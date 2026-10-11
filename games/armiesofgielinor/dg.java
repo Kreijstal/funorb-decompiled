@@ -88,11 +88,11 @@ final class dg {
         co var3Lifetime1;
         if (param0 != mk.field_e) {
           if (!(param1 > mk.field_e)) {
-            var4 = mc.field_d[mk.field_e];
+            var4 = UnitLossCondition.field_d[mk.field_e];
             var3 = var4;
             var4.a(0);
           }
-          var5 = mc.field_d[param0];
+          var5 = UnitLossCondition.field_d[param0];
           var3Lifetime1 = var5;
           var3Lifetime1.b((byte) -118);
           ac.field_k = var3Lifetime1.field_w;
@@ -109,15 +109,15 @@ final class dg {
     final void b(int param0) {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        of.field_Mb = lo.a("cantmove", -28106, "basic", this.field_d);
-        bk.field_d = lo.a("attacktargets", -28106, "basic", this.field_d);
-        hq.field_a = lo.a("surround_tiles", -28106, "basic", this.field_d);
+        of.field_Mb = MapLayout.a("cantmove", -28106, "basic", this.field_d);
+        bk.field_d = MapLayout.a("attacktargets", -28106, "basic", this.field_d);
+        hq.field_a = MapLayout.a("surround_tiles", -28106, "basic", this.field_d);
         vf.field_j = fk.a("smoke", (byte) -124, this.field_d, "basic");
         jq.field_G = fk.a("kalphites", (byte) -124, this.field_d, "basic");
         for (var2 = param0; jq.field_G.length > var2; var2++) {
           jq.field_G[var2].i();
         }
-        es.field_d = lo.a("bones", param0 - 28106, "basic", this.field_d);
+        es.field_d = MapLayout.a("bones", param0 - 28106, "basic", this.field_d);
         wf.field_B = fk.a("boneshadows", (byte) -124, this.field_d, "basic");
         TeamRoster.field_g = nh.a("player_ring", "basic", this.field_d, false);
         wl.field_N = fk.a("shadows", (byte) -128, this.field_d, "basic")[0];

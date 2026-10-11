@@ -56,7 +56,7 @@ final class TeamRoster {
         field_f = (int[][][]) null;
     }
 
-    final void a(int param0, Battlefield param1) {
+    final void eliminateAllPlayers(int obfuscationGuard, Battlefield battlefield) {
         int var4 = 0;
         int[] var3 = null;
         int var5 = 0;
@@ -73,9 +73,9 @@ final class TeamRoster {
           var3 = var7;
           for (var4 = 0; var4 < var7.length; var4++) {
             var5 = var7[var4];
-            param1.b(param0 ^ 10002, var5, true);
+            battlefield.eliminatePlayer(obfuscationGuard ^ 10002, var5, true);
           }
-          if (param0 != 3) {
+          if (obfuscationGuard != 3) {
             field_g = (RgbSprite) null;
           }
           return;
@@ -83,8 +83,8 @@ final class TeamRoster {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_9_0 = var3_ref;
-          stackIn_9_1 = new StringBuilder().append("go.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("go.E(").append(obfuscationGuard).append(',');
+          if (battlefield == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";

@@ -210,9 +210,9 @@ final class bk {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            mc.field_f = new je(0L, param11);
-            mc.field_f.field_X = cv.field_n;
-            CombatEvent.field_I.a(mc.field_f, 42);
+            UnitLossCondition.field_f = new je(0L, param11);
+            UnitLossCondition.field_f.field_X = cv.field_n;
+            CombatEvent.field_I.a(UnitLossCondition.field_f, 42);
             stackIn_28_0 = TeamRoster.a(4) ? 1 : 0;
           }
           if (stackIn_28_0 != 0 &&

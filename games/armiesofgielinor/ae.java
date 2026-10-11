@@ -25,7 +25,7 @@ final class ae extends bp {
         var2.h(32161, param1);
         var2.b(1, 2);
         var2.b(param0 - 895, 4);
-        var2.b(1, gm.f(3));
+        var2.b(1, LeaderEscortCondition.f(3));
         if (param0 != 896) {
           field_s = (String) null;
         }

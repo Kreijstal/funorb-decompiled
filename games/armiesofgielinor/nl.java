@@ -422,7 +422,7 @@ abstract class nl extends kb implements gw {
             }
           }
           KingBlackDragonEvent.field_z[2] = new je(0L, fp.field_Lb, GameEvent.field_p);
-          pu.field_k[2] = new nf[]{new nf(0L, eb.field_a, (je) null, ms.field_k, (RgbSprite) null, ki.field_a), new nf(0L, eb.field_a, (je) null, ms.field_k, lm.field_h[0], gm.field_e), new nf(0L, eb.field_a, (je) null, ms.field_k, lm.field_h[1], po.field_b)};
+          pu.field_k[2] = new nf[]{new nf(0L, eb.field_a, (je) null, ms.field_k, (RgbSprite) null, ki.field_a), new nf(0L, eb.field_a, (je) null, ms.field_k, lm.field_h[0], LeaderEscortCondition.field_e), new nf(0L, eb.field_a, (je) null, ms.field_k, lm.field_h[1], po.field_b)};
           if (ei.field_h > 1) {
             KingBlackDragonEvent.field_z[3] = new je(0L, fp.field_Lb, wp.field_u);
             array$1 = new nf[1 + ei.field_h];

@@ -40,7 +40,7 @@ final class TileMetadata implements TaggedFieldReader {
             if (0 >= encodedLength) {
               return;
             }
-            this.displayName = up.a(packet, encodedLength, (byte) -115);
+            this.displayName = PortalLossCondition.a(packet, encodedLength, (byte) -115);
           } else {
             if (!fieldName.equals("mf")) {
               if (fieldName.equals("ownr")) {
@@ -122,7 +122,7 @@ final class TileMetadata implements TaggedFieldReader {
         if (param0 != 0) {
           TileMetadata.c(-90);
         }
-        return new pf[]{CombatSandbox.field_j, ps.field_y, u.field_l};
+        return new pf[]{CombatSandbox.field_j, ps.field_y, MatchConditionEntry.field_l};
     }
 
     final static void a(int param0, boolean param1) {

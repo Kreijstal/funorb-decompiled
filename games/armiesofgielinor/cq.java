@@ -16,7 +16,7 @@ final class cq extends IntrusiveNode {
     int field_x;
     static int field_F;
     int field_v;
-    om field_p;
+    CampaignMission field_p;
     static String field_C;
     String field_w;
     String field_q;
@@ -248,11 +248,11 @@ final class cq extends IntrusiveNode {
         if (param2 < 114) {
           this.a(106, -67, 2);
         }
-        stackIn_8_0 = (db.a(true, this.field_y) <= param0) && (db.a(true, this.field_B + this.field_y) >= param0) && (param1 >= u.a(this.field_x, (byte) 94)) && (u.a(this.field_o + this.field_x, (byte) 94) >= param1);
+        stackIn_8_0 = (db.a(true, this.field_y) <= param0) && (db.a(true, this.field_B + this.field_y) >= param0) && (param1 >= MatchConditionEntry.a(this.field_x, (byte) 94)) && (MatchConditionEntry.a(this.field_o + this.field_x, (byte) 94) >= param1);
         return stackIn_8_0;
     }
 
-    cq(om param0) {
+    cq(CampaignMission param0) {
         int var4 = 0;
         int var8 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -266,33 +266,33 @@ final class cq extends IntrusiveNode {
         int var7 = 0;
         int var9 = 0;
         int var10 = 0;
-        lo var12 = null;
+        MapLayout var12 = null;
         MapTile var13 = null;
         sd var14 = null;
         int[] var18 = null;
         int var5Lifetime1;
         try {
           this.field_p = param0;
-          this.field_w = param0.field_J;
+          this.field_w = param0.name;
           this.field_v = 1073741823;
           this.field_l = false;
-          this.field_k = param0.field_v;
+          this.field_k = param0.missionId;
           this.field_n = new bg(16);
-          var12 = param0.a(-114);
-          var3 = var12.a(115, (Battlefield) null);
+          var12 = param0.getMapLayout(-114);
+          var3 = var12.createTiles(115, (Battlefield) null);
           var4_ref_ne__ = var3;
           for (var5 = 0; var5 < var4_ref_ne__.length; var5++) {
             var13 = var4_ref_ne__[var5];
             if (null != var13.occupant &&
-              var13.occupant.ownerPlayer != param0.field_w) {
+              var13.occupant.ownerPlayer != param0.playerSlot) {
               var7 = var13.occupant.getUnitCategory(0);
               if (this.field_n.a(-57, (long)var7) == null) {
                 this.field_n.a(new IntrusiveNode(), (long)var7, 108);
               }
             }
           }
-          for (var4 = 0; var4 < param0.field_B.length; var4++) {
-            var5Lifetime1 = param0.field_B[var4];
+          for (var4 = 0; var4 < param0.participantIds.length; var4++) {
+            var5Lifetime1 = param0.participantIds[var4];
             if (var5Lifetime1 != -1) {
               var14 = param0.field_G.field_q[var5Lifetime1];
               if (null != var14.field_p) {

@@ -84,11 +84,11 @@ final class pf {
         throw new IllegalStateException();
     }
 
-    final static om a(int param0, byte param1, CipherPacketBuffer param2) {
+    final static CampaignMission a(int param0, byte param1, CipherPacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        om var4 = null;
-        om stackIn_4_0 = null;
+        CampaignMission var4 = null;
+        CampaignMission stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -98,7 +98,7 @@ final class pf {
           if (param0 == 0) {
             return null;
           }
-          var4 = new om();
+          var4 = new CampaignMission();
           no.a(param2, var4, param0, -24721);
           var4.a(true);
           stackIn_4_0 = var4;

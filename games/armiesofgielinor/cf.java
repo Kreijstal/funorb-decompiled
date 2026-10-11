@@ -4,7 +4,7 @@
 final class cf extends IntrusiveNode {
     static ru field_t;
     static String[] field_m;
-    om[] field_n;
+    CampaignMission[] field_n;
     String field_o;
     int[] field_p;
     int field_s;

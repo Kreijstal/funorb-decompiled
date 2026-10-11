@@ -8,7 +8,7 @@ class im extends ms {
     static RgbSprite field_y;
     static boolean field_w;
 
-    final static int a(om param0, int param1) {
+    final static int a(CampaignMission param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -22,7 +22,7 @@ class im extends ms {
             im.b(49, 30);
           }
           var2_int = param0.field_G.field_r;
-          var3 = param0.field_v;
+          var3 = param0.missionId;
           stackIn_3_0 = mh.a(var2_int, -125, var3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

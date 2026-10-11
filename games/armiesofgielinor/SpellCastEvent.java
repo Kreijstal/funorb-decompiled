@@ -228,7 +228,7 @@ final class SpellCastEvent extends GameEvent {
           var19 = param7.o((byte) 98) ? 1 : 0;
           stackIn_15_0 = (var12 != 4) ? 0 : 1;
           var20 = stackIn_15_0;
-          var15Lifetime1 = gm.field_h[var12][var13];
+          var15Lifetime1 = LeaderEscortCondition.field_h[var12][var13];
           if (!param10) {
             stackIn_17_0 = 20;
             return stackIn_17_0;
@@ -254,7 +254,7 @@ final class SpellCastEvent extends GameEvent {
           if (var15Lifetime1 < 0) {
             var15Lifetime1 = 6;
           }
-          var16Lifetime1 = gm.field_h[var12][var14];
+          var16Lifetime1 = LeaderEscortCondition.field_h[var12][var14];
           if (var17 != 0 &&
             var14 == 3) {
             var16Lifetime1 = 3;

@@ -191,14 +191,14 @@ final class nm extends hn {
             var4 = l.field_a;
             synchronized (var4) {
               au.field_Kb.a(param2, -1, (byte) -91);
-              if (lo.field_u == param0) {
+              if (MapLayout.field_u == param0) {
                 return;
               }
               au.field_Kb.j(7);
               l.field_a.c();
-              lo.field_u = param0;
-              if (lo.field_u != null) {
-                au.field_Kb.a(2, param1, lo.field_u);
+              MapLayout.field_u = param0;
+              if (MapLayout.field_u != null) {
+                au.field_Kb.a(2, param1, MapLayout.field_u);
               }
             }
           }

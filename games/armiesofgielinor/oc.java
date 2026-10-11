@@ -66,7 +66,7 @@ final class oc extends je {
           }
           if (rs.field_q == 85 &&
             this.field_Qb.length() > 0) {
-            up.a(' ', -1 + this.field_Qb.length(), this.field_Qb, true);
+            PortalLossCondition.a(' ', -1 + this.field_Qb.length(), this.field_Qb, true);
           }
           if (kv.a(false, (CharSequence) ((Object) this.field_Qb), ui.field_i)) {
             discarded$1 = this.field_Qb.append(ui.field_i);
@@ -285,7 +285,7 @@ final class oc extends je {
           }
           return false;
         }
-        up.a(' ', this.field_Qb.length() - 1, this.field_Qb, true);
+        PortalLossCondition.a(' ', this.field_Qb.length() - 1, this.field_Qb, true);
         if (this.field_Qb.length() >= 12) {
           if (84 == rs.field_q) {
             if (this.field_Qb.length() <= 0) {

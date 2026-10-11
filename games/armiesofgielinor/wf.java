@@ -36,7 +36,7 @@ abstract class wf extends iv {
         hq.a(param6, 5000, this.field_E, 5000, param2, og.field_m, this.field_C, 0, this.field_t, this.field_o, this.field_p, ft.field_m, this.field_x, this.field_G);
         qf.a(og.field_m, this.field_p, this.field_G, (byte) 103, this.field_C, param6, this.field_E, this.field_t, ft.field_m);
         rf.b((byte) 112);
-        om.field_I = jk.b(68);
+        CampaignMission.field_I = jk.b(68);
         lk.a(101, si.field_b);
         mo.field_c = param7;
         on.field_n = param5;
@@ -219,7 +219,7 @@ abstract class wf extends iv {
             throw new IllegalStateException();
           }
           if (1 == var4) {
-            var5_int = sa.a(false, om.c((byte) -27), fp.l(-117));
+            var5_int = sa.a(false, CampaignMission.c((byte) -27), fp.l(-117));
             if (var5_int != -1) {
               AiPlanningStrategy.a(103, br.field_b, lk.field_r, var5_int);
               lk.field_r = null;
@@ -408,7 +408,7 @@ abstract class wf extends iv {
           regionExit1: {
             switch (var2) {
               case 2:
-                gm.d(9);
+                LeaderEscortCondition.d(9);
                 break;
               case 4:
                 da.a((byte) -101);
@@ -424,7 +424,7 @@ abstract class wf extends iv {
                   var2 != 12) {
                   switch (var2) {
                     case 13:
-                      u.a(param0 - 11);
+                      MatchConditionEntry.a(param0 - 11);
                       break regionExit1;
                     case 17:
                       this.n(16433);
@@ -441,7 +441,7 @@ abstract class wf extends iv {
                 stackIn_30_0 = -34;
                 stackIn_31_1 = (var2 == 12);
                 var3 = ea.$cfr$intArgs$a$72f70aa7c69d(stackIn_30_0, stackIn_31_1);
-                lo.a(var3, -1);
+                MapLayout.a(var3, -1);
                 break;
               case 8:
                 jh.a(mg.field_e, ft.field_m, fk.field_b, param0 - 13);
@@ -528,8 +528,8 @@ abstract class wf extends iv {
           p.field_b != 11) {
           pf.a((byte) 73);
         }
-        if (om.field_I != null) {
-          el.field_d = om.field_I.a(9);
+        if (CampaignMission.field_I != null) {
+          el.field_d = CampaignMission.field_I.a(9);
         }
         if (TeamRoster.a(99)) {
           var3 = tp.b(-113) * 1200;

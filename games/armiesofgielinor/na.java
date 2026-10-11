@@ -440,19 +440,19 @@ final class na extends tj implements mf, he {
         }
     }
 
-    final static om a(CipherPacketBuffer param0, int param1) {
+    final static CampaignMission a(CipherPacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        om var3 = null;
-        om stackIn_2_0 = null;
-        om stackIn_4_0 = null;
+        CampaignMission var3 = null;
+        CampaignMission stackIn_2_0 = null;
+        CampaignMission stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 3) {
-            stackIn_2_0 = (om) null;
+            stackIn_2_0 = (CampaignMission) null;
             return stackIn_2_0;
           }
           var2_int = param0.i(1);

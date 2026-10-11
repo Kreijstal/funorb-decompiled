@@ -44,7 +44,7 @@ final class nu extends lk {
         sd var19 = null;
         sd[] var20 = null;
         sd var21 = null;
-        om var22 = null;
+        CampaignMission var22 = null;
         byte[] var23 = null;
         var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
@@ -93,11 +93,11 @@ final class nu extends lk {
             var14++;
           }
           var13 = var4.k(0);
-          var10.field_n = new om[var13];
+          var10.field_n = new CampaignMission[var13];
           for (var14 = 0; var13 > var14; var14++) {
             try {
               var22 = BattleCharacter.a(var10, var4, param1, (byte) -73);
-              var10.field_n[var22.field_v] = var22;
+              var10.field_n[var22.missionId] = var22;
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var15 = decompiledCaughtException;

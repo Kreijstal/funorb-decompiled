@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class u extends IntrusiveNode {
-    lv field_m;
+final class MatchConditionEntry extends IntrusiveNode {
+    MatchCondition condition;
     static pf field_l;
     static int[][] field_o;
     static CombatViewTransition field_p;
@@ -15,7 +15,7 @@ final class u extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 94) {
-            u.a((byte) -104);
+            MatchConditionEntry.a((byte) -104);
           }
           stackIn_4_0 = param0 + (so.field_b.field_g - se.field_a >> 1);
           return stackIn_4_0;
@@ -109,7 +109,7 @@ final class u extends IntrusiveNode {
               return;
             }
             if (param0 != 1) {
-              u.a((byte) -118);
+              MatchConditionEntry.a((byte) -118);
             }
             if (var2 != 4) {
               af.a((Throwable) null, -66, "F1: " + cm.b(false));
@@ -195,7 +195,7 @@ final class u extends IntrusiveNode {
         RuntimeException var1 = null;
         try {
           if (param0 >= -102) {
-            u.a(62, (byte) -42);
+            MatchConditionEntry.a(62, (byte) -42);
           }
           field_n = null;
           field_p = null;
@@ -209,21 +209,21 @@ final class u extends IntrusiveNode {
         }
     }
 
-    u(lv param0) {
+    MatchConditionEntry(MatchCondition condition) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_m = param0;
+          this.condition = condition;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_6_0 = runtimeException;
           stackIn_6_1 = new StringBuilder().append("u.<init>(");
-          if (param0 == null) {
+          if (condition == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

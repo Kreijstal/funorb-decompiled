@@ -55,7 +55,7 @@ final class wb {
           return;
         }
         try {
-          af.a(param0, lo.field_o, param1 ^ -33);
+          af.a(param0, MapLayout.field_o, param1 ^ -33);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "wb.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

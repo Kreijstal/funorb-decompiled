@@ -246,10 +246,10 @@ final class vo implements Runnable {
         ef.a(param2, (byte) 46, param3, param6, param4, param0, param5, var7);
     }
 
-    final static void a(boolean param0, int param1, int param2, om param3) {
+    final static void a(boolean param0, int param1, int param2, CampaignMission param3) {
         int var6 = 0;
         int var4_int = param3.field_G.field_r;
-        int var5 = param3.field_v;
+        int var5 = param3.missionId;
         if (param1 != 1) {
           field_e = (String) null;
         }

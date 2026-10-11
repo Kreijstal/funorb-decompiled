@@ -80,7 +80,7 @@ final class rk {
         if (param1 < 90) {
           discarded$0 = this.c(60, 20);
         }
-        hs.a(false, true, this.field_W, 0, db.a(true, param2), 0, var4Lifetime1, u.a(param0, (byte) 94));
+        hs.a(false, true, this.field_W, 0, db.a(true, param2), 0, var4Lifetime1, MatchConditionEntry.a(param0, (byte) 94));
     }
 
     private final void a(byte param0, int param1, int param2) {
@@ -114,13 +114,13 @@ final class rk {
               if (null != hr.field_d &&
                 1 + var7 >= 0 &&
                 1 + var7 < hr.field_d.length) {
-                hr.field_d[1 + var7].h(db.a(true, 6 + param1), u.a(param2 + 9, (byte) 94));
-                gt.field_c[var7 + 1].h(db.a(true, param1), u.a(param2, (byte) 94));
+                hr.field_d[1 + var7].h(db.a(true, 6 + param1), MatchConditionEntry.a(param2 + 9, (byte) 94));
+                gt.field_c[var7 + 1].h(db.a(true, param1), MatchConditionEntry.a(param2, (byte) 94));
                 if (var8 > 0 &&
                   null != fe.field_o &&
                   0 <= 1 + var7 &&
                   var7 + 1 < fe.field_o.length) {
-                  fe.a(db.a(true, 18 + param1), u.a(param2 + 21, (byte) 94), var7 + 1, var8, var4);
+                  fe.a(db.a(true, 18 + param1), MatchConditionEntry.a(param2 + 21, (byte) 94), var7 + 1, var8, var4);
                   param1 = 50 + param1 - var9;
                   var6++;
                   continue;
@@ -320,19 +320,19 @@ final class rk {
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_N >= 0 &&
           this.field_N < this.field_p) {
-          if (null == up.field_b[this.field_N]) {
+          if (null == PortalLossCondition.field_b[this.field_N]) {
             return;
           }
-          var11 = up.field_b[this.field_N];
+          var11 = PortalLossCondition.field_b[this.field_N];
           var2 = var11;
-          if (null == up.field_g[this.field_N]) {
+          if (null == PortalLossCondition.field_g[this.field_N]) {
             return;
           }
-          var3 = up.field_g[this.field_N];
-          if (null == up.field_c[this.field_N]) {
+          var3 = PortalLossCondition.field_g[this.field_N];
+          if (null == PortalLossCondition.field_c[this.field_N]) {
             return;
           }
-          var4 = up.field_c[this.field_N];
+          var4 = PortalLossCondition.field_c[this.field_N];
           if (null == TeamRoster.field_f[this.field_N]) {
             return;
           }
@@ -393,7 +393,7 @@ final class rk {
           }
           var12 = param0;
           if (var12 != null) {
-            fe.c(var12, db.a(true, var9_int), u.a(var10, (byte) 94), nd.field_b, true);
+            fe.c(var12, db.a(true, var9_int), MatchConditionEntry.a(var10, (byte) 94), nd.field_b, true);
           }
           var13 = param4;
           var11Lifetime1 = this.field_Y - this.field_T + (this.a(true) >> 1);
@@ -475,7 +475,7 @@ final class rk {
             if (2 == var8) {
               if (17 < l.field_b.length &&
                 l.field_b.length > 16) {
-                l.field_b[17].a(db.a(true, param0), u.a(-40 + param1, (byte) 94));
+                l.field_b[17].a(db.a(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
                 var9 = 1;
                 if (null == ds.field_a ||
                   !(param2 < ds.field_a.length)) {
@@ -486,12 +486,12 @@ final class rk {
                   var9 = 0;
                 }
                 if (var9 != 0) {
-                  mv.a(db.a(true, 20 + param0), (byte) -70, var7, param2, u.a(param1, (byte) 94));
+                  mv.a(db.a(true, 20 + param0), (byte) -70, var7, param2, MatchConditionEntry.a(param1, (byte) 94));
                 }
                 if (-1 < param2) {
-                  ks.a(ActionRequest.field_k[76][param2], false, u.a(-40 + param1, (byte) 94), this.field_ab, 128, 150, db.a(true, param0), (js) null, -10374);
+                  ks.a(ActionRequest.field_k[76][param2], false, MatchConditionEntry.a(-40 + param1, (byte) 94), this.field_ab, 128, 150, db.a(true, param0), (js) null, -10374);
                 }
-                l.field_b[16].a(db.a(true, param0), u.a(param1 - 40, (byte) 94));
+                l.field_b[16].a(db.a(true, param0), MatchConditionEntry.a(param1 - 40, (byte) 94));
                 return;
               }
               return;
@@ -500,10 +500,10 @@ final class rk {
               if (l.field_b.length <= 8) {
                 return;
               }
-              l.field_b[8].a(db.a(true, param0), u.a(-50 + param1, (byte) 94));
+              l.field_b[8].a(db.a(true, param0), MatchConditionEntry.a(-50 + param1, (byte) 94));
               if (param2 > -1 &&
                 param2 < op.field_c.length) {
-                wb.a(7816226, db.a(true, param0 + 21), param2, var7, u.a(-30 + param1, (byte) 94));
+                wb.a(7816226, db.a(true, param0 + 21), param2, var7, MatchConditionEntry.a(-30 + param1, (byte) 94));
               }
             } else {
               if (0 != var8) {
@@ -511,21 +511,21 @@ final class rk {
                   if (11 >= l.field_b.length) {
                     return;
                   }
-                  l.field_b[11].a(db.a(true, param0), u.a(-10 + (param1 - 40), (byte) 94));
+                  l.field_b[11].a(db.a(true, param0), MatchConditionEntry.a(-10 + (param1 - 40), (byte) 94));
                   if (param2 > -1 &&
                     op.field_c.length > param2) {
-                    wb.a(7816226, db.a(true, param0 + 20), param2, var7, u.a(param1 - 20, (byte) 94));
-                    eu.a(db.a(true, param0 + 15), param2, 11, 127, u.a(21 + param1, (byte) 94));
+                    wb.a(7816226, db.a(true, param0 + 20), param2, var7, MatchConditionEntry.a(param1 - 20, (byte) 94));
+                    eu.a(db.a(true, param0 + 15), param2, 11, 127, MatchConditionEntry.a(21 + param1, (byte) 94));
                   }
                 }
               } else {
                 if (l.field_b.length <= 0) {
                   return;
                 }
-                l.field_b[0].a(db.a(true, param0), u.a(-40 + param1, (byte) 94));
+                l.field_b[0].a(db.a(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
                 if (param2 > -1 &&
                   op.field_c.length > param2) {
-                  wb.a(param3 + 7841939, db.a(true, 20 + param0), param2, var7, u.a(10 + param1, (byte) 94));
+                  wb.a(param3 + 7841939, db.a(true, 20 + param0), param2, var7, MatchConditionEntry.a(10 + param1, (byte) 94));
                 }
               }
             }
@@ -554,8 +554,8 @@ final class rk {
         int var3 = this.field_Z.field_n;
         int var4 = this.field_n.field_k - var2;
         int var5 = -var3 + this.field_n.field_n;
-        SoftwareRaster.f(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, this.field_cb);
-        fe.b(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, io.field_m, nd.field_b, this.field_A, this.field_e);
+        SoftwareRaster.f(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, this.field_cb);
+        fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, io.field_m, nd.field_b, this.field_A, this.field_e);
         int var6 = this.field_Z.field_n;
         int var7 = this.field_n.field_n;
         var3 = var6 + var7 >> 1;
@@ -569,7 +569,7 @@ final class rk {
         int[] var12 = this.field_P ? TutorialController.field_e : nd.field_b;
         int[] var11 = var12;
         int[] var10 = var11;
-        fe.c(var9, db.a(true, this.field_F.field_k), u.a(var3, (byte) 94), var12, true);
+        fe.c(var9, db.a(true, this.field_F.field_k), MatchConditionEntry.a(var3, (byte) 94), var12, true);
     }
 
     final void f(byte param0) {
@@ -671,7 +671,7 @@ final class rk {
           en.field_E.c(100 - param3 + "%", 20, 45, 16777215, -1);
           EventPresenter.field_t.b(68, 60, nd.field_b[-1 + nd.field_b.length]);
           so.field_b.a(5605);
-          uf.field_j.e(db.a(true, param1), u.a(param7, (byte) 94), -param0 + 32 << 3);
+          uf.field_j.e(db.a(true, param1), MatchConditionEntry.a(param7, (byte) 94), -param0 + 32 << 3);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "rk.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
@@ -808,7 +808,7 @@ final class rk {
         var3 = this.field_R.field_n;
         var4 = this.field_b.field_k - var2;
         var5 = this.field_b.field_n - var3;
-        SoftwareRaster.b(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, this.field_A, this.field_e);
+        SoftwareRaster.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, this.field_A, this.field_e);
         var6 = this.field_R.field_n;
         if (param0 != 10) {
           this.j(76);
@@ -831,7 +831,7 @@ final class rk {
         if (this.field_o &&
           var13 != null &&
           var13.length() > 0) {
-          fe.a(var13, db.a(true, var2Lifetime1), u.a(var3Lifetime1, (byte) 94), var17, true);
+          fe.a(var13, db.a(true, var2Lifetime1), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var17, true);
         }
         if (this.field_Q) {
           stackIn_12_0 = TutorialController.field_e;
@@ -847,11 +847,11 @@ final class rk {
         if (this.field_I &&
           var15 != null &&
           var15.length() > 0) {
-          fe.b(var15, db.a(true, var2Lifetime2), u.a(var3Lifetime1, (byte) 94), var18, true);
+          fe.b(var15, db.a(true, var2Lifetime2), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var18, true);
         }
         var2Lifetime3 = this.field_F.field_k;
         var9 = qk.a(this.field_p, -2823, this.field_N);
-        fe.c(var9, db.a(true, var2Lifetime3), u.a(var3Lifetime1, (byte) 94), TutorialController.field_e, true);
+        fe.c(var9, db.a(true, var2Lifetime3), MatchConditionEntry.a(var3Lifetime1, (byte) 94), TutorialController.field_e, true);
     }
 
     private final int d(int param0) {
@@ -863,9 +863,9 @@ final class rk {
 
     private final void c(int param0, int param1, int param2) {
         if (null != this.field_v) {
-          this.field_v.a(db.a(true, 40 + param1), u.a(param2 + 50, (byte) 94), (byte) -117);
+          this.field_v.a(db.a(true, 40 + param1), MatchConditionEntry.a(param2 + 50, (byte) 94), (byte) -117);
           this.field_v.a((byte) -72, false);
-          nb.a(db.a(true, param1), u.a(param2 + 38, (byte) 94), (byte) -97, (Unit) null);
+          nb.a(db.a(true, param1), MatchConditionEntry.a(param2 + 38, (byte) 94), (byte) -97, (Unit) null);
         }
         if (param0 != 50) {
           return;
@@ -1283,12 +1283,12 @@ final class rk {
           }
           param4 = stackIn_26_0;
           if (param3 != null) {
-            param3.g(db.a(true, param1), u.a(param4, (byte) 94));
+            param3.g(db.a(true, param1), MatchConditionEntry.a(param4, (byte) 94));
           } else {
             if (param5 == null) {
               return null;
             }
-            param5.a(db.a(true, param1), u.a(param4, (byte) 94));
+            param5.a(db.a(true, param1), MatchConditionEntry.a(param4, (byte) 94));
           }
           stackIn_34_0 = null;
           return (ft) (stackIn_34_0);
@@ -1385,7 +1385,7 @@ final class rk {
           if (param4 != null) {
             param3 = param3 - param4.field_z;
             if (param4 != null) {
-              param4.h(db.a(true, param2), u.a(param3, (byte) 94));
+              param4.h(db.a(true, param2), MatchConditionEntry.a(param3, (byte) 94));
             }
           }
           if (param1 == 26823) {
@@ -1448,7 +1448,7 @@ final class rk {
             if (null == l.field_b[param1]) {
               return;
             }
-            l.field_b[param1].d(db.a(true, param0), u.a(-20 + param4, (byte) 94));
+            l.field_b[param1].d(db.a(true, param0), MatchConditionEntry.a(-20 + param4, (byte) 94));
             return;
           }
           return;
@@ -1500,9 +1500,9 @@ final class rk {
               nr.field_c[var11Lifetime1] != null) {
               var12 = nr.field_c[var11Lifetime1];
               if (param3) {
-                var12.d(db.a(true, var8 + param4), u.a(var9 + param5, (byte) 94));
+                var12.d(db.a(true, var8 + param4), MatchConditionEntry.a(var9 + param5, (byte) 94));
               } else {
-                var12.a(db.a(true, param4 + var8), u.a(param5 + var9, (byte) 94));
+                var12.a(db.a(true, param4 + var8), MatchConditionEntry.a(param5 + var9, (byte) 94));
               }
             }
           }
@@ -1741,9 +1741,9 @@ final class rk {
               if (var3 != 8) {
                 return 1;
               }
-              return u.a(this.field_Z.field_n, (byte) 94);
+              return MatchConditionEntry.a(this.field_Z.field_n, (byte) 94);
             }
-            return u.a(this.field_R.field_n, (byte) 94);
+            return MatchConditionEntry.a(this.field_R.field_n, (byte) 94);
           }
           return 1;
         }
@@ -1758,14 +1758,14 @@ final class rk {
           var7 = this.field_fb;
         }
         if (var7 != null) {
-          var7.a(db.a(true, param5 + 40), u.a(param2 + 60, (byte) 94), (byte) -117);
+          var7.a(db.a(true, param5 + 40), MatchConditionEntry.a(param2 + 60, (byte) 94), (byte) -117);
           var7.a((byte) -72, false);
         }
         if (param4 != -1) {
           discarded$0 = this.e(-40, -71, -63, -38, 73);
         }
         if (param3) {
-          this.a(db.a(true, param5), param1, u.a(param2 + 40, (byte) 94), false);
+          this.a(db.a(true, param5), param1, MatchConditionEntry.a(param2 + 40, (byte) 94), false);
         }
     }
 
@@ -1774,7 +1774,7 @@ final class rk {
           return;
         }
         try {
-          param2.a(db.a(true, param3), u.a(param0, (byte) 94), (byte) 77);
+          param2.a(db.a(true, param3), MatchConditionEntry.a(param0, (byte) 94), (byte) 77);
           param2.a((byte) -72, false);
           int var5_int = -57 % ((param1 - 3) / 48);
         } catch (RuntimeException runtimeException) {
@@ -1805,9 +1805,9 @@ final class rk {
           this.field_t = -120;
         }
         if (this.field_S != null) {
-          this.field_S.a(db.a(true, 40 + param2), u.a(90 + param0, (byte) 94), (byte) -3);
+          this.field_S.a(db.a(true, 40 + param2), MatchConditionEntry.a(90 + param0, (byte) 94), (byte) -3);
           this.field_S.a((byte) -72, false);
-          eu.a(-10, u.a(38 + param0, (byte) 94), db.a(true, param2), (Unit) null);
+          eu.a(-10, MatchConditionEntry.a(38 + param0, (byte) 94), db.a(true, param2), (Unit) null);
         }
     }
 
@@ -2151,8 +2151,8 @@ final class rk {
           this.g((byte) 9);
         }
         int var4 = var3 + var2;
-        fe.b(this.field_a, db.a(true, this.field_F.field_k), u.a(var4, (byte) 94));
-        fe.c(this.field_a, db.a(true, this.field_F.field_k), u.a(var4, (byte) 94), nd.field_b, false);
+        fe.b(this.field_a, db.a(true, this.field_F.field_k), MatchConditionEntry.a(var4, (byte) 94));
+        fe.c(this.field_a, db.a(true, this.field_F.field_k), MatchConditionEntry.a(var4, (byte) 94), nd.field_b, false);
     }
 
     private final void f(int param0) {
@@ -2571,7 +2571,7 @@ final class rk {
         RuntimeException var7 = null;
         try {
           if (0 > this.field_p) {
-            this.field_p = up.field_c.length;
+            this.field_p = PortalLossCondition.field_c.length;
           }
           if (param5 != this.field_N &&
             param5 >= 0 &&
@@ -2740,7 +2740,7 @@ final class rk {
               var17 != null) {
               var23 = 1;
             }
-            rs.field_n.a(param2, db.a(true, var18Lifetime1), u.a(var19Lifetime1, (byte) 94), var20, var21, var22, -1, var23, 0, var15);
+            rs.field_n.a(param2, db.a(true, var18Lifetime1), MatchConditionEntry.a(var19Lifetime1, (byte) 94), var20, var21, var22, -1, var23, 0, var15);
             var12 = var12 + var21;
             if (param1 != null) {
               var12 = var12 + this.field_g;
@@ -2758,7 +2758,7 @@ final class rk {
             while (param1.length > var25) {
               var22Lifetime1 = rs.field_n.a(param1[var25], var20Lifetime1, var15);
               var23Lifetime1 = this.field_l;
-              rs.field_n.a(param1[var25], db.a(true, var18Lifetime2), u.a(var19Lifetime2, (byte) 94), var20Lifetime1, var22Lifetime1, var23Lifetime1, -1, 0, 0, var15);
+              rs.field_n.a(param1[var25], db.a(true, var18Lifetime2), MatchConditionEntry.a(var19Lifetime2, (byte) 94), var20Lifetime1, var22Lifetime1, var23Lifetime1, -1, 0, 0, var15);
               var19Lifetime2 = var19Lifetime2 + var22Lifetime1;
               if ((-1 + param1.length) > var25) {
                 var19Lifetime2 = var19Lifetime2 + this.field_E;
@@ -2872,13 +2872,13 @@ final class rk {
         int var3 = this.field_C.field_n;
         int var4 = this.field_V.field_k - var2;
         int var5 = this.field_V.field_n - var3;
-        fe.b(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, io.field_m, nd.field_b, this.field_A, this.field_e);
+        fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, io.field_m, nd.field_b, this.field_A, this.field_e);
         this.g(120);
         var2 = this.field_x.field_k;
         var3 = this.field_x.field_n;
         var4 = -var2 + this.field_K.field_k;
         var5 = -var3 + this.field_K.field_n;
-        fe.b(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, io.field_m, TutorialController.field_e, this.field_A, this.field_e);
+        fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, io.field_m, TutorialController.field_e, this.field_A, this.field_e);
         this.k(-107);
         this.l(param0 + 19);
         this.g((byte) 10);

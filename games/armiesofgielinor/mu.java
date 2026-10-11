@@ -66,7 +66,7 @@ final class mu {
             af.a((Throwable) null, 124, "QC2");
             return;
           }
-          lo.a(var4, 19003);
+          MapLayout.a(var4, 19003);
           var12 = (BitmapFont) null;
           hf.field_f = pr.a(65793, 2245737, 65793, 65793, 8947848, 0, (BitmapFont) null, 1127256, 1513239, 4020342, 5138823, (byte) 39, 1513239);
           vs.field_g = pr.a(param1, 0, 0, 0, 0, 16764006, param0, 0, 0, 0, 0, (byte) 107, 0);

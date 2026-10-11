@@ -53,7 +53,7 @@ final class mw extends dr {
               var11++;
               var7Lifetime1 = 3 + (var11 * (2 + CombatEvent.field_I.field_ob - 6) / (se.field_d + 1) - 2 - var13);
               if (5 <= var12) {
-                mc.field_f.a(var7Lifetime1, param5 ^ -20499, var8, var13, var6_int);
+                UnitLossCondition.field_f.a(var7Lifetime1, param5 ^ -20499, var8, var13, var6_int);
               } else {
                 gt.field_b[var12].a(var7Lifetime1, param5 ^ -20499, var8, var13, var6_int);
                 jj.field_i[var12].a(var7Lifetime1, -20500, -param2 + var9, 0, param2);

@@ -33,7 +33,7 @@ final class qf {
         }
         try {
           er.field_a = param6;
-          gm.field_i = param7;
+          LeaderEscortCondition.field_i = param7;
           ai.field_T = (bp) ((Object) new ae());
           ou.field_h = new vo(param8);
           oi.field_c = new dd(ai.field_T, ou.field_h);

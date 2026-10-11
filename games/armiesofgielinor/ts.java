@@ -105,7 +105,7 @@ final class ts {
         return 0;
     }
 
-    final static void a(om param0, int param1, sl param2) {
+    final static void a(CampaignMission param0, int param1, sl param2) {
         GameplayController stackIn_4_0;
         GameplayController stackIn_4_1;
         boolean stackIn_4_2;
@@ -152,9 +152,9 @@ final class ts {
             var8 = param0.e(-23209);
             var3 = var8;
             r.field_B = var8.length;
-            var4 = param0.field_w;
+            var4 = param0.playerSlot;
             mg.field_g = param1 + r.field_B;
-            td.field_f.a(param0.field_z, 0);
+            td.field_f.a(param0.mapTheme, 0);
             stackIn_4_0 = null;
             stackIn_4_1 = null;
             stackIn_4_2 = false;
@@ -163,9 +163,9 @@ final class ts {
             stackIn_4_5 = var4;
             stackIn_4_6 = false;
             stackIn_4_7 = td.field_f;
-            stackIn_4_8 = param0.field_o;
+            stackIn_4_8 = param0.mapSizeSetting;
             stackIn_4_9 = ArmiesOfGielinor.field_K;
-            stackIn_4_10 = param0.field_z;
+            stackIn_4_10 = param0.mapTheme;
             stackIn_4_11 = false;
             stackIn_4_12 = 4;
             stackIn_4_13 = 0;
@@ -185,24 +185,24 @@ final class ts {
           }
           rd.field_j = new GameplayController(stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_4_6, stackIn_4_7, stackIn_4_8, stackIn_4_9, stackIn_4_10, stackIn_4_11, stackIn_4_12, stackIn_4_13, stackIn_5_14, param0);
           rd.field_j.battlefield.field_F = true;
-          rd.field_j.battlefield.field_T = new ln[param0.field_B.length];
+          rd.field_j.battlefield.field_T = new ln[param0.participantIds.length];
           for (var5_int = 0; rd.field_j.battlefield.field_T.length > var5_int; var5_int++) {
-            if (~var5_int == ~param0.field_w) {
+            if (~var5_int == ~param0.playerSlot) {
               rd.field_j.battlefield.field_T[var5_int] = ah.field_a;
             } else {
-              var9 = param0.field_G.field_q[param0.field_B[var5_int]];
+              var9 = param0.field_G.field_q[param0.participantIds[var5_int]];
               var6_ref = var9;
               rd.field_j.battlefield.field_T[var5_int] = var9.field_q;
             }
           }
-          if ((1 & param0.field_k) != 0) {
-            var5_intLifetime1 = -1 + param0.field_B.length;
-            var6 = (Unit) (rd.field_j.battlefield.f(var5_intLifetime1, ~param1).first((byte) 97));
+          if ((1 & param0.flags) != 0) {
+            var5_intLifetime1 = -1 + param0.participantIds.length;
+            var6 = (Unit) (rd.field_j.battlefield.getUnitsForPlayer(var5_intLifetime1, ~param1).first((byte) 97));
             while (var6 != null) {
               if (var6.strength > 10) {
                 var6.strength = 10;
               }
-              var6 = (Unit) (rd.field_j.battlefield.f(var5_intLifetime1, ~param1).next((byte) 123));
+              var6 = (Unit) (rd.field_j.battlefield.getUnitsForPlayer(var5_intLifetime1, ~param1).next((byte) 123));
             }
           }
           if (param2 == null) {

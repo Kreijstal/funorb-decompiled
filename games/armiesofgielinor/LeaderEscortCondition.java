@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gm implements lv {
+final class LeaderEscortCondition implements MatchCondition {
     static tu field_f;
     static String field_b;
     static String[] field_a;
-    private Unit[] field_c;
+    private Unit[] leaders;
     static String field_e;
     static int field_d;
     static int[][] field_h;
@@ -52,26 +52,26 @@ final class gm implements lv {
         return (va.field_D << 2) + (ol.field_B << 4) + cd.field_c;
     }
 
-    public final boolean b(int param0) {
+    public final boolean isVictory(int obfuscationGuard) {
         int var3 = 0;
         Unit var4 = null;
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        Unit[] var6 = this.field_c;
+        Unit[] var6 = this.leaders;
         Unit[] var2 = var6;
-        for (var3 = param0; var3 < var6.length; var3++) {
+        for (var3 = obfuscationGuard; var3 < var6.length; var3++) {
           var4 = var6[var3];
-          if (!var4.field_G) {
+          if (!var4.escortComplete) {
             return false;
           }
         }
         return true;
     }
 
-    gm(int param0, Unit[] param1) {
+    LeaderEscortCondition(int suppliedPlayerId, Unit[] leaders) {
         try {
-          this.field_c = param1;
+          this.leaders = leaders;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "gm.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "gm.<init>(" + suppliedPlayerId + ',' + (leaders != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -145,7 +145,7 @@ final class gm implements lv {
         field_f = null;
         field_g = null;
         if (param0 != 25931) {
-          gm.f(-9);
+          LeaderEscortCondition.f(-9);
         }
     }
 
@@ -318,16 +318,16 @@ final class gm implements lv {
         }
     }
 
-    public final String a(int param0) {
-        if (param0 > -122) {
+    public final String describeCondition(int obfuscationGuard) {
+        if (obfuscationGuard > -122) {
           return (String) null;
         }
         return "Win: Leader Escort";
     }
 
-    public final boolean c(int param0) {
-        if (param0 >= -121) {
-          gm.d(68);
+    public final boolean isDefeat(int obfuscationGuard) {
+        if (obfuscationGuard >= -121) {
+          LeaderEscortCondition.d(68);
         }
         return false;
     }

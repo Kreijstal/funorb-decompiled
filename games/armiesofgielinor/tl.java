@@ -172,7 +172,7 @@ final class tl implements Iterator {
     final static void a(byte param0, kl param1, kl param2) {
         try {
           jj.field_c = param2;
-          up.field_e = param1;
+          PortalLossCondition.field_e = param1;
           if (param0 > -117) {
             field_a = (String) null;
           }

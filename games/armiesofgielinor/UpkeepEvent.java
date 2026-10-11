@@ -72,16 +72,16 @@ final class UpkeepEvent extends GameEvent {
           lt.field_h[2] = GameplayController.a("coatofarms_rbarespace", (byte) 51, "basic", param0);
           lt.field_h[5] = GameplayController.a("coatofarms_iconspace", (byte) 51, "basic", param0);
           lt.field_h[4] = GameplayController.a("coatofarms_topperspace", (byte) 51, "basic", param0);
-          bc.field_j[0] = lo.a("coatofarms_bases", -28106, "basic", param0);
+          bc.field_j[0] = MapLayout.a("coatofarms_bases", -28106, "basic", param0);
           if (param1 <= 20) {
             kl var3 = (kl) null;
             UpkeepEvent.a((kl) null, 74);
           }
-          bc.field_j[1] = lo.a("coatofarms_lbarers", -28106, "basic", param0);
-          bc.field_j[2] = lo.a("coatofarms_rbarers", -28106, "basic", param0);
-          bc.field_j[3] = lo.a("coatofarms_banners", -28106, "basic", param0);
-          bc.field_j[5] = lo.a("coatofarms_icons", -28106, "basic", param0);
-          bc.field_j[4] = lo.a("coatofarms_toppers", -28106, "basic", param0);
+          bc.field_j[1] = MapLayout.a("coatofarms_lbarers", -28106, "basic", param0);
+          bc.field_j[2] = MapLayout.a("coatofarms_rbarers", -28106, "basic", param0);
+          bc.field_j[3] = MapLayout.a("coatofarms_banners", -28106, "basic", param0);
+          bc.field_j[5] = MapLayout.a("coatofarms_icons", -28106, "basic", param0);
+          bc.field_j[4] = MapLayout.a("coatofarms_toppers", -28106, "basic", param0);
           a.field_m = fk.a("coatofarms_effects", (byte) -124, param0, "basic");
           GameplayController.a("coatofarms_palette", (byte) 51, "basic", param0);
           sa.field_a = GameplayController.a("coatofarms_scrollbutton", (byte) 51, "basic", param0);

@@ -59,7 +59,7 @@ final class og extends IntrusiveNode {
         if (mo.field_j == this.field_q) {
           return "ArgStart";
         }
-        if (gm.field_d == this.field_q) {
+        if (LeaderEscortCondition.field_d == this.field_q) {
           return "ArgEnd";
         }
         if (this.field_q == sb.field_d) {

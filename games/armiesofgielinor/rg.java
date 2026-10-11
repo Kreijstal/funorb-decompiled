@@ -76,10 +76,10 @@ final class rg {
               ml.a(212, 165, 20, false)) {
               vi.field_f = fo.a(4800, rr.field_a, new String[]{this.field_j.field_k});
               var9 = 40;
-              TeamRoster.field_e.f(db.a(true, 130 + param2), u.a(177, (byte) 94), 128);
+              TeamRoster.field_e.f(db.a(true, 130 + param2), MatchConditionEntry.a(177, (byte) 94), 128);
             }
-            this.field_c.e(db.a(true, param2 + 145), u.a(192, (byte) 94), var11);
-            km.field_h[1].e(db.a(true, 142 + param2), u.a(189, (byte) 94), var11);
+            this.field_c.e(db.a(true, param2 + 145), MatchConditionEntry.a(192, (byte) 94), var11);
+            km.field_h[1].e(db.a(true, 142 + param2), MatchConditionEntry.a(189, (byte) 94), var11);
           }
           if (null != this.field_a) {
             var12 = this.field_a.length;
@@ -102,15 +102,15 @@ final class rg {
                 ml.a(var15, var14, 20, false)) {
                 vi.field_f = this.field_a[var17].field_k;
                 var9 = 50 + var17;
-                TeamRoster.field_e.f(db.a(true, var14 - 35), u.a(var15 - 35, (byte) 94), 128);
+                TeamRoster.field_e.f(db.a(true, var14 - 35), MatchConditionEntry.a(var15 - 35, (byte) 94), 128);
               }
               if (param0 < 0 &&
                 param6 == var17) {
-                TeamRoster.field_e.f(db.a(true, var14 - 35), u.a(var15 - 35, (byte) 94), -param0);
+                TeamRoster.field_e.f(db.a(true, var14 - 35), MatchConditionEntry.a(var15 - 35, (byte) 94), -param0);
               }
               stackIn_57_0 = this.field_a[var17].field_c;
               stackIn_57_1 = db.a(true, -20 + var14);
-              stackIn_57_2 = u.a(var15 - 20, (byte) 94);
+              stackIn_57_2 = MatchConditionEntry.a(var15 - 20, (byte) 94);
               if (var17 != param6) {
                 stackIn_58_3 = var11;
               } else {
@@ -119,7 +119,7 @@ final class rg {
               ((RgbSprite) (Object) stackIn_57_0).e(stackIn_57_1, stackIn_57_2, stackIn_58_3);
               stackIn_60_0 = km.field_h[1];
               stackIn_60_1 = db.a(true, var14 - 23);
-              stackIn_60_2 = u.a(-23 + var15, (byte) 94);
+              stackIn_60_2 = MatchConditionEntry.a(-23 + var15, (byte) 94);
               if (var17 == param6) {
                 stackIn_61_3 = 256;
               } else {
@@ -138,22 +138,22 @@ final class rg {
                   ml.a(var15, var14, 20, false)) {
                   vi.field_f = fq.field_f[this.field_i[var13]];
                   var9 = 50 + var13;
-                  TeamRoster.field_e.f(db.a(true, -35 + var14), u.a(-35 + var15, (byte) 94), 128);
+                  TeamRoster.field_e.f(db.a(true, -35 + var14), MatchConditionEntry.a(-35 + var15, (byte) 94), 128);
                 }
                 if (ev.field_d == this.field_i[var13]) {
-                  TeamRoster.field_e.f(db.a(true, -35 + var14), u.a(var15 - 35, (byte) 94), param1);
+                  TeamRoster.field_e.f(db.a(true, -35 + var14), MatchConditionEntry.a(var15 - 35, (byte) 94), param1);
                 }
                 if (this.field_i[var13] == ab.field_a) {
-                  TeamRoster.field_e.f(db.a(true, var14 - 35), u.a(var15 - 35, (byte) 94), 256 - param1);
+                  TeamRoster.field_e.f(db.a(true, var14 - 35), MatchConditionEntry.a(var15 - 35, (byte) 94), 256 - param1);
                 }
-                BattleCharacter.field_h[uc.spellDefinitions[this.field_i[var13]][2]].g(db.a(true, var14 - 20), u.a(-20 + var15, (byte) 94));
+                BattleCharacter.field_h[uc.spellDefinitions[this.field_i[var13]][2]].g(db.a(true, var14 - 20), MatchConditionEntry.a(-20 + var15, (byte) 94));
                 if (ev.field_d == this.field_i[var13]) {
-                  BattleCharacter.field_h[uc.spellDefinitions[this.field_i[var13]][2]].f(db.a(true, -20 + var14), u.a(var15 - 20, (byte) 94), param1);
+                  BattleCharacter.field_h[uc.spellDefinitions[this.field_i[var13]][2]].f(db.a(true, -20 + var14), MatchConditionEntry.a(var15 - 20, (byte) 94), param1);
                 }
                 if (this.field_i[var13] == ab.field_a) {
-                  BattleCharacter.field_h[uc.spellDefinitions[this.field_i[var13]][2]].f(db.a(true, var14 - 20), u.a(var15 - 20, (byte) 94), 256 - param1);
+                  BattleCharacter.field_h[uc.spellDefinitions[this.field_i[var13]][2]].f(db.a(true, var14 - 20), MatchConditionEntry.a(var15 - 20, (byte) 94), 256 - param1);
                 }
-                km.field_h[0].g(db.a(true, -23 + var14), u.a(var15 - 23, (byte) 94));
+                km.field_h[0].g(db.a(true, -23 + var14), MatchConditionEntry.a(var15 - 23, (byte) 94));
               }
             }
           }

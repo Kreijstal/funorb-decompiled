@@ -69,7 +69,7 @@ final class cv {
     private final void f(int param0) {
         RuntimeException runtimeException = null;
         sl var2 = null;
-        om var3 = null;
+        CampaignMission var3 = null;
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -77,7 +77,7 @@ final class cv {
           var2 = ku.j(124);
           var3 = ar.a(var2.field_g, var2.field_e, 0);
           ts.a(var3, -1, var2);
-          var4 = var3.field_w;
+          var4 = var3.playerSlot;
           var5 = rd.field_j.battlefield.playerTurnCounts[var4];
           if (~var5 < param0) {
             vo.a(false, 1, var5, var3);
@@ -213,7 +213,7 @@ final class cv {
     private final void a(byte param0) {
         RuntimeException runtimeException = null;
         sl var2 = null;
-        om var3 = null;
+        CampaignMission var3 = null;
         int var4 = 0;
         String var5 = null;
         String var6 = null;
@@ -233,8 +233,8 @@ final class cv {
         try {
           var2 = ku.j(111);
           var3 = ar.a(var2.field_g, var2.field_e, 0);
-          var4 = Battlefield.a(var3.field_B.length, var2.field_c, false);
-          var5 = fo.a(4800, wd.field_e, new String[]{var3.field_J, Integer.toString(var4)});
+          var4 = Battlefield.a(var3.participantIds.length, var2.field_c, false);
+          var5 = fo.a(4800, wd.field_e, new String[]{var3.name, Integer.toString(var4)});
           var6 = fo.a(4800, hi.field_h, new String[]{var5});
           if (this.field_h == null) {
             var7 = 164;
@@ -258,16 +258,16 @@ final class cv {
           var11 = -(var8Lifetime1 / 2) + 320;
           var12 = -(var10 / 2) + 240;
           var13 = 13 + var11;
-          fe.b(db.a(true, var11), u.a(var12, (byte) 94), var8Lifetime1, var10, io.field_m, TutorialController.field_e, 0, 192);
+          fe.b(db.a(true, var11), MatchConditionEntry.a(var12, (byte) 94), var8Lifetime1, var10, io.field_m, TutorialController.field_e, 0, 192);
           var14 = -26 + var8Lifetime1;
           var15 = var13;
           var16 = var12 + 30;
           if (param0 < 9) {
             field_s = (Boolean) null;
           }
-          fe.a(this.field_b.field_w, db.a(true, var8Lifetime1 / 2 + var11), u.a(var16, (byte) 94), var8Lifetime1 - 20, nd.field_b, true, 40, 1);
+          fe.a(this.field_b.field_w, db.a(true, var8Lifetime1 / 2 + var11), MatchConditionEntry.a(var16, (byte) 94), var8Lifetime1 - 20, nd.field_b, true, 40, 1);
           var16 += 14;
-          rs.field_n.a(var6, db.a(true, var15), u.a(var16, (byte) 94), var14, var10, 16777215, 1, 1, 0, 0);
+          rs.field_n.a(var6, db.a(true, var15), MatchConditionEntry.a(var16, (byte) 94), var14, var10, 16777215, 1, 1, 0, 0);
           var16 = var16 + (var9Lifetime1 + 30);
           if (this.field_h == null) {
             this.field_h = new iq(qf.field_c, var15, var16, var7);
@@ -310,8 +310,8 @@ final class cv {
         int var4Lifetime1;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          fe.a(db.a(true, 32), u.a(71, (byte) 94), 305, 228, io.field_m, jh.field_k, 0, 128, ai.field_V, true, nd.field_b);
-          fe.a(db.a(true, 32), u.a(321, (byte) 94), 305, 92, io.field_m, jh.field_k, 0, 128, SummonAction.field_A, true, nd.field_b);
+          fe.a(db.a(true, 32), MatchConditionEntry.a(71, (byte) 94), 305, 228, io.field_m, jh.field_k, 0, 128, ai.field_V, true, nd.field_b);
+          fe.a(db.a(true, 32), MatchConditionEntry.a(321, (byte) 94), 305, 92, io.field_m, jh.field_k, 0, 128, SummonAction.field_A, true, nd.field_b);
           if (null != this.field_d) {
             if (this.field_d.field_k == -1) {
               stackIn_8_0 = SummonAction.field_A;
@@ -319,13 +319,13 @@ final class cv {
               stackIn_8_0 = this.field_d.field_w;
             }
             var2 = stackIn_8_0;
-            fe.a(db.a(true, 346), u.a(70, (byte) 94), 262, 343, io.field_m, jh.field_k, 0, 128, (String) (var2), true, nd.field_b);
+            fe.a(db.a(true, 346), MatchConditionEntry.a(70, (byte) 94), 262, 343, io.field_m, jh.field_k, 0, 128, (String) (var2), true, nd.field_b);
             stackIn_11_0 = db.a(true, 354);
-            stackIn_11_1 = u.a(361, (byte) 94);
+            stackIn_11_1 = MatchConditionEntry.a(361, (byte) 94);
             stackIn_11_2 = 246;
             stackIn_11_3 = 41;
             stackIn_11_4 = DisplacedUnitMarker.field_s;
-            if (!wg.a(-33, db.a(true, 354), db.a(true, 354) + 246, u.a(361, (byte) 94), u.a(361, (byte) 94) + 41)) {
+            if (!wg.a(-33, db.a(true, 354), db.a(true, 354) + 246, MatchConditionEntry.a(361, (byte) 94), MatchConditionEntry.a(361, (byte) 94) + 41)) {
               stackIn_12_5 = nd.field_b;
             } else {
               stackIn_12_5 = TutorialController.field_e;
@@ -335,9 +335,9 @@ final class cv {
             if (this.field_d.field_k == -1) {
               var3 = es.field_b;
             }
-            fe.c(var3, db.a(true, 477), u.a(396, (byte) 94), 0, true);
+            fe.c(var3, db.a(true, 477), MatchConditionEntry.a(396, (byte) 94), 0, true);
             var4 = db.a(true, 359);
-            var5 = u.a(85, (byte) 94);
+            var5 = MatchConditionEntry.a(85, (byte) 94);
             CampaignUnitOverride.a(var4, var4 + 236, var5 + 200, var5, (byte) 83);
             boolean decompiledSharedTail0 = (this.field_d == null ||
               this.field_d.field_k != -1);
@@ -395,7 +395,7 @@ final class cv {
             break;
           }
           this.field_u = (cq) (var2);
-          fe.a(og.field_u, db.a(true, 320), u.a(30, (byte) 94), nd.field_b, 1, false);
+          fe.a(og.field_u, db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), nd.field_b, 1, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -449,8 +449,8 @@ final class cv {
         int var9Lifetime1;
         try {
           var5_int = db.a(true, -15 + param2.field_y);
-          var6 = u.a(19 + param2.field_x, (byte) 94);
-          CampaignUnitOverride.a(db.a(true, param2.field_y), db.a(true, param2.field_B + param2.field_y), u.a(param2.field_x + param2.field_o, (byte) 94), u.a(param2.field_x, (byte) 94), (byte) 125);
+          var6 = MatchConditionEntry.a(19 + param2.field_x, (byte) 94);
+          CampaignUnitOverride.a(db.a(true, param2.field_y), db.a(true, param2.field_B + param2.field_y), MatchConditionEntry.a(param2.field_x + param2.field_o, (byte) 94), MatchConditionEntry.a(param2.field_x, (byte) 94), (byte) 125);
           var7 = 54;
           var8 = 128;
           var9 = -1;
@@ -477,7 +477,7 @@ final class cv {
           }
           rf.b(param0 - 18875);
           stackIn_17_0 = db.a(true, param2.field_y);
-          stackIn_17_1 = u.a(param2.field_x, (byte) 94);
+          stackIn_17_1 = MatchConditionEntry.a(param2.field_x, (byte) 94);
           stackIn_17_2 = param2.field_B;
           stackIn_17_3 = param2.field_o;
           stackIn_17_4 = EffectPresentation.field_j;
@@ -490,9 +490,9 @@ final class cv {
           if (null != param2.field_w) {
             var10 = db.a(true, param2.field_y + var7);
             var11 = param2.field_o / 2 + param2.field_x + rs.field_n.field_v;
-            fe.a(param2.field_w, var10, u.a(8 + (param2.field_x + param2.field_o / 2), (byte) 94), true);
-            fe.a(param2.field_w, var10, u.a(param2.field_o / 2 + param2.field_x + 8, (byte) 94), nd.field_b, true);
-            rs.field_n.b(param2.field_r, var10, u.a(var11, (byte) 94), 12303291, 1);
+            fe.a(param2.field_w, var10, MatchConditionEntry.a(8 + (param2.field_x + param2.field_o / 2), (byte) 94), true);
+            fe.a(param2.field_w, var10, MatchConditionEntry.a(param2.field_o / 2 + param2.field_x + 8, (byte) 94), nd.field_b, true);
+            rs.field_n.b(param2.field_r, var10, MatchConditionEntry.a(var11, (byte) 94), 12303291, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -609,17 +609,17 @@ final class cv {
                 }
                 var6_int = 8573219;
               }
-              fe.c(param3.field_m, db.a(true, 0), u.a(3, (byte) 94), param3.field_m.field_y, var6_int);
+              fe.c(param3.field_m, db.a(true, 0), MatchConditionEntry.a(3, (byte) 94), param3.field_m.field_y, var6_int);
             }
             if (param4) {
-              param3.field_m.f(db.a(true, 0), u.a(0, (byte) 94), 128);
+              param3.field_m.f(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), 128);
             }
             if (param2) {
               if (null == param3.field_s) {
                 param3.field_s = param3.field_m.g();
                 param3.field_s.c(228, 130, 4);
               }
-              param3.field_s.e(db.a(true, 0), u.a(0, (byte) 94), (ae.b(uk.field_n << 6, 100) >> 12) + 22);
+              param3.field_s.e(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), (ae.b(uk.field_n << 6, 100) >> 12) + 22);
             }
             if (!param2 ||
               var13 != 0) {
@@ -631,7 +631,7 @@ final class cv {
                 var7 = (a) (var6.first((byte) 120));
                 if (null != var7) {
                   var8 = null;
-                  var10 = param3.field_p.field_E;
+                  var10 = param3.field_p.difficulty;
                   if (param3.field_r != null) {
                     var10 = 0;
                     var9 = DeployAction.field_D[this.field_l];
@@ -701,7 +701,7 @@ final class cv {
     private final void d(int param0) {
         RuntimeException runtimeException = null;
         sl var2 = null;
-        om var3 = null;
+        CampaignMission var3 = null;
         int var4 = 0;
         String var5 = null;
         int var6 = 0;
@@ -721,7 +721,7 @@ final class cv {
         try {
           var2 = ku.j(97);
           var3 = ar.a(var2.field_g, var2.field_e, param0 - 26);
-          var4 = Battlefield.a(var3.field_B.length, var2.field_c, false);
+          var4 = Battlefield.a(var3.participantIds.length, var2.field_c, false);
           var5 = fo.a(4800, sb.field_f, new String[]{Integer.toString(var4)});
           boolean decompiledSharedTail0 = (null == this.field_c);
           if (!decompiledSharedTail0) {
@@ -749,13 +749,13 @@ final class cv {
           var10 = -(var7Lifetime1 / 2) + 320;
           var11 = 240 - var9Lifetime1 / 2;
           var12 = var10 + 13;
-          fe.b(db.a(true, var10), u.a(var11, (byte) 94), var7Lifetime1, var9Lifetime1, io.field_m, TutorialController.field_e, 0, 192);
+          fe.b(db.a(true, var10), MatchConditionEntry.a(var11, (byte) 94), var7Lifetime1, var9Lifetime1, io.field_m, TutorialController.field_e, 0, 192);
           var13 = var7Lifetime1 - 26;
           var14 = var12;
           var15 = 30 + var11;
-          fe.a(this.field_b.field_w, db.a(true, var10 + var7Lifetime1 / 2), u.a(var15, (byte) 94), var7Lifetime1 - 20, nd.field_b, true, 40, 1);
+          fe.a(this.field_b.field_w, db.a(true, var10 + var7Lifetime1 / 2), MatchConditionEntry.a(var15, (byte) 94), var7Lifetime1 - 20, nd.field_b, true, 40, 1);
           var15 += 14;
-          rs.field_n.a(var5, db.a(true, var14), u.a(var15, (byte) 94), var13, var9Lifetime1, 16777215, 1, 1, 0, 0);
+          rs.field_n.a(var5, db.a(true, var14), MatchConditionEntry.a(var15, (byte) 94), var13, var9Lifetime1, 16777215, 1, 1, 0, 0);
           var15 = var15 + (30 + var8Lifetime1);
           if (null == this.field_c) {
             this.field_c = new iq(kd.field_Y, var14, var15, var6);
@@ -906,7 +906,7 @@ final class cv {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        lo var7 = null;
+        MapLayout var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -915,7 +915,7 @@ final class cv {
         int[][] var13 = null;
         int var14 = 0;
         int var15_int = 0;
-        om var15 = null;
+        CampaignMission var15 = null;
         int var16 = 0;
         IntrusiveNode var16_ref_tc = null;
         int var17 = 0;
@@ -984,22 +984,22 @@ final class cv {
             }
             var3Lifetime1 = var2_int + 26;
             var4Lifetime1 = -26 + var3Lifetime1;
-            fe.b(db.a(true, 5), u.a(4, (byte) 94), var3Lifetime1, 472, io.field_m, TutorialController.field_e, 0, 112);
+            fe.b(db.a(true, 5), MatchConditionEntry.a(4, (byte) 94), var3Lifetime1, 472, io.field_m, TutorialController.field_e, 0, 112);
             var5 = 18;
             var6 = 34;
             var6Lifetime1 = 34;
-            fe.a(this.field_b.field_w, db.a(true, var3Lifetime1 / 2 + 5), u.a(var6Lifetime1, (byte) 94), -20 + var3Lifetime1, nd.field_b, true, 40, 1);
+            fe.a(this.field_b.field_w, db.a(true, var3Lifetime1 / 2 + 5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), -20 + var3Lifetime1, nd.field_b, true, 40, 1);
             var6Lifetime1 += 14;
-            var7 = this.field_b.field_p.a(-127);
+            var7 = this.field_b.field_p.getMapLayout(-127);
             var8 = 0;
             var9 = 6;
             var10 = 5;
             var11 = var4Lifetime1;
             var12 = 2 * var11 / 3;
-            var9Lifetime1 = var11 / var7.field_l;
-            var8Lifetime1 = (-(var9Lifetime1 * var7.field_l) + var11) / 2;
-            var10Lifetime1 = var12 / var7.field_n;
-            var13 = var7.e(28554);
+            var9Lifetime1 = var11 / var7.mapWidth;
+            var8Lifetime1 = (-(var9Lifetime1 * var7.mapWidth) + var11) / 2;
+            var10Lifetime1 = var12 / var7.mapHeight;
+            var13 = var7.getTerrainGrid(28554);
             var14 = var13[0].length - 1;
             var15_int = 0;
             scanLoop1: while (true) {
@@ -1011,9 +1011,9 @@ final class cv {
                 var16 = stackIn_26_0;
                 while (var16 < var13[0].length) {
                   var17 = var13[var15_int][-var16 + var13[0].length - 1];
-                  var18 = mc.field_d[var7.field_p].field_i[var17];
+                  var18 = UnitLossCondition.field_d[var7.field_p].field_i[var17];
                   var19_int = db.a(true, var8Lifetime1 + var9Lifetime1 * (var14 - var16) + var5);
-                  var20 = u.a(var6Lifetime1 + var10Lifetime1 * var15_int, (byte) 94);
+                  var20 = MatchConditionEntry.a(var6Lifetime1 + var10Lifetime1 * var15_int, (byte) 94);
                   SoftwareRaster.f(var19_int, var20, var9Lifetime1, var10Lifetime1, var18);
                   SoftwareRaster.e(var19_int, var20, var19_int + var9Lifetime1, var20, 16777215, 16);
                   SoftwareRaster.e(var19_int, 1 + var20, var19_int, var20 + var10Lifetime1, 16777215, 16);
@@ -1024,7 +1024,7 @@ final class cv {
                 var15_int++;
                 continue scanLoop1;
               }
-              fe.b(db.a(true, var5 + var8Lifetime1), u.a(var6Lifetime1, (byte) 94), var9Lifetime1 * var7.field_l, var7.field_n * var10Lifetime1, io.field_m, TutorialController.field_e, 0, 0);
+              fe.b(db.a(true, var5 + var8Lifetime1), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var9Lifetime1 * var7.mapWidth, var7.mapHeight * var10Lifetime1, io.field_m, TutorialController.field_e, 0, 0);
               var6Lifetime1 = var6Lifetime1 + (124 + ro.field_rb[0].field_f);
               stackIn_26_0 = 18;
               break;
@@ -1034,7 +1034,7 @@ final class cv {
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var16_ref_tc == null))) {
               var17Lifetime1 = (int)var16_ref_tc.key;
-              ro.field_rb[var17Lifetime1].a(db.a(true, var15_intLifetime1), u.a(var6Lifetime1 - ro.field_rb[var17Lifetime1].field_f, (byte) 94));
+              ro.field_rb[var17Lifetime1].a(db.a(true, var15_intLifetime1), MatchConditionEntry.a(var6Lifetime1 - ro.field_rb[var17Lifetime1].field_f, (byte) 94));
               var15_intLifetime1 = var15_intLifetime1 + ro.field_rb[var17Lifetime1].field_g;
               stackIn_31_0 = this.field_b;
               if (var29 == 0) {
@@ -1047,7 +1047,7 @@ final class cv {
               stackIn_31_0 = this.field_b;
             }
             var15 = stackIn_31_0.field_p;
-            rs.field_n.a(k.field_b + var15.field_E, db.a(true, var5), u.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
+            rs.field_n.a(k.field_b + var15.difficulty, db.a(true, var5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
             var6Lifetime1 = var6Lifetime1 + rs.field_n.field_v;
             var16Lifetime1 = 1;
             if (this.field_b.field_r != null) {
@@ -1064,22 +1064,22 @@ final class cv {
               }
               stackIn_37_3[stackIn_37_4] = stackIn_38_5;
               var17_ref_String = fo.a(stackIn_37_0, stackIn_37_1, stackIn_37_2);
-              var16Lifetime1 = rs.field_n.a(var17_ref_String, db.a(true, var5), u.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
+              var16Lifetime1 = rs.field_n.a(var17_ref_String, db.a(true, var5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16776960, 1, 0, 0, 0);
               var18Lifetime1 = rs.field_n.a(var17_ref_String, var4Lifetime1);
               var19_intLifetime1 = this.field_b.field_A;
               if (1000 >= var19_intLifetime1) {
                 if (var19_intLifetime1 > 500) {
-                  MoveAttackRequest.field_C[1].g(db.a(true, 5 + var18Lifetime1 + var5), u.a(var6Lifetime1 + rs.field_n.field_H - rs.field_n.field_z, (byte) 94));
+                  MoveAttackRequest.field_C[1].g(db.a(true, 5 + var18Lifetime1 + var5), MatchConditionEntry.a(var6Lifetime1 + rs.field_n.field_H - rs.field_n.field_z, (byte) 94));
                 }
                 if ((!(var19_intLifetime1 > 500) ||
                   var29 != 0) &&
                   (!(10 >= var19_intLifetime1))) {
-                  MoveAttackRequest.field_C[2].g(db.a(true, var5 + var18Lifetime1 + 5), u.a(-rs.field_n.field_z + rs.field_n.field_H + var6Lifetime1, (byte) 94));
+                  MoveAttackRequest.field_C[2].g(db.a(true, var5 + var18Lifetime1 + 5), MatchConditionEntry.a(-rs.field_n.field_z + rs.field_n.field_H + var6Lifetime1, (byte) 94));
                   if (var29 != 0) {
-                    MoveAttackRequest.field_C[0].g(db.a(true, var5 - (-var18Lifetime1 - 5)), u.a(-rs.field_n.field_z + rs.field_n.field_H + var6Lifetime1, (byte) 94));
+                    MoveAttackRequest.field_C[0].g(db.a(true, var5 - (-var18Lifetime1 - 5)), MatchConditionEntry.a(-rs.field_n.field_z + rs.field_n.field_H + var6Lifetime1, (byte) 94));
                   }
                 }} else {
-                MoveAttackRequest.field_C[0].g(db.a(true, var5 - (-var18Lifetime1 - 5)), u.a(-rs.field_n.field_z + rs.field_n.field_H + var6Lifetime1, (byte) 94));
+                MoveAttackRequest.field_C[0].g(db.a(true, var5 - (-var18Lifetime1 - 5)), MatchConditionEntry.a(-rs.field_n.field_z + rs.field_n.field_H + var6Lifetime1, (byte) 94));
               }
             }
             var6Lifetime1 = var6Lifetime1 + rs.field_n.field_v * (-1 + var16Lifetime1);
@@ -1090,7 +1090,7 @@ final class cv {
             var17Lifetime2 += 17;
             var19 = null;
             var18Lifetime2 = var18Lifetime2 + param0;
-            var20Lifetime1 = var15.field_B.length - 1;
+            var20Lifetime1 = var15.participantIds.length - 1;
             var21 = 50;
             var22 = 15;
             if (var20Lifetime1 > 2) {
@@ -1099,13 +1099,13 @@ final class cv {
               var17Lifetime2 += 30;
             }
             var17Lifetime2 = var17Lifetime2 + (var20Lifetime1 * var21 / 2 - 50);
-            var23 = var15.field_B;
+            var23 = var15.participantIds;
             var24_int = 0;
             while (true) {
               if (var24_int >= var23.length) {
                 var5Lifetime1 = 18;
                 var6Lifetime1 += 16;
-                en.field_E.a(var15.field_n, db.a(true, var5Lifetime1), u.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16777215, 1, 0, 0, 12);
+                en.field_E.a(var15.description, db.a(true, var5Lifetime1), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var4Lifetime1, 472, 16777215, 1, 0, 0, 12);
                 stackIn_70_0 = 391;
                 break;
               }
@@ -1115,13 +1115,13 @@ final class cv {
                 if (stackIn_70_0 <= var25_int) {
                   var26_ref_sd = var15.field_G.field_q[var25_int];
                   if (var20Lifetime1 > 2) {
-                    var26_ref_sd.field_q.a(false, false, (byte) 68, false, false, false, u.a(var17Lifetime2, (byte) 94), var26_ref_sd.field_u, db.a(true, -5 + var18Lifetime2));
+                    var26_ref_sd.field_q.a(false, false, (byte) 68, false, false, false, MatchConditionEntry.a(var17Lifetime2, (byte) 94), var26_ref_sd.field_u, db.a(true, -5 + var18Lifetime2));
                   } else {
-                    var26_ref_sd.field_q.a(false, 0, u.a(var17Lifetime2, (byte) 94), false, db.a(true, var18Lifetime2 - 5), var26_ref_sd.field_u, false, false, false, param0 - 19764);
+                    var26_ref_sd.field_q.a(false, 0, MatchConditionEntry.a(var17Lifetime2, (byte) 94), false, db.a(true, var18Lifetime2 - 5), var26_ref_sd.field_u, false, false, false, param0 - 19764);
                   }
                   var27 = var18Lifetime2 + 60;
                   var28 = 5 + var4Lifetime1 - var27;
-                  rs.field_n.a(var26_ref_sd.field_u, db.a(true, var27), u.a(var17Lifetime2 + var22, (byte) 94), var28, 20, 16777215, 1, 0, 2, 0);
+                  rs.field_n.a(var26_ref_sd.field_u, db.a(true, var27), MatchConditionEntry.a(var17Lifetime2 + var22, (byte) 94), var28, 20, 16777215, 1, 0, 2, 0);
                   var17Lifetime2 = var17Lifetime2 - var21;
                 }
                 var24_int++;
@@ -1134,7 +1134,7 @@ final class cv {
             var24 = km.field_h[2];
             this.a(var24, 0, 0, 10 + var6Lifetime2, var23_ref.field_h, param0 - 19, 1.0f, 18 + var23_ref.field_h.field_A / 2);
             if (var23_ref.field_i != null &&
-              ml.a(u.a(var6Lifetime2 + 10, (byte) 94), db.a(true, var23_ref.field_h.field_A / 2 + 18), 25, false)) {
+              ml.a(MatchConditionEntry.a(var6Lifetime2 + 10, (byte) 94), db.a(true, var23_ref.field_h.field_A / 2 + 18), 25, false)) {
               var25_intLifetime1 = var4Lifetime1 * 2;
               var26 = var3Lifetime1 + 5;
               if (so.field_b.field_a < var26 + var25_intLifetime1) {
@@ -1142,17 +1142,17 @@ final class cv {
               }
               var27Lifetime1 = rs.field_n.a(var23_ref.field_i, var25_intLifetime1, 0);
               var28Lifetime1 = var6Lifetime2 - var27Lifetime1 / 2;
-              SoftwareRaster.b(db.a(true, var26), u.a(var28Lifetime1, (byte) 94), var25_intLifetime1, var27Lifetime1 + 2, 0, 128);
-              rs.field_n.a(var23_ref.field_i, db.a(true, var26), u.a(var28Lifetime1, (byte) 94), var25_intLifetime1, 472, 16777215, 1, 1, 0, 0);
+              SoftwareRaster.b(db.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, var27Lifetime1 + 2, 0, 128);
+              rs.field_n.a(var23_ref.field_i, db.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, 472, 16777215, 1, 1, 0, 0);
             }
-            rs.field_n.a(ft.field_l + var23_ref.field_c, db.a(true, var23_ref.field_h.field_A + 31), u.a(-10 + var6Lifetime2, (byte) 94), -13 + (-var23_ref.field_h.field_A + var4Lifetime1), var23_ref.field_h.field_x, 16776960, 0, 0, 1, 0);
+            rs.field_n.a(ft.field_l + var23_ref.field_c, db.a(true, var23_ref.field_h.field_A + 31), MatchConditionEntry.a(-10 + var6Lifetime2, (byte) 94), -13 + (-var23_ref.field_h.field_A + var4Lifetime1), var23_ref.field_h.field_x, 16776960, 0, 0, 1, 0);
             if (null != var19) {
               var25_intLifetime2 = 100;
               var26Lifetime1 = AiPlanningStrategy.field_d;
               var27Lifetime2 = rs.field_n.a(((sd) (var19)).field_u, var25_intLifetime2, 0);
               var28Lifetime2 = -(var27Lifetime2 / 2) + (25 + ko.field_b);
-              SoftwareRaster.b(db.a(true, var26Lifetime1), u.a(var28Lifetime2, (byte) 94), var25_intLifetime2, var27Lifetime2 + 2, 0, 255);
-              rs.field_n.a(((sd) (var19)).field_u, db.a(true, var26Lifetime1), u.a(var28Lifetime2, (byte) 94), var25_intLifetime2, 472, 16777215, 1, 1, 0, 0);
+              SoftwareRaster.b(db.a(true, var26Lifetime1), MatchConditionEntry.a(var28Lifetime2, (byte) 94), var25_intLifetime2, var27Lifetime2 + 2, 0, 255);
+              rs.field_n.a(((sd) (var19)).field_u, db.a(true, var26Lifetime1), MatchConditionEntry.a(var28Lifetime2, (byte) 94), var25_intLifetime2, 472, 16777215, 1, 1, 0, 0);
             }
             var6Lifetime3 = 436;
             if (this.field_t == null) {
@@ -1209,7 +1209,7 @@ final class cv {
         try {
           var9_int = param4.field_y;
           param7 = db.a(true, param7);
-          param3 = u.a(param3, (byte) 94);
+          param3 = MatchConditionEntry.a(param3, (byte) 94);
           var10 = (13 * param3 + fe.field_b + param7 * 57) % 100;
           if (param6 == (float)param5) {
             if (param0 != null) {
@@ -1283,10 +1283,10 @@ final class cv {
         }
     }
 
-    private final RgbSprite a(om param0, sl param1, int param2, int param3, int param4) {
+    private final RgbSprite a(CampaignMission param0, sl param1, int param2, int param3, int param4) {
         RuntimeException runtimeException = null;
         RgbSprite var6 = null;
-        lo var7 = null;
+        MapLayout var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -1318,13 +1318,13 @@ final class cv {
         var23 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var6 = new RgbSprite(param4, param2);
-          var7 = param0.a(-98);
-          var8 = var6.field_v / var7.field_n;
-          var9 = var6.field_y / var7.field_l;
-          var10 = (var6.field_y - var9 * var7.field_l) / 2;
-          var11 = (-(var9 * var7.field_n) + var6.field_v) / 2;
+          var7 = param0.getMapLayout(-98);
+          var8 = var6.field_v / var7.mapHeight;
+          var9 = var6.field_y / var7.mapWidth;
+          var10 = (var6.field_y - var9 * var7.mapWidth) / 2;
+          var11 = (-(var9 * var7.mapHeight) + var6.field_v) / 2;
           var12 = new int[][]{kb.field_o};
-          var13 = new String[param0.field_B.length];
+          var13 = new String[param0.participantIds.length];
           var14_int = 0;
           while (var13.length > var14_int) {
             var13[var14_int] = "-";
@@ -1334,7 +1334,7 @@ final class cv {
             }
             break;
           }
-          var14 = new Battlefield(0, var13, -1, var12, 0, true, false, param0.field_o, 1, var7.field_p, false, (int[][]) null, 4, 0, 0, param0);
+          var14 = new Battlefield(0, var13, -1, var12, 0, true, false, param0.mapSizeSetting, 1, var7.field_p, false, (int[][]) null, 4, 0, 0, param0);
           var14.localPlayer = 0;
           try {
             ml.a(param0, (byte) -26);
@@ -1359,7 +1359,7 @@ final class cv {
               if (stackIn_20_0 >= stackIn_20_1) {
                 var19 = 0;
               }
-              var20 = mc.field_d[var7.field_p].field_i[var19];
+              var20 = UnitLossCondition.field_d[var7.field_p].field_i[var19];
               if (null != var18.occupant) {
                 var21_ref_jd = var18.occupant;
                 var20 = op.field_c[0][var21_ref_jd.ownerPlayer];
@@ -1403,7 +1403,7 @@ final class cv {
         }
     }
 
-    private final void a(int param0, om param1) {
+    private final void a(int param0, CampaignMission param1) {
         RuntimeException runtimeException = null;
         cq var3 = null;
         int var4 = 0;
@@ -1455,7 +1455,7 @@ final class cv {
 
     private final void g(int param0) {
         sl var2 = null;
-        om var3 = null;
+        CampaignMission var3 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
@@ -1522,7 +1522,7 @@ final class cv {
             while (true) {
               if (java.lang.reflect.Array.getLength(var2) > var3_int) {
                 var4 = ((Object[]) (var2))[var3_int];
-                ActionSpell.a(4, -1, (om) (var4), true, 1, -1);
+                ActionSpell.a(4, -1, (CampaignMission) (var4), true, 1, -1);
                 var3_int++;
                 if (var7 == 0) {
                   continue;
@@ -1548,7 +1548,7 @@ final class cv {
                 this.b((byte) 107);
                 return;
               }
-              var2_int = this.field_e.a(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -79, ko.field_b - u.a(0, (byte) 94));
+              var2_int = this.field_e.a(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -79, ko.field_b - MatchConditionEntry.a(0, (byte) 94));
               if (-1 < var2_int) {
                 var3 = null;
                 var4_ref = (cq) (this.field_i.b(1));
@@ -1657,7 +1657,7 @@ final class cv {
                   this.field_c.a((byte) -49)) {
                   var2 = ku.j(86);
                   var3 = ar.a(((sl) (var2)).field_g, ((sl) (var2)).field_e, 0);
-                  l.field_c = (om) (var3);
+                  l.field_c = (CampaignMission) (var3);
                   CipherPacketBuffer.a(true, -11, 1, 0);
                 }
                 if (DeployEvent.field_A == 1 &&
@@ -1695,7 +1695,7 @@ final class cv {
               }
               if (null != this.field_d &&
                 DeployEvent.field_A == 1 &&
-                wg.a(-33, db.a(true, 354), db.a(true, 600), u.a(361, (byte) 94), u.a(402, (byte) 94))) {
+                wg.a(-33, db.a(true, 354), db.a(true, 600), MatchConditionEntry.a(361, (byte) 94), MatchConditionEntry.a(402, (byte) 94))) {
                 this.g(0);
                 return;
               }
@@ -1916,10 +1916,10 @@ final class cv {
         RuntimeException decompiledCaughtException = null;
         cf var3 = null;
         RuntimeException var3_ref = null;
-        om[] var4_ref_om__ = null;
+        CampaignMission[] var4_ref_om__ = null;
         int var4 = 0;
         int var5 = 0;
-        om var6_ref_om = null;
+        CampaignMission var6_ref_om = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1972,11 +1972,11 @@ final class cv {
               return;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (null != var13.field_p.field_y &&
+            if (null != var13.field_p.neighborMissionIds &&
               null == var13.field_r) {
               var14 = var13.field_p.e((byte) 68) ? 1 : 0;
               var15 = var14;
-              var16 = var13.field_p.field_y;
+              var16 = var13.field_p.neighborMissionIds;
               var17 = 0;
               while (var16.length > var17) {
                 var18 = var16[var17];
@@ -2016,7 +2016,7 @@ final class cv {
             var13 = (cq) (this.field_i.b((byte) 64));
           }
           if (param1 < 15) {
-            this.a(45, (om) null);
+            this.a(45, (CampaignMission) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2043,7 +2043,7 @@ final class cv {
           this.field_l = param0;
           this.b(param0, 98);
           if (!param1) {
-            discarded$1 = this.a((om) null, (sl) null, -116, 21, 100);
+            discarded$1 = this.a((CampaignMission) null, (sl) null, -116, 21, 100);
           }
           this.a(1, (byte) 42);
           return;
@@ -2163,14 +2163,14 @@ final class cv {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2 = mu.field_g[this.field_l][0];
-          var2.b(db.a(true, 0), u.a(0, (byte) 94));
+          var2.b(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94));
           if (null != this.field_e) {
             try {
               var3 = new boolean[this.field_i.a((byte) 117)];
               var4 = (cq) (this.field_i.b(param0 ^ -25751));
               do {
                 if (var4 == null) {
-                  this.field_e.a((byte) 93, db.a(true, 0), (boolean[]) (var3), u.a(0, (byte) 94), mu.field_g[this.field_l][2]);
+                  this.field_e.a((byte) 93, db.a(true, 0), (boolean[]) (var3), MatchConditionEntry.a(0, (byte) 94), mu.field_g[this.field_l][2]);
                   break;
                 }
                 ((byte[]) (var3))[var4.field_k] = (byte) (var4.field_l ? 1 : 0);
@@ -2199,8 +2199,8 @@ final class cv {
                 if (var5_ref_cq.field_l &&
                   AiPlanningStrategy.field_d >= db.a(true, var5_ref_cq.field_y) &&
                   AiPlanningStrategy.field_d <= db.a(true, var5_ref_cq.field_y + var5_ref_cq.field_B) &&
-                  ko.field_b >= u.a(var5_ref_cq.field_x, (byte) 94) &&
-                  ko.field_b <= u.a(var5_ref_cq.field_o + var5_ref_cq.field_x, (byte) 94)) {
+                  ko.field_b >= MatchConditionEntry.a(var5_ref_cq.field_x, (byte) 94) &&
+                  ko.field_b <= MatchConditionEntry.a(var5_ref_cq.field_o + var5_ref_cq.field_x, (byte) 94)) {
                   stackIn_38_0 = 1;
                 } else {
                   stackIn_38_0 = 0;
@@ -2208,7 +2208,7 @@ final class cv {
                 var6Lifetime1 = stackIn_38_0;
                 if (this.field_e != null) {
                   if (var5_ref_cq.field_l &&
-                    this.field_e.a(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -128, ko.field_b - u.a(0, (byte) 94)) == var5_ref_cq.field_k) {
+                    this.field_e.a(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -128, ko.field_b - MatchConditionEntry.a(0, (byte) 94)) == var5_ref_cq.field_k) {
                     stackIn_48_0 = 1;
                   } else {
                     stackIn_48_0 = 0;
@@ -2266,8 +2266,8 @@ final class cv {
               if (-var5 + var6 < 225) {
                 var6 = 225 + var5;
               }
-              fe.b(((cq) (var3)).field_w, db.a(true, var6), u.a(((cq) (var3)).field_x - 12, (byte) 94), true);
-              fe.c(((cq) (var3)).field_w, db.a(true, var6), u.a(((cq) (var3)).field_x - 12, (byte) 94), nd.field_b, true);
+              fe.b(((cq) (var3)).field_w, db.a(true, var6), MatchConditionEntry.a(((cq) (var3)).field_x - 12, (byte) 94), true);
+              fe.c(((cq) (var3)).field_w, db.a(true, var6), MatchConditionEntry.a(((cq) (var3)).field_x - 12, (byte) 94), nd.field_b, true);
               if (null != var4_ref &&
                 ~this.field_l == ~var4_ref.field_g &&
                 var4_ref.field_e == ((cq) (var3)).field_k) {
@@ -2277,8 +2277,8 @@ final class cv {
               }
               var7 = stackIn_89_0;
               if (var7 != 0) {
-                fe.b(qf.field_a, db.a(true, ((cq) (var3)).field_y), u.a(10 + ((cq) (var3)).field_x, (byte) 94), true);
-                fe.c(qf.field_a, db.a(true, ((cq) (var3)).field_y), u.a(((cq) (var3)).field_x + 10, (byte) 94), nd.field_b, true);
+                fe.b(qf.field_a, db.a(true, ((cq) (var3)).field_y), MatchConditionEntry.a(10 + ((cq) (var3)).field_x, (byte) 94), true);
+                fe.c(qf.field_a, db.a(true, ((cq) (var3)).field_y), MatchConditionEntry.a(((cq) (var3)).field_x + 10, (byte) 94), nd.field_b, true);
               }
               if (this.field_u != var3) {
                 ub.$cfr$intArgs$a$6d836999ad61(127, im.field_v[1]);
@@ -2316,7 +2316,7 @@ final class cv {
         RuntimeException var10_ref_RuntimeException = null;
         cq var11 = null;
         cf var11_ref = null;
-        om var12 = null;
+        CampaignMission var12 = null;
         cq var12_ref = null;
         int var13_int = 0;
         IntrusiveNode var13 = null;
@@ -2357,14 +2357,14 @@ final class cv {
                   var11.field_o = 57;
                   var11.field_y = 45;
                   var12 = ar.a(var10_ref_sl.field_g, var10_ref_sl.field_e, 0);
-                  var13_int = Battlefield.a(var12.field_B.length, var10_ref_sl.field_c, false);
-                  var14 = fo.a(4800, wd.field_e, new String[]{var12.field_J, Integer.toString(var13_int)});
+                  var13_int = Battlefield.a(var12.participantIds.length, var10_ref_sl.field_c, false);
+                  var14 = fo.a(4800, wd.field_e, new String[]{var12.name, Integer.toString(var13_int)});
                   var11.field_w = var12.field_G.field_k;
                   var11.field_l = true;
                   var11.field_p = var12;
                   var11.field_D = var12.field_G.field_s;
                   var11.field_r = var14;
-                  var11.field_q = var12.field_n;
+                  var11.field_q = var12.description;
                   if (!var12.field_G.c((byte) -45) &&
                     rf.a(27875)) {
                     var11.field_l = false;

@@ -177,7 +177,7 @@ final class RevivalEvent extends GameEvent {
           this.unit.tileX = this.destinationX;
           this.unit.accessoryType = 0;
           this.unit.refreshTileEffects((byte) -96);
-          this.unit.field_S = false;
+          this.unit.removedFromActivePlay = false;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "rt.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

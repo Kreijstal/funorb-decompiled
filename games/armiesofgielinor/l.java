@@ -5,7 +5,7 @@ final class l {
     static String field_h;
     static String field_e;
     static ru[] field_b;
-    static om field_c;
+    static CampaignMission field_c;
     static String field_g;
     static rc field_a;
     static String field_d;

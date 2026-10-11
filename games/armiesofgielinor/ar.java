@@ -55,7 +55,7 @@ final class ar extends ms {
         return cp.field_b[var4];
     }
 
-    final static om a(int param0, int param1, int param2) {
+    final static CampaignMission a(int param0, int param1, int param2) {
         cf var4 = br.a(param0, (byte) -14);
         cf var3 = var4;
         if (var3 == null) {

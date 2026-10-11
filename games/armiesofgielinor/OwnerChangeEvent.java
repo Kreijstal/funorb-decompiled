@@ -51,8 +51,8 @@ final class OwnerChangeEvent extends GameEvent {
         ta.field_N = 0;
         kd.field_R = null;
         jj.field_g = null;
-        int var2 = gm.field_i;
-        gm.field_i = er.field_a;
+        int var2 = LeaderEscortCondition.field_i;
+        LeaderEscortCondition.field_i = er.field_a;
         ai.field_T.field_q = ai.field_T.field_q + 1;
         if (param1 != 101) {
           OwnerChangeEvent.a(-88, (byte) -45);

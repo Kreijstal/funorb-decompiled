@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lo extends IntrusiveNode {
-    private int field_t;
-    private byte[] field_s;
+final class MapLayout extends IntrusiveNode {
+    private int formatVersion;
+    private byte[] encodedMap;
     int field_p;
-    private MapTile[] field_r;
-    int field_l;
+    private MapTile[] decodedTiles;
+    int mapWidth;
     static me field_q;
-    int field_n;
+    int mapHeight;
     int field_k;
     static um field_u;
     static String field_m;
@@ -91,11 +91,11 @@ final class lo extends IntrusiveNode {
             var7 = param1.k(0);
             var8 = param1.k(0);
             if (var7 >= 0 &&
-              this.field_l > var7 &&
+              this.mapWidth > var7 &&
               var8 >= 0 &&
-              var8 < this.field_n) {
+              var8 < this.mapHeight) {
               var9 = new Unit(var7, var8, 0);
-              var10 = var7 + var8 * this.field_l;
+              var10 = var7 + var8 * this.mapWidth;
               if (0 <= var10 &&
                 var10 <= param0.length) {
                 param0[var10].occupant = var9;
@@ -125,7 +125,7 @@ final class lo extends IntrusiveNode {
         }
     }
 
-    final int[][] e(int param0) {
+    final int[][] getTerrainGrid(int obfuscationGuard) {
         int var3 = 0;
         int var5 = 0;
         int[][] var2;
@@ -135,24 +135,24 @@ final class lo extends IntrusiveNode {
         int[][] var7;
         int[][] var8;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var8 = new int[this.field_n][this.field_l];
+        var8 = new int[this.mapHeight][this.mapWidth];
         var7 = var8;
         var2 = var7;
-        if (this.field_r != null) {
-          for (var3 = 0; this.field_n > var3; var3++) {
-            for (var4 = 0; var4 < this.field_l; var4++) {
-              var8[var3][var4] = this.field_r[var4 + this.field_l * var3].terrainType;
+        if (this.decodedTiles != null) {
+          for (var3 = 0; this.mapHeight > var3; var3++) {
+            for (var4 = 0; var4 < this.mapWidth; var4++) {
+              var8[var3][var4] = this.decodedTiles[var4 + this.mapWidth * var3].terrainType;
             }
           }
         } else {
-          var3_ref_vh = this.a((byte) 126);
-          for (var4 = 0; this.field_n > var4; var4++) {
-            for (var5 = 0; this.field_l > var5; var5++) {
+          var3_ref_vh = this.readHeader((byte) 126);
+          for (var4 = 0; this.mapHeight > var4; var4++) {
+            for (var5 = 0; this.mapWidth > var5; var5++) {
               var8[var4][var5] = var3_ref_vh.k(0);
             }
           }
         }
-        if (param0 == 28554) {
+        if (obfuscationGuard == 28554) {
           return var2;
         }
         return (int[][]) null;
@@ -175,14 +175,14 @@ final class lo extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4_int = this.field_n * this.field_l;
+          var4_int = this.mapHeight * this.mapWidth;
           if (param1 != 22654) {
-            this.e(117);
+            this.getTerrainGrid(117);
           }
           var5 = new MapTile[var4_int];
           var6 = 0;
-          for (var7 = 0; this.field_n > var7; var7++) {
-            for (var8 = 0; var8 < this.field_l; var8++) {
+          for (var7 = 0; this.mapHeight > var7; var7++) {
+            for (var8 = 0; var8 < this.mapWidth; var8++) {
               if (var5.length >= var6) {
                 var5[var6] = new MapTile(param0[var6], param2);
                 if (var5[var6].terrainType == 11) {
@@ -214,7 +214,7 @@ final class lo extends IntrusiveNode {
         }
     }
 
-    private final PacketBuffer a(byte param0) {
+    private final PacketBuffer readHeader(byte obfuscationGuard) {
         int var5 = 0;
         sc var3_ref_sc;
         int var3;
@@ -223,39 +223,39 @@ final class lo extends IntrusiveNode {
         int var7;
         CipherPacketBuffer var8;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.field_s.length < 4) {
+        if (this.encodedMap.length < 4) {
           return null;
         }
-        var8 = new CipherPacketBuffer(this.field_s);
-        this.field_t = bs.a(var8, 3);
-        if (param0 != 126) {
-          this.field_l = 72;
+        var8 = new CipherPacketBuffer(this.encodedMap);
+        this.formatVersion = bs.a(var8, 3);
+        if (obfuscationGuard != 126) {
+          this.mapWidth = 72;
         }
-        if (this.field_t == 2) {
-          var3_ref_sc = po.a(var8, param0 - 24046);
-          this.field_l = var3_ref_sc.field_k;
+        if (this.formatVersion == 2) {
+          var3_ref_sc = po.a(var8, obfuscationGuard - 24046);
+          this.mapWidth = var3_ref_sc.field_k;
           this.field_p = var3_ref_sc.field_a;
-          this.field_n = var3_ref_sc.field_e;
-          this.field_r = var3_ref_sc.field_c;
+          this.mapHeight = var3_ref_sc.field_e;
+          this.decodedTiles = var3_ref_sc.field_c;
           this.field_k = var3_ref_sc.field_j;
-          var4 = this.field_r;
+          var4 = this.decodedTiles;
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
             var6.captureStrength = var6.getDefaultCaptureStrength(10);
           }
           return null;
         }
-        this.field_l = var8.k(0);
-        this.field_n = var8.k(0);
-        if (this.field_t < 1) {
+        this.mapWidth = var8.k(0);
+        this.mapHeight = var8.k(0);
+        if (this.formatVersion < 1) {
           this.field_p = 0;
         } else {
           this.field_p = var8.k(0);
         }
-        if (this.field_t >= 0) {
+        if (this.formatVersion >= 0) {
           this.field_k = var8.k(0);
         } else {
-          var3 = this.field_l * this.field_n;
+          var3 = this.mapWidth * this.mapHeight;
           var8.position = var8.position + var3;
           this.field_k = var8.k(0);
           var8.position = var8.position - (var3 + 1);
@@ -269,7 +269,7 @@ final class lo extends IntrusiveNode {
           param0.field_v = new char[]{(char)63};
           if (param1 != 19003) {
             va var3 = (va) null;
-            lo.a((va) null, 21);
+            MapLayout.a((va) null, 21);
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "lo.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -280,7 +280,7 @@ final class lo extends IntrusiveNode {
         field_o = null;
         if (param0 != 0) {
           kl var2 = (kl) null;
-          lo.a((String) null, 125, (String) null, (kl) null);
+          MapLayout.a((String) null, 125, (String) null, (kl) null);
         }
         field_u = null;
         field_q = null;
@@ -336,7 +336,7 @@ final class lo extends IntrusiveNode {
         }
     }
 
-    final MapTile[] a(int param0, Battlefield param1) {
+    final MapTile[] createTiles(int obfuscationGuard, Battlefield battlefield) {
         PacketBuffer discarded$0 = null;
         int var4_int = 0;
         int var7_int = 0;
@@ -368,35 +368,35 @@ final class lo extends IntrusiveNode {
         int[] var18 = null;
         var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (null != this.field_r) {
-            discarded$0 = this.a((byte) 126);
-            var16 = this.field_r;
+          if (null != this.decodedTiles) {
+            discarded$0 = this.readHeader((byte) 126);
+            var16 = this.decodedTiles;
             var3 = var16;
             for (var4_int = 0; var4_int < var16.length; var4_int++) {
               var5_ref_ne = var16[var4_int];
-              var5_ref_ne.a((byte) -68, param1);
+              var5_ref_ne.a((byte) -68, battlefield);
               if (var5_ref_ne.hasModifierFlag4((byte) -122) &&
                 var5_ref_ne.getTag((byte) -107) == 0) {
                 var5_ref_ne.setTag(true, 1);
               }
             }
-            stackIn_12_0 = this.field_r;
+            stackIn_12_0 = this.decodedTiles;
             return stackIn_12_0;
           }
-          var3_int = 116 % ((param0 + 31) / 60);
-          var4 = this.a((byte) 126);
-          var5 = this.field_n * this.field_l;
+          var3_int = 116 % ((obfuscationGuard + 31) / 60);
+          var4 = this.readHeader((byte) 126);
+          var5 = this.mapHeight * this.mapWidth;
           var18 = new int[var5];
           var17 = var18;
           var6 = var17;
-          if (2 + var5 > this.field_s.length) {
+          if (2 + var5 > this.encodedMap.length) {
             throw new RuntimeException("Problem loading file");
           }
           for (var7_int = 0; var5 > var7_int; var7_int++) {
             var6[var7_int] = var4.k(0);
           }
-          var7 = this.a(var18, 22654, param1);
-          if (0 <= this.field_t) {
+          var7 = this.a(var18, 22654, battlefield);
+          if (0 <= this.formatVersion) {
             var8 = var4.k(0);
             var9 = new tf(0, 0);
             for (var10 = 0; var8 > var10; var10++) {
@@ -409,7 +409,7 @@ final class lo extends IntrusiveNode {
                 var13_int = var4.k(0);
                 var14 = new Unit(var9.field_n, var9.field_o, var12);
                 var14.ownerPlayer = var13_int;
-                var7[var9.field_o * this.field_l + var9.field_n].occupant = var14;
+                var7[var9.field_o * this.mapWidth + var9.field_n].occupant = var14;
               } else {
                 if (1 != var12) {
                   throw new RuntimeException("Illegal saved item type: " + var11);
@@ -417,7 +417,7 @@ final class lo extends IntrusiveNode {
                 var9.field_n = var4.k(0);
                 var9.field_o = var4.k(0);
                 var12 = var4.k(0);
-                var13 = var7[var9.field_n + var9.field_o * this.field_l];
+                var13 = var7[var9.field_n + var9.field_o * this.mapWidth];
                 if (var13.isStructure(false) ||
                   var13.hasModifierFlag4((byte) -125)) {
                   var13.ownerPlayer = var12;
@@ -433,8 +433,8 @@ final class lo extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_37_0 = var3_ref;
-          stackIn_37_1 = new StringBuilder().append("lo.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_37_1 = new StringBuilder().append("lo.E(").append(obfuscationGuard).append(',');
+          if (battlefield == null) {
             stackIn_38_2 = "null";
           } else {
             stackIn_38_2 = "{...}";
@@ -443,14 +443,14 @@ final class lo extends IntrusiveNode {
         }
     }
 
-    lo(int param0, byte[] param1) {
+    MapLayout(int suppliedMapId, byte[] encodedMap) {
         PacketBuffer discarded$0 = null;
         try {
-          this.field_s = param1;
-          this.field_r = null;
-          discarded$0 = this.a((byte) 126);
+          this.encodedMap = encodedMap;
+          this.decodedTiles = null;
+          discarded$0 = this.readHeader((byte) 126);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "lo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "lo.<init>(" + suppliedMapId + ',' + (encodedMap != null ? "{...}" : "null") + ')');
         }
     }
 

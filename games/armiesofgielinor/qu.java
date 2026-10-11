@@ -40,7 +40,7 @@ final class qu extends IntrusiveNode {
         if (var11.battlefield.playerCount < param0) {
           return "Please choose a player, 0-based.";
         }
-        var11.battlefield.b(10001, param0, false);
+        var11.battlefield.eliminatePlayer(10001, param0, false);
         kw.field_R = 2297;
         cg.field_j = 72584621;
         wr.field_L = 224;

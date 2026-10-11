@@ -238,7 +238,7 @@ abstract class wl extends tj {
             AiActionCandidate.field_u[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            om.field_r[var1_intLifetime1] = 0L;
+            CampaignMission.field_r[var1_intLifetime1] = 0L;
           }
           kb.field_A = 0;
         } catch (RuntimeException runtimeException) {

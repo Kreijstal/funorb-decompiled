@@ -84,10 +84,10 @@ final class ea {
         var3 = var8.k(0);
         stackIn_3_0 = (0 != (var3 & 128));
         ui.field_b = stackIn_3_0;
-        u.field_k = var3 & 127;
+        MatchConditionEntry.field_k = var3 & 127;
         hc.field_e = var8.k(0);
         gk.field_I = var8.j((byte) -2);
-        if (2 == u.field_k) {
+        if (2 == MatchConditionEntry.field_k) {
           rh.field_e = var8.e((byte) -104);
           th.field_c = var8.d((byte) -13);
         } else {
@@ -102,11 +102,11 @@ final class ea {
         } else {
           gp.field_b = var8.g(1);
         }
-        if (u.field_k == 1) {
+        if (MatchConditionEntry.field_k == 1) {
           ut.field_eb = var8.e((byte) -104);
           BestScoreStrategy.field_k = var8.g(1);
         } else {
-          if (u.field_k == 4) {
+          if (MatchConditionEntry.field_k == 4) {
             ut.field_eb = var8.e((byte) -104);
             BestScoreStrategy.field_k = var8.g(1);
           } else {
@@ -158,14 +158,14 @@ final class ea {
         try {
           var2 = fk.a((byte) 102, param1, "jagex-last-login-method");
           if (var2 == null) {
-            stackIn_3_0 = u.field_l;
+            stackIn_3_0 = MatchConditionEntry.field_l;
             return stackIn_3_0;
           }
           var3 = TileMetadata.c(0);
           var4 = param0;
           while (true) {
             if (var4 >= var3.length) {
-              stackIn_11_0 = u.field_l;
+              stackIn_11_0 = MatchConditionEntry.field_l;
               return stackIn_11_0;
             }
             var5 = var3[var4];
@@ -250,10 +250,10 @@ final class ea {
         var3 = var8.k(0);
         stackIn_3_0 = (0 != (var3 & 128));
         ui.field_b = stackIn_3_0;
-        u.field_k = var3 & 127;
+        MatchConditionEntry.field_k = var3 & 127;
         hc.field_e = var8.k(0);
         gk.field_I = var8.j((byte) -2);
-        if (2 == u.field_k) {
+        if (2 == MatchConditionEntry.field_k) {
           rh.field_e = var8.e((byte) -104);
           th.field_c = var8.d((byte) -13);
         } else {
@@ -268,11 +268,11 @@ final class ea {
         } else {
           gp.field_b = var8.g(1);
         }
-        if (u.field_k == 1) {
+        if (MatchConditionEntry.field_k == 1) {
           ut.field_eb = var8.e((byte) -104);
           BestScoreStrategy.field_k = var8.g(1);
         } else {
-          if (u.field_k == 4) {
+          if (MatchConditionEntry.field_k == 4) {
             ut.field_eb = var8.e((byte) -104);
             BestScoreStrategy.field_k = var8.g(1);
           } else {

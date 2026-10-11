@@ -75,7 +75,7 @@ final class SphinxActionRequest extends ActionRequest {
         int var7_intLifetime3;
         var18 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var20 = lo.a("crowns", -28106, "lobby", param1);
+          var20 = MapLayout.a("crowns", -28106, "lobby", param1);
           var5 = var20;
           PacketBuffer.field_n = var20.length;
           if (param0 != null) {
@@ -115,10 +115,10 @@ final class SphinxActionRequest extends ActionRequest {
           jn.field_d = 15;
           var7 = gs.a("lobby", param1, param4, (byte) -53, "largefont");
           t.field_a = gs.a("lobby", param1, param4, (byte) -53, "generalfont");
-          gm.field_f = gs.a("lobby", param1, param4, (byte) -53, "chatfont");
+          LeaderEscortCondition.field_f = gs.a("lobby", param1, param4, (byte) -53, "chatfont");
           var7.a(var5, var24);
           t.field_a.a(var5, var24);
-          gm.field_f.a(var5, var24);
+          LeaderEscortCondition.field_f.a(var5, var24);
           var8 = new je(0L, (je) null);
           var8.field_Z = (BitmapFont) ((Object) var7);
           var8.field_N = 16777215;

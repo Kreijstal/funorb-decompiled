@@ -322,7 +322,7 @@ final class ib extends mk {
                     ((ru) (Object) stackIn_62_0).c(stackIn_62_1 + (stackIn_62_2 - (stackIn_62_3 - stackIn_63_4)), 40 + (var10 - (uh.field_e[1][1] >> 3)));
                   }
                 }
-                if (u.a(80 + param1, (byte) 94) < var10) {
+                if (MatchConditionEntry.a(80 + param1, (byte) 94) < var10) {
                   break scanLoop1;
                 }
                 if (1 == var12_int % 2) {
@@ -384,7 +384,7 @@ final class ib extends mk {
                 if (var13Lifetime1Lifetime1 + param4 > db.a(true, 620)) {
                   param4 = db.a(true, 620) - var13Lifetime1Lifetime1;
                 }
-                if (10 + param3 > u.a(480, (byte) 94)) {
+                if (10 + param3 > MatchConditionEntry.a(480, (byte) 94)) {
                   param3 -= 30;
                 }
                 SoftwareRaster.a(-6 + param4, param3 - 11, var13Lifetime1Lifetime1 + 12, 15, 5, 0, 128);

@@ -73,9 +73,9 @@ final class ds {
               var8 = ac.field_k[0];
               if (var8 != null) {
                 if (param4) {
-                  var8.d(db.a(true, param0), u.a(param1, (byte) 94));
+                  var8.d(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
                 } else {
-                  var8.a(db.a(true, param0), u.a(param1, (byte) 94));
+                  var8.a(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
                 }
               }
             }
@@ -105,9 +105,9 @@ final class ds {
                   var13 = ac.field_k[var12];
                   if (var13 != null) {
                     if (!param4) {
-                      var13.a(db.a(true, param0), u.a(param1, (byte) 94));
+                      var13.a(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
                     } else {
-                      var13.d(db.a(true, param0), u.a(param1, (byte) 94));
+                      var13.d(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
                     }
                   }
                   var8_int++;

@@ -501,7 +501,7 @@ final class jg extends IntrusiveNode {
                 var31 = var31 + jn.field_d;
               }
             }
-            var33 = gm.a(var12.field_mc, 6, var32);
+            var33 = LeaderEscortCondition.a(var12.field_mc, 6, var32);
             if (var33 != null) {
               var34_intLifetime1 = var12.field_Wb.field_Z.c(var33, var12.field_gb - mi.field_l - mi.field_l);
               var12.field_Wb.field_X = var33;

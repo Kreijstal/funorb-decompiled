@@ -94,9 +94,9 @@ final class vu extends fw {
                   nr.field_c[var11] != null) {
                   var12 = nr.field_c[var11];
                   if (param1) {
-                    var12.d(db.a(true, param2 + var8), u.a(var9 + param3, (byte) 94));
+                    var12.d(db.a(true, param2 + var8), MatchConditionEntry.a(var9 + param3, (byte) 94));
                   } else {
-                    var12.a(db.a(true, var8 + param2), u.a(var9 + param3, (byte) 94));
+                    var12.a(db.a(true, var8 + param2), MatchConditionEntry.a(var9 + param3, (byte) 94));
                   }
                 }
               }

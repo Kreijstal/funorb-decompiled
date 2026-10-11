@@ -114,11 +114,11 @@ final class op {
           }
           if (dj.field_a >= 100 &&
             df.field_M <= 0) {
-            stackIn_18_0 = lo.field_m;
+            stackIn_18_0 = MapLayout.field_m;
             return stackIn_18_0;
           }
           if (dj.field_a >= 200) {
-            stackIn_21_0 = lo.field_m;
+            stackIn_21_0 = MapLayout.field_m;
             return stackIn_21_0;
           }
           if (si.a(param1, -3404)) {

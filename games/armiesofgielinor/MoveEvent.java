@@ -178,7 +178,7 @@ final class MoveEvent extends GameEvent {
             MoveEvent.g(90);
           }
           pv.a("commonui", "dropdown", param2, 24914);
-          var5 = lo.a("screen_options", -28106, "commonui", param2);
+          var5 = MapLayout.a("screen_options", -28106, "commonui", param2);
           oa.field_H = new ru[4];
           dq.field_e = new ru[4];
           tg.field_b = new ru[4];
@@ -342,7 +342,7 @@ final class MoveEvent extends GameEvent {
                   decompiledFrameRemainder0 = (var12 != 0);
                 }
                 if ((decompiledFrameRemainder0) &&
-                  (decompiledFrameRemainder0 = (battlefield.field_K != null)) &&
+                  (decompiledFrameRemainder0 = (battlefield.campaignMission != null)) &&
                   (decompiledFrameRemainder0 = (var11 == 7 ||
                   var11 == 11)) &&
                   (decompiledFrameRemainder0 = !(!var6.hasMovementFlag1(false))) &&
@@ -415,17 +415,17 @@ final class MoveEvent extends GameEvent {
                 if (!(0 >= var7)) {
                   battlefield.a(var4, var3_int, 0, var7);
                   if (var12 != 0) {
-                    this.unit.field_G = true;
-                    this.unit.field_S = true;
+                    this.unit.escortComplete = true;
+                    this.unit.removedFromActivePlay = true;
                     this.unit.unlink(-109);
-                    battlefield.m(0, this.unit.ownerPlayer);
+                    battlefield.checkPlayerVictory(0, this.unit.ownerPlayer);
                   }
                 }
               } else {
-                this.unit.field_G = true;
-                this.unit.field_S = true;
+                this.unit.escortComplete = true;
+                this.unit.removedFromActivePlay = true;
                 this.unit.unlink(-109);
-                battlefield.m(0, this.unit.ownerPlayer);
+                battlefield.checkPlayerVictory(0, this.unit.ownerPlayer);
               }
               if (var7 > 0) {
                 battlefield.a(this.startY, this.startX, obfuscationGuard + 26661, var7);

@@ -177,7 +177,7 @@ final class ml extends je {
         }
     }
 
-    final static void a(om param0, byte param1) {
+    final static void a(CampaignMission param0, byte param1) {
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
         RuntimeException stackIn_18_0 = null;

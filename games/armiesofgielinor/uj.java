@@ -133,10 +133,10 @@ final class uj extends mk {
 
     final static me[] c(byte param0) {
         if (param0 > 100) {
-          return new me[]{jk.field_b, na.field_G, oa.field_F, PacketBuffer.field_l, tl.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, kb.field_y, lo.field_q, nf.field_Ib, rs.field_v, kq.field_M};
+          return new me[]{jk.field_b, na.field_G, oa.field_F, PacketBuffer.field_l, tl.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, kb.field_y, MapLayout.field_q, nf.field_Ib, rs.field_v, kq.field_M};
         }
         uj.h(67);
-        return new me[]{jk.field_b, na.field_G, oa.field_F, PacketBuffer.field_l, tl.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, kb.field_y, lo.field_q, nf.field_Ib, rs.field_v, kq.field_M};
+        return new me[]{jk.field_b, na.field_G, oa.field_F, PacketBuffer.field_l, tl.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, kb.field_y, MapLayout.field_q, nf.field_Ib, rs.field_v, kq.field_M};
     }
 
     uj(fn param0) {

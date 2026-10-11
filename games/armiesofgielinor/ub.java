@@ -133,7 +133,7 @@ final class ub {
           return (String) null;
         }
         for (var3 = 0; var3 < cd.field_a[param1].field_n.length; var3++) {
-          var2 = var2 + var3 + ": " + cd.field_a[param1].field_n[var3].field_J + "\n";
+          var2 = var2 + var3 + ": " + cd.field_a[param1].field_n[var3].name + "\n";
         }
         return var2;
     }

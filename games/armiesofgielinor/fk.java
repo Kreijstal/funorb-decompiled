@@ -108,7 +108,7 @@ final class fk implements kh {
               if (param0.a(127)) {
                 throw new ef(var4.field_s);
               }
-              if (param0.a((byte) 13).field_q == gm.field_d) {
+              if (param0.a((byte) 13).field_q == LeaderEscortCondition.field_d) {
                 stackIn_23_0 = var4;
                 return stackIn_23_0;
               }
@@ -118,7 +118,7 @@ final class fk implements kh {
                 throw new ef(var4.field_s);
               }
               var6 = param0.a((byte) 13);
-              if (gm.field_d == var6.field_q) {
+              if (LeaderEscortCondition.field_d == var6.field_q) {
                 stackIn_29_0 = var4;
                 return stackIn_29_0;
               }

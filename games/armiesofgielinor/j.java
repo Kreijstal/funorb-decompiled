@@ -96,7 +96,7 @@ final class j {
           DisplacedUnitMarker.field_t[37] = lg.field_c;
           cf.field_m = new String[3];
           DisplacedUnitMarker.field_t[52] = oa.field_G;
-          DisplacedUnitMarker.field_t[38] = up.field_f;
+          DisplacedUnitMarker.field_t[38] = PortalLossCondition.field_f;
           ParasiteEvent.field_A = new String[]{wi.field_a, rf.field_e, je.field_lb, ob.field_P};
           DisplacedUnitMarker.field_t[43] = kg.field_c;
           DisplacedUnitMarker.field_t[33] = gv.field_b;

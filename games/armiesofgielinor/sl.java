@@ -175,9 +175,9 @@ final class sl {
           this.field_g = param0;
           this.field_b = -1;
           var7 = new PacketBuffer(30000);
-          param2.a(var7, -25771, param2.field_K.field_w);
+          param2.a(var7, -25771, param2.campaignMission.playerSlot);
           this.field_c = var7.g((byte) -82);
-          this.field_h = param2.field_e;
+          this.field_h = param2.eliminatedPlayerMask;
           this.field_f = param4 ? true : false;
           this.field_d = param3;
           this.field_j = new int[param2.playerMana.length];

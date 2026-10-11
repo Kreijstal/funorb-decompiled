@@ -252,9 +252,9 @@ final class co {
         if (this.field_b != null) {
           return;
         }
-        this.field_w = lo.a(this.field_a, -28106, "basic", ae.field_u);
-        this.field_m = lo.a(this.field_v, -28106, "basic", ae.field_u);
-        this.field_g = lo.a(this.field_q, -28106, "basic", ae.field_u);
+        this.field_w = MapLayout.a(this.field_a, -28106, "basic", ae.field_u);
+        this.field_m = MapLayout.a(this.field_v, -28106, "basic", ae.field_u);
+        this.field_g = MapLayout.a(this.field_q, -28106, "basic", ae.field_u);
         this.field_u = fk.a(this.field_e, (byte) -128, ae.field_u, "basic");
         if (param0 > -63) {
           this.field_u = (RgbSprite[]) null;

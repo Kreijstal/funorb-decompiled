@@ -420,11 +420,11 @@ final class CombatPresentation implements EventPresentation {
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == u.field_p) {
+          if (null == MatchConditionEntry.field_p) {
             return true;
           }
           if (obfuscationGuard < -25) {
-            stackIn_7_0 = u.field_p.isExpanded((byte) -106);
+            stackIn_7_0 = MatchConditionEntry.field_p.isExpanded((byte) -106);
             return stackIn_7_0;
           }
           return true;
@@ -861,7 +861,7 @@ final class CombatPresentation implements EventPresentation {
                 if (decompiledSharedTail0) {
                   this.field_t = var3.targetDeltaX + var3.attackerX + this.battlefield.mapWidth * (var3.targetDeltaY + var3.attackerY);
                 }
-                u.field_p.b(var3.attackerY * this.battlefield.mapWidth + var3.attackerX, obfuscationGuard ^ 65);
+                MatchConditionEntry.field_p.b(var3.attackerY * this.battlefield.mapWidth + var3.attackerX, obfuscationGuard ^ 65);
                 decompiledFrameRemainder3 = false;
               }
               else {
@@ -930,8 +930,8 @@ final class CombatPresentation implements EventPresentation {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.e(2);
-          if (u.field_p != null) {
-            u.field_p.c(1959107777);
+          if (MatchConditionEntry.field_p != null) {
+            MatchConditionEntry.field_p.c(1959107777);
           }
           boolean decompiledFrameRemainder0 = true;
           this.phaseFrame = this.phaseFrame + 1;
@@ -1086,7 +1086,7 @@ final class CombatPresentation implements EventPresentation {
                   this.attackers[var3].d((byte) 113);
                   if (this.field_E &&
                     this.attackers[var3].field_e) {
-                    this.attackers[var3].a(0, 30, 0, -10, u.field_o[this.field_c][1], pk.field_T[this.field_c][1], (byte) 122);
+                    this.attackers[var3].a(0, 30, 0, -10, MatchConditionEntry.field_o[this.field_c][1], pk.field_T[this.field_c][1], (byte) 122);
                     this.attackers[var3].field_e = false;
                   }
                   if (this.attackers[var3].field_d) {
@@ -1109,7 +1109,7 @@ final class CombatPresentation implements EventPresentation {
                       this.defenders[var3].d((byte) 113);
                       if (this.field_P &&
                         this.defenders[var3].field_e) {
-                        this.defenders[var3].a(0, 30, 0, 10, u.field_o[this.field_a][1], pk.field_T[this.field_a][1], (byte) 122);
+                        this.defenders[var3].a(0, 30, 0, 10, MatchConditionEntry.field_o[this.field_a][1], pk.field_T[this.field_a][1], (byte) 122);
                         this.defenders[var3].field_e = false;
                       }
                       if (this.defenders[var3].field_d) {
@@ -2811,8 +2811,8 @@ final class CombatPresentation implements EventPresentation {
           }
           fe.b(0, 0, rs.field_k, se.field_a, dq.field_i, nd.field_b, 0, 0);
           so.field_b.a(5605);
-          if (null != u.field_p) {
-            u.field_p.a(-66, this.framebuffer);
+          if (null != MatchConditionEntry.field_p) {
+            MatchConditionEntry.field_p.a(-66, this.framebuffer);
             if (var9 == 0) {
               return;
             }
@@ -3025,7 +3025,7 @@ final class CombatPresentation implements EventPresentation {
                   this.attackers[var2_int].field_l = false;
                   this.a((byte) -84, var2_int);
                   if (this.field_h) {
-                    this.attackers[var2_int].a(0, 30, 1, -10, u.field_o[this.field_c][1], pk.field_T[this.field_c][1], (byte) 122);
+                    this.attackers[var2_int].a(0, 30, 1, -10, MatchConditionEntry.field_o[this.field_c][1], pk.field_T[this.field_c][1], (byte) 122);
                   }
                 }
               }
@@ -3225,14 +3225,14 @@ final class CombatPresentation implements EventPresentation {
                 break;
               }
               this.attackers[var3Lifetime1 - 1].setAnimationState(2, (byte) -108);
-              this.attackers[var3Lifetime1 - 1].a(0, 30, 1, 0, u.field_o[this.field_c][0], pk.field_T[this.field_c][0], (byte) 122);
+              this.attackers[var3Lifetime1 - 1].a(0, 30, 1, 0, MatchConditionEntry.field_o[this.field_c][0], pk.field_T[this.field_c][0], (byte) 122);
               this.attackers[var3Lifetime1 - 1].field_d = true;
               this.defenders[0].setAnimationState(1, (byte) -109);
               stackIn_43_0 = this.defenders[0];
             }
             break;
           }
-          ((BattleCharacter) (Object) stackIn_43_0).a(0, 30, 1, 20, u.field_o[this.field_a][1], pk.field_T[this.field_a][1], (byte) 122);
+          ((BattleCharacter) (Object) stackIn_43_0).a(0, 30, 1, 20, MatchConditionEntry.field_o[this.field_a][1], pk.field_T[this.field_a][1], (byte) 122);
           this.field_v = this.field_v - 1;
           this.field_I = 20 + AttackEvent.a(false, 20, vv.field_b);
           return;
@@ -3714,8 +3714,8 @@ final class CombatPresentation implements EventPresentation {
         RuntimeException decompiledCaughtException = null;
         try {
           boolean decompiledFrameRemainder0 = true;
-          if (this.phase == 8 && (null == u.field_p ||
-            u.field_p.transitionFactor == 0)) {
+          if (this.phase == 8 && (null == MatchConditionEntry.field_p ||
+            MatchConditionEntry.field_p.transitionFactor == 0)) {
             stackIn_10_0 = 1;
             decompiledFrameRemainder0 = false;
           }
@@ -3761,7 +3761,7 @@ final class CombatPresentation implements EventPresentation {
           if (var3_int >= this.field_D.length) {
             return;
           }
-          this.field_D[var3_int] = new km(-u.field_o[this.field_c][1] + this.attackers[param1].destinationX, 600 - pk.field_T[this.field_c][1], this.attackers[param1].destinationY, 2, this.field_z);
+          this.field_D[var3_int] = new km(-MatchConditionEntry.field_o[this.field_c][1] + this.attackers[param1].destinationX, 600 - pk.field_T[this.field_c][1], this.attackers[param1].destinationY, 2, this.field_z);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3911,8 +3911,8 @@ final class CombatPresentation implements EventPresentation {
             this.a((byte) -79, 88);
           }
           if (this.phaseFrame == 1) {
-            if (null != u.field_p) {
-              u.field_p.a(param0 ^ -24, this.field_t);
+            if (null != MatchConditionEntry.field_p) {
+              MatchConditionEntry.field_p.a(param0 ^ -24, this.field_t);
             }
             oo.e(-387);
           }
@@ -4405,13 +4405,13 @@ final class CombatPresentation implements EventPresentation {
           }
           if (camera != null) {
             this.camera = camera;
-            if (null != u.field_p) {
-              u.field_p.camera = this.camera;
+            if (null != MatchConditionEntry.field_p) {
+              MatchConditionEntry.field_p.camera = this.camera;
               if (ArmiesOfGielinor.obfuscationControl) {
-                u.field_p = new CombatViewTransition(rs.field_k, se.field_a, camera);
+                MatchConditionEntry.field_p = new CombatViewTransition(rs.field_k, se.field_a, camera);
               }
             } else {
-              u.field_p = new CombatViewTransition(rs.field_k, se.field_a, camera);
+              MatchConditionEntry.field_p = new CombatViewTransition(rs.field_k, se.field_a, camera);
             }
           }
           this.framebuffer = new RgbSprite(640, 480);

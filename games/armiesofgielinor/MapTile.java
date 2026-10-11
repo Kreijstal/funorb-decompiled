@@ -223,7 +223,7 @@ final class MapTile implements TaggedFieldReader {
         int var5Lifetime1Lifetime1;
         int var5Lifetime1Lifetime2;
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.battlefield.field_K != null &&
+        if (this.battlefield.campaignMission != null &&
           param2 != this.ownerPlayer) {
           return;
         }
@@ -293,7 +293,7 @@ final class MapTile implements TaggedFieldReader {
         if (this.occupant != null) {
           if (var8 != 0) {
             if (this.occupant.ownerPlayer != param2) {
-              stackIn_55_0 = (null != this.battlefield.field_K) ? 0 : 1;
+              stackIn_55_0 = (null != this.battlefield.campaignMission) ? 0 : 1;
             } else {
               stackIn_55_0 = 0;
             }
@@ -460,9 +460,9 @@ final class MapTile implements TaggedFieldReader {
         return this.metadata.ownerPlayer;
     }
 
-    final boolean d(int param0) {
+    final boolean isPortal(int obfuscationGuard) {
         boolean stackIn_7_0 = false;
-        if (param0 > -12) {
+        if (obfuscationGuard > -12) {
           this.godId = 34;
         }
         stackIn_7_0 = (this.terrainType == 11) || (7 == this.terrainType);
@@ -718,7 +718,7 @@ final class MapTile implements TaggedFieldReader {
         if (this.terrainType != 11) {
           this.ownerPlayer = param1;
         } else {
-          if (null != this.battlefield.field_K) {
+          if (null != this.battlefield.campaignMission) {
             this.field_b = true;
           }
           this.ownerPlayer = -1;

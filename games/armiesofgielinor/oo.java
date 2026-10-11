@@ -417,7 +417,7 @@ final class oo {
             bh.field_H.a((byte) 82) &&
             bh.field_H.a(28979, "arialish12") &&
             bh.field_H.a(28979, "pump32")) {
-            mc.field_a = pv.a("members_expansion_screen", "frame", iw.field_p, 24914);
+            UnitLossCondition.field_a = pv.a("members_expansion_screen", "frame", iw.field_p, 24914);
             mg.field_d = GameplayController.a("arrow", (byte) 51, "members_expansion_screen", iw.field_p);
             ll.field_Sb = gs.a("arialish12", iw.field_p, bh.field_H, (byte) -53, "");
             kt.field_n = it.a("", iw.field_p, bh.field_H, (byte) -87, "pump32");
@@ -428,12 +428,12 @@ final class oo {
             iw.field_p = null;
           }
           this.a((byte) -124);
-          if (mc.field_a == null) {
+          if (UnitLossCondition.field_a == null) {
             return;
           }
           this.field_b.g(376, 339);
           this.field_t.g(9, 9);
-          mc.field_a.a(0, 0);
+          UnitLossCondition.field_a.a(0, 0);
           if (mg.field_d != null) {
             mg.field_d.g(9, 257);
             mg.field_d.d(558, 257);
@@ -619,7 +619,7 @@ final class oo {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (mc.field_a == null) {
+          if (UnitLossCondition.field_a == null) {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }

@@ -47,10 +47,10 @@ final class dt {
           }
           fj.a((java.awt.Component) ((Object) param0), (byte) 35);
           dc.a((java.awt.Component) ((Object) param0), -37);
-          if (om.field_I == null) {
+          if (CampaignMission.field_I == null) {
             return;
           }
-          om.field_I.a((java.awt.Component) ((Object) param0), true);
+          CampaignMission.field_I.a((java.awt.Component) ((Object) param0), true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

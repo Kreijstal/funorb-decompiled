@@ -702,10 +702,10 @@ class lk implements kh, pm {
           }
           oq.a(27080, (java.awt.Component) ((Object) param1));
           DisplacedUnitMarker.a((java.awt.Component) ((Object) param1), (byte) 74);
-          if (om.field_I == null) {
+          if (CampaignMission.field_I == null) {
             return;
           }
-          om.field_I.a(0, (java.awt.Component) ((Object) param1));
+          CampaignMission.field_I.a(0, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

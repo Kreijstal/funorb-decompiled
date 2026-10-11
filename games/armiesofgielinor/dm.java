@@ -119,7 +119,7 @@ final class dm {
               if (param3 <= 36) {
                 return;
               }
-              var7.f(db.a(true, param2.field_k), u.a(param2.field_n, (byte) 94));
+              var7.f(db.a(true, param2.field_k), MatchConditionEntry.a(param2.field_n, (byte) 94));
               var8 = 0;
               if (this.field_K == var6_int) {
                 var8 = 1;
@@ -133,7 +133,7 @@ final class dm {
                 var9 = this.field_F;
               }
               for (var10 = 0; this.field_L > var10; var10++) {
-                SoftwareRaster.b(db.a(true, param2.field_k + var10), u.a(var10 + param2.field_n, (byte) 94), -(var10 << 1) + (param4.field_k - param2.field_k), -param2.field_n + (param4.field_n - (var10 << 1)), var9);
+                SoftwareRaster.b(db.a(true, param2.field_k + var10), MatchConditionEntry.a(var10 + param2.field_n, (byte) 94), -(var10 << 1) + (param4.field_k - param2.field_k), -param2.field_n + (param4.field_n - (var10 << 1)), var9);
               }
               return;
             }
@@ -180,7 +180,7 @@ final class dm {
             if (var5 == 0) {
               return;
             }
-            fe.b(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, io.field_m, nd.field_b, this.field_Q, this.field_p);
+            fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, io.field_m, nd.field_b, this.field_Q, this.field_p);
             return;
           }
         }
@@ -204,7 +204,7 @@ final class dm {
             if (var5 == 0) {
               return;
             }
-            fe.b(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, io.field_m, TutorialController.field_e, this.field_Q, this.field_p);
+            fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, io.field_m, TutorialController.field_e, this.field_Q, this.field_p);
             if (param0 != 33) {
               discarded$0 = this.d(true);
             }
@@ -329,7 +329,7 @@ final class dm {
           if (param5 != null &&
             param2 != null) {
             var7_int = db.a(true, param5.field_k);
-            var8 = u.a(param5.field_n, (byte) 94);
+            var8 = MatchConditionEntry.a(param5.field_n, (byte) 94);
             var9 = -var7_int + param2.field_k;
             var10 = param2.field_n - var8;
             SoftwareRaster.b(var7_int, var8, var9, var10, this.field_Q, this.field_p);
@@ -338,8 +338,8 @@ final class dm {
             }
             if (param1 != null &&
               param1.length() != 0) {
-              var11 = u.a(param5.field_n, (byte) 94);
-              var12 = u.a(param2.field_n, (byte) 94);
+              var11 = MatchConditionEntry.a(param5.field_n, (byte) 94);
+              var12 = MatchConditionEntry.a(param2.field_n, (byte) 94);
               var8Lifetime1 = var11 + var12 >> 1;
               var13 = mp.k(-78);
               var8Lifetime1 = var8Lifetime1 + var13;
@@ -541,7 +541,7 @@ final class dm {
             if (var5 == 0) {
               return;
             }
-            fe.b(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, io.field_m, TutorialController.field_e, this.field_Q, this.field_p);
+            fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, io.field_m, TutorialController.field_e, this.field_Q, this.field_p);
             return;
           }
         }
@@ -835,7 +835,7 @@ final class dm {
           }
           if (var3 != null &&
             var3.field_n >= 0) {
-            return u.a(var3.field_n, (byte) 94);
+            return MatchConditionEntry.a(var3.field_n, (byte) 94);
           }
           return 1;
         }
@@ -876,10 +876,10 @@ final class dm {
             if (param4 != 26709) {
               this.field_v = true;
             }
-            SoftwareRaster.f(db.a(true, var6_int), u.a(var7, (byte) 94), var8, var9, this.field_M);
-            fe.b(db.a(true, var6_int), u.a(var7, (byte) 94), var8, var9, io.field_m, nd.field_b, this.field_Q, this.field_p);
-            var10 = u.a(param0.field_n, (byte) 94);
-            var11 = u.a(param3.field_n, (byte) 94);
+            SoftwareRaster.f(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, this.field_M);
+            fe.b(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, io.field_m, nd.field_b, this.field_Q, this.field_p);
+            var10 = MatchConditionEntry.a(param0.field_n, (byte) 94);
+            var11 = MatchConditionEntry.a(param3.field_n, (byte) 94);
             var7Lifetime1 = var10 + var11 >> 1;
             var12 = mp.k(-57);
             var7Lifetime1 = var12 + var7Lifetime1;
@@ -1015,14 +1015,14 @@ final class dm {
             if (param0) {
               var10 = TutorialController.field_e;
             }
-            fe.a(db.a(true, var6_int), u.a(var7, (byte) 94), var8, var9, DisplacedUnitMarker.field_s, var10, this.field_Q, this.field_b, true);
-            fe.b(db.a(true, var6_int), u.a(var7, (byte) 94), var8, var9, io.field_m, TutorialController.field_e, this.field_Q, this.field_A);
+            fe.a(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, DisplacedUnitMarker.field_s, var10, this.field_Q, this.field_b, true);
+            fe.b(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, io.field_m, TutorialController.field_e, this.field_Q, this.field_A);
             var11 = param1.field_n;
             var12 = param2.field_n;
             var7Lifetime1 = var11 + var12 >> 1;
             var13 = mp.k(-74);
             var7Lifetime1 = var7Lifetime1 + var13;
-            fe.c(param4, db.a(true, this.field_c.field_k), u.a(var7Lifetime1, (byte) 94), this.field_Q, true);
+            fe.c(param4, db.a(true, this.field_c.field_k), MatchConditionEntry.a(var7Lifetime1, (byte) 94), this.field_Q, true);
             return;
           }
           return;
@@ -1121,7 +1121,7 @@ final class dm {
         try {
           var12_int = -1;
           if (param7) {
-            var12_int = tt.a(param0 - param10, -param8 + param6, param2, param9);
+            var12_int = MatchConditionRegistry.a(param0 - param10, -param8 + param6, param2, param9);
           }
           var13 = 0;
           if (param9) {
@@ -1360,8 +1360,8 @@ final class dm {
             this.a(70, true);
           }
           var4 = var3 + var2;
-          fe.b(this.field_R, db.a(true, this.field_c.field_k), u.a(var4, (byte) 94));
-          fe.c(this.field_R, db.a(true, this.field_c.field_k), u.a(var4, (byte) 94), nd.field_b, false);
+          fe.b(this.field_R, db.a(true, this.field_c.field_k), MatchConditionEntry.a(var4, (byte) 94));
+          fe.c(this.field_R, db.a(true, this.field_c.field_k), MatchConditionEntry.a(var4, (byte) 94), nd.field_b, false);
           return;
         }
     }

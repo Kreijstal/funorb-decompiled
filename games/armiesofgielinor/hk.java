@@ -63,7 +63,7 @@ final class hk extends je {
           }
           if (au.field_Kb != null &&
             !au.field_Kb.g(param0 + 11771)) {
-            lo.field_u = null;
+            MapLayout.field_u = null;
             return;
           }
         } catch (RuntimeException runtimeException) {

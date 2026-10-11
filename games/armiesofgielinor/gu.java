@@ -43,7 +43,7 @@ final class gu {
                 continue;
               }
               if (var4 == 41) {
-                var2.addLast((byte) -119, (IntrusiveNode) (new og(gm.field_d, -1 + var3.field_c)));
+                var2.addLast((byte) -119, (IntrusiveNode) (new og(LeaderEscortCondition.field_d, -1 + var3.field_c)));
                 continue;
               }
               if (44 != var4) {

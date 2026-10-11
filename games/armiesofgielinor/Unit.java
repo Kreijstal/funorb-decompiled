@@ -35,7 +35,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
     int field_z;
     boolean meleeLifeSteal;
     boolean field_X;
-    boolean field_S;
+    boolean removedFromActivePlay;
     private int movementTargetX;
     int equipmentDescriptor;
     int tankId;
@@ -46,7 +46,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
     int attacksReceived;
     boolean packedFlag8;
     boolean movementSpent;
-    boolean field_G;
+    boolean escortComplete;
     boolean hasTileEffect16;
     boolean packedFlag256;
 
@@ -259,7 +259,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (obfuscationGuard != -1) {
           this.displayName = (String) null;
         }
-        if (this.field_S) {
+        if (this.removedFromActivePlay) {
           return null;
         }
         if (this.strength + this.bonusStrength == 0) {
@@ -598,7 +598,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
                     if (0 >= encodedLength) {
                       return;
                     }
-                    this.displayName = up.a(packet, encodedLength, (byte) -122);
+                    this.displayName = PortalLossCondition.a(packet, encodedLength, (byte) -122);
                     return;
                   }
                   if (fieldName.equals("tag")) {
@@ -657,11 +657,11 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (obfuscationGuard != 22331) {
           this.objectiveId = 111;
         }
-        if (this.field_S) {
+        if (this.removedFromActivePlay) {
           return;
         }
         if (this.getEffectiveStrength((byte) 122) < 1) {
-          this.field_S = true;
+          this.removedFromActivePlay = true;
           var2 = -1;
           if (this.accessoryType == 5) {
             var2 = this.battlefield.a(this.tileY, this.ownerPlayer, this.tileX, (byte) -53);
@@ -691,7 +691,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         MapTile var6;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.strength = 0;
-        this.field_S = true;
+        this.removedFromActivePlay = true;
         this.bonusStrength = 0;
         var6 = this.battlefield.tiles[this.tileX + this.battlefield.mapWidth * this.tileY];
         var3 = var6;
@@ -758,7 +758,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         }
         this.battlefield.a(this.tileY, this.tileX, 0, 3);
         if (this.hasMovementFlag1(false)) {
-          this.battlefield.a((byte) 89, this.ownerPlayer);
+          this.battlefield.eliminatePlayerTeam((byte) 89, this.ownerPlayer);
         }
         if (this.battlefield.field_b) {
           this.battlefield.field_h[this.ownerPlayer] = this.battlefield.field_h[this.ownerPlayer] + 1;
@@ -879,7 +879,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return stackIn_7_0;
     }
 
-    final void k(int param0) {
+    final void queueTurnConsequences(int obfuscationGuard) {
         if (this.isJadeVine((byte) 102)) {
           this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new UpkeepEvent(this.tileX, this.tileY)));
         }
@@ -892,7 +892,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (this.f((byte) -116)) {
           this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new StateChangeEvent(1, this.tileX, this.tileY, this.ownerPlayer)));
         }
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           return;
         }
         if (this.s(124)) {
@@ -1068,8 +1068,8 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         this.movementTargetY = -1;
         this.movementTargetX = -1;
         this.objectiveId = 0;
-        this.field_S = false;
-        this.field_G = false;
+        this.removedFromActivePlay = false;
+        this.escortComplete = false;
         try {
           this.tileX = tileX;
           this.bonusStrength = bonusStrength;
@@ -1137,8 +1137,8 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         this.movementTargetY = -1;
         this.movementTargetX = -1;
         this.objectiveId = 0;
-        this.field_S = false;
-        this.field_G = false;
+        this.removedFromActivePlay = false;
+        this.escortComplete = false;
     }
 
     Unit(int tileX, int tileY, int unitType) {
@@ -1147,8 +1147,8 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         this.movementTargetY = -1;
         this.movementTargetX = -1;
         this.objectiveId = 0;
-        this.field_S = false;
-        this.field_G = false;
+        this.removedFromActivePlay = false;
+        this.escortComplete = false;
         this.tileY = tileY;
         this.tileX = tileX;
         this.unitType = unitType;

@@ -48,13 +48,13 @@ final class iq {
     }
 
     final void a(int param0) {
-        if (!wg.a(-33, db.a(true, this.field_f), db.a(true, this.field_f + this.field_i), u.a(this.field_c, (byte) 94), u.a(30 + this.field_c, (byte) 94))) {
-          fe.a(db.a(true, this.field_f), u.a(this.field_c, (byte) 94), this.field_i, 30, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
-          fe.c(this.field_d, db.a(true, this.field_i / 2 + this.field_f), u.a(this.field_c + 30, (byte) 94), param0, true);
+        if (!wg.a(-33, db.a(true, this.field_f), db.a(true, this.field_f + this.field_i), MatchConditionEntry.a(this.field_c, (byte) 94), MatchConditionEntry.a(30 + this.field_c, (byte) 94))) {
+          fe.a(db.a(true, this.field_f), MatchConditionEntry.a(this.field_c, (byte) 94), this.field_i, 30, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
+          fe.c(this.field_d, db.a(true, this.field_i / 2 + this.field_f), MatchConditionEntry.a(this.field_c + 30, (byte) 94), param0, true);
           return;
         }
-        fe.a(db.a(true, this.field_f), u.a(this.field_c, (byte) 94), this.field_i, 30, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 0);
-        fe.c(this.field_d, db.a(true, this.field_i / 2 + this.field_f), u.a(this.field_c + 30, (byte) 94), param0, true);
+        fe.a(db.a(true, this.field_f), MatchConditionEntry.a(this.field_c, (byte) 94), this.field_i, 30, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 0);
+        fe.c(this.field_d, db.a(true, this.field_i / 2 + this.field_f), MatchConditionEntry.a(this.field_c + 30, (byte) 94), param0, true);
     }
 
     final static void b(int param0) {
@@ -99,7 +99,7 @@ final class iq {
 
     final boolean a(byte param0) {
         int var2 = -106 / ((param0 - 17) / 39);
-        return wg.a(-33, db.a(true, this.field_f), db.a(true, this.field_f + this.field_i), u.a(this.field_c, (byte) 94), u.a(this.field_c + 30, (byte) 94));
+        return wg.a(-33, db.a(true, this.field_f), db.a(true, this.field_f + this.field_i), MatchConditionEntry.a(this.field_c, (byte) 94), MatchConditionEntry.a(this.field_c + 30, (byte) 94));
     }
 
     static {

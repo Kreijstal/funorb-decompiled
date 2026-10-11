@@ -654,7 +654,7 @@ final class PopupPresentation implements EventPresentation {
               if (event.unit == null) {
                 return false;
               }
-              if (event.unit.field_S) {
+              if (event.unit.removedFromActivePlay) {
                 return false;
               }
               this.presenter.tileIndex = this.field_s * event.unit.tileY + event.unit.tileX;

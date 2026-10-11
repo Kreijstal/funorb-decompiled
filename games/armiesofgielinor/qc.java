@@ -46,8 +46,8 @@ abstract class qc {
           if (param0 < 0) {
             return null;
           }
-          if (mc.field_d.length > param0) {
-            var2 = mc.field_d[param0];
+          if (UnitLossCondition.field_d.length > param0) {
+            var2 = UnitLossCondition.field_d[param0];
             return var2.c((byte) -116);
           }
           return null;
@@ -58,8 +58,8 @@ abstract class qc {
         if (param0 < 0) {
           return null;
         }
-        if (mc.field_d.length > param0) {
-          var2Lifetime1 = mc.field_d[param0];
+        if (UnitLossCondition.field_d.length > param0) {
+          var2Lifetime1 = UnitLossCondition.field_d[param0];
           return var2Lifetime1.c((byte) -116);
         }
         return null;

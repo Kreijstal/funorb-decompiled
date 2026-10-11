@@ -211,7 +211,7 @@ final class AiInfluenceMap {
         int var14Lifetime1;
         var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param3.field_S) {
+          if (param3.removedFromActivePlay) {
             return;
           }
           var5_int = param3.getUnitCategory(param2 ^ param2);
@@ -780,9 +780,9 @@ final class AiInfluenceMap {
           var4 = var14.k(0);
           if (var4 != 0) {
             var5 = var3.field_q;
-            gm.field_a[0] = mv.field_d;
+            LeaderEscortCondition.field_a[0] = mv.field_d;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              gm.field_a[var6_int] = var14.g(1);
+              LeaderEscortCondition.field_a[var6_int] = var14.g(1);
             }
             qu.a(2, var5, var4);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
@@ -809,12 +809,12 @@ final class AiInfluenceMap {
             var10 = 0;
             while (var8 > var9) {
               var11 = vt.field_m[var9];
-              var6[0][var10] = gm.field_a[var11];
+              var6[0][var10] = LeaderEscortCondition.field_a[var11];
               var7[0][var10 * 4] = no.field_U[var11];
               var7[0][1 + 4 * var10] = wp.field_w[var11];
               var7[0][var10 * 4 + 2] = TutorialController.field_c[var11];
               var7[0][3 + var10 * 4] = VineGrowthAction.field_s[var11];
-              if (gt.a(gm.field_a[var11], (byte) 121) &&
+              if (gt.a(LeaderEscortCondition.field_a[var11], (byte) 121) &&
                 0 == TutorialController.field_c[var11] + wp.field_w[var11] + VineGrowthAction.field_s[var11]) {
                 var6[0][var10] = null;
                 var10--;
@@ -827,12 +827,12 @@ final class AiInfluenceMap {
             var10Lifetime1 = var13;
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = vt.field_m[var5 + var9Lifetime1];
-              var6[1][var13] = gm.field_a[var11Lifetime1];
+              var6[1][var13] = LeaderEscortCondition.field_a[var11Lifetime1];
               var7[1][4 * var13] = no.field_U[var11Lifetime1];
               var7[1][var13 * 4 + 1] = wp.field_w[var11Lifetime1];
               var7[1][var13 * 4 + 2] = TutorialController.field_c[var11Lifetime1];
               var7[1][var13 * 4 + 3] = VineGrowthAction.field_s[var11Lifetime1];
-              if (gt.a(gm.field_a[var11Lifetime1], (byte) 109) &&
+              if (gt.a(LeaderEscortCondition.field_a[var11Lifetime1], (byte) 109) &&
                 VineGrowthAction.field_s[var11Lifetime1] + (wp.field_w[var11Lifetime1] + TutorialController.field_c[var11Lifetime1]) == 0) {
                 var6[1][var13] = null;
                 var13--;

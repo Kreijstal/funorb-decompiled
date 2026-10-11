@@ -349,7 +349,7 @@ final class ep {
           }
           try {
             if (ta.field_N == 0) {
-              kd.field_R = vq.field_c.a(gm.field_i, (byte) 114, db.field_c);
+              kd.field_R = vq.field_c.a(LeaderEscortCondition.field_i, (byte) 114, db.field_c);
               ta.field_N = ta.field_N + 1;
             }
             if (ta.field_N == 1) {

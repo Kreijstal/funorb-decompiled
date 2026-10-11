@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 80 reviewed class names, not a complete semantic map. Its raw/named
+Armies has 88 reviewed class names, not a complete semantic map. Its raw/named
 core probe checks map lookups, alliances, status packing, damage, equipment/ranges,
 spell payload bytes and queued combat consequences under a controlled headless
 boundary. SpellCastEvent corrects the earlier trinket label from actual spell-table
@@ -32,7 +32,10 @@ also tested, alongside packed movement requests and prepared-action event
 payloads. ActionRequest/PreparedAction replace the overly narrow SpellArea names;
 movement, summoning, deployment and spells share this contract. Combat prediction,
 cover/status scaling, team effects, summoning permissions and parasite eligibility
-also have reviewed names and focused fixtures. Three dispatcher files remain.
+also have reviewed names and focused fixtures. Match-condition aggregation,
+survivor masks, elimination order/ownership cleanup and structure income are
+checked too. Campaign metadata and map layouts have reviewed names. Three
+dispatcher files remain.
 
 Steel has 27 reviewed class names. Its controlled raw/named core checks cover
 module aliases, armour/charge mutations, terrain bounds, recursive part armour

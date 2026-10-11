@@ -118,7 +118,7 @@ abstract class uq extends ms {
             } else {
               if (var9Lifetime1 == 248) {
                 tf.a((byte) -99, CombatEvent.d((byte) -127));
-                lk.field_r = om.field_s;
+                lk.field_r = CampaignMission.field_s;
                 dj.a((byte) -128);
                 ev.field_b = false;
                 stackIn_31_0 = var9Lifetime1;

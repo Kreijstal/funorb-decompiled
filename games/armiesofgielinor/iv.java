@@ -267,8 +267,8 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         Object var6 = null;
         try {
           var2_long = vi.b(120);
-          var4 = om.field_r[os.field_o];
-          om.field_r[os.field_o] = var2_long;
+          var4 = CampaignMission.field_r[os.field_o];
+          CampaignMission.field_r[os.field_o] = var2_long;
           if (0L != var4 &&
             var4 >= var2_long) {
           }

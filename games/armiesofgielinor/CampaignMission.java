@@ -1,33 +1,33 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class om extends IntrusiveNode implements TaggedFieldReader {
-    int field_k;
+final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
+    int flags;
     int field_l;
     static String field_s;
     static long[] field_r;
-    int field_z;
-    int field_q;
-    private lo field_C;
+    int mapTheme;
+    int musicId;
+    private MapLayout cachedLayout;
     static String field_p;
     private int field_A;
-    String field_n;
-    int[] field_D;
-    int field_m;
+    String description;
+    int[] rewardIds;
+    int gameType;
     int field_u;
-    int[] field_B;
-    int[] field_y;
+    int[] participantIds;
+    int[] neighborMissionIds;
     static el field_I;
-    int field_o;
-    int field_v;
+    int mapSizeSetting;
+    int missionId;
     cf field_G;
     kl field_H;
-    int field_E;
-    int field_w;
-    int field_F;
-    private int[] field_x;
-    String field_J;
-    private int field_t;
+    int difficulty;
+    int playerSlot;
+    int godSetting;
+    private int[] teamAssignments;
+    String name;
+    private int mapResourceId;
 
     public final void decodeTaggedField(int encodedLength, CipherPacketBuffer packet, String fieldName, byte obfuscationGuard) {
         RuntimeException stackIn_91_0 = null;
@@ -50,19 +50,19 @@ final class om extends IntrusiveNode implements TaggedFieldReader {
               if (encodedLength <= 0) {
                 return;
               }
-              this.field_k = (int)tn.a(false, encodedLength, packet);
+              this.flags = (int)tn.a(false, encodedLength, packet);
             } else {
               if (fieldName.equals("name")) {
                 if (encodedLength <= 0) {
                   return;
                 }
-                this.field_J = up.a(packet, encodedLength, (byte) -82);
+                this.name = PortalLossCondition.a(packet, encodedLength, (byte) -82);
                 return;
               }
               if (!fieldName.equals("key")) {
                 if (fieldName.equals("pos")) {
                   if (encodedLength > 0) {
-                    this.field_w = (int)tn.a(false, encodedLength, packet);
+                    this.playerSlot = (int)tn.a(false, encodedLength, packet);
                     return;
                   }
                 } else {
@@ -80,14 +80,14 @@ final class om extends IntrusiveNode implements TaggedFieldReader {
                           return;
                         }
                         var5_int = ai.a(packet, true);
-                        this.field_y = new int[var5_int];
+                        this.neighborMissionIds = new int[var5_int];
                         for (var6 = 0; var6 < var5_int; var6++) {
-                          this.field_y[var6] = (int)tn.a(false, 2, packet);
+                          this.neighborMissionIds[var6] = (int)tn.a(false, 2, packet);
                         }
                       } else {
                         if (fieldName.equals("mpsz")) {
                           if (0 < encodedLength) {
-                            this.field_o = (int)tn.a(false, encodedLength, packet);
+                            this.mapSizeSetting = (int)tn.a(false, encodedLength, packet);
                             return;
                           }
                         } else {
@@ -97,9 +97,9 @@ final class om extends IntrusiveNode implements TaggedFieldReader {
                                 return;
                               }
                               var5_int = ai.a(packet, true);
-                              this.field_B = new int[var5_int];
+                              this.participantIds = new int[var5_int];
                               for (var6 = 0; var5_int > var6; var6++) {
-                                this.field_B[var6] = (int)tn.a(false, 2, packet);
+                                this.participantIds[var6] = (int)tn.a(false, 2, packet);
                               }
                             } else {
                               if (!fieldName.equals("rwd")) {
@@ -122,19 +122,19 @@ final class om extends IntrusiveNode implements TaggedFieldReader {
                                     if (0 >= encodedLength) {
                                       return;
                                     }
-                                    this.field_n = up.a(packet, encodedLength, (byte) -119);
+                                    this.description = PortalLossCondition.a(packet, encodedLength, (byte) -119);
                                     return;
                                   }
                                   if (fieldName.equals("gt")) {
                                     if (0 >= encodedLength) {
                                       return;
                                     }
-                                    this.field_m = (int)tn.a(false, encodedLength, packet);
+                                    this.gameType = (int)tn.a(false, encodedLength, packet);
                                     return;
                                   }
                                   if (fieldName.equals("gd")) {
                                     if (encodedLength > 0) {
-                                      this.field_F = (int)tn.a(false, encodedLength, packet);
+                                      this.godSetting = (int)tn.a(false, encodedLength, packet);
                                       return;
                                     }
                                   } else {
@@ -147,7 +147,7 @@ final class om extends IntrusiveNode implements TaggedFieldReader {
                                     }
                                     if (fieldName.equals("song")) {
                                       if (encodedLength > 0) {
-                                        this.field_q = (int)tn.a(false, encodedLength, packet);
+                                        this.musicId = (int)tn.a(false, encodedLength, packet);
                                         return;
                                       }
                                     } else {
@@ -156,32 +156,32 @@ final class om extends IntrusiveNode implements TaggedFieldReader {
                                       }
                                       if (encodedLength > 0) {
                                         var5_int = ai.a(packet, true);
-                                        this.field_x = new int[var5_int];
+                                        this.teamAssignments = new int[var5_int];
                                         for (var6 = 0; var5_int > var6; var6++) {
-                                          this.field_x[var6] = (int)tn.a(false, 2, packet);
+                                          this.teamAssignments[var6] = (int)tn.a(false, 2, packet);
                                         }
                                       }
                                     }
                                   }
                                 } else {
                                   if (0 < encodedLength) {
-                                    this.field_E = (int)tn.a(false, encodedLength, packet);
+                                    this.difficulty = (int)tn.a(false, encodedLength, packet);
                                     return;
                                   }
                                 }
                               } else {
                                 if (encodedLength > 0) {
                                   var5_int = ai.a(packet, true);
-                                  this.field_D = new int[var5_int];
+                                  this.rewardIds = new int[var5_int];
                                   for (var6 = 0; var6 < var5_int; var6++) {
-                                    this.field_D[var6] = (int)tn.a(false, 2, packet);
+                                    this.rewardIds[var6] = (int)tn.a(false, 2, packet);
                                   }
                                 }
                               }
                             }
                           } else {
                             if (encodedLength > 0) {
-                              this.field_z = (int)tn.a(false, encodedLength, packet);
+                              this.mapTheme = (int)tn.a(false, encodedLength, packet);
                               return;
                             }
                           }
@@ -189,7 +189,7 @@ final class om extends IntrusiveNode implements TaggedFieldReader {
                       }
                     } else {
                       if (0 < encodedLength) {
-                        this.field_t = (int)tn.a(false, encodedLength, packet);
+                        this.mapResourceId = (int)tn.a(false, encodedLength, packet);
                         return;
                       }
                     }
@@ -202,14 +202,14 @@ final class om extends IntrusiveNode implements TaggedFieldReader {
                 }
               } else {
                 if (encodedLength > 0) {
-                  up.a(packet, encodedLength, (byte) -82);
+                  PortalLossCondition.a(packet, encodedLength, (byte) -82);
                   return;
                 }
               }
             }
           } else {
             if (encodedLength > 0) {
-              this.field_v = (int)tn.a(false, encodedLength, packet);
+              this.missionId = (int)tn.a(false, encodedLength, packet);
               return;
             }
           }
@@ -234,14 +234,14 @@ final class om extends IntrusiveNode implements TaggedFieldReader {
         }
     }
 
-    final lo a(int param0) {
-        if (null == this.field_C) {
-          this.field_C = this.d((byte) 92);
+    final MapLayout getMapLayout(int obfuscationGuard) {
+        if (null == this.cachedLayout) {
+          this.cachedLayout = this.loadMapLayout((byte) 92);
         }
-        if (param0 > -88) {
-          this.field_q = 10;
+        if (obfuscationGuard > -88) {
+          this.musicId = 10;
         }
-        return this.field_C;
+        return this.cachedLayout;
     }
 
     public static void f(int param0) {
@@ -254,13 +254,13 @@ final class om extends IntrusiveNode implements TaggedFieldReader {
         }
     }
 
-    private final lo d(byte param0) {
-        if (param0 < 86) {
-          om.c((byte) 8);
+    private final MapLayout loadMapLayout(byte obfuscationGuard) {
+        if (obfuscationGuard < 86) {
+          CampaignMission.c((byte) 8);
         }
-        byte[] var3 = this.field_H.a((byte) 76, this.field_t, this.field_H.a(gk.field_O[this.field_G.field_r], 102));
+        byte[] var3 = this.field_H.a((byte) 76, this.mapResourceId, this.field_H.a(gk.field_O[this.field_G.field_r], 102));
         byte[] var2 = var3;
-        return new lo(this.field_v, var3);
+        return new MapLayout(this.missionId, var3);
     }
 
     final String[] e(int param0) {
@@ -273,36 +273,36 @@ final class om extends IntrusiveNode implements TaggedFieldReader {
         if (param0 != -23209) {
           return (String[]) null;
         }
-        var6 = new String[this.field_B.length];
+        var6 = new String[this.participantIds.length];
         var2 = var6;
         for (var3 = 0; var6.length > var3; var3++) {
-          if (var3 == this.field_w) {
+          if (var3 == this.playerSlot) {
             var6[var3] = this.field_G.field_l;
           } else {
-            var4 = this.field_G.field_q[this.field_B[var3]];
+            var4 = this.field_G.field_q[this.participantIds[var3]];
             var6[var3] = var4.field_u;
           }
         }
         return var2;
     }
 
-    final int[] a(byte param0) {
-        int var2 = -73 % ((param0 - 13) / 33);
-        return this.field_x;
+    final int[] getTeamAssignments(byte obfuscationGuard) {
+        int var2 = -73 % ((obfuscationGuard - 13) / 33);
+        return this.teamAssignments;
     }
 
     final boolean e(byte param0) {
         if (param0 <= 56) {
           return true;
         }
-        return (this.field_k & 2) != 0 ? true : false;
+        return (this.flags & 2) != 0 ? true : false;
     }
 
     final fu g(int param0) {
         if (param0 != -1) {
           this.g(-55);
         }
-        return new fu(this.field_D, this.field_l, this.field_u);
+        return new fu(this.rewardIds, this.field_l, this.field_u);
     }
 
     final static RgbSprite[] a(byte param0, String param1, String param2, kl param3) {
@@ -362,12 +362,12 @@ final class om extends IntrusiveNode implements TaggedFieldReader {
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         for (var2 = 0; var2 < hs.field_G.length; var2++) {
           if (hs.field_G[var2] == this.field_A) {
-            this.field_o = var2;
+            this.mapSizeSetting = var2;
             break;
           }
         }
         if (!param0) {
-          this.a((byte) 40);
+          this.getTeamAssignments((byte) 40);
         }
     }
 
@@ -385,15 +385,15 @@ final class om extends IntrusiveNode implements TaggedFieldReader {
     final static gl c(byte param0) {
         if (param0 >= -11) {
           kl var2 = (kl) null;
-          om.a((byte) -102, (String) null, (String) null, (kl) null);
+          CampaignMission.a((byte) -102, (String) null, (String) null, (kl) null);
         }
         return new gl(cn.e(488997228), rf.c(-104));
     }
 
-    om() {
-        this.field_q = -1;
+    CampaignMission() {
+        this.musicId = -1;
         this.field_l = -1;
-        this.field_E = 1;
+        this.difficulty = 1;
     }
 
     static {

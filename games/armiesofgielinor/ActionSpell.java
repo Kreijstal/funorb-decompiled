@@ -75,7 +75,7 @@ final class ActionSpell extends Spell {
         }
     }
 
-    final static void a(int param0, int param1, om param2, boolean param3, int param4, int param5) {
+    final static void a(int param0, int param1, CampaignMission param2, boolean param3, int param4, int param5) {
         CipherPacketBuffer stackIn_32_0 = null;
         int stackIn_32_1 = 0;
         int stackIn_33_2 = 0;
@@ -95,7 +95,7 @@ final class ActionSpell extends Spell {
             return;
           }
           var6_int = param2.field_G.field_r;
-          var7 = param2.field_v;
+          var7 = param2.missionId;
           MoveEvent.field_C.a(var7, (byte) 33, param4);
           if (!(pg.field_d.field_g.a(var6_int, -63, var7) >= param4) ||
             param4 == 1) {
@@ -200,13 +200,13 @@ final class ActionSpell extends Spell {
         g.a((byte) -85, param0 / 2, param2 / 2);
         if (param1 == 23505) {
           ni.a(-8994, param0, param2);
-          om.a(param2, -22696, param0);
+          CampaignMission.a(param2, -22696, param0);
           pt.c(param0 / 2, param2 / 2, 9);
           return;
         }
         ActionSpell.a(-106, -34, -122);
         ni.a(-8994, param0, param2);
-        om.a(param2, -22696, param0);
+        CampaignMission.a(param2, -22696, param0);
         pt.c(param0 / 2, param2 / 2, 9);
     }
 
@@ -245,7 +245,7 @@ final class ActionSpell extends Spell {
 
     final void finishEffect(Battlefield battlefield, int obfuscationGuard) {
         RuntimeException var3 = null;
-        om var4 = null;
+        CampaignMission var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -258,8 +258,8 @@ final class ActionSpell extends Spell {
           if (obfuscationGuard == -1700635440) {
             return;
           }
-          var4 = (om) null;
-          ActionSpell.a(112, -111, (om) null, true, 116, 78);
+          var4 = (CampaignMission) null;
+          ActionSpell.a(112, -111, (CampaignMission) null, true, 116, 78);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -366,7 +366,7 @@ final class UnitSpell extends Spell {
           if (uc.spellDefinitions[this.spellId][5] == 7) {
             param2.tiles[this.targetY * param2.mapWidth + this.targetX].ownerPlayer = -1;
             param2.f(-2);
-            param2.b(param0 ^ -98);
+            param2.recountStructures(param0 ^ -98);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

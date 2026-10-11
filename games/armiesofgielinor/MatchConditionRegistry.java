@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tt {
+final class MatchConditionRegistry {
     static int field_c;
-    private NodeDeque[] field_b;
+    private NodeDeque[] conditionsByPlayer;
     static String[] field_a;
     static RgbSprite[] field_d;
 
-    final String[] a(int param0) {
+    final String[] describeConditions(int initialCount) {
         int var4_int = 0;
         String[] array$2 = null;
         int incrementValue$3 = 0;
@@ -20,29 +20,29 @@ final class tt {
         int var5;
         bb var5_ref_bb;
         int var6;
-        u var7_ref_u;
+        MatchConditionEntry var7_ref_u;
         int var8;
         int var6Lifetime1;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var2 = param0;
-        var3 = new String[this.field_b.length][];
-        for (var4_int = 0; this.field_b.length > var4_int; var4_int++) {
-          array$2 = new String[this.field_b[var4_int].b(false)];
+        var2 = initialCount;
+        var3 = new String[this.conditionsByPlayer.length][];
+        for (var4_int = 0; this.conditionsByPlayer.length > var4_int; var4_int++) {
+          array$2 = new String[this.conditionsByPlayer[var4_int].b(false)];
           var3[var4_int] = array$2;
-          var5_ref_bb = new bb(this.field_b[var4_int]);
+          var5_ref_bb = new bb(this.conditionsByPlayer[var4_int]);
           var6 = 0;
-          var7_ref_u = (u) (var5_ref_bb.c(50));
+          var7_ref_u = (MatchConditionEntry) (var5_ref_bb.c(50));
           while (var7_ref_u != null) {
             var2++;
             incrementValue$3 = var6;
             var6++;
-            var3[var4_int][incrementValue$3] = var7_ref_u.field_m.a(param0 - 124);
-            var7_ref_u = (u) (var5_ref_bb.b(param0 ^ 50));
+            var3[var4_int][incrementValue$3] = var7_ref_u.condition.describeCondition(initialCount - 124);
+            var7_ref_u = (MatchConditionEntry) (var5_ref_bb.b(initialCount ^ 50));
           }
         }
-        var4 = new String[var2 + this.field_b.length];
+        var4 = new String[var2 + this.conditionsByPlayer.length];
         var5 = 0;
-        for (var6Lifetime1 = 0; this.field_b.length > var6Lifetime1; var6Lifetime1++) {
+        for (var6Lifetime1 = 0; this.conditionsByPlayer.length > var6Lifetime1; var6Lifetime1++) {
           incrementValue$0 = var5;
           var5++;
           var4[incrementValue$0] = "player [" + var6Lifetime1 + "]";
@@ -55,26 +55,26 @@ final class tt {
         return var4;
     }
 
-    final void a(byte param0) {
+    final void removePortalLossConditions(byte obfuscationGuard) {
         int var3 = 0;
         NodeDeque var4 = null;
         bb var5 = null;
-        u var6 = null;
+        MatchConditionEntry var6 = null;
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        NodeDeque[] var8 = this.field_b;
+        NodeDeque[] var8 = this.conditionsByPlayer;
         NodeDeque[] var2 = var8;
         for (var3 = 0; var8.length > var3; var3++) {
           var4 = var8[var3];
           var5 = new bb(var4);
-          var6 = (u) (var5.c(50));
+          var6 = (MatchConditionEntry) (var5.c(50));
           while (var6 != null) {
-            if (var6.field_m instanceof up) {
+            if (var6.condition instanceof PortalLossCondition) {
               var6.unlink(87);
             }
-            var6 = (u) (var5.b(50));
+            var6 = (MatchConditionEntry) (var5.b(50));
           }
         }
-        if (param0 < 4) {
+        if (obfuscationGuard < 4) {
           field_c = -58;
         }
     }
@@ -137,18 +137,18 @@ final class tt {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void removePlayerPortalLossConditions(int obfuscationGuard, int playerId) {
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        bb var3 = new bb(this.field_b[param1]);
-        if (param0 != 244) {
+        bb var3 = new bb(this.conditionsByPlayer[playerId]);
+        if (obfuscationGuard != 244) {
           return;
         }
-        u var4 = (u) (var3.c(50));
+        MatchConditionEntry var4 = (MatchConditionEntry) (var3.c(50));
         while (var4 != null) {
-          if (var4.field_m instanceof up) {
+          if (var4.condition instanceof PortalLossCondition) {
             var4.unlink(-115);
           }
-          var4 = (u) (var3.b(50));
+          var4 = (MatchConditionEntry) (var3.b(50));
         }
     }
 
@@ -156,58 +156,58 @@ final class tt {
         field_d = null;
         field_a = null;
         if (!param0) {
-          tt.a(true);
+          MatchConditionRegistry.a(true);
         }
     }
 
-    final boolean a(byte param0, int param1) {
+    final boolean hasDefeat(byte obfuscationGuard, int playerId) {
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        bb var3 = new bb(this.field_b[param1]);
-        if (param0 > -49) {
+        bb iterator = new bb(this.conditionsByPlayer[playerId]);
+        if (obfuscationGuard > -49) {
           return false;
         }
-        u var4 = (u) (var3.c(50));
-        while (var4 != null) {
-          if (var4.field_m.c(-128)) {
+        MatchConditionEntry entry = (MatchConditionEntry) (iterator.c(50));
+        while (entry != null) {
+          if (entry.condition.isDefeat(-128)) {
             return true;
           }
-          var4 = (u) (var3.b(50));
+          entry = (MatchConditionEntry) (iterator.b(50));
         }
         return false;
     }
 
-    final boolean a(int param0, int param1) {
+    final boolean hasVictory(int playerId, int obfuscationGuard) {
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        bb var3 = new bb(this.field_b[param0]);
-        u var4 = (u) (var3.c(50));
-        if (param1 > -46) {
-          this.a(85, 104);
+        bb iterator = new bb(this.conditionsByPlayer[playerId]);
+        MatchConditionEntry entry = (MatchConditionEntry) (iterator.c(50));
+        if (obfuscationGuard > -46) {
+          this.hasVictory(85, 104);
         }
-        while (var4 != null) {
-          if (var4.field_m.b(0)) {
+        while (entry != null) {
+          if (entry.condition.isVictory(0)) {
             return true;
           }
-          var4 = (u) (var3.b(50));
+          entry = (MatchConditionEntry) (iterator.b(50));
         }
         return false;
     }
 
-    tt(int param0) {
+    MatchConditionRegistry(int playerCount) {
         int var2 = 0;
-        this.field_b = new NodeDeque[param0];
-        for (var2 = 0; var2 < this.field_b.length; var2++) {
-          this.field_b[var2] = new NodeDeque();
+        this.conditionsByPlayer = new NodeDeque[playerCount];
+        for (var2 = 0; var2 < this.conditionsByPlayer.length; var2++) {
+          this.conditionsByPlayer[var2] = new NodeDeque();
         }
     }
 
-    final void a(lv param0, byte param1, int param2) {
+    final void addCondition(MatchCondition condition, byte obfuscationGuard, int playerId) {
         try {
-          this.field_b[param2].addFirst(750, new u(param0));
-          if (param1 < 81) {
+          this.conditionsByPlayer[playerId].addFirst(750, new MatchConditionEntry(condition));
+          if (obfuscationGuard < 81) {
             field_a = (String[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "tt.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "tt.C(" + (condition != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + playerId + ')');
         }
     }
 

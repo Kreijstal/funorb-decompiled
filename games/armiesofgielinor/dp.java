@@ -56,7 +56,7 @@ final class dp extends je {
 
     final void a(boolean param0) {
         try {
-          up.a(' ', 0, this.field_Rb, param0);
+          PortalLossCondition.a(' ', 0, this.field_Rb, param0);
           this.field_Qb = 0;
           this.field_Jb = 0;
           this.field_Pb.field_X = this.field_Rb.toString();
@@ -282,7 +282,7 @@ final class dp extends je {
             this.field_Jb = var2_int;
             this.field_Qb = var2_int;
             var4 = this.field_Rb.toString().substring(var3, this.field_Rb.length());
-            up.a(' ', var2_int, this.field_Rb, true);
+            PortalLossCondition.a(' ', var2_int, this.field_Rb, true);
             discarded$0 = this.field_Rb.append(var4);
             this.field_Pb.field_X = this.field_Rb.toString();
           }
@@ -322,7 +322,7 @@ final class dp extends je {
             discarded$0 = this.field_Rb.append(param1);
           } else {
             var4 = this.field_Rb.toString().substring(this.field_Qb, this.field_Rb.length());
-            up.a(' ', this.field_Qb, this.field_Rb, true);
+            PortalLossCondition.a(' ', this.field_Qb, this.field_Rb, true);
             discarded$1 = this.field_Rb.append(param1);
             discarded$2 = this.field_Rb.append(var4);
           }
@@ -406,7 +406,7 @@ final class dp extends je {
               !(this.field_Rb.length() >= this.field_Ub)) {
               if (this.field_Qb != this.field_Rb.length()) {
                 var5 = this.field_Rb.toString().substring(this.field_Qb, this.field_Rb.length());
-                up.a(' ', this.field_Qb, this.field_Rb, true);
+                PortalLossCondition.a(' ', this.field_Qb, this.field_Rb, true);
                 discarded$0 = this.field_Rb.append(param2);
                 discarded$1 = this.field_Rb.append(var5);
               } else {

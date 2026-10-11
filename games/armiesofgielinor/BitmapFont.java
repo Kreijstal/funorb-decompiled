@@ -186,7 +186,7 @@ abstract class BitmapFont extends ms {
         if (param0 == null) {
           return 0;
         }
-        up.a(' ', 0, field_U, true);
+        PortalLossCondition.a(' ', 0, field_U, true);
         var4 = 0;
         var5 = 0;
         var6 = -1;

@@ -7,7 +7,7 @@ final class ou {
     static char[] field_a;
     static vo field_h;
     private NodeDeque[][] field_i;
-    private lo[] field_b;
+    private MapLayout[] field_b;
     static String field_g;
     private kl[] field_e;
     private boolean field_d;
@@ -107,7 +107,7 @@ final class ou {
         int var5_int = 0;
         RuntimeException var5 = null;
         bb var6 = null;
-        lo var7 = null;
+        MapLayout var7 = null;
         int var8 = 0;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
@@ -123,7 +123,7 @@ final class ou {
               }
               var5_int = param0;
               var6 = new bb(this.field_i[param2][param1]);
-              var7 = (lo) (var6.c(param0 + 50));
+              var7 = (MapLayout) (var6.c(param0 + 50));
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (null == var7))) {
                 stackIn_36_0 = var7.field_k;
@@ -131,7 +131,7 @@ final class ou {
                   if (stackIn_36_0 >= param3) {
                     var5_int++;
                   }
-                  var7 = (lo) (var6.b(param0 + 50));
+                  var7 = (MapLayout) (var6.b(param0 + 50));
                   continue;
                 }
                 break;
@@ -161,7 +161,7 @@ final class ou {
         RuntimeException var2 = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.field_b = new lo[wn.field_eb.length];
+          this.field_b = new MapLayout[wn.field_eb.length];
           var2_int = 0;
           if (param0 <= 110) {
             this.a((byte) -41);
@@ -173,7 +173,7 @@ final class ou {
             }
             if (var3 != null &&
               var3.length != 0) {
-              this.field_b[var2_int] = new lo(-1, var3);
+              this.field_b[var2_int] = new MapLayout(-1, var3);
               var2_int++;
               continue;
             } else {
@@ -188,18 +188,18 @@ final class ou {
         }
     }
 
-    final lo a(int param0, int param1, int param2, int param3, int param4) {
+    final MapLayout a(int param0, int param1, int param2, int param3, int param4) {
         Object stackIn_12_0 = null;
         Object stackIn_23_0 = null;
         Object stackIn_31_0 = null;
         Object stackIn_42_0 = null;
-        lo stackIn_45_0 = null;
+        MapLayout stackIn_45_0 = null;
         Object stackIn_50_0 = null;
-        lo stackIn_67_0 = null;
+        MapLayout stackIn_67_0 = null;
         RuntimeException decompiledCaughtException = null;
         bb var6 = null;
         RuntimeException var6_ref = null;
-        lo var7 = null;
+        MapLayout var7 = null;
         int var8 = 0;
         int var9 = 0;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -217,18 +217,18 @@ final class ou {
                   !this.field_d &&
                   df.field_M < 0) {
                   stackIn_42_0 = null;
-                  return (lo) (stackIn_42_0);
+                  return (MapLayout) (stackIn_42_0);
                 }
                 if (param1 != 4136) {
-                  stackIn_45_0 = (lo) null;
+                  stackIn_45_0 = (MapLayout) null;
                   return stackIn_45_0;
                 }
                 if (null == this.field_i[param3][param2]) {
                   stackIn_50_0 = null;
-                  return (lo) (stackIn_50_0);
+                  return (MapLayout) (stackIn_50_0);
                 }
                 var6 = new bb(this.field_i[param3][param2]);
-                var7 = (lo) (var6.c(param1 - 4086));
+                var7 = (MapLayout) (var6.c(param1 - 4086));
                 var8 = 0;
                 while (var7 != null) {
                   if (!(param0 <= var7.field_k) ||
@@ -237,7 +237,7 @@ final class ou {
                     if (param0 <= var7.field_k) {
                       var8++;
                     }
-                    var7 = (lo) (var6.b(50));
+                    var7 = (MapLayout) (var6.b(50));
                     if (var9 == 0) {
                       continue;
                     }
@@ -248,13 +248,13 @@ final class ou {
                 return stackIn_67_0;
               }
               stackIn_31_0 = null;
-              return (lo) (stackIn_31_0);
+              return (MapLayout) (stackIn_31_0);
             }
             stackIn_23_0 = null;
-            return (lo) (stackIn_23_0);
+            return (MapLayout) (stackIn_23_0);
           }
           stackIn_12_0 = null;
-          return (lo) (stackIn_12_0);
+          return (MapLayout) (stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
@@ -674,10 +674,10 @@ final class ou {
         }
     }
 
-    final lo a(byte param0, int param1) {
+    final MapLayout a(byte param0, int param1) {
         RuntimeException var3 = null;
-        lo stackIn_4_0 = null;
-        lo stackIn_9_0 = null;
+        MapLayout stackIn_4_0 = null;
+        MapLayout stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < this.field_b.length) {
@@ -756,7 +756,7 @@ final class ou {
             var6 = var4.a(AttackEvent.field_A[param2][param1][var5], param0 - 5249, "");
             if (var6 != null && (var6.length != 0 ||
               var7 != 0)) {
-              this.field_i[param2][param1].addLast((byte) -119, (IntrusiveNode) (new lo(var5, var6)));
+              this.field_i[param2][param1].addLast((byte) -119, (IntrusiveNode) (new MapLayout(var5, var6)));
             }
             var5++;
             if (var7 == 0) {

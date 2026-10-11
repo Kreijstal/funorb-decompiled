@@ -85,7 +85,7 @@ final class mo {
           this.field_d = null;
         }
         this.field_a = rh.field_e;
-        this.field_b = u.field_k;
+        this.field_b = MatchConditionEntry.field_k;
         this.field_k = BestScoreStrategy.field_k;
         this.field_f = ui.field_b;
         this.field_m = gp.field_b;

@@ -196,7 +196,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         if (!var7.isStructure(param1)) {
           return;
         }
-        if (var7.d(-60)) {
+        if (var7.isPortal(-60)) {
           stackIn_7_0 = (var7.ownerPlayer != this.playerId) ? 101.0f : 0.0f;
           var4 = stackIn_7_0;
         }
@@ -317,7 +317,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         if (1 == var2) {
           if (this.field_t == 0) {
             if (0 == this.battlefield.unitsByPlayer[this.playerId].b(false) &&
-              null != this.battlefield.field_K) {
+              null != this.battlefield.campaignMission) {
               var2 = 0;
               var3_ref_ne__ = this.battlefield.tiles;
               var4 = 0;
@@ -325,7 +325,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                 if (var3_ref_ne__.length > var4) {
                   var5 = var3_ref_ne__[var4];
                   if (var5.isAlliedToPlayer(this.playerId, (byte) 91) &&
-                    var5.d(param0 + 5026) &&
+                    var5.isPortal(param0 + 5026) &&
                     null == var5.occupant) {
                     var2 = 1;
                   } else {
@@ -340,8 +340,8 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                 for (var4 = 0; this.battlefield.playerCount > var4; var4++) {
                   if (var3 == 0) {
                     if (var4 != this.playerId &&
-                      0 != (1 & this.battlefield.a((byte) 78) >> var4) &&
-                      !this.battlefield.arePlayersAllied(var4, -16985, this.battlefield.field_K.field_w)) {
+                      0 != (1 & this.battlefield.getSurvivingPlayerMask((byte) 78) >> var4) &&
+                      !this.battlefield.arePlayersAllied(var4, -16985, this.battlefield.campaignMission.playerSlot)) {
                       var3 = 1;
                     }
                     continue;
@@ -349,7 +349,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                   break;
                 }
                 if (var3 == 0) {
-                  this.battlefield.a(0, this.battlefield.field_u | 1 << this.playerId);
+                  this.battlefield.setInactivePlayerMask(0, this.battlefield.inactivePlayerMask | 1 << this.playerId);
                 }
                 this.b(7, param0 ^ -5090);
                 decompiledFrameCompleted0 = false;
@@ -410,7 +410,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
     }
 
     private final void a(int param0, boolean param1) {
-        if (null == this.battlefield.field_K) {
+        if (null == this.battlefield.campaignMission) {
           this.b(param1 ? 5 : 8, 4);
           return;
         }
@@ -522,7 +522,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
               this.field_x = this.field_x + 1;
               this.field_s = 9;
             } else {
-              if (!((Unit) (var3_ref)).field_S) {
+              if (!((Unit) (var3_ref)).removedFromActivePlay) {
                 if (0 != this.field_s) {
                   if (var4_int != 0) {
                     this.field_s = 8;
@@ -558,7 +558,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
               var11 = var10;
               var11 = var10;
               this.a(var3, false, 1);
-              if (!var10.d(-16)) {
+              if (!var10.isPortal(-16)) {
               }
             }
             this.field_o = this.field_o + 1;
@@ -602,7 +602,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           this.b(3, param0 ^ -25527);
           return;
         }
-        if (this.field_M.unit.field_S ||
+        if (this.field_M.unit.removedFromActivePlay ||
           this.field_M.unit.ownerPlayer != this.playerId) {
           var3 = (AiUnitPlanner) (this.unitPlanners.next((byte) 123));
           AiUnitPlanner var2 = var3;
@@ -1483,7 +1483,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         Unit var8;
         if (null != this.field_S) {
           if (this.field_S.unit.field_X) {
-            if (!this.field_S.unit.field_S) {
+            if (!this.field_S.unit.removedFromActivePlay) {
               this.influenceMap.a(this.field_A, 1, -19545, this.field_S.unit);
               if (this.field_S.unit.tag != 0) {
                 this.a(3, -14092, this.battlefield.mapWidth * this.field_S.unit.tileY + this.field_S.unit.tileX, this.field_S.unit.tag, 1);
@@ -1746,7 +1746,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           for (var13_intLifetime1 = 0; this.battlefield.tiles.length > var13_intLifetime1; var13_intLifetime1++) {
             var36Lifetime1 = this.battlefield.tiles[var13_intLifetime1];
             if (null == var36Lifetime1.occupant &&
-              var36Lifetime1.d(-37) &&
+              var36Lifetime1.isPortal(-37) &&
               this.playerId == var36Lifetime1.ownerPlayer) {
               var15 = this.battlefield.godFavourLevels[this.playerId];
               var16 = var13_intLifetime1 % this.battlefield.mapWidth;
@@ -1766,10 +1766,10 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                     var20 = this.battlefield.canSummonUnitAt(var17, -26813, var18, var16, this.playerId) ? 1 : 0;
                     var21 = var20;
                     if (var20 == 0) {
-                      this.battlefield.playerMana[this.playerId] = this.battlefield.playerMana[this.playerId] + this.battlefield.k(-116, this.playerId);
+                      this.battlefield.playerMana[this.playerId] = this.battlefield.playerMana[this.playerId] + this.battlefield.getStructureIncome(-116, this.playerId);
                       stackIn_75_0 = (!this.battlefield.canSummonUnitAt(var17, param0 ^ -26813, var18, var16, this.playerId)) ? 0 : 1;
                       var21 = stackIn_75_0;
-                      this.battlefield.playerMana[this.playerId] = this.battlefield.playerMana[this.playerId] - this.battlefield.k(-101, this.playerId);
+                      this.battlefield.playerMana[this.playerId] = this.battlefield.playerMana[this.playerId] - this.battlefield.getStructureIncome(-101, this.playerId);
                     }
                     if (var21 != 0) {
                       var22 = 0.0f;

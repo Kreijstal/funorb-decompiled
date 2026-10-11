@@ -225,7 +225,7 @@ final class wi {
                 } else {
                   if (var12.field_Ub) {
                     var12.field_ac.field_X = fo.a(param1 + 4545, DeployEvent.field_G, new String[]{var20});
-                    var12.field_dc.field_X = gm.field_g;
+                    var12.field_dc.field_X = LeaderEscortCondition.field_g;
                     var12.field_ec.field_X = uf.field_l;
                   } else {
                     var12.field_dc.field_X = bq.field_b;

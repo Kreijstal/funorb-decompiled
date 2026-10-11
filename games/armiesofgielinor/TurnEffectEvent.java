@@ -60,7 +60,7 @@ final class TurnEffectEvent extends GameEvent {
                     if (this.unit.maximumStrength <= this.unit.strength) {
                       break regionExit1;
                     }
-                    if (this.unit.field_S) {
+                    if (this.unit.removedFromActivePlay) {
                       break regionExit1;
                     }
                     this.unit.strength = this.unit.strength + 1;

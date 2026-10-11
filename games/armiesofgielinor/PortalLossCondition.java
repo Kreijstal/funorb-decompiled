@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class up implements lv {
+final class PortalLossCondition implements MatchCondition {
     static String[][] field_b;
     static kl field_e;
     static String[][][][] field_c;
-    private int field_a;
+    private int playerId;
     static String[][][] field_g;
     static String field_f;
-    private Battlefield field_d;
+    private Battlefield battlefield;
 
     public static void d(int param0) {
         field_f = null;
@@ -59,8 +59,8 @@ final class up implements lv {
         }
     }
 
-    public final String a(int param0) {
-        if (param0 > -122) {
+    public final String describeCondition(int obfuscationGuard) {
+        if (obfuscationGuard > -122) {
           return (String) null;
         }
         return "Defeat: Total Portal Loss";
@@ -102,28 +102,28 @@ final class up implements lv {
         }
     }
 
-    public final boolean b(int param0) {
-        if (param0 != 0) {
+    public final boolean isVictory(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           return false;
         }
         return false;
     }
 
-    public final boolean c(int param0) {
+    public final boolean isDefeat(int obfuscationGuard) {
         boolean stackIn_6_0 = false;
-        if (param0 > -121) {
-          this.a(-22);
+        if (obfuscationGuard > -121) {
+          this.describeCondition(-22);
         }
-        stackIn_6_0 = (!this.field_d.b(this.field_a, (byte) -26)) && (!this.field_d.a(this.field_a, true));
+        stackIn_6_0 = (!this.battlefield.hasUsablePortal(this.playerId, (byte) -26)) && (!this.battlefield.hasCapturingUnit(this.playerId, true));
         return stackIn_6_0;
     }
 
-    up(int param0, Battlefield param1) {
+    PortalLossCondition(int playerId, Battlefield battlefield) {
         try {
-          this.field_a = param0;
-          this.field_d = param1;
+          this.playerId = playerId;
+          this.battlefield = battlefield;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "up.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "up.<init>(" + playerId + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -1639,9 +1639,9 @@ class iu {
           this.field_a = -21;
         }
         if (this.field_k == 0) {
-          ol.field_y.g(db.a(true, 320) - (ol.field_y.field_y >> 1), u.a(100, (byte) 94));
-          fe.b(this.field_e, db.a(true, 320), u.a(130, (byte) 94));
-          fe.c(this.field_e, db.a(true, 320), u.a(130, (byte) 94), nd.field_b, false);
+          ol.field_y.g(db.a(true, 320) - (ol.field_y.field_y >> 1), MatchConditionEntry.a(100, (byte) 94));
+          fe.b(this.field_e, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94));
+          fe.c(this.field_e, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94), nd.field_b, false);
           this.field_j = 40;
         }
         if (0 == this.field_j) {
@@ -2029,7 +2029,7 @@ class iu {
           this.b(0, -30659);
           this.field_q.battlefield.tiles[DeployAction.field_s[0]].ownerPlayer = 1;
           this.field_q.battlefield.field_f = true;
-          this.field_q.battlefield.field_z[1][1] = 1;
+          this.field_q.battlefield.teamStructureCounts[1][1] = 1;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "iu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

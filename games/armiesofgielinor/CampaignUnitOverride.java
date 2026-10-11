@@ -83,7 +83,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "create_unable");
                 if (null != var2) {
-                  om.field_s = uu.a(var2, (byte) -127);
+                  CampaignMission.field_s = uu.a(var2, (byte) -127);
                 }
                 var2 = bb.a(50, "create_ineligible");
                 if (null != var2) {
@@ -331,7 +331,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "no");
                 if (var2 != null) {
-                  gm.field_e = uu.a(var2, (byte) -106);
+                  LeaderEscortCondition.field_e = uu.a(var2, (byte) -106);
                 }
                 var2 = bb.a(50, "mu_invite_players");
                 if (var2 != null) {
@@ -587,7 +587,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "accept");
                 if (var2 != null) {
-                  gm.field_g = uu.a(var2, (byte) -118);
+                  LeaderEscortCondition.field_g = uu.a(var2, (byte) -118);
                 }
                 var2 = bb.a(param0 + 132, "reject");
                 if (var2 != null) {
@@ -1097,7 +1097,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "logging_in");
                 if (var2 != null) {
-                  lo.field_o = uu.a(var2, (byte) 62);
+                  MapLayout.field_o = uu.a(var2, (byte) 62);
                 }
                 var2 = bb.a(50, "reconnect");
                 if (var2 != null) {
@@ -1697,7 +1697,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(param0 + 132, "friendlistfull");
                 if (var2 != null) {
-                  lo.field_m = uu.a(var2, (byte) -100);
+                  MapLayout.field_m = uu.a(var2, (byte) -100);
                 }
                 var2 = bb.a(50, "friendlistdupe");
                 if (var2 != null) {

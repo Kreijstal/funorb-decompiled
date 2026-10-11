@@ -231,7 +231,7 @@ class ro extends pt implements he {
           if (UpkeepEvent.field_C.length() <= 0) {
             return true;
           }
-          up.a(' ', -1 + UpkeepEvent.field_C.length(), UpkeepEvent.field_C, true);
+          PortalLossCondition.a(' ', -1 + UpkeepEvent.field_C.length(), UpkeepEvent.field_C, true);
           return true;
         }
         var4 = ui.field_i;
@@ -260,7 +260,7 @@ class ro extends pt implements he {
           if (var9 > var10) {
             var5Lifetime1 = var5Lifetime1 - var9;
             if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {
-              up.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
+              PortalLossCondition.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
             }
             return true;
           }
@@ -268,7 +268,7 @@ class ro extends pt implements he {
           if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) <= var5Lifetime1) {
             return true;
           }
-          up.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
+          PortalLossCondition.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
           return true;
         }
         var7 = "";
@@ -276,7 +276,7 @@ class ro extends pt implements he {
           var51 = var7 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var51);
           if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {
-            up.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
+            PortalLossCondition.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
           }
           return true;
         }
@@ -288,7 +288,7 @@ class ro extends pt implements he {
           var54 = var7 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var54);
           if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {
-            up.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
+            PortalLossCondition.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
           }
           return true;
         }
@@ -297,7 +297,7 @@ class ro extends pt implements he {
           var54Lifetime1 = var7Lifetime1 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var54Lifetime1);
           if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {
-            up.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
+            PortalLossCondition.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
           }
           return true;
         }
@@ -306,7 +306,7 @@ class ro extends pt implements he {
           var53 = var52 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var53);
           if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {
-            up.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
+            PortalLossCondition.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
           }
           return true;
         }
@@ -314,7 +314,7 @@ class ro extends pt implements he {
         var54Lifetime2 = var7Lifetime2 + var18 + ": ";
         var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var54Lifetime2);
         if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {
-          up.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
+          PortalLossCondition.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
         }
         return true;
     }

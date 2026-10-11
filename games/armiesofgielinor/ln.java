@@ -45,10 +45,10 @@ final class ln {
 
     final int a(int param0, int param1, int param2, int param3, int param4) {
         if (param1 == 21930) {
-          return tt.a(param0 - param3, param4 - param2, this.field_a, false);
+          return MatchConditionRegistry.a(param0 - param3, param4 - param2, this.field_a, false);
         }
         this.a(42, -104, -118);
-        return tt.a(param0 - param3, param4 - param2, this.field_a, false);
+        return MatchConditionRegistry.a(param0 - param3, param4 - param2, this.field_a, false);
     }
 
     final String a(byte param0) {

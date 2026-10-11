@@ -18,7 +18,7 @@ final class cm {
     final int a(boolean param0, int param1) {
         int var5 = 0;
         ho var6 = null;
-        om var7 = null;
+        CampaignMission var7 = null;
         int var8 = 0;
         int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null == this.field_d[param1]) {
@@ -33,7 +33,7 @@ final class cm {
         for (var5 = 0; var5 < var3.field_n.length; var5++) {
           var6 = this.field_d[param1][var5];
           var7 = var10.field_n[var5];
-          var8 = var6 != null ? b.a(var7.field_m, var7.field_F, var6.field_c, (byte) 25, var6.field_b) : 0;
+          var8 = var6 != null ? b.a(var7.gameType, var7.godSetting, var6.field_c, (byte) 25, var6.field_b) : 0;
           var4 = var4 + var8;
         }
         return var4;
@@ -151,13 +151,13 @@ final class cm {
     final int a(int param0, int param1, int param2) {
         int var4;
         cf var5;
-        om var6;
+        CampaignMission var6;
         var4 = 54 / ((67 - param1) / 36);
         if (this.field_d[param0] != null &&
           null != this.field_d[param0][param2]) {
           var5 = br.a(param0, (byte) -57);
           var6 = var5.field_n[param2];
-          return b.a(var6.field_m, var6.field_F, this.field_d[param0][param2].field_c, (byte) 25, this.field_d[param0][param2].field_b);
+          return b.a(var6.gameType, var6.godSetting, this.field_d[param0][param2].field_c, (byte) 25, this.field_d[param0][param2].field_b);
         }
         return 0;
     }

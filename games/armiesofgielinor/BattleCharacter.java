@@ -754,11 +754,11 @@ final class BattleCharacter {
         }
     }
 
-    final static om a(cf param0, CipherPacketBuffer param1, kl param2, byte param3) {
-        om var4 = null;
+    final static CampaignMission a(cf param0, CipherPacketBuffer param1, kl param2, byte param3) {
+        CampaignMission var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        om stackIn_1_0 = null;
+        CampaignMission stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

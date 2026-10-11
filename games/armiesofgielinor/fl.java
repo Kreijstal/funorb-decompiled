@@ -143,8 +143,8 @@ final class fl {
           var11 = 1;
           if (var9 > var8 ||
             param3.indexOf("<br>") != -1) {
-            if (null == tt.field_a) {
-              tt.field_a = new String[16];
+            if (null == MatchConditionRegistry.field_a) {
+              MatchConditionRegistry.field_a = new String[16];
             }
             if (var8 >= var9) {
               var12 = var8;
@@ -152,11 +152,11 @@ final class fl {
               var13 = var9 / var8;
               var12 = var8 + (-1 + var9 % var8 + var13) / var13 * 2;
             }
-            var11Lifetime1 = this.field_m.a(param3, new int[]{var12}, tt.field_a);
+            var11Lifetime1 = this.field_m.a(param3, new int[]{var12}, MatchConditionRegistry.field_a);
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_m.a(tt.field_a[var13Lifetime2]);
+              var14 = this.field_m.a(MatchConditionRegistry.field_a[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }

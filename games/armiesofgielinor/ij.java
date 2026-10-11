@@ -265,7 +265,7 @@ final class ij extends dv {
               var9 = var5;
               var10_int = 0;
               while (var9 >= 0) {
-                if (~gm.field_d == ~var4[var9].field_q) {
+                if (~LeaderEscortCondition.field_d == ~var4[var9].field_q) {
                   var10_int++;
                 }
                 if (var4[var9].field_q == mo.field_j) {
