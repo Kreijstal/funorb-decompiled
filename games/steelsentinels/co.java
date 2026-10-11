@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class co {
-    static wk[] field_d;
+    static RgbSprite[] field_d;
     private cm field_e;
     private cm field_b;
-    static gh field_c;
+    static SceneWidget field_c;
     static long field_f;
     private nc field_a;
 
@@ -51,7 +51,7 @@ final class co {
         }
         var3Lifetime1 = new mn();
         if (var4 != null) {
-          var3Lifetime1.a(106, new gi(var4));
+          var3Lifetime1.a(106, new PacketBuffer(var4));
         }
         if (param1 >= 32768) {
           var3Lifetime1.c((byte) -3);
@@ -73,7 +73,7 @@ final class co {
         RuntimeException var4_ref = null;
         ig var5 = null;
         byte[] var6 = null;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           if (param0 != -37) {
             co.a((byte) -53);

@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class vb {
-    static gh[] field_a;
+    static SceneWidget[] field_a;
     static boolean field_e;
     static boolean field_c;
     static String field_h;
@@ -13,17 +13,17 @@ final class vb {
     static int[] field_b;
     private java.util.zip.Inflater field_f;
 
-    final static void a(gh param0, byte param1) {
+    final static void a(SceneWidget param0, byte param1) {
         int var11 = 0;
         int var9 = 0;
-        gh stackIn_13_0 = null;
+        SceneWidget stackIn_13_0 = null;
         int stackIn_14_1 = 0;
-        gh stackIn_16_0 = null;
+        SceneWidget stackIn_16_0 = null;
         String stackIn_17_1 = null;
         int stackIn_21_0 = 0;
         int stackIn_21_1 = 0;
-        gh stackIn_42_0 = null;
-        gk[] stackIn_42_1 = null;
+        SceneWidget stackIn_42_0 = null;
+        IndexedSprite[] stackIn_42_1 = null;
         int stackIn_43_2 = 0;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
@@ -32,48 +32,48 @@ final class vb {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        gh var5 = null;
+        SceneWidget var5 = null;
         int var6 = 0;
-        gh var7 = null;
+        SceneWidget var7 = null;
         int var8 = 0;
-        gh var9_ref_gh = null;
+        SceneWidget var9_ref_gh = null;
         int var10 = 0;
         int var12 = 0;
-        gh var13 = null;
-        gh var14 = null;
-        gh var15 = null;
-        gh var16 = null;
+        SceneWidget var13 = null;
+        SceneWidget var14 = null;
+        SceneWidget var15 = null;
+        SceneWidget var16 = null;
         int var3Lifetime1;
-        var12 = SteelSentinels.field_G;
+        var12 = SteelSentinels.obfuscationControl;
         try {
-          var14 = new gh();
+          var14 = new SceneWidget();
           var14.field_nb = 0;
           var14.field_ub = 4;
           var14.field_I = pa.field_g;
-          var14.field_L = (mi) ((Object) fk.field_d);
+          var14.field_L = (BitmapFont) ((Object) fk.field_d);
           var14.field_Fb = 0;
           var14.field_Ib = 15;
           var14.field_Kb = 1;
           var3 = 0;
           var4 = 20;
           if (null != param0.field_M) {
-            param0.field_M.g(param1 - 13);
+            param0.field_M.clear(param1 - 13);
           }
-          var5 = new gh("", var14);
+          var5 = new SceneWidget("", var14);
           var5.field_S = vf.field_c;
           var5.a(0, 0, 18, 0, 110);
           param0.a(var5, 120);
           var6 = hl.field_v.i(param1 ^ -97);
-          var7 = new gh(-1L, (gh) null);
+          var7 = new SceneWidget(-1L, (SceneWidget) null);
           var7.field_I = tk.field_t;
           var8 = (var6 + 1) / 2 * 51 + 32;
           if (param1 != 19) {
-            field_a = (gh[]) null;
+            field_a = (SceneWidget[]) null;
           }
           var7.a(0, var4, var8, 0, 110);
           param0.a(var7, 121);
           var4 += 3;
-          var9_ref_gh = new gh("", ei.field_n);
+          var9_ref_gh = new SceneWidget("", ei.field_n);
           var10 = 0;
           for (var11 = 0; var6 > var11; var11++) {
             if (dn.field_bc[var11] == di.field_c[var11]) {
@@ -119,7 +119,7 @@ final class vb {
           for (var9 = 0; var6 > var9; var9++) {
             if (var9 != 1) {
             }
-            var15 = new gh("", ei.field_n);
+            var15 = new SceneWidget("", ei.field_n);
             var15.a(0, var4, 47, var3Lifetime1, 47);
             param0.a(var15, param1 ^ 101);
             if (oh.field_f >= var3Lifetime1 + param0.field_Rb &&
@@ -133,16 +133,16 @@ final class vb {
               var15.field_I = be.field_f;
             }
             if (di.field_c[var9] != -1) {
-              var13 = new gh();
+              var13 = new SceneWidget();
               var16 = var13;
               stackIn_42_0 = var13;
-              stackIn_42_1 = ie.field_d;
+              stackIn_42_1 = IsaacRandom.field_d;
               if (t.a(fe.field_D, di.field_c[var9], -20370)) {
                 stackIn_43_2 = di.field_c[var9];
               } else {
                 stackIn_43_2 = di.field_c[var9] + 64;
               }
-              stackIn_42_0.field_Pb = ((gk) (Object) stackIn_42_1[stackIn_43_2]).a();
+              stackIn_42_0.field_Pb = ((IndexedSprite) (Object) stackIn_42_1[stackIn_43_2]).toRgbSprite();
               var16.a(0, var4 + 3, 40, var3Lifetime1 + 3, 40);
               param0.a(var16, 118);
             }
@@ -166,7 +166,7 @@ final class vb {
         }
     }
 
-    final void a(gi param0, byte[] param1, boolean param2) {
+    final void a(PacketBuffer param0, byte[] param1, boolean param2) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -177,13 +177,13 @@ final class vb {
           Exception var4 = null;
           RuntimeException var4_ref = null;
           try {
-            if (param0.field_t[param0.field_p] == 31 &&
-              -117 == param0.field_t[param0.field_p + 1]) {
+            if (param0.payload[param0.position] == 31 &&
+              -117 == param0.payload[param0.position + 1]) {
               if (this.field_f == null) {
                 this.field_f = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_f.setInput(param0.field_t, param0.field_p + 10, param0.field_t.length + (-10 - param0.field_p) - 8);
+                this.field_f.setInput(param0.payload, param0.position + 10, param0.payload.length + (-10 - param0.position) - 8);
                 if (!param2) {
                   return;
                 }
@@ -227,8 +227,8 @@ final class vb {
         int var2 = (-640 + re.field_Z) / 2;
         int var3 = an.field_h * an.field_h;
         int var4 = -(param1 * param1) + var3;
-        ql.field_ec.a(0, 90, -210 + (pb.field_j - 4), -(var4 * 199 / var3) + var2, 199);
-        gl.field_y.a(0, 0, -120 + pb.field_j - 4, var4 * 438 / var3 + (var2 + 202), 438);
+        ql.field_ec.a(0, 90, -210 + (SoftwareRaster.field_j - 4), -(var4 * 199 / var3) + var2, 199);
+        gl.field_y.a(0, 0, -120 + SoftwareRaster.field_j - 4, var4 * 438 / var3 + (var2 + 202), 438);
         if (param0 > 8) {
           return;
         }
@@ -270,7 +270,7 @@ final class vb {
             vb.a(-34, (byte[]) null, (byte) 32);
           }
           var3 = new rh(param1);
-          ol.field_Vb.a(3, var3);
+          ol.field_Vb.addLast(3, var3);
           vm.a(param0, param2 - 39, var3);
           stackIn_3_0 = var3;
           return stackIn_3_0;
@@ -292,7 +292,7 @@ final class vb {
     }
 
     static {
-        field_a = new gh[4];
+        field_a = new SceneWidget[4];
         field_e = false;
         field_h = "<%1> couldn't find cover in time";
         field_b = new int[]{2, 20, 21, 6, 37, 45, 5, 12, 13};
@@ -303,8 +303,8 @@ final class vb {
         int var2 = (-640 + re.field_Z) / 2;
         int var3 = an.field_h * an.field_h;
         int var4 = -(param1 * param1) + var3;
-        ql.field_ec.a(0, 90, -210 + (pb.field_j - 4), -(var4 * 199 / var3) + var2, 199);
-        gl.field_y.a(0, 0, -120 + pb.field_j - 4, var4 * 438 / var3 + (var2 + 202), 438);
+        ql.field_ec.a(0, 90, -210 + (SoftwareRaster.field_j - 4), -(var4 * 199 / var3) + var2, 199);
+        gl.field_y.a(0, 0, -120 + SoftwareRaster.field_j - 4, var4 * 438 / var3 + (var2 + 202), 438);
         if (param0 > 8) {
           return;
         }

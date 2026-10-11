@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class dh extends kd {
-    static wk[] field_y;
+class dh extends DualNode {
+    static RgbSprite[] field_y;
     static int field_D;
-    static gh field_E;
+    static SceneWidget field_E;
     static int field_B;
     static int field_F;
     static byte[][] field_A;
@@ -85,7 +85,7 @@ class dh extends kd {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = qe.a(di.field_h, ul.field_d, -126);
+          var2_int = qe.a(di.field_h, NodeDeque.field_d, -126);
           if (1 == var2_int) {
             param1 = "<img=0>" + param1;
           }

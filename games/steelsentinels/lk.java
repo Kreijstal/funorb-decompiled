@@ -26,8 +26,8 @@ final class lk extends oa {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            rf.field_d = new kj(param8);
-            mm.field_g = new kj(param11);
+            rf.field_d = new CipherPacketBuffer(param8);
+            mm.field_g = new CipherPacketBuffer(param11);
             bk.field_Z = param4;
             kg.field_Wb = param3;
             ll.field_l = param13;
@@ -40,11 +40,11 @@ final class lk extends oa {
             fe.field_F = param6;
             e.field_b = param1;
             vi.field_T = param7;
-            nk.field_A = param0;
+            ArticulatedPart.field_A = param0;
             kk.field_d = param12;
-            if (null != nk.field_A.field_m) {
+            if (null != ArticulatedPart.field_A.field_m) {
               try {
-                va.field_h = new rj(nk.field_A.field_m, 64, 0);
+                va.field_h = new rj(ArticulatedPart.field_A.field_m, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;
@@ -105,7 +105,7 @@ final class lk extends oa {
           if (fj.a(param2, -7036, param0)) {
             return false;
           }
-          if (wl.a(param0, true, param2)) {
+          if (Projectile.a(param0, true, param2)) {
             return false;
           }
           var3_int = -38 % ((param1 + 50) / 37);
@@ -143,7 +143,7 @@ final class lk extends oa {
     }
 
     final static void a(byte param0, boolean param1) {
-        ji.a(param1, (byte) 44);
+        SentinelDesigner.a(param1, (byte) 44);
         if (param0 > -58) {
           return;
         }
@@ -171,7 +171,7 @@ final class lk extends oa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var1_intLifetime1;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           lf.a();
           kf.field_t = new int[260];
@@ -216,10 +216,10 @@ final class lk extends oa {
         int var9;
         int var10;
         int var11;
-        wk var12;
-        wk var13;
-        wk var14;
-        var11 = SteelSentinels.field_G;
+        RgbSprite var12;
+        RgbSprite var13;
+        RgbSprite var14;
+        var11 = SteelSentinels.obfuscationControl;
         if (param1 > -99) {
           this.field_ab = 58;
         }
@@ -247,9 +247,9 @@ final class lk extends oa {
             var9 <= qf.field_f.field_A &&
             var10 <= qf.field_f.field_F) {
             q.a(qf.field_f, (byte) -71);
-            pb.b();
+            SoftwareRaster.b();
           } else {
-            qf.field_f = new wk(var9, var10);
+            qf.field_f = new RgbSprite(var9, var10);
             q.a(qf.field_f, (byte) -108);
           }
           var12.a(112, 144, var12.field_z << 4, var12.field_B << 4, -this.field_ab << 10, 4096);
@@ -306,7 +306,7 @@ final class lk extends oa {
 
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$7ffe4b125357(int param0, boolean param1) {
-        ji.a(param1, (byte) 44);
+        SentinelDesigner.a(param1, (byte) 44);
         if (param0 > -58) {
           return;
         }

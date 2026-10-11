@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lb extends gh {
+final class lb extends SceneWidget {
     private int field_ic;
     static String field_fc;
     static String field_Ub;
-    private gh field_ec;
+    private SceneWidget field_ec;
     static String field_cc;
-    static gk[] field_Zb;
-    private gh field_bc;
+    static IndexedSprite[] field_Zb;
+    private SceneWidget field_bc;
     static int field_ac;
     static int field_Tb;
-    private gh field_dc;
+    private SceneWidget field_dc;
     static String field_hc;
     static String field_kc;
-    private gh field_jc;
+    private SceneWidget field_jc;
     static byte[][][] field_Wb;
     static String field_Yb;
     static String field_Vb;
-    private gh field_Sb;
-    private gh field_Xb;
+    private SceneWidget field_Sb;
+    private SceneWidget field_Xb;
     static int field_gc;
 
     public static void j(int param0) {
@@ -38,19 +38,19 @@ final class lb extends gh {
     }
 
     final static void a(byte param0, cm param1) {
-        gh var5 = null;
-        gh var6 = null;
-        gh var3 = null;
+        SceneWidget var5 = null;
+        SceneWidget var6 = null;
+        SceneWidget var3 = null;
         try {
           ce.field_p = rl.a(param1, "basic", "display_name_changed", false);
           km.field_j = new ql(0L, l.field_e, qg.field_i, cb.field_d);
           vi.field_W = new ql(0L, l.field_e, ge.field_k, sa.field_a);
-          ig.field_m = new gh(0L, (gh) null);
-          vc.field_h = new gh(0L, bd.field_f);
+          ig.field_m = new SceneWidget(0L, (SceneWidget) null);
+          vc.field_h = new SceneWidget(0L, bd.field_f);
           vc.field_h.field_Kb = 1;
-          mm.field_a = new gh(0L, sj.field_J, uj.field_g);
-          dh.field_E = new gh(0L, kb.field_b, rm.field_i);
-          si.field_v = new gh(0L, qb.field_K);
+          mm.field_a = new SceneWidget(0L, sj.field_J, uj.field_g);
+          dh.field_E = new SceneWidget(0L, kb.field_b, rm.field_i);
+          si.field_v = new SceneWidget(0L, ParticleEffect.field_K);
           ig.field_m.a(vc.field_h, 121);
           ig.field_m.a(mm.field_a, 123);
           ig.field_m.a(dh.field_E, 121);
@@ -75,7 +75,7 @@ final class lb extends gh {
 
     final boolean b(boolean param0) {
         if (param0) {
-          this.field_jc = (gh) null;
+          this.field_jc = (SceneWidget) null;
         }
         if (this.field_bc.field_Eb != 0) {
           this.field_ic = 20;
@@ -146,8 +146,8 @@ final class lb extends gh {
         return this.field_ec.field_W != 0 ? true : false;
     }
 
-    lb(long param0, gh param1, gh param2, gh param3, gh param4) {
-        super(param0, (gh) null);
+    lb(long param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
+        super(param0, (SceneWidget) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -159,24 +159,24 @@ final class lb extends gh {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        gh var9 = null;
-        gh var10 = null;
+        SceneWidget var9 = null;
+        SceneWidget var10 = null;
         try {
-          this.field_bc = new gh(0L, param1);
-          this.field_jc = new gh(0L, param2);
+          this.field_bc = new SceneWidget(0L, param1);
+          this.field_jc = new SceneWidget(0L, param2);
           this.a(this.field_bc, 121);
           this.a(this.field_jc, 121);
-          this.field_Sb = new gh(0L, (gh) null);
+          this.field_Sb = new SceneWidget(0L, (SceneWidget) null);
           this.a(this.field_Sb, 126);
-          this.field_dc = new gh(0L, param3);
-          this.field_Xb = new gh(0L, param3);
+          this.field_dc = new SceneWidget(0L, param3);
+          this.field_Xb = new SceneWidget(0L, param3);
           var9 = this.field_dc;
           var10 = var9;
           this.field_Xb.field_P = true;
           var10.field_P = true;
           this.field_Sb.a(this.field_dc, 122);
           this.field_Sb.a(this.field_Xb, 123);
-          this.field_ec = new gh(0L, param4);
+          this.field_ec = new SceneWidget(0L, param4);
           this.field_ec.field_U = true;
           this.field_Sb.a(this.field_ec, 124);
           return;
@@ -272,7 +272,7 @@ final class lb extends gh {
           return true;
         }
         if (param0 <= 56) {
-          this.field_jc = (gh) null;
+          this.field_jc = (SceneWidget) null;
           if (this.field_jc.field_W == 0) {
             return false;
           }
@@ -298,7 +298,7 @@ final class lb extends gh {
         return false;
     }
 
-    lb(String param0, gh param1, gh param2, gh param3, gh param4) {
+    lb(String param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
         this(ke.a((CharSequence) ((Object) param0), (byte) -48), param1, param2, param3, param4);
     }
 
@@ -309,18 +309,18 @@ final class lb extends gh {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        gh var14 = null;
-        gh var15 = null;
-        gh var16 = null;
-        gh var17 = null;
-        gh var18 = null;
-        gh var19 = null;
-        gh var14Lifetime1;
-        gh var15Lifetime1;
-        gh var16Lifetime1;
-        gh var17Lifetime1;
-        gh var18Lifetime1;
-        gh var19Lifetime1;
+        SceneWidget var14 = null;
+        SceneWidget var15 = null;
+        SceneWidget var16 = null;
+        SceneWidget var17 = null;
+        SceneWidget var18 = null;
+        SceneWidget var19 = null;
+        SceneWidget var14Lifetime1;
+        SceneWidget var15Lifetime1;
+        SceneWidget var16Lifetime1;
+        SceneWidget var17Lifetime1;
+        SceneWidget var18Lifetime1;
+        SceneWidget var19Lifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;

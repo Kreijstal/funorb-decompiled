@@ -14,10 +14,10 @@ final class va {
     static int[] field_k;
     static int field_b;
 
-    final static gk a(int param0, cm param1, boolean param2, int param3) {
+    final static IndexedSprite a(int param0, cm param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
-        gk stackIn_6_0 = null;
+        IndexedSprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -27,11 +27,11 @@ final class va {
             field_k = (int[]) null;
           }
           if (wa.a((byte) 30, param3, param0, param1)) {
-            stackIn_6_0 = ul.d((byte) 51);
+            stackIn_6_0 = NodeDeque.d((byte) 51);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (gk) (stackIn_4_0);
+          return (IndexedSprite) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -98,7 +98,7 @@ final class va {
         }
     }
 
-    final static void a(int param0, int param1, mi param2, int param3, int param4, int param5, wk[] param6, wk[] param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, wk[] param16, int param17, mi param18, int param19) {
+    final static void a(int param0, int param1, BitmapFont param2, int param3, int param4, int param5, RgbSprite[] param6, RgbSprite[] param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, RgbSprite[] param16, int param17, BitmapFont param18, int param19) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

@@ -3,19 +3,19 @@
  */
 final class qg implements qk {
     private int field_d;
-    private mi field_b;
+    private BitmapFont field_b;
     static String field_i;
     private int field_k;
     static String field_g;
     private int field_c;
-    static wk[] field_f;
+    static RgbSprite[] field_f;
     private int field_e;
     static String field_o;
     static String field_l;
     static boolean[][] field_j;
     private int field_m;
     static int field_a;
-    static je field_n;
+    static SentinelCommand field_n;
     private int field_h;
     static String field_p;
 
@@ -28,7 +28,7 @@ final class qg implements qk {
     final static int a(byte param0, int param1) {
         int var2;
         int var3;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         var2 = param1;
         if (96 == var2) {
           return 2;
@@ -98,7 +98,7 @@ final class qg implements qk {
         int var9 = 0;
         int var11 = 0;
         um var12 = null;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         try {
           if (param1 instanceof um) {
             stackIn_4_0 = (lh) (param1);
@@ -106,15 +106,15 @@ final class qg implements qk {
             stackIn_4_0 = null;
           }
           var12 = (um) (stackIn_4_0);
-          pb.a(param0 + param1.field_o, param1.field_z + param4, param1.field_x, param1.field_E, this.field_m);
+          SoftwareRaster.a(param0 + param1.field_o, param1.field_z + param4, param1.field_x, param1.field_E, this.field_m);
           if (var12 != null) {
           }
           var7 = -(2 * var12.field_Y) + param1.field_x;
           var8 = var12.field_Y + (param1.field_o + param0);
           var9 = var12.field_ab + (param1.field_z + param4);
-          pb.d(var8, var9, var7 + var8, var9, this.field_k);
+          SoftwareRaster.d(var8, var9, var7 + var8, var9, this.field_k);
           for (var10 = -1 + var12.h(24129); var10 >= 0; var10--) {
-            pb.e(var8 + var7 * var12.a(var10, -128) / var12.g((byte) 64), var9, this.field_c, this.field_h);
+            SoftwareRaster.e(var8 + var7 * var12.a(var10, -128) / var12.g((byte) 64), var9, this.field_c, this.field_h);
           }
           if (null != this.field_b) {
             this.field_b.a(var12.field_y, var8 + var7 / 2, var12.field_ab + this.field_b.field_W + var9, this.field_e, this.field_d);
@@ -138,7 +138,7 @@ final class qg implements qk {
         }
     }
 
-    qg(mi param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    qg(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_e = param1;
           this.field_h = param6;

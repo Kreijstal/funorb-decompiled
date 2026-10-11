@@ -5,10 +5,10 @@ final class sb extends oa {
     static int field_Z;
     static he field_bb;
     static int[] field_V;
-    static gh field_Y;
-    static wk field_W;
-    static gh field_ab;
-    static wk[] field_X;
+    static SceneWidget field_Y;
+    static RgbSprite field_W;
+    static SceneWidget field_ab;
+    static RgbSprite[] field_X;
 
     public static void g(int param0) {
         field_bb = null;

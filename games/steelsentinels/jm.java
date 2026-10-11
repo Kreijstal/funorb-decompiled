@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jm extends ck {
+final class jm extends IntrusiveNode {
     static int[] field_p;
     static String field_t;
     static int[] field_r;
@@ -18,7 +18,7 @@ final class jm extends ck {
         field_r = null;
     }
 
-    final static void a(int param0, int param1, wk[] param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, RgbSprite[] param2, int param3, int param4, int param5) {
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
@@ -49,7 +49,7 @@ final class jm extends ck {
         int[] var26 = null;
         int[] var29 = null;
         int var21Lifetime1;
-        var22 = SteelSentinels.field_G;
+        var22 = SteelSentinels.obfuscationControl;
         try {
           var26 = new int[4];
           var24 = var26;
@@ -102,61 +102,61 @@ final class jm extends ck {
               var20 = param1 * var9 / (var9 + var10) + param0;
               var19 = param1 * var9 / (var9 + var10) + param0;
             }
-            pb.b(var26);
+            SoftwareRaster.b(var26);
             if (param2[0] != null) {
-              pb.h(param4, param0, var17, var19);
+              SoftwareRaster.h(param4, param0, var17, var19);
               param2[0].a(param4, param0);
-              pb.a(var26);
+              SoftwareRaster.a(var26);
             }
             if (null != param2[2]) {
-              pb.h(var18, param0, var11, var19);
+              SoftwareRaster.h(var18, param0, var11, var19);
               param2[2].a(var14, param0);
-              pb.a(var26);
+              SoftwareRaster.a(var26);
             }
             if (null != param2[6]) {
-              pb.h(param4, var20, var17, var12);
+              SoftwareRaster.h(param4, var20, var17, var12);
               param2[6].a(param4, var16);
-              pb.a(var26);
+              SoftwareRaster.a(var26);
             }
             if (param2[8] != null) {
-              pb.h(var18, var20, var11, var12);
+              SoftwareRaster.h(var18, var20, var11, var12);
               param2[8].a(var14, var16);
-              pb.a(var26);
+              SoftwareRaster.a(var26);
             }
             if (null != param2[1] &&
               param2[1].field_z != 0) {
-              pb.h(var17, param0, var18, var19);
+              SoftwareRaster.h(var17, param0, var18, var19);
               for (var21 = var13; var21 < var14; var21 = var21 + param2[1].field_z) {
                 param2[1].a(var21, param0);
               }
-              pb.a(var29);
+              SoftwareRaster.a(var29);
             }
             if (param2[7] != null &&
               param2[7].field_z != 0) {
-              pb.h(var17, var20, var18, var12);
+              SoftwareRaster.h(var17, var20, var18, var12);
               for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param2[7].field_z) {
                 param2[7].a(var21Lifetime1, var16);
               }
-              pb.a(var29);
+              SoftwareRaster.a(var29);
             }
             if (param2[3] != null &&
               param2[3].field_B != 0) {
-              pb.h(param4, var19, var17, var20);
+              SoftwareRaster.h(param4, var19, var17, var20);
               param2[3].c(param4, var15, var7, var16 - var15);
-              pb.a(var29);
+              SoftwareRaster.a(var29);
             }
             if (null != param2[5] &&
               0 != param2[5].field_B) {
-              pb.h(var18, var19, var11, var20);
+              SoftwareRaster.h(var18, var19, var11, var20);
               param2[5].c(var14, var15, var8, var16 - var15);
-              pb.a(var29);
+              SoftwareRaster.a(var29);
             }
             if (param2[4] != null &&
               0 != param2[4].field_z &&
               0 != param2[4].field_B) {
-              pb.h(var17, var19, var18, var20);
+              SoftwareRaster.h(var17, var19, var18, var20);
               param2[4].c(var13, var15, -var13 + var14, -var15 + var16);
-              pb.a(var29);
+              SoftwareRaster.a(var29);
               return;
             }
             return;

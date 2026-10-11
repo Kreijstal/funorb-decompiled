@@ -4,7 +4,7 @@
 final class bj {
     int field_n;
     int field_g;
-    static gh field_d;
+    static SceneWidget field_d;
     int field_e;
     int field_q;
     int field_i;
@@ -66,13 +66,13 @@ final class bj {
         int[] var9 = null;
         int var6Lifetime1;
         int var7Lifetime1;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           if (param3 < 81) {
             var9 = (int[]) null;
             bj.a((int[]) null, 21, true, (byte) -121);
           }
-          var4_int = ul.a((byte) 71, param1);
+          var4_int = NodeDeque.a((byte) 71, param1);
           if (var4_int < 0) {
             return false;
           }
@@ -85,7 +85,7 @@ final class bj {
           }
           var5 = 0;
           for (var6 = 0; var6 < 6; var6++) {
-            if (t.a(param0, n.field_z[var6], -20370)) {
+            if (t.a(param0, FunOrbClient.field_z[var6], -20370)) {
               var5++;
             }
           }
@@ -94,8 +94,8 @@ final class bj {
             return stackIn_27_0;
           }
           var6Lifetime1 = 0;
-          for (var7 = 6; n.field_z.length > var7; var7++) {
-            if (t.a(param0, n.field_z[var7], -20370)) {
+          for (var7 = 6; FunOrbClient.field_z.length > var7; var7++) {
+            if (t.a(param0, FunOrbClient.field_z[var7], -20370)) {
               var6Lifetime1++;
             }
           }

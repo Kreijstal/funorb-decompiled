@@ -4,7 +4,7 @@
 final class qi {
     static String field_h;
     static String field_e;
-    static wk[] field_a;
+    static RgbSprite[] field_a;
     static kf field_d;
     static String field_b;
     static int[] field_f;
@@ -12,8 +12,8 @@ final class qi {
     static boolean field_l;
     static ud field_j;
     static boolean field_k;
-    static gh field_c;
-    static wk field_i;
+    static SceneWidget field_c;
+    static RgbSprite field_i;
 
     final static me a(boolean param0, long param1, String param2, int param3, String param4) {
         RuntimeException var6 = null;
@@ -61,12 +61,12 @@ final class qi {
         }
     }
 
-    final static void a(java.math.BigInteger param0, gi param1, gi param2, java.math.BigInteger param3, int param4) {
+    final static void a(java.math.BigInteger param0, PacketBuffer param1, PacketBuffer param2, java.math.BigInteger param3, int param4) {
         if (param4 != 5) {
           return;
         }
         try {
-          nf.a(false, param2, param3, 0, param1.field_p, param0, param1.field_t);
+          nf.a(false, param2, param3, 0, param1.position, param0, param1.payload);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "qi.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

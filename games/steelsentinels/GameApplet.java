@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class lg extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static String field_a;
     static boolean field_l;
     static String field_b;
@@ -23,7 +23,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
           field_b = null;
           field_f = null;
           if (param0 != 48) {
-            lg.e(-42);
+            GameApplet.e(-42);
           }
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "lg.CA(" + param0 + ')');
@@ -83,7 +83,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
           Throwable var3_ref_Throwable = null;
           String var4 = null;
           int var5 = 0;
-          var5 = SteelSentinels.field_G;
+          var5 = SteelSentinels.obfuscationControl;
           try {
             try {
               boolean decompiledFrameRemainder3 = true;
@@ -276,7 +276,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == km.field_m &&
-            !je.field_v) {
+            !SentinelCommand.field_v) {
             qa.field_P = mm.a(-91);
             a.a((byte) 124, 5000L);
             ug.field_M = null;
@@ -325,7 +325,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
         Object var1 = null;
         RuntimeException var1_ref = null;
         int var2Lifetime1;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           if (param0 != -27983) {
             field_f = (String) null;
@@ -467,10 +467,10 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
             sl.field_n.setSize(na.field_i, li.field_A);
             sl.field_n.setVisible(true);
             if (vd.field_c != null &&
-              gh.field_N == null) {
+              SceneWidget.field_N == null) {
               var6 = vd.field_c.getInsets();
               sl.field_n.setLocation(kf.field_p + var6.left, var6.top + ij.field_X);
-              if (SteelSentinels.field_G != 0) {
+              if (SteelSentinels.obfuscationControl != 0) {
                 sl.field_n.setLocation(kf.field_p, ij.field_X);
               }
             } else {
@@ -491,7 +491,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (km.field_m == this &&
-            !je.field_v) {
+            !SentinelCommand.field_v) {
             qa.field_P = 0L;
             return;
           }
@@ -513,7 +513,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
         java.awt.Insets var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           if (null != sl.field_n) {
             sl.field_n.removeFocusListener((java.awt.event.FocusListener) (this));
@@ -521,7 +521,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
             sl.field_n.getParent().remove((java.awt.Component) ((Object) sl.field_n));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (null == gh.field_N) {
+          if (null == SceneWidget.field_N) {
             if (null != vd.field_c) {
               var2 = vd.field_c;
               decompiledFrameRemainder0 = (var4 != 0);
@@ -531,17 +531,17 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
                 var2 = fb.field_o;
                 if (var4 != 0) {
                   var2 = km.field_m;
-                  var2 = gh.field_N;
+                  var2 = SceneWidget.field_N;
                 }
               } else {
                 var2 = km.field_m;
                 if (var4 != 0) {
-                  var2 = gh.field_N;
+                  var2 = SceneWidget.field_N;
                 }
               }
             }
           } else {
-            var2 = gh.field_N;
+            var2 = SceneWidget.field_N;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           sl.field_n = (java.awt.Canvas) ((Object) new pi((java.awt.Component) (this)));
@@ -633,10 +633,10 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
         try {
           var3_ref = this;
           synchronized (var3_ref) {
-            if (je.field_v) {
+            if (SentinelCommand.field_v) {
               return;
             }
-            je.field_v = true;
+            SentinelCommand.field_v = true;
             var4 = 67 / ((param1 - 7) / 46);
           }
           if (null != fb.field_o) {
@@ -732,7 +732,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
         int stackIn_13_0 = 0;
         int stackIn_17_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           var3_int = 0;
           if (param0 != 5) {
@@ -778,7 +778,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == km.field_m &&
-            !je.field_v) {
+            !SentinelCommand.field_v) {
             qa.field_P = 4000L + mm.a(54);
             return;
           }
@@ -824,7 +824,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
         RuntimeException var2_ref = null;
         try {
           if (km.field_m == this &&
-            !je.field_v) {
+            !SentinelCommand.field_v) {
             dd.field_e = true;
             if (ob.field_u &&
               mm.a(-82) - pl.field_Y > 1000L) {
@@ -877,7 +877,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
             }
             System.out.println("error_game_" + param0);
             try {
-              hn.a(wl.d((byte) -21), (byte) -96, "loggedout");
+              hn.a(Projectile.d((byte) -21), (byte) -96, "loggedout");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -947,7 +947,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
           wj var9 = null;
           Throwable var9_ref = null;
           int var10 = 0;
-          var10 = SteelSentinels.field_G;
+          var10 = SteelSentinels.obfuscationControl;
           try {
             var8_int = 65 / ((-41 - param3) / 58);
             try {
@@ -968,7 +968,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
               dd.field_d = param5;
               kf.field_p = 0;
               km.field_m = this;
-              ug.field_O = wl.d((byte) -21);
+              ug.field_O = Projectile.d((byte) -21);
               dupTemp$0 = new pn(param2, param4, param6, true);
               hb.field_i = dupTemp$0;
               ug.field_M = dupTemp$0;
@@ -1008,7 +1008,7 @@ public abstract class lg extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected lg() {
+    protected GameApplet() {
         this.field_m = false;
     }
 

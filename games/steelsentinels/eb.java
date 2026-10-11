@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eb extends ia {
-    static wk[] field_s;
+    static RgbSprite[] field_s;
     static int[] field_u;
     static String field_q;
     static String field_t;
     static int[] field_o;
     static int field_n;
     static String field_r;
-    static wk[] field_p;
+    static RgbSprite[] field_p;
 
     final static boolean b(String param0, int param1) {
         int var3 = 0;
@@ -20,7 +20,7 @@ final class eb extends ia {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           if (param1 != 29974) {
             field_n = -3;
@@ -57,7 +57,7 @@ final class eb extends ia {
           field_p = null;
           return;
         }
-        field_s = (wk[]) null;
+        field_s = (RgbSprite[]) null;
         field_r = null;
         field_q = null;
         field_s = null;
@@ -83,7 +83,7 @@ final class eb extends ia {
             return stackIn_3_0;
           }
           if (param1 != -1) {
-            field_s = (wk[]) null;
+            field_s = (RgbSprite[]) null;
           }
           var5 = (CharSequence) ((Object) param0);
           var3_int = dj.a(var5, -124);
@@ -140,7 +140,7 @@ final class eb extends ia {
         }
     }
 
-    final static void a(int param0, gh param1, gh param2, gh param3, gh param4) {
+    final static void a(int param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -155,7 +155,7 @@ final class eb extends ia {
         RuntimeException var5_ref = null;
         int var6 = 0;
         String var7 = null;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           if (tj.field_f != null) {
             return;
@@ -171,23 +171,23 @@ final class eb extends ia {
             var5 = hk.field_Kc;
           }
           var7 = (String) null;
-          qb.a(-104, v.field_e, var5, 0, (String) null);
+          ParticleEffect.a(-104, v.field_e, var5, 0, (String) null);
           vd.field_d.field_rb = ((td.field_ic.field_rb & 16711422) >> 1) + (v.field_e - ((16711422 & v.field_e) >> 1));
           vd.field_d.field_xb = (8355711 & td.field_ic.field_xb >> 1) - ((16711422 & v.field_e) >> 1) + v.field_e;
           sb.field_ab = wh.field_e;
           tj.field_f = vd.field_d;
           vd.field_d.field_Mb = (td.field_ic.field_Mb >> 1 & 8355711) - ((16711422 & v.field_e) >> 1) + v.field_e;
-          hh.field_a = new gh(0L, param2);
-          cc.field_bc = new gh(0L, param4);
-          in.field_d = new gh(0L, (gh) null);
-          te.field_f = new gh(0L, param1);
-          vd.field_d = new gh((long)param0, param3);
+          hh.field_a = new SceneWidget(0L, param2);
+          cc.field_bc = new SceneWidget(0L, param4);
+          in.field_d = new SceneWidget(0L, (SceneWidget) null);
+          te.field_f = new SceneWidget(0L, param1);
+          vd.field_d = new SceneWidget((long)param0, param3);
           vd.field_d.field_L = pl.field_X;
           te.field_f.a(vd.field_d, 122);
-          wh.field_e = new gh(0L, sb.field_ab);
+          wh.field_e = new SceneWidget(0L, sb.field_ab);
           te.field_f.a(wh.field_e, 125);
-          vc.field_f = new gh(0L, td.field_ic, re.field_cb);
-          qa.field_N = new gh(0L, td.field_ic);
+          vc.field_f = new SceneWidget(0L, td.field_ic, re.field_cb);
+          qa.field_N = new SceneWidget(0L, td.field_ic);
           hh.field_a.a(cc.field_bc, 124);
           hh.field_a.a(in.field_d, 127);
           in.field_d.a(te.field_f, 122);
@@ -231,15 +231,15 @@ final class eb extends ia {
         int stackIn_9_0 = 0;
         int[] stackIn_25_0 = null;
         Throwable decompiledCaughtException = null;
-        kj var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        kj var8 = null;
+        CipherPacketBuffer var8 = null;
         ao var9 = null;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         var8 = rf.field_d;
         var2 = var8;
         var3 = var8.f((byte) -87);
@@ -259,7 +259,7 @@ final class eb extends ia {
         var4 = stackIn_9_0;
         b.field_g = var8.h(1);
         if (param0 >= -50) {
-          field_s = (wk[]) null;
+          field_s = (RgbSprite[]) null;
         }
         if (var4 != 0) {
           jk.field_e = var8.h(1);
@@ -321,15 +321,15 @@ final class eb extends ia {
         int stackIn_9_0 = 0;
         int[] stackIn_25_0 = null;
         Throwable decompiledCaughtException = null;
-        kj var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        kj var8 = null;
+        CipherPacketBuffer var8 = null;
         ao var9 = null;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         var8 = rf.field_d;
         var2 = var8;
         var3 = var8.f((byte) -87);
@@ -349,7 +349,7 @@ final class eb extends ia {
         var4 = stackIn_9_0;
         b.field_g = var8.h(1);
         if (param0 >= -50) {
-          field_s = (wk[]) null;
+          field_s = (RgbSprite[]) null;
         }
         if (var4 != 0) {
           jk.field_e = var8.h(1);

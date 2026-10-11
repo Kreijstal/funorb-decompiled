@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ih extends ia {
-    static ee field_s;
+    static CombatWorld field_s;
     static int field_t;
     static String field_p;
     static int field_n;

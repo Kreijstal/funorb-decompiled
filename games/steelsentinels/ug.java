@@ -11,7 +11,7 @@ abstract class ug extends lh implements lm {
     static String field_N;
     static pn field_M;
     static java.applet.Applet field_O;
-    static wk field_P;
+    static RgbSprite field_P;
     static String field_L;
     static int field_I;
 
@@ -19,12 +19,12 @@ abstract class ug extends lh implements lm {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        gh var5 = null;
+        SceneWidget var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
         na var9 = null;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           if (an.field_h > wa.field_p) {
             wa.field_p = wa.field_p + 1;
@@ -57,9 +57,9 @@ abstract class ug extends lh implements lm {
             }
           }
           if (fm.field_b.field_Eb != 0) {
-            n.field_x = new td(fm.field_b.field_Rb, fm.field_b.field_cb, fm.field_b.field_zb, fm.field_b.field_Lb, param2, an.field_a, od.field_g, hg.field_e, bd.field_f, ol.field_Tb, qb.field_K, (String) null, 0L);
+            FunOrbClient.field_x = new td(fm.field_b.field_Rb, fm.field_b.field_cb, fm.field_b.field_zb, fm.field_b.field_Lb, param2, an.field_a, od.field_g, hg.field_e, bd.field_f, ol.field_Tb, ParticleEffect.field_K, (String) null, 0L);
           }
-          var9 = ea.a(param3, da.field_g, 85, db.field_b);
+          var9 = Sprite.a(param3, da.field_g, 85, db.field_b);
           if (var9 != null) {
             ph.a(var9, -1);
           }
@@ -175,7 +175,7 @@ abstract class ug extends lh implements lm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 4) {
-            field_P = (wk) null;
+            field_P = (RgbSprite) null;
           }
           stackIn_7_0 = (null != this.field_J) && (!this.field_J.d(param0 - 4)) && (this.field_J.a(1, param1));
           return stackIn_7_0;
@@ -344,7 +344,7 @@ abstract class ug extends lh implements lm {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           discarded$3 = param3.append('\n');
           var5_int = 0;

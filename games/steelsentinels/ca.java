@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ca extends ck {
+final class ca extends IntrusiveNode {
     bj[] field_u;
     sk[] field_x;
     static int[] field_r;
@@ -30,7 +30,7 @@ final class ca extends ck {
         Object var7 = null;
         int var9 = 0;
         int var10 = 0;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         try {
           if (param1 != -12422) {
             this.field_p = (short[]) null;
@@ -119,7 +119,7 @@ final class ca extends ck {
     final static void a(int param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6) {
         int var18_int = 0;
         int var22_int = 0;
-        gh dupTemp$0 = null;
+        SceneWidget dupTemp$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
@@ -130,25 +130,25 @@ final class ca extends ck {
         int stackIn_3_3;
         boolean stackIn_4_4 = false;
         hk stackIn_12_0;
-        gh stackIn_12_1;
-        gh stackIn_12_2;
+        SceneWidget stackIn_12_1;
+        SceneWidget stackIn_12_2;
         long stackIn_12_3;
-        gh stackIn_13_1 = null;
-        gh stackIn_13_2 = null;
-        gh stackIn_13_4 = null;
+        SceneWidget stackIn_13_1 = null;
+        SceneWidget stackIn_13_2 = null;
+        SceneWidget stackIn_13_4 = null;
         hk stackIn_30_0;
-        gh stackIn_30_1;
-        gh stackIn_30_2;
+        SceneWidget stackIn_30_1;
+        SceneWidget stackIn_30_2;
         long stackIn_30_3;
-        gh stackIn_31_1;
-        gh stackIn_31_2;
-        gh stackIn_31_4;
+        SceneWidget stackIn_31_1;
+        SceneWidget stackIn_31_2;
+        SceneWidget stackIn_31_4;
         int stackIn_35_0 = 0;
         int stackIn_70_0 = 0;
         int stackIn_80_0 = 0;
-        wk[] stackIn_82_0 = null;
+        RgbSprite[] stackIn_82_0 = null;
         int stackIn_83_1 = 0;
-        wk[] stackIn_90_0 = null;
+        RgbSprite[] stackIn_90_0 = null;
         int stackIn_91_1 = 0;
         String stackIn_155_0 = null;
         String stackIn_164_0 = null;
@@ -156,25 +156,25 @@ final class ca extends ck {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        ul var8 = null;
+        NodeDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
         hk var12 = null;
         int var13 = 0;
         int var14 = 0;
-        gh var18 = null;
-        gh var19 = null;
-        gh var20 = null;
-        gh var21 = null;
-        gh var22 = null;
-        gh var23 = null;
-        gh var24 = null;
-        gh var25 = null;
-        gh var26 = null;
-        gh var27 = null;
-        gh var28 = null;
-        gh var29 = null;
-        gh var30 = null;
+        SceneWidget var18 = null;
+        SceneWidget var19 = null;
+        SceneWidget var20 = null;
+        SceneWidget var21 = null;
+        SceneWidget var22 = null;
+        SceneWidget var23 = null;
+        SceneWidget var24 = null;
+        SceneWidget var25 = null;
+        SceneWidget var26 = null;
+        SceneWidget var27 = null;
+        SceneWidget var28 = null;
+        SceneWidget var29 = null;
+        SceneWidget var30 = null;
         int var31 = 0;
         String var32 = null;
         int var33_int = 0;
@@ -190,23 +190,23 @@ final class ca extends ck {
         int var39 = 0;
         int var40 = 0;
         int var41 = 0;
-        wk var42 = null;
-        gh var43 = null;
-        gh var44 = null;
-        gh var45 = null;
-        gh var46 = null;
-        gh var47 = null;
-        gh var48 = null;
-        gh var49 = null;
+        RgbSprite var42 = null;
+        SceneWidget var43 = null;
+        SceneWidget var44 = null;
+        SceneWidget var45 = null;
+        SceneWidget var46 = null;
+        SceneWidget var47 = null;
+        SceneWidget var48 = null;
+        SceneWidget var49 = null;
         Object var50 = null;
-        wk var50_ref = null;
+        RgbSprite var50_ref = null;
         Object var51 = null;
-        wk var51_ref = null;
+        RgbSprite var51_ref = null;
         Object var52 = null;
-        wk var52_ref = null;
+        RgbSprite var52_ref = null;
         Object var53 = null;
-        wk var53_ref = null;
-        wk var54 = null;
+        RgbSprite var53_ref = null;
+        RgbSprite var54 = null;
         int var14Lifetime1;
         int var33_intLifetime1;
         int var34_intLifetime1;
@@ -220,7 +220,7 @@ final class ca extends ck {
         var51 = null;
         var52 = null;
         var53 = null;
-        var41 = SteelSentinels.field_G;
+        var41 = SteelSentinels.obfuscationControl;
         try {
           stackIn_3_0 = rn.field_y;
           stackIn_3_1 = 2;
@@ -234,23 +234,23 @@ final class ca extends ck {
           var8 = rn.field_y.field_Ub.field_M;
           var9 = mm.a(param1 - 114);
           var11 = null;
-          var12 = (hk) (var8.e(13058));
+          var12 = (hk) (var8.first(13058));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_M) {
               var14 = param0 | param4;
-              var12.field_kc = new gh(0L, SteelSentinels.field_J);
+              var12.field_kc = new SceneWidget(0L, SteelSentinels.field_J);
               var12.a(var12.field_kc, 125);
               var12.field_kc.field_Kb = 1;
-              var12.field_Cc = new gh(0L, bb.field_W);
+              var12.field_Cc = new SceneWidget(0L, bb.field_W);
               var12.a(var12.field_Cc, 127);
-              var12.field_qc = new gh(0L, SteelSentinels.field_J);
+              var12.field_qc = new SceneWidget(0L, SteelSentinels.field_J);
               var12.a(var12.field_qc, 123);
               var12.field_qc.field_ub = 0;
-              var12.field_zc = new gh(0L, SteelSentinels.field_J);
+              var12.field_zc = new SceneWidget(0L, SteelSentinels.field_J);
               var12.a(var12.field_zc, 123);
               var12.field_zc.field_ub = 0;
-              var12.field_Ic = new gh(0L, bb.field_W);
+              var12.field_Ic = new SceneWidget(0L, bb.field_W);
               var12.a(var12.field_Ic, 118);
               var12.field_Ic.field_Kb = 2;
               stackIn_12_0 = var12;
@@ -266,22 +266,22 @@ final class ca extends ck {
                 stackIn_13_2 = null;
                 stackIn_13_4 = bb.field_W;
               }
-              stackIn_12_0.field_uc = new gh(stackIn_12_3, stackIn_13_4);
+              stackIn_12_0.field_uc = new SceneWidget(stackIn_12_3, stackIn_13_4);
               var12.a(var12.field_uc, 118);
-              var12.field_Gc = new gh[be.field_a];
-              var12.field_Fc = new gh(0L, (gh) null);
+              var12.field_Gc = new SceneWidget[be.field_a];
+              var12.field_Fc = new SceneWidget(0L, (SceneWidget) null);
               if ((1 << ol.field_dc & var14) != 0) {
                 var12.field_uc.a(var12.field_Fc, 125);
               }
-              var12.field_Wb = new gh(0L, (gh) null);
+              var12.field_Wb = new SceneWidget(0L, (SceneWidget) null);
               if ((var14 & 1 << sn.field_b) != 0) {
                 var12.field_uc.a(var12.field_Wb, 124);
               }
-              var12.field_ac = new gh(0L, (gh) null);
+              var12.field_ac = new SceneWidget(0L, (SceneWidget) null);
               if ((var14 & 1 << jf.field_Z) != 0) {
                 var12.field_uc.a(var12.field_ac, 126);
               }
-              var12.field_tc = new gh(0L, (gh) null);
+              var12.field_tc = new SceneWidget(0L, (SceneWidget) null);
               if ((1 << ja.field_f & var14) != 0) {
                 var12.field_uc.a(var12.field_tc, 122);
               }
@@ -293,7 +293,7 @@ final class ca extends ck {
               var44.field_Fb = 1;
               var45.field_Fb = 1;
               for (var18_int = 0; var18_int < be.field_a; var18_int++) {
-                var12.field_Gc[var18_int] = new gh(0L, (gh) null);
+                var12.field_Gc[var18_int] = new SceneWidget(0L, (SceneWidget) null);
                 if ((1 << var18_int + ch.field_L & var14) != 0) {
                   var12.field_uc.a(var12.field_Gc[var18_int], param1 ^ 127);
                 }
@@ -312,19 +312,19 @@ final class ca extends ck {
                 stackIn_31_2 = null;
                 stackIn_31_4 = bb.field_W;
               }
-              stackIn_30_0.field_Lc = new gh(stackIn_30_3, stackIn_31_4);
+              stackIn_30_0.field_Lc = new SceneWidget(stackIn_30_3, stackIn_31_4);
               var12.a(var12.field_Lc, 119);
               var12.field_Lc.field_Kb = 2;
-              var12.field_Bc = new gh(0L, bb.field_W);
+              var12.field_Bc = new SceneWidget(0L, bb.field_W);
               var12.a(var12.field_Bc, 119);
-              var12.field_Dc = new gh(0L, qb.field_K);
+              var12.field_Dc = new SceneWidget(0L, ParticleEffect.field_K);
               var12.a(var12.field_Dc, 121);
-              var12.field_lc = new gh(0L, qb.field_K);
+              var12.field_lc = new SceneWidget(0L, ParticleEffect.field_K);
               var12.a(var12.field_lc, 124);
-              var12.field_xc = new gh(0L, bd.field_f);
+              var12.field_xc = new SceneWidget(0L, bd.field_f);
               var12.a(var12.field_xc, 121);
               var12.h(param1 ^ -104);
-              var12.field_gc = new gh(0L, fa.field_f);
+              var12.field_gc = new SceneWidget(0L, fa.field_f);
               var13 = 1;
               var12.a(var12.field_gc, 120);
             }
@@ -441,7 +441,7 @@ final class ca extends ck {
               } else {
                 var12.field_gc.a(0, var31, db.field_b, 0, 68);
               }
-              var12.field_Cc.field_S = mi.a(var12.field_Cc.field_L, var32, 78);
+              var12.field_Cc.field_S = BitmapFont.a(var12.field_Cc.field_L, var32, 78);
               var12.field_Cc.a(param1 ^ 1, var31, db.field_b, 70, 78);
               if (var12.field_Cc.field_kb &&
                 !var12.field_Cc.field_S.equals(var32)) {
@@ -585,7 +585,7 @@ final class ca extends ck {
               var12.field_lb = var31 - var12.field_Lb;
             }
             if (var13 != 0) {
-              rn.field_y.field_Ub.a(2, (byte) 111, (gh) (var11), var12);
+              rn.field_y.field_Ub.a(2, (byte) 111, (SceneWidget) (var11), var12);
             }
             for (var34_intLifetime2 = 0; var34_intLifetime2 < be.field_a; var34_intLifetime2++) {
               if (var12.field_Gc[var34_intLifetime2].field_kb) {
@@ -645,7 +645,7 @@ final class ca extends ck {
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_Eb != 0) {
               if (var12.k(4219)) {
-                var12 = (hk) (var8.a((byte) -123));
+                var12 = (hk) (var8.next((byte) -123));
                 continue;
               }
               if (0 != var12.field_gc.field_Eb) {
@@ -662,7 +662,7 @@ final class ca extends ck {
                 qa.a(var32, param5, var12, 88);
               }
             }
-            var12 = (hk) (var8.a((byte) -123));
+            var12 = (hk) (var8.next((byte) -123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -724,7 +724,7 @@ final class ca extends ck {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        gi var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         bj var40 = null;
         byte[] var41 = null;
@@ -807,8 +807,8 @@ final class ca extends ck {
           this.field_o = new byte[128];
           this.field_s = new int[128];
           this.field_x = new sk[128];
-          var38 = new gi(param0);
-          for (var3 = 0; var38.field_t[var38.field_p + var3] != 0; var3++) {
+          var38 = new PacketBuffer(param0);
+          for (var3 = 0; var38.payload[var38.position + var3] != 0; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
@@ -816,11 +816,11 @@ final class ca extends ck {
           for (var5 = 0; var3 > var5; var5++) {
             var4[var5] = var38.d((byte) -2);
           }
-          var38.field_p = var38.field_p + 1;
+          var38.position = var38.position + 1;
           var3++;
-          var5Lifetime1 = var38.field_p;
-          var38.field_p = var38.field_p + var3;
-          for (var6 = 0; 0 != var38.field_t[var6 + var38.field_p]; var6++) {
+          var5Lifetime1 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; 0 != var38.payload[var6 + var38.position]; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
@@ -828,11 +828,11 @@ final class ca extends ck {
           for (var8 = 0; var6 > var8; var8++) {
             var7[var8] = var38.d((byte) -2);
           }
-          var38.field_p = var38.field_p + 1;
+          var38.position = var38.position + 1;
           var6++;
-          var8Lifetime1 = var38.field_p;
-          var38.field_p = var38.field_p + var6;
-          for (var9 = 0; var38.field_t[var38.field_p + var9] != 0; var9++) {
+          var8Lifetime1 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; var38.payload[var38.position + var9] != 0; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
@@ -840,7 +840,7 @@ final class ca extends ck {
           for (var11_int = 0; var9 > var11_int; var11_int++) {
             var10[var11_int] = var38.d((byte) -2);
           }
-          var38.field_p = var38.field_p + 1;
+          var38.position = var38.position + 1;
           var9++;
           var53 = new byte[var9];
           var39 = var53;
@@ -899,7 +899,7 @@ final class ca extends ck {
           }
           var47 = stackIn_42_0;
           var16 = var47;
-          for (var17 = 0; var38.field_t[var38.field_p + var17] != 0; var17++) {
+          for (var17 = 0; var38.payload[var38.position + var17] != 0; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
@@ -907,7 +907,7 @@ final class ca extends ck {
           for (var19 = 0; var17 > var19; var19++) {
             var18[var19] = var38.d((byte) -2);
           }
-          var38.field_p = var38.field_p + 1;
+          var38.position = var38.position + 1;
           var17++;
           var19Lifetime1 = 0;
           for (var20 = 0; var20 < 128; var20++) {
@@ -948,7 +948,7 @@ final class ca extends ck {
                 }
                 incrementValue$6 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = var38.field_t[incrementValue$6] - 1;
+                var23Lifetime1 = var38.payload[incrementValue$6] - 1;
               }
               var20Lifetime3--;
               this.field_v[var24] = (byte)var23Lifetime1;
@@ -962,7 +962,7 @@ final class ca extends ck {
               if (var20Lifetime4 == 0) {
                 incrementValue$3 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = 16 + var38.field_t[incrementValue$3] << 2;
+                var24Lifetime1 = 16 + var38.payload[incrementValue$3] << 2;
                 if (var21Lifetime2 >= var56.length) {
                   var20Lifetime4 = -1;
                 } else {

@@ -17,7 +17,7 @@ final class r extends db {
     static long field_l;
 
     final static void a(int param0, ud param1, int param2) {
-        kj var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           if (param0 != 27153) {
             r.a(true, false);
@@ -64,7 +64,7 @@ final class r extends db {
         vg var13_ref = null;
         IOException var13_ref2 = null;
         int var14 = 0;
-        var14 = SteelSentinels.field_G;
+        var14 = SteelSentinels.obfuscationControl;
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
           System.setProperty("java.net.useSystemProxies", "true");
         }
@@ -153,7 +153,7 @@ final class r extends db {
 
     final static void a(int param0, byte param1, cf param2) {
         try {
-          jb.field_A.a(3, param2);
+          Explosion.field_A.addLast(3, param2);
           if (param1 != 123) {
             r.b((byte) 48);
           }
@@ -164,7 +164,7 @@ final class r extends db {
     }
 
     final static void a(int param0, byte param1) {
-        gh.i(107);
+        SceneWidget.i(107);
         if (param1 != 104) {
           field_r = (ki) null;
         }
@@ -202,7 +202,7 @@ final class r extends db {
         int var12 = 0;
         java.net.Socket var13 = null;
         String var14 = null;
-        var12 = SteelSentinels.field_G;
+        var12 = SteelSentinels.obfuscationControl;
         try {
           var13 = new java.net.Socket(param2, param0);
           var13.setSoTimeout(10000);
@@ -372,7 +372,7 @@ final class r extends db {
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (jc.a(2)) {
+        if (NodeIterator.a(2)) {
           param1 = false;
         }
         ah.a(param1, -127);
@@ -382,7 +382,7 @@ final class r extends db {
         li.e(0);
     }
 
-    final static int a(gi param0, String param1, int param2) {
+    final static int a(PacketBuffer param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -395,12 +395,12 @@ final class r extends db {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param0.field_p;
+          var3_int = param0.position;
           var5 = (CharSequence) ((Object) param1);
           var4 = km.a(-38, var5);
           param0.a(var4.length, 32768);
-          param0.field_p = param0.field_p + ob.field_r.a(param0.field_p, param0.field_t, param2 ^ 115, var4, param2, var4.length);
-          stackIn_1_0 = -var3_int + param0.field_p;
+          param0.position = param0.position + ob.field_r.a(param0.position, param0.payload, param2 ^ 115, var4, param2, var4.length);
+          stackIn_1_0 = -var3_int + param0.position;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

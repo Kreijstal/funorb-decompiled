@@ -61,14 +61,14 @@ final class vn extends v implements fd, aa {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_intLifetime1;
-        var2 = SteelSentinels.field_G;
+        var2 = SteelSentinels.obfuscationControl;
         try {
           hm.field_a = null;
           gd.field_jb = null;
           vd.field_a = null;
           bi.field_f = null;
           kf.field_s = true;
-          lg.field_l = true;
+          GameApplet.field_l = true;
           rh.field_u = null;
           kk.field_a = null;
           for (var1_int = 0; wc.field_h.length > var1_int; var1_int++) {
@@ -117,7 +117,7 @@ final class vn extends v implements fd, aa {
 
     final static String a(char param0, int param1, int param2) {
         int var4 = 0;
-        int var5 = SteelSentinels.field_G;
+        int var5 = SteelSentinels.obfuscationControl;
         char[] var6 = new char[param2];
         char[] var3 = var6;
         for (var4 = 0; param2 > var4; var4++) {

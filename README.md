@@ -1,8 +1,8 @@
 # funorb-decompiled
 
 Current Java source for the complete 44-game FunOrb / AlterOrb catalog lives
-only in `games/<game>/`. GeoBlox, Deko Bloko and Armies of Gielinor have named sources directly in
-those directories, with a reading guide beside the Java. There is no separate
+only in `games/<game>/`. GeoBlox, Deko Bloko, Armies of Gielinor and Steel Sentinels
+have named sources directly in those directories, with a reading guide beside the Java. There is no separate
 readable mirror and no committed compilation binaries.
 
 The generic decompiler belongs to [java-tools](https://github.com/Kreijstal/java-tools).
@@ -13,6 +13,7 @@ current reverse dictionaries belong here.
 ## Read the games
 
 - [GeoBlox](games/geoblox/README.md): gameplay, tutorial, screens and rendering.
+- [Steel Sentinels](games/steelsentinels/README.md): first gameplay pass for sentinel physics, armour/charge, world state, projectiles, engineering and articulated parts.
 - [Armies of Gielinor](games/armiesofgielinor/README.md): first gameplay pass for battlefield state, units, tiles, teams, events, movement, AI and tutorial anchors.
 - [Deko Bloko](games/dekobloko/README.md): buckets, falling pieces, controls,
   feedback shapes, multiplayer snapshots, assets and UI.
@@ -25,6 +26,10 @@ unresolved purposes honestly; they are not complete semantic deobfuscation.
 Armies has 39 reviewed class names, not a complete semantic map. Its raw/named
 core probe checks map lookups, alliances, status packing, damage and tile metadata
 under a controlled headless boundary. Three dispatcher files remain.
+
+Steel has 27 reviewed class names. Its controlled raw/named core checks cover
+module aliases, armour/charge mutations, terrain bounds, recursive part armour
+and synchronization checksums. Three dispatcher files remain.
 
 ## Reproduce
 
@@ -40,6 +45,9 @@ env -u JAVA_TOOL_OPTIONS node readable/reproduce-dekobloko.mjs --check
 env -u JAVA_TOOL_OPTIONS node readable/build-armiesofgielinor-rules.mjs --check
 env -u JAVA_TOOL_OPTIONS node readable/reproduce-armiesofgielinor.mjs --update
 env -u JAVA_TOOL_OPTIONS node readable/reproduce-armiesofgielinor.mjs --check
+env -u JAVA_TOOL_OPTIONS node readable/build-steelsentinels-rules.mjs --check
+env -u JAVA_TOOL_OPTIONS node readable/reproduce-steelsentinels.mjs --update
+env -u JAVA_TOOL_OPTIONS node readable/reproduce-steelsentinels.mjs --check
 node scripts/check-source-catalog.mjs /absolute/path/to/funorb-decompiled
 node readable/restore-game.mjs dekobloko /tmp/original-dekobloko
 ```

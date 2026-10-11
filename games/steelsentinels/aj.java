@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aj extends ck {
+final class aj extends IntrusiveNode {
     int field_o;
     static int[] field_v;
     static cm field_x;
     int field_z;
     int field_t;
     int field_w;
-    static wk[] field_r;
+    static RgbSprite[] field_r;
     int field_y;
     int[] field_q;
     static int field_u;
@@ -34,13 +34,13 @@ final class aj extends ck {
         int[] var12 = null;
         int[] var14 = null;
         int[] var17 = null;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         try {
           if (49 == param3) {
             stackIn_7_0 = (param4) && (ve.a(param0, 1, 25));
             return stackIn_7_0;
           }
-          var14 = n.field_z;
+          var14 = FunOrbClient.field_z;
           var12 = var14;
           var11 = var12;
           var5 = var11;
@@ -121,7 +121,7 @@ final class aj extends ck {
 
     static {
         field_v = new int[4];
-        field_r = new wk[3];
+        field_r = new RgbSprite[3];
         field_u = -1;
     }
 }

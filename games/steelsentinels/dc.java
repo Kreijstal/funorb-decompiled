@@ -4,7 +4,7 @@
 final class dc {
     static String field_d;
     static int field_g;
-    static wk[][] field_b;
+    static RgbSprite[][] field_b;
     String[] field_e;
     static int field_h;
     static String field_f;
@@ -19,7 +19,7 @@ final class dc {
         StringBuilder var3;
         int var5;
         int[] var6;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         var6 = new int[]{16, param1, 64, 128, 256, 512};
         var2 = var6;
         var3 = new StringBuilder();
@@ -35,7 +35,7 @@ final class dc {
     }
 
     public static void a(int param0) {
-        field_b = (wk[][]) null;
+        field_b = (RgbSprite[][]) null;
         field_d = null;
         field_f = null;
         int var1 = -60 % ((42 - param0) / 59);

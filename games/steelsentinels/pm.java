@@ -9,13 +9,13 @@ final class pm extends dl implements fd, ae {
     private jf field_Q;
     private boolean field_eb;
     static int field_U;
-    static gh field_gb;
+    static SceneWidget field_gb;
     static String field_Y;
     private jf field_V;
     private oa field_X;
     private String field_fb;
     private oa field_R;
-    static ul field_db;
+    static NodeDeque field_db;
     static int field_T;
     static jj[] field_W;
     private boolean field_cb;
@@ -75,14 +75,14 @@ final class pm extends dl implements fd, ae {
             return false;
           }
           jg.field_f = rf.field_d.f((byte) -118);
-          rf.field_d.field_p = 0;
+          rf.field_d.position = 0;
         }
         if (-2 == jg.field_f) {
           if (!ve.a((byte) -103, 2)) {
             return false;
           }
           jg.field_f = rf.field_d.c((byte) -60);
-          rf.field_d.field_p = 0;
+          rf.field_d.position = 0;
         }
         return ve.a((byte) -112, jg.field_f);
     }
@@ -130,7 +130,7 @@ final class pm extends dl implements fd, ae {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           var6_int = -6 / ((-85 - param1) / 36);
           if (this.field_bb == param3) {
@@ -198,7 +198,7 @@ final class pm extends dl implements fd, ae {
         RuntimeException decompiledCaughtException = null;
         kh var6 = null;
         RuntimeException var6_ref = null;
-        mi var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         de var9 = null;
         hc var12 = null;
@@ -269,10 +269,10 @@ final class pm extends dl implements fd, ae {
             this.field_z = this.field_z + (5 + var7.a(this.field_fb, -40 + this.field_x, var7.field_G));
           }
           var8 = qe.field_c;
-          var9 = db.a((byte) -60, wl.d((byte) -21));
-          if (var9 != qd.field_o) {
+          var9 = db.a((byte) -60, Projectile.d((byte) -21));
+          if (var9 != PartInstruction.field_o) {
             if (var9 == mj.field_Vb) {
-              var8 = ji.field_l;
+              var8 = SentinelDesigner.field_l;
             }
           } else {
             var8 = ln.field_b;
@@ -373,7 +373,7 @@ final class pm extends dl implements fd, ae {
           tj.field_e.a(this.field_fb, 20 + this.field_o + param2, this.field_z + param0 + 15, -40 + this.field_x, this.field_E, 16777215, -1, 1, 0, tj.field_e.field_G);
         }
         if (this.field_X != null) {
-          pb.g(10 + param2, 134 + param0, this.field_x - 20, 4210752);
+          SoftwareRaster.g(10 + param2, 134 + param0, this.field_x - 20, 4210752);
         }
         super.a(param0, (byte) -124, param2, param3);
         if (param1 > -99) {
@@ -418,24 +418,24 @@ final class pm extends dl implements fd, ae {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        kj var13 = null;
+        CipherPacketBuffer var13 = null;
         int var14 = 0;
-        kj var15 = null;
+        CipherPacketBuffer var15 = null;
         int var4Lifetime1;
         int var6_intLifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
-        var12 = SteelSentinels.field_G;
+        var12 = SteelSentinels.obfuscationControl;
         try {
           var13 = rf.field_d;
           var15 = var13;
           var2 = var15.f((byte) -67);
           var4 = 121 / ((40 - param0) / 53);
-          var3 = (ud) (uf.field_f.e(13058));
+          var3 = (ud) (uf.field_f.first(13058));
           while (var3 != null) {
             if (var3.field_t != var2) {
-              var3 = (ud) (uf.field_f.a((byte) -33));
+              var3 = (ud) (uf.field_f.next((byte) -33));
               continue;
             }
             break;
@@ -453,7 +453,7 @@ final class pm extends dl implements fd, ae {
             }
             hb.a(-121, var4Lifetime1, var5);
             for (var6_intLifetime1 = 0; var4Lifetime1 > var6_intLifetime1; var6_intLifetime1++) {
-              nk.a((byte) -80, var15);
+              ArticulatedPart.a((byte) -80, var15);
               if (var6_intLifetime1 == 0) {
                 var3.field_B = uf.field_h;
                 var3.field_s = um.field_W;
@@ -480,9 +480,9 @@ final class pm extends dl implements fd, ae {
               var7[0][4 * var10] = ok.field_d[var11];
               var7[0][1 + 4 * var10] = jm.field_r[var11];
               var7[0][var10 * 4 + 2] = ne.field_G[var11];
-              var7[0][3 + var10 * 4] = mb.field_T[var11];
-              if (wl.a(107, ua.field_M[var11]) &&
-                0 == jm.field_r[var11] + (ne.field_G[var11] + mb.field_T[var11])) {
+              var7[0][3 + var10 * 4] = Sentinel.field_T[var11];
+              if (Projectile.a(107, ua.field_M[var11]) &&
+                0 == jm.field_r[var11] + (ne.field_G[var11] + Sentinel.field_T[var11])) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -498,9 +498,9 @@ final class pm extends dl implements fd, ae {
               var7[1][4 * var14] = ok.field_d[var11Lifetime1];
               var7[1][1 + 4 * var14] = jm.field_r[var11Lifetime1];
               var7[1][2 + 4 * var14] = ne.field_G[var11Lifetime1];
-              var7[1][var14 * 4 + 3] = mb.field_T[var11Lifetime1];
-              if (wl.a(47, ua.field_M[var11Lifetime1]) &&
-                0 == mb.field_T[var11Lifetime1] + ne.field_G[var11Lifetime1] + jm.field_r[var11Lifetime1]) {
+              var7[1][var14 * 4 + 3] = Sentinel.field_T[var11Lifetime1];
+              if (Projectile.a(47, ua.field_M[var11Lifetime1]) &&
+                0 == Sentinel.field_T[var11Lifetime1] + ne.field_G[var11Lifetime1] + jm.field_r[var11Lifetime1]) {
                 var6[1][var14] = null;
                 var14--;
               }
@@ -509,7 +509,7 @@ final class pm extends dl implements fd, ae {
             }
           }
           var3.field_r = true;
-          var3.b(4);
+          var3.unlink(4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -554,7 +554,7 @@ final class pm extends dl implements fd, ae {
         double var10Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
-        var19 = SteelSentinels.field_G;
+        var19 = SteelSentinels.obfuscationControl;
         try {
           nm.field_s = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = nn.field_h.length;
@@ -590,7 +590,7 @@ final class pm extends dl implements fd, ae {
             var7Lifetime1 = oh.field_f - 320;
           }
           if (!param0) {
-            field_gb = (gh) null;
+            field_gb = (SceneWidget) null;
           }
           var10 = 256.0 / Math.sqrt((double)(var7Lifetime1 * var7Lifetime1 + var8Lifetime1 * var8Lifetime1 + var9Lifetime1 * var9Lifetime1));
           var7Lifetime1 = (int)((double)var7Lifetime1 * var10);
@@ -616,7 +616,7 @@ final class pm extends dl implements fd, ae {
             for (var18 = 0; 3 > var18; var18++) {
               bl.field_e[var18] = bl.field_e[var18] + cl.field_f[var15][var18];
             }
-            ul.a(true, (byte) -128, false, bl.field_e, var17, false, nm.field_s);
+            NodeDeque.a(true, (byte) -128, false, bl.field_e, var17, false, nm.field_s);
             ch.a(var9Lifetime1, var8Lifetime1, var14, -125, var12Lifetime1, var17, var7Lifetime1, var13Lifetime1);
           }
           return;

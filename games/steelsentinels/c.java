@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class c extends ck {
-    static gh field_p;
+final class c extends IntrusiveNode {
+    static SceneWidget field_p;
     static String field_r;
     byte[] field_t;
     boolean field_q;
-    static wk field_o;
+    static RgbSprite field_o;
     static String[] field_s;
     static int field_u;
 
@@ -24,7 +24,7 @@ final class c extends ck {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           ag.field_u = ag.field_u + 65536;
           while (wa.a(ag.field_u, hh.field_j, (byte) -27) >= 65536) {
@@ -32,32 +32,32 @@ final class c extends ck {
             ik.field_e = ik.field_e + 1;
           }
           var2_int = -1;
-          if (null == jb.field_S) {
+          if (null == Explosion.field_S) {
             if (null != bm.field_R) {
               var2_int = bm.field_R.length;
             }
           } else {
-            var2_int = jb.field_S.length;
+            var2_int = Explosion.field_S.length;
           }
           if (var2_int != -1) {
             boolean decompiledFrameRemainder0 = true;
-            if (ul.field_g < hh.field_f) {
-              ul.field_g = ul.field_g + 1;
-              if (ul.field_g > hh.field_i && (jb.field_S == null ||
-                null == jb.field_S[lh.field_r])) {
-                ul.field_g = ul.field_g - 1;
+            if (NodeDeque.field_g < hh.field_f) {
+              NodeDeque.field_g = NodeDeque.field_g + 1;
+              if (NodeDeque.field_g > hh.field_i && (Explosion.field_S == null ||
+                null == Explosion.field_S[lh.field_r])) {
+                NodeDeque.field_g = NodeDeque.field_g - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (ul.field_g >= hh.field_f &&
-                  null == jb.field_S[(1 + lh.field_r) % var2_int]) {
-                  ul.field_g = ul.field_g - 1;
+                if (NodeDeque.field_g >= hh.field_f &&
+                  null == Explosion.field_S[(1 + lh.field_r) % var2_int]) {
+                  NodeDeque.field_g = NodeDeque.field_g - 1;
                 }
               }
             }
-            if (hh.field_f <= ul.field_g) {
+            if (hh.field_f <= NodeDeque.field_g) {
               oe.field_e = lh.field_r;
-              ul.field_g = ul.field_g - hh.field_f;
+              NodeDeque.field_g = NodeDeque.field_g - hh.field_f;
               if (!rf.field_b) {
                 lh.field_r = lh.field_r - 1;
                 if (lh.field_r < 0) {
@@ -70,7 +70,7 @@ final class c extends ck {
                 }
               }
             }
-            if (ul.field_g > hh.field_i) {
+            if (NodeDeque.field_g > hh.field_i) {
               rf.field_b = true;
             }
           }
@@ -78,36 +78,36 @@ final class c extends ck {
             stackIn_32_0 = -13;
             return stackIn_32_0;
           }
-          if (null != jc.field_b) {
-            var3 = 357 - jc.field_b.field_B / 2;
+          if (null != NodeIterator.field_b) {
+            var3 = 357 - NodeIterator.field_b.field_B / 2;
             var4 = 0;
             if (lb.field_gc != 0 &&
               var3 < rj.field_j &&
-              jc.field_b.field_F + var3 > rj.field_j) {
-              if (269 - jc.field_b.field_A < oa.field_S &&
+              NodeIterator.field_b.field_F + var3 > rj.field_j) {
+              if (269 - NodeIterator.field_b.field_A < oa.field_S &&
                 oa.field_S < 269) {
                 rf.field_b = false;
-                ul.field_g = hh.field_f;
+                NodeDeque.field_g = hh.field_f;
                 var4 = 1;
               }
               if (oa.field_S > 586 &&
-                oa.field_S < jc.field_b.field_A + 586) {
+                oa.field_S < NodeIterator.field_b.field_A + 586) {
                 var4 = 1;
                 rf.field_b = true;
-                ul.field_g = hh.field_f;
+                NodeDeque.field_g = hh.field_f;
               }
             }
             if (var4 == 0 &&
-              hh.field_i < ul.field_g &&
+              hh.field_i < NodeDeque.field_g &&
               var3 < pi.field_c &&
-              jc.field_b.field_F + var3 > pi.field_c) {
-              if (oh.field_f > -jc.field_b.field_A + 269 &&
+              NodeIterator.field_b.field_F + var3 > pi.field_c) {
+              if (oh.field_f > -NodeIterator.field_b.field_A + 269 &&
                 269 > oh.field_f) {
-                ul.field_g = hh.field_i;
+                NodeDeque.field_g = hh.field_i;
               }
               if (oh.field_f > 586 &&
-                586 + jc.field_b.field_A > oh.field_f) {
-                ul.field_g = hh.field_i;
+                586 + NodeIterator.field_b.field_A > oh.field_f) {
+                NodeDeque.field_g = hh.field_i;
               }
             }
           }
@@ -153,7 +153,7 @@ final class c extends ck {
 
     final static boolean a(byte param0, int param1) {
         if (param0 >= -12) {
-          field_p = (gh) null;
+          field_p = (SceneWidget) null;
           if (param1 == 10) {
             return true;
           }
@@ -197,7 +197,7 @@ final class c extends ck {
           field_s = null;
           return;
         }
-        field_p = (gh) null;
+        field_p = (SceneWidget) null;
         field_r = null;
         field_s = null;
     }

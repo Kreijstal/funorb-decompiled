@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pc extends ck {
+final class pc extends IntrusiveNode {
     em field_v;
-    ck field_u;
+    IntrusiveNode field_u;
     static String field_r;
     static fm field_p;
     int field_t;
     static String field_s;
     static String field_o;
-    static gh field_q;
+    static SceneWidget field_q;
     static boolean field_w;
 
     final static int e(int param0) {
@@ -22,7 +22,7 @@ final class pc extends ck {
         int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2Lifetime1;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
           var1_int = 0;
           for (var2 = 0; var2 < fe.field_D.length; var2++) {
@@ -47,7 +47,7 @@ final class pc extends ck {
         }
     }
 
-    final static void a(int param0, wk[] param1, int param2, mi param3, int param4, int param5, int param6, int param7, int param8, wk[] param9, int param10, int param11, int param12, int param13, int param14, int param15, mi param16, int param17, wk[] param18, int param19, int param20) {
+    final static void a(int param0, RgbSprite[] param1, int param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, RgbSprite[] param9, int param10, int param11, int param12, int param13, int param14, int param15, BitmapFont param16, int param17, RgbSprite[] param18, int param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -130,7 +130,7 @@ final class pc extends ck {
         }
     }
 
-    pc(em param0, ck param1) {
+    pc(em param0, IntrusiveNode param1) {
         try {
           this.field_v = param0;
           this.field_t = param0.f();

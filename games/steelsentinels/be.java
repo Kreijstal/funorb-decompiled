@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class be {
-    static gh field_c;
+    static SceneWidget field_c;
     static int field_b;
     static String field_g;
     static int field_a;
-    static wk[] field_f;
+    static RgbSprite[] field_f;
     static int field_e;
     static long field_d;
 
@@ -23,10 +23,10 @@ final class be {
         Object var5 = null;
         int var6 = 0;
         byte[] var8 = null;
-        kj var9 = null;
+        CipherPacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           var9 = rf.field_d;
           var2 = var9.f((byte) -70);
@@ -40,16 +40,16 @@ final class be {
               return;
             }
             var3 = var9.i(0);
-            var4 = (rh) (ol.field_Vb.e(13058));
+            var4 = (rh) (ol.field_Vb.first(13058));
             while (var4 != null) {
               if (~var4.field_x != ~var3) {
-                var4 = (rh) (ol.field_Vb.a((byte) -59));
+                var4 = (rh) (ol.field_Vb.next((byte) -59));
                 continue;
               }
               break;
             }
             if (var4 != null) {
-              var4.b(param0 ^ -16790);
+              var4.unlink(param0 ^ -16790);
               return;
             }
             stackIn_24_0 = param0;
@@ -57,7 +57,7 @@ final class be {
             pm.m(stackIn_24_0 + stackIn_24_1);
             return;
           }
-          var3_ref_c = (c) (fg.field_Ub.e(13058));
+          var3_ref_c = (c) (fg.field_Ub.first(13058));
           if (var3_ref_c == null) {
             pm.m(111);
             return;
@@ -72,14 +72,14 @@ final class be {
             var5 = var8;
             var9.a(0, var11, 28, var4_int);
           }
-          var9.field_p = var9.field_p + 4;
+          var9.position = var9.position + 4;
           if (!var9.a((byte) -32)) {
             pm.m(param0 ^ 16871);
             return;
           }
           var3_ref_c.field_q = true;
           var3_ref_c.field_t = (byte[]) (var5);
-          var3_ref_c.b(4);
+          var3_ref_c.unlink(4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

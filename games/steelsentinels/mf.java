@@ -11,7 +11,7 @@ final class mf {
     private static float field_g;
     private static float[][] field_e;
 
-    final void a(gi param0, kl param1) {
+    final void a(PacketBuffer param0, kl param1) {
         int var3;
         int var4;
         int var5;

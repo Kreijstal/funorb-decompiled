@@ -61,7 +61,7 @@ final class fn {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         tg var6 = null;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           var2_int = param1.length();
           if (0 == var2_int) {

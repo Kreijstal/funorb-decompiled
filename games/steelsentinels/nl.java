@@ -23,7 +23,7 @@ final class nl extends oa {
         int var9 = 0;
         double var10 = 0.0;
         int var12 = 0;
-        var12 = SteelSentinels.field_G;
+        var12 = SteelSentinels.obfuscationControl;
         try {
           if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
@@ -69,7 +69,7 @@ final class nl extends oa {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
-        var2 = SteelSentinels.field_G;
+        var2 = SteelSentinels.obfuscationControl;
         try {
           for (var1_int = 0; var1_int < ue.field_c.length; var1_int++) {
             if (ue.field_c[var1_int] != null) {
@@ -108,14 +108,14 @@ final class nl extends oa {
     final static void a(int param0, byte[] param1, boolean param2, int param3, int param4, byte param5) {
         int var7 = 0;
         int var8 = 0;
-        kj var6 = mm.field_g;
+        CipherPacketBuffer var6 = mm.field_g;
         var6.a(param4, (byte) -117);
         if (param5 <= 30) {
           return;
         }
         try {
-          var6.field_p = var6.field_p + 1;
-          var7 = var6.field_p;
+          var6.position = var6.position + 1;
+          var7 = var6.position;
           var6.a((byte) 115, 4);
           var6.a((byte) 119, param0);
           var8 = param3;
@@ -124,7 +124,7 @@ final class nl extends oa {
           }
           var6.a((byte) 112, var8);
           var6.a(param1.length, (byte) -122, 0, param1);
-          var6.b((byte) -116, var6.field_p - var7);
+          var6.b((byte) -116, var6.position - var7);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "nl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -139,29 +139,29 @@ final class nl extends oa {
         }
     }
 
-    final static wk[] a(boolean param0, int param1, boolean param2, int param3, int param4, int param5) {
-        wk var13 = null;
-        wk var14 = null;
-        int[] var16 = pb.field_g;
+    final static RgbSprite[] a(boolean param0, int param1, boolean param2, int param3, int param4, int param5) {
+        RgbSprite var13 = null;
+        RgbSprite var14 = null;
+        int[] var16 = SoftwareRaster.field_g;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
-        int var7 = pb.field_c;
-        int var8 = pb.field_j;
-        wk var9 = new wk(16, param4);
+        int var7 = SoftwareRaster.field_c;
+        int var8 = SoftwareRaster.field_j;
+        RgbSprite var9 = new RgbSprite(16, param4);
         var9.d();
-        pb.e(0, 0, 16, param4, param1, param5);
+        SoftwareRaster.e(0, 0, 16, param4, param1, param5);
         Object var10 = null;
         Object var11 = null;
         if (param0) {
           var13 = var9.g();
           var10 = var13;
           var13.d();
-          pb.g(0, 0, 5, 0);
-          pb.g(0, 1, 3, 0);
-          pb.g(0, 2, 2, 0);
-          pb.g(0, 3, 1, 0);
-          pb.g(0, 4, 1, 0);
+          SoftwareRaster.g(0, 0, 5, 0);
+          SoftwareRaster.g(0, 1, 3, 0);
+          SoftwareRaster.g(0, 2, 2, 0);
+          SoftwareRaster.g(0, 3, 1, 0);
+          SoftwareRaster.g(0, 4, 1, 0);
         }
         if (param3 >= -7) {
           field_X = true;
@@ -170,28 +170,28 @@ final class nl extends oa {
           var14 = var9.g();
           var11 = var14;
           var14.d();
-          pb.g(11, 0, 5, 0);
-          pb.g(13, 1, 3, 0);
-          pb.g(14, 2, 2, 0);
-          pb.g(15, 3, 1, 0);
-          pb.g(15, 4, 1, 0);
+          SoftwareRaster.g(11, 0, 5, 0);
+          SoftwareRaster.g(13, 1, 3, 0);
+          SoftwareRaster.g(14, 2, 2, 0);
+          SoftwareRaster.g(15, 3, 1, 0);
+          SoftwareRaster.g(15, 4, 1, 0);
         }
-        pb.a(var16, var7, var8);
-        return new wk[]{null, null, null, (wk) (var10), var9, (wk) (var11), null, null, null};
+        SoftwareRaster.a(var16, var7, var8);
+        return new RgbSprite[]{null, null, null, (RgbSprite) (var10), var9, (RgbSprite) (var11), null, null, null};
     }
 
     final static void a(byte param0, cm param1) {
-        kj var8 = null;
-        kj var10 = null;
+        CipherPacketBuffer var8 = null;
+        CipherPacketBuffer var10 = null;
         int var3 = 0;
         int var9 = 0;
         pe var5_ref_pe = null;
         int[] var6 = null;
         int var4 = 0;
-        int var7 = SteelSentinels.field_G;
+        int var7 = SteelSentinels.obfuscationControl;
         int var4Lifetime1;
         try {
-          var8 = new kj(param1.a("", -742, "logo.fo3d"));
+          var8 = new CipherPacketBuffer(param1.a("", -742, "logo.fo3d"));
           var10 = var8;
           var3 = var10.f((byte) -119);
           var10.d(false);
@@ -222,7 +222,7 @@ final class nl extends oa {
     final static int a(int param0, int param1) {
         int var2;
         int var3;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         if (param1 != 26) {
           return 14;
         }
@@ -260,7 +260,7 @@ final class nl extends oa {
     final static int[] a(int param0, byte param1) {
         int var2;
         int var3;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         if (param1 <= 122) {
           return (int[]) null;
         }
@@ -319,8 +319,8 @@ final class nl extends oa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var5 = 0;
-        kj var9 = null;
-        var6 = SteelSentinels.field_G;
+        CipherPacketBuffer var9 = null;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           var10 = (CharSequence) ((Object) param0);
           if (!fa.a(param2, var10)) {
@@ -336,25 +336,25 @@ final class nl extends oa {
             stackIn_12_0 = db.a(bd.field_a, -75, new String[]{param0});
             return stackIn_12_0;
           }
-          ea.field_c.a((byte) 125, (ck) (var8));
+          Sprite.field_c.a((byte) 125, (IntrusiveNode) (var8));
           while (true) {
-            var7 = (ah) (ea.field_c.a((byte) -102));
+            var7 = (ah) (Sprite.field_c.next((byte) -102));
             if (var7 != null) {
               var7.field_bc = var7.field_bc - 1;
               continue;
             }
             break;
           }
-          var8.b(4);
-          var8.e(480);
+          var8.unlink(4);
+          var8.unlinkDual(480);
           vd.field_h = vd.field_h - 1;
           var9 = mm.field_g;
           var9.a(param1, (byte) -117);
-          var9.field_p = var9.field_p + 1;
-          var5 = var9.field_p;
+          var9.position = var9.position + 1;
+          var5 = var9.position;
           var9.a((byte) 110, 1);
           var9.a(param0, -61);
-          var9.b((byte) -53, -var5 + var9.field_p);
+          var9.b((byte) -53, -var5 + var9.position);
           stackIn_18_0 = null;
           return (String) (stackIn_18_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -378,7 +378,7 @@ final class nl extends oa {
     final static void a(int param0, int param1, int param2) {
         hk var6 = null;
         hk var7 = null;
-        kj var4 = null;
+        CipherPacketBuffer var4 = null;
         if (param2 != 5) {
           field_V = (String) null;
         }

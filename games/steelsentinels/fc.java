@@ -127,7 +127,7 @@ final class fc {
           StringBuilder var7 = null;
           Exception var8 = null;
           int var9 = 0;
-          var9 = SteelSentinels.field_G;
+          var9 = SteelSentinels.obfuscationControl;
           try {
             var5 = param1.getFile();
             var6 = 0;

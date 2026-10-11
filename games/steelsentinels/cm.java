@@ -13,11 +13,11 @@ final class cm {
     static String field_n;
     static int[] field_e;
     static String[] field_m;
-    static wk[] field_b;
+    static RgbSprite[] field_b;
     static String field_p;
     static tb field_j;
     static int field_g;
-    static gh field_h;
+    static SceneWidget field_h;
 
     final synchronized boolean a(byte param0, int param1, int param2) {
         if (!this.b(param2, param1, -17637)) {
@@ -96,12 +96,12 @@ final class cm {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        gi var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        gi var29 = null;
+        PacketBuffer var29 = null;
         int[] var30 = null;
         byte[][] var31 = null;
-        gi var32 = null;
+        PacketBuffer var32 = null;
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
@@ -110,7 +110,7 @@ final class cm {
         byte[] var43 = null;
         byte[] var44 = null;
         int var14Lifetime1;
-        var22 = SteelSentinels.field_G;
+        var22 = SteelSentinels.obfuscationControl;
         try {
           if (!this.b(param1, true)) {
             return false;
@@ -153,8 +153,8 @@ final class cm {
               var35 = dk.a(true, this.field_k[param1], 0);
               var25 = var35;
               var9 = var25;
-              var26 = new gi(var35);
-              var26.a(5, param2 ^ 32203, var26.field_t.length, param3);
+              var26 = new PacketBuffer(var35);
+              var26.a(5, param2 ^ 32203, var26.payload.length, param3);
               decompiledFrameRemainder0 = false;
             }
           }
@@ -183,9 +183,9 @@ final class cm {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - var5_int * var12 * 4;
-              var32 = new gi(var43);
+              var32 = new PacketBuffer(var43);
               var14 = 0;
-              var32.field_p = var11;
+              var32.position = var11;
               var15 = 0;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
@@ -207,7 +207,7 @@ final class cm {
               }
               var44 = new byte[var14];
               var14Lifetime1 = 0;
-              var32.field_p = var11;
+              var32.position = var11;
               var17 = 0;
               for (var18 = 0; var18 < var12; var18++) {
                 var19 = 0;
@@ -231,8 +231,8 @@ final class cm {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - var12 * var5_int * 4;
-              var29 = new gi(var43);
-              var29.field_p = var11;
+              var29 = new PacketBuffer(var43);
+              var29.position = var11;
               var38 = new int[var5_int];
               var30 = var38;
               var14_ref_int__ = var30;
@@ -251,7 +251,7 @@ final class cm {
                 var15_ref_byte____[var16] = array$1;
                 var38[var16] = 0;
               }
-              var29.field_p = var11;
+              var29.position = var11;
               var16 = 0;
               for (var17 = 0; var17 < var12; var17++) {
                 var18 = 0;
@@ -381,7 +381,7 @@ final class cm {
         int var4;
         int var5;
         int var4Lifetime1;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         if (param0 != -33) {
           return ((int[]) (this.field_k[12]))[1];
         }
@@ -409,7 +409,7 @@ final class cm {
         field_p = null;
         if (param0) {
           byte[] var2 = (byte[]) null;
-          cm.a((String[][]) null, (byte) 89, (cm) null, (int[]) null, (cm) null, (wk[][]) null, false, 80, 61, (String[]) null, (gk[]) null, (int[]) null, (wk[][]) null, (cm) null, (byte[]) null, (String[][]) null, (byte[]) null);
+          cm.a((String[][]) null, (byte) 89, (cm) null, (int[]) null, (cm) null, (RgbSprite[][]) null, false, 80, 61, (String[]) null, (IndexedSprite[]) null, (int[]) null, (RgbSprite[][]) null, (cm) null, (byte[]) null, (String[][]) null, (byte[]) null);
         }
         field_c = null;
         field_b = null;
@@ -598,7 +598,7 @@ final class cm {
         }
     }
 
-    final static void a(String[][] param0, byte param1, cm param2, int[] param3, cm param4, wk[][] param5, boolean param6, int param7, int param8, String[] param9, gk[] param10, int[] param11, wk[][] param12, cm param13, byte[] param14, String[][] param15, byte[] param16) {
+    final static void a(String[][] param0, byte param1, cm param2, int[] param3, cm param4, RgbSprite[][] param5, boolean param6, int param7, int param8, String[] param9, IndexedSprite[] param10, int[] param11, RgbSprite[][] param12, cm param13, byte[] param14, String[][] param15, byte[] param16) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -818,7 +818,7 @@ final class cm {
         int var2;
         int var4;
         int var5;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         if (!this.a(true)) {
           return false;
         }

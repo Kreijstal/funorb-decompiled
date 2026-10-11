@@ -70,7 +70,7 @@ final class se {
         int var4_intLifetime1;
         int var6Lifetime1;
         int var6Lifetime2;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         try {
           if (null != param1 &&
             0 != param1.length) {
@@ -195,7 +195,7 @@ final class se {
               }
               if (decompiledFrameCompleted1) {
                 var5_ref_int__ = new int[8];
-                if (ji.a(uc.field_b, (byte) 97, var5_ref_int__) == null) {
+                if (SentinelDesigner.a(uc.field_b, (byte) 97, var5_ref_int__) == null) {
                   uc.field_b = new int[ua.field_x.length];
                   ii.a(ua.field_x, 0, uc.field_b, 0, uc.field_b.length);
                 }
@@ -289,7 +289,7 @@ final class se {
                     var7++;
                   }
                 }
-                ad.a(var5Lifetime2, (nk) null, 33);
+                ad.a(var5Lifetime2, (ArticulatedPart) null, 33);
                 var5Lifetime2++;
               }
             }
@@ -310,49 +310,49 @@ final class se {
         }
     }
 
-    final static wk[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int[] var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
         int var8 = 0;
-        wk var9 = null;
-        wk var10 = null;
-        wk var11 = null;
-        wk var12 = null;
-        wk var13 = null;
+        RgbSprite var9 = null;
+        RgbSprite var10 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
+        RgbSprite var13 = null;
         Object var14 = null;
-        wk[] stackIn_8_0 = null;
+        RgbSprite[] stackIn_8_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = pb.field_g;
-          var7 = pb.field_c;
-          var8 = pb.field_j;
-          var9 = new wk(param0, -(2 * param0) + param3);
+          var6 = SoftwareRaster.field_g;
+          var7 = SoftwareRaster.field_c;
+          var8 = SoftwareRaster.field_j;
+          var9 = new RgbSprite(param0, -(2 * param0) + param3);
           var9.d();
-          pb.e(0, 0, param0, param3 - param0 * 2, param2, param4);
-          var10 = new wk(param0, param0);
+          SoftwareRaster.e(0, 0, param0, param3 - param0 * 2, param2, param4);
+          var10 = new RgbSprite(param0, param0);
           var10.d();
           if (param5 != 13574) {
             field_a = (String[]) null;
           }
-          pb.a(0, 0, param0, param0, param2);
-          var11 = new wk(16, param0);
+          SoftwareRaster.a(0, 0, param0, param0, param2);
+          var11 = new RgbSprite(16, param0);
           var11.d();
-          pb.a(0, 0, 16, param0, param2);
-          var12 = new wk(param0, param0);
+          SoftwareRaster.a(0, 0, 16, param0, param2);
+          var12 = new RgbSprite(param0, param0);
           var12.d();
-          pb.a(0, 0, param0, param0, param4);
-          var13 = new wk(16, param0);
+          SoftwareRaster.a(0, 0, param0, param0, param4);
+          var13 = new RgbSprite(16, param0);
           var13.d();
-          pb.a(0, 0, 16, param0, param4);
+          SoftwareRaster.a(0, 0, 16, param0, param4);
           var14 = null;
           if (0 < param1) {
-            var14 = new wk(16, 16);
-            ((wk) (var14)).d();
-            pb.a(0, 0, 16, 16, param1);
+            var14 = new RgbSprite(16, 16);
+            ((RgbSprite) (var14)).d();
+            SoftwareRaster.a(0, 0, 16, 16, param1);
           }
-          pb.a(var6, var7, var8);
-          stackIn_8_0 = new wk[]{var10, var11, var10, var9, (wk) (var14), var9, var12, var13, var12};
+          SoftwareRaster.a(var6, var7, var8);
+          stackIn_8_0 = new RgbSprite[]{var10, var11, var10, var9, (RgbSprite) (var14), var9, var12, var13, var12};
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -383,7 +383,7 @@ final class se {
         int stackIn_13_0 = 0;
         int stackIn_18_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           var3_int = 0;
           var4 = lk.field_W;
@@ -405,7 +405,7 @@ final class se {
                 }
                 var4 = var4 + (tf.field_c + ((id.field_ac << 1) + ig.field_e));
               } else {
-                var4 = var4 + ck.field_e;
+                var4 = var4 + IntrusiveNode.field_e;
               }
               var3_int++;
               continue;
@@ -434,29 +434,29 @@ final class se {
         }
     }
 
-    final static gh a(boolean param0, boolean param1, int param2, nk param3, int param4) {
+    final static SceneWidget a(boolean param0, boolean param1, int param2, ArticulatedPart param3, int param4) {
         int stackIn_11_0 = 0;
         int stackIn_15_0 = 0;
-        gh stackIn_27_0 = null;
-        wk[] stackIn_28_1 = null;
-        gh stackIn_31_0 = null;
-        wk[] stackIn_32_1 = null;
+        SceneWidget stackIn_27_0 = null;
+        RgbSprite[] stackIn_28_1 = null;
+        SceneWidget stackIn_31_0 = null;
+        RgbSprite[] stackIn_32_1 = null;
         boolean stackIn_41_0 = false;
         int stackIn_48_0 = 0;
         boolean stackIn_51_0 = false;
         int stackIn_58_0 = 0;
-        gh stackIn_67_0 = null;
+        SceneWidget stackIn_67_0 = null;
         int stackIn_112_0 = 0;
-        gh stackIn_115_0;
-        gh stackIn_115_1;
+        SceneWidget stackIn_115_0;
+        SceneWidget stackIn_115_1;
         long stackIn_115_2;
-        gh stackIn_115_3;
-        gh stackIn_116_0;
-        gh stackIn_116_1;
+        SceneWidget stackIn_115_3;
+        SceneWidget stackIn_116_0;
+        SceneWidget stackIn_116_1;
         String stackIn_116_4;
-        gh stackIn_159_0 = null;
+        SceneWidget stackIn_159_0 = null;
         int stackIn_160_1 = 0;
-        gh stackIn_170_0 = null;
+        SceneWidget stackIn_170_0 = null;
         RuntimeException stackIn_174_0 = null;
         StringBuilder stackIn_174_1 = null;
         String stackIn_175_2 = null;
@@ -467,7 +467,7 @@ final class se {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        gh var8 = null;
+        SceneWidget var8 = null;
         int var9 = 0;
         int var10 = 0;
         int[] var11_ref_int__ = null;
@@ -475,23 +475,23 @@ final class se {
         int[] var12 = null;
         String var12_ref = null;
         int var13_int = 0;
-        gh var13 = null;
+        SceneWidget var13 = null;
         int var14_int = 0;
-        gh var14 = null;
+        SceneWidget var14 = null;
         int[] var15_ref_int__ = null;
-        gh var15_ref_gh = null;
+        SceneWidget var15_ref_gh = null;
         int var15 = 0;
         int var16 = 0;
         String var16_ref_String = null;
         int var17_int = 0;
-        gh var17 = null;
+        SceneWidget var17 = null;
         int var18_int = 0;
-        gh var18 = null;
+        SceneWidget var18 = null;
         int var19 = 0;
-        gh var15_ref_ghLifetime1;
+        SceneWidget var15_ref_ghLifetime1;
         String var16_ref_StringLifetime1;
-        gh var17Lifetime1;
-        gh var15_ref_ghLifetime1Lifetime1;
+        SceneWidget var17Lifetime1;
+        SceneWidget var15_ref_ghLifetime1Lifetime1;
         int var9Lifetime1;
         int var14_intLifetime1;
         int var15Lifetime1;
@@ -505,12 +505,12 @@ final class se {
         int var17_intLifetime2;
         int var14_intLifetime1Lifetime1;
         int var17_intLifetime1Lifetime1;
-        var19 = SteelSentinels.field_G;
+        var19 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameRemainder2 = true;
           var5_int = qa.field_O;
           if ((ni.b(104) ||
-            !(0 < rd.field_b)) && oc.a(param3.field_N, -125, false)) {
+            !(0 < rd.field_b)) && oc.a(param3.componentId, -125, false)) {
             stackIn_11_0 = 1;
             decompiledFrameRemainder2 = false;
           }
@@ -520,15 +520,15 @@ final class se {
           var6 = stackIn_11_0;
           stackIn_15_0 = (param3.field_Q == 1) ? 78 : 64;
           var7 = stackIn_15_0;
-          if (17 <= param3.field_N &&
-            param3.field_N < 53) {
+          if (17 <= param3.componentId &&
+            param3.componentId < 53) {
             var7 = 36;
           }
-          if (param3.field_N == 83) {
+          if (param3.componentId == 83) {
             var7 = 36;
           }
-          var8 = new gh((long)param3.field_N, sb.field_Y);
-          cj.field_a[param3.field_N] = var8;
+          var8 = new SceneWidget((long)param3.componentId, sb.field_Y);
+          cj.field_a[param3.componentId] = var8;
           stackIn_27_0 = var8;
           if (0 != param2) {
             stackIn_28_1 = tk.field_t;
@@ -543,12 +543,12 @@ final class se {
             stackIn_32_1 = tk.field_t;
           }
           stackIn_31_0.field_I = stackIn_32_1;
-          var9 = sj.field_v[param3.field_N];
+          var9 = sj.field_v[param3.componentId];
           var10 = 0;
           if (param3.field_Q == 1 &&
             param2 != 0) {
-            var11_ref_int__ = ne.a(param3.field_N, (byte) 28);
-            var12 = ki.b(param3.field_N, (byte) -101);
+            var11_ref_int__ = ne.a(param3.componentId, (byte) 28);
+            var12 = ki.b(param3.componentId, (byte) -101);
             var13_int = 0;
             var14_int = 0;
             var15_ref_int__ = var11_ref_int__;
@@ -607,8 +607,8 @@ final class se {
             }
           }
           var11 = 66;
-          var12_ref = param3.l(-24719);
-          var13 = new gh((long)param3.field_N, kh.field_s, var12_ref);
+          var12_ref = param3.getPartName(-24719);
+          var13 = new SceneWidget((long)param3.componentId, kh.field_s, var12_ref);
           var13.a(0, 2, var7 - 19, -4 + var11, -var11 + var5_int);
           var13.field_Ib = 10;
           if (var7 < 40) {
@@ -616,30 +616,30 @@ final class se {
           }
           var13.field_S = var12_ref;
           if (param4 != 14) {
-            stackIn_67_0 = (gh) null;
+            stackIn_67_0 = (SceneWidget) null;
             return stackIn_67_0;
           }
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameCompleted1 = true;
           var13.field_nb = 1995681;
           var8.a(var13, param4 ^ 114);
-          if ((!(param3.field_N >= 17) ||
-            !(53 > param3.field_N)) && param3.field_N != 83) {
+          if ((!(param3.componentId >= 17) ||
+            !(53 > param3.componentId)) && param3.componentId != 83) {
             if (1 == param3.field_Q) {
               var14_intLifetime1 = var13.field_L.a(var13.field_S, var13.field_zb - var13.field_ub * 2, var13.field_Ib) + 6;
-              kh.a(var8, "<img=1>", tc.field_B[param3.field_N], param3.field_N, var14_intLifetime1, var5_int, 3000, var11, true);
+              kh.a(var8, "<img=1>", tc.field_B[param3.componentId], param3.componentId, var14_intLifetime1, var5_int, 3000, var11, true);
               var14_intLifetime1 += 14;
-              kh.a(var8, "<img=0>", param3.g(8192), param3.field_N, var14_intLifetime1, var5_int, 800, var11, true);
+              kh.a(var8, "<img=0>", param3.getTotalArmour(8192), param3.componentId, var14_intLifetime1, var5_int, 800, var11, true);
               var14_intLifetime1 += 14;
               if (0 >= param3.j(0)) {
                 if (!(param3.h(-31496) <= 0)) {
-                  kh.a(var8, "<img=2>", (int)((double)param3.h(-31496) / Math.sqrt((double)param3.g(8192))), param3.field_N, var14_intLifetime1, var5_int, 27, var11, true);
+                  kh.a(var8, "<img=2>", (int)((double)param3.h(-31496) / Math.sqrt((double)param3.getTotalArmour(8192))), param3.componentId, var14_intLifetime1, var5_int, 27, var11, true);
                   if (var19 != 0) {
-                    kh.a(var8, "<img=3>", (int)((double)param3.j(0) / Math.sqrt((double)param3.g(8192))), param3.field_N, var14_intLifetime1, var5_int, 27, var11, true);
+                    kh.a(var8, "<img=3>", (int)((double)param3.j(0) / Math.sqrt((double)param3.getTotalArmour(8192))), param3.componentId, var14_intLifetime1, var5_int, 27, var11, true);
                   }
                 }
               } else {
-                kh.a(var8, "<img=3>", (int)((double)param3.j(0) / Math.sqrt((double)param3.g(8192))), param3.field_N, var14_intLifetime1, var5_int, 27, var11, true);
+                kh.a(var8, "<img=3>", (int)((double)param3.j(0) / Math.sqrt((double)param3.getTotalArmour(8192))), param3.componentId, var14_intLifetime1, var5_int, 27, var11, true);
               }
               var14_intLifetime1 += 14;
               var16_ref_String = "";
@@ -653,7 +653,7 @@ final class se {
                 }
               }
               if (decompiledFrameCompleted1) {
-                var15_ref_gh = new gh((long)param3.field_N, kh.field_s, var16_ref_String);
+                var15_ref_gh = new SceneWidget((long)param3.componentId, kh.field_s, var16_ref_String);
                 var15_ref_gh.a(0, var14_intLifetime1, 20, var11 - 4, var5_int - var11);
                 var8.a(var15_ref_gh, 123);
                 var14_intLifetime1 += 14;
@@ -664,9 +664,9 @@ final class se {
               (decompiledFrameCompleted1)) {
               boolean decompiledFrameCompleted0 = true;
               var14_intLifetime1Lifetime1 = var13.field_L.a(var13.field_S, var13.field_zb - var13.field_ub * 2, var13.field_Ib) + 6;
-              kh.a(var8, "<img=1>", tc.field_B[param3.field_N], param3.field_N, var14_intLifetime1Lifetime1, var5_int, 3000, var11, true);
+              kh.a(var8, "<img=1>", tc.field_B[param3.componentId], param3.componentId, var14_intLifetime1Lifetime1, var5_int, 3000, var11, true);
               var14_intLifetime1Lifetime1 += 14;
-              kh.a(var8, "<img=0>", param3.g(8192), param3.field_N, var14_intLifetime1Lifetime1, var5_int, 400, var11, true);
+              kh.a(var8, "<img=0>", param3.getTotalArmour(8192), param3.componentId, var14_intLifetime1Lifetime1, var5_int, 400, var11, true);
               var14_intLifetime1Lifetime1 += 14;
               if (0 < param3.i(-122)) {
                 var16_ref_StringLifetime1 = "";
@@ -680,14 +680,14 @@ final class se {
                   }
                 }
                 if (decompiledFrameCompleted0) {
-                  var15_ref_ghLifetime1 = new gh((long)param3.field_N, kh.field_s, var16_ref_StringLifetime1);
+                  var15_ref_ghLifetime1 = new SceneWidget((long)param3.componentId, kh.field_s, var16_ref_StringLifetime1);
                   var15_ref_ghLifetime1.a(0, var14_intLifetime1Lifetime1, 20, -4 + var11, var5_int - var11);
                   var8.a(var15_ref_ghLifetime1, 125);
                 }
               }
               if (param3.j(0) > 0) {
-                if (param3.field_N != 59 &&
-                  param3.field_N != 77) {
+                if (param3.componentId != 59 &&
+                  param3.componentId != 77) {
                   stackIn_112_0 = 0;
                 } else {
                   stackIn_112_0 = 1;
@@ -695,7 +695,7 @@ final class se {
                 var16Lifetime1 = stackIn_112_0;
                 stackIn_115_0 = null;
                 stackIn_115_1 = null;
-                stackIn_115_2 = (long)param3.field_N;
+                stackIn_115_2 = (long)param3.componentId;
                 stackIn_115_3 = kh.field_s;
                 if (var16Lifetime1 != 0) {
                   stackIn_116_0 = null;
@@ -706,33 +706,33 @@ final class se {
                   stackIn_116_1 = null;
                   stackIn_116_4 = "<img=3>";
                 }
-                var15_ref_ghLifetime1Lifetime1 = new gh(stackIn_115_2, stackIn_115_3, stackIn_116_4);
+                var15_ref_ghLifetime1Lifetime1 = new SceneWidget(stackIn_115_2, stackIn_115_3, stackIn_116_4);
                 var15_ref_ghLifetime1Lifetime1.a(0, var14_intLifetime1Lifetime1, 20, var11 - 4, 5 + (-var11 + var5_int));
                 var15_ref_ghLifetime1Lifetime1.field_Kb = 2;
                 var8.a(var15_ref_ghLifetime1Lifetime1, param4 + 108);
               }
               if (var19 != 0) {
-                kh.a(var8, "<img=1>", tc.field_B[param3.field_N], param3.field_N, 18, var5_int, 500, var11, true);
+                kh.a(var8, "<img=1>", tc.field_B[param3.componentId], param3.componentId, 18, var5_int, 500, var11, true);
               }
             }
           } else {
-            kh.a(var8, "<img=1>", tc.field_B[param3.field_N], param3.field_N, 18, var5_int, 500, var11, true);
+            kh.a(var8, "<img=1>", tc.field_B[param3.componentId], param3.componentId, 18, var5_int, 500, var11, true);
           }
           boolean decompiledFrameRemainder0 = true;
-          var14 = new gh((long)param3.field_N, (gh) null);
+          var14 = new SceneWidget((long)param3.componentId, (SceneWidget) null);
           var14.a(0, 2, -4 + var7, 2, var11 - 4);
           var14.field_I = co.field_d;
           if (1 != param3.field_Q ||
-            !(ul.a((byte) -82, param3.field_N) >= 0)) {
-            qb.a(param3, var14, (byte) -93, false, -4 + var11, -4 + var7);
+            !(NodeDeque.a((byte) -82, param3.componentId) >= 0)) {
+            ParticleEffect.a(param3, var14, (byte) -93, false, -4 + var11, -4 + var7);
             decompiledFrameRemainder0 = (var19 != 0);
           }
           if (decompiledFrameRemainder0) {
-            var15 = ul.a((byte) 83, param3.field_N);
-            var14.field_Pb = new wk(Math.min(64, -4 + var11), Math.min(64, var7 - 4));
+            var15 = NodeDeque.a((byte) 83, param3.componentId);
+            var14.field_Pb = new RgbSprite(Math.min(64, -4 + var11), Math.min(64, var7 - 4));
             var14.field_Pb.d();
             si.field_E[var15].a(0, 0);
-            pb.c();
+            SoftwareRaster.c();
             sb.field_bb.b((byte) 121);
             jg.field_h[var15] = var14;
             var14.field_Kb = 1;
@@ -742,7 +742,7 @@ final class se {
             param1 ||
             var6 != 0) {
             var14.field_Pb.d();
-            pb.c(0, 0, var14.field_Pb.field_A, var14.field_Pb.field_F, 0, 128);
+            SoftwareRaster.c(0, 0, var14.field_Pb.field_A, var14.field_Pb.field_F, 0, 128);
             if (param1 &&
               var6 == 0) {
               pl.field_U.a(mc.field_d, var14.field_Pb.field_A / 2, (pl.field_U.field_G + var14.field_Pb.field_F) / 2, 12632256, 0);
@@ -753,7 +753,7 @@ final class se {
           if (var6 != 0) {
             var15Lifetime1 = sj.field_F.field_A;
             var16Lifetime2 = sj.field_F.field_F;
-            var17 = new gh(-1L, (gh) null);
+            var17 = new SceneWidget(-1L, (SceneWidget) null);
             var17.a(0, (var14.field_Lb - var15Lifetime1) / 2 + var14.field_eb, var16Lifetime2, (-var15Lifetime1 + var14.field_zb) / 2 + var14.field_Y, var15Lifetime1);
             var17.field_Pb = sj.field_F;
             var8.a(var17, 118);
@@ -766,7 +766,7 @@ final class se {
             if (1 == param3.field_Q) {
               var16Lifetime3 += 14;
             }
-            var17Lifetime1 = new gh("engineer", (gh) null);
+            var17Lifetime1 = new SceneWidget("engineer", (SceneWidget) null);
             var17Lifetime1.a(param4 - 14, (-var15Lifetime2 + var14.field_Lb) / 2 + var14.field_eb, var16Lifetime3, (var14.field_zb - var15Lifetime2) / 2 + var14.field_Y, var15Lifetime2);
             var17Lifetime1.field_Ab = cm.field_b;
             var17Lifetime1.field_I = lj.field_b;
@@ -774,14 +774,14 @@ final class se {
             var17Lifetime1.field_sb = 2;
             var17Lifetime1.field_Pb = b.field_q[param2];
             var8.a(var17Lifetime1, 123);
-            if (param3.field_N != 58) {
+            if (param3.componentId != 58) {
             }
             if (param3.field_Q == 1) {
-              var18 = new gh(-1L, (gh) null);
+              var18 = new SceneWidget(-1L, (SceneWidget) null);
               var18.field_Kb = 1;
               var18.field_Fb = 1;
               var18.field_S = var10 + "%";
-              var18.field_L = (mi) ((Object) fk.field_d);
+              var18.field_L = (BitmapFont) ((Object) fk.field_d);
               stackIn_159_0 = var18;
               if (param2 != 1) {
                 stackIn_160_1 = 16711680;
@@ -793,10 +793,10 @@ final class se {
               var17Lifetime1.a(var18, 127);
             }
           }
-          if (param3.field_N == 55) {
+          if (param3.componentId == 55) {
             pa.field_d[1].field_a = var8;
           }
-          if (param3.field_N == 18) {
+          if (param3.componentId == 18) {
             pa.field_d[7].field_a = var8;
           }
           stackIn_170_0 = var8;

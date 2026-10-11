@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class d extends ug {
-    static wk field_G;
+    static RgbSprite field_G;
     static java.awt.Color field_S;
     static int[][] field_T;
     static int field_R;
@@ -66,7 +66,7 @@ final class d extends ug {
         int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           param4 = param4 - param2;
           if (0 > param4) {
@@ -98,19 +98,19 @@ final class d extends ug {
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, boolean param6, byte param7, boolean param8, boolean param9) {
         int var11;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         if (param5) {
           if (param5) {
             me.field_e = ln.field_f;
             cc.a(param5, 0);
-            if (0 < je.field_t) {
+            if (0 < SentinelCommand.field_t) {
               tm.a(param7 + 4, param5, param0, param1);
             }
             rh.field_w.field_Kb = 1;
             if (param7 != -6) {
               return;
             }
-            rh.field_w.field_ub = gh.field_ib.field_ub;
+            rh.field_w.field_ub = SceneWidget.field_ib.field_ub;
             if (bd.field_c > 0) {
               pl.a(param0, param5, param1, (byte) 66);
             }
@@ -130,14 +130,14 @@ final class d extends ug {
           } else {
             me.field_e = (re.field_Z - 640) / 2;
             cc.a(param5, 0);
-            if (0 < je.field_t) {
+            if (0 < SentinelCommand.field_t) {
               tm.a(param7 + 4, param5, param0, param1);
             }
             rh.field_w.field_Kb = 1;
             if (param7 != -6) {
               return;
             }
-            rh.field_w.field_ub = gh.field_ib.field_ub;
+            rh.field_w.field_ub = SceneWidget.field_ib.field_ub;
             if (bd.field_c > 0) {
               pl.a(param0, param5, param1, (byte) 66);
             }
@@ -156,9 +156,9 @@ final class d extends ug {
             }
           }
         } else {
-          if (re.field_Z != pb.field_c) {
-            if (sb.field_bb.field_i == pb.field_j &&
-              pb.field_c == sb.field_bb.field_c) {
+          if (re.field_Z != SoftwareRaster.field_c) {
+            if (sb.field_bb.field_i == SoftwareRaster.field_j &&
+              SoftwareRaster.field_c == sb.field_bb.field_c) {
               if (null == nf.field_b) {
                 if (ni.field_a != null) {
                   ef.a(1, true);
@@ -172,14 +172,14 @@ final class d extends ug {
             if (param5) {
               me.field_e = ln.field_f;
               cc.a(param5, 0);
-              if (0 < je.field_t) {
+              if (0 < SentinelCommand.field_t) {
                 tm.a(param7 + 4, param5, param0, param1);
               }
               rh.field_w.field_Kb = 1;
               if (param7 != -6) {
                 return;
               }
-              rh.field_w.field_ub = gh.field_ib.field_ub;
+              rh.field_w.field_ub = SceneWidget.field_ib.field_ub;
               if (bd.field_c > 0) {
                 pl.a(param0, param5, param1, (byte) 66);
               }
@@ -199,14 +199,14 @@ final class d extends ug {
             } else {
               me.field_e = (re.field_Z - 640) / 2;
               cc.a(param5, 0);
-              if (0 < je.field_t) {
+              if (0 < SentinelCommand.field_t) {
                 tm.a(param7 + 4, param5, param0, param1);
               }
               rh.field_w.field_Kb = 1;
               if (param7 != -6) {
                 return;
               }
-              rh.field_w.field_ub = gh.field_ib.field_ub;
+              rh.field_w.field_ub = SceneWidget.field_ib.field_ub;
               if (bd.field_c > 0) {
                 pl.a(param0, param5, param1, (byte) 66);
               }
@@ -225,9 +225,9 @@ final class d extends ug {
               }
             }
           } else {
-            if (pb.field_j != sf.field_t &&
-              sb.field_bb.field_i == pb.field_j &&
-              pb.field_c == sb.field_bb.field_c) {
+            if (SoftwareRaster.field_j != sf.field_t &&
+              sb.field_bb.field_i == SoftwareRaster.field_j &&
+              SoftwareRaster.field_c == sb.field_bb.field_c) {
               if (null == nf.field_b) {
                 if (ni.field_a != null) {
                   ef.a(1, true);
@@ -241,14 +241,14 @@ final class d extends ug {
             if (!param5) {
               me.field_e = (re.field_Z - 640) / 2;
               cc.a(param5, 0);
-              if (0 < je.field_t) {
+              if (0 < SentinelCommand.field_t) {
                 tm.a(param7 + 4, param5, param0, param1);
               }
               rh.field_w.field_Kb = 1;
               if (param7 != -6) {
                 return;
               }
-              rh.field_w.field_ub = gh.field_ib.field_ub;
+              rh.field_w.field_ub = SceneWidget.field_ib.field_ub;
               if (bd.field_c > 0) {
                 pl.a(param0, param5, param1, (byte) 66);
               }
@@ -268,14 +268,14 @@ final class d extends ug {
             } else {
               me.field_e = ln.field_f;
               cc.a(param5, 0);
-              if (0 < je.field_t) {
+              if (0 < SentinelCommand.field_t) {
                 tm.a(param7 + 4, param5, param0, param1);
               }
               rh.field_w.field_Kb = 1;
               if (param7 != -6) {
                 return;
               }
-              rh.field_w.field_ub = gh.field_ib.field_ub;
+              rh.field_w.field_ub = SceneWidget.field_ib.field_ub;
               if (bd.field_c > 0) {
                 pl.a(param0, param5, param1, (byte) 66);
               }
@@ -323,7 +323,7 @@ final class d extends ug {
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           var2_int = param0.length();
           if (0 == var2_int) {
@@ -373,7 +373,7 @@ final class d extends ug {
         }
     }
 
-    final static wk a(boolean param0) {
+    final static RgbSprite a(boolean param0) {
         int[] var13 = null;
         int[] var11 = null;
         int[] var5_ref_int__ = null;
@@ -382,7 +382,7 @@ final class d extends ug {
         int var5 = 0;
         byte[] var17 = null;
         Object var3 = null;
-        int var7 = SteelSentinels.field_G;
+        int var7 = SteelSentinels.obfuscationControl;
         int var1 = le.field_L[0] * ca.field_r[0];
         byte[] var16 = dl.field_L[0];
         if (pd.field_U[0]) {
@@ -399,14 +399,14 @@ final class d extends ug {
           for (var5 = 0; var1 > var5; var5++) {
             var9[var5] = ba.field_d[ec.a(255, (int) var16[var5])];
           }
-          var3 = new wk(un.field_n, eb.field_n, rl.field_a[0], oa.field_M[0], le.field_L[0], ca.field_r[0], var9);
+          var3 = new RgbSprite(un.field_n, eb.field_n, rl.field_a[0], oa.field_M[0], le.field_L[0], ca.field_r[0], var9);
         }
         uh.a(9324);
         if (param0) {
-          return (wk) (var3);
+          return (RgbSprite) (var3);
         }
         field_R = -27;
-        return (wk) (var3);
+        return (RgbSprite) (var3);
     }
 
     public static void h(int param0) {

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hl extends ck {
+final class hl extends IntrusiveNode {
     static int field_o;
-    static nk field_v;
+    static ArticulatedPart field_v;
     static java.lang.reflect.Constructor field_u;
-    static wk[] field_p;
+    static RgbSprite[] field_p;
     int[] field_s;
     static int field_q;
-    static wk field_r;
+    static RgbSprite field_r;
     boolean field_t;
 
     final static String d(int param0) {
@@ -42,7 +42,7 @@ final class hl extends ck {
         field_u = null;
     }
 
-    final static gh a(byte param0) {
+    final static SceneWidget a(byte param0) {
         if (fj.field_f > 0) {
           return qa.field_L;
         }
@@ -62,6 +62,6 @@ final class hl extends ck {
 
     static {
         field_o = 5;
-        field_p = new wk[110];
+        field_p = new RgbSprite[110];
     }
 }

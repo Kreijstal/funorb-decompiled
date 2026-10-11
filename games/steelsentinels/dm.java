@@ -41,7 +41,7 @@ final class dm {
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           if (param1 != 22635) {
             var5 = (StringBuilder) null;
@@ -121,7 +121,7 @@ final class dm {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           var4_int = param2.length();
           param2.setLength(param3);

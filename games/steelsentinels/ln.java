@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ln {
     static int field_g;
-    static wk field_c;
+    static RgbSprite field_c;
     static int field_e;
     static String field_b;
     static int field_a;
@@ -37,7 +37,7 @@ final class ln {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        var12 = SteelSentinels.field_G;
+        var12 = SteelSentinels.obfuscationControl;
         try {
           var4_int = param3.length();
           var5 = param0.length();
@@ -121,13 +121,13 @@ final class ln {
         byte[] var5_ref_byte__ = null;
         byte[] var6 = null;
         Object var7 = null;
-        gi var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new gi(param0);
+          var9 = new PacketBuffer(param0);
           if (param1 < 126) {
             field_e = 55;
           }
@@ -189,7 +189,7 @@ final class ln {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           if (param2 != -16121) {
             stackIn_3_0 = (String) null;
@@ -211,7 +211,7 @@ final class ln {
             }
             break;
           }
-          stackIn_12_0 = lg.field_f;
+          stackIn_12_0 = GameApplet.field_f;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -243,7 +243,7 @@ final class ln {
           Throwable decompiledCaughtException = null;
           RuntimeException var1 = null;
           IOException var2 = null;
-          var3 = SteelSentinels.field_G;
+          var3 = SteelSentinels.obfuscationControl;
           try {
             if (ne.field_N != null) {
               ne.field_N.b(111);

@@ -13,40 +13,40 @@ final class tm {
     static String field_f;
 
     final static void a(int param0, boolean param1, boolean param2, int param3) {
-        gh stackIn_9_0 = null;
+        SceneWidget stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         boolean stackIn_10_2 = false;
-        gh stackIn_16_0 = null;
+        SceneWidget stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         boolean stackIn_17_2 = false;
-        gh stackIn_21_0 = null;
+        SceneWidget stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         boolean stackIn_22_2 = false;
         bh.a(param0 + 2);
         if (ba.field_b >= 0) {
-          jb.field_C.field_S = db.a(qg.field_g, -34, new String[]{Integer.toString(ba.field_b)});
+          Explosion.field_C.field_S = db.a(qg.field_g, -34, new String[]{Integer.toString(ba.field_b)});
         } else {
-          jb.field_C.field_S = null;
+          Explosion.field_C.field_S = null;
         }
         stackIn_9_0 = mg.field_Ub;
         stackIn_9_1 = 125;
         stackIn_10_2 = (param2) && (!param1) && (!im.field_b) && (nf.field_b == null) && (ni.field_a == null);
-        ((gh) (Object) stackIn_9_0).a((byte) stackIn_9_1, stackIn_10_2);
+        ((SceneWidget) (Object) stackIn_9_0).a((byte) stackIn_9_1, stackIn_10_2);
         stackIn_16_0 = pc.field_q;
         stackIn_16_1 = 12;
         stackIn_17_2 = (param2) && (!param1) && (!im.field_b) && (null == nf.field_b) && (null == ni.field_a);
-        ((gh) (Object) stackIn_16_0).a((byte) stackIn_16_1, stackIn_17_2);
+        ((SceneWidget) (Object) stackIn_16_0).a((byte) stackIn_16_1, stackIn_17_2);
         stackIn_21_0 = fl.field_b;
         stackIn_21_1 = 22;
         stackIn_22_2 = (param2) && (!param1) && (im.field_b);
-        ((gh) (Object) stackIn_21_0).a((byte) stackIn_21_1, stackIn_22_2);
+        ((SceneWidget) (Object) stackIn_21_0).a((byte) stackIn_21_1, stackIn_22_2);
         sn.field_f.field_d.j(10000);
         if (sg.field_i.field_Eb != 0) {
           of.field_c = true;
         }
         if (0 != qm.field_b.field_Eb && (vg.field_a ||
           !(rd.field_b <= 0) ||
-          !(ul.field_d < 2) &&
+          !(NodeDeque.field_d < 2) &&
           fc.field_e[12])) {
           ui.a(param3, param0 + 2);
         }
@@ -65,7 +65,7 @@ final class tm {
         }
     }
 
-    final static gh a(byte param0) {
+    final static SceneWidget a(byte param0) {
         int var1 = -54 % ((-38 - param0) / 57);
         return pl.d(true);
     }
@@ -103,7 +103,7 @@ final class tm {
         field_e = new long[11];
         field_a = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled, or try a different resolution.";
         var0 = 0;
-        L0: while (var0 < 256) {
+        scanLoop1: while (var0 < 256) {
           var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
           if ((var0 & 1) != 0) {
             stackIn_5_0 = (long)(255 & var1);

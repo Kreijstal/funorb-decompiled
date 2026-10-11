@@ -9,7 +9,7 @@ final class t {
     static int[] field_d;
     static String[] field_e;
     static String field_j;
-    static wk[] field_i;
+    static RgbSprite[] field_i;
     static String field_g;
     static dk field_c;
     private km[] field_f;
@@ -62,7 +62,7 @@ final class t {
           rh.a(param3, param2, param1, 635);
           return;
         }
-        field_i = (wk[]) null;
+        field_i = (RgbSprite[]) null;
         ad.a(param2, (byte) -76);
         rh.a(param3, param2, param1, 635);
     }

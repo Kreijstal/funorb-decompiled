@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ai extends ck {
+final class ai extends IntrusiveNode {
     static String field_p;
-    wk field_q;
+    RgbSprite field_q;
     String field_u;
     static String field_s;
-    static wk field_o;
+    static RgbSprite field_o;
     static String field_t;
     static String field_v;
     static String field_w;
@@ -18,8 +18,8 @@ final class ai extends ck {
         field_p = null;
         field_s = null;
         if (param0 != 0) {
-          gi var2 = (gi) null;
-          ai.a((gi) null, 92);
+          PacketBuffer var2 = (PacketBuffer) null;
+          ai.a((PacketBuffer) null, 92);
         }
         field_t = null;
         field_r = null;
@@ -38,7 +38,7 @@ final class ai extends ck {
         int[] var13 = null;
         int[] var14 = null;
         int var4Lifetime1;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           var1_int = 60 % ((3 - param0) / 43);
           if (!ln.field_h) {
@@ -61,7 +61,7 @@ final class ai extends ck {
               }
               ln.field_h = true;
               al.field_i = null;
-              wl.c((byte) 8);
+              Projectile.c((byte) 8);
             }
             if (ln.field_h) {
               en.a(79);
@@ -89,7 +89,7 @@ final class ai extends ck {
         }
     }
 
-    ai(wk param0, String param1) {
+    ai(RgbSprite param0, String param1) {
         try {
           this.field_u = param1;
           this.field_q = param0;
@@ -98,7 +98,7 @@ final class ai extends ck {
         }
     }
 
-    final static boolean a(gi param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -134,7 +134,7 @@ final class ai extends ck {
     static {
         field_p = "Reject";
         field_s = "Offer draw";
-        field_o = new wk(540, 140);
+        field_o = new RgbSprite(540, 140);
         field_w = "<%0> has entered a game.";
         field_t = "Waiting for graphics";
         field_v = "Custom-building of sentinels is available in advanced mode only. Earn 1,000 solarite cubes in multiplayer games or in missions to unlock advanced mode.";

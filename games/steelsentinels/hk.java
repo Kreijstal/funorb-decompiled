@@ -1,55 +1,55 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hk extends gh {
+final class hk extends SceneWidget {
     String field_Xb;
     boolean field_cc;
-    gh field_Lc;
-    gh field_gc;
-    static gk[] field_Ec;
+    SceneWidget field_Lc;
+    SceneWidget field_gc;
+    static IndexedSprite[] field_Ec;
     boolean field_nc;
-    gh field_Cc;
+    SceneWidget field_Cc;
     boolean field_dc;
     boolean field_vc;
     int field_mc;
-    static wk[] field_Tb;
-    gh field_zc;
+    static RgbSprite[] field_Tb;
+    SceneWidget field_zc;
     static String field_Yb;
     static String field_Kc;
-    gh field_Fc;
-    gh field_qc;
+    SceneWidget field_Fc;
+    SceneWidget field_qc;
     long field_fc;
-    gh field_Ic;
+    SceneWidget field_Ic;
     int field_sc;
     int field_wc;
-    gh field_tc;
-    gh field_Bc;
+    SceneWidget field_tc;
+    SceneWidget field_Bc;
     int field_Ac;
-    gh field_kc;
-    gh[] field_Gc;
+    SceneWidget field_kc;
+    SceneWidget[] field_Gc;
     boolean field_rc;
     String[] field_hc;
     static String field_Jc;
     int field_Ub;
     static cb field_oc;
     static int[] field_Zb;
-    gh field_Wb;
+    SceneWidget field_Wb;
     static String field_jc;
     int field_yc;
     static String field_pc;
     int field_Nc;
-    gh field_xc;
+    SceneWidget field_xc;
     static int field_ic;
     int field_Mc;
     static int[] field_Vb;
     long field_Hc;
-    gh field_ac;
-    gh field_Dc;
+    SceneWidget field_ac;
+    SceneWidget field_Dc;
     boolean field_bc;
-    gh field_lc;
+    SceneWidget field_lc;
     byte[] field_Sb;
     boolean field_ec;
-    gh field_uc;
+    SceneWidget field_uc;
 
     final static String a(char param0, String param1, boolean param2, String param3) {
         StringBuilder discarded$2 = null;
@@ -72,7 +72,7 @@ final class hk extends gh {
         StringBuilder var8 = null;
         int var9 = 0;
         int var10 = 0;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         try {
           var4_int = param3.length();
           if (!param2) {
@@ -266,7 +266,7 @@ final class hk extends gh {
     }
 
     hk(int param0) {
-        super(0L, (gh) null);
+        super(0L, (SceneWidget) null);
         this.field_Sb = new byte[param0];
     }
 
@@ -282,7 +282,7 @@ final class hk extends gh {
     final static int a(boolean param0, int param1) {
         int var2;
         int var3;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         var2 = param1;
         if (0 == var2) {
           return 12;
@@ -328,25 +328,25 @@ final class hk extends gh {
     }
 
     final static void a(byte param0, int param1) {
-        ck var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         cf var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
-          var4 = (cf) (jb.field_A.e(param0 ^ 13140));
+          var4 = (cf) (Explosion.field_A.first(param0 ^ 13140));
           while (var4 != null) {
             ml.a(param0 ^ 87, var4, param1);
-            var4 = (cf) (jb.field_A.a((byte) -124));
+            var4 = (cf) (Explosion.field_A.next((byte) -124));
           }
-          var2 = ic.field_D.e(param0 ^ 13140);
+          var2 = ic.field_D.first(param0 ^ 13140);
           if (param0 != 86) {
             field_Yb = (String) null;
           }
           while (var2 != null) {
             eh.a(param1, -17274);
-            var2 = ic.field_D.a((byte) -110);
+            var2 = ic.field_D.next((byte) -110);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

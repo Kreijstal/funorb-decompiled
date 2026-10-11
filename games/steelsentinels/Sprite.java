@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ea {
+abstract class Sprite {
     static boolean field_k;
     int field_i;
     int field_j;
-    static wk[] field_m;
-    static gk[] field_b;
-    static gh field_f;
+    static RgbSprite[] field_m;
+    static IndexedSprite[] field_b;
+    static SceneWidget field_f;
     int field_g;
     static String field_e;
-    static ul field_c;
+    static NodeDeque field_c;
     int field_n;
     static int field_h;
     int field_d;
     int field_a;
-    static gh field_l;
+    static SceneWidget field_l;
 
     abstract void a(int param0, int param1, int param2);
 
@@ -76,7 +76,7 @@ abstract class ea {
             return stackIn_24_0;
           }
           if (param0 != 10126) {
-            field_l = (gh) null;
+            field_l = (SceneWidget) null;
           }
           if (!param1.equals("C")) {
             stackIn_31_0 = Class.forName(param1);
@@ -118,8 +118,8 @@ abstract class ea {
         int var7Lifetime1;
         int var8Lifetime1;
         int var9Lifetime1;
-        var13 = SteelSentinels.field_G;
-        sn.field_j.field_Ub.field_M.g(6);
+        var13 = SteelSentinels.obfuscationControl;
+        sn.field_j.field_Ub.field_M.clear(6);
         var4 = null;
         var5 = 0;
         var6 = 0;
@@ -143,10 +143,10 @@ abstract class ea {
               if (var8_ref_na.field_m == null) {
                 ln.field_e = ln.field_e + 1;
               }
-              var10 = nk.a(-118, var8_ref_na);
-              var11 = var10 + mi.a(var8_ref_na.field_o);
+              var10 = ArticulatedPart.a(-118, var8_ref_na);
+              var11 = var10 + BitmapFont.a(var8_ref_na.field_o);
               var12 = rf.a(-102, var8_ref_na);
-              var8_ref_na.field_m = new gh(0L, td.field_ic, var11);
+              var8_ref_na.field_m = new SceneWidget(0L, td.field_ic, var11);
               var8_ref_na.field_m.field_xb = (8355711 & td.field_ic.field_xb >> 1) - (8355711 & var12 >> 1) + var12;
               var8_ref_na.field_m.field_L = pl.field_X;
               var8_ref_na.field_m.field_nb = var12;
@@ -202,7 +202,7 @@ abstract class ea {
         try {
           uk.b(param0.a("", -742, "headers.packvorbis"));
           if (param1 != 1728986241) {
-            field_c = (ul) null;
+            field_c = (NodeDeque) null;
           }
           var2 = uk.a(param0, "jagex logo2.packvorbis", "");
           var2.a();

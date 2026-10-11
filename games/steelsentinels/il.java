@@ -11,9 +11,9 @@ final class il {
     static String field_g;
     static String field_d;
 
-    final static wk[] a(int param0, int param1, int param2, cm param3) {
+    final static RgbSprite[] a(int param0, int param1, int param2, cm param3) {
         RuntimeException var4 = null;
-        wk[] stackIn_6_0 = null;
+        RgbSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -25,7 +25,7 @@ final class il {
           if (param1 != 20178) {
             field_d = (String) null;
           }
-          stackIn_6_0 = jb.g(param1 ^ 20181);
+          stackIn_6_0 = Explosion.g(param1 ^ 20181);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -121,7 +121,7 @@ final class il {
     final int a(byte param0, int param1) {
         int var3 = 0;
         int var4;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         if (null != this.field_f &&
           this.field_f.length != 0) {
           for (var3 = 1; var3 < this.field_f.length; var3++) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wd {
-    static wk[] field_a;
+    static RgbSprite[] field_a;
 
     final static int a(String param0, byte param1, boolean param2) {
         RuntimeException var3 = null;
@@ -46,7 +46,7 @@ final class wd {
         }
     }
 
-    final static void a(gi param0, boolean param1, hk param2, byte param3) {
+    final static void a(PacketBuffer param0, boolean param1, hk param2, byte param3) {
         int var9 = 0;
         hk stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
@@ -75,7 +75,7 @@ final class wd {
         int var7 = 0;
         int var8 = 0;
         int var10 = 0;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         try {
           if (param1) {
             param2.field_wc = param0.f((byte) -124);
@@ -119,11 +119,11 @@ final class wd {
             param2.field_Mc = -1;
           }
           param2.field_fc = param0.g((byte) -104);
-          var8 = param0.field_p;
+          var8 = param0.position;
           param2.field_Xb = param0.h(1);
           if (var7 != 0) {
             param2.field_hc = new String[param2.field_wc];
-            param0.field_p = var8;
+            param0.position = var8;
             for (var9 = 0; var9 < param2.field_wc; var9++) {
               param2.field_hc[var9] = param0.h(1);
             }
@@ -159,7 +159,7 @@ final class wd {
             return;
           }
           try {
-            hn.a("resizing", (byte) -41, wl.d((byte) -21), new Object[]{new Integer(param0)});
+            hn.a("resizing", (byte) -41, Projectile.d((byte) -21), new Object[]{new Integer(param0)});
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class td extends gh {
+final class td extends SceneWidget {
     long field_hc;
-    private gh field_cc;
-    private gh field_Zb;
-    private gh field_Wb;
+    private SceneWidget field_cc;
+    private SceneWidget field_Zb;
+    private SceneWidget field_Wb;
     private int field_Yb;
     static String field_ac;
     private StringBuilder field_fc;
     static int[] field_Xb;
-    private gh[] field_Ub;
-    private gh field_Tb;
+    private SceneWidget[] field_Ub;
+    private SceneWidget field_Tb;
     private id field_dc;
-    static gh field_ic;
-    static wk field_ec;
-    private gh field_jc;
+    static SceneWidget field_ic;
+    static RgbSprite field_ec;
+    private SceneWidget field_jc;
     static boolean field_Sb;
-    private gh field_gc;
+    private SceneWidget field_gc;
     static String field_Vb;
-    static gh field_bc;
+    static SceneWidget field_bc;
 
     final boolean k(int param0) {
         int var2 = -21 % ((param0 - 14) / 53);
@@ -33,7 +33,7 @@ final class td extends gh {
         return true;
     }
 
-    private final int a(int param0, int param1, gh param2, int param3, gh param4) {
+    private final int a(int param0, int param1, SceneWidget param2, int param3, SceneWidget param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_1_0 = 0;
@@ -71,8 +71,8 @@ final class td extends gh {
         }
     }
 
-    private final int a(int param0, boolean param1, gh param2, gh param3, int param4, String param5) {
-        gh var7 = null;
+    private final int a(int param0, boolean param1, SceneWidget param2, SceneWidget param3, int param4, String param5) {
+        SceneWidget var7 = null;
         RuntimeException var7_ref = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -85,7 +85,7 @@ final class td extends gh {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new gh(0L, param2, 0, param0, param4, 24, param5);
+          var7 = new SceneWidget(0L, param2, 0, param0, param4, 24, param5);
           param0 += 32;
           if (!param1) {
             stackIn_2_0 = -92;
@@ -120,10 +120,10 @@ final class td extends gh {
         }
     }
 
-    td(int param0, int param1, int param2, int param3, int param4, gh param5, gh param6, gh param7, gh param8, id param9, gh param10, String param11, long param12) {
+    td(int param0, int param1, int param2, int param3, int param4, SceneWidget param5, SceneWidget param6, SceneWidget param7, SceneWidget param8, id param9, SceneWidget param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$1 = null;
-        gh[] var15 = null;
+        SceneWidget[] var15 = null;
         int var15_int = 0;
         int var16 = 0;
         int var17 = 0;
@@ -136,7 +136,7 @@ final class td extends gh {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        gh[] var28 = null;
+        SceneWidget[] var28 = null;
         Object stackIn_7_0;
         id stackIn_7_1;
         id stackIn_7_2;
@@ -146,7 +146,7 @@ final class td extends gh {
         id stackIn_8_1;
         id stackIn_8_2;
         String stackIn_8_5;
-        gh stackIn_14_0 = null;
+        SceneWidget stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
@@ -191,29 +191,29 @@ final class td extends gh {
         this.field_Yb = -2;
         try {
           this.field_hc = param12;
-          this.field_Wb = new gh(0L, param6, oc.field_a.toUpperCase());
+          this.field_Wb = new SceneWidget(0L, param6, oc.field_a.toUpperCase());
           this.field_Wb.field_Kb = 1;
           this.a(this.field_Wb, 119);
-          this.field_Zb = new gh(0L, param7);
+          this.field_Zb = new SceneWidget(0L, param7);
           this.field_Wb.a(this.field_Zb, 121);
-          this.field_jc = new gh(0L, (gh) null);
+          this.field_jc = new SceneWidget(0L, (SceneWidget) null);
           this.a(this.field_jc, 119);
           if (param11 != null) {
-            this.field_cc = new gh(0L, param8, cl.field_h);
+            this.field_cc = new SceneWidget(0L, param8, cl.field_h);
             this.field_cc.field_nb = 11184810;
             this.field_cc.field_Kb = 1;
             this.field_jc.a(this.field_cc, 120);
-            this.field_gc = new gh(0L, param8, nj.field_X);
+            this.field_gc = new SceneWidget(0L, param8, nj.field_X);
             this.field_gc.field_nb = 11184810;
             this.field_gc.field_Kb = 1;
             this.field_jc.a(this.field_gc, 121);
-            this.field_Tb = new gh(0L, param8);
+            this.field_Tb = new SceneWidget(0L, param8);
             this.field_Tb.field_nb = 16764006;
             this.field_jc.a(this.field_Tb, 119);
             this.field_Tb.field_Db = "|";
             if (!(di.field_h < 5) ||
-              !(ul.field_d < 2)) {
-              L3: {
+              !(NodeDeque.field_d < 2)) {
+              regionExit1: {
                 stackIn_7_0 = this;
                 stackIn_7_1 = null;
                 stackIn_7_2 = null;
@@ -223,12 +223,12 @@ final class td extends gh {
                   stackIn_7_0Lifetime1 = this;
                   stackIn_7_1Lifetime1 = null;
                   stackIn_7_2Lifetime1 = null;
-                  if (ul.field_d < 2) {
+                  if (NodeDeque.field_d < 2) {
                     stackIn_8_0 = this;
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
                     stackIn_8_5 = ge.field_h;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_8_0Lifetime1 = this;
@@ -239,18 +239,18 @@ final class td extends gh {
               this.field_dc = new id(stackIn_7_3, stackIn_7_4, stackIn_8_5);
               this.field_jc.a(this.field_dc, 119);
             }
-            var28 = new gh[3];
+            var28 = new SceneWidget[3];
             var15 = var28;
-            var28[0] = new gh(0L, (gh) null);
+            var28[0] = new SceneWidget(0L, (SceneWidget) null);
             this.field_jc.a(var28[0], 127);
-            var28[1] = new gh(0L, (gh) null);
+            var28[1] = new SceneWidget(0L, (SceneWidget) null);
             this.field_jc.a(var28[1], 124);
-            var28[2] = new gh(0L, (gh) null);
+            var28[2] = new SceneWidget(0L, (SceneWidget) null);
             this.field_jc.a(var28[2], 124);
-            this.field_Ub = new gh[fc.field_d];
+            this.field_Ub = new SceneWidget[fc.field_d];
             for (var16 = 0; fc.field_d > var16; var16++) {
               if (null != hh.field_g[var16]) {
-                this.field_Ub[var16] = new gh(0L, param10, hh.field_g[var16]);
+                this.field_Ub[var16] = new SceneWidget(0L, param10, hh.field_g[var16]);
                 this.field_Ub[var16].field_Kb = 0;
                 stackIn_14_0 = this.field_Ub[var16];
                 stackIn_15_1 = (param11 != null);
@@ -355,7 +355,7 @@ final class td extends gh {
             this.a(0, var26, var24, var25, var23);
             return;
           }
-          this.field_cc = new gh(0L, param8, ed.field_b);
+          this.field_cc = new SceneWidget(0L, param8, ed.field_b);
           this.field_cc.field_Kb = 1;
           this.field_cc.field_nb = 11184810;
           this.field_jc.a(this.field_cc, 119);
@@ -428,7 +428,7 @@ final class td extends gh {
         boolean stackIn_6_0 = false;
         if (param0 < 55) {
           var3 = (String) null;
-          discarded$1 = this.a(-52, false, (gh) null, (gh) null, 10, (String) null);
+          discarded$1 = this.a(-52, false, (SceneWidget) null, (SceneWidget) null, 10, (String) null);
         }
         stackIn_6_0 = (this.field_dc != null) && (this.field_dc.field_G);
         return stackIn_6_0;
@@ -439,7 +439,7 @@ final class td extends gh {
         field_ec = null;
         field_Vb = null;
         if (param0 >= -104) {
-          field_bc = (gh) null;
+          field_bc = (SceneWidget) null;
         }
         field_bc = null;
         field_ac = null;
@@ -450,10 +450,10 @@ final class td extends gh {
         int var3 = 0;
         id stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
-        gh stackIn_16_0 = null;
+        SceneWidget stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
         int var4;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         this.a((byte) 119, param0);
         if (this.field_Tb != null) {
           this.field_Tb.field_S = this.field_fc.toString();
@@ -486,7 +486,7 @@ final class td extends gh {
           return -1;
         }
         if (param1 > -89) {
-          field_bc = (gh) null;
+          field_bc = (SceneWidget) null;
         }
         return this.field_Yb;
     }
@@ -495,7 +495,7 @@ final class td extends gh {
         int discarded$0 = 0;
         if (!param0) {
           String var3 = (String) null;
-          discarded$0 = this.a(32, true, (gh) null, (gh) null, -121, (String) null);
+          discarded$0 = this.a(32, true, (SceneWidget) null, (SceneWidget) null, -121, (String) null);
         }
         return this.field_fc.toString();
     }

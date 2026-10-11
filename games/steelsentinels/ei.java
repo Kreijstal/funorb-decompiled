@@ -5,11 +5,11 @@ final class ei extends ia {
     private String field_w;
     static String field_u;
     static int field_t;
-    static gh field_n;
+    static SceneWidget field_n;
     static String field_x;
     static int field_q;
-    static gh field_o;
-    static gh field_p;
+    static SceneWidget field_o;
+    static SceneWidget field_p;
     private boolean field_s;
     static String field_v;
     static String field_r;
@@ -46,14 +46,14 @@ final class ei extends ia {
         int var8 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
-          pb.h(param0, param1, param2, param3, 12105914);
-          pb.e(1 + param0, param1 + 1, -2 + param2, param3 - 2, 16251129, 10461345);
+          SoftwareRaster.h(param0, param1, param2, param3, 12105914);
+          SoftwareRaster.e(1 + param0, param1 + 1, -2 + param2, param3 - 2, 16251129, 10461345);
           var6 = -126 / ((param4 - 69) / 50);
           var5_int = 64;
           for (var7 = 1; var7 <= 6; var7++) {
-            pb.h(var7 + param0, var7 + param1, -(var7 * 2) + param2, -(var7 * 2) + param3, 16251129, var5_int);
+            SoftwareRaster.h(var7 + param0, var7 + param1, -(var7 * 2) + param2, -(var7 * 2) + param3, 16251129, var5_int);
             var5_int = var5_int >> 1;
           }
           return;
@@ -205,17 +205,17 @@ final class ei extends ia {
         return var2;
     }
 
-    final static wk[] a(int param0, wk[] param1) {
+    final static RgbSprite[] a(int param0, RgbSprite[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        wk var3 = null;
+        RgbSprite var3 = null;
         int var4 = 0;
-        wk[] stackIn_5_0 = null;
+        RgbSprite[] stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           for (var2_int = param0; param1.length > var2_int; var2_int++) {
             var3 = param1[var2_int];
@@ -224,7 +224,7 @@ final class ei extends ia {
             param1[var2_int].field_z = param1[var2_int].field_A;
             param1[var2_int].field_B = param1[var2_int].field_F;
           }
-          stackIn_5_0 = (wk[]) (param1);
+          stackIn_5_0 = (RgbSprite[]) (param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -241,7 +241,7 @@ final class ei extends ia {
     }
 
     final static void a(int param0, byte param1, int param2) {
-        kj var3 = mm.field_g;
+        CipherPacketBuffer var3 = mm.field_g;
         var3.a(param2, (byte) -117);
         var3.a((byte) 127, 3);
         if (param1 != -23) {

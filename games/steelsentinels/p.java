@@ -239,7 +239,7 @@ final class p {
         return field_u;
     }
 
-    final void a(gi param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_e = new kl();
@@ -248,7 +248,7 @@ final class p {
         this.field_t.b(param0);
         int var2 = param0.f((byte) -58);
         if (var2 != 0) {
-          param0.field_p = param0.field_p - 1;
+          param0.position = param0.position - 1;
           this.field_k = new kl();
           this.field_k.b(param0);
           this.field_c = new kl();
@@ -256,7 +256,7 @@ final class p {
         }
         var2 = param0.f((byte) -70);
         if (var2 != 0) {
-          param0.field_p = param0.field_p - 1;
+          param0.position = param0.position - 1;
           this.field_g = new kl();
           this.field_g.b(param0);
           this.field_h = new kl();
@@ -264,7 +264,7 @@ final class p {
         }
         var2 = param0.f((byte) -120);
         if (var2 != 0) {
-          param0.field_p = param0.field_p - 1;
+          param0.position = param0.position - 1;
           this.field_i = new kl();
           this.field_i.b(param0);
           this.field_b = new kl();

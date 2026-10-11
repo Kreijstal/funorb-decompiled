@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bm extends dl implements ae {
-    static wk[] field_S;
+    static RgbSprite[] field_S;
     static String field_W;
-    static wk[] field_R;
+    static RgbSprite[] field_R;
     private String field_P;
     private oa[] field_bb;
     private int field_V;
     static boolean field_Q;
     private int[] field_U;
-    static wk[] field_Y;
+    static RgbSprite[] field_Y;
     private k field_X;
-    static wk[] field_Z;
+    static RgbSprite[] field_Z;
     static long[] field_T;
-    private mi field_ab;
+    private BitmapFont field_ab;
 
     public static void a(byte param0) {
         field_Z = null;
@@ -26,7 +26,7 @@ final class bm extends dl implements ae {
         field_T = null;
     }
 
-    bm(k param0, mi param1, String param2) {
+    bm(k param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (qk) null);
         int var4_int = 0;
         this.field_V = 0;
@@ -49,11 +49,11 @@ final class bm extends dl implements ae {
         this.field_ab.a(this.field_P, this.field_o + (param2 + 14), this.field_z + param0 + 10, this.field_x - 28, this.field_E, 16777215, -1, 0, 0, this.field_ab.field_G);
     }
 
-    final static wk[] b(int param0, int param1, int param2, int param3) {
+    final static RgbSprite[] b(int param0, int param1, int param2, int param3) {
         int var5 = 0;
-        int var6 = SteelSentinels.field_G;
-        wk[] var7 = new wk[9];
-        wk[] var4 = var7;
+        int var6 = SteelSentinels.obfuscationControl;
+        RgbSprite[] var7 = new RgbSprite[9];
+        RgbSprite[] var4 = var7;
         if (param1 != -2) {
           bm.a((byte) 112);
         }
@@ -68,7 +68,7 @@ final class bm extends dl implements ae {
     public final void a(int param0, byte param1, int param2, oa param3, int param4) {
         int var7 = 0;
         int var6_int = 0;
-        int var8 = SteelSentinels.field_G;
+        int var8 = SteelSentinels.obfuscationControl;
         int var6_intLifetime1;
         try {
           for (var6_int = 0; this.field_V > var6_int; var6_int++) {
@@ -90,7 +90,7 @@ final class bm extends dl implements ae {
 
     private final void a(int param0, byte param1) {
         int var5 = 0;
-        int var6 = SteelSentinels.field_G;
+        int var6 = SteelSentinels.obfuscationControl;
         if (this.field_V >= param0) {
           return;
         }

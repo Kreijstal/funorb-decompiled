@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rn extends ck {
+final class rn extends IntrusiveNode {
     static rf field_v;
     static String field_s;
     static String field_t;
@@ -14,14 +14,14 @@ final class rn extends ck {
     static String field_A;
     int field_x;
     static int[] field_w;
-    static gh field_C;
+    static SceneWidget field_C;
     static kg field_y;
     static int[] field_o;
     static String field_z;
 
     final static String a(String param0, int param1, String param2, boolean param3) {
         RuntimeException var4 = null;
-        kj var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         ah var7 = null;
         CharSequence var8 = null;
@@ -50,16 +50,16 @@ final class rn extends ck {
             stackIn_10_0 = db.a(ui.field_W, -42, new String[]{param0});
             return stackIn_10_0;
           }
-          var7.b(4);
-          var7.e(480);
+          var7.unlink(4);
+          var7.unlinkDual(480);
           cc.field_gc = cc.field_gc - 1;
           var5 = mm.field_g;
           var5.a(param1, (byte) -117);
-          var5.field_p = var5.field_p + 1;
-          var6 = var5.field_p;
+          var5.position = var5.position + 1;
+          var6 = var5.position;
           var5.a((byte) 124, 3);
           var5.a(param2, -121);
-          var5.b((byte) 116, var5.field_p - var6);
+          var5.b((byte) 116, var5.position - var6);
           stackIn_12_0 = null;
           return (String) (stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -130,7 +130,7 @@ final class rn extends ck {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
           var1_int = 0;
           while (dl.f(22759)) {

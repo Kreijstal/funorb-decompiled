@@ -4,13 +4,13 @@
 final class lj {
     static String field_c;
     static rf field_d;
-    static wk[] field_b;
+    static RgbSprite[] field_b;
     static String field_i;
     static String[] field_g;
     static String[] field_a;
     static String field_f;
-    static qd field_h;
-    static wk[] field_e;
+    static PartInstruction field_h;
+    static RgbSprite[] field_e;
 
     final static String a(String param0, byte param1, int param2) {
         String stackIn_4_0 = null;
@@ -26,7 +26,7 @@ final class lj {
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kj var3 = null;
+        CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         try {
@@ -38,7 +38,7 @@ final class lj {
             stackIn_7_0 = ed.field_d;
             return stackIn_7_0;
           }
-          if (wl.a(param1 ^ -2, param0)) {
+          if (Projectile.a(param1 ^ -2, param0)) {
             stackIn_12_0 = o.field_f;
             return stackIn_12_0;
           }
@@ -65,11 +65,11 @@ final class lj {
           }
           var3 = mm.field_g;
           var3.a(param2, (byte) -117);
-          var3.field_p = var3.field_p + 1;
-          var4 = var3.field_p;
+          var3.position = var3.position + 1;
+          var4 = var3.position;
           var3.a((byte) 114, 0);
           var3.a(param0, param1 ^ 43);
-          var3.b((byte) -46, -var4 + var3.field_p);
+          var3.b((byte) -46, -var4 + var3.position);
           stackIn_36_0 = null;
           return (String) (stackIn_36_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -125,7 +125,7 @@ final class lj {
         int var9 = 0;
         int var10 = 0;
         String var8Lifetime1;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         try {
           if (param0 != 1) {
             field_f = (String) null;
@@ -158,7 +158,7 @@ final class lj {
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != var2) {
-            qb.a(56, v.field_e, (String) (var2), 0, (String) null);
+            ParticleEffect.a(56, v.field_e, (String) (var2), 0, (String) null);
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -185,9 +185,9 @@ final class lj {
                 }
                 if (null != nf.field_b) {
                   boolean decompiledSharedTail1 = (!(cc.field_lc) ||
-                    qd.field_a == null);
+                    PartInstruction.field_a == null);
                   if (!decompiledSharedTail1) {
-                    var4 = "[" + qd.field_a + "] ";
+                    var4 = "[" + PartInstruction.field_a + "] ";
                     decompiledSharedTail1 = (var10 != 0);
                   }
                   if (decompiledSharedTail1) {
@@ -231,12 +231,12 @@ final class lj {
                 }
               }
             }
-            qb.a(71, ag.field_r[var6], var4 + mi.a(tf.field_g.toString()), var7, var5);
+            ParticleEffect.a(71, ag.field_r[var6], var4 + BitmapFont.a(tf.field_g.toString()), var7, var5);
             if (!jn.field_g) {
               wh.field_e.field_kb = false;
             }
             if (wh.field_e.field_kb) {
-              var1 = db.a(wl.field_Y, -120, new String[]{var3, en.field_e});
+              var1 = db.a(Projectile.field_Y, -120, new String[]{var3, en.field_e});
             }
           }
           stackIn_102_0 = var1;
@@ -266,7 +266,7 @@ final class lj {
             stackIn_7_0 = null;
             return (u) (stackIn_7_0);
           }
-          stackIn_9_0 = je.a(96, param0.a(param4, (byte) 75, param1));
+          stackIn_9_0 = SentinelCommand.a(96, param0.a(param4, (byte) 75, param1));
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -288,22 +288,22 @@ final class lj {
         }
     }
 
-    final static gh a(int param0, int param1, boolean param2, boolean param3, int param4, int param5) {
+    final static SceneWidget a(int param0, int param1, boolean param2, boolean param3, int param4, int param5) {
         int stackIn_11_0 = 0;
         int stackIn_103_0 = 0;
-        gh stackIn_106_0 = null;
-        wk[] stackIn_107_1 = null;
-        gh stackIn_110_0 = null;
-        wk[] stackIn_111_1 = null;
+        SceneWidget stackIn_106_0 = null;
+        RgbSprite[] stackIn_107_1 = null;
+        SceneWidget stackIn_110_0 = null;
+        RgbSprite[] stackIn_111_1 = null;
         int stackIn_131_0 = 0;
         int stackIn_131_1 = 0;
-        gh stackIn_139_0 = null;
+        SceneWidget stackIn_139_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         Object var8 = null;
-        gh var8_ref = null;
+        SceneWidget var8_ref = null;
         Object var9 = null;
         String var9_ref = null;
         Object var10 = null;
@@ -311,22 +311,22 @@ final class lj {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        gh var15 = null;
+        SceneWidget var15 = null;
         int var16 = 0;
-        gh var17 = null;
-        gk var18 = null;
+        SceneWidget var17 = null;
+        IndexedSprite var18 = null;
         int[] var19_ref_int__ = null;
         int var19 = 0;
         int var20 = 0;
-        gh var21 = null;
-        gh var22 = null;
+        SceneWidget var21 = null;
+        SceneWidget var22 = null;
         int var23 = 0;
-        gh var21Lifetime1;
+        SceneWidget var21Lifetime1;
         int var13Lifetime1;
         int var19Lifetime1;
         int var20Lifetime1;
         int var20Lifetime2;
-        var23 = SteelSentinels.field_G;
+        var23 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameRemainder0 = true;
           var6_int = qa.field_O;
@@ -443,7 +443,7 @@ final class lj {
           }
           stackIn_103_0 = (null != var10) ? 1 : 2;
           var13Lifetime1 = stackIn_103_0;
-          var8_ref = new gh((long)param1, sb.field_Y);
+          var8_ref = new SceneWidget((long)param1, sb.field_Y);
           cj.field_a[param1] = var8_ref;
           stackIn_106_0 = var8_ref;
           if (0 != param4) {
@@ -460,7 +460,7 @@ final class lj {
           }
           stackIn_110_0.field_Ab = stackIn_111_1;
           var14 = 46;
-          var15 = new gh(-1L, kh.field_s, var9_ref);
+          var15 = new SceneWidget(-1L, kh.field_s, var9_ref);
           var15.field_Ib = 10;
           var15.a(0, 2, -4 + (-15 + param5), var14, param0 - (var14 + 10));
           if (1 == var13Lifetime1) {
@@ -476,11 +476,11 @@ final class lj {
             kh.a(var8_ref, (String) (var10), var11, param1, var16, var6_int, var12, var14, true);
           }
           boolean decompiledFrameCompleted0 = true;
-          var17 = new gh((long)param1, (gh) null);
+          var17 = new SceneWidget((long)param1, (SceneWidget) null);
           var17.a(0, 2, param5 - 4, 2, -4 + var14);
           var17.field_I = co.field_d;
-          var18 = ie.field_d[param1];
-          var17.field_Pb = var18.a();
+          var18 = IsaacRandom.field_d[param1];
+          var17.field_Pb = var18.toRgbSprite();
           if (!param3 ||
             var7 != 0) {
             var19_ref_int__ = var17.field_Pb.field_E;
@@ -508,7 +508,7 @@ final class lj {
           if (var7 != 0) {
             var19 = sj.field_F.field_A;
             var20Lifetime1 = sj.field_F.field_F;
-            var21 = new gh(-1L, (gh) null);
+            var21 = new SceneWidget(-1L, (SceneWidget) null);
             var21.a(0, var17.field_eb + (-var19 + var17.field_Lb) / 2, var20Lifetime1, var17.field_Y + (var17.field_zb - var19) / 2, var19);
             var21.field_Pb = sj.field_F;
             var8_ref.a(var21, 124);
@@ -518,14 +518,14 @@ final class lj {
             param4 != 0) {
             var19Lifetime1 = 28;
             var20Lifetime2 = var19Lifetime1;
-            var21Lifetime1 = new gh("engineer", (gh) null);
+            var21Lifetime1 = new SceneWidget("engineer", (SceneWidget) null);
             var21Lifetime1.a(0, var17.field_eb + (var17.field_Lb - var20Lifetime2) / 2, var20Lifetime2, var17.field_Y + (-var19Lifetime1 + var17.field_zb) / 2, var19Lifetime1);
             var21Lifetime1.field_qb = 2;
             var21Lifetime1.field_I = field_b;
             var21Lifetime1.field_Ab = cm.field_b;
             var21Lifetime1.field_sb = 2;
             var21Lifetime1.field_Pb = aj.field_r[param4];
-            var22 = new gh(-1L, (gh) null);
+            var22 = new SceneWidget(-1L, (SceneWidget) null);
             var22.a(0, 0, 28, 0, 28);
             var22.field_Pb = b.field_q[param4];
             var22.field_sb = 2;

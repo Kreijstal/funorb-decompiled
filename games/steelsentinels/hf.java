@@ -44,7 +44,7 @@ final class hf {
         hh.field_a.a(param0, (byte) 127);
     }
 
-    final static wk[] a(int param0, int param1, int param2, int param3, boolean param4) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, boolean param4) {
         if (param4) {
           return ch.a(3, 1, 4, param2, param1, param3, param0, 1, 1);
         }

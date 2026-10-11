@@ -6,7 +6,7 @@ final class an implements Runnable {
     volatile tb[] field_e;
     static int[] field_d;
     static int field_b;
-    static gh field_a;
+    static SceneWidget field_a;
     static int field_h;
     pn field_j;
     static dd field_i;
@@ -14,14 +14,14 @@ final class an implements Runnable {
     volatile boolean field_f;
 
     final static void a(int param0, boolean param1, boolean param2, int param3) {
-        int var5 = SteelSentinels.field_G;
+        int var5 = SteelSentinels.obfuscationControl;
         int var4 = 83 % ((param3 - 35) / 50);
         if (param0 == -1) {
           qf.a(param2, (byte) -122);
           return;
         }
         if (param0 == -2) {
-          pb.b();
+          SoftwareRaster.b();
           return;
         }
         if (param1) {
@@ -39,7 +39,7 @@ final class an implements Runnable {
         Exception var1 = null;
         Throwable var3 = null;
         String var5 = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         this.field_f = true;
         try {
           try {

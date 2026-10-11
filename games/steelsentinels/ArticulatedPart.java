@@ -1,41 +1,41 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nk extends kd {
+final class ArticulatedPart extends DualNode {
     int field_T;
     int field_C;
     private boolean field_L;
-    private nk field_S;
+    private ArticulatedPart field_S;
     int field_V;
     private int field_D;
     private int field_z;
-    gk field_U;
+    IndexedSprite field_U;
     int field_G;
     int field_E;
-    gk field_R;
-    int field_y;
-    int field_N;
+    IndexedSprite sprite;
+    int rotation;
+    int componentId;
     int field_K;
     int field_Q;
     int field_W;
-    private qd[] field_I;
+    private PartInstruction[] instructions;
     static dj field_F;
     private static int[] field_M;
     static pn field_A;
     static fm field_O;
-    gk field_H;
+    IndexedSprite field_H;
     static String field_P;
     static int field_J;
     static boolean field_B;
     static String[] field_X;
 
-    final static qb a(int param0, int param1, ee param2, int param3, int param4, boolean param5, int param6, int param7, int param8, int param9) {
-        qb var10 = null;
+    final static ParticleEffect a(int param0, int param1, CombatWorld param2, int param3, int param4, boolean param5, int param6, int param7, int param8, int param9) {
+        ParticleEffect var10 = null;
         RuntimeException var10_ref = null;
-        ee var11 = null;
-        qb stackIn_4_0 = null;
+        CombatWorld var11 = null;
+        ParticleEffect stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
-        qb stackIn_6_0 = null;
+        ParticleEffect stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -45,8 +45,8 @@ final class nk extends kd {
           var10.field_O = param7;
           var10.field_B = param4;
           if (param3 <= 86) {
-            var11 = (ee) null;
-            nk.a(91, 120, (ee) null, -2, -98, true, 88, 125, 5, -15);
+            var11 = (CombatWorld) null;
+            ArticulatedPart.a(91, 120, (CombatWorld) null, -2, -98, true, 88, 125, 5, -15);
           }
           var10.field_P = param9;
           stackIn_4_0 = var10;
@@ -57,7 +57,7 @@ final class nk extends kd {
           var10.field_F = param8;
           var10.field_I = 0;
           var10.field_A = param1;
-          var10.field_z = param2;
+          var10.world = param2;
           stackIn_6_0 = var10;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -75,9 +75,9 @@ final class nk extends kd {
     }
 
     final void a(int param0, boolean param1, int param2, int param3, byte param4, int param5) {
-        nk stackIn_5_0 = null;
+        ArticulatedPart stackIn_5_0 = null;
         Object stackIn_11_0 = null;
-        nk stackOut_4_0;
+        ArticulatedPart stackOut_4_0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -94,27 +94,27 @@ final class nk extends kd {
         int var11Lifetime1;
         int var10Lifetime1Lifetime1;
         int var11Lifetime1Lifetime1;
-        var14 = SteelSentinels.field_G;
+        var14 = SteelSentinels.obfuscationControl;
         var7 = this.field_z + param5;
         if (param4 != 49) {
           this.k(14);
         }
         var8 = 0;
         boolean decompiledNaturalLoopExit0 = false;
-        while (!(decompiledNaturalLoopExit0 = (this.field_I.length <= var8))) {
-          this.field_I[var8].field_m = -this.field_I[var8].field_i + this.field_I[var8].field_n + (var7 - param0) - this.field_D;
-          this.field_I[var8].field_j = this.field_D + (this.field_I[var8].field_i + var7) + (this.field_I[var8].field_n + param0);
-          stackOut_4_0 = this.field_I[var8].field_d;
+        while (!(decompiledNaturalLoopExit0 = (this.instructions.length <= var8))) {
+          this.instructions[var8].field_m = -this.instructions[var8].field_i + this.instructions[var8].field_n + (var7 - param0) - this.field_D;
+          this.instructions[var8].field_j = this.field_D + (this.instructions[var8].field_i + var7) + (this.instructions[var8].field_n + param0);
+          stackOut_4_0 = this.instructions[var8].attachedPart;
           stackIn_11_0Lifetime1 = stackOut_4_0;
           stackIn_5_0 = stackOut_4_0;
           if (var14 == 0) {
             if (stackIn_5_0 != null &&
-              this.field_I[var8].field_u) {
+              this.instructions[var8].field_u) {
               var9 = 16 * jh.a(8192 * -var7 / 65536, 4096) / 65536;
               var10 = 16 * kg.a(8192 * -var7 / 65536, (byte) -74) / 65536;
-              var11 = (hj.field_w * ((this.field_I[var8].field_r - this.field_E) * var9 + (this.field_I[var8].field_s - this.field_G) * var10) >> 16) + param2;
-              var12 = param3 + ((-(var9 * (this.field_I[var8].field_s - this.field_G)) + var10 * (-this.field_E + this.field_I[var8].field_r)) * hj.field_w >> 16);
-              var13 = var7 + this.field_I[var8].field_n;
+              var11 = (hj.field_w * ((this.instructions[var8].field_r - this.field_E) * var9 + (this.instructions[var8].field_s - this.field_G) * var10) >> 16) + param2;
+              var12 = param3 + ((-(var9 * (this.instructions[var8].field_s - this.field_G)) + var10 * (-this.field_E + this.instructions[var8].field_r)) * hj.field_w >> 16);
+              var13 = var7 + this.instructions[var8].field_n;
               this.a((byte) -101, param1, var13, var8, var11, param0, var12);
             }
             var8++;
@@ -125,8 +125,8 @@ final class nk extends kd {
         if (decompiledNaturalLoopExit0) {
           stackIn_11_0 = this;
         }
-        if (this.field_R != null) {
-          this.field_R.a(this.field_G << 4, this.field_E << 4, param2 << 4, param3 << 4, -var7, hj.field_w);
+        if (this.sprite != null) {
+          this.sprite.a(this.field_G << 4, this.field_E << 4, param2 << 4, param3 << 4, -var7, hj.field_w);
         }
         if (param1) {
           this.field_K = var7 - param0 - this.field_D;
@@ -147,38 +147,38 @@ final class nk extends kd {
         }
         var15 = 0;
         var9Lifetime1 = var15;
-        while (var15 < this.field_I.length) {
+        while (var15 < this.instructions.length) {
           if (var14 == 0) {
-            if (this.field_I[var15].field_q != -1 ||
-              null != this.field_I[var15].field_d) {
+            if (this.instructions[var15].field_q != -1 ||
+              null != this.instructions[var15].attachedPart) {
               var10Lifetime1 = jh.a(8192 * -var7 / 65536, param4 + 4047) * 16 / 65536;
               var11Lifetime1 = 16 * kg.a(-var7 * 8192 / 65536, (byte) -82) / 65536;
-              this.field_I[var15].field_k = (((-this.field_G + this.field_I[var15].field_s) * var11Lifetime1 + var10Lifetime1 * (-this.field_E + this.field_I[var15].field_r)) * hj.field_w >> 16) + param2;
-              this.field_I[var15].field_l = ((var11Lifetime1 * (this.field_I[var15].field_r - this.field_E) - var10Lifetime1 * (-this.field_G + this.field_I[var15].field_s)) * hj.field_w >> 16) + param3;
-              this.field_I[var15].field_f = var7 + this.field_I[var15].field_n;
-              if (this.field_I[var15].field_d == null ||
-                this.field_I[var15].field_u) {
-                if (this.field_I[var15].field_d == null &&
-                  this.field_I[var15].field_q != -1 &&
+              this.instructions[var15].field_k = (((-this.field_G + this.instructions[var15].field_s) * var11Lifetime1 + var10Lifetime1 * (-this.field_E + this.instructions[var15].field_r)) * hj.field_w >> 16) + param2;
+              this.instructions[var15].field_l = ((var11Lifetime1 * (this.instructions[var15].field_r - this.field_E) - var10Lifetime1 * (-this.field_G + this.instructions[var15].field_s)) * hj.field_w >> 16) + param3;
+              this.instructions[var15].field_f = var7 + this.instructions[var15].field_n;
+              if (this.instructions[var15].attachedPart == null ||
+                this.instructions[var15].field_u) {
+                if (this.instructions[var15].attachedPart == null &&
+                  this.instructions[var15].field_q != -1 &&
                   param1 &&
-                  1024 != this.field_I[var15].field_q) {
-                  if (nj.field_V > -var8Lifetime1 + this.field_I[var15].field_k) {
-                    nj.field_V = this.field_I[var15].field_k - var8Lifetime1;
+                  1024 != this.instructions[var15].field_q) {
+                  if (nj.field_V > -var8Lifetime1 + this.instructions[var15].field_k) {
+                    nj.field_V = this.instructions[var15].field_k - var8Lifetime1;
                   }
-                  if (this.field_I[var15].field_k + var8Lifetime1 > en.field_d) {
-                    en.field_d = this.field_I[var15].field_k + var8Lifetime1;
+                  if (this.instructions[var15].field_k + var8Lifetime1 > en.field_d) {
+                    en.field_d = this.instructions[var15].field_k + var8Lifetime1;
                   }
-                  if (-var8Lifetime1 + this.field_I[var15].field_l < ti.field_y) {
-                    ti.field_y = this.field_I[var15].field_l - var8Lifetime1;
+                  if (-var8Lifetime1 + this.instructions[var15].field_l < ti.field_y) {
+                    ti.field_y = this.instructions[var15].field_l - var8Lifetime1;
                   }
-                  if (lh.field_t < this.field_I[var15].field_l + var8Lifetime1) {
-                    lh.field_t = this.field_I[var15].field_l + var8Lifetime1;
+                  if (lh.field_t < this.instructions[var15].field_l + var8Lifetime1) {
+                    lh.field_t = this.instructions[var15].field_l + var8Lifetime1;
                   }
-                  var10Lifetime1Lifetime1 = jh.a(this.field_I[var15].field_f * 8192 / 65536, 4096) * 16 / 65536;
-                  var11Lifetime1Lifetime1 = kg.a(this.field_I[var15].field_f * 8192 / 65536, (byte) -68) * 16 / 65536;
+                  var10Lifetime1Lifetime1 = jh.a(this.instructions[var15].field_f * 8192 / 65536, 4096) * 16 / 65536;
+                  var11Lifetime1Lifetime1 = kg.a(this.instructions[var15].field_f * 8192 / 65536, (byte) -68) * 16 / 65536;
                 }
               } else {
-                this.a((byte) -69, param1, this.field_I[var15].field_f, var15, this.field_I[var15].field_k, param0, this.field_I[var15].field_l);
+                this.a((byte) -69, param1, this.instructions[var15].field_f, var15, this.instructions[var15].field_k, param0, this.instructions[var15].field_l);
               }
             }
             var15++;
@@ -189,9 +189,9 @@ final class nk extends kd {
         return;
     }
 
-    final nk[] a(int param0, mb param1, nk[] param2, int param3, int param4) {
+    final ArticulatedPart[] a(int param0, Sentinel param1, ArticulatedPart[] param2, int param3, int param4) {
         int stackIn_21_0 = 0;
-        nk[] stackIn_36_0 = null;
+        ArticulatedPart[] stackIn_36_0 = null;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         String stackIn_40_2 = null;
@@ -200,28 +200,28 @@ final class nk extends kd {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
-        nk[] var7 = null;
+        ArticulatedPart[] var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var6_intLifetime1;
-        var9 = SteelSentinels.field_G;
+        var9 = SteelSentinels.obfuscationControl;
         try {
           if (param0 != 0) {
-            this.field_R = (gk) null;
+            this.sprite = (IndexedSprite) null;
           }
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
-          if (param4 != ja.a(this.field_N, false) ||
+          if (param4 != ja.a(this.componentId, false) ||
             this.field_Q <= 0 ||
             this.field_C > 0) {
             var6_int = 0;
-            while (this.field_I.length > var6_int) {
+            while (this.instructions.length > var6_int) {
               if (var9 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              if (this.field_I[var6_int].field_d != null) {
-                param2 = this.field_I[var6_int].field_d.a(param0 + 0, param1, param2, param3, param4);
+              if (this.instructions[var6_int].attachedPart != null) {
+                param2 = this.instructions[var6_int].attachedPart.a(param0 + 0, param1, param2, param3, param4);
               }
               var6_int++;
             }
@@ -239,12 +239,12 @@ final class nk extends kd {
             var6_intLifetime1 = stackIn_21_0;
             if (var6_intLifetime1 != 0 &&
               param1.field_Lb &&
-              bi.b(105, this.field_N) &&
-              !param1.i(31, param0 - 27)) {
+              bi.b(105, this.componentId) &&
+              !param1.hasModuleType(31, param0 - 27)) {
               var6_intLifetime1 = 0;
             }
             if (var6_intLifetime1 != 0) {
-              var7 = new nk[param2.length + 1];
+              var7 = new ArticulatedPart[param2.length + 1];
               var8 = 0;
               while (true) {
                 if (param2.length > var8) {
@@ -261,7 +261,7 @@ final class nk extends kd {
               param2 = var7;
             }
           }
-          stackIn_36_0 = (nk[]) (param2);
+          stackIn_36_0 = (ArticulatedPart[]) (param2);
           return stackIn_36_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -288,51 +288,51 @@ final class nk extends kd {
         int var3;
         int var4;
         int stackIn_4_0 = 0;
-        nk stackIn_7_0 = null;
+        ArticulatedPart stackIn_7_0 = null;
         Object stackIn_12_0 = null;
-        nk stackOut_6_0;
-        var4 = SteelSentinels.field_G;
-        if (this.field_N >= 0 &&
-          this.field_N < tc.field_B.length) {
-          stackIn_4_0 = tc.field_B[this.field_N];
+        ArticulatedPart stackOut_6_0;
+        var4 = SteelSentinels.obfuscationControl;
+        if (this.componentId >= 0 &&
+          this.componentId < tc.field_B.length) {
+          stackIn_4_0 = tc.field_B[this.componentId];
         } else {
           stackIn_4_0 = 0;
         }
         var2 = stackIn_4_0;
         var3 = 0;
-        L3: while (true) {
-          if (var3 < this.field_I.length) {
-            stackOut_6_0 = this.field_I[var3].field_d;
+        scanLoop1: while (true) {
+          if (var3 < this.instructions.length) {
+            stackOut_6_0 = this.instructions[var3].attachedPart;
             stackIn_12_0 = stackOut_6_0;
             stackIn_7_0 = stackOut_6_0;
             if (var4 == 0) {
               if (stackIn_7_0 != null) {
-                var2 = var2 + this.field_I[var3].field_d.e((byte) -63);
+                var2 = var2 + this.instructions[var3].attachedPart.e((byte) -63);
               }
               var3++;
               continue;
             }
           } else {
             if (param0 < -50) {
-              break L3;
+              break scanLoop1;
             }
             stackIn_12_0 = this;
           }
-          ((nk) (stackIn_12_0)).field_U = (gk) null;
+          ((ArticulatedPart) (stackIn_12_0)).field_U = (IndexedSprite) null;
           break;
         }
         return var2;
     }
 
-    final int a(byte param0, qd param1) {
-        qd[] var3 = null;
+    final int a(byte param0, PartInstruction param1) {
+        PartInstruction[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        qd var5 = null;
-        nk var6 = null;
+        PartInstruction var5 = null;
+        ArticulatedPart var6 = null;
         int var7 = 0;
         int var8 = 0;
-        qd[] var9 = null;
+        PartInstruction[] var9 = null;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -340,21 +340,21 @@ final class nk extends kd {
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
-          var9 = this.field_I;
+          var9 = this.instructions;
           var3 = var9;
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4 >= var9.length))) {
             var5 = var9[var4];
-            var6 = var5.field_d;
+            var6 = var5.attachedPart;
             if (var8 == 0) {
               if (var6 != null) {
                 if (var5.field_s == param1.field_s &&
                   var5.field_r == param1.field_r &&
                   var5.field_q == param1.field_q) {
-                  stackIn_11_0 = var6.field_N;
+                  stackIn_11_0 = var6.componentId;
                   return stackIn_11_0;
                 }
                 var7 = var6.a((byte) 2, param1);
@@ -388,27 +388,27 @@ final class nk extends kd {
         }
     }
 
-    final int g(int param0) {
+    final int getTotalArmour(int obfuscationGuard) {
         int var2;
         int var3;
         int var4;
         String var5;
         int stackIn_10_0 = 0;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         var2 = 0;
-        if (param0 != 8192) {
+        if (obfuscationGuard != 8192) {
           var5 = (String) null;
           this.a(-87, (String) null);
         }
         var3 = 0;
-        while (this.field_I.length > var3) {
-          stackIn_10_0 = var2 + this.field_I[var3].field_e;
+        while (this.instructions.length > var3) {
+          stackIn_10_0 = var2 + this.instructions[var3].armourContribution;
           if (var4 != 0) {
             return stackIn_10_0;
           }
           var2 = stackIn_10_0;
-          if (this.field_I[var3].field_d != null) {
-            var2 = var2 + this.field_I[var3].field_d.g(param0 ^ 0);
+          if (this.instructions[var3].attachedPart != null) {
+            var2 = var2 + this.instructions[var3].attachedPart.getTotalArmour(obfuscationGuard ^ 0);
           }
           var3++;
         }
@@ -420,17 +420,17 @@ final class nk extends kd {
         int var3;
         int var4;
         int stackIn_7_0 = 0;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         var2 = 0;
         var3 = param0;
-        while (this.field_I.length > var3) {
-          stackIn_7_0 = var2 + this.field_I[var3].field_w;
+        while (this.instructions.length > var3) {
+          stackIn_7_0 = var2 + this.instructions[var3].field_w;
           if (var4 != 0) {
             return stackIn_7_0;
           }
           var2 = stackIn_7_0;
-          if (this.field_I[var3].field_d != null) {
-            var2 = var2 + this.field_I[var3].field_d.j(param0 ^ 0);
+          if (this.instructions[var3].attachedPart != null) {
+            var2 = var2 + this.instructions[var3].attachedPart.j(param0 ^ 0);
           }
           var3++;
         }
@@ -440,10 +440,10 @@ final class nk extends kd {
     final void a(byte param0, int param1, int param2, int param3) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        nk stackIn_9_1 = null;
+        ArticulatedPart stackIn_9_1 = null;
         Object stackIn_27_0 = null;
         Object stackIn_27_1 = null;
-        nk stackOut_8_1;
+        ArticulatedPart stackOut_8_1;
         int var5;
         int var6;
         int var7;
@@ -459,7 +459,7 @@ final class nk extends kd {
         int var10Lifetime1;
         int var11Lifetime1;
         int var12Lifetime1;
-        var13 = SteelSentinels.field_G;
+        var13 = SteelSentinels.obfuscationControl;
         if (!this.field_L) {
           stackIn_3_0 = hj.field_w << 2;
         } else {
@@ -468,32 +468,32 @@ final class nk extends kd {
         var5 = stackIn_3_0;
         stackIn_6_0 = (!this.field_L) ? 2 : 4;
         var6 = stackIn_6_0;
-        var7 = this.field_y;
+        var7 = this.rotation;
         var8 = 0;
-        L3: while (true) {
+        scanLoop1: while (true) {
           boolean decompiledFrameRemainder0 = true;
-          if (var8 < this.field_I.length) {
+          if (var8 < this.instructions.length) {
             stackIn_27_0 = null;
-            stackOut_8_1 = this.field_I[var8].field_d;
+            stackOut_8_1 = this.instructions[var8].attachedPart;
             stackIn_27_1 = stackOut_8_1;
             stackIn_9_1 = stackOut_8_1;
             if (var13 == 0) {
               if (stackIn_27_0 != stackIn_9_1 &&
-                this.field_I[var8].field_u) {
+                this.instructions[var8].field_u) {
                 var9 = jh.a(-var7 / 8, 4096) / 256;
                 var10 = kg.a(-var7 / 8, (byte) -103) / 256;
-                var11 = param3 * (hj.field_w * ((this.field_I[var8].field_r - this.field_E) * var9 + (this.field_I[var8].field_s - this.field_G) * var10) >> 20) + param1;
-                var12 = ((-((this.field_I[var8].field_s - this.field_G) * var9) + (-this.field_E + this.field_I[var8].field_r) * var10) * hj.field_w >> 20) + param2;
-                this.field_I[var8].field_d.a((byte) 122, var11, var12, param3);
+                var11 = param3 * (hj.field_w * ((this.instructions[var8].field_r - this.field_E) * var9 + (this.instructions[var8].field_s - this.field_G) * var10) >> 20) + param1;
+                var12 = ((-((this.instructions[var8].field_s - this.field_G) * var9) + (-this.field_E + this.instructions[var8].field_r) * var10) * hj.field_w >> 20) + param2;
+                this.instructions[var8].attachedPart.a((byte) 122, var11, var12, param3);
               }
               var8++;
               continue;
             }
           } else {
             if (param0 < 97) {
-              this.field_H = (gk) null;
+              this.field_H = (IndexedSprite) null;
             }
-            decompiledFrameRemainder0 = (this.field_N != 108 ||
+            decompiledFrameRemainder0 = (this.componentId != 108 ||
               !(vi.field_db));
             if (decompiledFrameRemainder0) {
               if (param3 == 1 &&
@@ -501,15 +501,15 @@ final class nk extends kd {
                 if (0 >= this.field_C) {
                   this.field_U.a(this.field_G << var6, this.field_E << var6, param1 << 4, param2 << 4, -var7, var5);
                   if (var13 == 0) {
-                    break L3;
+                    break scanLoop1;
                   }
                 }
                 if (this.field_C > 50) {
-                  break L3;
+                  break scanLoop1;
                 }
                 this.field_U.a(this.field_G << var6, this.field_E << var6, param1 << 4, param2 << 4, -var7, (-this.field_C + 50) * var5 / 50);
                 if (var13 == 0) {
-                  break L3;
+                  break scanLoop1;
                 }
               }
               stackIn_27_0 = null;
@@ -517,27 +517,27 @@ final class nk extends kd {
             }
           }
           if (decompiledFrameRemainder0) {
-            if (stackIn_27_0 == ((nk) (stackIn_27_1)).field_H) {
-              break L3;
+            if (stackIn_27_0 == ((ArticulatedPart) (stackIn_27_1)).field_H) {
+              break scanLoop1;
             }
             if (0 < this.field_C) {
               if (this.field_C > 50) {
-                break L3;
+                break scanLoop1;
               }
               this.field_H.a(this.field_H.field_g * 4 - this.field_G << var6, this.field_E << var6, param1 << 4, param2 << 4, var7, (-this.field_C + 50) * var5 / 50);
               if (var13 == 0) {
-                break L3;
+                break scanLoop1;
               }
             }
             this.field_H.a(4 * this.field_H.field_g - this.field_G << var6, this.field_E << var6, param1 << 4, param2 << 4, var7, var5);
             if (var13 == 0) {
-              break L3;
+              break scanLoop1;
             }
           }
           if (this.field_C <= 0) {
             this.field_U.a(140 << var6, 130 << var6, param1 << 4, param2 << 4, -var7, var5);
             if (var13 == 0) {
-              break L3;
+              break scanLoop1;
             }
           }
           if (50 >= this.field_C) {
@@ -547,15 +547,15 @@ final class nk extends kd {
         }
         var14 = 0;
         var8Lifetime1 = var14;
-        while (var14 < this.field_I.length) {
+        while (var14 < this.instructions.length) {
           if (var13 == 0) {
-            if (null != this.field_I[var14].field_d &&
-              !this.field_I[var14].field_u) {
+            if (null != this.instructions[var14].attachedPart &&
+              !this.instructions[var14].field_u) {
               var9Lifetime1 = jh.a(-var7 / 8, 4096) / 256;
               var10Lifetime1 = kg.a(-var7 / 8, (byte) -71) / 256;
-              var11Lifetime1 = param3 * (hj.field_w * ((this.field_I[var14].field_r - this.field_E) * var9Lifetime1 + var10Lifetime1 * (-this.field_G + this.field_I[var14].field_s)) >> 20) + param1;
-              var12Lifetime1 = param2 + (hj.field_w * ((this.field_I[var14].field_r - this.field_E) * var10Lifetime1 - var9Lifetime1 * (-this.field_G + this.field_I[var14].field_s)) >> 20);
-              this.field_I[var14].field_d.a((byte) 101, var11Lifetime1, var12Lifetime1, param3);
+              var11Lifetime1 = param3 * (hj.field_w * ((this.instructions[var14].field_r - this.field_E) * var9Lifetime1 + var10Lifetime1 * (-this.field_G + this.instructions[var14].field_s)) >> 20) + param1;
+              var12Lifetime1 = param2 + (hj.field_w * ((this.instructions[var14].field_r - this.field_E) * var10Lifetime1 - var9Lifetime1 * (-this.field_G + this.instructions[var14].field_s)) >> 20);
+              this.instructions[var14].attachedPart.a((byte) 101, var11Lifetime1, var12Lifetime1, param3);
             }
             var14++;
             continue;
@@ -576,36 +576,36 @@ final class nk extends kd {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        nk var7 = null;
+        ArticulatedPart var7 = null;
         int var8 = 0;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           var5_int = param3;
-          while (this.field_I.length > var5_int) {
-            if (null == this.field_I[var5_int].field_d) {
-              if (-1 != this.field_I[var5_int].field_q) {
+          while (this.instructions.length > var5_int) {
+            if (null == this.instructions[var5_int].attachedPart) {
+              if (-1 != this.instructions[var5_int].field_q) {
                 var6 = param1[param0++];
                 if (var6 != -1) {
-                  var7 = ul.a(var6, (byte) 67);
+                  var7 = NodeDeque.a(var6, (byte) 67);
                   if (var7 == null) {
                     dh.a(db.a("Component Id not valid ID=<%0> data_pos=<%1>", -61, new String[]{Integer.toString(var6), Integer.toString(-1 + param0)}), (byte) 118);
                     stackIn_10_0 = param0;
                     return stackIn_10_0;
                   }
-                  if ((var7.field_Q & this.field_I[var5_int].field_q) == 0) {
-                    dh.a(db.a("Component not correct id=<%0> type=<%0> desired=<%1>", -71, new String[]{Integer.toString(var6), Integer.toString(var7.field_Q), Integer.toString(this.field_I[var5_int].field_q)}), (byte) 124);
+                  if ((var7.field_Q & this.instructions[var5_int].field_q) == 0) {
+                    dh.a(db.a("Component not correct id=<%0> type=<%0> desired=<%1>", -71, new String[]{Integer.toString(var6), Integer.toString(var7.field_Q), Integer.toString(this.instructions[var5_int].field_q)}), (byte) 124);
                     stackIn_13_0 = param0;
                     return stackIn_13_0;
                   }
-                  this.field_I[var5_int].field_d = new nk(var7, param2);
-                  param0 = this.field_I[var5_int].field_d.a(param0, param1, param2, 0);
+                  this.instructions[var5_int].attachedPart = new ArticulatedPart(var7, param2);
+                  param0 = this.instructions[var5_int].attachedPart.a(param0, param1, param2, 0);
                 }
                 if (var8 != 0) {
-                  param0 = this.field_I[var5_int].field_d.a(param0, param1, param2, 0);
+                  param0 = this.instructions[var5_int].attachedPart.a(param0, param1, param2, 0);
                 }
               }
             } else {
-              param0 = this.field_I[var5_int].field_d.a(param0, param1, param2, 0);
+              param0 = this.instructions[var5_int].attachedPart.a(param0, param1, param2, 0);
             }
             var5_int++;
             if (var8 == 0) {
@@ -645,14 +645,14 @@ final class nk extends kd {
         int var3;
         int var4;
         int var3Lifetime1;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         var3 = 0;
-        while (var3 < this.field_I.length) {
+        while (var3 < this.instructions.length) {
           if (var4 != 0) {
             return;
           }
-          if (null != this.field_I[var3].field_d) {
-            this.field_I[var3].field_d.b(param0, -107);
+          if (null != this.instructions[var3].attachedPart) {
+            this.instructions[var3].attachedPart.b(param0, -107);
           }
           var3++;
         }
@@ -667,21 +667,21 @@ final class nk extends kd {
         int var8;
         int var9;
         int var10;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         this.field_T = param1;
         this.field_V = param3;
         if (param0 != -128) {
-          this.l(35);
+          this.getPartName(35);
         }
         var5 = 0;
-        while (var5 < this.field_I.length) {
+        while (var5 < this.instructions.length) {
           if (var10 == 0) {
-            if (null != this.field_I[var5].field_d) {
-              var6 = 32 * jh.a(-this.field_y * 8192 / 65536, 4096) / 65536;
-              var7 = kg.a(-this.field_y * 8192 / 65536, (byte) -68) * 32 / 65536;
-              var8 = param1 + ((-this.field_E + this.field_I[var5].field_r) * var6 + var7 * (this.field_I[var5].field_s - this.field_G)) * param2;
-              var9 = param3 + (-this.field_E + this.field_I[var5].field_r) * var7 - var6 * (this.field_I[var5].field_s - this.field_G);
-              this.field_I[var5].field_d.b((byte) -128, var8, param2, var9);
+            if (null != this.instructions[var5].attachedPart) {
+              var6 = 32 * jh.a(-this.rotation * 8192 / 65536, 4096) / 65536;
+              var7 = kg.a(-this.rotation * 8192 / 65536, (byte) -68) * 32 / 65536;
+              var8 = param1 + ((-this.field_E + this.instructions[var5].field_r) * var6 + var7 * (this.instructions[var5].field_s - this.field_G)) * param2;
+              var9 = param3 + (-this.field_E + this.instructions[var5].field_r) * var7 - var6 * (this.instructions[var5].field_s - this.field_G);
+              this.instructions[var5].attachedPart.b((byte) -128, var8, param2, var9);
             }
             var5++;
             continue;
@@ -690,7 +690,7 @@ final class nk extends kd {
         }
     }
 
-    private final void a(int param0, boolean param1, nk param2) {
+    private final void a(int param0, boolean param1, ArticulatedPart param2) {
         boolean stackIn_4_1 = false;
         int stackIn_24_0 = 0;
         RuntimeException stackIn_35_0 = null;
@@ -702,28 +702,28 @@ final class nk extends kd {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        wk var9 = null;
-        wk var10 = null;
+        RgbSprite var9 = null;
+        RgbSprite var10 = null;
         int[] var12 = null;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           stackIn_4_1 = (param1);
           boolean decompiledFrameCompleted0 = true;
           this.field_L = stackIn_4_1;
           if (param1) {
-            this.field_R = param2.field_R;
+            this.sprite = param2.sprite;
           }
           if (!param1 ||
             var8 != 0) {
             if (param2.field_U == null &&
-              param2.field_R != null) {
-              var9 = new wk(param2.field_R.field_g >> 2, param2.field_R.field_d >> 2);
+              param2.sprite != null) {
+              var9 = new RgbSprite(param2.sprite.field_g >> 2, param2.sprite.field_d >> 2);
               var10 = var9;
-              var12 = pb.field_g;
+              var12 = SoftwareRaster.field_g;
               var10.d();
-              param2.field_R.b(0, 0);
-              pb.a(var12, 640, 480);
-              param2.field_U = new gk(var10.field_z, var10.field_B, 129);
+              param2.sprite.b(0, 0);
+              SoftwareRaster.a(var12, 640, 480);
+              param2.field_U = new IndexedSprite(var10.field_z, var10.field_B, 129);
               var6 = var10.field_E.length - 1;
               while (var6 >= 0) {
                 var7 = var9.field_E[var6];
@@ -749,7 +749,7 @@ final class nk extends kd {
             }
             if (decompiledFrameCompleted0) {
               this.field_U = param2.field_U;
-              this.field_R = param2.field_R;
+              this.sprite = param2.sprite;
               this.field_H = param2.field_H;
             }
           }
@@ -759,23 +759,23 @@ final class nk extends kd {
             this.field_Q = param2.field_Q;
             this.field_z = param2.field_z;
             this.field_E = param2.field_E;
-            this.field_N = param2.field_N;
-            this.field_I = new qd[param2.field_I.length];
+            this.componentId = param2.componentId;
+            this.instructions = new PartInstruction[param2.instructions.length];
             stackIn_24_0 = param0;
           }
           if (stackIn_24_0 != -353384856) {
             this.a(41, (byte) 107);
           }
           var4_int = 0;
-          while (var4_int < this.field_I.length) {
-            this.field_I[var4_int] = new qd(param2.field_I[var4_int], param1);
+          while (var4_int < this.instructions.length) {
+            this.instructions[var4_int] = new PartInstruction(param2.instructions[var4_int], param1);
             var4_int++;
             if (var8 != 0) {
               return;
             }
           }
           this.field_K = param2.field_K;
-          this.field_y = param2.field_y;
+          this.rotation = param2.rotation;
           this.field_W = param2.field_W;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -796,7 +796,7 @@ final class nk extends kd {
         if (param0 > -63) {
           return;
         }
-        this.field_I[param3].field_d.a(this.field_D + param5 + this.field_I[param3].field_i, param1, param4, param6, (byte) 49, param2);
+        this.instructions[param3].attachedPart.a(this.field_D + param5 + this.instructions[param3].field_i, param1, param4, param6, (byte) 49, param2);
     }
 
     final void d(int param0, int param1) {
@@ -804,7 +804,7 @@ final class nk extends kd {
         gl.field_p = -1;
         si.field_t = 0;
         if (param0 != 65536) {
-          this.field_y = 13;
+          this.rotation = 13;
         }
         this.e(param1, 5307);
     }
@@ -816,7 +816,7 @@ final class nk extends kd {
             this.field_Q == 128) {
             if (this.field_C > 75) {
               this.field_C = 75;
-              if (SteelSentinels.field_G != 0 && (param1 &&
+              if (SteelSentinels.obfuscationControl != 0 && (param1 &&
                 this.field_C > 0)) {
                 this.field_C = this.field_C - 1;
               }
@@ -833,9 +833,9 @@ final class nk extends kd {
         }
     }
 
-    final nk[] k(int param0) {
+    final ArticulatedPart[] k(int param0) {
         int var2 = 66 / ((29 - param0) / 57);
-        nk[] var3 = new nk[]{};
+        ArticulatedPart[] var3 = new ArticulatedPart[]{};
         return this.a(var3, 3);
     }
 
@@ -844,20 +844,20 @@ final class nk extends kd {
         int var3;
         int var4;
         int stackIn_9_0 = 0;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         if (param0 >= -104) {
           return 21;
         }
         var2 = 0;
         var3 = 0;
-        while (this.field_I.length > var3) {
-          stackIn_9_0 = var2 + this.field_I[var3].field_p;
+        while (this.instructions.length > var3) {
+          stackIn_9_0 = var2 + this.instructions[var3].field_p;
           if (var4 != 0) {
             return stackIn_9_0;
           }
           var2 = stackIn_9_0;
-          if (null != this.field_I[var3].field_d) {
-            var2 = var2 + this.field_I[var3].field_d.i(-116);
+          if (null != this.instructions[var3].attachedPart) {
+            var2 = var2 + this.instructions[var3].attachedPart.i(-116);
           }
           var3++;
         }
@@ -869,52 +869,52 @@ final class nk extends kd {
         int var3;
         int var4;
         int stackIn_9_0 = 0;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         var2 = 0;
         var3 = 0;
         if (param0 != -31496) {
           return 18;
         }
-        while (var3 < this.field_I.length) {
-          stackIn_9_0 = var2 + this.field_I[var3].field_b;
+        while (var3 < this.instructions.length) {
+          stackIn_9_0 = var2 + this.instructions[var3].field_b;
           if (var4 != 0) {
             return stackIn_9_0;
           }
           var2 = stackIn_9_0;
-          if (this.field_I[var3].field_d != null) {
-            var2 = var2 + this.field_I[var3].field_d.h(-31496);
+          if (this.instructions[var3].attachedPart != null) {
+            var2 = var2 + this.instructions[var3].attachedPart.h(-31496);
           }
           var3++;
         }
         return var2;
     }
 
-    final qd c(int param0, int param1) {
+    final PartInstruction c(int param0, int param1) {
         int var3 = 0;
-        qd var4 = null;
+        PartInstruction var4 = null;
         int var5 = 0;
         Object stackIn_14_0 = null;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         var3 = param0;
         while (true) {
-          if (this.field_I.length <= var3) {
+          if (this.instructions.length <= var3) {
             return null;
           }
           stackIn_14_0 = null;
           if (var5 != 0) {
-            return (qd) (stackIn_14_0);
+            return (PartInstruction) (stackIn_14_0);
           }
-          if (stackIn_14_0 != this.field_I[var3].field_d) {
-            if (this.field_I[var3].field_d.field_Q == 1024) {
-              return this.field_I[var3];
+          if (stackIn_14_0 != this.instructions[var3].attachedPart) {
+            if (this.instructions[var3].attachedPart.field_Q == 1024) {
+              return this.instructions[var3];
             }
-            var4 = this.field_I[var3].field_d.c(0, param1);
+            var4 = this.instructions[var3].attachedPart.c(0, param1);
             if (var4 != null) {
               return var4;
             }
           } else {
-            if (1024 == this.field_I[var3].field_q) {
-              return this.field_I[var3];
+            if (1024 == this.instructions[var3].field_q) {
+              return this.instructions[var3];
             }
           }
           var3++;
@@ -925,18 +925,18 @@ final class nk extends kd {
         int var3;
         int var4;
         int stackIn_12_0 = 0;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         var3 = 0;
         boolean decompiledNaturalLoopExit0 = false;
-        while (!(decompiledNaturalLoopExit0 = (var3 >= this.field_I.length))) {
-          stackIn_12_0 = this.field_I[var3].field_q & param0;
+        while (!(decompiledNaturalLoopExit0 = (var3 >= this.instructions.length))) {
+          stackIn_12_0 = this.instructions[var3].field_q & param0;
           if (var4 == 0) {
             if (stackIn_12_0 > 0 &&
-              this.field_I[var3].field_q != -1) {
+              this.instructions[var3].field_q != -1) {
               return true;
             }
-            if (null != this.field_I[var3].field_d &&
-              this.field_I[var3].field_d.f(param0, -1)) {
+            if (null != this.instructions[var3].attachedPart &&
+              this.instructions[var3].attachedPart.f(param0, -1)) {
               return true;
             }
             var3++;
@@ -950,7 +950,7 @@ final class nk extends kd {
         if (stackIn_12_0 == -1) {
           return false;
         }
-        this.l(127);
+        this.getPartName(127);
         return false;
     }
 
@@ -965,26 +965,26 @@ final class nk extends kd {
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
-          if (param0 != ~this.field_N) {
+          if (param0 != ~this.componentId) {
             incrementValue$2 = param2;
             param2++;
-            param1[incrementValue$2] = this.field_N;
+            param1[incrementValue$2] = this.componentId;
           }
           var4_int = 0;
-          while (var4_int < this.field_I.length) {
-            if (null == this.field_I[var4_int].field_d) {
-              if (-1 != this.field_I[var4_int].field_q) {
+          while (var4_int < this.instructions.length) {
+            if (null == this.instructions[var4_int].attachedPart) {
+              if (-1 != this.instructions[var4_int].field_q) {
                 incrementValue$3 = param2;
                 param2++;
                 param1[incrementValue$3] = -1;
                 if (var5 != 0) {
-                  param2 = this.field_I[var4_int].field_d.a(0, param1, param2);
+                  param2 = this.instructions[var4_int].attachedPart.a(0, param1, param2);
                 }
               }
             } else {
-              param2 = this.field_I[var4_int].field_d.a(0, param1, param2);
+              param2 = this.instructions[var4_int].attachedPart.a(0, param1, param2);
             }
             var4_int++;
             if (var5 == 0) {
@@ -1008,24 +1008,24 @@ final class nk extends kd {
         }
     }
 
-    final String l(int param0) {
-        int var3 = SteelSentinels.field_G;
-        if (this.field_N >= 0 &&
-          !(t.field_e.length <= this.field_N) &&
-          t.field_e[this.field_N] != null) {
-          return t.field_e[this.field_N];
+    final String getPartName(int obfuscationGuard) {
+        int var3 = SteelSentinels.obfuscationControl;
+        if (this.componentId >= 0 &&
+          !(t.field_e.length <= this.componentId) &&
+          t.field_e[this.componentId] != null) {
+          return t.field_e[this.componentId];
         }
-        if (param0 != -24719) {
-          qd[] var4 = (qd[]) null;
-          this.a((qd[]) null, -66, -17);
+        if (obfuscationGuard != -24719) {
+          PartInstruction[] var4 = (PartInstruction[]) null;
+          this.a((PartInstruction[]) null, -66, -17);
         }
         int var2 = 0;
         do {
-          if (this.field_I.length <= var2) {
+          if (this.instructions.length <= var2) {
             return null;
           }
-          if (this.field_I[var2].field_v != null) {
-            return this.field_I[var2].field_v;
+          if (this.instructions[var2].partName != null) {
+            return this.instructions[var2].partName;
           }
           var2++;
         } while (var3 == 0);
@@ -1034,7 +1034,7 @@ final class nk extends kd {
 
     final int[] c(byte param0) {
         if (param0 != 125) {
-          this.field_N = -25;
+          this.componentId = -25;
         }
         int[] var3 = new int[]{};
         int[] var2 = var3;
@@ -1063,20 +1063,20 @@ final class nk extends kd {
         int[] var10 = null;
         int[] var11 = null;
         int var4Lifetime1;
-        var9 = SteelSentinels.field_G;
+        var9 = SteelSentinels.obfuscationControl;
         try {
           var3_int = 0;
           if ((1008 & this.field_Q) != 0 &&
-            83 != this.field_N) {
+            83 != this.componentId) {
             var3_int = 1;
           }
           var4 = 0;
           boolean decompiledNaturalLoopExit2 = false;
-          while (!(decompiledNaturalLoopExit2 = (var4 >= this.field_I.length))) {
+          while (!(decompiledNaturalLoopExit2 = (var4 >= this.instructions.length))) {
             if (var9 == 0) {
-              if (null != this.field_I[var4].field_d) {
+              if (null != this.instructions[var4].attachedPart) {
                 var3_int = 0;
-                param0 = this.field_I[var4].field_d.a(param0, 6793);
+                param0 = this.instructions[var4].attachedPart.a(param0, 6793);
               }
               var4++;
               continue;
@@ -1088,14 +1088,14 @@ final class nk extends kd {
             this.a((byte) -7, true, true);
           }
           if (var3_int != 0 &&
-            -1 != this.field_N) {
+            -1 != this.componentId) {
             var4Lifetime1 = param0.length;
             var5_int = 0;
             boolean decompiledNaturalLoopExit1 = false;
             while (!(decompiledNaturalLoopExit1 = (var5_int >= var4Lifetime1))) {
               stackIn_25_0 = (int[]) (param0);
               if (var9 == 0) {
-                if (stackIn_25_0[var5_int] == ja.a(this.field_N, false)) {
+                if (stackIn_25_0[var5_int] == ja.a(this.componentId, false)) {
                   stackIn_22_0 = (int[]) (param0);
                   return stackIn_22_0;
                 }
@@ -1111,7 +1111,7 @@ final class nk extends kd {
             var5 = var11;
             var10 = new int[var4Lifetime1 + 1];
             param0 = var10;
-            var6 = ja.a(this.field_N, false);
+            var6 = ja.a(this.componentId, false);
             var7 = 0;
             var8 = 0;
             boolean decompiledNaturalLoopExit0 = false;
@@ -1156,22 +1156,22 @@ final class nk extends kd {
         }
     }
 
-    final nk a(int param0, byte param1) {
-        nk var4 = null;
-        int var5 = SteelSentinels.field_G;
+    final ArticulatedPart a(int param0, byte param1) {
+        ArticulatedPart var4 = null;
+        int var5 = SteelSentinels.obfuscationControl;
         if (param1 > -29) {
-          this.g(-116);
+          this.getTotalArmour(-116);
         }
         int var3 = 0;
         do {
-          if (var3 >= this.field_I.length) {
+          if (var3 >= this.instructions.length) {
             return null;
           }
-          if (this.field_N == param0) {
+          if (this.componentId == param0) {
             return this;
           }
-          if (this.field_I[var3].field_d != null) {
-            var4 = this.field_I[var3].field_d.a(param0, (byte) -73);
+          if (this.instructions[var3].attachedPart != null) {
+            var4 = this.instructions[var3].attachedPart.a(param0, (byte) -73);
             if (var4 != null) {
               return var4;
             }
@@ -1181,7 +1181,7 @@ final class nk extends kd {
         return null;
     }
 
-    final static void a(byte param0, gi param1) {
+    final static void a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -1227,18 +1227,18 @@ final class nk extends kd {
         int var6;
         int var7;
         int var8;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         var5 = this.field_z + param0;
         this.field_K = this.field_z + param3 - this.field_D;
-        this.field_y = var5;
+        this.rotation = var5;
         this.field_W = param1 - (-this.field_D - this.field_z);
         var6 = param2;
-        while (var6 < this.field_I.length) {
+        while (var6 < this.instructions.length) {
           if (var8 == 0) {
-            if (this.field_I[var6].field_d != null) {
-              var7 = var5 + this.field_I[var6].field_n;
-              this.field_I[var6].field_d.field_S = this;
-              this.field_I[var6].field_d.a(var7, this.field_W + (this.field_I[var6].field_i + this.field_I[var6].field_n), param2 + 0, this.field_I[var6].field_n + (-this.field_I[var6].field_i + this.field_K));
+            if (this.instructions[var6].attachedPart != null) {
+              var7 = var5 + this.instructions[var6].field_n;
+              this.instructions[var6].attachedPart.field_S = this;
+              this.instructions[var6].attachedPart.a(var7, this.field_W + (this.instructions[var6].field_i + this.instructions[var6].field_n), param2 + 0, this.instructions[var6].field_n + (-this.instructions[var6].field_i + this.field_K));
             }
             var6++;
             continue;
@@ -1247,34 +1247,34 @@ final class nk extends kd {
         }
     }
 
-    final nk a(int param0, String param1) {
+    final ArticulatedPart a(int param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
-        nk var5 = null;
+        ArticulatedPart var5 = null;
         int var6 = 0;
-        nk stackIn_13_0 = null;
+        ArticulatedPart stackIn_13_0 = null;
         Object stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           var3_int = param0;
           while (true) {
-            if (var3_int >= this.field_I.length) {
+            if (var3_int >= this.instructions.length) {
               return null;
             }
-            var4 = this.field_I[var3_int].field_v;
+            var4 = this.instructions[var3_int].partName;
             stackIn_16_0 = null;
             if (var6 == 0) {
               if (stackIn_16_0 != var4 &&
                 var4.equals(param1)) {
                 return this;
               }
-              if (this.field_I[var3_int].field_d != null) {
-                var5 = this.field_I[var3_int].field_d.a(param0 + 0, param1);
+              if (this.instructions[var3_int].attachedPart != null) {
+                var5 = this.instructions[var3_int].attachedPart.a(param0 + 0, param1);
                 if (var5 != null) {
                   stackIn_13_0 = var5;
                   return stackIn_13_0;
@@ -1285,7 +1285,7 @@ final class nk extends kd {
             }
             break;
           }
-          return (nk) (stackIn_16_0);
+          return (ArticulatedPart) (stackIn_16_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -1310,7 +1310,7 @@ final class nk extends kd {
         int var3 = 0;
         String var4 = null;
         int var5 = 0;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           var2 = null;
           if (null != param1.field_d) {
@@ -1346,8 +1346,8 @@ final class nk extends kd {
               var4 = "[" + db.a(pd.field_ab, -102, new String[]{param1.field_s}) + "] ";
             }
             if (4 == param1.field_k &&
-              qd.field_a != null) {
-              var4 = "[" + qd.field_a + "] ";
+              PartInstruction.field_a != null) {
+              var4 = "[" + PartInstruction.field_a + "] ";
             }
             if (param1.field_k == 3) {
               var4 = "[#" + param1.field_s + "] ";
@@ -1372,20 +1372,20 @@ final class nk extends kd {
         }
     }
 
-    private final nk[] a(nk[] param0, int param1) {
+    private final ArticulatedPart[] a(ArticulatedPart[] param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        nk[] var5 = null;
+        ArticulatedPart[] var5 = null;
         int var6 = 0;
         int var7 = 0;
-        nk[] var8 = null;
-        nk[] stackIn_20_0 = null;
+        ArticulatedPart[] var8 = null;
+        ArticulatedPart[] stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           var3_int = 0;
           if ((this.field_Q & 1008) != 0) {
@@ -1395,29 +1395,29 @@ final class nk extends kd {
             field_B = true;
           }
           var4 = 0;
-          L3: while (true) {
-            if (var4 < this.field_I.length) {
+          scanLoop1: while (true) {
+            if (var4 < this.instructions.length) {
               if (var7 == 0) {
-                if (this.field_I[var4].field_d != null) {
+                if (this.instructions[var4].attachedPart != null) {
                   var3_int = 0;
-                  param0 = this.field_I[var4].field_d.a(param0, 3);
+                  param0 = this.instructions[var4].attachedPart.a(param0, 3);
                 }
                 var4++;
                 continue;
               }
             } else {
               if (var3_int != 0 &&
-                this.field_N != -1) {
+                this.componentId != -1) {
                 var4 = param0.length;
                 var5 = param0;
-                var8 = new nk[1 + var4];
+                var8 = new ArticulatedPart[1 + var4];
                 param0 = var8;
                 var6 = 0;
                 while (var4 > var6) {
                   var8[var6] = var5[var6];
                   var6++;
                   if (var7 != 0) {
-                    break L3;
+                    break scanLoop1;
                   }
                 }
                 var8[var4] = this;
@@ -1425,7 +1425,7 @@ final class nk extends kd {
             }
             break;
           }
-          stackIn_20_0 = (nk[]) (param0);
+          stackIn_20_0 = (ArticulatedPart[]) (param0);
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1442,17 +1442,17 @@ final class nk extends kd {
     }
 
     final void a(int param0, int param1, int param2) {
-        nk var4_ref_nk;
+        ArticulatedPart var4_ref_nk;
         int var4;
         int var5;
-        var5 = SteelSentinels.field_G;
-        this.field_y = (this.field_K + 8 * this.field_y + this.field_W) / 10;
+        var5 = SteelSentinels.obfuscationControl;
+        this.rotation = (this.field_K + 8 * this.rotation + this.field_W) / 10;
         if (param1 > -82) {
           return;
         }
         boolean decompiledFrameCompleted0 = true;
         boolean decompiledFrameRemainder0 = true;
-        if (ja.a(this.field_N, false) == param2 &&
+        if (ja.a(this.componentId, false) == param2 &&
           this.field_C <= 0) {
           if (param0 >= this.field_K &&
             this.field_W >= param0) {
@@ -1472,7 +1472,7 @@ final class nk extends kd {
               sl.field_i = this.field_K;
               ic.field_P = this.field_W;
             }
-            this.field_y = param0;
+            this.rotation = param0;
             var4_ref_nk = this.field_S;
             while (var4_ref_nk != null) {
               if (var5 != 0) {
@@ -1480,7 +1480,7 @@ final class nk extends kd {
                 break;
               }
               if (0 < -this.field_K + this.field_W) {
-                var4_ref_nk.field_y = var4_ref_nk.field_K + (-var4_ref_nk.field_K + var4_ref_nk.field_W) * (-this.field_K + param0) / (-this.field_K + this.field_W);
+                var4_ref_nk.rotation = var4_ref_nk.field_K + (-var4_ref_nk.field_K + var4_ref_nk.field_W) * (-this.field_K + param0) / (-this.field_K + this.field_W);
               }
               var4_ref_nk = var4_ref_nk.field_S;
             }
@@ -1509,7 +1509,7 @@ final class nk extends kd {
             }
             decompiledFrameRemainder0 = (this.field_S != null);
             if (decompiledFrameRemainder0) {
-              this.field_y = this.field_S.field_y - (this.field_S.field_K + this.field_S.field_W) / 2 + (this.field_W + this.field_K) / 2;
+              this.rotation = this.field_S.rotation - (this.field_S.field_K + this.field_S.field_W) / 2 + (this.field_W + this.field_K) / 2;
               decompiledFrameRemainder0 = (var5 != 0);
             }
           }
@@ -1517,15 +1517,15 @@ final class nk extends kd {
         if ((decompiledFrameCompleted0) &&
           (decompiledFrameRemainder0)) {
           if (null != this.field_S) {
-            this.field_y = (this.field_W + this.field_K) / 2 + (this.field_S.field_y - (this.field_S.field_K + this.field_S.field_W) / 2);
+            this.rotation = (this.field_W + this.field_K) / 2 + (this.field_S.rotation - (this.field_S.field_K + this.field_S.field_W) / 2);
           }
           var4 = 0;
-          while (var4 < this.field_I.length) {
+          while (var4 < this.instructions.length) {
             if (var5 != 0) {
               break;
             }
-            if (null != this.field_I[var4].field_d) {
-              this.field_I[var4].field_d.a(param0, -90, param2);
+            if (null != this.instructions[var4].attachedPart) {
+              this.instructions[var4].attachedPart.a(param0, -90, param2);
             }
             var4++;
           }
@@ -1542,16 +1542,16 @@ final class nk extends kd {
         return stackIn_6_0;
     }
 
-    final qd a(int param0, int param1) {
-        qd[] var3;
+    final PartInstruction a(int param0, int param1) {
+        PartInstruction[] var3;
         int var4;
-        qd var5;
-        qd var6;
+        PartInstruction var5;
+        PartInstruction var6;
         int var7;
-        qd[] var8;
+        PartInstruction[] var8;
         Object stackIn_16_0 = null;
-        var7 = SteelSentinels.field_G;
-        var8 = this.field_I;
+        var7 = SteelSentinels.obfuscationControl;
+        var8 = this.instructions;
         var3 = var8;
         var4 = param0;
         while (true) {
@@ -1561,13 +1561,13 @@ final class nk extends kd {
           var5 = var8[var4];
           stackIn_16_0 = null;
           if (var7 != 0) {
-            return (qd) (stackIn_16_0);
+            return (PartInstruction) (stackIn_16_0);
           }
-          if (stackIn_16_0 != var5.field_d) {
-            if (param1 == var5.field_d.field_Q) {
+          if (stackIn_16_0 != var5.attachedPart) {
+            if (param1 == var5.attachedPart.field_Q) {
               return var5;
             }
-            var6 = var5.field_d.a(param0 + 0, param1);
+            var6 = var5.attachedPart.a(param0 + 0, param1);
             if (var6 != null) {
               return var6;
             }
@@ -1581,16 +1581,16 @@ final class nk extends kd {
     }
 
     private final void e(int param0, int param1) {
-        nk[] discarded$1 = null;
+        ArticulatedPart[] discarded$1 = null;
         int var3;
         int var4;
-        nk[] var5;
-        var4 = SteelSentinels.field_G;
+        ArticulatedPart[] var5;
+        var4 = SteelSentinels.obfuscationControl;
         if (param1 != 5307) {
-          var5 = (nk[]) null;
-          discarded$1 = this.a((nk[]) null, 24);
+          var5 = (ArticulatedPart[]) null;
+          discarded$1 = this.a((ArticulatedPart[]) null, 24);
         }
-        if (param0 == ja.a(this.field_N, false)) {
+        if (param0 == ja.a(this.componentId, false)) {
           if (0 >= this.field_C) {
             si.field_t = si.field_t + 1;
             if ((var4 != 0) && (gl.field_p == -1 ||
@@ -1603,13 +1603,13 @@ final class nk extends kd {
               gl.field_p = this.field_C;
             }
           }
-          ed.field_f = -17 + this.field_N;
+          ed.field_f = -17 + this.componentId;
         }
         var3 = 0;
-        while (this.field_I.length > var3) {
+        while (this.instructions.length > var3) {
           if (var4 == 0) {
-            if (this.field_I[var3].field_d != null) {
-              this.field_I[var3].field_d.e(param0, 5307);
+            if (this.instructions[var3].attachedPart != null) {
+              this.instructions[var3].attachedPart.e(param0, 5307);
             }
             var3++;
             continue;
@@ -1626,33 +1626,33 @@ final class nk extends kd {
         if (param0 != -14487) {
           return 19;
         }
-        return gi.field_s[param1];
+        return PacketBuffer.field_s[param1];
     }
 
-    final qd[] a(qd[] param0, int param1, int param2) {
+    final PartInstruction[] a(PartInstruction[] param0, int param1, int param2) {
         int stackIn_18_0 = 0;
         int stackIn_18_1 = 0;
-        qd[] stackIn_21_0 = null;
+        PartInstruction[] stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        qd[] var5 = null;
+        PartInstruction[] var5 = null;
         int var6 = 0;
         int var7 = 0;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           var4_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (var4_int >= this.field_I.length))) {
+          while (!(decompiledNaturalLoopExit0 = (var4_int >= this.instructions.length))) {
             stackIn_18_0 = -1;
-            stackIn_18_1 = ~(this.field_I[var4_int].field_q & param2);
+            stackIn_18_1 = ~(this.instructions[var4_int].field_q & param2);
             if (var7 == 0) {
               if (stackIn_18_0 > stackIn_18_1 &&
-                this.field_I[var4_int].field_q != -1) {
-                var5 = new qd[param0.length + 1];
+                this.instructions[var4_int].field_q != -1) {
+                var5 = new PartInstruction[param0.length + 1];
                 var6 = 0;
                 while (true) {
                   if (var6 < param0.length) {
@@ -1662,11 +1662,11 @@ final class nk extends kd {
                   }
                   break;
                 }
-                var5[param0.length] = this.field_I[var4_int];
+                var5[param0.length] = this.instructions[var4_int];
                 param0 = var5;
               }
-              if (null != this.field_I[var4_int].field_d) {
-                param0 = this.field_I[var4_int].field_d.a(param0, -21636, param2);
+              if (null != this.instructions[var4_int].attachedPart) {
+                param0 = this.instructions[var4_int].attachedPart.a(param0, -21636, param2);
               }
               var4_int++;
               continue;
@@ -1678,9 +1678,9 @@ final class nk extends kd {
             stackIn_18_1 = -21636;
           }
           if (stackIn_18_0 != stackIn_18_1) {
-            this.field_R = (gk) null;
+            this.sprite = (IndexedSprite) null;
           }
-          stackIn_21_0 = (qd[]) (param0);
+          stackIn_21_0 = (PartInstruction[]) (param0);
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1707,10 +1707,10 @@ final class nk extends kd {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_intLifetime1;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameCompleted0 = true;
-          if (param0 == ja.a(this.field_N, false) &&
+          if (param0 == ja.a(this.componentId, false) &&
             this.field_C <= 0) {
             var4_int = this.field_K;
             while (this.field_W > var4_int) {
@@ -1735,12 +1735,12 @@ final class nk extends kd {
             return;
           }
           var4_intLifetime1 = 0;
-          while (this.field_I.length > var4_intLifetime1) {
+          while (this.instructions.length > var4_intLifetime1) {
             if (var5 != 0) {
               return;
             }
-            if (null != this.field_I[var4_intLifetime1].field_d) {
-              this.field_I[var4_intLifetime1].field_d.a(param0, -1, param2);
+            if (null != this.instructions[var4_intLifetime1].attachedPart) {
+              this.instructions[var4_intLifetime1].attachedPart.a(param0, -1, param2);
             }
             var4_intLifetime1++;
           }
@@ -1759,7 +1759,7 @@ final class nk extends kd {
         }
     }
 
-    nk(nk param0) {
+    ArticulatedPart(ArticulatedPart param0) {
         try {
           this.a(-353384856, true, param0);
         } catch (RuntimeException runtimeException) {
@@ -1767,7 +1767,7 @@ final class nk extends kd {
         }
     }
 
-    nk(nk param0, boolean param1) {
+    ArticulatedPart(ArticulatedPart param0, boolean param1) {
         try {
           this.a(-353384856, param1, param0);
         } catch (RuntimeException runtimeException) {
@@ -1775,37 +1775,37 @@ final class nk extends kd {
         }
     }
 
-    nk(gk param0, int param1, int param2, int param3, int param4, int param5, qd[] param6) {
+    ArticulatedPart(IndexedSprite param0, int param1, int param2, int param3, int param4, int param5, PartInstruction[] param6) {
         try {
           this.field_W = 0;
           this.field_Q = param1;
           this.field_D = param5;
-          this.field_I = param6;
+          this.instructions = param6;
           this.field_K = 0;
           this.field_G = param2;
           this.field_E = param3;
           this.field_L = true;
-          this.field_N = -1;
+          this.componentId = -1;
           this.field_z = param4;
-          this.field_R = param0;
-          this.field_y = 0;
+          this.sprite = param0;
+          this.rotation = 0;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
-    nk(gk param0, int param1, int param2, qd[] param3) {
+    ArticulatedPart(IndexedSprite param0, int param1, int param2, PartInstruction[] param3) {
         try {
           this.field_z = 0;
           this.field_K = 0;
-          this.field_I = param3;
+          this.instructions = param3;
           this.field_E = param2;
           this.field_Q = -1;
           this.field_D = 0;
-          this.field_y = 0;
-          this.field_R = param0;
+          this.rotation = 0;
+          this.sprite = param0;
           this.field_L = true;
-          this.field_N = -1;
+          this.componentId = -1;
           this.field_W = 0;
           this.field_G = param1;
         } catch (RuntimeException runtimeException) {

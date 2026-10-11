@@ -7,7 +7,7 @@ final class sl {
     static int field_i;
     static String[] field_j;
     cm field_d;
-    static ul field_b;
+    static NodeDeque field_b;
     String field_e;
     String field_g;
     static String field_o;
@@ -16,11 +16,11 @@ final class sl {
     String field_h;
     int field_a;
     static String field_l;
-    static wk field_p;
+    static RgbSprite field_p;
     static long field_m;
-    static gh[] field_k;
+    static SceneWidget[] field_k;
 
-    final static void a(wk[] param0, int param1, int param2, int param3, int param4, byte param5) {
+    final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4, byte param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -32,7 +32,7 @@ final class sl {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         try {
           if (param0 != null &&
             param1 > 0) {
@@ -41,8 +41,8 @@ final class sl {
             var8 = param0[1].field_z;
             param0[0].d(param3, param2, param4);
             param0[2].d(param1 + param3 - var7, param2, param4);
-            pb.b(aj.field_v);
-            pb.h(var6_int + param3, param2, -var7 + param3 + param1, param2 + param0[1].field_B);
+            SoftwareRaster.b(aj.field_v);
+            SoftwareRaster.h(var6_int + param3, param2, -var7 + param3 + param1, param2 + param0[1].field_B);
             var9 = param3 + var6_int;
             var10 = -var7 + (param3 + param1);
             if (param5 > -64) {
@@ -51,7 +51,7 @@ final class sl {
             for (param3 = var9; var10 > param3; param3 = param3 + var8) {
               param0[1].d(param3, param2, param4);
             }
-            pb.a(aj.field_v);
+            SoftwareRaster.a(aj.field_v);
             return;
           }
           return;
@@ -69,7 +69,7 @@ final class sl {
         }
     }
 
-    final static int a(nk param0, int[] param1, int param2) {
+    final static int a(ArticulatedPart param0, int[] param1, int param2) {
         int var6 = 0;
         int stackIn_25_0 = 0;
         RuntimeException stackIn_28_0 = null;
@@ -83,7 +83,7 @@ final class sl {
         int var4 = 0;
         int var5 = 0;
         int var7 = 0;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           var3_int = 0;
           var4 = param0.i(-126);
@@ -137,12 +137,12 @@ final class sl {
         }
     }
 
-    final static wk[] a(int param0, int param1) {
+    final static RgbSprite[] a(int param0, int param1) {
         if (param1 != 2) {
           field_n = (java.awt.Canvas) null;
         }
-        wk[] var3 = new wk[9];
-        wk[] var2 = var3;
+        RgbSprite[] var3 = new RgbSprite[9];
+        RgbSprite[] var2 = var3;
         var3[4] = bd.a(param0, 64, 248);
         return var2;
     }
@@ -178,6 +178,6 @@ final class sl {
         field_j = new String[]{"Tech value: <%0>", "Jump boost", "Thrust boost", "Energy capacity: <%0> TJ", "Shields: <%0> GJ", "Energy generation: <%0> GJ/s", "Energy generation: UNKNOWN", "Health: <%0> kPm", "Tech value: <%0>", "Jump: <%0>%", "Thrust: <%0>%", "Jump & thrust boosts"};
         field_l = "Waiting for extra data";
         field_c = "Retry";
-        field_b = new ul();
+        field_b = new NodeDeque();
     }
 }

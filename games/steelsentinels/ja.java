@@ -7,14 +7,14 @@ final class ja {
     static String field_c;
     static int field_f;
     static int[][] field_b;
-    static wk[] field_e;
+    static RgbSprite[] field_e;
     static sj field_g;
     static int field_i;
-    static gk[] field_d;
+    static IndexedSprite[] field_d;
 
     final static int a(int param0, boolean param1) {
         if (param1) {
-          field_e = (wk[]) null;
+          field_e = (RgbSprite[]) null;
           param0 -= 17;
           if (param0 < 0) {
             return -1;
@@ -34,10 +34,10 @@ final class ja {
         return -1;
     }
 
-    final static wk b(int param0, boolean param1) {
+    final static RgbSprite b(int param0, boolean param1) {
         int var2;
         int var3;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         var2 = param0;
         if (var2 == 104) {
           return hb.field_j[0];
@@ -103,7 +103,7 @@ final class ja {
           ja.b(-72, true);
         }
         if (param0 >= 200) {
-          return nc.a(param0 - 199, (byte) -114).a();
+          return nc.a(param0 - 199, (byte) -114).toRgbSprite();
         }
         if (param0 < rh.field_v.length) {
           return rh.field_v[param0];

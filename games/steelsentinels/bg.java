@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bg extends kd {
+abstract class bg extends DualNode {
     static boolean field_H;
     static int field_G;
     static String field_F;
-    static wk[] field_C;
+    static RgbSprite[] field_C;
     int field_z;
     static int field_y;
     static String field_E;
@@ -32,9 +32,9 @@ abstract class bg extends kd {
         stackIn_7_0[stackIn_7_1] = stackIn_8_2;
         if (si.field_p &&
           fk.field_i != null &&
-          null != fk.field_i.field_C) {
-          fk.field_i.field_V = -(fk.field_i.field_C.field_Gb >> 4) + fk.field_i.field_E - 3200;
-          fk.field_i.field_p = -(fk.field_i.field_C.field_hc >> 4) + (fk.field_i.field_P + 5120);
+          null != fk.field_i.controlledSentinel) {
+          fk.field_i.field_V = -(fk.field_i.controlledSentinel.worldY >> 4) + fk.field_i.field_E - 3200;
+          fk.field_i.field_p = -(fk.field_i.controlledSentinel.worldX >> 4) + (fk.field_i.field_P + 5120);
         }
     }
 
@@ -53,7 +53,7 @@ abstract class bg extends kd {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         try {
           if (2 <= param2 &&
             param2 <= 36) {
@@ -132,7 +132,7 @@ abstract class bg extends kd {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           if (null == param0.field_o) {
             return;
@@ -156,7 +156,7 @@ abstract class bg extends kd {
           }
           tf.a(param0, (byte) -115);
           if (param1 >= -61) {
-            field_C = (wk[]) null;
+            field_C = (RgbSprite[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -173,12 +173,12 @@ abstract class bg extends kd {
         }
     }
 
-    final static String a(String param0, int param1, byte param2, mi param3) {
+    final static String a(String param0, int param1, byte param2, BitmapFont param3) {
         Object var4 = null;
         String var4_ref = null;
         RuntimeException var4_ref2 = null;
         int var5 = 0;
-        mb var6 = null;
+        Sentinel var6 = null;
         String stackIn_7_0 = null;
         String stackIn_11_0 = null;
         String stackIn_14_0 = null;
@@ -188,11 +188,11 @@ abstract class bg extends kd {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           if (param2 != -45) {
-            var6 = (mb) null;
-            bg.a((wk) null, (mb) null, 56);
+            var6 = (Sentinel) null;
+            bg.a((RgbSprite) null, (Sentinel) null, 56);
           }
           if (param0 != null &&
             param3.c(param0) > param1) {
@@ -247,7 +247,7 @@ abstract class bg extends kd {
         }
     }
 
-    final static void a(wk param0, mb param1, int param2) {
+    final static void a(RgbSprite param0, Sentinel param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -262,7 +262,7 @@ abstract class bg extends kd {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = SteelSentinels.field_G;
+        var9 = SteelSentinels.obfuscationControl;
         try {
           var3_int = 0;
           if (param2 != 14590) {
@@ -272,7 +272,7 @@ abstract class bg extends kd {
             for (var5 = 0; param0.field_z > var5; var5++) {
               var6 = param0.field_E[var3_int + var5];
               if (~(var6 >> 8) == ~(var6 & 65535)) {
-                var7 = param1.d((byte) -102);
+                var7 = param1.getTeamColour((byte) -102);
                 var8 = var6 & 255;
                 if (var8 > 64) {
                   param0.field_E[var5 + var3_int] = (ec.a(16711720, var8 * ec.a(var7, 65280)) >> 8) + ec.a(ec.a(16711935, var7) * var8 >> 8, 16711935);

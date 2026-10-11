@@ -4,7 +4,7 @@
 final class ba {
     static String field_a;
     static int field_c;
-    static wk field_e;
+    static RgbSprite field_e;
     static int field_b;
     static String field_f;
     static int[] field_d;
@@ -67,7 +67,7 @@ final class ba {
 
     final static boolean a(byte param0) {
         if (param0 != -57) {
-          field_e = (wk) null;
+          field_e = (RgbSprite) null;
           return ve.a(ge.field_m, 1, 25);
         }
         return ve.a(ge.field_m, 1, 25);

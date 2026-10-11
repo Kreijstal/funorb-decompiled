@@ -32,7 +32,7 @@ final class df extends fe {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var3_intLifetime1;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           if (nj.field_Q < 10) {
             var3_int = 0;
@@ -43,7 +43,7 @@ final class df extends fe {
             kc.a(sa.b((byte) 118), fi.a(true), var3_int != 0, 300, d.field_S);
           } else {
             if (!km.a(-124)) {
-              pb.b();
+              SoftwareRaster.b();
               ff.a((byte) 17, 240, 320);
               kg.a(0, 0, 28594, param1);
             } else {

@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ao extends kd {
+final class ao extends DualNode {
     static int[] field_E;
     int[] field_F;
     static int[] field_B;
     static int[] field_A;
     private int[][] field_z;
     static int field_C;
-    static ul field_H;
+    static NodeDeque field_H;
     private String[] field_G;
     private int[] field_D;
-    static wk field_y;
+    static RgbSprite field_y;
 
     final void c(byte param0) {
         int var3 = 0;
-        int var4 = SteelSentinels.field_G;
+        int var4 = SteelSentinels.obfuscationControl;
         int var2 = -79 % ((param0 + 50) / 55);
         if (this.field_F != null) {
           for (var3 = 0; var3 < this.field_F.length; var3++) {
@@ -24,7 +24,7 @@ final class ao extends kd {
         }
     }
 
-    final static String[] a(mi param0, int[] param1, int param2, String param3) {
+    final static String[] a(BitmapFont param0, int[] param1, int param2, String param3) {
         ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -41,7 +41,7 @@ final class ao extends kd {
         String stackIn_24_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           if (jh.field_b == null) {
             jh.field_b = new String[16];
@@ -101,7 +101,7 @@ final class ao extends kd {
         int var3 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
-        int var4 = SteelSentinels.field_G;
+        int var4 = SteelSentinels.obfuscationControl;
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
         if (this.field_G == null) {
@@ -126,7 +126,7 @@ final class ao extends kd {
         field_y = null;
     }
 
-    final void a(gi param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -134,7 +134,7 @@ final class ao extends kd {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           if (param1 >= -68) {
             return;
@@ -178,7 +178,7 @@ final class ao extends kd {
     ao() {
     }
 
-    private final void a(int param0, gi param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -192,7 +192,7 @@ final class ao extends kd {
         fm var7 = null;
         int var9 = 0;
         int var4_intLifetime1;
-        var9 = SteelSentinels.field_G;
+        var9 = SteelSentinels.obfuscationControl;
         try {
           if (param0 == 1) {
             this.field_G = ka.a('<', false, param1.h(1));

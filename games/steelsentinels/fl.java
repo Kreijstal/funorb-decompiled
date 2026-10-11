@@ -3,12 +3,12 @@
  */
 final class fl {
     static int field_a;
-    static gh field_b;
+    static SceneWidget field_b;
     static int field_d;
-    static gh field_c;
-    static gh field_e;
+    static SceneWidget field_c;
+    static SceneWidget field_e;
 
-    final static void a(int param0, mb param1, byte param2, int param3, int param4, int param5) {
+    final static void a(int param0, Sentinel param1, byte param2, int param3, int param4, int param5) {
         int var7 = 0;
         int var8 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -21,19 +21,19 @@ final class fl {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        mb var13 = null;
-        var12 = SteelSentinels.field_G;
+        Sentinel var13 = null;
+        var12 = SteelSentinels.obfuscationControl;
         try {
           var6_int = sb.field_bb.field_c * param5;
           if (param2 >= -90) {
-            var13 = (mb) null;
-            fl.a(48, (mb) null, (byte) -79, 76, -55, -81);
+            var13 = (Sentinel) null;
+            fl.a(48, (Sentinel) null, (byte) -79, 76, -55, -81);
           }
           for (var7 = param5; var7 < param5 + param3; var7++) {
             for (var8 = param4; var8 < param4 + param0; var8++) {
               var9 = sb.field_bb.field_a[var6_int + var8];
               if (var9 >> 8 == (65535 & var9)) {
-                var10 = param1.d((byte) 25);
+                var10 = param1.getTeamColour((byte) 25);
                 var11 = 255 & var9;
                 if (var11 > 64) {
                   sb.field_bb.field_a[var8 + var6_int] = ec.a(16711935, var11 * ec.a(16711935, var10) >> 8) + ec.a(65280, var11 * ec.a(var10, 65280) >> 8);
@@ -100,7 +100,7 @@ final class fl {
     public static void a(int param0) {
         field_e = null;
         if (param0 <= 60) {
-          field_e = (gh) null;
+          field_e = (SceneWidget) null;
         }
         field_b = null;
         field_c = null;

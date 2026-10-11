@@ -22,7 +22,7 @@ final class ph {
     }
 
     final static void a(na param0, int param1) {
-        gh stackIn_2_0 = null;
+        SceneWidget stackIn_2_0 = null;
         int stackIn_3_1 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -124,7 +124,7 @@ final class ph {
           return;
         }
         se.field_e = param1;
-        kj.field_I = param2;
+        CipherPacketBuffer.field_I = param2;
     }
 
     static {

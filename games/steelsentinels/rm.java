@@ -12,7 +12,7 @@ final class rm {
     private int field_b;
     private int field_k;
     static String[] field_o;
-    static gh field_j;
+    static SceneWidget field_j;
     static boolean field_f;
     static String field_i;
     int field_e;

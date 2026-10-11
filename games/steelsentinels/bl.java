@@ -5,15 +5,15 @@ final class bl implements qk {
     static String field_g;
     private int field_i;
     static String field_o;
-    static gh field_c;
+    static SceneWidget field_c;
     static rf field_k;
     private int field_n;
     static String[][] field_h;
-    private mi field_l;
-    static wk[] field_d;
+    private BitmapFont field_l;
+    static RgbSprite[] field_d;
     static boolean field_a;
     static String field_j;
-    static gk[] field_p;
+    static IndexedSprite[] field_p;
     static String field_b;
     static int[] field_e;
     static String field_f;
@@ -38,7 +38,7 @@ final class bl implements qk {
         int var10 = 0;
         int var11 = 0;
         String var12 = null;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         try {
           if (param2 != -30) {
             var12 = (String) null;
@@ -89,45 +89,45 @@ final class bl implements qk {
         }
     }
 
-    final static void a(int param0, int param1, gh param2) {
+    final static void a(int param0, int param1, SceneWidget param2) {
         dd var9 = null;
-        wk var10 = null;
+        RgbSprite var10 = null;
         String var11 = null;
         dd var12 = null;
-        wk var13 = null;
+        RgbSprite var13 = null;
         String var14 = null;
         dd var15 = null;
-        wk var16 = null;
+        RgbSprite var16 = null;
         String var17 = null;
         dd var18 = null;
         String var20 = null;
         dd var21 = null;
-        wk var22 = null;
+        RgbSprite var22 = null;
         String var23 = null;
         dd var24 = null;
-        wk var25 = null;
+        RgbSprite var25 = null;
         String var26 = null;
         dd var27 = null;
-        wk var28 = null;
+        RgbSprite var28 = null;
         String var29 = null;
         dd var30 = null;
-        wk var31 = null;
+        RgbSprite var31 = null;
         String var32 = null;
         dd var33 = null;
-        wk var34 = null;
+        RgbSprite var34 = null;
         String var35 = null;
         dd var36 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        wk var19 = null;
-        wk var19Lifetime1;
-        wk var19Lifetime2;
-        wk var19Lifetime3;
-        wk var19Lifetime4;
-        wk var19Lifetime5;
-        wk var19Lifetime6;
+        RgbSprite var19 = null;
+        RgbSprite var19Lifetime1;
+        RgbSprite var19Lifetime2;
+        RgbSprite var19Lifetime3;
+        RgbSprite var19Lifetime4;
+        RgbSprite var19Lifetime5;
+        RgbSprite var19Lifetime6;
         kk.a(param2, -1, param1, (int[]) null, (String) null, (String) null, 1073741824, 0L, (kg) null);
         if (param0 != 12) {
           return;
@@ -220,7 +220,7 @@ final class bl implements qk {
 
     final static void a(int param0, String param1, byte param2) {
         int var3_int = 0;
-        int var4 = SteelSentinels.field_G;
+        int var4 = SteelSentinels.obfuscationControl;
         int var3_intLifetime1;
         try {
           for (var3_int = 5; var3_int > 0; var3_int--) {
@@ -243,7 +243,7 @@ final class bl implements qk {
         this.field_i = 1;
     }
 
-    bl(mi param0, int param1, int param2) {
+    bl(BitmapFont param0, int param1, int param2) {
         try {
           this.field_i = param2;
           this.field_n = param1;

@@ -6,12 +6,12 @@ final class kk {
     static String field_f;
     static int[] field_b;
     static int[] field_g;
-    static gh field_a;
+    static SceneWidget field_a;
     static String[] field_h;
     static int field_d;
     static ak field_c;
 
-    final static void a(il param0, int param1, int param2, String param3, mi param4) {
+    final static void a(il param0, int param1, int param2, String param3, BitmapFont param4) {
         int var8 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -27,7 +27,7 @@ final class kk {
         int var7 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         try {
           var5_int = 0;
           var6 = -1;
@@ -94,17 +94,17 @@ final class kk {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        mi var5 = null;
+        BitmapFont var5 = null;
         int[] var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           if (param0 != 34) {
-            var5 = (mi) null;
-            kk.a((il) null, -122, -42, (String) null, (mi) null);
+            var5 = (BitmapFont) null;
+            kk.a((il) null, -122, -42, (String) null, (BitmapFont) null);
           }
-          var6 = ck.field_c;
+          var6 = IntrusiveNode.field_c;
           var1 = var6;
           var2 = 0;
           var3 = var6.length;
@@ -126,9 +126,9 @@ final class kk {
         }
     }
 
-    final static String a(nk param0, int param1) {
+    final static String a(ArticulatedPart param0, int param1) {
         int var6_int = 0;
-        nk stackIn_4_0 = null;
+        ArticulatedPart stackIn_4_0 = null;
         Object stackIn_35_0 = null;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
@@ -138,20 +138,20 @@ final class kk {
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        nk var5 = null;
+        ArticulatedPart var5 = null;
         Object var6 = null;
         int var7 = 0;
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
-        mi var11 = null;
+        BitmapFont var11 = null;
         int[] var12 = null;
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
         int[] var16 = null;
         int var7Lifetime1;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         try {
           var15 = new int[16];
           var13 = var15;
@@ -159,16 +159,16 @@ final class kk {
           var16 = var12;
           var14 = var16;
           var2 = var14;
-          var3 = wl.a(var15, 0, true, param0);
-          var4 = ub.a(127, param0.field_N);
+          var3 = Projectile.a(var15, 0, true, param0);
+          var4 = ub.a(127, param0.componentId);
           if (0 > var4) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = ul.a(var4, (byte) 67);
+            stackIn_4_0 = NodeDeque.a(var4, (byte) 67);
           }
           var5 = stackIn_4_0;
           if (var5 != null) {
-            var3 = wl.a(var15, var3, true, var5);
+            var3 = Projectile.a(var15, var3, true, var5);
           }
           for (var6_int = 0; var6_int < var3 - 1; var6_int++) {
             var7 = var6_int;
@@ -201,8 +201,8 @@ final class kk {
             }
           }
           if (param1 != -4097) {
-            var11 = (mi) null;
-            kk.a((il) null, -28, -91, (String) null, (mi) null);
+            var11 = (BitmapFont) null;
+            kk.a((il) null, -28, -91, (String) null, (BitmapFont) null);
           }
           stackIn_35_0 = var6;
           return (String) (stackIn_35_0);
@@ -224,7 +224,7 @@ final class kk {
         if (param0 != -28548) {
           field_g = (int[]) null;
         }
-        return ~nb.field_G == ~nf.field_b.field_fc ? true : false;
+        return ~GameplayController.field_G == ~nf.field_b.field_fc ? true : false;
     }
 
     final static int a(int param0, int param1, int param2) {
@@ -332,10 +332,10 @@ final class kk {
         return stackIn_41_0;
     }
 
-    final static void a(gh param0, int param1, int param2, int[] param3, String param4, String param5, int param6, long param7, kg param8) {
+    final static void a(SceneWidget param0, int param1, int param2, int[] param3, String param4, String param5, int param6, long param7, kg param8) {
         try {
           if (param6 != 1073741824) {
-            field_a = (gh) null;
+            field_a = (SceneWidget) null;
           }
           la.field_c = param8;
           an.field_i = new dd(param0, param7, param4, param5, param1, param2, param3);

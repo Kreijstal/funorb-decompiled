@@ -4,17 +4,17 @@
 final class ta {
     private fi[] field_j;
     static int field_l;
-    private gi field_a;
+    private PacketBuffer field_a;
     private cb field_m;
     private java.math.BigInteger field_k;
-    static wk field_e;
+    static RgbSprite field_e;
     private qa field_h;
     private java.math.BigInteger field_b;
-    static gh field_i;
+    static SceneWidget field_i;
     private vk field_g;
     static cm field_d;
     static String[] field_f;
-    static wk[] field_c;
+    static RgbSprite[] field_c;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var11 = 0;
@@ -23,15 +23,15 @@ final class ta {
         int var12 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var9 = null;
-        var12 = SteelSentinels.field_G;
+        var12 = SteelSentinels.obfuscationControl;
         try {
           if (param2 != 0) {
-            field_e = (wk) null;
+            field_e = (RgbSprite) null;
           }
           for (var11 = param7; var11 < param8 + param7; var11++) {
             var9_int = (param1 - param4) * (-param7 + var11) / param8 + param4;
             var10 = param3 + (-param7 + var11) * (-param3 + param5) / param8;
-            pb.c(param6, var11, param0, var9_int, var10);
+            SoftwareRaster.c(param6, var11, param0, var9_int, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -57,12 +57,12 @@ final class ta {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        gi var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
         byte[] var15;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         if (this.field_a != null) {
           return true;
         }
@@ -75,11 +75,11 @@ final class ta {
         if (this.field_h.field_z) {
           return false;
         }
-        var10 = new gi(this.field_h.d((byte) -65));
-        var10.field_p = 5;
+        var10 = new PacketBuffer(this.field_h.d((byte) -65));
+        var10.position = 5;
         var3 = var10.f((byte) -103);
-        var10.field_p = var10.field_p + var3 * 72;
-        var13 = new byte[-var10.field_p + var10.field_t.length];
+        var10.position = var10.position + var3 * 72;
+        var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
         var10.a(0, var4, 28, var13.length);
@@ -97,7 +97,7 @@ final class ta {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = co.a((byte) -37, -5 + var10.field_p - var13.length, 5, var10.field_t);
+        var15 = co.a((byte) -37, -5 + var10.position - var13.length, 5, var10.payload);
         for (var7 = 0; var7 < 64; var7++) {
           if (var5[1 + var7] != var15[var7]) {
             throw new RuntimeException();
@@ -133,7 +133,7 @@ final class ta {
               stackIn_10_0 = this.field_j[param4];
               return stackIn_10_0;
             }
-            this.field_a.field_p = 6 + param4 * 72;
+            this.field_a.position = 6 + param4 * 72;
             if (param1 <= 91) {
               var10 = (rc) null;
               this.a((rc) null, (byte) 104, true, (rc) null, 114);
@@ -184,7 +184,7 @@ final class ta {
         int var3;
         fi stackIn_15_0 = null;
         int var2Lifetime1;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         if (null == this.field_j) {
           return;
         }

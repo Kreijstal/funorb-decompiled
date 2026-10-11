@@ -3,17 +3,17 @@
  */
 import java.util.*;
 
-final class mj extends gh {
+final class mj extends SceneWidget {
     static double field_Xb;
     static String field_ac;
-    private gh[] field_Ub;
+    private SceneWidget[] field_Ub;
     static kg field_Sb;
-    private gh[] field_Tb;
+    private SceneWidget[] field_Tb;
     int field_bc;
-    private gh field_Wb;
+    private SceneWidget field_Wb;
     static int field_cc;
     static de field_Vb;
-    static gh field_Zb;
+    static SceneWidget field_Zb;
     static ja field_Yb;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -50,11 +50,11 @@ final class mj extends gh {
         int var7 = pg.field_x.get(11);
         int var8 = pg.field_x.get(12);
         int var9 = pg.field_x.get(13);
-        return cf.field_t[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ee.field_jb[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        return cf.field_t[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + CombatWorld.field_jb[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
-    mj(long param0, gh param1, String[] param2, gh param3, gh[] param4, int param5) {
-        super(param0, (gh) null);
+    mj(long param0, SceneWidget param1, String[] param2, SceneWidget param3, SceneWidget[] param4, int param5) {
+        super(param0, (SceneWidget) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -67,15 +67,15 @@ final class mj extends gh {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        gh var9 = null;
+        SceneWidget var9 = null;
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_Ub = new gh[param2.length];
-          this.field_Wb = new gh(0L, param3);
+          this.field_Ub = new SceneWidget[param2.length];
+          this.field_Wb = new SceneWidget(0L, param3);
           this.field_Tb = param4;
           for (var8_int = 0; param2.length > var8_int; var8_int++) {
-            var9 = new gh(0L, param1);
+            var9 = new SceneWidget(0L, param1);
             var9.field_S = param2[var8_int];
             this.field_Ub[var8_int] = var9;
             this.a(var9, 124);
@@ -123,14 +123,14 @@ final class mj extends gh {
     }
 
     private final void a(int param0, int param1, int param2) {
-        gh dupTemp$0 = null;
+        SceneWidget dupTemp$0 = null;
         int var4;
         int var5;
         int var6;
         int var7;
         int var8;
         int var4Lifetime1;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         for (var4 = 0; this.field_Ub.length > var4; var4++) {
           var5 = this.field_zb * var4 / this.field_Ub.length;
           var6 = (1 + var4) * this.field_zb / this.field_Ub.length;
@@ -215,11 +215,11 @@ final class mj extends gh {
     }
 
     final void j(int param0) {
-        gh dupTemp$0 = null;
-        gh dupTemp$1 = null;
+        SceneWidget dupTemp$0 = null;
+        SceneWidget dupTemp$1 = null;
         int var2;
         int var3;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         var2 = 0;
         if (param0 != 10000) {
           return;
@@ -268,7 +268,7 @@ final class mj extends gh {
         int var14Lifetime2;
         int var14Lifetime3;
         int var15Lifetime1;
-        var16 = SteelSentinels.field_G;
+        var16 = SteelSentinels.obfuscationControl;
         try {
           if (param2 > 32767) {
             param2 = 32767;
@@ -291,18 +291,18 @@ final class mj extends gh {
               if (ni.b(122)) {
                 stackIn_11_0 = td.field_ac;
               } else {
-                stackIn_11_0 = ee.field_k;
+                stackIn_11_0 = CombatWorld.field_k;
               }
               km.field_a = stackIn_11_0;
-              if (jc.field_f < 1) {
-                jc.field_f = 1;
+              if (NodeIterator.field_f < 1) {
+                NodeIterator.field_f = 1;
               }
               ln.field_g = -1;
             }
             if (param0 == 0 &&
               10 == fm.field_f[param0] &&
               ni.b(param7 + 103)) {
-              km.field_a = ra.field_b;
+              km.field_a = DualNodeDeque.field_b;
             }
             if (1 == param0) {
               jh.field_a[param3] = param2;
@@ -320,7 +320,7 @@ final class mj extends gh {
             mm.field_g.b(true, param6);
             mm.field_g.b(true, param4);
           } else {
-            jb.field_P = jb.field_P | 1 << 10 * param0 + param3;
+            Explosion.field_P = Explosion.field_P | 1 << 10 * param0 + param3;
           }
           var8 = d.field_T[10 * param0 + param3];
           var9 = bi.field_e[param3 + param0 * 10];

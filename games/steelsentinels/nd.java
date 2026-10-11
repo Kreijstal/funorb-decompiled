@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nd {
-    static gh field_a;
+    static SceneWidget field_a;
 
     final static int a(byte param0) {
         if (param0 != 56) {
@@ -14,7 +14,7 @@ final class nd {
     final static void a(boolean param0, int param1) {
         hf.a(param0, 1);
         if (param1 != 230827172) {
-          field_a = (gh) null;
+          field_a = (SceneWidget) null;
           if (null != ll.field_i) {
             jg.a(ll.field_i, 1);
             return;

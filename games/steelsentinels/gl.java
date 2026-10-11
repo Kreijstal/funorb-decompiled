@@ -11,11 +11,11 @@ final class gl extends al {
     static boolean[][] field_x;
     static kg field_t;
     private long field_k;
-    static gh field_u;
+    static SceneWidget field_u;
     private int field_o;
     static String field_r;
     static int field_p;
-    static gh field_y;
+    static SceneWidget field_y;
     static char[] field_w;
     static int field_v;
 
@@ -30,12 +30,12 @@ final class gl extends al {
         }
     }
 
-    final static gk a(cm param0, byte param1, String param2, String param3) {
+    final static IndexedSprite a(cm param0, byte param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        gk stackIn_2_0 = null;
-        gk stackIn_4_0 = null;
+        IndexedSprite stackIn_2_0 = null;
+        IndexedSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -47,7 +47,7 @@ final class gl extends al {
         try {
           var4_int = param0.a(param2, 44);
           if (param1 != 85) {
-            stackIn_2_0 = (gk) null;
+            stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
           var5 = param0.a(var4_int, -32759, param3);
@@ -114,7 +114,7 @@ final class gl extends al {
     final int a(long param0, byte param1) {
         int var4;
         int var5;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         if (param1 != -97) {
           return 92;
         }
@@ -137,7 +137,7 @@ final class gl extends al {
     }
 
     private final long d(byte param0) {
-        int var9 = SteelSentinels.field_G;
+        int var9 = SteelSentinels.obfuscationControl;
         long var2 = System.nanoTime();
         long var4 = -this.field_n + var2;
         this.field_n = var2;

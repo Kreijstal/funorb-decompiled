@@ -4,13 +4,13 @@
 final class hg {
     static long[] field_c;
     boolean field_d;
-    static wk[] field_i;
+    static RgbSprite[] field_i;
     String field_b;
     String field_g;
     static boolean field_h;
     static String field_f;
     static String field_a;
-    static gh field_e;
+    static SceneWidget field_e;
 
     final static void a(int param0, String param1) {
         int stackIn_17_0 = 0;
@@ -21,7 +21,7 @@ final class hg {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
           si.field_m = si.field_m + 1;
           if (pe.field_d == -1 &&

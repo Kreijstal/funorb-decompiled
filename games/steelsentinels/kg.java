@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kg extends gh {
+final class kg extends SceneWidget {
     static int field_Vb;
-    gh field_Ub;
+    SceneWidget field_Ub;
     lb field_Sb;
-    gh field_Tb;
+    SceneWidget field_Tb;
     static int field_Wb;
 
     final void a(byte param0, int param1, int param2, boolean param3, int param4) {
@@ -13,7 +13,7 @@ final class kg extends gh {
           this.field_Ub.field_gb = this.field_Ub.field_gb + param4;
         }
         if (param0 != 96) {
-          this.field_Ub = (gh) null;
+          this.field_Ub = (SceneWidget) null;
         }
         if (this.field_Sb.e((byte) 58)) {
           this.field_Ub.field_gb = this.field_Ub.field_gb - param4;
@@ -49,7 +49,7 @@ final class kg extends gh {
         this.field_Sb.a(this.field_Tb.field_Lb, -this.field_Ub.field_eb, this.field_Ub.field_Lb, param0 - 97);
     }
 
-    kg(String param0, gh param1, gh param2, lb param3) {
+    kg(String param0, SceneWidget param1, SceneWidget param2, lb param3) {
         this(ke.a((CharSequence) ((Object) param0), (byte) -48), param1, param2, param3);
     }
 
@@ -102,7 +102,7 @@ final class kg extends gh {
         int var4 = 0;
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           var3_int = 0;
           while (0 < param1) {
@@ -131,7 +131,7 @@ final class kg extends gh {
           this.a(param2, param4, (byte) 126);
           return;
         }
-        this.field_Tb = (gh) null;
+        this.field_Tb = (SceneWidget) null;
         this.field_zb = param0;
         this.field_Y = param5;
         this.field_eb = param6;
@@ -177,10 +177,10 @@ final class kg extends gh {
         return stackIn_5_0;
     }
 
-    kg(long param0, gh param1, gh param2, lb param3) {
-        super(param0, (gh) null);
+    kg(long param0, SceneWidget param1, SceneWidget param2, lb param3) {
+        super(param0, (SceneWidget) null);
         try {
-          this.field_Tb = new gh(0L, param2);
+          this.field_Tb = new SceneWidget(0L, param2);
           this.field_Sb = new lb(0L, param3);
           this.a(this.field_Tb, 125);
           this.a(this.field_Sb, 119);
@@ -205,7 +205,7 @@ final class kg extends gh {
         return true;
     }
 
-    final static void a(int param0, mi param1, mi param2, int param3) {
+    final static void a(int param0, BitmapFont param1, BitmapFont param2, int param3) {
         try {
           ud.field_C = param3;
           if (param0 != 2048) {
@@ -213,7 +213,7 @@ final class kg extends gh {
           }
           pa.field_k = param2;
           wb.field_a = param1;
-          sf.a(74, pb.field_c / 2, pb.field_j / 2);
+          sf.a(74, SoftwareRaster.field_c / 2, SoftwareRaster.field_j / 2);
           he.a(false, param2.field_U, param1.field_U, param2.field_U + param2.field_F, param1.field_F + param1.field_U);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "kg.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -298,7 +298,7 @@ final class kg extends gh {
     final void a(boolean param0, int param1, int param2, int param3) {
         this.a((byte) 96, param3, this.field_Tb.field_Lb, param0, param2);
         if (param1 != 8113) {
-          this.field_Tb = (gh) null;
+          this.field_Tb = (SceneWidget) null;
         }
     }
 

@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class gh extends dh {
+class SceneWidget extends dh {
     int field_Kb;
     static boolean field_J;
     static java.awt.Frame field_N;
     int field_Ib;
     int field_Lb;
-    wk[] field_H;
+    RgbSprite[] field_H;
     int field_qb;
-    wk field_db;
+    RgbSprite field_db;
     int field_Y;
     int field_ab;
     int field_lb;
@@ -23,7 +23,7 @@ class gh extends dh {
     int field_yb;
     int field_cb;
     private int field_Q;
-    wk field_Pb;
+    RgbSprite field_Pb;
     int field_sb;
     String field_S;
     private int field_Nb;
@@ -31,8 +31,8 @@ class gh extends dh {
     private int field_X;
     static boolean field_pb;
     int field_Qb;
-    wk[] field_bb;
-    static gh field_ib;
+    RgbSprite[] field_bb;
+    static SceneWidget field_ib;
     int field_W;
     int field_V;
     static String field_Bb;
@@ -41,22 +41,22 @@ class gh extends dh {
     String field_Db;
     int field_zb;
     int field_eb;
-    wk field_Ob;
+    RgbSprite field_Ob;
     private boolean field_R;
     boolean field_T;
-    wk[] field_mb;
-    wk[] field_Ab;
+    RgbSprite[] field_mb;
+    RgbSprite[] field_Ab;
     static String[] field_jb;
     boolean field_U;
     boolean field_G;
-    wk field_Hb;
-    wk[] field_I;
+    RgbSprite field_Hb;
+    RgbSprite[] field_I;
     int field_ub;
     private int field_Gb;
     int field_ob;
     int field_rb;
-    mi field_L;
-    wk field_fb;
+    BitmapFont field_L;
+    RgbSprite field_fb;
     int field_Eb;
     static int field_hb;
     private int field_O;
@@ -64,10 +64,10 @@ class gh extends dh {
     int field_nb;
     int field_Cb;
     private int field_wb;
-    ul field_M;
+    NodeDeque field_M;
     private boolean field_tb;
 
-    final void b(gh param0, int param1) {
+    final void b(SceneWidget param0, int param1) {
         boolean stackIn_95_1 = false;
         RuntimeException stackIn_108_0 = null;
         StringBuilder stackIn_108_1 = null;
@@ -220,27 +220,27 @@ class gh extends dh {
 
     final int g(int param0) {
         if (param0 != -2147483648) {
-          gh var3 = (gh) null;
-          this.a((gh) null, 37);
+          SceneWidget var3 = (SceneWidget) null;
+          this.a((SceneWidget) null, 37);
         }
         return this.b(param0 + 2147483550, 2147483647);
     }
 
-    private final gh a(long param0, int param1) {
-        gh var7 = null;
-        gh var5 = null;
-        int var6 = SteelSentinels.field_G;
-        if (~this.field_j == ~param0) {
+    private final SceneWidget a(long param0, int param1) {
+        SceneWidget var7 = null;
+        SceneWidget var5 = null;
+        int var6 = SteelSentinels.obfuscationControl;
+        if (~this.key == ~param0) {
           return this;
         }
         if (this.field_M != null) {
-          var7 = (gh) (this.field_M.e(13058));
+          var7 = (SceneWidget) (this.field_M.first(13058));
           while (var7 != null) {
             var5 = var7.a(param0, 3318);
             if (var5 != null) {
               return var5;
             }
-            var7 = (gh) (this.field_M.a((byte) -96));
+            var7 = (SceneWidget) (this.field_M.next((byte) -96));
           }
         }
         if (param1 == 3318) {
@@ -254,7 +254,7 @@ class gh extends dh {
         db.field_d = !param1 ? true : false;
         int var3 = -36 % ((65 - param0) / 41);
         bh.field_f = !param1 ? true : false;
-        this.a(true, pb.field_c, 0, pb.field_j, (byte) -123, 0);
+        this.a(true, SoftwareRaster.field_c, 0, SoftwareRaster.field_j, (byte) -123, 0);
     }
 
     final static int i(int param0) {
@@ -268,9 +268,9 @@ class gh extends dh {
         int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var2 = SteelSentinels.field_G;
+        var2 = SteelSentinels.obfuscationControl;
         try {
-          ag.field_p.a((byte) 86, true, n.field_u, bd.field_d);
+          ag.field_p.a((byte) 86, true, FunOrbClient.field_u, bd.field_d);
           ag.field_p.h((byte) -4);
           while (dl.f(22759)) {
             ag.field_p.a(true, ei.field_q, de.field_c);
@@ -290,7 +290,7 @@ class gh extends dh {
             return stackIn_14_0;
           }
           if (param0 <= 96) {
-            gh.a(true);
+            SceneWidget.a(true);
           }
           if (!gf.field_a.a((byte) -72)) {
             stackIn_19_0 = 1;
@@ -309,7 +309,7 @@ class gh extends dh {
         }
     }
 
-    final void a(int param0, byte param1, gh param2, gh param3) {
+    final void a(int param0, byte param1, SceneWidget param2, SceneWidget param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -326,7 +326,7 @@ class gh extends dh {
             param3.field_eb = param0 + (param2.field_eb + param2.field_Lb);
           }
           if (param1 < 64) {
-            this.field_bb = (wk[]) null;
+            this.field_bb = (RgbSprite[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -349,7 +349,7 @@ class gh extends dh {
         }
     }
 
-    final void a(gh param0, int param1) {
+    final void a(SceneWidget param0, int param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -357,9 +357,9 @@ class gh extends dh {
         RuntimeException var3 = null;
         try {
           if (null == this.field_M) {
-            this.field_M = new ul();
+            this.field_M = new NodeDeque();
           }
-          this.field_M.a(3, param0);
+          this.field_M.addLast(3, param0);
           if (param1 < 117) {
             this.a(46, 9, 12, -84, 107);
           }
@@ -384,8 +384,8 @@ class gh extends dh {
         int var13;
         int var14;
         int var15;
-        wk[] var16;
-        wk var17;
+        RgbSprite[] var16;
+        RgbSprite var17;
         int var18;
         int var19;
         int var20;
@@ -393,23 +393,23 @@ class gh extends dh {
         int var22;
         int var23_int;
         String var23;
-        gh var23_ref;
+        SceneWidget var23_ref;
         int var24;
         int var25;
         String var26;
         String var23Lifetime1;
         String var23Lifetime2;
-        var25 = SteelSentinels.field_G;
+        var25 = SteelSentinels.obfuscationControl;
         this.field_cb = this.field_eb + param9;
         this.field_Rb = param1 + this.field_Y;
-        var12 = pb.field_i;
-        var13 = pb.field_l;
-        var14 = pb.field_b;
-        var15 = pb.field_d;
+        var12 = SoftwareRaster.field_i;
+        var13 = SoftwareRaster.field_l;
+        var14 = SoftwareRaster.field_b;
+        var15 = SoftwareRaster.field_d;
         if (param8 <= 15) {
           this.field_ub = -78;
         }
-        pb.h(this.field_Rb, this.field_cb, this.field_zb + this.field_Rb, this.field_cb + this.field_Lb);
+        SoftwareRaster.h(this.field_Rb, this.field_cb, this.field_zb + this.field_Rb, this.field_cb + this.field_Lb);
         param0 = param0 & this.field_T;
         if (!this.field_R) {
           param4 = this.field_kb;
@@ -552,20 +552,20 @@ class gh extends dh {
           }
         }
         if (null != this.field_M) {
-          var23_ref = (gh) (this.field_M.e(13058));
+          var23_ref = (SceneWidget) (this.field_M.first(13058));
           while (var23_ref != null) {
             var23_ref.a(param0, this.field_Rb + var19, param2, this.field_tb, param4, param5, this.field_zb, this.field_Lb, (byte) 81, this.field_cb + var20, param10);
-            var23_ref = (gh) (this.field_M.a((byte) -78));
+            var23_ref = (SceneWidget) (this.field_M.next((byte) -78));
           }
         }
-        pb.a(var12, var13, var14, var15);
+        SoftwareRaster.a(var12, var13, var14, var15);
     }
 
-    final gh a(String param0, boolean param1) {
+    final SceneWidget a(String param0, boolean param1) {
         RuntimeException var3 = null;
         java.applet.Applet var4 = null;
         CharSequence var5 = null;
-        gh stackIn_3_0 = null;
+        SceneWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -573,7 +573,7 @@ class gh extends dh {
         try {
           if (param1) {
             var4 = (java.applet.Applet) null;
-            gh.a(25, (java.applet.Applet) null);
+            SceneWidget.a(25, (java.applet.Applet) null);
           }
           var5 = (CharSequence) ((Object) param0);
           stackIn_3_0 = this.a(ke.a(var5, (byte) -48), 3318);
@@ -592,7 +592,7 @@ class gh extends dh {
         }
     }
 
-    gh(String param0, gh param1) {
+    SceneWidget(String param0, SceneWidget param1) {
         this(ke.a((CharSequence) ((Object) param0), (byte) -48), param1, 0, 0, 0, 0, (String) null);
     }
 
@@ -606,12 +606,12 @@ class gh extends dh {
         int var11;
         int var12;
         int var13;
-        gh var14;
+        SceneWidget var14;
         int var15;
         int var8Lifetime1;
         int var8Lifetime2;
         int var8Lifetime3;
-        var15 = SteelSentinels.field_G;
+        var15 = SteelSentinels.obfuscationControl;
         var7 = 10 / ((param4 + 71) / 51);
         if (this.field_Gb > 0) {
           var8 = -(-this.field_Gb >> 2);
@@ -644,19 +644,19 @@ class gh extends dh {
         this.field_Rb = param5 + this.field_Y;
         this.field_Lb = this.field_Lb + var8Lifetime3;
         this.field_lb = this.field_lb - var8Lifetime3;
-        var9 = pb.field_i;
-        var10 = pb.field_l;
-        var11 = pb.field_b;
-        var12 = pb.field_d;
-        pb.h(this.field_Rb, this.field_cb, this.field_zb + this.field_Rb, this.field_Lb + this.field_cb);
+        var9 = SoftwareRaster.field_i;
+        var10 = SoftwareRaster.field_l;
+        var11 = SoftwareRaster.field_b;
+        var12 = SoftwareRaster.field_d;
+        SoftwareRaster.h(this.field_Rb, this.field_cb, this.field_zb + this.field_Rb, this.field_Lb + this.field_cb);
         var13 = 0;
         if (!db.field_d &&
           param0 &&
           lb.field_gc != 0 &&
-          pb.field_i <= oa.field_S &&
-          oa.field_S < pb.field_b &&
-          rj.field_j >= pb.field_l &&
-          pb.field_d > rj.field_j) {
+          SoftwareRaster.field_i <= oa.field_S &&
+          oa.field_S < SoftwareRaster.field_b &&
+          rj.field_j >= SoftwareRaster.field_l &&
+          SoftwareRaster.field_d > rj.field_j) {
           this.field_Eb = lb.field_gc;
           this.field_Nb = -this.field_cb + rj.field_j;
           this.field_Cb = -this.field_Rb + oa.field_S;
@@ -671,15 +671,15 @@ class gh extends dh {
         if (0 == nc.field_d) {
           this.field_W = 0;
         }
-        stackIn_33_1 = (!bh.field_f) && (pb.field_i <= oh.field_f) && (oh.field_f < pb.field_b) && (pb.field_l <= pi.field_c) && (pi.field_c < pb.field_d);
+        stackIn_33_1 = (!bh.field_f) && (SoftwareRaster.field_i <= oh.field_f) && (oh.field_f < SoftwareRaster.field_b) && (SoftwareRaster.field_l <= pi.field_c) && (pi.field_c < SoftwareRaster.field_d);
         this.field_K = stackIn_33_1;
         stackIn_38_1 = (this.field_K) && (this.field_W == nc.field_d) && (param0);
         this.field_kb = stackIn_38_1;
         if (this.field_M != null) {
-          var14 = (gh) (this.field_M.b(1063677678));
+          var14 = (SceneWidget) (this.field_M.b(1063677678));
           while (var14 != null) {
             var14.a(param0, this.field_zb, this.field_cb, this.field_Lb, (byte) 1, this.field_Rb);
-            var14 = (gh) (this.field_M.a(-2137));
+            var14 = (SceneWidget) (this.field_M.a(-2137));
           }
         }
         if (this.field_K) {
@@ -688,7 +688,7 @@ class gh extends dh {
         if (var13 != 0) {
           db.field_d = true;
         }
-        pb.a(var9, var10, var11, var12);
+        SoftwareRaster.a(var9, var10, var11, var12);
         if (this.field_W != 0 &&
           this.field_U) {
           this.field_Y = -this.field_Cb + oh.field_f - param5;
@@ -712,7 +712,7 @@ class gh extends dh {
         }
     }
 
-    gh(long param0, gh param1, String param2) {
+    SceneWidget(long param0, SceneWidget param1, String param2) {
         this(param0, param1, 0, 0, 0, 0, param2);
     }
 
@@ -734,7 +734,7 @@ class gh extends dh {
           Throwable decompiledCaughtException = null;
           Throwable var2_ref = null;
           int var6Lifetime1;
-          var8 = SteelSentinels.field_G;
+          var8 = SteelSentinels.obfuscationControl;
           try {
             try {
               var9 = param1.getParameter("cookieprefix");
@@ -779,21 +779,21 @@ class gh extends dh {
     }
 
     final void a(boolean param0, byte param1) {
-        this.a(true, 0, false, false, false, false, pb.field_c, pb.field_j, (byte) 126, 0, param0);
+        this.a(true, 0, false, false, false, false, SoftwareRaster.field_c, SoftwareRaster.field_j, (byte) 126, 0, param0);
         if (param1 < 125) {
           this.field_Lb = -23;
         }
     }
 
     final void h(int param0) {
-        gh var4 = null;
-        int var3 = SteelSentinels.field_G;
+        SceneWidget var4 = null;
+        int var3 = SteelSentinels.obfuscationControl;
         if (null != this.field_M) {
-          var4 = (gh) (this.field_M.b(1063677678));
+          var4 = (SceneWidget) (this.field_M.b(1063677678));
           while (var4 != null) {
             var4.field_R = true;
             var4.h(42);
-            var4 = (gh) (this.field_M.a(-2137));
+            var4 = (SceneWidget) (this.field_M.a(-2137));
           }
         }
         int var2 = 126 % ((param0 + 23) / 57);
@@ -811,10 +811,10 @@ class gh extends dh {
     }
 
     final int b(int param0, int param1) {
-        gh var4 = null;
+        SceneWidget var4 = null;
         int var5 = 0;
         int var4_int = 0;
-        int var6 = SteelSentinels.field_G;
+        int var6 = SteelSentinels.obfuscationControl;
         int var4_intLifetime1;
         if (param0 >= -82) {
           return 28;
@@ -834,13 +834,13 @@ class gh extends dh {
           }
         }
         if (null != this.field_M) {
-          var4 = (gh) (this.field_M.e(13058));
+          var4 = (SceneWidget) (this.field_M.first(13058));
           while (var4 != null) {
             var5 = var4.field_Y + var4.field_zb;
             if (var3 < var5) {
               var3 = var5;
             }
-            var4 = (gh) (this.field_M.a((byte) -110));
+            var4 = (SceneWidget) (this.field_M.next((byte) -110));
           }
         }
         return var3;
@@ -852,22 +852,22 @@ class gh extends dh {
         int var7;
         int var8;
         int var9;
-        gh var10_ref_gh;
+        SceneWidget var10_ref_gh;
         int var10;
         int var11;
         int var9Lifetime1;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         var5 = -this.field_eb;
         var6 = -this.field_gb + var5;
         var7 = this.field_Lb;
         var8 = this.field_lb + var7;
         if (!param3) {
           var9 = 0;
-          var10_ref_gh = (gh) (this.field_M.e(13058));
+          var10_ref_gh = (SceneWidget) (this.field_M.first(13058));
           while (var10_ref_gh != null) {
             var10_ref_gh.field_gb = var9 - var10_ref_gh.field_eb;
             var9 = var9 + (var10_ref_gh.field_Lb - (-var10_ref_gh.field_lb - param2));
-            var10_ref_gh = (gh) (this.field_M.a((byte) -128));
+            var10_ref_gh = (SceneWidget) (this.field_M.next((byte) -128));
           }
           var8 = -param2 + var9;
         }
@@ -894,11 +894,11 @@ class gh extends dh {
         this.field_Lb = var7;
     }
 
-    gh(long param0, gh param1) {
+    SceneWidget(long param0, SceneWidget param1) {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    public gh() {
+    public SceneWidget() {
         this.field_vb = false;
         this.field_Q = -2147483648;
         this.field_Qb = -2147483648;
@@ -916,7 +916,7 @@ class gh extends dh {
         this.field_tb = false;
     }
 
-    gh(long param0, gh param1, int param2, int param3, int param4, int param5, String param6) {
+    SceneWidget(long param0, SceneWidget param1, int param2, int param3, int param4, int param5, String param6) {
         this.field_vb = false;
         this.field_Q = -2147483648;
         this.field_Qb = -2147483648;
@@ -934,7 +934,7 @@ class gh extends dh {
         this.field_tb = false;
         try {
           this.field_zb = param4;
-          this.field_j = param0;
+          this.key = param0;
           this.field_eb = param3;
           this.field_Lb = param5;
           this.field_Y = param2;

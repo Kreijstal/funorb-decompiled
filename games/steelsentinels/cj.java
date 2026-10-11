@@ -8,18 +8,18 @@ final class cj {
     private int field_k;
     String field_i;
     static String field_b;
-    static gh[] field_a;
+    static SceneWidget[] field_a;
     private sl[] field_c;
     static int field_h;
     static String field_f;
     static int field_j;
 
-    final static gk[] a(int param0, String param1, cm param2, String param3) {
+    final static IndexedSprite[] a(int param0, String param1, cm param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        gk[] stackIn_1_0 = null;
+        IndexedSprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -64,7 +64,7 @@ final class cj {
         int var2;
         sl var3;
         int var4;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         var2 = 69 / ((71 - param0) / 55);
         while (this.field_k > this.field_d) {
           var3 = this.field_c[this.field_d];
@@ -94,7 +94,7 @@ final class cj {
         return true;
     }
 
-    final static int[] a(int param0, int[] param1, nk param2) {
+    final static int[] a(int param0, int[] param1, ArticulatedPart param2) {
         int var7_int = 0;
         int incrementValue$1 = 0;
         int var8 = 0;
@@ -117,7 +117,7 @@ final class cj {
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = SteelSentinels.field_G;
+        var9 = SteelSentinels.obfuscationControl;
         try {
           var3_int = 0;
           var5 = -2 / ((-49 - param0) / 36);
@@ -190,7 +190,7 @@ final class cj {
         int var8Lifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
-        var14 = SteelSentinels.field_G;
+        var14 = SteelSentinels.obfuscationControl;
         try {
           if (param0 <= param4) {
             return;
@@ -275,9 +275,9 @@ final class cj {
           rh.a(false);
           return true;
         }
-        if (n.field_x != null &&
-          n.field_x.k(-91)) {
-          n.field_x = null;
+        if (FunOrbClient.field_x != null &&
+          FunOrbClient.field_x.k(-91)) {
+          FunOrbClient.field_x = null;
           rh.a(false);
           return true;
         }
@@ -297,7 +297,7 @@ final class cj {
         int stackIn_3_0 = 0;
         int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           var3_int = 1;
           if (param0 > -15) {
@@ -329,7 +329,7 @@ final class cj {
 
     static {
         field_b = "Show chat (<%0> unread messages)";
-        field_a = new gh[Math.max(110, 35)];
+        field_a = new SceneWidget[Math.max(110, 35)];
         field_f = "Show game chat from my friends";
         field_j = 9;
     }

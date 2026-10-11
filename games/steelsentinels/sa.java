@@ -5,7 +5,7 @@ final class sa {
     static String field_a;
     static hg[] field_f;
     static String field_d;
-    static wk[] field_e;
+    static RgbSprite[] field_e;
     static int field_c;
     static String field_b;
 
@@ -50,7 +50,7 @@ final class sa {
         if (!id.field_bc.a(25)) {
           return qj.field_i + " - " + id.field_bc.a((byte) -33) + "%";
         }
-        return lg.field_a;
+        return GameApplet.field_a;
     }
 
     final static String a(int param0, String param1, byte param2) {
@@ -105,7 +105,7 @@ final class sa {
             return stackIn_23_0;
           }
           if (11 == param0) {
-            stackIn_26_0 = db.a(n.field_y, -107, new String[]{param1});
+            stackIn_26_0 = db.a(FunOrbClient.field_y, -107, new String[]{param1});
             return stackIn_26_0;
           }
           if (param0 == 12) {
@@ -139,23 +139,23 @@ final class sa {
     final static void a(byte param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        kj var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
           var1 = mm.field_g;
           if (param0 != -110) {
             return;
           }
-          while (qd.a(true)) {
+          while (PartInstruction.a(true)) {
             var1.a(8, (byte) -117);
-            fieldTemp$0 = var1.field_p + 1;
-            var1.field_p = var1.field_p + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             uj.a(true, var1);
-            mm.field_g.b((byte) -93, -var2 + var1.field_p);
+            mm.field_g.b((byte) -93, -var2 + var1.position);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class n extends lg {
+abstract class FunOrbClient extends GameApplet {
     private int field_D;
     private boolean field_C;
     private boolean field_E;
@@ -33,16 +33,16 @@ abstract class n extends lg {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          gi var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
-          var8 = SteelSentinels.field_G;
+          var8 = SteelSentinels.obfuscationControl;
           var4 = hh.a(dh.field_D, param1, (byte) -66, jj.field_d);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = lg.a(ln.a((byte) -89), si.b(64), -121);
+            var5_int = GameApplet.a(ln.a((byte) -89), si.b(64), -121);
             if (var5_int != -1) {
               a.a(di.field_e, (byte) 118, var5_int, vh.field_d);
               vh.field_d = null;
@@ -75,7 +75,7 @@ abstract class n extends lg {
                   di.field_e = null;
                 } else {
                   oa.field_P = li.field_w;
-                  ee.c(11828);
+                  CombatWorld.c(11828);
                   mg.field_ac = false;
                   uj.field_d = 10;
                 }
@@ -89,36 +89,36 @@ abstract class n extends lg {
               mg.field_ac = true;
               uj.field_d = 10;
             } else {
-              ei.a(param2 + 7014, wl.d((byte) -21));
+              ei.a(param2 + 7014, Projectile.d((byte) -21));
             }
           }
           if (5 == var4) {
-            t.a(true, wl.d((byte) -21));
+            t.a(true, Projectile.d((byte) -21));
           }
           if (var4 == 6 &&
-            ck.field_a) {
+            IntrusiveNode.field_a) {
             uj.field_d = 10;
           }
           if (param2 != -7014) {
             return 20;
           }
           if (7 == var4) {
-            nc.a((byte) -81, wl.d((byte) -21));
+            nc.a((byte) -81, Projectile.d((byte) -21));
           }
           if (var4 == 8) {
-            ei.a(0, wl.d((byte) -21));
+            ei.a(0, Projectile.d((byte) -21));
           }
           if (9 == var4) {
-            mj.a((byte) 49, wl.d((byte) -21));
+            mj.a((byte) 49, Projectile.d((byte) -21));
           }
           if (var4 == 10) {
             mm.field_g.a(17, (byte) -117);
           }
           if (var4 == 11) {
-            pf.a(wl.d((byte) -21), 63);
+            pf.a(Projectile.d((byte) -21), 63);
           }
           if (12 == var4) {
-            rj.a(db.b(param2 + 7014), wl.d((byte) -21), (byte) -47);
+            rj.a(db.b(param2 + 7014), Projectile.d((byte) -21), (byte) -47);
           }
           if (var4 == 13) {
             try {
@@ -131,7 +131,7 @@ abstract class n extends lg {
                   var9 = (String) null;
                   na.a((String) null, (byte) -126);
                 } else {
-                  var7 = ub.a((byte) 37, 0, var12.field_t, var12.field_p);
+                  var7 = ub.a((byte) 37, 0, var12.payload, var12.position);
                   na.a(var7, (byte) -105);
                 }
                 kc.field_s = null;
@@ -263,7 +263,7 @@ abstract class n extends lg {
         }
         if (uj.field_d == 11 &&
           fl.field_d == 0) {
-          ee.c(11828);
+          CombatWorld.c(11828);
         }
         return var2;
     }
@@ -280,10 +280,10 @@ abstract class n extends lg {
         fa.a((byte) 127);
         nc.field_j = pi.a((byte) 68);
         hg.a((byte) -93, sl.field_n);
-        ea.field_h = param5;
+        Sprite.field_h = param5;
         jl.field_r = param7;
         ed.field_h = param4;
-        kd.field_p = param6;
+        DualNode.field_p = param6;
         rf.field_c = param0;
         this.c(true);
         di.a((byte) -128);
@@ -371,7 +371,7 @@ abstract class n extends lg {
     final void k(int param0) {
         int discarded$1 = 0;
         int discarded$3 = 0;
-        int var3 = SteelSentinels.field_G;
+        int var3 = SteelSentinels.obfuscationControl;
         if (ri.c(6995)) {
           discarded$1 = this.a(false, wb.field_c != null ? true : false, -7014);
         } else {
@@ -403,7 +403,7 @@ abstract class n extends lg {
         int var4 = -1 + jg.field_f;
         byte[] var5 = new byte[var4];
         rf.field_d.a(0, var4, var5, 103);
-        be.a(var3 != 0, (byte) 99, jk.a(13, var5), wl.d((byte) -21));
+        be.a(var3 != 0, (byte) 99, jk.a(13, var5), Projectile.d((byte) -21));
         if (param0 != 3894) {
           this.f((byte) -96);
         }
@@ -421,7 +421,7 @@ abstract class n extends lg {
         java.awt.Container var6;
         int var3Lifetime1;
         int var3Lifetime2;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         if (null != ve.field_a) {
           if (null == wb.field_c) {
             var6 = pl.g(param0 - 45);
@@ -430,7 +430,7 @@ abstract class n extends lg {
           }
           ve.field_a.b(false);
         }
-        lg.g(-27983);
+        GameApplet.g(-27983);
         rl.b(param0 ^ param0);
         if (!ol.j(0) &&
           uj.field_d != 11) {
@@ -457,12 +457,12 @@ abstract class n extends lg {
           fl.field_d == 0) {
           stackIn_24_0 = (fl.field_d != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_24_0;
-          fl.field_d = kj.j(param0 + 16);
+          fl.field_d = CipherPacketBuffer.j(param0 + 16);
           if (var3Lifetime1 != 0) {
             if (fl.field_d == 0) {
               if (11 == uj.field_d) {
                 if (!ri.a(param0 ^ 16731216)) {
-                  ee.c(11828);
+                  CombatWorld.c(11828);
                   if (fl.field_d != -1 &&
                     fl.field_d != 0) {
                     r.field_l = mm.a(127) + 15000L;
@@ -507,7 +507,7 @@ abstract class n extends lg {
                     if (fl.field_d != 5) {
                       cl.a(pg.field_s, 256, 1);
                     } else {
-                      cl.a(wl.field_R, 5, 1);
+                      cl.a(Projectile.field_R, 5, 1);
                     }
                   } else {
                     cl.a(qf.field_j, 256, 1);
@@ -557,11 +557,11 @@ abstract class n extends lg {
         }
         if (nj.field_Q == 1) {
           if (dh.field_D != 0) {
-            ok.field_f = dh.a(73, ea.field_h);
+            ok.field_f = dh.a(73, Sprite.field_h);
           }
-          ke.field_k = nb.a(true, ed.field_h, param0 + 251, 1, false);
-          oe.field_d = nb.a(true, jl.field_r, param0 ^ 261, 1, false);
-          id.field_bc = nb.a(true, rf.field_c, 256, 1, false);
+          ke.field_k = GameplayController.a(true, ed.field_h, param0 + 251, 1, false);
+          oe.field_d = GameplayController.a(true, jl.field_r, param0 ^ 261, 1, false);
+          id.field_bc = GameplayController.a(true, rf.field_c, 256, 1, false);
           nj.field_Q = 2;
           tm.field_d = ke.field_k;
           ej.field_t = oe.field_d;
@@ -589,7 +589,7 @@ abstract class n extends lg {
           km.a(false);
           fg.n(-6);
           od.field_i = eb.field_q;
-          ck.field_a = false;
+          IntrusiveNode.field_a = false;
           vi.a((byte) -127, ki.field_ib, id.field_bc, ke.field_k, oe.field_d);
           if (ub.field_j ||
             null != uj.field_k) {
@@ -603,9 +603,9 @@ abstract class n extends lg {
           }
           if (null == lk.field_cb) {
             lk.field_cb = vn.c((byte) 83);
-            ji.field_e = ue.a((byte) 62);
+            SentinelDesigner.field_e = ue.a((byte) 62);
           }
-          da.a(id.field_bc, 73, ji.field_e, lk.field_cb);
+          da.a(id.field_bc, 73, SentinelDesigner.field_e, lk.field_cb);
           oe.field_d = null;
           ke.field_k = null;
           id.field_bc = null;
@@ -615,7 +615,7 @@ abstract class n extends lg {
         }
         if (nj.field_Q == 10) {
           if (dh.field_D != 0) {
-            pl.field_S = dh.a(param0 - 99, kd.field_p);
+            pl.field_S = dh.a(param0 - 99, DualNode.field_p);
           }
           nj.field_Q = 11;
         }
@@ -662,7 +662,7 @@ abstract class n extends lg {
           this.i(67);
         }
         String var2 = qh.k(8347);
-        ic.a(param0 - 14, var2, wl.d((byte) -21));
+        ic.a(param0 - 14, var2, Projectile.d((byte) -21));
     }
 
     final void h(int param0) {
@@ -671,7 +671,7 @@ abstract class n extends lg {
         int var2;
         na var3;
         int var4;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         if (param0 <= 40) {
           this.l(8);
         }
@@ -763,7 +763,7 @@ abstract class n extends lg {
         dg.field_h[17] = true;
     }
 
-    protected n() {
+    protected FunOrbClient() {
     }
 
     private final void c(boolean param0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek extends wk {
+final class ek extends RgbSprite {
     final void c(int param0, int param1, int param2, int param3) {
         int var13 = 0;
         int var15 = 0;
@@ -37,30 +37,30 @@ final class ek extends wk {
         if (var6 < var10) {
           param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
         }
-        var13Lifetime2 = param0 + param1 * pb.field_c;
-        int var14 = pb.field_c - param2;
-        if (param1 + param3 > pb.field_d) {
-          param3 = param3 - (param1 + param3 - pb.field_d);
+        var13Lifetime2 = param0 + param1 * SoftwareRaster.field_c;
+        int var14 = SoftwareRaster.field_c - param2;
+        if (param1 + param3 > SoftwareRaster.field_d) {
+          param3 = param3 - (param1 + param3 - SoftwareRaster.field_d);
         }
-        if (param1 < pb.field_l) {
-          var15 = pb.field_l - param1;
+        if (param1 < SoftwareRaster.field_l) {
+          var15 = SoftwareRaster.field_l - param1;
           param3 = param3 - var15;
-          var13Lifetime2 = var13Lifetime2 + var15 * pb.field_c;
+          var13Lifetime2 = var13Lifetime2 + var15 * SoftwareRaster.field_c;
           var8 = var8 + var12 * var15;
         }
-        if (param0 + param2 > pb.field_b) {
-          var15Lifetime1 = param0 + param2 - pb.field_b;
+        if (param0 + param2 > SoftwareRaster.field_b) {
+          var15Lifetime1 = param0 + param2 - SoftwareRaster.field_b;
           param2 = param2 - var15Lifetime1;
           var14 = var14 + var15Lifetime1;
         }
-        if (param0 < pb.field_i) {
-          var15Lifetime2 = pb.field_i - param0;
+        if (param0 < SoftwareRaster.field_i) {
+          var15Lifetime2 = SoftwareRaster.field_i - param0;
           param2 = param2 - var15Lifetime2;
           var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        ek.c(pb.field_g, this.field_E, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        ek.c(SoftwareRaster.field_g, this.field_E, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -97,33 +97,33 @@ final class ek extends wk {
         int var9Lifetime2;
         param0 = param0 + this.field_D;
         param1 = param1 + this.field_H;
-        int var3 = param0 + param1 * pb.field_c;
+        int var3 = param0 + param1 * SoftwareRaster.field_c;
         int var4 = 0;
         int var5 = this.field_F;
         int var6 = this.field_A;
-        int var7 = pb.field_c - var6;
+        int var7 = SoftwareRaster.field_c - var6;
         int var8 = 0;
-        if (param1 < pb.field_l) {
-          var9 = pb.field_l - param1;
+        if (param1 < SoftwareRaster.field_l) {
+          var9 = SoftwareRaster.field_l - param1;
           var5 = var5 - var9;
-          param1 = pb.field_l;
+          param1 = SoftwareRaster.field_l;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * pb.field_c;
+          var3 = var3 + var9 * SoftwareRaster.field_c;
         }
-        if (param1 + var5 > pb.field_d) {
-          var5 = var5 - (param1 + var5 - pb.field_d);
+        if (param1 + var5 > SoftwareRaster.field_d) {
+          var5 = var5 - (param1 + var5 - SoftwareRaster.field_d);
         }
-        if (param0 < pb.field_i) {
-          var9Lifetime1 = pb.field_i - param0;
+        if (param0 < SoftwareRaster.field_i) {
+          var9Lifetime1 = SoftwareRaster.field_i - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = pb.field_i;
+          param0 = SoftwareRaster.field_i;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > pb.field_b) {
-          var9Lifetime2 = param0 + var6 - pb.field_b;
+        if (param0 + var6 > SoftwareRaster.field_b) {
+          var9Lifetime2 = param0 + var6 - SoftwareRaster.field_b;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -132,7 +132,7 @@ final class ek extends wk {
           var5 <= 0) {
           return;
         }
-        ek.e(pb.field_g, this.field_E, 0, var4, var3, var6, var5, var7, var8);
+        ek.e(SoftwareRaster.field_g, this.field_E, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void c(int param0, int param1, int param2) {
@@ -141,33 +141,33 @@ final class ek extends wk {
         int var10Lifetime2;
         param0 = param0 + this.field_D;
         param1 = param1 + this.field_H;
-        int var4 = param0 + param1 * pb.field_c;
+        int var4 = param0 + param1 * SoftwareRaster.field_c;
         int var5 = 0;
         int var6 = this.field_F;
         int var7 = this.field_A;
-        int var8 = pb.field_c - var7;
+        int var8 = SoftwareRaster.field_c - var7;
         int var9 = 0;
-        if (param1 < pb.field_l) {
-          var10 = pb.field_l - param1;
+        if (param1 < SoftwareRaster.field_l) {
+          var10 = SoftwareRaster.field_l - param1;
           var6 = var6 - var10;
-          param1 = pb.field_l;
+          param1 = SoftwareRaster.field_l;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * pb.field_c;
+          var4 = var4 + var10 * SoftwareRaster.field_c;
         }
-        if (param1 + var6 > pb.field_d) {
-          var6 = var6 - (param1 + var6 - pb.field_d);
+        if (param1 + var6 > SoftwareRaster.field_d) {
+          var6 = var6 - (param1 + var6 - SoftwareRaster.field_d);
         }
-        if (param0 < pb.field_i) {
-          var10Lifetime1 = pb.field_i - param0;
+        if (param0 < SoftwareRaster.field_i) {
+          var10Lifetime1 = SoftwareRaster.field_i - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = pb.field_i;
+          param0 = SoftwareRaster.field_i;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > pb.field_b) {
-          var10Lifetime2 = param0 + var7 - pb.field_b;
+        if (param0 + var7 > SoftwareRaster.field_b) {
+          var10Lifetime2 = param0 + var7 - SoftwareRaster.field_b;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -176,7 +176,7 @@ final class ek extends wk {
           var6 <= 0) {
           return;
         }
-        ek.d(pb.field_g, this.field_E, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+        ek.d(SoftwareRaster.field_g, this.field_E, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -265,33 +265,33 @@ final class ek extends wk {
         int var9Lifetime2;
         param0 = param0 + this.field_D;
         param1 = param1 + this.field_H;
-        int var3 = param0 + param1 * pb.field_c;
+        int var3 = param0 + param1 * SoftwareRaster.field_c;
         int var4 = 0;
         int var5 = this.field_F;
         int var6 = this.field_A;
-        int var7 = pb.field_c - var6;
+        int var7 = SoftwareRaster.field_c - var6;
         int var8 = 0;
-        if (param1 < pb.field_l) {
-          var9 = pb.field_l - param1;
+        if (param1 < SoftwareRaster.field_l) {
+          var9 = SoftwareRaster.field_l - param1;
           var5 = var5 - var9;
-          param1 = pb.field_l;
+          param1 = SoftwareRaster.field_l;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * pb.field_c;
+          var3 = var3 + var9 * SoftwareRaster.field_c;
         }
-        if (param1 + var5 > pb.field_d) {
-          var5 = var5 - (param1 + var5 - pb.field_d);
+        if (param1 + var5 > SoftwareRaster.field_d) {
+          var5 = var5 - (param1 + var5 - SoftwareRaster.field_d);
         }
-        if (param0 < pb.field_i) {
-          var9Lifetime1 = pb.field_i - param0;
+        if (param0 < SoftwareRaster.field_i) {
+          var9Lifetime1 = SoftwareRaster.field_i - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = pb.field_i;
+          param0 = SoftwareRaster.field_i;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > pb.field_b) {
-          var9Lifetime2 = param0 + var6 - pb.field_b;
+        if (param0 + var6 > SoftwareRaster.field_b) {
+          var9Lifetime2 = param0 + var6 - SoftwareRaster.field_b;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -300,7 +300,7 @@ final class ek extends wk {
           var5 <= 0) {
           return;
         }
-        ek.e(pb.field_g, this.field_E, 0, var4, var3, var6, var5, var7, var8);
+        ek.e(SoftwareRaster.field_g, this.field_E, 0, var4, var3, var6, var5, var7, var8);
     }
 
     ek(int param0, int param1) {
@@ -313,33 +313,33 @@ final class ek extends wk {
         int var10Lifetime2;
         param0 = param0 + this.field_D;
         param1 = param1 + this.field_H;
-        int var4 = param0 + param1 * pb.field_c;
+        int var4 = param0 + param1 * SoftwareRaster.field_c;
         int var5 = 0;
         int var6 = this.field_F;
         int var7 = this.field_A;
-        int var8 = pb.field_c - var7;
+        int var8 = SoftwareRaster.field_c - var7;
         int var9 = 0;
-        if (param1 < pb.field_l) {
-          var10 = pb.field_l - param1;
+        if (param1 < SoftwareRaster.field_l) {
+          var10 = SoftwareRaster.field_l - param1;
           var6 = var6 - var10;
-          param1 = pb.field_l;
+          param1 = SoftwareRaster.field_l;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * pb.field_c;
+          var4 = var4 + var10 * SoftwareRaster.field_c;
         }
-        if (param1 + var6 > pb.field_d) {
-          var6 = var6 - (param1 + var6 - pb.field_d);
+        if (param1 + var6 > SoftwareRaster.field_d) {
+          var6 = var6 - (param1 + var6 - SoftwareRaster.field_d);
         }
-        if (param0 < pb.field_i) {
-          var10Lifetime1 = pb.field_i - param0;
+        if (param0 < SoftwareRaster.field_i) {
+          var10Lifetime1 = SoftwareRaster.field_i - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = pb.field_i;
+          param0 = SoftwareRaster.field_i;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > pb.field_b) {
-          var10Lifetime2 = param0 + var7 - pb.field_b;
+        if (param0 + var7 > SoftwareRaster.field_b) {
+          var10Lifetime2 = param0 + var7 - SoftwareRaster.field_b;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -348,7 +348,7 @@ final class ek extends wk {
           var6 <= 0) {
           return;
         }
-        ek.b(0, 0, 0, pb.field_g, this.field_E, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+        ek.b(0, 0, 0, SoftwareRaster.field_g, this.field_E, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
@@ -385,33 +385,33 @@ final class ek extends wk {
         int var9Lifetime2;
         param0 = param0 + this.field_D;
         param1 = param1 + (this.field_B - this.field_F - this.field_H);
-        int var3 = param0 + (param1 + this.field_F - 1) * pb.field_c;
+        int var3 = param0 + (param1 + this.field_F - 1) * SoftwareRaster.field_c;
         int var4 = 0;
         int var5 = this.field_F;
         int var6 = this.field_A;
-        int var7 = -pb.field_c - var6;
+        int var7 = -SoftwareRaster.field_c - var6;
         int var8 = 0;
-        if (param1 < pb.field_l) {
-          var5 = var5 - (pb.field_l - param1);
-          param1 = pb.field_l;
+        if (param1 < SoftwareRaster.field_l) {
+          var5 = var5 - (SoftwareRaster.field_l - param1);
+          param1 = SoftwareRaster.field_l;
         }
-        if (param1 + var5 > pb.field_d) {
-          var9 = param1 + var5 - pb.field_d;
+        if (param1 + var5 > SoftwareRaster.field_d) {
+          var9 = param1 + var5 - SoftwareRaster.field_d;
           var5 = var5 - var9;
-          var3 = var3 - var9 * pb.field_c;
+          var3 = var3 - var9 * SoftwareRaster.field_c;
           var4 = var4 + var9 * var6;
         }
-        if (param0 < pb.field_i) {
-          var9Lifetime1 = pb.field_i - param0;
+        if (param0 < SoftwareRaster.field_i) {
+          var9Lifetime1 = SoftwareRaster.field_i - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = pb.field_i;
+          param0 = SoftwareRaster.field_i;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > pb.field_b) {
-          var9Lifetime2 = param0 + var6 - pb.field_b;
+        if (param0 + var6 > SoftwareRaster.field_b) {
+          var9Lifetime2 = param0 + var6 - SoftwareRaster.field_b;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -420,7 +420,7 @@ final class ek extends wk {
           var5 <= 0) {
           return;
         }
-        ek.e(pb.field_g, this.field_E, 0, var4, var3, var6, var5, var7, var8);
+        ek.e(SoftwareRaster.field_g, this.field_E, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void d(int param0, int param1, int param2) {
@@ -429,33 +429,33 @@ final class ek extends wk {
         int var10Lifetime2;
         param0 = param0 + this.field_D;
         param1 = param1 + this.field_H;
-        int var4 = param0 + param1 * pb.field_c;
+        int var4 = param0 + param1 * SoftwareRaster.field_c;
         int var5 = 0;
         int var6 = this.field_F;
         int var7 = this.field_A;
-        int var8 = pb.field_c - var7;
+        int var8 = SoftwareRaster.field_c - var7;
         int var9 = 0;
-        if (param1 < pb.field_l) {
-          var10 = pb.field_l - param1;
+        if (param1 < SoftwareRaster.field_l) {
+          var10 = SoftwareRaster.field_l - param1;
           var6 = var6 - var10;
-          param1 = pb.field_l;
+          param1 = SoftwareRaster.field_l;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * pb.field_c;
+          var4 = var4 + var10 * SoftwareRaster.field_c;
         }
-        if (param1 + var6 > pb.field_d) {
-          var6 = var6 - (param1 + var6 - pb.field_d);
+        if (param1 + var6 > SoftwareRaster.field_d) {
+          var6 = var6 - (param1 + var6 - SoftwareRaster.field_d);
         }
-        if (param0 < pb.field_i) {
-          var10Lifetime1 = pb.field_i - param0;
+        if (param0 < SoftwareRaster.field_i) {
+          var10Lifetime1 = SoftwareRaster.field_i - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = pb.field_i;
+          param0 = SoftwareRaster.field_i;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > pb.field_b) {
-          var10Lifetime2 = param0 + var7 - pb.field_b;
+        if (param0 + var7 > SoftwareRaster.field_b) {
+          var10Lifetime2 = param0 + var7 - SoftwareRaster.field_b;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -464,7 +464,7 @@ final class ek extends wk {
           var6 <= 0) {
           return;
         }
-        ek.d(pb.field_g, this.field_E, 0, var5, var4, var7, var6, var8, var9, param2);
+        ek.d(SoftwareRaster.field_g, this.field_E, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
@@ -515,33 +515,33 @@ final class ek extends wk {
         int var9Lifetime2;
         param0 = param0 + (this.field_z - this.field_A - this.field_D);
         param1 = param1 + this.field_H;
-        int var3 = param0 + param1 * pb.field_c;
+        int var3 = param0 + param1 * SoftwareRaster.field_c;
         int var4 = this.field_A - 1;
         int var5 = this.field_F;
         int var6 = this.field_A;
-        int var7 = pb.field_c - var6;
+        int var7 = SoftwareRaster.field_c - var6;
         int var8 = var6 + var6;
-        if (param1 < pb.field_l) {
-          var9 = pb.field_l - param1;
+        if (param1 < SoftwareRaster.field_l) {
+          var9 = SoftwareRaster.field_l - param1;
           var5 = var5 - var9;
-          param1 = pb.field_l;
+          param1 = SoftwareRaster.field_l;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * pb.field_c;
+          var3 = var3 + var9 * SoftwareRaster.field_c;
         }
-        if (param1 + var5 > pb.field_d) {
-          var5 = var5 - (param1 + var5 - pb.field_d);
+        if (param1 + var5 > SoftwareRaster.field_d) {
+          var5 = var5 - (param1 + var5 - SoftwareRaster.field_d);
         }
-        if (param0 < pb.field_i) {
-          var9Lifetime1 = pb.field_i - param0;
+        if (param0 < SoftwareRaster.field_i) {
+          var9Lifetime1 = SoftwareRaster.field_i - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = pb.field_i;
+          param0 = SoftwareRaster.field_i;
           var4 = var4 - var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 - var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > pb.field_b) {
-          var9Lifetime2 = param0 + var6 - pb.field_b;
+        if (param0 + var6 > SoftwareRaster.field_b) {
+          var9Lifetime2 = param0 + var6 - SoftwareRaster.field_b;
           var6 = var6 - var9Lifetime2;
           var8 = var8 - var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -550,7 +550,7 @@ final class ek extends wk {
           var5 <= 0) {
           return;
         }
-        ek.d(pb.field_g, this.field_E, 0, var4, var3, var6, var5, var7, var8);
+        ek.d(SoftwareRaster.field_g, this.field_E, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void d(int param0, int param1) {
@@ -588,28 +588,28 @@ final class ek extends wk {
         var4 = this.field_F >> 2;
         param0 = param0 + this.field_D / 4;
         param1 = param1 + this.field_H / 4;
-        if (param0 >= pb.field_i) {
+        if (param0 >= SoftwareRaster.field_i) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = pb.field_i - param0 << 2;
+          stackIn_3_0 = SoftwareRaster.field_i - param0 << 2;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= pb.field_b) {
+        if (param0 + var3 <= SoftwareRaster.field_b) {
           stackIn_6_0 = this.field_A - 4;
         } else {
-          stackIn_6_0 = (pb.field_b - param0 << 2) - 4;
+          stackIn_6_0 = (SoftwareRaster.field_b - param0 << 2) - 4;
         }
         var6 = stackIn_6_0;
-        if (param1 >= pb.field_l) {
+        if (param1 >= SoftwareRaster.field_l) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = pb.field_l - param1 << 2;
+          stackIn_9_0 = SoftwareRaster.field_l - param1 << 2;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= pb.field_d) {
+        if (param1 + var4 <= SoftwareRaster.field_d) {
           stackIn_12_0 = this.field_F - 4;
         } else {
-          stackIn_12_0 = (pb.field_d - param1 << 2) - 4;
+          stackIn_12_0 = (SoftwareRaster.field_d - param1 << 2) - 4;
         }
         var8 = stackIn_12_0;
         var23 = new int[16];
@@ -618,7 +618,7 @@ final class ek extends wk {
         for (var10 = var7; var10 <= var8; var10 += 4) {
           for (var11 = var5; var11 <= var6; var11 += 4) {
             var12 = var10 * this.field_A + var11;
-            var13 = (param1 + (var10 >> 2)) * pb.field_c + (param0 + (var11 >> 2));
+            var13 = (param1 + (var10 >> 2)) * SoftwareRaster.field_c + (param0 + (var11 >> 2));
             for (var14 = 0; var14 < 4; var14++) {
               for (var15 = 0; var15 < 4; var15++) {
                 var9[(var14 << 2) + var15] = this.field_E[var12 + var14 * this.field_A + var15];
@@ -642,8 +642,8 @@ final class ek extends wk {
               var17 = var17 / var15Lifetime1 << 8;
               var19Lifetime1 = var15Lifetime1 >> 4;
               var20 = 256 - var19Lifetime1;
-              var21 = pb.field_g[var13];
-              pb.field_g[var13] = (var19Lifetime1 * var16 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var17 + var20 * (var21 & 65280) & 16711680) >>> 8;
+              var21 = SoftwareRaster.field_g[var13];
+              SoftwareRaster.field_g[var13] = (var19Lifetime1 * var16 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var17 + var20 * (var21 & 65280) & 16711680) >>> 8;
             }
           }
         }
@@ -684,30 +684,30 @@ final class ek extends wk {
         if (var7 < var11) {
           param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
         }
-        var14Lifetime2 = param0 + param1 * pb.field_c;
-        int var15 = pb.field_c - param2;
-        if (param1 + param3 > pb.field_d) {
-          param3 = param3 - (param1 + param3 - pb.field_d);
+        var14Lifetime2 = param0 + param1 * SoftwareRaster.field_c;
+        int var15 = SoftwareRaster.field_c - param2;
+        if (param1 + param3 > SoftwareRaster.field_d) {
+          param3 = param3 - (param1 + param3 - SoftwareRaster.field_d);
         }
-        if (param1 < pb.field_l) {
-          var16 = pb.field_l - param1;
+        if (param1 < SoftwareRaster.field_l) {
+          var16 = SoftwareRaster.field_l - param1;
           param3 = param3 - var16;
-          var14Lifetime2 = var14Lifetime2 + var16 * pb.field_c;
+          var14Lifetime2 = var14Lifetime2 + var16 * SoftwareRaster.field_c;
           var9 = var9 + var13 * var16;
         }
-        if (param0 + param2 > pb.field_b) {
-          var16Lifetime1 = param0 + param2 - pb.field_b;
+        if (param0 + param2 > SoftwareRaster.field_b) {
+          var16Lifetime1 = param0 + param2 - SoftwareRaster.field_b;
           param2 = param2 - var16Lifetime1;
           var15 = var15 + var16Lifetime1;
         }
-        if (param0 < pb.field_i) {
-          var16Lifetime2 = pb.field_i - param0;
+        if (param0 < SoftwareRaster.field_i) {
+          var16Lifetime2 = SoftwareRaster.field_i - param0;
           param2 = param2 - var16Lifetime2;
           var14Lifetime2 = var14Lifetime2 + var16Lifetime2;
           var8 = var8 + var12 * var16Lifetime2;
           var15 = var15 + var16Lifetime2;
         }
-        ek.c(pb.field_g, this.field_E, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+        ek.c(SoftwareRaster.field_g, this.field_E, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
     }
 
     final void e(int param0, int param1, int param2, int param3) {
@@ -734,26 +734,26 @@ final class ek extends wk {
         var7 = param2 << 8;
         var8 = (param3 - param2 << 8) / var5;
         var9 = 0;
-        if (param0 < pb.field_i) {
-          var6 = var6 - (pb.field_i - param0);
-          var9 = var9 + (pb.field_i - param0);
-          param0 = pb.field_i;
+        if (param0 < SoftwareRaster.field_i) {
+          var6 = var6 - (SoftwareRaster.field_i - param0);
+          var9 = var9 + (SoftwareRaster.field_i - param0);
+          param0 = SoftwareRaster.field_i;
         }
-        if (param1 < pb.field_l) {
-          var7 = var7 + (pb.field_l - param1) * var8;
-          var5 = var5 - (pb.field_l - param1);
-          var9 = var9 + (pb.field_l - param1) * pb.field_c;
-          param1 = pb.field_l;
+        if (param1 < SoftwareRaster.field_l) {
+          var7 = var7 + (SoftwareRaster.field_l - param1) * var8;
+          var5 = var5 - (SoftwareRaster.field_l - param1);
+          var9 = var9 + (SoftwareRaster.field_l - param1) * SoftwareRaster.field_c;
+          param1 = SoftwareRaster.field_l;
         }
-        if (param0 + var6 > pb.field_b) {
-          var6 = pb.field_b - param0;
+        if (param0 + var6 > SoftwareRaster.field_b) {
+          var6 = SoftwareRaster.field_b - param0;
         }
-        if (param1 + var5 > pb.field_d) {
-          var5 = pb.field_d - param1;
+        if (param1 + var5 > SoftwareRaster.field_d) {
+          var5 = SoftwareRaster.field_d - param1;
         }
-        var10 = pb.field_c - var6;
+        var10 = SoftwareRaster.field_c - var6;
         var11 = this.field_A - var6;
-        var12 = param0 + param1 * pb.field_c;
+        var12 = param0 + param1 * SoftwareRaster.field_c;
         for (param1 = -var5; param1 < 0; param1++) {
           var13 = var7 >> 8;
           if (var13 >= 0) {
@@ -763,10 +763,10 @@ final class ek extends wk {
               incrementValue$0 = var9;
               var9++;
               var16 = this.field_E[incrementValue$0];
-              var17 = pb.field_g[var12];
+              var17 = SoftwareRaster.field_g[var12];
               incrementValue$1 = var12;
               var12++;
-              pb.field_g[incrementValue$1] = ((var16 & 16711935) * var14 + (var17 & 16711935) * var15 & -16711936) + ((var16 & 65280) * var14 + (var17 & 65280) * var15 & 16711680) >>> 8;
+              SoftwareRaster.field_g[incrementValue$1] = ((var16 & 16711935) * var14 + (var17 & 16711935) * var15 & -16711936) + ((var16 & 65280) * var14 + (var17 & 65280) * var15 & 16711680) >>> 8;
             }
             var12 = var12 + var10;
             var9 = var9 + var11;
@@ -810,33 +810,33 @@ final class ek extends wk {
         var4 = this.field_F >> 1;
         param0 = param0 + this.field_D / 2;
         param1 = param1 + this.field_H / 2;
-        if (param0 >= pb.field_i) {
+        if (param0 >= SoftwareRaster.field_i) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = pb.field_i - param0 << 1;
+          stackIn_3_0 = SoftwareRaster.field_i - param0 << 1;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= pb.field_b) {
+        if (param0 + var3 <= SoftwareRaster.field_b) {
           stackIn_6_0 = this.field_A - 2;
         } else {
-          stackIn_6_0 = (pb.field_b - param0 << 1) - 2;
+          stackIn_6_0 = (SoftwareRaster.field_b - param0 << 1) - 2;
         }
         var6 = stackIn_6_0;
-        if (param1 >= pb.field_l) {
+        if (param1 >= SoftwareRaster.field_l) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = pb.field_l - param1 << 1;
+          stackIn_9_0 = SoftwareRaster.field_l - param1 << 1;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= pb.field_d) {
+        if (param1 + var4 <= SoftwareRaster.field_d) {
           stackIn_12_0 = this.field_F - 2;
         } else {
-          stackIn_12_0 = (pb.field_d - param1 << 1) - 2;
+          stackIn_12_0 = (SoftwareRaster.field_d - param1 << 1) - 2;
         }
         var8 = stackIn_12_0;
         for (var9 = var7; var9 <= var8; var9 += 2) {
           var10 = var9 * this.field_A + var5;
-          var11 = (param1 + (var9 >> 1)) * pb.field_c + (param0 + (var5 >> 1));
+          var11 = (param1 + (var9 >> 1)) * SoftwareRaster.field_c + (param0 + (var5 >> 1));
           var12 = var5;
           while (var12 <= var6) {
             var13 = 0;
@@ -865,8 +865,8 @@ final class ek extends wk {
               var16 = var16 / var18 << 8;
               var19Lifetime1 = var18 >> 2;
               var20 = 256 - var19Lifetime1;
-              var21 = pb.field_g[var11];
-              pb.field_g[var11] = (var19Lifetime1 * var15 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var16 + var20 * (var21 & 65280) & 16711680) >>> 8;
+              var21 = SoftwareRaster.field_g[var11];
+              SoftwareRaster.field_g[var11] = (var19Lifetime1 * var15 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var16 + var20 * (var21 & 65280) & 16711680) >>> 8;
             }
             var12 += 2;
             var11++;
@@ -967,33 +967,33 @@ final class ek extends wk {
         int var10Lifetime2;
         param0 = param0 + this.field_D;
         param1 = param1 + this.field_H;
-        int var4 = param0 + param1 * pb.field_c;
+        int var4 = param0 + param1 * SoftwareRaster.field_c;
         int var5 = 0;
         int var6 = this.field_F;
         int var7 = this.field_A;
-        int var8 = pb.field_c - var7;
+        int var8 = SoftwareRaster.field_c - var7;
         int var9 = 0;
-        if (param1 < pb.field_l) {
-          var10 = pb.field_l - param1;
+        if (param1 < SoftwareRaster.field_l) {
+          var10 = SoftwareRaster.field_l - param1;
           var6 = var6 - var10;
-          param1 = pb.field_l;
+          param1 = SoftwareRaster.field_l;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * pb.field_c;
+          var4 = var4 + var10 * SoftwareRaster.field_c;
         }
-        if (param1 + var6 > pb.field_d) {
-          var6 = var6 - (param1 + var6 - pb.field_d);
+        if (param1 + var6 > SoftwareRaster.field_d) {
+          var6 = var6 - (param1 + var6 - SoftwareRaster.field_d);
         }
-        if (param0 < pb.field_i) {
-          var10Lifetime1 = pb.field_i - param0;
+        if (param0 < SoftwareRaster.field_i) {
+          var10Lifetime1 = SoftwareRaster.field_i - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = pb.field_i;
+          param0 = SoftwareRaster.field_i;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > pb.field_b) {
-          var10Lifetime2 = param0 + var7 - pb.field_b;
+        if (param0 + var7 > SoftwareRaster.field_b) {
+          var10Lifetime2 = param0 + var7 - SoftwareRaster.field_b;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1002,6 +1002,6 @@ final class ek extends wk {
           var6 <= 0) {
           return;
         }
-        ek.c(pb.field_g, this.field_E, 0, var5, var4, var7, var6, var8, var9, param2);
+        ek.c(SoftwareRaster.field_g, this.field_E, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 }

@@ -9,9 +9,9 @@ final class vi extends dl implements cg, ae, oj {
     private bc field_cb;
     static String field_X;
     private bc field_Q;
-    static wk field_R;
+    static RgbSprite field_R;
     private oa field_V;
-    static wk[] field_gb;
+    static RgbSprite[] field_gb;
     private bc field_eb;
     ij field_S;
     private bc field_hb;
@@ -66,7 +66,7 @@ final class vi extends dl implements cg, ae, oj {
         String var4 = null;
         try {
           if (param0 != 20522) {
-            field_R = (wk) null;
+            field_R = (RgbSprite) null;
           }
           var3 = this.field_cb;
           var4 = param1;
@@ -90,9 +90,9 @@ final class vi extends dl implements cg, ae, oj {
         this.field_V = new oa(hg.field_f, (tn) null);
         this.field_cb.field_v = lc.field_i;
         this.field_Y.field_v = bk.field_H;
-        this.field_jb.field_v = gi.field_v;
-        this.field_hb.field_v = ie.field_a;
-        this.field_Q.field_v = jb.field_W;
+        this.field_jb.field_v = PacketBuffer.field_v;
+        this.field_hb.field_v = IsaacRandom.field_a;
+        this.field_Q.field_v = Explosion.field_W;
         this.field_eb.field_v = wb.field_b;
         this.field_ib.field_v = ug.field_K;
         this.field_cb.a(true, new ei(this.field_cb));
@@ -118,9 +118,9 @@ final class vi extends dl implements cg, ae, oj {
         var3 = var3 + this.a(this.field_Y, 170, nc.field_i, var3, 126);
         var3 = var3 + (5 + this.a(var3, true, g.field_m, this.field_jb, "", 20, 170));
         var3 = var3 + this.a(this.field_hb, 170, jh.field_c, var3, 126);
-        var3 = var3 + (this.a(qb.field_N, 170, g.field_b, 12973, this.field_Q, var3) + 5);
+        var3 = var3 + (this.a(ParticleEffect.field_N, 170, g.field_b, 12973, this.field_Q, var3) + 5);
         var3 = var3 + (5 + this.a(bl.field_b, 170, cf.field_s, 12973, this.field_cb, var3));
-        var3 = var3 + this.a(var3, false, ee.field_L, this.field_eb, 170);
+        var3 = var3 + this.a(var3, false, CombatWorld.field_L, this.field_eb, 170);
         hc var4 = new hc(46, var3, this.field_x - 90, 25, this.field_ib, true, -120 + this.field_x, 5, rc.field_m, 11579568, ic.field_cb);
         this.a(var4, -125);
         var3 = var3 + var4.field_E;
@@ -501,7 +501,7 @@ final class vi extends dl implements cg, ae, oj {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           if (param3 < 124) {
             return;

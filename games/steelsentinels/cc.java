@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cc extends gh {
+final class cc extends SceneWidget {
     boolean field_Zb;
     int field_dc;
     long field_ec;
@@ -14,32 +14,32 @@ final class cc extends gh {
     String field_Vb;
     static int field_gc;
     boolean field_kc;
-    gh field_Yb;
+    SceneWidget field_Yb;
     String field_mc;
-    gh field_hc;
+    SceneWidget field_hc;
     boolean field_nc;
     static String field_Tb;
     static ek[] field_pc;
-    gh field_cc;
-    gh field_oc;
+    SceneWidget field_cc;
+    SceneWidget field_oc;
     long field_fc;
     int field_Ub;
-    gh field_Sb;
-    static gh field_bc;
+    SceneWidget field_Sb;
+    static SceneWidget field_bc;
     int field_Wb;
 
     final static void a(int param0, byte param1, boolean param2) {
         int var4 = 0;
         int var5 = 0;
         int var3 = -68 / ((-30 - param1) / 54);
-        if (null != n.field_x) {
-          var4 = n.field_x.a(param2, -95);
+        if (null != FunOrbClient.field_x) {
+          var4 = FunOrbClient.field_x.a(param2, -95);
           if (var4 != -2) {
             if (var4 != -1) {
-              var5 = n.field_x.d((byte) 63) ? 1 : 0;
-              wc.a(0, var5 != 0, n.field_x.field_hc, var4, n.field_x.b(true), param0);
+              var5 = FunOrbClient.field_x.d((byte) 63) ? 1 : 0;
+              wc.a(0, var5 != 0, FunOrbClient.field_x.field_hc, var4, FunOrbClient.field_x.b(true), param0);
             }
-            n.field_x = null;
+            FunOrbClient.field_x = null;
             rh.a(false);
           }
         }
@@ -47,7 +47,7 @@ final class cc extends gh {
 
     final static void a(boolean param0, int param1) {
         int var3;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         if (param1 != 0) {
           return;
         }
@@ -57,8 +57,8 @@ final class cc extends gh {
         }
         if (!param0) {
           if (null != nf.field_b) {
-            if (0 < je.field_t) {
-              je.field_t = je.field_t - 1;
+            if (0 < SentinelCommand.field_t) {
+              SentinelCommand.field_t = SentinelCommand.field_t - 1;
             } else {
               if (bd.field_c > 0) {
                 bd.field_c = bd.field_c - 1;
@@ -73,7 +73,7 @@ final class cc extends gh {
             }
           } else {
             if (ni.field_a != null) {
-              if (je.field_t <= 0) {
+              if (SentinelCommand.field_t <= 0) {
                 if (0 >= fj.field_f) {
                   if (an.field_h > bd.field_c) {
                     if (0 == bd.field_c) {
@@ -85,7 +85,7 @@ final class cc extends gh {
                   fj.field_f = fj.field_f - 1;
                 }
               } else {
-                je.field_t = je.field_t - 1;
+                SentinelCommand.field_t = SentinelCommand.field_t - 1;
               }
             } else {
               vb.field_c = false;
@@ -93,11 +93,11 @@ final class cc extends gh {
                 if (fj.field_f > 0) {
                   fj.field_f = fj.field_f - 1;
                 } else {
-                  if (je.field_t < an.field_h) {
-                    if (je.field_t == 0) {
+                  if (SentinelCommand.field_t < an.field_h) {
+                    if (SentinelCommand.field_t == 0) {
                       bf.m(854);
                     }
-                    je.field_t = je.field_t + 1;
+                    SentinelCommand.field_t = SentinelCommand.field_t + 1;
                   }
                 }
               } else {
@@ -106,8 +106,8 @@ final class cc extends gh {
             }
           }
         } else {
-          if (je.field_t > 0) {
-            je.field_t = je.field_t - 1;
+          if (SentinelCommand.field_t > 0) {
+            SentinelCommand.field_t = SentinelCommand.field_t - 1;
           } else {
             if (0 < bd.field_c) {
               bd.field_c = bd.field_c - 1;
@@ -139,7 +139,7 @@ final class cc extends gh {
     }
 
     cc(String param0, String param1, long param2) {
-        super(0L, (gh) null);
+        super(0L, (SceneWidget) null);
         CharSequence var6 = null;
         try {
           this.field_mc = param0;
@@ -195,7 +195,7 @@ final class cc extends gh {
 
     final static void j(int param0) {
         int var1_int = 0;
-        int var2 = SteelSentinels.field_G;
+        int var2 = SteelSentinels.obfuscationControl;
         int var1_intLifetime1;
         try {
           gd.field_qb.c((byte) -118);

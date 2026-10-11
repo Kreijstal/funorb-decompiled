@@ -5,7 +5,7 @@ import java.io.*;
 
 final class sn {
     private long field_m;
-    static ul field_r;
+    static NodeDeque field_r;
     private long field_c;
     private RandomAccessFile field_e;
     static ml field_p;
@@ -31,11 +31,11 @@ final class sn {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
-          var1_int = ck.field_c[param0];
-          for (var2 = 1; var2 < ck.field_c.length; var2++) {
-            var3 = ck.field_c[var2];
+          var1_int = IntrusiveNode.field_c[param0];
+          for (var2 = 1; var2 < IntrusiveNode.field_c.length; var2++) {
+            var3 = IntrusiveNode.field_c[var2];
             ii.a(um.field_bb, var2 << 4, um.field_bb, var1_int, var3);
             var1_int = var1_int + var3;
           }
@@ -229,7 +229,7 @@ final class sn {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var2 = SteelSentinels.field_G;
+        var2 = SteelSentinels.obfuscationControl;
         try {
           if (!oc.a((byte) 84)) {
             if (wb.field_c != null &&
@@ -256,7 +256,7 @@ final class sn {
     }
 
     static {
-        field_r = new ul();
+        field_r = new NodeDeque();
         field_p = new ml();
         field_b = 1;
         field_s = "<%0> is already on your ignore list.";

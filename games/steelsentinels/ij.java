@@ -36,9 +36,9 @@ final class ij extends dl implements ae {
         RuntimeException var3 = null;
         bl var4 = null;
         int var6 = 0;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
-          this.field_K.g(6);
+          this.field_K.clear(6);
           if (!param0) {
             this.field_Z = (String[]) null;
           }
@@ -89,7 +89,7 @@ final class ij extends dl implements ae {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var6_intLifetime1;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           for (var6_int = 0; var6_int < this.field_Z.length; var6_int++) {
             if (param3 == this.field_U[var6_int]) {
@@ -171,7 +171,7 @@ final class ij extends dl implements ae {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           var2_int = param0.length();
           var3 = 0;
@@ -223,35 +223,35 @@ final class ij extends dl implements ae {
           String[] var6 = (String[]) null;
           this.a(false, (String[]) null);
         }
-        mi var5 = tj.field_e;
+        BitmapFont var5 = tj.field_e;
         if (null != this.field_Z) {
           var5.a(qi.field_h, param2 + this.field_o, this.field_z + param0, this.field_x, 20, 16777215, -1, 0, 0, var5.field_F + var5.field_G);
         }
     }
 
-    final static wk j(int param0) {
+    final static RgbSprite j(int param0) {
         int var4_int = 0;
-        int var5 = SteelSentinels.field_G;
+        int var5 = SteelSentinels.obfuscationControl;
         int var1 = ca.field_r[0] * le.field_L[0];
         if (param0 != -100) {
-          return (wk) null;
+          return (RgbSprite) null;
         }
         byte[] var2 = dl.field_L[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = ba.field_d[ec.a(255, (int) var2[var4_int])];
         }
-        wk var4 = new wk(un.field_n, eb.field_n, rl.field_a[0], oa.field_M[0], le.field_L[0], ca.field_r[0], var3);
+        RgbSprite var4 = new RgbSprite(un.field_n, eb.field_n, rl.field_a[0], oa.field_M[0], le.field_L[0], ca.field_r[0], var3);
         uh.a(9324);
         return var4;
     }
 
-    final static gk[] i(int param0) {
+    final static IndexedSprite[] i(int param0) {
         int var2 = 0;
-        int var3 = SteelSentinels.field_G;
-        gk[] var1 = new gk[rl.field_d];
+        int var3 = SteelSentinels.obfuscationControl;
+        IndexedSprite[] var1 = new IndexedSprite[rl.field_d];
         for (var2 = 0; rl.field_d > var2; var2++) {
-          var1[var2] = new gk(un.field_n, eb.field_n, rl.field_a[var2], oa.field_M[var2], le.field_L[var2], ca.field_r[var2], dl.field_L[var2], ba.field_d);
+          var1[var2] = new IndexedSprite(un.field_n, eb.field_n, rl.field_a[var2], oa.field_M[var2], le.field_L[var2], ca.field_r[var2], dl.field_L[var2], ba.field_d);
         }
         if (param0 >= -66) {
           field_W = 104;

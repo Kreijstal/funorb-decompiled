@@ -9,7 +9,7 @@ final class ub {
     static int field_g;
     static String field_h;
     static boolean field_j;
-    static gk[] field_a;
+    static IndexedSprite[] field_a;
     static byte[] field_f;
     static String field_k;
     static String field_b;
@@ -51,23 +51,23 @@ final class ub {
     }
 
     final static void a(boolean param0) {
-        kd var1 = null;
-        int var2 = SteelSentinels.field_G;
-        kd var1Lifetime1;
+        DualNode var1 = null;
+        int var2 = SteelSentinels.obfuscationControl;
+        DualNode var1Lifetime1;
         try {
           nn.field_f = null;
           vd.field_h = 0;
           cc.field_gc = 0;
-          ea.field_c.g(6);
-          am.field_c.g(6);
+          Sprite.field_c.clear(6);
+          am.field_c.clear(6);
           var1 = pi.field_a.a(114);
           while (var1 != null) {
-            var1.e(480);
+            var1.unlinkDual(480);
             var1 = pi.field_a.a((byte) -55);
           }
           var1Lifetime1 = db.field_h.a(97);
           while (var1Lifetime1 != null) {
-            var1Lifetime1.e(480);
+            var1Lifetime1.unlinkDual(480);
             var1Lifetime1 = db.field_h.a((byte) -117);
           }
           if (!param0) {
@@ -253,7 +253,7 @@ final class ub {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.b(4);
+          var9.unlink(4);
           this.field_d.a(var6, var8Lifetime1, -1816);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;
@@ -423,7 +423,7 @@ final class ub {
         int var2;
         int var3;
         int var2Lifetime1;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         if (param0 > 115) {
           var2 = param1;
           if (var2 == 2) {

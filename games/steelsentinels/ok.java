@@ -22,7 +22,7 @@ final class ok {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         java.awt.Frame var5 = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           while (true) {
             var3 = param1.a(param2, -1463474960);
@@ -110,7 +110,7 @@ final class ok {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           if (param3 != 109) {
             var7 = (byte[]) null;

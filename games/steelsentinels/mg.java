@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mg extends gh {
+final class mg extends SceneWidget {
     private int field_Sb;
     static String field_ec;
     private int field_jc;
@@ -23,14 +23,14 @@ final class mg extends gh {
     static String field_Tb;
     static String field_lc;
     static String field_nc;
-    static gh field_Ub;
+    static SceneWidget field_Ub;
     static int field_kc;
     private char[] field_cc;
 
     private final void c(int param0, int param1) {
         int var4 = 0;
         int var3 = 0;
-        int var7 = SteelSentinels.field_G;
+        int var7 = SteelSentinels.obfuscationControl;
         this.field_fc = param1;
         int var5 = 0;
         int var6 = -114 / ((param0 + 35) / 45);
@@ -47,7 +47,7 @@ final class mg extends gh {
         int var6;
         int var7;
         String var8;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         if (param3 <= 79) {
           return;
         }
@@ -106,13 +106,13 @@ final class mg extends gh {
             field_Tb = (String) null;
           }
           uc.field_e[param2] = param0;
-          i.field_e[param2] = new ji(param2);
+          i.field_e[param2] = new SentinelDesigner(param2);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "mg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    mg(long param0, gh param1, gh param2, gh param3, mg[] param4, int[] param5, String[] param6, char[] param7) {
+    mg(long param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, mg[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -136,8 +136,8 @@ final class mg extends gh {
         String var12 = null;
         Object var14 = null;
         int var15 = 0;
-        mi var17 = null;
-        mi var18 = null;
+        BitmapFont var17 = null;
+        BitmapFont var18 = null;
         this.field_Sb = -1;
         try {
           this.field_Vb = param4;
@@ -161,7 +161,7 @@ final class mg extends gh {
               this.field_bc[var13] == -1) {
               var14 = ik.field_g;
             }
-            this.field_Yb[var13] = new qh(0L, param2, (gh) null, param3, (wk) (var14), param6[var13]);
+            this.field_Yb[var13] = new qh(0L, param2, (SceneWidget) null, param3, (RgbSprite) (var14), param6[var13]);
             this.a(this.field_Yb[var13], 121);
             var15 = var17.c(param6[var13]);
             if (this.field_Wb < var15) {
@@ -226,7 +226,7 @@ final class mg extends gh {
         int var8;
         int var9;
         int var7Lifetime1;
-        var9 = SteelSentinels.field_G;
+        var9 = SteelSentinels.obfuscationControl;
         if (param3 != 27) {
           field_lc = (String) null;
         }
@@ -251,7 +251,7 @@ final class mg extends gh {
     final boolean m(int param0) {
         int var4 = 0;
         qh var5_ref_qh = null;
-        int var6 = SteelSentinels.field_G;
+        int var6 = SteelSentinels.obfuscationControl;
         int var2 = 0;
         qh[] var3 = this.field_Yb;
         for (var4 = 0; var4 < var3.length; var4++) {
@@ -275,7 +275,7 @@ final class mg extends gh {
         boolean stackIn_8_1 = false;
         mg var4;
         mg var7;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         for (var4_int = 0; var4_int < this.field_Yb.length; var4_int++) {
           var5 = this.field_Yb[var4_int];
           if (1 == var5.field_Eb) {
@@ -313,7 +313,7 @@ final class mg extends gh {
         int var5;
         int var7;
         int stackIn_3_0 = 0;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         stackIn_3_0 = (85 != ei.field_q) ? 0 : 1;
         var4 = stackIn_3_0;
         if (this.field_mc != null) {
@@ -353,7 +353,7 @@ final class mg extends gh {
     final void l(int param0) {
         qh var4 = null;
         int var3 = 0;
-        int var5 = SteelSentinels.field_G;
+        int var5 = SteelSentinels.obfuscationControl;
         qh[] var6 = this.field_Yb;
         qh[] var2 = var6;
         int var3Lifetime1;
@@ -365,7 +365,7 @@ final class mg extends gh {
         var3Lifetime1 = -17 / ((-59 - param0) / 58);
         if (this.field_mc != null) {
           this.field_mc.l(45);
-          this.field_mc.b(4);
+          this.field_mc.unlink(4);
         }
         this.field_mc = null;
         this.field_Sb = -1;

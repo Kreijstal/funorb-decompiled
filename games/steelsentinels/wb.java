@@ -8,16 +8,16 @@ final class wb {
     static String field_e;
     static byte[] field_j;
     static int[] field_h;
-    static mi field_a;
+    static BitmapFont field_a;
     static int field_g;
-    static wk field_i;
+    static RgbSprite field_i;
     static String field_d;
 
     final static int a(int param0, int param1) {
         int var2;
         int var3;
         int var2Lifetime1;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         if (param0 == 500) {
           if (param1 < 0) {
             return 0;

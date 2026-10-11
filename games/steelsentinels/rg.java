@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class rg {
-    static ul field_d;
+    static NodeDeque field_d;
     static String field_g;
     static boolean field_e;
     static boolean field_h;
@@ -47,7 +47,7 @@ final class rg {
         }
     }
 
-    final static void a(boolean param0, wk param1) {
+    final static void a(boolean param0, RgbSprite param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -64,7 +64,7 @@ final class rg {
         int var6 = 0;
         int var9 = 0;
         String var10 = null;
-        var9 = SteelSentinels.field_G;
+        var9 = SteelSentinels.obfuscationControl;
         try {
           if ((3 & (param1.field_D | (param1.field_F | param1.field_A) | param1.field_H)) == 0) {
             return;
@@ -145,11 +145,11 @@ final class rg {
         int var9 = 0;
         ak var10 = null;
         int var11 = 0;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         try {
           var1_int = hb.field_b - hl.field_q;
           hl.field_q = vg.field_f - (var1_int >> 1);
-          lk.field_W = qg.field_a - (gh.field_hb >> 1);
+          lk.field_W = qg.field_a - (SceneWidget.field_hb >> 1);
           hb.field_b = var1_int + hl.field_q;
           var3 = -104 % ((26 - param0) / 62);
           var2 = lk.field_W;
@@ -187,7 +187,7 @@ final class rg {
               var2 = var2 + (ig.field_e + (tf.field_c + id.field_ac));
             } else {
               re.field_ib.b(var7, var9, var2 + jk.field_d, var6, -1);
-              var2 = var2 + ck.field_e;
+              var2 = var2 + IntrusiveNode.field_e;
             }
           }
           return;
@@ -206,26 +206,26 @@ final class rg {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        wk var6 = null;
-        wk var7 = null;
-        wk var8 = null;
-        wk var7Lifetime1;
-        wk var7Lifetime2;
+        RgbSprite var6 = null;
+        RgbSprite var7 = null;
+        RgbSprite var8 = null;
+        RgbSprite var7Lifetime1;
+        RgbSprite var7Lifetime2;
         int var3Lifetime1;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           if (param0 != 30) {
             field_b = (ak) null;
           }
-          pb.h(243, 197, 369, 143, 16777215);
-          pb.a(244, 198, 367, 141, 0);
-          if (jb.field_S == null) {
+          SoftwareRaster.h(243, 197, 369, 143, 16777215);
+          SoftwareRaster.a(244, 198, 367, 141, 0);
+          if (Explosion.field_S == null) {
             if (null != wn.field_a) {
               wn.field_a.a(eb.field_q, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
-          var6 = jb.field_S[lh.field_r];
+          var6 = Explosion.field_S[lh.field_r];
           var7 = var6;
           var7Lifetime1 = var6;
           if (var6 == null) {
@@ -235,10 +235,10 @@ final class rg {
           } else {
             var6.a(245, 199);
           }
-          if (ul.field_g < hh.field_i) {
-            var7Lifetime2 = jb.field_S[oe.field_e];
+          if (NodeDeque.field_g < hh.field_i) {
+            var7Lifetime2 = Explosion.field_S[oe.field_e];
             if (var7Lifetime2 != null) {
-              var2_int = (var7Lifetime2.field_z + 60) * ul.field_g / hh.field_i;
+              var2_int = (var7Lifetime2.field_z + 60) * NodeDeque.field_g / hh.field_i;
               var3 = var2_int - 30;
               if (rf.field_b) {
                 nn.a(245, -256 * var3 / 30, (var7Lifetime2.field_z - var3) * 256 / 30, 199, var7Lifetime2, -1);
@@ -251,8 +251,8 @@ final class rg {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
-            while (jb.field_S.length > var5) {
-              var8 = jb.field_S[var5];
+            while (Explosion.field_S.length > var5) {
+              var8 = Explosion.field_S[var5];
               if (var8 != null && (365 != var8.field_z ||
                 139 != var8.field_B)) {
                 if (var2 == null) {
@@ -278,7 +278,7 @@ final class rg {
     }
 
     static {
-        field_d = new ul();
+        field_d = new NodeDeque();
         field_g = "Play the game without logging in just yet";
         field_f = true;
         field_a = "Connection restored.";

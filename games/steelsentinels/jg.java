@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jg {
-    static gh[] field_h;
+    static SceneWidget[] field_h;
     private sm field_c;
     private int field_i;
     private int field_u;
@@ -56,7 +56,7 @@ final class jg {
         int var3;
         int var4;
         int var5;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         var2 = this.field_k;
         var3 = this.field_i;
         if (!this.a((byte) 106)) {
@@ -137,7 +137,7 @@ final class jg {
 
     final static void a(int param0, byte param1, int param2) {
         int var4 = -117 / ((-11 - param1) / 35);
-        kj var3 = mm.field_g;
+        CipherPacketBuffer var3 = mm.field_g;
         var3.a(param2, (byte) -117);
         var3.a((byte) 124, 3);
         var3.a((byte) 109, 8);
@@ -251,8 +251,8 @@ final class jg {
           var6 = 2 + db.field_b * var4;
           var7 = dl.a(12, 127, var2_int, var5);
           var8 = ol.a(var3, 0, 20, var6);
-          pb.h(var7, var8, var5, var6, 0);
-          pb.a(1 + var7, 1 + var8, -2 + var5, var6 - 2, 16777088);
+          SoftwareRaster.h(var7, var8, var5, var6, 0);
+          SoftwareRaster.a(1 + var7, 1 + var8, -2 + var5, var6 - 2, 16777088);
           bd.field_f.field_L.a(param0, 3 + var7, param1 + var8 - (-km.field_g + bd.field_f.field_L.field_G), 500, 1000, 0, -1, 0, 0, db.field_b);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "jg.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -268,9 +268,9 @@ final class jg {
         int var11 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         try {
-          var6_int = param5 * pb.field_c + param2;
+          var6_int = param5 * SoftwareRaster.field_c + param2;
           if (param3) {
             return;
           }
@@ -278,8 +278,8 @@ final class jg {
             var8 = 255 * (param4 - var7) / (-param5 + param4);
             var9 = 255 * (var7 - param5) / (-param5 + param4);
             var10 = (var8 * param0 + var9 * param1) / 256;
-            pb.field_g[var6_int] = 65793 * var10;
-            var6_int = var6_int + pb.field_c;
+            SoftwareRaster.field_g[var6_int] = 65793 * var10;
+            var6_int = var6_int + SoftwareRaster.field_c;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -291,7 +291,7 @@ final class jg {
 
     final static void a(int param0, int param1) {
         ud.field_w = i.field_d[param0];
-        jk.field_g = nk.field_X[param0];
+        jk.field_g = ArticulatedPart.field_X[param0];
         nm.field_t = si.field_j[param0];
         if (param1 != 1000) {
           jg.a(126, (byte) -10, -36);
@@ -312,7 +312,7 @@ final class jg {
     }
 
     static {
-        field_h = new gh[12];
+        field_h = new SceneWidget[12];
         field_j = false;
         field_t = new String[]{"Ballistics Master", "Missile Assault", "Ballistic Assault", "Missile Defender", "Counter Attack", "Air Defender", "Mechavity", "Perfection", "Smelter", "Master of War", "Tag Rampage", "Gunning for Tags", "Fusion Tag", "Tagged It", "Energising Tag", "Team Tagger", "Destroyer", "Iron Sentinel", "Steel Sentinel", "Alloy Sentinel", "Titanium Sentinel", "Platinum Sentinel", "Adamant Sentinel", "Diamond Sentinel", "Comeback", "And It Costs How Much?", "Vengeance", "Defender", "Master Defender", "Boomerang", "Slingshot", "The Big Red Button", "Ilolian Hero", "Silver Winner", "Gold Winner", "Silver Hero", "Gold Hero", "Conqueror", "Pterocide"};
     }

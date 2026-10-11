@@ -8,12 +8,12 @@ final class od extends RuntimeException {
     static int field_m;
     String field_a;
     static int[] field_k;
-    static gh field_g;
+    static SceneWidget field_g;
     static rf field_d;
     static String field_i;
     static String field_j;
     static String field_b;
-    static wk[] field_c;
+    static RgbSprite[] field_c;
     static boolean field_e;
     private static String field_z;
 
@@ -36,13 +36,13 @@ final class od extends RuntimeException {
         c var2Lifetime1;
         if (param1) {
           var2 = new c();
-          fg.field_Ub.a(3, var2);
+          fg.field_Ub.addLast(3, var2);
           tc.a(87, param0);
           return var2;
         }
         field_m = 46;
         var2Lifetime1 = new c();
-        fg.field_Ub.a(3, var2Lifetime1);
+        fg.field_Ub.addLast(3, var2Lifetime1);
         tc.a(87, param0);
         return var2Lifetime1;
     }

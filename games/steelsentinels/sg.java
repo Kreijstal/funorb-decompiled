@@ -10,7 +10,7 @@ final class sg implements Runnable {
     private boolean field_k;
     private byte[] field_p;
     private int field_n;
-    static gh field_i;
+    static SceneWidget field_i;
     private int field_j;
     private java.net.Socket field_d;
     static String field_h;
@@ -35,7 +35,7 @@ final class sg implements Runnable {
         }
     }
 
-    final static mg a(gh param0, mn param1, boolean param2, gh param3, gh param4) {
+    final static mg a(SceneWidget param0, mn param1, boolean param2, SceneWidget param3, SceneWidget param4) {
         int var14 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;
@@ -71,7 +71,7 @@ final class sg implements Runnable {
         int[] var20 = null;
         char[] var21 = null;
         int var12Lifetime1;
-        var17 = SteelSentinels.field_G;
+        var17 = SteelSentinels.obfuscationControl;
         try {
           if (param1 == null) {
             stackIn_3_0 = null;
@@ -170,8 +170,8 @@ final class sg implements Runnable {
         field_h = null;
         field_i = null;
         if (param0 > -43) {
-          gh var2 = (gh) null;
-          sg.a(30, -23, (gh) null, -70, 104, (gh) null, (byte[]) null, (byte) 72, (gh) null, 102);
+          SceneWidget var2 = (SceneWidget) null;
+          sg.a(30, -23, (SceneWidget) null, -70, 104, (SceneWidget) null, (byte[]) null, (byte) 72, (SceneWidget) null, 102);
           return;
         }
     }
@@ -182,7 +182,7 @@ final class sg implements Runnable {
           Object var2 = null;
           InterruptedException var2_ref = null;
           int var4 = 0;
-          var4 = SteelSentinels.field_G;
+          var4 = SteelSentinels.obfuscationControl;
           if (this.field_f) {
             return;
           }
@@ -231,7 +231,7 @@ final class sg implements Runnable {
           InterruptedException var4 = null;
           int var6 = 0;
           String var7 = null;
-          var6 = SteelSentinels.field_G;
+          var6 = SteelSentinels.obfuscationControl;
           try {
             while (true) {
               var3 = this;
@@ -321,7 +321,7 @@ final class sg implements Runnable {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           if (this.field_f) {
             return;
@@ -353,7 +353,7 @@ final class sg implements Runnable {
         }
     }
 
-    final static void a(int param0, int param1, gh param2, int param3, int param4, gh param5, byte[] param6, byte param7, gh param8, int param9) {
+    final static void a(int param0, int param1, SceneWidget param2, int param3, int param4, SceneWidget param5, byte[] param6, byte param7, SceneWidget param8, int param9) {
         int var11 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -368,9 +368,9 @@ final class sg implements Runnable {
         int var10_int = 0;
         RuntimeException var10 = null;
         int var12 = 0;
-        var12 = SteelSentinels.field_G;
+        var12 = SteelSentinels.obfuscationControl;
         try {
-          nb.field_G = -1L;
+          GameplayController.field_G = -1L;
           wb.field_j = param6;
           gl.field_v = param1;
           be.field_a = param6.length;
@@ -385,10 +385,10 @@ final class sg implements Runnable {
           var10_int = (var10_int + 7) / 8;
           ti.field_s = new byte[var10_int];
           if (null == param5.field_M) {
-            param5.field_M = new ul();
+            param5.field_M = new NodeDeque();
           }
           q.field_m = param5.field_M;
-          q.field_m.g(6);
+          q.field_m.clear(6);
           t.field_c = new dk(param0);
           if (param7 >= -10) {
             return;
@@ -398,16 +398,16 @@ final class sg implements Runnable {
           bj.field_j = 0;
           ud.field_D = -1;
           if (null == param8.field_M) {
-            param8.field_M = new ul();
+            param8.field_M = new NodeDeque();
           }
           ci.field_e = param8.field_M;
-          ci.field_e.g(6);
+          ci.field_e.clear(6);
           fm.field_a = new dk(param3);
           if (param2.field_M == null) {
-            param2.field_M = new ul();
+            param2.field_M = new NodeDeque();
           }
           o.field_d = param2.field_M;
-          o.field_d.g(6);
+          o.field_d.clear(6);
           me.field_b = new dk(param4);
           ka.field_R = 0L;
           ta.field_l = param9;
@@ -479,7 +479,7 @@ final class sg implements Runnable {
     final static char a(byte param0, char param1) {
         int var2;
         int var3;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         if (param0 != 115) {
           return '\n';
         }
@@ -664,7 +664,7 @@ final class sg implements Runnable {
         RuntimeException var5_ref = null;
         int var6 = 0;
         int var8 = 0;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           if (this.field_f) {
             return;

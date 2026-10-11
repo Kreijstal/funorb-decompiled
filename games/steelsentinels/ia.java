@@ -54,7 +54,7 @@ abstract class ia extends v implements fd {
         }
     }
 
-    final static void a(ak param0, ak param1, ak param2, mi param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, mi param18, int param19) {
+    final static void a(ak param0, ak param1, ak param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, BitmapFont param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

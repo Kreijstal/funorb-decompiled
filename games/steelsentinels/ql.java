@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ql extends gh {
-    gh field_bc;
-    static gh field_Vb;
+final class ql extends SceneWidget {
+    SceneWidget field_bc;
+    static SceneWidget field_Vb;
     static int field_Ub;
     kg field_Xb;
     static String field_dc;
     static boolean field_cc;
     static String field_Yb;
-    static gh field_ec;
-    gh field_Sb;
+    static SceneWidget field_ec;
+    SceneWidget field_Sb;
     static int[] field_ac;
     static String field_Zb;
     static ld field_Tb;
-    gh field_Wb;
+    SceneWidget field_Wb;
 
     final static boolean a(int[] param0, int param1) {
         int var2_int = 0;
@@ -24,10 +24,10 @@ final class ql extends gh {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
           if (param1 != 18286) {
-            field_ec = (gh) null;
+            field_ec = (SceneWidget) null;
           }
           var2_int = 0;
           while (true) {
@@ -64,13 +64,13 @@ final class ql extends gh {
         this.a(param2, param4, 102, param6);
     }
 
-    ql(long param0, gh param1, gh param2, lb param3, gh param4, String param5, String param6) {
+    ql(long param0, SceneWidget param1, SceneWidget param2, lb param3, SceneWidget param4, String param5, String param6) {
         super(param0, param1);
         try {
-          this.field_Wb = new gh(0L, (gh) null);
+          this.field_Wb = new SceneWidget(0L, (SceneWidget) null);
           this.field_Xb = new kg(0L, this.field_Wb, param2, param3);
-          this.field_bc = new gh(0L, param4);
-          this.field_Sb = new gh(0L, param4);
+          this.field_bc = new SceneWidget(0L, param4);
+          this.field_Sb = new SceneWidget(0L, param4);
           this.field_bc.field_S = param5;
           this.field_Sb.field_S = param6;
           this.a(this.field_Xb, 127);
@@ -123,9 +123,9 @@ final class ql extends gh {
     }
 
     final static void b(boolean param0) {
-        gi.field_o.a(0, 0, 18, 0, fl.field_c.field_zb - (rm.field_p ? 2 + ua.field_G + 42 : 0));
+        PacketBuffer.field_o.a(0, 0, 18, 0, fl.field_c.field_zb - (rm.field_p ? 2 + ua.field_G + 42 : 0));
         if (!param0) {
-          field_ec = (gh) null;
+          field_ec = (SceneWidget) null;
           uj.field_j.a(0, 0, 18, -2 + (fl.field_c.field_zb - ua.field_G - 40), 42 + ua.field_G);
           mj.field_Sb.a(fl.field_c.field_zb, -2048, ua.field_G, -20 + fl.field_c.field_Lb, 2, 0, 20);
           return;

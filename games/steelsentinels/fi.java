@@ -13,7 +13,7 @@ final class fi extends fa {
     static int field_l;
     private jl field_A;
     private byte[] field_h;
-    static wk field_j;
+    static RgbSprite field_j;
     private cb field_k;
     private rc field_x;
     static int[] field_g;
@@ -22,9 +22,9 @@ final class fi extends fa {
     static int field_y;
     private rc field_E;
     private boolean field_D;
-    private ul field_C;
+    private NodeDeque field_C;
     private boolean field_v;
-    private ul field_i;
+    private NodeDeque field_i;
     private int field_p;
     private long field_n;
     private boolean field_u;
@@ -50,7 +50,7 @@ final class fi extends fa {
         byte[] var28 = null;
         byte[] var29 = null;
         byte[] var30 = null;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         var12 = (fe) (this.field_m.a((long)param1, param0 + 232));
         var4 = var12;
         if (param0 != -109) {
@@ -60,7 +60,7 @@ final class fi extends fa {
           param2 == 0 &&
           !var12.field_B &&
           var12.field_z) {
-          var12.b(4);
+          var12.unlink(4);
           var4 = null;
         }
         if (var4 == null) {
@@ -96,7 +96,7 @@ final class fi extends fa {
               var4 = this.field_B.a((byte) 2, this.field_r, param1, false, (byte) -94);
             }
           }
-          this.field_m.a((long)param1, (ck) (var4), -1816);
+          this.field_m.a((long)param1, (IntrusiveNode) (var4), -1816);
         }
         if (((fe) (var4)).field_z) {
           return null;
@@ -137,7 +137,7 @@ final class fi extends fa {
                 this.field_h[param1] = (byte) 1;
               }
               if (!((fe) (var4)).field_B) {
-                ((fe) (var4)).b(4);
+                ((fe) (var4)).unlink(4);
               }
               stackIn_95_0 = var4;
               return (fe) (stackIn_95_0);
@@ -147,13 +147,13 @@ final class fi extends fa {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_h[param1] = (byte)-1;
-            ((fe) (var4)).b(param0 ^ -105);
+            ((fe) (var4)).unlink(param0 ^ -105);
             if (!((fe) (var4)).field_B) {
               return null;
             }
             if (!this.field_B.c(62)) {
               var4 = this.field_B.a((byte) 2, this.field_r, param1, true, (byte) 55);
-              this.field_m.a((long)param1, (ck) (var4), -1816);
+              this.field_m.a((long)param1, (IntrusiveNode) (var4), -1816);
             }
             return null;
           }
@@ -186,13 +186,13 @@ final class fi extends fa {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_B.a(14900);
-          ((fe) (var4)).b(4);
+          ((fe) (var4)).unlink(4);
           if (((fe) (var4)).field_B) {
             if (this.field_B.c(-93)) {
               return null;
             }
             var4 = this.field_B.a((byte) 2, this.field_r, param1, true, (byte) -128);
-            this.field_m.a((long)param1, (ck) (var4), -1816);
+            this.field_m.a((long)param1, (IntrusiveNode) (var4), -1816);
           }
           return null;
         }
@@ -207,7 +207,7 @@ final class fi extends fa {
           }
         }
         if (!((fe) (var4)).field_B) {
-          ((fe) (var4)).b(4);
+          ((fe) (var4)).unlink(4);
         }
         return (fe) (var4);
     }
@@ -216,25 +216,25 @@ final class fi extends fa {
         int var4 = 0;
         fe discarded$0 = null;
         fe discarded$1 = null;
-        int var5 = SteelSentinels.field_G;
+        int var5 = SteelSentinels.obfuscationControl;
         if (null == this.field_C) {
           return;
         }
         if (null == this.b((byte) 114)) {
           return;
         }
-        ck var2 = this.field_i.e(13058);
+        IntrusiveNode var2 = this.field_i.first(13058);
         int var3 = 51 / ((55 - param0) / 37);
         while (var2 != null) {
-          var4 = (int)var2.field_j;
+          var4 = (int)var2.key;
           if (0 > var4) {
-            var2.b(4);
+            var2.unlink(4);
           } else {
             if (this.field_A.field_u <= var4) {
-              var2.b(4);
+              var2.unlink(4);
             } else {
               if (0 == this.field_A.field_j[var4]) {
-                var2.b(4);
+                var2.unlink(4);
               } else {
                 if (this.field_h[var4] == 0) {
                   discarded$0 = this.a((byte) -109, var4, 1);
@@ -243,12 +243,12 @@ final class fi extends fa {
                   discarded$1 = this.a((byte) -109, var4, 2);
                 }
                 if (this.field_h[var4] == 1) {
-                  var2.b(4);
+                  var2.unlink(4);
                 }
               }
             }
           }
-          var2 = this.field_i.a((byte) -126);
+          var2 = this.field_i.next((byte) -126);
         }
     }
 
@@ -306,7 +306,7 @@ final class fi extends fa {
         byte[] var7 = null;
         byte[] var8 = null;
         byte[] var9 = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         if (param0 != 114) {
           return (jl) null;
         }
@@ -385,15 +385,15 @@ final class fi extends fa {
         fe discarded$3 = null;
         int var2_int;
         fe var2;
-        ck var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        ck var6;
-        ck var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        ck var3Lifetime1;
-        var5 = SteelSentinels.field_G;
+        IntrusiveNode var3Lifetime1;
+        var5 = SteelSentinels.obfuscationControl;
         if (param0 >= -56) {
           discarded$0 = this.a((byte) -11, 3, -96);
         }
@@ -404,18 +404,18 @@ final class fi extends fa {
           }
           if (this.field_D) {
             var2_int = 1;
-            var3 = this.field_C.e(13058);
+            var3 = this.field_C.first(13058);
             while (var3 != null) {
-              var4 = (int)var3.field_j;
+              var4 = (int)var3.key;
               if (this.field_h[var4] == 0) {
                 discarded$2 = this.a((byte) -109, var4, 1);
               }
               if (this.field_h[var4] != 0) {
-                var3.b(4);
+                var3.unlink(4);
               } else {
                 var2_int = 0;
               }
-              var3 = this.field_C.a((byte) -101);
+              var3 = this.field_C.next((byte) -101);
             }
             while (this.field_p < this.field_A.field_j.length) {
               if (0 == this.field_A.field_j[this.field_p]) {
@@ -427,9 +427,9 @@ final class fi extends fa {
                   discarded$1 = this.a((byte) -109, this.field_p, 1);
                 }
                 if (this.field_h[this.field_p] == 0) {
-                  var7 = new ck();
-                  var7.field_j = (long)this.field_p;
-                  this.field_C.a(3, var7);
+                  var7 = new IntrusiveNode();
+                  var7.key = (long)this.field_p;
+                  this.field_C.addLast(3, var7);
                   var2_int = 0;
                 }
                 this.field_p = this.field_p + 1;
@@ -447,33 +447,33 @@ final class fi extends fa {
           else {
             if (this.field_v) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_C.e(13058);
+              var3Lifetime1 = this.field_C.first(13058);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_j;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (1 != this.field_h[var4Lifetime1]) {
                   discarded$4 = this.a((byte) -109, var4Lifetime1, 2);
                 }
                 if (this.field_h[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.b(4);
+                  var3Lifetime1.unlink(4);
                 }
-                var3Lifetime1 = this.field_C.a((byte) -19);
+                var3Lifetime1 = this.field_C.next((byte) -19);
               }
-              L11: while (true) {
+              scanLoop1: while (true) {
                 if (this.field_A.field_j.length > this.field_p) {
                   if (this.field_A.field_j[this.field_p] != 0) {
                     if (this.field_B.b((byte) 102)) {
                       var2_intLifetime1 = 0;
-                      break L11;
+                      break scanLoop1;
                     }
                     if (this.field_h[this.field_p] != 1) {
                       discarded$3 = this.a((byte) -109, this.field_p, 2);
                     }
                     if (this.field_h[this.field_p] != 1) {
-                      var6 = new ck();
-                      var6.field_j = (long)this.field_p;
-                      this.field_C.a(3, var6);
+                      var6 = new IntrusiveNode();
+                      var6.key = (long)this.field_p;
+                      this.field_C.addLast(3, var6);
                       var2_intLifetime1 = 0;
                     }
                   }
@@ -502,7 +502,7 @@ final class fi extends fa {
                 if (!var2.field_B) {
                   throw new RuntimeException();
                 }
-                var2.b(4);
+                var2.unlink(4);
               } else {
                 var2.field_C = true;
               }
@@ -520,7 +520,7 @@ final class fi extends fa {
         }
         int var4 = -50 % ((40 - param1) / 32);
         byte[] var5 = var3.d((byte) -80);
-        var3.b(4);
+        var3.unlink(4);
         return var5;
     }
 
@@ -530,7 +530,7 @@ final class fi extends fa {
           return var3.g(16);
         }
         if (param0) {
-          this.field_C = (ul) null;
+          this.field_C = (NodeDeque) null;
           return 0;
         }
         return 0;
@@ -545,7 +545,7 @@ final class fi extends fa {
           this.field_r = -97;
         }
         if (this.field_C == null) {
-          this.field_C = new ul();
+          this.field_C = new NodeDeque();
         }
     }
 
@@ -641,14 +641,14 @@ final class fi extends fa {
         RuntimeException var10 = null;
         this.field_m = new uh(16);
         this.field_p = 0;
-        this.field_i = new ul();
+        this.field_i = new NodeDeque();
         this.field_n = 0L;
         try {
           this.field_E = param1;
           this.field_r = param0;
           if (this.field_E != null) {
             this.field_D = true;
-            this.field_C = new ul();
+            this.field_C = new NodeDeque();
           } else {
             this.field_D = false;
           }

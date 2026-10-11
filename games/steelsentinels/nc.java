@@ -18,12 +18,12 @@ final class nc {
     static a field_j;
     private q field_o;
     static boolean field_q;
-    static gh field_n;
+    static SceneWidget field_n;
 
     private final void a(byte param0, int param1, Object param2, long param3) {
         bg var6 = null;
         le var6_ref = null;
-        int var7 = SteelSentinels.field_G;
+        int var7 = SteelSentinels.obfuscationControl;
         try {
           if (this.field_c < param1) {
             throw new IllegalStateException();
@@ -86,8 +86,8 @@ final class nc {
           this.a((bg) null, -108);
           var9 = var8.d((byte) 125);
           if (var9 == null) {
-            var8.b(4);
-            var8.e(480);
+            var8.unlink(4);
+            var8.unlinkDual(480);
             this.field_l = this.field_l + var8.field_z;
             return null;
           }
@@ -97,17 +97,17 @@ final class nc {
             return var9;
           }
           var6 = new le(var9, var8.field_z);
-          this.field_o.a(var6, var8.field_j, false);
+          this.field_o.a(var6, var8.key, false);
           this.field_k.a((byte) 72, var6);
           ((bg) ((Object) var6)).field_w = 0L;
-          var8.b(4);
-          var8.e(480);
+          var8.unlink(4);
+          var8.unlinkDual(480);
           return var9;
         }
         Object var10 = var8.d((byte) 125);
         if (var10 == null) {
-          var8.b(4);
-          var8.e(480);
+          var8.unlink(4);
+          var8.unlinkDual(480);
           this.field_l = this.field_l + var8.field_z;
           return null;
         }
@@ -117,11 +117,11 @@ final class nc {
           return var10;
         }
         var6Lifetime1 = new le(var10, var8.field_z);
-        this.field_o.a(var6Lifetime1, var8.field_j, false);
+        this.field_o.a(var6Lifetime1, var8.key, false);
         this.field_k.a((byte) 72, var6Lifetime1);
         ((bg) ((Object) var6Lifetime1)).field_w = 0L;
-        var8.b(4);
-        var8.e(480);
+        var8.unlink(4);
+        var8.unlinkDual(480);
         return var10;
     }
 
@@ -134,8 +134,8 @@ final class nc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != null) {
-            param0.b(param1 ^ -17385);
-            param0.e(param1 + 17869);
+            param0.unlink(param1 ^ -17385);
+            param0.unlinkDual(param1 + 17869);
             this.field_l = this.field_l + param0.field_z;
           }
           if (param1 == -17389) {
@@ -266,7 +266,7 @@ final class nc {
         wj var8 = null;
         int[] var9 = null;
         int[] var10 = null;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           if (!param1.b(-35)) {
             stackIn_4_0 = new vc[]{};
@@ -374,14 +374,14 @@ final class nc {
         return;
     }
 
-    final static gk a(int param0, byte param1) {
+    final static IndexedSprite a(int param0, byte param1) {
         if (param0 >= 35) {
           return bl.field_p[param0 - 35];
         }
         if (param1 < -93) {
-          return ie.field_d[param0];
+          return IsaacRandom.field_d[param0];
         }
-        return (gk) null;
+        return (IndexedSprite) null;
     }
 
     static {

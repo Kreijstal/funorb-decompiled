@@ -80,7 +80,7 @@ abstract class v implements tl {
 
     final static void a(int param0, String param1, int param2) {
         try {
-          ji.field_i = param0;
+          SentinelDesigner.field_i = param0;
           in.field_i = bg.field_G;
           if (param2 != 10) {
             field_d = (String) null;

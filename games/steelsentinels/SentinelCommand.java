@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class je extends ck {
+final class SentinelCommand extends IntrusiveNode {
     boolean field_q;
     static boolean field_v;
-    static ul field_w;
+    static NodeDeque field_w;
     boolean field_p;
-    int field_A;
+    int actionVariant;
     static int field_o;
-    int field_x;
-    int field_s;
+    int startTick;
+    int actionType;
     int field_B;
     int field_u;
     int field_y;
-    int field_r;
-    boolean field_z;
+    int endTick;
+    boolean activated;
     static int field_t;
 
     public static void a(byte param0) {
         field_w = null;
         if (param0 >= -102) {
           byte[] var2 = (byte[]) null;
-          je.a(-111, (byte[]) null);
+          SentinelCommand.a(-111, (byte[]) null);
         }
     }
 
@@ -60,99 +60,99 @@ final class je extends ck {
         }
     }
 
-    je(int param0, int param1, int param2) {
+    SentinelCommand(int param0, int param1, int param2) {
         int var4;
-        this.field_x = param2;
-        this.field_s = param0;
+        this.startTick = param2;
+        this.actionType = param0;
         this.field_q = false;
-        this.field_A = param1;
+        this.actionVariant = param1;
         this.field_p = false;
         var4 = 50;
-        this.field_z = false;
-        if (this.field_s == 6) {
+        this.activated = false;
+        if (this.actionType == 6) {
           var4 = 5;
         }
-        if (this.field_s == 5) {
-          this.field_z = true;
+        if (this.actionType == 5) {
+          this.activated = true;
           var4 = 125;
         }
-        if (this.field_s == 12) {
-          this.field_z = false;
+        if (this.actionType == 12) {
+          this.activated = false;
           var4 = 5;
         }
-        if (this.field_s == 3) {
-          this.field_z = true;
+        if (this.actionType == 3) {
+          this.activated = true;
           var4 = 100;
         }
-        if (0 == this.field_s) {
+        if (0 == this.actionType) {
           var4 = 10;
-          if (this.field_A == 0) {
+          if (this.actionVariant == 0) {
             var4 = 25;
           }
-          if (1 == this.field_A) {
+          if (1 == this.actionVariant) {
             var4 = 20;
           }
-          if (this.field_A == 2) {
+          if (this.actionVariant == 2) {
             var4 = 35;
           }
-          if (3 == this.field_A) {
+          if (3 == this.actionVariant) {
             var4 = 50;
           }
-          if (6 == this.field_A) {
+          if (6 == this.actionVariant) {
             var4 = 40;
-            this.field_z = true;
+            this.activated = true;
           }
-          if (this.field_A == 7) {
+          if (this.actionVariant == 7) {
             var4 = 50;
-            this.field_z = true;
+            this.activated = true;
           }
-          if (8 == this.field_A) {
+          if (8 == this.actionVariant) {
             var4 = 100;
-            this.field_z = true;
+            this.activated = true;
           }
-          if (this.field_A == 9) {
+          if (this.actionVariant == 9) {
             var4 = 30;
-            this.field_z = true;
+            this.activated = true;
           }
-          if (this.field_A == 10) {
+          if (this.actionVariant == 10) {
             var4 = 20;
-            this.field_z = true;
+            this.activated = true;
           }
-          if (this.field_A == 4) {
+          if (this.actionVariant == 4) {
             var4 = 75;
           }
-          if (5 == this.field_A) {
+          if (5 == this.actionVariant) {
             var4 = 75;
           }
         }
-        if (this.field_s == 7) {
-          this.field_z = true;
+        if (this.actionType == 7) {
+          this.activated = true;
           var4 = 25;
-          if (3 == this.field_A) {
+          if (3 == this.actionVariant) {
             var4 = 100;
           }
         }
-        if (this.field_s == 8) {
+        if (this.actionType == 8) {
           var4 = 25;
-          this.field_z = true;
+          this.activated = true;
         }
-        if (this.field_s == 9) {
-          this.field_z = true;
+        if (this.actionType == 9) {
+          this.activated = true;
           var4 = 25;
         }
-        if (11 == this.field_s) {
+        if (11 == this.actionType) {
           var4 = 25;
-          this.field_z = false;
+          this.activated = false;
         }
-        if (this.field_s == 10) {
+        if (this.actionType == 10) {
           var4 = 1;
         }
-        this.field_r = var4 + this.field_x;
+        this.endTick = var4 + this.startTick;
     }
 
     static {
         field_v = false;
         field_o = 0;
-        field_w = new ul();
+        field_w = new NodeDeque();
     }
 }

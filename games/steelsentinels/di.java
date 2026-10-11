@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class di {
-    static wk field_f;
+    static RgbSprite field_f;
     static int field_g;
     static String field_e;
     static int field_d;

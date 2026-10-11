@@ -41,7 +41,7 @@ final class rj {
         int var9_intLifetime1;
         int var9_intLifetime2;
         int var9_intLifetime1Lifetime1;
-        var14 = SteelSentinels.field_G;
+        var14 = SteelSentinels.obfuscationControl;
         try {
           try {
             if (param2 + param3 > param1.length) {
@@ -177,7 +177,7 @@ final class rj {
         int var6;
         int var7;
         java.applet.Applet var8;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         if (this.field_a != -1L) {
           if (~this.field_a != ~this.field_e) {
             this.field_q.a(this.field_a, -1);
@@ -240,7 +240,7 @@ final class rj {
         int stackIn_205_0 = 0;
         int stackIn_208_0 = 0;
         int stackIn_296_0 = 0;
-        gh stackIn_333_0 = null;
+        SceneWidget stackIn_333_0 = null;
         int stackIn_350_0 = 0;
         int stackIn_350_1 = 0;
         boolean stackIn_351_2 = false;
@@ -252,17 +252,17 @@ final class rj {
         int stackIn_436_4;
         String stackIn_437_5;
         int stackIn_456_0 = 0;
-        gh stackIn_493_0 = null;
-        gh stackIn_493_1 = null;
+        SceneWidget stackIn_493_0 = null;
+        SceneWidget stackIn_493_1 = null;
         String stackIn_493_2 = null;
-        gh stackIn_494_0 = null;
-        gh stackIn_494_1 = null;
+        SceneWidget stackIn_494_0 = null;
+        SceneWidget stackIn_494_1 = null;
         Object stackIn_494_3 = null;
-        gh stackIn_496_0 = null;
-        wk[] stackIn_496_1 = null;
+        SceneWidget stackIn_496_0 = null;
+        RgbSprite[] stackIn_496_1 = null;
         int stackIn_496_2 = 0;
         int stackIn_497_3;
-        gh stackIn_554_0;
+        SceneWidget stackIn_554_0;
         int stackIn_554_1;
         int stackIn_554_2;
         int stackIn_554_3;
@@ -274,28 +274,28 @@ final class rj {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        qd var5_ref_qd = null;
+        PartInstruction var5_ref_qd = null;
         int var6 = 0;
-        qd var6_ref_qd = null;
+        PartInstruction var6_ref_qd = null;
         int var7_int = 0;
-        gh var7 = null;
-        qd var8 = null;
+        SceneWidget var7 = null;
+        PartInstruction var8 = null;
         int var8_int = 0;
-        gh var8_ref = null;
-        gh var9 = null;
+        SceneWidget var8_ref = null;
+        SceneWidget var9 = null;
         int var10_int = 0;
-        gh var10 = null;
+        SceneWidget var10 = null;
         int var11_int = 0;
-        gh var11 = null;
+        SceneWidget var11 = null;
         int var12_int = 0;
-        gh var12 = null;
+        SceneWidget var12 = null;
         int var13 = 0;
-        nk var13_ref_nk = null;
+        ArticulatedPart var13_ref_nk = null;
         int var14_int = 0;
         Object var14 = null;
         Object var15 = null;
         int var16_int = 0;
-        gh var16 = null;
+        SceneWidget var16 = null;
         int[] var16_array = null;
         int var17 = 0;
         Object var17_ref = null;
@@ -305,13 +305,13 @@ final class rj {
         int[] var19_ref_int__ = null;
         int var19 = 0;
         int var20_int = 0;
-        gh var20 = null;
+        SceneWidget var20 = null;
         int var21_int = 0;
-        gh var21 = null;
+        SceneWidget var21 = null;
         lb var23 = null;
         int var25 = 0;
         int var26_int = 0;
-        gh var26 = null;
+        SceneWidget var26 = null;
         Object var27_ref = null;
         int var27 = 0;
         int var28 = 0;
@@ -319,38 +319,38 @@ final class rj {
         int var30 = 0;
         int[] var31 = null;
         int var32 = 0;
-        qd var34 = null;
-        nk var35 = null;
-        qd var36 = null;
+        PartInstruction var34 = null;
+        ArticulatedPart var35 = null;
+        PartInstruction var36 = null;
         kg var37 = null;
         kg var38 = null;
-        gh var39 = null;
-        gh var40 = null;
-        gh var41 = null;
-        gh var42 = null;
-        gh var43 = null;
+        SceneWidget var39 = null;
+        SceneWidget var40 = null;
+        SceneWidget var41 = null;
+        SceneWidget var42 = null;
+        SceneWidget var43 = null;
         Object var44 = null;
-        jc var45 = null;
-        gh var46 = null;
-        gh var47 = null;
-        gh var48 = null;
-        gh var49 = null;
-        jc var50 = null;
-        gh var51 = null;
-        gh var52 = null;
-        gh var53 = null;
-        gh var54 = null;
-        gh var55 = null;
-        gh var56 = null;
-        gh var57 = null;
-        gh var58 = null;
+        NodeIterator var45 = null;
+        SceneWidget var46 = null;
+        SceneWidget var47 = null;
+        SceneWidget var48 = null;
+        SceneWidget var49 = null;
+        NodeIterator var50 = null;
+        SceneWidget var51 = null;
+        SceneWidget var52 = null;
+        SceneWidget var53 = null;
+        SceneWidget var54 = null;
+        SceneWidget var55 = null;
+        SceneWidget var56 = null;
+        SceneWidget var57 = null;
+        SceneWidget var58 = null;
         kg var60 = null;
-        gh var61 = null;
-        gh var62 = null;
-        gh var63 = null;
-        gh var64 = null;
+        SceneWidget var61 = null;
+        SceneWidget var62 = null;
+        SceneWidget var63 = null;
+        SceneWidget var64 = null;
         kg var65 = null;
-        gh var66 = null;
+        SceneWidget var66 = null;
         kg var67 = null;
         int[] var69 = null;
         int[] var73 = null;
@@ -364,7 +364,7 @@ final class rj {
         var75 = null;
         var76 = null;
         var77 = null;
-        var32 = SteelSentinels.field_G;
+        var32 = SteelSentinels.obfuscationControl;
         try {
           var1_int = 0;
           var2 = 0;
@@ -418,16 +418,16 @@ final class rj {
           var4 = stackIn_34_0;
           if (var4 != 0 ||
             nl.field_X) {
-            lg.field_l = true;
+            GameApplet.field_l = true;
           }
           if (dc.field_g >= 0) {
             kf.field_s = true;
-            lg.field_l = true;
+            GameApplet.field_l = true;
           }
           nl.field_X = var4 != 0;
           if (qa.field_M != 0 &&
             57 != qa.field_M) {
-            lg.field_l = true;
+            GameApplet.field_l = true;
           }
           if (fg.field_Ob != 1) {
             qa.field_M = Math.max(qa.field_M - 6, 0);
@@ -436,16 +436,16 @@ final class rj {
           }
           if (qa.field_M != 0 &&
             qa.field_M != 57) {
-            lg.field_l = true;
+            GameApplet.field_l = true;
           }
           if (null != hl.field_v && (null == kh.field_v ||
-            kh.field_v.field_N != hl.field_v.field_N)) {
+            kh.field_v.componentId != hl.field_v.componentId)) {
             var5 = uc.field_b[0];
             var73 = nl.a(var5, (byte) 123);
             for (var7_int = 0; var7_int < dn.field_bc.length; var7_int++) {
               dn.field_bc[var7_int] = -1;
             }
-            kh.field_v = ji.a(var73, (byte) -50, dn.field_bc);
+            kh.field_v = SentinelDesigner.a(var73, (byte) -50, dn.field_bc);
           }
           if (-2 == pa.field_e &&
             lb.field_gc == 1 &&
@@ -461,7 +461,7 @@ final class rj {
               if (ij.field_Y < 0) {
                 di.field_c[pa.field_e] = -1;
               } else {
-                lg.field_l = true;
+                GameApplet.field_l = true;
                 ij.field_Y = -1;
               }
             } else {
@@ -472,7 +472,7 @@ final class rj {
                   fg.field_Ob = 0;
                   var1_int = 1;
                   kf.field_s = true;
-                  lg.field_l = true;
+                  GameApplet.field_l = true;
                 }
                 if (0 <= ij.field_Y) {
                   ij.field_Y = -1;
@@ -490,24 +490,24 @@ final class rj {
                 he.a((byte) 118)) {
                 var34 = lj.field_h;
                 var6 = kh.field_v.a((byte) 2, var34);
-                if ((!(var6 < 0)) && ((null == var34.field_d ||
-                  var6 != var34.field_d.field_N))) {
-                  if (null != var34.field_d &&
-                    83 == var34.field_d.field_N) {
+                if ((!(var6 < 0)) && ((null == var34.attachedPart ||
+                  var6 != var34.attachedPart.componentId))) {
+                  if (null != var34.attachedPart &&
+                    83 == var34.attachedPart.componentId) {
                     var1_int = 1;
                   }
-                  var34.field_d = new nk(ul.a(var6, (byte) 67));
+                  var34.attachedPart = new ArticulatedPart(NodeDeque.a(var6, (byte) 67));
                   var7_int = ub.a(125, var6);
                   if (var7_int >= 0) {
                     var8 = hl.field_v.c(0, lj.field_h.field_r);
                     if (var8 != null) {
-                      var8.field_d = new nk(ul.a(var7_int, (byte) 67));
+                      var8.attachedPart = new ArticulatedPart(NodeDeque.a(var7_int, (byte) 67));
                     }
                   }
                   if (var6 == 83) {
                     var1_int = 1;
                   }
-                  ee.c(param0 - 6996144, 25);
+                  CombatWorld.c(param0 - 6996144, 25);
                 }
                 decompiledFrameRemainder3 = false;
               }
@@ -518,17 +518,17 @@ final class rj {
                     ti.field_B = null;
                     f.field_A = null;
                   } else {
-                    var35 = lj.field_h.field_d;
+                    var35 = lj.field_h.attachedPart;
                     if (var35 != null && (var35.field_Q == 4 ||
                       var35.field_Q == 2048)) {
                       var6_ref_qd = hl.field_v.c(0, lj.field_h.field_r);
                       if (var6_ref_qd != null) {
-                        var6_ref_qd.field_d = null;
+                        var6_ref_qd.attachedPart = null;
                       }
                     }
-                    lj.field_h.field_d = null;
+                    lj.field_h.attachedPart = null;
                     if (((var35 != null)) &&
-                      ((var35.field_N == 83))) {
+                      ((var35.componentId == 83))) {
                       var1_int = 1;
                     }
                   }
@@ -540,27 +540,27 @@ final class rj {
                     if ((fg.field_Ob & 16) != 0 &&
                       ti.field_B != null) {
                       if (!((ti.field_B.field_Q & lj.field_h.field_q) <= 0)) {
-                        if (ti.field_B.field_N == 83) {
+                        if (ti.field_B.componentId == 83) {
                           var1_int = 1;
                         }
-                        lj.field_h.field_d = new nk(ti.field_B);
-                        ee.c(-2483, 25);
+                        lj.field_h.attachedPart = new ArticulatedPart(ti.field_B);
+                        CombatWorld.c(-2483, 25);
                       }
                       decompiledFrameRemainder3 = false;
                     }
                     else {
-                      if (null == lj.field_h.field_d) {
+                      if (null == lj.field_h.attachedPart) {
                         if (null != ti.field_B &&
                           (ti.field_B.field_Q & lj.field_h.field_q) > 0) {
-                          lj.field_h.field_d = ti.field_B;
-                          if (ti.field_B.field_N == 83) {
+                          lj.field_h.attachedPart = ti.field_B;
+                          if (ti.field_B.componentId == 83) {
                             var1_int = 1;
                           }
-                          ee.c(-2483, 25);
+                          CombatWorld.c(-2483, 25);
                           if (null != f.field_A) {
                             var5_ref_qd = hl.field_v.c(param0 ^ 6993661, lj.field_h.field_r);
                             if (var5_ref_qd != null) {
-                              var5_ref_qd.field_d = f.field_A;
+                              var5_ref_qd.attachedPart = f.field_A;
                             }
                           }
                           ti.field_B = null;
@@ -569,42 +569,42 @@ final class rj {
                       } else {
                         if (ti.field_B != null &&
                           0 < (ti.field_B.field_Q & lj.field_h.field_q)) {
-                          lj.field_h.field_d = ti.field_B;
-                          if (ti.field_B.field_N == 83) {
+                          lj.field_h.attachedPart = ti.field_B;
+                          if (ti.field_B.componentId == 83) {
                             var1_int = 1;
                           }
-                          ee.c(-2483, 25);
+                          CombatWorld.c(-2483, 25);
                           if (null != f.field_A) {
                             var5_ref_qd = hl.field_v.c(0, lj.field_h.field_r);
                             if (var5_ref_qd != null) {
-                              var5_ref_qd.field_d = f.field_A;
+                              var5_ref_qd.attachedPart = f.field_A;
                             }
                           }
                           f.field_A = null;
                           ti.field_B = null;
                         } else {
                           if (null == ti.field_B) {
-                            ti.field_B = lj.field_h.field_d;
+                            ti.field_B = lj.field_h.attachedPart;
                             f.field_A = null;
                             if (4 == ti.field_B.field_Q ||
                               ti.field_B.field_Q == 2048) {
                               var36 = hl.field_v.c(0, lj.field_h.field_r);
                               if (var36 != null) {
-                                f.field_A = var36.field_d;
-                                var36.field_d = null;
+                                f.field_A = var36.attachedPart;
+                                var36.attachedPart = null;
                               } else {
                                 f.field_A = null;
                               }
                             }
-                            if (null != lj.field_h.field_d &&
-                              lj.field_h.field_d.field_N == 83) {
+                            if (null != lj.field_h.attachedPart &&
+                              lj.field_h.attachedPart.componentId == 83) {
                               var1_int = 1;
                             }
                             if (ti.field_B == null) {
                               f.field_A = null;
                               ti.field_B = null;
                             }
-                            lj.field_h.field_d = null;
+                            lj.field_h.attachedPart = null;
                           }
                         }
                       }
@@ -650,7 +650,7 @@ final class rj {
             }
             var8_int = stackIn_179_0;
             if (var8_int != var6) {
-              lg.field_l = true;
+              GameApplet.field_l = true;
             }
             var37 = bi.field_f;
             if (var37 != null) {
@@ -706,7 +706,7 @@ final class rj {
               }
               var12_int = stackIn_208_0;
               if (var11_int != var12_int) {
-                lg.field_l = true;
+                GameApplet.field_l = true;
               }
             }
             if (lb.field_gc == 1) {
@@ -765,7 +765,7 @@ final class rj {
                 f.field_A = null;
                 ij.field_Y = -1;
                 ti.field_B = null;
-                ee.c(-2483, 95);
+                CombatWorld.c(-2483, 95);
               }
             }
             t.field_h = -1;
@@ -788,9 +788,9 @@ final class rj {
                       he.a((byte) 121)) {
                       var15 = null;
                       if (!t.a(fe.field_D, var12_int, -20370)) {
-                        if (ad.a(var12_int, nk.f((byte) -96), fe.field_D, (byte) 84, ge.field_m, rn.field_D)) {
+                        if (ad.a(var12_int, ArticulatedPart.f((byte) -96), fe.field_D, (byte) 84, ge.field_m, rn.field_D)) {
                           if (qf.field_h[var12_int] > li.field_v) {
-                            var15 = hd.field_g;
+                            var15 = BattleTerrain.field_g;
                             ln.field_c = b.field_q[2];
                           }
                         } else {
@@ -811,7 +811,7 @@ final class rj {
                               var15 = k.field_Eb;
                               break;
                             case 27:
-                              var15 = kd.field_t;
+                              var15 = DualNode.field_t;
                               break;
                             case 25:
                               var15 = rd.field_c;
@@ -828,7 +828,7 @@ final class rj {
                         !ni.b(param0 - 6993613)) {
                         sn.field_q = var12_int;
                         f.field_v = qf.field_h[var12_int];
-                        ee.c(-2483, 95);
+                        CombatWorld.c(-2483, 95);
                       }
                       if (var15 != null) {
                         array$0 = new String[1];
@@ -852,13 +852,13 @@ final class rj {
                         ij.field_Y = var12_int;
                         ti.field_B = null;
                         f.field_A = null;
-                        ee.c(-2483, 100);
+                        CombatWorld.c(-2483, 100);
                       }
                     }
                     t.field_h = var12_int;
                     if (null == f.field_y) {
-                      var50 = new jc(var48.field_M);
-                      var16 = (gh) (var50.b(2));
+                      var50 = new NodeIterator(var48.field_M);
+                      var16 = (SceneWidget) (var50.b(2));
                       while (var16 != null) {
                         if (var16.field_kb &&
                           var16.field_S != null &&
@@ -867,24 +867,24 @@ final class rj {
                           f.field_y = var16;
                           break;
                         }
-                        var16 = (gh) (var50.d(2));
+                        var16 = (SceneWidget) (var50.d(2));
                       }
                     }
                   }
                 }
               } else {
                 var12_int = 0;
-                var13_ref_nk = (nk) (ao.field_H.e(13058));
+                var13_ref_nk = (ArticulatedPart) (ao.field_H.first(13058));
                 while (var13_ref_nk != null) {
                   var14 = null;
-                  if (0 <= var13_ref_nk.field_N &&
-                    var13_ref_nk.field_N < cj.field_a.length &&
+                  if (0 <= var13_ref_nk.componentId &&
+                    var13_ref_nk.componentId < cj.field_a.length &&
                     0 != (fg.field_Ob & var13_ref_nk.field_Q)) {
-                    var14 = cj.field_a[var13_ref_nk.field_N];
+                    var14 = cj.field_a[var13_ref_nk.componentId];
                   }
                   if (var14 != null &&
-                    ((gh) (var14)).field_kb) {
-                    var43 = ((gh) (var14)).a("engineer", false);
+                    ((SceneWidget) (var14)).field_kb) {
+                    var43 = ((SceneWidget) (var14)).a("engineer", false);
                     if (var43 != null &&
                       var43.field_kb) {
                       df.field_K = true;
@@ -895,8 +895,8 @@ final class rj {
                       he.a((byte) 117)) {
                       var16_int = 0;
                       if (1 == var13_ref_nk.field_Q) {
-                        var17_ref = ki.b(var13_ref_nk.field_N, (byte) -85);
-                        var18_ref_int__ = ne.a(var13_ref_nk.field_N, (byte) 28);
+                        var17_ref = ki.b(var13_ref_nk.componentId, (byte) -85);
+                        var18_ref_int__ = ne.a(var13_ref_nk.componentId, (byte) 28);
                         var69 = (int[]) var17_ref;
                         var44 = var69;
                         var19_ref = var44;
@@ -914,10 +914,10 @@ final class rj {
                           }
                         }
                       } else {
-                        var16_int = sj.field_v[var13_ref_nk.field_N];
+                        var16_int = sj.field_v[var13_ref_nk.componentId];
                       }
                       var17_ref = null;
-                      if (t.a(rn.field_D, var13_ref_nk.field_N, -20370)) {
+                      if (t.a(rn.field_D, var13_ref_nk.componentId, -20370)) {
                         var17_ref = qi.field_e;
                         ln.field_c = b.field_q[0];
                       } else {
@@ -929,11 +929,11 @@ final class rj {
                       if (var17_ref == null &&
                         !ni.b(88)) {
                         f.field_v = var16_int;
-                        sn.field_q = var13_ref_nk.field_N + 128;
-                        ee.c(-2483, 95);
+                        sn.field_q = var13_ref_nk.componentId + 128;
+                        CombatWorld.c(-2483, 95);
                       }
                       if ((var17_ref != null)) {
-                        km.field_a = db.a((String) (var17_ref), param0 - 6993681, new String[]{t.field_e[var13_ref_nk.field_N]});
+                        km.field_a = db.a((String) (var17_ref), param0 - 6993681, new String[]{t.field_e[var13_ref_nk.componentId]});
                       }
                       decompiledFrameRemainder2 = false;
                     }
@@ -946,10 +946,10 @@ final class rj {
                         }
                         if (decompiledFrameRemainder2) {
                           if (var13_ref_nk.field_Q == 1 &&
-                            var13_ref_nk.field_N != 55 &&
+                            var13_ref_nk.componentId != 55 &&
                             (4 & dm.field_a) == 0 &&
                             !he.a((byte) 120)) {
-                            stackIn_296_0 = (var13_ref_nk.field_N == 57) ? 6 : 10;
+                            stackIn_296_0 = (var13_ref_nk.componentId == 57) ? 6 : 10;
                             if (stackIn_296_0 > fm.field_f[0]) {
                               km.field_a = dj.field_i;
                               dm.field_a = dm.field_a | 4;
@@ -961,30 +961,30 @@ final class rj {
                           }
                           if (decompiledFrameRemainder2) {
                             if (var13_ref_nk.field_Q == 1) {
-                              ee.c(-2483, 99);
+                              CombatWorld.c(-2483, 99);
                               di.field_c = new int[8];
                               qh.field_Wb = true;
                               for (var16_int = 0; var16_int < 8; var16_int++) {
                                 di.field_c[var16_int] = -1;
                               }
                               var12_int = 1;
-                              var16_array = nl.a(var13_ref_nk.field_N, (byte) 123);
+                              var16_array = nl.a(var13_ref_nk.componentId, (byte) 123);
                               if (var16_array != null) {
                                 uc.field_b = var16_array;
                               } else {
                                 var12_int = 0;
-                                hl.field_v = new nk(var13_ref_nk);
+                                hl.field_v = new ArticulatedPart(var13_ref_nk);
                               }
                               ij.field_Y = -1;
                               ti.field_B = null;
                             } else {
-                              ee.c(param0 ^ -6995792, 100);
-                              t.field_h = var13_ref_nk.field_N;
-                              ti.field_B = new nk(var13_ref_nk);
+                              CombatWorld.c(param0 ^ -6995792, 100);
+                              t.field_h = var13_ref_nk.componentId;
+                              ti.field_B = new ArticulatedPart(var13_ref_nk);
                               f.field_A = null;
-                              var16_int = ub.a(119, var13_ref_nk.field_N);
+                              var16_int = ub.a(119, var13_ref_nk.componentId);
                               if (var16_int >= 0) {
-                                f.field_A = new nk(ul.a(var16_int, (byte) 67));
+                                f.field_A = new ArticulatedPart(NodeDeque.a(var16_int, (byte) 67));
                               }
                               ij.field_Y = -1;
                             }
@@ -992,27 +992,27 @@ final class rj {
                         }
                       }
                     }
-                    t.field_h = var13_ref_nk.field_N;
+                    t.field_h = var13_ref_nk.componentId;
                     if (null != f.field_y) {
-                      var13_ref_nk = (nk) (ao.field_H.a((byte) -27));
+                      var13_ref_nk = (ArticulatedPart) (ao.field_H.next((byte) -27));
                       continue;
                     }
-                    var45 = new jc(((gh) (var14)).field_M);
-                    var17_ref = (gh) (var45.b(2));
+                    var45 = new NodeIterator(((SceneWidget) (var14)).field_M);
+                    var17_ref = (SceneWidget) (var45.b(2));
                     while (var17_ref != null) {
-                      if (((gh) (var17_ref)).field_kb &&
-                        null != ((gh) (var17_ref)).field_S && (((gh) (var17_ref)).field_S.startsWith("<img=6>") ||
-                        ((gh) (var17_ref)).field_S.startsWith("<img=2>") ||
-                        ((gh) (var17_ref)).field_S.startsWith("<img=3>") ||
-                        ((gh) (var17_ref)).field_S.length() == 7 &&
-                        ((gh) (var17_ref)).field_S.startsWith("<img="))) {
-                        f.field_y = (gh) (var17_ref);
+                      if (((SceneWidget) (var17_ref)).field_kb &&
+                        null != ((SceneWidget) (var17_ref)).field_S && (((SceneWidget) (var17_ref)).field_S.startsWith("<img=6>") ||
+                        ((SceneWidget) (var17_ref)).field_S.startsWith("<img=2>") ||
+                        ((SceneWidget) (var17_ref)).field_S.startsWith("<img=3>") ||
+                        ((SceneWidget) (var17_ref)).field_S.length() == 7 &&
+                        ((SceneWidget) (var17_ref)).field_S.startsWith("<img="))) {
+                        f.field_y = (SceneWidget) (var17_ref);
                         break;
                       }
-                      var17_ref = (gh) (var45.d(2));
+                      var17_ref = (SceneWidget) (var45.d(2));
                     }
                   }
-                  var13_ref_nk = (nk) (ao.field_H.a((byte) -27));
+                  var13_ref_nk = (ArticulatedPart) (ao.field_H.next((byte) -27));
                 }
                 if (fg.field_Ob == 1) {
                   for (var13 = 0; ue.field_c.length > var13; var13++) {
@@ -1027,7 +1027,7 @@ final class rj {
                     if (var15 != null &&
                       var46.field_kb &&
                       lb.field_gc == 1) {
-                      var47 = ((gh) (var15)).a("bin", false);
+                      var47 = ((SceneWidget) (var15)).a("bin", false);
                       if (var47 != null &&
                         var47.field_kb) {
                         ue.field_c[var13] = null;
@@ -1040,7 +1040,7 @@ final class rj {
                         var1_int = 1;
                       } else {
                         var17 = 0;
-                        if (!nk.f((byte) -46)) {
+                        if (!ArticulatedPart.f((byte) -46)) {
                           var18 = 0;
                           while (!(var18 >= ue.field_c[var13].length)) {
                             stackIn_350_0 = ue.field_c[var13][var18];
@@ -1055,7 +1055,7 @@ final class rj {
                           }
                         }
                         if (var17 == 0) {
-                          ee.c(-2483, 99);
+                          CombatWorld.c(-2483, 99);
                           di.field_c = new int[8];
                           var12_int = 1;
                           for (var18 = 0; var18 < 8; var18++) {
@@ -1073,7 +1073,7 @@ final class rj {
                   }
                 }
                 if (var12_int != 0) {
-                  hl.field_v = ji.a(uc.field_b, (byte) -53, di.field_c);
+                  hl.field_v = SentinelDesigner.a(uc.field_b, (byte) -53, di.field_c);
                   hl.field_v.b(6993661, 113);
                 } else {
                   if (lb.field_gc == 2 &&
@@ -1083,7 +1083,7 @@ final class rj {
                     f.field_A = null;
                   }
                   if (ti.field_B != null) {
-                    stackIn_376_0 = ti.field_B.field_N;
+                    stackIn_376_0 = ti.field_B.componentId;
                   } else {
                     stackIn_376_0 = -1;
                   }
@@ -1096,7 +1096,7 @@ final class rj {
                     field_j = -1;
                   }
                   if (var5 != fl.field_a) {
-                    lg.field_l = true;
+                    GameApplet.field_l = true;
                     fl.field_a = var5;
                     ad.field_h = true;
                     kf.field_s = true;
@@ -1125,7 +1125,7 @@ final class rj {
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
             if (ti.field_B != null) {
-              stackIn_456_0 = ti.field_B.field_N;
+              stackIn_456_0 = ti.field_B.componentId;
             } else {
               stackIn_456_0 = -1;
             }
@@ -1138,7 +1138,7 @@ final class rj {
               field_j = -1;
             }
             if (var5 != fl.field_a) {
-              lg.field_l = true;
+              GameApplet.field_l = true;
               fl.field_a = var5;
               ad.field_h = true;
               kf.field_s = true;
@@ -1157,8 +1157,8 @@ final class rj {
           if (decompiledFrameRemainder0) {
             var6 = jj.field_e.field_z;
             jj.field_e.d();
-            pb.a(0, 0, var6, var6, 0);
-            var7_int = ul.a((byte) 105, uc.field_b[0]);
+            SoftwareRaster.a(0, 0, var6, var6, 0);
+            var7_int = NodeDeque.a((byte) 105, uc.field_b[0]);
             if (var7_int < 0 ||
               !(si.field_E.length > var7_int)) {
               var7_int = 0;
@@ -1167,61 +1167,61 @@ final class rj {
             sb.field_bb.b((byte) 122);
             var6 = hj.field_w;
             hj.field_w = 4096;
-            var7 = new gh();
+            var7 = new SceneWidget();
             var7.field_I = wd.field_a;
             var7.field_Kb = 1;
             var7.field_nb = 16777215;
-            var7.field_L = (mi) ((Object) fk.field_d);
+            var7.field_L = (BitmapFont) ((Object) fk.field_d);
             var7.field_Fb = 1;
-            var8_ref = new gh("", var7);
+            var8_ref = new SceneWidget("", var7);
             var8_ref.field_I = km.field_e;
-            kh.field_s = new gh("", var7);
+            kh.field_s = new SceneWidget("", var7);
             kh.field_s.field_Kb = 0;
             kh.field_s.field_Fb = 0;
             kh.field_s.field_ub = 4;
             kh.field_s.field_I = null;
             kh.field_s.field_nb = 16777215;
             kh.field_s.field_Ib = 17;
-            var9 = new gh("", var7);
+            var9 = new SceneWidget("", var7);
             var9.field_I = vh.field_b;
-            dg.field_g = new gh("", var7);
+            dg.field_g = new SceneWidget("", var7);
             dg.field_g.field_I = ng.field_p;
             dg.field_g.field_Ab = cm.field_b;
-            var10 = new gh("", var7);
+            var10 = new SceneWidget("", var7);
             var10.field_Ab = ta.field_c;
             var10.field_nb = 16777215;
             var10.field_I = wc.field_k;
             var10.field_V = 192;
-            var11 = new gh("", var7);
+            var11 = new SceneWidget("", var7);
             var11.field_V = 192;
             var11.field_I = ta.field_c;
             var11.field_nb = 16777215;
-            var12 = new gh("", var7);
+            var12 = new SceneWidget("", var7);
             var12.field_Ab = ta.field_c;
             var12.field_I = wc.field_k;
-            var51 = new gh("", var7);
+            var51 = new SceneWidget("", var7);
             var51.field_I = bm.field_Y;
-            var14 = new gh("", var7);
-            ((gh) (var14)).field_I = sb.field_X;
-            ((gh) (var14)).field_Ab = oe.field_f;
-            ei.field_n = new gh("", var7);
+            var14 = new SceneWidget("", var7);
+            ((SceneWidget) (var14)).field_I = sb.field_X;
+            ((SceneWidget) (var14)).field_Ab = oe.field_f;
+            ei.field_n = new SceneWidget("", var7);
             ei.field_n.field_I = co.field_d;
-            sb.field_Y = new gh("", var7);
+            sb.field_Y = new SceneWidget("", var7);
             sb.field_Y.field_I = be.field_f;
-            dd.field_b = new gh("", var7);
+            dd.field_b = new SceneWidget("", var7);
             dd.field_b.field_I = lj.field_b;
             dd.field_b.field_Kb = 0;
-            var53 = new gh("", var7);
+            var53 = new SceneWidget("", var7);
             var53.field_I = nn.field_a;
-            var62 = new gh("", var7);
-            var62.field_L = (mi) ((Object) fk.field_d);
+            var62 = new SceneWidget("", var7);
+            var62.field_L = (BitmapFont) ((Object) fk.field_d);
             var62.field_ub = 4;
             var62.field_I = pa.field_g;
             var62.field_Fb = 0;
             var62.field_Ib = 15;
             var62.field_Kb = 1;
             var62.field_nb = 0;
-            gd.field_jb = new gh();
+            gd.field_jb = new SceneWidget();
             gd.field_jb.a(0, 0, 480, 0, 640);
             var17 = am.field_d.length;
             var18 = 204 / var17;
@@ -1256,7 +1256,7 @@ final class rj {
                 stackIn_494_1 = null;
                 stackIn_494_3 = var14;
               }
-              var52 = new gh(stackIn_493_2, (gh) (stackIn_494_3));
+              var52 = new SceneWidget(stackIn_493_2, (SceneWidget) (stackIn_494_3));
               wc.field_h[var20_int] = var52;
               stackIn_496_0 = var52;
               stackIn_496_1 = da.field_e;
@@ -1272,24 +1272,24 @@ final class rj {
               vb.field_a[var20_int] = var52;
               var19 = var19 + var18;
             }
-            bl.field_c = new gh("Listselectpane", var53);
+            bl.field_c = new SceneWidget("Listselectpane", var53);
             bl.field_c.a(0, 84, 349, 10, 204);
             gd.field_jb.a(bl.field_c, 118);
             bi.field_d = 15;
             pf.field_n = 4;
             bg.field_y = 4;
-            var54 = new gh();
+            var54 = new SceneWidget();
             var54.field_db = sj.field_x[1];
             var54.field_Pb = sj.field_x[0];
-            var20 = new gh();
+            var20 = new SceneWidget();
             var20.field_db = ah.field_Zb[1];
             var20.field_Pb = ah.field_Zb[0];
-            var21 = new gh();
+            var21 = new SceneWidget();
             var21.field_I = qi.field_a;
-            var55 = new gh();
+            var55 = new SceneWidget();
             var55.field_I = jn.field_f;
             var23 = new lb("", var54, var20, var21, var55);
-            var56 = new gh("Dataview", (gh) null);
+            var56 = new SceneWidget("Dataview", (SceneWidget) null);
             rh.field_u = var56;
             for (var25 = 0; var25 < cj.field_a.length; var25++) {
               cj.field_a[var25] = null;
@@ -1323,9 +1323,9 @@ final class rj {
               var27_ref = kc.field_u;
             }
             if (var27_ref != null) {
-              var57 = new gh(-1L, kh.field_s);
+              var57 = new SceneWidget(-1L, kh.field_s);
               var29 = fk.field_d.a((String) (var27_ref), -(2 * var57.field_ub) + var25 - var57.field_qb * 2, kh.field_s.field_Ib);
-              var58 = new gh(-1L, (gh) null);
+              var58 = new SceneWidget(-1L, (SceneWidget) null);
               var26_int += 2;
               var56.a(var58, 127);
               var58.a(0, var26_int, var29, 0, var25);
@@ -1360,7 +1360,7 @@ final class rj {
             }
             var56.a(0, 0, var26_int, 0, 0);
             var78 = (CharSequence) ((Object) "Scrollingview");
-            var60 = new kg(ke.a(var78, (byte) -48), var56, (gh) null, var23);
+            var60 = new kg(ke.a(var78, (byte) -48), var56, (SceneWidget) null, var23);
             bi.field_f = var60;
             var60.a(bl.field_c.field_zb - 2 * pf.field_n, -2048, bi.field_d, bl.field_c.field_Lb - pf.field_n * 2, bg.field_y, pf.field_n, pf.field_n);
             bl.field_c.a(var60, 124);
@@ -1385,10 +1385,10 @@ final class rj {
               var60.field_Sb.a(var60.field_Tb.field_Lb, -va.field_k[var30], var60.field_Ub.field_Lb, -1);
             }
             hj.field_w = var6;
-            kk.field_a = new gh("Itempane", kh.field_s);
+            kk.field_a = new SceneWidget("Itempane", kh.field_s);
             kk.field_a.a(0, 64, 280, 518, 110);
             gd.field_jb.a(kk.field_a, param0 - 6993534);
-            var61 = new gh(-1L, (gh) null);
+            var61 = new SceneWidget(-1L, (SceneWidget) null);
             var61.field_I = tk.field_t;
             var61.a(0, 20, 257, 0, 110);
             kk.field_a.a(var61, 126);
@@ -1396,18 +1396,18 @@ final class rj {
               kk.field_a.field_S = "";
             } else {
               if ((2 & fg.field_Ob) > 0) {
-                var66 = new gh("", var62);
+                var66 = new SceneWidget("", var62);
                 var66.field_S = mc.field_b;
                 var66.a(0, 0, 18, 0, 110);
                 kk.field_a.a(var66, param0 ^ 6993543);
-                var26 = new gh("DataListView", (gh) null);
+                var26 = new SceneWidget("DataListView", (SceneWidget) null);
                 hm.field_a = var26;
                 var27 = 4 + oc.a(4, var26);
                 var26.field_I = tk.field_t;
                 var26.a(0, 20, var27, 0, 110);
                 if (var27 > 284) {
                   var80 = (CharSequence) ((Object) "Scrollingview2");
-                  var67 = new kg(ke.a(var80, (byte) -48), var26, (gh) null, var23);
+                  var67 = new kg(ke.a(var80, (byte) -48), var26, (SceneWidget) null, var23);
                   vd.field_a = var67;
                   var67.a(110, -2048, bi.field_d, 301, bg.field_y, 0, 21);
                   kk.field_a.a(var67, 119);
@@ -1421,20 +1421,20 @@ final class rj {
                     vb.a(kk.field_a, (byte) 19);
                   }
                 } else {
-                  var63 = new gh("", var62);
+                  var63 = new SceneWidget("", var62);
                   var63.field_S = kf.field_B;
                   var63.a(0, 0, 18, 0, 110);
                   kk.field_a.a(var63, 119);
                   var26_int = og.a(true);
                   var27 = 254;
                   kc.field_r = !(var27 >= var26_int);
-                  var64 = new gh("DataListView", (gh) null);
+                  var64 = new SceneWidget("DataListView", (SceneWidget) null);
                   if (!kc.field_r) {
                     var64.field_I = tk.field_t;
                   }
                   hm.field_a = var64;
                   var29 = ak.a(var64, 112);
-                  lg.field_l = true;
+                  GameApplet.field_l = true;
                   stackIn_554_0 = var64;
                   stackIn_554_1 = 0;
                   stackIn_554_2 = 20;
@@ -1444,10 +1444,10 @@ final class rj {
                   } else {
                     stackIn_555_4 = 0;
                   }
-                  ((gh) (Object) stackIn_554_0).a(stackIn_554_1, stackIn_554_2, stackIn_554_3, stackIn_555_4, 110);
+                  ((SceneWidget) (Object) stackIn_554_0).a(stackIn_554_1, stackIn_554_2, stackIn_554_3, stackIn_555_4, 110);
                   if (kc.field_r) {
                     var79 = (CharSequence) ((Object) "Scrollingview2");
-                    var65 = new kg(ke.a(var79, (byte) -48), var64, (gh) null, var23);
+                    var65 = new kg(ke.a(var79, (byte) -48), var64, (SceneWidget) null, var23);
                     vd.field_a = var65;
                     var65.a(107, -2048, bi.field_d, -2 + var27, bg.field_y, 0, 23);
                     kk.field_a.a(var65, 121);
@@ -1500,7 +1500,7 @@ final class rj {
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
         rm.field_g = param2;
         ig.field_e = param0;
-        ck.field_e = param3;
+        IntrusiveNode.field_e = param3;
         if (param4 != -89) {
           field_k = (cm) null;
         }
@@ -1560,7 +1560,7 @@ final class rj {
     private final void b(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
-        int var4 = SteelSentinels.field_G;
+        int var4 = SteelSentinels.obfuscationControl;
         this.field_g = 0;
         if (this.field_e != this.field_l) {
           this.field_q.a(this.field_l, -1);
@@ -1607,7 +1607,7 @@ final class rj {
         int var9 = 0;
         int var10 = 0;
         java.applet.Applet var11 = null;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         try {
           try {
             if (this.field_o < this.field_l + (long)param1) {

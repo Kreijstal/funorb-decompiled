@@ -3,11 +3,11 @@
  */
 final class tf {
     static StringBuilder field_g;
-    static gh field_a;
+    static SceneWidget field_a;
     static boolean field_b;
     static String field_f;
     static int field_c;
-    static wk field_e;
+    static RgbSprite field_e;
     static String[] field_d;
 
     final static void a(na param0, byte param1) {
@@ -26,7 +26,7 @@ final class tf {
         int var5 = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
             uf.field_a[var2_int] = 0;
@@ -79,11 +79,11 @@ final class tf {
 
     final static void a(int param0, boolean param1) {
         if (null != qf.field_e) {
-          pb.f(pb.field_i, pb.field_l, -pb.field_i + pb.field_b, pb.field_d - pb.field_l);
+          SoftwareRaster.f(SoftwareRaster.field_i, SoftwareRaster.field_l, -SoftwareRaster.field_i + SoftwareRaster.field_b, SoftwareRaster.field_d - SoftwareRaster.field_l);
           qf.field_e.a(param1, (byte) 127);
         }
         if (param0 != 0) {
-          field_a = (gh) null;
+          field_a = (SceneWidget) null;
         }
     }
 

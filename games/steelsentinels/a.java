@@ -3,7 +3,7 @@
  */
 abstract class a {
     static int field_c;
-    static mi field_a;
+    static BitmapFont field_a;
     static String field_f;
     static String field_e;
     static int[] field_h;
@@ -19,8 +19,8 @@ abstract class a {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        wk[] var5 = null;
-        wk[] var5Lifetime1;
+        RgbSprite[] var5 = null;
+        RgbSprite[] var5Lifetime1;
         if (param3 >= 6) {
           var5 = eb.field_s;
           jm.a(param0, param2, var5, 1, param1, param4);
@@ -82,7 +82,7 @@ abstract class a {
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           var4_int = -56 % ((param1 - 65) / 35);
           jn.field_b = sn.field_p;

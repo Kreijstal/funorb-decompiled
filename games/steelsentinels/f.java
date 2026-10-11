@@ -7,14 +7,14 @@ import java.util.*;
 final class f extends vk {
     static String field_x;
     static int[] field_w;
-    static gh field_y;
+    static SceneWidget field_y;
     private sg field_F;
     static String field_u;
     static int[] field_B;
     static rf field_D;
     static String field_E;
     static java.util.zip.CRC32 field_G;
-    static nk field_A;
+    static ArticulatedPart field_A;
     static int field_v;
     static String field_z;
 
@@ -30,7 +30,7 @@ final class f extends vk {
 
     private final void a(boolean param0, boolean param1) {
         try {
-          gi stackIn_5_0 = null;
+          PacketBuffer stackIn_5_0 = null;
           int stackIn_5_1 = 0;
           int stackIn_6_2 = 0;
           Throwable decompiledCaughtException = null;
@@ -40,7 +40,7 @@ final class f extends vk {
             return;
           }
           try {
-            this.field_o.field_p = 0;
+            this.field_o.position = 0;
             stackIn_5_0 = this.field_o;
             stackIn_5_1 = 111;
             if (param1) {
@@ -48,9 +48,9 @@ final class f extends vk {
             } else {
               stackIn_6_2 = 3;
             }
-            ((gi) (Object) stackIn_5_0).a((byte) stackIn_5_1, stackIn_6_2);
+            ((PacketBuffer) (Object) stackIn_5_0).a((byte) stackIn_5_1, stackIn_6_2);
             this.field_o.a(0L, (byte) 120);
-            this.field_F.a(this.field_o.field_t.length, this.field_o.field_t, -100, 0);
+            this.field_F.a(this.field_o.payload.length, this.field_o.payload, -100, 0);
             if (!param0) {
               this.b(3);
             }
@@ -104,7 +104,7 @@ final class f extends vk {
           Exception var6 = null;
           int var7 = 0;
           qa var5Lifetime1;
-          var7 = SteelSentinels.field_G;
+          var7 = SteelSentinels.obfuscationControl;
           try {
             if (null != this.field_F) {
               try {
@@ -119,7 +119,7 @@ final class f extends vk {
             var4_int = 98 % ((param2 + 72) / 32);
             this.f(123);
             this.a(true, param1);
-            this.field_c.field_p = 0;
+            this.field_c.position = 0;
             this.field_d = null;
             while (true) {
               var5 = (qa) (this.field_a.c(25));
@@ -139,11 +139,11 @@ final class f extends vk {
             }
             if (this.field_n != 0) {
               try {
-                this.field_o.field_p = 0;
+                this.field_o.position = 0;
                 this.field_o.a((byte) 116, 4);
                 this.field_o.a((byte) 114, (int) this.field_n);
                 this.field_o.b(true, 0);
-                this.field_F.a(this.field_o.field_t.length, this.field_o.field_t, -100, 0);
+                this.field_F.a(this.field_o.payload.length, this.field_o.payload, -100, 0);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var5_ref = (IOException) (Object) decompiledCaughtException;
@@ -219,7 +219,7 @@ final class f extends vk {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           if (param0 == null) {
             return false;
@@ -284,12 +284,12 @@ final class f extends vk {
             return;
           }
           try {
-            this.field_o.field_p = 0;
+            this.field_o.position = 0;
             this.field_o.a((byte) 111, 6);
             this.field_o.e(31, 3);
             this.field_o.d(0, 90);
             var2_int = -85 / ((-22 - param0) / 42);
-            this.field_F.a(this.field_o.field_t.length, this.field_o.field_t, -100, 0);
+            this.field_F.a(this.field_o.payload.length, this.field_o.payload, -100, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -357,7 +357,7 @@ final class f extends vk {
           int var16 = 0;
           int var17 = 0;
           qa var3Lifetime1;
-          var17 = SteelSentinels.field_G;
+          var17 = SteelSentinels.obfuscationControl;
           if (null != this.field_F) {
             var2_long = mm.a(52);
             var4 = (int)(-this.field_e + var2_long);
@@ -390,19 +390,19 @@ final class f extends vk {
             this.field_F.a(true);
             var3 = (qa) (this.field_m.b(22));
             while (var3 != null) {
-              this.field_o.field_p = 0;
+              this.field_o.position = 0;
               this.field_o.a((byte) 111, 1);
               this.field_o.a(var3.field_w, (byte) 120);
-              this.field_F.a(this.field_o.field_t.length, this.field_o.field_t, -100, 0);
+              this.field_F.a(this.field_o.payload.length, this.field_o.payload, -100, 0);
               this.field_a.a((byte) 121, var3);
               var3 = (qa) (this.field_m.a(false));
             }
             var3Lifetime1 = (qa) (this.field_j.b(22));
             while (var3Lifetime1 != null) {
-              this.field_o.field_p = 0;
+              this.field_o.position = 0;
               this.field_o.a((byte) 110, 0);
               this.field_o.a(var3Lifetime1.field_w, (byte) 120);
-              this.field_F.a(this.field_o.field_t.length, this.field_o.field_t, -100, 0);
+              this.field_F.a(this.field_o.payload.length, this.field_o.payload, -100, 0);
               this.field_p.a((byte) 106, var3Lifetime1);
               var3Lifetime1 = (qa) (this.field_j.a(false));
             }
@@ -422,30 +422,30 @@ final class f extends vk {
                   }
                 }
                 if (0 < var5) {
-                  var6 = var5 - this.field_c.field_p;
+                  var6 = var5 - this.field_c.position;
                   if (var6 > var4) {
                     var6 = var4;
                   }
-                  this.field_F.a(this.field_c.field_p, var6, this.field_c.field_t, -256);
+                  this.field_F.a(this.field_c.position, var6, this.field_c.payload, -256);
                   if (0 != this.field_n) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_c.field_t[this.field_c.field_p + var7] = (byte)bi.a((int) this.field_c.field_t[this.field_c.field_p + var7], (int) this.field_n);
+                      this.field_c.payload[this.field_c.position + var7] = (byte)bi.a((int) this.field_c.payload[this.field_c.position + var7], (int) this.field_n);
                     }
                   }
-                  this.field_c.field_p = this.field_c.field_p + var6;
-                  if (this.field_c.field_p >= var5) {
+                  this.field_c.position = this.field_c.position + var6;
+                  if (this.field_c.position >= var5) {
                     if (this.field_d != null) {
                       if (this.field_d.field_I != 0) {
                         throw new IOException();
                       }
-                      if (this.field_c.field_t[0] != -1) {
+                      if (this.field_c.payload[0] != -1) {
                         this.field_d = null;
                       } else {
                         this.field_d.field_I = 1;
-                        this.field_c.field_p = 0;
+                        this.field_c.position = 0;
                       }
                     } else {
-                      this.field_c.field_p = 0;
+                      this.field_c.position = 0;
                       var7 = this.field_c.f((byte) -86);
                       var8 = this.field_c.i(0);
                       var9 = this.field_c.f((byte) -113);
@@ -484,36 +484,36 @@ final class f extends vk {
                       stackIn_78_0 = (var11 != 0) ? 9 : 5;
                       var16 = stackIn_78_0;
                       this.field_d = var15_ref;
-                      this.field_d.field_G = new gi(var16 + (var10 + this.field_d.field_K));
+                      this.field_d.field_G = new PacketBuffer(var16 + (var10 + this.field_d.field_K));
                       this.field_d.field_G.a((byte) 125, var11);
                       this.field_d.field_G.b(true, var10);
-                      this.field_c.field_p = 0;
+                      this.field_c.position = 0;
                       this.field_d.field_I = 10;
                     }
                   }
                 } else {
-                  var6 = -this.field_d.field_K + this.field_d.field_G.field_t.length;
+                  var6 = -this.field_d.field_K + this.field_d.field_G.payload.length;
                   var7 = 512 - this.field_d.field_I;
-                  if (var7 > var6 - this.field_d.field_G.field_p) {
-                    var7 = -this.field_d.field_G.field_p + var6;
+                  if (var7 > var6 - this.field_d.field_G.position) {
+                    var7 = -this.field_d.field_G.position + var6;
                   }
                   if (var7 > var4) {
                     var7 = var4;
                   }
-                  this.field_F.a(this.field_d.field_G.field_p, var7, this.field_d.field_G.field_t, -256);
+                  this.field_F.a(this.field_d.field_G.position, var7, this.field_d.field_G.payload, -256);
                   if (this.field_n != 0) {
                     for (var8 = 0; var7 > var8; var8++) {
-                      this.field_d.field_G.field_t[this.field_d.field_G.field_p + var8] = (byte)bi.a((int) this.field_d.field_G.field_t[this.field_d.field_G.field_p + var8], (int) this.field_n);
+                      this.field_d.field_G.payload[this.field_d.field_G.position + var8] = (byte)bi.a((int) this.field_d.field_G.payload[this.field_d.field_G.position + var8], (int) this.field_n);
                     }
                   }
-                  this.field_d.field_G.field_p = this.field_d.field_G.field_p + var7;
+                  this.field_d.field_G.position = this.field_d.field_G.position + var7;
                   this.field_d.field_I = this.field_d.field_I + var7;
-                  if (var6 != this.field_d.field_G.field_p) {
+                  if (var6 != this.field_d.field_G.position) {
                     if (this.field_d.field_I == 512) {
                       this.field_d.field_I = 0;
                     }
                   } else {
-                    this.field_d.e(480);
+                    this.field_d.unlinkDual(480);
                     this.field_d.field_z = false;
                     this.field_d = null;
                   }

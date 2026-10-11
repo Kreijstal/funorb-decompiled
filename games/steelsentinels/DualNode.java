@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class kd extends ck {
+class DualNode extends IntrusiveNode {
     static int field_p;
-    kd field_o;
+    DualNode dualNext;
     static String field_q;
     static int[] field_r;
     static String field_s;
     static cm field_x;
     long field_w;
     static int field_u;
-    kd field_v;
+    DualNode dualPrevious;
     static String field_t;
 
     public static void f(int param0) {
@@ -24,20 +24,20 @@ class kd extends ck {
         field_s = null;
     }
 
-    final void e(int param0) {
-        if (this.field_v == null) {
+    final void unlinkDual(int obfuscationGuard) {
+        if (this.dualPrevious == null) {
           return;
         }
-        this.field_v.field_o = this.field_o;
-        this.field_o.field_v = this.field_v;
-        if (param0 == 480) {
-          this.field_v = null;
-          this.field_o = null;
+        this.dualPrevious.dualNext = this.dualNext;
+        this.dualNext.dualPrevious = this.dualPrevious;
+        if (obfuscationGuard == 480) {
+          this.dualPrevious = null;
+          this.dualNext = null;
           return;
         }
         field_x = (cm) null;
-        this.field_v = null;
-        this.field_o = null;
+        this.dualPrevious = null;
+        this.dualNext = null;
     }
 
     final long d(int param0) {
@@ -51,14 +51,14 @@ class kd extends ck {
         if (param0 <= 41) {
           return;
         }
-        if (null != this.field_v) {
+        if (null != this.dualPrevious) {
           throw new RuntimeException();
         }
         this.field_w = param1;
     }
 
     final boolean a(byte param0) {
-        if (this.field_v == null) {
+        if (this.dualPrevious == null) {
           return false;
         }
         if (param0 != 30) {
@@ -68,7 +68,7 @@ class kd extends ck {
         return true;
     }
 
-    protected kd() {
+    protected DualNode() {
     }
 
     static {

@@ -8,14 +8,14 @@ final class jd extends ac implements ae {
     static rf field_sb;
     static java.lang.reflect.Method field_rb;
     static String field_jb;
-    static gk[] field_qb;
+    static IndexedSprite[] field_qb;
     static java.math.BigInteger field_ib;
     static String field_pb;
     static int[] field_lb;
     static String[] field_mb;
 
     final static void m(int param0) {
-        qf.field_e = new ol(an.field_a, od.field_g, hg.field_e, bd.field_f, ol.field_Tb, qb.field_K);
+        qf.field_e = new ol(an.field_a, od.field_g, hg.field_e, bd.field_f, ol.field_Tb, ParticleEffect.field_K);
         if (param0 != -6) {
           jd.a('{', -67);
         }
@@ -48,7 +48,7 @@ final class jd extends ac implements ae {
         lh var4 = null;
         try {
           var3 = null;
-          if (param1 == ra.field_a) {
+          if (param1 == DualNodeDeque.field_a) {
             var3 = r.field_p;
           } else {
             if (wh.field_b == param1) {
@@ -204,7 +204,7 @@ final class jd extends ac implements ae {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           if (param0 == null) {
             stackIn_4_0 = lk.field_Y;
@@ -232,7 +232,7 @@ final class jd extends ac implements ae {
                   }
                   if (var5 >= 2 &&
                     !param1) {
-                    stackIn_32_0 = jb.field_Q;
+                    stackIn_32_0 = Explosion.field_Q;
                     return stackIn_32_0;
                   }
                 }

@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mn extends kd {
+final class mn extends DualNode {
     char[] field_F;
     String field_D;
     static rf field_G;
     int[] field_C;
     char[] field_z;
     int[] field_A;
-    static gh field_E;
+    static SceneWidget field_E;
     static int field_y;
     boolean field_B;
 
-    final void a(int param0, gi param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
-        int var4 = SteelSentinels.field_G;
+        int var4 = SteelSentinels.obfuscationControl;
         int var3_intLifetime1;
         try {
           while (true) {
@@ -65,7 +65,7 @@ final class mn extends kd {
     final void c(byte param0) {
         int var4 = 0;
         int var2 = 0;
-        int var3 = SteelSentinels.field_G;
+        int var3 = SteelSentinels.obfuscationControl;
         int var2Lifetime1;
         if (this.field_A != null) {
           for (var2 = 0; var2 < this.field_A.length; var2++) {
@@ -85,7 +85,7 @@ final class mn extends kd {
         }
     }
 
-    private final void a(gi param0, int param1, byte param2) {
+    private final void a(PacketBuffer param0, int param1, byte param2) {
         char[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
@@ -102,7 +102,7 @@ final class mn extends kd {
         int var6 = 0;
         int var7 = 0;
         int var4_intLifetime1;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           if (1 == param1) {
             this.field_D = param0.h(1);
@@ -167,7 +167,7 @@ final class mn extends kd {
         field_G = null;
         field_E = null;
         if (param0 != 1) {
-          field_E = (gh) null;
+          field_E = (SceneWidget) null;
         }
     }
 
@@ -189,7 +189,7 @@ final class mn extends kd {
         int var9 = 0;
         vc[] var10 = null;
         wj var11 = null;
-        var9 = SteelSentinels.field_G;
+        var9 = SteelSentinels.obfuscationControl;
         try {
           if (!param2.b(-98)) {
             return null;

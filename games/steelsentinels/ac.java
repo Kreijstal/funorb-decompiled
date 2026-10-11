@@ -11,7 +11,7 @@ abstract class ac extends bb {
     static String field_ab;
     private int field_hb;
     private int field_cb;
-    static wk field_bb;
+    static RgbSprite field_bb;
 
     void j(byte param0) {
         if (param0 < 6) {
@@ -36,9 +36,9 @@ abstract class ac extends bb {
         int var2 = 73 % ((55 - param0) / 39);
     }
 
-    final static gh k(int param0) {
+    final static SceneWidget k(int param0) {
         if (param0 != -4795) {
-          return (gh) null;
+          return (SceneWidget) null;
         }
         return rn.field_y.field_Ub;
     }
@@ -71,16 +71,16 @@ abstract class ac extends bb {
         int var9Lifetime2;
         int var12Lifetime1;
         int var13Lifetime1;
-        var16 = SteelSentinels.field_G;
-        pb.e(6 + param0, param1 + 35, -12 + this.field_x, this.field_E - 40, 2105376, 0);
+        var16 = SteelSentinels.obfuscationControl;
+        SoftwareRaster.e(6 + param0, param1 + 35, -12 + this.field_x, this.field_E - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
         var7 = 0;
         var8 = param1;
         while (var7 < var4) {
-          if (var8 >= pb.field_l &&
-            var8 < pb.field_d) {
+          if (var8 >= SoftwareRaster.field_l &&
+            var8 < SoftwareRaster.field_d) {
             var9 = (-var5 + var6) * var7 / var4 + var5;
             var10 = 0;
             var11 = this.field_x;
@@ -93,7 +93,7 @@ abstract class ac extends bb {
                   }
                   var13 = (462 - var12) * var9 / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  pb.field_g[param0 + (var8 * pb.field_c + var10)] = var13;
+                  SoftwareRaster.field_g[param0 + (var8 * SoftwareRaster.field_c + var10)] = var13;
                 }
                 var10++;
               }
@@ -110,7 +110,7 @@ abstract class ac extends bb {
                   } else {
                     var15 = var9 * (462 - var14) / 42;
                     var15 = var15 | (var15 << 8 | var15 << 16);
-                    pb.field_g[var8 * pb.field_c + param0 + var11] = var15;
+                    SoftwareRaster.field_g[var8 * SoftwareRaster.field_c + param0 + var11] = var15;
                   }
                   var13Lifetime1++;
                   var11++;
@@ -121,7 +121,7 @@ abstract class ac extends bb {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            pb.g(var10 + param0, var8, -var10 + var11, var9);
+            SoftwareRaster.g(var10 + param0, var8, -var10 + var11, var9);
           }
           var7++;
           var8++;
@@ -134,15 +134,15 @@ abstract class ac extends bb {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          pb.g(param0, var8Lifetime1, 6, var9Lifetime1);
-          pb.g(this.field_x + (param0 - 6), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRaster.g(param0, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRaster.g(this.field_x + (param0 - 6), var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        jb.field_L.a(this.field_x + param0 - 90, param1 + 10);
+        Explosion.field_L.a(this.field_x + param0 - 90, param1 + 10);
         if (param2) {
           uc.a(jj.field_k, this.field_x - 10, 35 + param1, (byte) -39, param0 + 5);
-          uc.a(jb.field_J, this.field_x, this.field_E + (param1 - 22), (byte) -39, param0);
+          uc.a(Explosion.field_J, this.field_x, this.field_E + (param1 - 22), (byte) -39, param0);
           var5Lifetime2 = 169;
           var4Lifetime2 = -79 + this.field_E;
           var6Lifetime2 = 127;
@@ -151,15 +151,15 @@ abstract class ac extends bb {
           while (var4Lifetime2 > var7Lifetime2) {
             var9Lifetime2 = var5Lifetime2 + (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2;
             var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-            pb.g(param0, var8Lifetime2, 6, var9Lifetime2);
-            pb.g(-6 + param0 + this.field_x, var8Lifetime2, 6, var9Lifetime2);
+            SoftwareRaster.g(param0, var8Lifetime2, 6, var9Lifetime2);
+            SoftwareRaster.g(-6 + param0 + this.field_x, var8Lifetime2, 6, var9Lifetime2);
             var8Lifetime2++;
             var7Lifetime2++;
           }
         } else {
           field_gb = (String) null;
           uc.a(jj.field_k, this.field_x - 10, 35 + param1, (byte) -39, param0 + 5);
-          uc.a(jb.field_J, this.field_x, this.field_E + (param1 - 22), (byte) -39, param0);
+          uc.a(Explosion.field_J, this.field_x, this.field_E + (param1 - 22), (byte) -39, param0);
           var5Lifetime2 = 169;
           var4Lifetime2 = -79 + this.field_E;
           var6Lifetime2 = 127;
@@ -168,8 +168,8 @@ abstract class ac extends bb {
           while (var4Lifetime2 > var7Lifetime2) {
             var9Lifetime2 = var5Lifetime2 + (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2;
             var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-            pb.g(param0, var8Lifetime2, 6, var9Lifetime2);
-            pb.g(-6 + param0 + this.field_x, var8Lifetime2, 6, var9Lifetime2);
+            SoftwareRaster.g(param0, var8Lifetime2, 6, var9Lifetime2);
+            SoftwareRaster.g(-6 + param0 + this.field_x, var8Lifetime2, 6, var9Lifetime2);
             var8Lifetime2++;
             var7Lifetime2++;
           }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uf {
-    static ul field_f;
+    static NodeDeque field_f;
     static int[] field_b;
     static int[] field_a;
     mj field_d;
@@ -32,7 +32,7 @@ final class uf {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           var2_int = 0;
           if (param0 < 54) {
@@ -57,12 +57,12 @@ final class uf {
         }
     }
 
-    uf(String param0, gh param1) {
+    uf(String param0, SceneWidget param1) {
         String[] var3 = null;
-        gh[] var4 = null;
+        SceneWidget[] var4 = null;
         try {
           var3 = new String[]{param0, ad.field_a, cf.field_A};
-          var4 = new gh[]{param1, ig.field_m, (gh) ((Object) vi.field_W)};
+          var4 = new SceneWidget[]{param1, ig.field_m, (SceneWidget) ((Object) vi.field_W)};
           this.field_d = new mj(0L, ka.field_U, var3, be.field_c, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -83,7 +83,7 @@ final class uf {
     static {
         field_b = new int[8192];
         field_e = "<%0> has been removed.";
-        field_f = new ul();
+        field_f = new NodeDeque();
         field_c = 0;
         field_g = new rf();
     }

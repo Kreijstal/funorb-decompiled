@@ -7,7 +7,7 @@ final class pf implements qk {
     static String field_f;
     static int[] field_j;
     private int field_i;
-    static wk field_b;
+    static RgbSprite field_b;
     private int field_k;
     private int field_e;
     static String field_r;
@@ -19,7 +19,7 @@ final class pf implements qk {
     private int field_d;
     private int field_g;
     private int field_h;
-    private mi field_c;
+    private BitmapFont field_c;
 
     public static void a(boolean param0) {
         field_r = null;
@@ -56,17 +56,17 @@ final class pf implements qk {
             param3 = param3 & var12.field_K;
           }
           var7 = 5592405;
-          pb.a(param0 + param1.field_o, param1.field_z + param4, param1.field_x, param1.field_E, this.field_l);
+          SoftwareRaster.a(param0 + param1.field_o, param1.field_z + param4, param1.field_x, param1.field_E, this.field_l);
           if (param3) {
             var7 = 16777215;
           }
           var8 = this.field_p + (param1.field_o + param0);
           var9 = this.field_k + param1.field_z + param4;
-          pb.e(var8, var9, this.field_e, this.field_h, 5592405);
-          pb.a(var8, var9, this.field_e, this.field_h, var7);
+          SoftwareRaster.e(var8, var9, this.field_e, this.field_h, 5592405);
+          SoftwareRaster.a(var8, var9, this.field_e, this.field_h, var7);
           if (var12.field_T) {
-            pb.d(var8, var9, this.field_e + var8, var9 + this.field_h, 1);
-            pb.d(var8 + this.field_e, var9, var8, var9 + this.field_h, 1);
+            SoftwareRaster.d(var8, var9, this.field_e + var8, var9 + this.field_h, 1);
+            SoftwareRaster.d(var8 + this.field_e, var9, var8, var9 + this.field_h, 1);
           }
           if (param2 != -30) {
             var11 = (java.applet.Applet) null;
@@ -166,7 +166,7 @@ final class pf implements qk {
         }
     }
 
-    pf(mi param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    pf(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_o = 1;
         this.field_d = 1;
         try {

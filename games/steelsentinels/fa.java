@@ -3,11 +3,11 @@
  */
 abstract class fa {
     static vd field_d;
-    static gh field_f;
-    static wk field_e;
+    static SceneWidget field_f;
+    static RgbSprite field_e;
     static int[] field_c;
-    static wk field_b;
-    static gk[] field_a;
+    static RgbSprite field_b;
+    static IndexedSprite[] field_a;
 
     abstract jl b(byte param0);
 
@@ -19,7 +19,7 @@ abstract class fa {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
           if (!f.a(param1, 4, param0)) {
             return false;
@@ -63,7 +63,7 @@ abstract class fa {
 
     final static boolean a(int param0) {
         if (param0 != 38) {
-          field_b = (wk) null;
+          field_b = (RgbSprite) null;
           return !uc.field_g ? true : false;
         }
         return !uc.field_g ? true : false;
@@ -99,7 +99,7 @@ abstract class fa {
 
     final static void a(boolean param0, byte param1, boolean param2) {
         if (param0) {
-          pb.c(0, 0, pb.field_c, pb.field_j, 0, 192);
+          SoftwareRaster.c(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j, 0, 192);
           if (param1 <= 32) {
             field_d = (vd) null;
             wn.a(0, param0);
@@ -108,7 +108,7 @@ abstract class fa {
           wn.a(0, param0);
           return;
         }
-        pb.b();
+        SoftwareRaster.b();
         if (param1 <= 32) {
           field_d = (vd) null;
           wn.a(0, param0);
@@ -125,7 +125,7 @@ abstract class fa {
         field_f = null;
         field_c = null;
         if (param0 != 38) {
-          field_b = (wk) null;
+          field_b = (RgbSprite) null;
         }
     }
 

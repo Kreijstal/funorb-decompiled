@@ -45,7 +45,7 @@ final class pe {
     int field_W;
     int field_c;
     short[] field_Y;
-    static gh field_v;
+    static SceneWidget field_v;
     static int[] field_O;
     int[] field_l;
     static int field_d;
@@ -56,7 +56,7 @@ final class pe {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
-        int var7 = SteelSentinels.field_G;
+        int var7 = SteelSentinels.obfuscationControl;
         for (var6 = 0; var6 < this.field_L; var6++) {
           this.field_z[var6] = (short)(this.field_z[var6] * param1 / param2);
           this.field_m[var6] = (short)(this.field_m[var6] * param3 / param2);
@@ -80,7 +80,7 @@ final class pe {
         int var10;
         int var11;
         int var12;
-        var12 = SteelSentinels.field_G;
+        var12 = SteelSentinels.obfuscationControl;
         if (this.field_f) {
           return;
         }
@@ -128,7 +128,7 @@ final class pe {
         int var4;
         int var5;
         int var6;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         var2 = 0;
         var3 = vn.field_h;
         if (var3 < 5) {
@@ -195,7 +195,7 @@ final class pe {
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
-        int var6 = SteelSentinels.field_G;
+        int var6 = SteelSentinels.obfuscationControl;
         for (var5 = param0; var5 < this.field_L; var5++) {
           this.field_z[var5] = (short)(this.field_z[var5] + param3);
           this.field_m[var5] = (short)(this.field_m[var5] + param1);

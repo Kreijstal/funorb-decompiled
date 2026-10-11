@@ -25,24 +25,24 @@ final class la {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
-          param1.b(4);
-          var2 = (cc) (q.field_m.e(13058));
+          param1.unlink(4);
+          var2 = (cc) (q.field_m.first(13058));
           if (param0 <= 123) {
             field_a = -70;
           }
           while (var2 != null) {
             if (var2.a(param1, -81)) {
-              var2 = (cc) (q.field_m.a((byte) -25));
+              var2 = (cc) (q.field_m.next((byte) -25));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            q.field_m.a(3, param1);
+            q.field_m.addLast(3, param1);
           } else {
-            ie.a(var2, 30, param1);
+            IsaacRandom.a(var2, 30, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -74,9 +74,9 @@ final class la {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        wk var2_ref_wk = null;
+        RgbSprite var2_ref_wk = null;
         int var3 = 0;
-        wk var4_ref_wk = null;
+        RgbSprite var4_ref_wk = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -85,11 +85,11 @@ final class la {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        wk var10 = null;
+        RgbSprite var10 = null;
         int var11 = 0;
-        wk var12 = null;
+        RgbSprite var12 = null;
         String var14 = null;
-        wk var16 = null;
+        RgbSprite var16 = null;
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
@@ -111,7 +111,7 @@ final class la {
         int var10_intLifetime1;
         int var10_intLifetime2;
         int var10_intLifetime3;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         try {
           if (null != ta.field_d &&
             ta.field_d.a(true) &&
@@ -125,24 +125,24 @@ final class la {
             da.field_f = rl.a(ta.field_d, "benefits", "signup_text", false);
             bc.field_pb = rl.a(ta.field_d, "benefits", "menu_text", false);
             bc.field_ub = rl.a(ta.field_d, "benefits", "button_frame", false);
-            jc.field_b = rl.a(ta.field_d, "benefits", "arrow", false);
-            nn.field_g = (mi) ((Object) vd.a(fb.field_h, "benefits", ta.field_d, -1, "large_font"));
-            wn.field_a = (mi) ((Object) vd.a(fb.field_h, "benefits", ta.field_d, -1, "small_font"));
-            var27 = pb.field_g;
-            var2 = pb.field_c;
-            var3 = pb.field_j;
-            pb.b(ti.field_n);
-            var4_ref_wk = new wk(jc.field_b.field_A + 4, 4 + jc.field_b.field_F);
+            NodeIterator.field_b = rl.a(ta.field_d, "benefits", "arrow", false);
+            nn.field_g = (BitmapFont) ((Object) vd.a(fb.field_h, "benefits", ta.field_d, -1, "large_font"));
+            wn.field_a = (BitmapFont) ((Object) vd.a(fb.field_h, "benefits", ta.field_d, -1, "small_font"));
+            var27 = SoftwareRaster.field_g;
+            var2 = SoftwareRaster.field_c;
+            var3 = SoftwareRaster.field_j;
+            SoftwareRaster.b(ti.field_n);
+            var4_ref_wk = new RgbSprite(NodeIterator.field_b.field_A + 4, 4 + NodeIterator.field_b.field_F);
             var4_ref_wk.d();
-            jc.field_b.c(2, 2, dc.field_h);
+            NodeIterator.field_b.c(2, 2, dc.field_h);
             uj.a(2, 0, 0, (byte) -19, var4_ref_wk.field_F, 1, var4_ref_wk, var4_ref_wk.field_A);
-            jc.field_b = var4_ref_wk;
-            in.field_e = jc.field_b.a();
-            var12 = new wk(195, 221);
+            NodeIterator.field_b = var4_ref_wk;
+            in.field_e = NodeIterator.field_b.a();
+            var12 = new RgbSprite(195, 221);
             var6 = var12.field_A / 2;
             var12.d();
             nn.field_g.a(db.a(hg.field_a, -127, new String[]{vb.field_d}), var6, 40, 16777215, -1);
-            wn.field_a.a(db.a(gh.field_Bb, -119, new String[]{vb.field_d}), var6, 60, 16777215, -1);
+            wn.field_a.a(db.a(SceneWidget.field_Bb, -119, new String[]{vb.field_d}), var6, 60, 16777215, -1);
             nn.field_g.a(db.a(rn.field_z, -40, new String[]{rg.field_c}), var6, 110, 16777215, -1);
             wn.field_a.a(db.a(jk.field_f, -25, new String[]{rg.field_c}), var6, 130, 16777215, -1);
             nn.field_g.a(ol.field_Xb, var6, 180, 16777215, -1);
@@ -158,9 +158,9 @@ final class la {
             ta.field_f = null;
             tf.field_e = da.field_f.g();
             tf.field_e.d();
-            ej.a(pb.field_j * 2 / 3, 0, pb.field_c, 64, 0, 40);
-            pb.a(var27, var2, var3);
-            pb.a(ti.field_n);
+            ej.a(SoftwareRaster.field_j * 2 / 3, 0, SoftwareRaster.field_c, 64, 0, 40);
+            SoftwareRaster.a(var27, var2, var3);
+            SoftwareRaster.a(ti.field_n);
             mc.field_a = (ba.field_e.field_F - bc.field_ub.field_F) / 2 + 390;
             ta.field_d = null;
             rn.field_u = 434 + (-bc.field_ub.field_A + ba.field_e.field_A) / 2;
@@ -173,11 +173,11 @@ final class la {
           var1_int = -79 / ((-22 - param0) / 42);
           if (hl.field_r != null &&
             null != nn.field_g) {
-            var28 = pb.field_g;
-            var3Lifetime1 = pb.field_c;
-            var4 = pb.field_j;
-            pb.b(ti.field_n);
-            var14 = db.a(ee.field_x, -69, new String[]{cm.field_m[wc.field_j]});
+            var28 = SoftwareRaster.field_g;
+            var3Lifetime1 = SoftwareRaster.field_c;
+            var4 = SoftwareRaster.field_j;
+            SoftwareRaster.b(ti.field_n);
+            var14 = db.a(CombatWorld.field_x, -69, new String[]{cm.field_m[wc.field_j]});
             var6Lifetime1 = nn.field_g.a(var14, pa.field_b);
             var7Lifetime1 = nn.field_g.a(var14, pa.field_b, nn.field_g.field_G + nn.field_g.field_F);
             var8 = sg.field_e + (-var6Lifetime1 + pa.field_b) / 2;
@@ -223,27 +223,27 @@ final class la {
               ej.field_y = ej.field_y - var10_intLifetime3;
             }
             hl.field_r.e();
-            var10 = new wk(hl.field_r.field_z, hl.field_r.field_B);
+            var10 = new RgbSprite(hl.field_r.field_z, hl.field_r.field_B);
             var10.d();
             nn.field_g.a(var14, sg.field_e, ij.field_W, pa.field_b, ci.field_g, 16777215, -1, 1, 1, nn.field_g.field_F + nn.field_g.field_G);
             uj.a(3, 0, 0, (byte) -119, var10.field_B, 1, var10, var10.field_z);
             hl.field_r.d();
             var10.a(0, 0);
-            fa.field_e = new wk(640, 480);
+            fa.field_e = new RgbSprite(640, 480);
             fa.field_e.d();
             hl.field_r.d((hl.field_r.field_z >> 1) + vl.field_t, (hl.field_r.field_B >> 1) + ej.field_y, be.field_e, 4096);
             hl.field_r = null;
             fa.field_e.f();
-            pb.a(var28, var3Lifetime1, var4);
-            pb.a(ti.field_n);
+            SoftwareRaster.a(var28, var3Lifetime1, var4);
+            SoftwareRaster.a(ti.field_n);
           }
           if (ij.field_P != null &&
             null != wn.field_a) {
-            var29 = pb.field_g;
-            var3Lifetime2 = pb.field_c;
-            var4Lifetime1 = pb.field_j;
-            pb.b(ti.field_n);
-            var16 = new wk(412, 43);
+            var29 = SoftwareRaster.field_g;
+            var3Lifetime2 = SoftwareRaster.field_c;
+            var4Lifetime1 = SoftwareRaster.field_j;
+            SoftwareRaster.b(ti.field_n);
+            var16 = new RgbSprite(412, 43);
             var6_ref_String = db.a(dd.field_l, -109, new String[]{ij.field_P});
             ij.field_P = null;
             var16.d();
@@ -251,15 +251,15 @@ final class la {
             uj.a(3, 0, 0, (byte) -42, var16.field_F, 1, var16, var16.field_A);
             jf.field_kb.d();
             var16.a(-jf.field_kb.field_D + 199, -jf.field_kb.field_H + 83);
-            pb.a(var29, var3Lifetime2, var4Lifetime1);
-            pb.a(ti.field_n);
+            SoftwareRaster.a(var29, var3Lifetime2, var4Lifetime1);
+            SoftwareRaster.a(ti.field_n);
           }
           if (qi.field_i != null &&
             wn.field_a != null) {
-            var30 = pb.field_g;
-            var3Lifetime3 = pb.field_c;
-            var4Lifetime2 = pb.field_j;
-            pb.b(ti.field_n);
+            var30 = SoftwareRaster.field_g;
+            var3Lifetime3 = SoftwareRaster.field_c;
+            var4Lifetime2 = SoftwareRaster.field_j;
+            SoftwareRaster.b(ti.field_n);
             var5 = wn.field_a.a(ia.field_j, 640) + 6;
             var6Lifetime2 = 20 + (var5 + qi.field_i.field_z);
             var7Lifetime2 = 427 - var6Lifetime2 / 2;
@@ -269,13 +269,13 @@ final class la {
             uj.a(3, var8Lifetime1 - jf.field_kb.field_D - 4, 155 - jf.field_kb.field_H, (byte) -60, 50, 1, jf.field_kb, var5);
             var9Lifetime1 = 155 - jf.field_kb.field_H - (-wn.field_a.field_F + (-wn.field_a.field_G + qi.field_i.field_B - 3)) / 2;
             qi.field_i.a(-jf.field_kb.field_D + var7Lifetime2, var9Lifetime1);
-            pb.a(var30, var3Lifetime3, var4Lifetime2);
-            pb.a(ti.field_n);
+            SoftwareRaster.a(var30, var3Lifetime3, var4Lifetime2);
+            SoftwareRaster.a(ti.field_n);
             qi.field_i = null;
           }
-          pb.b(ti.field_n);
-          pb.a(16, 16, 608, 112, 15, mb.field_bc, an.field_b);
-          pb.a(231, 144, 393, 232, 15, mb.field_bc, an.field_b);
+          SoftwareRaster.b(ti.field_n);
+          SoftwareRaster.a(16, 16, 608, 112, 15, Sentinel.field_bc, an.field_b);
+          SoftwareRaster.a(231, 144, 393, 232, 15, Sentinel.field_bc, an.field_b);
           if (c.field_o != null) {
             c.field_o.a(0, 0);
           }
@@ -330,23 +330,23 @@ final class la {
             stackIn_67_2 = (jh.field_i.field_e == 1);
             sf.$cfr$intArgs$a$c79a3df4369d(stackIn_66_0, stackIn_66_1, stackIn_67_2, rn.field_u);
           }
-          if (jc.field_b != null) {
-            var2Lifetime1 = 357 - jc.field_b.field_B / 2;
-            jc.field_b.a(-jc.field_b.field_z + 269, var2Lifetime1);
+          if (NodeIterator.field_b != null) {
+            var2Lifetime1 = 357 - NodeIterator.field_b.field_B / 2;
+            NodeIterator.field_b.a(-NodeIterator.field_b.field_z + 269, var2Lifetime1);
             in.field_e.a(586, var2Lifetime1);
             if (pi.field_c > var2Lifetime1 &&
-              pi.field_c < jc.field_b.field_F + var2Lifetime1) {
+              pi.field_c < NodeIterator.field_b.field_F + var2Lifetime1) {
               var3Lifetime5 = 40 + (dd.a(20612, ik.field_e << 4) * 40 >> 16);
               if (0 < var3Lifetime5) {
-                if (oh.field_f > -jc.field_b.field_A + 269 &&
+                if (oh.field_f > -NodeIterator.field_b.field_A + 269 &&
                   oh.field_f < 269) {
-                  jc.field_b.a(-1 - jc.field_b.field_z + 269, -1 + var2Lifetime1, var3Lifetime5);
-                  jc.field_b.a(-jc.field_b.field_z + 269 + 1, -1 + var2Lifetime1, var3Lifetime5);
-                  jc.field_b.a(-1 + (269 - jc.field_b.field_z), var2Lifetime1 + 1, var3Lifetime5);
-                  jc.field_b.a(269 - jc.field_b.field_z + 1, 1 + var2Lifetime1, var3Lifetime5);
+                  NodeIterator.field_b.a(-1 - NodeIterator.field_b.field_z + 269, -1 + var2Lifetime1, var3Lifetime5);
+                  NodeIterator.field_b.a(-NodeIterator.field_b.field_z + 269 + 1, -1 + var2Lifetime1, var3Lifetime5);
+                  NodeIterator.field_b.a(-1 + (269 - NodeIterator.field_b.field_z), var2Lifetime1 + 1, var3Lifetime5);
+                  NodeIterator.field_b.a(269 - NodeIterator.field_b.field_z + 1, 1 + var2Lifetime1, var3Lifetime5);
                 } else {
                   if (oh.field_f > 586 &&
-                    586 + jc.field_b.field_A > oh.field_f) {
+                    586 + NodeIterator.field_b.field_A > oh.field_f) {
                     in.field_e.a(585, var2Lifetime1 - 1, var3Lifetime5);
                     in.field_e.a(587, var2Lifetime1 - 1, var3Lifetime5);
                     in.field_e.a(585, 1 + var2Lifetime1, var3Lifetime5);
@@ -385,7 +385,7 @@ final class la {
         int var6 = 0;
         int var7 = 0;
         cc var8 = null;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           if (param4 != -32513) {
             var8 = (cc) null;
@@ -393,10 +393,10 @@ final class la {
           }
           var5_int = 0;
           while (true) {
-            if (ck.field_c.length <= var5_int) {
+            if (IntrusiveNode.field_c.length <= var5_int) {
               return;
             }
-            param1 = ck.field_c[var5_int];
+            param1 = IntrusiveNode.field_c[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param1;
@@ -460,7 +460,7 @@ final class la {
         var2 = stackIn_6_0;
         stackIn_9_0 = 15;
         stackIn_9_1 = jj.field_d;
-        stackIn_11_2 = (ob.field_y) || (ee.field_G);
+        stackIn_11_2 = (ob.field_y) || (CombatWorld.field_G);
         stackIn_13_3 = param0;
         stackIn_13_4 = 0;
         stackIn_13_5 = 72;
@@ -468,9 +468,9 @@ final class la {
         stackIn_13_7 = 11;
         stackIn_14_8 = (kg.field_Vb <= 50) ? false : true;
         bl.a(stackIn_9_0, stackIn_9_1, stackIn_11_2, stackIn_13_3, stackIn_13_4, stackIn_13_5, stackIn_13_6 != 0, stackIn_13_7, stackIn_14_8, 14, param1, true);
-        if (qb.field_J) {
+        if (ParticleEffect.field_J) {
           mm.field_g.a(57, (byte) -117);
-          qb.field_J = false;
+          ParticleEffect.field_J = false;
         }
         if (of.field_c) {
           mm.field_g.a(10, (byte) -117);

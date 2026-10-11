@@ -1,56 +1,56 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ra {
-    private kd field_d;
+final class DualNodeDeque {
+    private DualNode field_d;
     static String field_b;
     static int[] field_c;
     static hm field_a;
-    private kd field_e;
+    private DualNode field_e;
     static rm field_f;
 
-    final kd a(boolean param0) {
-        kd var2 = this.field_e;
+    final DualNode a(boolean param0) {
+        DualNode var2 = this.field_e;
         if (this.field_d == var2) {
           this.field_e = null;
           return null;
         }
-        this.field_e = var2.field_o;
+        this.field_e = var2.dualNext;
         if (!param0) {
           return var2;
         }
-        ra.b((byte) 121);
+        DualNodeDeque.b((byte) 121);
         return var2;
     }
 
-    final kd b(int param0) {
-        kd var2 = this.field_d.field_o;
+    final DualNode b(int param0) {
+        DualNode var2 = this.field_d.dualNext;
         if (param0 != 22) {
           this.b(118);
           if (var2 == this.field_d) {
             this.field_e = null;
             return null;
           }
-          this.field_e = var2.field_o;
+          this.field_e = var2.dualNext;
           return var2;
         }
         if (var2 == this.field_d) {
           this.field_e = null;
           return null;
         }
-        this.field_e = var2.field_o;
+        this.field_e = var2.dualNext;
         return var2;
     }
 
     final void a(int param0) {
-        kd var2 = null;
-        int var3 = SteelSentinels.field_G;
+        DualNode var2 = null;
+        int var3 = SteelSentinels.obfuscationControl;
         while (true) {
-          var2 = this.field_d.field_o;
+          var2 = this.field_d.dualNext;
           if (var2 == this.field_d) {
             break;
           }
-          var2.e(480);
+          var2.unlinkDual(480);
         }
         if (param0 == 8150) {
           this.field_e = null;
@@ -69,23 +69,23 @@ final class ra {
         int var9 = 0;
         int var10 = 0;
         RuntimeException decompiledCaughtException = null;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         try {
-          pb.g(param3, param0, 1 + param1, 10000536);
-          pb.g(param3, param2 + param0, 1 + param1, 12105912);
+          SoftwareRaster.g(param3, param0, 1 + param1, 10000536);
+          SoftwareRaster.g(param3, param2 + param0, 1 + param1, 12105912);
           var5_int = 1;
-          if (pb.field_l > param0 + var5_int) {
-            var5_int = pb.field_l - param0;
+          if (SoftwareRaster.field_l > param0 + var5_int) {
+            var5_int = SoftwareRaster.field_l - param0;
           }
           var6 = param2;
-          if (pb.field_d < var6 + param0) {
-            var6 = pb.field_d - param0;
+          if (SoftwareRaster.field_d < var6 + param0) {
+            var6 = SoftwareRaster.field_d - param0;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = 152 + 48 * var7 / param2;
             var9 = var8 << 16 | var8 << 8 | var8;
-            pb.field_g[pb.field_c * (param0 + var7) + param3] = var9;
-            pb.field_g[param1 + (param3 + pb.field_c * (param0 + var7))] = var9;
+            SoftwareRaster.field_g[SoftwareRaster.field_c * (param0 + var7) + param3] = var9;
+            SoftwareRaster.field_g[param1 + (param3 + SoftwareRaster.field_c * (param0 + var7))] = var9;
           }
           if (param4 > 93) {
             return;
@@ -107,18 +107,18 @@ final class ra {
         field_c = null;
     }
 
-    final kd c(int param0) {
-        kd var2 = this.field_d.field_o;
+    final DualNode c(int param0) {
+        DualNode var2 = this.field_d.dualNext;
         int var3 = -86 % ((param0 + 32) / 35);
         if (var2 != this.field_d) {
-          var2.e(480);
+          var2.unlinkDual(480);
           return var2;
         }
         return null;
     }
 
-    final static void a(int param0, int param1, mi param2, int param3, int param4, byte param5, String param6, int param7) {
-        wk[] var8 = null;
+    final static void a(int param0, int param1, BitmapFont param2, int param3, int param4, byte param5, String param6, int param7) {
+        RgbSprite[] var8 = null;
         RuntimeException var8_ref = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -157,24 +157,24 @@ final class ra {
         }
     }
 
-    final void a(byte param0, kd param1) {
+    final void a(byte param0, DualNode param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != param1.field_v) {
-            param1.e(480);
+          if (null != param1.dualPrevious) {
+            param1.unlinkDual(480);
           }
-          param1.field_o = this.field_d;
-          param1.field_v = this.field_d.field_v;
-          param1.field_v.field_o = param1;
-          param1.field_o.field_v = param1;
+          param1.dualNext = this.field_d;
+          param1.dualPrevious = this.field_d.dualPrevious;
+          param1.dualPrevious.dualNext = param1;
+          param1.dualNext.dualPrevious = param1;
           if (param0 > 34) {
             return;
           }
-          this.field_e = (kd) null;
+          this.field_e = (DualNode) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -191,28 +191,28 @@ final class ra {
     }
 
     final int a(byte param0) {
-        int var4 = SteelSentinels.field_G;
+        int var4 = SteelSentinels.obfuscationControl;
         int var2 = 0;
-        kd var3 = this.field_d.field_o;
+        DualNode var3 = this.field_d.dualNext;
         if (param0 >= -81) {
           this.a(false);
           while (this.field_d != var3) {
-            var3 = var3.field_o;
+            var3 = var3.dualNext;
             var2++;
           }
           return var2;
         }
         while (this.field_d != var3) {
-          var3 = var3.field_o;
+          var3 = var3.dualNext;
           var2++;
         }
         return var2;
     }
 
-    public ra() {
-        this.field_d = new kd();
-        this.field_d.field_v = this.field_d;
-        this.field_d.field_o = this.field_d;
+    public DualNodeDeque() {
+        this.field_d = new DualNode();
+        this.field_d.dualPrevious = this.field_d;
+        this.field_d.dualNext = this.field_d;
     }
 
     static {

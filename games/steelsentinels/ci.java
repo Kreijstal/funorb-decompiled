@@ -7,7 +7,7 @@ final class ci {
     static bf field_a;
     static int[] field_c;
     static String field_h;
-    static ul field_e;
+    static NodeDeque field_e;
     static String field_f;
     static String[] field_b;
 
@@ -20,7 +20,7 @@ final class ci {
         String var6;
         String var7;
         String var8;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         var6 = "(" + di.field_d + " " + ma.field_W + " " + aj.field_u + ") " + ch.field_N;
         var1 = var6;
         if (param0 != 94) {
@@ -30,7 +30,7 @@ final class ci {
           var1 = var6 + ":";
           for (var2 = 0; var2 < jg.field_f; var2++) {
             var7 = var1 + ' ';
-            var3 = rf.field_d.field_t[var2] & 255;
+            var3 = rf.field_d.payload[var2] & 255;
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (10 > var4) {
@@ -64,42 +64,42 @@ final class ci {
     }
 
     final static void a(cm param0, byte param1, cm param2, cm param3) {
-        wk var17 = null;
-        gk[] var5 = null;
-        gk[][] var6 = null;
+        RgbSprite var17 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var19 = null;
         int[][] var16 = null;
         int[][] var7 = null;
-        gk[] var14 = null;
+        IndexedSprite[] var14 = null;
         int var11_int = 0;
-        wk var15 = null;
-        wk var18 = null;
-        wk var11 = null;
-        wk var12 = null;
+        RgbSprite var15 = null;
+        RgbSprite var18 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
         int var8 = 0;
         int var9 = 0;
-        int var13 = SteelSentinels.field_G;
+        int var13 = SteelSentinels.obfuscationControl;
         int var8Lifetime1;
         int var9Lifetime1;
         try {
           jj.field_k = cf.a("frame_top", "commonui", (byte) -95, param0);
-          jb.field_J = cf.a("frame_bottom", "commonui", (byte) -94, param0);
-          jb.field_L = rl.a(param0, "commonui", "jagex_logo_grey", false);
+          Explosion.field_J = cf.a("frame_bottom", "commonui", (byte) -94, param0);
+          Explosion.field_L = rl.a(param0, "commonui", "jagex_logo_grey", false);
           un.field_m = cf.a("button", "commonui", (byte) -54, param0);
           t.field_i = ec.a((byte) -62, "validation", param0, "commonui");
-          rc.field_m = (mi) ((Object) be.a(param0, param2, (byte) -48, "arezzo12", "commonui"));
-          tj.field_e = (mi) ((Object) be.a(param0, param2, (byte) -62, "arezzo14", "commonui"));
-          gf.field_d = (mi) ((Object) be.a(param0, param2, (byte) -57, "arezzo14bold", "commonui"));
-          var17 = new wk(param3.a("", -742, "button.gif"), (java.awt.Component) ((Object) sl.field_n));
+          rc.field_m = (BitmapFont) ((Object) be.a(param0, param2, (byte) -48, "arezzo12", "commonui"));
+          tj.field_e = (BitmapFont) ((Object) be.a(param0, param2, (byte) -62, "arezzo14", "commonui"));
+          gf.field_d = (BitmapFont) ((Object) be.a(param0, param2, (byte) -57, "arezzo14bold", "commonui"));
+          var17 = new RgbSprite(param3.a("", -742, "button.gif"), (java.awt.Component) ((Object) sl.field_n));
           if (param1 < 63) {
             ci.a(true);
           }
           gl.a(param0, (byte) 85, "commonui", "dropdown");
           var5 = cj.a(45, "commonui", param0, "screen_options");
-          lh.field_q = new gk[4];
-          ce.field_q = new gk[4];
-          vm.field_r = new gk[4];
-          var6 = new gk[][]{lh.field_q, ce.field_q, vm.field_r};
+          lh.field_q = new IndexedSprite[4];
+          ce.field_q = new IndexedSprite[4];
+          vm.field_r = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{lh.field_q, ce.field_q, vm.field_r};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -113,7 +113,7 @@ final class ci {
           var19[3][var8Lifetime1] = 4767999;
           for (var9 = 0; var9 < 3; var9++) {
             var14 = var6[var9];
-            gk[] var10 = var14;
+            IndexedSprite[] var10 = var14;
             for (var11_int = 0; var14.length > var11_int; var11_int++) {
               var14[var11_int] = uh.a(var5[var9], var19[var11_int], false);
             }
@@ -121,19 +121,19 @@ final class ci {
           var9Lifetime1 = var17.field_F;
           jl.a(false);
           var17.d();
-          pb.b(0, 0, pb.field_c, pb.field_j);
-          var15 = new wk(var9Lifetime1, var9Lifetime1);
+          SoftwareRaster.b(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j);
+          var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.d();
           var17.f(0, 0);
-          var11 = new wk(var9Lifetime1, var9Lifetime1);
+          var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var11.d();
           var17.f(var9Lifetime1 - var17.field_A, 0);
-          var12 = new wk(var17.field_A - var9Lifetime1 * 2, var9Lifetime1);
+          var12 = new RgbSprite(var17.field_A - var9Lifetime1 * 2, var9Lifetime1);
           var12.d();
           var17.f(-var9Lifetime1, 0);
           tk.$cfr$intArgs$f$20d51497949f(122);
-          un.field_m = new wk[]{var15, var12, var11};
+          un.field_m = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ci.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -215,8 +215,8 @@ final class ci {
         }
         bh.a((byte) -115, param0);
         int var2 = 40 % ((param1 - 49) / 45);
-        if (n.field_x != null) {
-          n.field_x.a(param0, (byte) 127);
+        if (FunOrbClient.field_x != null) {
+          FunOrbClient.field_x.a(param0, (byte) 127);
         }
         tf.a(0, param0);
     }

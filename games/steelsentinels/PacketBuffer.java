@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class gi extends ck {
-    byte[] field_t;
+class PacketBuffer extends IntrusiveNode {
+    byte[] payload;
     static ja field_q;
-    int field_p;
+    int position;
     static String field_v;
     static int[] field_s;
     static boolean field_r;
     static boolean field_u;
-    static gh field_o;
+    static SceneWidget field_o;
 
     final void a(int param0, String param1) {
         int fieldTemp$2 = 0;
@@ -27,14 +27,14 @@ class gi extends ck {
           if (var3_int >= 0) {
             throw new IllegalArgumentException("");
           }
-          fieldTemp$2 = this.field_p;
-          this.field_p = this.field_p + 1;
-          this.field_t[fieldTemp$2] = (byte) 0;
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte) 0;
           var5 = (CharSequence) ((Object) param1);
-          this.field_p = this.field_p + rc.a(param1.length(), var5, 0, -122, this.field_t, this.field_p);
-          fieldTemp$3 = this.field_p;
-          this.field_p = this.field_p + 1;
-          this.field_t[fieldTemp$3] = (byte) 0;
+          this.position = this.position + rc.a(param1.length(), var5, 0, -122, this.payload, this.position);
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte) 0;
           if (param0 != 13588) {
             var4 = (byte[]) null;
             this.a(45, (byte) -56, -56, (byte[]) null);
@@ -56,15 +56,15 @@ class gi extends ck {
 
     final void b(byte param0, int param1) {
         int var3 = -83 / ((param0 - 30) / 44);
-        this.field_t[-1 + (-param1 + this.field_p)] = (byte)param1;
+        this.payload[-1 + (-param1 + this.position)] = (byte)param1;
     }
 
     final int i(int param0) {
-        this.field_p = this.field_p + 4;
+        this.position = this.position + 4;
         if (param0 != 0) {
           field_r = false;
         }
-        return (this.field_t[-1 + this.field_p] & 255) + ((-16777216 & this.field_t[-4 + this.field_p] << 24) - (-((this.field_t[this.field_p - 3] & 255) << 16) - (65280 & this.field_t[-2 + this.field_p] << 8)));
+        return (this.payload[-1 + this.position] & 255) + ((-16777216 & this.payload[-4 + this.position] << 24) - (-((this.payload[this.position - 3] & 255) << 16) - (65280 & this.payload[-2 + this.position] << 8)));
     }
 
     final void a(String param0, byte param1) {
@@ -79,7 +79,7 @@ class gi extends ck {
         int var7 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         try {
           var3_long = 0L;
           var5 = 0L;
@@ -134,7 +134,7 @@ class gi extends ck {
         if (param0 <= 5) {
           return 55;
         }
-        int var2 = this.field_t[this.field_p] & 255;
+        int var2 = this.payload[this.position] & 255;
         if (var2 >= 128) {
           return -49152 + this.c((byte) -60);
         }
@@ -164,24 +164,24 @@ class gi extends ck {
         int fieldTemp$0 = 0;
         int var2;
         int var3;
-        var2 = this.field_p;
+        var2 = this.position;
         if (param0 != 1) {
           this.g((byte) -73);
         }
         do {
-          fieldTemp$0 = this.field_p;
-          this.field_p = this.field_p + 1;
-        } while (0 != this.field_t[fieldTemp$0]);
-        var3 = -1 - var2 + this.field_p;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+        } while (0 != this.payload[fieldTemp$0]);
+        var3 = -1 - var2 + this.position;
         if (0 == var3) {
           return "";
         }
-        return ub.a((byte) 37, var2, this.field_t, var3);
+        return ub.a((byte) 37, var2, this.payload, var3);
     }
 
     final boolean a(byte param0) {
-        this.field_p = this.field_p - 4;
-        int var2 = ok.a(0, this.field_t, this.field_p, (byte) 109);
+        this.position = this.position - 4;
+        int var2 = ok.a(0, this.payload, this.position, (byte) 109);
         if (param0 >= -27) {
           return false;
         }
@@ -196,7 +196,7 @@ class gi extends ck {
         field_s = null;
         field_q = null;
         if (param0 > -119) {
-          gi.h((byte) 76);
+          PacketBuffer.h((byte) 76);
         }
         field_v = null;
         field_o = null;
@@ -206,15 +206,15 @@ class gi extends ck {
         if (param0 >= -53) {
           field_q = (ja) null;
         }
-        int fieldTemp$0 = this.field_p;
-        this.field_p = this.field_p + 1;
-        return 255 & this.field_t[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$0];
     }
 
     final void a(byte param0, int param1) {
-        int fieldTemp$0 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$0] = (byte)param1;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)param1;
         if (param0 <= 107) {
           this.a((byte) 58, -61);
         }
@@ -237,16 +237,16 @@ class gi extends ck {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           var5_int = param2;
           if (param1 != -122) {
             field_q = (ja) null;
           }
           while (param0 + param2 > var5_int) {
-            fieldTemp$0 = this.field_p;
-            this.field_p = this.field_p + 1;
-            this.field_t[fieldTemp$0] = param3[var5_int];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            this.payload[fieldTemp$0] = param3[var5_int];
             var5_int++;
           }
           return;
@@ -268,16 +268,16 @@ class gi extends ck {
         if (param0 != 30) {
           return;
         }
-        this.field_t[this.field_p - param1 - 2] = (byte)(param1 >> 8);
-        this.field_t[-1 + (-param1 + this.field_p)] = (byte)param1;
+        this.payload[this.position - param1 - 2] = (byte)(param1 >> 8);
+        this.payload[-1 + (-param1 + this.position)] = (byte)param1;
     }
 
     final String g(int param0) {
         if (param0 > -60) {
           return (String) null;
         }
-        if (0 == this.field_t[this.field_p]) {
-          this.field_p = this.field_p + 1;
+        if (0 == this.payload[this.position]) {
+          this.position = this.position + 1;
           return null;
         }
         return this.h(1);
@@ -286,11 +286,11 @@ class gi extends ck {
     final void b(int param0, int param1) {
         int fieldTemp$0 = 0;
         int var4;
-        var4 = SteelSentinels.field_G;
-        while (param1 > this.field_p) {
-          fieldTemp$0 = this.field_p;
-          this.field_p = this.field_p + 1;
-          this.field_t[fieldTemp$0] = (byte) 0;
+        var4 = SteelSentinels.obfuscationControl;
+        while (param1 > this.position) {
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
         }
         if (param0 != -2) {
           field_u = true;
@@ -320,21 +320,21 @@ class gi extends ck {
         int var3;
         int var4;
         int var5;
-        int fieldTemp$0 = this.field_p;
-        this.field_p = this.field_p + 1;
-        var2 = this.field_t[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        var2 = this.payload[fieldTemp$0];
         if (0 != var2) {
           throw new IllegalStateException("");
         }
-        var3 = this.field_p;
+        var3 = this.position;
         do {
-          fieldTemp$1 = this.field_p;
-          this.field_p = this.field_p + 1;
-        } while (this.field_t[fieldTemp$1] != 0);
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+        } while (this.payload[fieldTemp$1] != 0);
         var5 = -76 % ((48 - param0) / 62);
-        var4 = -1 + this.field_p - var3;
+        var4 = -1 + this.position - var3;
         if (var4 != 0) {
-          return ub.a((byte) 37, var3, this.field_t, var4);
+          return ub.a((byte) 37, var3, this.payload, var4);
         }
         return "";
     }
@@ -354,12 +354,12 @@ class gi extends ck {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         try {
-          var3_int = this.field_p / 8;
-          this.field_p = 0;
+          var3_int = this.position / 8;
+          this.position = 0;
           if (param1 >= -103) {
-            this.field_p = 106;
+            this.position = 106;
           }
           var4 = 0;
           while (true) {
@@ -382,7 +382,7 @@ class gi extends ck {
               }
               break;
             }
-            this.field_p = this.field_p - 8;
+            this.position = this.position - 8;
             this.b(true, var5);
             this.b(true, var6);
             var4++;
@@ -401,39 +401,39 @@ class gi extends ck {
         }
     }
 
-    gi(int param0) {
-        this.field_t = ni.a(param0, (byte) -45);
-        this.field_p = 0;
+    PacketBuffer(int param0) {
+        this.payload = ni.a(param0, (byte) -45);
+        this.position = 0;
     }
 
     final void d(int param0, int param1) {
         if (param1 <= 0) {
           this.g(92);
         }
-        int fieldTemp$0 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$0] = (byte)(param0 >> 8);
-        int fieldTemp$1 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$1] = (byte)param0;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param0 >> 8);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)param0;
     }
 
     final void b(boolean param0, int param1) {
-        int fieldTemp$0 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$0] = (byte)(param1 >> 24);
-        int fieldTemp$1 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$1] = (byte)(param1 >> 16);
-        int fieldTemp$2 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$2] = (byte)(param1 >> 8);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 >> 24);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param1 >> 16);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(param1 >> 8);
         if (!param0) {
           this.e(-78);
         }
-        int fieldTemp$3 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$3] = (byte)param1;
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)param1;
     }
 
     final void a(String param0, int param1) {
@@ -448,34 +448,34 @@ class gi extends ck {
             throw new IllegalArgumentException("");
           }
           var4 = (CharSequence) ((Object) param0);
-          this.field_p = this.field_p + rc.a(param0.length(), var4, 0, -112, this.field_t, this.field_p);
-          fieldTemp$0 = this.field_p;
-          this.field_p = this.field_p + 1;
-          this.field_t[fieldTemp$0] = (byte) 0;
+          this.position = this.position + rc.a(param0.length(), var4, 0, -112, this.payload, this.position);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "gi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(long param0, byte param1) {
-        int fieldTemp$0 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$0] = (byte)(int)(param0 >> 32);
-        int fieldTemp$1 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$1] = (byte)(int)(param0 >> 24);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param0 >> 32);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param0 >> 24);
         if (param1 != 120) {
           return;
         }
-        int fieldTemp$2 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$2] = (byte)(int)(param0 >> 16);
-        int fieldTemp$3 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$3] = (byte)(int)(param0 >> 8);
-        int fieldTemp$4 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$4] = (byte)(int)param0;
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param0 >> 16);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param0 >> 8);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)param0;
     }
 
     final void e(int param0, int param1) {
@@ -483,23 +483,23 @@ class gi extends ck {
           int[] var4 = (int[]) null;
           this.a((int[]) null, -2);
         }
-        int fieldTemp$0 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$0] = (byte)(param1 >> 16);
-        int fieldTemp$1 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$1] = (byte)(param1 >> 8);
-        int fieldTemp$2 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$2] = (byte)param1;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 >> 16);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param1 >> 8);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)param1;
     }
 
     final int c(byte param0) {
         if (param0 != -60) {
           return 19;
         }
-        this.field_p = this.field_p + 2;
-        return (65280 & this.field_t[this.field_p - 2] << 8) + (255 & this.field_t[-1 + this.field_p]);
+        this.position = this.position + 2;
+        return (65280 & this.payload[this.position - 2] << 8) + (255 & this.payload[-1 + this.position]);
     }
 
     final void a(int param0, byte[] param1, int param2, int param3) {
@@ -511,15 +511,15 @@ class gi extends ck {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           if (param2 != 28) {
             field_u = true;
           }
           for (var5_int = param0; param3 + param0 > var5_int; var5_int++) {
-            fieldTemp$0 = this.field_p;
-            this.field_p = this.field_p + 1;
-            param1[var5_int] = this.field_t[fieldTemp$0];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param1[var5_int] = this.payload[fieldTemp$0];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -540,9 +540,9 @@ class gi extends ck {
         if (param0 != -2) {
           field_s = (int[]) null;
         }
-        int fieldTemp$0 = this.field_p;
-        this.field_p = this.field_p + 1;
-        return this.field_t[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$0];
     }
 
     final long g(byte param0) {
@@ -554,17 +554,17 @@ class gi extends ck {
         return (var2 << 32) + var4;
     }
 
-    gi(byte[] param0) {
+    PacketBuffer(byte[] param0) {
         try {
-          this.field_p = 0;
-          this.field_t = param0;
+          this.position = 0;
+          this.payload = param0;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final int b(boolean param0) {
-        int var2 = this.field_t[this.field_p] & 255;
+        int var2 = this.payload[this.position] & 255;
         if (param0) {
           return 34;
         }
@@ -578,20 +578,20 @@ class gi extends ck {
         if (!param0) {
           field_q = (ja) null;
         }
-        if (this.field_t[this.field_p] >= 0) {
+        if (this.payload[this.position] >= 0) {
           return this.c((byte) -60);
         }
         return 2147483647 & this.i(0);
     }
 
     final void a(boolean param0, int param1) {
-        this.field_t[-4 - param1 + this.field_p] = (byte)(param1 >> 24);
-        this.field_t[this.field_p - (param1 + 3)] = (byte)(param1 >> 16);
+        this.payload[-4 - param1 + this.position] = (byte)(param1 >> 24);
+        this.payload[this.position - (param1 + 3)] = (byte)(param1 >> 16);
         if (!param0) {
           field_u = true;
         }
-        this.field_t[-2 - param1 + this.field_p] = (byte)(param1 >> 8);
-        this.field_t[-param1 + this.field_p - 1] = (byte)param1;
+        this.payload[-2 - param1 + this.position] = (byte)(param1 >> 8);
+        this.payload[-param1 + this.position - 1] = (byte)param1;
     }
 
     final void a(int param0, int param1, int param2, int[] param3) {
@@ -610,10 +610,10 @@ class gi extends ck {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        var13 = SteelSentinels.field_G;
+        var13 = SteelSentinels.obfuscationControl;
         try {
-          var5_int = this.field_p;
-          this.field_p = param0;
+          var5_int = this.position;
+          this.position = param0;
           var6 = (param2 - param0) / 8;
           var7 = 0;
           while (true) {
@@ -621,7 +621,7 @@ class gi extends ck {
               if (param1 != 32203) {
                 return;
               }
-              this.field_p = var5_int;
+              this.position = var5_int;
               return;
             }
             var8 = this.i(0);
@@ -640,7 +640,7 @@ class gi extends ck {
               }
               break;
             }
-            this.field_p = this.field_p - 8;
+            this.position = this.position - 8;
             this.b(true, var8);
             this.b(true, var9);
             var7++;
@@ -673,14 +673,14 @@ class gi extends ck {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          var4_int = this.field_p;
-          this.field_p = 0;
+          var4_int = this.position;
+          this.position = 0;
           var5 = new byte[var4_int];
           this.a(0, var5, 28, var4_int);
           var6 = new java.math.BigInteger(var5);
           var7 = var6.modPow(param1, param0);
           var8 = var7.toByteArray();
-          this.field_p = 0;
+          this.position = 0;
           this.d(var8.length, 60);
           this.a(var8.length, (byte) -122, 0, var8);
           if (param2 != -10048) {
@@ -708,68 +708,68 @@ class gi extends ck {
     }
 
     final void b(int param0, long param1) {
-        int fieldTemp$0 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$0] = (byte)(int)(param1 >> 56);
-        int fieldTemp$1 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$1] = (byte)(int)(param1 >> 48);
-        int fieldTemp$2 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$2] = (byte)(int)(param1 >> 40);
-        int fieldTemp$3 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$3] = (byte)(int)(param1 >> 32);
-        int fieldTemp$4 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$4] = (byte)(int)(param1 >> 24);
-        int fieldTemp$5 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$5] = (byte)(int)(param1 >> 16);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param1 >> 56);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param1 >> 48);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param1 >> 40);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param1 >> 32);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)(param1 >> 24);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(int)(param1 >> 16);
         if (param0 != -28875) {
           return;
         }
-        int fieldTemp$6 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$6] = (byte)(int)(param1 >> 8);
-        int fieldTemp$7 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$7] = (byte)(int)param1;
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(int)(param1 >> 8);
+        int fieldTemp$7 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$7] = (byte)(int)param1;
     }
 
     final int a(boolean param0) {
         if (param0) {
           field_s = (int[]) null;
         }
-        this.field_p = this.field_p + 3;
-        return (16711680 & this.field_t[-3 + this.field_p] << 16) + ((this.field_t[this.field_p - 2] & 255) << 8) + (this.field_t[-1 + this.field_p] & 255);
+        this.position = this.position + 3;
+        return (16711680 & this.payload[-3 + this.position] << 16) + ((this.payload[this.position - 2] & 255) << 8) + (this.payload[-1 + this.position] & 255);
     }
 
     private final void a(int param0, long param1) {
-        int fieldTemp$0 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$0] = (byte)(int)(param1 >> 48);
-        int fieldTemp$1 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$1] = (byte)(int)(param1 >> 40);
-        int fieldTemp$2 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$2] = (byte)(int)(param1 >> 32);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param1 >> 48);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param1 >> 40);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param1 >> 32);
         if (param0 != 28904) {
           field_u = true;
         }
-        int fieldTemp$3 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$3] = (byte)(int)(param1 >> 24);
-        int fieldTemp$4 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$4] = (byte)(int)(param1 >> 16);
-        int fieldTemp$5 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$5] = (byte)(int)(param1 >> 8);
-        int fieldTemp$6 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$6] = (byte)(int)param1;
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param1 >> 24);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)(param1 >> 16);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(int)(param1 >> 8);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(int)param1;
     }
 
     final int e(int param0) {
@@ -777,25 +777,25 @@ class gi extends ck {
         int var2;
         int var3;
         int var4;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         if (param0 <= 3) {
-          this.field_t = (byte[]) null;
+          this.payload = (byte[]) null;
         }
-        int fieldTemp$0 = this.field_p;
-        this.field_p = this.field_p + 1;
-        var2 = this.field_t[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        var2 = this.payload[fieldTemp$0];
         var3 = 0;
         while (var2 < 0) {
           var3 = (var3 | 127 & var2) << 7;
-          fieldTemp$1 = this.field_p;
-          this.field_p = this.field_p + 1;
-          var2 = this.field_t[fieldTemp$1];
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          var2 = this.payload[fieldTemp$1];
         }
         return var2 | var3;
     }
 
     final int f(int param0, int param1) {
-        int var3 = ok.a(param1, this.field_t, this.field_p, (byte) 109);
+        int var3 = ok.a(param1, this.payload, this.position, (byte) 109);
         if (param0 > -46) {
           field_s = (int[]) null;
         }

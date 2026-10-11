@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ag extends cn {
-    static wk[] field_o;
+    static RgbSprite[] field_o;
     static int field_u;
     static String field_t;
     static int[] field_r;
@@ -27,7 +27,7 @@ class ag extends cn {
     public final void a(int param0, lh param1, byte param2, boolean param3, int param4) {
         try {
           if (param3) {
-            ra.a(param1.field_z + param4, param1.field_x, param1.field_E, param1.field_o + param0, (byte) 116);
+            DualNodeDeque.a(param1.field_z + param4, param1.field_x, param1.field_E, param1.field_o + param0, (byte) 116);
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
@@ -57,7 +57,7 @@ class ag extends cn {
     final static void a(int param0, boolean param1) {
         int var2;
         int var3;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         if (rd.field_b <= 0) {
           if (ni.b(89)) {
             var2 = 0;
@@ -96,7 +96,7 @@ class ag extends cn {
         cl.a(113, param1, var2);
     }
 
-    ag(mi param0, int param1) {
+    ag(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_G, -1, 2147483647, false);
     }
 

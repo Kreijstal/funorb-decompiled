@@ -4,29 +4,29 @@
 final class ak {
     static String field_e;
     static String field_b;
-    private wk[] field_d;
+    private RgbSprite[] field_d;
     static String field_a;
     static int field_c;
 
-    final static int a(gh param0, int param1) {
+    final static int a(SceneWidget param0, int param1) {
         int var6 = 0;
         int stackIn_6_0 = 0;
-        gh stackIn_38_0 = null;
+        SceneWidget stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         String stackIn_39_2 = null;
-        gh stackIn_43_0 = null;
+        SceneWidget stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
         String stackIn_44_2 = null;
-        gh stackIn_49_0 = null;
+        SceneWidget stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
         String stackIn_50_2 = null;
-        gh stackIn_54_0 = null;
+        SceneWidget stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
         String stackIn_55_2 = null;
-        gh stackIn_60_0 = null;
+        SceneWidget stackIn_60_0 = null;
         StringBuilder stackIn_60_1 = null;
         String stackIn_61_2 = null;
-        gh stackIn_68_0 = null;
+        SceneWidget stackIn_68_0 = null;
         StringBuilder stackIn_68_1 = null;
         String stackIn_69_2 = null;
         int stackIn_87_0 = 0;
@@ -37,14 +37,14 @@ final class ak {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        qd var5 = null;
-        gh var7 = null;
+        PartInstruction var5 = null;
+        SceneWidget var7 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        gh var13_ref_gh = null;
+        SceneWidget var13_ref_gh = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -52,15 +52,15 @@ final class ak {
         int var18 = 0;
         int var19 = 0;
         String[] var20 = null;
-        qd[] var21 = null;
-        qd[] var22 = null;
-        nk var23 = null;
-        gh var24 = null;
+        PartInstruction[] var21 = null;
+        PartInstruction[] var22 = null;
+        ArticulatedPart var23 = null;
+        SceneWidget var24 = null;
         int var13Lifetime1;
-        var19 = SteelSentinels.field_G;
+        var19 = SteelSentinels.obfuscationControl;
         try {
           if (param0.field_M != null) {
-            param0.field_M.g(6);
+            param0.field_M.clear(6);
           }
           var2_int = 4;
           if (!kc.field_r) {
@@ -69,22 +69,22 @@ final class ak {
             stackIn_6_0 = -8 - pf.field_n + 110 - bi.field_d;
           }
           var3 = stackIn_6_0;
-          var22 = new qd[]{};
+          var22 = new PartInstruction[]{};
           var21 = hl.field_v.a(var22, -21636, fg.field_Ob);
           if (param1 <= 82) {
             var20 = (String[]) null;
-            ak.a((wk) null, -101, (String) null, 108, -59, -84, 124, -128, (String[]) null, true);
+            ak.a((RgbSprite) null, -101, (String) null, 108, -59, -84, 124, -128, (String[]) null, true);
           }
           for (var6 = 0; var6 < var21.length; var6++) {
             var5 = var21[var6];
-            var7 = new gh("", ei.field_n);
+            var7 = new SceneWidget("", ei.field_n);
             if (null != ti.field_B &&
               (var5.field_q & ti.field_B.field_Q) > 0) {
               var7.b(sb.field_Y, 6402);
             }
             if (null == ti.field_B &&
               t.field_h >= 0) {
-              var23 = ul.a(t.field_h, (byte) 67);
+              var23 = NodeDeque.a(t.field_h, (byte) 67);
               if (var23 != null &&
                 (var23.field_Q & var5.field_q) != 0) {
                 var7.b(sb.field_Y, 6402);
@@ -94,11 +94,11 @@ final class ak {
             var7.field_Fb = 0;
             var7.field_S = "";
             var7.field_sb = 2;
-            var24 = new gh(-1L, (gh) null);
+            var24 = new SceneWidget(-1L, (SceneWidget) null);
             var24.field_nb = 9211020;
             var24.field_Fb = 2;
             var24.field_Kb = 1;
-            var24.field_L = (mi) ((Object) fk.field_d);
+            var24.field_L = (BitmapFont) ((Object) fk.field_d);
             var24.field_I = lj.field_b;
             var24.a(0, 18, 12, 2, var3 - 4);
             var7.a(var24, 122);
@@ -106,16 +106,16 @@ final class ak {
             var10 = 0;
             var11 = 1;
             var12 = kh.field_v.a((byte) 2, var5);
-            if (null == var5.field_d &&
+            if (null == var5.attachedPart &&
               (var5.field_q & 256) == 0) {
             }
-            if (var5.field_d != null) {
-              if (var12 == var5.field_d.field_N) {
+            if (var5.attachedPart != null) {
+              if (var12 == var5.attachedPart.componentId) {
                 var12 = -1;
               }
-              var10 = var5.field_d.field_Q;
-              var24.field_S = bg.a(var5.field_d.l(-24719), var24.field_zb - 2 * var24.field_ub, (byte) -45, var24.field_L);
-              var13 = var5.field_d.field_N;
+              var10 = var5.attachedPart.field_Q;
+              var24.field_S = bg.a(var5.attachedPart.getPartName(-24719), var24.field_zb - 2 * var24.field_ub, (byte) -45, var24.field_L);
+              var13 = var5.attachedPart.componentId;
               if (var13 != 83 &&
                 0 != (1008 & var10)) {
                 qh.field_Wb = true;
@@ -178,7 +178,7 @@ final class ak {
                 stackIn_60_0.field_S = ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).toString();
               }
               if ((var9 & 512) > 0 && (t.a(rn.field_D, 49, -20370) ||
-                aj.a(ge.field_m, (byte) 124, rn.field_D, 49, nk.f((byte) -95)))) {
+                aj.a(ge.field_m, (byte) 124, rn.field_D, 49, ArticulatedPart.f((byte) -95)))) {
                 stackIn_68_0 = var7;
                 stackIn_68_1 = new StringBuilder().append(var7.field_S);
                 if ((var10 & 512) == 0) {
@@ -201,12 +201,12 @@ final class ak {
               lj.field_h = var5;
             }
             if (0 <= var12) {
-              var13_ref_gh = new gh("", ei.field_n);
+              var13_ref_gh = new SceneWidget("", ei.field_n);
               var13_ref_gh.field_S = uh.field_h;
               var13_ref_gh.a(0, 2, 10, 2, 10);
               var13_ref_gh.field_nb = 65535;
               var13_ref_gh.field_I = null;
-              var13_ref_gh.field_L = (mi) ((Object) fk.field_d);
+              var13_ref_gh.field_L = (BitmapFont) ((Object) fk.field_d);
               var7.a(var13_ref_gh, 124);
             }
             var13Lifetime1 = param0.field_Rb;
@@ -218,8 +218,8 @@ final class ak {
             var2_int += 36;
             if (var14 <= var17 &&
               var14 >= var18) {
-              pb.a(var15, var14, var13Lifetime1, var14, var16, 128);
-              pb.a((3 * var5.field_k + var15) / 4, (3 * var5.field_l + var14) / 4, var15, var14, var16, 128);
+              SoftwareRaster.a(var15, var14, var13Lifetime1, var14, var16, 128);
+              SoftwareRaster.a((3 * var5.field_k + var15) / 4, (3 * var5.field_l + var14) / 4, var15, var14, var16, 128);
             }
           }
           stackIn_87_0 = var2_int;
@@ -238,7 +238,7 @@ final class ak {
         }
     }
 
-    final static int a(wk param0, int param1, String param2, int param3, int param4, int param5, int param6, int param7, String[] param8, boolean param9) {
+    final static int a(RgbSprite param0, int param1, String param2, int param3, int param4, int param5, int param6, int param7, String[] param8, boolean param9) {
         int var16 = 0;
         fh stackIn_7_0;
         String stackIn_7_1;
@@ -269,10 +269,10 @@ final class ak {
         int var17 = 0;
         int var11Lifetime1;
         int var12Lifetime1;
-        var17 = SteelSentinels.field_G;
+        var17 = SteelSentinels.obfuscationControl;
         try {
           var10 = ff.field_lb;
-          pb.c(-8 + (param4 - param5), param1 - 8 + 2, 16 + (param3 - 4), param6 + 12, 0, 210);
+          SoftwareRaster.c(-8 + (param4 - param5), param1 - 8 + 2, 16 + (param3 - 4), param6 + 12, 0, 210);
           jm.a(-8 + param1, param6 + 16, oa.field_Q, 1, param4 - 8, param3 + 16);
           var11 = 4 + param1;
           if (param0 != null) {
@@ -293,10 +293,10 @@ final class ak {
             } else {
               stackIn_8_8 = 0;
             }
-            var12 = ((mi) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_7_5, stackIn_7_6, stackIn_7_7, stackIn_8_8, 0, 0);
-            var11 = var11 + (4 + (((mi) ((Object) var10)).field_W * var12 + 3));
+            var12 = ((BitmapFont) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_7_5, stackIn_7_6, stackIn_7_7, stackIn_8_8, 0, 0);
+            var11 = var11 + (4 + (((BitmapFont) ((Object) var10)).field_W * var12 + 3));
           }
-          pb.h(param4, param1, param3, -param1 + var11, param7);
+          SoftwareRaster.h(param4, param1, param3, -param1 + var11, param7);
           var12Lifetime1 = 100;
           var13 = 30;
           if (param8 != null &&
@@ -346,8 +346,8 @@ final class ak {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         if (param1 != -15203) {
-          gh var7 = (gh) null;
-          ak.a((gh) null, 87);
+          SceneWidget var7 = (SceneWidget) null;
+          ak.a((SceneWidget) null, 87);
         }
         hb.a((byte) -77, this.field_d, param0, param4, param2, param3);
     }
@@ -367,7 +367,7 @@ final class ak {
         int var5 = 0;
         char[] var6 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           if (param1 > 0 &&
             param1 < 128) {
@@ -401,7 +401,7 @@ final class ak {
         }
     }
 
-    ak(wk[] param0) {
+    ak(RgbSprite[] param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
@@ -431,7 +431,7 @@ final class ak {
             var6 = param0;
           } else {
             var7 = (CharSequence) ((Object) param0);
-            var4_long = ji.a(-60, var7);
+            var4_long = SentinelDesigner.a(-60, var7);
           }
           stackIn_6_0 = qi.a(param3, var4_long, param1, 0, (String) (var6));
           return stackIn_6_0;

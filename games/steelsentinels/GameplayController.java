@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nb {
-    private mb field_u;
+final class GameplayController {
+    private Sentinel field_u;
     private int field_r;
     private int[] field_O;
     private int field_s;
     private int[] field_D;
     private int field_F;
     private int field_Q;
-    mb field_C;
+    Sentinel controlledSentinel;
     int field_l;
     static String field_T;
-    private mb[] field_W;
+    private Sentinel[] field_W;
     private int[] field_B;
     private int field_n;
     boolean field_J;
@@ -46,7 +46,7 @@ final class nb {
     private boolean field_f;
     private int[] field_g;
     private int[] field_M;
-    ee field_X;
+    CombatWorld world;
     int field_j;
     private int field_Z;
     static String field_x;
@@ -64,9 +64,9 @@ final class nb {
         int var12 = 0;
         int var13 = 0;
         RuntimeException decompiledCaughtException = null;
-        var13 = SteelSentinels.field_G;
+        var13 = SteelSentinels.obfuscationControl;
         try {
-          if (!this.field_X.field_j) {
+          if (!this.world.field_j) {
             if (oh.field_f < 0 &&
               0 > pi.field_c) {
               return;
@@ -81,7 +81,7 @@ final class nb {
                 return;
               }
               if (0 < var10) {
-                pb.a(var8_int, var9, var11, var12, 16777215, 128);
+                SoftwareRaster.a(var8_int, var9, var11, var12, 16777215, 128);
               }
               var8_int = var11;
               var9 = var12;
@@ -108,42 +108,42 @@ final class nb {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
-        mb[] var3 = null;
+        Sentinel[] var3 = null;
         int var4 = 0;
-        jc var5 = null;
-        mb var6_ref_mb = null;
+        NodeIterator var5 = null;
+        Sentinel var6_ref_mb = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        mb var9 = null;
+        Sentinel var9 = null;
         int var10 = 0;
         int var11 = 0;
         int stackIn_52_0Lifetime1;
         int stackIn_52_1Lifetime1;
         int var6Lifetime1;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         try {
-          var2_int = this.field_X.field_Q + this.field_X.field_kb;
-          if (0 <= this.field_X.field_A) {
+          var2_int = this.world.computerPlayerCount + this.world.playerCount;
+          if (0 <= this.world.field_A) {
             var2_int++;
           }
           if (null == this.field_B ||
             ~var2_int != ~this.field_B.length) {
             this.field_B = new int[var2_int];
           }
-          var3 = new mb[var2_int];
+          var3 = new Sentinel[var2_int];
           var4 = 0;
-          var5 = new jc(this.field_X.field_K);
-          var6_ref_mb = (mb) (var5.b(2));
+          var5 = new NodeIterator(this.world.sentinels);
+          var6_ref_mb = (Sentinel) (var5.b(2));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var6_ref_mb))) {
             stackIn_34_0 = 0;
-            stackIn_34_1 = var6_ref_mb.field_Bb;
+            stackIn_34_1 = var6_ref_mb.playerId;
             if (var11 == 0) {
               if (stackIn_34_0 > stackIn_34_1 ||
-                !(this.field_X.field_kb + this.field_X.field_Q > var6_ref_mb.field_Bb)) {
-                if (!(0 > this.field_X.field_A) &&
-                  this.field_X.field_A == var6_ref_mb.field_Bb) {
+                !(this.world.playerCount + this.world.computerPlayerCount > var6_ref_mb.playerId)) {
+                if (!(0 > this.world.field_A) &&
+                  this.world.field_A == var6_ref_mb.playerId) {
                   incrementValue$0 = var4;
                   var4++;
                   var3[incrementValue$0] = var6_ref_mb;
@@ -153,7 +153,7 @@ final class nb {
                 var4++;
                 var3[incrementValue$1] = var6_ref_mb;
               }
-              var6_ref_mb = (mb) (var5.d(2));
+              var6_ref_mb = (Sentinel) (var5.d(2));
               continue;
             }
             break;
@@ -169,12 +169,12 @@ final class nb {
             return;
           }
           var6 = 0;
-          L10: while (true) {
+          scanLoop1: while (true) {
             if (var6 < (-1 + var2_int)) {
               var7 = var6;
               stackIn_56_0 = var6;
               if (var11 != 0) {
-                break L10;
+                break scanLoop1;
               }
               var8 = stackIn_56_0;
               while (var2_int > var8) {
@@ -193,7 +193,7 @@ final class nb {
                 var3[var7] = var9;
               }
               var6++;
-              continue L10;
+              continue scanLoop1;
             }
             var7 = 0;
             stackIn_56_0 = 0;
@@ -201,12 +201,12 @@ final class nb {
           }
           var6Lifetime1 = stackIn_56_0;
           while (var2_int > var6Lifetime1) {
-            var10 = var3[var6Lifetime1].field_Bb;
+            var10 = var3[var6Lifetime1].playerId;
             if (var11 != 0) {
               return;
             }
-            if (this.field_X.field_A >= 0 &&
-              ~this.field_X.field_A == ~var10) {
+            if (this.world.field_A >= 0 &&
+              ~this.world.field_A == ~var10) {
               var10 = var3.length - 1;
             }
             if (var7 > this.field_B[var10]) {
@@ -243,7 +243,7 @@ final class nb {
           InstantiationException var8_ref2 = null;
           java.lang.reflect.InvocationTargetException var8_ref3 = null;
           int var9 = 0;
-          var9 = SteelSentinels.field_G;
+          var9 = SteelSentinels.obfuscationControl;
           try {
             boolean decompiledFrameCompleted0 = true;
             if (this.field_q != param1) {
@@ -254,7 +254,7 @@ final class nb {
                 stackIn_8_0 = wb.field_c;
               }
               var5 = stackIn_8_0;
-              if (!hd.c(-104)) {
+              if (!BattleTerrain.c(-104)) {
                 return;
               }
               var6 = new int[vg.field_h[this.field_q].field_E.length];
@@ -298,7 +298,7 @@ final class nb {
               stackIn_32_0 = param2;
             }
             if (stackIn_32_0 != 0) {
-              nb.a((cm) null, (byte) 6, (String) null, (String) null);
+              GameplayController.a((cm) null, (byte) 6, (String) null, (String) null);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
@@ -316,7 +316,7 @@ final class nb {
     private final void h(byte param0) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
-        mb stackIn_17_0 = null;
+        Sentinel stackIn_17_0 = null;
         int stackIn_38_0 = 0;
         int stackIn_38_1 = 0;
         int stackIn_56_0 = 0;
@@ -325,16 +325,16 @@ final class nb {
         int stackIn_67_0 = 0;
         int stackIn_71_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        mb var2 = null;
+        Sentinel var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        mb var5_ref_mb = null;
-        mb[] var5_ref_mb__ = null;
+        Sentinel var5_ref_mb = null;
+        Sentinel[] var5_ref_mb__ = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        mb var7_ref_mb = null;
+        Sentinel var7_ref_mb = null;
         int var8 = 0;
         int stackIn_56_0Lifetime1;
         int stackIn_56_1Lifetime1;
@@ -342,10 +342,10 @@ final class nb {
         int var6Lifetime1;
         int var7Lifetime1;
         int var7Lifetime1Lifetime1;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
-          if (this.field_X.field_P != 1) {
-            if (this.field_X.field_P != 2) {
+          if (this.world.field_P != 1) {
+            if (this.world.field_P != 2) {
               this.field_O = null;
               if (var8 != 0) {
                 this.field_O = new int[3];
@@ -360,31 +360,31 @@ final class nb {
           } else {
             this.field_O = new int[2];
           }
-          if (this.field_X.field_A < 0) {
+          if (this.world.field_A < 0) {
             stackIn_17_0 = null;
           } else {
-            stackIn_17_0 = this.field_X.field_y;
+            stackIn_17_0 = this.world.spawnedSpecialSentinel;
           }
           var2 = stackIn_17_0;
-          var3 = this.field_X.field_kb + this.field_X.field_Q;
+          var3 = this.world.playerCount + this.world.computerPlayerCount;
           if (null != var2) {
             var3++;
           }
-          this.field_W = new mb[var3];
+          this.field_W = new Sentinel[var3];
           var4 = 0;
-          var5_ref_mb = (mb) (this.field_X.field_K.e(13058));
+          var5_ref_mb = (Sentinel) (this.world.sentinels.first(13058));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var5_ref_mb))) {
             stackIn_38_0 = 0;
-            stackIn_38_1 = var5_ref_mb.field_Bb;
+            stackIn_38_1 = var5_ref_mb.playerId;
             if (var8 == 0) {
               if (stackIn_38_0 <= stackIn_38_1 &&
-                var5_ref_mb.field_Bb < this.field_X.field_Q + this.field_X.field_kb) {
+                var5_ref_mb.playerId < this.world.computerPlayerCount + this.world.playerCount) {
                 incrementValue$0 = var4;
                 var4++;
                 this.field_W[incrementValue$0] = var5_ref_mb;
               }
-              var5_ref_mb = (mb) (this.field_X.field_K.a((byte) -41));
+              var5_ref_mb = (Sentinel) (this.world.sentinels.next((byte) -41));
               continue;
             }
             break;
@@ -400,7 +400,7 @@ final class nb {
           }
           if (stackIn_38_0 > stackIn_38_1) {
             var5_ref_mb__ = this.field_W;
-            this.field_W = new mb[var4];
+            this.field_W = new Sentinel[var4];
             ii.a(var5_ref_mb__, 0, this.field_W, 0, var4);
             var3 = var4;
           }
@@ -416,8 +416,8 @@ final class nb {
               }
               var7 = stackIn_60_0;
               while (var7 < var3) {
-                stackIn_56_0 = ~this.field_W[var7].field_jc;
-                stackIn_56_1 = ~this.field_W[var6].field_jc;
+                stackIn_56_0 = ~this.field_W[var7].teamId;
+                stackIn_56_1 = ~this.field_W[var6].teamId;
                 if (stackIn_56_0 > stackIn_56_1) {
                   var6 = var7;
                 }
@@ -447,8 +447,8 @@ final class nb {
           var5Lifetime1 = stackIn_67_0;
           stackIn_71_0 = (var5Lifetime1 != 0) ? 0 : 1;
           var6Lifetime1 = stackIn_71_0;
-          if (this.field_X.field_lb &&
-            this.field_X.field_cb < 43) {
+          if (this.world.field_lb &&
+            this.world.field_cb < 43) {
             var6Lifetime1 = 0;
           }
           boolean decompiledFrameCompleted0 = true;
@@ -456,7 +456,7 @@ final class nb {
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted2 = true;
           if (var6Lifetime1 != 0) {
-            this.field_X.a(this.field_W, this.field_O, this.field_H, -112, this.field_e, this.field_c);
+            this.world.a(this.field_W, this.field_O, this.field_H, -112, this.field_e, this.field_c);
           }
           if (var6Lifetime1 == 0 ||
             var8 != 0) {
@@ -471,11 +471,11 @@ final class nb {
             }
           }
           if ((decompiledFrameCompleted2) && (var6Lifetime1 != 0 &&
-            null != this.field_C &&
+            null != this.controlledSentinel &&
             ed.field_j >= 0)) {
             var7Lifetime1 = 0;
             while (var7Lifetime1 < 32) {
-              this.field_a[var7Lifetime1] = this.field_C.b(true, var7Lifetime1);
+              this.field_a[var7Lifetime1] = this.controlledSentinel.getStatistic(true, var7Lifetime1);
               var7Lifetime1++;
               if (var8 != 0) {
                 decompiledFrameCompleted1 = false;
@@ -484,7 +484,7 @@ final class nb {
             }
             if ((decompiledFrameCompleted1) &&
               (decompiledFrameRemainder0 = (null != this.field_O))) {
-              this.field_a[25] = this.field_O[this.field_C.field_jc];
+              this.field_a[25] = this.field_O[this.controlledSentinel.teamId];
               decompiledFrameRemainder0 = (var8 != 0);
             }
           }
@@ -502,7 +502,7 @@ final class nb {
           }
           if ((decompiledFrameCompleted0) &&
             (var5Lifetime1 != 0)) {
-            this.field_c[0] = this.field_X.field_r / 50;
+            this.field_c[0] = this.world.simulationTick / 50;
           }
           if (var5Lifetime1 != 0 &&
             0 <= nc.field_a) {
@@ -516,7 +516,7 @@ final class nb {
         }
     }
 
-    private final void a(int param0, boolean param1, int param2, int param3, boolean param4, int param5, int param6, mb param7, int param8) {
+    private final void a(int param0, boolean param1, int param2, int param3, boolean param4, int param5, int param6, Sentinel param7, int param8) {
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -531,60 +531,60 @@ final class nb {
         Object var16 = null;
         int var17_int = 0;
         Object var17 = null;
-        wk var17_ref = null;
+        RgbSprite var17_ref = null;
         String var18 = null;
         try {
           if (param7 == null) {
             return;
           }
           var10_int = param0;
-          pb.c(param8, param5, var10_int, param0, 0, 160);
+          SoftwareRaster.c(param8, param5, var10_int, param0, 0, 160);
           var11 = -var10_int + (param3 - 4);
           var12 = 4 + var10_int + param8;
           var13 = param5;
           var14 = hj.field_w;
           var15 = 0;
           var16 = null;
-          var17_int = ul.a((byte) 105, param7.field_Zb.field_N);
+          var17_int = NodeDeque.a((byte) 105, param7.chassis.componentId);
           if (var17_int >= 0 &&
             var17_int < cd.field_c.length) {
             var16 = cd.field_c[var17_int];
-            if (n.field_z[var17_int] == 84) {
+            if (FunOrbClient.field_z[var17_int] == 84) {
               var15 += 10;
             }
           }
-          pb.a(param8, param5, var10_int + param8, param5 + param0);
+          SoftwareRaster.a(param8, param5, var10_int + param8, param5 + param0);
           if (param4) {
             oa.field_N.a(param8 + (-oa.field_N.field_z + var10_int) / 2, param5 + (-oa.field_N.field_B + param0) / 2);
           }
           hj.field_w = var10_int * 6400 / param6;
           var17 = null;
           if (!param4) {
-            param7.field_Zb.a(0, true, var10_int / 2 + param8, param0 + param5 - (6 - var15), (byte) 49, 0);
+            param7.chassis.a(0, true, var10_int / 2 + param8, param0 + param5 - (6 - var15), (byte) 49, 0);
             fl.a(var10_int, param7, (byte) -125, param0, param8, param5);
           } else {
-            var17_ref = new wk(var10_int, param0);
+            var17_ref = new RgbSprite(var10_int, param0);
             var17_ref.d();
-            param7.field_Zb.a(0, true, var10_int / 2, var15 - 6 + param0, (byte) 49, 0);
+            param7.chassis.a(0, true, var10_int / 2, var15 - 6 + param0, (byte) 49, 0);
             bg.a(var17_ref, param7, 14590);
             sb.field_bb.b((byte) 121);
             var17_ref.a(param8, param5);
           }
-          pb.c();
+          SoftwareRaster.c();
           hj.field_w = var14;
-          pb.c(var12, var13, var11, 21, 0, 160);
+          SoftwareRaster.c(var12, var13, var11, 21, 0, 160);
           var13 += 16;
-          var18 = this.field_X.d(-1661904765, param7.field_Bb);
+          var18 = this.world.d(-1661904765, param7.playerId);
           if (param1) {
             return;
           }
-          if (~param2 == ~qd.field_t[0]) {
+          if (~param2 == ~PartInstruction.field_t[0]) {
             param2 = uj.a(param2, 96);
           }
           boolean decompiledSharedTail0 = (null != var18);
           if (!decompiledSharedTail0) {
             var12 += 4;
-            decompiledSharedTail0 = (SteelSentinels.field_G != 0);
+            decompiledSharedTail0 = (SteelSentinels.obfuscationControl != 0);
           }
           if (decompiledSharedTail0) {
             pl.field_U.b(var18.toUpperCase(), var12 + 4, var13, param2, -1);
@@ -703,13 +703,13 @@ final class nb {
         int var24Lifetime2Lifetime1;
         int var26Lifetime2Lifetime1;
         int var27Lifetime2Lifetime1;
-        var29 = SteelSentinels.field_G;
+        var29 = SteelSentinels.obfuscationControl;
         try {
           var3_int = 0;
           if (qg.field_n == null) {
-            km.field_c = this.field_C.field_hc;
-            dl.field_G = this.field_C.field_Gb;
-            var5_ref_bh = new bh(this.field_C);
+            km.field_c = this.controlledSentinel.worldX;
+            dl.field_G = this.controlledSentinel.worldY;
+            var5_ref_bh = new bh(this.controlledSentinel);
             var6 = -this.field_P >> 4;
             var7 = 400 - (this.field_E >> 4);
             var5_ref_bh.field_k = 16;
@@ -720,7 +720,7 @@ final class nb {
           }
           var4 = 0;
           var5 = (km.field_c >> 8) - (this.field_P >> 4);
-          var6 = 400 + (-(this.field_E >> 4) + (-(this.field_C.field_Db * 8) + dl.field_G >> 8));
+          var6 = 400 + (-(this.field_E >> 4) + (-(this.controlledSentinel.field_Db * 8) + dl.field_G >> 8));
           if (Math.abs(320 - var5) <= 320 &&
             190 >= Math.abs(-var6 + 190)) {
             stackIn_14_0 = 0;
@@ -731,37 +731,37 @@ final class nb {
           var5 = Math.max(48, Math.min(592, var5));
           var6 = Math.max(48, Math.min(332, var6));
           var3_int = var4;
-          if (Math.abs(this.field_C.field_F) > 100 &&
+          if (Math.abs(this.controlledSentinel.field_F) > 100 &&
             null == qg.field_n) {
             var3_int = 1;
           }
           nc.field_b = false;
-          if (this.field_C != null &&
-            this.field_C.field_ub < 0 &&
+          if (this.controlledSentinel != null &&
+            this.controlledSentinel.field_ub < 0 &&
             this.field_F >= 0 &&
-            this.field_F < this.field_C.field_Xb.length &&
-            c.a((byte) -122, this.field_C.field_Xb[this.field_F])) {
+            this.field_F < this.controlledSentinel.field_Xb.length &&
+            c.a((byte) -122, this.controlledSentinel.field_Xb[this.field_F])) {
             stackIn_35_0 = 1;
           } else {
             stackIn_35_0 = 0;
           }
           var7 = stackIn_35_0;
-          if (this.field_C == null &&
-            1 > this.field_C.field_Tb &&
+          if (this.controlledSentinel == null &&
+            1 > this.controlledSentinel.charge &&
             this.field_F >= 0 &&
-            this.field_F < this.field_C.field_Xb.length &&
-            this.field_C.field_Xb[this.field_F] == 8) {
+            this.field_F < this.controlledSentinel.field_Xb.length &&
+            this.controlledSentinel.field_Xb[this.field_F] == 8) {
             var7 = 1;
           }
-          if (null != this.field_C &&
+          if (null != this.controlledSentinel &&
             param0 &&
-            !this.field_C.field_Hb) {
-            if (this.field_C.field_pc &&
-              this.field_C.field_Qb >= 0) {
+            !this.controlledSentinel.field_Hb) {
+            if (this.controlledSentinel.field_pc &&
+              this.controlledSentinel.field_Qb >= 0) {
               return;
             }
             var8 = -1 + ml.field_f.length;
-            L10: while (true) {
+            scanLoop1: while (true) {
               if (var8 >= 0) {
                 ml.field_f[var8] = 0;
                 var8--;
@@ -769,23 +769,23 @@ final class nb {
                   continue;
                 }
               } else {
-                if (this.field_C.field_Xb.length > this.field_F) {
-                  break L10;
+                if (this.controlledSentinel.field_Xb.length > this.field_F) {
+                  break scanLoop1;
                 }
               }
               this.field_F = 0;
               break;
             }
-            if (this.field_C.field_Xb.length > 0) {
-              this.field_C.field_Zb.a(this.field_C.field_Xb[this.field_F], param1 + 0, ml.field_f);
+            if (this.controlledSentinel.field_Xb.length > 0) {
+              this.controlledSentinel.chassis.a(this.controlledSentinel.field_Xb[this.field_F], param1 + 0, ml.field_f);
               if (var29 != 0) {
-                this.field_C.field_Zb.a(0, -1, ml.field_f);
+                this.controlledSentinel.chassis.a(0, -1, ml.field_f);
               }
             } else {
-              this.field_C.field_Zb.a(0, -1, ml.field_f);
+              this.controlledSentinel.chassis.a(0, -1, ml.field_f);
             }
             var8 = 48;
-            if (this.field_C.field_Xb.length > 0 &&
+            if (this.controlledSentinel.field_Xb.length > 0 &&
               var3_int != 0 &&
               ((-var6 + pi.field_c) * (pi.field_c - var6) + (oh.field_f - var5) * (oh.field_f - var5)) < (var8 * var8)) {
               stackIn_88_0 = 1;
@@ -795,10 +795,10 @@ final class nb {
             var9 = stackIn_88_0;
             nc.field_b = var9 != 0;
             if (var9 != 0) {
-              pb.b(var5, var6, var8, 8421631, 50);
+              SoftwareRaster.b(var5, var6, var8, 8421631, 50);
             }
             if (var4 != 0) {
-              pb.b(var5, var6, var8 - 1, 0, 200);
+              SoftwareRaster.b(var5, var6, var8 - 1, 0, 200);
             }
             var10 = 1;
             do {
@@ -879,7 +879,7 @@ final class nb {
               stackIn_170_0 = 4;
             }
             var13 = new int[stackIn_170_0];
-            pb.b(var13);
+            SoftwareRaster.b(var13);
             var14Lifetime1 = this.d(true, km.field_c + l.field_g);
             var15Lifetime1 = this.b(1, cf.field_q + dl.field_G);
             if (!nc.field_b &&
@@ -893,15 +893,15 @@ final class nb {
                 var16 = stackIn_193_0;
               }
               if (var16 == 0) {
-                pb.h(0, 0, var14Lifetime1, 480);
+                SoftwareRaster.h(0, 0, var14Lifetime1, 480);
               }
               if (var16 != 0 ||
                 var29 != 0) {
-                pb.h(var14Lifetime1 + 1, 0, 640, 480);
+                SoftwareRaster.h(var14Lifetime1 + 1, 0, 640, 480);
               }
               fm.field_j.c(-48 + var14Lifetime1, var15Lifetime1 - 48);
             }
-            pb.a(var13);
+            SoftwareRaster.a(var13);
             if (!nc.field_b &&
               oh.field_f >= 0 &&
               this.field_n == -1) {
@@ -925,7 +925,7 @@ final class nb {
               -1 == this.field_n) {
               var16Lifetime2 = var14Lifetime1;
               var14Lifetime1 = var5 + (l.field_g >> 8);
-              var15Lifetime2 = (this.field_C.field_Db >>> 5) + (var6 + (cf.field_q >> 8));
+              var15Lifetime2 = (this.controlledSentinel.field_Db >>> 5) + (var6 + (cf.field_q >> 8));
               if (nc.field_b) {
                 var16Lifetime2 = var14Lifetime1;
               }
@@ -936,16 +936,16 @@ final class nb {
                 var17Lifetime1 = stackIn_230_0;
               }
               if (var17Lifetime1 != 0) {
-                pb.h(var14Lifetime1 + 1, 0, 640, 480);
+                SoftwareRaster.h(var14Lifetime1 + 1, 0, 640, 480);
               }
               if (var17Lifetime1 == 0 ||
                 var29 != 0) {
-                pb.h(0, 0, var14Lifetime1, 480);
+                SoftwareRaster.h(0, 0, var14Lifetime1, 480);
               }
               if (var7 == 0) {
                 fm.field_j.c(-48 + var14Lifetime1, var15Lifetime2 - 48);
               }
-              pb.a(var13);
+              SoftwareRaster.a(var13);
               if (nc.field_b &&
                 var7 == 0) {
                 var17Lifetime1Lifetime1 = oh.field_f - var14Lifetime1;
@@ -965,22 +965,22 @@ final class nb {
               }
             }
             if (var3_int != 0) {
-              pb.a(var5 << 4, var6 << 4, var8 << 4, 99, this.field_b);
+              SoftwareRaster.a(var5 << 4, var6 << 4, var8 << 4, 99, this.field_b);
             }
-            L54: {
+            regionExit2: {
               if (var4 != 0) {
                 rl.field_b.d();
-                pb.b();
-                var16Lifetime3 = this.field_C.field_S;
-                var17Lifetime2 = this.field_C.field_Cb ? 1 : 0;
-                this.field_C.field_S = 0;
-                this.field_C.field_Cb = false;
-                this.field_C.b(40, 256, 80, -68);
-                this.field_C.field_Cb = var17Lifetime2 != 0;
-                this.field_C.field_S = var16Lifetime3;
+                SoftwareRaster.b();
+                var16Lifetime3 = this.controlledSentinel.field_S;
+                var17Lifetime2 = this.controlledSentinel.field_Cb ? 1 : 0;
+                this.controlledSentinel.field_S = 0;
+                this.controlledSentinel.field_Cb = false;
+                this.controlledSentinel.b(40, 256, 80, -68);
+                this.controlledSentinel.field_Cb = var17Lifetime2 != 0;
+                this.controlledSentinel.field_S = var16Lifetime3;
                 var10 = 0;
                 rl.field_b.e(0, 0, 1);
-                var18Lifetime1 = this.field_C.d((byte) -128);
+                var18Lifetime1 = this.controlledSentinel.getTeamColour((byte) -128);
                 var19 = 0;
                 while (true) {
                   stackIn_258_0 = var19;
@@ -1018,18 +1018,18 @@ final class nb {
                     }
                   } else {
                     sb.field_bb.b((byte) 125);
-                    pb.a(var5 - 48, var6 - 48, 48 + var5, 48 + var6);
-                    var19 = -80 + (this.field_C.field_Db >>> 5);
+                    SoftwareRaster.a(var5 - 48, var6 - 48, 48 + var5, 48 + var6);
+                    var19 = -80 + (this.controlledSentinel.field_Db >>> 5);
                     rl.field_b.e(-40 + var5, var19 + var6, 128, 128);
-                    stackIn_294_0 = this.d(true, this.field_C.field_hc);
+                    stackIn_294_0 = this.d(true, this.controlledSentinel.worldX);
                   }
                   var20_intLifetime1Lifetime1 = stackIn_294_0;
-                  var21Lifetime2 = this.b(param1 ^ -2, this.field_C.field_Gb);
+                  var21Lifetime2 = this.b(param1 ^ -2, this.controlledSentinel.worldY);
                   var22Lifetime2 = -40 + var20_intLifetime1Lifetime1;
-                  L67: while (true) {
+                  scanLoop3: while (true) {
                     if (var22Lifetime2 < var20_intLifetime1Lifetime1 + 40) {
                       var23Lifetime2 = this.a(1024, var22Lifetime2) >>> 4;
-                      var24Lifetime2 = -this.field_X.field_ab.a((byte) -116, var23Lifetime2);
+                      var24Lifetime2 = -this.world.terrain.getGroundHeightAt((byte) -116, var23Lifetime2);
                       var25_intLifetime2 = this.b(1, var24Lifetime2 << 4);
                       var25_intLifetime2 = var25_intLifetime2 + (var6 + var19 - (-80 + var21Lifetime2));
                       var26Lifetime2 = -var20_intLifetime1Lifetime1 + var22Lifetime2;
@@ -1045,21 +1045,21 @@ final class nb {
                           var27Lifetime2 = -var24Lifetime2 + var6;
                           stackIn_320_0 = 2304;
                           stackIn_320_1 = var26Lifetime2 * var26Lifetime2 + var27Lifetime2 * var27Lifetime2;
-                          break L54;
+                          break regionExit2;
                         }
-                        break L67;
+                        break scanLoop3;
                       }
                       if (stackIn_310_0 > stackIn_310_1) {
-                        pb.a(-var20_intLifetime1Lifetime1 + (var5 + var22Lifetime2), var25_intLifetime2, 20560);
+                        SoftwareRaster.a(-var20_intLifetime1Lifetime1 + (var5 + var22Lifetime2), var25_intLifetime2, 20560);
                       }
-                      var24Lifetime2 = -this.field_X.field_ab.a(false, var23Lifetime2);
+                      var24Lifetime2 = -this.world.terrain.getSecondaryHeightAt(false, var23Lifetime2);
                       var28Lifetime1 = this.b(1, var24Lifetime2 << 4);
                       var28Lifetime1 = var28Lifetime1 + (-var21Lifetime2 + (var19 + var6) + 80);
                       if (~var25_intLifetime2 != ~var28Lifetime1) {
                         var27Lifetime2 = var28Lifetime1 - var6;
                         var26Lifetime2 = -var20_intLifetime1Lifetime1 + var22Lifetime2;
                         if (var27Lifetime2 * var27Lifetime2 + var26Lifetime2 * var26Lifetime2 < 2304) {
-                          pb.a(-var20_intLifetime1Lifetime1 + (var22Lifetime2 + var5), var28Lifetime1, 20560);
+                          SoftwareRaster.a(-var20_intLifetime1Lifetime1 + (var22Lifetime2 + var5), var28Lifetime1, 20560);
                         }
                       }
                       var22Lifetime2++;
@@ -1069,7 +1069,7 @@ final class nb {
                     var22Lifetime2 = 0;
                     while (true) {
                       stackIn_310_0Lifetime1 = ~var22Lifetime2;
-                      stackIn_310_1Lifetime1 = ~hd.field_a;
+                      stackIn_310_1Lifetime1 = ~BattleTerrain.field_a;
                       if (stackIn_310_0Lifetime1 <= stackIn_310_1Lifetime1) {
                         break;
                       }
@@ -1081,16 +1081,16 @@ final class nb {
                       stackIn_320_0 = 2304;
                       stackIn_320_1 = var26Lifetime2Lifetime1 * var26Lifetime2Lifetime1 + var27Lifetime2Lifetime1 * var27Lifetime2Lifetime1;
                       if (var29 != 0) {
-                        break L54;
+                        break regionExit2;
                       }
                       if (stackIn_320_0 > stackIn_320_1) {
-                        pb.a(var23Lifetime2Lifetime1 << 4, var24Lifetime2Lifetime1 << 4, 20, -1 + var25Lifetime1.length, var25Lifetime1);
+                        SoftwareRaster.a(var23Lifetime2Lifetime1 << 4, var24Lifetime2Lifetime1 << 4, 20, -1 + var25Lifetime1.length, var25Lifetime1);
                       }
                       var22Lifetime2++;
                     }
                     break;
                   }
-                  pb.c();
+                  SoftwareRaster.c();
                   break;
                 }
               }
@@ -1100,7 +1100,7 @@ final class nb {
             if (stackIn_320_0 >= stackIn_320_1) {
               return;
             }
-            if (this.field_C.field_Xb.length <= 0) {
+            if (this.controlledSentinel.field_Xb.length <= 0) {
               return;
             }
             if (3 == di.field_g &&
@@ -1110,12 +1110,12 @@ final class nb {
             var16Lifetime4 = var5;
             var17Lifetime3 = -26 + var6;
             var18Lifetime2 = 100 - rc.field_l;
-            pb.a(0, -50 + var17Lifetime3, 640, var17Lifetime3);
+            SoftwareRaster.a(0, -50 + var17Lifetime3, 640, var17Lifetime3);
             var17Lifetime3 = var17Lifetime3 + (-(10 * var18Lifetime2 / 20) + 5);
             var19Lifetime1 = -(256 * var18Lifetime2 / 100) + 256;
-            var20 = li.field_B[this.field_C.field_Xb[this.field_F]];
+            var20 = li.field_B[this.controlledSentinel.field_Xb[this.field_F]];
             fk.field_d.c(var20, var16Lifetime4, var17Lifetime3, 16777215, 0, var19Lifetime1);
-            pb.c();
+            SoftwareRaster.c();
             return;
           }
           return;
@@ -1157,7 +1157,7 @@ final class nb {
         int stackIn_118_3;
         int stackIn_119_4 = 0;
         RuntimeException decompiledCaughtException = null;
-        wl var2 = null;
+        Projectile var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -1179,21 +1179,21 @@ final class nb {
         int var21 = 0;
         int var13Lifetime1;
         int var14Lifetime1;
-        var21 = SteelSentinels.field_G;
+        var21 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameRemainder0 = true;
           hf.field_c = 0;
-          if (this.field_C != null &&
+          if (this.controlledSentinel != null &&
             this.field_F >= 0 &&
-            this.field_F < this.field_C.field_Xb.length &&
-            c.a((byte) -118, this.field_C.field_Xb[this.field_F])) {
-            if (this.field_C.field_ub >= 0) {
-              if (0 == this.field_C.field_Tb &&
-                0 == this.field_C.field_ub) {
+            this.field_F < this.controlledSentinel.field_Xb.length &&
+            c.a((byte) -118, this.controlledSentinel.field_Xb[this.field_F])) {
+            if (this.controlledSentinel.field_ub >= 0) {
+              if (0 == this.controlledSentinel.charge &&
+                0 == this.controlledSentinel.field_ub) {
                 return;
               }
-              if (((this.field_C.field_Xb[this.field_F] == 8)) &&
-                (this.field_C.field_Tb < 1)) {
+              if (((this.controlledSentinel.field_Xb[this.field_F] == 8)) &&
+                (this.controlledSentinel.charge < 1)) {
                 return;
               }
               decompiledFrameRemainder0 = false;
@@ -1202,7 +1202,7 @@ final class nb {
               return;
             }
           }
-          if (!this.field_X.field_j) {
+          if (!this.world.field_j) {
             if (oh.field_f < 0 &&
               0 > pi.field_c) {
               return;
@@ -1215,46 +1215,46 @@ final class nb {
               qh.field_Yb < 5) {
               return;
             }
-            var2 = (wl) (pm.field_db.e(13058));
+            var2 = (Projectile) (pm.field_db.first(13058));
             var2.field_I = true;
-            var3 = this.d(true, var2.field_U);
+            var3 = this.d(true, var2.worldX);
             if (param0 >= -75) {
               this.c(73, false);
             }
-            var4 = this.b(1, var2.field_A);
-            var5 = var2.field_U;
-            var6 = var2.field_A;
+            var4 = this.b(1, var2.worldY);
+            var5 = var2.worldX;
+            var6 = var2.worldY;
             this.field_D[0] = var5;
             this.field_K[0] = var6;
-            if (var2.field_C != 0 &&
-              var2.field_C != 7) {
+            if (var2.effectType != 0 &&
+              var2.effectType != 7) {
               stackIn_59_0 = 0;
             } else {
               stackIn_59_0 = 1;
             }
             var7 = stackIn_59_0;
-            if (null != this.field_C &&
-              !this.field_C.i(21, -27) &&
+            if (null != this.controlledSentinel &&
+              !this.controlledSentinel.hasModuleType(21, -27) &&
               var7 == 0) {
               stackIn_69_0 = 1;
             } else {
               stackIn_69_0 = 0;
             }
             var8 = stackIn_69_0;
-            if (var2.field_y != 14 &&
-              var2.field_y != 28) {
+            if (var2.sourceWeaponType != 14 &&
+              var2.sourceWeaponType != 28) {
               stackIn_76_0 = 0;
             } else {
               stackIn_76_0 = 1;
             }
             var9 = stackIn_76_0;
             var10 = 0;
-            L16: while (true) {
+            scanLoop1: while (true) {
               if (this.field_S > var10 &&
                 !var2.field_T) {
-                var2.i(-1);
-                var11 = this.d(true, var2.field_U);
-                var12 = this.b(1, var2.field_A);
+                var2.advanceProjectile(-1);
+                var11 = this.d(true, var2.worldX);
+                var12 = this.b(1, var2.worldY);
                 stackIn_82_0 = var3;
                 stackIn_82_1 = var4;
                 stackIn_82_2 = var11;
@@ -1264,32 +1264,32 @@ final class nb {
                 } else {
                   stackIn_83_4 = 16777215;
                 }
-                pb.a(stackIn_82_0, stackIn_82_1, stackIn_82_2, stackIn_82_3, stackIn_83_4, 128);
+                SoftwareRaster.a(stackIn_82_0, stackIn_82_1, stackIn_82_2, stackIn_82_3, stackIn_83_4, 128);
                 if ((var10 + 1) < this.field_S) {
-                  this.field_D[var10 + 1] = var2.field_U;
-                  this.field_K[1 + var10] = var2.field_A;
+                  this.field_D[var10 + 1] = var2.worldX;
+                  this.field_K[1 + var10] = var2.worldY;
                   hf.field_c = var10 + 1;
                 }
                 if (var8 != 0) {
-                  var13 = Math.abs(-this.field_C.field_hc + var2.field_U) >> 4;
-                  var14 = Math.abs(var2.field_A - this.field_C.field_Gb) >> 4;
+                  var13 = Math.abs(-this.controlledSentinel.worldX + var2.worldX) >> 4;
+                  var14 = Math.abs(var2.worldY - this.controlledSentinel.worldY) >> 4;
                   var13 = var13 * var13;
                   var14 = var14 * var14;
                   if (var13 + var14 >= 10240000 &&
                     var21 == 0) {
-                    break L16;
+                    break scanLoop1;
                   }
                 }
                 if (var8 == 0 &&
                   var7 != 0 &&
-                  var2.field_hb <= var2.field_Z ||
+                  var2.field_hb <= var2.ageTicks ||
                   var9 != 0 &&
-                  !(20 > var2.field_Z)) {
-                  var13Lifetime1 = var2.field_U - var5;
-                  var14Lifetime1 = -var6 + var2.field_A;
+                  !(20 > var2.ageTicks)) {
+                  var13Lifetime1 = var2.worldX - var5;
+                  var14Lifetime1 = -var6 + var2.worldY;
                   if (var13Lifetime1 == 0 &&
                     var14Lifetime1 == 0) {
-                    break L16;
+                    break scanLoop1;
                   }
                   var15 = 6.0 / Math.sqrt((double)(var13Lifetime1 * var13Lifetime1 + var14Lifetime1 * var14Lifetime1));
                   var13Lifetime1 = (int)((double)var13Lifetime1 * var15);
@@ -1307,16 +1307,16 @@ final class nb {
                   } else {
                     stackIn_119_4 = 16744576;
                   }
-                  pb.b(stackIn_118_0, stackIn_118_1, stackIn_118_2, stackIn_118_3, stackIn_119_4, 128);
+                  SoftwareRaster.b(stackIn_118_0, stackIn_118_1, stackIn_118_2, stackIn_118_3, stackIn_119_4, 128);
                   var9 = 0;
                   if (var7 != 0) {
-                    break L16;
+                    break scanLoop1;
                   }
                 }
-                var6 = var2.field_A;
+                var6 = var2.worldY;
                 var4 = var12;
                 var3 = var11;
-                var5 = var2.field_U;
+                var5 = var2.worldX;
                 var10++;
                 if (var21 == 0) {
                   continue;
@@ -1324,7 +1324,7 @@ final class nb {
               }
               break;
             }
-            pm.field_db.g(6);
+            pm.field_db.clear(6);
             return;
           }
           return;
@@ -1347,58 +1347,58 @@ final class nb {
         boolean stackOut_117_0;
         int var5_int = 0;
         RuntimeException var5 = null;
-        mb var6_ref_mb = null;
+        Sentinel var6_ref_mb = null;
         int var6 = 0;
         bh var7_ref_bh = null;
         int var7 = 0;
         bh var8 = null;
-        mb var8_ref = null;
+        Sentinel var8_ref = null;
         ne var8_ref2 = null;
-        qb var8_ref3 = null;
-        jb var8_ref4 = null;
-        wl var8_ref5 = null;
+        ParticleEffect var8_ref3 = null;
+        Explosion var8_ref4 = null;
+        Projectile var8_ref5 = null;
         int var9_int = 0;
         bh var9 = null;
-        je var9_ref = null;
+        SentinelCommand var9_ref = null;
         int var10 = 0;
         int var11 = 0;
-        je var12 = null;
+        SentinelCommand var12 = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        mb var8_refLifetime1;
+        Sentinel var8_refLifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
-        var16 = SteelSentinels.field_G;
+        var16 = SteelSentinels.obfuscationControl;
         try {
           this.field_u = null;
           var5_int = 0;
-          boolean decompiledSharedTail0 = (this.field_C == null ||
+          boolean decompiledSharedTail0 = (this.controlledSentinel == null ||
             !(param2) ||
-            this.field_C.field_Hb || ((0 <= this.field_C.field_Qb) &&
-            this.field_C.field_pc));
+            this.controlledSentinel.field_Hb || ((0 <= this.controlledSentinel.field_Qb) &&
+            this.controlledSentinel.field_pc));
           if (!decompiledSharedTail0) {
-            var6_ref_mb = this.field_C;
+            var6_ref_mb = this.controlledSentinel;
             var7_ref_bh = new bh(var6_ref_mb);
             var8 = new bh(var6_ref_mb);
-            hd.field_a = 0;
+            BattleTerrain.field_a = 0;
             var7_ref_bh.field_k = 0;
             var9_int = 100;
             var10 = 0;
-            var11 = this.field_X.field_r + 1;
-            L4: while (true) {
-              if (var11 < (500 + this.field_X.field_r)) {
+            var11 = this.world.simulationTick + 1;
+            scanLoop1: while (true) {
+              if (var11 < (500 + this.world.simulationTick)) {
                 var12 = var7_ref_bh.a(qg.field_n, true, var11);
-                var8.a((je) null, true, var11);
+                var8.a((SentinelCommand) null, true, var11);
                 if (var16 == 0) {
                   boolean decompiledFrameRemainder1 = true;
                   if (null != var12 &&
-                    var12.field_s == 0 &&
-                    !pm.field_db.f(7) && ((!(this.field_C.field_ub < 0) ||
-                    !c.a((byte) -95, this.field_C.field_Xb[this.field_F])) &&
-                    (!(this.field_C.field_Tb < 1) ||
-                    this.field_C.field_Xb[this.field_F] != 8))) {
+                    var12.actionType == 0 &&
+                    !pm.field_db.f(7) && ((!(this.controlledSentinel.field_ub < 0) ||
+                    !c.a((byte) -95, this.controlledSentinel.field_Xb[this.field_F])) &&
+                    (!(this.controlledSentinel.charge < 1) ||
+                    this.controlledSentinel.field_Xb[this.field_F] != 8))) {
                     var10 = 1;
                     this.e((byte) -104);
                     decompiledFrameRemainder1 = false;
@@ -1415,12 +1415,12 @@ final class nb {
                     0 > var7_ref_bh.field_k) &&
                     (decompiledFrameRemainder2 = (var12 != null)) &&
                     (decompiledFrameRemainder2 = (qg.field_n == var12))) {
-                    decompiledFrameRemainder2 = (var11 == var12.field_x);
+                    decompiledFrameRemainder2 = (var11 == var12.startTick);
                   }
                   if (decompiledFrameRemainder2) {
                     var15 = 0;
                     if (null != qg.field_n &&
-                      qg.field_n.field_x <= var11) {
+                      qg.field_n.startTick <= var11) {
                       var15 = 1;
                     }
                     if (var15 != 1) {
@@ -1430,14 +1430,14 @@ final class nb {
                       decompiledFrameRemainder2 = false;
                     }
                     else {
-                      if (0 <= this.field_C.field_ub &&
-                        var7_ref_bh.field_j && (qg.field_n.field_s == 3 ||
-                        4 == qg.field_n.field_s)) {
+                      if (0 <= this.controlledSentinel.field_ub &&
+                        var7_ref_bh.field_j && (qg.field_n.actionType == 3 ||
+                        4 == qg.field_n.actionType)) {
                         var7_ref_bh.a((byte) -69, 35, var13, 0, true, var14);
                         var5_int = 1;
                       }
                       if (qg.field_n == var12 &&
-                        var11 == qg.field_n.field_x) {
+                        var11 == qg.field_n.startTick) {
                         var8.a((byte) -61, 35, var13, 0, true, var14);
                       }
                     }
@@ -1449,7 +1449,7 @@ final class nb {
                     null != qg.field_n) {
                     bj.field_h = var7_ref_bh.field_b;
                     km.field_c = var7_ref_bh.field_g;
-                    gi.field_r = var7_ref_bh.field_r;
+                    PacketBuffer.field_r = var7_ref_bh.field_r;
                     dl.field_G = var7_ref_bh.field_q;
                   }
                   var11++;
@@ -1457,7 +1457,7 @@ final class nb {
                 }
               } else {
                 if (var10 != 0) {
-                  break L4;
+                  break scanLoop1;
                 }
               }
               hf.field_c = 0;
@@ -1466,21 +1466,21 @@ final class nb {
             decompiledSharedTail0 = (var16 != 0);
           }
           if ((decompiledSharedTail0) &&
-            (this.field_C != null)) {
-            dl.field_G = this.field_C.field_Gb;
-            gi.field_r = this.field_C.field_pc;
-            bj.field_h = this.field_C.field_E;
-            km.field_c = this.field_C.field_hc;
+            (this.controlledSentinel != null)) {
+            dl.field_G = this.controlledSentinel.worldY;
+            PacketBuffer.field_r = this.controlledSentinel.field_pc;
+            bj.field_h = this.controlledSentinel.field_E;
+            km.field_c = this.controlledSentinel.worldX;
           }
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted1 = true;
-          L21: {
+          regionExit2: {
             boolean decompiledFrameCompleted2 = true;
             boolean decompiledFrameCompleted3 = true;
             var6 = -(this.field_P >> 4);
             var7 = -(this.field_E >> 4) + 400;
             if (param1) {
-              var8_ref = (mb) (this.field_X.field_K.e(13058));
+              var8_ref = (Sentinel) (this.world.sentinels.first(13058));
               while (var8_ref != null) {
                 stackOut_117_0 = var8_ref.a((byte) -22, var6, oh.field_f, pi.field_c, var7);
                 stackIn_190_0 = stackOut_117_0 ? 1 : 0;
@@ -1489,36 +1489,36 @@ final class nb {
                   decompiledFrameCompleted3 = false;
                   break;
                 }
-                if (stackIn_118_0 && (this.field_C == null ||
-                  ~this.field_C.field_jc != ~var8_ref.field_jc)) {
+                if (stackIn_118_0 && (this.controlledSentinel == null ||
+                  ~this.controlledSentinel.teamId != ~var8_ref.teamId)) {
                   this.field_u = var8_ref;
                 }
-                if (this.field_C != null &&
-                  this.field_C.field_Vb == var8_ref) {
-                  this.field_C.a(var6, 256, 23859, var7);
+                if (this.controlledSentinel != null &&
+                  this.controlledSentinel.field_Vb == var8_ref) {
+                  this.controlledSentinel.a(var6, 256, 23859, var7);
                 }
-                if (null != this.field_C &&
-                  !this.field_X.field_j &&
-                  this.field_C.i(21, -27) &&
-                  !var8_ref.i(81) && (this.field_C != var8_ref ||
-                  var5_int == 0) && (var8_ref.field_Zb.field_N != 109 &&
+                if (null != this.controlledSentinel &&
+                  !this.world.field_j &&
+                  this.controlledSentinel.hasModuleType(21, -27) &&
+                  !var8_ref.i(81) && (this.controlledSentinel != var8_ref ||
+                  var5_int == 0) && (var8_ref.chassis.componentId != 109 &&
                   !var8_ref.field_pc &&
                   !var8_ref.field_Hb)) {
                   var9 = new bh(var8_ref);
-                  if (var8_ref != this.field_C) {
-                    var9.field_n = var8_ref.d((byte) 110);
+                  if (var8_ref != this.controlledSentinel) {
+                    var9.field_n = var8_ref.getTeamColour((byte) 110);
                   }
                   var10Lifetime1 = 100;
                   var9.field_k = 0;
-                  var11Lifetime1 = 1 + this.field_X.field_r;
-                  while (!(var11Lifetime1 >= this.field_X.field_r + 90)) {
-                    var9.a((je) null, true, var11Lifetime1);
+                  var11Lifetime1 = 1 + this.world.simulationTick;
+                  while (!(var11Lifetime1 >= this.world.simulationTick + 90)) {
+                    var9.a((SentinelCommand) null, true, var11Lifetime1);
                     stackIn_190_0 = var11Lifetime1 % var10Lifetime1;
                     if (stackIn_190_0 == 0 ||
                       !(0 > var9.field_k)) {
                       stackIn_179_0 = var9;
                       stackIn_179_1 = -39;
-                      if (var11Lifetime1 >= (this.field_X.field_r + 70)) {
+                      if (var11Lifetime1 >= (this.world.simulationTick + 70)) {
                         stackIn_180_2 = 25;
                       } else {
                         stackIn_180_2 = 35;
@@ -1528,13 +1528,13 @@ final class nb {
                     var11Lifetime1++;
                   }
                 }
-                var8_ref = (mb) (this.field_X.field_K.a((byte) -57));
+                var8_ref = (Sentinel) (this.world.sentinels.next((byte) -57));
               }
               if (decompiledFrameCompleted3) {
-                var8_ref2 = (ne) (this.field_X.field_e.e(13058));
+                var8_ref2 = (ne) (this.world.field_e.first(13058));
                 while (null != var8_ref2) {
                   var8_ref2.a(256, var7, -1, var6);
-                  var8_ref2 = (ne) (this.field_X.field_e.a((byte) -72));
+                  var8_ref2 = (ne) (this.world.field_e.next((byte) -72));
                   if (var16 != 0) {
                     decompiledFrameCompleted2 = false;
                     break;
@@ -1548,40 +1548,40 @@ final class nb {
             }
             if ((decompiledFrameCompleted2) &&
               (stackIn_190_0 == 0)) {
-              break L21;
+              break regionExit2;
             }
-            var8_ref3 = (qb) (this.field_X.field_o.e(13058));
+            var8_ref3 = (ParticleEffect) (this.world.field_o.first(13058));
             while (true) {
               if (var8_ref3 != null) {
                 var8_ref3.a(var6, var7, true, (byte) -119);
-                var8_ref3 = (qb) (this.field_X.field_o.a((byte) -8));
+                var8_ref3 = (ParticleEffect) (this.world.field_o.next((byte) -8));
                 if (var16 == 0) {
                   continue;
                 }
               } else {
-                var8_ref4 = (jb) (this.field_X.field_C.e(13058));
+                var8_ref4 = (Explosion) (this.world.field_C.first(13058));
                 while (var8_ref4 != null) {
                   var8_ref4.a(var7, var6, 116);
-                  var8_ref4 = (jb) (this.field_X.field_C.a((byte) -82));
+                  var8_ref4 = (Explosion) (this.world.field_C.next((byte) -82));
                   if (var16 != 0) {
-                    break L21;
+                    break regionExit2;
                   }
                 }
-                var8_ref5 = (wl) (this.field_X.field_db.e(13058));
+                var8_ref5 = (Projectile) (this.world.field_db.first(13058));
                 while (null != var8_ref5) {
                   var8_ref5.a(var7, var6, 4);
-                  var8_ref5 = (wl) (this.field_X.field_db.a((byte) -55));
+                  var8_ref5 = (Projectile) (this.world.field_db.next((byte) -55));
                   if (var16 != 0) {
-                    break L21;
+                    break regionExit2;
                   }
                 }
-                var8_ref3 = (qb) (this.field_X.field_o.e(13058));
+                var8_ref3 = (ParticleEffect) (this.world.field_o.first(13058));
               }
               break;
             }
             while (null != var8_ref3) {
               var8_ref3.a(var6, var7, false, (byte) -107);
-              var8_ref3 = (qb) (this.field_X.field_o.a((byte) -61));
+              var8_ref3 = (ParticleEffect) (this.world.field_o.next((byte) -61));
               if (var16 != 0) {
                 decompiledFrameCompleted1 = false;
                 break;
@@ -1589,39 +1589,39 @@ final class nb {
             }
           }
           if ((decompiledFrameCompleted1) &&
-            (this.field_X.field_b >= 50)) {
-            pb.c(0, 0, 640, 400, 16777215, 255 * (-this.field_X.field_b + 550) / 500);
+            (this.world.field_b >= 50)) {
+            SoftwareRaster.c(0, 0, 640, 400, 16777215, 255 * (-this.world.field_b + 550) / 500);
             decompiledFrameRemainder0 = (var16 != 0);
           }
           if ((decompiledFrameRemainder0) &&
-            (this.field_X.field_b > 0)) {
-            pb.c(0, 0, 640, 400, 16777215, this.field_X.field_b * 5);
+            (this.world.field_b > 0)) {
+            SoftwareRaster.c(0, 0, 640, 400, 16777215, this.world.field_b * 5);
           }
           boolean decompiledFrameCompleted0 = true;
           if (param1 &&
-            null != this.field_C &&
-            !jc.a(2)) {
-            var8_refLifetime1 = this.field_C;
-            this.field_P = Math.min(this.field_P, this.field_X.field_ab.a(99) - 10240);
+            null != this.controlledSentinel &&
+            !NodeIterator.a(2)) {
+            var8_refLifetime1 = this.controlledSentinel;
+            this.field_P = Math.min(this.field_P, this.world.terrain.getProfileLength(99) - 10240);
             this.field_P = Math.max(this.field_P, 0);
             if (!fc.field_e[81] &&
               null != qg.field_n &&
-              this.field_C.field_Xb.length > 0) {
-              var8_refLifetime1.field_Zb.a(qg.field_n.field_B * bj.field_h, -126, var8_refLifetime1.field_Xb[this.field_F]);
+              this.controlledSentinel.field_Xb.length > 0) {
+              var8_refLifetime1.chassis.a(qg.field_n.field_B * bj.field_h, -126, var8_refLifetime1.field_Xb[this.field_F]);
             }
-            var9_ref = (je) (var8_refLifetime1.field_B.b(1063677678));
+            var9_ref = (SentinelCommand) (var8_refLifetime1.pendingCommands.b(1063677678));
             while (var9_ref != null) {
               stackIn_251_0 = -1;
-              stackIn_251_1 = ~var9_ref.field_s;
+              stackIn_251_1 = ~var9_ref.actionType;
               if (var16 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
               if (stackIn_251_0 == stackIn_251_1) {
                 qi.field_k = true;
-                var8_refLifetime1.field_Zb.a(var9_ref.field_B * this.field_C.field_E, -117, var9_ref.field_A);
+                var8_refLifetime1.chassis.a(var9_ref.field_B * this.controlledSentinel.field_E, -117, var9_ref.actionVariant);
               }
-              var9_ref = (je) (var8_refLifetime1.field_B.a(-2137));
+              var9_ref = (SentinelCommand) (var8_refLifetime1.pendingCommands.a(-2137));
             }
           }
           if (decompiledFrameCompleted0) {
@@ -1648,24 +1648,24 @@ final class nb {
         RuntimeException decompiledCaughtException = null;
         try {
           this.c(false);
-          qd.field_g = 500;
+          PartInstruction.field_g = 500;
           var2_int = ol.field_Ub + 10 * ge.field_j;
-          this.field_C.a(ua.field_C[var2_int], true, false, 0, 0);
-          this.field_X.field_N = this.field_X.field_N + 100000 * this.field_C.field_x;
-          this.field_X.field_q = this.field_X.field_q + this.field_C.field_Eb * 60000;
-          this.field_X.field_M = ua.field_t[var2_int][3];
+          this.controlledSentinel.configureDesign(ua.field_C[var2_int], true, false, 0, 0);
+          this.world.field_N = this.world.field_N + 100000 * this.controlledSentinel.maximumCharge;
+          this.world.field_q = this.world.field_q + this.controlledSentinel.maximumArmour * 60000;
+          this.world.field_M = ua.field_t[var2_int][3];
           var3 = ua.field_t[var2_int][2];
-          this.field_C.field_Qb = 170;
-          this.field_C.field_hc = var3 << 4;
-          this.field_C.field_ab = 1000;
-          this.field_C.field_K = 0;
-          this.field_C.field_Gb = -120000;
+          this.controlledSentinel.field_Qb = 170;
+          this.controlledSentinel.worldX = var3 << 4;
+          this.controlledSentinel.velocityY = 1000;
+          this.controlledSentinel.velocityX = 0;
+          this.controlledSentinel.worldY = -120000;
           var4 = -93 % ((-52 - param0) / 35);
-          this.field_C.field_U = 0;
+          this.controlledSentinel.field_U = 0;
           if (ge.field_j == 0) {
             var5 = vc.a((byte) 32);
             if (var5 >= 0) {
-              this.field_C.field_hc = var5;
+              this.controlledSentinel.worldX = var5;
             }
           }
           return;
@@ -1682,7 +1682,7 @@ final class nb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var3_intLifetime1;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           if (!this.field_d) {
             if (!ni.b(112)) {
@@ -1728,7 +1728,7 @@ final class nb {
             throw new IllegalStateException();
           }
           mm.field_g.a(60, (byte) -117);
-          this.field_C = null;
+          this.controlledSentinel = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1783,7 +1783,7 @@ final class nb {
         int var20Lifetime1;
         int var22Lifetime1;
         int var23Lifetime1;
-        var24 = SteelSentinels.field_G;
+        var24 = SteelSentinels.obfuscationControl;
         try {
           stackIn_5_0 = (nc.field_a < 0) ? 0 : 1;
           var2_int = stackIn_5_0;
@@ -1849,7 +1849,7 @@ final class nb {
           var8 = var8 + var14 * var9;
           var15 = 480 - var8;
           ch.a(var15, 640, 32308, 0, var8);
-          pb.g(3, 3 + var15, 634, var8 - 3 - 3, 8, 0);
+          SoftwareRaster.g(3, 3 + var15, 634, var8 - 3 - 3, 8, 0);
           var16 = 473;
           var17 = 0;
           if (var5 != 0) {
@@ -2012,21 +2012,21 @@ final class nb {
     final void c(int param0, boolean param1) {
         int dupTemp$0 = 0;
         int stackIn_22_0 = 0;
-        nk stackIn_622_0 = null;
+        ArticulatedPart stackIn_622_0 = null;
         int stackIn_661_0 = 0;
         int stackIn_661_1 = 0;
         Object stackIn_801_0 = null;
         int stackIn_869_0 = 0;
         int stackIn_872_0 = 0;
         int stackIn_873_1 = 0;
-        je stackIn_894_0 = null;
+        SentinelCommand stackIn_894_0 = null;
         int stackIn_895_1 = 0;
         int stackIn_1080_0 = 0;
         int stackIn_1149_0 = 0;
         boolean stackIn_1455_1 = false;
         boolean stackIn_1459_1 = false;
         int stackIn_1508_0 = 0;
-        wk[] stackIn_1512_0 = null;
+        RgbSprite[] stackIn_1512_0 = null;
         boolean stackIn_1535_0 = false;
         boolean stackIn_1550_1 = false;
         boolean stackIn_1554_1 = false;
@@ -2049,10 +2049,10 @@ final class nb {
         int stackIn_1799_1 = 0;
         String stackIn_1800_2 = null;
         int stackIn_2059_0 = 0;
-        wk[] stackIn_2063_0 = null;
+        RgbSprite[] stackIn_2063_0 = null;
         boolean stackIn_2086_0 = false;
         RuntimeException decompiledCaughtException = null;
-        nk stackOut_621_0;
+        ArticulatedPart stackOut_621_0;
         int var3_int = 0;
         String var3 = null;
         RuntimeException var3_ref = null;
@@ -2063,86 +2063,86 @@ final class nb {
         int var6 = 0;
         int var7 = 0;
         int[] var7_ref_int__ = null;
-        mb var7_ref_mb = null;
-        jc var7_ref_jc = null;
-        nk[] var7_ref_nk__ = null;
-        mb var8_ref_mb = null;
+        Sentinel var7_ref_mb = null;
+        NodeIterator var7_ref_jc = null;
+        ArticulatedPart[] var7_ref_nk__ = null;
+        Sentinel var8_ref_mb = null;
         int var8 = 0;
-        mb var9_ref_mb = null;
+        Sentinel var9_ref_mb = null;
         int var9 = 0;
-        wl var9_ref_wl = null;
-        nk var9_ref_nk = null;
-        je var9_ref_je = null;
+        Projectile var9_ref_wl = null;
+        ArticulatedPart var9_ref_nk = null;
+        SentinelCommand var9_ref_je = null;
         int var10 = 0;
-        je var10_ref_je = null;
+        SentinelCommand var10_ref_je = null;
         int var11 = 0;
-        je var11_ref_je = null;
+        SentinelCommand var11_ref_je = null;
         int var12_int = 0;
-        wk[] var12 = null;
+        RgbSprite[] var12 = null;
         double var13_double = 0.0;
         int var13 = 0;
         int var14 = 0;
-        nk[] var15_ref_nk__ = null;
+        ArticulatedPart[] var15_ref_nk__ = null;
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
-        var18 = SteelSentinels.field_G;
+        var18 = SteelSentinels.obfuscationControl;
         try {
-          if (!this.field_X.field_p &&
+          if (!this.world.field_p &&
             wc.field_a &&
-            0 <= this.field_X.field_A &&
+            0 <= this.world.field_A &&
             -2 != ed.field_j) {
             wc.field_a = false;
-            var3_int = Math.min(2, Math.max(0, this.field_X.field_Q));
+            var3_int = Math.min(2, Math.max(0, this.world.computerPlayerCount));
             var4_ref = null;
             if (1 == var3_int) {
-              var4_ref_String = this.field_X.d(-1661904765, this.field_X.field_kb);
+              var4_ref_String = this.world.d(-1661904765, this.world.playerCount);
             } else {
               if (var3_int == 2) {
-                var4_ref_String = this.field_X.d(-1661904765, this.field_X.field_kb + (1 & this.field_X.field_r));
+                var4_ref_String = this.world.d(-1661904765, this.world.playerCount + (1 & this.world.simulationTick));
               } else {
-                var4_ref_String = this.field_X.d(-1661904765, this.field_X.field_A);
+                var4_ref_String = this.world.d(-1661904765, this.world.field_A);
               }
             }
             var4_ref_String = var4_ref_String + ": " + rh.field_t[var3_int];
             stackIn_22_0 = (0 < var3_int) ? 48127 : 16776960;
             bl.a(stackIn_22_0, var4_ref_String, (byte) 34);
-            bc.a(var4_ref_String, this.field_X, (byte) 100);
+            bc.a(var4_ref_String, this.world, (byte) 100);
           }
-          if (this.field_X.field_p &&
+          if (this.world.field_p &&
             !wc.field_a &&
             ed.field_j != -2) {
             wc.field_a = true;
-            var3 = si.field_H[this.field_X.field_r % si.field_H.length];
+            var3 = si.field_H[this.world.simulationTick % si.field_H.length];
             var3 = dc.field_a + ": " + var3;
             bl.a(16776960, var3, (byte) -50);
-            bc.a(var3, this.field_X, (byte) 100);
+            bc.a(var3, this.world, (byte) 100);
           }
           boolean decompiledFrameRemainder12 = true;
           if (di.field_g == -1) {
             if (!uj.field_f) {
-              if (this.field_X.field_P == 0 ||
-                this.field_X.field_lb) {
+              if (this.world.field_P == 0 ||
+                this.world.field_lb) {
                 this.j(53);
                 decompiledFrameRemainder12 = (var18 != 0);
               }
               if ((decompiledFrameRemainder12) &&
-                (decompiledFrameRemainder12 = (this.field_X.field_P == 1))) {
+                (decompiledFrameRemainder12 = (this.world.field_P == 1))) {
                 this.f(30483);
                 decompiledFrameRemainder12 = (var18 != 0);
               }
             }
             if (decompiledFrameRemainder12) {
-              if (this.field_X.field_P == 0 ||
-                this.field_X.field_lb) {
+              if (this.world.field_P == 0 ||
+                this.world.field_lb) {
                 this.b(true);
                 if ((var18 != 0) &&
-                  (this.field_X.field_P == 1)) {
+                  (this.world.field_P == 1)) {
                   this.l(-21714);
                 }
               } else {
-                if (this.field_X.field_P == 1) {
+                if (this.world.field_P == 1) {
                   this.l(-21714);
                 }
               }
@@ -2152,20 +2152,20 @@ final class nb {
             bh.a(true)) {
             sh.field_d = sh.field_d + 1;
           }
-          if (this.field_X.field_j &&
+          if (this.world.field_j &&
             q.field_h > 0) {
             q.field_h = q.field_h - 1;
           }
-          if (qd.field_g > 0) {
-            qd.field_g = qd.field_g - 1;
+          if (PartInstruction.field_g > 0) {
+            PartInstruction.field_g = PartInstruction.field_g - 1;
           }
-          if (this.field_X.field_j &&
+          if (this.world.field_j &&
             this.field_W == null) {
             this.h((byte) -69);
           }
           if (-1 != this.field_t &&
             lb.field_gc == 1 &&
-            !this.field_X.field_j) {
+            !this.world.field_j) {
             this.field_F = this.field_t;
             this.field_t = -1;
             rc.field_l = 100;
@@ -2174,14 +2174,14 @@ final class nb {
             rc.field_l = rc.field_l - 1;
           }
           boolean decompiledSharedTail4 = (!(hb.field_f) ||
-            !(150 > je.field_o));
+            !(150 > SentinelCommand.field_o));
           if (!decompiledSharedTail4) {
-            je.field_o = je.field_o + 2;
+            SentinelCommand.field_o = SentinelCommand.field_o + 2;
             decompiledSharedTail4 = (var18 != 0);
           }
           if ((decompiledSharedTail4) && (!hb.field_f &&
-            je.field_o > 0)) {
-            je.field_o = je.field_o - 1;
+            SentinelCommand.field_o > 0)) {
+            SentinelCommand.field_o = SentinelCommand.field_o - 1;
           }
           if (-1 != g.field_h) {
             pd.field_X = pd.field_X + 1;
@@ -2191,13 +2191,13 @@ final class nb {
           }
           if (!pm.field_db.f(7) &&
             ~rc.field_g != ~this.field_F) {
-            pm.field_db.g(6);
+            pm.field_db.clear(6);
           }
           rc.field_g = this.field_F;
           if (null != pm.field_db &&
             pm.field_db.f(7) &&
-            null != this.field_C &&
-            !this.field_C.field_pc) {
+            null != this.controlledSentinel &&
+            !this.controlledSentinel.field_pc) {
             sn.field_n = true;
           }
           if (this.field_r != -1 &&
@@ -2205,7 +2205,7 @@ final class nb {
             this.field_r != 0 &&
             this.field_r != 28 &&
             this.field_r != this.field_n) {
-            ee.c(-2483, 97);
+            CombatWorld.c(-2483, 97);
           }
           if (ue.field_b) {
             if (this.field_U > this.field_Y) {
@@ -2294,33 +2294,33 @@ final class nb {
             ~qh.field_Yb != ~dl.field_M) {
             param1 = false;
           }
-          if (null != this.field_C &&
-            this.field_C.field_pc) {
+          if (null != this.controlledSentinel &&
+            this.controlledSentinel.field_pc) {
             hf.field_c = 0;
           }
-          if (this.field_C != null) {
-            if (!this.field_C.field_pc) {
-              if (0 < this.field_C.field_Q) {
+          if (this.controlledSentinel != null) {
+            if (!this.controlledSentinel.field_pc) {
+              if (0 < this.controlledSentinel.field_Q) {
                 if (!this.field_A &&
-                  0 >= this.field_C.field_S) {
+                  0 >= this.controlledSentinel.field_S) {
                   this.field_A = true;
                   fc.a((byte) 78, 83, -1);
                 }
                 if (this.field_A &&
-                  this.field_C.field_S > (this.field_C.field_Q / 10)) {
+                  this.controlledSentinel.field_S > (this.controlledSentinel.field_Q / 10)) {
                   this.field_A = false;
                   fc.a((byte) -94, 29, -1);
                 }
               }
-              if (this.field_C.field_ub >= 0) {
+              if (this.controlledSentinel.field_ub >= 0) {
                 if (!this.field_f &&
-                  this.field_C.field_Tb < 3 &&
-                  (this.field_C.field_x / 2) > this.field_C.field_Tb) {
+                  this.controlledSentinel.charge < 3 &&
+                  (this.controlledSentinel.maximumCharge / 2) > this.controlledSentinel.charge) {
                   this.field_f = true;
                   fc.a((byte) 55, 82, -1);
                 }
-                if (this.field_f && (!(this.field_C.field_Tb <= 3) ||
-                  !(this.field_C.field_Tb <= this.field_C.field_x / 2))) {
+                if (this.field_f && (!(this.controlledSentinel.charge <= 3) ||
+                  !(this.controlledSentinel.charge <= this.controlledSentinel.maximumCharge / 2))) {
                   this.field_f = false;
                   if (var18 != 0) {
                     this.field_f = false;
@@ -2330,12 +2330,12 @@ final class nb {
                 this.field_f = false;
               }
               if (!this.field_y &&
-                this.field_C.field_rb <= (this.field_C.field_Eb / 4)) {
+                this.controlledSentinel.armour <= (this.controlledSentinel.maximumArmour / 4)) {
                 this.field_y = true;
                 fc.a((byte) 108, 78, -1);
               }
               if ((this.field_y) &&
-                (!(this.field_C.field_rb < this.field_C.field_Eb / 2))) {
+                (!(this.controlledSentinel.armour < this.controlledSentinel.maximumArmour / 2))) {
                 this.field_y = false;
                 if (var18 != 0) {
                   sn.field_n = false;
@@ -2359,8 +2359,8 @@ final class nb {
             4 != di.field_g &&
             di.field_g != 10 &&
             qh.field_Yb == dl.field_M) {
-            L48: {
-              this.field_C.field_vb = 0;
+            regionExit1: {
+              this.controlledSentinel.field_vb = 0;
               if (di.field_g == 0) {
                 var7 = qh.field_Yb;
                 switch ((var18 == 0
@@ -2373,164 +2373,164 @@ final class nb {
                   ) ? var7 : -1) {
                   case 1:
                     if (tj.field_c != 1) {
-                      break L48;
+                      break regionExit1;
                     }
                     this.k(-1589);
                     if (var18 == 0) {
-                      break L48;
+                      break regionExit1;
                     }
                   case 2:
                     if (tj.field_c != 1) {
-                      break L48;
+                      break regionExit1;
                     }
                     this.k(-1589);
                     if (var18 == 0) {
-                      break L48;
+                      break regionExit1;
                     }
                   case 3:
                     if (tj.field_c != 1) {
-                      break L48;
+                      break regionExit1;
                     }
                     this.k(-1589);
                     if (var18 == 0) {
-                      break L48;
+                      break regionExit1;
                     }
                   case 4:
-                    if (!this.field_X.f(-48)) {
-                      break L48;
+                    if (!this.world.f(-48)) {
+                      break regionExit1;
                     }
                     this.k(-1589);
                     if (var18 == 0) {
-                      break L48;
+                      break regionExit1;
                     }
                   case 6:
                     if (tj.field_c != 1) {
-                      break L48;
+                      break regionExit1;
                     }
                     this.k(-1589);
                     if (var18 == 0) {
-                      break L48;
+                      break regionExit1;
                     }
                   case 7:
-                    if (!this.field_X.f(-91)) {
-                      break L48;
+                    if (!this.world.f(-91)) {
+                      break regionExit1;
                     }
                     this.k(-1589);
                     if (var18 == 0) {
-                      break L48;
+                      break regionExit1;
                     }
                   case 9:
-                    if (!this.field_X.f(-73)) {
-                      break L48;
+                    if (!this.world.f(-73)) {
+                      break regionExit1;
                     }
                     this.k(-1589);
                     if (var18 == 0) {
-                      break L48;
+                      break regionExit1;
                     }
                   case 10:
                     break;
                   default:
-                    break L48;
+                    break regionExit1;
                 }
-                if (this.field_X.f(-50)) {
+                if (this.world.f(-50)) {
                   this.k(-1589);
                 }
               }
             }
-            L58: {
+            regionExit2: {
               boolean decompiledFrameCompleted2 = true;
               boolean decompiledFrameRemainder15 = true;
               boolean decompiledFrameCompleted4 = true;
-              L62: {
+              regionExit3: {
                 boolean decompiledFrameCompleted3 = true;
                 if (1 == di.field_g) {
-                  L63: {
-                    L64: {
-                      L65: {
-                        L66: {
+                  regionExit4: {
+                    regionExit5: {
+                      regionExit6: {
+                        regionExit7: {
                           var7 = qh.field_Yb;
                           if (1 != var7) {
                             if (2 == var7) {
-                              break L65;
+                              break regionExit6;
                             }
                             if (3 == var7) {
-                              break L64;
+                              break regionExit5;
                             }
                             if (4 == var7 &&
                               var18 == 0) {
-                              break L63;
+                              break regionExit4;
                             }
-                            L68: {
-                              L69: {
+                            regionExit8: {
+                              regionExit9: {
                                 if (var7 != 5) {
                                   if (var7 != 6 ||
                                     var18 != 0) {
                                     if (var7 == 7 &&
                                       var18 == 0) {
-                                      break L69;
+                                      break regionExit9;
                                     }
                                     if (var7 == 8 &&
                                       var18 == 0) {
-                                      break L68;
+                                      break regionExit8;
                                     }
-                                    L74: {
-                                      L75: {
+                                    regionExit10: {
+                                      regionExit11: {
                                         if (var7 == 9) {
-                                          if (!this.field_X.f(-124)) {
-                                            break L62;
+                                          if (!this.world.f(-124)) {
+                                            break regionExit3;
                                           }
                                           this.k(-1589);
                                           if (var18 == 0) {
-                                            break L62;
+                                            break regionExit3;
                                           }
                                         } else {
                                           switch (var7) {
                                             case 12:
-                                              break L75;
+                                              break regionExit11;
                                             default:
-                                              break L62;
+                                              break regionExit3;
                                             case 13:
                                               if (var18 == 0) {
-                                                break L74;
+                                                break regionExit10;
                                               }
-                                              break L66;
+                                              break regionExit7;
                                             case 11:
                                               break;
                                           }
                                         }
                                         if (8 > tj.field_c &&
-                                          !this.field_X.f(-127)) {
-                                          break L62;
+                                          !this.world.f(-127)) {
+                                          break regionExit3;
                                         }
                                         this.k(-1589);
                                         if (var18 == 0) {
-                                          break L62;
+                                          break regionExit3;
                                         }
                                       }
-                                      if (!this.field_X.f(-126)) {
-                                        break L62;
+                                      if (!this.world.f(-126)) {
+                                        break regionExit3;
                                       }
                                       this.k(-1589);
                                       if (var18 == 0) {
-                                        break L62;
+                                        break regionExit3;
                                       }
                                     }
-                                    if (!this.field_X.f(-79)) {
-                                      break L62;
+                                    if (!this.world.f(-79)) {
+                                      break regionExit3;
                                     }
                                     if (0 == tj.field_c) {
                                       tj.field_c = 1;
                                       var7 = 0;
                                       while (var7 < 16) {
-                                        var8_ref_mb = new mb(-1, 1, this.field_X);
-                                        var8_ref_mb.a(nn.field_c, true, false, -1, 1);
+                                        var8_ref_mb = new Sentinel(-1, 1, this.world);
+                                        var8_ref_mb.configureDesign(nn.field_c, true, false, -1, 1);
                                         var8_ref_mb.field_Nb = 9;
                                         var8_ref_mb.j(-5);
-                                        var8_ref_mb.field_Gb = -120000 - var7 * 10000;
-                                        var8_ref_mb.field_fc = var8_ref_mb.field_Gb;
-                                        var8_ref_mb.field_K = 0;
-                                        var8_ref_mb.field_ab = 1000;
-                                        this.field_X.field_K.a(3, var8_ref_mb);
+                                        var8_ref_mb.worldY = -120000 - var7 * 10000;
+                                        var8_ref_mb.field_fc = var8_ref_mb.worldY;
+                                        var8_ref_mb.velocityX = 0;
+                                        var8_ref_mb.velocityY = 1000;
+                                        this.world.sentinels.addLast(3, var8_ref_mb);
                                         var7++;
                                         if (var18 != 0) {
                                           decompiledFrameCompleted4 = false;
@@ -2538,33 +2538,33 @@ final class nb {
                                         }
                                       }
                                       if (decompiledFrameCompleted4) {
-                                        break L62;
+                                        break regionExit3;
                                       }
                                     }
                                     if (decompiledFrameCompleted4) {
                                       if (tj.field_c > 2) {
                                         if (tj.field_c != 4) {
-                                          break L62;
+                                          break regionExit3;
                                         }
                                         this.k(-1589);
                                         if (var18 == 0) {
-                                          break L62;
+                                          break regionExit3;
                                         }
                                       }
                                       var7_ref_int__ = new int[]{55, 1, 18, -1, -1, -1, -1, 2, 29, 96, 29, -1, -1, -1, -1, -1, -1, -1, -1};
                                       tj.field_c = 4;
                                       var8 = 0;
                                       while (var8 < 4) {
-                                        var9_ref_mb = new mb(-1, 1, this.field_X);
-                                        var9_ref_mb.a(var7_ref_int__, true, false, -1, 1);
+                                        var9_ref_mb = new Sentinel(-1, 1, this.world);
+                                        var9_ref_mb.configureDesign(var7_ref_int__, true, false, -1, 1);
                                         var9_ref_mb.field_Nb = 4;
                                         var9_ref_mb.j(-5);
-                                        var9_ref_mb.field_Gb = -120000 - 10000 * var8;
-                                        var9_ref_mb.field_fc = var9_ref_mb.field_Gb;
+                                        var9_ref_mb.worldY = -120000 - 10000 * var8;
+                                        var9_ref_mb.field_fc = var9_ref_mb.worldY;
                                         var9_ref_mb.field_pc = false;
-                                        var9_ref_mb.field_K = 0;
-                                        var9_ref_mb.field_ab = 1000;
-                                        this.field_X.field_K.a(3, var9_ref_mb);
+                                        var9_ref_mb.velocityX = 0;
+                                        var9_ref_mb.velocityY = 1000;
+                                        this.world.sentinels.addLast(3, var9_ref_mb);
                                         var8++;
                                         if (var18 != 0) {
                                           decompiledFrameCompleted3 = false;
@@ -2572,103 +2572,103 @@ final class nb {
                                         }
                                       }
                                       if (decompiledFrameCompleted3) {
-                                        break L62;
+                                        break regionExit3;
                                       }
                                     }
                                   }
                                 } else {
                                   if (this.field_P >= 500) {
-                                    break L62;
+                                    break regionExit3;
                                   }
                                   this.k(-1589);
                                   if (var18 == 0) {
-                                    break L62;
+                                    break regionExit3;
                                   }
                                 }
                                 if ((decompiledFrameCompleted4) &&
                                   (decompiledFrameCompleted3)) {
                                   if ((tj.field_c & 7) != 7) {
-                                    break L62;
+                                    break regionExit3;
                                   }
                                   this.k(-1589);
                                   if (var18 == 0) {
-                                    break L62;
+                                    break regionExit3;
                                   }
                                 }
                               }
                               if ((decompiledFrameCompleted4) &&
                                 (decompiledFrameCompleted3)) {
-                                if (!this.field_X.f(-39)) {
-                                  break L62;
+                                if (!this.world.f(-39)) {
+                                  break regionExit3;
                                 }
                                 this.k(-1589);
                                 if (var18 == 0) {
-                                  break L62;
+                                  break regionExit3;
                                 }
                               }
                             }
                             if ((decompiledFrameCompleted4) &&
                               (decompiledFrameCompleted3)) {
-                              var7_ref_mb = (mb) (this.field_X.field_K.b(1063677678));
-                              var8 = Math.max(0, Math.min(this.field_X.field_ab.a(38) - 10240, -5120 + (this.field_C.field_hc >> 4)));
-                              var9 = 3200 + (this.field_C.field_Gb >> 4);
-                              var10 = -10240 + this.field_X.field_ab.a(-119);
-                              if ((!(Math.abs(-var7_ref_mb.field_hc + var8) >= (var7_ref_mb.field_Db << 4)) ||
+                              var7_ref_mb = (Sentinel) (this.world.sentinels.b(1063677678));
+                              var8 = Math.max(0, Math.min(this.world.terrain.getProfileLength(38) - 10240, -5120 + (this.controlledSentinel.worldX >> 4)));
+                              var9 = 3200 + (this.controlledSentinel.worldY >> 4);
+                              var10 = -10240 + this.world.terrain.getProfileLength(-119);
+                              if ((!(Math.abs(-var7_ref_mb.worldX + var8) >= (var7_ref_mb.field_Db << 4)) ||
                                 this.field_P >= var10) && (this.field_E == 1024 ||
-                                !(Math.abs(var9 + 8 * var7_ref_mb.field_Db - var7_ref_mb.field_Gb) >= (40000 + (var7_ref_mb.field_Db << 4))))) {
+                                !(Math.abs(var9 + 8 * var7_ref_mb.field_Db - var7_ref_mb.worldY) >= (40000 + (var7_ref_mb.field_Db << 4))))) {
                                 this.k(-1589);
                               }
-                              break L62;
+                              break regionExit3;
                             }
                           }
                         }
                         if ((decompiledFrameCompleted4) &&
                           (decompiledFrameCompleted3)) {
-                          if (this.field_C.field_Xb.length <= this.field_F) {
-                            break L62;
+                          if (this.controlledSentinel.field_Xb.length <= this.field_F) {
+                            break regionExit3;
                           }
-                          if (this.field_C.field_Xb[this.field_F] != 13) {
-                            break L62;
+                          if (this.controlledSentinel.field_Xb[this.field_F] != 13) {
+                            break regionExit3;
                           }
                           this.k(-1589);
                           if (var18 == 0) {
-                            break L62;
+                            break regionExit3;
                           }
                         }
                       }
                       if ((decompiledFrameCompleted4) &&
                         (decompiledFrameCompleted3)) {
-                        if (!this.field_X.f(-41)) {
-                          break L62;
+                        if (!this.world.f(-41)) {
+                          break regionExit3;
                         }
                         this.k(-1589);
                         if (var18 == 0) {
-                          break L62;
+                          break regionExit3;
                         }
                       }
                     }
                     if ((decompiledFrameCompleted4) &&
                       (decompiledFrameCompleted3)) {
-                      if (this.field_X.field_e.b((byte) -128) != 0) {
-                        break L62;
+                      if (this.world.field_e.size((byte) -128) != 0) {
+                        break regionExit3;
                       }
                       this.k(-1589);
                       if (var18 == 0) {
-                        break L62;
+                        break regionExit3;
                       }
                     }
                   }
                   if ((decompiledFrameCompleted4) &&
                     (decompiledFrameCompleted3)) {
-                    boolean decompiledSharedTail3 = !(this.field_X.f(-120));
+                    boolean decompiledSharedTail3 = !(this.world.f(-120));
                     if (!decompiledSharedTail3) {
                       this.k(-1589);
                       decompiledSharedTail3 = (var18 != 0);
                     }
                     if ((decompiledSharedTail3) &&
-                      (this.field_X.field_K.b((byte) -128) == 2)) {
-                      var7_ref_mb = (mb) (this.field_X.field_K.b(1063677678));
-                      if (var7_ref_mb.field_hc < 38000) {
+                      (this.world.sentinels.size((byte) -128) == 2)) {
+                      var7_ref_mb = (Sentinel) (this.world.sentinels.b(1063677678));
+                      if (var7_ref_mb.worldX < 38000) {
                         this.k(-1589);
                       }
                     }
@@ -2696,8 +2696,8 @@ final class nb {
                 }
                 if (((decompiledFrameRemainder15) && (decompiledFrameRemainder11) && (decompiledFrameRemainder10) && (decompiledFrameRemainder9) && (decompiledFrameRemainder8) && (decompiledFrameRemainder7)) &&
                   (decompiledFrameRemainder15 = !(0 > this.field_F)) &&
-                  (decompiledFrameRemainder15 = !(this.field_C.field_Xb.length <= this.field_F)) &&
-                  (decompiledFrameRemainder15 = (this.field_C.field_Xb[this.field_F] == 17))) {
+                  (decompiledFrameRemainder15 = !(this.controlledSentinel.field_Xb.length <= this.field_F)) &&
+                  (decompiledFrameRemainder15 = (this.controlledSentinel.field_Xb[this.field_F] == 17))) {
                   this.k(-1589);
                   decompiledFrameRemainder15 = (var18 != 0);
                 }
@@ -2706,15 +2706,15 @@ final class nb {
                   (decompiledFrameRemainder10) &&
                   (decompiledFrameRemainder9) &&
                   (decompiledFrameRemainder8)) {
-                  if (!this.field_X.f(-46)) {
-                    this.field_C.field_Zb.d(65536, 17);
+                  if (!this.world.f(-46)) {
+                    this.controlledSentinel.chassis.d(65536, 17);
                     decompiledFrameRemainder15 = (si.field_t == 0);
                     if (decompiledFrameRemainder15) {
-                      var7_ref_jc = new jc(this.field_X.field_db);
+                      var7_ref_jc = new NodeIterator(this.world.field_db);
                       var8 = 0;
-                      var9_ref_wl = (wl) (var7_ref_jc.b(2));
+                      var9_ref_wl = (Projectile) (var7_ref_jc.b(2));
                       while (null != var9_ref_wl) {
-                        stackIn_661_0 = var9_ref_wl.field_y;
+                        stackIn_661_0 = var9_ref_wl.sourceWeaponType;
                         stackIn_661_1 = 20;
                         if (var18 != 0) {
                           decompiledFrameCompleted2 = false;
@@ -2723,7 +2723,7 @@ final class nb {
                         if (stackIn_661_0 == stackIn_661_1) {
                           var8 = 1;
                         }
-                        var9_ref_wl = (wl) (var7_ref_jc.d(2));
+                        var9_ref_wl = (Projectile) (var7_ref_jc.d(2));
                       }
                       if (decompiledFrameCompleted2) {
                         if (var8 == 0) {
@@ -2744,8 +2744,8 @@ final class nb {
                   (decompiledFrameRemainder10) &&
                   (decompiledFrameRemainder9) &&
                   (decompiledFrameCompleted2)) {
-                  if (!this.field_X.f(-93)) {
-                    var7_ref_nk__ = this.field_C.field_gb;
+                  if (!this.world.f(-93)) {
+                    var7_ref_nk__ = this.controlledSentinel.weaponParts;
                     var8 = 0;
                     while (var7_ref_nk__.length > var8) {
                       var9_ref_nk = var7_ref_nk__[var8];
@@ -2753,10 +2753,10 @@ final class nb {
                       stackIn_801_0 = stackOut_621_0;
                       stackIn_622_0 = stackOut_621_0;
                       if (var18 != 0) {
-                        break L58;
+                        break regionExit2;
                       }
                       if (stackIn_622_0 != null &&
-                        37 == var9_ref_nk.field_N &&
+                        37 == var9_ref_nk.componentId &&
                         var9_ref_nk.field_C > 350) {
                         var9_ref_nk.field_C = 350;
                       }
@@ -2771,19 +2771,19 @@ final class nb {
                 }
                 if (((decompiledFrameRemainder15) && (decompiledFrameRemainder11) && (decompiledFrameRemainder10) && (decompiledFrameCompleted2)) &&
                   (decompiledFrameRemainder15 = !(this.field_F < 0)) &&
-                  (decompiledFrameRemainder15 = !(this.field_F >= this.field_C.field_Xb.length)) &&
-                  (decompiledFrameRemainder15 = (this.field_C.field_Xb[this.field_F] == 2))) {
+                  (decompiledFrameRemainder15 = !(this.field_F >= this.controlledSentinel.field_Xb.length)) &&
+                  (decompiledFrameRemainder15 = (this.controlledSentinel.field_Xb[this.field_F] == 2))) {
                   this.k(-1589);
                   decompiledFrameRemainder15 = (var18 != 0);
                 }
                 if (((decompiledFrameRemainder15) && (decompiledFrameRemainder11) && (decompiledFrameCompleted2)) &&
-                  (decompiledFrameRemainder15 = !(!this.field_X.f(-52)))) {
+                  (decompiledFrameRemainder15 = !(!this.world.f(-52)))) {
                   this.k(-1589);
                   decompiledFrameRemainder15 = (var18 != 0);
                 }
                 if ((decompiledFrameRemainder15) &&
                   (decompiledFrameCompleted2) &&
-                  (this.field_X.f(-63))) {
+                  (this.world.f(-63))) {
                   this.k(-1589);
                 }
               }
@@ -2791,7 +2791,7 @@ final class nb {
                 stackIn_661_0 = 3;
                 stackIn_661_1 = di.field_g;
               }
-              L101: {
+              regionExit12: {
                 if (stackIn_661_0 == stackIn_661_1) {
                   var7 = qh.field_Yb;
                   switch ((var18 == 0
@@ -2799,35 +2799,35 @@ final class nb {
                     || var7 == 5
                     ) ? var7 : -1) {
                     case 2:
-                      if (this.field_C.field_ub >= 0) {
-                        break L101;
+                      if (this.controlledSentinel.field_ub >= 0) {
+                        break regionExit12;
                       }
                       this.k(-1589);
                       if (var18 == 0) {
-                        break L101;
+                        break regionExit12;
                       }
                     case 1:
                       if (tj.field_c <= 0) {
-                        break L101;
+                        break regionExit12;
                       }
                       this.k(-1589);
                       if (var18 == 0) {
-                        break L101;
+                        break regionExit12;
                       }
                     case 4:
-                      if (!this.field_X.f(-128)) {
-                        break L101;
+                      if (!this.world.f(-128)) {
+                        break regionExit12;
                       }
                       this.k(-1589);
                       if (var18 == 0) {
-                        break L101;
+                        break regionExit12;
                       }
                     case 5:
                       break;
                     default:
-                      break L101;
+                      break regionExit12;
                   }
-                  if (this.field_X.f(-70)) {
+                  if (this.world.f(-70)) {
                     this.k(-1589);
                   }
                 }
@@ -2845,21 +2845,21 @@ final class nb {
                   decompiledFrameRemainder5 = (var18 != 0);
                 }
                 if (((decompiledFrameRemainder6) && (decompiledFrameRemainder5) && (decompiledFrameRemainder4)) &&
-                  (decompiledFrameRemainder6 = (this.field_C.field_Vb != null))) {
+                  (decompiledFrameRemainder6 = (this.controlledSentinel.field_Vb != null))) {
                   this.k(-1589);
                   decompiledFrameRemainder6 = (var18 != 0);
                 }
                 if (((decompiledFrameRemainder6) && (decompiledFrameRemainder5)) &&
-                  (decompiledFrameRemainder6 = !(!this.field_X.f(-74)))) {
+                  (decompiledFrameRemainder6 = !(!this.world.f(-74)))) {
                   this.k(-1589);
                   decompiledFrameRemainder6 = (var18 != 0);
                 }
                 if ((decompiledFrameRemainder6) &&
-                  (this.field_X.f(-100))) {
+                  (this.world.f(-100))) {
                   this.k(-1589);
                 }
               }
-              L113: {
+              regionExit13: {
                 if (9 == di.field_g) {
                   var7 = qh.field_Yb;
                   switch ((var18 == 0
@@ -2869,61 +2869,61 @@ final class nb {
                     ) ? var7 : -1) {
                     case 0:
                       if (this.field_F < 0) {
-                        break L113;
+                        break regionExit13;
                       }
-                      if (this.field_F >= this.field_C.field_Xb.length) {
-                        break L113;
+                      if (this.field_F >= this.controlledSentinel.field_Xb.length) {
+                        break regionExit13;
                       }
-                      if (this.field_C.field_Xb[this.field_F] != 1) {
-                        break L113;
+                      if (this.controlledSentinel.field_Xb[this.field_F] != 1) {
+                        break regionExit13;
                       }
                       this.k(-1589);
                       if (var18 == 0) {
-                        break L113;
+                        break regionExit13;
                       }
                     case 1:
-                      if (!this.field_X.f(-109)) {
-                        break L113;
+                      if (!this.world.f(-109)) {
+                        break regionExit13;
                       }
                       this.k(-1589);
                       if (var18 == 0) {
-                        break L113;
+                        break regionExit13;
                       }
                     case 3:
-                      if (!this.field_X.f(-47)) {
-                        break L113;
+                      if (!this.world.f(-47)) {
+                        break regionExit13;
                       }
                       this.k(-1589);
                       if (var18 == 0) {
-                        break L113;
+                        break regionExit13;
                       }
                     case 4:
                       if (this.field_F < 0) {
-                        break L113;
+                        break regionExit13;
                       }
-                      if (this.field_F >= this.field_C.field_Xb.length) {
-                        break L113;
+                      if (this.field_F >= this.controlledSentinel.field_Xb.length) {
+                        break regionExit13;
                       }
-                      if (this.field_C.field_Xb[this.field_F] != 15) {
-                        break L113;
+                      if (this.controlledSentinel.field_Xb[this.field_F] != 15) {
+                        break regionExit13;
                       }
                       this.k(-1589);
                       if (var18 == 0) {
-                        break L113;
+                        break regionExit13;
                       }
                     case 5:
                       break;
                     default:
-                      break L113;
+                      break regionExit13;
                   }
-                  if (this.field_X.f(-64)) {
+                  if (this.world.f(-64)) {
                     this.k(-1589);
                   }
                 }
               }
-              stackIn_801_0 = this.field_X.field_K.e(13058);
+              stackIn_801_0 = this.world.sentinels.first(13058);
             }
-            var7_ref_mb = (mb) (stackIn_801_0);
+            var7_ref_mb = (Sentinel) (stackIn_801_0);
             while (var7_ref_mb != null) {
               stackIn_1080_0 = -7;
               if (var18 != 0) {
@@ -2931,24 +2931,24 @@ final class nb {
                 break;
               }
               if (stackIn_1080_0 == ~var7_ref_mb.field_Nb) {
-                var8 = Math.abs(var7_ref_mb.field_hc - this.field_C.field_hc);
-                var9 = Math.abs(var7_ref_mb.field_Gb - this.field_C.field_Gb);
+                var8 = Math.abs(var7_ref_mb.worldX - this.controlledSentinel.worldX);
+                var9 = Math.abs(var7_ref_mb.worldY - this.controlledSentinel.worldY);
                 if (8192 > var8 &&
                   var9 < 1024 && (di.field_g != 0 ||
                   !(6 >= qh.field_Yb) ||
-                  this.field_C.field_U == 0)) {
-                  var7_ref_mb.f(128);
+                  this.controlledSentinel.field_U == 0)) {
+                  var7_ref_mb.clearArmour(128);
                 }
               }
               if (var7_ref_mb.field_Nb == 2 &&
                 di.field_g == 3 &&
                 5 > qh.field_Yb) {
-                var8 = -this.field_C.field_hc + var7_ref_mb.field_hc;
+                var8 = -this.controlledSentinel.worldX + var7_ref_mb.worldX;
                 var8 = var8 / 1000;
-                var9 = -this.field_C.field_Gb + var7_ref_mb.field_Gb;
+                var9 = -this.controlledSentinel.worldY + var7_ref_mb.worldY;
                 var9 = var9 / 1000;
                 if (var9 * var9 + var8 * (4 * var8) < 50) {
-                  var7_ref_mb.f(128);
+                  var7_ref_mb.clearArmour(128);
                 }
               }
               if (var7_ref_mb.field_Nb == 9 &&
@@ -2957,7 +2957,7 @@ final class nb {
                 if (tj.field_c > 1) {
                   var7_ref_mb.field_Nb = 7;
                 } else {
-                  if (var7_ref_mb.field_Eb > var7_ref_mb.field_rb) {
+                  if (var7_ref_mb.maximumArmour > var7_ref_mb.armour) {
                     tj.field_c = 2;
                   }
                 }
@@ -2967,23 +2967,23 @@ final class nb {
                 9 == di.field_g)) {
                 stackIn_869_0 = (di.field_g != 9) ? 0 : 1;
                 var8 = stackIn_869_0;
-                stackIn_872_0 = var7_ref_mb.field_Gb;
+                stackIn_872_0 = var7_ref_mb.worldY;
                 if (var8 == 0) {
                   stackIn_873_1 = -75000;
                 } else {
                   stackIn_873_1 = -60000;
                 }
                 if (stackIn_872_0 > stackIn_873_1 &&
-                  var7_ref_mb.field_B.f(7)) {
-                  var9_ref_je = new je(3, 0, 10 + this.field_X.field_r);
-                  var9_ref_je.field_u = ((int)(Math.random() * (double)this.field_X.field_ab.a(19) / 4.0) - this.field_X.field_ab.a(32) / 8 << 4) + this.field_C.field_hc;
+                  var7_ref_mb.pendingCommands.f(7)) {
+                  var9_ref_je = new SentinelCommand(3, 0, 10 + this.world.simulationTick);
+                  var9_ref_je.field_u = ((int)(Math.random() * (double)this.world.terrain.getProfileLength(19) / 4.0) - this.world.terrain.getProfileLength(32) / 8 << 4) + this.controlledSentinel.worldX;
                   var9_ref_je.field_p = true;
-                  if (var7_ref_mb.field_K > 0 &&
-                    384000 > var7_ref_mb.field_hc ||
-                    !(var7_ref_mb.field_hc >= 64000)) {
-                    var9_ref_je.field_u = var7_ref_mb.field_hc + 5000;
+                  if (var7_ref_mb.velocityX > 0 &&
+                    384000 > var7_ref_mb.worldX ||
+                    !(var7_ref_mb.worldX >= 64000)) {
+                    var9_ref_je.field_u = var7_ref_mb.worldX + 5000;
                   } else {
-                    var9_ref_je.field_u = var7_ref_mb.field_hc - 5000;
+                    var9_ref_je.field_u = var7_ref_mb.worldX - 5000;
                   }
                   stackIn_894_0 = var9_ref_je;
                   if (var8 != 0) {
@@ -2992,8 +2992,8 @@ final class nb {
                     stackIn_895_1 = -80000;
                   }
                   stackIn_894_0.field_y = stackIn_895_1;
-                  var7_ref_mb.field_B.a(3, var9_ref_je);
-                  var7_ref_mb.g(5);
+                  var7_ref_mb.pendingCommands.addLast(3, var9_ref_je);
+                  var7_ref_mb.refillCharge(5);
                 }
               }
               if (var7_ref_mb.field_Nb == 2 &&
@@ -3002,24 +3002,24 @@ final class nb {
                 if (var7_ref_mb.field_Nb == 2) {
                   var8 = -75000;
                 }
-                if (var8 < var7_ref_mb.field_Gb &&
-                  var7_ref_mb.field_B.f(7)) {
-                  var9_ref_je = new je(3, 0, 10 + this.field_X.field_r);
-                  var9_ref_je.field_u = ((int)(Math.random() * (double)this.field_X.field_ab.a(-123) / 4.0) - this.field_X.field_ab.a(41) / 8 << 4) + this.field_C.field_hc;
-                  if (var9_ref_je.field_u < (-5000 + var7_ref_mb.field_hc)) {
-                    var9_ref_je.field_u = var7_ref_mb.field_hc - 5000;
+                if (var8 < var7_ref_mb.worldY &&
+                  var7_ref_mb.pendingCommands.f(7)) {
+                  var9_ref_je = new SentinelCommand(3, 0, 10 + this.world.simulationTick);
+                  var9_ref_je.field_u = ((int)(Math.random() * (double)this.world.terrain.getProfileLength(-123) / 4.0) - this.world.terrain.getProfileLength(41) / 8 << 4) + this.controlledSentinel.worldX;
+                  if (var9_ref_je.field_u < (-5000 + var7_ref_mb.worldX)) {
+                    var9_ref_je.field_u = var7_ref_mb.worldX - 5000;
                   }
                   var9_ref_je.field_y = -60000;
-                  if (var9_ref_je.field_u > (var7_ref_mb.field_hc + 5000)) {
-                    var9_ref_je.field_u = var7_ref_mb.field_hc + 5000;
+                  if (var9_ref_je.field_u > (var7_ref_mb.worldX + 5000)) {
+                    var9_ref_je.field_u = var7_ref_mb.worldX + 5000;
                   }
                   var9_ref_je.field_p = true;
-                  var7_ref_mb.field_B.a(3, var9_ref_je);
-                  var7_ref_mb.g(5);
-                  var9_ref_je = new je(0, var7_ref_mb.field_Xb[0], this.field_X.field_r + 20);
+                  var7_ref_mb.pendingCommands.addLast(3, var9_ref_je);
+                  var7_ref_mb.refillCharge(5);
+                  var9_ref_je = new SentinelCommand(0, var7_ref_mb.field_Xb[0], this.world.simulationTick + 20);
                   var10 = 1;
-                  var11 = -var7_ref_mb.field_hc + this.field_C.field_hc;
-                  var12_int = -var7_ref_mb.field_Gb + (this.field_C.field_Gb - this.field_C.field_Db * 8);
+                  var11 = -var7_ref_mb.worldX + this.controlledSentinel.worldX;
+                  var12_int = -var7_ref_mb.worldY + (this.controlledSentinel.worldY - this.controlledSentinel.field_Db * 8);
                   if (Math.abs(var11) > 80000) {
                     var10 = 0;
                   }
@@ -3034,8 +3034,8 @@ final class nb {
                     }
                     var13_double = Math.atan2((double)var11, (double)(-var12_int));
                     var9_ref_je.field_B = (int)(var13_double * 65536.0 / 6.283185307179586);
-                    var15_ref_nk__ = var7_ref_mb.field_Zb.a(0, var7_ref_mb, new nk[]{}, var9_ref_je.field_B * bj.field_h, var7_ref_mb.field_Xb[0]);
-                    var7_ref_mb.field_Zb.b((byte) -128, 0, bj.field_h, 0);
+                    var15_ref_nk__ = var7_ref_mb.chassis.a(0, var7_ref_mb, new ArticulatedPart[]{}, var9_ref_je.field_B * bj.field_h, var7_ref_mb.field_Xb[0]);
+                    var7_ref_mb.chassis.b((byte) -128, 0, bj.field_h, 0);
                     var16 = 0;
                     var17 = 0;
                     while (true) {
@@ -3051,8 +3051,8 @@ final class nb {
                     }
                     var13_double = Math.atan2((double)var11, (double)(-var12_int));
                     var9_ref_je.field_B = (int)(var13_double * 65536.0 / 6.283185307179586);
-                    var9_ref_je.field_y = this.field_C.field_Gb;
-                    var9_ref_je.field_u = this.field_C.field_hc;
+                    var9_ref_je.field_y = this.controlledSentinel.worldY;
+                    var9_ref_je.field_u = this.controlledSentinel.worldX;
                     if (bj.field_h < 0) {
                       if (!(16384 >= var9_ref_je.field_B)) {
                         var9_ref_je.field_B = var9_ref_je.field_B - 65536;
@@ -3063,7 +3063,7 @@ final class nb {
                       }
                     }
                     var9_ref_je.field_p = true;
-                    var7_ref_mb.field_B.a(3, var9_ref_je);
+                    var7_ref_mb.pendingCommands.addLast(3, var9_ref_je);
                   }
                 }
               }
@@ -3071,14 +3071,14 @@ final class nb {
                 4 == var7_ref_mb.field_Nb ||
                 var7_ref_mb.field_Nb == 9) {
                 var7_ref_mb.field_pc = false;
-                if (var7_ref_mb.field_B.f(7)) {
+                if (var7_ref_mb.pendingCommands.f(7)) {
                   var8 = 1;
                   if (di.field_g == 1 &&
                     qh.field_Yb <= 12) {
                     if (var7_ref_mb.field_Lb) {
                       var8 = 0;
                     }
-                    if (var7_ref_mb.field_hc - this.field_C.field_hc > 100000) {
+                    if (var7_ref_mb.worldX - this.controlledSentinel.worldX > 100000) {
                       var8 = 0;
                     }
                   }
@@ -3087,18 +3087,18 @@ final class nb {
                   }
                   var9 = 0;
                   if (5 == var7_ref_mb.field_Nb &&
-                    var7_ref_mb.field_Gb > -20000) {
-                    var10_ref_je = new je(3, 0, 1 + this.field_X.field_r);
-                    var10_ref_je.field_y = -20000 + var7_ref_mb.field_Gb;
-                    var10_ref_je.field_u = var7_ref_mb.field_hc;
+                    var7_ref_mb.worldY > -20000) {
+                    var10_ref_je = new SentinelCommand(3, 0, 1 + this.world.simulationTick);
+                    var10_ref_je.field_y = -20000 + var7_ref_mb.worldY;
+                    var10_ref_je.field_u = var7_ref_mb.worldX;
                     var10_ref_je.field_p = true;
-                    var7_ref_mb.field_B.a(3, var10_ref_je);
-                    var7_ref_mb.g(5);
+                    var7_ref_mb.pendingCommands.addLast(3, var10_ref_je);
+                    var7_ref_mb.refillCharge(5);
                   }
                   if (var7_ref_mb.field_Nb == 9) {
-                    if (var7_ref_mb.field_hc <= 16000) {
+                    if (var7_ref_mb.worldX <= 16000) {
                       var7_ref_mb.field_U = 1;
-                    } else if (var7_ref_mb.field_hc >= 213000) {
+                    } else if (var7_ref_mb.worldX >= 213000) {
                       var7_ref_mb.field_U = -1;
                     } else {
                       if (var7_ref_mb.field_U == 0) {
@@ -3111,26 +3111,26 @@ final class nb {
                       !var7_ref_mb.field_Lb) {
                       if (!(5.0 > 100.0 * Math.random()) ||
                         var7_ref_mb.field_r != 5) {
-                        if (this.field_C.field_hc < (var7_ref_mb.field_hc - 1000)) {
+                        if (this.controlledSentinel.worldX < (var7_ref_mb.worldX - 1000)) {
                           var7_ref_mb.field_U = -1;
                         }
-                        if (!(this.field_C.field_hc <= (1000 + var7_ref_mb.field_hc))) {
+                        if (!(this.controlledSentinel.worldX <= (1000 + var7_ref_mb.worldX))) {
                           var7_ref_mb.field_U = 1;
                         }
                       } else {
-                        var10_ref_je = new je(3, 0, 1 + this.field_X.field_r);
-                        var10_ref_je.field_y = -20000 + var7_ref_mb.field_Gb;
+                        var10_ref_je = new SentinelCommand(3, 0, 1 + this.world.simulationTick);
+                        var10_ref_je.field_y = -20000 + var7_ref_mb.worldY;
                         var10_ref_je.field_p = true;
-                        var10_ref_je.field_u = this.field_C.field_hc;
-                        var7_ref_mb.field_B.a(3, var10_ref_je);
-                        var7_ref_mb.g(5);
+                        var10_ref_je.field_u = this.controlledSentinel.worldX;
+                        var7_ref_mb.pendingCommands.addLast(3, var10_ref_je);
+                        var7_ref_mb.refillCharge(5);
                       }
                       var9 = (int)(100.0 * Math.random()) + 100;
                     }
                   }
-                  var10_ref_je = new je(0, var7_ref_mb.field_Xb[0], var9 + 2 + this.field_X.field_r);
-                  var11 = this.field_C.field_hc - var7_ref_mb.field_hc;
-                  var12_int = -(this.field_C.field_Db * 8) + this.field_C.field_Gb - var7_ref_mb.field_Gb;
+                  var10_ref_je = new SentinelCommand(0, var7_ref_mb.field_Xb[0], var9 + 2 + this.world.simulationTick);
+                  var11 = this.controlledSentinel.worldX - var7_ref_mb.worldX;
+                  var12_int = -(this.controlledSentinel.field_Db * 8) + this.controlledSentinel.worldY - var7_ref_mb.worldY;
                   if (0 == var7_ref_mb.field_Xb[0] &&
                     Math.abs(var11) > 80000) {
                     var8 = 0;
@@ -3147,8 +3147,8 @@ final class nb {
                     }
                     var13_double = Math.atan2((double)var11, (double)(-var12_int));
                     var10_ref_je.field_B = (int)(var13_double * 65536.0 / 6.283185307179586);
-                    var15_ref_nk__ = var7_ref_mb.field_Zb.a(0, var7_ref_mb, new nk[]{}, var10_ref_je.field_B * bj.field_h, var7_ref_mb.field_Xb[0]);
-                    var7_ref_mb.field_Zb.b((byte) -128, 0, bj.field_h, 0);
+                    var15_ref_nk__ = var7_ref_mb.chassis.a(0, var7_ref_mb, new ArticulatedPart[]{}, var10_ref_je.field_B * bj.field_h, var7_ref_mb.field_Xb[0]);
+                    var7_ref_mb.chassis.b((byte) -128, 0, bj.field_h, 0);
                     var16 = 0;
                     var17 = 0;
                     while (true) {
@@ -3162,7 +3162,7 @@ final class nb {
                       }
                       var13_double = Math.atan2((double)var11, (double)(-var12_int));
                       var10_ref_je.field_B = (int)(var13_double * 65536.0 / 6.283185307179586);
-                      var10_ref_je.field_u = this.field_C.field_hc;
+                      var10_ref_je.field_u = this.controlledSentinel.worldX;
                       if (0 <= bj.field_h) {
                         if (!(-16384 <= var10_ref_je.field_B)) {
                           var10_ref_je.field_B = var10_ref_je.field_B + 65536;
@@ -3173,18 +3173,18 @@ final class nb {
                         }
                       }
                       var10_ref_je.field_p = true;
-                      var10_ref_je.field_y = this.field_C.field_Gb;
-                      var7_ref_mb.field_B.a(3, var10_ref_je);
+                      var10_ref_je.field_y = this.controlledSentinel.worldY;
+                      var7_ref_mb.pendingCommands.addLast(3, var10_ref_je);
                       if (var7_ref_mb.field_Xb[0] != 13) {
                         break;
                       }
-                      var10_ref_je.field_x = var10_ref_je.field_x + 50;
+                      var10_ref_je.startTick = var10_ref_je.startTick + 50;
                       break;
                     }
                   }
                 }
               }
-              var7_ref_mb = (mb) (this.field_X.field_K.a((byte) -88));
+              var7_ref_mb = (Sentinel) (this.world.sentinels.next((byte) -88));
             }
           }
           if (decompiledFrameCompleted1) {
@@ -3193,10 +3193,10 @@ final class nb {
           var7 = stackIn_1080_0;
           if (0 != di.field_g &&
             0 != jj.field_d &&
-            this.field_C != null &&
-            this.field_C.field_Xb != null &&
-            !this.field_X.field_j) {
-            this.field_F = Math.max(0, Math.min(this.field_C.field_Xb.length - 1, -jj.field_d + this.field_F));
+            this.controlledSentinel != null &&
+            this.controlledSentinel.field_Xb != null &&
+            !this.world.field_j) {
+            this.field_F = Math.max(0, Math.min(this.controlledSentinel.field_Xb.length - 1, -jj.field_d + this.field_F));
             rc.field_l = 100;
           }
           if (di.field_g == 1 &&
@@ -3215,7 +3215,7 @@ final class nb {
             }
           }
           if (!fc.field_e[b.field_b] ||
-            this.field_C == null) {
+            this.controlledSentinel == null) {
             if (!(0 >= lk.field_eb)) {
               lk.field_eb = lk.field_eb - 1;
               if (var18 != 0) {
@@ -3226,10 +3226,10 @@ final class nb {
             lk.field_eb = 16;
           }
           boolean decompiledFrameRemainder14 = true;
-          if (this.field_C != null &&
-            this.field_C.field_pc &&
-            !this.field_C.field_Hb && (!(this.field_C.field_Qb >= 0) ||
-            !(this.field_C.field_Qb <= 100))) {
+          if (this.controlledSentinel != null &&
+            this.controlledSentinel.field_pc &&
+            !this.controlledSentinel.field_Hb && (!(this.controlledSentinel.field_Qb >= 0) ||
+            !(this.controlledSentinel.field_Qb <= 100))) {
             stackIn_1149_0 = 1;
             decompiledFrameRemainder14 = false;
           }
@@ -3237,18 +3237,18 @@ final class nb {
             stackIn_1149_0 = 0;
           }
           var8 = stackIn_1149_0;
-          if (null != this.field_C &&
+          if (null != this.controlledSentinel &&
             si.field_p &&
-            this.field_C.field_pc &&
-            this.field_C.field_Qb == 0) {
-            this.field_V = this.field_E + (-(this.field_C.field_Gb >> 4) - 3200);
-            this.field_p = 5120 - (this.field_C.field_hc >> 4) + this.field_P;
+            this.controlledSentinel.field_pc &&
+            this.controlledSentinel.field_Qb == 0) {
+            this.field_V = this.field_E + (-(this.controlledSentinel.worldY >> 4) - 3200);
+            this.field_p = 5120 - (this.controlledSentinel.worldX >> 4) + this.field_P;
           }
           boolean decompiledFrameRemainder3 = true;
           if (ri.field_b != null &&
-            !this.field_X.field_j) {
-            var9 = Math.max(0, Math.min(this.field_X.field_ab.a(-127) - 10240, (ri.field_b.field_U >> 4) - 5120));
-            var10 = 3200 + (ri.field_b.field_A >> 4);
+            !this.world.field_j) {
+            var9 = Math.max(0, Math.min(this.world.terrain.getProfileLength(-127) - 10240, (ri.field_b.worldX >> 4) - 5120));
+            var10 = 3200 + (ri.field_b.worldY >> 4);
             if (var9 < this.field_P) {
               this.field_P = Math.max(var9, -500 + this.field_P);
               if (var18 != 0) {
@@ -3271,13 +3271,13 @@ final class nb {
             if (dm.field_c) {
               boolean decompiledFrameRemainder2 = true;
               var9 = 0;
-              var10 = this.field_X.field_ab.a(-126) - 10240;
+              var10 = this.world.terrain.getProfileLength(-126) - 10240;
               var11 = -3000;
               var12_int = 1024;
               var13 = 0;
               if (lb.field_gc != 2) {
                 if ((0 == (4 & sf.field_d)) &&
-                  (decompiledFrameRemainder2 = (this.field_C != null)) &&
+                  (decompiledFrameRemainder2 = (this.controlledSentinel != null)) &&
                   (decompiledFrameRemainder2 = (var8 == 0)) &&
                   (decompiledFrameRemainder2 = !(!si.field_p))) {
                   if (this.field_P < var9) {
@@ -3292,8 +3292,8 @@ final class nb {
                   if (this.field_E > var12_int) {
                     this.field_E = var12_int;
                   }
-                  this.field_P = this.field_p + ((this.field_C.field_hc >> 4) - 5120);
-                  this.field_E = 3200 + this.field_V + (this.field_C.field_Gb >> 4);
+                  this.field_P = this.field_p + ((this.controlledSentinel.worldX >> 4) - 5120);
+                  this.field_E = 3200 + this.field_V + (this.controlledSentinel.worldY >> 4);
                   decompiledFrameRemainder2 = (var18 != 0);
                 }
                 if (decompiledFrameRemainder2) {
@@ -3336,16 +3336,16 @@ final class nb {
                 this.field_E = var12_int;
               }
               if (var13 != 0 &&
-                this.field_C != null) {
-                this.field_V = -3200 - (this.field_C.field_Gb >> 4) + this.field_E;
-                this.field_p = 5120 - (this.field_C.field_hc >> 4) + this.field_P;
+                this.controlledSentinel != null) {
+                this.field_V = -3200 - (this.controlledSentinel.worldY >> 4) + this.field_E;
+                this.field_p = 5120 - (this.controlledSentinel.worldX >> 4) + this.field_P;
               }
               decompiledFrameRemainder3 = (var18 != 0);
             }
             if (decompiledFrameRemainder3) {
-              if ((null == this.field_C ||
+              if ((null == this.controlledSentinel ||
                 !si.field_p ||
-                this.field_X.field_j) &&
+                this.world.field_j) &&
                 (decompiledFrameRemainder3 = !(jn.field_g))) {
                 if (fc.field_e[96] ||
                   fc.field_e[sa.field_c]) {
@@ -3355,7 +3355,7 @@ final class nb {
                 if (fc.field_e[97] ||
                   fc.field_e[on.field_h]) {
                   var8 = 0;
-                  this.field_P = Math.min(-10240 + this.field_X.field_ab.a(-117), var7 + this.field_P);
+                  this.field_P = Math.min(-10240 + this.world.terrain.getProfileLength(-117), var7 + this.field_P);
                 }
                 if (fc.field_e[99] ||
                   fc.field_e[pd.field_V]) {
@@ -3370,7 +3370,7 @@ final class nb {
                   decompiledFrameRemainder3 = (var18 != 0);
                 }
               }
-              if ((decompiledFrameRemainder3) && (null != this.field_C &&
+              if ((decompiledFrameRemainder3) && (null != this.controlledSentinel &&
                 si.field_p)) {
                 if (!jn.field_g) {
                   if (fc.field_e[96] ||
@@ -3394,8 +3394,8 @@ final class nb {
                     this.field_V = this.field_V + var7;
                   }
                 }
-                this.field_E = this.field_V + (this.field_C.field_Gb >> 4) + 3200;
-                this.field_P = -5120 + this.field_p + (this.field_C.field_hc >> 4);
+                this.field_E = this.field_V + (this.controlledSentinel.worldY >> 4) + 3200;
+                this.field_P = -5120 + this.field_p + (this.controlledSentinel.worldX >> 4);
                 if (this.field_P < 0) {
                   if (jn.field_g ||
                     !fc.field_e[97] &&
@@ -3411,7 +3411,7 @@ final class nb {
                   }
                   this.field_P = 0;
                 }
-                var9 = -10240 + this.field_X.field_ab.a(-127);
+                var9 = -10240 + this.world.terrain.getProfileLength(-127);
                 if (var9 < this.field_P) {
                   if (jn.field_g ||
                     !fc.field_e[96] &&
@@ -3462,8 +3462,8 @@ final class nb {
           }
           if (!(lk.field_eb <= 0) ||
             var8 != 0) {
-            var9 = Math.max(0, Math.min(-10240 + this.field_X.field_ab.a(54), (this.field_C.field_hc >> 4) - 5120));
-            var10 = 3200 + (this.field_C.field_Gb >> 4);
+            var9 = Math.max(0, Math.min(-10240 + this.world.terrain.getProfileLength(54), (this.controlledSentinel.worldX >> 4) - 5120));
+            var10 = 3200 + (this.controlledSentinel.worldY >> 4);
             var11 = Math.max(Math.abs(var9 - this.field_P), Math.abs(-this.field_E + var10)) / 5;
             if (0 < lk.field_eb) {
               var11 = Math.max(var11, 400);
@@ -3490,34 +3490,34 @@ final class nb {
               this.field_E = Math.max(var10, this.field_E - var11);
             }
             if (si.field_p) {
-              this.field_V = -3200 - (this.field_C.field_Gb >> 4) + this.field_E;
-              this.field_p = -(this.field_C.field_hc >> 4) + (5120 + this.field_P);
+              this.field_V = -3200 - (this.controlledSentinel.worldY >> 4) + this.field_E;
+              this.field_p = -(this.controlledSentinel.worldX >> 4) + (5120 + this.field_P);
             }
           }
           if (!this.field_d &&
             ~qh.field_Yb == ~dl.field_M) {
-            this.field_i = 1 + this.field_X.field_r;
+            this.field_i = 1 + this.world.simulationTick;
           }
-          boolean decompiledSharedTail1 = !(this.field_X.field_j);
+          boolean decompiledSharedTail1 = !(this.world.field_j);
           if (!decompiledSharedTail1) {
-            this.field_i = this.field_X.field_r + 1;
+            this.field_i = this.world.simulationTick + 1;
             decompiledSharedTail1 = (var18 != 0);
           }
           if ((decompiledSharedTail1) &&
-            (~this.field_i == ~this.field_X.field_r)) {
-            this.field_X.e(-1);
+            (~this.field_i == ~this.world.simulationTick)) {
+            this.world.checkMatchCompletion(-1);
           }
           boolean decompiledFrameRemainder1 = true;
           if (this.field_d &&
-            (this.field_X.field_r < this.field_i ||
-            this.field_X.field_j) || !this.field_d) {
-            if (~this.field_l == ~this.field_X.field_r) {
-              stackIn_1455_1 = ((65535 & this.field_X.b(false)) != (65535 & this.field_j));
+            (this.world.simulationTick < this.field_i ||
+            this.world.field_j) || !this.field_d) {
+            if (~this.field_l == ~this.world.simulationTick) {
+              stackIn_1455_1 = ((65535 & this.world.computeSyncChecksum(false)) != (65535 & this.field_j));
               this.field_ab = stackIn_1455_1;
-              stackIn_1459_1 = (~(-65536 & this.field_X.b(false)) != ~(this.field_j & -65536));
+              stackIn_1459_1 = (~(-65536 & this.world.computeSyncChecksum(false)) != ~(this.field_j & -65536));
               this.field_k = stackIn_1459_1;
             }
-            this.field_X.b((byte) 27);
+            this.world.advanceSimulation((byte) 27);
             if (um.field_X > 0) {
               um.field_X = um.field_X - 1;
             }
@@ -3594,16 +3594,16 @@ final class nb {
               }
             }
           }
-          L274: while (true) {
-            if (this.field_X.field_r < (-in.field_g[this.field_X.field_c] + this.field_i) &&
+          scanLoop14: while (true) {
+            if (this.world.simulationTick < (-in.field_g[this.world.field_c] + this.field_i) &&
               !this.field_z) {
-              if (~this.field_l == ~this.field_X.field_r) {
-                stackIn_1550_1 = ((65535 & this.field_X.b(false)) != (this.field_j & 65535));
+              if (~this.field_l == ~this.world.simulationTick) {
+                stackIn_1550_1 = ((65535 & this.world.computeSyncChecksum(false)) != (this.field_j & 65535));
                 this.field_ab = stackIn_1550_1;
-                stackIn_1554_1 = ((this.field_X.b(false) & -65536) != (-65536 & this.field_j));
+                stackIn_1554_1 = ((this.world.computeSyncChecksum(false) & -65536) != (-65536 & this.field_j));
                 this.field_k = stackIn_1554_1;
               }
-              this.field_X.b((byte) 27);
+              this.world.advanceSimulation((byte) 27);
               if (0 >= um.field_X) {
                 continue;
               }
@@ -3613,43 +3613,43 @@ final class nb {
               }
             } else {
               if (this.field_d) {
-                break L274;
+                break scanLoop14;
               }
               this.field_ab = false;
             }
             this.field_k = false;
             break;
           }
-          if (this.field_w > this.field_X.field_r) {
+          if (this.field_w > this.world.simulationTick) {
             return;
           }
-          L280: {
+          regionExit15: {
             if (!param1 ||
-              jc.a(2) ||
+              NodeIterator.a(2) ||
               jn.field_g) {
               this.b(0, 0, 0, 0);
               if (var18 == 0) {
-                break L280;
+                break regionExit15;
               }
             }
             if (!this.field_d &&
               fc.field_e[35] &&
               !this.field_d &&
-              ul.field_d >= 2) {
-              this.field_X.field_ab.a(1200, this.field_X.field_kb, this.field_X.field_Y);
+              NodeDeque.field_d >= 2) {
+              this.world.terrain.a(1200, this.world.playerCount, this.world.mapSeed);
             }
             if (1 == lb.field_gc) {
             }
             if (lb.field_gc == 1 &&
-              this.field_C != null &&
-              null != this.field_C.field_Vb &&
-              jc.field_k) {
-              var9 = this.field_X.field_r + vk.field_h[this.field_X.field_c];
-              var10_ref_je = new je(12, 0, var9);
-              var11_ref_je = (je) (this.field_C.field_B.b(1063677678));
+              this.controlledSentinel != null &&
+              null != this.controlledSentinel.field_Vb &&
+              NodeIterator.field_k) {
+              var9 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var10_ref_je = new SentinelCommand(12, 0, var9);
+              var11_ref_je = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
               if (null != var11_ref_je &&
-                var11_ref_je.field_r > var9) {
-                var9 = var11_ref_je.field_r;
+                var11_ref_je.endTick > var9) {
+                var9 = var11_ref_je.endTick;
               }
               if (this.field_d) {
                 mm.field_g.a(64, (byte) -117);
@@ -3666,13 +3666,13 @@ final class nb {
                 var10_ref_je.field_p = true;
               }
               if (di.field_g != -1 ||
-                1 != this.field_X.field_c) {
-                this.field_C.field_B.a(3, var10_ref_je);
+                1 != this.world.field_c) {
+                this.controlledSentinel.pendingCommands.addLast(3, var10_ref_je);
               }
             }
             if (var3_int != 0 &&
-              null != this.field_C && (!this.field_C.field_pc ||
-              !(this.field_C.field_Qb >= 0))) {
+              null != this.controlledSentinel && (!this.controlledSentinel.field_pc ||
+              !(this.controlledSentinel.field_Qb >= 0))) {
               stackIn_1638_0 = (!fc.field_e[81]) ? 0 : 1;
               var9 = stackIn_1638_0;
               if (dm.field_c) {
@@ -3681,10 +3681,10 @@ final class nb {
               }
               boolean decompiledFrameRemainder0 = true;
               if (!fc.field_e[86] ||
-                !this.field_C.i(16, -27)) {
+                !this.controlledSentinel.hasModuleType(16, -27)) {
                 if (!dm.field_c &&
                   (4 & sf.field_d) != 0) {
-                  ie.field_c = true;
+                  IsaacRandom.field_c = true;
                   var9 = 1;
                   decompiledFrameRemainder0 = (var18 != 0);
                 }
@@ -3694,16 +3694,16 @@ final class nb {
                     !fc.field_e[83]) {
                     if ((!dm.field_c) &&
                       (fc.field_e[83])) {
-                      ie.field_c = true;
+                      IsaacRandom.field_c = true;
                       var9 = 1;
                       if (var18 != 0) {
-                        ie.field_c = true;
+                        IsaacRandom.field_c = true;
                         var9 = 1;
                         var9 = 2;
                       }
                     }
                   } else {
-                    ie.field_c = true;
+                    IsaacRandom.field_c = true;
                     var9 = 1;
                     if (var18 != 0) {
                       var9 = 2;
@@ -3713,7 +3713,7 @@ final class nb {
               } else {
                 var9 = 2;
               }
-              if (gi.field_r &&
+              if (PacketBuffer.field_r &&
                 var9 != 1) {
                 var9 = 0;
               }
@@ -3727,8 +3727,8 @@ final class nb {
                     stackIn_1702_1 = 15;
                     stackIn_1702_2 = 6;
                     if (null != this.field_u &&
-                      0 < this.field_C.field_Tb &&
-                      this.field_C.field_ub >= 0) {
+                      0 < this.controlledSentinel.charge &&
+                      this.controlledSentinel.field_ub >= 0) {
                       stackIn_1705_3 = 0;
                     } else {
                       stackIn_1705_3 = 1;
@@ -3739,8 +3739,8 @@ final class nb {
                     }
                   case 1:
                     var10 = 2;
-                    if (this.field_C.field_cb > 0 && (this.field_C.field_Lb ||
-                      !(0 < this.field_C.field_Fb))) {
+                    if (this.controlledSentinel.field_cb > 0 && (this.controlledSentinel.field_Lb ||
+                      !(0 < this.controlledSentinel.field_Fb))) {
                       var10 = 3;
                     }
                     this.b(15, var10, 0, 1);
@@ -3753,8 +3753,8 @@ final class nb {
               }
               if (decompiledSharedTail0) {
                 this.b(0, 0, 0, 0);
-                dl.field_G = this.field_C.field_Gb;
-                km.field_c = this.field_C.field_hc;
+                dl.field_G = this.controlledSentinel.worldY;
+                km.field_c = this.controlledSentinel.worldX;
               }
               if (var18 != 0) {
                 this.b(0, 0, 0, 0);
@@ -3845,14 +3845,14 @@ final class nb {
           }
           if (this.field_r == 33 &&
             lb.field_gc == 1) {
-            var9 = this.field_X.field_r + vk.field_h[this.field_X.field_c];
-            var10_ref_je = (je) (this.field_C.field_Ec.b(1063677678));
+            var9 = this.world.simulationTick + vk.field_h[this.world.field_c];
+            var10_ref_je = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
             if (var10_ref_je != null &&
-              var10_ref_je.field_r > var9) {
-              var9 = var10_ref_je.field_r;
+              var10_ref_je.endTick > var9) {
+              var9 = var10_ref_je.endTick;
             }
-            if (var9 < 500 + this.field_X.field_r) {
-              var11_ref_je = new je(6, -1, var9);
+            if (var9 < 500 + this.world.simulationTick) {
+              var11_ref_je = new SentinelCommand(6, -1, var9);
               if (this.field_d) {
                 mm.field_g.a(64, (byte) -117);
                 mm.field_g.a((byte) 115, 6);
@@ -3868,21 +3868,21 @@ final class nb {
                 var11_ref_je.field_p = true;
               }
               if (di.field_g != -1 ||
-                this.field_X.field_c != 1) {
-                this.field_C.field_Ec.a(3, var11_ref_je);
+                this.world.field_c != 1) {
+                this.controlledSentinel.secondaryCommands.addLast(3, var11_ref_je);
               }
             }
           }
           if (this.field_r == 34 &&
             lb.field_gc == 1) {
-            var9 = vk.field_h[this.field_X.field_c] + this.field_X.field_r;
-            var10_ref_je = (je) (this.field_C.field_Ec.b(1063677678));
+            var9 = vk.field_h[this.world.field_c] + this.world.simulationTick;
+            var10_ref_je = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
             if (null != var10_ref_je &&
-              var9 < var10_ref_je.field_r) {
-              var9 = var10_ref_je.field_r;
+              var9 < var10_ref_je.endTick) {
+              var9 = var10_ref_je.endTick;
             }
-            if (var9 < 500 + this.field_X.field_r) {
-              var11_ref_je = new je(6, 1, var9);
+            if (var9 < 500 + this.world.simulationTick) {
+              var11_ref_je = new SentinelCommand(6, 1, var9);
               if (this.field_d) {
                 mm.field_g.a(64, (byte) -117);
                 mm.field_g.a((byte) 122, 6);
@@ -3898,21 +3898,21 @@ final class nb {
                 var11_ref_je.field_p = true;
               }
               if (di.field_g != -1 ||
-                1 != this.field_X.field_c) {
-                this.field_C.field_Ec.a(3, var11_ref_je);
+                1 != this.world.field_c) {
+                this.controlledSentinel.secondaryCommands.addLast(3, var11_ref_je);
               }
             }
           }
           if (this.field_r == 35 &&
             lb.field_gc == 1) {
-            var9 = vk.field_h[this.field_X.field_c] + this.field_X.field_r;
-            var10_ref_je = (je) (this.field_C.field_Ec.b(1063677678));
+            var9 = vk.field_h[this.world.field_c] + this.world.simulationTick;
+            var10_ref_je = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
             if (var10_ref_je != null &&
-              var9 < var10_ref_je.field_r) {
-              var9 = var10_ref_je.field_r;
+              var9 < var10_ref_je.endTick) {
+              var9 = var10_ref_je.endTick;
             }
-            if (this.field_X.field_r + 500 > var9) {
-              var11_ref_je = new je(6, 0, var9);
+            if (this.world.simulationTick + 500 > var9) {
+              var11_ref_je = new SentinelCommand(6, 0, var9);
               if (this.field_d) {
                 mm.field_g.a(64, (byte) -117);
                 mm.field_g.a((byte) 122, 6);
@@ -3928,8 +3928,8 @@ final class nb {
                 var11_ref_je.field_p = true;
               }
               if (di.field_g != -1 ||
-                this.field_X.field_c != 1) {
-                this.field_C.field_Ec.a(3, var11_ref_je);
+                this.world.field_c != 1) {
+                this.controlledSentinel.secondaryCommands.addLast(3, var11_ref_je);
               }
             }
           }
@@ -3979,37 +3979,37 @@ final class nb {
           if (27 == this.field_r &&
             lb.field_gc == 1) {
             vd.field_b = true;
-            ee.c(-2483, 95);
+            CombatWorld.c(-2483, 95);
             this.field_h = false;
           }
           if (this.field_r == 30 &&
             1 == lb.field_gc) {
             vd.field_b = true;
-            ee.c(-2483, 95);
+            CombatWorld.c(-2483, 95);
             if (ob.field_y) {
               var9 = vb.field_g;
               if (5 == var9 ||
                 var9 == 6 ||
                 var9 == 8) {
-                var9 = gh.field_Jb;
+                var9 = SceneWidget.field_Jb;
               }
               q.a(-5, true, -1, var9);
             }
-            if (ee.field_G) {
+            if (CombatWorld.field_G) {
               ei.a(0, (byte) -23, 11);
             }
           }
           if (this.field_r == 29 &&
             lb.field_gc == 1) {
             vd.field_b = true;
-            ee.c(-2483, 95);
+            CombatWorld.c(-2483, 95);
             fk.field_i.a(false);
             q.a(-1, true, -1, 0);
           }
           if (31 == this.field_r &&
             lb.field_gc == 1) {
             vd.field_b = true;
-            ee.c(-2483, 95);
+            CombatWorld.c(-2483, 95);
             v.a(-1, (String) null, 10);
           }
           if (this.field_r == 32 &&
@@ -4027,7 +4027,7 @@ final class nb {
             } while (var18 == 0);
             do {
               if (!(var9 < fe.field_D.length)) {
-                ea.field_k = false;
+                Sprite.field_k = false;
                 ol.field_Ub = 0;
                 lc.field_e = true;
                 var9 = vb.field_g;
@@ -4039,7 +4039,7 @@ final class nb {
             if (var9 == 5 ||
               var9 == 6 ||
               var9 == 8) {
-              var9 = gh.field_Jb;
+              var9 = SceneWidget.field_Jb;
             }
             q.a(0, false, -1, var9);
           }
@@ -4197,7 +4197,7 @@ final class nb {
         int stackIn_506_4;
         int stackIn_512_0 = 0;
         String stackIn_536_0 = null;
-        mb stackIn_649_0 = null;
+        Sentinel stackIn_649_0 = null;
         ne stackIn_662_0 = null;
         Object stackIn_682_0 = null;
         boolean stackIn_694_0 = false;
@@ -4237,17 +4237,17 @@ final class nb {
         int var24 = 0;
         int var25 = 0;
         String var25_ref_String = null;
-        hd var25_ref_hd = null;
+        BattleTerrain var25_ref_hd = null;
         int var26 = 0;
-        mb var26_ref_mb = null;
+        Sentinel var26_ref_mb = null;
         ne var26_ref_ne = null;
-        wl var26_ref_wl = null;
-        jb var26_ref_jb = null;
+        Projectile var26_ref_wl = null;
+        Explosion var26_ref_jb = null;
         int var27 = 0;
         int var28 = 0;
         int var29 = 0;
-        wk var29_ref_wk = null;
-        je var29_ref_je = null;
+        RgbSprite var29_ref_wk = null;
+        SentinelCommand var29_ref_je = null;
         int var30 = 0;
         String var30_ref_String = null;
         int var31 = 0;
@@ -4260,7 +4260,7 @@ final class nb {
         int var38 = 0;
         int var39 = 0;
         int var40 = 0;
-        mb var26_ref_mbLifetime1;
+        Sentinel var26_ref_mbLifetime1;
         int stackIn_415_0Lifetime1;
         int stackIn_415_1Lifetime1;
         int stackIn_445_0Lifetime1;
@@ -4283,7 +4283,7 @@ final class nb {
         int var34Lifetime3;
         int var35Lifetime2;
         int var25Lifetime1Lifetime1;
-        var40 = SteelSentinels.field_G;
+        var40 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameRemainder4 = true;
           var3_int = 1;
@@ -4307,12 +4307,12 @@ final class nb {
             var5 = stackIn_21_0;
             if (qh.field_Yb == 3 &&
               (31 & a.field_c) > 24 &&
-              this.field_C.field_ub >= 0) {
+              this.controlledSentinel.field_ub >= 0) {
               var4 = 0;
             }
           }
           if (!sj.a(true) &&
-            kj.field_w <= 0) {
+            CipherPacketBuffer.field_w <= 0) {
             stackIn_36_0 = 0;
           } else {
             stackIn_36_0 = 1;
@@ -4322,22 +4322,22 @@ final class nb {
             var6Lifetime1 != 0) {
             this.field_r = 0;
           }
-          if (this.field_C != null) {
-            pb.a(3, 423, 71, 54, 0);
-            pb.a(77, 423, 77, 54, 0);
-            pb.e(4, 424, 69, 26, 0, 1052688);
+          if (this.controlledSentinel != null) {
+            SoftwareRaster.a(3, 423, 71, 54, 0);
+            SoftwareRaster.a(77, 423, 77, 54, 0);
+            SoftwareRaster.e(4, 424, 69, 26, 0, 1052688);
           }
           if (param1 != 1956917985) {
             this.a(116, -87, -26);
           }
-          if (this.field_C != null) {
-            if (!this.field_C.i(24, -27)) {
+          if (this.controlledSentinel != null) {
+            if (!this.controlledSentinel.hasModuleType(24, -27)) {
             }
-            if (!this.field_C.i(16, -27)) {
+            if (!this.controlledSentinel.hasModuleType(16, -27)) {
             }
-            if (this.field_C.i(15, -27)) {
+            if (this.controlledSentinel.hasModuleType(15, -27)) {
             }
-            if (this.field_C.field_fb != 0) {
+            if (this.controlledSentinel.field_fb != 0) {
             }
           }
           var7 = 138;
@@ -4348,12 +4348,12 @@ final class nb {
           var14 = -var9 + var7 - var11;
           var12 = var11;
           var13 = var11 + 385;
-          if (null == this.field_C &&
-            !this.field_X.field_j) {
+          if (null == this.controlledSentinel &&
+            !this.world.field_j) {
             var16_ref_String = ri.field_d;
-            if (0 < this.field_X.field_bb.length &&
-              null != this.field_X.field_bb[0]) {
-              var16_ref_String = db.a(n.field_o, -30, new String[]{this.field_X.field_bb[0]});
+            if (0 < this.world.playerNames.length &&
+              null != this.world.playerNames[0]) {
+              var16_ref_String = db.a(FunOrbClient.field_o, -30, new String[]{this.world.playerNames[0]});
             }
             var17 = this.field_M[0];
             if (var17 == 7196927) {
@@ -4362,17 +4362,17 @@ final class nb {
             pl.field_U.a(var16_ref_String, 320, 405, var17, -1);
           }
           var15 = var10 - var9 - var11;
-          if (this.field_C != null) {
+          if (this.controlledSentinel != null) {
             var16 = 6;
             var17 = 427;
-            fk.field_d.b(mb.field_I, var16, var17 + 9, 1021128, -1);
-            var16 = var16 + (2 + fk.field_d.c(mb.field_I));
+            fk.field_d.b(Sentinel.field_I, var16, var17 + 9, 1021128, -1);
+            var16 = var16 + (2 + fk.field_d.c(Sentinel.field_I));
             qg.field_f[3].a(var16, var17);
             var17 += 22;
             var16 = 6;
             var18 = 1021128;
-            if (null != this.field_C &&
-              this.field_C.field_Dc > 0) {
+            if (null != this.controlledSentinel &&
+              this.controlledSentinel.field_Dc > 0) {
               var18 = 8421504;
             }
             fk.field_d.b(l.field_f, var16, 9 + var17, var18, -1);
@@ -4396,19 +4396,19 @@ final class nb {
             var16 = var16 + fk.field_d.c("+");
             qg.field_f[3].a(var16, var17);
           }
-          if (this.field_C != null) {
+          if (this.controlledSentinel != null) {
             var14 = -var8 + (640 - var7);
             var13 = 385 + var11;
             var12 = var7;
             var15 = var10 + (-var9 - var11);
-            if (this.field_C.field_pc &&
-              this.field_C.field_Qb > 0 &&
-              this.field_C.field_Qb < 100 &&
-              this.field_C.field_Qb < this.field_X.field_r) {
+            if (this.controlledSentinel.field_pc &&
+              this.controlledSentinel.field_Qb > 0 &&
+              this.controlledSentinel.field_Qb < 100 &&
+              this.controlledSentinel.field_Qb < this.world.simulationTick) {
               var4 = 0;
               var3_int = 0;
             }
-            if (this.field_F >= this.field_C.field_Xb.length) {
+            if (this.field_F >= this.controlledSentinel.field_Xb.length) {
               this.field_F = 0;
             }
             boolean decompiledFrameCompleted5 = true;
@@ -4421,7 +4421,7 @@ final class nb {
             var19 = -var18 + 640;
             if (!vl.field_v &&
               var5 != 0) {
-              pb.a(var18, 0, var19, 480);
+              SoftwareRaster.a(var18, 0, var19, 480);
               var20 = -5;
               var21 = 6;
               var22 = 30;
@@ -4440,9 +4440,9 @@ final class nb {
                 }
                 boolean decompiledFrameRemainder11 = true;
                 if (stackIn_254_0 <= stackIn_254_1 &&
-                  var28 < this.field_C.field_Xb.length) {
+                  var28 < this.controlledSentinel.field_Xb.length) {
                   var16 = var24 + var27 * (var23 + var22);
-                  var29 = this.field_C.field_Xb[var28];
+                  var29 = this.controlledSentinel.field_Xb[var28];
                   var17 = var15 / 2 + var13;
                   if (var27 < 0) {
                     var16 -= 22;
@@ -4450,7 +4450,7 @@ final class nb {
                   if (var27 > 0) {
                     var16 += 22;
                   }
-                  this.field_C.field_Zb.d(65536, var29);
+                  this.controlledSentinel.chassis.d(65536, var29);
                   if (var27 == 0) {
                     var17--;
                   }
@@ -4465,24 +4465,24 @@ final class nb {
                           hb.field_j[this.field_M[3] + var29].d(var16, var17, 0, 4096);
                           if (gl.field_p > 0) {
                             var30 = 40 * gl.field_p / (50 * eh.field_b[ed.field_f]);
-                            pb.c(var16 - 20, -20 + var17, 40, var30, 0, 192);
+                            SoftwareRaster.c(var16 - 20, -20 + var17, 40, var30, 0, 192);
                             if (si.field_t == 0) {
-                              pb.c(-20 + var16, var17 - 20 + var30, 40, 40 - var30, 0, 128);
+                              SoftwareRaster.c(-20 + var16, var17 - 20 + var30, 40, 40 - var30, 0, 128);
                             }
                           }
                           fk.field_d.c(Integer.toString(si.field_t), 20 + var16, 17 + var17, 16777215, 0);
                         } else {
                           hb.field_j[var29 + this.field_M[3]].d(var16, var17, 0, 4096);
-                          if (this.field_C.field_ub < 0 &&
+                          if (this.controlledSentinel.field_ub < 0 &&
                             c.a((byte) -90, var29)) {
-                            pb.c(var16 - 20, -20 + var17, 40, 40, 0, 192);
-                          } else if (!(this.field_C.field_Tb >= 1) &&
+                            SoftwareRaster.c(var16 - 20, -20 + var17, 40, 40, 0, 192);
+                          } else if (!(this.controlledSentinel.charge >= 1) &&
                             var29 == 8) {
-                            pb.c(var16 - 20, -20 + var17, 40, 40, 0, 192);
+                            SoftwareRaster.c(var16 - 20, -20 + var17, 40, 40, 0, 192);
                           }
                         }
                       } else {
-                        if (kj.field_w == 0 &&
+                        if (CipherPacketBuffer.field_w == 0 &&
                           var18 < oh.field_f &&
                           var19 > oh.field_f &&
                           oh.field_f >= -15 + var16 &&
@@ -4490,28 +4490,28 @@ final class nb {
                           oh.field_f <= (var16 + 15) &&
                           var17 + 15 >= pi.field_c) {
                           this.field_t = var28;
-                          pb.a(var16 << 4, var17 << 4, 320, pe.field_o.length - 1, pe.field_o);
+                          SoftwareRaster.a(var16 << 4, var17 << 4, 320, pe.field_o.length - 1, pe.field_o);
                         }
                         if (eh.field_b[ed.field_f] > 0) {
                           hb.field_j[var29 + this.field_M[3]].d(var16, var17, 0, var22 * 4096 / 40);
                           if (gl.field_p > 0) {
                             var30 = var22 * gl.field_p / (50 * eh.field_b[ed.field_f]);
-                            pb.c(var16 - var22 / 2, -(var22 / 2) + var17, var22, var30, 0, 192);
+                            SoftwareRaster.c(var16 - var22 / 2, -(var22 / 2) + var17, var22, var30, 0, 192);
                             if (0 == si.field_t) {
-                              pb.c(-(var22 / 2) + var16, var30 + var17 - var22 / 2, var22, -var30 + var22, 0, 128);
+                              SoftwareRaster.c(-(var22 / 2) + var16, var30 + var17 - var22 / 2, var22, -var30 + var22, 0, 128);
                             }
                           }
                           fk.field_d.c(Integer.toString(si.field_t), 15 + var16, 14 + var17, 16777215, 0);
                         } else {
                           hb.field_j[this.field_M[3] + var29].d(var16, var17, 0, 4096 * var22 / 40);
-                          if (!(this.field_C.field_ub < 0) ||
+                          if (!(this.controlledSentinel.field_ub < 0) ||
                             !c.a((byte) -101, var29)) {
-                            if (!(this.field_C.field_Tb >= 1) &&
+                            if (!(this.controlledSentinel.charge >= 1) &&
                               var29 == 8) {
-                              pb.c(-(var22 / 2) + var16, var17 - var22 / 2, var22, var22, 0, 192);
+                              SoftwareRaster.c(-(var22 / 2) + var16, var17 - var22 / 2, var22, var22, 0, 192);
                             }
                           } else {
-                            pb.c(var16 - var22 / 2, -(var22 / 2) + var17, var22, var22, 0, 192);
+                            SoftwareRaster.c(var16 - var22 / 2, -(var22 / 2) + var17, var22, var22, 0, 192);
                           }
                         }
                       }
@@ -4519,7 +4519,7 @@ final class nb {
                         if ((var27 == 1)) {
                           var30 = 0;
                           while (var30 < 11) {
-                            pb.d(var16 + (-var30 - 21), var17 - var30, var30 * 2 + 1, 10066329);
+                            SoftwareRaster.d(var16 + (-var30 - 21), var17 - var30, var30 * 2 + 1, 10066329);
                             var30++;
                           }
                           fk.field_d.a(ob.field_w, -12 + var16 - var22 / 2, 4 + var17, 0, -1);
@@ -4529,7 +4529,7 @@ final class nb {
                       else {
                         var30 = 0;
                         while (var30 < 11) {
-                          pb.d(var16 + (var30 + 20), var17 - var30, 2 * var30 + 1, 10066329);
+                          SoftwareRaster.d(var16 + (var30 + 20), var17 - var30, 2 * var30 + 1, 10066329);
                           var30++;
                         }
                         fk.field_d.a(gf.field_e, var22 / 2 + (var16 + 12), var17 + 4, 0, -1);
@@ -4540,11 +4540,11 @@ final class nb {
                 var27++;
               }
               if (decompiledFrameCompleted8) {
-                pb.c();
+                SoftwareRaster.c();
                 if (var25 != 0) {
                   var27 = 0;
                   while (var27 < 5) {
-                    pb.d(var18 + var27 - 6, -var27 + 400, 2 * var27 + 1, 10066329);
+                    SoftwareRaster.d(var18 + var27 - 6, -var27 + 400, 2 * var27 + 1, 10066329);
                     var27++;
                     if (var40 != 0) {
                       decompiledFrameCompleted7 = false;
@@ -4556,7 +4556,7 @@ final class nb {
                   (var26 != 0)) {
                   var27 = 0;
                   while (var27 < 5) {
-                    pb.d(6 - var27 + var19, -var27 + 400, var27 * 2 + 1, 10066329);
+                    SoftwareRaster.d(6 - var27 + var19, -var27 + 400, var27 * 2 + 1, 10066329);
                     var27++;
                     if (var40 != 0) {
                       decompiledFrameCompleted6 = false;
@@ -4580,7 +4580,7 @@ final class nb {
               var24 = 3;
               var25 = (-(var24 * 4) + var23) / 4;
               var26 = var24 + var20;
-              pb.a(var20, var21, var23, var22, 0);
+              SoftwareRaster.a(var20, var21, var23, var22, 0);
               var27 = var21 + 3;
               var13 = var11 + 385;
               var15 = -var9 + var10 - var11;
@@ -4590,8 +4590,8 @@ final class nb {
             if (decompiledFrameRemainder3) {
               var28 = 0;
               while (var28 < 4) {
-                pb.e(var26, var27, var25, 25, 1776411, 2565927);
-                pb.e(var26, 25 + var27, var25, var22 + (-25 - 2 * var24), 1644825, 2631720);
+                SoftwareRaster.e(var26, var27, var25, 25, 1776411, 2565927);
+                SoftwareRaster.e(var26, 25 + var27, var25, var22 + (-25 - 2 * var24), 1644825, 2631720);
                 var26 = var26 + (var25 + var24);
                 var28++;
                 if (var40 != 0) {
@@ -4603,11 +4603,11 @@ final class nb {
                 var17 = var15 / 2 + var21 + 12;
                 var16 = 17 - var25 + (-var24 + var26);
                 var28 = var25 + var24;
-                if (this.field_C.i(24, -27)) {
+                if (this.controlledSentinel.hasModuleType(24, -27)) {
                   boolean decompiledFrameRemainder9 = true;
-                  ie.field_d[24].c(var16 - 10, var17 - 14);
-                  if ((!(this.field_C.field_ub >= 0) ||
-                    !(this.field_C.field_Tb >= 5)) && this.field_C.field_rc != 24) {
+                  IsaacRandom.field_d[24].c(var16 - 10, var17 - 14);
+                  if ((!(this.controlledSentinel.field_ub >= 0) ||
+                    !(this.controlledSentinel.charge >= 5)) && this.controlledSentinel.activeModuleType != 24) {
                     stackIn_276_0 = 1;
                     decompiledFrameRemainder9 = false;
                   }
@@ -4637,13 +4637,13 @@ final class nb {
                   } else {
                     stackIn_292_3 = 4473924;
                   }
-                  kb.a(stackIn_284_0, stackIn_288_1, stackIn_291_2, stackIn_292_3, true, ck.field_n, fk.field_d, var16);
+                  kb.a(stackIn_284_0, stackIn_288_1, stackIn_291_2, stackIn_292_3, true, IntrusiveNode.field_n, fk.field_d, var16);
                   var16 = var16 - var28;
                 }
-                if (this.field_C.i(15, -27)) {
-                  ie.field_d[15].c(-10 + var16, var17 - 14);
-                  if (0 <= this.field_C.field_ub &&
-                    0 >= this.field_C.field_Yb) {
+                if (this.controlledSentinel.hasModuleType(15, -27)) {
+                  IsaacRandom.field_d[15].c(-10 + var16, var17 - 14);
+                  if (0 <= this.controlledSentinel.field_ub &&
+                    0 >= this.controlledSentinel.field_Yb) {
                     stackIn_303_0 = 0;
                   } else {
                     stackIn_303_0 = 1;
@@ -4674,27 +4674,27 @@ final class nb {
                   kb.a(stackIn_311_0, stackIn_315_1, stackIn_318_2, stackIn_319_3, true, dc.field_d, fk.field_d, var16);
                   var16 = var16 - var28;
                 }
-                if (this.field_C.i(16, -27)) {
+                if (this.controlledSentinel.hasModuleType(16, -27)) {
                   if (Math.abs(oh.field_f - var16) < 16 &&
                     Math.abs(-var17 + pi.field_c + 1) < 17 &&
-                    this.field_C.field_Vb != null) {
-                    jc.field_k = true;
+                    this.controlledSentinel.field_Vb != null) {
+                    NodeIterator.field_k = true;
                     if (var40 != 0) {
-                      jc.field_k = false;
+                      NodeIterator.field_k = false;
                     }
                   } else {
-                    jc.field_k = false;
+                    NodeIterator.field_k = false;
                   }
-                  ie.field_d[16].c(var16 - 10, var17 - 14);
-                  if (!jc.field_k &&
-                    this.field_C.field_ub < 0) {
+                  IsaacRandom.field_d[16].c(var16 - 10, var17 - 14);
+                  if (!NodeIterator.field_k &&
+                    this.controlledSentinel.field_ub < 0) {
                     stackIn_342_0 = 1;
                   } else {
                     stackIn_342_0 = 0;
                   }
                   var29 = stackIn_342_0;
                   var30_ref_String = sn.field_a;
-                  if (jc.field_k) {
+                  if (NodeIterator.field_k) {
                     var30_ref_String = id.field_Zb;
                   }
                   stackIn_347_0 = fk.field_d;
@@ -4722,10 +4722,10 @@ final class nb {
                   kb.a(stackIn_352_0, stackIn_356_1, stackIn_359_2, stackIn_360_3, true, var30_ref_String, fk.field_d, var16);
                   var16 = var16 - var28;
                 }
-                if (this.field_C.field_fb != 0) {
+                if (this.controlledSentinel.field_fb != 0) {
                   boolean decompiledFrameRemainder8 = true;
-                  if (this.field_C.field_ub >= 0 && (3 != this.field_C.field_fb ||
-                    !(10 > this.field_C.field_Tb))) {
+                  if (this.controlledSentinel.field_ub >= 0 && (3 != this.controlledSentinel.field_fb ||
+                    !(10 > this.controlledSentinel.charge))) {
                     stackIn_374_0 = 0;
                     decompiledFrameRemainder8 = false;
                   }
@@ -4733,7 +4733,7 @@ final class nb {
                     stackIn_374_0 = 1;
                   }
                   var29 = stackIn_374_0;
-                  hb.field_j[this.field_C.field_fb + 19].b(var16 - 10, var17 - 14);
+                  hb.field_j[this.controlledSentinel.field_fb + 19].b(var16 - 10, var17 - 14);
                   stackIn_377_0 = fk.field_d;
                   stackIn_377_1 = fk.field_l;
                   stackIn_377_2 = var16;
@@ -4775,11 +4775,11 @@ final class nb {
             boolean decompiledFrameRemainder2 = true;
             boolean decompiledFrameCompleted4 = true;
             boolean decompiledFrameCompleted2 = true;
-            L92: {
+            regionExit1: {
               boolean decompiledFrameCompleted3 = true;
               if (var3_int != 0) {
                 fk.field_d.b(tj.field_d, var9 + var20, var13 + 18, 52224, -1);
-                var24 = Math.max(this.field_C.field_Q, this.field_C.field_Eb) + 100;
+                var24 = Math.max(this.controlledSentinel.field_Q, this.controlledSentinel.maximumArmour) + 100;
                 var25 = 12;
                 var26 = var24 / 100;
                 var27 = var13 + 6;
@@ -4790,25 +4790,25 @@ final class nb {
                 if (var25 == 0) {
                   var25 = 1;
                 }
-                pb.a(var23, var27, var25 * this.field_C.field_Eb / 100 + var23, var27 + var28);
-                pb.a(var23, var27, var25 * var26, var28, 0);
-                pb.a(var23, var27, var25 * this.field_C.field_rb / 100 + var23, var28 + var27);
+                SoftwareRaster.a(var23, var27, var25 * this.controlledSentinel.maximumArmour / 100 + var23, var27 + var28);
+                SoftwareRaster.a(var23, var27, var25 * var26, var28, 0);
+                SoftwareRaster.a(var23, var27, var25 * this.controlledSentinel.armour / 100 + var23, var28 + var27);
                 var29 = 8;
                 var30 = 0;
-                L96: while (true) {
+                scanLoop2: while (true) {
                   boolean decompiledFrameRemainder7 = true;
                   if (var26 >= var30) {
                     var31 = var30 * var25 + var23;
-                    pb.e(var31, var27, var25, var29, 100611, 514822);
-                    pb.g(var31, var29 + var27, var25, 501766);
-                    pb.e(var31, var27 + var29 + 1, var25, -var29 + var28 - 1, 487430, 93952);
+                    SoftwareRaster.e(var31, var27, var25, var29, 100611, 514822);
+                    SoftwareRaster.g(var31, var29 + var27, var25, 501766);
+                    SoftwareRaster.e(var31, var27 + var29 + 1, var25, -var29 + var28 - 1, 487430, 93952);
                     stackIn_415_0 = ~var25;
                     stackIn_415_1 = -5;
                     if (var40 != 0) {
                       if (stackIn_415_0 > stackIn_415_1) {
                         stackIn_426_0 = ~var25;
                         stackIn_426_1 = -2;
-                        break L96;
+                        break scanLoop2;
                       }
                       decompiledFrameRemainder7 = false;
                     }
@@ -4816,7 +4816,7 @@ final class nb {
                       if (stackIn_415_0 < stackIn_415_1) {
                         var32 = 1 + var31;
                         while ((var31 + var25) > var32) {
-                          pb.f(var32, var27, var28, 0, 100);
+                          SoftwareRaster.f(var32, var27, var28, 0, 100);
                           var32 += 2;
                         }
                       }
@@ -4835,33 +4835,33 @@ final class nb {
                       stackIn_426_0 = ~var25;
                       stackIn_426_1 = -2;
                       if (var40 != 0) {
-                        break L96;
+                        break scanLoop2;
                       }
                       if (stackIn_426_0 < stackIn_426_1) {
-                        pb.d(var25 * var30 + var23, var27, var28, 0);
+                        SoftwareRaster.d(var25 * var30 + var23, var27, var28, 0);
                       }
                       var30++;
                     }
                   }
-                  pb.c();
+                  SoftwareRaster.c();
                   stackIn_426_0 = 38;
-                  stackIn_426_1 = this.field_C.field_rc;
+                  stackIn_426_1 = this.controlledSentinel.activeModuleType;
                   break;
                 }
                 if (stackIn_426_0 == stackIn_426_1) {
-                  var30 = 127 + (int)(Math.sin(0.2 * (double)this.field_X.field_r) * 128.0);
-                  pb.a(var23, var27, var21, var28, 65280 + 65537 * var30);
+                  var30 = 127 + (int)(Math.sin(0.2 * (double)this.world.simulationTick) * 128.0);
+                  SoftwareRaster.a(var23, var27, var21, var28, 65280 + 65537 * var30);
                 }
                 var30 = 8 + var27;
                 var31 = var28 - 8;
-                pb.a(var23, var30, var25 * this.field_C.field_Q / 100 + var23, var30 + var31);
-                pb.c(var23, var30, this.field_C.field_Q * var25 / 100, 0, 192);
-                pb.a(var23, var30, var26 * var25, var31, 0);
-                pb.a(var23, var30, var25 * this.field_C.field_S / 100 + var23, var31 + var30);
+                SoftwareRaster.a(var23, var30, var25 * this.controlledSentinel.field_Q / 100 + var23, var30 + var31);
+                SoftwareRaster.c(var23, var30, this.controlledSentinel.field_Q * var25 / 100, 0, 192);
+                SoftwareRaster.a(var23, var30, var26 * var25, var31, 0);
+                SoftwareRaster.a(var23, var30, var25 * this.controlledSentinel.field_S / 100 + var23, var31 + var30);
                 var32 = 0;
                 while (var26 >= var32) {
                   var33 = var25 * var32 + var23;
-                  pb.a(var33, var30 + 1, var25, var31, 2138367);
+                  SoftwareRaster.a(var33, var30 + 1, var25, var31, 2138367);
                   stackIn_445_0 = ~var25;
                   stackIn_445_1 = -5;
                   if (var40 != 0) {
@@ -4877,7 +4877,7 @@ final class nb {
                   if (stackIn_445_0 < stackIn_445_1) {
                     var34 = 1 + var33;
                     while (var34 < var33 + var25) {
-                      pb.f(var34, var27, var28, 0, 100);
+                      SoftwareRaster.f(var34, var27, var28, 0, 100);
                       var34 += 2;
                     }
                   }
@@ -4885,10 +4885,10 @@ final class nb {
                 }
                 if ((decompiledFrameCompleted4) &&
                   (decompiledFrameCompleted3)) {
-                  pb.c();
+                  SoftwareRaster.c();
                   var32 = 0;
                   while (true) {
-                    stackIn_445_0Lifetime1 = ~(this.field_C.field_Q / 100);
+                    stackIn_445_0Lifetime1 = ~(this.controlledSentinel.field_Q / 100);
                     stackIn_445_1Lifetime1 = ~var32;
                     if (stackIn_445_0Lifetime1 > stackIn_445_1Lifetime1) {
                       break;
@@ -4900,7 +4900,7 @@ final class nb {
                       break;
                     }
                     if (stackIn_459_0 < stackIn_459_1) {
-                      pb.d(var25 * var32 + var23, var30, var31, 0);
+                      SoftwareRaster.d(var25 * var32 + var23, var30, var31, 0);
                     }
                     var32++;
                   }
@@ -4911,8 +4911,8 @@ final class nb {
               (decompiledFrameRemainder2 = (var4 != 0))) {
               fk.field_d.c(vg.field_e, 630 - var9, 18 + var13, 16736304, -1);
               var24 = -var22 + 620;
-              var25 = 100 * this.field_C.field_x;
-              var26 = this.field_C.field_ub / 30 + this.field_C.field_Tb * 100;
+              var25 = 100 * this.controlledSentinel.maximumCharge;
+              var26 = this.controlledSentinel.field_ub / 30 + this.controlledSentinel.charge * 100;
               var27 = 100 + var25;
               var28 = 12;
               var29 = var27 / 100;
@@ -4926,13 +4926,13 @@ final class nb {
               if (stackIn_459_0 > stackIn_459_1) {
                 var28 = var21 / var29;
               }
-              pb.a(-(var25 * var28 / 100) + var24, var30, var24, var30 + var31);
-              pb.a(-(var28 * var29) + var24, var30, var29 * var28, var31, 0);
-              pb.a(var24 - var26 * var28 / 100, var30, var24, var30 + var31);
+              SoftwareRaster.a(-(var25 * var28 / 100) + var24, var30, var24, var30 + var31);
+              SoftwareRaster.a(-(var28 * var29) + var24, var30, var29 * var28, var31, 0);
+              SoftwareRaster.a(var24 - var26 * var28 / 100, var30, var24, var30 + var31);
               var33Lifetime2 = 0;
               var34Lifetime2 = 0;
               var35 = 0;
-              if (this.field_C.field_mc <= 0) {
+              if (this.controlledSentinel.field_mc <= 0) {
                 var33Lifetime3 = 16711680;
                 var34Lifetime3 = 16744448;
                 var35Lifetime2 = 4210688;
@@ -4954,13 +4954,13 @@ final class nb {
                 boolean decompiledFrameRemainder5 = true;
                 if (var29 >= var36) {
                   var37 = -((var36 + 1) * var28) + var24;
-                  pb.e(var37, var30, var28, var32, var33Lifetime3, var34Lifetime3);
-                  pb.e(var37, var32 + var30, var28, var31 - var32, var34Lifetime3, var35Lifetime2);
+                  SoftwareRaster.e(var37, var30, var28, var32, var33Lifetime3, var34Lifetime3);
+                  SoftwareRaster.e(var37, var32 + var30, var28, var31 - var32, var34Lifetime3, var35Lifetime2);
                   stackIn_481_0 = -5;
                   stackIn_481_1 = ~var28;
                   if (var40 != 0) {
                     if (stackIn_481_0 > stackIn_481_1) {
-                      pb.d(-((1 + var36) * var28) + var24, var30, var31, 0);
+                      SoftwareRaster.d(-((1 + var36) * var28) + var24, var30, var31, 0);
                       var36++;
                       decompiledFrameRemainder6 = false;
                     }
@@ -4973,7 +4973,7 @@ final class nb {
                     if (stackIn_481_0 > stackIn_481_1) {
                       var38 = 1 + var37;
                       while (var37 + var28 > var38) {
-                        pb.f(var38, var30, var31, 0, 100);
+                        SoftwareRaster.f(var38, var30, var31, 0, 100);
                         var38 += 2;
                       }
                     }
@@ -4990,7 +4990,7 @@ final class nb {
                     if (stackIn_481_0Lifetime1 <= stackIn_481_1Lifetime1) {
                       break;
                     }
-                    pb.d(-((1 + var36) * var28) + var24, var30, var31, 0);
+                    SoftwareRaster.d(-((1 + var36) * var28) + var24, var30, var31, 0);
                     var36++;
                     if (var40 != 0) {
                       decompiledFrameCompleted1 = false;
@@ -4999,19 +4999,19 @@ final class nb {
                   }
                 }
                 if (((decompiledFrameRemainder6) && (decompiledFrameCompleted1)) &&
-                  (decompiledFrameRemainder1 = (this.field_C.field_rc == 37))) {
-                  var36 = (int)(Math.sin((double)this.field_X.field_r * 0.2) * 64.0) + 63;
+                  (decompiledFrameRemainder1 = (this.controlledSentinel.activeModuleType == 37))) {
+                  var36 = (int)(Math.sin((double)this.world.simulationTick * 0.2) * 64.0) + 63;
                 }
                 if (decompiledFrameRemainder1) {
-                  pb.a(var24 - var21, var30, var21, var31, var36 * 513 + 16711680);
+                  SoftwareRaster.a(var24 - var21, var30, var21, var31, var36 * 513 + 16711680);
                 }
-                pb.c();
-                if (0 >= this.field_C.field_mc) {
-                  if (0 <= this.field_C.field_ub) {
+                SoftwareRaster.c();
+                if (0 >= this.controlledSentinel.field_mc) {
+                  if (0 <= this.controlledSentinel.field_ub) {
                     break;
                   }
-                  var36 = -(var28 * this.field_C.field_x / 2) + var24;
-                  var37 = -this.field_C.field_ub / (100 + 50 * this.field_C.field_wb);
+                  var36 = -(var28 * this.controlledSentinel.maximumCharge / 2) + var24;
+                  var37 = -this.controlledSentinel.field_ub / (100 + 50 * this.controlledSentinel.field_wb);
                   stackIn_500_0 = fk.field_d;
                   stackIn_500_1 = hk.field_pc;
                   stackIn_500_2 = var36;
@@ -5027,7 +5027,7 @@ final class nb {
                     break;
                   }
                 }
-                var36 = var24 - var28 * this.field_C.field_x / 2;
+                var36 = var24 - var28 * this.controlledSentinel.maximumCharge / 2;
                 stackIn_505_0 = fk.field_d;
                 stackIn_505_1 = r.field_i;
                 stackIn_505_2 = var36;
@@ -5038,7 +5038,7 @@ final class nb {
                   stackIn_506_4 = 6316128;
                 }
                 ((fh) (Object) stackIn_505_0).a(stackIn_505_1, stackIn_505_2, stackIn_505_3, stackIn_506_4, 0);
-                fk.field_d.a(db.a(f.field_E, -61, new String[]{Integer.toString(this.field_C.field_mc / 50)}), var36, 6 + (var30 + 10), 16777215, 0);
+                fk.field_d.a(db.a(f.field_E, -61, new String[]{Integer.toString(this.controlledSentinel.field_mc / 50)}), var36, 6 + (var30 + 10), 16777215, 0);
                 break;
               }
             }
@@ -5046,38 +5046,38 @@ final class nb {
           }
           var16 = 160;
           var17 = 320;
-          stackIn_512_0 = (this.field_X.field_ab.b(95) == 4) ? 256 : 100;
+          stackIn_512_0 = (this.world.terrain.getTerrainType(95) == 4) ? 256 : 100;
           var18 = stackIn_512_0;
           var19 = 474;
           var20 = 48;
           var21 = -var20 + var19;
           var22 = 400;
-          if (4 == this.field_X.field_ab.b(61)) {
+          if (4 == this.world.terrain.getTerrainType(61)) {
             var22 = 435;
           }
           var22 = var22 - (-7680 + this.field_E) / var18;
-          pb.a(var16 - 3, var19 - (var20 + 3), var17 + 6, 6 + var20, 0);
+          SoftwareRaster.a(var16 - 3, var19 - (var20 + 3), var17 + 6, 6 + var20, 0);
           var22 = var19;
-          if (null != this.field_C &&
-            this.field_C.field_rc != -1) {
+          if (null != this.controlledSentinel &&
+            this.controlledSentinel.activeModuleType != -1) {
             var23 = 64;
             var24 = 455;
-            this.field_C.a(var24, false, var23, (byte) 45);
+            this.controlledSentinel.a(var24, false, var23, (byte) 45);
             if ((-10 + var23) <= oh.field_f &&
               10 + var23 > oh.field_f &&
               pi.field_c >= -30 + var24 &&
               pi.field_c < var24) {
-              if (this.field_C.field_rc < 35) {
-                stackIn_536_0 = rj.field_m[this.field_C.field_rc];
+              if (this.controlledSentinel.activeModuleType < 35) {
+                stackIn_536_0 = rj.field_m[this.controlledSentinel.activeModuleType];
               } else {
-                stackIn_536_0 = qj.field_v[this.field_C.field_rc - 35];
+                stackIn_536_0 = qj.field_v[this.controlledSentinel.activeModuleType - 35];
               }
               var25_ref_String = stackIn_536_0;
               var26 = 4 + fk.field_d.c(var25_ref_String);
               var27 = fk.field_d.field_F + fk.field_d.field_G;
               var28 = Math.max(0, var23 - var26 / 2);
               var29 = -var27 + (var24 - 30);
-              pb.c(var28, var29, var26, var27, 0, 128);
+              SoftwareRaster.c(var28, var29, var26, var27, 0, 128);
               fk.field_d.b(var25_ref_String, var28 + 2, var29 + 10, 16777215, 0);
             }
           }
@@ -5085,10 +5085,10 @@ final class nb {
           boolean decompiledFrameCompleted9 = true;
           boolean decompiledFrameRemainder0 = true;
           var23 = 4;
-          pb.a(var16 + var23, var21, var17 + var16 - var23 + 3, var20 + var21);
-          var24 = this.field_X.field_ab.a(-121);
-          var25_ref_hd = this.field_X.field_ab;
-          if (this.field_X.field_ab.b(param1 - 1956917895) != 4) {
+          SoftwareRaster.a(var16 + var23, var21, var17 + var16 - var23 + 3, var20 + var21);
+          var24 = this.world.terrain.getProfileLength(-121);
+          var25_ref_hd = this.world.terrain;
+          if (this.world.terrain.getTerrainType(param1 - 1956917895) != 4) {
             var26 = this.field_M[0];
             if (65535 == (65535 & var26)) {
               var26 = 1021128;
@@ -5097,13 +5097,13 @@ final class nb {
             var28 = 0;
             while (var17 > var28) {
               var12 = var24 * var28 / var17;
-              var13 = -(this.field_X.field_ab.a((byte) -112, var12) / var18) + var22;
+              var13 = -(this.world.terrain.getGroundHeightAt((byte) -112, var12) / var18) + var22;
               var27 = -var27 + 383;
-              var29 = (this.field_X.field_ab.a((byte) -114, var12) & 63) * var27 / 64;
-              pb.a(var28 + var16, var13, 65536 * (var29 * (16711680 & var26) >> 24) + (var29 * (65280 & var26) >> 16) * 256 + 1 * ((255 & var26) * var29 >> 8));
-              pb.d(var16 + var28, var13 + 1, -var13 + (var19 - 1), ((65280 & var26) * var27 >> 16) * 256 + 1 * (var27 * (255 & var26) >> 8) + (var27 * (16711680 & var26) >> 24) * 65536);
-              var30 = var22 - this.field_X.field_ab.a(false, var12) / var18;
-              var31 = var22 - this.field_X.field_ab.b((byte) 119, var12) / var18;
+              var29 = (this.world.terrain.getGroundHeightAt((byte) -114, var12) & 63) * var27 / 64;
+              SoftwareRaster.a(var28 + var16, var13, 65536 * (var29 * (16711680 & var26) >> 24) + (var29 * (65280 & var26) >> 16) * 256 + 1 * ((255 & var26) * var29 >> 8));
+              SoftwareRaster.d(var16 + var28, var13 + 1, -var13 + (var19 - 1), ((65280 & var26) * var27 >> 16) * 256 + 1 * (var27 * (255 & var26) >> 8) + (var27 * (16711680 & var26) >> 24) * 65536);
+              var30 = var22 - this.world.terrain.getSecondaryHeightAt(false, var12) / var18;
+              var31 = var22 - this.world.terrain.getSurfaceProfileAt((byte) 119, var12) / var18;
               stackIn_703_0 = ~var30;
               stackIn_703_1 = ~var31;
               if (var40 != 0) {
@@ -5111,10 +5111,10 @@ final class nb {
                 break;
               }
               if (stackIn_703_0 != stackIn_703_1) {
-                pb.d(var16 + var28, var30, -var30 + var31, 65536 * ((16711680 & var26) * var27 >> 24) + (256 * (var27 * (var26 & 65280) >> 16) + (var27 * (var26 & 255) >> 8) * 1));
+                SoftwareRaster.d(var16 + var28, var30, -var30 + var31, 65536 * ((16711680 & var26) * var27 >> 24) + (256 * (var27 * (var26 & 65280) >> 16) + (var27 * (var26 & 255) >> 8) * 1));
               }
               if (var13 != var31) {
-                pb.d(var16 + var28, var31, var13 - var31, (var27 * (var26 & 65280) >> 17) * 256 + (1 * (var27 * (255 & var26) >> 9) + (((var26 & 16711680) >> 8) * var27 >> 17) * 65536));
+                SoftwareRaster.d(var16 + var28, var31, var13 - var31, (var27 * (var26 & 65280) >> 17) * 256 + (1 * (var27 * (255 & var26) >> 9) + (((var26 & 16711680) >> 8) * var27 >> 17) * 65536));
               }
               var28++;
             }
@@ -5126,7 +5126,7 @@ final class nb {
             (decompiledFrameRemainder0)) {
             var26 = 0;
             while (!(var26 >= var25_ref_hd.field_c)) {
-              var27 = var17 * var25_ref_hd.field_o[var26] / var24 + var16;
+              var27 = var17 * var25_ref_hd.spawnPositions[var26] / var24 + var16;
               var15 = sb.field_W.field_B >> 4;
               var28 = -(var25_ref_hd.field_h[var26] / var18) + var22;
               var14 = var24 * sb.field_W.field_z / var17 >> 11;
@@ -5153,12 +5153,12 @@ final class nb {
           }
           if ((decompiledFrameCompleted10) &&
             (decompiledFrameCompleted9)) {
-            var26_ref_mb = (mb) (this.field_X.field_K.e(param1 ^ 1956905443));
+            var26_ref_mb = (Sentinel) (this.world.sentinels.first(param1 ^ 1956905443));
             boolean decompiledNaturalLoopExit2 = false;
             while (!(decompiledNaturalLoopExit2 = (var26_ref_mb == null))) {
-              var12 = var16 + (var26_ref_mb.field_hc * var17 / var24 >> 4);
-              var13 = var22 + var26_ref_mb.field_Gb / (var18 * 16);
-              stackIn_649_0 = this.field_C;
+              var12 = var16 + (var26_ref_mb.worldX * var17 / var24 >> 4);
+              var13 = var22 + var26_ref_mb.worldY / (var18 * 16);
+              stackIn_649_0 = this.controlledSentinel;
               if (var40 == 0) {
                 boolean decompiledFrameRemainder10 = true;
                 if (stackIn_649_0 != var26_ref_mb &&
@@ -5168,78 +5168,78 @@ final class nb {
                   11 != qh.field_Yb ||
                   !((a.field_c & 16) > 0)) && 250 > var26_ref_mb.field_F && (!var26_ref_mb.field_pc ||
                   var26_ref_mb.field_Nb == 7)) {
-                  var27 = var26_ref_mb.d((byte) -125);
-                  if (var27 == qd.field_t[0]) {
+                  var27 = var26_ref_mb.getTeamColour((byte) -125);
+                  if (var27 == PartInstruction.field_t[0]) {
                     var27 = 7612277;
                   }
                   var28 = 0;
                   if (var26_ref_mb.field_Cb) {
-                    if (2 == this.field_X.field_ab.b(116)) {
-                      var28 = (int)((1.0 + Math.sin(3.141592653589793 * (double)((63 & this.field_X.field_r) * 2) / 64.0)) * 255.0 / 2.0);
+                    if (2 == this.world.terrain.getTerrainType(116)) {
+                      var28 = (int)((1.0 + Math.sin(3.141592653589793 * (double)((63 & this.world.simulationTick) * 2) / 64.0)) * 255.0 / 2.0);
                     }
-                    pb.c(var12, var13 - 3, (int)(2.0 * Math.sin(3.141592653589793 * (double)(2 * (63 & this.field_X.field_r)) / 64.0)) + 6, var27);
+                    SoftwareRaster.c(var12, var13 - 3, (int)(2.0 * Math.sin(3.141592653589793 * (double)(2 * (63 & this.world.simulationTick)) / 64.0)) + 6, var27);
                   }
                   if ((var21 + 4) <= var13) {
-                    pb.e(var12, -3 + var13, (250 - var26_ref_mb.field_F) * 3 / 250, var27);
+                    SoftwareRaster.e(var12, -3 + var13, (250 - var26_ref_mb.field_F) * 3 / 250, var27);
                     if (!(var28 <= 0)) {
-                      pb.b(var12, -3 + var13, (250 - var26_ref_mb.field_F) * 3 / 250, 16776960, var28);
+                      SoftwareRaster.b(var12, -3 + var13, (250 - var26_ref_mb.field_F) * 3 / 250, 16776960, var28);
                     }
                     decompiledFrameRemainder10 = false;
                   }
                   else {
-                    pb.g(var12, 1 + var21, 1, var27);
+                    SoftwareRaster.g(var12, 1 + var21, 1, var27);
                     if (150 > var26_ref_mb.field_F) {
-                      pb.g(var12 - 1, 2 + var21, 3, var27);
+                      SoftwareRaster.g(var12 - 1, 2 + var21, 3, var27);
                     }
                     if (var26_ref_mb.field_F < 50) {
-                      pb.g(var12 - 2, 3 + var21, 5, var27);
+                      SoftwareRaster.g(var12 - 2, 3 + var21, 5, var27);
                     }
                     if (0 < var28) {
-                      pb.c(var12, 1 + var21, 1, var27, var28);
+                      SoftwareRaster.c(var12, 1 + var21, 1, var27, var28);
                       if (var26_ref_mb.field_F < 150) {
-                        pb.c(var12 - 1, var21 + 2, 3, 16776960, var28);
+                        SoftwareRaster.c(var12 - 1, var21 + 2, 3, 16776960, var28);
                       }
                       if (50 > var26_ref_mb.field_F) {
-                        pb.c(var12 - 2, 3 + var21, 5, 16776960, var28);
+                        SoftwareRaster.c(var12 - 2, 3 + var21, 5, 16776960, var28);
                       }
                     }
                   }
                 }
-                var26_ref_mb = (mb) (this.field_X.field_K.a((byte) -42));
+                var26_ref_mb = (Sentinel) (this.world.sentinels.next((byte) -42));
                 continue;
               }
               break;
             }
             if (decompiledNaturalLoopExit2) {
-              stackIn_649_0 = this.field_C;
+              stackIn_649_0 = this.controlledSentinel;
             }
             if (stackIn_649_0 != null &&
-              !this.field_C.field_Hb) {
-              var26_ref_mbLifetime1 = this.field_C;
-              var12 = var16 + (var26_ref_mbLifetime1.field_hc * var17 / var24 >> 4);
-              var13 = var26_ref_mbLifetime1.field_Gb / (var18 * 16) + var22;
-              var27 = var26_ref_mbLifetime1.d((byte) 92);
+              !this.controlledSentinel.field_Hb) {
+              var26_ref_mbLifetime1 = this.controlledSentinel;
+              var12 = var16 + (var26_ref_mbLifetime1.worldX * var17 / var24 >> 4);
+              var13 = var26_ref_mbLifetime1.worldY / (var18 * 16) + var22;
+              var27 = var26_ref_mbLifetime1.getTeamColour((byte) 92);
               boolean decompiledSharedTail1 = !(var21 <= var13);
               if (!decompiledSharedTail1) {
-                pb.e(var12, -4 + var13, 4, var27);
-                pb.c(var12, var13 - 4, 4, 16777215);
+                SoftwareRaster.e(var12, -4 + var13, 4, var27);
+                SoftwareRaster.c(var12, var13 - 4, 4, 16777215);
                 decompiledSharedTail1 = (var40 != 0);
               }
               if (decompiledSharedTail1) {
-                pb.g(var12, var21 + 1, 1, var27);
-                pb.g(-1 + var12, var21 + 2, 3, var27);
-                pb.g(-2 + var12, 3 + var21, 5, var27);
-                pb.g(var12 - 3, 4 + var21, 7, 16777215);
-                pb.d(var12 - 1, 1 + var21, var12 - 3, 3 + var21, 16777215);
-                pb.d(1 + var12, 1 + var21, 3 + var12, 3 + var21, 16777215);
+                SoftwareRaster.g(var12, var21 + 1, 1, var27);
+                SoftwareRaster.g(-1 + var12, var21 + 2, 3, var27);
+                SoftwareRaster.g(-2 + var12, 3 + var21, 5, var27);
+                SoftwareRaster.g(var12 - 3, 4 + var21, 7, 16777215);
+                SoftwareRaster.d(var12 - 1, 1 + var21, var12 - 3, 3 + var21, 16777215);
+                SoftwareRaster.d(1 + var12, 1 + var21, 3 + var12, 3 + var21, 16777215);
               }
             }
-            var26_ref_ne = (ne) (this.field_X.field_e.e(13058));
+            var26_ref_ne = (ne) (this.world.field_e.first(13058));
             boolean decompiledNaturalLoopExit1 = false;
             while (!(decompiledNaturalLoopExit1 = (null == var26_ref_ne))) {
               var12 = var16 + (var17 * var26_ref_ne.field_z / var24 >> 4);
               var13 = var26_ref_ne.field_I / (16 * var18) + var22;
-              var27 = (int)(128.0 * Math.sin((double)this.field_X.field_r / 10.0)) + 128;
+              var27 = (int)(128.0 * Math.sin((double)this.world.simulationTick / 10.0)) + 128;
               var27 = 65536 * (-var27 + 255) + var27 * 257;
               stackOut_661_0 = var26_ref_ne;
               stackIn_682_0 = stackOut_661_0;
@@ -5248,49 +5248,49 @@ final class nb {
                 var28 = stackIn_662_0.field_K / 2;
                 if (var13 >= var21) {
                   if (var28 < 256) {
-                    pb.c(var12, -6 + var13, 6, 6, var27, var28);
-                    pb.h(var12, var13 - 6, 6, 6, 65535, var28);
+                    SoftwareRaster.c(var12, -6 + var13, 6, 6, var27, var28);
+                    SoftwareRaster.h(var12, var13 - 6, 6, 6, 65535, var28);
                   } else {
-                    pb.a(var12, var13 - 6, 6, 6, var27);
-                    pb.h(var12, var13 - 6, 6, 6, 65535);
+                    SoftwareRaster.a(var12, var13 - 6, 6, 6, var27);
+                    SoftwareRaster.h(var12, var13 - 6, 6, 6, 65535);
                   }
                 } else if (var28 >= 256) {
-                  pb.g(var12, 1 + var21, 1, var27);
-                  pb.g(-1 + var12, 2 + var21, 3, var27);
-                  pb.g(-2 + var12, 3 + var21, 5, var27);
-                  pb.g(var12 - 3, var21 + 4, 7, var27);
-                  pb.d(var12 - 1, var21 + 1, -3 + var12, var21 + 3, 65535);
-                  pb.d(var12 + 1, var21 + 1, var12 + 3, var21 + 3, 65535);
+                  SoftwareRaster.g(var12, 1 + var21, 1, var27);
+                  SoftwareRaster.g(-1 + var12, 2 + var21, 3, var27);
+                  SoftwareRaster.g(-2 + var12, 3 + var21, 5, var27);
+                  SoftwareRaster.g(var12 - 3, var21 + 4, 7, var27);
+                  SoftwareRaster.d(var12 - 1, var21 + 1, -3 + var12, var21 + 3, 65535);
+                  SoftwareRaster.d(var12 + 1, var21 + 1, var12 + 3, var21 + 3, 65535);
                 } else {
-                  pb.c(var12, 1 + var21, 1, var27, var28);
-                  pb.c(var12 - 1, var21 + 2, 3, var27, var28);
-                  pb.c(var12 - 2, 3 + var21, 5, var27, var28);
-                  pb.c(-3 + var12, 4 + var21, 7, var27, var28);
-                  pb.b(var12 - 1, var21 + 1, var12 - 3, 3 + var21, 65535, var28);
-                  pb.b(1 + var12, 1 + var21, var12 + 3, 3 + var21, 65535, var28);
+                  SoftwareRaster.c(var12, 1 + var21, 1, var27, var28);
+                  SoftwareRaster.c(var12 - 1, var21 + 2, 3, var27, var28);
+                  SoftwareRaster.c(var12 - 2, 3 + var21, 5, var27, var28);
+                  SoftwareRaster.c(-3 + var12, 4 + var21, 7, var27, var28);
+                  SoftwareRaster.b(var12 - 1, var21 + 1, var12 - 3, 3 + var21, 65535, var28);
+                  SoftwareRaster.b(1 + var12, 1 + var21, var12 + 3, 3 + var21, 65535, var28);
                 }
-                var26_ref_ne = (ne) (this.field_X.field_e.a((byte) -6));
+                var26_ref_ne = (ne) (this.world.field_e.next((byte) -6));
                 continue;
               }
               break;
             }
             if (decompiledNaturalLoopExit1) {
-              stackIn_682_0 = this.field_X.field_db.e(13058);
+              stackIn_682_0 = this.world.field_db.first(13058);
             }
-            var26_ref_wl = (wl) (stackIn_682_0);
+            var26_ref_wl = (Projectile) (stackIn_682_0);
             do {
               if (null == var26_ref_wl) {
-                if (this.field_C != null) {
+                if (this.controlledSentinel != null) {
                   this.a(var19, var16, param1 ^ 1956917985, var18, var24, var17, var20);
                 }
                 break;
               }
-              var13 = var26_ref_wl.field_A / (var18 * 16) + var22;
-              var12 = var16 + (var17 * var26_ref_wl.field_U / var24 >> 4);
-              pb.a(var12, var13, 16776960);
-              var26_ref_wl = (wl) (this.field_X.field_db.a((byte) -103));
+              var13 = var26_ref_wl.worldY / (var18 * 16) + var22;
+              var12 = var16 + (var17 * var26_ref_wl.worldX / var24 >> 4);
+              SoftwareRaster.a(var12, var13, 16776960);
+              var26_ref_wl = (Projectile) (this.world.field_db.next((byte) -103));
             } while (var40 == 0);
-            var26_ref_jb = (jb) (this.field_X.field_C.e(13058));
+            var26_ref_jb = (Explosion) (this.world.field_C.first(13058));
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (null == var26_ref_jb))) {
               var13 = var22 + var26_ref_jb.field_M / (var18 * 16);
@@ -5306,11 +5306,11 @@ final class nb {
                 if (stackIn_694_0) {
                   var28 = 16711680;
                 }
-                pb.f(var12 - var14, var13, var12, var13 - var15, var28, 256);
-                pb.f(var12, -var15 + var13, var14 + var12, var13, var28, 256);
-                pb.f(var12 + var14, var13, var12, var15 + var13, var28, 256);
-                pb.f(var12, var13 + var15, -var14 + var12, var13, var28, 256);
-                var26_ref_jb = (jb) (this.field_X.field_C.a((byte) -96));
+                SoftwareRaster.f(var12 - var14, var13, var12, var13 - var15, var28, 256);
+                SoftwareRaster.f(var12, -var15 + var13, var14 + var12, var13, var28, 256);
+                SoftwareRaster.f(var12 + var14, var13, var12, var15 + var13, var28, 256);
+                SoftwareRaster.f(var12, var13 + var15, -var14 + var12, var13, var28, 256);
+                var26_ref_jb = (Explosion) (this.world.field_C.next((byte) -96));
                 continue;
               }
               break;
@@ -5327,18 +5327,18 @@ final class nb {
           if (decompiledFrameCompleted10) {
             var29 = stackIn_702_0 + stackIn_702_1;
             stackIn_703_0 = 4;
-            stackIn_703_1 = this.field_X.field_ab.b(92);
+            stackIn_703_1 = this.world.terrain.getTerrainType(92);
           }
           if (stackIn_703_0 == stackIn_703_1) {
             var29 += 3;
             var28 += 3;
           }
-          pb.c(var26, var28, 1 - var26 + var27, var29 - var28 + 1, 16777215, 40);
-          pb.c();
-          pb.d(var16 + (var17 - 2), -2 + var22 - 3, 4, 0);
-          pb.d(-2 + var17 + (var16 - 1), var22 - 3, 2, 0);
-          pb.d(-4 + var16 + var17, -2 + var22, 1, 0);
-          pb.d(var16 + var17 - 5, -2 + var22, 1, 0);
+          SoftwareRaster.c(var26, var28, 1 - var26 + var27, var29 - var28 + 1, 16777215, 40);
+          SoftwareRaster.c();
+          SoftwareRaster.d(var16 + (var17 - 2), -2 + var22 - 3, 4, 0);
+          SoftwareRaster.d(-2 + var17 + (var16 - 1), var22 - 3, 2, 0);
+          SoftwareRaster.d(-4 + var16 + var17, -2 + var22, 1, 0);
+          SoftwareRaster.d(var16 + var17 - 5, -2 + var22, 1, 0);
           var30 = Math.max(var21 + 12, var28 + 10);
           boolean decompiledSharedTail0 = !(!dm.field_c);
           if (!decompiledSharedTail0) {
@@ -5356,8 +5356,8 @@ final class nb {
           if (di.field_g == 4) {
             this.d((byte) -86);
           }
-          if (this.field_X.field_r > 50 &&
-            ul.field_d >= 2) {
+          if (this.world.simulationTick > 50 &&
+            NodeDeque.field_d >= 2) {
             if (this.field_ab) {
               dk.field_h.c("S/C checksums broken", 636, 80, 16711680, -1);
             }
@@ -5370,25 +5370,25 @@ final class nb {
           }
           boolean decompiledFrameCompleted0 = true;
           if (param0 &&
-            this.field_C != null) {
-            if (this.field_C.field_Xb.length <= this.field_F) {
+            this.controlledSentinel != null) {
+            if (this.controlledSentinel.field_Xb.length <= this.field_F) {
               this.field_F = 0;
             }
             var23 = 0;
             var24 = 640;
             var25Lifetime1 = var24 - var23;
             var26 = 360;
-            if (this.field_X.field_c != 1) {
-              var27 = vk.field_h[this.field_X.field_c] * (var24 - var23) / 500;
-              pb.e(var23, var26 + 2, -var27 + var24 - var23, 8, 2236962, 8772);
-              pb.e(var23, 8 + var26 + 2, var24 - var23 - var27, 8, 68, 0);
-              pb.e(var24 - var27, var26 + 2, var27, 8, 2236962, 16729156);
-              pb.e(-var27 + var24, 10 + var26, var27, 8, 16729156, 0);
+            if (this.world.field_c != 1) {
+              var27 = vk.field_h[this.world.field_c] * (var24 - var23) / 500;
+              SoftwareRaster.e(var23, var26 + 2, -var27 + var24 - var23, 8, 2236962, 8772);
+              SoftwareRaster.e(var23, 8 + var26 + 2, var24 - var23 - var27, 8, 68, 0);
+              SoftwareRaster.e(var24 - var27, var26 + 2, var27, 8, 2236962, 16729156);
+              SoftwareRaster.e(-var27 + var24, 10 + var26, var27, 8, 16729156, 0);
               var28 = 1;
-              var29_ref_je = (je) (this.field_C.field_B.e(param1 ^ 1956905443));
+              var29_ref_je = (SentinelCommand) (this.controlledSentinel.pendingCommands.first(param1 ^ 1956905443));
               while (null != var29_ref_je) {
-                var30 = var29_ref_je.field_x - this.field_X.field_r;
-                var31 = -this.field_X.field_r + var29_ref_je.field_r;
+                var30 = var29_ref_je.startTick - this.world.simulationTick;
+                var31 = -this.world.simulationTick + var29_ref_je.endTick;
                 var32Lifetime1 = var25Lifetime1 - var25Lifetime1 * var31 / 500;
                 var33Lifetime1 = var25Lifetime1 - var25Lifetime1 * var30 / 500;
                 var14 = var33Lifetime1 - var32Lifetime1;
@@ -5409,19 +5409,19 @@ final class nb {
                   var35Lifetime1 = var36Lifetime1;
                 }
                 var37 = 65535;
-                if (6 == var29_ref_je.field_s) {
+                if (6 == var29_ref_je.actionType) {
                   var37 = 35071;
                 }
-                if (var29_ref_je.field_s == 3) {
+                if (var29_ref_je.actionType == 3) {
                   var37 = 65416;
                 }
                 if (var29_ref_je.field_q) {
                   var37 = 8947712;
                 }
-                pb.g(var23 + var32Lifetime1, var34Lifetime1, var14, var15, var35Lifetime1, var37);
-                pb.g(2 + (var32Lifetime1 + var23), 2 + var34Lifetime1, var14 - 4, -4 + var15, -2 + var35Lifetime1, 0);
-                if (var29_ref_je.field_s == 0) {
-                  var38Lifetime1 = var29_ref_je.field_A;
+                SoftwareRaster.g(var23 + var32Lifetime1, var34Lifetime1, var14, var15, var35Lifetime1, var37);
+                SoftwareRaster.g(2 + (var32Lifetime1 + var23), 2 + var34Lifetime1, var14 - 4, -4 + var15, -2 + var35Lifetime1, 0);
+                if (var29_ref_je.actionType == 0) {
+                  var38Lifetime1 = var29_ref_je.actionVariant;
                   if (var38Lifetime1 >= 0 &&
                     var38Lifetime1 < 30) {
                     if (var28 == 0) {
@@ -5437,7 +5437,7 @@ final class nb {
                     }
                   }
                 }
-                var29_ref_je = (je) (this.field_C.field_B.a((byte) -8));
+                var29_ref_je = (SentinelCommand) (this.controlledSentinel.pendingCommands.next((byte) -8));
               }
             }
           }
@@ -5472,9 +5472,9 @@ final class nb {
               var28 = var28 * (-var27 + 6) / 6;
               var29 = fi.field_g[var27];
               var30 = 6 + fk.field_d.c(ke.field_b[var27]);
-              pb.c(-3 + var24, var23 - fk.field_d.field_G, var30, fk.field_d.field_G, 0, var28 * 2 / 3);
+              SoftwareRaster.c(-3 + var24, var23 - fk.field_d.field_G, var30, fk.field_d.field_G, 0, var28 * 2 / 3);
               if (var30 > var26) {
-                pb.c(var24 - (3 - var26), var23, var30 - var26, 5, 0, 2 * var28 / 3);
+                SoftwareRaster.c(var24 - (3 - var26), var23, var30 - var26, 5, 0, 2 * var28 / 3);
               }
               var26 = var30;
               fk.field_d.a(ke.field_b[var27], var24, var23, var29, 0, var28);
@@ -5482,7 +5482,7 @@ final class nb {
               var27++;
             }
           }
-          fk.field_d.a(jc.field_c, bb.field_X);
+          fk.field_d.a(NodeIterator.field_c, bb.field_X);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5510,7 +5510,7 @@ final class nb {
         }
     }
 
-    private final int a(boolean param0, hd param1, boolean param2, byte param3) {
+    private final int a(boolean param0, BattleTerrain param1, boolean param2, byte param3) {
         int stackIn_7_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_39_0 = 0;
@@ -5529,11 +5529,11 @@ final class nb {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        wk var11_ref_wk = null;
+        RgbSprite var11_ref_wk = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        mb var13_ref_mb = null;
+        Sentinel var13_ref_mb = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -5548,7 +5548,7 @@ final class nb {
         int var13Lifetime1Lifetime1;
         int var14Lifetime1Lifetime1;
         int var15Lifetime1Lifetime1;
-        var20 = SteelSentinels.field_G;
+        var20 = SteelSentinels.obfuscationControl;
         try {
           var5_int = 480;
           if (1024 < this.field_E) {
@@ -5556,7 +5556,7 @@ final class nb {
           }
           var6 = this.field_P;
           var7 = this.field_E;
-          pb.a(0, 0, 640, 400);
+          SoftwareRaster.a(0, 0, 640, 400);
           if (param3 >= -87) {
             stackIn_7_0 = 92;
             return stackIn_7_0;
@@ -5566,12 +5566,12 @@ final class nb {
           if (var9 < 30) {
             var9 = 30;
           }
-          stackIn_14_0 = (param1.b(104) == 4) ? 0 : 1;
+          stackIn_14_0 = (param1.getTerrainType(104) == 4) ? 0 : 1;
           boolean decompiledFrameCompleted1 = true;
           var10 = stackIn_14_0;
           if (param0 &&
             var10 != 0) {
-            var11_ref_wk = bc.field_rb[this.field_X.field_ab.b(107)];
+            var11_ref_wk = bc.field_rb[this.world.terrain.getTerrainType(107)];
             var12 = 128;
             var13 = 1 + var8;
             if (var13 > 400) {
@@ -5580,10 +5580,10 @@ final class nb {
             var14 = 0;
             while (640 > var14) {
               var15 = var6 + (var14 << 4);
-              var16 = param1.a((byte) -127, var15) + var7;
-              var17 = param1.a(false, var15) + var7;
-              var18 = param1.b((byte) 119, var15) + var7;
-              stackIn_39_0 = param1.b(70);
+              var16 = param1.getGroundHeightAt((byte) -127, var15) + var7;
+              var17 = param1.getSecondaryHeightAt(false, var15) + var7;
+              var18 = param1.getSurfaceProfileAt((byte) 119, var15) + var7;
+              stackIn_39_0 = param1.getTerrainType(70);
               stackIn_39_1 = 2;
               if (var20 != 0) {
                 decompiledFrameCompleted1 = false;
@@ -5594,19 +5594,19 @@ final class nb {
                 var17 = 1125 + var7;
               }
               if (var16 < var17) {
-                pb.a(var14, -(var18 >> 4) + 400, 1 + var14, -(var16 >> 4) + 400);
-                pb.f(var14, 400 - (var18 >> 4), 400 - (-var18 + var16 >> 4) + 1, 0, 64);
-                pb.a(var14, 401 - (var17 >> 4), 1 + var14, 400 - (var18 >> 4));
+                SoftwareRaster.a(var14, -(var18 >> 4) + 400, 1 + var14, -(var16 >> 4) + 400);
+                SoftwareRaster.f(var14, 400 - (var18 >> 4), 400 - (-var18 + var16 >> 4) + 1, 0, 64);
+                SoftwareRaster.a(var14, 401 - (var17 >> 4), 1 + var14, 400 - (var18 >> 4));
                 var11_ref_wk.f(-(255 & var15 >> 4) + var14, var8 - 3 * var12);
                 var11_ref_wk.f(-((var15 & 4095) >> 4) + var14, var8 - var12);
-                pb.a(var14, 400 - (var17 >> 4) + 1, 1 + var14, 400 - (var16 >> 4));
+                SoftwareRaster.a(var14, 400 - (var17 >> 4) + 1, 1 + var14, 400 - (var16 >> 4));
                 vi.field_R.d(-(1023 & var15 >> 2) + var14, -(var17 >> 4) + 400, 1024, 16, 128);
               }
-              pb.a(var14, 1 - (var16 >> 4) + 400, 1 + var14, var9 + var13);
+              SoftwareRaster.a(var14, 1 - (var16 >> 4) + 400, 1 + var14, var9 + var13);
               var11_ref_wk.f(-(255 & var15 >> 4) + var14, var8 - var12 * 3);
               var11_ref_wk.f(var14 - (var15 >> 4 & 255), var8 - var12);
               vi.field_R.d(var14 - ((var15 & 4095) >> 2), 400 - (var16 >> 4), 1024, 16, 128);
-              pb.a(var14, 400 - (var16 >> 4), var14 + 1, 1 + (400 - (var16 >> 4)));
+              SoftwareRaster.a(var14, 400 - (var16 >> 4), var14 + 1, 1 + (400 - (var16 >> 4)));
               var19 = (var16 << 8) % 4096 * 256 / 4096;
               var11_ref_wk.b(-(255 & var15 >> 4) + var14, -(3 * var12) + var8, var19);
               var11_ref_wk.b(var14 - ((4095 & var15) >> 4), var8 - var12, var19);
@@ -5614,7 +5614,7 @@ final class nb {
               var14++;
             }
             if (decompiledFrameCompleted1) {
-              pb.c();
+              SoftwareRaster.c();
             }
           }
           if (decompiledFrameCompleted1) {
@@ -5623,37 +5623,37 @@ final class nb {
           }
           var11 = -(stackIn_39_0 >> stackIn_39_1);
           var12Lifetime1 = -(this.field_E >> 4) + 400;
-          var13_ref_mb = (mb) (this.field_X.field_K.e(13058));
-          L11: while (true) {
+          var13_ref_mb = (Sentinel) (this.world.sentinels.first(13058));
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (null != var13_ref_mb) {
-              var13_ref_mb.a(var12Lifetime1, 256, 16711680, this.field_C, var11);
+              var13_ref_mb.a(var12Lifetime1, 256, 16711680, this.controlledSentinel, var11);
               if (var20 == 0) {
-                if (null != this.field_C &&
-                  var13_ref_mb == this.field_C.field_Vb) {
-                  this.field_C.a(var11, 256, 23859, var12Lifetime1);
+                if (null != this.controlledSentinel &&
+                  var13_ref_mb == this.controlledSentinel.field_Vb) {
+                  this.controlledSentinel.a(var11, 256, 23859, var12Lifetime1);
                 }
-                var13_ref_mb = (mb) (this.field_X.field_K.a((byte) -85));
+                var13_ref_mb = (Sentinel) (this.world.sentinels.next((byte) -85));
                 continue;
               }
             } else {
-              if (je.field_o > 0 &&
+              if (SentinelCommand.field_o > 0 &&
                 0 != he.field_k) {
                 var11 = 33023;
-                var12Lifetime1 = Math.min(je.field_o, 256);
+                var12Lifetime1 = Math.min(SentinelCommand.field_o, 256);
                 var13Lifetime1 = (he.field_k >> 8) - (this.field_P >> 4);
                 var14Lifetime1 = 400;
                 if (fk.field_c) {
                   var14Lifetime1 = var14Lifetime1 * var12Lifetime1 / 150;
-                  if (je.field_o == 0) {
+                  if (SentinelCommand.field_o == 0) {
                     he.field_k = 0;
                   }
                   var12Lifetime1 = 150;
                 }
                 var15Lifetime1 = 0;
                 while (var15Lifetime1 < 100) {
-                  pb.f(var13Lifetime1 - var15Lifetime1, 0, var14Lifetime1, var11, var12Lifetime1);
+                  SoftwareRaster.f(var13Lifetime1 - var15Lifetime1, 0, var14Lifetime1, var11, var12Lifetime1);
                   var12Lifetime1 -= 4;
                   stackIn_78_0 = 0;
                   stackIn_78_1 = var12Lifetime1;
@@ -5669,30 +5669,30 @@ final class nb {
               }
             }
             if ((decompiledFrameCompleted0) &&
-              (decompiledFrameRemainder0 = !(je.field_o <= 0))) {
+              (decompiledFrameRemainder0 = !(SentinelCommand.field_o <= 0))) {
               stackIn_78_0 = -1;
               stackIn_78_1 = ~ge.field_l;
             }
             if ((decompiledFrameRemainder0) &&
               (stackIn_78_0 != stackIn_78_1)) {
               var11 = 33023;
-              var12Lifetime1 = Math.min(je.field_o, 256);
+              var12Lifetime1 = Math.min(SentinelCommand.field_o, 256);
               var13Lifetime1Lifetime1 = -(this.field_P >> 4) + (ge.field_l >> 8);
               var14Lifetime1Lifetime1 = 400;
               if (fk.field_c) {
                 var14Lifetime1Lifetime1 = var14Lifetime1Lifetime1 * var12Lifetime1 / 150;
-                if (je.field_o == 0) {
+                if (SentinelCommand.field_o == 0) {
                   ge.field_l = 0;
                 }
                 var12Lifetime1 = 150;
               }
               var15Lifetime1Lifetime1 = 0;
               while (var15Lifetime1Lifetime1 < 100) {
-                pb.f(var15Lifetime1Lifetime1 + var13Lifetime1Lifetime1, 0, var14Lifetime1Lifetime1, var11, var12Lifetime1);
+                SoftwareRaster.f(var15Lifetime1Lifetime1 + var13Lifetime1Lifetime1, 0, var14Lifetime1Lifetime1, var11, var12Lifetime1);
                 var12Lifetime1 -= 4;
                 stackIn_95_0 = var12Lifetime1;
                 if (var20 != 0) {
-                  break L11;
+                  break scanLoop1;
                 }
                 if (stackIn_95_0 <= 4) {
                   break;
@@ -5718,11 +5718,11 @@ final class nb {
         }
     }
 
-    final static wk[] a(cm param0, byte param1, String param2, String param3) {
-        wk[] var4 = null;
+    final static RgbSprite[] a(cm param0, byte param1, String param2, String param3) {
+        RgbSprite[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        wk[] stackIn_1_0 = null;
+        RgbSprite[] stackIn_1_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -5774,7 +5774,7 @@ final class nb {
         int stackIn_85_1 = 0;
         int stackIn_104_0 = 0;
         int stackIn_104_1 = 0;
-        mb[] stackIn_130_0 = null;
+        Sentinel[] stackIn_130_0 = null;
         int stackIn_131_1 = 0;
         int stackIn_147_0 = 0;
         int stackIn_170_0 = 0;
@@ -5782,7 +5782,7 @@ final class nb {
         int stackIn_185_0 = 0;
         int stackIn_188_0 = 0;
         int stackIn_188_1 = 0;
-        mb[] stackIn_223_0 = null;
+        Sentinel[] stackIn_223_0 = null;
         int stackIn_224_1 = 0;
         int stackIn_234_0 = 0;
         int stackIn_237_0 = 0;
@@ -5819,7 +5819,7 @@ final class nb {
         int var10_int = 0;
         u var10 = null;
         int var11 = 0;
-        mb[] var12_ref_mb__ = null;
+        Sentinel[] var12_ref_mb__ = null;
         int var12 = 0;
         int var13 = 0;
         Object var14 = null;
@@ -5841,7 +5841,7 @@ final class nb {
         int var28 = 0;
         fh var28_ref_fh = null;
         int var29 = 0;
-        mb var29_ref_mb = null;
+        Sentinel var29_ref_mb = null;
         String var29_ref_String = null;
         int var30 = 0;
         String var30_ref_String = null;
@@ -5852,7 +5852,7 @@ final class nb {
         int var33_int = 0;
         String var33 = null;
         int var34 = 0;
-        wk var34_ref_wk = null;
+        RgbSprite var34_ref_wk = null;
         int var35 = 0;
         int var36 = 0;
         int var37 = 0;
@@ -5901,7 +5901,7 @@ final class nb {
         int var50Lifetime1;
         int var24Lifetime2;
         int var25Lifetime2;
-        var51 = SteelSentinels.field_G;
+        var51 = SteelSentinels.obfuscationControl;
         try {
           stackIn_5_0 = (di.field_g == -1) ? 0 : 1;
           var2_int = stackIn_5_0;
@@ -5910,7 +5910,7 @@ final class nb {
             this.h((byte) -50);
           }
           var4 = 0;
-          var5 = kj.field_x;
+          var5 = CipherPacketBuffer.field_x;
           if (var2_int != 0 &&
             0 <= nc.field_a &&
             ni.b(122) &&
@@ -5935,7 +5935,7 @@ final class nb {
           var5 = ke.a(42, var5);
           ic.field_db.f(0, -10);
           if (var5 != null) {
-            ((mi) ((Object) var3)).a(var5, 320, ((mi) ((Object) var3)).field_G / 2 + 22, 0, -1);
+            ((BitmapFont) ((Object) var3)).a(var5, 320, ((BitmapFont) ((Object) var3)).field_G / 2 + 22, 0, -1);
           }
           var7 = 375;
           if (var2_int != 0 &&
@@ -5947,7 +5947,7 @@ final class nb {
           if (var2_int == 0) {
             if (!(ed.field_j < 0)) {
               ch.a(var7, 640, 32308, 0, 480 - var7);
-              pb.g(3, 3 + var7, 634, -var7 + 480 - 6, 8, 0);
+              SoftwareRaster.g(3, 3 + var7, 634, -var7 + 480 - 6, 8, 0);
               if (var51 != 0) {
                 this.g((byte) -118);
               }
@@ -5994,14 +5994,14 @@ final class nb {
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (var13 >= var12_ref_mb__.length))) {
             var14 = var12_ref_mb__[var13];
-            stackIn_104_0 = ((mb) (var14)).field_Db;
+            stackIn_104_0 = ((Sentinel) (var14)).field_Db;
             stackIn_104_1 = var11;
             if (var51 == 0) {
               if (stackIn_104_0 > stackIn_104_1) {
-                var11 = ((mb) (var14)).field_Db;
+                var11 = ((Sentinel) (var14)).field_Db;
               }
-              if (((mb) (var14)).field_Ub > var11) {
-                var11 = ((mb) (var14)).field_Ub;
+              if (((Sentinel) (var14)).field_Ub > var11) {
+                var11 = ((Sentinel) (var14)).field_Ub;
               }
               var13++;
               continue;
@@ -6014,10 +6014,10 @@ final class nb {
           }
           var12 = stackIn_104_0 / stackIn_104_1;
           var13Lifetime1 = 1;
-          if (1 == this.field_X.field_P) {
+          if (1 == this.world.field_P) {
             var13Lifetime1 = 2;
           }
-          if (this.field_X.field_P == 2) {
+          if (this.world.field_P == 2) {
             var13Lifetime1 = 3;
           }
           if (var12 > 1024) {
@@ -6052,7 +6052,7 @@ final class nb {
                 } else {
                   stackIn_131_1 = var24;
                 }
-                var25 = stackIn_130_0[stackIn_131_1].field_jc;
+                var25 = stackIn_130_0[stackIn_131_1].teamId;
                 if (var25 >= 0 &&
                   2 > var25) {
                   var23_ref_int__[var25] = var23_ref_int__[var25] + 1;
@@ -6083,7 +6083,7 @@ final class nb {
                   }
                   if (stackIn_170_0 != stackIn_170_1 &&
                     null != this.field_W[var26] &&
-                    ~this.field_W[var26].field_jc == ~var24Lifetime2) {
+                    ~this.field_W[var26].teamId == ~var24Lifetime2) {
                     var25Lifetime2 = 0;
                   } else {
                     var26++;
@@ -6115,9 +6115,9 @@ final class nb {
               var30 = -(var29 / 2) + (640 + var26 * 1280) / 4;
               var31 = 60;
               var32 = ui.field_U.field_U + 2 * var27;
-              pb.c(var30, var31, var29, var32, 0, 160);
+              SoftwareRaster.c(var30, var31, var29, var32, 0, 160);
               var33_int = fj.field_h[var26];
-              stackIn_188_0 = ~qd.field_t[0];
+              stackIn_188_0 = ~PartInstruction.field_t[0];
               stackIn_188_1 = ~var33_int;
               if (var51 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -6167,12 +6167,12 @@ final class nb {
             if (var28 >= var9) {
               if (null != var14Lifetime1) {
                 var28_ref_fh = ff.field_lb;
-                var29Lifetime1 = ((mi) ((Object) var28_ref_fh)).c((String) (var14Lifetime1));
+                var29Lifetime1 = ((BitmapFont) ((Object) var28_ref_fh)).c((String) (var14Lifetime1));
                 var15 = var15 - var29Lifetime1 / 2;
                 var15 = Math.min(var15, 638 - var29Lifetime1);
                 var15 = Math.max(var15, 2);
-                pb.c(-2 + var15, var16 - 2, var29Lifetime1 + 4, 4 + (((mi) ((Object) var28_ref_fh)).field_F + ((mi) ((Object) var28_ref_fh)).field_G), 0, 192);
-                ((mi) ((Object) var28_ref_fh)).b((String) (var14Lifetime1), var15, var16 + ((mi) ((Object) var28_ref_fh)).field_G, 16777215, 0);
+                SoftwareRaster.c(-2 + var15, var16 - 2, var29Lifetime1 + 4, 4 + (((BitmapFont) ((Object) var28_ref_fh)).field_F + ((BitmapFont) ((Object) var28_ref_fh)).field_G), 0, 192);
+                ((BitmapFont) ((Object) var28_ref_fh)).b((String) (var14Lifetime1), var15, var16 + ((BitmapFont) ((Object) var28_ref_fh)).field_G, 16777215, 0);
               }
               stackIn_370_0 = 0;
               stackIn_370_1 = ed.field_j;
@@ -6215,7 +6215,7 @@ final class nb {
               var31Lifetime1 = stackIn_242_0;
               if (var2_int == 0 ||
                 !(ge.field_j <= 0)) {
-                this.a(var21, false, var29_ref_mb.d((byte) 28), var20, var30Lifetime1 != 0, var27Lifetime1, var11, var29_ref_mb, var26);
+                this.a(var21, false, var29_ref_mb.getTeamColour((byte) 28), var20, var30Lifetime1 != 0, var27Lifetime1, var11, var29_ref_mb, var26);
               }
               var32_ref_String = Integer.toString(this.field_H[var28] / 100);
               stackIn_253_0 = (var31Lifetime1 == 0) ? 16777215 : 11579568;
@@ -6229,24 +6229,24 @@ final class nb {
                 stackIn_263_0 = (nc.field_a >= 0) ? 65280 : 6316128;
                 var33_intLifetime1 = stackIn_263_0;
               }
-              ((mi) ((Object) var10)).c(var32_ref_String, -5 + (var26 + var20), var27Lifetime1 + 16, var33_intLifetime1, -1);
+              ((BitmapFont) ((Object) var10)).c(var32_ref_String, -5 + (var26 + var20), var27Lifetime1 + 16, var33_intLifetime1, -1);
               var34Lifetime1 = 25 + var27Lifetime1;
               var35Lifetime1 = 4 + (var26 + var21);
               var36Lifetime1 = -var35Lifetime1 + var20 + var26;
               var37 = var27Lifetime1 - (-var21 + var34Lifetime1);
               var38 = 160;
               if (var2_int == 0) {
-                if (this.field_X.field_lb &&
-                  this.field_X.field_cb < 43) {
-                  pb.c(var35Lifetime1, var34Lifetime1, var36Lifetime1, var37, 0, var38);
+                if (this.world.field_lb &&
+                  this.world.field_cb < 43) {
+                  SoftwareRaster.c(var35Lifetime1, var34Lifetime1, var36Lifetime1, var37, 0, var38);
                   var39_ref = null;
-                  if (this.field_X.field_cb <= 40) {
-                    var39_ref_String = "" + this.field_X.field_cb;
+                  if (this.world.field_cb <= 40) {
+                    var39_ref_String = "" + this.world.field_cb;
                   } else {
                     var39_ref_String = "40+";
                   }
                   var39_ref_String = db.a(jf.field_W, -100, new String[]{var39_ref_String});
-                  ((mi) ((Object) var10)).a(var39_ref_String, var36Lifetime1 / 2 + var35Lifetime1, (var37 + ((mi) ((Object) var10)).field_U) / 2 + var34Lifetime1, 16777215, 0);
+                  ((BitmapFont) ((Object) var10)).a(var39_ref_String, var36Lifetime1 / 2 + var35Lifetime1, (var37 + ((BitmapFont) ((Object) var10)).field_U) / 2 + var34Lifetime1, 16777215, 0);
                 } else {
                   var39 = var35Lifetime1;
                   var40 = var37 / 2 + var34Lifetime1;
@@ -6254,8 +6254,8 @@ final class nb {
                   var42 = 20;
                   var43 = var39;
                   if (var31Lifetime1 != 0) {
-                    pb.c(var35Lifetime1, var34Lifetime1, var36Lifetime1, var37, 0, var38);
-                    ((mi) ((Object) var10)).b(jc.field_e, 4 + var39, ((mi) ((Object) var10)).field_U / 2 + var40, 11579568, 0);
+                    SoftwareRaster.c(var35Lifetime1, var34Lifetime1, var36Lifetime1, var37, 0, var38);
+                    ((BitmapFont) ((Object) var10)).b(NodeIterator.field_e, 4 + var39, ((BitmapFont) ((Object) var10)).field_U / 2 + var40, 11579568, 0);
                   } else {
                     var25Lifetime1 = 1;
                     var44 = 1;
@@ -6267,7 +6267,7 @@ final class nb {
                     var45 = stackIn_283_0;
                     var46 = var36Lifetime1 / var41;
                     if (0 < var45) {
-                      pb.c(var35Lifetime1, var34Lifetime1, var36Lifetime1, var37, 0, var38);
+                      SoftwareRaster.c(var35Lifetime1, var34Lifetime1, var36Lifetime1, var37, 0, var38);
                     }
                     if (var46 < var45) {
                       if (var37 <= 40) {
@@ -6308,12 +6308,12 @@ final class nb {
                             }
                           } else {
                             if (this.field_c[var47] == 1) {
-                              var48 = var48 + ck.field_d;
+                              var48 = var48 + IntrusiveNode.field_d;
                             } else {
                               var48 = var48 + tc.field_s;
                             }
                             if (1 == this.field_a[var47]) {
-                              var49 = var49 + ck.field_d;
+                              var49 = var49 + IntrusiveNode.field_d;
                             } else {
                               var49 = var49 + tc.field_s;
                             }
@@ -6366,7 +6366,7 @@ final class nb {
           if (stackIn_370_0 <= stackIn_370_1 &&
             !this.field_J &&
             var25Lifetime1 != 0 &&
-            !this.field_X.field_lb) {
+            !this.world.field_lb) {
             pl.field_U.a(oa.field_O, 320, 436, 1021128, -1);
           }
           if (ed.field_j >= 0 &&
@@ -6444,7 +6444,7 @@ final class nb {
               var31Lifetime2 = -var34Lifetime2 + 630;
             }
             var36Lifetime2 = -var35Lifetime2 + 400 - 4;
-            pb.c(var31Lifetime2, var36Lifetime2, var34Lifetime2, var35Lifetime2, 0, 192);
+            SoftwareRaster.c(var31Lifetime2, var36Lifetime2, var34Lifetime2, var35Lifetime2, 0, 192);
             ff.field_lb.b(var33, 2 + var31Lifetime2, -2 + (var35Lifetime2 + var36Lifetime2), 16777215, -1);
             return;
           }
@@ -6460,13 +6460,13 @@ final class nb {
         RuntimeException var4 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != this.field_C &&
-            this.field_C.field_Fb < 5 &&
-            0 >= this.field_C.field_cb) {
+          if (null != this.controlledSentinel &&
+            this.controlledSentinel.field_Fb < 5 &&
+            0 >= this.controlledSentinel.field_cb) {
             return true;
           }
           if (param2 > dl.field_G &&
-            this.field_X.a(4 + (dl.field_G >> 4), 4, 0, dl.field_G >> 4, km.field_c >> 4, (byte) 98, km.field_c >> 4)) {
+            this.world.a(4 + (dl.field_G >> 4), 4, 0, dl.field_G >> 4, km.field_c >> 4, (byte) 98, km.field_c >> 4)) {
             return true;
           }
           if (param0 != -5821) {
@@ -6487,7 +6487,7 @@ final class nb {
         RuntimeException var2 = null;
         int var3 = 0;
         int var2_intLifetime1;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
           if (dl.field_M < qh.field_Yb) {
             return true;
@@ -6560,26 +6560,26 @@ final class nb {
 
     private final void c(boolean param0) {
         RuntimeException runtimeException = null;
-        ul var2 = null;
-        mb var3 = null;
+        NodeDeque var2 = null;
+        Sentinel var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
-          var2 = this.field_X.field_K;
+          var2 = this.world.sentinels;
           if (param0) {
             return;
           }
-          var3 = (mb) (var2.e(13058));
+          var3 = (Sentinel) (var2.first(13058));
           while (null != var3) {
             if (var4 != 0) {
               return;
             }
             if (var3.field_Nb != 0) {
-              var3.f(128);
+              var3.clearArmour(128);
               b.field_f = true;
             }
-            var3 = (mb) (var2.a((byte) -49));
+            var3 = (Sentinel) (var2.next((byte) -49));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -6615,11 +6615,11 @@ final class nb {
         String stackIn_112_0 = null;
         int stackIn_140_0 = 0;
         int stackIn_157_0 = 0;
-        wk[] stackIn_161_0 = null;
+        RgbSprite[] stackIn_161_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        hd var4 = null;
+        BattleTerrain var4 = null;
         int var5 = 0;
         u var5_ref_u = null;
         String var5_ref_String = null;
@@ -6627,7 +6627,7 @@ final class nb {
         String var6_ref_String = null;
         int var7 = 0;
         String var7_ref_String = null;
-        wk[] var7_ref_wk__ = null;
+        RgbSprite[] var7_ref_wk__ = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -6645,16 +6645,16 @@ final class nb {
         int var9Lifetime3;
         int var9Lifetime4;
         int var9Lifetime5;
-        var12 = SteelSentinels.field_G;
+        var12 = SteelSentinels.obfuscationControl;
         try {
-          if (this.field_X.field_r < this.field_w) {
+          if (this.world.simulationTick < this.field_w) {
             this.a(param0, (byte) -21);
             return;
           }
           this.field_n = this.field_r;
           this.field_r = -1;
           sb.field_bb.b((byte) 126);
-          if (!jc.a(param1 ^ 21517) &&
+          if (!NodeIterator.a(param1 ^ 21517) &&
             param0 &&
             !jn.field_g) {
             stackIn_16_0 = 1;
@@ -6662,56 +6662,56 @@ final class nb {
             stackIn_16_0 = 0;
           }
           var3_int = stackIn_16_0;
-          var4 = this.field_X.field_ab;
+          var4 = this.world.terrain;
           this.a((byte) 125, true, true, var4);
           this.a(-93, true, var3_int != 0, true);
           discarded$0 = this.a(true, var4, true, (byte) -95);
           if (di.field_g != -1 &&
             di.field_g != 4 &&
             dl.field_M != qh.field_Yb) {
-            pb.c(0, 0, 640, 480, 0, 128);
+            SoftwareRaster.c(0, 0, 640, 480, 0, 128);
           }
-          if (null != this.field_C) {
+          if (null != this.controlledSentinel) {
             this.a(var3_int != 0, param1 ^ -21520);
           }
           boolean decompiledFrameCompleted0 = true;
-          pb.c();
+          SoftwareRaster.c();
           this.field_t = -1;
           this.b(var3_int != 0, 1956917985);
           if (di.field_g == -1 &&
-            !this.field_X.field_j &&
-            1 == this.field_X.field_ab.b(param1 - 21434)) {
+            !this.world.field_j &&
+            1 == this.world.terrain.getTerrainType(param1 - 21434)) {
             var5 = 16;
             var6 = 8;
             var7 = 428;
             var8 = 192;
             var9 = 508;
-            pb.c(var7, var5, var9 - var7, var6, 32768, var8);
+            SoftwareRaster.c(var7, var5, var9 - var7, var6, 32768, var8);
             var7 = var9;
             var9Lifetime3 = 549;
-            pb.c(var7, var5, -var7 + var9Lifetime3, var6, 8421376, var8);
+            SoftwareRaster.c(var7, var5, -var7 + var9Lifetime3, var6, 8421376, var8);
             var7 = var9Lifetime3;
             var9Lifetime4 = 589;
-            pb.c(var7, var5, var9Lifetime4 - var7, var6, 8409088, var8);
+            SoftwareRaster.c(var7, var5, var9Lifetime4 - var7, var6, 8409088, var8);
             var7 = var9Lifetime4;
             var9Lifetime5 = 628;
-            pb.c(var7, var5, var9Lifetime5 - var7, var6, 8388608, var8);
-            if (12000 > this.field_X.field_r) {
+            SoftwareRaster.c(var7, var5, var9Lifetime5 - var7, var6, 8388608, var8);
+            if (12000 > this.world.simulationTick) {
               stackIn_46_0 = 32768;
             } else {
-              if (18000 <= this.field_X.field_r) {
-                stackIn_46_0 = (this.field_X.field_r < 24000) ? 8409088 : 8388608;
+              if (18000 <= this.world.simulationTick) {
+                stackIn_46_0 = (this.world.simulationTick < 24000) ? 8409088 : 8388608;
               } else {
                 stackIn_46_0 = 8421376;
               }
             }
             var10 = stackIn_46_0;
             var5 -= 2;
-            var7 = Math.min(200 * this.field_X.field_r / 29750, 200) + 428;
+            var7 = Math.min(200 * this.world.simulationTick / 29750, 200) + 428;
             var11_int = 4;
             while (var11_int > 0) {
-              pb.c(-var11_int + var7, -var11_int + var5, var11_int * 2, var10, var8);
-              pb.c(-var11_int + var7, var6 + (var11_int + var5) + 3, var11_int * 2, var10, var8);
+              SoftwareRaster.c(-var11_int + var7, -var11_int + var5, var11_int * 2, var10, var8);
+              SoftwareRaster.c(-var11_int + var7, var6 + (var11_int + var5) + 3, var11_int * 2, var10, var8);
               var11_int--;
               if (var12 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -6719,7 +6719,7 @@ final class nb {
               }
             }
           }
-          if ((decompiledFrameCompleted0) && (di.field_g == -1 && (!this.field_X.field_j ||
+          if ((decompiledFrameCompleted0) && (di.field_g == -1 && (!this.world.field_j ||
             !(q.field_h <= 0)))) {
             this.f(var3_int != 0, 8209);
           }
@@ -6742,7 +6742,7 @@ final class nb {
             var8 = pd.field_X;
             var9Lifetime1 = 320;
             var10Lifetime1 = 240;
-            var11_intLifetime1 = var10Lifetime1 + ((mi) ((Object) var5_ref_u)).field_U / 2;
+            var11_intLifetime1 = var10Lifetime1 + ((BitmapFont) ((Object) var5_ref_u)).field_U / 2;
             if (var8 >= 25) {
               if (225 > var8) {
                 var11_intLifetime1 -= 75;
@@ -6759,36 +6759,36 @@ final class nb {
             } else {
               var11_intLifetime1 = var11_intLifetime1 - 3 * var8;
             }
-            pb.a(0, 0, 640, var10Lifetime1);
-            ((mi) ((Object) var5_ref_u)).a(ke.a(42, var6_ref_String), var9Lifetime1, var11_intLifetime1, 16777215, 0);
-            pb.a(0, 10 + var11_intLifetime1, 640, 480);
+            SoftwareRaster.a(0, 0, 640, var10Lifetime1);
+            ((BitmapFont) ((Object) var5_ref_u)).a(ke.a(42, var6_ref_String), var9Lifetime1, var11_intLifetime1, 16777215, 0);
+            SoftwareRaster.a(0, 10 + var11_intLifetime1, 640, 480);
             pl.field_U.a(var7_ref_String, 100, 200, 440, 200, 1044724, 0, 1, 0, pl.field_U.field_G);
-            pb.c();
+            SoftwareRaster.c();
           }
-          if (this.field_X.field_j) {
-            pb.c(0, 0, 640, 480, 0, Math.max(0, -q.field_h + 100));
+          if (this.world.field_j) {
+            SoftwareRaster.c(0, 0, 640, 480, 0, Math.max(0, -q.field_h + 100));
           }
           if (param1 != 21519) {
             return;
           }
           boolean decompiledFrameRemainder1 = true;
-          if (!this.field_X.field_j ||
+          if (!this.world.field_j ||
             !(q.field_h <= 0)) {
-            if ((!(this.field_X.field_R > 150) ||
-              this.field_X.field_ab.b(56) == 4) &&
-              (decompiledFrameRemainder1 = !(this.field_X.field_R <= 0)) &&
-              (decompiledFrameRemainder1 = (this.field_X.field_ab.b(62) != 4))) {
-              if (1 == this.field_X.field_ab.b(81)) {
+            if ((!(this.world.field_R > 150) ||
+              this.world.terrain.getTerrainType(56) == 4) &&
+              (decompiledFrameRemainder1 = !(this.world.field_R <= 0)) &&
+              (decompiledFrameRemainder1 = (this.world.terrain.getTerrainType(62) != 4))) {
+              if (1 == this.world.terrain.getTerrainType(81)) {
                 stackIn_112_0 = hk.field_jc;
               } else {
                 stackIn_112_0 = wb.field_f;
               }
               var5_ref_String = stackIn_112_0;
-              ui.field_U.a(db.a(var5_ref_String, -126, new String[]{Integer.toString((-this.field_X.field_R + 150) / 50)}).toUpperCase(), 320, 80, 16777215, 8421504);
+              ui.field_U.a(db.a(var5_ref_String, -126, new String[]{Integer.toString((-this.world.field_R + 150) / 50)}).toUpperCase(), 320, 80, 16777215, 8421504);
               decompiledFrameRemainder1 = (var12 != 0);
             }
             if ((decompiledFrameRemainder1) &&
-              (this.field_X.field_ab.b(param1 ^ 21572) != 1)) {
+              (this.world.terrain.getTerrainType(param1 ^ 21572) != 1)) {
               ui.field_U.a(nh.field_A.toUpperCase(), 320, 80, 16777215, 8421504);
               if (var12 != 0) {
                 this.i((byte) -23);
@@ -6848,7 +6848,7 @@ final class nb {
                 var10Lifetime2 = -var9Lifetime2 + qc.field_V.field_cb;
               }
             }
-            pb.c(0, var10Lifetime2, var8, var9Lifetime2, 0, 192);
+            SoftwareRaster.c(0, var10Lifetime2, var8, var9Lifetime2, 0, 192);
             hb.a((byte) 44, var7_ref_wk__, var8, var10Lifetime2, 0, var9Lifetime2);
             if (0 <= oh.field_f &&
               var8 + 0 > oh.field_f &&
@@ -6858,11 +6858,11 @@ final class nb {
               vd.field_b = true;
             }
             var11 = new int[4];
-            pb.b(var11);
+            SoftwareRaster.b(var11);
             if (hj.field_s != null) {
               fk.field_d.c(hj.field_s.toUpperCase(), var7_ref_wk__[0].field_A + (int)jl.field_c, -var7_ref_wk__[6].field_F + var10Lifetime2 - (-var9Lifetime2 - 3), this.field_M[0], -1);
             }
-            pb.a(var11);
+            SoftwareRaster.a(var11);
           }
           boolean decompiledFrameRemainder0 = true;
           var6Lifetime2 = 0;
@@ -6873,7 +6873,7 @@ final class nb {
           }
           if ((decompiledFrameRemainder0) &&
             (this.field_h)) {
-            if (this.field_X.field_r < 250) {
+            if (this.world.simulationTick < 250) {
               var6Lifetime2 = 1;
               if (var12 != 0) {
                 this.field_h = false;
@@ -6883,19 +6883,19 @@ final class nb {
             }
           }
           if (var6Lifetime2 == 0) {
-            if (!(kj.field_w <= 0)) {
-              kj.field_w = Math.max(0, -25 + kj.field_w);
+            if (!(CipherPacketBuffer.field_w <= 0)) {
+              CipherPacketBuffer.field_w = Math.max(0, -25 + CipherPacketBuffer.field_w);
               if ((var12 != 0) &&
-                (kj.field_w < 105)) {
-                kj.field_w = Math.min(25 + kj.field_w, 105);
+                (CipherPacketBuffer.field_w < 105)) {
+                CipherPacketBuffer.field_w = Math.min(25 + CipherPacketBuffer.field_w, 105);
               }
             }
           } else {
-            if (kj.field_w < 105) {
-              kj.field_w = Math.min(25 + kj.field_w, 105);
+            if (CipherPacketBuffer.field_w < 105) {
+              CipherPacketBuffer.field_w = Math.min(25 + CipherPacketBuffer.field_w, 105);
             }
           }
-          if (kj.field_w > 0) {
+          if (CipherPacketBuffer.field_w > 0) {
             this.h(-4294);
           }
           var7 = 0;
@@ -6936,36 +6936,36 @@ final class nb {
         int[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        mb[] var4 = null;
+        Sentinel[] var4 = null;
         int var5 = 0;
-        jc var6 = null;
-        mb var7_ref_mb = null;
+        NodeIterator var6 = null;
+        Sentinel var7_ref_mb = null;
         int var7 = 0;
         int var8 = 0;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           var2 = new int[2];
-          var3 = this.field_X.field_kb + this.field_X.field_Q;
+          var3 = this.world.playerCount + this.world.computerPlayerCount;
           if (null == this.field_B ||
             this.field_B.length != var3) {
             this.field_B = new int[var3];
           }
-          var4 = new mb[var3];
+          var4 = new Sentinel[var3];
           var5 = 0;
-          var6 = new jc(this.field_X.field_K);
-          var7_ref_mb = (mb) (var6.b(param0 + 21716));
+          var6 = new NodeIterator(this.world.sentinels);
+          var7_ref_mb = (Sentinel) (var6.b(param0 + 21716));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var7_ref_mb))) {
-            stackIn_21_0 = var7_ref_mb.field_Bb;
+            stackIn_21_0 = var7_ref_mb.playerId;
             if (var8 == 0) {
               if (stackIn_21_0 >= 0 &&
-                var7_ref_mb.field_Bb < var3) {
+                var7_ref_mb.playerId < var3) {
                 incrementValue$0 = var5;
                 var5++;
                 var4[incrementValue$0] = var7_ref_mb;
               }
-              var2[var7_ref_mb.field_jc] = var2[var7_ref_mb.field_jc] + (var7_ref_mb.field_vb - var7_ref_mb.field_Ab);
-              var7_ref_mb = (mb) (var6.d(2));
+              var2[var7_ref_mb.teamId] = var2[var7_ref_mb.teamId] + (var7_ref_mb.field_vb - var7_ref_mb.field_Ab);
+              var7_ref_mb = (Sentinel) (var6.d(2));
               continue;
             }
             break;
@@ -7047,9 +7047,9 @@ final class nb {
         int[][] var9_array = null;
         String var9_ref = null;
         int var10_int = 0;
-        jc var10 = null;
+        NodeIterator var10 = null;
         String var10_ref = null;
-        mb var11_ref_mb = null;
+        Sentinel var11_ref_mb = null;
         int var11 = 0;
         int var12 = 0;
         String var13 = null;
@@ -7059,9 +7059,9 @@ final class nb {
         Object var6Lifetime1;
         int var5Lifetime1;
         int var8Lifetime1;
-        var16 = SteelSentinels.field_G;
+        var16 = SteelSentinels.obfuscationControl;
         try {
-          if (this.field_X.field_j) {
+          if (this.world.field_j) {
             return;
           }
           dl.field_M = qh.field_Yb;
@@ -7071,7 +7071,7 @@ final class nb {
           var2_int = ge.field_j * 10 + ol.field_Ub;
           var3 = 0;
           if (var3 != 0 &&
-            !this.field_X.field_j) {
+            !this.world.field_j) {
             var4_ref = null;
             var5_ref = null;
             if (ol.field_Ub < dl.field_N.length &&
@@ -7121,9 +7121,9 @@ final class nb {
             var4 = this.field_M[1];
             var5 = 16777215;
             var6Lifetime1 = fk.field_d;
-            pb.c(0, 0, 192, 47, 0, 192);
-            pb.h(0, 0, 192, 47, var4, 192);
-            pb.a(2, 2, 188, 14, 2565927);
+            SoftwareRaster.c(0, 0, 192, 47, 0, 192);
+            SoftwareRaster.h(0, 0, 192, 47, var4, 192);
+            SoftwareRaster.a(2, 2, 188, 14, 2565927);
             var7 = 0;
             var8 = 0;
             var9_array = ua.field_I[ge.field_j * 10 + ol.field_Ub];
@@ -7133,26 +7133,26 @@ final class nb {
               if (var16 != 0) {
                 return;
               }
-              if (var10_int <= this.field_X.field_cb) {
+              if (var10_int <= this.world.field_cb) {
                 var7 = var7 + 9 * var9_array[var10_int].length;
               }
               var10_int++;
             }
-            var10 = new jc(this.field_X.field_K);
-            var11_ref_mb = (mb) (var10.b(2));
+            var10 = new NodeIterator(this.world.sentinels);
+            var11_ref_mb = (Sentinel) (var10.b(2));
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var11_ref_mb == null))) {
               stackIn_70_0 = 0;
               stackIn_70_1 = var11_ref_mb.field_Nb;
               if (var16 == 0) {
                 if (stackIn_70_0 != stackIn_70_1) {
-                  if (~nn.field_c[0] == ~var11_ref_mb.field_Zb.field_N) {
+                  if (~nn.field_c[0] == ~var11_ref_mb.chassis.componentId) {
                     var7--;
                   } else {
                     var7 -= 9;
                   }
                 }
-                var11_ref_mb = (mb) (var10.d(2));
+                var11_ref_mb = (Sentinel) (var10.d(2));
                 continue;
               }
               break;
@@ -7165,7 +7165,7 @@ final class nb {
             var8Lifetime1 = 13;
             var9_ref = db.a(dc.field_f, -77, new String[]{Integer.toString(ol.field_Ub + 1)});
             var10_ref = db.a(ne.field_J, -112, new String[]{Integer.toString(var7)});
-            var11 = this.field_X.field_r / 50;
+            var11 = this.world.simulationTick / 50;
             if (b.field_f) {
               var11 += 600;
             }
@@ -7177,24 +7177,24 @@ final class nb {
             stackIn_77_2 = array$0;
             stackIn_77_3 = array$0;
             stackIn_77_4 = 0;
-            if (this.field_X.field_M == -1) {
-              stackIn_78_5 = ul.field_b;
+            if (this.world.field_M == -1) {
+              stackIn_78_5 = NodeDeque.field_b;
             } else {
-              stackIn_78_5 = Integer.toString(this.field_X.field_M);
+              stackIn_78_5 = Integer.toString(this.world.field_M);
             }
             stackIn_77_3[stackIn_77_4] = stackIn_78_5;
             var14 = db.a(stackIn_77_0, stackIn_77_1, stackIn_77_2);
             var15 = db.a(ub.field_k, -82, new String[]{qa.a(-1, var12)});
-            ((mi) (var6Lifetime1)).b(cc.field_ic[ge.field_j], 6, var8Lifetime1, var5, 0);
-            ((mi) (var6Lifetime1)).b(var9_ref, 99, var8Lifetime1, 1021128, 0);
+            ((BitmapFont) (var6Lifetime1)).b(cc.field_ic[ge.field_j], 6, var8Lifetime1, var5, 0);
+            ((BitmapFont) (var6Lifetime1)).b(var9_ref, 99, var8Lifetime1, 1021128, 0);
             var8Lifetime1 += 17;
             var5Lifetime1 = 1021128;
-            ((mi) (var6Lifetime1)).b(var10_ref, 6, var8Lifetime1, var5Lifetime1, 0);
-            ((mi) (var6Lifetime1)).b(var13, 99, var8Lifetime1, var5Lifetime1, 0);
+            ((BitmapFont) (var6Lifetime1)).b(var10_ref, 6, var8Lifetime1, var5Lifetime1, 0);
+            ((BitmapFont) (var6Lifetime1)).b(var13, 99, var8Lifetime1, var5Lifetime1, 0);
             var8Lifetime1 += 11;
-            ((mi) (var6Lifetime1)).b(var14, 6, var8Lifetime1, var5Lifetime1, 0);
+            ((BitmapFont) (var6Lifetime1)).b(var14, 6, var8Lifetime1, var5Lifetime1, 0);
             if (ge.field_j > 0) {
-              ((mi) (var6Lifetime1)).b(var15, 99, var8Lifetime1, var5Lifetime1, 0);
+              ((BitmapFont) (var6Lifetime1)).b(var15, 99, var8Lifetime1, var5Lifetime1, 0);
             }
             if (0 != qh.field_Yb) {
               return;
@@ -7217,7 +7217,7 @@ final class nb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 256) {
-            nb.b((byte) 125);
+            GameplayController.b((byte) 125);
           }
           stackIn_4_0 = rf.a(param0, param3, (byte) -118, false, param4, param1);
           return stackIn_4_0;
@@ -7274,9 +7274,9 @@ final class nb {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        wk var21_ref_wk = null;
+        RgbSprite var21_ref_wk = null;
         int var22_int = 0;
-        wk var22 = null;
+        RgbSprite var22 = null;
         int var23 = 0;
         int var24_int = 0;
         double var24 = 0.0;
@@ -7295,9 +7295,9 @@ final class nb {
         int var26Lifetime1;
         int var27Lifetime1;
         int var23Lifetime2;
-        var29 = SteelSentinels.field_G;
+        var29 = SteelSentinels.obfuscationControl;
         try {
-          if (this.field_X.field_j) {
+          if (this.world.field_j) {
             return;
           }
           param4 = false;
@@ -7313,7 +7313,7 @@ final class nb {
           var11 = 96;
           var12 = var10 * 2;
           var13 = var10 * 2;
-          qb.a(var11, var10, (byte) 50, var13, var12, var11);
+          ParticleEffect.a(var11, var10, (byte) 50, var13, var12, var11);
           var8Lifetime1 = var12 - (-var11 - 8);
           var14 = 0;
           var15 = ff.field_lb.field_U + 3;
@@ -7331,11 +7331,11 @@ final class nb {
           }
           var20 = var20 + var14;
           if (param2 != null) {
-            var19 = ((mi) ((Object) var7)).a(param2, new int[]{var17}, var18);
+            var19 = ((BitmapFont) ((Object) var7)).a(param2, new int[]{var17}, var18);
             var20 = var20 + var16 * var19;
           }
           ta.a(var9 - var8Lifetime1, 0, param0 + 0, 255, 0, 128, var8Lifetime1, var13, var20);
-          pb.c(var8Lifetime1, var13 + var20, -var8Lifetime1 + var9, param0, 64);
+          SoftwareRaster.c(var8Lifetime1, var13 + var20, -var8Lifetime1 + var9, param0, 64);
           var13Lifetime1 = 20;
           if (param1 != null) {
             pl.field_U.b(param1, var8Lifetime1 + 5, var13Lifetime1, 16777215, 0);
@@ -7406,7 +7406,7 @@ final class nb {
             var13Lifetime1 = var13Lifetime1 + (var21Lifetime1 + var10);
             var23Lifetime2 = 0;
             while (var23Lifetime2 < var19) {
-              ((mi) ((Object) var7)).b(var18[var23Lifetime2], var12, var13Lifetime1, var22_int, 5263440);
+              ((BitmapFont) ((Object) var7)).b(var18[var23Lifetime2], var12, var13Lifetime1, var22_int, 5263440);
               var13Lifetime1 = var13Lifetime1 + var21Lifetime1;
               var23Lifetime2++;
               if (var29 != 0) {
@@ -7548,28 +7548,28 @@ final class nb {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        mb var6_ref_mb = null;
+        Sentinel var6_ref_mb = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         Object var10 = null;
         Object var11 = null;
-        mb var12_ref_mb = null;
+        Sentinel var12_ref_mb = null;
         int var12 = 0;
-        mb var13_ref_mb = null;
+        Sentinel var13_ref_mb = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        jc var16_ref_jc = null;
+        NodeIterator var16_ref_jc = null;
         int[] var16_ref_int__ = null;
         int var17 = 0;
-        mb var17_ref_mb = null;
+        Sentinel var17_ref_mb = null;
         int[] var17_ref_int__ = null;
         int var18 = 0;
         String var18_ref_String = null;
-        mb var18_ref_mb = null;
+        Sentinel var18_ref_mb = null;
         int var19 = 0;
         int var20 = 0;
         String var21_ref_String = null;
@@ -7581,9 +7581,9 @@ final class nb {
         int var24_int = 0;
         String var24 = null;
         int var25 = 0;
-        wk var26 = null;
+        RgbSprite var26 = null;
         int var27 = 0;
-        mb var12_ref_mbLifetime1;
+        Sentinel var12_ref_mbLifetime1;
         String var21_ref_StringLifetime1;
         String var22Lifetime1;
         String var21_ref_StringLifetime1Lifetime1;
@@ -7595,44 +7595,44 @@ final class nb {
         int var19Lifetime1Lifetime1;
         int var20Lifetime1Lifetime1;
         int var23_intLifetime1Lifetime1;
-        var27 = SteelSentinels.field_G;
+        var27 = SteelSentinels.obfuscationControl;
         try {
           var3_int = this.field_M[1];
           var4 = this.field_M[0];
           var5 = 0;
-          var6_ref_mb = (mb) (this.field_X.field_K.e(13058));
+          var6_ref_mb = (Sentinel) (this.world.sentinels.first(13058));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var6_ref_mb))) {
             stackIn_20_0 = -1;
             if (var27 == 0) {
-              if (!(stackIn_20_0 >= ~var6_ref_mb.field_Bb) ||
-                !(var6_ref_mb.field_Bb < this.field_X.field_kb)) {
+              if (!(stackIn_20_0 >= ~var6_ref_mb.playerId) ||
+                !(var6_ref_mb.playerId < this.world.playerCount)) {
                 if (var6_ref_mb.field_Nb == 11) {
                   var5++;
                 }
               } else {
                 var5++;
               }
-              var6_ref_mb = (mb) (this.field_X.field_K.a((byte) -124));
+              var6_ref_mb = (Sentinel) (this.world.sentinels.next((byte) -124));
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_20_0 = this.field_X.field_lb ? 1 : 0;
+            stackIn_20_0 = this.world.field_lb ? 1 : 0;
           }
           if (stackIn_20_0 != 0) {
             var5 += 4;
           }
           var6 = 1;
-          if (this.field_X.field_P == 1) {
+          if (this.world.field_P == 1) {
             var6 = 2;
             if (var27 != 0 &&
-              this.field_X.field_P == 2) {
+              this.world.field_P == 2) {
               var6 = 3;
             }
           } else {
-            if (this.field_X.field_P == 2) {
+            if (this.world.field_P == 2) {
               var6 = 3;
             }
           }
@@ -7648,7 +7648,7 @@ final class nb {
           boolean decompiledFrameRemainder4 = true;
           var8 = 138;
           if (uj.field_f &&
-            !this.field_X.field_lb && (var5 > 4 ||
+            !this.world.field_lb && (var5 > 4 ||
             var5 > 3 &&
             var6 > 1)) {
             stackIn_57_0 = 1;
@@ -7669,33 +7669,33 @@ final class nb {
           var11 = null;
           if (var9 != 0 &&
             var6 == 1) {
-            var10 = new mb[2];
-            var12_ref_mb = (mb) (this.field_X.field_K.e(13058));
+            var10 = new Sentinel[2];
+            var12_ref_mb = (Sentinel) (this.world.sentinels.first(13058));
             while (true) {
               if (null == var12_ref_mb) {
-                if (this.field_C == null) {
+                if (this.controlledSentinel == null) {
                   decompiledFrameCompleted7 = false;
                   break;
                 }
-                if (this.field_C == ((Object[]) (var10))[0]) {
+                if (this.controlledSentinel == ((Object[]) (var10))[0]) {
                   decompiledFrameCompleted6 = false;
                   break;
                 }
-                if (this.field_C == ((Object[]) (var10))[1]) {
+                if (this.controlledSentinel == ((Object[]) (var10))[1]) {
                   decompiledFrameCompleted5 = false;
                   break;
                 }
-                ((Object[]) (var10))[1] = this.field_C;
+                ((Object[]) (var10))[1] = this.controlledSentinel;
                 break;
               }
               if (var27 == 0) {
-                if (var12_ref_mb.field_Bb >= 0 &&
-                  this.field_X.field_kb > var12_ref_mb.field_Bb ||
+                if (var12_ref_mb.playerId >= 0 &&
+                  this.world.playerCount > var12_ref_mb.playerId ||
                   var12_ref_mb.field_Nb == 11) {
                   if (null != ((Object[]) (var10))[0] &&
-                    var12_ref_mb.field_vb <= ((mb) (((Object[]) (var10))[0])).field_vb) {
+                    var12_ref_mb.field_vb <= ((Sentinel) (((Object[]) (var10))[0])).field_vb) {
                     if (((Object[]) (var10))[1] == null ||
-                      !(((mb) (((Object[]) (var10))[1])).field_vb >= var12_ref_mb.field_vb)) {
+                      !(((Sentinel) (((Object[]) (var10))[1])).field_vb >= var12_ref_mb.field_vb)) {
                       ((Object[]) (var10))[1] = var12_ref_mb;
                     }
                   } else {
@@ -7703,7 +7703,7 @@ final class nb {
                     ((Object[]) (var10))[0] = var12_ref_mb;
                   }
                 }
-                var12_ref_mb = (mb) (this.field_X.field_K.a((byte) -16));
+                var12_ref_mb = (Sentinel) (this.world.sentinels.next((byte) -16));
                 continue;
               }
               break;
@@ -7719,13 +7719,13 @@ final class nb {
             (decompiledFrameCompleted5) &&
             (var9 != 0)) {
             var11 = new int[2];
-            var12_ref_mbLifetime1 = (mb) (this.field_X.field_K.e(13058));
+            var12_ref_mbLifetime1 = (Sentinel) (this.world.sentinels.first(13058));
             while (null != var12_ref_mbLifetime1) {
-              if (var12_ref_mbLifetime1.field_jc == 0 ||
-                1 == var12_ref_mbLifetime1.field_jc) {
-                ((int[]) (var11))[var12_ref_mbLifetime1.field_jc] = ((int[]) (var11))[var12_ref_mbLifetime1.field_jc] + var12_ref_mbLifetime1.field_vb;
+              if (var12_ref_mbLifetime1.teamId == 0 ||
+                1 == var12_ref_mbLifetime1.teamId) {
+                ((int[]) (var11))[var12_ref_mbLifetime1.teamId] = ((int[]) (var11))[var12_ref_mbLifetime1.teamId] + var12_ref_mbLifetime1.field_vb;
               }
-              var12_ref_mbLifetime1 = (mb) (this.field_X.field_K.a((byte) -36));
+              var12_ref_mbLifetime1 = (Sentinel) (this.world.sentinels.next((byte) -36));
               if (var27 == 0) {
                 continue;
               }
@@ -7734,10 +7734,10 @@ final class nb {
             var7 += 3;
           }
           boolean decompiledFrameCompleted4 = true;
-          if (this.field_X.field_fb &&
+          if (this.world.field_fb &&
             var9 == 0) {
             var12 = 0;
-            var13_ref_mb = (mb) (this.field_X.field_K.e(13058));
+            var13_ref_mb = (Sentinel) (this.world.sentinels.first(13058));
             while (true) {
               boolean decompiledFrameRemainder3 = true;
               if (var13_ref_mb != null) {
@@ -7753,7 +7753,7 @@ final class nb {
                   decompiledFrameRemainder3 = false;
                 }
                 else {
-                  var13_ref_mb = (mb) (this.field_X.field_K.a((byte) -117));
+                  var13_ref_mb = (Sentinel) (this.world.sentinels.next((byte) -117));
                   continue;
                 }
               }
@@ -7775,9 +7775,9 @@ final class nb {
           boolean decompiledFrameCompleted2 = true;
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameCompleted3 = true;
-          pb.c(0, 0, var8, var7, 0, 192);
-          pb.h(0, 0, var8, var7, var3_int, 192);
-          if ((!this.field_X.field_lb) &&
+          SoftwareRaster.c(0, 0, var8, var7, 0, 192);
+          SoftwareRaster.h(0, 0, var8, var7, var3_int, 192);
+          if ((!this.world.field_lb) &&
             (!(var5 <= 4) ||
             !(var5 <= 3)) &&
             (!(var5 <= 4) ||
@@ -7788,7 +7788,7 @@ final class nb {
             var14 = var7;
             var15 = 9;
             var14 = var14 - var15 / 2;
-            pb.a(var12, var14, var13, var15, 0);
+            SoftwareRaster.a(var12, var14, var13, var15, 0);
             if (oh.field_f >= var12 &&
               var12 + var13 > oh.field_f &&
               pi.field_c >= var14 &&
@@ -7810,12 +7810,12 @@ final class nb {
             } else {
               stackIn_176_4 = var3_int;
             }
-            pb.h(stackIn_175_0, stackIn_175_1, stackIn_175_2, stackIn_175_3, stackIn_176_4);
+            SoftwareRaster.h(stackIn_175_0, stackIn_175_1, stackIn_175_2, stackIn_175_3, stackIn_176_4);
             var12 = var12 + var13 / 2;
             if (!uj.field_f) {
               var17 = 0;
               while (var17 < 5) {
-                pb.g(-var17 + var12, var14 - (-var17 - 1), 2 * var17, var3_int);
+                SoftwareRaster.g(-var17 + var12, var14 - (-var17 - 1), 2 * var17, var3_int);
                 var17++;
                 if (var27 != 0) {
                   decompiledFrameCompleted3 = false;
@@ -7830,7 +7830,7 @@ final class nb {
               (decompiledFrameCompleted3)) {
               var17 = 0;
               while (var17 < 5) {
-                pb.g(-var17 + var12, -var17 + (var15 + (var14 - 3)), 2 * var17, var3_int);
+                SoftwareRaster.g(-var17 + var12, -var17 + (var15 + (var14 - 3)), 2 * var17, var3_int);
                 var17++;
                 if (var27 != 0) {
                   decompiledFrameCompleted2 = false;
@@ -7852,13 +7852,13 @@ final class nb {
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameRemainder0 = true;
           if (null != var10) {
-            var16_ref_jc = new jc(this.field_X.field_K);
-            pb.a(0, 0, var8, -1 + var7);
-            var17_ref_mb = (mb) (var16_ref_jc.b(param1 - 8207));
+            var16_ref_jc = new NodeIterator(this.world.sentinels);
+            SoftwareRaster.a(0, 0, var8, -1 + var7);
+            var17_ref_mb = (Sentinel) (var16_ref_jc.b(param1 - 8207));
             while (null != var17_ref_mb) {
-              var18 = var17_ref_mb.field_Bb;
+              var18 = var17_ref_mb.playerId;
               stackIn_388_0 = var18;
-              stackIn_388_1 = this.field_X.field_A;
+              stackIn_388_1 = this.world.field_A;
               if (var27 != 0) {
                 decompiledFrameCompleted1 = false;
                 break;
@@ -7878,23 +7878,23 @@ final class nb {
                   if (var17_ref_mb.field_Ab <= 0) {
                     if (var17_ref_mb.field_Ab < 0) {
                       var20 = 16711680;
-                    } else if (var17_ref_mb.field_Cb && (this.field_X.field_ab.b(84) == 3 ||
-                      this.field_X.field_ab.b(param1 - 8131) == 2)) {
+                    } else if (var17_ref_mb.field_Cb && (this.world.terrain.getTerrainType(84) == 3 ||
+                      this.world.terrain.getTerrainType(param1 - 8131) == 2)) {
                       var20 = 16777215;
                     }
                   } else {
                     var20 = 16777215;
                   }
-                  if (this.field_X.field_kb > var17_ref_mb.field_Bb) {
-                    var21_ref_String = this.field_X.field_bb[var17_ref_mb.field_Bb].toUpperCase();
+                  if (this.world.playerCount > var17_ref_mb.playerId) {
+                    var21_ref_String = this.world.playerNames[var17_ref_mb.playerId].toUpperCase();
                     if (this.field_d) {
-                      var19 = var17_ref_mb.d((byte) -117);
-                      if (~qd.field_t[0] == ~var19) {
+                      var19 = var17_ref_mb.getTeamColour((byte) -117);
+                      if (~PartInstruction.field_t[0] == ~var19) {
                         var19 = uj.a(var19, 91);
                       }
                     }
                     var22 = Integer.toString(var17_ref_mb.field_vb / 100);
-                    stackIn_245_0 = (0 == (this.field_X.field_hb & 1 << var17_ref_mb.field_Bb)) ? 0 : 1;
+                    stackIn_245_0 = (0 == (this.world.field_hb & 1 << var17_ref_mb.playerId)) ? 0 : 1;
                     var23_int = stackIn_245_0;
                     if (var23_int != 0) {
                       var19 = 10526880;
@@ -7903,18 +7903,18 @@ final class nb {
                       var14 = var14 + var17_ref_mb.field_vb;
                     }
                     if (var17_ref_mb.field_Cb &&
-                      this.field_X.field_ab.b(param1 ^ 8298) == 2) {
+                      this.world.terrain.getTerrainType(param1 ^ 8298) == 2) {
                       var19 = 16776960;
                     }
                     fk.field_d.b(var21_ref_String, 6, var12, var19, -1);
                     fk.field_d.c(var22, 132, var12, var20, -1);
                     if (var23_int != 0) {
-                      pb.g(6, -1 + var12 - fk.field_d.field_U / 2, 126, 10526880);
+                      SoftwareRaster.g(6, -1 + var12 - fk.field_d.field_U / 2, 126, 10526880);
                     }
                   } else {
                     if (var17_ref_mb.field_Nb == 11) {
-                      var21_ref_String = this.field_X.d(-1661904765, var17_ref_mb.field_Bb);
-                      var19 = var17_ref_mb.d((byte) -124);
+                      var21_ref_String = this.world.d(-1661904765, var17_ref_mb.playerId);
+                      var19 = var17_ref_mb.getTeamColour((byte) -124);
                       var22 = Integer.toString(var17_ref_mb.field_vb / 100);
                       fk.field_d.b(var21_ref_String, 6, var12, var19, -1);
                       fk.field_d.c(var22, 132, var12, 13421772, -1);
@@ -7923,10 +7923,10 @@ final class nb {
                   }
                 }
               }
-              var17_ref_mb = (mb) (var16_ref_jc.d(2));
+              var17_ref_mb = (Sentinel) (var16_ref_jc.d(2));
             }
             if (decompiledFrameCompleted1) {
-              pb.c();
+              SoftwareRaster.c();
               decompiledFrameRemainder0 = (var27 != 0);
             }
           }
@@ -7963,7 +7963,7 @@ final class nb {
               (decompiledFrameCompleted0)) {
               var16_ref_int__ = new int[]{480, 480};
               var17_ref_int__ = new int[]{0, 0};
-              var18_ref_mb = (mb) (this.field_X.field_K.e(13058));
+              var18_ref_mb = (Sentinel) (this.world.sentinels.first(13058));
               while (true) {
                 if (null != var18_ref_mb) {
                   var19Lifetime1Lifetime1 = var4;
@@ -7973,8 +7973,8 @@ final class nb {
                   if (var27 == 0) {
                     if (stackIn_381_0 >= stackIn_381_1) {
                       if (var18_ref_mb.field_Ab >= 0) {
-                        if (var18_ref_mb.field_Cb && (3 == this.field_X.field_ab.b(74) ||
-                          this.field_X.field_ab.b(126) == 2)) {
+                        if (var18_ref_mb.field_Cb && (3 == this.world.terrain.getTerrainType(74) ||
+                          this.world.terrain.getTerrainType(126) == 2)) {
                           var20Lifetime1Lifetime1 = 16777215;
                         }
                       } else {
@@ -7983,46 +7983,46 @@ final class nb {
                     } else {
                       var20Lifetime1Lifetime1 = 16777215;
                     }
-                    if (var18_ref_mb.field_Bb >= 0 &&
-                      this.field_X.field_kb > var18_ref_mb.field_Bb) {
-                      var21_ref_StringLifetime1Lifetime1 = this.field_X.field_bb[var18_ref_mb.field_Bb].toUpperCase();
+                    if (var18_ref_mb.playerId >= 0 &&
+                      this.world.playerCount > var18_ref_mb.playerId) {
+                      var21_ref_StringLifetime1Lifetime1 = this.world.playerNames[var18_ref_mb.playerId].toUpperCase();
                       if (this.field_B != null &&
-                        var18_ref_mb.field_Bb < this.field_B.length) {
-                        var12 = this.field_B[var18_ref_mb.field_Bb] + 13;
+                        var18_ref_mb.playerId < this.field_B.length) {
+                        var12 = this.field_B[var18_ref_mb.playerId] + 13;
                       }
                       if (var6 > 1) {
-                        var16_ref_int__[var18_ref_mb.field_jc] = Math.min(var16_ref_int__[var18_ref_mb.field_jc], var12 - 7);
-                        var17_ref_int__[var18_ref_mb.field_jc] = Math.max(var17_ref_int__[var18_ref_mb.field_jc], var12);
+                        var16_ref_int__[var18_ref_mb.teamId] = Math.min(var16_ref_int__[var18_ref_mb.teamId], var12 - 7);
+                        var17_ref_int__[var18_ref_mb.teamId] = Math.max(var17_ref_int__[var18_ref_mb.teamId], var12);
                       }
                       if (var6 > 1 &&
-                        ~var18_ref_mb.field_jc != ~var13) {
+                        ~var18_ref_mb.teamId != ~var13) {
                         if (var13 != -1) {
                           var22_int = fj.field_h[var13];
-                          if (var22_int == qd.field_t[0]) {
+                          if (var22_int == PartInstruction.field_t[0]) {
                             var22_int = uj.a(var22_int, 105);
                           }
-                          pb.g(var15, var16_ref_int__[var13], 3, var22_int);
-                          pb.g(var15, var17_ref_int__[var13], 3, var22_int);
-                          pb.d(3 + var15, var16_ref_int__[var13], 1 + (var17_ref_int__[var13] - var16_ref_int__[var13]), var22_int);
+                          SoftwareRaster.g(var15, var16_ref_int__[var13], 3, var22_int);
+                          SoftwareRaster.g(var15, var17_ref_int__[var13], 3, var22_int);
+                          SoftwareRaster.d(3 + var15, var16_ref_int__[var13], 1 + (var17_ref_int__[var13] - var16_ref_int__[var13]), var22_int);
                           var14 = var14 / 100;
                           var23_intLifetime1 = (var16_ref_int__[var13] + var17_ref_int__[var13]) / 2;
                           var24_int = ff.field_lb.c(Integer.toString(var14));
                           var24_int = -3 - var15 + (-6 + (var8 - var24_int));
-                          pb.g(3 + var15, var23_intLifetime1, -5 + var24_int, var22_int);
+                          SoftwareRaster.g(3 + var15, var23_intLifetime1, -5 + var24_int, var22_int);
                           ff.field_lb.b(Integer.toString(var14), var24_int + (3 + var15), 4 + var23_intLifetime1, var22_int, -1);
                         }
-                        var13 = var18_ref_mb.field_jc;
+                        var13 = var18_ref_mb.teamId;
                         var14 = 0;
                       }
                       if (this.field_d) {
-                        var19Lifetime1Lifetime1 = var18_ref_mb.d((byte) 88);
-                        if (~qd.field_t[0] == ~var19Lifetime1Lifetime1) {
+                        var19Lifetime1Lifetime1 = var18_ref_mb.getTeamColour((byte) 88);
+                        if (~PartInstruction.field_t[0] == ~var19Lifetime1Lifetime1) {
                           var19Lifetime1Lifetime1 = uj.a(var19Lifetime1Lifetime1, 114);
                         }
                       }
                       var22Lifetime1 = Integer.toString(var18_ref_mb.field_vb / 100);
                       var14 = var14 + var18_ref_mb.field_vb;
-                      stackIn_333_0 = ((1 << var18_ref_mb.field_Bb & this.field_X.field_hb) == 0) ? 0 : 1;
+                      stackIn_333_0 = ((1 << var18_ref_mb.playerId & this.world.field_hb) == 0) ? 0 : 1;
                       var23_intLifetime1Lifetime1 = stackIn_333_0;
                       if (var23_intLifetime1Lifetime1 != 0) {
                         var19Lifetime1Lifetime1 = 10526880;
@@ -8031,12 +8031,12 @@ final class nb {
                         }
                       }
                       if (var18_ref_mb.field_Cb &&
-                        this.field_X.field_ab.b(param1 ^ 8259) == 2) {
+                        this.world.terrain.getTerrainType(param1 ^ 8259) == 2) {
                         var19Lifetime1Lifetime1 = 16776960;
                       }
                       fk.field_d.b(var21_ref_StringLifetime1Lifetime1, 6, var12, var19Lifetime1Lifetime1, -1);
                       fk.field_d.c(var22Lifetime1, 132, var12, var20Lifetime1Lifetime1, -1);
-                      if (this.field_X.field_fb &&
+                      if (this.world.field_fb &&
                         var18_ref_mb.field_kc > 0) {
                         var24 = "<times>" + var18_ref_mb.field_kc;
                         var25 = fk.field_d.c(var24);
@@ -8046,16 +8046,16 @@ final class nb {
                       }
                       if (var23_intLifetime1Lifetime1 != 0) {
                         if (1 < var6) {
-                          pb.g(6, -(fk.field_d.field_U / 2) + var12 - 1, fk.field_d.c(var21_ref_StringLifetime1Lifetime1), 10526880);
+                          SoftwareRaster.g(6, -(fk.field_d.field_U / 2) + var12 - 1, fk.field_d.c(var21_ref_StringLifetime1Lifetime1), 10526880);
                         } else {
-                          pb.g(6, var12 - fk.field_d.field_U / 2 - 1, 126, 10526880);
+                          SoftwareRaster.g(6, var12 - fk.field_d.field_U / 2 - 1, 126, 10526880);
                         }
                       }
                       var12 += 9;
                     } else {
                       if (var18_ref_mb.field_Nb == 11) {
-                        var21 = var18_ref_mb.field_Bb;
-                        if (this.field_X.field_A == var21 &&
+                        var21 = var18_ref_mb.playerId;
+                        if (this.world.field_A == var21 &&
                           null != this.field_B) {
                           var21 = this.field_B.length - 1;
                         }
@@ -8063,12 +8063,12 @@ final class nb {
                           this.field_B.length > var21) {
                           var12 = 13 + this.field_B[var21];
                         }
-                        var19Lifetime1Lifetime1 = var18_ref_mb.d((byte) -98);
-                        var22Lifetime1 = this.field_X.d(-1661904765, var18_ref_mb.field_Bb);
+                        var19Lifetime1Lifetime1 = var18_ref_mb.getTeamColour((byte) -98);
+                        var22Lifetime1 = this.world.d(-1661904765, var18_ref_mb.playerId);
                         var23 = Integer.toString(var18_ref_mb.field_vb / 100);
                         fk.field_d.b(var22Lifetime1, 6, var12, var19Lifetime1Lifetime1, -1);
                         fk.field_d.c(var23, 132, var12, var20Lifetime1Lifetime1, -1);
-                        if (this.field_X.field_fb &&
+                        if (this.world.field_fb &&
                           var18_ref_mb.field_kc > 0) {
                           var24 = "<times>" + var18_ref_mb.field_kc;
                           var25 = fk.field_d.c(var24);
@@ -8079,7 +8079,7 @@ final class nb {
                         var12 += 9;
                       }
                     }
-                    var18_ref_mb = (mb) (this.field_X.field_K.a((byte) -97));
+                    var18_ref_mb = (Sentinel) (this.world.sentinels.next((byte) -97));
                     continue;
                   }
                 } else {
@@ -8090,14 +8090,14 @@ final class nb {
                   break;
                 }
                 var17_ref_int__[var13] = Math.max(var17_ref_int__[var13], var12 - 7 - 2);
-                pb.g(var15, var16_ref_int__[var13], 3, fj.field_h[var13]);
-                pb.g(var15, var17_ref_int__[var13], 3, fj.field_h[var13]);
-                pb.d(3 + var15, var16_ref_int__[var13], -var16_ref_int__[var13] + (var17_ref_int__[var13] + 1), fj.field_h[var13]);
+                SoftwareRaster.g(var15, var16_ref_int__[var13], 3, fj.field_h[var13]);
+                SoftwareRaster.g(var15, var17_ref_int__[var13], 3, fj.field_h[var13]);
+                SoftwareRaster.d(3 + var15, var16_ref_int__[var13], -var16_ref_int__[var13] + (var17_ref_int__[var13] + 1), fj.field_h[var13]);
                 var14 = var14 / 100;
                 var18Lifetime2 = (var16_ref_int__[var13] + var17_ref_int__[var13]) / 2;
                 var19Lifetime1Lifetime1 = ff.field_lb.c(Integer.toString(var14));
                 var19Lifetime1Lifetime1 = -var19Lifetime1Lifetime1 - 6 + (var8 - 3 - var15);
-                pb.g(3 + var15, var18Lifetime2, -5 + var19Lifetime1Lifetime1, fj.field_h[var13]);
+                SoftwareRaster.g(3 + var15, var18Lifetime2, -5 + var19Lifetime1Lifetime1, fj.field_h[var13]);
                 ff.field_lb.b(Integer.toString(var14), var19Lifetime1Lifetime1 + var15 + 3, var18Lifetime2 + 4, fj.field_h[var13], -1);
                 break;
               }
@@ -8105,7 +8105,7 @@ final class nb {
           }
           if ((decompiledFrameCompleted1) &&
             (decompiledFrameCompleted0)) {
-            if (!this.field_X.field_lb) {
+            if (!this.world.field_lb) {
               return;
             }
             stackIn_388_0 = 13;
@@ -8115,20 +8115,20 @@ final class nb {
             var12 = stackIn_388_0 + stackIn_388_1;
             var12 += 9;
             fk.field_d.b(ci.field_f, 6, var12, var4, -1);
-            fk.field_d.c(Integer.toString(this.field_X.field_cb), 132, var12, 13421772, -1);
+            fk.field_d.c(Integer.toString(this.world.field_cb), 132, var12, 13421772, -1);
             var12 += 9;
             fk.field_d.b(mc.field_e, 6, var12, var4, -1);
-            fk.field_d.c(Integer.toString(this.field_X.field_M), 132, var12, 13421772, -1);
+            fk.field_d.c(Integer.toString(this.world.field_M), 132, var12, 13421772, -1);
             var12 += 4;
             var16 = 6;
             var17 = 126;
             stackIn_389_0 = -1;
-            stackIn_389_1 = ~this.field_X.field_d;
+            stackIn_389_1 = ~this.world.field_d;
           }
           if (stackIn_389_0 > stackIn_389_1) {
-            var18Lifetime1 = Math.min(var17 - 2, this.field_X.field_gb * (var17 - 2) / this.field_X.field_d);
-            pb.h(var16, var12, var17, 7, var4);
-            pb.a(1 + var16, 1 + var12, var18Lifetime1, 5, this.field_M[2]);
+            var18Lifetime1 = Math.min(var17 - 2, this.world.field_gb * (var17 - 2) / this.world.field_d);
+            SoftwareRaster.h(var16, var12, var17, 7, var4);
+            SoftwareRaster.a(1 + var16, 1 + var12, var18Lifetime1, 5, this.field_M[2]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8153,14 +8153,14 @@ final class nb {
         int var8 = 0;
         int var9 = 0;
         int var8Lifetime1;
-        var9 = SteelSentinels.field_G;
+        var9 = SteelSentinels.obfuscationControl;
         try {
           this.field_Y = 0;
           fn.field_a = false;
           this.field_v = 0;
           ue.field_b = false;
-          this.field_C.field_U = 0;
-          var3 = n.field_z;
+          this.controlledSentinel.field_U = 0;
+          var3 = FunOrbClient.field_z;
           if (this.field_o == null) {
             this.field_o = new int[var3.length];
             this.field_g = new int[var3.length];
@@ -8218,13 +8218,13 @@ final class nb {
             stackIn_33_0 = param1;
           }
           if (stackIn_33_0) {
-            this.field_C.field_Gb = -50000;
-            this.field_C.field_hc = 138000;
-            this.field_C.field_Qb = 256;
-            this.field_C.field_ab = 1000;
+            this.controlledSentinel.worldY = -50000;
+            this.controlledSentinel.worldX = 138000;
+            this.controlledSentinel.field_Qb = 256;
+            this.controlledSentinel.velocityY = 1000;
             this.field_E = 327;
             this.field_P = 6000;
-            this.field_C.field_fc = this.field_C.field_Gb;
+            this.controlledSentinel.field_fc = this.controlledSentinel.worldY;
           }
           this.field_s = this.field_s + 40;
           return;
@@ -8265,7 +8265,7 @@ final class nb {
         String var10_ref = null;
         int var8Lifetime1;
         try {
-          if (this.field_X.field_j) {
+          if (this.world.field_j) {
             return;
           }
           var2 = dl.field_H[di.field_g];
@@ -8358,7 +8358,7 @@ final class nb {
             var6 += 3;
             var7 += 3;
             var8Lifetime1 = ff.field_lb.a(var10_ref, var9, 18);
-            pb.c(-3 + var6, -3 + var7, var9 + 5, var8Lifetime1 + 5, 0, 128);
+            SoftwareRaster.c(-3 + var6, -3 + var7, var9 + 5, var8Lifetime1 + 5, 0, 128);
             ff.field_lb.a(var10_ref, var6, var7, var9, 100, 1021128, -1, 0, 0, 18);
           }
           return;
@@ -8376,13 +8376,13 @@ final class nb {
         int var3 = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
           this.c(false);
           if (param0 < 18) {
             this.field_J = true;
           }
-          ea.field_k = false;
+          Sprite.field_k = false;
           lc.field_e = true;
           if ((ge.field_j != 0 ||
             !(3 > fm.field_f[0]) ||
@@ -8396,7 +8396,7 @@ final class nb {
               if (var2_int == 5 ||
                 var2_int == 6 ||
                 var2_int == 8) {
-                var2_int = gh.field_Jb;
+                var2_int = SceneWidget.field_Jb;
               }
               q.a(20, false, -1, var2_int);
               if (var3 == 0) {
@@ -8407,7 +8407,7 @@ final class nb {
             if (var2_intLifetime2 == 5 ||
               var2_intLifetime2 == 6 ||
               var2_intLifetime2 == 8) {
-              var2_intLifetime2 = gh.field_Jb;
+              var2_intLifetime2 = SceneWidget.field_Jb;
             }
             q.a(19, false, -1, var2_intLifetime2);
             if (var3 == 0) {
@@ -8419,7 +8419,7 @@ final class nb {
           if (var2_intLifetime1 == 5 ||
             var2_intLifetime1 == 6 ||
             var2_intLifetime1 == 8) {
-            var2_intLifetime1 = gh.field_Jb;
+            var2_intLifetime1 = SceneWidget.field_Jb;
           }
           q.a(20, false, -1, var2_intLifetime1);
           return;
@@ -8441,44 +8441,44 @@ final class nb {
         int[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        mb[] var4 = null;
+        Sentinel[] var4 = null;
         int var5 = 0;
-        jc var6 = null;
-        mb var7_ref_mb = null;
+        NodeIterator var6 = null;
+        Sentinel var7_ref_mb = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        mb var10 = null;
+        Sentinel var10 = null;
         int var11 = 0;
         int var12 = 0;
         int stackIn_52_0Lifetime1;
         int stackIn_52_1Lifetime1;
         int var7Lifetime1;
-        var12 = SteelSentinels.field_G;
+        var12 = SteelSentinels.obfuscationControl;
         try {
           var2 = new int[2];
-          var3 = this.field_X.field_Q + this.field_X.field_kb;
+          var3 = this.world.computerPlayerCount + this.world.playerCount;
           if (null == this.field_B ||
             ~var3 != ~this.field_B.length) {
             this.field_B = new int[var3];
           }
-          var4 = new mb[var3];
+          var4 = new Sentinel[var3];
           var5 = 0;
-          var6 = new jc(this.field_X.field_K);
-          var7_ref_mb = (mb) (var6.b(2));
+          var6 = new NodeIterator(this.world.sentinels);
+          var7_ref_mb = (Sentinel) (var6.b(2));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var7_ref_mb))) {
             stackIn_20_0 = -1;
-            stackIn_20_1 = ~var7_ref_mb.field_Bb;
+            stackIn_20_1 = ~var7_ref_mb.playerId;
             if (var12 == 0) {
               if (stackIn_20_0 >= stackIn_20_1 &&
-                var7_ref_mb.field_Bb < var3) {
+                var7_ref_mb.playerId < var3) {
                 incrementValue$0 = var5;
                 var5++;
                 var4[incrementValue$0] = var7_ref_mb;
               }
-              var2[var7_ref_mb.field_jc] = var2[var7_ref_mb.field_jc] + (var7_ref_mb.field_vb - var7_ref_mb.field_Ab);
-              var7_ref_mb = (mb) (var6.d(2));
+              var2[var7_ref_mb.teamId] = var2[var7_ref_mb.teamId] + (var7_ref_mb.field_vb - var7_ref_mb.field_Ab);
+              var7_ref_mb = (Sentinel) (var6.d(2));
               continue;
             }
             break;
@@ -8501,19 +8501,19 @@ final class nb {
             this.field_D = (int[]) null;
           }
           var7 = 0;
-          L9: while (true) {
+          scanLoop1: while (true) {
             if ((-1 + var3) > var7) {
               var8 = var7;
               stackIn_57_0 = var7;
               if (var12 != 0) {
-                break L9;
+                break scanLoop1;
               }
               var9 = stackIn_57_0;
               while (var3 > var9) {
-                stackIn_52_0 = var2[var4[var8].field_jc];
-                stackIn_52_1 = var2[var4[var9].field_jc];
+                stackIn_52_0 = var2[var4[var8].teamId];
+                stackIn_52_1 = var2[var4[var9].teamId];
                 if (stackIn_52_0 < stackIn_52_1 ||
-                  var4[var8].field_jc == var4[var9].field_jc &&
+                  var4[var8].teamId == var4[var9].teamId &&
                   !(var4[var8].field_vb - var4[var8].field_Ab >= var4[var9].field_vb - var4[var9].field_Ab)) {
                   var8 = var9;
                 }
@@ -8527,7 +8527,7 @@ final class nb {
                 var4[var8] = var10;
               }
               var7++;
-              continue L9;
+              continue scanLoop1;
             }
             var8 = 0;
             stackIn_57_0 = 0;
@@ -8535,12 +8535,12 @@ final class nb {
           }
           var7Lifetime1 = stackIn_57_0;
           while (var7Lifetime1 < var3) {
-            var11 = var4[var7Lifetime1].field_Bb;
+            var11 = var4[var7Lifetime1].playerId;
             if (var12 != 0) {
               return;
             }
             if (var7Lifetime1 > 0 &&
-              ~var4[var7Lifetime1 - 1].field_jc != ~var4[var7Lifetime1].field_jc) {
+              ~var4[var7Lifetime1 - 1].teamId != ~var4[var7Lifetime1].teamId) {
               var8 += 3;
             }
             if (var8 <= this.field_B[var11]) {
@@ -8561,7 +8561,7 @@ final class nb {
         }
     }
 
-    private final void a(byte param0, boolean param1, boolean param2, hd param3) {
+    private final void a(byte param0, boolean param1, boolean param2, BattleTerrain param3) {
         int stackIn_11_0 = 0;
         int stackIn_78_0 = 0;
         int stackIn_78_1 = 0;
@@ -8590,8 +8590,8 @@ final class nb {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        ie var12_ref_ie = null;
-        wk var12_ref_wk = null;
+        IsaacRandom var12_ref_ie = null;
+        RgbSprite var12_ref_wk = null;
         int var13 = 0;
         int[] var13_ref_int__ = null;
         int var14 = 0;
@@ -8642,27 +8642,27 @@ final class nb {
         int var17Lifetime1Lifetime1;
         int var18Lifetime1Lifetime1;
         int var19Lifetime1Lifetime1;
-        var27 = SteelSentinels.field_G;
+        var27 = SteelSentinels.obfuscationControl;
         try {
           if (this.field_E > 1024) {
             this.field_E = 1024;
           }
           var5_int = this.field_P;
           var6 = this.field_E;
-          pb.a(0, 0, 640, 400);
+          SoftwareRaster.a(0, 0, 640, 400);
           var7 = -(var6 >> 4) + 400;
           var8 = -var7 + 400;
           if (var8 < 30) {
             var8 = 30;
           }
-          stackIn_11_0 = (4 == param3.b(111)) ? 0 : 1;
+          stackIn_11_0 = (4 == param3.getTerrainType(111)) ? 0 : 1;
           boolean decompiledFrameCompleted7 = true;
           var9 = stackIn_11_0;
           if (param1) {
             if (var9 == 0) {
-              pb.b();
+              SoftwareRaster.b();
               var10 = -var8 + var7;
-              var11 = -(this.field_P >> 4) + (this.field_X.field_ab.a(param0 - 74) / 2 >> 4);
+              var11 = -(this.field_P >> 4) + (this.world.terrain.getProfileLength(param0 - 74) / 2 >> 4);
               var11 = 320 + (var11 - 320) * 3 / 10;
               var12 = 1000;
               var13 = 4 * var8 / 6 + (var10 - var12 * 2 / 3);
@@ -8671,8 +8671,8 @@ final class nb {
               if (null == un.field_o ||
                 h.field_T == null) {
                 im.field_h.field_d = 0;
-                un.field_o = (wk) ((Object) new ek(im.field_h.a("planet.jpg", -742, "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
-                h.field_T = (wk) ((Object) new ek(im.field_h.a("moon.jpg", param0 ^ -665, "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
+                un.field_o = (RgbSprite) ((Object) new ek(im.field_h.a("planet.jpg", -742, "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
+                h.field_T = (RgbSprite) ((Object) new ek(im.field_h.a("moon.jpg", param0 ^ -665, "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
               }
               if (null != un.field_o &&
                 h.field_T != null) {
@@ -8687,8 +8687,8 @@ final class nb {
                 var11Lifetime2 = 0;
                 var12Lifetime2 = 288;
                 var13Lifetime2 = var12Lifetime2 * 800 >> 9;
-                pb.a(0, 0, 640, -(var13Lifetime2 * 4 / 5) + (var10Lifetime2 + 4 * var8 / 6), 0);
-                var14 = this.field_X.field_ab.a(86) - 10240;
+                SoftwareRaster.a(0, 0, 640, -(var13Lifetime2 * 4 / 5) + (var10Lifetime2 + 4 * var8 / 6), 0);
+                var14 = this.world.terrain.getProfileLength(86) - 10240;
                 if (var14 < 30000) {
                   var14 = 30000;
                 }
@@ -8701,32 +8701,32 @@ final class nb {
                 }
                 if (null == jh.field_h) {
                   im.field_h.field_d = 0;
-                  if (this.field_X.field_ab.b(55) == 0) {
-                    jh.field_h = new wk(im.field_h.a("wz_background.jpg", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false)));
+                  if (this.world.terrain.getTerrainType(55) == 0) {
+                    jh.field_h = new RgbSprite(im.field_h.a("wz_background.jpg", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false)));
                   }
-                  if (1 == this.field_X.field_ab.b(79)) {
-                    jh.field_h = new wk(im.field_h.a("lw_background.jpg", param0 - 867, "lostworld/"), (java.awt.Component) ((Object) gl.a(false)));
+                  if (1 == this.world.terrain.getTerrainType(79)) {
+                    jh.field_h = new RgbSprite(im.field_h.a("lw_background.jpg", param0 - 867, "lostworld/"), (java.awt.Component) ((Object) gl.a(false)));
                   }
-                  if (this.field_X.field_ab.b(63) == 2) {
-                    jh.field_h = new wk(im.field_h.a("ct_background.jpg", param0 - 867, "city/"), (java.awt.Component) ((Object) gl.a(false)));
+                  if (this.world.terrain.getTerrainType(63) == 2) {
+                    jh.field_h = new RgbSprite(im.field_h.a("ct_background.jpg", param0 - 867, "city/"), (java.awt.Component) ((Object) gl.a(false)));
                   }
-                  if (this.field_X.field_ab.b(90) == 3) {
-                    jh.field_h = new wk(im.field_h.a("mn_background.jpg", -742, "moon/"), (java.awt.Component) ((Object) gl.a(false)));
+                  if (this.world.terrain.getTerrainType(90) == 3) {
+                    jh.field_h = new RgbSprite(im.field_h.a("mn_background.jpg", -742, "moon/"), (java.awt.Component) ((Object) gl.a(false)));
                   }
                 }
                 if (jh.field_h != null) {
                   jh.field_h.c(var15, var16, 2 * var13Lifetime2, var13Lifetime2);
                 }
-                if (this.field_X.field_ab.b(113) != 3 &&
+                if (this.world.terrain.getTerrainType(113) != 3 &&
                   ka.field_V) {
-                  var12_ref_ie = new ie(new int[]{this.field_X.field_Y, this.field_X.field_Y});
+                  var12_ref_ie = new IsaacRandom(new int[]{this.world.mapSeed, this.world.mapSeed});
                   var13_ref_int__ = new int[]{24000, 24000, 10000, 26000};
                   var14Lifetime2 = var12_ref_ie.a(-95, var13_ref_int__.length);
                   var15Lifetime2 = 256;
                   var16Lifetime2 = 500 * var15Lifetime2 >> 9;
                   var17 = -16000;
                   while (true) {
-                    if (!(var17 < (22000 + this.field_X.field_ab.a(param0 - 249)))) {
+                    if (!(var17 < (22000 + this.world.terrain.getProfileLength(param0 - 249)))) {
                       var15Lifetime2 = 256;
                       stackIn_78_0 = 800 * var15Lifetime2;
                       stackIn_78_1 = -325987223;
@@ -8736,12 +8736,12 @@ final class nb {
                     var19 = var8 + var10Lifetime2 - var16Lifetime2;
                     var18 = 320 + (3 * var18 - 960) / 20;
                     var19 = (-720 + 3 * var19) / 20 + 160;
-                    stackIn_78_0 = this.field_X.field_ab.b(76);
+                    stackIn_78_0 = this.world.terrain.getTerrainType(76);
                     stackIn_78_1 = 2;
                     if (var27 == 0) {
                       if (stackIn_78_0 == stackIn_78_1 &&
-                        ig.field_o[this.field_X.field_ab.b(param0 - 38)][var14Lifetime2].field_F >= 300) {
-                        ig.field_o[this.field_X.field_ab.b(81)][var14Lifetime2].c(var18 - var16Lifetime2 / 2, var19, var16Lifetime2, var16Lifetime2);
+                        ig.field_o[this.world.terrain.getTerrainType(param0 - 38)][var14Lifetime2].field_F >= 300) {
+                        ig.field_o[this.world.terrain.getTerrainType(81)][var14Lifetime2].c(var18 - var16Lifetime2 / 2, var19, var16Lifetime2, var16Lifetime2);
                       }
                       var17 = var17 + var13_ref_int__[var14Lifetime2];
                       var14Lifetime2 = var14Lifetime2 + (var12_ref_ie.a(-107, var13_ref_int__.length - 1) + 1);
@@ -8754,12 +8754,12 @@ final class nb {
                   }
                   var16Lifetime2 = stackIn_78_0 >> stackIn_78_1;
                   var17Lifetime2 = -12000;
-                  while (!((20000 + this.field_X.field_ab.a(106)) <= var17Lifetime2)) {
+                  while (!((20000 + this.world.terrain.getProfileLength(106)) <= var17Lifetime2)) {
                     var18Lifetime2 = -this.field_P * var15Lifetime2 / 4096 + (var15Lifetime2 * var17Lifetime2 >> 12);
                     var19Lifetime2 = var8 + var10Lifetime2 - var16Lifetime2;
                     var18Lifetime2 = 320 + (-320 + var18Lifetime2) * 5 / 20;
                     var19Lifetime2 = (var19Lifetime2 * 5 - 1200) / 20 + 80;
-                    ig.field_o[this.field_X.field_ab.b(101)][var14Lifetime2].c(var18Lifetime2 - var16Lifetime2 / 2, var19Lifetime2, var16Lifetime2, var16Lifetime2);
+                    ig.field_o[this.world.terrain.getTerrainType(101)][var14Lifetime2].c(var18Lifetime2 - var16Lifetime2 / 2, var19Lifetime2, var16Lifetime2, var16Lifetime2);
                     var17Lifetime2 = var17Lifetime2 + var13_ref_int__[var14Lifetime2];
                     var14Lifetime2 = var14Lifetime2 + (1 + var12_ref_ie.a(-122, -1 + var13_ref_int__.length));
                     stackIn_88_0 = ~var13_ref_int__.length;
@@ -8790,7 +8790,7 @@ final class nb {
               var11Lifetime1 = -(this.field_E >> 4) + 400;
               var12Lifetime1 = 0;
               while (var12Lifetime1 < param3.field_c) {
-                var13Lifetime1 = var10Lifetime1 + (param3.field_o[var12Lifetime1] >> 4);
+                var13Lifetime1 = var10Lifetime1 + (param3.spawnPositions[var12Lifetime1] >> 4);
                 var14Lifetime1 = var11Lifetime1 - (param3.field_h[var12Lifetime1] >> 4);
                 stackIn_199_0 = var12Lifetime1;
                 stackIn_199_1 = 2;
@@ -8802,15 +8802,15 @@ final class nb {
                   var15Lifetime1 = sb.field_W.field_z;
                   if (var12Lifetime1 == 0) {
                     sb.field_W.a(-(var15Lifetime1 / 2) + var13Lifetime1, var14Lifetime1);
-                    var16Lifetime1 = this.field_X.field_r / 5 % 6;
-                    if ((1 & this.field_X.field_v) == 0) {
+                    var16Lifetime1 = this.world.simulationTick / 5 % 6;
+                    if ((1 & this.world.field_v) == 0) {
                       b.field_n[var16Lifetime1].d(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1, 64);
                     }
                   }
                   if (1 == var12Lifetime1) {
                     hb.field_e.a(-(var15Lifetime1 / 2) + var13Lifetime1, var14Lifetime1);
-                    var16Lifetime1 = 6 + this.field_X.field_r / 5 % 6;
-                    if ((2 & this.field_X.field_v) == 0) {
+                    var16Lifetime1 = 6 + this.world.simulationTick / 5 % 6;
+                    if ((2 & this.world.field_v) == 0) {
                       b.field_n[var16Lifetime1].d(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1, 64);
                     }
                   }
@@ -8829,10 +8829,10 @@ final class nb {
                 boolean decompiledFrameCompleted2 = true;
                 boolean decompiledFrameCompleted5 = true;
                 boolean decompiledFrameCompleted3 = true;
-                L35: {
+                regionExit1: {
                   var10Lifetime1 = -(this.field_P >> 4);
                   var11Lifetime1 = 400 - (this.field_E >> 4);
-                  if (2 == param3.b(54)) {
+                  if (2 == param3.getTerrainType(54)) {
                     boolean decompiledFrameCompleted4 = true;
                     if (ka.field_V) {
                       var12Lifetime1 = 0;
@@ -8841,10 +8841,10 @@ final class nb {
                         stackIn_135_1 = param3.field_j[var12Lifetime1];
                         if (var27 == 0) {
                           if (stackIn_135_0 < stackIn_135_1) {
-                            var13Lifetime1 = (param3.field_o[var12Lifetime1] >> 4) + var10Lifetime1;
+                            var13Lifetime1 = (param3.spawnPositions[var12Lifetime1] >> 4) + var10Lifetime1;
                             var14Lifetime1 = -(param3.field_h[var12Lifetime1] >> 4) + var11Lifetime1;
-                            var15Lifetime1 = kc.field_x[this.field_X.field_ab.b(param0 ^ 63)][param3.field_j[var12Lifetime1]].field_z >> 1;
-                            kc.field_x[this.field_X.field_ab.b(70)][param3.field_j[var12Lifetime1]].c(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1);
+                            var15Lifetime1 = kc.field_x[this.world.terrain.getTerrainType(param0 ^ 63)][param3.field_j[var12Lifetime1]].field_z >> 1;
+                            kc.field_x[this.world.terrain.getTerrainType(70)][param3.field_j[var12Lifetime1]].c(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1);
                           }
                           var12Lifetime1++;
                           continue;
@@ -8875,10 +8875,10 @@ final class nb {
                           break;
                         }
                         if (stackIn_157_0 >= stackIn_157_1) {
-                          var13Lifetime1 = var10Lifetime1 + (param3.field_o[var12Lifetime1] >> 4);
+                          var13Lifetime1 = var10Lifetime1 + (param3.spawnPositions[var12Lifetime1] >> 4);
                           var14Lifetime1 = var11Lifetime1 - (param3.field_h[var12Lifetime1] >> 4);
-                          var15Lifetime1 = kc.field_x[this.field_X.field_ab.b(46)][param3.field_j[var12Lifetime1]].field_z >> 1;
-                          kc.field_x[this.field_X.field_ab.b(72)][param3.field_j[var12Lifetime1]].c(-(var15Lifetime1 / 2) + var13Lifetime1, var14Lifetime1, var15Lifetime1, var15Lifetime1);
+                          var15Lifetime1 = kc.field_x[this.world.terrain.getTerrainType(46)][param3.field_j[var12Lifetime1]].field_z >> 1;
+                          kc.field_x[this.world.terrain.getTerrainType(72)][param3.field_j[var12Lifetime1]].c(-(var15Lifetime1 / 2) + var13Lifetime1, var14Lifetime1, var15Lifetime1, var15Lifetime1);
                         }
                         var12Lifetime1++;
                       }
@@ -8886,7 +8886,7 @@ final class nb {
                     if ((decompiledFrameCompleted5) &&
                       (decompiledFrameCompleted3) &&
                       (var27 == 0)) {
-                      break L35;
+                      break regionExit1;
                     }
                   }
                   if ((decompiledFrameCompleted5) &&
@@ -8894,10 +8894,10 @@ final class nb {
                     (ka.field_V)) {
                     var12Lifetime1 = 0;
                     while (!(param3.field_c <= var12Lifetime1)) {
-                      var13Lifetime1 = (param3.field_o[var12Lifetime1] >> 4) + var10Lifetime1;
+                      var13Lifetime1 = (param3.spawnPositions[var12Lifetime1] >> 4) + var10Lifetime1;
                       var14Lifetime1 = var11Lifetime1 - (param3.field_h[var12Lifetime1] >> 4);
-                      var15Lifetime1 = kc.field_x[this.field_X.field_ab.b(param0 - 68)][param3.field_j[var12Lifetime1]].field_z >> 2;
-                      kc.field_x[this.field_X.field_ab.b(param0 ^ 65)][param3.field_j[var12Lifetime1]].c(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1);
+                      var15Lifetime1 = kc.field_x[this.world.terrain.getTerrainType(param0 - 68)][param3.field_j[var12Lifetime1]].field_z >> 2;
+                      kc.field_x[this.world.terrain.getTerrainType(param0 ^ 65)][param3.field_j[var12Lifetime1]].c(var13Lifetime1 - var15Lifetime1 / 2, var14Lifetime1, var15Lifetime1, var15Lifetime1);
                       var12Lifetime1++;
                       if (var27 != 0) {
                         decompiledFrameCompleted2 = false;
@@ -8922,17 +8922,17 @@ final class nb {
                 boolean decompiledFrameCompleted1 = true;
                 boolean decompiledFrameCompleted0 = true;
                 boolean decompiledFrameRemainder0 = true;
-                pb.a(0, 0, 640, 400);
-                var12_ref_wk = bc.field_rb[this.field_X.field_ab.b(109)];
+                SoftwareRaster.a(0, 0, 640, 400);
+                var12_ref_wk = bc.field_rb[this.world.terrain.getTerrainType(109)];
                 var13Lifetime1 = 128;
                 var14Lifetime1 = var7 + 1;
                 if (!ka.field_V) {
                   var15Lifetime1 = 0;
                   while (var15Lifetime1 < 640) {
                     var16Lifetime1 = var5_int + (var15Lifetime1 << 4);
-                    var17Lifetime1 = var6 + param3.a((byte) -119, var16Lifetime1);
-                    var18Lifetime1 = param3.a(false, var16Lifetime1) + var6;
-                    var19Lifetime1 = var6 + param3.b((byte) 126, var16Lifetime1);
+                    var17Lifetime1 = var6 + param3.getGroundHeightAt((byte) -119, var16Lifetime1);
+                    var18Lifetime1 = param3.getSecondaryHeightAt(false, var16Lifetime1) + var6;
+                    var19Lifetime1 = var6 + param3.getSurfaceProfileAt((byte) 126, var16Lifetime1);
                     stackIn_195_0 = var18Lifetime1;
                     stackIn_195_1 = var17Lifetime1;
                     if (var27 != 0) {
@@ -8940,7 +8940,7 @@ final class nb {
                       break;
                     }
                     if (stackIn_195_0 > stackIn_195_1) {
-                      pb.d(var15Lifetime1, 400 - (var19Lifetime1 >> 4), -(var17Lifetime1 - var19Lifetime1 >> 4) + 400 + 1, 0);
+                      SoftwareRaster.d(var15Lifetime1, 400 - (var19Lifetime1 >> 4), -(var17Lifetime1 - var19Lifetime1 >> 4) + 400 + 1, 0);
                     }
                     var15Lifetime1++;
                   }
@@ -8953,9 +8953,9 @@ final class nb {
                   var15Lifetime1 = 0;
                   while (var15Lifetime1 < 640) {
                     var16Lifetime1 = var5_int + (var15Lifetime1 << 4);
-                    var17Lifetime1 = var6 + param3.a((byte) -96, var16Lifetime1);
-                    var18Lifetime1Lifetime1 = var6 + param3.a(false, var16Lifetime1);
-                    var19Lifetime1Lifetime1 = param3.b((byte) 123, var16Lifetime1) + var6;
+                    var17Lifetime1 = var6 + param3.getGroundHeightAt((byte) -96, var16Lifetime1);
+                    var18Lifetime1Lifetime1 = var6 + param3.getSecondaryHeightAt(false, var16Lifetime1);
+                    var19Lifetime1Lifetime1 = param3.getSurfaceProfileAt((byte) 123, var16Lifetime1) + var6;
                     var20 = var17Lifetime1;
                     var21 = -(var20 >> 4) + 400;
                     var22 = 0;
@@ -8988,11 +8988,11 @@ final class nb {
                     stackIn_190_0Lifetime1 = var18Lifetime1Lifetime1;
                     stackIn_190_1Lifetime1 = var17Lifetime1;
                     if (stackIn_190_0Lifetime1 > stackIn_190_1Lifetime1) {
-                      pb.a(var15Lifetime1, 400 - (var19Lifetime1Lifetime1 >> 4), 1 + var15Lifetime1, 400 - (var17Lifetime1 >> 4));
+                      SoftwareRaster.a(var15Lifetime1, 400 - (var19Lifetime1Lifetime1 >> 4), 1 + var15Lifetime1, 400 - (var17Lifetime1 >> 4));
                       var12_ref_wk.c(-((4095 & var16Lifetime1) >> 1) + var15Lifetime1, var7 - var13Lifetime1, 2048, var13Lifetime1);
                       var12_ref_wk.c(var15Lifetime1 - ((4095 & var16Lifetime1) >> 1), var7 - var13Lifetime1 * 2, 2048, var13Lifetime1);
                       var12_ref_wk.c(-((4095 & var16Lifetime1) >> 1) + var15Lifetime1, var7, 2048, var13Lifetime1);
-                      pb.f(var15Lifetime1, 400 - (var19Lifetime1Lifetime1 >> 4), -(var17Lifetime1 - var19Lifetime1Lifetime1 >> 4) + 400 + 1, 0, 192);
+                      SoftwareRaster.f(var15Lifetime1, 400 - (var19Lifetime1Lifetime1 >> 4), -(var17Lifetime1 - var19Lifetime1Lifetime1 >> 4) + 400 + 1, 0, 192);
                     }
                     var15Lifetime1++;
                   }
@@ -9005,27 +9005,27 @@ final class nb {
                 if (stackIn_195_0 < stackIn_195_1) {
                   var14Lifetime1 = 400;
                 }
-                pb.c();
+                SoftwareRaster.c();
               }
-              stackIn_199_0 = ~this.field_X.field_ab.b(param0 - 70);
+              stackIn_199_0 = ~this.world.terrain.getTerrainType(param0 - 70);
               stackIn_199_1 = -4;
             }
             if (stackIn_199_0 == stackIn_199_1) {
               var10Lifetime1Lifetime1 = -(this.field_P >> 4);
               var11Lifetime1Lifetime1 = -(this.field_E >> 4) + 400;
-              var12Lifetime1Lifetime1 = this.field_X.field_ab.a(param0 ^ 35);
+              var12Lifetime1Lifetime1 = this.world.terrain.getProfileLength(param0 ^ 35);
               var13Lifetime1Lifetime1 = (var12Lifetime1Lifetime1 >> 5) + var10Lifetime1Lifetime1;
               var14Lifetime1Lifetime1 = var11Lifetime1Lifetime1;
               var14Lifetime1Lifetime1 += 384;
               var15Lifetime1Lifetime1 = sb.field_W.field_z;
               var16Lifetime1Lifetime1 = sb.field_W.field_B;
               sb.field_W.a(-(var15Lifetime1Lifetime1 / 2) + var13Lifetime1Lifetime1, -(3 * var16Lifetime1Lifetime1 / 2) + var14Lifetime1Lifetime1);
-              var17Lifetime1Lifetime1 = this.field_X.field_r / 5 % 6;
+              var17Lifetime1Lifetime1 = this.world.simulationTick / 5 % 6;
               b.field_n[var17Lifetime1Lifetime1].d(-(var15Lifetime1Lifetime1 / 2) + var13Lifetime1Lifetime1, -(var15Lifetime1Lifetime1 / 2) + (var14Lifetime1Lifetime1 - 3 * var16Lifetime1Lifetime1 / 4), var15Lifetime1Lifetime1, var15Lifetime1Lifetime1, 64);
             }
           }
-          if (this.field_X.field_fb) {
-            pb.c(0, 0, 640, 480, 0, 180);
+          if (this.world.field_fb) {
+            SoftwareRaster.c(0, 0, 640, 480, 0, 180);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -9061,9 +9061,9 @@ final class nb {
         int stackIn_86_1Lifetime1;
         int stackIn_86_0Lifetime2;
         int stackIn_86_1Lifetime2;
-        var16 = SteelSentinels.field_G;
+        var16 = SteelSentinels.obfuscationControl;
         try {
-          if (!this.field_X.field_j) {
+          if (!this.world.field_j) {
             if (oh.field_f < 0 &&
               pi.field_c < 0) {
               return;
@@ -9087,7 +9087,7 @@ final class nb {
               boolean decompiledFrameRemainder1 = true;
               if (var9 > 0 &&
                 var13 * var13 + var12 * var12 < 2304) {
-                pb.a(var7_int, var8, var10, var11, 12632304, 128);
+                SoftwareRaster.a(var7_int, var8, var10, var11, 12632304, 128);
               } else {
                 if ((0 >= var9) &&
                   (decompiledFrameRemainder1 = !(var9 <= 0))) {
@@ -9175,7 +9175,7 @@ final class nb {
                   }
                   stackIn_86_0Lifetime1 = var7_int;
                   stackIn_86_1Lifetime1 = var8;
-                  pb.a(stackIn_86_0Lifetime1, stackIn_86_1Lifetime1, var14, var15, 12632304, 128);
+                  SoftwareRaster.a(stackIn_86_0Lifetime1, stackIn_86_1Lifetime1, var14, var15, 12632304, 128);
                   return;
                 }
               }
@@ -9235,14 +9235,14 @@ final class nb {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        wk var17_ref_wk = null;
+        RgbSprite var17_ref_wk = null;
         int var17 = 0;
         int var18_int = 0;
         String var18 = null;
         int var19 = 0;
         int var20 = 0;
         int var19Lifetime1;
-        var20 = SteelSentinels.field_G;
+        var20 = SteelSentinels.obfuscationControl;
         try {
           var2_int = 41;
           var3 = 1021128;
@@ -9255,7 +9255,7 @@ final class nb {
             var3 = 1044724;
             this.field_r = 6;
           }
-          ra.a(var3, 2, pl.field_U, 479, 156, (byte) 68, ha.field_S, 28);
+          DualNodeDeque.a(var3, 2, pl.field_U, 479, 156, (byte) 68, ha.field_S, 28);
           var3 = 1021128;
           if (this.field_r == -1 &&
             oh.field_f >= 173 &&
@@ -9265,7 +9265,7 @@ final class nb {
             this.field_r = 12;
             var3 = 1044724;
           }
-          ra.a(var3, 2, pl.field_U, 173, 148, (byte) 68, sl.field_f, 28);
+          DualNodeDeque.a(var3, 2, pl.field_U, 173, 148, (byte) 68, sl.field_f, 28);
           var3 = 1021128;
           var3 = 1021128;
           if (this.field_r == -1 &&
@@ -9280,14 +9280,14 @@ final class nb {
             return;
           }
           boolean decompiledFrameCompleted0 = true;
-          ra.a(var3, 2, pl.field_U, 5, 166, (byte) 68, SteelSentinels.field_I, 28);
+          DualNodeDeque.a(var3, 2, pl.field_U, 5, 166, (byte) 68, SteelSentinels.field_I, 28);
           if (this.field_v > 0) {
             var4 = new int[4];
-            pb.b(var4);
-            pb.h(0, var2_int, 640, 480);
+            SoftwareRaster.b(var4);
+            SoftwareRaster.h(0, var2_int, 640, 480);
             var5 = new int[4];
-            pb.b(var5);
-            var6 = n.field_z;
+            SoftwareRaster.b(var5);
+            var6 = FunOrbClient.field_z;
             var7 = 0;
             var8 = 0;
             boolean decompiledNaturalLoopExit0 = false;
@@ -9306,7 +9306,7 @@ final class nb {
             }
             if (decompiledNaturalLoopExit0) {
               var7 = var7 + (-this.field_s + (32 + this.field_v));
-              pb.a(5, var2_int, 166, var7 - var2_int, 0);
+              SoftwareRaster.a(5, var2_int, 166, var7 - var2_int, 0);
               ei.a(5, var7, 166, 8, -96);
               var8 = 50;
               stackIn_62_0 = 2;
@@ -9330,7 +9330,7 @@ final class nb {
               pi.field_c < var7) {
               this.field_r = 26;
             }
-            stackIn_89_0 = (12 > this.field_X.field_K.b((byte) -128)) ? 0 : 1;
+            stackIn_89_0 = (12 > this.world.sentinels.size((byte) -128)) ? 0 : 1;
             var8 = stackIn_89_0;
             var9 = oe.field_i;
             oe.field_i = -1;
@@ -9368,13 +9368,13 @@ final class nb {
                 var14 = 28;
                 var15 = var11 + 2;
                 var16 = 1 + var12;
-                pb.g(var15, var16, var14, var14, 4, 0);
-                pb.h(var15, 1 + var16, var15 + var14, var14 + var16);
+                SoftwareRaster.g(var15, var16, var14, var14, 4, 0);
+                SoftwareRaster.h(var15, 1 + var16, var15 + var14, var14 + var16);
                 var17_ref_wk = si.field_E[var10];
                 var18_int = var13 % 4 * var14;
                 var19 = var14 * (var13 / 4);
                 var17_ref_wk.c(var15 - var18_int, -var19 + var16, 4 * var14, 4 * var14);
-                pb.a(var5);
+                SoftwareRaster.a(var5);
                 var17 = var12 + (30 + fk.field_d.field_G) / 2 - 3;
                 var18 = cd.field_c[var10];
                 var19Lifetime1 = fk.field_d.c(var18);
@@ -9387,7 +9387,7 @@ final class nb {
               var10++;
             }
             if (decompiledFrameCompleted0) {
-              pb.a(var4);
+              SoftwareRaster.a(var4);
             }
           }
           if (decompiledFrameCompleted0) {
@@ -9430,10 +9430,10 @@ final class nb {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        mb[] var10 = null;
+        Sentinel[] var10 = null;
         int var11 = 0;
         int var12_int = 0;
-        mb var12 = null;
+        Sentinel var12 = null;
         int[] var12_array = null;
         int var13 = 0;
         int var14 = 0;
@@ -9459,22 +9459,22 @@ final class nb {
         int var8Lifetime3;
         int var13Lifetime2;
         int var12_intLifetime1Lifetime1;
-        var21 = SteelSentinels.field_G;
+        var21 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameRemainder4 = true;
           boolean decompiledFrameRemainder3 = true;
-          pb.c(0, 0, 640, 480, 0, 100);
+          SoftwareRaster.c(0, 0, 640, 480, 0, 100);
           var2_int = 25;
           var3 = 0;
           var4 = null;
           var5 = "";
-          var6_int = this.field_X.field_P;
+          var6_int = this.world.field_P;
           if (var6_int != 0) {
             if ((var6_int != 1 && (var6_int != 2 ||
               var21 != 0)) &&
               (decompiledFrameRemainder4 = (var6_int == 3)) &&
               (decompiledFrameRemainder3 = (var21 == 0))) {
-              if (1 == this.field_X.field_kb) {
+              if (1 == this.world.playerCount) {
                 var5 = vd.field_e[2];
                 var4 = a.field_b;
               } else {
@@ -9503,7 +9503,7 @@ final class nb {
           boolean decompiledFrameRemainder7 = true;
           boolean decompiledFrameRemainder6 = true;
           boolean decompiledFrameRemainder0 = true;
-          var6_intLifetime1 = this.field_X.field_ab.b(77);
+          var6_intLifetime1 = this.world.terrain.getTerrainType(77);
           if ((var6_intLifetime1 != 0 ||
             var21 != 0) &&
             (decompiledFrameRemainder0 = (1 != var6_intLifetime1 ||
@@ -9546,56 +9546,56 @@ final class nb {
           if (di.field_g == 4) {
             var5 = null;
           }
-          ic.field_db.f(0, -115 + kj.field_w);
-          if (this.field_X.field_W ||
-            !(0 > this.field_X.field_A)) {
-            pb.b(639, -58 + kj.field_w, 16776960);
+          ic.field_db.f(0, -115 + CipherPacketBuffer.field_w);
+          if (this.world.field_W ||
+            !(0 > this.world.field_A)) {
+            SoftwareRaster.b(639, -58 + CipherPacketBuffer.field_w, 16776960);
           }
           var4 = ke.a(42, (String) (var4));
           var6 = ql.field_Tb;
           if (param0 != -4294) {
-            nb.b((byte) 5);
+            GameplayController.b((byte) 5);
           }
           if (var4 != null) {
-            ((mi) ((Object) var6)).a((String) (var4), 320, kj.field_w - 83 + ((mi) ((Object) var6)).field_G / 2, 0, -1);
+            ((BitmapFont) ((Object) var6)).a((String) (var4), 320, CipherPacketBuffer.field_w - 83 + ((BitmapFont) ((Object) var6)).field_G / 2, 0, -1);
           }
           if (0 >= var3) {
-            stackIn_74_0 = this.field_X.field_Q + this.field_X.field_kb;
+            stackIn_74_0 = this.world.computerPlayerCount + this.world.playerCount;
           } else {
             stackIn_74_0 = var3;
           }
           boolean decompiledFrameCompleted6 = true;
           var9 = stackIn_74_0;
-          var10 = new mb[var9];
+          var10 = new Sentinel[var9];
           var11 = 0;
           if (var3 != 0) {
             var12_int = 0;
             while (true) {
               if (var10.length > var12_int) {
-                var10[var12_int] = this.field_C;
+                var10[var12_int] = this.controlledSentinel;
                 var12_int++;
                 if (var21 == 0) {
                   continue;
                 }
               } else {
-                var11 = Math.max(this.field_C.field_Db, this.field_C.field_Ub);
+                var11 = Math.max(this.controlledSentinel.field_Db, this.controlledSentinel.field_Ub);
               }
               break;
             }
           }
           if (var3 == 0 ||
             var21 != 0) {
-            var12 = (mb) (this.field_X.field_K.e(param0 + 17352));
+            var12 = (Sentinel) (this.world.sentinels.first(param0 + 17352));
             while (var12 != null) {
               stackIn_103_0 = 0;
-              stackIn_103_1 = var12.field_Bb;
+              stackIn_103_1 = var12.playerId;
               if (var21 != 0) {
                 decompiledFrameCompleted6 = false;
                 break;
               }
               if (stackIn_103_0 <= stackIn_103_1 &&
-                var12.field_Bb < var9) {
-                var10[var12.field_Bb] = var12;
+                var12.playerId < var9) {
+                var10[var12.playerId] = var12;
               }
               if (var12.field_Db > var11) {
                 var11 = var12.field_Db;
@@ -9603,11 +9603,11 @@ final class nb {
               if (var12.field_Ub > var11) {
                 var11 = var12.field_Ub;
               }
-              var12 = (mb) (this.field_X.field_K.a((byte) -71));
+              var12 = (Sentinel) (this.world.sentinels.next((byte) -71));
             }
           }
           if (decompiledFrameCompleted6) {
-            stackIn_103_0 = ~this.field_X.field_P;
+            stackIn_103_0 = ~this.world.field_P;
             stackIn_103_1 = -4;
           }
           boolean decompiledFrameCompleted2 = true;
@@ -9631,7 +9631,7 @@ final class nb {
             }
           }
           if ((decompiledFrameCompleted5) &&
-            (0 == this.field_X.field_P)) {
+            (0 == this.world.field_P)) {
             if (var9 >= 4) {
               var8 = 73;
               if (var9 > 10) {
@@ -9642,7 +9642,7 @@ final class nb {
               var13 = 0;
               while (true) {
                 if (var12_intLifetime1Lifetime1 > var13) {
-                  this.a(var11, 100, 5, var10[var13], var10[var13].d((byte) -110), var7, var8, 130);
+                  this.a(var11, 100, 5, var10[var13], var10[var13].getTeamColour((byte) -110), var7, var8, 130);
                   var7 = var7 + (100 + var2_int);
                   var13++;
                   if (var21 == 0) {
@@ -9656,7 +9656,7 @@ final class nb {
               }
               var7 = (var2_int - var12_intLifetime1Lifetime1 * (100 + var2_int) + 640) / 2;
               while (var9 > var13) {
-                this.a(var11, 100, param0 + 4299, var10[var13], var10[var13].d((byte) -107), var7, var8, 130);
+                this.a(var11, 100, param0 + 4299, var10[var13], var10[var13].getTeamColour((byte) -107), var7, var8, 130);
                 var7 = var7 + (100 + var2_int);
                 var13++;
                 if (var21 != 0) {
@@ -9672,7 +9672,7 @@ final class nb {
               var8 = 149;
               var12_intLifetime1Lifetime1 = 0;
               while (var12_intLifetime1Lifetime1 < var9) {
-                this.a(var11, 100, 5, var10[var12_intLifetime1Lifetime1], var10[var12_intLifetime1Lifetime1].d((byte) 31), var7, var8, 130);
+                this.a(var11, 100, 5, var10[var12_intLifetime1Lifetime1], var10[var12_intLifetime1Lifetime1].getTeamColour((byte) 31), var7, var8, 130);
                 var7 = var7 + (var2_int + 100);
                 var12_intLifetime1Lifetime1++;
                 if (var21 != 0) {
@@ -9683,7 +9683,7 @@ final class nb {
             }
           }
           if (decompiledFrameCompleted3) {
-            decompiledFrameRemainder5 = (this.field_X.field_P == 1);
+            decompiledFrameRemainder5 = (this.world.field_P == 1);
           }
           if (decompiledFrameRemainder5) {
             var12_array = new int[2];
@@ -9699,10 +9699,10 @@ final class nb {
               stackIn_152_1 = var3;
               if (var21 == 0) {
                 if (stackIn_152_0 < stackIn_152_1) {
-                  var10[var13Lifetime2] = this.field_X.f(var13Lifetime2 * 2 / var3, bi.a(param0, 4283));
+                  var10[var13Lifetime2] = this.world.findSentinelForPlayer(var13Lifetime2 * 2 / var3, bi.a(param0, 4283));
                 }
                 if (null != var10[var13Lifetime2]) {
-                  dupTemp$0 = var10[var13Lifetime2].field_jc;
+                  dupTemp$0 = var10[var13Lifetime2].teamId;
                   var12_array[dupTemp$0] = var12_array[dupTemp$0] + 1;
                 }
                 var13Lifetime2++;
@@ -9718,14 +9718,14 @@ final class nb {
             var7Lifetime2 = var14;
             var15 = 0;
             while (var15 < var9) {
-              stackIn_169_0 = ~var10[0].field_jc;
-              stackIn_169_1 = ~var10[var15].field_jc;
+              stackIn_169_0 = ~var10[0].teamId;
+              stackIn_169_1 = ~var10[var15].teamId;
               if (var21 != 0) {
                 decompiledFrameCompleted2 = false;
                 break;
               }
               if (stackIn_169_0 == stackIn_169_1) {
-                this.a(var11, 100, 5, var10[var15], var10[var15].d((byte) 121), var7Lifetime2, var8Lifetime2, 130);
+                this.a(var11, 100, 5, var10[var15], var10[var15].getTeamColour((byte) 121), var7Lifetime2, var8Lifetime2, 130);
                 var7Lifetime2 = var7Lifetime2 + (var2_int + 100);
                 var15++;
                 continue;
@@ -9737,8 +9737,8 @@ final class nb {
               var7Lifetime3 = var14;
               var16 = var15;
               while (var9 > var15) {
-                stackIn_169_0 = ~var10[var16].field_jc;
-                stackIn_169_1 = ~var10[var15].field_jc;
+                stackIn_169_0 = ~var10[var16].teamId;
+                stackIn_169_1 = ~var10[var15].teamId;
                 if (var21 != 0) {
                   decompiledFrameCompleted1 = false;
                   break;
@@ -9746,7 +9746,7 @@ final class nb {
                 if (stackIn_169_0 != stackIn_169_1) {
                   break;
                 }
-                this.a(var11, 100, 5, var10[var15], var10[var15].d((byte) -115), var7Lifetime3, var8Lifetime3, 130);
+                this.a(var11, 100, 5, var10[var15], var10[var15].getTeamColour((byte) -115), var7Lifetime3, var8Lifetime3, 130);
                 var7Lifetime3 = var7Lifetime3 + (100 + var2_int);
                 var15++;
               }
@@ -9754,7 +9754,7 @@ final class nb {
           }
           if ((decompiledFrameCompleted2) &&
             (decompiledFrameCompleted1)) {
-            stackIn_169_0 = this.field_X.field_P;
+            stackIn_169_0 = this.world.field_P;
             stackIn_169_1 = 2;
           }
           boolean decompiledFrameCompleted0 = true;
@@ -9768,7 +9768,7 @@ final class nb {
               }
               if (var21 == 0) {
                 if (var10[var13Lifetime1] != null) {
-                  dupTemp$1 = var10[var13Lifetime1].field_jc;
+                  dupTemp$1 = var10[var13Lifetime1].teamId;
                   var12_arrayLifetime1[dupTemp$1] = var12_arrayLifetime1[dupTemp$1] + 1;
                 }
                 var13Lifetime1++;
@@ -9799,7 +9799,7 @@ final class nb {
               var20 = 0;
               while (var9 > var20) {
                 if (null != var10[var20] &&
-                  var10[var20].field_jc == var18) {
+                  var10[var20].teamId == var18) {
                   this.a(var11, 100, param0 + 4299, var10[var20], fj.field_h[var18], var7Lifetime1, var8Lifetime1, 130);
                   var19++;
                   if (~var19 != ~var15Lifetime1) {
@@ -9819,16 +9819,16 @@ final class nb {
             }
           }
           if (decompiledFrameCompleted0) {
-            pb.a(0, 480 - kj.field_w, 640, 105, 0);
+            SoftwareRaster.a(0, 480 - CipherPacketBuffer.field_w, 640, 105, 0);
             stackIn_219_0 = 0;
-            stackIn_219_1 = -kj.field_w + 479;
+            stackIn_219_1 = -CipherPacketBuffer.field_w + 479;
           }
-          pb.c(stackIn_219_0, stackIn_219_1, 640, 0, 128);
+          SoftwareRaster.c(stackIn_219_0, stackIn_219_1, 640, 0, 128);
           if (var5 != null) {
-            pl.field_U.a((String) (var5), 100, -kj.field_w + 500, 440, 100, 1021128, -1, 1, 0, pl.field_U.field_U + 6);
+            pl.field_U.a((String) (var5), 100, -CipherPacketBuffer.field_w + 500, 440, 100, 1021128, -1, 1, 0, pl.field_U.field_U + 6);
           }
           if (this.field_h &&
-            nm.a(-kj.field_w + 541, 280, param0 + 4418, ja.field_c, 30, 80)) {
+            nm.a(-CipherPacketBuffer.field_w + 541, 280, param0 + 4418, ja.field_c, 30, 80)) {
             this.field_r = 27;
           }
           return;
@@ -9848,10 +9848,10 @@ final class nb {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        mb var7 = null;
+        Sentinel var7 = null;
         int[] var8 = null;
         int var9 = 0;
-        var9 = SteelSentinels.field_G;
+        var9 = SteelSentinels.obfuscationControl;
         try {
           if (0 <= this.field_r &&
             this.field_r != 26) {
@@ -9870,7 +9870,7 @@ final class nb {
                 var3 = -8 + this.field_r;
               }
             }
-            ee.c(-2483, 95);
+            CombatWorld.c(-2483, 95);
             var4 = -29 / ((24 - param0) / 51);
             vd.field_b = true;
             var5 = -var3 + this.field_r;
@@ -9884,14 +9884,14 @@ final class nb {
                   return;
                 }
               case 6:
-                hl.field_v = ji.a(uc.field_b, (byte) 0, di.field_c);
+                hl.field_v = SentinelDesigner.a(uc.field_b, (byte) 0, di.field_c);
                 lc.field_e = true;
-                ea.field_k = false;
+                Sprite.field_k = false;
                 var5 = vb.field_g;
                 if (var5 == 5 ||
                   var5 == 6 ||
                   var5 == 8) {
-                  var5 = gh.field_Jb;
+                  var5 = SceneWidget.field_Jb;
                 }
                 q.a(14, false, -1, var5);
                 if (var9 == 0) {
@@ -9899,7 +9899,7 @@ final class nb {
                 }
               case 7:
                 lc.field_e = true;
-                ea.field_k = false;
+                Sprite.field_k = false;
                 if (fm.field_f[0] < 10) {
                   ol.field_Ub = fm.field_f[0];
                   ge.field_j = 0;
@@ -9907,7 +9907,7 @@ final class nb {
                   if (var5 == 5 ||
                     var5 == 6 ||
                     8 == var5) {
-                    var5 = gh.field_Jb;
+                    var5 = SceneWidget.field_Jb;
                   }
                   q.a(20, false, -1, var5);
                   if (var9 == 0) {
@@ -9918,30 +9918,30 @@ final class nb {
                 if (5 == var5 ||
                   var5 == 6 ||
                   var5 == 8) {
-                  var5 = gh.field_Jb;
+                  var5 = SceneWidget.field_Jb;
                 }
                 q.a(19, false, -1, var5);
                 if (var9 == 0) {
                   return;
                 }
               case 14:
-                if (this.field_X.field_K.b((byte) -128) >= 12) {
+                if (this.world.sentinels.size((byte) -128) >= 12) {
                   return;
                 }
-                var5 = (int)((double)(this.field_X.field_ab.a(-115) << 4) * Math.random());
+                var5 = (int)((double)(this.world.terrain.getProfileLength(-115) << 4) * Math.random());
                 var6 = -100000;
-                var7 = new mb(var5, var6, this.field_X);
+                var7 = new Sentinel(var5, var6, this.world);
                 var8 = var2[var3];
                 if (var8 == ua.field_v &&
                   t.a(rn.field_D, 49, -20370)) {
                   var8 = pg.field_z;
                 }
-                var7.a(var8, true, false, -1, 1);
+                var7.configureDesign(var8, true, false, -1, 1);
                 var7.field_Nb = 7;
                 var7.d(-28033);
-                var7.field_ab = 1000;
+                var7.velocityY = 1000;
                 var7.field_Qb = 256;
-                this.field_X.field_K.a(3, var7);
+                this.world.sentinels.addLast(3, var7);
                 if (var9 == 0) {
                   return;
                 }
@@ -9999,11 +9999,11 @@ final class nb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          pm.field_db.g(6);
+          pm.field_db.clear(6);
           ri.field_b = null;
           hf.field_c = 0;
-          this.field_X.field_O.g(6);
-          this.field_X.field_o.g(6);
+          this.world.field_O.clear(6);
+          this.world.field_o.clear(6);
           db.c(10000);
           jh.field_h = null;
           if (param0 >= -60) {
@@ -10036,7 +10036,7 @@ final class nb {
         int var10 = 0;
         int var11 = 0;
         int var6Lifetime1;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         try {
           if (!param0) {
             this.j((byte) -91);
@@ -10084,7 +10084,7 @@ final class nb {
             if (630 < var6Lifetime1 + var10) {
               var6Lifetime1 = 630 - var10;
             }
-            pb.c(var6Lifetime1 - 3, -ff.field_lb.field_U + (param1 - 3), var10, ff.field_lb.field_U + (ff.field_lb.field_F + 3), 0, 128);
+            SoftwareRaster.c(var6Lifetime1 - 3, -ff.field_lb.field_U + (param1 - 3), var10, ff.field_lb.field_U + (ff.field_lb.field_F + 3), 0, 128);
             ff.field_lb.b(var9, var6Lifetime1, param1, 16777215, -1);
           }
           stackIn_39_0 = var7;
@@ -10102,7 +10102,7 @@ final class nb {
         String stackIn_89_1 = null;
         fh stackIn_92_0 = null;
         String stackIn_93_1 = null;
-        mb stackIn_96_0 = null;
+        Sentinel stackIn_96_0 = null;
         int stackIn_96_1 = 0;
         int stackIn_96_2 = 0;
         int stackIn_97_3;
@@ -10130,40 +10130,40 @@ final class nb {
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
-        var18 = SteelSentinels.field_G;
+        var18 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameRemainder0 = true;
           var4_int = 0;
           var5 = -1;
           if (pi.field_c >= (-2 + param0) &&
             pi.field_c < (12 + param0) &&
-            this.field_C.field_ub >= 0 &&
+            this.controlledSentinel.field_ub >= 0 &&
             oh.field_f >= (-40 + param1)) {
             if ((param1 - 13) <= oh.field_f) {
               if ((param1 + 12) > oh.field_f) {
                 this.field_r = 35;
-                pb.a(-1 + param1 << 4, param0 + 6 << 4, 160, -1 + pe.field_o.length, pe.field_o);
+                SoftwareRaster.a(-1 + param1 << 4, param0 + 6 << 4, 160, -1 + pe.field_o.length, pe.field_o);
                 decompiledFrameRemainder0 = (var18 != 0);
               }
               if ((decompiledFrameRemainder0) &&
                 (!(oh.field_f >= (param1 + 40)))) {
                 this.field_r = 34;
-                pb.a(16 + param1 << 4, 6 + param0 << 4, 144, pe.field_o.length - 1, pe.field_o);
+                SoftwareRaster.a(16 + param1 << 4, 6 + param0 << 4, 144, pe.field_o.length - 1, pe.field_o);
                 if (var18 != 0) {
                   this.field_r = 33;
-                  pb.a(param1 - 17 << 4, param0 + 6 << 4, 144, pe.field_o.length - 1, pe.field_o);
+                  SoftwareRaster.a(param1 - 17 << 4, param0 + 6 << 4, 144, pe.field_o.length - 1, pe.field_o);
                 }
               }
             } else {
               this.field_r = 33;
-              pb.a(param1 - 17 << 4, param0 + 6 << 4, 144, pe.field_o.length - 1, pe.field_o);
+              SoftwareRaster.a(param1 - 17 << 4, param0 + 6 << 4, 144, pe.field_o.length - 1, pe.field_o);
             }
           }
-          if (~this.field_C.field_ub > param2) {
+          if (~this.controlledSentinel.field_ub > param2) {
             var5Lifetime1 = -1;
             var4_intLifetime1 = 8388608;
             if (var18 != 0) {
-              if (this.field_C.field_U != -1) {
+              if (this.controlledSentinel.field_U != -1) {
                 var5Lifetime1 = 16777215;
                 var4_intLifetime1 = 0;
                 var4_intLifetime1 = 16777215;
@@ -10174,7 +10174,7 @@ final class nb {
               }
             }
           } else {
-            if (this.field_C.field_U != -1) {
+            if (this.controlledSentinel.field_U != -1) {
               var5Lifetime1 = 16777215;
               var4_intLifetime1 = 0;
               if (var18 != 0) {
@@ -10187,8 +10187,8 @@ final class nb {
             }
           }
           s.a(var4_intLifetime1, true, true, param0 + 6, param1 - 19, var5Lifetime1);
-          if (0 <= this.field_C.field_ub) {
-            if (this.field_C.field_U == 0) {
+          if (0 <= this.controlledSentinel.field_ub) {
+            if (this.controlledSentinel.field_U == 0) {
               var5Lifetime2 = -1;
               var4_intLifetime2 = 16777215;
               if (var18 != 0) {
@@ -10209,7 +10209,7 @@ final class nb {
             var4_intLifetime2 = 8388608;
             var5Lifetime2 = -1;
           }
-          L9: {
+          regionExit1: {
             boolean decompiledFrameCompleted0 = true;
             if (!sn.field_o.equals("X") ||
               dm.field_c) {
@@ -10220,7 +10220,7 @@ final class nb {
               }
               var6_ref_String = stackIn_52_0;
               if (var4_intLifetime2 != -1) {
-                pb.a(param1 - 8, param0 + 1, 15, 11, var4_intLifetime2);
+                SoftwareRaster.a(param1 - 8, param0 + 1, 15, 11, var4_intLifetime2);
                 fk.field_d.a(var6_ref_String, param1, 10 + param0, 0, -1);
               }
               if (var4_intLifetime2 == -1 ||
@@ -10228,10 +10228,10 @@ final class nb {
                 fk.field_d.a(var6_ref_String, param1, param0 + 10, 1021128, -1);
               }
               if (-1 != var5Lifetime2) {
-                pb.h(param1 - 8, param0 + 1, 15, 11, var5Lifetime2);
+                SoftwareRaster.h(param1 - 8, param0 + 1, 15, 11, var5Lifetime2);
               }
               if (var18 == 0) {
-                break L9;
+                break regionExit1;
               }
             }
             var6 = param1 - 8;
@@ -10248,8 +10248,8 @@ final class nb {
             if (var4_intLifetime2 != -1) {
               var17 = 0;
               while (var17 <= var16) {
-                pb.d(var6 + var17, var7, var17 + (var6 + 10), var9, var4_intLifetime2);
-                pb.d(var6 + var17, var9, 10 + var6 + var17, var7, var4_intLifetime2);
+                SoftwareRaster.d(var6 + var17, var7, var17 + (var6 + 10), var9, var4_intLifetime2);
+                SoftwareRaster.d(var6 + var17, var9, 10 + var6 + var17, var7, var4_intLifetime2);
                 var17++;
                 if (var18 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -10259,25 +10259,25 @@ final class nb {
             }
             if ((decompiledFrameCompleted0) &&
               (var5Lifetime2 != -1)) {
-              pb.d(var6, var7, var14, var8, var5Lifetime2);
-              pb.d(var14, var8, var6, var9, var5Lifetime2);
-              pb.g(var6, var9, var16, var5Lifetime2);
-              pb.d(var16 + var6, var9, var12, var11, var5Lifetime2);
-              pb.d(var12, var11, -var16 + var13, var9, var5Lifetime2);
-              pb.g(var13 - var16, var9, var16, var5Lifetime2);
-              pb.d(var13, var9, var15, var8, var5Lifetime2);
-              pb.d(var15, var8, var13, var7, var5Lifetime2);
-              pb.g(var13 - var16, var7, var16, var5Lifetime2);
-              pb.d(-var16 + var13, var7, var12, var10, var5Lifetime2);
-              pb.d(var12, var10, var6 + var16, var7, var5Lifetime2);
-              pb.g(var6, var7, var16, var5Lifetime2);
+              SoftwareRaster.d(var6, var7, var14, var8, var5Lifetime2);
+              SoftwareRaster.d(var14, var8, var6, var9, var5Lifetime2);
+              SoftwareRaster.g(var6, var9, var16, var5Lifetime2);
+              SoftwareRaster.d(var16 + var6, var9, var12, var11, var5Lifetime2);
+              SoftwareRaster.d(var12, var11, -var16 + var13, var9, var5Lifetime2);
+              SoftwareRaster.g(var13 - var16, var9, var16, var5Lifetime2);
+              SoftwareRaster.d(var13, var9, var15, var8, var5Lifetime2);
+              SoftwareRaster.d(var15, var8, var13, var7, var5Lifetime2);
+              SoftwareRaster.g(var13 - var16, var7, var16, var5Lifetime2);
+              SoftwareRaster.d(-var16 + var13, var7, var12, var10, var5Lifetime2);
+              SoftwareRaster.d(var12, var10, var6 + var16, var7, var5Lifetime2);
+              SoftwareRaster.g(var6, var7, var16, var5Lifetime2);
             }
           }
-          if (this.field_C.field_ub < 0) {
+          if (this.controlledSentinel.field_ub < 0) {
             var5Lifetime3 = -1;
             var4_intLifetime3 = 8388608;
             if (var18 != 0) {
-              if (this.field_C.field_U != 1) {
+              if (this.controlledSentinel.field_U != 1) {
                 var5Lifetime3 = 16777215;
                 var4_intLifetime3 = 0;
                 var4_intLifetime3 = 16777215;
@@ -10288,7 +10288,7 @@ final class nb {
               }
             }
           } else {
-            if (this.field_C.field_U != 1) {
+            if (this.controlledSentinel.field_U != 1) {
               var5Lifetime3 = 16777215;
               var4_intLifetime3 = 0;
               if (var18 != 0) {
@@ -10315,17 +10315,17 @@ final class nb {
             stackIn_93_1 = cl.field_g;
           }
           ((fh) (Object) stackIn_92_0).c(stackIn_93_1, param1 - 29, 10 + param0, 1021128, -1);
-          pb.a(0, 423, 640, 480);
-          stackIn_96_0 = this.field_C;
+          SoftwareRaster.a(0, 423, 640, 480);
+          stackIn_96_0 = this.controlledSentinel;
           stackIn_96_1 = param1;
           stackIn_96_2 = 256;
-          if (!this.field_C.field_Lb) {
+          if (!this.controlledSentinel.field_Lb) {
             stackIn_97_3 = 0;
           } else {
             stackIn_97_3 = 7;
           }
-          ((mb) (Object) stackIn_96_0).b(stackIn_96_1, stackIn_96_2, -stackIn_97_3 + param0, -118);
-          pb.c();
+          ((Sentinel) (Object) stackIn_96_0).b(stackIn_96_1, stackIn_96_2, -stackIn_97_3 + param0, -118);
+          SoftwareRaster.c();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -10339,17 +10339,17 @@ final class nb {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        jc var3_ref_jc = null;
+        NodeIterator var3_ref_jc = null;
         ne var3_ref_ne = null;
         int var4 = 0;
-        mb var4_ref_mb = null;
-        mb var5 = null;
+        Sentinel var4_ref_mb = null;
+        Sentinel var5 = null;
         int var6 = 0;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           if (di.field_g == 7 &&
             dl.field_M == 1 &&
-            this.field_X.f(param0 ^ 1613)) {
+            this.world.f(param0 ^ 1613)) {
             dl.field_M = dl.field_M + 1;
           }
           tj.field_c = 0;
@@ -10367,7 +10367,7 @@ final class nb {
             this.a((byte) -52, true);
           }
           if (var2_int <= dl.field_M) {
-            this.field_X.field_j = true;
+            this.world.field_j = true;
             if (nc.field_a < 0) {
               nc.field_a = 1;
             }
@@ -10378,106 +10378,106 @@ final class nb {
             boolean decompiledFrameRemainder4 = true;
             boolean decompiledFrameRemainder3 = true;
             qh.field_Yb = dl.field_M;
-            qd.field_g = 500;
+            PartInstruction.field_g = 500;
             var3 = di.field_g;
             if (0 == var3) {
-              L10: {
-                L11: {
-                  L12: {
-                    L13: {
+              regionExit1: {
+                regionExit2: {
+                  regionExit3: {
+                    regionExit4: {
                       var3 = qh.field_Yb;
                       if (var3 != 4) {
                         switch (var3) {
                           case 7:
-                            break L13;
+                            break regionExit4;
                           case 9:
-                            break L12;
+                            break regionExit3;
                           case 10:
-                            break L11;
+                            break regionExit2;
                           default:
                             return;
                           case 11:
                             if (var6 == 0) {
-                              break L10;
+                              break regionExit1;
                             }
                             break;
                         }
                       }
                       var3 = 52000;
                       var4 = -23000;
-                      var5 = new mb(var3, var4, this.field_X);
-                      var5.a(va.field_f, true, false, -1, 1);
+                      var5 = new Sentinel(var3, var4, this.world);
+                      var5.configureDesign(va.field_f, true, false, -1, 1);
                       var5.field_Nb = 6;
                       var5.field_pc = false;
-                      this.field_X.field_K.a(param0 + 1592, var5);
+                      this.world.sentinels.addLast(param0 + 1592, var5);
                       if (var6 == 0) {
                         return;
                       }
                     }
                     var3 = 126000;
                     var4 = -25000;
-                    var5 = new mb(var3, var4, this.field_X);
-                    var5.a(va.field_f, true, false, -1, 1);
+                    var5 = new Sentinel(var3, var4, this.world);
+                    var5.configureDesign(va.field_f, true, false, -1, 1);
                     var5.field_pc = false;
                     var5.field_Nb = 6;
                     var3 = 166000;
                     var4 = -30000;
-                    this.field_X.field_K.a(param0 + 1592, var5);
-                    var5 = new mb(var3, var4, this.field_X);
-                    var5.a(va.field_f, true, false, -1, 1);
+                    this.world.sentinels.addLast(param0 + 1592, var5);
+                    var5 = new Sentinel(var3, var4, this.world);
+                    var5.configureDesign(va.field_f, true, false, -1, 1);
                     var5.field_pc = false;
                     var5.field_Nb = 6;
                     var4 = -40000;
                     var3 = 221000;
-                    this.field_X.field_K.a(3, var5);
-                    var5 = new mb(var3, var4, this.field_X);
-                    var5.a(va.field_f, true, false, -1, 1);
+                    this.world.sentinels.addLast(3, var5);
+                    var5 = new Sentinel(var3, var4, this.world);
+                    var5.configureDesign(va.field_f, true, false, -1, 1);
                     var5.field_pc = false;
                     var5.field_Nb = 6;
-                    this.field_X.field_K.a(3, var5);
+                    this.world.sentinels.addLast(3, var5);
                     if (var6 == 0) {
                       return;
                     }
                   }
                   var3 = 180000;
                   var4 = -30000;
-                  var5 = new mb(var3, var4, this.field_X);
-                  var5.a(va.field_f, true, false, -1, 1);
+                  var5 = new Sentinel(var3, var4, this.world);
+                  var5.configureDesign(va.field_f, true, false, -1, 1);
                   var5.field_Nb = 1;
                   var5.field_pc = false;
-                  this.field_X.field_K.a(3, var5);
+                  this.world.sentinels.addLast(3, var5);
                   if (var6 == 0) {
                     return;
                   }
                 }
                 var3 = 25000;
                 var4 = -100000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.field_ab = -100;
-                var5.a(va.field_f, true, false, -1, 1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.velocityY = -100;
+                var5.configureDesign(va.field_f, true, false, -1, 1);
                 var5.field_Nb = 9;
                 var5.field_pc = false;
-                this.field_X.field_K.a(3, var5);
+                this.world.sentinels.addLast(3, var5);
                 var3 = 96000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.a(va.field_f, true, false, -1, 1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.configureDesign(va.field_f, true, false, -1, 1);
                 var5.field_Nb = 9;
                 var5.field_pc = false;
-                this.field_X.field_K.a(3, var5);
+                this.world.sentinels.addLast(3, var5);
                 var3 = 166000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.a(va.field_f, true, false, -1, 1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.configureDesign(va.field_f, true, false, -1, 1);
                 var5.field_Nb = 9;
                 var5.field_pc = false;
-                this.field_X.field_K.a(3, var5);
+                this.world.sentinels.addLast(3, var5);
                 var3 = 228000;
                 var4 = -4000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.a(va.field_f, true, false, -1, 1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.configureDesign(va.field_f, true, false, -1, 1);
                 var5.field_Nb = 9;
                 var5.field_pc = false;
                 var5.field_u = true;
-                this.field_X.field_K.a(param0 ^ -1592, var5);
+                this.world.sentinels.addLast(param0 ^ -1592, var5);
                 if (var6 == 0) {
                   return;
                 }
@@ -10505,33 +10505,33 @@ final class nb {
               (decompiledFrameRemainder4) &&
               (decompiledFrameRemainder3)) {
               boolean decompiledFrameRemainder2 = true;
-              L17: {
+              regionExit5: {
                 var3 = qh.field_Yb;
                 if ((var3 != 2 ||
                   var6 != 0) &&
                   (decompiledFrameRemainder2 = (var3 != 3))) {
-                  L19: {
-                    L20: {
-                      L21: {
-                        L22: {
+                  regionExit6: {
+                    regionExit7: {
+                      regionExit8: {
+                        regionExit9: {
                           boolean decompiledFrameRemainder1 = true;
                           if (var3 == 4 &&
                             var6 == 0) {
                             var3 = 102000;
                             var4 = -100000;
-                            var5 = new mb(var3, var4, this.field_X);
-                            var5.a(va.field_f, true, false, -1, 1);
+                            var5 = new Sentinel(var3, var4, this.world);
+                            var5.configureDesign(va.field_f, true, false, -1, 1);
                             var5.field_Nb = 1;
                             var5.field_o = 7;
                             var5.field_pc = false;
                             var3 = 67000;
-                            this.field_X.field_K.a(3, var5);
-                            var5 = new mb(var3, var4, this.field_X);
-                            var5.a(va.field_f, true, false, -1, 1);
+                            this.world.sentinels.addLast(3, var5);
+                            var5 = new Sentinel(var3, var4, this.world);
+                            var5.configureDesign(va.field_f, true, false, -1, 1);
                             var5.field_o = 7;
                             var5.field_pc = false;
                             var5.field_Nb = 1;
-                            this.field_X.field_K.a(3, var5);
+                            this.world.sentinels.addLast(3, var5);
                             return;
                           } else if (var3 != 5 ||
                             var6 != 0) {
@@ -10540,20 +10540,20 @@ final class nb {
                             if (decompiledFrameRemainder1) {
                               switch (var3) {
                                 case 9:
-                                  break L22;
+                                  break regionExit9;
                                 case 10:
-                                  break L21;
+                                  break regionExit8;
                                 case 11:
-                                  break L20;
+                                  break regionExit7;
                                 case 12:
-                                  break L19;
+                                  break regionExit6;
                                 case 13:
                                   return;
                                 default:
                                   return;
                                 case 14:
                                   if (var6 != 0) {
-                                    break L17;
+                                    break regionExit5;
                                   }
                                   mj.a(0, 0, 1200, 1, 0, 0, 0, (byte) -65);
                                   return;
@@ -10563,61 +10563,61 @@ final class nb {
                           if (decompiledFrameRemainder1) {
                             var4 = -100000;
                             var3 = 17000;
-                            var5 = new mb(var3, var4, this.field_X);
-                            var5.a(va.field_f, true, false, -1, 1);
+                            var5 = new Sentinel(var3, var4, this.world);
+                            var5.configureDesign(va.field_f, true, false, -1, 1);
                             var5.field_Nb = 1;
                             var5.field_o = 7;
                             var5.field_pc = false;
-                            this.field_X.field_K.a(param0 ^ -1592, var5);
+                            this.world.sentinels.addLast(param0 ^ -1592, var5);
                             return;
                           }
-                          if (!this.field_X.f(param0 ^ 1617)) {
+                          if (!this.world.f(param0 ^ 1617)) {
                             return;
                           }
                           var4 = -100000;
                           var3 = 17000;
-                          var5 = new mb(var3, var4, this.field_X);
-                          var5.a(va.field_f, true, false, -1, 1);
+                          var5 = new Sentinel(var3, var4, this.world);
+                          var5.configureDesign(va.field_f, true, false, -1, 1);
                           var5.field_Nb = 1;
                           var5.field_pc = false;
                           var5.field_o = 7;
-                          this.field_X.field_K.a(3, var5);
+                          this.world.sentinels.addLast(3, var5);
                           if (var6 == 0) {
                             return;
                           }
                         }
                         var4 = -100000;
                         var3 = 25000;
-                        var5 = new mb(var3, var4, this.field_X);
-                        var5.field_ab = -100;
-                        var5.a(va.field_f, true, false, -1, 1);
+                        var5 = new Sentinel(var3, var4, this.world);
+                        var5.velocityY = -100;
+                        var5.configureDesign(va.field_f, true, false, -1, 1);
                         var5.field_Nb = 9;
                         var5.field_pc = false;
                         var5.field_o = 7;
                         var3 = 96000;
-                        this.field_X.field_K.a(param0 + 1592, var5);
-                        var5 = new mb(var3, var4, this.field_X);
-                        var5.a(va.field_f, true, false, -1, 1);
+                        this.world.sentinels.addLast(param0 + 1592, var5);
+                        var5 = new Sentinel(var3, var4, this.world);
+                        var5.configureDesign(va.field_f, true, false, -1, 1);
                         var5.field_o = 7;
                         var5.field_Nb = 9;
                         var5.field_pc = false;
-                        this.field_X.field_K.a(3, var5);
+                        this.world.sentinels.addLast(3, var5);
                         var3 = 166000;
-                        var5 = new mb(var3, var4, this.field_X);
-                        var5.a(va.field_f, true, false, -1, 1);
+                        var5 = new Sentinel(var3, var4, this.world);
+                        var5.configureDesign(va.field_f, true, false, -1, 1);
                         var5.field_o = 7;
                         var5.field_Nb = 9;
                         var5.field_pc = false;
-                        this.field_X.field_K.a(3, var5);
+                        this.world.sentinels.addLast(3, var5);
                         var4 = -4000;
                         var3 = 228000;
-                        var5 = new mb(var3, var4, this.field_X);
-                        var5.a(va.field_f, true, false, -1, 1);
+                        var5 = new Sentinel(var3, var4, this.world);
+                        var5.configureDesign(va.field_f, true, false, -1, 1);
                         var5.field_o = 7;
                         var5.field_Nb = 9;
                         var5.field_pc = false;
                         var5.field_u = true;
-                        this.field_X.field_K.a(3, var5);
+                        this.world.sentinels.addLast(3, var5);
                         if (var6 == 0) {
                           return;
                         }
@@ -10628,29 +10628,29 @@ final class nb {
                       }
                     }
                     this.j((byte) -123);
-                    je.field_o = 150;
+                    SentinelCommand.field_o = 150;
                     hb.field_f = false;
                     fk.field_c = true;
                     var3 = 147000;
                     var4 = -150000;
-                    var5 = new mb(var3, var4, this.field_X);
-                    var5.a(in.field_j, true, false, -1, 1);
+                    var5 = new Sentinel(var3, var4, this.world);
+                    var5.configureDesign(in.field_j, true, false, -1, 1);
                     var5.field_pc = false;
                     var5.field_Lb = true;
                     var5.field_Nb = 3;
-                    var5.field_ab = 2000;
-                    this.field_X.field_K.a(3, var5);
+                    var5.velocityY = 2000;
+                    this.world.sentinels.addLast(3, var5);
                     var5.field_o = -2;
                     if (var6 == 0) {
                       return;
                     }
                   }
-                  this.field_C.field_U = 0;
-                  var3_ref_jc = new jc(this.field_X.field_K);
-                  var4_ref_mb = (mb) (var3_ref_jc.b(2));
+                  this.controlledSentinel.field_U = 0;
+                  var3_ref_jc = new NodeIterator(this.world.sentinels);
+                  var4_ref_mb = (Sentinel) (var3_ref_jc.b(2));
                   while (var4_ref_mb != null) {
                     var4_ref_mb.field_o = -1;
-                    var4_ref_mb = (mb) (var3_ref_jc.d(param0 + 1591));
+                    var4_ref_mb = (Sentinel) (var3_ref_jc.d(param0 + 1591));
                     if (var6 != 0) {
                       return;
                     }
@@ -10661,18 +10661,18 @@ final class nb {
               if (decompiledFrameRemainder2) {
                 var3 = 122000;
                 var4 = -25000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.a(va.field_f, true, false, -1, 1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.configureDesign(va.field_f, true, false, -1, 1);
                 var5.field_Nb = 1;
                 var5.field_pc = false;
                 var5.field_o = 7;
-                this.field_X.field_K.a(3, var5);
+                this.world.sentinels.addLast(3, var5);
                 if (var6 == 0) {
                   return;
                 }
               }
-              var3_ref_ne = new ne(this.field_X, 22);
-              if (this.field_C.field_hc > 203000) {
+              var3_ref_ne = new ne(this.world, 22);
+              if (this.controlledSentinel.worldX > 203000) {
                 var3_ref_ne.field_z = 187000;
                 if (var6 != 0) {
                   var3_ref_ne.field_z = 225000;
@@ -10685,36 +10685,36 @@ final class nb {
               var3_ref_ne.field_S = 500;
               var3_ref_ne.field_F = 2147483647;
               var3_ref_ne.field_K = 2147483647;
-              this.field_X.field_e.a(3, var3_ref_ne);
+              this.world.field_e.addLast(3, var3_ref_ne);
               return;
             }
             if ((decompiledFrameRemainder6) &&
               (decompiledFrameRemainder5) &&
               (decompiledFrameRemainder4)) {
-              L32: {
-                L33: {
+              regionExit10: {
+                regionExit11: {
                   var3 = qh.field_Yb;
                   if (var3 == 1) {
                     var4 = -100000;
                     var3 = 20000;
-                    var5 = new mb(var3, var4, this.field_X);
-                    var5.field_ab = -100;
-                    var5.a(va.field_f, true, false, -1, 1);
-                    var5.field_rb = 1;
+                    var5 = new Sentinel(var3, var4, this.world);
+                    var5.velocityY = -100;
+                    var5.configureDesign(va.field_f, true, false, -1, 1);
+                    var5.armour = 1;
                     var5.field_o = 20;
-                    var5.field_Eb = 1;
+                    var5.maximumArmour = 1;
                     var5.field_Nb = 1;
                     var5.field_pc = false;
-                    this.field_X.field_K.a(param0 ^ -1592, var5);
+                    this.world.sentinels.addLast(param0 ^ -1592, var5);
                     if (var6 == 0) {
                       return;
                     }
                   } else {
                     switch (var3) {
                       case 5:
-                        break L33;
+                        break regionExit11;
                       case 6:
-                        break L32;
+                        break regionExit10;
                       default:
                         return;
                       case 4:
@@ -10723,65 +10723,65 @@ final class nb {
                   }
                   var3 = 142000;
                   var4 = -100000;
-                  var5 = new mb(var3, var4, this.field_X);
-                  var5.a(va.field_f, true, false, -1, 1);
+                  var5 = new Sentinel(var3, var4, this.world);
+                  var5.configureDesign(va.field_f, true, false, -1, 1);
                   var5.field_pc = false;
                   var5.field_Nb = 1;
                   var5.field_o = 13;
                   var3 = 102000;
-                  this.field_X.field_K.a(param0 ^ -1592, var5);
-                  var5 = new mb(var3, var4, this.field_X);
-                  var5.a(va.field_f, true, false, -1, 1);
+                  this.world.sentinels.addLast(param0 ^ -1592, var5);
+                  var5 = new Sentinel(var3, var4, this.world);
+                  var5.configureDesign(va.field_f, true, false, -1, 1);
                   var5.field_pc = false;
                   var5.field_o = 13;
                   var5.field_Nb = 1;
-                  this.field_X.field_K.a(3, var5);
+                  this.world.sentinels.addLast(3, var5);
                   var3 = 67000;
-                  var5 = new mb(var3, var4, this.field_X);
-                  var5.a(va.field_f, true, false, -1, 1);
+                  var5 = new Sentinel(var3, var4, this.world);
+                  var5.configureDesign(va.field_f, true, false, -1, 1);
                   var5.field_Nb = 1;
                   var5.field_pc = false;
                   var5.field_o = 13;
                   var3 = 49000;
-                  this.field_X.field_K.a(3, var5);
-                  var5 = new mb(var3, var4, this.field_X);
-                  var5.a(va.field_f, true, false, -1, 1);
+                  this.world.sentinels.addLast(3, var5);
+                  var5 = new Sentinel(var3, var4, this.world);
+                  var5.configureDesign(va.field_f, true, false, -1, 1);
                   var5.field_o = 13;
                   var5.field_pc = false;
                   var5.field_Nb = 1;
-                  this.field_X.field_K.a(3, var5);
+                  this.world.sentinels.addLast(3, var5);
                   if (var6 == 0) {
                     return;
                   }
                 }
-                je.field_o = 150;
+                SentinelCommand.field_o = 150;
                 hb.field_f = false;
                 fk.field_c = true;
                 var4 = -100000;
                 var3 = 142000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.a(va.field_f, true, false, -1, 1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.configureDesign(va.field_f, true, false, -1, 1);
                 var5.field_Nb = 9;
                 var5.field_pc = false;
                 var3 = 102000;
-                this.field_X.field_K.a(param0 + 1592, var5);
-                var5 = new mb(var3, var4, this.field_X);
-                var5.a(va.field_f, true, false, -1, 1);
+                this.world.sentinels.addLast(param0 + 1592, var5);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.configureDesign(va.field_f, true, false, -1, 1);
                 var5.field_pc = false;
                 var5.field_Nb = 9;
-                this.field_X.field_K.a(3, var5);
+                this.world.sentinels.addLast(3, var5);
                 var3 = 67000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.a(va.field_f, true, false, -1, 1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.configureDesign(va.field_f, true, false, -1, 1);
                 var5.field_Nb = 9;
                 var5.field_pc = false;
-                this.field_X.field_K.a(3, var5);
+                this.world.sentinels.addLast(3, var5);
                 var3 = 49000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.a(va.field_f, true, false, -1, 1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.configureDesign(va.field_f, true, false, -1, 1);
                 var5.field_pc = false;
                 var5.field_Nb = 9;
-                this.field_X.field_K.a(3, var5);
+                this.world.sentinels.addLast(3, var5);
                 if (var6 == 0) {
                   return;
                 }
@@ -10798,40 +10798,40 @@ final class nb {
               if (var3 == 4) {
                 var4 = -100000;
                 var3 = 25000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.field_ab = -100;
-                var5.a(qm.field_d, true, false, -1, 1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.velocityY = -100;
+                var5.configureDesign(qm.field_d, true, false, -1, 1);
                 var5.field_pc = false;
                 var5.field_Nb = 2;
-                this.field_X.field_K.a(3, var5);
+                this.world.sentinels.addLast(3, var5);
                 var3 = 105000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.field_ab = -100;
-                var5.a(qm.field_d, true, false, -1, 1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.velocityY = -100;
+                var5.configureDesign(qm.field_d, true, false, -1, 1);
                 var5.field_pc = false;
                 var5.field_Nb = 2;
-                this.field_X.field_K.a(3, var5);
+                this.world.sentinels.addLast(3, var5);
                 var3 = 205000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.field_ab = -100;
-                var5.a(qm.field_d, true, false, -1, 1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.velocityY = -100;
+                var5.configureDesign(qm.field_d, true, false, -1, 1);
                 var5.field_pc = false;
                 var5.field_Nb = 2;
                 var3 = 305000;
-                this.field_X.field_K.a(3, var5);
-                var5 = new mb(var3, var4, this.field_X);
-                var5.field_ab = -100;
-                var5.a(qm.field_d, true, false, -1, 1);
+                this.world.sentinels.addLast(3, var5);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.velocityY = -100;
+                var5.configureDesign(qm.field_d, true, false, -1, 1);
                 var5.field_pc = false;
                 var5.field_Nb = 2;
                 var3 = 405000;
-                this.field_X.field_K.a(3, var5);
-                var5 = new mb(var3, var4, this.field_X);
-                var5.field_ab = -100;
-                var5.a(qm.field_d, true, false, -1, 1);
+                this.world.sentinels.addLast(3, var5);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.velocityY = -100;
+                var5.configureDesign(qm.field_d, true, false, -1, 1);
                 var5.field_Nb = 2;
                 var5.field_pc = false;
-                this.field_X.field_K.a(param0 ^ -1592, var5);
+                this.world.sentinels.addLast(param0 ^ -1592, var5);
                 if (var6 == 0) {
                   return;
                 }
@@ -10844,50 +10844,50 @@ final class nb {
               if (decompiledFrameRemainder0) {
                 var4 = -100000;
                 var3 = 25000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.field_ab = -100;
-                var5.a(qm.field_d, true, false, -1, 1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.velocityY = -100;
+                var5.configureDesign(qm.field_d, true, false, -1, 1);
                 var5.field_Nb = 2;
-                var5.field_rb = 1;
+                var5.armour = 1;
                 var5.field_pc = false;
-                var5.field_Eb = 1;
-                this.field_X.field_K.a(param0 ^ -1592, var5);
+                var5.maximumArmour = 1;
+                this.world.sentinels.addLast(param0 ^ -1592, var5);
                 var3 = 105000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.field_ab = -100;
-                var5.a(qm.field_d, true, false, -1, 1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.velocityY = -100;
+                var5.configureDesign(qm.field_d, true, false, -1, 1);
                 var5.field_Nb = 2;
                 var5.field_pc = false;
-                var5.field_Eb = 1;
-                var5.field_rb = 1;
-                this.field_X.field_K.a(3, var5);
+                var5.maximumArmour = 1;
+                var5.armour = 1;
+                this.world.sentinels.addLast(3, var5);
                 var3 = 205000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.field_ab = -100;
-                var5.a(qm.field_d, true, false, -1, 1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.velocityY = -100;
+                var5.configureDesign(qm.field_d, true, false, -1, 1);
                 var5.field_Nb = 2;
-                var5.field_Eb = 1;
-                var5.field_rb = 1;
+                var5.maximumArmour = 1;
+                var5.armour = 1;
                 var5.field_pc = false;
-                this.field_X.field_K.a(3, var5);
+                this.world.sentinels.addLast(3, var5);
                 var3 = 305000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.field_ab = -100;
-                var5.a(qm.field_d, true, false, -1, 1);
-                var5.field_rb = 1;
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.velocityY = -100;
+                var5.configureDesign(qm.field_d, true, false, -1, 1);
+                var5.armour = 1;
                 var5.field_Nb = 2;
                 var5.field_pc = false;
-                var5.field_Eb = 1;
+                var5.maximumArmour = 1;
                 var3 = 405000;
-                this.field_X.field_K.a(3, var5);
-                var5 = new mb(var3, var4, this.field_X);
-                var5.field_ab = -100;
-                var5.a(qm.field_d, true, false, -1, 1);
-                var5.field_Eb = 1;
+                this.world.sentinels.addLast(3, var5);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.velocityY = -100;
+                var5.configureDesign(qm.field_d, true, false, -1, 1);
+                var5.maximumArmour = 1;
                 var5.field_pc = false;
-                var5.field_rb = 1;
+                var5.armour = 1;
                 var5.field_Nb = 2;
-                this.field_X.field_K.a(3, var5);
+                this.world.sentinels.addLast(3, var5);
                 if (var6 == 0) {
                   return;
                 }
@@ -10900,11 +10900,11 @@ final class nb {
             if (decompiledFrameRemainder6) {
               var3 = qh.field_Yb;
               if (var3 == 1) {
-                var3_ref_jc = new jc(this.field_X.field_K);
-                var4_ref_mb = (mb) (var3_ref_jc.b(2));
+                var3_ref_jc = new NodeIterator(this.world.sentinels);
+                var4_ref_mb = (Sentinel) (var3_ref_jc.b(2));
                 while (var4_ref_mb != null) {
                   var4_ref_mb.field_o = -1;
-                  var4_ref_mb = (mb) (var3_ref_jc.d(param0 + 1591));
+                  var4_ref_mb = (Sentinel) (var3_ref_jc.d(param0 + 1591));
                   if (var6 != 0) {
                     return;
                   }
@@ -10914,32 +10914,32 @@ final class nb {
               if (2 == var3) {
                 fk.field_c = true;
                 hb.field_f = false;
-                je.field_o = 150;
+                SentinelCommand.field_o = 150;
                 var4 = -100000;
                 var3 = 25000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.field_ab = -100;
-                var5.a(qm.field_d, true, false, -1, 1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.velocityY = -100;
+                var5.configureDesign(qm.field_d, true, false, -1, 1);
                 var5.field_Nb = 2;
                 var5.field_pc = false;
                 var5.field_o = 4;
                 var3 = 105000;
-                this.field_X.field_K.a(3, var5);
-                var5 = new mb(var3, var4, this.field_X);
-                var5.field_ab = -100;
-                var5.a(qm.field_d, true, false, -1, 1);
+                this.world.sentinels.addLast(3, var5);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.velocityY = -100;
+                var5.configureDesign(qm.field_d, true, false, -1, 1);
                 var5.field_o = 4;
                 var5.field_pc = false;
                 var5.field_Nb = 2;
-                this.field_X.field_K.a(param0 ^ -1592, var5);
+                this.world.sentinels.addLast(param0 ^ -1592, var5);
                 var3 = 205000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.field_ab = -100;
-                var5.a(qm.field_d, true, false, -1, 1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.velocityY = -100;
+                var5.configureDesign(qm.field_d, true, false, -1, 1);
                 var5.field_pc = false;
                 var5.field_o = 4;
                 var5.field_Nb = 2;
-                this.field_X.field_K.a(3, var5);
+                this.world.sentinels.addLast(3, var5);
                 if (var6 == 0) {
                   return;
                 }
@@ -10953,73 +10953,73 @@ final class nb {
                 return;
               }
             }
-            L40: {
-              L41: {
-                L42: {
+            regionExit12: {
+              regionExit13: {
+                regionExit14: {
                   var3 = qh.field_Yb;
                   if (var3 != 1) {
                     switch (var3) {
                       case 3:
-                        break L42;
+                        break regionExit14;
                       case 5:
-                        break L41;
+                        break regionExit13;
                       default:
                         return;
                       case 6:
                         if (var6 == 0) {
-                          break L40;
+                          break regionExit12;
                         }
                         break;
                     }
                   }
                   var4 = -100000;
                   var3 = 20000;
-                  var5 = new mb(var3, var4, this.field_X);
-                  var5.field_ab = -100;
-                  var5.a(va.field_f, true, false, -1, -1);
+                  var5 = new Sentinel(var3, var4, this.world);
+                  var5.velocityY = -100;
+                  var5.configureDesign(va.field_f, true, false, -1, -1);
                   var5.field_Nb = 9;
                   var5.field_pc = false;
                   var5.field_o = 0;
-                  this.field_X.field_K.a(3, var5);
+                  this.world.sentinels.addLast(3, var5);
                   if (var6 == 0) {
                     return;
                   }
                 }
                 var4 = -100000;
                 var3 = 20000;
-                var5 = new mb(var3, var4, this.field_X);
-                var5.field_ab = -100;
-                var5.a(eb.field_o, true, false, -1, -1);
+                var5 = new Sentinel(var3, var4, this.world);
+                var5.velocityY = -100;
+                var5.configureDesign(eb.field_o, true, false, -1, -1);
                 var5.field_Nb = 7;
                 var5.field_o = 7;
                 var5.field_pc = false;
-                this.field_X.field_K.a(param0 ^ -1592, var5);
+                this.world.sentinels.addLast(param0 ^ -1592, var5);
                 if (var6 == 0) {
                   return;
                 }
               }
               var3 = 25000;
               var4 = -100000;
-              var5 = new mb(var3, var4, this.field_X);
-              var5.field_ab = -100;
-              var5.a(bb.field_S, true, false, -1, 1);
+              var5 = new Sentinel(var3, var4, this.world);
+              var5.velocityY = -100;
+              var5.configureDesign(bb.field_S, true, false, -1, 1);
               var5.field_Nb = 2;
               var5.field_pc = false;
               var3 = 105000;
-              this.field_X.field_K.a(3, var5);
-              var5 = new mb(var3, var4, this.field_X);
-              var5.field_ab = -100;
-              var5.a(bb.field_S, true, false, -1, 1);
+              this.world.sentinels.addLast(3, var5);
+              var5 = new Sentinel(var3, var4, this.world);
+              var5.velocityY = -100;
+              var5.configureDesign(bb.field_S, true, false, -1, 1);
               var5.field_Nb = 2;
               var5.field_pc = false;
               var3 = 205000;
-              this.field_X.field_K.a(3, var5);
-              var5 = new mb(var3, var4, this.field_X);
-              var5.field_ab = -100;
-              var5.a(bb.field_S, true, false, -1, 1);
+              this.world.sentinels.addLast(3, var5);
+              var5 = new Sentinel(var3, var4, this.world);
+              var5.velocityY = -100;
+              var5.configureDesign(bb.field_S, true, false, -1, 1);
               var5.field_Nb = 2;
               var5.field_pc = false;
-              this.field_X.field_K.a(3, var5);
+              this.world.sentinels.addLast(3, var5);
               if (var6 == 0) {
                 return;
               }
@@ -11041,48 +11041,48 @@ final class nb {
         int stackIn_47_0 = 0;
         int stackIn_47_1 = 0;
         int stackIn_52_0 = 0;
-        mb stackIn_75_0 = null;
+        Sentinel stackIn_75_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
-        mb[] var3 = null;
+        Sentinel[] var3 = null;
         int var4 = 0;
-        jc var5 = null;
-        mb var6_ref_mb = null;
+        NodeIterator var5 = null;
+        Sentinel var6_ref_mb = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        mb var9 = null;
+        Sentinel var9 = null;
         int var10 = 0;
         int var11 = 0;
-        mb stackIn_75_0Lifetime1;
+        Sentinel stackIn_75_0Lifetime1;
         int stackIn_47_0Lifetime1;
         int stackIn_47_1Lifetime1;
         int var6Lifetime1;
         int var6Lifetime2;
         int var7Lifetime1;
         int var10Lifetime1;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         try {
-          var2_int = this.field_X.field_kb + this.field_X.field_Q;
-          if (this.field_X.field_A >= 0) {
+          var2_int = this.world.playerCount + this.world.computerPlayerCount;
+          if (this.world.field_A >= 0) {
             var2_int++;
           }
           if (this.field_B == null ||
             ~this.field_B.length != ~var2_int) {
             this.field_B = new int[var2_int];
           }
-          var3 = new mb[var2_int];
+          var3 = new Sentinel[var2_int];
           var4 = 0;
-          var5 = new jc(this.field_X.field_K);
-          var6_ref_mb = (mb) (var5.b(2));
+          var5 = new NodeIterator(this.world.sentinels);
+          var6_ref_mb = (Sentinel) (var5.b(2));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var6_ref_mb))) {
-            stackIn_33_0 = var6_ref_mb.field_Bb;
+            stackIn_33_0 = var6_ref_mb.playerId;
             if (var11 == 0) {
               if (stackIn_33_0 < 0 ||
-                !(var6_ref_mb.field_Bb < this.field_X.field_kb + this.field_X.field_Q)) {
-                if (~var6_ref_mb.field_Bb == ~this.field_X.field_A &&
+                !(var6_ref_mb.playerId < this.world.playerCount + this.world.computerPlayerCount)) {
+                if (~var6_ref_mb.playerId == ~this.world.field_A &&
                   !var6_ref_mb.field_Hb) {
                   incrementValue$0 = var4;
                   var4++;
@@ -11093,7 +11093,7 @@ final class nb {
                 var4++;
                 var3[incrementValue$1] = var6_ref_mb;
               }
-              var6_ref_mb = (mb) (var5.d(2));
+              var6_ref_mb = (Sentinel) (var5.d(2));
               continue;
             }
             break;
@@ -11105,12 +11105,12 @@ final class nb {
             var2_int = var4;
           }
           var6 = 0;
-          L10: while (true) {
+          scanLoop1: while (true) {
             if ((var2_int - 1) > var6) {
               var7 = var6;
               stackIn_52_0 = var6;
               if (var11 != 0) {
-                break L10;
+                break scanLoop1;
               }
               var8 = stackIn_52_0;
               while (var8 < var2_int) {
@@ -11129,7 +11129,7 @@ final class nb {
                 var3[var7] = var9;
               }
               var6++;
-              continue L10;
+              continue scanLoop1;
             }
             stackIn_52_0 = param0 ? 1 : 0;
             break;
@@ -11138,22 +11138,22 @@ final class nb {
             this.field_S = 72;
           }
           var7Lifetime1 = 0;
-          if (this.field_C != null &&
-            this.field_C != var3[0] &&
-            var3[1] != this.field_C) {
+          if (this.controlledSentinel != null &&
+            this.controlledSentinel != var3[0] &&
+            var3[1] != this.controlledSentinel) {
             var6Lifetime1 = 2;
             while (var6Lifetime1 < var2_int) {
-              stackIn_75_0 = this.field_C;
+              stackIn_75_0 = this.controlledSentinel;
               if (var11 == 0) {
                 if (stackIn_75_0 == var3[var6Lifetime1]) {
                   var3[var6Lifetime1] = var3[1];
-                  var3[1] = this.field_C;
+                  var3[1] = this.controlledSentinel;
                 }
                 var6Lifetime1++;
                 continue;
               }
               while (true) {
-                var10 = stackIn_75_0.field_Bb;
+                var10 = stackIn_75_0.playerId;
                 return;
               }
             }
@@ -11161,11 +11161,11 @@ final class nb {
           var6Lifetime2 = 0;
           while (var2_int > var6Lifetime2) {
             stackIn_75_0Lifetime1 = var3[var6Lifetime2];
-            var10Lifetime1 = stackIn_75_0Lifetime1.field_Bb;
+            var10Lifetime1 = stackIn_75_0Lifetime1.playerId;
             if (var11 != 0) {
               return;
             }
-            if (~var10Lifetime1 == ~this.field_X.field_A) {
+            if (~var10Lifetime1 == ~this.world.field_A) {
               var10Lifetime1 = var3.length - 1;
             }
             if (var7Lifetime1 <= this.field_B[var10Lifetime1]) {
@@ -11188,7 +11188,7 @@ final class nb {
         }
     }
 
-    private final void a(int param0, int param1, int param2, mb param3, int param4, int param5, int param6, int param7) {
+    private final void a(int param0, int param1, int param2, Sentinel param3, int param4, int param5, int param6, int param7) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -11205,46 +11205,46 @@ final class nb {
         int var15Lifetime1;
         try {
           var9_int = -48 + param7;
-          pb.c(param5, param6, param1, var9_int, 0, 150);
-          pb.c(param5, param6 + var9_int + 4, param1, 20, 0, 150);
-          var10 = this.field_X.d(-1661904765, param3.field_Bb);
+          SoftwareRaster.c(param5, param6, param1, var9_int, 0, 150);
+          SoftwareRaster.c(param5, param6 + var9_int + 4, param1, 20, 0, 150);
+          var10 = this.world.d(-1661904765, param3.playerId);
           if (null != var10) {
-            pb.c(param5, 8 + (param6 - (-var9_int - 20)), param1, 20, 0, 150);
+            SoftwareRaster.c(param5, 8 + (param6 - (-var9_int - 20)), param1, 20, 0, 150);
           }
           var11 = hj.field_w;
           var12 = -4 + Math.min(param1, var9_int);
           hj.field_w = 6400 * var12 / param0;
-          pb.a(param5, param6, param1 + param5, var9_int + param6);
-          param3.field_Zb.a(0, true, param1 / 2 + param5, -6 + var9_int + param6, (byte) 49, 0);
+          SoftwareRaster.a(param5, param6, param1 + param5, var9_int + param6);
+          param3.chassis.a(0, true, param1 / 2 + param5, -6 + var9_int + param6, (byte) 49, 0);
           fl.a(param1, param3, (byte) -98, var9_int, param5, param6);
-          pb.c();
+          SoftwareRaster.c();
           hj.field_w = var11;
-          if (param4 == qd.field_t[0]) {
+          if (param4 == PartInstruction.field_t[0]) {
             param4 = uj.a(param4, 93);
           }
           var13 = var9_int + param6 + (4 + (20 + pl.field_U.field_U) / 2);
           if (var10 != null) {
             var14 = pl.field_U;
-            var15 = ((mi) (var14)).c(var10);
+            var15 = ((BitmapFont) (var14)).c(var10);
             if (var15 > param1) {
               var14 = ff.field_lb;
-              var15 = ((mi) (var14)).c(var10);
+              var15 = ((BitmapFont) (var14)).c(var10);
               if (var15 > param1) {
                 var14 = fk.field_d;
-                var15 = ((mi) (var14)).c(var10);
+                var15 = ((BitmapFont) (var14)).c(var10);
               }
               if (var15 > param1) {
-                var10 = bg.a(var10, param1, (byte) -45, (mi) (var14));
+                var10 = bg.a(var10, param1, (byte) -45, (BitmapFont) (var14));
               }
             }
-            ((mi) (var14)).a(var10, param5 + param1 / 2, var13, param4, 0);
+            ((BitmapFont) (var14)).a(var10, param5 + param1 / 2, var13, param4, 0);
             var13 += 24;
           }
           if (param2 != 5) {
             this.a(95, false, true, true);
           }
           var14Lifetime1 = null;
-          var15Lifetime1 = ul.a((byte) -59, param3.field_Zb.field_N);
+          var15Lifetime1 = NodeDeque.a((byte) -59, param3.chassis.componentId);
           if (var15Lifetime1 >= 0 &&
             var15Lifetime1 < cd.field_c.length) {
             var14Lifetime1 = cd.field_c[var15Lifetime1];
@@ -11269,46 +11269,46 @@ final class nb {
 
     private final void j(byte param0) {
         RuntimeException decompiledCaughtException = null;
-        mb var2 = null;
+        Sentinel var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           this.c(false);
-          this.field_C.field_Qb = 250;
+          this.controlledSentinel.field_Qb = 250;
           if (param0 != -123) {
             return;
           }
-          qd.field_g = 500;
-          this.field_C.field_U = 0;
+          PartInstruction.field_g = 500;
+          this.controlledSentinel.field_U = 0;
           if (di.field_g == 1 &&
             qh.field_Yb == 11) {
-            this.field_X.field_ab.a(param0 + 1323, this.field_X.field_kb, 16);
-            this.field_C.a(ua.field_x, true, false, 0, 0);
-            this.field_C.field_Gb = -100000;
-            this.field_C.field_hc = 31000;
-            this.field_C.field_ab = 3000;
-            this.field_C.field_fc = this.field_C.field_Gb;
-            this.field_C.field_u = true;
-            this.field_C.field_E = 1;
-            this.field_C.field_pc = false;
-            this.field_C.field_Qb = -1;
-            this.field_C.field_K = 0;
-            nh.a(true, this.field_C);
+            this.world.terrain.a(param0 + 1323, this.world.playerCount, 16);
+            this.controlledSentinel.configureDesign(ua.field_x, true, false, 0, 0);
+            this.controlledSentinel.worldY = -100000;
+            this.controlledSentinel.worldX = 31000;
+            this.controlledSentinel.velocityY = 3000;
+            this.controlledSentinel.field_fc = this.controlledSentinel.worldY;
+            this.controlledSentinel.field_u = true;
+            this.controlledSentinel.field_E = 1;
+            this.controlledSentinel.field_pc = false;
+            this.controlledSentinel.field_Qb = -1;
+            this.controlledSentinel.velocityX = 0;
+            nh.a(true, this.controlledSentinel);
             this.field_E = 1024;
             this.field_P = 0;
-            this.field_C.field_J = 0;
-            var2 = this.field_C;
+            this.controlledSentinel.field_J = 0;
+            var2 = this.controlledSentinel;
             var2.field_r = 0;
             return;
           }
-          L1: {
-            L2: {
-              L3: {
-                L4: {
+          regionExit1: {
+            regionExit2: {
+              regionExit3: {
+                regionExit4: {
                   qh.field_Yb = 0;
                   dl.field_M = 0;
                   var2_int = di.field_g;
@@ -11316,97 +11316,97 @@ final class nb {
                     case 1:
                       break;
                     case 7:
-                      break L4;
+                      break regionExit4;
                     case 3:
-                      break L3;
+                      break regionExit3;
                     case 5:
-                      break L2;
+                      break regionExit2;
                     default:
-                      break L1;
+                      break regionExit1;
                     case 9:
                       if (var5 == 0) {
-                        this.field_C.a(ua.field_C[9], true, false, 0, 0);
-                        this.field_C.field_hc = 218000;
-                        this.field_C.field_Gb = -40000;
+                        this.controlledSentinel.configureDesign(ua.field_C[9], true, false, 0, 0);
+                        this.controlledSentinel.worldX = 218000;
+                        this.controlledSentinel.worldY = -40000;
                         this.field_E = 1024;
-                        this.field_C.field_ab = 0;
+                        this.controlledSentinel.velocityY = 0;
                         this.field_P = 4000;
-                        this.field_C.field_fc = this.field_C.field_Gb;
-                        break L1;
+                        this.controlledSentinel.field_fc = this.controlledSentinel.worldY;
+                        break regionExit1;
                       }
                     case 0:
-                      this.field_C.a(ua.field_C[0], true, false, 0, 0);
-                      this.field_C.field_Gb = -100000;
-                      this.field_C.field_hc = 92000;
+                      this.controlledSentinel.configureDesign(ua.field_C[0], true, false, 0, 0);
+                      this.controlledSentinel.worldY = -100000;
+                      this.controlledSentinel.worldX = 92000;
                       this.field_P = 1024;
-                      this.field_C.field_fc = this.field_C.field_Gb;
+                      this.controlledSentinel.field_fc = this.controlledSentinel.worldY;
                       this.field_E = 1024;
-                      this.field_C.field_ab = 3000;
+                      this.controlledSentinel.velocityY = 3000;
                       if (var5 == 0) {
-                        break L1;
+                        break regionExit1;
                       }
                       break;
                   }
-                  this.field_C.a(ua.field_C[1], true, false, 0, 0);
-                  this.field_C.field_hc = 218000;
-                  this.field_C.field_Gb = -40000;
+                  this.controlledSentinel.configureDesign(ua.field_C[1], true, false, 0, 0);
+                  this.controlledSentinel.worldX = 218000;
+                  this.controlledSentinel.worldY = -40000;
                   this.field_P = 4000;
-                  this.field_C.field_fc = this.field_C.field_Gb;
+                  this.controlledSentinel.field_fc = this.controlledSentinel.worldY;
                   this.field_E = 1024;
                   if (var5 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
-                this.field_C.a(ua.field_C[7], true, false, 0, 0);
-                this.field_C.field_Gb = -40000;
-                this.field_C.field_hc = 218000;
+                this.controlledSentinel.configureDesign(ua.field_C[7], true, false, 0, 0);
+                this.controlledSentinel.worldY = -40000;
+                this.controlledSentinel.worldX = 218000;
                 this.field_E = 1024;
-                this.field_C.field_ab = 0;
-                this.field_C.field_fc = this.field_C.field_Gb;
+                this.controlledSentinel.velocityY = 0;
+                this.controlledSentinel.field_fc = this.controlledSentinel.worldY;
                 this.field_P = 4000;
                 if (var5 == 0) {
-                  break L1;
+                  break regionExit1;
                 }
               }
-              this.field_C.a(ua.field_C[3], true, false, 0, 0);
-              this.field_C.field_hc = 108000;
-              this.field_C.field_Gb = -40000;
+              this.controlledSentinel.configureDesign(ua.field_C[3], true, false, 0, 0);
+              this.controlledSentinel.worldX = 108000;
+              this.controlledSentinel.worldY = -40000;
               this.field_P = 1000;
-              this.field_C.field_fc = this.field_C.field_Gb;
+              this.controlledSentinel.field_fc = this.controlledSentinel.worldY;
               this.field_E = 1024;
               if (var5 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
-            this.field_C.a(ua.field_C[5], true, false, 0, 0);
-            this.field_C.field_Gb = -40000;
-            this.field_C.field_hc = 200000;
+            this.controlledSentinel.configureDesign(ua.field_C[5], true, false, 0, 0);
+            this.controlledSentinel.worldY = -40000;
+            this.controlledSentinel.worldX = 200000;
             this.field_P = 4000;
             this.field_E = 1024;
-            this.field_C.field_fc = this.field_C.field_Gb;
+            this.controlledSentinel.field_fc = this.controlledSentinel.worldY;
             var3 = 109000;
             var4 = -16000;
-            var2 = new mb(0, 0, this.field_X);
-            var2.a(va.field_f, true, false, -1, 1);
+            var2 = new Sentinel(0, 0, this.world);
+            var2.configureDesign(va.field_f, true, false, -1, 1);
             var2.field_o = -2;
             var2.field_Nb = 1;
-            var2.field_hc = var3;
+            var2.worldX = var3;
             var2.field_pc = false;
-            var2.field_Gb = var4;
+            var2.worldY = var4;
             var3 = 77000;
-            this.field_X.field_K.a(3, var2);
+            this.world.sentinels.addLast(3, var2);
             var4 = -4000;
-            var2 = new mb(0, 0, this.field_X);
-            var2.a(va.field_f, true, false, -1, 1);
-            var2.field_hc = var3;
+            var2 = new Sentinel(0, 0, this.world);
+            var2.configureDesign(va.field_f, true, false, -1, 1);
+            var2.worldX = var3;
             var2.field_pc = false;
-            var2.field_Gb = var4;
+            var2.worldY = var4;
             var2.field_Nb = 1;
             var2.field_o = -2;
-            this.field_X.field_K.a(3, var2);
+            this.world.sentinels.addLast(3, var2);
           }
-          var2 = this.field_C;
-          this.field_C.field_J = 0;
+          var2 = this.controlledSentinel;
+          this.controlledSentinel.field_J = 0;
           var2.field_r = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -11422,7 +11422,7 @@ final class nb {
           field_x = null;
           field_T = null;
           if (param0 != 750) {
-            nb.b(4, false);
+            GameplayController.b(4, false);
           }
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "nb.F(" + param0 + ')');
@@ -11433,20 +11433,20 @@ final class nb {
         int discarded$0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_23_0 = 0;
-        wk[] stackIn_27_0 = null;
+        RgbSprite[] stackIn_27_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        hd var4 = null;
+        BattleTerrain var4 = null;
         int var5 = 0;
-        wk[] var6 = null;
+        RgbSprite[] var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int[] var10 = null;
         try {
           sb.field_bb.b((byte) 121);
-          if (!jc.a(param1 + 23) &&
+          if (!NodeIterator.a(param1 + 23) &&
             param0 &&
             !jn.field_g) {
             stackIn_10_0 = 1;
@@ -11455,16 +11455,16 @@ final class nb {
           }
           var3_int = stackIn_10_0;
           if (param1 != -21) {
-            nb.b(-25, false);
+            GameplayController.b(-25, false);
           }
-          var4 = this.field_X.field_ab;
+          var4 = this.world.terrain;
           this.a((byte) 125, true, true, var4);
           this.a(-105, true, var3_int != 0, true);
           discarded$0 = this.a(true, var4, true, (byte) -110);
-          pb.c(0, 0, 640, 480, 0, 128);
-          pb.h(218, 198, 204, 44, 16777215);
-          pb.c(220, 200, this.field_X.field_r * 200 / this.field_w, 40, 4473924, 128);
-          pl.field_U.a(eb.field_q + " " + this.field_X.field_r * 100 / this.field_w + "%", 320, pl.field_U.field_U / 2 + 220, 16777215, 0);
+          SoftwareRaster.c(0, 0, 640, 480, 0, 128);
+          SoftwareRaster.h(218, 198, 204, 44, 16777215);
+          SoftwareRaster.c(220, 200, this.world.simulationTick * 200 / this.field_w, 40, 4473924, 128);
+          pl.field_U.a(eb.field_q + " " + this.world.simulationTick * 100 / this.field_w + "%", 320, pl.field_U.field_U / 2 + 220, 16777215, 0);
           pl.field_U.a(rb.field_b, 320, 220 + pl.field_U.field_U / 2 + 40, 16777215, 0);
           this.b(true, 1956917985);
           if (this.field_d) {
@@ -11491,7 +11491,7 @@ final class nb {
               }
               if (!(var9 <= 356)) {
                 var9 = 356;
-                if ((SteelSentinels.field_G != 0) &&
+                if ((SteelSentinels.obfuscationControl != 0) &&
                   (-var8 + qc.field_V.field_cb < var9)) {
                   var9 = qc.field_V.field_cb - var8;
                 }
@@ -11501,7 +11501,7 @@ final class nb {
                 var9 = qc.field_V.field_cb - var8;
               }
             }
-            pb.c(0, var9, var7, var8, 0, 192);
+            SoftwareRaster.c(0, var9, var7, var8, 0, 192);
             hb.a((byte) 115, var6, var7, var9, 0, var8);
             if (oh.field_f >= 0 &&
               var7 + 0 > oh.field_f &&
@@ -11511,11 +11511,11 @@ final class nb {
               this.field_r = 0;
             }
             var10 = new int[4];
-            pb.b(var10);
+            SoftwareRaster.b(var10);
             if (null != hj.field_s) {
               fk.field_d.c(hj.field_s.toUpperCase(), (int)jl.field_c + var6[0].field_A, 3 + (var9 + (-var6[6].field_F + var8)), this.field_M[0], -1);
             }
-            pb.a(var10);
+            SoftwareRaster.a(var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -11533,7 +11533,7 @@ final class nb {
         try {
           va.field_b = param0;
           if (param1) {
-            nb.b((byte) -121);
+            GameplayController.b((byte) -121);
           }
           if (~wa.field_p != ~an.field_h) {
             var2_int = an.field_h * an.field_h;
@@ -11566,12 +11566,12 @@ final class nb {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        je var6_ref_je = null;
+        SentinelCommand var6_ref_je = null;
         int var6 = 0;
-        je var7 = null;
+        SentinelCommand var7 = null;
         int var7_int = 0;
         int var8_int = 0;
-        je var8 = null;
+        SentinelCommand var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -11579,20 +11579,20 @@ final class nb {
         int var14 = 0;
         int var15 = 0;
         double var15_double = 0.0;
-        nk var16_ref_nk = null;
+        ArticulatedPart var16_ref_nk = null;
         int var16_int = 0;
         double var16 = 0.0;
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        je var6_ref_jeLifetime1;
-        je var7Lifetime1;
-        je var7Lifetime2;
-        nk var16_ref_nkLifetime1;
-        je var6_ref_jeLifetime2;
-        je var7Lifetime3;
-        je var6_ref_jeLifetime1Lifetime1;
+        SentinelCommand var6_ref_jeLifetime1;
+        SentinelCommand var7Lifetime1;
+        SentinelCommand var7Lifetime2;
+        ArticulatedPart var16_ref_nkLifetime1;
+        SentinelCommand var6_ref_jeLifetime2;
+        SentinelCommand var7Lifetime3;
+        SentinelCommand var6_ref_jeLifetime1Lifetime1;
         int var5_intLifetime1;
         int var5_intLifetime2;
         int var8_intLifetime1;
@@ -11607,7 +11607,7 @@ final class nb {
         int var5_intLifetime1Lifetime1;
         int var8_intLifetime1Lifetime1;
         int var15Lifetime1Lifetime1;
-        var20 = SteelSentinels.field_G;
+        var20 = SteelSentinels.obfuscationControl;
         try {
           if (param2 != 0) {
             cf.field_q = -1;
@@ -11617,22 +11617,22 @@ final class nb {
           if (lb.field_gc == 1 &&
             param2 == 2 &&
             null != this.field_u) {
-            var5_int = this.field_X.field_r + vk.field_h[this.field_X.field_c];
-            var6_ref_je = (je) (this.field_C.field_B.b(1063677678));
+            var5_int = this.world.simulationTick + vk.field_h[this.world.field_c];
+            var6_ref_je = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
             if (null != var6_ref_je &&
-              var6_ref_je.field_r > var5_int) {
-              var5_int = var6_ref_je.field_r;
+              var6_ref_je.endTick > var5_int) {
+              var5_int = var6_ref_je.endTick;
             }
-            if (var5_int < 500 + this.field_X.field_r) {
+            if (var5_int < 500 + this.world.simulationTick) {
               fc.a((byte) 101, 69, -1);
-              if (this.field_C.i(16, -27)) {
-                var7 = new je(5, this.field_u.field_Bb, var5_int);
+              if (this.controlledSentinel.hasModuleType(16, -27)) {
+                var7 = new SentinelCommand(5, this.field_u.playerId, var5_int);
                 var7.field_y = param1;
                 var7.field_u = param3;
                 if (this.field_d) {
                   mm.field_g.a(64, (byte) -117);
                   mm.field_g.a((byte) 126, 5);
-                  mm.field_g.a((byte) 112, this.field_u.field_Bb);
+                  mm.field_g.a((byte) 112, this.field_u.playerId);
                   mm.field_g.b(true, var5_int);
                   mm.field_g.b(true, 0);
                   mm.field_g.b(true, 0);
@@ -11644,8 +11644,8 @@ final class nb {
                   var7.field_p = true;
                 }
                 if (di.field_g != -1 ||
-                  1 != this.field_X.field_c) {
-                  this.field_C.field_B.a(3, var7);
+                  1 != this.world.field_c) {
+                  this.controlledSentinel.pendingCommands.addLast(3, var7);
                 }
                 fc.a((byte) 59, 26, -1);
               }
@@ -11656,13 +11656,13 @@ final class nb {
             if (param2 == 2 &&
               lb.field_gc == 2 &&
               tj.field_a) {
-              var5_intLifetime3 = this.field_X.field_r + vk.field_h[this.field_X.field_c];
-              var6_ref_jeLifetime2 = (je) (this.field_C.field_B.b(1063677678));
+              var5_intLifetime3 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var6_ref_jeLifetime2 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
               if (null != var6_ref_jeLifetime2 &&
-                var6_ref_jeLifetime2.field_r > var5_intLifetime3) {
-                var5_intLifetime3 = var6_ref_jeLifetime2.field_r;
+                var6_ref_jeLifetime2.endTick > var5_intLifetime3) {
+                var5_intLifetime3 = var6_ref_jeLifetime2.endTick;
               }
-              var7Lifetime3 = new je(12, 0, var5_intLifetime3);
+              var7Lifetime3 = new SentinelCommand(12, 0, var5_intLifetime3);
               if (!this.field_d) {
                 var7Lifetime3.field_p = true;
                 if (var20 != 0) {
@@ -11684,32 +11684,32 @@ final class nb {
                 mm.field_g.b(true, 0);
               }
               if (di.field_g != -1 ||
-                this.field_X.field_c != 1) {
-                this.field_C.field_B.a(3, var7Lifetime3);
+                this.world.field_c != 1) {
+                this.controlledSentinel.pendingCommands.addLast(3, var7Lifetime3);
               }
               if ((var20 != 0) && (param2 == 2 &&
                 null != this.field_u)) {
-                var5_intLifetime3 = this.field_X.field_r + vk.field_h[this.field_X.field_c];
-                var6_ref_jeLifetime2 = (je) (this.field_C.field_B.b(1063677678));
+                var5_intLifetime3 = this.world.simulationTick + vk.field_h[this.world.field_c];
+                var6_ref_jeLifetime2 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
                 if (var6_ref_jeLifetime2 != null &&
-                  var6_ref_jeLifetime2.field_r > var5_intLifetime3) {
-                  var5_intLifetime3 = var6_ref_jeLifetime2.field_r;
+                  var6_ref_jeLifetime2.endTick > var5_intLifetime3) {
+                  var5_intLifetime3 = var6_ref_jeLifetime2.endTick;
                 }
-                if (var5_intLifetime3 < kh.field_x + this.field_X.field_r) {
-                  qg.field_n = new je(5, this.field_u.field_Bb, var5_intLifetime3);
+                if (var5_intLifetime3 < kh.field_x + this.world.simulationTick) {
+                  qg.field_n = new SentinelCommand(5, this.field_u.playerId, var5_intLifetime3);
                 }
               }
             } else {
               if (param2 == 2 &&
                 null != this.field_u) {
-                var5_intLifetime3 = this.field_X.field_r + vk.field_h[this.field_X.field_c];
-                var6_ref_jeLifetime2 = (je) (this.field_C.field_B.b(1063677678));
+                var5_intLifetime3 = this.world.simulationTick + vk.field_h[this.world.field_c];
+                var6_ref_jeLifetime2 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
                 if (var6_ref_jeLifetime2 != null &&
-                  var6_ref_jeLifetime2.field_r > var5_intLifetime3) {
-                  var5_intLifetime3 = var6_ref_jeLifetime2.field_r;
+                  var6_ref_jeLifetime2.endTick > var5_intLifetime3) {
+                  var5_intLifetime3 = var6_ref_jeLifetime2.endTick;
                 }
-                if (var5_intLifetime3 < kh.field_x + this.field_X.field_r) {
-                  qg.field_n = new je(5, this.field_u.field_Bb, var5_intLifetime3);
+                if (var5_intLifetime3 < kh.field_x + this.world.simulationTick) {
+                  qg.field_n = new SentinelCommand(5, this.field_u.playerId, var5_intLifetime3);
                 }
               }
             }
@@ -11717,35 +11717,35 @@ final class nb {
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder5 = true;
           boolean decompiledFrameRemainder4 = true;
-          if (null != this.field_C) {
+          if (null != this.controlledSentinel) {
             if ((1 != lb.field_gc) &&
               (decompiledFrameRemainder4 = (0 != (1 & sf.field_d))) &&
               (decompiledFrameRemainder4 = !(vd.field_b))) {
               decompiledFrameRemainder4 = !(0 < um.field_X);
             }
             if ((decompiledFrameRemainder4) && (this.field_F >= 0 &&
-              this.field_C.field_Xb.length > this.field_F && (ad.field_e ||
-              !(this.field_C.field_Mb[this.field_F] > 0)) && 0 == param2 && (di.field_g != 0 ||
+              this.controlledSentinel.field_Xb.length > this.field_F && (ad.field_e ||
+              !(this.controlledSentinel.field_Mb[this.field_F] > 0)) && 0 == param2 && (di.field_g != 0 ||
               !(qh.field_Yb < 8)) && (3 != di.field_g ||
               !(5 > qh.field_Yb)))) {
-              var5_intLifetime1 = this.field_X.field_r + vk.field_h[this.field_X.field_c];
-              var6_ref_jeLifetime1 = (je) (this.field_C.field_B.b(param0 ^ -1063678615));
+              var5_intLifetime1 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var6_ref_jeLifetime1 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(param0 ^ -1063678615));
               if (null != var6_ref_jeLifetime1 &&
-                var5_intLifetime1 < var6_ref_jeLifetime1.field_r) {
-                var5_intLifetime1 = var6_ref_jeLifetime1.field_r;
+                var5_intLifetime1 < var6_ref_jeLifetime1.endTick) {
+                var5_intLifetime1 = var6_ref_jeLifetime1.endTick;
               }
-              if (this.field_X.field_r + kh.field_x > var5_intLifetime1 &&
-                this.field_C.field_Xb.length > 0 && ((0 <= this.field_C.field_ub &&
-                (this.field_C.field_Tb > 0 ||
-                this.field_C.field_ub != 0) ||
-                !c.a((byte) -56, this.field_C.field_Xb[this.field_F])) &&
-                (this.field_C.field_Xb[this.field_F] != 8 ||
-                !(this.field_C.field_Tb < 1)))) {
-                var7Lifetime1 = new je(0, this.field_C.field_Xb[this.field_F], var5_intLifetime1);
+              if (this.world.simulationTick + kh.field_x > var5_intLifetime1 &&
+                this.controlledSentinel.field_Xb.length > 0 && ((0 <= this.controlledSentinel.field_ub &&
+                (this.controlledSentinel.charge > 0 ||
+                this.controlledSentinel.field_ub != 0) ||
+                !c.a((byte) -56, this.controlledSentinel.field_Xb[this.field_F])) &&
+                (this.controlledSentinel.field_Xb[this.field_F] != 8 ||
+                !(this.controlledSentinel.charge < 1)))) {
+                var7Lifetime1 = new SentinelCommand(0, this.controlledSentinel.field_Xb[this.field_F], var5_intLifetime1);
                 var7Lifetime1.field_u = param3;
                 var7Lifetime1.field_y = param1;
                 var8_int = (km.field_c >> 8) - (this.field_P >> 4);
-                var9 = 400 + (-(this.field_E >> 4) + (dl.field_G - this.field_C.field_Db * 8 >> 8));
+                var9 = 400 + (-(this.field_E >> 4) + (dl.field_G - this.controlledSentinel.field_Db * 8 >> 8));
                 if (var8_int < 0) {
                   var8_int = 48;
                 }
@@ -11772,8 +11772,8 @@ final class nb {
                   bj.field_h = 1;
                 }
                 var12 = 0L;
-                if (this.field_C.field_Lb &&
-                  !this.field_C.i(31, param0 + 7262)) {
+                if (this.controlledSentinel.field_Lb &&
+                  !this.controlledSentinel.hasModuleType(31, param0 + 7262)) {
                   stackIn_186_0 = 0;
                 } else {
                   stackIn_186_0 = 1;
@@ -11781,29 +11781,29 @@ final class nb {
                 var14 = stackIn_186_0;
                 var15 = 0;
                 while (true) {
-                  if (var15 < this.field_C.field_gb.length) {
-                    var16_ref_nk = this.field_C.field_gb[var15];
-                    stackIn_214_0 = ja.a(var16_ref_nk.field_N, false);
-                    stackIn_214_1 = this.field_C.field_Xb[this.field_F];
+                  if (var15 < this.controlledSentinel.weaponParts.length) {
+                    var16_ref_nk = this.controlledSentinel.weaponParts[var15];
+                    stackIn_214_0 = ja.a(var16_ref_nk.componentId, false);
+                    stackIn_214_1 = this.controlledSentinel.field_Xb[this.field_F];
                     if (var20 == 0) {
                       if (stackIn_214_0 == stackIn_214_1 && (var14 != 0 ||
-                        !bi.b(-69, var16_ref_nk.field_N))) {
+                        !bi.b(-69, var16_ref_nk.componentId))) {
                         var12 = var12 | 1L << var15;
                       }
                       var15++;
                       continue;
                     }
                   } else {
-                    this.field_C.field_Zb.b((byte) -128, 0, bj.field_h, 0);
+                    this.controlledSentinel.chassis.b((byte) -128, 0, bj.field_h, 0);
                     if (var12 != 0L) {
                       var15 = 0;
                       var16_int = 0;
                       while (true) {
-                        if (this.field_C.field_gb.length > var16_int) {
+                        if (this.controlledSentinel.weaponParts.length > var16_int) {
                           stackIn_212_0 = $cfr$lcmp(~(1L << var16_int & var12), -1L);
                           if (var20 == 0) {
                             if (stackIn_212_0 != 0) {
-                              var15 = var15 + this.field_C.field_gb[var16_int].field_V;
+                              var15 = var15 + this.controlledSentinel.weaponParts[var16_int].field_V;
                             }
                             var16_int++;
                             continue;
@@ -11880,7 +11880,7 @@ final class nb {
                   if (this.field_d) {
                     mm.field_g.a(64, (byte) -117);
                     mm.field_g.a((byte) 123, 0);
-                    mm.field_g.a((byte) 112, this.field_C.field_Xb[this.field_F]);
+                    mm.field_g.a((byte) 112, this.controlledSentinel.field_Xb[this.field_F]);
                     mm.field_g.b(true, var5_intLifetime1);
                     mm.field_g.b(true, var7Lifetime1.field_u);
                     mm.field_g.b(true, var7Lifetime1.field_y);
@@ -11893,11 +11893,11 @@ final class nb {
                   }
                   fc.a((byte) -83, 69, -1);
                   if (-1 != di.field_g ||
-                    this.field_X.field_c != 1) {
-                    this.field_C.field_B.a(3, var7Lifetime1);
+                    this.world.field_c != 1) {
+                    this.controlledSentinel.pendingCommands.addLast(3, var7Lifetime1);
                   }
-                  var17 = -var7Lifetime1.field_x + var7Lifetime1.field_r;
-                  this.field_C.field_Mb[this.field_F] = this.field_C.field_Mb[this.field_F] + var17;
+                  var17 = -var7Lifetime1.startTick + var7Lifetime1.endTick;
+                  this.controlledSentinel.field_Mb[this.field_F] = this.controlledSentinel.field_Mb[this.field_F] + var17;
                   um.field_X = um.field_X + var17;
                   break;
                 }
@@ -11907,18 +11907,18 @@ final class nb {
           }
           if ((decompiledFrameRemainder5) &&
             (param2 == 0)) {
-            var5_intLifetime1Lifetime1 = this.field_X.field_r + vk.field_h[this.field_X.field_c];
-            var6_ref_jeLifetime1Lifetime1 = (je) (this.field_C.field_B.b(1063677678));
+            var5_intLifetime1Lifetime1 = this.world.simulationTick + vk.field_h[this.world.field_c];
+            var6_ref_jeLifetime1Lifetime1 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
             if (null != var6_ref_jeLifetime1Lifetime1 &&
-              var5_intLifetime1Lifetime1 < var6_ref_jeLifetime1Lifetime1.field_r) {
-              var5_intLifetime1Lifetime1 = var6_ref_jeLifetime1Lifetime1.field_r;
+              var5_intLifetime1Lifetime1 < var6_ref_jeLifetime1Lifetime1.endTick) {
+              var5_intLifetime1Lifetime1 = var6_ref_jeLifetime1Lifetime1.endTick;
             }
             boolean decompiledFrameRemainder3 = true;
             var7_int = 0;
-            if (0 != this.field_C.field_Xb.length) {
+            if (0 != this.controlledSentinel.field_Xb.length) {
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameRemainder1 = true;
-              var8_intLifetime1 = this.field_C.field_Xb[this.field_F];
+              var8_intLifetime1 = this.controlledSentinel.field_Xb[this.field_F];
               if ((7 != var8_intLifetime1 && ((var8_intLifetime1 != 0 ||
                 var20 != 0) &&
                 (8 != var8_intLifetime1 ||
@@ -11929,13 +11929,13 @@ final class nb {
               }
               if ((decompiledFrameRemainder2) &&
                 (decompiledFrameRemainder1)) {
-                stackIn_303_0 = (this.field_C.field_Vb == null) ? 4 : 14;
+                stackIn_303_0 = (this.controlledSentinel.field_Vb == null) ? 4 : 14;
                 var7_int = stackIn_303_0;
                 decompiledFrameRemainder3 = (var20 != 0);
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2)) {
-                stackIn_310_0 = (this.field_C.field_Vb != null) ? 12 : 10;
+                stackIn_310_0 = (this.controlledSentinel.field_Vb != null) ? 12 : 10;
                 var7_int = stackIn_310_0;
                 decompiledFrameRemainder3 = (var20 != 0);
               }
@@ -11948,27 +11948,27 @@ final class nb {
             } else {
               var7_int = 0;
             }
-            if (var5_intLifetime1Lifetime1 < (this.field_X.field_r + 500) &&
-              null != this.field_C &&
-              this.field_C.field_Xb.length > 0) {
-              if (this.field_F >= this.field_C.field_Xb.length) {
+            if (var5_intLifetime1Lifetime1 < (this.world.simulationTick + 500) &&
+              null != this.controlledSentinel &&
+              this.controlledSentinel.field_Xb.length > 0) {
+              if (this.field_F >= this.controlledSentinel.field_Xb.length) {
                 this.field_F = 0;
               }
               if (null != qg.field_n &&
-                qg.field_n.field_s == 0 &&
-                ~qg.field_n.field_A == ~this.field_C.field_Xb[this.field_F]) {
-                qg.field_n.field_r = var5_intLifetime1Lifetime1 - (-qg.field_n.field_r + qg.field_n.field_x);
-                qg.field_n.field_x = var5_intLifetime1Lifetime1;
+                qg.field_n.actionType == 0 &&
+                ~qg.field_n.actionVariant == ~this.controlledSentinel.field_Xb[this.field_F]) {
+                qg.field_n.endTick = var5_intLifetime1Lifetime1 - (-qg.field_n.endTick + qg.field_n.startTick);
+                qg.field_n.startTick = var5_intLifetime1Lifetime1;
                 if (var20 != 0) {
-                  qg.field_n = new je(0, this.field_C.field_Xb[this.field_F], var5_intLifetime1Lifetime1);
+                  qg.field_n = new SentinelCommand(0, this.controlledSentinel.field_Xb[this.field_F], var5_intLifetime1Lifetime1);
                 }
               } else {
-                qg.field_n = new je(0, this.field_C.field_Xb[this.field_F], var5_intLifetime1Lifetime1);
+                qg.field_n = new SentinelCommand(0, this.controlledSentinel.field_Xb[this.field_F], var5_intLifetime1Lifetime1);
               }
               qg.field_n.field_u = param3;
               qg.field_n.field_y = param1;
               var8_intLifetime1Lifetime1 = (km.field_c >> 8) - (this.field_P >> 4);
-              var9Lifetime1 = -(this.field_E >> 4) + (400 + (dl.field_G - this.field_C.field_Db * 8 >> 8));
+              var9Lifetime1 = -(this.field_E >> 4) + (400 + (dl.field_G - this.controlledSentinel.field_Db * 8 >> 8));
               if (var8_intLifetime1Lifetime1 < 0) {
                 var8_intLifetime1Lifetime1 = 48;
               }
@@ -11995,39 +11995,39 @@ final class nb {
                 bj.field_h = 1;
               }
               var12Lifetime1 = 0L;
-              if (this.field_C.field_Lb &&
-                !this.field_C.i(31, -27)) {
+              if (this.controlledSentinel.field_Lb &&
+                !this.controlledSentinel.hasModuleType(31, -27)) {
                 stackIn_368_0 = 0;
               } else {
                 stackIn_368_0 = 1;
               }
               var14Lifetime1 = stackIn_368_0;
               var15Lifetime1 = 0;
-              while (this.field_C.field_gb.length > var15Lifetime1) {
-                var16_ref_nkLifetime1 = this.field_C.field_gb[var15Lifetime1];
-                stackIn_471_0 = ja.a(var16_ref_nkLifetime1.field_N, false);
-                stackIn_471_1 = qg.field_n.field_A;
+              while (this.controlledSentinel.weaponParts.length > var15Lifetime1) {
+                var16_ref_nkLifetime1 = this.controlledSentinel.weaponParts[var15Lifetime1];
+                stackIn_471_0 = ja.a(var16_ref_nkLifetime1.componentId, false);
+                stackIn_471_1 = qg.field_n.actionVariant;
                 if (var20 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
                 if (stackIn_471_0 == stackIn_471_1 &&
                   0 >= var16_ref_nkLifetime1.field_C && (var14Lifetime1 != 0 ||
-                  !bi.b(110, var16_ref_nkLifetime1.field_N))) {
+                  !bi.b(110, var16_ref_nkLifetime1.componentId))) {
                   var12Lifetime1 = var12Lifetime1 | 1L << var15Lifetime1;
                 }
                 var15Lifetime1++;
               }
               if (decompiledFrameCompleted0) {
-                this.field_C.field_Zb.b((byte) -128, 0, bj.field_h, 0);
+                this.controlledSentinel.chassis.b((byte) -128, 0, bj.field_h, 0);
                 var15Lifetime1Lifetime1 = 0;
                 var16_intLifetime1 = 0;
                 while (true) {
-                  if (this.field_C.field_gb.length > var16_intLifetime1) {
+                  if (this.controlledSentinel.weaponParts.length > var16_intLifetime1) {
                     stackIn_394_0 = $cfr$lcmp(-1L, ~(1L << var16_intLifetime1 & var12Lifetime1));
                     if (var20 == 0) {
                       if (stackIn_394_0 != 0) {
-                        var15Lifetime1Lifetime1 = var15Lifetime1Lifetime1 + this.field_C.field_gb[var16_intLifetime1].field_V;
+                        var15Lifetime1Lifetime1 = var15Lifetime1Lifetime1 + this.controlledSentinel.weaponParts[var16_intLifetime1].field_V;
                       }
                       var16_intLifetime1++;
                       continue;
@@ -12083,7 +12083,7 @@ final class nb {
                   }
                 }
                 var18 = 0;
-                if (this.field_X.field_r + kh.field_x <= var5_intLifetime1Lifetime1) {
+                if (this.world.simulationTick + kh.field_x <= var5_intLifetime1Lifetime1) {
                   var18 = 1;
                 }
                 if (0L == var12Lifetime1) {
@@ -12093,16 +12093,16 @@ final class nb {
                 }
                 if (0L != var12Lifetime1 ||
                   var20 != 0) {
-                  if (this.field_C.field_ub >= 0 && (this.field_C.field_Tb != 0 ||
-                    this.field_C.field_ub != 0)) {
-                    if (this.field_C.field_Xb[this.field_F] != 8 ||
-                      !(this.field_C.field_Tb < 1)) {
+                  if (this.controlledSentinel.field_ub >= 0 && (this.controlledSentinel.charge != 0 ||
+                    this.controlledSentinel.field_ub != 0)) {
+                    if (this.controlledSentinel.field_Xb[this.field_F] != 8 ||
+                      !(this.controlledSentinel.charge < 1)) {
                       if ((ml.field_f[Math.max(0, qg.field_n.field_B * bj.field_h >> 8)] == 0) &&
                         (0 == hf.field_c)) {
                         var18 = 1;
                         if (var20 != 0) {
                           var18 = 1;
-                          var19 = this.field_C.field_Xb[this.field_F];
+                          var19 = this.controlledSentinel.field_Xb[this.field_F];
                           if (c.a((byte) -119, var19)) {
                             var18 = 1;
                           }
@@ -12111,14 +12111,14 @@ final class nb {
                     } else {
                       var18 = 1;
                       if (var20 != 0) {
-                        var19 = this.field_C.field_Xb[this.field_F];
+                        var19 = this.controlledSentinel.field_Xb[this.field_F];
                         if (c.a((byte) -119, var19)) {
                           var18 = 1;
                         }
                       }
                     }
                   } else {
-                    var19 = this.field_C.field_Xb[this.field_F];
+                    var19 = this.controlledSentinel.field_Xb[this.field_F];
                     if (c.a((byte) -119, var19)) {
                       var18 = 1;
                     }
@@ -12178,17 +12178,17 @@ final class nb {
           if (lb.field_gc == 1 &&
             param2 == 1 &&
             var5_intLifetime2 == 0 ||
-            ie.field_c &&
+            IsaacRandom.field_c &&
             var5_intLifetime2 == 0 &&
             param2 != -1) {
-            var6 = vk.field_h[this.field_X.field_c] + this.field_X.field_r;
-            var7Lifetime2 = (je) (this.field_C.field_Ec.b(1063677678));
+            var6 = vk.field_h[this.world.field_c] + this.world.simulationTick;
+            var7Lifetime2 = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
             if (null != var7Lifetime2 &&
-              var6 < var7Lifetime2.field_r) {
-              var6 = var7Lifetime2.field_r;
+              var6 < var7Lifetime2.endTick) {
+              var6 = var7Lifetime2.endTick;
             }
-            if (500 + this.field_X.field_r > var6) {
-              var8 = new je(3, 0, var6);
+            if (500 + this.world.simulationTick > var6) {
+              var8 = new SentinelCommand(3, 0, var6);
               var8.field_u = param3;
               var8.field_y = param1;
               if (!this.b(param0 ^ 2756, param3, param1)) {
@@ -12208,37 +12208,37 @@ final class nb {
                 }
                 fc.a((byte) 67, 69, -1);
                 if (di.field_g != -1 ||
-                  1 != this.field_X.field_c) {
-                  this.field_C.field_Ec.a(3, var8);
+                  1 != this.world.field_c) {
+                  this.controlledSentinel.secondaryCommands.addLast(3, var8);
                 }
               }
             }
             if ((var20 != 0) &&
               (param2 == 1)) {
-              var6 = this.field_X.field_r + vk.field_h[this.field_X.field_c];
-              var7Lifetime2 = (je) (this.field_C.field_Ec.b(1063677678));
+              var6 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var7Lifetime2 = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
               if (var7Lifetime2 != null &&
-                var7Lifetime2.field_r > var6) {
-                var6 = var7Lifetime2.field_r;
+                var7Lifetime2.endTick > var6) {
+                var6 = var7Lifetime2.endTick;
               }
-              if ((500 + this.field_X.field_r) > var6 &&
+              if ((500 + this.world.simulationTick) > var6 &&
                 !this.b(-5821, param3, param1)) {
-                qg.field_n = new je(3, 0, var6);
+                qg.field_n = new SentinelCommand(3, 0, var6);
                 qg.field_n.field_y = param1;
                 qg.field_n.field_u = param3;
               }
             }
           } else {
             if (param2 == 1) {
-              var6 = this.field_X.field_r + vk.field_h[this.field_X.field_c];
-              var7Lifetime2 = (je) (this.field_C.field_Ec.b(1063677678));
+              var6 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var7Lifetime2 = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
               if (var7Lifetime2 != null &&
-                var7Lifetime2.field_r > var6) {
-                var6 = var7Lifetime2.field_r;
+                var7Lifetime2.endTick > var6) {
+                var6 = var7Lifetime2.endTick;
               }
-              if ((500 + this.field_X.field_r) > var6 &&
+              if ((500 + this.world.simulationTick) > var6 &&
                 !this.b(-5821, param3, param1)) {
-                qg.field_n = new je(3, 0, var6);
+                qg.field_n = new SentinelCommand(3, 0, var6);
                 qg.field_n.field_y = param1;
                 qg.field_n.field_u = param3;
               }
@@ -12254,14 +12254,14 @@ final class nb {
             if (fc.field_e[83]) {
               return;
             }
-            ie.field_c = false;
+            IsaacRandom.field_c = false;
             if (var20 == 0) {
               return;
             }
           }
           if (!fc.field_e[fm.field_d] &&
             !fc.field_e[83]) {
-            ie.field_c = false;
+            IsaacRandom.field_c = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -12279,24 +12279,24 @@ final class nb {
         int var3 = 0;
         int var4 = 0;
         int var5_int = 0;
-        je var5 = null;
+        SentinelCommand var5 = null;
         int var6 = 0;
-        je var6_ref_je = null;
+        SentinelCommand var6_ref_je = null;
         int var7_int = 0;
-        je var7 = null;
+        SentinelCommand var7 = null;
         ne var8 = null;
         int var9 = 0;
-        je var5Lifetime1;
-        je var5Lifetime2;
-        je var5Lifetime3;
-        je var5Lifetime4;
-        je var5Lifetime5;
-        je var6_ref_jeLifetime1;
-        je var7Lifetime1;
-        je var7Lifetime2;
-        je var7Lifetime3;
-        je var7Lifetime4;
-        je var7Lifetime1Lifetime1;
+        SentinelCommand var5Lifetime1;
+        SentinelCommand var5Lifetime2;
+        SentinelCommand var5Lifetime3;
+        SentinelCommand var5Lifetime4;
+        SentinelCommand var5Lifetime5;
+        SentinelCommand var6_ref_jeLifetime1;
+        SentinelCommand var7Lifetime1;
+        SentinelCommand var7Lifetime2;
+        SentinelCommand var7Lifetime3;
+        SentinelCommand var7Lifetime4;
+        SentinelCommand var7Lifetime1Lifetime1;
         int var2_intLifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
@@ -12309,20 +12309,20 @@ final class nb {
         int var6Lifetime2;
         int var6Lifetime3;
         int var6Lifetime4;
-        var9 = SteelSentinels.field_G;
+        var9 = SteelSentinels.obfuscationControl;
         try {
           if (ei.field_q == 13 && (di.field_g != 10 ||
             !(nc.field_a >= 0) ||
             ge.field_j != 0 ||
             ol.field_Ub != 9 ||
             !ni.b(55))) {
-            ee.c(-2483, 84);
+            CombatWorld.c(-2483, 84);
             var2_int = 1;
             if (this.field_d) {
               if (ed.field_j < 0) {
                 var2_int = 4;
                 if (var9 != 0) {
-                  if (this.field_X.field_j) {
+                  if (this.world.field_j) {
                     var2_int = 3;
                     var2_int = 2;
                   } else {
@@ -12330,7 +12330,7 @@ final class nb {
                   }
                 }
               } else {
-                if (this.field_X.field_j) {
+                if (this.world.field_j) {
                   var2_int = 3;
                   if (var9 != 0) {
                     var2_int = 2;
@@ -12342,12 +12342,12 @@ final class nb {
             }
             var3 = var2_int;
             q.a(var3, false, -1, 0);
-            ea.field_k = true;
+            Sprite.field_k = true;
             return;
           }
           if (fc.field_e[86] &&
             ei.field_q == 84 &&
-            nk.f((byte) -76)) {
+            ArticulatedPart.f((byte) -76)) {
             if (wb.field_c != null) {
               ub.c(0);
               if (var9 != 0) {
@@ -12359,12 +12359,12 @@ final class nb {
               ag.a(-4, false);
             }
           }
-          if (this.field_X.field_r < this.field_w) {
+          if (this.world.simulationTick < this.field_w) {
             return;
           }
           var2_intLifetime1 = -127 / ((param0 + 29) / 46);
-          if (this.field_C != null &&
-            !this.field_X.field_j) {
+          if (this.controlledSentinel != null &&
+            !this.world.field_j) {
             var3Lifetime1 = 0;
             if (ln.field_d == ei.field_q &&
               0 != di.field_g) {
@@ -12385,8 +12385,8 @@ final class nb {
               this.field_F = -16 + ei.field_q;
               var3Lifetime1 = 1;
             }
-            if (this.field_F >= this.field_C.field_Xb.length) {
-              this.field_F = -1 + this.field_C.field_Xb.length;
+            if (this.field_F >= this.controlledSentinel.field_Xb.length) {
+              this.field_F = -1 + this.controlledSentinel.field_Xb.length;
             }
             if (ei.field_q != 85 &&
               ei.field_q == 101) {
@@ -12395,7 +12395,7 @@ final class nb {
               !(qh.field_Yb < 5))) {
               rc.field_l = 100;
             }
-            if (0 < ul.field_d && (ei.field_q == 41 ||
+            if (0 < NodeDeque.field_d && (ei.field_q == 41 ||
               ei.field_q == 40 ||
               ei.field_q == 56 ||
               ei.field_q == 55) && di.field_g == 4) {
@@ -12443,10 +12443,10 @@ final class nb {
               }
               if (var6 <= fg.field_Xb.length) {
                 var7_int = fg.field_Xb[var6];
-                var8 = new ne(this.field_X, var7_int);
+                var8 = new ne(this.world, var7_int);
                 var8.field_I = var5_int;
                 var8.field_z = var4;
-                this.field_X.field_e.a(3, var8);
+                this.world.field_e.addLast(3, var8);
               }
             }
             boolean decompiledFrameRemainder2 = true;
@@ -12456,25 +12456,25 @@ final class nb {
               decompiledFrameRemainder2 = (ei.field_q == sa.field_c);
             }
             if (decompiledFrameRemainder2) {
-              var4Lifetime1 = this.field_X.field_r + vk.field_h[this.field_X.field_c];
-              var5 = (je) (this.field_C.field_Ec.b(1063677678));
+              var4Lifetime1 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var5 = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
               var6Lifetime1 = 0;
               if (var5 != null) {
-                if (var5.field_r > var4Lifetime1) {
-                  var4Lifetime1 = var5.field_r;
+                if (var5.endTick > var4Lifetime1) {
+                  var4Lifetime1 = var5.endTick;
                 }
-                if (var5.field_s == 6 &&
-                  var5.field_A == -1) {
-                  var7 = (je) (this.field_C.field_B.b(1063677678));
+                if (var5.actionType == 6 &&
+                  var5.actionVariant == -1) {
+                  var7 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
                   if (null == var7 ||
-                    !(var7.field_r >= var5.field_r)) {
+                    !(var7.endTick >= var5.endTick)) {
                     var6Lifetime1 = 1;
                   }
                 }
               }
-              if (500 + this.field_X.field_r > var4Lifetime1 &&
+              if (500 + this.world.simulationTick > var4Lifetime1 &&
                 var6Lifetime1 == 0) {
-                var7Lifetime4 = new je(6, -1, var4Lifetime1);
+                var7Lifetime4 = new SentinelCommand(6, -1, var4Lifetime1);
                 if (!this.field_d) {
                   var7Lifetime4.field_p = true;
                   if (var9 != 0) {
@@ -12496,8 +12496,8 @@ final class nb {
                   mm.field_g.b(true, 0);
                 }
                 if (di.field_g != -1 ||
-                  1 != this.field_X.field_c) {
-                  this.field_C.field_Ec.a(3, var7Lifetime4);
+                  1 != this.world.field_c) {
+                  this.controlledSentinel.secondaryCommands.addLast(3, var7Lifetime4);
                 }
               }
             }
@@ -12508,25 +12508,25 @@ final class nb {
               decompiledFrameRemainder1 = (~on.field_h == ~ei.field_q);
             }
             if (decompiledFrameRemainder1) {
-              var4Lifetime2 = this.field_X.field_r + vk.field_h[this.field_X.field_c];
-              var5Lifetime1 = (je) (this.field_C.field_Ec.b(1063677678));
+              var4Lifetime2 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var5Lifetime1 = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
               var6Lifetime2 = 0;
               if (var5Lifetime1 != null) {
-                if (var5Lifetime1.field_r > var4Lifetime2) {
-                  var4Lifetime2 = var5Lifetime1.field_r;
+                if (var5Lifetime1.endTick > var4Lifetime2) {
+                  var4Lifetime2 = var5Lifetime1.endTick;
                 }
-                if (var5Lifetime1.field_s == 6 &&
-                  1 == var5Lifetime1.field_A) {
-                  var7Lifetime1 = (je) (this.field_C.field_B.b(1063677678));
+                if (var5Lifetime1.actionType == 6 &&
+                  1 == var5Lifetime1.actionVariant) {
+                  var7Lifetime1 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
                   if (null == var7Lifetime1 ||
-                    !(var7Lifetime1.field_r >= var5Lifetime1.field_r)) {
+                    !(var7Lifetime1.endTick >= var5Lifetime1.endTick)) {
                     var6Lifetime2 = 1;
                   }
                 }
               }
-              if (500 + this.field_X.field_r > var4Lifetime2 &&
+              if (500 + this.world.simulationTick > var4Lifetime2 &&
                 var6Lifetime2 == 0) {
-                var7Lifetime1Lifetime1 = new je(6, 1, var4Lifetime2);
+                var7Lifetime1Lifetime1 = new SentinelCommand(6, 1, var4Lifetime2);
                 if (this.field_d) {
                   mm.field_g.a(64, (byte) -117);
                   mm.field_g.a((byte) 110, 6);
@@ -12542,8 +12542,8 @@ final class nb {
                   var7Lifetime1Lifetime1.field_p = true;
                 }
                 if (di.field_g != -1 ||
-                  this.field_X.field_c != 1) {
-                  this.field_C.field_Ec.a(3, var7Lifetime1Lifetime1);
+                  this.world.field_c != 1) {
+                  this.controlledSentinel.secondaryCommands.addLast(3, var7Lifetime1Lifetime1);
                 }
               }
             }
@@ -12553,21 +12553,21 @@ final class nb {
               decompiledFrameRemainder0 = (~pd.field_V == ~ei.field_q);
             }
             if (decompiledFrameRemainder0) {
-              var4Lifetime3 = this.field_X.field_r + vk.field_h[this.field_X.field_c];
-              var5Lifetime2 = (je) (this.field_C.field_Ec.b(1063677678));
+              var4Lifetime3 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var5Lifetime2 = (SentinelCommand) (this.controlledSentinel.secondaryCommands.b(1063677678));
               var6Lifetime3 = 0;
               if (null != var5Lifetime2) {
-                if (var5Lifetime2.field_r > var4Lifetime3) {
-                  var4Lifetime3 = var5Lifetime2.field_r;
+                if (var5Lifetime2.endTick > var4Lifetime3) {
+                  var4Lifetime3 = var5Lifetime2.endTick;
                 }
-                if (var5Lifetime2.field_s == 6 &&
-                  var5Lifetime2.field_A == 0) {
+                if (var5Lifetime2.actionType == 6 &&
+                  var5Lifetime2.actionVariant == 0) {
                   var6Lifetime3 = 1;
                 }
               }
-              if (var4Lifetime3 < (this.field_X.field_r + 500) &&
+              if (var4Lifetime3 < (this.world.simulationTick + 500) &&
                 var6Lifetime3 == 0) {
-                var7Lifetime2 = new je(6, 0, var4Lifetime3);
+                var7Lifetime2 = new SentinelCommand(6, 0, var4Lifetime3);
                 if (this.field_d) {
                   mm.field_g.a(64, (byte) -117);
                   mm.field_g.a((byte) 115, 6);
@@ -12583,27 +12583,27 @@ final class nb {
                   var7Lifetime2.field_p = true;
                 }
                 if (di.field_g != -1 ||
-                  this.field_X.field_c != 1) {
-                  this.field_C.field_Ec.a(3, var7Lifetime2);
+                  this.world.field_c != 1) {
+                  this.controlledSentinel.secondaryCommands.addLast(3, var7Lifetime2);
                 }
               }
             }
             if (na.field_b == ei.field_q &&
-              this.field_C.field_fb != 0) {
-              var4Lifetime4 = vk.field_h[this.field_X.field_c] + this.field_X.field_r;
-              var5Lifetime3 = (je) (this.field_C.field_B.b(1063677678));
+              this.controlledSentinel.field_fb != 0) {
+              var4Lifetime4 = vk.field_h[this.world.field_c] + this.world.simulationTick;
+              var5Lifetime3 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
               if (var5Lifetime3 != null &&
-                var4Lifetime4 < var5Lifetime3.field_r) {
-                var4Lifetime4 = var5Lifetime3.field_r;
+                var4Lifetime4 < var5Lifetime3.endTick) {
+                var4Lifetime4 = var5Lifetime3.endTick;
               }
-              if (500 + this.field_X.field_r > var4Lifetime4) {
-                var6_ref_je = new je(7, this.field_C.field_fb, var4Lifetime4);
+              if (500 + this.world.simulationTick > var4Lifetime4) {
+                var6_ref_je = new SentinelCommand(7, this.controlledSentinel.field_fb, var4Lifetime4);
                 if (!this.field_d) {
                   var6_ref_je.field_p = true;
                   if (var9 != 0) {
                     mm.field_g.a(64, (byte) -117);
                     mm.field_g.a((byte) 112, 7);
-                    mm.field_g.a((byte) 120, this.field_C.field_fb);
+                    mm.field_g.a((byte) 120, this.controlledSentinel.field_fb);
                     mm.field_g.b(true, var4Lifetime4);
                     mm.field_g.b(true, 0);
                     mm.field_g.b(true, 0);
@@ -12612,28 +12612,28 @@ final class nb {
                 } else {
                   mm.field_g.a(64, (byte) -117);
                   mm.field_g.a((byte) 112, 7);
-                  mm.field_g.a((byte) 120, this.field_C.field_fb);
+                  mm.field_g.a((byte) 120, this.controlledSentinel.field_fb);
                   mm.field_g.b(true, var4Lifetime4);
                   mm.field_g.b(true, 0);
                   mm.field_g.b(true, 0);
                   mm.field_g.b(true, 0);
                 }
                 if (-1 != di.field_g ||
-                  1 != this.field_X.field_c) {
-                  this.field_C.field_B.a(3, var6_ref_je);
+                  1 != this.world.field_c) {
+                  this.controlledSentinel.pendingCommands.addLast(3, var6_ref_je);
                 }
               }
             }
             if (ff.field_nb == ei.field_q &&
-              this.field_C.i(15, -27)) {
-              var4Lifetime5 = this.field_X.field_r + vk.field_h[this.field_X.field_c];
-              var5Lifetime4 = (je) (this.field_C.field_B.b(1063677678));
+              this.controlledSentinel.hasModuleType(15, -27)) {
+              var4Lifetime5 = this.world.simulationTick + vk.field_h[this.world.field_c];
+              var5Lifetime4 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
               if (null != var5Lifetime4 &&
-                var4Lifetime5 < var5Lifetime4.field_r) {
-                var4Lifetime5 = var5Lifetime4.field_r;
+                var4Lifetime5 < var5Lifetime4.endTick) {
+                var4Lifetime5 = var5Lifetime4.endTick;
               }
-              if (500 + this.field_X.field_r > var4Lifetime5) {
-                var6_ref_jeLifetime1 = new je(8, 0, var4Lifetime5);
+              if (500 + this.world.simulationTick > var4Lifetime5) {
+                var6_ref_jeLifetime1 = new SentinelCommand(8, 0, var4Lifetime5);
                 if (!this.field_d) {
                   var6_ref_jeLifetime1.field_p = true;
                   if (var9 != 0) {
@@ -12655,23 +12655,23 @@ final class nb {
                   mm.field_g.b(true, 0);
                 }
                 if (di.field_g != -1 ||
-                  this.field_X.field_c != 1) {
-                  this.field_C.field_B.a(3, var6_ref_jeLifetime1);
+                  this.world.field_c != 1) {
+                  this.controlledSentinel.pendingCommands.addLast(3, var6_ref_jeLifetime1);
                 }
               }
             }
             if (~ei.field_q == ~dg.field_d &&
-              this.field_C.i(24, -27)) {
-              var4Lifetime6 = vk.field_h[this.field_X.field_c] + this.field_X.field_r;
-              var5Lifetime5 = (je) (this.field_C.field_B.b(1063677678));
+              this.controlledSentinel.hasModuleType(24, -27)) {
+              var4Lifetime6 = vk.field_h[this.world.field_c] + this.world.simulationTick;
+              var5Lifetime5 = (SentinelCommand) (this.controlledSentinel.pendingCommands.b(1063677678));
               if (null != var5Lifetime5 &&
-                var5Lifetime5.field_r > var4Lifetime6) {
-                var4Lifetime6 = var5Lifetime5.field_r;
+                var5Lifetime5.endTick > var4Lifetime6) {
+                var4Lifetime6 = var5Lifetime5.endTick;
               }
-              if (var4Lifetime6 < this.field_X.field_r + 500) {
-                stackIn_367_0 = (this.field_C.field_rc != 24) ? 9 : 11;
+              if (var4Lifetime6 < this.world.simulationTick + 500) {
+                stackIn_367_0 = (this.controlledSentinel.activeModuleType != 24) ? 9 : 11;
                 var6Lifetime4 = stackIn_367_0;
-                var7Lifetime3 = new je(var6Lifetime4, 0, var4Lifetime6);
+                var7Lifetime3 = new SentinelCommand(var6Lifetime4, 0, var4Lifetime6);
                 if (!this.field_d) {
                   var7Lifetime3.field_p = true;
                   if (var9 != 0) {
@@ -12693,10 +12693,10 @@ final class nb {
                   mm.field_g.b(true, 0);
                 }
                 if (-1 == di.field_g &&
-                  1 == this.field_X.field_c) {
+                  1 == this.world.field_c) {
                   return;
                 }
-                this.field_C.field_B.a(3, var7Lifetime3);
+                this.controlledSentinel.pendingCommands.addLast(3, var7Lifetime3);
               }
             }
           }
@@ -12708,7 +12708,7 @@ final class nb {
         }
     }
 
-    nb(boolean param0, int param1, int param2, String[] param3, int param4, boolean param5, int[][] param6, int param7, int param8, boolean param9, boolean param10) {
+    GameplayController(boolean param0, int param1, int param2, String[] param3, int param4, boolean param5, int[][] param6, int param7, int param8, boolean param9, boolean param10) {
         int stackIn_4_0 = 0;
         boolean stackIn_123_1 = false;
         RuntimeException stackIn_137_0 = null;
@@ -12723,7 +12723,7 @@ final class nb {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        var16 = SteelSentinels.field_G;
+        var16 = SteelSentinels.obfuscationControl;
         this.field_r = -1;
         this.field_p = 0;
         this.field_U = 0;
@@ -12752,7 +12752,7 @@ final class nb {
           ri.field_b = null;
           nc.field_a = -1;
           rc.field_l = 0;
-          pm.field_db = new ul();
+          pm.field_db = new NodeDeque();
           hh.field_c = new int[6];
           this.field_D = new int[this.field_S];
           fi.field_g = new int[6];
@@ -12760,7 +12760,7 @@ final class nb {
           ke.field_b = new String[6];
           ed.field_j = param4;
           this.field_J = param5;
-          hd.field_a = 0;
+          BattleTerrain.field_a = 0;
           this.field_d = param0;
           dl.field_M = qh.field_Yb;
           f.field_w = new int[10];
@@ -12788,11 +12788,11 @@ final class nb {
           }
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
-          this.field_X = new ee(param1, param2, param3, param6, false, param7, var12_int, param8, param9, param10);
-          wc.field_a = this.field_X.field_W;
-          vi.field_db = this.field_X.field_fb;
+          this.world = new CombatWorld(param1, param2, param3, param6, false, param7, var12_int, param8, param9, param10);
+          wc.field_a = this.world.field_W;
+          vi.field_db = this.world.field_fb;
           fj.field_h = fj.field_a;
-          if (this.field_X.field_P == 0) {
+          if (this.world.field_P == 0) {
             fj.field_h = new int[12];
             if (param4 == -2) {
               var13 = 0;
@@ -12824,27 +12824,27 @@ final class nb {
               }
             }
           }
-          if (this.field_X.field_P == 1) {
-            fj.field_h = qd.field_t;
+          if (this.world.field_P == 1) {
+            fj.field_h = PartInstruction.field_t;
           }
-          if (this.field_X.field_ab.b(72) == 0) {
+          if (this.world.terrain.getTerrainType(72) == 0) {
             jn.a(true, (byte) 104, 200, l.field_i);
           }
-          if (1 == this.field_X.field_ab.b(68)) {
+          if (1 == this.world.terrain.getTerrainType(68)) {
             jn.a(true, (byte) 86, 200, gb.field_e);
           }
-          if (this.field_X.field_ab.b(119) == 2) {
-            jn.a(true, (byte) 82, 200, kj.field_z);
+          if (this.world.terrain.getTerrainType(119) == 2) {
+            jn.a(true, (byte) 82, 200, CipherPacketBuffer.field_z);
           }
-          if (this.field_X.field_ab.b(107) == 3) {
+          if (this.world.terrain.getTerrainType(107) == 3) {
             jn.a(true, (byte) 111, 200, ue.field_e);
           }
-          if (this.field_X.field_ab.b(61) == 4) {
+          if (this.world.terrain.getTerrainType(61) == 4) {
             jn.a(true, (byte) 70, 200, db.field_a);
           }
           boolean decompiledFrameRemainder0 = true;
-          this.field_C = this.field_X.f(param4, -127);
-          if (null == this.field_C) {
+          this.controlledSentinel = this.world.findSentinelForPlayer(param4, -127);
+          if (null == this.controlledSentinel) {
             this.field_M = new int[4];
             this.field_M[0] = 7172239;
             this.field_M[1] = 4216424;
@@ -12854,12 +12854,12 @@ final class nb {
           }
           if (decompiledFrameRemainder0) {
             this.field_M = new int[4];
-            var13 = this.field_C.field_jc;
+            var13 = this.controlledSentinel.teamId;
             this.field_M[2] = 65535;
             this.field_M[1] = 26248;
             this.field_M[0] = 7196927;
             this.field_M[3] = 0;
-            if (1 == this.field_X.field_P) {
+            if (1 == this.world.field_P) {
               if (0 == var13) {
                 this.field_M[1] = 6559605;
                 this.field_M[3] = 30;
@@ -12911,14 +12911,14 @@ final class nb {
           if (4 == di.field_g) {
             this.a(1, true);
           }
-          stackIn_123_1 = !(1 >= this.field_X.field_kb);
+          stackIn_123_1 = !(1 >= this.world.playerCount);
           this.field_h = stackIn_123_1;
           vk.field_g = null;
           ad.field_i = null;
-          if (this.field_X.field_ab.b(118) == 4 &&
-            null != this.field_C &&
-            this.field_C.field_jc == 1) {
-            this.field_P = -10240 + this.field_X.field_ab.a(-125);
+          if (this.world.terrain.getTerrainType(118) == 4 &&
+            null != this.controlledSentinel &&
+            this.controlledSentinel.teamId == 1) {
+            this.field_P = -10240 + this.world.terrain.getProfileLength(-125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

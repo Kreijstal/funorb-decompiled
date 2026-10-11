@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class SteelSentinels extends n {
+public final class SteelSentinels extends FunOrbClient {
     static String field_H;
     static String field_I;
-    static gh field_J;
-    public static int field_G;
+    static SceneWidget field_J;
+    public static int obfuscationControl;
 
     final void a(byte param0) {
         int stackIn_134_0 = 0;
@@ -13,20 +13,20 @@ public final class SteelSentinels extends n {
         RuntimeException decompiledCaughtException = null;
         java.awt.Canvas var2 = null;
         RuntimeException var2_ref = null;
-        gh var3 = null;
+        SceneWidget var3 = null;
         ai var3_ref = null;
         int var4 = 0;
         int var5_int = 0;
         String var5 = null;
-        ee var6_ref_ee = null;
+        CombatWorld var6_ref_ee = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        mb var9 = null;
-        qb var9_ref = null;
-        wl var9_ref2 = null;
-        mb var10 = null;
+        Sentinel var9 = null;
+        ParticleEffect var9_ref = null;
+        Projectile var9_ref2 = null;
+        Sentinel var10 = null;
         int var11 = 0;
         int[] var12 = null;
         int var13 = 0;
@@ -36,14 +36,14 @@ public final class SteelSentinels extends n {
         int var5_intLifetime2;
         int var7Lifetime1;
         int var8Lifetime1;
-        var13 = field_G;
+        var13 = obfuscationControl;
         try {
           var2 = gl.a(false);
           if (ol.j(0)) {
-            df.a(-111, var2, qb.g(2));
+            df.a(-111, var2, ParticleEffect.g(2));
             return;
           }
-          if (!gh.field_pb) {
+          if (!SceneWidget.field_pb) {
             en.a(var2, -28003);
             return;
           }
@@ -63,7 +63,7 @@ public final class SteelSentinels extends n {
               }
               if (decompiledFrameRemainder1) {
                 if (pm.field_U >= 10) {
-                  an.a(vb.field_g, ea.field_k, false, 86);
+                  an.a(vb.field_g, Sprite.field_k, false, 86);
                   if (var13 != 0) {
                     an.a(pm.field_T, pc.field_w, false, -110);
                     an.a(vb.field_g, pc.field_w, false, -62);
@@ -90,34 +90,34 @@ public final class SteelSentinels extends n {
             an.a(pm.field_T, pc.field_w, true, -15);
           }
           if (!pc.field_w ||
-            !ea.field_k) {
+            !Sprite.field_k) {
             boolean decompiledFrameCompleted0 = true;
             da.a(li.c(8), 25104);
             if (pm.field_T == -2) {
               var3 = hl.a((byte) -66);
               if (var3 != null) {
-                L9: {
+                regionExit1: {
                   boolean decompiledFrameCompleted1 = true;
                   var4 = var3.field_Rb;
                   var5_int = var3.field_cb;
-                  pb.a(var4 + 4, 4 + var5_int + 42, var3.field_Rb - 4 + var3.field_zb, var3.field_cb + (-4 + var3.field_Lb));
+                  SoftwareRaster.a(var4 + 4, 4 + var5_int + 42, var3.field_Rb - 4 + var3.field_zb, var3.field_cb + (-4 + var3.field_Lb));
                   if (null == ih.field_s ||
                     fc.field_e[101]) {
                     di.field_g = -1;
-                    ih.field_s = new ee(-1, 1, new String[]{}, new int[][]{null}, false, 0, 0, 2, false, false);
-                    ih.field_s.field_Q = 2;
+                    ih.field_s = new CombatWorld(-1, 1, new String[]{}, new int[][]{null}, false, 0, 0, 2, false, false);
+                    ih.field_s.computerPlayerCount = 2;
                     if (var13 == 0) {
-                      break L9;
+                      break regionExit1;
                     }
                   }
                   var6_ref_ee = ih.field_s;
                   var7 = var4 - 2;
-                  if (var6_ref_ee.field_K.b((byte) -128) < 2) {
+                  if (var6_ref_ee.sentinels.size((byte) -128) < 2) {
                     var9_int = -100000;
-                    var10 = new mb(0, var9_int, var6_ref_ee);
+                    var10 = new Sentinel(0, var9_int, var6_ref_ee);
                     var11 = 0;
-                    if (var6_ref_ee.field_K.e(13058) != null) {
-                      var11 = -((mb) (var6_ref_ee.field_K.e(13058))).field_jc + 1;
+                    if (var6_ref_ee.sentinels.first(13058) != null) {
+                      var11 = -((Sentinel) (var6_ref_ee.sentinels.first(13058))).teamId + 1;
                     }
                     var12 = ua.field_v;
                     if (0.5 > Math.random()) {
@@ -132,49 +132,49 @@ public final class SteelSentinels extends n {
                     if (0.1 > Math.random()) {
                       var12 = ua.field_O;
                     }
-                    var10.a(var12, true, false, -1, var11);
+                    var10.configureDesign(var12, true, false, -1, var11);
                     var10.field_Nb = 10;
                     var10.d(-28033);
-                    var10.field_ab = 1000;
+                    var10.velocityY = 1000;
                     var10.field_Qb = 250;
                     var10.j(-5);
-                    var6_ref_ee.field_K.a(3, var10);
+                    var6_ref_ee.sentinels.addLast(3, var10);
                   }
                   var8 = 310;
-                  var9 = (mb) (var6_ref_ee.field_K.e(13058));
+                  var9 = (Sentinel) (var6_ref_ee.sentinels.first(13058));
                   while (null != var9) {
                     var9.a((byte) -22, var7, oh.field_f, pi.field_c, var8);
-                    var9 = (mb) (var6_ref_ee.field_K.a((byte) -119));
+                    var9 = (Sentinel) (var6_ref_ee.sentinels.next((byte) -119));
                     if (var13 != 0) {
                       decompiledFrameCompleted1 = false;
                       break;
                     }
                   }
                   if (decompiledFrameCompleted1) {
-                    var9_ref = (qb) (var6_ref_ee.field_o.e(13058));
+                    var9_ref = (ParticleEffect) (var6_ref_ee.field_o.first(13058));
                     while (true) {
                       if (null != var9_ref) {
                         var9_ref.a(var7, var8, true, (byte) -89);
-                        var9_ref = (qb) (var6_ref_ee.field_o.a((byte) -112));
+                        var9_ref = (ParticleEffect) (var6_ref_ee.field_o.next((byte) -112));
                         if (var13 == 0) {
                           continue;
                         }
                       } else {
-                        var9_ref2 = (wl) (var6_ref_ee.field_db.e(13058));
+                        var9_ref2 = (Projectile) (var6_ref_ee.field_db.first(13058));
                         while (null != var9_ref2) {
                           var9_ref2.a(var8, var7, 4);
-                          var9_ref2 = (wl) (var6_ref_ee.field_db.a((byte) -39));
+                          var9_ref2 = (Projectile) (var6_ref_ee.field_db.next((byte) -39));
                           if (var13 != 0) {
-                            break L9;
+                            break regionExit1;
                           }
                         }
-                        var9_ref = (qb) (var6_ref_ee.field_o.e(13058));
+                        var9_ref = (ParticleEffect) (var6_ref_ee.field_o.first(13058));
                       }
                       break;
                     }
                     while (var9_ref != null) {
                       var9_ref.a(var7, var8, false, (byte) 31);
-                      var9_ref = (qb) (var6_ref_ee.field_o.a((byte) -82));
+                      var9_ref = (ParticleEffect) (var6_ref_ee.field_o.next((byte) -82));
                       if (var13 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -183,7 +183,7 @@ public final class SteelSentinels extends n {
                   }
                 }
                 if (decompiledFrameCompleted0) {
-                  pb.c();
+                  SoftwareRaster.c();
                 }
               }
             }
@@ -192,7 +192,7 @@ public final class SteelSentinels extends n {
             }
             ci.a(li.c(8), (byte) -62);
           }
-          var3_ref = (ai) (bd.field_b.e(13058));
+          var3_ref = (ai) (bd.field_b.first(13058));
           if (var3_ref != null) {
             var4Lifetime1 = 6;
             var5_intLifetime1 = 250;
@@ -205,8 +205,8 @@ public final class SteelSentinels extends n {
             if ((500 - var6) < ob.field_o) {
               var7Lifetime1 = var7Lifetime1 + (500 + (-ob.field_o - var6));
             }
-            pb.c(var8Lifetime1, var7Lifetime1, var5_intLifetime1, var6, 0, 192);
-            pb.h(var8Lifetime1, var7Lifetime1, var5_intLifetime1, var6, 39398, 192);
+            SoftwareRaster.c(var8Lifetime1, var7Lifetime1, var5_intLifetime1, var6, 0, 192);
+            SoftwareRaster.h(var8Lifetime1, var7Lifetime1, var5_intLifetime1, var6, 39398, 192);
             if (var3_ref.field_q == null) {
               ff.field_lb.a(var3_ref.field_u, var8Lifetime1 + var4Lifetime1, var7Lifetime1 + var4Lifetime1, -(2 * var4Lifetime1) + var5_intLifetime1, -(2 * var4Lifetime1) + var6, 52479, -1, 0, 1, 12);
               if (var13 != 0) {
@@ -221,7 +221,7 @@ public final class SteelSentinels extends n {
           boolean decompiledFrameRemainder0 = true;
           var4Lifetime2 = 27 / ((param0 - 56) / 48);
           if (mg.b(true)) {
-            pb.f(0, 0, pb.field_c, pb.field_j);
+            SoftwareRaster.f(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j);
             qf.a(100);
             decompiledFrameRemainder0 = (var13 != 0);
           }
@@ -229,7 +229,7 @@ public final class SteelSentinels extends n {
             if (!cf.c((byte) 92)) {
               if ((ri.b(-113)) &&
                 (!mg.b(true))) {
-                pb.f(0, 0, pb.field_c, pb.field_j);
+                SoftwareRaster.f(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j);
                 ec.a((byte) -95);
                 if (var13 != 0) {
                   stackIn_134_0 = -64;
@@ -252,21 +252,21 @@ public final class SteelSentinels extends n {
             }
           }
           if (in.field_i != in.field_h) {
-            var5_intLifetime2 = 256 * ji.field_a / 16;
+            var5_intLifetime2 = 256 * SentinelDesigner.field_a / 16;
             if (var5_intLifetime2 > 0) {
-              pb.c(0, 0, pb.field_c, pb.field_j, 0, var5_intLifetime2);
+              SoftwareRaster.c(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j, 0, var5_intLifetime2);
             }
           }
           if (cb.field_l < ej.field_v) {
-            pb.h(2, 2, 102, 15, 6710886, 128);
-            pb.a(3, 3, 100, 13, 0);
-            pb.a(4, 4, cb.field_l * 33 + 33 * al.field_g / ua.field_r, 11, 39398);
+            SoftwareRaster.h(2, 2, 102, 15, 6710886, 128);
+            SoftwareRaster.a(3, 3, 100, 13, 0);
+            SoftwareRaster.a(4, 4, cb.field_l * 33 + 33 * al.field_g / ua.field_r, 11, 39398);
             if (fk.field_d != null) {
               var5 = db.a(ff.field_sb, -98, new String[]{Integer.toString(cb.field_l * 33 + al.field_g * 33 / ua.field_r)});
               fk.field_d.a(var5, 54, 12, 39398, 0);
-              pb.a(3, 3, 33 * cb.field_l + al.field_g * 33 / ua.field_r, 17);
+              SoftwareRaster.a(3, 3, 33 * cb.field_l + al.field_g * 33 / ua.field_r, 17);
               fk.field_d.a(var5, 54, 12, 0, 39398);
-              pb.c();
+              SoftwareRaster.c();
             }
           }
           kg.a(0, 0, 28594, var2);
@@ -285,15 +285,15 @@ public final class SteelSentinels extends n {
         int stackIn_149_0 = 0;
         int stackIn_149_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        gk[] var2_array = null;
-        gk[] var3 = null;
+        IndexedSprite[] var2_array = null;
+        IndexedSprite[] var3 = null;
         int var3_int = 0;
-        wk[] var3_array = null;
-        wk[][] var3_array2 = null;
+        RgbSprite[] var3_array = null;
+        RgbSprite[][] var3_array2 = null;
         int var4_int = 0;
-        wk[][] var4 = null;
+        RgbSprite[][] var4 = null;
         int var5 = 0;
-        var6 = field_G;
+        var6 = obfuscationControl;
         try {
           ec.a(35);
           if (null != aj.field_x) {
@@ -322,14 +322,14 @@ public final class SteelSentinels extends n {
                                   rc.field_i.a(param0 + 77)) {
                                   if (g.field_i.a(true) &&
                                     g.field_i.a(25)) {
-                                    if (kd.field_x.a(true) &&
-                                      kd.field_x.a("basic", (byte) 90)) {
+                                    if (DualNode.field_x.a(true) &&
+                                      DualNode.field_x.a("basic", (byte) 90)) {
                                       if (im.field_h.a(true) &&
                                         im.field_h.a(25)) {
                                         if (oh.field_a.a(true) &&
                                           oh.field_a.a("basic", (byte) 90)) {
-                                          if (ie.field_k.a(true) &&
-                                            ie.field_k.a(25)) {
+                                          if (IsaacRandom.field_k.a(true) &&
+                                            IsaacRandom.field_k.a(25)) {
                                             if (rj.field_k.a(true) &&
                                               rj.field_k.a(param0 + 77)) {
                                               en.a(-59);
@@ -343,7 +343,7 @@ public final class SteelSentinels extends n {
                                             mc.a(ka.a((byte) -128, qj.field_i, sl.field_l, rj.field_k), 90.0f, -21801);
                                             return false;
                                           }
-                                          mc.a(ci.a(ie.field_k, (byte) 94, "", qj.field_i, sl.field_l), 85.0f, -21801);
+                                          mc.a(ci.a(IsaacRandom.field_k, (byte) 94, "", qj.field_i, sl.field_l), 85.0f, -21801);
                                           return false;
                                         }
                                         mc.a(ci.a(oh.field_a, (byte) 108, "basic", kb.field_c, og.field_c), 80.0f, -21801);
@@ -352,7 +352,7 @@ public final class SteelSentinels extends n {
                                       mc.a(ka.a((byte) -78, en.field_f, ai.field_t, im.field_h), 75.0f, -21801);
                                       return false;
                                     }
-                                    mc.a(ci.a(kd.field_x, (byte) 94, "basic", en.field_f, ai.field_t), 70.0f, -21801);
+                                    mc.a(ci.a(DualNode.field_x, (byte) 94, "basic", en.field_f, ai.field_t), 70.0f, -21801);
                                     return false;
                                   }
                                   mc.a(ci.a(g.field_i, (byte) 101, "", tf.field_f, nj.field_P), 60.0f, -21801);
@@ -417,13 +417,13 @@ public final class SteelSentinels extends n {
             me.field_f = tg.a(g.field_i, "", "md_title_music");
             l.field_i = tg.a(g.field_i, "", "war_zone");
             gb.field_e = tg.a(g.field_i, "", "lost_world");
-            kj.field_z = tg.a(g.field_i, "", "cityscape");
+            CipherPacketBuffer.field_z = tg.a(g.field_i, "", "cityscape");
             ue.field_e = tg.a(g.field_i, "", "thats_no_moon");
             db.field_a = tg.a(g.field_i, "", "star_fleet");
             q.field_f.a(0, me.field_f, 21687, he.field_e, rc.field_i);
             q.field_f.a(0, l.field_i, 21687, he.field_e, rc.field_i);
             q.field_f.a(0, gb.field_e, 21687, he.field_e, rc.field_i);
-            q.field_f.a(0, kj.field_z, 21687, he.field_e, rc.field_i);
+            q.field_f.a(0, CipherPacketBuffer.field_z, 21687, he.field_e, rc.field_i);
             q.field_f.a(0, ue.field_e, param0 + 21739, he.field_e, rc.field_i);
             q.field_f.a(0, db.field_a, 21687, he.field_e, rc.field_i);
             q.field_f.a((byte) 25);
@@ -433,13 +433,13 @@ public final class SteelSentinels extends n {
             return false;
           }
           if (oh.field_a == null) {
-            if (null != ie.field_k) {
-              hj.a((byte) 106, new m(ie.field_k.a("huffman", -742, "")));
-              ie.field_k = null;
+            if (null != IsaacRandom.field_k) {
+              hj.a((byte) 106, new m(IsaacRandom.field_k.a("huffman", -742, "")));
+              IsaacRandom.field_k = null;
               cc.j(0);
               return false;
             }
-            hd.a(false);
+            BattleTerrain.a(false);
             gf.a(0);
             var2_int = 0;
             do {
@@ -450,7 +450,7 @@ public final class SteelSentinels extends n {
                 jn.a(true, (byte) 92, 200, me.field_f);
                 break;
               }
-              i.field_e[var2_int] = new ji(var2_int);
+              i.field_e[var2_int] = new SentinelDesigner(var2_int);
               var2_int++;
             } while (var6 == 0);
             if (!ni.b(118)) {
@@ -464,64 +464,64 @@ public final class SteelSentinels extends n {
           }
           mc.a(jl.field_i, 90.0f, param0 - 21749);
           this.a((byte) 109);
-          var2_array = cj.a(-126, "basic", kd.field_x, "ranks");
+          var2_array = cj.a(-126, "basic", DualNode.field_x, "ranks");
           va.field_j = vd.a(ej.field_t, "roman20", tm.field_d, param0 + 51, "");
-          dm.field_f = be.a(kd.field_x, oh.field_a, (byte) -102, "biting30", "basic");
-          dk.field_h = vd.a(oh.field_a, "basic", kd.field_x, param0 ^ 51, "smallfont");
-          fk.field_d = vd.a(oh.field_a, "basic", kd.field_x, -1, "tinyfont");
+          dm.field_f = be.a(DualNode.field_x, oh.field_a, (byte) -102, "biting30", "basic");
+          dk.field_h = vd.a(oh.field_a, "basic", DualNode.field_x, param0 ^ 51, "smallfont");
+          fk.field_d = vd.a(oh.field_a, "basic", DualNode.field_x, -1, "tinyfont");
           ff.field_lb = vd.a(ej.field_t, "basicfont12", tm.field_d, param0 + 51, "");
-          pl.field_U = be.a(kd.field_x, oh.field_a, (byte) -93, "bitingfont", "basic");
-          ui.field_U = be.a(kd.field_x, oh.field_a, (byte) -84, "bitinghalf", "basic");
-          ql.field_Tb = dd.a(kd.field_x, oh.field_a, true, "basic", "menutitlefont");
-          cf.a("menu_overlays", "basic", (byte) -87, kd.field_x);
-          wd.field_a = nb.a(kd.field_x, (byte) 42, "frame", "basic");
-          km.field_e = nb.a(kd.field_x, (byte) -119, "frame_filled", "basic");
-          ag.field_o = nb.a(kd.field_x, (byte) -60, "button_frame", "basic");
-          vk.field_l = nb.a(kd.field_x, (byte) -122, "button_raised", "basic");
-          ja.field_e = nb.a(kd.field_x, (byte) 36, "button_depressed", "basic");
+          pl.field_U = be.a(DualNode.field_x, oh.field_a, (byte) -93, "bitingfont", "basic");
+          ui.field_U = be.a(DualNode.field_x, oh.field_a, (byte) -84, "bitinghalf", "basic");
+          ql.field_Tb = dd.a(DualNode.field_x, oh.field_a, true, "basic", "menutitlefont");
+          cf.a("menu_overlays", "basic", (byte) -87, DualNode.field_x);
+          wd.field_a = GameplayController.a(DualNode.field_x, (byte) 42, "frame", "basic");
+          km.field_e = GameplayController.a(DualNode.field_x, (byte) -119, "frame_filled", "basic");
+          ag.field_o = GameplayController.a(DualNode.field_x, (byte) -60, "button_frame", "basic");
+          vk.field_l = GameplayController.a(DualNode.field_x, (byte) -122, "button_raised", "basic");
+          ja.field_e = GameplayController.a(DualNode.field_x, (byte) 36, "button_depressed", "basic");
           if (ni.b(param0 ^ -44) ||
             !(rd.field_b > 0)) {
-            var3 = cj.a(121, "basic", kd.field_x, "expansion");
-            eh.field_c = new ng((java.applet.Applet) (this), dm.field_e, var3, ji.field_f);
+            var3 = cj.a(121, "basic", DualNode.field_x, "expansion");
+            eh.field_c = new ng((java.applet.Applet) (this), dm.field_e, var3, SentinelDesigner.field_f);
           }
-          od.field_c = cf.a("achievements_large", "basic", (byte) -79, kd.field_x);
-          vg.field_h = cf.a("cursors", "basic", (byte) -54, kd.field_x);
+          od.field_c = cf.a("achievements_large", "basic", (byte) -79, DualNode.field_x);
+          vg.field_h = cf.a("cursors", "basic", (byte) -54, DualNode.field_x);
           var3_int = 0;
           do {
             if (!(var3_int < vg.field_h.length)) {
               ff.field_tb = rl.a(tm.field_d, "basic", "unachieved", false);
               ug.field_P = rl.a(tm.field_d, "basic", "locked", false);
               d.field_G = rl.a(tm.field_d, "basic", "orbcoin", false);
-              g.field_d = new wk(40, 40);
+              g.field_d = new RgbSprite(40, 40);
               g.field_d.d();
               ff.field_tb.c(0, 0, 40, 40);
-              sj.field_F = new wk(40, 40);
+              sj.field_F = new RgbSprite(40, 40);
               sj.field_F.d();
               ug.field_P.c(0, 0, 40, 40);
               sb.field_bb.b((byte) 126);
               rg.a(false, ff.field_tb);
               rg.a(false, ug.field_P);
               rg.a(false, d.field_G);
-              ig.field_o = new wk[5][];
-              wa.a((cm) null, 2, kd.field_x);
-              ea.field_m = cf.a("darkblueboxfilled", "basic", (byte) -52, kd.field_x);
-              be.field_f = cf.a("obviousdarkbluebox", "basic", (byte) -56, kd.field_x);
-              tk.field_t = cf.a("darkbluebox", "basic", (byte) -54, kd.field_x);
-              sa.field_e = cf.a("darkerbluebox", "basic", (byte) -30, kd.field_x);
-              nn.field_a = cf.a("lightbluetabbox", "basic", (byte) -108, kd.field_x);
-              lj.field_b = cf.a("darkgrayboxfilled", "basic", (byte) -114, kd.field_x);
-              co.field_d = cf.a("darkgraybox", "basic", (byte) -67, kd.field_x);
-              pa.field_g = cf.a("sectiontab", "basic", (byte) -99, kd.field_x);
-              bm.field_Y = cf.a("tabselected", "basic", (byte) -40, kd.field_x);
-              sb.field_X = cf.a("tabunselected", "basic", (byte) -67, kd.field_x);
-              oe.field_f = cf.a("tabmouseover", "basic", (byte) -71, kd.field_x);
-              si.field_E = cf.a("sentinelimages", "basic", (byte) -111, kd.field_x);
+              ig.field_o = new RgbSprite[5][];
+              wa.a((cm) null, 2, DualNode.field_x);
+              Sprite.field_m = cf.a("darkblueboxfilled", "basic", (byte) -52, DualNode.field_x);
+              be.field_f = cf.a("obviousdarkbluebox", "basic", (byte) -56, DualNode.field_x);
+              tk.field_t = cf.a("darkbluebox", "basic", (byte) -54, DualNode.field_x);
+              sa.field_e = cf.a("darkerbluebox", "basic", (byte) -30, DualNode.field_x);
+              nn.field_a = cf.a("lightbluetabbox", "basic", (byte) -108, DualNode.field_x);
+              lj.field_b = cf.a("darkgrayboxfilled", "basic", (byte) -114, DualNode.field_x);
+              co.field_d = cf.a("darkgraybox", "basic", (byte) -67, DualNode.field_x);
+              pa.field_g = cf.a("sectiontab", "basic", (byte) -99, DualNode.field_x);
+              bm.field_Y = cf.a("tabselected", "basic", (byte) -40, DualNode.field_x);
+              sb.field_X = cf.a("tabunselected", "basic", (byte) -67, DualNode.field_x);
+              oe.field_f = cf.a("tabmouseover", "basic", (byte) -71, DualNode.field_x);
+              si.field_E = cf.a("sentinelimages", "basic", (byte) -111, DualNode.field_x);
               tk.field_t[4] = null;
               be.field_f[4] = null;
-              pd.field_T = cf.a("greybox", "basic", (byte) -90, kd.field_x);
+              pd.field_T = cf.a("greybox", "basic", (byte) -90, DualNode.field_x);
               pd.field_T[4] = null;
-              ao.field_y = rl.a(kd.field_x, "basic", "dropdown_mark", false);
-              ac.field_bb = rl.a(kd.field_x, "basic", "button_cover", false);
+              ao.field_y = rl.a(DualNode.field_x, "basic", "dropdown_mark", false);
+              ac.field_bb = rl.a(DualNode.field_x, "basic", "button_cover", false);
               break;
             }
             vg.field_h[var3_int].e();
@@ -542,132 +542,132 @@ public final class SteelSentinels extends n {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            oa.field_N = rl.a(kd.field_x, "basic", "goldstar", false);
-            td.field_ec = rl.a(kd.field_x, "basic", "silverstar", false);
-            rl.a(kd.field_x, "basic", "starfrigate", false);
-            sb.field_W = rl.a(kd.field_x, "basic", "starcruiser", false);
+            oa.field_N = rl.a(DualNode.field_x, "basic", "goldstar", false);
+            td.field_ec = rl.a(DualNode.field_x, "basic", "silverstar", false);
+            rl.a(DualNode.field_x, "basic", "starfrigate", false);
+            sb.field_W = rl.a(DualNode.field_x, "basic", "starcruiser", false);
             hb.field_e = sb.field_W.a();
-            jc.field_c = cj.a(27, "basic", kd.field_x, "texticons");
+            NodeIterator.field_c = cj.a(27, "basic", DualNode.field_x, "texticons");
             bb.field_X = new int[]{13, 13, 13, 13, 14, 14, 14, 13, 13, 15, 13, 13, 12, 13, 15, 13, 13, 13, 14, 14, 14, 15, 15, 15, 15, 15, 15, 15};
-            dk.field_h.a(jc.field_c, bb.field_X);
-            fk.field_d.a(jc.field_c, bb.field_X);
-            pl.field_U.a(jc.field_c, bb.field_X);
-            ff.field_lb.a(jc.field_c, bb.field_X);
+            dk.field_h.a(NodeIterator.field_c, bb.field_X);
+            fk.field_d.a(NodeIterator.field_c, bb.field_X);
+            pl.field_U.a(NodeIterator.field_c, bb.field_X);
+            ff.field_lb.a(NodeIterator.field_c, bb.field_X);
             stackIn_149_0 = param0;
             stackIn_149_1 = -5;
           }
-          var3 = cj.a(stackIn_149_0 ^ stackIn_149_1, "basic", kd.field_x, "instr_texticons");
-          ub.field_a = new gk[18];
+          var3 = cj.a(stackIn_149_0 ^ stackIn_149_1, "basic", DualNode.field_x, "instr_texticons");
+          ub.field_a = new IndexedSprite[18];
           pg.field_w = new int[ub.field_a.length];
           var4_int = 0;
           do {
             if (!(var4_int < ub.field_a.length)) {
               ii.a(var3, 0, ub.field_a, 6, 2);
               ub.field_a[17] = ub.field_a[7];
-              ah.field_Zb = cf.a("scrolldown", "basic", (byte) -87, kd.field_x);
-              sj.field_x = cf.a("scrollup", "basic", (byte) -33, kd.field_x);
-              jn.field_f = cf.a("scrollbar", "basic", (byte) -95, kd.field_x);
-              qi.field_a = cf.a("scrollvert", "basic", (byte) -104, kd.field_x);
-              wc.field_k = cf.a("frame_shiny", "basic", (byte) -123, kd.field_x);
-              ta.field_c = cf.a("frame_shiny_bright", "basic", (byte) -43, kd.field_x);
-              cm.field_b = cf.a("frame_basic_bright", "basic", (byte) -128, kd.field_x);
-              ng.field_p = cf.a("frame_basic_thin", "basic", (byte) -55, kd.field_x);
-              vh.field_b = cf.a("frame_basic", "basic", (byte) -127, kd.field_x);
-              oa.field_U = cf.a("display_frame", "basic", (byte) -35, kd.field_x);
+              ah.field_Zb = cf.a("scrolldown", "basic", (byte) -87, DualNode.field_x);
+              sj.field_x = cf.a("scrollup", "basic", (byte) -33, DualNode.field_x);
+              jn.field_f = cf.a("scrollbar", "basic", (byte) -95, DualNode.field_x);
+              qi.field_a = cf.a("scrollvert", "basic", (byte) -104, DualNode.field_x);
+              wc.field_k = cf.a("frame_shiny", "basic", (byte) -123, DualNode.field_x);
+              ta.field_c = cf.a("frame_shiny_bright", "basic", (byte) -43, DualNode.field_x);
+              cm.field_b = cf.a("frame_basic_bright", "basic", (byte) -128, DualNode.field_x);
+              ng.field_p = cf.a("frame_basic_thin", "basic", (byte) -55, DualNode.field_x);
+              vh.field_b = cf.a("frame_basic", "basic", (byte) -127, DualNode.field_x);
+              oa.field_U = cf.a("display_frame", "basic", (byte) -35, DualNode.field_x);
               oa.field_U[4] = null;
-              bl.field_d = cf.a("config_tut_frame", "basic", (byte) -32, kd.field_x);
+              bl.field_d = cf.a("config_tut_frame", "basic", (byte) -32, DualNode.field_x);
               bl.field_d[4] = null;
-              oa.field_Q = cf.a("popup_frame", "basic", (byte) -94, kd.field_x);
+              oa.field_Q = cf.a("popup_frame", "basic", (byte) -94, DualNode.field_x);
               oa.field_Q[4] = null;
-              si.field_l = cj.a(125, "basic", kd.field_x, "mechbits");
-              hb.field_j = cf.a("weaponclasses", "basic", (byte) -107, kd.field_x);
-              ja.field_d = cj.a(-123, "basic", kd.field_x, "batdrone");
-              lb.field_Zb = cj.a(param0 ^ 69, "basic", kd.field_x, "drones");
-              jd.field_qb = cj.a(param0 + 163, "basic", kd.field_x, "bits_golem");
-              mb.field_nc = cj.a(42, "basic", kd.field_x, "bits_bird");
-              li.field_z = cj.a(-115, "basic", kd.field_x, "bits_slave");
-              wi.field_C = cj.a(125, "basic", kd.field_x, "bits_babel");
-              ne.field_R = cj.a(-128, "basic", kd.field_x, "bits_valhalla");
-              hk.field_Ec = cj.a(-128, "basic", kd.field_x, "bits_orbital");
-              ui.field_V = cj.a(61, "basic", kd.field_x, "bits_bertha");
-              vc.field_b = cj.a(67, "basic", kd.field_x, "bits_smasher");
-              ng.field_c = cj.a(76, "basic", kd.field_x, "bits_scorpion");
-              qb.field_L = cj.a(-116, "basic", kd.field_x, "bits_hurricane");
-              cf.field_u = cj.a(param0 - 65, "basic", kd.field_x, "bits_commando");
-              ea.field_b = cj.a(param0 ^ -112, "basic", kd.field_x, "bits_turtle");
-              ml.field_c = cj.a(param0 + 19, "basic", kd.field_x, "droppod");
-              fa.field_a = cj.a(param0 ^ -128, "basic", kd.field_x, "infantary");
-              ie.field_d = cj.a(-123, "basic", kd.field_x, "modules");
+              si.field_l = cj.a(125, "basic", DualNode.field_x, "mechbits");
+              hb.field_j = cf.a("weaponclasses", "basic", (byte) -107, DualNode.field_x);
+              ja.field_d = cj.a(-123, "basic", DualNode.field_x, "batdrone");
+              lb.field_Zb = cj.a(param0 ^ 69, "basic", DualNode.field_x, "drones");
+              jd.field_qb = cj.a(param0 + 163, "basic", DualNode.field_x, "bits_golem");
+              Sentinel.field_nc = cj.a(42, "basic", DualNode.field_x, "bits_bird");
+              li.field_z = cj.a(-115, "basic", DualNode.field_x, "bits_slave");
+              wi.field_C = cj.a(125, "basic", DualNode.field_x, "bits_babel");
+              ne.field_R = cj.a(-128, "basic", DualNode.field_x, "bits_valhalla");
+              hk.field_Ec = cj.a(-128, "basic", DualNode.field_x, "bits_orbital");
+              ui.field_V = cj.a(61, "basic", DualNode.field_x, "bits_bertha");
+              vc.field_b = cj.a(67, "basic", DualNode.field_x, "bits_smasher");
+              ng.field_c = cj.a(76, "basic", DualNode.field_x, "bits_scorpion");
+              ParticleEffect.field_L = cj.a(-116, "basic", DualNode.field_x, "bits_hurricane");
+              cf.field_u = cj.a(param0 - 65, "basic", DualNode.field_x, "bits_commando");
+              Sprite.field_b = cj.a(param0 ^ -112, "basic", DualNode.field_x, "bits_turtle");
+              ml.field_c = cj.a(param0 + 19, "basic", DualNode.field_x, "droppod");
+              fa.field_a = cj.a(param0 ^ -128, "basic", DualNode.field_x, "infantary");
+              IsaacRandom.field_d = cj.a(-123, "basic", DualNode.field_x, "modules");
               break;
             }
             pg.field_w[var4_int] = 14;
             var4_int++;
           } while (var6 == 0);
           var3_array = rh.field_v;
-          var3_array[0] = rl.a(kd.field_x, "basic", "instr_giantrobot", false);
-          var3_array[1] = rl.a(kd.field_x, "basic", "instr_queue", false);
-          var3_array[2] = rl.a(kd.field_x, "Basic", "instr_walk", false);
-          var3_array[3] = rl.a(kd.field_x, "basic", "instr_jump", false);
-          var3_array[4] = rl.a(kd.field_x, "basic", "instr_thrust", false);
-          var3_array[5] = ie.field_d[16].a();
-          var3_array[6] = rl.a(kd.field_x, "basic", "instr_selweapon", false);
-          var3_array[7] = rl.a(kd.field_x, "basic", "instr_target", false);
-          var3_array[8] = rl.a(kd.field_x, "basic", "instr_noenergy", false);
-          var3_array[9] = ie.field_d[32].a();
-          var3_array[10] = ie.field_d[33].a();
-          var3_array[11] = rl.a(kd.field_x, "basic", "instr_bigshieldicon", false);
-          var3_array[12] = ie.field_d[27].a();
-          var3_array[13] = rl.a(kd.field_x, "basic", "instr_stats", false);
-          var3_array[14] = rl.a(kd.field_x, "basic", "instr_chassis", false);
-          var3_array[15] = rl.a(kd.field_x, "basic", "instr_components", false);
-          var3_array[16] = rl.a(kd.field_x, "basic", "instr_weapons", false);
-          var3_array[17] = rl.a(kd.field_x, "basic", "instr_modules", false);
-          var3_array[18] = rl.a(kd.field_x, "basic", "instr_engineer", false);
-          var3_array[19] = rl.a(kd.field_x, "basic", "instr_coop", false);
-          var3_array[20] = rl.a(kd.field_x, "basic", "instr_team", false);
-          var3_array[25] = rl.a(kd.field_x, "basic", "instr_techvalue", false);
-          fa.field_b = rl.a(kd.field_x, "basic", "logo_menu_chromakey", false);
-          ob.field_z = (ek) (dn.a("basic", -63, "main_lower_panel", kd.field_x));
-          ma.field_eb = (ek) (dn.a("basic", param0 ^ 75, "main_title_panel", kd.field_x));
-          fi.field_j = rl.a(kd.field_x, "basic", "menu_mesh", false);
-          ic.field_db = rl.a(kd.field_x, "basic", "menu_titlebar", false);
-          pl.field_T = nb.a(kd.field_x, (byte) -62, "menu_button_1", "basic");
-          nb.a(kd.field_x, (byte) 107, "empty_button", "basic");
-          el.field_Ub = rl.a(kd.field_x, "basic", "prevbtn", false);
-          gm.field_b = rl.a(kd.field_x, "basic", "nextbtn", false);
-          pf.field_b = rl.a(kd.field_x, "basic", "lobby_icon", false);
-          vc.field_e = cf.a("statbars", "basic", (byte) -13, kd.field_x);
-          pd.field_Z = cf.a("tags", "basic", (byte) -50, kd.field_x);
-          uh.field_k = rl.a(kd.field_x, "basic", "tagborder", false);
-          qg.field_f = cf.a("movekeys", "basic", (byte) -38, kd.field_x);
-          bc.field_wb = rl.a(kd.field_x, "basic", "shiftkey", false);
-          da.field_e = cf.a("config_tabs", "basic", (byte) -33, kd.field_x);
-          aj.field_r[0] = rl.a(kd.field_x, "basic", "research_ring", false);
-          b.field_q[0] = rl.a(kd.field_x, "basic", "research_icon", false);
-          bl.field_p = cj.a(param0 - 75, "basic", kd.field_x, "powerups");
-          gf.field_c = cf.a("headings_bar", "basic", (byte) -26, kd.field_x);
-          rl.a(kd.field_x, "basic", "solarite", false);
-          vk.field_q = rl.a(kd.field_x, "basic", "mansize", false);
-          gj.field_a = rl.a(kd.field_x, "basic", "stripeybar", false);
-          vk.field_r = rl.a(kd.field_x, "basic", "hackbit", false);
-          wc.field_d = cf.a("pretty_button_lit", "basic", (byte) -111, kd.field_x);
-          hk.field_Tb = cf.a("pretty_button_unlit", "basic", (byte) -50, kd.field_x);
-          eb.field_p = cf.a("menu_border", "basic", (byte) -31, kd.field_x);
-          lj.field_e = cf.a("bin_icon", "basic", (byte) -14, kd.field_x);
-          pd.field_Q = cf.a("faces_idle", "basic", (byte) -87, kd.field_x);
-          bg.field_C = cf.a("faces_talk", "basic", (byte) -97, kd.field_x);
-          am.field_f = cf.a("tutor_buttons", "basic", (byte) -125, kd.field_x);
-          b.field_n = cf.a("shields", "basic", (byte) -58, kd.field_x);
-          vi.field_gb = cf.a("explosion", "basic", (byte) -34, kd.field_x);
-          var3_array = ec.a((byte) -115, "smoke", kd.field_x, "basic");
+          var3_array[0] = rl.a(DualNode.field_x, "basic", "instr_giantrobot", false);
+          var3_array[1] = rl.a(DualNode.field_x, "basic", "instr_queue", false);
+          var3_array[2] = rl.a(DualNode.field_x, "Basic", "instr_walk", false);
+          var3_array[3] = rl.a(DualNode.field_x, "basic", "instr_jump", false);
+          var3_array[4] = rl.a(DualNode.field_x, "basic", "instr_thrust", false);
+          var3_array[5] = IsaacRandom.field_d[16].toRgbSprite();
+          var3_array[6] = rl.a(DualNode.field_x, "basic", "instr_selweapon", false);
+          var3_array[7] = rl.a(DualNode.field_x, "basic", "instr_target", false);
+          var3_array[8] = rl.a(DualNode.field_x, "basic", "instr_noenergy", false);
+          var3_array[9] = IsaacRandom.field_d[32].toRgbSprite();
+          var3_array[10] = IsaacRandom.field_d[33].toRgbSprite();
+          var3_array[11] = rl.a(DualNode.field_x, "basic", "instr_bigshieldicon", false);
+          var3_array[12] = IsaacRandom.field_d[27].toRgbSprite();
+          var3_array[13] = rl.a(DualNode.field_x, "basic", "instr_stats", false);
+          var3_array[14] = rl.a(DualNode.field_x, "basic", "instr_chassis", false);
+          var3_array[15] = rl.a(DualNode.field_x, "basic", "instr_components", false);
+          var3_array[16] = rl.a(DualNode.field_x, "basic", "instr_weapons", false);
+          var3_array[17] = rl.a(DualNode.field_x, "basic", "instr_modules", false);
+          var3_array[18] = rl.a(DualNode.field_x, "basic", "instr_engineer", false);
+          var3_array[19] = rl.a(DualNode.field_x, "basic", "instr_coop", false);
+          var3_array[20] = rl.a(DualNode.field_x, "basic", "instr_team", false);
+          var3_array[25] = rl.a(DualNode.field_x, "basic", "instr_techvalue", false);
+          fa.field_b = rl.a(DualNode.field_x, "basic", "logo_menu_chromakey", false);
+          ob.field_z = (ek) (dn.a("basic", -63, "main_lower_panel", DualNode.field_x));
+          ma.field_eb = (ek) (dn.a("basic", param0 ^ 75, "main_title_panel", DualNode.field_x));
+          fi.field_j = rl.a(DualNode.field_x, "basic", "menu_mesh", false);
+          ic.field_db = rl.a(DualNode.field_x, "basic", "menu_titlebar", false);
+          pl.field_T = GameplayController.a(DualNode.field_x, (byte) -62, "menu_button_1", "basic");
+          GameplayController.a(DualNode.field_x, (byte) 107, "empty_button", "basic");
+          el.field_Ub = rl.a(DualNode.field_x, "basic", "prevbtn", false);
+          gm.field_b = rl.a(DualNode.field_x, "basic", "nextbtn", false);
+          pf.field_b = rl.a(DualNode.field_x, "basic", "lobby_icon", false);
+          vc.field_e = cf.a("statbars", "basic", (byte) -13, DualNode.field_x);
+          pd.field_Z = cf.a("tags", "basic", (byte) -50, DualNode.field_x);
+          uh.field_k = rl.a(DualNode.field_x, "basic", "tagborder", false);
+          qg.field_f = cf.a("movekeys", "basic", (byte) -38, DualNode.field_x);
+          bc.field_wb = rl.a(DualNode.field_x, "basic", "shiftkey", false);
+          da.field_e = cf.a("config_tabs", "basic", (byte) -33, DualNode.field_x);
+          aj.field_r[0] = rl.a(DualNode.field_x, "basic", "research_ring", false);
+          b.field_q[0] = rl.a(DualNode.field_x, "basic", "research_icon", false);
+          bl.field_p = cj.a(param0 - 75, "basic", DualNode.field_x, "powerups");
+          gf.field_c = cf.a("headings_bar", "basic", (byte) -26, DualNode.field_x);
+          rl.a(DualNode.field_x, "basic", "solarite", false);
+          vk.field_q = rl.a(DualNode.field_x, "basic", "mansize", false);
+          gj.field_a = rl.a(DualNode.field_x, "basic", "stripeybar", false);
+          vk.field_r = rl.a(DualNode.field_x, "basic", "hackbit", false);
+          wc.field_d = cf.a("pretty_button_lit", "basic", (byte) -111, DualNode.field_x);
+          hk.field_Tb = cf.a("pretty_button_unlit", "basic", (byte) -50, DualNode.field_x);
+          eb.field_p = cf.a("menu_border", "basic", (byte) -31, DualNode.field_x);
+          lj.field_e = cf.a("bin_icon", "basic", (byte) -14, DualNode.field_x);
+          pd.field_Q = cf.a("faces_idle", "basic", (byte) -87, DualNode.field_x);
+          bg.field_C = cf.a("faces_talk", "basic", (byte) -97, DualNode.field_x);
+          am.field_f = cf.a("tutor_buttons", "basic", (byte) -125, DualNode.field_x);
+          b.field_n = cf.a("shields", "basic", (byte) -58, DualNode.field_x);
+          vi.field_gb = cf.a("explosion", "basic", (byte) -34, DualNode.field_x);
+          var3_array = ec.a((byte) -115, "smoke", DualNode.field_x, "basic");
           cc.field_pc = new ek[var3_array.length];
           var4_int = 0;
           do {
             if (var4_int >= var3_array.length) {
-              bm.field_S = cf.a("plasma", "basic", (byte) -98, kd.field_x);
-              cf.a("dust", "basic", (byte) -81, kd.field_x);
-              bf.field_Cb = cj.a(-120, "basic", kd.field_x, "crowns");
-              bc.field_sb = new wk(32, 32);
+              bm.field_S = cf.a("plasma", "basic", (byte) -98, DualNode.field_x);
+              cf.a("dust", "basic", (byte) -81, DualNode.field_x);
+              bf.field_Cb = cj.a(-120, "basic", DualNode.field_x, "crowns");
+              bc.field_sb = new RgbSprite(32, 32);
               bc.field_sb.d();
               d.field_G.b(0, 0, 32, 32);
               sb.field_bb.b((byte) 125);
@@ -677,19 +677,19 @@ public final class SteelSentinels extends n {
             cc.field_pc[var4_int] = (ek) (var3_array[var4_int]);
             var4_int++;
           } while (var6 == 0);
-          var3_array2 = new wk[nc.field_m.length][];
-          var4 = new wk[nc.field_m.length][];
+          var3_array2 = new RgbSprite[nc.field_m.length][];
+          var4 = new RgbSprite[nc.field_m.length][];
           var5 = 0;
           do {
             if (!(nc.field_m.length > var5)) {
-              cm.a(te.field_c, (byte) 74, tm.field_d, (int[]) null, rj.field_k, var4, true, 4, 3, bb.field_R, var2_array, v.field_b, var3_array2, ej.field_t, kc.field_w, qb.field_y, ti.field_u);
+              cm.a(te.field_c, (byte) 74, tm.field_d, (int[]) null, rj.field_k, var4, true, 4, 3, bb.field_R, var2_array, v.field_b, var3_array2, ej.field_t, kc.field_w, ParticleEffect.field_y, ti.field_u);
               pa.a(tm.field_d, 111, ej.field_t);
               un.a(200, 126);
               oh.field_a = null;
               cc.j(param0 ^ -52);
               break;
             }
-            var3_array2[var5] = cf.a(nc.field_m[var5], "basic", (byte) -63, kd.field_x);
+            var3_array2[var5] = cf.a(nc.field_m[var5], "basic", (byte) -63, DualNode.field_x);
             var4[var5] = null;
             var5++;
           } while (var6 == 0);
@@ -701,18 +701,18 @@ public final class SteelSentinels extends n {
         }
     }
 
-    final static wk[] a(int param0, int param1, byte param2, int param3, int param4) {
-        wk dupTemp$2 = null;
-        wk dupTemp$3 = null;
-        wk[] var5 = null;
+    final static RgbSprite[] a(int param0, int param1, byte param2, int param3, int param4) {
+        RgbSprite dupTemp$2 = null;
+        RgbSprite dupTemp$3 = null;
+        RgbSprite[] var5 = null;
         RuntimeException var5_ref = null;
-        wk[] stackIn_2_0 = null;
-        wk[] stackIn_8_0 = null;
+        RgbSprite[] stackIn_2_0 = null;
+        RgbSprite[] stackIn_8_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new wk[9];
+          var5 = new RgbSprite[9];
           if (param2 != -62) {
-            stackIn_2_0 = (wk[]) null;
+            stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
           dupTemp$2 = bd.a(param1, param3, 248);
@@ -741,91 +741,91 @@ public final class SteelSentinels extends n {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
-        var3 = field_G;
+        var3 = obfuscationControl;
         try {
           ej.field_v = 3;
           if (param0 != 53) {
             return;
           }
-          if (kd.field_x != null) {
+          if (DualNode.field_x != null) {
             ua.field_r = 13;
             cb.field_l = 0;
-            if (!kd.field_x.a(true)) {
+            if (!DualNode.field_x.a(true)) {
               return;
             }
             boolean decompiledFrameRemainder0 = true;
             if (al.field_g == 0 &&
-              kd.field_x.a((byte) -38, "lw_midground_01", "basic")) {
+              DualNode.field_x.a((byte) -38, "lw_midground_01", "basic")) {
               al.field_g = al.field_g + 1;
-              ig.field_o[1] = new wk[4];
-              ig.field_o[1][0] = rl.a(kd.field_x, "basic", "lw_midground_01", false);
+              ig.field_o[1] = new RgbSprite[4];
+              ig.field_o[1][0] = rl.a(DualNode.field_x, "basic", "lw_midground_01", false);
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (1 == al.field_g &&
-                kd.field_x.a((byte) 113, "lw_midground_02", "basic")) {
+                DualNode.field_x.a((byte) 113, "lw_midground_02", "basic")) {
                 al.field_g = al.field_g + 1;
-                ig.field_o[1][1] = rl.a(kd.field_x, "basic", "lw_midground_02", false);
+                ig.field_o[1][1] = rl.a(DualNode.field_x, "basic", "lw_midground_02", false);
                 decompiledFrameRemainder0 = (var3 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if (2 != al.field_g ||
-                  !kd.field_x.a((byte) -78, "lw_midground_03", "basic")) {
+                  !DualNode.field_x.a((byte) -78, "lw_midground_03", "basic")) {
                   if (al.field_g == 3 &&
-                    kd.field_x.a((byte) 101, "lw_midground_04", "basic")) {
+                    DualNode.field_x.a((byte) 101, "lw_midground_04", "basic")) {
                     al.field_g = al.field_g + 1;
-                    ig.field_o[1][3] = rl.a(kd.field_x, "basic", "lw_midground_04", false);
+                    ig.field_o[1][3] = rl.a(DualNode.field_x, "basic", "lw_midground_04", false);
                     decompiledFrameRemainder0 = (var3 != 0);
                   }
                   if (decompiledFrameRemainder0) {
                     if (al.field_g != 4 ||
-                      !kd.field_x.a((byte) -56, "ct_midground_01", "basic")) {
+                      !DualNode.field_x.a((byte) -56, "ct_midground_01", "basic")) {
                       if (al.field_g != 5 ||
-                        !kd.field_x.a((byte) 102, "ct_midground_02", "basic")) {
+                        !DualNode.field_x.a((byte) 102, "ct_midground_02", "basic")) {
                         if (al.field_g != 6 ||
-                          !kd.field_x.a((byte) -117, "ct_midground_03", "basic")) {
+                          !DualNode.field_x.a((byte) -117, "ct_midground_03", "basic")) {
                           if (7 == al.field_g &&
-                            kd.field_x.a((byte) -57, "ct_midground_04", "basic")) {
+                            DualNode.field_x.a((byte) -57, "ct_midground_04", "basic")) {
                             al.field_g = al.field_g + 1;
-                            ig.field_o[2][3] = rl.a(kd.field_x, "basic", "ct_midground_04", false);
+                            ig.field_o[2][3] = rl.a(DualNode.field_x, "basic", "ct_midground_04", false);
                             decompiledFrameRemainder0 = (var3 != 0);
                           }
                           if (decompiledFrameRemainder0) {
                             if (al.field_g == 8 &&
-                              kd.field_x.a((byte) 107, "testsurface", "basic")) {
+                              DualNode.field_x.a((byte) 107, "testsurface", "basic")) {
                               al.field_g = al.field_g + 1;
-                              vi.field_R = rl.a(kd.field_x, "basic", "testsurface", false);
+                              vi.field_R = rl.a(DualNode.field_x, "basic", "testsurface", false);
                               decompiledFrameRemainder0 = (var3 != 0);
                             }
                             if (decompiledFrameRemainder0) {
                               if (al.field_g != 9 ||
-                                !kd.field_x.a((byte) -63, "wz_texture", "basic")) {
+                                !DualNode.field_x.a((byte) -63, "wz_texture", "basic")) {
                                 if (al.field_g == 10 &&
-                                  kd.field_x.a((byte) -81, "lw_texture", "basic")) {
+                                  DualNode.field_x.a((byte) -81, "lw_texture", "basic")) {
                                   al.field_g = al.field_g + 1;
-                                  bc.field_rb[1] = rl.a(kd.field_x, "basic", "lw_texture", false);
+                                  bc.field_rb[1] = rl.a(DualNode.field_x, "basic", "lw_texture", false);
                                   decompiledFrameRemainder0 = (var3 != 0);
                                 }
                                 if (decompiledFrameRemainder0) {
                                   if (11 == al.field_g &&
-                                    kd.field_x.a((byte) -113, "ct_texture", "basic")) {
+                                    DualNode.field_x.a((byte) -113, "ct_texture", "basic")) {
                                     al.field_g = al.field_g + 1;
-                                    bc.field_rb[2] = rl.a(kd.field_x, "basic", "ct_texture", false);
+                                    bc.field_rb[2] = rl.a(DualNode.field_x, "basic", "ct_texture", false);
                                     decompiledFrameRemainder0 = (var3 != 0);
                                   }
                                   if ((decompiledFrameRemainder0) &&
                                     (decompiledFrameRemainder0 = (al.field_g == 12)) &&
-                                    (decompiledFrameRemainder0 = !(!kd.field_x.a((byte) 127, "mn_texture", "basic")))) {
+                                    (decompiledFrameRemainder0 = !(!DualNode.field_x.a((byte) 127, "mn_texture", "basic")))) {
                                     al.field_g = al.field_g + 1;
-                                    bc.field_rb[3] = rl.a(kd.field_x, "basic", "mn_texture", false);
+                                    bc.field_rb[3] = rl.a(DualNode.field_x, "basic", "mn_texture", false);
                                     decompiledFrameRemainder0 = (var3 != 0);
                                   }
                                 }
                               }
                               if (decompiledFrameRemainder0) {
                                 al.field_g = al.field_g + 1;
-                                bc.field_rb = new wk[5];
-                                bc.field_rb[0] = rl.a(kd.field_x, "basic", "wz_texture", false);
+                                bc.field_rb = new RgbSprite[5];
+                                bc.field_rb[0] = rl.a(DualNode.field_x, "basic", "wz_texture", false);
                                 bc.field_rb[4] = bc.field_rb[0];
                                 decompiledFrameRemainder0 = (var3 != 0);
                               }
@@ -834,46 +834,46 @@ public final class SteelSentinels extends n {
                         }
                         if (decompiledFrameRemainder0) {
                           al.field_g = al.field_g + 1;
-                          ig.field_o[2][2] = rl.a(kd.field_x, "basic", "ct_midground_03", false);
+                          ig.field_o[2][2] = rl.a(DualNode.field_x, "basic", "ct_midground_03", false);
                           if (var3 != 0) {
                             al.field_g = al.field_g + 1;
-                            ig.field_o[2][1] = rl.a(kd.field_x, "basic", "ct_midground_02", false);
+                            ig.field_o[2][1] = rl.a(DualNode.field_x, "basic", "ct_midground_02", false);
                             al.field_g = al.field_g + 1;
-                            ig.field_o[2] = new wk[4];
-                            ig.field_o[2][0] = rl.a(kd.field_x, "basic", "ct_midground_01", false);
+                            ig.field_o[2] = new RgbSprite[4];
+                            ig.field_o[2][0] = rl.a(DualNode.field_x, "basic", "ct_midground_01", false);
                             al.field_g = al.field_g + 1;
-                            ig.field_o[1][2] = rl.a(kd.field_x, "basic", "lw_midground_03", false);
+                            ig.field_o[1][2] = rl.a(DualNode.field_x, "basic", "lw_midground_03", false);
                           }
                         }
                       } else {
                         al.field_g = al.field_g + 1;
-                        ig.field_o[2][1] = rl.a(kd.field_x, "basic", "ct_midground_02", false);
+                        ig.field_o[2][1] = rl.a(DualNode.field_x, "basic", "ct_midground_02", false);
                         if (var3 != 0) {
                           al.field_g = al.field_g + 1;
-                          ig.field_o[2] = new wk[4];
-                          ig.field_o[2][0] = rl.a(kd.field_x, "basic", "ct_midground_01", false);
+                          ig.field_o[2] = new RgbSprite[4];
+                          ig.field_o[2][0] = rl.a(DualNode.field_x, "basic", "ct_midground_01", false);
                           al.field_g = al.field_g + 1;
-                          ig.field_o[1][2] = rl.a(kd.field_x, "basic", "lw_midground_03", false);
+                          ig.field_o[1][2] = rl.a(DualNode.field_x, "basic", "lw_midground_03", false);
                         }
                       }
                     } else {
                       al.field_g = al.field_g + 1;
-                      ig.field_o[2] = new wk[4];
-                      ig.field_o[2][0] = rl.a(kd.field_x, "basic", "ct_midground_01", false);
+                      ig.field_o[2] = new RgbSprite[4];
+                      ig.field_o[2][0] = rl.a(DualNode.field_x, "basic", "ct_midground_01", false);
                       if (var3 != 0) {
                         al.field_g = al.field_g + 1;
-                        ig.field_o[1][2] = rl.a(kd.field_x, "basic", "lw_midground_03", false);
+                        ig.field_o[1][2] = rl.a(DualNode.field_x, "basic", "lw_midground_03", false);
                       }
                     }
                   }
                 } else {
                   al.field_g = al.field_g + 1;
-                  ig.field_o[1][2] = rl.a(kd.field_x, "basic", "lw_midground_03", false);
+                  ig.field_o[1][2] = rl.a(DualNode.field_x, "basic", "lw_midground_03", false);
                 }
               }
             }
             if (13 == al.field_g) {
-              kd.field_x = null;
+              DualNode.field_x = null;
               cb.field_l = cb.field_l + 1;
               al.field_g = 0;
             }
@@ -909,106 +909,106 @@ public final class SteelSentinels extends n {
             if (al.field_g == 4 &&
               im.field_h.a((byte) 94, "wz_midground_01.png", "warzone/")) {
               al.field_g = al.field_g + 1;
-              ig.field_o[0] = new wk[4];
-              ig.field_o[0][0] = (wk) ((Object) new ek(im.field_h.a("wz_midground_01.png", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
+              ig.field_o[0] = new RgbSprite[4];
+              ig.field_o[0][0] = (RgbSprite) ((Object) new ek(im.field_h.a("wz_midground_01.png", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (al.field_g == 5 &&
               im.field_h.a((byte) 109, "wz_midground_02.png", "warzone/")) {
               al.field_g = al.field_g + 1;
-              ig.field_o[0][1] = (wk) ((Object) new ek(im.field_h.a("wz_midground_02.png", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
+              ig.field_o[0][1] = (RgbSprite) ((Object) new ek(im.field_h.a("wz_midground_02.png", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (al.field_g == 6 &&
               im.field_h.a((byte) 83, "wz_midground_03.png", "warzone/")) {
               al.field_g = al.field_g + 1;
-              ig.field_o[0][2] = (wk) ((Object) new ek(im.field_h.a("wz_midground_03.png", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
+              ig.field_o[0][2] = (RgbSprite) ((Object) new ek(im.field_h.a("wz_midground_03.png", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (7 == al.field_g &&
               im.field_h.a((byte) 118, "wz_midground_04.png", "warzone/")) {
               al.field_g = al.field_g + 1;
-              ig.field_o[0][3] = (wk) ((Object) new ek(im.field_h.a("wz_midground_04.png", bi.a(param0, -721), "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
+              ig.field_o[0][3] = (RgbSprite) ((Object) new ek(im.field_h.a("wz_midground_04.png", bi.a(param0, -721), "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (al.field_g == 8 &&
               im.field_h.a((byte) 88, "wz_foreground_01.png", "warzone/")) {
               al.field_g = al.field_g + 1;
-              kc.field_x[0] = new wk[7];
-              kc.field_x[0][0] = (wk) ((Object) new ek(im.field_h.a("wz_foreground_01.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
+              kc.field_x[0] = new RgbSprite[7];
+              kc.field_x[0][0] = (RgbSprite) ((Object) new ek(im.field_h.a("wz_foreground_01.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (9 == al.field_g &&
               im.field_h.a((byte) 122, "wz_foreground_02.png", "warzone/")) {
               al.field_g = al.field_g + 1;
-              kc.field_x[0][1] = (wk) ((Object) new ek(im.field_h.a("wz_foreground_02.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
+              kc.field_x[0][1] = (RgbSprite) ((Object) new ek(im.field_h.a("wz_foreground_02.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (al.field_g == 10 &&
               im.field_h.a((byte) 84, "wz_foreground_03.png", "warzone/")) {
               al.field_g = al.field_g + 1;
-              kc.field_x[0][2] = (wk) ((Object) new ek(im.field_h.a("wz_foreground_03.png", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
+              kc.field_x[0][2] = (RgbSprite) ((Object) new ek(im.field_h.a("wz_foreground_03.png", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (al.field_g == 11 &&
               im.field_h.a((byte) 122, "wz_foreground_04.png", "warzone/")) {
               al.field_g = al.field_g + 1;
-              kc.field_x[0][3] = (wk) ((Object) new ek(im.field_h.a("wz_foreground_04.png", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
+              kc.field_x[0][3] = (RgbSprite) ((Object) new ek(im.field_h.a("wz_foreground_04.png", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (al.field_g == 12 &&
               im.field_h.a((byte) -76, "wz_foreground_05.png", "warzone/")) {
               al.field_g = al.field_g + 1;
-              kc.field_x[0][4] = (wk) ((Object) new ek(im.field_h.a("wz_foreground_05.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
+              kc.field_x[0][4] = (RgbSprite) ((Object) new ek(im.field_h.a("wz_foreground_05.png", param0 - 795, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (al.field_g == 13 &&
               im.field_h.a((byte) 102, "wz_foreground_06.png", "warzone/")) {
               al.field_g = al.field_g + 1;
-              kc.field_x[0][5] = (wk) ((Object) new ek(im.field_h.a("wz_foreground_06.png", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
+              kc.field_x[0][5] = (RgbSprite) ((Object) new ek(im.field_h.a("wz_foreground_06.png", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (al.field_g == 14 &&
               im.field_h.a((byte) 93, "wz_foreground_07.png", "warzone/")) {
               al.field_g = al.field_g + 1;
-              kc.field_x[0][6] = (wk) ((Object) new ek(im.field_h.a("wz_foreground_07.png", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
+              kc.field_x[0][6] = (RgbSprite) ((Object) new ek(im.field_h.a("wz_foreground_07.png", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (al.field_g == 15 &&
               im.field_h.a((byte) -54, "sb_foreground_01.png", "fleetbattle/")) {
-              kc.field_x[1] = new wk[6];
+              kc.field_x[1] = new RgbSprite[6];
               al.field_g = al.field_g + 1;
-              kc.field_x[1][0] = (wk) ((Object) new ek(im.field_h.a("sb_foreground_01.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
+              kc.field_x[1][0] = (RgbSprite) ((Object) new ek(im.field_h.a("sb_foreground_01.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (16 == al.field_g &&
               im.field_h.a((byte) -68, "sb_foreground_02.png", "fleetbattle/")) {
               al.field_g = al.field_g + 1;
-              kc.field_x[1][1] = (wk) ((Object) new ek(im.field_h.a("sb_foreground_02.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
+              kc.field_x[1][1] = (RgbSprite) ((Object) new ek(im.field_h.a("sb_foreground_02.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (17 == al.field_g &&
               im.field_h.a((byte) -121, "sb_foreground_03.png", "fleetbattle/")) {
               al.field_g = al.field_g + 1;
-              kc.field_x[1][2] = (wk) ((Object) new ek(im.field_h.a("sb_foreground_03.png", bi.a(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
+              kc.field_x[1][2] = (RgbSprite) ((Object) new ek(im.field_h.a("sb_foreground_03.png", bi.a(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (18 == al.field_g &&
               im.field_h.a((byte) -127, "sb_foreground_04.png", "fleetbattle/")) {
               al.field_g = al.field_g + 1;
-              kc.field_x[1][3] = (wk) ((Object) new ek(im.field_h.a("sb_foreground_04.png", bi.a(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
+              kc.field_x[1][3] = (RgbSprite) ((Object) new ek(im.field_h.a("sb_foreground_04.png", bi.a(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (al.field_g == 19 &&
               im.field_h.a((byte) -70, "sb_foreground_05.png", "fleetbattle/")) {
               al.field_g = al.field_g + 1;
-              kc.field_x[1][4] = (wk) ((Object) new ek(im.field_h.a("sb_foreground_05.png", bi.a(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
+              kc.field_x[1][4] = (RgbSprite) ((Object) new ek(im.field_h.a("sb_foreground_05.png", bi.a(param0, -721), "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (20 == al.field_g &&
               im.field_h.a((byte) 126, "sb_foreground_06.png", "fleetbattle/")) {
               al.field_g = al.field_g + 1;
-              kc.field_x[1][5] = (wk) ((Object) new ek(im.field_h.a("sb_foreground_06.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
+              kc.field_x[1][5] = (RgbSprite) ((Object) new ek(im.field_h.a("sb_foreground_06.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
               return;
             }
             if (al.field_g == 21 &&
@@ -1029,20 +1029,20 @@ public final class SteelSentinels extends n {
           }
           if (cb.field_l == 2 &&
             he.field_e != null) {
-            L26: {
+            regionExit1: {
               ua.field_r = 90;
               if (al.field_g == 0) {
                 qj.field_q[0] = he.field_e.a("menu_select", "", -123);
                 al.field_g = al.field_g + 1;
                 if (var3 == 0) {
-                  break L26;
+                  break regionExit1;
                 }
               }
               if (al.field_g == 1) {
                 qj.field_q[1] = he.field_e.a("jumping", "", bi.a(param0, 90));
                 al.field_g = al.field_g + 1;
                 if (var3 == 0) {
-                  break L26;
+                  break regionExit1;
                 }
               }
               if (al.field_g != 2) {
@@ -1051,7 +1051,7 @@ public final class SteelSentinels extends n {
                     qj.field_q[4] = he.field_e.a("drop_pod", "", -121);
                     al.field_g = al.field_g + 1;
                     if (var3 == 0) {
-                      break L26;
+                      break regionExit1;
                     }
                   }
                   if (al.field_g != 5) {
@@ -1059,7 +1059,7 @@ public final class SteelSentinels extends n {
                       qj.field_q[6] = he.field_e.a("footstep_5", "", 100);
                       al.field_g = al.field_g + 1;
                       if (var3 == 0) {
-                        break L26;
+                        break regionExit1;
                       }
                     }
                     if (al.field_g != 7) {
@@ -1067,7 +1067,7 @@ public final class SteelSentinels extends n {
                         qj.field_q[8] = he.field_e.a("respawn", "", -28);
                         al.field_g = al.field_g + 1;
                         if (var3 == 0) {
-                          break L26;
+                          break regionExit1;
                         }
                       }
                       if (al.field_g != 9) {
@@ -1077,7 +1077,7 @@ public final class SteelSentinels extends n {
                               qj.field_q[12] = he.field_e.a("proxy_grenade_launcher", "", 105);
                               al.field_g = al.field_g + 1;
                               if (var3 == 0) {
-                                break L26;
+                                break regionExit1;
                               }
                             }
                             if (al.field_g != 13) {
@@ -1086,7 +1086,7 @@ public final class SteelSentinels extends n {
                                   qj.field_q[15] = he.field_e.a("pulse_laser", "", -118);
                                   al.field_g = al.field_g + 1;
                                   if (var3 == 0) {
-                                    break L26;
+                                    break regionExit1;
                                   }
                                 }
                                 if (al.field_g != 16) {
@@ -1094,21 +1094,21 @@ public final class SteelSentinels extends n {
                                     qj.field_q[17] = he.field_e.a("emp_rocket_impact", "", 112);
                                     al.field_g = al.field_g + 1;
                                     if (var3 == 0) {
-                                      break L26;
+                                      break regionExit1;
                                     }
                                   }
                                   if (al.field_g == 18) {
                                     qj.field_q[18] = he.field_e.a("flak_repeater", "", 124);
                                     al.field_g = al.field_g + 1;
                                     if (var3 == 0) {
-                                      break L26;
+                                      break regionExit1;
                                     }
                                   }
                                   if (19 == al.field_g) {
                                     qj.field_q[19] = he.field_e.a("plasma_spray", "", -50);
                                     al.field_g = al.field_g + 1;
                                     if (var3 == 0) {
-                                      break L26;
+                                      break regionExit1;
                                     }
                                   }
                                   if (al.field_g != 20) {
@@ -1116,14 +1116,14 @@ public final class SteelSentinels extends n {
                                       qj.field_q[21] = he.field_e.a("electron_cannon", "", param0 - 135);
                                       al.field_g = al.field_g + 1;
                                       if (var3 == 0) {
-                                        break L26;
+                                        break regionExit1;
                                       }
                                     }
                                     if (al.field_g == 22) {
                                       qj.field_q[22] = he.field_e.a("sword", "", 113);
                                       al.field_g = al.field_g + 1;
                                       if (var3 == 0) {
-                                        break L26;
+                                        break regionExit1;
                                       }
                                     }
                                     if (al.field_g != 23) {
@@ -1136,28 +1136,28 @@ public final class SteelSentinels extends n {
                                                   qj.field_q[29] = he.field_e.a("shield_loop", "", 122);
                                                   al.field_g = al.field_g + 1;
                                                   if (var3 == 0) {
-                                                    break L26;
+                                                    break regionExit1;
                                                   }
                                                 }
                                                 if (30 == al.field_g) {
                                                   qj.field_q[30] = he.field_e.a("mine_inactive_hum_2", "", -105);
                                                   al.field_g = al.field_g + 1;
                                                   if (var3 == 0) {
-                                                    break L26;
+                                                    break regionExit1;
                                                   }
                                                 }
                                                 if (al.field_g == 31) {
                                                   qj.field_q[31] = he.field_e.a("lightning_cannon", "", 123);
                                                   al.field_g = al.field_g + 1;
                                                   if (var3 == 0) {
-                                                    break L26;
+                                                    break regionExit1;
                                                   }
                                                 }
                                                 if (32 == al.field_g) {
                                                   qj.field_q[32] = he.field_e.a("heavy_cannon_3", "", -86);
                                                   al.field_g = al.field_g + 1;
                                                   if (var3 == 0) {
-                                                    break L26;
+                                                    break regionExit1;
                                                   }
                                                 }
                                                 if (al.field_g != 33) {
@@ -1165,7 +1165,7 @@ public final class SteelSentinels extends n {
                                                     qj.field_q[34] = he.field_e.a("heavy_cannon_1", "", -109);
                                                     al.field_g = al.field_g + 1;
                                                     if (var3 == 0) {
-                                                      break L26;
+                                                      break regionExit1;
                                                     }
                                                   }
                                                   if (al.field_g != 35) {
@@ -1173,21 +1173,21 @@ public final class SteelSentinels extends n {
                                                       qj.field_q[36] = he.field_e.a("heavy_gun_3", "", param0 - 94);
                                                       al.field_g = al.field_g + 1;
                                                       if (var3 == 0) {
-                                                        break L26;
+                                                        break regionExit1;
                                                       }
                                                     }
                                                     if (al.field_g == 37) {
                                                       qj.field_q[37] = he.field_e.a("air_mine", "", -78);
                                                       al.field_g = al.field_g + 1;
                                                       if (var3 == 0) {
-                                                        break L26;
+                                                        break regionExit1;
                                                       }
                                                     }
                                                     if (al.field_g == 38) {
                                                       qj.field_q[38] = he.field_e.a("heavy_gun_1", "", 126);
                                                       al.field_g = al.field_g + 1;
                                                       if (var3 == 0) {
-                                                        break L26;
+                                                        break regionExit1;
                                                       }
                                                     }
                                                     if (al.field_g != 39) {
@@ -1195,7 +1195,7 @@ public final class SteelSentinels extends n {
                                                         qj.field_q[40] = he.field_e.a("rail_repeater", "", 118);
                                                         al.field_g = al.field_g + 1;
                                                         if (var3 == 0) {
-                                                          break L26;
+                                                          break regionExit1;
                                                         }
                                                       }
                                                       if (41 != al.field_g) {
@@ -1203,7 +1203,7 @@ public final class SteelSentinels extends n {
                                                           qj.field_q[42] = he.field_e.a("plasma_cannon", "", 104);
                                                           al.field_g = al.field_g + 1;
                                                           if (var3 == 0) {
-                                                            break L26;
+                                                            break regionExit1;
                                                           }
                                                         }
                                                         if (43 != al.field_g) {
@@ -1213,7 +1213,7 @@ public final class SteelSentinels extends n {
                                                                 qj.field_q[67] = he.field_e.a("laser_beam", "", 110);
                                                                 al.field_g = al.field_g + 1;
                                                                 if (var3 == 0) {
-                                                                  break L26;
+                                                                  break regionExit1;
                                                                 }
                                                               }
                                                               if (al.field_g != 47) {
@@ -1221,7 +1221,7 @@ public final class SteelSentinels extends n {
                                                                   qj.field_q[46] = he.field_e.a("flak_cannon_3", "", 103);
                                                                   al.field_g = al.field_g + 1;
                                                                   if (var3 == 0) {
-                                                                    break L26;
+                                                                    break regionExit1;
                                                                   }
                                                                 }
                                                                 if (49 != al.field_g) {
@@ -1229,21 +1229,21 @@ public final class SteelSentinels extends n {
                                                                     qj.field_q[48] = he.field_e.a("explosion_1", "", 110);
                                                                     al.field_g = al.field_g + 1;
                                                                     if (var3 == 0) {
-                                                                      break L26;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if (al.field_g == 51) {
                                                                     qj.field_q[49] = he.field_e.a("damage_richochet", "", bi.a(param0, -15));
                                                                     al.field_g = al.field_g + 1;
                                                                     if (var3 == 0) {
-                                                                      break L26;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if (al.field_g == 52) {
                                                                     qj.field_q[50] = he.field_e.a("damage_plasma_burn", "", 113);
                                                                     al.field_g = al.field_g + 1;
                                                                     if (var3 == 0) {
-                                                                      break L26;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if (53 != al.field_g) {
@@ -1251,7 +1251,7 @@ public final class SteelSentinels extends n {
                                                                       qj.field_q[52] = he.field_e.a("explosion_4", "", 122);
                                                                       al.field_g = al.field_g + 1;
                                                                       if (var3 == 0) {
-                                                                        break L26;
+                                                                        break regionExit1;
                                                                       }
                                                                     }
                                                                     if (al.field_g != 55) {
@@ -1260,14 +1260,14 @@ public final class SteelSentinels extends n {
                                                                           qj.field_q[55] = he.field_e.a("damage_debris_hitting_ground", "", -32);
                                                                           al.field_g = al.field_g + 1;
                                                                           if (var3 == 0) {
-                                                                            break L26;
+                                                                            break regionExit1;
                                                                           }
                                                                         }
                                                                         if (al.field_g == 58) {
                                                                           qj.field_q[56] = he.field_e.a("explosion_3", "", -82);
                                                                           al.field_g = al.field_g + 1;
                                                                           if (var3 == 0) {
-                                                                            break L26;
+                                                                            break regionExit1;
                                                                           }
                                                                         }
                                                                         if (al.field_g != 59) {
@@ -1276,7 +1276,7 @@ public final class SteelSentinels extends n {
                                                                               qj.field_q[59] = he.field_e.a("rail_cannon", "", 122);
                                                                               al.field_g = al.field_g + 1;
                                                                               if (var3 == 0) {
-                                                                                break L26;
+                                                                                break regionExit1;
                                                                               }
                                                                             }
                                                                             if (al.field_g != 62) {
@@ -1285,7 +1285,7 @@ public final class SteelSentinels extends n {
                                                                                   qj.field_q[62] = he.field_e.a("fusion_cannon", "", -56);
                                                                                   al.field_g = al.field_g + 1;
                                                                                   if (var3 == 0) {
-                                                                                    break L26;
+                                                                                    break regionExit1;
                                                                                   }
                                                                                 }
                                                                                 if (al.field_g != 65) {
@@ -1296,7 +1296,7 @@ public final class SteelSentinels extends n {
                                                                                           qj.field_q[69] = he.field_e.a("Add_order", "", 118);
                                                                                           al.field_g = al.field_g + 1;
                                                                                           if (var3 == 0) {
-                                                                                            break L26;
+                                                                                            break regionExit1;
                                                                                           }
                                                                                         }
                                                                                         if (70 != al.field_g) {
@@ -1304,14 +1304,14 @@ public final class SteelSentinels extends n {
                                                                                             qj.field_q[85] = he.field_e.a("pause_menu_close", "", -92);
                                                                                             al.field_g = al.field_g + 1;
                                                                                             if (var3 == 0) {
-                                                                                              break L26;
+                                                                                              break regionExit1;
                                                                                             }
                                                                                           }
                                                                                           if (72 == al.field_g) {
                                                                                             qj.field_q[86] = he.field_e.a("explosion_fireball_1", "", 100);
                                                                                             al.field_g = al.field_g + 1;
                                                                                             if (var3 == 0) {
-                                                                                              break L26;
+                                                                                              break regionExit1;
                                                                                             }
                                                                                           }
                                                                                           if (al.field_g != 73) {
@@ -1321,14 +1321,14 @@ public final class SteelSentinels extends n {
                                                                                                   qj.field_q[90] = he.field_e.a("steam", "", -108);
                                                                                                   al.field_g = al.field_g + 1;
                                                                                                   if (var3 == 0) {
-                                                                                                    break L26;
+                                                                                                    break regionExit1;
                                                                                                   }
                                                                                                 }
                                                                                                 if (al.field_g == 77) {
                                                                                                   qj.field_q[91] = he.field_e.a("flak_explosion_500ms", "", 95);
                                                                                                   al.field_g = al.field_g + 1;
                                                                                                   if (var3 == 0) {
-                                                                                                    break L26;
+                                                                                                    break regionExit1;
                                                                                                   }
                                                                                                 }
                                                                                                 if (al.field_g != 78) {
@@ -1341,7 +1341,7 @@ public final class SteelSentinels extends n {
                                                                                                               qj.field_q[98] = he.field_e.a("main_menu_disappear", "", 93);
                                                                                                               al.field_g = al.field_g + 1;
                                                                                                               if (var3 == 0) {
-                                                                                                                break L26;
+                                                                                                                break regionExit1;
                                                                                                               }
                                                                                                             }
                                                                                                             if (al.field_g != 85) {
@@ -1350,311 +1350,311 @@ public final class SteelSentinels extends n {
                                                                                                                   qj.field_q[102] = he.field_e.a("power_up", "", 102);
                                                                                                                   al.field_g = al.field_g + 1;
                                                                                                                   if (var3 == 0) {
-                                                                                                                    break L26;
+                                                                                                                    break regionExit1;
                                                                                                                   }
                                                                                                                 }
                                                                                                                 if (al.field_g == 88) {
                                                                                                                   qj.field_q[103] = he.field_e.a("energy_sword_part_1", "", param0 + 47);
                                                                                                                   al.field_g = al.field_g + 1;
                                                                                                                   if (var3 == 0) {
-                                                                                                                    break L26;
+                                                                                                                    break regionExit1;
                                                                                                                   }
                                                                                                                 }
                                                                                                                 if (al.field_g != 89) {
-                                                                                                                  break L26;
+                                                                                                                  break regionExit1;
                                                                                                                 }
                                                                                                                 qj.field_q[104] = he.field_e.a("new_nuke_explosion", "", 100);
                                                                                                                 al.field_g = al.field_g + 1;
                                                                                                                 if (var3 == 0) {
-                                                                                                                  break L26;
+                                                                                                                  break regionExit1;
                                                                                                                 }
                                                                                                               }
                                                                                                               qj.field_q[100] = he.field_e.a("Menu_engineering_select_part", "", -28);
                                                                                                               al.field_g = al.field_g + 1;
                                                                                                               if (var3 == 0) {
-                                                                                                                break L26;
+                                                                                                                break regionExit1;
                                                                                                               }
                                                                                                             }
                                                                                                             qj.field_q[99] = he.field_e.a("Menu_engineering_select_chassis", "", -112);
                                                                                                             al.field_g = al.field_g + 1;
                                                                                                             if (var3 == 0) {
-                                                                                                              break L26;
+                                                                                                              break regionExit1;
                                                                                                             }
                                                                                                           }
                                                                                                           qj.field_q[97] = he.field_e.a("Mouseover", "", 120);
                                                                                                           al.field_g = al.field_g + 1;
                                                                                                           if (var3 == 0) {
-                                                                                                            break L26;
+                                                                                                            break regionExit1;
                                                                                                           }
                                                                                                         }
                                                                                                         qj.field_q[96] = he.field_e.a("Main_menu_appear", "", 104);
                                                                                                         al.field_g = al.field_g + 1;
                                                                                                         if (var3 == 0) {
-                                                                                                          break L26;
+                                                                                                          break regionExit1;
                                                                                                         }
                                                                                                       }
                                                                                                       qj.field_q[95] = he.field_e.a("Button_press", "", -49);
                                                                                                       al.field_g = al.field_g + 1;
                                                                                                       if (var3 == 0) {
-                                                                                                        break L26;
+                                                                                                        break regionExit1;
                                                                                                       }
                                                                                                     }
                                                                                                     qj.field_q[94] = he.field_e.a("damage_plasma_burn2", "", -79);
                                                                                                     al.field_g = al.field_g + 1;
                                                                                                     if (var3 == 0) {
-                                                                                                      break L26;
+                                                                                                      break regionExit1;
                                                                                                     }
                                                                                                   }
                                                                                                   qj.field_q[93] = he.field_e.a("trackloop", "", bi.a(param0, 68));
                                                                                                   al.field_g = al.field_g + 1;
                                                                                                   if (var3 == 0) {
-                                                                                                    break L26;
+                                                                                                    break regionExit1;
                                                                                                   }
                                                                                                 }
                                                                                                 qj.field_q[92] = he.field_e.a("hoverloop", "", param0 + 59);
                                                                                                 al.field_g = al.field_g + 1;
                                                                                                 if (var3 == 0) {
-                                                                                                  break L26;
+                                                                                                  break regionExit1;
                                                                                                 }
                                                                                               }
                                                                                               qj.field_q[89] = he.field_e.a("explosion_fireball_4", "", -85);
                                                                                               al.field_g = al.field_g + 1;
                                                                                               if (var3 == 0) {
-                                                                                                break L26;
+                                                                                                break regionExit1;
                                                                                               }
                                                                                             }
                                                                                             qj.field_q[88] = he.field_e.a("explosion_fireball_3", "", bi.a(param0, -90));
                                                                                             al.field_g = al.field_g + 1;
                                                                                             if (var3 == 0) {
-                                                                                              break L26;
+                                                                                              break regionExit1;
                                                                                             }
                                                                                           }
                                                                                           qj.field_q[87] = he.field_e.a("explosion_fireball_2", "", -125);
                                                                                           al.field_g = al.field_g + 1;
                                                                                           if (var3 == 0) {
-                                                                                            break L26;
+                                                                                            break regionExit1;
                                                                                           }
                                                                                         }
                                                                                         qj.field_q[84] = he.field_e.a("pause_menu_open", "", bi.a(param0, -110));
                                                                                         al.field_g = al.field_g + 1;
                                                                                         if (var3 == 0) {
-                                                                                          break L26;
+                                                                                          break regionExit1;
                                                                                         }
                                                                                       }
                                                                                       qj.field_q[66] = he.field_e.a("ultra_gun", "", 123);
                                                                                       al.field_g = al.field_g + 1;
                                                                                       if (var3 == 0) {
-                                                                                        break L26;
+                                                                                        break regionExit1;
                                                                                       }
                                                                                     }
                                                                                     qj.field_q[65] = he.field_e.a("doomsday_cannon", "", -83);
                                                                                     al.field_g = al.field_g + 1;
                                                                                     if (var3 == 0) {
-                                                                                      break L26;
+                                                                                      break regionExit1;
                                                                                     }
                                                                                   }
                                                                                   qj.field_q[64] = he.field_e.a("solaris_laser", "", -116);
                                                                                   al.field_g = al.field_g + 1;
                                                                                   if (var3 == 0) {
-                                                                                    break L26;
+                                                                                    break regionExit1;
                                                                                   }
                                                                                 }
                                                                                 qj.field_q[63] = he.field_e.a("EMP_cannon", "", -61);
                                                                                 al.field_g = al.field_g + 1;
                                                                                 if (var3 == 0) {
-                                                                                  break L26;
+                                                                                  break regionExit1;
                                                                                 }
                                                                               }
                                                                               qj.field_q[61] = he.field_e.a("air_death_missile", "", bi.a(param0, 85));
                                                                               al.field_g = al.field_g + 1;
                                                                               if (var3 == 0) {
-                                                                                break L26;
+                                                                                break regionExit1;
                                                                               }
                                                                             }
                                                                             qj.field_q[60] = he.field_e.a("class_DEATH_nuke", "", -113);
                                                                             al.field_g = al.field_g + 1;
                                                                             if (var3 == 0) {
-                                                                              break L26;
+                                                                              break regionExit1;
                                                                             }
                                                                           }
                                                                           qj.field_q[58] = he.field_e.a("howitzer", "", -53);
                                                                           al.field_g = al.field_g + 1;
                                                                           if (var3 == 0) {
-                                                                            break L26;
+                                                                            break regionExit1;
                                                                           }
                                                                         }
                                                                         qj.field_q[57] = he.field_e.a("destructor_rocket", "", 100);
                                                                         al.field_g = al.field_g + 1;
                                                                         if (var3 == 0) {
-                                                                          break L26;
+                                                                          break regionExit1;
                                                                         }
                                                                       }
                                                                       qj.field_q[54] = he.field_e.a("explosion_6", "", 96);
                                                                       al.field_g = al.field_g + 1;
                                                                       if (var3 == 0) {
-                                                                        break L26;
+                                                                        break regionExit1;
                                                                       }
                                                                     }
                                                                     qj.field_q[53] = he.field_e.a("explosion_5", "", 117);
                                                                     al.field_g = al.field_g + 1;
                                                                     if (var3 == 0) {
-                                                                      break L26;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   qj.field_q[51] = he.field_e.a("damage_scraping_metal", "", -108);
                                                                   al.field_g = al.field_g + 1;
                                                                   if (var3 == 0) {
-                                                                    break L26;
+                                                                    break regionExit1;
                                                                   }
                                                                 }
                                                                 qj.field_q[47] = he.field_e.a("explosion_2", "", bi.a(param0, -87));
                                                                 al.field_g = al.field_g + 1;
                                                                 if (var3 == 0) {
-                                                                  break L26;
+                                                                  break regionExit1;
                                                                 }
                                                               }
                                                               qj.field_q[68] = he.field_e.a("heavy_gun_2", "", bi.a(param0, -27));
                                                               al.field_g = al.field_g + 1;
                                                               if (var3 == 0) {
-                                                                break L26;
+                                                                break regionExit1;
                                                               }
                                                             }
                                                             qj.field_q[45] = he.field_e.a("heavy_cannon_2", "", param0 + 62);
                                                             al.field_g = al.field_g + 1;
                                                             if (var3 == 0) {
-                                                              break L26;
+                                                              break regionExit1;
                                                             }
                                                           }
                                                           qj.field_q[44] = he.field_e.a("heavy_rocket_launch", "", param0 + 63);
                                                           al.field_g = al.field_g + 1;
                                                           if (var3 == 0) {
-                                                            break L26;
+                                                            break regionExit1;
                                                           }
                                                         }
                                                         qj.field_q[43] = he.field_e.a("rifled_sniper_cannon", "", 120);
                                                         al.field_g = al.field_g + 1;
                                                         if (var3 == 0) {
-                                                          break L26;
+                                                          break regionExit1;
                                                         }
                                                       }
                                                       qj.field_q[41] = he.field_e.a("mine_proximity_2", "", -72);
                                                       al.field_g = al.field_g + 1;
                                                       if (var3 == 0) {
-                                                        break L26;
+                                                        break regionExit1;
                                                       }
                                                     }
                                                     qj.field_q[39] = he.field_e.a("flak_cannon_1", "", 95);
                                                     al.field_g = al.field_g + 1;
                                                     if (var3 == 0) {
-                                                      break L26;
+                                                      break regionExit1;
                                                     }
                                                   }
                                                   qj.field_q[35] = he.field_e.a("morter", "", -67);
                                                   al.field_g = al.field_g + 1;
                                                   if (var3 == 0) {
-                                                    break L26;
+                                                    break regionExit1;
                                                   }
                                                 }
                                                 qj.field_q[33] = he.field_e.a("flak_cannon_2", "", -103);
                                                 al.field_g = al.field_g + 1;
                                                 if (var3 == 0) {
-                                                  break L26;
+                                                  break regionExit1;
                                                 }
                                               }
                                               qj.field_q[28] = he.field_e.a("EDD_teleport", "", 103);
                                               al.field_g = al.field_g + 1;
                                               if (var3 == 0) {
-                                                break L26;
+                                                break regionExit1;
                                               }
                                             }
                                             qj.field_q[27] = he.field_e.a("shield_hit", "", bi.a(param0, -109));
                                             al.field_g = al.field_g + 1;
                                             if (var3 == 0) {
-                                              break L26;
+                                              break regionExit1;
                                             }
                                           }
                                           qj.field_q[26] = he.field_e.a("ballistic_target_tracking_module", "", param0 - 176);
                                           al.field_g = al.field_g + 1;
                                           if (var3 == 0) {
-                                            break L26;
+                                            break regionExit1;
                                           }
                                         }
                                         qj.field_q[25] = he.field_e.a("attach_component", "", -57);
                                         al.field_g = al.field_g + 1;
                                         if (var3 == 0) {
-                                          break L26;
+                                          break regionExit1;
                                         }
                                       }
                                       qj.field_q[24] = he.field_e.a("hammer", "", -57);
                                       al.field_g = al.field_g + 1;
                                       if (var3 == 0) {
-                                        break L26;
+                                        break regionExit1;
                                       }
                                     }
                                     qj.field_q[23] = he.field_e.a("energy_sword_part_2", "", -41);
                                     al.field_g = al.field_g + 1;
                                     if (var3 == 0) {
-                                      break L26;
+                                      break regionExit1;
                                     }
                                   }
                                   qj.field_q[20] = he.field_e.a("light_rocket_launch", "", -56);
                                   al.field_g = al.field_g + 1;
                                   if (var3 == 0) {
-                                    break L26;
+                                    break regionExit1;
                                   }
                                 }
                                 qj.field_q[16] = he.field_e.a("mini_gun", "", 127);
                                 al.field_g = al.field_g + 1;
                                 if (var3 == 0) {
-                                  break L26;
+                                  break regionExit1;
                                 }
                               }
                               qj.field_q[14] = he.field_e.a("rapier_missle", "", param0 + 68);
                               al.field_g = al.field_g + 1;
                               if (var3 == 0) {
-                                break L26;
+                                break regionExit1;
                               }
                             }
                             qj.field_q[13] = he.field_e.a("gauss_gun", "", -110);
                             al.field_g = al.field_g + 1;
                             if (var3 == 0) {
-                              break L26;
+                              break regionExit1;
                             }
                           }
                           qj.field_q[11] = he.field_e.a("landing", "", 121);
                           al.field_g = al.field_g + 1;
                           if (var3 == 0) {
-                            break L26;
+                            break regionExit1;
                           }
                         }
                         qj.field_q[10] = he.field_e.a("footstep_3", "", param0 + 64);
                         al.field_g = al.field_g + 1;
                         if (var3 == 0) {
-                          break L26;
+                          break regionExit1;
                         }
                       }
                       qj.field_q[9] = he.field_e.a("death", "", param0 - 141);
                       al.field_g = al.field_g + 1;
                       if (var3 == 0) {
-                        break L26;
+                        break regionExit1;
                       }
                     }
                     qj.field_q[7] = he.field_e.a("footstep_2", "", 111);
                     al.field_g = al.field_g + 1;
                     if (var3 == 0) {
-                      break L26;
+                      break regionExit1;
                     }
                   }
                   qj.field_q[5] = he.field_e.a("footstep_4", "", 125);
                   al.field_g = al.field_g + 1;
                   if (var3 == 0) {
-                    break L26;
+                    break regionExit1;
                   }
                 }
                 qj.field_q[3] = he.field_e.a("footstep_1", "", bi.a(param0, 75));
                 al.field_g = al.field_g + 1;
                 if (var3 == 0) {
-                  break L26;
+                  break regionExit1;
                 }
               }
               qj.field_q[2] = he.field_e.a("thrusting", "", bi.a(param0, 92));
@@ -1698,8 +1698,8 @@ public final class SteelSentinels extends n {
             pl.field_S = null;
             cc.j(0);
           }
-          ie.field_k = dh.a(-124, 3);
-          kd.field_x = dh.a(60, 5);
+          IsaacRandom.field_k = dh.a(-124, 3);
+          DualNode.field_x = dh.a(60, 5);
           oh.field_a = dh.a(-90, 6);
           aj.field_x = dh.a(55, 7);
           dh.field_z = dh.a(120, 8);
@@ -1747,8 +1747,8 @@ public final class SteelSentinels extends n {
     private final void b(int param0, boolean param1) {
         int fieldTemp$0 = 0;
         boolean stackIn_179_0 = false;
-        nb stackIn_251_0;
-        nb stackIn_251_1;
+        GameplayController stackIn_251_0;
+        GameplayController stackIn_251_1;
         boolean stackIn_251_2;
         int stackIn_251_3;
         int stackIn_251_4;
@@ -1756,8 +1756,8 @@ public final class SteelSentinels extends n {
         int stackIn_251_6;
         boolean stackIn_251_7;
         int[][] stackIn_251_8;
-        nb stackIn_252_0;
-        nb stackIn_252_1;
+        GameplayController stackIn_252_0;
+        GameplayController stackIn_252_1;
         int stackIn_252_9;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -1765,13 +1765,13 @@ public final class SteelSentinels extends n {
         RuntimeException var3_ref = null;
         int var4 = 0;
         String[] var4_ref_String__ = null;
-        mb var5 = null;
+        Sentinel var5 = null;
         int var5_int = 0;
         int[][] var5_array = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = field_G;
+        var8 = obfuscationControl;
         try {
           boolean decompiledFrameRemainder2 = true;
           wh.a(false);
@@ -1783,7 +1783,7 @@ public final class SteelSentinels extends n {
                     pa.a(3, (byte) -114, lc.field_c);
                   }
                   gf.c(-128);
-                  vb.field_g = ji.field_i;
+                  vb.field_g = SentinelDesigner.field_i;
                   if (si.field_y) {
                     si.field_y = false;
                     ag.a(-4, false);
@@ -1794,7 +1794,7 @@ public final class SteelSentinels extends n {
                     if (var3_int == 5 ||
                       var3_int == 6 ||
                       var3_int == 8) {
-                      var3_int = gh.field_Jb;
+                      var3_int = SceneWidget.field_Jb;
                     }
                     q.a(-4, false, -1, var3_int);
                   }
@@ -1806,8 +1806,8 @@ public final class SteelSentinels extends n {
                 decompiledFrameRemainder2 = (var8 != 0);
               }
               if (decompiledFrameRemainder2) {
-                ji.field_a = ji.field_a - 1;
-                decompiledFrameRemainder2 = (ji.field_a == 0);
+                SentinelDesigner.field_a = SentinelDesigner.field_a - 1;
+                decompiledFrameRemainder2 = (SentinelDesigner.field_a == 0);
                 if (decompiledFrameRemainder2) {
                   in.field_i = in.field_h;
                   decompiledFrameRemainder2 = (var8 != 0);
@@ -1815,8 +1815,8 @@ public final class SteelSentinels extends n {
               }
             }
             if (decompiledFrameRemainder2) {
-              ji.field_a = ji.field_a + 1;
-              decompiledFrameRemainder2 = (ji.field_a == 16);
+              SentinelDesigner.field_a = SentinelDesigner.field_a + 1;
+              decompiledFrameRemainder2 = (SentinelDesigner.field_a == 16);
               if (decompiledFrameRemainder2) {
                 if (!si.field_y) {
                   bb.a((byte) 113);
@@ -1865,11 +1865,11 @@ public final class SteelSentinels extends n {
                     boolean decompiledFrameCompleted1 = true;
                     if (null != ih.field_s &&
                       null != hl.a((byte) -66)) {
-                      ih.field_s.b((byte) 27);
-                      var5 = (mb) (ih.field_s.field_K.e(13058));
+                      ih.field_s.advanceSimulation((byte) 27);
+                      var5 = (Sentinel) (ih.field_s.sentinels.first(13058));
                       while (null != var5) {
                         var5.field_vb = 0;
-                        var5 = (mb) (ih.field_s.field_K.a((byte) -80));
+                        var5 = (Sentinel) (ih.field_s.sentinels.next((byte) -80));
                         if (var8 != 0) {
                           decompiledFrameCompleted1 = false;
                           break;
@@ -1907,11 +1907,11 @@ public final class SteelSentinels extends n {
                 var3_int = 0;
               }
               la.a(13, var3_int != 0);
-              if (ee.field_G ||
+              if (CombatWorld.field_G ||
                 ob.field_y) {
                 ue.a((byte) 38, var4 != 0, 320, 180);
               }
-              if (ee.field_G &&
+              if (CombatWorld.field_G &&
                 null != si.field_A) {
                 si.field_A.c(param0 ^ 37, var4 != 0);
               }
@@ -1922,7 +1922,7 @@ public final class SteelSentinels extends n {
                 boolean decompiledFrameRemainder0 = true;
                 if (vl.field_v) {
                   if (ob.field_y ||
-                    ee.field_G) {
+                    CombatWorld.field_G) {
                     decompiledFrameRemainder0 = !(!cn.a(13, 15, 12, false));
                     if ((decompiledFrameRemainder0) &&
                       (var8 == 0)) {
@@ -1935,7 +1935,7 @@ public final class SteelSentinels extends n {
                   }
                 }
                 if ((decompiledFrameRemainder0) && ((ob.field_y ||
-                  ee.field_G) && (jn.field_g ||
+                  CombatWorld.field_G) && (jn.field_g ||
                   ei.field_q == 80 ||
                   ei.field_q == 10) && cn.a(13, 15, 12, false))) {
                   continue;
@@ -1948,7 +1948,7 @@ public final class SteelSentinels extends n {
                 if (stackIn_179_0) {
                   continue;
                 }
-                if (ee.field_G) {
+                if (CombatWorld.field_G) {
                   si.field_A.g(73);
                 }
                 if (!ob.field_y) {
@@ -1979,8 +1979,8 @@ public final class SteelSentinels extends n {
             var5_int = an.field_h * an.field_h;
             var6 = var5_int - on.field_i * on.field_i;
             var7 = vf.field_e + 120 * var6 / var5_int;
-            ji.d(0, var7);
-            if (bd.field_b.e(13058) != null) {
+            SentinelDesigner.d(0, var7);
+            if (bd.field_b.first(13058) != null) {
               fieldTemp$0 = ob.field_o + 1;
               ob.field_o = ob.field_o + 1;
               if (fieldTemp$0 == 500) {
@@ -2081,15 +2081,15 @@ public final class SteelSentinels extends n {
               stackIn_252_1 = null;
               stackIn_252_9 = 3;
             }
-            fk.field_i = new nb(stackIn_251_2, stackIn_251_3, stackIn_251_4, stackIn_251_5, stackIn_251_6, stackIn_251_7, stackIn_251_8, stackIn_252_9, 2, false, false);
-            var7 = nk.field_B ? 1 : 0;
+            fk.field_i = new GameplayController(stackIn_251_2, stackIn_251_3, stackIn_251_4, stackIn_251_5, stackIn_251_6, stackIn_251_7, stackIn_251_8, stackIn_252_9, 2, false, false);
+            var7 = ArticulatedPart.field_B ? 1 : 0;
             q.a(-1, var7 != 0, -1, 0);
-            ea.field_k = true;
+            Sprite.field_k = true;
           }
           if (-4 == vb.field_g) {
             mm.field_g.a(63, (byte) -117);
-            mm.field_g.field_p = mm.field_g.field_p + 1;
-            var3_int = mm.field_g.field_p;
+            mm.field_g.position = mm.field_g.position + 1;
+            var3_int = mm.field_g.position;
             mm.field_g.a((byte) 124, uc.field_b.length);
             var4 = 0;
             while (true) {
@@ -2100,7 +2100,7 @@ public final class SteelSentinels extends n {
                   continue;
                 }
               } else {
-                mm.field_g.b((byte) 111, mm.field_g.field_p - var3_int);
+                mm.field_g.b((byte) 111, mm.field_g.position - var3_int);
                 mm.field_g.a(9, (byte) -117);
                 rc.field_n = true;
                 vb.field_g = pm.field_T;
@@ -2132,7 +2132,7 @@ public final class SteelSentinels extends n {
           var2.b(128, (byte) -123, 9);
           qm.a(-31, hb.field_i, 22050, var2, true, (java.awt.Component) ((Object) sl.field_n));
           this.a(1, true, true, false, true, true, false);
-          ad.field_d = n.field_s;
+          ad.field_d = FunOrbClient.field_s;
           m.field_b = pl.field_ab;
           f.field_B[66] = 1;
           f.field_B[61] = 1;
@@ -2197,21 +2197,21 @@ public final class SteelSentinels extends n {
         Object var4_ref = null;
         int var4 = 0;
         int var5 = 0;
-        je var5_ref_je = null;
+        SentinelCommand var5_ref_je = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         String[] var10 = null;
-        je var10_ref = null;
+        SentinelCommand var10_ref = null;
         int var11_int = 0;
-        mb var11 = null;
+        Sentinel var11 = null;
         int[][] var12 = null;
         int var13_int = 0;
-        nb var13 = null;
+        GameplayController var13 = null;
         int var14 = 0;
         int var15 = 0;
-        var15 = field_G;
+        var15 = obfuscationControl;
         try {
           ub.b(-108);
           kg.field_Vb = ha.a((byte) -86);
@@ -2239,7 +2239,7 @@ public final class SteelSentinels extends n {
             }
           }
           boolean decompiledFrameRemainder0 = true;
-          if (gh.field_pb) {
+          if (SceneWidget.field_pb) {
             if (co.a(false)) {
               if (mg.b(true)) {
                 if (in.field_i == in.field_h) {
@@ -2299,7 +2299,7 @@ public final class SteelSentinels extends n {
                       ub.c(0);
                     }
                     if (var2_int == 2) {
-                      t.a(true, wl.d((byte) -21));
+                      t.a(true, Projectile.d((byte) -21));
                     }
                   }
                   this.b(120, true);
@@ -2307,7 +2307,7 @@ public final class SteelSentinels extends n {
                     ai.d(param0 + 103);
                     r.a(jj.field_d, (byte) 104);
                     if (this.k((byte) -52)) {
-                      gh.field_pb = true;
+                      SceneWidget.field_pb = true;
                     }
                   }
                 }
@@ -2317,14 +2317,14 @@ public final class SteelSentinels extends n {
               if (var15 != 0) {
                 r.a(jj.field_d, (byte) 104);
                 if (this.k((byte) -52)) {
-                  gh.field_pb = true;
+                  SceneWidget.field_pb = true;
                 }
               }
             }
           } else {
             r.a(jj.field_d, (byte) 104);
             if (this.k((byte) -52)) {
-              gh.field_pb = true;
+              SceneWidget.field_pb = true;
             }
           }
           if (!ni.b(92)) {
@@ -2340,7 +2340,7 @@ public final class SteelSentinels extends n {
             } while (var15 == 0);
           }
           if (!ni.b(74) &&
-            jb.field_P != 0) {
+            Explosion.field_P != 0) {
             ef.a((byte) -109);
           }
           boolean decompiledNaturalLoopExit0 = false;
@@ -2385,12 +2385,12 @@ public final class SteelSentinels extends n {
                 if (bg.field_H) {
                   ol.b(true);
                   oa.f(param0 ^ -12163);
-                  ie.b((byte) 124);
-                  ea.field_k = false;
+                  IsaacRandom.b((byte) 124);
+                  Sprite.field_k = false;
                   ob.field_y = false;
                   vb.field_g = 0;
-                  jc.field_d = true;
-                  ee.field_G = false;
+                  NodeIterator.field_d = true;
+                  CombatWorld.field_G = false;
                   bg.field_H = false;
                   lc.field_e = true;
                   vn.c(103);
@@ -2441,7 +2441,7 @@ public final class SteelSentinels extends n {
                   }
                   var3_ref = (String) (var4_ref) + ": ";
                 }
-                var4_ref = (String) (var3_ref) + mi.a(bg.field_F);
+                var4_ref = (String) (var3_ref) + BitmapFont.a(bg.field_F);
                 if (((na) (var2)).field_g ||
                   !o.a(-122, ((na) (var2)).field_p)) {
                   bl.a(48127, (String) (var4_ref), (byte) 124);
@@ -2484,7 +2484,7 @@ public final class SteelSentinels extends n {
                   ((int[]) (var3_ref))[var5] = vn.a(((int[]) (var3_ref))[var5], ((int[]) (var4_ref))[var5]);
                   var5++;
                 }
-                wl.c((byte) 10);
+                Projectile.c((byte) 10);
                 continue;
               }
               if (ch.field_N == 60) {
@@ -2510,10 +2510,10 @@ public final class SteelSentinels extends n {
               }
               if (ch.field_N == 77) {
                 var2_int = rf.field_d.f((byte) -123);
-                ee.field_S = new int[var2_int];
+                CombatWorld.field_S = new int[var2_int];
                 var3 = 0;
                 while (var2_int > var3) {
-                  ee.field_S[var3] = rf.field_d.f((byte) -123);
+                  CombatWorld.field_S[var3] = rf.field_d.f((byte) -123);
                   var3++;
                 }
                 continue;
@@ -2542,17 +2542,17 @@ public final class SteelSentinels extends n {
                 fm.field_f[0] = ec.a(fm.field_f[0], 15);
                 if (fj.field_d <= fm.field_f[0]) {
                   if (var2_int == 0) {
-                    jc.field_f = 1;
+                    NodeIterator.field_f = 1;
                   } else {
-                    jc.field_f = 2;
+                    NodeIterator.field_f = 2;
                   }
                 } else {
-                  jc.field_f = 0;
+                  NodeIterator.field_f = 0;
                 }
-                if (!gi.h((byte) -79)) {
+                if (!PacketBuffer.h((byte) -79)) {
                   continue;
                 }
-                km.field_a = ee.field_k;
+                km.field_a = CombatWorld.field_k;
                 continue;
               }
               if (ch.field_N == 73) {
@@ -2567,7 +2567,7 @@ public final class SteelSentinels extends n {
                 }
                 qi.field_d = null;
                 qm.a(true);
-                bd.field_b.a(3, new ai((wk) null, db.a(vm.field_q, param0 - 102, new String[]{Integer.toString(var3 / 516)})));
+                bd.field_b.addLast(3, new ai((RgbSprite) null, db.a(vm.field_q, param0 - 102, new String[]{Integer.toString(var3 / 516)})));
                 continue;
               }
               if (ch.field_N == 72) {
@@ -2587,7 +2587,7 @@ public final class SteelSentinels extends n {
                 if (79 == ch.field_N) {
                   var3_ref = c.field_r;
                 }
-                bd.field_b.a(3, new ai((wk) null, db.a((String) (var3_ref), -105, new String[]{t.field_e[var2_int]})));
+                bd.field_b.addLast(3, new ai((RgbSprite) null, db.a((String) (var3_ref), -105, new String[]{t.field_e[var2_int]})));
                 continue;
               }
               if (ch.field_N == 70) {
@@ -2645,11 +2645,11 @@ public final class SteelSentinels extends n {
                 if (stackIn_351_0 == var11_int) {
                   var11_int = -2;
                 }
-                var13 = new nb(true, var2_int, var3, var10, var11_int, var9 != 0, var12, var4, var5, var7 != 0, var8 != 0);
+                var13 = new GameplayController(true, var2_int, var3, var10, var11_int, var9 != 0, var12, var4, var5, var7 != 0, var8 != 0);
                 var13.field_w = rf.field_d.i(0);
                 if (57 != ch.field_N) {
                   si.field_A = var13;
-                  ee.field_G = true;
+                  CombatWorld.field_G = true;
                   ol.l(0);
                 } else {
                   fk.field_i = var13;
@@ -2660,21 +2660,21 @@ public final class SteelSentinels extends n {
                 }
                 vb.field_g = -1;
                 da.field_d = false;
-                ea.field_k = true;
+                Sprite.field_k = true;
                 continue;
               }
               if (ch.field_N == 59) {
                 if (ob.field_y ||
-                  ee.field_G) {
+                  CombatWorld.field_G) {
                   ol.b(true);
                   if (ob.field_y) {
                     fk.field_i.a((byte) -128, false);
                   }
                   lc.field_e = true;
                   vb.field_g = -2;
-                  ee.field_G = false;
+                  CombatWorld.field_G = false;
                   ob.field_y = false;
-                  ea.field_k = false;
+                  Sprite.field_k = false;
                   vl.field_v = true;
                   ln.field_e = 0;
                   vn.c(104);
@@ -2684,7 +2684,7 @@ public final class SteelSentinels extends n {
               }
               var2 = null;
               if (!ob.field_y) {
-                if (ee.field_G) {
+                if (CombatWorld.field_G) {
                   var2 = si.field_A;
                 }
               } else {
@@ -2693,16 +2693,16 @@ public final class SteelSentinels extends n {
               if (null != var2) {
                 if (ch.field_N == 61) {
                   var3 = rf.field_d.f((byte) -117);
-                  var4_ref = ((nb) (var2)).field_X.f(var3, -128);
-                  var5_ref_je = (je) (((mb) (var4_ref)).field_Ec.b(1063677678));
+                  var4_ref = ((GameplayController) (var2)).world.findSentinelForPlayer(var3, -128);
+                  var5_ref_je = (SentinelCommand) (((Sentinel) (var4_ref)).secondaryCommands.b(1063677678));
                   if (var5_ref_je != null) {
-                    var5_ref_je.b(param0 ^ 6);
+                    var5_ref_je.unlink(param0 ^ 6);
                   }
-                  var5_ref_je = (je) (((mb) (var4_ref)).field_B.b(1063677678));
+                  var5_ref_je = (SentinelCommand) (((Sentinel) (var4_ref)).pendingCommands.b(1063677678));
                   if (var5_ref_je == null) {
                     continue;
                   }
-                  var5_ref_je.b(4);
+                  var5_ref_je.unlink(4);
                   continue;
                 }
                 if (ch.field_N == 69) {
@@ -2716,11 +2716,11 @@ public final class SteelSentinels extends n {
                   if (var5 == 255) {
                     var5 = -1;
                   }
-                  var10_ref = new je(var4, var5, var6);
+                  var10_ref = new SentinelCommand(var4, var5, var6);
                   var10_ref.field_B = var9;
                   var10_ref.field_u = var7;
                   var10_ref.field_y = var8;
-                  var11 = ((nb) (var2)).field_X.f(var3, -128);
+                  var11 = ((GameplayController) (var2)).world.findSentinelForPlayer(var3, -128);
                   if (var4 == 10) {
                   }
                   if (null == var11) {
@@ -2732,31 +2732,31 @@ public final class SteelSentinels extends n {
                 if (ch.field_N == 76) {
                   var3 = rf.field_d.f((byte) -120);
                   var4 = rf.field_d.i(0);
-                  ((nb) (var2)).field_X.a(var4, 28669, var3);
+                  ((GameplayController) (var2)).world.a(var4, 28669, var3);
                   continue;
                 }
                 if (ch.field_N == 71) {
-                  if (((nb) (var2)).field_i - 100 > ((nb) (var2)).field_w &&
-                    ((nb) (var2)).field_X.field_r < ((nb) (var2)).field_w) {
-                    ((nb) (var2)).field_w = -100 + ((nb) (var2)).field_i;
+                  if (((GameplayController) (var2)).field_i - 100 > ((GameplayController) (var2)).field_w &&
+                    ((GameplayController) (var2)).world.simulationTick < ((GameplayController) (var2)).field_w) {
+                    ((GameplayController) (var2)).field_w = -100 + ((GameplayController) (var2)).field_i;
                   }
-                  ((nb) (var2)).field_i = rf.field_d.i(param0 ^ 2);
+                  ((GameplayController) (var2)).field_i = rf.field_d.i(param0 ^ 2);
                   var3 = rf.field_d.i(0);
                   var4 = rf.field_d.i(param0 - 2);
-                  if (((nb) (var2)).field_l >= ((nb) (var2)).field_X.field_r) {
+                  if (((GameplayController) (var2)).field_l >= ((GameplayController) (var2)).world.simulationTick) {
                     continue;
                   }
-                  ((nb) (var2)).field_j = var3;
-                  ((nb) (var2)).field_l = var4;
+                  ((GameplayController) (var2)).field_j = var3;
+                  ((GameplayController) (var2)).field_l = var4;
                   continue;
                 }
                 if (62 == ch.field_N) {
-                  ((nb) (var2)).field_i = rf.field_d.i(0);
-                  ((nb) (var2)).field_z = true;
+                  ((GameplayController) (var2)).field_i = rf.field_d.i(0);
+                  ((GameplayController) (var2)).field_z = true;
                   continue;
                 }
                 if (ch.field_N == 63) {
-                  ((nb) (var2)).field_X.field_V = rf.field_d.f((byte) -92);
+                  ((GameplayController) (var2)).world.field_V = rf.field_d.f((byte) -92);
                   if (null == fk.field_i) {
                     continue;
                   }
@@ -2764,11 +2764,11 @@ public final class SteelSentinels extends n {
                   continue;
                 }
                 if (ch.field_N == 64) {
-                  ((nb) (var2)).field_X.field_hb = rf.field_d.f((byte) -111);
+                  ((GameplayController) (var2)).world.field_hb = rf.field_d.f((byte) -111);
                   continue;
                 }
                 if (ch.field_N == 65) {
-                  ((nb) (var2)).field_X.field_X = rf.field_d.f((byte) -91);
+                  ((GameplayController) (var2)).world.field_X = rf.field_d.f((byte) -91);
                   if (null == fk.field_i) {
                     continue;
                   }
@@ -2776,7 +2776,7 @@ public final class SteelSentinels extends n {
                   continue;
                 }
                 if (66 == ch.field_N) {
-                  ((nb) (var2)).field_N = rf.field_d.f((byte) -85);
+                  ((GameplayController) (var2)).field_N = rf.field_d.f((byte) -85);
                   if (null == fk.field_i) {
                     continue;
                   }
@@ -2814,10 +2814,10 @@ public final class SteelSentinels extends n {
               if (1 != var2_int) {
                 if (bg.field_H) {
                   ob.field_y = false;
-                  ea.field_k = false;
-                  ee.field_G = false;
+                  Sprite.field_k = false;
+                  CombatWorld.field_G = false;
                   lc.field_e = true;
-                  jc.field_d = true;
+                  NodeIterator.field_d = true;
                   if (!ob.field_y) {
                     q.a(0, false, param0 - 3, 0);
                     if (var15 != 0) {
@@ -2873,29 +2873,29 @@ public final class SteelSentinels extends n {
         RuntimeException var2 = null;
         try {
           SteelSentinels.j((byte) -10);
-          ul.c((byte) -29);
+          NodeDeque.c((byte) -29);
           wd.a(0);
           hf.a(true);
           fj.a((byte) -120);
           rg.c(125);
-          gh.a(false);
+          SceneWidget.a(false);
           i.a((byte) 100);
           uc.a(false);
           ci.a(false);
           am.a(2);
-          n.h((byte) -111);
+          FunOrbClient.h((byte) -111);
           od.a(false);
-          lg.e(48);
+          GameApplet.e(48);
           fk.a((byte) -64);
           wc.a(true);
           a.c(72);
-          pb.a();
+          SoftwareRaster.a();
           cm.b(false);
           un.a(false);
           if (param0 < 22) {
             this.a(48);
           }
-          gi.d(-125);
+          PacketBuffer.d(-125);
           mm.b(122);
           fl.a(124);
           of.a((byte) 84);
@@ -2915,8 +2915,8 @@ public final class SteelSentinels extends n {
           jg.b((byte) -109);
           ng.a((byte) -82);
           ub.a(94);
-          ji.h((byte) -104);
-          nb.b(750);
+          SentinelDesigner.h((byte) -104);
+          GameplayController.b(750);
           nd.a(-107);
           hh.a(false);
           vk.c((byte) -91);
@@ -2925,7 +2925,7 @@ public final class SteelSentinels extends n {
           rj.a(83);
           sg.a((byte) -45);
           jn.a((byte) 79);
-          ck.c(4433);
+          IntrusiveNode.c(4433);
           cd.a(false);
           di.a(-1);
           bi.a((byte) 80);
@@ -2934,26 +2934,26 @@ public final class SteelSentinels extends n {
           o.a(-98);
           dj.a((byte) 94);
           me.a(-118);
-          kj.e(true);
-          ie.a((byte) -94);
+          CipherPacketBuffer.e(true);
+          IsaacRandom.a((byte) -94);
           gj.a(-102);
           tf.a((byte) 26);
           lb.j(0);
           dh.c((byte) 93);
           ve.b((byte) -60);
-          ee.g(0);
-          nk.d((byte) 20);
+          CombatWorld.g(0);
+          ArticulatedPart.d((byte) 20);
           rm.d((byte) -18);
           qj.c(21841);
-          jc.e(5370);
-          mi.a();
+          NodeIterator.e(5370);
+          BitmapFont.a();
           vf.a(-119);
           jh.a(30706);
           ba.a(false);
-          je.a((byte) -110);
-          wl.h(31554);
-          mb.c((byte) 58);
-          hd.b(false);
+          SentinelCommand.a((byte) -110);
+          Projectile.h(31554);
+          Sentinel.c((byte) 58);
+          BattleTerrain.b(false);
           ic.a(false);
           uh.c(96);
           hj.e(0);
@@ -2969,7 +2969,7 @@ public final class SteelSentinels extends n {
           vb.a(-1);
           fa.b(38);
           wi.g(573);
-          kd.f(8191);
+          DualNode.f(8191);
           rd.a(8192);
           eh.b(0);
           ka.f((byte) 127);
@@ -2988,8 +2988,8 @@ public final class SteelSentinels extends n {
           dg.a((byte) -84);
           ri.d(0);
           tj.a(true);
-          ea.a((byte) 66);
-          qd.a((byte) 17);
+          Sprite.a((byte) 66);
+          PartInstruction.a((byte) 17);
           ne.g(-23261);
           oc.a(-1);
           qi.a(-104);
@@ -3012,12 +3012,12 @@ public final class SteelSentinels extends n {
           pl.c(true);
           ai.e(0);
           dc.a(-38);
-          ra.b((byte) 26);
+          DualNodeDeque.b((byte) 26);
           qh.j(15);
           uf.a(24);
           nf.a(55);
           ol.k(-16);
-          qb.h(-185837884);
+          ParticleEffect.h(-185837884);
           ua.a((byte) 115);
           sn.b(0);
           bd.a(-23333);
@@ -3079,7 +3079,7 @@ public final class SteelSentinels extends n {
           p.a();
           ce.a((byte) 77);
           bh.a((byte) -98);
-          jb.h(-2107133436);
+          Explosion.h(-2107133436);
           ig.a((byte) 121);
           qf.a(false);
           mj.d((byte) -72);

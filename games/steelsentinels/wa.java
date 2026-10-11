@@ -7,7 +7,7 @@ final class wa extends cn {
     static String field_o;
     private ke[] field_r;
 
-    final void a(wk param0, byte param1) {
+    final void a(RgbSprite param0, byte param1) {
         int var4 = 0;
         ke[] var3 = null;
         ke var5 = null;
@@ -18,7 +18,7 @@ final class wa extends cn {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           if (param1 != 88) {
             return;
@@ -53,32 +53,32 @@ final class wa extends cn {
           if (var3 == null) {
             var3 = new java.awt.Canvas();
           }
-          kc.field_x = new wk[5][];
+          kc.field_x = new RgbSprite[5][];
           if (param0 != null) {
-            kc.field_x[0] = new wk[7];
-            kc.field_x[0][0] = (wk) ((Object) new ek(param0.a("wz_foreground_01.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
-            kc.field_x[0][1] = (wk) ((Object) new ek(param0.a("wz_foreground_02.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
-            kc.field_x[0][2] = (wk) ((Object) new ek(param0.a("wz_foreground_03.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
-            kc.field_x[0][3] = (wk) ((Object) new ek(param0.a("wz_foreground_04.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
-            kc.field_x[0][4] = (wk) ((Object) new ek(param0.a("wz_foreground_05.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
-            kc.field_x[0][5] = (wk) ((Object) new ek(param0.a("wz_foreground_06.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
-            kc.field_x[0][6] = (wk) ((Object) new ek(param0.a("wz_foreground_07.png", bi.a(param1, -744), "warzone/"), (java.awt.Component) ((Object) var3)));
-            kc.field_x[1] = new wk[6];
-            kc.field_x[1][0] = (wk) ((Object) new ek(param0.a("sb_foreground_01.png", param1 - 744, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
-            kc.field_x[1][1] = (wk) ((Object) new ek(param0.a("sb_foreground_02.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
-            kc.field_x[1][2] = (wk) ((Object) new ek(param0.a("sb_foreground_03.png", bi.a(param1, -744), "fleetbattle/"), (java.awt.Component) ((Object) var3)));
-            kc.field_x[1][3] = (wk) ((Object) new ek(param0.a("sb_foreground_04.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
-            kc.field_x[1][4] = (wk) ((Object) new ek(param0.a("sb_foreground_05.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
-            kc.field_x[1][5] = (wk) ((Object) new ek(param0.a("sb_foreground_06.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
+            kc.field_x[0] = new RgbSprite[7];
+            kc.field_x[0][0] = (RgbSprite) ((Object) new ek(param0.a("wz_foreground_01.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
+            kc.field_x[0][1] = (RgbSprite) ((Object) new ek(param0.a("wz_foreground_02.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
+            kc.field_x[0][2] = (RgbSprite) ((Object) new ek(param0.a("wz_foreground_03.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
+            kc.field_x[0][3] = (RgbSprite) ((Object) new ek(param0.a("wz_foreground_04.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
+            kc.field_x[0][4] = (RgbSprite) ((Object) new ek(param0.a("wz_foreground_05.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
+            kc.field_x[0][5] = (RgbSprite) ((Object) new ek(param0.a("wz_foreground_06.png", -742, "warzone/"), (java.awt.Component) ((Object) var3)));
+            kc.field_x[0][6] = (RgbSprite) ((Object) new ek(param0.a("wz_foreground_07.png", bi.a(param1, -744), "warzone/"), (java.awt.Component) ((Object) var3)));
+            kc.field_x[1] = new RgbSprite[6];
+            kc.field_x[1][0] = (RgbSprite) ((Object) new ek(param0.a("sb_foreground_01.png", param1 - 744, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
+            kc.field_x[1][1] = (RgbSprite) ((Object) new ek(param0.a("sb_foreground_02.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
+            kc.field_x[1][2] = (RgbSprite) ((Object) new ek(param0.a("sb_foreground_03.png", bi.a(param1, -744), "fleetbattle/"), (java.awt.Component) ((Object) var3)));
+            kc.field_x[1][3] = (RgbSprite) ((Object) new ek(param0.a("sb_foreground_04.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
+            kc.field_x[1][4] = (RgbSprite) ((Object) new ek(param0.a("sb_foreground_05.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
+            kc.field_x[1][5] = (RgbSprite) ((Object) new ek(param0.a("sb_foreground_06.png", -742, "fleetbattle/"), (java.awt.Component) ((Object) var3)));
           }
-          kc.field_x[2] = new wk[6];
+          kc.field_x[2] = new RgbSprite[6];
           kc.field_x[2][0] = rl.a(param2, "basic", "ct_foreground_01", false);
           kc.field_x[2][1] = rl.a(param2, "basic", "ct_foreground_02", false);
           kc.field_x[2][2] = rl.a(param2, "basic", "ct_foreground_03", false);
           kc.field_x[2][3] = rl.a(param2, "basic", "ct_foreground_04", false);
           kc.field_x[param1][4] = rl.a(param2, "basic", "ct_foreground_05", false);
           kc.field_x[2][5] = rl.a(param2, "basic", "ct_foreground_06", false);
-          kc.field_x[4] = new wk[2];
+          kc.field_x[4] = new RgbSprite[2];
           kc.field_x[4][0] = rl.a(param2, "basic", "starcruiser_base", false);
           kc.field_x[4][1] = rl.a(param2, "basic", "starcruiser_top", false);
         } catch (RuntimeException runtimeException) {
@@ -232,7 +232,7 @@ final class wa extends cn {
         }
     }
 
-    final void a(wk[] param0, boolean param1, int param2) {
+    final void a(RgbSprite[] param0, boolean param1, int param2) {
         int var4_int = 0;
         try {
           var4_int = param2;
@@ -300,7 +300,7 @@ final class wa extends cn {
         ke var5 = null;
         ke var6 = null;
         int var7 = 0;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           if (param1 != 65535) {
             return;
@@ -343,7 +343,7 @@ final class wa extends cn {
         }
     }
 
-    final void a(boolean param0, wk[] param1) {
+    final void a(boolean param0, RgbSprite[] param1) {
         ke[] var3 = null;
         int var4 = 0;
         ke var5 = null;
@@ -353,7 +353,7 @@ final class wa extends cn {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           var3 = this.field_r;
           var4 = 0;
@@ -384,7 +384,7 @@ final class wa extends cn {
 
     final static fm b(int param0, int param1) {
         int var3 = 0;
-        int var4 = SteelSentinels.field_G;
+        int var4 = SteelSentinels.obfuscationControl;
         fm[] var5 = gb.b(false);
         fm[] var2 = var5;
         int var3Lifetime1;

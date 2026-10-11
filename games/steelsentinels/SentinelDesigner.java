@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ji {
+final class SentinelDesigner {
     static int field_a;
     private int field_k;
     static int field_i;
@@ -24,7 +24,7 @@ final class ji {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           if (param0 != -108) {
             field_d = (int[]) null;
@@ -146,14 +146,14 @@ final class ji {
         int var3_intLifetime3;
         int var3_intLifetime4;
         int var3_intLifetime3Lifetime1;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
-          if (nk.field_J > 0) {
-            nk.field_J = nk.field_J - 1;
+          if (ArticulatedPart.field_J > 0) {
+            ArticulatedPart.field_J = ArticulatedPart.field_J - 1;
           }
-          if (gh.field_J &&
+          if (SceneWidget.field_J &&
             !ni.b(11)) {
-            gh.field_J = false;
+            SceneWidget.field_J = false;
             km.field_a = null;
           }
           if (this.field_c == 21) {
@@ -170,7 +170,7 @@ final class ji {
               if (var5 == 5 ||
                 6 == var5 ||
                 var5 == 8) {
-                var5 = gh.field_Jb;
+                var5 = SceneWidget.field_Jb;
               }
               q.a(0, var4 != 0, -1, var5);
             }
@@ -221,8 +221,8 @@ final class ji {
                 }
               }
               if (jl.field_p >= 0) {
-                ee.c(-2483, 95);
-                lg.field_l = true;
+                CombatWorld.c(-2483, 95);
+                GameApplet.field_l = true;
                 kf.field_s = true;
                 sn.field_q = -1;
                 lb.field_gc = 0;
@@ -233,7 +233,7 @@ final class ji {
             }
             boolean decompiledFrameRemainder4 = true;
             boolean decompiledFrameCompleted1 = true;
-            if (gh.field_J &&
+            if (SceneWidget.field_J &&
               lb.field_gc == 1) {
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
@@ -248,23 +248,23 @@ final class ji {
               if ((decompiledFrameRemainder4) &&
                 (decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2)) {
-                ee.c(-2483, 95);
+                CombatWorld.c(-2483, 95);
                 var2_int = vb.field_g;
                 if (var2_int == 5 ||
                   var2_int == 6 ||
                   var2_int == 8) {
-                  var2_int = gh.field_Jb;
+                  var2_int = SceneWidget.field_Jb;
                 }
                 q.a(0, true, -1, var2_int);
                 km.field_a = null;
-                gh.field_J = false;
-                lg.field_l = true;
+                SceneWidget.field_J = false;
+                GameApplet.field_l = true;
                 kf.field_s = true;
                 var2_int = 0;
                 do {
                   if (3 <= var2_int) {
-                    jc.field_f = 0;
-                    jb.field_P = 0;
+                    NodeIterator.field_f = 0;
+                    Explosion.field_P = 0;
                     break;
                   }
                   fm.field_f[var2_int] = 0;
@@ -294,17 +294,17 @@ final class ji {
               if ((decompiledFrameRemainder4) &&
                 (decompiledFrameRemainder3) &&
                 (decompiledFrameCompleted1)) {
-                ee.c(-2483, 95);
+                CombatWorld.c(-2483, 95);
                 v.a(20, (String) null, 10);
                 decompiledFrameRemainder4 = (var6 != 0);
               }
               if ((decompiledFrameRemainder4) &&
                 (decompiledFrameCompleted1)) {
-                ee.c(-2483, 95);
-                gh.field_J = false;
+                CombatWorld.c(-2483, 95);
+                SceneWidget.field_J = false;
                 kf.field_s = true;
                 km.field_a = null;
-                lg.field_l = true;
+                GameApplet.field_l = true;
               }
             }
             if (gd.field_ub &&
@@ -317,21 +317,21 @@ final class ji {
               km.field_a = null;
               kf.field_s = true;
               ln.field_c = null;
-              lg.field_l = true;
+              GameApplet.field_l = true;
               gd.field_ub = false;
             }
             if ((km.field_a == td.field_ac ||
-              km.field_a == ra.field_b) &&
+              km.field_a == DualNodeDeque.field_b) &&
               !ni.b(11)) {
               km.field_a = null;
-              lg.field_l = true;
+              GameApplet.field_l = true;
               kf.field_s = true;
             }
             if ((km.field_a == td.field_ac ||
-              ra.field_b == km.field_a) &&
+              DualNodeDeque.field_b == km.field_a) &&
               (lb.field_gc == 1 &&
               ln.field_g == 0)) {
-              ee.c(-2483, 95);
+              CombatWorld.c(-2483, 95);
               v.a(20, (String) null, 10);
             }
             if (null != km.field_a) {
@@ -342,7 +342,7 @@ final class ji {
                   continue;
                 }
                 km.field_a = null;
-                lg.field_l = true;
+                GameApplet.field_l = true;
                 ln.field_c = null;
                 kf.field_s = true;
                 if (var6 != 0) {
@@ -384,7 +384,7 @@ final class ji {
                   if (var3_intLifetime1 == 5 ||
                     var3_intLifetime1 == 6 ||
                     8 == var3_intLifetime1) {
-                    var3_intLifetime1 = gh.field_Jb;
+                    var3_intLifetime1 = SceneWidget.field_Jb;
                   }
                   q.a(0, false, -1, var3_intLifetime1);
                 }
@@ -425,14 +425,14 @@ final class ji {
               if (null != wb.field_c) {
                 ub.c(0);
               }
-              re.a(wl.d((byte) -21), 9268);
+              re.a(Projectile.d((byte) -21), 9268);
             }
             if (var3_intLifetime2 == 1) {
               var4 = vb.field_g;
               if (5 == var4 ||
                 var4 == 6 ||
                 var4 == 8) {
-                var4 = gh.field_Jb;
+                var4 = SceneWidget.field_Jb;
               }
               q.a(0, false, -1, var4);
             }
@@ -441,7 +441,7 @@ final class ji {
               if (5 == var4 ||
                 var4 == 6 ||
                 8 == var4) {
-                var4 = gh.field_Jb;
+                var4 = SceneWidget.field_Jb;
               }
               q.a(0, true, -1, var4);
             }
@@ -463,8 +463,8 @@ final class ji {
                   continue;
                 }
                 if (this.field_c == 7 &&
-                  gh.field_Jb != 0) {
-                  ea.field_k = true;
+                  SceneWidget.field_Jb != 0) {
+                  Sprite.field_k = true;
                 }
                 if (this.field_c != 20 ||
                   !(fm.field_f[0] > 0) ||
@@ -481,25 +481,25 @@ final class ji {
                         continue;
                       }
                       if (pm.field_T == 14) {
-                        gh.field_Jb = 0;
+                        SceneWidget.field_Jb = 0;
                       } else if (pm.field_T != 20) {
-                        if (~gh.field_Jb == ~this.field_c && (this.field_c == 14 ||
+                        if (~SceneWidget.field_Jb == ~this.field_c && (this.field_c == 14 ||
                           13 == this.field_c)) {
-                          gh.field_Jb = 0;
+                          SceneWidget.field_Jb = 0;
                         }
                       } else if (!(10 <= fm.field_f[0]) ||
                         ni.b(36)) {
-                        gh.field_Jb = 0;
+                        SceneWidget.field_Jb = 0;
                       } else {
-                        gh.field_Jb = 19;
+                        SceneWidget.field_Jb = 19;
                       }
                       if (pm.field_T == 19) {
-                        gh.field_Jb = 0;
+                        SceneWidget.field_Jb = 0;
                       }
-                      q.a(gh.field_Jb, false, -1, gh.field_Jb);
+                      q.a(SceneWidget.field_Jb, false, -1, SceneWidget.field_Jb);
                       continue;
                     }
-                    ee.c(-2483, 85);
+                    CombatWorld.c(-2483, 85);
                     q.a(-1, false, -1, 0);
                     continue;
                   }
@@ -513,12 +513,12 @@ final class ji {
                   if (var3_intLifetime3Lifetime1 == 5 ||
                     var3_intLifetime3Lifetime1 == 6 ||
                     var3_intLifetime3Lifetime1 == 8) {
-                    var3_intLifetime3Lifetime1 = gh.field_Jb;
+                    var3_intLifetime3Lifetime1 = SceneWidget.field_Jb;
                   }
                   q.a(0, false, -1, var3_intLifetime3Lifetime1);
                   continue;
                 }
-                gh.field_J = true;
+                SceneWidget.field_J = true;
                 ln.field_g = -1;
                 continue;
               }
@@ -536,12 +536,12 @@ final class ji {
           if (0 == this.field_c &&
             hg.field_h &&
             lb.field_gc == 1) {
-            ee.c(-2483, 95);
+            CombatWorld.c(-2483, 95);
             var3_intLifetime4 = vb.field_g;
             if (var3_intLifetime4 == 5 ||
               var3_intLifetime4 == 6 ||
               var3_intLifetime4 == 8) {
-              var3_intLifetime4 = gh.field_Jb;
+              var3_intLifetime4 = SceneWidget.field_Jb;
             }
             q.a(18, true, -1, var3_intLifetime4);
             if (var6 == 0) {
@@ -581,7 +581,7 @@ final class ji {
                       continue;
                     }
                   } else {
-                    hl.field_v = ji.a(ua.field_x, (byte) 108, di.field_c);
+                    hl.field_v = SentinelDesigner.a(ua.field_x, (byte) 108, di.field_c);
                     uc.field_b = cj.a(-94, di.field_c, hl.field_v);
                   }
                   if (var6 == 0) {
@@ -758,7 +758,7 @@ final class ji {
               default:
                 break;
               case 39:
-                if (SteelSentinels.field_G == 0) {
+                if (SteelSentinels.obfuscationControl == 0) {
                   stackIn_128_0 = 196;
                   return stackIn_128_0;
                 }
@@ -805,7 +805,7 @@ final class ji {
             return stackIn_18_0;
           }
           if (param0 != 25) {
-            ji.h((byte) -119);
+            SentinelDesigner.h((byte) -119);
           }
           if (this.field_c == 19 &&
             uc.field_e[this.field_c][param1] == 38) {
@@ -816,7 +816,7 @@ final class ji {
           if (this.field_c == 20) {
             var3_int = uc.field_e[this.field_c][param1];
             if ((25 != var3_int && (var3_int != 26 ||
-              SteelSentinels.field_G != 0)) &&
+              SteelSentinels.obfuscationControl != 0)) &&
               (decompiledFrameRemainder0 = (var3_int == 39))) {
               stackIn_44_0 = 26;
               return stackIn_44_0;
@@ -847,10 +847,10 @@ final class ji {
         }
     }
 
-    final static nk a(int[] param0, byte param1, int[] param2) {
+    final static ArticulatedPart a(int[] param0, byte param1, int[] param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        nk stackIn_1_0 = null;
+        ArticulatedPart stackIn_1_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -912,10 +912,10 @@ final class ji {
         int[][] var12_ref_int____ = null;
         int[] var13 = null;
         int var13_int = 0;
-        wk var13_ref = null;
+        RgbSprite var13_ref = null;
         int var14_int = 0;
         int[] var14 = null;
-        wk var14_ref = null;
+        RgbSprite var14_ref = null;
         int[] var15_ref_int__ = null;
         int var15 = 0;
         int var16 = 0;
@@ -960,17 +960,17 @@ final class ji {
         int var14_intLifetime1Lifetime2;
         int var20Lifetime1Lifetime1;
         int var21Lifetime1Lifetime1;
-        var24 = SteelSentinels.field_G;
+        var24 = SteelSentinels.obfuscationControl;
         try {
-          pb.h(30, 70, 580, 350, 5789784);
-          pb.h(34, 74, 60, 342, 930889);
-          pb.h(546, 74, 60, 342, 930889);
-          pb.h(98, 74, 61, 23, 930889);
-          pb.h(481, 74, 61, 23, 930889);
+          SoftwareRaster.h(30, 70, 580, 350, 5789784);
+          SoftwareRaster.h(34, 74, 60, 342, 930889);
+          SoftwareRaster.h(546, 74, 60, 342, 930889);
+          SoftwareRaster.h(98, 74, 61, 23, 930889);
+          SoftwareRaster.h(481, 74, 61, 23, 930889);
           var3_int = 930889;
           var4 = q.field_i;
           q.field_i = 0;
-          if (hd.field_i > 0) {
+          if (BattleTerrain.field_i > 0) {
             if (oh.field_f >= 98 &&
               oh.field_f < 159 &&
               74 <= pi.field_c &&
@@ -986,7 +986,7 @@ final class ji {
             }
           }
           var5 = 930889;
-          if (hd.field_i < -1 + dh.field_C.length) {
+          if (BattleTerrain.field_i < -1 + dh.field_C.length) {
             if (oh.field_f >= 481 &&
               542 > oh.field_f &&
               74 <= pi.field_c &&
@@ -1003,20 +1003,20 @@ final class ji {
           }
           if (var4 != q.field_i &&
             q.field_i != 0) {
-            ee.c(-2483, 97);
+            CombatWorld.c(-2483, 97);
           }
           el.field_Ub.c((61 - el.field_Ub.field_A) / 2 + 98, 74 + (-el.field_Ub.field_F + 23) / 2, var3_int);
           gm.field_b.c(481 + (-gm.field_b.field_A + 61) / 2, 74 + (-gm.field_b.field_F + 23) / 2, var5);
           if (param0 != 48) {
             return;
           }
-          pb.h(163, 74, 314, 23, 930889);
-          pl.field_U.a(db.a(am.field_e, -63, new String[]{Integer.toString(1 + hd.field_i), Integer.toString(dh.field_C.length)}), 320, 74 + (pl.field_U.field_U + 23) / 2, 1021128, -1);
-          pb.h(98, 101, 444, 154, 5789784);
-          pb.d(262, 259, 157, 930889);
-          pb.h(98, 259, 444, 157, 1130327);
-          pb.h(266, 263, 272, 23, 1130327);
-          pb.h(266, 290, 272, 122, 2697513);
+          SoftwareRaster.h(163, 74, 314, 23, 930889);
+          pl.field_U.a(db.a(am.field_e, -63, new String[]{Integer.toString(1 + BattleTerrain.field_i), Integer.toString(dh.field_C.length)}), 320, 74 + (pl.field_U.field_U + 23) / 2, 1021128, -1);
+          SoftwareRaster.h(98, 101, 444, 154, 5789784);
+          SoftwareRaster.d(262, 259, 157, 930889);
+          SoftwareRaster.h(98, 259, 444, 157, 1130327);
+          SoftwareRaster.h(266, 263, 272, 23, 1130327);
+          SoftwareRaster.h(266, 290, 272, 122, 2697513);
           var6 = 78;
           var7 = 0;
           do {
@@ -1024,8 +1024,8 @@ final class ji {
               var7 = 120;
               break;
             }
-            pb.h(37, var6, 54, 18, 2697513);
-            pb.h(549, var6, 54, 18, 2697513);
+            SoftwareRaster.h(37, var6, 54, 18, 2697513);
+            SoftwareRaster.h(549, var6, 54, 18, 2697513);
             var6 += 21;
             var7++;
           } while (var24 == 0);
@@ -1038,16 +1038,16 @@ final class ji {
           }
           var9 = stackIn_50_0;
           var10 = 0;
-          var11_ref_int____ = dh.field_C[hd.field_i];
+          var11_ref_int____ = dh.field_C[BattleTerrain.field_i];
           var12 = 0;
-          L9: while (true) {
+          scanLoop1: while (true) {
             if (var11_ref_int____.length > var12) {
               var13 = var11_ref_int____[var12];
               var14_int = 0;
               var15_ref_int__ = var13;
               stackIn_69_0 = 0;
               if (var24 != 0) {
-                break L9;
+                break scanLoop1;
               }
               var16 = stackIn_69_0;
               while (var15_ref_int__.length > var16) {
@@ -1068,23 +1068,23 @@ final class ji {
                 var10++;
               }
               var12++;
-              continue L9;
+              continue scanLoop1;
             }
             stackIn_69_0 = (-(var10 * 30) + 154) / (1 + var10) + 30;
             break;
           }
           var11 = stackIn_69_0;
           var8Lifetime1 = var11 + 101 - 30;
-          var12_ref_int____ = dh.field_C[hd.field_i];
+          var12_ref_int____ = dh.field_C[BattleTerrain.field_i];
           var13_int = 0;
-          L17: while (true) {
+          scanLoop2: while (true) {
             if (var13_int < var12_ref_int____.length) {
               var14 = var12_ref_int____[var13_int];
               var15 = 0;
               var16_ref_int__ = var14;
               stackIn_138_0 = 0;
               if (var24 != 0) {
-                break L17;
+                break scanLoop2;
               }
               var17Lifetime1 = stackIn_138_0;
               while (var16_ref_int__.length > var17Lifetime1) {
@@ -1140,7 +1140,7 @@ final class ji {
                       } else {
                         var21 = 4;
                       }
-                      ((wk) (var20_ref)).d(var7 + var21, var8Lifetime1 - var21);
+                      ((RgbSprite) (var20_ref)).d(var7 + var21, var8Lifetime1 - var21);
                       var7 = var7 + var16Lifetime1;
                     }
                     var18Lifetime3++;
@@ -1153,7 +1153,7 @@ final class ji {
                 var8Lifetime1 = stackIn_135_0Lifetime1 + stackIn_135_1Lifetime1;
               }
               var13_int++;
-              continue L17;
+              continue scanLoop2;
             }
             stackIn_138_0 = in.field_k;
             break;
@@ -1257,7 +1257,7 @@ final class ji {
             var24 != 0) {
             pl.field_U.a(na.field_q, 276, 300, 252, 102, 1021128, -1, 1, 1, 0);
           }
-          if (ee.field_S != null) {
+          if (CombatWorld.field_S != null) {
             var13_ref = uh.field_k;
             var14_ref = var13_ref.a();
             var15Lifetime2 = 38;
@@ -1267,8 +1267,8 @@ final class ji {
               if (var24 != 0) {
                 return;
               }
-              if (var16Lifetime2 < ee.field_S.length &&
-                ee.field_S[var16Lifetime2] > 0) {
+              if (var16Lifetime2 < CombatWorld.field_S.length &&
+                CombatWorld.field_S[var16Lifetime2] > 0) {
                 if (var15Lifetime2 < 320) {
                   var14_ref.a(-1 + var15Lifetime2, -1 + var6);
                 } else {
@@ -1284,7 +1284,7 @@ final class ji {
                   stackIn_226_0 = 0;
                 }
                 var17Lifetime3 = stackIn_226_0;
-                var18Lifetime2 = ee.field_S[var16Lifetime2];
+                var18Lifetime2 = CombatWorld.field_S[var16Lifetime2];
                 if (var18Lifetime2 > 0) {
                   if (var18Lifetime2 < 250) {
                     stackIn_233_0 = Integer.toString(var18Lifetime2);
@@ -1313,8 +1313,8 @@ final class ji {
                   }
                   var22 = 15;
                   var23 = var6 - var22;
-                  pb.h(var21Lifetime2, var23, var20Lifetime1Lifetime1, var22, 16777215, 192);
-                  pb.c(var21Lifetime2, var23, var20Lifetime1Lifetime1, var22, 0, 192);
+                  SoftwareRaster.h(var21Lifetime2, var23, var20Lifetime1Lifetime1, var22, 16777215, 192);
+                  SoftwareRaster.c(var21Lifetime2, var23, var20Lifetime1Lifetime1, var22, 0, 192);
                   fk.field_d.b(var19Lifetime1, 4 + var21Lifetime2, 11 + var23, 16777215, -1);
                 }
                 if (var15Lifetime2 < 320) {
@@ -1346,7 +1346,7 @@ final class ji {
         int stackIn_27_0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_3_0;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           var4_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -1373,7 +1373,7 @@ final class ji {
             stackIn_23_0 = param2;
           }
           if (stackIn_23_0 <= 68) {
-            ji.a((String) null, -71);
+            SentinelDesigner.a((String) null, -71);
           }
           stackIn_27_0 = -1;
           return stackIn_27_0;
@@ -1416,7 +1416,7 @@ final class ji {
         int var5 = 0;
         int var6 = 0;
         int var2_intLifetime1;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           if (7 == this.field_c) {
             stackIn_3_0 = -1;
@@ -1510,12 +1510,12 @@ final class ji {
             return stackIn_123_0;
           }
           var2_intLifetime1 = 0;
-          L9: while (true) {
+          scanLoop1: while (true) {
             if (var2_intLifetime1 < uc.field_e[this.field_c].length) {
               stackIn_21_0 = 0;
               stackIn_21_1 = ~uc.field_e[this.field_c][var2_intLifetime1];
               if (var6 != 0) {
-                break L9;
+                break scanLoop1;
               }
               if (stackIn_21_0 == stackIn_21_1) {
                 var2_intLifetime1++;
@@ -1583,11 +1583,11 @@ final class ji {
         int var6Lifetime2;
         int var9_intLifetime1;
         int var9_intLifetime2;
-        var12 = SteelSentinels.field_G;
+        var12 = SteelSentinels.obfuscationControl;
         try {
           var2_int = va.field_d;
           va.field_d = -1;
-          pb.a(0, 50, 640, 430, 0);
+          SoftwareRaster.a(0, 50, 640, 430, 0);
           if (param0 <= 112) {
             return;
           }
@@ -1600,7 +1600,7 @@ final class ji {
           var9_int = 0;
           boolean decompiledNaturalLoopExit2 = false;
           while (!(decompiledNaturalLoopExit2 = (var9_int >= 3))) {
-            stackOut_5_0 = t.a(rn.field_D, n.field_z[var9_int], -20370);
+            stackOut_5_0 = t.a(rn.field_D, FunOrbClient.field_z[var9_int], -20370);
             stackIn_12_0 = stackOut_5_0 ? 1 : 0;
             stackIn_6_0 = stackOut_5_0;
             if (var12 == 0) {
@@ -1622,9 +1622,9 @@ final class ji {
             var12 != 0) {
             var8 = var8.substring(2);
           }
-          var4 = var4 + ((mi) ((Object) var7)).field_G;
+          var4 = var4 + ((BitmapFont) ((Object) var7)).field_G;
           var8 = "Currently unlocked: " + var8;
-          ((mi) ((Object) var7)).a(var8, 320, var4, 16777215, -1);
+          ((BitmapFont) ((Object) var7)).a(var8, 320, var4, 16777215, -1);
           var4 += 5;
           if (nm.a(var4, var3, 126, "Lock mechs 1,2,3", var6, var5)) {
             va.field_d = 0;
@@ -1639,7 +1639,7 @@ final class ji {
           var9_intLifetime1 = 3;
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (var9_intLifetime1 >= 6))) {
-            stackOut_25_0 = t.a(rn.field_D, n.field_z[var9_intLifetime1], -20370);
+            stackOut_25_0 = t.a(rn.field_D, FunOrbClient.field_z[var9_intLifetime1], -20370);
             stackIn_32_0 = stackOut_25_0 ? 1 : 0;
             stackIn_26_0 = stackOut_25_0;
             if (var12 == 0) {
@@ -1663,8 +1663,8 @@ final class ji {
             var8Lifetime1 = var8Lifetime1.substring(2);
           }
           var8Lifetime1 = "Currently unlocked: " + var8Lifetime1;
-          var4 = var4 + ((mi) ((Object) var7)).field_G;
-          ((mi) ((Object) var7)).a(var8Lifetime1, 320, var4, 16777215, -1);
+          var4 = var4 + ((BitmapFont) ((Object) var7)).field_G;
+          ((BitmapFont) ((Object) var7)).a(var8Lifetime1, 320, var4, 16777215, -1);
           var4 += 5;
           if (nm.a(var4, var3, 116, "Lock mechs 4,5,6", var6, var5)) {
             va.field_d = 2;
@@ -1679,7 +1679,7 @@ final class ji {
           var9_intLifetime2 = 6;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var9_intLifetime2 >= 12))) {
-            stackOut_45_0 = t.a(rn.field_D, n.field_z[var9_intLifetime2], -20370);
+            stackOut_45_0 = t.a(rn.field_D, FunOrbClient.field_z[var9_intLifetime2], -20370);
             stackIn_53_0 = stackOut_45_0 ? 1 : 0;
             stackIn_46_0 = stackOut_45_0;
             if (var12 == 0) {
@@ -1702,9 +1702,9 @@ final class ji {
           } else {
             var8Lifetime2 = "none";
           }
-          var4 = var4 + ((mi) ((Object) var7)).field_G;
+          var4 = var4 + ((BitmapFont) ((Object) var7)).field_G;
           var8Lifetime2 = "Currently unlocked: " + var8Lifetime2;
-          ((mi) ((Object) var7)).a(var8Lifetime2, 320, var4, 16777215, -1);
+          ((BitmapFont) ((Object) var7)).a(var8Lifetime2, 320, var4, 16777215, -1);
           var4 += 5;
           if (nm.a(var4, var3, 116, "Lock mechs 7-12", var6, var5)) {
             va.field_d = 4;
@@ -1715,8 +1715,8 @@ final class ji {
           }
           var4 = var4 + (var6 + 5);
           var3 = var3 - (20 + var5);
-          var4 = var4 + ((mi) ((Object) var7)).field_G;
-          ((mi) ((Object) var7)).a("Solarite: " + li.field_v, 320, var4, 16777215, -1);
+          var4 = var4 + ((BitmapFont) ((Object) var7)).field_G;
+          ((BitmapFont) ((Object) var7)).a("Solarite: " + li.field_v, 320, var4, 16777215, -1);
           var4 += 5;
           if (nm.a(var4, var3, 127, "Revoke 100 Solarite", var6, var5)) {
             va.field_d = 6;
@@ -1727,8 +1727,8 @@ final class ji {
           }
           var4 = var4 + (10 + var6);
           var3 = var3 - (var5 + 20);
-          var4 = var4 + ((mi) ((Object) var7)).field_G;
-          ((mi) ((Object) var7)).a("Total items engineered: " + pc.e(126), 320, var4, 16777215, -1);
+          var4 = var4 + ((BitmapFont) ((Object) var7)).field_G;
+          ((BitmapFont) ((Object) var7)).a("Total items engineered: " + pc.e(126), 320, var4, 16777215, -1);
           var4 += 5;
           if (nm.a(var4, var3, 127, "Unengineer all", var6, var5)) {
             va.field_d = 8;
@@ -1742,27 +1742,27 @@ final class ji {
           var4 += 10;
           var5Lifetime1 = 80;
           var6Lifetime1 = 30;
-          ((mi) ((Object) var7)).b("COMPLETE CAMPAIGN:", 50, 20 + var4, 1021128, -1);
+          ((BitmapFont) ((Object) var7)).b("COMPLETE CAMPAIGN:", 50, 20 + var4, 1021128, -1);
           if (nm.a(var4, var3Lifetime1, 124, "Training", var6Lifetime1, var5Lifetime1)) {
             va.field_d = 24;
           }
-          ((mi) ((Object) var7)).a(Integer.toString(fm.field_f[0]), var5Lifetime1 / 2 + var3Lifetime1, var4 - 2, 16777215, -1);
+          ((BitmapFont) ((Object) var7)).a(Integer.toString(fm.field_f[0]), var5Lifetime1 / 2 + var3Lifetime1, var4 - 2, 16777215, -1);
           var3Lifetime1 = var3Lifetime1 + (10 + var5Lifetime1);
           if (nm.a(var4, var3Lifetime1, 124, "Free", var6Lifetime1, var5Lifetime1)) {
             va.field_d = 25;
           }
-          ((mi) ((Object) var7)).a(Integer.toString(fm.field_f[1]), var5Lifetime1 / 2 + var3Lifetime1, var4 - 2, 16777215, -1);
+          ((BitmapFont) ((Object) var7)).a(Integer.toString(fm.field_f[1]), var5Lifetime1 / 2 + var3Lifetime1, var4 - 2, 16777215, -1);
           var3Lifetime1 = var3Lifetime1 + (10 + var5Lifetime1);
           if (nm.a(var4, var3Lifetime1, 117, "Member", var6Lifetime1, var5Lifetime1)) {
             va.field_d = 26;
           }
-          ((mi) ((Object) var7)).a(Integer.toString(fm.field_f[2]), var5Lifetime1 / 2 + var3Lifetime1, -2 + var4, 16777215, -1);
+          ((BitmapFont) ((Object) var7)).a(Integer.toString(fm.field_f[2]), var5Lifetime1 / 2 + var3Lifetime1, -2 + var4, 16777215, -1);
           var3Lifetime2 = 170;
           var6Lifetime2 = 30;
           var4 += 34;
           var3Lifetime3 = 30;
-          var4 = var4 + (((mi) ((Object) var7)).field_G + 5);
-          ((mi) ((Object) var7)).b("SET STATE:", var3Lifetime3, 20 + var4, 1021128, -1);
+          var4 = var4 + (((BitmapFont) ((Object) var7)).field_G + 5);
+          ((BitmapFont) ((Object) var7)).b("SET STATE:", var3Lifetime3, 20 + var4, 1021128, -1);
           var5Lifetime2 = 60;
           var3Lifetime3 += 70;
           if (nm.a(var4, var3Lifetime3, 120, "Noob", var6Lifetime2, var5Lifetime2)) {
@@ -1790,7 +1790,7 @@ final class ji {
             stackIn_106_0 = "Config tutorial viewed";
           }
           var9 = stackIn_106_0;
-          ((mi) ((Object) var7)).b(var9, -10 + var3Lifetime3, -3 + var4, 16777215, -1);
+          ((BitmapFont) ((Object) var7)).b(var9, -10 + var3Lifetime3, -3 + var4, 16777215, -1);
           if ((dm.field_a & 8) == 0) {
             stackIn_110_0 = "Skip";
           } else {
@@ -1801,7 +1801,7 @@ final class ji {
             va.field_d = 16;
           }
           var4 += 46;
-          ((mi) ((Object) var7)).a("MUSIC", 122, -3 + var4, 1021128, -1);
+          ((BitmapFont) ((Object) var7)).a("MUSIC", 122, -3 + var4, 1021128, -1);
           var3Lifetime4 = 20;
           var5Lifetime6 = 30;
           var11 = 0;
@@ -1833,17 +1833,17 @@ final class ji {
             va.field_d = 15;
             if ((var12 != 0) && (jg.field_j &&
               0 == (a.field_c & 16))) {
-              pb.h(var3Lifetime4, var4, var5Lifetime7, var6Lifetime2, 32896);
+              SoftwareRaster.h(var3Lifetime4, var4, var5Lifetime7, var6Lifetime2, 32896);
             }
           } else {
             if (jg.field_j &&
               0 == (a.field_c & 16)) {
-              pb.h(var3Lifetime4, var4, var5Lifetime7, var6Lifetime2, 32896);
+              SoftwareRaster.h(var3Lifetime4, var4, var5Lifetime7, var6Lifetime2, 32896);
             }
           }
           if (va.field_d != -1 &&
             ~var2_int != ~va.field_d) {
-            ee.c(-2483, 97);
+            CombatWorld.c(-2483, 97);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1924,7 +1924,7 @@ final class ji {
         int var6Lifetime2;
         int var7Lifetime2;
         int var8Lifetime2;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         try {
           if (this.field_c == 18) {
             return;
@@ -1937,36 +1937,36 @@ final class ji {
           if (var5 != -1 &&
             this.field_g.field_c &&
             this.a(121, param1)) {
-            ee.c(-2483, 97);
+            CombatWorld.c(-2483, 97);
           }
-          L1: {
-            L2: {
-              L3: {
-                L4: {
-                  L5: {
-                    L6: {
-                      L7: {
-                        L8: {
-                          L9: {
-                            L10: {
-                              L11: {
-                                L12: {
-                                  L13: {
-                                    L14: {
-                                      L15: {
-                                        L16: {
-                                          L17: {
-                                            L18: {
-                                              L19: {
-                                                L20: {
-                                                  L21: {
-                                                    L22: {
-                                                      L23: {
-                                                        L24: {
-                                                          L25: {
-                                                            L26: {
-                                                              L27: {
-                                                                L28: {
+          regionExit1: {
+            regionExit2: {
+              regionExit3: {
+                regionExit4: {
+                  regionExit5: {
+                    regionExit6: {
+                      regionExit7: {
+                        regionExit8: {
+                          regionExit9: {
+                            regionExit10: {
+                              regionExit11: {
+                                regionExit12: {
+                                  regionExit13: {
+                                    regionExit14: {
+                                      regionExit15: {
+                                        regionExit16: {
+                                          regionExit17: {
+                                            regionExit18: {
+                                              regionExit19: {
+                                                regionExit20: {
+                                                  regionExit21: {
+                                                    regionExit22: {
+                                                      regionExit23: {
+                                                        regionExit24: {
+                                                          regionExit25: {
+                                                            regionExit26: {
+                                                              regionExit27: {
+                                                                regionExit28: {
                                                                   boolean decompiledFrameRemainder14 = true;
                                                                   boolean decompiledFrameRemainder13 = true;
                                                                   boolean decompiledFrameRemainder12 = true;
@@ -1986,7 +1986,7 @@ final class ji {
                                                                   if (-1 == var6 &&
                                                                     var10 == 0) {
                                                                     var4_int = 0;
-                                                                    break L1;
+                                                                    break regionExit1;
                                                                   } else {
                                                                     if ((var6 != 38) &&
                                                                       (decompiledFrameRemainder0 = (var6 != 39)) &&
@@ -2012,103 +2012,103 @@ final class ji {
                                                                       (decompiledFrameRemainder13 = (var6 != 5)) &&
                                                                       (decompiledFrameRemainder14 = (8 != var6))) {
                                                                       if (var6 == 4) {
-                                                                        break L28;
+                                                                        break regionExit28;
                                                                       }
                                                                       if (var6 == 3 &&
                                                                         var10 == 0) {
-                                                                        break L27;
+                                                                        break regionExit27;
                                                                       }
                                                                       if (var6 == 20 &&
                                                                         var10 == 0) {
-                                                                        break L26;
+                                                                        break regionExit26;
                                                                       }
                                                                       if (var6 == 21 &&
                                                                         var10 == 0) {
-                                                                        break L25;
+                                                                        break regionExit25;
                                                                       }
                                                                       if (6 == var6) {
-                                                                        break L24;
+                                                                        break regionExit24;
                                                                       }
                                                                       if (var6 == 9 &&
                                                                         var10 == 0) {
-                                                                        break L23;
+                                                                        break regionExit23;
                                                                       }
                                                                       if (10 == var6 &&
                                                                         var10 == 0) {
-                                                                        break L22;
+                                                                        break regionExit22;
                                                                       }
                                                                       if (var6 == 11) {
-                                                                        break L21;
+                                                                        break regionExit21;
                                                                       }
                                                                       if (var6 == 12 &&
                                                                         var10 == 0) {
-                                                                        break L20;
+                                                                        break regionExit20;
                                                                       }
                                                                       if (var6 == 13 &&
                                                                         var10 == 0) {
-                                                                        break L19;
+                                                                        break regionExit19;
                                                                       }
                                                                       if (14 == var6 &&
                                                                         var10 == 0) {
-                                                                        break L18;
+                                                                        break regionExit18;
                                                                       }
                                                                       if (var6 == 15 &&
                                                                         var10 == 0) {
-                                                                        break L17;
+                                                                        break regionExit17;
                                                                       }
                                                                       if (16 == var6 &&
                                                                         var10 == 0) {
-                                                                        break L16;
+                                                                        break regionExit16;
                                                                       }
                                                                       if (17 == var6 &&
                                                                         var10 == 0) {
-                                                                        break L15;
+                                                                        break regionExit15;
                                                                       }
                                                                       if (var6 == 18) {
-                                                                        break L14;
+                                                                        break regionExit14;
                                                                       }
                                                                       if (23 == var6 &&
                                                                         var10 == 0) {
-                                                                        break L13;
+                                                                        break regionExit13;
                                                                       }
                                                                       if (var6 == 25) {
-                                                                        break L12;
+                                                                        break regionExit12;
                                                                       }
                                                                       if (var6 == 26 &&
                                                                         var10 == 0) {
-                                                                        break L11;
+                                                                        break regionExit11;
                                                                       }
                                                                       if (var6 == 19 &&
                                                                         var10 == 0) {
-                                                                        break L10;
+                                                                        break regionExit10;
                                                                       }
                                                                       if (var6 == 34 &&
                                                                         var10 == 0) {
-                                                                        break L9;
+                                                                        break regionExit9;
                                                                       }
                                                                       if (var6 == 40) {
-                                                                        break L8;
+                                                                        break regionExit8;
                                                                       }
                                                                       if (var6 == 35) {
-                                                                        break L7;
+                                                                        break regionExit7;
                                                                       }
                                                                       if (var6 == 45) {
-                                                                        break L6;
+                                                                        break regionExit6;
                                                                       }
                                                                       if (var6 == 42) {
-                                                                        break L5;
+                                                                        break regionExit5;
                                                                       }
                                                                       if (43 == var6) {
-                                                                        break L4;
+                                                                        break regionExit4;
                                                                       }
                                                                       if (44 == var6 &&
                                                                         var10 == 0) {
-                                                                        break L3;
+                                                                        break regionExit3;
                                                                       }
                                                                       if (var6 == 47) {
-                                                                        break L2;
+                                                                        break regionExit2;
                                                                       }
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if ((decompiledFrameRemainder14) &&
@@ -2127,20 +2127,20 @@ final class ji {
                                                                     (decompiledFrameRemainder1) &&
                                                                     (decompiledFrameRemainder0)) {
                                                                     if (!this.field_g.c(0)) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                     if (this.field_c == 19) {
                                                                       ge.field_j = param1 / 10;
                                                                     }
                                                                     if (!this.b(false, ge.field_j, param1 % 10)) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
-                                                                    nk.field_J = 500;
+                                                                    ArticulatedPart.field_J = 500;
                                                                     ol.field_Ub = param1 % 10;
                                                                     var6 = param2 ? 1 : 0;
                                                                     q.a(20, var6 != 0, -1, 0);
                                                                     if (var10 == 0) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if ((decompiledFrameRemainder14) &&
@@ -2159,7 +2159,7 @@ final class ji {
                                                                     (decompiledFrameRemainder1)) {
                                                                     sh.a(-23, param2, this.field_g.c(0));
                                                                     if (var10 == 0) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if ((decompiledFrameRemainder14) &&
@@ -2176,7 +2176,7 @@ final class ji {
                                                                     (decompiledFrameRemainder3) &&
                                                                     (decompiledFrameRemainder2)) {
                                                                     if (!this.field_g.c(0)) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                     stackIn_243_0 = !(ka.field_V);
                                                                     ka.field_V = stackIn_243_0;
@@ -2189,11 +2189,11 @@ final class ji {
                                                                     }
                                                                     stackIn_246_0[stackIn_246_1] = stackIn_247_2;
                                                                     if (ni.b(22)) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                     um.f((byte) 3);
                                                                     if (var10 == 0) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if ((decompiledFrameRemainder14) &&
@@ -2209,15 +2209,15 @@ final class ji {
                                                                     (decompiledFrameRemainder4) &&
                                                                     (decompiledFrameRemainder3)) {
                                                                     if (!this.field_g.c(0)) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                     bg.c((byte) 120);
                                                                     if (ni.b(51)) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                     um.f((byte) 3);
                                                                     if (var10 == 0) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if ((decompiledFrameRemainder14) &&
@@ -2233,14 +2233,14 @@ final class ji {
                                                                     (decompiledFrameRemainder4)) {
                                                                     if (this.a(124, param1)) {
                                                                       if (!this.field_g.c(0)) {
-                                                                        break L1;
+                                                                        break regionExit1;
                                                                       }
                                                                       if (this.b(false, 1, 0) ||
                                                                         this.field_c == 20) {
                                                                         var6 = param2 ? 1 : 0;
                                                                         q.a(19, var6 != 0, -1, 0);
                                                                         if (var10 == 0) {
-                                                                          break L1;
+                                                                          break regionExit1;
                                                                         }
                                                                       }
                                                                       ol.field_Ub = fm.field_f[0];
@@ -2250,16 +2250,16 @@ final class ji {
                                                                       if (5 == var7 ||
                                                                         var7 == 6 ||
                                                                         var7 == 8) {
-                                                                        var7 = gh.field_Jb;
+                                                                        var7 = SceneWidget.field_Jb;
                                                                       }
                                                                       q.a(20, var6 != 0, -1, var7);
                                                                       if (var10 == 0) {
-                                                                        break L1;
+                                                                        break regionExit1;
                                                                       }
                                                                     }
                                                                     var4_int = 0;
                                                                     if (var10 == 0) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if ((decompiledFrameRemainder14) &&
@@ -2275,15 +2275,15 @@ final class ji {
                                                                     if (!this.a(118, param1)) {
                                                                       var4_int = 0;
                                                                       if (var10 == 0) {
-                                                                        break L1;
+                                                                        break regionExit1;
                                                                       }
                                                                     }
                                                                     if (!this.field_g.c(0)) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                     nl.g(127);
                                                                     if (var10 == 0) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if ((decompiledFrameRemainder14) &&
@@ -2296,25 +2296,25 @@ final class ji {
                                                                     (decompiledFrameRemainder7) &&
                                                                     (decompiledFrameRemainder6)) {
                                                                     if (!this.field_g.c(0)) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                     dc.field_g = -1;
                                                                     if (!ib.a(-99)) {
                                                                       km.field_a = dg.field_e;
                                                                       if (var10 == 0) {
-                                                                        break L1;
+                                                                        break regionExit1;
                                                                       }
                                                                     }
                                                                     qh.field_Yb = 0;
                                                                     di.field_g = 4;
                                                                     if (this.field_c == 14) {
                                                                       uc.field_b = cj.a(-107, di.field_c, hl.field_v);
-                                                                      hl.field_v = ji.a(uc.field_b, (byte) -25, di.field_c);
+                                                                      hl.field_v = SentinelDesigner.a(uc.field_b, (byte) -25, di.field_c);
                                                                     }
                                                                     var6 = param2 ? 1 : 0;
                                                                     q.a(-3, var6 != 0, -1, 0);
                                                                     if (var10 == 0) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if ((decompiledFrameRemainder14) &&
@@ -2326,14 +2326,14 @@ final class ji {
                                                                     (decompiledFrameRemainder8) &&
                                                                     (decompiledFrameRemainder7)) {
                                                                     if (!this.field_g.c(0)) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                     if (ni.b(111)) {
                                                                       si.field_y = false;
                                                                       var6 = 0;
                                                                       oc.a(99, var6, ql.field_dc, param2, true);
                                                                       if (var10 == 0) {
-                                                                        break L1;
+                                                                        break regionExit1;
                                                                       }
                                                                     }
                                                                     if (this.a(127, param1)) {
@@ -2343,22 +2343,22 @@ final class ji {
                                                                         if (var7 == 5 ||
                                                                           var7 == 6 ||
                                                                           var7 == 8) {
-                                                                          var7 = gh.field_Jb;
+                                                                          var7 = SceneWidget.field_Jb;
                                                                         }
                                                                         q.a(-4, var6 != 0, -1, var7);
                                                                         if (var10 == 0) {
-                                                                          break L1;
+                                                                          break regionExit1;
                                                                         }
                                                                       }
                                                                       km.field_a = dg.field_e;
                                                                       if (var10 == 0) {
-                                                                        break L1;
+                                                                        break regionExit1;
                                                                       }
                                                                     }
                                                                     var4_int = 0;
                                                                     km.field_a = b.field_l;
                                                                     if (var10 == 0) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if ((decompiledFrameRemainder14) &&
@@ -2369,12 +2369,12 @@ final class ji {
                                                                     (decompiledFrameRemainder9) &&
                                                                     (decompiledFrameRemainder8)) {
                                                                     if (!this.field_g.c(0)) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                     var6 = param2 ? 1 : 0;
                                                                     q.a(-1, var6 != 0, -1, 0);
                                                                     if (var10 == 0) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if ((decompiledFrameRemainder14) &&
@@ -2385,7 +2385,7 @@ final class ji {
                                                                     (decompiledFrameRemainder9)) {
                                                                     ub.a(false, -1);
                                                                     if (!this.field_g.c(0)) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                     if (14 == pm.field_T) {
                                                                       uc.field_b = cj.a(-109, di.field_c, hl.field_v);
@@ -2394,9 +2394,9 @@ final class ji {
                                                                       ni.b(28) &&
                                                                       0 < fm.field_f[0]) {
                                                                       ln.field_g = -1;
-                                                                      gh.field_J = true;
+                                                                      SceneWidget.field_J = true;
                                                                       if (var10 == 0) {
-                                                                        break L1;
+                                                                        break regionExit1;
                                                                       }
                                                                     }
                                                                     var6 = param2 ? 1 : 0;
@@ -2404,11 +2404,11 @@ final class ji {
                                                                     if (var7 == 5 ||
                                                                       var7 == 6 ||
                                                                       8 == var7) {
-                                                                      var7 = gh.field_Jb;
+                                                                      var7 = SceneWidget.field_Jb;
                                                                     }
                                                                     q.a(0, var6 != 0, -1, var7);
                                                                     if (var10 == 0) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if ((decompiledFrameRemainder14) &&
@@ -2417,19 +2417,19 @@ final class ji {
                                                                     (decompiledFrameRemainder11) &&
                                                                     (decompiledFrameRemainder10)) {
                                                                     if (!this.field_g.c(0)) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                     var6 = param2 ? 1 : 0;
                                                                     var7 = vb.field_g;
                                                                     if (5 == var7 ||
                                                                       6 == var7 ||
                                                                       8 == var7) {
-                                                                      var7 = gh.field_Jb;
+                                                                      var7 = SceneWidget.field_Jb;
                                                                     }
                                                                     q.a(12, var6 != 0, -1, var7);
                                                                     td.field_Sb = true;
                                                                     if (var10 == 0) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if ((decompiledFrameRemainder14) &&
@@ -2437,55 +2437,55 @@ final class ji {
                                                                     (decompiledFrameRemainder12) &&
                                                                     (decompiledFrameRemainder11)) {
                                                                     if (!this.field_g.c(0)) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                     var6 = param2 ? 1 : 0;
                                                                     var7 = vb.field_g;
                                                                     if (var7 == 5 ||
                                                                       6 == var7 ||
                                                                       var7 == 8) {
-                                                                      var7 = gh.field_Jb;
+                                                                      var7 = SceneWidget.field_Jb;
                                                                     }
                                                                     q.a(8, var6 != 0, -1, var7);
                                                                     if (var10 == 0) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if ((decompiledFrameRemainder14) &&
                                                                     (decompiledFrameRemainder13) &&
                                                                     (decompiledFrameRemainder12)) {
                                                                     if (!this.field_g.c(0)) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                     var6 = param2 ? 1 : 0;
                                                                     var7 = vb.field_g;
                                                                     if (var7 == 5 ||
                                                                       var7 == 6 ||
                                                                       8 == var7) {
-                                                                      var7 = gh.field_Jb;
+                                                                      var7 = SceneWidget.field_Jb;
                                                                     }
                                                                     q.a(13, var6 != 0, -1, var7);
                                                                     if (pm.field_T != 14) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                     uc.field_b = cj.a(-100, di.field_c, hl.field_v);
                                                                     if (var10 == 0) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if ((decompiledFrameRemainder14) &&
                                                                     (decompiledFrameRemainder13)) {
                                                                     if (!this.field_g.c(0)) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                     if (!this.a(124, param1)) {
                                                                       var4_int = 0;
                                                                       km.field_a = sj.field_C + "<br>" + b.field_l;
                                                                       if (var10 == 0) {
-                                                                        break L1;
+                                                                        break regionExit1;
                                                                       }
                                                                     }
-                                                                    if (gi.h((byte) -79)) {
+                                                                    if (PacketBuffer.h((byte) -79)) {
                                                                       ij.field_Y = -1;
                                                                       fg.field_Ob = 1;
                                                                       f.field_A = null;
@@ -2512,78 +2512,78 @@ final class ji {
                                                                     if (5 == var7 ||
                                                                       var7 == 6 ||
                                                                       var7 == 8) {
-                                                                      var7 = gh.field_Jb;
+                                                                      var7 = SceneWidget.field_Jb;
                                                                     }
                                                                     q.a(14, var6 != 0, -1, var7);
-                                                                    hl.field_v = ji.a(uc.field_b, (byte) -67, di.field_c);
+                                                                    hl.field_v = SentinelDesigner.a(uc.field_b, (byte) -67, di.field_c);
                                                                     hl.field_v.b(6993661, -110);
                                                                     if (var10 == 0) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if (decompiledFrameRemainder14) {
                                                                     if (!this.field_g.c(0)) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
-                                                                    ea.field_k = false;
+                                                                    Sprite.field_k = false;
                                                                     var6 = param2 ? 1 : 0;
                                                                     var7 = vb.field_g;
                                                                     if (var7 == 5 ||
                                                                       var7 == 6 ||
                                                                       var7 == 8) {
-                                                                      var7 = gh.field_Jb;
+                                                                      var7 = SceneWidget.field_Jb;
                                                                     }
                                                                     q.a(7, var6 != 0, -1, var7);
                                                                     if (var10 == 0) {
-                                                                      break L1;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   if (this.field_c == 19) {
-                                                                    gh.field_Jb = 0;
+                                                                    SceneWidget.field_Jb = 0;
                                                                   }
                                                                   if (!this.field_g.c(0)) {
-                                                                    break L1;
+                                                                    break regionExit1;
                                                                   }
                                                                   if (this.field_c == 7 &&
-                                                                    gh.field_Jb != 0) {
-                                                                    ea.field_k = true;
+                                                                    SceneWidget.field_Jb != 0) {
+                                                                    Sprite.field_k = true;
                                                                   }
-                                                                  var6 = gh.field_Jb;
+                                                                  var6 = SceneWidget.field_Jb;
                                                                   var7 = param2 ? 1 : 0;
                                                                   var8 = vb.field_g;
                                                                   if (var8 == 5 ||
                                                                     var8 == 6 ||
                                                                     var8 == 8) {
-                                                                    var8 = gh.field_Jb;
+                                                                    var8 = SceneWidget.field_Jb;
                                                                   }
                                                                   q.a(var6, var7 != 0, -1, var8);
                                                                   if (var10 == 0) {
-                                                                    break L1;
+                                                                    break regionExit1;
                                                                   }
                                                                 }
                                                                 if (!this.field_g.c(0)) {
-                                                                  break L1;
+                                                                  break regionExit1;
                                                                 }
                                                                 var6 = param2 ? 1 : 0;
                                                                 var7 = vb.field_g;
                                                                 if (var7 == 5 ||
                                                                   var7 == 6 ||
                                                                   var7 == 8) {
-                                                                  var7 = gh.field_Jb;
+                                                                  var7 = SceneWidget.field_Jb;
                                                                 }
                                                                 q.a(6, var6 != 0, -1, var7);
                                                                 if (var10 == 0) {
-                                                                  break L1;
+                                                                  break regionExit1;
                                                                 }
                                                               }
                                                               if (!this.field_g.c(0)) {
-                                                                break L1;
+                                                                break regionExit1;
                                                               }
                                                               if (this.field_c == 9) {
                                                                 var6 = param2 ? 1 : 0;
                                                                 q.a(5, var6 != 0, -1, 0);
                                                                 if (var10 == 0) {
-                                                                  break L1;
+                                                                  break regionExit1;
                                                                 }
                                                               }
                                                               var6 = param2 ? 1 : 0;
@@ -2591,11 +2591,11 @@ final class ji {
                                                               if (var7 == 5 ||
                                                                 6 == var7 ||
                                                                 8 == var7) {
-                                                                var7 = gh.field_Jb;
+                                                                var7 = SceneWidget.field_Jb;
                                                               }
                                                               q.a(5, var6 != 0, -1, var7);
                                                               if (var10 == 0) {
-                                                                break L1;
+                                                                break regionExit1;
                                                               }
                                                             }
                                                             var4_int = 0;
@@ -2648,11 +2648,11 @@ final class ji {
                                                             }
                                                             if (var6 != 0 && (!this.field_g.a(0) ||
                                                               !(a.field_c <= gb.field_a))) {
-                                                              ee.c(-2483, 0);
+                                                              CombatWorld.c(-2483, 0);
                                                               gb.field_a = a.field_c + 20;
                                                             }
                                                             if (var10 == 0) {
-                                                              break L1;
+                                                              break regionExit1;
                                                             }
                                                           }
                                                           if (this.field_g.b(126)) {
@@ -2691,31 +2691,31 @@ final class ji {
                                                             s.b(125);
                                                           }
                                                           if (!this.field_g.c((byte) 51)) {
-                                                            break L1;
+                                                            break regionExit1;
                                                           }
                                                           un.a((byte) 125);
                                                           if (var10 == 0) {
-                                                            break L1;
+                                                            break regionExit1;
                                                           }
                                                         }
                                                         if (!this.field_g.c(0)) {
-                                                          break L1;
+                                                          break regionExit1;
                                                         }
                                                         if (wb.field_c != null) {
                                                           ub.c(0);
                                                           if (var10 == 0) {
-                                                            break L1;
+                                                            break regionExit1;
                                                           }
                                                         }
                                                         var6 = param2 ? 1 : 0;
                                                         si.field_y = false;
                                                         ag.a(-4, var6 != 0);
                                                         if (var10 == 0) {
-                                                          break L1;
+                                                          break regionExit1;
                                                         }
                                                       }
                                                       if (!this.field_g.c(0)) {
-                                                        break L1;
+                                                        break regionExit1;
                                                       }
                                                       var6 = 0;
                                                       var7 = di.field_g;
@@ -2733,60 +2733,60 @@ final class ji {
                                                         var10 != 0) {
                                                         boolean decompiledSharedTail0 = (di.field_g != 4);
                                                         if (!decompiledSharedTail0) {
-                                                          hl.field_v = ji.a(uc.field_b, (byte) 109, di.field_c);
+                                                          hl.field_v = SentinelDesigner.a(uc.field_b, (byte) 109, di.field_c);
                                                           lc.field_e = true;
-                                                          ea.field_k = false;
+                                                          Sprite.field_k = false;
                                                           var7 = vb.field_g;
                                                           if (var7 == 5 ||
                                                             var7 == 6 ||
                                                             var7 == 8) {
-                                                            var7 = gh.field_Jb;
+                                                            var7 = SceneWidget.field_Jb;
                                                           }
                                                           q.a(14, false, -1, var7);
                                                           decompiledSharedTail0 = (var10 != 0);
                                                         }
                                                         if (decompiledSharedTail0) {
                                                           fk.field_i.a((byte) 30, param2);
-                                                          ea.field_k = false;
+                                                          Sprite.field_k = false;
                                                           lc.field_e = true;
                                                         }
                                                       }
                                                       if (var10 == 0) {
-                                                        break L1;
+                                                        break regionExit1;
                                                       }
                                                     }
                                                     if (!this.field_g.c(0)) {
-                                                      break L1;
+                                                      break regionExit1;
                                                     }
                                                     fk.field_i.m(1125);
                                                     var6 = param2 ? 1 : 0;
                                                     q.a(-1, var6 != 0, -1, 0);
                                                     if (var10 == 0) {
-                                                      break L1;
+                                                      break regionExit1;
                                                     }
                                                   }
                                                   if (!this.field_g.c(0)) {
-                                                    break L1;
+                                                    break regionExit1;
                                                   }
                                                   fk.field_i.c(126);
                                                   var6 = param2 ? 1 : 0;
                                                   q.a(-1, var6 != 0, -1, 0);
                                                   if (var10 == 0) {
-                                                    break L1;
+                                                    break regionExit1;
                                                   }
                                                 }
                                                 if (!this.field_g.c(0)) {
-                                                  break L1;
+                                                  break regionExit1;
                                                 }
                                                 fk.field_i.a(false);
                                                 var6 = param2 ? 1 : 0;
                                                 q.a(-1, var6 != 0, -1, 0);
                                                 if (var10 == 0) {
-                                                  break L1;
+                                                  break regionExit1;
                                                 }
                                               }
                                               if (!this.field_g.c(0)) {
-                                                break L1;
+                                                break regionExit1;
                                               }
                                               if (ob.field_y) {
                                                 var6 = param2 ? 1 : 0;
@@ -2794,60 +2794,60 @@ final class ji {
                                                 if (var7 == 5 ||
                                                   6 == var7 ||
                                                   var7 == 8) {
-                                                  var7 = gh.field_Jb;
+                                                  var7 = SceneWidget.field_Jb;
                                                 }
                                                 q.a(-5, var6 != 0, -1, var7);
                                               }
-                                              if (!ee.field_G) {
-                                                break L1;
+                                              if (!CombatWorld.field_G) {
+                                                break regionExit1;
                                               }
                                               ei.a(0, (byte) -23, 11);
                                               if (var10 == 0) {
-                                                break L1;
+                                                break regionExit1;
                                               }
                                             }
                                             if (!this.field_g.c(0)) {
-                                              break L1;
+                                              break regionExit1;
                                             }
                                             d.field_R = 0;
                                             if (var10 == 0) {
-                                              break L1;
+                                              break regionExit1;
                                             }
                                           }
                                           if (!this.field_g.c(0)) {
-                                            break L1;
+                                            break regionExit1;
                                           }
                                           d.field_R = 1;
                                           if (var10 == 0) {
-                                            break L1;
+                                            break regionExit1;
                                           }
                                         }
                                         if (!this.field_g.c(0)) {
-                                          break L1;
+                                          break regionExit1;
                                         }
                                         d.field_R = 2;
                                         if (var10 == 0) {
-                                          break L1;
+                                          break regionExit1;
                                         }
                                       }
                                       if (!this.field_g.c(0)) {
-                                        break L1;
+                                        break regionExit1;
                                       }
                                       on.field_j = 0;
                                       if (var10 == 0) {
-                                        break L1;
+                                        break regionExit1;
                                       }
                                     }
                                     if (!this.field_g.c(0)) {
-                                      break L1;
+                                      break regionExit1;
                                     }
                                     on.field_j = 1;
                                     if (var10 == 0) {
-                                      break L1;
+                                      break regionExit1;
                                     }
                                   }
                                   if (!this.field_g.c(0)) {
-                                    break L1;
+                                    break regionExit1;
                                   }
                                   si.field_y = false;
                                   if (20 == this.field_c ||
@@ -2855,80 +2855,80 @@ final class ji {
                                     stackIn_737_0 = (fm.field_f[0] < 3) ? 20 : 19;
                                     v.a(stackIn_737_0, (String) null, 10);
                                     if (var10 == 0) {
-                                      break L1;
+                                      break regionExit1;
                                     }
                                   }
                                   if (this.field_c == 10) {
                                     v.a(9, (String) null, 10);
                                     if (var10 == 0) {
-                                      break L1;
+                                      break regionExit1;
                                     }
                                   }
                                   if (8 != this.field_c &&
                                     5 != pm.field_T &&
                                     pm.field_T != 6 &&
                                     14 != pm.field_T) {
-                                    break L1;
+                                    break regionExit1;
                                   }
                                   v.a(this.field_c, pl.field_Q, 10);
                                   if (var10 == 0) {
-                                    break L1;
+                                    break regionExit1;
                                   }
                                 }
                                 if (this.field_g.c(0) &&
                                   this.a(121, param1)) {
-                                  nk.field_J = 500;
+                                  ArticulatedPart.field_J = 500;
                                   ol.field_Ub = ol.field_Ub - 1;
                                   if (var10 == 0) {
-                                    break L1;
+                                    break regionExit1;
                                   }
                                 }
                                 var4_int = 0;
                                 if (var10 == 0) {
-                                  break L1;
+                                  break regionExit1;
                                 }
                               }
                               if (this.field_g.c(0) &&
                                 this.a(126, param1)) {
                                 ol.field_Ub = ol.field_Ub + 1;
-                                nk.field_J = 500;
+                                ArticulatedPart.field_J = 500;
                                 if (var10 == 0) {
-                                  break L1;
+                                  break regionExit1;
                                 }
                               }
                               var4_int = 0;
                               if (var10 == 0) {
-                                break L1;
+                                break regionExit1;
                               }
                             }
                             if (!this.field_g.c(0)) {
-                              break L1;
+                              break regionExit1;
                             }
-                            t.a(true, wl.d((byte) -21));
+                            t.a(true, Projectile.d((byte) -21));
                             if (var10 == 0) {
-                              break L1;
+                              break regionExit1;
                             }
                           }
                           if (!this.field_g.c(0)) {
-                            break L1;
+                            break regionExit1;
                           }
-                          if (nk.f((byte) -28)) {
-                            break L1;
+                          if (ArticulatedPart.f((byte) -28)) {
+                            break regionExit1;
                           }
                           var6 = param2 ? 1 : 0;
                           var7 = vb.field_g;
                           if (var7 == 5 ||
                             6 == var7 ||
                             8 == var7) {
-                            var7 = gh.field_Jb;
+                            var7 = SceneWidget.field_Jb;
                           }
                           q.a(21, var6 != 0, -1, var7);
                           if (var10 == 0) {
-                            break L1;
+                            break regionExit1;
                           }
                         }
                         if (!this.field_g.c(0)) {
-                          break L1;
+                          break regionExit1;
                         }
                         ve.a((byte) 122);
                         ij.field_Y = -1;
@@ -2950,41 +2950,41 @@ final class ji {
                           break;
                         }
                         if (var10 == 0) {
-                          break L1;
+                          break regionExit1;
                         }
                       }
                       if (!this.field_g.c(0)) {
-                        break L1;
+                        break regionExit1;
                       }
                       var6Lifetime2 = param2 ? 1 : 0;
                       var7Lifetime2 = vb.field_g;
                       if (5 == var7Lifetime2 ||
                         var7Lifetime2 == 6 ||
                         8 == var7Lifetime2) {
-                        var7Lifetime2 = gh.field_Jb;
+                        var7Lifetime2 = SceneWidget.field_Jb;
                       }
                       q.a(17, var6Lifetime2 != 0, -1, var7Lifetime2);
                       if (var10 == 0) {
-                        break L1;
+                        break regionExit1;
                       }
                     }
                     if (!this.field_g.c(0)) {
-                      break L1;
+                      break regionExit1;
                     }
                     var6Lifetime1 = param2 ? 1 : 0;
                     var7Lifetime1 = vb.field_g;
                     if (var7Lifetime1 == 5 ||
                       var7Lifetime1 == 6 ||
                       var7Lifetime1 == 8) {
-                      var7Lifetime1 = gh.field_Jb;
+                      var7Lifetime1 = SceneWidget.field_Jb;
                     }
                     q.a(22, var6Lifetime1 != 0, -1, var7Lifetime1);
                     if (var10 == 0) {
-                      break L1;
+                      break regionExit1;
                     }
                   }
                   if (!this.field_g.c(0)) {
-                    break L1;
+                    break regionExit1;
                   }
                   stackIn_856_0 = !(dm.field_c);
                   dm.field_c = stackIn_856_0;
@@ -2998,11 +2998,11 @@ final class ji {
                   }
                   stackIn_859_0[stackIn_859_1] = stackIn_860_2;
                   if (ni.b(81)) {
-                    break L1;
+                    break regionExit1;
                   }
                   um.f((byte) 3);
                   if (var10 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 if (this.a(125, param1) &&
@@ -3018,16 +3018,16 @@ final class ji {
                   }
                   stackIn_879_0[stackIn_879_1] = stackIn_880_2;
                   if (ni.b(45)) {
-                    break L1;
+                    break regionExit1;
                   }
                   um.f((byte) 3);
                   if (var10 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 var4_int = 0;
                 if (var10 == 0) {
-                  break L1;
+                  break regionExit1;
                 }
               }
               if (this.a(125, param1) &&
@@ -3043,23 +3043,23 @@ final class ji {
                 }
                 stackIn_900_0[stackIn_900_1] = stackIn_901_2;
                 if (ni.b(12)) {
-                  break L1;
+                  break regionExit1;
                 }
                 um.f((byte) 3);
                 if (var10 == 0) {
-                  break L1;
+                  break regionExit1;
                 }
               }
               var4_int = 0;
               if (var10 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             if (!this.a(127, param1) ||
               !this.field_g.c(0)) {
               var4_int = 0;
               if (var10 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             gd.field_sb = null;
@@ -3078,7 +3078,7 @@ final class ji {
             }
           }
           if (var4_int != 0) {
-            ee.c(-2483, 95);
+            CombatWorld.c(-2483, 95);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3096,7 +3096,7 @@ final class ji {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           var2_int = -1;
           if (param0 != -120) {
@@ -3221,7 +3221,7 @@ final class ji {
     }
 
     final static void a(String param0, int param1) {
-        System.out.println("Error: " + ee.a("%0a", param0, "\n", param1 ^ -29743));
+        System.out.println("Error: " + CombatWorld.a("%0a", param0, "\n", param1 ^ -29743));
         if (param1 != -29771) {
           field_e = -33;
         }
@@ -3251,7 +3251,7 @@ final class ji {
           int var2_int = 73 % ((param0 + 34) / 34);
           var3 = pl.field_U;
           var4 = lb.field_hc;
-          ((mi) ((Object) var3)).a(var4, 320, 240, 1021128, -1);
+          ((BitmapFont) ((Object) var3)).a(var4, 320, 240, 1021128, -1);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ji.OA(" + param0 + ')');
         }
@@ -3278,11 +3278,11 @@ final class ji {
           if (param0 >= -55) {
             return;
           }
-          pb.h(40, 80, 560, 330, 3487029);
-          pb.h(41, 81, 558, 328, 3487029);
+          SoftwareRaster.h(40, 80, 560, 330, 3487029);
+          SoftwareRaster.h(41, 81, 558, 328, 3487029);
           if (ni.b(25)) {
             this.j(60);
-            if (SteelSentinels.field_G == 0) {
+            if (SteelSentinels.obfuscationControl == 0) {
               return;
             }
           }
@@ -3300,7 +3300,7 @@ final class ji {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
           if (gd.field_sb != null) {
             if (dm.field_c) {
@@ -3314,13 +3314,13 @@ final class ji {
             boolean decompiledSharedTail0 = (od.field_e ||
               pm.field_U != 0);
             if (!decompiledSharedTail0) {
-              pb.a(jj.field_a.field_Rb, jj.field_a.field_cb, jj.field_a.field_zb, jj.field_a.field_Lb, 0);
+              SoftwareRaster.a(jj.field_a.field_Rb, jj.field_a.field_cb, jj.field_a.field_zb, jj.field_a.field_Lb, 0);
               jj.field_a.a(true, (byte) 127);
               decompiledSharedTail0 = (var3 != 0);
             }
             if (decompiledSharedTail0) {
               gd.field_sb.a(true, (byte) 126);
-              ff.field_lb.a(jc.field_c, bb.field_X);
+              ff.field_lb.a(NodeIterator.field_c, bb.field_X);
             }
           }
           var2_int = -33 % ((-71 - param0) / 55);
@@ -3338,23 +3338,23 @@ final class ji {
         int[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledSharedTail0 = (lb.field_gc != 1 ||
             !(q.field_i > 0) ||
-            !(hd.field_i < (dh.field_C.length - 1)));
+            !(BattleTerrain.field_i < (dh.field_C.length - 1)));
           if (!decompiledSharedTail0) {
-            ee.c(-2483, 95);
-            hd.field_i = hd.field_i + 1;
+            CombatWorld.c(-2483, 95);
+            BattleTerrain.field_i = BattleTerrain.field_i + 1;
             in.field_k = -1;
             decompiledSharedTail0 = (var4 != 0);
           }
           if ((decompiledSharedTail0) && (lb.field_gc == 1 &&
             q.field_i < 0 &&
-            0 < hd.field_i)) {
-            ee.c(-2483, 95);
+            0 < BattleTerrain.field_i)) {
+            CombatWorld.c(-2483, 95);
             in.field_k = -1;
-            hd.field_i = hd.field_i - 1;
+            BattleTerrain.field_i = BattleTerrain.field_i - 1;
           }
           if (!param0) {
             this.field_g = (rm) null;
@@ -3376,12 +3376,12 @@ final class ji {
             (decompiledFrameRemainder0 = !(ao.field_C < 0)) &&
             (decompiledFrameRemainder0 = (~ao.field_C != ~un.field_i)) &&
             (decompiledFrameRemainder0 = (ao.field_C != in.field_k))) {
-            ee.c(-2483, 97);
+            CombatWorld.c(-2483, 97);
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
             if (ao.field_C != -1) {
-              ee.c(-2483, 0);
+              CombatWorld.c(-2483, 0);
             }
             if (~ao.field_C == ~in.field_k) {
               in.field_k = -1;
@@ -3409,13 +3409,13 @@ final class ji {
         String stackIn_40_0 = null;
         u stackIn_179_0 = null;
         int stackIn_233_0 = 0;
-        wk[] stackIn_275_0 = null;
+        RgbSprite[] stackIn_275_0 = null;
         int stackIn_279_0 = 0;
-        wk stackIn_351_0 = null;
+        RgbSprite stackIn_351_0 = null;
         int stackIn_351_1 = 0;
         int stackIn_351_2 = 0;
         int stackIn_352_3 = 0;
-        wk stackIn_355_0 = null;
+        RgbSprite stackIn_355_0 = null;
         int stackIn_355_1 = 0;
         int stackIn_355_2 = 0;
         int stackIn_356_3;
@@ -3442,14 +3442,14 @@ final class ji {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        wk[] var20 = null;
+        RgbSprite[] var20 = null;
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
-        wk[] var20Lifetime1;
-        wk[] var20Lifetime2;
-        wk[] var20Lifetime3;
+        RgbSprite[] var20Lifetime1;
+        RgbSprite[] var20Lifetime2;
+        RgbSprite[] var20Lifetime3;
         int var9Lifetime1;
         int var15Lifetime1;
         int var16Lifetime1;
@@ -3457,7 +3457,7 @@ final class ji {
         int var22Lifetime1;
         int var22Lifetime2;
         int var23Lifetime1;
-        var24 = SteelSentinels.field_G;
+        var24 = SteelSentinels.obfuscationControl;
         try {
           var4_int = uc.field_e[this.field_c][param0];
           var5 = 0;
@@ -3469,7 +3469,7 @@ final class ji {
             var6 = stackIn_14_0;
           }
           if (var4_int == 28 &&
-            gi.h((byte) -72) &&
+            PacketBuffer.h((byte) -72) &&
             0 != (32 & a.field_c)) {
             var5 = 13548069;
           }
@@ -3516,20 +3516,20 @@ final class ji {
           }
           boolean decompiledFrameRemainder0 = true;
           if (var4_int == 8) {
-            if (gh.field_Jb != 0 &&
+            if (SceneWidget.field_Jb != 0 &&
               vb.field_g != 0 &&
-              gh.field_Jb != 12 &&
+              SceneWidget.field_Jb != 12 &&
               vb.field_g != 12) {
-              if (gh.field_Jb == 1 ||
+              if (SceneWidget.field_Jb == 1 ||
                 vb.field_g == 1) {
                 var7 = un.field_d;
                 decompiledFrameRemainder0 = (var24 != 0);
               }
-              if ((decompiledFrameRemainder0) && (gh.field_Jb == 2 ||
+              if ((decompiledFrameRemainder0) && (SceneWidget.field_Jb == 2 ||
                 2 == vb.field_g ||
-                3 == gh.field_Jb ||
+                3 == SceneWidget.field_Jb ||
                 vb.field_g == 3 ||
-                4 == gh.field_Jb ||
+                4 == SceneWidget.field_Jb ||
                 4 == vb.field_g)) {
                 var7 = fb.field_k;
                 if (var24 != 0) {
@@ -3571,15 +3571,15 @@ final class ji {
                 }
               }
               if (decompiledFrameRemainder1) {
-                var12_ref = gh.field_jb[5];
+                var12_ref = SceneWidget.field_jb[5];
               }
             } else {
               if (this.b(false, var10_int, var11)) {
                 var14_ref_String = "8fdfff";
-                var12_ref = gh.field_jb[6];
+                var12_ref = SceneWidget.field_jb[6];
               } else {
                 var14_ref_String = "194761";
-                var12_ref = gh.field_jb[4];
+                var12_ref = SceneWidget.field_jb[4];
               }
             }
             if (param1) {
@@ -3621,7 +3621,7 @@ final class ji {
             }
             var10 = stackIn_179_0;
           }
-          var12 = ((mi) ((Object) var10)).c(var7);
+          var12 = ((BitmapFont) ((Object) var10)).c(var7);
           var13 = this.g(127, param0);
           var14 = this.a(param0, (byte) 109);
           var15Lifetime1 = this.b(param0, (byte) 27);
@@ -3741,7 +3741,7 @@ final class ji {
               var24 != 0) {
               if (var4_int == 20 ||
                 21 == var4_int) {
-                ((mi) ((Object) var10)).b(var7, 14 + var13, var17Lifetime1 / 5 + var15Lifetime1 + ((mi) ((Object) var10)).field_G, 1146810, -1);
+                ((BitmapFont) ((Object) var10)).b(var7, 14 + var13, var17Lifetime1 / 5 + var15Lifetime1 + ((BitmapFont) ((Object) var10)).field_G, 1146810, -1);
               }
               if (var4_int != 20 &&
                 21 != var4_int || var24 != 0) {
@@ -3750,16 +3750,16 @@ final class ji {
                   if (var6 != 0) {
                     var21 = 11417637;
                   }
-                  ((mi) ((Object) var10)).a(var7, var13, var15Lifetime1, var18, var17Lifetime1, var21, -1, 1, 1, 0);
+                  ((BitmapFont) ((Object) var10)).a(var7, var13, var15Lifetime1, var18, var17Lifetime1, var21, -1, 1, 1, 0);
                 }
                 if (!(var12 > (-var13 + var14)) &&
                   var11 == 0 || var24 != 0) {
                   if (var6 != 0) {
                     var21 = 11417637;
                   }
-                  ((mi) ((Object) var10)).b(var7, var16Lifetime1, ((mi) ((Object) var10)).field_G + (var15Lifetime1 + var17Lifetime1 / 5), var21, -1);
+                  ((BitmapFont) ((Object) var10)).b(var7, var16Lifetime1, ((BitmapFont) ((Object) var10)).field_G + (var15Lifetime1 + var17Lifetime1 / 5), var21, -1);
                   if (var9Lifetime1 != -1) {
-                    pb.a(var13 + 2, 0, var14 - 2, 480);
+                    SoftwareRaster.a(var13 + 2, 0, var14 - 2, 480);
                     stackIn_351_0 = pd.field_Z[var9Lifetime1];
                     stackIn_351_1 = var16Lifetime1 + var12;
                     stackIn_351_2 = var15Lifetime1 + 2;
@@ -3768,7 +3768,7 @@ final class ji {
                     } else {
                       stackIn_352_3 = 192;
                     }
-                    ((wk) (Object) stackIn_351_0).a(stackIn_351_1, stackIn_351_2, stackIn_352_3);
+                    ((RgbSprite) (Object) stackIn_351_0).a(stackIn_351_1, stackIn_351_2, stackIn_352_3);
                     stackIn_355_0 = pd.field_Z[var9Lifetime1];
                     stackIn_355_1 = -28 + var16Lifetime1;
                     stackIn_355_2 = var15Lifetime1 + 2;
@@ -3777,8 +3777,8 @@ final class ji {
                     } else {
                       stackIn_356_3 = 150;
                     }
-                    ((wk) (Object) stackIn_355_0).a(stackIn_355_1, stackIn_355_2, stackIn_356_3);
-                    pb.c();
+                    ((RgbSprite) (Object) stackIn_355_0).a(stackIn_355_1, stackIn_355_2, stackIn_356_3);
+                    SoftwareRaster.c();
                   }
                 }}}}
           if (var4_int != 20 &&
@@ -3792,7 +3792,7 @@ final class ji {
             stackIn_367_0 = lb.field_ac * 170 / 256;
           }
           var22Lifetime2 = stackIn_367_0;
-          pb.a(-1 + (var22Lifetime2 + var16Lifetime1), 3 + var15Lifetime1, 170 + (-var22Lifetime2 + 1), -6 + var17Lifetime1, 0);
+          SoftwareRaster.a(-1 + (var22Lifetime2 + var16Lifetime1), 3 + var15Lifetime1, 170 + (-var22Lifetime2 + 1), -6 + var17Lifetime1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3836,7 +3836,7 @@ final class ji {
         String var13Lifetime3;
         String var13Lifetime4;
         String var13Lifetime5;
-        var18 = SteelSentinels.field_G;
+        var18 = SteelSentinels.obfuscationControl;
         try {
           var10 = pl.field_U;
           var11 = 1021128;
@@ -3853,7 +3853,7 @@ final class ji {
             while (!(var15 >= oe.field_h.length - 1)) {
               var16 = oe.field_h[var15];
               var17 = oe.field_h[var15 + 1];
-              pb.a(var16 + 3, var13_int, var17 - (var16 + 5), var14, 12105);
+              SoftwareRaster.a(var16 + 3, var13_int, var17 - (var16 + 5), var14, 12105);
               var15++;
               if (var18 == 0) {
                 continue;
@@ -3862,20 +3862,20 @@ final class ji {
             }
           }
           var13 = param0;
-          ((mi) ((Object) var10)).b(var13, 5 + oe.field_h[0], param2, var11, -1);
+          ((BitmapFont) ((Object) var10)).b(var13, 5 + oe.field_h[0], param2, var11, -1);
           var13Lifetime1 = Integer.toString(param5);
-          ((mi) ((Object) var10)).c(var13Lifetime1, -1 + oe.field_h[2] - 5, param2, var11, -1);
+          ((BitmapFont) ((Object) var10)).c(var13Lifetime1, -1 + oe.field_h[2] - 5, param2, var11, -1);
           var13Lifetime2 = Integer.toString(var12);
-          ((mi) ((Object) var10)).c(var13Lifetime2, oe.field_h[3] - 5 - 1, param2, var11, -1);
+          ((BitmapFont) ((Object) var10)).c(var13Lifetime2, oe.field_h[3] - 5 - 1, param2, var11, -1);
           var13Lifetime3 = param7 + "%";
-          ((mi) ((Object) var10)).c(var13Lifetime3, -6 + oe.field_h[4], param2, var11, -1);
+          ((BitmapFont) ((Object) var10)).c(var13Lifetime3, -6 + oe.field_h[4], param2, var11, -1);
           var13Lifetime4 = param6 + "%";
           if (param8 > -125) {
             this.a(-34, false, -5);
           }
-          ((mi) ((Object) var10)).c(var13Lifetime4, -6 + oe.field_h[5], param2, var11, -1);
+          ((BitmapFont) ((Object) var10)).c(var13Lifetime4, -6 + oe.field_h[5], param2, var11, -1);
           var13Lifetime5 = param4 + "%";
-          ((mi) ((Object) var10)).c(var13Lifetime5, oe.field_h[6] - 5 - 1, param2, var11, -1);
+          ((BitmapFont) ((Object) var10)).c(var13Lifetime5, oe.field_h[6] - 5 - 1, param2, var11, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3947,7 +3947,7 @@ final class ji {
         int var15Lifetime1;
         int var7Lifetime2;
         int var8Lifetime1Lifetime1;
-        var16 = SteelSentinels.field_G;
+        var16 = SteelSentinels.obfuscationControl;
         try {
           if (param0 < 49) {
             return;
@@ -3969,7 +3969,7 @@ final class ji {
           }
           boolean decompiledFrameRemainder0 = true;
           if (!qi.field_d.field_q) {
-            var6 = lg.field_a;
+            var6 = GameApplet.field_a;
             decompiledFrameRemainder0 = (var16 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -3978,30 +3978,30 @@ final class ji {
               var8 = 1021128;
               var9 = qi.field_d.field_x[var4];
               var10 = qi.field_d.field_z[var4];
-              pb.h(48, 88, 544, 286, 1130327);
+              SoftwareRaster.h(48, 88, 544, 286, 1130327);
               var11_int = 1;
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (!(var11_int < nm.field_v.length)))) {
                 stackIn_34_0 = nm.field_v[var11_int];
                 stackIn_34_1 = 88;
                 if (var16 == 0) {
-                  pb.d(stackIn_34_0, stackIn_34_1, 265, 1130327);
+                  SoftwareRaster.d(stackIn_34_0, stackIn_34_1, 265, 1130327);
                   var11_int++;
                   continue;
                 }
                 break;
               }
               if (decompiledNaturalLoopExit0) {
-                stackIn_34_0 = (21 + ((mi) ((Object) var2)).field_G) / 2;
+                stackIn_34_0 = (21 + ((BitmapFont) ((Object) var2)).field_G) / 2;
                 stackIn_34_1 = 88;
               }
               var7 = stackIn_34_0 + stackIn_34_1;
-              ((mi) ((Object) var2)).b(k.field_Ib[0], nm.field_v[0] + 5, var7, var8, -1);
-              ((mi) ((Object) var2)).b(k.field_Ib[1], 5 + nm.field_v[1], var7, var8, -1);
-              ((mi) ((Object) var2)).c(k.field_Ib[2], -1 + nm.field_v[3] - 5, var7, var8, -1);
-              ((mi) ((Object) var2)).c(k.field_Ib[3], -5 + nm.field_v[4] - 1, var7, var8, -1);
-              pb.g(48, 109, 544, 1130327);
-              pb.g(48, 353, 544, 1130327);
+              ((BitmapFont) ((Object) var2)).b(k.field_Ib[0], nm.field_v[0] + 5, var7, var8, -1);
+              ((BitmapFont) ((Object) var2)).b(k.field_Ib[1], 5 + nm.field_v[1], var7, var8, -1);
+              ((BitmapFont) ((Object) var2)).c(k.field_Ib[2], -1 + nm.field_v[3] - 5, var7, var8, -1);
+              ((BitmapFont) ((Object) var2)).c(k.field_Ib[3], -5 + nm.field_v[4] - 1, var7, var8, -1);
+              SoftwareRaster.g(48, 109, 544, 1130327);
+              SoftwareRaster.g(48, 353, 544, 1130327);
               var7Lifetime2 = 126;
               var6 = im.field_d;
               var11_intLifetime1 = 0;
@@ -4066,7 +4066,7 @@ final class ji {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        wk[] var7 = null;
+        RgbSprite[] var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -4075,7 +4075,7 @@ final class ji {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        var15 = SteelSentinels.field_G;
+        var15 = SteelSentinels.obfuscationControl;
         try {
           var4_int = uc.field_e[this.field_c][param1];
           if (-1 == var4_int) {
@@ -4104,25 +4104,25 @@ final class ji {
           boolean decompiledFrameRemainder0 = true;
           var12 = ti.field_A[var4_int];
           if (8 == var4_int) {
-            if (gh.field_Jb == 0 ||
+            if (SceneWidget.field_Jb == 0 ||
               vb.field_g == 0 ||
-              gh.field_Jb == 12 ||
+              SceneWidget.field_Jb == 12 ||
               12 == vb.field_g) {
               var12 = ti.field_A[7];
               decompiledFrameRemainder0 = (var15 != 0);
             }
             if (decompiledFrameRemainder0) {
-              boolean decompiledSharedTail0 = (gh.field_Jb != 1 &&
+              boolean decompiledSharedTail0 = (SceneWidget.field_Jb != 1 &&
                 vb.field_g != 1);
               if (!decompiledSharedTail0) {
                 var12 = un.field_d;
                 decompiledSharedTail0 = (var15 != 0);
               }
-              if ((decompiledSharedTail0) && (gh.field_Jb == 2 ||
+              if ((decompiledSharedTail0) && (SceneWidget.field_Jb == 2 ||
                 vb.field_g == 2 ||
-                gh.field_Jb == 3 ||
+                SceneWidget.field_Jb == 3 ||
                 vb.field_g == 3 ||
-                4 == gh.field_Jb ||
+                4 == SceneWidget.field_Jb ||
                 vb.field_g == 4)) {
                 var12 = fb.field_k;
               }
@@ -4180,7 +4180,7 @@ final class ji {
 
     private final void n(int param0) {
         String stackIn_24_0 = null;
-        wk[] stackIn_34_0 = null;
+        RgbSprite[] stackIn_34_0 = null;
         int stackIn_35_1 = 0;
         int stackIn_39_0 = 0;
         int stackIn_55_0 = 0;
@@ -4216,7 +4216,7 @@ final class ji {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        wk var17_ref_wk = null;
+        RgbSprite var17_ref_wk = null;
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
@@ -4228,10 +4228,10 @@ final class ji {
         int var24 = 0;
         String var24_ref_String = null;
         int var25_int = 0;
-        wk[] var25 = null;
+        RgbSprite[] var25 = null;
         int var26 = 0;
         int var27 = 0;
-        wk var28 = null;
+        RgbSprite var28 = null;
         int var29 = 0;
         int var2_intLifetime1;
         int var5Lifetime1;
@@ -4243,7 +4243,7 @@ final class ji {
         int var19Lifetime1;
         int var20Lifetime1;
         int var24Lifetime1;
-        var29 = SteelSentinels.field_G;
+        var29 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameRemainder1 = true;
           var2_int = this.b(0, (byte) 29);
@@ -4254,23 +4254,23 @@ final class ji {
           var3 -= 8;
           var4 += 8;
           var5 += 8;
-          pb.h(var3, var2_int, -var3 + var4, -var2_int + var5, 6316128);
+          SoftwareRaster.h(var3, var2_int, -var3 + var4, -var2_int + var5, 6316128);
           var6 = this.a(0, (byte) 108) + 4;
           var7 = -var6 + (-4 + this.g(127, 1));
           var8 = this.b(0, (byte) -125);
           var9 = this.c(25, 0);
           var10 = 1064792;
-          var11 = gh.field_jb[0];
+          var11 = SceneWidget.field_jb[0];
           if ((ol.field_Ub >= fm.field_f[ge.field_j]) &&
             (decompiledFrameRemainder1 = !(!this.b(false, ge.field_j, ol.field_Ub)))) {
-            var11 = gh.field_jb[3];
+            var11 = SceneWidget.field_jb[3];
             decompiledFrameRemainder1 = (var29 != 0);
           }
           if (decompiledFrameRemainder1) {
             boolean decompiledFrameRemainder0 = true;
             var12_int = ge.field_j;
             if (0 == var12_int) {
-              var11 = gh.field_jb[1];
+              var11 = SceneWidget.field_jb[1];
               decompiledFrameRemainder1 = (var29 != 0);
             } else {
               if (var12_int != 1) {
@@ -4280,17 +4280,17 @@ final class ji {
             }
             if ((decompiledFrameRemainder1) &&
               (decompiledFrameRemainder0)) {
-              var11 = db.a(gh.field_jb[2], -45, new String[]{qa.a(param0 ^ -21346, jh.field_a[ol.field_Ub])});
+              var11 = db.a(SceneWidget.field_jb[2], -45, new String[]{qa.a(param0 ^ -21346, jh.field_a[ol.field_Ub])});
               decompiledFrameRemainder1 = (var29 != 0);
             }
             if (decompiledFrameRemainder1) {
-              var11 = db.a(gh.field_jb[2], -84, new String[]{qa.a(param0 ^ -21346, jh.field_a[10 + ol.field_Ub])});
+              var11 = db.a(SceneWidget.field_jb[2], -84, new String[]{qa.a(param0 ^ -21346, jh.field_a[10 + ol.field_Ub])});
             }
           }
           if (ge.field_j != 0) {
             stackIn_24_0 = v.field_f;
           } else {
-            stackIn_24_0 = ul.field_h;
+            stackIn_24_0 = NodeDeque.field_h;
           }
           var12 = db.a(stackIn_24_0, -88, new String[]{Integer.toString(ol.field_Ub + 1), var11});
           pl.field_U.a(var12, var7 / 2 + var6, var8 + 16, 1021128, -1);
@@ -4319,14 +4319,14 @@ final class ji {
           var3 += 8;
           var2_intLifetime1 = 6 + (var8 + var9);
           var4 -= 8;
-          pb.h(var6, var8, var7, var9, var10);
+          SoftwareRaster.h(var6, var8, var7, var9, var10);
           var5Lifetime1 = -8 + this.b(2, (byte) -109);
-          pb.h(var3, var2_intLifetime1, var4 - var3, -var2_intLifetime1 + var5Lifetime1, 2061990);
+          SoftwareRaster.h(var3, var2_intLifetime1, var4 - var3, -var2_intLifetime1 + var5Lifetime1, 2061990);
           var13Lifetime1 = 100;
           var14Lifetime1 = 110;
           var15Lifetime1 = var2_intLifetime1 + 20;
           var16Lifetime1 = 10 + var3;
-          pb.h(var16Lifetime1, var15Lifetime1, var13Lifetime1, var14Lifetime1, var10);
+          SoftwareRaster.h(var16Lifetime1, var15Lifetime1, var13Lifetime1, var14Lifetime1, var10);
           var17 = var13Lifetime1 + var16Lifetime1 + 10;
           if (param0 != 21345) {
             return;
@@ -4335,7 +4335,7 @@ final class ji {
           var19Lifetime1 = var4 - 10 - var17;
           var20Lifetime1 = -var18Lifetime1 + var5Lifetime1;
           var21 = 0;
-          var22 = n.field_z;
+          var22 = FunOrbClient.field_z;
           var23 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var22.length <= var23))) {
@@ -4370,7 +4370,7 @@ final class ji {
             if (var23 == 10) {
               stackIn_70_0 = uj.field_l;
             } else {
-              stackIn_70_0 = db.a(lg.field_b, -26, new String[]{Integer.toString(var23), um.field_cb[var23 - 1]});
+              stackIn_70_0 = db.a(GameApplet.field_b, -26, new String[]{Integer.toString(var23), um.field_cb[var23 - 1]});
             }
             var24_ref_String = stackIn_70_0;
             var22_ref = var22_ref + "<br><br><col=ff0000>" + var24_ref_String + "</col>";
@@ -4395,7 +4395,7 @@ final class ji {
           }
           ((fh) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_78_2, stackIn_78_3, stackIn_78_4, stackIn_78_5, stackIn_78_6, stackIn_78_7, stackIn_78_8, stackIn_78_9, stackIn_79_10);
           var25 = bg.field_C;
-          if (0 == nk.field_J) {
+          if (0 == ArticulatedPart.field_J) {
             var25 = pd.field_Q;
           }
           var26 = 8;
@@ -4426,69 +4426,69 @@ final class ji {
         int var6 = 0;
         int var3_intLifetime1;
         int var4Lifetime1;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           var3_int = this.b(-117, param0);
           if (0 <= var3_int) {
             stackIn_3_0 = 448;
             return stackIn_3_0;
           }
-          L0: {
-            L1: {
-              L2: {
-                L3: {
-                  L4: {
-                    L5: {
+          regionExit1: {
+            regionExit2: {
+              regionExit3: {
+                regionExit4: {
+                  regionExit5: {
+                    regionExit6: {
                       boolean decompiledFrameRemainder0 = true;
                       var3_intLifetime1 = 0;
                       var5 = this.field_c;
                       if (var5 != 5 && (var5 != 6 ||
                         var6 != 0)) {
                         if (var5 == 8) {
-                          break L5;
+                          break regionExit6;
                         }
                         if (7 == var5) {
-                          break L4;
+                          break regionExit5;
                         }
                         if (14 == var5 &&
                           var6 == 0) {
-                          break L4;
+                          break regionExit5;
                         }
                         if (var5 == 13) {
-                          break L4;
+                          break regionExit5;
                         }
                         if (var5 == 0) {
-                          break L3;
+                          break regionExit4;
                         }
                         if (var5 == 17) {
-                          break L2;
+                          break regionExit3;
                         }
                         if (19 == var5 &&
                           var6 == 0) {
-                          break L1;
+                          break regionExit2;
                         }
                         if (var5 == 20) {
                           var5 = uc.field_e[this.field_c][param0];
                           if (((var5 != 25 ||
                             var6 != 0) && (var5 != 26 ||
                             var6 != 0)) && (var5 != 39)) {
-                            break L0;
+                            break regionExit1;
                           }
                           if (var5 == 25 &&
                             var6 == 0 || var5 == 26 &&
                             var6 == 0 || var6 != 0) {
                             var3_intLifetime1 = 95;
                             if (var6 == 0) {
-                              break L0;
+                              break regionExit1;
                             }
                           }
                           var3_intLifetime1 = 376;
                           if (var6 == 0) {
-                            break L0;
+                            break regionExit1;
                           }
                         } else {
                           if (var5 != 22) {
-                            break L0;
+                            break regionExit1;
                           }
                           decompiledFrameRemainder0 = (var6 == 0);
                         }
@@ -4498,49 +4498,49 @@ final class ji {
                         }
                       }
                       if (ni.b(99)) {
-                        break L0;
+                        break regionExit1;
                       }
                       var3_intLifetime1 = 379;
                       if (var6 == 0) {
-                        break L0;
+                        break regionExit1;
                       }
                     }
                     if (ni.b(92)) {
-                      break L0;
+                      break regionExit1;
                     }
                     var3_intLifetime1 = 448;
                     if (var6 == 0) {
-                      break L0;
+                      break regionExit1;
                     }
                   }
                   var3_intLifetime1 = 448;
                   if (var6 == 0) {
-                    break L0;
+                    break regionExit1;
                   }
                 }
                 var3_intLifetime1 = uc.field_f[this.field_c] * param0 + 175;
-                if (!nk.f((byte) -15)) {
+                if (!ArticulatedPart.f((byte) -15)) {
                   var3_intLifetime1 = var3_intLifetime1 + 4 * param0;
                 }
                 var4 = uc.field_e[this.field_c][param0];
                 if (34 != var4) {
-                  break L0;
+                  break regionExit1;
                 }
                 var3_intLifetime1 = 350;
                 if (var6 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               }
               var3_intLifetime1 = 130;
               if (param0 <= 0) {
-                break L0;
+                break regionExit1;
               }
               if (param0 >= uc.field_e[this.field_c].length - 4) {
-                break L0;
+                break regionExit1;
               }
               var3_intLifetime1 = var3_intLifetime1 + 30 * param0;
               if (var6 == 0) {
-                break L0;
+                break regionExit1;
               }
             }
             stackIn_72_0 = 29 * (param0 % 10) + 111;
@@ -4591,7 +4591,7 @@ final class ji {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
@@ -4686,12 +4686,12 @@ final class ji {
           if ((decompiledFrameRemainder0) &&
             (decompiledFrameCompleted0)) {
             var2_int = 0;
-            L13: while (true) {
+            scanLoop1: while (true) {
               if (uc.field_e[this.field_c].length > var2_int) {
                 stackIn_26_0 = -1;
                 stackIn_26_1 = uc.field_e[this.field_c][var2_int];
                 if (var5 != 0) {
-                  break L13;
+                  break scanLoop1;
                 }
                 if (stackIn_26_0 == stackIn_26_1) {
                   var2_int++;
@@ -4772,7 +4772,7 @@ final class ji {
         int var3 = 0;
         int var4 = 0;
         int var2_intLifetime1;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           if (7 == this.field_c) {
             stackIn_3_0 = -1;
@@ -4866,12 +4866,12 @@ final class ji {
             return stackIn_128_0;
           }
           var2_intLifetime1 = uc.field_e[this.field_c].length - 1;
-          L12: while (true) {
+          scanLoop1: while (true) {
             if (var2_intLifetime1 >= 0) {
               stackIn_26_0 = 0;
               stackIn_26_1 = ~uc.field_e[this.field_c][var2_intLifetime1];
               if (var4 != 0) {
-                break L12;
+                break scanLoop1;
               }
               if (stackIn_26_0 == stackIn_26_1) {
                 var2_intLifetime1--;
@@ -4914,11 +4914,11 @@ final class ji {
         int var11 = 0;
         int var12 = 0;
         int var7_intLifetime1;
-        var12 = SteelSentinels.field_G;
+        var12 = SteelSentinels.obfuscationControl;
         try {
           var2 = pl.field_U;
-          pb.h(40, 80, 560, 330, 3487029);
-          pb.h(41, 81, 558, 328, 3487029);
+          SoftwareRaster.h(40, 80, 560, 330, 3487029);
+          SoftwareRaster.h(41, 81, 558, 328, 3487029);
           if (ni.b(25)) {
             this.e(1021128);
             return;
@@ -4932,10 +4932,10 @@ final class ji {
           boolean decompiledFrameCompleted0 = true;
           var3 = 1021128;
           if (oe.field_h[5] == 0) {
-            var5_int = ((mi) ((Object) var2)).c("10000%");
+            var5_int = ((BitmapFont) ((Object) var2)).c("10000%");
             var6_int = 5;
             while (var6_int > 0) {
-              var7_int = ((mi) ((Object) var2)).c(pe.field_h[var6_int]) + 8;
+              var7_int = ((BitmapFont) ((Object) var2)).c(pe.field_h[var6_int]) + 8;
               stackIn_19_0 = Math.max(var7_int, var5_int);
               if (var12 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -4960,32 +4960,32 @@ final class ji {
               var5 = wb.field_d;
               var6 = qi.field_j.field_z[on.field_j];
               var7 = qi.field_j.field_x[on.field_j];
-              pb.h(48, 88, 544, 286, 1130327);
-              pb.g(48, 109, 544, 1130327);
+              SoftwareRaster.h(48, 88, 544, 286, 1130327);
+              SoftwareRaster.g(48, 109, 544, 1130327);
               var8 = 1;
               do {
                 if (!(oe.field_h.length - 1 > var8)) {
-                  ((mi) ((Object) var2)).b(pe.field_h[0], 2 + oe.field_h[0], var4, var3, -1);
-                  ((mi) ((Object) var2)).c(pe.field_h[1], -2 + (oe.field_h[2] - 1), var4, var3, -1);
-                  ((mi) ((Object) var2)).c(pe.field_h[2], -1 + oe.field_h[3] - 2, var4, var3, -1);
-                  ((mi) ((Object) var2)).c(pe.field_h[3], -1 + (-2 + oe.field_h[4]), var4, var3, -1);
-                  ((mi) ((Object) var2)).c(pe.field_h[4], -2 + (oe.field_h[5] - 1), var4, var3, -1);
-                  ((mi) ((Object) var2)).c(pe.field_h[5], -1 + (-2 + oe.field_h[6]), var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).b(pe.field_h[0], 2 + oe.field_h[0], var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).c(pe.field_h[1], -2 + (oe.field_h[2] - 1), var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).c(pe.field_h[2], -1 + oe.field_h[3] - 2, var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).c(pe.field_h[3], -1 + (-2 + oe.field_h[4]), var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).c(pe.field_h[4], -2 + (oe.field_h[5] - 1), var4, var3, -1);
+                  ((BitmapFont) ((Object) var2)).c(pe.field_h[5], -1 + (-2 + oe.field_h[6]), var4, var3, -1);
                   var4 = 126;
                   var8 = 0;
                   break;
                 }
-                pb.d(oe.field_h[var8], 88, 286, 1130327);
+                SoftwareRaster.d(oe.field_h[var8], 88, 286, 1130327);
                 var8++;
               } while (var12 == 0);
               var9 = 0;
-              L11: while (true) {
+              scanLoop1: while (true) {
                 if (10 > var9) {
                   if (var12 == 0) {
                     if (var6[var9] != null) {
                       var3 = 1021128;
                       var10 = var6[var9];
-                      var11 = wl.a(50, var10) ? 1 : 0;
+                      var11 = Projectile.a(50, var10) ? 1 : 0;
                       var5 = "";
                       this.a(var10, var9, var4, var11 != 0, var7[3 + var9 * 4], var7[var9 * 4], var7[4 * var9 + 2], var7[4 * var9 + 1], -128);
                       if (var11 != 0) {
@@ -4999,7 +4999,7 @@ final class ji {
                   }
                 } else {
                   if (var8 != 0) {
-                    break L11;
+                    break scanLoop1;
                   }
                   var4 = 369;
                   var3 = 1021128;
@@ -5008,14 +5008,14 @@ final class ji {
                 break;
               }
               if (var12 != 0) {
-                var5 = lg.field_a;
+                var5 = GameApplet.field_a;
               }
             }
           } else {
-            var5 = lg.field_a;
+            var5 = GameApplet.field_a;
           }
           var4 = 231;
-          ((mi) ((Object) var2)).a(var5, 320, var4, 1021128, -1);
+          ((BitmapFont) ((Object) var2)).a(var5, 320, var4, 1021128, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5048,7 +5048,7 @@ final class ji {
         int var4 = 0;
         int var5 = 0;
         int var4Lifetime1;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           var3_int = this.b(-72, param0);
           if (0 <= var3_int) {
@@ -5152,7 +5152,7 @@ final class ji {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 50) {
-            ji.a(-98, (CharSequence) null);
+            SentinelDesigner.a(-98, (CharSequence) null);
           }
           stackIn_4_0 = sj.field_y.a(param1, -742, "");
           return stackIn_4_0;
@@ -5201,7 +5201,7 @@ final class ji {
         try {
           var2 = pl.field_U;
           var3 = lb.field_hc;
-          ((mi) ((Object) var2)).a(var3, 320, 240, param0, -1);
+          ((BitmapFont) ((Object) var2)).a(var3, 320, 240, param0, -1);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ji.CA(" + param0 + ')');
         }
@@ -5225,10 +5225,10 @@ final class ji {
         int var9_int = 0;
         int[] var9 = null;
         int var10 = 0;
-        nk var11_ref_nk = null;
+        ArticulatedPart var11_ref_nk = null;
         int var11 = 0;
         int var12 = 0;
-        var12 = SteelSentinels.field_G;
+        var12 = SteelSentinels.obfuscationControl;
         try {
           if (param0 != -29628) {
             field_f = (String[]) null;
@@ -5243,11 +5243,11 @@ final class ji {
                 var2_int = 0;
               }
             }
-            L5: {
-              L6: {
-                L7: {
-                  L8: {
-                    L9: {
+            regionExit1: {
+              regionExit2: {
+                regionExit3: {
+                  regionExit4: {
+                    regionExit5: {
                       boolean decompiledFrameRemainder13 = true;
                       boolean decompiledFrameRemainder12 = true;
                       var3 = 0;
@@ -5261,18 +5261,18 @@ final class ji {
                         var12 != 0))) {
                         switch (var5) {
                           case 1:
-                            break L9;
+                            break regionExit5;
                           case 3:
-                            break L8;
+                            break regionExit4;
                           case 5:
-                            break L7;
+                            break regionExit3;
                           case 9:
-                            break L6;
+                            break regionExit2;
                           default:
-                            break L5;
+                            break regionExit1;
                           case 13:
                             if (var12 == 0) {
-                              break L6;
+                              break regionExit2;
                             }
                             break;
                         }
@@ -5283,7 +5283,7 @@ final class ji {
                         var3 = 0;
                         var4 = 3;
                         if (var12 == 0) {
-                          break L5;
+                          break regionExit1;
                         }
                       }
                       if (decompiledFrameRemainder13) {
@@ -5291,35 +5291,35 @@ final class ji {
                         var2_int = 2;
                         var3 = 3;
                         if (var12 == 0) {
-                          break L5;
+                          break regionExit1;
                         }
                       }
                       var3 = 6;
                       var4 = 12;
                       var2_int = 4;
                       if (var12 == 0) {
-                        break L5;
+                        break regionExit1;
                       }
                     }
                     var4 = 3;
                     var3 = 0;
                     var2_int = 0;
                     if (var12 == 0) {
-                      break L5;
+                      break regionExit1;
                     }
                   }
                   var4 = 6;
                   var3 = 3;
                   var2_int = 2;
                   if (var12 == 0) {
-                    break L5;
+                    break regionExit1;
                   }
                 }
                 var3 = 6;
                 var2_int = 4;
                 var4 = 12;
                 if (var12 == 0) {
-                  break L5;
+                  break regionExit1;
                 }
               }
               var4 = 12;
@@ -5332,7 +5332,7 @@ final class ji {
               fe.field_D[0] = vn.a(fe.field_D[0], 16777216);
             }
             if (va.field_d == 13) {
-              jc.field_f = 2;
+              NodeIterator.field_f = 2;
               li.field_v = 1000;
               fm.field_f[0] = 10;
               dm.field_a = 8;
@@ -5342,10 +5342,10 @@ final class ji {
             }
             boolean decompiledFrameCompleted2 = true;
             boolean decompiledFrameCompleted0 = true;
-            L18: {
+            regionExit6: {
               boolean decompiledFrameCompleted1 = true;
-              L19: {
-                L20: {
+              regionExit7: {
+                regionExit8: {
                   boolean decompiledFrameRemainder11 = true;
                   boolean decompiledFrameRemainder10 = true;
                   boolean decompiledFrameRemainder9 = true;
@@ -5362,7 +5362,7 @@ final class ji {
                       stackIn_121_0 = ~var4;
                       stackIn_121_1 = ~var5;
                       if (stackIn_121_0 < stackIn_121_1) {
-                        var6 = n.field_z[var5];
+                        var6 = FunOrbClient.field_z[var5];
                         rn.field_D[var6 >> 5] = ec.a(rn.field_D[var6 >> 5], ~(1 << ec.a(var6, 31)));
                         var7 = ne.a(var6, (byte) 28);
                         var8 = var7;
@@ -5370,7 +5370,7 @@ final class ji {
                         var9_int = stackIn_385_0;
                         while (var8.length > var9_int) {
                           var10 = var8[var9_int];
-                          var11_ref_nk = ul.a(var10, (byte) 67);
+                          var11_ref_nk = NodeDeque.a(var10, (byte) 67);
                           stackIn_121_0 = -1;
                           stackIn_121_1 = ~(var11_ref_nk.field_Q & 2055);
                           if (stackIn_121_0 != stackIn_121_1) {
@@ -5383,7 +5383,7 @@ final class ji {
                       }
                       break;
                     }
-                    break L18;
+                    break regionExit6;
                   }
                   if (1 != var5) {
                     if ((var5 != 8) &&
@@ -5401,34 +5401,34 @@ final class ji {
                       var12 != 0))) {
                       switch (var5) {
                         case 14:
-                          break L20;
+                          break regionExit8;
                         case 17:
-                          break L19;
+                          break regionExit7;
                         case 24:
                           jg.field_j = true;
                           if (fm.field_f[var2_int] != 10) {
                             fm.field_f[var2_int] = 10;
                             if (var2_int != 0) {
-                              break L18;
+                              break regionExit6;
                             }
-                            if (jc.field_f != 0) {
-                              break L18;
+                            if (NodeIterator.field_f != 0) {
+                              break regionExit6;
                             }
-                            jc.field_f = 1;
+                            NodeIterator.field_f = 1;
                             if (var12 == 0) {
-                              break L18;
+                              break regionExit6;
                             }
                           }
                           fm.field_f[var2_int] = 0;
                           if (0 != var2_int) {
-                            break L18;
+                            break regionExit6;
                           }
-                          if (jc.field_f <= 0) {
-                            break L18;
+                          if (NodeIterator.field_f <= 0) {
+                            break regionExit6;
                           }
-                          jc.field_f = 0;
+                          NodeIterator.field_f = 0;
                           if (var12 == 0) {
-                            break L18;
+                            break regionExit6;
                           }
                         default:
                           return;
@@ -5438,7 +5438,7 @@ final class ji {
                     jg.field_j = true;
                     var5 = var3;
                     while (var5 < var4) {
-                      var6 = n.field_z[var5];
+                      var6 = FunOrbClient.field_z[var5];
                       rn.field_D[var6 >> 5] = vn.a(rn.field_D[var6 >> 5], 1 << ec.a(var6, 31));
                       var7 = ne.a(var6, (byte) 28);
                       var8 = var7;
@@ -5465,7 +5465,7 @@ final class ji {
                     }
                     if ((decompiledFrameCompleted2) &&
                       (var12 == 0)) {
-                      break L18;
+                      break regionExit6;
                     }
                   }
                   if ((decompiledFrameRemainder11) &&
@@ -5500,7 +5500,7 @@ final class ji {
                     }
                     if ((decompiledFrameCompleted1) &&
                       (var12 == 0)) {
-                      break L18;
+                      break regionExit6;
                     }
                   }
                   if ((decompiledFrameRemainder11) &&
@@ -5515,7 +5515,7 @@ final class ji {
                     li.field_v = Math.min(100 + li.field_v, 1000);
                     h.field_G = h.field_G + 100;
                     if (var12 == 0) {
-                      break L18;
+                      break regionExit6;
                     }
                   }
                   if ((decompiledFrameRemainder11) &&
@@ -5529,7 +5529,7 @@ final class ji {
                     li.field_v = Math.max(li.field_v - 100, 0);
                     h.field_G = Math.max(h.field_G - 100, 0);
                     if (var12 == 0) {
-                      break L18;
+                      break regionExit6;
                     }
                   }
                   if ((decompiledFrameRemainder11) &&
@@ -5539,7 +5539,7 @@ final class ji {
                     (decompiledFrameCompleted2) &&
                     (decompiledFrameCompleted1)) {
                     jg.field_j = true;
-                    jc.field_f = 0;
+                    NodeIterator.field_f = 0;
                     var5 = 0;
                     do {
                       if (!(rn.field_D.length > var5)) {
@@ -5563,7 +5563,7 @@ final class ji {
                       var5++;
                     } while (var12 == 0);
                     if (var12 == 0) {
-                      break L18;
+                      break regionExit6;
                     }
                   }
                   if ((decompiledFrameRemainder11) &&
@@ -5573,7 +5573,7 @@ final class ji {
                     (decompiledFrameCompleted1)) {
                     dm.field_a = 0;
                     jg.field_j = true;
-                    jc.field_f = 1;
+                    NodeIterator.field_f = 1;
                     var5 = 0;
                     do {
                       if (!(rn.field_D.length > var5)) {
@@ -5622,14 +5622,14 @@ final class ji {
                       var9_int++;
                     } while (var12 == 0);
                     if (var12 == 0) {
-                      break L18;
+                      break regionExit6;
                     }
                   }
                   if ((decompiledFrameRemainder11) &&
                     (decompiledFrameRemainder10) &&
                     (decompiledFrameCompleted2) &&
                     (decompiledFrameCompleted1)) {
-                    jc.field_f = 2;
+                    NodeIterator.field_f = 2;
                     dm.field_a = 8;
                     jg.field_j = true;
                     var5 = 0;
@@ -5652,7 +5652,7 @@ final class ji {
                     } while (var12 == 0);
                     var5 = 0;
                     while (var5 < 3) {
-                      var6 = n.field_z[var5];
+                      var6 = FunOrbClient.field_z[var5];
                       rn.field_D[var6 >> 5] = vn.a(rn.field_D[var6 >> 5], 1 << ec.a(31, var6));
                       var7 = ne.a(var6, (byte) 28);
                       var8 = var7;
@@ -5684,7 +5684,7 @@ final class ji {
                       fm.field_f[0] = 10;
                       fm.field_f[1] = 0;
                       if (var12 == 0) {
-                        break L18;
+                        break regionExit6;
                       }
                     }
                   }
@@ -5695,12 +5695,12 @@ final class ji {
                     if ((8 & dm.field_a) != 0) {
                       dm.field_a = dm.field_a & -9;
                       if (var12 == 0) {
-                        break L18;
+                        break regionExit6;
                       }
                     }
                     dm.field_a = dm.field_a | 8;
                     if (var12 == 0) {
-                      break L18;
+                      break regionExit6;
                     }
                   }
                   if ((decompiledFrameCompleted2) &&
@@ -5709,7 +5709,7 @@ final class ji {
                     if (ni.b(46)) {
                       km.field_a = "Not logged in.";
                       if (var12 == 0) {
-                        break L18;
+                        break regionExit6;
                       }
                     }
                     jg.field_j = false;
@@ -5735,19 +5735,19 @@ final class ji {
                     } while (var12 == 0);
                     do {
                       if (var5 >= 3) {
-                        mm.field_g.a((byte) 126, jc.field_f);
+                        mm.field_g.a((byte) 126, NodeIterator.field_f);
                         km.field_a = "Data sent.";
                         break;
                       }
                       mm.field_g.a((byte) 115, fm.field_f[var5]);
                       var5++;
                     } while (var12 == 0);
-                    if (ul.field_d >= 2) {
-                      break L18;
+                    if (NodeDeque.field_d >= 2) {
+                      break regionExit6;
                     }
                     km.field_a = km.field_a + " (Expect it to be ignored.)";
                     if (var12 == 0) {
-                      break L18;
+                      break regionExit6;
                     }
                   }
                 }
@@ -5771,11 +5771,11 @@ final class ji {
                   if (var5 == 5 ||
                     var5 == 6 ||
                     var5 == 8) {
-                    var5 = gh.field_Jb;
+                    var5 = SceneWidget.field_Jb;
                   }
                   q.a(0, true, param0 + 29627, var5);
                   if (var12 == 0) {
-                    break L18;
+                    break regionExit6;
                   }
                 }
               }
@@ -5832,7 +5832,7 @@ final class ji {
                 }
                 if ((decompiledFrameRemainder4) &&
                   (decompiledFrameRemainder3)) {
-                  jn.a(true, (byte) 91, 200, kj.field_z);
+                  jn.a(true, (byte) 91, 200, CipherPacketBuffer.field_z);
                   if (var12 == 0) {
                     return;
                   }
@@ -5851,7 +5851,7 @@ final class ji {
               (decompiledFrameCompleted0)) {
               stackIn_385_0 = param0 ^ 31241;
             }
-            ee.c(stackIn_385_0, 95);
+            CombatWorld.c(stackIn_385_0, 95);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5865,7 +5865,7 @@ final class ji {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
           if (ei.field_q == 96) {
             if (this.field_g.field_e > 0) {
@@ -5913,7 +5913,7 @@ final class ji {
             }
           }
           if (param0 != -1) {
-            ji.a(12, (String) null);
+            SentinelDesigner.a(12, (String) null);
           }
           this.field_g.e((byte) 22);
           return;
@@ -5957,7 +5957,7 @@ final class ji {
         fh var5_ref2 = null;
         String var5_ref3 = null;
         int var6_int = 0;
-        gh var6 = null;
+        SceneWidget var6 = null;
         fh var6_ref = null;
         int var7 = 0;
         Object var7_ref = null;
@@ -5974,7 +5974,7 @@ final class ji {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        var19 = SteelSentinels.field_G;
+        var19 = SteelSentinels.obfuscationControl;
         try {
           if (fm.field_f[0] < 3) {
             ti.field_A[0] = qg.field_p;
@@ -6037,15 +6037,15 @@ final class ji {
             }
             var7 = 14419;
             var8 = -var2_int + (450 + this.field_k);
-            pb.a(550, this.field_k + 171, 560, 450 + this.field_k);
+            SoftwareRaster.a(550, this.field_k + 171, 560, 450 + this.field_k);
             ta.a(10, var7, 0, 0, var7, 192, 550, var8, var5_int);
             if (var8 + var5_int < 450 + this.field_k) {
-              pb.c(550, var8 + var5_int, 10, this.field_k + 450 - (var8 + var5_int), var7, 192);
+              SoftwareRaster.c(550, var8 + var5_int, 10, this.field_k + 450 - (var8 + var5_int), var7, 192);
             }
-            pb.c();
+            SoftwareRaster.c();
             fa.field_b.a((-fa.field_b.field_z + 640) / 2, -this.field_h + 15);
             if (!ni.b(param0 + 98) &&
-              ul.field_d >= 2) {
+              NodeDeque.field_d >= 2) {
               var9 = 520;
               var10 = this.field_k + 100;
               var11_int = 100;
@@ -6062,7 +6062,7 @@ final class ji {
               fb.a(var12, var10, "TESTING", var11_int, var9, param0 + 12490);
               if (var13 != 0 &&
                 !hg.field_h) {
-                ee.c(-2483, 97);
+                CombatWorld.c(-2483, 97);
               }
               hg.field_h = var13 != 0;
             }
@@ -6180,7 +6180,7 @@ final class ji {
               this.field_c == 14 &&
               0 == pm.field_U &&
               (!kf.field_s ||
-              !lg.field_l)) {
+              !GameApplet.field_l)) {
               if (14 == this.field_c) {
                 var6 = bl.field_c;
                 var7_ref = kk.field_a;
@@ -6188,49 +6188,49 @@ final class ji {
                   var7_ref = null;
                 }
                 if (null != var6) {
-                  pb.a(0, 50, var6.field_Rb, -var5_int + 430, 0);
+                  SoftwareRaster.a(0, 50, var6.field_Rb, -var5_int + 430, 0);
                   if (var6.field_cb > 50) {
-                    pb.a(var6.field_Rb, 50, var6.field_zb, var6.field_cb - 50, 0);
+                    SoftwareRaster.a(var6.field_Rb, 50, var6.field_zb, var6.field_cb - 50, 0);
                   }
                   if ((var6.field_Lb + var6.field_cb) < (430 - var5_int)) {
-                    pb.a(var6.field_Rb, var6.field_cb + var6.field_Lb, var6.field_zb, 430 + (-var5_int - var6.field_cb) - var6.field_Lb, 0);
+                    SoftwareRaster.a(var6.field_Rb, var6.field_cb + var6.field_Lb, var6.field_zb, 430 + (-var5_int - var6.field_cb) - var6.field_Lb, 0);
                   }
                   boolean decompiledSharedTail0 = (null != var7_ref);
                   if (!decompiledSharedTail0) {
-                    pb.a(var6.field_zb + var6.field_Rb, 50, -var6.field_zb - var6.field_Rb + 640, -var5_int + 430, 0);
+                    SoftwareRaster.a(var6.field_zb + var6.field_Rb, 50, -var6.field_zb - var6.field_Rb + 640, -var5_int + 430, 0);
                     decompiledSharedTail0 = (var19 != 0);
                   }
                   if (decompiledSharedTail0) {
-                    pb.a(var6.field_zb + var6.field_Rb, 50, -var6.field_Rb + (((gh) (var7_ref)).field_Rb - var6.field_zb), 430 - var5_int, 0);
+                    SoftwareRaster.a(var6.field_zb + var6.field_Rb, 50, -var6.field_Rb + (((SceneWidget) (var7_ref)).field_Rb - var6.field_zb), 430 - var5_int, 0);
                   }
                 }
                 if (null != var7_ref) {
                   if (null == var6) {
-                    pb.a(0, 50, ((gh) (var7_ref)).field_Rb, 430 - var5_int, 0);
+                    SoftwareRaster.a(0, 50, ((SceneWidget) (var7_ref)).field_Rb, 430 - var5_int, 0);
                   }
-                  if (((gh) (var7_ref)).field_cb > 50) {
-                    pb.a(((gh) (var7_ref)).field_Rb, 0, ((gh) (var7_ref)).field_zb, ((gh) (var7_ref)).field_cb, 0);
+                  if (((SceneWidget) (var7_ref)).field_cb > 50) {
+                    SoftwareRaster.a(((SceneWidget) (var7_ref)).field_Rb, 0, ((SceneWidget) (var7_ref)).field_zb, ((SceneWidget) (var7_ref)).field_cb, 0);
                   }
-                  if (((gh) (var7_ref)).field_Lb + ((gh) (var7_ref)).field_cb < -var5_int + 430) {
-                    pb.a(((gh) (var7_ref)).field_Rb, ((gh) (var7_ref)).field_Lb + ((gh) (var7_ref)).field_cb, ((gh) (var7_ref)).field_zb, -((gh) (var7_ref)).field_cb + 480 - ((gh) (var7_ref)).field_Lb, 0);
+                  if (((SceneWidget) (var7_ref)).field_Lb + ((SceneWidget) (var7_ref)).field_cb < -var5_int + 430) {
+                    SoftwareRaster.a(((SceneWidget) (var7_ref)).field_Rb, ((SceneWidget) (var7_ref)).field_Lb + ((SceneWidget) (var7_ref)).field_cb, ((SceneWidget) (var7_ref)).field_zb, -((SceneWidget) (var7_ref)).field_cb + 480 - ((SceneWidget) (var7_ref)).field_Lb, 0);
                   }
-                  pb.a(((gh) (var7_ref)).field_zb + ((gh) (var7_ref)).field_Rb, 50, 640 - ((gh) (var7_ref)).field_Rb - ((gh) (var7_ref)).field_zb, -var5_int + 430, 0);
+                  SoftwareRaster.a(((SceneWidget) (var7_ref)).field_zb + ((SceneWidget) (var7_ref)).field_Rb, 50, 640 - ((SceneWidget) (var7_ref)).field_Rb - ((SceneWidget) (var7_ref)).field_zb, -var5_int + 430, 0);
                 }
                 if (var6 == null &&
                   null == var7_ref) {
-                  pb.a(0, 50, 640, 630 - var5_int, 0);
+                  SoftwareRaster.a(0, 50, 640, 630 - var5_int, 0);
                 }
                 if (var19 != 0) {
-                  pb.a(0, 50, 640, -var5_int + 430, 0);
+                  SoftwareRaster.a(0, 50, 640, -var5_int + 430, 0);
                 }
               }
             } else {
-              pb.a(0, 50, 640, -var5_int + 430, 0);
+              SoftwareRaster.a(0, 50, 640, -var5_int + 430, 0);
             }
             hb.a((byte) -95, oa.field_U, 640, 49, 0, 431 - var5_int);
             var6_int = 50 - ic.field_db.field_B;
             ic.field_db.a(0, var6_int - this.field_h);
-            pb.c(0, -this.field_h + 49, 640, 0, 128);
+            SoftwareRaster.c(0, -this.field_h + 49, 640, 0, 128);
             sh.a(-16088, 640, var5_int, 480 - var5_int + this.field_k, 0);
           }
           if (this.field_c == 17) {
@@ -6269,39 +6269,39 @@ final class ji {
             var5_int = this.field_c;
             stackIn_296_0 = var5_int;
           }
-          L48: {
-            L49: {
-              L50: {
-                L51: {
-                  L52: {
-                    L53: {
+          regionExit1: {
+            regionExit2: {
+              regionExit3: {
+                regionExit4: {
+                  regionExit5: {
+                    regionExit6: {
                       if (stackIn_296_0 == 5 &&
                         var19 == 0) {
                         this.c(-87);
-                        break L48;
+                        break regionExit1;
                       } else if (var5_int != 6 ||
                         var19 != 0) {
                         if (7 == var5_int) {
-                          break L53;
+                          break regionExit6;
                         }
                         if (var5_int == 8 &&
                           var19 == 0) {
-                          break L52;
+                          break regionExit5;
                         }
                         if (var5_int == 9 &&
                           var19 == 0) {
-                          break L51;
+                          break regionExit4;
                         }
                         if (10 == var5_int) {
-                          break L50;
+                          break regionExit3;
                         }
                         if ((var5_int != 13 ||
                           var19 != 0)) {
                           if (var5_int == 14 &&
                             var19 == 0) {
-                            break L49;
+                            break regionExit2;
                           }
-                          L61: switch ((var19 == 0
+                          regionExit7: switch ((var19 == 0
                             || var5_int == 17
                             || var5_int == 19
                             || var5_int == 20
@@ -6309,17 +6309,17 @@ final class ji {
                             case 11:
                               va.field_j.a(ll.field_s, 40, 150, 600, 1000, 1021128, -1, 0, 0, 0);
                               if (var19 == 0) {
-                                break L48;
+                                break regionExit1;
                               }
                             case 16:
                               this.h(7165);
                               if (var19 == 0) {
-                                break L48;
+                                break regionExit1;
                               }
                             case 18:
                               this.m(param0 + 126);
                               if (var19 == 0) {
-                                break L48;
+                                break regionExit1;
                               }
                             case 19:
                               if (uc.field_e[this.field_c] != fa.field_c) {
@@ -6339,7 +6339,7 @@ final class ji {
                                     }
                                     var6_int = stackIn_460_0;
                                     var7 = 74;
-                                    pb.h(-4 + this.g(127, var5_int + 0), var7, this.a(var5_int - 0, (byte) 115) - (this.g(126, 0 + var5_int) - 8), -var7 + (4 + this.b(9 + var5_int, (byte) -103)) + (this.c(25, var5_int + 9) + var6_int), 3158064);
+                                    SoftwareRaster.h(-4 + this.g(127, var5_int + 0), var7, this.a(var5_int - 0, (byte) 115) - (this.g(126, 0 + var5_int) - 8), -var7 + (4 + this.b(9 + var5_int, (byte) -103)) + (this.c(25, var5_int + 9) + var6_int), 3158064);
                                     var5_int += 10;
                                     continue;
                                   }
@@ -6347,7 +6347,7 @@ final class ji {
                                 }
                                 if (decompiledNaturalLoopExit1) {
                                   if (fm.field_f[1] <= 0) {
-                                    break L48;
+                                    break regionExit1;
                                   }
                                   stackIn_465_0 = ~fm.field_f[1];
                                   stackIn_465_1 = -11;
@@ -6365,9 +6365,9 @@ final class ji {
                                   var7++;
                                 } while (var19 == 0);
                                 if (var19 == 0) {
-                                  break L48;
+                                  break regionExit1;
                                 }
-                                break L61;
+                                break regionExit7;
                               }
                               var5 = new int[3];
                               var6_int = 0;
@@ -6394,7 +6394,7 @@ final class ji {
                                     }
                                     var7 = stackIn_417_0;
                                     var8 = 74;
-                                    pb.h(this.g(126, var6_int + 0) - 4, var8, this.a(0 + var6_int, (byte) 112) - (this.g(126, 0 + var6_int) - 8), this.b(9 + var6_int, (byte) 32) - (-this.c(25, 9 + var6_int) - 4) + (-var8 + var7), 3158064);
+                                    SoftwareRaster.h(this.g(126, var6_int + 0) - 4, var8, this.a(0 + var6_int, (byte) 112) - (this.g(126, 0 + var6_int) - 8), this.b(9 + var6_int, (byte) 32) - (-this.c(25, 9 + var6_int) - 4) + (-var8 + var7), 3158064);
                                     var6_int += 10;
                                     continue;
                                   }
@@ -6440,39 +6440,39 @@ final class ji {
                                     pl.field_U.a(ic.field_E + qa.a(~param0, var7), var5[2], 17 + (this.b(29, (byte) 108) + this.c(25, 29)), var6_int, -1);
                                   }
                                 }
-                                break L48;
+                                break regionExit1;
                               }
                             case 20:
                               break;
                             case 17:
                             default:
-                              break L48;
+                              break regionExit1;
                           }
                           this.n(21345);
                         }
-                        break L48;
+                        break regionExit1;
                       }
                       this.p(-119);
-                      break L48;
+                      break regionExit1;
                     }
                     this.i((byte) -127);
                     if (var19 == 0) {
-                      break L48;
+                      break regionExit1;
                     }
                   }
                   this.a(48, false);
                   if (var19 == 0) {
-                    break L48;
+                    break regionExit1;
                   }
                 }
                 this.a(48, true);
                 if (var19 == 0) {
-                  break L48;
+                  break regionExit1;
                 }
               }
               this.f(param0 ^ 126);
               if (var19 == 0) {
-                break L48;
+                break regionExit1;
               }
             }
             try {
@@ -6480,7 +6480,7 @@ final class ji {
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5_ref = decompiledCaughtException;
-              hl.field_v = ji.a(ua.field_x, (byte) 118, di.field_c);
+              hl.field_v = SentinelDesigner.a(ua.field_x, (byte) 118, di.field_c);
               uc.field_b = cj.a(param0 ^ 95, di.field_c, hl.field_v);
               vn.d(param0 - 119);
               System.err.println("Draw config: " + var5_ref);
@@ -6492,15 +6492,15 @@ final class ji {
           }
           if (!(sn.field_q >= 0) ||
             var4 != 0) {
-            if (gh.field_J &&
+            if (SceneWidget.field_J &&
               var4 == 0) {
-              km.field_a = ee.field_I;
-              pb.c(0, 0, 640, 480, 0, 128);
+              km.field_a = CombatWorld.field_I;
+              SoftwareRaster.c(0, 0, 640, 480, 0, 128);
               var5_ref2 = ff.field_lb;
-              var6_int = ((mi) ((Object) var5_ref2)).a(ee.field_I, 424, 0);
+              var6_int = ((BitmapFont) ((Object) var5_ref2)).a(CombatWorld.field_I, 424, 0);
               var6_int += 54;
               var7 = (480 - var6_int) / 2;
-              ak.a((wk) null, var7, km.field_a, 440, 100, -2, var6_int, 1071146, (String[]) null, true);
+              ak.a((RgbSprite) null, var7, km.field_a, 440, 100, -2, var6_int, 1071146, (String[]) null, true);
               var8 = 30;
               var9 = 100;
               var10 = 110;
@@ -6522,7 +6522,7 @@ final class ji {
               }
               if (ln.field_g != var12 &&
                 ln.field_g != -1) {
-                ee.c(-2483, 97);
+                CombatWorld.c(-2483, 97);
               }
               if (var19 == 0) {
                 return;
@@ -6536,13 +6536,13 @@ final class ji {
             }
             var5_int = 300;
             if (km.field_a == td.field_ac ||
-              ra.field_b == km.field_a) {
+              DualNodeDeque.field_b == km.field_a) {
               var5_int = 330;
             }
             var6_int = (-var5_int + 640) / 2;
-            pb.c(0, 0, 640, 480, 0, 128);
+            SoftwareRaster.c(0, 0, 640, 480, 0, 128);
             var7_ref = ff.field_lb;
-            var8 = ((mi) (var7_ref)).a(km.field_a, var5_int - 16, 0);
+            var8 = ((BitmapFont) (var7_ref)).a(km.field_a, var5_int - 16, 0);
             var9 = 0;
             if (null != ln.field_c) {
               var9 = ln.field_c.field_F + 4;
@@ -6551,7 +6551,7 @@ final class ji {
             var10 = (-var8 + 480) / 2;
             var11 = al.field_f;
             if (td.field_ac == km.field_a ||
-              km.field_a == ra.field_b) {
+              km.field_a == DualNodeDeque.field_b) {
               var11 = null;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -6561,10 +6561,10 @@ final class ji {
             var15 = (-var14 + 640) / 2;
             var16 = -8 + (var8 + var10) - var13;
             if (td.field_ac != km.field_a &&
-              ra.field_b != km.field_a) {
+              DualNodeDeque.field_b != km.field_a) {
               if (var12 >= 0 &&
                 !gd.field_ub) {
-                ee.c(-2483, 97);
+                CombatWorld.c(-2483, 97);
               }
               gd.field_ub = !(var12 < 0);
               decompiledFrameRemainder0 = (var19 != 0);
@@ -6577,7 +6577,7 @@ final class ji {
               var18 = nm.a(var16, var15, 124, ma.field_Z, var13, var14) ? 1 : 0;
               if (var18 != 0 &&
                 !gd.field_ub) {
-                ee.c(-2483, 97);
+                CombatWorld.c(-2483, 97);
               }
               var15 = var15 + (10 + var14);
               gd.field_ub = var18 != 0;
@@ -6586,7 +6586,7 @@ final class ji {
               if (var18 != 0) {
                 ln.field_g = 0;
                 if (var17 != 0) {
-                  ee.c(param0 - 2483, 97);
+                  CombatWorld.c(param0 - 2483, 97);
                 }
               }
             }
@@ -6606,16 +6606,16 @@ final class ji {
             var5_ref3 = rj.field_m[sn.field_q];
           }
           km.field_a = db.a(km.field_a, -22, new String[]{var5_ref3, Integer.toString(f.field_v), Integer.toString(li.field_v)});
-          pb.c(0, 0, 640, 480, 0, 128);
+          SoftwareRaster.c(0, 0, 640, 480, 0, 128);
           var6_ref = ff.field_lb;
           var7 = ln.field_c.field_F;
-          var8 = ((mi) ((Object) var6_ref)).a(km.field_a, 284, 16);
+          var8 = ((BitmapFont) ((Object) var6_ref)).a(km.field_a, 284, 16);
           var8 = var8 + (50 + var7);
           var9 = (-var8 + 480) / 2;
           var10 = ak.a(ln.field_c, var9, km.field_a, 300, 170, -2, var8, 1071146, el.field_Vb, true);
           if (0 <= var10 &&
             jl.field_p != var10) {
-            ee.c(-2483, 97);
+            CombatWorld.c(-2483, 97);
           }
           jl.field_p = var10;
           return;
@@ -6672,7 +6672,7 @@ final class ji {
         RuntimeException var4 = null;
         int var5 = 0;
         int var4_intLifetime1;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           if (param2 >= 1 &&
             param2 <= 2) {
@@ -6815,67 +6815,67 @@ final class ji {
         boolean stackIn_113_0 = false;
         boolean stackIn_135_0 = false;
         int stackIn_241_0 = 0;
-        gh stackIn_304_0 = null;
+        SceneWidget stackIn_304_0 = null;
         int stackIn_305_0 = 0;
         int stackIn_312_0 = 0;
-        gh stackIn_314_0 = null;
+        SceneWidget stackIn_314_0 = null;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_112_0;
         boolean stackOut_134_0;
         int var2_int = 0;
         RuntimeException var2 = null;
         kg var3 = null;
-        gh var3_ref = null;
+        SceneWidget var3_ref = null;
         int var4_int = 0;
-        gh var4 = null;
+        SceneWidget var4 = null;
         int var5_int = 0;
-        gh var5 = null;
+        SceneWidget var5 = null;
         int var6_int = 0;
-        gh var6 = null;
+        SceneWidget var6 = null;
         Object var7 = null;
         int var7_int = 0;
         int var8_int = 0;
-        gh var8 = null;
+        SceneWidget var8 = null;
         int var9_int = 0;
-        gh var9 = null;
+        SceneWidget var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13_int = 0;
-        gh var13 = null;
+        SceneWidget var13 = null;
         String[] var14 = null;
-        gh var14_ref = null;
+        SceneWidget var14_ref = null;
         int var15_int = 0;
-        gh var15 = null;
+        SceneWidget var15 = null;
         int var16_int = 0;
-        gh var16 = null;
+        SceneWidget var16 = null;
         int var17_int = 0;
         lb var17 = null;
-        gh[] var18 = null;
+        SceneWidget[] var18 = null;
         kg var18_ref = null;
         int var19_int = 0;
-        gh var19 = null;
+        SceneWidget var19 = null;
         int var20 = 0;
         int var21 = 0;
         int var22_int = 0;
-        gh var22 = null;
+        SceneWidget var22 = null;
         int var23 = 0;
         int var24 = 0;
         String var25_ref_String = null;
         int var25 = 0;
         int var26 = 0;
-        gh var26_ref_gh = null;
-        gh var27 = null;
+        SceneWidget var26_ref_gh = null;
+        SceneWidget var27 = null;
         int var27_int = 0;
         int var28 = 0;
         int var29 = 0;
         int var30 = 0;
         int var31 = 0;
-        gh stackIn_304_0Lifetime1;
-        gh var6Lifetime1;
+        SceneWidget stackIn_304_0Lifetime1;
+        SceneWidget var6Lifetime1;
         Object var7Lifetime1;
-        gh var14_refLifetime1;
-        gh var27Lifetime1;
+        SceneWidget var14_refLifetime1;
+        SceneWidget var27Lifetime1;
         int stackIn_241_0Lifetime1;
         int var5_intLifetime1;
         int var13_intLifetime1;
@@ -6892,7 +6892,7 @@ final class ji {
         int var28Lifetime2;
         int var29Lifetime1;
         int var27_intLifetime1Lifetime1;
-        var31 = SteelSentinels.field_G;
+        var31 = SteelSentinels.obfuscationControl;
         try {
           if (param0 > -28) {
             this.q(-72);
@@ -6926,35 +6926,35 @@ final class ji {
               var7 = null;
               var8_int = 0;
               while (var8_int < 32) {
-                if (null != ck.field_f[var8_int]) {
+                if (null != IntrusiveNode.field_f[var8_int]) {
                   boolean decompiledFrameRemainder2 = true;
                   var9_int = hc.field_R[var8_int] + (10 + ff.field_lb.field_W / 2);
                   if (var9_int < -var6_int) {
-                    var7 = ck.field_f[var8_int];
+                    var7 = IntrusiveNode.field_f[var8_int];
                     if (98 == ef.field_c) {
                       var5_intLifetime1 = var8_int;
                     }
-                    ck.field_f[var8_int].field_nb = 2061990;
-                    decompiledFrameRemainder2 = !(!ck.field_f[var8_int].field_kb);
+                    IntrusiveNode.field_f[var8_int].field_nb = 2061990;
+                    decompiledFrameRemainder2 = !(!IntrusiveNode.field_f[var8_int].field_kb);
                     if (decompiledFrameRemainder2) {
-                      ck.field_f[var8_int].field_nb = 0;
+                      IntrusiveNode.field_f[var8_int].field_nb = 0;
                     }
                   }
                   if ((decompiledFrameRemainder2) &&
                     (!(var9_int < -var6_int) ||
                     var31 != 0)) {
                     if (-var6_int + var3.field_Tb.field_Lb <= var9_int) {
-                      ck.field_f[var8_int].field_nb = 2061990;
-                      if (ck.field_f[var8_int].field_kb) {
-                        ck.field_f[var8_int].field_nb = 0;
+                      IntrusiveNode.field_f[var8_int].field_nb = 2061990;
+                      if (IntrusiveNode.field_f[var8_int].field_kb) {
+                        IntrusiveNode.field_f[var8_int].field_nb = 0;
                         if (var31 != 0) {
                           var7 = null;
-                          ck.field_f[var8_int].field_nb = 10526880;
+                          IntrusiveNode.field_f[var8_int].field_nb = 10526880;
                         }
                       }
                     } else {
                       var7 = null;
-                      ck.field_f[var8_int].field_nb = 10526880;
+                      IntrusiveNode.field_f[var8_int].field_nb = 10526880;
                     }
                   }
                   if (ef.field_c == 99 &&
@@ -6970,7 +6970,7 @@ final class ji {
                 break;
               }
               if (var7 != null) {
-                ((gh) (var7)).field_nb = 10526880;
+                ((SceneWidget) (var7)).field_nb = 10526880;
               }
             }
             ef.field_c = 0;
@@ -6989,20 +6989,20 @@ final class ji {
               var6.field_kb) {
               var7_int = 0;
               while (var7_int < 32) {
-                if (null == ck.field_f[var7_int]) {
+                if (null == IntrusiveNode.field_f[var7_int]) {
                   break;
                 }
                 boolean decompiledFrameRemainder0 = true;
-                if (ck.field_f[var7_int].field_kb) {
+                if (IntrusiveNode.field_f[var7_int].field_kb) {
                   ha.field_V = var7_int;
                   if ((lb.field_gc != 1) &&
                     (decompiledFrameRemainder0 = (var2_int != var7_int))) {
                     var2_int = var7_int;
-                    ee.c(-2483, 97);
+                    CombatWorld.c(-2483, 97);
                     decompiledFrameRemainder0 = (var31 != 0);
                   }
                   if (decompiledFrameRemainder0) {
-                    ee.c(-2483, 95);
+                    CombatWorld.c(-2483, 95);
                     var3.field_Ub.field_gb = -hc.field_R[var7_int] - var3.field_Ub.field_eb - 4;
                     if (var3.field_Ub.field_gb > -var3.field_Ub.field_eb) {
                       var3.field_Ub.field_gb = -var3.field_Ub.field_eb;
@@ -7031,37 +7031,37 @@ final class ji {
             return;
           }
           od.field_e = true;
-          gd.field_sb = new gh();
+          gd.field_sb = new SceneWidget();
           gd.field_sb.a(0, 0, 480, 0, 640);
-          var3_ref = new gh("DataView", (gh) null);
+          var3_ref = new SceneWidget("DataView", (SceneWidget) null);
           pf.field_n = 4;
           bg.field_y = 4;
           bi.field_d = 15;
-          var4 = new gh();
+          var4 = new SceneWidget();
           var4.field_nb = 10526880;
-          var4.field_L = (mi) ((Object) ff.field_lb);
-          var5 = new gh(-1L, var4);
+          var4.field_L = (BitmapFont) ((Object) ff.field_lb);
+          var5 = new SceneWidget(-1L, var4);
           var5.field_I = gf.field_c;
           var5.field_nb = 0;
-          var6Lifetime1 = new gh();
+          var6Lifetime1 = new SceneWidget();
           var6Lifetime1.field_Kb = 1;
           var6Lifetime1.field_Fb = 1;
           var6Lifetime1.field_I = pd.field_T;
-          var7Lifetime1 = new gh(-1L, var5);
-          ((gh) (var7Lifetime1)).field_ub = 3;
-          ((gh) (var7Lifetime1)).field_Ib = 10;
-          ((gh) (var7Lifetime1)).field_I = sa.field_e;
-          ((gh) (var7Lifetime1)).field_nb = 2061990;
-          ((gh) (var7Lifetime1)).field_Ab = wc.field_d;
-          ((gh) (var7Lifetime1)).field_Kb = 1;
-          ((gh) (var7Lifetime1)).field_L = (mi) ((Object) fk.field_d);
-          ((gh) (var7Lifetime1)).field_sb = 0;
+          var7Lifetime1 = new SceneWidget(-1L, var5);
+          ((SceneWidget) (var7Lifetime1)).field_ub = 3;
+          ((SceneWidget) (var7Lifetime1)).field_Ib = 10;
+          ((SceneWidget) (var7Lifetime1)).field_I = sa.field_e;
+          ((SceneWidget) (var7Lifetime1)).field_nb = 2061990;
+          ((SceneWidget) (var7Lifetime1)).field_Ab = wc.field_d;
+          ((SceneWidget) (var7Lifetime1)).field_Kb = 1;
+          ((SceneWidget) (var7Lifetime1)).field_L = (BitmapFont) ((Object) fk.field_d);
+          ((SceneWidget) (var7Lifetime1)).field_sb = 0;
           var5.field_Kb = 1;
-          var5.field_L = (mi) ((Object) pl.field_U);
-          var8 = new gh();
+          var5.field_L = (BitmapFont) ((Object) pl.field_U);
+          var8 = new SceneWidget();
           var8.field_I = tk.field_t;
           var4.field_Fb = 1;
-          var9 = new gh("HeadingsPane", (gh) null);
+          var9 = new SceneWidget("HeadingsPane", (SceneWidget) null);
           jj.field_a = var9;
           var9.a(0, 60, 370, 16, 106);
           var10 = 4;
@@ -7072,7 +7072,7 @@ final class ji {
           while (!(decompiledNaturalLoopExit1 = (!(var13_int < wc.field_g.length)))) {
             var14 = wc.field_g[var13_int];
             var15_int = 0;
-            stackOut_112_0 = nk.f((byte) -96);
+            stackOut_112_0 = ArticulatedPart.f((byte) -96);
             stackIn_305_0 = stackOut_112_0 ? 1 : 0;
             stackIn_113_0 = stackOut_112_0;
             if (var31 == 0) {
@@ -7085,7 +7085,7 @@ final class ji {
                 if (var14 != null &&
                   0 != var14.length) {
                   var17_int = 0;
-                  var18 = new gh[var14.length];
+                  var18 = new SceneWidget[var14.length];
                   var19_int = 0;
                   var20 = 0;
                   var21 = 0;
@@ -7101,7 +7101,7 @@ final class ji {
                       stackIn_135_0 = stackOut_134_0;
                       if (stackIn_135_0) {
                         var25_ref_String = var25_ref_String.substring(6);
-                        if (!nk.f((byte) -20)) {
+                        if (!ArticulatedPart.f((byte) -20)) {
                           var26 = 1;
                         }
                       }
@@ -7121,19 +7121,19 @@ final class ji {
                         if (!var25_ref_String.startsWith("<pic") ||
                           !var14[var23].endsWith(">")) {
                           if (var25_ref_String.startsWith("<h>")) {
-                            var18[var23] = new gh((long)var11, var5);
+                            var18[var23] = new SceneWidget((long)var11, var5);
                             if (var16_int == 0) {
                               var16_int = 1;
                               var12 += 10;
                             }
                             var18[var23].field_S = var25_ref_String.substring(3);
-                            var27 = new gh((long)var11, (gh) (var7Lifetime1));
+                            var27 = new SceneWidget((long)var11, (SceneWidget) (var7Lifetime1));
                             var27.field_S = ke.a(42, var18[var23].field_S);
                             var28 = var27.field_L.a(var27.field_S, -(var27.field_ub * 2) + 106, var27.field_Ib) + 3;
                             var27.a(0, var10, var28, 0, 106);
                             var10 = var10 + (var28 + 4);
                             var9.a(var27, 125);
-                            ck.field_f[var11] = var27;
+                            IntrusiveNode.field_f[var11] = var27;
                             hc.field_R[var11] = -10 + var12;
                             var11++;
                             var21++;
@@ -7146,7 +7146,7 @@ final class ji {
                             } else {
                               var25_ref_String = ln.a("<rmbcancelonoff>", (byte) 11, i.field_a, var25_ref_String);
                             }
-                            var18[var23] = new gh(-1L, var4);
+                            var18[var23] = new SceneWidget(-1L, var4);
                             var18[var23].field_S = var25_ref_String;
                             if (var19_int != 0) {
                               var18[var23].field_Ib = 19;
@@ -7162,7 +7162,7 @@ final class ji {
                             }
                           }
                         } else {
-                          var18[var23] = new gh(-1L, var6Lifetime1);
+                          var18[var23] = new SceneWidget(-1L, var6Lifetime1);
                           var27_int = Integer.parseInt(var25_ref_String.substring(4, var25_ref_String.length() - 1));
                           var18[var23].field_Pb = ja.b(var27_int, true);
                           var28 = 0;
@@ -7195,8 +7195,8 @@ final class ji {
                           }
                           var22_int = var22_int + var28;
                         }
-                      } else if (!nk.f((byte) -87)) {
-                        var18[var23] = new gh(-1L, var6Lifetime1);
+                      } else if (!ArticulatedPart.f((byte) -87)) {
+                        var18[var23] = new SceneWidget(-1L, var6Lifetime1);
                         var18[var23].field_Pb = sj.field_F;
                         var22_int = var22_int + (var18[var23].field_Pb.field_A + 4);
                       } else {
@@ -7287,13 +7287,13 @@ final class ji {
           }
           if (decompiledNaturalLoopExit1) {
             stackIn_304_0 = var3_ref;
-            ((gh) (Object) stackIn_304_0).a(0, 0, var12, 0, 480);
+            ((SceneWidget) (Object) stackIn_304_0).a(0, 0, var12, 0, 480);
             stackIn_305_0 = 0;
           }
           var13_intLifetime1 = stackIn_305_0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var11 <= var13_intLifetime1))) {
-            stackIn_314_0 = new gh(-1L, var8);
+            stackIn_314_0 = new SceneWidget(-1L, var8);
             if (var31 == 0) {
               var14_ref = stackIn_314_0;
               var15_intLifetime1 = -10 + (5 + (hc.field_R[var13_intLifetime1] + 10));
@@ -7311,24 +7311,24 @@ final class ji {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_314_0 = new gh();
+            stackIn_314_0 = new SceneWidget();
           }
           var13 = stackIn_314_0;
           var13.field_db = sj.field_x[1];
           var13.field_Pb = sj.field_x[0];
-          var14_refLifetime1 = new gh();
+          var14_refLifetime1 = new SceneWidget();
           var14_refLifetime1.field_Pb = ah.field_Zb[0];
           var14_refLifetime1.field_db = ah.field_Zb[1];
-          var15 = new gh();
+          var15 = new SceneWidget();
           var15.field_I = qi.field_a;
-          var16 = new gh();
+          var16 = new SceneWidget();
           var16.field_I = jn.field_f;
           var17 = new lb("", var13, var14_refLifetime1, var15, var16);
-          var18_ref = new kg("Scrollingview", var3_ref, (gh) null, var17);
+          var18_ref = new kg("Scrollingview", var3_ref, (SceneWidget) null, var17);
           nf.field_a = var18_ref;
           var18_ref.a(bi.field_d + 480, -2048, bi.field_d, 358, bg.field_y, 0, 4);
           var18_ref.field_I = null;
-          var19 = new gh(-1L, (gh) null);
+          var19 = new SceneWidget(-1L, (SceneWidget) null);
           var19.field_I = pd.field_T;
           var19.a(var18_ref, 119);
           var19.a(0, 64, 366, 126, 4 + bi.field_d + 480);
@@ -7338,11 +7338,11 @@ final class ji {
           if (var11 > 1) {
             var20Lifetime1 = var20Lifetime1 / (-1 + var11);
             var21Lifetime1 = 0;
-            var22 = (gh) (var9.field_M.e(13058));
+            var22 = (SceneWidget) (var9.field_M.first(13058));
             while (null != var22) {
               var22.a(0, var21Lifetime1 + var22.field_eb, var22.field_Lb, var22.field_Y, var22.field_zb);
               var21Lifetime1 = var21Lifetime1 + var20Lifetime1;
-              var22 = (gh) (var9.field_M.a((byte) -55));
+              var22 = (SceneWidget) (var9.field_M.next((byte) -55));
               if (var31 != 0) {
                 return;
               }
@@ -7364,7 +7364,7 @@ final class ji {
         int var4 = 0;
         int var5 = 0;
         int var3Lifetime1;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           if (0 == pm.field_U &&
             this.field_c == pm.field_T) {
@@ -7493,7 +7493,7 @@ final class ji {
         RuntimeException var2 = null;
         try {
           if (param1 != 44) {
-            ji.d(-110, -20);
+            SentinelDesigner.d(-110, -20);
           }
           da.a(param0, 25104);
           r.a(false, param0);
@@ -7520,7 +7520,7 @@ final class ji {
         }
     }
 
-    ji(int param0) {
+    SentinelDesigner(int param0) {
         this.field_k = 0;
         this.field_h = 0;
         try {
@@ -7547,7 +7547,7 @@ final class ji {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        var16 = SteelSentinels.field_G;
+        var16 = SteelSentinels.obfuscationControl;
         try {
           if (param1) {
             field_a = -81;
@@ -7562,7 +7562,7 @@ final class ji {
             while (var13 < 4) {
               var14 = nm.field_v[var13];
               var15 = nm.field_v[1 + var13];
-              pb.a(var14 + 3, var11_int, -var14 + var15 - 5, var12, 12105);
+              SoftwareRaster.a(var14 + 3, var11_int, -var14 + var15 - 5, var12, 12105);
               var13++;
               if (var16 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -7571,9 +7571,9 @@ final class ji {
             }
           }
           if (decompiledFrameCompleted0) {
-            ((mi) ((Object) var10)).b(param4, nm.field_v[0] + 5, param2, var9_int, -1);
+            ((BitmapFont) ((Object) var10)).b(param4, nm.field_v[0] + 5, param2, var9_int, -1);
             param3++;
-            ((mi) ((Object) var10)).b(cd.field_c[param5], 5 + nm.field_v[1], param2, var9_int, -1);
+            ((BitmapFont) ((Object) var10)).b(cd.field_c[param5], 5 + nm.field_v[1], param2, var9_int, -1);
           }
           if (param3 != 43) {
             if (param3 != 42) {
@@ -7589,8 +7589,8 @@ final class ji {
             stackIn_24_0 = of.field_a;
           }
           var11 = stackIn_24_0;
-          ((mi) ((Object) var10)).c(var11, -1 + nm.field_v[3] - 5, param2, var9_int, -1);
-          ((mi) ((Object) var10)).c(Integer.toString(param6), nm.field_v[4] - 6, param2, var9_int, -1);
+          ((BitmapFont) ((Object) var10)).c(var11, -1 + nm.field_v[3] - 5, param2, var9_int, -1);
+          ((BitmapFont) ((Object) var10)).c(Integer.toString(param6), nm.field_v[4] - 6, param2, var9_int, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -7622,9 +7622,9 @@ final class ji {
 
     final static void d(int param0, int param1) {
         try {
-          nb.b(param1, false);
+          GameplayController.b(param1, false);
           if (param0 != 0) {
-            ji.a(true, (byte) 17);
+            SentinelDesigner.a(true, (byte) 17);
           }
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ji.O(" + param0 + ',' + param1 + ')');
@@ -7651,7 +7651,7 @@ final class ji {
         int var4 = 0;
         int var5 = 0;
         int var2_intLifetime1;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           if (this.field_c == 16) {
             stackIn_5_0 = -1;
@@ -7745,11 +7745,11 @@ final class ji {
             return stackIn_115_0;
           }
           var2_intLifetime1 = uc.field_e[this.field_c].length - 1;
-          L16: while (true) {
+          scanLoop1: while (true) {
             if (var2_intLifetime1 >= 0) {
               stackIn_29_0 = -1;
               if (var5 != 0) {
-                break L16;
+                break scanLoop1;
               }
               if (stackIn_29_0 == uc.field_e[this.field_c][var2_intLifetime1]) {
                 var2_intLifetime1--;
@@ -7781,19 +7781,19 @@ final class ji {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           var2_long = 0L;
           var4 = param1.length();
           var5 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var5 < var4) {
               var2_long = var2_long * 37L;
               var6 = param1.charAt(var5);
               stackIn_30_0 = var6;
               stackIn_30_1 = 65;
               if (var7 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_30_0 >= stackIn_30_1 &&
                 90 >= var6) {
@@ -7817,13 +7817,13 @@ final class ji {
             break;
           }
           if (stackIn_30_0 >= stackIn_30_1) {
-            ji.h((byte) -101);
+            SentinelDesigner.h((byte) -101);
           }
-          L8: while (true) {
+          scanLoop2: while (true) {
             if (var2_long % 37L == 0L) {
               stackIn_40_0 = var2_long;
               if (var7 != 0) {
-                break L8;
+                break scanLoop2;
               }
               if (stackIn_40_0 != 0L) {
                 var2_long = var2_long / 37L;
@@ -7928,7 +7928,7 @@ final class ji {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
           if (96 == ei.field_q) {
             if (0 < this.field_g.field_e) {

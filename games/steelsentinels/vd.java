@@ -5,7 +5,7 @@ final class vd {
     static ak field_f;
     static boolean field_b;
     static boolean[] field_g;
-    static gh field_d;
+    static SceneWidget field_d;
     static String[] field_e;
     static kg field_a;
     static int field_h;
@@ -68,14 +68,14 @@ final class vd {
 
     final static void a(byte param0) {
         int var2;
-        var2 = SteelSentinels.field_G;
+        var2 = SteelSentinels.obfuscationControl;
         boolean decompiledFrameRemainder0 = true;
-        if (je.field_t > 0) {
-          je.field_t = je.field_t - 1;
+        if (SentinelCommand.field_t > 0) {
+          SentinelCommand.field_t = SentinelCommand.field_t - 1;
         } else {
           if (bd.field_c > 0) {
             bd.field_c = bd.field_c - 1;
-            if (je.field_t <= 0) {
+            if (SentinelCommand.field_t <= 0) {
               if (0 < bd.field_c) {
                 vb.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
               }
@@ -102,7 +102,7 @@ final class vd {
           if ((decompiledFrameRemainder0) &&
             (fj.field_f > 0)) {
             fj.field_f = fj.field_f - 1;
-            if (je.field_t > 0) {
+            if (SentinelCommand.field_t > 0) {
               bh.a(0);
               if (0 < bd.field_c) {
                 vb.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
@@ -128,7 +128,7 @@ final class vd {
           }
         }
         if (decompiledFrameRemainder0) {
-          if (je.field_t > 0) {
+          if (SentinelCommand.field_t > 0) {
             bh.a(0);
           }
           if (0 < bd.field_c) {

@@ -6,10 +6,10 @@ final class rd {
     static int field_b;
     static String field_c;
 
-    final static gk[] a(boolean param0, cm param1, int param2, int param3) {
+    final static IndexedSprite[] a(boolean param0, cm param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        gk[] stackIn_6_0 = null;
+        IndexedSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -17,7 +17,7 @@ final class rd {
         try {
           if (!wa.a((byte) 30, param3, param2, param1)) {
             stackIn_2_0 = null;
-            return (gk[]) (stackIn_2_0);
+            return (IndexedSprite[]) (stackIn_2_0);
           }
           if (!param0) {
             field_a = (int[]) null;

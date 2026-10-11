@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cf extends ck {
+final class cf extends IntrusiveNode {
     static String[] field_t;
     static int field_q;
     static String field_p;
@@ -16,15 +16,15 @@ final class cf extends ck {
     int field_r;
     int field_B;
     int field_y;
-    static gk[] field_u;
-    static gh field_w;
+    static IndexedSprite[] field_u;
+    static SceneWidget field_w;
     static String field_A;
 
-    final static wk[] a(String param0, String param1, byte param2, cm param3) {
+    final static RgbSprite[] a(String param0, String param1, byte param2, cm param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        wk[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

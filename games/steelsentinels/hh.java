@@ -9,7 +9,7 @@ final class hh {
     static String field_h;
     static int field_b;
     static String field_d;
-    static gh field_a;
+    static SceneWidget field_a;
     static String[] field_g;
     static int[] field_c;
 
@@ -21,7 +21,7 @@ final class hh {
         int var10 = 0;
         int var11 = 0;
         StringBuilder discarded$0 = null;
-        int var12 = SteelSentinels.field_G;
+        int var12 = SteelSentinels.obfuscationControl;
         if (param0 <= 0L) {
           return null;
         }
@@ -58,9 +58,9 @@ final class hh {
     final static int a(int param0, boolean param1, byte param2, int param3) {
         if (param2 != -66) {
           hh.a(false);
-          return gh.i(104);
+          return SceneWidget.i(104);
         }
-        return gh.i(104);
+        return SceneWidget.i(104);
     }
 
     public static void a(boolean param0) {

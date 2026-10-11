@@ -51,14 +51,14 @@ final class kl {
         this.field_a[1] = 65535;
     }
 
-    final void b(gi param0) {
+    final void b(PacketBuffer param0) {
         this.field_i = param0.f((byte) -128);
         this.field_c = param0.i(0);
         this.field_j = param0.i(0);
         this.a(param0);
     }
 
-    final void a(gi param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
         this.field_g = param0.f((byte) -62);
         this.field_f = new int[this.field_g];

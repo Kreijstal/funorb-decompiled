@@ -8,7 +8,7 @@ final class g {
     private int[] field_k;
     static String field_a;
     static int field_h;
-    static wk field_d;
+    static RgbSprite field_d;
     static em field_c;
     static String field_g;
     static String field_l;
@@ -34,7 +34,7 @@ final class g {
         int var3;
         int var4;
         int var5;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         var3 = this.field_k.length;
         var4 = 36 / ((-20 - param1) / 46);
         while (var3 <= param0) {
@@ -108,11 +108,11 @@ final class g {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        kj var28 = null;
+        CipherPacketBuffer var28 = null;
         int var3Lifetime1;
         int var25Lifetime1;
         int var25Lifetime2;
-        var26 = SteelSentinels.field_G;
+        var26 = SteelSentinels.obfuscationControl;
         try {
           if (param0 >= -115) {
             return;
@@ -121,10 +121,10 @@ final class g {
           var2 = var28.f((byte) -61);
           if (var2 == 0) {
             var3 = var28.c((byte) -60);
-            var4 = (kf) (je.field_w.e(13058));
+            var4 = (kf) (SentinelCommand.field_w.first(13058));
             while (var4 != null) {
               if (var3 != var4.field_C) {
-                var4 = (kf) (je.field_w.a((byte) -88));
+                var4 = (kf) (SentinelCommand.field_w.next((byte) -88));
                 continue;
               }
               break;
@@ -171,7 +171,7 @@ final class g {
                   var20 = var28.f((byte) -58);
                   var21 = sa.field_f[var20].field_g;
                   var22 = var28.g((byte) -97);
-                  var24 = var28.field_p;
+                  var24 = var28.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
                     var9[0][var12] = sa.field_f[var20].field_b;
@@ -184,12 +184,12 @@ final class g {
                     var12++;
                   }
                   if (var21 != null &&
-                    wl.a(67, var21)) {
+                    Projectile.a(67, var21)) {
                     var8[1][var13] = field_l;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var13++;
-                    var28.field_p = var24;
+                    var28.position = var24;
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
@@ -203,7 +203,7 @@ final class g {
                     var9[2][var14] = sa.field_f[var20].field_b;
                     var10[2][var14] = var22;
                     var14++;
-                    var28.field_p = var24;
+                    var28.position = var24;
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
@@ -214,16 +214,16 @@ final class g {
               }
             }
             var4.field_q = true;
-            var4.b(4);
+            var4.unlink(4);
             return;
           }
           if (var2 == 1) {
             var3Lifetime1 = var28.c((byte) -60);
             var4_long = var28.g((byte) -122);
-            var6_ref_tc = (tc) (ic.field_B.e(13058));
+            var6_ref_tc = (tc) (ic.field_B.first(13058));
             while (var6_ref_tc != null) {
               if (var6_ref_tc.field_p != var3Lifetime1) {
-                var6_ref_tc = (tc) (ic.field_B.a((byte) -20));
+                var6_ref_tc = (tc) (ic.field_B.next((byte) -20));
                 continue;
               }
               break;
@@ -233,7 +233,7 @@ final class g {
               return;
             }
             var6_ref_tc.field_D = var4_long;
-            var6_ref_tc.b(4);
+            var6_ref_tc.unlink(4);
             return;
           }
           sj.a("HS1: " + ci.a((byte) 94), -37, (Throwable) null);
@@ -295,7 +295,7 @@ final class g {
 
     final void a(int param0, byte param1) {
         if (param1 != 22) {
-          field_d = (wk) null;
+          field_d = (RgbSprite) null;
         }
         this.a(param0, true, 1 + this.field_j);
     }

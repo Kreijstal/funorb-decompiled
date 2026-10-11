@@ -7,7 +7,7 @@ final class h extends ug {
     static de field_Y;
     private int field_R;
     private int field_Z;
-    static wk field_T;
+    static RgbSprite field_T;
     private boolean field_W;
     private boolean field_S;
     static int field_U;
@@ -18,18 +18,18 @@ final class h extends ug {
 
     final static void i(int param0) {
         int var2;
-        var2 = SteelSentinels.field_G;
+        var2 = SteelSentinels.obfuscationControl;
         if (param0 != -1) {
           return;
         }
         if (null == fk.field_i) {
-          if ((1 << ed.field_j & fk.field_i.field_X.field_X) != 0) {
+          if ((1 << ed.field_j & fk.field_i.world.field_X) != 0) {
             ti.field_A[12] = ig.field_d;
           } else {
-            if (0 != fk.field_i.field_X.field_X) {
+            if (0 != fk.field_i.world.field_X) {
               ti.field_A[12] = ih.field_p;
             } else {
-              if ((1 << fk.field_i.field_X.field_kb) - 1 != (1 << ed.field_j | fk.field_i.field_N)) {
+              if ((1 << fk.field_i.world.playerCount) - 1 != (1 << ed.field_j | fk.field_i.field_N)) {
                 ti.field_A[12] = dg.field_a;
               } else {
                 ti.field_A[12] = hm.field_d;
@@ -38,13 +38,13 @@ final class h extends ug {
           }
         } else {
           if (fk.field_i.field_J) {
-            if (0 != (fk.field_i.field_X.field_X & 1 << ed.field_j)) {
+            if (0 != (fk.field_i.world.field_X & 1 << ed.field_j)) {
               ti.field_A[12] = ch.field_H;
             } else {
-              if (0 != fk.field_i.field_X.field_X) {
+              if (0 != fk.field_i.world.field_X) {
                 ti.field_A[12] = nl.field_Z;
               } else {
-                if ((fk.field_i.field_N | 1 << ed.field_j) != -1 + (1 << fk.field_i.field_X.field_kb)) {
+                if ((fk.field_i.field_N | 1 << ed.field_j) != -1 + (1 << fk.field_i.world.playerCount)) {
                   ti.field_A[12] = cl.field_i;
                 } else {
                   ti.field_A[12] = jh.field_g;
@@ -52,13 +52,13 @@ final class h extends ug {
               }
             }
           } else {
-            if ((1 << ed.field_j & fk.field_i.field_X.field_X) != 0) {
+            if ((1 << ed.field_j & fk.field_i.world.field_X) != 0) {
               ti.field_A[12] = ig.field_d;
             } else {
-              if (0 != fk.field_i.field_X.field_X) {
+              if (0 != fk.field_i.world.field_X) {
                 ti.field_A[12] = ih.field_p;
               } else {
-                if ((1 << fk.field_i.field_X.field_kb) - 1 != (1 << ed.field_j | fk.field_i.field_N)) {
+                if ((1 << fk.field_i.world.playerCount) - 1 != (1 << ed.field_j | fk.field_i.field_N)) {
                   ti.field_A[12] = dg.field_a;
                 } else {
                   ti.field_A[12] = hm.field_d;

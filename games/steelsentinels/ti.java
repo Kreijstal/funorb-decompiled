@@ -10,14 +10,14 @@ final class ti extends he implements java.awt.image.ImageProducer, java.awt.imag
     static long field_p;
     static String field_o;
     static String[] field_A;
-    static nk field_B;
+    static ArticulatedPart field_B;
     static String field_r;
     static int[] field_n;
     static byte[] field_s;
     static volatile boolean field_x;
     static byte[] field_u;
     static String field_q;
-    static ul field_z;
+    static NodeDeque field_z;
     static int field_y;
     private java.awt.image.ImageConsumer field_l;
     private java.awt.image.ColorModel field_v;
@@ -197,6 +197,6 @@ final class ti extends he implements java.awt.image.ImageProducer, java.awt.imag
         field_u = new byte[]{(byte)2, (byte)3, (byte)6};
         field_o = "Wingslot";
         field_y = 200;
-        field_z = new ul();
+        field_z = new NodeDeque();
     }
 }

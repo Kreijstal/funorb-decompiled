@@ -4,10 +4,10 @@
 final class bf extends gd {
     static String field_Db;
     static boolean field_Gb;
-    static gh field_Ab;
+    static SceneWidget field_Ab;
     static String field_Bb;
     static int field_Fb;
-    static gk[] field_Cb;
+    static IndexedSprite[] field_Cb;
     static String field_zb;
     static String field_Eb;
 
@@ -23,52 +23,52 @@ final class bf extends gd {
         field_Db = null;
         field_Cb = null;
         if (param0 > -110) {
-          field_Ab = (gh) null;
+          field_Ab = (SceneWidget) null;
         }
     }
 
     final static kf a(byte param0, int param1, int param2, int param3, int param4) {
-        int var7 = SteelSentinels.field_G;
-        kf var5 = (kf) (je.field_w.e(13058));
+        int var7 = SteelSentinels.obfuscationControl;
+        kf var5 = (kf) (SentinelCommand.field_w.first(13058));
         int var6 = -56 % ((-3 - param0) / 44);
         while (var5 != null) {
           if (var5.field_C == param2) {
             return var5;
           }
-          var5 = (kf) (je.field_w.a((byte) -28));
+          var5 = (kf) (SentinelCommand.field_w.next((byte) -28));
         }
         var5 = new kf();
         var5.field_u = param4;
         var5.field_w = param1;
         var5.field_C = param2;
-        je.field_w.a(3, var5);
+        SentinelCommand.field_w.addLast(3, var5);
         ma.a(param3, var5, -2864);
         return var5;
     }
 
     final static void a(byte param0, boolean param1) {
-        gh stackIn_9_0 = null;
+        SceneWidget stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
-        gh stackIn_13_0 = null;
+        SceneWidget stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
-        gh stackIn_23_0 = null;
+        SceneWidget stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
-        gh stackIn_27_0 = null;
+        SceneWidget stackIn_27_0 = null;
         boolean stackIn_28_1 = false;
         if (param0 > -102) {
           return;
         }
-        fe.a(-640 + pb.field_c >> 1, 0, -102, 640 + pb.field_c >> 1, pb.field_j);
-        if (je.field_t > 0) {
+        fe.a(-640 + SoftwareRaster.field_c >> 1, 0, -102, 640 + SoftwareRaster.field_c >> 1, SoftwareRaster.field_j);
+        if (SentinelCommand.field_t > 0) {
           if (null != ta.field_e) {
             ta.field_e.f(mg.field_Ub.field_Y, 0);
           }
           stackIn_9_0 = mg.field_Ub;
           stackIn_10_1 = (param1) && (!im.field_b);
-          ((gh) (Object) stackIn_9_0).a(stackIn_10_1, (byte) 126);
+          ((SceneWidget) (Object) stackIn_9_0).a(stackIn_10_1, (byte) 126);
           stackIn_13_0 = pc.field_q;
           stackIn_14_1 = (param1) && (!im.field_b);
-          ((gh) (Object) stackIn_13_0).a(stackIn_14_1, (byte) 127);
+          ((SceneWidget) (Object) stackIn_13_0).a(stackIn_14_1, (byte) 127);
         }
         if (!(bd.field_c <= 0) ||
           !(fj.field_f <= 0)) {
@@ -77,10 +77,10 @@ final class bf extends gd {
           }
           stackIn_23_0 = ql.field_ec;
           stackIn_24_1 = (param1) && (!vb.field_c);
-          ((gh) (Object) stackIn_23_0).a(stackIn_24_1, (byte) 127);
+          ((SceneWidget) (Object) stackIn_23_0).a(stackIn_24_1, (byte) 127);
           stackIn_27_0 = gl.field_y;
           stackIn_28_1 = (param1) && (!vb.field_c);
-          ((gh) (Object) stackIn_27_0).a(stackIn_28_1, (byte) 126);
+          ((SceneWidget) (Object) stackIn_27_0).a(stackIn_28_1, (byte) 126);
         }
         tk.$cfr$intArgs$f$20d51497949f(98);
     }
@@ -148,16 +148,16 @@ final class bf extends gd {
     }
 
     final static void m(int param0) {
-        ea.field_l = new gh(0L, (gh) null);
+        Sprite.field_l = new SceneWidget(0L, (SceneWidget) null);
         if (param0 != 854) {
           field_zb = (String) null;
         }
         if (rm.field_p) {
-          ea.field_l.a(jb.field_C, 126);
+          Sprite.field_l.a(Explosion.field_C, 126);
         }
-        ea.field_l.a(fl.field_c, 122);
-        sn.field_f = new uf(kh.field_p, ea.field_l);
-        mg.field_Ub = new gh(0L, (gh) null);
+        Sprite.field_l.a(fl.field_c, 122);
+        sn.field_f = new uf(kh.field_p, Sprite.field_l);
+        mg.field_Ub = new SceneWidget(0L, (SceneWidget) null);
         mg.field_Ub.a(sn.field_f.field_d, param0 - 734);
         mg.field_Ub.a(sg.field_i, 120);
         vl.d(0);
@@ -195,7 +195,7 @@ final class bf extends gd {
         CharSequence var8 = null;
         int var9 = 0;
         CharSequence var10 = null;
-        var9 = SteelSentinels.field_G;
+        var9 = SteelSentinels.obfuscationControl;
         try {
           if (0 == param0) {
             stackIn_3_0 = "";

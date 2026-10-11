@@ -9,9 +9,9 @@ final class ke {
     private int field_c;
     private int field_d;
     static String field_i;
-    wk[] field_h;
+    RgbSprite[] field_h;
     private int field_g;
-    wk field_a;
+    RgbSprite field_a;
     private boolean field_e;
 
     public static void b(byte param0) {
@@ -33,7 +33,7 @@ final class ke {
         boolean stackIn_42_4 = false;
         int stackIn_45_0 = 0;
         int stackIn_58_0 = 0;
-        gh stackIn_93_0;
+        SceneWidget stackIn_93_0;
         int stackIn_93_1;
         int stackIn_93_2;
         int stackIn_93_3;
@@ -51,16 +51,16 @@ final class ke {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        ul var10 = null;
+        NodeDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         cc var12 = null;
         int var13 = 0;
-        gh var14 = null;
-        gh var15 = null;
-        gh var16 = null;
-        gh var17 = null;
-        gh var18 = null;
+        SceneWidget var14 = null;
+        SceneWidget var15 = null;
+        SceneWidget var16 = null;
+        SceneWidget var17 = null;
+        SceneWidget var18 = null;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
@@ -94,7 +94,7 @@ final class ke {
         int var26Lifetime1;
         int var30_intLifetime1;
         int var26Lifetime2;
-        var31 = SteelSentinels.field_G;
+        var31 = SteelSentinels.obfuscationControl;
         try {
           var5_int = 0;
           var6 = param4;
@@ -148,23 +148,23 @@ final class ke {
           var9Lifetime1 = stackIn_45_0;
           var10 = param2.field_Ub.field_M;
           var11 = null;
-          var12 = (cc) (var10.e(13058));
+          var12 = (cc) (var10.first(13058));
           while (var12 != null) {
             var13 = 0;
             if (var12.field_M == null) {
-              var12.field_Sb = new gh(0L, bb.field_W);
+              var12.field_Sb = new SceneWidget(0L, bb.field_W);
               var12.a(var12.field_Sb, param4 ^ 118);
-              var12.field_oc = new gh(0L, SteelSentinels.field_J);
+              var12.field_oc = new SceneWidget(0L, SteelSentinels.field_J);
               if (rm.field_p) {
                 var12.a(var12.field_oc, 126);
               }
               var12.field_oc.field_Kb = 2;
-              var12.field_cc = new gh(0L, bd.field_f);
+              var12.field_cc = new SceneWidget(0L, bd.field_f);
               var12.a(var12.field_cc, param4 + 121);
               var12.h(-123);
-              var12.field_hc = new gh(0L, fa.field_f);
+              var12.field_hc = new SceneWidget(0L, fa.field_f);
               var12.a(var12.field_hc, 127);
-              var12.field_Yb = new gh(0L, co.field_c);
+              var12.field_Yb = new SceneWidget(0L, co.field_c);
               var13 = 1;
               var12.a(var12.field_Yb, 118);
             }
@@ -197,7 +197,7 @@ final class ke {
             if (mj.field_Sb == param2) {
               var21 += 42;
             }
-            var33 = mi.a(var12.field_Sb.field_L, var32, var21);
+            var33 = BitmapFont.a(var12.field_Sb.field_L, var32, var21);
             var20 = var33;
             var20 = var33;
             var20 = var33;
@@ -255,7 +255,7 @@ final class ke {
               var25_int = 0;
               if (nf.field_b != null &&
                 kk.a(-28548) &&
-                ~var12.field_ec != ~nb.field_G) {
+                ~var12.field_ec != ~GameplayController.field_G) {
                 if (null != var12.field_hc.field_S) {
                   var26 = var12.field_hc.g(-2147483648) + da.field_g * 2;
                   var12.field_hc.a(0, var19, db.field_b, var25_int, var26);
@@ -282,7 +282,7 @@ final class ke {
               } else {
                 stackIn_94_6 = 0;
               }
-              ((gh) (Object) stackIn_93_0).a(stackIn_93_1, stackIn_93_2, stackIn_93_3, stackIn_93_4, stackIn_93_5 - (stackIn_94_6 + var25_int));
+              ((SceneWidget) (Object) stackIn_93_0).a(stackIn_93_1, stackIn_93_2, stackIn_93_3, stackIn_93_4, stackIn_93_5 - (stackIn_94_6 + var25_int));
               var12.field_oc.field_S = Integer.toString(var12.field_ac);
               var12.field_oc.a(param4 ^ 0, var19, db.field_b, var12.field_zb - 40, 40);
               if (var12.field_Sb.field_kb &&
@@ -317,7 +317,7 @@ final class ke {
               var12.field_lb = -var12.field_Lb + var19;
             }
             if (var13 != 0) {
-              param2.field_Ub.a(2, (byte) 104, (gh) (var11), var12);
+              param2.field_Ub.a(2, (byte) 104, (SceneWidget) (var11), var12);
             }
             if (var12.field_Eb != 0 &&
               !var12.d((byte) -36)) {
@@ -335,7 +335,7 @@ final class ke {
             if (var12.field_K &&
               !var12.d((byte) -36)) {
               var24Lifetime2 = null;
-              if (~var12.field_ec != ~nb.field_G) {
+              if (~var12.field_ec != ~GameplayController.field_G) {
                 if (var5_int != 0 &&
                   !var12.field_nc) {
                   var24Lifetime2 = db.a(ia.field_i, -76, new String[]{var20});
@@ -481,7 +481,7 @@ final class ke {
                 ll.field_i = (String) (var24Lifetime2);
               }
             }
-            var12 = (cc) (var10.a((byte) -64));
+            var12 = (cc) (var10.next((byte) -64));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -520,7 +520,7 @@ final class ke {
     }
 
     final void a(int param0, lh param1, int param2, wa param3, boolean param4) {
-        mi stackIn_19_0 = null;
+        BitmapFont stackIn_19_0 = null;
         String stackIn_19_1 = null;
         int stackIn_20_2 = 0;
         int stackIn_22_2;
@@ -592,7 +592,7 @@ final class ke {
             } else {
               stackIn_26_8 = 256;
             }
-            ((mi) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param3.field_a, param3.field_j, param3.field_m);
+            ((BitmapFont) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param3.field_a, param3.field_j, param3.field_m);
           }
           if (param4) {
             var8 = (String) null;
@@ -631,7 +631,7 @@ final class ke {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           var2_int = param0.length();
           var3 = 0L;
@@ -682,7 +682,7 @@ final class ke {
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           if (param0 != 42) {
             field_i = (String) null;
@@ -730,7 +730,7 @@ final class ke {
         }
     }
 
-    final ke a(int param0, wk[] param1) {
+    final ke a(int param0, RgbSprite[] param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

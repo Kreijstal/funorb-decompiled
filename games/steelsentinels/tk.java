@@ -6,7 +6,7 @@ final class tk extends ia {
     static String field_q;
     static String field_r;
     static String field_s;
-    static wk[] field_t;
+    static RgbSprite[] field_t;
     static ak field_p;
     static String field_n;
 
@@ -57,7 +57,7 @@ final class tk extends ia {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, wk param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, RgbSprite param6, int param7, int param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -67,27 +67,27 @@ final class tk extends ia {
           var9_int = -param3 + (param7 + param6.field_D) + param8;
           var10 = param6.field_D + param7 + (param8 + param2);
           var11 = (param6.field_F >> 1) + param0 + param6.field_H;
-          pb.h(var9_int, 0, var10, var11 + param4);
+          SoftwareRaster.h(var9_int, 0, var10, var11 + param4);
           param6.a(-1 + param7, param0 - 1, param1);
           param6.a(param7 - 1, 1 + param0, param1);
-          pb.a(ti.field_n);
-          pb.h(1 + var9_int, 0, 1 + var10, param4 + var11);
+          SoftwareRaster.a(ti.field_n);
+          SoftwareRaster.h(1 + var9_int, 0, 1 + var10, param4 + var11);
           param6.a(param7 + 1, param0 - 1, param1);
           param6.a(param7 + 1, 1 + param0, param1);
-          pb.a(ti.field_n);
+          SoftwareRaster.a(ti.field_n);
           if (param5 != -30456) {
             tk.$cfr$intArgs$f$20d51497949f(-117);
           }
           var9_intLifetime1 = param6.field_A + param6.field_D + (param7 + (-param8 - param2));
           var10Lifetime1 = param6.field_A + param6.field_D + param7 - (param8 + param3);
-          pb.h(var9_intLifetime1, -param4 + var11, var10Lifetime1, 480);
+          SoftwareRaster.h(var9_intLifetime1, -param4 + var11, var10Lifetime1, 480);
           param6.a(param7 - 1, param0 - 1, param1);
           param6.a(param7 - 1, 1 + param0, param1);
-          pb.a(ti.field_n);
-          pb.h(1 + var9_intLifetime1, var11 - param4, 1 + var10Lifetime1, 480);
+          SoftwareRaster.a(ti.field_n);
+          SoftwareRaster.h(1 + var9_intLifetime1, var11 - param4, 1 + var10Lifetime1, 480);
           param6.a(1 + param7, -1 + param0, param1);
           param6.a(param7 + 1, param0 + 1, param1);
-          pb.a(ti.field_n);
+          SoftwareRaster.a(ti.field_n);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "tk.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
@@ -107,17 +107,17 @@ final class tk extends ia {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        pb.a(var1.field_q, var1.field_z, var1.field_w);
+        SoftwareRaster.a(var1.field_q, var1.field_z, var1.field_w);
         if (param0 > 96) {
-          pb.a(var1.field_p, var1.field_o, var1.field_y, var1.field_t);
+          SoftwareRaster.a(var1.field_p, var1.field_o, var1.field_y, var1.field_t);
           var1.field_q = null;
-          sl.field_b.a(3, var1);
+          sl.field_b.addLast(3, var1);
           return;
         }
-        field_t = (wk[]) null;
-        pb.a(var1.field_p, var1.field_o, var1.field_y, var1.field_t);
+        field_t = (RgbSprite[]) null;
+        SoftwareRaster.a(var1.field_p, var1.field_o, var1.field_y, var1.field_t);
         var1.field_q = null;
-        sl.field_b.a(3, var1);
+        sl.field_b.addLast(3, var1);
     }
 
     public static void d(byte param0) {
@@ -175,7 +175,7 @@ final class tk extends ia {
 
     final static void e(byte param0) {
         if (param0 < 22) {
-          field_t = (wk[]) null;
+          field_t = (RgbSprite[]) null;
         }
     }
 
@@ -192,16 +192,16 @@ final class tk extends ia {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        pb.a(var1.field_q, var1.field_z, var1.field_w);
+        SoftwareRaster.a(var1.field_q, var1.field_z, var1.field_w);
         if (param0 > 96) {
-          pb.a(var1.field_p, var1.field_o, var1.field_y, var1.field_t);
+          SoftwareRaster.a(var1.field_p, var1.field_o, var1.field_y, var1.field_t);
           var1.field_q = null;
-          sl.field_b.a(3, var1);
+          sl.field_b.addLast(3, var1);
           return;
         }
-        field_t = (wk[]) null;
-        pb.a(var1.field_p, var1.field_o, var1.field_y, var1.field_t);
+        field_t = (RgbSprite[]) null;
+        SoftwareRaster.a(var1.field_p, var1.field_o, var1.field_y, var1.field_t);
         var1.field_q = null;
-        sl.field_b.a(3, var1);
+        sl.field_b.addLast(3, var1);
     }
 }

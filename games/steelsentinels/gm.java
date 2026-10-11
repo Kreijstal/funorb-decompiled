@@ -4,16 +4,16 @@
 final class gm {
     static String field_d;
     static String field_a;
-    static gh field_c;
-    static wk field_b;
+    static SceneWidget field_c;
+    static RgbSprite field_b;
 
     final static void a(byte param0) {
         if (param0 > -87) {
           field_d = (String) null;
-          rg.field_d = new ul();
+          rg.field_d = new NodeDeque();
           return;
         }
-        rg.field_d = new ul();
+        rg.field_d = new NodeDeque();
     }
 
     final static ef a(boolean param0, String param1) {

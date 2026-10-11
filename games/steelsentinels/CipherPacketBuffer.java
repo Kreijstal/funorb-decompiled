@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj extends gi {
+final class CipherPacketBuffer extends PacketBuffer {
     static int field_I;
     static int field_w;
-    private ie field_A;
+    private IsaacRandom field_A;
     static String field_x;
     static int[] field_D;
-    static gh field_H;
+    static SceneWidget field_H;
     static String field_y;
     private int field_F;
     static tg field_z;
@@ -17,9 +17,9 @@ final class kj extends gi {
     static boolean field_B;
 
     final void a(int param0, byte param1) {
-        int fieldTemp$0 = this.field_p;
-        this.field_p = this.field_p + 1;
-        this.field_t[fieldTemp$0] = (byte)(param0 + this.field_A.c(-96));
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param0 + this.field_A.c(-96));
         if (param1 != -117) {
           field_y = (String) null;
         }
@@ -48,15 +48,15 @@ final class kj extends gi {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           if (param3 < 49) {
             field_E = (String) null;
           }
           for (var5_int = 0; var5_int < param1; var5_int++) {
-            fieldTemp$0 = this.field_p;
-            this.field_p = this.field_p + 1;
-            param2[param0 + var5_int] = (byte)(this.field_t[fieldTemp$0] - this.field_A.c(-93));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param2[param0 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_A.c(-93));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -79,7 +79,7 @@ final class kj extends gi {
           return qh.d((byte) -107);
         }
         if (param0 <= 9) {
-          kj.j(-98);
+          CipherPacketBuffer.j(-98);
           return 0;
         }
         return 0;
@@ -87,11 +87,11 @@ final class kj extends gi {
 
     final void i(byte param0) {
         if (param0 != -3) {
-          kj.j(53);
-          this.field_p = (7 + this.field_F) / 8;
+          CipherPacketBuffer.j(53);
+          this.position = (7 + this.field_F) / 8;
           return;
         }
-        this.field_p = (7 + this.field_F) / 8;
+        this.position = (7 + this.field_F) / 8;
     }
 
     final void a(int param0, int[] param1) {
@@ -99,22 +99,22 @@ final class kj extends gi {
           if (param0 != -1833430685) {
             field_B = true;
           }
-          this.field_A = new ie(param1);
+          this.field_A = new IsaacRandom(param1);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "kj.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void d(boolean param0) {
-        this.field_F = this.field_p * 8;
+        this.field_F = this.position * 8;
         if (param0) {
-          kj.j(-27);
+          CipherPacketBuffer.j(-27);
         }
     }
 
     final int g(int param0, int param1) {
         int incrementValue$0 = 0;
-        int var7 = SteelSentinels.field_G;
+        int var7 = SteelSentinels.obfuscationControl;
         int var3 = this.field_F >> 3;
         int var4 = -(this.field_F & 7) + 8;
         this.field_F = this.field_F + param1;
@@ -122,24 +122,24 @@ final class kj extends gi {
         while (param1 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.field_t[incrementValue$0] & kd.field_r[var4]) << param1 - var4);
+          var5 = var5 + ((this.payload[incrementValue$0] & DualNode.field_r[var4]) << param1 - var4);
           param1 = param1 - var4;
           var4 = 8;
         }
         int var6 = 64 % ((param0 + 27) / 36);
         if (param1 != var4) {
-          var5 = var5 + (this.field_t[var3] >> var4 - param1 & kd.field_r[param1]);
+          var5 = var5 + (this.payload[var3] >> var4 - param1 & DualNode.field_r[param1]);
         } else {
-          var5 = var5 + (this.field_t[var3] & kd.field_r[var4]);
+          var5 = var5 + (this.payload[var3] & DualNode.field_r[var4]);
         }
         return var5;
     }
 
-    kj(byte[] param0) {
+    CipherPacketBuffer(byte[] param0) {
         super(param0);
     }
 
-    kj(int param0) {
+    CipherPacketBuffer(int param0) {
         super(param0);
     }
 
@@ -147,9 +147,9 @@ final class kj extends gi {
         if (param0) {
           return -93;
         }
-        int fieldTemp$0 = this.field_p;
-        this.field_p = this.field_p + 1;
-        return 255 & this.field_t[fieldTemp$0] - this.field_A.c(-102);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$0] - this.field_A.c(-102);
     }
 
     static {

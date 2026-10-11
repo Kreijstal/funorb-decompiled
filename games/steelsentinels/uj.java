@@ -6,7 +6,7 @@ import java.io.*;
 final class uj {
     static String field_h;
     static String field_c;
-    static gh field_e;
+    static SceneWidget field_e;
     static int field_d;
     static boolean field_f;
     static String field_k;
@@ -15,7 +15,7 @@ final class uj {
     static String field_b;
     static String field_l;
     static int[] field_i;
-    static gh field_j;
+    static SceneWidget field_j;
 
     final static int a(int param0, int param1) {
         int var2 = (param0 & 16760920) >> 16;
@@ -30,7 +30,7 @@ final class uj {
         return (var2 << 16) - (-(var3 << 8) - var4);
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, wk param6, int param7) {
+    final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, RgbSprite param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_43_0 = null;
@@ -45,42 +45,42 @@ final class uj {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        wk var20 = null;
-        wk var22 = null;
+        RgbSprite var20 = null;
+        RgbSprite var22 = null;
         int[] var23 = null;
         int[] var26 = null;
         int[] var30 = null;
         int[] var31 = null;
-        var19 = SteelSentinels.field_G;
+        var19 = SteelSentinels.obfuscationControl;
         try {
-          if (pb.field_i > param1) {
-            param7 = param7 - (-param1 + pb.field_i);
-            param1 = pb.field_i;
+          if (SoftwareRaster.field_i > param1) {
+            param7 = param7 - (-param1 + SoftwareRaster.field_i);
+            param1 = SoftwareRaster.field_i;
           }
-          if (pb.field_b < param7 + param1) {
-            param7 = pb.field_b - param1;
+          if (SoftwareRaster.field_b < param7 + param1) {
+            param7 = SoftwareRaster.field_b - param1;
           }
-          if (pb.field_l > param2) {
-            param4 = param4 - (pb.field_l - param2);
-            param2 = pb.field_l;
+          if (SoftwareRaster.field_l > param2) {
+            param4 = param4 - (SoftwareRaster.field_l - param2);
+            param2 = SoftwareRaster.field_l;
           }
-          if (param4 + param2 > pb.field_d) {
-            param4 = -param2 + pb.field_d;
+          if (param4 + param2 > SoftwareRaster.field_d) {
+            param4 = -param2 + SoftwareRaster.field_d;
           }
           if (param7 > 0 &&
             0 < param4) {
             var22 = param6.g();
             if (param3 > -16) {
-              var20 = (wk) null;
-              uj.a(-28, -57, -101, (byte) 67, 90, 52, (wk) null, -77);
+              var20 = (RgbSprite) null;
+              uj.a(-28, -57, -101, (byte) 67, 90, 52, (RgbSprite) null, -77);
             }
-            var31 = pb.field_g;
-            var10 = pb.field_c;
-            var11 = pb.field_j;
+            var31 = SoftwareRaster.field_g;
+            var10 = SoftwareRaster.field_c;
+            var11 = SoftwareRaster.field_j;
             var30 = new int[4];
-            pb.b(var30);
+            SoftwareRaster.b(var30);
             param6.d();
-            pb.h(var30[0], var30[1], var30[2], var30[3]);
+            SoftwareRaster.h(var30[0], var30[1], var30[2], var30[3]);
             var13 = param1 + param2 * param6.field_A;
             var14 = -param7 + param6.field_A;
             var26 = var22.field_E;
@@ -97,15 +97,15 @@ final class uj {
                   var15[1 + var13] == 0 ||
                   !(var16 >= param6.field_F - 1) &&
                   var15[var13 + param6.field_A] == 0)) {
-                  pb.e(var17, var16, param0, param5);
+                  SoftwareRaster.e(var17, var16, param0, param5);
                 }
                 var13++;
               }
               var13 = var13 + var14;
             }
             var22.a(-param6.field_D, -param6.field_H);
-            pb.a(var31, var10, var11);
-            pb.a(var30);
+            SoftwareRaster.a(var31, var10, var11);
+            SoftwareRaster.a(var30);
             return;
           }
           return;
@@ -139,7 +139,7 @@ final class uj {
         field_i = null;
     }
 
-    final static void a(boolean param0, kj param1) {
+    final static void a(boolean param0, CipherPacketBuffer param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -186,9 +186,9 @@ final class uj {
           var16 = null;
           var21 = null;
           var22 = null;
-          var12 = SteelSentinels.field_G;
+          var12 = SteelSentinels.obfuscationControl;
           try {
-            var13 = (ua) (rg.field_d.e(13058));
+            var13 = (ua) (rg.field_d.first(13058));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -215,7 +215,7 @@ final class uj {
             if (var3 != 0) {
               return;
             }
-            var4 = param1.field_p;
+            var4 = param1.position;
             param1.b(param0, var17.field_q);
             for (var5 = 0; var17.field_B > var5; var5++) {
               if (var17.field_A[var5] != 0) {
@@ -323,7 +323,7 @@ final class uj {
               }
             }
             param1.f(-127, var4);
-            var17.b(4);
+            var17.unlink(4);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -349,8 +349,8 @@ final class uj {
           250 - vc.field_c != vn.field_h) {
         }
         if (param0 != 29) {
-          wk var2 = (wk) null;
-          uj.a(17, 76, 105, (byte) 99, -38, -93, (wk) null, 68);
+          RgbSprite var2 = (RgbSprite) null;
+          uj.a(17, 76, 105, (byte) 99, -38, -93, (RgbSprite) null, 68);
         }
         vn.field_h = vn.field_h + 1;
     }

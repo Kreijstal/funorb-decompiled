@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fh extends mi {
+final class fh extends BitmapFont {
     private byte[][] field_D;
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
@@ -15,8 +15,8 @@ final class fh extends mi {
         int var18;
         int var19;
         int var19Lifetime1;
-        var13 = param2 - pb.field_i;
-        var14 = param3 - pb.field_l;
+        var13 = param2 - SoftwareRaster.field_i;
+        var14 = param3 - SoftwareRaster.field_l;
         for (var15 = var14; var15 < var14 + param5; var15++) {
           boolean decompiledFrameRemainder0 = true;
           var16 = param11[var15];
@@ -58,7 +58,7 @@ final class fh extends mi {
               } else {
                 incrementValue$1 = param8;
                 param8++;
-                pb.field_g[incrementValue$1] = param6;
+                SoftwareRaster.field_g[incrementValue$1] = param6;
               }
             }
             param7 = param7 + (var19Lifetime1 + param10);
@@ -146,41 +146,41 @@ final class fh extends mi {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * pb.field_c;
-        var9 = pb.field_c - param3;
+        var8 = param1 + param2 * SoftwareRaster.field_c;
+        var9 = SoftwareRaster.field_c - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < pb.field_l) {
-          var12 = pb.field_l - param2;
+        if (param2 < SoftwareRaster.field_l) {
+          var12 = SoftwareRaster.field_l - param2;
           param4 = param4 - var12;
-          param2 = pb.field_l;
+          param2 = SoftwareRaster.field_l;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * pb.field_c;
+          var8 = var8 + var12 * SoftwareRaster.field_c;
         }
-        if (param2 + param4 > pb.field_d) {
-          param4 = param4 - (param2 + param4 - pb.field_d);
+        if (param2 + param4 > SoftwareRaster.field_d) {
+          param4 = param4 - (param2 + param4 - SoftwareRaster.field_d);
         }
-        if (param1 < pb.field_i) {
-          var12Lifetime1 = pb.field_i - param1;
+        if (param1 < SoftwareRaster.field_i) {
+          var12Lifetime1 = SoftwareRaster.field_i - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = pb.field_i;
+          param1 = SoftwareRaster.field_i;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > pb.field_b) {
-          var12Lifetime2 = param1 + param3 - pb.field_b;
+        if (param1 + param3 > SoftwareRaster.field_b) {
+          var12Lifetime2 = param1 + param3 - SoftwareRaster.field_b;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
         }
         if (param3 > 0 &&
           param4 > 0) {
-          if (pb.field_a == null) {
-            fh.a(pb.field_g, this.field_D[param0], param5, var11, var8, param3, param4, var9, var10);
+          if (SoftwareRaster.field_a == null) {
+            fh.a(SoftwareRaster.field_g, this.field_D[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            fh.a(pb.field_g, this.field_D[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, pb.field_a, pb.field_k);
+            fh.a(SoftwareRaster.field_g, this.field_D[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRaster.field_a, SoftwareRaster.field_k);
           }
           return;
         }
@@ -188,33 +188,33 @@ final class fh extends mi {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var13 = 0;
-        int var9 = param1 + param2 * pb.field_c;
-        int var10 = pb.field_c - param3;
+        int var9 = param1 + param2 * SoftwareRaster.field_c;
+        int var10 = SoftwareRaster.field_c - param3;
         int var11 = 0;
         int var12 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
-        if (param2 < pb.field_l) {
-          var13 = pb.field_l - param2;
+        if (param2 < SoftwareRaster.field_l) {
+          var13 = SoftwareRaster.field_l - param2;
           param4 = param4 - var13;
-          param2 = pb.field_l;
+          param2 = SoftwareRaster.field_l;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * pb.field_c;
+          var9 = var9 + var13 * SoftwareRaster.field_c;
         }
-        if (param2 + param4 > pb.field_d) {
-          param4 = param4 - (param2 + param4 - pb.field_d);
+        if (param2 + param4 > SoftwareRaster.field_d) {
+          param4 = param4 - (param2 + param4 - SoftwareRaster.field_d);
         }
-        if (param1 < pb.field_i) {
-          var13Lifetime1 = pb.field_i - param1;
+        if (param1 < SoftwareRaster.field_i) {
+          var13Lifetime1 = SoftwareRaster.field_i - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = pb.field_i;
+          param1 = SoftwareRaster.field_i;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > pb.field_b) {
-          var13Lifetime2 = param1 + param3 - pb.field_b;
+        if (param1 + param3 > SoftwareRaster.field_b) {
+          var13Lifetime2 = param1 + param3 - SoftwareRaster.field_b;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -223,6 +223,6 @@ final class fh extends mi {
           param4 <= 0) {
           return;
         }
-        fh.a(pb.field_g, this.field_D[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        fh.a(SoftwareRaster.field_g, this.field_D[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 }

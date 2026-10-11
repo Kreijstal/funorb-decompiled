@@ -6,7 +6,7 @@ class cn implements qk, eg {
     static boolean field_l;
     int field_h;
     int field_d;
-    mi field_f;
+    BitmapFont field_f;
     int field_m;
     private int field_g;
     private boolean field_i;
@@ -40,7 +40,7 @@ class cn implements qk, eg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -3) {
-            this.field_f = (mi) null;
+            this.field_f = (BitmapFont) null;
           }
           stackIn_3_0 = -this.field_h + param1.field_E - this.field_d;
           return stackIn_3_0;
@@ -59,7 +59,7 @@ class cn implements qk, eg {
     }
 
     final static void a(int param0, boolean param1, boolean param2, boolean param3, int param4) {
-        gh stackIn_19_0 = null;
+        SceneWidget stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
         int stackIn_34_0 = 0;
         int stackIn_34_1 = 0;
@@ -72,13 +72,13 @@ class cn implements qk, eg {
         int stackIn_83_0 = 0;
         boolean stackIn_125_0 = false;
         int stackIn_141_0 = 0;
-        gh stackIn_164_0 = null;
+        SceneWidget stackIn_164_0 = null;
         int stackIn_164_1 = 0;
         boolean stackIn_165_2 = false;
-        gh stackIn_169_0 = null;
+        SceneWidget stackIn_169_0 = null;
         int stackIn_169_1 = 0;
         boolean stackIn_170_2 = false;
-        gh stackIn_176_0 = null;
+        SceneWidget stackIn_176_0 = null;
         int stackIn_176_1 = 0;
         boolean stackIn_177_2 = false;
         Object stackIn_178_0 = null;
@@ -86,9 +86,9 @@ class cn implements qk, eg {
         boolean stackOut_75_0;
         boolean stackOut_124_0;
         RuntimeException var5 = null;
-        gh var6 = null;
-        gh var7 = null;
-        gh var8 = null;
+        SceneWidget var6 = null;
+        SceneWidget var7 = null;
+        SceneWidget var8 = null;
         String var9_ref_String = null;
         int var9 = 0;
         String var10_ref_String = null;
@@ -104,24 +104,24 @@ class cn implements qk, eg {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        ul var17 = null;
+        NodeDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         cc var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
-        gh var22 = null;
+        SceneWidget var22 = null;
         int[] var23 = null;
         String var24 = null;
         int[] var25 = null;
-        gh var26 = null;
+        SceneWidget var26 = null;
         int stackIn_53_0Lifetime1;
         int stackIn_53_1Lifetime1;
         int stackIn_61_0Lifetime1;
         int var13Lifetime1;
         int var18_intLifetime1;
         var18 = null;
-        var19 = SteelSentinels.field_G;
+        var19 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameCompleted0 = true;
           vb.$cfr$intArgs$a$e9dea5688aa5(48, fj.field_f);
@@ -198,12 +198,12 @@ class cn implements qk, eg {
                   m.field_h[var11] = false;
                   var11++;
                 } while (var19 == 0);
-                L17: while (true) {
+                scanLoop1: while (true) {
                   if (var10 < 2) {
                     var11 = 0;
                     stackIn_67_0 = 0;
                     if (var19 != 0) {
-                      break L17;
+                      break scanLoop1;
                     }
                     var12 = stackIn_67_0;
                     while (true) {
@@ -216,7 +216,7 @@ class cn implements qk, eg {
                         var13_ref_int__ = var20;
                         stackIn_61_0 = 0;
                         var14 = stackIn_61_0;
-                        L24: while (true) {
+                        scanLoop2: while (true) {
                           if (var14 < var25.length) {
                             var15 = var25[var14];
                             var16 = var20[var14 + 1];
@@ -230,12 +230,12 @@ class cn implements qk, eg {
                               }
                               var17_int = stackIn_43_0;
                               if (var16 != var17_int) {
-                                break L24;
+                                break scanLoop2;
                               }
                             } else {
                               if (~var16 != ~(255 & nf.field_b.field_Sb[var15]) &&
                                 var19 == 0) {
-                                break L24;
+                                break scanLoop2;
                               }
                             }
                             var14 += 2;
@@ -273,7 +273,7 @@ class cn implements qk, eg {
                       continue;
                     }
                   }
-                  stackIn_67_0 = ~ul.field_d;
+                  stackIn_67_0 = ~NodeDeque.field_d;
                   break;
                 }
                 if (stackIn_67_0 <= -3 &&
@@ -388,7 +388,7 @@ class cn implements qk, eg {
                 if (decompiledFrameCompleted0) {
                   var16 = 0;
                   var17 = gl.field_t.field_Ub.field_M;
-                  var18_ref = (cc) (var17.e(13058));
+                  var18_ref = (cc) (var17.first(13058));
                   while (true) {
                     boolean decompiledFrameRemainder0 = true;
                     boolean decompiledFrameRemainder1 = true;
@@ -430,7 +430,7 @@ class cn implements qk, eg {
                           }
                         }
                         if (decompiledFrameRemainder1) {
-                          var18_ref = (cc) (var17.a((byte) -12));
+                          var18_ref = (cc) (var17.next((byte) -12));
                           continue;
                         }
                       }
@@ -438,7 +438,7 @@ class cn implements qk, eg {
                     if (decompiledFrameRemainder0) {
                       stackIn_141_0 = 2;
                     }
-                    if (stackIn_141_0 <= ul.field_d &&
+                    if (stackIn_141_0 <= NodeDeque.field_d &&
                       fc.field_e[12]) {
                       var16 = 0;
                     }
@@ -477,18 +477,18 @@ class cn implements qk, eg {
             stackIn_164_0 = ql.field_ec;
             stackIn_164_1 = -99;
             stackIn_165_2 = (param1) && (!param2) && (!vb.field_c);
-            ((gh) (Object) stackIn_164_0).a((byte) stackIn_164_1, stackIn_165_2);
+            ((SceneWidget) (Object) stackIn_164_0).a((byte) stackIn_164_1, stackIn_165_2);
             stackIn_169_0 = gl.field_y;
             stackIn_169_1 = -88;
             stackIn_170_2 = (param1) && (!param2) && (!vb.field_c);
-            ((gh) (Object) stackIn_169_0).a((byte) stackIn_169_1, stackIn_170_2);
+            ((SceneWidget) (Object) stackIn_169_0).a((byte) stackIn_169_1, stackIn_170_2);
             if (param0 != 0) {
               cn.a(126, false, true, true, 60);
             }
             stackIn_176_0 = fb.field_r;
             stackIn_176_1 = -5;
             stackIn_177_2 = (param1) && (!param2) && (vb.field_c);
-            ((gh) (Object) stackIn_176_0).a((byte) stackIn_176_1, stackIn_177_2);
+            ((SceneWidget) (Object) stackIn_176_0).a((byte) stackIn_176_1, stackIn_177_2);
             fg.field_Tb.field_d.j(param0 + 10000);
             stackIn_178_0 = null;
           }
@@ -500,7 +500,7 @@ class cn implements qk, eg {
               vb.field_c = true;
             }
             if (fk.field_q.field_Eb != 0) {
-              qb.field_J = true;
+              ParticleEffect.field_J = true;
             }
             if (ta.field_i.field_Eb != 0) {
               vb.field_c = false;
@@ -681,7 +681,7 @@ class cn implements qk, eg {
         int var6 = 0;
         int var7 = 0;
         int var6Lifetime1;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           if (null == param0.field_s) {
             param0.field_s = (da) ((Object) new si());
@@ -764,7 +764,7 @@ class cn implements qk, eg {
         }
     }
 
-    cn(mi param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    cn(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -805,7 +805,7 @@ class cn implements qk, eg {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = hh.a(ji.a(-87, param1), (byte) -114);
+          var2 = hh.a(SentinelDesigner.a(-87, param1), (byte) -114);
           if (param0 < 89) {
             field_l = false;
           }
@@ -839,7 +839,7 @@ class cn implements qk, eg {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        var13 = SteelSentinels.field_G;
+        var13 = SteelSentinels.obfuscationControl;
         try {
           fe.a(param0 + param6.field_o, param2 + param6.field_z, 47, param6.field_x + (param6.field_o + param0), param6.field_E + param6.field_z + param2);
           var9_int = this.a(5546, param6);
@@ -870,20 +870,20 @@ class cn implements qk, eg {
             if (decompiledFrameRemainder2) {
               var11 = (-this.field_f.field_F - this.field_f.field_G + var10 >> 1) + this.field_f.field_G;
             }
-            L7: {
-              L8: {
-                L9: {
+            regionExit1: {
+              regionExit2: {
+                regionExit3: {
                   var12 = this.field_a;
                   if (0 != var12 ||
                     var13 != 0) {
                     switch (var12) {
                       case 1:
-                        break L9;
+                        break regionExit3;
                       default:
-                        break L7;
+                        break regionExit1;
                       case 2:
                         if (var13 == 0) {
-                          break L8;
+                          break regionExit2;
                         }
                         break;
                       case 3:
@@ -892,12 +892,12 @@ class cn implements qk, eg {
                   }
                   this.field_f.b(this.c(param1 + 11866, param6), this.a((byte) 114, param6, param5, param0), var11 + this.a(param3, param2, 0, param6), param7, param4);
                   if (var13 == 0) {
-                    break L7;
+                    break regionExit1;
                   }
                 }
                 this.field_f.a(this.c(-1, param6), (var9_int >> 1) + this.a((byte) 114, param6, param5, param0), this.a(param3, param2, 0, param6) + var11, param7, param4);
                 if (var13 == 0) {
-                  break L7;
+                  break regionExit1;
                 }
               }
               this.field_f.c(this.c(param1 ^ 11866, param6), this.a((byte) 114, param6, param5, param0) + var9_int, this.a(param3, param2, 0, param6) + var11, param7, param4);
@@ -942,7 +942,7 @@ class cn implements qk, eg {
           }
           if (this.field_i) {
             ((si) (param1.field_s)).a(this.a(param0 + 5547, param1), this.field_a, this.field_m, this.c(-1, param1), this.field_j, this.field_f, this.d(param0 - 2, param1), param0 + 2);
-            if (SteelSentinels.field_G != 0) {
+            if (SteelSentinels.obfuscationControl != 0) {
               this.a(param1, (byte) 125);
             }
           } else {
@@ -1012,7 +1012,7 @@ class cn implements qk, eg {
         int var16 = 0;
         da var17 = null;
         da var18 = null;
-        var16 = SteelSentinels.field_G;
+        var16 = SteelSentinels.obfuscationControl;
         try {
           if (~param3 == ~param5) {
             return;
@@ -1261,7 +1261,7 @@ class cn implements qk, eg {
     protected cn() {
     }
 
-    cn(mi param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    cn(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_h = param3;
           this.field_a = param7;

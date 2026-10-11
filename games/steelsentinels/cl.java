@@ -64,7 +64,7 @@ final class cl {
             }
             if (var3_int != 0) {
               if (rg.field_e) {
-                param0 = db.a(nb.field_T, -58, new String[]{param0});
+                param0 = db.a(GameplayController.field_T, -58, new String[]{param0});
               }
               if (nm.field_p) {
                 param0 = ph.field_c;
@@ -140,7 +140,7 @@ final class cl {
         int var8Lifetime3;
         int var5Lifetime2Lifetime1;
         int var7Lifetime1Lifetime1;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         try {
           in.field_a = param2;
           vl.field_r = true;
@@ -325,7 +325,7 @@ final class cl {
             }
             rb.field_c = mm.a(76);
           }
-          ra.field_f.field_m = oc.field_b.length;
+          DualNodeDeque.field_f.field_m = oc.field_b.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; r.field_j.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_86_0 = r.field_j[var4Lifetime1];
@@ -356,7 +356,7 @@ final class cl {
             }
           }
           ce.field_r = -(var3_intLifetime1 >> 1) + (mg.field_kc + var3_intLifetime1);
-          al.field_d = (rc.field_j + ng.field_m << 1) * ra.field_f.field_m;
+          al.field_d = (rc.field_j + ng.field_m << 1) * DualNodeDeque.field_f.field_m;
           ej.field_D = mg.field_kc - (var3_intLifetime1 >> 1);
           for (var4Lifetime2 = 0; r.field_j.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_110_0 = al.field_d;
@@ -390,9 +390,9 @@ final class cl {
             var5Lifetime3++;
           }
           if (in.field_a == 2) {
-            ra.field_f.a(param1, -1, 0, -1);
+            DualNodeDeque.field_f.a(param1, -1, 0, -1);
           } else {
-            ra.field_f.a(param1, 0, 0, lg.a(5, pi.field_c, oh.field_f));
+            DualNodeDeque.field_f.a(param1, 0, 0, GameApplet.a(5, pi.field_c, oh.field_f));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

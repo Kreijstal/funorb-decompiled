@@ -9,8 +9,8 @@ final class pl extends ch implements ae {
     static String field_V;
     private oa field_R;
     private re field_Z;
-    static wk[] field_T;
-    static mi field_X;
+    static RgbSprite[] field_T;
+    static BitmapFont field_X;
     static String field_Q;
     static int[][] field_ab;
 
@@ -18,7 +18,7 @@ final class pl extends ch implements ae {
         int var2;
         int var3;
         int var2Lifetime1;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         var2 = param1;
         if (var2 == 89) {
           return jd.field_nb[0];
@@ -50,7 +50,7 @@ final class pl extends ch implements ae {
           return (java.awt.Container) ((Object) vd.field_c);
         }
         int var1 = -117 / ((13 - param0) / 50);
-        return (java.awt.Container) ((Object) wl.d((byte) -21));
+        return (java.awt.Container) ((Object) Projectile.d((byte) -21));
     }
 
     public static void c(boolean param0) {
@@ -69,24 +69,24 @@ final class pl extends ch implements ae {
 
     final static void a(boolean param0, boolean param1, int param2, byte param3) {
         int stackIn_11_0 = 0;
-        gh stackIn_25_0 = null;
+        SceneWidget stackIn_25_0 = null;
         String stackIn_26_1 = null;
-        gh stackIn_28_0 = null;
+        SceneWidget stackIn_28_0 = null;
         String stackIn_29_1 = null;
         String stackIn_57_0 = null;
-        gh stackIn_71_0 = null;
+        SceneWidget stackIn_71_0 = null;
         int stackIn_71_1 = 0;
         boolean stackIn_72_2 = false;
-        gh stackIn_76_0 = null;
+        SceneWidget stackIn_76_0 = null;
         int stackIn_76_1 = 0;
         boolean stackIn_77_2 = false;
-        gh stackIn_81_0 = null;
+        SceneWidget stackIn_81_0 = null;
         int stackIn_81_1 = 0;
         boolean stackIn_82_2 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        gh var5 = null;
-        gh var6 = null;
+        SceneWidget var5 = null;
+        SceneWidget var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -97,13 +97,13 @@ final class pl extends ch implements ae {
         String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
-        gh var15 = null;
+        SceneWidget var15 = null;
         String var16 = null;
-        gh var17 = null;
+        SceneWidget var17 = null;
         Object var11Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
-        var12 = SteelSentinels.field_G;
+        var12 = SteelSentinels.obfuscationControl;
         try {
           vb.$cfr$intArgs$a$e9dea5688aa5(103, bd.field_c);
           if (null != ni.field_a) {
@@ -153,7 +153,7 @@ final class pl extends ch implements ae {
             fk.field_q.field_T = true;
             if (ad.field_f) {
               mn.field_E.field_T = false;
-              wl.field_J.field_S = oa.field_R;
+              Projectile.field_J.field_S = oa.field_R;
               if (var8 == 0) {
                 stackIn_57_0 = ah.field_fc;
               } else {
@@ -185,7 +185,7 @@ final class pl extends ch implements ae {
                 stackIn_26_1 = lj.field_i;
               }
               stackIn_25_0.field_S = ((String) (Object) stackIn_26_1).toUpperCase();
-              stackIn_28_0 = wl.field_J;
+              stackIn_28_0 = Projectile.field_J;
               if (var8 != 0) {
                 stackIn_29_1 = vi.field_P;
               } else {
@@ -197,7 +197,7 @@ final class pl extends ch implements ae {
               ng.field_k = true;
               if (m.field_b != null) {
                 ng.field_k = false;
-                gi.field_u = false;
+                PacketBuffer.field_u = false;
                 if (null == dl.field_O) {
                   dl.field_O = new byte[be.field_a];
                   m.field_h = new boolean[be.field_a];
@@ -209,7 +209,7 @@ final class pl extends ch implements ae {
                   var13++;
                 }
                 lc.a(-1, -1, ni.field_a, be.field_a, -1, -97, 0, true);
-                if (!(2 > ul.field_d) &&
+                if (!(2 > NodeDeque.field_d) &&
                   fc.field_e[12]) {
                   ng.field_k = true;
                 }
@@ -218,7 +218,7 @@ final class pl extends ch implements ae {
                 fk.field_q.field_T = false;
                 if (fk.field_q.field_K) {
                   var9 = null;
-                  if (gi.field_u) {
+                  if (PacketBuffer.field_u) {
                     var9 = "<col=A00000>" + rb.field_d + "</col>";
                     var11 = var9;
                     var9 = var11;
@@ -248,15 +248,15 @@ final class pl extends ch implements ae {
           stackIn_71_0 = ql.field_ec;
           stackIn_71_1 = -26;
           stackIn_72_2 = (param0) && (!param1) && (!vb.field_c);
-          ((gh) (Object) stackIn_71_0).a((byte) stackIn_71_1, stackIn_72_2);
+          ((SceneWidget) (Object) stackIn_71_0).a((byte) stackIn_71_1, stackIn_72_2);
           stackIn_76_0 = gl.field_y;
           stackIn_76_1 = -56;
           stackIn_77_2 = (param0) && (!param1) && (!vb.field_c);
-          ((gh) (Object) stackIn_76_0).a((byte) stackIn_76_1, stackIn_77_2);
+          ((SceneWidget) (Object) stackIn_76_0).a((byte) stackIn_76_1, stackIn_77_2);
           stackIn_81_0 = fb.field_r;
           stackIn_81_1 = 120;
           stackIn_82_2 = (param0) && (!param1) && (vb.field_c);
-          ((gh) (Object) stackIn_81_0).a((byte) stackIn_81_1, stackIn_82_2);
+          ((SceneWidget) (Object) stackIn_81_0).a((byte) stackIn_81_1, stackIn_82_2);
           fg.field_Tb.field_d.j(param3 ^ 10066);
           if (ni.field_a != null) {
             if (mn.field_E.field_Eb != 0) {
@@ -281,7 +281,7 @@ final class pl extends ch implements ae {
 
     pl(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (qk) null);
-        this.field_Z = new re(new ag(10000536), kj.field_B, 0, 0, 140, 25);
+        this.field_Z = new re(new ag(10000536), CipherPacketBuffer.field_B, 0, 0, 140, 25);
         this.field_Z.a((byte) -26, new vn());
         this.field_R = new oa(ah.field_Sb, (tn) (this));
         this.field_J = new lh[]{(lh) ((Object) this.field_Z), (lh) ((Object) this.field_R)};
@@ -289,7 +289,7 @@ final class pl extends ch implements ae {
         this.e((byte) 50);
     }
 
-    final static gh d(boolean param0) {
+    final static SceneWidget d(boolean param0) {
         if (!param0) {
           field_Q = (String) null;
         }

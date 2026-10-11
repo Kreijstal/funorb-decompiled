@@ -14,7 +14,7 @@ final class ec {
         return param0 & param1;
     }
 
-    final static byte[] a(int param0, kj param1, byte[] param2, int param3) {
+    final static byte[] a(int param0, CipherPacketBuffer param1, byte[] param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -29,7 +29,7 @@ final class ec {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           if (param3 != -13035) {
             field_c = (int[]) null;
@@ -77,13 +77,13 @@ final class ec {
     }
 
     final static void a(int param0, boolean param1, long param2) {
-        kj var4 = mm.field_g;
+        CipherPacketBuffer var4 = mm.field_g;
         var4.a(param0, (byte) -117);
-        var4.field_p = var4.field_p + 1;
-        int var5 = var4.field_p;
+        var4.position = var4.position + 1;
+        int var5 = var4.position;
         var4.a((byte) 127, 7);
         var4.b(-28875, param2);
-        var4.b((byte) 105, -var5 + var4.field_p);
+        var4.b((byte) 105, -var5 + var4.position);
         if (param1) {
           field_c = (int[]) null;
         }
@@ -126,15 +126,15 @@ final class ec {
         }
         ti.field_A = new String[48];
         ti.field_A[13] = bi.field_c;
-        ti.field_A[3] = kj.field_G;
+        ti.field_A[3] = CipherPacketBuffer.field_G;
         ti.field_A[2] = fb.field_q;
         ti.field_A[7] = jn.field_a;
         ti.field_A[0] = fk.field_f;
         ti.field_A[8] = null;
         ti.field_A[6] = ge.field_g;
-        ti.field_A[5] = kd.field_s;
-        ti.field_A[9] = ck.field_m;
-        ti.field_A[1] = qb.field_C;
+        ti.field_A[5] = DualNode.field_s;
+        ti.field_A[9] = IntrusiveNode.field_m;
+        ti.field_A[1] = ParticleEffect.field_C;
         ti.field_A[11] = vc.field_l;
         ti.field_A[4] = hb.field_h;
         stackIn_5_0 = ti.field_A;
@@ -172,13 +172,13 @@ final class ec {
         ti.field_A[18] = wc.field_b[1];
         ti.field_A[17] = wc.field_b[0];
         ti.field_A[32] = pm.field_P;
-        ti.field_A[29] = jc.field_j;
+        ti.field_A[29] = NodeIterator.field_j;
         ti.field_A[31] = mg.field_Tb;
         ti.field_A[38] = "";
         ti.field_A[33] = na.field_u;
-        ti.field_A[20] = kj.field_y;
+        ti.field_A[20] = CipherPacketBuffer.field_y;
         ti.field_A[26] = ng.field_b;
-        ti.field_A[19] = ul.field_a;
+        ti.field_A[19] = NodeDeque.field_a;
         stackIn_14_0 = ti.field_A;
         stackIn_14_1 = 47;
         if (tj.field_a) {
@@ -207,7 +207,7 @@ final class ec {
           stackIn_21_2 = fg.field_Vb;
         }
         stackIn_20_0[stackIn_20_1] = stackIn_21_2;
-        ti.field_A[34] = ea.field_e;
+        ti.field_A[34] = Sprite.field_e;
         ti.field_A[28] = hc.field_cb;
         ti.field_A[25] = vf.field_a;
         ti.field_A[40] = pe.field_R;
@@ -226,12 +226,12 @@ final class ec {
         rg.a(118);
     }
 
-    final static wk[] a(byte param0, String param1, cm param2, String param3) {
+    final static RgbSprite[] a(byte param0, String param1, cm param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         String var6 = null;
-        wk[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

@@ -23,7 +23,7 @@ final class nf {
         int var7 = 0;
         int[] var11 = null;
         int var5Lifetime1;
-        var7 = SteelSentinels.field_G;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           if (param0[0] != 0) {
             if (param0[0] != 55) {
@@ -101,7 +101,7 @@ final class nf {
         }
     }
 
-    final static void a(boolean param0, gi param1, java.math.BigInteger param2, int param3, int param4, java.math.BigInteger param5, byte[] param6) {
+    final static void a(boolean param0, PacketBuffer param1, java.math.BigInteger param2, int param3, int param4, java.math.BigInteger param5, byte[] param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -122,7 +122,7 @@ final class nf {
         int[] var13 = null;
         int[] var14 = null;
         int var9Lifetime1;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         try {
           var7_int = me.a(param4, -97);
           if (null == hb.field_c) {
@@ -135,24 +135,24 @@ final class nf {
             var8[var9] = hb.field_c.nextInt();
           }
           if (hj.field_H == null ||
-            !(hj.field_H.field_t.length >= var7_int)) {
-            hj.field_H = new gi(var7_int);
+            !(hj.field_H.payload.length >= var7_int)) {
+            hj.field_H = new PacketBuffer(var7_int);
           }
-          hj.field_H.field_p = 0;
+          hj.field_H.position = 0;
           hj.field_H.a(param4, (byte) -122, param3, param6);
           hj.field_H.b(-2, var7_int);
           hj.field_H.a(var14, -108);
           if (sj.field_u == null ||
-            !(sj.field_u.field_t.length >= 100)) {
-            sj.field_u = new gi(100);
+            !(sj.field_u.payload.length >= 100)) {
+            sj.field_u = new PacketBuffer(100);
           }
-          sj.field_u.field_p = 0;
+          sj.field_u.position = 0;
           sj.field_u.a((byte) 122, 10);
           var12 = 0;
           var9Lifetime1 = var12;
           if (param0) {
             var11 = (byte[]) null;
-            nf.a(true, (gi) null, (java.math.BigInteger) null, -45, 111, (java.math.BigInteger) null, (byte[]) null);
+            nf.a(true, (PacketBuffer) null, (java.math.BigInteger) null, -45, 111, (java.math.BigInteger) null, (byte[]) null);
           }
           while (var12 < 4) {
             sj.field_u.b(true, var14[var12]);
@@ -160,8 +160,8 @@ final class nf {
           }
           sj.field_u.d(param4, 17);
           sj.field_u.a(param2, param5, -10048);
-          param1.a(sj.field_u.field_p, (byte) -122, 0, sj.field_u.field_t);
-          param1.a(hj.field_H.field_p, (byte) -122, 0, hj.field_H.field_t);
+          param1.a(sj.field_u.position, (byte) -122, 0, sj.field_u.payload);
+          param1.a(hj.field_H.position, (byte) -122, 0, hj.field_H.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

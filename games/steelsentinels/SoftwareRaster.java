@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pb {
+final class SoftwareRaster {
     static int field_i;
     static int field_j;
     private static int[] field_h;
@@ -40,7 +40,7 @@ final class pb {
         if (field_d > param3) {
           field_d = param3;
         }
-        pb.d();
+        SoftwareRaster.d();
     }
 
     final static void a(int param0, int param1, int param2) {
@@ -166,17 +166,17 @@ final class pb {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            pb.g(param0 + param2, param1, -param2 + 1, param4);
+            SoftwareRaster.g(param0 + param2, param1, -param2 + 1, param4);
           } else {
-            pb.g(param0, param1, param2 + 1, param4);
+            SoftwareRaster.g(param0, param1, param2 + 1, param4);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            pb.d(param0, param1 + param3, -param3 + 1, param4);
+            SoftwareRaster.d(param0, param1 + param3, -param3 + 1, param4);
           } else {
-            pb.d(param0, param1, param3 + 1, param4);
+            SoftwareRaster.d(param0, param1, param3 + 1, param4);
           }
           return;
         }
@@ -283,11 +283,11 @@ final class pb {
         int var23Lifetime1;
         int var23Lifetime2;
         if (param6 == 256) {
-          pb.g(param0, param1, param2, param3, param4, param5);
+          SoftwareRaster.g(param0, param1, param2, param3, param4, param5);
           return;
         }
         if (param4 == 0) {
-          pb.c(param0, param1, param2, param3, param5, param6);
+          SoftwareRaster.c(param0, param1, param2, param3, param5, param6);
           return;
         }
         var7 = 256 - param6;
@@ -439,17 +439,17 @@ final class pb {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            pb.c(param0 + param2 + 1, param1, -param2, param4, param5);
+            SoftwareRaster.c(param0 + param2 + 1, param1, -param2, param4, param5);
           } else {
-            pb.c(param0, param1, param2, param4, param5);
+            SoftwareRaster.c(param0, param1, param2, param4, param5);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            pb.f(param0, param1 + param3 + 1, -param3, param4, param5);
+            SoftwareRaster.f(param0, param1 + param3 + 1, -param3, param4, param5);
           } else {
-            pb.f(param0, param1, param3, param4, param5);
+            SoftwareRaster.f(param0, param1, param3, param4, param5);
           }
           return;
         }
@@ -582,8 +582,8 @@ final class pb {
     }
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        pb.a(field_g, 0, param2 + param3 * field_c, param0, param2, param4, field_c - param4, param5);
-        pb.a(field_g, 0, param2 + param3 * field_c, param1, param3, param5, field_c - param4, param2, param4);
+        SoftwareRaster.a(field_g, 0, param2 + param3 * field_c, param0, param2, param4, field_c - param4, param5);
+        SoftwareRaster.a(field_g, 0, param2 + param3 * field_c, param1, param3, param5, field_c - param4, param2, param4);
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -770,17 +770,17 @@ final class pb {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            pb.c(param0 + param2, param1, -param2 + 1, param4, param5);
+            SoftwareRaster.c(param0 + param2, param1, -param2 + 1, param4, param5);
           } else {
-            pb.c(param0, param1, param2 + 1, param4, param5);
+            SoftwareRaster.c(param0, param1, param2 + 1, param4, param5);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            pb.f(param0, param1 + param3, -param3 + 1, param4, param5);
+            SoftwareRaster.f(param0, param1 + param3, -param3 + 1, param4, param5);
           } else {
-            pb.f(param0, param1, param3 + 1, param4, param5);
+            SoftwareRaster.f(param0, param1, param3 + 1, param4, param5);
           }
           return;
         }
@@ -968,8 +968,8 @@ final class pb {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
           var5 = 128 - (var6 << 5);
-          pb.c(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-          pb.f(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+          SoftwareRaster.c(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+          SoftwareRaster.f(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
         }
     }
 
@@ -1001,7 +1001,7 @@ final class pb {
         int var14Lifetime1;
         int var15Lifetime1;
         if (param2 == 0) {
-          pb.b(param0, param1, param3);
+          SoftwareRaster.b(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
@@ -1119,7 +1119,7 @@ final class pb {
         int var9;
         int var10;
         if (param2 == 0) {
-          pb.b(param0, param1, param3);
+          SoftwareRaster.b(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
@@ -1291,15 +1291,15 @@ final class pb {
         field_l = 0;
         field_b = field_c;
         field_d = field_j;
-        pb.d();
+        SoftwareRaster.d();
     }
 
     final static void h(int param0, int param1, int param2, int param3, int param4, int param5) {
-        pb.c(param0, param1, param2, param4, param5);
-        pb.c(param0, param1 + param3 - 1, param2, param4, param5);
+        SoftwareRaster.c(param0, param1, param2, param4, param5);
+        SoftwareRaster.c(param0, param1 + param3 - 1, param2, param4, param5);
         if (param3 >= 3) {
-          pb.f(param0, param1 + 1, param3 - 2, param4, param5);
-          pb.f(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
+          SoftwareRaster.f(param0, param1 + 1, param3 - 2, param4, param5);
+          SoftwareRaster.f(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
           return;
         }
     }
@@ -1321,7 +1321,7 @@ final class pb {
         }
         int var4 = field_c - param2;
         int var5 = param0 + param1 * field_c;
-        pb.a(var5, field_g, 0, param2, -param3, var4);
+        SoftwareRaster.a(var5, field_g, 0, param2, -param3, var4);
     }
 
     final static void a(int[] param0) {
@@ -1329,7 +1329,7 @@ final class pb {
         field_l = param0[1];
         field_b = param0[2];
         field_d = param0[3];
-        pb.d();
+        SoftwareRaster.d();
     }
 
     final static void f(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -1352,17 +1352,17 @@ final class pb {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            pb.g(param0 + param2, param1, -param2 + 1, param4, param5);
+            SoftwareRaster.g(param0 + param2, param1, -param2 + 1, param4, param5);
           } else {
-            pb.g(param0, param1, param2 + 1, param4, param5);
+            SoftwareRaster.g(param0, param1, param2 + 1, param4, param5);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            pb.i(param0, param1 + param3, -param3 + 1, param4, param5);
+            SoftwareRaster.i(param0, param1 + param3, -param3 + 1, param4, param5);
           } else {
-            pb.i(param0, param1, param3 + 1, param4, param5);
+            SoftwareRaster.i(param0, param1, param3 + 1, param4, param5);
           }
           return;
         }
@@ -1509,7 +1509,7 @@ final class pb {
           return;
         }
         if (param4 == 256) {
-          pb.e(param0, param1, param2, param3);
+          SoftwareRaster.e(param0, param1, param2, param3);
           return;
         }
         if (param2 < 0) {
@@ -1960,14 +1960,14 @@ final class pb {
         field_g = param0;
         field_c = param1;
         field_j = param2;
-        pb.a(0, 0, param1, param2);
+        SoftwareRaster.a(0, 0, param1, param2);
     }
 
     final static void h(int param0, int param1, int param2, int param3, int param4) {
-        pb.g(param0, param1, param2, param4);
-        pb.g(param0, param1 + param3 - 1, param2, param4);
-        pb.d(param0, param1, param3, param4);
-        pb.d(param0 + param2 - 1, param1, param3, param4);
+        SoftwareRaster.g(param0, param1, param2, param4);
+        SoftwareRaster.g(param0, param1 + param3 - 1, param2, param4);
+        SoftwareRaster.d(param0, param1, param3, param4);
+        SoftwareRaster.d(param0 + param2 - 1, param1, param3, param4);
     }
 
     private final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5) {
@@ -2018,7 +2018,7 @@ final class pb {
         field_l = param1;
         field_b = param2;
         field_d = param3;
-        pb.d();
+        SoftwareRaster.d();
     }
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4) {
@@ -2059,7 +2059,7 @@ final class pb {
         int var21 = var20 - var19;
         int var22 = var6 + var8 * field_c;
         int var23 = field_c + var6 - var7;
-        pb.a(0, 0, 0, 0, 0, var15, var5, var22, field_g, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
+        SoftwareRaster.a(0, 0, 0, 0, 0, var15, var5, var22, field_g, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
     }
 
     final static void g(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -2101,7 +2101,7 @@ final class pb {
         int var20Lifetime1;
         int var20Lifetime2;
         if (param4 == 0) {
-          pb.a(param0, param1, param2, param3, param5);
+          SoftwareRaster.a(param0, param1, param2, param3, param5);
           return;
         }
         if (param4 < 0) {

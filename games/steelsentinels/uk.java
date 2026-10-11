@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class uk extends ck {
+final class uk extends IntrusiveNode {
     private static pj[] field_q;
     private static int[] field_S;
     private static wf[] field_O;
@@ -452,7 +452,7 @@ final class uk extends ck {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        gi var2 = new gi(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_P = var2.i(0);
         this.field_x = var2.i(0);
         this.field_F = var2.i(0);

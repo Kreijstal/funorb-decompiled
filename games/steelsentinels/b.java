@@ -3,22 +3,22 @@
  */
 final class b implements qk {
     static String field_g;
-    static wk[] field_q;
+    static RgbSprite[] field_q;
     private int field_d;
     static String field_p;
     private int field_s;
     static String field_i;
     static boolean field_f;
-    private mi field_o;
+    private BitmapFont field_o;
     private int field_m;
     private int field_k;
-    static wk[] field_n;
+    static RgbSprite[] field_n;
     private int field_h;
     static String field_j;
     static int field_c;
     static String field_l;
     static int field_b;
-    static gh field_e;
+    static SceneWidget field_e;
     private int field_r;
     private int field_a;
 
@@ -33,7 +33,7 @@ final class b implements qk {
         double var9Lifetime1;
         int var11Lifetime1;
         int var12Lifetime1;
-        pb.a(param0 + param1.field_o, param4 + param1.field_z, param1.field_x, param1.field_E, this.field_m);
+        SoftwareRaster.a(param0 + param1.field_o, param4 + param1.field_z, param1.field_x, param1.field_E, this.field_m);
         if (var14 != null) {
         }
         if (param2 != -30) {
@@ -42,18 +42,18 @@ final class b implements qk {
         try {
           var7 = var14.field_cb + (param1.field_o + param0);
           var8 = var14.field_Y + (param4 + param1.field_z);
-          pb.e(var7, var8, var14.field_ab, this.field_a);
+          SoftwareRaster.e(var7, var8, var14.field_ab, this.field_a);
           if (-1 != var14.field_W) {
             var9 = (double)var14.field_W * 3.141592653589793 * 2.0 / (double)var14.field_bb;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_ab);
             var12 = (int)(Math.cos(var9) * (double)var14.field_ab);
-            pb.e(var11 + var7, var12 + var8, 1, this.field_k);
+            SoftwareRaster.e(var11 + var7, var12 + var8, 1, this.field_k);
           }
-          pb.e(var7, var8, 2, 1);
+          SoftwareRaster.e(var7, var8, 2, 1);
           var9Lifetime1 = (double)var14.field_eb * 3.141592653589793 * 2.0 / (double)var14.field_bb;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_ab);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_ab);
-          pb.d(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRaster.d(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_o) {
             var13 = this.field_s + var14.field_cb + var14.field_ab;
             this.field_o.a(param1.field_y, param0 + param1.field_o + var13, this.field_h + param4 + param1.field_z, -var13 - this.field_s + param1.field_x, param1.field_E - (this.field_s << 1), this.field_r, this.field_d, 1, 1, 0);
@@ -64,16 +64,16 @@ final class b implements qk {
     }
 
     final static void a(int param0, int param1) {
-        kj var2 = mm.field_g;
+        CipherPacketBuffer var2 = mm.field_g;
         var2.a(param1, (byte) -117);
-        var2.field_p = var2.field_p + 1;
-        int var3 = var2.field_p;
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
         var2.a((byte) 113, 2);
         var2.a(rb.field_i.length, (byte) -122, 0, rb.field_i);
         var2.a((byte) 125, fi.field_l);
-        var2.a((byte) 110, nb.field_L);
+        var2.a((byte) 110, GameplayController.field_L);
         var2.a(ti.field_s.length, (byte) -122, 0, ti.field_s);
-        var2.b((byte) 123, var2.field_p - var3);
+        var2.b((byte) 123, var2.position - var3);
         if (param0 < -21) {
           return;
         }
@@ -81,7 +81,7 @@ final class b implements qk {
     }
 
     final static void a(int param0, byte param1) {
-        kj var2 = mm.field_g;
+        CipherPacketBuffer var2 = mm.field_g;
         var2.a(param0, (byte) -117);
         var2.a((byte) 123, 2);
         var2.a((byte) 112, 4);
@@ -114,7 +114,7 @@ final class b implements qk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            field_n = (wk[]) null;
+            field_n = (RgbSprite[]) null;
           }
           if (jn.field_b == nj.field_ab) {
             stackIn_4_0 = null;
@@ -145,7 +145,7 @@ final class b implements qk {
         }
     }
 
-    b(mi param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    b(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_m = param7;
           this.field_h = param2;
@@ -161,7 +161,7 @@ final class b implements qk {
     }
 
     static {
-        field_q = new wk[3];
+        field_q = new RgbSprite[3];
         field_j = "Off";
         field_p = "S";
         field_l = "Complete three training missions to unlock your first sentinel.";

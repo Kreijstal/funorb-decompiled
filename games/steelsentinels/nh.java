@@ -56,7 +56,7 @@ final class nh {
         }
     }
 
-    final static void a(boolean param0, mb param1) {
+    final static void a(boolean param0, Sentinel param1) {
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
         String stackIn_54_2 = null;
@@ -64,9 +64,9 @@ final class nh {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
-          var2_int = param1.field_rc;
+          var2_int = param1.activeModuleType;
           switch (var2_int) {
             case 10:
               param1.field_Q = param1.field_Q - 100;
@@ -95,7 +95,7 @@ final class nh {
                 var2_int != 7 &&
                 var2_int != 8) {
                 if (var2_int == 9) {
-                  param1.field_x = param1.field_x - ag.a(48, param1.field_rc);
+                  param1.maximumCharge = param1.maximumCharge - ag.a(48, param1.activeModuleType);
                   break;
                 }
                 if (var2_int == 29) {
@@ -108,7 +108,7 @@ final class nh {
                 param1.field_Fb = param1.field_Fb / 2;
                 break;
               }
-              param1.field_x = param1.field_x - ag.a(48, param1.field_rc);
+              param1.maximumCharge = param1.maximumCharge - ag.a(48, param1.activeModuleType);
               break;
             case 4:
               param1.field_wb = param1.field_wb - 5;
@@ -132,10 +132,10 @@ final class nh {
           if (param1.field_S > param1.field_Q) {
             param1.field_S = param1.field_Q;
           }
-          if (param1.field_Tb > param1.field_x) {
-            param1.g(5);
+          if (param1.charge > param1.maximumCharge) {
+            param1.refillCharge(5);
           }
-          param1.field_rc = -1;
+          param1.activeModuleType = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -151,13 +151,13 @@ final class nh {
         }
     }
 
-    final static void a(byte param0, gh param1, gh param2) {
+    final static void a(byte param0, SceneWidget param1, SceneWidget param2) {
         try {
           if (null == param1.field_M) {
-            param1.field_M = new ul();
+            param1.field_M = new NodeDeque();
           }
           if (param2.field_M == null) {
-            param2.field_M = new ul();
+            param2.field_M = new NodeDeque();
           }
           if (null == pi.field_a) {
             pi.field_a = new dk(64);
@@ -165,7 +165,7 @@ final class nh {
           if (null == db.field_h) {
             db.field_h = new dk(64);
           }
-          ea.field_c = param1.field_M;
+          Sprite.field_c = param1.field_M;
           if (param0 > -97) {
             field_o = (String[]) null;
           }

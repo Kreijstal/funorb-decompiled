@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class jk {
-    static gh[] field_a;
+    static SceneWidget[] field_a;
     static String field_e;
     static String field_f;
     static String field_b;
@@ -13,7 +13,7 @@ final class jk {
     static int[] field_j;
     static mg field_i;
     static String field_g;
-    static gh field_h;
+    static SceneWidget field_h;
     static int field_d;
 
     final static boolean c(byte param0) {
@@ -112,7 +112,7 @@ final class jk {
         }
     }
 
-    final static void a(int param0, gi param1) {
+    final static void a(int param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -129,10 +129,10 @@ final class jk {
           String stackIn_22_2 = null;
           Throwable decompiledCaughtException = null;
           RuntimeException var2_ref = null;
-          var5 = SteelSentinels.field_G;
+          var5 = SteelSentinels.obfuscationControl;
           try {
             if (param0 < 120) {
-              field_a = (gh[]) null;
+              field_a = (SceneWidget[]) null;
             }
             var9 = new byte[24];
             var7 = var9;
@@ -208,8 +208,8 @@ final class jk {
     }
 
     final static void a(byte param0) {
-        wk var3 = new wk(120, 30);
-        wk var4 = var3;
+        RgbSprite var3 = new RgbSprite(120, 30);
+        RgbSprite var4 = var3;
         ub.field_a[0] = qe.a(var4, (byte) -93, jf.field_eb);
         ub.field_a[1] = qe.a(var4, (byte) -93, gf.field_e);
         ub.field_a[2] = qe.a(var4, (byte) -93, ob.field_w);
@@ -224,7 +224,7 @@ final class jk {
         ub.field_a[14] = qe.a(var4, (byte) -93, b.field_p);
         ub.field_a[15] = qe.a(var4, (byte) -93, lk.field_X);
         ub.field_a[16] = qe.a(var4, (byte) -93, pl.field_V);
-        lc.field_a = new gk[ub.field_a.length];
+        lc.field_a = new IndexedSprite[ub.field_a.length];
         ii.a(ub.field_a, 0, lc.field_a, 0, ub.field_a.length);
         lc.field_a[5] = ub.field_a[15];
         lc.field_a[4] = ub.field_a[14];

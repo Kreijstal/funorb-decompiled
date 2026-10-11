@@ -21,7 +21,7 @@ final class s implements qk {
         }
     }
 
-    final static void a(gi param0, int param1, int param2, int param3, int param4) {
+    final static void a(PacketBuffer param0, int param1, int param2, int param3, int param4) {
         try {
           param0.a((byte) 112, param1);
           param0.d(17, 77);
@@ -42,7 +42,7 @@ final class s implements qk {
         int var9 = 0;
         int var6_intLifetime1;
         int var7Lifetime1;
-        var9 = SteelSentinels.field_G;
+        var9 = SteelSentinels.obfuscationControl;
         try {
           if (param0 != -1) {
             for (var6_int = 0; 11 > var6_int; var6_int++) {
@@ -54,21 +54,21 @@ final class s implements qk {
                 var7 = (-var6_int + 10) * 2 + 2;
               }
               if (!param2) {
-                pb.g(param4 - 5, var6_int + param3 - 5, var7, param0);
+                SoftwareRaster.g(param4 - 5, var6_int + param3 - 5, var7, param0);
               } else {
-                pb.g(6 + (param4 - var7), param3 - 5 + var6_int, var7, param0);
+                SoftwareRaster.g(6 + (param4 - var7), param3 - 5 + var6_int, var7, param0);
               }
             }
           }
           if (-1 != param5) {
             if (!param2) {
-              pb.d(-5 + param4, param3 - 5, 11, param5);
-              pb.d(param4 - 4, param3 - 5, 5 + param4, param3, param5);
-              pb.d(-4 + param4, 5 + param3, param4 + 5, param3, param5);
+              SoftwareRaster.d(-5 + param4, param3 - 5, 11, param5);
+              SoftwareRaster.d(param4 - 4, param3 - 5, 5 + param4, param3, param5);
+              SoftwareRaster.d(-4 + param4, 5 + param3, param4 + 5, param3, param5);
             } else {
-              pb.d(param4 + 5, param3 - 5, 11, param5);
-              pb.d(param4 + 4, param3 - 5, -5 + param4, param3, param5);
-              pb.d(4 + param4, 5 + param3, param4 - 5, param3, param5);
+              SoftwareRaster.d(param4 + 5, param3 - 5, 11, param5);
+              SoftwareRaster.d(param4 + 4, param3 - 5, -5 + param4, param3, param5);
+              SoftwareRaster.d(4 + param4, 5 + param3, param4 - 5, param3, param5);
             }
           }
           if (param4 != -1) {
@@ -77,38 +77,38 @@ final class s implements qk {
           var6_intLifetime1 = param4 - 10;
           var7Lifetime1 = param4 + 10;
           if (param0 != -1) {
-            pb.a(var6_intLifetime1, -2 + param3, 20, 5, param0);
+            SoftwareRaster.a(var6_intLifetime1, -2 + param3, 20, 5, param0);
             for (var8 = 0; 5 > var8; var8++) {
               if (!param2) {
-                pb.d(-var8 + 3 + var7Lifetime1, param3, -7 + (-var8 + 3) + var7Lifetime1, param3 - 7, param0);
-                pb.d(var7Lifetime1 + 3 - var8, param3, -7 - var8 + (var7Lifetime1 + 3), 7 + param3, param0);
+                SoftwareRaster.d(-var8 + 3 + var7Lifetime1, param3, -7 + (-var8 + 3) + var7Lifetime1, param3 - 7, param0);
+                SoftwareRaster.d(var7Lifetime1 + 3 - var8, param3, -7 - var8 + (var7Lifetime1 + 3), 7 + param3, param0);
               } else {
-                pb.d(-3 + var6_intLifetime1 + var8, param3, 7 + var6_intLifetime1 + (-3 + var8), param3 - 7, param0);
-                pb.d(var8 + var6_intLifetime1 - 3, param3, 7 + (-3 + var6_intLifetime1) + var8, 7 + param3, param0);
+                SoftwareRaster.d(-3 + var6_intLifetime1 + var8, param3, 7 + var6_intLifetime1 + (-3 + var8), param3 - 7, param0);
+                SoftwareRaster.d(var8 + var6_intLifetime1 - 3, param3, 7 + (-3 + var6_intLifetime1) + var8, 7 + param3, param0);
               }
             }
           }
           if (param5 != -1) {
             if (param2) {
-              pb.d(var6_intLifetime1 - 3, param3, 4 + var6_intLifetime1, -7 + param3, param5);
-              pb.g(var6_intLifetime1 + 4, param3 - 7, 4, param5);
-              pb.d(8 + var6_intLifetime1, param3 - 7, var6_intLifetime1 + 4, param3 - 3, param5);
-              pb.g(4 + var6_intLifetime1, param3 - 3, 16, param5);
-              pb.d(var6_intLifetime1 - 3, param3, 4 + var6_intLifetime1, 7 + param3, param5);
-              pb.g(4 + var6_intLifetime1, 7 + param3, 4, param5);
-              pb.d(var6_intLifetime1 + 8, 7 + param3, var6_intLifetime1 + 4, param3 + 3, param5);
-              pb.g(var6_intLifetime1 + 4, param3 + 3, 16, param5);
-              pb.d(var7Lifetime1 - 1, param3 - 3, 6, param5);
+              SoftwareRaster.d(var6_intLifetime1 - 3, param3, 4 + var6_intLifetime1, -7 + param3, param5);
+              SoftwareRaster.g(var6_intLifetime1 + 4, param3 - 7, 4, param5);
+              SoftwareRaster.d(8 + var6_intLifetime1, param3 - 7, var6_intLifetime1 + 4, param3 - 3, param5);
+              SoftwareRaster.g(4 + var6_intLifetime1, param3 - 3, 16, param5);
+              SoftwareRaster.d(var6_intLifetime1 - 3, param3, 4 + var6_intLifetime1, 7 + param3, param5);
+              SoftwareRaster.g(4 + var6_intLifetime1, 7 + param3, 4, param5);
+              SoftwareRaster.d(var6_intLifetime1 + 8, 7 + param3, var6_intLifetime1 + 4, param3 + 3, param5);
+              SoftwareRaster.g(var6_intLifetime1 + 4, param3 + 3, 16, param5);
+              SoftwareRaster.d(var7Lifetime1 - 1, param3 - 3, 6, param5);
             } else {
-              pb.d(3 + var7Lifetime1, param3, -4 + var7Lifetime1, -7 + param3, param5);
-              pb.g(-4 + var7Lifetime1 - 4, param3 - 7, 4, param5);
-              pb.d(var7Lifetime1 - 8, -7 + param3, var7Lifetime1 - 4, -3 + param3, param5);
-              pb.g(-16 + (-4 + var7Lifetime1), param3 - 3, 16, param5);
-              pb.d(3 + var7Lifetime1, param3, var7Lifetime1 - 4, 7 + param3, param5);
-              pb.g(-8 + var7Lifetime1, 7 + param3, 4, param5);
-              pb.d(-8 + var7Lifetime1, param3 + 7, -4 + var7Lifetime1, 3 + param3, param5);
-              pb.g(-4 + var7Lifetime1 - 16, param3 + 3, 16, param5);
-              pb.d(var6_intLifetime1, param3 - 3, 6, param5);
+              SoftwareRaster.d(3 + var7Lifetime1, param3, -4 + var7Lifetime1, -7 + param3, param5);
+              SoftwareRaster.g(-4 + var7Lifetime1 - 4, param3 - 7, 4, param5);
+              SoftwareRaster.d(var7Lifetime1 - 8, -7 + param3, var7Lifetime1 - 4, -3 + param3, param5);
+              SoftwareRaster.g(-16 + (-4 + var7Lifetime1), param3 - 3, 16, param5);
+              SoftwareRaster.d(3 + var7Lifetime1, param3, var7Lifetime1 - 4, 7 + param3, param5);
+              SoftwareRaster.g(-8 + var7Lifetime1, 7 + param3, 4, param5);
+              SoftwareRaster.d(-8 + var7Lifetime1, param3 + 7, -4 + var7Lifetime1, 3 + param3, param5);
+              SoftwareRaster.g(-4 + var7Lifetime1 - 16, param3 + 3, 16, param5);
+              SoftwareRaster.d(var6_intLifetime1, param3 - 3, 6, param5);
             }
           }
           if (!param1) {
@@ -125,7 +125,7 @@ final class s implements qk {
     final static int a(int param0, boolean param1) {
         int var2;
         int var3;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         if (param1) {
           field_a = 125;
         }
@@ -207,14 +207,14 @@ final class s implements qk {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        wk var8 = null;
+        RgbSprite var8 = null;
         try {
           if (param2 != -30) {
             s.a((byte) -83);
           }
           var6_int = param0 + param1.field_o;
           var7 = param1.field_z + param4;
-          ra.a(var7, param1.field_x, param1.field_E, var6_int, (byte) 120);
+          DualNodeDeque.a(var7, param1.field_x, param1.field_E, var6_int, (byte) 120);
           var8 = t.field_i[1];
           if (param1 instanceof oa &&
             ((oa) (param1)).field_T) {
@@ -238,13 +238,13 @@ final class s implements qk {
         }
     }
 
-    final static short[] a(short[] param0, int param1, kj param2, boolean param3) {
+    final static short[] a(short[] param0, int param1, CipherPacketBuffer param2, boolean param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        kj var9 = null;
+        CipherPacketBuffer var9 = null;
         Object stackIn_3_0 = null;
         short[] stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
@@ -254,7 +254,7 @@ final class s implements qk {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           var4_int = param2.g(-118, param1);
           if (var4_int == 0) {
@@ -268,8 +268,8 @@ final class s implements qk {
           var5 = param2.g(20, 4);
           var6 = (short)param2.g(-91, 16);
           if (param3) {
-            var9 = (kj) null;
-            s.a((short[]) null, 108, (kj) null, false);
+            var9 = (CipherPacketBuffer) null;
+            s.a((short[]) null, 108, (CipherPacketBuffer) null, false);
           }
           if (var5 > 0) {
             for (var7 = 0; var7 < var4_int; var7++) {

@@ -3,9 +3,9 @@
  */
 final class tj {
     static String field_b;
-    static mi field_e;
+    static BitmapFont field_e;
     static boolean field_a;
-    static gh field_f;
+    static SceneWidget field_f;
     static int field_c;
     static String field_d;
 
@@ -26,7 +26,7 @@ final class tj {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new tc(param6, param3, param1, param2, param0, param4, param7);
-          ic.field_B.a(param5 ^ 18, var9);
+          ic.field_B.addLast(param5 ^ 18, var9);
           if (param5 != 17) {
             field_d = (String) null;
           }

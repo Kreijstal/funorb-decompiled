@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ck {
+class IntrusiveNode {
     static String field_m;
     static int field_e;
     static String field_d;
-    long field_j;
+    long key;
     static fm field_g;
     static String[] field_b;
     static boolean field_a;
     static String field_n;
     static int[] field_c;
-    ck field_k;
-    ck field_i;
+    IntrusiveNode next;
+    IntrusiveNode previous;
     static int field_l;
     static int field_h;
-    static gh[] field_f;
+    static SceneWidget[] field_f;
 
     final static ll a(int param0) {
         int var1 = -105 / ((param0 - 83) / 42);
@@ -35,23 +35,23 @@ class ck {
         return kh.field_w;
     }
 
-    final void b(int param0) {
-        if (param0 != 4) {
+    final void unlink(int obfuscationGuard) {
+        if (obfuscationGuard != 4) {
           field_e = -59;
-          if (this.field_i != null) {
-            this.field_i.field_k = this.field_k;
-            this.field_k.field_i = this.field_i;
-            this.field_i = null;
-            this.field_k = null;
+          if (this.previous != null) {
+            this.previous.next = this.next;
+            this.next.previous = this.previous;
+            this.previous = null;
+            this.next = null;
             return;
           }
           return;
         }
-        if (this.field_i != null) {
-          this.field_i.field_k = this.field_k;
-          this.field_k.field_i = this.field_i;
-          this.field_i = null;
-          this.field_k = null;
+        if (this.previous != null) {
+          this.previous.next = this.next;
+          this.next.previous = this.previous;
+          this.previous = null;
+          this.next = null;
           return;
         }
     }
@@ -67,7 +67,7 @@ class ck {
           field_n = null;
           return;
         }
-        ck.c(127);
+        IntrusiveNode.c(127);
         field_c = null;
         field_g = null;
         field_d = null;
@@ -79,7 +79,7 @@ class ck {
         if (param0 != -12) {
           return true;
         }
-        if (this.field_i != null) {
+        if (this.previous != null) {
           return true;
         }
         return false;
@@ -93,6 +93,6 @@ class ck {
         field_l = 640;
         field_g = new fm(1, 2, 2, 0);
         field_h = 0;
-        field_f = new gh[32];
+        field_f = new SceneWidget[32];
     }
 }

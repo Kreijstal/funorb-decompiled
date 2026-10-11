@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ue {
-    static wk[] field_g;
+    static RgbSprite[] field_g;
     static String field_a;
     static int[][] field_c;
     static boolean field_b;
     static tg field_e;
     static String field_d;
-    static gh field_f;
+    static SceneWidget field_f;
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        ne.field_y.field_p = 0;
+        ne.field_y.position = 0;
         ne.field_y.a((byte) 122, 12);
         ne.field_y.b(param3, rb.field_g.nextInt());
         ne.field_y.b(true, rb.field_g.nextInt());
@@ -20,11 +20,11 @@ final class ue {
         ne.field_y.d(param1, 59);
         ne.field_y.a(qe.field_d, jd.field_ib, -10048);
         mm.field_g.a(18, (byte) -117);
-        int fieldTemp$0 = mm.field_g.field_p + 1;
-        mm.field_g.field_p = mm.field_g.field_p + 1;
+        int fieldTemp$0 = mm.field_g.position + 1;
+        mm.field_g.position = mm.field_g.position + 1;
         int var4 = fieldTemp$0;
-        mm.field_g.a(ne.field_y.field_p, (byte) -122, 0, ne.field_y.field_t);
-        mm.field_g.b((byte) 89, -var4 + mm.field_g.field_p);
+        mm.field_g.a(ne.field_y.position, (byte) -122, 0, ne.field_y.payload);
+        mm.field_g.b((byte) 89, -var4 + mm.field_g.position);
     }
 
     final static int a(byte param0) {
@@ -43,19 +43,19 @@ final class ue {
         }
     }
 
-    final static void a(int param0, gh param1) {
-        gh var4 = null;
-        gh var5 = null;
-        int var3 = SteelSentinels.field_G;
+    final static void a(int param0, SceneWidget param1) {
+        SceneWidget var4 = null;
+        SceneWidget var5 = null;
+        int var3 = SteelSentinels.obfuscationControl;
         try {
-          var4 = (gh) (param1.field_M.e(13058));
-          gh var2 = var4;
+          var4 = (SceneWidget) (param1.field_M.first(13058));
+          SceneWidget var2 = var4;
           while (var4 != null) {
             var4.field_Lb = 0;
             var4.field_lb = 0;
             var4.field_eb = 0;
             var4.field_gb = 0;
-            var5 = (gh) (param1.field_M.a((byte) -34));
+            var5 = (SceneWidget) (param1.field_M.next((byte) -34));
             var5 = var5;
           }
           param1.field_Lb = 0;
@@ -109,7 +109,7 @@ final class ue {
     static {
         field_a = "Waiting for sound effects";
         field_c = new int[][]{null, null, null};
-        field_g = new wk[field_c.length];
+        field_g = new RgbSprite[field_c.length];
         field_d = "<col=00ffff>You are reading a past message, and your training schedule has been paused.<br>To continue your training, press <img=20> until you return to your current objective.</col>";
         field_b = false;
     }

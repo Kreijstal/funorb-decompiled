@@ -12,9 +12,9 @@ final class ig {
     private int field_l;
     static int field_e;
     private long[] field_j;
-    static gh field_m;
+    static SceneWidget field_m;
     static fm field_n;
-    static wk[][] field_o;
+    static RgbSprite[][] field_o;
     static String field_d;
     static String[] field_g;
 
@@ -50,7 +50,7 @@ final class ig {
         int var27Lifetime1;
         int var25Lifetime2;
         int var25Lifetime1Lifetime1;
-        var28 = SteelSentinels.field_G;
+        var28 = SteelSentinels.obfuscationControl;
         try {
           var15_int = (param2 << 4) - param8;
           var16 = param14;
@@ -69,7 +69,7 @@ final class ig {
               if (var24 > 479) {
                 var24 = 479;
               }
-              var25 = pb.field_g[var24 * 640 + var23];
+              var25 = SoftwareRaster.field_g[var24 * 640 + var23];
               var26 = 64 + (ff.field_ib[var21] * param5 >> 17);
               if (var26 < 0) {
                 throw new Error();
@@ -82,7 +82,7 @@ final class ig {
               var17 = var17 + var18;
               incrementValue$1 = var16;
               var16++;
-              pb.field_g[incrementValue$1] = vn.a(var27 - (var27 >>> 8), var25Lifetime2) >>> 6;
+              SoftwareRaster.field_g[incrementValue$1] = vn.a(var27 - (var27 >>> 8), var25Lifetime2) >>> 6;
               var18 = var18 + param12;
               continue;
             }
@@ -106,7 +106,7 @@ final class ig {
               if (var24Lifetime1 > 479) {
                 var24Lifetime1 = 479;
               }
-              var25Lifetime1 = pb.field_g[var24Lifetime1 * 640 + var23Lifetime1];
+              var25Lifetime1 = SoftwareRaster.field_g[var24Lifetime1 * 640 + var23Lifetime1];
               var26Lifetime1 = 64 + (ff.field_ib[var21Lifetime1] * param5 >> 17);
               if (var26Lifetime1 < 0) {
                 var26Lifetime1 = -var26Lifetime1;
@@ -117,7 +117,7 @@ final class ig {
               var27Lifetime1 = (12582912 & var26Lifetime1) + (var27Lifetime1 & -1073692672);
               var27Lifetime1 = 1077952512 & (var27Lifetime1 | var27Lifetime1 >>> 1);
               var16Lifetime1--;
-              pb.field_g[var16Lifetime1] = vn.a(var25Lifetime1Lifetime1, -(var27Lifetime1 >>> 8) + var27Lifetime1) >>> 6;
+              SoftwareRaster.field_g[var16Lifetime1] = vn.a(var25Lifetime1Lifetime1, -(var27Lifetime1 >>> 8) + var27Lifetime1) >>> 6;
               continue;
             }
             break;
@@ -151,7 +151,7 @@ final class ig {
         int var3Lifetime1Lifetime1;
         int var3Lifetime1Lifetime2;
         int var3Lifetime1Lifetime3;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
@@ -206,9 +206,9 @@ final class ig {
     public static void a(byte param0) {
         field_g = null;
         field_d = null;
-        field_o = (wk[][]) null;
+        field_o = (RgbSprite[][]) null;
         if (param0 < 118) {
-          field_o = (wk[][]) null;
+          field_o = (RgbSprite[][]) null;
         }
         field_m = null;
         field_n = null;
@@ -232,7 +232,7 @@ final class ig {
         int var13 = 0;
         int var14 = 0;
         int var8Lifetime1;
-        var14 = SteelSentinels.field_G;
+        var14 = SteelSentinels.obfuscationControl;
         try {
           var5_int = 0;
           var6 = 8 - (7 & (int)param1) & 7;
@@ -306,11 +306,11 @@ final class ig {
     }
 
     final void a(int param0) {
-        int var3 = SteelSentinels.field_G;
+        int var3 = SteelSentinels.obfuscationControl;
         int var2 = 0;
         int var2Lifetime1;
         if (param0 != -635160440) {
-          field_o = (wk[][]) null;
+          field_o = (RgbSprite[][]) null;
         }
         while (var2 < 32) {
           this.field_a[var2] = (byte) 0;
@@ -336,7 +336,7 @@ final class ig {
         int var5 = 0;
         long var6 = 0L;
         int var8 = 0;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           if (!param1) {
             this.field_k = (long[]) null;

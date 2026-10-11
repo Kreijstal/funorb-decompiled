@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rh extends ck {
+final class rh extends IntrusiveNode {
     byte[] field_r;
     static String field_p;
-    static gh field_u;
+    static SceneWidget field_u;
     int field_x;
     static rj[] field_o;
     static cj field_q;
     static String[] field_t;
-    static wk[] field_v;
+    static RgbSprite[] field_v;
     static int field_s;
-    static gh field_w;
+    static SceneWidget field_w;
 
     final static void a(int param0, boolean param1, int param2, int param3) {
         int var4;
@@ -108,7 +108,7 @@ final class rh extends ck {
     }
 
     final static void a(int param0, int param1, jm param2) {
-        kj var3 = null;
+        CipherPacketBuffer var3 = null;
         if (param1 != 0) {
           return;
         }
@@ -134,7 +134,7 @@ final class rh extends ck {
         field_p = "Logging in...";
         field_t = new String[]{"KNEEL BEFORE YOUR CONQUEROR!", "Lord Ba'al, help me!", "Lord Ba'al, help us!"};
         field_u = null;
-        field_v = new wk[26];
+        field_v = new RgbSprite[26];
         field_s = 0;
     }
 }

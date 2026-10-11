@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dn extends gh {
+final class dn extends SceneWidget {
     private int field_dc;
     private int field_fc;
     private int field_Wb;
     static int[] field_bc;
     private int[] field_ec;
     private int field_Tb;
-    private gh field_gc;
+    private SceneWidget field_gc;
     private int field_cc;
     static String field_Ub;
-    private gh field_Yb;
+    private SceneWidget field_Yb;
     static int[] field_Sb;
     private int field_Xb;
     private qh[] field_Vb;
     private int field_ac;
-    private wk[] field_Zb;
+    private RgbSprite[] field_Zb;
 
     final boolean j(int param0) {
         int var2_int = 0;
@@ -63,7 +63,7 @@ final class dn extends gh {
                 ok.field_e = param0;
                 var2 = mm.a((byte) 9, "loginm3");
                 if (null != var2) {
-                  kj.field_E = jk.a(13, var2);
+                  CipherPacketBuffer.field_E = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "loginm2");
                 if (var2 != null) {
@@ -95,7 +95,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "login_gameupdated");
                 if (null != var2) {
-                  wl.field_R = jk.a(13, var2);
+                  Projectile.field_R = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_unable");
                 if (var2 != null) {
@@ -167,7 +167,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "mu_chat_tips");
                 if (var2 != null) {
-                  nb.field_x = jk.a(13, var2);
+                  GameplayController.field_x = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_chat_game");
                 if (var2 != null) {
@@ -211,7 +211,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "mu_x_withdrew_request");
                 if (var2 != null) {
-                  n.field_y = jk.a(13, var2);
+                  FunOrbClient.field_y = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_x_removed");
                 if (null != var2) {
@@ -415,7 +415,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "mu_gameopt_accept_x_into_game");
                 if (null != var2) {
-                  nk.field_P = jk.a(13, var2);
+                  ArticulatedPart.field_P = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mu_gameopt_reject_x_from_game");
                 if (var2 != null) {
@@ -687,7 +687,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "connecting_to_friend_server_twoline");
                 if (var2 != null) {
-                  kd.field_q = jk.a(13, var2);
+                  DualNode.field_q = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "loading");
                 if (var2 != null) {
@@ -763,7 +763,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "privatechat_blankarea_explanation");
                 if (null != var2) {
-                  wl.field_Y = jk.a(13, var2);
+                  Projectile.field_Y = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "publicchat_unavailable_ratedgame");
                 if (var2 != null) {
@@ -807,7 +807,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "gameopt_moreratedgames");
                 if (null != var2) {
-                  hd.field_d = jk.a(13, var2);
+                  BattleTerrain.field_d = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_needrating");
                 if (null != var2) {
@@ -827,7 +827,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "gameopt_cannotbecombined2");
                 if (null != var2) {
-                  mb.field_Ob = jk.a(13, var2);
+                  Sentinel.field_Ob = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "gameopt_playernotmember");
                 if (var2 != null) {
@@ -1137,7 +1137,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "connectionlost_withreason");
                 if (var2 != null) {
-                  nb.field_T = jk.a(13, var2);
+                  GameplayController.field_T = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "passwordverificationrequired");
                 if (null != var2) {
@@ -1432,7 +1432,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "create_password_confirm");
                 if (null != var2) {
-                  qb.field_N = jk.a(13, var2);
+                  ParticleEffect.field_N = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_email");
                 if (null != var2) {
@@ -1444,7 +1444,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "create_age");
                 if (null != var2) {
-                  ee.field_L = jk.a(13, var2);
+                  CombatWorld.field_L = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_u13_email");
                 if (var2 != null) {
@@ -1500,7 +1500,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "login_username");
                 if (var2 != null) {
-                  ji.field_l = jk.a(13, var2);
+                  SentinelDesigner.field_l = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "login_email");
                 if (var2 != null) {
@@ -1552,7 +1552,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "create_password_tooltip");
                 if (var2 != null) {
-                  ie.field_a = jk.a(13, var2);
+                  IsaacRandom.field_a = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_password_hint");
                 if (var2 != null) {
@@ -1560,7 +1560,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "create_password_confirm_tooltip");
                 if (null != var2) {
-                  jb.field_W = jk.a(13, var2);
+                  Explosion.field_W = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_email_tooltip");
                 if (var2 != null) {
@@ -1568,7 +1568,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "create_email_confirm_tooltip");
                 if (null != var2) {
-                  gi.field_v = jk.a(13, var2);
+                  PacketBuffer.field_v = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_age_tooltip");
                 if (null != var2) {
@@ -1616,7 +1616,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "create_alert_namechars");
                 if (var2 != null) {
-                  lg.field_f = jk.a(13, var2);
+                  GameApplet.field_f = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_alert_nameleadingspace");
                 if (var2 != null) {
@@ -1624,7 +1624,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "create_alert_doublespace");
                 if (var2 != null) {
-                  jb.field_Q = jk.a(13, var2);
+                  Explosion.field_Q = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_alert_passchars");
                 if (var2 != null) {
@@ -1648,7 +1648,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "create_alert_passcontainsname_partial");
                 if (var2 != null) {
-                  kj.field_C = jk.a(13, var2);
+                  CipherPacketBuffer.field_C = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "create_alert_checkname");
                 if (null != var2) {
@@ -1728,7 +1728,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "ignorelistfull");
                 if (var2 != null) {
-                  jc.field_g = jk.a(13, var2);
+                  NodeIterator.field_g = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "ignorelistdupe");
                 if (null != var2) {
@@ -1916,7 +1916,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "sound_colon");
                 if (null != var2) {
-                  kj.field_y = jk.a(13, var2);
+                  CipherPacketBuffer.field_y = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "music_colon");
                 if (null != var2) {
@@ -1934,7 +1934,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "highscores");
                 if (null != var2) {
-                  kj.field_G = jk.a(13, var2);
+                  CipherPacketBuffer.field_G = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "rankings");
                 if (null != var2) {
@@ -1958,7 +1958,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "quit");
                 if (null != var2) {
-                  ul.field_a = jk.a(13, var2);
+                  NodeDeque.field_a = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "login_createaccount");
                 if (null != var2) {
@@ -1970,7 +1970,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "returntomainmenu");
                 if (null != var2) {
-                  jc.field_i = jk.a(13, var2);
+                  NodeIterator.field_i = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "returntopausemenu");
                 if (var2 != null) {
@@ -2042,7 +2042,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "endgame");
                 if (null != var2) {
-                  ck.field_m = jk.a(13, var2);
+                  IntrusiveNode.field_m = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "endtutorial");
                 if (var2 != null) {
@@ -2050,7 +2050,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "ok");
                 if (var2 != null) {
-                  mb.field_D = jk.a(13, var2);
+                  Sentinel.field_D = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "on");
                 if (null != var2) {
@@ -2082,7 +2082,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "entermultiplayerlobby");
                 if (var2 != null) {
-                  qb.field_C = jk.a(13, var2);
+                  ParticleEffect.field_C = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "singleplayergame");
                 if (var2 != null) {
@@ -2102,7 +2102,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "canceldraw");
                 if (var2 != null) {
-                  nb.field_m = jk.a(13, var2);
+                  GameplayController.field_m = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "acceptdraw");
                 if (null != var2) {
@@ -2582,7 +2582,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "benefits_price");
                 if (var2 != null) {
-                  ee.field_x = jk.a(13, var2);
+                  CombatWorld.field_x = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "members_expansion_benefits,0");
                 if (null != var2) {
@@ -2750,7 +2750,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "mb_full_access_2");
                 if (null != var2) {
-                  gh.field_Bb = jk.a(13, var2);
+                  SceneWidget.field_Bb = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "mb_achievement_count_1");
                 if (var2 != null) {
@@ -2842,7 +2842,7 @@ final class dn extends gh {
                 }
                 var2 = mm.a((byte) 9, "pleasewait_dotdotdot");
                 if (var2 != null) {
-                  lg.field_a = jk.a(13, var2);
+                  GameApplet.field_a = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "serviceunavailable");
                 if (null != var2) {
@@ -3077,7 +3077,7 @@ final class dn extends gh {
         decompiledBody.run();
     }
 
-    final void a(int param0, wk param1, String param2, int param3) {
+    final void a(int param0, RgbSprite param1, String param2, int param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -3086,7 +3086,7 @@ final class dn extends gh {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_Vb[this.field_Wb] = new qh(0L, (gh) null, (gh) null, this.field_gc, param1, param2);
+          this.field_Vb[this.field_Wb] = new qh(0L, (SceneWidget) null, (SceneWidget) null, this.field_gc, param1, param2);
           this.field_Vb[this.field_Wb].field_Ab = this.field_Zb;
           if (param3 >= -41) {
             return;
@@ -3128,7 +3128,7 @@ final class dn extends gh {
         int stackIn_20_0 = 0;
         int stackIn_22_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           this.a((byte) -46, param0);
           if (!param1) {
@@ -3183,10 +3183,10 @@ final class dn extends gh {
         int var11 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         try {
           if (0 == this.field_Wb) {
-            this.field_Vb[this.field_Wb] = new qh(0L, (gh) null, (gh) null, this.field_Yb, (wk) null, im.field_i);
+            this.field_Vb[this.field_Wb] = new qh(0L, (SceneWidget) null, (SceneWidget) null, this.field_Yb, (RgbSprite) null, im.field_i);
             this.field_Vb[this.field_Wb].field_Fb = 1;
             this.a(this.field_Vb[this.field_Wb], 125);
             this.field_ec[this.field_Wb] = -1;
@@ -3293,12 +3293,12 @@ final class dn extends gh {
         }
     }
 
-    final static wk a(String param0, int param1, String param2, cm param3) {
+    final static RgbSprite a(String param0, int param1, String param2, cm param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        wk stackIn_2_0 = null;
-        wk stackIn_4_0 = null;
+        RgbSprite stackIn_2_0 = null;
+        RgbSprite stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -3314,7 +3314,7 @@ final class dn extends gh {
             stackIn_4_0 = oe.a(var4_int, var5, 1, param3);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (wk) null;
+          stackIn_2_0 = (RgbSprite) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3353,10 +3353,10 @@ final class dn extends gh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          this.field_Vb[this.field_Wb] = new qh(0L, (gh) null, (gh) null, this.field_gc, (wk) null, param2);
+          this.field_Vb[this.field_Wb] = new qh(0L, (SceneWidget) null, (SceneWidget) null, this.field_gc, (RgbSprite) null, param2);
           this.field_Vb[this.field_Wb].field_Ab = this.field_Zb;
           if (param0 != 2) {
-            this.field_Yb = (gh) null;
+            this.field_Yb = (SceneWidget) null;
           }
           this.field_Vb[this.field_Wb].field_P = true;
           this.field_Vb[this.field_Wb].field_Fb = 1;
@@ -3391,7 +3391,7 @@ final class dn extends gh {
         }
     }
 
-    dn(gh param0, wk[] param1, gh param2, gh param3, int param4, int param5, int param6, int param7, int param8) {
+    dn(SceneWidget param0, RgbSprite[] param1, SceneWidget param2, SceneWidget param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;

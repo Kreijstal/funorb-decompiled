@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class we extends ck {
+abstract class we extends IntrusiveNode {
     volatile boolean field_p;
     md field_r;
     int field_q;

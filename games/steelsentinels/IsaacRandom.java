@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ie {
+final class IsaacRandom {
     static cm field_k;
     static boolean field_c;
     private int[] field_h;
@@ -10,19 +10,19 @@ final class ie {
     private int field_e;
     private int field_g;
     private int field_j;
-    static gk[] field_d;
+    static IndexedSprite[] field_d;
     private int[] field_b;
     private int field_i;
 
     final static void b(byte param0) {
         int var1_int = 0;
-        int var2 = SteelSentinels.field_G;
+        int var2 = SteelSentinels.obfuscationControl;
         try {
           for (var1_int = 0; var1_int < uc.field_a; var1_int++) {
             ph.field_e[var1_int] = null;
           }
           if (param0 != 124) {
-            ie.b((byte) 117);
+            IsaacRandom.b((byte) 117);
           }
           uc.field_a = 0;
         } catch (RuntimeException runtimeException) {
@@ -32,7 +32,7 @@ final class ie {
 
     private final void b(int param0) {
         int var2 = 0;
-        int var11 = SteelSentinels.field_G;
+        int var11 = SteelSentinels.obfuscationControl;
         int var9 = -1640531527;
         int var4 = -1640531527;
         int var7 = -1640531527;
@@ -40,7 +40,7 @@ final class ie {
         int var2Lifetime1;
         int var2Lifetime2;
         if (param0 < 30) {
-          ie.b((byte) -19);
+          IsaacRandom.b((byte) -19);
         }
         int var10 = -1640531527;
         int var5 = -1640531527;
@@ -198,7 +198,7 @@ final class ie {
 
     final int a(int param0, int param1) {
         int var4 = 0;
-        int var6 = SteelSentinels.field_G;
+        int var6 = SteelSentinels.obfuscationControl;
         if (param1 <= 0) {
           throw new IllegalArgumentException();
         }
@@ -233,24 +233,24 @@ final class ie {
         return this.field_h[fieldTemp$0];
     }
 
-    final static void a(ck param0, int param1, ck param2) {
-        if (param2.field_i != null) {
-          param2.b(4);
+    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
+        if (param2.previous != null) {
+          param2.unlink(4);
         }
-        param2.field_k = param0;
-        param2.field_i = param0.field_i;
-        param2.field_i.field_k = param2;
+        param2.next = param0;
+        param2.previous = param0.previous;
+        param2.previous.next = param2;
         if (param1 != 30) {
           return;
         }
         try {
-          param2.field_k.field_i = param2;
+          param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ie.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    ie(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_h = new int[256];

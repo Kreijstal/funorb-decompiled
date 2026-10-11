@@ -3,21 +3,21 @@
  */
 final class ff extends ma {
     private tl field_mb;
-    private wk field_pb;
+    private RgbSprite field_pb;
     static int[] field_ub;
     static int[] field_ob;
     static int field_nb;
     static String field_gb;
     private int field_jb;
-    static wk field_tb;
+    static RgbSprite field_tb;
     static int[] field_ib;
     static boolean field_fb;
     static fh field_lb;
     private String field_hb;
     static int[] field_kb;
     static String field_sb;
-    static ul field_qb;
-    static wk[] field_rb;
+    static NodeDeque field_qb;
+    static RgbSprite[] field_rb;
 
     final boolean a(int param0, lh param1) {
         RuntimeException var3 = null;
@@ -54,7 +54,7 @@ final class ff extends ma {
         byte[] var9;
         int var6Lifetime1;
         int var7Lifetime1;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         if (vn.field_h < 0) {
           return;
         }
@@ -73,10 +73,10 @@ final class ff extends ma {
         }
         q.a(ai.field_o, (byte) -106);
         lf.a();
-        pb.b();
+        SoftwareRaster.b();
         pm.a(true);
         if (var5 < 256) {
-          pb.c(0, 0, pb.field_c, pb.field_j, 0, 256 - var5);
+          SoftwareRaster.c(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j, 0, 256 - var5);
         }
         tk.$cfr$intArgs$f$20d51497949f(103);
         if (150 > vn.field_h) {
@@ -105,7 +105,7 @@ final class ff extends ma {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          hd.field_k.b(var3 + 15, 10 + var4, var5 * var7Lifetime1 >> 8);
+          BattleTerrain.field_k.b(var3 + 15, 10 + var4, var5 * var7Lifetime1 >> 8);
         }
         return;
     }
@@ -177,10 +177,10 @@ final class ff extends ma {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        gh[] var3_ref_gh__ = null;
+        SceneWidget[] var3_ref_gh__ = null;
         int var3 = 0;
         int var4 = 0;
-        gh var5_ref_gh = null;
+        SceneWidget var5_ref_gh = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -209,7 +209,7 @@ final class ff extends ma {
         int[] var19_ref_int__ = null;
         int var19 = 0;
         int var20 = 0;
-        wk var20_ref_wk = null;
+        RgbSprite var20_ref_wk = null;
         int var21 = 0;
         Object var21_ref = null;
         int var22 = 0;
@@ -227,39 +227,39 @@ final class ff extends ma {
         int var30 = 0;
         int var31 = 0;
         int var32 = 0;
-        qd var33 = null;
-        qd var34 = null;
-        qd var35 = null;
-        qd var36 = null;
+        PartInstruction var33 = null;
+        PartInstruction var34 = null;
+        PartInstruction var35 = null;
+        PartInstruction var36 = null;
         String[] var37 = null;
         String var38 = null;
         String var39 = null;
-        gh var40 = null;
-        gh var41 = null;
-        gh var42 = null;
+        SceneWidget var40 = null;
+        SceneWidget var41 = null;
+        SceneWidget var42 = null;
         String var43 = null;
         int[] var44 = null;
         StringBuilder var45 = null;
         int[] var46 = null;
         int[] var48 = null;
         String var50 = null;
-        qd var51 = null;
-        nk var52 = null;
-        gh var53 = null;
+        PartInstruction var51 = null;
+        ArticulatedPart var52 = null;
+        SceneWidget var53 = null;
         String var54 = null;
         String var55 = null;
         String var56 = null;
         String var57 = null;
         int[] var58 = null;
         String var59 = null;
-        nk var60 = null;
+        ArticulatedPart var60 = null;
         int[] var61 = null;
         int[] var62 = null;
         int[] var64 = null;
         int[] var66 = null;
         int[] var69 = null;
         int[] var70 = null;
-        var32 = SteelSentinels.field_G;
+        var32 = SteelSentinels.obfuscationControl;
         try {
           pa.field_e = -1;
           lj.field_h = null;
@@ -290,8 +290,8 @@ final class ff extends ma {
           var2 = stackIn_19_0;
           if (null != gd.field_jb) {
             if (null != km.field_a ||
-              ji.field_a != 0) {
-              lg.field_l = true;
+              SentinelDesigner.field_a != 0) {
+              GameApplet.field_l = true;
               kf.field_s = true;
             }
             if (!kf.field_s &&
@@ -304,7 +304,7 @@ final class ff extends ma {
             if (var2 != 0 ||
               !(fl.field_a < 0) ||
               !(nm.field_w < 0)) {
-              lg.field_l = true;
+              GameApplet.field_l = true;
               nl.field_X = true;
             }
             if (ad.field_h) {
@@ -329,7 +329,7 @@ final class ff extends ma {
               ad.field_h = false;
             }
             if ((!kf.field_s ||
-              !lg.field_l) &&
+              !GameApplet.field_l) &&
               0 == pm.field_U) {
               var3_ref_gh__ = wc.field_h;
               for (var4 = 0; var3_ref_gh__.length > var4; var4++) {
@@ -337,21 +337,21 @@ final class ff extends ma {
                 var5_ref_gh.a(true, (byte) 126);
               }
               if (kf.field_s) {
-                pb.a(bl.field_c.field_Rb, bl.field_c.field_cb, bl.field_c.field_zb, bl.field_c.field_Lb, 0);
+                SoftwareRaster.a(bl.field_c.field_Rb, bl.field_c.field_cb, bl.field_c.field_zb, bl.field_c.field_Lb, 0);
                 bl.field_c.a(true, (byte) 127);
                 kf.field_s = false;
               }
-              if (!(!lg.field_l)) {
-                pb.a(kk.field_a.field_Rb, kk.field_a.field_cb, kk.field_a.field_zb, kk.field_a.field_Lb, 0);
+              if (!(!GameApplet.field_l)) {
+                SoftwareRaster.a(kk.field_a.field_Rb, kk.field_a.field_cb, kk.field_a.field_zb, kk.field_a.field_Lb, 0);
                 kk.field_a.a(true, (byte) 126);
-                lg.field_l = false;
+                GameApplet.field_l = false;
               }
               decompiledFrameRemainder3 = false;
             }
             else {
               gd.field_jb.a(true, (byte) 127);
               kf.field_s = false;
-              lg.field_l = false;
+              GameApplet.field_l = false;
             }
           }
           var3 = -68 / ((param0 - 80) / 33);
@@ -359,7 +359,7 @@ final class ff extends ma {
             if (uc.field_b == null) {
               uc.field_b = ua.field_x;
             }
-            hl.field_v = ji.a(uc.field_b, (byte) 109, di.field_c);
+            hl.field_v = SentinelDesigner.a(uc.field_b, (byte) 109, di.field_c);
             hl.field_v.b(6993661, 83);
           }
           var4 = 364;
@@ -426,14 +426,14 @@ final class ff extends ma {
           var7 = 0;
           var8_int = 66 + qa.field_M * 26 / 57;
           var9 = 114 * qa.field_M / 57 + 510;
-          pb.g(226, var8_int, 26, 3355443);
-          pb.d(226, var8_int, 26, 3355443);
-          pb.g(var9 - 26, var8_int, 26, 3355443);
-          pb.d(var9, var8_int, 26, 3355443);
-          pb.g(226, 360, 26, 3355443);
-          pb.d(226, 334, 26, 3355443);
-          pb.g(var9 - 26, 360, 26, 3355443);
-          pb.d(var9, 334, 26, 3355443);
+          SoftwareRaster.g(226, var8_int, 26, 3355443);
+          SoftwareRaster.d(226, var8_int, 26, 3355443);
+          SoftwareRaster.g(var9 - 26, var8_int, 26, 3355443);
+          SoftwareRaster.d(var9, var8_int, 26, 3355443);
+          SoftwareRaster.g(226, 360, 26, 3355443);
+          SoftwareRaster.d(226, 334, 26, 3355443);
+          SoftwareRaster.g(var9 - 26, 360, 26, 3355443);
+          SoftwareRaster.d(var9, 334, 26, 3355443);
           if (null != hl.field_v &&
             null != gd.field_jb) {
             vh.field_a = var5;
@@ -442,53 +442,53 @@ final class ff extends ma {
             en.field_d = b.field_c;
             lh.field_t = vh.field_a;
             nj.field_V = b.field_c;
-            pb.a(221, 60, 629, 432);
+            SoftwareRaster.a(221, 60, 629, 432);
             if (var1_int == 0) {
               var8 = null;
-              if (hl.field_v.field_N == 69) {
+              if (hl.field_v.componentId == 69) {
                 var33 = hl.field_v.a(0, 2);
                 if (var33 != null &&
-                  null != var33.field_d) {
+                  null != var33.attachedPart) {
                   vk.field_r.a(var4 + qa.field_M + 40, var5 - 135);
                 }
               }
-              if (hl.field_v.field_N == 75) {
+              if (hl.field_v.componentId == 75) {
                 var34 = hl.field_v.a(0, 2);
                 if (var34 != null &&
-                  null != var34.field_d) {
+                  null != var34.attachedPart) {
                   vk.field_r.a(4 + qa.field_M + var4, -178 + var5);
-                  if (var34.field_d.field_N == 95) {
+                  if (var34.attachedPart.componentId == 95) {
                     vk.field_r.a(var4 + qa.field_M + 10, -175 + var5);
                   }
                 }
               }
-              if (hl.field_v.field_N == 57) {
+              if (hl.field_v.componentId == 57) {
                 var35 = hl.field_v.a(0, 2);
                 if (var35 != null &&
-                  null != var35.field_d) {
+                  null != var35.attachedPart) {
                   vk.field_r.a(-3 + qa.field_M + var4, var5 - 156);
                 }
               }
-              if (55 == hl.field_v.field_N) {
+              if (55 == hl.field_v.componentId) {
                 var36 = hl.field_v.a(0, 2);
                 if (var36 != null &&
-                  var36.field_d != null &&
-                  var36.field_d.field_N == 95) {
+                  var36.attachedPart != null &&
+                  var36.attachedPart.componentId == 95) {
                   vk.field_r.e(35 + qa.field_M + var4, var5 - 130);
                 }
               }
               hl.field_v.a(0, true, b.field_c, vh.field_a, (byte) 49, 0);
             }
-            pb.c();
+            SoftwareRaster.c();
             if (qa.field_M == 57 &&
               var1_int == 0) {
               var8_int = lh.field_t;
-              if (hl.field_v.field_N == 84) {
+              if (hl.field_v.componentId == 84) {
                 var8_int -= 50;
               }
-              pb.d(308, ti.field_y, var8_int - ti.field_y, 3355443);
-              pb.g(308, ti.field_y, 8, 3355443);
-              pb.g(308, var8_int, 8, 3355443);
+              SoftwareRaster.d(308, ti.field_y, var8_int - ti.field_y, 3355443);
+              SoftwareRaster.g(308, ti.field_y, 8, 3355443);
+              SoftwareRaster.g(308, var8_int, 8, 3355443);
               var9 = (var8_int - ti.field_y) * 2000 / hj.field_w;
               fk.field_d.c(db.a(de.field_e, -123, new String[]{Integer.toString(var9 / 10), Integer.toString(var9 % 10)}), 307, (ti.field_y + var8_int) / 2, 4473924, -1);
             }
@@ -499,9 +499,9 @@ final class ff extends ma {
               var10 = 18 * hj.field_w / 2000;
               vk.field_q.c(var8_int, -8 + var9 - var10, 7 * hj.field_w / 2000, var10);
               if (qa.field_M == 57) {
-                pb.d(-10 + var8_int, -8 + (var9 - var10), var10, 3355443);
-                pb.g(var8_int - 10, -var10 + var9 - 8, 8, 3355443);
-                pb.g(var8_int - 10, -8 + var9, 8, 3355443);
+                SoftwareRaster.d(-10 + var8_int, -8 + (var9 - var10), var10, 3355443);
+                SoftwareRaster.g(var8_int - 10, -var10 + var9 - 8, 8, 3355443);
+                SoftwareRaster.g(var8_int - 10, -8 + var9, 8, 3355443);
                 var11_ref_String = db.a(de.field_e, -60, new String[]{Integer.toString(1), Integer.toString(8)});
                 fk.field_d.c(var11_ref_String, var8_int - 12, -8 + var9 - var10 / 2 + 3, 4473924, -1);
               }
@@ -515,20 +515,20 @@ final class ff extends ma {
               var13_int = 1000;
               var14 = li.field_v;
               var15_int = var14 * var9 / var13_int;
-              pb.a(var11, var12, var15_int, -1 + var10, 2061990);
+              SoftwareRaster.a(var11, var12, var15_int, -1 + var10, 2061990);
               for (var16 = 100; var13_int > var16; var16 += 100) {
                 var17 = var11 + var16 * var9 / var13_int;
-                pb.d(var17, var12, var10, 0);
+                SoftwareRaster.d(var17, var12, var10, 0);
               }
-              pb.h(-2 + var11, -2 + var12, 4 + var9, 4 + var10, 4408131);
-              fk.field_d.c(jb.field_E + var14, var11 + var9, -4 + var12, 16777215, -1);
+              SoftwareRaster.h(-2 + var11, -2 + var12, 4 + var9, 4 + var10, 4408131);
+              fk.field_d.c(Explosion.field_E + var14, var11 + var9, -4 + var12, 16777215, -1);
             }
             var9 = 0;
             var10 = 0;
             var7 = hl.field_v.e((byte) -85);
             var11 = 0;
-            var12 = (int)((double)hl.field_v.h(-31496) / Math.sqrt((double)hl.field_v.g(8192)));
-            var13_int = (int)((double)hl.field_v.j(0) / Math.sqrt((double)hl.field_v.g(8192)));
+            var12 = (int)((double)hl.field_v.h(-31496) / Math.sqrt((double)hl.field_v.getTotalArmour(8192)));
+            var13_int = (int)((double)hl.field_v.j(0) / Math.sqrt((double)hl.field_v.getTotalArmour(8192)));
             if (var12 < 0) {
               var12 = 0;
             }
@@ -641,7 +641,7 @@ final class ff extends ma {
               var37 = new String[]{"<img=0>", "<img=5>", "<img=4>", "<img=7>", "<img=2>", "<img=3>"};
               var18_ref_int__ = new int[]{0, 0, 0, 0, 0, 0};
               var19_ref_int__ = new int[]{1000, 1000, 10, 11, 10, 20};
-              var18_ref_int__[0] = hl.field_v.g(8192);
+              var18_ref_int__[0] = hl.field_v.getTotalArmour(8192);
               var18_ref_int__[4] = var12;
               var18_ref_int__[3] = var11;
               if (var16 != 0) {
@@ -669,29 +669,29 @@ final class ff extends ma {
                   stackIn_231_0 = 0;
                 }
                 var24_int = stackIn_231_0;
-                pb.h(var20 + 18, var21 - 10, var22, 11, 1400960);
+                SoftwareRaster.h(var20 + 18, var21 - 10, var22, 11, 1400960);
                 if (var18_ref_int__[var23] <= var19_ref_int__[var23] * 2) {
                   if (var18_ref_int__[var23] > var19_ref_int__[var23]) {
-                    pb.a(18 + var20 + 2, 2 + (var21 - 10), -4 + var22, 7, 8421504);
-                    pb.a(2 + (var20 + 18), var21 - 10 + 2, (var18_ref_int__[var23] - var19_ref_int__[var23]) * (-4 + var22) / var19_ref_int__[var23], 7, 16777215);
+                    SoftwareRaster.a(18 + var20 + 2, 2 + (var21 - 10), -4 + var22, 7, 8421504);
+                    SoftwareRaster.a(2 + (var20 + 18), var21 - 10 + 2, (var18_ref_int__[var23] - var19_ref_int__[var23]) * (-4 + var22) / var19_ref_int__[var23], 7, 16777215);
                   } else {
                     if (var18_ref_int__[var23] > 0) {
-                      pb.a(var20 + 18 + 2, -10 + (var21 + 2), var18_ref_int__[var23] * (-4 + var22) / var19_ref_int__[var23], 7, 8421504);
+                      SoftwareRaster.a(var20 + 18 + 2, -10 + (var21 + 2), var18_ref_int__[var23] * (-4 + var22) / var19_ref_int__[var23], 7, 8421504);
                     } else {
-                      pb.h(var20 + 18, var21 - 10, var22, 11, 8400933);
+                      SoftwareRaster.h(var20 + 18, var21 - 10, var22, 11, 8400933);
                     }
                   }
                 } else {
-                  pb.a(2 + var20 + 18, 2 + var21 - 10, var22 - 4, 7, 16777215);
+                  SoftwareRaster.a(2 + var20 + 18, 2 + var21 - 10, var22 - 4, 7, 16777215);
                 }
                 if (var23 <= 1) {
                   for (var25 = 100; var19_ref_int__[var23] > var25; var25 += 100) {
-                    pb.f(var25 * (-4 + var22) / var19_ref_int__[var23] + var20 + 18 + 2, 2 + var21 - 10, 7, 4473924, 192);
+                    SoftwareRaster.f(var25 * (-4 + var22) / var19_ref_int__[var23] + var20 + 18 + 2, 2 + var21 - 10, 7, 4473924, 192);
                   }
                 } else {
                   if (var23 == 2) {
                     for (var25 = 1; var19_ref_int__[var23] > var25; var25++) {
-                      pb.f(20 + var20 + (var22 - 4) * var25 / var19_ref_int__[var23], var21 - 10 + 2, 7, 4473924, 192);
+                      SoftwareRaster.f(20 + var20 + (var22 - 4) * var25 / var19_ref_int__[var23], var21 - 10 + 2, 7, 4473924, 192);
                     }
                   }
                 }
@@ -722,8 +722,8 @@ final class ff extends ma {
                   var39 = var38 + ": " + var29_ref_String;
                   var31 = fk.field_d.c(var39) + 8;
                   var25 = var25 - var31 / 2;
-                  pb.c(var25, var27, var31, var26, 0, 192);
-                  pb.h(var25, var27, var31, var26, 1400960, 192);
+                  SoftwareRaster.c(var25, var27, var31, var26, 0, 192);
+                  SoftwareRaster.h(var25, var27, var31, var26, 1400960, 192);
                   fk.field_d.b(var39, 4 + var25, var27 + 10, 41727, -1);
                 }
                 if (0 == var23 % 2) {
@@ -737,33 +737,33 @@ final class ff extends ma {
             if (fg.field_Ob != 1) {
               if (0 < (fg.field_Ob & 2)) {
                 var42 = hm.field_a;
-                if (((var42 != null)) && ((lg.field_l ||
+                if (((var42 != null)) && ((GameApplet.field_l ||
                   var2 != 0 ||
                   nl.field_X))) {
                   oc.a(4, var42);
-                  lg.field_l = true;
+                  GameApplet.field_l = true;
                 }
                 decompiledFrameRemainder2 = false;
               }
               else {
                 if ((fg.field_Ob & 16) > 0) {
                   var41 = hm.field_a;
-                  if (((var41 != null)) && ((lg.field_l ||
+                  if (((var41 != null)) && ((GameApplet.field_l ||
                     var2 != 0 ||
                     nl.field_X))) {
                     ak.a(var41, 87);
-                    lg.field_l = true;
+                    GameApplet.field_l = true;
                   }
                   decompiledFrameRemainder2 = false;
                 }
                 else {
                   if (fg.field_Ob == 0) {
                     var40 = kk.field_a;
-                    if (var40 != null && (lg.field_l ||
+                    if (var40 != null && (GameApplet.field_l ||
                       var2 != 0 ||
                       nl.field_X)) {
                       vb.a(var40, (byte) 19);
-                      lg.field_l = true;
+                      GameApplet.field_l = true;
                     }
                   }
                 }
@@ -783,7 +783,7 @@ final class ff extends ma {
           }
           if (ij.field_Y != -1 &&
             oh.field_f >= 0) {
-            ie.field_d[ij.field_Y].a(oh.field_f - 20, pi.field_c - 20);
+            IsaacRandom.field_d[ij.field_Y].a(oh.field_f - 20, pi.field_c - 20);
           }
           if (0 == (fg.field_Ob & 1)) {
             re.field_eb = -1;
@@ -793,29 +793,29 @@ final class ff extends ma {
             var10 = 401;
             var11 = 20;
             var12 = 60;
-            var13_int = ul.a((byte) -42, uc.field_b[0]);
+            var13_int = NodeDeque.a((byte) -42, uc.field_b[0]);
             if (re.field_eb != var13_int) {
               re.field_eb = var13_int;
               s.field_a = a.field_c;
               var14 = 20;
               jj.field_e.d();
-              pb.a(0, 0, jj.field_e.field_z, jj.field_e.field_B, 0);
-              pb.a(0, 0, var14, var14);
+              SoftwareRaster.a(0, 0, jj.field_e.field_z, jj.field_e.field_B, 0);
+              SoftwareRaster.a(0, 0, var14, var14);
               if (0 > var13_int ||
                 !(var13_int < si.field_E.length)) {
                 var13_int = 0;
               }
               si.field_E[var13_int].c(0, 0, 4 * var14, 4 * var14);
-              pb.c();
+              SoftwareRaster.c();
               sb.field_bb.b((byte) 122);
             }
             if (0 <= var13_int &&
               ig.field_g.length > var13_int &&
               var1_int == 0) {
-              pb.c(var8_int, var9, var10, var11, 0, 150);
-              pb.h(var8_int, var9, var10, var11, 1397105);
+              SoftwareRaster.c(var8_int, var9, var10, var11, 0, 150);
+              SoftwareRaster.h(var8_int, var9, var10, var11, 1397105);
               var43 = ig.field_g[var13_int];
-              pb.a(var8_int + 1, 1 + var9, var10 + (var8_int - 1), var9 - (-var11 + 1));
+              SoftwareRaster.a(var8_int + 1, 1 + var9, var10 + (var8_int - 1), var9 - (-var11 + 1));
               var15_int = fk.field_d.c(var43);
               var16 = a.field_c - s.field_a;
               if (var16 > var10 + (var15_int + var12)) {
@@ -824,7 +824,7 @@ final class ff extends ma {
               for (var17 = (var12 + 14) / 2 - var16 + (var10 + var8_int); var17 - var12 - 14 < var8_int + var10; var17 = var17 + (var15_int + var12)) {
                 fk.field_d.b(var43, var17, -6 + (var11 + var9), 11119017, -1);
               }
-              pb.c();
+              SoftwareRaster.c();
             }
           }
           var8_ref = fk.field_d;
@@ -940,14 +940,14 @@ final class ff extends ma {
             discarded$34 = var45.append("</col>");
             var50 = var45.toString();
             var16 = 250;
-            var17 = ((mi) ((Object) var8_ref)).field_G + ((mi) ((Object) var8_ref)).field_F;
-            var18 = 5 + (5 + ((mi) ((Object) var8_ref)).a(var50, -20 + var16, var17));
+            var17 = ((BitmapFont) ((Object) var8_ref)).field_G + ((BitmapFont) ((Object) var8_ref)).field_F;
+            var18 = 5 + (5 + ((BitmapFont) ((Object) var8_ref)).a(var50, -20 + var16, var17));
             var19 = 228;
             var20 = 16777215;
             var21 = -var18 + 378;
-            pb.c(var19, var21, var16, var18, 0, 200);
-            pb.h(var19, var21, var16, var18, var20);
-            ((mi) ((Object) var8_ref)).a(var50, 10 + var19, 5 + var21, -20 + var16, var18, 8421504, 0, 0, 0, var17);
+            SoftwareRaster.c(var19, var21, var16, var18, 0, 200);
+            SoftwareRaster.h(var19, var21, var16, var18, var20);
+            ((BitmapFont) ((Object) var8_ref)).a(var50, 10 + var19, 5 + var21, -20 + var16, var18, 8421504, 0, 0, 0, var17);
           }
           var9 = -1;
           var10 = -1;
@@ -969,9 +969,9 @@ final class ff extends ma {
           if ((fg.field_Ob & 18) != 0 &&
             var9 < 0 &&
             null != lj.field_h) {
-            if (lj.field_h.field_d != null) {
-              var9 = lj.field_h.field_d.field_N;
-              var52 = lj.field_h.field_d;
+            if (lj.field_h.attachedPart != null) {
+              var9 = lj.field_h.attachedPart.componentId;
+              var52 = lj.field_h.attachedPart;
               var11 = var52.field_K;
               var12 = var52.field_W;
             } else {
@@ -1005,14 +1005,14 @@ final class ff extends ma {
               if (var53 != null) {
                 if ((ni.b(63) ||
                   !(rd.field_b > 0)) &&
-                  oc.a(n.field_z[var14], -120, false)) {
+                  oc.a(FunOrbClient.field_z[var14], -120, false)) {
                   stackIn_418_0 = 1;
                 } else {
                   stackIn_418_0 = 0;
                 }
                 var16 = stackIn_418_0;
                 if (var16 == 0 &&
-                  t.a(rn.field_D, n.field_z[var14], -20370)) {
+                  t.a(rn.field_D, FunOrbClient.field_z[var14], -20370)) {
                   if (oh.field_f >= var53.field_Rb &&
                     oh.field_f < 190 &&
                     var53.field_cb <= pi.field_c &&
@@ -1027,14 +1027,14 @@ final class ff extends ma {
                     oe.field_i = var14;
                     if (var13_int != oe.field_i) {
                       nc.field_f = a.field_c;
-                      ee.c(-2483, 97);
+                      CombatWorld.c(-2483, 97);
                     }
                     var18 = (-nc.field_f + a.field_c) / 6 % 15;
                   }
                   var19 = 64;
                   var53.field_Pb.d();
-                  pb.a(0, 0, var19, var19, 0);
-                  pb.a(0, 0, var19, var19);
+                  SoftwareRaster.a(0, 0, var19, var19, 0);
+                  SoftwareRaster.a(0, 0, var19, var19);
                   var20_ref_wk = si.field_E[var14];
                   var16_ref = var20_ref_wk;
                   var16_ref = var20_ref_wk;
@@ -1066,23 +1066,23 @@ final class ff extends ma {
           if (var10 >= 0 &&
             fg.field_Ob == 0) {
             if (nm.field_w != var10) {
-              ee.c(-2483, 97);
+              CombatWorld.c(-2483, 97);
               nm.field_w = var10;
-              lg.field_l = true;
+              GameApplet.field_l = true;
             }
             var10 = -1;
           } else if (-2 == pa.field_e &&
             fg.field_Ob == 0) {
             if (nm.field_w != -2) {
-              lg.field_l = true;
+              GameApplet.field_l = true;
               nm.field_w = -2;
-              ee.c(-2483, 97);
+              CombatWorld.c(-2483, 97);
             }
           } else if (0 > var9 &&
             var10 < 0) {
             if (nm.field_w != -1) {
               nm.field_w = -1;
-              lg.field_l = true;
+              GameApplet.field_l = true;
             }
           } else {
             var13 = null;
@@ -1093,9 +1093,9 @@ final class ff extends ma {
               if (0 != fg.field_Ob) {
                 if ((18 & fg.field_Ob) != 0) {
                   if (nm.field_w != var9) {
-                    ee.c(-2483, 97);
+                    CombatWorld.c(-2483, 97);
                     nm.field_w = var9;
-                    lg.field_l = true;
+                    GameApplet.field_l = true;
                   }
                   var13 = t.field_e[var9];
                   var14_ref = var13;
@@ -1128,7 +1128,7 @@ final class ff extends ma {
                     var14_ref = var21_ref;
                     var14_ref = var56;
                     var14_ref = var56;
-                    var57 = kk.a(ul.a(var9, (byte) 67), -4097);
+                    var57 = kk.a(NodeDeque.a(var9, (byte) 67), -4097);
                     var14_ref = var57;
                     var21_ref = var14_ref;
                     var14_ref = var21_ref;
@@ -1152,8 +1152,8 @@ final class ff extends ma {
                 }
               } else {
                 if (nm.field_w != var9) {
-                  ee.c(-2483, 97);
-                  lg.field_l = true;
+                  CombatWorld.c(-2483, 97);
+                  GameApplet.field_l = true;
                   nm.field_w = var9;
                 }
                 if (var9 != 34) {
@@ -1180,9 +1180,9 @@ final class ff extends ma {
               }
             } else {
               if (nm.field_w != var10) {
-                ee.c(-2483, 97);
+                CombatWorld.c(-2483, 97);
                 nm.field_w = var10;
-                lg.field_l = true;
+                GameApplet.field_l = true;
               }
               var17 = -2049 & var10;
               if (var17 != 2) {
@@ -1240,7 +1240,7 @@ final class ff extends ma {
                   if (t.a(rn.field_D, var9, -20370)) {
                     var18 = 0;
                   } else {
-                    if (!aj.a(ge.field_m, (byte) 123, rn.field_D, var9, nk.f((byte) -74))) {
+                    if (!aj.a(ge.field_m, (byte) 123, rn.field_D, var9, ArticulatedPart.f((byte) -74))) {
                       var18 = 2;
                       var19 = 1;
                     } else {
@@ -1254,7 +1254,7 @@ final class ff extends ma {
                   if (t.a(fe.field_D, var9, -20370)) {
                     var18 = 0;
                   } else {
-                    if (ad.a(var9, nk.f((byte) -61), fe.field_D, (byte) 84, ge.field_m, rn.field_D)) {
+                    if (ad.a(var9, ArticulatedPart.f((byte) -61), fe.field_D, (byte) 84, ge.field_m, rn.field_D)) {
                       if (var20 > li.field_v) {
                         var18 = 2;
                       }
@@ -1306,7 +1306,7 @@ final class ff extends ma {
             }
             var18 = 110;
             var19 = 270;
-            var20 = ((mi) ((Object) var8_ref)).field_G + ((mi) ((Object) var8_ref)).field_F;
+            var20 = ((BitmapFont) ((Object) var8_ref)).field_G + ((BitmapFont) ((Object) var8_ref)).field_F;
             var21 = 5 + (5 + var20);
             var22 = 228;
             var23 = 16777215;
@@ -1317,7 +1317,7 @@ final class ff extends ma {
             var25 = 0;
             var26 = 0;
             if (var13 != null) {
-              var25 = ((mi) ((Object) var8_ref)).a((String) (var13), new int[]{-20 + var19}, var24);
+              var25 = ((BitmapFont) ((Object) var8_ref)).a((String) (var13), new int[]{-20 + var19}, var24);
               var21 = var21 + (5 + var20 * var25);
             }
             if (0 != (fg.field_Ob & 16)) {
@@ -1326,7 +1326,7 @@ final class ff extends ma {
                 var21 += 25;
               } else {
                 if (var16_ref != null) {
-                  var27 = 7 + var20 + (-20 + ((wk) (var16_ref)).field_F);
+                  var27 = 7 + var20 + (-20 + ((RgbSprite) (var16_ref)).field_F);
                   if (var26 < var27) {
                     var26 = var27;
                   }
@@ -1335,21 +1335,21 @@ final class ff extends ma {
             }
             var21 = var21 + var26;
             if (var14_ref != null) {
-              var21 = var21 + (((mi) ((Object) var8_ref)).a((String) (var14_ref), var19 - 20, var20) + 5);
+              var21 = var21 + (((BitmapFont) ((Object) var8_ref)).a((String) (var14_ref), var19 - 20, var20) + 5);
             }
             var18 = 378 - var21;
-            pb.c(var22, var18, var19, var21, 0, 200);
-            pb.h(var22, var18, var19, var21, var23);
+            SoftwareRaster.c(var22, var18, var19, var21, 0, 200);
+            SoftwareRaster.h(var22, var18, var19, var21, var23);
             var21 = var18 - (-5 - var20);
             if (var25 > 0) {
               for (var27 = 0; var27 < var25; var27++) {
-                ((mi) ((Object) var8_ref)).b(var24[var27], 10 + var22, var21 + var27 * var20, 1021128, 0);
+                ((BitmapFont) ((Object) var8_ref)).b(var24[var27], 10 + var22, var21 + var27 * var20, 1021128, 0);
               }
               var21 = var21 + (var20 * var25 + 5);
             }
             if (var16_ref != null) {
-              ((wk) (var16_ref)).f(var22 + 138, var21 - 18);
-              ((mi) ((Object) var8_ref)).a((String) (var15), 138 + var22, var21 - 20 + ((wk) (var16_ref)).field_F, -140 + (var19 - 2), 100, 1021128, 0, 0, 0, 10);
+              ((RgbSprite) (var16_ref)).f(var22 + 138, var21 - 18);
+              ((BitmapFont) ((Object) var8_ref)).a((String) (var15), 138 + var22, var21 - 20 + ((RgbSprite) (var16_ref)).field_F, -140 + (var19 - 2), 100, 1021128, 0, 0, 0, 10);
             }
             if (var11 != -1 ||
               var12 != -1) {
@@ -1359,28 +1359,28 @@ final class ff extends ma {
               if (var10 >= 0) {
                 var27 = var19 / 2 + var22;
               }
-              pb.c(var27, var28 + 1, var29, 477796);
-              pb.c(var27, var28, var29, 1021128);
+              SoftwareRaster.c(var27, var28 + 1, var29, 477796);
+              SoftwareRaster.c(var27, var28, var29, 1021128);
               var12 = 8192 * var12 / 65536;
-              ((mi) ((Object) var8_ref)).a(tk.field_s, var27, 14 + var28 + var29, 1044724, 0);
+              ((BitmapFont) ((Object) var8_ref)).a(tk.field_s, var27, 14 + var28 + var29, 1044724, 0);
               var11 = 8192 * var11 / 65536;
               for (var30 = var11; var30 < var12; var30 += 100) {
-                pb.d(var27, var28, var29 * kg.a(var30, (byte) -76) / 65536 + var27, var28 + var29 * jh.a(var30, 4096) / 65536, 1044724);
-                pb.d(var27, var28 + 1, var27 + kg.a(var30, (byte) -82) * var29 / 65536, var29 * jh.a(var30, 4096) / 65536 + 1 + var28, 1044724);
+                SoftwareRaster.d(var27, var28, var29 * kg.a(var30, (byte) -76) / 65536 + var27, var28 + var29 * jh.a(var30, 4096) / 65536, 1044724);
+                SoftwareRaster.d(var27, var28 + 1, var27 + kg.a(var30, (byte) -82) * var29 / 65536, var29 * jh.a(var30, 4096) / 65536 + 1 + var28, 1044724);
               }
-              pb.d(var27, var28, kg.a(var12, (byte) -82) * var29 / 65536 + var27, var28 + var29 * jh.a(var12, 4096) / 65536, 1044724);
+              SoftwareRaster.d(var27, var28, kg.a(var12, (byte) -82) * var29 / 65536 + var27, var28 + var29 * jh.a(var12, 4096) / 65536, 1044724);
               if (var10 >= 0) {
                 var21 = var21 + (18 + var29);
               }
-              pb.d(var27, 1 + var28, kg.a(var12, (byte) -77) * var29 / 65536 + var27, 1 + var28 + var29 * jh.a(var12, 4096) / 65536, 1044724);
+              SoftwareRaster.d(var27, 1 + var28, kg.a(var12, (byte) -77) * var29 / 65536 + var27, 1 + var28 + var29 * jh.a(var12, 4096) / 65536, 1044724);
             }
             if ((fg.field_Ob & 16) != 0) {
               d.a(var21 - 10, var22 + 10, 17, false, var9);
             }
             var21 = var21 + var26;
             if (var14_ref != null) {
-              ((mi) ((Object) var8_ref)).a((String) (var14_ref), var22 + 10, var21, -20 + var19, 300, 1021128, 0, 0, 0, var20);
-              var21 = var21 + ((mi) ((Object) var8_ref)).a((String) (var14_ref), -20 + var19, var20);
+              ((BitmapFont) ((Object) var8_ref)).a((String) (var14_ref), var22 + 10, var21, -20 + var19, 300, 1021128, 0, 0, 0, var20);
+              var21 = var21 + ((BitmapFont) ((Object) var8_ref)).a((String) (var14_ref), -20 + var19, var20);
             }
           }
           var13 = null;
@@ -1413,41 +1413,41 @@ final class ff extends ma {
             if (var16 == 34) {
               var13 = "Don't equip multiple GODULEs. They are too awesome.";
             } else if (var16 != -1) {
-              var13 = db.a(ji.field_b[1], -25, new String[]{rj.field_m[var16]});
+              var13 = db.a(SentinelDesigner.field_b[1], -25, new String[]{rj.field_m[var16]});
             } else if (var66[26] > 0 &&
               var17 == 0) {
-              var13 = ji.field_b[2];
+              var13 = SentinelDesigner.field_b[2];
             } else if (0 < var66[28] &&
               hl.field_v.h(-31496) <= 0) {
-              var13 = ji.field_b[3];
+              var13 = SentinelDesigner.field_b[3];
             } else if (var66[29] > 0 &&
               hl.field_v.j(0) <= 0) {
-              var13 = ji.field_b[4];
+              var13 = SentinelDesigner.field_b[4];
             } else if (0 < var66[17] &&
-              !wl.field_lb) {
-              var13 = ji.field_b[5];
+              !Projectile.field_lb) {
+              var13 = SentinelDesigner.field_b[5];
             } else if (var66[16] > 0 &&
               !vc.field_d) {
-              var13 = ji.field_b[6];
+              var13 = SentinelDesigner.field_b[6];
             } else if (0 < var66[22] &&
-              !nb.field_I &&
+              !GameplayController.field_I &&
               !bf.field_Gb) {
-              var13 = ji.field_b[7];
+              var13 = SentinelDesigner.field_b[7];
             } else if (var66[23] > 0 &&
               !qf.field_b) {
-              var13 = ji.field_b[8];
+              var13 = SentinelDesigner.field_b[8];
             } else if (0 < var66[25] &&
               !bm.field_Q) {
-              var13 = ji.field_b[9];
+              var13 = SentinelDesigner.field_b[9];
             } else if (0 < var66[24] &&
               ei.field_t < 5) {
-              var13 = ji.field_b[10];
+              var13 = SentinelDesigner.field_b[10];
             } else if (lc.field_f &&
               !(10 <= ei.field_t)) {
-              var13 = ji.field_b[11];
+              var13 = SentinelDesigner.field_b[11];
             }
           } else {
-            var13 = ji.field_b[0];
+            var13 = SentinelDesigner.field_b[0];
             var15 = var13;
             var15 = var13;
           }
@@ -1461,14 +1461,14 @@ final class ff extends ma {
             var16 = 87;
             var17 = 10 + pl.field_U.a(var59, var14);
             var18 = 10 + pl.field_U.a(var59, var14, 12);
-            pb.c((-var17 + var14) / 2 + var15_int, -5 + var16, var17, var18, 0, 150);
+            SoftwareRaster.c((-var17 + var14) / 2 + var15_int, -5 + var16, var17, var18, 0, 150);
             pl.field_U.a(var59, var15_int, var16, var14, 100, 16711680, 0, 1, 0, 12);
           }
           if (f.field_y != null) {
             var14 = 0;
             var15 = null;
             if (fg.field_Ob == 0) {
-              var16 = (int)f.field_y.field_j;
+              var16 = (int)f.field_y.key;
               var14 = Integer.parseInt(f.field_y.field_S.substring(5, 6));
               var17 = var14;
               if (var17 == 1) {
@@ -1499,7 +1499,7 @@ final class ff extends ma {
                 }
               }
             } else {
-              var60 = ul.a((int)f.field_y.field_j, (byte) 67);
+              var60 = NodeDeque.a((int)f.field_y.key, (byte) 67);
               var14 = Integer.parseInt(f.field_y.field_S.substring(5, 6));
               if (0 == (fg.field_Ob & 1) && (var14 == 2 ||
                 var14 == 3) && oh.field_f < -30 + f.field_y.field_Rb + f.field_y.field_zb) {
@@ -1507,13 +1507,13 @@ final class ff extends ma {
               }
               var17 = var14;
               if (var17 == 0) {
-                var15 = db.a(sl.field_j[7], -111, new String[]{Integer.toString(var60.g(8192))});
+                var15 = db.a(sl.field_j[7], -111, new String[]{Integer.toString(var60.getTotalArmour(8192))});
               } else {
                 if (var17 != 1) {
                   if (var17 != 2) {
                     if (var17 == 3) {
                       if ((1 & fg.field_Ob) != 0) {
-                        var17 = ul.a((byte) -97, var60.field_N);
+                        var17 = NodeDeque.a((byte) -97, var60.componentId);
                         array$36 = new String[1];
                         stackIn_708_0 = sl.field_j[10];
                         stackIn_708_1 = -93;
@@ -1537,7 +1537,7 @@ final class ff extends ma {
                     }
                   } else {
                     if ((fg.field_Ob & 1) != 0) {
-                      var17 = ul.a((byte) 77, var60.field_N);
+                      var17 = NodeDeque.a((byte) 77, var60.componentId);
                       array$37 = new String[1];
                       stackIn_702_0 = sl.field_j[9];
                       stackIn_702_1 = -107;
@@ -1556,7 +1556,7 @@ final class ff extends ma {
                     }
                   }
                 } else {
-                  var15 = db.a(sl.field_j[8], -40, new String[]{Integer.toString(tc.field_B[var60.field_N])});
+                  var15 = db.a(sl.field_j[8], -40, new String[]{Integer.toString(tc.field_B[var60.componentId])});
                 }
               }
               if (var14 != 6 &&
@@ -1578,8 +1578,8 @@ final class ff extends ma {
                 var14 == 3) && 0 == (fg.field_Ob & 1)) {
                 var17 = -var19 - 4 + (f.field_y.field_zb + f.field_y.field_Rb);
               }
-              pb.c(var17, var18, var19, var16, 0, 192);
-              pb.h(var17, var18, var19, var16, 1400960, 192);
+              SoftwareRaster.c(var17, var18, var19, var16, 0, 192);
+              SoftwareRaster.h(var17, var18, var19, var16, 1400960, 192);
               fk.field_d.b((String) (var15), 4 + var17, 10 + var18, 16777215, -1);
             }
           }
@@ -1630,11 +1630,11 @@ final class ff extends ma {
         }
     }
 
-    final static gh a(boolean param0, int param1, int[] param2) {
-        gh stackIn_38_0 = null;
+    final static SceneWidget a(boolean param0, int param1, int[] param2) {
+        SceneWidget stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         String stackIn_39_2 = null;
-        gh stackIn_40_0 = null;
+        SceneWidget stackIn_40_0 = null;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
         String stackIn_44_2 = null;
@@ -1644,12 +1644,12 @@ final class ff extends ma {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        gh var7 = null;
-        gh var8 = null;
-        gh var9 = null;
+        SceneWidget var7 = null;
+        SceneWidget var8 = null;
+        SceneWidget var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        gh var12 = null;
+        SceneWidget var12 = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -1668,10 +1668,10 @@ final class ff extends ma {
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
-        wk var30 = null;
-        gh var32 = null;
+        RgbSprite var30 = null;
+        SceneWidget var32 = null;
         int[] var34 = null;
-        gh var35 = null;
+        SceneWidget var35 = null;
         int[] var36 = null;
         int[] var37 = null;
         int[] var38 = null;
@@ -1684,25 +1684,25 @@ final class ff extends ma {
         int var18_intLifetime2;
         int var19Lifetime1;
         int var20Lifetime1;
-        var22 = SteelSentinels.field_G;
+        var22 = SteelSentinels.obfuscationControl;
         try {
           var3_int = qa.field_O;
           var4 = param1 + 100;
           var5 = 78;
           var6 = 66;
-          var7 = new gh((long)var4, sb.field_Y);
+          var7 = new SceneWidget((long)var4, sb.field_Y);
           cj.field_a[var4] = var7;
           var7.field_I = tk.field_t;
           var7.field_Ab = be.field_f;
-          var8 = new gh((long)var4, (gh) null);
+          var8 = new SceneWidget((long)var4, (SceneWidget) null);
           var8.a(0, 2, var5 - 4, 2, -4 + var6);
           var8.field_I = co.field_d;
           if (null == ue.field_g[-1 + param1]) {
-            ad.a(param1 - 1, (nk) null, 84);
+            ad.a(param1 - 1, (ArticulatedPart) null, 84);
           }
           var8.field_Pb = ue.field_g[param1 - 1];
           var7.a(var8, 119);
-          var9 = new gh((long)var4, kh.field_s);
+          var9 = new SceneWidget((long)var4, kh.field_s);
           var37 = new int[param2.length - 8];
           var28 = var37;
           var10 = var28;
@@ -1716,7 +1716,7 @@ final class ff extends ma {
           var9.a(0, 2, -4 + var5 - 15, -2 + var6, -var6 + var3_int);
           var9.field_Ib = 10;
           var7.a(var9, 125);
-          var12 = new gh("bin", (gh) null);
+          var12 = new SceneWidget("bin", (SceneWidget) null);
           var13 = lj.field_e[0].field_z + 3;
           var14 = 3 + lj.field_e[0].field_B;
           var12.a(0, -3 + var5 - var14, var14, -var13 + 174, var13);
@@ -1739,7 +1739,7 @@ final class ff extends ma {
             }
           }
           if (var15 > 0) {
-            var30 = new wk(20 * Math.min(var15, 4), 20 * (1 + var15 / 4));
+            var30 = new RgbSprite(20 * Math.min(var15, 4), 20 * (1 + var15 / 4));
             var15 = 0;
             var30.d();
             var17Lifetime1 = 0;
@@ -1749,7 +1749,7 @@ final class ff extends ma {
               var21 = var44[var20];
               if (var21 >= 0) {
                 var15++;
-                ie.field_d[var21].c(var17Lifetime1, var18_intLifetime1);
+                IsaacRandom.field_d[var21].c(var17Lifetime1, var18_intLifetime1);
                 if (var15 == 4) {
                   var17Lifetime1 = 0;
                   var18_intLifetime1 += 20;
@@ -1759,7 +1759,7 @@ final class ff extends ma {
               }
             }
             sb.field_bb.b((byte) 125);
-            var32 = new gh((long)var4, (gh) null);
+            var32 = new SceneWidget((long)var4, (SceneWidget) null);
             var32.field_Pb = var30;
             var32.a(0, 20, var30.field_B, var6, var30.field_z);
             var7.a(var32, 120);
@@ -1792,7 +1792,7 @@ final class ff extends ma {
             var17Lifetime2 = 1;
             break;
           }
-          var35 = new gh((long)var4, kh.field_s);
+          var35 = new SceneWidget((long)var4, kh.field_s);
           var35.a(0, 60, -4 + (var5 - 15), var6 - 6, 6 - var6 + var12.field_Y);
           var35.field_nb = 749462;
           var35.field_Ib = 10;
@@ -1830,7 +1830,7 @@ final class ff extends ma {
           this.field_jb = this.field_jb + 1;
           super.a(param0, 92, param2, param3);
           if (param1 < 56) {
-            field_rb = (wk[]) null;
+            field_rb = (RgbSprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ff.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -1895,26 +1895,26 @@ final class ff extends ma {
         int var11;
         int var12;
         int var13;
-        wk var14;
-        wk var15;
-        wk var16;
+        RgbSprite var14;
+        RgbSprite var15;
+        RgbSprite var16;
         vd var6Lifetime1;
-        L0: {
-          L1: {
-            var13 = SteelSentinels.field_G;
+        regionExit1: {
+          regionExit2: {
+            var13 = SteelSentinels.obfuscationControl;
             var6 = this.field_mb.a((byte) 21);
             if (var6 != nh.field_J &&
               var6 != ma.field_Y) {
               var5 = this.field_mb.a(true);
               if (var5 == null) {
                 var5 = this.field_hb;
-                break L1;
+                break regionExit2;
               }
               if (!(var5.equals(this.field_y))) {
                 this.field_y = var5;
                 this.f((byte) -104);
               }
-              break L0;
+              break regionExit1;
             }
             var5 = me.field_c;
           }
@@ -1948,9 +1948,9 @@ final class ff extends ma {
             var11 <= this.field_pb.field_A &&
             var12 <= this.field_pb.field_F) {
             q.a(this.field_pb, (byte) -88);
-            pb.b();
+            SoftwareRaster.b();
           } else {
-            this.field_pb = new wk(var11, var12);
+            this.field_pb = new RgbSprite(var11, var12);
             q.a(this.field_pb, (byte) -111);
           }
           var14.a(112, 144, var14.field_z << 4, var14.field_B << 4, -this.field_jb << 10, 4096);
@@ -1979,6 +1979,6 @@ final class ff extends ma {
           var1Lifetime1 = Math.sqrt((double)var0Lifetime1);
           field_ib[var0Lifetime1] = (int)Math.floor(-(var1Lifetime1 * 9.0) + 768.5 + 0.0234375 * (double)var0Lifetime1);
         }
-        field_qb = new ul();
+        field_qb = new NodeDeque();
     }
 }

@@ -67,11 +67,11 @@ final class ni {
         byte[] var3Lifetime5;
         byte[] var3Lifetime1Lifetime1;
         if (param0 == 100) {
-          if (ck.field_h > 0) {
-            fieldTemp$22 = ck.field_h - 1;
-            ck.field_h = ck.field_h - 1;
+          if (IntrusiveNode.field_h > 0) {
+            fieldTemp$22 = IntrusiveNode.field_h - 1;
+            IntrusiveNode.field_h = IntrusiveNode.field_h - 1;
             var2_ref_byte__ = dh.field_A[fieldTemp$22];
-            dh.field_A[ck.field_h] = null;
+            dh.field_A[IntrusiveNode.field_h] = null;
             return var2_ref_byte__;
           }
           if (param1 != -45) {

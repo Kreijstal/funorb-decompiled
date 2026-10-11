@@ -1,33 +1,33 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ee {
+final class CombatWorld {
     boolean field_lb;
     int field_g;
     int field_N;
     boolean field_fb;
-    ie field_D;
+    IsaacRandom random;
     boolean field_W;
     int field_eb;
-    int field_Q;
-    ul field_T;
+    int computerPlayerCount;
+    NodeDeque projectiles;
     private int[] field_Z;
-    hd field_ab;
-    int field_kb;
+    BattleTerrain terrain;
+    int playerCount;
     boolean field_j;
     private t field_U;
     static boolean field_G;
-    static gh field_H;
+    static SceneWidget field_H;
     boolean field_h;
     private int[] field_E;
     int field_c;
     int field_a;
     int field_M;
     int field_A;
-    ul field_K;
+    NodeDeque sentinels;
     static String field_I;
     int field_R;
-    mb field_y;
+    Sentinel spawnedSpecialSentinel;
     private int field_t;
     int field_gb;
     boolean field_p;
@@ -35,19 +35,19 @@ final class ee {
     int field_d;
     static String field_k;
     int field_f;
-    int field_r;
+    int simulationTick;
     int field_q;
     private int field_m;
-    ul field_o;
+    NodeDeque field_o;
     int field_X;
-    ul field_O;
-    int field_Y;
+    NodeDeque field_O;
+    int mapSeed;
     int field_n;
-    ul field_u;
+    NodeDeque explosions;
     int field_P;
-    ul field_db;
+    NodeDeque field_db;
     int field_s;
-    String[] field_bb;
+    String[] playerNames;
     int field_B;
     private int field_w;
     private int field_F;
@@ -57,13 +57,13 @@ final class ee {
     int field_V;
     int field_cb;
     static String field_L;
-    ul field_e;
+    NodeDeque field_e;
     int field_l;
     static int[] field_S;
     private int field_i;
-    ul field_C;
+    NodeDeque field_C;
     static String[] field_jb;
-    ra field_J;
+    DualNodeDeque field_J;
     static String field_x;
     int field_z;
 
@@ -71,13 +71,13 @@ final class ee {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        wl var6 = null;
+        Projectile var6 = null;
         try {
-          var3_int = (this.field_ab.field_o[param1] << 4) - 75000 + 150000 * param1;
-          var4 = this.field_ab.field_o[-param1 + param0] << 4;
+          var3_int = (this.terrain.spawnPositions[param1] << 4) - 75000 + 150000 * param1;
+          var4 = this.terrain.spawnPositions[-param1 + param0] << 4;
           var5 = -30000;
-          var6 = new wl(var3_int, var5, -1 + 2 * param1, 0, 50, 1, 17, this, (mb) null, 1000 + this.field_R, var4, 30);
-          this.field_T.a(param0 ^ 2, var6);
+          var6 = new Projectile(var3_int, var5, -1 + 2 * param1, 0, 50, 1, 17, this, (Sentinel) null, 1000 + this.field_R, var4, 30);
+          this.projectiles.addLast(param0 ^ 2, var6);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ee.D(" + param0 + ',' + param1 + ')');
         }
@@ -88,12 +88,12 @@ final class ee {
         int var4 = 0;
         int stackIn_32_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
-          if (this.field_ab.b(98) != 2) {
+          if (this.terrain.getTerrainType(98) != 2) {
             return false;
           }
-          if (this.field_ab.a(false, param1) > 3000) {
+          if (this.terrain.getSecondaryHeightAt(false, param1) > 3000) {
             return false;
           }
           if (!this.b(true, param1)) {
@@ -104,8 +104,8 @@ final class ee {
           }
           param1++;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(this.field_ab.field_n > param1)))) {
-            stackIn_32_0 = this.field_ab.a(false, param1);
+          while (!(decompiledNaturalLoopExit0 = (!(this.terrain.profileLength > param1)))) {
+            stackIn_32_0 = this.terrain.getSecondaryHeightAt(false, param1);
             if (var4 == 0) {
               if (stackIn_32_0 > 3000) {
                 return true;
@@ -129,12 +129,12 @@ final class ee {
         }
     }
 
-    final void b(byte param0) {
+    final void advanceSimulation(byte obfuscationGuard) {
         int stackIn_27_0 = 0;
         int stackIn_47_0 = 0;
         int stackIn_49_0 = 0;
         int stackIn_49_1 = 0;
-        mb stackIn_358_0 = null;
+        Sentinel stackIn_358_0 = null;
         int stackIn_358_1 = 0;
         int stackIn_359_2 = 0;
         int stackIn_396_0 = 0;
@@ -159,10 +159,10 @@ final class ee {
         int var4 = 0;
         int[] var4_ref_int__ = null;
         int[] var5_ref_int__ = null;
-        jc var5_ref_jc = null;
+        NodeIterator var5_ref_jc = null;
         int var5 = 0;
-        mb var5_ref_mb = null;
-        wl var5_ref_wl = null;
+        Sentinel var5_ref_mb = null;
+        Projectile var5_ref_wl = null;
         int var6_int = 0;
         ne var6 = null;
         int[] var6_array = null;
@@ -172,28 +172,28 @@ final class ee {
         int var9_int = 0;
         Object var9 = null;
         int var10 = 0;
-        mb var10_ref_mb = null;
+        Sentinel var10_ref_mb = null;
         int var11_int = 0;
-        mb var11 = null;
+        Sentinel var11 = null;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        var15 = SteelSentinels.field_G;
+        var15 = SteelSentinels.obfuscationControl;
         try {
           this.field_N = this.field_N + 2 * oh.field_f;
           if ((this.field_v & 32) != 0) {
-            if (this.field_ab.field_h[1] != 6000) {
+            if (this.terrain.field_h[1] != 6000) {
             }
             if (50 == this.field_b) {
-              this.field_ab.field_h[1] = -10000;
+              this.terrain.field_h[1] = -10000;
             }
           }
           if ((16 & this.field_v) != 0) {
-            if (this.field_ab.field_h[0] == 6000) {
+            if (this.terrain.field_h[0] == 6000) {
             }
             if (this.field_b == 50) {
-              this.field_ab.field_h[0] = -10000;
+              this.terrain.field_h[0] = -10000;
             }
           }
           this.field_q = this.field_q + pi.field_c;
@@ -211,7 +211,7 @@ final class ee {
           if (!this.field_j &&
             10 == di.field_g &&
             qh.field_Yb > 0 &&
-            this.f(param0 ^ -114)) {
+            this.f(obfuscationGuard ^ -114)) {
             var3_ref_int____ = ua.field_I[ol.field_Ub + 10 * ge.field_j];
             if (1 + this.field_cb < var3_ref_int____.length) {
               this.field_cb = this.field_cb + 1;
@@ -245,7 +245,7 @@ final class ee {
                     var8 = qm.field_d;
                   }
                   if (var5_ref_int__[var7] == 3) {
-                    var8 = kj.field_D;
+                    var8 = CipherPacketBuffer.field_D;
                   }
                   if (var5_ref_int__[var7] == 4) {
                     var8 = rn.field_o;
@@ -307,48 +307,48 @@ final class ee {
                   if (var5_ref_int__[var7] == 24) {
                     var8 = pg.field_z;
                   }
-                  L38: {
+                  regionExit1: {
                     var9_int = -1;
                     if (ge.field_j == 1 &&
                       ol.field_Ub == 9) {
-                      L39: {
-                        L40: {
-                          L41: {
+                      regionExit2: {
+                        regionExit3: {
+                          regionExit4: {
                             var10 = this.field_cb;
                             if (var10 != 0) {
                               if (1 != var10 ||
                                 var15 != 0) {
                                 switch (var10) {
                                   case 2:
-                                    break L41;
+                                    break regionExit4;
                                   case 3:
-                                    break L40;
+                                    break regionExit3;
                                   default:
-                                    break L38;
+                                    break regionExit1;
                                   case 4:
-                                    break L39;
+                                    break regionExit2;
                                 }
                               }
                             } else {
                               if ((0 == var7)) {
                                 var9_int = 36;
                               }
-                              break L38;
+                              break regionExit1;
                             }
                             if ((var7 == 0)) {
                               var9_int = 15;
                             }
-                            break L38;
+                            break regionExit1;
                           }
                           if ((var7 == 0)) {
                             var9_int = 35;
                           }
-                          break L38;
+                          break regionExit1;
                         }
                         if ((var7 == 0)) {
                           var9_int = 45;
                         }
-                        break L38;
+                        break regionExit1;
                       }
                       var9_int = 41;
                     }
@@ -400,7 +400,7 @@ final class ee {
                       this.field_cb == 3)) {
                       var9_int = 45;
                     }
-                    L57: {
+                    regionExit5: {
                       if (-1 + var3_ref_int____.length == this.field_cb) {
                         boolean decompiledFrameRemainder7 = true;
                         var11_int = var7;
@@ -408,17 +408,17 @@ final class ee {
                           if (var11_int != 1 ||
                             var15 != 0) {
                             if (var11_int != 2) {
-                              break L57;
+                              break regionExit5;
                             }
                             decompiledFrameRemainder7 = false;
                           }
                         } else {
                           var9_int = 37;
-                          break L57;
+                          break regionExit5;
                         }
                         if (decompiledFrameRemainder7) {
                           var9_int = 14;
-                          break L57;
+                          break regionExit5;
                         }
                         var9_int = 15;
                       }
@@ -470,34 +470,34 @@ final class ee {
                   }
                   if (var8 != null) {
                     if (0 == var5_ref_int__[var7]) {
-                      var11 = new mb(0, 0, this);
+                      var11 = new Sentinel(0, 0, this);
                       var11.a(-1, 3, (int[]) (var8), 1);
                       var11.field_Nb = 7;
-                      var11.j(param0 - 32);
-                      var12 = var11.field_Bb;
-                      var13 = var11.field_hc;
-                      var11.field_Gb = -320000;
-                      var11.field_K = 0;
-                      var11.field_ab = 1000;
+                      var11.j(obfuscationGuard - 32);
+                      var12 = var11.playerId;
+                      var13 = var11.worldX;
+                      var11.worldY = -320000;
+                      var11.velocityX = 0;
+                      var11.velocityY = 1000;
                       var11.field_Qb = 150;
-                      var11.field_fc = var11.field_Gb;
-                      this.field_K.a(3, var11);
+                      var11.field_fc = var11.worldY;
+                      this.sentinels.addLast(3, var11);
                       var11.field_W = var12;
                       var14 = -4;
                       while (var14 <= 4) {
                         stackIn_49_0 = ~var14;
                         stackIn_49_1 = -1;
                         if (stackIn_49_0 != stackIn_49_1) {
-                          var11 = new mb(0, 0, this);
+                          var11 = new Sentinel(0, 0, this);
                           var11.a(-1, 3, (int[]) (var8), 1);
                           var11.field_Nb = 7;
-                          this.field_K.a(param0 ^ 24, var11);
+                          this.sentinels.addLast(obfuscationGuard ^ 24, var11);
                           var11.field_W = var12;
                           var11.field_C = 3000 * var14;
-                          var11.field_hc = var13;
-                          var11.field_Gb = -320000;
-                          var11.field_fc = var11.field_Gb;
-                          var11.field_K = 0;
+                          var11.worldX = var13;
+                          var11.worldY = -320000;
+                          var11.field_fc = var11.worldY;
+                          var11.velocityX = 0;
                           stackIn_358_0 = var11;
                           stackIn_358_1 = 1000 * Math.abs(var14);
                           if (var14 <= 0) {
@@ -505,14 +505,14 @@ final class ee {
                           } else {
                             stackIn_359_2 = 500;
                           }
-                          stackIn_358_0.field_ab = stackIn_358_1 + stackIn_359_2;
+                          stackIn_358_0.velocityY = stackIn_358_1 + stackIn_359_2;
                           var11.field_Qb = 150;
                         }
                         var14++;
                       }
                     } else {
-                      var11 = new mb(0, 0, this);
-                      var11.a((int[]) (var8), true, false, -1, 1);
+                      var11 = new Sentinel(0, 0, this);
+                      var11.configureDesign((int[]) (var8), true, false, -1, 1);
                       var11.field_Nb = 7;
                       if (-1 != var9_int) {
                         var11.field_hb = var9_int;
@@ -522,13 +522,13 @@ final class ee {
                           var4 = 0;
                         }
                       }
-                      this.field_K.a(3, var11);
+                      this.sentinels.addLast(3, var11);
                       var11.j(-5);
-                      var11.field_Gb = -320000;
-                      var11.field_K = 0;
-                      var11.field_fc = var11.field_Gb;
+                      var11.worldY = -320000;
+                      var11.velocityX = 0;
+                      var11.field_fc = var11.worldY;
                       var11.field_Qb = 150;
-                      var11.field_ab = 8000;
+                      var11.velocityY = 8000;
                     }
                   }
                   var7++;
@@ -544,12 +544,12 @@ final class ee {
               (decompiledFrameCompleted4) &&
               (!this.field_j)) {
               this.field_j = true;
-              nc.field_a = this.field_r / 50;
+              nc.field_a = this.simulationTick / 50;
               if (b.field_f) {
                 nc.field_a = nc.field_a + 600;
               }
               var4 = 0;
-              var5_ref_jc = new jc(this.field_e);
+              var5_ref_jc = new NodeIterator(this.field_e);
               var6 = (ne) (var5_ref_jc.b(2));
               while (var6 != null) {
                 var4 = var4 + var6.field_O;
@@ -564,12 +564,12 @@ final class ee {
                 var7 = 0;
                 var8_int = 0;
                 var9_int = 0;
-                var10_ref_mb = this.f(0, -127);
+                var10_ref_mb = this.findSentinelForPlayer(0, -127);
                 if (var10_ref_mb != null) {
-                  var8_int = var10_ref_mb.field_Tb;
-                  var7 = var10_ref_mb.field_Eb;
-                  var6_int = var10_ref_mb.field_rb;
-                  var9_int = var10_ref_mb.field_x - ag.a(91, var10_ref_mb.field_rc);
+                  var8_int = var10_ref_mb.charge;
+                  var7 = var10_ref_mb.maximumArmour;
+                  var6_int = var10_ref_mb.armour;
+                  var9_int = var10_ref_mb.maximumCharge - ag.a(91, var10_ref_mb.activeModuleType);
                 }
                 mj.a(ge.field_j, -(var9_int * 50000) + (this.field_M + this.field_f), nc.field_a, ol.field_Ub, -(var7 * 60000) + (-(var6_int * 128) + this.field_a), -(var8_int * 256) + (-(var4 * 100) + this.field_N), this.field_q, (byte) -65);
               }
@@ -579,13 +579,13 @@ final class ee {
             stackIn_396_0 = this.field_lb ? 1 : 0;
           }
           if (stackIn_396_0 != 0) {
-            var3 = this.field_bb.length;
+            var3 = this.playerNames.length;
             if (this.field_ib > 0 &&
-              this.field_K.b((byte) -128) < 30 &&
+              this.sentinels.size((byte) -128) < 30 &&
               41 > this.field_cb) {
               this.field_ib = this.field_ib - 1;
             }
-            if (!this.field_j && (!(var3 < this.field_K.b((byte) -128)) ||
+            if (!this.field_j && (!(var3 < this.sentinels.size((byte) -128)) ||
               this.field_ib <= 0)) {
               boolean decompiledFrameCompleted2 = true;
               this.field_ib = 3000;
@@ -595,7 +595,7 @@ final class ee {
                 var5 = var4_ref_int__.length;
                 var6_int = 0;
                 while (var6_int < var5) {
-                  var7 = this.field_ab.a(-11) * (var6_int + 1) / (var5 + 1) << 4;
+                  var7 = this.terrain.getProfileLength(-11) * (var6_int + 1) / (var5 + 1) << 4;
                   var8_int = -100000;
                   var9 = null;
                   stackIn_721_0 = -1;
@@ -614,7 +614,7 @@ final class ee {
                     var9 = qm.field_d;
                   }
                   if (3 == var4_ref_int__[var6_int]) {
-                    var9 = kj.field_D;
+                    var9 = CipherPacketBuffer.field_D;
                   }
                   if (var4_ref_int__[var6_int] == 4) {
                     var9 = rn.field_o;
@@ -663,7 +663,7 @@ final class ee {
                   }
                   if (null != var9) {
                     if (var4_ref_int__[var6_int] != 0) {
-                      var10_ref_mb = new mb(var7, var8_int, this);
+                      var10_ref_mb = new Sentinel(var7, var8_int, this);
                       var11_int = var4_ref_int__[var6_int];
                       switch ((var15 == 0
                         || var11_int == 1
@@ -863,17 +863,17 @@ final class ee {
                         default:
                           break;
                       }
-                      var10_ref_mb.a((int[]) (var9), true, false, -1, 1);
+                      var10_ref_mb.configureDesign((int[]) (var9), true, false, -1, 1);
                       var10_ref_mb.field_Nb = 7;
-                      this.field_K.a(param0 ^ 24, var10_ref_mb);
+                      this.sentinels.addLast(obfuscationGuard ^ 24, var10_ref_mb);
                     } else {
                       var10 = -4;
                       while (var10 <= 4) {
-                        var11 = new mb(var7 + 3000 * var10, var8_int, this);
-                        var11.a((int[]) (var9), true, false, -1, 1);
+                        var11 = new Sentinel(var7 + 3000 * var10, var8_int, this);
+                        var11.configureDesign((int[]) (var9), true, false, -1, 1);
                         var11.field_Nb = 7;
-                        var11.field_ab = 5 * var10;
-                        this.field_K.a(3, var11);
+                        var11.velocityY = 5 * var10;
+                        this.sentinels.addLast(3, var11);
                         var10++;
                       }
                     }
@@ -887,9 +887,9 @@ final class ee {
               }
               if (stackIn_721_0 >= stackIn_721_1 ||
                 this.field_cb >= 40 &&
-                this.field_kb <= 1) {
+                this.playerCount <= 1) {
                 if (!this.field_j &&
-                  !(var3 < this.field_K.b((byte) -128))) {
+                  !(var3 < this.sentinels.size((byte) -128))) {
                   this.field_j = true;
                   this.field_cb = 43;
                   if (var15 != 0) {
@@ -916,31 +916,31 @@ final class ee {
             }
           }
           this.a((byte) 20);
-          this.field_r = this.field_r + 1;
+          this.simulationTick = this.simulationTick + 1;
           if (this.field_j &&
-            0 != (7 & this.field_r)) {
+            0 != (7 & this.simulationTick)) {
             return;
           }
-          if (4 == this.field_ab.b(68)) {
+          if (4 == this.terrain.getTerrainType(68)) {
             this.a(-27309);
           }
-          if (this.field_ab.b(49) == 1 &&
+          if (this.terrain.getTerrainType(49) == 1 &&
             -1 == di.field_g) {
             var3 = 1;
             var4 = 0;
-            var5_ref_mb = (mb) (this.field_K.e(param0 + 13031));
+            var5_ref_mb = (Sentinel) (this.sentinels.first(obfuscationGuard + 13031));
             while (true) {
               if (null != var5_ref_mb) {
                 stackIn_775_0 = -1;
-                stackIn_775_1 = ~var5_ref_mb.field_jc;
+                stackIn_775_1 = ~var5_ref_mb.teamId;
                 if (var15 == 0) {
                   if (stackIn_775_0 == stackIn_775_1) {
                     var4 = var4 + var5_ref_mb.field_vb;
                   }
-                  if (var5_ref_mb.field_jc == 1) {
+                  if (var5_ref_mb.teamId == 1) {
                     var4 = var4 - var5_ref_mb.field_vb;
                   }
-                  var5_ref_mb = (mb) (this.field_K.a((byte) -60));
+                  var5_ref_mb = (Sentinel) (this.sentinels.next((byte) -60));
                   continue;
                 }
               } else {
@@ -950,25 +950,25 @@ final class ee {
               if (stackIn_775_0 > stackIn_775_1) {
                 var3 = -1;
               }
-              if (this.field_r == 12000) {
-                var5_ref_wl = new wl(0, 0, var3, 0, 0, 1, 12, this, (mb) null, 0, 0, 0);
-                this.field_T.a(3, var5_ref_wl);
+              if (this.simulationTick == 12000) {
+                var5_ref_wl = new Projectile(0, 0, var3, 0, 0, 1, 12, this, (Sentinel) null, 0, 0, 0);
+                this.projectiles.addLast(3, var5_ref_wl);
               }
-              if (this.field_r == 18000) {
-                var5_ref_wl = new wl(0, 0, var3, 0, 0, 1, 12, this, (mb) null, 0, 0, 0);
-                this.field_T.a(param0 ^ 24, var5_ref_wl);
+              if (this.simulationTick == 18000) {
+                var5_ref_wl = new Projectile(0, 0, var3, 0, 0, 1, 12, this, (Sentinel) null, 0, 0, 0);
+                this.projectiles.addLast(obfuscationGuard ^ 24, var5_ref_wl);
               }
-              if (this.field_r == 24000) {
-                var5_ref_wl = new wl(0, 0, -var3, 0, 0, 1, 14, this, (mb) null, 0, 0, 0);
-                this.field_T.a(param0 ^ 24, var5_ref_wl);
+              if (this.simulationTick == 24000) {
+                var5_ref_wl = new Projectile(0, 0, -var3, 0, 0, 1, 14, this, (Sentinel) null, 0, 0, 0);
+                this.projectiles.addLast(obfuscationGuard ^ 24, var5_ref_wl);
               }
-              if (29750 != this.field_r) {
+              if (29750 != this.simulationTick) {
                 break;
               }
               this.field_R = 1;
-              var5_ref_wl = new wl(0, 0, -var3, 0, 0, 1, 16, this, (mb) null, 0, 0, 0);
+              var5_ref_wl = new Projectile(0, 0, -var3, 0, 0, 1, 16, this, (Sentinel) null, 0, 0, 0);
               ri.field_b = var5_ref_wl;
-              this.field_T.a(param0 ^ 24, var5_ref_wl);
+              this.projectiles.addLast(obfuscationGuard ^ 24, var5_ref_wl);
               break;
             }
           }
@@ -980,51 +980,51 @@ final class ee {
           }
           var3 = -1;
           var4 = 0;
-          stackIn_802_0 = (1 != this.field_ab.b(125)) ? 0 : 1;
+          stackIn_802_0 = (1 != this.terrain.getTerrainType(125)) ? 0 : 1;
           var5 = stackIn_802_0;
-          if (param0 != 27) {
+          if (obfuscationGuard != 27) {
             return;
           }
-          var6_array = new int[this.field_kb + this.field_Q];
+          var6_array = new int[this.playerCount + this.computerPlayerCount];
           var7 = 0;
-          var8 = (mb) (this.field_K.e(13058));
+          var8 = (Sentinel) (this.sentinels.first(13058));
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (null == var8))) {
-            ((mb) (var8)).c(1, this.field_r);
-            stackIn_849_0 = ~((mb) (var8)).field_Bb;
+            ((Sentinel) (var8)).advanceCombatState(1, this.simulationTick);
+            stackIn_849_0 = ~((Sentinel) (var8)).playerId;
             stackIn_849_1 = -1;
             if (var15 == 0) {
               boolean decompiledFrameRemainder8 = true;
               if (stackIn_849_0 <= stackIn_849_1 &&
-                ((mb) (var8)).field_Bb >= 0 &&
-                ((mb) (var8)).field_Bb < this.field_kb + this.field_Q &&
-                !((mb) (var8)).field_V) {
-                if (!((mb) (var8)).field_Hb) {
-                  var7 = var7 | 1 << ((mb) (var8)).field_jc;
+                ((Sentinel) (var8)).playerId >= 0 &&
+                ((Sentinel) (var8)).playerId < this.playerCount + this.computerPlayerCount &&
+                !((Sentinel) (var8)).field_V) {
+                if (!((Sentinel) (var8)).field_Hb) {
+                  var7 = var7 | 1 << ((Sentinel) (var8)).teamId;
                 }
-                var6_array[((mb) (var8)).field_Bb] = ((mb) (var8)).field_vb;
-                if (var6_array[((mb) (var8)).field_Bb] <= 0) {
-                  var6_array[((mb) (var8)).field_Bb] = 1;
+                var6_array[((Sentinel) (var8)).playerId] = ((Sentinel) (var8)).field_vb;
+                if (var6_array[((Sentinel) (var8)).playerId] <= 0) {
+                  var6_array[((Sentinel) (var8)).playerId] = 1;
                 }
-                if (!(this.field_l * 100000 <= ((mb) (var8)).field_vb) ||
+                if (!(this.field_l * 100000 <= ((Sentinel) (var8)).field_vb) ||
                   var5 != 0) {
-                  if (!(((mb) (var8)).field_vb <= var4)) {
-                    var4 = ((mb) (var8)).field_vb;
+                  if (!(((Sentinel) (var8)).field_vb <= var4)) {
+                    var4 = ((Sentinel) (var8)).field_vb;
                   }
                   decompiledFrameRemainder8 = false;
                 }
                 else {
-                  if (~((mb) (var8)).field_vb == ~var4) {
+                  if (~((Sentinel) (var8)).field_vb == ~var4) {
                     var3 = -1;
                   } else {
-                    if (((mb) (var8)).field_vb > var4) {
-                      var3 = ((mb) (var8)).field_Bb;
-                      var4 = ((mb) (var8)).field_vb;
+                    if (((Sentinel) (var8)).field_vb > var4) {
+                      var3 = ((Sentinel) (var8)).playerId;
+                      var4 = ((Sentinel) (var8)).field_vb;
                     }
                   }
                 }
               }
-              var8 = (mb) (this.field_K.a((byte) -98));
+              var8 = (Sentinel) (this.sentinels.next((byte) -98));
               continue;
             }
             break;
@@ -1036,101 +1036,101 @@ final class ee {
           if (stackIn_849_0 == stackIn_849_1 &&
             0 > var3 &&
             this.field_A > 0 &&
-            null != this.field_y &&
-            this.field_y.field_vb >= 200000) {
+            null != this.spawnedSpecialSentinel &&
+            this.spawnedSpecialSentinel.field_vb >= 200000) {
             this.field_R = 1;
           }
           if ((50000 * this.field_l) <= var4 &&
             this.field_W) {
             this.field_W = false;
-            var8_int = this.field_ab.a(-116) << 3;
+            var8_int = this.terrain.getProfileLength(-116) << 3;
             var9_int = -500000;
-            var10_ref_mb = new mb(var8_int, var9_int, this);
+            var10_ref_mb = new Sentinel(var8_int, var9_int, this);
             var10_ref_mb.field_ib = true;
-            var10_ref_mb.a(oh.field_h, true, false, -1, this.field_kb + this.field_Q);
+            var10_ref_mb.configureDesign(oh.field_h, true, false, -1, this.playerCount + this.computerPlayerCount);
             var10_ref_mb.field_Nb = 11;
-            this.field_A = var10_ref_mb.field_Bb;
-            this.field_y = var10_ref_mb;
-            var10_ref_mb.d(param0 - 28060);
+            this.field_A = var10_ref_mb.playerId;
+            this.spawnedSpecialSentinel = var10_ref_mb;
+            var10_ref_mb.d(obfuscationGuard - 28060);
             var10_ref_mb.field_ic = 131585;
             var10_ref_mb.field_Qb = 250;
-            var10_ref_mb.field_ab = 1000;
-            this.field_K.a(3, var10_ref_mb);
+            var10_ref_mb.velocityY = 1000;
+            this.sentinels.addLast(3, var10_ref_mb);
           }
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameCompleted1 = true;
-          L177: {
+          regionExit6: {
             if (!this.field_fb ||
               this.field_lb ||
-              0 != this.field_r % 1200 &&
+              0 != this.simulationTick % 1200 &&
               (this.field_R <= 150 ||
               this.field_j) ||
-              !(this.field_K.b((byte) -128) < 16)) {
+              !(this.sentinels.size((byte) -128) < 16)) {
               if (this.field_lb) {
-                break L177;
+                break regionExit6;
               }
               if (this.field_fb) {
-                break L177;
+                break regionExit6;
               }
               if (var2_int != 0) {
-                break L177;
+                break regionExit6;
               }
-              if (this.field_ab.b(54) != 0) {
-                break L177;
+              if (this.terrain.getTerrainType(54) != 0) {
+                break regionExit6;
               }
               if (this.field_F <= 0) {
-                break L177;
+                break regionExit6;
               }
               if (this.field_R != 0) {
-                break L177;
+                break regionExit6;
               }
-              if (this.field_r <= 0) {
-                break L177;
+              if (this.simulationTick <= 0) {
+                break regionExit6;
               }
-              if (this.field_r % 3000 != 0) {
-                break L177;
+              if (this.simulationTick % 3000 != 0) {
+                break regionExit6;
               }
               if (this.h(126) >= 2) {
-                break L177;
+                break regionExit6;
               }
               var8 = null;
-              var9_int = this.field_r / 3000 - 1;
+              var9_int = this.simulationTick / 3000 - 1;
               if (1 < this.field_F) {
                 if (!(5 >= var9_int)) {
-                  var9_int = this.field_D.a(-123, 2) + 4;
+                  var9_int = this.random.a(-123, 2) + 4;
                   if ((var15 != 0) &&
                     (var9_int > 3)) {
-                    var9_int = this.field_D.a(-120, 2) + 2;
+                    var9_int = this.random.a(-120, 2) + 2;
                   }
                 }
               } else {
                 if (var9_int > 3) {
-                  var9_int = this.field_D.a(-120, 2) + 2;
+                  var9_int = this.random.a(-120, 2) + 2;
                 }
               }
-              L183: {
+              regionExit7: {
                 var10 = var9_int;
                 if (0 != var10 ||
                   var15 != 0) {
                   switch (var10) {
                     case 1:
-                      var8 = kj.field_D;
-                      break L183;
+                      var8 = CipherPacketBuffer.field_D;
+                      break regionExit7;
                     case 2:
                       var8 = qm.field_d;
-                      break L183;
+                      break regionExit7;
                     case 3:
                       var8 = rn.field_o;
-                      break L183;
+                      break regionExit7;
                     case 4:
                       var8 = oc.field_f;
-                      break L183;
+                      break regionExit7;
                     default:
-                      break L183;
+                      break regionExit7;
                     case 5:
                       if (var15 == 0) {
                         var8 = hk.field_Vb;
-                        break L183;
+                        break regionExit7;
                       }
                       break;
                   }
@@ -1139,34 +1139,34 @@ final class ee {
               }
               var10 = 0;
               while (var10 < 2) {
-                var11 = new mb(0, 0, this);
-                var11.a((int[]) (var8), true, false, -1, 12);
+                var11 = new Sentinel(0, 0, this);
+                var11.configureDesign((int[]) (var8), true, false, -1, 12);
                 var11.field_hb = this.a(false, var9_int);
                 var11.field_Nb = 8;
-                this.field_K.a(param0 - 24, var11);
-                var11.field_hc = -128;
+                this.sentinels.addLast(obfuscationGuard - 24, var11);
+                var11.worldX = -128;
                 stackIn_988_0 = var10 & 1;
                 if (var15 != 0) {
                   decompiledFrameCompleted1 = false;
                   break;
                 }
                 if (stackIn_988_0 == 0) {
-                  var11.field_hc = (this.field_ab.a(-126) << 4) - var11.field_hc;
+                  var11.worldX = (this.terrain.getProfileLength(-126) << 4) - var11.worldX;
                 }
-                var11.field_Gb = 1;
+                var11.worldY = 1;
                 var11.field_pc = false;
                 var10++;
               }
               if ((decompiledFrameCompleted1) &&
                 (var15 == 0)) {
-                break L177;
+                break regionExit6;
               }
             }
             if (decompiledFrameCompleted1) {
               var8 = null;
-              var9_int = -1 + this.field_r / 1200;
+              var9_int = -1 + this.simulationTick / 1200;
               if (var9_int > 2) {
-                var9_int = this.field_D.a(param0 ^ 77, 1 + this.field_F);
+                var9_int = this.random.a(obfuscationGuard ^ 77, 1 + this.field_F);
               }
               var10 = var9_int;
               if (0 == var10) {
@@ -1183,14 +1183,14 @@ final class ee {
               }
               var10 = 0;
               while (var10 < 2) {
-                var11 = new mb(0, 0, this);
-                var11.a((int[]) (var8), true, false, -1, 12);
+                var11 = new Sentinel(0, 0, this);
+                var11.configureDesign((int[]) (var8), true, false, -1, 12);
                 var11.field_hb = this.a(false, var9_int);
                 var11.field_Nb = 8;
-                this.field_K.a(3, var11);
-                var11.field_hc = this.field_D.a(83, this.field_ab.a(124)) << 4;
+                this.sentinels.addLast(3, var11);
+                var11.worldX = this.random.a(83, this.terrain.getProfileLength(124)) << 4;
                 var11.field_pc = false;
-                var11.field_Gb = this.field_ab.a(false, var11.field_hc >> 4) - 16000 << 4;
+                var11.worldY = this.terrain.getSecondaryHeightAt(false, var11.worldX >> 4) - 16000 << 4;
                 var10++;
                 if (var15 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -1204,61 +1204,61 @@ final class ee {
             stackIn_988_0 = this.field_lb ? 1 : 0;
           }
           if ((decompiledFrameCompleted0) && (stackIn_988_0 == 0 &&
-            var2_int == 0 && (this.field_ab.b(51) == 3 ||
-            1 == this.field_ab.b(53)) && (0 == this.field_R &&
-            0 == this.field_r % 1500))) {
-            var8_int = this.field_r / 3000;
+            var2_int == 0 && (this.terrain.getTerrainType(51) == 3 ||
+            1 == this.terrain.getTerrainType(53)) && (0 == this.field_R &&
+            0 == this.simulationTick % 1500))) {
+            var8_int = this.simulationTick / 3000;
             if (0 < this.field_F) {
               if (!(var8_int <= 5)) {
-                var8_int = 4 + this.field_D.a(param0 - 146, 2);
+                var8_int = 4 + this.random.a(obfuscationGuard - 146, 2);
                 if ((var15 != 0) &&
                   (var8_int > 4)) {
-                  var8_int = this.field_D.a(60, 5);
+                  var8_int = this.random.a(60, 5);
                 }
               }
             } else {
               if (var8_int > 4) {
-                var8_int = this.field_D.a(60, 5);
+                var8_int = this.random.a(60, 5);
               }
             }
             var9 = new ne(this, this.a(false, var8_int));
-            ((ne) (var9)).field_z = this.field_D.a(80, this.field_ab.a(param0 ^ 68) << 4);
+            ((ne) (var9)).field_z = this.random.a(80, this.terrain.getProfileLength(obfuscationGuard ^ 68) << 4);
             ((ne) (var9)).field_I = -180000;
-            this.field_e.a(3, (ck) (var9));
+            this.field_e.addLast(3, (IntrusiveNode) (var9));
           }
-          var8 = (ne) (this.field_e.e(13058));
-          L198: while (true) {
+          var8 = (ne) (this.field_e.first(13058));
+          scanLoop8: while (true) {
             if (var8 != null) {
               ((ne) (var8)).c((byte) 87);
               stackIn_1133_0 = null;
               stackIn_1133_1 = var8;
               if (var15 != 0) {
                 if (stackIn_1133_0 != stackIn_1133_1) {
-                  ((kd) (var8)).b(4);
+                  ((DualNode) (var8)).unlink(4);
                   var8 = this.field_J.a(false);
                   return;
                 }
-                break L198;
+                break scanLoop8;
               }
               if (stackIn_1133_0 != ((ne) (stackIn_1133_1)).field_T ||
                 !(((ne) (var8)).field_K > 0)) {
-                ((ne) (var8)).b(4);
+                ((ne) (var8)).unlink(4);
                 this.field_f = this.field_f - ((ne) (var8)).field_O * 50;
               }
-              var8 = (ne) (this.field_e.a((byte) -40));
+              var8 = (ne) (this.field_e.next((byte) -40));
               continue;
             }
-            var8 = (mb) (this.field_K.e(param0 + 13031));
+            var8 = (Sentinel) (this.sentinels.first(obfuscationGuard + 13031));
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var8 == null))) {
-              stackOut_1035_0 = ((mb) (var8)).field_gc;
+              stackOut_1035_0 = ((Sentinel) (var8)).field_gc;
               stackIn_1043_0 = stackOut_1035_0 ? 1 : 0;
               stackIn_1036_0 = stackOut_1035_0;
               if (var15 == 0) {
                 if (stackIn_1036_0) {
-                  ((mb) (var8)).b(4);
+                  ((Sentinel) (var8)).unlink(4);
                 }
-                var8 = (mb) (this.field_K.a((byte) -77));
+                var8 = (Sentinel) (this.sentinels.next((byte) -77));
                 continue;
               }
               break;
@@ -1267,7 +1267,7 @@ final class ee {
               stackIn_1043_0 = var2_int;
             }
             if (stackIn_1043_0 != 0 &&
-              4 == this.field_ab.b(98) &&
+              4 == this.terrain.getTerrainType(98) &&
               this.field_R > 0) {
               this.field_R = this.field_R + 1;
               this.field_l = Math.max(1 + this.field_F, 2);
@@ -1275,34 +1275,34 @@ final class ee {
             if (!this.field_lb &&
               var2_int == 0) {
               if (-1 != var3 &&
-                this.field_ab.b(47) != 4 ||
+                this.terrain.getTerrainType(47) != 4 ||
                 this.field_R > 0) {
                 this.field_R = this.field_R + 1;
                 this.field_l = Math.max(1 + this.field_F, 2);
               }
               if (var5 != 0 &&
                 this.field_R == 0 &&
-                this.field_r > 29850) {
+                this.simulationTick > 29850) {
                 this.field_R = 1;
               }
               if (this.field_R == 1 &&
-                this.field_bb.length == 2) {
+                this.playerNames.length == 2) {
                 var8_int = 0;
-                var9 = this.f(0, -128);
+                var9 = this.findSentinelForPlayer(0, -128);
                 if (var9 != null &&
-                  0 < ((mb) (var9)).field_vb) {
-                  var8_int = ((mb) (var9)).field_vb;
+                  0 < ((Sentinel) (var9)).field_vb) {
+                  var8_int = ((Sentinel) (var9)).field_vb;
                 }
-                var9 = this.f(1, -128);
+                var9 = this.findSentinelForPlayer(1, -128);
                 if (var9 != null &&
-                  ((mb) (var9)).field_vb < var8_int) {
-                  if (~var8_int != ~((mb) (var9)).field_vb) {
+                  ((Sentinel) (var9)).field_vb < var8_int) {
+                  if (~var8_int != ~((Sentinel) (var9)).field_vb) {
                   }
-                  var8_int = ((mb) (var9)).field_vb;
+                  var8_int = ((Sentinel) (var9)).field_vb;
                 }
               }
               if (1650 != this.field_R ||
-                4 == this.field_ab.b(57)) {
+                4 == this.terrain.getTerrainType(57)) {
                 if (!(1 < mm.a((byte) 119, var7))) {
                   this.a(var6_array, (byte) -114);
                   if (var15 != 0) {
@@ -1313,32 +1313,32 @@ final class ee {
                 this.a(var6_array, (byte) -128);
               }
             }
-            var8 = (wl) (this.field_db.e(13058));
+            var8 = (Projectile) (this.field_db.first(13058));
             do {
               if (null == var8) {
-                this.field_u.a(param0 - 2, this.field_C);
+                this.explosions.a(obfuscationGuard - 2, this.field_C);
                 break;
               }
-              ((wl) (var8)).i(-1);
-              var8 = (wl) (this.field_db.a((byte) -60));
+              ((Projectile) (var8)).advanceProjectile(-1);
+              var8 = (Projectile) (this.field_db.next((byte) -60));
             } while (var15 == 0);
-            var8 = (jb) (this.field_C.e(param0 ^ 13081));
-            L223: while (true) {
+            var8 = (Explosion) (this.field_C.first(obfuscationGuard ^ 13081));
+            scanLoop9: while (true) {
               if (var8 != null) {
-                ((jb) (var8)).a(false);
-                var8 = (jb) (this.field_C.a((byte) -30));
+                ((Explosion) (var8)).a(false);
+                var8 = (Explosion) (this.field_C.next((byte) -30));
                 if (var15 == 0) {
                   continue;
                 }
               } else {
                 if (this.field_o != null) {
                   this.field_O.a(35, this.field_o);
-                  var8 = (qb) (this.field_o.e(13058));
+                  var8 = (ParticleEffect) (this.field_o.first(13058));
                   while (null != var8) {
-                    ((qb) (var8)).c((byte) 60);
-                    var8 = (qb) (this.field_o.a((byte) -13));
+                    ((ParticleEffect) (var8)).c((byte) 60);
+                    var8 = (ParticleEffect) (this.field_o.next((byte) -13));
                     if (var15 != 0) {
-                      break L223;
+                      break scanLoop9;
                     }
                   }
                 }
@@ -1350,9 +1350,9 @@ final class ee {
               stackIn_1133_0 = null;
               stackIn_1133_1 = var8;
               if (stackIn_1133_0 == stackIn_1133_1) {
-                break L198;
+                break scanLoop8;
               }
-              ((kd) (var8)).b(4);
+              ((DualNode) (var8)).unlink(4);
               var8 = this.field_J.a(false);
               if (var15 != 0) {
                 return;
@@ -1361,12 +1361,12 @@ final class ee {
 
           }
           this.field_J.a(8150);
-          this.field_T.a(114, this.field_db);
+          this.projectiles.a(114, this.field_db);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ee.MA(" + param0 + ')');
+          throw ci.a((Throwable) ((Object) var2), "ee.MA(" + obfuscationGuard + ')');
         }
     }
 
@@ -1374,11 +1374,11 @@ final class ee {
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != ~this.field_ab.b(param1 ^ -103)) {
+          if (param1 != ~this.terrain.getTerrainType(param1 ^ -103)) {
             return true;
           }
-          if (this.field_ab.field_o[0] - 5000 >= param0 >> 4 &&
-            this.field_ab.field_o[1] + 5000 <= param0 >> 4) {
+          if (this.terrain.spawnPositions[0] - 5000 >= param0 >> 4 &&
+            this.terrain.spawnPositions[1] + 5000 <= param0 >> 4) {
             return true;
           }
           return false;
@@ -1391,24 +1391,24 @@ final class ee {
 
     final static void a(boolean param0) {
         RuntimeException runtimeException = null;
-        wk var1 = null;
-        wk var2 = null;
+        RgbSprite var1 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
-          var1 = new wk(540, 140);
+          var1 = new RgbSprite(540, 140);
           q.a(var1, (byte) -82);
           lf.a();
-          pb.b();
+          SoftwareRaster.b();
           vn.field_h = 0;
           pm.a(param0);
           var2 = var1.g();
           var3 = 0;
           while (var3 < 15) {
             var2.e(-2, -2, 16777215);
-            pb.d(4, 4, 0, 0, 540, 140);
+            SoftwareRaster.d(4, 4, 0, 0, 540, 140);
             var3++;
             if (var4 != 0) {
               return;
@@ -1426,13 +1426,13 @@ final class ee {
     }
 
     private final void a(byte param0) {
-        ck stackIn_8_0 = null;
+        IntrusiveNode stackIn_8_0 = null;
         Object stackIn_46_0 = null;
         Object stackIn_46_1 = null;
-        mb stackIn_57_0 = null;
+        Sentinel stackIn_57_0 = null;
         Object stackIn_128_0 = null;
-        mb stackIn_128_1 = null;
-        mb stackIn_146_1 = null;
+        Sentinel stackIn_128_1 = null;
+        Sentinel stackIn_146_1 = null;
         int stackIn_211_0 = 0;
         int stackIn_215_1 = 0;
         int stackIn_222_0 = 0;
@@ -1440,21 +1440,21 @@ final class ee {
         int stackIn_314_0 = 0;
         int stackIn_318_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        mb stackOut_145_1;
-        mb stackOut_56_0;
-        mb var2 = null;
+        Sentinel stackOut_145_1;
+        Sentinel stackOut_56_0;
+        Sentinel var2 = null;
         RuntimeException var2_ref = null;
-        mb var3 = null;
-        mb var4_ref_mb = null;
+        Sentinel var3 = null;
+        Sentinel var4_ref_mb = null;
         int var4 = 0;
         int var5 = 0;
-        mb var6 = null;
+        Sentinel var6 = null;
         Object var7 = null;
         int var8 = 0;
-        je var8_ref_je = null;
-        jc var9_ref_jc = null;
+        SentinelCommand var8_ref_je = null;
+        NodeIterator var9_ref_jc = null;
         int var9 = 0;
-        mb var10_ref_mb = null;
+        Sentinel var10_ref_mb = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -1462,30 +1462,30 @@ final class ee {
         Object stackIn_46_0Lifetime1;
         Object stackIn_46_1Lifetime1;
         Object stackIn_128_0Lifetime1;
-        mb stackIn_128_1Lifetime1;
-        je var8_ref_jeLifetime1;
-        jc var9_ref_jcLifetime1;
-        mb var10_ref_mbLifetime1;
+        Sentinel stackIn_128_1Lifetime1;
+        SentinelCommand var8_ref_jeLifetime1;
+        NodeIterator var9_ref_jcLifetime1;
+        Sentinel var10_ref_mbLifetime1;
         int var8Lifetime1;
         int var11Lifetime1;
         int var12Lifetime1;
         int var8Lifetime2;
         int var8Lifetime1Lifetime1;
-        var13 = SteelSentinels.field_G;
+        var13 = SteelSentinels.obfuscationControl;
         try {
           if (param0 <= 5) {
-            this.field_e = (ul) null;
+            this.field_e = (NodeDeque) null;
           }
-          var2 = (mb) (this.field_K.e(13058));
+          var2 = (Sentinel) (this.sentinels.first(13058));
           if (null != var2) {
-            stackIn_8_0 = this.field_K.a((byte) -68);
+            stackIn_8_0 = this.sentinels.next((byte) -68);
           } else {
             stackIn_8_0 = null;
           }
-          var3 = (mb) (stackIn_8_0);
+          var3 = (Sentinel) (stackIn_8_0);
           if (null != var3 &&
-            ~var2.field_jc == ~var3.field_jc) {
-            if (var3.field_rb > var2.field_rb) {
+            ~var2.teamId == ~var3.teamId) {
+            if (var3.armour > var2.armour) {
               var4_ref_mb = var3;
               var3 = var2;
               var2 = var4_ref_mb;
@@ -1511,13 +1511,13 @@ final class ee {
             this.field_w = 0;
           }
           var4 = 0;
-          var6 = (mb) (this.field_K.e(13058));
+          var6 = (Sentinel) (this.sentinels.first(13058));
           while (var6 != null) {
             var7 = var2;
             if (var13 != 0) {
               return;
             }
-            L12: {
+            regionExit1: {
               boolean decompiledFrameCompleted2 = true;
               boolean decompiledFrameCompleted1 = true;
               boolean decompiledFrameCompleted0 = true;
@@ -1528,8 +1528,8 @@ final class ee {
                     while (true) {
                       var7 = null;
                       var8 = 2147483647;
-                      var9_ref_jc = new jc(this.field_K);
-                      var10_ref_mb = (mb) (var9_ref_jc.b(2));
+                      var9_ref_jc = new NodeIterator(this.sentinels);
+                      var10_ref_mb = (Sentinel) (var9_ref_jc.b(2));
                       while (var10_ref_mb != null) {
                         stackIn_46_0 = null;
                         stackOut_145_1 = var10_ref_mb;
@@ -1537,19 +1537,19 @@ final class ee {
                         stackIn_146_1 = stackOut_145_1;
                         if (stackIn_46_0 != stackIn_146_1 &&
                           !var10_ref_mb.field_Hb &&
-                          0 != var10_ref_mb.field_Nb && (var6.field_jc != var10_ref_mb.field_jc ||
+                          0 != var10_ref_mb.field_Nb && (var6.teamId != var10_ref_mb.teamId ||
                           var13 != 0)) {
-                          var11 = var10_ref_mb.field_hc - var6.field_hc;
-                          var12 = -var6.field_Gb + var10_ref_mb.field_Gb;
+                          var11 = var10_ref_mb.worldX - var6.worldX;
+                          var12 = -var6.worldY + var10_ref_mb.worldY;
                           var12 = var12 * var12 + var11 * var11;
                           if (var8 > var12) {
                             var8 = var12;
                             var7 = var10_ref_mb;
                           }
                         }
-                        var10_ref_mb = (mb) (var9_ref_jc.d(2));
+                        var10_ref_mb = (Sentinel) (var9_ref_jc.d(2));
                       }
-                      break L12;
+                      break regionExit1;
                     }
                   }
                   var4++;
@@ -1571,15 +1571,15 @@ final class ee {
                     stackIn_128_1 = var6.field_Vb;
                     while (true) {
                       if (stackIn_128_0 != stackIn_128_1 &&
-                        ((mb) (var7)).i(78) &&
-                        200 * var6.field_Bb > this.field_w) {
+                        ((Sentinel) (var7)).i(78) &&
+                        200 * var6.playerId > this.field_w) {
                         var7 = null;
                       }
                       if (((var6.field_Vb != null)) &&
                         (!(var6.field_Vb.field_Hb))) {
                         var7 = var6.field_Vb;
                       }
-                      break L12;
+                      break regionExit1;
                     }
                   }
                   if (var6.field_Vb == null) {
@@ -1603,33 +1603,33 @@ final class ee {
                 stackIn_46_0Lifetime1 = null;
                 stackIn_46_1Lifetime1 = var7;
                 while (true) {
-                  if (stackIn_46_0Lifetime1 != stackIn_46_1Lifetime1 && (((mb) (var7)).field_pc ||
-                    ((mb) (var7)).field_Hb)) {
+                  if (stackIn_46_0Lifetime1 != stackIn_46_1Lifetime1 && (((Sentinel) (var7)).field_pc ||
+                    ((Sentinel) (var7)).field_Hb)) {
                     var7 = null;
                   }
                   if (var7 == null) {
-                    var9_ref_jcLifetime1 = new jc(this.field_K);
-                    var10_ref_mbLifetime1 = (mb) (var9_ref_jcLifetime1.b(2));
+                    var9_ref_jcLifetime1 = new NodeIterator(this.sentinels);
+                    var10_ref_mbLifetime1 = (Sentinel) (var9_ref_jcLifetime1.b(2));
                     while (var10_ref_mbLifetime1 != null) {
                       stackOut_56_0 = var10_ref_mbLifetime1;
                       stackIn_128_0Lifetime1 = stackOut_56_0;
                       stackIn_57_0 = stackOut_56_0;
-                      stackIn_128_1Lifetime1 = this.field_y;
+                      stackIn_128_1Lifetime1 = this.spawnedSpecialSentinel;
                       if (stackIn_57_0 != stackIn_128_1Lifetime1 &&
                         null != var10_ref_mbLifetime1 &&
                         !var10_ref_mbLifetime1.field_Hb &&
                         !var10_ref_mbLifetime1.field_pc &&
                         !var10_ref_mbLifetime1.i(75) &&
-                        ~var6.field_jc != ~var10_ref_mbLifetime1.field_jc && (var7 == null ||
-                        !(((mb) (var7)).field_Bb < this.field_kb) ||
-                        !(var10_ref_mbLifetime1.field_Bb >= this.field_kb))) {
-                        var11Lifetime1 = var10_ref_mbLifetime1.field_hc - var6.field_hc >> 4;
-                        var12Lifetime1 = -var6.field_Gb + var10_ref_mbLifetime1.field_Gb >> 4;
+                        ~var6.teamId != ~var10_ref_mbLifetime1.teamId && (var7 == null ||
+                        !(((Sentinel) (var7)).playerId < this.playerCount) ||
+                        !(var10_ref_mbLifetime1.playerId >= this.playerCount))) {
+                        var11Lifetime1 = var10_ref_mbLifetime1.worldX - var6.worldX >> 4;
+                        var12Lifetime1 = -var6.worldY + var10_ref_mbLifetime1.worldY >> 4;
                         var12Lifetime1 = var12Lifetime1 * var12Lifetime1 + var11Lifetime1 * var11Lifetime1;
                         if (var12Lifetime1 >= var8Lifetime2) {
                           if ((null != var7) &&
-                            (!(this.field_kb > ((mb) (var7)).field_Bb)) &&
-                            (!(this.field_kb <= var10_ref_mbLifetime1.field_Bb))) {
+                            (!(this.playerCount > ((Sentinel) (var7)).playerId)) &&
+                            (!(this.playerCount <= var10_ref_mbLifetime1.playerId))) {
                             var8Lifetime2 = var12Lifetime1;
                             var7 = var10_ref_mbLifetime1;
                           }
@@ -1638,7 +1638,7 @@ final class ee {
                           var7 = var10_ref_mbLifetime1;
                         }
                       }
-                      var10_ref_mbLifetime1 = (mb) (var9_ref_jcLifetime1.d(2));
+                      var10_ref_mbLifetime1 = (Sentinel) (var9_ref_jcLifetime1.d(2));
                     }
                   }
                   break;
@@ -1656,40 +1656,40 @@ final class ee {
                 boolean decompiledFrameRemainder0 = true;
                 var6.field_t = 0;
                 var6.field_pb = 0;
-                var8Lifetime1 = this.field_ab.b(81);
+                var8Lifetime1 = this.terrain.getTerrainType(81);
                 if (var8Lifetime1 == 3 &&
                   var13 == 0) {
                   boolean decompiledFrameRemainder1 = true;
-                  var8Lifetime1 = this.field_ab.a(-121) / 2;
+                  var8Lifetime1 = this.terrain.getProfileLength(-121) / 2;
                   if (!var6.field_Cb &&
-                    !((mb) (var7)).field_Cb) {
-                    stackIn_211_0 = (var8Lifetime1 <= (var6.field_hc >> 4)) ? 0 : 1;
-                    if (var8Lifetime1 <= (((mb) (var7)).field_hc >> 4)) {
+                    !((Sentinel) (var7)).field_Cb) {
+                    stackIn_211_0 = (var8Lifetime1 <= (var6.worldX >> 4)) ? 0 : 1;
+                    if (var8Lifetime1 <= (((Sentinel) (var7)).worldX >> 4)) {
                       stackIn_215_1 = 0;
                     } else {
                       stackIn_215_1 = 1;
                     }
                     if (stackIn_211_0 == stackIn_215_1) {
                       stackIn_222_0 = (var6.field_u) ? 0 : 1;
-                      if (((mb) (var7)).field_u) {
+                      if (((Sentinel) (var7)).field_u) {
                         stackIn_226_1 = 0;
                       } else {
                         stackIn_226_1 = 1;
                       }
                       if (stackIn_222_0 == stackIn_226_1) {
-                        var6.field_t = ((mb) (var7)).field_hc >> 4;
+                        var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                       } else {
                         if (var6.field_u) {
-                          if (!this.a((byte) 91, ((mb) (var7)).field_hc >> 4, var6.field_hc >> 4)) {
-                            var6.field_t = ((mb) (var7)).field_hc >> 4;
+                          if (!this.a((byte) 91, ((Sentinel) (var7)).worldX >> 4, var6.worldX >> 4)) {
+                            var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                           } else {
-                            var6.field_t = this.a((byte) 69, var6.field_hc >> 4);
+                            var6.field_t = this.a((byte) 69, var6.worldX >> 4);
                           }
                         } else {
-                          if (!this.a((byte) 127, var6.field_hc >> 4, ((mb) (var7)).field_hc >> 4)) {
-                            var6.field_t = ((mb) (var7)).field_hc >> 4;
+                          if (!this.a((byte) 127, var6.worldX >> 4, ((Sentinel) (var7)).worldX >> 4)) {
+                            var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                           } else {
-                            var6.field_t = this.a((byte) -81, var6.field_hc >> 4);
+                            var6.field_t = this.a((byte) -81, var6.worldX >> 4);
                           }
                         }
                       }
@@ -1700,8 +1700,8 @@ final class ee {
                     if (!var6.field_Cb) {
                       var6.field_t = var8Lifetime1;
                     } else {
-                      if (!((mb) (var7)).field_Cb) {
-                        if (((mb) (var7)).field_hc < var6.field_hc) {
+                      if (!((Sentinel) (var7)).field_Cb) {
+                        if (((Sentinel) (var7)).worldX < var6.worldX) {
                           var6.field_t = -100 + (-5120 + var8Lifetime1);
                         } else {
                           var6.field_t = var8Lifetime1 + 5220;
@@ -1709,7 +1709,7 @@ final class ee {
                         decompiledFrameRemainder1 = false;
                       }
                       else {
-                        var6.field_t = ((mb) (var7)).field_hc >> 4;
+                        var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                       }
                     }
                   }
@@ -1725,140 +1725,140 @@ final class ee {
                 if ((decompiledFrameRemainder2) &&
                   (decompiledFrameRemainder0)) {
                   if (!var6.field_u &&
-                    this.b(true, var6.field_hc >> 4)) {
-                    if (var6.field_hc > ((mb) (var7)).field_hc) {
-                      if (this.a(var6.field_hc >> 4, false)) {
-                        var6.field_t = (var6.field_hc >> 4) + 1500;
+                    this.b(true, var6.worldX >> 4)) {
+                    if (var6.worldX > ((Sentinel) (var7)).worldX) {
+                      if (this.a(var6.worldX >> 4, false)) {
+                        var6.field_t = (var6.worldX >> 4) + 1500;
                       } else {
-                        var6.field_t = ((mb) (var7)).field_hc >> 4;
+                        var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                       }
                     } else {
-                      if (!this.e(-44, var6.field_hc >> 4)) {
-                        var6.field_t = ((mb) (var7)).field_hc >> 4;
+                      if (!this.e(-44, var6.worldX >> 4)) {
+                        var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                       } else {
-                        var6.field_t = -1500 + (var6.field_hc >> 4);
+                        var6.field_t = -1500 + (var6.worldX >> 4);
                       }
                     }
                   } else {
                     if ((!(!var6.field_u)) &&
-                      (!(!this.a((byte) 61, ((mb) (var7)).field_hc >> 4, var6.field_hc >> 4)))) {
-                      var6.field_t = this.a((byte) 50, var6.field_hc >> 4);
+                      (!(!this.a((byte) 61, ((Sentinel) (var7)).worldX >> 4, var6.worldX >> 4)))) {
+                      var6.field_t = this.a((byte) 50, var6.worldX >> 4);
                     }
                   }
                   decompiledFrameRemainder2 = false;
                 }
                 if (decompiledFrameRemainder2) {
                   stackIn_314_0 = (var6.field_u) ? 0 : 1;
-                  if (((mb) (var7)).field_u) {
+                  if (((Sentinel) (var7)).field_u) {
                     stackIn_318_1 = 0;
                   } else {
                     stackIn_318_1 = 1;
                   }
                   if (stackIn_314_0 == stackIn_318_1) {
-                    var6.field_t = ((mb) (var7)).field_hc >> 4;
+                    var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                   } else {
                     if (!var6.field_u) {
-                      if (this.a((byte) 39, var6.field_hc >> 4, ((mb) (var7)).field_hc >> 4)) {
-                        var6.field_t = this.a((byte) 124, var6.field_hc >> 4);
+                      if (this.a((byte) 39, var6.worldX >> 4, ((Sentinel) (var7)).worldX >> 4)) {
+                        var6.field_t = this.a((byte) 124, var6.worldX >> 4);
                       } else {
-                        var6.field_t = ((mb) (var7)).field_hc >> 4;
+                        var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                       }
                       decompiledFrameRemainder2 = false;
                     }
                     else {
-                      if (!this.a((byte) 95, ((mb) (var7)).field_hc >> 4, var6.field_hc >> 4)) {
-                        var6.field_t = ((mb) (var7)).field_hc >> 4;
+                      if (!this.a((byte) 95, ((Sentinel) (var7)).worldX >> 4, var6.worldX >> 4)) {
+                        var6.field_t = ((Sentinel) (var7)).worldX >> 4;
                       } else {
-                        var6.field_t = this.a((byte) 93, var6.field_hc >> 4);
+                        var6.field_t = this.a((byte) 93, var6.worldX >> 4);
                       }
                     }
                   }
                 }
               }
               if (var6.field_t > 0 &&
-                200 > Math.abs((var6.field_hc >> 4) - var6.field_t)) {
+                200 > Math.abs((var6.worldX >> 4) - var6.field_t)) {
                 var6.field_pb = 0;
                 var6.field_t = 0;
               }
               if (var6.field_t > 0 &&
-                ((mb) (var7)).field_pc) {
+                ((Sentinel) (var7)).field_pc) {
                 var6.field_pb = 0;
                 var6.field_t = 0;
               }
               if (var6.field_t > 0 &&
-                var6.field_rc == 24) {
+                var6.activeModuleType == 24) {
                 var6.field_pb = 0;
                 var6.field_t = 0;
-                var8_ref_je = new je(11, 0, this.field_r + 2);
+                var8_ref_je = new SentinelCommand(11, 0, this.simulationTick + 2);
                 var8_ref_je.field_p = true;
-                var6.field_B.a(3, var8_ref_je);
+                var6.pendingCommands.addLast(3, var8_ref_je);
               }
               if (var6.field_t > 0 &&
-                15 == var6.field_rc) {
+                15 == var6.activeModuleType) {
                 var6.field_pb = 0;
                 var6.field_t = 0;
-                var8_ref_jeLifetime1 = new je(8, 0, 2 + this.field_r);
+                var8_ref_jeLifetime1 = new SentinelCommand(8, 0, 2 + this.simulationTick);
                 var8_ref_jeLifetime1.field_p = true;
-                var6.field_B.a(3, var8_ref_jeLifetime1);
+                var6.pendingCommands.addLast(3, var8_ref_jeLifetime1);
               }
-              var8Lifetime1Lifetime1 = var6.field_Zb.field_N;
-              var9 = ((mb) (var7)).field_hc - var6.field_hc;
-              var10 = -var6.field_Gb + ((mb) (var7)).field_Gb;
+              var8Lifetime1Lifetime1 = var6.chassis.componentId;
+              var9 = ((Sentinel) (var7)).worldX - var6.worldX;
+              var10 = -var6.worldY + ((Sentinel) (var7)).worldY;
               if (var9 >= 0) {
                 var5 = 1;
               } else {
                 var5 = -1;
               }
-              if (var6.field_Ec.f(7) &&
-                var6.field_B.f(7)) {
+              if (var6.secondaryCommands.f(7) &&
+                var6.pendingCommands.f(7)) {
                 if (109 == var8Lifetime1Lifetime1) {
-                  this.a(var9, (mb) (var7), 16384, var10, var5, var6);
+                  this.a(var9, (Sentinel) (var7), 16384, var10, var5, var6);
                 }
                 if (107 == var8Lifetime1Lifetime1) {
-                  this.a(var6, var5, var10, (mb) (var7), 0, var9);
+                  this.a(var6, var5, var10, (Sentinel) (var7), 0, var9);
                 }
                 if (var8Lifetime1Lifetime1 == 108) {
-                  var10 = this.a((mb) (var7), var9, (byte) -64, var10, var6, var5);
+                  var10 = this.a((Sentinel) (var7), var9, (byte) -64, var10, var6, var5);
                 }
                 if (var8Lifetime1Lifetime1 == 0) {
-                  this.a(var10, var5, (byte) 21, (mb) (var7), var6, var9);
+                  this.a(var10, var5, (byte) 21, (Sentinel) (var7), var6, var9);
                 }
                 if (var8Lifetime1Lifetime1 == 55) {
-                  this.a((byte) 68, var5, var10, var9, var6, (mb) (var7));
+                  this.a((byte) 68, var5, var10, var9, var6, (Sentinel) (var7));
                 }
                 if (57 == var8Lifetime1Lifetime1) {
-                  this.a(var9, 2714, var10, var5, var6, (mb) (var7));
+                  this.a(var9, 2714, var10, var5, var6, (Sentinel) (var7));
                 }
                 if (var8Lifetime1Lifetime1 == 62) {
-                  this.a(var10, var5, var6, var9, (mb) (var7), (byte) 88);
+                  this.a(var10, var5, var6, var9, (Sentinel) (var7), (byte) 88);
                 }
                 if (var8Lifetime1Lifetime1 == 65) {
-                  this.a(var5, var9, var10, var6, (mb) (var7), false);
+                  this.a(var5, var9, var10, var6, (Sentinel) (var7), false);
                 }
                 if (var8Lifetime1Lifetime1 == 69) {
-                  this.a(var6, (byte) -35, (mb) (var7), var9, var5);
+                  this.a(var6, (byte) -35, (Sentinel) (var7), var9, var5);
                 }
                 if (var8Lifetime1Lifetime1 == 72) {
-                  this.a(var9, (mb) (var7), var6, 20063, var5);
+                  this.a(var9, (Sentinel) (var7), var6, 20063, var5);
                 }
                 if (var8Lifetime1Lifetime1 == 75) {
-                  this.a((byte) -121, var10, (mb) (var7), var9, var6, var5);
+                  this.a((byte) -121, var10, (Sentinel) (var7), var9, var6, var5);
                 }
                 if (var8Lifetime1Lifetime1 == 79) {
-                  this.a((byte) 57, var9, (mb) (var7), var6, var5, var10);
+                  this.a((byte) 57, var9, (Sentinel) (var7), var6, var5, var10);
                 }
                 if (84 == var8Lifetime1Lifetime1) {
-                  this.a(var10, var6, var9, (mb) (var7), var5, 14432);
+                  this.a(var10, var6, var9, (Sentinel) (var7), var5, 14432);
                 }
                 if (var8Lifetime1Lifetime1 == 88) {
-                  this.a((mb) (var7), var9, -128, var5, var6, var10);
+                  this.a((Sentinel) (var7), var9, -128, var5, var6, var10);
                 }
                 if (var8Lifetime1Lifetime1 == 92) {
-                  this.a(-103, var5, (mb) (var7), var9, var6);
+                  this.a(-103, var5, (Sentinel) (var7), var9, var6);
                 }
               }
             }
-            var6 = (mb) (this.field_K.a((byte) -48));
+            var6 = (Sentinel) (this.sentinels.next((byte) -48));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1873,7 +1873,7 @@ final class ee {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var2 = SteelSentinels.field_G;
+        var2 = SteelSentinels.obfuscationControl;
         try {
           ba.field_f = null;
           if (param0 != 11828) {
@@ -1917,9 +1917,9 @@ final class ee {
         int var5 = 0;
         int var6 = 0;
         int var7_int = 0;
-        mb var7 = null;
+        Sentinel var7 = null;
         int var8 = 0;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           if (this.field_b != 0) {
             if (this.field_b >= 50) {
@@ -1931,34 +1931,34 @@ final class ee {
           } else {
             this.field_b = 1;
           }
-          var3_int = this.field_ab.field_o[param1];
+          var3_int = this.terrain.spawnPositions[param1];
           var4 = kc.field_x[4][0].field_z << 4;
           var5 = -(var4 / 2) + var3_int;
           var6 = var3_int + var4 / 2;
           var7_int = var5;
           while (var6 > var7_int) {
-            this.field_ab.field_m[var7_int] = 0;
-            this.field_ab.field_e[var7_int] = 0;
+            this.terrain.groundHeightProfile[var7_int] = 0;
+            this.terrain.secondaryHeightProfile[var7_int] = 0;
             if (var8 == 0) {
-              this.field_ab.field_f[var7_int] = 0;
+              this.terrain.surfaceProfile[var7_int] = 0;
               var7_int++;
               continue;
             }
             break;
           }
-          var7 = (mb) (this.field_K.e(13058));
+          var7 = (Sentinel) (this.sentinels.first(13058));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var7))) {
             stackIn_43_0 = ~param1;
-            stackIn_43_1 = ~var7.field_jc;
+            stackIn_43_1 = ~var7.teamId;
             if (var8 == 0) {
               if (stackIn_43_0 == stackIn_43_1 &&
                 0 < var7.field_z) {
                 var7.field_z = 0;
                 var7.field_pc = false;
-                var7.field_rb = 0;
+                var7.armour = 0;
               }
-              if (var7.field_jc == param1 ||
+              if (var7.teamId == param1 ||
                 var7.field_Hb) {
                 if (!var7.field_Hb) {
                   var7.field_Cb = false;
@@ -1968,7 +1968,7 @@ final class ee {
                 var7.field_Fc = 50;
                 var7.field_Ab = var7.field_Ab + 100000;
               }
-              var7 = (mb) (this.field_K.a((byte) -111));
+              var7 = (Sentinel) (this.sentinels.next((byte) -111));
               continue;
             }
             break;
@@ -1978,7 +1978,7 @@ final class ee {
             stackIn_43_1 = -108;
           }
           if (stackIn_43_0 > stackIn_43_1) {
-            ee.g(124);
+            CombatWorld.g(124);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1988,12 +1988,12 @@ final class ee {
         }
     }
 
-    private final void a(byte param0, int param1, int param2, int param3, mb param4, mb param5) {
-        je stackIn_25_0 = null;
-        je stackIn_25_1 = null;
+    private final void a(byte param0, int param1, int param2, int param3, Sentinel param4, Sentinel param5) {
+        SentinelCommand stackIn_25_0 = null;
+        SentinelCommand stackIn_25_1 = null;
         int stackIn_25_2 = 0;
-        je stackIn_26_0 = null;
-        je stackIn_26_1 = null;
+        SentinelCommand stackIn_26_0 = null;
+        SentinelCommand stackIn_26_1 = null;
         int stackIn_26_3 = 0;
         int stackIn_55_0 = 0;
         int stackIn_55_1 = 0;
@@ -2003,29 +2003,29 @@ final class ee {
         StringBuilder stackIn_78_1 = null;
         String stackIn_79_2 = null;
         RuntimeException decompiledCaughtException = null;
-        je var7 = null;
+        SentinelCommand var7 = null;
         int var7_int = 0;
         RuntimeException var7_ref = null;
         int var8_int = 0;
-        je var8 = null;
+        SentinelCommand var8 = null;
         double var9 = 0.0;
         int var11 = 0;
-        je var7Lifetime1;
-        je var7Lifetime2;
-        je var7Lifetime3;
-        var11 = SteelSentinels.field_G;
+        SentinelCommand var7Lifetime1;
+        SentinelCommand var7Lifetime2;
+        SentinelCommand var7Lifetime3;
+        var11 = SteelSentinels.obfuscationControl;
         try {
-          if (~param5.field_hc == ~param4.field_hc &&
+          if (~param5.worldX == ~param4.worldX &&
             param4.field_U == 0 &&
             param4.field_t <= 0 &&
             !param4.field_Lb) {
-            if (param4.field_hc < 4096) {
-              param4.field_t = 1024 + param4.field_hc;
+            if (param4.worldX < 4096) {
+              param4.field_t = 1024 + param4.worldX;
               if (var11 != 0) {
-                param4.field_t = param4.field_hc - 1024;
+                param4.field_t = param4.worldX - 1024;
               }
             } else {
-              param4.field_t = param4.field_hc - 1024;
+              param4.field_t = param4.worldX - 1024;
             }
           }
           boolean decompiledFrameRemainder0 = true;
@@ -2033,7 +2033,7 @@ final class ee {
             stackIn_25_0 = null;
             stackIn_25_1 = null;
             stackIn_25_2 = 6;
-            if (param4.field_hc >> 4 < param4.field_t) {
+            if (param4.worldX >> 4 < param4.field_t) {
               stackIn_26_0 = null;
               stackIn_26_1 = null;
               stackIn_26_3 = 1;
@@ -2042,28 +2042,28 @@ final class ee {
               stackIn_26_1 = null;
               stackIn_26_3 = -1;
             }
-            var7 = new je(stackIn_25_2, stackIn_26_3, 2 + this.field_r);
+            var7 = new SentinelCommand(stackIn_25_2, stackIn_26_3, 2 + this.simulationTick);
             var7.field_p = true;
-            param4.field_B.a(3, var7);
+            param4.pendingCommands.addLast(3, var7);
             decompiledFrameRemainder0 = (var11 != 0);
           }
           if (decompiledFrameRemainder0) {
             if ((Math.abs(param3) < 30000) &&
               (decompiledFrameRemainder0 = !(Math.abs(param3) >= 30000))) {
-              var7Lifetime1 = new je(6, -param1, this.field_r + 2);
+              var7Lifetime1 = new SentinelCommand(6, -param1, this.simulationTick + 2);
               var7Lifetime1.field_p = true;
               decompiledFrameRemainder0 = (var11 != 0);
             }
             if (decompiledFrameRemainder0) {
-              var7Lifetime2 = new je(6, param1, this.field_r + 2);
+              var7Lifetime2 = new SentinelCommand(6, param1, this.simulationTick + 2);
               var7Lifetime2.field_p = true;
-              param4.field_B.a(3, var7Lifetime2);
-              var7Lifetime3 = new je(3, 0, 100 + this.field_r + (4 + (param5.field_hc + this.field_r + param4.field_hc) % 100));
-              var7Lifetime3.field_u = param5.field_hc;
+              param4.pendingCommands.addLast(3, var7Lifetime2);
+              var7Lifetime3 = new SentinelCommand(3, 0, 100 + this.simulationTick + (4 + (param5.worldX + this.simulationTick + param4.worldX) % 100));
+              var7Lifetime3.field_u = param5.worldX;
               var7Lifetime3.field_p = true;
-              var7Lifetime3.field_y = param4.field_Gb - 20000;
-              param4.field_B.a(3, var7Lifetime3);
-              param4.field_Tb = param4.field_x;
+              var7Lifetime3.field_y = param4.worldY - 20000;
+              param4.pendingCommands.addLast(3, var7Lifetime3);
+              param4.charge = param4.maximumCharge;
             }
           }
           var7_int = -1;
@@ -2071,12 +2071,12 @@ final class ee {
             return;
           }
           var8_int = 0;
-          L8: while (true) {
+          scanLoop1: while (true) {
             if (param4.field_Xb.length > var8_int) {
               stackIn_55_0 = ~param4.field_Xb[var8_int];
               stackIn_55_1 = -14;
               if (var11 != 0) {
-                break L8;
+                break scanLoop1;
               }
               if (stackIn_55_0 == stackIn_55_1) {
                 var7_int = var8_int;
@@ -2086,7 +2086,7 @@ final class ee {
               }
             }
             if (var7_int >= 0 &&
-              this.a(this.field_z, (byte) -95, var7_int, param4, param5, 2600, 5 + this.field_r + (param4.field_hc + (param5.field_hc + this.field_r)) % 100)) {
+              this.a(this.field_z, (byte) -95, var7_int, param4, param5, 2600, 5 + this.simulationTick + (param4.worldX + (param5.worldX + this.simulationTick)) % 100)) {
               return;
             }
             stackIn_55_0 = 40000;
@@ -2094,9 +2094,9 @@ final class ee {
             break;
           }
           if (stackIn_55_0 > stackIn_55_1) {
-            var8 = new je(0, 0, 5 + (this.field_r + (param5.field_hc + (this.field_r + param4.field_hc)) % 100));
-            var8.field_y = param5.field_Gb;
-            var8.field_u = param5.field_hc;
+            var8 = new SentinelCommand(0, 0, 5 + (this.simulationTick + (param5.worldX + (this.simulationTick + param4.worldX)) % 100));
+            var8.field_y = param5.worldY;
+            var8.field_u = param5.worldX;
             var9 = Math.atan2((double)param3, (double)(-param2));
             var8.field_B = (int)(var9 * 65536.0 / 6.283185307179586);
             if (param1 < 0) {
@@ -2113,7 +2113,7 @@ final class ee {
               }
             }
             var8.field_p = true;
-            param4.field_B.a(3, var8);
+            param4.pendingCommands.addLast(3, var8);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2136,8 +2136,8 @@ final class ee {
         }
     }
 
-    final void a(mb[] param0, int[] param1, int[] param2, int param3, int[] param4, int[] param5) {
-        mb stackIn_5_0 = null;
+    final void a(Sentinel[] param0, int[] param1, int[] param2, int param3, int[] param4, int[] param5) {
+        Sentinel stackIn_5_0 = null;
         int stackIn_20_0 = 0;
         int stackIn_20_1 = 0;
         int stackIn_97_0 = 0;
@@ -2157,17 +2157,17 @@ final class ee {
         StringBuilder stackIn_220_1 = null;
         String stackIn_221_2 = null;
         RuntimeException decompiledCaughtException = null;
-        mb var7 = null;
+        Sentinel var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
         int var9 = 0;
-        mb[] var9_ref_mb__ = null;
+        Sentinel[] var9_ref_mb__ = null;
         int var10 = 0;
-        mb var11 = null;
+        Sentinel var11 = null;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        mb var11Lifetime1;
+        Sentinel var11Lifetime1;
         int stackIn_97_0Lifetime1;
         int stackIn_97_1Lifetime1;
         int var12Lifetime1;
@@ -2175,11 +2175,11 @@ final class ee {
         int stackIn_97_0Lifetime1Lifetime1;
         int stackIn_97_1Lifetime1Lifetime1;
         int var12Lifetime1Lifetime1;
-        var14 = SteelSentinels.field_G;
+        var14 = SteelSentinels.obfuscationControl;
         try {
           param5[8] = 1;
           if (this.field_A >= 0) {
-            stackIn_5_0 = this.field_y;
+            stackIn_5_0 = this.spawnedSpecialSentinel;
           } else {
             stackIn_5_0 = null;
           }
@@ -2242,7 +2242,7 @@ final class ee {
                       6 != var13 &&
                       var13 != 5 &&
                       var13 != 25) {
-                      var12 = var11.b(true, var13);
+                      var12 = var11.getStatistic(true, var13);
                       if (4 == var13) {
                         if (!(param5[var13] <= var12)) {
                           param5[var13] = var12;
@@ -2258,7 +2258,7 @@ final class ee {
                     var13++;
                   }
                   if (null != param1) {
-                    param1[var11.field_jc] = param1[var11.field_jc] + var11.field_vb;
+                    param1[var11.teamId] = param1[var11.teamId] + var11.field_vb;
                   }
                   if (!var11.field_Hb) {
                     var8++;
@@ -2270,7 +2270,7 @@ final class ee {
             } else {
               decompiledFrameRemainder0 = (null != var7 ||
                 var8 != 1 ||
-                !(1 < this.field_kb));
+                !(1 < this.playerCount));
               if (decompiledFrameRemainder0) {
                 param5[6] = 2;
               }
@@ -2283,7 +2283,7 @@ final class ee {
             }
             boolean decompiledFrameCompleted2 = true;
             boolean decompiledFrameCompleted0 = true;
-            L21: {
+            regionExit1: {
               boolean decompiledFrameCompleted1 = true;
               if (param1 != null &&
                 (param0.length - 1) > param1.length) {
@@ -2331,7 +2331,7 @@ final class ee {
                   var11Lifetime1 = param0[var9];
                   if (var11Lifetime1 != var7 ||
                     var14 != 0) {
-                    if ((1 << var11Lifetime1.field_Bb & this.field_hb) != 0) {
+                    if ((1 << var11Lifetime1.playerId & this.field_hb) != 0) {
                       param4[var9] = -1;
                     } else {
                       var13Lifetime1 = 0;
@@ -2340,14 +2340,14 @@ final class ee {
                         stackIn_97_1Lifetime1Lifetime1 = 4;
                         boolean decompiledFrameRemainder3 = true;
                         if (stackIn_97_0Lifetime1Lifetime1 == stackIn_97_1Lifetime1Lifetime1) {
-                          var12Lifetime1 = var11Lifetime1.b(true, var13Lifetime1);
+                          var12Lifetime1 = var11Lifetime1.getStatistic(true, var13Lifetime1);
                           if (var12Lifetime1 == 0 &&
                             var11Lifetime1.field_w > 0 &&
                             var11Lifetime1.field_kb == 0 && (0 != this.field_R ||
                             this.field_lb)) {
                             var10 = var10 | 32;
                           } else {
-                            if ((!(this.field_kb <= 1)) &&
+                            if ((!(this.playerCount <= 1)) &&
                               ((param5[var13Lifetime1] == var12Lifetime1))) {
                               var10 = var10 | 16;
                             }
@@ -2357,7 +2357,7 @@ final class ee {
                         else {
                           if (25 != var13Lifetime1) {
                             if ((var13Lifetime1 != 5)) {
-                              var12Lifetime1Lifetime1 = var11Lifetime1.b(true, var13Lifetime1);
+                              var12Lifetime1Lifetime1 = var11Lifetime1.getStatistic(true, var13Lifetime1);
                               if ((~param5[var13Lifetime1] == ~var12Lifetime1Lifetime1)) {
                                 var10 = var10 | 1 << var13Lifetime1;
                               }
@@ -2367,7 +2367,7 @@ final class ee {
                           else {
                             if (0 < param5[25] &&
                               param1 != null &&
-                              param5[var13Lifetime1] == param1[var11Lifetime1.field_jc]) {
+                              param5[var13Lifetime1] == param1[var11Lifetime1.teamId]) {
                               var10 = var10 | 1 << var13Lifetime1;
                             }
                           }
@@ -2468,12 +2468,12 @@ final class ee {
         }
     }
 
-    private final void a(mb param0, int param1, int param2, int param3, mb param4, int param5) {
-        je stackIn_19_0 = null;
-        je stackIn_19_1 = null;
+    private final void a(Sentinel param0, int param1, int param2, int param3, Sentinel param4, int param5) {
+        SentinelCommand stackIn_19_0 = null;
+        SentinelCommand stackIn_19_1 = null;
         int stackIn_19_2 = 0;
-        je stackIn_20_0 = null;
-        je stackIn_20_1 = null;
+        SentinelCommand stackIn_20_0 = null;
+        SentinelCommand stackIn_20_1 = null;
         int stackIn_20_3 = 0;
         RuntimeException stackIn_72_0 = null;
         StringBuilder stackIn_72_1 = null;
@@ -2481,36 +2481,36 @@ final class ee {
         StringBuilder stackIn_76_1 = null;
         String stackIn_77_2 = null;
         RuntimeException decompiledCaughtException = null;
-        je var7 = null;
+        SentinelCommand var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
-        je var7Lifetime1;
-        var8 = SteelSentinels.field_G;
+        SentinelCommand var7Lifetime1;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameRemainder0 = true;
           if (param4.field_Yb == 0 &&
             param0.field_mc <= 0 &&
             param0.field_S > 0 &&
             Math.abs(param1) < 30000) {
-            param4.field_Tb = 10;
-            var7 = new je(8, param3, this.field_r + 2);
+            param4.charge = 10;
+            var7 = new SentinelCommand(8, param3, this.simulationTick + 2);
             var7.field_p = true;
-            param4.field_B.a(3, var7);
-            var7 = new je(6, param3, 4 + this.field_r);
+            param4.pendingCommands.addLast(3, var7);
+            var7 = new SentinelCommand(6, param3, 4 + this.simulationTick);
             var7.field_p = true;
-            param4.field_B.a(3, var7);
-            var7 = new je(3, 0, this.field_r + 100);
-            var7.field_u = param4.field_hc + param3 * 20000;
-            var7.field_y = -20000 + param4.field_Gb;
+            param4.pendingCommands.addLast(3, var7);
+            var7 = new SentinelCommand(3, 0, this.simulationTick + 100);
+            var7.field_u = param4.worldX + param3 * 20000;
+            var7.field_y = -20000 + param4.worldY;
             var7.field_p = true;
-            param4.field_B.a(3, var7);
-            param4.field_Tb = param4.field_x;
+            param4.pendingCommands.addLast(3, var7);
+            param4.charge = param4.maximumCharge;
           } else {
             if (0 < param4.field_t) {
               stackIn_19_0 = null;
               stackIn_19_1 = null;
               stackIn_19_2 = 6;
-              if (param4.field_hc >> 4 >= param4.field_t) {
+              if (param4.worldX >> 4 >= param4.field_t) {
                 stackIn_20_0 = null;
                 stackIn_20_1 = null;
                 stackIn_20_3 = -1;
@@ -2519,69 +2519,69 @@ final class ee {
                 stackIn_20_1 = null;
                 stackIn_20_3 = 1;
               }
-              var7 = new je(stackIn_19_2, stackIn_20_3, 2 + this.field_r);
+              var7 = new SentinelCommand(stackIn_19_2, stackIn_20_3, 2 + this.simulationTick);
               var7.field_p = true;
-              param4.field_B.a(3, var7);
+              param4.pendingCommands.addLast(3, var7);
               decompiledFrameRemainder0 = (var8 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (Math.abs(param1) >= 15000 && (!(param4.field_Tb < 5) ||
+              if (Math.abs(param1) >= 15000 && (!(param4.charge < 5) ||
                 !(Math.abs(param1) < 30000))) {
-                var7 = new je(6, param3, 2 + this.field_r);
+                var7 = new SentinelCommand(6, param3, 2 + this.simulationTick);
                 var7.field_p = true;
-                param4.field_B.a(3, var7);
+                param4.pendingCommands.addLast(3, var7);
                 decompiledFrameRemainder0 = (var8 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if ((!(Math.abs(param1) < 15000) ||
                   !(Math.abs(param5) < 10000)) &&
                   (decompiledFrameRemainder0 = !(10000 <= Math.abs(param1)))) {
-                  var7 = new je(6, -param3, 2 + this.field_r);
+                  var7 = new SentinelCommand(6, -param3, 2 + this.simulationTick);
                   var7.field_p = true;
-                  param4.field_B.a(3, var7);
+                  param4.pendingCommands.addLast(3, var7);
                   decompiledFrameRemainder0 = (var8 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  param4.field_Tb = 10;
-                  var7 = new je(6, param3, this.field_r + 2);
+                  param4.charge = 10;
+                  var7 = new SentinelCommand(6, param3, this.simulationTick + 2);
                   var7.field_p = true;
-                  param4.field_B.a(3, var7);
-                  var7 = new je(7, param3, 4 + this.field_r);
+                  param4.pendingCommands.addLast(3, var7);
+                  var7 = new SentinelCommand(7, param3, 4 + this.simulationTick);
                   var7.field_p = true;
-                  param4.field_B.a(3, var7);
-                  var7 = new je(6, -param3, 25 + this.field_r + 4);
+                  param4.pendingCommands.addLast(3, var7);
+                  var7 = new SentinelCommand(6, -param3, 25 + this.simulationTick + 4);
                   var7.field_p = true;
-                  param4.field_B.a(3, var7);
-                  var7 = new je(6, 0, 254 + this.field_r);
+                  param4.pendingCommands.addLast(3, var7);
+                  var7 = new SentinelCommand(6, 0, 254 + this.simulationTick);
                   var7.field_p = true;
-                  param4.field_B.a(3, var7);
+                  param4.pendingCommands.addLast(3, var7);
                   return;
                 }
               }
             }
           }
           if (Math.abs(param1) > 50000 &&
-            this.a(this.field_z, (byte) -119, 3, param4, param0, 2600, this.field_r + 15)) {
+            this.a(this.field_z, (byte) -119, 3, param4, param0, 2600, this.simulationTick + 15)) {
           }
-          if (!this.a(this.field_z, (byte) -72, 2, param4, param0, 2600, 15 + this.field_r)) {
-            if (param4.field_Tb <= 1) {
+          if (!this.a(this.field_z, (byte) -72, 2, param4, param0, 2600, 15 + this.simulationTick)) {
+            if (param4.charge <= 1) {
               if (80000 < Math.abs(param1) &&
-                param4.field_Tb > 0) {
-                var7Lifetime1 = new je(3, 0, this.field_r + 30);
-                var7Lifetime1.field_u = param4.field_hc + 20000 * param3;
-                var7Lifetime1.field_y = -20000 + param4.field_Gb;
+                param4.charge > 0) {
+                var7Lifetime1 = new SentinelCommand(3, 0, this.simulationTick + 30);
+                var7Lifetime1.field_u = param4.worldX + 20000 * param3;
+                var7Lifetime1.field_y = -20000 + param4.worldY;
                 var7Lifetime1.field_p = true;
-                param4.field_B.a(3, var7Lifetime1);
-                param4.field_Tb = param4.field_x;
+                param4.pendingCommands.addLast(3, var7Lifetime1);
+                param4.charge = param4.maximumCharge;
               }
             } else {
-              if (!this.a(this.field_z, (byte) -67, 1, param4, param0, 1728, 25 + this.field_r) &&
-                !this.a(this.field_z, (byte) -49, 0, param4, param0, 4608, 25 + this.field_r)) {
+              if (!this.a(this.field_z, (byte) -67, 1, param4, param0, 1728, 25 + this.simulationTick) &&
+                !this.a(this.field_z, (byte) -49, 0, param4, param0, 4608, 25 + this.simulationTick)) {
               }
             }
           }
           if (param2 > -127) {
-            this.field_O = (ul) null;
+            this.field_O = (NodeDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2604,13 +2604,13 @@ final class ee {
         }
     }
 
-    private final void a(int param0, int param1, mb param2, int param3, mb param4, byte param5) {
+    private final void a(int param0, int param1, Sentinel param2, int param3, Sentinel param4, byte param5) {
         boolean discarded$0 = false;
-        je stackIn_18_0 = null;
-        je stackIn_18_1 = null;
+        SentinelCommand stackIn_18_0 = null;
+        SentinelCommand stackIn_18_1 = null;
         int stackIn_18_2 = 0;
-        je stackIn_19_0;
-        je stackIn_19_1;
+        SentinelCommand stackIn_19_0;
+        SentinelCommand stackIn_19_1;
         int stackIn_19_3;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
@@ -2618,28 +2618,28 @@ final class ee {
         StringBuilder stackIn_48_1 = null;
         String stackIn_49_2 = null;
         RuntimeException decompiledCaughtException = null;
-        je var7 = null;
+        SentinelCommand var7 = null;
         int var7_int = 0;
         RuntimeException var7_ref = null;
         int var8 = 0;
-        je var7Lifetime1;
-        je var7Lifetime2;
-        var8 = SteelSentinels.field_G;
+        SentinelCommand var7Lifetime1;
+        SentinelCommand var7Lifetime2;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameRemainder1 = true;
           if (param2.field_t <= 0) {
             if (40000 <= Math.abs(param3) &&
               param2.field_U != param1) {
-              var7 = new je(6, param1, this.field_r + 2);
+              var7 = new SentinelCommand(6, param1, this.simulationTick + 2);
               var7.field_p = true;
-              param2.field_B.a(3, var7);
+              param2.pendingCommands.addLast(3, var7);
               decompiledFrameRemainder1 = (var8 != 0);
             }
             if ((decompiledFrameRemainder1) &&
               (decompiledFrameRemainder1 = !(30000 <= Math.abs(param3)))) {
-              var7Lifetime2 = new je(6, -param1, 2 + this.field_r);
+              var7Lifetime2 = new SentinelCommand(6, -param1, 2 + this.simulationTick);
               var7Lifetime2.field_p = true;
-              param2.field_B.a(3, var7Lifetime2);
+              param2.pendingCommands.addLast(3, var7Lifetime2);
               decompiledFrameRemainder1 = (var8 != 0);
             }
           }
@@ -2647,7 +2647,7 @@ final class ee {
             stackIn_18_0 = null;
             stackIn_18_1 = null;
             stackIn_18_2 = 6;
-            if (param2.field_t <= (param2.field_hc >> 4)) {
+            if (param2.field_t <= (param2.worldX >> 4)) {
               stackIn_19_0 = null;
               stackIn_19_1 = null;
               stackIn_19_3 = -1;
@@ -2656,21 +2656,21 @@ final class ee {
               stackIn_19_1 = null;
               stackIn_19_3 = 1;
             }
-            var7Lifetime1 = new je(stackIn_18_2, stackIn_19_3, 2 + this.field_r);
+            var7Lifetime1 = new SentinelCommand(stackIn_18_2, stackIn_19_3, 2 + this.simulationTick);
             var7Lifetime1.field_p = true;
-            param2.field_B.a(3, var7Lifetime1);
+            param2.pendingCommands.addLast(3, var7Lifetime1);
           }
           boolean decompiledFrameRemainder0 = true;
-          if (!this.a(this.field_z, (byte) -78, 3, param2, param4, 2600, this.field_r + 15) &&
-            !this.a(this.field_z, (byte) -64, 2, param2, param4, 2600, 15 + this.field_r)) {
+          if (!this.a(this.field_z, (byte) -78, 3, param2, param4, 2600, this.simulationTick + 15) &&
+            !this.a(this.field_z, (byte) -64, 2, param2, param4, 2600, 15 + this.simulationTick)) {
             if (80000 > Math.abs(param3) &&
-              param2.field_Tb > 0 &&
-              this.a(this.field_z, (byte) -29, 1, param2, param4, 4608, this.field_r + 25)) {
-              discarded$0 = this.a(this.field_z, (byte) -98, 0, param2, param4, 2304, this.field_r + 75);
+              param2.charge > 0 &&
+              this.a(this.field_z, (byte) -29, 1, param2, param4, 4608, this.simulationTick + 25)) {
+              discarded$0 = this.a(this.field_z, (byte) -98, 0, param2, param4, 2304, this.simulationTick + 75);
               decompiledFrameRemainder0 = (var8 != 0);
             }
             if ((decompiledFrameRemainder0) &&
-              (this.a(this.field_z, (byte) -105, 0, param2, param4, 3072, 50 + this.field_r))) {
+              (this.a(this.field_z, (byte) -105, 0, param2, param4, 3072, 50 + this.simulationTick))) {
             }
           }
           var7_int = 112 % ((param5 + 66) / 46);
@@ -2698,7 +2698,7 @@ final class ee {
     final int d(int param0) {
         boolean[] var2 = null;
         int var3 = 0;
-        mb var4_ref_mb = null;
+        Sentinel var4_ref_mb = null;
         int var4 = 0;
         int var5 = 0;
         int stackIn_3_0 = 0;
@@ -2709,24 +2709,24 @@ final class ee {
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_19_0;
         RuntimeException var2_ref = null;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           var2 = new boolean[200];
           if (param0 != -3905) {
             stackIn_3_0 = 66;
             return stackIn_3_0;
           }
-          var4_ref_mb = (mb) (this.field_K.e(13058));
+          var4_ref_mb = (Sentinel) (this.sentinels.first(13058));
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (null == var4_ref_mb))) {
-            var3 = var4_ref_mb.field_Bb - this.field_kb;
+            var3 = var4_ref_mb.playerId - this.playerCount;
             stackIn_17_0 = ~var3;
             if (var5 == 0) {
               if (stackIn_17_0 <= -1 &&
                 var2.length > var3) {
                 var2[var3] = true;
               }
-              var4_ref_mb = (mb) (this.field_K.a((byte) -102));
+              var4_ref_mb = (Sentinel) (this.sentinels.next((byte) -102));
               continue;
             }
             break;
@@ -2742,7 +2742,7 @@ final class ee {
             stackIn_20_0 = stackOut_19_0;
             if (var5 == 0) {
               if (!stackIn_20_0) {
-                stackIn_25_0 = var4 + this.field_kb;
+                stackIn_25_0 = var4 + this.playerCount;
                 return stackIn_25_0;
               }
               var4++;
@@ -2761,12 +2761,12 @@ final class ee {
         }
     }
 
-    private final void a(int param0, mb param1, mb param2, int param3, int param4) {
-        je stackIn_14_0 = null;
-        je stackIn_14_1 = null;
+    private final void a(int param0, Sentinel param1, Sentinel param2, int param3, int param4) {
+        SentinelCommand stackIn_14_0 = null;
+        SentinelCommand stackIn_14_1 = null;
         int stackIn_14_2 = 0;
-        je stackIn_15_0 = null;
-        je stackIn_15_1 = null;
+        SentinelCommand stackIn_15_0 = null;
+        SentinelCommand stackIn_15_1 = null;
         int stackIn_15_3 = 0;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
@@ -2774,26 +2774,26 @@ final class ee {
         StringBuilder stackIn_48_1 = null;
         String stackIn_49_2 = null;
         RuntimeException decompiledCaughtException = null;
-        je var6 = null;
+        SentinelCommand var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
-        je var6Lifetime1;
-        je var6Lifetime2;
-        je var6Lifetime3;
-        je var6Lifetime4;
-        var7 = SteelSentinels.field_G;
+        SentinelCommand var6Lifetime1;
+        SentinelCommand var6Lifetime2;
+        SentinelCommand var6Lifetime3;
+        SentinelCommand var6Lifetime4;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           if (param2.field_Vb == null &&
-            0 < param2.field_Tb) {
-            var6 = new je(5, param1.field_Bb, 1 + this.field_r);
+            0 < param2.charge) {
+            var6 = new SentinelCommand(5, param1.playerId, 1 + this.simulationTick);
             var6.field_p = true;
-            param2.field_B.a(3, var6);
+            param2.pendingCommands.addLast(3, var6);
           }
           if (param2.field_t > 0) {
             stackIn_14_0 = null;
             stackIn_14_1 = null;
             stackIn_14_2 = 6;
-            if (param2.field_t > param2.field_hc >> 4) {
+            if (param2.field_t > param2.worldX >> 4) {
               stackIn_15_0 = null;
               stackIn_15_1 = null;
               stackIn_15_3 = 1;
@@ -2802,53 +2802,53 @@ final class ee {
               stackIn_15_1 = null;
               stackIn_15_3 = -1;
             }
-            var6Lifetime1 = new je(stackIn_14_2, stackIn_15_3, this.field_r + 2);
+            var6Lifetime1 = new SentinelCommand(stackIn_14_2, stackIn_15_3, this.simulationTick + 2);
             var6Lifetime1.field_p = true;
-            param2.field_B.a(param3 - 20060, var6Lifetime1);
+            param2.pendingCommands.addLast(param3 - 20060, var6Lifetime1);
             if ((var7 != 0) &&
               (Math.abs(param0) > 80000)) {
-              var6Lifetime1 = new je(6, param4, 2 + this.field_r);
+              var6Lifetime1 = new SentinelCommand(6, param4, 2 + this.simulationTick);
               var6Lifetime1.field_p = true;
-              param2.field_B.a(param3 - 20060, var6Lifetime1);
+              param2.pendingCommands.addLast(param3 - 20060, var6Lifetime1);
             }
           } else {
             if (Math.abs(param0) > 80000) {
-              var6Lifetime1 = new je(6, param4, 2 + this.field_r);
+              var6Lifetime1 = new SentinelCommand(6, param4, 2 + this.simulationTick);
               var6Lifetime1.field_p = true;
-              param2.field_B.a(param3 - 20060, var6Lifetime1);
+              param2.pendingCommands.addLast(param3 - 20060, var6Lifetime1);
             }
           }
           if (param3 != 20063) {
             return;
           }
-          var6Lifetime2 = new je(0, param2.field_Xb[2], 3 + this.field_r);
+          var6Lifetime2 = new SentinelCommand(0, param2.field_Xb[2], 3 + this.simulationTick);
           var6Lifetime2.field_B = 13384 * param2.field_E;
           var6Lifetime2.field_p = true;
-          var6Lifetime2.field_y = param1.field_Gb;
-          var6Lifetime2.field_u = param1.field_hc;
-          param2.field_B.a(param3 - 20060, var6Lifetime2);
-          if (param2.field_Tb > 0 &&
-            param2.field_Gb > param1.field_Gb) {
+          var6Lifetime2.field_y = param1.worldY;
+          var6Lifetime2.field_u = param1.worldX;
+          param2.pendingCommands.addLast(param3 - 20060, var6Lifetime2);
+          if (param2.charge > 0 &&
+            param2.worldY > param1.worldY) {
             if (null == param2.field_Vb) {
               return;
             }
-            var6Lifetime3 = new je(0, param2.field_Xb[1], (param1.field_hc + this.field_r + param2.field_hc) % 100 + this.field_r + 29);
-            var6Lifetime3.field_u = param1.field_hc;
+            var6Lifetime3 = new SentinelCommand(0, param2.field_Xb[1], (param1.worldX + this.simulationTick + param2.worldX) % 100 + this.simulationTick + 29);
+            var6Lifetime3.field_u = param1.worldX;
             var6Lifetime3.field_B = param4 * 15384;
-            var6Lifetime3.field_y = param1.field_Gb;
+            var6Lifetime3.field_y = param1.worldY;
             var6Lifetime3.field_p = true;
-            param2.field_B.a(3, var6Lifetime3);
+            param2.pendingCommands.addLast(3, var6Lifetime3);
             if (var7 == 0) {
               return;
             }
           }
           if (param2.field_Vb != null) {
-            var6Lifetime4 = new je(0, param2.field_Xb[0], (param1.field_hc + (this.field_r + param2.field_hc)) % 100 + 4 + (this.field_r + 50));
+            var6Lifetime4 = new SentinelCommand(0, param2.field_Xb[0], (param1.worldX + (this.simulationTick + param2.worldX)) % 100 + 4 + (this.simulationTick + 50));
             var6Lifetime4.field_B = 16384 * param4;
             var6Lifetime4.field_p = true;
-            var6Lifetime4.field_y = param1.field_Gb;
-            var6Lifetime4.field_u = param1.field_hc;
-            param2.field_B.a(param3 - 20060, var6Lifetime4);
+            var6Lifetime4.field_y = param1.worldY;
+            var6Lifetime4.field_u = param1.worldX;
+            param2.pendingCommands.addLast(param3 - 20060, var6Lifetime4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2871,36 +2871,36 @@ final class ee {
         }
     }
 
-    private final void a(int param0, mb param1, int param2, int param3, int param4, mb param5) {
-        je stackIn_33_0 = null;
-        je stackIn_33_1 = null;
+    private final void a(int param0, Sentinel param1, int param2, int param3, int param4, Sentinel param5) {
+        SentinelCommand stackIn_33_0 = null;
+        SentinelCommand stackIn_33_1 = null;
         int stackIn_33_2 = 0;
-        je stackIn_34_0 = null;
-        je stackIn_34_1 = null;
+        SentinelCommand stackIn_34_0 = null;
+        SentinelCommand stackIn_34_1 = null;
         int stackIn_34_3 = 0;
-        je stackIn_65_0 = null;
-        je stackIn_65_1 = null;
+        SentinelCommand stackIn_65_0 = null;
+        SentinelCommand stackIn_65_1 = null;
         int stackIn_65_2 = 0;
-        je stackIn_66_0 = null;
-        je stackIn_66_1 = null;
+        SentinelCommand stackIn_66_0 = null;
+        SentinelCommand stackIn_66_1 = null;
         int stackIn_66_3 = 0;
-        je stackIn_84_0 = null;
-        je stackIn_84_1 = null;
+        SentinelCommand stackIn_84_0 = null;
+        SentinelCommand stackIn_84_1 = null;
         int stackIn_84_2 = 0;
-        je stackIn_85_0 = null;
-        je stackIn_85_1 = null;
+        SentinelCommand stackIn_85_0 = null;
+        SentinelCommand stackIn_85_1 = null;
         int stackIn_85_3 = 0;
-        je stackIn_99_0 = null;
-        je stackIn_99_1 = null;
+        SentinelCommand stackIn_99_0 = null;
+        SentinelCommand stackIn_99_1 = null;
         int stackIn_99_2 = 0;
-        je stackIn_100_0;
-        je stackIn_100_1;
+        SentinelCommand stackIn_100_0;
+        SentinelCommand stackIn_100_1;
         int stackIn_100_3;
-        je stackIn_129_0 = null;
-        je stackIn_129_1 = null;
+        SentinelCommand stackIn_129_0 = null;
+        SentinelCommand stackIn_129_1 = null;
         int stackIn_129_2 = 0;
-        je stackIn_130_0 = null;
-        je stackIn_130_1 = null;
+        SentinelCommand stackIn_130_0 = null;
+        SentinelCommand stackIn_130_1 = null;
         int stackIn_130_3 = 0;
         RuntimeException stackIn_162_0 = null;
         StringBuilder stackIn_162_1 = null;
@@ -2911,40 +2911,40 @@ final class ee {
         int var7_int = 0;
         RuntimeException var7 = null;
         Object var8 = null;
-        je var9 = null;
+        SentinelCommand var9 = null;
         int var9_int = 0;
         double var10 = 0.0;
-        je var10_ref_je = null;
+        SentinelCommand var10_ref_je = null;
         double var11 = 0.0;
         int var13 = 0;
-        je var9Lifetime1;
-        je var9Lifetime2;
-        je var9Lifetime3;
-        je var9Lifetime4;
-        je var10_ref_jeLifetime1;
-        je var9Lifetime5;
-        je var9Lifetime6;
-        je var9Lifetime1Lifetime1;
-        je var9Lifetime1Lifetime2;
+        SentinelCommand var9Lifetime1;
+        SentinelCommand var9Lifetime2;
+        SentinelCommand var9Lifetime3;
+        SentinelCommand var9Lifetime4;
+        SentinelCommand var10_ref_jeLifetime1;
+        SentinelCommand var9Lifetime5;
+        SentinelCommand var9Lifetime6;
+        SentinelCommand var9Lifetime1Lifetime1;
+        SentinelCommand var9Lifetime1Lifetime2;
         double var10Lifetime1;
-        var13 = SteelSentinels.field_G;
+        var13 = SteelSentinels.obfuscationControl;
         try {
           var7_int = 0;
           if (param2 != 16384) {
             this.field_d = -12;
           }
           if (param4 < 0) {
-            var7_int = (this.field_ab.a(122) << 4) - 128 - param1.field_hc;
+            var7_int = (this.terrain.getProfileLength(122) << 4) - 128 - param1.worldX;
           }
           if (param4 >= 0 ||
             var13 != 0) {
-            var7_int = -128 + param1.field_hc;
+            var7_int = -128 + param1.worldX;
           }
           var8 = null;
           if (0 <= param5.field_W) {
-            var8 = this.f(param5.field_W, -127);
+            var8 = this.findSentinelForPlayer(param5.field_W, -127);
             if (var8 == null ||
-              ((mb) (var8)).field_Hb) {
+              ((Sentinel) (var8)).field_Hb) {
               var8 = null;
               param5.field_W = -1;
             }
@@ -2958,7 +2958,7 @@ final class ee {
                   stackIn_33_0 = null;
                   stackIn_33_1 = null;
                   stackIn_33_2 = 6;
-                  if ((param5.field_hc >> 4) >= param5.field_t) {
+                  if ((param5.worldX >> 4) >= param5.field_t) {
                     stackIn_34_0 = null;
                     stackIn_34_1 = null;
                     stackIn_34_3 = -1;
@@ -2967,9 +2967,9 @@ final class ee {
                     stackIn_34_1 = null;
                     stackIn_34_3 = 1;
                   }
-                  var9 = new je(stackIn_33_2, stackIn_34_3, 2 + this.field_r);
+                  var9 = new SentinelCommand(stackIn_33_2, stackIn_34_3, 2 + this.simulationTick);
                   var9.field_p = true;
-                  param5.field_B.a(param2 ^ 16387, var9);
+                  param5.pendingCommands.addLast(param2 ^ 16387, var9);
                   decompiledFrameRemainder1 = (var13 != 0);
                 }
                 if (decompiledFrameRemainder1) {
@@ -2977,25 +2977,25 @@ final class ee {
                     var7_int <= 50000) {
                     if (!(Math.abs(param0) <= 60000) ||
                       param5.field_U == 0) {
-                      var9 = new je(6, param4, this.field_r + 2);
+                      var9 = new SentinelCommand(6, param4, this.simulationTick + 2);
                       var9.field_p = true;
-                      param5.field_B.a(3, var9);
+                      param5.pendingCommands.addLast(3, var9);
                       if (var13 != 0) {
-                        var9 = new je(6, -param4, 2 + this.field_r);
+                        var9 = new SentinelCommand(6, -param4, 2 + this.simulationTick);
                         var9.field_p = true;
-                        param5.field_B.a(3, var9);
+                        param5.pendingCommands.addLast(3, var9);
                       }
                     }
                   } else {
-                    var9 = new je(6, -param4, 2 + this.field_r);
+                    var9 = new SentinelCommand(6, -param4, 2 + this.simulationTick);
                     var9.field_p = true;
-                    param5.field_B.a(3, var9);
+                    param5.pendingCommands.addLast(3, var9);
                   }
                 }
-                if (param5.field_Tb >= 1) {
-                  var9 = new je(5, param1.field_Bb, 4 + (this.field_r + (param5.field_hc + (param1.field_hc + this.field_r)) % 500));
+                if (param5.charge >= 1) {
+                  var9 = new SentinelCommand(5, param1.playerId, 4 + (this.simulationTick + (param5.worldX + (param1.worldX + this.simulationTick)) % 500));
                   var9.field_p = true;
-                  param5.field_B.a(3, var9);
+                  param5.pendingCommands.addLast(3, var9);
                   if (var13 == 0) {
                     return;
                   }
@@ -3003,13 +3003,13 @@ final class ee {
                 if (Math.abs(param0) >= 60000) {
                   return;
                 }
-                var9 = new je(0, param5.field_Xb[0], (param5.field_hc + param1.field_hc + this.field_r) % 100 + (4 + this.field_r));
-                var9.field_y = param1.field_Gb;
-                var9.field_u = param1.field_hc;
+                var9 = new SentinelCommand(0, param5.field_Xb[0], (param5.worldX + param1.worldX + this.simulationTick) % 100 + (4 + this.simulationTick));
+                var9.field_y = param1.worldY;
+                var9.field_u = param1.worldX;
                 var10 = Math.atan2((double)param0, (double)(-param3));
                 var9.field_p = true;
                 var9.field_B = (int)(var10 * 65536.0 / 6.283185307179586);
-                param5.field_B.a(3, var9);
+                param5.pendingCommands.addLast(3, var9);
                 if (var13 == 0) {
                   return;
                 }
@@ -3023,7 +3023,7 @@ final class ee {
                 stackIn_65_0 = null;
                 stackIn_65_1 = null;
                 stackIn_65_2 = 6;
-                if (param5.field_t <= param5.field_hc >> 4) {
+                if (param5.field_t <= param5.worldX >> 4) {
                   stackIn_66_0 = null;
                   stackIn_66_1 = null;
                   stackIn_66_3 = -1;
@@ -3032,25 +3032,25 @@ final class ee {
                   stackIn_66_1 = null;
                   stackIn_66_3 = 1;
                 }
-                var10_ref_je = new je(stackIn_65_2, stackIn_66_3, 2 + this.field_r);
+                var10_ref_je = new SentinelCommand(stackIn_65_2, stackIn_66_3, 2 + this.simulationTick);
                 var10_ref_je.field_p = true;
-                param5.field_B.a(3, var10_ref_je);
+                param5.pendingCommands.addLast(3, var10_ref_je);
                 decompiledSharedTail0 = (var13 != 0);
               }
               if ((decompiledSharedTail0) &&
                 (~var9_int != ~param5.field_U)) {
-                var10_ref_je = new je(6, var9_int, this.field_r + 2);
+                var10_ref_je = new SentinelCommand(6, var9_int, this.simulationTick + 2);
                 var10_ref_je.field_p = true;
-                param5.field_B.a(3, var10_ref_je);
+                param5.pendingCommands.addLast(3, var10_ref_je);
               }
               if (Math.abs(param0) < 30000) {
-                var10_ref_jeLifetime1 = new je(0, param5.field_Xb[0], (param5.field_hc + (param1.field_hc + this.field_r)) % 100 + 4 + this.field_r);
-                var10_ref_jeLifetime1.field_u = param1.field_hc;
-                var10_ref_jeLifetime1.field_y = param1.field_Gb;
+                var10_ref_jeLifetime1 = new SentinelCommand(0, param5.field_Xb[0], (param5.worldX + (param1.worldX + this.simulationTick)) % 100 + 4 + this.simulationTick);
+                var10_ref_jeLifetime1.field_u = param1.worldX;
+                var10_ref_jeLifetime1.field_y = param1.worldY;
                 var11 = Math.atan2((double)param0, (double)(-param3));
                 var10_ref_jeLifetime1.field_p = true;
                 var10_ref_jeLifetime1.field_B = (int)(65536.0 * var11 / 6.283185307179586);
-                param5.field_B.a(3, var10_ref_jeLifetime1);
+                param5.pendingCommands.addLast(3, var10_ref_jeLifetime1);
               }
               if (var13 == 0) {
                 return;
@@ -3060,7 +3060,7 @@ final class ee {
               stackIn_84_0 = null;
               stackIn_84_1 = null;
               stackIn_84_2 = 6;
-              if (param5.field_t > (param5.field_hc >> 4)) {
+              if (param5.field_t > (param5.worldX >> 4)) {
                 stackIn_85_0 = null;
                 stackIn_85_1 = null;
                 stackIn_85_3 = 1;
@@ -3069,21 +3069,21 @@ final class ee {
                 stackIn_85_1 = null;
                 stackIn_85_3 = -1;
               }
-              var9Lifetime5 = new je(stackIn_84_2, stackIn_85_3, this.field_r + 2);
+              var9Lifetime5 = new SentinelCommand(stackIn_84_2, stackIn_85_3, this.simulationTick + 2);
               if (var13 != 0) {
-                var9Lifetime5 = new je(6, param4, this.field_r + 2);
+                var9Lifetime5 = new SentinelCommand(6, param4, this.simulationTick + 2);
               }
             } else {
-              var9Lifetime5 = new je(6, param4, this.field_r + 2);
+              var9Lifetime5 = new SentinelCommand(6, param4, this.simulationTick + 2);
             }
             var9Lifetime5.field_p = true;
-            param5.field_B.a(3, var9Lifetime5);
-            var9Lifetime6 = new je(0, param5.field_Xb[1], 4 + this.field_r + (this.field_r + param1.field_hc + param5.field_hc) % 500);
+            param5.pendingCommands.addLast(3, var9Lifetime5);
+            var9Lifetime6 = new SentinelCommand(0, param5.field_Xb[1], 4 + this.simulationTick + (this.simulationTick + param1.worldX + param5.worldX) % 500);
             var9Lifetime6.field_p = true;
-            var9Lifetime6.field_u = param4 * 25000 + param5.field_hc;
-            var9Lifetime6.field_y = -25000 + param5.field_Gb;
+            var9Lifetime6.field_u = param4 * 25000 + param5.worldX;
+            var9Lifetime6.field_y = -25000 + param5.worldY;
             var9Lifetime6.field_B = param4 * 4096;
-            param5.field_B.a(param2 - 16381, var9Lifetime6);
+            param5.pendingCommands.addLast(param2 - 16381, var9Lifetime6);
             if (var13 == 0) {
               return;
             }
@@ -3093,7 +3093,7 @@ final class ee {
               stackIn_99_0 = null;
               stackIn_99_1 = null;
               stackIn_99_2 = 6;
-              if (param5.field_t <= (param5.field_hc >> 4)) {
+              if (param5.field_t <= (param5.worldX >> 4)) {
                 stackIn_100_0 = null;
                 stackIn_100_1 = null;
                 stackIn_100_3 = -1;
@@ -3102,24 +3102,24 @@ final class ee {
                 stackIn_100_1 = null;
                 stackIn_100_3 = 1;
               }
-              var9Lifetime1 = new je(stackIn_99_2, stackIn_100_3, this.field_r + 2);
+              var9Lifetime1 = new SentinelCommand(stackIn_99_2, stackIn_100_3, this.simulationTick + 2);
               var9Lifetime1.field_p = true;
-              param5.field_B.a(param2 ^ 16387, var9Lifetime1);
+              param5.pendingCommands.addLast(param2 ^ 16387, var9Lifetime1);
             }
             boolean decompiledFrameRemainder0 = true;
             if (null != param5.field_Vb &&
               Math.abs(param0) >= 90000) {
               if (param5.field_t == 0) {
-                var9Lifetime1Lifetime1 = new je(6, param4, this.field_r + 2);
+                var9Lifetime1Lifetime1 = new SentinelCommand(6, param4, this.simulationTick + 2);
                 var9Lifetime1Lifetime1.field_p = true;
-                param5.field_B.a(3, var9Lifetime1Lifetime1);
+                param5.pendingCommands.addLast(3, var9Lifetime1Lifetime1);
               }
-              var9Lifetime1Lifetime1 = new je(0, param5.field_Xb[1], (param1.field_hc + this.field_r + param5.field_hc) % 500 + (4 + this.field_r));
-              var9Lifetime1Lifetime1.field_u = param4 * 25000 + param5.field_hc;
+              var9Lifetime1Lifetime1 = new SentinelCommand(0, param5.field_Xb[1], (param1.worldX + this.simulationTick + param5.worldX) % 500 + (4 + this.simulationTick));
+              var9Lifetime1Lifetime1.field_u = param4 * 25000 + param5.worldX;
               var9Lifetime1Lifetime1.field_p = true;
-              var9Lifetime1Lifetime1.field_y = -25000 + param5.field_Gb;
+              var9Lifetime1Lifetime1.field_y = -25000 + param5.worldY;
               var9Lifetime1Lifetime1.field_B = param4 * 4096;
-              param5.field_B.a(3, var9Lifetime1Lifetime1);
+              param5.pendingCommands.addLast(3, var9Lifetime1Lifetime1);
               decompiledFrameRemainder0 = (var13 != 0);
             }
             if ((decompiledFrameRemainder0) &&
@@ -3139,83 +3139,83 @@ final class ee {
                     stackIn_130_1 = null;
                     stackIn_130_3 = -param4;
                   }
-                  var9Lifetime1Lifetime1 = new je(stackIn_129_2, stackIn_130_3, 2 + this.field_r);
+                  var9Lifetime1Lifetime1 = new SentinelCommand(stackIn_129_2, stackIn_130_3, 2 + this.simulationTick);
                   var9Lifetime1Lifetime1.field_p = true;
-                  param5.field_B.a(3, var9Lifetime1Lifetime1);
+                  param5.pendingCommands.addLast(3, var9Lifetime1Lifetime1);
                   if (var13 != 0) {
-                    var9Lifetime1Lifetime1 = new je(6, param4, this.field_r + 2);
+                    var9Lifetime1Lifetime1 = new SentinelCommand(6, param4, this.simulationTick + 2);
                     var9Lifetime1Lifetime1.field_p = true;
-                    param5.field_B.a(3, var9Lifetime1Lifetime1);
+                    param5.pendingCommands.addLast(3, var9Lifetime1Lifetime1);
                   }
                 }
               } else {
-                var9Lifetime1Lifetime1 = new je(6, param4, this.field_r + 2);
+                var9Lifetime1Lifetime1 = new SentinelCommand(6, param4, this.simulationTick + 2);
                 var9Lifetime1Lifetime1.field_p = true;
-                param5.field_B.a(3, var9Lifetime1Lifetime1);
+                param5.pendingCommands.addLast(3, var9Lifetime1Lifetime1);
               }
             }
-            if (param5.field_Tb < 1) {
+            if (param5.charge < 1) {
               return;
             }
             if (null != param5.field_Vb) {
               return;
             }
-            var9Lifetime1Lifetime2 = new je(5, param1.field_Bb, this.field_r + 4 + (param5.field_hc + (this.field_r + param1.field_hc)) % 500);
+            var9Lifetime1Lifetime2 = new SentinelCommand(5, param1.playerId, this.simulationTick + 4 + (param5.worldX + (this.simulationTick + param1.worldX)) % 500);
             var9Lifetime1Lifetime2.field_p = true;
-            param5.field_B.a(3, var9Lifetime1Lifetime2);
+            param5.pendingCommands.addLast(3, var9Lifetime1Lifetime2);
             if (var13 == 0) {
               return;
             }
           }
-          if (param5.field_hc >= param5.field_C + ((mb) (var8)).field_hc - 1000) {
-            if (param5.field_hc <= (param5.field_C + ((mb) (var8)).field_hc + 1000)) {
-              if (~((mb) (var8)).field_U != ~param5.field_U) {
-                var9Lifetime2 = new je(6, ((mb) (var8)).field_U, 2 + this.field_r);
+          if (param5.worldX >= param5.field_C + ((Sentinel) (var8)).worldX - 1000) {
+            if (param5.worldX <= (param5.field_C + ((Sentinel) (var8)).worldX + 1000)) {
+              if (~((Sentinel) (var8)).field_U != ~param5.field_U) {
+                var9Lifetime2 = new SentinelCommand(6, ((Sentinel) (var8)).field_U, 2 + this.simulationTick);
                 var9Lifetime2.field_p = true;
-                param5.field_B.a(param2 - 16381, var9Lifetime2);
+                param5.pendingCommands.addLast(param2 - 16381, var9Lifetime2);
                 if (var13 != 0) {
-                  var9Lifetime2 = new je(6, -1, 2 + this.field_r);
+                  var9Lifetime2 = new SentinelCommand(6, -1, 2 + this.simulationTick);
                   var9Lifetime2.field_p = true;
-                  param5.field_B.a(3, var9Lifetime2);
-                  var9Lifetime2 = new je(6, 1, this.field_r + 2);
+                  param5.pendingCommands.addLast(3, var9Lifetime2);
+                  var9Lifetime2 = new SentinelCommand(6, 1, this.simulationTick + 2);
                   var9Lifetime2.field_p = true;
-                  param5.field_B.a(3, var9Lifetime2);
+                  param5.pendingCommands.addLast(3, var9Lifetime2);
                 }
               }
             } else {
-              var9Lifetime2 = new je(6, -1, 2 + this.field_r);
+              var9Lifetime2 = new SentinelCommand(6, -1, 2 + this.simulationTick);
               var9Lifetime2.field_p = true;
-              param5.field_B.a(3, var9Lifetime2);
+              param5.pendingCommands.addLast(3, var9Lifetime2);
               if (var13 != 0) {
-                var9Lifetime2 = new je(6, 1, this.field_r + 2);
+                var9Lifetime2 = new SentinelCommand(6, 1, this.simulationTick + 2);
                 var9Lifetime2.field_p = true;
-                param5.field_B.a(3, var9Lifetime2);
+                param5.pendingCommands.addLast(3, var9Lifetime2);
               }
             }
           } else {
-            var9Lifetime2 = new je(6, 1, this.field_r + 2);
+            var9Lifetime2 = new SentinelCommand(6, 1, this.simulationTick + 2);
             var9Lifetime2.field_p = true;
-            param5.field_B.a(3, var9Lifetime2);
+            param5.pendingCommands.addLast(3, var9Lifetime2);
           }
-          param5.field_Vb = ((mb) (var8)).field_Vb;
-          param5.field_ec = ((mb) (var8)).field_ec;
+          param5.field_Vb = ((Sentinel) (var8)).field_Vb;
+          param5.field_ec = ((Sentinel) (var8)).field_ec;
           if (param5.field_Vb != null &&
             Math.abs(param0) >= 90000) {
-            var9Lifetime3 = new je(0, param5.field_Xb[1], 4 + (this.field_r + (param5.field_hc + this.field_r + param1.field_hc) % 500));
-            var9Lifetime3.field_y = -25000 + param5.field_Gb;
-            var9Lifetime3.field_u = param5.field_hc + param4 * 25000;
+            var9Lifetime3 = new SentinelCommand(0, param5.field_Xb[1], 4 + (this.simulationTick + (param5.worldX + this.simulationTick + param1.worldX) % 500));
+            var9Lifetime3.field_y = -25000 + param5.worldY;
+            var9Lifetime3.field_u = param5.worldX + param4 * 25000;
             var9Lifetime3.field_B = 4096 * param4;
             var9Lifetime3.field_p = true;
-            param5.field_B.a(3, var9Lifetime3);
+            param5.pendingCommands.addLast(3, var9Lifetime3);
           }
           if (10000 > Math.abs(param0)) {
-            var9Lifetime4 = new je(0, param5.field_Xb[0], (param1.field_hc + (this.field_r + param5.field_hc)) % 100 + (4 + this.field_r));
-            var9Lifetime4.field_y = param1.field_Gb;
-            var9Lifetime4.field_u = param1.field_hc;
+            var9Lifetime4 = new SentinelCommand(0, param5.field_Xb[0], (param1.worldX + (this.simulationTick + param5.worldX)) % 100 + (4 + this.simulationTick));
+            var9Lifetime4.field_y = param1.worldY;
+            var9Lifetime4.field_u = param1.worldX;
             var10Lifetime1 = Math.atan2((double)param0, (double)(-param3));
             var9Lifetime4.field_B = (int)(var10Lifetime1 * 65536.0 / 6.283185307179586);
             var9Lifetime4.field_p = true;
-            param5.field_B.a(3, var9Lifetime4);
+            param5.pendingCommands.addLast(3, var9Lifetime4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3247,7 +3247,7 @@ final class ee {
             fl.a((byte) 28, qj.field_q[param1], cm.field_e[param1]);
           }
           if (param0 != -2483) {
-            ee.a((String) null, (String) null, (String) null, -92);
+            CombatWorld.a((String) null, (String) null, (String) null, -92);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3265,7 +3265,7 @@ final class ee {
           if (param0 <= 74) {
             field_x = (String) null;
           }
-          stackIn_4_0 = na.a(wl.d((byte) -21), 0);
+          stackIn_4_0 = na.a(Projectile.d((byte) -21), 0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3290,7 +3290,7 @@ final class ee {
         int var19 = 0;
         int var20 = 0;
         double var7_doubleLifetime1;
-        var20 = SteelSentinels.field_G;
+        var20 = SteelSentinels.obfuscationControl;
         try {
           if (0 == param3) {
             var7_double = Math.atan2((double)param2, (double)(-param5));
@@ -3316,7 +3316,7 @@ final class ee {
           var11 = (double)param2 * ((double)param2 * ((double)(param3 << 3) * 0.5)) / (double)(param4 * param4) - (double)param5;
           var13 = (double)param2;
           if (param1 > -72) {
-            this.f(-42, -3);
+            this.findSentinelForPlayer(-42, -3);
           }
           var15 = (double)param2 * ((double)param2 * ((double)(param3 << 3) * 0.5)) / (double)(param4 * param4);
           if (var13 * var13 - var15 * (4.0 * var11) > 0.0 && (0.0 != var11 ||
@@ -3328,14 +3328,14 @@ final class ee {
           var18 = 0;
           var17 = (int)(var7_doubleLifetime1 * 65536.0 / 6.283185307179586);
           if (var17 != 0) {
-            var17 = var17 + (16 * (this.field_r & 31) - 256);
+            var17 = var17 + (16 * (this.simulationTick & 31) - 256);
           }
           var18 = (int)(var9 * 65536.0 / 6.283185307179586);
           if (var17 < -32768) {
             var17 = var17 + 65536;
           }
           if (var18 != 0) {
-            var18 = var18 + (-256 + (31 & this.field_r) * 16);
+            var18 = var18 + (-256 + (31 & this.simulationTick) * 16);
           }
           if (var18 < -32768) {
             var18 = var18 + 65536;
@@ -3383,77 +3383,77 @@ final class ee {
         }
     }
 
-    private final void a(int param0, mb param1, int param2, mb param3, int param4, int param5) {
+    private final void a(int param0, Sentinel param1, int param2, Sentinel param3, int param4, int param5) {
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
         String stackIn_74_2 = null;
         StringBuilder stackIn_77_1 = null;
         String stackIn_78_2 = null;
         RuntimeException decompiledCaughtException = null;
-        je var7 = null;
+        SentinelCommand var7 = null;
         RuntimeException var7_ref = null;
         double var8 = 0.0;
         int var10 = 0;
-        je var7Lifetime1;
-        je var7Lifetime2;
-        je var7Lifetime3;
-        je var7Lifetime4;
+        SentinelCommand var7Lifetime1;
+        SentinelCommand var7Lifetime2;
+        SentinelCommand var7Lifetime3;
+        SentinelCommand var7Lifetime4;
         double var8Lifetime1;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         try {
           if (null == param1.field_Vb &&
-            0 < param1.field_Tb) {
-            var7 = new je(5, param3.field_Bb, 1 + this.field_r);
+            0 < param1.charge) {
+            var7 = new SentinelCommand(5, param3.playerId, 1 + this.simulationTick);
             var7.field_p = true;
-            param1.field_B.a(3, var7);
+            param1.pendingCommands.addLast(3, var7);
           }
           if ((param1.field_Lb ||
-            !(param1.field_Tb < 5)) && param1.field_Tb >= 1) {
+            !(param1.charge < 5)) && param1.charge >= 1) {
             if (Math.abs(param2) <= 50000) {
-              var7Lifetime1 = new je(3, 0, 5 + ((param1.field_hc + (this.field_r + param3.field_hc)) % 100 + this.field_r + 4));
-              var7Lifetime1.field_y = -20000 + param1.field_Gb;
-              var7Lifetime1.field_u = -(param4 * 20000) + param1.field_hc;
+              var7Lifetime1 = new SentinelCommand(3, 0, 5 + ((param1.worldX + (this.simulationTick + param3.worldX)) % 100 + this.simulationTick + 4));
+              var7Lifetime1.field_y = -20000 + param1.worldY;
+              var7Lifetime1.field_u = -(param4 * 20000) + param1.worldX;
               var7Lifetime1.field_p = true;
-              param1.field_B.a(param5 ^ 14435, var7Lifetime1);
+              param1.pendingCommands.addLast(param5 ^ 14435, var7Lifetime1);
               if (var10 != 0) {
-                var7Lifetime1 = new je(3, 0, 4 + (this.field_r + ((param3.field_hc + this.field_r + param1.field_hc) % 100 + 50)));
-                var7Lifetime1.field_u = param3.field_hc;
-                if (var7Lifetime1.field_u > param1.field_hc + 10000) {
-                  var7Lifetime1.field_u = param1.field_hc + 10000;
+                var7Lifetime1 = new SentinelCommand(3, 0, 4 + (this.simulationTick + ((param3.worldX + this.simulationTick + param1.worldX) % 100 + 50)));
+                var7Lifetime1.field_u = param3.worldX;
+                if (var7Lifetime1.field_u > param1.worldX + 10000) {
+                  var7Lifetime1.field_u = param1.worldX + 10000;
                 }
                 var7Lifetime1.field_p = true;
-                var7Lifetime1.field_y = -20000 + param1.field_Gb;
-                if ((param1.field_hc - 10000) > var7Lifetime1.field_u) {
-                  var7Lifetime1.field_u = param1.field_hc - 10000;
+                var7Lifetime1.field_y = -20000 + param1.worldY;
+                if ((param1.worldX - 10000) > var7Lifetime1.field_u) {
+                  var7Lifetime1.field_u = param1.worldX - 10000;
                 }
-                param1.field_B.a(3, var7Lifetime1);
+                param1.pendingCommands.addLast(3, var7Lifetime1);
               }
             } else {
-              var7Lifetime1 = new je(3, 0, 4 + (this.field_r + ((param3.field_hc + this.field_r + param1.field_hc) % 100 + 50)));
-              var7Lifetime1.field_u = param3.field_hc;
-              if (var7Lifetime1.field_u > param1.field_hc + 10000) {
-                var7Lifetime1.field_u = param1.field_hc + 10000;
+              var7Lifetime1 = new SentinelCommand(3, 0, 4 + (this.simulationTick + ((param3.worldX + this.simulationTick + param1.worldX) % 100 + 50)));
+              var7Lifetime1.field_u = param3.worldX;
+              if (var7Lifetime1.field_u > param1.worldX + 10000) {
+                var7Lifetime1.field_u = param1.worldX + 10000;
               }
               var7Lifetime1.field_p = true;
-              var7Lifetime1.field_y = -20000 + param1.field_Gb;
-              if ((param1.field_hc - 10000) > var7Lifetime1.field_u) {
-                var7Lifetime1.field_u = param1.field_hc - 10000;
+              var7Lifetime1.field_y = -20000 + param1.worldY;
+              if ((param1.worldX - 10000) > var7Lifetime1.field_u) {
+                var7Lifetime1.field_u = param1.worldX - 10000;
               }
-              param1.field_B.a(3, var7Lifetime1);
+              param1.pendingCommands.addLast(3, var7Lifetime1);
             }
           }
           if (param5 != 14432) {
-            this.field_db = (ul) null;
+            this.field_db = (NodeDeque) null;
           }
           if (Math.abs(param2) <= 50000 &&
             Math.abs(param0) <= 30000 ||
-            !(param1.field_Tb >= 1)) {
-            if (param1.i(30, -27)) {
+            !(param1.charge >= 1)) {
+            if (param1.hasModuleType(30, -27)) {
               return;
             }
-            var7Lifetime2 = new je(0, 0, 4 + (this.field_r + (param3.field_hc + this.field_r + param1.field_hc) % 100 + 60));
-            var7Lifetime2.field_y = param3.field_Gb;
-            var7Lifetime2.field_u = param3.field_hc;
+            var7Lifetime2 = new SentinelCommand(0, 0, 4 + (this.simulationTick + (param3.worldX + this.simulationTick + param1.worldX) % 100 + 60));
+            var7Lifetime2.field_y = param3.worldY;
+            var7Lifetime2.field_u = param3.worldX;
             var8 = Math.atan2((double)param2, (double)(-param0));
             var7Lifetime2.field_B = (int)(var8 * 65536.0 / 6.283185307179586);
             if (0 > param4) {
@@ -3470,14 +3470,14 @@ final class ee {
               }
             }
             var7Lifetime2.field_p = true;
-            param1.field_B.a(3, var7Lifetime2);
+            param1.pendingCommands.addLast(3, var7Lifetime2);
             if (var10 == 0) {
               return;
             }
           }
-          var7Lifetime3 = new je(0, 8, 60 + (param3.field_hc + this.field_r + param1.field_hc) % 100 + this.field_r + 4);
-          var7Lifetime3.field_y = param3.field_Gb;
-          var7Lifetime3.field_u = param3.field_hc;
+          var7Lifetime3 = new SentinelCommand(0, 8, 60 + (param3.worldX + this.simulationTick + param1.worldX) % 100 + this.simulationTick + 4);
+          var7Lifetime3.field_y = param3.worldY;
+          var7Lifetime3.field_u = param3.worldX;
           var8Lifetime1 = Math.atan2((double)param2, (double)(-param0));
           var7Lifetime3.field_B = (int)(var8Lifetime1 * 65536.0 / 6.283185307179586);
           if (param4 < 0) {
@@ -3494,12 +3494,12 @@ final class ee {
             }
           }
           var7Lifetime3.field_p = true;
-          param1.field_B.a(param5 - 14429, var7Lifetime3);
-          var7Lifetime4 = new je(3, 0, 5 + (4 + this.field_r) + (param1.field_hc + (param3.field_hc + this.field_r)) % 100);
-          var7Lifetime4.field_y = param1.field_Gb - 20000;
-          var7Lifetime4.field_u = 5000 * param4 + param1.field_hc;
+          param1.pendingCommands.addLast(param5 - 14429, var7Lifetime3);
+          var7Lifetime4 = new SentinelCommand(3, 0, 5 + (4 + this.simulationTick) + (param1.worldX + (param3.worldX + this.simulationTick)) % 100);
+          var7Lifetime4.field_y = param1.worldY - 20000;
+          var7Lifetime4.field_u = 5000 * param4 + param1.worldX;
           var7Lifetime4.field_p = true;
-          param1.field_Ec.a(3, var7Lifetime4);
+          param1.secondaryCommands.addLast(3, var7Lifetime4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3529,7 +3529,7 @@ final class ee {
           if (!param0) {
             this.a((int[]) null, (byte) 42);
           }
-          stackIn_7_0 = (this.field_ab.b((byte) 125, param1) != this.field_ab.a((byte) -100, param1));
+          stackIn_7_0 = (this.terrain.getSurfaceProfileAt((byte) 125, param1) != this.terrain.getGroundHeightAt((byte) -100, param1));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3538,7 +3538,7 @@ final class ee {
         }
     }
 
-    private final boolean a(int param0, byte param1, int param2, mb param3, mb param4, int param5, int param6) {
+    private final boolean a(int param0, byte param1, int param2, Sentinel param3, Sentinel param4, int param5, int param6) {
         int stackIn_22_0 = 0;
         int stackIn_29_0 = 0;
         int stackIn_36_0 = 0;
@@ -3554,7 +3554,7 @@ final class ee {
         String stackIn_172_2 = null;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_108_0;
-        je var8 = null;
+        SentinelCommand var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
         int var10 = 0;
@@ -3562,14 +3562,14 @@ final class ee {
         long[] var12 = null;
         int var13 = 0;
         int var14 = 0;
-        nk var15 = null;
+        ArticulatedPart var15 = null;
         int var16 = 0;
         int var17 = 0;
         long var18 = 0L;
         bh var20 = null;
         int var21 = 0;
         int var22 = 0;
-        wl var23 = null;
+        Projectile var23 = null;
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
@@ -3582,7 +3582,7 @@ final class ee {
         int var25Lifetime1;
         int var26Lifetime1;
         int var27Lifetime1;
-        var30 = SteelSentinels.field_G;
+        var30 = SteelSentinels.obfuscationControl;
         try {
           if ((11 == param3.field_Nb ||
             di.field_g == 10 &&
@@ -3590,10 +3590,10 @@ final class ee {
             !(ol.field_Ub > 2)) && 0 < param3.field_Mb[param2]) {
             return false;
           }
-          var8 = new je(0, param3.field_Xb[param2], param6);
-          var8.field_y = param4.field_Gb;
-          var8.field_u = param4.field_hc;
-          stackIn_22_0 = (param4.field_hc <= param3.field_hc) ? -1 : 1;
+          var8 = new SentinelCommand(0, param3.field_Xb[param2], param6);
+          var8.field_y = param4.worldY;
+          var8.field_u = param4.worldX;
+          stackIn_22_0 = (param4.worldX <= param3.worldX) ? -1 : 1;
           var9 = stackIn_22_0;
           if (!param3.field_u &&
             !param4.field_u) {
@@ -3602,19 +3602,19 @@ final class ee {
             stackIn_29_0 = 1;
           }
           var10 = stackIn_29_0;
-          if ((param3.field_Bb & 1) * 256 + (256 & this.field_r + 15 * param3.field_Bb) == 0) {
+          if ((param3.playerId & 1) * 256 + (256 & this.simulationTick + 15 * param3.playerId) == 0) {
             stackIn_36_0 = (var10 != 0) ? 0 : 1;
             var10 = stackIn_36_0;
           }
-          var11 = this.a(var9, (byte) -88, param4.field_hc - param3.field_hc, param0, param5, -param3.field_Gb + param4.field_Gb);
+          var11 = this.a(var9, (byte) -88, param4.worldX - param3.worldX, param0, param5, -param3.worldY + param4.worldY);
           if (param3.field_Xb[param2] == 6) {
             var10 = 1;
           }
           var12 = new long[]{0L, 0L};
           var13 = 0;
-          var14 = param3.field_gb.length;
+          var14 = param3.weaponParts.length;
           if (param3.field_Lb &&
-            !param3.i(31, -27)) {
+            !param3.hasModuleType(31, -27)) {
             stackIn_46_0 = 0;
           } else {
             stackIn_46_0 = 1;
@@ -3623,22 +3623,22 @@ final class ee {
           var17 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var14 <= var17))) {
-            var15 = param3.field_gb[var17];
-            stackIn_85_0 = ~ja.a(var15.field_N, false);
+            var15 = param3.weaponParts[var17];
+            stackIn_85_0 = ~ja.a(var15.componentId, false);
             if (var30 == 0) {
-              if (stackIn_85_0 == ~var8.field_A &&
+              if (stackIn_85_0 == ~var8.actionVariant &&
                 var15.field_C <= 0) {
                 if (Math.abs(var11[0]) >= var15.field_K &&
                   Math.abs(var11[0]) <= var15.field_W && (var16 != 0 ||
-                  !bi.b(105, var15.field_N))) {
+                  !bi.b(105, var15.componentId))) {
                   var12[0] = mc.a(var12[0], 1L << var17);
                 }
                 if (Math.abs(var11[1]) >= var15.field_K &&
                   Math.abs(var11[1]) <= var15.field_W && (var16 != 0 ||
-                  !bi.b(-75, var15.field_N))) {
+                  !bi.b(-75, var15.componentId))) {
                   var12[1] = mc.a(var12[1], 1L << var17);
                 }
-                var13 = var15.field_N;
+                var13 = var15.componentId;
               }
               var17++;
               continue;
@@ -3652,7 +3652,7 @@ final class ee {
           var17Lifetime1 = stackIn_89_0;
           var18 = var12[var17Lifetime1];
           if (param1 >= -16) {
-            this.field_J = (ra) null;
+            this.field_J = (DualNodeDeque) null;
           }
           var8.field_B = var11[var17Lifetime1];
           if (var18 == 0L ||
@@ -3665,8 +3665,8 @@ final class ee {
             var8.field_B != 0) {
             var20 = new bh(param3);
             var20.field_b = var9;
-            var21 = param3.field_hc;
-            var22 = -(param3.field_Db << 3) + param3.field_Gb;
+            var21 = param3.worldX;
+            var22 = -(param3.field_Db << 3) + param3.worldY;
             var23 = var20.a(var13, (byte) 121, var8.field_u, var8.field_B, var22, var21, var8.field_y);
             var23.field_I = true;
             if (null != var23) {
@@ -3683,15 +3683,15 @@ final class ee {
                   decompiledFrameRemainder0 = (var30 == 0);
                   if ((decompiledFrameRemainder0) &&
                     (!stackIn_109_0)) {
-                    var23.i(-1);
-                    var26 = Math.abs(var23.field_U - param4.field_hc) >> 4;
-                    var27 = Math.abs(var23.field_A - param4.field_Gb) >> 4;
+                    var23.advanceProjectile(-1);
+                    var26 = Math.abs(var23.worldX - param4.worldX) >> 4;
+                    var27 = Math.abs(var23.worldY - param4.worldY) >> 4;
                     var24Lifetime1 = var27 * var27 + var26 * var26;
-                    var26Lifetime1 = Math.abs(-var20.field_g + var23.field_U) >> 4;
+                    var26Lifetime1 = Math.abs(-var20.field_g + var23.worldX) >> 4;
                     if (var24Lifetime1 < 0) {
                       var24Lifetime1 = 2147483647;
                     }
-                    var27Lifetime1 = Math.abs(-var20.field_q + var23.field_A) >> 4;
+                    var27Lifetime1 = Math.abs(-var20.field_q + var23.worldY) >> 4;
                     var25Lifetime1 = var26Lifetime1 * var26Lifetime1 + var27Lifetime1 * var27Lifetime1;
                     if (var25Lifetime1 < 0 ||
                       var24Lifetime1 < var25Lifetime1) {
@@ -3723,10 +3723,10 @@ final class ee {
                 18 != param3.field_Xb[param2] &&
                 14 != param3.field_Xb[param2] &&
                 param3.field_Xb[param2] != 16) {
-                param3.field_Mb[param2] = param3.field_Mb[param2] + (-var8.field_x + var8.field_r);
+                param3.field_Mb[param2] = param3.field_Mb[param2] + (-var8.startTick + var8.endTick);
               }
               var8.field_p = true;
-              param3.field_B.a(3, var8);
+              param3.pendingCommands.addLast(3, var8);
               return true;
             }
           }
@@ -3758,7 +3758,7 @@ final class ee {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (0 == this.field_kb) {
+          if (0 == this.playerCount) {
             return;
           }
           this.field_j = true;
@@ -3801,15 +3801,15 @@ final class ee {
             stackIn_5_0 = (String) null;
             return stackIn_5_0;
           }
-          if (param1 < this.field_kb) {
-            stackIn_8_0 = this.field_bb[param1];
+          if (param1 < this.playerCount) {
+            stackIn_8_0 = this.playerNames[param1];
             return stackIn_8_0;
           }
-          if (this.field_Q <= (param1 - this.field_kb)) {
+          if (this.computerPlayerCount <= (param1 - this.playerCount)) {
             stackIn_13_0 = dc.field_a;
             return stackIn_13_0;
           }
-          stackIn_11_0 = re.field_W + (-this.field_kb + param1 + 1);
+          stackIn_11_0 = re.field_W + (-this.playerCount + param1 + 1);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3818,14 +3818,14 @@ final class ee {
         }
     }
 
-    private final void a(byte param0, int param1, mb param2, int param3, mb param4, int param5) {
+    private final void a(byte param0, int param1, Sentinel param2, int param3, Sentinel param4, int param5) {
         int stackIn_34_0 = 0;
         int stackIn_38_1 = 0;
-        je stackIn_48_0 = null;
-        je stackIn_48_1 = null;
+        SentinelCommand stackIn_48_0 = null;
+        SentinelCommand stackIn_48_1 = null;
         int stackIn_48_2 = 0;
-        je stackIn_49_0;
-        je stackIn_49_1;
+        SentinelCommand stackIn_49_0;
+        SentinelCommand stackIn_49_1;
         int stackIn_49_3;
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
@@ -3833,12 +3833,12 @@ final class ee {
         StringBuilder stackIn_80_1 = null;
         String stackIn_81_2 = null;
         RuntimeException decompiledCaughtException = null;
-        je var7 = null;
+        SentinelCommand var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
-        je var7Lifetime1;
-        je var7Lifetime2;
-        var8 = SteelSentinels.field_G;
+        SentinelCommand var7Lifetime1;
+        SentinelCommand var7Lifetime2;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           if (param0 >= -103) {
             return;
@@ -3848,12 +3848,12 @@ final class ee {
             boolean decompiledFrameRemainder1 = true;
             if (!(40000 <= Math.abs(param3)) ||
               !(Math.abs(param3) < 50000) ||
-              !(param4.field_Tb > 0)) {
+              !(param4.charge > 0)) {
               if (Math.abs(param3) >= 10000 && (!param2.field_Lb ||
                 !(Math.abs(param3) < 40000))) {
-                var7 = new je(6, param5, 2 + this.field_r);
+                var7 = new SentinelCommand(6, param5, 2 + this.simulationTick);
                 var7.field_p = true;
-                param4.field_B.a(3, var7);
+                param4.pendingCommands.addLast(3, var7);
                 decompiledFrameRemainder0 = (var8 != 0);
                 decompiledFrameRemainder1 = !(decompiledFrameRemainder0);
               }
@@ -3868,26 +3868,26 @@ final class ee {
                 }
                 decompiledFrameRemainder0 = (stackIn_34_0 == stackIn_38_1);
                 if (decompiledFrameRemainder0) {
-                  param4.field_Tb = param4.field_Tb + 2;
-                  var7 = new je(6, param5, this.field_r + 2);
+                  param4.charge = param4.charge + 2;
+                  var7 = new SentinelCommand(6, param5, this.simulationTick + 2);
                   var7.field_p = true;
-                  param4.field_B.a(3, var7);
-                  var7 = new je(7, param5, this.field_r + 4);
+                  param4.pendingCommands.addLast(3, var7);
+                  var7 = new SentinelCommand(7, param5, this.simulationTick + 4);
                   var7.field_p = true;
-                  param4.field_B.a(3, var7);
-                  var7 = new je(6, param5, 25 + (this.field_r + 4));
+                  param4.pendingCommands.addLast(3, var7);
+                  var7 = new SentinelCommand(6, param5, 25 + (this.simulationTick + 4));
                   var7.field_p = true;
-                  param4.field_B.a(3, var7);
+                  param4.pendingCommands.addLast(3, var7);
                   return;
                 }
               }
             }
             if (decompiledFrameRemainder0) {
-              var7Lifetime2 = new je(3, 0, this.field_r + 15);
+              var7Lifetime2 = new SentinelCommand(3, 0, this.simulationTick + 15);
               var7Lifetime2.field_p = true;
-              var7Lifetime2.field_y = param4.field_Gb - 20000;
-              var7Lifetime2.field_u = -(20000 * param5) + param4.field_hc;
-              param4.field_B.a(3, var7Lifetime2);
+              var7Lifetime2.field_y = param4.worldY - 20000;
+              var7Lifetime2.field_u = -(20000 * param5) + param4.worldX;
+              param4.pendingCommands.addLast(3, var7Lifetime2);
               decompiledFrameRemainder0 = (var8 != 0);
             }
           }
@@ -3895,7 +3895,7 @@ final class ee {
             stackIn_48_0 = null;
             stackIn_48_1 = null;
             stackIn_48_2 = 6;
-            if (param4.field_t > (param4.field_hc >> 4)) {
+            if (param4.field_t > (param4.worldX >> 4)) {
               stackIn_49_0 = null;
               stackIn_49_1 = null;
               stackIn_49_3 = 1;
@@ -3904,24 +3904,24 @@ final class ee {
               stackIn_49_1 = null;
               stackIn_49_3 = -1;
             }
-            var7Lifetime1 = new je(stackIn_48_2, stackIn_49_3, 2 + this.field_r);
+            var7Lifetime1 = new SentinelCommand(stackIn_48_2, stackIn_49_3, 2 + this.simulationTick);
             var7Lifetime1.field_p = true;
-            param4.field_B.a(3, var7Lifetime1);
+            param4.pendingCommands.addLast(3, var7Lifetime1);
           }
-          if (!this.a(this.field_z, (byte) -73, 3, param4, param2, 2600, this.field_r + 15)) {
-            if (param4.field_Tb > 0 &&
+          if (!this.a(this.field_z, (byte) -73, 3, param4, param2, 2600, this.simulationTick + 15)) {
+            if (param4.charge > 0 &&
               param2.field_S > 50) {
-              if (this.a(this.field_z * 4, (byte) -63, 2, param4, param2, 8448, 25 + this.field_r)) {
+              if (this.a(this.field_z * 4, (byte) -63, 2, param4, param2, 8448, 25 + this.simulationTick)) {
                 return;
               }
-              if (!this.a(this.field_z, (byte) -114, 1, param4, param2, 3072, 50 + this.field_r)) {
+              if (!this.a(this.field_z, (byte) -114, 1, param4, param2, 3072, 50 + this.simulationTick)) {
                 return;
               }
               return;
             }
-            if (!this.a(this.field_z, (byte) -57, 1, param4, param2, 3072, 50 + this.field_r) &&
-              param4.field_Tb > 0 &&
-              !this.a(this.field_z, (byte) -24, 2, param4, param2, 8448, 25 + this.field_r)) {
+            if (!this.a(this.field_z, (byte) -57, 1, param4, param2, 3072, 50 + this.simulationTick) &&
+              param4.charge > 0 &&
+              !this.a(this.field_z, (byte) -24, 2, param4, param2, 8448, 25 + this.simulationTick)) {
             }
           }
           return;
@@ -3945,39 +3945,39 @@ final class ee {
         }
     }
 
-    final mb f(int param0, int param1) {
+    final Sentinel findSentinelForPlayer(int playerId, int obfuscationGuard) {
         boolean discarded$1 = false;
-        jc var3 = null;
+        NodeIterator var3 = null;
         RuntimeException var3_ref = null;
-        mb var4 = null;
+        Sentinel var4 = null;
         int var5 = 0;
-        mb stackIn_10_0 = null;
+        Sentinel stackIn_10_0 = null;
         Object stackIn_13_0 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
-          if (param1 >= -126) {
+          if (obfuscationGuard >= -126) {
             discarded$1 = this.a(-73, false);
           }
-          var3 = new jc(this.field_K);
-          var4 = (mb) (var3.b(2));
+          var3 = new NodeIterator(this.sentinels);
+          var4 = (Sentinel) (var3.b(2));
           while (var4 != null) {
-            if (~var4.field_Bb == ~param0) {
+            if (~var4.playerId == ~playerId) {
               stackIn_10_0 = var4;
               return stackIn_10_0;
             }
-            var4 = (mb) (var3.d(2));
+            var4 = (Sentinel) (var3.d(2));
             if (var5 == 0) {
               continue;
             }
             break;
           }
           stackIn_13_0 = null;
-          return (mb) (stackIn_13_0);
+          return (Sentinel) (stackIn_13_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var3_ref), "ee.HA(" + param0 + ',' + param1 + ')');
+          throw ci.a((Throwable) ((Object) var3_ref), "ee.HA(" + playerId + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -3987,7 +3987,7 @@ final class ee {
         int var5 = 0;
         int var6 = 0;
         String stackIn_5_0 = null;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         var4_int = -125 % ((param3 - 51) / 32);
         var5 = param1.indexOf(param0);
         boolean decompiledNaturalLoopExit0 = false;
@@ -4006,12 +4006,12 @@ final class ee {
         return stackIn_5_0;
     }
 
-    private final void a(mb param0, int param1, int param2, mb param3, int param4, int param5) {
-        je stackIn_10_0 = null;
-        je stackIn_10_1 = null;
+    private final void a(Sentinel param0, int param1, int param2, Sentinel param3, int param4, int param5) {
+        SentinelCommand stackIn_10_0 = null;
+        SentinelCommand stackIn_10_1 = null;
         int stackIn_10_2 = 0;
-        je stackIn_11_0 = null;
-        je stackIn_11_1 = null;
+        SentinelCommand stackIn_11_0 = null;
+        SentinelCommand stackIn_11_1 = null;
         int stackIn_11_3 = 0;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
@@ -4019,7 +4019,7 @@ final class ee {
         StringBuilder stackIn_48_1 = null;
         String stackIn_49_2 = null;
         RuntimeException decompiledCaughtException = null;
-        je var7 = null;
+        SentinelCommand var7 = null;
         RuntimeException var7_ref = null;
         double var8_double = 0.0;
         int var8 = 0;
@@ -4027,10 +4027,10 @@ final class ee {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        je var7Lifetime1;
-        je var7Lifetime2;
-        je var7Lifetime1Lifetime1;
-        var12 = SteelSentinels.field_G;
+        SentinelCommand var7Lifetime1;
+        SentinelCommand var7Lifetime2;
+        SentinelCommand var7Lifetime1Lifetime1;
+        var12 = SteelSentinels.obfuscationControl;
         try {
           if (param4 != 0) {
             this.i(-54);
@@ -4040,7 +4040,7 @@ final class ee {
             stackIn_10_0 = null;
             stackIn_10_1 = null;
             stackIn_10_2 = 6;
-            if (param0.field_hc >> 4 < param0.field_t) {
+            if (param0.worldX >> 4 < param0.field_t) {
               stackIn_11_0 = null;
               stackIn_11_1 = null;
               stackIn_11_3 = 1;
@@ -4049,35 +4049,35 @@ final class ee {
               stackIn_11_1 = null;
               stackIn_11_3 = -1;
             }
-            var7 = new je(stackIn_10_2, stackIn_11_3, this.field_r + 2);
+            var7 = new SentinelCommand(stackIn_10_2, stackIn_11_3, this.simulationTick + 2);
             var7.field_p = true;
-            param0.field_B.a(3, var7);
+            param0.pendingCommands.addLast(3, var7);
             decompiledFrameRemainder0 = (var12 != 0);
           }
           if (decompiledFrameRemainder0) {
             if (Math.abs(param5) > 80000) {
-              var7Lifetime2 = new je(6, param1, 2 + this.field_r);
+              var7Lifetime2 = new SentinelCommand(6, param1, 2 + this.simulationTick);
               var7Lifetime2.field_p = true;
-              param0.field_B.a(3, var7Lifetime2);
+              param0.pendingCommands.addLast(3, var7Lifetime2);
               if ((var12 != 0) &&
                 (Math.abs(param5) < 30000)) {
-                var7Lifetime2 = new je(6, -param1, 2 + this.field_r);
+                var7Lifetime2 = new SentinelCommand(6, -param1, 2 + this.simulationTick);
                 var7Lifetime2.field_p = true;
-                param0.field_B.a(3, var7Lifetime2);
+                param0.pendingCommands.addLast(3, var7Lifetime2);
               }
             } else {
               if (Math.abs(param5) < 30000) {
-                var7Lifetime2 = new je(6, -param1, 2 + this.field_r);
+                var7Lifetime2 = new SentinelCommand(6, -param1, 2 + this.simulationTick);
                 var7Lifetime2.field_p = true;
-                param0.field_B.a(3, var7Lifetime2);
+                param0.pendingCommands.addLast(3, var7Lifetime2);
               }
             }
           }
           if (60000 > Math.abs(param5)) {
             if (param0.field_Xb[0] != 9) {
-              var7Lifetime1 = new je(0, param0.field_Xb[0], (param0.field_hc + (param3.field_hc + this.field_r)) % 100 + this.field_r + 4);
-              var7Lifetime1.field_y = param3.field_Gb;
-              var7Lifetime1.field_u = param3.field_hc;
+              var7Lifetime1 = new SentinelCommand(0, param0.field_Xb[0], (param0.worldX + (param3.worldX + this.simulationTick)) % 100 + this.simulationTick + 4);
+              var7Lifetime1.field_y = param3.worldY;
+              var7Lifetime1.field_u = param3.worldX;
               var8_double = Math.atan2((double)param5, (double)(-param2));
               var7Lifetime1.field_B = (int)(var8_double * 65536.0 / 6.283185307179586);
               var7Lifetime1.field_p = true;
@@ -4094,21 +4094,21 @@ final class ee {
                   var7Lifetime1.field_B = var7Lifetime1.field_B - 65536;
                 }
               }
-              param0.field_B.a(param4 ^ 3, var7Lifetime1);
+              param0.pendingCommands.addLast(param4 ^ 3, var7Lifetime1);
               if (var12 == 0) {
                 return;
               }
             }
-            var7Lifetime1Lifetime1 = new je(0, param0.field_Xb[0], this.field_r - (-4 - (param3.field_hc + (this.field_r + param0.field_hc)) % 100));
-            var7Lifetime1Lifetime1.field_u = param3.field_hc;
-            var7Lifetime1Lifetime1.field_y = param3.field_Gb;
+            var7Lifetime1Lifetime1 = new SentinelCommand(0, param0.field_Xb[0], this.simulationTick - (-4 - (param3.worldX + (this.simulationTick + param0.worldX)) % 100));
+            var7Lifetime1Lifetime1.field_u = param3.worldX;
+            var7Lifetime1Lifetime1.field_y = param3.worldY;
             var8 = 900;
             var9 = this.field_z;
             var10 = 0;
             var11 = 10922;
             this.a(param1, param2, param5, var8, var10, var7Lifetime1Lifetime1, var9, var11, -1);
             var7Lifetime1Lifetime1.field_p = true;
-            param0.field_B.a(3, var7Lifetime1Lifetime1);
+            param0.pendingCommands.addLast(3, var7Lifetime1Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4143,23 +4143,23 @@ final class ee {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        mb var4_ref_mb = null;
+        Sentinel var4_ref_mb = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        mb var7_ref_mb = null;
-        wl var8 = null;
-        jb var9 = null;
+        Sentinel var7_ref_mb = null;
+        Projectile var8 = null;
+        Explosion var9 = null;
         int var10 = 0;
         int[] var11 = null;
         int var12 = 0;
         int[] var13 = null;
         int var14 = 0;
         int var15 = 0;
-        mb var7_ref_mbLifetime1;
-        wl var8Lifetime1;
-        jb var9Lifetime1;
+        Sentinel var7_ref_mbLifetime1;
+        Projectile var8Lifetime1;
+        Explosion var9Lifetime1;
         int[] var11Lifetime1;
         int[] var13Lifetime1;
         int var2_intLifetime1;
@@ -4176,7 +4176,7 @@ final class ee {
         int var2_intLifetime2;
         int var7Lifetime2;
         int var7Lifetime1Lifetime1;
-        var15 = SteelSentinels.field_G;
+        var15 = SteelSentinels.obfuscationControl;
         try {
           if (this.field_R == 0 &&
             (this.field_v & 48) != 0) {
@@ -4193,7 +4193,7 @@ final class ee {
               var2_int = 1;
               if ((1 << var2_int + 4 & this.field_v) == 0) {
                 if ((1 << 5 - var2_int & this.field_v) == 0) {
-                  this.a(var2_int, (byte) 8, (mb) null);
+                  this.a(var2_int, (byte) 8, (Sentinel) null);
                   if (var15 != 0) {
                     this.a(1, var2_int);
                   }
@@ -4208,7 +4208,7 @@ final class ee {
             var2_intLifetime2 = 0;
             if ((this.field_v & 1 << 4 + var2_intLifetime2) == 0) {
               if ((1 << -var2_intLifetime2 + 1 + 4 & this.field_v) == 0) {
-                this.a(var2_intLifetime2, (byte) 100, (mb) null);
+                this.a(var2_intLifetime2, (byte) 100, (Sentinel) null);
                 if (var15 != 0) {
                   this.a(1, var2_intLifetime2);
                 }
@@ -4221,23 +4221,23 @@ final class ee {
             }
           }
           if (this.field_R == 0) {
-            var2_intLifetime1 = -this.field_ab.field_o[1] + this.field_ab.field_o[0];
+            var2_intLifetime1 = -this.terrain.spawnPositions[1] + this.terrain.spawnPositions[0];
             if (kc.field_x[4][0].field_z << 5 > var2_intLifetime1) {
               var3 = 0;
-              var4_ref_mb = (mb) (this.field_K.e(13058));
+              var4_ref_mb = (Sentinel) (this.sentinels.first(13058));
               while (true) {
                 if (null != var4_ref_mb) {
-                  stackIn_66_0 = var4_ref_mb.field_jc;
+                  stackIn_66_0 = var4_ref_mb.teamId;
                   if (var15 == 0) {
                     if (stackIn_66_0 == 0 &&
                       var4_ref_mb.field_vb > 0) {
                       var3 = var3 + var4_ref_mb.field_vb;
                     }
-                    if (var4_ref_mb.field_jc == 1 &&
+                    if (var4_ref_mb.teamId == 1 &&
                       0 < var4_ref_mb.field_vb) {
                       var3 = var3 - var4_ref_mb.field_vb;
                     }
-                    var4_ref_mb = (mb) (this.field_K.a((byte) -42));
+                    var4_ref_mb = (Sentinel) (this.sentinels.next((byte) -42));
                     continue;
                   }
                 } else {
@@ -4259,52 +4259,52 @@ final class ee {
               }
               if (var4 != -1 &&
                 0 == (this.field_v & 1 << 4 + var4)) {
-                this.a(var4, (byte) -95, (mb) null);
+                this.a(var4, (byte) -95, (Sentinel) null);
               }
               if (var15 == 0) {
                 return;
               }
             }
-            if ((3 & this.field_r) == 0) {
-              var3Lifetime1 = this.field_ab.field_o[0];
+            if ((3 & this.simulationTick) == 0) {
+              var3Lifetime1 = this.terrain.spawnPositions[0];
               var4Lifetime1 = kc.field_x[4][0].field_z << 4;
               var5 = -(var4Lifetime1 / 2) + var3Lifetime1;
               var6 = var3Lifetime1 + var4Lifetime1 / 2;
               var7 = var5;
-              L21: while (true) {
+              scanLoop1: while (true) {
                 if (var7 < var6) {
-                  this.field_ab.field_m[var7] = this.field_ab.field_m[var7 + 1];
-                  this.field_ab.field_e[var7] = this.field_ab.field_e[1 + var7];
-                  this.field_ab.field_f[var7] = this.field_ab.field_f[var7 + 1];
+                  this.terrain.groundHeightProfile[var7] = this.terrain.groundHeightProfile[var7 + 1];
+                  this.terrain.secondaryHeightProfile[var7] = this.terrain.secondaryHeightProfile[1 + var7];
+                  this.terrain.surfaceProfile[var7] = this.terrain.surfaceProfile[var7 + 1];
                   var7++;
                   if (var15 == 0) {
                     continue;
                   }
                 } else {
-                  if (4 == this.field_r) {
+                  if (4 == this.simulationTick) {
                     var7 = var6;
-                    while (var7 < this.field_ab.field_m.length) {
-                      this.field_ab.field_m[var7] = 0;
-                      this.field_ab.field_e[var7] = 0;
-                      this.field_ab.field_f[var7] = 0;
+                    while (var7 < this.terrain.groundHeightProfile.length) {
+                      this.terrain.groundHeightProfile[var7] = 0;
+                      this.terrain.secondaryHeightProfile[var7] = 0;
+                      this.terrain.surfaceProfile[var7] = 0;
                       var7++;
                       if (var15 != 0) {
-                        break L21;
+                        break scanLoop1;
                       }
                     }
                     if (var15 == 0) {
-                      break L21;
+                      break scanLoop1;
                     }
                   }
                 }
-                if (var6 < this.field_ab.field_m.length) {
-                  this.field_ab.field_m[var6] = 0;
-                  this.field_ab.field_e[var6] = 0;
-                  this.field_ab.field_f[var6] = 0;
+                if (var6 < this.terrain.groundHeightProfile.length) {
+                  this.terrain.groundHeightProfile[var6] = 0;
+                  this.terrain.secondaryHeightProfile[var6] = 0;
+                  this.terrain.surfaceProfile[var6] = 0;
                 }
                 break;
               }
-              var7_ref_mb = (mb) (this.field_K.e(param0 ^ -22959));
+              var7_ref_mb = (Sentinel) (this.sentinels.first(param0 ^ -22959));
               boolean decompiledNaturalLoopExit1 = false;
               while (!(decompiledNaturalLoopExit1 = (var7_ref_mb == null))) {
                 stackOut_102_0 = var7_ref_mb.field_Lb;
@@ -4313,41 +4313,41 @@ final class ee {
                 if (var15 == 0) {
                   if ((!stackIn_103_0 ||
                     var7_ref_mb.field_pc) &&
-                    (var5 <= (var7_ref_mb.field_hc >> 4) &&
-                    var7_ref_mb.field_hc >> 4 <= var6)) {
-                    var7_ref_mb.field_hc = var7_ref_mb.field_hc - 16;
+                    (var5 <= (var7_ref_mb.worldX >> 4) &&
+                    var7_ref_mb.worldX >> 4 <= var6)) {
+                    var7_ref_mb.worldX = var7_ref_mb.worldX - 16;
                   }
-                  var7_ref_mb = (mb) (this.field_K.a((byte) -100));
+                  var7_ref_mb = (Sentinel) (this.sentinels.next((byte) -100));
                   continue;
                 }
                 break;
               }
               if (decompiledNaturalLoopExit1) {
-                this.field_ab.field_o[0] = this.field_ab.field_o[0] - 1;
+                this.terrain.spawnPositions[0] = this.terrain.spawnPositions[0] - 1;
                 stackIn_119_0 = 2;
               }
               var7Lifetime2 = stackIn_119_0;
-              while (this.field_ab.field_c > var7Lifetime2) {
+              while (this.terrain.field_c > var7Lifetime2) {
                 if (var15 != 0) {
                   return;
                 }
-                if (this.field_ab.field_j[var7Lifetime2] != -1 &&
-                  this.field_ab.field_o[var7Lifetime2] + 6000 > var3Lifetime1) {
-                  var8 = new wl(this.field_ab.field_o[var7Lifetime2] << 4, -this.field_ab.field_e[this.field_ab.field_o[var7Lifetime2]] << 4, 0, 0, 0, 0, 0, this, (mb) null, 500, 0, -1);
+                if (this.terrain.field_j[var7Lifetime2] != -1 &&
+                  this.terrain.spawnPositions[var7Lifetime2] + 6000 > var3Lifetime1) {
+                  var8 = new Projectile(this.terrain.spawnPositions[var7Lifetime2] << 4, -this.terrain.secondaryHeightProfile[this.terrain.spawnPositions[var7Lifetime2]] << 4, 0, 0, 0, 0, 0, this, (Sentinel) null, 500, 0, -1);
                   var8.field_O = 500;
                   var8.field_ob = false;
-                  var9 = new jb(var8.field_U, var8.field_A, 0, 0, 20, this, var8.field_fb, var8);
+                  var9 = new Explosion(var8.worldX, var8.worldY, 0, 0, 20, this, var8.affectedSentinels, var8);
                   var9.field_U = 1500;
                   var9.field_G = 100;
                   var9.field_K = 0;
-                  this.field_u.a(3, var9);
-                  this.field_ab.field_j[var7Lifetime2] = -1;
-                  var10 = this.field_ab.field_o[var7Lifetime2] - 1075;
-                  while (!((this.field_ab.field_o[var7Lifetime2] + 1075) <= var10)) {
-                    var11 = this.field_ab.field_m;
+                  this.explosions.addLast(3, var9);
+                  this.terrain.field_j[var7Lifetime2] = -1;
+                  var10 = this.terrain.spawnPositions[var7Lifetime2] - 1075;
+                  while (!((this.terrain.spawnPositions[var7Lifetime2] + 1075) <= var10)) {
+                    var11 = this.terrain.groundHeightProfile;
                     var12 = var10;
-                    var13 = this.field_ab.field_e;
-                    this.field_ab.field_f[var10] = 0;
+                    var13 = this.terrain.secondaryHeightProfile;
+                    this.terrain.surfaceProfile[var10] = 0;
                     var14 = var10;
                     var13[var14] = 0;
                     var11[var12] = 0;
@@ -4360,46 +4360,46 @@ final class ee {
                 return;
               }
             }
-            if ((3 & this.field_r) == 2) {
-              var3Lifetime2 = this.field_ab.field_o[1];
+            if ((3 & this.simulationTick) == 2) {
+              var3Lifetime2 = this.terrain.spawnPositions[1];
               var4Lifetime2 = kc.field_x[4][0].field_z << 4;
               var5Lifetime1 = var3Lifetime2 - var4Lifetime2 / 2;
               var6Lifetime1 = var4Lifetime2 / 2 + var3Lifetime2;
               var7Lifetime1 = var6Lifetime1;
-              L37: while (true) {
+              scanLoop2: while (true) {
                 if (var7Lifetime1 > var5Lifetime1) {
-                  this.field_ab.field_m[var7Lifetime1] = this.field_ab.field_m[var7Lifetime1 - 1];
-                  this.field_ab.field_e[var7Lifetime1] = this.field_ab.field_e[-1 + var7Lifetime1];
-                  this.field_ab.field_f[var7Lifetime1] = this.field_ab.field_f[var7Lifetime1 - 1];
+                  this.terrain.groundHeightProfile[var7Lifetime1] = this.terrain.groundHeightProfile[var7Lifetime1 - 1];
+                  this.terrain.secondaryHeightProfile[var7Lifetime1] = this.terrain.secondaryHeightProfile[-1 + var7Lifetime1];
+                  this.terrain.surfaceProfile[var7Lifetime1] = this.terrain.surfaceProfile[var7Lifetime1 - 1];
                   var7Lifetime1--;
                   if (var15 == 0) {
                     continue;
                   }
                 } else {
-                  if (this.field_r == 6) {
+                  if (this.simulationTick == 6) {
                     var7Lifetime1 = var5Lifetime1;
                     while (var7Lifetime1 >= 0) {
-                      this.field_ab.field_m[var7Lifetime1] = 0;
-                      this.field_ab.field_e[var7Lifetime1] = 0;
-                      this.field_ab.field_f[var7Lifetime1] = 0;
+                      this.terrain.groundHeightProfile[var7Lifetime1] = 0;
+                      this.terrain.secondaryHeightProfile[var7Lifetime1] = 0;
+                      this.terrain.surfaceProfile[var7Lifetime1] = 0;
                       var7Lifetime1--;
                       if (var15 != 0) {
-                        break L37;
+                        break scanLoop2;
                       }
                     }
                     if (var15 == 0) {
-                      break L37;
+                      break scanLoop2;
                     }
                   }
                 }
                 if (var5Lifetime1 >= 0) {
-                  this.field_ab.field_m[var5Lifetime1] = 0;
-                  this.field_ab.field_e[var5Lifetime1] = 0;
-                  this.field_ab.field_f[var5Lifetime1] = 0;
+                  this.terrain.groundHeightProfile[var5Lifetime1] = 0;
+                  this.terrain.secondaryHeightProfile[var5Lifetime1] = 0;
+                  this.terrain.surfaceProfile[var5Lifetime1] = 0;
                 }
                 break;
               }
-              var7_ref_mbLifetime1 = (mb) (this.field_K.e(13058));
+              var7_ref_mbLifetime1 = (Sentinel) (this.sentinels.first(13058));
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (var7_ref_mbLifetime1 == null))) {
                 stackOut_162_0 = var7_ref_mbLifetime1.field_Lb;
@@ -4408,45 +4408,45 @@ final class ee {
                 if (var15 == 0) {
                   if ((!stackIn_163_0 ||
                     var7_ref_mbLifetime1.field_pc) &&
-                    ((var7_ref_mbLifetime1.field_hc >> 4) >= var5Lifetime1 &&
-                    var7_ref_mbLifetime1.field_hc >> 4 <= var6Lifetime1)) {
-                    var7_ref_mbLifetime1.field_hc = var7_ref_mbLifetime1.field_hc + 16;
+                    ((var7_ref_mbLifetime1.worldX >> 4) >= var5Lifetime1 &&
+                    var7_ref_mbLifetime1.worldX >> 4 <= var6Lifetime1)) {
+                    var7_ref_mbLifetime1.worldX = var7_ref_mbLifetime1.worldX + 16;
                   }
-                  var7_ref_mbLifetime1 = (mb) (this.field_K.a((byte) -22));
+                  var7_ref_mbLifetime1 = (Sentinel) (this.sentinels.next((byte) -22));
                   continue;
                 }
                 break;
               }
               if (decompiledNaturalLoopExit0) {
-                this.field_ab.field_o[1] = this.field_ab.field_o[1] + 1;
+                this.terrain.spawnPositions[1] = this.terrain.spawnPositions[1] + 1;
                 stackIn_180_0 = 2;
               }
               var7Lifetime1Lifetime1 = stackIn_180_0;
               while (true) {
-                if (this.field_ab.field_c <= var7Lifetime1Lifetime1) {
+                if (this.terrain.field_c <= var7Lifetime1Lifetime1) {
                   return;
                 }
                 if (var15 != 0) {
                   return;
                 }
-                if (-1 != this.field_ab.field_j[var7Lifetime1Lifetime1] &&
-                  var3Lifetime2 > (-6000 + this.field_ab.field_o[var7Lifetime1Lifetime1])) {
-                  var8Lifetime1 = new wl(this.field_ab.field_o[var7Lifetime1Lifetime1] << 4, -this.field_ab.field_e[this.field_ab.field_o[var7Lifetime1Lifetime1]] << 4, 0, 0, 0, 0, 0, this, (mb) null, 500, 0, -1);
+                if (-1 != this.terrain.field_j[var7Lifetime1Lifetime1] &&
+                  var3Lifetime2 > (-6000 + this.terrain.spawnPositions[var7Lifetime1Lifetime1])) {
+                  var8Lifetime1 = new Projectile(this.terrain.spawnPositions[var7Lifetime1Lifetime1] << 4, -this.terrain.secondaryHeightProfile[this.terrain.spawnPositions[var7Lifetime1Lifetime1]] << 4, 0, 0, 0, 0, 0, this, (Sentinel) null, 500, 0, -1);
                   var8Lifetime1.field_ob = false;
                   var8Lifetime1.field_O = 500;
-                  var9Lifetime1 = new jb(var8Lifetime1.field_U, var8Lifetime1.field_A, 0, 0, 20, this, var8Lifetime1.field_fb, var8Lifetime1);
+                  var9Lifetime1 = new Explosion(var8Lifetime1.worldX, var8Lifetime1.worldY, 0, 0, 20, this, var8Lifetime1.affectedSentinels, var8Lifetime1);
                   var9Lifetime1.field_U = 1500;
                   var9Lifetime1.field_K = 0;
                   var9Lifetime1.field_G = 100;
-                  this.field_u.a(3, var9Lifetime1);
-                  this.field_ab.field_j[var7Lifetime1Lifetime1] = -1;
-                  var10Lifetime1 = -1075 + this.field_ab.field_o[var7Lifetime1Lifetime1];
-                  while (!(1075 + this.field_ab.field_o[var7Lifetime1Lifetime1] <= var10Lifetime1)) {
-                    var11Lifetime1 = this.field_ab.field_m;
+                  this.explosions.addLast(3, var9Lifetime1);
+                  this.terrain.field_j[var7Lifetime1Lifetime1] = -1;
+                  var10Lifetime1 = -1075 + this.terrain.spawnPositions[var7Lifetime1Lifetime1];
+                  while (!(1075 + this.terrain.spawnPositions[var7Lifetime1Lifetime1] <= var10Lifetime1)) {
+                    var11Lifetime1 = this.terrain.groundHeightProfile;
                     var12Lifetime1 = var10Lifetime1;
-                    var13Lifetime1 = this.field_ab.field_e;
+                    var13Lifetime1 = this.terrain.secondaryHeightProfile;
                     var14Lifetime1 = var10Lifetime1;
-                    this.field_ab.field_f[var10Lifetime1] = 0;
+                    this.terrain.surfaceProfile[var10Lifetime1] = 0;
                     var13Lifetime1[var14Lifetime1] = 0;
                     var11Lifetime1[var12Lifetime1] = 0;
                     var10Lifetime1++;
@@ -4464,7 +4464,7 @@ final class ee {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, je param5, int param6, int param7, int param8) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, SentinelCommand param5, int param6, int param7, int param8) {
         int stackIn_16_0 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -4479,7 +4479,7 @@ final class ee {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        var17 = SteelSentinels.field_G;
+        var17 = SteelSentinels.obfuscationControl;
         try {
           param5.field_B = param4;
           var10_int = param8;
@@ -4523,12 +4523,12 @@ final class ee {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, mb param4, mb param5) {
-        je stackIn_21_0 = null;
-        je stackIn_21_1 = null;
+    private final void a(int param0, int param1, int param2, int param3, Sentinel param4, Sentinel param5) {
+        SentinelCommand stackIn_21_0 = null;
+        SentinelCommand stackIn_21_1 = null;
         int stackIn_21_2 = 0;
-        je stackIn_22_0;
-        je stackIn_22_1;
+        SentinelCommand stackIn_22_0;
+        SentinelCommand stackIn_22_1;
         int stackIn_22_3;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
@@ -4536,52 +4536,52 @@ final class ee {
         StringBuilder stackIn_49_1 = null;
         String stackIn_50_2 = null;
         RuntimeException decompiledCaughtException = null;
-        je var7 = null;
+        SentinelCommand var7 = null;
         RuntimeException var7_ref = null;
         double var8 = 0.0;
         int var10 = 0;
-        je var7Lifetime1;
-        je var7Lifetime2;
-        je var7Lifetime1Lifetime1;
-        var10 = SteelSentinels.field_G;
+        SentinelCommand var7Lifetime1;
+        SentinelCommand var7Lifetime2;
+        SentinelCommand var7Lifetime1Lifetime1;
+        var10 = SteelSentinels.obfuscationControl;
         try {
           if (param1 != 2714) {
             return;
           }
           if (param4.field_Vb == null &&
-            0 < param4.field_Tb) {
-            var7 = new je(5, param5.field_Bb, this.field_r + 1);
+            0 < param4.charge) {
+            var7 = new SentinelCommand(5, param5.playerId, this.simulationTick + 1);
             var7.field_p = true;
-            param4.field_B.a(3, var7);
+            param4.pendingCommands.addLast(3, var7);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param4.field_t <= 0) {
             if (Math.abs(param0) > 80000) {
-              var7Lifetime1 = new je(6, param3, 2 + this.field_r);
+              var7Lifetime1 = new SentinelCommand(6, param3, 2 + this.simulationTick);
               var7Lifetime1.field_p = true;
-              param4.field_B.a(3, var7Lifetime1);
-              var7Lifetime1 = new je(3, 0, (param4.field_hc + this.field_r + param5.field_hc) % 100 + 4 + (this.field_r + 100));
-              var7Lifetime1.field_u = param5.field_hc;
+              param4.pendingCommands.addLast(3, var7Lifetime1);
+              var7Lifetime1 = new SentinelCommand(3, 0, (param4.worldX + this.simulationTick + param5.worldX) % 100 + 4 + (this.simulationTick + 100));
+              var7Lifetime1.field_u = param5.worldX;
               var7Lifetime1.field_p = true;
-              var7Lifetime1.field_y = -20000 + param4.field_Gb;
-              param4.field_B.a(3, var7Lifetime1);
-              param4.field_Tb = param4.field_x;
+              var7Lifetime1.field_y = -20000 + param4.worldY;
+              param4.pendingCommands.addLast(3, var7Lifetime1);
+              param4.charge = param4.maximumCharge;
               decompiledFrameRemainder0 = (var10 != 0);
             }
             if (decompiledFrameRemainder0) {
-              var7Lifetime1 = new je(3, 0, 100 + ((param4.field_hc + param5.field_hc + this.field_r) % 100 + (this.field_r + 4)));
-              var7Lifetime1.field_y = param4.field_Gb - 20000;
-              var7Lifetime1.field_u = param4.field_hc - param3 * 20000;
+              var7Lifetime1 = new SentinelCommand(3, 0, 100 + ((param4.worldX + param5.worldX + this.simulationTick) % 100 + (this.simulationTick + 4)));
+              var7Lifetime1.field_y = param4.worldY - 20000;
+              var7Lifetime1.field_u = param4.worldX - param3 * 20000;
               var7Lifetime1.field_p = true;
-              param4.field_B.a(3, var7Lifetime1);
-              param4.field_Tb = param4.field_x;
+              param4.pendingCommands.addLast(3, var7Lifetime1);
+              param4.charge = param4.maximumCharge;
               if (null != param4.field_Vb) {
-                var7Lifetime1 = new je(0, 11, 150 + ((param5.field_hc + this.field_r + param4.field_hc) % 100 + (4 + this.field_r)));
-                var7Lifetime1.field_u = param5.field_hc;
-                var7Lifetime1.field_y = param5.field_Gb;
+                var7Lifetime1 = new SentinelCommand(0, 11, 150 + ((param5.worldX + this.simulationTick + param4.worldX) % 100 + (4 + this.simulationTick)));
+                var7Lifetime1.field_u = param5.worldX;
+                var7Lifetime1.field_y = param5.worldY;
                 var7Lifetime1.field_p = true;
                 var7Lifetime1.field_B = 16384 * param3;
-                param4.field_B.a(3, var7Lifetime1);
+                param4.pendingCommands.addLast(3, var7Lifetime1);
               }
               decompiledFrameRemainder0 = (var10 != 0);
             }
@@ -4590,7 +4590,7 @@ final class ee {
             stackIn_21_0 = null;
             stackIn_21_1 = null;
             stackIn_21_2 = 6;
-            if (param4.field_t <= (param4.field_hc >> 4)) {
+            if (param4.field_t <= (param4.worldX >> 4)) {
               stackIn_22_0 = null;
               stackIn_22_1 = null;
               stackIn_22_3 = -1;
@@ -4599,15 +4599,15 @@ final class ee {
               stackIn_22_1 = null;
               stackIn_22_3 = 1;
             }
-            var7Lifetime1Lifetime1 = new je(stackIn_21_2, stackIn_22_3, 2 + this.field_r);
+            var7Lifetime1Lifetime1 = new SentinelCommand(stackIn_21_2, stackIn_22_3, 2 + this.simulationTick);
             var7Lifetime1Lifetime1.field_p = true;
-            param4.field_B.a(3, var7Lifetime1Lifetime1);
+            param4.pendingCommands.addLast(3, var7Lifetime1Lifetime1);
           }
           if (Math.abs(param0) < 100000 &&
-            1 <= param4.field_Tb) {
-            var7Lifetime2 = new je(0, 7, 4 + (this.field_r - (-((param4.field_hc + this.field_r + param5.field_hc) % 100) - 175)));
-            var7Lifetime2.field_u = param5.field_hc;
-            var7Lifetime2.field_y = param5.field_Gb;
+            1 <= param4.charge) {
+            var7Lifetime2 = new SentinelCommand(0, 7, 4 + (this.simulationTick - (-((param4.worldX + this.simulationTick + param5.worldX) % 100) - 175)));
+            var7Lifetime2.field_u = param5.worldX;
+            var7Lifetime2.field_y = param5.worldY;
             var8 = Math.atan2((double)param0, (double)(-param2));
             var7Lifetime2.field_B = (int)(65536.0 * var8 / 6.283185307179586);
             if (0 <= param3) {
@@ -4624,7 +4624,7 @@ final class ee {
               }
             }
             var7Lifetime2.field_p = true;
-            param4.field_B.a(3, var7Lifetime2);
+            param4.pendingCommands.addLast(3, var7Lifetime2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4647,7 +4647,7 @@ final class ee {
         }
     }
 
-    final void a(int param0, byte param1, mb param2) {
+    final void a(int param0, byte param1, Sentinel param2) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -4656,30 +4656,30 @@ final class ee {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        wl var7 = null;
+        Projectile var7 = null;
         int var8 = 0;
-        jc var9 = null;
-        mb var10 = null;
+        NodeIterator var9 = null;
+        Sentinel var10 = null;
         int var11 = 0;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         try {
-          var4_int = (this.field_ab.field_o[param0] << 4) + (-75000 + param0 * 150000);
-          var5 = this.field_ab.field_o[-param0 + 1] << 4;
+          var4_int = (this.terrain.spawnPositions[param0] << 4) + (-75000 + param0 * 150000);
+          var5 = this.terrain.spawnPositions[-param0 + 1] << 4;
           var6 = -30000;
-          var7 = new wl(var4_int, var6, -1 + param0 * 2, 0, 50, 1, 11, this, param2, 1000, var5, 30);
-          this.field_T.a(3, var7);
+          var7 = new Projectile(var4_int, var6, -1 + param0 * 2, 0, 50, 1, 11, this, param2, 1000, var5, 30);
+          this.projectiles.addLast(3, var7);
           var8 = -114 % ((param1 + 59) / 32);
-          var9 = new jc(this.field_K);
-          var10 = (mb) (var9.b(2));
+          var9 = new NodeIterator(this.sentinels);
+          var10 = (Sentinel) (var9.b(2));
           while (null != var10) {
             if (var11 != 0) {
               return;
             }
-            if (param0 == var10.field_jc &&
+            if (param0 == var10.teamId &&
               var10.field_Cb) {
               var10.field_Cb = false;
             }
-            var10 = (mb) (var9.d(2));
+            var10 = (Sentinel) (var9.d(2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4696,12 +4696,12 @@ final class ee {
         }
     }
 
-    private final void a(int param0, int param1, int param2, mb param3, mb param4, boolean param5) {
-        je stackIn_36_0 = null;
-        je stackIn_36_1 = null;
+    private final void a(int param0, int param1, int param2, Sentinel param3, Sentinel param4, boolean param5) {
+        SentinelCommand stackIn_36_0 = null;
+        SentinelCommand stackIn_36_1 = null;
         int stackIn_36_2 = 0;
-        je stackIn_37_0;
-        je stackIn_37_1;
+        SentinelCommand stackIn_37_0;
+        SentinelCommand stackIn_37_1;
         int stackIn_37_3;
         RuntimeException stackIn_69_0 = null;
         StringBuilder stackIn_69_1 = null;
@@ -4709,44 +4709,44 @@ final class ee {
         StringBuilder stackIn_73_1 = null;
         String stackIn_74_2 = null;
         RuntimeException decompiledCaughtException = null;
-        je var7 = null;
+        SentinelCommand var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
-        je var7Lifetime1;
-        je var7Lifetime2;
-        var8 = SteelSentinels.field_G;
+        SentinelCommand var7Lifetime1;
+        SentinelCommand var7Lifetime2;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameRemainder0 = true;
           if (0 >= param3.field_t) {
             if (15000 <= Math.abs(param1) && (!(param4.field_mc > 0) ||
               !(Math.abs(param1) < 40000))) {
-              var7 = new je(6, param0, this.field_r + 2);
+              var7 = new SentinelCommand(6, param0, this.simulationTick + 2);
               var7.field_p = true;
-              param3.field_B.a(3, var7);
+              param3.pendingCommands.addLast(3, var7);
               decompiledFrameRemainder0 = (var8 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (15000 > Math.abs(param1) &&
                 10000 > Math.abs(param2) &&
-                param3.field_Tb > 1) {
-                var7 = new je(6, param0, 2 + this.field_r);
+                param3.charge > 1) {
+                var7 = new SentinelCommand(6, param0, 2 + this.simulationTick);
                 var7.field_p = true;
-                param3.field_B.a(3, var7);
-                var7 = new je(7, param0, 4 + this.field_r);
+                param3.pendingCommands.addLast(3, var7);
+                var7 = new SentinelCommand(7, param0, 4 + this.simulationTick);
                 var7.field_p = true;
-                param3.field_B.a(3, var7);
-                var7 = new je(6, param0, 4 + this.field_r + 25);
+                param3.pendingCommands.addLast(3, var7);
+                var7 = new SentinelCommand(6, param0, 4 + this.simulationTick + 25);
                 var7.field_p = true;
-                param3.field_B.a(3, var7);
+                param3.pendingCommands.addLast(3, var7);
                 return;
               }
               decompiledFrameRemainder0 = !(Math.abs(param1) >= 20000);
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameRemainder0 = (!(param4.field_mc <= 1) ||
                 !(Math.abs(param1) >= 10000)))) {
-                var7 = new je(6, -param0, this.field_r + 2);
+                var7 = new SentinelCommand(6, -param0, this.simulationTick + 2);
                 var7.field_p = true;
-                param3.field_B.a(3, var7);
+                param3.pendingCommands.addLast(3, var7);
                 decompiledFrameRemainder0 = (var8 != 0);
               }
             }
@@ -4755,7 +4755,7 @@ final class ee {
             stackIn_36_0 = null;
             stackIn_36_1 = null;
             stackIn_36_2 = 6;
-            if ((param3.field_hc >> 4) >= param3.field_t) {
+            if ((param3.worldX >> 4) >= param3.field_t) {
               stackIn_37_0 = null;
               stackIn_37_1 = null;
               stackIn_37_3 = -1;
@@ -4764,30 +4764,30 @@ final class ee {
               stackIn_37_1 = null;
               stackIn_37_3 = 1;
             }
-            var7Lifetime2 = new je(stackIn_36_2, stackIn_37_3, 2 + this.field_r);
+            var7Lifetime2 = new SentinelCommand(stackIn_36_2, stackIn_37_3, 2 + this.simulationTick);
             var7Lifetime2.field_p = true;
-            param3.field_B.a(3, var7Lifetime2);
+            param3.pendingCommands.addLast(3, var7Lifetime2);
           }
           if (param5) {
             return;
           }
           if (50000 < Math.abs(param1) &&
-            this.a(this.field_z, (byte) -89, 2, param3, param4, 2600, this.field_r + 15)) {
+            this.a(this.field_z, (byte) -89, 2, param3, param4, 2600, this.simulationTick + 15)) {
             return;
           }
-          if (param3.field_Tb <= 1) {
-            if (this.a(this.field_z, (byte) -88, 0, param3, param4, 4352, this.field_r + 25) &&
+          if (param3.charge <= 1) {
+            if (this.a(this.field_z, (byte) -88, 0, param3, param4, 4352, this.simulationTick + 25) &&
               Math.abs(param1) > 80000 &&
-              param3.field_Tb > 0) {
-              var7Lifetime1 = new je(3, 0, this.field_r + 30);
+              param3.charge > 0) {
+              var7Lifetime1 = new SentinelCommand(3, 0, this.simulationTick + 30);
               var7Lifetime1.field_p = true;
-              var7Lifetime1.field_y = param3.field_Gb - 20000;
-              var7Lifetime1.field_u = param0 * 20000 + param3.field_hc;
-              param3.field_B.a(3, var7Lifetime1);
+              var7Lifetime1.field_y = param3.worldY - 20000;
+              var7Lifetime1.field_u = param0 * 20000 + param3.worldX;
+              param3.pendingCommands.addLast(3, var7Lifetime1);
             }
           } else {
-            if (!this.a(this.field_z, (byte) -126, 1, param3, param4, 1728, 25 + this.field_r) &&
-              !this.a(this.field_z, (byte) -63, 0, param3, param4, 4352, 25 + this.field_r)) {
+            if (!this.a(this.field_z, (byte) -126, 1, param3, param4, 1728, 25 + this.simulationTick) &&
+              !this.a(this.field_z, (byte) -63, 0, param3, param4, 4352, 25 + this.simulationTick)) {
             }
           }
           return;
@@ -4819,7 +4819,7 @@ final class ee {
         boolean stackIn_22_0 = false;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_14_0;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           if (this.b(true, param1) &&
             this.b(true, param2)) {
@@ -4869,56 +4869,56 @@ final class ee {
           field_I = null;
           field_S = null;
           if (param0 != 0) {
-            ee.c(-128);
+            CombatWorld.c(-128);
           }
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ee.L(" + param0 + ')');
         }
     }
 
-    final int b(boolean param0) {
+    final int computeSyncChecksum(boolean obfuscationGuard) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        mb var3 = null;
+        Sentinel var3 = null;
         int var4 = 0;
         int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           var2_int = 0;
-          if (param0) {
+          if (obfuscationGuard) {
             this.field_lb = false;
           }
-          var3 = (mb) (this.field_K.e(13058));
+          var3 = (Sentinel) (this.sentinels.first(13058));
           do {
             if (null == var3) {
-              var2_int = var2_int + this.field_r;
+              var2_int = var2_int + this.simulationTick;
               var2_int = var2_int + ((65535 & this.field_d + this.field_M + this.field_gb) << 16);
               break;
             }
-            var2_int = var2_int + (3 * var3.field_Gb + var3.field_hc * 2 & 65535);
-            var2_int = var2_int + (var3.field_K & 65535);
-            var2_int = var2_int + ((65535 & var3.field_ab) << 16);
-            var2_int = var2_int + (11 * var3.field_ub + 7 * var3.field_Tb & 65535);
+            var2_int = var2_int + (3 * var3.worldY + var3.worldX * 2 & 65535);
+            var2_int = var2_int + (var3.velocityX & 65535);
+            var2_int = var2_int + ((65535 & var3.velocityY) << 16);
+            var2_int = var2_int + (11 * var3.field_ub + 7 * var3.charge & 65535);
             var2_int = var2_int + ((65535 & var3.field_vb) << 16);
-            var2_int = var2_int + (65535 & var3.field_rb * 5);
-            var3 = (mb) (this.field_K.a((byte) -44));
+            var2_int = var2_int + (65535 & var3.armour * 5);
+            var3 = (Sentinel) (this.sentinels.next((byte) -44));
           } while (var4 == 0);
           stackIn_12_0 = var2_int;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ee.V(" + param0 + ')');
+          throw ci.a((Throwable) ((Object) var2), "ee.V(" + obfuscationGuard + ')');
         }
     }
 
-    private final void a(byte param0, int param1, mb param2, mb param3, int param4, int param5) {
-        je stackIn_17_0 = null;
-        je stackIn_17_1 = null;
+    private final void a(byte param0, int param1, Sentinel param2, Sentinel param3, int param4, int param5) {
+        SentinelCommand stackIn_17_0 = null;
+        SentinelCommand stackIn_17_1 = null;
         int stackIn_17_2 = 0;
-        je stackIn_18_0 = null;
-        je stackIn_18_1 = null;
+        SentinelCommand stackIn_18_0 = null;
+        SentinelCommand stackIn_18_1 = null;
         int stackIn_18_3 = 0;
         RuntimeException stackIn_70_0 = null;
         StringBuilder stackIn_70_1 = null;
@@ -4926,27 +4926,27 @@ final class ee {
         StringBuilder stackIn_74_1 = null;
         String stackIn_75_2 = null;
         RuntimeException decompiledCaughtException = null;
-        je var7 = null;
+        SentinelCommand var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
-        je var7Lifetime1;
-        je var7Lifetime2;
-        je var7Lifetime1Lifetime1;
-        var8 = SteelSentinels.field_G;
+        SentinelCommand var7Lifetime1;
+        SentinelCommand var7Lifetime2;
+        SentinelCommand var7Lifetime1Lifetime1;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           if (param3.field_Vb == null &&
-            0 < param3.field_Tb &&
-            !param2.i(18, -27)) {
-            var7 = new je(5, param2.field_Bb, 1 + this.field_r);
+            0 < param3.charge &&
+            !param2.hasModuleType(18, -27)) {
+            var7 = new SentinelCommand(5, param2.playerId, 1 + this.simulationTick);
             var7.field_p = true;
-            param3.field_B.a(param0 ^ 58, var7);
+            param3.pendingCommands.addLast(param0 ^ 58, var7);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param3.field_t > 0) {
             stackIn_17_0 = null;
             stackIn_17_1 = null;
             stackIn_17_2 = 6;
-            if (param3.field_hc >> 4 < param3.field_t) {
+            if (param3.worldX >> 4 < param3.field_t) {
               stackIn_18_0 = null;
               stackIn_18_1 = null;
               stackIn_18_3 = 1;
@@ -4955,9 +4955,9 @@ final class ee {
               stackIn_18_1 = null;
               stackIn_18_3 = -1;
             }
-            var7Lifetime1 = new je(stackIn_17_2, stackIn_18_3, this.field_r + 2);
+            var7Lifetime1 = new SentinelCommand(stackIn_17_2, stackIn_18_3, this.simulationTick + 2);
             var7Lifetime1.field_p = true;
-            param3.field_B.a(3, var7Lifetime1);
+            param3.pendingCommands.addLast(3, var7Lifetime1);
             decompiledFrameRemainder0 = (var8 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -4965,60 +4965,60 @@ final class ee {
               param3.field_U != 0) {
               if (Math.abs(param1) >= 20000) {
                 if (!(Math.abs(param1) >= 50000)) {
-                  var7Lifetime1Lifetime1 = new je(6, 0, this.field_r + 2);
+                  var7Lifetime1Lifetime1 = new SentinelCommand(6, 0, this.simulationTick + 2);
                   var7Lifetime1Lifetime1.field_p = true;
-                  param3.field_B.a(3, var7Lifetime1Lifetime1);
+                  param3.pendingCommands.addLast(3, var7Lifetime1Lifetime1);
                   if (var8 != 0) {
-                    var7Lifetime1Lifetime1 = new je(6, -param4, 2 + this.field_r);
+                    var7Lifetime1Lifetime1 = new SentinelCommand(6, -param4, 2 + this.simulationTick);
                     var7Lifetime1Lifetime1.field_p = true;
-                    param3.field_B.a(3, var7Lifetime1Lifetime1);
-                    var7Lifetime1Lifetime1 = new je(6, param4, this.field_r + 2);
+                    param3.pendingCommands.addLast(3, var7Lifetime1Lifetime1);
+                    var7Lifetime1Lifetime1 = new SentinelCommand(6, param4, this.simulationTick + 2);
                     var7Lifetime1Lifetime1.field_p = true;
-                    param3.field_B.a(param0 ^ 58, var7Lifetime1Lifetime1);
+                    param3.pendingCommands.addLast(param0 ^ 58, var7Lifetime1Lifetime1);
                   }
                 }
               } else {
-                var7Lifetime1Lifetime1 = new je(6, -param4, 2 + this.field_r);
+                var7Lifetime1Lifetime1 = new SentinelCommand(6, -param4, 2 + this.simulationTick);
                 var7Lifetime1Lifetime1.field_p = true;
-                param3.field_B.a(3, var7Lifetime1Lifetime1);
+                param3.pendingCommands.addLast(3, var7Lifetime1Lifetime1);
                 if (var8 != 0) {
-                  var7Lifetime1Lifetime1 = new je(6, param4, this.field_r + 2);
+                  var7Lifetime1Lifetime1 = new SentinelCommand(6, param4, this.simulationTick + 2);
                   var7Lifetime1Lifetime1.field_p = true;
-                  param3.field_B.a(param0 ^ 58, var7Lifetime1Lifetime1);
+                  param3.pendingCommands.addLast(param0 ^ 58, var7Lifetime1Lifetime1);
                 }
               }
             } else {
-              var7Lifetime1Lifetime1 = new je(6, param4, this.field_r + 2);
+              var7Lifetime1Lifetime1 = new SentinelCommand(6, param4, this.simulationTick + 2);
               var7Lifetime1Lifetime1.field_p = true;
-              param3.field_B.a(param0 ^ 58, var7Lifetime1Lifetime1);
+              param3.pendingCommands.addLast(param0 ^ 58, var7Lifetime1Lifetime1);
             }
           }
           if (null != param3.field_Vb) {
-            var7Lifetime2 = new je(0, param3.field_Xb[2], 5 + this.field_r);
+            var7Lifetime2 = new SentinelCommand(0, param3.field_Xb[2], 5 + this.simulationTick);
             var7Lifetime2.field_B = 7192 * param4;
             var7Lifetime2.field_p = true;
-            var7Lifetime2.field_y = param2.field_Gb;
-            var7Lifetime2.field_u = param2.field_hc;
-            param3.field_B.a(3, var7Lifetime2);
+            var7Lifetime2.field_y = param2.worldY;
+            var7Lifetime2.field_u = param2.worldX;
+            param3.pendingCommands.addLast(3, var7Lifetime2);
           }
           if (param0 != 57) {
             this.field_hb = -92;
           }
-          if (!this.a(this.field_z, (byte) -57, 4, param3, param2, 2600, this.field_r + 15) &&
-            !this.a(this.field_z, (byte) -61, 3, param3, param2, 2600, this.field_r + 15)) {
-            if (param3.field_Tb > 0 &&
+          if (!this.a(this.field_z, (byte) -57, 4, param3, param2, 2600, this.simulationTick + 15) &&
+            !this.a(this.field_z, (byte) -61, 3, param3, param2, 2600, this.simulationTick + 15)) {
+            if (param3.charge > 0 &&
               param2.field_S > 50) {
-              if (this.a(this.field_z * 4, (byte) -88, 1, param3, param2, 8448, 15 + this.field_r)) {
+              if (this.a(this.field_z * 4, (byte) -88, 1, param3, param2, 8448, 15 + this.simulationTick)) {
                 return;
               }
-              if (!this.a(this.field_z, (byte) -29, 0, param3, param2, 2304, this.field_r + 25)) {
+              if (!this.a(this.field_z, (byte) -29, 0, param3, param2, 2304, this.simulationTick + 25)) {
                 return;
               }
               return;
             }
-            if (!this.a(this.field_z, (byte) -88, 0, param3, param2, 2304, this.field_r + 25) &&
-              param3.field_Tb > 0 &&
-              this.a(this.field_z, (byte) -91, 1, param3, param2, 1728, 15 + this.field_r)) {
+            if (!this.a(this.field_z, (byte) -88, 0, param3, param2, 2304, this.simulationTick + 25) &&
+              param3.charge > 0 &&
+              this.a(this.field_z, (byte) -91, 1, param3, param2, 1728, 15 + this.simulationTick)) {
             }
           }
           return;
@@ -5048,12 +5048,12 @@ final class ee {
         boolean stackIn_24_1 = false;
         int stackIn_29_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
-          if (this.field_ab.b(88) != 2) {
+          if (this.terrain.getTerrainType(88) != 2) {
             return false;
           }
-          if (this.field_ab.a(param1, param0) > 3000) {
+          if (this.terrain.getSecondaryHeightAt(param1, param0) > 3000) {
             return false;
           }
           if (!this.b(true, param0)) {
@@ -5064,7 +5064,7 @@ final class ee {
           while (!(decompiledNaturalLoopExit0 = (param0 <= 0))) {
             stackIn_29_0 = 3000;
             if (var4 == 0) {
-              if (stackIn_29_0 < this.field_ab.a(false, param0)) {
+              if (stackIn_29_0 < this.terrain.getSecondaryHeightAt(false, param0)) {
                 return true;
               }
               stackIn_24_1 = !(param1);
@@ -5095,7 +5095,7 @@ final class ee {
           if (param0 >= -36) {
             this.b(-114, 97);
           }
-          stackIn_7_0 = (this.field_K.field_e.field_k == this.field_K.field_e.field_i);
+          stackIn_7_0 = (this.sentinels.sentinel.next == this.sentinels.sentinel.previous);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5115,7 +5115,7 @@ final class ee {
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_4_0;
         boolean stackOut_13_0;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameCompleted2 = true;
           boolean decompiledFrameCompleted0 = true;
@@ -5123,8 +5123,8 @@ final class ee {
           boolean decompiledFrameCompleted1 = true;
           var4 = -114 / ((param0 + 15) / 60);
           var3_int = 0;
-          if (this.field_ab.a(65) / 2 <= param1) {
-            var3_int = this.field_ab.a(108);
+          if (this.terrain.getProfileLength(65) / 2 <= param1) {
+            var3_int = this.terrain.getProfileLength(108);
             while (param1 > 0) {
               stackOut_4_0 = this.b(true, param1);
               stackIn_22_0 = stackOut_4_0 ? 1 : 0;
@@ -5147,7 +5147,7 @@ final class ee {
           if ((decompiledFrameRemainder0) &&
             (decompiledFrameCompleted2) &&
             (decompiledFrameCompleted1)) {
-            while (!(this.field_ab.a(-128) <= param1)) {
+            while (!(this.terrain.getProfileLength(-128) <= param1)) {
               stackOut_13_0 = this.b(true, param1);
               stackIn_22_0 = stackOut_13_0 ? 1 : 0;
               stackIn_14_0 = stackOut_13_0;
@@ -5164,7 +5164,7 @@ final class ee {
           }
           if ((decompiledFrameCompleted2) &&
             (decompiledFrameCompleted0)) {
-            stackIn_22_0 = Math.max(128, Math.min(this.field_ab.a(109) - 128, var3_int));
+            stackIn_22_0 = Math.max(128, Math.min(this.terrain.getProfileLength(109) - 128, var3_int));
           }
           return stackIn_22_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5174,96 +5174,96 @@ final class ee {
         }
     }
 
-    private final void a(int param0, int param1, mb param2, int param3, mb param4) {
+    private final void a(int param0, int param1, Sentinel param2, int param3, Sentinel param4) {
         RuntimeException stackIn_62_0 = null;
         StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
         StringBuilder stackIn_66_1 = null;
         String stackIn_67_2 = null;
         RuntimeException decompiledCaughtException = null;
-        je var6 = null;
+        SentinelCommand var6 = null;
         Object var6_ref = null;
         RuntimeException var6_ref2 = null;
         int var7 = 0;
-        je var6Lifetime1;
-        var7 = SteelSentinels.field_G;
+        SentinelCommand var6Lifetime1;
+        var7 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameRemainder0 = true;
           if (param4.field_t <= 0) {
             if (Math.abs(param3) >= 30000 &&
-              param4.field_Tb > 5) {
-              var6 = new je(6, param1, this.field_r + 2);
+              param4.charge > 5) {
+              var6 = new SentinelCommand(6, param1, this.simulationTick + 2);
               var6.field_p = true;
-              param4.field_B.a(3, var6);
+              param4.pendingCommands.addLast(3, var6);
               decompiledFrameRemainder0 = (var7 != 0);
             }
             if ((decompiledFrameRemainder0) && (0 == param4.field_U ||
-              !(param4.field_Tb > 1))) {
-              var6 = new je(6, -param1, this.field_r + 2);
+              !(param4.charge > 1))) {
+              var6 = new SentinelCommand(6, -param1, this.simulationTick + 2);
               var6.field_p = true;
-              param4.field_B.a(3, var6);
+              param4.pendingCommands.addLast(3, var6);
               if (var7 != 0) {
                 var6_ref = null;
-                if (param4.field_hc >> 4 <= param4.field_t) {
-                  var6 = new je(6, 1, 2 + this.field_r);
+                if (param4.worldX >> 4 <= param4.field_t) {
+                  var6 = new SentinelCommand(6, 1, 2 + this.simulationTick);
                 } else {
-                  var6 = new je(6, -1, 2 + this.field_r);
+                  var6 = new SentinelCommand(6, -1, 2 + this.simulationTick);
                 }
                 var6.field_p = true;
-                param4.field_B.a(3, var6);
+                param4.pendingCommands.addLast(3, var6);
               }
             }
           } else {
             var6_ref = null;
-            if (param4.field_hc >> 4 <= param4.field_t) {
-              var6 = new je(6, 1, 2 + this.field_r);
+            if (param4.worldX >> 4 <= param4.field_t) {
+              var6 = new SentinelCommand(6, 1, 2 + this.simulationTick);
             } else {
-              var6 = new je(6, -1, 2 + this.field_r);
+              var6 = new SentinelCommand(6, -1, 2 + this.simulationTick);
             }
             var6.field_p = true;
-            param4.field_B.a(3, var6);
+            param4.pendingCommands.addLast(3, var6);
           }
           if (param0 >= -77) {
             this.field_X = 4;
           }
-          param2.field_Gb = param2.field_Gb + (param4.field_Db << 3);
+          param2.worldY = param2.worldY + (param4.field_Db << 3);
           if ((param4.field_Lb ||
-            !(param4.field_oc <= 0)) && !this.a(this.field_z, (byte) -128, 3, param4, param2, 2600, this.field_r + 15)) {
+            !(param4.field_oc <= 0)) && !this.a(this.field_z, (byte) -128, 3, param4, param2, 2600, this.simulationTick + 15)) {
           }
-          if (!this.a(this.field_z, (byte) -97, 2, param4, param2, 2600, 15 + this.field_r)) {
-            if (param4.field_Tb > 1) {
-              if ((!this.a(this.field_z, (byte) -109, 1, param4, param2, 1728, 25 + this.field_r)) &&
-                (this.a(0, (byte) -69, 0, param4, param2, 4608, 25 + this.field_r)) &&
+          if (!this.a(this.field_z, (byte) -97, 2, param4, param2, 2600, 15 + this.simulationTick)) {
+            if (param4.charge > 1) {
+              if ((!this.a(this.field_z, (byte) -109, 1, param4, param2, 1728, 25 + this.simulationTick)) &&
+                (this.a(0, (byte) -69, 0, param4, param2, 4608, 25 + this.simulationTick)) &&
                 (param4.field_t == 0)) {
-                var6Lifetime1 = new je(3, 0, 3 + this.field_r);
-                var6Lifetime1.field_y = param4.field_Gb - 20000;
-                var6Lifetime1.field_u = param4.field_hc + 10000 * param1;
+                var6Lifetime1 = new SentinelCommand(3, 0, 3 + this.simulationTick);
+                var6Lifetime1.field_y = param4.worldY - 20000;
+                var6Lifetime1.field_u = param4.worldX + 10000 * param1;
                 var6Lifetime1.field_p = true;
-                param4.field_B.a(3, var6Lifetime1);
-                param4.g(5);
+                param4.pendingCommands.addLast(3, var6Lifetime1);
+                param4.refillCharge(5);
                 if ((var7 != 0) && (param4.field_t == 0 &&
-                  param4.field_Tb > 0)) {
-                  var6Lifetime1 = new je(3, 0, 30 + this.field_r);
-                  var6Lifetime1.field_y = param4.field_Gb - 20000;
+                  param4.charge > 0)) {
+                  var6Lifetime1 = new SentinelCommand(3, 0, 30 + this.simulationTick);
+                  var6Lifetime1.field_y = param4.worldY - 20000;
                   var6Lifetime1.field_p = true;
-                  var6Lifetime1.field_u = param4.field_hc - 20000 * param1;
-                  param4.field_B.a(3, var6Lifetime1);
-                  param4.g(5);
+                  var6Lifetime1.field_u = param4.worldX - 20000 * param1;
+                  param4.pendingCommands.addLast(3, var6Lifetime1);
+                  param4.refillCharge(5);
                 }
               }
             } else {
               if (param4.field_t == 0 &&
-                param4.field_Tb > 0) {
-                var6Lifetime1 = new je(3, 0, 30 + this.field_r);
-                var6Lifetime1.field_y = param4.field_Gb - 20000;
+                param4.charge > 0) {
+                var6Lifetime1 = new SentinelCommand(3, 0, 30 + this.simulationTick);
+                var6Lifetime1.field_y = param4.worldY - 20000;
                 var6Lifetime1.field_p = true;
-                var6Lifetime1.field_u = param4.field_hc - 20000 * param1;
-                param4.field_B.a(3, var6Lifetime1);
-                param4.g(5);
+                var6Lifetime1.field_u = param4.worldX - 20000 * param1;
+                param4.pendingCommands.addLast(3, var6Lifetime1);
+                param4.refillCharge(5);
               }
             }
           }
-          param2.field_Gb = param2.field_Gb - (param4.field_Db << 3);
+          param2.worldY = param2.worldY - (param4.field_Db << 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5285,7 +5285,7 @@ final class ee {
         }
     }
 
-    final void e(int param0) {
+    final void checkMatchCompletion(int obfuscationGuard) {
         int stackIn_5_0 = 0;
         int stackIn_29_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -5295,37 +5295,37 @@ final class ee {
         int var4 = 0;
         int var5 = 0;
         int[] var6 = null;
-        mb var7 = null;
+        Sentinel var7 = null;
         int var8 = 0;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
-          stackIn_5_0 = (param0 < ~di.field_g) ? 0 : 1;
+          stackIn_5_0 = (obfuscationGuard < ~di.field_g) ? 0 : 1;
           var2_int = stackIn_5_0;
           var3 = 0;
           var4 = 0;
           var5 = 0;
-          var6 = new int[this.field_Q + this.field_kb];
-          var7 = (mb) (this.field_K.e(13058));
+          var6 = new int[this.computerPlayerCount + this.playerCount];
+          var7 = (Sentinel) (this.sentinels.first(13058));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var7 == null))) {
-            stackIn_29_0 = var7.field_Bb;
+            stackIn_29_0 = var7.playerId;
             if (var8 == 0) {
               if (stackIn_29_0 >= 0 &&
-                var7.field_Bb < this.field_Q + this.field_kb &&
+                var7.playerId < this.computerPlayerCount + this.playerCount &&
                 !var7.field_V) {
                 if (!var7.field_Hb) {
-                  var4 = var4 | 1 << var7.field_Bb;
-                  var3 = var3 | 1 << var7.field_jc;
-                  if (this.field_kb > var7.field_Bb) {
-                    var5 = var5 | 1 << var7.field_Bb;
+                  var4 = var4 | 1 << var7.playerId;
+                  var3 = var3 | 1 << var7.teamId;
+                  if (this.playerCount > var7.playerId) {
+                    var5 = var5 | 1 << var7.playerId;
                   }
                 }
-                var6[var7.field_Bb] = var7.field_vb;
-                if (var6[var7.field_Bb] <= 0) {
-                  var6[var7.field_Bb] = 1;
+                var6[var7.playerId] = var7.field_vb;
+                if (var6[var7.playerId] <= 0) {
+                  var6[var7.playerId] = 1;
                 }
               }
-              var7 = (mb) (this.field_K.a((byte) -55));
+              var7 = (Sentinel) (this.sentinels.next((byte) -55));
               continue;
             }
             break;
@@ -5352,7 +5352,7 @@ final class ee {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ee.K(" + param0 + ')');
+          throw ci.a((Throwable) ((Object) var2), "ee.K(" + obfuscationGuard + ')');
         }
     }
 
@@ -5378,7 +5378,7 @@ final class ee {
         int var10Lifetime2;
         int var9Lifetime1Lifetime1;
         int var10Lifetime1Lifetime1;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         try {
           boolean decompiledFrameCompleted3 = true;
           boolean decompiledFrameCompleted2 = true;
@@ -5486,19 +5486,19 @@ final class ee {
     private final int h(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        mb var3 = null;
+        Sentinel var3 = null;
         int var4 = 0;
         int stackIn_3_0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           if (param0 <= 45) {
             stackIn_3_0 = 53;
             return stackIn_3_0;
           }
           var2_int = 0;
-          var3 = (mb) (this.field_K.e(13058));
+          var3 = (Sentinel) (this.sentinels.first(13058));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
             stackIn_14_0 = 8;
@@ -5506,7 +5506,7 @@ final class ee {
               if (stackIn_14_0 == var3.field_Nb) {
                 var2_int++;
               }
-              var3 = (mb) (this.field_K.a((byte) -81));
+              var3 = (Sentinel) (this.sentinels.next((byte) -81));
               continue;
             }
             break;
@@ -5527,20 +5527,20 @@ final class ee {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
-          if (null == this.field_y) {
+          if (null == this.spawnedSpecialSentinel) {
             this.field_p = false;
             return;
           }
           this.field_p = true;
           if (param0 != -22017) {
-            this.a((byte) 105, -38, 41, -10, (mb) null, (mb) null);
+            this.a((byte) 105, -38, 41, -10, (Sentinel) null, (Sentinel) null);
           }
           var2_int = 0;
           while (var2_int < this.field_E.length) {
             if (this.field_p) {
-              if (this.field_y.field_vb <= this.field_E[var2_int]) {
+              if (this.spawnedSpecialSentinel.field_vb <= this.field_E[var2_int]) {
                 this.field_p = false;
               }
               var2_int++;
@@ -5565,11 +5565,11 @@ final class ee {
         try {
           param2 = -param2;
           if (!param0) {
-            this.field_T = (ul) null;
+            this.projectiles = (NodeDeque) null;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (this.field_ab.a(false, param1) > param2 && (!(this.field_ab.a((byte) -102, param1) <= param2) ||
-            !(this.field_ab.b((byte) 120, param1) >= param2))) {
+          if (this.terrain.getSecondaryHeightAt(false, param1) > param2 && (!(this.terrain.getGroundHeightAt((byte) -102, param1) <= param2) ||
+            !(this.terrain.getSurfaceProfileAt((byte) 120, param1) >= param2))) {
             stackIn_13_0 = true;
             decompiledFrameRemainder0 = false;
           }
@@ -5585,31 +5585,31 @@ final class ee {
     }
 
     final void a(int param0, int param1, int param2) {
-        mb var4 = null;
+        Sentinel var4 = null;
         int var5 = 0;
         int stackIn_18_0 = 0;
         int stackIn_18_1 = 0;
-        mb stackIn_23_0 = null;
+        Sentinel stackIn_23_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         int stackIn_18_0Lifetime1;
         int stackIn_18_1Lifetime1;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
-          var4 = this.f(param2, -128);
+          var4 = this.findSentinelForPlayer(param2, -128);
           if (param1 != 28669) {
             return;
           }
           if (var4 != null) {
-            L2: while (true) {
+            scanLoop1: while (true) {
               boolean decompiledFrameRemainder1 = true;
               boolean decompiledFrameRemainder0 = true;
-              if (!var4.field_Ec.f(7)) {
+              if (!var4.secondaryCommands.f(7)) {
                 stackIn_18_0 = param0;
-                stackIn_18_1 = ((je) (var4.field_Ec.b(1063677678))).field_x;
+                stackIn_18_1 = ((SentinelCommand) (var4.secondaryCommands.b(1063677678))).startTick;
                 if (var5 != 0) {
                   if (stackIn_18_0 >= stackIn_18_1) {
-                    var4.field_B.b(param1 + 1063649009).b(4);
+                    var4.pendingCommands.b(param1 + 1063649009).unlink(4);
                     decompiledFrameRemainder0 = false;
                   }
                   decompiledFrameRemainder1 = !(decompiledFrameRemainder0);
@@ -5617,29 +5617,29 @@ final class ee {
                 if ((decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder0) &&
                   (stackIn_18_0 <= stackIn_18_1)) {
-                  var4.field_Ec.b(1063677678).b(4);
+                  var4.secondaryCommands.b(1063677678).unlink(4);
                   continue;
                 }
               }
               if ((decompiledFrameRemainder1) &&
                 (decompiledFrameRemainder0)) {
-                while (!var4.field_B.f(7)) {
+                while (!var4.pendingCommands.f(7)) {
                   stackIn_23_0 = var4;
                   if (var5 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
-                  stackIn_18_0Lifetime1 = ((je) (((ul) (Object) stackIn_23_0.field_B).b(param1 + 1063649009))).field_x;
+                  stackIn_18_0Lifetime1 = ((SentinelCommand) (((NodeDeque) (Object) stackIn_23_0.pendingCommands).b(param1 + 1063649009))).startTick;
                   stackIn_18_1Lifetime1 = param0;
                   if (stackIn_18_0Lifetime1 < stackIn_18_1Lifetime1) {
                     break;
                   }
-                  var4.field_B.b(param1 + 1063649009).b(4);
+                  var4.pendingCommands.b(param1 + 1063649009).unlink(4);
                 }
               }
               stackIn_23_0 = var4;
               break;
             }
-            ((mb) (Object) stackIn_23_0).d((byte) 85, new je(10, 0, param0));
+            ((Sentinel) (Object) stackIn_23_0).d((byte) 85, new SentinelCommand(10, 0, param0));
             return;
           }
           return;
@@ -5650,36 +5650,36 @@ final class ee {
         }
     }
 
-    private final void a(mb param0, byte param1, mb param2, int param3, int param4) {
+    private final void a(Sentinel param0, byte param1, Sentinel param2, int param3, int param4) {
         boolean discarded$0 = false;
         int stackIn_5_0 = 0;
-        je stackIn_11_0 = null;
-        je stackIn_11_1 = null;
+        SentinelCommand stackIn_11_0 = null;
+        SentinelCommand stackIn_11_1 = null;
         int stackIn_11_2 = 0;
-        je stackIn_12_0 = null;
-        je stackIn_12_1 = null;
+        SentinelCommand stackIn_12_0 = null;
+        SentinelCommand stackIn_12_1 = null;
         int stackIn_12_3 = 0;
-        je stackIn_22_0;
-        je stackIn_22_1;
+        SentinelCommand stackIn_22_0;
+        SentinelCommand stackIn_22_1;
         int stackIn_22_2;
         int stackIn_22_3;
         int stackIn_22_4;
-        je stackIn_23_0;
-        je stackIn_23_1;
+        SentinelCommand stackIn_23_0;
+        SentinelCommand stackIn_23_1;
         int stackIn_23_5;
-        je stackIn_32_0;
-        je stackIn_32_1;
+        SentinelCommand stackIn_32_0;
+        SentinelCommand stackIn_32_1;
         int stackIn_32_2;
         int stackIn_32_3;
-        je stackIn_33_0;
-        je stackIn_33_1;
+        SentinelCommand stackIn_33_0;
+        SentinelCommand stackIn_33_1;
         int stackIn_33_4;
-        je stackIn_42_0;
-        je stackIn_42_1;
+        SentinelCommand stackIn_42_0;
+        SentinelCommand stackIn_42_1;
         int stackIn_42_2;
         int stackIn_42_3;
-        je stackIn_43_0;
-        je stackIn_43_1;
+        SentinelCommand stackIn_43_0;
+        SentinelCommand stackIn_43_1;
         int stackIn_43_4;
         Object stackIn_77_0 = null;
         StringBuilder stackIn_77_1 = null;
@@ -5689,22 +5689,22 @@ final class ee {
         RuntimeException decompiledCaughtException = null;
         Object var6 = null;
         int var7 = 0;
-        je var8_ref_je = null;
+        SentinelCommand var8_ref_je = null;
         int var8 = 0;
-        je var9 = null;
+        SentinelCommand var9 = null;
         int var10 = 0;
-        je var8_ref_jeLifetime1;
-        var10 = SteelSentinels.field_G;
+        SentinelCommand var8_ref_jeLifetime1;
+        var10 = SteelSentinels.obfuscationControl;
         try {
           var6 = null;
-          stackIn_5_0 = (param0.field_Zb.a(0, param0, new nk[]{}, 32768, param0.field_Xb[2]).length <= 0) ? 0 : 1;
+          stackIn_5_0 = (param0.chassis.a(0, param0, new ArticulatedPart[]{}, 32768, param0.field_Xb[2]).length <= 0) ? 0 : 1;
           boolean decompiledFrameRemainder1 = true;
           var7 = stackIn_5_0;
           if (param0.field_t > 0) {
             stackIn_11_0 = null;
             stackIn_11_1 = null;
             stackIn_11_2 = 6;
-            if (param0.field_hc >> 4 < param0.field_t) {
+            if (param0.worldX >> 4 < param0.field_t) {
               stackIn_12_0 = null;
               stackIn_12_1 = null;
               stackIn_12_3 = 1;
@@ -5713,18 +5713,18 @@ final class ee {
               stackIn_12_1 = null;
               stackIn_12_3 = -1;
             }
-            var8_ref_je = new je(stackIn_11_2, stackIn_12_3, 2 + this.field_r);
+            var8_ref_je = new SentinelCommand(stackIn_11_2, stackIn_12_3, 2 + this.simulationTick);
             var8_ref_je.field_p = true;
-            param0.field_B.a(3, var8_ref_je);
+            param0.pendingCommands.addLast(3, var8_ref_je);
             decompiledFrameRemainder1 = (var10 != 0);
           }
           if (decompiledFrameRemainder1) {
             if (Math.abs(param3) <= 80000) {
               if (Math.abs(param3) >= 60000) {
                 if (param0.field_U == 0) {
-                  var8_ref_jeLifetime1 = new je(6, param4, 2 + this.field_r);
+                  var8_ref_jeLifetime1 = new SentinelCommand(6, param4, 2 + this.simulationTick);
                   var8_ref_jeLifetime1.field_p = true;
-                  param0.field_B.a(3, var8_ref_jeLifetime1);
+                  param0.pendingCommands.addLast(3, var8_ref_jeLifetime1);
                   decompiledFrameRemainder1 = (var10 != 0);
                 }
                 if (decompiledFrameRemainder1) {
@@ -5741,15 +5741,15 @@ final class ee {
                     stackIn_43_1 = null;
                     stackIn_43_4 = 32;
                   }
-                  var6 = new je(stackIn_42_2, stackIn_42_3, stackIn_43_4 + this.field_r);
-                  ((je) (var6)).field_p = true;
-                  ((je) (var6)).field_u = 5000 * param4 + param0.field_hc;
-                  ((je) (var6)).field_y = -20000 + param0.field_Gb;
+                  var6 = new SentinelCommand(stackIn_42_2, stackIn_42_3, stackIn_43_4 + this.simulationTick);
+                  ((SentinelCommand) (var6)).field_p = true;
+                  ((SentinelCommand) (var6)).field_u = 5000 * param4 + param0.worldX;
+                  ((SentinelCommand) (var6)).field_y = -20000 + param0.worldY;
                 }
               } else {
-                var8_ref_jeLifetime1 = new je(6, -param4, 2 + this.field_r);
+                var8_ref_jeLifetime1 = new SentinelCommand(6, -param4, 2 + this.simulationTick);
                 var8_ref_jeLifetime1.field_p = true;
-                param0.field_B.a(3, var8_ref_jeLifetime1);
+                param0.pendingCommands.addLast(3, var8_ref_jeLifetime1);
                 if (var7 != 0) {
                   stackIn_32_0 = null;
                   stackIn_32_1 = null;
@@ -5764,22 +5764,22 @@ final class ee {
                     stackIn_33_1 = null;
                     stackIn_33_4 = 60;
                   }
-                  var6 = new je(stackIn_32_2, stackIn_32_3, stackIn_33_4 + this.field_r);
-                  ((je) (var6)).field_y = -20000 + param0.field_Gb;
-                  ((je) (var6)).field_u = param0.field_hc - 20000 * param4;
-                  ((je) (var6)).field_p = true;
+                  var6 = new SentinelCommand(stackIn_32_2, stackIn_32_3, stackIn_33_4 + this.simulationTick);
+                  ((SentinelCommand) (var6)).field_y = -20000 + param0.worldY;
+                  ((SentinelCommand) (var6)).field_u = param0.worldX - 20000 * param4;
+                  ((SentinelCommand) (var6)).field_p = true;
                 }
               }
             } else {
-              var8_ref_jeLifetime1 = new je(6, param4, 2 + this.field_r);
+              var8_ref_jeLifetime1 = new SentinelCommand(6, param4, 2 + this.simulationTick);
               var8_ref_jeLifetime1.field_p = true;
-              param0.field_B.a(3, var8_ref_jeLifetime1);
+              param0.pendingCommands.addLast(3, var8_ref_jeLifetime1);
               if (var7 != 0) {
                 stackIn_22_0 = null;
                 stackIn_22_1 = null;
                 stackIn_22_2 = 3;
                 stackIn_22_3 = 0;
-                stackIn_22_4 = this.field_r;
+                stackIn_22_4 = this.simulationTick;
                 if (param0.field_Lb) {
                   stackIn_23_0 = null;
                   stackIn_23_1 = null;
@@ -5789,53 +5789,53 @@ final class ee {
                   stackIn_23_1 = null;
                   stackIn_23_5 = 60;
                 }
-                var6 = new je(stackIn_22_2, stackIn_22_3, stackIn_22_4 + stackIn_23_5);
-                ((je) (var6)).field_u = param2.field_hc;
-                ((je) (var6)).field_y = -20000 + param0.field_Gb;
-                ((je) (var6)).field_p = true;
+                var6 = new SentinelCommand(stackIn_22_2, stackIn_22_3, stackIn_22_4 + stackIn_23_5);
+                ((SentinelCommand) (var6)).field_u = param2.worldX;
+                ((SentinelCommand) (var6)).field_y = -20000 + param0.worldY;
+                ((SentinelCommand) (var6)).field_p = true;
               }
             }
           }
           boolean decompiledFrameRemainder0 = true;
           var8 = 41 % ((param1 - 31) / 61);
           if (!param0.field_Lb ||
-            !this.a(this.field_z, (byte) -92, 2, param0, param2, 2600, 3 + this.field_r)) {
-            if (param0.field_Tb > 1) {
-              if ((!this.a(this.field_z, (byte) -75, 1, param0, param2, 4608, this.field_r + 3)) &&
-                (decompiledFrameRemainder0 = !(!this.a(this.field_z, (byte) -26, 0, param0, param2, 1280, this.field_r + 3)))) {
-                var9 = new je(6, -param4, this.field_r + 50);
+            !this.a(this.field_z, (byte) -92, 2, param0, param2, 2600, 3 + this.simulationTick)) {
+            if (param0.charge > 1) {
+              if ((!this.a(this.field_z, (byte) -75, 1, param0, param2, 4608, this.simulationTick + 3)) &&
+                (decompiledFrameRemainder0 = !(!this.a(this.field_z, (byte) -26, 0, param0, param2, 1280, this.simulationTick + 3)))) {
+                var9 = new SentinelCommand(6, -param4, this.simulationTick + 50);
                 var9.field_p = true;
-                param0.field_B.a(3, var9);
+                param0.pendingCommands.addLast(3, var9);
                 decompiledFrameRemainder0 = (var10 != 0);
               }
               if (decompiledFrameRemainder0) {
-                var9 = new je(6, -param4, this.field_r + 25);
+                var9 = new SentinelCommand(6, -param4, this.simulationTick + 25);
                 var9.field_p = true;
-                param0.field_B.a(3, var9);
+                param0.pendingCommands.addLast(3, var9);
                 decompiledFrameRemainder0 = (var10 != 0);
               }
             }
             if ((decompiledFrameRemainder0) &&
-              (this.a(this.field_z, (byte) -30, 0, param0, param2, 1280, this.field_r + 3))) {
-              var9 = new je(6, -param4, this.field_r + 50);
+              (this.a(this.field_z, (byte) -30, 0, param0, param2, 1280, this.simulationTick + 3))) {
+              var9 = new SentinelCommand(6, -param4, this.simulationTick + 50);
               var9.field_p = true;
-              param0.field_B.a(3, var9);
+              param0.pendingCommands.addLast(3, var9);
               if (var10 != 0) {
-                discarded$0 = this.a(this.field_z, (byte) -87, 2, param0, param2, 2600, this.field_r + 15);
-                var9 = new je(6, -param4, 30 + this.field_r);
+                discarded$0 = this.a(this.field_z, (byte) -87, 2, param0, param2, 2600, this.simulationTick + 15);
+                var9 = new SentinelCommand(6, -param4, 30 + this.simulationTick);
                 var9.field_p = true;
-                param0.field_B.a(3, var9);
+                param0.pendingCommands.addLast(3, var9);
               }
             }
           } else {
-            discarded$0 = this.a(this.field_z, (byte) -87, 2, param0, param2, 2600, this.field_r + 15);
-            var9 = new je(6, -param4, 30 + this.field_r);
+            discarded$0 = this.a(this.field_z, (byte) -87, 2, param0, param2, 2600, this.simulationTick + 15);
+            var9 = new SentinelCommand(6, -param4, 30 + this.simulationTick);
             var9.field_p = true;
-            param0.field_B.a(3, var9);
+            param0.pendingCommands.addLast(3, var9);
           }
           if (var6 != null &&
-            param0.field_Tb > 0) {
-            param0.field_B.a(3, (ck) (var6));
+            param0.charge > 0) {
+            param0.pendingCommands.addLast(3, (IntrusiveNode) (var6));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5867,10 +5867,10 @@ final class ee {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            discarded$1 = this.a(-35, (byte) 87, -74, (mb) null, (mb) null, -128, 75);
+            discarded$1 = this.a(-35, (byte) 87, -74, (Sentinel) null, (Sentinel) null, -128, 75);
           }
           var3 = new int[]{0, 6, 12, 18, 23, 29, fg.field_Xb.length};
-          var4 = var3[param1] + this.field_D.a(115, var3[1 + param1] - var3[param1]);
+          var4 = var3[param1] + this.random.a(115, var3[1 + param1] - var3[param1]);
           stackIn_4_0 = fg.field_Xb[var4];
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5880,7 +5880,7 @@ final class ee {
         }
     }
 
-    private final int a(mb param0, int param1, byte param2, int param3, mb param4, int param5) {
+    private final int a(Sentinel param0, int param1, byte param2, int param3, Sentinel param4, int param5) {
         int stackIn_8_0 = 0;
         int stackIn_126_0 = 0;
         RuntimeException stackIn_130_0 = null;
@@ -5891,13 +5891,13 @@ final class ee {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        je var8 = null;
+        SentinelCommand var8 = null;
         int var9 = 0;
         int var10 = 0;
         double var11_double = 0.0;
         int var11 = 0;
         int var12 = 0;
-        nk[] var13_ref_nk__ = null;
+        ArticulatedPart[] var13_ref_nk__ = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -5905,7 +5905,7 @@ final class ee {
         int var9Lifetime1;
         double var11_doubleLifetime1;
         int var14Lifetime1;
-        var16 = SteelSentinels.field_G;
+        var16 = SteelSentinels.obfuscationControl;
         try {
           if (10 == di.field_g &&
             ge.field_j == 0) {
@@ -5915,28 +5915,28 @@ final class ee {
           }
           boolean decompiledFrameRemainder1 = true;
           var7_int = stackIn_8_0;
-          if ((param4.field_Gb <= -55000) &&
+          if ((param4.worldY <= -55000) &&
             (decompiledFrameRemainder1 = (this.field_fb)) &&
             (decompiledFrameRemainder1 = (this.field_j)) &&
-            (decompiledFrameRemainder1 = !(param4.field_Gb <= -200000))) {
-            decompiledFrameRemainder1 = (0 == (this.field_r & 15));
+            (decompiledFrameRemainder1 = !(param4.worldY <= -200000))) {
+            decompiledFrameRemainder1 = (0 == (this.simulationTick & 15));
           }
           if ((decompiledFrameRemainder1) &&
-            (param4.field_B.f(7))) {
+            (param4.pendingCommands.f(7))) {
             boolean decompiledFrameRemainder0 = true;
-            var8 = new je(3, 0, 10 + this.field_r);
-            var8.field_u = (this.field_r * 77 % (this.field_ab.a(-123) / 4) - this.field_ab.a(1) / 8 << 4) + param0.field_hc;
+            var8 = new SentinelCommand(3, 0, 10 + this.simulationTick);
+            var8.field_u = (this.simulationTick * 77 % (this.terrain.getProfileLength(-123) / 4) - this.terrain.getProfileLength(1) / 8 << 4) + param0.worldX;
             var9 = 5000;
             var10 = 1;
             if (var7_int == 0) {
               if (param4.field_Xb.length != 0 ||
                 param4.field_Xb[0] != 1) {
-                if (var8.field_u < (param4.field_hc - var9)) {
-                  var8.field_u = -var9 + param4.field_hc;
+                if (var8.field_u < (param4.worldX - var9)) {
+                  var8.field_u = -var9 + param4.worldX;
                 }
-                var8.field_y = -30000 + param0.field_Gb;
-                if (var8.field_u > (param4.field_hc + var9)) {
-                  var8.field_u = var9 + param4.field_hc;
+                var8.field_y = -30000 + param0.worldY;
+                if (var8.field_u > (param4.worldX + var9)) {
+                  var8.field_u = var9 + param4.worldX;
                 }
                 decompiledFrameRemainder0 = !(Math.abs(param1) <= 80000);
                 if (decompiledFrameRemainder0) {
@@ -5946,27 +5946,27 @@ final class ee {
               }
               if (decompiledFrameRemainder0) {
                 var9 = 100000;
-                if (param4.field_hc < param0.field_hc) {
-                  if (var8.field_u > param0.field_hc - var9) {
-                    var8.field_u = param0.field_hc - var9;
+                if (param4.worldX < param0.worldX) {
+                  if (var8.field_u > param0.worldX - var9) {
+                    var8.field_u = param0.worldX - var9;
                   }
                   if (!(var8.field_u >= 0)) {
-                    var8.field_u = param0.field_hc + var9;
+                    var8.field_u = param0.worldX + var9;
                     if (var16 != 0) {
-                      if (var8.field_u < (var9 + param0.field_hc)) {
-                        var8.field_u = param0.field_hc + var9;
+                      if (var8.field_u < (var9 + param0.worldX)) {
+                        var8.field_u = param0.worldX + var9;
                       }
-                      if (var8.field_u > this.field_ab.a(param2 ^ 68) << 4) {
-                        var8.field_u = param0.field_hc - var9;
+                      if (var8.field_u > this.terrain.getProfileLength(param2 ^ 68) << 4) {
+                        var8.field_u = param0.worldX - var9;
                       }
                     }
                   }
                 } else {
-                  if (var8.field_u < (var9 + param0.field_hc)) {
-                    var8.field_u = param0.field_hc + var9;
+                  if (var8.field_u < (var9 + param0.worldX)) {
+                    var8.field_u = param0.worldX + var9;
                   }
-                  if (var8.field_u > this.field_ab.a(param2 ^ 68) << 4) {
-                    var8.field_u = param0.field_hc - var9;
+                  if (var8.field_u > this.terrain.getProfileLength(param2 ^ 68) << 4) {
+                    var8.field_u = param0.worldX - var9;
                   }
                 }
                 var8.field_y = -60000;
@@ -5976,60 +5976,60 @@ final class ee {
               (var7_int != 0 ||
               var16 != 0)) {
               var9Lifetime1 = 50000;
-              if (param4.field_hc >= param0.field_hc) {
-                if (param0.field_hc + var9Lifetime1 > var8.field_u) {
-                  var8.field_u = param0.field_hc + var9Lifetime1;
+              if (param4.worldX >= param0.worldX) {
+                if (param0.worldX + var9Lifetime1 > var8.field_u) {
+                  var8.field_u = param0.worldX + var9Lifetime1;
                 }
-                if (!(var8.field_u <= this.field_ab.a(29) << 4)) {
-                  var8.field_u = param0.field_hc - var9Lifetime1;
+                if (!(var8.field_u <= this.terrain.getProfileLength(29) << 4)) {
+                  var8.field_u = param0.worldX - var9Lifetime1;
                   if (var16 != 0) {
-                    if (var8.field_u > -var9Lifetime1 + param0.field_hc) {
-                      var8.field_u = param0.field_hc - var9Lifetime1;
+                    if (var8.field_u > -var9Lifetime1 + param0.worldX) {
+                      var8.field_u = param0.worldX - var9Lifetime1;
                     }
                     if (var8.field_u < 0) {
-                      var8.field_u = var9Lifetime1 + param0.field_hc;
+                      var8.field_u = var9Lifetime1 + param0.worldX;
                     }
                   }
                 }
               } else {
-                if (var8.field_u > -var9Lifetime1 + param0.field_hc) {
-                  var8.field_u = param0.field_hc - var9Lifetime1;
+                if (var8.field_u > -var9Lifetime1 + param0.worldX) {
+                  var8.field_u = param0.worldX - var9Lifetime1;
                 }
                 if (var8.field_u < 0) {
-                  var8.field_u = var9Lifetime1 + param0.field_hc;
+                  var8.field_u = var9Lifetime1 + param0.worldX;
                 }
               }
               var8.field_y = -60000;
             }
             if (this.field_fb &&
               this.field_j) {
-              var8.field_y = -5000 + param4.field_Gb;
-              if (-199000 > param4.field_Gb) {
+              var8.field_y = -5000 + param4.worldY;
+              if (-199000 > param4.worldY) {
                 param4.field_Hb = true;
-                param4.b(param2 ^ -60);
-                System.out.println(param4.field_Bb + " unlinked");
+                param4.unlink(param2 ^ -60);
+                System.out.println(param4.playerId + " unlinked");
               }
             }
             var8.field_p = true;
-            param4.field_B.a(3, var8);
-            param4.field_Tb = param4.field_x;
+            param4.pendingCommands.addLast(3, var8);
+            param4.charge = param4.maximumCharge;
             if (param4.field_Xb.length <= 0) {
               var10 = 0;
               if (var16 != 0) {
-                var8 = new je(0, param4.field_Xb[0], this.field_r + 20);
+                var8 = new SentinelCommand(0, param4.field_Xb[0], this.simulationTick + 20);
               }
             } else {
-              var8 = new je(0, param4.field_Xb[0], this.field_r + 20);
+              var8 = new SentinelCommand(0, param4.field_Xb[0], this.simulationTick + 20);
             }
             if (var10 != 0) {
               if (param4.field_Xb[0] != 1) {
                 var11_double = Math.atan2((double)param1, (double)(-param3));
                 var8.field_B = (int)(65536.0 * var11_double / 6.283185307179586);
-                var13_ref_nk__ = param4.field_Zb.a(0, param4, new nk[]{}, var8.field_B * param5, param4.field_Xb[0]);
-                param4.field_Zb.b((byte) -128, 0, param5, 0);
+                var13_ref_nk__ = param4.chassis.a(0, param4, new ArticulatedPart[]{}, var8.field_B * param5, param4.field_Xb[0]);
+                param4.chassis.b((byte) -128, 0, param5, 0);
                 var14 = 0;
                 var15 = 0;
-                L23: while (true) {
+                scanLoop1: while (true) {
                   if (var13_ref_nk__.length > var15) {
                     var14 = var14 + var13_ref_nk__[var15].field_V;
                     var15++;
@@ -6038,7 +6038,7 @@ final class ee {
                     }
                   } else {
                     if (var13_ref_nk__.length <= 0) {
-                      break L23;
+                      break scanLoop1;
                     }
                   }
                   param3 = param3 - var14 / var13_ref_nk__.length;
@@ -6046,8 +6046,8 @@ final class ee {
                 }
                 var11_doubleLifetime1 = Math.atan2((double)param1, (double)(-param3));
                 var8.field_B = (int)(var11_doubleLifetime1 * 65536.0 / 6.283185307179586);
-                var8.field_u = param0.field_hc;
-                var8.field_y = param0.field_Gb;
+                var8.field_u = param0.worldX;
+                var8.field_y = param0.worldY;
                 if (0 <= param5) {
                   if (!(var8.field_B >= -16384)) {
                     var8.field_B = var8.field_B + 65536;
@@ -6062,20 +6062,20 @@ final class ee {
                   }
                 }
                 var8.field_p = true;
-                param4.field_B.a(param2 ^ -61, var8);
+                param4.pendingCommands.addLast(param2 ^ -61, var8);
                 decompiledFrameRemainder1 = (var16 != 0);
               }
               if (decompiledFrameRemainder1) {
-                var8 = new je(0, param4.field_Xb[1], (this.field_r + param0.field_hc + param4.field_hc) % 50 + this.field_r + 4 + 25);
-                var8.field_y = param0.field_Gb;
-                var8.field_u = param0.field_hc;
+                var8 = new SentinelCommand(0, param4.field_Xb[1], (this.simulationTick + param0.worldX + param4.worldX) % 50 + this.simulationTick + 4 + 25);
+                var8.field_y = param0.worldY;
+                var8.field_u = param0.worldX;
                 var11 = 2500;
                 var12 = 0;
                 var13 = 8192;
                 var14Lifetime1 = 32768;
                 this.a(param5, param3, param1, var11, var13, var8, var12, var14Lifetime1, -1);
                 var8.field_p = true;
-                param4.field_B.a(3, var8);
+                param4.pendingCommands.addLast(3, var8);
               }
             }
           }
@@ -6104,15 +6104,15 @@ final class ee {
         }
     }
 
-    private final void a(int param0, int param1, byte param2, mb param3, mb param4, int param5) {
+    private final void a(int param0, int param1, byte param2, Sentinel param3, Sentinel param4, int param5) {
         boolean discarded$0 = false;
         boolean discarded$1 = false;
         boolean discarded$2 = false;
-        je stackIn_48_0 = null;
-        je stackIn_48_1 = null;
+        SentinelCommand stackIn_48_0 = null;
+        SentinelCommand stackIn_48_1 = null;
         int stackIn_48_2 = 0;
-        je stackIn_49_0 = null;
-        je stackIn_49_1 = null;
+        SentinelCommand stackIn_49_0 = null;
+        SentinelCommand stackIn_49_1 = null;
         int stackIn_49_3 = 0;
         RuntimeException stackIn_60_0 = null;
         StringBuilder stackIn_60_1 = null;
@@ -6123,68 +6123,68 @@ final class ee {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
-        je var9 = null;
+        SentinelCommand var9 = null;
         int var10 = 0;
-        je var9Lifetime1;
-        je var9Lifetime2;
-        var10 = SteelSentinels.field_G;
+        SentinelCommand var9Lifetime1;
+        SentinelCommand var9Lifetime2;
+        var10 = SteelSentinels.obfuscationControl;
         try {
           var7_int = 1;
           var8 = 0;
           if (param2 != 21) {
-            this.b(false);
+            this.computeSyncChecksum(false);
           }
           if (var7_int == 0) {
             return;
           }
           if (param4.field_Xb[4] == 19) {
             if (!param4.field_u) {
-              discarded$0 = this.a(this.field_z / 2, (byte) -76, 4, param4, param3, 2600, this.field_r + 5);
+              discarded$0 = this.a(this.field_z / 2, (byte) -76, 4, param4, param3, 2600, this.simulationTick + 5);
               if ((var10 != 0) &&
                 (!param4.field_u)) {
-                discarded$1 = this.a(this.field_z, (byte) -85, 4, param4, param3, 2600, 5 + this.field_r);
+                discarded$1 = this.a(this.field_z, (byte) -85, 4, param4, param3, 2600, 5 + this.simulationTick);
               }
             }
           } else {
             if (!param4.field_u) {
-              discarded$1 = this.a(this.field_z, (byte) -85, 4, param4, param3, 2600, 5 + this.field_r);
+              discarded$1 = this.a(this.field_z, (byte) -85, 4, param4, param3, 2600, 5 + this.simulationTick);
             }
           }
           if (var8 == 0 &&
-            this.a(this.field_z, (byte) -36, 2, param4, param3, 2304, 25 + this.field_r)) {
+            this.a(this.field_z, (byte) -36, 2, param4, param3, 2304, 25 + this.simulationTick)) {
             if ((param4.field_t == 0) &&
               (!(30000 > Math.abs(param5)))) {
-              var9 = new je(6, param1, this.field_r + 27);
+              var9 = new SentinelCommand(6, param1, this.simulationTick + 27);
               var9.field_p = true;
-              param4.field_B.a(3, var9);
+              param4.pendingCommands.addLast(3, var9);
               if (var10 != 0) {
                 if (!(60000 >= Math.abs(param5)) ||
                   param4.field_U == 0) {
-                  var9 = new je(6, param1, this.field_r + 2);
+                  var9 = new SentinelCommand(6, param1, this.simulationTick + 2);
                   var9.field_p = true;
-                  param4.field_B.a(3, var9);
+                  param4.pendingCommands.addLast(3, var9);
                 }
                 if (Math.abs(param5) < 100000) {
-                  discarded$2 = this.a(0, (byte) -80, 0, param4, param3, 2304, 25 + this.field_r);
+                  discarded$2 = this.a(0, (byte) -80, 0, param4, param3, 2304, 25 + this.simulationTick);
                 }
               }
             }
           } else {
             if (!(60000 >= Math.abs(param5)) ||
               param4.field_U == 0) {
-              var9 = new je(6, param1, this.field_r + 2);
+              var9 = new SentinelCommand(6, param1, this.simulationTick + 2);
               var9.field_p = true;
-              param4.field_B.a(3, var9);
+              param4.pendingCommands.addLast(3, var9);
             }
             if (Math.abs(param5) < 100000) {
-              discarded$2 = this.a(0, (byte) -80, 0, param4, param3, 2304, 25 + this.field_r);
+              discarded$2 = this.a(0, (byte) -80, 0, param4, param3, 2304, 25 + this.simulationTick);
             }
           }
           if (param4.field_t > 0) {
             stackIn_48_0 = null;
             stackIn_48_1 = null;
             stackIn_48_2 = 6;
-            if (param4.field_t > (param4.field_hc >> 4)) {
+            if (param4.field_t > (param4.worldX >> 4)) {
               stackIn_49_0 = null;
               stackIn_49_1 = null;
               stackIn_49_3 = 1;
@@ -6193,17 +6193,17 @@ final class ee {
               stackIn_49_1 = null;
               stackIn_49_3 = -1;
             }
-            var9Lifetime1 = new je(stackIn_48_2, stackIn_49_3, 2 + this.field_r);
+            var9Lifetime1 = new SentinelCommand(stackIn_48_2, stackIn_49_3, 2 + this.simulationTick);
             var9Lifetime1.field_p = true;
-            param4.field_B.a(param2 ^ 22, var9Lifetime1);
+            param4.pendingCommands.addLast(param2 ^ 22, var9Lifetime1);
             if (var10 == 0) {
               return;
             }
           }
           if (Math.abs(param5) < 30000) {
-            var9Lifetime2 = new je(6, -param1, this.field_r + 29);
+            var9Lifetime2 = new SentinelCommand(6, -param1, this.simulationTick + 29);
             var9Lifetime2.field_p = true;
-            param4.field_B.a(3, var9Lifetime2);
+            param4.pendingCommands.addLast(3, var9Lifetime2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -6226,9 +6226,9 @@ final class ee {
         }
     }
 
-    ee(int param0, int param1, String[] param2, int[][] param3, boolean param4, int param5, int param6, int param7, boolean param8, boolean param9) {
+    CombatWorld(int param0, int param1, String[] param2, int[][] param3, boolean param4, int param5, int param6, int param7, boolean param8, boolean param9) {
         boolean stackIn_8_1 = false;
-        mb stackIn_83_0 = null;
+        Sentinel stackIn_83_0 = null;
         boolean stackIn_84_1 = false;
         int stackIn_101_0 = 0;
         int stackIn_101_1 = 0;
@@ -6238,7 +6238,7 @@ final class ee {
         StringBuilder stackIn_132_1 = null;
         String stackIn_133_2 = null;
         RuntimeException decompiledCaughtException = null;
-        mb var11 = null;
+        Sentinel var11 = null;
         RuntimeException var11_ref = null;
         int[][] var12 = null;
         int var13_int = 0;
@@ -6249,12 +6249,12 @@ final class ee {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        var19 = SteelSentinels.field_G;
+        var19 = SteelSentinels.obfuscationControl;
         this.field_g = -1;
         this.field_n = -1;
         this.field_t = 0;
         this.field_w = 0;
-        this.field_D = null;
+        this.random = null;
         this.field_m = 0;
         this.field_A = -1;
         this.field_p = false;
@@ -6262,30 +6262,30 @@ final class ee {
         this.field_B = -1;
         try {
           this.field_c = param1;
-          this.field_Y = param0;
+          this.mapSeed = param0;
           this.field_P = param5;
           this.field_F = param7;
           this.field_h = param4;
-          this.field_D = new ie(new int[]{this.field_Y});
-          this.field_kb = param2.length;
+          this.random = new IsaacRandom(new int[]{this.mapSeed});
+          this.playerCount = param2.length;
           this.field_q = 0;
-          this.field_bb = param2;
+          this.playerNames = param2;
           this.field_a = 0;
-          if (this.field_Y % 8 != 0 &&
-            this.field_Y != -1) {
+          if (this.mapSeed % 8 != 0 &&
+            this.mapSeed != -1) {
             param6 = 0;
           }
           this.field_N = 621164641;
           this.field_f = 269488144;
-          this.field_Q = param6;
-          this.field_ab = new hd(this.field_Y, this.field_kb + param6);
+          this.computerPlayerCount = param6;
+          this.terrain = new BattleTerrain(this.mapSeed, this.playerCount + param6);
           this.field_l = Math.max(this.field_F, 1);
           this.field_ib = 0;
           this.field_eb = 0;
           this.field_s = 0;
-          this.field_r = 0;
-          this.field_K = new ul();
-          this.field_Z = new int[param6 + this.field_kb];
+          this.simulationTick = 0;
+          this.sentinels = new NodeDeque();
+          this.field_Z = new int[param6 + this.playerCount];
           var12 = new int[][]{ua.field_v, ua.field_x, ua.field_P, ua.field_z, ua.field_N, ua.field_O, ua.field_D, ua.field_J, ua.field_E};
           this.field_W = param8;
           this.field_fb = param9;
@@ -6293,31 +6293,31 @@ final class ee {
           this.field_lb = stackIn_8_1;
           var13_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (var13_int >= (param6 + this.field_kb)))) {
-            var11 = new mb((this.field_ab.a(-119) << 4) * (var13_int + 1) / (this.field_kb - (-1 - param6)), -320000, this);
+          while (!(decompiledNaturalLoopExit0 = (var13_int >= (param6 + this.playerCount)))) {
+            var11 = new Sentinel((this.terrain.getProfileLength(-119) << 4) * (var13_int + 1) / (this.playerCount - (-1 - param6)), -320000, this);
             var14 = var13_int;
             stackIn_101_0 = -1;
             stackIn_101_1 = ~param6;
             if (var19 == 0) {
               if (stackIn_101_0 > stackIn_101_1) {
-                if (this.field_kb / 2 > var13_int ||
-                  var13_int >= param6 + this.field_kb / 2) {
-                  if (var13_int < param6 + this.field_kb / 2) {
-                    var14 = -var14 + this.field_kb - 1;
+                if (this.playerCount / 2 > var13_int ||
+                  var13_int >= param6 + this.playerCount / 2) {
+                  if (var13_int < param6 + this.playerCount / 2) {
+                    var14 = -var14 + this.playerCount - 1;
                   } else {
                     var14 = var14 - param6;
-                    var14 = -var14 - 1 + this.field_kb;
+                    var14 = -var14 - 1 + this.playerCount;
                   }
                 } else {
-                  var14 = this.field_kb - (this.field_kb / 2 - var13_int);
+                  var14 = this.playerCount - (this.playerCount / 2 - var13_int);
                 }
               } else {
-                var14 = this.field_kb - (1 + var14);
+                var14 = this.playerCount - (1 + var14);
               }
               var15 = var14;
-              if (this.field_ab.b(73) == 1 ||
-                4 == this.field_ab.b(118)) {
-                var15 = var14 * 2 / this.field_kb;
+              if (this.terrain.getTerrainType(73) == 1 ||
+                4 == this.terrain.getTerrainType(118)) {
+                var15 = var14 * 2 / this.playerCount;
                 if (1 == var15) {
                   var11.field_ic = 65793;
                 }
@@ -6325,7 +6325,7 @@ final class ee {
               if (3 == this.field_P) {
                 var15 = 0;
               }
-              if (var14 >= this.field_kb) {
+              if (var14 >= this.playerCount) {
                 var16 = 0;
                 var17 = 3;
                 if (this.field_F >= 1) {
@@ -6335,10 +6335,10 @@ final class ee {
                   var16 = 3;
                   var17 = 9;
                 }
-                var18 = var16 + this.field_D.a(-126, -var16 + var17);
-                var11.a(var12[var18], true, false, var14, var15);
+                var18 = var16 + this.random.a(-126, -var16 + var17);
+                var11.configureDesign(var12[var18], true, false, var14, var15);
                 var11.field_Nb = 11;
-                this.field_K.a(3, var11);
+                this.sentinels.addLast(3, var11);
               } else {
                 if (param3[var14] != null) {
                   if (0 == this.field_F) {
@@ -6369,30 +6369,30 @@ final class ee {
                     param3[var14] = var12[var16];
                   }
                   stackIn_83_0 = var11;
-                  stackIn_84_1 = (null != this.field_bb) && (var14 >= 0) && (this.field_bb.length > var14) && (null != this.field_bb[var14]) && (this.field_bb[var14].toLowerCase().startsWith("mod"));
+                  stackIn_84_1 = (null != this.playerNames) && (var14 >= 0) && (this.playerNames.length > var14) && (null != this.playerNames[var14]) && (this.playerNames[var14].toLowerCase().startsWith("mod"));
                   stackIn_83_0.field_ib = stackIn_84_1;
-                  var11.a(param3[var14], true, false, var14, var15);
+                  var11.configureDesign(param3[var14], true, false, var14, var15);
                   if (this.field_F == 1 &&
-                    6100 < hm.a((byte) 126, var11.field_nb, var11.field_Zb)) {
-                    var11.a(ua.field_x, true, false, var14, var15);
+                    6100 < hm.a((byte) 126, var11.moduleTypes, var11.chassis)) {
+                    var11.configureDesign(ua.field_x, true, false, var14, var15);
                   }
                   if (this.field_U != null) {
                     this.field_U.a(0, (byte) 123, var14, Integer.toString(var11.field_lb));
                   }
-                  this.field_K.a(var11, -21459);
+                  this.sentinels.a(var11, -21459);
                 }
               }
-              if (this.field_ab.b(115) == 4) {
+              if (this.terrain.getTerrainType(115) == 4) {
                 var11.j(-5);
-                var11.field_Gb = -320000;
+                var11.worldY = -320000;
                 var11.field_Lb = true;
-                var11.field_K = 0;
+                var11.velocityX = 0;
                 var11.field_u = true;
-                var11.field_ab = 1000;
-                var11.field_fc = var11.field_Gb;
-                var11.field_Gb = -(this.field_ab.a((byte) -115, var11.field_hc >> 4) << 4) - 500;
+                var11.velocityY = 1000;
+                var11.field_fc = var11.worldY;
+                var11.worldY = -(this.terrain.getGroundHeightAt((byte) -115, var11.worldX >> 4) << 4) - 500;
                 var11.field_z = 500;
-                var11.field_fc = var11.field_Gb;
+                var11.field_fc = var11.worldY;
               }
               var11.d(-28033);
               this.field_Z[var13_int] = 50;
@@ -6403,43 +6403,43 @@ final class ee {
           }
           if (decompiledNaturalLoopExit0) {
             this.field_z = 4;
-            stackIn_101_0 = this.field_ab.b(109);
+            stackIn_101_0 = this.terrain.getTerrainType(109);
             stackIn_101_1 = 4;
           }
           if (stackIn_101_0 == stackIn_101_1) {
             this.field_z = 2;
           }
-          if (this.field_ab.b(98) == 3) {
+          if (this.terrain.getTerrainType(98) == 3) {
             this.field_z = 3;
           }
-          this.field_C = new ul();
-          this.field_u = new ul();
-          this.field_db = new ul();
-          this.field_T = new ul();
+          this.field_C = new NodeDeque();
+          this.explosions = new NodeDeque();
+          this.field_db = new NodeDeque();
+          this.projectiles = new NodeDeque();
           if (this.field_h) {
             this.field_O = null;
             this.field_o = null;
             if (var19 != 0) {
-              this.field_o = new ul();
-              this.field_O = new ul();
+              this.field_o = new NodeDeque();
+              this.field_O = new NodeDeque();
             }
           } else {
-            this.field_o = new ul();
-            this.field_O = new ul();
+            this.field_o = new NodeDeque();
+            this.field_O = new NodeDeque();
           }
-          this.field_e = new ul();
-          this.field_J = new ra();
+          this.field_e = new NodeDeque();
+          this.field_J = new DualNodeDeque();
           this.field_cb = -1;
           if (this.field_lb) {
             this.field_d = 100000;
             this.field_M = 3;
             this.field_gb = 0;
           }
-          if (2 == this.field_ab.b(72) &&
-            this.field_kb > 1) {
+          if (2 == this.terrain.getTerrainType(72) &&
+            this.playerCount > 1) {
             var13 = new ne(this, 43);
-            var13.field_z = (this.field_ab.a(-119) << 4) / 2;
-            this.field_e.a(3, var13);
+            var13.field_z = (this.terrain.getProfileLength(-119) << 4) / 2;
+            this.field_e.addLast(3, var13);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

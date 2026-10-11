@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ul {
+final class NodeDeque {
     static int field_g;
-    ck field_e;
+    IntrusiveNode sentinel;
     static int field_d;
     static String field_b;
     static String field_f;
     static String field_h;
     static String field_a;
-    private ck field_i;
+    private IntrusiveNode traversalCursor;
     static int[] field_c;
 
     public static void c(byte param0) {
@@ -64,63 +64,63 @@ final class ul {
         }
     }
 
-    final void g(int param0) {
+    final void clear(int obfuscationGuard) {
         RuntimeException runtimeException = null;
-        ck var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
-          L1: while (true) {
-            var2 = this.field_e.field_k;
-            if (this.field_e == var2) {
+          scanLoop1: while (true) {
+            var2 = this.sentinel.next;
+            if (this.sentinel == var2) {
               if (var3 == 0) {
-                break L1;
+                break scanLoop1;
               }
             } else {
-              var2.b(4);
+              var2.unlink(4);
             }
             if (var3 == 0) {
               continue;
             }
             break;
           }
-          this.field_i = null;
-          if (param0 != 6) {
+          this.traversalCursor = null;
+          if (obfuscationGuard != 6) {
             field_c = (int[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) runtimeException), "ul.Q(" + param0 + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "ul.Q(" + obfuscationGuard + ')');
         }
     }
 
-    final void a(int param0, ck param1) {
+    final void addLast(int obfuscationGuard, IntrusiveNode node) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1.field_i != null) {
-            param1.b(4);
+          if (node.previous != null) {
+            node.unlink(4);
           }
-          param1.field_k = this.field_e;
-          if (param0 != 3) {
+          node.next = this.sentinel;
+          if (obfuscationGuard != 3) {
             return;
           }
-          param1.field_i = this.field_e.field_i;
-          param1.field_i.field_k = param1;
-          param1.field_k.field_i = param1;
+          node.previous = this.sentinel.previous;
+          node.previous.next = node;
+          node.next.previous = node;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_10_0 = runtimeException;
-          stackIn_10_1 = new StringBuilder().append("ul.W(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("ul.W(").append(obfuscationGuard).append(',');
+          if (node == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -129,32 +129,32 @@ final class ul {
         }
     }
 
-    final static nk a(int param0, byte param1) {
-        nk var2 = null;
+    final static ArticulatedPart a(int param0, byte param1) {
+        ArticulatedPart var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        nk stackIn_7_0 = null;
+        ArticulatedPart stackIn_7_0 = null;
         Object stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
-          var2 = (nk) (ao.field_H.e(13058));
+          var2 = (ArticulatedPart) (ao.field_H.first(13058));
           if (param1 != 67) {
-            ul.e((byte) 116);
+            NodeDeque.e((byte) 116);
           }
           while (var2 != null) {
-            if (var2.field_N == param0) {
+            if (var2.componentId == param0) {
               stackIn_7_0 = var2;
               return stackIn_7_0;
             }
-            var2 = (nk) (ao.field_H.a((byte) -87));
+            var2 = (ArticulatedPart) (ao.field_H.next((byte) -87));
             if (var3 == 0) {
               continue;
             }
             break;
           }
           stackIn_10_0 = null;
-          return (nk) (stackIn_10_0);
+          return (ArticulatedPart) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -162,14 +162,14 @@ final class ul {
         }
     }
 
-    final static gk d(byte param0) {
-        gk stackIn_1_0 = null;
+    final static IndexedSprite d(byte param0) {
+        IndexedSprite stackIn_1_0 = null;
         RuntimeException decompiledCaughtException = null;
-        gk var1 = null;
+        IndexedSprite var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         try {
-          var1 = new gk(un.field_n, eb.field_n, rl.field_a[0], oa.field_M[0], le.field_L[0], ca.field_r[0], dl.field_L[0], ba.field_d);
+          var1 = new IndexedSprite(un.field_n, eb.field_n, rl.field_a[0], oa.field_M[0], le.field_L[0], ca.field_r[0], dl.field_L[0], ba.field_d);
           var2 = -124 % ((param0 + 33) / 62);
           uh.a(9324);
           stackIn_1_0 = var1;
@@ -181,25 +181,25 @@ final class ul {
         }
     }
 
-    final int b(byte param0) {
+    final int size(byte obfuscationGuard) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        ck var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           var2_int = 0;
-          if (param0 >= -127) {
+          if (obfuscationGuard >= -127) {
             stackIn_3_0 = 32;
             return stackIn_3_0;
           }
-          var3 = this.field_e.field_k;
-          while (var3 != this.field_e) {
+          var3 = this.sentinel.next;
+          while (var3 != this.sentinel) {
             var2_int++;
-            var3 = var3.field_k;
+            var3 = var3.next;
             if (var4 == 0) {
               continue;
             }
@@ -210,54 +210,54 @@ final class ul {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2), "ul.I(" + param0 + ')');
+          throw ci.a((Throwable) ((Object) var2), "ul.I(" + obfuscationGuard + ')');
         }
     }
 
-    final ck a(byte param0) {
-        ck var2 = null;
+    final IntrusiveNode next(byte obfuscationGuard) {
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_5_0 = null;
-        ck stackIn_7_0 = null;
+        IntrusiveNode stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 >= -5) {
-            ul.d(-99);
+          if (obfuscationGuard >= -5) {
+            NodeDeque.d(-99);
           }
-          var2 = this.field_i;
-          if (var2 != this.field_e) {
-            this.field_i = var2.field_k;
+          var2 = this.traversalCursor;
+          if (var2 != this.sentinel) {
+            this.traversalCursor = var2.next;
             stackIn_7_0 = var2;
             return stackIn_7_0;
           }
-          this.field_i = null;
+          this.traversalCursor = null;
           stackIn_5_0 = null;
-          return (ck) (stackIn_5_0);
+          return (IntrusiveNode) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "ul.S(" + param0 + ')');
+          throw ci.a((Throwable) ((Object) var2_ref), "ul.S(" + obfuscationGuard + ')');
         }
     }
 
-    final ck c(int param0) {
-        ck var2 = null;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        ck stackIn_5_0 = null;
-        ck stackIn_7_0 = null;
+        IntrusiveNode stackIn_5_0 = null;
+        IntrusiveNode stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_e.field_i;
-          if (var2 == this.field_e) {
+          var2 = this.sentinel.previous;
+          if (var2 == this.sentinel) {
             stackIn_2_0 = null;
-            return (ck) (stackIn_2_0);
+            return (IntrusiveNode) (stackIn_2_0);
           }
           if (param0 != -6533) {
-            stackIn_5_0 = (ck) null;
+            stackIn_5_0 = (IntrusiveNode) null;
             return stackIn_5_0;
           }
-          var2.b(param0 ^ -6529);
+          var2.unlink(param0 ^ -6529);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -267,37 +267,37 @@ final class ul {
         }
     }
 
-    final ck e(int param0) {
-        ck var2 = null;
+    final IntrusiveNode first(int obfuscationGuard) {
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
-        ck stackIn_2_0 = null;
+        IntrusiveNode stackIn_2_0 = null;
         Object stackIn_7_0 = null;
-        ck stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 13058) {
-            stackIn_2_0 = (ck) null;
+          if (obfuscationGuard != 13058) {
+            stackIn_2_0 = (IntrusiveNode) null;
             return stackIn_2_0;
           }
-          var2 = this.field_e.field_k;
-          if (var2 == this.field_e) {
-            this.field_i = null;
+          var2 = this.sentinel.next;
+          if (var2 == this.sentinel) {
+            this.traversalCursor = null;
             stackIn_7_0 = null;
-            return (ck) (stackIn_7_0);
+            return (IntrusiveNode) (stackIn_7_0);
           }
-          this.field_i = var2.field_k;
+          this.traversalCursor = var2.next;
           stackIn_9_0 = var2;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ci.a((Throwable) ((Object) var2_ref), "ul.N(" + param0 + ')');
+          throw ci.a((Throwable) ((Object) var2_ref), "ul.N(" + obfuscationGuard + ')');
         }
     }
 
-    private final void a(ul param0, int param1, ck param2) {
+    private final void a(NodeDeque param0, int param1, IntrusiveNode param2) {
         RuntimeException runtimeException = null;
-        ck var4 = null;
+        IntrusiveNode var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -305,17 +305,17 @@ final class ul {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = this.field_e.field_i;
-          this.field_e.field_i = param2.field_i;
-          param2.field_i.field_k = this.field_e;
+          var4 = this.sentinel.previous;
+          this.sentinel.previous = param2.previous;
+          param2.previous.next = this.sentinel;
           if (param1 != -16775) {
             this.a(2);
           }
-          if (param2 != this.field_e) {
-            param2.field_i = param0.field_e.field_i;
-            param2.field_i.field_k = param2;
-            var4.field_k = param0.field_e;
-            param0.field_e.field_i = var4;
+          if (param2 != this.sentinel) {
+            param2.previous = param0.sentinel.previous;
+            param2.previous.next = param2;
+            var4.next = param0.sentinel;
+            param0.sentinel.previous = var4;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -338,24 +338,24 @@ final class ul {
         }
     }
 
-    final ck a(boolean param0) {
-        ck var2 = null;
+    final IntrusiveNode a(boolean param0) {
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_4_0 = null;
-        ck stackIn_7_0 = null;
-        ck stackIn_9_0 = null;
+        IntrusiveNode stackIn_7_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = this.field_e.field_k;
-          if (var2 == this.field_e) {
+          var2 = this.sentinel.next;
+          if (var2 == this.sentinel) {
             stackIn_4_0 = null;
-            return (ck) (stackIn_4_0);
+            return (IntrusiveNode) (stackIn_4_0);
           }
           if (!param0) {
-            stackIn_7_0 = (ck) null;
+            stackIn_7_0 = (IntrusiveNode) null;
             return stackIn_7_0;
           }
-          var2.b(4);
+          var2.unlink(4);
           stackIn_9_0 = var2;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -365,23 +365,23 @@ final class ul {
         }
     }
 
-    final void a(ck param0, int param1) {
+    final void a(IntrusiveNode param0, int param1) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (null != param0.field_i) {
-            param0.b(4);
+          if (null != param0.previous) {
+            param0.unlink(4);
           }
-          param0.field_k = this.field_e.field_k;
-          param0.field_i = this.field_e;
+          param0.next = this.sentinel.next;
+          param0.previous = this.sentinel;
           if (param1 != -21459) {
-            ul.e((byte) 47);
+            NodeDeque.e((byte) 47);
           }
-          param0.field_i.field_k = param0;
-          param0.field_k.field_i = param0;
+          param0.previous.next = param0;
+          param0.next.previous = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -404,7 +404,7 @@ final class ul {
         int var5 = 0;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           var1_long = mm.a(77);
           var3 = -sl.field_m + var1_long;
@@ -435,7 +435,7 @@ final class ul {
             }
             if (var6 == 0) {
               if (param0 != 17) {
-                ul.a(72, 96, 29, -125, false, -71, -107);
+                NodeDeque.a(72, 96, 29, -125, false, -71, -107);
               }
               return false;
             }
@@ -458,7 +458,7 @@ final class ul {
           if (param0 != 7) {
             field_d = 34;
           }
-          stackIn_7_0 = (this.field_e.field_k == this.field_e);
+          stackIn_7_0 = (this.sentinel.next == this.sentinel);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -475,15 +475,15 @@ final class ul {
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.field_G;
+        var4 = SteelSentinels.obfuscationControl;
         try {
           var2_int = -66 / ((param0 - 30) / 32);
           var3 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var3 < n.field_z.length)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(var3 < FunOrbClient.field_z.length)))) {
             stackIn_13_0 = param1;
             if (var4 == 0) {
-              if (stackIn_13_0 == n.field_z[var3]) {
+              if (stackIn_13_0 == FunOrbClient.field_z[var3]) {
                 stackIn_10_0 = var3;
                 return stackIn_10_0;
               }
@@ -558,7 +558,7 @@ final class ul {
         int var25Lifetime1Lifetime1;
         int var26Lifetime1Lifetime1;
         int var27Lifetime1Lifetime1;
-        var31 = SteelSentinels.field_G;
+        var31 = SteelSentinels.obfuscationControl;
         try {
           var7_int = 2147483647;
           var8 = -2147483648;
@@ -590,7 +590,7 @@ final class ul {
           var22Lifetime2 = 22 / ((param1 - 51) / 45);
           var23Lifetime2 = lf.field_b;
           var24Lifetime1 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var24Lifetime1 < param4.field_L) {
               var25Lifetime1 = param4.field_z[var24Lifetime1];
@@ -604,14 +604,14 @@ final class ul {
               if (var31 != 0) {
                 if (stackIn_59_0 < stackIn_59_1) {
                   stackIn_68_0 = ~tc.field_A.length;
-                  break L1;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (stackIn_59_0 <= stackIn_59_1) {
                   eh.field_d[var24Lifetime1] = var21Lifetime2 + var28Lifetime1 / var30;
-                  n.field_p[var24Lifetime1] = var23Lifetime2 + var29Lifetime1 / var30;
+                  FunOrbClient.field_p[var24Lifetime1] = var23Lifetime2 + var29Lifetime1 / var30;
                   if (var30 < var7_int) {
                     var7_int = var30;
                   }
@@ -691,7 +691,7 @@ final class ul {
                   }
                   stackIn_68_0 = ~tc.field_A.length;
                   if (var31 != 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                   if (stackIn_68_0 >= ~var18) {
                     break;
@@ -737,13 +737,13 @@ final class ul {
         }
     }
 
-    final static wk[] a(byte param0, int param1, int param2) {
+    final static RgbSprite[] a(byte param0, int param1, int param2) {
         RuntimeException var3 = null;
-        wk[] stackIn_4_0 = null;
+        RgbSprite[] stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            ul.d(10);
+            NodeDeque.d(10);
           }
           stackIn_4_0 = bm.b(param1, -2, 1, param2);
           return stackIn_4_0;
@@ -762,7 +762,7 @@ final class ul {
           if (param0 != 11) {
             field_h = (String) null;
           }
-          if (jc.a(2)) {
+          if (NodeIterator.a(2)) {
             t.a((byte) 125, param5, param4, param6);
             if (null != an.field_i &&
               an.field_i.a(param4, param0 ^ 125, param3, param6, param1)) {
@@ -782,37 +782,37 @@ final class ul {
         }
     }
 
-    final ck a(byte param0, ck param1) {
-        ck var3 = null;
+    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
-        ck stackIn_2_0 = null;
+        IntrusiveNode stackIn_2_0 = null;
         Object stackIn_8_0 = null;
-        ck stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 124) {
-            stackIn_2_0 = (ck) null;
+            stackIn_2_0 = (IntrusiveNode) null;
             return stackIn_2_0;
           }
           if (param1 != null) {
             var3 = param1;
-            if (SteelSentinels.field_G != 0) {
-              var3 = this.field_e.field_k;
+            if (SteelSentinels.obfuscationControl != 0) {
+              var3 = this.sentinel.next;
             }
           } else {
-            var3 = this.field_e.field_k;
+            var3 = this.sentinel.next;
           }
-          if (this.field_e != var3) {
-            this.field_i = var3.field_k;
+          if (this.sentinel != var3) {
+            this.traversalCursor = var3.next;
             stackIn_10_0 = var3;
             return stackIn_10_0;
           }
-          this.field_i = null;
+          this.traversalCursor = null;
           stackIn_8_0 = null;
-          return (ck) (stackIn_8_0);
+          return (IntrusiveNode) (stackIn_8_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -827,14 +827,14 @@ final class ul {
         }
     }
 
-    final void a(int param0, ul param1) {
+    final void a(int param0, NodeDeque param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param1, -16775, this.field_e.field_k);
+          this.a(param1, -16775, this.sentinel.next);
           if (param0 < 8) {
             field_d = 72;
           }
@@ -853,23 +853,23 @@ final class ul {
         }
     }
 
-    final ck b(int param0) {
-        ck var2 = null;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_7_0 = null;
-        ck stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 1063677678) {
-            this.field_i = (ck) null;
+            this.traversalCursor = (IntrusiveNode) null;
           }
-          var2 = this.field_e.field_i;
-          if (var2 == this.field_e) {
-            this.field_i = null;
+          var2 = this.sentinel.previous;
+          if (var2 == this.sentinel) {
+            this.traversalCursor = null;
             stackIn_7_0 = null;
-            return (ck) (stackIn_7_0);
+            return (IntrusiveNode) (stackIn_7_0);
           }
-          this.field_i = var2.field_i;
+          this.traversalCursor = var2.previous;
           stackIn_9_0 = var2;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -879,35 +879,35 @@ final class ul {
         }
     }
 
-    public ul() {
-        this.field_e = new ck();
+    public NodeDeque() {
+        this.sentinel = new IntrusiveNode();
         try {
-          this.field_e.field_i = this.field_e;
-          this.field_e.field_k = this.field_e;
+          this.sentinel.previous = this.sentinel;
+          this.sentinel.next = this.sentinel;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ul.<init>()");
         }
     }
 
-    final ck a(int param0) {
-        ck var2 = null;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
-        ck stackIn_2_0 = null;
+        IntrusiveNode stackIn_2_0 = null;
         Object stackIn_7_0 = null;
-        ck stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -2137) {
-            stackIn_2_0 = (ck) null;
+            stackIn_2_0 = (IntrusiveNode) null;
             return stackIn_2_0;
           }
-          var2 = this.field_i;
-          if (this.field_e == var2) {
-            this.field_i = null;
+          var2 = this.traversalCursor;
+          if (this.sentinel == var2) {
+            this.traversalCursor = null;
             stackIn_7_0 = null;
-            return (ck) (stackIn_7_0);
+            return (IntrusiveNode) (stackIn_7_0);
           }
-          this.field_i = var2.field_i;
+          this.traversalCursor = var2.previous;
           stackIn_9_0 = var2;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class km {
-    static lg field_m;
+    static GameApplet field_m;
     static volatile int field_f;
     static int field_i;
     static int[] field_h;
     static int field_c;
     static int field_g;
-    static wk[] field_e;
+    static RgbSprite[] field_e;
     static String field_a;
     static ql field_j;
     static String field_d;
@@ -43,7 +43,7 @@ final class km {
         byte[] var3 = null;
         int var5 = 0;
         int var6 = 0;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           var2_int = param1.length();
           var3 = new byte[var2_int];
@@ -180,7 +180,7 @@ final class km {
           uc.field_e[param6] = param2;
           uc.field_k[param6] = param3;
           if (param0 != -44) {
-            field_e = (wk[]) null;
+            field_e = (RgbSprite[]) null;
           }
           uc.field_d[param6] = param1;
           uc.field_c[param6] = param5;
@@ -203,23 +203,23 @@ final class km {
         int var6;
         int var7;
         int var10;
-        nk var13;
+        ArticulatedPart var13;
         int[] var22;
         int[] var23;
         int[] var24;
         int[] var25;
         int var5Lifetime1;
         int var7Lifetime1;
-        var10 = SteelSentinels.field_G;
-        var13 = ul.a(param0, (byte) 67);
+        var10 = SteelSentinels.obfuscationControl;
+        var13 = NodeDeque.a(param0, (byte) 67);
         if (param1 <= 29) {
           field_c = 12;
         }
         boolean decompiledFrameRemainder0 = true;
         var3 = var13.field_Q;
         if (var3 == 2) {
-          for (var3 = 0; n.field_z.length > var3; var3++) {
-            var4_int = n.field_z[var3];
+          for (var3 = 0; FunOrbClient.field_z.length > var3; var3++) {
+            var4_int = FunOrbClient.field_z[var3];
             var22 = nl.a(var4_int, (byte) 127);
             for (var6 = 0; var22.length - 8 > var6; var6++) {
               if (var22[var6] == param0) {
@@ -232,8 +232,8 @@ final class km {
             var3 != 2048) &&
             (decompiledFrameRemainder0 = (var3 == 8))) {
             var3 = 0;
-            for (var4_int = 0; var4_int < n.field_z.length; var4_int++) {
-              var5 = n.field_z[var4_int];
+            for (var4_int = 0; var4_int < FunOrbClient.field_z.length; var4_int++) {
+              var5 = FunOrbClient.field_z[var4_int];
               var24 = nl.a(var5, (byte) 124);
               for (var7 = 0; var7 < -8 + var24.length; var7++) {
                 if (var24[var7] != param0) {
@@ -245,8 +245,8 @@ final class km {
             }
             var4 = lj.field_g[0];
             var5Lifetime1 = 0;
-            for (var6 = 0; var6 < n.field_z.length; var6++) {
-              var7Lifetime1 = n.field_z[var6];
+            for (var6 = 0; var6 < FunOrbClient.field_z.length; var6++) {
+              var7Lifetime1 = FunOrbClient.field_z[var6];
               var25 = nl.a(var7Lifetime1, (byte) 123);
               for (var9 = 0; -8 + var25.length > var9; var9++) {
                 if (var25[var9] != param0) {
@@ -270,8 +270,8 @@ final class km {
             return null;
           }
           if (decompiledFrameRemainder0) {
-            for (var3 = 0; n.field_z.length > var3; var3++) {
-              var4_int = n.field_z[var3];
+            for (var3 = 0; FunOrbClient.field_z.length > var3; var3++) {
+              var4_int = FunOrbClient.field_z[var3];
               var23 = nl.a(var4_int, (byte) 126);
               for (var6 = 0; -8 + var23.length > var6; var6++) {
                 if (var23[var6] == param0) {

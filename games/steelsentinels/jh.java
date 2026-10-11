@@ -7,7 +7,7 @@ final class jh {
     static int field_d;
     static String field_f;
     static int[] field_a;
-    static wk field_h;
+    static RgbSprite field_h;
     static String[] field_b;
     static String field_e;
     static String field_g;

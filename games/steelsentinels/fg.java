@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fg extends k implements ae {
-    static ul field_Ub;
+    static NodeDeque field_Ub;
     private boolean field_Nb;
     private vi field_Zb;
     static uf field_Tb;
@@ -73,7 +73,7 @@ final class fg extends k implements ae {
         RuntimeException var4_ref = null;
         bm var5 = null;
         int var6 = 0;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         try {
           this.field_Nb = true;
           if (!param2.field_d) {
@@ -155,13 +155,13 @@ final class fg extends k implements ae {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var7Lifetime1;
-        var14 = SteelSentinels.field_G;
+        var14 = SteelSentinels.obfuscationControl;
         try {
           var6_int = 8 + param4 + (485 + param3 + param0);
           vg.field_g.a(0, 3, -6 + qc.field_V.field_Lb, 3, -6 + var6_int);
           var7 = -5 + vg.field_g.field_Lb;
-          ee.field_H.a(0, var7 - param1, param1, 5, param3 + 485 + 2 + param4);
-          vd.field_d.a(0, 0, param1, param3, -wh.field_e.field_zb + (-param3 + ee.field_H.field_zb));
+          CombatWorld.field_H.a(0, var7 - param1, param1, 5, param3 + 485 + 2 + param4);
+          vd.field_d.a(0, 0, param1, param3, -wh.field_e.field_zb + (-param3 + CombatWorld.field_H.field_zb));
           wh.field_e.a(0, 0, param1, vd.field_d.field_zb + param3, wh.field_e.field_zb);
           var7 = var7 - (2 + param1);
           sn.field_j.a(param4 + param3 + 485 + 2, -2048, param4, var7 - 5, 2, 5, 5);
@@ -216,7 +216,7 @@ final class fg extends k implements ae {
         if (param1 != 19999) {
           fg.a(125, 90);
         }
-        ic.field_D.a(3, var2);
+        ic.field_D.addLast(3, var2);
         eh.a(param0, -17274);
         return var2;
     }
@@ -287,7 +287,7 @@ final class fg extends k implements ae {
         field_Qb = "That name is not available";
         field_Rb = 0;
         field_Pb = "or";
-        field_Ub = new ul();
+        field_Ub = new NodeDeque();
         field_Vb = "Detail: Low";
         field_Yb = new rf();
         field_Wb = "Mission Complete";

@@ -5,11 +5,11 @@ final class te {
     static int field_b;
     static String field_d;
     static String[][] field_c;
-    static gh field_f;
+    static SceneWidget field_f;
     static int[][] field_a;
     static String field_e;
 
-    final static int a(gh param0, int param1, boolean param2, int param3) {
+    final static int a(SceneWidget param0, int param1, boolean param2, int param3) {
         int stackIn_6_0 = 0;
         int stackIn_11_0 = 0;
         String stackIn_71_0 = null;
@@ -31,17 +31,17 @@ final class te {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        nk var12 = null;
-        gh var13 = null;
+        ArticulatedPart var12 = null;
+        SceneWidget var13 = null;
         String var13_ref = null;
         String var14 = null;
-        gh var14_ref = null;
-        gh var15 = null;
+        SceneWidget var14_ref = null;
+        SceneWidget var15 = null;
         int var16 = 0;
-        gh var13Lifetime1;
+        SceneWidget var13Lifetime1;
         int stackIn_81_0Lifetime1;
         int stackIn_81_1Lifetime1;
-        var16 = SteelSentinels.field_G;
+        var16 = SteelSentinels.obfuscationControl;
         try {
           if (fg.field_Ob != 1 &&
             !he.a((byte) 124)) {
@@ -70,14 +70,14 @@ final class te {
                 if (var8 == 1) {
                   var11 = 1;
                 }
-                var12 = (nk) (ao.field_H.e(13058));
+                var12 = (ArticulatedPart) (ao.field_H.first(13058));
                 while (var12 != null) {
                   stackIn_81_0 = ~(var8 & var12.field_Q);
                   stackIn_81_1 = -1;
                   boolean decompiledFrameRemainder1 = true;
                   if (stackIn_81_0 != stackIn_81_1) {
                     var6 = 2;
-                    if (t.a(rn.field_D, var12.field_N, -20370)) {
+                    if (t.a(rn.field_D, var12.componentId, -20370)) {
                       var6 = 0;
                     }
                     boolean decompiledFrameRemainder0 = true;
@@ -87,23 +87,23 @@ final class te {
                       decompiledFrameRemainder1 = (var6 != 0);
                       if (decompiledFrameRemainder1) {
                         if (var12.field_Q == 1) {
-                          decompiledFrameRemainder0 = !(bj.a(rn.field_D, var12.field_N, nk.f((byte) -50), (byte) 86));
+                          decompiledFrameRemainder0 = !(bj.a(rn.field_D, var12.componentId, ArticulatedPart.f((byte) -50), (byte) 86));
                           decompiledFrameRemainder1 = !(decompiledFrameRemainder0);
                         }
                         if ((decompiledFrameRemainder1) &&
                           (decompiledFrameRemainder0)) {
-                          decompiledFrameRemainder1 = !(!aj.a(ge.field_m, (byte) -120, rn.field_D, var12.field_N, nk.f((byte) -92)));
+                          decompiledFrameRemainder1 = !(!aj.a(ge.field_m, (byte) -120, rn.field_D, var12.componentId, ArticulatedPart.f((byte) -92)));
                         }
                       }
                     }
                     if (decompiledFrameRemainder1) {
                       if (var6 == 2 &&
-                        sj.field_v[var12.field_N] <= li.field_v) {
+                        sj.field_v[var12.componentId] <= li.field_v) {
                         var6 = 1;
                       }
                       if (var7 != 0) {
                         var7 = 0;
-                        var13 = new gh(-1L, (gh) null);
+                        var13 = new SceneWidget(-1L, (SceneWidget) null);
                         var13.field_Kb = 2;
                         var13.field_Pb = gj.field_a;
                         var13.a(0, param1, 18, 0, var5);
@@ -114,9 +114,9 @@ final class te {
                           stackIn_71_0 = he.field_h;
                         }
                         var14 = stackIn_71_0;
-                        var15 = new gh(-1L, kh.field_s, var14);
+                        var15 = new SceneWidget(-1L, kh.field_s, var14);
                         var15.field_nb = 0;
-                        var15.field_L = (mi) ((Object) pl.field_U);
+                        var15.field_L = (BitmapFont) ((Object) pl.field_U);
                         var15.a(~param3, param1, 18, 0, var5);
                         var15.field_Fb = 1;
                         var15.field_sb = 1;
@@ -128,7 +128,7 @@ final class te {
                       if (var11 == 0) {
                         var11 = 1;
                         var13_ref = sn.field_i[var9];
-                        var14_ref = new gh(-1L, kh.field_s, var13_ref);
+                        var14_ref = new SceneWidget(-1L, kh.field_s, var13_ref);
                         var14_ref.field_Kb = 1;
                         var14_ref.field_nb = 11119017;
                         param1 += 2;
@@ -146,7 +146,7 @@ final class te {
                       param1 = param1 + var4_int;
                     }
                   }
-                  var12 = (nk) (ao.field_H.a((byte) -48));
+                  var12 = (ArticulatedPart) (ao.field_H.next((byte) -48));
                 }
               }
               stackIn_81_0Lifetime1 = var8;
@@ -183,7 +183,7 @@ final class te {
         int stackIn_65_1 = 0;
         ah stackIn_65_2 = null;
         RuntimeException decompiledCaughtException = null;
-        kj var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
@@ -200,7 +200,7 @@ final class te {
         String var4_ref_StringLifetime1;
         String var5Lifetime1;
         ah var6Lifetime1;
-        var9 = SteelSentinels.field_G;
+        var9 = SteelSentinels.obfuscationControl;
         try {
           if (param0 != 2) {
             te.a((byte) -82);
@@ -240,7 +240,7 @@ final class te {
               fieldTemp$0 = cc.field_gc;
               cc.field_gc = cc.field_gc + 1;
               var6.field_bc = fieldTemp$0;
-              am.field_c.a(3, var6);
+              am.field_c.addLast(3, var6);
             }
             var6.field_Tb = var5;
             var6.field_dc = var4_ref_String;
@@ -295,7 +295,7 @@ final class te {
             fieldTemp$1 = vd.field_h;
             vd.field_h = vd.field_h + 1;
             var6Lifetime1.field_bc = fieldTemp$1;
-            ea.field_c.a(param0 ^ 1, var6Lifetime1);
+            Sprite.field_c.addLast(param0 ^ 1, var6Lifetime1);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -303,23 +303,23 @@ final class te {
           var6Lifetime1.field_dc = var4_ref_StringLifetime1;
           var6Lifetime1.field_ac = (String) (var3Lifetime1);
           var6Lifetime1.field_Vb = var5Lifetime1;
-          var6Lifetime1.b(param0 ^ 6);
-          var7_ref = (ah) (ea.field_c.e(13058));
-          L15: while (true) {
+          var6Lifetime1.unlink(param0 ^ 6);
+          var7_ref = (ah) (Sprite.field_c.first(13058));
+          scanLoop1: while (true) {
             if (null != var7_ref) {
               stackIn_65_0 = var7_ref;
               stackIn_65_1 = 22635;
               stackIn_65_2 = var6Lifetime1;
               if (var9 != 0) {
-                break L15;
+                break scanLoop1;
               }
               if (dm.a(stackIn_65_0, stackIn_65_1, stackIn_65_2)) {
-                var7_ref = (ah) (ea.field_c.a((byte) -17));
+                var7_ref = (ah) (Sprite.field_c.next((byte) -17));
                 continue;
               }
             }
             if (null == var7_ref) {
-              ea.field_c.a(3, var6Lifetime1);
+              Sprite.field_c.addLast(3, var6Lifetime1);
               if (var9 == 0) {
                 return;
               }
@@ -329,7 +329,7 @@ final class te {
             stackIn_65_2 = var6Lifetime1;
             break;
           }
-          ie.a(stackIn_65_0, stackIn_65_1, stackIn_65_2);
+          IsaacRandom.a(stackIn_65_0, stackIn_65_1, stackIn_65_2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

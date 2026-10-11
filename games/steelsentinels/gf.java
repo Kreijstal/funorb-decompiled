@@ -3,15 +3,15 @@
  */
 final class gf {
     static fm field_b;
-    static mi field_d;
+    static BitmapFont field_d;
     static dm field_a;
-    static wk[] field_c;
+    static RgbSprite[] field_c;
     static String field_e;
 
     final static int a(int param0, int param1) {
         int var2;
         int var3;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         ha.field_T = null;
         nf.field_c = null;
         wh.field_d = 0;
@@ -50,7 +50,7 @@ final class gf {
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
-        wk var3 = null;
+        RgbSprite var3 = null;
         int var4 = 0;
         int var5 = 0;
         int[] var9 = null;
@@ -58,16 +58,16 @@ final class gf {
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
-        var5 = SteelSentinels.field_G;
+        var5 = SteelSentinels.obfuscationControl;
         try {
           jk.a((byte) 6);
           le.field_K = 77;
           bc.a(49, 9, 56, 0, fa.field_b, 16711680, 255);
           bc.a(83, 1, 63, 56, fa.field_b, 16711680, 255);
           ta.field_e = pf.field_b;
-          rf.a(ea.field_m, 320, 8, 8, 8, 8, hk.field_Tb, 16777215, 0, pl.field_U, 1146810, 240, 2, param0 - 94, wc.field_d);
-          im.a(hk.field_Tb, 0, 8, -13782, ea.field_m, 16777215, 8, 8, 2, 240, pl.field_U, 1146810, wc.field_d, 320, 8);
-          eb.field_s = new wk[9];
+          rf.a(Sprite.field_m, 320, 8, 8, 8, 8, hk.field_Tb, 16777215, 0, pl.field_U, 1146810, 240, 2, param0 - 94, wc.field_d);
+          im.a(hk.field_Tb, 0, 8, -13782, Sprite.field_m, 16777215, 8, 8, 2, 240, pl.field_U, 1146810, wc.field_d, 320, 8);
+          eb.field_s = new RgbSprite[9];
           for (var1_int = 0; var1_int < 9; var1_int++) {
             eb.field_s[var1_int] = pl.field_T[var1_int].g();
             if (var1_int < 3) {
@@ -81,8 +81,8 @@ final class gf {
             }
           }
           var1_intLifetime1 = aj.field_r[0].field_B;
-          aj.field_r[1] = new wk(var1_intLifetime1, var1_intLifetime1);
-          aj.field_r[2] = new wk(var1_intLifetime1, var1_intLifetime1);
+          aj.field_r[1] = new RgbSprite(var1_intLifetime1, var1_intLifetime1);
+          aj.field_r[2] = new RgbSprite(var1_intLifetime1, var1_intLifetime1);
           var9 = aj.field_r[0].field_E;
           for (var3_int = 0; var9.length > var3_int; var3_int++) {
             if (var9[var3_int] == 16711680) {
@@ -130,9 +130,9 @@ final class gf {
           rh.field_v[24].d();
           si.field_E[1].c(0, 0, 4 * var1_intLifetime1, var1_intLifetime1 * 4);
           sb.field_bb.b((byte) 122);
-          ff.field_rb = new wk[20];
+          ff.field_rb = new RgbSprite[20];
           for (var4Lifetime3 = 0; 20 > var4Lifetime3; var4Lifetime3++) {
-            ff.field_rb[var4Lifetime3] = new wk(20, 20);
+            ff.field_rb[var4Lifetime3] = new RgbSprite(20, 20);
             ff.field_rb[var4Lifetime3].d();
             hb.field_j[var4Lifetime3].b(0, 0);
           }

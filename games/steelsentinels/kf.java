@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kf extends ck {
+final class kf extends IntrusiveNode {
     String[][] field_x;
     static String field_o;
     static boolean field_s;
@@ -17,7 +17,7 @@ final class kf extends ck {
     static int field_p;
     static String field_B;
     static String[] field_A;
-    static gh field_y;
+    static SceneWidget field_y;
 
     public static void d(int param0) {
         if (param0 == 90) {

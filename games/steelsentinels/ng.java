@@ -3,15 +3,15 @@
  */
 final class ng {
     private boolean field_v;
-    private wk field_t;
-    private wk field_a;
+    private RgbSprite field_t;
+    private RgbSprite field_a;
     private String field_l;
-    private wk field_u;
+    private RgbSprite field_u;
     private int field_h;
     private String[] field_d;
     private int field_j;
-    static wk[] field_p;
-    private gk[] field_s;
+    static RgbSprite[] field_p;
+    private IndexedSprite[] field_s;
     private int field_q;
     private int field_e;
     private int field_i;
@@ -22,7 +22,7 @@ final class ng {
     private static long[] field_f;
     static String field_o;
     static boolean field_k;
-    static gk[] field_c;
+    static IndexedSprite[] field_c;
     static String field_b;
 
     private final int a(int param0, int param1, byte param2) {
@@ -51,26 +51,26 @@ final class ng {
         int var2;
         int var3;
         int var4;
-        mi var5;
+        BitmapFont var5;
         int var2Lifetime1;
         int var2Lifetime2;
         int var3Lifetime1;
-        var4 = SteelSentinels.field_G;
-        pb.e(9, 9, 622, 47, 4540749, 65793);
-        pb.a(9, 257, 622, 33, 2585);
-        pb.e(9, 265, 622, 11, 2585, 1515566);
+        var4 = SteelSentinels.obfuscationControl;
+        SoftwareRaster.e(9, 9, 622, 47, 4540749, 65793);
+        SoftwareRaster.a(9, 257, 622, 33, 2585);
+        SoftwareRaster.e(9, 265, 622, 11, 2585, 1515566);
         var2 = 0;
         var3 = 14;
         while (var2 < 4) {
-          pb.e(var3, 331, 117, 90, 460551, 3881787);
+          SoftwareRaster.e(var3, 331, 117, 90, 460551, 3881787);
           var2++;
           var3 += 121;
         }
         var2Lifetime1 = 0;
         var3Lifetime1 = 299;
         while (var2Lifetime1 < 2) {
-          pb.e(508, var3Lifetime1, 127, 42, 1130115, 3365268);
-          pb.a(508, 42 + var3Lifetime1, 127, 42, 12410);
+          SoftwareRaster.e(508, var3Lifetime1, 127, 42, 1130115, 3365268);
+          SoftwareRaster.a(508, 42 + var3Lifetime1, 127, 42, 12410);
           var3Lifetime1 += 91;
           var2Lifetime1++;
         }
@@ -86,8 +86,8 @@ final class ng {
           rj.field_d.a("pump32", (byte) 90)) {
           ol.field_Wb = gl.a(pa.field_a, (byte) 85, "members_expansion_screen", "frame");
           di.field_f = rl.a(pa.field_a, "members_expansion_screen", "arrow", false);
-          lg.field_g = vd.a(rj.field_d, "arialish12", pa.field_a, -1, "");
-          n.field_w = be.a(pa.field_a, rj.field_d, (byte) -69, "", "pump32");
+          GameApplet.field_g = vd.a(rj.field_d, "arialish12", pa.field_a, -1, "");
+          FunOrbClient.field_w = be.a(pa.field_a, rj.field_d, (byte) -69, "", "pump32");
           qe.field_g = dn.a("members_expansion_screen", -42, "benefit_orbs", pa.field_a);
           rc.field_d = dn.a("members_expansion_screen", -83, "button_text", pa.field_a);
           ce.field_v = ec.a((byte) -80, "button_highlights", pa.field_a, "members_expansion_screen");
@@ -129,15 +129,15 @@ final class ng {
           }
         }
         this.field_t.a(16, 302);
-        lg.field_g.a(this.field_d[this.field_q], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+        GameApplet.field_g.a(this.field_d[this.field_q], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
         qe.field_g.a(30, 330);
-        lg.field_g.a(fe.field_A[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        lg.field_g.a(fe.field_A[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        lg.field_g.a(fe.field_A[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        GameApplet.field_g.a(fe.field_A[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        GameApplet.field_g.a(fe.field_A[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        GameApplet.field_g.a(fe.field_A[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
         rc.field_d.a(508 + (-rc.field_d.field_z + 127) / 2, 315);
         if (!param0) {
-          var5 = (mi) null;
-          this.a(-67, (int[]) null, -60, 99, (String) null, 51, (mi) null, (byte) 82);
+          var5 = (BitmapFont) null;
+          this.a(-67, (int[]) null, -60, 99, (String) null, 51, (BitmapFont) null, (byte) 82);
         }
         if (this.field_n.field_e == 0) {
           ce.field_v[0].a(508, 299);
@@ -155,7 +155,7 @@ final class ng {
         int var5;
         int var6;
         int var4Lifetime1;
-        var6 = SteelSentinels.field_G;
+        var6 = SteelSentinels.obfuscationControl;
         this.field_i = this.field_i + 65536;
         while (wa.a(this.field_i, cf.field_x, (byte) -27) >= 65536) {
           this.field_i = this.field_i - cf.field_x;
@@ -278,38 +278,38 @@ final class ng {
         int var3 = 0;
         int[] var16 = null;
         int[] var17 = null;
-        wk var5 = null;
+        RgbSprite var5 = null;
         String var6 = null;
         String var7 = null;
         if (null == this.field_u) {
-          if (null == n.field_w) {
+          if (null == FunOrbClient.field_w) {
             return;
           }
-          this.field_u = new wk(622, 47);
+          this.field_u = new RgbSprite(622, 47);
           q.a(this.field_u, (byte) -124);
-          pb.e(0, 0, 622, 47, 4540749, 65793);
+          SoftwareRaster.e(0, 0, 622, 47, 4540749, 65793);
           if (param0 < 86) {
             this.a(-93, false);
           }
           var2 = 16448250;
           var3 = 10068666;
           var16 = gd.b(var2, var3, (byte) -104);
-          this.a(0, var16, 622, 0, this.field_l, 47, n.field_w, (byte) -27);
+          this.a(0, var16, 622, 0, this.field_l, 47, FunOrbClient.field_w, (byte) -27);
           tk.$cfr$intArgs$f$20d51497949f(118);
-          this.field_t = new wk(475, 24);
-          this.a(24, 0.75f, this.field_t, 0, 475, lb.field_Yb, -4, n.field_w, var16, 259);
+          this.field_t = new RgbSprite(475, 24);
+          this.a(24, 0.75f, this.field_t, 0, 475, lb.field_Yb, -4, FunOrbClient.field_w, var16, 259);
           var17 = gd.b(526344, 526344, (byte) -104);
-          var5 = new wk(121, 122);
+          var5 = new RgbSprite(121, 122);
           q.a(var5, (byte) -117);
-          pb.e(0, 0, var5.field_A, var5.field_F / 2, 16180917, 16306250);
-          pb.e(0, var5.field_F / 2, var5.field_A, var5.field_F, 16306250, 15568919);
+          SoftwareRaster.e(0, 0, var5.field_A, var5.field_F / 2, 16180917, 16306250);
+          SoftwareRaster.e(0, var5.field_F / 2, var5.field_A, var5.field_F, 16306250, 15568919);
           var6 = cl.field_d;
           var7 = eb.field_t;
-          this.a(var5.field_F, 0.5f, var5, 0, var5.field_A, var6, -16, n.field_w, var17, 259);
-          this.a(var5.field_F, 0.5f, var5, 0, var5.field_A, var7, 20, n.field_w, var17, 259);
-          this.a(var5.field_F / 3, 0.699999988079071f, var5, 0, var5.field_A, cm.field_m[this.field_g], 12 + (var5.field_F / 2 - n.field_w.field_G), n.field_w, var17, 259);
+          this.a(var5.field_F, 0.5f, var5, 0, var5.field_A, var6, -16, FunOrbClient.field_w, var17, 259);
+          this.a(var5.field_F, 0.5f, var5, 0, var5.field_A, var7, 20, FunOrbClient.field_w, var17, 259);
+          this.a(var5.field_F / 3, 0.699999988079071f, var5, 0, var5.field_A, cm.field_m[this.field_g], 12 + (var5.field_F / 2 - FunOrbClient.field_w.field_G), FunOrbClient.field_w, var17, 259);
           tk.$cfr$intArgs$f$20d51497949f(118);
-          this.field_a = new wk(121, 122);
+          this.field_a = new RgbSprite(121, 122);
           q.a(this.field_a, (byte) -75);
           var5.d(this.field_a.field_A / 2, this.field_a.field_F / 2, -2048, 4096);
           tk.$cfr$intArgs$f$20d51497949f(112);
@@ -318,28 +318,28 @@ final class ng {
     }
 
     private final void d(byte param0) {
-        gk var2;
+        IndexedSprite var2;
         int var3;
         int var4;
         int var5;
-        gk var6;
-        gk var7;
-        gk var2Lifetime1;
-        var5 = SteelSentinels.field_G;
+        IndexedSprite var6;
+        IndexedSprite var7;
+        IndexedSprite var2Lifetime1;
+        var5 = SteelSentinels.obfuscationControl;
         if (null == this.field_s) {
-          if (null != lg.field_g) {
-            lg.field_g.a(eb.field_q, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+          if (null != GameApplet.field_g) {
+            GameApplet.field_g.a(eb.field_q, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
           return;
         }
         var6 = this.field_s[this.field_q];
         var2 = var6;
         if (param0 >= -116) {
-          this.field_s = (gk[]) null;
+          this.field_s = (IndexedSprite[]) null;
         }
         if (var2 == null) {
-          if (null != lg.field_g) {
-            lg.field_g.a(eb.field_q, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+          if (null != GameApplet.field_g) {
+            GameApplet.field_g.a(eb.field_q, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
           }
         } else {
           var6.a(9, 58);
@@ -360,7 +360,7 @@ final class ng {
         return;
     }
 
-    private final void a(java.applet.Applet param0, boolean param1, boolean param2, String[] param3, gk[] param4, String param5) {
+    private final void a(java.applet.Applet param0, boolean param1, boolean param2, String[] param3, IndexedSprite[] param4, String param5) {
         String var7 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -373,7 +373,7 @@ final class ng {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7_ref = null;
-        mi var8 = null;
+        BitmapFont var8 = null;
         try {
           var7 = param0.getParameter("currency");
           if (var7 != null &&
@@ -389,8 +389,8 @@ final class ng {
           if (null != this.field_s &&
             this.field_s.length >= 3) {
             if (param1) {
-              var8 = (mi) null;
-              this.a(-88, (int[]) null, 11, -49, (String) null, -42, (mi) null, (byte) 27);
+              var8 = (BitmapFont) null;
+              this.a(-88, (int[]) null, 11, -49, (String) null, -42, (BitmapFont) null, (byte) 27);
             }
             ql.field_cc = param2;
             return;
@@ -428,19 +428,19 @@ final class ng {
         }
     }
 
-    private final void a(int param0, int[] param1, int param2, int param3, String param4, int param5, mi param6, byte param7) {
+    private final void a(int param0, int[] param1, int param2, int param3, String param4, int param5, BitmapFont param6, byte param7) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
-        int var12 = SteelSentinels.field_G;
+        int var12 = SteelSentinels.obfuscationControl;
         try {
           jl.a(false);
           var9_int = param3;
           if (param7 != -27) {
-            this.field_a = (wk) null;
+            this.field_a = (RgbSprite) null;
           }
           while (param5 > var9_int) {
-            pb.a(param0, var9_int, param2, var9_int + 1);
+            SoftwareRaster.a(param0, var9_int, param2, var9_int + 1);
             var10 = param1.length * var9_int / param5;
             var11 = param1[-1 - var10 + param1.length];
             param6.a(param4, param0, param3, param2, param5, var11, -1, 1, 1, 0);
@@ -452,7 +452,7 @@ final class ng {
         }
     }
 
-    private final void a(int param0, float param1, wk param2, int param3, int param4, String param5, int param6, mi param7, int[] param8, int param9) {
+    private final void a(int param0, float param1, RgbSprite param2, int param3, int param4, String param5, int param6, BitmapFont param7, int[] param8, int param9) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -466,11 +466,11 @@ final class ng {
         int var11_int = 0;
         RuntimeException var11 = null;
         int var12 = 0;
-        wk var13 = null;
+        RgbSprite var13 = null;
         try {
           var11_int = (int)((float)param4 / param1);
           var12 = (int)((float)param0 / param1);
-          var13 = new wk(var11_int, var12);
+          var13 = new RgbSprite(var11_int, var12);
           q.a(var13, (byte) -113);
           param2.c((int)((float)(-param3) / param1), (int)((float)(-param6) / param1), (int)((float)param2.field_A / param1), (int)((float)param2.field_F / param1));
           if (param9 != 259) {
@@ -536,7 +536,7 @@ final class ng {
 
     private final void a(int param0) {
         try {
-          re.a(wl.d((byte) -21), 9268);
+          re.a(Projectile.d((byte) -21), 9268);
         } catch (Exception exception) {
           exception.printStackTrace();
         }
@@ -545,7 +545,7 @@ final class ng {
         }
     }
 
-    ng(java.applet.Applet param0, String param1, gk[] param2, String[] param3) {
+    ng(java.applet.Applet param0, String param1, IndexedSprite[] param2, String[] param3) {
         this.field_v = true;
         this.field_h = 0;
         this.field_i = 0;

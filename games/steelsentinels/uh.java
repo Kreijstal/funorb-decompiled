@@ -5,14 +5,14 @@ final class uh {
     static lb field_j;
     static int field_e;
     static String[] field_i;
-    private ck[] field_d;
+    private IntrusiveNode[] field_d;
     static String field_f;
     static String field_h;
-    static wk field_k;
-    private ck field_a;
+    static RgbSprite field_k;
+    private IntrusiveNode field_a;
     private int field_b;
     private int field_g;
-    private ck field_c;
+    private IntrusiveNode field_c;
 
     public static void c(int param0) {
         field_h = null;
@@ -23,21 +23,21 @@ final class uh {
         field_i = null;
     }
 
-    final void a(long param0, ck param1, int param2) {
-        ck var5 = null;
+    final void a(long param0, IntrusiveNode param1, int param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (param1.field_i != null) {
-            param1.b(param2 + 1820);
+          if (param1.previous != null) {
+            param1.unlink(param2 + 1820);
           }
           var5 = this.field_d[(int)(param0 & (long)(this.field_b - 1))];
-          param1.field_i = var5.field_i;
-          param1.field_k = var5;
-          param1.field_i.field_k = param1;
+          param1.previous = var5.previous;
+          param1.next = var5;
+          param1.previous.next = param1;
           if (param2 != -1816) {
             uh.c(30);
           }
-          param1.field_j = param0;
-          param1.field_k.field_i = param1;
+          param1.key = param0;
+          param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "uh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -56,19 +56,19 @@ final class uh {
         }
     }
 
-    final ck a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int fieldTemp$3 = 0;
         int fieldTemp$2 = 0;
         int var3;
-        ck var4;
-        ck var35;
-        ck var36;
-        ck var37;
-        ck var38;
-        ck var41;
-        var3 = SteelSentinels.field_G;
+        IntrusiveNode var4;
+        IntrusiveNode var35;
+        IntrusiveNode var36;
+        IntrusiveNode var37;
+        IntrusiveNode var38;
+        IntrusiveNode var41;
+        var3 = SteelSentinels.obfuscationControl;
         if (param0 > 92) {
           if (this.field_g <= 0) {
             do {
@@ -77,14 +77,14 @@ final class uh {
               }
               fieldTemp$1 = this.field_g;
               this.field_g = this.field_g + 1;
-              var37 = this.field_d[fieldTemp$1].field_k;
+              var37 = this.field_d[fieldTemp$1].next;
             } while (this.field_d[this.field_g - 1] == var37);
-            this.field_a = var37.field_k;
+            this.field_a = var37.next;
             return var37;
           }
           if (this.field_a != this.field_d[-1 + this.field_g]) {
             var41 = this.field_a;
-            this.field_a = var41.field_k;
+            this.field_a = var41.next;
             return var41;
           }
           do {
@@ -93,12 +93,12 @@ final class uh {
             }
             fieldTemp$0 = this.field_g;
             this.field_g = this.field_g + 1;
-            var38 = this.field_d[fieldTemp$0].field_k;
+            var38 = this.field_d[fieldTemp$0].next;
           } while (this.field_d[this.field_g - 1] == var38);
-          this.field_a = var38.field_k;
+          this.field_a = var38.next;
           return var38;
         }
-        this.field_d = (ck[]) null;
+        this.field_d = (IntrusiveNode[]) null;
         if (this.field_g <= 0) {
           do {
             if (this.field_g >= this.field_b) {
@@ -106,14 +106,14 @@ final class uh {
             }
             fieldTemp$3 = this.field_g;
             this.field_g = this.field_g + 1;
-            var4 = this.field_d[fieldTemp$3].field_k;
+            var4 = this.field_d[fieldTemp$3].next;
           } while (this.field_d[this.field_g - 1] == var4);
-          this.field_a = var4.field_k;
+          this.field_a = var4.next;
           return var4;
         }
         if (this.field_a != this.field_d[-1 + this.field_g]) {
           var35 = this.field_a;
-          this.field_a = var35.field_k;
+          this.field_a = var35.next;
           return var35;
         }
         do {
@@ -122,9 +122,9 @@ final class uh {
           }
           fieldTemp$2 = this.field_g;
           this.field_g = this.field_g + 1;
-          var36 = this.field_d[fieldTemp$2].field_k;
+          var36 = this.field_d[fieldTemp$2].next;
         } while (this.field_d[this.field_g - 1] == var36);
-        this.field_a = var36.field_k;
+        this.field_a = var36.next;
         return var36;
     }
 
@@ -135,12 +135,12 @@ final class uh {
           var3 = param1 >> 31 & -1 + param2;
           return var3 + (param1 + (param1 >>> 31)) % param2;
         }
-        field_k = (wk) null;
+        field_k = (RgbSprite) null;
         var3Lifetime1 = param1 >> 31 & -1 + param2;
         return var3Lifetime1 + (param1 + (param1 >>> 31)) % param2;
     }
 
-    final static void a(int param0, wk[] param1) {
+    final static void a(int param0, RgbSprite[] param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -150,8 +150,8 @@ final class uh {
           if (param0 != 1) {
             return;
           }
-          jb.field_S = param1;
-          if (null != jb.field_S &&
+          Explosion.field_S = param1;
+          if (null != Explosion.field_S &&
             param1.length < 3) {
             throw new IllegalArgumentException("");
           }
@@ -170,35 +170,35 @@ final class uh {
         }
     }
 
-    final ck b(int param0) {
+    final IntrusiveNode b(int param0) {
         this.field_g = param0;
         return this.a((byte) 113);
     }
 
-    final ck a(long param0, int param1) {
-        ck var5 = null;
-        int var6 = SteelSentinels.field_G;
-        ck var4 = this.field_d[(int)(param0 & (long)(-1 + this.field_b))];
-        this.field_c = var4.field_k;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var5 = null;
+        int var6 = SteelSentinels.obfuscationControl;
+        IntrusiveNode var4 = this.field_d[(int)(param0 & (long)(-1 + this.field_b))];
+        this.field_c = var4.next;
         while (var4 != this.field_c) {
-          if (~this.field_c.field_j == ~param0) {
+          if (~this.field_c.key == ~param0) {
             var5 = this.field_c;
-            this.field_c = this.field_c.field_k;
+            this.field_c = this.field_c.next;
             return var5;
           }
-          this.field_c = this.field_c.field_k;
+          this.field_c = this.field_c.next;
         }
         if (param1 >= 122) {
           this.field_c = null;
           return null;
         }
-        return (ck) null;
+        return (IntrusiveNode) null;
     }
 
-    final static gk a(gk param0, int[] param1, boolean param2) {
-        gk var3 = null;
+    final static IndexedSprite a(IndexedSprite param0, int[] param1, boolean param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        gk stackIn_3_0 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -206,7 +206,7 @@ final class uh {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new gk(0, 0, 0);
+          var3 = new IndexedSprite(0, 0, 0);
           var3.field_a = param0.field_a;
           var3.field_i = param0.field_i;
           if (param2) {
@@ -242,17 +242,17 @@ final class uh {
 
     uh(int param0) {
         int var2 = 0;
-        ck dupTemp$1 = null;
-        ck var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_g = 0;
-        this.field_d = new ck[param0];
+        this.field_d = new IntrusiveNode[param0];
         this.field_b = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new ck();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_d[var2] = dupTemp$1;
-          var3.field_k = var3;
-          var3.field_i = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 

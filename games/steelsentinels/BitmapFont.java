@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mi extends kd {
+abstract class BitmapFont extends DualNode {
     private int[] field_C;
     private int[] field_y;
     int field_G;
@@ -20,7 +20,7 @@ abstract class mi extends kd {
     private static int field_O;
     int field_F;
     int field_W;
-    private ea[] field_E;
+    private Sprite[] field_E;
     private static int field_H;
     private static int field_T;
     private static int field_Q;
@@ -206,7 +206,7 @@ abstract class mi extends kd {
         field_M = null;
     }
 
-    final static String a(mi param0, String param1, int param2) {
+    final static String a(BitmapFont param0, String param1, int param2) {
         int var6 = 0;
         int var3;
         int var4;
@@ -279,7 +279,7 @@ abstract class mi extends kd {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        ea var11_ref_ea = null;
+        Sprite var11_ref_ea = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -386,10 +386,10 @@ abstract class mi extends kd {
               }
               param1 = param1 + this.field_B[var8];
               if (field_S != -1) {
-                pb.g(var11, param2 + (int)((double)this.field_W * 0.7), param1 - var11, field_S);
+                SoftwareRaster.g(var11, param2 + (int)((double)this.field_W * 0.7), param1 - var11, field_S);
               }
               if (field_V != -1) {
-                pb.g(var11, param2 + this.field_W + 1, param1 - var11, field_V);
+                SoftwareRaster.g(var11, param2 + this.field_W + 1, param1 - var11, field_V);
               }
               var5 = var8;
             }
@@ -494,7 +494,7 @@ abstract class mi extends kd {
         return this.a(param0, new int[]{param1}, field_M);
     }
 
-    final void a(ea[] param0, int[] param1) {
+    final void a(Sprite[] param0, int[] param1) {
         if (param1 != null &&
           param1.length != param0.length) {
           throw new IllegalArgumentException();
@@ -629,7 +629,7 @@ abstract class mi extends kd {
               for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
                 if (var8Lifetime2 != 32 &&
                   var8Lifetime2 != 160) {
-                  this.field_J[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)mi.a(var15, var16, var17, this.field_B, var14, var7Lifetime2, var8Lifetime2);
+                  this.field_J[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)BitmapFont.a(var15, var16, var17, this.field_B, var14, var7Lifetime2, var8Lifetime2);
                 }
               }
             }
@@ -948,7 +948,7 @@ abstract class mi extends kd {
         return var4;
     }
 
-    mi(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
+    BitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4) {
         int var8 = 0;
         int var6;
         int var7;

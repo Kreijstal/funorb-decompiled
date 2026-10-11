@@ -9,13 +9,13 @@ final class im {
     static String field_c;
     static String field_g;
     static String field_i;
-    static gh field_f;
+    static SceneWidget field_f;
     static boolean field_b;
 
-    final static wk a(cm param0, int param1, int param2, int param3) {
+    final static RgbSprite a(cm param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        wk stackIn_6_0 = null;
+        RgbSprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -23,7 +23,7 @@ final class im {
         try {
           if (!wa.a((byte) 30, param1, param2, param0)) {
             stackIn_2_0 = null;
-            return (wk) (stackIn_2_0);
+            return (RgbSprite) (stackIn_2_0);
           }
           if (param3 != 1048576) {
             im.b((byte) 103);
@@ -50,30 +50,30 @@ final class im {
         cm var3 = null;
         cc var4 = null;
         RuntimeException decompiledCaughtException = null;
-        var2 = SteelSentinels.field_G;
+        var2 = SteelSentinels.obfuscationControl;
         try {
           ad.field_f = false;
           nf.field_b = null;
           ni.field_a = null;
           if (q.field_m != null) {
-            q.field_m.g(6);
+            q.field_m.clear(6);
             q.field_m = null;
           }
           t.field_c = null;
           if (ci.field_e != null) {
-            ci.field_e.g(6);
+            ci.field_e.clear(6);
             ci.field_e = null;
           }
           fm.field_a = null;
           if (null != o.field_d) {
-            o.field_d.g(6);
+            o.field_d.clear(6);
             o.field_d = null;
           }
           me.field_b = null;
           if (null != t.field_c) {
             var4 = (cc) (t.field_c.a(90));
             while (var4 != null) {
-              var4.e(480);
+              var4.unlinkDual(480);
               var4 = (cc) (t.field_c.a((byte) -66));
             }
             t.field_c = null;
@@ -126,7 +126,7 @@ final class im {
         return false;
     }
 
-    final static void a(wk[] param0, int param1, int param2, int param3, wk[] param4, int param5, int param6, int param7, int param8, int param9, mi param10, int param11, wk[] param12, int param13, int param14) {
+    final static void a(RgbSprite[] param0, int param1, int param2, int param3, RgbSprite[] param4, int param5, int param6, int param7, int param8, int param9, BitmapFont param10, int param11, RgbSprite[] param12, int param13, int param14) {
         int var15_int = 0;
         RuntimeException var15 = null;
         int var16 = 0;

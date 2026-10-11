@@ -10,8 +10,8 @@ final class pg extends fb {
     static String field_s;
     static boolean field_A;
     static int field_B;
-    static gh field_u;
-    static wk[] field_v;
+    static SceneWidget field_u;
+    static RgbSprite[] field_v;
     static Calendar field_x;
     static int[] field_z;
     static String field_y;
@@ -23,9 +23,9 @@ final class pg extends fb {
     final dj a(byte param0) {
         if (param0 <= 47) {
           this.a((byte) 26);
-          return qd.field_h;
+          return PartInstruction.field_h;
         }
-        return qd.field_h;
+        return PartInstruction.field_h;
     }
 
     final static void d(int param0) {
@@ -148,7 +148,7 @@ final class pg extends fb {
         String var11Lifetime1Lifetime1;
         String var11Lifetime1Lifetime2;
         String var11Lifetime5Lifetime1;
-        var13 = SteelSentinels.field_G;
+        var13 = SteelSentinels.obfuscationControl;
         if (param1 instanceof od) {
           var14 = (od) ((Object) param1);
           param1 = var14.field_l;

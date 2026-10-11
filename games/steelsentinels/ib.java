@@ -21,7 +21,7 @@ final class ib {
         RuntimeException var4 = null;
         int var5 = 0;
         int var8 = 0;
-        var8 = SteelSentinels.field_G;
+        var8 = SteelSentinels.obfuscationControl;
         try {
           if (param3 != null &&
             param3.field_z != null &&
@@ -32,7 +32,7 @@ final class ib {
             for (var6 = 0; var5 > var6; var6++) {
               boolean decompiledFrameCompleted0 = true;
               if (~param3.field_D[param2][var6] == ~param0.field_D &&
-                wl.a(-85, param3.field_x[param2][var6])) {
+                Projectile.a(-85, param3.field_x[param2][var6])) {
                 for (var7 = 0; var7 < var4_int; var7++) {
                   if (param0.field_q[var7] != param3.field_z[param2][var7 + var6 * var4_int]) {
                     decompiledFrameCompleted0 = false;

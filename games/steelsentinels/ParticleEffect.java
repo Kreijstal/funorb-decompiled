@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qb extends kd {
+final class ParticleEffect extends DualNode {
     static boolean field_J;
     int field_D;
     int field_A;
     boolean field_G;
     int field_B;
     int field_P;
-    static gh field_K;
+    static SceneWidget field_K;
     int field_M;
     int field_O;
     static String[][] field_y;
     static fm field_H;
-    ee field_z;
+    CombatWorld world;
     int field_I;
     int field_F;
-    static gh field_E;
+    static SceneWidget field_E;
     static String field_C;
-    static gk[] field_L;
+    static IndexedSprite[] field_L;
     static String field_N;
 
     public static void h(int param0) {
@@ -35,7 +35,7 @@ final class qb extends kd {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
-        wk[] var6 = null;
+        RgbSprite[] var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -44,28 +44,28 @@ final class qb extends kd {
         String var12 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6_ref = null;
-        var11 = SteelSentinels.field_G;
+        var11 = SteelSentinels.obfuscationControl;
         try {
           var6 = pd.field_Q;
-          if (qd.field_g > 0) {
+          if (PartInstruction.field_g > 0) {
             var6 = bg.field_C;
           }
           var7 = 8 * a.field_c / 50 % var6.length;
           de.a(-param1 + param4, param3 - param1, vh.field_b, param0 + 2 * param1, 160, (byte) -31, param1 * 2 + param5);
           var6[var7].e(param4, param3, 2254472);
-          pb.d(16, 4, -4 + param4, param3 - 4, 8 + param0, param5 + 8);
+          SoftwareRaster.d(16, 4, -4 + param4, param3 - 4, 8 + param0, param5 + 8);
           if (param2 < 26) {
             var12 = (String) null;
-            qb.a(112, -62, (String) null, 84, (String) null);
+            ParticleEffect.a(112, -62, (String) null, 84, (String) null);
           }
           var6[var7].e(param4, param3, 17561);
-          pb.d(8, 2, -4 + param4, param3 - 4, 8 + param0, param5 + 8);
+          SoftwareRaster.d(8, 2, -4 + param4, param3 - 4, 8 + param0, param5 + 8);
           var6[var7].a(param4, param3, 255);
           var8 = param0 + 2 * param1;
           var9 = 2 * param1 + param5;
           var10 = a.field_c / 10 % 2;
           while (var10 < var8) {
-            pb.f(param4 + (-param1 + var10), param3 - param1, var9, 0, 100);
+            SoftwareRaster.f(param4 + (-param1 + var10), param3 - param1, var9, 0, 100);
             var10 += 2;
             if (var11 == 0) {
               continue;
@@ -97,7 +97,7 @@ final class qb extends kd {
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
-        var10 = SteelSentinels.field_G;
+        var10 = SteelSentinels.obfuscationControl;
         var5 = (this.field_F >> 8) + param0;
         var6 = -124 / ((-25 - param3) / 54);
         var7 = (this.field_B >> 8) + param1;
@@ -186,7 +186,7 @@ final class qb extends kd {
                         return;
                       }
                       var9 = (500 - 2 * this.field_I) / 125;
-                      pb.a(var5 << 4, var7 << 4, var9 << 4, 31, hc.field_W);
+                      SoftwareRaster.a(var5 << 4, var7 << 4, var9 << 4, 31, hc.field_W);
                       if (var10 == 0) {
                         return;
                       }
@@ -195,7 +195,7 @@ final class qb extends kd {
                       return;
                     }
                     var9 = 16;
-                    pb.a(var5 << 4, var7 << 4, var9 << 4, 249, hc.field_X);
+                    SoftwareRaster.a(var5 << 4, var7 << 4, var9 << 4, 249, hc.field_X);
                     if (var10 == 0) {
                       return;
                     }
@@ -260,102 +260,102 @@ final class qb extends kd {
         if (param0 != -15809) {
           field_H = (fm) null;
         }
-        this.field_z = null;
+        this.world = null;
     }
 
     final static boolean g(int param0) {
         if (param0 != 2) {
-          qb.a(-13, 21, (byte) 84, -39, 29, 95);
+          ParticleEffect.a(-13, 21, (byte) 84, -39, 29, 95);
         }
         return wb.field_c == null ? kc.field_q : true;
     }
 
     final void c(byte param0) {
-        qb var2;
+        ParticleEffect var2;
         int var3;
         String var4;
-        var3 = SteelSentinels.field_G;
-        if (this.field_z == null) {
+        var3 = SteelSentinels.obfuscationControl;
+        if (this.world == null) {
           return;
         }
         this.field_F = this.field_F + this.field_A;
         this.field_B = this.field_B + this.field_O;
         if (param0 < 1) {
           var4 = (String) null;
-          qb.a(-116, -34, (String) null, -4, (String) null);
+          ParticleEffect.a(-116, -34, (String) null, -4, (String) null);
         }
         if (200 > this.field_I) {
           this.field_I = this.field_I + (int)(Math.random() * 4.0);
         }
-        if (this.field_z.field_ab.b(110) != 4) {
+        if (this.world.terrain.getTerrainType(110) != 4) {
           boolean decompiledFrameRemainder0 = true;
           if (!this.field_G) {
-            if (!(this.field_z.field_ab.a(false, this.field_F >> 4) <= -(this.field_B >> 4))) {
-              if ((this.field_z.field_ab.b(51) != 2 ||
-                !(this.field_z.field_ab.a(false, this.field_F >> 4) > 2048)) &&
+            if (!(this.world.terrain.getSecondaryHeightAt(false, this.field_F >> 4) <= -(this.field_B >> 4))) {
+              if ((this.world.terrain.getTerrainType(51) != 2 ||
+                !(this.world.terrain.getSecondaryHeightAt(false, this.field_F >> 4) > 2048)) &&
                 (decompiledFrameRemainder0 = ((this.field_M != 2 &&
                 3 != this.field_M &&
                 this.field_M != 9 &&
                 10 != this.field_M &&
                 this.field_M != 6) ||
-                this.field_z.field_ab.b((byte) 126, this.field_F >> 4) != this.field_z.field_ab.a(false, this.field_F >> 4)))) {
-                this.field_B = -(this.field_z.field_ab.a(false, this.field_F >> 4) << 4);
+                this.world.terrain.getSurfaceProfileAt((byte) 126, this.field_F >> 4) != this.world.terrain.getSecondaryHeightAt(false, this.field_F >> 4)))) {
+                this.field_B = -(this.world.terrain.getSecondaryHeightAt(false, this.field_F >> 4) << 4);
                 decompiledFrameRemainder0 = (var3 != 0);
               }
               if (decompiledFrameRemainder0) {
                 this.field_F = this.field_F - this.field_A;
                 this.field_A = 0;
                 if ((var3 != 0) &&
-                  (this.field_z.field_ab.b((byte) 122, this.field_F >> 4) < -(this.field_B >> 4))) {
+                  (this.world.terrain.getSurfaceProfileAt((byte) 122, this.field_F >> 4) < -(this.field_B >> 4))) {
                   if (this.field_M != 2 &&
                     this.field_M != 3 &&
                     this.field_M != 9 &&
                     this.field_M != 10 &&
                     this.field_M != 6 ||
-                    this.field_z.field_ab.b((byte) 127, this.field_F >> 4) != this.field_z.field_ab.a(false, this.field_F >> 4)) {
-                    this.field_B = -(this.field_z.field_ab.b((byte) 118, this.field_F >> 4) << 4);
+                    this.world.terrain.getSurfaceProfileAt((byte) 127, this.field_F >> 4) != this.world.terrain.getSecondaryHeightAt(false, this.field_F >> 4)) {
+                    this.field_B = -(this.world.terrain.getSurfaceProfileAt((byte) 118, this.field_F >> 4) << 4);
                   }
-                  if (this.field_z.field_ab.b((byte) 120, this.field_F >> 4) == this.field_z.field_ab.a(false, this.field_F >> 4)) {
+                  if (this.world.terrain.getSurfaceProfileAt((byte) 120, this.field_F >> 4) == this.world.terrain.getSecondaryHeightAt(false, this.field_F >> 4)) {
                     this.field_G = false;
                   }
                 }
               }
             }
           } else {
-            if (this.field_z.field_ab.b((byte) 122, this.field_F >> 4) < -(this.field_B >> 4)) {
+            if (this.world.terrain.getSurfaceProfileAt((byte) 122, this.field_F >> 4) < -(this.field_B >> 4)) {
               if (this.field_M != 2 &&
                 this.field_M != 3 &&
                 this.field_M != 9 &&
                 this.field_M != 10 &&
                 this.field_M != 6 ||
-                this.field_z.field_ab.b((byte) 127, this.field_F >> 4) != this.field_z.field_ab.a(false, this.field_F >> 4)) {
-                this.field_B = -(this.field_z.field_ab.b((byte) 118, this.field_F >> 4) << 4);
+                this.world.terrain.getSurfaceProfileAt((byte) 127, this.field_F >> 4) != this.world.terrain.getSecondaryHeightAt(false, this.field_F >> 4)) {
+                this.field_B = -(this.world.terrain.getSurfaceProfileAt((byte) 118, this.field_F >> 4) << 4);
               }
-              if (this.field_z.field_ab.b((byte) 120, this.field_F >> 4) == this.field_z.field_ab.a(false, this.field_F >> 4)) {
+              if (this.world.terrain.getSurfaceProfileAt((byte) 120, this.field_F >> 4) == this.world.terrain.getSecondaryHeightAt(false, this.field_F >> 4)) {
                 this.field_G = false;
               }
             }
           }
-          if (this.field_z.field_ab.a((byte) -96, this.field_F >> 4) > -(this.field_B >> 4)) {
-            this.field_B = -(this.field_z.field_ab.a((byte) -128, this.field_F >> 4) << 4);
+          if (this.world.terrain.getGroundHeightAt((byte) -96, this.field_F >> 4) > -(this.field_B >> 4)) {
+            this.field_B = -(this.world.terrain.getGroundHeightAt((byte) -128, this.field_F >> 4) << 4);
           }
         }
         if (this.field_M != 10) {
           this.field_A = this.field_A * 9 / 10;
           this.field_O = this.field_O * 9 / 10;
           if (var3 != 0) {
-            this.field_O = this.field_O + this.field_z.field_z;
-            var2 = nk.a(9, 0, this.field_z, 105, this.field_B, this.field_G, 100, 0, this.field_F, this.field_P);
-            this.field_z.field_O.a(3, var2);
+            this.field_O = this.field_O + this.world.field_z;
+            var2 = ArticulatedPart.a(9, 0, this.world, 105, this.field_B, this.field_G, 100, 0, this.field_F, this.field_P);
+            this.world.field_O.addLast(3, var2);
           }
         } else {
-          this.field_O = this.field_O + this.field_z.field_z;
-          var2 = nk.a(9, 0, this.field_z, 105, this.field_B, this.field_G, 100, 0, this.field_F, this.field_P);
-          this.field_z.field_O.a(3, var2);
+          this.field_O = this.field_O + this.world.field_z;
+          var2 = ArticulatedPart.a(9, 0, this.world, 105, this.field_B, this.field_G, 100, 0, this.field_F, this.field_P);
+          this.world.field_O.addLast(3, var2);
         }
         this.field_I = this.field_I + 1;
         if (this.field_I > this.field_D) {
-          this.field_z.field_J.a((byte) 110, (kd) (this));
+          this.world.field_J.a((byte) 110, (DualNode) (this));
         }
     }
 
@@ -375,10 +375,10 @@ final class qb extends kd {
         }
     }
 
-    qb() {
+    ParticleEffect() {
     }
 
-    final static void a(nk param0, gh param1, byte param2, boolean param3, int param4, int param5) {
+    final static void a(ArticulatedPart param0, SceneWidget param1, byte param2, boolean param3, int param4, int param5) {
         Object stackIn_304_0 = null;
         StringBuilder stackIn_304_1 = null;
         String stackIn_305_2 = null;
@@ -386,35 +386,35 @@ final class qb extends kd {
         String stackIn_308_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object var6 = null;
-        wk var7 = null;
+        RgbSprite var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        wk[] var13 = null;
+        RgbSprite[] var13 = null;
         int var8Lifetime1;
-        var12 = SteelSentinels.field_G;
+        var12 = SteelSentinels.obfuscationControl;
         try {
           var6 = null;
           if (param3 &&
-            param0.field_N >= 0 &&
+            param0.componentId >= 0 &&
             param0.field_Q != 1) {
             var13 = hl.field_p;
             var6 = var13;
-            if (var13.length <= param0.field_N) {
+            if (var13.length <= param0.componentId) {
               var6 = null;
             }
           }
           if (var6 != null &&
-            null != ((Object[]) (var6))[param0.field_N]) {
-            param1.field_Pb = (wk) (((Object[]) (var6))[param0.field_N]);
+            null != ((Object[]) (var6))[param0.componentId]) {
+            param1.field_Pb = (RgbSprite) (((Object[]) (var6))[param0.componentId]);
             return;
           }
-          var7 = new wk(param4, param5);
+          var7 = new RgbSprite(param4, param5);
           param1.field_Pb = var7;
           if (var6 != null) {
-            ((Object[]) (var6))[param0.field_N] = var7;
+            ((Object[]) (var6))[param0.componentId] = var7;
           }
           if (param2 != -93) {
             field_C = (String) null;
@@ -427,7 +427,7 @@ final class qb extends kd {
               var8 -= 10;
             }
             var10 = hj.field_w;
-            if (param0.field_N == 31) {
+            if (param0.componentId == 31) {
               var8 -= 20;
             }
             if (64 == param0.field_Q) {
@@ -445,79 +445,79 @@ final class qb extends kd {
               var8 -= 10;
               var9 += 10;
             }
-            if (param0.field_N == 95) {
+            if (param0.componentId == 95) {
               var8 -= 20;
             }
             if (4 == param0.field_Q) {
               var9 -= 20;
               hj.field_w = 3072;
             }
-            if (param0.field_N == 76) {
+            if (param0.componentId == 76) {
               var8 -= 20;
-              param0 = ul.a(102, (byte) 67);
+              param0 = NodeDeque.a(102, (byte) 67);
             }
-            if (66 == param0.field_N) {
+            if (66 == param0.componentId) {
               var8 -= 20;
-              param0 = ul.a(99, (byte) 67);
+              param0 = NodeDeque.a(99, (byte) 67);
             }
             if (param0.field_Q == 2048) {
               var9 -= 20;
               hj.field_w = 2048;
             }
-            if (param0.field_N == 80) {
+            if (param0.componentId == 80) {
               var8 -= 10;
               var9 += 10;
             }
             if (param0.field_Q == 8) {
               var9 += 20;
             }
-            if (param0.field_N == 59) {
+            if (param0.componentId == 59) {
               var9 -= 25;
             }
-            if (param0.field_N == 71) {
+            if (param0.componentId == 71) {
               var9 -= 15;
             }
-            if (77 == param0.field_N) {
+            if (77 == param0.componentId) {
               var9 -= 10;
             }
-            L22: {
-              L23: {
-                L24: {
-                  L25: {
-                    L26: {
-                      L27: {
-                        L28: {
-                          L29: {
-                            L30: {
-                              L31: {
-                                L32: {
-                                  L33: {
-                                    L34: {
-                                      L35: {
-                                        L36: {
-                                          L37: {
-                                            L38: {
-                                              L39: {
-                                                L40: {
-                                                  L41: {
-                                                    L42: {
-                                                      L43: {
-                                                        L44: {
-                                                          L45: {
-                                                            L46: {
-                                                              L47: {
-                                                                L48: {
-                                                                  L49: {
-                                                                    L50: {
-                                                                      L51: {
-                                                                        L52: {
-                                                                          L53: {
-                                                                            L54: {
-                                                                              L55: {
-                                                                                L56: {
-                                                                                  L57: {
-                                                                                    L58: {
-                                                                                      L59: {
+            regionExit1: {
+              regionExit2: {
+                regionExit3: {
+                  regionExit4: {
+                    regionExit5: {
+                      regionExit6: {
+                        regionExit7: {
+                          regionExit8: {
+                            regionExit9: {
+                              regionExit10: {
+                                regionExit11: {
+                                  regionExit12: {
+                                    regionExit13: {
+                                      regionExit14: {
+                                        regionExit15: {
+                                          regionExit16: {
+                                            regionExit17: {
+                                              regionExit18: {
+                                                regionExit19: {
+                                                  regionExit20: {
+                                                    regionExit21: {
+                                                      regionExit22: {
+                                                        regionExit23: {
+                                                          regionExit24: {
+                                                            regionExit25: {
+                                                              regionExit26: {
+                                                                regionExit27: {
+                                                                  regionExit28: {
+                                                                    regionExit29: {
+                                                                      regionExit30: {
+                                                                        regionExit31: {
+                                                                          regionExit32: {
+                                                                            regionExit33: {
+                                                                              regionExit34: {
+                                                                                regionExit35: {
+                                                                                  regionExit36: {
+                                                                                    regionExit37: {
+                                                                                      regionExit38: {
                                                                                         {
                                                                                           boolean decompiledFrameRemainder13 = true;
                                                                                           {
@@ -546,7 +546,7 @@ final class qb extends kd {
                                                                                                                   boolean decompiledFrameRemainder1 = true;
                                                                                                                   {
                                                                                                                     boolean decompiledFrameRemainder0 = true;
-                                                                                                                    var11 = param0.field_N;
+                                                                                                                    var11 = param0.componentId;
                                                                                                                     if (1 != var11) {
                                                                                                                       decompiledFrameRemainder0 = !(53 == var11 &&
                                                                                                                         var12 == 0);
@@ -588,138 +588,138 @@ final class qb extends kd {
                                                                                                                                                   if (decompiledFrameRemainder13) {
                                                                                                                                                     if (var11 == 70 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L59;
+                                                                                                                                                      break regionExit38;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 76) {
-                                                                                                                                                      break L58;
+                                                                                                                                                      break regionExit37;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 102) {
-                                                                                                                                                      break L58;
+                                                                                                                                                      break regionExit37;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 85) {
-                                                                                                                                                      break L57;
+                                                                                                                                                      break regionExit36;
                                                                                                                                                     }
                                                                                                                                                     if (80 == var11 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L56;
+                                                                                                                                                      break regionExit35;
                                                                                                                                                     }
                                                                                                                                                     if (89 == var11) {
-                                                                                                                                                      break L55;
+                                                                                                                                                      break regionExit34;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 93) {
-                                                                                                                                                      break L54;
+                                                                                                                                                      break regionExit33;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 3 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L53;
+                                                                                                                                                      break regionExit32;
                                                                                                                                                     }
                                                                                                                                                     if (54 == var11) {
-                                                                                                                                                      break L52;
+                                                                                                                                                      break regionExit31;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 67) {
-                                                                                                                                                      break L51;
+                                                                                                                                                      break regionExit30;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 71 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L50;
+                                                                                                                                                      break regionExit29;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 73) {
-                                                                                                                                                      break L49;
+                                                                                                                                                      break regionExit28;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 77 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L48;
+                                                                                                                                                      break regionExit27;
                                                                                                                                                     }
                                                                                                                                                     if (81 == var11 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L47;
+                                                                                                                                                      break regionExit26;
                                                                                                                                                     }
                                                                                                                                                     if (86 == var11) {
-                                                                                                                                                      break L46;
+                                                                                                                                                      break regionExit25;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 90) {
-                                                                                                                                                      break L45;
+                                                                                                                                                      break regionExit24;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 83 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L44;
+                                                                                                                                                      break regionExit23;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 28 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L43;
+                                                                                                                                                      break regionExit22;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 29 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L42;
+                                                                                                                                                      break regionExit21;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 30) {
-                                                                                                                                                      break L41;
+                                                                                                                                                      break regionExit20;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 31 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L40;
+                                                                                                                                                      break regionExit19;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 35) {
-                                                                                                                                                      break L39;
+                                                                                                                                                      break regionExit18;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 32) {
-                                                                                                                                                      break L38;
+                                                                                                                                                      break regionExit17;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 33 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L37;
+                                                                                                                                                      break regionExit16;
                                                                                                                                                     }
                                                                                                                                                     if (34 == var11) {
-                                                                                                                                                      break L36;
+                                                                                                                                                      break regionExit15;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 38 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L35;
+                                                                                                                                                      break regionExit14;
                                                                                                                                                     }
                                                                                                                                                     if (43 == var11 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L34;
+                                                                                                                                                      break regionExit13;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 48) {
-                                                                                                                                                      break L33;
+                                                                                                                                                      break regionExit12;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 52) {
-                                                                                                                                                      break L32;
+                                                                                                                                                      break regionExit11;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 46) {
-                                                                                                                                                      break L31;
+                                                                                                                                                      break regionExit10;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 45 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L30;
+                                                                                                                                                      break regionExit9;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 44) {
-                                                                                                                                                      break L29;
+                                                                                                                                                      break regionExit8;
                                                                                                                                                     }
                                                                                                                                                     if (47 == var11 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L28;
+                                                                                                                                                      break regionExit7;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 36 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L27;
+                                                                                                                                                      break regionExit6;
                                                                                                                                                     }
                                                                                                                                                     if (37 == var11) {
-                                                                                                                                                      break L26;
+                                                                                                                                                      break regionExit5;
                                                                                                                                                     }
                                                                                                                                                     if (51 == var11 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L25;
+                                                                                                                                                      break regionExit4;
                                                                                                                                                     }
                                                                                                                                                     if (var11 == 50 &&
                                                                                                                                                       var12 == 0) {
-                                                                                                                                                      break L24;
+                                                                                                                                                      break regionExit3;
                                                                                                                                                     }
                                                                                                                                                     if (var11 != 49) {
-                                                                                                                                                      break L22;
+                                                                                                                                                      break regionExit1;
                                                                                                                                                     }
                                                                                                                                                     if (var12 == 0) {
-                                                                                                                                                      break L23;
+                                                                                                                                                      break regionExit2;
                                                                                                                                                     }
                                                                                                                                                   }
                                                                                                                                                 }
@@ -754,7 +754,7 @@ final class qb extends kd {
                                                                                                                                                 var8 += 5;
                                                                                                                                                 var9 -= 8;
                                                                                                                                                 if (var12 == 0) {
-                                                                                                                                                  break L22;
+                                                                                                                                                  break regionExit1;
                                                                                                                                                 }
                                                                                                                                               }
                                                                                                                                             }
@@ -787,7 +787,7 @@ final class qb extends kd {
                                                                                                                                             var9 += 2;
                                                                                                                                             var8 -= 7;
                                                                                                                                             if (var12 == 0) {
-                                                                                                                                              break L22;
+                                                                                                                                              break regionExit1;
                                                                                                                                             }
                                                                                                                                           }
                                                                                                                                         }
@@ -818,7 +818,7 @@ final class qb extends kd {
                                                                                                                                         var9 -= 4;
                                                                                                                                         var8 += 10;
                                                                                                                                         if (var12 == 0) {
-                                                                                                                                          break L22;
+                                                                                                                                          break regionExit1;
                                                                                                                                         }
                                                                                                                                       }
                                                                                                                                     }
@@ -847,7 +847,7 @@ final class qb extends kd {
                                                                                                                                     var9 -= 5;
                                                                                                                                     var8 -= 4;
                                                                                                                                     if (var12 == 0) {
-                                                                                                                                      break L22;
+                                                                                                                                      break regionExit1;
                                                                                                                                     }
                                                                                                                                   }
                                                                                                                                 }
@@ -873,7 +873,7 @@ final class qb extends kd {
                                                                                                                               if (decompiledFrameRemainder4) {
                                                                                                                                 var9 -= 6;
                                                                                                                                 if (var12 == 0) {
-                                                                                                                                  break L22;
+                                                                                                                                  break regionExit1;
                                                                                                                                 }
                                                                                                                               }
                                                                                                                             }
@@ -898,7 +898,7 @@ final class qb extends kd {
                                                                                                                             var8 += 4;
                                                                                                                             var9 -= 10;
                                                                                                                             if (var12 == 0) {
-                                                                                                                              break L22;
+                                                                                                                              break regionExit1;
                                                                                                                             }
                                                                                                                           }
                                                                                                                         }
@@ -921,7 +921,7 @@ final class qb extends kd {
                                                                                                                         var9 -= 10;
                                                                                                                         var8 -= 8;
                                                                                                                         if (var12 == 0) {
-                                                                                                                          break L22;
+                                                                                                                          break regionExit1;
                                                                                                                         }
                                                                                                                       }
                                                                                                                     }
@@ -941,7 +941,7 @@ final class qb extends kd {
                                                                                                                   if (decompiledFrameRemainder7) {
                                                                                                                     var9 -= 2;
                                                                                                                     if (var12 == 0) {
-                                                                                                                      break L22;
+                                                                                                                      break regionExit1;
                                                                                                                     }
                                                                                                                   }
                                                                                                                 }
@@ -960,7 +960,7 @@ final class qb extends kd {
                                                                                                                 var8 -= 4;
                                                                                                                 var9 += 9;
                                                                                                                 if (var12 == 0) {
-                                                                                                                  break L22;
+                                                                                                                  break regionExit1;
                                                                                                                 }
                                                                                                               }
                                                                                                             }
@@ -976,7 +976,7 @@ final class qb extends kd {
                                                                                                           if (decompiledFrameRemainder9) {
                                                                                                             var9 -= 3;
                                                                                                             if (var12 == 0) {
-                                                                                                              break L22;
+                                                                                                              break regionExit1;
                                                                                                             }
                                                                                                           }
                                                                                                         }
@@ -991,7 +991,7 @@ final class qb extends kd {
                                                                                                         hj.field_w = 3000;
                                                                                                         var8 += 8;
                                                                                                         if (var12 == 0) {
-                                                                                                          break L22;
+                                                                                                          break regionExit1;
                                                                                                         }
                                                                                                       }
                                                                                                     }
@@ -1005,7 +1005,7 @@ final class qb extends kd {
                                                                                                     hj.field_w = 3300;
                                                                                                     var8 += 4;
                                                                                                     if (var12 == 0) {
-                                                                                                      break L22;
+                                                                                                      break regionExit1;
                                                                                                     }
                                                                                                   }
                                                                                                 }
@@ -1016,7 +1016,7 @@ final class qb extends kd {
                                                                                                 var8 -= 7;
                                                                                                 var9 += 8;
                                                                                                 if (var12 == 0) {
-                                                                                                  break L22;
+                                                                                                  break regionExit1;
                                                                                                 }
                                                                                               }
                                                                                             }
@@ -1025,218 +1025,218 @@ final class qb extends kd {
                                                                                             var9--;
                                                                                             hj.field_w = 2500;
                                                                                             if (var12 == 0) {
-                                                                                              break L22;
+                                                                                              break regionExit1;
                                                                                             }
                                                                                           }
                                                                                         }
                                                                                         var9 += 4;
                                                                                         hj.field_w = 2500;
                                                                                         if (var12 == 0) {
-                                                                                          break L22;
+                                                                                          break regionExit1;
                                                                                         }
                                                                                       }
                                                                                       var9 += 4;
                                                                                       var8 -= 4;
                                                                                       if (var12 == 0) {
-                                                                                        break L22;
+                                                                                        break regionExit1;
                                                                                       }
                                                                                     }
                                                                                     hj.field_w = 2700;
                                                                                     if (var12 == 0) {
-                                                                                      break L22;
+                                                                                      break regionExit1;
                                                                                     }
                                                                                   }
                                                                                   var9 += 10;
                                                                                   if (var12 == 0) {
-                                                                                    break L22;
+                                                                                    break regionExit1;
                                                                                   }
                                                                                 }
                                                                                 var8 += 4;
                                                                                 var9 += 2;
                                                                                 if (var12 == 0) {
-                                                                                  break L22;
+                                                                                  break regionExit1;
                                                                                 }
                                                                               }
                                                                               var9 += 8;
                                                                               var8 += 6;
                                                                               hj.field_w = 1600;
                                                                               if (var12 == 0) {
-                                                                                break L22;
+                                                                                break regionExit1;
                                                                               }
                                                                             }
                                                                             var9 += 2;
                                                                             hj.field_w = 1024;
                                                                             var8 -= 2;
                                                                             if (var12 == 0) {
-                                                                              break L22;
+                                                                              break regionExit1;
                                                                             }
                                                                           }
                                                                           var8 += 12;
                                                                           var9 -= 4;
                                                                           if (var12 == 0) {
-                                                                            break L22;
+                                                                            break regionExit1;
                                                                           }
                                                                         }
                                                                         var9 -= 14;
                                                                         if (var12 == 0) {
-                                                                          break L22;
+                                                                          break regionExit1;
                                                                         }
                                                                       }
                                                                       var9 -= 10;
                                                                       var8 += 12;
                                                                       if (var12 == 0) {
-                                                                        break L22;
+                                                                        break regionExit1;
                                                                       }
                                                                     }
                                                                     var9 -= 8;
                                                                     var8 -= 15;
                                                                     if (var12 == 0) {
-                                                                      break L22;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   hj.field_w = 2900;
                                                                   if (var12 == 0) {
-                                                                    break L22;
+                                                                    break regionExit1;
                                                                   }
                                                                 }
                                                                 var9 -= 4;
                                                                 var8 += 13;
                                                                 if (var12 == 0) {
-                                                                  break L22;
+                                                                  break regionExit1;
                                                                 }
                                                               }
                                                               hj.field_w = 3000;
                                                               var9 -= 2;
                                                               if (var12 == 0) {
-                                                                break L22;
+                                                                break regionExit1;
                                                               }
                                                             }
                                                             hj.field_w = 2300;
                                                             var8 += 25;
                                                             if (var12 == 0) {
-                                                              break L22;
+                                                              break regionExit1;
                                                             }
                                                           }
                                                           var9 -= 6;
                                                           if (var12 == 0) {
-                                                            break L22;
+                                                            break regionExit1;
                                                           }
                                                         }
                                                         var8 += 8;
                                                         if (var12 == 0) {
-                                                          break L22;
+                                                          break regionExit1;
                                                         }
                                                       }
                                                       var8 += 4;
                                                       if (var12 == 0) {
-                                                        break L22;
+                                                        break regionExit1;
                                                       }
                                                     }
                                                     var8 += 3;
                                                     if (var12 == 0) {
-                                                      break L22;
+                                                      break regionExit1;
                                                     }
                                                   }
                                                   var8 += 3;
                                                   var9 -= 4;
                                                   if (var12 == 0) {
-                                                    break L22;
+                                                    break regionExit1;
                                                   }
                                                 }
                                                 var8 -= 3;
                                                 hj.field_w = 2800;
                                                 if (var12 == 0) {
-                                                  break L22;
+                                                  break regionExit1;
                                                 }
                                               }
                                               hj.field_w = 3500;
                                               var8 -= 2;
                                               if (var12 == 0) {
-                                                break L22;
+                                                break regionExit1;
                                               }
                                             }
                                             hj.field_w = 2800;
                                             var8 -= 10;
                                             if (var12 == 0) {
-                                              break L22;
+                                              break regionExit1;
                                             }
                                           }
                                           var8 -= 3;
                                           hj.field_w = 3800;
                                           if (var12 == 0) {
-                                            break L22;
+                                            break regionExit1;
                                           }
                                         }
                                         var8 -= 4;
                                         hj.field_w = 3800;
                                         if (var12 == 0) {
-                                          break L22;
+                                          break regionExit1;
                                         }
                                       }
                                       hj.field_w = 3900;
                                       var8 -= 2;
                                       if (var12 == 0) {
-                                        break L22;
+                                        break regionExit1;
                                       }
                                     }
                                     var8 += 8;
                                     if (var12 == 0) {
-                                      break L22;
+                                      break regionExit1;
                                     }
                                   }
                                   var9--;
                                   var8 += 4;
                                   if (var12 == 0) {
-                                    break L22;
+                                    break regionExit1;
                                   }
                                 }
                                 var8 += 3;
                                 hj.field_w = 1800;
                                 if (var12 == 0) {
-                                  break L22;
+                                  break regionExit1;
                                 }
                               }
                               var8 += 4;
                               hj.field_w = 1800;
                               if (var12 == 0) {
-                                break L22;
+                                break regionExit1;
                               }
                             }
                             var8 += 2;
                             hj.field_w = 1550;
                             if (var12 == 0) {
-                              break L22;
+                              break regionExit1;
                             }
                           }
                           var9 -= 2;
                           var8 += 7;
                           if (var12 == 0) {
-                            break L22;
+                            break regionExit1;
                           }
                         }
                         var8 += 4;
                         if (var12 == 0) {
-                          break L22;
+                          break regionExit1;
                         }
                       }
                       hj.field_w = 3600;
                       if (var12 == 0) {
-                        break L22;
+                        break regionExit1;
                       }
                     }
                     hj.field_w = 3600;
                     if (var12 == 0) {
-                      break L22;
+                      break regionExit1;
                     }
                   }
                   hj.field_w = 3600;
                   if (var12 == 0) {
-                    break L22;
+                    break regionExit1;
                   }
                 }
                 hj.field_w = 3600;
                 if (var12 == 0) {
-                  break L22;
+                  break regionExit1;
                 }
               }
               var8 += 3;
@@ -1254,40 +1254,40 @@ final class qb extends kd {
             }
           }
           var8Lifetime1 = hj.field_w;
-          if (param0.field_N == 0) {
+          if (param0.componentId == 0) {
             hj.field_w = 1200;
           }
-          if (55 == param0.field_N) {
+          if (55 == param0.componentId) {
             hj.field_w = 1200;
           }
-          if (57 == param0.field_N) {
+          if (57 == param0.componentId) {
             hj.field_w = 1300;
           }
-          if (param0.field_N == 62) {
+          if (param0.componentId == 62) {
             hj.field_w = 1400;
           }
-          if (65 == param0.field_N) {
+          if (65 == param0.componentId) {
             hj.field_w = 1000;
           }
-          if (param0.field_N == 69) {
+          if (param0.componentId == 69) {
             hj.field_w = 1400;
           }
-          if (72 == param0.field_N) {
+          if (72 == param0.componentId) {
             hj.field_w = 1000;
           }
-          if (param0.field_N == 75) {
+          if (param0.componentId == 75) {
             hj.field_w = 1000;
           }
-          if (param0.field_N == 79) {
+          if (param0.componentId == 79) {
             hj.field_w = 1000;
           }
-          if (param0.field_N == 84) {
+          if (param0.componentId == 84) {
             hj.field_w = 1000;
           }
-          if (param0.field_N == 88) {
+          if (param0.componentId == 88) {
             hj.field_w = 1000;
           }
-          if (param0.field_N == 92) {
+          if (param0.componentId == 92) {
             hj.field_w = 700;
           }
           param0.a(0, false, param4 / 2, param5, (byte) 49, 0);

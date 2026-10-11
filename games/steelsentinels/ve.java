@@ -42,26 +42,26 @@ final class ve {
 
     final static void a(byte param0) {
         pa.field_d = new sf[17];
-        pa.field_d[0] = new sf(0, 170, 170, 300, 0, (wk) null, true);
+        pa.field_d[0] = new sf(0, 170, 170, 300, 0, (RgbSprite) null, true);
         if (param0 != 122) {
           return;
         }
-        pa.field_d[1] = new sf(1, 224, 110, 200, 0, (wk) null, false);
-        pa.field_d[2] = new sf(2, 224, 86, 400, 0, (wk) null, true);
-        pa.field_d[3] = new sf(3, 224, 60, 200, 0, (wk) null, false);
-        pa.field_d[4] = new sf(4, 224, 60, 285, 0, (wk) null, false);
-        pa.field_d[5] = new sf(5, 224, 60, 200, 0, (wk) null, false);
-        pa.field_d[6] = new sf(6, 224, 60, 285, 0, (wk) null, false);
-        pa.field_d[7] = new sf(7, 224, 120, 200, 0, (wk) null, false);
-        pa.field_d[8] = new sf(8, 224, 86, 285, 0, (wk) null, false);
-        pa.field_d[9] = new sf(9, 170, 86, 300, 0, (wk) null, true);
-        pa.field_d[10] = new sf(10, 224, 60, 200, 0, (wk) null, false);
-        pa.field_d[11] = new sf(11, 224, 60, 285, 0, (wk) null, false);
+        pa.field_d[1] = new sf(1, 224, 110, 200, 0, (RgbSprite) null, false);
+        pa.field_d[2] = new sf(2, 224, 86, 400, 0, (RgbSprite) null, true);
+        pa.field_d[3] = new sf(3, 224, 60, 200, 0, (RgbSprite) null, false);
+        pa.field_d[4] = new sf(4, 224, 60, 285, 0, (RgbSprite) null, false);
+        pa.field_d[5] = new sf(5, 224, 60, 200, 0, (RgbSprite) null, false);
+        pa.field_d[6] = new sf(6, 224, 60, 285, 0, (RgbSprite) null, false);
+        pa.field_d[7] = new sf(7, 224, 120, 200, 0, (RgbSprite) null, false);
+        pa.field_d[8] = new sf(8, 224, 86, 285, 0, (RgbSprite) null, false);
+        pa.field_d[9] = new sf(9, 170, 86, 300, 0, (RgbSprite) null, true);
+        pa.field_d[10] = new sf(10, 224, 60, 200, 0, (RgbSprite) null, false);
+        pa.field_d[11] = new sf(11, 224, 60, 285, 0, (RgbSprite) null, false);
         pa.field_d[12] = new sf(12, 224, 100, 285, 0, b.field_q[2], false);
-        pa.field_d[13] = new sf(13, 170, 174, 300, 0, (wk) null, true);
-        pa.field_d[14] = new sf(14, 224, 60, 200, 0, (wk) null, false);
+        pa.field_d[13] = new sf(13, 170, 174, 300, 0, (RgbSprite) null, true);
+        pa.field_d[14] = new sf(14, 224, 60, 200, 0, (RgbSprite) null, false);
         pa.field_d[15] = new sf(15, 224, 60, 400, 0, b.field_q[2], false);
-        pa.field_d[16] = new sf(16, 170, 170, 300, 0, (wk) null, true);
+        pa.field_d[16] = new sf(16, 170, 170, 300, 0, (RgbSprite) null, true);
     }
 
     final static boolean a(byte param0, int param1) {
@@ -70,7 +70,7 @@ final class ve {
             byte[] var3 = (byte[]) null;
             ve.a(-78, (byte[]) null);
           }
-          if (rf.field_d.field_p >= param1) {
+          if (rf.field_d.position >= param1) {
             return true;
           }
           if (rb.field_h == null) {
@@ -78,16 +78,16 @@ final class ve {
           }
           int var2_int = rb.field_h.a(-119);
           if (var2_int > 0) {
-            if (!(var2_int <= -rf.field_d.field_p + param1)) {
-              var2_int = -rf.field_d.field_p + param1;
+            if (!(var2_int <= -rf.field_d.position + param1)) {
+              var2_int = -rf.field_d.position + param1;
             }
-            rb.field_h.a(rf.field_d.field_p, var2_int, rf.field_d.field_t, -256);
+            rb.field_h.a(rf.field_d.position, var2_int, rf.field_d.payload, -256);
             oe.field_b = mm.a(-100);
-            rf.field_d.field_p = rf.field_d.field_p + var2_int;
-            if (rf.field_d.field_p < param1) {
+            rf.field_d.position = rf.field_d.position + var2_int;
+            if (rf.field_d.position < param1) {
               return false;
             }
-            rf.field_d.field_p = 0;
+            rf.field_d.position = 0;
             return true;
           }
           try {
@@ -135,8 +135,8 @@ final class ve {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        gi var16 = null;
-        gi var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -146,11 +146,11 @@ final class ve {
         int var4Lifetime3;
         int var4Lifetime4;
         int var4Lifetime5;
-        var15 = SteelSentinels.field_G;
+        var15 = SteelSentinels.obfuscationControl;
         try {
-          var16 = new gi(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
-          var17.field_p = param1.length - 2;
+          var17.position = param1.length - 2;
           rl.field_d = var17.c((byte) -60);
           ca.field_r = new int[rl.field_d];
           oa.field_M = new int[rl.field_d];
@@ -159,7 +159,7 @@ final class ve {
           dl.field_L = new byte[rl.field_d][];
           rl.field_a = new int[rl.field_d];
           sn.field_g = new byte[rl.field_d][];
-          var17.field_p = -(8 * rl.field_d) - 7 + param1.length;
+          var17.position = -(8 * rl.field_d) - 7 + param1.length;
           un.field_n = var17.c((byte) -60);
           eb.field_n = var17.c((byte) -60);
           var3 = (255 & var17.f((byte) -114)) + 1;
@@ -180,7 +180,7 @@ final class ve {
           for (var4Lifetime3 = 0; var4Lifetime3 < rl.field_d; var4Lifetime3++) {
             ca.field_r[var4Lifetime3] = var17.c((byte) -60);
           }
-          var17.field_p = -(8 * rl.field_d) + (-7 + param1.length - 3 * (var3 - 1));
+          var17.position = -(8 * rl.field_d) + (-7 + param1.length - 3 * (var3 - 1));
           ba.field_d = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
             ba.field_d[var4Lifetime4] = var17.a(false);
@@ -188,7 +188,7 @@ final class ve {
               ba.field_d[var4Lifetime4] = 1;
             }
           }
-          var17.field_p = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < rl.field_d; var4Lifetime5++) {
             var5 = le.field_L[var4Lifetime5];
             var6 = ca.field_r[var4Lifetime5];
@@ -263,7 +263,7 @@ final class ve {
         }
     }
 
-    final static pe a(int param0, kj param1) {
+    final static pe a(int param0, CipherPacketBuffer param1) {
         int var8 = 0;
         pe stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
@@ -278,7 +278,7 @@ final class ve {
         pe var6 = null;
         int var7 = 0;
         int var9 = 0;
-        var9 = SteelSentinels.field_G;
+        var9 = SteelSentinels.obfuscationControl;
         try {
           var3 = 110 / ((-37 - param0) / 57);
           var2_int = param1.g(-72, 8);

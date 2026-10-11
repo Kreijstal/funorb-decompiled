@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qd {
+final class PartInstruction {
     int field_w;
     int field_s;
     static de field_o;
     int field_k;
-    String field_v;
+    String partName;
     boolean field_u;
     int field_r;
     int field_i;
     int field_m;
-    int field_e;
+    int armourContribution;
     int field_b;
     int field_n;
     int field_f;
-    nk field_d;
+    ArticulatedPart attachedPart;
     int field_q;
     static int[] field_t;
     int field_j;
@@ -71,7 +71,7 @@ final class qd {
         int var39Lifetime2;
         int var40Lifetime2;
         int var41Lifetime2;
-        var43 = SteelSentinels.field_G;
+        var43 = SteelSentinels.obfuscationControl;
         try {
           if (param13 >= 0 &&
             param1 < lf.field_h) {
@@ -251,7 +251,7 @@ final class qd {
                   var21 = var21 + var23;
                   var17_int = var17_int + var19;
                   var30 = var30 + var32;
-                  var37Lifetime2 = var37Lifetime2 + pb.field_c;
+                  var37Lifetime2 = var37Lifetime2 + SoftwareRaster.field_c;
                   var18 = var18 + var20;
                   var25 = var25 + var27;
                 }
@@ -339,7 +339,7 @@ final class qd {
               var18 = var18 + var20;
               var30 = var30 + var32;
               var17_int = var17_int + var19;
-              var36Lifetime1 = var36Lifetime1 + pb.field_c;
+              var36Lifetime1 = var36Lifetime1 + SoftwareRaster.field_c;
               var31 = var31 + var33;
             }
             return;
@@ -359,7 +359,7 @@ final class qd {
         }
     }
 
-    qd(int param0, int param1, int param2, int param3, int param4) {
+    PartInstruction(int param0, int param1, int param2, int param3, int param4) {
         this(param0, param1, param2, param3, param4, false);
     }
 
@@ -370,9 +370,9 @@ final class qd {
         int var3 = 0;
         ua var4 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = SteelSentinels.field_G;
+        var3 = SteelSentinels.obfuscationControl;
         try {
-          var4 = (ua) (rg.field_d.e(13058));
+          var4 = (ua) (rg.field_d.first(13058));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -398,7 +398,7 @@ final class qd {
         }
     }
 
-    qd(int param0, int param1, int param2, int param3, nk param4) {
+    PartInstruction(int param0, int param1, int param2, int param3, ArticulatedPart param4) {
         this(param0, param1, param2, param3, param4, false);
     }
 
@@ -413,7 +413,7 @@ final class qd {
         field_t = null;
     }
 
-    private final void a(byte param0, boolean param1, qd param2) {
+    private final void a(byte param0, boolean param1, PartInstruction param2) {
         try {
           this.field_w = param2.field_w;
           this.field_p = param2.field_p;
@@ -421,17 +421,17 @@ final class qd {
           if (param0 != 121) {
             this.field_u = false;
           }
-          this.field_v = param2.field_v;
+          this.partName = param2.partName;
           this.field_q = param2.field_q;
           this.field_r = param2.field_r;
           this.field_s = param2.field_s;
-          this.field_e = param2.field_e;
+          this.armourContribution = param2.armourContribution;
           this.field_b = param2.field_b;
           this.field_n = param2.field_n;
-          if (param2.field_d != null) {
-            this.field_d = new nk(param2.field_d, param1);
+          if (param2.attachedPart != null) {
+            this.attachedPart = new ArticulatedPart(param2.attachedPart, param1);
           } else {
-            this.field_d = null;
+            this.attachedPart = null;
           }
           this.field_u = param2.field_u;
         } catch (RuntimeException runtimeException) {
@@ -439,7 +439,7 @@ final class qd {
         }
     }
 
-    qd(qd param0, boolean param1) {
+    PartInstruction(PartInstruction param0, boolean param1) {
         try {
           this.a((byte) 121, param1, param0);
         } catch (RuntimeException runtimeException) {
@@ -468,10 +468,10 @@ final class qd {
         eh.a(param2, -1, param0);
     }
 
-    qd(int param0, int param1, int param2, int param3, nk param4, boolean param5) {
+    PartInstruction(int param0, int param1, int param2, int param3, ArticulatedPart param4, boolean param5) {
         try {
           this.field_r = param1;
-          this.field_d = param4;
+          this.attachedPart = param4;
           this.field_i = param3;
           this.field_s = param0;
           this.field_u = param5 ? true : false;
@@ -482,41 +482,41 @@ final class qd {
         }
     }
 
-    qd(int param0, int param1, int param2, int param3, int param4, boolean param5) {
+    PartInstruction(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         this.field_r = param1;
         this.field_s = param0;
-        this.field_d = null;
+        this.attachedPart = null;
         this.field_u = param5 ? true : false;
         this.field_n = param2;
         this.field_i = param3;
         this.field_q = param4;
     }
 
-    qd(String param0) {
+    PartInstruction(String param0) {
         try {
           this.field_q = -1;
-          this.field_v = param0;
-          this.field_d = null;
+          this.partName = param0;
+          this.attachedPart = null;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    qd(int param0, int param1, int param2) {
-        this.field_d = null;
+    PartInstruction(int param0, int param1, int param2) {
+        this.attachedPart = null;
         this.field_p = param1;
         this.field_q = -1;
-        this.field_e = param0;
+        this.armourContribution = param0;
     }
 
-    qd(int param0, int param1) {
+    PartInstruction(int param0, int param1) {
         this.field_w = param0;
         this.field_q = -1;
-        this.field_d = null;
+        this.attachedPart = null;
         this.field_b = param1;
     }
 
-    qd(int param0) {
+    PartInstruction(int param0) {
         this.field_q = -1;
     }
 

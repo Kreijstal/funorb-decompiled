@@ -16,7 +16,7 @@ final class jl {
     private int[][] field_q;
     int field_e;
     int[] field_j;
-    static gh field_s;
+    static SceneWidget field_s;
     private byte[] field_l;
     int field_u;
     static oe field_w;
@@ -31,8 +31,8 @@ final class jl {
         if (var1 == null) {
           var1 = new aj();
         }
-        var1.a(pb.field_b, pb.field_i, pb.field_c, pb.field_l, pb.field_g, pb.field_d, pb.field_j, (byte) -62);
-        ff.field_qb.a(3, var1);
+        var1.a(SoftwareRaster.field_b, SoftwareRaster.field_i, SoftwareRaster.field_c, SoftwareRaster.field_l, SoftwareRaster.field_g, SoftwareRaster.field_d, SoftwareRaster.field_j, (byte) -62);
+        ff.field_qb.addLast(3, var1);
         if (param0) {
           jl.a(true);
         }
@@ -78,7 +78,7 @@ final class jl {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        gi var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -93,9 +93,9 @@ final class jl {
         int var12Lifetime1;
         int var10Lifetime1Lifetime1;
         int var13Lifetime1Lifetime1;
-        var16 = SteelSentinels.field_G;
+        var16 = SteelSentinels.obfuscationControl;
         try {
-          var17 = new gi(ln.a(param0, (byte) 127));
+          var17 = new PacketBuffer(ln.a(param0, (byte) 127));
           var4 = var17.f((byte) -66);
           if (5 <= var4 &&
             var4 <= 7) {

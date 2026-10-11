@@ -3,13 +3,13 @@
  */
 final class hc extends ug {
     static int field_V;
-    static nk[] field_bb;
+    static ArticulatedPart[] field_bb;
     private String field_U;
     private boolean field_db;
     private int field_Y;
     static String field_cb;
     static volatile int field_G;
-    private mi field_Z;
+    private BitmapFont field_Z;
     private int field_ab;
     static int[] field_W;
     static int[] field_X;
@@ -87,7 +87,7 @@ final class hc extends ug {
         this.field_Z.a(this.field_U, var7 + (var5 + this.field_ab), var6 + this.field_ab, -this.field_ab + this.field_T, -(this.field_ab * 2) + this.field_E, this.field_Y, -1, !this.field_db ? 2 : 0, 1, this.field_Z.field_G);
     }
 
-    hc(int param0, int param1, int param2, int param3, lh param4, boolean param5, int param6, int param7, mi param8, int param9, String param10) {
+    hc(int param0, int param1, int param2, int param3, lh param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (qk) null, (tn) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
