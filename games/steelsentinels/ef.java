@@ -109,15 +109,15 @@ final class ef {
           for (var2 = 0; var2 < 30; var2++) {
             if ((var1_int & Explosion.field_P) == 0) {
             } else {
-              mm.field_g.a(71, (byte) -117);
-              mm.field_g.a((byte) 122, var2);
+              mm.field_g.writeCipheredOpcode(71, (byte) -117);
+              mm.field_g.writeByte((byte) 122, var2);
               if (var2 >= 10) {
-                mm.field_g.d(jh.field_a[var2 - 10], 31);
+                mm.field_g.writeShort(jh.field_a[var2 - 10], 31);
               } else {
-                mm.field_g.d(0, 105);
+                mm.field_g.writeShort(0, 105);
               }
               for (var3 = 0; var3 < 4; var3++) {
-                mm.field_g.b(true, 0);
+                mm.field_g.writeInt(true, 0);
               }
             }
             var1_int = var1_int << 1;

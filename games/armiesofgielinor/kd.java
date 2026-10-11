@@ -63,7 +63,7 @@ final class kd extends tj implements nq, he, mf {
             var9 = (byte[]) null;
             kd.a(-26, (CipherPacketBuffer) null, (byte[]) null, (byte) -65);
           }
-          var4_int = param1.g(-122, param0);
+          var4_int = param1.readBits(-122, param0);
           if (var4_int == 0) {
             return null;
           }
@@ -71,15 +71,15 @@ final class kd extends tj implements nq, he, mf {
             var4_int != param2.length) {
             param2 = new byte[var4_int];
           }
-          var5 = param1.g(-117, 3);
-          var6 = (byte)param1.g(77, 8);
+          var5 = param1.readBits(-117, 3);
+          var6 = (byte)param1.readBits(77, 8);
           if (var5 <= 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param2[var7] = (byte)var6;
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param2[var7] = (byte)(var6 + param1.g(44, var5));
+              param2[var7] = (byte)(var6 + param1.readBits(44, var5));
             }
           }
           stackIn_18_0 = (byte[]) (param2);
@@ -183,7 +183,7 @@ final class kd extends tj implements nq, he, mf {
         this.field_bb = new fw(ed.field_c, (qo) null);
         this.field_G = new fw(pt.field_Y, (qo) null);
         this.field_O.field_s = ms.field_m;
-        this.field_I.field_s = bb.field_d;
+        this.field_I.field_s = NodeIterator.field_d;
         this.field_H.field_s = oc.field_Jb;
         this.field_V.field_s = bm.field_k;
         this.field_K.field_s = WeightedScoreStrategy.field_i;

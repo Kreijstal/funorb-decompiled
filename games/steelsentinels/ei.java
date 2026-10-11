@@ -242,16 +242,16 @@ final class ei extends ia {
 
     final static void a(int param0, byte param1, int param2) {
         CipherPacketBuffer var3 = mm.field_g;
-        var3.a(param2, (byte) -117);
-        var3.a((byte) 127, 3);
+        var3.writeCipheredOpcode(param2, (byte) -117);
+        var3.writeByte((byte) 127, 3);
         if (param1 != -23) {
           field_v = (String) null;
-          var3.a((byte) 121, 10);
-          var3.d(param0, 98);
+          var3.writeByte((byte) 121, 10);
+          var3.writeShort(param0, 98);
           return;
         }
-        var3.a((byte) 121, 10);
-        var3.d(param0, 98);
+        var3.writeByte((byte) 121, 10);
+        var3.writeShort(param0, 98);
     }
 
     final static int a(int param0, int param1, boolean param2) {

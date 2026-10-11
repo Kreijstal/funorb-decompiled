@@ -8,7 +8,7 @@ abstract class vt extends IntrusiveNode {
     static int field_l;
 
     final static boolean a(int param0, int param1, int param2, byte param3) {
-        if (bb.field_a) {
+        if (NodeIterator.field_a) {
           return BestScoreStrategy.field_i.a(rs.field_q, ui.field_i, 80);
         }
         if (iu.field_h) {
@@ -62,7 +62,7 @@ abstract class vt extends IntrusiveNode {
         }
     }
 
-    final static int a(int param0, int param1, int param2, CipherPacketBuffer param3) {
+    final static int readTwoTierUnsignedInt(int obfuscationGuard, int longBits, int shortBits, CipherPacketBuffer packet) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -71,8 +71,8 @@ abstract class vt extends IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == -9202) {
-            stackIn_4_0 = ju.a(param3, 1 << param2, 1 << param1, param1, (byte) -122, param2);
+          if (obfuscationGuard == -9202) {
+            stackIn_4_0 = ju.a(packet, 1 << shortBits, 1 << longBits, longBits, (byte) -122, shortBits);
             return stackIn_4_0;
           }
           stackIn_2_0 = 101;
@@ -81,8 +81,8 @@ abstract class vt extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_7_0 = var4;
-          stackIn_7_1 = new StringBuilder().append("vt.LA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_7_1 = new StringBuilder().append("vt.LA(").append(obfuscationGuard).append(',').append(longBits).append(',').append(shortBits).append(',');
+          if (packet == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";

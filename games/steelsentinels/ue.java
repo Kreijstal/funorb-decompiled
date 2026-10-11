@@ -12,18 +12,18 @@ final class ue {
 
     final static void a(int param0, int param1, int param2, boolean param3) {
         ne.field_y.position = 0;
-        ne.field_y.a((byte) 122, 12);
-        ne.field_y.b(param3, rb.field_g.nextInt());
-        ne.field_y.b(true, rb.field_g.nextInt());
-        ne.field_y.a((byte) 121, param0);
-        ne.field_y.a((byte) 109, param2);
-        ne.field_y.d(param1, 59);
+        ne.field_y.writeByte((byte) 122, 12);
+        ne.field_y.writeInt(param3, rb.field_g.nextInt());
+        ne.field_y.writeInt(true, rb.field_g.nextInt());
+        ne.field_y.writeByte((byte) 121, param0);
+        ne.field_y.writeByte((byte) 109, param2);
+        ne.field_y.writeShort(param1, 59);
         ne.field_y.a(qe.field_d, jd.field_ib, -10048);
-        mm.field_g.a(18, (byte) -117);
+        mm.field_g.writeCipheredOpcode(18, (byte) -117);
         int fieldTemp$0 = mm.field_g.position + 1;
         mm.field_g.position = mm.field_g.position + 1;
         int var4 = fieldTemp$0;
-        mm.field_g.a(ne.field_y.position, (byte) -122, 0, ne.field_y.payload);
+        mm.field_g.writeBytes(ne.field_y.position, (byte) -122, 0, ne.field_y.payload);
         mm.field_g.b((byte) 89, -var4 + mm.field_g.position);
     }
 

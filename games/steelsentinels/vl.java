@@ -84,7 +84,7 @@ final class vl extends IntrusiveNode {
 
     final static void a(cm param0, cm param1, boolean param2, int param3) {
         try {
-          wn.a(jl.field_s, ei.field_o, ParticleEffect.field_K, uh.field_j, param2, 127, nh.field_d, dj.field_b, CipherPacketBuffer.field_H, nc.field_n, SceneWidget.field_ib, bd.field_f);
+          wn.a(jl.field_s, ei.field_o, ParticleEffect.field_K, NodeHashTable.field_j, param2, 127, nh.field_d, dj.field_b, CipherPacketBuffer.field_H, nc.field_n, SceneWidget.field_ib, bd.field_f);
           dh.field_y = cf.a("chatfilter", "lobby", (byte) -62, param0);
           ec.field_e[2] = b.field_j;
           if (param3 >= -10) {

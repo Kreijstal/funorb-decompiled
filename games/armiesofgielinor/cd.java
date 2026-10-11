@@ -28,14 +28,14 @@ final class cd {
             field_c = -14;
           }
           var8 = mg.field_e;
-          var2 = var8.k(0);
+          var2 = var8.readUnsignedByte(0);
           if (var2 != 0) {
             if (var2 != 1) {
               af.a((Throwable) null, 76, "A1: " + cm.b(false));
               dj.a((byte) -128);
               return;
             }
-            var3 = var8.i(1);
+            var3 = var8.readInt(1);
             var4 = (li) (s.field_e.first((byte) 92));
             while (var4 != null) {
               if (var4.field_o != var3) {
@@ -56,7 +56,7 @@ final class cd {
             dj.a((byte) -126);
             return;
           }
-          var4_int = var8.k(0);
+          var4_int = var8.readUnsignedByte(0);
           if (var4_int != 0) {
             var10 = new byte[var4_int];
             var9 = var10;

@@ -45,7 +45,7 @@ final class GlobalSpell extends Spell {
 
     final void writePayload(int obfuscationGuard, PacketBuffer packet) {
         try {
-          packet.b(true, this.spellId);
+          packet.writeShort(true, this.spellId);
           if (obfuscationGuard != -11637) {
             this.getPayloadSize(-111);
           }

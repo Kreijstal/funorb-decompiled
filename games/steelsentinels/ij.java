@@ -242,7 +242,7 @@ final class ij extends dl implements ae {
           var3[var4_int] = ba.field_d[ec.a(255, (int) var2[var4_int])];
         }
         RgbSprite var4 = new RgbSprite(un.field_n, eb.field_n, rl.field_a[0], oa.field_M[0], le.field_L[0], ca.field_r[0], var3);
-        uh.a(9324);
+        NodeHashTable.a(9324);
         return var4;
     }
 
@@ -256,7 +256,7 @@ final class ij extends dl implements ae {
         if (param0 >= -66) {
           field_W = 104;
         }
-        uh.a(9324);
+        NodeHashTable.a(9324);
         return var1;
     }
 

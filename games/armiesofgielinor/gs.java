@@ -32,13 +32,13 @@ final class gs implements kh {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = vl.field_n;
-        var2.h(32161, param0);
+        var2.writeCipheredOpcode(32161, param0);
         var2.position = var2.position + 1;
         int var3 = var2.position;
-        var2.b(1, 2);
+        var2.writeByte(1, 2);
         var2.a(ln.field_d, 0, ln.field_d.length, 113);
-        var2.b(1, nh.field_E);
-        var2.b(1, AiPlanningStrategy.field_b);
+        var2.writeByte(1, nh.field_E);
+        var2.writeByte(1, AiPlanningStrategy.field_b);
         var2.a(tg.field_d, 0, tg.field_d.length, -72);
         if (param1 != -8006) {
           field_b = -111;
@@ -408,7 +408,7 @@ final class gs implements kh {
                                 if (es.a(param0 ^ -83, 1)) {
                                     /* Inlined CFG state: 27. */
                                     {
-                                        mg.field_f = mg.field_e.m(255);
+                                        mg.field_f = mg.field_e.readCipheredOpcode(255);
                                         mg.field_e.position = 0;
                                         fk.field_b = param1[mg.field_f];
                                         statePc = 28;

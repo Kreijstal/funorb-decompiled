@@ -72,7 +72,7 @@ final class AiInfluenceMap {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, CipherPacketBuffer param6) {
+    final static int writeTieredSignedInt(int tier1Bits, int tier2Bits, int value, int tier3Bits, int obfuscationGuard, int tier0Bits, CipherPacketBuffer packet) {
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_16_0 = 0;
@@ -90,73 +90,73 @@ final class AiInfluenceMap {
         int var7_intLifetime3;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param5 != 0) {
-            var7_int = 1 << -1 + param5;
-            if (-1 + var7_int >= param2 &&
-              param2 >= -var7_int) {
-              param6.a(-16807, 2, 0);
-              param6.a(param4 - 16808, param5, param2);
-              stackIn_9_0 = param5 + 2;
+          if (tier0Bits != 0) {
+            var7_int = 1 << -1 + tier0Bits;
+            if (-1 + var7_int >= value &&
+              value >= -var7_int) {
+              packet.writeBits(-16807, 2, 0);
+              packet.writeBits(obfuscationGuard - 16808, tier0Bits, value);
+              stackIn_9_0 = tier0Bits + 2;
               return stackIn_9_0;
             }
-            if (0 >= param2) {
-              param2 = param2 + var7_int;
+            if (0 >= value) {
+              value = value + var7_int;
             } else {
-              param2 = param2 - var7_int;
+              value = value - var7_int;
             }
           } else {
-            if (0 == param2) {
-              param6.a(param4 - 16808, 2, 0);
+            if (0 == value) {
+              packet.writeBits(obfuscationGuard - 16808, 2, 0);
               stackIn_5_0 = 2;
               return stackIn_5_0;
             }
           }
-          var7_intLifetime1 = 1 << -1 + param0;
-          if (param2 <= var7_intLifetime1 - param4 &&
-            param2 >= -var7_intLifetime1) {
-            param6.a(-16807, 2, 1);
-            param6.a(param4 ^ -16808, param0, param2);
-            stackIn_16_0 = param0 + 2;
+          var7_intLifetime1 = 1 << -1 + tier1Bits;
+          if (value <= var7_intLifetime1 - obfuscationGuard &&
+            value >= -var7_intLifetime1) {
+            packet.writeBits(-16807, 2, 1);
+            packet.writeBits(obfuscationGuard ^ -16808, tier1Bits, value);
+            stackIn_16_0 = tier1Bits + 2;
             return stackIn_16_0;
           }
-          if (param2 <= 0) {
-            param2 = param2 + var7_intLifetime1;
+          if (value <= 0) {
+            value = value + var7_intLifetime1;
           } else {
-            param2 = param2 - var7_intLifetime1;
+            value = value - var7_intLifetime1;
           }
-          var7_intLifetime2 = 1 << -1 + param1;
-          if (param2 <= var7_intLifetime2 - 1 &&
-            param2 >= -var7_intLifetime2) {
-            param6.a(-16807, 2, 2);
-            param6.a(-16807, param1, param2);
-            stackIn_27_0 = 2 + param1;
+          var7_intLifetime2 = 1 << -1 + tier2Bits;
+          if (value <= var7_intLifetime2 - 1 &&
+            value >= -var7_intLifetime2) {
+            packet.writeBits(-16807, 2, 2);
+            packet.writeBits(-16807, tier2Bits, value);
+            stackIn_27_0 = 2 + tier2Bits;
             return stackIn_27_0;
           }
-          if (param2 <= 0) {
-            param2 = param2 + var7_intLifetime2;
+          if (value <= 0) {
+            value = value + var7_intLifetime2;
           } else {
-            param2 = param2 - var7_intLifetime2;
+            value = value - var7_intLifetime2;
           }
-          var7_intLifetime3 = 1 << param3 - 1;
-          if (param2 <= -1 + var7_intLifetime3 &&
-            param2 >= -var7_intLifetime3) {
-            param6.a(-16807, 2, 3);
-            param6.a(-16807, param3, param2);
-            stackIn_31_0 = 2 + param3;
+          var7_intLifetime3 = 1 << tier3Bits - 1;
+          if (value <= -1 + var7_intLifetime3 &&
+            value >= -var7_intLifetime3) {
+            packet.writeBits(-16807, 2, 3);
+            packet.writeBits(-16807, tier3Bits, value);
+            stackIn_31_0 = 2 + tier3Bits;
             return stackIn_31_0;
           }
-          if (param2 <= 0) {
-            param2 = param2 + var7_intLifetime3;
+          if (value <= 0) {
+            value = value + var7_intLifetime3;
           } else {
-            param2 = param2 - var7_intLifetime3;
+            value = value - var7_intLifetime3;
           }
-          throw new IllegalArgumentException("out of range " + param2);
+          throw new IllegalArgumentException("out of range " + value);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_38_0 = var7;
-          stackIn_38_1 = new StringBuilder().append("ir.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
+          stackIn_38_1 = new StringBuilder().append("ir.L(").append(tier1Bits).append(',').append(tier2Bits).append(',').append(value).append(',').append(tier3Bits).append(',').append(obfuscationGuard).append(',').append(tier0Bits).append(',');
+          if (packet == null) {
             stackIn_39_2 = "null";
           } else {
             stackIn_39_2 = "{...}";
@@ -178,7 +178,7 @@ final class AiInfluenceMap {
     final static String a(int param0, int param1) {
         if (param0 != 10602) {
           CipherPacketBuffer var3 = (CipherPacketBuffer) null;
-          AiInfluenceMap.a(12, 72, -87, -119, -83, -86, (CipherPacketBuffer) null);
+          AiInfluenceMap.writeTieredSignedInt(12, 72, -87, -119, -83, -86, (CipherPacketBuffer) null);
         }
         return Integer.toString(param1);
     }
@@ -297,8 +297,8 @@ final class AiInfluenceMap {
             field_l = (String) null;
           }
           for (var4_int = 0; 6 > var4_int; var4_int++) {
-            param2.b(param1 - 99, param0[var4_int]);
-            param2.b(1, param3[var4_int]);
+            param2.writeByte(param1 - 99, param0[var4_int]);
+            param2.writeByte(1, param3[var4_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -764,7 +764,7 @@ final class AiInfluenceMap {
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var14 = mg.field_e;
-          var2 = var14.k(0);
+          var2 = var14.readUnsignedByte(0);
           var3 = (nt) (s.field_a.first((byte) 120));
           while (var3 != null) {
             if (var2 != var3.field_o) {
@@ -777,7 +777,7 @@ final class AiInfluenceMap {
             dj.a((byte) -127);
             return;
           }
-          var4 = var14.k(0);
+          var4 = var14.readUnsignedByte(0);
           if (var4 != 0) {
             var5 = var3.field_q;
             LeaderEscortCondition.field_a[0] = mv.field_d;

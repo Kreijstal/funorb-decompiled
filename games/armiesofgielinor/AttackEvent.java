@@ -141,12 +141,12 @@ final class AttackEvent extends GameEvent {
         RuntimeException var1 = null;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          vl.field_n.h(32161, 76);
+          vl.field_n.writeCipheredOpcode(32161, 76);
           if (param0) {
             field_A = (String[][][]) null;
           }
           for (var1_int = 0; 5 > var1_int; var1_int++) {
-            vl.field_n.b(true, pg.field_d.field_d[var1_int]);
+            vl.field_n.writeShort(true, pg.field_d.field_d[var1_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

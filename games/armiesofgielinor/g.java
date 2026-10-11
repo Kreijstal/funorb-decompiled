@@ -47,7 +47,7 @@ final class g extends RuntimeException {
         try {
           tl.field_e = GameplayController.a("display_name_changed", (byte) 51, "basic", param1);
           mw.field_E = new mp(0L, br.field_g, h.field_b, wp.field_y);
-          sc.field_g = new mp(0L, br.field_g, lm.field_a, jm.field_u);
+          TaggedMapData.field_g = new mp(0L, br.field_g, lm.field_a, jm.field_u);
           su.field_d = new je(0L, (je) null);
           bn.field_c = new je(0L, eq.field_h);
           bn.field_c.field_Eb = 1;
@@ -64,13 +64,13 @@ final class g extends RuntimeException {
           var6 = mw.field_E.field_Kb.field_Nb;
           var7 = var6;
           var7.field_Eb = 1;
-          sc.field_g.field_Kb.field_Nb.a(0, eq.field_h);
+          TaggedMapData.field_g.field_Kb.field_Nb.a(0, eq.field_h);
           if (param0 != -6145) {
             kl var4 = (kl) null;
             g.a(-105, (kl) null);
           }
-          sc.field_g.field_Kb.field_Nb.field_Fb = 1;
-          var3 = sc.field_g.field_Kb.field_Nb;
+          TaggedMapData.field_g.field_Kb.field_Nb.field_Fb = 1;
+          var3 = TaggedMapData.field_g.field_Kb.field_Nb;
           var3.field_Eb = 1;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "g.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

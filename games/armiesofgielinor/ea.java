@@ -81,20 +81,20 @@ final class ea {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var8 = mg.field_e;
         var2 = var8;
-        var3 = var8.k(0);
+        var3 = var8.readUnsignedByte(0);
         stackIn_3_0 = (0 != (var3 & 128));
         ui.field_b = stackIn_3_0;
         MatchConditionEntry.field_k = var3 & 127;
-        hc.field_e = var8.k(0);
+        hc.field_e = var8.readUnsignedByte(0);
         gk.field_I = var8.j((byte) -2);
         if (2 == MatchConditionEntry.field_k) {
-          rh.field_e = var8.e((byte) -104);
+          rh.field_e = var8.readUnsignedShort((byte) -104);
           th.field_c = var8.d((byte) -13);
         } else {
           rh.field_e = 0;
           th.field_c = 0;
         }
-        stackIn_9_0 = (var8.k(0) != 1) ? 0 : 1;
+        stackIn_9_0 = (var8.readUnsignedByte(0) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
         qd.field_L = var8.g(1);
         if (var4 == 0) {
@@ -103,11 +103,11 @@ final class ea {
           gp.field_b = var8.g(1);
         }
         if (MatchConditionEntry.field_k == 1) {
-          ut.field_eb = var8.e((byte) -104);
+          ut.field_eb = var8.readUnsignedShort((byte) -104);
           BestScoreStrategy.field_k = var8.g(1);
         } else {
           if (MatchConditionEntry.field_k == 4) {
-            ut.field_eb = var8.e((byte) -104);
+            ut.field_eb = var8.readUnsignedShort((byte) -104);
             BestScoreStrategy.field_k = var8.g(1);
           } else {
             ut.field_eb = 0;
@@ -118,7 +118,7 @@ final class ea {
           dg.field_b = le.a(80, (byte) -25, var8);
           hv.field_R = null;
         } else {
-          var5 = var8.e((byte) -104);
+          var5 = var8.readUnsignedShort((byte) -104);
           try {
             var9 = ce.field_K.a(var5, -124);
             dg.field_b = var9.d((byte) 97);
@@ -202,7 +202,7 @@ final class ea {
         wn.field_kb.a(18, -20500, -2 + (-2 + su.field_d.field_gb + (-jn.field_c - 80)), 2 + jn.field_d, 0);
         ek.field_a.a(18, -20500, 82 + jn.field_c, jn.field_d + 2, -82 + (su.field_d.field_gb - jn.field_c));
         mw.field_E.a(0, jn.field_c, 2, 20, su.field_d.field_gb, 20 + (2 + jn.field_d), -2 + (su.field_d.field_ob - jn.field_d) - 20, (byte) -92);
-        sc.field_g.a((byte) -110, jn.field_c, 20, 2);
+        TaggedMapData.field_g.a((byte) -110, jn.field_c, 20, 2);
     }
 
     ea(String param0, je param1) {
@@ -210,7 +210,7 @@ final class ea {
         je[] var4 = null;
         try {
           var3 = new String[]{param0, wg.field_a, op.field_e};
-          var4 = new je[]{param1, su.field_d, (je) ((Object) sc.field_g)};
+          var4 = new je[]{param1, su.field_d, (je) ((Object) TaggedMapData.field_g)};
           this.field_a = new ml(0L, h.field_d, var3, wm.field_c, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "ea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -247,20 +247,20 @@ final class ea {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var8 = mg.field_e;
         var2 = var8;
-        var3 = var8.k(0);
+        var3 = var8.readUnsignedByte(0);
         stackIn_3_0 = (0 != (var3 & 128));
         ui.field_b = stackIn_3_0;
         MatchConditionEntry.field_k = var3 & 127;
-        hc.field_e = var8.k(0);
+        hc.field_e = var8.readUnsignedByte(0);
         gk.field_I = var8.j((byte) -2);
         if (2 == MatchConditionEntry.field_k) {
-          rh.field_e = var8.e((byte) -104);
+          rh.field_e = var8.readUnsignedShort((byte) -104);
           th.field_c = var8.d((byte) -13);
         } else {
           rh.field_e = 0;
           th.field_c = 0;
         }
-        stackIn_9_0 = (var8.k(0) != 1) ? 0 : 1;
+        stackIn_9_0 = (var8.readUnsignedByte(0) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
         qd.field_L = var8.g(1);
         if (var4 == 0) {
@@ -269,11 +269,11 @@ final class ea {
           gp.field_b = var8.g(1);
         }
         if (MatchConditionEntry.field_k == 1) {
-          ut.field_eb = var8.e((byte) -104);
+          ut.field_eb = var8.readUnsignedShort((byte) -104);
           BestScoreStrategy.field_k = var8.g(1);
         } else {
           if (MatchConditionEntry.field_k == 4) {
-            ut.field_eb = var8.e((byte) -104);
+            ut.field_eb = var8.readUnsignedShort((byte) -104);
             BestScoreStrategy.field_k = var8.g(1);
           } else {
             ut.field_eb = 0;
@@ -284,7 +284,7 @@ final class ea {
           dg.field_b = le.a(80, (byte) -25, var8);
           hv.field_R = null;
         } else {
-          var5 = var8.e((byte) -104);
+          var5 = var8.readUnsignedShort((byte) -104);
           try {
             var9 = ce.field_K.a(var5, -124);
             dg.field_b = var9.d((byte) 97);

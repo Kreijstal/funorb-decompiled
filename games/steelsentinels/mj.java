@@ -312,13 +312,13 @@ final class mj extends SceneWidget {
             }
           }
           if (!ni.b(85)) {
-            mm.field_g.a(71, (byte) -117);
-            mm.field_g.a((byte) 114, 10 * param0 + param3);
-            mm.field_g.d(param2, 54);
-            mm.field_g.b(true, param5);
-            mm.field_g.b(true, param1);
-            mm.field_g.b(true, param6);
-            mm.field_g.b(true, param4);
+            mm.field_g.writeCipheredOpcode(71, (byte) -117);
+            mm.field_g.writeByte((byte) 114, 10 * param0 + param3);
+            mm.field_g.writeShort(param2, 54);
+            mm.field_g.writeInt(true, param5);
+            mm.field_g.writeInt(true, param1);
+            mm.field_g.writeInt(true, param6);
+            mm.field_g.writeInt(true, param4);
           } else {
             Explosion.field_P = Explosion.field_P | 1 << 10 * param0 + param3;
           }

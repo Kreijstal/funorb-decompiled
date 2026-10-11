@@ -17,7 +17,7 @@ final class fi extends fa {
     private cb field_k;
     private rc field_x;
     static int[] field_g;
-    private uh field_m;
+    private NodeHashTable field_m;
     private int field_q;
     static int field_y;
     private rc field_E;
@@ -51,7 +51,7 @@ final class fi extends fa {
         byte[] var29 = null;
         byte[] var30 = null;
         var10 = SteelSentinels.obfuscationControl;
-        var12 = (fe) (this.field_m.a((long)param1, param0 + 232));
+        var12 = (fe) (this.field_m.get((long)param1, param0 + 232));
         var4 = var12;
         if (param0 != -109) {
           this.field_v = true;
@@ -96,7 +96,7 @@ final class fi extends fa {
               var4 = this.field_B.a((byte) 2, this.field_r, param1, false, (byte) -94);
             }
           }
-          this.field_m.a((long)param1, (IntrusiveNode) (var4), -1816);
+          this.field_m.put((long)param1, (IntrusiveNode) (var4), -1816);
         }
         if (((fe) (var4)).field_z) {
           return null;
@@ -153,7 +153,7 @@ final class fi extends fa {
             }
             if (!this.field_B.c(62)) {
               var4 = this.field_B.a((byte) 2, this.field_r, param1, true, (byte) 55);
-              this.field_m.a((long)param1, (IntrusiveNode) (var4), -1816);
+              this.field_m.put((long)param1, (IntrusiveNode) (var4), -1816);
             }
             return null;
           }
@@ -192,7 +192,7 @@ final class fi extends fa {
               return null;
             }
             var4 = this.field_B.a((byte) 2, this.field_r, param1, true, (byte) -128);
-            this.field_m.a((long)param1, (IntrusiveNode) (var4), -1816);
+            this.field_m.put((long)param1, (IntrusiveNode) (var4), -1816);
           }
           return null;
         }
@@ -495,7 +495,7 @@ final class fi extends fa {
         }
         if (this.field_u &&
           mm.a(-109) >= this.field_n) {
-          var2 = (fe) (this.field_m.b(0));
+          var2 = (fe) (this.field_m.first(0));
           while (var2 != null) {
             if (!var2.field_z) {
               if (var2.field_C) {
@@ -507,7 +507,7 @@ final class fi extends fa {
                 var2.field_C = true;
               }
             }
-            var2 = (fe) (this.field_m.a((byte) 127));
+            var2 = (fe) (this.field_m.next((byte) 127));
           }
           this.field_n = 1000L + mm.a(-89);
         }
@@ -525,7 +525,7 @@ final class fi extends fa {
     }
 
     final int a(boolean param0, int param1) {
-        fe var3 = (fe) (this.field_m.a((long)param1, 127));
+        fe var3 = (fe) (this.field_m.get((long)param1, 127));
         if (var3 != null) {
           return var3.g(16);
         }
@@ -639,7 +639,7 @@ final class fi extends fa {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
-        this.field_m = new uh(16);
+        this.field_m = new NodeHashTable(16);
         this.field_p = 0;
         this.field_i = new NodeDeque();
         this.field_n = 0L;

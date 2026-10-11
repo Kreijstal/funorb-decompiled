@@ -22,10 +22,10 @@ final class ae extends bp {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = vl.field_n;
-        var2.h(32161, param1);
-        var2.b(1, 2);
-        var2.b(param0 - 895, 4);
-        var2.b(1, LeaderEscortCondition.f(3));
+        var2.writeCipheredOpcode(32161, param1);
+        var2.writeByte(1, 2);
+        var2.writeByte(param0 - 895, 4);
+        var2.writeByte(1, LeaderEscortCondition.f(3));
         if (param0 != 896) {
           field_s = (String) null;
         }
@@ -81,9 +81,9 @@ final class ae extends bp {
             if (this.field_i != 0) {
               try {
                 this.field_o.position = 0;
-                this.field_o.b(1, 4);
-                this.field_o.b(1, (int) this.field_i);
-                this.field_o.a((byte) -59, 0);
+                this.field_o.writeByte(1, 4);
+                this.field_o.writeByte(1, (int) this.field_i);
+                this.field_o.writeInt((byte) -59, 0);
                 this.field_t.a(this.field_o.payload, (byte) 20, 0, this.field_o.payload.length);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
@@ -210,7 +210,7 @@ final class ae extends bp {
             var2 = (jf) (this.field_b.a((byte) -117));
             while (var2 != null) {
               this.field_o.position = 0;
-              this.field_o.b(1, 1);
+              this.field_o.writeByte(1, 1);
               this.field_o.a(true, var2.field_q);
               this.field_t.a(this.field_o.payload, (byte) 20, 0, this.field_o.payload.length);
               this.field_n.a(var2, false);
@@ -219,7 +219,7 @@ final class ae extends bp {
             var2Lifetime1 = (jf) (this.field_f.a((byte) -123));
             while (var2Lifetime1 != null) {
               this.field_o.position = 0;
-              this.field_o.b(1, 0);
+              this.field_o.writeByte(1, 0);
               this.field_o.a(true, var2Lifetime1.field_q);
               this.field_t.a(this.field_o.payload, (byte) 20, 0, this.field_o.payload.length);
               this.field_g.a(var2Lifetime1, false);
@@ -255,10 +255,10 @@ final class ae extends bp {
                   if (var4 <= this.field_h.position) {
                     if (null == this.field_a) {
                       this.field_h.position = 0;
-                      var6 = this.field_h.k(0);
-                      var7 = this.field_h.i(1);
-                      var8 = this.field_h.k(0);
-                      var9 = this.field_h.i(1);
+                      var6 = this.field_h.readUnsignedByte(0);
+                      var7 = this.field_h.readInt(1);
+                      var8 = this.field_h.readUnsignedByte(0);
+                      var9 = this.field_h.readInt(1);
                       var10 = 127 & var8;
                       stackIn_60_0 = ((var8 & 128) == 0) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -294,8 +294,8 @@ final class ae extends bp {
                       stackIn_76_0 = (var10 == 0) ? 5 : 9;
                       var15 = stackIn_76_0;
                       this.field_a.field_E = new PacketBuffer(var15 + var9 + this.field_a.field_B);
-                      this.field_a.field_E.b(1, var10);
-                      this.field_a.field_E.a((byte) -77, var9);
+                      this.field_a.field_E.writeByte(1, var10);
+                      this.field_a.field_E.writeInt((byte) -77, var9);
                       this.field_h.position = 0;
                       this.field_a.field_F = 10;
                     } else {
@@ -380,9 +380,9 @@ final class ae extends bp {
           }
           try {
             this.field_o.position = 0;
-            this.field_o.b(1, 6);
+            this.field_o.writeByte(1, 6);
             this.field_o.a(3, (byte) 58);
-            this.field_o.b(true, 0);
+            this.field_o.writeShort(true, 0);
             this.field_t.a(this.field_o.payload, (byte) 20, 0, this.field_o.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -427,7 +427,7 @@ final class ae extends bp {
             } else {
               stackIn_7_2 = 2;
             }
-            ((PacketBuffer) (Object) stackIn_6_0).b(stackIn_6_1, stackIn_7_2);
+            ((PacketBuffer) (Object) stackIn_6_0).writeByte(stackIn_6_1, stackIn_7_2);
             this.field_o.a(true, 0L);
             this.field_t.a(this.field_o.payload, (byte) 20, 0, this.field_o.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {

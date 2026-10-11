@@ -694,15 +694,15 @@ final class qs extends IntrusiveNode {
         int var6_int = 0;
         byte[] var6 = null;
         PacketBuffer var2 = new PacketBuffer(param0);
-        this.field_m = var2.i(1);
-        this.field_F = var2.i(1);
-        this.field_D = var2.i(1);
-        this.field_S = var2.i(1);
+        this.field_m = var2.readInt(1);
+        this.field_F = var2.readInt(1);
+        this.field_D = var2.readInt(1);
+        this.field_S = var2.readInt(1);
         if (this.field_S < 0) {
           this.field_S = ~this.field_S;
           this.field_z = true;
         }
-        int var3 = var2.i(1);
+        int var3 = var2.readInt(1);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -710,7 +710,7 @@ final class qs extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.k(0);
+            var6_int = var2.readUnsignedByte(0);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];

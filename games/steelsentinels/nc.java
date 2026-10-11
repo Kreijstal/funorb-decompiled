@@ -178,7 +178,7 @@ final class nc {
             nc.a((byte) 100, (java.applet.Applet) null);
           }
           var2 = new ld(param0, rl.field_a, oa.field_M, le.field_L, ca.field_r, ba.field_d, dl.field_L);
-          uh.a(param1 + 2279);
+          NodeHashTable.a(param1 + 2279);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -15,7 +15,7 @@ final class gu {
 
     final static NodeDeque a(boolean param0, String param1) {
         NodeDeque var2 = null;
-        mt var3 = null;
+        TextCursor var3 = null;
         int var4 = 0;
         int var5 = 0;
         NodeDeque stackIn_18_0 = null;
@@ -30,27 +30,27 @@ final class gu {
             gu.a(102);
           }
           var2 = new NodeDeque();
-          var3 = new mt(param1);
-          while (!var3.a((byte) 16)) {
-            var4 = var3.b(-1);
+          var3 = new TextCursor(param1);
+          while (!var3.isAtEnd((byte) 16)) {
+            var4 = var3.readCharacter(-1);
             if (Character.isWhitespace((char) var4)) {
               continue;
             }
             if (var4 != 34 &&
               var4 != 39) {
               if (var4 == 40) {
-                var2.addLast((byte) -119, (IntrusiveNode) (new og(mo.field_j, -1 + var3.field_c)));
+                var2.addLast((byte) -119, (IntrusiveNode) (new og(mo.field_j, -1 + var3.position)));
                 continue;
               }
               if (var4 == 41) {
-                var2.addLast((byte) -119, (IntrusiveNode) (new og(LeaderEscortCondition.field_d, -1 + var3.field_c)));
+                var2.addLast((byte) -119, (IntrusiveNode) (new og(LeaderEscortCondition.field_d, -1 + var3.position)));
                 continue;
               }
               if (44 != var4) {
                 var2.addLast((byte) -119, (IntrusiveNode) (bi.a((byte) -118, var3)));
                 continue;
               }
-              var2.addLast((byte) -119, (IntrusiveNode) (new og(sb.field_d, var3.field_c - 1)));
+              var2.addLast((byte) -119, (IntrusiveNode) (new og(sb.field_d, var3.position - 1)));
               continue;
             }
             var2.addLast((byte) -119, (IntrusiveNode) (BestScoreStrategy.a((byte) 121, var3)));
@@ -82,15 +82,15 @@ final class gu {
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = vl.field_n;
         if (param0 < -31) {
-          var2.h(32161, param1);
-          var2.b(1, 1);
-          var2.b(1, 0);
+          var2.writeCipheredOpcode(32161, param1);
+          var2.writeByte(1, 1);
+          var2.writeByte(1, 0);
           return;
         }
         field_a = (String) null;
-        var2.h(32161, param1);
-        var2.b(1, 1);
-        var2.b(1, 0);
+        var2.writeCipheredOpcode(32161, param1);
+        var2.writeByte(1, 1);
+        var2.writeByte(1, 0);
     }
 
     public final String toString() {

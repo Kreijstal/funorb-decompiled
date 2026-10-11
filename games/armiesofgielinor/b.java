@@ -48,7 +48,7 @@ final class b extends IntrusiveNode {
           var16 = new PacketBuffer(param0);
           var17 = var16;
           var17.position = param0.length - 2;
-          iw.field_n = var17.e((byte) -104);
+          iw.field_n = var17.readUnsignedShort((byte) -104);
           j.field_e = new int[iw.field_n];
           c.field_e = new int[iw.field_n];
           iq.field_g = new int[iw.field_n];
@@ -57,20 +57,20 @@ final class b extends IntrusiveNode {
           vj.field_j = new byte[iw.field_n][];
           cq.field_z = new byte[iw.field_n][];
           var17.position = -(iw.field_n * 8) - 7 + param0.length;
-          lg.field_d = var17.e((byte) -104);
-          wr.field_J = var17.e((byte) -104);
-          var3 = 1 + (255 & var17.k(param1 + 1));
+          lg.field_d = var17.readUnsignedShort((byte) -104);
+          wr.field_J = var17.readUnsignedShort((byte) -104);
+          var3 = 1 + (255 & var17.readUnsignedByte(param1 + 1));
           for (var4 = 0; iw.field_n > var4; var4++) {
-            j.field_e[var4] = var16.e((byte) -104);
+            j.field_e[var4] = var16.readUnsignedShort((byte) -104);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < iw.field_n; var4Lifetime1++) {
-            iq.field_g[var4Lifetime1] = var17.e((byte) -104);
+            iq.field_g[var4Lifetime1] = var17.readUnsignedShort((byte) -104);
           }
           for (var4Lifetime2 = 0; iw.field_n > var4Lifetime2; var4Lifetime2++) {
-            qm.field_K[var4Lifetime2] = var17.e((byte) -104);
+            qm.field_K[var4Lifetime2] = var17.readUnsignedShort((byte) -104);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < iw.field_n; var4Lifetime3++) {
-            c.field_e[var4Lifetime3] = var17.e((byte) -104);
+            c.field_e[var4Lifetime3] = var17.readUnsignedShort((byte) -104);
           }
           if (param1 != -1) {
             field_n = (la) null;
@@ -97,14 +97,14 @@ final class b extends IntrusiveNode {
             var9 = var19;
             cq.field_z[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.k(0);
+            var11 = var17.readUnsignedByte(0);
             if ((1 & var11) == 0) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.a((byte) -90);
+                var8[var12] = var17.readByte((byte) -90);
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$0 = var17.a((byte) 102);
+                  dupTemp$0 = var17.readByte((byte) 102);
                   var9[var12] = dupTemp$0;
                   var13 = dupTemp$0;
                   stackIn_49_0 = var10;
@@ -119,13 +119,13 @@ final class b extends IntrusiveNode {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var6 > var13; var13++) {
-                  var8[var13 * var5 + var12] = var17.a((byte) -106);
+                  var8[var13 * var5 + var12] = var17.readByte((byte) -106);
                 }
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var12 < var5; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$1 = var17.a((byte) -67);
+                    dupTemp$1 = var17.readByte((byte) -67);
                     var9[var12 + var5 * var13] = dupTemp$1;
                     var14 = dupTemp$1;
                     stackIn_37_0 = var10;

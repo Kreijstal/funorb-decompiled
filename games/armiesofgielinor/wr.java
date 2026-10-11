@@ -100,20 +100,20 @@ final class wr extends hs implements he {
         try {
           var8 = vl.field_n;
           var9 = var8;
-          var9.h(32161, param2);
+          var9.writeCipheredOpcode(32161, param2);
           var9.position = var9.position + 1;
           var4 = var9.position;
-          var9.b(1, 1);
-          var9.b(true, param1.field_s);
-          var9.b(true, param1.field_n);
-          var9.b(true, param1.field_q);
-          var9.a((byte) -99, param1.field_k);
-          var9.a((byte) -92, param1.field_m);
-          var9.a((byte) -103, param1.field_o);
-          var9.a((byte) -62, param1.field_r);
-          var9.b(1, param1.field_l.length);
+          var9.writeByte(1, 1);
+          var9.writeShort(true, param1.field_s);
+          var9.writeShort(true, param1.field_n);
+          var9.writeShort(true, param1.field_q);
+          var9.writeInt((byte) -99, param1.field_k);
+          var9.writeInt((byte) -92, param1.field_m);
+          var9.writeInt((byte) -103, param1.field_o);
+          var9.writeInt((byte) -62, param1.field_r);
+          var9.writeByte(1, param1.field_l.length);
           for (var5 = 0; var5 < param1.field_l.length; var5++) {
-            var8.a((byte) -70, param1.field_l[var5]);
+            var8.writeInt((byte) -70, param1.field_l[var5]);
           }
           if (param0 >= -26) {
             aj var7 = (aj) null;

@@ -242,20 +242,20 @@ final class eb extends ia {
         var7 = SteelSentinels.obfuscationControl;
         var8 = rf.field_d;
         var2 = var8;
-        var3 = var8.f((byte) -87);
+        var3 = var8.readUnsignedByte((byte) -87);
         m.field_a = var3 & 127;
         stackIn_3_0 = (0 != (var3 & 128));
         oh.field_e = stackIn_3_0;
-        be.field_b = var8.f((byte) -121);
+        be.field_b = var8.readUnsignedByte((byte) -121);
         ni.field_d = var8.g((byte) -116);
         if (m.field_a != 2) {
           dk.field_a = 0;
           t.field_k = 0;
         } else {
-          dk.field_a = var8.c((byte) -60);
+          dk.field_a = var8.readUnsignedShort((byte) -60);
           t.field_k = var8.a(false);
         }
-        stackIn_9_0 = (var8.f((byte) -77) != 1) ? 0 : 1;
+        stackIn_9_0 = (var8.readUnsignedByte((byte) -77) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
         b.field_g = var8.h(1);
         if (param0 >= -50) {
@@ -267,11 +267,11 @@ final class eb extends ia {
           jk.field_e = b.field_g;
         }
         if (m.field_a == 1) {
-          gd.field_lb = var8.c((byte) -60);
+          gd.field_lb = var8.readUnsignedShort((byte) -60);
           uj.field_a = var8.h(1);
         } else {
           if (m.field_a == 4) {
-            gd.field_lb = var8.c((byte) -60);
+            gd.field_lb = var8.readUnsignedShort((byte) -60);
             uj.field_a = var8.h(1);
           } else {
             uj.field_a = null;
@@ -283,7 +283,7 @@ final class eb extends ia {
           bc.field_ob = null;
           return new na(param1);
         }
-        var5 = var8.c((byte) -60);
+        var5 = var8.readUnsignedShort((byte) -60);
         try {
           var9 = jl.field_w.a(var5, -81);
           bg.field_F = var9.i(1);
@@ -332,20 +332,20 @@ final class eb extends ia {
         var7 = SteelSentinels.obfuscationControl;
         var8 = rf.field_d;
         var2 = var8;
-        var3 = var8.f((byte) -87);
+        var3 = var8.readUnsignedByte((byte) -87);
         m.field_a = var3 & 127;
         stackIn_3_0 = (0 != (var3 & 128));
         oh.field_e = stackIn_3_0;
-        be.field_b = var8.f((byte) -121);
+        be.field_b = var8.readUnsignedByte((byte) -121);
         ni.field_d = var8.g((byte) -116);
         if (m.field_a != 2) {
           dk.field_a = 0;
           t.field_k = 0;
         } else {
-          dk.field_a = var8.c((byte) -60);
+          dk.field_a = var8.readUnsignedShort((byte) -60);
           t.field_k = var8.a(false);
         }
-        stackIn_9_0 = (var8.f((byte) -77) != 1) ? 0 : 1;
+        stackIn_9_0 = (var8.readUnsignedByte((byte) -77) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
         b.field_g = var8.h(1);
         if (param0 >= -50) {
@@ -357,11 +357,11 @@ final class eb extends ia {
           jk.field_e = b.field_g;
         }
         if (m.field_a == 1) {
-          gd.field_lb = var8.c((byte) -60);
+          gd.field_lb = var8.readUnsignedShort((byte) -60);
           uj.field_a = var8.h(1);
         } else {
           if (m.field_a == 4) {
-            gd.field_lb = var8.c((byte) -60);
+            gd.field_lb = var8.readUnsignedShort((byte) -60);
             uj.field_a = var8.h(1);
           } else {
             uj.field_a = null;
@@ -373,7 +373,7 @@ final class eb extends ia {
           bc.field_ob = null;
           return new na(param1);
         }
-        var5 = var8.c((byte) -60);
+        var5 = var8.readUnsignedShort((byte) -60);
         try {
           var9 = jl.field_w.a(var5, -81);
           bg.field_F = var9.i(1);

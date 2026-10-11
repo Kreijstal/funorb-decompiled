@@ -21,8 +21,8 @@ class fw extends kb {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != ga.field_g) {
-            ga.field_g.field_T.a(100, param1);
+          if (null != IsaacRandom.field_g) {
+            IsaacRandom.field_g.field_T.a(100, param1);
           }
           if (null != tj.field_C) {
             tj.field_C.field_M.a(100, param1);

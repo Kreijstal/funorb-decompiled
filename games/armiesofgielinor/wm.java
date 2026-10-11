@@ -120,7 +120,7 @@ final class wm {
         for (var7 = -1 + lk.field_h; var7 >= 0; var7--) {
           var8_ref_mo = an.field_F[var7];
           var9 = 0;
-          if (!bb.field_a &&
+          if (!NodeIterator.field_a &&
             vj.field_g > var5) {
             var10_int = kp.a(var8_ref_mo.field_b, -125);
             if (var8_ref_mo.a(true) >= var10_int && (var8_ref_mo.field_f ||

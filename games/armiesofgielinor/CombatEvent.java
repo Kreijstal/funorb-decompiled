@@ -38,15 +38,15 @@ final class CombatEvent extends GameEvent {
 
     final static void a(int param0, int param1, int param2) {
         CipherPacketBuffer var3 = vl.field_n;
-        var3.h(32161, param0);
-        var3.b(1, 3);
-        var3.b(1, 8);
+        var3.writeCipheredOpcode(32161, param0);
+        var3.writeByte(1, 3);
+        var3.writeByte(1, 8);
         if (param1 <= -41) {
-          var3.b(true, param2);
+          var3.writeShort(true, param2);
           return;
         }
         CombatEvent.e((byte) 75);
-        var3.b(true, param2);
+        var3.writeShort(true, param2);
     }
 
     final String describeEvent(byte obfuscationGuard, boolean verbose) {

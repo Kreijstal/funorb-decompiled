@@ -210,11 +210,11 @@ final class da {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var9 = mg.field_e;
-          var2 = var9.k(0);
+          var2 = var9.readUnsignedByte(0);
           if (param0 >= -77) {
             return;
           }
-          var3 = var9.k(0);
+          var3 = var9.readUnsignedByte(0);
           if (0 == var2) {
             var4 = (on) (StateChangeMarker.field_t.first((byte) 96));
             if (var4 == null) {
@@ -229,7 +229,7 @@ final class da {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.k(0) << rn.a(var7 << 8, 768));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(0) << rn.a(var7 << 8, 768));
             }
             var4.unlink(-116);
             return;

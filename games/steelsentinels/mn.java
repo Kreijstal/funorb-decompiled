@@ -18,7 +18,7 @@ final class mn extends DualNode {
         int var3_intLifetime1;
         try {
           while (true) {
-            var3_int = param1.f((byte) -107);
+            var3_int = param1.readUnsignedByte((byte) -107);
             if (0 == var3_int) {
               break;
             }
@@ -108,12 +108,12 @@ final class mn extends DualNode {
             this.field_D = param0.h(1);
           } else {
             if (param1 == 2) {
-              var4_int = param0.f((byte) -59);
+              var4_int = param0.readUnsignedByte((byte) -59);
               this.field_C = new int[var4_int];
               this.field_z = new char[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_C[var5] = param0.c((byte) -60);
-                var6 = param0.d((byte) -2);
+                this.field_C[var5] = param0.readUnsignedShort((byte) -60);
+                var6 = param0.readByte((byte) -2);
                 stackIn_16_0 = this.field_z;
                 stackIn_16_1 = var5;
                 if (var6 != 0) {
@@ -125,12 +125,12 @@ final class mn extends DualNode {
               }
             } else {
               if (param1 == 3) {
-                var4_int = param0.f((byte) -66);
+                var4_int = param0.readUnsignedByte((byte) -66);
                 this.field_F = new char[var4_int];
                 this.field_A = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  this.field_A[var5] = param0.c((byte) -60);
-                  var6 = param0.d((byte) -2);
+                  this.field_A[var5] = param0.readUnsignedShort((byte) -60);
+                  var6 = param0.readByte((byte) -2);
                   stackIn_8_0 = this.field_F;
                   stackIn_8_1 = var5;
                   if (0 != var6) {

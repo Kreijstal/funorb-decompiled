@@ -207,7 +207,7 @@ final class ar extends ms {
             return;
           }
           while (true) {
-            var3_int = param0.k(0);
+            var3_int = param0.readUnsignedByte(0);
             if (var3_int == 0) {
               return;
             }
@@ -280,24 +280,24 @@ final class ar extends ms {
           var4_int = -110 % ((13 - param0) / 56);
           if (param1 != 1) {
             if (param1 == 2) {
-              var5 = param2.k(0);
+              var5 = param2.readUnsignedByte(0);
               this.field_A = new int[var5];
               for (var6 = 0; var5 > var6; var6++) {
-                this.field_A[var6] = param2.e((byte) -104);
+                this.field_A[var6] = param2.readUnsignedShort((byte) -104);
               }
             } else if (param1 == 3) {
-              var5 = param2.k(0);
+              var5 = param2.readUnsignedByte(0);
               this.field_B = new int[var5];
               this.field_u = new int[var5][];
               for (var6 = 0; var5 > var6; var6++) {
-                var7 = param2.e((byte) -104);
+                var7 = param2.readUnsignedShort((byte) -104);
                 var8 = UnitInfoPopup.b(0, var7);
                 if (var8 != null) {
                   this.field_B[var6] = var7;
                   array$0 = new int[var8.field_f];
                   this.field_u[var6] = array$0;
                   for (var9 = 0; var9 < var8.field_f; var9++) {
-                    this.field_u[var6][var9] = param2.e((byte) -104);
+                    this.field_u[var6][var9] = param2.readUnsignedShort((byte) -104);
                   }
                 }
               }

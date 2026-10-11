@@ -1,33 +1,33 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mt {
+final class TextCursor {
     static String field_g;
     static boolean field_f;
-    private int field_a;
+    private int length;
     static rc field_e;
     static int field_d;
-    private String field_b;
-    int field_c;
+    private String text;
+    int position;
 
     public final String toString() {
-        return this.field_b.substring(0, this.field_c) + "|" + this.field_b.substring(this.field_c);
+        return this.text.substring(0, this.position) + "|" + this.text.substring(this.position);
     }
 
-    final char b(int param0) {
-        if (param0 != -1) {
-          this.field_b = (String) null;
+    final char readCharacter(int obfuscationGuard) {
+        if (obfuscationGuard != -1) {
+          this.text = (String) null;
         }
-        int fieldTemp$0 = this.field_c;
-        this.field_c = this.field_c + 1;
-        return this.field_b.charAt(fieldTemp$0);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.text.charAt(fieldTemp$0);
     }
 
-    final boolean a(byte param0) {
-        if (param0 != 16) {
+    final boolean isAtEnd(byte obfuscationGuard) {
+        if (obfuscationGuard != 16) {
           return true;
         }
-        return this.field_c >= this.field_a ? true : false;
+        return this.position >= this.length ? true : false;
     }
 
     public static void a(int param0) {
@@ -35,11 +35,11 @@ final class mt {
         field_g = null;
         if (param0 > -116) {
           CipherPacketBuffer var2 = (CipherPacketBuffer) null;
-          mt.a((CipherPacketBuffer) null, false);
+          TextCursor.readTagName((CipherPacketBuffer) null, false);
         }
     }
 
-    final static String a(CipherPacketBuffer param0, boolean param1) {
+    final static String readTagName(CipherPacketBuffer packet, boolean obfuscationGuard) {
         int var4_int = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -53,12 +53,12 @@ final class mt {
         RuntimeException decompiledCaughtException = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2_int = param0.g(61, 2) + 1;
+          var2_int = packet.readBits(61, 2) + 1;
           var3 = new byte[var2_int];
           for (var4_int = 0; var4_int < var2_int; var4_int++) {
-            var3[var4_int] = (byte)(int)sa.a(param0, -1, -15329);
+            var3[var4_int] = (byte)(int)sa.readTagCharacter(packet, -1, -15329);
           }
-          if (!param1) {
+          if (!obfuscationGuard) {
             field_g = (String) null;
           }
           var4 = new String(var3);
@@ -69,22 +69,22 @@ final class mt {
           var2 = decompiledCaughtException;
           stackIn_10_0 = var2;
           stackIn_10_1 = new StringBuilder().append("mt.D(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    mt(String param0) {
-        this.field_c = 0;
+    TextCursor(String text) {
+        this.position = 0;
         try {
-          this.field_b = param0;
-          this.field_a = this.field_b.length();
+          this.text = text;
+          this.length = this.text.length();
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "mt.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "mt.<init>(" + (text != null ? "{...}" : "null") + ')');
         }
     }
 

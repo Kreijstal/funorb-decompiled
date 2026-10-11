@@ -340,7 +340,7 @@ final class i extends je {
         var2[2] = 16777215;
         var2[0] = 1;
         var2[1] = param0;
-        TurnEffectEvent.field_z = new hc(oh.field_J, ga.field_k, rs.field_n, var2, 0, 0);
+        TurnEffectEvent.field_z = new hc(oh.field_J, IsaacRandom.field_k, rs.field_n, var2, 0, 0);
     }
 
     final boolean o(int param0) {

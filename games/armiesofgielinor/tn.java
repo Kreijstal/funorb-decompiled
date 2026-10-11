@@ -83,7 +83,7 @@ final class tn extends sf implements he {
     private final void o(int param0) {
         if (param0 != 1) {
           CipherPacketBuffer var3 = (CipherPacketBuffer) null;
-          tn.a(false, 35, (CipherPacketBuffer) null);
+          tn.readTaggedInteger(false, 35, (CipherPacketBuffer) null);
         }
         if (!this.field_L) {
           return;
@@ -245,7 +245,7 @@ final class tn extends sf implements he {
         }
     }
 
-    final static long a(boolean param0, int param1, CipherPacketBuffer param2) {
+    final static long readTaggedInteger(boolean obfuscationGuard, int encodedLength, CipherPacketBuffer packet) {
         RuntimeException var3 = null;
         long stackIn_2_0 = 0L;
         long stackIn_4_0 = 0L;
@@ -254,8 +254,8 @@ final class tn extends sf implements he {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0) {
-            stackIn_4_0 = (long)de.a(-111, param2, 4, 14, 30, 20);
+          if (!obfuscationGuard) {
+            stackIn_4_0 = (long)de.readTieredSignedInt(-111, packet, 4, 14, 30, 20);
             return stackIn_4_0;
           }
           stackIn_2_0 = 100L;
@@ -264,8 +264,8 @@ final class tn extends sf implements he {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("tn.C(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_7_1 = new StringBuilder().append("tn.C(").append(obfuscationGuard).append(',').append(encodedLength).append(',');
+          if (packet == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -277,7 +277,7 @@ final class tn extends sf implements he {
     final static RgbSprite[] a(boolean param0, int param1, int param2) {
         if (!param0) {
           CipherPacketBuffer var4 = (CipherPacketBuffer) null;
-          tn.a(false, 58, (CipherPacketBuffer) null);
+          tn.readTaggedInteger(false, 58, (CipherPacketBuffer) null);
         }
         return ft.a(param1, (byte) -114, param2, 1);
     }

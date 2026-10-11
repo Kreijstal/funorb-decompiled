@@ -164,10 +164,10 @@ final class fq {
           var7.c((byte) -76);
           vg.field_p = vg.field_p - 1;
           var5 = vl.field_n;
-          var5.h(32161, param0);
+          var5.writeCipheredOpcode(32161, param0);
           var5.position = var5.position + 1;
           var6 = var5.position;
-          var5.b(1, 3);
+          var5.writeByte(1, 3);
           if (param2) {
             stackIn_13_0 = (String) null;
             return stackIn_13_0;
@@ -197,8 +197,8 @@ final class fq {
     }
 
     final static void b(byte param0) {
-        bb.field_a = false;
-        vi.field_d = mg.field_e.k(0) == 0 ? true : false;
+        NodeIterator.field_a = false;
+        vi.field_d = mg.field_e.readUnsignedByte(0) == 0 ? true : false;
         if (param0 < 70) {
           field_h = (fa) null;
           return;

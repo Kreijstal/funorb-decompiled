@@ -60,7 +60,7 @@ final class wp extends ms {
           var28 = this.field_x[var13];
           var16 = new PacketBuffer(var28);
           var16.position = 1;
-          var6 = var16.e((byte) -104);
+          var6 = var16.readUnsignedShort((byte) -104);
           var2 = var2 != 0 & PortalLossCondition.field_e.a(var6, (byte) -56) ? 1 : 0;
           var13++;
         }
@@ -75,7 +75,7 @@ final class wp extends ms {
           var30 = this.field_x[var6Lifetime1];
           var8 = new PacketBuffer(var30);
           var8.position = 1;
-          var9 = var8.e((byte) -104);
+          var9 = var8.readUnsignedShort((byte) -104);
           var10 = null;
           var11 = (ig) (var3.first((byte) 124));
           while (var11 != null) {

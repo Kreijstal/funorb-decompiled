@@ -115,7 +115,7 @@ final class ci {
             var14 = var6[var9];
             IndexedSprite[] var10 = var14;
             for (var11_int = 0; var14.length > var11_int; var11_int++) {
-              var14[var11_int] = uh.a(var5[var9], var19[var11_int], false);
+              var14[var11_int] = NodeHashTable.a(var5[var9], var19[var11_int], false);
             }
           }
           var9Lifetime1 = var17.field_F;

@@ -10,12 +10,12 @@ final class gn {
         CipherPacketBuffer var3 = null;
         try {
           var3 = vl.field_n;
-          var3.h(32161, param0);
-          var3.b(1, 5);
-          var3.b(param2 + 1, param2);
-          var3.b(true, param1.field_r);
-          var3.b(1, param1.field_k);
-          var3.b(1, param1.field_p);
+          var3.writeCipheredOpcode(32161, param0);
+          var3.writeByte(1, 5);
+          var3.writeByte(param2 + 1, param2);
+          var3.writeShort(true, param1.field_r);
+          var3.writeByte(1, param1.field_k);
+          var3.writeByte(1, param1.field_p);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "gn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

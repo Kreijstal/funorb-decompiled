@@ -44,7 +44,7 @@ abstract class he {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -1766) {
-            stackIn_6_0 = (param1.g(param0 + 1815, 1) == 1);
+            stackIn_6_0 = (param1.readBits(param0 + 1815, 1) == 1);
             return stackIn_6_0;
           }
           return false;

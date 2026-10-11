@@ -61,10 +61,10 @@ final class dd {
             return stackIn_23_0;
           }
           var5 = mm.field_g;
-          var5.a(param0, (byte) -117);
+          var5.writeCipheredOpcode(param0, (byte) -117);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.a((byte) 111, 2);
+          var5.writeByte((byte) 111, 2);
           var5.a(param2, -93);
           var5.b((byte) -28, var5.position - var4);
           stackIn_25_0 = null;

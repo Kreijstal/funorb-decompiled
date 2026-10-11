@@ -77,16 +77,16 @@ final class tc extends IntrusiveNode {
         CipherPacketBuffer var2Lifetime1;
         if (param0 == 87) {
           var2 = mm.field_g;
-          var2.a(param1, (byte) -117);
-          var2.a((byte) 124, 1);
-          var2.a((byte) 112, 0);
+          var2.writeCipheredOpcode(param1, (byte) -117);
+          var2.writeByte((byte) 124, 1);
+          var2.writeByte((byte) 112, 0);
           return;
         }
         field_r = (String) null;
         var2Lifetime1 = mm.field_g;
-        var2Lifetime1.a(param1, (byte) -117);
-        var2Lifetime1.a((byte) 124, 1);
-        var2Lifetime1.a((byte) 112, 0);
+        var2Lifetime1.writeCipheredOpcode(param1, (byte) -117);
+        var2Lifetime1.writeByte((byte) 124, 1);
+        var2Lifetime1.writeByte((byte) 112, 0);
     }
 
     final static int a(int param0, BitmapFont param1, int param2, String param3, String[] param4) {

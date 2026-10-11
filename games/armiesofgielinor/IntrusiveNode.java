@@ -197,19 +197,19 @@ class IntrusiveNode {
         int var4 = 0;
         try {
           var5 = vl.field_n;
-          var5.h(32161, param0);
+          var5.writeCipheredOpcode(32161, param0);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.b(1, 1);
-          var5.b(1, param1.field_r);
+          var5.writeByte(1, 1);
+          var5.writeByte(1, param1.field_r);
           var5.c((byte) 60, param1.field_l);
           if (param2 != 105) {
             IntrusiveNode.a((java.applet.Applet) null, (String) null, (byte) 58, (String) null, -67L);
           }
-          var5.a((byte) -54, param1.field_w);
-          var5.a((byte) -53, param1.field_m);
-          var5.a((byte) -63, param1.field_s);
-          var5.a((byte) -109, param1.field_u);
+          var5.writeInt((byte) -54, param1.field_w);
+          var5.writeInt((byte) -53, param1.field_m);
+          var5.writeInt((byte) -63, param1.field_s);
+          var5.writeInt((byte) -109, param1.field_u);
           var5.b((byte) -39, var4);
           var5.e(-var4 + var5.position, param2 + 5825);
         } catch (RuntimeException runtimeException) {

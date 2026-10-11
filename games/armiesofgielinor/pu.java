@@ -202,7 +202,7 @@ final class pu {
           }
           var1 = vl.field_n;
           while (g.a(param0 ^ -13083)) {
-            var1.h(32161, 8);
+            var1.writeCipheredOpcode(32161, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;

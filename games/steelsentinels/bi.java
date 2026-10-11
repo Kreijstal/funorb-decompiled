@@ -20,20 +20,20 @@ final class bi {
         }
         if (param0 == 2158) {
           var2 = rf.field_d;
-          var2.i(0);
-          var2.i(0);
-          var2.i(0);
-          var2.i(0);
+          var2.readInt(0);
+          var2.readInt(0);
+          var2.readInt(0);
+          var2.readInt(0);
           var1.unlink(param0 - 2154);
           return;
         }
         CharSequence var3 = (CharSequence) null;
         bi.a(false, -110, true, (CharSequence) null);
         var2Lifetime1 = rf.field_d;
-        var2Lifetime1.i(0);
-        var2Lifetime1.i(0);
-        var2Lifetime1.i(0);
-        var2Lifetime1.i(0);
+        var2Lifetime1.readInt(0);
+        var2Lifetime1.readInt(0);
+        var2Lifetime1.readInt(0);
+        var2Lifetime1.readInt(0);
         var1.unlink(param0 - 2154);
     }
 

@@ -499,7 +499,7 @@ abstract class vf {
                 }
                 var21 = null;
                 if (var13 != 0) {
-                  var21 = sc.field_h;
+                  var21 = TaggedMapData.field_h;
                   var22 = var21;
                   var25 = var22;
                   var22 = var25;

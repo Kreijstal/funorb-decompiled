@@ -170,7 +170,7 @@ final class jg extends IntrusiveNode {
               var14 = param4 | param5;
               var12.a(var12.field_Xb, param0 + 107);
               var12.field_Xb.field_Eb = 1;
-              var12.field_lc = new je(0L, ga.field_i);
+              var12.field_lc = new je(0L, IsaacRandom.field_i);
               var12.a(var12.field_lc, 102);
               var12.field_cc = new je(0L, ws.field_P);
               var12.a(var12.field_cc, 59);
@@ -178,7 +178,7 @@ final class jg extends IntrusiveNode {
               var12.field_hc = new je(0L, ws.field_P);
               var12.a(var12.field_hc, 61);
               var12.field_hc.field_O = 0;
-              var12.field_Zb = new je(0L, ga.field_i);
+              var12.field_Zb = new je(0L, IsaacRandom.field_i);
               var12.a(var12.field_Zb, 78);
               var12.field_Zb.field_Eb = 2;
               stackIn_10_0 = var12;
@@ -188,7 +188,7 @@ final class jg extends IntrusiveNode {
               if (!fh.field_c) {
                 stackIn_11_1 = null;
                 stackIn_11_2 = null;
-                stackIn_11_4 = ga.field_i;
+                stackIn_11_4 = IsaacRandom.field_i;
               } else {
                 stackIn_11_1 = null;
                 stackIn_11_2 = null;
@@ -234,7 +234,7 @@ final class jg extends IntrusiveNode {
               if (fh.field_c) {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
-                stackIn_32_4 = ga.field_i;
+                stackIn_32_4 = IsaacRandom.field_i;
               } else {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
@@ -243,7 +243,7 @@ final class jg extends IntrusiveNode {
               stackIn_31_0.field_Rb = new je(stackIn_31_3, stackIn_32_4);
               var12.a(var12.field_Rb, 39);
               var12.field_Rb.field_Eb = 2;
-              var12.field_Pb = new je(0L, ga.field_i);
+              var12.field_Pb = new je(0L, IsaacRandom.field_i);
               var12.a(var12.field_Pb, 85);
               var12.field_Ib = new je(0L, ms.field_k);
               var12.a(var12.field_Ib, 78);
@@ -619,16 +619,16 @@ final class jg extends IntrusiveNode {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var13 = mg.field_e;
-          var2 = var13.k(param0);
+          var2 = var13.readUnsignedByte(param0);
           if (var2 == 0) {
             var10 = ce.a(-80);
             var3 = var10;
             var9 = var10;
             var4 = var9;
             var5 = var13;
-            var6 = ((PacketBuffer) ((Object) var5)).k(0);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(0);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((PacketBuffer) ((Object) var5)).i(1);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(1);
             }
             var12 = (b) (ta.field_O.first((byte) 98));
             if (var12 == null) {

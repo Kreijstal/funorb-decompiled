@@ -40,11 +40,11 @@ final class ik {
         int var5 = 0;
         CipherPacketBuffer var4 = mm.field_g;
         int var5Lifetime1;
-        var4.a(param1, (byte) -117);
+        var4.writeCipheredOpcode(param1, (byte) -117);
         if (!param2) {
           var4.position = var4.position + 1;
           var5 = var4.position;
-          var4.a((byte) 115, 6);
+          var4.writeByte((byte) 115, 6);
           var4.b(-28875, param0);
           var4.b((byte) -92, -var5 + var4.position);
           return;
@@ -52,7 +52,7 @@ final class ik {
         ik.b(-47);
         var4.position = var4.position + 1;
         var5Lifetime1 = var4.position;
-        var4.a((byte) 115, 6);
+        var4.writeByte((byte) 115, 6);
         var4.b(-28875, param0);
         var4.b((byte) -92, -var5Lifetime1 + var4.position);
     }

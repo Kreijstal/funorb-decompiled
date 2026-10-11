@@ -150,7 +150,7 @@ final class sa {
             return;
           }
           while (PartInstruction.a(true)) {
-            var1.a(8, (byte) -117);
+            var1.writeCipheredOpcode(8, (byte) -117);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;

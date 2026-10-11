@@ -245,7 +245,7 @@ final class a extends IntrusiveNode {
         }
     }
 
-    final static Unit a(int param0, int param1, CipherPacketBuffer param2) {
+    final static Unit readTaggedUnit(int recordBitLength, int obfuscationGuard, CipherPacketBuffer packet) {
         Unit var3 = null;
         RuntimeException var3_ref = null;
         Unit stackIn_6_0 = null;
@@ -254,22 +254,22 @@ final class a extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == 0) {
+          if (recordBitLength == 0) {
             return null;
           }
           var3 = new Unit();
-          if (param1 <= 31) {
+          if (obfuscationGuard <= 31) {
             a.a(96, (byte) -94);
           }
-          no.a(param2, var3, param0, -24721);
+          no.readTaggedFields(packet, var3, recordBitLength, -24721);
           stackIn_6_0 = var3;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_9_0 = var3_ref;
-          stackIn_9_1 = new StringBuilder().append("a.B(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_9_1 = new StringBuilder().append("a.B(").append(recordBitLength).append(',').append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -283,9 +283,9 @@ final class a extends IntrusiveNode {
           field_m = (RgbSprite[]) null;
         }
         CipherPacketBuffer var2 = vl.field_n;
-        var2.h(32161, param0);
-        var2.b(1, 1);
-        var2.b(1, 2);
+        var2.writeCipheredOpcode(32161, param0);
+        var2.writeByte(1, 1);
+        var2.writeByte(1, 2);
     }
 
     a(int param0, int param1) {

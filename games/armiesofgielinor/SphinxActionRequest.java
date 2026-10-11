@@ -186,8 +186,8 @@ final class SphinxActionRequest extends ActionRequest {
           fp.field_Lb.field_O = 2;
           ws.field_P = new je(0L, ke.field_e);
           ws.field_P.a(0, ms.field_k);
-          ga.field_i = new je(0L, fp.field_Lb);
-          ga.field_i.a(0, ms.field_k);
+          IsaacRandom.field_i = new je(0L, fp.field_Lb);
+          IsaacRandom.field_i.a(0, ms.field_k);
           var16 = fk.a("button_mouseover", (byte) -128, param1, "lobby");
           qb.field_h = new np(kq.field_N, var12, eq.field_h, ms.field_k, 3, 2, io.field_n, 3, jn.field_d);
           lu.field_u = new je(0L, ms.field_k);

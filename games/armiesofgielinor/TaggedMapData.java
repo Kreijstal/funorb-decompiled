@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sc implements TaggedFieldReader {
+final class TaggedMapData implements TaggedFieldReader {
     static String field_i;
-    int field_j;
-    int field_k;
+    int playerCount;
+    int mapWidth;
     static mp field_g;
-    MapTile[] field_c;
+    MapTile[] tiles;
     static BitmapFont field_b;
-    int field_e;
+    int mapHeight;
     static String field_d;
     static RgbSprite[] field_f;
-    int field_a;
+    int mapTheme;
     static String field_h;
 
     final static void a(int param0, int param1, int param2) {
@@ -236,7 +236,7 @@ final class sc implements TaggedFieldReader {
           field_i = null;
           return;
         }
-        sc.a(85);
+        TaggedMapData.a(85);
         field_h = null;
         field_d = null;
         field_i = null;
@@ -266,14 +266,14 @@ final class sc implements TaggedFieldReader {
               if (encodedLength <= 0) {
                 return;
               }
-              this.field_k = (int)tn.a(false, encodedLength, packet);
+              this.mapWidth = (int)tn.readTaggedInteger(false, encodedLength, packet);
             } else {
               if (!fieldName.equals("h")) {
                 if (fieldName.equals("them")) {
                   if (0 >= encodedLength) {
                     return;
                   }
-                  this.field_a = (int)tn.a(false, encodedLength, packet);
+                  this.mapTheme = (int)tn.readTaggedInteger(false, encodedLength, packet);
                   return;
                 }
                 if (!fieldName.equals("map")) {
@@ -282,27 +282,27 @@ final class sc implements TaggedFieldReader {
                 if (encodedLength <= 0) {
                   return;
                 }
-                var5_int = ai.a(packet, true);
-                this.field_c = new MapTile[var5_int];
+                var5_int = ai.readCompactInt(packet, true);
+                this.tiles = new MapTile[var5_int];
                 for (var6 = 0; var5_int > var6; var6++) {
-                  mt.a(packet, true);
-                  var7 = packet.a(false);
-                  var8 = AiPlanner.a(packet, true);
-                  var9 = -var7 + packet.a(false);
-                  kq.a(var7, -24232, var9, var8, packet);
-                  this.field_c[var6] = rb.a(var8, (byte) 70, packet);
-                  ao.a(var7, -126, var9, packet, var8);
+                  TextCursor.readTagName(packet, true);
+                  var7 = packet.getReadBitPosition(false);
+                  var8 = AiPlanner.readCompactInt(packet, true);
+                  var9 = -var7 + packet.getReadBitPosition(false);
+                  kq.enterTaggedPayload(var7, -24232, var9, var8, packet);
+                  this.tiles[var6] = rb.readTaggedMapTile(var8, (byte) 70, packet);
+                  ao.finishTaggedPayload(var7, -126, var9, packet, var8);
                 }
               } else {
                 if (0 < encodedLength) {
-                  this.field_e = (int)tn.a(false, encodedLength, packet);
+                  this.mapHeight = (int)tn.readTaggedInteger(false, encodedLength, packet);
                   return;
                 }
               }
             }
           } else {
             if (0 < encodedLength) {
-              this.field_j = (int)tn.a(false, encodedLength, packet);
+              this.playerCount = (int)tn.readTaggedInteger(false, encodedLength, packet);
             }
           }
           return;

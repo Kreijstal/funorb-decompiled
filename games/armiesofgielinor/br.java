@@ -91,7 +91,7 @@ final class br {
     final static void a(BitmapFont param0, int param1, int param2, BitmapFont param3) {
         try {
           pf.field_d = param1;
-          sc.field_b = param0;
+          TaggedMapData.field_b = param0;
           AiInfluenceMap.field_h = param3;
           pt.c(SoftwareRaster.field_l / 2, SoftwareRaster.field_g / 2, 75);
           uc.a(param0.field_L + param0.field_z, param0.field_z, param3.field_z, false, param3.field_L + param3.field_z);

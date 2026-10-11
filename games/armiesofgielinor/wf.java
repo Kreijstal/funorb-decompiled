@@ -185,7 +185,7 @@ abstract class wf extends iv {
     }
 
     private final void n(int param0) {
-        int var2 = mg.field_e.k(0);
+        int var2 = mg.field_e.readUnsignedByte(0);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = fk.field_b - 1;
         byte[] var5 = new byte[var4];
@@ -286,7 +286,7 @@ abstract class wf extends iv {
             ov.a(CombatEvent.d((byte) 48), 11982);
           }
           if (10 == var4) {
-            vl.field_n.h(32161, 17);
+            vl.field_n.writeCipheredOpcode(32161, 17);
           }
           if (11 == var4) {
             t.a((byte) -118, CombatEvent.d((byte) 7));

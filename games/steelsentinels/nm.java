@@ -114,9 +114,9 @@ final class nm extends ia {
 
     final static void a(int param0, byte param1) {
         CipherPacketBuffer var2 = mm.field_g;
-        var2.a(param0, (byte) -117);
-        var2.a((byte) 109, 1);
-        var2.a((byte) 108, 1);
+        var2.writeCipheredOpcode(param0, (byte) -117);
+        var2.writeByte((byte) 109, 1);
+        var2.writeByte((byte) 108, 1);
         int var3 = 30 / ((11 - param1) / 51);
     }
 
@@ -213,7 +213,7 @@ final class nm extends ia {
         RuntimeException decompiledCaughtException = null;
         var7 = SteelSentinels.obfuscationControl;
         try {
-          var2_int = param0.g(-126, 8);
+          var2_int = param0.readBits(-126, 8);
           if (0 < var2_int) {
             stackIn_3_0 = null;
             return (jj[]) (stackIn_3_0);
@@ -222,21 +222,21 @@ final class nm extends ia {
             stackIn_6_0 = (jj[]) null;
             return stackIn_6_0;
           }
-          var3 = param0.g(-77, 12);
+          var3 = param0.readBits(-77, 12);
           var4 = new jj[var3];
           for (var5 = 0; var5 < var3; var5++) {
             if (!he.a(-1766, param0)) {
-              var6 = param0.g(30, fm.a(-1 + var5, 80));
+              var6 = param0.readBits(30, fm.a(-1 + var5, 80));
               var4[var5] = var4[var6];
             } else {
               var6_ref_jj = new jj();
-              param0.g(-78, 24);
-              param0.g(80, 24);
-              var6_ref_jj.field_g = param0.g(94, 24);
-              param0.g(62, 9);
-              param0.g(-75, 12);
-              param0.g(122, 12);
-              param0.g(-103, 12);
+              param0.readBits(-78, 24);
+              param0.readBits(80, 24);
+              var6_ref_jj.field_g = param0.readBits(94, 24);
+              param0.readBits(62, 9);
+              param0.readBits(-75, 12);
+              param0.readBits(122, 12);
+              param0.readBits(-103, 12);
               var4[var5] = var6_ref_jj;
             }
           }

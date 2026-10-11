@@ -469,11 +469,11 @@ final class la {
         stackIn_14_8 = (kg.field_Vb <= 50) ? false : true;
         bl.a(stackIn_9_0, stackIn_9_1, stackIn_11_2, stackIn_13_3, stackIn_13_4, stackIn_13_5, stackIn_13_6 != 0, stackIn_13_7, stackIn_14_8, 14, param1, true);
         if (ParticleEffect.field_J) {
-          mm.field_g.a(57, (byte) -117);
+          mm.field_g.writeCipheredOpcode(57, (byte) -117);
           ParticleEffect.field_J = false;
         }
         if (of.field_c) {
-          mm.field_g.a(10, (byte) -117);
+          mm.field_g.writeCipheredOpcode(10, (byte) -117);
           of.field_c = false;
         }
     }

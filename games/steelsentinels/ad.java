@@ -99,14 +99,14 @@ final class ad {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = mm.field_g;
-        var2.a(param1, (byte) -117);
+        var2.writeCipheredOpcode(param1, (byte) -117);
         var2.position = var2.position + 1;
         int var3 = var2.position;
-        var2.a((byte) 126, 5);
-        var2.a((byte) 114, nf.field_b.field_Ub);
+        var2.writeByte((byte) 126, 5);
+        var2.writeByte((byte) 114, nf.field_b.field_Ub);
         int var4 = nf.field_b.field_Nc + (nf.field_b.field_sc << 6);
-        var2.a((byte) 127, var4);
-        var2.a(nf.field_b.field_Sb.length, (byte) -122, param0, nf.field_b.field_Sb);
+        var2.writeByte((byte) 127, var4);
+        var2.writeBytes(nf.field_b.field_Sb.length, (byte) -122, param0, nf.field_b.field_Sb);
         var2.b((byte) -113, var2.position - var3);
     }
 

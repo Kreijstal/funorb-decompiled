@@ -118,9 +118,9 @@ final class g {
             return;
           }
           var28 = rf.field_d;
-          var2 = var28.f((byte) -61);
+          var2 = var28.readUnsignedByte((byte) -61);
           if (var2 == 0) {
-            var3 = var28.c((byte) -60);
+            var3 = var28.readUnsignedShort((byte) -60);
             var4 = (kf) (SentinelCommand.field_w.first(13058));
             while (var4 != null) {
               if (var3 != var4.field_C) {
@@ -133,7 +133,7 @@ final class g {
               pm.m(98);
               return;
             }
-            var5 = var28.f((byte) -68);
+            var5 = var28.readUnsignedByte((byte) -68);
             if (var5 != 0) {
               var6 = var4.field_u;
               var7 = var4.field_w;
@@ -143,7 +143,7 @@ final class g {
               for (var8_int = 1; var8_int < var5; var8_int++) {
                 sa.field_f[var8_int].field_g = var28.h(1);
                 sa.field_f[var8_int].field_d = false;
-                if (var28.f((byte) -99) != 1) {
+                if (var28.readUnsignedByte((byte) -99) != 1) {
                   sa.field_f[var8_int].field_b = null;
                 } else {
                   sa.field_f[var8_int].field_b = var28.h(1);
@@ -165,10 +165,10 @@ final class g {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var28.f((byte) -90);
+              var18 = var28.readUnsignedByte((byte) -90);
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
-                  var20 = var28.f((byte) -58);
+                  var20 = var28.readUnsignedByte((byte) -58);
                   var21 = sa.field_f[var20].field_g;
                   var22 = var28.g((byte) -97);
                   var24 = var28.position;
@@ -179,7 +179,7 @@ final class g {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var28.i(0);
+                      var11[0][incrementValue$3] = var28.readInt(0);
                     }
                     var12++;
                   }
@@ -193,7 +193,7 @@ final class g {
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var28.i(0);
+                      var11[1][incrementValue$4] = var28.readInt(0);
                     }
                   }
                   if (var14 < var6 &&
@@ -207,7 +207,7 @@ final class g {
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var28.i(0);
+                      var11[2][incrementValue$5] = var28.readInt(0);
                     }
                   }
                 }
@@ -218,7 +218,7 @@ final class g {
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var28.c((byte) -60);
+            var3Lifetime1 = var28.readUnsignedShort((byte) -60);
             var4_long = var28.g((byte) -122);
             var6_ref_tc = (tc) (ic.field_B.first(13058));
             while (var6_ref_tc != null) {

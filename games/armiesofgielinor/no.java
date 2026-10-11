@@ -69,7 +69,7 @@ final class no extends en {
         }
     }
 
-    final static void a(CipherPacketBuffer param0, TaggedFieldReader param1, int param2, int param3) {
+    final static void readTaggedFields(CipherPacketBuffer packet, TaggedFieldReader target, int recordBitLength, int obfuscationGuard) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String var5 = null;
@@ -85,17 +85,17 @@ final class no extends en {
         RuntimeException decompiledCaughtException = null;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4_int = param2 + param0.a(false);
-          while (param0.a(false) < var4_int) {
-            var5 = mt.a(param0, true);
-            var6 = param0.a(false);
-            var7 = AiPlanner.a(param0, true);
-            var8 = param0.a(false) - var6;
-            kq.a(var6, param3 + 489, var8, var7, param0);
-            param1.decodeTaggedField(var7, param0, var5, (byte) 37);
-            ao.a(var6, 4, var8, param0, var7);
+          var4_int = recordBitLength + packet.getReadBitPosition(false);
+          while (packet.getReadBitPosition(false) < var4_int) {
+            var5 = TextCursor.readTagName(packet, true);
+            var6 = packet.getReadBitPosition(false);
+            var7 = AiPlanner.readCompactInt(packet, true);
+            var8 = packet.getReadBitPosition(false) - var6;
+            kq.enterTaggedPayload(var6, obfuscationGuard + 489, var8, var7, packet);
+            target.decodeTaggedField(var7, packet, var5, (byte) 37);
+            ao.finishTaggedPayload(var6, 4, var8, packet, var7);
           }
-          if (param3 == -24721) {
+          if (obfuscationGuard == -24721) {
             return;
           }
           field_M = (je) null;
@@ -105,18 +105,18 @@ final class no extends en {
           var4 = decompiledCaughtException;
           stackIn_9_0 = var4;
           stackIn_9_1 = new StringBuilder().append("no.K(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param1 == null) {
+          if (target == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(recordBitLength).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

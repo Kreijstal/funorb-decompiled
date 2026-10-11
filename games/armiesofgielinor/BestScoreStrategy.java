@@ -91,7 +91,7 @@ final class BestScoreStrategy extends AiPlanningStrategy {
         return var2Lifetime1;
     }
 
-    final static og a(byte param0, mt param1) {
+    final static og a(byte param0, TextCursor param1) {
         int fieldTemp$4 = 0;
         StringBuilder discarded$5 = null;
         StringBuilder discarded$6 = null;
@@ -112,18 +112,18 @@ final class BestScoreStrategy extends AiPlanningStrategy {
         int var6Lifetime1;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          fieldTemp$4 = param1.field_c - 1;
-          param1.field_c = param1.field_c - 1;
+          fieldTemp$4 = param1.position - 1;
+          param1.position = param1.position - 1;
           var2_int = fieldTemp$4;
           var3 = new StringBuilder();
-          var4 = param1.b(-1);
+          var4 = param1.readCharacter(-1);
           if (param0 <= 95) {
             field_h = (String) null;
           }
           discarded$5 = var3.append((char) var4);
           var5 = 0;
-          while (!param1.a((byte) 16)) {
-            var6 = param1.b(-1);
+          while (!param1.isAtEnd((byte) 16)) {
+            var6 = param1.readCharacter(-1);
             if (var5 != 0) {
               var5 = 0;
               discarded$6 = var3.append((char) var6);

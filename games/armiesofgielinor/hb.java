@@ -40,12 +40,12 @@ final class hb {
               decompiledFrameRemainder0 = (kl.field_k == ov.field_g);
               if ((decompiledFrameRemainder0) && (0 == vl.field_n.position &&
                 (10000L + SummonEvent.field_G) < vi.b(-60))) {
-                vl.field_n.h(32161, param1);
+                vl.field_n.writeCipheredOpcode(32161, param1);
               }
             } else {
               if (0 == vl.field_n.position &&
                 (10000L + SummonEvent.field_G) < vi.b(-60)) {
-                vl.field_n.h(32161, param1);
+                vl.field_n.writeCipheredOpcode(32161, param1);
               }
             }
             if (decompiledFrameRemainder0) {
@@ -90,12 +90,12 @@ final class hb {
               decompiledFrameRemainder0 = (kl.field_k == ov.field_g);
               if ((decompiledFrameRemainder0) && (0 == vl.field_n.position &&
                 (10000L + SummonEvent.field_G) < vi.b(-60))) {
-                vl.field_n.h(32161, param1);
+                vl.field_n.writeCipheredOpcode(32161, param1);
               }
             } else {
               if (0 == vl.field_n.position &&
                 (10000L + SummonEvent.field_G) < vi.b(-60)) {
-                vl.field_n.h(32161, param1);
+                vl.field_n.writeCipheredOpcode(32161, param1);
               }
             }
             if (decompiledFrameRemainder0) {

@@ -12,7 +12,7 @@ final class sa {
     static RgbSprite field_a;
     static String field_c;
 
-    final static long a(CipherPacketBuffer param0, int param1, int param2) {
+    final static long readTagCharacter(CipherPacketBuffer packet, int unusedValue, int obfuscationGuard) {
         RuntimeException var3 = null;
         String var4 = null;
         long stackIn_3_0 = 0L;
@@ -21,23 +21,23 @@ final class sa {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 != -15329) {
+          if (obfuscationGuard != -15329) {
             var4 = (String) null;
             sa.a(18, -42, -58, (String) null);
           }
-          stackIn_3_0 = (long)vt.a(-9202, 8, 4, param0);
+          stackIn_3_0 = (long)vt.readTwoTierUnsignedInt(-9202, 8, 4, packet);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("sa.E(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(unusedValue).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

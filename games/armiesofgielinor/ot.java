@@ -12,20 +12,20 @@ final class ot extends dr {
         int var4 = 0;
         try {
           var6 = vl.field_n;
-          var6.h(32161, param1);
+          var6.writeCipheredOpcode(32161, param1);
           var6.position = var6.position + 1;
           var4 = var6.position;
-          var6.b(param0 ^ 113, 1);
-          var6.b(1, param2.field_r);
+          var6.writeByte(param0 ^ 113, 1);
+          var6.writeByte(1, param2.field_r);
           if (param0 != 112) {
             iw var5 = (iw) null;
             ot.a((byte) 26, -53, (iw) null);
           }
-          var6.b(1, param2.field_k);
-          var6.a((byte) -96, param2.field_q);
-          var6.a((byte) -102, param2.field_m);
-          var6.a((byte) -86, param2.field_t);
-          var6.a((byte) -60, param2.field_s);
+          var6.writeByte(1, param2.field_k);
+          var6.writeInt((byte) -96, param2.field_q);
+          var6.writeInt((byte) -102, param2.field_m);
+          var6.writeInt((byte) -86, param2.field_t);
+          var6.writeInt((byte) -60, param2.field_s);
           var6.b((byte) -39, var4);
           var6.e(var6.position - var4, 5930);
         } catch (RuntimeException runtimeException) {

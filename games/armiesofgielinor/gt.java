@@ -120,7 +120,7 @@ final class gt {
           var6 = new int[6];
           var2 = var6;
           for (var3 = 0; var6.length > var3; var3++) {
-            var6[var3] = param1.k(param0 + 2);
+            var6[var3] = param1.readUnsignedByte(param0 + 2);
           }
           if (param0 != -2) {
             var5 = (PacketBuffer) null;

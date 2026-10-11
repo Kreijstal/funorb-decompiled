@@ -56,30 +56,30 @@ final class ig extends IntrusiveNode {
           this.field_k = param0;
           var7 = new PacketBuffer(param1);
           var8 = var7;
-          this.field_o = var8.k(0);
+          this.field_o = var8.readUnsignedByte(0);
           this.field_l = new int[this.field_o][];
           this.field_q = new boolean[this.field_o];
           this.field_p = new int[this.field_o];
           this.field_s = new int[this.field_o];
           for (var4 = 0; var4 < this.field_o; var4++) {
-            this.field_p[var4] = var7.k(0);
+            this.field_p[var4] = var7.readUnsignedByte(0);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < this.field_o; var4Lifetime1++) {
             stackIn_8_0 = this.field_q;
             stackIn_8_1 = var4Lifetime1;
-            stackIn_9_2 = (var8.k(0) == 1);
+            stackIn_9_2 = (var8.readUnsignedByte(0) == 1);
             stackIn_8_0[stackIn_8_1] = stackIn_9_2;
           }
           for (var4Lifetime2 = 0; this.field_o > var4Lifetime2; var4Lifetime2++) {
-            this.field_s[var4Lifetime2] = var7.e((byte) -104);
+            this.field_s[var4Lifetime2] = var7.readUnsignedShort((byte) -104);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < this.field_o; var4Lifetime3++) {
-            array$0 = new int[var7.k(0)];
+            array$0 = new int[var7.readUnsignedByte(0)];
             this.field_l[var4Lifetime3] = array$0;
           }
           for (var4Lifetime4 = 0; this.field_o > var4Lifetime4; var4Lifetime4++) {
             for (var5 = 0; var5 < this.field_l[var4Lifetime4].length; var5++) {
-              this.field_l[var4Lifetime4][var5] = var7.k(0);
+              this.field_l[var4Lifetime4][var5] = var7.readUnsignedByte(0);
             }
           }
           return;

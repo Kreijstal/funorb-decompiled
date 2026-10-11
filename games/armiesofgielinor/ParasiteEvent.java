@@ -3,22 +3,22 @@
  */
 final class ParasiteEvent extends GameEvent {
     static String[] field_A;
-    int field_D;
-    int field_z;
-    int field_E;
+    int sourceX;
+    int destinationY;
+    int destinationX;
     static NodeDeque field_y;
-    private int field_C;
-    int field_B;
+    private int newOwnerPlayer;
+    int sourceY;
     static String field_F;
 
     final String describeEvent(byte obfuscationGuard, boolean verbose) {
         if (verbose) {
           System.out.println("Parasite event debug");
-          System.out.println("Unit at " + this.field_D + "," + this.field_B);
-          System.out.println("Takes over " + (this.field_D + this.field_E) + "," + (this.field_B + this.field_z));
-          System.out.println("New owner " + this.field_C);
+          System.out.println("Unit at " + this.sourceX + "," + this.sourceY);
+          System.out.println("Takes over " + (this.sourceX + this.destinationX) + "," + (this.sourceY + this.destinationY));
+          System.out.println("New owner " + this.newOwnerPlayer);
         }
-        String var3 = "EventParasite: pos: (" + this.field_D + "," + this.field_B + "), d: (" + this.field_E + "," + this.field_z + ")+, owner: " + this.field_C;
+        String var3 = "EventParasite: pos: (" + this.sourceX + "," + this.sourceY + "), d: (" + this.destinationX + "," + this.destinationY + ")+, owner: " + this.newOwnerPlayer;
         int var4 = 21 / ((53 - obfuscationGuard) / 51);
         return var3;
     }
@@ -92,12 +92,12 @@ final class ParasiteEvent extends GameEvent {
         }
     }
 
-    ParasiteEvent(int param0, int param1, int param2, int param3, int param4) {
-        this.field_z = param3 + param1;
-        this.field_C = param4;
-        this.field_E = param0 + param2;
-        this.field_B = param1;
-        this.field_D = param0;
+    ParasiteEvent(int sourceX, int sourceY, int targetDeltaX, int targetDeltaY, int newOwnerPlayer) {
+        this.destinationY = targetDeltaY + sourceY;
+        this.newOwnerPlayer = newOwnerPlayer;
+        this.destinationX = sourceX + targetDeltaX;
+        this.sourceY = sourceY;
+        this.sourceX = sourceX;
         this.eventKind = 7;
     }
 
@@ -106,13 +106,13 @@ final class ParasiteEvent extends GameEvent {
         Unit var4 = null;
         Unit var5 = null;
         try {
-          var7 = battlefield.getUnitAt(this.field_B, true, this.field_D);
-          var4 = battlefield.getUnitAt(this.field_z, true, this.field_E);
+          var7 = battlefield.getUnitAt(this.sourceY, true, this.sourceX);
+          var4 = battlefield.getUnitAt(this.destinationY, true, this.destinationX);
           if (var4 != null) {
             if (null != var4.aiPlanner) {
               var4.aiPlanner.unlink(-116);
             }
-            var5 = var4.replaceWithOwner(this.field_C, -1);
+            var5 = var4.replaceWithOwner(this.newOwnerPlayer, -1);
             if (var7 != null &&
               var7.aiPlanner != null &&
               var5 != null) {
@@ -124,7 +124,7 @@ final class ParasiteEvent extends GameEvent {
             if (var7.aiPlanner != null) {
               var7.aiPlanner.unlink(-128);
             }
-            battlefield.tiles[battlefield.mapWidth * this.field_B + this.field_D].occupant = null;
+            battlefield.tiles[battlefield.mapWidth * this.sourceY + this.sourceX].occupant = null;
           }
           if (obfuscationGuard != -26661) {
             GameplayController var6 = (GameplayController) null;

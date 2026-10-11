@@ -29,15 +29,15 @@ final class oe {
         try {
           var8 = mm.field_g;
           var6 = var8;
-          var8.a(param0, (byte) -117);
+          var8.writeCipheredOpcode(param0, (byte) -117);
           var8.position = var8.position + 1;
           var7 = var8.position;
-          var8.a((byte) 112, param3);
+          var8.writeByte((byte) 112, param3);
           if (2 == param3) {
             var8.a(param1, -115);
           }
           if (param5 == null) {
-            var8.d(param4, 117);
+            var8.writeShort(param4, 117);
           } else {
             r.a(var8, param5, 0);
           }

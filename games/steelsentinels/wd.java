@@ -78,12 +78,12 @@ final class wd {
         var10 = SteelSentinels.obfuscationControl;
         try {
           if (param1) {
-            param2.field_wc = param0.f((byte) -124);
+            param2.field_wc = param0.readUnsignedByte((byte) -124);
           }
           var4_int = 99 / ((-4 - param3) / 58);
-          param2.field_Ub = param0.f((byte) -67);
-          param2.field_Nc = param0.f((byte) -113);
-          var5 = param0.f((byte) -66);
+          param2.field_Ub = param0.readUnsignedByte((byte) -67);
+          param2.field_Nc = param0.readUnsignedByte((byte) -113);
+          var5 = param0.readUnsignedByte((byte) -66);
           stackIn_5_0 = (hk) (param2);
           stackIn_6_1 = ((128 & var5) != 0);
           stackIn_5_0.field_nc = stackIn_6_1;
@@ -108,13 +108,13 @@ final class wd {
           stackIn_21_0.field_cc = stackIn_22_1;
           stackIn_25_0 = ((4 & var5) == 0) ? 0 : 1;
           var6 = stackIn_25_0;
-          param0.a(0, param2.field_Sb, 28, param2.field_Sb.length);
+          param0.readBytes(0, param2.field_Sb, 28, param2.field_Sb.length);
           stackIn_28_0 = ((2 & var5) == 0) ? 0 : 1;
           var7 = stackIn_28_0;
-          param2.field_yc = param0.c((byte) -60);
-          param2.field_Hc = mm.a(-93) - (long)param0.i(0);
+          param2.field_yc = param0.readUnsignedShort((byte) -60);
+          param2.field_Hc = mm.a(-93) - (long)param0.readInt(0);
           if (var6 != 0) {
-            param2.field_Mc = param0.i(0);
+            param2.field_Mc = param0.readInt(0);
           } else {
             param2.field_Mc = -1;
           }

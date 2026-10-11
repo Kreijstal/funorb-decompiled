@@ -29,13 +29,13 @@ class ev implements ok {
         RuntimeException decompiledCaughtException = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2_int = param0.k(param1 ^ -98);
+          var2_int = param0.readUnsignedByte(param1 ^ -98);
           if (var2_int == 0) {
             return null;
           }
           var3 = new int[var2_int];
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3[var4] = param0.k(0);
+            var3[var4] = param0.readUnsignedByte(0);
           }
           if (param1 != -98) {
             ev.a(4);

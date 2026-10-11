@@ -4,23 +4,23 @@
 final class CipherPacketBuffer extends PacketBuffer {
     static int field_I;
     static int field_w;
-    private IsaacRandom field_A;
+    private IsaacRandom opcodeCipher;
     static String field_x;
     static int[] field_D;
     static SceneWidget field_H;
     static String field_y;
-    private int field_F;
+    private int readBitPosition;
     static tg field_z;
     static String field_G;
     static String field_C;
     static String field_E;
     static boolean field_B;
 
-    final void a(int param0, byte param1) {
+    final void writeCipheredOpcode(int opcode, byte obfuscationGuard) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(param0 + this.field_A.c(-96));
-        if (param1 != -117) {
+        this.payload[fieldTemp$0] = (byte)(opcode + this.opcodeCipher.nextInt(-96));
+        if (obfuscationGuard != -117) {
           field_y = (String) null;
         }
     }
@@ -39,8 +39,8 @@ final class CipherPacketBuffer extends PacketBuffer {
         field_C = null;
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) {
-        int var5_int = 0;
+    final void readCipheredBytes(int destinationOffset, int length, byte[] destination, int obfuscationGuard) {
+        int byteIndex = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -50,26 +50,26 @@ final class CipherPacketBuffer extends PacketBuffer {
         int var6 = 0;
         var6 = SteelSentinels.obfuscationControl;
         try {
-          if (param3 < 49) {
+          if (obfuscationGuard < 49) {
             field_E = (String) null;
           }
-          for (var5_int = 0; var5_int < param1; var5_int++) {
+          for (byteIndex = 0; byteIndex < length; byteIndex++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param2[param0 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_A.c(-93));
+            destination[destinationOffset + byteIndex] = (byte)(this.payload[fieldTemp$0] - this.opcodeCipher.nextInt(-93));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_9_0 = var5;
-          stackIn_9_1 = new StringBuilder().append("kj.EB(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_9_1 = new StringBuilder().append("kj.EB(").append(destinationOffset).append(',').append(length).append(',');
+          if (destination == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -85,54 +85,54 @@ final class CipherPacketBuffer extends PacketBuffer {
         return 0;
     }
 
-    final void i(byte param0) {
-        if (param0 != -3) {
+    final void endBitReading(byte obfuscationGuard) {
+        if (obfuscationGuard != -3) {
           CipherPacketBuffer.j(53);
-          this.position = (7 + this.field_F) / 8;
+          this.position = (7 + this.readBitPosition) / 8;
           return;
         }
-        this.position = (7 + this.field_F) / 8;
+        this.position = (7 + this.readBitPosition) / 8;
     }
 
-    final void a(int param0, int[] param1) {
+    final void initializeOpcodeCipher(int obfuscationGuard, int[] seed) {
         try {
-          if (param0 != -1833430685) {
+          if (obfuscationGuard != -1833430685) {
             field_B = true;
           }
-          this.field_A = new IsaacRandom(param1);
+          this.opcodeCipher = new IsaacRandom(seed);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "kj.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "kj.WA(" + obfuscationGuard + ',' + (seed != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void d(boolean param0) {
-        this.field_F = this.position * 8;
-        if (param0) {
+    final void beginBitReading(boolean obfuscationGuard) {
+        this.readBitPosition = this.position * 8;
+        if (obfuscationGuard) {
           CipherPacketBuffer.j(-27);
         }
     }
 
-    final int g(int param0, int param1) {
-        int incrementValue$0 = 0;
+    final int readBits(int obfuscationGuard, int bitCount) {
+        int consumedByteIndex = 0;
         int var7 = SteelSentinels.obfuscationControl;
-        int var3 = this.field_F >> 3;
-        int var4 = -(this.field_F & 7) + 8;
-        this.field_F = this.field_F + param1;
-        int var5 = 0;
-        while (param1 > var4) {
-          incrementValue$0 = var3;
-          var3++;
-          var5 = var5 + ((this.payload[incrementValue$0] & DualNode.field_r[var4]) << param1 - var4);
-          param1 = param1 - var4;
-          var4 = 8;
+        int byteIndex = this.readBitPosition >> 3;
+        int bitsAvailable = -(this.readBitPosition & 7) + 8;
+        this.readBitPosition = this.readBitPosition + bitCount;
+        int value = 0;
+        while (bitCount > bitsAvailable) {
+          consumedByteIndex = byteIndex;
+          byteIndex++;
+          value = value + ((this.payload[consumedByteIndex] & DualNode.bitMasks[bitsAvailable]) << bitCount - bitsAvailable);
+          bitCount = bitCount - bitsAvailable;
+          bitsAvailable = 8;
         }
-        int var6 = 64 % ((param0 + 27) / 36);
-        if (param1 != var4) {
-          var5 = var5 + (this.payload[var3] >> var4 - param1 & DualNode.field_r[param1]);
+        int guardArithmetic = 64 % ((obfuscationGuard + 27) / 36);
+        if (bitCount != bitsAvailable) {
+          value = value + (this.payload[byteIndex] >> bitsAvailable - bitCount & DualNode.bitMasks[bitCount]);
         } else {
-          var5 = var5 + (this.payload[var3] & DualNode.field_r[var4]);
+          value = value + (this.payload[byteIndex] & DualNode.bitMasks[bitsAvailable]);
         }
-        return var5;
+        return value;
     }
 
     CipherPacketBuffer(byte[] param0) {
@@ -143,13 +143,13 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final int f(boolean param0) {
-        if (param0) {
+    final int readCipheredOpcode(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           return -93;
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        return 255 & this.payload[fieldTemp$0] - this.field_A.c(-102);
+        return 255 & this.payload[fieldTemp$0] - this.opcodeCipher.nextInt(-102);
     }
 
     static {

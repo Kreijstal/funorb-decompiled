@@ -184,9 +184,9 @@ final class SentinelDesigner {
               if (jl.field_p == 0 &&
                 !ni.b(47)) {
                 if (128 > sn.field_q) {
-                  mm.field_g.a(66, (byte) -117);
-                  mm.field_g.a((byte) 111, 1);
-                  mm.field_g.a((byte) 124, sn.field_q);
+                  mm.field_g.writeCipheredOpcode(66, (byte) -117);
+                  mm.field_g.writeByte((byte) 111, 1);
+                  mm.field_g.writeByte((byte) 124, sn.field_q);
                   var2_int = 0;
                   while (true) {
                     if (var2_int < va.field_k.length) {
@@ -203,9 +203,9 @@ final class SentinelDesigner {
                   decompiledFrameRemainder1 = (var6 != 0);
                 }
                 if (decompiledFrameRemainder1) {
-                  mm.field_g.a(66, (byte) -117);
-                  mm.field_g.a((byte) 108, 0);
-                  mm.field_g.a((byte) 119, sn.field_q - 128);
+                  mm.field_g.writeCipheredOpcode(66, (byte) -117);
+                  mm.field_g.writeByte((byte) 108, 0);
+                  mm.field_g.writeByte((byte) 119, sn.field_q - 128);
                   var2_int = 0;
                   while (va.field_k.length > var2_int) {
                     va.field_k[var2_int] = 0;
@@ -1258,7 +1258,7 @@ final class SentinelDesigner {
             pl.field_U.a(na.field_q, 276, 300, 252, 102, 1021128, -1, 1, 1, 0);
           }
           if (CombatWorld.field_S != null) {
-            var13_ref = uh.field_k;
+            var13_ref = NodeHashTable.field_k;
             var14_ref = var13_ref.a();
             var15Lifetime2 = 38;
             var6 = 79;
@@ -4013,8 +4013,8 @@ final class SentinelDesigner {
                     var10 = lc.field_c.field_q;
                     var11 = g.field_l;
                     var12 = 0;
-                    var13 = uh.a(false, var10[var12], 12);
-                    var14 = uh.a(false, ad.a(126, var10[var12], 12), 43);
+                    var13 = NodeHashTable.nonnegativeRemainder(false, var10[var12], 12);
+                    var14 = NodeHashTable.nonnegativeRemainder(false, ad.a(126, var10[var12], 12), 43);
                     var15 = ad.a(113, var10[var12], 516);
                     this.a(true, false, var7Lifetime2, var14, var11, var13, var15, 0);
                   }
@@ -4027,8 +4027,8 @@ final class SentinelDesigner {
                     if (var5 == var11_intLifetime1) {
                       var8Lifetime1Lifetime1 = 1044724;
                     }
-                    var13Lifetime1 = uh.a(false, var10[var11_intLifetime1], 12);
-                    var14Lifetime1 = uh.a(false, ad.a(119, var10[var11_intLifetime1], 12), 43);
+                    var13Lifetime1 = NodeHashTable.nonnegativeRemainder(false, var10[var11_intLifetime1], 12);
+                    var14Lifetime1 = NodeHashTable.nonnegativeRemainder(false, ad.a(119, var10[var11_intLifetime1], 12), 43);
                     var15Lifetime1 = ad.a(122, var10[var11_intLifetime1], 516);
                     stackIn_48_1 = (~var5 == ~var11_intLifetime1);
                     this.a(stackIn_48_1, false, var7Lifetime2, var14Lifetime1, var12_ref_String, var13Lifetime1, var15Lifetime1, 1 + var11_intLifetime1);
@@ -5713,16 +5713,16 @@ final class SentinelDesigner {
                       }
                     }
                     jg.field_j = false;
-                    mm.field_g.a(69, (byte) -117);
-                    mm.field_g.b(true, li.field_v);
-                    mm.field_g.b(true, h.field_G);
+                    mm.field_g.writeCipheredOpcode(69, (byte) -117);
+                    mm.field_g.writeInt(true, li.field_v);
+                    mm.field_g.writeInt(true, h.field_G);
                     var5 = 0;
                     do {
                       if (var5 >= 4) {
                         var5 = 0;
                         break;
                       }
-                      mm.field_g.b(true, rn.field_D[var5]);
+                      mm.field_g.writeInt(true, rn.field_D[var5]);
                       var5++;
                     } while (var12 == 0);
                     do {
@@ -5730,16 +5730,16 @@ final class SentinelDesigner {
                         var5 = 0;
                         break;
                       }
-                      mm.field_g.b(true, fe.field_D[var5]);
+                      mm.field_g.writeInt(true, fe.field_D[var5]);
                       var5++;
                     } while (var12 == 0);
                     do {
                       if (var5 >= 3) {
-                        mm.field_g.a((byte) 126, NodeIterator.field_f);
+                        mm.field_g.writeByte((byte) 126, NodeIterator.field_f);
                         km.field_a = "Data sent.";
                         break;
                       }
-                      mm.field_g.a((byte) 115, fm.field_f[var5]);
+                      mm.field_g.writeByte((byte) 115, fm.field_f[var5]);
                       var5++;
                     } while (var12 == 0);
                     if (NodeDeque.field_d >= 2) {

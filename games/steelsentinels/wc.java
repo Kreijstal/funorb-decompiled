@@ -259,7 +259,7 @@ final class wc implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     final static void a(int param0, boolean param1, long param2, int param3, String param4, int param5) {
         int var7_int = 0;
-        mm.field_g.a(param5, (byte) -117);
+        mm.field_g.writeCipheredOpcode(param5, (byte) -117);
         if (param0 != 0) {
           return;
         }
@@ -268,8 +268,8 @@ final class wc implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           var7_int = mm.field_g.position;
           mm.field_g.b(-28875, param2);
           mm.field_g.a(param4, -88);
-          mm.field_g.a((byte) 115, param3);
-          mm.field_g.a((byte) 115, !param1 ? 0 : 1);
+          mm.field_g.writeByte((byte) 115, param3);
+          mm.field_g.writeByte((byte) 115, !param1 ? 0 : 1);
           mm.field_g.b((byte) 83, -var7_int + mm.field_g.position);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "wc.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
@@ -313,7 +313,7 @@ final class wc implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             throw new IllegalArgumentException();
           }
           if (de.a(param2, (byte) -99)) {
-            stackIn_7_0 = (int)((long)param2 * ((long)param1.c(param0 ^ 100) & 4294967295L) >> 32);
+            stackIn_7_0 = (int)((long)param2 * ((long)param1.nextInt(param0 ^ 100) & 4294967295L) >> 32);
             return stackIn_7_0;
           }
           if (param0 != -61) {
@@ -321,9 +321,9 @@ final class wc implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           var3_int = -2147483648 - (int)(4294967296L % (long)param2);
           do {
-            var4 = param1.c(-111);
+            var4 = param1.nextInt(-111);
           } while (var3_int <= var4);
-          stackIn_13_0 = uh.a(false, var4, param2);
+          stackIn_13_0 = NodeHashTable.nonnegativeRemainder(false, var4, param2);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

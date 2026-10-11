@@ -250,8 +250,8 @@ final class OwnerChangeEvent extends GameEvent {
           }
           if (decompiledFrameRemainder0) {
             if (!ei.field_b) {
-              if (bb.field_c <= ev.field_a) {
-                stackIn_17_0 = (bb.field_c + ps.field_E > ev.field_a) ? 1 : 0;
+              if (NodeIterator.field_c <= ev.field_a) {
+                stackIn_17_0 = (NodeIterator.field_c + ps.field_E > ev.field_a) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -263,10 +263,10 @@ final class OwnerChangeEvent extends GameEvent {
               ev.field_a = 0;
             } else {
               if (ei.field_b) {
-                ev.field_a = bb.field_c;
+                ev.field_a = NodeIterator.field_c;
               } else {
                 if (var2_int != 0) {
-                  ev.field_a = bb.field_c;
+                  ev.field_a = NodeIterator.field_c;
                 } else {
                   ev.field_a = 0;
                 }
@@ -283,7 +283,7 @@ final class OwnerChangeEvent extends GameEvent {
             lq.field_e = me.field_e;
           }
           if (!ei.field_b &&
-            ev.field_a < bb.field_c &&
+            ev.field_a < NodeIterator.field_c &&
             lk.field_f) {
             cc.field_b = of.field_Ib;
             lq.field_e = me.field_e;

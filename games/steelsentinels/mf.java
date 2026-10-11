@@ -20,17 +20,17 @@ final class mf {
         int[] var11;
         int var5Lifetime1;
         int var6Lifetime1;
-        var3 = param0.f((byte) -116);
+        var3 = param0.readUnsignedByte((byte) -116);
         this.field_a[0] = var3 >> 4;
         this.field_a[1] = var3 & 15;
         if (var3 != 0) {
-          this.field_h[0] = param0.c((byte) -60);
-          this.field_h[1] = param0.c((byte) -60);
-          var4 = param0.f((byte) -76);
+          this.field_h[0] = param0.readUnsignedShort((byte) -60);
+          this.field_h[1] = param0.readUnsignedShort((byte) -60);
+          var4 = param0.readUnsignedByte((byte) -76);
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < this.field_a[var5]; var6++) {
-              this.field_c[var5][0][var6] = param0.c((byte) -60);
-              this.field_b[var5][0][var6] = param0.c((byte) -60);
+              this.field_c[var5][0][var6] = param0.readUnsignedShort((byte) -60);
+              this.field_b[var5][0][var6] = param0.readUnsignedShort((byte) -60);
             }
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
@@ -41,8 +41,8 @@ final class mf {
                 this.field_c[var5Lifetime1][1][var7] = this.field_c[var5Lifetime1][0][var7];
                 this.field_b[var5Lifetime1][1][var7] = this.field_b[var5Lifetime1][0][var7];
               } else {
-                this.field_c[var5Lifetime1][1][var7] = param0.c((byte) -60);
-                this.field_b[var5Lifetime1][1][var7] = param0.c((byte) -60);
+                this.field_c[var5Lifetime1][1][var7] = param0.readUnsignedShort((byte) -60);
+                this.field_b[var5Lifetime1][1][var7] = param0.readUnsignedShort((byte) -60);
               }
               var7++;
             }

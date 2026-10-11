@@ -140,7 +140,7 @@ final class ao extends DualNode {
             return;
           }
           while (true) {
-            var3_int = param0.f((byte) -85);
+            var3_int = param0.readUnsignedByte((byte) -85);
             if (var3_int == 0) {
               return;
             }
@@ -169,7 +169,7 @@ final class ao extends DualNode {
         og.b(-115);
         ln.a(param0 ^ -8601);
         if (rn.a((byte) -14)) {
-          mm.field_g.a(1, (byte) -117);
+          mm.field_g.writeCipheredOpcode(1, (byte) -117);
           gj.a(0, 0);
         }
         pm.m(param0 - 47);
@@ -198,25 +198,25 @@ final class ao extends DualNode {
             this.field_G = ka.a('<', false, param1.h(1));
           } else {
             if (param0 == 2) {
-              var4_int = param1.f((byte) -114);
+              var4_int = param1.readUnsignedByte((byte) -114);
               this.field_F = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_F[var5] = param1.c((byte) -60);
+                this.field_F[var5] = param1.readUnsignedShort((byte) -60);
               }
             } else {
               if (3 == param0) {
-                var4_int = param1.f((byte) -99);
+                var4_int = param1.readUnsignedByte((byte) -99);
                 this.field_z = new int[var4_int][];
                 this.field_D = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  var6 = param1.c((byte) -60);
+                  var6 = param1.readUnsignedShort((byte) -60);
                   var7 = wa.b(var6, 99);
                   if (var7 != null) {
                     this.field_D[var5] = var6;
                     array$0 = new int[var7.field_k];
                     this.field_z[var5] = array$0;
                     for (var8 = 0; var7.field_k > var8; var8++) {
-                      this.field_z[var5][var8] = param1.c((byte) -60);
+                      this.field_z[var5][var8] = param1.readUnsignedShort((byte) -60);
                     }
                   }
                 }

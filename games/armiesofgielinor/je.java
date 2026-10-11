@@ -479,7 +479,7 @@ class je extends im {
     }
 
     final void b(int param0, je param1) {
-        bb var3 = null;
+        NodeIterator var3 = null;
         je var4 = null;
         int var5 = 0;
         boolean stackIn_11_1 = false;
@@ -494,11 +494,11 @@ class je extends im {
             this.a(true, 119, -41, -35);
           }
           if (null != this.field_fb) {
-            var3 = new bb(this.field_fb);
-            var4 = (je) (var3.c(param0 + 47));
+            var3 = new NodeIterator(this.field_fb);
+            var4 = (je) (var3.first(param0 + 47));
             while (var4 != null) {
               var4.b(param0 ^ 0, param1);
-              var4 = (je) (var3.b(param0 + 47));
+              var4 = (je) (var3.next(param0 + 47));
             }
           }
           stackIn_11_1 = (param1 == this);

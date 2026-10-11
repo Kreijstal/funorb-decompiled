@@ -65,14 +65,14 @@ final class b implements qk {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = mm.field_g;
-        var2.a(param1, (byte) -117);
+        var2.writeCipheredOpcode(param1, (byte) -117);
         var2.position = var2.position + 1;
         int var3 = var2.position;
-        var2.a((byte) 113, 2);
-        var2.a(rb.field_i.length, (byte) -122, 0, rb.field_i);
-        var2.a((byte) 125, fi.field_l);
-        var2.a((byte) 110, GameplayController.field_L);
-        var2.a(ti.field_s.length, (byte) -122, 0, ti.field_s);
+        var2.writeByte((byte) 113, 2);
+        var2.writeBytes(rb.field_i.length, (byte) -122, 0, rb.field_i);
+        var2.writeByte((byte) 125, fi.field_l);
+        var2.writeByte((byte) 110, GameplayController.field_L);
+        var2.writeBytes(ti.field_s.length, (byte) -122, 0, ti.field_s);
         var2.b((byte) 123, var2.position - var3);
         if (param0 < -21) {
           return;
@@ -82,10 +82,10 @@ final class b implements qk {
 
     final static void a(int param0, byte param1) {
         CipherPacketBuffer var2 = mm.field_g;
-        var2.a(param0, (byte) -117);
-        var2.a((byte) 123, 2);
-        var2.a((byte) 112, 4);
-        var2.a((byte) 127, nd.a((byte) 56));
+        var2.writeCipheredOpcode(param0, (byte) -117);
+        var2.writeByte((byte) 123, 2);
+        var2.writeByte((byte) 112, 4);
+        var2.writeByte((byte) 127, nd.a((byte) 56));
         int var3 = -47 % ((param1 + 35) / 61);
     }
 

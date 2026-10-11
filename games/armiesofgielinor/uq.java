@@ -61,16 +61,16 @@ abstract class uq extends ms {
               if (param6) {
                 var9 = var9 | 1;
               }
-              vd.field_b.a((byte) -108, iq.field_e.nextInt());
-              vd.field_b.a((byte) -52, iq.field_e.nextInt());
+              vd.field_b.writeInt((byte) -108, iq.field_e.nextInt());
+              vd.field_b.writeInt((byte) -52, iq.field_e.nextInt());
               vd.field_b.a(var14, 413740432);
               vd.field_b.a(var8, 413740432);
               var15 = (CharSequence) ((Object) param0);
               vd.field_b.a(ea.a(param2 + 18820, var15), 413740432);
-              vd.field_b.b(true, param4);
-              vd.field_b.b(1, param3);
-              vd.field_b.b(param2 + 20033, var9);
-              vl.field_n.b(param2 + 20033, 18);
+              vd.field_b.writeShort(true, param4);
+              vd.field_b.writeByte(1, param3);
+              vd.field_b.writeByte(param2 + 20033, var9);
+              vl.field_n.writeByte(param2 + 20033, 18);
               vl.field_n.position = vl.field_n.position + 2;
               var10 = vl.field_n.position;
               var11_ref_String = mg.a(0, CombatEvent.d((byte) 55));
@@ -82,8 +82,8 @@ abstract class uq extends ms {
               vl.field_n.f(0, -var10 + vl.field_n.position);
             } else {
               vd.field_b.position = 0;
-              vd.field_b.a((byte) -57, iq.field_e.nextInt());
-              vd.field_b.a((byte) -54, iq.field_e.nextInt());
+              vd.field_b.writeInt((byte) -57, iq.field_e.nextInt());
+              vd.field_b.writeInt((byte) -54, iq.field_e.nextInt());
               stackIn_10_0 = vd.field_b;
               if (!param1.a((byte) 125)) {
                 stackIn_11_1 = "";
@@ -98,7 +98,7 @@ abstract class uq extends ms {
                 stackIn_14_1 = "";
               }
               ((PacketBuffer) (Object) stackIn_13_0).a(stackIn_14_1, 413740432);
-              vl.field_n.b(1, 16);
+              vl.field_n.writeByte(1, 16);
               vl.field_n.position = vl.field_n.position + 1;
               var9 = vl.field_n.position;
               fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.field_n);
@@ -109,7 +109,7 @@ abstract class uq extends ms {
           }
           if (ov.field_g == cj.field_m &&
             es.a(param2 ^ 20080, 1)) {
-            var9Lifetime1 = mg.field_e.k(0);
+            var9Lifetime1 = mg.field_e.readUnsignedByte(0);
             mg.field_e.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
@@ -138,7 +138,7 @@ abstract class uq extends ms {
           if (mv.field_c == ov.field_g) {
             var9Lifetime2 = 2;
             if (es.a(-79, var9Lifetime2)) {
-              var10Lifetime1 = mg.field_e.e((byte) -104);
+              var10Lifetime1 = mg.field_e.readUnsignedShort((byte) -104);
               mg.field_e.position = 0;
               if (es.a(-83, var10Lifetime1)) {
                 var11 = br.field_b.length;
@@ -252,8 +252,8 @@ abstract class uq extends ms {
             uq.g(56);
           }
           for (var3 = 0; var3 < 6; var3++) {
-            var5.field_a[var3] = param0.a((byte) 103);
-            var5.field_b[var3] = param0.a((byte) 120);
+            var5.field_a[var3] = param0.readByte((byte) 103);
+            var5.field_b[var3] = param0.readByte((byte) 120);
           }
           stackIn_7_0 = var2;
           return stackIn_7_0;

@@ -168,7 +168,7 @@ final class MoveEvent extends GameEvent {
           t.field_d = fk.a("frame_top", (byte) -124, param2, "commonui");
           ip.field_c = fk.a("frame_bottom", (byte) -125, param2, "commonui");
           gt.field_e = GameplayController.a("jagex_logo_grey", (byte) 51, "commonui", param2);
-          bb.field_b = fk.a("button", (byte) -124, param2, "commonui");
+          NodeIterator.field_b = fk.a("button", (byte) -124, param2, "commonui");
           db.field_a = ac.a(param2, "validation", (byte) -4, "commonui");
           gl.field_e = (BitmapFont) ((Object) it.a("arezzo12", param2, param3, (byte) -87, "commonui"));
           ArmiesOfGielinor.field_J = (BitmapFont) ((Object) it.a("arezzo14", param2, param3, (byte) -87, "commonui"));
@@ -230,7 +230,7 @@ final class MoveEvent extends GameEvent {
           var12.b();
           var4.f(-var9, 0);
           rf.b(-18862);
-          bb.field_b = new RgbSprite[]{var10_ref, var12, var11};
+          NodeIterator.field_b = new RgbSprite[]{var10_ref, var12, var11};
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

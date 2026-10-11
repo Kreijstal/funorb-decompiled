@@ -66,16 +66,16 @@ abstract class ju {
             var7 = (CipherPacketBuffer) null;
             ju.a((CipherPacketBuffer) null, 120, 29, -83, (byte) -93, 59);
           }
-          var6_int = param0.g(-106, 1);
+          var6_int = param0.readBits(-106, 1);
           if (0 != var6_int) {
             if (1 != var6_int) {
               throw new IllegalStateException();
             }
-            stackIn_10_0 = param0.g(95, param3) + param1;
+            stackIn_10_0 = param0.readBits(95, param3) + param1;
             return stackIn_10_0;
           }
           if (param5 > 0) {
-            stackIn_6_0 = param0.g(-109, param5);
+            stackIn_6_0 = param0.readBits(-109, param5);
           } else {
             stackIn_6_0 = 0;
           }

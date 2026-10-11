@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild from pinned raw Git input using Deko’s `readable/reproduce-armiesofgielinor.mjs`. The current reverse dictionary is `../../decompilation/armiesofgielinor-naming.json`.
 
-This gameplay naming pass reviews 88 class identities across all 542 compiled classes. Other class/member names remain unresolved. Unresolved packed flags use bit-position names without guessing gameplay effects. Renamed identifiers have no opaque suffixes; the dictionary records their original identities.
+This gameplay naming pass reviews 92 class identities across all 542 compiled classes. Other class/member names remain unresolved. Unresolved packed flags use bit-position names without guessing gameplay effects. Renamed identifiers have no opaque suffixes; the dictionary records their original identities.
 
 | Start here | Follow |
 | --- | --- |
@@ -26,6 +26,7 @@ This gameplay naming pass reviews 88 class identities across all 542 compiled cl
 | [CombatSandbox](CombatSandbox.java) / [UnitInfoPopup](UnitInfoPopup.java) | Standalone combat sandbox and animated unit information popups. |
 | [MatchConditionRegistry](MatchConditionRegistry.java) → [MatchCondition](MatchCondition.java) / [PortalLossCondition](PortalLossCondition.java) / [UnitLossCondition](UnitLossCondition.java) / [LeaderEscortCondition](LeaderEscortCondition.java) | Registered portal-loss, unit-loss and leader-escort conditions. |
 | [CampaignMission](CampaignMission.java) → [MapLayout](MapLayout.java) | Campaign metadata and encoded/decoded map layouts. |
+| [TaggedMapData](TaggedMapData.java) / [CipherPacketBuffer](CipherPacketBuffer.java) / [IsaacRandom](IsaacRandom.java) | Tagged version-2 map records, bit cursors and ISAAC ciphered opcodes. |
 | [TutorialController](TutorialController.java) | Tutorial stages, prompts and flashing controls. |
 | [PacketBuffer](PacketBuffer.java) / [CipherPacketBuffer](CipherPacketBuffer.java) / [TaggedFieldReader](TaggedFieldReader.java) | Packet data, ciphered opcodes and tagged-field decoding. |
 
@@ -39,6 +40,8 @@ Battlefield.predictCombat returns [defenderDamage, attackerDamage, deathFlags], 
 
 Turn/match names expose condition initialization, per-player victory/defeat queries, survivor masks, elimination order, participant rankings and collected-mana/turn limits. MatchConditionRegistry uses any-condition aggregation: portal and unit conditions can defeat a player, and leader escort can win. Escort completion and removal from active play are separate unit flags. CampaignMission and MapLayout retain tagged-field encodings, lazy loading and unused arguments.
 
+The wire layer names MSB-first bit I/O, opcode ciphering, compact signed integers and tagged record factories. Compact tier widths are 4/14/20/30 bits with a two-bit selector and cumulative signed offsets. Field names have one to four encoded characters. Tagged payload access can temporarily rotate bits over a length header; finishTaggedPayload restores the header and advances to the next field. Unknown field names still skip their declared payload. ParasiteEvent converts incoming signed deltas into stored absolute destination coordinates despite its legacy d diagnostic label. Legacy snapshot and event entry points now have names; this pass does not establish a complete multiplayer protocol.
+
 The naming pass changes identifiers and lexical labels, not control flow. Three files still retain compiler dispatcher fallbacks, and large methods remain. More semantic work is needed in combat, spells, AI, tutorial stages and multiplayer packet handling.
 
-The exporter compiles both complete corpora and verifies bindings/overrides. A headless raw-versus-named probe checks rectangular map lookup, team membership, unit flags/damage, equipment/ranges, combat payloads, spell serialization, tile metadata, AI candidate selection/recycling, packed move request decoding, prepared action event payloads, combat/cover calculations, team tile effects, summoning permissions, popup animation, match conditions/masks/rankings, structure income, legacy/version-0/version-1 map terrain headers and event presentation acknowledgement against independent expectations. It bypasses battlefield construction and the Applet graph; it does not establish whole-game playability, AI quality or server compatibility. Exact dictionary reversal recovers every original source byte.
+The exporter compiles both complete corpora and verifies bindings/overrides. A headless raw-versus-named probe checks rectangular map lookup, team membership, unit flags/damage, equipment/ranges, combat payloads, spell serialization, tile metadata, AI candidate selection/recycling, packed move request decoding, prepared action event payloads, combat/cover calculations, team tile effects, summoning permissions, popup animation, match conditions/masks/rankings, structure income, bit/compact codecs, tagged fields/maps, combat packet decoding, legacy/version-0/version-1/version-2 map terrain headers and event presentation acknowledgement against independent expectations. It bypasses battlefield construction and the Applet graph; it does not establish whole-game playability, AI quality or server compatibility. Exact dictionary reversal recovers every original source byte.

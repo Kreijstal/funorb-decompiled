@@ -401,7 +401,7 @@ final class d extends ug {
           }
           var3 = new RgbSprite(un.field_n, eb.field_n, rl.field_a[0], oa.field_M[0], le.field_L[0], ca.field_r[0], var9);
         }
-        uh.a(9324);
+        NodeHashTable.a(9324);
         if (param0) {
           return (RgbSprite) (var3);
         }

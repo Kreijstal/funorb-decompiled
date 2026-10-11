@@ -333,7 +333,7 @@ final class ej extends we {
         pg.field_v = cf.a("members_benefits_screenshots", "benefits", (byte) -73, DualNode.field_x);
         vc.a(uj.field_h, Explosion.field_B, false);
         ha.a(16744576, 2, (byte) 120, va.field_j, -2400, el.field_ac, 80, 40, 15, 80, 40);
-        uh.a(1, pg.field_v);
+        NodeHashTable.a(1, pg.field_v);
         qa.a(bc.field_qb, (byte) 69);
         return true;
     }

@@ -277,7 +277,7 @@ final class rl {
                                 if (ve.a((byte) -127, 1)) {
                                     /* Inlined CFG state: 25. */
                                     {
-                                        ub.field_g = rf.field_d.f(false);
+                                        ub.field_g = rf.field_d.readCipheredOpcode(false);
                                         rf.field_d.position = 0;
                                         jg.field_f = param1[ub.field_g];
                                         statePc = 26;

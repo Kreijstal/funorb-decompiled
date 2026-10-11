@@ -26,24 +26,24 @@ final class bk {
           vd.field_b.position = 0;
           CombatEvent.field_L[3] = (int)ts.field_h;
           CombatEvent.field_L[2] = (int)(ts.field_h >> 32);
-          vd.field_b.a((byte) -69, CombatEvent.field_L[0]);
-          vd.field_b.a((byte) -69, CombatEvent.field_L[1]);
-          vd.field_b.a((byte) -125, CombatEvent.field_L[2]);
-          vd.field_b.a((byte) -89, CombatEvent.field_L[3]);
+          vd.field_b.writeInt((byte) -69, CombatEvent.field_L[0]);
+          vd.field_b.writeInt((byte) -69, CombatEvent.field_L[1]);
+          vd.field_b.writeInt((byte) -125, CombatEvent.field_L[2]);
+          vd.field_b.writeInt((byte) -89, CombatEvent.field_L[3]);
           pr.a(vd.field_b, (byte) -84);
-          vd.field_b.b(true, param4);
+          vd.field_b.writeShort(true, param4);
           param2.a(vd.field_b, -11436);
           vl.field_n.position = 0;
           if (!param1) {
-            vl.field_n.b(1, 16);
+            vl.field_n.writeByte(1, 16);
           }
           if (param1 ||
             ArmiesOfGielinor.obfuscationControl) {
-            vl.field_n.b(1, 18);
+            vl.field_n.writeByte(1, 18);
           }
           vl.field_n.position = vl.field_n.position + 2;
           var5_int = vl.field_n.position;
-          vl.field_n.a((byte) -67, fl.field_e);
+          vl.field_n.writeInt((byte) -67, fl.field_e);
           vl.field_n.a(an.field_E, 38359632);
           var6 = 0;
           if (BestScoreStrategy.field_l) {
@@ -58,7 +58,7 @@ final class bk {
           if (gh.field_P != null) {
             var6 = var6 | 16;
           }
-          vl.field_n.b(1, var6);
+          vl.field_n.writeByte(1, var6);
           var7 = mg.a(0, CombatEvent.d((byte) -116));
           if (var7 == null) {
             var7 = "";
@@ -216,7 +216,7 @@ final class bk {
             stackIn_28_0 = TeamRoster.a(4) ? 1 : 0;
           }
           if (stackIn_28_0 != 0 &&
-            !bb.field_a) {
+            !NodeIterator.field_a) {
             return;
           }
           BestScoreStrategy.field_i = new wr(0, 0, 0, 0);

@@ -1097,15 +1097,15 @@ final class CombatWorld {
               var9_int = this.simulationTick / 3000 - 1;
               if (1 < this.field_F) {
                 if (!(5 >= var9_int)) {
-                  var9_int = this.random.a(-123, 2) + 4;
+                  var9_int = this.random.nextIntBounded(-123, 2) + 4;
                   if ((var15 != 0) &&
                     (var9_int > 3)) {
-                    var9_int = this.random.a(-120, 2) + 2;
+                    var9_int = this.random.nextIntBounded(-120, 2) + 2;
                   }
                 }
               } else {
                 if (var9_int > 3) {
-                  var9_int = this.random.a(-120, 2) + 2;
+                  var9_int = this.random.nextIntBounded(-120, 2) + 2;
                 }
               }
               regionExit7: {
@@ -1166,7 +1166,7 @@ final class CombatWorld {
               var8 = null;
               var9_int = -1 + this.simulationTick / 1200;
               if (var9_int > 2) {
-                var9_int = this.random.a(obfuscationGuard ^ 77, 1 + this.field_F);
+                var9_int = this.random.nextIntBounded(obfuscationGuard ^ 77, 1 + this.field_F);
               }
               var10 = var9_int;
               if (0 == var10) {
@@ -1188,7 +1188,7 @@ final class CombatWorld {
                 var11.field_hb = this.a(false, var9_int);
                 var11.field_Nb = 8;
                 this.sentinels.addLast(3, var11);
-                var11.worldX = this.random.a(83, this.terrain.getProfileLength(124)) << 4;
+                var11.worldX = this.random.nextIntBounded(83, this.terrain.getProfileLength(124)) << 4;
                 var11.field_pc = false;
                 var11.worldY = this.terrain.getSecondaryHeightAt(false, var11.worldX >> 4) - 16000 << 4;
                 var10++;
@@ -1210,19 +1210,19 @@ final class CombatWorld {
             var8_int = this.simulationTick / 3000;
             if (0 < this.field_F) {
               if (!(var8_int <= 5)) {
-                var8_int = 4 + this.random.a(obfuscationGuard - 146, 2);
+                var8_int = 4 + this.random.nextIntBounded(obfuscationGuard - 146, 2);
                 if ((var15 != 0) &&
                   (var8_int > 4)) {
-                  var8_int = this.random.a(60, 5);
+                  var8_int = this.random.nextIntBounded(60, 5);
                 }
               }
             } else {
               if (var8_int > 4) {
-                var8_int = this.random.a(60, 5);
+                var8_int = this.random.nextIntBounded(60, 5);
               }
             }
             var9 = new ne(this, this.a(false, var8_int));
-            ((ne) (var9)).field_z = this.random.a(80, this.terrain.getProfileLength(obfuscationGuard ^ 68) << 4);
+            ((ne) (var9)).field_z = this.random.nextIntBounded(80, this.terrain.getProfileLength(obfuscationGuard ^ 68) << 4);
             ((ne) (var9)).field_I = -180000;
             this.field_e.addLast(3, (IntrusiveNode) (var9));
           }
@@ -5870,7 +5870,7 @@ final class CombatWorld {
             discarded$1 = this.a(-35, (byte) 87, -74, (Sentinel) null, (Sentinel) null, -128, 75);
           }
           var3 = new int[]{0, 6, 12, 18, 23, 29, fg.field_Xb.length};
-          var4 = var3[param1] + this.random.a(115, var3[1 + param1] - var3[param1]);
+          var4 = var3[param1] + this.random.nextIntBounded(115, var3[1 + param1] - var3[param1]);
           stackIn_4_0 = fg.field_Xb[var4];
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -6335,7 +6335,7 @@ final class CombatWorld {
                   var16 = 3;
                   var17 = 9;
                 }
-                var18 = var16 + this.random.a(-126, -var16 + var17);
+                var18 = var16 + this.random.nextIntBounded(-126, -var16 + var17);
                 var11.configureDesign(var12[var18], true, false, var14, var15);
                 var11.field_Nb = 11;
                 this.sentinels.addLast(3, var11);

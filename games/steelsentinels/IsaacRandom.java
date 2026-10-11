@@ -4,15 +4,15 @@
 final class IsaacRandom {
     static cm field_k;
     static boolean field_c;
-    private int[] field_h;
+    private int[] results;
     static String field_a;
     static int[][] field_f;
-    private int field_e;
-    private int field_g;
-    private int field_j;
+    private int accumulator;
+    private int generationCounter;
+    private int lastResult;
     static IndexedSprite[] field_d;
-    private int[] field_b;
-    private int field_i;
+    private int[] memory;
+    private int remainingResults;
 
     final static void b(byte param0) {
         int var1_int = 0;
@@ -30,7 +30,7 @@ final class IsaacRandom {
         }
     }
 
-    private final void b(int param0) {
+    private final void initializeState(int obfuscationGuard) {
         int var2 = 0;
         int var11 = SteelSentinels.obfuscationControl;
         int var9 = -1640531527;
@@ -39,7 +39,7 @@ final class IsaacRandom {
         int var6 = -1640531527;
         int var2Lifetime1;
         int var2Lifetime2;
-        if (param0 < 30) {
+        if (obfuscationGuard < 30) {
           IsaacRandom.b((byte) -19);
         }
         int var10 = -1640531527;
@@ -73,14 +73,14 @@ final class IsaacRandom {
           var3 = var3 + var4;
         }
         for (var2Lifetime1 = 0; var2Lifetime1 < 256; var2Lifetime1 += 8) {
-          var9 = var9 + this.field_h[var2Lifetime1 + 6];
-          var3 = var3 + this.field_h[var2Lifetime1];
-          var10 = var10 + this.field_h[7 + var2Lifetime1];
-          var7 = var7 + this.field_h[4 + var2Lifetime1];
-          var6 = var6 + this.field_h[3 + var2Lifetime1];
-          var8 = var8 + this.field_h[5 + var2Lifetime1];
-          var5 = var5 + this.field_h[2 + var2Lifetime1];
-          var4 = var4 + this.field_h[1 + var2Lifetime1];
+          var9 = var9 + this.results[var2Lifetime1 + 6];
+          var3 = var3 + this.results[var2Lifetime1];
+          var10 = var10 + this.results[7 + var2Lifetime1];
+          var7 = var7 + this.results[4 + var2Lifetime1];
+          var6 = var6 + this.results[3 + var2Lifetime1];
+          var8 = var8 + this.results[5 + var2Lifetime1];
+          var5 = var5 + this.results[2 + var2Lifetime1];
+          var4 = var4 + this.results[1 + var2Lifetime1];
           var3 = var3 ^ var4 << 11;
           var4 = var4 + var5;
           var6 = var6 + var3;
@@ -105,24 +105,24 @@ final class IsaacRandom {
           var10 = var10 ^ var3 >>> 9;
           var3 = var3 + var4;
           var5 = var5 + var10;
-          this.field_b[var2Lifetime1] = var3;
-          this.field_b[var2Lifetime1 + 1] = var4;
-          this.field_b[var2Lifetime1 + 2] = var5;
-          this.field_b[var2Lifetime1 + 3] = var6;
-          this.field_b[var2Lifetime1 + 4] = var7;
-          this.field_b[var2Lifetime1 + 5] = var8;
-          this.field_b[var2Lifetime1 + 6] = var9;
-          this.field_b[var2Lifetime1 + 7] = var10;
+          this.memory[var2Lifetime1] = var3;
+          this.memory[var2Lifetime1 + 1] = var4;
+          this.memory[var2Lifetime1 + 2] = var5;
+          this.memory[var2Lifetime1 + 3] = var6;
+          this.memory[var2Lifetime1 + 4] = var7;
+          this.memory[var2Lifetime1 + 5] = var8;
+          this.memory[var2Lifetime1 + 6] = var9;
+          this.memory[var2Lifetime1 + 7] = var10;
         }
         for (var2Lifetime2 = 0; var2Lifetime2 < 256; var2Lifetime2 += 8) {
-          var6 = var6 + this.field_b[var2Lifetime2 + 3];
-          var5 = var5 + this.field_b[var2Lifetime2 + 2];
-          var3 = var3 + this.field_b[var2Lifetime2];
-          var4 = var4 + this.field_b[1 + var2Lifetime2];
-          var10 = var10 + this.field_b[7 + var2Lifetime2];
-          var9 = var9 + this.field_b[6 + var2Lifetime2];
-          var7 = var7 + this.field_b[var2Lifetime2 + 4];
-          var8 = var8 + this.field_b[5 + var2Lifetime2];
+          var6 = var6 + this.memory[var2Lifetime2 + 3];
+          var5 = var5 + this.memory[var2Lifetime2 + 2];
+          var3 = var3 + this.memory[var2Lifetime2];
+          var4 = var4 + this.memory[1 + var2Lifetime2];
+          var10 = var10 + this.memory[7 + var2Lifetime2];
+          var9 = var9 + this.memory[6 + var2Lifetime2];
+          var7 = var7 + this.memory[var2Lifetime2 + 4];
+          var8 = var8 + this.memory[5 + var2Lifetime2];
           var3 = var3 ^ var4 << 11;
           var4 = var4 + var5;
           var6 = var6 + var3;
@@ -147,67 +147,67 @@ final class IsaacRandom {
           var10 = var10 ^ var3 >>> 9;
           var5 = var5 + var10;
           var3 = var3 + var4;
-          this.field_b[var2Lifetime2] = var3;
-          this.field_b[var2Lifetime2 + 1] = var4;
-          this.field_b[var2Lifetime2 + 2] = var5;
-          this.field_b[3 + var2Lifetime2] = var6;
-          this.field_b[var2Lifetime2 + 4] = var7;
-          this.field_b[var2Lifetime2 + 5] = var8;
-          this.field_b[6 + var2Lifetime2] = var9;
-          this.field_b[var2Lifetime2 + 7] = var10;
+          this.memory[var2Lifetime2] = var3;
+          this.memory[var2Lifetime2 + 1] = var4;
+          this.memory[var2Lifetime2 + 2] = var5;
+          this.memory[3 + var2Lifetime2] = var6;
+          this.memory[var2Lifetime2 + 4] = var7;
+          this.memory[var2Lifetime2 + 5] = var8;
+          this.memory[6 + var2Lifetime2] = var9;
+          this.memory[var2Lifetime2 + 7] = var10;
         }
-        this.a(116);
-        this.field_i = 256;
+        this.generateResults(116);
+        this.remainingResults = 256;
     }
 
-    private final void a(int param0) {
+    private final void generateResults(int obfuscationGuard) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
         int var3;
         int var4;
         int var5;
-        int fieldTemp$0 = this.field_g + 1;
-        this.field_g = this.field_g + 1;
-        this.field_j = this.field_j + fieldTemp$0;
+        int fieldTemp$0 = this.generationCounter + 1;
+        this.generationCounter = this.generationCounter + 1;
+        this.lastResult = this.lastResult + fieldTemp$0;
         for (var2 = 0; 256 > var2; var2++) {
-          var3 = this.field_b[var2];
+          var3 = this.memory[var2];
           if (0 == (var2 & 2)) {
             if ((1 & var2) != 0) {
-              this.field_e = this.field_e ^ this.field_e >>> 6;
+              this.accumulator = this.accumulator ^ this.accumulator >>> 6;
             } else {
-              this.field_e = this.field_e ^ this.field_e << 13;
+              this.accumulator = this.accumulator ^ this.accumulator << 13;
             }
           } else {
             if (0 == (var2 & 1)) {
-              this.field_e = this.field_e ^ this.field_e << 2;
+              this.accumulator = this.accumulator ^ this.accumulator << 2;
             } else {
-              this.field_e = this.field_e ^ this.field_e >>> 16;
+              this.accumulator = this.accumulator ^ this.accumulator >>> 16;
             }
           }
-          this.field_e = this.field_e + this.field_b[var2 + 128 & 255];
-          dupTemp$1 = this.field_j + (this.field_b[ec.a(var3, 1020) >> 2] + this.field_e);
+          this.accumulator = this.accumulator + this.memory[var2 + 128 & 255];
+          dupTemp$1 = this.lastResult + (this.memory[ec.a(var3, 1020) >> 2] + this.accumulator);
           var4 = dupTemp$1;
-          this.field_b[var2] = dupTemp$1;
-          dupTemp$2 = this.field_b[ec.a(261147, var4) >> 8 >> 2] + var3;
-          this.field_j = dupTemp$2;
-          this.field_h[var2] = dupTemp$2;
+          this.memory[var2] = dupTemp$1;
+          dupTemp$2 = this.memory[ec.a(261147, var4) >> 8 >> 2] + var3;
+          this.lastResult = dupTemp$2;
+          this.results[var2] = dupTemp$2;
         }
-        var5 = -1 / ((param0 - 54) / 60);
+        var5 = -1 / ((obfuscationGuard - 54) / 60);
     }
 
-    final int a(int param0, int param1) {
-        int var4 = 0;
+    final int nextIntBounded(int obfuscationGuard, int bound) {
+        int sample = 0;
         int var6 = SteelSentinels.obfuscationControl;
-        if (param1 <= 0) {
+        if (bound <= 0) {
           throw new IllegalArgumentException();
         }
-        int var5 = -9 % ((-40 - param0) / 54);
-        int var3 = 2147483647 - (int)(4294967296L % (long)param1);
+        int guardArithmetic = -9 % ((-40 - obfuscationGuard) / 54);
+        int maximumAcceptedSample = 2147483647 - (int)(4294967296L % (long)bound);
         do {
-          var4 = this.c(-104);
-        } while (var3 < var4);
-        return uh.a(false, var4, param1);
+          sample = this.nextInt(-104);
+        } while (maximumAcceptedSample < sample);
+        return NodeHashTable.nonnegativeRemainder(false, sample, bound);
     }
 
     public static void a(byte param0) {
@@ -220,17 +220,17 @@ final class IsaacRandom {
         field_k = null;
     }
 
-    final int c(int param0) {
-        if (param0 >= -86) {
-          this.a(74);
+    final int nextInt(int obfuscationGuard) {
+        if (obfuscationGuard >= -86) {
+          this.generateResults(74);
         }
-        if (this.field_i == 0) {
-          this.a(126);
-          this.field_i = 256;
+        if (this.remainingResults == 0) {
+          this.generateResults(126);
+          this.remainingResults = 256;
         }
-        int fieldTemp$0 = this.field_i - 1;
-        this.field_i = this.field_i - 1;
-        return this.field_h[fieldTemp$0];
+        int fieldTemp$0 = this.remainingResults - 1;
+        this.remainingResults = this.remainingResults - 1;
+        return this.results[fieldTemp$0];
     }
 
     final static void insertNodeBefore(IntrusiveNode existingNode, int obfuscationGuard, IntrusiveNode node) {
@@ -250,17 +250,17 @@ final class IsaacRandom {
         }
     }
 
-    IsaacRandom(int[] param0) {
+    IsaacRandom(int[] seed) {
         int var2_int = 0;
         try {
-          this.field_h = new int[256];
-          this.field_b = new int[256];
-          for (var2_int = 0; var2_int < param0.length; var2_int++) {
-            this.field_h[var2_int] = param0[var2_int];
+          this.results = new int[256];
+          this.memory = new int[256];
+          for (var2_int = 0; var2_int < seed.length; var2_int++) {
+            this.results[var2_int] = seed[var2_int];
           }
-          this.b(55);
+          this.initializeState(55);
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ie.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "ie.<init>(" + (seed != null ? "{...}" : "null") + ')');
         }
     }
 

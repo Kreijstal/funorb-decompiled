@@ -34,13 +34,13 @@ final class rq extends IntrusiveNode {
     }
 
     final static void a(boolean param0) {
-        ga.field_g = new kd();
+        IsaacRandom.field_g = new kd();
         if (param0) {
           rq.a((byte) 79);
-          lt.field_g.a(ga.field_g, (byte) 78);
+          lt.field_g.a(IsaacRandom.field_g, (byte) 78);
           return;
         }
-        lt.field_g.a(ga.field_g, (byte) 78);
+        lt.field_g.a(IsaacRandom.field_g, (byte) 78);
     }
 
     rq(String param0) {

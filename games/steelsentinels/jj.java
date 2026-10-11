@@ -86,14 +86,14 @@ final class jj {
                 ic.field_T = ak.a(param2, param5, -20407, false);
               }
               mm.field_g.position = 0;
-              mm.field_g.a((byte) 115, 14);
-              mm.field_g.a((byte) 109, ic.field_T.a((byte) 121).field_e);
+              mm.field_g.writeByte((byte) 115, 14);
+              mm.field_g.writeByte((byte) 109, ic.field_T.a((byte) 121).field_e);
               gj.a(0, -1);
               rn.field_v = f.field_D;
             }
             if (rn.field_v == f.field_D &&
               ve.a((byte) -127, 1)) {
-              var6_int = rf.field_d.f((byte) -55);
+              var6_int = rf.field_d.readUnsignedByte((byte) -55);
               rf.field_d.position = 0;
               if (var6_int == 0) {
                 rn.field_v = od.field_d;
@@ -113,7 +113,7 @@ final class jj {
             boolean decompiledFrameRemainder0 = true;
             if (rn.field_v == uf.field_g &&
               ve.a((byte) -86, 1)) {
-              var6_intLifetime1 = rf.field_d.f((byte) -68);
+              var6_intLifetime1 = rf.field_d.readUnsignedByte((byte) -68);
               rf.field_d.position = 0;
               on.field_k = null;
               ch.field_N = var6_intLifetime1;
@@ -140,11 +140,11 @@ final class jj {
               pm.n(121)) {
               li.field_w = rf.field_d.g((byte) -101);
               gj.field_b = param5;
-              NodeDeque.field_d = rf.field_d.f((byte) -65);
-              di.field_h = rf.field_d.f((byte) -54);
-              rd.field_b = rf.field_d.c((byte) -60);
+              NodeDeque.field_d = rf.field_d.readUnsignedByte((byte) -65);
+              di.field_h = rf.field_d.readUnsignedByte((byte) -54);
+              rd.field_b = rf.field_d.readUnsignedShort((byte) -60);
               var6 = rf.field_d.g(-122);
-              var7 = rf.field_d.f((byte) -128);
+              var7 = rf.field_d.readUnsignedByte((byte) -128);
               if (0 != (1 & var7)) {
                 ed.b((byte) -105);
               }
@@ -162,19 +162,19 @@ final class jj {
                 }
               }
               if (cd.field_a) {
-                rf.field_d.f((byte) -118);
-                rf.field_d.f((byte) -83);
-                rf.field_d.i(0);
-                ag.field_q = rf.field_d.c((byte) -60);
+                rf.field_d.readUnsignedByte((byte) -118);
+                rf.field_d.readUnsignedByte((byte) -83);
+                rf.field_d.readInt(0);
+                ag.field_q = rf.field_d.readUnsignedShort((byte) -60);
                 nj.field_Y = new byte[ag.field_q];
                 for (var8 = 0; var8 < ag.field_q; var8++) {
-                  nj.field_Y[var8] = rf.field_d.d((byte) -2);
+                  nj.field_Y[var8] = rf.field_d.readByte((byte) -2);
                 }
               }
               g.field_l = rf.field_d.h(1);
               var11 = (CharSequence) ((Object) g.field_l);
               ng.field_r = ui.a(1, var11);
-              ua.field_o = rf.field_d.f((byte) -106);
+              ua.field_o = rf.field_d.readUnsignedByte((byte) -106);
               rn.field_v = jd.field_sb;
               if (ic.field_T.a((byte) 69) == ArticulatedPart.field_F) {
                 PartInstruction.field_o.a(-48, Projectile.d((byte) -21));
@@ -206,11 +206,11 @@ final class jj {
               if (0 < rd.field_b) {
                 ki.field_ib = true;
               }
-              mm.field_g.a(-1833430685, dj.field_k);
+              mm.field_g.initializeOpcodeCipher(-1833430685, dj.field_k);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 dj.field_k[var8Lifetime1] = dj.field_k[var8Lifetime1] + 50;
               }
-              rf.field_d.a(-1833430685, dj.field_k);
+              rf.field_d.initializeOpcodeCipher(-1833430685, dj.field_k);
               stackIn_86_0 = ch.field_N;
               return stackIn_86_0;
             }

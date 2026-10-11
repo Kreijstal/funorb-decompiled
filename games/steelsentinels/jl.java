@@ -96,19 +96,19 @@ final class jl {
         var16 = SteelSentinels.obfuscationControl;
         try {
           var17 = new PacketBuffer(ln.a(param0, (byte) 127));
-          var4 = var17.f((byte) -66);
+          var4 = var17.readUnsignedByte((byte) -66);
           if (5 <= var4 &&
             var4 <= 7) {
             if (var4 >= 6) {
-              this.field_k = var17.i(0);
+              this.field_k = var17.readInt(0);
             } else {
               this.field_k = 0;
             }
-            var5 = var17.f((byte) -111);
+            var5 = var17.readUnsignedByte((byte) -111);
             stackIn_11_0 = ((1 & var5) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             if (var4 < 7) {
-              this.field_b = var17.c((byte) -60);
+              this.field_b = var17.readUnsignedShort((byte) -60);
             } else {
               this.field_b = var17.c(true);
             }
@@ -119,7 +119,7 @@ final class jl {
             this.field_h = new int[this.field_b];
             if (7 > var4) {
               for (var10 = 0; this.field_b > var10; var10++) {
-                dupTemp$0 = var8 + var17.c((byte) -60);
+                dupTemp$0 = var8 + var17.readUnsignedShort((byte) -60);
                 var8 = dupTemp$0;
                 this.field_h[var10] = dupTemp$0;
                 if (this.field_h[var10] > var9) {
@@ -151,17 +151,17 @@ final class jl {
                 this.field_v[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_b; var10Lifetime1Lifetime1++) {
-                this.field_v[this.field_h[var10Lifetime1Lifetime1]] = var17.i(0);
+                this.field_v[this.field_h[var10Lifetime1Lifetime1]] = var17.readInt(0);
               }
               this.field_n = new jk(this.field_v);
             }
             for (var10Lifetime2 = 0; this.field_b > var10Lifetime2; var10Lifetime2++) {
-              this.field_a[this.field_h[var10Lifetime2]] = var17.i(0);
+              this.field_a[this.field_h[var10Lifetime2]] = var17.readInt(0);
             }
             if (var7 != 0) {
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_b; var10Lifetime3++) {
                 var21 = new byte[64];
-                var17.a(0, var21, 28, 64);
+                var17.readBytes(0, var21, 28, 64);
                 this.field_t[this.field_h[var10Lifetime3]] = var21;
               }
             }
@@ -169,11 +169,11 @@ final class jl {
               return;
             }
             for (var10Lifetime4 = 0; this.field_b > var10Lifetime4; var10Lifetime4++) {
-              this.field_m[this.field_h[var10Lifetime4]] = var17.i(0);
+              this.field_m[this.field_h[var10Lifetime4]] = var17.readInt(0);
             }
             if (var4 < 7) {
               for (var10Lifetime5 = 0; this.field_b > var10Lifetime5; var10Lifetime5++) {
-                this.field_j[this.field_h[var10Lifetime5]] = var17.c((byte) -60);
+                this.field_j[this.field_h[var10Lifetime5]] = var17.readUnsignedShort((byte) -60);
               }
               for (var10Lifetime5 = 0; this.field_b > var10Lifetime5; var10Lifetime5++) {
                 var11 = this.field_h[var10Lifetime5];
@@ -183,7 +183,7 @@ final class jl {
                 this.field_o[var11] = array$2;
                 var13 = -1;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.c((byte) -60);
+                  dupTemp$3 = var8Lifetime1 + var17.readUnsignedShort((byte) -60);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_o[var11];
                   dupTemp$4[var14] = dupTemp$3;
@@ -241,7 +241,7 @@ final class jl {
                   } else {
                     var14Lifetime1 = this.field_o[var11Lifetime1][var13Lifetime1Lifetime1];
                   }
-                  this.field_q[var11Lifetime1][var14Lifetime1] = var17.i(0);
+                  this.field_q[var11Lifetime1][var14Lifetime1] = var17.readInt(0);
                 }
                 this.field_d[var11Lifetime1] = new jk(this.field_q[var11Lifetime1]);
               }

@@ -2684,7 +2684,7 @@ final class CombatPresentation implements EventPresentation {
             return stackIn_8_0;
           }
           if (se.field_g.a((byte) -47)) {
-            stackIn_13_0 = ga.field_d;
+            stackIn_13_0 = IsaacRandom.field_d;
             return stackIn_13_0;
           }
           stackIn_11_0 = jh.field_j;

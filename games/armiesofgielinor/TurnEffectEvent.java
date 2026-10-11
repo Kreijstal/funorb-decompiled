@@ -241,7 +241,7 @@ final class TurnEffectEvent extends GameEvent {
             TurnEffectEvent.a(-95, (je) null, (je) null, (je) null, (je) null);
           }
           hf.field_c = false;
-          if (!bb.field_a) {
+          if (!NodeIterator.field_a) {
             if (vi.field_d) {
               var5 = ml.field_Lb;
               if (var6 != 0) {

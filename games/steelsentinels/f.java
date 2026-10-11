@@ -48,7 +48,7 @@ final class f extends vk {
             } else {
               stackIn_6_2 = 3;
             }
-            ((PacketBuffer) (Object) stackIn_5_0).a((byte) stackIn_5_1, stackIn_6_2);
+            ((PacketBuffer) (Object) stackIn_5_0).writeByte((byte) stackIn_5_1, stackIn_6_2);
             this.field_o.a(0L, (byte) 120);
             this.field_F.a(this.field_o.payload.length, this.field_o.payload, -100, 0);
             if (!param0) {
@@ -140,9 +140,9 @@ final class f extends vk {
             if (this.field_n != 0) {
               try {
                 this.field_o.position = 0;
-                this.field_o.a((byte) 116, 4);
-                this.field_o.a((byte) 114, (int) this.field_n);
-                this.field_o.b(true, 0);
+                this.field_o.writeByte((byte) 116, 4);
+                this.field_o.writeByte((byte) 114, (int) this.field_n);
+                this.field_o.writeInt(true, 0);
                 this.field_F.a(this.field_o.payload.length, this.field_o.payload, -100, 0);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
@@ -285,9 +285,9 @@ final class f extends vk {
           }
           try {
             this.field_o.position = 0;
-            this.field_o.a((byte) 111, 6);
+            this.field_o.writeByte((byte) 111, 6);
             this.field_o.e(31, 3);
-            this.field_o.d(0, 90);
+            this.field_o.writeShort(0, 90);
             var2_int = -85 / ((-22 - param0) / 42);
             this.field_F.a(this.field_o.payload.length, this.field_o.payload, -100, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -391,7 +391,7 @@ final class f extends vk {
             var3 = (qa) (this.field_m.b(22));
             while (var3 != null) {
               this.field_o.position = 0;
-              this.field_o.a((byte) 111, 1);
+              this.field_o.writeByte((byte) 111, 1);
               this.field_o.a(var3.field_w, (byte) 120);
               this.field_F.a(this.field_o.payload.length, this.field_o.payload, -100, 0);
               this.field_a.a((byte) 121, var3);
@@ -400,7 +400,7 @@ final class f extends vk {
             var3Lifetime1 = (qa) (this.field_j.b(22));
             while (var3Lifetime1 != null) {
               this.field_o.position = 0;
-              this.field_o.a((byte) 110, 0);
+              this.field_o.writeByte((byte) 110, 0);
               this.field_o.a(var3Lifetime1.field_w, (byte) 120);
               this.field_F.a(this.field_o.payload.length, this.field_o.payload, -100, 0);
               this.field_p.a((byte) 106, var3Lifetime1);
@@ -446,10 +446,10 @@ final class f extends vk {
                       }
                     } else {
                       this.field_c.position = 0;
-                      var7 = this.field_c.f((byte) -86);
-                      var8 = this.field_c.i(0);
-                      var9 = this.field_c.f((byte) -113);
-                      var10 = this.field_c.i(0);
+                      var7 = this.field_c.readUnsignedByte((byte) -86);
+                      var8 = this.field_c.readInt(0);
+                      var9 = this.field_c.readUnsignedByte((byte) -113);
+                      var10 = this.field_c.readInt(0);
                       var11 = var9 & 127;
                       stackIn_62_0 = (0 == (var9 & 128)) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -485,8 +485,8 @@ final class f extends vk {
                       var16 = stackIn_78_0;
                       this.field_d = var15_ref;
                       this.field_d.field_G = new PacketBuffer(var16 + (var10 + this.field_d.field_K));
-                      this.field_d.field_G.a((byte) 125, var11);
-                      this.field_d.field_G.b(true, var10);
+                      this.field_d.field_G.writeByte((byte) 125, var11);
+                      this.field_d.field_G.writeInt(true, var10);
                       this.field_c.position = 0;
                       this.field_d.field_I = 10;
                     }

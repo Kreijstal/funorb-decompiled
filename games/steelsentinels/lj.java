@@ -64,10 +64,10 @@ final class lj {
             return stackIn_34_0;
           }
           var3 = mm.field_g;
-          var3.a(param2, (byte) -117);
+          var3.writeCipheredOpcode(param2, (byte) -117);
           var3.position = var3.position + 1;
           var4 = var3.position;
-          var3.a((byte) 114, 0);
+          var3.writeByte((byte) 114, 0);
           var3.a(param0, param1 ^ 43);
           var3.b((byte) -46, -var4 + var3.position);
           stackIn_36_0 = null;

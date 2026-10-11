@@ -54,10 +54,10 @@ final class rn extends IntrusiveNode {
           var7.unlinkDual(480);
           cc.field_gc = cc.field_gc - 1;
           var5 = mm.field_g;
-          var5.a(param1, (byte) -117);
+          var5.writeCipheredOpcode(param1, (byte) -117);
           var5.position = var5.position + 1;
           var6 = var5.position;
-          var5.a((byte) 124, 3);
+          var5.writeByte((byte) 124, 3);
           var5.a(param2, -121);
           var5.b((byte) 116, var5.position - var6);
           stackIn_12_0 = null;

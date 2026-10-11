@@ -47,14 +47,14 @@ final class TileMetadata implements TaggedFieldReader {
                 if (0 >= encodedLength) {
                   return;
                 }
-                this.ownerPlayer = (int)tn.a(false, encodedLength, packet);
+                this.ownerPlayer = (int)tn.readTaggedInteger(false, encodedLength, packet);
                 return;
               }
               if (fieldName.equals("tag")) {
                 if (encodedLength <= 0) {
                   return;
                 }
-                this.tag = (int)tn.a(false, encodedLength, packet);
+                this.tag = (int)tn.readTaggedInteger(false, encodedLength, packet);
                 return;
               }
               if (!fieldName.equals("god")) {
@@ -63,11 +63,11 @@ final class TileMetadata implements TaggedFieldReader {
               if (0 >= encodedLength) {
                 return;
               }
-              this.godId = (int)tn.a(false, encodedLength, packet);
+              this.godId = (int)tn.readTaggedInteger(false, encodedLength, packet);
               return;
             }
             if (encodedLength > 0) {
-              this.modifierFlags = (int)tn.a(false, encodedLength, packet);
+              this.modifierFlags = (int)tn.readTaggedInteger(false, encodedLength, packet);
               return;
             }
           }
@@ -96,13 +96,13 @@ final class TileMetadata implements TaggedFieldReader {
         try {
           rc.a(param7, param3, 10);
           l.field_a = rc.a(param2, param0, 0, param6);
-          mt.field_e = rc.a(param2, param0, 1, param1);
+          TextCursor.field_e = rc.a(param2, param0, 1, param1);
           ig.field_n = new uv();
           ku.field_K = param1;
           if (param4 >= -38) {
             field_a = (int[]) null;
           }
-          mt.field_e.b(ig.field_n);
+          TextCursor.field_e.b(ig.field_n);
           lk.field_e = param5;
           lk.field_e.b(te.field_n, -120);
           l.field_a.b(lk.field_e);

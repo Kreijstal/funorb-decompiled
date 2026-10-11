@@ -18,19 +18,19 @@ final class DeathEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = vl.field_n;
-          var5.h(32161, param1);
+          var5.writeCipheredOpcode(32161, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.b(1, 1);
+          var5.writeByte(1, 1);
           if (null == param0.field_l) {
-            var5.b(param2 - 25521, 0);
+            var5.writeByte(param2 - 25521, 0);
           } else {
-            var5.b(1, param0.field_l.length);
+            var5.writeByte(1, param0.field_l.length);
             var5.a(param0.field_l, 0, param0.field_l.length, 86);
           }
           var5.b((byte) -39, var4);
           var5.position = var5.position - 4;
-          param0.field_o = var5.i(param2 ^ 25523);
+          param0.field_o = var5.readInt(param2 ^ 25523);
           var5.e(-var4 + var5.position, 5930);
           if (param2 == 25522) {
             return;

@@ -465,7 +465,7 @@ final class GameplayController {
         try {
           var4_int = param2.playerSlot;
           this.battlefield.localPlayer = var4_int;
-          this.battlefield.b(0, new PacketBuffer(param1.field_c));
+          this.battlefield.readLegacySnapshot(0, new PacketBuffer(param1.field_c));
           this.battlefield.field_zb[var4_int] = param1.field_d;
           if (null != param1.field_j) {
             this.battlefield.playerMana = new int[param1.field_j.length];
@@ -1237,9 +1237,9 @@ final class GameplayController {
         try {
           if (this.battlefield.currentPlayer == this.field_q) {
             var2_int = uk.field_n - this.field_Hb;
-            vl.field_n.h(32161, 73);
-            vl.field_n.b(1, 0);
-            vl.field_n.b(true, var2_int);
+            vl.field_n.writeCipheredOpcode(32161, 73);
+            vl.field_n.writeByte(1, 0);
+            vl.field_n.writeShort(true, var2_int);
             this.field_p = ce.field_O[this.battlefield.field_ib];
             this.field_Tb = false;
           }
@@ -1640,13 +1640,13 @@ final class GameplayController {
         RuntimeException decompiledCaughtException = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          vl.field_n.h(32161, 65);
+          vl.field_n.writeCipheredOpcode(32161, 65);
           var3 = -5 % ((26 - param0) / 37);
           var2_int = 5 + AttackEvent.a(false, 15, vv.field_b);
-          vl.field_n.b(1, var2_int);
+          vl.field_n.writeByte(1, var2_int);
           var4 = 0;
           while (var4 < var2_int) {
-            vl.field_n.b(1, AttackEvent.a(false, 256, vv.field_b));
+            vl.field_n.writeByte(1, AttackEvent.a(false, 256, vv.field_b));
             var4++;
             if (var5 != 0) {
               return;
@@ -1669,11 +1669,11 @@ final class GameplayController {
             GameplayController.a((byte[]) null, -44, (CharSequence) null, 112, -65, (byte) -121);
           }
           if (this.field_lb) {
-            vl.field_n.h(32161, 65);
+            vl.field_n.writeCipheredOpcode(32161, 65);
             var2 = vl.field_n;
-            ((PacketBuffer) ((Object) var2)).b(1, 2);
-            ((PacketBuffer) ((Object) var2)).b(1, this.battlefield.chosenGods[this.field_q][0] | 128);
-            ((PacketBuffer) ((Object) var2)).b(param0 + 24937, this.battlefield.chosenGods[this.field_q][1] << 4 | this.battlefield.chosenGods[this.field_q][2]);
+            ((PacketBuffer) ((Object) var2)).writeByte(1, 2);
+            ((PacketBuffer) ((Object) var2)).writeByte(1, this.battlefield.chosenGods[this.field_q][0] | 128);
+            ((PacketBuffer) ((Object) var2)).writeByte(param0 + 24937, this.battlefield.chosenGods[this.field_q][1] << 4 | this.battlefield.chosenGods[this.field_q][2]);
             if (!ArmiesOfGielinor.obfuscationControl) {
               return;
             }
@@ -3150,7 +3150,7 @@ final class GameplayController {
               7 == this.selectedUnit.unitType) {
               var4_intLifetime1 = 2;
             }
-            vl.field_n.h(32161, 65);
+            vl.field_n.writeCipheredOpcode(32161, 65);
             stackIn_91_0 = vl.field_n;
             stackIn_91_1 = 1;
             if (var4_intLifetime1 == 2) {
@@ -3158,12 +3158,12 @@ final class GameplayController {
             } else {
               stackIn_92_2 = 3;
             }
-            ((CipherPacketBuffer) (Object) stackIn_91_0).b(stackIn_91_1, stackIn_92_2);
-            vl.field_n.b(1, var4_intLifetime1 | 96);
-            vl.field_n.b(1, this.selectedUnit.tileX);
-            vl.field_n.b(1, this.selectedUnit.tileY);
+            ((CipherPacketBuffer) (Object) stackIn_91_0).writeByte(stackIn_91_1, stackIn_92_2);
+            vl.field_n.writeByte(1, var4_intLifetime1 | 96);
+            vl.field_n.writeByte(1, this.selectedUnit.tileX);
+            vl.field_n.writeByte(1, this.selectedUnit.tileY);
             if (var4_intLifetime1 == 2) {
-              vl.field_n.b(1, param0);
+              vl.field_n.writeByte(1, param0);
             }
             if ((var6 != 0) &&
               (!this.selectedUnit.movementSpent)) {
@@ -3330,7 +3330,7 @@ final class GameplayController {
             }
             if (~this.field_q == ~this.battlefield.currentPlayer) {
               this.field_Tb = true;
-              vl.field_n.h(param1 ^ 32165, 74);
+              vl.field_n.writeCipheredOpcode(param1 ^ 32165, 74);
             }
             this.field_db = param0;
             this.field_zb = uk.field_n;
@@ -3378,7 +3378,7 @@ final class GameplayController {
           if (param0 != 108) {
             return;
           }
-          vl.field_n.h(32161, 68);
+          vl.field_n.writeCipheredOpcode(32161, 68);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4154,7 +4154,7 @@ final class GameplayController {
               var2_int != 0) {
               hh.field_d.d(0, -12 + this.field_Fb, 134, 50, (int)(128.0 + Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) * 64.0));
             }
-            MoveAttackAction.a(this.field_Fb, ga.field_a, en.field_E, GrowthEvent.field_I, this.n((byte) -69), 67, param0 ^ -25);
+            MoveAttackAction.a(this.field_Fb, IsaacRandom.field_a, en.field_E, GrowthEvent.field_I, this.n((byte) -69), 67, param0 ^ -25);
           }
           if (param0 != 82) {
             return;
@@ -4372,12 +4372,12 @@ final class GameplayController {
           ub.$cfr$intArgs$a$6d836999ad61(109, im.field_v[12]);
           boolean decompiledSharedTail0 = !(this.field_lb);
           if (!decompiledSharedTail0) {
-            vl.field_n.h(32161, 65);
-            vl.field_n.b(1, 4);
-            vl.field_n.b(param1 - 64, 32);
-            vl.field_n.b(param1 ^ 64, param0);
-            vl.field_n.b(1, this.field_X);
-            vl.field_n.b(param1 - 64, this.field_ec);
+            vl.field_n.writeCipheredOpcode(32161, 65);
+            vl.field_n.writeByte(1, 4);
+            vl.field_n.writeByte(param1 - 64, 32);
+            vl.field_n.writeByte(param1 ^ 64, param0);
+            vl.field_n.writeByte(1, this.field_X);
+            vl.field_n.writeByte(param1 - 64, this.field_ec);
             decompiledSharedTail0 = (ArmiesOfGielinor.obfuscationControl);
           }
           if (decompiledSharedTail0) {
@@ -4427,7 +4427,7 @@ final class GameplayController {
     }
 
     private final Unit a(int param0, int param1, Unit param2, boolean param3) {
-        bb var5 = null;
+        NodeIterator var5 = null;
         RuntimeException var5_ref = null;
         Unit var6 = null;
         int var7 = 0;
@@ -4449,9 +4449,9 @@ final class GameplayController {
             !param2.c(param0 + 65281))) {
             param2 = null;
           }
-          var5 = new bb(this.battlefield.unitsByPlayer[param1]);
+          var5 = new NodeIterator(this.battlefield.unitsByPlayer[param1]);
           if (param3) {
-            var6 = (Unit) (var5.c(50));
+            var6 = (Unit) (var5.first(50));
           }
           if (!param3 ||
             var7 != 0) {
@@ -4469,7 +4469,7 @@ final class GameplayController {
               stackIn_32_0 = null;
               return (Unit) (stackIn_32_0);
             }
-            var6 = (Unit) (var5.b(param0 ^ -51));
+            var6 = (Unit) (var5.next(param0 ^ -51));
             if (var7 == 0) {
               continue;
             }
@@ -10066,7 +10066,7 @@ final class GameplayController {
           if (!this.field_lb) {
             throw new IllegalStateException();
           }
-          vl.field_n.h(32161, 66);
+          vl.field_n.writeCipheredOpcode(32161, 66);
           if (param0 != 69) {
             this.field_wb = (String) null;
           }
@@ -10500,9 +10500,9 @@ final class GameplayController {
 
     final void i(int param0) {
         try {
-          vl.field_n.h(param0 ^ 32161, 65);
-          vl.field_n.b(param0 ^ 1, 1);
-          vl.field_n.b(param0 + 1, 64);
+          vl.field_n.writeCipheredOpcode(param0 ^ 32161, 65);
+          vl.field_n.writeByte(param0 ^ 1, 1);
+          vl.field_n.writeByte(param0 + 1, 64);
           this.field_p = param0;
           this.field_Tb = true;
         } catch (RuntimeException runtimeException) {
@@ -10778,10 +10778,10 @@ final class GameplayController {
           this.battlefield.field_J = true;
           this.g(25, ((Spell) (var8)).spellId, -118);
           if (this.field_lb) {
-            vl.field_n.h(32161, 65);
-            vl.field_n.b(1, 2 + ((Spell) (var8)).getPayloadSize(25365));
-            vl.field_n.b(1, 160);
-            vl.field_n.b(1, param0);
+            vl.field_n.writeCipheredOpcode(32161, 65);
+            vl.field_n.writeByte(1, 2 + ((Spell) (var8)).getPayloadSize(25365));
+            vl.field_n.writeByte(1, 160);
+            vl.field_n.writeByte(1, param0);
             ((Spell) (var8)).writePayload(-11637, vl.field_n);
             if (var9 == 0) {
               return;
@@ -11378,9 +11378,9 @@ final class GameplayController {
             throw new RuntimeException((String) null);
           }
           if (this.battlefield.currentPlayer == this.field_q) {
-            vl.field_n.h(param1 + 32217, 73);
-            vl.field_n.b(1, param0);
-            vl.field_n.b(true, uk.field_n - this.field_zb);
+            vl.field_n.writeCipheredOpcode(param1 + 32217, 73);
+            vl.field_n.writeByte(1, param0);
+            vl.field_n.writeShort(true, uk.field_n - this.field_zb);
             this.field_Tb = false;
           }
           this.field_db = 0;
@@ -11719,7 +11719,7 @@ final class GameplayController {
           if (!this.field_lb) {
             throw new IllegalStateException();
           }
-          vl.field_n.h(32161, 67);
+          vl.field_n.writeCipheredOpcode(32161, 67);
           var2_int = 38 / ((param0 - 53) / 41);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -11885,7 +11885,7 @@ final class GameplayController {
             param3 -= 16;
           }
           if (!param0) {
-            stackIn_22_0 = ga.field_a;
+            stackIn_22_0 = IsaacRandom.field_a;
           } else {
             stackIn_22_0 = rq.field_k;
           }

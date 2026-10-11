@@ -27,7 +27,7 @@ final class ui {
         return (ms) null;
     }
 
-    final static TileMetadata a(CipherPacketBuffer param0, int param1, int param2) {
+    final static TileMetadata readTaggedTileMetadata(CipherPacketBuffer packet, int recordBitLength, int obfuscationGuard) {
         TileMetadata var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -38,13 +38,13 @@ final class ui {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (0 == param1) {
+          if (0 == recordBitLength) {
             stackIn_2_0 = null;
             return (TileMetadata) (stackIn_2_0);
           }
           var3 = new TileMetadata();
-          no.a(param0, var3, param1, -24721);
-          var4 = -10 % ((param2 + 23) / 54);
+          no.readTaggedFields(packet, var3, recordBitLength, -24721);
+          var4 = -10 % ((obfuscationGuard + 23) / 54);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -52,12 +52,12 @@ final class ui {
           var3_ref = decompiledCaughtException;
           stackIn_7_0 = var3_ref;
           stackIn_7_1 = new StringBuilder().append("ui.A(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(recordBitLength).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

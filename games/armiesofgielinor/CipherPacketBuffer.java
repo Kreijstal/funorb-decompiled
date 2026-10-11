@@ -5,27 +5,27 @@ final class CipherPacketBuffer extends PacketBuffer {
     static String[] field_u;
     private int bitPosition;
     static byte[] field_A;
-    private int field_y;
+    private int writeBitsRemaining;
     static BitmapFont field_t;
     static dn field_x;
-    private ga field_z;
+    private IsaacRandom opcodeCipher;
     static Battlefield currentBattlefield;
 
-    final void d(byte param0, int param1) {
-        this.bitPosition = param1;
-        if (param0 < -16) {
+    final void setReadBitPosition(byte obfuscationGuard, int bitPosition) {
+        this.bitPosition = bitPosition;
+        if (obfuscationGuard < -16) {
           return;
         }
         int[] var4 = (int[]) null;
-        this.a((int[]) null, -64);
+        this.initializeOpcodeCipher((int[]) null, -64);
     }
 
     static boolean a(boolean param0, boolean param1) {
         return param0 ^ param1;
     }
 
-    final int a(boolean param0) {
-        if (param0) {
+    final int getReadBitPosition(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           return 59;
         }
         return this.bitPosition;
@@ -35,127 +35,127 @@ final class CipherPacketBuffer extends PacketBuffer {
         super(param0);
     }
 
-    final void h(int param0, int param1) {
+    final void writeCipheredOpcode(int obfuscationGuard, int opcode) {
         int fieldTemp$0 = 0;
-        if (param0 == 32161) {
+        if (obfuscationGuard == 32161) {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          this.payload[fieldTemp$0] = (byte)(param1 + this.field_z.a(256));
+          this.payload[fieldTemp$0] = (byte)(opcode + this.opcodeCipher.nextInt(256));
           return;
         }
     }
 
-    final int g(int param0, int param1) {
+    final int readBits(int obfuscationGuard, int bitCount) {
         int incrementValue$0 = 0;
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        int var5 = -82 / ((-41 - param0) / 57);
+        int var5 = -82 / ((-41 - obfuscationGuard) / 57);
         int var3 = this.bitPosition >> 3;
         int var4 = 8 - (7 & this.bitPosition);
-        this.bitPosition = this.bitPosition + param1;
+        this.bitPosition = this.bitPosition + bitCount;
         int var6 = 0;
-        while (var4 < param1) {
+        while (var4 < bitCount) {
           incrementValue$0 = var3;
           var3++;
-          var6 = var6 + ((this.payload[incrementValue$0] & GameEvent.field_n[var4]) << -var4 + param1);
-          param1 = param1 - var4;
+          var6 = var6 + ((this.payload[incrementValue$0] & GameEvent.bitMasks[var4]) << -var4 + bitCount);
+          bitCount = bitCount - var4;
           var4 = 8;
         }
-        if (param1 == var4) {
-          var6 = var6 + (GameEvent.field_n[var4] & this.payload[var3]);
+        if (bitCount == var4) {
+          var6 = var6 + (GameEvent.bitMasks[var4] & this.payload[var3]);
         } else {
-          var6 = var6 + (this.payload[var3] >> var4 - param1 & GameEvent.field_n[param1]);
+          var6 = var6 + (this.payload[var3] >> var4 - bitCount & GameEvent.bitMasks[bitCount]);
         }
         return var6;
     }
 
-    final void o(int param0) {
+    final void beginBitReading(int obfuscationGuard) {
         this.bitPosition = 8 * this.position;
-        if (param0 > 10) {
+        if (obfuscationGuard > 10) {
           return;
         }
-        this.o(52);
+        this.beginBitReading(52);
     }
 
-    final void c(int param0, byte param1) {
-        if (param1 != 0) {
+    final void setWriteBitPosition(int bitPosition, byte obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           return;
         }
-        this.field_y = 8 - (param0 & 7);
-        this.position = param0 >> 3;
+        this.writeBitsRemaining = 8 - (bitPosition & 7);
+        this.position = bitPosition >> 3;
     }
 
     CipherPacketBuffer(int param0) {
         super(param0);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void writeBits(int obfuscationGuard, int bitCount, int value) {
         int var4 = 0;
         int var5 = 0;
         int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var4Lifetime1;
         int var5Lifetime1;
-        param2 = param2 & GameEvent.field_n[param1];
-        if (param0 == -16807) {
-          while (this.field_y < param1) {
-            param1 = param1 - this.field_y;
-            this.payload[this.position] = (byte)oe.c(param2 >>> param1, rn.a((int) this.payload[this.position], 255 << this.field_y));
-            this.field_y = 8;
+        value = value & GameEvent.bitMasks[bitCount];
+        if (obfuscationGuard == -16807) {
+          while (this.writeBitsRemaining < bitCount) {
+            bitCount = bitCount - this.writeBitsRemaining;
+            this.payload[this.position] = (byte)oe.c(value >>> bitCount, rn.a((int) this.payload[this.position], 255 << this.writeBitsRemaining));
+            this.writeBitsRemaining = 8;
             this.position = this.position + 1;
           }
-          if (param1 == this.field_y) {
-            this.payload[this.position] = (byte)oe.c(param2, rn.a((int) this.payload[this.position], 255 << this.field_y));
+          if (bitCount == this.writeBitsRemaining) {
+            this.payload[this.position] = (byte)oe.c(value, rn.a((int) this.payload[this.position], 255 << this.writeBitsRemaining));
             this.position = this.position + 1;
-            this.field_y = 8;
+            this.writeBitsRemaining = 8;
           } else {
-            var4 = -param1 + this.field_y;
-            var5 = ~(GameEvent.field_n[param1] << var4);
-            this.payload[this.position] = (byte)oe.c(rn.a(var5, (int) this.payload[this.position]), param2 << var4);
-            this.field_y = this.field_y - param1;
+            var4 = -bitCount + this.writeBitsRemaining;
+            var5 = ~(GameEvent.bitMasks[bitCount] << var4);
+            this.payload[this.position] = (byte)oe.c(rn.a(var5, (int) this.payload[this.position]), value << var4);
+            this.writeBitsRemaining = this.writeBitsRemaining - bitCount;
             return;
           }
           return;
         }
-        this.d((byte) -128, -74);
-        while (this.field_y < param1) {
-          param1 = param1 - this.field_y;
-          this.payload[this.position] = (byte)oe.c(param2 >>> param1, rn.a((int) this.payload[this.position], 255 << this.field_y));
-          this.field_y = 8;
+        this.setReadBitPosition((byte) -128, -74);
+        while (this.writeBitsRemaining < bitCount) {
+          bitCount = bitCount - this.writeBitsRemaining;
+          this.payload[this.position] = (byte)oe.c(value >>> bitCount, rn.a((int) this.payload[this.position], 255 << this.writeBitsRemaining));
+          this.writeBitsRemaining = 8;
           this.position = this.position + 1;
         }
-        if (param1 == this.field_y) {
-          this.payload[this.position] = (byte)oe.c(param2, rn.a((int) this.payload[this.position], 255 << this.field_y));
+        if (bitCount == this.writeBitsRemaining) {
+          this.payload[this.position] = (byte)oe.c(value, rn.a((int) this.payload[this.position], 255 << this.writeBitsRemaining));
           this.position = this.position + 1;
-          this.field_y = 8;
+          this.writeBitsRemaining = 8;
         } else {
-          var4Lifetime1 = -param1 + this.field_y;
-          var5Lifetime1 = ~(GameEvent.field_n[param1] << var4Lifetime1);
-          this.payload[this.position] = (byte)oe.c(rn.a(var5Lifetime1, (int) this.payload[this.position]), param2 << var4Lifetime1);
-          this.field_y = this.field_y - param1;
+          var4Lifetime1 = -bitCount + this.writeBitsRemaining;
+          var5Lifetime1 = ~(GameEvent.bitMasks[bitCount] << var4Lifetime1);
+          this.payload[this.position] = (byte)oe.c(rn.a(var5Lifetime1, (int) this.payload[this.position]), value << var4Lifetime1);
+          this.writeBitsRemaining = this.writeBitsRemaining - bitCount;
           return;
         }
     }
 
-    final int m(int param0) {
+    final int readCipheredOpcode(int obfuscationGuard) {
         int fieldTemp$0 = 0;
-        if (param0 == 255) {
+        if (obfuscationGuard == 255) {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return this.payload[fieldTemp$0] - this.field_z.a(256) & 255;
+          return this.payload[fieldTemp$0] - this.opcodeCipher.nextInt(256) & 255;
         }
         this.bitPosition = -69;
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$1] - this.field_z.a(256) & 255;
+        return this.payload[fieldTemp$1] - this.opcodeCipher.nextInt(256) & 255;
     }
 
-    final void a(int[] param0, int param1) {
+    final void initializeOpcodeCipher(int[] seed, int obfuscationGuard) {
         try {
-          if (param1 >= -76) {
+          if (obfuscationGuard >= -76) {
             currentBattlefield = (Battlefield) null;
           }
-          this.field_z = new ga(param0);
+          this.opcodeCipher = new IsaacRandom(seed);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "bv.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "bv.I(" + (seed != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -185,10 +185,10 @@ final class CipherPacketBuffer extends PacketBuffer {
           for (var5_int = 0; param0 > var5_int; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param1[param3 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_z.a(256));
+            param1[param3 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.opcodeCipher.nextInt(256));
           }
           if (param2) {
-            this.o(-70);
+            this.beginBitReading(-70);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -344,12 +344,12 @@ final class CipherPacketBuffer extends PacketBuffer {
         CipherPacketBuffer.k((byte) -51);
     }
 
-    final void n(int param0) {
+    final void endBitReading(int obfuscationGuard) {
         this.position = (7 + this.bitPosition) / 8;
-        if (param0 == -2) {
+        if (obfuscationGuard == -2) {
           return;
         }
-        this.c(-66, (byte) 60);
+        this.setWriteBitPosition(-66, (byte) 60);
     }
 
     static {

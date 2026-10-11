@@ -50,7 +50,7 @@ final class wb {
 
     final static void a(boolean param0, byte param1, String param2, String param3) {
         ah.field_d = param3;
-        ga.field_d = param2;
+        IsaacRandom.field_d = param2;
         if (param1 != 32) {
           return;
         }

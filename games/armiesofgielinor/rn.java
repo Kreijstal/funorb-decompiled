@@ -45,7 +45,7 @@ final class rn {
         try {
           ou.a(true);
           KingBlackDragonEvent.field_C.j(param0 ^ -124);
-          np.field_Qb = new df(ga.field_d, (String) null, fh.field_i, param2, param3);
+          np.field_Qb = new df(IsaacRandom.field_d, (String) null, fh.field_i, param2, param3);
           if (param0 != 3) {
             field_d = -55;
           }

@@ -126,10 +126,10 @@ final class op {
             return stackIn_24_0;
           }
           var5 = vl.field_n;
-          var5.h(32161, param2);
+          var5.writeCipheredOpcode(32161, param2);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.b(1, 0);
+          var5.writeByte(1, 0);
           if (param0 != 20) {
             stackIn_27_0 = (String) null;
             return stackIn_27_0;

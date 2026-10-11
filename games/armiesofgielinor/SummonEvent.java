@@ -100,29 +100,29 @@ final class SummonEvent extends GameEvent {
             stackIn_2_0 = (Unit) null;
             return stackIn_2_0;
           }
-          var8_int = param4.k(0);
-          var9 = param4.e((byte) -104);
-          var10 = param4.k(0);
-          var11 = param4.a((byte) 110);
-          var12 = param4.k(0);
-          var13 = param4.k(0);
-          var14 = param4.k(0);
-          var15 = param4.k(0);
+          var8_int = param4.readUnsignedByte(0);
+          var9 = param4.readUnsignedShort((byte) -104);
+          var10 = param4.readUnsignedByte(0);
+          var11 = param4.readByte((byte) 110);
+          var12 = param4.readUnsignedByte(0);
+          var13 = param4.readUnsignedByte(0);
+          var14 = param4.readUnsignedByte(0);
+          var15 = param4.readUnsignedByte(0);
           if (var14 == 255) {
             var14 = -1;
           }
           var16 = new Unit(param3, param2, param0, var8_int >> 5, var10, var11, var9, var13, 7 & var8_int, param5, var12 & 15, var12 >> 4, var14, param7, var15);
-          var16.movementFlags = param4.k(0);
+          var16.movementFlags = param4.readUnsignedByte(0);
           if ((var16.movementFlags & 4) != 0) {
             var16.displayName = param4.h((byte) 121);
           }
           if (param1 > 0) {
-            var17 = param4.k(0);
+            var17 = param4.readUnsignedByte(0);
             if ((2 & var17) != 0) {
-              var16.tag = param4.k(0);
+              var16.tag = param4.readUnsignedByte(0);
             }
             if (0 != (1 & var17)) {
-              var16.objectiveId = param4.k(0);
+              var16.objectiveId = param4.readUnsignedByte(0);
             }
           }
           stackIn_15_0 = var16;

@@ -112,7 +112,7 @@ abstract class FunOrbClient extends GameApplet {
             mj.a((byte) 49, Projectile.d((byte) -21));
           }
           if (var4 == 10) {
-            mm.field_g.a(17, (byte) -117);
+            mm.field_g.writeCipheredOpcode(17, (byte) -117);
           }
           if (var4 == 11) {
             pf.a(Projectile.d((byte) -21), 63);
@@ -398,11 +398,11 @@ abstract class FunOrbClient extends GameApplet {
     }
 
     private final void l(int param0) {
-        int var2 = rf.field_d.f((byte) -86);
+        int var2 = rf.field_d.readUnsignedByte((byte) -86);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = -1 + jg.field_f;
         byte[] var5 = new byte[var4];
-        rf.field_d.a(0, var4, var5, 103);
+        rf.field_d.readCipheredBytes(0, var4, var5, 103);
         be.a(var3 != 0, (byte) 99, jk.a(13, var5), Projectile.d((byte) -21));
         if (param0 != 3894) {
           this.f((byte) -96);

@@ -202,7 +202,7 @@ final class ak {
             }
             if (0 <= var12) {
               var13_ref_gh = new SceneWidget("", ei.field_n);
-              var13_ref_gh.field_S = uh.field_h;
+              var13_ref_gh.field_S = NodeHashTable.field_h;
               var13_ref_gh.a(0, 2, 10, 2, 10);
               var13_ref_gh.field_nb = 65535;
               var13_ref_gh.field_I = null;

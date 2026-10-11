@@ -32,9 +32,9 @@ final class tq {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = vl.field_n;
-        var2.h(32161, param0);
-        var2.b(param1 ^ 1, 1);
-        var2.b(1, param1);
+        var2.writeCipheredOpcode(32161, param0);
+        var2.writeByte(param1 ^ 1, 1);
+        var2.writeByte(1, param1);
     }
 
     final static RgbSprite[] a(int param0, boolean param1, int param2, int param3, int param4, int param5) {

@@ -41,7 +41,7 @@ abstract class ks extends ms {
             ks.e((byte) 15);
           }
           var3 = new sd();
-          var3.field_m = param2.k(0);
+          var3.field_m = param2.readUnsignedByte(0);
           var3.field_u = param2.h((byte) 121);
           var3.field_p = ev.a(param2, (byte) -98);
           var3.field_q = uq.a(param2, false);

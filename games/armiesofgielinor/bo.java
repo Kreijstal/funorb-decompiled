@@ -76,7 +76,7 @@ final class bo {
             var6 = (PacketBuffer) null;
             bo.a(-35, (PacketBuffer) null, 62);
           }
-          var3_int = param1.e((byte) -104);
+          var3_int = param1.readUnsignedShort((byte) -104);
           var4 = uc.spellDefinitions[var3_int][3];
           if (var4 == 4) {
             stackIn_16_0 = new GlobalSpell(var3_int);
@@ -93,7 +93,7 @@ final class bo {
             return null;
           }
           if (uc.spellDefinitions[var3_int][4] != 5) {
-            stackIn_25_0 = new UnitSpell(var3_int, param1.k(param2 ^ 4368051), param1.k(0));
+            stackIn_25_0 = new UnitSpell(var3_int, param1.readUnsignedByte(param2 ^ 4368051), param1.readUnsignedByte(0));
             return (Spell) ((Object) stackIn_25_0);
           }
           if (param0 > -1) {

@@ -558,18 +558,18 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
             if (encodedLength <= 0) {
               return;
             }
-            this.unitType = (int)tn.a(false, encodedLength, packet);
+            this.unitType = (int)tn.readTaggedInteger(false, encodedLength, packet);
           } else {
             if (fieldName.equals("o")) {
               if (encodedLength <= 0) {
                 return;
               }
-              this.ownerPlayer = (int)tn.a(false, encodedLength, packet);
+              this.ownerPlayer = (int)tn.readTaggedInteger(false, encodedLength, packet);
               return;
             }
             if (fieldName.equals("str")) {
               if (encodedLength > 0) {
-                this.strength = (int)tn.a(false, encodedLength, packet);
+                this.strength = (int)tn.readTaggedInteger(false, encodedLength, packet);
                 return;
               }
             } else {
@@ -577,20 +577,20 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
                 if (encodedLength <= 0) {
                   return;
                 }
-                this.maximumStrength = (int)tn.a(false, encodedLength, packet);
+                this.maximumStrength = (int)tn.readTaggedInteger(false, encodedLength, packet);
                 return;
               }
               if (fieldName.equals("x")) {
                 if (0 >= encodedLength) {
                   return;
                 }
-                this.tileX = (int)tn.a(false, encodedLength, packet);
+                this.tileX = (int)tn.readTaggedInteger(false, encodedLength, packet);
                 return;
               }
               if (!fieldName.equals("y")) {
                 if (fieldName.equals("mf")) {
                   if (encodedLength > 0) {
-                    this.movementFlags = (int)tn.a(false, encodedLength, packet);
+                    this.movementFlags = (int)tn.readTaggedInteger(false, encodedLength, packet);
                     return;
                   }
                 } else {
@@ -605,27 +605,27 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
                     if (encodedLength <= 0) {
                       return;
                     }
-                    this.tag = (int)tn.a(false, encodedLength, packet);
+                    this.tag = (int)tn.readTaggedInteger(false, encodedLength, packet);
                     return;
                   }
                   if (fieldName.equals("obj")) {
                     if (encodedLength <= 0) {
                       return;
                     }
-                    this.objectiveId = (int)tn.a(false, encodedLength, packet);
+                    this.objectiveId = (int)tn.readTaggedInteger(false, encodedLength, packet);
                     return;
                   }
                   if (fieldName.equals("tnk")) {
                     if (encodedLength <= 0) {
                       return;
                     }
-                    this.tankId = (int)tn.a(false, encodedLength, packet);
+                    this.tankId = (int)tn.readTaggedInteger(false, encodedLength, packet);
                     return;
                   }
                 }
               } else {
                 if (encodedLength > 0) {
-                  this.tileY = (int)tn.a(false, encodedLength, packet);
+                  this.tileY = (int)tn.readTaggedInteger(false, encodedLength, packet);
                   return;
                 }
               }

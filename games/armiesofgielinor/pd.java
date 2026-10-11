@@ -79,12 +79,12 @@ final class pd {
           var4_int = -123 % ((-11 - param3) / 50);
           if (0 == param0 &&
             param1 == 0) {
-            param2.b(true, 0);
+            param2.writeShort(true, 0);
             return;
           }
           var5 = param0 & 255;
           var6 = param1 & 255;
-          param2.b(true, var6 | var5 << 8);
+          param2.writeShort(true, var6 | var5 << 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

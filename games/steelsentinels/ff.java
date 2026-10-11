@@ -1101,7 +1101,7 @@ final class ff extends ma {
                   var14_ref = var13;
                   var14_ref = var13;
                   if (var9 >= 17 &&
-                    var9 < 17 + uh.field_i.length) {
+                    var9 < 17 + NodeHashTable.field_i.length) {
                     var55 = db.field_g[-17 + var9];
                     var14_ref = var55;
                     var17 = ja.a(var9, false);

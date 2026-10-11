@@ -83,11 +83,11 @@ abstract class AiPlanningStrategy {
                 var8 = 0;
                 if (var19 == 0) {
                   if (null == var7.field_fb) {
-                    var7.field_Qb = new je(0L, ga.field_i);
+                    var7.field_Qb = new je(0L, IsaacRandom.field_i);
                     var7.a(var7.field_Qb, 87);
                     var7.field_Kb = new je(0L, ws.field_P);
                     var7.a(var7.field_Kb, 96);
-                    var7.field_Jb = new je(0L, ga.field_i);
+                    var7.field_Jb = new je(0L, IsaacRandom.field_i);
                     var7.a(var7.field_Jb, 69);
                     var7.field_Kb.field_Eb = 2;
                     var7.i(-10027);
@@ -168,7 +168,7 @@ abstract class AiPlanningStrategy {
                     ng.a(mw.field_E.field_Kb, var7, (int[]) null, (String) null, -1, 84, -1, var16, 0L);
                     if (null != var7.field_Ib &&
                       !fs.a((byte) 110, tn.field_Z.field_m) &&
-                      !bb.field_a) {
+                      !NodeIterator.field_a) {
                       if (!vi.field_d) {
                         var17 = tn.field_Z;
                         var18 = fo.a(4800, mi.field_k, new String[]{var16});

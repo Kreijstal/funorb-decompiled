@@ -106,7 +106,7 @@ final class ou {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        bb var6 = null;
+        NodeIterator var6 = null;
         MapLayout var7 = null;
         int var8 = 0;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -122,8 +122,8 @@ final class ou {
                 return stackIn_25_0;
               }
               var5_int = param0;
-              var6 = new bb(this.field_i[param2][param1]);
-              var7 = (MapLayout) (var6.c(param0 + 50));
+              var6 = new NodeIterator(this.field_i[param2][param1]);
+              var7 = (MapLayout) (var6.first(param0 + 50));
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (null == var7))) {
                 stackIn_36_0 = var7.field_k;
@@ -131,7 +131,7 @@ final class ou {
                   if (stackIn_36_0 >= param3) {
                     var5_int++;
                   }
-                  var7 = (MapLayout) (var6.b(param0 + 50));
+                  var7 = (MapLayout) (var6.next(param0 + 50));
                   continue;
                 }
                 break;
@@ -197,7 +197,7 @@ final class ou {
         Object stackIn_50_0 = null;
         MapLayout stackIn_67_0 = null;
         RuntimeException decompiledCaughtException = null;
-        bb var6 = null;
+        NodeIterator var6 = null;
         RuntimeException var6_ref = null;
         MapLayout var7 = null;
         int var8 = 0;
@@ -227,8 +227,8 @@ final class ou {
                   stackIn_50_0 = null;
                   return (MapLayout) (stackIn_50_0);
                 }
-                var6 = new bb(this.field_i[param3][param2]);
-                var7 = (MapLayout) (var6.c(param1 - 4086));
+                var6 = new NodeIterator(this.field_i[param3][param2]);
+                var7 = (MapLayout) (var6.first(param1 - 4086));
                 var8 = 0;
                 while (var7 != null) {
                   if (!(param0 <= var7.field_k) ||
@@ -237,7 +237,7 @@ final class ou {
                     if (param0 <= var7.field_k) {
                       var8++;
                     }
-                    var7 = (MapLayout) (var6.b(50));
+                    var7 = (MapLayout) (var6.next(50));
                     if (var9 == 0) {
                       continue;
                     }

@@ -113,22 +113,22 @@ final class MapTile implements TaggedFieldReader {
         try {
           if (fieldName.equals("unit")) {
             if (encodedLength > 0) {
-              this.occupant = a.a(encodedLength, 32, packet);
+              this.occupant = a.readTaggedUnit(encodedLength, 32, packet);
             }
           } else {
             if (fieldName.equals("own")) {
               if (encodedLength > 0) {
-                this.ownerPlayer = (int)tn.a(false, encodedLength, packet);
+                this.ownerPlayer = (int)tn.readTaggedInteger(false, encodedLength, packet);
               }
             } else {
               if (!fieldName.equals("type")) {
                 if (fieldName.equals("mod") &&
                   encodedLength > 0) {
-                  this.metadata = ui.a(packet, encodedLength, 80);
+                  this.metadata = ui.readTaggedTileMetadata(packet, encodedLength, 80);
                 }
               } else {
                 if (encodedLength > 0) {
-                  this.terrainType = (int)tn.a(false, encodedLength, packet);
+                  this.terrainType = (int)tn.readTaggedInteger(false, encodedLength, packet);
                 }
               }
             }

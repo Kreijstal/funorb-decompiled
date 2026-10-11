@@ -64,20 +64,20 @@ final class jp {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          la.field_d = param0.e((byte) -104) << 5;
-          var2_int = param0.k(0);
+          la.field_d = param0.readUnsignedShort((byte) -104) << 5;
+          var2_int = param0.readUnsignedByte(0);
           RevivalEvent.field_D = (var2_int & 7) << 18;
           la.field_d = la.field_d + (var2_int >> 3);
-          RevivalEvent.field_D = RevivalEvent.field_D + (param0.e((byte) -104) << 2);
-          var2_intLifetime1 = param0.k(0);
+          RevivalEvent.field_D = RevivalEvent.field_D + (param0.readUnsignedShort((byte) -104) << 2);
+          var2_intLifetime1 = param0.readUnsignedByte(0);
           nk.field_m = 2064384 & var2_intLifetime1 << 15;
           RevivalEvent.field_D = RevivalEvent.field_D + (var2_intLifetime1 >> 6);
-          nk.field_m = nk.field_m + (param0.k(0) << 7);
+          nk.field_m = nk.field_m + (param0.readUnsignedByte(0) << 7);
           int var3 = 16 % ((param1 + 45) / 34);
-          var2_intLifetime2 = param0.k(0);
+          var2_intLifetime2 = param0.readUnsignedByte(0);
           ov.field_e = (1 & var2_intLifetime2) << 16;
           nk.field_m = nk.field_m + (var2_intLifetime2 >> 1);
-          ov.field_e = ov.field_e + param0.e((byte) -104);
+          ov.field_e = ov.field_e + param0.readUnsignedShort((byte) -104);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "jp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

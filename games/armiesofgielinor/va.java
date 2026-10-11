@@ -41,12 +41,12 @@ final class va extends ms {
             this.field_E = param1.g(1);
           } else {
             if (param2 == 2) {
-              var5 = param1.k(0);
+              var5 = param1.readUnsignedByte(0);
               this.field_C = new int[var5];
               this.field_x = new char[var5];
               for (var6 = 0; var5 > var6; var6++) {
-                this.field_C[var6] = param1.e((byte) -104);
-                var7 = param1.a((byte) 111);
+                this.field_C[var6] = param1.readUnsignedShort((byte) -104);
+                var7 = param1.readByte((byte) 111);
                 stackIn_7_0 = this.field_x;
                 stackIn_7_1 = var6;
                 if (0 == var7) {
@@ -57,12 +57,12 @@ final class va extends ms {
                 stackIn_7_0[stackIn_7_1] = stackIn_8_2;
               }
             } else if (3 == param2) {
-              var5 = param1.k(0);
+              var5 = param1.readUnsignedByte(0);
               this.field_v = new char[var5];
               this.field_y = new int[var5];
               for (var6 = 0; var5 > var6; var6++) {
-                this.field_y[var6] = param1.e((byte) -104);
-                var7 = param1.a((byte) -74);
+                this.field_y[var6] = param1.readUnsignedShort((byte) -104);
+                var7 = param1.readByte((byte) -74);
                 stackIn_14_0 = this.field_v;
                 stackIn_14_1 = var6;
                 if (0 == var7) {
@@ -143,7 +143,7 @@ final class va extends ms {
             return;
           }
           while (true) {
-            var3_int = param1.k(0);
+            var3_int = param1.readUnsignedByte(0);
             if (var3_int == 0) {
               return;
             }

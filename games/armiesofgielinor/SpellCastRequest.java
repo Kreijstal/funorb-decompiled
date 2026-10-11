@@ -22,7 +22,7 @@ final class SpellCastRequest extends ActionRequest {
         RuntimeException var4 = null;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4_int = param2.g(45, param1);
+          var4_int = param2.readBits(45, param1);
           if (var4_int == 0) {
             return null;
           }
@@ -34,11 +34,11 @@ final class SpellCastRequest extends ActionRequest {
             var4_int != param0.length) {
             param0 = new short[var4_int];
           }
-          var5 = param2.g(123, 4);
-          var6 = (short)param2.g(param3 - 10172, 16);
+          var5 = param2.readBits(123, 4);
+          var6 = (short)param2.readBits(param3 - 10172, 16);
           if (0 < var5) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param0[var7] = (short)(param2.g(63, var5) + var6);
+              param0[var7] = (short)(param2.readBits(63, var5) + var6);
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {

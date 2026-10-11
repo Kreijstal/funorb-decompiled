@@ -187,23 +187,23 @@ class kq extends fw {
         field_M = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, CipherPacketBuffer param4) {
+    final static void enterTaggedPayload(int headerBitPosition, int obfuscationGuard, int headerBitLength, int payloadBitLength, CipherPacketBuffer packet) {
         int var5_int = 0;
-        if (param3 <= param2) {
-          param4.d((byte) -88, param0 + param2);
+        if (payloadBitLength <= headerBitLength) {
+          packet.setReadBitPosition((byte) -88, headerBitPosition + headerBitLength);
           return;
         }
-        param4.d((byte) -40, param3 + param0);
-        if (param1 != -24232) {
+        packet.setReadBitPosition((byte) -40, payloadBitLength + headerBitPosition);
+        if (obfuscationGuard != -24232) {
           return;
         }
         try {
-          var5_int = param4.g(-99, param2);
-          param4.c(param0, (byte) 0);
-          param4.a(-16807, param2, var5_int);
-          param4.d((byte) -73, param0);
+          var5_int = packet.readBits(-99, headerBitLength);
+          packet.setWriteBitPosition(headerBitPosition, (byte) 0);
+          packet.writeBits(-16807, headerBitLength, var5_int);
+          packet.setReadBitPosition((byte) -73, headerBitPosition);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "kq.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "kq.E(" + headerBitPosition + ',' + obfuscationGuard + ',' + headerBitLength + ',' + payloadBitLength + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 

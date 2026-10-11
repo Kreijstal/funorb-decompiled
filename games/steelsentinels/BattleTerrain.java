@@ -274,8 +274,8 @@ final class BattleTerrain {
               hb.field_f = false;
               break;
             }
-            this.secondaryHeightProfile[var6] = 128 + var5.a(38, 60 * var4_int / 640);
-            this.groundHeightProfile[var6] = var5.a(47, var4_int * 60 / 640) + 128;
+            this.secondaryHeightProfile[var6] = 128 + var5.nextIntBounded(38, 60 * var4_int / 640);
+            this.groundHeightProfile[var6] = var5.nextIntBounded(47, var4_int * 60 / 640) + 128;
             var6++;
           } while (var22 == 0);
           boolean decompiledFrameRemainder1 = true;
@@ -412,7 +412,7 @@ final class BattleTerrain {
                 stackIn_110_1 = 1 + 2 * var11;
                 stackIn_110_2 = (var8_ref_int__[var11] + var8_ref_int__[1 + var11]) / 2;
                 if (var6 > 0) {
-                  stackIn_104_3 = -var6 + var5.a(-114, 1 + 2 * var6);
+                  stackIn_104_3 = -var6 + var5.nextIntBounded(-114, 1 + 2 * var6);
                 } else {
                   stackIn_104_3 = 0;
                 }
@@ -424,7 +424,7 @@ final class BattleTerrain {
                 if (var7 <= 0) {
                   stackIn_108_4 = 0;
                 } else {
-                  stackIn_108_4 = -var7 + var5.a(96, 2 * var7 + 1);
+                  stackIn_108_4 = -var7 + var5.nextIntBounded(96, 2 * var7 + 1);
                 }
                 stackIn_107_0[stackIn_107_1] = stackIn_107_2 + stackIn_107_3 * stackIn_108_4;
                 var6 = var6 - Math.abs(-var8_ref_int__[var11 + 1] + var8_ref_int__[var11]) / 24;
@@ -772,10 +772,10 @@ final class BattleTerrain {
                   stackIn_318_0 = 11;
                   boolean decompiledFrameRemainder2 = true;
                   if (stackIn_318_0 > var10) {
-                    var11 = -var5.a(75, 6000) + 8000;
+                    var11 = -var5.nextIntBounded(75, 6000) + 8000;
                     var12 = 1200;
                     var13 = (var10 - 5) * 2150 + this.profileLength / 2;
-                    var14 = var5.a(22, 5) + 1;
+                    var14 = var5.nextIntBounded(22, 5) + 1;
                     var15_int = kc.field_x[1][var14].field_z;
                     this.spawnPositions[this.field_c] = var13;
                     this.field_j[this.field_c] = var14;
@@ -907,7 +907,7 @@ final class BattleTerrain {
               if ((this.profileLength - this.profileLength / 16) > var11 &&
                 this.field_p > this.field_c) {
                 this.spawnPositions[this.field_c] = var11;
-                var13 = var5.a(-115, var10);
+                var13 = var5.nextIntBounded(-115, var10);
                 this.field_j[this.field_c] = var13;
                 var14_ref_wk = kc.field_x[this.terrainType][var13];
                 var11 = var11 - var14_ref_wk.field_z * 2;
@@ -948,7 +948,7 @@ final class BattleTerrain {
                   }
                   break;
                 }
-                var11 = var11 + (var5.a(-117, 2048) + var15_int / 2);
+                var11 = var11 + (var5.nextIntBounded(-117, 2048) + var15_int / 2);
                 this.field_c = this.field_c + 1;
               }
               var11++;
@@ -969,11 +969,11 @@ final class BattleTerrain {
               if (var12 < (this.profileLength - this.profileLength / 16) &&
                 this.field_p > this.field_c) {
                 this.spawnPositions[this.field_c] = var12;
-                var14 = var5.a(-96, var10);
+                var14 = var5.nextIntBounded(-96, var10);
                 var11--;
                 if (var14 <= 2 &&
                   0 < var11) {
-                  var14 = var5.a(52, -2 + var10) + 2;
+                  var14 = var5.nextIntBounded(52, -2 + var10) + 2;
                 }
                 this.field_j[this.field_c] = var14;
                 var15_ref = kc.field_x[this.terrainType][var14];
@@ -1088,7 +1088,7 @@ final class BattleTerrain {
                 }
                 stackIn_539_0Lifetime1 = this.terrainType;
                 if (stackIn_539_0Lifetime1 == 2) {
-                  var12 = var12 + (var5.a(53, 128) + var16);
+                  var12 = var12 + (var5.nextIntBounded(53, 128) + var16);
                 }
                 this.field_c = this.field_c + 1;
               }
@@ -1959,7 +1959,7 @@ final class BattleTerrain {
                                 } else {
                                     /* Inlined CFG state: 59. */
                                     {
-                                        var1 = new ArticulatedPart(si.field_l[var2[var3] + 11], 16, 32, 39, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[-17 + var2[var3]]), new PartInstruction(0, 0, 10)});
+                                        var1 = new ArticulatedPart(si.field_l[var2[var3] + 11], 16, 32, 39, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[-17 + var2[var3]]), new PartInstruction(0, 0, 10)});
                                         var1.componentId = var2[var3];
                                         ao.field_H.addLast(3, var1);
                                         var3++;
@@ -2028,7 +2028,7 @@ final class BattleTerrain {
                                 } else {
                                     /* Inlined CFG state: 66. */
                                     {
-                                        var1 = new ArticulatedPart(si.field_l[11 + var2[var3]], 32, 32, 32, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[var2[var3] - 17]), new PartInstruction(0, 0, 35)});
+                                        var1 = new ArticulatedPart(si.field_l[11 + var2[var3]], 32, 32, 32, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[var2[var3] - 17]), new PartInstruction(0, 0, 35)});
                                         var1.componentId = var2[var3];
                                         ao.field_H.addLast(3, var1);
                                         var3++;
@@ -2097,7 +2097,7 @@ final class BattleTerrain {
                                 } else {
                                     /* Inlined CFG state: 73. */
                                     {
-                                        var1 = new ArticulatedPart(si.field_l[-17 + var2[var3] + 28], 128, 32, 27, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[-17 + var2[var3]]), new PartInstruction(0, 0, 10)});
+                                        var1 = new ArticulatedPart(si.field_l[-17 + var2[var3] + 28], 128, 32, 27, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[-17 + var2[var3]]), new PartInstruction(0, 0, 10)});
                                         var1.componentId = var2[var3];
                                         ao.field_H.addLast(3, var1);
                                         var3++;
@@ -2381,46 +2381,46 @@ final class BattleTerrain {
                         }
                         case 89: {
                             try {
-                                var1 = new ArticulatedPart(jd.field_qb[5], 512, 64, 64, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[32]), new PartInstruction(0, 0, 1000)});
+                                var1 = new ArticulatedPart(jd.field_qb[5], 512, 64, 64, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[32]), new PartInstruction(0, 0, 1000)});
                                 var1.componentId = 49;
                                 ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(Sprite.field_b[8], 32, 64, 96, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[14]), new PartInstruction(0, 0, 100)});
+                                var1 = new ArticulatedPart(Sprite.field_b[8], 32, 64, 96, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[14]), new PartInstruction(0, 0, 100)});
                                 var1.componentId = 31;
                                 ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ne.field_R[2], 32, 98, 144, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[18]), new PartInstruction(0, 0, 100)});
+                                var1 = new ArticulatedPart(ne.field_R[2], 32, 98, 144, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[18]), new PartInstruction(0, 0, 100)});
                                 var1.componentId = 35;
                                 ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(cf.field_u[8], 32, 80, 69, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[15]), new PartInstruction(0, 0, 100)});
+                                var1 = new ArticulatedPart(cf.field_u[8], 32, 80, 69, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[15]), new PartInstruction(0, 0, 100)});
                                 var1.componentId = 32;
                                 ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ParticleEffect.field_L[11], 32, 59, 65, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[16]), new PartInstruction(0, 0, 100)});
+                                var1 = new ArticulatedPart(ParticleEffect.field_L[11], 32, 59, 65, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[16]), new PartInstruction(0, 0, 100)});
                                 var1.componentId = 33;
                                 ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ng.field_c[14], 32, 49, 52, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[17]), new PartInstruction(0, 0, 100)});
+                                var1 = new ArticulatedPart(ng.field_c[14], 32, 49, 52, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[17]), new PartInstruction(0, 0, 100)});
                                 var1.componentId = 34;
                                 ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ui.field_V[9], 32, 132, 124, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[21]), new PartInstruction(0, 0, 100)});
+                                var1 = new ArticulatedPart(ui.field_V[9], 32, 132, 124, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[21]), new PartInstruction(0, 0, 100)});
                                 var1.componentId = 38;
                                 ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ng.field_c[13], 64, 65, 96, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[26]), new PartInstruction(0, 0, 500)});
+                                var1 = new ArticulatedPart(ng.field_c[13], 64, 65, 96, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[26]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 43;
                                 ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(wi.field_C[15], 64, 115, 157, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[31]), new PartInstruction(0, 0, 500)});
+                                var1 = new ArticulatedPart(wi.field_C[15], 64, 115, 157, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[31]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 48;
                                 ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(wi.field_C[0], 64, 143, 152, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[35]), new PartInstruction(0, 0, 500)});
+                                var1 = new ArticulatedPart(wi.field_C[0], 64, 143, 152, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[35]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 52;
                                 ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ne.field_R[6], 64, 39, 127, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[29]), new PartInstruction(0, 0, 500)});
+                                var1 = new ArticulatedPart(ne.field_R[6], 64, 39, 127, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[29]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 46;
                                 ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(vc.field_b[15], 64, 147, 168, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[28]), new PartInstruction(0, 0, 500)});
+                                var1 = new ArticulatedPart(vc.field_b[15], 64, 147, 168, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[28]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 45;
                                 ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(ui.field_V[4], 64, 114, 145, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[27]), new PartInstruction(0, 0, 500)});
+                                var1 = new ArticulatedPart(ui.field_V[4], 64, 114, 145, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[27]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 44;
                                 ao.field_H.addLast(3, var1);
-                                var1 = new ArticulatedPart(hk.field_Ec[12], 64, 117, 140, 0, 1024, new PartInstruction[]{new PartInstruction(uh.field_i[30]), new PartInstruction(0, 0, 500)});
+                                var1 = new ArticulatedPart(hk.field_Ec[12], 64, 117, 140, 0, 1024, new PartInstruction[]{new PartInstruction(NodeHashTable.field_i[30]), new PartInstruction(0, 0, 500)});
                                 var1.componentId = 47;
                                 ao.field_H.addLast(3, var1);
                                 hc.field_bb = new ArticulatedPart[110];

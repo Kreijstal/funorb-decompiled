@@ -516,13 +516,13 @@ final class AiUnitPlanner extends IntrusiveNode {
 
     final static void b(int param0, int param1) {
         CipherPacketBuffer var2 = vl.field_n;
-        var2.h(param0 ^ 32164, param1);
+        var2.writeCipheredOpcode(param0 ^ 32164, param1);
         var2.position = var2.position + 1;
         int var3 = var2.position;
-        var2.b(1, param0);
-        var2.b(1, vu.field_M.field_nc);
+        var2.writeByte(1, param0);
+        var2.writeByte(1, vu.field_M.field_nc);
         int var4 = (vu.field_M.field_ac << 6) + vu.field_M.field_Tb;
-        var2.b(1, var4);
+        var2.writeByte(1, var4);
         var2.a(vu.field_M.field_pc, 0, vu.field_M.field_pc.length, -38);
         var2.e(var2.position - var3, param0 ^ 5935);
     }

@@ -13,9 +13,9 @@ final class eh {
           return;
         }
         CipherPacketBuffer var2 = mm.field_g;
-        var2.a(param0, (byte) -117);
-        var2.a((byte) 114, 1);
-        var2.a((byte) 117, 2);
+        var2.writeCipheredOpcode(param0, (byte) -117);
+        var2.writeByte((byte) 114, 1);
+        var2.writeByte((byte) 117, 2);
     }
 
     final static char a(byte param0, byte param1) {

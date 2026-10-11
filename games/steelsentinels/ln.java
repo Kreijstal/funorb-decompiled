@@ -131,19 +131,19 @@ final class ln {
           if (param1 < 126) {
             field_e = 55;
           }
-          var3 = var9.f((byte) -72);
-          var4 = var9.i(0);
+          var3 = var9.readUnsignedByte((byte) -72);
+          var4 = var9.readInt(0);
           if (var4 >= 0 && (uf.field_c == 0 ||
             !(var4 > uf.field_c))) {
             if (0 == var3) {
               var12 = new byte[var4];
               var10 = var12;
               var5_ref_byte__ = var10;
-              var9.a(0, var12, 28, var4);
+              var9.readBytes(0, var12, 28, var4);
               stackIn_9_0 = var5_ref_byte__;
               return stackIn_9_0;
             }
-            var5 = var9.i(0);
+            var5 = var9.readInt(0);
             if (var5 >= 0 && (uf.field_c == 0 ||
               !(var5 > uf.field_c))) {
               var13 = new byte[var5];

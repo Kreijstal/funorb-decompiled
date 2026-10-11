@@ -185,7 +185,7 @@ final class dl {
           vi.a(-68);
           CombatEvent.field_I.a(true, param3);
           if (BestScoreStrategy.field_i != null) {
-            if (bb.field_a) {
+            if (NodeIterator.field_a) {
               BestScoreStrategy.field_i.a(param3, -6226, CombatEvent.field_I.field_V, CombatEvent.field_I.field_D);
             } else {
               BestScoreStrategy.field_i = null;

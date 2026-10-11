@@ -1857,9 +1857,9 @@ final class Battlefield {
         int var6 = 0;
         int var7 = 0;
         try {
-          var3_int = param1.k(param0 + 30531);
-          var4 = param1.k(0);
-          var5 = param1.k(0);
+          var3_int = param1.readUnsignedByte(param0 + 30531);
+          var4 = param1.readUnsignedByte(0);
+          var5 = param1.readUnsignedByte(0);
           var6 = 7 & var3_int;
           if (param0 != -30531) {
             this.applyMatchOutcome(103, false, (int[]) null);
@@ -2806,7 +2806,7 @@ final class Battlefield {
           return;
         }
         try {
-          var5_int = param2.k(0);
+          var5_int = param2.readUnsignedByte(0);
           var6 = SummonEvent.a(var5_int, 0, param3, param0, param2, this, -102, true);
           this.unitsByPlayer[var6.ownerPlayer].addLast((byte) -119, (IntrusiveNode) (var6));
         } catch (RuntimeException runtimeException) {
@@ -2887,7 +2887,7 @@ final class Battlefield {
         return var12.c(1024);
     }
 
-    private final void b(PacketBuffer param0, byte param1) {
+    private final void readSpecialEvent(PacketBuffer packet, byte obfuscationGuard) {
         RuntimeException stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
         String stackIn_50_2 = null;
@@ -2902,25 +2902,25 @@ final class Battlefield {
         int var5Lifetime1;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3_int = param0.k(param1 ^ -84) & 31;
+          var3_int = packet.readUnsignedByte(obfuscationGuard ^ -84) & 31;
           if (var3_int == 13) {
-            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new KingBlackDragonEvent(param0.k(0))));
+            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new KingBlackDragonEvent(packet.readUnsignedByte(0))));
             return;
           }
           if (var3_int == 14) {
-            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new ManaEvent(3, param0.k(0), this.localPlayer)));
+            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new ManaEvent(3, packet.readUnsignedByte(0), this.localPlayer)));
             return;
           }
-          if (param1 != -84) {
+          if (obfuscationGuard != -84) {
             this.registerUnit(-22, (Unit) null);
           }
           if (var3_int == 5) {
-            var4 = param0.k(0);
+            var4 = packet.readUnsignedByte(0);
             var5 = 15 & var4;
             if (var5 == 15) {
               var5 = -1;
             }
-            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SpellCastEvent(bo.a(-1, param0, 4368051), var5, var4 >> 4)));
+            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SpellCastEvent(bo.a(-1, packet, 4368051), var5, var4 >> 4)));
           }
           regionExit1: {
             regionExit2: {
@@ -2929,8 +2929,8 @@ final class Battlefield {
                   regionExit5: {
                     regionExit6: {
                       boolean decompiledFrameRemainder0 = true;
-                      var4Lifetime1 = param0.k(0);
-                      var5Lifetime1 = param0.k(param1 ^ -84);
+                      var4Lifetime1 = packet.readUnsignedByte(0);
+                      var5Lifetime1 = packet.readUnsignedByte(obfuscationGuard ^ -84);
                       var6 = var3_int;
                       if ((var6 != 1) &&
                         (decompiledFrameRemainder0 = (var6 != 11))) {
@@ -2966,17 +2966,17 @@ final class Battlefield {
                           return;
                         }
                       }
-                      this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TeleportEvent(var4Lifetime1, var5Lifetime1, param0.e((byte) -104), true)));
+                      this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TeleportEvent(var4Lifetime1, var5Lifetime1, packet.readUnsignedShort((byte) -104), true)));
                       if (var7 == 0) {
                         return;
                       }
                     }
-                    this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TeleportEvent(var4Lifetime1, var5Lifetime1, param0.e((byte) -104), false)));
+                    this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TeleportEvent(var4Lifetime1, var5Lifetime1, packet.readUnsignedShort((byte) -104), false)));
                     if (var7 == 0) {
                       return;
                     }
                   }
-                  this.a(var4Lifetime1, -47, param0, var5Lifetime1);
+                  this.a(var4Lifetime1, -47, packet, var5Lifetime1);
                   if (var7 == 0) {
                     return;
                   }
@@ -2991,24 +2991,24 @@ final class Battlefield {
                 return;
               }
             }
-            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeployEvent(var4Lifetime1, var5Lifetime1, param0.k(0))));
+            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeployEvent(var4Lifetime1, var5Lifetime1, packet.readUnsignedByte(0))));
             if (var7 == 0) {
               return;
             }
           }
-          this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new GrowthEvent(var4Lifetime1, var5Lifetime1, param0.k(0), param0.k(param1 ^ -84), param0.k(0), param0.k(0))));
+          this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new GrowthEvent(var4Lifetime1, var5Lifetime1, packet.readUnsignedByte(0), packet.readUnsignedByte(obfuscationGuard ^ -84), packet.readUnsignedByte(0), packet.readUnsignedByte(0))));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_49_0 = var3;
           stackIn_49_1 = new StringBuilder().append("ha.LC(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_50_2 = "null";
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -3048,7 +3048,7 @@ final class Battlefield {
         return this.teams[param1].getPlayerCount(16648);
     }
 
-    private final void a(PacketBuffer param0, int param1) {
+    private final void readCombatEvent(PacketBuffer packet, int obfuscationGuard) {
         NodeDeque stackIn_5_0;
         int stackIn_5_1;
         CombatEvent stackIn_5_2;
@@ -3091,20 +3091,20 @@ final class Battlefield {
         CombatEvent stackIn_6_3Lifetime2;
         CombatEvent stackIn_6_3Lifetime3;
         try {
-          var3_int = param0.k(0);
-          var4 = param0.k(0);
-          var5 = param0.k(0);
-          var6 = param0.k(~param1);
-          var7 = param0.e((byte) -104);
+          var3_int = packet.readUnsignedByte(0);
+          var4 = packet.readUnsignedByte(0);
+          var5 = packet.readUnsignedByte(0);
+          var6 = packet.readUnsignedByte(~obfuscationGuard);
+          var7 = packet.readUnsignedShort((byte) -104);
           var8 = var7 >> 8;
           var9 = 255 & var7;
           var8 = (var8 ^ 128) - 128;
           var9 = (var9 ^ 128) - 128;
-          var10 = param0.k(0);
-          var11 = param0.k(0);
-          var12 = param0.k(0);
-          var13 = param0.k(0);
-          if (param1 > ~(4 & var3_int)) {
+          var10 = packet.readUnsignedByte(0);
+          var11 = packet.readUnsignedByte(0);
+          var12 = packet.readUnsignedByte(0);
+          var13 = packet.readUnsignedByte(0);
+          if (obfuscationGuard > ~(4 & var3_int)) {
             this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new ParasiteEvent(var5, var6, var8, var9, var10)));
             if (!ArmiesOfGielinor.obfuscationControl) {
               return;
@@ -3166,12 +3166,12 @@ final class Battlefield {
           var3 = decompiledCaughtException;
           stackIn_19_0 = var3;
           stackIn_19_1 = new StringBuilder().append("ha.ND(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -3348,7 +3348,7 @@ final class Battlefield {
         return param1;
     }
 
-    final void b(int param0, PacketBuffer param1) {
+    final void readLegacySnapshot(int obfuscationGuard, PacketBuffer packet) {
         boolean stackIn_10_1 = false;
         int stackIn_13_0 = 0;
         int stackIn_38_0 = 0;
@@ -3394,17 +3394,17 @@ final class Battlefield {
         int var11Lifetime2;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.randomSeed = param1.i(param0 + 1);
-          this.turnLimit = param1.e((byte) -104);
+          this.randomSeed = packet.readInt(obfuscationGuard + 1);
+          this.turnLimit = packet.readUnsignedShort((byte) -104);
           this.field_T = new ln[this.playerCount];
           var3_int = 0;
           do {
             if (var3_int >= this.playerCount) {
-              var3_int = param1.k(param0 ^ 0);
+              var3_int = packet.readUnsignedByte(obfuscationGuard ^ 0);
               break;
             }
             this.field_T[var3_int] = new ln();
-            EffectPresentation.a(this.field_T[var3_int].field_a, param1, false, this.field_T[var3_int].field_b);
+            EffectPresentation.a(this.field_T[var3_int].field_a, packet, false, this.field_T[var3_int].field_b);
             var3_int++;
           } while (var13 == 0);
           stackIn_10_1 = !((var3_int & 1) <= 0);
@@ -3415,11 +3415,11 @@ final class Battlefield {
           var4 = stackIn_13_0;
           var5 = 0;
           if (var4 != 0) {
-            var5 = param1.k(0);
+            var5 = packet.readUnsignedByte(0);
           }
-          this.turnNumber = param1.k(param0 ^ 0);
-          this.currentPlayer = param1.k(param0 + 0);
-          this.l(param0 + 0, 0);
+          this.turnNumber = packet.readUnsignedByte(obfuscationGuard ^ 0);
+          this.currentPlayer = packet.readUnsignedByte(obfuscationGuard + 0);
+          this.l(obfuscationGuard + 0, 0);
           var6 = this.tiles.length - 1;
           scanLoop1: while (true) {
             if (var6 >= 0) {
@@ -3432,7 +3432,7 @@ final class Battlefield {
               if (this.localPlayer <= -1) {
                 var6 = 0;
                 while (this.playerCount > var6) {
-                  this.playerTurnCounts[var6] = param1.e((byte) -104);
+                  this.playerTurnCounts[var6] = packet.readUnsignedShort((byte) -104);
                   var6++;
                   if (var13 != 0) {
                     break scanLoop1;
@@ -3442,12 +3442,12 @@ final class Battlefield {
                   break scanLoop1;
                 }
               }
-              this.godFavourLevels[this.localPlayer][6] = param1.k(0);
+              this.godFavourLevels[this.localPlayer][6] = packet.readUnsignedByte(0);
             }
             var6 = 0;
             while (true) {
               if (this.chosenGods[this.localPlayer].length > var6) {
-                var7 = param1.k(param0 ^ 0);
+                var7 = packet.readUnsignedByte(obfuscationGuard ^ 0);
                 this.chosenGods[this.localPlayer][var6] = var7 >> 4;
                 stackIn_38_0 = ~this.chosenGods[this.localPlayer][var6];
                 stackIn_38_1 = -8;
@@ -3465,9 +3465,9 @@ final class Battlefield {
                   continue;
                 }
               } else {
-                this.playerMana[this.localPlayer] = param1.i(1);
-                this.playerTurnCounts[this.localPlayer] = param1.e((byte) -104);
-                this.field_Q = param1.k(0);
+                this.playerMana[this.localPlayer] = packet.readInt(1);
+                this.playerTurnCounts[this.localPlayer] = packet.readUnsignedShort((byte) -104);
+                this.field_Q = packet.readUnsignedByte(0);
                 stackIn_38_0 = -1;
                 stackIn_38_1 = ~this.field_Q;
               }
@@ -3478,7 +3478,7 @@ final class Battlefield {
                 }
                 var6 = 0;
                 while (var6 < 5) {
-                  var7Lifetime2 = param1.e((byte) -104);
+                  var7Lifetime2 = packet.readUnsignedShort((byte) -104);
                   stackIn_50_0 = 65535;
                   stackIn_50_1 = var7Lifetime2;
                   if (var13 != 0) {
@@ -3499,7 +3499,7 @@ final class Battlefield {
               if (stackIn_50_0 == stackIn_50_1) {
                 break;
               }
-              this.remainingRuneCap[this.localPlayer] = param1.e((byte) -104);
+              this.remainingRuneCap[this.localPlayer] = packet.readUnsignedShort((byte) -104);
               break;
             }
             break;
@@ -3510,7 +3510,7 @@ final class Battlefield {
               var6 = 0;
               break;
             }
-            this.teamManaCollected[var6] = param1.e((byte) -104);
+            this.teamManaCollected[var6] = packet.readUnsignedShort((byte) -104);
             var6++;
           } while (var13 == 0);
           scanLoop2: while (true) {
@@ -3529,7 +3529,7 @@ final class Battlefield {
               var6++;
               continue scanLoop2;
             }
-            var6 = param1.e((byte) -104);
+            var6 = packet.readUnsignedShort((byte) -104);
             stackIn_69_0 = 0;
             break;
           }
@@ -3543,13 +3543,13 @@ final class Battlefield {
                 if (stackIn_94_0 <= stackIn_94_1) {
                   break scanLoop3;
                 }
-                var9 = param1.k(0);
-                var10 = param1.k(0);
-                var11 = param1.k(0);
+                var9 = packet.readUnsignedByte(0);
+                var10 = packet.readUnsignedByte(0);
+                var11 = packet.readUnsignedByte(0);
                 return;
               }
               if (stackIn_94_0 < stackIn_94_1) {
-                var9Lifetime2 = param1.k(0);
+                var9Lifetime2 = packet.readUnsignedByte(0);
                 if ((var9Lifetime2 & 128) != 0) {
                   var7Lifetime1 = var7Lifetime1 + (127 & var9Lifetime2);
                   continue;
@@ -3560,25 +3560,25 @@ final class Battlefield {
                 }
                 if (0 < (1 & var9Lifetime2) ||
                   var13 != 0) {
-                  var10_ref_ne.a(param0 + 63);
+                  var10_ref_ne.a(obfuscationGuard + 63);
                 }
                 if ((var9Lifetime2 & 2) > 0) {
-                  var10_ref_ne.terrainType = param1.k(0);
+                  var10_ref_ne.terrainType = packet.readUnsignedByte(0);
                   var10_ref_ne.field_b = true;
                   if (var10_ref_ne.terrainType == 11) {
-                    var11Lifetime2 = param1.k(0);
+                    var11Lifetime2 = packet.readUnsignedByte(0);
                     var10_ref_ne.godId = var11Lifetime2 >> 4 & 15;
                     var10_ref_ne.godFavourLevel = var11Lifetime2 & 15;
                   }
                 }
                 if ((16 & var9Lifetime2) > 0) {
-                  var10_ref_ne.ownerPlayer = param1.k(0);
+                  var10_ref_ne.ownerPlayer = packet.readUnsignedByte(0);
                 }
                 if ((var9Lifetime2 & 4) > 0) {
-                  var10_ref_ne.captureStrength = param1.k(0);
+                  var10_ref_ne.captureStrength = packet.readUnsignedByte(0);
                 }
                 if ((64 & var9Lifetime2) > 0) {
-                  var11Lifetime2 = param1.k(0);
+                  var11Lifetime2 = packet.readUnsignedByte(0);
                   var10_ref_ne.setExplicitOwner(true, var11Lifetime2);
                 }
                 var7Lifetime1++;
@@ -3586,17 +3586,17 @@ final class Battlefield {
                 continue;
               }
             }
-            var6 = param1.e((byte) -104);
-            var8 = param0;
+            var6 = packet.readUnsignedShort((byte) -104);
+            var8 = obfuscationGuard;
             while (true) {
               stackIn_94_0Lifetime1 = ~var8;
               stackIn_94_1Lifetime1 = ~var6;
               if (stackIn_94_0Lifetime1 <= stackIn_94_1Lifetime1) {
                 break;
               }
-              var9Lifetime1 = param1.k(0);
-              var10Lifetime1 = param1.k(0);
-              var11Lifetime1 = param1.k(0);
+              var9Lifetime1 = packet.readUnsignedByte(0);
+              var10Lifetime1 = packet.readUnsignedByte(0);
+              var11Lifetime1 = packet.readUnsignedByte(0);
               if (var13 != 0) {
                 return;
               }
@@ -3604,7 +3604,7 @@ final class Battlefield {
               stackIn_98_1 = var5;
               stackIn_98_2 = var10Lifetime1;
               stackIn_98_3 = var9Lifetime1;
-              stackIn_98_4 = (PacketBuffer) (param1);
+              stackIn_98_4 = (PacketBuffer) (packet);
               stackIn_98_5 = this;
               stackIn_98_6 = -94;
               stackIn_99_7 = ((128 & var11Lifetime1) != 0);
@@ -3617,16 +3617,16 @@ final class Battlefield {
           this.initializeMatchConditions(-29673);
           this.f(-2);
           this.collectedManaTarget = this.f((byte) -82);
-          this.recountStructures(param0 ^ 2);
-          this.a(0, 0, param0 + 0, -1);
+          this.recountStructures(obfuscationGuard ^ 2);
+          this.a(0, 0, obfuscationGuard + 0, -1);
           fl.a(this, -118);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_104_0 = var3;
-          stackIn_104_1 = new StringBuilder().append("ha.UA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_104_1 = new StringBuilder().append("ha.UA(").append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_105_2 = "null";
           } else {
             stackIn_105_2 = "{...}";
@@ -3978,7 +3978,7 @@ final class Battlefield {
         return -1;
     }
 
-    final void a(PacketBuffer param0, int param1, int param2) {
+    final void writeLegacySnapshot(PacketBuffer packet, int obfuscationGuard, int playerId) {
         int stackIn_9_0 = 0;
         int stackIn_16_2 = 0;
         PacketBuffer stackIn_21_0 = null;
@@ -4029,12 +4029,12 @@ final class Battlefield {
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = 0;
-          param0.a((byte) -58, this.randomSeed);
-          param0.b(true, this.turnLimit);
+          packet.writeInt((byte) -58, this.randomSeed);
+          packet.writeShort(true, this.turnLimit);
           var5 = 0;
           scanLoop1: while (true) {
             if (var5 < this.playerCount) {
-              AiInfluenceMap.a(this.field_T[var5].field_a, (byte) 100, param0, this.field_T[var5].field_b);
+              AiInfluenceMap.a(this.field_T[var5].field_a, (byte) 100, packet, this.field_T[var5].field_b);
               var5++;
               if (var12 == 0) {
                 continue;
@@ -4051,49 +4051,49 @@ final class Battlefield {
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder0 = true;
           var5Lifetime1 = stackIn_9_0 | this.mapSizeSetting << 1 | this.mapTheme << 3 | 128;
-          param0.b(1, var5Lifetime1);
-          param0.b(param1 + 25772, 1);
-          param0.b(1, this.turnNumber);
-          param0.b(1, this.currentPlayer);
-          if (param2 > -1) {
-            param0.b(1, this.godFavourLevels[param2][6]);
+          packet.writeByte(1, var5Lifetime1);
+          packet.writeByte(obfuscationGuard + 25772, 1);
+          packet.writeByte(1, this.turnNumber);
+          packet.writeByte(1, this.currentPlayer);
+          if (playerId > -1) {
+            packet.writeByte(1, this.godFavourLevels[playerId][6]);
             var6 = 0;
             scanLoop2: while (true) {
-              if (var6 < this.chosenGods[param2].length) {
-                stackIn_21_0 = (PacketBuffer) (param0);
-                stackIn_21_1 = param1 + 25772;
+              if (var6 < this.chosenGods[playerId].length) {
+                stackIn_21_0 = (PacketBuffer) (packet);
+                stackIn_21_1 = obfuscationGuard + 25772;
                 stackIn_21_2 = 0;
                 if (var12 == 0) {
-                  if (stackIn_21_2 <= this.chosenGods[param2][var6]) {
-                    stackIn_16_2 = this.godFavourLevels[param2][this.chosenGods[param2][var6]];
+                  if (stackIn_21_2 <= this.chosenGods[playerId][var6]) {
+                    stackIn_16_2 = this.godFavourLevels[playerId][this.chosenGods[playerId][var6]];
                   } else {
                     stackIn_16_2 = 0;
                   }
-                  ((PacketBuffer) (Object) stackIn_21_0).b(stackIn_21_1, stackIn_16_2 | this.chosenGods[param2][var6] << 4);
+                  ((PacketBuffer) (Object) stackIn_21_0).writeByte(stackIn_21_1, stackIn_16_2 | this.chosenGods[playerId][var6] << 4);
                   var6++;
                   continue;
                 }
               } else {
-                if (this.playerMana[param2] < 1) {
-                  param0.a((byte) -104, 0);
+                if (this.playerMana[playerId] < 1) {
+                  packet.writeInt((byte) -104, 0);
                   if (var12 == 0) {
                     break scanLoop2;
                   }
                 }
-                stackIn_21_0 = (PacketBuffer) (param0);
+                stackIn_21_0 = (PacketBuffer) (packet);
                 stackIn_21_1 = -107;
-                stackIn_21_2 = this.playerMana[param2];
+                stackIn_21_2 = this.playerMana[playerId];
               }
-              ((PacketBuffer) (Object) stackIn_21_0).a((byte) stackIn_21_1, stackIn_21_2);
+              ((PacketBuffer) (Object) stackIn_21_0).writeInt((byte) stackIn_21_1, stackIn_21_2);
               break;
             }
             boolean decompiledFrameCompleted1 = true;
-            param0.b(true, this.playerTurnCounts[param2]);
-            param0.b(1, this.field_Q);
+            packet.writeShort(true, this.playerTurnCounts[playerId]);
+            packet.writeByte(1, this.field_Q);
             if (this.field_Q != 0) {
               var6 = 0;
               while (var6 < 5) {
-                param0.b(true, this.field_B[param2][var6]);
+                packet.writeShort(true, this.field_B[playerId][var6]);
                 var6++;
                 if (var12 != 0) {
                   decompiledFrameCompleted1 = false;
@@ -4103,15 +4103,15 @@ final class Battlefield {
             }
             if ((decompiledFrameCompleted1) &&
               (decompiledFrameRemainder0 = (BattleCharacter.field_i[this.field_Q] != 0))) {
-              param0.b(true, this.remainingRuneCap[param2]);
+              packet.writeShort(true, this.remainingRuneCap[playerId]);
             }
           }
           if ((decompiledFrameRemainder0) &&
-            (!(param2 > -1) ||
+            (!(playerId > -1) ||
             var12 != 0)) {
             var6 = 0;
             while (var6 < this.playerCount) {
-              param0.b(true, this.playerTurnCounts[var6]);
+              packet.writeShort(true, this.playerTurnCounts[var6]);
               var6++;
               if (var12 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -4127,9 +4127,9 @@ final class Battlefield {
             stackIn_48_0 = -2;
             if (var12 == 0) {
               if (stackIn_48_0 < ~this.teamManaCollected[var6]) {
-                param0.b(true, 0);
+                packet.writeShort(true, 0);
               } else {
-                param0.b(true, this.teamManaCollected[var6]);
+                packet.writeShort(true, this.teamManaCollected[var6]);
               }
               var6++;
               continue;
@@ -4155,7 +4155,7 @@ final class Battlefield {
                   if (stackIn_50_0 > stackIn_50_1 ||
                     var9_ref_ne.field_b ||
                     null != var9_ref_ne.occupant &&
-                    var9_ref_ne.l(param1 ^ 25770) ||
+                    var9_ref_ne.l(obfuscationGuard ^ 25770) ||
                     (var9_ref_ne.hasCorpse(67) ||
                     var9_ref_ne.hasExplicitOwner((byte) -79))) {
                     var6++;
@@ -4166,7 +4166,7 @@ final class Battlefield {
                 continue;
               }
             } else {
-              stackIn_67_0 = param1;
+              stackIn_67_0 = obfuscationGuard;
             }
             if (stackIn_67_0 != -25771) {
               this.a(89, (String) null, (GameEvent) null);
@@ -4174,13 +4174,13 @@ final class Battlefield {
             if (var4_int != 0) {
               var6 = this.mapHeight * this.mapWidth;
             }
-            param0.b(true, var6);
+            packet.writeShort(true, var6);
             var7 = 0;
             var6 = 0;
             var8Lifetime1 = 0;
             while (true) {
               if (var8Lifetime1 >= this.mapHeight * this.mapWidth) {
-                var8Lifetime1 = param2;
+                var8Lifetime1 = playerId;
                 stackIn_113_0 = 0;
                 break;
               }
@@ -4189,7 +4189,7 @@ final class Battlefield {
                 stackIn_78_0 = (stackIn_113_0 == 0) ? 0 : 2;
                 var9 = stackIn_78_0;
                 var13 = this.tiles[var8Lifetime1];
-                if (var13.hasCorpse(param1 ^ 25807)) {
+                if (var13.hasCorpse(obfuscationGuard ^ 25807)) {
                   var9 = var9 | 1;
                 }
                 if (var13.field_b) {
@@ -4217,31 +4217,31 @@ final class Battlefield {
                       }
                       var11 = stackIn_97_0;
                       var7 = var7 + var11;
-                      param0.b(1, var11 | 128);
+                      packet.writeByte(1, var11 | 128);
                       continue;
                     }
-                    param0.b(1, var9);
+                    packet.writeByte(1, var9);
                     stackIn_99_0Lifetime1 = 0;
                     stackIn_99_1Lifetime1 = var9 & 2;
                     if (stackIn_99_0Lifetime1 < stackIn_99_1Lifetime1) {
-                      param0.b(1, var13.terrainType);
+                      packet.writeByte(1, var13.terrainType);
                       if (var13.terrainType == 11) {
-                        param0.b(1, var13.godId << 4 | var13.godFavourLevel);
+                        packet.writeByte(1, var13.godId << 4 | var13.godFavourLevel);
                       }
                     }
                     if ((var9 & 16) > 0) {
-                      param0.b(1, var13.ownerPlayer);
+                      packet.writeByte(1, var13.ownerPlayer);
                     }
                     if ((var9 & 8) <= 0) {
                     }
                     if ((4 & var9) > 0) {
-                      param0.b(1, var13.captureStrength);
+                      packet.writeByte(1, var13.captureStrength);
                     }
                     var7++;
                     if (0 >= (var9 & 64)) {
                       break;
                     }
-                    param0.b(param1 + 25772, var13.ownerPlayer);
+                    packet.writeByte(obfuscationGuard + 25772, var13.ownerPlayer);
                     break;
                   }
                 }
@@ -4279,7 +4279,7 @@ final class Battlefield {
                   }
                 }
               }
-              param0.b(true, var6);
+              packet.writeShort(true, var6);
               var9Lifetime1 = 0;
               while (var9Lifetime1 < this.playerCount) {
                 if (var12 != 0) {
@@ -4293,17 +4293,17 @@ final class Battlefield {
                   stackIn_134_1Lifetime1 = var10Lifetime1;
                   if (stackIn_134_0Lifetime1 == stackIn_134_1Lifetime1 ||
                     ~var8Lifetime1 == ~var9Lifetime1) {
-                    param0.b(1, var10Lifetime1.tileX);
-                    param0.b(1, var10Lifetime1.tileY);
-                    stackIn_139_0 = (PacketBuffer) (param0);
-                    stackIn_139_1 = param1 + 25772;
+                    packet.writeByte(1, var10Lifetime1.tileX);
+                    packet.writeByte(1, var10Lifetime1.tileY);
+                    stackIn_139_0 = (PacketBuffer) (packet);
+                    stackIn_139_1 = obfuscationGuard + 25772;
                     if (var10Lifetime1 == this.tiles[this.mapWidth * var10Lifetime1.tileY + var10Lifetime1.tileX].occupant) {
                       stackIn_140_2 = 0;
                     } else {
                       stackIn_140_2 = 128;
                     }
-                    ((PacketBuffer) (Object) stackIn_139_0).b(stackIn_139_1, stackIn_140_2 | var10Lifetime1.unitType);
-                    fu.a(29712, var10Lifetime1, param0);
+                    ((PacketBuffer) (Object) stackIn_139_0).writeByte(stackIn_139_1, stackIn_140_2 | var10Lifetime1.unitType);
+                    fu.a(29712, var10Lifetime1, packet);
                   }
                   var10Lifetime1 = (Unit) (this.unitsByPlayer[var9Lifetime1].next((byte) 123));
                 }
@@ -4311,7 +4311,7 @@ final class Battlefield {
               }
               break;
             }
-            this.recountStructures(param1 + 25773);
+            this.recountStructures(obfuscationGuard + 25773);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4319,12 +4319,12 @@ final class Battlefield {
           var4 = decompiledCaughtException;
           stackIn_148_0 = var4;
           stackIn_148_1 = new StringBuilder().append("ha.TD(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_149_2 = "null";
           } else {
             stackIn_149_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_148_0), ((StringBuilder) (Object) stackIn_148_1).append(stackIn_149_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_148_0), ((StringBuilder) (Object) stackIn_148_1).append(stackIn_149_2).append(',').append(obfuscationGuard).append(',').append(playerId).append(')').toString());
         }
     }
 
@@ -4415,7 +4415,7 @@ final class Battlefield {
         MapTile var21 = null;
         Unit var22 = null;
         NodeDeque var23 = null;
-        bb var24 = null;
+        NodeIterator var24 = null;
         MapTile var25 = null;
         Unit var26 = null;
         int[] var30 = null;
@@ -4442,10 +4442,10 @@ final class Battlefield {
             if (var20 == 0) {
               if (var23 != null &&
                 var23.b(false) != 0) {
-                var24 = new bb(var23);
-                var9_ref_jd = (Unit) (var24.c(50));
+                var24 = new NodeIterator(var23);
+                var9_ref_jd = (Unit) (var24.first(50));
                 while (var9_ref_jd != null) {
-                  var10_ref_jd = (Unit) (var24.b(50));
+                  var10_ref_jd = (Unit) (var24.next(50));
                   var9_ref_jd.unlink(70);
                   var9_ref_jd = var10_ref_jd;
                 }
@@ -4547,9 +4547,9 @@ final class Battlefield {
                       throw new IllegalStateException("");
                     }
                     var18 = new PacketBuffer(4);
-                    var18.b(true, var26.tankId);
-                    var18.b(1, var26.tileX);
-                    var18.b(1, var26.tileY);
+                    var18.writeShort(true, var26.tankId);
+                    var18.writeByte(1, var26.tileX);
+                    var18.writeByte(1, var26.tileY);
                     var18.position = 0;
                     var19 = bo.a(var26.ownerPlayer, var18, 4368051);
                     if (var19 != null) {
@@ -4846,7 +4846,7 @@ final class Battlefield {
           }
           if (this.field_Z == null) {
             param0 -= 2;
-            this.field_Z = new PacketBuffer(param1.e((byte) -104));
+            this.field_Z = new PacketBuffer(param1.readUnsignedShort((byte) -104));
           }
           param1.a(0, param0, this.field_Z.position, this.field_Z.payload);
           this.field_Z.position = this.field_Z.position + param0;
@@ -4873,14 +4873,14 @@ final class Battlefield {
         int var6 = 0;
         int var7 = 0;
         try {
-          param0.k(0);
+          param0.readUnsignedByte(0);
           if (!param1) {
             this.f(-120);
           }
-          var3_int = param0.k(0);
-          var4 = param0.k(0);
-          var5 = param0.k(0);
-          var6 = param0.k(0);
+          var3_int = param0.readUnsignedByte(0);
+          var4 = param0.readUnsignedByte(0);
+          var5 = param0.readUnsignedByte(0);
+          var6 = param0.readUnsignedByte(0);
           var7 = 31 & var4;
           var7 = (16 ^ var7) - 16;
           this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(var3_int, var5, var6, var7, var4 >> 5)));
@@ -5641,9 +5641,9 @@ final class Battlefield {
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4 = -72 % ((-9 - param0) / 57);
-          var3_int = param1.e((byte) -104) & 8191;
-          var5 = param1.k(0);
-          var6 = param1.k(0);
+          var3_int = param1.readUnsignedShort((byte) -104) & 8191;
+          var5 = param1.readUnsignedByte(0);
+          var6 = param1.readUnsignedByte(0);
           var13 = new int[var3_int];
           var12 = var13;
           var7 = var12;
@@ -5651,7 +5651,7 @@ final class Battlefield {
           scanLoop1: while (true) {
             stackIn_3_0 = var3_int;
             if (stackIn_3_0 > 0) {
-              var9 = param1.k(0);
+              var9 = param1.readUnsignedByte(0);
               if (var11 != 0) {
                 return;
               }
@@ -5751,7 +5751,7 @@ final class Battlefield {
                 break;
               }
             case 3:
-              this.a(param0, -1);
+              this.readCombatEvent(param0, -1);
               if (var5 == 0) {
                 break;
               }
@@ -5761,7 +5761,7 @@ final class Battlefield {
                 break;
               }
             case 6:
-              this.b(param0, (byte) -84);
+              this.readSpecialEvent(param0, (byte) -84);
             default:
               break;
           }

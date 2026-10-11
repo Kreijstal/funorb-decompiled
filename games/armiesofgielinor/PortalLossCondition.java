@@ -83,9 +83,9 @@ final class PortalLossCondition implements MatchCondition {
           if (param1 == 0) {
             return null;
           }
-          param0.n(-2);
+          param0.endBitReading(-2);
           var3 = param0.h((byte) 121);
-          param0.o(72);
+          param0.beginBitReading(72);
           stackIn_7_0 = var3;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

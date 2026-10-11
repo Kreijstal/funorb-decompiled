@@ -93,7 +93,7 @@ abstract class rb implements n {
         }
     }
 
-    final static MapTile a(int param0, byte param1, CipherPacketBuffer param2) {
+    final static MapTile readTaggedMapTile(int recordBitLength, byte obfuscationGuard, CipherPacketBuffer packet) {
         MapTile var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -104,22 +104,22 @@ abstract class rb implements n {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == 0) {
+          if (recordBitLength == 0) {
             stackIn_2_0 = null;
             return (MapTile) (stackIn_2_0);
           }
           var3 = new MapTile();
-          no.a(param2, var3, param0, -24721);
+          no.readTaggedFields(packet, var3, recordBitLength, -24721);
           var3.j(-78);
-          var4 = -72 / ((-5 - param1) / 60);
+          var4 = -72 / ((-5 - obfuscationGuard) / 60);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_7_0 = var3_ref;
-          stackIn_7_1 = new StringBuilder().append("rb.G(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_7_1 = new StringBuilder().append("rb.G(").append(recordBitLength).append(',').append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";

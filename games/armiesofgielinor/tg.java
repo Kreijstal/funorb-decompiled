@@ -533,14 +533,14 @@ final class tg {
               this.field_i.a(6, fo.a(4800, sq.field_o, new String[]{var7}), (byte) -100);
               if (param0 != null &&
                 param2 != 2 &&
-                !bb.field_a) {
+                !NodeIterator.field_a) {
                 this.field_o = param0;
                 this.field_i.a(19, fo.a(4800, kt.field_m, new String[]{var7}), (byte) -115);
               }
             }
             if (var5 != null) {
               if (!fs.a((byte) 111, this.field_m) &&
-                !bb.field_a) {
+                !NodeIterator.field_a) {
                 if (!vi.field_d) {
                   this.field_i.a(8, fo.a(4800, mi.field_k, new String[]{var7}), (byte) -114);
                 }

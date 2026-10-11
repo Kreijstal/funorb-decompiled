@@ -19,8 +19,8 @@ final class mj {
     final static void b(byte param0) {
         if (l.field_a != null) {
           l.field_a.f();
-          if (mt.field_e != null) {
-            mt.field_e.f();
+          if (TextCursor.field_e != null) {
+            TextCursor.field_e.f();
           }
           if (param0 > -79) {
             mj.b((byte) 93);
@@ -28,8 +28,8 @@ final class mj {
           }
           return;
         }
-        if (mt.field_e != null) {
-          mt.field_e.f();
+        if (TextCursor.field_e != null) {
+          TextCursor.field_e.f();
         }
         if (param0 <= -79) {
           return;

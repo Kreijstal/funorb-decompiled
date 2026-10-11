@@ -33,10 +33,10 @@ final class ov {
 
     final static void a(int param0, int param1, int param2) {
         CipherPacketBuffer var3 = vl.field_n;
-        var3.h(32161, param0);
-        var3.b(param1 - 2, param1);
-        var3.b(1, 10);
-        var3.b(true, param2);
+        var3.writeCipheredOpcode(32161, param0);
+        var3.writeByte(param1 - 2, param1);
+        var3.writeByte(1, 10);
+        var3.writeShort(true, param2);
     }
 
     final static void a(java.applet.Applet param0, int param1) {

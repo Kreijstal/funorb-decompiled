@@ -12,13 +12,13 @@ final class s {
         CipherPacketBuffer var3 = null;
         try {
           var3 = vl.field_n;
-          var3.h(32161, param1);
-          var3.b(1, 2);
-          var3.b(1, 0);
+          var3.writeCipheredOpcode(32161, param1);
+          var3.writeByte(1, 2);
+          var3.writeByte(1, 0);
           if (param0 <= 125) {
             field_b = (String) null;
           }
-          var3.b(1, param2.field_l);
+          var3.writeByte(1, param2.field_l);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "s.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

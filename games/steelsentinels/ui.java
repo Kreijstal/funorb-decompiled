@@ -141,9 +141,9 @@ final class ui extends ug {
 
     final static void a(int param0, int param1) {
         CipherPacketBuffer var2 = mm.field_g;
-        var2.a(param0, (byte) -117);
-        var2.a((byte) 111, 1);
-        var2.a((byte) 119, param1);
+        var2.writeCipheredOpcode(param0, (byte) -117);
+        var2.writeByte((byte) 111, 1);
+        var2.writeByte((byte) 119, param1);
     }
 
     public ui() {

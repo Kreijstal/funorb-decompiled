@@ -151,7 +151,7 @@ final class ve {
           var16 = new PacketBuffer(param1);
           var17 = var16;
           var17.position = param1.length - 2;
-          rl.field_d = var17.c((byte) -60);
+          rl.field_d = var17.readUnsignedShort((byte) -60);
           ca.field_r = new int[rl.field_d];
           oa.field_M = new int[rl.field_d];
           le.field_L = new int[rl.field_d];
@@ -160,25 +160,25 @@ final class ve {
           rl.field_a = new int[rl.field_d];
           sn.field_g = new byte[rl.field_d][];
           var17.position = -(8 * rl.field_d) - 7 + param1.length;
-          un.field_n = var17.c((byte) -60);
-          eb.field_n = var17.c((byte) -60);
-          var3 = (255 & var17.f((byte) -114)) + 1;
+          un.field_n = var17.readUnsignedShort((byte) -60);
+          eb.field_n = var17.readUnsignedShort((byte) -60);
+          var3 = (255 & var17.readUnsignedByte((byte) -114)) + 1;
           var4 = 0;
           if (param0 != 16) {
             return;
           }
           while (var4 < rl.field_d) {
-            rl.field_a[var4] = var16.c((byte) -60);
+            rl.field_a[var4] = var16.readUnsignedShort((byte) -60);
             var4++;
           }
           for (var4Lifetime1 = 0; rl.field_d > var4Lifetime1; var4Lifetime1++) {
-            oa.field_M[var4Lifetime1] = var17.c((byte) -60);
+            oa.field_M[var4Lifetime1] = var17.readUnsignedShort((byte) -60);
           }
           for (var4Lifetime2 = 0; rl.field_d > var4Lifetime2; var4Lifetime2++) {
-            le.field_L[var4Lifetime2] = var17.c((byte) -60);
+            le.field_L[var4Lifetime2] = var17.readUnsignedShort((byte) -60);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < rl.field_d; var4Lifetime3++) {
-            ca.field_r[var4Lifetime3] = var17.c((byte) -60);
+            ca.field_r[var4Lifetime3] = var17.readUnsignedShort((byte) -60);
           }
           var17.position = -(8 * rl.field_d) + (-7 + param1.length - 3 * (var3 - 1));
           ba.field_d = new int[var3];
@@ -202,14 +202,14 @@ final class ve {
             var9 = var19;
             sn.field_g[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.f((byte) -121);
+            var11 = var17.readUnsignedByte((byte) -121);
             if ((1 & var11) == 0) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.d((byte) -2);
+                var8[var12] = var17.readByte((byte) -2);
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  dupTemp$1 = var17.d((byte) -2);
+                  dupTemp$1 = var17.readByte((byte) -2);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_31_0 = var10;
@@ -224,7 +224,7 @@ final class ve {
             } else {
               for (var12 = 0; var12 < var5; var12++) {
                 for (var13 = 0; var6 > var13; var13++) {
-                  var8[var12 + var13 * var5] = var17.d((byte) -2);
+                  var8[var12 + var13 * var5] = var17.readByte((byte) -2);
                 }
               }
               stackIn_41_0 = 0;
@@ -232,7 +232,7 @@ final class ve {
               if (stackIn_41_0 != stackIn_41_1) {
                 for (var12 = 0; var5 > var12; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$0 = var17.d((byte) -2);
+                    dupTemp$0 = var17.readByte((byte) -2);
                     var9[var13 * var5 + var12] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_48_0 = var10;
@@ -281,23 +281,23 @@ final class ve {
         var9 = SteelSentinels.obfuscationControl;
         try {
           var3 = 110 / ((-37 - param0) / 57);
-          var2_int = param1.g(-72, 8);
+          var2_int = param1.readBits(-72, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
           var4 = he.a(-1766, param1) ? 1 : 0;
           var5 = he.a(-1766, param1) ? 1 : 0;
           var6 = new pe();
-          var6.field_L = (short)param1.g(71, 16);
+          var6.field_L = (short)param1.readBits(71, 16);
           var6.field_z = s.a(var6.field_z, 16, param1, false);
           var6.field_m = s.a(var6.field_m, 16, param1, false);
           var6.field_C = s.a(var6.field_C, 16, param1, false);
-          var6.field_w = (short)param1.g(95, 16);
+          var6.field_w = (short)param1.readBits(95, 16);
           var6.field_G = s.a(var6.field_G, 16, param1, false);
           var6.field_j = s.a(var6.field_j, 16, param1, false);
           var6.field_x = s.a(var6.field_x, 16, param1, false);
           if (var4 != 0) {
-            var6.field_u = (short)param1.g(-113, 16);
+            var6.field_u = (short)param1.readBits(-113, 16);
             var6.field_g = s.a(var6.field_g, 16, param1, false);
             var6.field_H = s.a(var6.field_H, 16, param1, false);
             var6.field_F = s.a(var6.field_F, 16, param1, false);
@@ -306,7 +306,7 @@ final class ve {
             var6.field_T = s.a(var6.field_T, 16, param1, false);
           }
           if (var5 != 0) {
-            param1.g(-113, 16);
+            param1.readBits(-113, 16);
             var6.field_y = s.a(var6.field_y, 16, param1, false);
             var6.field_i = s.a(var6.field_i, 16, param1, false);
             var6.field_E = s.a(var6.field_E, 16, param1, false);

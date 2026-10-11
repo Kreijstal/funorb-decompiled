@@ -3,7 +3,7 @@
  */
 final class tg extends IntrusiveNode {
     byte[] field_p;
-    uh field_o;
+    NodeHashTable field_o;
 
     final void a() {
         this.field_o = null;
@@ -37,7 +37,7 @@ final class tg extends IntrusiveNode {
         if (this.field_o != null) {
           return;
         }
-        this.field_o = new uh(16);
+        this.field_o = new NodeHashTable(16);
         var20 = new int[16];
         var17 = var20;
         var1 = var17;
@@ -94,10 +94,10 @@ final class tg extends IntrusiveNode {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var18[var10Lifetime2];
-                var14 = (ce) (this.field_o.a((long)var13, 126));
+                var14 = (ce) (this.field_o.get((long)var13, 126));
                 if (var14 == null) {
                   var14 = new ce(new byte[128]);
-                  this.field_o.a((long)var13, var14, -1816);
+                  this.field_o.put((long)var13, var14, -1816);
                 }
                 var14.field_s[var11Lifetime2] = (byte) 1;
               }
@@ -220,8 +220,8 @@ final class tg extends IntrusiveNode {
         int var28Lifetime1;
         int var29Lifetime1;
         param0.position = param0.payload.length - 3;
-        var2 = param0.f((byte) -62);
-        var3 = param0.c((byte) -60);
+        var2 = param0.readUnsignedByte((byte) -62);
+        var3 = param0.readUnsignedShort((byte) -60);
         var4 = 14 + var2 * 10;
         param0.position = 0;
         var5 = 0;
@@ -236,7 +236,7 @@ final class tg extends IntrusiveNode {
         while (var13 < var2) {
           var14 = -1;
           while (true) {
-            var15 = param0.f((byte) -83);
+            var15 = param0.readUnsignedByte((byte) -83);
             if (var15 != var14) {
               var4++;
             }
@@ -303,7 +303,7 @@ final class tg extends IntrusiveNode {
         var27 = 0;
         var28 = 0;
         for (var29 = 0; var29 < var6; var29++) {
-          var28 = var28 + param0.f((byte) -108) & 127;
+          var28 = var28 + param0.readUnsignedByte((byte) -108) & 127;
           if (var28 != 0) {
             if (var28 != 32) {
               if (var28 != 1) {
@@ -419,17 +419,17 @@ final class tg extends IntrusiveNode {
         param0.position = param0.position + var5 * 3;
         this.field_p = new byte[var4];
         var51 = new PacketBuffer(this.field_p);
-        var51.b(true, 1297377380);
-        var51.b(true, 6);
+        var51.writeInt(true, 1297377380);
+        var51.writeInt(true, 6);
         stackIn_84_0 = var51;
         if (var2 <= 1) {
           stackIn_85_1 = 0;
         } else {
           stackIn_85_1 = 1;
         }
-        ((PacketBuffer) (Object) stackIn_84_0).d(stackIn_85_1, 72);
-        var51.d(var2, 68);
-        var51.d(var3, 18);
+        ((PacketBuffer) (Object) stackIn_84_0).writeShort(stackIn_85_1, 72);
+        var51.writeShort(var2, 68);
+        var51.writeShort(var3, 18);
         param0.position = var13Lifetime1;
         var52 = 0;
         var53 = 0;
@@ -445,7 +445,7 @@ final class tg extends IntrusiveNode {
           if (var60 >= var2) {
             return;
           }
-          var51.b(true, 1297379947);
+          var51.writeInt(true, 1297379947);
           var51.position = var51.position + 4;
           var61 = var51.position;
           var62 = -1;
@@ -460,35 +460,35 @@ final class tg extends IntrusiveNode {
             var62 = var64 & 15;
             if (var64 == 7) {
               if (var65 != 0) {
-                var51.a((byte) 124, 255);
+                var51.writeByte((byte) 124, 255);
               }
-              var51.a((byte) 125, 47);
-              var51.a((byte) 122, 0);
+              var51.writeByte((byte) 125, 47);
+              var51.writeByte((byte) 122, 0);
               var51.a(true, var51.position - var61);
               var60++;
               break;
             }
             if (var64 == 23) {
               if (var65 != 0) {
-                var51.a((byte) 116, 255);
+                var51.writeByte((byte) 116, 255);
               }
-              var51.a((byte) 120, 81);
-              var51.a((byte) 118, 3);
+              var51.writeByte((byte) 120, 81);
+              var51.writeByte((byte) 118, 3);
               incrementValue$25 = var50;
               var50++;
-              var51.a((byte) 121, (int) param0.payload[incrementValue$25]);
+              var51.writeByte((byte) 121, (int) param0.payload[incrementValue$25]);
               incrementValue$26 = var50;
               var50++;
-              var51.a((byte) 110, (int) param0.payload[incrementValue$26]);
+              var51.writeByte((byte) 110, (int) param0.payload[incrementValue$26]);
               incrementValue$27 = var50;
               var50++;
-              var51.a((byte) 123, (int) param0.payload[incrementValue$27]);
+              var51.writeByte((byte) 123, (int) param0.payload[incrementValue$27]);
               continue;
             }
             var52 = var52 ^ var64 >> 4;
             if (var62 == 0) {
               if (var65 != 0) {
-                var51.a((byte) 108, 144 + var52);
+                var51.writeByte((byte) 108, 144 + var52);
               }
               incrementValue$23 = var37;
               var37++;
@@ -496,13 +496,13 @@ final class tg extends IntrusiveNode {
               incrementValue$24 = var38;
               var38++;
               var54 = var54 + param0.payload[incrementValue$24];
-              var51.a((byte) 126, var53 & 127);
-              var51.a((byte) 123, var54 & 127);
+              var51.writeByte((byte) 126, var53 & 127);
+              var51.writeByte((byte) 123, var54 & 127);
               continue;
             }
             if (var62 == 1) {
               if (var65 != 0) {
-                var51.a((byte) 118, 128 + var52);
+                var51.writeByte((byte) 118, 128 + var52);
               }
               incrementValue$21 = var37;
               var37++;
@@ -510,14 +510,14 @@ final class tg extends IntrusiveNode {
               incrementValue$22 = var40;
               var40++;
               var55 = var55 + param0.payload[incrementValue$22];
-              var51.a((byte) 114, var53 & 127);
-              var51.a((byte) 117, var55 & 127);
+              var51.writeByte((byte) 114, var53 & 127);
+              var51.writeByte((byte) 117, var55 & 127);
               continue;
             }
             if (var62 != 2) {
               if (var62 == 3) {
                 if (var65 != 0) {
-                  var51.a((byte) 127, 224 + var52);
+                  var51.writeByte((byte) 127, 224 + var52);
                 }
                 incrementValue$5 = var45;
                 var45++;
@@ -525,18 +525,18 @@ final class tg extends IntrusiveNode {
                 incrementValue$6 = var33;
                 var33++;
                 var56 = var56 + (param0.payload[incrementValue$6] << 7);
-                var51.a((byte) 116, var56 & 127);
-                var51.a((byte) 112, var56 >> 7 & 127);
+                var51.writeByte((byte) 116, var56 & 127);
+                var51.writeByte((byte) 112, var56 >> 7 & 127);
                 continue;
               }
               if (var62 == 4) {
                 if (var65 != 0) {
-                  var51.a((byte) 113, 208 + var52);
+                  var51.writeByte((byte) 113, 208 + var52);
                 }
                 incrementValue$4 = var32;
                 var32++;
                 var57 = var57 + param0.payload[incrementValue$4];
-                var51.a((byte) 112, var57 & 127);
+                var51.writeByte((byte) 112, var57 & 127);
                 continue;
               }
               if (var62 != 5) {
@@ -544,15 +544,15 @@ final class tg extends IntrusiveNode {
                   throw new RuntimeException();
                 }
                 if (var65 != 0) {
-                  var51.a((byte) 123, 192 + var52);
+                  var51.writeByte((byte) 123, 192 + var52);
                 }
                 incrementValue$1 = var44;
                 var44++;
-                var51.a((byte) 111, (int) param0.payload[incrementValue$1]);
+                var51.writeByte((byte) 111, (int) param0.payload[incrementValue$1]);
                 continue;
               }
               if (var65 != 0) {
-                var51.a((byte) 116, 160 + var52);
+                var51.writeByte((byte) 116, 160 + var52);
               }
               incrementValue$2 = var37;
               var37++;
@@ -560,17 +560,17 @@ final class tg extends IntrusiveNode {
               incrementValue$3 = var31;
               var31++;
               var58 = var58 + param0.payload[incrementValue$3];
-              var51.a((byte) 116, var53 & 127);
-              var51.a((byte) 112, var58 & 127);
+              var51.writeByte((byte) 116, var53 & 127);
+              var51.writeByte((byte) 112, var58 & 127);
               continue;
             }
             if (var65 != 0) {
-              var51.a((byte) 117, 176 + var52);
+              var51.writeByte((byte) 117, 176 + var52);
             }
             incrementValue$7 = var15Lifetime2;
             var15Lifetime2++;
             var28Lifetime1 = var28Lifetime1 + param0.payload[incrementValue$7] & 127;
-            var51.a((byte) 127, var28Lifetime1);
+            var51.writeByte((byte) 127, var28Lifetime1);
             if (var28Lifetime1 != 0 &&
               var28Lifetime1 != 32) {
               if (var28Lifetime1 == 1) {
@@ -633,7 +633,7 @@ final class tg extends IntrusiveNode {
             }
             var66 = var66 + var70[var28Lifetime1];
             var70[var28Lifetime1] = var66;
-            var51.a((byte) 125, var66 & 127);
+            var51.writeByte((byte) 125, var66 & 127);
           }
         }
     }

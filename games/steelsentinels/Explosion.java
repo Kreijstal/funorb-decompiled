@@ -113,7 +113,7 @@ final class Explosion extends DualNode {
           stackIn_13_0 = 9324;
           break;
         }
-        uh.a(stackIn_13_0);
+        NodeHashTable.a(stackIn_13_0);
         return var1;
     }
 
@@ -828,7 +828,7 @@ final class Explosion extends DualNode {
                             } else {
                                 /* Inlined CFG state: 94. */
                                 {
-                                    if (8 < var16.a(93, 100)) {
+                                    if (8 < var16.nextIntBounded(93, 100)) {
                                         statePc = 100;
                                         continue scanLoop1;
                                     } else {

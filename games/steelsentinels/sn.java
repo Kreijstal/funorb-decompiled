@@ -79,7 +79,7 @@ final class sn {
             return (fh) (stackIn_2_0);
           }
           var3 = new fh(param0, rl.field_a, oa.field_M, le.field_L, ca.field_r, dl.field_L);
-          uh.a(9324);
+          NodeHashTable.a(9324);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

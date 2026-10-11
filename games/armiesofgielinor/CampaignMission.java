@@ -50,7 +50,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
               if (encodedLength <= 0) {
                 return;
               }
-              this.flags = (int)tn.a(false, encodedLength, packet);
+              this.flags = (int)tn.readTaggedInteger(false, encodedLength, packet);
             } else {
               if (fieldName.equals("name")) {
                 if (encodedLength <= 0) {
@@ -62,7 +62,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
               if (!fieldName.equals("key")) {
                 if (fieldName.equals("pos")) {
                   if (encodedLength > 0) {
-                    this.playerSlot = (int)tn.a(false, encodedLength, packet);
+                    this.playerSlot = (int)tn.readTaggedInteger(false, encodedLength, packet);
                     return;
                   }
                 } else {
@@ -71,7 +71,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                       if (0 >= encodedLength) {
                         return;
                       }
-                      tn.a(false, encodedLength, packet);
+                      tn.readTaggedInteger(false, encodedLength, packet);
                       return;
                     }
                     if (!fieldName.equals("mid")) {
@@ -79,15 +79,15 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                         if (encodedLength <= 0) {
                           return;
                         }
-                        var5_int = ai.a(packet, true);
+                        var5_int = ai.readCompactInt(packet, true);
                         this.neighborMissionIds = new int[var5_int];
                         for (var6 = 0; var6 < var5_int; var6++) {
-                          this.neighborMissionIds[var6] = (int)tn.a(false, 2, packet);
+                          this.neighborMissionIds[var6] = (int)tn.readTaggedInteger(false, 2, packet);
                         }
                       } else {
                         if (fieldName.equals("mpsz")) {
                           if (0 < encodedLength) {
-                            this.mapSizeSetting = (int)tn.a(false, encodedLength, packet);
+                            this.mapSizeSetting = (int)tn.readTaggedInteger(false, encodedLength, packet);
                             return;
                           }
                         } else {
@@ -96,10 +96,10 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                               if (encodedLength <= 0) {
                                 return;
                               }
-                              var5_int = ai.a(packet, true);
+                              var5_int = ai.readCompactInt(packet, true);
                               this.participantIds = new int[var5_int];
                               for (var6 = 0; var5_int > var6; var6++) {
-                                this.participantIds[var6] = (int)tn.a(false, 2, packet);
+                                this.participantIds[var6] = (int)tn.readTaggedInteger(false, 2, packet);
                               }
                             } else {
                               if (!fieldName.equals("rwd")) {
@@ -107,14 +107,14 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                                   if (0 >= encodedLength) {
                                     return;
                                   }
-                                  this.field_u = (int)tn.a(false, encodedLength, packet);
+                                  this.field_u = (int)tn.readTaggedInteger(false, encodedLength, packet);
                                   return;
                                 }
                                 if (fieldName.equals("tr")) {
                                   if (encodedLength <= 0) {
                                     return;
                                   }
-                                  this.field_l = (int)tn.a(false, encodedLength, packet);
+                                  this.field_l = (int)tn.readTaggedInteger(false, encodedLength, packet);
                                   return;
                                 }
                                 if (!fieldName.equals("df")) {
@@ -129,12 +129,12 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                                     if (0 >= encodedLength) {
                                       return;
                                     }
-                                    this.gameType = (int)tn.a(false, encodedLength, packet);
+                                    this.gameType = (int)tn.readTaggedInteger(false, encodedLength, packet);
                                     return;
                                   }
                                   if (fieldName.equals("gd")) {
                                     if (encodedLength > 0) {
-                                      this.godSetting = (int)tn.a(false, encodedLength, packet);
+                                      this.godSetting = (int)tn.readTaggedInteger(false, encodedLength, packet);
                                       return;
                                     }
                                   } else {
@@ -142,12 +142,12 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                                       if (0 >= encodedLength) {
                                         return;
                                       }
-                                      tn.a(false, encodedLength, packet);
+                                      tn.readTaggedInteger(false, encodedLength, packet);
                                       return;
                                     }
                                     if (fieldName.equals("song")) {
                                       if (encodedLength > 0) {
-                                        this.musicId = (int)tn.a(false, encodedLength, packet);
+                                        this.musicId = (int)tn.readTaggedInteger(false, encodedLength, packet);
                                         return;
                                       }
                                     } else {
@@ -155,33 +155,33 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                                         return;
                                       }
                                       if (encodedLength > 0) {
-                                        var5_int = ai.a(packet, true);
+                                        var5_int = ai.readCompactInt(packet, true);
                                         this.teamAssignments = new int[var5_int];
                                         for (var6 = 0; var5_int > var6; var6++) {
-                                          this.teamAssignments[var6] = (int)tn.a(false, 2, packet);
+                                          this.teamAssignments[var6] = (int)tn.readTaggedInteger(false, 2, packet);
                                         }
                                       }
                                     }
                                   }
                                 } else {
                                   if (0 < encodedLength) {
-                                    this.difficulty = (int)tn.a(false, encodedLength, packet);
+                                    this.difficulty = (int)tn.readTaggedInteger(false, encodedLength, packet);
                                     return;
                                   }
                                 }
                               } else {
                                 if (encodedLength > 0) {
-                                  var5_int = ai.a(packet, true);
+                                  var5_int = ai.readCompactInt(packet, true);
                                   this.rewardIds = new int[var5_int];
                                   for (var6 = 0; var6 < var5_int; var6++) {
-                                    this.rewardIds[var6] = (int)tn.a(false, 2, packet);
+                                    this.rewardIds[var6] = (int)tn.readTaggedInteger(false, 2, packet);
                                   }
                                 }
                               }
                             }
                           } else {
                             if (encodedLength > 0) {
-                              this.mapTheme = (int)tn.a(false, encodedLength, packet);
+                              this.mapTheme = (int)tn.readTaggedInteger(false, encodedLength, packet);
                               return;
                             }
                           }
@@ -189,13 +189,13 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                       }
                     } else {
                       if (0 < encodedLength) {
-                        this.mapResourceId = (int)tn.a(false, encodedLength, packet);
+                        this.mapResourceId = (int)tn.readTaggedInteger(false, encodedLength, packet);
                         return;
                       }
                     }
                   } else {
                     if (encodedLength > 0) {
-                      this.field_A = (int)tn.a(false, encodedLength, packet);
+                      this.field_A = (int)tn.readTaggedInteger(false, encodedLength, packet);
                       return;
                     }
                   }
@@ -209,7 +209,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
             }
           } else {
             if (encodedLength > 0) {
-              this.missionId = (int)tn.a(false, encodedLength, packet);
+              this.missionId = (int)tn.readTaggedInteger(false, encodedLength, packet);
               return;
             }
           }

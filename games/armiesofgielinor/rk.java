@@ -1320,10 +1320,10 @@ final class rk {
           return;
         }
         CipherPacketBuffer var3 = mg.field_e;
-        var3.i(1);
-        var3.i(1);
-        var3.i(1);
-        var3.i(1);
+        var3.readInt(1);
+        var3.readInt(1);
+        var3.readInt(1);
+        var3.readInt(1);
         var1.unlink(-115);
     }
 
@@ -2358,14 +2358,14 @@ final class rk {
                 fu.field_g = ml.a(false, param4, (byte) 10, param3);
               }
               vl.field_n.position = 0;
-              vl.field_n.b(1, 14);
-              vl.field_n.b(param0 ^ -54, fu.field_g.a((byte) -16).field_c);
+              vl.field_n.writeByte(1, 14);
+              vl.field_n.writeByte(param0 ^ -54, fu.field_g.a((byte) -16).field_c);
               hb.$cfr$intArgs$a$e9dea5688aa5(67, -1);
               ov.field_g = gi.field_d;
             }
             if (ov.field_g == gi.field_d &&
               es.a(-111, 1)) {
-              var6_int = mg.field_e.k(0);
+              var6_int = mg.field_e.readUnsignedByte(0);
               if (0 != var6_int) {
                 nm.field_o = var6_int;
                 fk.field_b = -1;
@@ -2385,7 +2385,7 @@ final class rk {
             boolean decompiledFrameRemainder0 = true;
             if (ov.field_g == jf.field_D &&
               es.a(-90, 1)) {
-              var6_intLifetime1 = mg.field_e.k(param0 + 53);
+              var6_intLifetime1 = mg.field_e.readUnsignedByte(param0 + 53);
               mg.field_e.position = 0;
               gh.field_P = null;
               nm.field_o = var6_intLifetime1;
@@ -2416,54 +2416,54 @@ final class rk {
               jh.g(2)) {
               dc.field_o = mg.field_e.j((byte) -2);
               wl.field_I = param3;
-              hi.field_j = mg.field_e.k(0);
-              tf.field_l = mg.field_e.k(0);
-              df.field_M = mg.field_e.e((byte) -104);
+              hi.field_j = mg.field_e.readUnsignedByte(0);
+              tf.field_l = mg.field_e.readUnsignedByte(0);
+              df.field_M = mg.field_e.readUnsignedShort((byte) -104);
               var6 = mg.field_e.c((byte) -125);
-              var7 = mg.field_e.k(param0 + 53);
+              var7 = mg.field_e.readUnsignedByte(param0 + 53);
               if ((var7 & 1) != 0) {
                 wj.a(0);
               }
               if (!param5) {
                 stackIn_52_0 = ((var7 & 8) != 0);
-                bb.field_a = stackIn_52_0;
+                NodeIterator.field_a = stackIn_52_0;
                 stackIn_55_0 = ((2 & var7) != 0);
                 vi.field_d = stackIn_55_0;
                 stackIn_58_0 = ((4 & var7) != 0);
                 ul.field_m = stackIn_58_0;
-                if (bb.field_a) {
+                if (NodeIterator.field_a) {
                   vi.field_d = true;
                 }
                 stackIn_63_0 = ((16 & var7) != 0);
                 c.field_c = stackIn_63_0;
                 if (ul.field_a) {
-                  mg.field_e.k(0);
-                  mg.field_e.k(param0 ^ -53);
-                  mg.field_e.i(param0 + 54);
-                  of.field_Nb = mg.field_e.e((byte) -104);
+                  mg.field_e.readUnsignedByte(0);
+                  mg.field_e.readUnsignedByte(param0 ^ -53);
+                  mg.field_e.readInt(param0 + 54);
+                  of.field_Nb = mg.field_e.readUnsignedShort((byte) -104);
                   nk.field_C = new byte[of.field_Nb];
                   for (var8 = 0; of.field_Nb > var8; var8++) {
-                    nk.field_C[var8] = mg.field_e.a((byte) -49);
+                    nk.field_C[var8] = mg.field_e.readByte((byte) -49);
                   }
                 }
               } else {
                 stackIn_45_0 = ((16 & var7) != 0);
                 c.field_c = stackIn_45_0;
                 if (ul.field_a) {
-                  mg.field_e.k(0);
-                  mg.field_e.k(param0 ^ -53);
-                  mg.field_e.i(param0 + 54);
-                  of.field_Nb = mg.field_e.e((byte) -104);
+                  mg.field_e.readUnsignedByte(0);
+                  mg.field_e.readUnsignedByte(param0 ^ -53);
+                  mg.field_e.readInt(param0 + 54);
+                  of.field_Nb = mg.field_e.readUnsignedShort((byte) -104);
                   nk.field_C = new byte[of.field_Nb];
                   for (var8 = 0; of.field_Nb > var8; var8++) {
-                    nk.field_C[var8] = mg.field_e.a((byte) -49);
+                    nk.field_C[var8] = mg.field_e.readByte((byte) -49);
                   }
                 }
               }
               mv.field_d = mg.field_e.g(1);
               var11 = (CharSequence) ((Object) mv.field_d);
               ft.field_p = k.a(var11, false);
-              vt.field_n = mg.field_e.k(0);
+              vt.field_n = mg.field_e.readUnsignedByte(0);
               ov.field_g = kl.field_k;
               if (fu.field_g.a((byte) 50) != pt.field_db) {
                 if (fu.field_g.a((byte) -11) == fl.field_u) {
@@ -2495,11 +2495,11 @@ final class rk {
               if (df.field_M > 0) {
                 BestScoreStrategy.field_l = true;
               }
-              vl.field_n.a(CombatEvent.field_L, -106);
+              vl.field_n.initializeOpcodeCipher(CombatEvent.field_L, -106);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 CombatEvent.field_L[var8Lifetime1] = CombatEvent.field_L[var8Lifetime1] + 50;
               }
-              mg.field_e.a(CombatEvent.field_L, param0 - 66);
+              mg.field_e.initializeOpcodeCipher(CombatEvent.field_L, param0 - 66);
               stackIn_88_0 = nm.field_o;
               return stackIn_88_0;
             }

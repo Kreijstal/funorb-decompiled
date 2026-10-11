@@ -211,7 +211,7 @@ final class wd {
                 }
                 if (null != vu.field_M) {
                   var6 = 1;
-                  if (!mt.field_f ||
+                  if (!TextCursor.field_f ||
                     TeleportAction.field_C == null) {
                     var4 = "[" + fo.a(4800, cv.field_m, new String[]{vu.field_M.field_rc}) + "] ";
                     if (var10 != 0) {
@@ -229,7 +229,7 @@ final class wd {
               }
               var8 = stackIn_56_0;
               var4 = var4 + var3 + var8;
-              boolean decompiledSharedTail0 = !(bb.field_a);
+              boolean decompiledSharedTail0 = !(NodeIterator.field_a);
               if (!decompiledSharedTail0) {
                 var4 = "<col=999999>" + var4 + dc.field_l + "</col>";
                 var5 = "";
@@ -244,7 +244,7 @@ final class wd {
               if (!us.a(true)) {
                 if (UpkeepEvent.field_z.field_eb &&
                   var9 > (-UpkeepEvent.field_z.field_V + AiPlanningStrategy.field_d)) {
-                  if (!bb.field_a) {
+                  if (!NodeIterator.field_a) {
                     var1 = ps.field_z;
                   } else {
                     var1 = "Broken!";
@@ -252,7 +252,7 @@ final class wd {
                 }
                 if (UpkeepEvent.field_z.field_yb != 0 &&
                   UpkeepEvent.field_z.field_bb < var9 &&
-                  !bb.field_a) {
+                  !NodeIterator.field_a) {
                   np.k(92);
                 }
               }

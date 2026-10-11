@@ -7,16 +7,16 @@ final class ao extends lk {
     static String field_x;
     private ip field_v;
 
-    final static void a(int param0, int param1, int param2, CipherPacketBuffer param3, int param4) {
+    final static void finishTaggedPayload(int headerBitPosition, int obfuscationGuard, int headerBitLength, CipherPacketBuffer packet, int payloadBitLength) {
         try {
-          int var5_int = 58 / ((param1 + 86) / 38);
-          if (param2 < param4) {
-            param3.c(param0, (byte) 0);
-            AiInfluenceMap.a(14, 20, param4, 30, 1, 4, param3);
+          int var5_int = 58 / ((obfuscationGuard + 86) / 38);
+          if (headerBitLength < payloadBitLength) {
+            packet.setWriteBitPosition(headerBitPosition, (byte) 0);
+            AiInfluenceMap.writeTieredSignedInt(14, 20, payloadBitLength, 30, 1, 4, packet);
           }
-          param3.d((byte) -83, param4 + param2 + param0);
+          packet.setReadBitPosition((byte) -83, payloadBitLength + headerBitLength + headerBitPosition);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ao.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ao.B(" + headerBitPosition + ',' + obfuscationGuard + ',' + headerBitLength + ',' + (packet != null ? "{...}" : "null") + ',' + payloadBitLength + ')');
         }
     }
 

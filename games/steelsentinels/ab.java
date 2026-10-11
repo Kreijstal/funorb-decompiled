@@ -35,14 +35,14 @@ final class ab {
         int var3Lifetime1;
         this.field_f.payload = param0;
         this.field_f.position = 10;
-        int var2 = this.field_f.c((byte) -60);
-        this.field_e = this.field_f.c((byte) -60);
+        int var2 = this.field_f.readUnsignedShort((byte) -60);
+        this.field_e = this.field_f.readUnsignedShort((byte) -60);
         this.field_c = 500000;
         this.field_b = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-          var4 = this.field_f.i(0);
-          var5 = this.field_f.i(0);
+          var4 = this.field_f.readInt(0);
+          var5 = this.field_f.readInt(0);
           if (var4 == 1297379947) {
             this.field_b[var3] = this.field_f.position;
             var3++;
@@ -158,7 +158,7 @@ final class ab {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 == 255) {
-          var3 = this.field_f.f((byte) -121);
+          var3 = this.field_f.readUnsignedByte((byte) -121);
           var4 = this.field_f.e(7);
           if (var3 == 47) {
             this.field_f.position = this.field_f.position + var4;
@@ -179,10 +179,10 @@ final class ab {
         var3Lifetime1 = field_d[param1 - 128];
         var4Lifetime1 = param1;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.field_f.f((byte) -113) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.field_f.readUnsignedByte((byte) -113) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.field_f.f((byte) -90) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.field_f.readUnsignedByte((byte) -90) << 16;
         }
         return var4Lifetime1;
     }

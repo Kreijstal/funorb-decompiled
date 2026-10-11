@@ -195,11 +195,11 @@ final class hh {
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1) {
-            param0.field_Ub = param2.k(0);
+            param0.field_Ub = param2.readUnsignedByte(0);
           }
-          param0.field_nc = param2.k(0);
-          param0.field_Tb = param2.k(0);
-          var4_int = param2.k(0);
+          param0.field_nc = param2.readUnsignedByte(0);
+          param0.field_Tb = param2.readUnsignedByte(0);
+          var4_int = param2.readUnsignedByte(0);
           stackIn_5_0 = (au) (param0);
           stackIn_6_1 = (0 != (128 & var4_int));
           stackIn_5_0.field_uc = stackIn_6_1;
@@ -227,12 +227,12 @@ final class hh {
           stackIn_28_0 = ((var4_int & 2) == 0) ? 0 : 1;
           var6 = stackIn_28_0;
           param2.a(0, param0.field_pc.length, 0, param0.field_pc);
-          param0.field_qc = param2.e((byte) -104);
-          param0.field_Mb = vi.b(39) - (long)param2.i(1);
+          param0.field_qc = param2.readUnsignedShort((byte) -104);
+          param0.field_Mb = vi.b(39) - (long)param2.readInt(1);
           if (var5 == 0) {
             param0.field_bc = -1;
           } else {
-            param0.field_bc = param2.i(1);
+            param0.field_bc = param2.readInt(1);
           }
           param0.field_dc = param2.j((byte) -2);
           var7 = param2.position;

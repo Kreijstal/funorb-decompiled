@@ -42,7 +42,7 @@ final class ai extends hs {
         }
     }
 
-    final static int a(CipherPacketBuffer param0, boolean param1) {
+    final static int readCompactInt(CipherPacketBuffer packet, boolean obfuscationGuard) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -50,22 +50,22 @@ final class ai extends hs {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1) {
+          if (!obfuscationGuard) {
             field_N = (String) null;
           }
-          stackIn_3_0 = de.a(-102, param0, 4, 14, 30, 20);
+          stackIn_3_0 = de.readTieredSignedInt(-102, packet, 4, 14, 30, 20);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("ai.C(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

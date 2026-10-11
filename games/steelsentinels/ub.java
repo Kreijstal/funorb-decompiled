@@ -5,7 +5,7 @@ final class ub {
     static wc field_e;
     private cm field_l;
     private cm field_c;
-    private uh field_i;
+    private NodeHashTable field_i;
     static int field_g;
     static String field_h;
     static boolean field_j;
@@ -13,7 +13,7 @@ final class ub {
     static byte[] field_f;
     static String field_k;
     static String field_b;
-    private uh field_d;
+    private NodeHashTable field_d;
 
     final sk a(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
@@ -229,10 +229,10 @@ final class ub {
           var5_int = param2 ^ (65520 & param0 << 4 | param0 >>> 12);
           var5_int = var5_int | param0 << 16;
           if (param1 != 0) {
-            this.field_d = (uh) null;
+            this.field_d = (NodeHashTable) null;
           }
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (sk) (this.field_d.a(var6, 127));
+          var8 = (sk) (this.field_d.get(var6, 127));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -241,20 +241,20 @@ final class ub {
             param3[0] <= 0) {
             return null;
           }
-          var9 = (uk) (this.field_i.a(var6, 124));
+          var9 = (uk) (this.field_i.get(var6, 124));
           if (var9 == null) {
             var9 = uk.a(this.field_l, param0, param2);
             if (var9 == null) {
               return null;
             }
-            this.field_i.a(var6, var9, -1816);
+            this.field_i.put(var6, var9, -1816);
           }
           var8Lifetime1 = var9.a(param3);
           if (var8Lifetime1 == null) {
             return null;
           }
           var9.unlink(4);
-          this.field_d.a(var6, var8Lifetime1, -1816);
+          this.field_d.put(var6, var8Lifetime1, -1816);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -384,7 +384,7 @@ final class ub {
             stackIn_2_0 = (sk) null;
             return stackIn_2_0;
           }
-          var8 = (sk) (this.field_d.a(var6, 124));
+          var8 = (sk) (this.field_d.get(var6, 124));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -399,7 +399,7 @@ final class ub {
           }
           var10 = var9.b();
           var8Lifetime1 = var10;
-          this.field_d.a(var6, var8Lifetime1, -1816);
+          this.field_d.put(var6, var8Lifetime1, -1816);
           if (param3 != null) {
             param3[0] = param3[0] - var10.field_r.length;
           }
@@ -520,8 +520,8 @@ final class ub {
     }
 
     ub(cm param0, cm param1) {
-        this.field_i = new uh(256);
-        this.field_d = new uh(256);
+        this.field_i = new NodeHashTable(256);
+        this.field_d = new NodeHashTable(256);
         try {
           this.field_c = param0;
           this.field_l = param1;

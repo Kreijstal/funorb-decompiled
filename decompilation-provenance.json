@@ -317,7 +317,7 @@
         },
         "publishedSources": {
           "files": 542,
-          "sha256": "561b049cd6981642ae619143ee329762c8a76875638596b1168cd9e5a53d96a8"
+          "sha256": "fa42567f296d68ea44a3f4761709b5d06d46b929c6d0f85ee24dc47baea8dec3"
         }
       },
       "bachelorfridge": {
@@ -1669,7 +1669,7 @@
         },
         "publishedSources": {
           "files": 347,
-          "sha256": "d2c6dcba93da9f5723097da881297f0ed4fade0c9bf71b4bdd189fafa10aacc5"
+          "sha256": "eb1c584db83bb9a581a0a5a6eb3666f2dfde8b6c99cef766ec92661c3accd42a"
         }
       },
       "stellarshard": {
@@ -2623,17 +2623,17 @@
       "inputTreeSha256": "a335a5dc8ceefc629e9ddd18c57c3ce19734ff22b3026833869d1fd193ad0637",
       "sources": {
         "files": 542,
-        "sha256": "561b049cd6981642ae619143ee329762c8a76875638596b1168cd9e5a53d96a8"
+        "sha256": "fa42567f296d68ea44a3f4761709b5d06d46b929c6d0f85ee24dc47baea8dec3"
       },
       "dictionary": {
         "path": "decompilation/armiesofgielinor-naming.json",
-        "sha256": "5343420e257615a3199eff809fda5282dc5c63a9770b7743acc8e03621069d9b"
+        "sha256": "5a2f6f19f6e482a73dde208d0f30e006cc102e2ee465dc7f78e150ba4d910090"
       },
       "readingGuide": {
         "path": "games/armiesofgielinor/README.md",
-        "sha256": "a2aa5d54f629e402a5c5725d17cc1553e5f76eee3c03152936fb91983f5ed9bd"
+        "sha256": "f7b3914eaa385983551f0b1a748bc6b3ed629dc5982ac4e0bff6e0dede220842"
       },
-      "rulesSha256": "82d36d7a3a384176e96d4acdad0f442900e2a2bd8c27729ce7aa21edd22a15aa",
+      "rulesSha256": "410b6a3a7ecf1fcfd526e68b288cebb17a556de2d71fab9679ba1c2a7b6bb054",
       "compiler": {
         "repository": "Kreijstal/java-tools",
         "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
@@ -2666,17 +2666,17 @@
       "inputTreeSha256": "2713f45b1bf8186a4a2e4c283f1b1cca876716cb17a00318e3d87ceaa13e5399",
       "sources": {
         "files": 347,
-        "sha256": "d2c6dcba93da9f5723097da881297f0ed4fade0c9bf71b4bdd189fafa10aacc5"
+        "sha256": "eb1c584db83bb9a581a0a5a6eb3666f2dfde8b6c99cef766ec92661c3accd42a"
       },
       "dictionary": {
         "path": "decompilation/steelsentinels-naming.json",
-        "sha256": "fde6c51f7193f813d4f4046d89ed60793b75e78de9f167ab3666d99d4a360c3d"
+        "sha256": "aa70ad622cf93b43a6a70db568126519bfc6401e9d5464c7cb31779412a52ad3"
       },
       "readingGuide": {
         "path": "games/steelsentinels/README.md",
-        "sha256": "5303828f2b86aa3a5ab93892aeb0b07967dec7cd85de4ab118e3644f366b04aa"
+        "sha256": "a80f59d5119a0f2c23eda8b39e7e910b30ea2cab1dabd8321b9b595a3ad59990"
       },
-      "rulesSha256": "1368b6dcf490f071e491f137906d8c33fe10446ff5071c9a84b431b997dc6264",
+      "rulesSha256": "ad001c29b890098046dc46d8dfd243d44570269933f876be20eb6ca709440e4e",
       "compiler": {
         "repository": "Kreijstal/java-tools",
         "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",

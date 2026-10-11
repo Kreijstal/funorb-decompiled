@@ -455,10 +455,10 @@ final class na extends tj implements mf, he {
             stackIn_2_0 = (CampaignMission) null;
             return stackIn_2_0;
           }
-          var2_int = param0.i(1);
-          param0.o(117);
+          var2_int = param0.readInt(1);
+          param0.beginBitReading(117);
           var3 = pf.a(var2_int, (byte) 6, param0);
-          param0.n(-2);
+          param0.endBitReading(-2);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

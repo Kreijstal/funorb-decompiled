@@ -211,19 +211,19 @@ final class vm extends ia {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = mm.field_g;
-          var6.a(param0, (byte) -117);
+          var6.writeCipheredOpcode(param0, (byte) -117);
           var6.position = var6.position + 1;
           var4 = var6.position;
-          var6.a((byte) 108, 1);
+          var6.writeByte((byte) 108, 1);
           if (param2.field_r != null) {
-            var6.a((byte) 125, param2.field_r.length);
-            var6.a(param2.field_r.length, (byte) -122, 0, param2.field_r);
+            var6.writeByte((byte) 125, param2.field_r.length);
+            var6.writeBytes(param2.field_r.length, (byte) -122, 0, param2.field_r);
           } else {
-            var6.a((byte) 113, 0);
+            var6.writeByte((byte) 113, 0);
           }
           var6.f(-101, var4);
           var6.position = var6.position - 4;
-          param2.field_x = var6.i(0);
+          param2.field_x = var6.readInt(0);
           var6.b((byte) 101, var6.position - var4);
           if (param1 < -38) {
             return;

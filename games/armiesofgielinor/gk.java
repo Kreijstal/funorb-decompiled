@@ -22,43 +22,43 @@ final class gk extends nl {
         if (this.field_k != null) {
           this.field_k.a((kb) (this), param0, -80, true, param1);
         }
-        bb var5 = new bb(this.field_M);
+        NodeIterator var5 = new NodeIterator(this.field_M);
         if (param2 > -82) {
           field_I = -21L;
         }
-        kb var6 = (kb) (var5.a(50));
+        kb var6 = (kb) (var5.last(50));
         while (var6 != null) {
           var6.a(this.field_B + param0, this.field_p + param1, (byte) -121, param3);
-          var6 = (kb) (var5.b((byte) -112));
+          var6 = (kb) (var5.previous((byte) -112));
         }
     }
 
     final wl a(byte param0) {
-        bb var2;
+        NodeIterator var2;
         wl var3;
         int var4;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var2 = new bb(this.field_M);
+        var2 = new NodeIterator(this.field_M);
         if (param0 != 89) {
           field_N = (String) null;
         }
-        var3 = (wl) (var2.c(param0 - 39));
+        var3 = (wl) (var2.first(param0 - 39));
         while (var3 != null) {
           if (var3.field_L) {
             return var3;
           }
-          var3 = (wl) (var2.b(50));
+          var3 = (wl) (var2.next(50));
         }
         return null;
     }
 
     final void j(int param0) {
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        bb var2 = new bb(this.field_M);
-        wl var3 = (wl) (var2.c(50));
+        NodeIterator var2 = new NodeIterator(this.field_M);
+        wl var3 = (wl) (var2.first(50));
         while (var3 != null) {
           var3.field_L = false;
-          var3 = (wl) (var2.b(50));
+          var3 = (wl) (var2.next(50));
         }
         this.field_E = null;
         if (param0 >= -85) {
@@ -74,15 +74,15 @@ final class gk extends nl {
         }
         int var4 = (-this.field_l + param0) / 2;
         int var5 = (-this.field_w + param1) / 2;
-        bb var6 = new bb(this.field_M);
-        wl var7 = (wl) (var6.c(50));
+        NodeIterator var6 = new NodeIterator(this.field_M);
+        wl var7 = (wl) (var6.first(50));
         if (param2 != -14) {
           this.a(-19, 39, (byte) 87, 16);
         }
         while (var7 != null) {
           var7.field_p = var7.field_p + var5;
           var7.field_B = var7.field_B + var4;
-          var7 = (wl) (var6.b(50));
+          var7 = (wl) (var6.next(50));
         }
         this.field_l = param0;
         this.field_w = param1;
@@ -117,13 +117,13 @@ final class gk extends nl {
 
     final void d(byte param0) {
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        bb var2 = new bb(this.field_M);
-        wl var3 = (wl) (var2.c(50));
+        NodeIterator var2 = new NodeIterator(this.field_M);
+        wl var3 = (wl) (var2.first(50));
         while (var3 != null) {
           if (var3.a((byte) -1)) {
             var3.unlink(-116);
           }
-          var3 = (wl) (var2.b(50));
+          var3 = (wl) (var2.next(50));
         }
         this.field_E = (kb) ((Object) this.a((byte) 89));
         int var4 = 94 / ((param0 - 30) / 60);
@@ -131,16 +131,16 @@ final class gk extends nl {
 
     final void k(int param0) {
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        bb var2 = new bb(this.field_M);
+        NodeIterator var2 = new NodeIterator(this.field_M);
         if (param0 != 0) {
           this.field_M = (NodeDeque) null;
         }
-        wl var3 = (wl) (var2.c(50));
+        wl var3 = (wl) (var2.first(50));
         while (var3 != null) {
           if (var3.k(122)) {
             var3.unlink(param0 + 37);
           }
-          var3 = (wl) (var2.b(param0 ^ 50));
+          var3 = (wl) (var2.next(param0 ^ 50));
         }
     }
 
@@ -179,13 +179,13 @@ final class gk extends nl {
 
     final kb a(int param0) {
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        bb var2 = new bb(this.field_M);
-        wl var3 = (wl) (var2.c(50));
+        NodeIterator var2 = new NodeIterator(this.field_M);
+        wl var3 = (wl) (var2.first(50));
         while (var3 != null) {
           if (var3.field_L) {
             return var3.e((byte) 119);
           }
-          var3 = (wl) (var2.b(param0 + 1898));
+          var3 = (wl) (var2.next(param0 + 1898));
         }
         if (param0 == -1848) {
           return null;

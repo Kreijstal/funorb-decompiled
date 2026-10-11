@@ -11,7 +11,7 @@ final class ic extends we {
     private hj[][] field_x;
     static RgbSprite field_db;
     static me field_T;
-    private uh field_bb;
+    private NodeHashTable field_bb;
     private int[] field_I;
     private hj[][] field_U;
     private int[] field_w;
@@ -663,13 +663,13 @@ final class ic extends we {
         RuntimeException decompiledCaughtException = null;
         var3 = SteelSentinels.obfuscationControl;
         try {
-          var2 = (ca) (this.field_bb.b(0));
+          var2 = (ca) (this.field_bb.first(0));
           if (param0 != 25) {
             return;
           }
           while (var2 != null) {
             var2.a((byte) 127);
-            var2 = (ca) (this.field_bb.a((byte) 118));
+            var2 = (ca) (this.field_bb.next((byte) 118));
             if (var3 != 0) {
               return;
             }
@@ -845,11 +845,11 @@ final class ic extends we {
           if (param2 != 21687) {
             this.e(-35);
           }
-          var8 = (ce) (param1.field_o.b(0));
+          var8 = (ce) (param1.field_o.first(0));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var8))) {
             var9 = (int)var8.key;
-            var10 = (ca) (this.field_bb.a((long)var9, param2 ^ 21706));
+            var10 = (ca) (this.field_bb.get((long)var9, param2 ^ 21706));
             if (var11 == 0) {
               boolean decompiledFrameRemainder0 = true;
               if (null == var10) {
@@ -859,14 +859,14 @@ final class ic extends we {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  this.field_bb.a((long)var9, var10, -1816);
+                  this.field_bb.put((long)var9, var10, -1816);
                 }
               }
               if ((decompiledFrameRemainder0) &&
                 (!var10.a(var8.field_s, param2 - 34109, param3, (int[]) (var7)))) {
                 var6_int = 0;
               }
-              var8 = (ce) (param1.field_o.a((byte) 94));
+              var8 = (ce) (param1.field_o.next((byte) 94));
               continue;
             }
             break;
@@ -1668,7 +1668,7 @@ final class ic extends we {
           if (stackIn_17_0 <= stackIn_17_1) {
             this.field_Q = -42;
           }
-          var5_ref = (ca) (this.field_bb.a((long)this.field_J[param2], 124));
+          var5_ref = (ca) (this.field_bb.get((long)this.field_J[param2], 124));
           if (null == var5_ref) {
             return;
           }
@@ -1939,7 +1939,7 @@ final class ic extends we {
               stackIn_39_1 = 1463;
             }
             if (stackIn_39_0 != stackIn_39_1) {
-              this.field_bb = (uh) null;
+              this.field_bb = (NodeHashTable) null;
             }
             this.field_X = var4;
             this.field_s = var3;
@@ -1982,7 +1982,7 @@ final class ic extends we {
         this.field_M = new ab();
         this.field_v = new ej(this);
         try {
-          this.field_bb = new uh(128);
+          this.field_bb = new NodeHashTable(128);
           this.a(-1, (byte) 109, 256);
           this.a(-1, true);
         } catch (RuntimeException runtimeException) {

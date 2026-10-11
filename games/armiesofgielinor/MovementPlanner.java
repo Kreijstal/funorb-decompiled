@@ -51,16 +51,16 @@ final class MovementPlanner {
         try {
           if (this.directAction &&
             this.actionAllowed) {
-            packet.h(32161, 65);
+            packet.writeCipheredOpcode(32161, 65);
             var4_int = 9;
-            packet.b(1, var4_int);
-            packet.b(1, 96);
-            packet.b(1, attackedUnit.tileX);
-            packet.b(1, attackedUnit.tileY);
-            packet.b(1, 0);
-            packet.b(1, 0);
-            packet.b(1, this.unit.tileX);
-            packet.b(1, this.unit.tileY);
+            packet.writeByte(1, var4_int);
+            packet.writeByte(1, 96);
+            packet.writeByte(1, attackedUnit.tileX);
+            packet.writeByte(1, attackedUnit.tileY);
+            packet.writeByte(1, 0);
+            packet.writeByte(1, 0);
+            packet.writeByte(1, this.unit.tileX);
+            packet.writeByte(1, this.unit.tileY);
             pd.a(this.targetDeltaX, this.targetDeltaY, packet, -100);
             stackIn_3_0 = var4_int;
             return stackIn_3_0;
@@ -85,15 +85,15 @@ final class MovementPlanner {
           if (obfuscationGuard > -24) {
             this.selectDirectAction(-36, 76, -91);
           }
-          packet.h(32161, 65);
-          packet.b(1, var4_intLifetime1);
-          packet.b(1, 96);
-          packet.b(1, attackedUnit.tileX);
-          packet.b(1, attackedUnit.tileY);
-          packet.b(1, (135 | this.pathLength) >> 8);
-          packet.b(1, 255 & this.pathLength);
-          packet.b(1, this.unit.tileX);
-          packet.b(1, this.unit.tileY);
+          packet.writeCipheredOpcode(32161, 65);
+          packet.writeByte(1, var4_intLifetime1);
+          packet.writeByte(1, 96);
+          packet.writeByte(1, attackedUnit.tileX);
+          packet.writeByte(1, attackedUnit.tileY);
+          packet.writeByte(1, (135 | this.pathLength) >> 8);
+          packet.writeByte(1, 255 & this.pathLength);
+          packet.writeByte(1, this.unit.tileX);
+          packet.writeByte(1, this.unit.tileY);
           jj.a((byte) -112, this.pathLength, packet, this.pathDirections);
           pd.a(this.targetDeltaX, this.targetDeltaY, packet, -73);
           stackIn_19_0 = var4_intLifetime1;
@@ -476,7 +476,7 @@ final class MovementPlanner {
           }
           var3_int = param0.field_e[0];
           var4 = param0.field_e[1];
-          sc.field_f[10].g(var3_int, var4);
+          TaggedMapData.field_f[10].g(var3_int, var4);
           param0.field_c[1] = this.targetY;
           param0.field_c[0] = this.targetX;
           param0.c(param1 + 9470341);
@@ -515,12 +515,12 @@ final class MovementPlanner {
                       var12 = -5;
                     }
                   }
-                  sc.field_f[this.pathDirections[var10] + var9].e(var3_int, var4, 128);
-                  sc.field_f[this.pathDirections[var10] + var9].e(var11 + var3_int, var4 + var12, 128);
-                  sc.field_f[this.pathDirections[var10] + var9].e(var3_int + (var11 << 1), (var12 << 1) + var4, 128);
+                  TaggedMapData.field_f[this.pathDirections[var10] + var9].e(var3_int, var4, 128);
+                  TaggedMapData.field_f[this.pathDirections[var10] + var9].e(var11 + var3_int, var4 + var12, 128);
+                  TaggedMapData.field_f[this.pathDirections[var10] + var9].e(var3_int + (var11 << 1), (var12 << 1) + var4, 128);
                   if (var10 < this.pathDirections.length - 1 &&
                     this.pathDirections[1 + var10] == this.pathDirections[var10]) {
-                    sc.field_f[this.pathDirections[var10] + var9].e(var3_int + 3 * var11, 3 * var12 + var4, 128);
+                    TaggedMapData.field_f[this.pathDirections[var10] + var9].e(var3_int + 3 * var11, 3 * var12 + var4, 128);
                   }
                   var4 = var4 + (var12 << 2);
                   var3_int = var3_int + (var11 << 2);
@@ -536,10 +536,10 @@ final class MovementPlanner {
                   }
                 }
               }
-              sc.field_f[var9 + 5].e(var5, var6, 128);
+              TaggedMapData.field_f[var9 + 5].e(var5, var6, 128);
             }
           } else {
-            stackIn_6_0 = sc.field_f;
+            stackIn_6_0 = TaggedMapData.field_f;
             stackIn_6_1 = 5;
             if (!this.actionAllowed) {
               stackIn_7_2 = 0;
@@ -1149,19 +1149,19 @@ final class MovementPlanner {
             this.actionAllowed) {
             var3_int = 6;
             if (this.spellId <= -1) {
-              packet.h(32161, 65);
-              packet.b(1, var3_int);
+              packet.writeCipheredOpcode(32161, 65);
+              packet.writeByte(1, var3_int);
             } else {
-              packet.h(32161, 65);
-              packet.b(1, var3_int + 4);
-              packet.b(1, 160);
-              packet.b(1, this.field_y);
-              packet.b(true, this.spellId);
+              packet.writeCipheredOpcode(32161, 65);
+              packet.writeByte(1, var3_int + 4);
+              packet.writeByte(1, 160);
+              packet.writeByte(1, this.field_y);
+              packet.writeShort(true, this.spellId);
             }
-            packet.b(1, 0);
-            packet.b(1, 0);
-            packet.b(1, this.unit.tileX);
-            packet.b(1, this.unit.tileY);
+            packet.writeByte(1, 0);
+            packet.writeByte(1, 0);
+            packet.writeByte(1, this.unit.tileX);
+            packet.writeByte(1, this.unit.tileY);
             pd.a(this.targetDeltaX, this.targetDeltaY, packet, 127);
             stackIn_7_0 = var3_int;
             return stackIn_7_0;
@@ -1172,20 +1172,20 @@ final class MovementPlanner {
           stackIn_14_0 = (0 < this.pathLength % 4) ? 1 : 0;
           var3_intLifetime1 = stackIn_14_0 + (6 + this.pathLength / 4);
           if (this.spellId <= -1) {
-            packet.h(32161, 65);
-            packet.b(1, var3_intLifetime1);
+            packet.writeCipheredOpcode(32161, 65);
+            packet.writeByte(1, var3_intLifetime1);
           } else {
-            packet.h(32161, 65);
-            packet.b(1, 4 + var3_intLifetime1);
-            packet.b(1, 160);
-            packet.b(1, this.field_y);
-            packet.b(true, this.spellId);
+            packet.writeCipheredOpcode(32161, 65);
+            packet.writeByte(1, 4 + var3_intLifetime1);
+            packet.writeByte(1, 160);
+            packet.writeByte(1, this.field_y);
+            packet.writeShort(true, this.spellId);
             this.battlefield.field_J = true;
           }
-          packet.b(1, this.pathLength >> 8 | 0);
-          packet.b(1, this.pathLength & 255);
-          packet.b(1, this.unit.tileX);
-          packet.b(1, this.unit.tileY);
+          packet.writeByte(1, this.pathLength >> 8 | 0);
+          packet.writeByte(1, this.pathLength & 255);
+          packet.writeByte(1, this.unit.tileX);
+          packet.writeByte(1, this.unit.tileY);
           jj.a((byte) -27, this.pathLength, packet, this.pathDirections);
           if (!obfuscationGuard) {
             this.resetCosts(-21);

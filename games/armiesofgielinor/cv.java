@@ -1338,7 +1338,7 @@ final class cv {
           var14.localPlayer = 0;
           try {
             ml.a(param0, (byte) -26);
-            var14.b(param3 ^ param3, new PacketBuffer(param1.field_c));
+            var14.readLegacySnapshot(param3 ^ param3, new PacketBuffer(param1.field_c));
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             runtimeException = decompiledCaughtException;

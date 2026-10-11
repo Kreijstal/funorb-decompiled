@@ -206,13 +206,13 @@ final class te {
             te.a((byte) -82);
           }
           var1 = rf.field_d;
-          var2 = var1.f((byte) -109);
+          var2 = var1.readUnsignedByte((byte) -109);
           if (var2 == 0) {
             if (db.field_h == null) {
               db.field_h = new dk(128);
               cc.field_gc = 0;
             }
-            stackIn_14_0 = (1 != var1.f((byte) -111)) ? 0 : 1;
+            stackIn_14_0 = (1 != var1.readUnsignedByte((byte) -111)) ? 0 : 1;
             var3_int = stackIn_14_0;
             var4_ref_String = var1.h(1);
             if (var3_int != 0) {
@@ -268,7 +268,7 @@ final class te {
             qc.field_P = 1;
             var3 = var1.h(1);
             nn.field_f = ((String) (var3)).intern();
-            var4 = var1.f((byte) -90);
+            var4 = var1.readUnsignedByte((byte) -90);
             in.a((byte) 46, var4);
             return;
           }

@@ -99,7 +99,7 @@ final class pf {
             return null;
           }
           var4 = new CampaignMission();
-          no.a(param2, var4, param0, -24721);
+          no.readTaggedFields(param2, var4, param0, -24721);
           var4.a(true);
           stackIn_4_0 = var4;
           return stackIn_4_0;

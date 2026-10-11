@@ -280,7 +280,7 @@ final class DamageEvent extends GameEvent {
           }
           var8 = lg.a(param0, (byte) -34);
           if (var8 == null) {
-            stackIn_10_0 = fo.a(4800, sc.field_d, new String[]{param0});
+            stackIn_10_0 = fo.a(4800, TaggedMapData.field_d, new String[]{param0});
             return stackIn_10_0;
           }
           wh.field_c.a(true, var8);
@@ -299,10 +299,10 @@ final class DamageEvent extends GameEvent {
           var8.c((byte) -76);
           dj.field_a = dj.field_a - 1;
           var9 = vl.field_n;
-          var9.h(32161, param2);
+          var9.writeCipheredOpcode(32161, param2);
           var9.position = var9.position + 1;
           var5 = var9.position;
-          var9.b(1, 1);
+          var9.writeByte(1, 1);
           var9.b(param0, 13851);
           var9.e(var9.position - var5, 5930);
           stackIn_17_0 = null;

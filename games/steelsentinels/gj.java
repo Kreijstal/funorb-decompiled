@@ -164,7 +164,7 @@ final class gj {
             var1[var2] = (RgbSprite) ((Object) new ek(un.field_n, eb.field_n, rl.field_a[var2], oa.field_M[var2], le.field_L[var2], ca.field_r[var2], var17));
           }
         }
-        uh.a(9324);
+        NodeHashTable.a(9324);
         return var1;
     }
 
@@ -178,12 +178,12 @@ final class gj {
               decompiledFrameRemainder0 = (rn.field_v == jd.field_sb);
               if ((decompiledFrameRemainder0) && (mm.field_g.position == 0 &&
                 10000L + vf.field_d < mm.a(param0 + 49))) {
-                mm.field_g.a(param1, (byte) -117);
+                mm.field_g.writeCipheredOpcode(param1, (byte) -117);
               }
             } else {
               if (mm.field_g.position == 0 &&
                 10000L + vf.field_d < mm.a(param0 + 49)) {
-                mm.field_g.a(param1, (byte) -117);
+                mm.field_g.writeCipheredOpcode(param1, (byte) -117);
               }
             }
             if (decompiledFrameRemainder0) {

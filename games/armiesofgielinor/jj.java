@@ -127,7 +127,7 @@ final class jj {
             param1 != 0) {
             var4_int = 0;
             while (param1 > 3) {
-              param2.b(1, param3[var4_int] | param3[var4_int + 1] << 2 | param3[2 + var4_int] << 4 | param3[3 + var4_int] << 6);
+              param2.writeByte(1, param3[var4_int] | param3[var4_int + 1] << 2 | param3[2 + var4_int] << 4 | param3[3 + var4_int] << 6);
               param1 -= 4;
               var4_int += 4;
             }
@@ -140,7 +140,7 @@ final class jj {
                   var5 = var5 | param3[var4_int + 2] << 4;
                 }
               }
-              param2.b(1, var5);
+              param2.writeByte(1, var5);
             }
             if (param0 > -17) {
               jj.b((byte) -104);
@@ -187,8 +187,8 @@ final class jj {
         try {
           var8 = new CipherPacketBuffer(param1.a("", 97, "logo.fo3d"));
           var10 = var8;
-          var3 = var10.k(0);
-          var10.o(90);
+          var3 = var10.readUnsignedByte(0);
+          var10.beginBitReading(90);
           if (param0 > -74) {
             return;
           }
@@ -198,7 +198,7 @@ final class jj {
           for (var4 = 0; var3 > var4; var4++) {
             iq.field_a[var4] = GameEvent.a(-86, var8);
           }
-          var10.n(-2);
+          var10.endBitReading(-2);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var9 < var3) {

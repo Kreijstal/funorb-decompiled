@@ -160,9 +160,9 @@ final class jk {
                   var2[var4] = (byte)-1;
                 }
               }
-              param1.a(24, (byte) -122, 0, var10);
+              param1.writeBytes(24, (byte) -122, 0, var10);
             } else {
-              param1.a(24, (byte) -122, 0, var10);
+              param1.writeBytes(24, (byte) -122, 0, var10);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

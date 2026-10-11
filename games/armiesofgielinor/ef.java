@@ -32,7 +32,7 @@ final class ef extends Exception {
         try {
           if (0 == we.field_f.field_yb) {
           } else {
-            if (bb.field_a) {
+            if (NodeIterator.field_a) {
             } else {
               if (!vi.field_d) {
                 hf.field_c = true;

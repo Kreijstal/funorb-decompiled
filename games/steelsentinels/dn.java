@@ -355,7 +355,7 @@ final class dn extends SceneWidget {
                 }
                 var2 = mm.a((byte) 9, "close");
                 if (var2 != null) {
-                  uh.field_f = jk.a(13, var2);
+                  NodeHashTable.field_f = jk.a(13, var2);
                 }
                 var2 = mm.a((byte) 9, "add_x_to_friends");
                 if (null != var2) {

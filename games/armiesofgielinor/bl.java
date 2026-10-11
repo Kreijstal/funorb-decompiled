@@ -25,10 +25,10 @@ final class bl {
         if (ei.field_b) {
           return null;
         }
-        if (ev.field_a < bb.field_c) {
+        if (ev.field_a < NodeIterator.field_c) {
           return null;
         }
-        if (!(ps.field_E + bb.field_c <= ev.field_a)) {
+        if (!(ps.field_E + NodeIterator.field_c <= ev.field_a)) {
           return ts.field_a;
         }
         return null;
@@ -107,7 +107,7 @@ final class bl {
         try {
           regionExit1: {
             var1 = mg.field_e;
-            var2 = ((PacketBuffer) ((Object) var1)).k(0);
+            var2 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
             if (var2 != 0 &&
               var2 != 1 &&
               var2 != 2 &&
@@ -130,21 +130,21 @@ final class bl {
                     var20.a((byte) 53, var21, var22);
                   }
                 }
-                var8_ref_of.field_Vb = vi.b(82) - (long)((PacketBuffer) ((Object) var1)).i(1);
-                var8_ref_of.field_Sb = ((PacketBuffer) ((Object) var1)).e((byte) -104);
+                var8_ref_of.field_Vb = vi.b(82) - (long)((PacketBuffer) ((Object) var1)).readInt(1);
+                var8_ref_of.field_Sb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                 var10 = ((PacketBuffer) ((Object) var1)).h(-27);
                 stackIn_16_0 = var8_ref_of;
                 stackIn_17_1 = ((1 & var10) != 0);
                 stackIn_16_0.field_Zb = stackIn_17_1;
                 var8_ref_of.field_Xb = var10 >> 1;
-                var8_ref_of.field_Qb = ((PacketBuffer) ((Object) var1)).k(0);
-                var8_ref_of.field_Ob = ((PacketBuffer) ((Object) var1)).k(0);
+                var8_ref_of.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
+                var8_ref_of.field_Ob = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
                 sf.a((byte) -115, var8_ref_of);
                 break regionExit1;
               }
               if (var2 == 6) {
                 var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
-                var5 = ((PacketBuffer) ((Object) var1)).k(0);
+                var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
                 var23 = DeployEvent.a((byte) 121, var3_long);
                 if ((var23 != null)) {
                   if (var23.field_Ub) {
@@ -170,7 +170,7 @@ final class bl {
                   vj.field_a = 0;
                 } else {
                   if (8 == var2) {
-                    var3 = ((PacketBuffer) ((Object) var1)).e((byte) -104);
+                    var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                     var4_ref_au = (au) (qm.field_J.a((byte) -27, (long)var3));
                     if (var4_ref_au == null) {
                       var4_ref_au = new au(tq.field_b);
@@ -180,8 +180,8 @@ final class bl {
                     rf.a(-107, var4_ref_au);
                   } else {
                     if (var2 == 9) {
-                      var3 = ((PacketBuffer) ((Object) var1)).e((byte) -104);
-                      var4 = ((PacketBuffer) ((Object) var1)).k(0);
+                      var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
+                      var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
                       var32 = (au) (qm.field_J.a((byte) -27, (long)var3));
                       if ((var32 != null)) {
                         if (var4 != 0) {
@@ -204,8 +204,8 @@ final class bl {
                         if (var2 != 11 &&
                           var2 != 12) {
                           if (var2 == 13) {
-                            var3 = ((PacketBuffer) ((Object) var1)).e((byte) -104);
-                            var4 = ((PacketBuffer) ((Object) var1)).k(0);
+                            var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
+                            var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
                             var17_ref = (au) (qm.field_J.a((byte) -27, (long)var3));
                             if ((var17_ref != null)) {
                               var17_ref.field_gc = false;
@@ -234,19 +234,19 @@ final class bl {
                                       eu.field_e.a(-1, var3_long, var7);
                                       vu.field_M.field_Ub = vu.field_M.field_Ub + 1;
                                     }
-                                    var7.field_Sb = ((PacketBuffer) ((Object) var1)).e((byte) -104);
+                                    var7.field_Sb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                                     var8 = ((PacketBuffer) ((Object) var1)).h(120);
                                     var7.field_Xb = var8 >> 1;
                                     stackIn_80_0 = var7;
                                     stackIn_81_1 = ((var8 & 1) != 0);
                                     stackIn_80_0.field_Zb = stackIn_81_1;
-                                    var7.field_Qb = ((PacketBuffer) ((Object) var1)).k(0);
-                                    var7.field_Ob = ((PacketBuffer) ((Object) var1)).k(0);
+                                    var7.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
+                                    var7.field_Ob = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
                                     wl.field_F.addLast((byte) -119, (IntrusiveNode) (var7));
                                     break regionExit1;
                                   case 19:
                                     var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
-                                    var5 = ((PacketBuffer) ((Object) var1)).k(0);
+                                    var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
                                     var14 = hr.a(var3_long, -111);
                                     var29 = var14;
                                     if (var14 == null) {
@@ -265,7 +265,7 @@ final class bl {
                                     hh.a(vu.field_M, false, var1, 83);
                                     break regionExit1;
                                   case 21:
-                                    var3 = ((PacketBuffer) ((Object) var1)).e((byte) -104);
+                                    var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                                     if (var3 == 0) {
                                       ph.field_d = 0L;
                                       break regionExit1;
@@ -273,7 +273,7 @@ final class bl {
                                     ph.field_d = vi.b(-59) + (long)var3;
                                     break regionExit1;
                                   case 22:
-                                    GlobalSpell.field_g = ((PacketBuffer) ((Object) var1)).e((byte) -104);
+                                    GlobalSpell.field_g = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                                     SummonAction.field_s = ((PacketBuffer) ((Object) var1)).h(95);
                                     break regionExit1;
                                   case 23:
@@ -286,7 +286,7 @@ final class bl {
                                 }
                               }
                               var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
-                              var5 = ((PacketBuffer) ((Object) var1)).k(0);
+                              var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
                               var13 = DeployEvent.a((byte) 121, var3_long);
                               var26 = var13;
                               if ((var13 != null)) {
@@ -321,7 +321,7 @@ final class bl {
                             }
                           }
                         } else {
-                          var3 = ((PacketBuffer) ((Object) var1)).e((byte) -104);
+                          var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                           var15 = (au) (qm.field_J.a((byte) -27, (long)var3));
                           var30 = var15;
                           if ((var15 != null)) {
@@ -364,7 +364,7 @@ final class bl {
               PopupPresentation.field_e = vu.field_M.field_rc;
             }
             if (4 == var2) {
-              var3 = ((PacketBuffer) ((Object) var1)).e((byte) -104);
+              var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
               vu.field_M = new au(tq.field_b);
               vu.field_M.a(true, (long)var3);
               hh.a(vu.field_M, false, var1, 97);
@@ -385,12 +385,12 @@ final class bl {
             } else {
               SpellCastAction.field_s = true;
               for (var3 = 0; var3 < ln.field_d.length; var3++) {
-                ln.field_d[var3] = ((PacketBuffer) ((Object) var1)).a((byte) -1);
+                ln.field_d[var3] = ((PacketBuffer) ((Object) var1)).readByte((byte) -1);
               }
-              nh.field_E = ((PacketBuffer) ((Object) var1)).k(0);
-              AiPlanningStrategy.field_b = ((PacketBuffer) ((Object) var1)).k(0);
+              nh.field_E = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
+              AiPlanningStrategy.field_b = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
               for (var3 = 0; tg.field_d.length > var3; var3++) {
-                tg.field_d[var3] = ((PacketBuffer) ((Object) var1)).a((byte) -106);
+                tg.field_d[var3] = ((PacketBuffer) ((Object) var1)).readByte((byte) -106);
               }
             }
           }

@@ -48,10 +48,10 @@ abstract class en extends tj implements eg {
           if (param1 != -24) {
             en.n(-95);
           }
-          var5 = new int[param0.k(param1 ^ -24)];
+          var5 = new int[param0.readUnsignedByte(param1 ^ -24)];
           var2 = var5;
           for (var3 = 0; var5.length > var3; var3++) {
-            var5[var3] = param0.k(0);
+            var5[var3] = param0.readUnsignedByte(0);
           }
           stackIn_7_0 = var2;
           return stackIn_7_0;

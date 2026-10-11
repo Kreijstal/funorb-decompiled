@@ -16,21 +16,21 @@ final class vh {
         try {
           var8 = mm.field_g;
           var9 = var8;
-          var9.a(param0, (byte) -117);
+          var9.writeCipheredOpcode(param0, (byte) -117);
           var9.position = var9.position + 1;
           var4 = var9.position;
-          var9.a((byte) 120, 1);
-          var9.d(param1.field_p, 36);
-          var9.d(param1.field_y, 20);
-          var9.d(param1.field_o, 29);
-          var9.b(true, param1.field_C);
-          var9.b(true, param1.field_u);
-          var9.b(true, param1.field_t);
-          var9.b(true, param1.field_w);
-          var9.a((byte) 123, param1.field_q.length);
+          var9.writeByte((byte) 120, 1);
+          var9.writeShort(param1.field_p, 36);
+          var9.writeShort(param1.field_y, 20);
+          var9.writeShort(param1.field_o, 29);
+          var9.writeInt(true, param1.field_C);
+          var9.writeInt(true, param1.field_u);
+          var9.writeInt(true, param1.field_t);
+          var9.writeInt(true, param1.field_w);
+          var9.writeByte((byte) 123, param1.field_q.length);
           int var5 = -14 / ((57 - param2) / 48);
           for (var6 = 0; var6 < param1.field_q.length; var6++) {
-            var8.b(true, param1.field_q[var6]);
+            var8.writeInt(true, param1.field_q[var6]);
           }
           var9.f(-103, var4);
           var9.b((byte) 99, -var4 + var9.position);

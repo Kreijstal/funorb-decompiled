@@ -34,7 +34,7 @@ final class ec {
           if (param3 != -13035) {
             field_c = (int[]) null;
           }
-          var4_int = param1.g(param3 + 12957, param0);
+          var4_int = param1.readBits(param3 + 12957, param0);
           if (var4_int == 0) {
             stackIn_5_0 = null;
             return (byte[]) (stackIn_5_0);
@@ -43,15 +43,15 @@ final class ec {
             param2.length != var4_int) {
             param2 = new byte[var4_int];
           }
-          var5 = param1.g(-119, 3);
-          var6 = (byte)param1.g(111, 8);
+          var5 = param1.readBits(-119, 3);
+          var6 = (byte)param1.readBits(111, 8);
           if (var5 <= 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param2[var7] = (byte)var6;
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param2[var7] = (byte)(param1.g(33, var5) + var6);
+              param2[var7] = (byte)(param1.readBits(33, var5) + var6);
             }
           }
           stackIn_18_0 = (byte[]) (param2);
@@ -78,10 +78,10 @@ final class ec {
 
     final static void a(int param0, boolean param1, long param2) {
         CipherPacketBuffer var4 = mm.field_g;
-        var4.a(param0, (byte) -117);
+        var4.writeCipheredOpcode(param0, (byte) -117);
         var4.position = var4.position + 1;
         int var5 = var4.position;
-        var4.a((byte) 127, 7);
+        var4.writeByte((byte) 127, 7);
         var4.b(-28875, param2);
         var4.b((byte) 105, -var5 + var4.position);
         if (param1) {

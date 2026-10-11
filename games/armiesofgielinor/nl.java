@@ -308,7 +308,7 @@ abstract class nl extends kb implements gw {
           mi.field_r = param0;
           jn.field_b = param8;
           ju.field_a = param9;
-          mt.field_d = param2;
+          TextCursor.field_d = param2;
           rs.field_p = fk.a("gameprivacy", (byte) -128, param7, "lobby");
           bp.field_d = fk.a("ratedgame", (byte) -125, param7, "lobby");
           mo.field_g = fk.a("opentome", (byte) -124, param7, "lobby");

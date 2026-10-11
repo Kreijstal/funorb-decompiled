@@ -178,7 +178,7 @@ final class lg {
             stackIn_7_0 = AiInfluenceMap.field_h.a(param0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = sc.field_b.a(param0);
+          stackIn_5_0 = TaggedMapData.field_b.a(param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

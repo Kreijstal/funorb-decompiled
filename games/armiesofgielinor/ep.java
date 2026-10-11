@@ -365,8 +365,8 @@ final class ep {
               jj.field_g = new hi((java.net.Socket) (kd.field_R.field_f), vq.field_c);
               var2 = new PacketBuffer(13);
               it.a(hq.field_e, false, MoveAttackRequest.field_x, var2, ek.field_e);
-              var2.b(1, 15);
-              var2.a((byte) -124, vq.field_d);
+              var2.writeByte(1, 15);
+              var2.writeInt((byte) -124, vq.field_d);
               jj.field_g.a(var2.payload, (byte) 20, 0, 13);
               ta.field_N = ta.field_N + 1;
               UnitInfoPopup.field_s = 30000L + vi.b(103);

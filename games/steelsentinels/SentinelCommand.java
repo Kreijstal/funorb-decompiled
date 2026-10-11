@@ -43,7 +43,7 @@ final class SentinelCommand extends IntrusiveNode {
             return stackIn_5_0;
           }
           var2 = new u(param1, rl.field_a, oa.field_M, le.field_L, ca.field_r, ba.field_d, dl.field_L);
-          uh.a(9324);
+          NodeHashTable.a(9324);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

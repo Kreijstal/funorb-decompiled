@@ -140,7 +140,7 @@ final class wi {
           while (var12 != null) {
             var13 = 0;
             if (var12.field_fb == null) {
-              var12.field_ac = new je(0L, ga.field_i);
+              var12.field_ac = new je(0L, IsaacRandom.field_i);
               var12.a(var12.field_ac, 106);
               var12.field_Tb = new je(0L, ws.field_P);
               if (fh.field_c) {

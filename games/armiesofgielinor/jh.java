@@ -43,8 +43,8 @@ final class jh extends mk {
           var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             var18 = new dc();
-            var18.field_p = param0.k(0);
-            var18.field_q = param0.i(1);
+            var18.field_p = param0.readUnsignedByte(0);
+            var18.field_q = param0.readInt(1);
             var18.field_m = new int[var18.field_p];
             var18.field_u = new byte[var18.field_p][][];
             if (param3 != -1) {
@@ -56,7 +56,7 @@ final class jh extends mk {
             var18.field_v = new int[var18.field_p];
             for (var5 = 0; var5 < var18.field_p; var5++) {
               try {
-                var6_int = param0.k(0);
+                var6_int = param0.readUnsignedByte(0);
                 if (0 != var6_int &&
                   var6_int != 1 &&
                   var6_int != 2) {
@@ -64,7 +64,7 @@ final class jh extends mk {
                     var6_int == 4) {
                     var20 = param0.g(1);
                     var21 = param0.g(param3 + 2);
-                    var9 = param0.k(0);
+                    var9 = param0.readUnsignedByte(0);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
                       var10[var11_int] = param0.g(GrowthEvent.b(param3, -2));
@@ -74,7 +74,7 @@ final class jh extends mk {
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param0.i(1);
+                        var13 = param0.readInt(1);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
                         param0.a(0, var13, 0, var22[var12_int]);
@@ -96,7 +96,7 @@ final class jh extends mk {
                   var16 = param0.g(1);
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param0.i(param3 + 2);
+                    var9 = param0.readInt(param3 + 2);
                   }
                   var18.field_t[var5] = var6_int;
                   var18.field_v[var5] = var9;
@@ -205,14 +205,14 @@ final class jh extends mk {
           if (!es.a(-122, 1)) {
             return false;
           }
-          fk.field_b = mg.field_e.k(0);
+          fk.field_b = mg.field_e.readUnsignedByte(0);
           mg.field_e.position = 0;
         }
         if (-2 == fk.field_b) {
           if (!es.a(-96, 2)) {
             return false;
           }
-          fk.field_b = mg.field_e.e((byte) -104);
+          fk.field_b = mg.field_e.readUnsignedShort((byte) -104);
           mg.field_e.position = 0;
         }
         return es.a(-105, fk.field_b);

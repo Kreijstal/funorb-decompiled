@@ -147,12 +147,12 @@ final class ActionSpell extends Spell {
               }
             }
             pg.field_d.field_g.a(65535, var7, param5, var6_int, param1);
-            vl.field_n.h(32161, 79);
-            vl.field_n.b(param0 - 3, var6_int);
-            vl.field_n.b(1, var7);
-            vl.field_n.b(true, param4);
-            vl.field_n.b(true, param5);
-            vl.field_n.b(true, param1);
+            vl.field_n.writeCipheredOpcode(32161, 79);
+            vl.field_n.writeByte(param0 - 3, var6_int);
+            vl.field_n.writeByte(1, var7);
+            vl.field_n.writeShort(true, param4);
+            vl.field_n.writeShort(true, param5);
+            vl.field_n.writeShort(true, param1);
             stackIn_32_0 = vl.field_n;
             stackIn_32_1 = 1;
             if (!param3) {
@@ -160,11 +160,11 @@ final class ActionSpell extends Spell {
             } else {
               stackIn_33_2 = 1;
             }
-            ((CipherPacketBuffer) (Object) stackIn_32_0).b(stackIn_32_1, stackIn_33_2);
-            vl.field_n.a((byte) -108, km.a(-59));
-            vl.field_n.a((byte) -124, oq.a(false));
-            vl.field_n.a((byte) -59, jr.a(false));
-            vl.field_n.a((byte) -50, RevivalEvent.g(0));
+            ((CipherPacketBuffer) (Object) stackIn_32_0).writeByte(stackIn_32_1, stackIn_33_2);
+            vl.field_n.writeInt((byte) -108, km.a(-59));
+            vl.field_n.writeInt((byte) -124, oq.a(false));
+            vl.field_n.writeInt((byte) -59, jr.a(false));
+            vl.field_n.writeInt((byte) -50, RevivalEvent.g(0));
           }
           qh.b((byte) 27);
           if (param0 == 4) {
@@ -289,7 +289,7 @@ final class ActionSpell extends Spell {
 
     final void writePayload(int obfuscationGuard, PacketBuffer packet) {
         try {
-          packet.b(true, this.spellId);
+          packet.writeShort(true, this.spellId);
           if (obfuscationGuard != -11637) {
             field_i = (String) null;
           }
@@ -300,10 +300,10 @@ final class ActionSpell extends Spell {
 
     final static void a(long param0, int param1, int param2) {
         CipherPacketBuffer var4 = vl.field_n;
-        var4.h(32161, param1);
+        var4.writeCipheredOpcode(32161, param1);
         var4.position = var4.position + 1;
         int var5 = var4.position;
-        var4.b(1, param2);
+        var4.writeByte(1, param2);
         var4.a(param0, param2 ^ 38359638);
         var4.e(-var5 + var4.position, 5930);
     }

@@ -29,16 +29,16 @@ final class cd {
         var8 = SteelSentinels.obfuscationControl;
         try {
           var14 = rf.field_d;
-          var2 = var14.f((byte) -117);
+          var2 = var14.readUnsignedByte((byte) -117);
           if (var2 == 0) {
             var11 = jg.a(true);
             var3 = var11;
             var10 = var11;
             var4 = var10;
             var5 = var14;
-            var6 = ((PacketBuffer) ((Object) var5)).f((byte) -121);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte((byte) -121);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((PacketBuffer) ((Object) var5)).i(0);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(0);
             }
             var13 = (hl) (ic.field_D.first(param0 ^ 13058));
             if (var13 == null) {

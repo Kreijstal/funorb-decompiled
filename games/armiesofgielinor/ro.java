@@ -292,7 +292,7 @@ class ro extends pt implements he {
           }
           return true;
         }
-        if (!mt.field_f) {
+        if (!TextCursor.field_f) {
           var7Lifetime1 = "[" + fo.a(param1 ^ -4859, cv.field_m, new String[]{vu.field_M.field_rc}) + "] ";
           var54Lifetime1 = var7Lifetime1 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var54Lifetime1);

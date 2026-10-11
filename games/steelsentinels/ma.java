@@ -193,15 +193,15 @@ class ma extends oa {
         CipherPacketBuffer var3 = null;
         try {
           var3 = mm.field_g;
-          var3.a(param0, (byte) -117);
-          var3.a((byte) 115, 5);
-          var3.a((byte) 110, 0);
+          var3.writeCipheredOpcode(param0, (byte) -117);
+          var3.writeByte((byte) 115, 5);
+          var3.writeByte((byte) 110, 0);
           if (param2 != -2864) {
             ma.a(false);
           }
-          var3.d(param1.field_C, param2 + 2960);
-          var3.a((byte) 125, param1.field_u);
-          var3.a((byte) 113, param1.field_w);
+          var3.writeShort(param1.field_C, param2 + 2960);
+          var3.writeByte((byte) 125, param1.field_u);
+          var3.writeByte((byte) 113, param1.field_w);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ma.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

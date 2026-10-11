@@ -19,12 +19,12 @@ final class ah {
 
     final static void b(byte param0) {
         if (param0 == 90) {
-          vl.field_n.h(32161, 71);
+          vl.field_n.writeCipheredOpcode(32161, 71);
           AiInfluenceMap.a(field_a.field_a, (byte) 100, vl.field_n, field_a.field_b);
           return;
         }
         ah.a((byte) 9, -104);
-        vl.field_n.h(32161, 71);
+        vl.field_n.writeCipheredOpcode(32161, 71);
         AiInfluenceMap.a(field_a.field_a, (byte) 100, vl.field_n, field_a.field_b);
     }
 

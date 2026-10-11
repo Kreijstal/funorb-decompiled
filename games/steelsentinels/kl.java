@@ -52,20 +52,20 @@ final class kl {
     }
 
     final void b(PacketBuffer param0) {
-        this.field_i = param0.f((byte) -128);
-        this.field_c = param0.i(0);
-        this.field_j = param0.i(0);
+        this.field_i = param0.readUnsignedByte((byte) -128);
+        this.field_c = param0.readInt(0);
+        this.field_j = param0.readInt(0);
         this.a(param0);
     }
 
     final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_g = param0.f((byte) -62);
+        this.field_g = param0.readUnsignedByte((byte) -62);
         this.field_f = new int[this.field_g];
         this.field_a = new int[this.field_g];
         for (var2 = 0; var2 < this.field_g; var2++) {
-          this.field_f[var2] = param0.c((byte) -60);
-          this.field_a[var2] = param0.c((byte) -60);
+          this.field_f[var2] = param0.readUnsignedShort((byte) -60);
+          this.field_a[var2] = param0.readUnsignedShort((byte) -60);
         }
     }
 }

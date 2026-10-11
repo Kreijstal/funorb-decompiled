@@ -15,19 +15,19 @@ final class te extends IntrusiveNode {
         CipherPacketBuffer var4 = vl.field_n;
         int var5Lifetime1;
         if (param2 >= 88) {
-          var4.h(32161, param0);
+          var4.writeCipheredOpcode(32161, param0);
           var4.position = var4.position + 1;
           var5 = var4.position;
-          var4.b(1, 7);
+          var4.writeByte(1, 7);
           var4.a(param1, 38359632);
           var4.e(-var5 + var4.position, 5930);
           return;
         }
         te.b(-87, -88);
-        var4.h(32161, param0);
+        var4.writeCipheredOpcode(32161, param0);
         var4.position = var4.position + 1;
         var5Lifetime1 = var4.position;
-        var4.b(1, 7);
+        var4.writeByte(1, 7);
         var4.a(param1, 38359632);
         var4.e(-var5Lifetime1 + var4.position, 5930);
     }
@@ -100,9 +100,9 @@ final class te extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = vl.field_n;
-          var3.h(32161, param0);
-          var3.b(1, param1.field_n);
-          var3.b(true, param1.field_m);
+          var3.writeCipheredOpcode(32161, param0);
+          var3.writeByte(1, param1.field_n);
+          var3.writeShort(true, param1.field_m);
           if (param2 == -17006) {
             return;
           }

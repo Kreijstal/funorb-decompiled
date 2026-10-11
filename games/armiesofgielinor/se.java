@@ -57,10 +57,10 @@ final class se {
             return stackIn_20_0;
           }
           var5 = vl.field_n;
-          var5.h(32161, param1);
+          var5.writeCipheredOpcode(32161, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.b(1, 2);
+          var5.writeByte(1, 2);
           var5.b(param0, 13851);
           var5.e(var5.position - var4, 5930);
           stackIn_22_0 = null;

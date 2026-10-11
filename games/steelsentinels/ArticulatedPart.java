@@ -1191,19 +1191,19 @@ final class ArticulatedPart extends DualNode {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          um.field_W = param1.c((byte) -60) << 5;
-          var2_int = param1.f((byte) -93);
+          um.field_W = param1.readUnsignedShort((byte) -60) << 5;
+          var2_int = param1.readUnsignedByte((byte) -93);
           um.field_W = um.field_W + (var2_int >> 3);
           pm.field_S = var2_int << 18 & 1835008;
-          pm.field_S = pm.field_S + (param1.c((byte) -60) << 2);
-          var2_intLifetime1 = param1.f((byte) -59);
+          pm.field_S = pm.field_S + (param1.readUnsignedShort((byte) -60) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte((byte) -59);
           pm.field_S = pm.field_S + (var2_intLifetime1 >> 6);
           uf.field_h = (63 & var2_intLifetime1) << 15;
-          uf.field_h = uf.field_h + (param1.f((byte) -65) << 7);
-          var2_intLifetime2 = param1.f((byte) -77);
+          uf.field_h = uf.field_h + (param1.readUnsignedByte((byte) -65) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte((byte) -77);
           lb.field_Tb = (1 & var2_intLifetime2) << 16;
           uf.field_h = uf.field_h + (var2_intLifetime2 >> 1);
-          lb.field_Tb = lb.field_Tb + param1.c((byte) -60);
+          lb.field_Tb = lb.field_Tb + param1.readUnsignedShort((byte) -60);
           if (param0 > -70) {
             field_M = (int[]) null;
           }

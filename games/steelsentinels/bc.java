@@ -90,22 +90,22 @@ final class bc extends jf implements qn {
           ne.field_y.position = 0;
           dj.field_k[param1] = (int)(oa.field_G >> 32);
           dj.field_k[3] = (int)oa.field_G;
-          ne.field_y.b(true, dj.field_k[0]);
-          ne.field_y.b(true, dj.field_k[1]);
-          ne.field_y.b(true, dj.field_k[2]);
-          ne.field_y.b(true, dj.field_k[3]);
+          ne.field_y.writeInt(true, dj.field_k[0]);
+          ne.field_y.writeInt(true, dj.field_k[1]);
+          ne.field_y.writeInt(true, dj.field_k[2]);
+          ne.field_y.writeInt(true, dj.field_k[3]);
           jk.a(125, ne.field_y);
-          ne.field_y.d(param4, 18);
+          ne.field_y.writeShort(param4, 18);
           param3.a(ne.field_y, false);
           mm.field_g.position = 0;
           if (!param0) {
-            mm.field_g.a((byte) 126, 16);
+            mm.field_g.writeByte((byte) 126, 16);
           } else {
-            mm.field_g.a((byte) 120, 18);
+            mm.field_g.writeByte((byte) 120, 18);
           }
           mm.field_g.position = mm.field_g.position + 2;
           var5_int = mm.field_g.position;
-          mm.field_g.b(true, kk.field_d);
+          mm.field_g.writeInt(true, kk.field_d);
           mm.field_g.b(-28875, og.field_b);
           var6 = 0;
           if (ki.field_ib) {
@@ -120,7 +120,7 @@ final class bc extends jf implements qn {
           if (on.field_k != null) {
             var6 = var6 | 16;
           }
-          mm.field_g.a((byte) 124, var6);
+          mm.field_g.writeByte((byte) 124, var6);
           var7 = SceneWidget.a(param1 ^ -82, Projectile.d((byte) -21));
           if (var7 == null) {
             var7 = "";

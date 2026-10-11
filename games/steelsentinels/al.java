@@ -91,8 +91,8 @@ abstract class al {
               al.a(-105, (byte) -107, 76, 3);
             }
             var18 = new ua();
-            var18.field_B = param2.f((byte) -80);
-            var18.field_q = param2.i(0);
+            var18.field_B = param2.readUnsignedByte((byte) -80);
+            var18.field_q = param2.readInt(0);
             var18.field_w = new int[var18.field_B];
             var18.field_F = new byte[var18.field_B][][];
             var18.field_K = new wj[var18.field_B];
@@ -101,7 +101,7 @@ abstract class al {
             var18.field_s = new int[var18.field_B];
             for (var5 = 0; var18.field_B > var5; var5++) {
               try {
-                var6_int = param2.f((byte) -117);
+                var6_int = param2.readUnsignedByte((byte) -117);
                 if (0 != var6_int &&
                   1 != var6_int &&
                   2 != var6_int) {
@@ -109,7 +109,7 @@ abstract class al {
                     4 == var6_int) {
                     var20 = param2.h(1);
                     var8 = param2.h(1);
-                    var9 = param2.f((byte) -84);
+                    var9 = param2.readUnsignedByte((byte) -84);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
                       var10[var11_int] = param2.h(1);
@@ -119,10 +119,10 @@ abstract class al {
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param2.i(0);
+                        var13 = param2.readInt(0);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param2.a(0, var21[var12_int], 28, var13);
+                        param2.readBytes(0, var21[var12_int], 28, var13);
                       }
                     }
                     var18.field_s[var5] = var6_int;
@@ -143,7 +143,7 @@ abstract class al {
                   var8 = dupTemp$1;
                   var9 = 0;
                   if (1 == var6_int) {
-                    var9 = param2.i(0);
+                    var9 = param2.readInt(0);
                   }
                   var18.field_s[var5] = var6_int;
                   var18.field_w[var5] = var9;

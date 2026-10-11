@@ -6,7 +6,7 @@ abstract class GameEvent extends IntrusiveNode {
     static String field_p;
     static String field_u;
     static NodeDeque field_r;
-    static int[] field_n;
+    static int[] bitMasks;
     boolean presentationComplete;
     static int field_v;
     Unit unit;
@@ -216,7 +216,7 @@ abstract class GameEvent extends IntrusiveNode {
         }
         field_p = null;
         field_l = null;
-        field_n = null;
+        bitMasks = null;
     }
 
     final boolean a(int param0, int param1, GameplayController param2, NodeDeque param3, int param4) {
@@ -281,7 +281,7 @@ abstract class GameEvent extends IntrusiveNode {
         int var9 = 0;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2_int = param1.g(-113, 8);
+          var2_int = param1.readBits(-113, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
@@ -289,16 +289,16 @@ abstract class GameEvent extends IntrusiveNode {
           var5 = 1 / ((param0 - 61) / 50);
           var4 = vq.a(param1, -2) ? 1 : 0;
           var6 = new pu();
-          var6.field_O = (short)param1.g(61, 16);
+          var6.field_O = (short)param1.readBits(61, 16);
           var6.field_z = SpellCastRequest.a(var6.field_z, 16, param1, 10064);
           var6.field_y = SpellCastRequest.a(var6.field_y, 16, param1, 10064);
           var6.field_o = SpellCastRequest.a(var6.field_o, 16, param1, 10064);
-          var6.field_q = (short)param1.g(107, 16);
+          var6.field_q = (short)param1.readBits(107, 16);
           var6.field_c = SpellCastRequest.a(var6.field_c, 16, param1, 10064);
           var6.field_j = SpellCastRequest.a(var6.field_j, 16, param1, 10064);
           var6.field_e = SpellCastRequest.a(var6.field_e, 16, param1, 10064);
           if (var3 != 0) {
-            var6.field_t = (short)param1.g(-100, 16);
+            var6.field_t = (short)param1.readBits(-100, 16);
             var6.field_l = SpellCastRequest.a(var6.field_l, 16, param1, 10064);
             var6.field_f = SpellCastRequest.a(var6.field_f, 16, param1, 10064);
             var6.field_x = SpellCastRequest.a(var6.field_x, 16, param1, 10064);
@@ -307,7 +307,7 @@ abstract class GameEvent extends IntrusiveNode {
             var6.field_d = SpellCastRequest.a(var6.field_d, 16, param1, 10064);
           }
           if (var4 != 0) {
-            param1.g(-102, 16);
+            param1.readBits(-102, 16);
             var6.field_r = SpellCastRequest.a(var6.field_r, 16, param1, 10064);
             var6.field_s = SpellCastRequest.a(var6.field_s, 16, param1, 10064);
             var6.field_A = SpellCastRequest.a(var6.field_A, 16, param1, 10064);
@@ -421,7 +421,7 @@ abstract class GameEvent extends IntrusiveNode {
         field_t = new int[]{2, 17, 18, 36, 37, 38, 6, 5, 50, 9};
         field_x = "Quick Chat Help";
         field_k = 4;
-        field_n = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
+        bitMasks = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
         field_q = new int[56];
         field_r = new NodeDeque();
         field_l = "Large screen sizes and high resolutions may cause the game to run slowly. If so, try using lower resolutions or screen sizes.";

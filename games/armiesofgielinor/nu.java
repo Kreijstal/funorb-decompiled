@@ -54,7 +54,7 @@ final class nu extends lk {
           var3 = var17;
           var4 = new CipherPacketBuffer(var23);
           var5 = var4.h((byte) 121);
-          var6 = var4.k(param0 - 23948);
+          var6 = var4.readUnsignedByte(param0 - 23948);
           var7 = var4.h((byte) 121);
           var8 = var4.h((byte) 121);
           var9 = ev.a(var4, (byte) -98);
@@ -65,7 +65,7 @@ final class nu extends lk {
           var10.field_s = var6;
           var10.field_p = var9;
           cd.field_a[param2] = var10;
-          var11 = var4.k(param0 - 23948);
+          var11 = var4.readUnsignedByte(param0 - 23948);
           var10.field_q = new sd[var11];
           for (var12 = 0; var11 > var12; var12++) {
             try {
@@ -76,7 +76,7 @@ final class nu extends lk {
               var13_ref_RuntimeException = decompiledCaughtException;
             }
           }
-          var12 = var4.k(0);
+          var12 = var4.readUnsignedByte(0);
           for (var13 = 0; var13 < var12; var13++) {
             em.a(var10, (byte) -7, var4);
           }
@@ -92,7 +92,7 @@ final class nu extends lk {
             }
             var14++;
           }
-          var13 = var4.k(0);
+          var13 = var4.readUnsignedByte(0);
           var10.field_n = new CampaignMission[var13];
           for (var14 = 0; var13 > var14; var14++) {
             try {
@@ -203,7 +203,7 @@ final class nu extends lk {
 
     private nu(int param0, int param1, int param2) {
         this.field_x = param0;
-        this.field_v = bb.field_b;
+        this.field_v = NodeIterator.field_b;
         this.field_u = param1;
         this.field_q = CipherPacketBuffer.field_t;
         this.field_y = param2;

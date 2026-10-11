@@ -1727,7 +1727,7 @@ final class GameplayController {
           if (!this.field_d) {
             throw new IllegalStateException();
           }
-          mm.field_g.a(60, (byte) -117);
+          mm.field_g.writeCipheredOpcode(60, (byte) -117);
           this.controlledSentinel = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3652,13 +3652,13 @@ final class GameplayController {
                 var9 = var11_ref_je.endTick;
               }
               if (this.field_d) {
-                mm.field_g.a(64, (byte) -117);
-                mm.field_g.a((byte) 127, 12);
-                mm.field_g.a((byte) 120, 0);
-                mm.field_g.b(true, var9);
-                mm.field_g.b(true, 0);
-                mm.field_g.b(true, 0);
-                mm.field_g.b(true, 0);
+                mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                mm.field_g.writeByte((byte) 127, 12);
+                mm.field_g.writeByte((byte) 120, 0);
+                mm.field_g.writeInt(true, var9);
+                mm.field_g.writeInt(true, 0);
+                mm.field_g.writeInt(true, 0);
+                mm.field_g.writeInt(true, 0);
                 if (var18 != 0) {
                   var10_ref_je.scheduled = true;
                 }
@@ -3854,13 +3854,13 @@ final class GameplayController {
             if (var9 < 500 + this.world.simulationTick) {
               var11_ref_je = new SentinelCommand(6, -1, var9);
               if (this.field_d) {
-                mm.field_g.a(64, (byte) -117);
-                mm.field_g.a((byte) 115, 6);
-                mm.field_g.a((byte) 122, -1);
-                mm.field_g.b(true, var9);
-                mm.field_g.b(true, 0);
-                mm.field_g.b(true, 0);
-                mm.field_g.b(true, 0);
+                mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                mm.field_g.writeByte((byte) 115, 6);
+                mm.field_g.writeByte((byte) 122, -1);
+                mm.field_g.writeInt(true, var9);
+                mm.field_g.writeInt(true, 0);
+                mm.field_g.writeInt(true, 0);
+                mm.field_g.writeInt(true, 0);
                 if (var18 != 0) {
                   var11_ref_je.scheduled = true;
                 }
@@ -3884,13 +3884,13 @@ final class GameplayController {
             if (var9 < 500 + this.world.simulationTick) {
               var11_ref_je = new SentinelCommand(6, 1, var9);
               if (this.field_d) {
-                mm.field_g.a(64, (byte) -117);
-                mm.field_g.a((byte) 122, 6);
-                mm.field_g.a((byte) 115, -1);
-                mm.field_g.b(true, var9);
-                mm.field_g.b(true, 0);
-                mm.field_g.b(true, 0);
-                mm.field_g.b(true, 0);
+                mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                mm.field_g.writeByte((byte) 122, 6);
+                mm.field_g.writeByte((byte) 115, -1);
+                mm.field_g.writeInt(true, var9);
+                mm.field_g.writeInt(true, 0);
+                mm.field_g.writeInt(true, 0);
+                mm.field_g.writeInt(true, 0);
                 if (var18 != 0) {
                   var11_ref_je.scheduled = true;
                 }
@@ -3914,13 +3914,13 @@ final class GameplayController {
             if (this.world.simulationTick + 500 > var9) {
               var11_ref_je = new SentinelCommand(6, 0, var9);
               if (this.field_d) {
-                mm.field_g.a(64, (byte) -117);
-                mm.field_g.a((byte) 122, 6);
-                mm.field_g.a((byte) 110, -1);
-                mm.field_g.b(true, var9);
-                mm.field_g.b(true, 0);
-                mm.field_g.b(true, 0);
-                mm.field_g.b(true, 0);
+                mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                mm.field_g.writeByte((byte) 122, 6);
+                mm.field_g.writeByte((byte) 110, -1);
+                mm.field_g.writeInt(true, var9);
+                mm.field_g.writeInt(true, 0);
+                mm.field_g.writeInt(true, 0);
+                mm.field_g.writeInt(true, 0);
                 if (var18 != 0) {
                   var11_ref_je.scheduled = true;
                 }
@@ -5501,7 +5501,7 @@ final class GameplayController {
           if (!this.field_d) {
             throw new IllegalStateException();
           }
-          mm.field_g.a(61, (byte) -117);
+          mm.field_g.writeCipheredOpcode(61, (byte) -117);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -8721,7 +8721,7 @@ final class GameplayController {
                   ka.field_V) {
                   var12_ref_ie = new IsaacRandom(new int[]{this.world.mapSeed, this.world.mapSeed});
                   var13_ref_int__ = new int[]{24000, 24000, 10000, 26000};
-                  var14Lifetime2 = var12_ref_ie.a(-95, var13_ref_int__.length);
+                  var14Lifetime2 = var12_ref_ie.nextIntBounded(-95, var13_ref_int__.length);
                   var15Lifetime2 = 256;
                   var16Lifetime2 = 500 * var15Lifetime2 >> 9;
                   var17 = -16000;
@@ -8744,7 +8744,7 @@ final class GameplayController {
                         ig.field_o[this.world.terrain.getTerrainType(81)][var14Lifetime2].c(var18 - var16Lifetime2 / 2, var19, var16Lifetime2, var16Lifetime2);
                       }
                       var17 = var17 + var13_ref_int__[var14Lifetime2];
-                      var14Lifetime2 = var14Lifetime2 + (var12_ref_ie.a(-107, var13_ref_int__.length - 1) + 1);
+                      var14Lifetime2 = var14Lifetime2 + (var12_ref_ie.nextIntBounded(-107, var13_ref_int__.length - 1) + 1);
                       if (var14Lifetime2 >= var13_ref_int__.length) {
                         var14Lifetime2 = var14Lifetime2 - var13_ref_int__.length;
                       }
@@ -8761,7 +8761,7 @@ final class GameplayController {
                     var19Lifetime2 = (var19Lifetime2 * 5 - 1200) / 20 + 80;
                     ig.field_o[this.world.terrain.getTerrainType(101)][var14Lifetime2].c(var18Lifetime2 - var16Lifetime2 / 2, var19Lifetime2, var16Lifetime2, var16Lifetime2);
                     var17Lifetime2 = var17Lifetime2 + var13_ref_int__[var14Lifetime2];
-                    var14Lifetime2 = var14Lifetime2 + (1 + var12_ref_ie.a(-122, -1 + var13_ref_int__.length));
+                    var14Lifetime2 = var14Lifetime2 + (1 + var12_ref_ie.nextIntBounded(-122, -1 + var13_ref_int__.length));
                     stackIn_88_0 = ~var13_ref_int__.length;
                     stackIn_88_1 = ~var14Lifetime2;
                     if (var27 != 0) {
@@ -9204,7 +9204,7 @@ final class GameplayController {
           if (!this.field_d) {
             throw new IllegalStateException();
           }
-          mm.field_g.a(59, (byte) -117);
+          mm.field_g.writeCipheredOpcode(59, (byte) -117);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -11630,13 +11630,13 @@ final class GameplayController {
                 var7.targetWorldY = param1;
                 var7.targetWorldX = param3;
                 if (this.field_d) {
-                  mm.field_g.a(64, (byte) -117);
-                  mm.field_g.a((byte) 126, 5);
-                  mm.field_g.a((byte) 112, this.field_u.playerId);
-                  mm.field_g.b(true, var5_int);
-                  mm.field_g.b(true, 0);
-                  mm.field_g.b(true, 0);
-                  mm.field_g.b(true, 0);
+                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                  mm.field_g.writeByte((byte) 126, 5);
+                  mm.field_g.writeByte((byte) 112, this.field_u.playerId);
+                  mm.field_g.writeInt(true, var5_int);
+                  mm.field_g.writeInt(true, 0);
+                  mm.field_g.writeInt(true, 0);
+                  mm.field_g.writeInt(true, 0);
                   if (var20 != 0) {
                     var7.scheduled = true;
                   }
@@ -11666,22 +11666,22 @@ final class GameplayController {
               if (!this.field_d) {
                 var7Lifetime3.scheduled = true;
                 if (var20 != 0) {
-                  mm.field_g.a(64, (byte) -117);
-                  mm.field_g.a((byte) 111, 12);
-                  mm.field_g.a((byte) 123, 0);
-                  mm.field_g.b(true, var5_intLifetime3);
-                  mm.field_g.b(true, 0);
-                  mm.field_g.b(true, 0);
-                  mm.field_g.b(true, 0);
+                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                  mm.field_g.writeByte((byte) 111, 12);
+                  mm.field_g.writeByte((byte) 123, 0);
+                  mm.field_g.writeInt(true, var5_intLifetime3);
+                  mm.field_g.writeInt(true, 0);
+                  mm.field_g.writeInt(true, 0);
+                  mm.field_g.writeInt(true, 0);
                 }
               } else {
-                mm.field_g.a(64, (byte) -117);
-                mm.field_g.a((byte) 111, 12);
-                mm.field_g.a((byte) 123, 0);
-                mm.field_g.b(true, var5_intLifetime3);
-                mm.field_g.b(true, 0);
-                mm.field_g.b(true, 0);
-                mm.field_g.b(true, 0);
+                mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                mm.field_g.writeByte((byte) 111, 12);
+                mm.field_g.writeByte((byte) 123, 0);
+                mm.field_g.writeInt(true, var5_intLifetime3);
+                mm.field_g.writeInt(true, 0);
+                mm.field_g.writeInt(true, 0);
+                mm.field_g.writeInt(true, 0);
               }
               if (di.field_g != -1 ||
                 this.world.field_c != 1) {
@@ -11878,13 +11878,13 @@ final class GameplayController {
                     break;
                   }
                   if (this.field_d) {
-                    mm.field_g.a(64, (byte) -117);
-                    mm.field_g.a((byte) 123, 0);
-                    mm.field_g.a((byte) 112, this.controlledSentinel.field_Xb[this.field_F]);
-                    mm.field_g.b(true, var5_intLifetime1);
-                    mm.field_g.b(true, var7Lifetime1.targetWorldX);
-                    mm.field_g.b(true, var7Lifetime1.targetWorldY);
-                    mm.field_g.b(true, var7Lifetime1.aimAngle);
+                    mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                    mm.field_g.writeByte((byte) 123, 0);
+                    mm.field_g.writeByte((byte) 112, this.controlledSentinel.field_Xb[this.field_F]);
+                    mm.field_g.writeInt(true, var5_intLifetime1);
+                    mm.field_g.writeInt(true, var7Lifetime1.targetWorldX);
+                    mm.field_g.writeInt(true, var7Lifetime1.targetWorldY);
+                    mm.field_g.writeInt(true, var7Lifetime1.aimAngle);
                     if (var20 != 0) {
                       var7Lifetime1.scheduled = true;
                     }
@@ -12198,13 +12198,13 @@ final class GameplayController {
                   decompiledSharedTail0 = (var20 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  mm.field_g.a(64, (byte) -117);
-                  mm.field_g.a((byte) 112, 3);
-                  mm.field_g.a((byte) 113, 0);
-                  mm.field_g.b(true, var6);
-                  mm.field_g.b(true, var8.targetWorldX);
-                  mm.field_g.b(true, var8.targetWorldY);
-                  mm.field_g.b(true, var8.aimAngle);
+                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                  mm.field_g.writeByte((byte) 112, 3);
+                  mm.field_g.writeByte((byte) 113, 0);
+                  mm.field_g.writeInt(true, var6);
+                  mm.field_g.writeInt(true, var8.targetWorldX);
+                  mm.field_g.writeInt(true, var8.targetWorldY);
+                  mm.field_g.writeInt(true, var8.aimAngle);
                 }
                 fc.a((byte) 67, 69, -1);
                 if (di.field_g != -1 ||
@@ -12478,22 +12478,22 @@ final class GameplayController {
                 if (!this.field_d) {
                   var7Lifetime4.scheduled = true;
                   if (var9 != 0) {
-                    mm.field_g.a(64, (byte) -117);
-                    mm.field_g.a((byte) 108, 6);
-                    mm.field_g.a((byte) 113, -1);
-                    mm.field_g.b(true, var4Lifetime1);
-                    mm.field_g.b(true, 0);
-                    mm.field_g.b(true, 0);
-                    mm.field_g.b(true, 0);
+                    mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                    mm.field_g.writeByte((byte) 108, 6);
+                    mm.field_g.writeByte((byte) 113, -1);
+                    mm.field_g.writeInt(true, var4Lifetime1);
+                    mm.field_g.writeInt(true, 0);
+                    mm.field_g.writeInt(true, 0);
+                    mm.field_g.writeInt(true, 0);
                   }
                 } else {
-                  mm.field_g.a(64, (byte) -117);
-                  mm.field_g.a((byte) 108, 6);
-                  mm.field_g.a((byte) 113, -1);
-                  mm.field_g.b(true, var4Lifetime1);
-                  mm.field_g.b(true, 0);
-                  mm.field_g.b(true, 0);
-                  mm.field_g.b(true, 0);
+                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                  mm.field_g.writeByte((byte) 108, 6);
+                  mm.field_g.writeByte((byte) 113, -1);
+                  mm.field_g.writeInt(true, var4Lifetime1);
+                  mm.field_g.writeInt(true, 0);
+                  mm.field_g.writeInt(true, 0);
+                  mm.field_g.writeInt(true, 0);
                 }
                 if (di.field_g != -1 ||
                   1 != this.world.field_c) {
@@ -12528,13 +12528,13 @@ final class GameplayController {
                 var6Lifetime2 == 0) {
                 var7Lifetime1Lifetime1 = new SentinelCommand(6, 1, var4Lifetime2);
                 if (this.field_d) {
-                  mm.field_g.a(64, (byte) -117);
-                  mm.field_g.a((byte) 110, 6);
-                  mm.field_g.a((byte) 112, 1);
-                  mm.field_g.b(true, var4Lifetime2);
-                  mm.field_g.b(true, 0);
-                  mm.field_g.b(true, 0);
-                  mm.field_g.b(true, 0);
+                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                  mm.field_g.writeByte((byte) 110, 6);
+                  mm.field_g.writeByte((byte) 112, 1);
+                  mm.field_g.writeInt(true, var4Lifetime2);
+                  mm.field_g.writeInt(true, 0);
+                  mm.field_g.writeInt(true, 0);
+                  mm.field_g.writeInt(true, 0);
                   if (var9 != 0) {
                     var7Lifetime1Lifetime1.scheduled = true;
                   }
@@ -12569,13 +12569,13 @@ final class GameplayController {
                 var6Lifetime3 == 0) {
                 var7Lifetime2 = new SentinelCommand(6, 0, var4Lifetime3);
                 if (this.field_d) {
-                  mm.field_g.a(64, (byte) -117);
-                  mm.field_g.a((byte) 115, 6);
-                  mm.field_g.a((byte) 110, 0);
-                  mm.field_g.b(true, var4Lifetime3);
-                  mm.field_g.b(true, 0);
-                  mm.field_g.b(true, 0);
-                  mm.field_g.b(true, 0);
+                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                  mm.field_g.writeByte((byte) 115, 6);
+                  mm.field_g.writeByte((byte) 110, 0);
+                  mm.field_g.writeInt(true, var4Lifetime3);
+                  mm.field_g.writeInt(true, 0);
+                  mm.field_g.writeInt(true, 0);
+                  mm.field_g.writeInt(true, 0);
                   if (var9 != 0) {
                     var7Lifetime2.scheduled = true;
                   }
@@ -12601,22 +12601,22 @@ final class GameplayController {
                 if (!this.field_d) {
                   var6_ref_je.scheduled = true;
                   if (var9 != 0) {
-                    mm.field_g.a(64, (byte) -117);
-                    mm.field_g.a((byte) 112, 7);
-                    mm.field_g.a((byte) 120, this.controlledSentinel.field_fb);
-                    mm.field_g.b(true, var4Lifetime4);
-                    mm.field_g.b(true, 0);
-                    mm.field_g.b(true, 0);
-                    mm.field_g.b(true, 0);
+                    mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                    mm.field_g.writeByte((byte) 112, 7);
+                    mm.field_g.writeByte((byte) 120, this.controlledSentinel.field_fb);
+                    mm.field_g.writeInt(true, var4Lifetime4);
+                    mm.field_g.writeInt(true, 0);
+                    mm.field_g.writeInt(true, 0);
+                    mm.field_g.writeInt(true, 0);
                   }
                 } else {
-                  mm.field_g.a(64, (byte) -117);
-                  mm.field_g.a((byte) 112, 7);
-                  mm.field_g.a((byte) 120, this.controlledSentinel.field_fb);
-                  mm.field_g.b(true, var4Lifetime4);
-                  mm.field_g.b(true, 0);
-                  mm.field_g.b(true, 0);
-                  mm.field_g.b(true, 0);
+                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                  mm.field_g.writeByte((byte) 112, 7);
+                  mm.field_g.writeByte((byte) 120, this.controlledSentinel.field_fb);
+                  mm.field_g.writeInt(true, var4Lifetime4);
+                  mm.field_g.writeInt(true, 0);
+                  mm.field_g.writeInt(true, 0);
+                  mm.field_g.writeInt(true, 0);
                 }
                 if (-1 != di.field_g ||
                   1 != this.world.field_c) {
@@ -12637,22 +12637,22 @@ final class GameplayController {
                 if (!this.field_d) {
                   var6_ref_jeLifetime1.scheduled = true;
                   if (var9 != 0) {
-                    mm.field_g.a(64, (byte) -117);
-                    mm.field_g.a((byte) 112, 8);
-                    mm.field_g.a((byte) 116, 0);
-                    mm.field_g.b(true, var4Lifetime5);
-                    mm.field_g.b(true, 0);
-                    mm.field_g.b(true, 0);
-                    mm.field_g.b(true, 0);
+                    mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                    mm.field_g.writeByte((byte) 112, 8);
+                    mm.field_g.writeByte((byte) 116, 0);
+                    mm.field_g.writeInt(true, var4Lifetime5);
+                    mm.field_g.writeInt(true, 0);
+                    mm.field_g.writeInt(true, 0);
+                    mm.field_g.writeInt(true, 0);
                   }
                 } else {
-                  mm.field_g.a(64, (byte) -117);
-                  mm.field_g.a((byte) 112, 8);
-                  mm.field_g.a((byte) 116, 0);
-                  mm.field_g.b(true, var4Lifetime5);
-                  mm.field_g.b(true, 0);
-                  mm.field_g.b(true, 0);
-                  mm.field_g.b(true, 0);
+                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                  mm.field_g.writeByte((byte) 112, 8);
+                  mm.field_g.writeByte((byte) 116, 0);
+                  mm.field_g.writeInt(true, var4Lifetime5);
+                  mm.field_g.writeInt(true, 0);
+                  mm.field_g.writeInt(true, 0);
+                  mm.field_g.writeInt(true, 0);
                 }
                 if (di.field_g != -1 ||
                   this.world.field_c != 1) {
@@ -12675,22 +12675,22 @@ final class GameplayController {
                 if (!this.field_d) {
                   var7Lifetime3.scheduled = true;
                   if (var9 != 0) {
-                    mm.field_g.a(64, (byte) -117);
-                    mm.field_g.a((byte) 116, var6Lifetime4);
-                    mm.field_g.a((byte) 123, 0);
-                    mm.field_g.b(true, var4Lifetime6);
-                    mm.field_g.b(true, 0);
-                    mm.field_g.b(true, 0);
-                    mm.field_g.b(true, 0);
+                    mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                    mm.field_g.writeByte((byte) 116, var6Lifetime4);
+                    mm.field_g.writeByte((byte) 123, 0);
+                    mm.field_g.writeInt(true, var4Lifetime6);
+                    mm.field_g.writeInt(true, 0);
+                    mm.field_g.writeInt(true, 0);
+                    mm.field_g.writeInt(true, 0);
                   }
                 } else {
-                  mm.field_g.a(64, (byte) -117);
-                  mm.field_g.a((byte) 116, var6Lifetime4);
-                  mm.field_g.a((byte) 123, 0);
-                  mm.field_g.b(true, var4Lifetime6);
-                  mm.field_g.b(true, 0);
-                  mm.field_g.b(true, 0);
-                  mm.field_g.b(true, 0);
+                  mm.field_g.writeCipheredOpcode(64, (byte) -117);
+                  mm.field_g.writeByte((byte) 116, var6Lifetime4);
+                  mm.field_g.writeByte((byte) 123, 0);
+                  mm.field_g.writeInt(true, var4Lifetime6);
+                  mm.field_g.writeInt(true, 0);
+                  mm.field_g.writeInt(true, 0);
+                  mm.field_g.writeInt(true, 0);
                 }
                 if (-1 == di.field_g &&
                   1 == this.world.field_c) {

@@ -30,7 +30,7 @@ final class rr {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.k(0);
+          var2_int = param1.readUnsignedByte(0);
           stackIn_3_0 = (1 != var2_int) ? 0 : 1;
           var3 = stackIn_3_0;
           if (param0 != -76) {

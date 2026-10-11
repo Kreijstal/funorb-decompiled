@@ -7,7 +7,7 @@ final class eu {
     private IntrusiveNode field_c;
     private NodeDeque field_b;
     static String field_d;
-    private bb field_f;
+    private NodeIterator field_f;
     static je field_g;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -192,15 +192,15 @@ final class eu {
 
     final void a(int param0) {
         if (param0 <= 11) {
-          this.field_f = (bb) null;
+          this.field_f = (NodeIterator) null;
         }
         this.c(10201);
         if (null != this.field_c) {
           this.field_f.a(this.field_c, true);
-          this.field_c = this.field_f.b(50);
+          this.field_c = this.field_f.next(50);
         }
         if (this.field_c == null) {
-          this.field_c = this.field_f.c(50);
+          this.field_c = this.field_f.first(50);
         }
     }
 
@@ -225,13 +225,13 @@ final class eu {
         this.c(10201);
         if (null != this.field_c) {
           this.field_f.a(false, this.field_c);
-          this.field_c = this.field_f.b((byte) -112);
+          this.field_c = this.field_f.previous((byte) -112);
         }
         if (param0 >= -50) {
           discarded$0 = this.c((byte) 124);
         }
         if (this.field_c == null) {
-          this.field_c = this.field_f.a(50);
+          this.field_c = this.field_f.last(50);
         }
     }
 
@@ -241,14 +241,14 @@ final class eu {
           discarded$0 = this.c((byte) -44);
         }
         if (this.c((byte) -33)) {
-          this.field_f = new bb(this.field_b);
+          this.field_f = new NodeIterator(this.field_b);
         }
     }
 
     eu(NodeDeque param0) {
         try {
           this.field_b = param0;
-          this.field_f = new bb(this.field_b);
+          this.field_f = new NodeIterator(this.field_b);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "eu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

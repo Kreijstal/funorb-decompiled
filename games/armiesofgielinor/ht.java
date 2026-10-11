@@ -38,9 +38,9 @@ final class ht {
         try {
           var14 = new PacketBuffer(param0);
           var4 = new PacketBuffer(param0);
-          var14.k(0);
+          var14.readUnsignedByte(0);
           var14.position = var14.position + 2;
-          var5 = var14.k(0);
+          var5 = var14.readUnsignedByte(0);
           var6 = 0;
           var7 = -1;
           var8 = -1;
@@ -50,7 +50,7 @@ final class ht {
             if (var10 == 0) {
               var7 = var9;
             }
-            var11 = var14.k(0);
+            var11 = var14.readUnsignedByte(0);
             if (var11 > 0) {
               if (var10 == 0) {
                 var8 = var9;

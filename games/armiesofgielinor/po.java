@@ -18,25 +18,25 @@ final class po {
         ac.field_k[183 + ls.a(CombatViewTransition.a(param7 - 1, param1 + 1, 2, (byte) -122), 1, CombatViewTransition.a(param7, param1 + 1, 2, (byte) -116), CombatViewTransition.a(-1 + param7, param1, 2, (byte) -114), -118)].b(param3, param2, param4, param5);
     }
 
-    final static sc a(CipherPacketBuffer param0, int param1) {
+    final static TaggedMapData readLengthPrefixedMap(CipherPacketBuffer packet, int obfuscationGuard) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        sc var3 = null;
-        sc stackIn_2_0 = null;
-        sc stackIn_4_0 = null;
+        TaggedMapData var3 = null;
+        TaggedMapData stackIn_2_0 = null;
+        TaggedMapData stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != -23920) {
-            stackIn_2_0 = (sc) null;
+          if (obfuscationGuard != -23920) {
+            stackIn_2_0 = (TaggedMapData) null;
             return stackIn_2_0;
           }
-          var2_int = param0.i(1);
-          param0.o(45);
-          var3 = ut.a(param0, (byte) -85, var2_int);
-          param0.n(-2);
+          var2_int = packet.readInt(1);
+          packet.beginBitReading(45);
+          var3 = ut.readTaggedMap(packet, (byte) -85, var2_int);
+          packet.endBitReading(-2);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -44,12 +44,12 @@ final class po {
           var2 = decompiledCaughtException;
           stackIn_7_0 = var2;
           stackIn_7_1 = new StringBuilder().append("po.C(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

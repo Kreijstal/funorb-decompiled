@@ -1454,147 +1454,147 @@ final class rc {
                 }
                 var2 = SentinelDesigner.a(91, "weaponnames,0");
                 if (var2 != null) {
-                  uh.field_i[0] = jk.a(13, var2);
+                  NodeHashTable.field_i[0] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 79, "weaponnames,1");
                 if (null != var2) {
-                  uh.field_i[1] = jk.a(bi.a(param0, 13), var2);
+                  NodeHashTable.field_i[1] = jk.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 72, "weaponnames,2");
                 if (null != var2) {
-                  uh.field_i[2] = jk.a(13, var2);
+                  NodeHashTable.field_i[2] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 88, "weaponnames,3");
                 if (var2 != null) {
-                  uh.field_i[3] = jk.a(13, var2);
+                  NodeHashTable.field_i[3] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 126, "weaponnames,4");
                 if (null != var2) {
-                  uh.field_i[4] = jk.a(13, var2);
+                  NodeHashTable.field_i[4] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(89, "weaponnames,5");
                 if (var2 != null) {
-                  uh.field_i[5] = jk.a(13, var2);
+                  NodeHashTable.field_i[5] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(101, "weaponnames,6");
                 if (var2 != null) {
-                  uh.field_i[6] = jk.a(13, var2);
+                  NodeHashTable.field_i[6] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 103, "weaponnames,7");
                 if (var2 != null) {
-                  uh.field_i[7] = jk.a(bi.a(param0, 13), var2);
+                  NodeHashTable.field_i[7] = jk.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 117, "weaponnames,8");
                 if (var2 != null) {
-                  uh.field_i[8] = jk.a(bi.a(param0, 13), var2);
+                  NodeHashTable.field_i[8] = jk.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(110, "weaponnames,9");
                 if (null != var2) {
-                  uh.field_i[9] = jk.a(param0 + 13, var2);
+                  NodeHashTable.field_i[9] = jk.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(124, "weaponnames,10");
                 if (var2 != null) {
-                  uh.field_i[10] = jk.a(13, var2);
+                  NodeHashTable.field_i[10] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(82, "weaponnames,11");
                 if (null != var2) {
-                  uh.field_i[11] = jk.a(13, var2);
+                  NodeHashTable.field_i[11] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 + 77, "weaponnames,12");
                 if (var2 != null) {
-                  uh.field_i[12] = jk.a(13, var2);
+                  NodeHashTable.field_i[12] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(110, "weaponnames,13");
                 if (null != var2) {
-                  uh.field_i[13] = jk.a(13, var2);
+                  NodeHashTable.field_i[13] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(104, "weaponnames,14");
                 if (var2 != null) {
-                  uh.field_i[14] = jk.a(bi.a(param0, 13), var2);
+                  NodeHashTable.field_i[14] = jk.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 93, "weaponnames,15");
                 if (null != var2) {
-                  uh.field_i[15] = jk.a(13, var2);
+                  NodeHashTable.field_i[15] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(54, "weaponnames,16");
                 if (null != var2) {
-                  uh.field_i[16] = jk.a(13, var2);
+                  NodeHashTable.field_i[16] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(118, "weaponnames,17");
                 if (var2 != null) {
-                  uh.field_i[17] = jk.a(param0 + 13, var2);
+                  NodeHashTable.field_i[17] = jk.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(113, "weaponnames,18");
                 if (null != var2) {
-                  uh.field_i[18] = jk.a(13, var2);
+                  NodeHashTable.field_i[18] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(98, "weaponnames,19");
                 if (var2 != null) {
-                  uh.field_i[19] = jk.a(13, var2);
+                  NodeHashTable.field_i[19] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(119, "weaponnames,20");
                 if (null != var2) {
-                  uh.field_i[20] = jk.a(13, var2);
+                  NodeHashTable.field_i[20] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(76, "weaponnames,21");
                 if (null != var2) {
-                  uh.field_i[21] = jk.a(13, var2);
+                  NodeHashTable.field_i[21] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(67, "weaponnames,22");
                 if (null != var2) {
-                  uh.field_i[22] = jk.a(param0 + 13, var2);
+                  NodeHashTable.field_i[22] = jk.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(58, "weaponnames,23");
                 if (var2 != null) {
-                  uh.field_i[23] = jk.a(13, var2);
+                  NodeHashTable.field_i[23] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(125, "weaponnames,24");
                 if (null != var2) {
-                  uh.field_i[24] = jk.a(bi.a(param0, 13), var2);
+                  NodeHashTable.field_i[24] = jk.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(118, "weaponnames,25");
                 if (null != var2) {
-                  uh.field_i[25] = jk.a(13, var2);
+                  NodeHashTable.field_i[25] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(120, "weaponnames,26");
                 if (var2 != null) {
-                  uh.field_i[26] = jk.a(bi.a(param0, 13), var2);
+                  NodeHashTable.field_i[26] = jk.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(107, "weaponnames,27");
                 if (null != var2) {
-                  uh.field_i[27] = jk.a(param0 + 13, var2);
+                  NodeHashTable.field_i[27] = jk.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(64, "weaponnames,28");
                 if (var2 != null) {
-                  uh.field_i[28] = jk.a(13, var2);
+                  NodeHashTable.field_i[28] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 120, "weaponnames,29");
                 if (var2 != null) {
-                  uh.field_i[29] = jk.a(13, var2);
+                  NodeHashTable.field_i[29] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(99, "weaponnames,30");
                 if (null != var2) {
-                  uh.field_i[30] = jk.a(13, var2);
+                  NodeHashTable.field_i[30] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(113, "weaponnames,31");
                 if (null != var2) {
-                  uh.field_i[31] = jk.a(13, var2);
+                  NodeHashTable.field_i[31] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(59, "weaponnames,32");
                 if (var2 != null) {
-                  uh.field_i[32] = jk.a(param0 + 13, var2);
+                  NodeHashTable.field_i[32] = jk.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(74, "weaponnames,33");
                 if (var2 != null) {
-                  uh.field_i[33] = jk.a(13, var2);
+                  NodeHashTable.field_i[33] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(114, "weaponnames,34");
                 if (null != var2) {
-                  uh.field_i[34] = jk.a(13, var2);
+                  NodeHashTable.field_i[34] = jk.a(13, var2);
                 }
                 var2 = SentinelDesigner.a(95, "weaponnames,35");
                 if (null != var2) {
-                  uh.field_i[35] = jk.a(bi.a(param0, 13), var2);
+                  NodeHashTable.field_i[35] = jk.a(bi.a(param0, 13), var2);
                 }
                 var2 = SentinelDesigner.a(58, "weaponkillstrings,0");
                 if (var2 != null) {
@@ -5117,7 +5117,7 @@ final class rc {
                 }
                 var2 = SentinelDesigner.a(122, "defaultmarker");
                 if (var2 != null) {
-                  uh.field_h = jk.a(param0 + 13, var2);
+                  NodeHashTable.field_h = jk.a(param0 + 13, var2);
                 }
                 var2 = SentinelDesigner.a(param0 ^ 127, "favouriteslottxt");
                 if (null != var2) {

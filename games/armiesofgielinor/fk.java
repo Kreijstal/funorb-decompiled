@@ -247,26 +247,26 @@ final class fk implements kh {
         RuntimeException decompiledCaughtException = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2_int = param1.g(114, 8);
+          var2_int = param1.readBits(114, 8);
           if (var2_int > 0) {
             stackIn_3_0 = null;
             return (bq[]) (stackIn_3_0);
           }
-          var3 = param1.g(55, param0);
+          var3 = param1.readBits(55, param0);
           var4 = new bq[var3];
           for (var5 = 0; var5 < var3; var5++) {
             if (vq.a(param1, -2)) {
               var6 = new bq();
-              param1.g(60, 24);
-              param1.g(-107, 24);
-              var6.field_e = param1.g(-115, 24);
-              param1.g(param0 - 127, 9);
-              param1.g(-105, 12);
-              param1.g(44, 12);
-              param1.g(125, 12);
+              param1.readBits(60, 24);
+              param1.readBits(-107, 24);
+              var6.field_e = param1.readBits(-115, 24);
+              param1.readBits(param0 - 127, 9);
+              param1.readBits(-105, 12);
+              param1.readBits(44, 12);
+              param1.readBits(125, 12);
               var4[var5] = var6;
             } else {
-              var6_int = param1.g(82, cu.a(3, var5 - 1));
+              var6_int = param1.readBits(82, cu.a(3, var5 - 1));
               var4[var5] = var4[var6_int];
             }
           }

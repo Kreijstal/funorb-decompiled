@@ -37,7 +37,7 @@ final class hk extends je {
         te var1Lifetime1;
         try {
           l.field_a.d();
-          mt.field_e.d();
+          TextCursor.field_e.d();
           qu.field_p = qu.field_p - 1;
           if (param0 != 128) {
             hk.k(94);

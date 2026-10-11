@@ -74,14 +74,14 @@ final class pm extends dl implements fd, ae {
           if (!ve.a((byte) -116, 1)) {
             return false;
           }
-          jg.field_f = rf.field_d.f((byte) -118);
+          jg.field_f = rf.field_d.readUnsignedByte((byte) -118);
           rf.field_d.position = 0;
         }
         if (-2 == jg.field_f) {
           if (!ve.a((byte) -103, 2)) {
             return false;
           }
-          jg.field_f = rf.field_d.c((byte) -60);
+          jg.field_f = rf.field_d.readUnsignedShort((byte) -60);
           rf.field_d.position = 0;
         }
         return ve.a((byte) -112, jg.field_f);
@@ -430,7 +430,7 @@ final class pm extends dl implements fd, ae {
         try {
           var13 = rf.field_d;
           var15 = var13;
-          var2 = var15.f((byte) -67);
+          var2 = var15.readUnsignedByte((byte) -67);
           var4 = 121 / ((40 - param0) / 53);
           var3 = (ud) (uf.field_f.first(13058));
           while (var3 != null) {
@@ -444,7 +444,7 @@ final class pm extends dl implements fd, ae {
             pm.m(81);
             return;
           }
-          var4Lifetime1 = var15.f((byte) -63);
+          var4Lifetime1 = var15.readUnsignedByte((byte) -63);
           if (var4Lifetime1 != 0) {
             ua.field_M[0] = g.field_l;
             var5 = var3.field_u;

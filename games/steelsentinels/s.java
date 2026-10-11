@@ -23,11 +23,11 @@ final class s implements qk {
 
     final static void a(PacketBuffer param0, int param1, int param2, int param3, int param4) {
         try {
-          param0.a((byte) 112, param1);
-          param0.d(17, 77);
-          param0.d(param3, 107);
-          param0.d(param2, param1 + 108);
-          param0.a((byte) 109, param4);
+          param0.writeByte((byte) 112, param1);
+          param0.writeShort(17, 77);
+          param0.writeShort(param3, 107);
+          param0.writeShort(param2, param1 + 108);
+          param0.writeByte((byte) 109, param4);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "s.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -256,7 +256,7 @@ final class s implements qk {
         RuntimeException var4 = null;
         var8 = SteelSentinels.obfuscationControl;
         try {
-          var4_int = param2.g(-118, param1);
+          var4_int = param2.readBits(-118, param1);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (short[]) (stackIn_3_0);
@@ -265,15 +265,15 @@ final class s implements qk {
             param0.length != var4_int) {
             param0 = new short[var4_int];
           }
-          var5 = param2.g(20, 4);
-          var6 = (short)param2.g(-91, 16);
+          var5 = param2.readBits(20, 4);
+          var6 = (short)param2.readBits(-91, 16);
           if (param3) {
             var9 = (CipherPacketBuffer) null;
             s.a((short[]) null, 108, (CipherPacketBuffer) null, false);
           }
           if (var5 > 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param0[var7] = (short)(var6 + param2.g(36, var5));
+              param0[var7] = (short)(var6 + param2.readBits(36, var5));
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {

@@ -85,11 +85,11 @@ final class MapLayout extends IntrusiveNode {
           if (param0 == null) {
             return;
           }
-          var4_int = param1.k(0);
+          var4_int = param1.readUnsignedByte(0);
           var5 = 0;
           for (var6 = 0; var4_int > var6; var6++) {
-            var7 = param1.k(0);
-            var8 = param1.k(0);
+            var7 = param1.readUnsignedByte(0);
+            var8 = param1.readUnsignedByte(0);
             if (var7 >= 0 &&
               this.mapWidth > var7 &&
               var8 >= 0 &&
@@ -148,7 +148,7 @@ final class MapLayout extends IntrusiveNode {
           var3_ref_vh = this.readHeader((byte) 126);
           for (var4 = 0; this.mapHeight > var4; var4++) {
             for (var5 = 0; this.mapWidth > var5; var5++) {
-              var8[var4][var5] = var3_ref_vh.k(0);
+              var8[var4][var5] = var3_ref_vh.readUnsignedByte(0);
             }
           }
         }
@@ -216,7 +216,7 @@ final class MapLayout extends IntrusiveNode {
 
     private final PacketBuffer readHeader(byte obfuscationGuard) {
         int var5 = 0;
-        sc var3_ref_sc;
+        TaggedMapData var3_ref_sc;
         int var3;
         MapTile[] var4;
         MapTile var6;
@@ -232,12 +232,12 @@ final class MapLayout extends IntrusiveNode {
           this.mapWidth = 72;
         }
         if (this.formatVersion == 2) {
-          var3_ref_sc = po.a(var8, obfuscationGuard - 24046);
-          this.mapWidth = var3_ref_sc.field_k;
-          this.field_p = var3_ref_sc.field_a;
-          this.mapHeight = var3_ref_sc.field_e;
-          this.decodedTiles = var3_ref_sc.field_c;
-          this.field_k = var3_ref_sc.field_j;
+          var3_ref_sc = po.readLengthPrefixedMap(var8, obfuscationGuard - 24046);
+          this.mapWidth = var3_ref_sc.mapWidth;
+          this.field_p = var3_ref_sc.mapTheme;
+          this.mapHeight = var3_ref_sc.mapHeight;
+          this.decodedTiles = var3_ref_sc.tiles;
+          this.field_k = var3_ref_sc.playerCount;
           var4 = this.decodedTiles;
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
@@ -245,19 +245,19 @@ final class MapLayout extends IntrusiveNode {
           }
           return null;
         }
-        this.mapWidth = var8.k(0);
-        this.mapHeight = var8.k(0);
+        this.mapWidth = var8.readUnsignedByte(0);
+        this.mapHeight = var8.readUnsignedByte(0);
         if (this.formatVersion < 1) {
           this.field_p = 0;
         } else {
-          this.field_p = var8.k(0);
+          this.field_p = var8.readUnsignedByte(0);
         }
         if (this.formatVersion >= 0) {
-          this.field_k = var8.k(0);
+          this.field_k = var8.readUnsignedByte(0);
         } else {
           var3 = this.mapWidth * this.mapHeight;
           var8.position = var8.position + var3;
-          this.field_k = var8.k(0);
+          this.field_k = var8.readUnsignedByte(0);
           var8.position = var8.position - (var3 + 1);
         }
         return (PacketBuffer) ((Object) var8);
@@ -393,20 +393,20 @@ final class MapLayout extends IntrusiveNode {
             throw new RuntimeException("Problem loading file");
           }
           for (var7_int = 0; var5 > var7_int; var7_int++) {
-            var6[var7_int] = var4.k(0);
+            var6[var7_int] = var4.readUnsignedByte(0);
           }
           var7 = this.a(var18, 22654, battlefield);
           if (0 <= this.formatVersion) {
-            var8 = var4.k(0);
+            var8 = var4.readUnsignedByte(0);
             var9 = new tf(0, 0);
             for (var10 = 0; var8 > var10; var10++) {
-              var11 = var4.k(0);
+              var11 = var4.readUnsignedByte(0);
               var12 = var11;
               if (var12 == 0) {
-                var9.field_n = var4.k(0);
-                var9.field_o = var4.k(0);
-                var12 = var4.k(0);
-                var13_int = var4.k(0);
+                var9.field_n = var4.readUnsignedByte(0);
+                var9.field_o = var4.readUnsignedByte(0);
+                var12 = var4.readUnsignedByte(0);
+                var13_int = var4.readUnsignedByte(0);
                 var14 = new Unit(var9.field_n, var9.field_o, var12);
                 var14.ownerPlayer = var13_int;
                 var7[var9.field_o * this.mapWidth + var9.field_n].occupant = var14;
@@ -414,9 +414,9 @@ final class MapLayout extends IntrusiveNode {
                 if (1 != var12) {
                   throw new RuntimeException("Illegal saved item type: " + var11);
                 }
-                var9.field_n = var4.k(0);
-                var9.field_o = var4.k(0);
-                var12 = var4.k(0);
+                var9.field_n = var4.readUnsignedByte(0);
+                var9.field_o = var4.readUnsignedByte(0);
+                var12 = var4.readUnsignedByte(0);
                 var13 = var7[var9.field_n + var9.field_o * this.mapWidth];
                 if (var13.isStructure(false) ||
                   var13.hasModifierFlag4((byte) -125)) {

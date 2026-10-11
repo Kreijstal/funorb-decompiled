@@ -101,7 +101,7 @@ final class sj {
         }
     }
 
-    final static int a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, CipherPacketBuffer param9) {
+    final static int readTieredSignedBits(int unusedTier3HalfRange, int tier2HalfRange, byte obfuscationGuard, int tier3Bits, int tier2Bits, int tier1HalfRange, int tier0HalfRange, int tier1Bits, int tier0Bits, CipherPacketBuffer packet) {
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -123,24 +123,24 @@ final class sj {
         int var12Lifetime1;
         int var12Lifetime2;
         try {
-          var10_int = 111 / ((25 - param2) / 56);
-          var10_intLifetime1 = param9.g(-108, 2);
+          var10_int = 111 / ((25 - obfuscationGuard) / 56);
+          var10_intLifetime1 = packet.readBits(-108, 2);
           if (0 == var10_intLifetime1) {
-            if (param8 == 0) {
+            if (tier0Bits == 0) {
               stackIn_4_0 = 0;
             } else {
-              stackIn_4_0 = UnitSpell.a(param9, param8, 1);
+              stackIn_4_0 = UnitSpell.readSignedBits(packet, tier0Bits, 1);
             }
             return stackIn_4_0;
           }
           if (1 == var10_intLifetime1) {
-            if (0 != param7) {
-              stackIn_9_0 = UnitSpell.a(param9, param7, 1);
+            if (0 != tier1Bits) {
+              stackIn_9_0 = UnitSpell.readSignedBits(packet, tier1Bits, 1);
             } else {
               stackIn_9_0 = 0;
             }
             var11 = stackIn_9_0;
-            var12 = param6;
+            var12 = tier0HalfRange;
             if (var11 >= 0) {
               stackIn_12_0 = var11 + var12;
             } else {
@@ -149,13 +149,13 @@ final class sj {
             return stackIn_12_0;
           }
           if (var10_intLifetime1 == 2) {
-            if (param4 != 0) {
-              stackIn_26_0 = UnitSpell.a(param9, param4, 1);
+            if (tier2Bits != 0) {
+              stackIn_26_0 = UnitSpell.readSignedBits(packet, tier2Bits, 1);
             } else {
               stackIn_26_0 = 0;
             }
             var11Lifetime1 = stackIn_26_0;
-            var12Lifetime1 = param5 + param6;
+            var12Lifetime1 = tier1HalfRange + tier0HalfRange;
             if (0 > var11Lifetime1) {
               stackIn_29_0 = var11Lifetime1 - var12Lifetime1;
             } else {
@@ -166,13 +166,13 @@ final class sj {
           if (3 != var10_intLifetime1) {
             throw new IllegalStateException();
           }
-          if (0 == param3) {
+          if (0 == tier3Bits) {
             stackIn_18_0 = 0;
           } else {
-            stackIn_18_0 = UnitSpell.a(param9, param3, 1);
+            stackIn_18_0 = UnitSpell.readSignedBits(packet, tier3Bits, 1);
           }
           var11Lifetime2 = stackIn_18_0;
-          var12Lifetime2 = param5 + param1 + param6;
+          var12Lifetime2 = tier1HalfRange + tier2HalfRange + tier0HalfRange;
           if (var11Lifetime2 < 0) {
             stackIn_21_0 = -var12Lifetime2 + var11Lifetime2;
           } else {
@@ -183,8 +183,8 @@ final class sj {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
           stackIn_32_0 = var10;
-          stackIn_32_1 = new StringBuilder().append("sj.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
-          if (param9 == null) {
+          stackIn_32_1 = new StringBuilder().append("sj.D(").append(unusedTier3HalfRange).append(',').append(tier2HalfRange).append(',').append(obfuscationGuard).append(',').append(tier3Bits).append(',').append(tier2Bits).append(',').append(tier1HalfRange).append(',').append(tier0HalfRange).append(',').append(tier1Bits).append(',').append(tier0Bits).append(',');
+          if (packet == null) {
             stackIn_33_2 = "null";
           } else {
             stackIn_33_2 = "{...}";
@@ -265,7 +265,7 @@ final class sj {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$eb6d2a313bbb(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, CipherPacketBuffer param9) {
+    final static int readTieredSignedBits(int unusedTier3HalfRange, int tier2HalfRange, int obfuscationGuard, int tier3Bits, int tier2Bits, int tier1HalfRange, int tier0HalfRange, int tier1Bits, int tier0Bits, CipherPacketBuffer packet) {
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -287,24 +287,24 @@ final class sj {
         int var12Lifetime1;
         int var12Lifetime2;
         try {
-          var10_int = 111 / ((25 - param2) / 56);
-          var10_intLifetime1 = param9.g(-108, 2);
+          var10_int = 111 / ((25 - obfuscationGuard) / 56);
+          var10_intLifetime1 = packet.readBits(-108, 2);
           if (0 == var10_intLifetime1) {
-            if (param8 == 0) {
+            if (tier0Bits == 0) {
               stackIn_4_0 = 0;
             } else {
-              stackIn_4_0 = UnitSpell.a(param9, param8, 1);
+              stackIn_4_0 = UnitSpell.readSignedBits(packet, tier0Bits, 1);
             }
             return stackIn_4_0;
           }
           if (1 == var10_intLifetime1) {
-            if (0 != param7) {
-              stackIn_9_0 = UnitSpell.a(param9, param7, 1);
+            if (0 != tier1Bits) {
+              stackIn_9_0 = UnitSpell.readSignedBits(packet, tier1Bits, 1);
             } else {
               stackIn_9_0 = 0;
             }
             var11 = stackIn_9_0;
-            var12 = param6;
+            var12 = tier0HalfRange;
             if (var11 >= 0) {
               stackIn_12_0 = var11 + var12;
             } else {
@@ -313,13 +313,13 @@ final class sj {
             return stackIn_12_0;
           }
           if (var10_intLifetime1 == 2) {
-            if (param4 != 0) {
-              stackIn_26_0 = UnitSpell.a(param9, param4, 1);
+            if (tier2Bits != 0) {
+              stackIn_26_0 = UnitSpell.readSignedBits(packet, tier2Bits, 1);
             } else {
               stackIn_26_0 = 0;
             }
             var11Lifetime1 = stackIn_26_0;
-            var12Lifetime1 = param5 + param6;
+            var12Lifetime1 = tier1HalfRange + tier0HalfRange;
             if (0 > var11Lifetime1) {
               stackIn_29_0 = var11Lifetime1 - var12Lifetime1;
             } else {
@@ -330,13 +330,13 @@ final class sj {
           if (3 != var10_intLifetime1) {
             throw new IllegalStateException();
           }
-          if (0 == param3) {
+          if (0 == tier3Bits) {
             stackIn_18_0 = 0;
           } else {
-            stackIn_18_0 = UnitSpell.a(param9, param3, 1);
+            stackIn_18_0 = UnitSpell.readSignedBits(packet, tier3Bits, 1);
           }
           var11Lifetime2 = stackIn_18_0;
-          var12Lifetime2 = param5 + param1 + param6;
+          var12Lifetime2 = tier1HalfRange + tier2HalfRange + tier0HalfRange;
           if (var11Lifetime2 < 0) {
             stackIn_21_0 = -var12Lifetime2 + var11Lifetime2;
           } else {
@@ -347,8 +347,8 @@ final class sj {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
           stackIn_32_0 = var10;
-          stackIn_32_1 = new StringBuilder().append("sj.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
-          if (param9 == null) {
+          stackIn_32_1 = new StringBuilder().append("sj.D(").append(unusedTier3HalfRange).append(',').append(tier2HalfRange).append(',').append(obfuscationGuard).append(',').append(tier3Bits).append(',').append(tier2Bits).append(',').append(tier1HalfRange).append(',').append(tier0HalfRange).append(',').append(tier1Bits).append(',').append(tier0Bits).append(',');
+          if (packet == null) {
             stackIn_33_2 = "null";
           } else {
             stackIn_33_2 = "{...}";

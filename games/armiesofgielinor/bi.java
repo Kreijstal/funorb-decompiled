@@ -15,7 +15,7 @@ abstract class bi {
 
     abstract void a(int param0, int param1, java.awt.Component param2, int param3);
 
-    final static og a(byte param0, mt param1) {
+    final static og a(byte param0, TextCursor param1) {
         int fieldTemp$2 = 0;
         StringBuilder discarded$3 = null;
         int var2_int = 0;
@@ -32,12 +32,12 @@ abstract class bi {
         int var4Lifetime1;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          fieldTemp$2 = param1.field_c - 1;
-          param1.field_c = param1.field_c - 1;
+          fieldTemp$2 = param1.position - 1;
+          param1.position = param1.position - 1;
           var2_int = fieldTemp$2;
           var3 = new StringBuilder();
-          while (!param1.a((byte) 16)) {
-            var4 = param1.b(-1);
+          while (!param1.isAtEnd((byte) 16)) {
+            var4 = param1.readCharacter(-1);
             if (!Character.isWhitespace((char) var4) &&
               var4 != 44 &&
               var4 != 40 &&
@@ -45,7 +45,7 @@ abstract class bi {
               discarded$3 = var3.append((char) var4);
               continue;
             }
-            param1.field_c = param1.field_c - 1;
+            param1.position = param1.position - 1;
             break;
           }
           if (param0 >= -106) {

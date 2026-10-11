@@ -431,7 +431,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                 pr.a((byte) 111, param2);
                 if (var4 != 0) {
                   SoftwareRaster.b();
-                  sc.a(240, 320, -121);
+                  TaggedMapData.a(240, 320, -121);
                   pt.a(0, 12, param2, 0);
                   var3_int = 0;
                   if (ol.field_z) {
@@ -443,7 +443,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               }
             } else {
               SoftwareRaster.b();
-              sc.a(240, 320, -121);
+              TaggedMapData.a(240, 320, -121);
               pt.a(0, 12, param2, 0);
               if (var4 != 0) {
                 var3_int = 0;

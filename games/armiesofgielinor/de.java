@@ -180,7 +180,7 @@ final class de {
                   } else {
                     if (var8Lifetime1 == 5) {
                       if (8 != var11.terrainType) {
-                        stackIn_311_0 = mt.field_g;
+                        stackIn_311_0 = TextCursor.field_g;
                         return stackIn_311_0;
                       }
                       if (param2.arePlayersAllied(var11.ownerPlayer, -16985, param5)) {
@@ -312,7 +312,7 @@ final class de {
                 }
                 if (param4 == 109 && (var7.unitType == 39 ||
                   51 == var7.unitType)) {
-                  stackIn_147_0 = sc.field_i;
+                  stackIn_147_0 = TaggedMapData.field_i;
                   return stackIn_147_0;
                 }
               }
@@ -502,7 +502,7 @@ final class de {
         field_d = null;
     }
 
-    final static int a(int param0, CipherPacketBuffer param1, int param2, int param3, int param4, int param5) {
+    final static int readTieredSignedInt(int obfuscationGuard, CipherPacketBuffer packet, int tier0Bits, int tier1Bits, int tier3Bits, int tier2Bits) {
         RuntimeException var6 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;
@@ -518,46 +518,46 @@ final class de {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 >= -86) {
+          if (obfuscationGuard >= -86) {
             stackIn_2_0 = 41;
             return stackIn_2_0;
           }
-          if (0 != param4) {
-            stackIn_6_0 = 1 << param4 - 1;
+          if (0 != tier3Bits) {
+            stackIn_6_0 = 1 << tier3Bits - 1;
           } else {
             stackIn_6_0 = 0;
           }
-          if (param5 != 0) {
-            stackIn_9_1 = 1 << param5 - 1;
+          if (tier2Bits != 0) {
+            stackIn_9_1 = 1 << tier2Bits - 1;
           } else {
             stackIn_9_1 = 0;
           }
           stackIn_11_2 = -65;
-          stackIn_11_3 = param4;
-          stackIn_11_4 = param5;
-          if (param3 != 0) {
-            stackIn_12_5 = 1 << param3 - 1;
+          stackIn_11_3 = tier3Bits;
+          stackIn_11_4 = tier2Bits;
+          if (tier1Bits != 0) {
+            stackIn_12_5 = 1 << tier1Bits - 1;
           } else {
             stackIn_12_5 = 0;
           }
-          if (param2 == 0) {
+          if (tier0Bits == 0) {
             stackIn_15_6 = 0;
           } else {
-            stackIn_15_6 = 1 << -1 + param2;
+            stackIn_15_6 = 1 << -1 + tier0Bits;
           }
-          stackIn_16_0 = sj.$cfr$intArgs$a$eb6d2a313bbb(stackIn_6_0, stackIn_9_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_12_5, stackIn_15_6, param3, param2, param1);
+          stackIn_16_0 = sj.readTieredSignedBits(stackIn_6_0, stackIn_9_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_12_5, stackIn_15_6, tier1Bits, tier0Bits, packet);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_19_0 = var6;
-          stackIn_19_1 = new StringBuilder().append("de.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_19_1 = new StringBuilder().append("de.B(").append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(tier0Bits).append(',').append(tier1Bits).append(',').append(tier3Bits).append(',').append(tier2Bits).append(')').toString());
         }
     }
 

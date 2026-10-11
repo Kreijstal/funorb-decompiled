@@ -191,35 +191,35 @@ final class DeployEvent extends GameEvent {
           if (param0 >= -67) {
             field_G = (String) null;
           }
-          stackIn_5_0 = sc.field_g.field_Kb;
+          stackIn_5_0 = TaggedMapData.field_g.field_Kb;
           stackIn_5_1 = param1;
           stackIn_5_2 = (2 + jn.field_d) * (3 * param2);
           stackIn_5_3 = jn.field_d + 2;
-          stackIn_6_4 = (pq.field_b == sc.field_g.field_Kb);
+          stackIn_6_4 = (pq.field_b == TaggedMapData.field_g.field_Kb);
           var3_int = ((dn) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, 0, 2) ? 1 : 0;
-          var4 = sc.field_g.field_Nb.field_fb;
+          var4 = TaggedMapData.field_g.field_Nb.field_fb;
           if (th.field_a != 2 &&
             th.field_a != 1) {
-            sc.field_g.field_Kb.field_Nb.field_X = ef.field_a;
-            sc.field_g.field_xb = false;
-            jm.a(sc.field_g.field_Nb, -71);
+            TaggedMapData.field_g.field_Kb.field_Nb.field_X = ef.field_a;
+            TaggedMapData.field_g.field_xb = false;
+            jm.a(TaggedMapData.field_g.field_Nb, -71);
             return;
           }
-          sc.field_g.field_Kb.field_Nb.field_X = null;
-          sc.field_g.field_xb = true;
+          TaggedMapData.field_g.field_Kb.field_Nb.field_X = null;
+          TaggedMapData.field_g.field_xb = true;
           var5 = null;
           var6 = (hl) (var4.first((byte) 110));
           while (var6 != null) {
             var7 = 0;
             if (var6.field_fb == null) {
-              var6.field_Qb = new je(0L, ga.field_i);
+              var6.field_Qb = new je(0L, IsaacRandom.field_i);
               var6.a(var6.field_Qb, 114);
-              var6.field_Jb = new je(0L, ga.field_i);
+              var6.field_Jb = new je(0L, IsaacRandom.field_i);
               var6.a(var6.field_Jb, 113);
               var6.i(-10027);
               var7 = 1;
             }
-            var6.field_gb = sc.field_g.field_Nb.field_gb;
+            var6.field_gb = TaggedMapData.field_g.field_Nb.field_gb;
             var6.field_Qb.a(jn.field_d, -20500, var6.field_gb, 0, 0);
             var8 = 0;
             if (null != var6.field_Nb &&
@@ -249,7 +249,7 @@ final class DeployEvent extends GameEvent {
               var6.field_nb = -var6.field_ob + jn.field_d;
             }
             if (var7 != 0) {
-              sc.field_g.field_Nb.a(var6, true, 2, (je) (var5));
+              TaggedMapData.field_g.field_Nb.a(var6, true, 2, (je) (var5));
             }
             if (var6.field_Jb != null &&
               var6.field_Jb.field_eb) {
@@ -261,7 +261,7 @@ final class DeployEvent extends GameEvent {
               }
             }
             if (0 != var6.field_yb) {
-              ng.a(sc.field_g.field_Kb, var6, (int[]) null, var6.field_Mb, -1, -110, -1, var6.field_Pb, 0L);
+              ng.a(TaggedMapData.field_g.field_Kb, var6, (int[]) null, var6.field_Mb, -1, -110, -1, var6.field_Pb, 0L);
               var16 = tn.field_Z;
               var13_ref_String = jm.field_u;
               var16.field_i.a(7, var13_ref_String, (byte) -100);
@@ -273,14 +273,14 @@ final class DeployEvent extends GameEvent {
             var5 = var6;
             var6 = (hl) (var4.next((byte) 123));
           }
-          if (0 != sc.field_g.field_Ib.field_yb) {
-            EffectPresentation.field_e = new oc(sc.field_g.field_Ib.field_V, sc.field_g.field_Ib.field_D, sc.field_g.field_Ib.field_gb, sc.field_g.field_Ib.field_ob, iw.field_o, kq.field_N, eq.field_h, eq.field_h);
+          if (0 != TaggedMapData.field_g.field_Ib.field_yb) {
+            EffectPresentation.field_e = new oc(TaggedMapData.field_g.field_Ib.field_V, TaggedMapData.field_g.field_Ib.field_D, TaggedMapData.field_g.field_Ib.field_gb, TaggedMapData.field_g.field_Ib.field_ob, iw.field_o, kq.field_N, eq.field_h, eq.field_h);
             ut.field_fb = 2;
           }
-          if (sc.field_g.field_Rb.field_yb == 0) {
+          if (TaggedMapData.field_g.field_Rb.field_yb == 0) {
             return;
           }
-          EffectPresentation.field_e = new oc(sc.field_g.field_Rb.field_V, sc.field_g.field_Rb.field_D, sc.field_g.field_Rb.field_gb, sc.field_g.field_Rb.field_ob, lw.field_kb, kq.field_N, eq.field_h, eq.field_h);
+          EffectPresentation.field_e = new oc(TaggedMapData.field_g.field_Rb.field_V, TaggedMapData.field_g.field_Rb.field_D, TaggedMapData.field_g.field_Rb.field_gb, TaggedMapData.field_g.field_Rb.field_ob, lw.field_kb, kq.field_N, eq.field_h, eq.field_h);
           ut.field_fb = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

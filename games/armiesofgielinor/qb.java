@@ -61,66 +61,66 @@ final class qb {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 == 1) {
-            var4_int = param1.e((byte) -104);
+            var4_int = param1.readUnsignedShort((byte) -104);
             this.field_d = new int[var4_int];
             for (var5 = 0; var4_int > var5; var5++) {
-              this.field_d[var5] = param1.e((byte) -104);
+              this.field_d[var5] = param1.readUnsignedShort((byte) -104);
             }
             this.field_a = new int[var4_int];
             for (var5 = 0; var5 < var4_int; var5++) {
-              this.field_a[var5] = param1.e((byte) -104);
+              this.field_a[var5] = param1.readUnsignedShort((byte) -104);
             }
             for (var5 = 0; var5 < var4_int; var5++) {
-              this.field_a[var5] = (param1.e((byte) -104) << 16) + this.field_a[var5];
+              this.field_a[var5] = (param1.readUnsignedShort((byte) -104) << 16) + this.field_a[var5];
             }
           } else {
             if (param2 == 2) {
-              this.field_g = param1.e((byte) -104);
+              this.field_g = param1.readUnsignedShort((byte) -104);
             } else {
               if (param2 == 3) {
-                var4_int = param1.k(0);
+                var4_int = param1.readUnsignedByte(0);
                 this.field_i = new int[1 + var4_int];
                 for (var5 = 0; var4_int > var5; var5++) {
-                  this.field_i[var5] = param1.k(0);
+                  this.field_i[var5] = param1.readUnsignedByte(0);
                 }
                 this.field_i[var4_int] = 9999999;
               } else {
                 if (param2 != 5) {
                   if (param2 == 6) {
-                    param1.e((byte) -104);
+                    param1.readUnsignedShort((byte) -104);
                   } else {
                     if (param2 == 7) {
-                      param1.e((byte) -104);
+                      param1.readUnsignedShort((byte) -104);
                     } else {
                       if (param2 == 8) {
-                        this.field_j = param1.k(0);
+                        this.field_j = param1.readUnsignedByte(0);
                         this.field_b = false;
                       } else {
                         if (9 != param2) {
                           if (param2 == 10) {
-                            param1.k(param0 ^ 0);
+                            param1.readUnsignedByte(param0 ^ 0);
                           } else {
                             if (param2 != 11) {
                               if (param2 == 12) {
-                                var4_int = param1.k(0);
+                                var4_int = param1.readUnsignedByte(0);
                                 for (var5 = 0; var5 < var4_int; var5++) {
-                                  param1.e((byte) -104);
+                                  param1.readUnsignedShort((byte) -104);
                                 }
                                 for (var5 = 0; var5 < var4_int; var5++) {
-                                  param1.e((byte) -104);
+                                  param1.readUnsignedShort((byte) -104);
                                 }
                               } else {
                                 if (param2 == 13) {
-                                  var4_int = param1.e((byte) -104);
+                                  var4_int = param1.readUnsignedShort((byte) -104);
                                   this.field_e = new int[var4_int][];
                                   for (var5 = 0; var4_int > var5; var5++) {
-                                    var6 = param1.k(param0 + 0);
+                                    var6 = param1.readUnsignedByte(param0 + 0);
                                     if (var6 > 0) {
                                       array$0 = new int[var6];
                                       this.field_e[var5] = array$0;
                                       this.field_e[var5][0] = param1.d((byte) -13);
                                       for (var7 = 1; var7 < var6; var7++) {
-                                        this.field_e[var5][var7] = param1.e((byte) -104);
+                                        this.field_e[var5][var7] = param1.readUnsignedShort((byte) -104);
                                       }
                                     }
                                   }
@@ -133,17 +133,17 @@ final class qb {
                                 }
                               }
                             } else {
-                              param1.k(param0 ^ 0);
+                              param1.readUnsignedByte(param0 ^ 0);
                             }
                           }
                         } else {
-                          param1.k(0);
+                          param1.readUnsignedByte(0);
                         }
                       }
                     }
                   }
                 } else {
-                  param1.k(param0 + 0);
+                  param1.readUnsignedByte(param0 + 0);
                 }
               }
             }
@@ -190,7 +190,7 @@ final class qb {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           while (true) {
-            var3_int = param1.k(0);
+            var3_int = param1.readUnsignedByte(0);
             if (var3_int != 0) {
               this.a(0, param1, var3_int);
               continue;

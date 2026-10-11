@@ -92,8 +92,8 @@ final class ka extends ug {
             ma.field_bb = null;
             if (param0 == null) {
               ne.field_y.position = 0;
-              ne.field_y.b(true, rb.field_g.nextInt());
-              ne.field_y.b(true, rb.field_g.nextInt());
+              ne.field_y.writeInt(true, rb.field_g.nextInt());
+              ne.field_y.writeInt(true, rb.field_g.nextInt());
               stackIn_16_0 = ne.field_y;
               stackIn_16_1 = 13588;
               if (!param5.a((byte) 51)) {
@@ -110,7 +110,7 @@ final class ka extends ug {
                 stackIn_20_2 = var8;
               }
               ((PacketBuffer) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
-              mm.field_g.a((byte) 127, 16);
+              mm.field_g.writeByte((byte) 127, 16);
               mm.field_g.position = mm.field_g.position + 1;
               var9 = mm.field_g.position;
               qi.a(jd.field_ib, ne.field_y, mm.field_g, qe.field_d, 5);
@@ -121,16 +121,16 @@ final class ka extends ug {
               if (param1) {
                 var9 = var9 | 1;
               }
-              ne.field_y.b(true, rb.field_g.nextInt());
-              ne.field_y.b(true, rb.field_g.nextInt());
+              ne.field_y.writeInt(true, rb.field_g.nextInt());
+              ne.field_y.writeInt(true, rb.field_g.nextInt());
               ne.field_y.a(13588, var15);
               ne.field_y.a(13588, var8);
               var17 = (CharSequence) ((Object) param0);
               ne.field_y.a(13588, pd.a(-105, var17));
-              ne.field_y.d(param4, 104);
-              ne.field_y.a((byte) 124, param2);
-              ne.field_y.a((byte) 117, var9);
-              mm.field_g.a((byte) 117, 18);
+              ne.field_y.writeShort(param4, 104);
+              ne.field_y.writeByte((byte) 124, param2);
+              ne.field_y.writeByte((byte) 117, var9);
+              mm.field_g.writeByte((byte) 117, 18);
               mm.field_g.position = mm.field_g.position + 2;
               var10 = mm.field_g.position;
               var11_ref_String = SceneWidget.a(-58, Projectile.d((byte) -21));
@@ -146,7 +146,7 @@ final class ka extends ug {
           }
           if (mc.field_c == rn.field_v &&
             ve.a((byte) -96, 1)) {
-            var9Lifetime1 = rf.field_d.f((byte) -62);
+            var9Lifetime1 = rf.field_d.readUnsignedByte((byte) -62);
             rf.field_d.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
@@ -179,7 +179,7 @@ final class ka extends ug {
           if (rn.field_v == bl.field_k) {
             var9Lifetime2 = 2;
             if (ve.a((byte) -128, var9Lifetime2)) {
-              var10Lifetime1 = rf.field_d.c((byte) -60);
+              var10Lifetime1 = rf.field_d.readUnsignedShort((byte) -60);
               rf.field_d.position = 0;
               if (ve.a((byte) -97, var10Lifetime1)) {
                 var11 = vh.field_d.length;

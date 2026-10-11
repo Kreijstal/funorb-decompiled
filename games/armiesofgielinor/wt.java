@@ -117,11 +117,11 @@ final class wt extends dr {
         stackIn_14_10 = (fj.field_c) || (gk.field_H);
         hb.a(stackIn_8_0, stackIn_8_1, stackIn_8_2, stackIn_9_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_12_7, stackIn_12_8, stackIn_12_9, stackIn_14_10, param1, var2 != 0, 0);
         if (cp.field_h) {
-          vl.field_n.h(32161, 64);
+          vl.field_n.writeCipheredOpcode(32161, 64);
           cp.field_h = false;
         }
         if (cg.field_a) {
-          vl.field_n.h(32161, 10);
+          vl.field_n.writeCipheredOpcode(32161, 10);
           cg.field_a = false;
         }
         if (mo.field_w) {

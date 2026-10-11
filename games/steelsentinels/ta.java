@@ -77,12 +77,12 @@ final class ta {
         }
         var10 = new PacketBuffer(this.field_h.d((byte) -65));
         var10.position = 5;
-        var3 = var10.f((byte) -103);
+        var3 = var10.readUnsignedByte((byte) -103);
         var10.position = var10.position + var3 * 72;
         var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
-        var10.a(0, var4, 28, var13.length);
+        var10.readBytes(0, var4, 28, var13.length);
         if (param0 != 64) {
           return false;
         }
@@ -138,10 +138,10 @@ final class ta {
               var10 = (rc) null;
               this.a((rc) null, (byte) 104, true, (rc) null, 114);
             }
-            var6_int = this.field_a.i(0);
-            var7 = this.field_a.i(0);
+            var6_int = this.field_a.readInt(0);
+            var7 = this.field_a.readInt(0);
             var14 = new byte[64];
-            this.field_a.a(0, var14, 28, 64);
+            this.field_a.readBytes(0, var14, 28, 64);
             var9 = new fi(param4, param3, param0, this.field_g, this.field_m, var6_int, var14, var7, param2);
             this.field_j[param4] = var9;
             stackIn_14_0 = var9;

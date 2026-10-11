@@ -64,12 +64,12 @@ final class tf extends IntrusiveNode {
         CipherPacketBuffer var3 = null;
         try {
           var3 = vl.field_n;
-          var3.h(32161, param0);
-          var3.b(1, param1.field_o);
+          var3.writeCipheredOpcode(32161, param0);
+          var3.writeByte(1, param1.field_o);
           if (param2 != -64) {
             field_m = (String) null;
           }
-          var3.b(1, param1.field_q);
+          var3.writeByte(1, param1.field_q);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "tf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

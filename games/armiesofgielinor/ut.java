@@ -387,25 +387,25 @@ final class ut extends sf implements he {
         }
     }
 
-    final static sc a(CipherPacketBuffer param0, byte param1, int param2) {
-        sc var3 = null;
+    final static TaggedMapData readTaggedMap(CipherPacketBuffer packet, byte obfuscationGuard, int recordBitLength) {
+        TaggedMapData var3 = null;
         RuntimeException var3_ref = null;
-        sc stackIn_5_0 = null;
-        sc stackIn_7_0 = null;
+        TaggedMapData stackIn_5_0 = null;
+        TaggedMapData stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 == 0) {
+          if (recordBitLength == 0) {
             return null;
           }
-          if (param1 > -31) {
-            stackIn_5_0 = (sc) null;
+          if (obfuscationGuard > -31) {
+            stackIn_5_0 = (TaggedMapData) null;
             return stackIn_5_0;
           }
-          var3 = new sc();
-          no.a(param0, var3, param2, -24721);
+          var3 = new TaggedMapData();
+          no.readTaggedFields(packet, var3, recordBitLength, -24721);
           stackIn_7_0 = var3;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -413,12 +413,12 @@ final class ut extends sf implements he {
           var3_ref = decompiledCaughtException;
           stackIn_10_0 = var3_ref;
           stackIn_10_1 = new StringBuilder().append("ut.G(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(',').append(recordBitLength).append(')').toString());
         }
     }
 

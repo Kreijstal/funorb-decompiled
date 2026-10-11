@@ -109,7 +109,7 @@ final class oh {
           fl.field_c = new SceneWidget(0L, (SceneWidget) null);
           PacketBuffer.field_o = new SceneWidget(0L, sj.field_J, uj.field_g);
           uj.field_j = new SceneWidget((long)param5, kb.field_b, sf.field_l);
-          mj.field_Sb = new kg(0L, new SceneWidget(0L, (SceneWidget) null), jk.field_h, uh.field_j);
+          mj.field_Sb = new kg(0L, new SceneWidget(0L, (SceneWidget) null), jk.field_h, NodeHashTable.field_j);
           fl.field_c.a(PacketBuffer.field_o, 119);
           if (rm.field_p) {
             fl.field_c.a(uj.field_j, 122);
@@ -131,7 +131,7 @@ final class oh {
           pe.field_v = new SceneWidget(0L, im.field_f, ij.field_Q);
           ql.field_Vb = new SceneWidget(0L, im.field_f, le.field_B);
           cf.field_w = new SceneWidget(0L, kb.field_b, bf.field_Bb);
-          rn.field_y = new kg(0L, new SceneWidget(0L, (SceneWidget) null), jk.field_h, uh.field_j);
+          rn.field_y = new kg(0L, new SceneWidget(0L, (SceneWidget) null), jk.field_h, NodeHashTable.field_j);
           qm.field_b = new SceneWidget(0L, rm.field_j, fc.field_f.toUpperCase());
           qm.field_b.field_T = rm.field_p;
           stackIn_5_0 = null;
@@ -181,7 +181,7 @@ final class oh {
           uj.field_e.field_Kb = 1;
           gl.field_u = new SceneWidget(0L, sj.field_J, uj.field_g);
           ei.field_p = new SceneWidget(0L, kb.field_b, sf.field_l);
-          gl.field_t = new kg(0L, new SceneWidget(0L, (SceneWidget) null), jk.field_h, uh.field_j);
+          gl.field_t = new kg(0L, new SceneWidget(0L, (SceneWidget) null), jk.field_h, NodeHashTable.field_j);
           m.field_i.a(uj.field_e, 120);
           m.field_i.a(gl.field_u, 127);
           if (rm.field_p) {
@@ -286,7 +286,7 @@ final class oh {
           gl.field_y.a(fk.field_q, 120);
           gl.field_y.a(rh.field_w, 120);
           tf.field_a = new SceneWidget(0L, od.field_g, he.field_j.toUpperCase());
-          ta.field_i = new SceneWidget(0L, b.field_e, uh.field_f.toUpperCase());
+          ta.field_i = new SceneWidget(0L, b.field_e, NodeHashTable.field_f.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -643,8 +643,8 @@ final class oh {
           cm.field_h.field_db = rl.a(param2, "lobby", "downbutton_mouseover", false);
           cm.field_h.field_fb = rl.a(param2, "lobby", "downbutton_mouseheld", false);
           cm.field_h.field_Ob = rl.a(param2, "lobby", "downbutton_disabled", false);
-          uh.field_j = new lb(0L, ue.field_f, cm.field_h, m.field_d, mj.field_Zb);
-          l.field_e = new ql(0L, (SceneWidget) null, jk.field_h, uh.field_j, gd.field_wb, (String) null, (String) null);
+          NodeHashTable.field_j = new lb(0L, ue.field_f, cm.field_h, m.field_d, mj.field_Zb);
+          l.field_e = new ql(0L, (SceneWidget) null, jk.field_h, NodeHashTable.field_j, gd.field_wb, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

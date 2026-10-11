@@ -64,14 +64,14 @@ final class rm {
         int var3;
         this.field_a = new hu[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.k(0);
+          var3 = param0.readUnsignedByte(0);
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.field_a[var2] = new hu();
             this.field_a[var2].a(param0);
           }
         }
-        this.field_c = param0.e((byte) -104);
-        this.field_b = param0.e((byte) -104);
+        this.field_c = param0.readUnsignedShort((byte) -104);
+        this.field_b = param0.readUnsignedShort((byte) -104);
     }
 }

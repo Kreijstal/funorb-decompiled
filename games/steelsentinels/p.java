@@ -246,7 +246,7 @@ final class p {
         this.field_e.b(param0);
         this.field_t = new kl();
         this.field_t.b(param0);
-        int var2 = param0.f((byte) -58);
+        int var2 = param0.readUnsignedByte((byte) -58);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_k = new kl();
@@ -254,7 +254,7 @@ final class p {
           this.field_c = new kl();
           this.field_c.b(param0);
         }
-        var2 = param0.f((byte) -70);
+        var2 = param0.readUnsignedByte((byte) -70);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_g = new kl();
@@ -262,7 +262,7 @@ final class p {
           this.field_h = new kl();
           this.field_h.b(param0);
         }
-        var2 = param0.f((byte) -120);
+        var2 = param0.readUnsignedByte((byte) -120);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_i = new kl();
@@ -281,8 +281,8 @@ final class p {
         }
         this.field_o = param0.b(false);
         this.field_p = param0.b(false);
-        this.field_y = param0.c((byte) -60);
-        this.field_j = param0.c((byte) -60);
+        this.field_y = param0.readUnsignedShort((byte) -60);
+        this.field_j = param0.readUnsignedShort((byte) -60);
         this.field_n = new mf();
         this.field_m = new kl();
         this.field_n.a(param0, this.field_m);

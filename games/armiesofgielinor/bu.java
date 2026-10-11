@@ -18,15 +18,15 @@ final class bu {
         int var5 = 0;
         try {
           var4_int = param1.packStatusFlags((byte) 117);
-          param3.b(param2 - 1, param1.bonusStrength & 31 | param1.ownerPlayer << 5);
-          param3.b(true, var4_int);
-          param3.b(1, param0 + param1.maximumStrength);
-          param3.b(1, param1.strength + param0);
-          param3.b(1, param1.statusEffectValue << 4 | param1.statusEffectType);
-          param3.b(1, param1.accessoryType);
-          param3.b(1, param1.equipmentDescriptor);
-          param3.b(param2 - 1, param1.immobilizedTurns);
-          param3.b(1, param1.movementFlags);
+          param3.writeByte(param2 - 1, param1.bonusStrength & 31 | param1.ownerPlayer << 5);
+          param3.writeShort(true, var4_int);
+          param3.writeByte(1, param0 + param1.maximumStrength);
+          param3.writeByte(1, param1.strength + param0);
+          param3.writeByte(1, param1.statusEffectValue << 4 | param1.statusEffectType);
+          param3.writeByte(1, param1.accessoryType);
+          param3.writeByte(1, param1.equipmentDescriptor);
+          param3.writeByte(param2 - 1, param1.immobilizedTurns);
+          param3.writeByte(1, param1.movementFlags);
           if ((4 & param1.movementFlags) != 0) {
             param3.a(param1.displayName, 413740432);
           }
@@ -37,14 +37,14 @@ final class bu {
           if (param1.objectiveId != 0) {
             var5 = var5 | 1;
           }
-          param3.b(1, var5);
+          param3.writeByte(1, var5);
           if (0 != (var5 & param2)) {
-            param3.b(1, param1.tag);
+            param3.writeByte(1, param1.tag);
           }
           if ((var5 & 1) == 0) {
             return;
           }
-          param3.b(1, param1.objectiveId);
+          param3.writeByte(1, param1.objectiveId);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

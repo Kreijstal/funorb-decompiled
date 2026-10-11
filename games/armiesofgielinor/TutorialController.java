@@ -288,8 +288,8 @@ final class TutorialController {
                     ev.field_d < 135 &&
                     pg.field_d.field_a[ev.field_d] < 250 &&
                     pg.field_d.a(uc.spellDefinitions[ev.field_d][0], (byte) 103)) {
-                    vl.field_n.h(32161, 70);
-                    vl.field_n.b(true, ev.field_d + 2000);
+                    vl.field_n.writeCipheredOpcode(32161, 70);
+                    vl.field_n.writeShort(true, ev.field_d + 2000);
                     pg.field_d.field_a[ev.field_d] = pg.field_d.field_a[ev.field_d] + 1;
                     this.a((byte) 48, ev.field_d, (rg) null);
                     ub.$cfr$intArgs$a$6d836999ad61(58, im.field_v[2]);
@@ -4026,8 +4026,8 @@ final class TutorialController {
                 (!(-1 >= li.field_q)) &&
                 (pg.field_d.field_b[1 + li.field_q] == 0) &&
                 (pg.field_d.a(50, (byte) 103))) {
-                vl.field_n.h(32161, 70);
-                vl.field_n.b(true, wp.field_H[li.field_q + 1][0]);
+                vl.field_n.writeCipheredOpcode(32161, 70);
+                vl.field_n.writeShort(true, wp.field_H[li.field_q + 1][0]);
                 var2_intLifetime2 = 0;
                 while (true) {
                   if (var2_intLifetime2 < wp.field_H[li.field_q + 1].length) {
@@ -4049,8 +4049,8 @@ final class TutorialController {
                   0 < pg.field_d.field_b[li.field_q + 1] &&
                   0 == (pg.field_d.field_b[1 + li.field_q] & 1 << jq.field_F) &&
                   pg.field_d.a((byte) 91) >= bw.unitDefinitions[jq.field_F][11])) {
-                  vl.field_n.h(32161, 70);
-                  vl.field_n.b(true, wp.field_H[1 + li.field_q][jq.field_F]);
+                  vl.field_n.writeCipheredOpcode(32161, 70);
+                  vl.field_n.writeShort(true, wp.field_H[1 + li.field_q][jq.field_F]);
                   ub.$cfr$intArgs$a$6d836999ad61(62, im.field_v[14]);
                   pg.field_d.field_b[1 + li.field_q] = oe.c(pg.field_d.field_b[1 + li.field_q], 1 << jq.field_F);
                 }
@@ -4060,8 +4060,8 @@ final class TutorialController {
                 0 < pg.field_d.field_b[li.field_q + 1] &&
                 0 == (pg.field_d.field_b[1 + li.field_q] & 1 << jq.field_F) &&
                 pg.field_d.a((byte) 91) >= bw.unitDefinitions[jq.field_F][11]) {
-                vl.field_n.h(32161, 70);
-                vl.field_n.b(true, wp.field_H[1 + li.field_q][jq.field_F]);
+                vl.field_n.writeCipheredOpcode(32161, 70);
+                vl.field_n.writeShort(true, wp.field_H[1 + li.field_q][jq.field_F]);
                 ub.$cfr$intArgs$a$6d836999ad61(62, im.field_v[14]);
                 pg.field_d.field_b[1 + li.field_q] = oe.c(pg.field_d.field_b[1 + li.field_q], 1 << jq.field_F);
               }

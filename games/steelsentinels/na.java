@@ -47,8 +47,8 @@ final class na {
             field_q = (String) null;
           }
           var10 = rf.field_d;
-          var2 = var10.f((byte) -87);
-          var3 = var10.f((byte) -80);
+          var2 = var10.readUnsignedByte((byte) -87);
+          var3 = var10.readUnsignedByte((byte) -80);
           if (var2 == 0) {
             var4 = (ob) (ti.field_z.first(13058));
             if (var4 == null) {
@@ -63,7 +63,7 @@ final class na {
               var5 = var12.length << 2;
             }
             for (var7 = 0; var7 < var5; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.f((byte) -54) << (ec.a(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte((byte) -54) << (ec.a(var7, 3) << 8));
             }
             var4.unlink(4);
             return;
@@ -132,10 +132,10 @@ final class na {
           field_q = (String) null;
         }
         CipherPacketBuffer var3 = mm.field_g;
-        var3.a(param1, (byte) -117);
-        var3.a((byte) 120, 3);
-        var3.a((byte) 110, 9);
-        var3.d(param2, 47);
+        var3.writeCipheredOpcode(param1, (byte) -117);
+        var3.writeByte((byte) 120, 3);
+        var3.writeByte((byte) 110, 9);
+        var3.writeShort(param2, 47);
     }
 
     public static void a(int param0) {

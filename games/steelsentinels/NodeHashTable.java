@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uh {
+final class NodeHashTable {
     static lb field_j;
     static int field_e;
     static String[] field_i;
-    private IntrusiveNode[] field_d;
+    private IntrusiveNode[] buckets;
     static String field_f;
     static String field_h;
     static RgbSprite field_k;
-    private IntrusiveNode field_a;
-    private int field_b;
-    private int field_g;
-    private IntrusiveNode field_c;
+    private IntrusiveNode iterationCursor;
+    private int bucketCount;
+    private int nextBucketIndex;
+    private IntrusiveNode lookupCursor;
 
     public static void c(int param0) {
         field_h = null;
@@ -23,23 +23,23 @@ final class uh {
         field_i = null;
     }
 
-    final void a(long param0, IntrusiveNode param1, int param2) {
+    final void put(long key, IntrusiveNode node, int obfuscationGuard) {
         IntrusiveNode var5 = null;
         try {
-          if (param1.previous != null) {
-            param1.unlink(param2 + 1820);
+          if (node.previous != null) {
+            node.unlink(obfuscationGuard + 1820);
           }
-          var5 = this.field_d[(int)(param0 & (long)(this.field_b - 1))];
-          param1.previous = var5.previous;
-          param1.next = var5;
-          param1.previous.next = param1;
-          if (param2 != -1816) {
-            uh.c(30);
+          var5 = this.buckets[(int)(key & (long)(this.bucketCount - 1))];
+          node.previous = var5.previous;
+          node.next = var5;
+          node.previous.next = node;
+          if (obfuscationGuard != -1816) {
+            NodeHashTable.c(30);
           }
-          param1.key = param0;
-          param1.next.previous = param1;
+          node.key = key;
+          node.next.previous = node;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "uh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "uh.C(" + key + ',' + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -56,7 +56,7 @@ final class uh {
         }
     }
 
-    final IntrusiveNode a(byte param0) {
+    final IntrusiveNode next(byte obfuscationGuard) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int fieldTemp$3 = 0;
@@ -69,75 +69,75 @@ final class uh {
         IntrusiveNode var38;
         IntrusiveNode var41;
         var3 = SteelSentinels.obfuscationControl;
-        if (param0 > 92) {
-          if (this.field_g <= 0) {
+        if (obfuscationGuard > 92) {
+          if (this.nextBucketIndex <= 0) {
             do {
-              if (this.field_g >= this.field_b) {
+              if (this.nextBucketIndex >= this.bucketCount) {
                 return null;
               }
-              fieldTemp$1 = this.field_g;
-              this.field_g = this.field_g + 1;
-              var37 = this.field_d[fieldTemp$1].next;
-            } while (this.field_d[this.field_g - 1] == var37);
-            this.field_a = var37.next;
+              fieldTemp$1 = this.nextBucketIndex;
+              this.nextBucketIndex = this.nextBucketIndex + 1;
+              var37 = this.buckets[fieldTemp$1].next;
+            } while (this.buckets[this.nextBucketIndex - 1] == var37);
+            this.iterationCursor = var37.next;
             return var37;
           }
-          if (this.field_a != this.field_d[-1 + this.field_g]) {
-            var41 = this.field_a;
-            this.field_a = var41.next;
+          if (this.iterationCursor != this.buckets[-1 + this.nextBucketIndex]) {
+            var41 = this.iterationCursor;
+            this.iterationCursor = var41.next;
             return var41;
           }
           do {
-            if (this.field_g >= this.field_b) {
+            if (this.nextBucketIndex >= this.bucketCount) {
               return null;
             }
-            fieldTemp$0 = this.field_g;
-            this.field_g = this.field_g + 1;
-            var38 = this.field_d[fieldTemp$0].next;
-          } while (this.field_d[this.field_g - 1] == var38);
-          this.field_a = var38.next;
+            fieldTemp$0 = this.nextBucketIndex;
+            this.nextBucketIndex = this.nextBucketIndex + 1;
+            var38 = this.buckets[fieldTemp$0].next;
+          } while (this.buckets[this.nextBucketIndex - 1] == var38);
+          this.iterationCursor = var38.next;
           return var38;
         }
-        this.field_d = (IntrusiveNode[]) null;
-        if (this.field_g <= 0) {
+        this.buckets = (IntrusiveNode[]) null;
+        if (this.nextBucketIndex <= 0) {
           do {
-            if (this.field_g >= this.field_b) {
+            if (this.nextBucketIndex >= this.bucketCount) {
               return null;
             }
-            fieldTemp$3 = this.field_g;
-            this.field_g = this.field_g + 1;
-            var4 = this.field_d[fieldTemp$3].next;
-          } while (this.field_d[this.field_g - 1] == var4);
-          this.field_a = var4.next;
+            fieldTemp$3 = this.nextBucketIndex;
+            this.nextBucketIndex = this.nextBucketIndex + 1;
+            var4 = this.buckets[fieldTemp$3].next;
+          } while (this.buckets[this.nextBucketIndex - 1] == var4);
+          this.iterationCursor = var4.next;
           return var4;
         }
-        if (this.field_a != this.field_d[-1 + this.field_g]) {
-          var35 = this.field_a;
-          this.field_a = var35.next;
+        if (this.iterationCursor != this.buckets[-1 + this.nextBucketIndex]) {
+          var35 = this.iterationCursor;
+          this.iterationCursor = var35.next;
           return var35;
         }
         do {
-          if (this.field_g >= this.field_b) {
+          if (this.nextBucketIndex >= this.bucketCount) {
             return null;
           }
-          fieldTemp$2 = this.field_g;
-          this.field_g = this.field_g + 1;
-          var36 = this.field_d[fieldTemp$2].next;
-        } while (this.field_d[this.field_g - 1] == var36);
-        this.field_a = var36.next;
+          fieldTemp$2 = this.nextBucketIndex;
+          this.nextBucketIndex = this.nextBucketIndex + 1;
+          var36 = this.buckets[fieldTemp$2].next;
+        } while (this.buckets[this.nextBucketIndex - 1] == var36);
+        this.iterationCursor = var36.next;
         return var36;
     }
 
-    final static int a(boolean param0, int param1, int param2) {
+    final static int nonnegativeRemainder(boolean obfuscationGuard, int value, int divisor) {
         int var3 = 0;
         int var3Lifetime1;
-        if (!param0) {
-          var3 = param1 >> 31 & -1 + param2;
-          return var3 + (param1 + (param1 >>> 31)) % param2;
+        if (!obfuscationGuard) {
+          var3 = value >> 31 & -1 + divisor;
+          return var3 + (value + (value >>> 31)) % divisor;
         }
         field_k = (RgbSprite) null;
-        var3Lifetime1 = param1 >> 31 & -1 + param2;
-        return var3Lifetime1 + (param1 + (param1 >>> 31)) % param2;
+        var3Lifetime1 = value >> 31 & -1 + divisor;
+        return var3Lifetime1 + (value + (value >>> 31)) % divisor;
     }
 
     final static void a(int param0, RgbSprite[] param1) {
@@ -170,26 +170,26 @@ final class uh {
         }
     }
 
-    final IntrusiveNode b(int param0) {
-        this.field_g = param0;
-        return this.a((byte) 113);
+    final IntrusiveNode first(int startBucketIndex) {
+        this.nextBucketIndex = startBucketIndex;
+        return this.next((byte) 113);
     }
 
-    final IntrusiveNode a(long param0, int param1) {
+    final IntrusiveNode get(long key, int obfuscationGuard) {
         IntrusiveNode var5 = null;
         int var6 = SteelSentinels.obfuscationControl;
-        IntrusiveNode var4 = this.field_d[(int)(param0 & (long)(-1 + this.field_b))];
-        this.field_c = var4.next;
-        while (var4 != this.field_c) {
-          if (~this.field_c.key == ~param0) {
-            var5 = this.field_c;
-            this.field_c = this.field_c.next;
+        IntrusiveNode var4 = this.buckets[(int)(key & (long)(-1 + this.bucketCount))];
+        this.lookupCursor = var4.next;
+        while (var4 != this.lookupCursor) {
+          if (~this.lookupCursor.key == ~key) {
+            var5 = this.lookupCursor;
+            this.lookupCursor = this.lookupCursor.next;
             return var5;
           }
-          this.field_c = this.field_c.next;
+          this.lookupCursor = this.lookupCursor.next;
         }
-        if (param1 >= 122) {
-          this.field_c = null;
+        if (obfuscationGuard >= 122) {
+          this.lookupCursor = null;
           return null;
         }
         return (IntrusiveNode) null;
@@ -240,17 +240,17 @@ final class uh {
         }
     }
 
-    uh(int param0) {
+    NodeHashTable(int bucketCount) {
         int var2 = 0;
         IntrusiveNode dupTemp$1 = null;
         IntrusiveNode var3;
-        this.field_g = 0;
-        this.field_d = new IntrusiveNode[param0];
-        this.field_b = param0;
-        for (var2 = 0; param0 > var2; var2++) {
+        this.nextBucketIndex = 0;
+        this.buckets = new IntrusiveNode[bucketCount];
+        this.bucketCount = bucketCount;
+        for (var2 = 0; bucketCount > var2; var2++) {
           dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
-          this.field_d[var2] = dupTemp$1;
+          this.buckets[var2] = dupTemp$1;
           var3.next = var3;
           var3.previous = var3;
         }

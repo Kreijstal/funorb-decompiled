@@ -2643,7 +2643,7 @@ final class Sentinel extends IntrusiveNode {
             } else {
               var21.field_M = 7;
             }
-            var21.field_z = this.world.random.a(103, 25) + 25;
+            var21.field_z = this.world.random.nextIntBounded(103, 25) + 25;
           }
           if (var21.field_E) {
             this.field_q = -200;

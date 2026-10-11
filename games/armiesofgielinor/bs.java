@@ -33,7 +33,7 @@ final class bs {
           if (param0.payload[param0.position] == we.field_a[0] &&
             param0.payload[param0.position + 1] == we.field_a[1] &&
             we.field_a[2] == param0.payload[param0.position + 2]) {
-            param0.i(1);
+            param0.readInt(1);
           } else {
             var2_int = -1;
           }

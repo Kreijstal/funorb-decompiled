@@ -638,7 +638,7 @@ public final class SteelSentinels extends FunOrbClient {
           pf.field_b = rl.a(DualNode.field_x, "basic", "lobby_icon", false);
           vc.field_e = cf.a("statbars", "basic", (byte) -13, DualNode.field_x);
           pd.field_Z = cf.a("tags", "basic", (byte) -50, DualNode.field_x);
-          uh.field_k = rl.a(DualNode.field_x, "basic", "tagborder", false);
+          NodeHashTable.field_k = rl.a(DualNode.field_x, "basic", "tagborder", false);
           qg.field_f = cf.a("movekeys", "basic", (byte) -38, DualNode.field_x);
           bc.field_wb = rl.a(DualNode.field_x, "basic", "shiftkey", false);
           da.field_e = cf.a("config_tabs", "basic", (byte) -33, DualNode.field_x);
@@ -2087,21 +2087,21 @@ public final class SteelSentinels extends FunOrbClient {
             Sprite.field_k = true;
           }
           if (-4 == vb.field_g) {
-            mm.field_g.a(63, (byte) -117);
+            mm.field_g.writeCipheredOpcode(63, (byte) -117);
             mm.field_g.position = mm.field_g.position + 1;
             var3_int = mm.field_g.position;
-            mm.field_g.a((byte) 124, uc.field_b.length);
+            mm.field_g.writeByte((byte) 124, uc.field_b.length);
             var4 = 0;
             while (true) {
               if (var4 < uc.field_b.length) {
-                mm.field_g.a((byte) 127, uc.field_b[var4]);
+                mm.field_g.writeByte((byte) 127, uc.field_b[var4]);
                 var4++;
                 if (var8 == 0) {
                   continue;
                 }
               } else {
                 mm.field_g.b((byte) 111, mm.field_g.position - var3_int);
-                mm.field_g.a(9, (byte) -117);
+                mm.field_g.writeCipheredOpcode(9, (byte) -117);
                 rc.field_n = true;
                 vb.field_g = pm.field_T;
               }
@@ -2405,8 +2405,8 @@ public final class SteelSentinels extends FunOrbClient {
                 continue;
               }
               if (ch.field_N == 80) {
-                var2_int = rf.field_d.f((byte) -123);
-                var3 = (byte)(255 & rf.field_d.f((byte) -123));
+                var2_int = rf.field_d.readUnsignedByte((byte) -123);
+                var3 = (byte)(255 & rf.field_d.readUnsignedByte((byte) -123));
                 if (null == nf.field_b) {
                   continue;
                 }
@@ -2458,7 +2458,7 @@ public final class SteelSentinels extends FunOrbClient {
                 var2 = jg.a(true);
                 var3 = 0;
                 while (var3 < java.lang.reflect.Array.getLength(var2)) {
-                  ((int[]) (var2))[var3] = rf.field_d.i(0);
+                  ((int[]) (var2))[var3] = rf.field_d.readInt(0);
                   var3++;
                 }
                 var3_ref = var2;
@@ -2488,16 +2488,16 @@ public final class SteelSentinels extends FunOrbClient {
                 continue;
               }
               if (ch.field_N == 60) {
-                li.field_v = rf.field_d.i(0);
-                h.field_G = rf.field_d.i(0);
+                li.field_v = rf.field_d.readInt(0);
+                h.field_G = rf.field_d.readInt(0);
                 var2_int = 0;
                 while (var2_int < 4) {
-                  rn.field_D[var2_int] = rf.field_d.i(0);
+                  rn.field_D[var2_int] = rf.field_d.readInt(0);
                   var2_int++;
                 }
                 var2_int = 0;
                 while (2 > var2_int) {
-                  fe.field_D[var2_int] = rf.field_d.i(0);
+                  fe.field_D[var2_int] = rf.field_d.readInt(0);
                   var2_int++;
                 }
                 var2_int = 0;
@@ -2509,11 +2509,11 @@ public final class SteelSentinels extends FunOrbClient {
                 continue;
               }
               if (ch.field_N == 77) {
-                var2_int = rf.field_d.f((byte) -123);
+                var2_int = rf.field_d.readUnsignedByte((byte) -123);
                 CombatWorld.field_S = new int[var2_int];
                 var3 = 0;
                 while (var2_int > var3) {
-                  CombatWorld.field_S[var3] = rf.field_d.f((byte) -123);
+                  CombatWorld.field_S[var3] = rf.field_d.readUnsignedByte((byte) -123);
                   var3++;
                 }
                 continue;
@@ -2521,13 +2521,13 @@ public final class SteelSentinels extends FunOrbClient {
               if (ch.field_N == 78) {
                 var2_int = 0;
                 while (var2_int < 3) {
-                  fm.field_f[var2_int] = rf.field_d.f((byte) -65);
+                  fm.field_f[var2_int] = rf.field_d.readUnsignedByte((byte) -65);
                   var2_int++;
                 }
                 var2_int = 0;
                 while (true) {
                   if (jh.field_a.length > var2_int) {
-                    jh.field_a[var2_int] = rf.field_d.c((byte) -60);
+                    jh.field_a[var2_int] = rf.field_d.readUnsignedShort((byte) -60);
                     var2_int++;
                     continue;
                   }
@@ -2556,12 +2556,12 @@ public final class SteelSentinels extends FunOrbClient {
                 continue;
               }
               if (ch.field_N == 73) {
-                var2_int = rf.field_d.f((byte) -63) - 1;
-                var3 = rf.field_d.i(0);
-                var4 = rf.field_d.i(0);
-                var5 = rf.field_d.i(0);
-                var6 = rf.field_d.i(0);
-                var7 = rf.field_d.i(0);
+                var2_int = rf.field_d.readUnsignedByte((byte) -63) - 1;
+                var3 = rf.field_d.readInt(0);
+                var4 = rf.field_d.readInt(0);
+                var5 = rf.field_d.readInt(0);
+                var6 = rf.field_d.readInt(0);
+                var7 = rf.field_d.readInt(0);
                 if (var2_int < 2) {
                   lc.field_c = tj.a(var6, var4, var5, -var2_int + 65535, var7, param0 ^ 19, var2_int + 0, new int[]{var3}, 3);
                 }
@@ -2571,7 +2571,7 @@ public final class SteelSentinels extends FunOrbClient {
                 continue;
               }
               if (ch.field_N == 72) {
-                var2_int = rf.field_d.c((byte) -60);
+                var2_int = rf.field_d.readUnsignedShort((byte) -60);
                 li.field_v = li.field_v + var2_int;
                 if (var2_int <= 0) {
                   continue;
@@ -2582,7 +2582,7 @@ public final class SteelSentinels extends FunOrbClient {
               }
               if (ch.field_N == 74 ||
                 79 == ch.field_N) {
-                var2_int = rf.field_d.f((byte) -113);
+                var2_int = rf.field_d.readUnsignedByte((byte) -113);
                 var3_ref = qg.field_o;
                 if (79 == ch.field_N) {
                   var3_ref = c.field_r;
@@ -2591,24 +2591,24 @@ public final class SteelSentinels extends FunOrbClient {
                 continue;
               }
               if (ch.field_N == 70) {
-                rf.field_d.f((byte) -67);
+                rf.field_d.readUnsignedByte((byte) -67);
                 continue;
               }
               if (ch.field_N == 57 ||
                 ch.field_N == 58) {
                 ol.b(true);
-                var2_int = rf.field_d.i(param0 - 2);
-                var3 = rf.field_d.f((byte) -110);
-                var4 = rf.field_d.f((byte) -74);
-                var5 = rf.field_d.f((byte) -90);
-                var6 = rf.field_d.f((byte) -102);
+                var2_int = rf.field_d.readInt(param0 - 2);
+                var3 = rf.field_d.readUnsignedByte((byte) -110);
+                var4 = rf.field_d.readUnsignedByte((byte) -74);
+                var5 = rf.field_d.readUnsignedByte((byte) -90);
+                var6 = rf.field_d.readUnsignedByte((byte) -102);
                 stackIn_330_0 = ((var6 & 1) == 0) ? 0 : 1;
                 var7 = stackIn_330_0;
                 stackIn_334_0 = ((2 & var6) == 0) ? 0 : 1;
                 var8 = stackIn_334_0;
-                stackIn_338_0 = (0 == rf.field_d.f((byte) -81)) ? 0 : 1;
+                stackIn_338_0 = (0 == rf.field_d.readUnsignedByte((byte) -81)) ? 0 : 1;
                 var9 = stackIn_338_0;
-                var10 = new String[rf.field_d.f((byte) -90)];
+                var10 = new String[rf.field_d.readUnsignedByte((byte) -90)];
                 var11_int = -2;
                 var12 = new int[var10.length][];
                 var13_int = 0;
@@ -2617,12 +2617,12 @@ public final class SteelSentinels extends FunOrbClient {
                   stackIn_340_1 = ~var10.length;
                   if (stackIn_340_0 > stackIn_340_1) {
                     var10[var13_int] = rf.field_d.e((byte) 126);
-                    array$0 = new int[rf.field_d.f((byte) -63)];
+                    array$0 = new int[rf.field_d.readUnsignedByte((byte) -63)];
                     var12[var13_int] = array$0;
                     stackIn_351_0 = 0;
                     var14 = stackIn_351_0;
                     while (var14 < var12[var13_int].length) {
-                      var12[var13_int][var14] = rf.field_d.f((byte) -123);
+                      var12[var13_int][var14] = rf.field_d.readUnsignedByte((byte) -123);
                       stackIn_340_0 = ~var12[var13_int][var14];
                       stackIn_340_1 = -256;
                       if (stackIn_340_0 == stackIn_340_1) {
@@ -2635,7 +2635,7 @@ public final class SteelSentinels extends FunOrbClient {
                   }
                   break;
                 }
-                var11_int = rf.field_d.d((byte) -2);
+                var11_int = rf.field_d.readByte((byte) -2);
                 di.field_g = -1;
                 qh.field_Yb = -2;
                 jn.field_g = false;
@@ -2646,7 +2646,7 @@ public final class SteelSentinels extends FunOrbClient {
                   var11_int = -2;
                 }
                 var13 = new GameplayController(true, var2_int, var3, var10, var11_int, var9 != 0, var12, var4, var5, var7 != 0, var8 != 0);
-                var13.field_w = rf.field_d.i(0);
+                var13.field_w = rf.field_d.readInt(0);
                 if (57 != ch.field_N) {
                   si.field_A = var13;
                   CombatWorld.field_G = true;
@@ -2692,7 +2692,7 @@ public final class SteelSentinels extends FunOrbClient {
               }
               if (null != var2) {
                 if (ch.field_N == 61) {
-                  var3 = rf.field_d.f((byte) -117);
+                  var3 = rf.field_d.readUnsignedByte((byte) -117);
                   var4_ref = ((GameplayController) (var2)).world.findSentinelForPlayer(var3, -128);
                   var5_ref_je = (SentinelCommand) (((Sentinel) (var4_ref)).secondaryCommands.b(1063677678));
                   if (var5_ref_je != null) {
@@ -2706,13 +2706,13 @@ public final class SteelSentinels extends FunOrbClient {
                   continue;
                 }
                 if (ch.field_N == 69) {
-                  var3 = rf.field_d.f((byte) -85);
-                  var4 = rf.field_d.f((byte) -80);
-                  var5 = rf.field_d.f((byte) -120);
-                  var6 = rf.field_d.i(0);
-                  var7 = rf.field_d.i(0);
-                  var8 = rf.field_d.i(param0 ^ 2);
-                  var9 = rf.field_d.i(param0 ^ 2);
+                  var3 = rf.field_d.readUnsignedByte((byte) -85);
+                  var4 = rf.field_d.readUnsignedByte((byte) -80);
+                  var5 = rf.field_d.readUnsignedByte((byte) -120);
+                  var6 = rf.field_d.readInt(0);
+                  var7 = rf.field_d.readInt(0);
+                  var8 = rf.field_d.readInt(param0 ^ 2);
+                  var9 = rf.field_d.readInt(param0 ^ 2);
                   if (var5 == 255) {
                     var5 = -1;
                   }
@@ -2730,8 +2730,8 @@ public final class SteelSentinels extends FunOrbClient {
                   continue;
                 }
                 if (ch.field_N == 76) {
-                  var3 = rf.field_d.f((byte) -120);
-                  var4 = rf.field_d.i(0);
+                  var3 = rf.field_d.readUnsignedByte((byte) -120);
+                  var4 = rf.field_d.readInt(0);
                   ((GameplayController) (var2)).world.a(var4, 28669, var3);
                   continue;
                 }
@@ -2740,9 +2740,9 @@ public final class SteelSentinels extends FunOrbClient {
                     ((GameplayController) (var2)).world.simulationTick < ((GameplayController) (var2)).field_w) {
                     ((GameplayController) (var2)).field_w = -100 + ((GameplayController) (var2)).field_i;
                   }
-                  ((GameplayController) (var2)).field_i = rf.field_d.i(param0 ^ 2);
-                  var3 = rf.field_d.i(0);
-                  var4 = rf.field_d.i(param0 - 2);
+                  ((GameplayController) (var2)).field_i = rf.field_d.readInt(param0 ^ 2);
+                  var3 = rf.field_d.readInt(0);
+                  var4 = rf.field_d.readInt(param0 - 2);
                   if (((GameplayController) (var2)).field_l >= ((GameplayController) (var2)).world.simulationTick) {
                     continue;
                   }
@@ -2751,12 +2751,12 @@ public final class SteelSentinels extends FunOrbClient {
                   continue;
                 }
                 if (62 == ch.field_N) {
-                  ((GameplayController) (var2)).field_i = rf.field_d.i(0);
+                  ((GameplayController) (var2)).field_i = rf.field_d.readInt(0);
                   ((GameplayController) (var2)).field_z = true;
                   continue;
                 }
                 if (ch.field_N == 63) {
-                  ((GameplayController) (var2)).world.field_V = rf.field_d.f((byte) -92);
+                  ((GameplayController) (var2)).world.field_V = rf.field_d.readUnsignedByte((byte) -92);
                   if (null == fk.field_i) {
                     continue;
                   }
@@ -2764,11 +2764,11 @@ public final class SteelSentinels extends FunOrbClient {
                   continue;
                 }
                 if (ch.field_N == 64) {
-                  ((GameplayController) (var2)).world.field_hb = rf.field_d.f((byte) -111);
+                  ((GameplayController) (var2)).world.field_hb = rf.field_d.readUnsignedByte((byte) -111);
                   continue;
                 }
                 if (ch.field_N == 65) {
-                  ((GameplayController) (var2)).world.field_X = rf.field_d.f((byte) -91);
+                  ((GameplayController) (var2)).world.field_X = rf.field_d.readUnsignedByte((byte) -91);
                   if (null == fk.field_i) {
                     continue;
                   }
@@ -2776,7 +2776,7 @@ public final class SteelSentinels extends FunOrbClient {
                   continue;
                 }
                 if (66 == ch.field_N) {
-                  ((GameplayController) (var2)).field_N = rf.field_d.f((byte) -85);
+                  ((GameplayController) (var2)).field_N = rf.field_d.readUnsignedByte((byte) -85);
                   if (null == fk.field_i) {
                     continue;
                   }
@@ -2955,7 +2955,7 @@ public final class SteelSentinels extends FunOrbClient {
           Sentinel.c((byte) 58);
           BattleTerrain.b(false);
           ic.a(false);
-          uh.c(96);
+          NodeHashTable.c(96);
           hj.e(0);
           ab.a();
           ej.e(-93);

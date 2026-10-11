@@ -100,8 +100,8 @@ abstract class el {
             field_c = 69;
           }
           var9 = new PacketBuffer(param1);
-          var3 = var9.k(0);
-          var4 = var9.i(1);
+          var3 = var9.readUnsignedByte(0);
+          var4 = var9.readInt(1);
           if (0 <= var4 && (CombatEvent.field_P == 0 ||
             !(var4 > CombatEvent.field_P))) {
             if (0 == var3) {
@@ -112,7 +112,7 @@ abstract class el {
               stackIn_23_0 = var5;
               return stackIn_23_0;
             }
-            var5_int = var9.i(1);
+            var5_int = var9.readInt(1);
             if (var5_int >= 0 && (CombatEvent.field_P == 0 ||
               !(CombatEvent.field_P < var5_int))) {
               var12 = new byte[var5_int];

@@ -40,11 +40,11 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     final static void a(int param0, int param1, int param2) {
         CipherPacketBuffer var3 = vl.field_n;
-        var3.h(32161, param2);
-        var3.b(1, 3);
+        var3.writeCipheredOpcode(32161, param2);
+        var3.writeByte(1, 3);
         int var4 = -78 % ((param0 - 10) / 46);
-        var3.b(1, 9);
-        var3.b(true, param1);
+        var3.writeByte(1, 9);
+        var3.writeShort(true, param1);
     }
 
     public final synchronized void mousePressed(java.awt.event.MouseEvent param0) {

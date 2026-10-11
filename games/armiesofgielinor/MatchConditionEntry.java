@@ -54,13 +54,13 @@ final class MatchConditionEntry extends IntrusiveNode {
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var1 = mg.field_e;
-          var2 = var1.k(0);
+          var2 = var1.readUnsignedByte(0);
           if (var2 == 0) {
             if (null == bk.field_a) {
               bk.field_a = new tp(128);
               vg.field_p = 0;
             }
-            stackIn_12_0 = (1 != var1.k(0)) ? 0 : 1;
+            stackIn_12_0 = (1 != var1.readUnsignedByte(0)) ? 0 : 1;
             var3_int = stackIn_12_0;
             var4_ref_String = var1.g(1);
             if (var3_int == 0) {
@@ -119,7 +119,7 @@ final class MatchConditionEntry extends IntrusiveNode {
             th.field_a = 1;
             var3 = var1.g(1);
             vl.field_p = ((String) (var3)).intern();
-            var4 = var1.k(0);
+            var4 = var1.readUnsignedByte(0);
             im.b(var4, param0 - 27499);
             return;
           }

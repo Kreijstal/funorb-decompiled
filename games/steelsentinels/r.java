@@ -23,9 +23,9 @@ final class r extends db {
             r.a(true, false);
           }
           var3 = mm.field_g;
-          var3.a(param2, (byte) -117);
-          var3.a((byte) 126, param1.field_t);
-          var3.a((byte) 111, param1.field_u);
+          var3.writeCipheredOpcode(param2, (byte) -117);
+          var3.writeByte((byte) 126, param1.field_t);
+          var3.writeByte((byte) 111, param1.field_u);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "r.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

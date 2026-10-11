@@ -70,7 +70,7 @@ final class dw {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 == 255) {
-          var3 = this.field_b.k(0);
+          var3 = this.field_b.readUnsignedByte(0);
           var4 = this.field_b.h(92);
           if (var3 == 47) {
             this.field_b.position = this.field_b.position + var4;
@@ -91,10 +91,10 @@ final class dw {
         var3Lifetime1 = field_f[param1 - 128];
         var4Lifetime1 = param1;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.field_b.k(0) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.field_b.readUnsignedByte(0) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.field_b.k(0) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.field_b.readUnsignedByte(0) << 16;
         }
         return var4Lifetime1;
     }
@@ -113,14 +113,14 @@ final class dw {
         int var3Lifetime1;
         this.field_b.payload = param0;
         this.field_b.position = 10;
-        int var2 = this.field_b.e((byte) -104);
-        this.field_c = this.field_b.e((byte) -104);
+        int var2 = this.field_b.readUnsignedShort((byte) -104);
+        this.field_c = this.field_b.readUnsignedShort((byte) -104);
         this.field_e = 500000;
         this.field_a = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-          var4 = this.field_b.i(1);
-          var5 = this.field_b.i(1);
+          var4 = this.field_b.readInt(1);
+          var5 = this.field_b.readInt(1);
           if (var4 == 1297379947) {
             this.field_a[var3] = this.field_b.position;
             var3++;

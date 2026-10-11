@@ -76,9 +76,9 @@ final class ai extends IntrusiveNode {
               se.a(-1, ol.field_ac.field_t);
               ol.field_ac = null;
               df.field_I = true;
-              mm.field_g.a(65, (byte) -117);
-              mm.field_g.a(68, (byte) -117);
-              mm.field_g.a(70, (byte) -117);
+              mm.field_g.writeCipheredOpcode(65, (byte) -117);
+              mm.field_g.writeCipheredOpcode(68, (byte) -117);
+              mm.field_g.writeCipheredOpcode(70, (byte) -117);
             }
           }
           return;
@@ -112,7 +112,7 @@ final class ai extends IntrusiveNode {
           if (param1 != -32599) {
             ai.e(-24);
           }
-          var2_int = param0.f((byte) -123);
+          var2_int = param0.readUnsignedByte((byte) -123);
           stackIn_5_0 = (var2_int == 1) ? 1 : 0;
           var3 = stackIn_5_0;
           stackIn_6_0 = var3;

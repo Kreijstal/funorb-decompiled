@@ -235,7 +235,7 @@ final class oc {
             }
             if (0 <= var12) {
               var15_ref_gh = new SceneWidget("", ei.field_n);
-              var15_ref_gh.field_S = uh.field_h;
+              var15_ref_gh.field_S = NodeHashTable.field_h;
               var15_ref_gh.a(param0 - 4, 2, 10, 2, 10);
               var15_ref_gh.field_L = (BitmapFont) ((Object) fk.field_d);
               var15_ref_gh.field_I = null;
@@ -393,7 +393,7 @@ final class oc {
 
     final static void a(boolean param0) {
         fj.field_e = param0 ? true : false;
-        uc.field_g = 0 == rf.field_d.f((byte) -103) ? true : false;
+        uc.field_g = 0 == rf.field_d.readUnsignedByte((byte) -103) ? true : false;
     }
 
     static {

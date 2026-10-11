@@ -49,8 +49,8 @@ final class qh extends SceneWidget {
               nf.field_c = new sg((java.net.Socket) (ha.field_T.field_c), km.field_k);
               var2 = new PacketBuffer(13);
               s.a(var2, 12, jf.field_ib, rb.field_f, sh.field_a);
-              var2.a((byte) 120, 15);
-              var2.b(true, wn.field_g);
+              var2.writeByte((byte) 120, 15);
+              var2.writeInt(true, wn.field_g);
               nf.field_c.a(13, var2.payload, -100, 0);
               wh.field_d = wh.field_d + 1;
               na.field_f = 30000L + mm.a(-57);

@@ -5,7 +5,7 @@ class DualNode extends IntrusiveNode {
     static int field_p;
     DualNode dualNext;
     static String field_q;
-    static int[] field_r;
+    static int[] bitMasks;
     static String field_s;
     static cm field_x;
     long field_w;
@@ -14,7 +14,7 @@ class DualNode extends IntrusiveNode {
     static String field_t;
 
     public static void f(int param0) {
-        field_r = null;
+        bitMasks = null;
         field_t = null;
         field_q = null;
         field_x = null;
@@ -76,6 +76,6 @@ class DualNode extends IntrusiveNode {
         field_s = "Reference manual";
         field_u = 480;
         field_t = "Research into <col=00ffff>EMP weapons</col> is needed before the <%0> can be engineered.";
-        field_r = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
+        bitMasks = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
     }
 }

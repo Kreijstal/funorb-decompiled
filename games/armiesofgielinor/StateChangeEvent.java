@@ -345,13 +345,13 @@ final class StateChangeEvent extends GameEvent {
           return;
         }
         CipherPacketBuffer var4 = vl.field_n;
-        var4.h(32161, 16);
+        var4.writeCipheredOpcode(32161, 16);
         var4.position = var4.position + 1;
         int var5 = var4.position;
-        var4.b(param0 ^ 7, 0);
-        var4.b(true, param1);
-        var4.b(1, param2);
-        var4.b(true, param3);
+        var4.writeByte(param0 ^ 7, 0);
+        var4.writeShort(true, param1);
+        var4.writeByte(1, param2);
+        var4.writeShort(true, param3);
         if (param0 != 6) {
           StateChangeEvent.a(-60, -103, 22, 28, -21);
         }

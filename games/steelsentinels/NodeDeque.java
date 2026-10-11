@@ -171,7 +171,7 @@ final class NodeDeque {
         try {
           var1 = new IndexedSprite(un.field_n, eb.field_n, rl.field_a[0], oa.field_M[0], le.field_L[0], ca.field_r[0], dl.field_L[0], ba.field_d);
           var2 = -124 % ((param0 + 33) / 62);
-          uh.a(9324);
+          NodeHashTable.a(9324);
           stackIn_1_0 = var1;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

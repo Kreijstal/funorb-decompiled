@@ -67,9 +67,9 @@ final class sl {
         RuntimeException var3 = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          param1.b(1, this.field_g);
-          param1.b(param0 - 7, this.field_e);
-          param1.b(true, this.field_d);
+          param1.writeByte(1, this.field_g);
+          param1.writeByte(param0 - 7, this.field_e);
+          param1.writeShort(true, this.field_d);
           stackIn_3_0 = (PacketBuffer) (param1);
           stackIn_3_1 = true;
           if (this.field_f) {
@@ -77,17 +77,17 @@ final class sl {
           } else {
             stackIn_4_2 = 0;
           }
-          ((PacketBuffer) (Object) stackIn_3_0).b(stackIn_3_1, stackIn_4_2);
+          ((PacketBuffer) (Object) stackIn_3_0).writeShort(stackIn_3_1, stackIn_4_2);
           if (this.field_j != null) {
-            param1.b(1, this.field_j.length);
+            param1.writeByte(1, this.field_j.length);
             for (var3_int = 0; this.field_j.length > var3_int; var3_int++) {
-              param1.a((byte) -74, this.field_j[var3_int]);
+              param1.writeInt((byte) -74, this.field_j[var3_int]);
             }
           } else {
-            param1.b(1, 0);
+            param1.writeByte(1, 0);
           }
-          param1.b(1, this.field_h);
-          param1.a((byte) -72, this.field_c.length);
+          param1.writeByte(1, this.field_h);
+          param1.writeInt((byte) -72, this.field_c.length);
           if (param0 != 8) {
             sl.a(25);
           }
@@ -124,24 +124,24 @@ final class sl {
         int var4_intLifetime1;
         try {
           this.field_b = -1;
-          this.field_g = param0.k(0);
-          this.field_e = param0.k(0);
-          this.field_d = param0.e((byte) -104);
-          stackIn_4_1 = (param0.e((byte) -104) == 1);
+          this.field_g = param0.readUnsignedByte(0);
+          this.field_e = param0.readUnsignedByte(0);
+          this.field_d = param0.readUnsignedShort((byte) -104);
+          stackIn_4_1 = (param0.readUnsignedShort((byte) -104) == 1);
           this.field_f = stackIn_4_1;
           if (param1 > 7) {
-            var4_int = param0.k(0);
+            var4_int = param0.readUnsignedByte(0);
             if (var4_int > 0) {
               this.field_j = new int[var4_int];
               for (var5 = 0; var5 < this.field_j.length; var5++) {
-                this.field_j[var5] = param0.i(1);
+                this.field_j[var5] = param0.readInt(1);
               }
             }
             if (param1 > 8) {
-              this.field_h = param0.k(0);
+              this.field_h = param0.readUnsignedByte(0);
             }
           }
-          var4_intLifetime1 = param0.i(1);
+          var4_intLifetime1 = param0.readInt(1);
           if (var4_intLifetime1 < 100000 &&
             var4_intLifetime1 > 0) {
             this.field_c = new byte[var4_intLifetime1];
@@ -175,7 +175,7 @@ final class sl {
           this.field_g = param0;
           this.field_b = -1;
           var7 = new PacketBuffer(30000);
-          param2.a(var7, -25771, param2.campaignMission.playerSlot);
+          param2.writeLegacySnapshot(var7, -25771, param2.campaignMission.playerSlot);
           this.field_c = var7.g((byte) -82);
           this.field_h = param2.eliminatedPlayerMask;
           this.field_f = param4 ? true : false;

@@ -53,19 +53,19 @@ final class MovementPresentation implements EventPresentation {
         int var8 = 0;
         try {
           var6 = vl.field_n;
-          var6.h(32161, param0);
+          var6.writeCipheredOpcode(32161, param0);
           var6.position = var6.position + 1;
           if (param5 != 5623) {
             field_i = (char[]) null;
           }
           var7 = var6.position;
-          var6.b(1, 4);
-          var6.b(1, param1);
+          var6.writeByte(1, 4);
+          var6.writeByte(1, param1);
           var8 = param2;
           if (param3) {
             var8 += 128;
           }
-          var6.b(1, var8);
+          var6.writeByte(1, var8);
           var6.a(param4, 0, param4.length, 102);
           var6.e(var6.position - var7, 5930);
         } catch (RuntimeException runtimeException) {
@@ -98,8 +98,8 @@ final class MovementPresentation implements EventPresentation {
           if (event.eventKind != 0) {
             if (7 == event.eventKind) {
               var10 = (ParasiteEvent) (event);
-              var4 = var10.field_D + var10.field_B * this.field_t;
-              var10.unit = this.battlefield.getUnitAt(var10.field_B, true, var10.field_D);
+              var4 = var10.sourceX + var10.sourceY * this.field_t;
+              var10.unit = this.battlefield.getUnitAt(var10.sourceY, true, var10.sourceX);
               if (null == var10.unit) {
                 var11 = Battlefield.field_q + ": Can see parasite";
                 this.battlefield.a(0, var11, event);
@@ -109,14 +109,14 @@ final class MovementPresentation implements EventPresentation {
               var12 = var14;
               var7 = var12;
               var17 = var7;
-              if (var10.field_E - var10.field_D == 0) {
-                if (0 < var10.field_z - var10.field_B) {
+              if (var10.destinationX - var10.sourceX == 0) {
+                if (0 < var10.destinationY - var10.sourceY) {
                   var17[0] = 2;
                 } else {
                   var17[0] = 1;
                 }
               } else {
-                if (-var10.field_D + var10.field_E > 0) {
+                if (-var10.sourceX + var10.destinationX > 0) {
                   var17[0] = 0;
                 } else {
                   var14[0] = 3;

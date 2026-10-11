@@ -122,7 +122,7 @@ final class qj {
           this.field_p = ja.field_i;
         }
         if (ei.field_q == 70) {
-          this.field_p = uh.field_e;
+          this.field_p = NodeHashTable.field_e;
         }
         if (ei.field_q == 51) {
           this.field_p = rb.field_j;

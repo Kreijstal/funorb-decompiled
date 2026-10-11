@@ -5115,7 +5115,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TERROR_NOTVILLAGE");
                 if (null != var2) {
-                  mt.field_g = uu.a(var2, (byte) -122);
+                  TextCursor.field_g = uu.a(var2, (byte) -122);
                 }
                 var2 = fk.a(false, "TERROR_NOTYOURS");
                 if (null != var2) {
@@ -5157,7 +5157,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TERROR_IRREGULARMOVE");
                 if (var2 != null) {
-                  sc.field_i = uu.a(var2, (byte) -98);
+                  TaggedMapData.field_i = uu.a(var2, (byte) -98);
                 }
                 var2 = fk.a(false, "TERROR_ALREADYMOVED");
                 if (null != var2) {
@@ -5642,16 +5642,16 @@ final class em {
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3 = new CampaignUnitOverride();
-          var3.unitType = param2.k(0);
+          var3.unitType = param2.readUnsignedByte(0);
           var3.displayName = param2.h((byte) 121);
-          var3.strength = param2.e((byte) -104);
+          var3.strength = param2.readUnsignedShort((byte) -104);
           if (param1 != -7) {
             return;
           }
-          var4 = param2.k(0);
+          var4 = param2.readUnsignedByte(0);
           var5 = 0;
           while (var5 < var4) {
-            var6 = param2.k(param1 + 7);
+            var6 = param2.readUnsignedByte(param1 + 7);
             var7 = param0.field_q[var6];
             fieldTemp$0 = var7.field_o;
             var7.field_o = var7.field_o + 1;

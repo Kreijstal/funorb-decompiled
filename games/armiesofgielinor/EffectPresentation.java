@@ -224,8 +224,8 @@ final class EffectPresentation implements EventPresentation {
             field_d = (String) null;
           }
           while (var4_int < 6) {
-            param0[var4_int] = param1.k(0);
-            param3[var4_int] = param1.k(0);
+            param0[var4_int] = param1.readUnsignedByte(0);
+            param3[var4_int] = param1.readUnsignedByte(0);
             if (param0[var4_int] == 255) {
               param0[var4_int] = -1;
             }

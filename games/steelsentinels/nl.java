@@ -109,21 +109,21 @@ final class nl extends oa {
         int var7 = 0;
         int var8 = 0;
         CipherPacketBuffer var6 = mm.field_g;
-        var6.a(param4, (byte) -117);
+        var6.writeCipheredOpcode(param4, (byte) -117);
         if (param5 <= 30) {
           return;
         }
         try {
           var6.position = var6.position + 1;
           var7 = var6.position;
-          var6.a((byte) 115, 4);
-          var6.a((byte) 119, param0);
+          var6.writeByte((byte) 115, 4);
+          var6.writeByte((byte) 119, param0);
           var8 = param3;
           if (param2) {
             var8 += 128;
           }
-          var6.a((byte) 112, var8);
-          var6.a(param1.length, (byte) -122, 0, param1);
+          var6.writeByte((byte) 112, var8);
+          var6.writeBytes(param1.length, (byte) -122, 0, param1);
           var6.b((byte) -116, var6.position - var7);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "nl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
@@ -193,15 +193,15 @@ final class nl extends oa {
         try {
           var8 = new CipherPacketBuffer(param1.a("", -742, "logo.fo3d"));
           var10 = var8;
-          var3 = var10.f((byte) -119);
-          var10.d(false);
+          var3 = var10.readUnsignedByte((byte) -119);
+          var10.beginBitReading(false);
           pm.field_W = nm.a(var10, (byte) 87);
           nn.field_h = new pe[var3];
           cl.field_f = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
             nn.field_h[var4] = ve.a(-100, var8);
           }
-          var10.i((byte) -3);
+          var10.endBitReading((byte) -3);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var9 < var3) {
@@ -349,10 +349,10 @@ final class nl extends oa {
           var8.unlinkDual(480);
           vd.field_h = vd.field_h - 1;
           var9 = mm.field_g;
-          var9.a(param1, (byte) -117);
+          var9.writeCipheredOpcode(param1, (byte) -117);
           var9.position = var9.position + 1;
           var5 = var9.position;
-          var9.a((byte) 110, 1);
+          var9.writeByte((byte) 110, 1);
           var9.a(param0, -61);
           var9.b((byte) -53, -var5 + var9.position);
           stackIn_18_0 = null;
@@ -390,10 +390,10 @@ final class nl extends oa {
           }
           bj.field_j = param0;
           var4 = mm.field_g;
-          var4.a(param1, (byte) -117);
-          var4.a((byte) 108, 3);
-          var4.a((byte) 113, 11);
-          var4.d(param0, 21);
+          var4.writeCipheredOpcode(param1, (byte) -117);
+          var4.writeByte((byte) 108, 3);
+          var4.writeByte((byte) 113, 11);
+          var4.writeShort(param0, 21);
         }
     }
 

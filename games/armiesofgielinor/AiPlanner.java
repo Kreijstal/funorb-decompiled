@@ -909,7 +909,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
     }
 
-    final static int a(CipherPacketBuffer param0, boolean param1) {
+    final static int readCompactInt(CipherPacketBuffer packet, boolean obfuscationGuard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
@@ -918,10 +918,10 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1) {
+          if (!obfuscationGuard) {
             field_G = (BitmapFont) null;
           }
-          var2_int = de.a(-108, param0, 4, 14, 30, 20);
+          var2_int = de.readTieredSignedInt(-108, packet, 4, 14, 30, 20);
           stackIn_3_0 = var2_int;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -929,12 +929,12 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("ej.H(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

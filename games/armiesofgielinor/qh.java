@@ -227,7 +227,7 @@ final class qh {
           return;
         }
         if (!DamageEvent.g(81)) {
-          vl.field_n.h(32161, 81);
+          vl.field_n.writeCipheredOpcode(32161, 81);
           bu.field_b = null;
         }
     }

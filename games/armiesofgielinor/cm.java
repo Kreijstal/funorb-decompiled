@@ -94,7 +94,7 @@ final class cm {
         RuntimeException var4 = null;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4_int = param1.e((byte) -104);
+          var4_int = param1.readUnsignedShort((byte) -104);
           var5 = 0;
           if (param2 > -109) {
             return;
@@ -103,18 +103,18 @@ final class cm {
             if ((var4_int & 1) != 0) {
               this.field_d[var5] = new ho[64];
               while (true) {
-                dupTemp$1 = param1.k(0);
+                dupTemp$1 = param1.readUnsignedByte(0);
                 var6 = dupTemp$1;
                 if (255 == dupTemp$1) {
                   break;
                 }
                 if (param0 < 7) {
                   var7 = 2000;
-                  var9 = param1.e((byte) -104);
+                  var9 = param1.readUnsignedShort((byte) -104);
                   var8 = var9;
                 } else {
-                  var7 = param1.e((byte) -104);
-                  var8 = param1.e((byte) -104);
+                  var7 = param1.readUnsignedShort((byte) -104);
+                  var8 = param1.readUnsignedShort((byte) -104);
                 }
                 this.field_d[var5][var6] = new ho(var7, var8);
               }

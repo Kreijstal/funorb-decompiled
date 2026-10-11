@@ -25,9 +25,9 @@ final class UnitSpell extends Spell {
 
     final void writePayload(int obfuscationGuard, PacketBuffer packet) {
         try {
-          packet.b(true, this.spellId);
-          packet.b(1, this.targetX);
-          packet.b(1, this.targetY);
+          packet.writeShort(true, this.spellId);
+          packet.writeByte(1, this.targetX);
+          packet.writeByte(1, this.targetY);
           if (obfuscationGuard != -11637) {
             field_e = (String) null;
           }
@@ -383,7 +383,7 @@ final class UnitSpell extends Spell {
         }
     }
 
-    final static int a(CipherPacketBuffer param0, int param1, int param2) {
+    final static int readSignedBits(CipherPacketBuffer packet, int bitCount, int obfuscationGuard) {
         RuntimeException var3 = null;
         CipherPacketBuffer var4 = null;
         int stackIn_3_0 = 0;
@@ -392,23 +392,23 @@ final class UnitSpell extends Spell {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 != 1) {
+          if (obfuscationGuard != 1) {
             var4 = (CipherPacketBuffer) null;
-            UnitSpell.a((CipherPacketBuffer) null, 11, -12);
+            UnitSpell.readSignedBits((CipherPacketBuffer) null, 11, -12);
           }
-          stackIn_3_0 = (param0.g(param2 - 102, param1) ^ 1 << param1 - 1) - (1 << param1 - 1);
+          stackIn_3_0 = (packet.readBits(obfuscationGuard - 102, bitCount) ^ 1 << bitCount - 1) - (1 << bitCount - 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("wa.L(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(bitCount).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

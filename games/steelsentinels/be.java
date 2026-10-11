@@ -29,7 +29,7 @@ final class be {
         var6 = SteelSentinels.obfuscationControl;
         try {
           var9 = rf.field_d;
-          var2 = var9.f((byte) -70);
+          var2 = var9.readUnsignedByte((byte) -70);
           if (param0 != -16786) {
             return;
           }
@@ -39,7 +39,7 @@ final class be {
               pm.m(param0 ^ -16880);
               return;
             }
-            var3 = var9.i(0);
+            var3 = var9.readInt(0);
             var4 = (rh) (ol.field_Vb.first(13058));
             while (var4 != null) {
               if (~var4.field_x != ~var3) {
@@ -62,7 +62,7 @@ final class be {
             pm.m(111);
             return;
           }
-          var4_int = var9.f((byte) -106);
+          var4_int = var9.readUnsignedByte((byte) -106);
           if (var4_int == 0) {
             var5 = null;
           } else {
@@ -70,7 +70,7 @@ final class be {
             var10 = var11;
             var8 = var10;
             var5 = var8;
-            var9.a(0, var11, 28, var4_int);
+            var9.readBytes(0, var11, 28, var4_int);
           }
           var9.position = var9.position + 4;
           if (!var9.a((byte) -32)) {

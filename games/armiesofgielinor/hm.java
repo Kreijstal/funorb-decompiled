@@ -143,7 +143,7 @@ final class hm {
         int var6Lifetime3;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4_int = param0.k(param1 + 2);
+          var4_int = param0.readUnsignedByte(param1 + 2);
           if (9 < var4_int) {
             throw new RuntimeException("Unrecognized version: " + var4_int);
           }
@@ -151,23 +151,23 @@ final class hm {
             if (var4_int < 5 ||
               param2) {
               for (var6 = 0; this.field_a.length > var6; var6++) {
-                this.field_a[var6] = param0.k(0);
+                this.field_a[var6] = param0.readUnsignedByte(0);
               }
             }
             for (var6Lifetime2 = 0; this.field_d.length > var6Lifetime2; var6Lifetime2++) {
-              this.field_d[var6Lifetime2] = param0.e((byte) -104);
+              this.field_d[var6Lifetime2] = param0.readUnsignedShort((byte) -104);
               if (this.field_d[var6Lifetime2] >= 135) {
                 this.field_d[var6Lifetime2] = -1;
               }
             }
-            this.field_c = param0.i(1);
+            this.field_c = param0.readInt(1);
             for (var6Lifetime3 = 0; 7 > var6Lifetime3; var6Lifetime3++) {
-              this.field_b[var6Lifetime3] = param0.e((byte) -104);
+              this.field_b[var6Lifetime3] = param0.readUnsignedShort((byte) -104);
             }
           }
           var5 = -1;
           if (6 > var4_int) {
-            var5Lifetime1 = param0.k(0);
+            var5Lifetime1 = param0.readUnsignedByte(0);
             this.field_k = 0;
             this.field_j = 0;
             for (var6Lifetime1 = 0; var6Lifetime1 < var5Lifetime1; var6Lifetime1++) {
@@ -175,8 +175,8 @@ final class hm {
               this.field_j = this.field_j + var7;
             }
           } else {
-            this.field_k = param0.i(1);
-            this.field_j = param0.i(1);
+            this.field_k = param0.readInt(1);
+            this.field_j = param0.readInt(1);
             this.field_g.a(var4_int, param0, -115);
           }
           stackIn_26_0 = var4_int;

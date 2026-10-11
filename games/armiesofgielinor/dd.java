@@ -39,8 +39,8 @@ final class dd {
               return stackIn_8_0;
             }
             this.field_f.position = 72 * param2 + 6;
-            var6_int = this.field_f.i(1);
-            var7 = this.field_f.i(1);
+            var6_int = this.field_f.readInt(1);
+            var7 = this.field_f.readInt(1);
             var13 = new byte[64];
             this.field_f.a(param3, 64, 0, var13);
             var9 = new bm(param2, param1, param4, this.field_d, this.field_b, var6_int, var13, var7, param0);
@@ -215,7 +215,7 @@ final class dd {
           return true;
         }
         var10.position = 5;
-        var3 = var10.k(0);
+        var3 = var10.readUnsignedByte(0);
         var10.position = var10.position + var3 * 72;
         var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;

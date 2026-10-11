@@ -190,7 +190,7 @@ final class cm {
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
-                  var17 = var17 + var32.i(0);
+                  var17 = var17 + var32.readInt(0);
                   if (var6 != null) {
                     var19 = var34[var18];
                   } else {
@@ -212,7 +212,7 @@ final class cm {
               for (var18 = 0; var18 < var12; var18++) {
                 var19 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
-                  var19 = var19 + var32.i(param2 + 0);
+                  var19 = var19 + var32.readInt(param2 + 0);
                   if (var6 != null) {
                     var21 = var34[var20];
                   } else {
@@ -239,7 +239,7 @@ final class cm {
               for (var15 = 0; var15 < var12; var15++) {
                 var16 = 0;
                 for (var17 = 0; var5_int > var17; var17++) {
-                  var16 = var16 + var29.i(0);
+                  var16 = var16 + var29.readInt(0);
                   var14_ref_int__[var17] = var14_ref_int__[var17] + var16;
                 }
               }
@@ -256,7 +256,7 @@ final class cm {
               for (var17 = 0; var17 < var12; var17++) {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
-                  var18 = var18 + var29.i(0);
+                  var18 = var18 + var29.readInt(0);
                   ii.a(var43, var16, var39[var19], var38[var19], var18);
                   var16 = var16 + var18;
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;

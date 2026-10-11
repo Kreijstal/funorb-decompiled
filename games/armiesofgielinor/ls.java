@@ -189,14 +189,14 @@ final class ls {
             ArmiesOfGielinor.field_L = new PacketBuffer(100);
           }
           ArmiesOfGielinor.field_L.position = 0;
-          ArmiesOfGielinor.field_L.b(1, 10);
+          ArmiesOfGielinor.field_L.writeByte(1, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            ArmiesOfGielinor.field_L.a((byte) -111, var13[var11]);
+            ArmiesOfGielinor.field_L.writeInt((byte) -111, var13[var11]);
             var11++;
           }
-          ArmiesOfGielinor.field_L.b(true, param4);
+          ArmiesOfGielinor.field_L.writeShort(true, param4);
           ArmiesOfGielinor.field_L.a(-5247, param5, param2);
           param0.a(ArmiesOfGielinor.field_L.payload, 0, ArmiesOfGielinor.field_L.position, 99);
           param0.a(sb.field_h.payload, 0, sb.field_h.position, 109);

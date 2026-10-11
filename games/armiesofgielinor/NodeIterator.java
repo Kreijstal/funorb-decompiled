@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bb {
-    private NodeDeque field_e;
+final class NodeIterator {
+    private NodeDeque deque;
     static boolean field_a;
     static String field_d;
     static int field_c;
-    private IntrusiveNode field_f;
+    private IntrusiveNode cursor;
     static RgbSprite[] field_b;
 
     final static byte[] a(int param0, String param1) {
@@ -60,16 +60,16 @@ final class bb {
             return stackIn_2_0;
           }
           if (param1 == null) {
-            var3 = this.field_e.sentinel.previous;
+            var3 = this.deque.sentinel.previous;
           } else {
             var3 = param1;
           }
-          if (this.field_e.sentinel == var3) {
-            this.field_f = null;
+          if (this.deque.sentinel == var3) {
+            this.cursor = null;
             stackIn_9_0 = null;
             return (IntrusiveNode) (stackIn_9_0);
           }
-          this.field_f = var3.previous;
+          this.cursor = var3.previous;
           stackIn_11_0 = var3;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -86,16 +86,16 @@ final class bb {
         }
     }
 
-    final IntrusiveNode b(int param0) {
-        if (param0 != 50) {
+    final IntrusiveNode next(int obfuscationGuard) {
+        if (obfuscationGuard != 50) {
           return (IntrusiveNode) null;
         }
-        IntrusiveNode var2 = this.field_f;
-        if (var2 == this.field_e.sentinel) {
-          this.field_f = null;
+        IntrusiveNode var2 = this.cursor;
+        if (var2 == this.deque.sentinel) {
+          this.cursor = null;
           return null;
         }
-        this.field_f = var2.next;
+        this.cursor = var2.next;
         return var2;
     }
 
@@ -152,46 +152,46 @@ final class bb {
         return false;
     }
 
-    final IntrusiveNode b(byte param0) {
-        if (param0 != -112) {
+    final IntrusiveNode previous(byte obfuscationGuard) {
+        if (obfuscationGuard != -112) {
           return (IntrusiveNode) null;
         }
-        IntrusiveNode var2 = this.field_f;
-        if (var2 != this.field_e.sentinel) {
-          this.field_f = var2.previous;
+        IntrusiveNode var2 = this.cursor;
+        if (var2 != this.deque.sentinel) {
+          this.cursor = var2.previous;
           return var2;
         }
-        this.field_f = null;
+        this.cursor = null;
         return null;
     }
 
-    final IntrusiveNode a(int param0) {
-        IntrusiveNode var2 = this.field_e.sentinel.previous;
-        if (param0 != 50) {
+    final IntrusiveNode last(int obfuscationGuard) {
+        IntrusiveNode var2 = this.deque.sentinel.previous;
+        if (obfuscationGuard != 50) {
           field_d = (String) null;
-          if (var2 != this.field_e.sentinel) {
-            this.field_f = var2.previous;
+          if (var2 != this.deque.sentinel) {
+            this.cursor = var2.previous;
             return var2;
           }
-          this.field_f = null;
+          this.cursor = null;
           return null;
         }
-        if (var2 != this.field_e.sentinel) {
-          this.field_f = var2.previous;
+        if (var2 != this.deque.sentinel) {
+          this.cursor = var2.previous;
           return var2;
         }
-        this.field_f = null;
+        this.cursor = null;
         return null;
     }
 
-    final IntrusiveNode c(int param0) {
-        IntrusiveNode var2 = this.field_e.sentinel.next;
-        if (var2 == this.field_e.sentinel) {
-          this.field_f = null;
+    final IntrusiveNode first(int obfuscationGuard) {
+        IntrusiveNode var2 = this.deque.sentinel.next;
+        if (var2 == this.deque.sentinel) {
+          this.cursor = null;
           return null;
         }
-        if (param0 == 50) {
-          this.field_f = var2.next;
+        if (obfuscationGuard == 50) {
+          this.cursor = var2.next;
           return var2;
         }
         return (IntrusiveNode) null;
@@ -215,14 +215,14 @@ final class bb {
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_e.sentinel.next;
+            var3 = this.deque.sentinel.next;
           }
-          if (this.field_e.sentinel == var3) {
-            this.field_f = null;
+          if (this.deque.sentinel == var3) {
+            this.cursor = null;
             stackIn_9_0 = null;
             return (IntrusiveNode) (stackIn_9_0);
           }
-          this.field_f = var3.next;
+          this.cursor = var3.next;
           stackIn_11_0 = var3;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -239,11 +239,11 @@ final class bb {
         }
     }
 
-    bb(NodeDeque param0) {
+    NodeIterator(NodeDeque deque) {
         try {
-          this.field_e = param0;
+          this.deque = deque;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "bb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "bb.<init>(" + (deque != null ? "{...}" : "null") + ')');
         }
     }
 

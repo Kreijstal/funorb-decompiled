@@ -383,15 +383,15 @@ final class ak extends ju {
         int var4 = 0;
         int var4Lifetime1;
         vd.field_b.position = 0;
-        vd.field_b.b(1, 12);
-        vd.field_b.a((byte) -128, iq.field_e.nextInt());
-        vd.field_b.a((byte) -75, iq.field_e.nextInt());
+        vd.field_b.writeByte(1, 12);
+        vd.field_b.writeInt((byte) -128, iq.field_e.nextInt());
+        vd.field_b.writeInt((byte) -75, iq.field_e.nextInt());
         if (param3 == 30) {
-          vd.field_b.b(1, param0);
-          vd.field_b.b(1, param1);
-          vd.field_b.b(true, param2);
+          vd.field_b.writeByte(1, param0);
+          vd.field_b.writeByte(1, param1);
+          vd.field_b.writeShort(true, param2);
           vd.field_b.a(-5247, cs.field_cb, mu.field_c);
-          vl.field_n.h(32161, 18);
+          vl.field_n.writeCipheredOpcode(32161, 18);
           fieldTemp$0 = vl.field_n.position + 1;
           vl.field_n.position = vl.field_n.position + 1;
           var4 = fieldTemp$0;
@@ -401,11 +401,11 @@ final class ak extends ju {
         }
         kl var5 = (kl) null;
         ak.a(81, (kl) null, -36, 38);
-        vd.field_b.b(1, param0);
-        vd.field_b.b(1, param1);
-        vd.field_b.b(true, param2);
+        vd.field_b.writeByte(1, param0);
+        vd.field_b.writeByte(1, param1);
+        vd.field_b.writeShort(true, param2);
         vd.field_b.a(-5247, cs.field_cb, mu.field_c);
-        vl.field_n.h(32161, 18);
+        vl.field_n.writeCipheredOpcode(32161, 18);
         int fieldTemp$1 = vl.field_n.position + 1;
         vl.field_n.position = vl.field_n.position + 1;
         var4Lifetime1 = fieldTemp$1;

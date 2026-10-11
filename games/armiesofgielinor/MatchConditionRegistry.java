@@ -18,7 +18,7 @@ final class MatchConditionRegistry {
         String[][] var3;
         String[] var4;
         int var5;
-        bb var5_ref_bb;
+        NodeIterator var5_ref_bb;
         int var6;
         MatchConditionEntry var7_ref_u;
         int var8;
@@ -29,15 +29,15 @@ final class MatchConditionRegistry {
         for (var4_int = 0; this.conditionsByPlayer.length > var4_int; var4_int++) {
           array$2 = new String[this.conditionsByPlayer[var4_int].b(false)];
           var3[var4_int] = array$2;
-          var5_ref_bb = new bb(this.conditionsByPlayer[var4_int]);
+          var5_ref_bb = new NodeIterator(this.conditionsByPlayer[var4_int]);
           var6 = 0;
-          var7_ref_u = (MatchConditionEntry) (var5_ref_bb.c(50));
+          var7_ref_u = (MatchConditionEntry) (var5_ref_bb.first(50));
           while (var7_ref_u != null) {
             var2++;
             incrementValue$3 = var6;
             var6++;
             var3[var4_int][incrementValue$3] = var7_ref_u.condition.describeCondition(initialCount - 124);
-            var7_ref_u = (MatchConditionEntry) (var5_ref_bb.b(initialCount ^ 50));
+            var7_ref_u = (MatchConditionEntry) (var5_ref_bb.next(initialCount ^ 50));
           }
         }
         var4 = new String[var2 + this.conditionsByPlayer.length];
@@ -58,20 +58,20 @@ final class MatchConditionRegistry {
     final void removePortalLossConditions(byte obfuscationGuard) {
         int var3 = 0;
         NodeDeque var4 = null;
-        bb var5 = null;
+        NodeIterator var5 = null;
         MatchConditionEntry var6 = null;
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         NodeDeque[] var8 = this.conditionsByPlayer;
         NodeDeque[] var2 = var8;
         for (var3 = 0; var8.length > var3; var3++) {
           var4 = var8[var3];
-          var5 = new bb(var4);
-          var6 = (MatchConditionEntry) (var5.c(50));
+          var5 = new NodeIterator(var4);
+          var6 = (MatchConditionEntry) (var5.first(50));
           while (var6 != null) {
             if (var6.condition instanceof PortalLossCondition) {
               var6.unlink(87);
             }
-            var6 = (MatchConditionEntry) (var5.b(50));
+            var6 = (MatchConditionEntry) (var5.next(50));
           }
         }
         if (obfuscationGuard < 4) {
@@ -139,16 +139,16 @@ final class MatchConditionRegistry {
 
     final void removePlayerPortalLossConditions(int obfuscationGuard, int playerId) {
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        bb var3 = new bb(this.conditionsByPlayer[playerId]);
+        NodeIterator var3 = new NodeIterator(this.conditionsByPlayer[playerId]);
         if (obfuscationGuard != 244) {
           return;
         }
-        MatchConditionEntry var4 = (MatchConditionEntry) (var3.c(50));
+        MatchConditionEntry var4 = (MatchConditionEntry) (var3.first(50));
         while (var4 != null) {
           if (var4.condition instanceof PortalLossCondition) {
             var4.unlink(-115);
           }
-          var4 = (MatchConditionEntry) (var3.b(50));
+          var4 = (MatchConditionEntry) (var3.next(50));
         }
     }
 
@@ -162,24 +162,24 @@ final class MatchConditionRegistry {
 
     final boolean hasDefeat(byte obfuscationGuard, int playerId) {
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        bb iterator = new bb(this.conditionsByPlayer[playerId]);
+        NodeIterator iterator = new NodeIterator(this.conditionsByPlayer[playerId]);
         if (obfuscationGuard > -49) {
           return false;
         }
-        MatchConditionEntry entry = (MatchConditionEntry) (iterator.c(50));
+        MatchConditionEntry entry = (MatchConditionEntry) (iterator.first(50));
         while (entry != null) {
           if (entry.condition.isDefeat(-128)) {
             return true;
           }
-          entry = (MatchConditionEntry) (iterator.b(50));
+          entry = (MatchConditionEntry) (iterator.next(50));
         }
         return false;
     }
 
     final boolean hasVictory(int playerId, int obfuscationGuard) {
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        bb iterator = new bb(this.conditionsByPlayer[playerId]);
-        MatchConditionEntry entry = (MatchConditionEntry) (iterator.c(50));
+        NodeIterator iterator = new NodeIterator(this.conditionsByPlayer[playerId]);
+        MatchConditionEntry entry = (MatchConditionEntry) (iterator.first(50));
         if (obfuscationGuard > -46) {
           this.hasVictory(85, 104);
         }
@@ -187,7 +187,7 @@ final class MatchConditionRegistry {
           if (entry.condition.isVictory(0)) {
             return true;
           }
-          entry = (MatchConditionEntry) (iterator.b(50));
+          entry = (MatchConditionEntry) (iterator.next(50));
         }
         return false;
     }

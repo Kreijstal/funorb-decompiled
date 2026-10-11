@@ -152,7 +152,7 @@ final class of extends je {
         try {
           var9 = new sl(param5, param4, param0, param1, param2 > 0 ? true : false);
           bu.field_b = var9;
-          vl.field_n.h(32161, 80);
+          vl.field_n.writeCipheredOpcode(32161, 80);
           vl.field_n.position = vl.field_n.position + 2;
           if (param3 != -80) {
             Battlefield var8 = (Battlefield) null;

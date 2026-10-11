@@ -99,11 +99,11 @@ final class it {
           return;
         }
         try {
-          param3.b(1, 12);
-          param3.b(true, 17);
-          param3.b(true, param2);
-          param3.b(!param1 ? true : false, param4);
-          param3.b(1, param0);
+          param3.writeByte(1, 12);
+          param3.writeShort(true, 17);
+          param3.writeShort(true, param2);
+          param3.writeShort(!param1 ? true : false, param4);
+          param3.writeByte(1, param0);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "it.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -119,17 +119,17 @@ final class it {
             String var8 = (String) null;
             it.a((String) null, (kl) null, (kl) null, (byte) -14, (String) null);
           }
-          var9.h(32161, param4);
+          var9.writeCipheredOpcode(32161, param4);
           var9.position = var9.position + 1;
           var7 = var9.position;
-          var9.b(1, param2);
+          var9.writeByte(1, param2);
           if (param2 == 2) {
             var9.b(param3, 13851);
           }
           if (param5 != null) {
             sf.a(15901, param5, var9);
           } else {
-            var9.b(true, param0);
+            var9.writeShort(true, param0);
           }
           var9.e(-var7 + var9.position, 5930);
         } catch (RuntimeException runtimeException) {

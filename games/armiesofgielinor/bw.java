@@ -200,10 +200,10 @@ final class bw {
             var7.field_jc = null;
           }
           var4 = vl.field_n;
-          var4.h(param2 ^ -32211, param0);
-          var4.b(1, 3);
-          var4.b(1, 11);
-          var4.b(true, param1);
+          var4.writeCipheredOpcode(param2 ^ -32211, param0);
+          var4.writeByte(1, 3);
+          var4.writeByte(1, 11);
+          var4.writeShort(true, param1);
         }
         if (param2 != -116) {
           unitDefinitions = (int[][]) null;

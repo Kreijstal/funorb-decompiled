@@ -443,19 +443,19 @@ final class MoveAttackRequest extends ActionRequest {
         int packedTargetDelta;
         try {
           this.actingPlayer = actingPlayer;
-          pathLength = packet.e((byte) -104) & 8191;
+          pathLength = packet.readUnsignedShort((byte) -104) & 8191;
           this.pathDirections = new int[pathLength];
-          this.startX = packet.k(0);
-          this.startY = packet.k(0);
+          this.startX = packet.readUnsignedByte(0);
+          this.startY = packet.readUnsignedByte(0);
           packedDirections = 0;
           for (pathIndex = 0; pathLength > pathIndex; pathIndex++) {
             if (0 == pathIndex % 4) {
-              packedDirections = packet.k(0);
+              packedDirections = packet.readUnsignedByte(0);
             }
             this.pathDirections[pathIndex] = rn.a(3, packedDirections);
             packedDirections = packedDirections >> 2;
           }
-          packedTargetDelta = packet.e((byte) -104);
+          packedTargetDelta = packet.readUnsignedShort((byte) -104);
           if (packedTargetDelta != 0) {
             this.targetDeltaY = 255 & packedTargetDelta;
             this.targetDeltaX = packedTargetDelta >> 8;

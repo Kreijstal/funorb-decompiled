@@ -139,7 +139,7 @@ final class nf {
             hj.field_H = new PacketBuffer(var7_int);
           }
           hj.field_H.position = 0;
-          hj.field_H.a(param4, (byte) -122, param3, param6);
+          hj.field_H.writeBytes(param4, (byte) -122, param3, param6);
           hj.field_H.b(-2, var7_int);
           hj.field_H.a(var14, -108);
           if (sj.field_u == null ||
@@ -147,7 +147,7 @@ final class nf {
             sj.field_u = new PacketBuffer(100);
           }
           sj.field_u.position = 0;
-          sj.field_u.a((byte) 122, 10);
+          sj.field_u.writeByte((byte) 122, 10);
           var12 = 0;
           var9Lifetime1 = var12;
           if (param0) {
@@ -155,13 +155,13 @@ final class nf {
             nf.a(true, (PacketBuffer) null, (java.math.BigInteger) null, -45, 111, (java.math.BigInteger) null, (byte[]) null);
           }
           while (var12 < 4) {
-            sj.field_u.b(true, var14[var12]);
+            sj.field_u.writeInt(true, var14[var12]);
             var12++;
           }
-          sj.field_u.d(param4, 17);
+          sj.field_u.writeShort(param4, 17);
           sj.field_u.a(param2, param5, -10048);
-          param1.a(sj.field_u.position, (byte) -122, 0, sj.field_u.payload);
-          param1.a(hj.field_H.position, (byte) -122, 0, hj.field_H.payload);
+          param1.writeBytes(sj.field_u.position, (byte) -122, 0, sj.field_u.payload);
+          param1.writeBytes(hj.field_H.position, (byte) -122, 0, hj.field_H.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

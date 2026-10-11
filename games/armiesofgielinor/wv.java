@@ -55,7 +55,7 @@ class wv extends af {
                 param0 = rq.field_o;
               }
               param2 = 2;
-              np.field_Qb.a(-17376, ga.field_d);
+              np.field_Qb.a(-17376, IsaacRandom.field_d);
             }
             var3_int = 1;
             if (param2 == 10) {

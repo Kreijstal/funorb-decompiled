@@ -193,9 +193,9 @@ final class LeaderEscortCondition implements MatchCondition {
           if (param0 != 9) {
             field_e = (String) null;
           }
-          var2 = var27.k(0);
+          var2 = var27.readUnsignedByte(0);
           if (0 == var2) {
-            var3 = var27.e((byte) -104);
+            var3 = var27.readUnsignedShort((byte) -104);
             var4_ref = (wj) (BattleCharacter.field_c.first((byte) 100));
             while (var4_ref != null) {
               if (var4_ref.field_r != var3) {
@@ -208,7 +208,7 @@ final class LeaderEscortCondition implements MatchCondition {
               dj.a((byte) -126);
               return;
             }
-            var5 = var27.k(param0 - 9);
+            var5 = var27.readUnsignedByte(param0 - 9);
             if (0 != var5) {
               var6 = var4_ref.field_k;
               th.field_b[0].field_d = false;
@@ -218,7 +218,7 @@ final class LeaderEscortCondition implements MatchCondition {
               for (var8_int = 1; var8_int < var5; var8_int++) {
                 th.field_b[var8_int].field_f = var27.g(param0 ^ 8);
                 th.field_b[var8_int].field_d = false;
-                if (var27.k(0) == 1) {
+                if (var27.readUnsignedByte(0) == 1) {
                   th.field_b[var8_int].field_c = var27.g(1);
                 } else {
                   th.field_b[var8_int].field_c = null;
@@ -238,10 +238,10 @@ final class LeaderEscortCondition implements MatchCondition {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var27.k(0);
+              var18 = var27.readUnsignedByte(0);
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var27.k(0);
+                  var20 = var27.readUnsignedByte(0);
                   var21 = th.field_b[var20].field_f;
                   var22 = var27.j((byte) -2);
                   var24 = var27.position;
@@ -253,7 +253,7 @@ final class LeaderEscortCondition implements MatchCondition {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$2 = var15;
                       var15++;
-                      var11[0][incrementValue$2] = var27.i(1);
+                      var11[0][incrementValue$2] = var27.readInt(1);
                     }
                   }
                   if (var21 != null &&
@@ -266,7 +266,7 @@ final class LeaderEscortCondition implements MatchCondition {
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$3 = var16;
                       var16++;
-                      var11[1][incrementValue$3] = var27.i(GrowthEvent.b(param0, 8));
+                      var11[1][incrementValue$3] = var27.readInt(GrowthEvent.b(param0, 8));
                     }
                   }
                   if (var6 > var14 &&
@@ -280,7 +280,7 @@ final class LeaderEscortCondition implements MatchCondition {
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$4 = var17;
                       var17++;
-                      var11[2][incrementValue$4] = var27.i(param0 - 8);
+                      var11[2][incrementValue$4] = var27.readInt(param0 - 8);
                     }
                   }
                 }
@@ -291,7 +291,7 @@ final class LeaderEscortCondition implements MatchCondition {
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var27.e((byte) -104);
+            var3Lifetime1 = var27.readUnsignedShort((byte) -104);
             var27.j((byte) -2);
             var4 = (aj) (GameEvent.field_r.first((byte) 99));
             while (var4 != null) {

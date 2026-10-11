@@ -138,10 +138,10 @@ final class jg {
     final static void a(int param0, byte param1, int param2) {
         int var4 = -117 / ((-11 - param1) / 35);
         CipherPacketBuffer var3 = mm.field_g;
-        var3.a(param2, (byte) -117);
-        var3.a((byte) 124, 3);
-        var3.a((byte) 109, 8);
-        var3.d(param0, 80);
+        var3.writeCipheredOpcode(param2, (byte) -117);
+        var3.writeByte((byte) 124, 3);
+        var3.writeByte((byte) 109, 8);
+        var3.writeShort(param0, 80);
     }
 
     final boolean a(byte param0) {

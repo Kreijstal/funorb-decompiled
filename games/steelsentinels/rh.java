@@ -114,9 +114,9 @@ final class rh extends IntrusiveNode {
         }
         try {
           var3 = mm.field_g;
-          var3.a(param0, (byte) -117);
-          var3.a((byte) 123, param2.field_q);
-          var3.d(param2.field_s, 77);
+          var3.writeCipheredOpcode(param0, (byte) -117);
+          var3.writeByte((byte) 123, param2.field_q);
+          var3.writeShort(param2.field_s, 77);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "rh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
