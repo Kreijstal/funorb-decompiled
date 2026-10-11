@@ -3,7 +3,7 @@
  */
 final class Unit extends IntrusiveNode implements TaggedFieldReader {
     int tag;
-    hr field_x;
+    UnitModelPreview field_x;
     int accessoryType;
     boolean hasTileEffect8;
     boolean hasTileEffect4;
@@ -114,9 +114,9 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           this.n((byte) 80);
         }
         if (this.field_x == null) {
-          this.field_x = new hr(this.field_R, param0, this.facingAngle);
+          this.field_x = new UnitModelPreview(this.field_R, param0, this.facingAngle);
         } else {
-          this.field_x.a((byte) 59, param0);
+          this.field_x.setUnitType((byte) 59, param0);
         }
     }
 
@@ -429,7 +429,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           this.immobilizedTurns = this.immobilizedTurns - 1;
         }
         if (obfuscationGuard != -36) {
-          this.field_x = (hr) null;
+          this.field_x = (UnitModelPreview) null;
         }
         if (this.immobilizedTurns != 0) {
         } else {
@@ -477,12 +477,12 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
     final void z(int param0) {
         if (null != this.field_x) {
           if (this.unitType == 34) {
-            this.field_x.a((byte) 115, 75);
+            this.field_x.setUnitType((byte) 115, 75);
           }
           if (this.unitType == 7) {
-            this.field_x.a((byte) 77, 76);
+            this.field_x.setUnitType((byte) 77, 76);
           }
-          this.field_x.a(-23162, 0);
+          this.field_x.selectAnimation(-23162, 0);
         }
         if (param0 != 10) {
           this.field_R = (int[]) null;
@@ -504,7 +504,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           this.facingAngle = angle;
         }
         if (this.field_x != null) {
-          this.field_x.a(false, angle);
+          this.field_x.setYaw(false, angle);
         }
         int var3 = 114 / ((-56 - obfuscationGuard) / 54);
     }

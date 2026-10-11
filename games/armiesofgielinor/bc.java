@@ -100,7 +100,7 @@ final class bc {
             boolean decompiledFrameRemainder0 = true;
             if (~param1.field_b == ~an.field_F[var3].field_b) {
               var4 = an.field_F[var3].a(true);
-              if (MoveAttackRequest.field_D[var4] > vj.field_g) {
+              if (MoveAttackRequest.field_D[var4] > AnimationPlayer.field_g) {
                 MoveAttackRequest.field_D[var4] = MoveAttackRequest.field_D[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

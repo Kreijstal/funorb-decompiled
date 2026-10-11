@@ -128,7 +128,7 @@ class ms extends IntrusiveNode {
             if (1 != var1) {
               BestScoreStrategy.field_h = fo.a(4800, lw.field_nb, new String[]{Integer.toString(var1)});
             } else {
-              BestScoreStrategy.field_h = hh.field_a;
+              BestScoreStrategy.field_h = TrianglePulse.field_a;
             }
             BestScoreStrategy.field_h = SpellCastEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) BestScoreStrategy.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) c.field_a)});
           }
@@ -147,7 +147,7 @@ class ms extends IntrusiveNode {
             if (1 != var1) {
               BestScoreStrategy.field_h = fo.a(4800, lw.field_nb, new String[]{Integer.toString(var1)});
             } else {
-              BestScoreStrategy.field_h = hh.field_a;
+              BestScoreStrategy.field_h = TrianglePulse.field_a;
             }
             BestScoreStrategy.field_h = SpellCastEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) BestScoreStrategy.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) c.field_a)});
           }

@@ -24,7 +24,7 @@ final class bj extends IntrusiveNode {
         byte[] var17;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var1 = qm.field_K[0] * c.field_e[0];
-        var17 = vj.field_j[0];
+        var17 = AnimationPlayer.field_j[0];
         if (param0 != 12722) {
           bj.a(-13);
         }

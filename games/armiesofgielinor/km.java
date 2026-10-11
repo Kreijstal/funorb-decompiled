@@ -13,7 +13,7 @@ final class km {
     private int field_g;
     static String field_a;
     static RgbSprite[] field_h;
-    private vj field_i;
+    private AnimationPlayer field_i;
     static String[] field_j;
 
     final static int a(int param0) {
@@ -38,7 +38,7 @@ final class km {
         int var9;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param3 != -44) {
-          this.field_i = (vj) null;
+          this.field_i = (AnimationPlayer) null;
         }
         for (var8 = 0; var8 < 6; var8++) {
           if (var8 * 8 < this.field_f) {
@@ -83,7 +83,7 @@ final class km {
 
     final boolean b(int param0) {
         if (null != this.field_i) {
-          this.field_i.a(-94);
+          this.field_i.advance(-94);
         }
         int var2 = 36 % ((10 - param0) / 61);
         if (this.field_f > -1) {
@@ -131,7 +131,7 @@ final class km {
           return;
         }
         if (this.field_i != null) {
-          var4_ref = (ModelMesh) (this.field_i.a(false, true, false, cs.field_db[this.field_e]));
+          var4_ref = (ModelMesh) (this.field_i.applyCurrentFrame(false, true, false, cs.field_db[this.field_e]));
         } else {
           var4_ref = (ModelMesh) (cs.field_db[this.field_e].a(false, false, false));
         }
@@ -230,7 +230,7 @@ final class km {
           this.field_b = false;
         }
         if (this.field_i != null) {
-          this.field_i.a(-96);
+          this.field_i.advance(-96);
         }
         this.field_f = this.field_f + 5;
     }
@@ -243,12 +243,12 @@ final class km {
         this.field_k = param1;
         this.field_d = param2;
         if (this.field_e == 0) {
-          this.field_i = new vj(1);
-          this.field_i.a(-1, pv.field_a[0][0]);
+          this.field_i = new AnimationPlayer(1);
+          this.field_i.selectSequence(-1, pv.field_a[0][0]);
         }
         if (this.field_e == 5) {
-          this.field_i = new vj(1);
-          this.field_i.a(-1, pv.field_a[5][0]);
+          this.field_i = new AnimationPlayer(1);
+          this.field_i.selectSequence(-1, pv.field_a[5][0]);
         }
     }
 

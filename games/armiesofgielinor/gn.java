@@ -96,7 +96,7 @@ final class gn {
     }
 
     final static void d(int param0) {
-        Spell.field_d = new hk(jm.field_b, hr.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k);
+        Spell.field_d = new hk(jm.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k);
         if (param0 != 5) {
           gn.d(-31);
         }

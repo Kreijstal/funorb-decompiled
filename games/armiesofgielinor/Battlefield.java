@@ -1936,7 +1936,7 @@ final class Battlefield {
         RuntimeException decompiledCaughtException = null;
         try {
           damageTakenPercent = this.getDamageTakenPercent(defender.tileX + defender.tileY * this.mapWidth, -4, defender);
-          if (~(attackTypeMask | hh.statusProtectionMasks[defender.statusEffectType]) == ~hh.statusProtectionMasks[defender.statusEffectType]) {
+          if (~(attackTypeMask | TrianglePulse.statusProtectionMasks[defender.statusEffectType]) == ~TrianglePulse.statusProtectionMasks[defender.statusEffectType]) {
             damageTakenPercent = damageTakenPercent - defender.statusEffectValue * 10;
           }
           if (obfuscationGuard > -111) {
@@ -7117,7 +7117,7 @@ final class Battlefield {
               throw new IllegalStateException("");
             }
             this.teams[0] = new TeamRoster(CampaignMission.field_p, var31);
-            this.teams[1] = new TeamRoster(vj.field_n, var32);
+            this.teams[1] = new TeamRoster(AnimationPlayer.field_n, var32);
           }
           if (decompiledFrameCompleted5) {
             this.pendingEvents = new NodeDeque();

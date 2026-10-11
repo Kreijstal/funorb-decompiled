@@ -71,7 +71,7 @@ final class ln {
     }
 
     final static void a(kl param0, kl param1, kl param2, int param3) {
-        qb[] array$0 = null;
+        AnimationSequence[] array$0 = null;
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -95,16 +95,16 @@ final class ln {
         int var4_intLifetime1;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          ck.field_e = new qb[or.field_f.length][];
+          ck.field_e = new AnimationSequence[or.field_f.length][];
           for (var4_int = param3; or.field_f.length > var4_int; var4_int++) {
             var10 = or.field_f[var4_int];
             var5 = var10;
             var6_int = jq.field_I[var4_int].length;
-            array$0 = new qb[var6_int];
+            array$0 = new AnimationSequence[var6_int];
             ck.field_e[var4_int] = array$0;
             for (var7 = 0; var6_int > var7; var7++) {
               var8 = jq.field_I[var4_int][var7];
-              ck.field_e[var4_int][var7] = new qb(param0, var10, var8);
+              ck.field_e[var4_int][var7] = new AnimationSequence(param0, var10, var8);
             }
           }
           if (!ta.field_L) {
@@ -114,11 +114,11 @@ final class ln {
               var11 = ArmiesOfGielinor.field_N[var12];
               var5Lifetime1 = var11;
               if (var5Lifetime1 == null) {
-                pv.field_a[var12] = new qb[]{};
+                pv.field_a[var12] = new AnimationSequence[]{};
               } else {
-                pv.field_a[var12] = new qb[1];
+                pv.field_a[var12] = new AnimationSequence[1];
                 var6 = CipherPacketBuffer.field_u[var12];
-                pv.field_a[var12][0] = new qb(param0, var11, var6);
+                pv.field_a[var12][0] = new AnimationSequence(param0, var11, var6);
               }
               var12++;
             }

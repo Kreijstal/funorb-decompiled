@@ -62,7 +62,7 @@ final class eo {
               param4.packedFlag8) {
               var6_int = 75;
             }
-            param4.field_x = new hr(param4.field_R, var6_int, param4.facingAngle);
+            param4.field_x = new UnitModelPreview(param4.field_R, var6_int, param4.facingAngle);
           }
           if (param4.field_x == null) {
             return true;

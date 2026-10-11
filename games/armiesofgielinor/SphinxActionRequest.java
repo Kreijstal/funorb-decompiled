@@ -144,8 +144,8 @@ final class SphinxActionRequest extends ActionRequest {
           var12 = wj.a(-12310, fk.a("popup_mouseover", (byte) -124, param1, "lobby"));
           var13 = fk.a("button", (byte) -125, param1, "lobby");
           var14 = wj.a(-12310, fk.a("tab_active", (byte) -124, param1, "lobby"));
-          hr.field_m = new je(0L, var8);
-          hr.field_m.field_G = var14;
+          UnitModelPreview.field_m = new je(0L, var8);
+          UnitModelPreview.field_m.field_G = var14;
           uc.field_b = new je(0L, (je) null);
           uc.field_b.field_cb = GameplayController.a("closebutton", (byte) 51, "lobby", param1);
           uc.field_b.field_vb = GameplayController.a("closebutton_mouseover", (byte) 51, "lobby", param1);
@@ -189,7 +189,7 @@ final class SphinxActionRequest extends ActionRequest {
           IsaacRandom.field_i = new je(0L, fp.field_Lb);
           IsaacRandom.field_i.a(0, ms.field_k);
           var16 = fk.a("button_mouseover", (byte) -128, param1, "lobby");
-          qb.field_h = new np(kq.field_N, var12, eq.field_h, ms.field_k, 3, 2, io.field_n, 3, jn.field_d);
+          AnimationSequence.field_h = new np(kq.field_N, var12, eq.field_h, ms.field_k, 3, 2, io.field_n, 3, jn.field_d);
           lu.field_u = new je(0L, ms.field_k);
           lu.field_u.field_G = var13;
           lu.field_u.field_Bb = 1;

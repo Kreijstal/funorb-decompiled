@@ -139,12 +139,12 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     final static void a(int param0) {
         if (param0 == 4) {
-          pr.field_g.a(-99);
+          pr.field_g.advance(-99);
           ug.field_b = ug.field_b + 1;
           return;
         }
         field_a = (cr) null;
-        pr.field_g.a(-99);
+        pr.field_g.advance(-99);
         ug.field_b = ug.field_b + 1;
     }
 

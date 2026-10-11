@@ -69,7 +69,7 @@ abstract class ks extends ms {
         }
     }
 
-    final static void a(kk param0, boolean param1, int param2, vj param3, int param4, int param5, int param6, js param7, int param8) {
+    final static void a(kk param0, boolean param1, int param2, AnimationPlayer param3, int param4, int param5, int param6, js param7, int param8) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -113,7 +113,7 @@ abstract class ks extends ms {
             param0 = param7.a(SummonAction.field_x, fm.field_a, var15, var16, var17);
           }
           if (param3 != null) {
-            param0 = param3.a(false, true, false, param0);
+            param0 = param3.applyCurrentFrame(false, true, false, param0);
           }
           param0.b(param4, param4, param4);
           param0.a(var9_int, var10, var11, var14, var15, var16, var17, -1L);

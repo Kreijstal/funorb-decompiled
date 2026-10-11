@@ -42,7 +42,7 @@ final class ParasiteEvent extends GameEvent {
         RgbSprite[] var1 = new RgbSprite[iw.field_n];
         for (var2 = 0; iw.field_n > var2; var2++) {
           var3 = qm.field_K[var2] * c.field_e[var2];
-          var4 = vj.field_j[var2];
+          var4 = AnimationPlayer.field_j[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = MovementPresentation.field_j[rn.a(255, (int) var4[var6])];

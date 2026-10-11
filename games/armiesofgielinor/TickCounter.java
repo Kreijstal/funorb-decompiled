@@ -1,50 +1,50 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class em {
+final class TickCounter {
     static String field_e;
     static String field_c;
-    int field_f;
+    int limit;
     static String field_b;
-    int field_a;
+    int elapsedTicks;
     static String field_d;
 
-    final boolean c(int param0) {
+    final boolean advanceAndCheck(int obfuscationGuard) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < ~this.field_f) {
+          if (obfuscationGuard < ~this.limit) {
             return false;
           }
-          this.field_a = this.field_a + 1;
-          if (this.field_f <= this.field_a) {
+          this.elapsedTicks = this.elapsedTicks + 1;
+          if (this.limit <= this.elapsedTicks) {
             return true;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "em.D(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "em.D(" + obfuscationGuard + ')');
         }
     }
 
-    final void b(int param0) {
+    final void reset(int obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (param0 != 17) {
+          if (obfuscationGuard != 17) {
             field_c = (String) null;
           }
-          this.field_a = 0;
+          this.elapsedTicks = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "em.F(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "em.F(" + obfuscationGuard + ')');
         }
     }
 
-    final static void a(kl param0, int param1) {
+    final static void loadClientAssets(kl archive, int obfuscationGuard) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_4826_0;
             StringBuilder stackIn_4826_1;
@@ -789,401 +789,401 @@ final class em {
                 }
                 var2 = fk.a(false, "instructions_titles,0,0");
                 if (null != var2) {
-                  PortalLossCondition.field_b[0][0] = uu.a(var2, (byte) -102);
+                  PortalLossCondition.instructionSectionTitles[0][0] = uu.a(var2, (byte) -102);
                 }
                 var2 = fk.a(false, "instructions_titles,1,0");
                 if (null != var2) {
-                  PortalLossCondition.field_b[1][0] = uu.a(var2, (byte) 20);
+                  PortalLossCondition.instructionSectionTitles[1][0] = uu.a(var2, (byte) 20);
                 }
                 var2 = fk.a(false, "instructions_titles,3,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_b[3][0] = uu.a(var2, (byte) 108);
+                  PortalLossCondition.instructionSectionTitles[3][0] = uu.a(var2, (byte) 108);
                 }
                 var2 = fk.a(false, "instructions_titles,4,0");
                 if (null != var2) {
-                  PortalLossCondition.field_b[4][0] = uu.a(var2, (byte) -127);
+                  PortalLossCondition.instructionSectionTitles[4][0] = uu.a(var2, (byte) -127);
                 }
                 var2 = fk.a(false, "instructions_titles,5,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_b[5][0] = uu.a(var2, (byte) 53);
+                  PortalLossCondition.instructionSectionTitles[5][0] = uu.a(var2, (byte) 53);
                 }
                 var2 = fk.a(false, "instructions_titles,6,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_b[6][0] = uu.a(var2, (byte) -103);
+                  PortalLossCondition.instructionSectionTitles[6][0] = uu.a(var2, (byte) -103);
                 }
                 var2 = fk.a(false, "instructions_titles,7,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_b[7][0] = uu.a(var2, (byte) 78);
+                  PortalLossCondition.instructionSectionTitles[7][0] = uu.a(var2, (byte) 78);
                 }
                 var2 = fk.a(false, "instructions_titles,8,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_b[8][0] = uu.a(var2, (byte) 111);
+                  PortalLossCondition.instructionSectionTitles[8][0] = uu.a(var2, (byte) 111);
                 }
                 var2 = fk.a(false, "instructions_titles,9,0");
                 if (null != var2) {
-                  PortalLossCondition.field_b[9][0] = uu.a(var2, (byte) -114);
+                  PortalLossCondition.instructionSectionTitles[9][0] = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "instructions_titles,9,1");
                 if (var2 != null) {
-                  PortalLossCondition.field_b[9][1] = uu.a(var2, (byte) -100);
+                  PortalLossCondition.instructionSectionTitles[9][1] = uu.a(var2, (byte) -100);
                 }
                 var2 = fk.a(false, "instructions_titles,11,0");
                 if (null != var2) {
-                  PortalLossCondition.field_b[11][0] = uu.a(var2, (byte) -122);
+                  PortalLossCondition.instructionSectionTitles[11][0] = uu.a(var2, (byte) -122);
                 }
                 var2 = fk.a(false, "instructions_titles,12,0");
                 if (null != var2) {
-                  PortalLossCondition.field_b[12][0] = uu.a(var2, (byte) -105);
+                  PortalLossCondition.instructionSectionTitles[12][0] = uu.a(var2, (byte) -105);
                 }
                 var2 = fk.a(false, "instructions_titles,14,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_b[14][0] = uu.a(var2, (byte) -112);
+                  PortalLossCondition.instructionSectionTitles[14][0] = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "instructions_titles,15,0");
                 if (null != var2) {
-                  PortalLossCondition.field_b[15][0] = uu.a(var2, (byte) 124);
+                  PortalLossCondition.instructionSectionTitles[15][0] = uu.a(var2, (byte) 124);
                 }
                 var2 = fk.a(false, "instructions_titles,16,0");
                 if (null != var2) {
-                  PortalLossCondition.field_b[16][0] = uu.a(var2, (byte) 8);
+                  PortalLossCondition.instructionSectionTitles[16][0] = uu.a(var2, (byte) 8);
                 }
                 var2 = fk.a(false, "instructions_subtitles,0,0,0");
                 if (null != var2) {
-                  PortalLossCondition.field_g[0][0][0] = uu.a(var2, (byte) 7);
+                  PortalLossCondition.instructionRowHeadings[0][0][0] = uu.a(var2, (byte) 7);
                 }
                 var2 = fk.a(false, "instructions_subtitles,6,0,1");
                 if (var2 != null) {
-                  PortalLossCondition.field_g[6][0][1] = uu.a(var2, (byte) -103);
+                  PortalLossCondition.instructionRowHeadings[6][0][1] = uu.a(var2, (byte) -103);
                 }
                 var2 = fk.a(false, "instructions_subtitles,6,0,2");
                 if (null != var2) {
-                  PortalLossCondition.field_g[6][0][2] = uu.a(var2, (byte) 98);
+                  PortalLossCondition.instructionRowHeadings[6][0][2] = uu.a(var2, (byte) 98);
                 }
                 var2 = fk.a(false, "instructions_subtitles,6,0,3");
                 if (null != var2) {
-                  PortalLossCondition.field_g[6][0][3] = uu.a(var2, (byte) 13);
+                  PortalLossCondition.instructionRowHeadings[6][0][3] = uu.a(var2, (byte) 13);
                 }
                 var2 = fk.a(false, "instructions_subtitles,7,0,1");
                 if (null != var2) {
-                  PortalLossCondition.field_g[7][0][1] = uu.a(var2, (byte) -103);
+                  PortalLossCondition.instructionRowHeadings[7][0][1] = uu.a(var2, (byte) -103);
                 }
                 var2 = fk.a(false, "instructions_subtitles,7,0,2");
                 if (null != var2) {
-                  PortalLossCondition.field_g[7][0][2] = uu.a(var2, (byte) -114);
+                  PortalLossCondition.instructionRowHeadings[7][0][2] = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "instructions_subtitles,7,0,3");
                 if (null != var2) {
-                  PortalLossCondition.field_g[7][0][3] = uu.a(var2, (byte) 75);
+                  PortalLossCondition.instructionRowHeadings[7][0][3] = uu.a(var2, (byte) 75);
                 }
                 var2 = fk.a(false, "instructions_subtitles,8,0,3");
                 if (var2 != null) {
-                  PortalLossCondition.field_g[8][0][3] = uu.a(var2, (byte) -100);
+                  PortalLossCondition.instructionRowHeadings[8][0][3] = uu.a(var2, (byte) -100);
                 }
                 var2 = fk.a(false, "instructions_subtitles,9,0,1");
                 if (null != var2) {
-                  PortalLossCondition.field_g[9][0][1] = uu.a(var2, (byte) -99);
+                  PortalLossCondition.instructionRowHeadings[9][0][1] = uu.a(var2, (byte) -99);
                 }
             }
             void runChunk1() throws java.lang.RuntimeException {
                 var2 = fk.a(false, "instructions_subtitles,9,0,2");
                 if (var2 != null) {
-                  PortalLossCondition.field_g[9][0][2] = uu.a(var2, (byte) -117);
+                  PortalLossCondition.instructionRowHeadings[9][0][2] = uu.a(var2, (byte) -117);
                 }
                 var2 = fk.a(false, "instructions_subtitles,9,0,3");
                 if (var2 != null) {
-                  PortalLossCondition.field_g[9][0][3] = uu.a(var2, (byte) -118);
+                  PortalLossCondition.instructionRowHeadings[9][0][3] = uu.a(var2, (byte) -118);
                 }
                 var2 = fk.a(false, "instructions_subtitles,9,0,4");
                 if (null != var2) {
-                  PortalLossCondition.field_g[9][0][4] = uu.a(var2, (byte) 20);
+                  PortalLossCondition.instructionRowHeadings[9][0][4] = uu.a(var2, (byte) 20);
                 }
                 var2 = fk.a(false, "instructions_subtitles,11,0,1");
                 if (null != var2) {
-                  PortalLossCondition.field_g[11][0][1] = uu.a(var2, (byte) 59);
+                  PortalLossCondition.instructionRowHeadings[11][0][1] = uu.a(var2, (byte) 59);
                 }
                 var2 = fk.a(false, "instructions_subtitles,11,0,2");
                 if (var2 != null) {
-                  PortalLossCondition.field_g[11][0][2] = uu.a(var2, (byte) -123);
+                  PortalLossCondition.instructionRowHeadings[11][0][2] = uu.a(var2, (byte) -123);
                 }
                 var2 = fk.a(false, "instructions_subtitles,11,0,3");
                 if (null != var2) {
-                  PortalLossCondition.field_g[11][0][3] = uu.a(var2, (byte) -120);
+                  PortalLossCondition.instructionRowHeadings[11][0][3] = uu.a(var2, (byte) -120);
                 }
                 var2 = fk.a(false, "instructions_subtitles,14,0,0");
                 if (null != var2) {
-                  PortalLossCondition.field_g[14][0][0] = uu.a(var2, (byte) -121);
+                  PortalLossCondition.instructionRowHeadings[14][0][0] = uu.a(var2, (byte) -121);
                 }
                 var2 = fk.a(false, "instructions_subtitles,14,0,1");
                 if (null != var2) {
-                  PortalLossCondition.field_g[14][0][1] = uu.a(var2, (byte) -95);
+                  PortalLossCondition.instructionRowHeadings[14][0][1] = uu.a(var2, (byte) -95);
                 }
                 var2 = fk.a(false, "instructions_subtitles,14,0,2");
                 if (null != var2) {
-                  PortalLossCondition.field_g[14][0][2] = uu.a(var2, (byte) 27);
+                  PortalLossCondition.instructionRowHeadings[14][0][2] = uu.a(var2, (byte) 27);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,0,0,1,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[0][0][1][0] = uu.a(var2, (byte) -124);
+                  PortalLossCondition.instructionParagraphs[0][0][1][0] = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,0,0,2,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[0][0][2][0] = uu.a(var2, (byte) 46);
+                  PortalLossCondition.instructionParagraphs[0][0][2][0] = uu.a(var2, (byte) 46);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,0,0,3,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[0][0][3][0] = uu.a(var2, (byte) -112);
+                  PortalLossCondition.instructionParagraphs[0][0][3][0] = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,1,0,0,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[1][0][0][0] = uu.a(var2, (byte) -119);
+                  PortalLossCondition.instructionParagraphs[1][0][0][0] = uu.a(var2, (byte) -119);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,1,0,1,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[1][0][1][0] = uu.a(var2, (byte) 19);
+                  PortalLossCondition.instructionParagraphs[1][0][1][0] = uu.a(var2, (byte) 19);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,1,0,2,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[1][0][2][0] = uu.a(var2, (byte) -97);
+                  PortalLossCondition.instructionParagraphs[1][0][2][0] = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,1,0,3,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[1][0][3][0] = uu.a(var2, (byte) -110);
+                  PortalLossCondition.instructionParagraphs[1][0][3][0] = uu.a(var2, (byte) -110);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,2,0,0,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[2][0][0][0] = uu.a(var2, (byte) -93);
+                  PortalLossCondition.instructionParagraphs[2][0][0][0] = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,2,0,1,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[2][0][1][0] = uu.a(var2, (byte) 88);
+                  PortalLossCondition.instructionParagraphs[2][0][1][0] = uu.a(var2, (byte) 88);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,2,0,2,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[2][0][2][0] = uu.a(var2, (byte) -95);
+                  PortalLossCondition.instructionParagraphs[2][0][2][0] = uu.a(var2, (byte) -95);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,3,0,0,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[3][0][0][0] = uu.a(var2, (byte) -112);
+                  PortalLossCondition.instructionParagraphs[3][0][0][0] = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,3,0,1,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[3][0][1][0] = uu.a(var2, (byte) 15);
+                  PortalLossCondition.instructionParagraphs[3][0][1][0] = uu.a(var2, (byte) 15);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,3,0,2,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[3][0][2][0] = uu.a(var2, (byte) 114);
+                  PortalLossCondition.instructionParagraphs[3][0][2][0] = uu.a(var2, (byte) 114);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,3,0,3,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[3][0][3][0] = uu.a(var2, (byte) 101);
+                  PortalLossCondition.instructionParagraphs[3][0][3][0] = uu.a(var2, (byte) 101);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,3,0,4,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[3][0][4][0] = uu.a(var2, (byte) 111);
+                  PortalLossCondition.instructionParagraphs[3][0][4][0] = uu.a(var2, (byte) 111);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,4,0,0,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[4][0][0][0] = uu.a(var2, (byte) 81);
+                  PortalLossCondition.instructionParagraphs[4][0][0][0] = uu.a(var2, (byte) 81);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,4,0,1,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[4][0][1][0] = uu.a(var2, (byte) -99);
+                  PortalLossCondition.instructionParagraphs[4][0][1][0] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,4,0,2,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[4][0][2][0] = uu.a(var2, (byte) 75);
+                  PortalLossCondition.instructionParagraphs[4][0][2][0] = uu.a(var2, (byte) 75);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,4,0,3,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[4][0][3][0] = uu.a(var2, (byte) -99);
+                  PortalLossCondition.instructionParagraphs[4][0][3][0] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,4,0,4,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[4][0][4][0] = uu.a(var2, (byte) -117);
+                  PortalLossCondition.instructionParagraphs[4][0][4][0] = uu.a(var2, (byte) -117);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,5,0,0,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[5][0][0][0] = uu.a(var2, (byte) -115);
+                  PortalLossCondition.instructionParagraphs[5][0][0][0] = uu.a(var2, (byte) -115);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,5,0,1,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[5][0][1][0] = uu.a(var2, (byte) -99);
+                  PortalLossCondition.instructionParagraphs[5][0][1][0] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,5,0,2,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[5][0][2][0] = uu.a(var2, (byte) -95);
+                  PortalLossCondition.instructionParagraphs[5][0][2][0] = uu.a(var2, (byte) -95);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,5,0,5,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[5][0][5][0] = uu.a(var2, (byte) 84);
+                  PortalLossCondition.instructionParagraphs[5][0][5][0] = uu.a(var2, (byte) 84);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,6,0,0,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[6][0][0][0] = uu.a(var2, (byte) 32);
+                  PortalLossCondition.instructionParagraphs[6][0][0][0] = uu.a(var2, (byte) 32);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,6,0,4,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[6][0][4][0] = uu.a(var2, (byte) 111);
+                  PortalLossCondition.instructionParagraphs[6][0][4][0] = uu.a(var2, (byte) 111);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,6,0,5,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[6][0][5][0] = uu.a(var2, (byte) 42);
+                  PortalLossCondition.instructionParagraphs[6][0][5][0] = uu.a(var2, (byte) 42);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,7,0,0,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[7][0][0][0] = uu.a(var2, (byte) -92);
+                  PortalLossCondition.instructionParagraphs[7][0][0][0] = uu.a(var2, (byte) -92);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,7,0,4,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[7][0][4][0] = uu.a(var2, (byte) -117);
+                  PortalLossCondition.instructionParagraphs[7][0][4][0] = uu.a(var2, (byte) -117);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,8,0,0,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[8][0][0][0] = uu.a(var2, (byte) 67);
+                  PortalLossCondition.instructionParagraphs[8][0][0][0] = uu.a(var2, (byte) 67);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,8,0,1,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[8][0][1][0] = uu.a(var2, (byte) 8);
+                  PortalLossCondition.instructionParagraphs[8][0][1][0] = uu.a(var2, (byte) 8);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,8,0,2,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[8][0][2][0] = uu.a(var2, (byte) -127);
+                  PortalLossCondition.instructionParagraphs[8][0][2][0] = uu.a(var2, (byte) -127);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,9,0,0,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[9][0][0][0] = uu.a(var2, (byte) -124);
+                  PortalLossCondition.instructionParagraphs[9][0][0][0] = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,9,1,0,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[9][1][0][0] = uu.a(var2, (byte) -112);
+                  PortalLossCondition.instructionParagraphs[9][1][0][0] = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,9,1,1,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[9][1][1][0] = uu.a(var2, (byte) 75);
+                  PortalLossCondition.instructionParagraphs[9][1][1][0] = uu.a(var2, (byte) 75);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,9,1,2,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[9][1][2][0] = uu.a(var2, (byte) -109);
+                  PortalLossCondition.instructionParagraphs[9][1][2][0] = uu.a(var2, (byte) -109);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,9,1,3,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[9][1][3][0] = uu.a(var2, (byte) 33);
+                  PortalLossCondition.instructionParagraphs[9][1][3][0] = uu.a(var2, (byte) 33);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,10,0,0,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[10][0][0][0] = uu.a(var2, (byte) -118);
+                  PortalLossCondition.instructionParagraphs[10][0][0][0] = uu.a(var2, (byte) -118);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,10,0,1,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[10][0][1][0] = uu.a(var2, (byte) -104);
+                  PortalLossCondition.instructionParagraphs[10][0][1][0] = uu.a(var2, (byte) -104);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,10,0,2,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[10][0][2][0] = uu.a(var2, (byte) -96);
+                  PortalLossCondition.instructionParagraphs[10][0][2][0] = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,10,0,3,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[10][0][3][0] = uu.a(var2, (byte) -114);
+                  PortalLossCondition.instructionParagraphs[10][0][3][0] = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,10,0,4,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[10][0][4][0] = uu.a(var2, (byte) -115);
+                  PortalLossCondition.instructionParagraphs[10][0][4][0] = uu.a(var2, (byte) -115);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,10,0,5,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[10][0][5][0] = uu.a(var2, (byte) 29);
+                  PortalLossCondition.instructionParagraphs[10][0][5][0] = uu.a(var2, (byte) 29);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,11,0,0,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[11][0][0][0] = uu.a(var2, (byte) -107);
+                  PortalLossCondition.instructionParagraphs[11][0][0][0] = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,11,0,4,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[11][0][4][0] = uu.a(var2, (byte) 63);
+                  PortalLossCondition.instructionParagraphs[11][0][4][0] = uu.a(var2, (byte) 63);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,11,0,5,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[11][0][5][0] = uu.a(var2, (byte) 25);
+                  PortalLossCondition.instructionParagraphs[11][0][5][0] = uu.a(var2, (byte) 25);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,11,0,6,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[11][0][6][0] = uu.a(var2, (byte) -92);
+                  PortalLossCondition.instructionParagraphs[11][0][6][0] = uu.a(var2, (byte) -92);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,12,0,0,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[12][0][0][0] = uu.a(var2, (byte) -104);
+                  PortalLossCondition.instructionParagraphs[12][0][0][0] = uu.a(var2, (byte) -104);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,12,0,1,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[12][0][1][0] = uu.a(var2, (byte) 124);
+                  PortalLossCondition.instructionParagraphs[12][0][1][0] = uu.a(var2, (byte) 124);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,12,0,2,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[12][0][2][0] = uu.a(var2, (byte) -106);
+                  PortalLossCondition.instructionParagraphs[12][0][2][0] = uu.a(var2, (byte) -106);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,12,0,3,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[12][0][3][0] = uu.a(var2, (byte) -93);
+                  PortalLossCondition.instructionParagraphs[12][0][3][0] = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,13,0,0,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[13][0][0][0] = uu.a(var2, (byte) 103);
+                  PortalLossCondition.instructionParagraphs[13][0][0][0] = uu.a(var2, (byte) 103);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,13,0,1,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[13][0][1][0] = uu.a(var2, (byte) -121);
+                  PortalLossCondition.instructionParagraphs[13][0][1][0] = uu.a(var2, (byte) -121);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,13,0,2,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[13][0][2][0] = uu.a(var2, (byte) 56);
+                  PortalLossCondition.instructionParagraphs[13][0][2][0] = uu.a(var2, (byte) 56);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,13,0,3,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[13][0][3][0] = uu.a(var2, (byte) 66);
+                  PortalLossCondition.instructionParagraphs[13][0][3][0] = uu.a(var2, (byte) 66);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,14,0,0,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[14][0][0][0] = uu.a(var2, (byte) -125);
+                  PortalLossCondition.instructionParagraphs[14][0][0][0] = uu.a(var2, (byte) -125);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,14,0,1,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[14][0][1][0] = uu.a(var2, (byte) 110);
+                  PortalLossCondition.instructionParagraphs[14][0][1][0] = uu.a(var2, (byte) 110);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,14,0,2,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[14][0][2][0] = uu.a(var2, (byte) -111);
+                  PortalLossCondition.instructionParagraphs[14][0][2][0] = uu.a(var2, (byte) -111);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,15,0,0,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[15][0][0][0] = uu.a(var2, (byte) -97);
+                  PortalLossCondition.instructionParagraphs[15][0][0][0] = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,15,0,1,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[15][0][1][0] = uu.a(var2, (byte) -99);
+                  PortalLossCondition.instructionParagraphs[15][0][1][0] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,15,0,2,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[15][0][2][0] = uu.a(var2, (byte) -122);
+                  PortalLossCondition.instructionParagraphs[15][0][2][0] = uu.a(var2, (byte) -122);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,15,0,3,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[15][0][3][0] = uu.a(var2, (byte) 41);
+                  PortalLossCondition.instructionParagraphs[15][0][3][0] = uu.a(var2, (byte) 41);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,16,0,0,0");
                 if (null != var2) {
-                  PortalLossCondition.field_c[16][0][0][0] = uu.a(var2, (byte) 72);
+                  PortalLossCondition.instructionParagraphs[16][0][0][0] = uu.a(var2, (byte) 72);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,16,0,1,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[16][0][1][0] = uu.a(var2, (byte) -108);
+                  PortalLossCondition.instructionParagraphs[16][0][1][0] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,16,0,2,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[16][0][2][0] = uu.a(var2, (byte) 71);
+                  PortalLossCondition.instructionParagraphs[16][0][2][0] = uu.a(var2, (byte) 71);
                 }
                 var2 = fk.a(false, "instructions_paragraphs,16,0,3,0");
                 if (var2 != null) {
-                  PortalLossCondition.field_c[16][0][3][0] = uu.a(var2, (byte) -98);
+                  PortalLossCondition.instructionParagraphs[16][0][3][0] = uu.a(var2, (byte) -98);
                 }
                 var2 = fk.a(false, "TEXT_SKIP");
                 if (var2 != null) {
@@ -2509,7 +2509,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TEAM_RED");
                 if (var2 != null) {
-                  vj.field_n = uu.a(var2, (byte) 34);
+                  AnimationPlayer.field_n = uu.a(var2, (byte) 34);
                 }
                 var2 = fk.a(false, "TEAM_BLUE");
                 if (null != var2) {
@@ -4851,7 +4851,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TTREEN_BOLTS");
                 if (null != var2) {
-                  qb.field_l = uu.a(var2, (byte) 120);
+                  AnimationSequence.field_l = uu.a(var2, (byte) 120);
                 }
                 var2 = fk.a(false, "TTREEN_RAINS");
                 if (var2 != null) {
@@ -5619,7 +5619,7 @@ final class em {
                 }
             }
         }
-        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(param0, param1);
+        $CfrPartitionedBody decompiledBody = new $CfrPartitionedBody(archive, obfuscationGuard);
         decompiledBody.run();
     }
 
@@ -5731,7 +5731,7 @@ final class em {
                   l.field_b[17].b(param7, -40 + param3, param0, param8);
                   mv.a(param7 + 20, (byte) -95, ug.field_b + param4, var11, param3);
                   if (var11 > -1) {
-                    ks.a(ActionRequest.field_k[76][var11], false, -40 + param3, pr.field_g, 128, 150, param7, (js) null, -10374);
+                    ks.a(ActionRequest.unitModels[76][var11], false, -40 + param3, pr.field_g, 128, 150, param7, (js) null, -10374);
                   }
                   l.field_b[16].b(param7, -40 + param3, param0, param8);
                 }
@@ -5739,7 +5739,7 @@ final class em {
                   if (var11 > -1) {
                     mv.a(param7 + 20, (byte) -74, param4 + ug.field_b, var11, param3);
                   }
-                  ks.a(ActionRequest.field_k[76][var11], false, param3 - 40, pr.field_g, 128, 150, param7, (js) null, -10374);
+                  ks.a(ActionRequest.unitModels[76][var11], false, param3 - 40, pr.field_g, 128, 150, param7, (js) null, -10374);
                 }
                 if ((var10 != 3 ||
                   var13 != 0) &&
@@ -5814,7 +5814,7 @@ final class em {
             }
           }
           if (param5 != 0) {
-            em.a((cf) null, (byte) -46, (CipherPacketBuffer) null);
+            TickCounter.a((cf) null, (byte) -46, (CipherPacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5843,12 +5843,12 @@ final class em {
         }
     }
 
-    em(int param0) {
+    TickCounter(int limit) {
         try {
-          this.field_f = param0;
-          this.field_a = 0;
+          this.limit = limit;
+          this.elapsedTicks = 0;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "em.<init>(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "em.<init>(" + limit + ')');
         }
     }
 

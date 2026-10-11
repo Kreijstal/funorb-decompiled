@@ -470,7 +470,7 @@ final class cv {
             }
             var9Lifetime1 = 1 + param2.field_D;
           }
-          hr.field_d[var9Lifetime1].g(var5_int, var6, var8);
+          UnitModelPreview.field_d[var9Lifetime1].g(var5_int, var6, var8);
           gt.field_c[var9Lifetime1].g(-12 + var5_int, var6 - 18, var8);
           if (param0 != 13) {
             field_n = (String) null;
@@ -797,7 +797,7 @@ final class cv {
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          hh.a(-16147, 50, qf.field_f, true);
+          TrianglePulse.a(-16147, 50, qf.field_f, true);
           var2 = null;
           if (0 != this.field_a) {
             var3 = this.field_l;

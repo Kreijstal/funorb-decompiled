@@ -305,7 +305,7 @@ final class rj extends kb {
         c.field_e = null;
         qm.field_K = null;
         j.field_e = null;
-        vj.field_j = (byte[][]) null;
+        AnimationPlayer.field_j = (byte[][]) null;
         if (param0 < 96) {
           return;
         }

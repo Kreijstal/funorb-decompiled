@@ -227,7 +227,7 @@ final class tg {
             return;
           }
           var11 = DeployEvent.a((byte) 121, this.field_f);
-          var4 = hr.a(this.field_f, -86);
+          var4 = UnitModelPreview.a(this.field_f, -86);
           var5 = this.b(param0 - 24004);
           if (var4 != null) {
             if (vu.field_M.field_kc &&
@@ -276,7 +276,7 @@ final class tg {
         }
         var10 = DeployEvent.a((byte) 121, this.field_f);
         var7 = var10;
-        var4Lifetime1 = hr.a(this.field_f, -86);
+        var4Lifetime1 = UnitModelPreview.a(this.field_f, -86);
         var5 = this.b(param0 - 24004);
         if (var4Lifetime1 != null) {
           if (vu.field_M.field_kc &&
@@ -468,13 +468,13 @@ final class tg {
         if (param1 <= 38) {
           tg.a(-18);
           if (param0 == 17) {
-            Spell.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, jm.field_b, hr.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k, this.field_m, this.field_f);
+            Spell.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, jm.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k, this.field_m, this.field_f);
             return true;
           }
           return false;
         }
         if (param0 == 17) {
-          Spell.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, jm.field_b, hr.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k, this.field_m, this.field_f);
+          Spell.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, jm.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k, this.field_m, this.field_f);
           return true;
         }
         return false;
@@ -590,7 +590,7 @@ final class tg {
 
     tg(je param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_i = new np(qb.field_h);
+          this.field_i = new np(AnimationSequence.field_h);
           this.field_o = param6;
           this.field_c = param4;
           this.field_f = param1;

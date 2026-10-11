@@ -27,7 +27,7 @@ final class LeaderEscortCondition implements MatchCondition {
           if (param1 < 71) {
             field_f = (tu) null;
           }
-          var2 = new d(param0, j.field_e, iq.field_g, qm.field_K, c.field_e, MovementPresentation.field_j, vj.field_j);
+          var2 = new d(param0, j.field_e, iq.field_g, qm.field_K, c.field_e, MovementPresentation.field_j, AnimationPlayer.field_j);
           rj.d((byte) 107);
           stackIn_6_0 = var2;
           return stackIn_6_0;

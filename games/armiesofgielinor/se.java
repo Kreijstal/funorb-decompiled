@@ -106,7 +106,7 @@ final class se {
         var1 = new RgbSprite[iw.field_n];
         for (var2 = 0; iw.field_n > var2; var2++) {
           var3 = c.field_e[var2] * qm.field_K[var2];
-          var20 = vj.field_j[var2];
+          var20 = AnimationPlayer.field_j[var2];
           if (!MapTile.field_e[var2]) {
             var9 = new int[var3];
             var21 = var9;

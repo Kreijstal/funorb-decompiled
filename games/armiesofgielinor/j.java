@@ -100,7 +100,7 @@ final class j {
           ParasiteEvent.field_A = new String[]{wi.field_a, rf.field_e, je.field_lb, ob.field_P};
           DisplacedUnitMarker.field_t[43] = kg.field_c;
           DisplacedUnitMarker.field_t[33] = gv.field_b;
-          DisplacedUnitMarker.field_t[59] = em.field_e;
+          DisplacedUnitMarker.field_t[59] = TickCounter.field_e;
           DisplacedUnitMarker.field_t[41] = CorpseConditionMarker.field_x;
           DisplacedUnitMarker.field_t[45] = oa.field_G;
           DisplacedUnitMarker.field_t[50] = GameEvent.field_u;
@@ -242,7 +242,7 @@ final class j {
         int var10Lifetime1;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          qb.a(PreparedAction.field_r, param0 + 114);
+          AnimationSequence.a(PreparedAction.field_r, param0 + 114);
           if (no.field_K != null) {
             var15 = lm.field_b;
             var17 = var15;

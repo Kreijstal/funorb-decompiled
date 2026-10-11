@@ -421,7 +421,7 @@ final class oo {
             mg.field_d = GameplayController.a("arrow", (byte) 51, "members_expansion_screen", iw.field_p);
             ll.field_Sb = gs.a("arialish12", iw.field_p, bh.field_H, (byte) -53, "");
             kt.field_n = it.a("", iw.field_p, bh.field_H, (byte) -87, "pump32");
-            hr.field_b = nh.a("benefit_orbs", "members_expansion_screen", iw.field_p, false);
+            UnitModelPreview.field_b = nh.a("benefit_orbs", "members_expansion_screen", iw.field_p, false);
             ar.field_D = nh.a("button_text", "members_expansion_screen", iw.field_p, false);
             nh.field_G = ac.a(iw.field_p, "button_highlights", (byte) -4, "members_expansion_screen");
             bh.field_H = null;
@@ -463,7 +463,7 @@ final class oo {
           }
           this.field_m.g(16, 302);
           ll.field_Sb.a(this.field_k[this.field_n], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
-          hr.field_b.g(30, 330);
+          UnitModelPreview.field_b.g(30, 330);
           ll.field_Sb.a(db.field_e[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ll.field_Sb.a(db.field_e[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ll.field_Sb.a(db.field_e[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
@@ -676,7 +676,7 @@ final class oo {
             this.a(var12, 622, this.field_c, 0, kt.field_n, (byte) 66, 47, 0);
             rf.b(-18862);
             this.field_m = new RgbSprite(475, 24);
-            this.a(this.field_m, -4, 0, hr.field_h, kt.field_n, var9, -124, 24, 475, 0.75f);
+            this.a(this.field_m, -4, 0, UnitModelPreview.field_h, kt.field_n, var9, -124, 24, 475, 0.75f);
             if (param0 >= -103) {
               var8 = (BitmapFont) null;
               this.a((int[]) null, -60, (String) null, -5, (BitmapFont) null, (byte) 31, 126, -81);
@@ -690,7 +690,7 @@ final class oo {
             var7 = wp.field_B;
             this.a(var5, -16, 0, var6, kt.field_n, var10, -112, var5.field_v, var5.field_y, 0.5f);
             this.a(var5, 20, 0, var7, kt.field_n, var10, -123, var5.field_v, var5.field_y, 0.5f);
-            this.a(var5, 12 - kt.field_n.field_H + var5.field_v / 2, 0, qb.field_c[this.field_r], kt.field_n, var10, -125, var5.field_v / 3, var5.field_y, 0.699999988079071f);
+            this.a(var5, 12 - kt.field_n.field_H + var5.field_v / 2, 0, AnimationSequence.field_c[this.field_r], kt.field_n, var10, -125, var5.field_v / 3, var5.field_y, 0.699999988079071f);
             rf.b(-18862);
             this.field_b = new RgbSprite(121, 122);
             CombatSandbox.a(this.field_b, 3);

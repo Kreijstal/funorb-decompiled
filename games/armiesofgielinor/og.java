@@ -76,7 +76,7 @@ final class og extends IntrusiveNode {
           var5 = (CharSequence) ((Object) param2);
           wm.field_b = k.a(var5, false);
           dj.field_e = param0;
-          hh.a((byte) 118);
+          TrianglePulse.a((byte) 118);
           if (param1 != 1) {
             field_r = (String) null;
           }

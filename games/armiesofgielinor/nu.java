@@ -78,7 +78,7 @@ final class nu extends lk {
           }
           var12 = var4.readUnsignedByte(0);
           for (var13 = 0; var13 < var12; var13++) {
-            em.a(var10, (byte) -7, var4);
+            TickCounter.a(var10, (byte) -7, var4);
           }
           var20 = var10.field_q;
           var14 = 0;

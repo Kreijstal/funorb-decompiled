@@ -36,7 +36,7 @@ final class eb {
             return;
           }
           for (var3_int = 1; var3_int < ActionRequest.field_m[param1].length; var3_int++) {
-            ActionRequest.field_k[param1][var3_int] = null;
+            ActionRequest.unitModels[param1][var3_int] = null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

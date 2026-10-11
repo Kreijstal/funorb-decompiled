@@ -557,7 +557,7 @@ class je extends im {
           } else {
             stackIn_4_0 = InstructionsPanel.field_D;
           }
-          qb.a(stackIn_4_0, -106);
+          AnimationSequence.a(stackIn_4_0, -106);
           ij.field_w.a(-40 + lk.field_a.field_ob - 2, (byte) -125, 0, lk.field_a.field_gb, 0);
           gg.field_E.a(jn.field_d, -20500, eb.field_c.field_gb, 0, 0);
           stackIn_6_0 = di.field_l;

@@ -54,7 +54,7 @@ final class b extends IntrusiveNode {
           iq.field_g = new int[iw.field_n];
           MapTile.field_e = new boolean[iw.field_n];
           qm.field_K = new int[iw.field_n];
-          vj.field_j = new byte[iw.field_n][];
+          AnimationPlayer.field_j = new byte[iw.field_n][];
           cq.field_z = new byte[iw.field_n][];
           var17.position = -(iw.field_n * 8) - 7 + param0.length;
           lg.field_d = var17.readUnsignedShort((byte) -104);
@@ -91,7 +91,7 @@ final class b extends IntrusiveNode {
             var20 = new byte[var7];
             var18 = var20;
             var8 = var18;
-            vj.field_j[var4Lifetime5] = var20;
+            AnimationPlayer.field_j[var4Lifetime5] = var20;
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;

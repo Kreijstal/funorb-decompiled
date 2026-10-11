@@ -181,10 +181,10 @@ final class ep {
             if (var6 >= 0 &&
               ParasiteEvent.field_A.length > var6) {
               var7_ref_String__ = new String[10];
-              var8 = hh.field_i.a(ParasiteEvent.field_A[var6], new int[]{620}, var7_ref_String__);
+              var8 = TrianglePulse.field_i.a(ParasiteEvent.field_A[var6], new int[]{620}, var7_ref_String__);
               for (var9 = 0; var9 < var8; var9++) {
                 var10 = 435 + 16 * var9;
-                hh.field_i.a(var7_ref_String__[var9], this.a(320, 4592), this.a((byte) -104, var10), 16777215, 65793, 256 - (int)(this.field_e * 256.0 / 11.904));
+                TrianglePulse.field_i.a(var7_ref_String__[var9], this.a(320, 4592), this.a((byte) -104, var10), 16777215, 65793, 256 - (int)(this.field_e * 256.0 / 11.904));
               }
             }
           }

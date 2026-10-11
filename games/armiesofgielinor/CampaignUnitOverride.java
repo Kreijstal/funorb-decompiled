@@ -111,7 +111,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "ticketing_oneunread");
                 if (var2 != null) {
-                  hh.field_a = uu.a(var2, (byte) 42);
+                  TrianglePulse.field_a = uu.a(var2, (byte) 42);
                 }
                 var2 = NodeIterator.a(50, "ticketing_xunread");
                 if (null != var2) {
@@ -335,7 +335,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_invite_players");
                 if (var2 != null) {
-                  em.field_d = uu.a(var2, (byte) -113);
+                  TickCounter.field_d = uu.a(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "close");
                 if (var2 != null) {
@@ -795,7 +795,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_needrating");
                 if (null != var2) {
-                  qb.field_k = uu.a(var2, (byte) 47);
+                  AnimationSequence.field_k = uu.a(var2, (byte) 47);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "gameopt_unratedonly");
                 if (var2 != null) {
@@ -815,7 +815,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "gameopt_playernotmember");
                 if (var2 != null) {
-                  em.field_b = uu.a(var2, (byte) -125);
+                  TickCounter.field_b = uu.a(var2, (byte) -125);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "gameopt_younotmember");
                 if (var2 != null) {
@@ -1421,7 +1421,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_email_confirm");
                 if (null != var2) {
-                  hh.field_j = uu.a(var2, (byte) 48);
+                  TrianglePulse.field_j = uu.a(var2, (byte) 48);
                 }
                 var2 = NodeIterator.a(50, "create_age");
                 if (null != var2) {
@@ -2754,7 +2754,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "me_extra_benefits");
                 if (var2 != null) {
-                  hr.field_h = uu.a(var2, (byte) 72);
+                  UnitModelPreview.field_h = uu.a(var2, (byte) 72);
                 }
                 var2 = NodeIterator.a(50, "hs_friend_tip");
                 if (var2 != null) {
@@ -2976,55 +2976,55 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,0");
                 if (var2 != null) {
-                  qb.field_c[0] = uu.a(var2, (byte) 13);
+                  AnimationSequence.field_c[0] = uu.a(var2, (byte) 13);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,1");
                 if (null != var2) {
-                  qb.field_c[1] = uu.a(var2, (byte) -105);
+                  AnimationSequence.field_c[1] = uu.a(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,2");
                 if (var2 != null) {
-                  qb.field_c[2] = uu.a(var2, (byte) 6);
+                  AnimationSequence.field_c[2] = uu.a(var2, (byte) 6);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,3");
                 if (null != var2) {
-                  qb.field_c[3] = uu.a(var2, (byte) 127);
+                  AnimationSequence.field_c[3] = uu.a(var2, (byte) 127);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,4");
                 if (null != var2) {
-                  qb.field_c[4] = uu.a(var2, (byte) 45);
+                  AnimationSequence.field_c[4] = uu.a(var2, (byte) 45);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,5");
                 if (null != var2) {
-                  qb.field_c[5] = uu.a(var2, (byte) -122);
+                  AnimationSequence.field_c[5] = uu.a(var2, (byte) -122);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,6");
                 if (null != var2) {
-                  qb.field_c[6] = uu.a(var2, (byte) 62);
+                  AnimationSequence.field_c[6] = uu.a(var2, (byte) 62);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,7");
                 if (null != var2) {
-                  qb.field_c[7] = uu.a(var2, (byte) -127);
+                  AnimationSequence.field_c[7] = uu.a(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,8");
                 if (var2 != null) {
-                  qb.field_c[8] = uu.a(var2, (byte) 100);
+                  AnimationSequence.field_c[8] = uu.a(var2, (byte) 100);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,9");
                 if (var2 != null) {
-                  qb.field_c[9] = uu.a(var2, (byte) -114);
+                  AnimationSequence.field_c[9] = uu.a(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,10");
                 if (var2 != null) {
-                  qb.field_c[10] = uu.a(var2, (byte) -92);
+                  AnimationSequence.field_c[10] = uu.a(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,11");
                 if (var2 != null) {
-                  qb.field_c[11] = uu.a(var2, (byte) 118);
+                  AnimationSequence.field_c[11] = uu.a(var2, (byte) 118);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,12");
                 if (var2 != null) {
-                  qb.field_c[12] = uu.a(var2, (byte) 67);
+                  AnimationSequence.field_c[12] = uu.a(var2, (byte) 67);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "sentence_separator");
                 if (var2 != null) {

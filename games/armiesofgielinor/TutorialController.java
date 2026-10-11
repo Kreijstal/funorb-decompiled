@@ -62,7 +62,7 @@ final class TutorialController {
             var11 = 10 + var10;
           }
           if (obfuscationGuard != 28115) {
-            this.f(93);
+            this.drawInstructionsPanel(93);
           }
           if (!highlighted) {
             fe.a(var5, var11, 25 + var9, nd.field_b, true);
@@ -383,8 +383,8 @@ final class TutorialController {
                 break;
               }
               var3Lifetime1 = 0;
-              if (hh.field_c > 312) {
-                var3Lifetime1 = (hh.field_c - 312) * ou.field_c / 291;
+              if (TrianglePulse.field_c > 312) {
+                var3Lifetime1 = (TrianglePulse.field_c - 312) * ou.field_c / 291;
               }
               if (wg.a(-33, db.a(param0, 34), db.a(param0, 292), MatchConditionEntry.a(64, (byte) 94), MatchConditionEntry.a(380, (byte) 94))) {
                 discarded$0 = this.a(bm.spellMenuRoot, true, var3Lifetime1, 0, 0, 97);
@@ -580,21 +580,21 @@ final class TutorialController {
         }
     }
 
-    private final void f(int param0) {
+    private final void drawInstructionsPanel(int obfuscationGuard) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 >= -117) {
+          if (obfuscationGuard >= -117) {
             return;
           }
           if (null != MoveEvent.instructionsPanel) {
-            MoveEvent.instructionsPanel.d((byte) -102);
+            MoveEvent.instructionsPanel.drawPanel((byte) -102);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.F(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "ci.F(" + obfuscationGuard + ')');
         }
     }
 
@@ -745,7 +745,7 @@ final class TutorialController {
         }
     }
 
-    private final void e(int param0) {
+    private final void updateInstructionsPanel(int obfuscationGuard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -763,7 +763,7 @@ final class TutorialController {
             if (MoveEvent.tutorialStageItems[this.tutorialStage] != null &&
               MoveEvent.tutorialStageItems[this.tutorialStage].length >= this.selectionState.itemCount) {
               var2_int = 0;
-              var4 = 103 / ((60 - param0) / 59);
+              var4 = 103 / ((60 - obfuscationGuard) / 59);
               var3 = 0;
               var5 = 0;
               while (this.selectionState.itemCount > var5) {
@@ -772,14 +772,14 @@ final class TutorialController {
                 }
                 if (MoveEvent.tutorialStageItems[this.tutorialStage][var5] != 22) {
                   if (23 == MoveEvent.tutorialStageItems[this.tutorialStage][var5]) {
-                    var3 = this.a((byte) 45, var5) ? 1 : 0;
+                    var3 = this.isItemEnabled((byte) 45, var5) ? 1 : 0;
                   }
                 } else {
-                  var2_int = this.a((byte) 107, var5) ? 1 : 0;
+                  var2_int = this.isItemEnabled((byte) 107, var5) ? 1 : 0;
                 }
                 var5++;
               }
-              MoveEvent.instructionsPanel.a(this.f(true), var2_int != 0, 100, this.selectionState.selectedIndex, var3 != 0, ij.field_y);
+              MoveEvent.instructionsPanel.updatePageState(this.f(true), var2_int != 0, 100, this.selectionState.selectedIndex, var3 != 0, ij.field_y);
               return;
             }
             return;
@@ -788,7 +788,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.A(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "ci.A(" + obfuscationGuard + ')');
         }
     }
 
@@ -1467,7 +1467,7 @@ final class TutorialController {
                                                                                                                                 b.field_n = null;
                                                                                                                                 eo.field_a = null;
                                                                                                                               }
-                                                                                                                              hh.a(-16147, 50, mp.field_Ob, true);
+                                                                                                                              TrianglePulse.a(-16147, 50, mp.field_Ob, true);
                                                                                                                               var6 = param0 ? 1 : 0;
                                                                                                                               CipherPacketBuffer.a(var6 != 0, 0, 1, jt.field_a);
                                                                                                                               if (var9 == 0) {
@@ -1952,7 +1952,7 @@ final class TutorialController {
                                                         return;
                                                       }
                                                       ov.a(11, 3, 0);
-                                                      hh.a(-16147, 50, mp.field_Ob, true);
+                                                      TrianglePulse.a(-16147, 50, mp.field_Ob, true);
                                                       if (var9 == 0) {
                                                         return;
                                                       }
@@ -2006,7 +2006,7 @@ final class TutorialController {
                                             if (!this.selectionState.hasActivationInput((byte) 100)) {
                                               return;
                                             }
-                                            if (!this.a((byte) -95, param2)) {
+                                            if (!this.isItemEnabled((byte) -95, param2)) {
                                               return;
                                             }
                                             fieldTemp$0 = ij.field_y - 1;
@@ -2025,12 +2025,12 @@ final class TutorialController {
                                           if (!this.selectionState.hasActivationInput((byte) 71)) {
                                             return;
                                           }
-                                          if (!this.a((byte) 70, param2)) {
+                                          if (!this.isItemEnabled((byte) 70, param2)) {
                                             return;
                                           }
                                           fieldTemp$1 = ij.field_y + 1;
                                           ij.field_y = ij.field_y + 1;
-                                          if (~fieldTemp$1 != ~(-1 + PortalLossCondition.field_c.length)) {
+                                          if (~fieldTemp$1 != ~(-1 + PortalLossCondition.instructionParagraphs.length)) {
                                             return;
                                           }
                                           if (this.selectionState.selectedIndex != 2) {
@@ -2990,7 +2990,7 @@ final class TutorialController {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(MoveEvent.tutorialStageItems[this.tutorialStage].length > var4_int)))) {
             var5 = -5 + this.getItemTopY(var4_int, true);
-            stackOut_5_0 = this.a((byte) -110, var4_int);
+            stackOut_5_0 = this.isItemEnabled((byte) -110, var4_int);
             stackIn_36_0 = stackOut_5_0 ? 1 : 0;
             stackIn_6_0 = stackOut_5_0;
             if (var7 == 0) {
@@ -3163,7 +3163,7 @@ final class TutorialController {
             var2 = DisplacedUnitMarker.field_t[7];
           }
           if (!param0) {
-            this.f(73);
+            this.drawInstructionsPanel(73);
           }
           stackIn_54_0 = var2;
           return (String) (stackIn_54_0);
@@ -3233,7 +3233,7 @@ final class TutorialController {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 < 30) {
-            discarded$0 = this.a((byte) 126, 58);
+            discarded$0 = this.isItemEnabled((byte) 126, 58);
           }
           if (96 == rs.field_q) {
             if (this.selectionState.selectedIndex <= 0) {
@@ -3707,9 +3707,9 @@ final class TutorialController {
           if (decompiledFrameRemainder0) {
             SoftwareRaster.f(db.a(true, 34), MatchConditionEntry.a(64, (byte) 94), db.a(true, 296), MatchConditionEntry.a(380, (byte) 94));
             var4 = 0;
-            boolean decompiledSharedTail0 = !(hh.field_c > 312);
+            boolean decompiledSharedTail0 = !(TrianglePulse.field_c > 312);
             if (!decompiledSharedTail0) {
-              var4 = ou.field_c * (-312 + hh.field_c) / 291;
+              var4 = ou.field_c * (-312 + TrianglePulse.field_c) / 291;
               SoftwareRaster.f(db.a(true, 279), MatchConditionEntry.a(67, (byte) 94), 14, 310, 2302755);
               mp.field_Jb.g(db.a(true, 280), MatchConditionEntry.a(68 + ou.field_c, (byte) 94));
               decompiledSharedTail0 = (var8 != 0);
@@ -4218,7 +4218,7 @@ final class TutorialController {
                 ue.field_k[var7].f(db.a(true, -19 + var8), MatchConditionEntry.a(var9 - 22, (byte) 94), 256 - var5);
                 ue.field_k[var7].f(db.a(true, -19 + var8), MatchConditionEntry.a(var9 - 22, (byte) 94), 256 - var5);
               }
-              hr.field_d[var7].g(db.a(true, var8), MatchConditionEntry.a(var9, (byte) 94));
+              UnitModelPreview.field_d[var7].g(db.a(true, var8), MatchConditionEntry.a(var9, (byte) 94));
               gt.field_c[var7].g(db.a(true, -12 + var8), MatchConditionEntry.a(-17 + var9, (byte) 94));
               var7++;
               continue;
@@ -4532,27 +4532,27 @@ final class TutorialController {
         }
     }
 
-    private final boolean a(byte param0, int param1) {
+    private final boolean isItemEnabled(byte obfuscationGuard, int itemIndex) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (7 == this.tutorialStage) {
-            if (param1 == 0 &&
+            if (itemIndex == 0 &&
               ij.field_y == 0) {
               return false;
             }
-            if (param1 == 2 &&
-              -1 + PortalLossCondition.field_c.length == ij.field_y) {
+            if (itemIndex == 2 &&
+              -1 + PortalLossCondition.instructionParagraphs.length == ij.field_y) {
               return false;
             }
           }
-          var3_int = 6 % ((-40 - param0) / 49);
+          var3_int = 6 % ((-40 - obfuscationGuard) / 49);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.W(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var3), "ci.W(" + obfuscationGuard + ',' + itemIndex + ')');
         }
     }
 
@@ -4745,7 +4745,7 @@ final class TutorialController {
               this.tutorialStage != 9 &&
               jt.field_a != 10) {
               if (7 == this.tutorialStage) {
-                this.e(-48);
+                this.updateInstructionsPanel(-48);
                 decompiledFrameRemainder3 = (var4 != 0);
               }
               if (decompiledFrameRemainder3) {
@@ -5040,7 +5040,7 @@ final class TutorialController {
               rs.field_n.a(ar.field_x, db.a(true, 50), MatchConditionEntry.a(70 + param0, (byte) 94), 220, 324 - (param0 + 20), 16777215, -1, 1, 1, 0);
             }
             stackIn_58_0 = ((3 & param3) != 0) ? 70 : 0;
-            hh.field_c = stackIn_58_0 + (param0 + 70 * (param3 >> 2));
+            TrianglePulse.field_c = stackIn_58_0 + (param0 + 70 * (param3 >> 2));
           }
           stackIn_60_0 = param3;
           return stackIn_60_0;
@@ -5589,7 +5589,7 @@ final class TutorialController {
                           }
                           if (decompiledFrameRemainder0) {
                             if (this.tutorialStage == 7) {
-                              this.f(-120);
+                              this.drawInstructionsPanel(-120);
                               return;
                             }
                             if (this.tutorialStage != 5) {
@@ -5731,7 +5731,7 @@ final class TutorialController {
           }
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var2_intLifetime1 < this.selectionState.itemCount)))) {
-            stackOut_202_0 = this.a((byte) 82, var2_intLifetime1);
+            stackOut_202_0 = this.isItemEnabled((byte) 82, var2_intLifetime1);
             stackIn_215_0 = stackOut_202_0 ? 1 : 0;
             stackIn_203_0 = stackOut_202_0;
             if (var4 == 0) {
@@ -5772,7 +5772,7 @@ final class TutorialController {
               if (this.tutorialStage != 11) {
                 return;
               }
-              hh.field_i.a(pr.field_i, MoveEvent.tutorialLayout.getLeftX(11, 29) + 20, 20 + MoveEvent.tutorialLayout.getTopY(11, (byte) -105), -40 + MoveEvent.tutorialLayout.getRightX((byte) 105, 11) - MoveEvent.tutorialLayout.getLeftX(11, 29), 1000, 16777215, -1, 0, 0, hh.field_i.field_H);
+              TrianglePulse.field_i.a(pr.field_i, MoveEvent.tutorialLayout.getLeftX(11, 29) + 20, 20 + MoveEvent.tutorialLayout.getTopY(11, (byte) -105), -40 + MoveEvent.tutorialLayout.getRightX((byte) 105, 11) - MoveEvent.tutorialLayout.getLeftX(11, 29), 1000, 16777215, -1, 0, 0, TrianglePulse.field_i.field_H);
               if (var4 == 0) {
                 return;
               }
@@ -5804,9 +5804,9 @@ final class TutorialController {
           if (param0 != 100) {
             return;
           }
-          stackIn_7_0 = (!this.a((byte) 40, 0)) ? 1 : 0;
+          stackIn_7_0 = (!this.isItemEnabled((byte) 40, 0)) ? 1 : 0;
           var2_int = stackIn_7_0;
-          stackIn_11_0 = (!this.a((byte) -102, 2)) ? 1 : 2;
+          stackIn_11_0 = (!this.isItemEnabled((byte) -102, 2)) ? 1 : 2;
           var3 = stackIn_11_0;
           if (!this.selectionState.isPointerPressed(false)) {
             if (rs.field_q == 96) {

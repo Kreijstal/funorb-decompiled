@@ -6,7 +6,7 @@ final class la {
     private boolean field_h;
     static String field_e;
     private ModelMesh field_c;
-    private vj field_a;
+    private AnimationPlayer field_a;
     int field_f;
     static int field_d;
     static java.applet.Applet field_g;
@@ -94,7 +94,7 @@ final class la {
     }
 
     private final void a(int param0) {
-        int var2 = this.field_a.field_i >> 16;
+        int var2 = this.field_a.frameId >> 16;
         if (param0 < 68) {
           this.a(91);
         }
@@ -136,25 +136,25 @@ final class la {
         lk.field_h = 0;
         MoveAttackRequest.field_D = new int[3];
         an.field_F = new mo[param1 * 15];
-        vj.field_g = param1;
+        AnimationPlayer.field_g = param1;
     }
 
     final void a(byte param0) {
         int var3 = -30 / ((-31 - param0) / 54);
         int var2 = 0;
         this.a((byte) -126, var2);
-        this.field_a.a(-122);
+        this.field_a.advance(-122);
         this.a(73);
     }
 
     la(int param0) {
-        this.field_a = new vj(1);
+        this.field_a = new AnimationPlayer(1);
         this.field_f = param0;
         if (param0 == 43) {
           param0 = 77;
         }
-        this.field_c = (ModelMesh) (ActionRequest.field_k[param0][0]);
-        this.field_h = nh.field_D[param0];
+        this.field_c = (ModelMesh) (ActionRequest.unitModels[param0][0]);
+        this.field_h = nh.unitProjectionVariants[param0];
         this.field_b = 0;
         this.c(0);
     }
@@ -196,9 +196,9 @@ final class la {
     private final void c(int param0) {
         if (this.field_b >= 0 &&
           this.field_b < 9) {
-          this.field_a.a(-1, ck.field_e[sf.field_P[this.field_f]][BestScoreStrategy.field_j[this.field_f][this.field_b][0]]);
+          this.field_a.selectSequence(-1, ck.field_e[sf.field_P[this.field_f]][BestScoreStrategy.field_j[this.field_f][this.field_b][0]]);
         } else {
-          this.field_a.a(~param0, ck.field_e[sf.field_P[this.field_f]][0]);
+          this.field_a.selectSequence(~param0, ck.field_e[sf.field_P[this.field_f]][0]);
         }
         if (param0 != 0) {
           this.a((byte) 11, -94);
@@ -207,7 +207,7 @@ final class la {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        ModelMesh var15 = (ModelMesh) (this.field_a.a(false, true, false, this.field_c));
+        ModelMesh var15 = (ModelMesh) (this.field_a.applyCurrentFrame(false, true, false, this.field_c));
         if (75 == this.field_f) {
           var15.b(250, 250, 250);
         }

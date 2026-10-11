@@ -3,7 +3,7 @@
  */
 final class ck {
     static String field_d;
-    static qb[][] field_e;
+    static AnimationSequence[][] field_e;
     static long field_b;
     static String field_a;
     static RgbSprite[] field_c;
@@ -103,7 +103,7 @@ final class ck {
         if (param0 != 14) {
           return;
         }
-        field_e = (qb[][]) null;
+        field_e = (AnimationSequence[][]) null;
     }
 
     final static void b(int param0) {
@@ -120,7 +120,7 @@ final class ck {
         if (param0 < -50) {
           return;
         }
-        field_e = (qb[][]) null;
+        field_e = (AnimationSequence[][]) null;
     }
 
     static {

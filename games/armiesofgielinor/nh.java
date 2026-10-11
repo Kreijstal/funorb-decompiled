@@ -3,7 +3,7 @@
  */
 final class nh extends ks {
     static String field_H;
-    static boolean[] field_D;
+    static boolean[] unitProjectionVariants;
     byte[] field_F;
     static RgbSprite[] field_G;
     static String field_J;
@@ -73,7 +73,7 @@ final class nh extends ks {
         field_J = null;
         field_G = null;
         field_I = null;
-        field_D = null;
+        unitProjectionVariants = null;
         if (param0 < 107) {
           return;
         }

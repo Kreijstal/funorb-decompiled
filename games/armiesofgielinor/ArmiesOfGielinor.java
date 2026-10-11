@@ -207,7 +207,7 @@ public final class ArmiesOfGielinor extends wf {
                   SpellCastAction.field_t = false;
                   kg.field_d = true;
                   jt.field_a = -2;
-                  hh.a(-16147, 50, DeployRequest.field_B, true);
+                  TrianglePulse.a(-16147, 50, DeployRequest.field_B, true);
                   continue;
                 }
                 if (nm.field_o == 15) {
@@ -225,7 +225,7 @@ public final class ArmiesOfGielinor extends wf {
                     vs.field_j = true;
                     uc.a(0);
                   }
-                  hh.a(-16147, 50, mp.field_Ob, true);
+                  TrianglePulse.a(-16147, 50, mp.field_Ob, true);
                   dn.field_Qb = false;
                   SpellCastAction.field_t = false;
                   continue;
@@ -1089,7 +1089,7 @@ public final class ArmiesOfGielinor extends wf {
           }
           if (hi.field_j >= 2 &&
             ln.field_e) {
-            rs.field_n.b(Integer.toString(hr.field_i), 8, 23, 16777215, 1);
+            rs.field_n.b(Integer.toString(UnitModelPreview.field_i), 8, 23, 16777215, 1);
             rs.field_n.a((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024L + "kB", 500, 100, 16777215, 1);
             rs.field_n.a(Runtime.getRuntime().totalMemory() / 1024L + "kB", 500, 120, 16777215, 1);
           }
@@ -1267,7 +1267,7 @@ public final class ArmiesOfGielinor extends wf {
           SummonRequest.a((byte) -58);
           GlobalSpell.a((byte) 103);
           UnitSpell.c(6);
-          hr.b(param0 ^ 298276648);
+          UnitModelPreview.b(param0 ^ 298276648);
           uf.a(param0 + 173);
           MovementPlanner.b(-104);
           ub.a((byte) -122);
@@ -1284,7 +1284,7 @@ public final class ArmiesOfGielinor extends wf {
           CipherPacketBuffer.k((byte) -97);
           km.e(param0 + 77);
           CombatPresentation.c(-128);
-          vj.b(-106);
+          AnimationPlayer.b(-106);
           ModelMesh.c();
           ms.f(param0 ^ 71);
           ac.a((byte) 71);
@@ -1345,7 +1345,7 @@ public final class ArmiesOfGielinor extends wf {
           wp.e((byte) -74);
           TileMetadata.a(23582);
           fd.a(-30097);
-          qb.a(param0 ^ 125);
+          AnimationSequence.a(param0 ^ 125);
           qf.a((byte) 31);
           pn.b((byte) -90);
           r.d((byte) -11);
@@ -1359,8 +1359,8 @@ public final class ArmiesOfGielinor extends wf {
           TelefragEvent.g(-75);
           ti.a((byte) 29);
           lq.a(-31320);
-          hh.b(16);
-          em.a(1);
+          TrianglePulse.b(16);
+          TickCounter.a(1);
           ud.n(12213);
           se.a(0);
           mg.b(9892);
@@ -1697,7 +1697,7 @@ public final class ArmiesOfGielinor extends wf {
         RuntimeException var2 = null;
         try {
           if (null != a.field_o) {
-            em.a(a.field_o, 10207);
+            TickCounter.loadClientAssets(a.field_o, 10207);
             lr.a(UnitLossCondition.field_d, (byte) 62);
             a.field_o = null;
             wl.a(0);
@@ -1745,7 +1745,7 @@ public final class ArmiesOfGielinor extends wf {
             stackIn_5_0 = null;
             return (tu) (stackIn_5_0);
           }
-          var2 = new tu(param0, j.field_e, iq.field_g, qm.field_K, c.field_e, vj.field_j);
+          var2 = new tu(param0, j.field_e, iq.field_g, qm.field_K, c.field_e, AnimationPlayer.field_j);
           rj.d((byte) 124);
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -2172,7 +2172,7 @@ public final class ArmiesOfGielinor extends wf {
           this.a(0);
           rs.field_n = gs.a(var4, gg.field_K, ks.field_A, (byte) -53, "");
           en.field_E = gs.a("basic", iw.field_l, sh.field_j, (byte) -53, "smallfont");
-          hh.field_i = it.a("introfont", iw.field_l, sh.field_j, (byte) -87, "basic");
+          TrianglePulse.field_i = it.a("introfont", iw.field_l, sh.field_j, (byte) -87, "basic");
           nr.field_e = TurnEffectEvent.a("runewarsfont", sh.field_j, iw.field_l, "basic", -2088);
           fe.a(nr.field_e);
           fe.field_l = fk.a("textshadow", (byte) -127, iw.field_l, "basic");
@@ -2184,7 +2184,7 @@ public final class ArmiesOfGielinor extends wf {
           cp.field_e = MapLayout.a("statusicons", -28106, "basic", iw.field_l);
           MapLayout.a("armouricons", -28106, "basic", iw.field_l);
           lb.field_e = MapLayout.a("special_icons", -28106, "basic", iw.field_l);
-          hh.field_d = GameplayController.a("godspark", (byte) 51, "basic", iw.field_l);
+          TrianglePulse.field_d = GameplayController.a("godspark", (byte) 51, "basic", iw.field_l);
           gh.field_M = nh.a("mapbutton", "basic", iw.field_l, false);
           nh.a("endturnbutton", "basic", iw.field_l, false);
           ul.field_g = nh.a("buttonring", "basic", iw.field_l, false);
@@ -2217,11 +2217,11 @@ public final class ArmiesOfGielinor extends wf {
           lw.field_ob = nh.a("smallorb", "basic", iw.field_l, false);
           wc.field_J = nh.a("bigorb", "basic", iw.field_l, false);
           pg.field_c = nh.a("bigorbring", "basic", iw.field_l, false);
-          hr.field_d = ac.a(iw.field_l, "godorbs", (byte) -4, "basic");
+          UnitModelPreview.field_d = ac.a(iw.field_l, "godorbs", (byte) -4, "basic");
           gt.field_c = ac.a(iw.field_l, "godframes", (byte) -4, "basic");
           ce.field_F = ac.a(iw.field_l, "godglows", (byte) -4, "basic");
           ue.field_k = ac.a(iw.field_l, "godframeglows", (byte) -4, "basic");
-          tn.a((byte) 80, hr.field_d);
+          tn.a((byte) 80, UnitModelPreview.field_d);
           hf.a(128, ce.field_F, 0);
           TeamRoster.field_e = new RgbSprite(71, 71);
           fn.a(8678, 256, 15, TeamRoster.field_e);
@@ -2236,7 +2236,7 @@ public final class ArmiesOfGielinor extends wf {
           qt.field_e = pv.a("basic", "popupbg", iw.field_l, 24914);
           vq.field_b = pv.a("basic", "gameinfobg", iw.field_l, 24914);
           vc.field_k = fk.a("manastars", (byte) -127, iw.field_l, "basic");
-          hh.field_f = GameplayController.a("manaicon", (byte) 51, "basic", iw.field_l);
+          TrianglePulse.field_f = GameplayController.a("manaicon", (byte) 51, "basic", iw.field_l);
           od.field_d = fk.a("overlayicons", (byte) -125, iw.field_l, "basic");
           mv.field_a = fk.a("bloodsplat", (byte) -126, iw.field_l, "basic");
           it.field_a = GameplayController.a("results_rune_icon", (byte) 51, "basic", iw.field_l);

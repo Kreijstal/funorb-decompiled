@@ -131,8 +131,8 @@ final class PopupPresentation implements EventPresentation {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.elapsedFrames < 40 &&
           this.elapsedFrames < 20) {
-          hh.field_d.d(-40 + param2, param1 - 40, 80, 80, 255 * this.elapsedFrames / 20);
-          hh.field_d.d(param2 - 40, param1 - 40, 80, 80, this.elapsedFrames * 255 / 20);
+          TrianglePulse.field_d.d(-40 + param2, param1 - 40, 80, 80, 255 * this.elapsedFrames / 20);
+          TrianglePulse.field_d.d(param2 - 40, param1 - 40, 80, 80, this.elapsedFrames * 255 / 20);
         }
         if (param0 > -124) {
           this.unit = (Unit) null;
@@ -141,7 +141,7 @@ final class PopupPresentation implements EventPresentation {
           for (var4 = 0; this.field_t.length > var4; var4++) {
             var5 = (this.elapsedFrames - 20) * this.field_t[var4][0] / 20 + param2;
             var6 = this.field_t[var4][1] * (this.elapsedFrames - 20) / 20 + param1;
-            hh.field_d.d(var5 - 10, var6 + (this.elapsedFrames - 20) * (-20 + this.elapsedFrames) / 10 - 10, 20, 20, 255 * (-this.elapsedFrames + 60) / 40);
+            TrianglePulse.field_d.d(var5 - 10, var6 + (this.elapsedFrames - 20) * (-20 + this.elapsedFrames) / 10 - 10, 20, 20, 255 * (-this.elapsedFrames + 60) / 40);
           }
         }
     }
@@ -302,7 +302,7 @@ final class PopupPresentation implements EventPresentation {
               stackIn_10_1 = 0;
             }
             var3 = stackIn_9_0 + stackIn_10_1;
-            hh.field_d.d(this.presenter.screenX + 35 + var2, var3 + (this.presenter.screenY + var4 * 4) - 120, 10, 10, var4 * 8);
+            TrianglePulse.field_d.d(this.presenter.screenX + 35 + var2, var3 + (this.presenter.screenY + var4 * 4) - 120, 10, 10, var4 * 8);
           }
         }
         if (param0 != 10) {
@@ -312,7 +312,7 @@ final class PopupPresentation implements EventPresentation {
           for (var2Lifetime1 = 0; this.field_t.length > var2Lifetime1; var2Lifetime1++) {
             var3Lifetime1 = this.presenter.screenX + (this.field_t[var2Lifetime1][0] * (this.elapsedFrames - 20) / 20 + 30);
             var4Lifetime1 = -20 + this.field_t[var2Lifetime1][1] * (this.elapsedFrames - 20) / 20 + this.presenter.screenY;
-            hh.field_d.d(var3Lifetime1, var4Lifetime1 + (this.elapsedFrames - 20) * (this.elapsedFrames - 20) / 10, 20, 20, 255 * (-this.elapsedFrames + 60) / 40);
+            TrianglePulse.field_d.d(var3Lifetime1, var4Lifetime1 + (this.elapsedFrames - 20) * (this.elapsedFrames - 20) / 10, 20, 20, 255 * (-this.elapsedFrames + 60) / 40);
           }
         }
     }
@@ -364,14 +364,14 @@ final class PopupPresentation implements EventPresentation {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.elapsedFrames < 40 &&
           this.elapsedFrames < 20) {
-          hh.field_d.d(this.presenter.screenX - 10, this.presenter.screenY - 30, 100, 50, this.elapsedFrames * 255 / 20);
-          hh.field_d.d(-10 + this.presenter.screenX, this.presenter.screenY - 30, 100, 50, 255 * this.elapsedFrames / 20);
+          TrianglePulse.field_d.d(this.presenter.screenX - 10, this.presenter.screenY - 30, 100, 50, this.elapsedFrames * 255 / 20);
+          TrianglePulse.field_d.d(-10 + this.presenter.screenX, this.presenter.screenY - 30, 100, 50, 255 * this.elapsedFrames / 20);
         }
         if (this.field_t != null) {
           for (var2 = 0; this.field_t.length > var2; var2++) {
             var3 = this.presenter.screenX + (-20 + this.elapsedFrames) * this.field_t[var2][0] / 20 + 30;
             var4 = -20 + (this.presenter.screenY + (this.elapsedFrames - 20) * this.field_t[var2][1] / 20);
-            hh.field_d.d(var3, (this.elapsedFrames - 20) * (this.elapsedFrames - 20) / 10 + var4, 20, 20, (15300 - this.elapsedFrames * 255) / 40);
+            TrianglePulse.field_d.d(var3, (this.elapsedFrames - 20) * (this.elapsedFrames - 20) / 10 + var4, 20, 20, (15300 - this.elapsedFrames * 255) / 40);
           }
         }
         if (param0 >= -108) {
@@ -466,14 +466,14 @@ final class PopupPresentation implements EventPresentation {
         }
         if (40 > this.elapsedFrames &&
           20 > this.elapsedFrames) {
-          hh.field_d.d(this.presenter.screenX, -70 + this.presenter.screenY, 80, 100, this.elapsedFrames * 255 / 20);
-          hh.field_d.d(this.presenter.screenX, -70 + this.presenter.screenY, 80, 100, 255 * this.elapsedFrames / 20);
+          TrianglePulse.field_d.d(this.presenter.screenX, -70 + this.presenter.screenY, 80, 100, this.elapsedFrames * 255 / 20);
+          TrianglePulse.field_d.d(this.presenter.screenX, -70 + this.presenter.screenY, 80, 100, 255 * this.elapsedFrames / 20);
         }
         if (null != this.field_t) {
           for (var2 = 0; this.field_t.length > var2; var2++) {
             var3 = 30 + (this.elapsedFrames - 20) * this.field_t[var2][0] / 20 + this.presenter.screenX;
             var4 = this.presenter.screenY + (-20 + this.elapsedFrames) * this.field_t[var2][1] / 20;
-            hh.field_d.d(var3, (-20 + this.elapsedFrames) * (-20 + this.elapsedFrames) / 10 + var4, 20, 20, (15300 - this.elapsedFrames * 255) / 40);
+            TrianglePulse.field_d.d(var3, (-20 + this.elapsedFrames) * (-20 + this.elapsedFrames) / 10 + var4, 20, 20, (15300 - this.elapsedFrames * 255) / 40);
           }
         }
     }
@@ -501,9 +501,9 @@ final class PopupPresentation implements EventPresentation {
         }
         if (40 > this.elapsedFrames) {
           if (this.elapsedFrames >= 20) {
-            hh.field_d.d(-this.elapsedFrames + this.presenter.screenX + 20, -this.elapsedFrames - 70 + this.presenter.screenY, (-20 + this.elapsedFrames) * 2 + 80, 100, (10200 - 255 * this.elapsedFrames) / 20);
+            TrianglePulse.field_d.d(-this.elapsedFrames + this.presenter.screenX + 20, -this.elapsedFrames - 70 + this.presenter.screenY, (-20 + this.elapsedFrames) * 2 + 80, 100, (10200 - 255 * this.elapsedFrames) / 20);
           } else {
-            hh.field_d.d(this.presenter.screenX, -this.elapsedFrames + (this.presenter.screenY - 70), 80, 100, 255 * this.elapsedFrames / 20);
+            TrianglePulse.field_d.d(this.presenter.screenX, -this.elapsedFrames + (this.presenter.screenY - 70), 80, 100, 255 * this.elapsedFrames / 20);
           }
         }
     }
@@ -550,14 +550,14 @@ final class PopupPresentation implements EventPresentation {
         if (this.elapsedFrames < 40) {
           if (this.elapsedFrames >= 20) {
             if (this.elapsedFrames >= 30) {
-              hh.field_d.d(this.presenter.screenX - 10, -30 + this.presenter.screenY, 100, 50, (-(255 * this.elapsedFrames) + 10200) / 10);
-              hh.field_d.d(-10 + this.presenter.screenX, -30 + this.presenter.screenY, 100, 50, (-this.elapsedFrames + 40) * 255 / 10);
+              TrianglePulse.field_d.d(this.presenter.screenX - 10, -30 + this.presenter.screenY, 100, 50, (-(255 * this.elapsedFrames) + 10200) / 10);
+              TrianglePulse.field_d.d(-10 + this.presenter.screenX, -30 + this.presenter.screenY, 100, 50, (-this.elapsedFrames + 40) * 255 / 10);
             } else {
-              hh.field_d.d(15 + (this.presenter.screenX - (5 * this.elapsedFrames - 100) / 2), this.presenter.screenY - 120 + 3 * this.elapsedFrames, -50 + this.elapsedFrames * 5, 50, 255);
-              hh.field_d.d(this.presenter.screenX + 15 - (this.elapsedFrames - 20) * 5 / 2, this.presenter.screenY - (120 - this.elapsedFrames * 3), this.elapsedFrames * 5 - 100 + 50, 50, 255);
+              TrianglePulse.field_d.d(15 + (this.presenter.screenX - (5 * this.elapsedFrames - 100) / 2), this.presenter.screenY - 120 + 3 * this.elapsedFrames, -50 + this.elapsedFrames * 5, 50, 255);
+              TrianglePulse.field_d.d(this.presenter.screenX + 15 - (this.elapsedFrames - 20) * 5 / 2, this.presenter.screenY - (120 - this.elapsedFrames * 3), this.elapsedFrames * 5 - 100 + 50, 50, 255);
             }
           } else {
-            stackIn_6_0 = hh.field_d;
+            stackIn_6_0 = TrianglePulse.field_d;
             stackIn_6_1 = 15 + this.presenter.screenX;
             stackIn_6_2 = -120 + this.presenter.screenY + this.elapsedFrames * 3;
             stackIn_6_3 = 50;
@@ -568,7 +568,7 @@ final class PopupPresentation implements EventPresentation {
               stackIn_7_5 = 255 * this.elapsedFrames / 10;
             }
             ((RgbSprite) (Object) stackIn_6_0).d(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
-            stackIn_9_0 = hh.field_d;
+            stackIn_9_0 = TrianglePulse.field_d;
             stackIn_9_1 = this.presenter.screenX + 15;
             stackIn_9_2 = this.presenter.screenY - 120 + this.elapsedFrames * 3;
             stackIn_9_3 = 50;

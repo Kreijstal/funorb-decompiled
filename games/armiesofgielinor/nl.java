@@ -132,7 +132,7 @@ abstract class nl extends kb implements gw {
           }
           if (param2 != 26477) {
             var6 = (kl) null;
-            nl.a((kl) null, (qb[][]) null, (kl) null, (byte) -118);
+            nl.a((kl) null, (AnimationSequence[][]) null, (kl) null, (byte) -118);
           }
           stackIn_6_0 = (StringBuilder) (param1);
           return stackIn_6_0;
@@ -502,7 +502,7 @@ abstract class nl extends kb implements gw {
           pd.field_c.a(lm.field_b, 77);
           pd.field_c.a(so.field_d, 69);
           pd.field_c.a(pi.field_N, 91);
-          bk.field_f = new je(0L, hr.field_m, em.field_d.toUpperCase());
+          bk.field_f = new je(0L, UnitModelPreview.field_m, TickCounter.field_d.toUpperCase());
           dv.field_m = new je(0L, bw.field_h, dr.field_D.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -726,7 +726,7 @@ abstract class nl extends kb implements gw {
         this.b(true);
     }
 
-    final static void a(kl param0, qb[][] param1, kl param2, byte param3) {
+    final static void a(kl param0, AnimationSequence[][] param1, kl param2, byte param3) {
         int var5 = 0;
         int var7 = 0;
         int var11 = 0;
@@ -741,7 +741,7 @@ abstract class nl extends kb implements gw {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var6 = 0;
-        qb var8 = null;
+        AnimationSequence var8 = null;
         int[] var9 = null;
         int var10 = 0;
         int var12 = 0;
@@ -762,7 +762,7 @@ abstract class nl extends kb implements gw {
               for (var7 = 0; var6 > var7; var7++) {
                 var8 = param1[var5][var7];
                 if (var8 != null) {
-                  var17 = var8.field_a;
+                  var17 = var8.frameIds;
                   var16 = var17;
                   var9 = var16;
                   if (var9 != null) {

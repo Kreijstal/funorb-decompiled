@@ -3,7 +3,7 @@
  */
 final class da {
     static sa field_b;
-    static int[][][] field_a;
+    static int[][][] instructionIllustrationArguments;
 
     final static void c(int param0) {
         ms var1 = null;
@@ -84,7 +84,7 @@ final class da {
               var3 = (String) (lj.a("getcookies", (byte) 81, param1));
               var4 = dj.a(29, ';', var3);
               if (param0 != 23660) {
-                field_a = (int[][][]) null;
+                instructionIllustrationArguments = (int[][][]) null;
               }
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -120,9 +120,9 @@ final class da {
 
     public static void a(boolean param0) {
         if (param0) {
-          field_a = (int[][][]) null;
+          instructionIllustrationArguments = (int[][][]) null;
         }
-        field_a = (int[][][]) null;
+        instructionIllustrationArguments = (int[][][]) null;
         field_b = null;
     }
 
@@ -264,6 +264,6 @@ final class da {
 
     static {
         field_b = new sa();
-        field_a = new int[][][]{new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -1, 0, 3}}, new int[][]{new int[]{-2, -1, 0, 3, -2, -2}}, new int[][]{new int[]{-2, -1, 0, 3, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -1, 3, -1, 3}, new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -1, 0, 3, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}};
+        instructionIllustrationArguments = new int[][][]{new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -1, 0, 3}}, new int[][]{new int[]{-2, -1, 0, 3, -2, -2}}, new int[][]{new int[]{-2, -1, 0, 3, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -1, 3, -1, 3}, new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2, -2, -2}}, new int[][]{new int[]{-2, -1, 0, 3, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}, new int[][]{new int[]{-2, -2, -2, -2}}};
     }
 }

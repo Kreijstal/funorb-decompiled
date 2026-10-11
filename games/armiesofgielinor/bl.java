@@ -148,7 +148,7 @@ final class bl {
                 var23 = DeployEvent.a((byte) 121, var3_long);
                 if ((var23 != null)) {
                   if (var23.field_Ub) {
-                    vj.field_a = vj.field_a - 1;
+                    AnimationPlayer.field_a = AnimationPlayer.field_a - 1;
                     var23.field_Ub = false;
                   }
                   if (var5 == 0) {
@@ -167,7 +167,7 @@ final class bl {
                     var31.c((byte) -76);
                     var31 = (of) (SummonAction.field_u.next((byte) 123));
                   }
-                  vj.field_a = 0;
+                  AnimationPlayer.field_a = 0;
                 } else {
                   if (8 == var2) {
                     var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
@@ -176,7 +176,7 @@ final class bl {
                       var4_ref_au = new au(tq.field_b);
                       qm.field_J.a(-1, (long)var3, var4_ref_au);
                     }
-                    hh.a(var4_ref_au, true, var1, 78);
+                    TrianglePulse.a(var4_ref_au, true, var1, 78);
                     rf.a(-107, var4_ref_au);
                   } else {
                     if (var2 == 9) {
@@ -228,7 +228,7 @@ final class bl {
                                     var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
                                     var27 = ((PacketBuffer) ((Object) var1)).g(1);
                                     var28 = ((PacketBuffer) ((Object) var1)).g(1);
-                                    var7 = hr.a(var3_long, -79);
+                                    var7 = UnitModelPreview.a(var3_long, -79);
                                     if (var7 == null) {
                                       var7 = new of(var27, var28, var3_long);
                                       eu.field_e.a(-1, var3_long, var7);
@@ -247,7 +247,7 @@ final class bl {
                                   case 19:
                                     var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
                                     var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                                    var14 = hr.a(var3_long, -111);
+                                    var14 = UnitModelPreview.a(var3_long, -111);
                                     var29 = var14;
                                     if (var14 == null) {
                                       break regionExit1;
@@ -262,7 +262,7 @@ final class bl {
                                     vu.field_M.field_Ub = vu.field_M.field_Ub - 1;
                                     break regionExit1;
                                   case 20:
-                                    hh.a(vu.field_M, false, var1, 83);
+                                    TrianglePulse.a(vu.field_M, false, var1, 83);
                                     break regionExit1;
                                   case 21:
                                     var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
@@ -297,7 +297,7 @@ final class bl {
                                 if (var2 != 15) {
                                   if (var26.field_Ub) {
                                     var26.field_Ub = false;
-                                    vj.field_a = vj.field_a - 1;
+                                    AnimationPlayer.field_a = AnimationPlayer.field_a - 1;
                                   }
                                 } else {
                                   var13.field_Wb = false;
@@ -313,7 +313,7 @@ final class bl {
                                 } else {
                                   if (!var25.field_Ub) {
                                     var25.field_Ub = true;
-                                    vj.field_a = vj.field_a + 1;
+                                    AnimationPlayer.field_a = AnimationPlayer.field_a + 1;
                                   }
                                 }
                                 sf.a((byte) 66, var25);
@@ -351,7 +351,7 @@ final class bl {
               if (var3_ref_of.field_Wb ||
                 var3_ref_of.field_Ub) {
                 if (var3_ref_of.field_Ub) {
-                  vj.field_a = vj.field_a - 1;
+                  AnimationPlayer.field_a = AnimationPlayer.field_a - 1;
                   var3_ref_of.field_Ub = false;
                 }
                 var3_ref_of.field_Wb = false;
@@ -367,7 +367,7 @@ final class bl {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
               vu.field_M = new au(tq.field_b);
               vu.field_M.a(true, (long)var3);
-              hh.a(vu.field_M, false, var1, 97);
+              TrianglePulse.a(vu.field_M, false, var1, 97);
               ph.field_d = 0L;
             } else {
               vu.field_M = null;
@@ -455,11 +455,11 @@ final class bl {
         try {
           SummonEvent.field_B = param1;
           var9 = "";
-          nh.field_D = new boolean[ActionRequest.field_m.length];
+          nh.unitProjectionVariants = new boolean[ActionRequest.field_m.length];
           for (var3 = param0; ActionRequest.field_m.length > var3; var3++) {
             array$0 = new kk[ActionRequest.field_m[var3].length];
-            ActionRequest.field_k[var3] = array$0;
-            nh.field_D[var3] = false;
+            ActionRequest.unitModels[var3] = array$0;
+            nh.unitProjectionVariants[var3] = false;
             var8 = ActionRequest.field_m[var3][0];
             var10 = hs.a(var8, 235, var9);
             var5 = var10;
@@ -468,7 +468,7 @@ final class bl {
                 pd.field_d = var10;
               }
               if (th.a(var10, -17900)) {
-                nh.field_D[var3] = true;
+                nh.unitProjectionVariants[var3] = true;
               }
               if (null != var10.field_p) {
                 for (var6 = 0; var6 < var10.field_O; var6++) {
@@ -479,9 +479,9 @@ final class bl {
                   }
                 }
               }
-              ActionRequest.field_k[var3][0] = var10.a(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, ni.field_a);
+              ActionRequest.unitModels[var3][0] = var10.a(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, ni.field_a);
               for (var6Lifetime2 = 1; var6Lifetime2 < ActionRequest.field_m[var3].length; var6Lifetime2++) {
-                ActionRequest.field_k[var3][var6Lifetime2] = null;
+                ActionRequest.unitModels[var3][var6Lifetime2] = null;
               }
             }
           }

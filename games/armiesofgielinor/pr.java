@@ -11,7 +11,7 @@ final class pr {
     private int field_e;
     private int field_c;
     static int[] field_f;
-    static vj field_g;
+    static AnimationPlayer field_g;
     private int[] field_d;
     private ru field_h;
 
@@ -166,7 +166,7 @@ final class pr {
         field_i = null;
         field_g = null;
         if (param0 != 7742) {
-          field_g = (vj) null;
+          field_g = (AnimationPlayer) null;
         }
         field_a = null;
         field_f = null;

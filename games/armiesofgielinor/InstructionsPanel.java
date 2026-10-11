@@ -3,60 +3,60 @@
  */
 final class InstructionsPanel {
     private IntPair field_F;
-    private boolean field_P;
-    private String field_O;
+    private boolean footerHighlighted;
+    private String footerCaption;
     private int pageCount;
     private int pageIndex;
     static int field_D;
     private IntPair navigationEnd;
     private int field_g;
     private RgbSprite[] cachedPageSprites;
-    private hh field_hb;
+    private TrianglePulse highlightPulse;
     private int field_cb;
     private int field_bb;
     int[] itemIds;
     private int[] field_J;
-    private vj field_ab;
-    private boolean field_o;
-    private em field_H;
-    private boolean field_Q;
+    private AnimationPlayer illustrationAnimation;
+    private boolean previousEnabled;
+    private TickCounter secondaryIllustrationCounter;
+    private boolean nextHighlighted;
     private IntPair footerEnd;
-    private hr field_h;
+    private UnitModelPreview firstPreviewModel;
     private int field_t;
     private IntPair field_x;
     private String field_a;
-    private boolean field_j;
+    private boolean previousHighlighted;
     static int field_B;
     static int field_r;
-    private hr field_fb;
-    private hr field_S;
+    private UnitModelPreview field_fb;
+    private UnitModelPreview field_S;
     private IntPair field_K;
     private Unit secondPreviewUnit;
     private int field_m;
     static String field_gb;
-    private String field_k;
+    private String previousCaption;
     static String field_y;
-    private em field_u;
+    private TickCounter illustrationCounter;
     static String field_c;
-    private String field_eb;
+    private String nextCaption;
     private int field_i;
     private int field_Y;
     private int field_T;
     private int cachedPageIndex;
     private int field_e;
     private IntPair field_V;
-    private hr field_v;
+    private UnitModelPreview auxiliaryPreviewModel;
     private Unit auxiliaryPreviewUnit;
     private IntPair field_C;
-    private hr field_s;
+    private UnitModelPreview field_s;
     private Unit firstPreviewUnit;
     private int field_l;
-    private boolean field_I;
+    private boolean nextEnabled;
     private IntPair navigationStart;
     private IntPair footerStart;
     private int field_db;
-    private hr field_M;
-    private em field_L;
+    private UnitModelPreview secondPreviewModel;
+    private TickCounter progressCounter;
     private int field_A;
     private int field_z;
     private int field_E;
@@ -92,13 +92,13 @@ final class InstructionsPanel {
         int var9;
         int var10;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (null == this.field_H) {
+        if (null == this.secondaryIllustrationCounter) {
           return;
         }
         var5 = -96 / ((param0 - 2) / 57);
-        var4 = this.field_H.field_a;
+        var4 = this.secondaryIllustrationCounter.elapsedTicks;
         if (var4 >= 0 &&
-          var4 < this.field_H.field_f) {
+          var4 < this.secondaryIllustrationCounter.limit) {
           var6 = 0;
           while (true) {
             if (3 <= var6) {
@@ -111,10 +111,10 @@ final class InstructionsPanel {
               gt.field_c.length > var7) {
               var9 = -(gt.field_c[var7].field_A >> 1) + 50 >> 1;
               param1 = param1 + var9;
-              if (null != hr.field_d &&
+              if (null != UnitModelPreview.field_d &&
                 1 + var7 >= 0 &&
-                1 + var7 < hr.field_d.length) {
-                hr.field_d[1 + var7].h(db.a(true, 6 + param1), MatchConditionEntry.a(param2 + 9, (byte) 94));
+                1 + var7 < UnitModelPreview.field_d.length) {
+                UnitModelPreview.field_d[1 + var7].h(db.a(true, 6 + param1), MatchConditionEntry.a(param2 + 9, (byte) 94));
                 gt.field_c[var7 + 1].h(db.a(true, param1), MatchConditionEntry.a(param2, (byte) 94));
                 if (var8 > 0 &&
                   null != fe.field_o &&
@@ -159,7 +159,7 @@ final class InstructionsPanel {
 
     private final void c(byte param0) {
         this.field_S = null;
-        this.field_S = new hr(18);
+        this.field_S = new UnitModelPreview(18);
         if (param0 > -101) {
           this.auxiliaryPreviewUnit = (Unit) null;
         }
@@ -253,35 +253,35 @@ final class InstructionsPanel {
         return 1;
     }
 
-    private final void a(byte param0, int param1, boolean param2, boolean param3) {
+    private final void configureNavigation(byte obfuscationGuard, int selectedItem, boolean nextEnabled, boolean previousEnabled) {
         int var5;
         int var6;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.p(31559);
-        if (param3) {
-          this.field_o = true;
+        if (previousEnabled) {
+          this.previousEnabled = true;
         }
-        if (param0 >= -87) {
-          this.k(-121);
+        if (obfuscationGuard >= -87) {
+          this.drawPageSections(-121);
         }
-        if (param2) {
-          this.field_I = true;
+        if (nextEnabled) {
+          this.nextEnabled = true;
         }
         if (null != this.itemIds &&
           this.itemIds.length != 0) {
-          if (param1 >= 0 &&
-            this.itemIds.length > param1) {
-            var5 = this.itemIds[param1];
+          if (selectedItem >= 0 &&
+            this.itemIds.length > selectedItem) {
+            var5 = this.itemIds[selectedItem];
             if (var5 != 22) {
               if (23 == var5) {
-                this.field_Q = true;
+                this.nextHighlighted = true;
               } else {
                 if (var5 == 8) {
-                  this.field_P = true;
+                  this.footerHighlighted = true;
                 }
               }
             } else {
-              this.field_j = true;
+              this.previousHighlighted = true;
             }
             return;
           }
@@ -306,61 +306,61 @@ final class InstructionsPanel {
         this.cachedPageSprites = null;
     }
 
-    private final void k(int param0) {
-        int var8 = 0;
-        String[] var2;
-        String[][] var3;
-        String[][][] var4;
-        int[][] var5;
-        int[][] var6;
-        int var7;
-        int var9;
+    private final void drawPageSections(int obfuscationGuard) {
+        int sectionIndex = 0;
+        String[] titles;
+        String[][] rowHeadings;
+        String[][][] paragraphs;
+        int[][] illustrationModes;
+        int[][] illustrationArguments;
+        int topY;
+        int sectionHeight;
         int var10;
-        String[] var11;
+        String[] sectionTitles;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.pageIndex >= 0 &&
           this.pageIndex < this.pageCount) {
-          if (null == PortalLossCondition.field_b[this.pageIndex]) {
+          if (null == PortalLossCondition.instructionSectionTitles[this.pageIndex]) {
             return;
           }
-          var11 = PortalLossCondition.field_b[this.pageIndex];
-          var2 = var11;
-          if (null == PortalLossCondition.field_g[this.pageIndex]) {
+          sectionTitles = PortalLossCondition.instructionSectionTitles[this.pageIndex];
+          titles = sectionTitles;
+          if (null == PortalLossCondition.instructionRowHeadings[this.pageIndex]) {
             return;
           }
-          var3 = PortalLossCondition.field_g[this.pageIndex];
-          if (null == PortalLossCondition.field_c[this.pageIndex]) {
+          rowHeadings = PortalLossCondition.instructionRowHeadings[this.pageIndex];
+          if (null == PortalLossCondition.instructionParagraphs[this.pageIndex]) {
             return;
           }
-          var4 = PortalLossCondition.field_c[this.pageIndex];
-          if (null == TeamRoster.field_f[this.pageIndex]) {
+          paragraphs = PortalLossCondition.instructionParagraphs[this.pageIndex];
+          if (null == TeamRoster.instructionIllustrationModes[this.pageIndex]) {
             return;
           }
-          var5 = TeamRoster.field_f[this.pageIndex];
-          if (da.field_a[this.pageIndex] == null) {
+          illustrationModes = TeamRoster.instructionIllustrationModes[this.pageIndex];
+          if (da.instructionIllustrationArguments[this.pageIndex] == null) {
             return;
           }
-          if (param0 >= -73) {
+          if (obfuscationGuard >= -73) {
             this.l(58);
           }
-          var6 = da.field_a[this.pageIndex];
-          var7 = this.field_T - this.a(true);
-          for (var8 = 0; var8 < var11.length; var8++) {
-            if (var2 != null &&
-              var3 != null &&
-              var4 != null &&
-              var5 != null &&
-              var6 != null && (this.pageIndex != 9 ||
-              var8 != 0)) {
-              var9 = this.a(var11[var8], var4[var8], var8, var5[var8], var7, -1185705759, var3[var8], var6[var8]);
-              var7 = var7 + var9;
+          illustrationArguments = da.instructionIllustrationArguments[this.pageIndex];
+          topY = this.field_T - this.a(true);
+          for (sectionIndex = 0; sectionIndex < sectionTitles.length; sectionIndex++) {
+            if (titles != null &&
+              rowHeadings != null &&
+              paragraphs != null &&
+              illustrationModes != null &&
+              illustrationArguments != null && (this.pageIndex != 9 ||
+              sectionIndex != 0)) {
+              sectionHeight = this.drawInstructionSection(sectionTitles[sectionIndex], paragraphs[sectionIndex], sectionIndex, illustrationModes[sectionIndex], topY, -1185705759, rowHeadings[sectionIndex], illustrationArguments[sectionIndex]);
+              topY = topY + sectionHeight;
             }
           }
           return;
         }
     }
 
-    private final int a(String param0, String[][] param1, int param2, int[] param3, int param4, int param5, String[] param6, int[] param7) {
+    private final int drawInstructionSection(String title, String[][] paragraphs, int sectionIndex, int[] illustrationModes, int topY, int obfuscationGuard, String[] rowHeadings, int[] illustrationArguments) {
         int stackIn_9_0 = 0;
         int stackIn_11_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -385,22 +385,22 @@ final class InstructionsPanel {
         int var11Lifetime1;
         try {
           var9_int = this.field_F.first;
-          var10 = param4;
+          var10 = topY;
           var11 = (this.a(true) >> 1) + this.h(-2881);
           var10 = var11 + var10;
-          if (param5 != -1185705759) {
+          if (obfuscationGuard != -1185705759) {
             this.navigationStart = (IntPair) null;
           }
-          var12 = param0;
+          var12 = title;
           if (var12 != null) {
             fe.c(var12, db.a(true, var9_int), MatchConditionEntry.a(var10, (byte) 94), nd.field_b, true);
           }
-          var13 = param4;
+          var13 = topY;
           var11Lifetime1 = this.field_Y - this.field_T + (this.a(true) >> 1);
           if (var12 != null) {
-            var13 = param4 + var11Lifetime1;
+            var13 = topY + var11Lifetime1;
           }
-          var14 = this.a(param6, param1, var13 + 10, param3, param7, (byte) -120, param2);
+          var14 = this.drawInstructionRows(rowHeadings, paragraphs, var13 + 10, illustrationModes, illustrationArguments, (byte) -120, sectionIndex);
           if (var12 != null) {
             stackIn_11_0 = 10 + var11Lifetime1 + var14;
             return stackIn_11_0;
@@ -412,31 +412,31 @@ final class InstructionsPanel {
           var9 = decompiledCaughtException;
           stackIn_14_0 = var9;
           stackIn_14_1 = new StringBuilder().append("rk.T(");
-          if (param0 == null) {
+          if (title == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
           stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-          if (param1 == null) {
+          if (paragraphs == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(sectionIndex).append(',');
+          if (illustrationModes == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
+          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(topY).append(',').append(obfuscationGuard).append(',');
+          if (rowHeadings == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
           stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',');
-          if (param7 == null) {
+          if (illustrationArguments == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
@@ -456,7 +456,7 @@ final class InstructionsPanel {
         }
         if (param4 >= 0 &&
           fn.field_Q.length > param4) {
-          var7 = this.field_u.field_a;
+          var7 = this.illustrationCounter.elapsedTicks;
           if (param3 != -25713) {
             return;
           }
@@ -489,7 +489,7 @@ final class InstructionsPanel {
                   mv.a(db.a(true, 20 + param0), (byte) -70, var7, param2, MatchConditionEntry.a(param1, (byte) 94));
                 }
                 if (-1 < param2) {
-                  ks.a(ActionRequest.field_k[76][param2], false, MatchConditionEntry.a(-40 + param1, (byte) 94), this.field_ab, 128, 150, db.a(true, param0), (js) null, -10374);
+                  ks.a(ActionRequest.unitModels[76][param2], false, MatchConditionEntry.a(-40 + param1, (byte) 94), this.illustrationAnimation, 128, 150, db.a(true, param0), (js) null, -10374);
                 }
                 l.field_b[16].a(db.a(true, param0), MatchConditionEntry.a(param1 - 40, (byte) 94));
                 return;
@@ -536,14 +536,14 @@ final class InstructionsPanel {
     }
 
     private final void p(int param0) {
-        this.field_o = false;
+        this.previousEnabled = false;
         if (param0 != 31559) {
           field_r = -110;
         }
-        this.field_Q = false;
-        this.field_j = false;
-        this.field_I = false;
-        this.field_P = false;
+        this.nextHighlighted = false;
+        this.previousHighlighted = false;
+        this.nextEnabled = false;
+        this.footerHighlighted = false;
     }
 
     private final void l(int param0) {
@@ -561,12 +561,12 @@ final class InstructionsPanel {
         var3 = var6 + var7 >> 1;
         int var8 = this.a(21695);
         var3 = var3 + var8;
-        String var9 = this.field_O;
+        String var9 = this.footerCaption;
         if (var9 == null ||
           var9.length() == 0) {
           return;
         }
-        int[] var12 = this.field_P ? TutorialController.field_e : nd.field_b;
+        int[] var12 = this.footerHighlighted ? TutorialController.field_e : nd.field_b;
         int[] var11 = var12;
         int[] var10 = var11;
         fe.c(var9, db.a(true, this.field_F.first), MatchConditionEntry.a(var3, (byte) 94), var12, true);
@@ -596,19 +596,19 @@ final class InstructionsPanel {
         this.field_cb = 3223077;
         if (DisplacedUnitMarker.field_t != null) {
           if (DisplacedUnitMarker.field_t.length <= 8) {
-            this.field_O = null;
+            this.footerCaption = null;
           } else {
-            this.field_O = DisplacedUnitMarker.field_t[8];
+            this.footerCaption = DisplacedUnitMarker.field_t[8];
           }
           if (DisplacedUnitMarker.field_t.length > 22) {
-            this.field_k = DisplacedUnitMarker.field_t[22];
+            this.previousCaption = DisplacedUnitMarker.field_t[22];
           } else {
-            this.field_k = null;
+            this.previousCaption = null;
           }
           if (DisplacedUnitMarker.field_t.length <= 23) {
-            this.field_eb = null;
+            this.nextCaption = null;
           } else {
-            this.field_eb = DisplacedUnitMarker.field_t[23];
+            this.nextCaption = DisplacedUnitMarker.field_t[23];
           }
         }
         this.field_bb = 58;
@@ -628,9 +628,9 @@ final class InstructionsPanel {
         this.field_l = 14540255;
         this.field_db = 14;
         this.field_z = 14398754;
-        this.field_hb = new hh(0, 256, 100);
-        this.field_u = new em(256);
-        this.field_H = new em(100);
+        this.highlightPulse = new TrianglePulse(0, 256, 100);
+        this.illustrationCounter = new TickCounter(256);
+        this.secondaryIllustrationCounter = new TickCounter(100);
         this.field_J = new int[4];
         this.f(-11195);
         this.i((byte) 28);
@@ -711,24 +711,24 @@ final class InstructionsPanel {
 
     private final void b(int param0) {
         if (null != this.field_s) {
-          this.field_s.a(0, (byte) -50);
+          this.field_s.selectAnimationAndAdvance(0, (byte) -50);
         }
-        if (this.field_L == null) {
+        if (this.progressCounter == null) {
           return;
         }
-        if (this.field_L.c(param0 - 39)) {
-          this.field_L.b(17);
+        if (this.progressCounter.advanceAndCheck(param0 - 39)) {
+          this.progressCounter.reset(17);
         }
         if (param0 != 38) {
           this.field_cb = 104;
         }
         int var2 = 0;
-        if (this.field_L.field_a >= 100 &&
-          this.field_L.field_a <= 250) {
+        if (this.progressCounter.elapsedTicks >= 100 &&
+          this.progressCounter.elapsedTicks <= 250) {
           var2 = 5;
         }
         if (null != this.field_fb) {
-          this.field_fb.a(var2, (byte) -50);
+          this.field_fb.selectAnimationAndAdvance(var2, (byte) -50);
         }
     }
 
@@ -773,7 +773,7 @@ final class InstructionsPanel {
             return null;
           }
           var9 = (int[]) null;
-          discarded$1 = this.a((String[]) null, (String[][]) null, -14, (int[]) null, (int[]) null, (byte) -11, 90);
+          discarded$1 = this.drawInstructionRows((String[]) null, (String[][]) null, -14, (int[]) null, (int[]) null, (byte) -11, 90);
           return null;
         }
         return this.a(param5, param3, 110);
@@ -818,8 +818,8 @@ final class InstructionsPanel {
         var8 = this.a(21695);
         var3Lifetime1 = var3Lifetime1 + var8;
         var2Lifetime1 = this.field_bb;
-        var13 = this.field_k;
-        if (this.field_j) {
+        var13 = this.previousCaption;
+        if (this.previousHighlighted) {
           stackIn_5_0 = TutorialController.field_e;
         } else {
           stackIn_5_0 = nd.field_b;
@@ -828,12 +828,12 @@ final class InstructionsPanel {
         var14 = var17;
         var11 = var14;
         var10 = var11;
-        if (this.field_o &&
+        if (this.previousEnabled &&
           var13 != null &&
           var13.length() > 0) {
           fe.a(var13, db.a(true, var2Lifetime1), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var17, true);
         }
-        if (this.field_Q) {
+        if (this.nextHighlighted) {
           stackIn_12_0 = TutorialController.field_e;
         } else {
           stackIn_12_0 = nd.field_b;
@@ -843,8 +843,8 @@ final class InstructionsPanel {
         var12 = var16;
         var10Lifetime1 = var12;
         var2Lifetime2 = this.field_t;
-        var15 = this.field_eb;
-        if (this.field_I &&
+        var15 = this.nextCaption;
+        if (this.nextEnabled &&
           var15 != null &&
           var15.length() > 0) {
           fe.b(var15, db.a(true, var2Lifetime2), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var18, true);
@@ -862,9 +862,9 @@ final class InstructionsPanel {
     }
 
     private final void c(int param0, int param1, int param2) {
-        if (null != this.field_v) {
-          this.field_v.a(db.a(true, 40 + param1), MatchConditionEntry.a(param2 + 50, (byte) 94), (byte) -117);
-          this.field_v.a((byte) -72, false);
+        if (null != this.auxiliaryPreviewModel) {
+          this.auxiliaryPreviewModel.setScreenPosition(db.a(true, 40 + param1), MatchConditionEntry.a(param2 + 50, (byte) 94), (byte) -117);
+          this.auxiliaryPreviewModel.a((byte) -72, false);
           nb.a(db.a(true, param1), MatchConditionEntry.a(param2 + 38, (byte) 94), (byte) -97, (Unit) null);
         }
         if (param0 != 50) {
@@ -1005,8 +1005,8 @@ final class InstructionsPanel {
     }
 
     private final void j(byte param0) {
-        this.field_v = null;
-        this.field_v = new hr(25);
+        this.auxiliaryPreviewModel = null;
+        this.auxiliaryPreviewModel = new UnitModelPreview(25);
         if (param0 != -7) {
           return;
         }
@@ -1055,7 +1055,7 @@ final class InstructionsPanel {
         try {
           if (param1 >= 0 &&
             param1 < ue.field_k.length &&
-            hr.field_d.length > param1 + 1 &&
+            UnitModelPreview.field_d.length > param1 + 1 &&
             gt.field_c.length > param1) {
             if (param3 != null &&
               param0 != null &&
@@ -1063,9 +1063,9 @@ final class InstructionsPanel {
               SoftwareRaster.b(this.field_J);
               param3.b();
               SoftwareRaster.b();
-              var7_int = this.field_hb.a(-122) ? 1 : 0;
-              var8 = this.field_hb.c(-1953891327);
-              var9 = this.field_hb.field_b;
+              var7_int = this.highlightPulse.isRisingHalf(-122) ? 1 : 0;
+              var8 = this.highlightPulse.getValue(-1953891327);
+              var9 = this.highlightPulse.maximum;
               var8Lifetime1 = var9;
               var10 = var9 >> 1;
               var11 = var8Lifetime1;
@@ -1087,7 +1087,7 @@ final class InstructionsPanel {
                 var19.f(0, 0, var9 - var13);
               }
               var19.f(0, 0, var9);
-              var20 = hr.field_d[param1 + 1];
+              var20 = UnitModelPreview.field_d[param1 + 1];
               var20.g(-var17, -var18);
               if (var15 != param1) {
                 if (param1 == var16) {
@@ -1214,7 +1214,7 @@ final class InstructionsPanel {
           return null;
         }
         if (obfuscationGuard != -108) {
-          this.field_I = true;
+          this.nextEnabled = true;
         }
         int var2 = this.navigationEnd.first > this.footerEnd.first ? this.navigationEnd.first : this.footerEnd.first;
         int var3 = this.footerEnd.second < this.navigationEnd.second ? this.navigationEnd.second : this.footerEnd.second;
@@ -1343,13 +1343,13 @@ final class InstructionsPanel {
         int var2 = 0;
         wp var3 = null;
         if (param0 != -302977872) {
-          this.field_hb = (hh) null;
+          this.highlightPulse = (TrianglePulse) null;
         }
-        if (this.field_ab != null) {
-          this.field_ab.a(-118);
-          var2 = this.field_ab.field_i >> 16;
+        if (this.illustrationAnimation != null) {
+          this.illustrationAnimation.advance(-118);
+          var2 = this.illustrationAnimation.frameId >> 16;
           var3 = we.a(var2, true);
-          if (this.field_ab == null) {
+          if (this.illustrationAnimation == null) {
             Object var3_ref = null;
             return;
           }
@@ -1753,12 +1753,12 @@ final class InstructionsPanel {
     private final void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         IntPair discarded$0 = null;
         this.c(param2, param0, -31550, !param3 ? param1 : -1, param5);
-        hr var7 = this.field_s;
+        UnitModelPreview var7 = this.field_s;
         if (param3) {
           var7 = this.field_fb;
         }
         if (var7 != null) {
-          var7.a(db.a(true, param5 + 40), MatchConditionEntry.a(param2 + 60, (byte) 94), (byte) -117);
+          var7.setScreenPosition(db.a(true, param5 + 40), MatchConditionEntry.a(param2 + 60, (byte) 94), (byte) -117);
           var7.a((byte) -72, false);
         }
         if (param4 != -1) {
@@ -1769,12 +1769,12 @@ final class InstructionsPanel {
         }
     }
 
-    private final void a(int param0, int param1, hr param2, int param3) {
+    private final void a(int param0, int param1, UnitModelPreview param2, int param3) {
         if (param2 == null) {
           return;
         }
         try {
-          param2.a(db.a(true, param3), MatchConditionEntry.a(param0, (byte) 94), (byte) 77);
+          param2.setScreenPosition(db.a(true, param3), MatchConditionEntry.a(param0, (byte) 94), (byte) 77);
           param2.a((byte) -72, false);
           int var5_int = -57 % ((param1 - 3) / 48);
         } catch (RuntimeException runtimeException) {
@@ -1794,10 +1794,10 @@ final class InstructionsPanel {
         if (param0 != 28) {
           this.field_l = 29;
         }
-        this.field_s = new hr(0);
+        this.field_s = new UnitModelPreview(0);
         this.field_fb = null;
-        this.field_fb = new hr(0);
-        this.field_L = new em(250);
+        this.field_fb = new UnitModelPreview(0);
+        this.progressCounter = new TickCounter(250);
     }
 
     private final void b(int param0, int param1, int param2) {
@@ -1805,7 +1805,7 @@ final class InstructionsPanel {
           this.field_t = -120;
         }
         if (this.field_S != null) {
-          this.field_S.a(db.a(true, 40 + param2), MatchConditionEntry.a(90 + param0, (byte) 94), (byte) -3);
+          this.field_S.setScreenPosition(db.a(true, 40 + param2), MatchConditionEntry.a(90 + param0, (byte) 94), (byte) -3);
           this.field_S.a((byte) -72, false);
           eu.a(-10, MatchConditionEntry.a(38 + param0, (byte) 94), db.a(true, param2), (Unit) null);
         }
@@ -1933,7 +1933,7 @@ final class InstructionsPanel {
               var10 = new RgbSprite(var2, var3);
               var5 = 3 * var2 >> 2;
               if (!param0) {
-                this.field_v = (hr) null;
+                this.auxiliaryPreviewModel = (UnitModelPreview) null;
               }
               this.cachedPageSprites = new RgbSprite[3];
               var6 = var3 * 3 >> 2;
@@ -1972,7 +1972,7 @@ final class InstructionsPanel {
         if (param0 == 3) {
           return null;
         }
-        this.field_ab = (vj) null;
+        this.illustrationAnimation = (AnimationPlayer) null;
         return null;
     }
 
@@ -2056,21 +2056,21 @@ final class InstructionsPanel {
           param1 <= 1) {
           boolean decompiledFrameRemainder0 = true;
           if (param1 == 0 && (this.firstPreviewUnit == null ||
-            this.field_h == null)) {
+            this.firstPreviewModel == null)) {
             var5 = 29;
             var6 = 1;
             this.firstPreviewUnit = this.createPreviewUnit(var5, param3 ^ 19555, var6, param1);
-            this.field_h = new hr(var5);
+            this.firstPreviewModel = new UnitModelPreview(var5);
             decompiledFrameRemainder0 = false;
           }
           else {
             if (param1 == 1 && (this.secondPreviewUnit == null ||
-              this.field_M == null)) {
+              this.secondPreviewModel == null)) {
               var5Lifetime1 = 10;
               var6Lifetime3 = 1;
               this.secondPreviewUnit = this.createPreviewUnit(var5Lifetime1, -1, var6Lifetime3, param1);
-              this.field_M = new hr(var5Lifetime1);
-              this.field_M.a(false, 256);
+              this.secondPreviewModel = new UnitModelPreview(var5Lifetime1);
+              this.secondPreviewModel.setYaw(false, 256);
             }
           }
           if (param3 != -19556) {
@@ -2078,12 +2078,12 @@ final class InstructionsPanel {
           }
           if (0 == param1 &&
             this.firstPreviewUnit != null &&
-            this.field_h != null) {
+            this.firstPreviewModel != null) {
             var10 = this.a(param0, 0, param2, param1, -3);
             if (var10 == null) {
               return;
             }
-            this.a(7 * (var10.second >> 3) + param2, 88, this.field_h, (var10.first >> 1) + param0);
+            this.a(7 * (var10.second >> 3) + param2, 88, this.firstPreviewModel, (var10.first >> 1) + param0);
             var6Lifetime1 = ri.terrainDamageTakenPercent[0];
             var7 = 0;
             this.a(var7, param0, this.firstPreviewUnit.ownerPlayer, var6Lifetime1, 110, this.firstPreviewUnit, this.firstPreviewUnit, param2);
@@ -2091,12 +2091,12 @@ final class InstructionsPanel {
           }
           if (1 == param1 &&
             null != this.secondPreviewUnit &&
-            null != this.field_M) {
+            null != this.secondPreviewModel) {
             var9 = this.a(param0, 0, param2, param1, -3);
             if (var9 == null) {
               return;
             }
-            this.a(7 * (var9.second >> 3) + param2, 57, this.field_M, param0 + (var9.first >> 1));
+            this.a(7 * (var9.second >> 3) + param2, 57, this.secondPreviewModel, param0 + (var9.first >> 1));
             var6Lifetime2 = ri.terrainDamageTakenPercent[0];
             var7Lifetime1 = 0;
             this.a(var7Lifetime1, param0, this.firstPreviewUnit.ownerPlayer, var6Lifetime2, 102, this.secondPreviewUnit, this.firstPreviewUnit, param2);
@@ -2157,8 +2157,8 @@ final class InstructionsPanel {
 
     private final void f(int param0) {
         int var2;
-        qb var3;
-        this.field_ab = null;
+        AnimationSequence var3;
+        this.illustrationAnimation = null;
         if (null != sf.field_P &&
           sf.field_P.length > 76) {
           var2 = sf.field_P[76];
@@ -2168,14 +2168,14 @@ final class InstructionsPanel {
             if (null != ck.field_e[var2] &&
               ck.field_e[var2].length > 0) {
               if (param0 != -11195) {
-                this.field_I = false;
+                this.nextEnabled = false;
               }
               var3 = ck.field_e[sf.field_P[76]][0];
               if (var3 == null) {
                 return;
               }
-              this.field_ab = new vj(1);
-              this.field_ab.a(-1, var3);
+              this.illustrationAnimation = new AnimationPlayer(1);
+              this.illustrationAnimation.selectSequence(-1, var3);
               return;
             }
             return;
@@ -2184,7 +2184,7 @@ final class InstructionsPanel {
         }
     }
 
-    private final int a(String[] param0, String[][] param1, int param2, int[] param3, int[] param4, byte param5, int param6) {
+    private final int drawInstructionRows(String[] headings, String[][] paragraphs, int topY, int[] illustrationModes, int[] illustrationArguments, byte obfuscationGuard, int sectionIndex) {
         int var13 = 0;
         int stackIn_3_0 = 0;
         int stackIn_9_0 = 0;
@@ -2217,46 +2217,46 @@ final class InstructionsPanel {
         int var18Lifetime1;
         var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param5 > -111) {
+          if (obfuscationGuard > -111) {
             stackIn_3_0 = 69;
             return stackIn_3_0;
           }
-          if (param1 != null &&
-            param0 != null) {
-            if (param4 == null) {
+          if (paragraphs != null &&
+            headings != null) {
+            if (illustrationArguments == null) {
               return 0;
             }
-            if (param1.length != param0.length) {
+            if (paragraphs.length != headings.length) {
               stackIn_13_0 = 0;
               return stackIn_13_0;
             }
-            if (param1.length != param3.length) {
+            if (paragraphs.length != illustrationModes.length) {
               stackIn_17_0 = 0;
               return stackIn_17_0;
             }
-            if (param1.length != param4.length) {
+            if (paragraphs.length != illustrationArguments.length) {
               stackIn_20_0 = 0;
               return stackIn_20_0;
             }
-            var8_int = param2;
+            var8_int = topY;
             var9 = this.field_i;
             var10 = this.field_m;
             var11 = -var9 + var10;
             var12 = 0;
-            for (var13 = 0; var13 < param1.length; var13++) {
-              var14 = param1[var13];
-              var15 = param0[var13];
-              var16 = param3[var13];
-              var17 = param4[var13];
+            for (var13 = 0; var13 < paragraphs.length; var13++) {
+              var14 = paragraphs[var13];
+              var15 = headings[var13];
+              var16 = illustrationModes[var13];
+              var17 = illustrationArguments[var13];
               if (var17 == -1) {
-                var18 = this.a(param4, var13, 50);
+                var18 = this.a(illustrationArguments, var13, 50);
                 if (var18 >= 0) {
                   var11 = var11 / var18;
                   var12 = 1;
                   var10 = var11 + var9;
                 }
               }
-              var18Lifetime1 = this.a(param6, var14, var15, var10, 9, var16, var13, param2, var9);
+              var18Lifetime1 = this.a(sectionIndex, var14, var15, var10, 9, var16, var13, topY, var9);
               if (var12 != 0 &&
                 this.c(var17, 256)) {
                 var9 = var9 + var11;
@@ -2265,15 +2265,15 @@ final class InstructionsPanel {
                   var12 = 0;
                   var9 = this.field_i;
                   var10 = this.field_m;
-                  param2 = param2 + var18Lifetime1;
+                  topY = topY + var18Lifetime1;
                   var11 = var10 - var9;
                 }
               } else {
                 var12 = 0;
-                param2 = var18Lifetime1 + param2;
+                topY = var18Lifetime1 + topY;
               }
             }
-            stackIn_35_0 = param2 - var8_int;
+            stackIn_35_0 = topY - var8_int;
             return stackIn_35_0;
           }
           stackIn_9_0 = 0;
@@ -2283,30 +2283,30 @@ final class InstructionsPanel {
           var8 = decompiledCaughtException;
           stackIn_38_0 = var8;
           stackIn_38_1 = new StringBuilder().append("rk.SA(");
-          if (param0 == null) {
+          if (headings == null) {
             stackIn_39_2 = "null";
           } else {
             stackIn_39_2 = "{...}";
           }
           stackIn_41_1 = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',');
-          if (param1 == null) {
+          if (paragraphs == null) {
             stackIn_42_2 = "null";
           } else {
             stackIn_42_2 = "{...}";
           }
-          stackIn_44_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_44_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(topY).append(',');
+          if (illustrationModes == null) {
             stackIn_45_2 = "null";
           } else {
             stackIn_45_2 = "{...}";
           }
           stackIn_47_1 = ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',');
-          if (param4 == null) {
+          if (illustrationArguments == null) {
             stackIn_48_2 = "null";
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(obfuscationGuard).append(',').append(sectionIndex).append(')').toString());
         }
     }
 
@@ -2563,7 +2563,7 @@ final class InstructionsPanel {
         }
     }
 
-    final void a(String param0, boolean param1, int param2, int param3, boolean param4, int param5) {
+    final void updatePageState(String footerCaption, boolean previousEnabled, int obfuscationGuard, int selectedItem, boolean nextEnabled, int pageIndex) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -2571,37 +2571,37 @@ final class InstructionsPanel {
         RuntimeException var7 = null;
         try {
           if (0 > this.pageCount) {
-            this.pageCount = PortalLossCondition.field_c.length;
+            this.pageCount = PortalLossCondition.instructionParagraphs.length;
           }
-          if (param5 != this.pageIndex &&
-            param5 >= 0 &&
-            param5 < this.pageCount) {
-            this.pageIndex = param5;
+          if (pageIndex != this.pageIndex &&
+            pageIndex >= 0 &&
+            pageIndex < this.pageCount) {
+            this.pageIndex = pageIndex;
           }
           if (this.pageIndex < 0 ||
             this.pageIndex >= this.pageCount) {
             this.pageIndex = 0;
           }
-          this.a((byte) -106, param3, param4, param1);
-          if (null == this.field_hb) {
-            this.field_hb = new hh(0, 256, 100);
+          this.configureNavigation((byte) -106, selectedItem, nextEnabled, previousEnabled);
+          if (null == this.highlightPulse) {
+            this.highlightPulse = new TrianglePulse(0, 256, 100);
           }
-          this.field_hb.b((byte) -66);
-          if (null == this.field_u) {
-            this.field_u = new em(256);
+          this.highlightPulse.advance((byte) -66);
+          if (null == this.illustrationCounter) {
+            this.illustrationCounter = new TickCounter(256);
           }
-          if (this.field_u.c(-1)) {
-            this.field_u.b(17);
+          if (this.illustrationCounter.advanceAndCheck(-1)) {
+            this.illustrationCounter.reset(17);
           }
-          if (null == this.field_H) {
-            this.field_H = new em(100);
+          if (null == this.secondaryIllustrationCounter) {
+            this.secondaryIllustrationCounter = new TickCounter(100);
           }
-          if (this.field_H.c(-1)) {
-            this.field_H.b(param2 ^ 117);
+          if (this.secondaryIllustrationCounter.advanceAndCheck(-1)) {
+            this.secondaryIllustrationCounter.reset(obfuscationGuard ^ 117);
           }
           this.j(-302977872);
-          this.b(param2 - 62);
-          this.field_O = param0;
+          this.b(obfuscationGuard - 62);
+          this.footerCaption = footerCaption;
           if (this.pageIndex != 12) {
             if (this.pageIndex == 13) {
               this.b(true);
@@ -2611,8 +2611,8 @@ final class InstructionsPanel {
           } else {
             this.b(true);
           }
-          if (param2 != 100) {
-            this.field_Q = true;
+          if (obfuscationGuard != 100) {
+            this.nextHighlighted = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2620,12 +2620,12 @@ final class InstructionsPanel {
           var7 = decompiledCaughtException;
           stackIn_33_0 = var7;
           stackIn_33_1 = new StringBuilder().append("rk.G(");
-          if (param0 == null) {
+          if (footerCaption == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(previousEnabled).append(',').append(obfuscationGuard).append(',').append(selectedItem).append(',').append(nextEnabled).append(',').append(pageIndex).append(')').toString());
         }
     }
 
@@ -2636,10 +2636,10 @@ final class InstructionsPanel {
         var3 = var4;
         if (0 <= param0 &&
           param0 < ue.field_k.length &&
-          1 + param0 < hr.field_d.length &&
+          1 + param0 < UnitModelPreview.field_d.length &&
           gt.field_c.length > param0) {
           if (param1 != 1) {
-            this.field_o = false;
+            this.previousEnabled = false;
           }
           var4.first = ue.field_k[param0].field_A;
           var4.second = ue.field_k[param0].field_x;
@@ -2829,10 +2829,10 @@ final class InstructionsPanel {
         int var9;
         if (param1 >= 0 &&
           op.field_c.length > param1) {
-          if (this.field_L != null &&
-            this.field_L.field_a >= 0 &&
-            this.field_L.field_f > 0 &&
-            this.field_L.field_a <= this.field_L.field_f) {
+          if (this.progressCounter != null &&
+            this.progressCounter.elapsedTicks >= 0 &&
+            this.progressCounter.limit > 0 &&
+            this.progressCounter.elapsedTicks <= this.progressCounter.limit) {
             var5 = 18;
             var6 = 30;
             param0 = param0 + var5;
@@ -2845,8 +2845,8 @@ final class InstructionsPanel {
             SoftwareRaster.b(param0, param2, var7, var8, 16777215);
             SoftwareRaster.f(param0 + 1, param2 + 1, -2 + var7, var8 - 2, 0);
             var9 = 0;
-            if (this.field_L.field_f > 0) {
-              var9 = 1 + this.field_L.field_a * (var7 - 2) / 100;
+            if (this.progressCounter.limit > 0) {
+              var9 = 1 + this.progressCounter.elapsedTicks * (var7 - 2) / 100;
             }
             if (var9 < 0) {
               var9 = 0;
@@ -2861,12 +2861,12 @@ final class InstructionsPanel {
         }
     }
 
-    final void d(byte param0) {
+    final void drawPanel(byte obfuscationGuard) {
         if (this.pageCount < 0) {
           return;
         }
         int var2 = this.field_C.first;
-        if (param0 != -102) {
+        if (obfuscationGuard != -102) {
           this.field_g = -92;
         }
         int var3 = this.field_C.second;
@@ -2879,8 +2879,8 @@ final class InstructionsPanel {
         var4 = -var2 + this.field_K.first;
         var5 = -var3 + this.field_K.second;
         fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, io.field_m, TutorialController.field_e, this.field_A, this.field_e);
-        this.k(-107);
-        this.l(param0 + 19);
+        this.drawPageSections(-107);
+        this.l(obfuscationGuard + 19);
         this.g((byte) 10);
     }
 

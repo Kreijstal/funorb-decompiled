@@ -459,7 +459,7 @@ final class SpellCastEvent extends GameEvent {
             var3 = (Unit) null;
             SpellCastEvent.a(73, (MapTile[]) null, true, -35, 53, 62, 17, (Unit) null, 87, false, false);
           }
-          stackIn_3_0 = hh.a(param1, 0, param1.length, 0);
+          stackIn_3_0 = TrianglePulse.a(param1, 0, param1.length, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

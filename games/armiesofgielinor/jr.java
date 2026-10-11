@@ -51,20 +51,20 @@ final class jr {
         if (!this.field_a) {
           if (param0 > 0) {
             if (this.b(112, AiPlanningStrategy.field_d, param1, param3, ko.field_b)) {
-              hr.field_d[this.field_c].g(this.field_b + param3 - 25, param1 + (this.field_g - 25));
-              hr.field_d[0].f(param3 + (this.field_b - 25), -25 + this.field_g + param1, 256);
+              UnitModelPreview.field_d[this.field_c].g(this.field_b + param3 - 25, param1 + (this.field_g - 25));
+              UnitModelPreview.field_d[0].f(param3 + (this.field_b - 25), -25 + this.field_g + param1, 256);
               if (var6 != 0) {
-                hr.field_d[this.field_c].g(this.field_b + param3 - 25, param1 + (this.field_g - 25));
-                hr.field_d[this.field_c].g(param3 - (-this.field_b + 25), -25 + (this.field_g + param1), 128);
+                UnitModelPreview.field_d[this.field_c].g(this.field_b + param3 - 25, param1 + (this.field_g - 25));
+                UnitModelPreview.field_d[this.field_c].g(param3 - (-this.field_b + 25), -25 + (this.field_g + param1), 128);
               }
             } else {
-              hr.field_d[this.field_c].g(this.field_b + param3 - 25, param1 + (this.field_g - 25));
+              UnitModelPreview.field_d[this.field_c].g(this.field_b + param3 - 25, param1 + (this.field_g - 25));
               if (var6 != 0) {
-                hr.field_d[this.field_c].g(param3 - (-this.field_b + 25), -25 + (this.field_g + param1), 128);
+                UnitModelPreview.field_d[this.field_c].g(param3 - (-this.field_b + 25), -25 + (this.field_g + param1), 128);
               }
             }
           } else {
-            hr.field_d[this.field_c].g(param3 - (-this.field_b + 25), -25 + (this.field_g + param1), 128);
+            UnitModelPreview.field_d[this.field_c].g(param3 - (-this.field_b + 25), -25 + (this.field_g + param1), 128);
           }
           fe.a(this.field_b + param3, param1 + this.field_g, this.field_c, param0, fe.field_b);
           if (var6 == 0) {
@@ -224,7 +224,7 @@ final class jr {
           SummonAction.field_u = param9.field_fb;
           SummonAction.field_u.b(80);
           oi.field_d = new tp(param4);
-          vj.field_a = 0;
+          AnimationPlayer.field_a = 0;
           SummonAction.field_s = -1;
           oo.field_a = 0;
           GlobalSpell.field_g = -1;

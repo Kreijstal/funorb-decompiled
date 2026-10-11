@@ -323,7 +323,7 @@ final class wi {
               if (oh.field_H != var12.field_Pb) {
                 if (var5_int != 0 &&
                   !var12.field_Zb) {
-                  var24Lifetime2 = fo.a(param1 + 4545, em.field_b, new String[]{var20});
+                  var24Lifetime2 = fo.a(param1 + 4545, TickCounter.field_b, new String[]{var20});
                   var30Lifetime1 = var24Lifetime2;
                   var25 = var30Lifetime1;
                   var24Lifetime2 = var25;

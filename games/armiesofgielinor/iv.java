@@ -790,7 +790,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           if (0L != var4 &&
             var4 < var2_long) {
             var6_int = (int)(-var4 + var2_long);
-            hr.field_i = (32000 + (var6_int >> 1)) / var6_int;
+            UnitModelPreview.field_i = (32000 + (var6_int >> 1)) / var6_int;
           }
           fieldTemp$1 = uh.field_d;
           uh.field_d = uh.field_d + 1;

@@ -110,8 +110,8 @@ final class ot extends dr {
         try {
           jf.field_C = param3;
           CipherPacketBuffer.currentBattlefield = param0;
-          pr.field_g = new vj(param2);
-          pr.field_g.a(-1, ck.field_e[sf.field_P[76]][0]);
+          pr.field_g = new AnimationPlayer(param2);
+          pr.field_g.selectSequence(-1, ck.field_e[sf.field_P[76]][0]);
           kl.field_a = jf.field_C.camera;
           discarded$1 = new RgbSprite(80, 40);
           ef.field_c = CipherPacketBuffer.currentBattlefield.mapHeight;

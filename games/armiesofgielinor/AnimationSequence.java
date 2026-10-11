@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qb {
-    private int[][] field_e;
-    private int[] field_i;
+final class AnimationSequence {
+    private int[][] opcode13Rows;
+    private int[] opcode3Values;
     static String[] field_c;
-    int[] field_d;
-    boolean field_b;
-    int field_j;
+    int[] frameDurations;
+    boolean unlimitedLoops;
+    int maximumLoops;
     static int[] field_f;
     static np field_h;
-    int[] field_a;
+    int[] frameIds;
     static String field_k;
     static String field_l;
-    int field_g;
+    int loopStartFrame;
 
     final static void b(int param0) {
         int var1_int = 0;
@@ -35,7 +35,7 @@ final class qb {
           var3 = 0;
           var1_intLifetime1 = var3;
           while (var3 < bn.field_a.length) {
-            ActionRequest.field_k[76][var3] = bn.field_a[var3];
+            ActionRequest.unitModels[76][var3] = bn.field_a[var3];
             var3++;
           }
           return;
@@ -46,127 +46,127 @@ final class qb {
         }
     }
 
-    private final void a(int param0, PacketBuffer param1, int param2) {
-        int[] array$0 = null;
-        int var7 = 0;
+    private final void decodeOpcode(int obfuscationGuard, PacketBuffer packet, int opcode) {
+        int[] rowValues = null;
+        int wordIndex = 0;
         RuntimeException stackIn_58_0 = null;
         StringBuilder stackIn_58_1 = null;
         String stackIn_59_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
+        int elementCount = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
+        int elementIndex = 0;
+        int rowLength = 0;
         int var8 = 0;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param2 == 1) {
-            var4_int = param1.readUnsignedShort((byte) -104);
-            this.field_d = new int[var4_int];
-            for (var5 = 0; var4_int > var5; var5++) {
-              this.field_d[var5] = param1.readUnsignedShort((byte) -104);
+          if (opcode == 1) {
+            elementCount = packet.readUnsignedShort((byte) -104);
+            this.frameDurations = new int[elementCount];
+            for (elementIndex = 0; elementCount > elementIndex; elementIndex++) {
+              this.frameDurations[elementIndex] = packet.readUnsignedShort((byte) -104);
             }
-            this.field_a = new int[var4_int];
-            for (var5 = 0; var5 < var4_int; var5++) {
-              this.field_a[var5] = param1.readUnsignedShort((byte) -104);
+            this.frameIds = new int[elementCount];
+            for (elementIndex = 0; elementIndex < elementCount; elementIndex++) {
+              this.frameIds[elementIndex] = packet.readUnsignedShort((byte) -104);
             }
-            for (var5 = 0; var5 < var4_int; var5++) {
-              this.field_a[var5] = (param1.readUnsignedShort((byte) -104) << 16) + this.field_a[var5];
+            for (elementIndex = 0; elementIndex < elementCount; elementIndex++) {
+              this.frameIds[elementIndex] = (packet.readUnsignedShort((byte) -104) << 16) + this.frameIds[elementIndex];
             }
           } else {
-            if (param2 == 2) {
-              this.field_g = param1.readUnsignedShort((byte) -104);
+            if (opcode == 2) {
+              this.loopStartFrame = packet.readUnsignedShort((byte) -104);
             } else {
-              if (param2 == 3) {
-                var4_int = param1.readUnsignedByte(0);
-                this.field_i = new int[1 + var4_int];
-                for (var5 = 0; var4_int > var5; var5++) {
-                  this.field_i[var5] = param1.readUnsignedByte(0);
+              if (opcode == 3) {
+                elementCount = packet.readUnsignedByte(0);
+                this.opcode3Values = new int[1 + elementCount];
+                for (elementIndex = 0; elementCount > elementIndex; elementIndex++) {
+                  this.opcode3Values[elementIndex] = packet.readUnsignedByte(0);
                 }
-                this.field_i[var4_int] = 9999999;
+                this.opcode3Values[elementCount] = 9999999;
               } else {
-                if (param2 != 5) {
-                  if (param2 == 6) {
-                    param1.readUnsignedShort((byte) -104);
+                if (opcode != 5) {
+                  if (opcode == 6) {
+                    packet.readUnsignedShort((byte) -104);
                   } else {
-                    if (param2 == 7) {
-                      param1.readUnsignedShort((byte) -104);
+                    if (opcode == 7) {
+                      packet.readUnsignedShort((byte) -104);
                     } else {
-                      if (param2 == 8) {
-                        this.field_j = param1.readUnsignedByte(0);
-                        this.field_b = false;
+                      if (opcode == 8) {
+                        this.maximumLoops = packet.readUnsignedByte(0);
+                        this.unlimitedLoops = false;
                       } else {
-                        if (9 != param2) {
-                          if (param2 == 10) {
-                            param1.readUnsignedByte(param0 ^ 0);
+                        if (9 != opcode) {
+                          if (opcode == 10) {
+                            packet.readUnsignedByte(obfuscationGuard ^ 0);
                           } else {
-                            if (param2 != 11) {
-                              if (param2 == 12) {
-                                var4_int = param1.readUnsignedByte(0);
-                                for (var5 = 0; var5 < var4_int; var5++) {
-                                  param1.readUnsignedShort((byte) -104);
+                            if (opcode != 11) {
+                              if (opcode == 12) {
+                                elementCount = packet.readUnsignedByte(0);
+                                for (elementIndex = 0; elementIndex < elementCount; elementIndex++) {
+                                  packet.readUnsignedShort((byte) -104);
                                 }
-                                for (var5 = 0; var5 < var4_int; var5++) {
-                                  param1.readUnsignedShort((byte) -104);
+                                for (elementIndex = 0; elementIndex < elementCount; elementIndex++) {
+                                  packet.readUnsignedShort((byte) -104);
                                 }
                               } else {
-                                if (param2 == 13) {
-                                  var4_int = param1.readUnsignedShort((byte) -104);
-                                  this.field_e = new int[var4_int][];
-                                  for (var5 = 0; var4_int > var5; var5++) {
-                                    var6 = param1.readUnsignedByte(param0 + 0);
-                                    if (var6 > 0) {
-                                      array$0 = new int[var6];
-                                      this.field_e[var5] = array$0;
-                                      this.field_e[var5][0] = param1.d((byte) -13);
-                                      for (var7 = 1; var7 < var6; var7++) {
-                                        this.field_e[var5][var7] = param1.readUnsignedShort((byte) -104);
+                                if (opcode == 13) {
+                                  elementCount = packet.readUnsignedShort((byte) -104);
+                                  this.opcode13Rows = new int[elementCount][];
+                                  for (elementIndex = 0; elementCount > elementIndex; elementIndex++) {
+                                    rowLength = packet.readUnsignedByte(obfuscationGuard + 0);
+                                    if (rowLength > 0) {
+                                      rowValues = new int[rowLength];
+                                      this.opcode13Rows[elementIndex] = rowValues;
+                                      this.opcode13Rows[elementIndex][0] = packet.d((byte) -13);
+                                      for (wordIndex = 1; wordIndex < rowLength; wordIndex++) {
+                                        this.opcode13Rows[elementIndex][wordIndex] = packet.readUnsignedShort((byte) -104);
                                       }
                                     }
                                   }
                                 } else {
-                                  if (param2 != 14 &&
-                                    param2 != 15 &&
-                                    param2 != 16 &&
-                                    param2 != 18) {
+                                  if (opcode != 14 &&
+                                    opcode != 15 &&
+                                    opcode != 16 &&
+                                    opcode != 18) {
                                   }
                                 }
                               }
                             } else {
-                              param1.readUnsignedByte(param0 ^ 0);
+                              packet.readUnsignedByte(obfuscationGuard ^ 0);
                             }
                           }
                         } else {
-                          param1.readUnsignedByte(0);
+                          packet.readUnsignedByte(0);
                         }
                       }
                     }
                   }
                 } else {
-                  param1.readUnsignedByte(param0 + 0);
+                  packet.readUnsignedByte(obfuscationGuard + 0);
                 }
               }
             }
           }
-          if (param0 != 0) {
-            this.field_a = (int[]) null;
+          if (obfuscationGuard != 0) {
+            this.frameIds = (int[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_58_0 = var4;
-          stackIn_58_1 = new StringBuilder().append("qb.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_58_1 = new StringBuilder().append("qb.C(").append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_59_2 = "null";
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(opcode).append(')').toString());
         }
     }
 
-    private qb(kl param0, int param1, String param2) {
+    private AnimationSequence(kl param0, int param1, String param2) {
         this(param0, param1, param0.a((byte) 28, param1, param2));
     }
 
@@ -179,7 +179,7 @@ final class qb {
         pd.field_c.a(SoftwareRaster.field_g - 124, -20500, 438, 0, 202 + var2 + 438 * var5 / var3);
     }
 
-    private final void a(int param0, PacketBuffer param1) {
+    private final void decode(int obfuscationGuard, PacketBuffer packet) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -190,14 +190,14 @@ final class qb {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           while (true) {
-            var3_int = param1.readUnsignedByte(0);
+            var3_int = packet.readUnsignedByte(0);
             if (var3_int != 0) {
-              this.a(0, param1, var3_int);
+              this.decodeOpcode(0, packet, var3_int);
               continue;
             }
             break;
           }
-          if (param0 != 32737) {
+          if (obfuscationGuard != 32737) {
             field_k = (String) null;
           }
           return;
@@ -205,8 +205,8 @@ final class qb {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("qb.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("qb.B(").append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -226,11 +226,11 @@ final class qb {
         field_c = null;
     }
 
-    qb(kl param0, String param1, String param2) {
+    AnimationSequence(kl param0, String param1, String param2) {
         this(param0, param0.a(param1, 122), param2);
     }
 
-    private qb(kl param0, int param1, int param2) {
+    private AnimationSequence(kl param0, int param1, int param2) {
         int var7 = 0;
         byte[] var4 = null;
         int var5 = 0;
@@ -244,27 +244,27 @@ final class qb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         int var6Lifetime1;
-        this.field_j = 0;
-        this.field_g = -1;
+        this.maximumLoops = 0;
+        this.loopStartFrame = -1;
         try {
-          this.field_b = true;
+          this.unlimitedLoops = true;
           var11 = param0.a((byte) 113, param2, param1);
           var10 = var11;
           var9 = var10;
           var4 = var9;
           if (var9 != null) {
-            this.a(32737, new PacketBuffer(var11));
+            this.decode(32737, new PacketBuffer(var11));
           }
           var5 = 0;
-          for (var6 = 0; this.field_a.length > var6; var6++) {
-            if (var5 < this.field_a[var6]) {
-              var5 = this.field_a[var6];
+          for (var6 = 0; this.frameIds.length > var6; var6++) {
+            if (var5 < this.frameIds[var6]) {
+              var5 = this.frameIds[var6];
             }
           }
           var6Lifetime1 = 0;
-          for (var7 = 0; var7 < this.field_d.length; var7++) {
-            if (this.field_d[var7] > var6Lifetime1) {
-              var6Lifetime1 = this.field_d[var7];
+          for (var7 = 0; var7 < this.frameDurations.length; var7++) {
+            if (this.frameDurations[var7] > var6Lifetime1) {
+              var6Lifetime1 = this.frameDurations[var7];
             }
           }
           return;

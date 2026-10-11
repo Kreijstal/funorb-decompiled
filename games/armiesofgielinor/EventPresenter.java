@@ -295,8 +295,8 @@ final class EventPresenter extends IntrusiveNode {
         if (this.event.unit.field_x == null) {
           return;
         }
-        var4 = -40 + this.event.unit.field_x.field_e[0];
-        var5 = -20 + this.event.unit.field_x.field_e[1];
+        var4 = -40 + this.event.unit.field_x.screenPosition[0];
+        var5 = -20 + this.event.unit.field_x.screenPosition[1];
         stackIn_14_0 = TeamRoster.field_g;
         stackIn_14_1 = 10 + var4;
         stackIn_14_2 = var5 + 5;

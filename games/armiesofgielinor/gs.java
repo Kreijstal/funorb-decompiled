@@ -289,7 +289,7 @@ final class gs implements kh {
                         if (0 > mg.field_f) {
                             /* Inlined CFG state: 11. */
                             {
-                                var4_ref_qu = (qu) (vj.field_b.first((byte) 127));
+                                var4_ref_qu = (qu) (AnimationPlayer.field_b.first((byte) 127));
                                 if (var4_ref_qu == null) {
                                     statePc = 20;
                                 } else {
@@ -543,7 +543,7 @@ final class gs implements kh {
                         if (var6 >= fk.field_b) {
                             /* Inlined CFG state: 40. */
                             {
-                                vj.field_b.addLast((byte) -119, (IntrusiveNode) (var5));
+                                AnimationPlayer.field_b.addLast((byte) -119, (IntrusiveNode) (var5));
                                 mg.field_f = -1;
                                 statePc = 21;
                                 continue scanLoop1;

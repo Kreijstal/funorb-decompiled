@@ -95,13 +95,13 @@ final class g extends RuntimeException {
           bh.d(false);
         }
         if (PreparedAction.field_r > 0) {
-          qb.a(PreparedAction.field_r, -71);
+          AnimationSequence.a(PreparedAction.field_r, -71);
         }
         if (param0 != -6145) {
           return;
         }
         if (InstructionsPanel.field_D > 0) {
-          qb.a(InstructionsPanel.field_D, param0 + 6255);
+          AnimationSequence.a(InstructionsPanel.field_D, param0 + 6255);
         }
     }
 

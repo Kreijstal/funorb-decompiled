@@ -2782,7 +2782,7 @@ final class CombatPresentation implements EventPresentation {
           }
           var2_intLifetime1 = var4 >> 1;
           var3Lifetime1 = mp.k(-104) + (var5 >> 1);
-          fe.c(em.field_c, var2_intLifetime1 + var6, var7 + var3Lifetime1, 2236962, true);
+          fe.c(TickCounter.field_c, var2_intLifetime1 + var6, var7 + var3Lifetime1, 2236962, true);
           if (this.battlefield != null &&
             this.battlefield.field_T != null) {
             var3Lifetime2 = 19;
@@ -4416,7 +4416,7 @@ final class CombatPresentation implements EventPresentation {
           }
           this.framebuffer = new RgbSprite(640, 480);
           var4 = cb.field_a[AttackEvent.a(false, cb.field_a.length, vv.field_b)];
-          hh.a(-16147, 50, var4, true);
+          TrianglePulse.a(-16147, 50, var4, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

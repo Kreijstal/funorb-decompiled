@@ -9,7 +9,7 @@ final class gv {
         RgbSprite var4 = null;
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var1 = c.field_e[0] * qm.field_K[0];
-        byte[] var6 = vj.field_j[0];
+        byte[] var6 = AnimationPlayer.field_j[0];
         byte[] var2 = var6;
         int[] var3 = new int[var1];
         int var4_int = 0;

@@ -356,8 +356,8 @@ abstract class sf extends wl {
               if (null != var7.event.unit &&
                 var7.event.unit.field_x != null &&
                 !var7.fullCombatScene) {
-                var8Lifetime1 = var7.event.unit.field_x.field_e[0];
-                var9Lifetime1 = var7.event.unit.field_x.field_e[1];
+                var8Lifetime1 = var7.event.unit.field_x.screenPosition[0];
+                var9Lifetime1 = var7.event.unit.field_x.screenPosition[1];
                 var10 = var7.event.unit.ownerPlayer;
                 stackIn_43_0 = TeamRoster.field_g;
                 stackIn_43_1 = -30 + var8Lifetime1;

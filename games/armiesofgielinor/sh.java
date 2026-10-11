@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sh {
-    private vj field_n;
+    private AnimationPlayer field_n;
     private int field_c;
     private boolean field_q;
     static boolean field_h;
@@ -27,13 +27,13 @@ final class sh {
         wp var3Lifetime1;
         int var2Lifetime1;
         if (param0 >= 20) {
-          var2 = this.field_n.field_i >> 16;
+          var2 = this.field_n.frameId >> 16;
           var3 = we.a(var2, true);
           io.a(var3, (byte) -34);
           return;
         }
         field_m = (je) null;
-        var2Lifetime1 = this.field_n.field_i >> 16;
+        var2Lifetime1 = this.field_n.frameId >> 16;
         var3Lifetime1 = we.a(var2Lifetime1, true);
         io.a(var3Lifetime1, (byte) -34);
     }
@@ -43,24 +43,24 @@ final class sh {
         if (!this.field_b) {
           return;
         }
-        var2 = this.field_n.a(-105) ? 1 : 0;
+        var2 = this.field_n.advance(-105) ? 1 : 0;
         if (param0 != -19812) {
           this.field_p = -51;
         }
         if (var2 != 0) {
           this.a((byte) -125, this.field_k);
         }
-        if (!this.field_n.field_c) {
+        if (!this.field_n.frameChanged) {
           return;
         }
         if (3 == this.field_o &&
-          this.field_n.field_m == je.field_K[this.field_c][0]) {
+          this.field_n.frameIndex == je.field_K[this.field_c][0]) {
           dh.a(this.field_c, 4, 32);
         }
         if (this.field_o != 4) {
           return;
         }
-        if (this.field_n.field_m != je.field_K[this.field_c][1]) {
+        if (this.field_n.frameIndex != je.field_K[this.field_c][1]) {
           return;
         }
         dh.a(this.field_c, 7, 32);
@@ -78,11 +78,11 @@ final class sh {
 
     final void a(int param0, int param1) {
         this.field_c = param1;
-        if (ActionRequest.field_k[this.field_c] == null) {
+        if (ActionRequest.unitModels[this.field_c] == null) {
           this.field_c = 24;
         }
-        this.field_e = (ModelMesh) (ActionRequest.field_k[this.field_c][param0]);
-        this.field_q = nh.field_D[this.field_c];
+        this.field_e = (ModelMesh) (ActionRequest.unitModels[this.field_c][param0]);
+        this.field_q = nh.unitProjectionVariants[this.field_c];
     }
 
     final void e(byte param0) {
@@ -136,7 +136,7 @@ final class sh {
           var11 = (!this.field_q ? 300 : 400) - this.field_f * 2;
           var12 = -400;
           if (this.field_b) {
-            var22_ref = (ModelMesh) (this.field_n.a(var2 != 0, true, var3 != 0, this.field_e));
+            var22_ref = (ModelMesh) (this.field_n.applyCurrentFrame(var2 != 0, true, var3 != 0, this.field_e));
             var23 = var22_ref;
             var22_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
             tm.a();
@@ -165,7 +165,7 @@ final class sh {
         var11Lifetime1 = (!this.field_q ? 300 : 400) - this.field_f * 2;
         var12Lifetime1 = -400;
         if (this.field_b) {
-          var18_ref = (ModelMesh) (this.field_n.a(var2Lifetime1 != 0, true, var3Lifetime1 != 0, this.field_e));
+          var18_ref = (ModelMesh) (this.field_n.applyCurrentFrame(var2Lifetime1 != 0, true, var3Lifetime1 != 0, this.field_e));
           var19 = var18_ref;
           var18_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
           tm.a();
@@ -183,7 +183,7 @@ final class sh {
 
     private final void a(byte param0, int param1) {
         int var3;
-        qb var4;
+        AnimationSequence var4;
         int var5;
         int var6;
         int var7;
@@ -195,7 +195,7 @@ final class sh {
         var3 = sf.field_P[this.field_c];
         var4 = ck.field_e[var3][this.field_k];
         var5 = 81 % ((param0 + 53) / 59);
-        this.field_n.a(-1, var4);
+        this.field_n.selectSequence(-1, var4);
         this.a((byte) 122);
         var6 = this.field_o;
         if (var6 == 1) {
@@ -279,7 +279,7 @@ final class sh {
     }
 
     sh() {
-        this.field_n = new vj(1);
+        this.field_n = new AnimationPlayer(1);
         this.a(0, 0);
         this.a(-28);
         this.a(0, 0, (byte) 115);

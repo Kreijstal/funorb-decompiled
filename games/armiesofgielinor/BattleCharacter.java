@@ -19,7 +19,7 @@ final class BattleCharacter {
     boolean field_d;
     boolean field_H;
     private int[] field_F;
-    private vj field_x;
+    private AnimationPlayer field_x;
     static RgbSprite[] field_h;
     private boolean field_B;
     private int[] field_r;
@@ -181,7 +181,7 @@ final class BattleCharacter {
           }
         }
         this.a(var6Lifetime1, 0);
-        var7 = this.field_x.a(param0 ^ -13) ? 1 : 0;
+        var7 = this.field_x.advance(param0 ^ -13) ? 1 : 0;
         if (1 != this.animationState) {
         }
         if (this.field_J == je.field_K[this.modelIndex][1] &&
@@ -364,7 +364,7 @@ final class BattleCharacter {
     }
 
     private final void d(int param0) {
-        this.field_x.a(-1, pg.a(this.field_y, 176, true, this.modelIndex));
+        this.field_x.selectSequence(-1, pg.a(this.field_y, 176, true, this.modelIndex));
         this.a(-313055120);
         if (param0 > -77) {
           this.a(-77, 60);
@@ -497,7 +497,7 @@ final class BattleCharacter {
         if (null == this.model) {
           return;
         }
-        var13 = (ModelMesh) (this.field_x.a(false, true, false, this.model));
+        var13 = (ModelMesh) (this.field_x.applyCurrentFrame(false, true, false, this.model));
         if (this.modelIndex == 75) {
           var13.b(250, 250, 250);
         }
@@ -625,7 +625,7 @@ final class BattleCharacter {
     private final void a(byte param0) {
         int stackIn_57_0 = 0;
         int var2;
-        vj var3;
+        AnimationPlayer var3;
         int var4;
         int var5;
         int var6;
@@ -674,18 +674,18 @@ final class BattleCharacter {
                         if (null != ck.field_e[sf.field_P[this.modelIndex]] &&
                           BestScoreStrategy.field_j[this.modelIndex][this.field_y][0] >= 0 &&
                           BestScoreStrategy.field_j[this.modelIndex][this.field_y][0] < ck.field_e[sf.field_P[this.modelIndex]].length) {
-                          var3 = new vj();
+                          var3 = new AnimationPlayer();
                           this.a(-313055120);
-                          var3.a(-1, ck.field_e[sf.field_P[this.modelIndex]][BestScoreStrategy.field_j[this.modelIndex][this.field_y][0]]);
+                          var3.selectSequence(-1, ck.field_e[sf.field_P[this.modelIndex]][BestScoreStrategy.field_j[this.modelIndex][this.field_y][0]]);
                           var4 = 0;
                           var5 = 0;
                           var6 = 10000;
                           var7 = 0;
                           while (true) {
-                            stackIn_57_0 = (!var3.a(-111)) ? 0 : 1;
+                            stackIn_57_0 = (!var3.advance(-111)) ? 0 : 1;
                             var5Lifetime1 = stackIn_57_0;
                             var7++;
-                            if (var3.field_c) {
+                            if (var3.frameChanged) {
                               var4++;
                             }
                             if (var6 <= var7) {
@@ -693,10 +693,10 @@ final class BattleCharacter {
                               return;
                             }
                             if (var5Lifetime1 == 0) {
-                              if (!var3.field_c) {
+                              if (!var3.frameChanged) {
                                 continue;
                               }
-                              if (0 != var3.field_m) {
+                              if (0 != var3.frameIndex) {
                                 continue;
                               }
                             }
@@ -738,7 +738,7 @@ final class BattleCharacter {
     }
 
     private final void a(int param0) {
-        int var2 = this.field_x.field_i >> 16;
+        int var2 = this.field_x.frameId >> 16;
         wp var3 = we.a(var2, true);
         io.a(var3, (byte) -34);
         if (param0 != -313055120) {
@@ -810,7 +810,7 @@ final class BattleCharacter {
         this.animationDelay = 0;
         this.animationFrame = -1;
         this.field_w = -1;
-        this.field_x = new vj(1);
+        this.field_x = new AnimationPlayer(1);
         this.unitType = param0;
         this.modelIndex = param0;
         if (param0 == 43) {
@@ -830,12 +830,12 @@ final class BattleCharacter {
             this.modelIndex = 89;
           }
         }
-        var7 = AttackEvent.a(false, ActionRequest.field_k[this.modelIndex].length, li.field_n);
-        this.model = (ModelMesh) (ActionRequest.field_k[this.modelIndex][var7]);
+        var7 = AttackEvent.a(false, ActionRequest.unitModels[this.modelIndex].length, li.field_n);
+        this.model = (ModelMesh) (ActionRequest.unitModels[this.modelIndex][var7]);
         if (null == this.model) {
           af.a((Throwable) null, 100, "BattleCharacter: no model found - model_index: " + this.modelIndex + " variation: " + var7);
         }
-        this.field_n = nh.field_D[this.modelIndex];
+        this.field_n = nh.unitProjectionVariants[this.modelIndex];
         this.destinationX = param2 + param5;
         this.field_z = new int[lb.field_a];
         this.field_k = new int[lb.field_a];

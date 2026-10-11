@@ -6,7 +6,7 @@ final class pv {
     static String field_d;
     static boolean field_c;
     static RgbSprite field_e;
-    static qb[][] field_a;
+    static AnimationSequence[][] field_a;
 
     final static char a(int param0, char param1) {
         int var2;
@@ -301,17 +301,17 @@ final class pv {
         field_e = null;
         if (param0 == 213) {
           field_d = null;
-          field_a = (qb[][]) null;
+          field_a = (AnimationSequence[][]) null;
           return;
         }
         field_d = (String) null;
         field_d = null;
-        field_a = (qb[][]) null;
+        field_a = (AnimationSequence[][]) null;
     }
 
     static {
         field_d = "Back to Map";
         field_e = new RgbSprite(64, 64);
-        field_a = new qb[6][];
+        field_a = new AnimationSequence[6][];
     }
 }

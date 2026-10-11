@@ -138,7 +138,7 @@ abstract class wf extends iv {
         if (param0 <= 119) {
           return;
         }
-        String var2 = hr.b((byte) 61);
+        String var2 = UnitModelPreview.b((byte) 61);
         dj.a(CombatEvent.d((byte) 47), 0, var2);
     }
 

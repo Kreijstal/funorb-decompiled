@@ -210,7 +210,7 @@ final class kd extends tj implements nq, he, mf {
         String var2 = fo.a(4800, StateChangeEvent.field_D, new String[]{this.m(150), this.l(29406)});
         int var3 = 20;
         var3 = var3 + this.a(tn.field_X, var3, 170, (byte) 18, this.field_I);
-        var3 = var3 + (this.a(false, 170, this.field_H, hh.field_j, 20, "", var3) + 5);
+        var3 = var3 + (this.a(false, 170, this.field_H, TrianglePulse.field_j, 20, "", var3) + 5);
         var3 = var3 + this.a(jj.field_h, var3, 170, (byte) 18, this.field_V);
         var3 = var3 + (this.a(TurnEffectEvent.field_B, this.field_K, 170, tf.field_m, 210, var3) + 5);
         var3 = var3 + (5 + this.a(dn.field_Ob, this.field_O, 170, fq.field_k, 210, var3));

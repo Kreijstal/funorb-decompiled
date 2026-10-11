@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hh {
+final class TrianglePulse {
     static String field_a;
-    private em field_k;
-    private int field_h;
-    int field_b;
+    private TickCounter counter;
+    private int minimum;
+    int maximum;
     static RgbSprite field_d;
     static String field_j;
     static nc field_i;
     static int field_c;
     static int[] statusProtectionMasks;
-    private int field_g;
+    private int value;
     static RgbSprite field_f;
 
     public static void b(int param0) {
@@ -33,30 +33,30 @@ final class hh {
         }
     }
 
-    final void b(byte param0) {
-        if (param0 != -66) {
+    final void advance(byte obfuscationGuard) {
+        if (obfuscationGuard != -66) {
           return;
         }
-        if (this.field_k == null) {
-          this.field_g = 127;
+        if (this.counter == null) {
+          this.value = 127;
           return;
         }
-        if (this.field_k.c(param0 ^ 65)) {
-          this.field_k.b(17);
+        if (this.counter.advanceAndCheck(obfuscationGuard ^ 65)) {
+          this.counter.reset(17);
         }
-        int var2 = this.field_k.field_a;
-        int var3 = this.field_k.field_f;
-        var3 = var3 >> 1;
-        int var4 = var2 <= var3 ? 1 : 0;
-        var2 = var4 != 0 ? var2 : -var3 + var2;
-        int var5 = var4 == 0 ? this.field_b : this.field_h;
-        int var6 = var4 == 0 ? this.field_h : this.field_b;
-        this.field_g = var5 + var2 * (-var5 + var6) / var3;
-        if (this.field_g < this.field_h) {
-          this.field_g = this.field_h;
+        int halfPhase = this.counter.elapsedTicks;
+        int halfPeriod = this.counter.limit;
+        halfPeriod = halfPeriod >> 1;
+        int risingHalf = halfPhase <= halfPeriod ? 1 : 0;
+        halfPhase = risingHalf != 0 ? halfPhase : -halfPeriod + halfPhase;
+        int phaseStart = risingHalf == 0 ? this.maximum : this.minimum;
+        int phaseEnd = risingHalf == 0 ? this.minimum : this.maximum;
+        this.value = phaseStart + halfPhase * (-phaseStart + phaseEnd) / halfPeriod;
+        if (this.value < this.minimum) {
+          this.value = this.minimum;
         }
-        if (this.field_b < this.field_g) {
-          this.field_g = this.field_b;
+        if (this.maximum < this.value) {
+          this.value = this.maximum;
         }
     }
 
@@ -71,26 +71,26 @@ final class hh {
         }
     }
 
-    private final void a(int param0, byte param1, int param2, int param3) {
-        if (param3 < 0) {
-          param3 = 100;
+    private final void configure(int minimum, byte obfuscationGuard, int maximum, int period) {
+        if (period < 0) {
+          period = 100;
         }
-        if (param0 < 0 ||
-          param0 > 255) {
-          param0 = 32;
+        if (minimum < 0 ||
+          minimum > 255) {
+          minimum = 32;
         }
-        this.field_k = new em(param3);
-        if (param1 < 117) {
+        this.counter = new TickCounter(period);
+        if (obfuscationGuard < 117) {
           return;
         }
-        this.field_h = param0;
-        if (param2 < 0 ||
-          param2 > 255 ||
-          param2 < param0) {
-          param2 = 224;
+        this.minimum = minimum;
+        if (maximum < 0 ||
+          maximum > 255 ||
+          maximum < minimum) {
+          maximum = 224;
         }
-        this.field_b = param2;
-        this.field_g = this.field_b + this.field_h >> 1;
+        this.maximum = maximum;
+        this.value = this.maximum + this.minimum >> 1;
     }
 
     final static String a(CharSequence[] param0, int param1, int param2, int param3) {
@@ -270,26 +270,26 @@ final class hh {
         }
     }
 
-    final boolean a(int param0) {
-        if (param0 > -121) {
-          this.c(103);
+    final boolean isRisingHalf(int obfuscationGuard) {
+        if (obfuscationGuard > -121) {
+          this.getValue(103);
         }
-        return this.field_k.field_a <= this.field_k.field_f >> 1 ? true : false;
+        return this.counter.elapsedTicks <= this.counter.limit >> 1 ? true : false;
     }
 
-    final int c(int param0) {
-        if (param0 != -1953891327) {
+    final int getValue(int obfuscationGuard) {
+        if (obfuscationGuard != -1953891327) {
           return 4;
         }
-        if (this.field_g >= 0 &&
-          this.field_g <= 255) {
-          return this.field_g;
+        if (this.value >= 0 &&
+          this.value <= 255) {
+          return this.value;
         }
         return 127;
     }
 
-    hh(int param0, int param1, int param2) {
-        this.a(param0, (byte) 127, param1, param2);
+    TrianglePulse(int minimum, int maximum, int period) {
+        this.configure(minimum, (byte) 127, maximum, period);
     }
 
     static {

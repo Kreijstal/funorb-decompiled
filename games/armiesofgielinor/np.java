@@ -74,7 +74,7 @@ final class np extends je {
         if (param0 <= 63) {
           field_Jb = (String) null;
         }
-        hh.a((byte) 126);
+        TrianglePulse.a((byte) 126);
     }
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {

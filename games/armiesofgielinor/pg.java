@@ -18,7 +18,7 @@ final class pg {
         return (param0 & -param0) == param0 ? true : false;
     }
 
-    final static qb a(int param0, int param1, boolean param2, int param3) {
+    final static AnimationSequence a(int param0, int param1, boolean param2, int param3) {
         int var7 = 0;
         int var8 = 0;
         int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -35,7 +35,7 @@ final class pg {
           return ck.field_e[sf.field_P[param3]][var5];
         }
         if (param1 != 176) {
-          return (qb) null;
+          return (AnimationSequence) null;
         }
         int[] var14 = var4;
         for (var7 = 0; var7 < var14.length; var7++) {

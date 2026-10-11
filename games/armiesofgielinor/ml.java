@@ -215,7 +215,7 @@ final class ml extends je {
             return;
           }
           while (var7 < op.field_c[0].length) {
-            ActionRequest.field_k[76][var7] = WeightedScoreStrategy.b(op.field_c[0][var7], -20849);
+            ActionRequest.unitModels[76][var7] = WeightedScoreStrategy.b(op.field_c[0][var7], -20849);
             bp.a(var7, op.field_c[0][var7], param1 - 100);
             var7++;
           }

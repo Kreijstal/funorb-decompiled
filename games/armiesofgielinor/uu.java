@@ -73,7 +73,7 @@ final class uu {
           if (param3 != 0) {
             uu.a((byte) -86);
           }
-          qb.a(InstructionsPanel.field_D, 125);
+          AnimationSequence.a(InstructionsPanel.field_D, 125);
           if (vu.field_M != null) {
             boolean decompiledFrameRemainder1 = true;
             mp.field_Lb.field_xb = true;
@@ -100,7 +100,7 @@ final class uu {
               var9 = (2 + pd.field_c.field_gb) / 2;
               lm.field_b.a(40, -20500, var9 - 2, -40 + pd.field_c.field_ob, 0);
               if (vu.field_M.field_nc > vu.field_M.field_Ub) {
-                lm.field_b.field_X = em.field_d.toUpperCase();
+                lm.field_b.field_X = TickCounter.field_d.toUpperCase();
                 lm.field_b.field_xb = true;
                 if (var19 != 0) {
                   lm.field_b.field_X = TelefragEvent.field_y.toUpperCase();
@@ -111,14 +111,14 @@ final class uu {
                 lm.field_b.field_xb = false;
               }
               lm.field_b.field_G = nd.field_a.field_G;
-              if (0 < vj.field_a) {
-                boolean decompiledSharedTail0 = (1 != vj.field_a);
+              if (0 < AnimationPlayer.field_a) {
+                boolean decompiledSharedTail0 = (1 != AnimationPlayer.field_a);
                 if (!decompiledSharedTail0) {
                   var10_ref_String = vf.field_c;
                   decompiledSharedTail0 = (var19 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  var10_ref_String = fo.a(4800, UnitSpell.field_h, new String[]{Integer.toString(vj.field_a)});
+                  var10_ref_String = fo.a(4800, UnitSpell.field_h, new String[]{Integer.toString(AnimationPlayer.field_a)});
                 }
                 if (0 == (16 & hg.field_b) &&
                   !vk.field_f) {

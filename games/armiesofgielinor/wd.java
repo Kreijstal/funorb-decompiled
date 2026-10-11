@@ -59,7 +59,7 @@ final class wd {
             }
             IntrusiveNode.a(78, param5, param3, param4 + 19, var6_int, param1 + 39);
             cw.a(var6_int, param4 + 19, 39 + param1, -125, param5, param3);
-            em.a(var9, param0, param3, param4, var6_int, param2 ^ -128, param5, param1, var8);
+            TickCounter.a(var9, param0, param3, param4, var6_int, param2 ^ -128, param5, param1, var8);
             var10 = var7.metadata;
             if (null != var10 &&
               (var10.modifierFlags & 1) != 0 &&
