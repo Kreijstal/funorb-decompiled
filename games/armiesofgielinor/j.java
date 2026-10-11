@@ -66,7 +66,7 @@ final class j {
           DisplacedUnitMarker.field_t[5] = pq.field_d;
           DisplacedUnitMarker.field_t[25] = ig.field_m;
           DisplacedUnitMarker.field_t[22] = hq.field_d;
-          DisplacedUnitMarker.field_t[16] = rk.field_y;
+          DisplacedUnitMarker.field_t[16] = InstructionsPanel.field_y;
           DisplacedUnitMarker.field_t[28] = wf.field_s;
           DisplacedUnitMarker.field_t[19] = s.field_b;
           DisplacedUnitMarker.field_t[21] = dv.field_r;
@@ -77,7 +77,7 @@ final class j {
           DisplacedUnitMarker.field_t[27] = bg.field_b;
           DisplacedUnitMarker.field_t[30] = pf.field_e;
           DisplacedUnitMarker.field_t[20] = tl.field_h;
-          DisplacedUnitMarker.field_t[18] = rk.field_c;
+          DisplacedUnitMarker.field_t[18] = InstructionsPanel.field_c;
           DisplacedUnitMarker.field_t[14] = qu.field_s[0];
           DisplacedUnitMarker.field_t[15] = qu.field_s[1];
           for (var1_int = 55; 59 > var1_int; var1_int++) {

@@ -111,7 +111,7 @@ final class ck {
           return;
         }
         dt.a(wq.field_a, 23678);
-        wq.field_a.a(-30918, ft.field_m);
+        wq.field_a.a(-30918, IntPair.field_m);
         wq.field_a = null;
         if (null != ActionSpell.field_e) {
           ActionSpell.field_e.b(124);

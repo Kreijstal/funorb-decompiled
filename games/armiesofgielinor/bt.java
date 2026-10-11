@@ -33,26 +33,26 @@ final class bt {
     }
 
     final static void a(int param0) {
-        MoveEvent.field_E = new dm();
-        MoveEvent.field_E.i(1);
-        ft var1 = MoveEvent.field_E.b((byte) -72);
+        MoveEvent.matchSetupPanel = new MatchSetupPanel();
+        MoveEvent.matchSetupPanel.initializePanel(1);
+        IntPair var1 = MoveEvent.matchSetupPanel.getPanelStart((byte) -72);
         if (var1 == null) {
           return;
         }
-        ft var2 = MoveEvent.field_E.h((byte) 94);
+        IntPair var2 = MoveEvent.matchSetupPanel.getPanelEnd((byte) 94);
         if (var2 == null) {
           return;
         }
         int var3 = 9 % ((param0 + 41) / 55);
-        int var4 = MoveEvent.field_E.h(-10754);
+        int var4 = MoveEvent.matchSetupPanel.getPreviewRowHeight(-10754);
         if (var4 < 0) {
           return;
         }
-        if (null == MoveEvent.field_E.field_N) {
+        if (null == MoveEvent.matchSetupPanel.itemIds) {
           return;
         }
-        if (MoveEvent.field_E.field_N.length != 0) {
-          gb.configureTutorialStage(var4, 5, var1.field_k, var2.field_k, var1.field_n, var2.field_n, MoveEvent.field_E.field_N, -52);
+        if (MoveEvent.matchSetupPanel.itemIds.length != 0) {
+          gb.configureTutorialStage(var4, 5, var1.first, var2.first, var1.second, var2.second, MoveEvent.matchSetupPanel.itemIds, -52);
           return;
         }
     }

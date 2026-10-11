@@ -59,8 +59,8 @@ final class SpellCastEvent extends GameEvent {
           if (param0 != 15) {
             field_E = (ea) null;
           }
-          rk.field_r = -(ms.field_r >> 1) + lm.field_g;
-          var2 = rk.field_r;
+          InstructionsPanel.field_r = -(ms.field_r >> 1) + lm.field_g;
+          var2 = InstructionsPanel.field_r;
           for (var3 = 0; nb.field_h.length > var3; var3++) {
             var4 = cj.field_k[var3];
             if (var4 >= 0) {

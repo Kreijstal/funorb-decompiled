@@ -268,7 +268,7 @@ final class df extends tj implements fb, he {
             if (this.field_R != param4) {
               if (param4 == this.field_N) {
                 if (this.field_P) {
-                  ft.e(17);
+                  IntPair.e(17);
                 } else {
                   if (!this.field_F) {
                     me.a(param1 ^ 26573);

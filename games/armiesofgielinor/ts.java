@@ -10,7 +10,7 @@ final class ts {
     int field_n;
     int[] field_i;
     static long field_h;
-    static rg field_j;
+    static SpellMenuGroup currentSpellMenu;
     static String field_f;
     int field_c;
     static boolean field_l;
@@ -87,7 +87,7 @@ final class ts {
           td.field_f.b(0);
           return;
         }
-        field_j = (rg) null;
+        currentSpellMenu = (SpellMenuGroup) null;
         td.field_f.a(0, 0);
         td.field_f.b(0);
     }
@@ -239,7 +239,7 @@ final class ts {
 
     public static void b(int param0) {
         field_e = null;
-        field_j = null;
+        currentSpellMenu = null;
         field_k = null;
         if (param0 == -26908) {
           field_a = null;

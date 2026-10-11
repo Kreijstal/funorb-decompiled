@@ -279,7 +279,7 @@ final class tn extends sf implements he {
           CipherPacketBuffer var4 = (CipherPacketBuffer) null;
           tn.readTaggedInteger(false, 58, (CipherPacketBuffer) null);
         }
-        return ft.a(param1, (byte) -114, param2, 1);
+        return IntPair.a(param1, (byte) -114, param2, 1);
     }
 
     static {

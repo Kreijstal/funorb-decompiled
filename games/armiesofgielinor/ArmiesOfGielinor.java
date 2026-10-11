@@ -766,7 +766,7 @@ public final class ArmiesOfGielinor extends wf {
                 if (-2 != jt.field_a) {
                   if (jt.field_a != -6) {
                     if (-7 == jt.field_a) {
-                      dm.c((byte) 61);
+                      MatchSetupPanel.c((byte) 61);
                       decompiledFrameRemainder2 = (var8 != 0);
                     }
                     if ((decompiledFrameRemainder2) &&
@@ -1243,12 +1243,12 @@ public final class ArmiesOfGielinor extends wf {
           db.a(-3);
           pr.a(param0 + 7814);
           tm.b();
-          dm.g(256);
-          rk.q(-114);
+          MatchSetupPanel.g(256);
+          InstructionsPanel.q(-114);
           la.b((byte) -111);
           sg.a((byte) 93);
-          ft.a(-10);
-          rg.a(-84);
+          IntPair.a(-10);
+          SpellMenuGroup.a(-84);
           TutorialLayout.a(param0 ^ -4368117);
           oo.b(-8616);
           UiSelectionState.c((byte) 110);
@@ -1624,7 +1624,7 @@ public final class ArmiesOfGielinor extends wf {
           var5 = 0;
           do {
             if (!(CorpseConditionMarker.field_u.field_a.length > var5)) {
-              lk.a(ft.field_m, 22050, var4, (byte) 68, true, (java.awt.Component) ((Object) si.field_b));
+              lk.a(IntPair.field_m, 22050, var4, (byte) 68, true, (java.awt.Component) ((Object) si.field_b));
               kb.field_o = new int[7];
               break;
             }
@@ -2202,7 +2202,7 @@ public final class ArmiesOfGielinor extends wf {
           ig.field_t = pv.a("basic", "turn", iw.field_l, 24914);
           AttackEvent.field_y = fk.a("mapsquares", (byte) -127, iw.field_l, "basic");
           SkeletonLimitMarker.field_s = fk.a("isomapsquares", (byte) -127, iw.field_l, "basic");
-          rg.field_h = fk.a("maprotbutton", (byte) -128, iw.field_l, "basic");
+          SpellMenuGroup.field_h = fk.a("maprotbutton", (byte) -128, iw.field_l, "basic");
           TeleportAction.field_w = fk.a("placeicons", (byte) -124, iw.field_l, "basic");
           mp.field_Jb = nh.a("slider", "basic", iw.field_l, false);
           MoveEvent.field_z = GameplayController.a("bcarrow", (byte) 51, "basic", iw.field_l);
@@ -2324,7 +2324,7 @@ public final class ArmiesOfGielinor extends wf {
           do {
             if (var17 >= 64) {
               if (hi.field_j >= 2) {
-                oa.field_I = new ij(hg.a(101), rs.field_n, ft.field_m);
+                oa.field_I = new ij(hg.a(101), rs.field_n, IntPair.field_m);
               }
               break;
             }
@@ -2352,7 +2352,7 @@ public final class ArmiesOfGielinor extends wf {
         RuntimeException decompiledCaughtException = null;
         var3 = obfuscationControl ? 1 : 0;
         try {
-          ul.a(17);
+          ul.buildSpellMenu(17);
           StateChangeEvent.g(1);
           var2_int = 0;
           while (var2_int < 29) {

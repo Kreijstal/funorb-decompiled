@@ -214,7 +214,7 @@ abstract class dv implements ap {
           if ((~rd.field_j.battlefield.eliminatedPlayerMask & rd.field_j.battlefield.field_C) == 0) {
             DisplacedUnitMarker.field_t[10] = uu.field_c;
           } else {
-            DisplacedUnitMarker.field_t[10] = dm.field_O;
+            DisplacedUnitMarker.field_t[10] = MatchSetupPanel.field_O;
           }
         }
         if (!param0) {

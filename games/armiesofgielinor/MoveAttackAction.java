@@ -59,17 +59,17 @@ final class MoveAttackAction extends PreparedAction {
             for (var9 = 0; var9 < var8; var9++) {
               cj.field_k[var9] = -1;
             }
-            rg.field_m = new int[2];
+            SpellMenuGroup.field_m = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
               nb.field_h[var9] = fs.field_c[var9];
             }
             nb.field_h[var8 - 3] = "";
             nb.field_h[-2 + var8] = var6;
             cj.field_k[-2 + var8] = 0;
-            rg.field_m[0] = 1;
+            SpellMenuGroup.field_m[0] = 1;
             nb.field_h[var8 - 1] = pd.field_f;
             cj.field_k[var8 - 1] = 1;
-            rg.field_m[1] = 2;
+            SpellMenuGroup.field_m[1] = 2;
           } else {
             if (ui.field_f != 1) {
               throw new IllegalArgumentException();
@@ -81,16 +81,16 @@ final class MoveAttackAction extends PreparedAction {
             for (var9 = 0; var9 < var8; var9++) {
               cj.field_k[var9] = -1;
             }
-            rg.field_m = new int[1];
+            SpellMenuGroup.field_m = new int[1];
             for (var9 = 0; var7 > var9; var9++) {
               nb.field_h[var9] = fs.field_c[var9];
             }
             nb.field_h[var8 - 2] = "";
             nb.field_h[var8 - 1] = pd.field_f;
             cj.field_k[var8 - 1] = 0;
-            rg.field_m[0] = 2;
+            SpellMenuGroup.field_m[0] = 2;
           }
-          MovementPlanner.field_z.itemCount = rg.field_m.length;
+          MovementPlanner.field_z.itemCount = SpellMenuGroup.field_m.length;
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; var8Lifetime1 < nb.field_h.length; var8Lifetime1++) {
             stackIn_25_0 = nb.field_h[var8Lifetime1];
@@ -121,7 +121,7 @@ final class MoveAttackAction extends PreparedAction {
           if (param3 != 90) {
             field_x = (int[]) null;
           }
-          rk.field_r = -(ms.field_r >> 1) + lm.field_g;
+          InstructionsPanel.field_r = -(ms.field_r >> 1) + lm.field_g;
           MovementPlanner.field_z.restoreSelection(0, param2, vo.a((byte) -73, ko.field_b, AiPlanningStrategy.field_d), 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

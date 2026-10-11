@@ -250,7 +250,7 @@ final class fj {
           this.field_e = bn.field_b;
           this.field_k.a(this.field_n, param0 ^ 32262, this.field_f);
           tq.field_a = false;
-          var2 = dj.a(this.field_f, 0, ft.field_m, -71, 0, this.field_n);
+          var2 = dj.a(this.field_f, 0, IntPair.field_m, -71, 0, this.field_n);
           if (var2 == null) {
             this.b(124);
             return var2;
@@ -260,7 +260,7 @@ final class fj {
         this.field_e = bn.field_b;
         this.field_k.a(this.field_n, param0 ^ 32262, this.field_f);
         tq.field_a = false;
-        var2Lifetime1 = dj.a(this.field_f, 0, ft.field_m, -71, 0, this.field_n);
+        var2Lifetime1 = dj.a(this.field_f, 0, IntPair.field_m, -71, 0, this.field_n);
         if (var2Lifetime1 != null) {
           return var2Lifetime1;
         }

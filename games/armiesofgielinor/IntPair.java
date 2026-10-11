@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ft extends IntrusiveNode {
-    int field_k;
+final class IntPair extends IntrusiveNode {
+    int first;
     static String field_l;
     static String field_o;
     static String field_p;
-    int field_n;
+    int second;
     static wp field_q;
     static hd field_m;
 
     public static void a(int param0) {
         if (param0 != -10) {
-          ft.e(-3);
+          IntPair.e(-3);
         }
         field_m = null;
         field_q = null;
@@ -28,7 +28,7 @@ final class ft extends IntrusiveNode {
         var7[0] = hl.a(false, param2, param3);
         int var5 = 1;
         if (param1 > -8) {
-          ft.e(-23);
+          IntPair.e(-23);
         }
         while (var5 < 9) {
           var4[var5] = var4[0];
@@ -42,9 +42,9 @@ final class ft extends IntrusiveNode {
         gl.a(120, param0);
     }
 
-    ft(int param0, int param1) {
-        this.field_n = param1;
-        this.field_k = param0;
+    IntPair(int first, int second) {
+        this.second = second;
+        this.first = first;
     }
 
     static {

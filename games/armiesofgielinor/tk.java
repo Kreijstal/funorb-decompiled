@@ -33,12 +33,12 @@ final class tk implements kh {
             }
             var6 = null;
             if (null != vq.field_c.field_r) {
-              rg.field_b = new ue(vq.field_c.field_r, 5200, 0);
+              SpellMenuGroup.field_b = new ue(vq.field_c.field_r, 5200, 0);
               vq.field_c.field_r = null;
-              var6 = new bc(255, rg.field_b, new ue(vq.field_c.field_d, 12000, 0), 2097152);
+              var6 = new bc(255, SpellMenuGroup.field_b, new ue(vq.field_c.field_d, 12000, 0), 2097152);
             }
             var7 = null;
-            if (null != rg.field_b) {
+            if (null != SpellMenuGroup.field_b) {
               if (mu.field_b == null) {
                 mu.field_b = new ue[vq.field_c.field_c.length];
               }
@@ -46,7 +46,7 @@ final class tk implements kh {
                 mu.field_b[param0] = new ue(vq.field_c.field_c[param0], 12000, 0);
                 vq.field_c.field_c[param0] = null;
               }
-              var7 = new bc(param0, rg.field_b, mu.field_b[param0], 2097152);
+              var7 = new bc(param0, SpellMenuGroup.field_b, mu.field_b[param0], 2097152);
             }
             var8 = oi.field_c.a(param3, (bc) (var7), param0, 0, (bc) (var6));
             if (param4) {

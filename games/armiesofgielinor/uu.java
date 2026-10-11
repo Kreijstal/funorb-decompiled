@@ -73,7 +73,7 @@ final class uu {
           if (param3 != 0) {
             uu.a((byte) -86);
           }
-          qb.a(rk.field_D, 125);
+          qb.a(InstructionsPanel.field_D, 125);
           if (vu.field_M != null) {
             boolean decompiledFrameRemainder1 = true;
             mp.field_Lb.field_xb = true;

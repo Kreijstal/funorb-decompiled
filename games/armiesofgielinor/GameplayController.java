@@ -205,8 +205,8 @@ final class GameplayController {
             if (var7 != 0) {
               param0 += 58;
               SoftwareRaster.e(db.a(true, var10), MatchConditionEntry.a(113 + param0, (byte) 94), -var10 + var11, 12303155);
-              fe.b(rk.field_gb, db.a(true, param1 + 111), MatchConditionEntry.a(128 + param0, (byte) 94), true);
-              fe.c(rk.field_gb, db.a(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), nd.field_b, true);
+              fe.b(InstructionsPanel.field_gb, db.a(true, param1 + 111), MatchConditionEntry.a(128 + param0, (byte) 94), true);
+              fe.c(InstructionsPanel.field_gb, db.a(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), nd.field_b, true);
               var18 = var5.g(-1);
               lw.field_ob.g(db.a(true, 4 + (15 + var10)), MatchConditionEntry.a(param0 + 132, (byte) 94));
               var18.field_h.g(db.a(true, 4 + var10 + 15), MatchConditionEntry.a(128 + param0 + 4, (byte) 94));
@@ -2467,7 +2467,7 @@ final class GameplayController {
               if (!kt.field_l) {
                 var7Lifetime3 = this.battlefield.mapSizeSetting;
                 if (0 == var7Lifetime3) {
-                  if (rg.field_h[1].b(210, 100, AiPlanningStrategy.field_d, ko.field_b)) {
+                  if (SpellMenuGroup.field_h[1].b(210, 100, AiPlanningStrategy.field_d, ko.field_b)) {
                     stackIn_273_0 = 20;
                     return stackIn_273_0;
                   }
@@ -2478,7 +2478,7 @@ final class GameplayController {
                 } else {
                   if (1 == var7Lifetime3 &&
                     var13 == 0) {
-                    if (rg.field_h[1].b(215, 95, AiPlanningStrategy.field_d, ko.field_b)) {
+                    if (SpellMenuGroup.field_h[1].b(215, 95, AiPlanningStrategy.field_d, ko.field_b)) {
                       stackIn_281_0 = 20;
                       return stackIn_281_0;
                     }
@@ -2490,7 +2490,7 @@ final class GameplayController {
                   }
                   if (decompiledFrameRemainder4) {
                     if (var7Lifetime3 == 2) {
-                      if (rg.field_h[1].b(210, 105, AiPlanningStrategy.field_d, ko.field_b)) {
+                      if (SpellMenuGroup.field_h[1].b(210, 105, AiPlanningStrategy.field_d, ko.field_b)) {
                         stackIn_291_0 = 20;
                         return stackIn_291_0;
                       }
@@ -2500,7 +2500,7 @@ final class GameplayController {
                       }
                     } else {
                       if (3 == var7Lifetime3) {
-                        if (rg.field_h[1].b(200, 110, AiPlanningStrategy.field_d, ko.field_b)) {
+                        if (SpellMenuGroup.field_h[1].b(200, 110, AiPlanningStrategy.field_d, ko.field_b)) {
                           stackIn_297_0 = 20;
                           return stackIn_297_0;
                         }
@@ -2516,7 +2516,7 @@ final class GameplayController {
                 var7Lifetime3 = this.battlefield.mapSizeSetting;
                 if (var7Lifetime3 == 0 &&
                   var13 == 0) {
-                  if (rg.field_h[0].b(188, 138, AiPlanningStrategy.field_d, ko.field_b)) {
+                  if (SpellMenuGroup.field_h[0].b(188, 138, AiPlanningStrategy.field_d, ko.field_b)) {
                     stackIn_228_0 = 20;
                     return stackIn_228_0;
                   }
@@ -2529,7 +2529,7 @@ final class GameplayController {
                 if (decompiledFrameRemainder4) {
                   if (1 == var7Lifetime3 &&
                     var13 == 0) {
-                    if (rg.field_h[0].b(190, 128, AiPlanningStrategy.field_d, ko.field_b)) {
+                    if (SpellMenuGroup.field_h[0].b(190, 128, AiPlanningStrategy.field_d, ko.field_b)) {
                       stackIn_236_0 = 20;
                       return stackIn_236_0;
                     }
@@ -2542,7 +2542,7 @@ final class GameplayController {
                   if (decompiledFrameRemainder4) {
                     if (var7Lifetime3 == 2 &&
                       var13 == 0) {
-                      if (rg.field_h[0].b(188, 137, AiPlanningStrategy.field_d, ko.field_b)) {
+                      if (SpellMenuGroup.field_h[0].b(188, 137, AiPlanningStrategy.field_d, ko.field_b)) {
                         stackIn_242_0 = 20;
                         return stackIn_242_0;
                       }
@@ -2554,7 +2554,7 @@ final class GameplayController {
                     }
                     if ((decompiledFrameRemainder4) &&
                       (3 == var7Lifetime3)) {
-                      if (rg.field_h[0].b(188, 95, AiPlanningStrategy.field_d, ko.field_b)) {
+                      if (SpellMenuGroup.field_h[0].b(188, 95, AiPlanningStrategy.field_d, ko.field_b)) {
                         stackIn_250_0 = 20;
                         return stackIn_250_0;
                       }
@@ -6143,7 +6143,7 @@ final class GameplayController {
               this.field_q >= 0 &&
               ml.a(-95 + this.o(param0 ^ 6), 130, 22, false) &&
               0 != this.battlefield.field_Q) {
-              var2 = dm.field_x;
+              var2 = MatchSetupPanel.field_x;
             }
             boolean decompiledFrameRemainder13 = true;
             if (null == var2) {
@@ -9295,10 +9295,10 @@ final class GameplayController {
               var10 = 110;
             }
             var9 = var9 - (240 - this.field_H);
-            rg.field_h[1].g(var9, var10);
+            SpellMenuGroup.field_h[1].g(var9, var10);
             if (this.field_H == 240 &&
-              rg.field_h[1].b(var9, var10, AiPlanningStrategy.field_d, ko.field_b)) {
-              rg.field_h[1].f(var9, var10, 200);
+              SpellMenuGroup.field_h[1].b(var9, var10, AiPlanningStrategy.field_d, ko.field_b)) {
+              SpellMenuGroup.field_h[1].f(var9, var10, 200);
             }
             return;
           }
@@ -11650,10 +11650,10 @@ final class GameplayController {
                 break;
             }
             var13 = var13 - (480 - (this.field_H << 1));
-            rg.field_h[0].g(var13, var14);
+            SpellMenuGroup.field_h[0].g(var13, var14);
             if (240 == this.field_H &&
-              rg.field_h[0].b(var13, var14, AiPlanningStrategy.field_d, ko.field_b)) {
-              rg.field_h[0].f(var13, var14, 200);
+              SpellMenuGroup.field_h[0].b(var13, var14, AiPlanningStrategy.field_d, ko.field_b)) {
+              SpellMenuGroup.field_h[0].f(var13, var14, 200);
             }
             return;
           }

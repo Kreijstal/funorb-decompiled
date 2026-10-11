@@ -16,7 +16,7 @@ final class qh {
           if (param7 > ~PreparedAction.field_r) {
             j.a(1, param9, param0, param5);
           }
-          if (0 < rk.field_D) {
+          if (0 < InstructionsPanel.field_D) {
             uu.a(param0, param9, param5, param7 + 1, param8);
           }
           if (vk.field_f &&
@@ -43,7 +43,7 @@ final class qh {
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
-              if (0 < rk.field_D) {
+              if (0 < InstructionsPanel.field_D) {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
               if (vk.field_f &&
@@ -67,7 +67,7 @@ final class qh {
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
-              if (0 < rk.field_D) {
+              if (0 < InstructionsPanel.field_D) {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
               if (vk.field_f &&
@@ -104,7 +104,7 @@ final class qh {
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
-              if (0 < rk.field_D) {
+              if (0 < InstructionsPanel.field_D) {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
               if (vk.field_f &&
@@ -139,7 +139,7 @@ final class qh {
             if (param7 > ~PreparedAction.field_r) {
               j.a(1, param9, param0, param5);
             }
-            if (0 < rk.field_D) {
+            if (0 < InstructionsPanel.field_D) {
               uu.a(param0, param9, param5, param7 + 1, param8);
             }
             if (vk.field_f &&
@@ -162,7 +162,7 @@ final class qh {
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
-              if (0 < rk.field_D) {
+              if (0 < InstructionsPanel.field_D) {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
               if (vk.field_f &&
@@ -181,7 +181,7 @@ final class qh {
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
-              if (0 < rk.field_D) {
+              if (0 < InstructionsPanel.field_D) {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
               if (!vk.field_f) {

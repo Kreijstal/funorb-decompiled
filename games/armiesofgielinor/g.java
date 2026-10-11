@@ -84,8 +84,8 @@ final class g extends RuntimeException {
           gk.field_J = gk.field_J - 1;
         } else {
           if (PreparedAction.field_r <= 0) {
-            if (rk.field_D > 0) {
-              rk.field_D = rk.field_D - 1;
+            if (InstructionsPanel.field_D > 0) {
+              InstructionsPanel.field_D = InstructionsPanel.field_D - 1;
             }
           } else {
             PreparedAction.field_r = PreparedAction.field_r - 1;
@@ -100,8 +100,8 @@ final class g extends RuntimeException {
         if (param0 != -6145) {
           return;
         }
-        if (rk.field_D > 0) {
-          qb.a(rk.field_D, param0 + 6255);
+        if (InstructionsPanel.field_D > 0) {
+          qb.a(InstructionsPanel.field_D, param0 + 6255);
         }
     }
 

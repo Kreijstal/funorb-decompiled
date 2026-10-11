@@ -77,7 +77,7 @@ final class ba extends dr {
           var2 = 0;
           if (var1_int != 0 &&
             MovementPlanner.field_z.selectedIndex >= 0) {
-            var2 = rg.field_m[MovementPlanner.field_z.selectedIndex];
+            var2 = SpellMenuGroup.field_m[MovementPlanner.field_z.selectedIndex];
             if (var2 == 2) {
               CombatPresentation.n(-112);
             }

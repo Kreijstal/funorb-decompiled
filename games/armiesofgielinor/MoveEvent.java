@@ -3,12 +3,12 @@
  */
 final class MoveEvent extends GameEvent {
     static int[] field_F;
-    static dm field_E;
+    static MatchSetupPanel matchSetupPanel;
     static RgbSprite field_z;
     static int[][] tutorialStageItems;
     int[] pathDirections;
     static cv field_C;
-    static rk field_G;
+    static InstructionsPanel instructionsPanel;
     static TutorialLayout tutorialLayout;
     int startY;
     private boolean applied;
@@ -473,8 +473,8 @@ final class MoveEvent extends GameEvent {
         try {
           field_F = null;
           field_z = null;
-          field_E = null;
-          field_G = null;
+          matchSetupPanel = null;
+          instructionsPanel = null;
           if (param0 != 29333) {
             MoveEvent.g(-45);
           }

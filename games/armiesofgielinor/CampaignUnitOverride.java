@@ -989,7 +989,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rule_1_4");
                 if (var2 != null) {
-                  dm.field_d = uu.a(var2, (byte) 45);
+                  MatchSetupPanel.field_d = uu.a(var2, (byte) 45);
                 }
                 var2 = NodeIterator.a(50, "rule_pillar_2");
                 if (null != var2) {
@@ -1749,7 +1749,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "text_lobby_pleaselogin_free");
                 if (var2 != null) {
-                  rg.field_l = uu.a(var2, (byte) -116);
+                  SpellMenuGroup.field_l = uu.a(var2, (byte) -116);
                 }
                 var2 = NodeIterator.a(50, "opengl");
                 if (null != var2) {
@@ -1903,7 +1903,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "music_colon");
                 if (null != var2) {
-                  rk.field_c = uu.a(var2, (byte) -93);
+                  InstructionsPanel.field_c = uu.a(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(50, "fullscreen");
                 if (var2 != null) {
@@ -1939,7 +1939,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "quit");
                 if (null != var2) {
-                  rk.field_y = uu.a(var2, (byte) 96);
+                  InstructionsPanel.field_y = uu.a(var2, (byte) 96);
                 }
                 var2 = NodeIterator.a(50, "login_createaccount");
                 if (null != var2) {
@@ -2090,7 +2090,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "acceptdraw");
                 if (null != var2) {
-                  dm.field_O = uu.a(var2, (byte) 118);
+                  MatchSetupPanel.field_O = uu.a(var2, (byte) 118);
                 }
                 var2 = NodeIterator.a(param0 + 132, "resign");
                 if (null != var2) {

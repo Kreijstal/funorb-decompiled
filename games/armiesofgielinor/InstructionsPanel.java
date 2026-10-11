@@ -1,37 +1,37 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rk {
-    private ft field_F;
+final class InstructionsPanel {
+    private IntPair field_F;
     private boolean field_P;
     private String field_O;
-    private int field_p;
-    private int field_N;
+    private int pageCount;
+    private int pageIndex;
     static int field_D;
-    private ft field_b;
+    private IntPair navigationEnd;
     private int field_g;
-    private RgbSprite[] field_X;
+    private RgbSprite[] cachedPageSprites;
     private hh field_hb;
     private int field_cb;
     private int field_bb;
-    int[] field_w;
+    int[] itemIds;
     private int[] field_J;
     private vj field_ab;
     private boolean field_o;
     private em field_H;
     private boolean field_Q;
-    private ft field_n;
+    private IntPair footerEnd;
     private hr field_h;
     private int field_t;
-    private ft field_x;
+    private IntPair field_x;
     private String field_a;
     private boolean field_j;
     static int field_B;
     static int field_r;
     private hr field_fb;
     private hr field_S;
-    private ft field_K;
-    private Unit field_q;
+    private IntPair field_K;
+    private Unit secondPreviewUnit;
     private int field_m;
     static String field_gb;
     private String field_k;
@@ -42,18 +42,18 @@ final class rk {
     private int field_i;
     private int field_Y;
     private int field_T;
-    private int field_f;
+    private int cachedPageIndex;
     private int field_e;
-    private ft field_V;
+    private IntPair field_V;
     private hr field_v;
-    private Unit field_W;
-    private ft field_C;
+    private Unit auxiliaryPreviewUnit;
+    private IntPair field_C;
     private hr field_s;
-    private Unit field_d;
+    private Unit firstPreviewUnit;
     private int field_l;
     private boolean field_I;
-    private ft field_R;
-    private ft field_Z;
+    private IntPair navigationStart;
+    private IntPair footerStart;
     private int field_db;
     private hr field_M;
     private em field_L;
@@ -67,20 +67,20 @@ final class rk {
         boolean discarded$0 = false;
         int var4 = 0;
         int var4Lifetime1;
-        if (null == this.field_W) {
+        if (null == this.auxiliaryPreviewUnit) {
           var4 = 0;
           var5 = 1;
           var6 = 0;
-          this.field_W = this.b(var4, -1, var5, var6);
+          this.auxiliaryPreviewUnit = this.createPreviewUnit(var4, -1, var5, var6);
         }
-        if (null == this.field_W) {
+        if (null == this.auxiliaryPreviewUnit) {
           return;
         }
         var4Lifetime1 = 76;
         if (param1 < 90) {
           discarded$0 = this.c(60, 20);
         }
-        hs.a(false, true, this.field_W, 0, db.a(true, param2), 0, var4Lifetime1, MatchConditionEntry.a(param0, (byte) 94));
+        hs.a(false, true, this.auxiliaryPreviewUnit, 0, db.a(true, param2), 0, var4Lifetime1, MatchConditionEntry.a(param0, (byte) 94));
     }
 
     private final void a(byte param0, int param1, int param2) {
@@ -161,7 +161,7 @@ final class rk {
         this.field_S = null;
         this.field_S = new hr(18);
         if (param0 > -101) {
-          this.field_W = (Unit) null;
+          this.auxiliaryPreviewUnit = (Unit) null;
         }
     }
 
@@ -223,28 +223,28 @@ final class rk {
         return 2;
     }
 
-    final int a(int param0, boolean param1) {
+    final int getItemHeight(int itemIndex, boolean obfuscationGuard) {
         int var3;
-        if (null != this.field_w &&
-          this.field_w.length != 0) {
-          if (param0 >= 0 &&
-            this.field_w.length > param0) {
-            if (param1) {
+        if (null != this.itemIds &&
+          this.itemIds.length != 0) {
+          if (itemIndex >= 0 &&
+            this.itemIds.length > itemIndex) {
+            if (obfuscationGuard) {
               return 106;
             }
-            if (null != this.field_Z &&
-              this.field_R != null &&
-              this.field_n != null &&
-              null != this.field_b) {
-              var3 = this.field_w[param0];
+            if (null != this.footerStart &&
+              this.navigationStart != null &&
+              this.footerEnd != null &&
+              null != this.navigationEnd) {
+              var3 = this.itemIds[itemIndex];
               if (22 != var3 &&
                 var3 != 23) {
                 if (var3 == 8) {
-                  return this.field_n.field_n - this.field_Z.field_n;
+                  return this.footerEnd.second - this.footerStart.second;
                 }
                 return 1;
               }
-              return this.field_b.field_n - this.field_R.field_n;
+              return this.navigationEnd.second - this.navigationStart.second;
             }
             return 1;
           }
@@ -267,11 +267,11 @@ final class rk {
         if (param2) {
           this.field_I = true;
         }
-        if (null != this.field_w &&
-          this.field_w.length != 0) {
+        if (null != this.itemIds &&
+          this.itemIds.length != 0) {
           if (param1 >= 0 &&
-            this.field_w.length > param1) {
-            var5 = this.field_w[param1];
+            this.itemIds.length > param1) {
+            var5 = this.itemIds[param1];
             if (var5 != 22) {
               if (23 == var5) {
                 this.field_Q = true;
@@ -293,17 +293,17 @@ final class rk {
         int var2 = 0;
         int var3;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.field_f = -1;
-        if (null == this.field_X) {
+        this.cachedPageIndex = -1;
+        if (null == this.cachedPageSprites) {
           return;
         }
-        for (var2 = param0; this.field_X.length > var2; var2++) {
-          if (this.field_X[var2] != null) {
-            this.field_X[var2].field_B = null;
-            this.field_X[var2] = null;
+        for (var2 = param0; this.cachedPageSprites.length > var2; var2++) {
+          if (this.cachedPageSprites[var2] != null) {
+            this.cachedPageSprites[var2].field_B = null;
+            this.cachedPageSprites[var2] = null;
           }
         }
-        this.field_X = null;
+        this.cachedPageSprites = null;
     }
 
     private final void k(int param0) {
@@ -318,39 +318,39 @@ final class rk {
         int var10;
         String[] var11;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.field_N >= 0 &&
-          this.field_N < this.field_p) {
-          if (null == PortalLossCondition.field_b[this.field_N]) {
+        if (this.pageIndex >= 0 &&
+          this.pageIndex < this.pageCount) {
+          if (null == PortalLossCondition.field_b[this.pageIndex]) {
             return;
           }
-          var11 = PortalLossCondition.field_b[this.field_N];
+          var11 = PortalLossCondition.field_b[this.pageIndex];
           var2 = var11;
-          if (null == PortalLossCondition.field_g[this.field_N]) {
+          if (null == PortalLossCondition.field_g[this.pageIndex]) {
             return;
           }
-          var3 = PortalLossCondition.field_g[this.field_N];
-          if (null == PortalLossCondition.field_c[this.field_N]) {
+          var3 = PortalLossCondition.field_g[this.pageIndex];
+          if (null == PortalLossCondition.field_c[this.pageIndex]) {
             return;
           }
-          var4 = PortalLossCondition.field_c[this.field_N];
-          if (null == TeamRoster.field_f[this.field_N]) {
+          var4 = PortalLossCondition.field_c[this.pageIndex];
+          if (null == TeamRoster.field_f[this.pageIndex]) {
             return;
           }
-          var5 = TeamRoster.field_f[this.field_N];
-          if (da.field_a[this.field_N] == null) {
+          var5 = TeamRoster.field_f[this.pageIndex];
+          if (da.field_a[this.pageIndex] == null) {
             return;
           }
           if (param0 >= -73) {
             this.l(58);
           }
-          var6 = da.field_a[this.field_N];
+          var6 = da.field_a[this.pageIndex];
           var7 = this.field_T - this.a(true);
           for (var8 = 0; var8 < var11.length; var8++) {
             if (var2 != null &&
               var3 != null &&
               var4 != null &&
               var5 != null &&
-              var6 != null && (this.field_N != 9 ||
+              var6 != null && (this.pageIndex != 9 ||
               var8 != 0)) {
               var9 = this.a(var11[var8], var4[var8], var8, var5[var8], var7, -1185705759, var3[var8], var6[var8]);
               var7 = var7 + var9;
@@ -384,12 +384,12 @@ final class rk {
         int var14 = 0;
         int var11Lifetime1;
         try {
-          var9_int = this.field_F.field_k;
+          var9_int = this.field_F.first;
           var10 = param4;
           var11 = (this.a(true) >> 1) + this.h(-2881);
           var10 = var11 + var10;
           if (param5 != -1185705759) {
-            this.field_R = (ft) null;
+            this.navigationStart = (IntPair) null;
           }
           var12 = param0;
           if (var12 != null) {
@@ -550,14 +550,14 @@ final class rk {
         if (param0 > -48) {
           this.c((byte) -46);
         }
-        int var2 = this.field_Z.field_k;
-        int var3 = this.field_Z.field_n;
-        int var4 = this.field_n.field_k - var2;
-        int var5 = -var3 + this.field_n.field_n;
+        int var2 = this.footerStart.first;
+        int var3 = this.footerStart.second;
+        int var4 = this.footerEnd.first - var2;
+        int var5 = -var3 + this.footerEnd.second;
         SoftwareRaster.f(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, this.field_cb);
         fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, io.field_m, nd.field_b, this.field_A, this.field_e);
-        int var6 = this.field_Z.field_n;
-        int var7 = this.field_n.field_n;
+        int var6 = this.footerStart.second;
+        int var7 = this.footerEnd.second;
         var3 = var6 + var7 >> 1;
         int var8 = this.a(21695);
         var3 = var3 + var8;
@@ -569,7 +569,7 @@ final class rk {
         int[] var12 = this.field_P ? TutorialController.field_e : nd.field_b;
         int[] var11 = var12;
         int[] var10 = var11;
-        fe.c(var9, db.a(true, this.field_F.field_k), MatchConditionEntry.a(var3, (byte) 94), var12, true);
+        fe.c(var9, db.a(true, this.field_F.first), MatchConditionEntry.a(var3, (byte) 94), var12, true);
     }
 
     final void f(byte param0) {
@@ -579,8 +579,8 @@ final class rk {
         int var4;
         int var5;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.field_C = new ft(25, 33);
-        this.field_V = new ft(614, 446);
+        this.field_C = new IntPair(25, 33);
+        this.field_V = new IntPair(614, 446);
         this.field_A = 0;
         this.field_e = 128;
         if (wb.field_b != null &&
@@ -589,10 +589,10 @@ final class rk {
         } else {
           this.field_a = null;
         }
-        this.field_F = new ft(so.field_b.field_a >> 1, so.field_b.field_g >> 1);
-        this.field_x = new ft(42, 63);
-        this.field_K = new ft(597, 417);
-        this.n(99);
+        this.field_F = new IntPair(so.field_b.field_a >> 1, so.field_b.field_g >> 1);
+        this.field_x = new IntPair(42, 63);
+        this.field_K = new IntPair(597, 417);
+        this.initializePanel(99);
         this.field_cb = 3223077;
         if (DisplacedUnitMarker.field_t != null) {
           if (DisplacedUnitMarker.field_t.length <= 8) {
@@ -616,7 +616,7 @@ final class rk {
         if (param0 <= 6) {
           discarded$0 = this.c(66, 56);
         }
-        var2 = this.field_x.field_n;
+        var2 = this.field_x.second;
         var3 = this.b((byte) 70);
         var4 = this.a(true);
         this.field_m = 583;
@@ -677,7 +677,7 @@ final class rk {
         }
     }
 
-    private final ft b(int param0, int param1, int param2, int param3, int param4) {
+    private final IntPair b(int param0, int param1, int param2, int param3, int param4) {
         if (param2 != 0 &&
           param2 != 1) {
           this.c(50, param1, param4);
@@ -690,7 +690,7 @@ final class rk {
         return this.a(param2, param3, param0 ^ 88);
     }
 
-    private final ft a(int param0, int param1, int param2, int param3, int param4) {
+    private final IntPair a(int param0, int param1, int param2, int param3, int param4) {
         if (param4 != -3) {
           this.field_m = 124;
         }
@@ -698,10 +698,10 @@ final class rk {
           return null;
         }
         if (param1 == 0) {
-          return new ft(uf.field_j.field_A, uf.field_j.field_x);
+          return new IntPair(uf.field_j.field_A, uf.field_j.field_x);
         }
         if (param1 == 1) {
-          return new ft(0, 0);
+          return new IntPair(0, 0);
         }
         if (param1 == 2) {
           this.a(param0, param3, param2, -19556);
@@ -732,28 +732,28 @@ final class rk {
         }
     }
 
-    final int o(int param0) {
+    final int getRowSpacing(int obfuscationGuard) {
         int var2;
         int var3;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        if (this.field_Z != null &&
-          this.field_n != null &&
-          this.field_R != null &&
-          null != this.field_b) {
-          if (this.field_R.field_n < this.field_Z.field_n) {
-            stackIn_9_0 = this.field_R.field_n;
+        if (this.footerStart != null &&
+          this.footerEnd != null &&
+          this.navigationStart != null &&
+          null != this.navigationEnd) {
+          if (this.navigationStart.second < this.footerStart.second) {
+            stackIn_9_0 = this.navigationStart.second;
           } else {
-            stackIn_9_0 = this.field_Z.field_n;
+            stackIn_9_0 = this.footerStart.second;
           }
           var2 = stackIn_9_0;
-          if (this.field_Z.field_n >= this.field_R.field_n) {
-            stackIn_12_0 = this.field_Z.field_n;
+          if (this.footerStart.second >= this.navigationStart.second) {
+            stackIn_12_0 = this.footerStart.second;
           } else {
-            stackIn_12_0 = this.field_R.field_n;
+            stackIn_12_0 = this.navigationStart.second;
           }
           var3 = stackIn_12_0;
-          if (param0 >= ~var2 &&
+          if (obfuscationGuard >= ~var2 &&
             0 <= var3 &&
             var3 > var2) {
             return -var2 + var3;
@@ -763,7 +763,7 @@ final class rk {
         return -1;
     }
 
-    private final ft a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
+    private final IntPair a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
         int discarded$1 = 0;
         int[] var9;
         if (param5 != 0 &&
@@ -804,16 +804,16 @@ final class rk {
         int var2Lifetime3;
         int var3Lifetime1;
         int[] var10Lifetime1;
-        var2 = this.field_R.field_k;
-        var3 = this.field_R.field_n;
-        var4 = this.field_b.field_k - var2;
-        var5 = this.field_b.field_n - var3;
+        var2 = this.navigationStart.first;
+        var3 = this.navigationStart.second;
+        var4 = this.navigationEnd.first - var2;
+        var5 = this.navigationEnd.second - var3;
         SoftwareRaster.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, this.field_A, this.field_e);
-        var6 = this.field_R.field_n;
+        var6 = this.navigationStart.second;
         if (param0 != 10) {
           this.j(76);
         }
-        var7 = this.field_b.field_n;
+        var7 = this.navigationEnd.second;
         var3Lifetime1 = var6 + var7 >> 1;
         var8 = this.a(21695);
         var3Lifetime1 = var3Lifetime1 + var8;
@@ -849,14 +849,14 @@ final class rk {
           var15.length() > 0) {
           fe.b(var15, db.a(true, var2Lifetime2), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var18, true);
         }
-        var2Lifetime3 = this.field_F.field_k;
-        var9 = qk.a(this.field_p, -2823, this.field_N);
+        var2Lifetime3 = this.field_F.first;
+        var9 = qk.a(this.pageCount, -2823, this.pageIndex);
         fe.c(var9, db.a(true, var2Lifetime3), MatchConditionEntry.a(var3Lifetime1, (byte) 94), TutorialController.field_e, true);
     }
 
     private final int d(int param0) {
         if (param0 != 17) {
-          this.e((byte) -89);
+          this.getPanelStart((byte) -89);
         }
         return rs.field_n.field_L + rs.field_n.field_H;
     }
@@ -872,32 +872,32 @@ final class rk {
         }
     }
 
-    final ft e(byte param0) {
-        if (this.field_Z == null) {
+    final IntPair getPanelStart(byte obfuscationGuard) {
+        if (this.footerStart == null) {
           return null;
         }
-        if (null == this.field_n) {
+        if (null == this.footerEnd) {
           return null;
         }
-        if (null == this.field_R) {
+        if (null == this.navigationStart) {
           return null;
         }
-        if (null == this.field_b) {
+        if (null == this.navigationEnd) {
           return null;
         }
-        int var2 = this.field_R.field_k >= this.field_Z.field_k ? this.field_Z.field_k : this.field_R.field_k;
-        int var3 = -47 % ((param0 - 32) / 46);
-        int var4 = this.field_R.field_n >= this.field_Z.field_n ? this.field_Z.field_n : this.field_R.field_n;
+        int var2 = this.navigationStart.first >= this.footerStart.first ? this.footerStart.first : this.navigationStart.first;
+        int var3 = -47 % ((obfuscationGuard - 32) / 46);
+        int var4 = this.navigationStart.second >= this.footerStart.second ? this.footerStart.second : this.navigationStart.second;
         if (var2 < 0) {
           return null;
         }
         if (var4 < 0) {
           return null;
         }
-        return new ft(var2, var4);
+        return new IntPair(var2, var4);
     }
 
-    private final ft b(int param0, byte param1) {
+    private final IntPair b(int param0, byte param1) {
         int var5 = 0;
         int var3;
         int var4;
@@ -906,14 +906,14 @@ final class rk {
         int var8;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 != 16) {
-          this.field_F = (ft) null;
+          this.field_F = (IntPair) null;
         }
         if (null == gt.field_c) {
           return null;
         }
         if (param0 != 0) {
           if (param0 == 1) {
-            return new ft(0, 0);
+            return new IntPair(0, 0);
           }
           return null;
         }
@@ -941,61 +941,61 @@ final class rk {
         }
         if (0 <= var3 &&
           var4 >= 0) {
-          return new ft(var3, var4);
+          return new IntPair(var3, var4);
         }
-        return new ft(0, 0);
+        return new IntPair(0, 0);
     }
 
-    private final Unit b(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = 0;
-        if (~param3 > param1) {
+    private final Unit createPreviewUnit(int unitType, int obfuscationGuard, int unusedValue, int playerId) {
+        int tileX = 0;
+        int tileY = 0;
+        if (~playerId > obfuscationGuard) {
           return null;
         }
-        if (param3 >= op.field_c.length) {
+        if (playerId >= op.field_c.length) {
           return null;
         }
-        if (param0 < 0) {
+        if (unitType < 0) {
           return null;
         }
-        if (param0 >= bw.unitDefinitions.length) {
+        if (unitType >= bw.unitDefinitions.length) {
           return null;
         }
-        int var7 = bw.unitDefinitions[param0][4];
-        int var8 = -1 + var7;
-        if (var8 <= 0) {
-          var8 = 1;
+        int maximumStrength = bw.unitDefinitions[unitType][4];
+        int strength = -1 + maximumStrength;
+        if (strength <= 0) {
+          strength = 1;
         }
-        int var9 = 1;
-        int var10 = 0;
-        Object var11 = null;
-        int var12 = 1;
-        Unit var13 = new Unit(var5, var6, param0, param3, var7, var8, var9, 0, var10, (Battlefield) (var11), 0, 0, -1, var12 != 0, 0);
-        return var13;
+        int packedStatusFlags = 1;
+        int bonusStrength = 0;
+        Object battlefield = null;
+        int detached = 1;
+        Unit previewUnit = new Unit(tileX, tileY, unitType, playerId, maximumStrength, strength, packedStatusFlags, 0, bonusStrength, (Battlefield) (battlefield), 0, 0, -1, detached != 0, 0);
+        return previewUnit;
     }
 
-    final int a(boolean param0, int param1) {
+    final int getItemRightX(boolean obfuscationGuard, int itemIndex) {
         int var3;
-        if (null != this.field_w &&
-          this.field_w.length != 0) {
-          if (0 <= param1 &&
-            param1 < this.field_w.length) {
-            if (param0) {
-              this.a(false, -94);
+        if (null != this.itemIds &&
+          this.itemIds.length != 0) {
+          if (0 <= itemIndex &&
+            itemIndex < this.itemIds.length) {
+            if (obfuscationGuard) {
+              this.getItemRightX(false, -94);
             }
-            if (this.field_n != null &&
-              this.field_b != null) {
-              var3 = this.field_w[param1];
+            if (this.footerEnd != null &&
+              this.navigationEnd != null) {
+              var3 = this.itemIds[itemIndex];
               if (22 == var3) {
                 return -1 + (so.field_b.field_a >> 1);
               }
               if (var3 == 23) {
-                return db.a(!param0, this.field_b.field_k);
+                return db.a(!obfuscationGuard, this.navigationEnd.first);
               }
               if (var3 != 8) {
                 return 1;
               }
-              return db.a(true, this.field_n.field_k);
+              return db.a(true, this.footerEnd.first);
             }
             return 1;
           }
@@ -1140,53 +1140,53 @@ final class rk {
 
     private final int b(byte param0) {
         if (param0 <= 14) {
-          this.field_n = (ft) null;
+          this.footerEnd = (IntPair) null;
         }
         return nr.field_e.field_H + nr.field_e.field_L >> 1;
     }
 
-    private final ft a(int param0, int param1, int param2) {
+    private final IntPair a(int param0, int param1, int param2) {
         int var4;
         if (param0 == 0) {
-          return new ft(80, param1 * 80 >> 2);
+          return new IntPair(80, param1 * 80 >> 2);
         }
         if (param0 == 1) {
-          return new ft(0, -(80 * param1) + 320 >> 2);
+          return new IntPair(0, -(80 * param1) + 320 >> 2);
         }
         var4 = -19 / ((param2 + 8) / 40);
         return null;
     }
 
     private final RgbSprite b(int param0, int param1) {
-        if (null == this.field_X) {
+        if (null == this.cachedPageSprites) {
           return null;
         }
         if (param1 < 0) {
           return null;
         }
-        if (param1 >= this.field_X.length) {
+        if (param1 >= this.cachedPageSprites.length) {
           return null;
         }
         if (param0 != 20255) {
           return (RgbSprite) null;
         }
-        return this.field_X[param1];
+        return this.cachedPageSprites[param1];
     }
 
-    private final ft a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    private final IntPair a(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param1 != 0 &&
           param1 != 1) {
           this.d(param3, param0, param4, param2, 1);
           if (param5 == 2) {
             return null;
           }
-          this.g(37, -69);
+          this.getItemTopY(37, -69);
           return null;
         }
         return this.e(3, param1);
     }
 
-    private final ft c(int param0, int param1, int param2, int param3) {
+    private final IntPair c(int param0, int param1, int param2, int param3) {
         if (param3 == 0 ||
           param3 == 1) {
           return this.b(param3, (byte) 16);
@@ -1197,43 +1197,43 @@ final class rk {
         if (param2 < -4) {
           return null;
         }
-        return (ft) null;
+        return (IntPair) null;
     }
 
-    final ft a(byte param0) {
-        if (this.field_Z == null) {
+    final IntPair getPanelEnd(byte obfuscationGuard) {
+        if (this.footerStart == null) {
           return null;
         }
-        if (null == this.field_n) {
+        if (null == this.footerEnd) {
           return null;
         }
-        if (this.field_R == null) {
+        if (this.navigationStart == null) {
           return null;
         }
-        if (null == this.field_b) {
+        if (null == this.navigationEnd) {
           return null;
         }
-        if (param0 != -108) {
+        if (obfuscationGuard != -108) {
           this.field_I = true;
         }
-        int var2 = this.field_b.field_k > this.field_n.field_k ? this.field_b.field_k : this.field_n.field_k;
-        int var3 = this.field_n.field_n < this.field_b.field_n ? this.field_b.field_n : this.field_n.field_n;
+        int var2 = this.navigationEnd.first > this.footerEnd.first ? this.navigationEnd.first : this.footerEnd.first;
+        int var3 = this.footerEnd.second < this.navigationEnd.second ? this.navigationEnd.second : this.footerEnd.second;
         if (var2 < 0) {
           return null;
         }
         if (var3 < 0) {
           return null;
         }
-        return new ft(var2, var3);
+        return new IntPair(var2, var3);
     }
 
-    private final ft a(byte param0, int param1, int param2, RgbSprite param3, int param4, ru param5) {
+    private final IntPair a(byte param0, int param1, int param2, RgbSprite param3, int param4, ru param5) {
         Object stackIn_4_0 = null;
-        ft stackIn_8_0 = null;
-        ft stackIn_15_0 = null;
-        ft stackIn_19_0 = null;
+        IntPair stackIn_8_0 = null;
+        IntPair stackIn_15_0 = null;
+        IntPair stackIn_19_0 = null;
         int stackIn_26_0 = 0;
-        ft stackIn_32_0 = null;
+        IntPair stackIn_32_0 = null;
         Object stackIn_34_0 = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
@@ -1250,26 +1250,26 @@ final class rk {
           if (param3 == null &&
             param5 == null) {
             stackIn_4_0 = null;
-            return (ft) (stackIn_4_0);
+            return (IntPair) (stackIn_4_0);
           }
           if (param3 != null &&
             param2 == 0) {
-            stackIn_8_0 = new ft(param3.field_A, param3.field_v);
+            stackIn_8_0 = new IntPair(param3.field_A, param3.field_v);
             return stackIn_8_0;
           }
           if (param5 != null &&
             param2 == 0) {
-            stackIn_32_0 = new ft(param5.field_g, param5.field_h);
+            stackIn_32_0 = new IntPair(param5.field_g, param5.field_h);
             return stackIn_32_0;
           }
           if (param3 != null &&
             param2 == 1) {
-            stackIn_15_0 = new ft(0, 0);
+            stackIn_15_0 = new IntPair(0, 0);
             return stackIn_15_0;
           }
           if (param5 != null &&
             1 == param2) {
-            stackIn_19_0 = new ft(0, 0);
+            stackIn_19_0 = new IntPair(0, 0);
             return stackIn_19_0;
           }
           if (param3 == null &&
@@ -1291,7 +1291,7 @@ final class rk {
             param5.a(db.a(true, param1), MatchConditionEntry.a(param4, (byte) 94));
           }
           stackIn_34_0 = null;
-          return (ft) (stackIn_34_0);
+          return (IntPair) (stackIn_34_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
@@ -1359,11 +1359,11 @@ final class rk {
         }
     }
 
-    private final ft a(int param0, int param1, int param2, int param3, RgbSprite param4) {
+    private final IntPair a(int param0, int param1, int param2, int param3, RgbSprite param4) {
         Object stackIn_2_0 = null;
-        ft stackIn_6_0 = null;
-        ft stackIn_12_0 = null;
-        ft stackIn_16_0 = null;
+        IntPair stackIn_6_0 = null;
+        IntPair stackIn_12_0 = null;
+        IntPair stackIn_16_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -1372,14 +1372,14 @@ final class rk {
         try {
           if (param4 == null) {
             stackIn_2_0 = null;
-            return (ft) (stackIn_2_0);
+            return (IntPair) (stackIn_2_0);
           }
           if (0 == param0) {
-            stackIn_12_0 = new ft(param4.field_A >> 1, param4.field_v >> 1);
+            stackIn_12_0 = new IntPair(param4.field_A >> 1, param4.field_v >> 1);
             return stackIn_12_0;
           }
           if (param0 == 1) {
-            stackIn_6_0 = new ft(0, 0);
+            stackIn_6_0 = new IntPair(0, 0);
             return stackIn_6_0;
           }
           if (param4 != null) {
@@ -1391,7 +1391,7 @@ final class rk {
           if (param1 == 26823) {
             return null;
           }
-          stackIn_16_0 = (ft) null;
+          stackIn_16_0 = (IntPair) null;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1410,15 +1410,15 @@ final class rk {
     public static void q(int param0) {
         field_y = null;
         if (param0 >= -20) {
-          rk.e(41);
+          InstructionsPanel.e(41);
         }
         field_gb = null;
         field_c = null;
     }
 
-    private final ft a(boolean param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7) {
+    private final IntPair a(boolean param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7) {
         if (param4 != 74) {
-          this.field_x = (ft) null;
+          this.field_x = (IntPair) null;
         }
         if (param5 != 0 &&
           param5 != 1) {
@@ -1430,7 +1430,7 @@ final class rk {
 
     private final int h(byte param0) {
         if (param0 >= -90) {
-          rk.c(117);
+          InstructionsPanel.c(117);
         }
         return nr.field_e.field_v - nr.field_e.field_L - (nr.field_e.field_H - ((nr.field_e.field_y >> 1) + 3));
     }
@@ -1510,7 +1510,7 @@ final class rk {
         }
     }
 
-    private final ft a(int param0, byte param1, int param2, int param3, int param4, int param5) {
+    private final IntPair a(int param0, byte param1, int param2, int param3, int param4, int param5) {
         Object var7;
         Object var8;
         if (param5 != 0 &&
@@ -1520,196 +1520,196 @@ final class rk {
         }
         var7 = null;
         if (param1 < 32) {
-          return (ft) null;
+          return (IntPair) null;
         }
         var8 = null;
-        if (this.field_N == 0 &&
+        if (this.pageIndex == 0 &&
           param4 == 1) {
           return this.a(param0, 0, 7, 2, true, param5, param3);
         }
-        if (this.field_N == 2 &&
+        if (this.pageIndex == 2 &&
           4 == param4) {
           return this.d(param3, param5, param0, 0);
         }
-        if (this.field_N == 3 &&
+        if (this.pageIndex == 3 &&
           param4 == 1) {
           var8 = this.f(0, 0);
-        } else if (this.field_N == 3 &&
+        } else if (this.pageIndex == 3 &&
           2 == param4) {
           var8 = this.f(0, 1);
-        } else if (this.field_N == 3 &&
+        } else if (this.pageIndex == 3 &&
           3 == param4) {
           var8 = this.f(0, 2);
-        } else if (3 == this.field_N &&
+        } else if (3 == this.pageIndex &&
           param4 == 4) {
           var8 = this.f(0, 3);
-        } else if (4 == this.field_N &&
+        } else if (4 == this.pageIndex &&
           param4 == 0) {
           var8 = this.f(0, 5);
-        } else if (this.field_N == 4 &&
+        } else if (this.pageIndex == 4 &&
           param4 == 1) {
           var8 = this.f(0, 4);
-        } else if (this.field_N == 4 &&
+        } else if (this.pageIndex == 4 &&
           2 == param4) {
           var8 = this.f(0, 6);
-        } else if (this.field_N == 4 &&
+        } else if (this.pageIndex == 4 &&
           param4 == 3) {
           var8 = this.f(0, 7);
         } else {
-          if (this.field_N == 5 &&
+          if (this.pageIndex == 5 &&
             3 == param4) {
             return this.a(param3, param5, param0, 0, -3);
           }
-          if (5 == this.field_N &&
+          if (5 == this.pageIndex &&
             param4 == 4) {
             return this.a(param3, param5, param0, 1, -3);
           }
-          if (this.field_N == 6 &&
+          if (this.pageIndex == 6 &&
             1 == param4) {
             return this.a(true, 8, 4, param3, (byte) 74, param5, 0, param0);
           }
-          if (6 == this.field_N &&
+          if (6 == this.pageIndex &&
             param4 == 2) {
             return this.a(param0, 0, 9, 4, true, param5, param3);
           }
-          if (this.field_N == 6 &&
+          if (this.pageIndex == 6 &&
             param4 == 3) {
             return this.a(param0, 0, 7, 4, true, param5, param3);
           }
-          if (this.field_N == 7 &&
+          if (this.pageIndex == 7 &&
             param4 == 1) {
             return this.a(param0, -1, 8, 3, true, param5, param3);
           }
-          if (7 == this.field_N &&
+          if (7 == this.pageIndex &&
             param4 == 2) {
             return this.a(param0, 0, 7, 3, true, param5, param3);
           }
-          if (this.field_N == 7 &&
+          if (this.pageIndex == 7 &&
             param4 == 3) {
             return this.a(param0, -1, 9, 3, true, param5, param3);
           }
-          if (8 == this.field_N &&
+          if (8 == this.pageIndex &&
             3 == param4) {
             return this.c(param3, param0, -116, param5);
           }
-          if (this.field_N == 9 &&
+          if (this.pageIndex == 9 &&
             param2 == 0 &&
             param4 == 1) {
             return this.a(param5, 26823, param3, param0, bj.field_p[0]);
           }
-          if (9 == this.field_N &&
+          if (9 == this.pageIndex &&
             param2 == 0 &&
             2 == param4) {
             return this.a(param5, 26823, param3, param0, bj.field_p[2]);
           }
-          if (this.field_N == 9 &&
+          if (this.pageIndex == 9 &&
             0 == param2 &&
             param4 == 3) {
             return this.a(param5, 26823, param3, param0, bj.field_p[1]);
           }
-          if (this.field_N == 9 &&
+          if (this.pageIndex == 9 &&
             param2 == 0 &&
             param4 == 4) {
             return this.a(param5, 26823, param3, param0, bj.field_p[3]);
           }
-          if (this.field_N == 9 &&
+          if (this.pageIndex == 9 &&
             param2 == 1 &&
             param4 == 0) {
             return this.a(param3, param5, 0, param0, 0, 2);
           }
-          if (9 == this.field_N &&
+          if (9 == this.pageIndex &&
             param2 == 1 &&
             param4 == 1) {
             return this.a(param3, param5, 0, param0, 1, 2);
           }
-          if (this.field_N == 9 &&
+          if (this.pageIndex == 9 &&
             param2 == 1 &&
             param4 == 2) {
             return this.a(param3, param5, 0, param0, 4, 2);
           }
-          if (this.field_N == 9 &&
+          if (this.pageIndex == 9 &&
             param2 == 1 &&
             param4 == 3) {
             return this.a(param3, param5, 0, param0, 3, 2);
           }
-          if (this.field_N == 10 &&
+          if (this.pageIndex == 10 &&
             param4 == 0) {
             return this.a(param3, param5, 0, param0, 2, 2);
           }
-          if (10 == this.field_N &&
+          if (10 == this.pageIndex &&
             param4 == 1) {
             return this.a(param3, param5, 0, param0, 5, 2);
           }
-          if (this.field_N == 10 &&
+          if (this.pageIndex == 10 &&
             param4 == 2) {
             return this.a(param3, param5, 0, param0, 6, 2);
           }
-          if (10 == this.field_N &&
+          if (10 == this.pageIndex &&
             param4 == 3) {
             return this.a(param3, param5, 0, param0, 8, 2);
           }
-          if (this.field_N == 10 &&
+          if (this.pageIndex == 10 &&
             param4 == 4) {
             return this.a(param3, param5, 0, param0, 12, 2);
           }
-          if (this.field_N == 10 &&
+          if (this.pageIndex == 10 &&
             5 == param4) {
             return this.a(param3, param5, 0, param0, 14, 2);
           }
-          if (this.field_N == 11 &&
+          if (this.pageIndex == 11 &&
             param4 == 1) {
             return this.a(param0, -1, 8, 3, true, param5, param3);
           }
-          if (11 == this.field_N &&
+          if (11 == this.pageIndex &&
             param4 == 2) {
             return this.a(param0, 0, 7, 3, true, param5, param3);
           }
-          if (11 == this.field_N &&
+          if (11 == this.pageIndex &&
             param4 == 3) {
             return this.a(param0, -1, 9, 3, true, param5, param3);
           }
-          if (12 == this.field_N &&
+          if (12 == this.pageIndex &&
             param4 == 1) {
             var7 = this.b(20255, 0);
-          } else if (this.field_N == 12 &&
+          } else if (this.pageIndex == 12 &&
             2 == param4) {
             var7 = this.b(20255, 1);
-          } else if (12 == this.field_N &&
+          } else if (12 == this.pageIndex &&
             param4 == 3) {
             var7 = this.b(20255, 2);
-          } else if (13 == this.field_N &&
+          } else if (13 == this.pageIndex &&
             param4 == 1) {
             var7 = this.b(20255, 0);
-          } else if (13 == this.field_N &&
+          } else if (13 == this.pageIndex &&
             param4 == 2) {
             var7 = this.b(20255, 1);
-          } else if (this.field_N == 13 &&
+          } else if (this.pageIndex == 13 &&
             param4 == 3) {
             var7 = this.b(20255, 2);
           } else {
-            if (this.field_N == 16 &&
+            if (this.pageIndex == 16 &&
               param4 == 1) {
               return this.e(-94, param5, param3, param0, 4);
             }
-            if (this.field_N == 16 &&
+            if (this.pageIndex == 16 &&
               2 == param4) {
               return this.a(param0, 0, 14, 3, true, param5, param3);
             }
-            if (this.field_N == 16 &&
+            if (this.pageIndex == 16 &&
               param4 == 3) {
               return this.b(-2, param3, param5, 4, param0);
             }
             if (gv.field_a != null &&
-              this.field_N >= 0 &&
-              gv.field_a.length > this.field_N &&
-              null != gv.field_a[this.field_N] &&
+              this.pageIndex >= 0 &&
+              gv.field_a.length > this.pageIndex &&
+              null != gv.field_a[this.pageIndex] &&
               param2 >= 0 &&
-              param2 < gv.field_a[this.field_N].length &&
-              null != gv.field_a[this.field_N][param2] &&
+              param2 < gv.field_a[this.pageIndex].length &&
+              null != gv.field_a[this.pageIndex][param2] &&
               param4 >= 0 &&
-              gv.field_a[this.field_N][param2].length > param4 &&
-              null != gv.field_a[this.field_N][param2][param4]) {
-              var7 = gv.field_a[this.field_N][param2][param4];
+              gv.field_a[this.pageIndex][param2].length > param4 &&
+              null != gv.field_a[this.pageIndex][param2][param4]) {
+              var7 = gv.field_a[this.pageIndex][param2][param4];
             }
           }
         }
@@ -1720,30 +1720,30 @@ final class rk {
         return this.a((byte) 114, param3, param5, (RgbSprite) (var7), param0, (ru) (var8));
     }
 
-    final int g(int param0, int param1) {
+    final int getItemTopY(int obfuscationGuard, int itemIndex) {
         int var3;
-        if (this.field_w != null &&
-          0 != this.field_w.length) {
-          if (0 > param1) {
+        if (this.itemIds != null &&
+          0 != this.itemIds.length) {
+          if (0 > itemIndex) {
             return 1;
           }
-          if (param1 >= this.field_w.length) {
+          if (itemIndex >= this.itemIds.length) {
             return 1;
           }
-          if (this.field_Z != null &&
-            null != this.field_R) {
-            if (param0 >= -75) {
-              this.g(0, -60);
+          if (this.footerStart != null &&
+            null != this.navigationStart) {
+            if (obfuscationGuard >= -75) {
+              this.getItemTopY(0, -60);
             }
-            var3 = this.field_w[param1];
+            var3 = this.itemIds[itemIndex];
             if (22 != var3 &&
               23 != var3) {
               if (var3 != 8) {
                 return 1;
               }
-              return MatchConditionEntry.a(this.field_Z.field_n, (byte) 94);
+              return MatchConditionEntry.a(this.footerStart.second, (byte) 94);
             }
-            return MatchConditionEntry.a(this.field_R.field_n, (byte) 94);
+            return MatchConditionEntry.a(this.navigationStart.second, (byte) 94);
           }
           return 1;
         }
@@ -1751,7 +1751,7 @@ final class rk {
     }
 
     private final void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
-        ft discarded$0 = null;
+        IntPair discarded$0 = null;
         this.c(param2, param0, -31550, !param3 ? param1 : -1, param5);
         hr var7 = this.field_s;
         if (param3) {
@@ -1811,7 +1811,7 @@ final class rk {
         }
     }
 
-    private final ft e(int param0, int param1, int param2, int param3, int param4) {
+    private final IntPair e(int param0, int param1, int param2, int param3, int param4) {
         if (param0 >= -35) {
           this.m(-120);
         }
@@ -1838,7 +1838,7 @@ final class rk {
     private final void c(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         if (param2 != -31550) {
-          this.a((byte) -64);
+          this.getPanelEnd((byte) -64);
         }
         int var7 = 0;
         if (param1 < 0 ||
@@ -1851,24 +1851,24 @@ final class rk {
         this.b(param4, 40 + param0, param3, -25713, param1, var6);
     }
 
-    final int a(int param0, byte param1) {
+    final int getItemLeftX(int itemIndex, byte obfuscationGuard) {
         int var3;
-        if (null != this.field_w &&
-          this.field_w.length != 0) {
-          if (param0 < 0) {
+        if (null != this.itemIds &&
+          this.itemIds.length != 0) {
+          if (itemIndex < 0) {
             return 1;
           }
-          if (param0 >= this.field_w.length) {
+          if (itemIndex >= this.itemIds.length) {
             return 1;
           }
-          if (this.field_Z != null &&
-            null != this.field_R) {
-            if (param1 != 4) {
+          if (this.footerStart != null &&
+            null != this.navigationStart) {
+            if (obfuscationGuard != 4) {
               return 0;
             }
-            var3 = this.field_w[param0];
+            var3 = this.itemIds[itemIndex];
             if (var3 == 22) {
-              return db.a(true, this.field_R.field_k);
+              return db.a(true, this.navigationStart.first);
             }
             if (var3 == 23) {
               return so.field_b.field_a >> 1;
@@ -1876,7 +1876,7 @@ final class rk {
             if (var3 != 8) {
               return 1;
             }
-            return db.a(true, this.field_Z.field_k);
+            return db.a(true, this.footerStart.first);
           }
           return 1;
         }
@@ -1892,15 +1892,15 @@ final class rk {
         int var3;
         Object var4;
         int var5;
-        ft var5_ref_ft;
+        IntPair var5_ref_ft;
         int var6;
         int var8;
         int var9;
         RgbSprite var10;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (null != this.field_X &&
-          this.field_X.length == 3 &&
-          this.field_N == this.field_f) {
+        if (null != this.cachedPageSprites &&
+          this.cachedPageSprites.length == 3 &&
+          this.pageIndex == this.cachedPageIndex) {
           return;
         }
         var2 = -1;
@@ -1908,20 +1908,20 @@ final class rk {
         for (var4_int = 0; var4_int < 6; var4_int++) {
           var5_ref_ft = this.d(var4_int, 1);
           if (var3 < 0 &&
-            0 <= var5_ref_ft.field_n) {
-            var3 = var5_ref_ft.field_n;
+            0 <= var5_ref_ft.second) {
+            var3 = var5_ref_ft.second;
           }
           if (0 > var2 &&
-            var5_ref_ft.field_k >= 0) {
-            var2 = var5_ref_ft.field_k;
+            var5_ref_ft.first >= 0) {
+            var2 = var5_ref_ft.first;
           }
           if (var2 >= 0 &&
-            var5_ref_ft.field_k > var2) {
-            var2 = var5_ref_ft.field_k;
+            var5_ref_ft.first > var2) {
+            var2 = var5_ref_ft.first;
           }
           if (var3 >= 0 &&
-            var3 < var5_ref_ft.field_n) {
-            var3 = var5_ref_ft.field_n;
+            var3 < var5_ref_ft.second) {
+            var3 = var5_ref_ft.second;
           }
         }
         if (var2 >= 0) {
@@ -1935,19 +1935,19 @@ final class rk {
               if (!param0) {
                 this.field_v = (hr) null;
               }
-              this.field_X = new RgbSprite[3];
+              this.cachedPageSprites = new RgbSprite[3];
               var6 = var3 * 3 >> 2;
-              for (var7 = 0; this.field_X.length > var7; var7++) {
-                this.field_X[var7] = new RgbSprite(var5, var6);
+              for (var7 = 0; this.cachedPageSprites.length > var7; var7++) {
+                this.cachedPageSprites[var7] = new RgbSprite(var5, var6);
                 var8 = var7;
-                if (this.field_N == 13) {
-                  var8 = this.field_X.length + var7;
+                if (this.pageIndex == 13) {
+                  var8 = this.cachedPageSprites.length + var7;
                 }
-                this.a(this.field_X[var7], var8, 0, var10, -110, 0);
+                this.a(this.cachedPageSprites[var7], var8, 0, var10, -110, 0);
               }
               var10.field_B = null;
               var4 = null;
-              this.field_f = this.field_N;
+              this.cachedPageIndex = this.pageIndex;
               return;
             }
             return;
@@ -1962,12 +1962,12 @@ final class rk {
         return nr.field_e.field_H >> 1;
     }
 
-    private final ft e(int param0, int param1) {
+    private final IntPair e(int param0, int param1) {
         if (param1 == 0) {
-          return new ft(40, 20);
+          return new IntPair(40, 20);
         }
         if (param1 == 1) {
-          return new ft(0, 0);
+          return new IntPair(0, 0);
         }
         if (param0 == 3) {
           return null;
@@ -1993,7 +1993,7 @@ final class rk {
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 <= 17) {
-            this.field_N = 84;
+            this.pageIndex = 84;
           }
           if (param0 != null &&
             param1 >= 0 &&
@@ -2044,8 +2044,8 @@ final class rk {
         int var6;
         int var7;
         int var8;
-        ft var9;
-        ft var10;
+        IntPair var9;
+        IntPair var10;
         int var5Lifetime1;
         int var6Lifetime1;
         int var6Lifetime2;
@@ -2055,20 +2055,20 @@ final class rk {
         if (param1 >= 0 &&
           param1 <= 1) {
           boolean decompiledFrameRemainder0 = true;
-          if (param1 == 0 && (this.field_d == null ||
+          if (param1 == 0 && (this.firstPreviewUnit == null ||
             this.field_h == null)) {
             var5 = 29;
             var6 = 1;
-            this.field_d = this.b(var5, param3 ^ 19555, var6, param1);
+            this.firstPreviewUnit = this.createPreviewUnit(var5, param3 ^ 19555, var6, param1);
             this.field_h = new hr(var5);
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (param1 == 1 && (this.field_q == null ||
+            if (param1 == 1 && (this.secondPreviewUnit == null ||
               this.field_M == null)) {
               var5Lifetime1 = 10;
               var6Lifetime3 = 1;
-              this.field_q = this.b(var5Lifetime1, -1, var6Lifetime3, param1);
+              this.secondPreviewUnit = this.createPreviewUnit(var5Lifetime1, -1, var6Lifetime3, param1);
               this.field_M = new hr(var5Lifetime1);
               this.field_M.a(false, 256);
             }
@@ -2077,36 +2077,36 @@ final class rk {
             this.field_t = 104;
           }
           if (0 == param1 &&
-            this.field_d != null &&
+            this.firstPreviewUnit != null &&
             this.field_h != null) {
             var10 = this.a(param0, 0, param2, param1, -3);
             if (var10 == null) {
               return;
             }
-            this.a(7 * (var10.field_n >> 3) + param2, 88, this.field_h, (var10.field_k >> 1) + param0);
+            this.a(7 * (var10.second >> 3) + param2, 88, this.field_h, (var10.first >> 1) + param0);
             var6Lifetime1 = ri.terrainDamageTakenPercent[0];
             var7 = 0;
-            this.a(var7, param0, this.field_d.ownerPlayer, var6Lifetime1, 110, this.field_d, this.field_d, param2);
+            this.a(var7, param0, this.firstPreviewUnit.ownerPlayer, var6Lifetime1, 110, this.firstPreviewUnit, this.firstPreviewUnit, param2);
             return;
           }
           if (1 == param1 &&
-            null != this.field_q &&
+            null != this.secondPreviewUnit &&
             null != this.field_M) {
             var9 = this.a(param0, 0, param2, param1, -3);
             if (var9 == null) {
               return;
             }
-            this.a(7 * (var9.field_n >> 3) + param2, 57, this.field_M, param0 + (var9.field_k >> 1));
+            this.a(7 * (var9.second >> 3) + param2, 57, this.field_M, param0 + (var9.first >> 1));
             var6Lifetime2 = ri.terrainDamageTakenPercent[0];
             var7Lifetime1 = 0;
-            this.a(var7Lifetime1, param0, this.field_d.ownerPlayer, var6Lifetime2, 102, this.field_q, this.field_d, param2);
+            this.a(var7Lifetime1, param0, this.firstPreviewUnit.ownerPlayer, var6Lifetime2, 102, this.secondPreviewUnit, this.firstPreviewUnit, param2);
           }
           return;
         }
     }
 
     private final boolean c(int param0, int param1) {
-        ft discarded$1 = null;
+        IntPair discarded$1 = null;
         RgbSprite var4;
         boolean stackIn_8_0 = false;
         if (param1 != 256) {
@@ -2117,26 +2117,26 @@ final class rk {
         return stackIn_8_0;
     }
 
-    final void n(int param0) {
-        this.field_N = 0;
-        this.field_p = -1;
-        if (null == this.field_Z) {
-          this.field_Z = new ft(31, 431);
+    final void initializePanel(int obfuscationGuard) {
+        this.pageIndex = 0;
+        this.pageCount = -1;
+        if (null == this.footerStart) {
+          this.footerStart = new IntPair(31, 431);
         }
-        if (this.field_n == null) {
-          this.field_n = new ft(608, 462);
+        if (this.footerEnd == null) {
+          this.footerEnd = new IntPair(608, 462);
         }
-        if (param0 <= 98) {
+        if (obfuscationGuard <= 98) {
           this.j(40);
         }
-        if (null == this.field_R) {
-          this.field_R = new ft(44, 386);
+        if (null == this.navigationStart) {
+          this.navigationStart = new IntPair(44, 386);
         }
-        if (null == this.field_b) {
-          this.field_b = new ft(595, 415);
+        if (null == this.navigationEnd) {
+          this.navigationEnd = new IntPair(595, 415);
         }
-        if (this.field_w == null) {
-          this.field_w = new int[]{22, 8, 23};
+        if (this.itemIds == null) {
+          this.itemIds = new int[]{22, 8, 23};
         }
         this.p(31559);
     }
@@ -2145,14 +2145,14 @@ final class rk {
         if (null == this.field_a) {
           return;
         }
-        int var2 = this.field_C.field_n;
+        int var2 = this.field_C.second;
         int var3 = this.h((byte) -117);
         if (param0 < 105) {
           this.g((byte) 9);
         }
         int var4 = var3 + var2;
-        fe.b(this.field_a, db.a(true, this.field_F.field_k), MatchConditionEntry.a(var4, (byte) 94));
-        fe.c(this.field_a, db.a(true, this.field_F.field_k), MatchConditionEntry.a(var4, (byte) 94), nd.field_b, false);
+        fe.b(this.field_a, db.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94));
+        fe.c(this.field_a, db.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94), nd.field_b, false);
     }
 
     private final void f(int param0) {
@@ -2462,7 +2462,7 @@ final class rk {
               }
               mv.field_d = mg.field_e.g(1);
               var11 = (CharSequence) ((Object) mv.field_d);
-              ft.field_p = k.a(var11, false);
+              IntPair.field_p = k.a(var11, false);
               vt.field_n = mg.field_e.readUnsignedByte(0);
               ov.field_g = kl.field_k;
               if (fu.field_g.a((byte) 50) != pt.field_db) {
@@ -2570,17 +2570,17 @@ final class rk {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          if (0 > this.field_p) {
-            this.field_p = PortalLossCondition.field_c.length;
+          if (0 > this.pageCount) {
+            this.pageCount = PortalLossCondition.field_c.length;
           }
-          if (param5 != this.field_N &&
+          if (param5 != this.pageIndex &&
             param5 >= 0 &&
-            param5 < this.field_p) {
-            this.field_N = param5;
+            param5 < this.pageCount) {
+            this.pageIndex = param5;
           }
-          if (this.field_N < 0 ||
-            this.field_N >= this.field_p) {
-            this.field_N = 0;
+          if (this.pageIndex < 0 ||
+            this.pageIndex >= this.pageCount) {
+            this.pageIndex = 0;
           }
           this.a((byte) -106, param3, param4, param1);
           if (null == this.field_hb) {
@@ -2602,8 +2602,8 @@ final class rk {
           this.j(-302977872);
           this.b(param2 - 62);
           this.field_O = param0;
-          if (this.field_N != 12) {
-            if (this.field_N == 13) {
+          if (this.pageIndex != 12) {
+            if (this.pageIndex == 13) {
               this.b(true);
             } else {
               this.m(0);
@@ -2629,10 +2629,10 @@ final class rk {
         }
     }
 
-    private final ft d(int param0, int param1) {
-        ft var3;
-        ft var4;
-        var4 = new ft(-1, -1);
+    private final IntPair d(int param0, int param1) {
+        IntPair var3;
+        IntPair var4;
+        var4 = new IntPair(-1, -1);
         var3 = var4;
         if (0 <= param0 &&
           param0 < ue.field_k.length &&
@@ -2641,8 +2641,8 @@ final class rk {
           if (param1 != 1) {
             this.field_o = false;
           }
-          var4.field_k = ue.field_k[param0].field_A;
-          var4.field_n = ue.field_k[param0].field_x;
+          var4.first = ue.field_k[param0].field_A;
+          var4.second = ue.field_k[param0].field_x;
           return var3;
         }
         return var3;
@@ -2650,9 +2650,9 @@ final class rk {
 
     private final int a(int param0, String[] param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int discarded$0 = 0;
-        ft discarded$1 = null;
-        ft discarded$2 = null;
-        ft discarded$3 = null;
+        IntPair discarded$1 = null;
+        IntPair discarded$2 = null;
+        IntPair discarded$3 = null;
         int stackIn_61_0 = 0;
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
@@ -2677,7 +2677,7 @@ final class rk {
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
-        ft var26 = null;
+        IntPair var26 = null;
         int var18Lifetime1;
         int var18Lifetime2;
         int var18Lifetime3;
@@ -2704,8 +2704,8 @@ final class rk {
           if (param5 != -1) {
             var26 = this.a(0, (byte) 80, param0, 0, param6, 0);
             var16 = var26;
-            if (var26 != null && (!(var26.field_k >= 0) ||
-              !(var26.field_n >= 0))) {
+            if (var26 != null && (!(var26.first >= 0) ||
+              !(var26.second >= 0))) {
               var16 = null;
             }
             var17 = this.a(0, (byte) 73, param0, 0, param6, 1);
@@ -2713,20 +2713,20 @@ final class rk {
           if (param5 == 5 &&
             var16 != null &&
             var17 != null) {
-            var11 = var11 - (this.field_db + ((ft) (var16)).field_k);
+            var11 = var11 - (this.field_db + ((IntPair) (var16)).first);
           }
           if (3 == param5 &&
             var16 != null &&
             var17 != null) {
-            var10_int = var10_int + (this.field_db + ((ft) (var16)).field_k);
+            var10_int = var10_int + (this.field_db + ((IntPair) (var16)).first);
           }
           if (param5 == 1 &&
             var16 != null &&
             var17 != null) {
-            var18 = (-((ft) (var16)).field_k + param3 - param8 >> 1) - ((ft) (var17)).field_k + param8;
-            var19 = param7 - ((ft) (var17)).field_n + var13;
+            var18 = (-((IntPair) (var16)).first + param3 - param8 >> 1) - ((IntPair) (var17)).first + param8;
+            var19 = param7 - ((IntPair) (var17)).second + var13;
             discarded$1 = this.a(var19, (byte) 46, param0, var18, param6, 2);
-            var12 = var12 + ((ft) (var16)).field_n;
+            var12 = var12 + ((IntPair) (var16)).second;
           }
           if (param2 != null) {
             var18Lifetime1 = var10_int;
@@ -2770,30 +2770,30 @@ final class rk {
           if (param5 == 3 &&
             var16 != null &&
             var17 != null) {
-            var18Lifetime3 = param8 - ((ft) (var17)).field_k;
-            var19Lifetime3 = -((ft) (var17)).field_n + param7;
-            if (((ft) (var16)).field_n <= var13) {
-              var19Lifetime3 = var19Lifetime3 + (var13 - ((ft) (var16)).field_n >> 1);
+            var18Lifetime3 = param8 - ((IntPair) (var17)).first;
+            var19Lifetime3 = -((IntPair) (var17)).second + param7;
+            if (((IntPair) (var16)).second <= var13) {
+              var19Lifetime3 = var19Lifetime3 + (var13 - ((IntPair) (var16)).second >> 1);
             }
             discarded$2 = this.a(var19Lifetime3, (byte) 52, param0, var18Lifetime3, param6, 2);
-            if (this.field_E + var13 < ((ft) (var16)).field_n) {
-              var14 = var14 + ((ft) (var16)).field_n;
+            if (this.field_E + var13 < ((IntPair) (var16)).second) {
+              var14 = var14 + ((IntPair) (var16)).second;
             } else {
               var14 = var14 + var13;
             }
           } else if (param5 == 5 &&
             var16 != null &&
             var17 != null) {
-            var18Lifetime3 = -((ft) (var16)).field_k - ((ft) (var17)).field_k + param3;
-            var19Lifetime3 = param7 - ((ft) (var17)).field_n;
-            if (var13 >= ((ft) (var16)).field_n) {
-              var19Lifetime3 = var19Lifetime3 + (-((ft) (var16)).field_n + var13 >> 1);
+            var18Lifetime3 = -((IntPair) (var16)).first - ((IntPair) (var17)).first + param3;
+            var19Lifetime3 = param7 - ((IntPair) (var17)).second;
+            if (var13 >= ((IntPair) (var16)).second) {
+              var19Lifetime3 = var19Lifetime3 + (-((IntPair) (var16)).second + var13 >> 1);
             }
             discarded$3 = this.a(var19Lifetime3, (byte) 68, param0, var18Lifetime3, param6, 2);
-            if (this.field_E + var13 >= ((ft) (var16)).field_n) {
+            if (this.field_E + var13 >= ((IntPair) (var16)).second) {
               var14 = var14 + var13;
             } else {
-              var14 = var14 + ((ft) (var16)).field_n;
+              var14 = var14 + ((IntPair) (var16)).second;
             }
           } else {
             var14 = var14 + var13;
@@ -2862,37 +2862,37 @@ final class rk {
     }
 
     final void d(byte param0) {
-        if (this.field_p < 0) {
+        if (this.pageCount < 0) {
           return;
         }
-        int var2 = this.field_C.field_k;
+        int var2 = this.field_C.first;
         if (param0 != -102) {
           this.field_g = -92;
         }
-        int var3 = this.field_C.field_n;
-        int var4 = this.field_V.field_k - var2;
-        int var5 = this.field_V.field_n - var3;
+        int var3 = this.field_C.second;
+        int var4 = this.field_V.first - var2;
+        int var5 = this.field_V.second - var3;
         fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, io.field_m, nd.field_b, this.field_A, this.field_e);
         this.g(120);
-        var2 = this.field_x.field_k;
-        var3 = this.field_x.field_n;
-        var4 = -var2 + this.field_K.field_k;
-        var5 = -var3 + this.field_K.field_n;
+        var2 = this.field_x.first;
+        var3 = this.field_x.second;
+        var4 = -var2 + this.field_K.first;
+        var5 = -var3 + this.field_K.second;
         fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, io.field_m, TutorialController.field_e, this.field_A, this.field_e);
         this.k(-107);
         this.l(param0 + 19);
         this.g((byte) 10);
     }
 
-    private final ft d(int param0, int param1, int param2, int param3) {
+    private final IntPair d(int param0, int param1, int param2, int param3) {
         if (param3 != 0) {
-          return (ft) null;
+          return (IntPair) null;
         }
         if (param1 == 0) {
-          return new ft(309, 81);
+          return new IntPair(309, 81);
         }
         if (param1 == 1) {
-          return new ft(0, 0);
+          return new IntPair(0, 0);
         }
         if (param1 == 2) {
           this.b(param2, (byte) 127, param0);

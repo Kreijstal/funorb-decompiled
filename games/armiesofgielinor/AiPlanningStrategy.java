@@ -465,7 +465,7 @@ abstract class AiPlanningStrategy {
           }
           if (decompiledFrameRemainder0) {
             if (ActionSpell.field_e == null) {
-              wq.field_a = dj.a(640, 0, ft.field_m, -36, 0, 480);
+              wq.field_a = dj.a(640, 0, IntPair.field_m, -36, 0, 480);
               if (var3 != 0) {
                 wq.field_a = ActionSpell.field_e.c(-1);
                 ds.a(2, 99);

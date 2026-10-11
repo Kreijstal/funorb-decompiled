@@ -190,7 +190,7 @@ final class ActionSpell extends Spell {
         bn.field_b = param0;
         ce.field_N = param0;
         dt.field_a = param2;
-        dm.field_D = param2;
+        MatchSetupPanel.field_D = param2;
         tq.field_a = true;
         so.field_b = null;
         int[] var4 = (int[]) null;

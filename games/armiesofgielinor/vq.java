@@ -94,7 +94,7 @@ final class vq {
             mi.field_G[0] = 5;
           } else if (no.field_J != 2) {
             if (no.field_J == 3) {
-              if (!ft.field_m.field_e) {
+              if (!IntPair.field_m.field_e) {
                 var3_int = iu.a(pf.field_d, tl.field_a, 7502, TaggedMapData.field_b, du.field_b);
               } else {
                 var3_int = iu.a(pf.field_d, ud.field_ab, 7502, TaggedMapData.field_b, du.field_b);
@@ -288,7 +288,7 @@ final class vq {
             var6Lifetime1 = TileMetadata.field_h[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = lg.a(wp.field_v[var4Lifetime3], true, (byte) -89);
-              var8Lifetime1 = -(var7Lifetime2 >> 1) + rk.field_B;
+              var8Lifetime1 = -(var7Lifetime2 >> 1) + InstructionsPanel.field_B;
               var5Lifetime4 = var5Lifetime4 + cp.field_a;
               lg.field_b[var4Lifetime3] = new int[4];
               lg.field_b[var4Lifetime3][0] = var8Lifetime1 - et.field_b;

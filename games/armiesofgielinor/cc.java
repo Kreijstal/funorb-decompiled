@@ -20,7 +20,7 @@ final class cc {
           if (param4 != -1) {
             field_b = -105;
           }
-          stackIn_3_0 = dm.a(param3, -1, param2, param1, false, param8, param6, param5, param9, false, param0, param7);
+          stackIn_3_0 = MatchSetupPanel.a(param3, -1, param2, param1, false, param8, param6, param5, param9, false, param0, param7);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

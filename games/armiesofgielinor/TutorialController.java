@@ -144,8 +144,8 @@ final class TutorialController {
             return stackIn_5_0;
           }
           if (this.tutorialStage == 7 &&
-            null != MoveEvent.field_G) {
-            stackIn_11_0 = MoveEvent.field_G.a(itemIndex, false);
+            null != MoveEvent.instructionsPanel) {
+            stackIn_11_0 = MoveEvent.instructionsPanel.getItemHeight(itemIndex, false);
             return stackIn_11_0;
           }
           if (this.tutorialStage == 7) {
@@ -153,8 +153,8 @@ final class TutorialController {
             return stackIn_14_0;
           }
           if (this.tutorialStage == 5 &&
-            null != MoveEvent.field_E) {
-            stackIn_20_0 = MoveEvent.field_E.a(false, itemIndex);
+            null != MoveEvent.matchSetupPanel) {
+            stackIn_20_0 = MoveEvent.matchSetupPanel.getItemHeight(false, itemIndex);
             return stackIn_20_0;
           }
           if (5 != this.tutorialStage) {
@@ -209,7 +209,7 @@ final class TutorialController {
               if (ih.field_p != null &&
                 tg.field_k == 0) {
                 KingBlackDragonEvent.field_A = 0;
-                ts.field_j = ih.field_p;
+                ts.currentSpellMenu = ih.field_p;
                 wj.field_q = 0;
               }
               ub.$cfr$intArgs$a$6d836999ad61(123, im.field_v[2]);
@@ -247,16 +247,16 @@ final class TutorialController {
                       if (tg.field_k != 0) {
                         ab.field_a = ev.field_d;
                         ev.field_d = pg.field_d.field_d[var2_int];
-                        ts.field_j = ct.field_o[ev.field_d];
-                        this.a((byte) 96, ev.field_d, (rg) null);
+                        ts.currentSpellMenu = ct.spellMenuById[ev.field_d];
+                        this.a((byte) 96, ev.field_d, (SpellMenuGroup) null);
                         return;
                       }
                       wj.field_q = 248;
                       ab.field_a = ev.field_d;
                       ev.field_d = pg.field_d.field_d[var2_int];
-                      ih.field_p = ct.field_o[ev.field_d];
-                      this.a((byte) 88, ev.field_d, (rg) null);
-                      if (ts.field_j != ih.field_p) {
+                      ih.field_p = ct.spellMenuById[ev.field_d];
+                      this.a((byte) 88, ev.field_d, (SpellMenuGroup) null);
+                      if (ts.currentSpellMenu != ih.field_p) {
                         ub.$cfr$intArgs$a$6d836999ad61(127, MoveAttackRequest.field_v[44]);
                         return;
                       }
@@ -291,18 +291,18 @@ final class TutorialController {
                     vl.field_n.writeCipheredOpcode(32161, 70);
                     vl.field_n.writeShort(true, ev.field_d + 2000);
                     pg.field_d.field_a[ev.field_d] = pg.field_d.field_a[ev.field_d] + 1;
-                    this.a((byte) 48, ev.field_d, (rg) null);
+                    this.a((byte) 48, ev.field_d, (SpellMenuGroup) null);
                     ub.$cfr$intArgs$a$6d836999ad61(58, im.field_v[2]);
                   }
                   return;
                 }
                 if (ml.a(MatchConditionEntry.a(212, (byte) 94), db.a(true, 165), 20, false)) {
-                  if (null != ts.field_j.field_j) {
-                    vu.field_O = ts.field_j;
+                  if (null != ts.currentSpellMenu.parent) {
+                    vu.field_O = ts.currentSpellMenu;
                     wj.field_q = 248;
                     KingBlackDragonEvent.field_A = -248;
-                    ts.field_j = ts.field_j.field_j;
-                    this.a((byte) 51, -1, ts.field_j);
+                    ts.currentSpellMenu = ts.currentSpellMenu.parent;
+                    this.a((byte) 51, -1, ts.currentSpellMenu);
                     ub.$cfr$intArgs$a$6d836999ad61(118, MoveAttackRequest.field_v[43]);
                     ab.field_a = ev.field_d;
                     ev.field_d = -1;
@@ -312,8 +312,8 @@ final class TutorialController {
                 boolean decompiledFrameCompleted1 = true;
                 boolean decompiledFrameCompleted0 = true;
                 boolean decompiledFrameRemainder0 = true;
-                if (ts.field_j.field_a != null) {
-                  var3 = ts.field_j.field_a.length;
+                if (ts.currentSpellMenu.children != null) {
+                  var3 = ts.currentSpellMenu.children.length;
                   var4 = 0;
                   while (var3 > var4) {
                     var5 = 165 + (int)(Math.sin(6.283185307179586 * (double)var4 / (double)var3) * 90.0);
@@ -326,11 +326,11 @@ final class TutorialController {
                       break;
                     }
                     if (stackIn_103_0) {
-                      vu.field_O = ts.field_j;
-                      ts.field_j = ts.field_j.field_a[var4];
+                      vu.field_O = ts.currentSpellMenu;
+                      ts.currentSpellMenu = ts.currentSpellMenu.children[var4];
                       wj.field_q = 248;
                       KingBlackDragonEvent.field_A = 248;
-                      this.a((byte) 92, -1, ts.field_j);
+                      this.a((byte) 92, -1, ts.currentSpellMenu);
                       ub.$cfr$intArgs$a$6d836999ad61(79, MoveAttackRequest.field_v[42]);
                       ab.field_a = ev.field_d;
                       ev.field_d = -1;
@@ -344,8 +344,8 @@ final class TutorialController {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameCompleted1) &&
-                  (ts.field_j.field_i != null)) {
-                  var3Lifetime2 = ts.field_j.field_i.length;
+                  (ts.currentSpellMenu.spellIds != null)) {
+                  var3Lifetime2 = ts.currentSpellMenu.spellIds.length;
                   var4Lifetime3 = 0;
                   while (var4Lifetime3 < var3Lifetime2) {
                     var5Lifetime1 = (int)(Math.sin(6.283185307179586 * (double)var4Lifetime3 / (double)var3Lifetime2) * 90.0) + 165;
@@ -362,10 +362,10 @@ final class TutorialController {
                       continue;
                     }
                     ab.field_a = ev.field_d;
-                    ev.field_d = ts.field_j.field_i[var4Lifetime3];
+                    ev.field_d = ts.currentSpellMenu.spellIds[var4Lifetime3];
                     wj.field_q = 248;
                     TelepopEvent.field_D = true;
-                    this.a((byte) 90, ev.field_d, (rg) null);
+                    this.a((byte) 90, ev.field_d, (SpellMenuGroup) null);
                     ub.$cfr$intArgs$a$6d836999ad61(113, MoveAttackRequest.field_v[45]);
                     ub.$cfr$intArgs$a$6d836999ad61(124, im.field_v[12]);
                     return;
@@ -373,7 +373,7 @@ final class TutorialController {
                 }
                 if ((decompiledFrameCompleted1) &&
                   (decompiledFrameCompleted0)) {
-                  stackIn_123_0Lifetime1 = this.a(ts.field_j, (byte) 83);
+                  stackIn_123_0Lifetime1 = this.a(ts.currentSpellMenu, (byte) 83);
                 }
                 if (var7 == 0) {
                   break;
@@ -387,7 +387,7 @@ final class TutorialController {
                 var3Lifetime1 = (hh.field_c - 312) * ou.field_c / 291;
               }
               if (wg.a(-33, db.a(param0, 34), db.a(param0, 292), MatchConditionEntry.a(64, (byte) 94), MatchConditionEntry.a(380, (byte) 94))) {
-                discarded$0 = this.a(bm.field_D, true, var3Lifetime1, 0, 0, 97);
+                discarded$0 = this.a(bm.spellMenuRoot, true, var3Lifetime1, 0, 0, 97);
               }
               if (fa.field_j != 2 &&
                 wg.a(-33, db.a(true, 279), db.a(true, 293), MatchConditionEntry.a(68 + ou.field_c, (byte) 94), MatchConditionEntry.a(60 - (-ou.field_c - 24), (byte) 94))) {
@@ -587,8 +587,8 @@ final class TutorialController {
           if (param0 >= -117) {
             return;
           }
-          if (null != MoveEvent.field_G) {
-            MoveEvent.field_G.d((byte) -102);
+          if (null != MoveEvent.instructionsPanel) {
+            MoveEvent.instructionsPanel.d((byte) -102);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -755,7 +755,7 @@ final class TutorialController {
         RuntimeException decompiledCaughtException = null;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (MoveEvent.field_G == null) {
+          if (MoveEvent.instructionsPanel == null) {
             return;
           }
           if (MoveEvent.tutorialStageItems != null &&
@@ -779,7 +779,7 @@ final class TutorialController {
                 }
                 var5++;
               }
-              MoveEvent.field_G.a(this.f(true), var2_int != 0, 100, this.selectionState.selectedIndex, var3 != 0, ij.field_y);
+              MoveEvent.instructionsPanel.a(this.f(true), var2_int != 0, 100, this.selectionState.selectedIndex, var3 != 0, ij.field_y);
               return;
             }
             return;
@@ -889,7 +889,7 @@ final class TutorialController {
         }
     }
 
-    private final int a(rg param0, boolean param1, int param2, int param3, int param4, int param5) {
+    private final int a(SpellMenuGroup param0, boolean param1, int param2, int param3, int param4, int param5) {
         int stackIn_25_0 = 0;
         int stackIn_25_1 = 0;
         int stackIn_42_0 = 0;
@@ -914,9 +914,9 @@ final class TutorialController {
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameCompleted2 = true;
           boolean decompiledFrameCompleted1 = true;
-          if (null != param0.field_a) {
+          if (null != param0.children) {
             var7_int = 0;
-            while (!(param0.field_a.length <= var7_int)) {
+            while (!(param0.children.length <= var7_int)) {
               stackIn_25_0 = 0;
               stackIn_25_1 = ~param4;
               if (var9 == 0) {
@@ -929,12 +929,12 @@ final class TutorialController {
                   }
                   param3 += 40;
                 }
-                param4 = this.a(param0.field_a[var7_int], false, param2, param3, param4, 53);
+                param4 = this.a(param0.children[var7_int], false, param2, param3, param4, 53);
                 var7_int++;
                 continue;
               }
               if (stackIn_25_0 > stackIn_25_1) {
-                stackIn_46_0 = ~pg.field_d.field_a[param0.field_i[var7_int]];
+                stackIn_46_0 = ~pg.field_d.field_a[param0.spellIds[var7_int]];
                 decompiledFrameCompleted3 = false;
                 break;
               }
@@ -944,16 +944,16 @@ final class TutorialController {
           }
           if ((decompiledFrameCompleted3) &&
             (decompiledFrameCompleted2) &&
-            (null != param0.field_i)) {
+            (null != param0.spellIds)) {
             var7_intLifetime1 = 0;
             while (true) {
               stackIn_25_0Lifetime1 = ~var7_intLifetime1;
-              stackIn_25_1Lifetime1 = ~param0.field_i.length;
+              stackIn_25_1Lifetime1 = ~param0.spellIds.length;
               if (stackIn_25_0Lifetime1 <= stackIn_25_1Lifetime1) {
                 decompiledFrameCompleted1 = false;
                 break;
               }
-              stackIn_46_0 = ~pg.field_d.field_a[param0.field_i[var7_intLifetime1]];
+              stackIn_46_0 = ~pg.field_d.field_a[param0.spellIds[var7_intLifetime1]];
               if (var9 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
@@ -972,10 +972,10 @@ final class TutorialController {
             if ((decompiledFrameCompleted1) &&
               (decompiledFrameCompleted0)) {
               ab.field_a = ev.field_d;
-              ev.field_d = param0.field_i[var7_intLifetime1];
+              ev.field_d = param0.spellIds[var7_intLifetime1];
               TelepopEvent.field_D = true;
-              ts.field_j = param0;
-              this.a((byte) 62, ev.field_d, (rg) null);
+              ts.currentSpellMenu = param0;
+              this.a((byte) 62, ev.field_d, (SpellMenuGroup) null);
               ub.$cfr$intArgs$a$6d836999ad61(59, MoveAttackRequest.field_v[45]);
               ub.$cfr$intArgs$a$6d836999ad61(38, im.field_v[12]);
               stackIn_42_0 = -1;
@@ -1358,7 +1358,7 @@ final class TutorialController {
                                                                                                                                             return;
                                                                                                                                           }
                                                                                                                                           if (DamageEvent.g(116)) {
-                                                                                                                                            MoveAttackAction.a(0, rg.field_l, param0, (byte) 90, true);
+                                                                                                                                            MoveAttackAction.a(0, SpellMenuGroup.field_l, param0, (byte) 90, true);
                                                                                                                                             if (var9 == 0) {
                                                                                                                                               return;
                                                                                                                                             }
@@ -2238,7 +2238,7 @@ final class TutorialController {
             if (!this.selectionState.hasActivationInput((byte) 88)) {
               return;
             }
-            this.a((byte) 93, ev.field_d, ts.field_j);
+            this.a((byte) 93, ev.field_d, ts.currentSpellMenu);
             var6Lifetime2 = param0 ? 1 : 0;
             CipherPacketBuffer.a(var6Lifetime2 != 0, 18, 1, 0);
             if (var9 == 0) {
@@ -2299,7 +2299,7 @@ final class TutorialController {
         }
     }
 
-    private final void a(byte param0, int param1, rg param2) {
+    private final void a(byte param0, int param1, SpellMenuGroup param2) {
         int stackIn_16_0 = 0;
         int stackIn_16_1 = 0;
         int stackIn_16_2 = 0;
@@ -2336,10 +2336,10 @@ final class TutorialController {
           var7 = 0;
           if (null != param2 &&
             0 > param1) {
-            var5 = param2.field_g;
-            var6 = param2.field_f;
+            var5 = param2.description;
+            var6 = param2.iconIndex;
             var7 = 1;
-            var4 = param2.field_k;
+            var4 = param2.label;
           } else {
             if (-1 < param1) {
               var4 = fq.field_f[param1];
@@ -2652,10 +2652,10 @@ final class TutorialController {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (MoveEvent.field_E == null) {
+          if (MoveEvent.matchSetupPanel == null) {
             return;
           }
-          MoveEvent.field_E.a(this.selectionState.selectedIndex, (byte) -28, t.field_e, wf.field_D, vg.field_m, mg.field_g, r.field_B, this.f(true));
+          MoveEvent.matchSetupPanel.setOptions(this.selectionState.selectedIndex, (byte) -28, t.field_e, wf.field_D, vg.field_m, mg.field_g, r.field_B, this.f(true));
           var2_int = -9 % ((61 - param0) / 60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2677,8 +2677,8 @@ final class TutorialController {
         }
     }
 
-    private final int a(rg param0, boolean param1, int param2, int param3) {
-        rg stackIn_10_1 = null;
+    private final int a(SpellMenuGroup param0, boolean param1, int param2, int param3) {
+        SpellMenuGroup stackIn_10_1 = null;
         boolean stackIn_11_2 = false;
         int stackIn_14_0 = 0;
         int stackIn_25_0 = 0;
@@ -2692,13 +2692,13 @@ final class TutorialController {
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = 0;
-          boolean decompiledSharedTail0 = (param0.field_j != null);
+          boolean decompiledSharedTail0 = (param0.parent != null);
           if (!decompiledSharedTail0) {
             SoftwareRaster.f(db.a(true, 38), MatchConditionEntry.a(340, (byte) 94), 254, 36, 2500134);
             decompiledSharedTail0 = (var6 != 0);
           }
           if (decompiledSharedTail0) {
-            stackIn_10_1 = param0.field_j;
+            stackIn_10_1 = param0.parent;
             if (256 == param3) {
               stackIn_11_2 = false;
             } else {
@@ -2711,18 +2711,18 @@ final class TutorialController {
             stackIn_14_0 = 49;
             return stackIn_14_0;
           }
-          param0.field_c.h(db.a(true, var5_int * 50 + 50), MatchConditionEntry.a(348, (byte) 94));
+          param0.icon.h(db.a(true, var5_int * 50 + 50), MatchConditionEntry.a(348, (byte) 94));
           km.field_h[1].h(db.a(true, 50 * var5_int + 30 + 19), MatchConditionEntry.a(347, (byte) 94));
           SoftwareRaster.a(db.a(true, 30 + var5_int * 50 + 30), MatchConditionEntry.a(358, (byte) 94), 12, 2500134, -param3 + 256);
           if (ml.a(MatchConditionEntry.a(359, (byte) 94), db.a(true, 30 + (50 * var5_int + 30)), 10, false)) {
-            na.field_F = param0.field_f + 400;
+            na.field_F = param0.iconIndex + 400;
             if (!param1) {
-              vi.field_f = fo.a(4800, rr.field_a, new String[]{param0.field_k});
+              vi.field_f = fo.a(4800, rr.field_a, new String[]{param0.label});
               if (var6 != 0) {
-                vi.field_f = param0.field_k;
+                vi.field_f = param0.label;
               }
             } else {
-              vi.field_f = param0.field_k;
+              vi.field_f = param0.label;
             }
           }
           stackIn_25_0 = var5_int + 1;
@@ -3362,8 +3362,8 @@ final class TutorialController {
               18 != this.tutorialStage &&
               this.tutorialStage != 20) {
               if (this.tutorialStage == 7 &&
-                MoveEvent.field_G != null) {
-                stackIn_51_0 = MoveEvent.field_G.g(-95, itemIndex);
+                MoveEvent.instructionsPanel != null) {
+                stackIn_51_0 = MoveEvent.instructionsPanel.getItemTopY(-95, itemIndex);
                 return stackIn_51_0;
               }
               if (this.tutorialStage == 7) {
@@ -3374,8 +3374,8 @@ final class TutorialController {
                 this.selectionState = (UiSelectionState) null;
               }
               if (this.tutorialStage == 5 &&
-                MoveEvent.field_E != null) {
-                stackIn_65_0 = MoveEvent.field_E.a(itemIndex, 1084326849);
+                MoveEvent.matchSetupPanel != null) {
+                stackIn_65_0 = MoveEvent.matchSetupPanel.getItemTopY(itemIndex, 1084326849);
                 return stackIn_65_0;
               }
               if (5 == this.tutorialStage) {
@@ -3560,7 +3560,7 @@ final class TutorialController {
         int discarded$1 = 0;
         int discarded$2 = 0;
         int discarded$3 = 0;
-        rg stackIn_56_0;
+        SpellMenuGroup stackIn_56_0;
         int stackIn_56_1;
         int stackIn_56_2;
         int stackIn_56_3;
@@ -3650,12 +3650,12 @@ final class TutorialController {
           if (tg.field_k == 0) {
             SoftwareRaster.f(db.a(true, 34), MatchConditionEntry.a(64, (byte) 94), db.a(true, 296), MatchConditionEntry.a(380, (byte) 94));
             if (vu.field_O == null ||
-              ts.field_j == vu.field_O.field_j ||
-              vu.field_O == ts.field_j.field_j) {
+              ts.currentSpellMenu == vu.field_O.parent ||
+              vu.field_O == ts.currentSpellMenu.parent) {
               if (0 < var2_int) {
-                na.field_F = vu.field_O.a(-256 + var2_int, var3, 0, 40, this, na.field_F, ts.field_j.field_e);
+                na.field_F = vu.field_O.drawRadialMenu(-256 + var2_int, var3, 0, 40, this, na.field_F, ts.currentSpellMenu.indexInParent);
               }
-              stackIn_56_0 = ts.field_j;
+              stackIn_56_0 = ts.currentSpellMenu;
               stackIn_56_1 = var2_int;
               stackIn_56_2 = var3;
               stackIn_56_3 = 0;
@@ -3663,39 +3663,39 @@ final class TutorialController {
               stackIn_56_5 = this;
               stackIn_56_6 = na.field_F;
               if (vu.field_O != null) {
-                stackIn_57_7 = vu.field_O.field_e;
+                stackIn_57_7 = vu.field_O.indexInParent;
               } else {
                 stackIn_57_7 = -1;
               }
-              na.field_F = ((rg) (Object) stackIn_56_0).a(stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_56_4, this, stackIn_56_6, stackIn_57_7);
+              na.field_F = ((SpellMenuGroup) (Object) stackIn_56_0).drawRadialMenu(stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_56_4, this, stackIn_56_6, stackIn_57_7);
               if (!(var2_int >= 0)) {
-                na.field_F = vu.field_O.a(256 + var2_int, var3, 0, 40, this, na.field_F, vu.field_O.field_e);
+                na.field_F = vu.field_O.drawRadialMenu(256 + var2_int, var3, 0, 40, this, na.field_F, vu.field_O.indexInParent);
                 if (var8 != 0) {
                   if (0 < var2_int) {
-                    na.field_F = vu.field_O.a(0, var3, var2_int - 256, 40, this, na.field_F, -1);
+                    na.field_F = vu.field_O.drawRadialMenu(0, var3, var2_int - 256, 40, this, na.field_F, -1);
                   }
-                  ts.field_j.a(0, var3, var2_int, param0 ^ 76, this, na.field_F, -1);
+                  ts.currentSpellMenu.drawRadialMenu(0, var3, var2_int, param0 ^ 76, this, na.field_F, -1);
                 }
               }
             } else {
               if (0 < var2_int) {
-                na.field_F = vu.field_O.a(0, var3, var2_int - 256, 40, this, na.field_F, -1);
+                na.field_F = vu.field_O.drawRadialMenu(0, var3, var2_int - 256, 40, this, na.field_F, -1);
               }
-              ts.field_j.a(0, var3, var2_int, param0 ^ 76, this, na.field_F, -1);
+              ts.currentSpellMenu.drawRadialMenu(0, var3, var2_int, param0 ^ 76, this, na.field_F, -1);
             }
             SoftwareRaster.a();
             fe.b(l.field_e, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, true);
             fe.a(l.field_e, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, nd.field_b, true);
             if (var2_int >= 0) {
-              discarded$1 = this.a(ts.field_j, true, -125, -var2_int + 256);
+              discarded$1 = this.a(ts.currentSpellMenu, true, -125, -var2_int + 256);
             }
             if (var2_int < 0 ||
               var8 != 0) {
               discarded$2 = this.a(vu.field_O, true, -127, -var2_int);
             }
             if (vi.field_f == null) {
-              fe.b(ts.field_j.field_k, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, true);
-              fe.a(ts.field_j.field_k, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, field_e, true);
+              fe.b(ts.currentSpellMenu.label, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, true);
+              fe.a(ts.currentSpellMenu.label, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, field_e, true);
               decompiledFrameRemainder0 = (var8 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -3718,7 +3718,7 @@ final class TutorialController {
               SoftwareRaster.f(db.a(true, 279), MatchConditionEntry.a(67, (byte) 94), 14, 310, 1250067);
               mp.field_Jb.g(db.a(true, 280), MatchConditionEntry.a(68, (byte) 94), 128);
             }
-            discarded$3 = this.a(0, bm.field_D, true, 0, var4, (byte) 116);
+            discarded$3 = this.a(0, bm.spellMenuRoot, true, 0, var4, (byte) 116);
             this.c(0);
             SoftwareRaster.a();
             fe.b(ou.field_j, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, true);
@@ -3771,11 +3771,11 @@ final class TutorialController {
           if ((stackIn_111_0 != 0 ||
             br.field_f[82] &&
             !(2 > hi.field_j)) && tg.field_k == 0) {
-            if (null == ts.field_j.field_j) {
+            if (null == ts.currentSpellMenu.parent) {
               rs.field_n.a(ae.field_x, db.a(true, 40), MatchConditionEntry.a(284, (byte) 94), 250, 55, 16777215, -1, var2_int + 256, 1, 1, 0);
             }
             if (null != vu.field_O &&
-              vu.field_O.field_j == null) {
+              vu.field_O.parent == null) {
               rs.field_n.a(ae.field_x, db.a(true, 40), MatchConditionEntry.a(284, (byte) 94), 250, 55, 16777215, -1, var2_int, 1, 1, 0);
             }
           }
@@ -4570,13 +4570,13 @@ final class TutorialController {
         int stackIn_248_1 = 0;
         int stackIn_260_0 = 0;
         int stackIn_261_1 = 0;
-        rg stackIn_284_0 = null;
-        rg stackIn_284_1 = null;
+        SpellMenuGroup stackIn_284_0 = null;
+        SpellMenuGroup stackIn_284_1 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int[] var3_ref_int__ = null;
-        rg var3_ref_rg = null;
+        SpellMenuGroup var3_ref_rg = null;
         int var3 = 0;
         int var4 = 0;
         int var2_intLifetime1;
@@ -4787,7 +4787,7 @@ final class TutorialController {
                     if (0 == KingBlackDragonEvent.field_A) {
                       vu.field_O = null;
                       if (ih.field_p != null) {
-                        if (ts.field_j == ih.field_p) {
+                        if (ts.currentSpellMenu == ih.field_p) {
                           ih.field_p = null;
                           decompiledFrameRemainder2 = (var4 != 0);
                         }
@@ -4797,21 +4797,21 @@ final class TutorialController {
                             boolean decompiledFrameRemainder1 = true;
                             boolean decompiledFrameRemainder0 = true;
                             if (var3_ref_rg != null) {
-                              stackIn_284_0 = var3_ref_rg.field_j;
-                              stackIn_284_1 = ts.field_j;
+                              stackIn_284_0 = var3_ref_rg.parent;
+                              stackIn_284_1 = ts.currentSpellMenu;
                               decompiledFrameRemainder0 = (var4 == 0);
                               if ((decompiledFrameRemainder0) &&
                                 (stackIn_284_0 != stackIn_284_1)) {
-                                var3_ref_rg = var3_ref_rg.field_j;
+                                var3_ref_rg = var3_ref_rg.parent;
                                 continue;
                               }
                             }
                             if ((decompiledFrameRemainder0) &&
                               (decompiledFrameRemainder1 = (var3_ref_rg != null))) {
-                              vu.field_O = ts.field_j;
-                              ts.field_j = var3_ref_rg;
+                              vu.field_O = ts.currentSpellMenu;
+                              ts.currentSpellMenu = var3_ref_rg;
                               KingBlackDragonEvent.field_A = 240;
-                              stackIn_284_0 = ts.field_j;
+                              stackIn_284_0 = ts.currentSpellMenu;
                               stackIn_284_1 = ih.field_p;
                             }
                             if (decompiledFrameRemainder1) {
@@ -4827,8 +4827,8 @@ final class TutorialController {
                                 break;
                               }
                             }
-                            vu.field_O = ts.field_j;
-                            ts.field_j = ts.field_j.field_j;
+                            vu.field_O = ts.currentSpellMenu;
+                            ts.currentSpellMenu = ts.currentSpellMenu.parent;
                             KingBlackDragonEvent.field_A = -240;
                             ub.$cfr$intArgs$a$6d836999ad61(41, MoveAttackRequest.field_v[45]);
                             break;
@@ -4938,7 +4938,7 @@ final class TutorialController {
         }
     }
 
-    private final int a(int param0, rg param1, boolean param2, int param3, int param4, byte param5) {
+    private final int a(int param0, SpellMenuGroup param1, boolean param2, int param3, int param4, byte param5) {
         boolean stackIn_7_0 = false;
         int stackIn_23_0 = 0;
         int stackIn_40_0;
@@ -4965,9 +4965,9 @@ final class TutorialController {
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameCompleted1 = true;
-          if (param1.field_a != null) {
+          if (param1.children != null) {
             var7_int = 0;
-            while (!(var7_int >= param1.field_a.length)) {
+            while (!(var7_int >= param1.children.length)) {
               stackOut_6_0 = param2;
               stackIn_23_0 = stackOut_6_0 ? 1 : 0;
               stackIn_7_0 = stackOut_6_0;
@@ -4983,13 +4983,13 @@ final class TutorialController {
                 var8 = -param4 + param0 - (-7 - 70 * (param3 >> 2));
                 if (0 < var8 &&
                   var8 < 354) {
-                  fe.c(param1.field_a[var7_int].field_k, db.a(true, 152), MatchConditionEntry.a(var8 + 55, (byte) 94), field_e, true);
-                  var9 = -30 + (270 + (-(nr.field_e.a(param1.field_a[var7_int].field_k) >> 1) - 25) >> 1);
+                  fe.c(param1.children[var7_int].label, db.a(true, 152), MatchConditionEntry.a(var8 + 55, (byte) 94), field_e, true);
+                  var9 = -30 + (270 + (-(nr.field_e.a(param1.children[var7_int].label) >> 1) - 25) >> 1);
                   fm.a(wc.field_Q, var9, db.a(true, 50), MatchConditionEntry.a(38 + var8, (byte) 94), -66);
                   fm.a(wc.field_Q, var9, db.a(true, 255 - var9), MatchConditionEntry.a(var8 + 38, (byte) 94), -126);
                 }
               }
-              param3 = this.a(param0, param1.field_a[var7_int], false, param3, param4, (byte) 126);
+              param3 = this.a(param0, param1.children[var7_int], false, param3, param4, (byte) 126);
               var7_int++;
             }
           }
@@ -4998,10 +4998,10 @@ final class TutorialController {
           }
           boolean decompiledFrameCompleted0 = true;
           var7_intLifetime1 = stackIn_23_0;
-          if (param1.field_i != null) {
+          if (param1.spellIds != null) {
             var8Lifetime1 = 0;
-            while (!(var8Lifetime1 >= param1.field_i.length)) {
-              stackIn_48_0 = pg.field_d.field_a[param1.field_i[var8Lifetime1]];
+            while (!(var8Lifetime1 >= param1.spellIds.length)) {
+              stackIn_48_0 = pg.field_d.field_a[param1.spellIds[var8Lifetime1]];
               if (var10 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
@@ -5014,17 +5014,17 @@ final class TutorialController {
                   stackIn_40_1 = MatchConditionEntry.a(-3 + (var9Lifetime1 + 60), (byte) 94);
                   stackIn_40_2 = 51;
                   stackIn_40_3 = 63;
-                  if (param1.field_i[var8Lifetime1] != ev.field_d) {
+                  if (param1.spellIds[var8Lifetime1] != ev.field_d) {
                     stackIn_41_4 = 2236962;
                   } else {
                     stackIn_41_4 = 5592405;
                   }
                   SoftwareRaster.f(stackIn_40_0, stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4);
-                  BattleCharacter.field_h[uc.spellDefinitions[param1.field_i[var8Lifetime1]][2]].g(db.a(true, 50 + (param3 & 3) * 58), MatchConditionEntry.a(63 + var9Lifetime1, (byte) 94));
+                  BattleCharacter.field_h[uc.spellDefinitions[param1.spellIds[var8Lifetime1]][2]].g(db.a(true, 50 + (param3 & 3) * 58), MatchConditionEntry.a(63 + var9Lifetime1, (byte) 94));
                   km.field_h[0].g(db.a(true, (3 & param3) * 58 + 47), MatchConditionEntry.a(60 + var9Lifetime1, (byte) 94));
-                  en.field_E.c(Integer.toString(pg.field_d.field_a[param1.field_i[var8Lifetime1]]), db.a(true, 70 + (3 & param3) * 58), MatchConditionEntry.a(var9Lifetime1 + 60 + 55, (byte) 94), 16777215, 0);
+                  en.field_E.c(Integer.toString(pg.field_d.field_a[param1.spellIds[var8Lifetime1]]), db.a(true, 70 + (3 & param3) * 58), MatchConditionEntry.a(var9Lifetime1 + 60 + 55, (byte) 94), 16777215, 0);
                   if (ml.a(MatchConditionEntry.a(60 + var9Lifetime1 + 23, (byte) 94), db.a(true, 70 + (3 & param3) * 58), 22, false)) {
-                    na.field_F = 200 + param1.field_i[var8Lifetime1];
+                    na.field_F = 200 + param1.spellIds[var8Lifetime1];
                   }
                 }
                 param3++;
@@ -5322,8 +5322,8 @@ final class TutorialController {
               this.tutorialStage != 18 &&
               20 != this.tutorialStage) {
               if (7 == this.tutorialStage &&
-                null != MoveEvent.field_G) {
-                stackIn_48_0 = MoveEvent.field_G.a(itemIndex, (byte) 4);
+                null != MoveEvent.instructionsPanel) {
+                stackIn_48_0 = MoveEvent.instructionsPanel.getItemLeftX(itemIndex, (byte) 4);
                 return stackIn_48_0;
               }
               if (7 == this.tutorialStage) {
@@ -5331,8 +5331,8 @@ final class TutorialController {
                 return stackIn_46_0;
               }
               if (this.tutorialStage == 5 &&
-                MoveEvent.field_E != null) {
-                stackIn_59_0 = MoveEvent.field_E.a(itemIndex, true);
+                MoveEvent.matchSetupPanel != null) {
+                stackIn_59_0 = MoveEvent.matchSetupPanel.getItemLeftX(itemIndex, true);
                 return stackIn_59_0;
               }
               if (5 != this.tutorialStage) {
@@ -5656,8 +5656,8 @@ final class TutorialController {
                               }
                             }
                             if (decompiledFrameRemainder0) {
-                              if (null != MoveEvent.field_E) {
-                                MoveEvent.field_E.d((byte) -73);
+                              if (null != MoveEvent.matchSetupPanel) {
+                                MoveEvent.matchSetupPanel.d((byte) -73);
                               }
                               return;
                             }
@@ -5913,7 +5913,7 @@ final class TutorialController {
         }
     }
 
-    private final int a(rg param0, byte param1) {
+    private final int a(SpellMenuGroup param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -5925,8 +5925,8 @@ final class TutorialController {
         try {
           var3_int = 0;
           var4 = -24 / ((-4 - param1) / 55);
-          if (param0.field_j != null) {
-            var3_int = this.a(param0.field_j, (byte) -88);
+          if (param0.parent != null) {
+            var3_int = this.a(param0.parent, (byte) -88);
           }
           if (ml.a(MatchConditionEntry.a(359, (byte) 94), db.a(true, 30 + var3_int * 50 + 30), 10, false)) {
             ih.field_p = param0;
@@ -5977,8 +5977,8 @@ final class TutorialController {
               this.tutorialStage != 18 &&
               20 != this.tutorialStage) {
               if (this.tutorialStage == 7 &&
-                MoveEvent.field_G != null) {
-                stackIn_43_0 = MoveEvent.field_G.a(false, itemIndex);
+                MoveEvent.instructionsPanel != null) {
+                stackIn_43_0 = MoveEvent.instructionsPanel.getItemRightX(false, itemIndex);
                 return stackIn_43_0;
               }
               if (this.tutorialStage == 7) {
@@ -5986,8 +5986,8 @@ final class TutorialController {
                 return stackIn_48_0;
               }
               if (this.tutorialStage == 5 &&
-                null != MoveEvent.field_E) {
-                stackIn_54_0 = MoveEvent.field_E.b(true, itemIndex);
+                null != MoveEvent.matchSetupPanel) {
+                stackIn_54_0 = MoveEvent.matchSetupPanel.getItemRightX(true, itemIndex);
                 return stackIn_54_0;
               }
               if (5 == this.tutorialStage) {

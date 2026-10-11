@@ -179,7 +179,7 @@ final class vo implements Runnable {
         try {
           var3_int = 33 / ((19 - param0) / 63);
           var4 = 0;
-          var5 = rk.field_r;
+          var5 = InstructionsPanel.field_r;
           while (var4 < nb.field_h.length) {
             var6 = cj.field_k[var4];
             if (var6 < 0) {

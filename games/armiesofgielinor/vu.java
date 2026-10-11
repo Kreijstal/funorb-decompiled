@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vu extends fw {
-    static rg field_O;
+    static SpellMenuGroup field_O;
     static je field_Q;
     static java.applet.Applet field_L;
     static String field_P;
@@ -25,7 +25,7 @@ final class vu extends fw {
 
     public static void a(int param0) {
         if (param0 < 43) {
-          field_O = (rg) null;
+          field_O = (SpellMenuGroup) null;
         }
         field_Q = null;
         field_O = null;

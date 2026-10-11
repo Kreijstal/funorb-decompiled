@@ -155,7 +155,7 @@ final class DeathEvent extends GameEvent {
           no.field_P.field_y = SoftwareRaster.field_l;
           ku.field_J.b();
           SoftwareRaster.b();
-          dm.a(-1, -1, param1, -1, false, param0, -1, false, 0, false, 0, param2);
+          MatchSetupPanel.a(-1, -1, param1, -1, false, param0, -1, false, 0, false, 0, param2);
           no.field_P.b();
           if (param3 == 17813) {
             stackIn_4_0 = ew.a((byte) 107, ku.field_J);

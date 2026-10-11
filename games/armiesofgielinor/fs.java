@@ -71,7 +71,7 @@ final class fs {
               var10 != vs.field_e[param5 + ks.field_y].getExplicitOwner((byte) -75)) {
               var11 = var11 | 8;
             }
-            dm.a(var10, false, param0 + 20, param4 + 40, var11, false);
+            MatchSetupPanel.a(var10, false, param0 + 20, param4 + 40, var11, false);
           }
           var10Lifetime1 = CipherPacketBuffer.currentBattlefield.getTileEffects(31, param8, param6, -1);
           if ((2 & var10Lifetime1) == 0) {

@@ -20,11 +20,11 @@ abstract class pt extends sf {
     final static void c(int param0, int param1, int param2) {
         if (param2 < 1) {
           field_db = (h) null;
-          rk.field_B = param0;
+          InstructionsPanel.field_B = param0;
           ar.field_C = param1;
           return;
         }
-        rk.field_B = param0;
+        InstructionsPanel.field_B = param0;
         ar.field_C = param1;
     }
 

@@ -1279,11 +1279,11 @@ final class em {
                 }
                 var2 = fk.a(false, "REWARD");
                 if (null != var2) {
-                  ft.field_l = uu.a(var2, (byte) -114);
+                  IntPair.field_l = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "REWARD_TITLE");
                 if (null != var2) {
-                  rk.field_gb = uu.a(var2, (byte) -124);
+                  InstructionsPanel.field_gb = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "QUICKSAVE_TITLE");
                 if (var2 != null) {
@@ -1709,7 +1709,7 @@ final class em {
                 }
                 var2 = fk.a(false, "BUTTON_EQUIPMENT");
                 if (null != var2) {
-                  dm.field_x = uu.a(var2, (byte) -107);
+                  MatchSetupPanel.field_x = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "HOVER_GOD");
                 if (var2 != null) {
@@ -4883,7 +4883,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TTREEN_MUTAGENS");
                 if (null != var2) {
-                  rg.field_d = uu.a(var2, (byte) 50);
+                  SpellMenuGroup.field_d = uu.a(var2, (byte) 50);
                 }
                 var2 = fk.a(false, "TTREED_INVENTORY");
                 if (null != var2) {
@@ -5516,7 +5516,7 @@ final class em {
                 }
                 var2 = fk.a(false, "caption3");
                 if (null != var2) {
-                  ft.field_o = uu.a(var2, (byte) -112);
+                  IntPair.field_o = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "caption4");
                 if (var2 != null) {
@@ -5718,7 +5718,7 @@ final class em {
                 vs.field_e[ks.field_y + param4].getExplicitOwner((byte) -55) != var10) {
                 var11 = var11 | 8;
               }
-              dm.a(var10, false, 20 + param3, param7 + 40, var11, true);
+              MatchSetupPanel.a(var10, false, 20 + param3, param7 + 40, var11, true);
             }
             regionExit1: {
               var10 = fn.field_Q[vs.field_e[param4].terrainType];

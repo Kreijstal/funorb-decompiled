@@ -21,7 +21,7 @@ final class io extends IntrusiveNode {
 
     final static void a(wp param0, byte param1) {
         try {
-          ft.field_q = param0;
+          IntPair.field_q = param0;
           if (param1 != -34) {
             field_m = (RgbSprite[]) null;
           }

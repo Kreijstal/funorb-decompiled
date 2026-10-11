@@ -16,7 +16,7 @@ class ih extends hn {
     private int field_v;
     private int field_U;
     private int[] field_A;
-    static rg field_p;
+    static SpellMenuGroup field_p;
     private int[] field_V;
     private static byte[] field_G;
     private int[] field_r;

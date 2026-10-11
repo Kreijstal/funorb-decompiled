@@ -185,7 +185,7 @@ final class ln {
             cc.a(0, -1, this.field_a, -1, -1, false, -1, param0, this.field_b, 0);
             this.field_a[3] = var4_int;
           }
-          dm.a(-1, -1, this.field_a, -1, false, this.field_b, -1, false, 0, false, 0, param0);
+          MatchSetupPanel.a(-1, -1, this.field_a, -1, false, this.field_b, -1, false, 0, false, 0, param0);
           no.field_P.b();
           stackIn_5_0 = ew.a((byte) 107, ku.field_J);
           return (RgbSprite) ((Object) stackIn_5_0);

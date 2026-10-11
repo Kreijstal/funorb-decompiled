@@ -150,7 +150,7 @@ final class TeleportEvent extends GameEvent {
             } else {
               var6 = lg.a(wp.field_v[var3_int], true, (byte) -56);
               var4 = var4 + cp.field_a;
-              var7 = rk.field_B - (var6 >> 1);
+              var7 = InstructionsPanel.field_B - (var6 >> 1);
               if (mu.a(param0, (el.field_c << 1) + TelepopEvent.field_B, param2, -et.field_b + var7, 5138823, var6 + (et.field_b << 1), var4)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;

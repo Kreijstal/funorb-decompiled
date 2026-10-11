@@ -6,7 +6,7 @@ final class ct extends IntrusiveNode {
     int field_n;
     static String field_m;
     int field_r;
-    static rg[] field_o;
+    static SpellMenuGroup[] spellMenuById;
     int field_q;
     ct field_k;
     int field_p;
@@ -14,11 +14,11 @@ final class ct extends IntrusiveNode {
     public static void a(int param0) {
         field_m = null;
         if (param0 != 135) {
-          field_o = (rg[]) null;
-          field_o = null;
+          spellMenuById = (SpellMenuGroup[]) null;
+          spellMenuById = null;
           return;
         }
-        field_o = null;
+        spellMenuById = null;
     }
 
     ct(int param0, int param1, int param2, int param3, int param4) {
@@ -31,6 +31,6 @@ final class ct extends IntrusiveNode {
 
     static {
         field_m = "Unable to add name - system busy";
-        field_o = new rg[135];
+        spellMenuById = new SpellMenuGroup[135];
     }
 }

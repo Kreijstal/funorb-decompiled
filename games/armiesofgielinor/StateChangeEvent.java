@@ -235,16 +235,16 @@ final class StateChangeEvent extends GameEvent {
           if (wd.field_b < var1_int) {
             wd.field_b = var1_int;
           }
-          if (MoveEvent.field_G == null) {
-            MoveEvent.field_G = new rk();
+          if (MoveEvent.instructionsPanel == null) {
+            MoveEvent.instructionsPanel = new InstructionsPanel();
           }
-          MoveEvent.field_G.f((byte) 79);
-          if (MoveEvent.field_E == null) {
-            MoveEvent.field_E = new dm();
+          MoveEvent.instructionsPanel.f((byte) 79);
+          if (MoveEvent.matchSetupPanel == null) {
+            MoveEvent.matchSetupPanel = new MatchSetupPanel();
           }
-          MoveEvent.field_E.i(param0 + 0);
-          MoveEvent.field_E.e((byte) 97);
-          ts.field_j = bm.field_D;
+          MoveEvent.matchSetupPanel.initializePanel(param0 + 0);
+          MoveEvent.matchSetupPanel.loadItemLabels((byte) 97);
+          ts.currentSpellMenu = bm.spellMenuRoot;
           if (param0 != 1) {
             field_A = (String) null;
           }

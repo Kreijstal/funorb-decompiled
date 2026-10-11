@@ -1145,7 +1145,7 @@ final class cv {
               SoftwareRaster.b(db.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, var27Lifetime1 + 2, 0, 128);
               rs.field_n.a(var23_ref.field_i, db.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, 472, 16777215, 1, 1, 0, 0);
             }
-            rs.field_n.a(ft.field_l + var23_ref.field_c, db.a(true, var23_ref.field_h.field_A + 31), MatchConditionEntry.a(-10 + var6Lifetime2, (byte) 94), -13 + (-var23_ref.field_h.field_A + var4Lifetime1), var23_ref.field_h.field_x, 16776960, 0, 0, 1, 0);
+            rs.field_n.a(IntPair.field_l + var23_ref.field_c, db.a(true, var23_ref.field_h.field_A + 31), MatchConditionEntry.a(-10 + var6Lifetime2, (byte) 94), -13 + (-var23_ref.field_h.field_A + var4Lifetime1), var23_ref.field_h.field_x, 16776960, 0, 0, 1, 0);
             if (null != var19) {
               var25_intLifetime2 = 100;
               var26Lifetime1 = AiPlanningStrategy.field_d;

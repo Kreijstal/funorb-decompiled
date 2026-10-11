@@ -1,64 +1,64 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dm {
-    private ft field_C;
+final class MatchSetupPanel {
+    private IntPair field_C;
     private int field_A;
-    private ft field_B;
+    private IntPair field_B;
     private String field_U;
-    private int[] field_j;
+    private int[] itemIndexById;
     private int field_h;
     private int field_Q;
     static String field_O;
-    private int field_l;
+    private int previewRowSpacing;
     static String field_d;
-    private ft field_q;
+    private IntPair previewSize;
     static String field_x;
-    private ft field_g;
+    private IntPair field_g;
     private int field_n;
     private int field_G;
     private int field_f;
-    private ft field_m;
+    private IntPair field_m;
     private int field_u;
     private int field_z;
-    private int field_r;
+    private int selectedIndex;
     private boolean field_y;
     private int field_b;
-    private ft field_c;
-    private ft[] field_T;
+    private IntPair field_c;
+    private IntPair[] itemEnds;
     private int field_F;
-    int[] field_N;
+    int[] itemIds;
     private int field_p;
     private String field_R;
-    private int field_e;
+    private int playerCount;
     static int field_D;
-    private int field_I;
+    private int computerPlayerCount;
     private int field_P;
-    private ft field_S;
+    private IntPair field_S;
     private int field_L;
-    private ft[] field_i;
+    private IntPair[] itemStarts;
     private int field_M;
-    private ft field_s;
-    private ft field_k;
-    private ft field_J;
-    private int field_E;
-    private ft field_a;
-    private String[] field_t;
+    private IntPair field_s;
+    private IntPair field_k;
+    private IntPair field_J;
+    private int mapSizeSetting;
+    private IntPair field_a;
+    private String[] itemLabels;
     private int field_o;
-    private ft field_w;
-    private int field_K;
-    private boolean field_v;
+    private IntPair field_w;
+    private int selectedPreviewIndex;
+    private boolean option33Enabled;
 
     private final int d(boolean param0) {
         if (!param0) {
-          this.field_i = (ft[]) null;
+          this.itemStarts = (IntPair[]) null;
         }
         return (nr.field_e.field_y >> 1) - nr.field_e.field_L + (nr.field_e.field_v - nr.field_e.field_H + 3);
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = this.b(true);
-        param0 = (this.field_q.field_k - var7 >> 1) + param0;
+        param0 = (this.previewSize.first - var7 >> 1) + param0;
         this.field_u = param0;
         param3 = param0 + var7;
         param0 = param3 - this.e(-119);
@@ -71,11 +71,11 @@ final class dm {
         int var9 = 0;
         param0 = (this.field_f + var7) * var8 + param0;
         var9 = 33;
-        param2 = param2 + (this.field_q.field_n - var9 >> 1);
+        param2 = param2 + (this.previewSize.second - var9 >> 1);
         param3 = var7 + param0;
         param1 = var9 + param2;
-        this.field_i[param5] = new ft(param0, param2);
-        this.field_T[param5] = new ft(param3, param1);
+        this.itemStarts[param5] = new IntPair(param0, param2);
+        this.itemEnds[param5] = new IntPair(param3, param1);
     }
 
     final void d(byte param0) {
@@ -89,7 +89,7 @@ final class dm {
         this.c(0);
     }
 
-    private final void a(int param0, boolean param1, ft param2, int param3, ft param4) {
+    private final void a(int param0, boolean param1, IntPair param2, int param3, IntPair param4) {
         int var10 = 0;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -119,9 +119,9 @@ final class dm {
               if (param3 <= 36) {
                 return;
               }
-              var7.f(db.a(true, param2.field_k), MatchConditionEntry.a(param2.field_n, (byte) 94));
+              var7.f(db.a(true, param2.first), MatchConditionEntry.a(param2.second, (byte) 94));
               var8 = 0;
-              if (this.field_K == var6_int) {
+              if (this.selectedPreviewIndex == var6_int) {
                 var8 = 1;
               }
               if (var8 == 0 &&
@@ -133,7 +133,7 @@ final class dm {
                 var9 = this.field_F;
               }
               for (var10 = 0; this.field_L > var10; var10++) {
-                SoftwareRaster.b(db.a(true, param2.field_k + var10), MatchConditionEntry.a(var10 + param2.field_n, (byte) 94), -(var10 << 1) + (param4.field_k - param2.field_k), -param2.field_n + (param4.field_n - (var10 << 1)), var9);
+                SoftwareRaster.b(db.a(true, param2.first + var10), MatchConditionEntry.a(var10 + param2.second, (byte) 94), -(var10 << 1) + (param4.first - param2.first), -param2.second + (param4.second - (var10 << 1)), var9);
               }
               return;
             }
@@ -172,10 +172,10 @@ final class dm {
           if (param0) {
             return;
           }
-          var2 = this.field_J.field_k;
-          var3 = this.field_J.field_n;
-          var4 = this.field_w.field_k - var2;
-          var5 = this.field_w.field_n - var3;
+          var2 = this.field_J.first;
+          var3 = this.field_J.second;
+          var4 = this.field_w.first - var2;
+          var5 = this.field_w.second - var3;
           if (0 != var4) {
             if (var5 == 0) {
               return;
@@ -196,10 +196,10 @@ final class dm {
           if (this.field_k == null) {
             return;
           }
-          var2 = this.field_s.field_k;
-          var3 = this.field_s.field_n;
-          var4 = this.field_k.field_k - var2;
-          var5 = this.field_k.field_n - var3;
+          var2 = this.field_s.first;
+          var3 = this.field_s.second;
+          var4 = this.field_k.first - var2;
+          var5 = this.field_k.second - var3;
           if (var4 != 0) {
             if (var5 == 0) {
               return;
@@ -214,11 +214,11 @@ final class dm {
     }
 
     private final void d(int param0) {
-        this.field_J = new ft(25, 33);
+        this.field_J = new IntPair(25, 33);
         if (param0 != 7) {
           return;
         }
-        this.field_w = new ft(614, 446);
+        this.field_w = new IntPair(614, 446);
         this.field_A = 0;
         this.field_P = 16777215;
         this.field_b = 192;
@@ -226,20 +226,20 @@ final class dm {
         this.field_p = 128;
     }
 
-    final int b(boolean param0, int param1) {
-        ft var3;
-        if (this.field_T != null &&
-          param1 >= 0) {
-          if (param1 >= this.field_T.length) {
+    final int getItemRightX(boolean obfuscationGuard, int itemIndex) {
+        IntPair var3;
+        if (this.itemEnds != null &&
+          itemIndex >= 0) {
+          if (itemIndex >= this.itemEnds.length) {
             return 1;
           }
-          if (!param0) {
+          if (!obfuscationGuard) {
             return 39;
           }
-          var3 = this.field_T[param1];
+          var3 = this.itemEnds[itemIndex];
           if (var3 != null &&
-            var3.field_k >= 0) {
-            return db.a(true, var3.field_k);
+            var3.first >= 0) {
+            return db.a(true, var3.first);
           }
           return 1;
         }
@@ -263,47 +263,47 @@ final class dm {
           }
         }
         if (param1) {
-          dm.c((byte) -56);
+          MatchSetupPanel.c((byte) -56);
         }
     }
 
     private final void a(boolean param0) {
-        this.field_a = new ft(31, 431);
+        this.field_a = new IntPair(31, 431);
         this.f(1);
         this.g((byte) -71);
         this.c(param0);
     }
 
-    final void a(int param0, byte param1, int param2, int param3, boolean param4, int param5, int param6, String param7) {
-        if (this.field_N != null && param0 >= 0 &&
-          param0 < this.field_N.length) {
-          this.field_r = param0;
+    final void setOptions(int selectedIndex, byte obfuscationGuard, int mapSizeSetting, int previewIndex, boolean option33Enabled, int computerPlayerCount, int playerCount, String startCaption) {
+        if (this.itemIds != null && selectedIndex >= 0 &&
+          selectedIndex < this.itemIds.length) {
+          this.selectedIndex = selectedIndex;
         }
-        if (2 <= param6 &&
-          param6 <= 8) {
-          this.field_e = param6;
+        if (2 <= playerCount &&
+          playerCount <= 8) {
+          this.playerCount = playerCount;
         }
-        this.field_v = param4 ? true : false;
-        if (param5 >= 0 &&
-          this.field_e >= param5) {
-          this.field_I = param5;
+        this.option33Enabled = option33Enabled ? true : false;
+        if (computerPlayerCount >= 0 &&
+          this.playerCount >= computerPlayerCount) {
+          this.computerPlayerCount = computerPlayerCount;
         }
-        if (param2 >= 0 &&
-          param2 < 4) {
-          this.field_E = param2;
+        if (mapSizeSetting >= 0 &&
+          mapSizeSetting < 4) {
+          this.mapSizeSetting = mapSizeSetting;
         }
-        this.field_K = param3;
-        if (param1 != -28) {
+        this.selectedPreviewIndex = previewIndex;
+        if (obfuscationGuard != -28) {
           return;
         }
         try {
-          this.a(param7, (byte) 125);
+          this.setStartCaption(startCaption, (byte) 125);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "dm.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "dm.D(" + selectedIndex + ',' + obfuscationGuard + ',' + mapSizeSetting + ',' + previewIndex + ',' + option33Enabled + ',' + computerPlayerCount + ',' + playerCount + ',' + (startCaption != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(int param0, String param1, ft param2, int param3, boolean param4, ft param5) {
+    private final void a(int param0, String param1, IntPair param2, int param3, boolean param4, IntPair param5) {
         int[] stackIn_12_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -328,18 +328,18 @@ final class dm {
         try {
           if (param5 != null &&
             param2 != null) {
-            var7_int = db.a(true, param5.field_k);
-            var8 = MatchConditionEntry.a(param5.field_n, (byte) 94);
-            var9 = -var7_int + param2.field_k;
-            var10 = param2.field_n - var8;
+            var7_int = db.a(true, param5.first);
+            var8 = MatchConditionEntry.a(param5.second, (byte) 94);
+            var9 = -var7_int + param2.first;
+            var10 = param2.second - var8;
             SoftwareRaster.b(var7_int, var8, var9, var10, this.field_Q, this.field_p);
             if (this.field_y) {
               SoftwareRaster.b(var7_int, var8, var9, var10, this.field_P);
             }
             if (param1 != null &&
               param1.length() != 0) {
-              var11 = MatchConditionEntry.a(param5.field_n, (byte) 94);
-              var12 = MatchConditionEntry.a(param2.field_n, (byte) 94);
+              var11 = MatchConditionEntry.a(param5.second, (byte) 94);
+              var12 = MatchConditionEntry.a(param2.second, (byte) 94);
               var8Lifetime1 = var11 + var12 >> 1;
               var13 = mp.k(-78);
               var8Lifetime1 = var8Lifetime1 + var13;
@@ -352,7 +352,7 @@ final class dm {
               var15 = var16;
               var14 = var15;
               if (param3 < ~param0) {
-                fe.c(param1, db.a(true, this.field_c.field_k), var8Lifetime1, var16, true);
+                fe.c(param1, db.a(true, this.field_c.first), var8Lifetime1, var16, true);
               } else {
                 fe.a(param1, db.a(true, param0), var8Lifetime1, var16, true);
               }
@@ -387,56 +387,56 @@ final class dm {
         }
     }
 
-    final int a(int param0, boolean param1) {
-        ft var3;
-        if (this.field_i != null &&
-          param0 >= 0 &&
-          param0 < this.field_i.length) {
-          if (!param1) {
-            this.a(126);
+    final int getItemLeftX(int itemIndex, boolean obfuscationGuard) {
+        IntPair var3;
+        if (this.itemStarts != null &&
+          itemIndex >= 0 &&
+          itemIndex < this.itemStarts.length) {
+          if (!obfuscationGuard) {
+            this.initializeItemIds(126);
           }
-          var3 = this.field_i[param0];
+          var3 = this.itemStarts[itemIndex];
           if (var3 == null) {
             return 1;
           }
-          if (var3.field_k >= 0) {
-            return db.a(true, var3.field_k);
+          if (var3.first >= 0) {
+            return db.a(true, var3.first);
           }
           return 1;
         }
         return 1;
     }
 
-    final ft h(byte param0) {
+    final IntPair getPanelEnd(byte obfuscationGuard) {
         int var3 = 0;
-        ft var4;
-        ft var5;
-        var5 = new ft(-1, -1);
-        if (null != this.field_T &&
-          this.field_T.length != 0) {
-          if (param0 != 94) {
-            return (ft) null;
+        IntPair var4;
+        IntPair var5;
+        var5 = new IntPair(-1, -1);
+        if (null != this.itemEnds &&
+          this.itemEnds.length != 0) {
+          if (obfuscationGuard != 94) {
+            return (IntPair) null;
           }
-          for (var3 = 0; var3 < this.field_T.length; var3++) {
-            var4 = this.field_T[var3];
+          for (var3 = 0; var3 < this.itemEnds.length; var3++) {
+            var4 = this.itemEnds[var3];
             if (var4 != null) {
-              if (0 <= var4.field_k && (!(var5.field_k >= var4.field_k) ||
-                !(var5.field_k >= 0))) {
-                var5.field_k = var4.field_k;
+              if (0 <= var4.first && (!(var5.first >= var4.first) ||
+                !(var5.first >= 0))) {
+                var5.first = var4.first;
               }
-              if (var4.field_n >= 0 && (!(var5.field_n >= var4.field_n) ||
-                !(var5.field_n >= 0))) {
-                var5.field_n = var4.field_n;
+              if (var4.second >= 0 && (!(var5.second >= var4.second) ||
+                !(var5.second >= 0))) {
+                var5.second = var4.second;
               }
             }
           }
-          if (0 <= var5.field_k &&
-            var5.field_n >= 0) {
+          if (0 <= var5.first &&
+            var5.second >= 0) {
             return var5;
           }
-          return new ft(1, 1);
+          return new IntPair(1, 1);
         }
-        return new ft(1, 1);
+        return new IntPair(1, 1);
     }
 
     private final void g(byte param0) {
@@ -469,52 +469,52 @@ final class dm {
         var4 = 0;
         var5 = 0;
         var6 = 0;
-        var4Lifetime1 = this.field_k.field_n;
+        var4Lifetime1 = this.field_k.second;
         var7 = 0;
-        var2Lifetime1 = this.field_s.field_k;
-        this.field_m = new ft(var2Lifetime1, var4Lifetime1);
-        var3Lifetime1 = this.field_k.field_k;
+        var2Lifetime1 = this.field_s.first;
+        this.field_m = new IntPair(var2Lifetime1, var4Lifetime1);
+        var3Lifetime1 = this.field_k.first;
         this.field_z = 4;
-        var7Lifetime1 = (this.field_q.field_n + this.field_l) * this.field_z + (this.field_B.field_n << 1) - this.field_l;
+        var7Lifetime1 = (this.previewSize.second + this.previewRowSpacing) * this.field_z + (this.field_B.second << 1) - this.previewRowSpacing;
         var5Lifetime1 = var7Lifetime1 + var4Lifetime1;
-        this.field_C = new ft(var3Lifetime1, var5Lifetime1);
-        var8 = this.field_k.field_n;
-        var9 = this.field_a.field_n;
+        this.field_C = new IntPair(var3Lifetime1, var5Lifetime1);
+        var8 = this.field_k.second;
+        var9 = this.field_a.second;
         var10 = -var8 + var9;
         var11 = (-var7Lifetime1 + var10 >> 1) - 25;
-        this.field_m.field_n = this.field_m.field_n + var11;
+        this.field_m.second = this.field_m.second + var11;
         this.field_f = 5;
         this.field_L = 2;
-        this.field_C.field_n = this.field_C.field_n + var11;
+        this.field_C.second = this.field_C.second + var11;
         var6Lifetime1 = this.b(true);
-        var2Lifetime1 = var2Lifetime1 + (-var6Lifetime1 + this.field_q.field_k >> 1);
+        var2Lifetime1 = var2Lifetime1 + (-var6Lifetime1 + this.previewSize.first >> 1);
         this.field_u = var2Lifetime1;
-        var2Lifetime2 = this.field_B.field_k + this.field_m.field_k;
-        var4Lifetime2 = this.field_B.field_n + this.field_m.field_n;
+        var2Lifetime2 = this.field_B.first + this.field_m.first;
+        var4Lifetime2 = this.field_B.second + this.field_m.second;
         if (param0 != -71) {
           return;
         }
-        var3Lifetime2 = var2Lifetime2 + this.field_q.field_k;
+        var3Lifetime2 = var2Lifetime2 + this.previewSize.first;
         var12 = 0;
         var13 = this.field_o;
-        var14 = this.field_N.length;
+        var14 = this.itemIds.length;
         for (var15 = var13; var14 > var15; var15++) {
           if (var15 == this.field_n) {
             var12 = 1;
           }
-          var5Lifetime2 = var4Lifetime2 + this.field_q.field_n;
+          var5Lifetime2 = var4Lifetime2 + this.previewSize.second;
           if (var12 == 0) {
-            this.field_i[var15] = new ft(var2Lifetime2, var4Lifetime2);
-            this.field_T[var15] = new ft(var3Lifetime2, var5Lifetime2);
-            var4Lifetime2 = this.field_l + var5Lifetime2;
+            this.itemStarts[var15] = new IntPair(var2Lifetime2, var4Lifetime2);
+            this.itemEnds[var15] = new IntPair(var3Lifetime2, var5Lifetime2);
+            var4Lifetime2 = this.previewRowSpacing + var5Lifetime2;
           } else {
             if (this.field_n == var15) {
-              this.field_g = new ft(var2Lifetime2, var4Lifetime2);
-              this.field_S = new ft(var3Lifetime2, var5Lifetime2);
+              this.field_g = new IntPair(var2Lifetime2, var4Lifetime2);
+              this.field_S = new IntPair(var3Lifetime2, var5Lifetime2);
             }
             this.a(var2Lifetime2, var5Lifetime2, var4Lifetime2, var3Lifetime2, 7, var15);
             if (var15 == this.field_h) {
-              var4Lifetime2 = 12 + (var5Lifetime2 + this.field_l);
+              var4Lifetime2 = 12 + (var5Lifetime2 + this.previewRowSpacing);
               var12 = 0;
             }
           }
@@ -533,10 +533,10 @@ final class dm {
           if (param0 != 66) {
             this.field_L = -47;
           }
-          var2 = this.field_m.field_k;
-          var3 = this.field_m.field_n;
-          var4 = -var2 + this.field_C.field_k;
-          var5 = this.field_C.field_n - var3;
+          var2 = this.field_m.first;
+          var3 = this.field_m.second;
+          var4 = -var2 + this.field_C.first;
+          var5 = this.field_C.second - var3;
           if (var4 != 0) {
             if (var5 == 0) {
               return;
@@ -552,36 +552,36 @@ final class dm {
         int stackIn_27_0 = 0;
         int stackIn_60_0 = 0;
         int var3;
-        ft var4;
-        ft var5;
+        IntPair var4;
+        IntPair var5;
         int var7;
         int var8;
         int var9;
         String var10;
         String var11;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (null != this.field_N) {
-          if (this.field_N.length == 0) {
+        if (null != this.itemIds) {
+          if (this.itemIds.length == 0) {
             return;
           }
-          if (null != this.field_i) {
-            if (this.field_i.length != 0 &&
-              this.field_i.length == this.field_N.length) {
-              if (this.field_T != null) {
-                if (0 != this.field_T.length &&
-                  this.field_T.length == this.field_N.length) {
-                  if (null == this.field_t) {
+          if (null != this.itemStarts) {
+            if (this.itemStarts.length != 0 &&
+              this.itemStarts.length == this.itemIds.length) {
+              if (this.itemEnds != null) {
+                if (0 != this.itemEnds.length &&
+                  this.itemEnds.length == this.itemIds.length) {
+                  if (null == this.itemLabels) {
                     return;
                   }
-                  if (0 != this.field_t.length &&
-                    this.field_t.length == this.field_N.length) {
-                    for (var2 = param0; this.field_N.length > var2; var2++) {
-                      var3 = this.field_N[var2];
-                      var4 = this.field_i[var2];
-                      var5 = this.field_T[var2];
-                      var10 = this.field_t[var2];
-                      if (this.field_r >= 0) {
-                        stackIn_27_0 = (this.field_r == var2) ? 1 : 0;
+                  if (0 != this.itemLabels.length &&
+                    this.itemLabels.length == this.itemIds.length) {
+                    for (var2 = param0; this.itemIds.length > var2; var2++) {
+                      var3 = this.itemIds[var2];
+                      var4 = this.itemStarts[var2];
+                      var5 = this.itemEnds[var2];
+                      var10 = this.itemLabels[var2];
+                      if (this.selectedIndex >= 0) {
+                        stackIn_27_0 = (this.selectedIndex == var2) ? 1 : 0;
                       } else {
                         stackIn_27_0 = 0;
                       }
@@ -601,9 +601,9 @@ final class dm {
                                   if (null == this.field_S) {
                                     break regionExit1;
                                   }
-                                  if (this.field_r >= 0) {
-                                    if (this.field_n <= this.field_r) {
-                                      stackIn_60_0 = (this.field_h >= this.field_r) ? 1 : 0;
+                                  if (this.selectedIndex >= 0) {
+                                    if (this.field_n <= this.selectedIndex) {
+                                      stackIn_60_0 = (this.field_h >= this.selectedIndex) ? 1 : 0;
                                     } else {
                                       stackIn_60_0 = 0;
                                     }
@@ -639,36 +639,36 @@ final class dm {
         }
     }
 
-    final ft b(byte param0) {
+    final IntPair getPanelStart(byte obfuscationGuard) {
         int var3 = 0;
-        ft var4;
-        ft var5;
-        var5 = new ft(-1, -1);
-        if (null != this.field_i &&
-          this.field_i.length != 0) {
-          if (param0 >= -42) {
-            return (ft) null;
+        IntPair var4;
+        IntPair var5;
+        var5 = new IntPair(-1, -1);
+        if (null != this.itemStarts &&
+          this.itemStarts.length != 0) {
+          if (obfuscationGuard >= -42) {
+            return (IntPair) null;
           }
-          for (var3 = 0; var3 < this.field_i.length; var3++) {
-            var4 = this.field_i[var3];
+          for (var3 = 0; var3 < this.itemStarts.length; var3++) {
+            var4 = this.itemStarts[var3];
             if (var4 != null) {
-              if (var4.field_k >= 0 && (!(var4.field_k >= var5.field_k) ||
-                !(var5.field_k >= 0))) {
-                var5.field_k = var4.field_k;
+              if (var4.first >= 0 && (!(var4.first >= var5.first) ||
+                !(var5.first >= 0))) {
+                var5.first = var4.first;
               }
-              if (var4.field_n >= 0 && (!(var5.field_n <= var4.field_n) ||
-                !(var5.field_n >= 0))) {
-                var5.field_n = var4.field_n;
+              if (var4.second >= 0 && (!(var5.second <= var4.second) ||
+                !(var5.second >= 0))) {
+                var5.second = var4.second;
               }
             }
           }
-          if (var5.field_k >= 0 &&
-            var5.field_n >= 0) {
+          if (var5.first >= 0 &&
+            var5.second >= 0) {
             return var5;
           }
-          return new ft(1, 1);
+          return new IntPair(1, 1);
         }
-        return new ft(1, 1);
+        return new IntPair(1, 1);
     }
 
     private final String a(int param0, String param1, int param2) {
@@ -693,17 +693,17 @@ final class dm {
             }
             if (param2 != 28) {
               if (46 == param2) {
-                param1 = param1 + this.field_I;
+                param1 = param1 + this.computerPlayerCount;
               } else {
                 if (param2 != 33) {
                   if (param2 == 29 &&
-                    0 <= this.field_E &&
-                    h.field_e.length >= this.field_E) {
+                    0 <= this.mapSizeSetting &&
+                    h.field_e.length >= this.mapSizeSetting) {
                     param1 = param1 + h.field_e[t.field_e];
                   }
                 } else {
                   stackIn_15_0 = new StringBuilder().append(param1);
-                  if (this.field_v) {
+                  if (this.option33Enabled) {
                     stackIn_16_1 = dn.field_Mb;
                   } else {
                     stackIn_16_1 = qd.field_J;
@@ -712,7 +712,7 @@ final class dm {
                 }
               }
             } else {
-              param1 = param1 + this.field_e;
+              param1 = param1 + this.playerCount;
             }
             stackIn_24_0 = (String) (param1);
             return stackIn_24_0;
@@ -745,32 +745,32 @@ final class dm {
         int var4Lifetime1;
         int var5Lifetime1;
         var6 = 257;
-        this.field_c = new ft(319, 239);
+        this.field_c = new IntPair(319, 239);
         int var7 = 0;
-        var2 = this.field_c.field_k - (var6 >> 1);
+        var2 = this.field_c.first - (var6 >> 1);
         var4 = 58;
-        this.field_s = new ft(var2, var4);
-        this.field_B = new ft(7, 7);
-        this.field_q = new ft(-(this.field_B.field_k << 1) + var6, 43);
+        this.field_s = new IntPair(var2, var4);
+        this.field_B = new IntPair(7, 7);
+        this.previewSize = new IntPair(-(this.field_B.first << 1) + var6, 43);
         var3 = var6 + var2;
         this.field_o = 2;
-        this.field_l = 4;
-        var7 = -this.field_l + (this.field_q.field_n + this.field_l) * this.field_o + (this.field_B.field_n << 1);
+        this.previewRowSpacing = 4;
+        var7 = -this.previewRowSpacing + (this.previewSize.second + this.previewRowSpacing) * this.field_o + (this.field_B.second << 1);
         var5 = var4 + var7;
-        this.field_k = new ft(var3, var5);
-        this.field_i = new ft[this.field_N.length];
-        this.field_T = new ft[this.field_N.length];
+        this.field_k = new IntPair(var3, var5);
+        this.itemStarts = new IntPair[this.itemIds.length];
+        this.itemEnds = new IntPair[this.itemIds.length];
         if (param0 != 1) {
           return;
         }
-        var2Lifetime1 = this.field_B.field_k + this.field_s.field_k;
-        var3Lifetime1 = this.field_q.field_k + var2Lifetime1;
-        var4Lifetime1 = this.field_s.field_n + this.field_B.field_n;
+        var2Lifetime1 = this.field_B.first + this.field_s.first;
+        var3Lifetime1 = this.previewSize.first + var2Lifetime1;
+        var4Lifetime1 = this.field_s.second + this.field_B.second;
         for (var8 = 0; this.field_o > var8; var8++) {
-          var5Lifetime1 = this.field_q.field_n + var4Lifetime1;
-          this.field_i[var8] = new ft(var2Lifetime1, var4Lifetime1);
-          this.field_T[var8] = new ft(var3Lifetime1, var5Lifetime1);
-          var4Lifetime1 = this.field_l + var5Lifetime1;
+          var5Lifetime1 = this.previewSize.second + var4Lifetime1;
+          this.itemStarts[var8] = new IntPair(var2Lifetime1, var4Lifetime1);
+          this.itemEnds[var8] = new IntPair(var3Lifetime1, var5Lifetime1);
+          var4Lifetime1 = this.previewRowSpacing + var5Lifetime1;
         }
     }
 
@@ -784,7 +784,7 @@ final class dm {
         return var2;
     }
 
-    private final void a(String param0, byte param1) {
+    private final void setStartCaption(String caption, byte obfuscationGuard) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         int var4 = 0;
@@ -794,17 +794,17 @@ final class dm {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = 122 % ((param1 - 92) / 33);
+          var3_int = 122 % ((obfuscationGuard - 92) / 33);
           var4 = 7;
-          var5 = this.b(-1, var4);
-          if (null == this.field_t) {
+          var5 = this.findItemIndex(-1, var4);
+          if (null == this.itemLabels) {
             return;
           }
           if (0 <= var5 &&
-            this.field_t.length > var5) {
-            if (param0 != null &&
-              param0.length() != 0) {
-              this.field_t[var5] = param0;
+            this.itemLabels.length > var5) {
+            if (caption != null &&
+              caption.length() != 0) {
+              this.itemLabels[var5] = caption;
               return;
             }
             return;
@@ -815,34 +815,34 @@ final class dm {
           runtimeException = decompiledCaughtException;
           stackIn_14_0 = runtimeException;
           stackIn_14_1 = new StringBuilder().append("dm.EA(");
-          if (param0 == null) {
+          if (caption == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final int a(int param0, int param1) {
-        ft var3;
-        if (null != this.field_i &&
-          param0 >= 0 &&
-          this.field_i.length > param0) {
-          var3 = this.field_i[param0];
-          if (param1 != 1084326849) {
+    final int getItemTopY(int itemIndex, int obfuscationGuard) {
+        IntPair var3;
+        if (null != this.itemStarts &&
+          itemIndex >= 0 &&
+          this.itemStarts.length > itemIndex) {
+          var3 = this.itemStarts[itemIndex];
+          if (obfuscationGuard != 1084326849) {
             return 91;
           }
           if (var3 != null &&
-            var3.field_n >= 0) {
-            return MatchConditionEntry.a(var3.field_n, (byte) 94);
+            var3.second >= 0) {
+            return MatchConditionEntry.a(var3.second, (byte) 94);
           }
           return 1;
         }
         return 1;
     }
 
-    private final void a(ft param0, String param1, boolean param2, ft param3, int param4) {
+    private final void a(IntPair param0, String param1, boolean param2, IntPair param3, int param4) {
         int[] stackIn_11_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -869,17 +869,17 @@ final class dm {
             param3 != null &&
             param1 != null &&
             param1.length() != 0) {
-            var6_int = param0.field_k;
-            var7 = param0.field_n;
-            var8 = param3.field_k - var6_int;
-            var9 = -var7 + param3.field_n;
+            var6_int = param0.first;
+            var7 = param0.second;
+            var8 = param3.first - var6_int;
+            var9 = -var7 + param3.second;
             if (param4 != 26709) {
-              this.field_v = true;
+              this.option33Enabled = true;
             }
             SoftwareRaster.f(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, this.field_M);
             fe.b(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, io.field_m, nd.field_b, this.field_Q, this.field_p);
-            var10 = MatchConditionEntry.a(param0.field_n, (byte) 94);
-            var11 = MatchConditionEntry.a(param3.field_n, (byte) 94);
+            var10 = MatchConditionEntry.a(param0.second, (byte) 94);
+            var11 = MatchConditionEntry.a(param3.second, (byte) 94);
             var7Lifetime1 = var10 + var11 >> 1;
             var12 = mp.k(-57);
             var7Lifetime1 = var12 + var7Lifetime1;
@@ -891,7 +891,7 @@ final class dm {
             var15 = stackIn_11_0;
             var14 = var15;
             var13 = var14;
-            fe.c(param1, db.a(true, this.field_c.field_k), var7Lifetime1, var15, true);
+            fe.c(param1, db.a(true, this.field_c.first), var7Lifetime1, var15, true);
             return;
           }
           return;
@@ -980,7 +980,7 @@ final class dm {
         }
     }
 
-    private final void a(boolean param0, ft param1, ft param2, int param3, String param4) {
+    private final void a(boolean param0, IntPair param1, IntPair param2, int param3, String param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -1004,25 +1004,25 @@ final class dm {
             param2 != null &&
             param4 != null &&
             param4.length() != 0) {
-            var6_int = param1.field_k;
-            var7 = param1.field_n;
+            var6_int = param1.first;
+            var7 = param1.second;
             if (param3 != 0) {
-              this.b(true, 61);
+              this.getItemRightX(true, 61);
             }
-            var8 = param2.field_k - var6_int;
-            var9 = param2.field_n - var7;
+            var8 = param2.first - var6_int;
+            var9 = param2.second - var7;
             var10 = nd.field_b;
             if (param0) {
               var10 = TutorialController.field_e;
             }
             fe.a(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, DisplacedUnitMarker.field_s, var10, this.field_Q, this.field_b, true);
             fe.b(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, io.field_m, TutorialController.field_e, this.field_Q, this.field_A);
-            var11 = param1.field_n;
-            var12 = param2.field_n;
+            var11 = param1.second;
+            var12 = param2.second;
             var7Lifetime1 = var11 + var12 >> 1;
             var13 = mp.k(-74);
             var7Lifetime1 = var7Lifetime1 + var13;
-            fe.c(param4, db.a(true, this.field_c.field_k), MatchConditionEntry.a(var7Lifetime1, (byte) 94), this.field_Q, true);
+            fe.c(param4, db.a(true, this.field_c.first), MatchConditionEntry.a(var7Lifetime1, (byte) 94), this.field_Q, true);
             return;
           }
           return;
@@ -1052,31 +1052,31 @@ final class dm {
         }
     }
 
-    final int a(boolean param0, int param1) {
-        ft var4;
+    final int getItemHeight(boolean obfuscationGuard, int itemIndex) {
+        IntPair var4;
         int var5;
-        ft var6;
-        if (param0) {
+        IntPair var6;
+        if (obfuscationGuard) {
           return 1;
         }
-        if (0 > param1) {
+        if (0 > itemIndex) {
           return 1;
         }
-        if (this.field_i != null &&
-          param1 < this.field_i.length) {
-          if (this.field_T != null &&
-            this.field_T.length > param1) {
-            var6 = this.field_i[param1];
-            var4 = this.field_T[param1];
+        if (this.itemStarts != null &&
+          itemIndex < this.itemStarts.length) {
+          if (this.itemEnds != null &&
+            this.itemEnds.length > itemIndex) {
+            var6 = this.itemStarts[itemIndex];
+            var4 = this.itemEnds[itemIndex];
             if (var6 != null &&
-              var6.field_n >= 0) {
+              var6.second >= 0) {
               if (var4 == null) {
                 return 1;
               }
-              if (var4.field_n < 0) {
+              if (var4.second < 0) {
                 return 1;
               }
-              var5 = var4.field_n - var6.field_n;
+              var5 = var4.second - var6.second;
               if (var5 <= 0) {
                 return 1;
               }
@@ -1089,13 +1089,13 @@ final class dm {
         return 1;
     }
 
-    private final int b(int param0, int param1) {
-        if (null == this.field_j) {
+    private final int findItemIndex(int obfuscationGuard, int itemId) {
+        if (null == this.itemIndexById) {
           return -1;
         }
-        if (param0 >= ~param1 &&
-          param1 < this.field_j.length) {
-          return this.field_j[param1];
+        if (obfuscationGuard >= ~itemId &&
+          itemId < this.itemIndexById.length) {
+          return this.itemIndexById[itemId];
         }
         return -1;
     }
@@ -1194,100 +1194,100 @@ final class dm {
         }
     }
 
-    final int h(int param0) {
+    final int getPreviewRowHeight(int obfuscationGuard) {
         int var2;
         int var3;
-        if (this.field_q == null) {
+        if (this.previewSize == null) {
           return 1;
         }
-        var2 = this.field_q.field_n;
+        var2 = this.previewSize.second;
         if (var2 >= 0 &&
-          0 <= this.field_l) {
-          var3 = var2 + this.field_l;
+          0 <= this.previewRowSpacing) {
+          var3 = var2 + this.previewRowSpacing;
           if (var3 < 0) {
             return 1;
           }
-          if (param0 != -10754) {
-            this.a(true, -108);
+          if (obfuscationGuard != -10754) {
+            this.getItemHeight(true, -108);
           }
           return var3;
         }
         return 1;
     }
 
-    private final void a(byte param0) {
-        int var2;
-        int var3;
-        int var4;
-        int var3Lifetime1;
-        int var3Lifetime2;
-        if (this.field_N == null) {
+    private final void buildItemIndex(byte obfuscationGuard) {
+        int maximumId;
+        int maximumScanIndex;
+        int itemId;
+        int lookupIndex;
+        int itemIndex;
+        if (this.itemIds == null) {
           return;
         }
-        if (this.field_N.length == 0) {
+        if (this.itemIds.length == 0) {
           return;
         }
-        if (param0 != -105) {
+        if (obfuscationGuard != -105) {
           return;
         }
-        var2 = 0;
-        for (var3 = 0; var3 < this.field_N.length; var3++) {
-          if (var2 < this.field_N[var3]) {
-            var2 = this.field_N[var3];
+        maximumId = 0;
+        for (maximumScanIndex = 0; maximumScanIndex < this.itemIds.length; maximumScanIndex++) {
+          if (maximumId < this.itemIds[maximumScanIndex]) {
+            maximumId = this.itemIds[maximumScanIndex];
           }
         }
-        if (var2 <= 0) {
+        if (maximumId <= 0) {
           return;
         }
-        this.field_j = new int[1 + var2];
-        for (var3Lifetime1 = 0; var3Lifetime1 < this.field_j.length; var3Lifetime1++) {
-          this.field_j[var3Lifetime1] = -1;
+        this.itemIndexById = new int[1 + maximumId];
+        for (lookupIndex = 0; lookupIndex < this.itemIndexById.length; lookupIndex++) {
+          this.itemIndexById[lookupIndex] = -1;
         }
-        for (var3Lifetime2 = 0; var3Lifetime2 < this.field_N.length; var3Lifetime2++) {
-          var4 = this.field_N[var3Lifetime2];
-          if (var4 >= 0 &&
-            var4 < this.field_j.length) {
-            this.field_j[var4] = var3Lifetime2;
+        for (itemIndex = 0; itemIndex < this.itemIds.length; itemIndex++) {
+          itemId = this.itemIds[itemIndex];
+          if (itemId >= 0 &&
+            itemId < this.itemIndexById.length) {
+            this.itemIndexById[itemId] = itemIndex;
           }
         }
     }
 
     private final void c(boolean param0) {
-        if (null == this.field_j) {
+        if (null == this.itemIndexById) {
           return;
         }
         if (!param0) {
-          this.field_w = (ft) null;
+          this.field_w = (IntPair) null;
         }
-        int var2 = this.b(-1, 7);
+        int var2 = this.findItemIndex(-1, 7);
         if (var2 < 0) {
           return;
         }
-        if (this.field_i != null) {
-          if (this.field_T == null) {
+        if (this.itemStarts != null) {
+          if (this.itemEnds == null) {
             return;
           }
-          if (this.field_i.length > var2) {
-            if (this.field_T.length <= var2) {
+          if (this.itemStarts.length > var2) {
+            if (this.itemEnds.length <= var2) {
               return;
             }
-            this.field_i[var2] = this.field_a;
-            this.field_T[var2] = new ft(608, 462);
+            this.itemStarts[var2] = this.field_a;
+            this.itemEnds[var2] = new IntPair(608, 462);
             return;
           }
         }
     }
 
-    private final void j(int param0) {
-        this.field_r = 0;
-        if (param0 != -15585) {
-          this.field_s = (ft) null;
+    private final void resetOptions(int obfuscationGuard) {
+        this.selectedIndex = 0;
+        if (obfuscationGuard != -15585) {
+          this.field_s = (IntPair) null;
         }
-        this.field_e = 2;
-        this.field_E = 0;
-        this.field_I = 0;
-        this.field_K = 0;
-        this.field_v = false;
+        this.playerCount = 2;
+        this.mapSizeSetting = 0;
+        this.computerPlayerCount = 0;
+        this.selectedPreviewIndex = 0;
+        this.option33Enabled = false;
     }
 
     public static void g(int param0) {
@@ -1299,46 +1299,46 @@ final class dm {
         field_d = null;
     }
 
-    final void e(byte param0) {
+    final void loadItemLabels(byte obfuscationGuard) {
         int var2 = 0;
         int var3;
         int var5;
         String var4;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.field_N == null) {
+        if (this.itemIds == null) {
           return;
         }
         if (null == DisplacedUnitMarker.field_t) {
           return;
         }
-        this.field_t = new String[this.field_N.length];
-        for (var2 = 0; var2 < this.field_N.length; var2++) {
-          var3 = this.field_N[var2];
+        this.itemLabels = new String[this.itemIds.length];
+        for (var2 = 0; var2 < this.itemIds.length; var2++) {
+          var3 = this.itemIds[var2];
           if (var3 >= 0 &&
             DisplacedUnitMarker.field_t.length > var3) {
             var4 = DisplacedUnitMarker.field_t[var3];
             if (var4 != null) {
-              this.field_t[var2] = var4;
+              this.itemLabels[var2] = var4;
             }
           }
         }
         if (0 == DisplacedUnitMarker.field_t.length) {
           return;
         }
-        if (param0 <= 54) {
+        if (obfuscationGuard <= 54) {
           return;
         }
         this.field_U = DisplacedUnitMarker.field_t[-1 + DisplacedUnitMarker.field_t.length];
     }
 
-    final void i(int param0) {
-        this.d(param0 + 6);
-        if (param0 != 1) {
+    final void initializePanel(int obfuscationGuard) {
+        this.d(obfuscationGuard + 6);
+        if (obfuscationGuard != 1) {
           return;
         }
-        this.a(param0 + 11);
+        this.initializeItemIds(obfuscationGuard + 11);
         this.a(true);
-        this.j(-15585);
+        this.resetOptions(-15585);
         this.field_y = false;
     }
 
@@ -1354,56 +1354,56 @@ final class dm {
           if (null == this.field_R) {
             return;
           }
-          var2 = this.field_J.field_n;
+          var2 = this.field_J.second;
           var3 = this.d(true);
           if (param0 != 18669) {
-            this.a(70, true);
+            this.getItemLeftX(70, true);
           }
           var4 = var3 + var2;
-          fe.b(this.field_R, db.a(true, this.field_c.field_k), MatchConditionEntry.a(var4, (byte) 94));
-          fe.c(this.field_R, db.a(true, this.field_c.field_k), MatchConditionEntry.a(var4, (byte) 94), nd.field_b, false);
+          fe.b(this.field_R, db.a(true, this.field_c.first), MatchConditionEntry.a(var4, (byte) 94));
+          fe.c(this.field_R, db.a(true, this.field_c.first), MatchConditionEntry.a(var4, (byte) 94), nd.field_b, false);
           return;
         }
     }
 
-    private final void a(int param0) {
+    private final void initializeItemIds(int obfuscationGuard) {
         int var3 = 0;
         int incrementValue$5 = 0;
-        this.field_N = new int[11];
+        this.itemIds = new int[11];
         int var2 = 0;
         int incrementValue$0 = var2;
         var2++;
-        this.field_N[incrementValue$0] = 25;
+        this.itemIds[incrementValue$0] = 25;
         int incrementValue$1 = var2;
         var2++;
-        this.field_N[incrementValue$1] = 26;
+        this.itemIds[incrementValue$1] = 26;
         int incrementValue$2 = var2;
         var2++;
-        this.field_N[incrementValue$2] = 28;
+        this.itemIds[incrementValue$2] = 28;
         int incrementValue$3 = var2;
         var2++;
-        this.field_N[incrementValue$3] = 46;
+        this.itemIds[incrementValue$3] = 46;
         int incrementValue$4 = var2;
         var2++;
-        this.field_N[incrementValue$4] = 29;
+        this.itemIds[incrementValue$4] = 29;
         this.field_n = var2;
         for (var3 = 0; 4 > var3; var3++) {
           incrementValue$5 = var2;
           var2++;
-          this.field_N[incrementValue$5] = 55 + var3;
+          this.itemIds[incrementValue$5] = 55 + var3;
         }
         this.field_h = var2 - 1;
-        if (param0 != 12) {
+        if (obfuscationGuard != 12) {
           String var4 = (String) null;
-          this.a(105, (byte) -17, -105, 21, true, -116, -10, (String) null);
+          this.setOptions(105, (byte) -17, -105, 21, true, -116, -10, (String) null);
         }
         int incrementValue$6 = var2;
         var2++;
-        this.field_N[incrementValue$6] = 27;
+        this.itemIds[incrementValue$6] = 27;
         int incrementValue$7 = var2;
         var2++;
-        this.field_N[incrementValue$7] = 7;
-        this.a((byte) -105);
+        this.itemIds[incrementValue$7] = 7;
+        this.buildItemIndex((byte) -105);
         this.field_F = 15855490;
         this.field_G = 11711413;
     }
@@ -1423,7 +1423,7 @@ final class dm {
         return var3;
     }
 
-    public dm() {
+    public MatchSetupPanel() {
         this.field_A = 0;
     }
 

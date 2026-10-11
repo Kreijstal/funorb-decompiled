@@ -611,9 +611,9 @@ class tj extends kb implements gw {
             if (ou.field_h != null) {
               ou.field_h.a((byte) -117);
             }
-            if (null != rg.field_b) {
+            if (null != SpellMenuGroup.field_b) {
               try {
-                rg.field_b.c((byte) 81);
+                SpellMenuGroup.field_b.c((byte) 81);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

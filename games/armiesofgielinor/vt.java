@@ -36,28 +36,28 @@ abstract class vt extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        MoveEvent.field_G = new rk();
-        MoveEvent.field_G.n(111);
-        ft var1 = MoveEvent.field_G.e((byte) 126);
+        MoveEvent.instructionsPanel = new InstructionsPanel();
+        MoveEvent.instructionsPanel.initializePanel(111);
+        IntPair var1 = MoveEvent.instructionsPanel.getPanelStart((byte) 126);
         if (var1 == null) {
           return;
         }
-        ft var2 = MoveEvent.field_G.a((byte) -108);
+        IntPair var2 = MoveEvent.instructionsPanel.getPanelEnd((byte) -108);
         if (var2 == null) {
           return;
         }
-        int var3 = MoveEvent.field_G.o(-1);
+        int var3 = MoveEvent.instructionsPanel.getRowSpacing(-1);
         if (var3 < 0) {
           return;
         }
         if (param0 > -112) {
           return;
         }
-        if (null == MoveEvent.field_G.field_w) {
+        if (null == MoveEvent.instructionsPanel.itemIds) {
           return;
         }
-        if (MoveEvent.field_G.field_w.length != 0) {
-          gb.configureTutorialStage(var3, 7, var1.field_k, var2.field_k, var1.field_n, var2.field_n, MoveEvent.field_G.field_w, -40);
+        if (MoveEvent.instructionsPanel.itemIds.length != 0) {
+          gb.configureTutorialStage(var3, 7, var1.first, var2.first, var1.second, var2.second, MoveEvent.instructionsPanel.itemIds, -40);
           return;
         }
     }

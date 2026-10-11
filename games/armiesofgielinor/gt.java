@@ -24,7 +24,7 @@ final class gt {
         try {
           var2_int = -112 % ((param1 - 19) / 63);
           var3 = (CharSequence) ((Object) param0);
-          stackIn_1_0 = ft.field_p.equals(k.a(var3, false));
+          stackIn_1_0 = IntPair.field_p.equals(k.a(var3, false));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -67,7 +67,7 @@ final class ut extends sf implements he {
         int var2_intLifetime1;
         int var3Lifetime2;
         try {
-          this.field_db = ma.a(-114, ft.field_m);
+          this.field_db = ma.a(-114, IntPair.field_m);
           if (this.field_db.length > 0) {
             for (var2_int = 0; var2_int < this.field_db.length; var2_int++) {
               if (this.field_db[var2_int] != null) {

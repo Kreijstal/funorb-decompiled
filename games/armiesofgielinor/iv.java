@@ -77,7 +77,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                 if (ce.field_N > var2.width) {
                   return;
                 }
-                if (dm.field_D > var2.height) {
+                if (MatchSetupPanel.field_D > var2.height) {
                   return;
                 }
               }
@@ -214,16 +214,16 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               sp.field_b = 0;
               SummonRequest.field_B = param4;
               dt.field_a = param6;
-              dm.field_D = param6;
+              MatchSetupPanel.field_D = param6;
               lr.field_a = this;
               if (param3 != 10) {
                 return;
               }
               vu.field_L = CombatEvent.d((byte) 10);
               dupTemp$0 = new hd(param1, param2, param5, true);
-              ft.field_m = dupTemp$0;
+              IntPair.field_m = dupTemp$0;
               PacketBuffer.field_s = dupTemp$0;
-              var8 = ft.field_m.a(1, 0, (Runnable) (this));
+              var8 = IntPair.field_m.a(1, 0, (Runnable) (this));
               while (true) {
                 if (var8.field_g == 0) {
                   nu.a(10L, param3 ^ 10);
@@ -381,9 +381,9 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          if (null != ft.field_m) {
+          if (null != IntPair.field_m) {
             try {
-              ft.field_m.a(true);
+              IntPair.field_m.a(true);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -630,7 +630,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                   do {
                     if (!(kb.field_A > var3)) {
                       this.c(-11);
-                      MapTile.a(ft.field_m, si.field_b, true);
+                      MapTile.a(IntPair.field_m, si.field_b, true);
                       break;
                     }
                     this.b(17684);

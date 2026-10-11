@@ -10,7 +10,7 @@ final class bm extends ew {
     private bg field_t;
     private int field_B;
     private byte[] field_C;
-    static rg field_D;
+    static SpellMenuGroup spellMenuRoot;
     private bp field_x;
     static String field_k;
     static int field_h;
@@ -526,7 +526,7 @@ final class bm extends ew {
 
     public static void e(int param0) {
         field_k = null;
-        field_D = null;
+        spellMenuRoot = null;
         if (param0 > -33) {
           return;
         }

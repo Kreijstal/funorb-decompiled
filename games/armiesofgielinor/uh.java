@@ -42,7 +42,7 @@ final class uh {
           no.field_P.field_B = SoftwareRaster.field_d;
           ku.field_J.b();
           SoftwareRaster.b();
-          dm.a(-1, -1, param2, -1, param5, param3, -1, false, 0, false, 0, param4);
+          MatchSetupPanel.a(-1, -1, param2, -1, param5, param3, -1, false, 0, false, 0, param4);
           no.field_P.b();
           ku.field_J.g(param6, param0);
           if (!param1) {

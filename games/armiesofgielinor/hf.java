@@ -35,7 +35,7 @@ final class hf {
         ef.field_d[13] = EffectPresentation.field_b;
         ef.field_d[7] = vs.field_d;
         ef.field_d[21] = dq.field_f;
-        ef.field_d[20] = dm.field_d;
+        ef.field_d[20] = MatchSetupPanel.field_d;
         ef.field_d[16] = tv.field_e;
         ef.field_d[4] = IntrusiveNode.field_c;
         ef.field_d[15] = ig.field_r;

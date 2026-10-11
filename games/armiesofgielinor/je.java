@@ -86,11 +86,11 @@ class je extends im {
           if (null != vu.field_M) {
             if (gk.field_J <= 0) {
               if (PreparedAction.field_r <= 0) {
-                if (mj.field_c > rk.field_D) {
-                  if (rk.field_D == 0) {
+                if (mj.field_c > InstructionsPanel.field_D) {
+                  if (InstructionsPanel.field_D == 0) {
                     ub.a(false, false);
                   }
-                  rk.field_D = rk.field_D + 1;
+                  InstructionsPanel.field_D = InstructionsPanel.field_D + 1;
                 }
               } else {
                 PreparedAction.field_r = PreparedAction.field_r - 1;
@@ -104,8 +104,8 @@ class je extends im {
               if (PreparedAction.field_r > 0) {
                 PreparedAction.field_r = PreparedAction.field_r - 1;
               } else {
-                if (rk.field_D > 0) {
-                  rk.field_D = rk.field_D - 1;
+                if (InstructionsPanel.field_D > 0) {
+                  InstructionsPanel.field_D = InstructionsPanel.field_D - 1;
                 } else {
                   if (mj.field_c > gk.field_J) {
                     if (gk.field_J == 0) {
@@ -119,7 +119,7 @@ class je extends im {
               if (gk.field_J > 0) {
                 gk.field_J = gk.field_J - 1;
               } else {
-                if (rk.field_D <= 0) {
+                if (InstructionsPanel.field_D <= 0) {
                   if (mj.field_c > PreparedAction.field_r) {
                     if (0 == PreparedAction.field_r) {
                       ub.a(false, true);
@@ -127,7 +127,7 @@ class je extends im {
                     PreparedAction.field_r = PreparedAction.field_r + 1;
                   }
                 } else {
-                  rk.field_D = rk.field_D - 1;
+                  InstructionsPanel.field_D = InstructionsPanel.field_D - 1;
                 }
               }
             }
@@ -137,8 +137,8 @@ class je extends im {
             gk.field_J = gk.field_J - 1;
           } else {
             if (PreparedAction.field_r <= 0) {
-              if (0 < rk.field_D) {
-                rk.field_D = rk.field_D - 1;
+              if (0 < InstructionsPanel.field_D) {
+                InstructionsPanel.field_D = InstructionsPanel.field_D - 1;
               }
             } else {
               PreparedAction.field_r = PreparedAction.field_r - 1;
@@ -555,7 +555,7 @@ class je extends im {
           if (param1) {
             stackIn_4_0 = PreparedAction.field_r;
           } else {
-            stackIn_4_0 = rk.field_D;
+            stackIn_4_0 = InstructionsPanel.field_D;
           }
           qb.a(stackIn_4_0, -106);
           ij.field_w.a(-40 + lk.field_a.field_ob - 2, (byte) -125, 0, lk.field_a.field_gb, 0);

@@ -128,7 +128,7 @@ final class vj {
           stackIn_5_2 = false;
           stackIn_6_3 = !(param2);
           var5 = ((kk) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_6_3);
-          var5.a(ft.field_q, this.field_i, (wp) null, -1, 0, 0, param2);
+          var5.a(IntPair.field_q, this.field_i, (wp) null, -1, 0, 0, param2);
           stackIn_7_0 = var5;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

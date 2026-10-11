@@ -56,7 +56,7 @@ final class da {
           da.a(70, 41, (String[][]) null, (String[]) null, 94);
         }
         CharSequence var3 = (CharSequence) ((Object) mv.field_d);
-        ft.field_p = k.a(var3, false);
+        IntPair.field_p = k.a(var3, false);
     }
 
     final static boolean a(int param0, java.applet.Applet param1) {

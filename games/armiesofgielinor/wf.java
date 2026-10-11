@@ -33,8 +33,8 @@ abstract class wf extends iv {
         }
         og.field_m = this.field_z;
         qa.b(og.field_m, 1);
-        hq.a(param6, 5000, this.field_E, 5000, param2, og.field_m, this.field_C, 0, this.field_t, this.field_o, this.field_p, ft.field_m, this.field_x, this.field_G);
-        qf.a(og.field_m, this.field_p, this.field_G, (byte) 103, this.field_C, param6, this.field_E, this.field_t, ft.field_m);
+        hq.a(param6, 5000, this.field_E, 5000, param2, og.field_m, this.field_C, 0, this.field_t, this.field_o, this.field_p, IntPair.field_m, this.field_x, this.field_G);
+        qf.a(og.field_m, this.field_p, this.field_G, (byte) 103, this.field_C, param6, this.field_E, this.field_t, IntPair.field_m);
         rf.b((byte) 112);
         CampaignMission.field_I = jk.b(68);
         lk.a(101, si.field_b);
@@ -99,7 +99,7 @@ abstract class wf extends iv {
         if (param0 >= -15) {
           this.field_o = true;
         }
-        var2 = rk.a((byte) -53, this.field_n, this.field_w, jr.a(-1), CombatPresentation.i(-4938), true);
+        var2 = InstructionsPanel.a((byte) -53, this.field_n, this.field_w, jr.a(-1), CombatPresentation.i(-4938), true);
         if (var2 == -1) {
           return -1;
         }
@@ -247,7 +247,7 @@ abstract class wf extends iv {
             if (param1) {
               ol.field_C = false;
             } else {
-              var5_intLifetime2 = rk.a((byte) -53, this.field_n, this.field_w, jr.a(-1), CombatPresentation.i(-4938), false);
+              var5_intLifetime2 = InstructionsPanel.a((byte) -53, this.field_n, this.field_w, jr.a(-1), CombatPresentation.i(-4938), false);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   wv.a(lk.field_r, 10, var5_intLifetime2);
@@ -297,7 +297,7 @@ abstract class wf extends iv {
           if (var4 == 13) {
             try {
               if (fq.field_h == null) {
-                fq.field_h = new fa(ft.field_m, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                fq.field_h = new fa(IntPair.field_m, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (fq.field_h.b(0)) {
                 var12 = fq.field_h.a(3);
@@ -444,7 +444,7 @@ abstract class wf extends iv {
                 MapLayout.a(var3, -1);
                 break;
               case 8:
-                jh.a(mg.field_e, ft.field_m, fk.field_b, param0 - 13);
+                jh.a(mg.field_e, IntPair.field_m, fk.field_b, param0 - 13);
                 break;
               case 7:
                 this.e((byte) 127);
@@ -456,7 +456,7 @@ abstract class wf extends iv {
                 jg.e(0);
                 break;
               case 1:
-                rk.e(param0 - 135);
+                InstructionsPanel.e(param0 - 135);
                 break;
             }
           }
