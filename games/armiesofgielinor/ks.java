@@ -26,7 +26,7 @@ abstract class ks extends ms {
 
     abstract int g(int param0);
 
-    final static sd a(int param0, cf param1, vh param2) {
+    final static sd a(int param0, cf param1, PacketBuffer param2) {
         sd var3 = null;
         RuntimeException var3_ref = null;
         sd stackIn_3_0 = null;

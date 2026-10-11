@@ -33,7 +33,7 @@ final class al extends ik {
         return ed.a(-111);
     }
 
-    final void a(ha param0, int param1) {
+    final void a(Battlefield param0, int param1) {
         try {
           if (param1 != -1700635440) {
             field_m = (String) null;
@@ -43,7 +43,7 @@ final class al extends ik {
         }
     }
 
-    final void a(int param0, vh param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           param1.b(true, this.field_c);
           if (param0 != -11637) {
@@ -54,21 +54,21 @@ final class al extends ik {
         }
     }
 
-    final void a(int param0, ha param1, int param2) {
+    final void a(int param0, Battlefield param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (uc.field_d[this.field_c][5] == 1) {
-            param1.b(uc.field_d[this.field_c][6], param0, 1, (byte) 92);
+          if (uc.spellDefinitions[this.field_c][5] == 1) {
+            param1.b(uc.spellDefinitions[this.field_c][6], param0, 1, (byte) 92);
           }
-          if (uc.field_d[this.field_c][5] == 0) {
-            param1.field_l.a((byte) -119, (tc) (new vp(4, uc.field_d[this.field_c][6], param0)));
+          if (uc.spellDefinitions[this.field_c][5] == 0) {
+            param1.pendingEvents.a((byte) -119, (IntrusiveNode) (new ManaEvent(4, uc.spellDefinitions[this.field_c][6], param0)));
           }
-          if (uc.field_d[this.field_c][5] == 2) {
-            param1.field_Bb = false;
+          if (uc.spellDefinitions[this.field_c][5] == 2) {
+            param1.kingBlackDragonSummoned = false;
           }
           if (param2 == 26123) {
             return;
@@ -99,11 +99,11 @@ final class al extends ik {
         da.a(-10820, param1);
     }
 
-    final void a(byte param0, ha param1) {
+    final void a(byte param0, Battlefield param1) {
         try {
           if (param0 != -37) {
-            ha var4 = (ha) null;
-            this.a(-41, (ha) null, -67);
+            Battlefield var4 = (Battlefield) null;
+            this.a(-41, (Battlefield) null, -67);
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "al.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

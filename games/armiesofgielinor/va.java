@@ -17,7 +17,7 @@ final class va extends ms {
     int[] field_y;
     static String[] field_A;
 
-    private final void a(byte param0, vh param1, int param2) {
+    private final void a(byte param0, PacketBuffer param1, int param2) {
         char[] stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         char stackIn_8_2 = 0;
@@ -34,7 +34,7 @@ final class va extends ms {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = 81 % ((param0 - 47) / 62);
           if (param2 == 1) {
@@ -97,7 +97,7 @@ final class va extends ms {
     final void g(int param0) {
         int var5 = 0;
         int var2 = 0;
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var2Lifetime1;
         if (null != this.field_y) {
           for (var2 = 0; var2 < this.field_y.length; var2++) {
@@ -113,8 +113,8 @@ final class va extends ms {
           }
         }
         if (param0 <= 6) {
-          vh var4 = (vh) null;
-          this.a((byte) 40, (vh) null, -40);
+          PacketBuffer var4 = (PacketBuffer) null;
+          this.a((byte) 40, (PacketBuffer) null, -40);
         }
     }
 
@@ -129,7 +129,7 @@ final class va extends ms {
         field_w = null;
     }
 
-    final void a(byte param0, vh param1) {
+    final void a(byte param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -137,7 +137,7 @@ final class va extends ms {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 >= -79) {
             return;

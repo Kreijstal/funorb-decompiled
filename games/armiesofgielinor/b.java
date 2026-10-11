@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class b extends tc {
+final class b extends IntrusiveNode {
     boolean field_m;
     static la field_n;
     int[] field_l;
@@ -32,8 +32,8 @@ final class b extends tc {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        vh var16 = null;
-        vh var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -43,20 +43,20 @@ final class b extends tc {
         int var4Lifetime3;
         int var4Lifetime4;
         int var4Lifetime5;
-        var15 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var16 = new vh(param0);
+          var16 = new PacketBuffer(param0);
           var17 = var16;
-          var17.field_q = param0.length - 2;
+          var17.position = param0.length - 2;
           iw.field_n = var17.e((byte) -104);
           j.field_e = new int[iw.field_n];
           c.field_e = new int[iw.field_n];
           iq.field_g = new int[iw.field_n];
-          ne.field_e = new boolean[iw.field_n];
+          MapTile.field_e = new boolean[iw.field_n];
           qm.field_K = new int[iw.field_n];
           vj.field_j = new byte[iw.field_n][];
           cq.field_z = new byte[iw.field_n][];
-          var17.field_q = -(iw.field_n * 8) - 7 + param0.length;
+          var17.position = -(iw.field_n * 8) - 7 + param0.length;
           lg.field_d = var17.e((byte) -104);
           wr.field_J = var17.e((byte) -104);
           var3 = 1 + (255 & var17.k(param1 + 1));
@@ -75,7 +75,7 @@ final class b extends tc {
           if (param1 != -1) {
             field_n = (la) null;
           }
-          var17.field_q = 3 + (-(var3 * 3) + (-(8 * iw.field_n) - 7) + param0.length);
+          var17.position = 3 + (-(var3 * 3) + (-(8 * iw.field_n) - 7) + param0.length);
           qv.field_j = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
             qv.field_j[var4Lifetime4] = var17.d((byte) -13);
@@ -83,7 +83,7 @@ final class b extends tc {
               qv.field_j[var4Lifetime4] = 1;
             }
           }
-          var17.field_q = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < iw.field_n; var4Lifetime5++) {
             var5 = qm.field_K[var4Lifetime5];
             var6 = c.field_e[var4Lifetime5];
@@ -139,7 +139,7 @@ final class b extends tc {
                 }
               }
             }
-            ne.field_e[var4Lifetime5] = var10 != 0;
+            MapTile.field_e[var4Lifetime5] = var10 != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -210,7 +210,7 @@ final class b extends tc {
         int stackIn_10_0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0) {
             field_n = (la) null;

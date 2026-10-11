@@ -27,7 +27,7 @@ class fn extends fw {
         int var2;
         int var3;
         int var4;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (0 == this.field_O) {
           return this.field_O;
         }
@@ -153,7 +153,7 @@ class fn extends fw {
         js var6 = null;
         int var8 = 0;
         String var9 = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var9 = "";
           if (43 == param1) {
@@ -350,7 +350,7 @@ class fn extends fw {
         }
     }
 
-    final static void a(int param0, int param1, int param2, wk param3) {
+    final static void a(int param0, int param1, int param2, RgbSprite param3) {
         int var8 = 0;
         int var9 = 0;
         int stackIn_6_0 = 0;
@@ -369,15 +369,15 @@ class fn extends fw {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        wk var16 = null;
-        var15 = ArmiesOfGielinor.field_M ? 1 : 0;
+        RgbSprite var16 = null;
+        var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           param3.i();
           var4_int = 0;
           var5 = param3.field_y / 2;
           if (param0 != 8678) {
-            var16 = (wk) null;
-            fn.a(-106, -71, -114, (wk) null);
+            var16 = (RgbSprite) null;
+            fn.a(-106, -71, -114, (RgbSprite) null);
           }
           var6 = param3.field_v / 2;
           stackIn_6_0 = (var5 >= var6) ? var6 : var5;
@@ -460,7 +460,7 @@ class fn extends fw {
         int var7;
         int var8;
         pm var9;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (!this.field_N) {
           this.field_r = 0;
           this.field_z = 0;
@@ -686,7 +686,7 @@ class fn extends fw {
         int var2;
         int var3;
         int var4;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 > -10) {
           return -64;
         }

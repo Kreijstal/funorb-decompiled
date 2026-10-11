@@ -16,7 +16,7 @@ final class bn {
             field_a = (kk[]) null;
           }
           wa.field_e = param2;
-          q.field_C = param1;
+          TelepopEvent.field_C = param1;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "bn.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -86,10 +86,10 @@ final class bn {
         boolean stackIn_68_1 = false;
         boolean stackIn_69_2 = false;
         int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         bh.d(false);
         if (al.field_g >= 0) {
-          t.field_g.field_X = fo.a(4800, ns.field_F, new String[]{Integer.toString(al.field_g)});
+          t.field_g.field_X = fo.a(4800, AttackEvent.field_F, new String[]{Integer.toString(al.field_g)});
           stackIn_56_0 = no.field_T;
           stackIn_56_1 = true;
           stackIn_57_2 = (param0) && (!param1) && (!bw.field_g) && (vu.field_M == null) && (null == no.field_K);
@@ -102,7 +102,7 @@ final class bn {
           stackIn_68_1 = true;
           stackIn_69_2 = (param0) && (!param1) && (bw.field_g);
           ((je) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_69_2);
-          pj.field_E.field_a.l(10000);
+          TrinketUseEvent.field_E.field_a.l(10000);
           if (cp.field_d.field_yb != 0) {
             cg.field_a = true;
           }
@@ -139,7 +139,7 @@ final class bn {
           stackIn_19_1 = true;
           stackIn_20_2 = (param0) && (!param1) && (bw.field_g);
           ((je) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
-          pj.field_E.field_a.l(10000);
+          TrinketUseEvent.field_E.field_a.l(10000);
           if (cp.field_d.field_yb != 0) {
             cg.field_a = true;
           }
@@ -171,7 +171,7 @@ final class bn {
             mt.field_d != lm.field_e[0]) {
             mt.field_d = lm.field_e[0];
           }
-          qv.a(param3, mt.field_d, 0, true, tr.field_F, 5623);
+          qv.a(param3, mt.field_d, 0, true, DeployEvent.field_F, 5623);
         }
         if (td.field_g.field_yb != 0) {
           bw.field_g = false;

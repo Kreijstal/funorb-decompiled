@@ -9,10 +9,10 @@ final class sa {
     static long[] field_h;
     static String field_f;
     static String field_e;
-    static wk field_a;
+    static RgbSprite field_a;
     static String field_c;
 
-    final static long a(bv param0, int param1, int param2) {
+    final static long a(CipherPacketBuffer param0, int param1, int param2) {
         RuntimeException var3 = null;
         String var4 = null;
         long stackIn_3_0 = 0L;
@@ -134,7 +134,7 @@ final class sa {
         }
         try {
           var5 = en.field_E.a(param3, -20 + var4_int, 0);
-          fe.b(50 + param2, 80 + param1, var4_int, var5 + 20, io.field_m, ci.field_e, 0, 192);
+          fe.b(50 + param2, 80 + param1, var4_int, var5 + 20, io.field_m, TutorialController.field_e, 0, 192);
           en.field_E.a(param3, 62 + param2, 90 + param1, -20 + var4_int, var5, 16777215, -1, 1, 0, 0);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "sa.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

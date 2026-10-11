@@ -51,7 +51,7 @@ final class id {
                 }
                 var2 = bb.a(param0 + 132, "loginm2");
                 if (null != var2) {
-                  nw.field_y = uu.a(var2, (byte) 51);
+                  DamageEvent.field_y = uu.a(var2, (byte) 51);
                 }
                 var2 = bb.a(50, "loginm1");
                 if (var2 != null) {
@@ -163,7 +163,7 @@ final class id {
                 }
                 var2 = bb.a(50, "mu_x_entered_game");
                 if (null != var2) {
-                  kf.field_B = uu.a(var2, (byte) 50);
+                  GrowthEvent.field_B = uu.a(var2, (byte) 50);
                 }
                 var2 = bb.a(50, "mu_x_joined_your_game");
                 if (var2 != null) {
@@ -271,7 +271,7 @@ final class id {
                 }
                 var2 = bb.a(50, "mu_gamelist_status");
                 if (null != var2) {
-                  tc.field_a = uu.a(var2, (byte) 61);
+                  IntrusiveNode.field_a = uu.a(var2, (byte) 61);
                 }
                 var2 = bb.a(param0 + 132, "mu_gamelist_owner");
                 if (null != var2) {
@@ -291,7 +291,7 @@ final class id {
                 }
                 var2 = bb.a(50, "mu_gamelist_elapsed_time");
                 if (null != var2) {
-                  rt.field_B = uu.a(var2, (byte) -128);
+                  RevivalEvent.field_B = uu.a(var2, (byte) -128);
                 }
                 var2 = bb.a(50, "mu_play_rated");
                 if (var2 != null) {
@@ -319,7 +319,7 @@ final class id {
                 }
                 var2 = bb.a(param0 ^ -100, "mu_options_allow_spectate");
                 if (null != var2) {
-                  oj.field_p = uu.a(var2, (byte) 96);
+                  GameEvent.field_p = uu.a(var2, (byte) 96);
                 }
                 var2 = bb.a(50, "mu_options_ratedgametype");
                 if (var2 != null) {
@@ -415,7 +415,7 @@ final class id {
                 }
                 var2 = bb.a(param0 + 132, "unable_to_send_message_password_a");
                 if (null != var2) {
-                  rl.field_y = uu.a(var2, (byte) -108);
+                  KingBlackDragonEvent.field_y = uu.a(var2, (byte) -108);
                 }
                 var2 = bb.a(param0 + 132, "unable_to_send_message_password_b");
                 if (var2 != null) {
@@ -475,7 +475,7 @@ final class id {
                 }
                 var2 = bb.a(50, "your_rating_is_x");
                 if (null != var2) {
-                  ns.field_F = uu.a(var2, (byte) 18);
+                  AttackEvent.field_F = uu.a(var2, (byte) 18);
                 }
                 var2 = bb.a(50, "you_are_on_x_server");
                 if (var2 != null) {
@@ -527,7 +527,7 @@ final class id {
                 }
                 var2 = bb.a(50, "game_full");
                 if (var2 != null) {
-                  kn.field_y = uu.a(var2, (byte) 28);
+                  TelefragEvent.field_y = uu.a(var2, (byte) 28);
                 }
                 var2 = bb.a(50, "join_requests_one");
                 if (null != var2) {
@@ -583,7 +583,7 @@ final class id {
                 }
                 var2 = bb.a(param0 ^ -100, "x_wants_to_join");
                 if (var2 != null) {
-                  tr.field_G = uu.a(var2, (byte) 90);
+                  DeployEvent.field_G = uu.a(var2, (byte) 90);
                 }
                 var2 = bb.a(50, "accept");
                 if (var2 != null) {
@@ -631,7 +631,7 @@ final class id {
                 }
                 var2 = bb.a(50, "asking_to_join_xs_game");
                 if (var2 != null) {
-                  ic.field_A = uu.a(var2, (byte) -108);
+                  GameplayController.field_A = uu.a(var2, (byte) -108);
                 }
                 var2 = bb.a(50, "who_can_join");
                 if (null != var2) {
@@ -639,7 +639,7 @@ final class id {
                 }
                 var2 = bb.a(50, "you_can_join");
                 if (null != var2) {
-                  ns.field_K = uu.a(var2, (byte) 96);
+                  AttackEvent.field_K = uu.a(var2, (byte) 96);
                 }
                 var2 = bb.a(50, "you_can_ask_to_join");
                 if (null != var2) {
@@ -683,7 +683,7 @@ final class id {
                 }
                 var2 = bb.a(50, "multiconst_invite_only");
                 if (null != var2) {
-                  ns.field_D = uu.a(var2, (byte) 89);
+                  AttackEvent.field_D = uu.a(var2, (byte) 89);
                 }
                 var2 = bb.a(50, "multiconst_clan");
                 if (null != var2) {
@@ -803,7 +803,7 @@ final class id {
                 }
                 var2 = bb.a(50, "gameopt_notunlocked");
                 if (null != var2) {
-                  md.field_F = uu.a(var2, (byte) -96);
+                  ParasiteEvent.field_F = uu.a(var2, (byte) -96);
                 }
                 var2 = bb.a(50, "gameopt_cannotbecombined1");
                 if (null != var2) {
@@ -879,7 +879,7 @@ final class id {
                 }
                 var2 = bb.a(param0 ^ -100, "gameopt_playersdontqualify_selectgametab");
                 if (var2 != null) {
-                  ha.field_pb = uu.a(var2, (byte) -124);
+                  Battlefield.field_pb = uu.a(var2, (byte) -124);
                 }
                 var2 = bb.a(50, "gameopt_unselectedoptions");
                 if (null != var2) {
@@ -887,7 +887,7 @@ final class id {
                 }
                 var2 = bb.a(50, "gameopt_pleaseselectoption1");
                 if (var2 != null) {
-                  go.field_d = uu.a(var2, (byte) 73);
+                  TeamRoster.field_d = uu.a(var2, (byte) 73);
                 }
                 var2 = bb.a(50, "gameopt_pleaseselectoption2");
                 if (null != var2) {
@@ -965,7 +965,7 @@ final class id {
                 }
                 var2 = bb.a(param0 + 132, "rule_0_5");
                 if (var2 != null) {
-                  tc.field_c = uu.a(var2, (byte) -120);
+                  IntrusiveNode.field_c = uu.a(var2, (byte) -120);
                 }
                 var2 = bb.a(50, "rule_pillar_1");
                 if (null != var2) {
@@ -1053,7 +1053,7 @@ final class id {
                 }
                 var2 = bb.a(50, "tocustomersupport");
                 if (null != var2) {
-                  ag.field_O = uu.a(var2, (byte) -101);
+                  CombatEvent.field_O = uu.a(var2, (byte) -101);
                 }
                 var2 = bb.a(50, "changedisplayname");
                 if (var2 != null) {
@@ -1469,7 +1469,7 @@ final class id {
                 }
                 var2 = bb.a(50, "create_agreeterms");
                 if (null != var2) {
-                  qq.field_D = uu.a(var2, (byte) 116);
+                  StateChangeEvent.field_D = uu.a(var2, (byte) 116);
                 }
                 var2 = bb.a(50, "create_u13terms");
                 if (var2 != null) {
@@ -1537,7 +1537,7 @@ final class id {
                 }
                 var2 = bb.a(50, "create_password_hint");
                 if (null != var2) {
-                  st.field_B = uu.a(var2, (byte) -114);
+                  TurnEffectEvent.field_B = uu.a(var2, (byte) -114);
                 }
                 var2 = bb.a(50, "create_password_confirm_tooltip");
                 if (var2 != null) {
@@ -1645,7 +1645,7 @@ final class id {
                 }
                 var2 = bb.a(param0 ^ -100, "create_alert_invaliddate");
                 if (var2 != null) {
-                  qq.field_z = uu.a(var2, (byte) 30);
+                  StateChangeEvent.field_z = uu.a(var2, (byte) 30);
                 }
                 var2 = bb.a(50, "create_alert_invalidage");
                 if (null != var2) {
@@ -1765,7 +1765,7 @@ final class id {
                 }
                 var2 = bb.a(param0 + 132, "waitingfor_graphics");
                 if (null != var2) {
-                  ca.field_i = uu.a(var2, (byte) -107);
+                  TileMetadata.field_i = uu.a(var2, (byte) -107);
                 }
                 var2 = bb.a(50, "waitingfor_models");
                 if (null != var2) {
@@ -1781,7 +1781,7 @@ final class id {
                 }
                 var2 = bb.a(param0 ^ -100, "waitingfor_music");
                 if (var2 != null) {
-                  vh.field_m = uu.a(var2, (byte) -103);
+                  PacketBuffer.field_m = uu.a(var2, (byte) -103);
                 }
                 var2 = bb.a(param0 + 132, "waitingfor_instruments");
                 if (var2 != null) {
@@ -1809,7 +1809,7 @@ final class id {
                 }
                 var2 = bb.a(50, "loading_graphics");
                 if (null != var2) {
-                  ha.field_nb = uu.a(var2, (byte) -93);
+                  Battlefield.field_nb = uu.a(var2, (byte) -93);
                 }
                 var2 = bb.a(50, "loading_models");
                 if (null != var2) {
@@ -1859,7 +1859,7 @@ final class id {
                 }
                 var2 = bb.a(50, "unpacking_models");
                 if (null != var2) {
-                  ej.field_R = uu.a(var2, (byte) -109);
+                  AiPlanner.field_R = uu.a(var2, (byte) -109);
                 }
                 var2 = bb.a(param0 + 132, "unpacking_soundeffects");
                 if (var2 != null) {
@@ -2003,7 +2003,7 @@ final class id {
                 }
                 var2 = bb.a(50, "skip");
                 if (null != var2) {
-                  qq.field_y = uu.a(var2, (byte) 33);
+                  StateChangeEvent.field_y = uu.a(var2, (byte) 33);
                 }
                 var2 = bb.a(50, "skiptutorial");
                 if (var2 != null) {
@@ -2015,7 +2015,7 @@ final class id {
                 }
                 var2 = bb.a(param0 + 132, "restartlevel");
                 if (var2 != null) {
-                  oj.field_u = uu.a(var2, (byte) 4);
+                  GameEvent.field_u = uu.a(var2, (byte) 4);
                 }
                 var2 = bb.a(50, "endtest");
                 if (var2 != null) {
@@ -2462,7 +2462,7 @@ final class id {
                 }
                 var2 = bb.a(50, "mp_showchat_unread2");
                 if (null != var2) {
-                  nn.field_s = uu.a(var2, (byte) -121);
+                  MovementPlanner.field_s = uu.a(var2, (byte) -121);
                 }
                 var2 = bb.a(50, "click_to_quickchat");
                 if (var2 != null) {
@@ -2474,7 +2474,7 @@ final class id {
                 }
                 var2 = bb.a(50, "quickchat_help");
                 if (var2 != null) {
-                  oj.field_x = uu.a(var2, (byte) -111);
+                  GameEvent.field_x = uu.a(var2, (byte) -111);
                 }
                 var2 = bb.a(50, "quickchat_help_title");
                 if (null != var2) {
@@ -2800,7 +2800,7 @@ final class id {
                 }
                 var2 = bb.a(50, "graphics_config_resizable");
                 if (null != var2) {
-                  jd.field_n = uu.a(var2, (byte) 23);
+                  Unit.field_n = uu.a(var2, (byte) 23);
                 }
                 var2 = bb.a(param0 ^ -100, "graphics_config_fullscreen");
                 if (null != var2) {
@@ -2820,7 +2820,7 @@ final class id {
                 }
                 var2 = bb.a(50, "graphics_config_instruction");
                 if (var2 != null) {
-                  oj.field_l = uu.a(var2, (byte) -93);
+                  GameEvent.field_l = uu.a(var2, (byte) -93);
                 }
                 var2 = bb.a(param0 + 132, "graphics_config_need_memory");
                 if (null != var2) {
@@ -3033,7 +3033,7 @@ final class id {
                 qk.field_e = null;
             }
             void run() {
-                var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+                var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
                 try {
                   runChunk0();
                   if (finished) return;
@@ -3056,7 +3056,7 @@ final class id {
                   throw ig.a((Throwable) ((Object) stackIn_2613_0), ((StringBuilder) (Object) stackIn_2613_1).append(stackIn_2614_2).append(')').toString());
                 }
                 if (iv.field_k) {
-                  ArmiesOfGielinor.field_M = (var3 == 0);
+                  ArmiesOfGielinor.obfuscationControl = (var3 == 0);
                 }
             }
         }
@@ -3067,7 +3067,7 @@ final class id {
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
         try {
           rq.a((byte) -56);
-          qn.b(param0, param3, param1, param2);
+          SoftwareRaster.b(param0, param3, param1, param2);
           if (param4 < 70) {
             field_c = (String) null;
           }
@@ -3076,7 +3076,7 @@ final class id {
         }
     }
 
-    final static void a(int param0, wk param1) {
+    final static void a(int param0, RgbSprite param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int stackIn_15_0 = 0;
@@ -3093,7 +3093,7 @@ final class id {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (0 == (3 & (param1.field_z | (param1.field_w | (param1.field_y | param1.field_v))))) {
             return;
@@ -3106,11 +3106,11 @@ final class id {
           var5 = 0;
           var6 = (3 & param1.field_w) + (param1.field_z & 3) * var2_int;
           var7 = 0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (param1.field_v > var7) {
               stackIn_15_0 = 0;
               if (var9 != 0) {
-                break L0;
+                break scanLoop1;
               }
               var8 = stackIn_15_0;
               while (var8 < param1.field_y) {
@@ -3123,7 +3123,7 @@ final class id {
               }
               var6 = var6 + (-param1.field_y + var2_int);
               var7++;
-              continue L0;
+              continue scanLoop1;
             }
             param1.field_v = var3;
             param1.field_z = param1.field_z & -4;

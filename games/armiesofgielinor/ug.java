@@ -8,11 +8,11 @@ final class ug extends IOException {
     static int field_b;
     static int field_a;
 
-    final static void a(int param0, ha param1, boolean param2) {
-        int var3_int = param1.field_sb;
+    final static void a(int param0, Battlefield param1, boolean param2) {
+        int var3_int = param1.localPlayer;
         int var4 = param1.a(true, var3_int);
         System.out.println("--- STATE DUMP REQUESTED - SERVER CHECKSUM: " + Integer.toString(ub.field_d, 16) + " SERVER CHECKSUM: " + Integer.toString(param1.a(true, var3_int), 16) + " ---");
-        System.out.println(param1.j(var3_int, -248));
+        System.out.println(param1.describeBattlefield(var3_int, -248));
         if (param0 != 0) {
           return;
         }
@@ -48,7 +48,7 @@ final class ug extends IOException {
         CharSequence var10 = null;
         ls[] var11 = null;
         wo var12 = null;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 != -1) {
             var10 = (CharSequence) null;

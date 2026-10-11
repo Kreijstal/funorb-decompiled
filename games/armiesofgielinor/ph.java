@@ -27,7 +27,7 @@ final class ph {
         char[] var2Lifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (Character.isISOControl(param1)) {
             return false;
@@ -89,7 +89,7 @@ final class ph {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = param0.charAt(0);
           for (var3 = 1; var3 < param0.length(); var3++) {

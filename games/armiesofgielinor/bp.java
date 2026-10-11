@@ -3,7 +3,7 @@
  */
 abstract class bp {
     static String field_m;
-    static wk[] field_d;
+    static RgbSprite[] field_d;
     static je[] field_j;
     static int field_e;
     static String field_k;
@@ -12,10 +12,10 @@ abstract class bp {
     ui field_n;
     ui field_f;
     ui field_g;
-    vh field_o;
+    PacketBuffer field_o;
     int field_l;
     long field_r;
-    vh field_h;
+    PacketBuffer field_h;
     volatile int field_q;
     volatile int field_p;
     byte field_i;
@@ -96,7 +96,7 @@ abstract class bp {
         int[] var11 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 > -96) {
             bp.a(-87, 28, 102);
@@ -137,11 +137,11 @@ abstract class bp {
         this.field_n = new ui();
         this.field_f = new ui();
         this.field_g = new ui();
-        this.field_o = new vh(6);
+        this.field_o = new PacketBuffer(6);
         this.field_q = 0;
         this.field_p = 0;
         this.field_i = (byte) 0;
-        this.field_h = new vh(10);
+        this.field_h = new PacketBuffer(10);
     }
 
     static {

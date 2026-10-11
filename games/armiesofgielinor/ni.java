@@ -13,8 +13,8 @@ abstract class ni {
           return;
         }
         ij.field_x = param2;
-        if (rl.field_C != null) {
-          rl.field_C.a(param1, param2, (byte) -14);
+        if (KingBlackDragonEvent.field_C != null) {
+          KingBlackDragonEvent.field_C.a(param1, param2, (byte) -14);
         }
     }
 

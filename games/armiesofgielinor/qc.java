@@ -11,7 +11,7 @@ abstract class qc {
     static je field_e;
     static je field_c;
     static String field_f;
-    static at field_g;
+    static NodeDeque field_g;
 
     public static void a(byte param0) {
         field_i = null;
@@ -35,7 +35,7 @@ abstract class qc {
         field_f = null;
     }
 
-    final static wk a(int param0, int param1) {
+    final static RgbSprite a(int param0, int param1) {
         co var2 = null;
         co var2Lifetime1;
         if (param1 != 8806) {

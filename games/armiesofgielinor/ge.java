@@ -12,7 +12,7 @@ final class ge extends sm {
     final static kk b(int param0, int param1) {
         int var5 = 0;
         int var6 = 0;
-        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 != -20849) {
           field_m = (String) null;
         }
@@ -36,7 +36,7 @@ final class ge extends sm {
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (bk.field_e == null) {
             return false;
@@ -44,13 +44,13 @@ final class ge extends sm {
           if (param0 == bk.field_e.b(false)) {
             return false;
           }
-          var2 = (fd) (bk.field_e.e((byte) 111));
+          var2 = (fd) (bk.field_e.first((byte) 111));
           while (var2 != null) {
             var3 = var2.field_k;
             if (var3 == param1) {
               return true;
             }
-            var2 = (fd) (bk.field_e.a((byte) 123));
+            var2 = (fd) (bk.field_e.next((byte) 123));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -68,7 +68,7 @@ final class ge extends sm {
         this.field_l = 0;
     }
 
-    ge(ej param0) {
+    ge(AiPlanner param0) {
         super(param0);
         this.field_k = 3.4028234663852886e+38f;
         this.field_j = 0.0f;
@@ -82,35 +82,35 @@ final class ge extends sm {
         int var4;
         jb var2_ref_jbLifetime1;
         var2_ref = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_a.a(false)) {
           return null;
         }
         this.field_j = 0.0f;
         if (this.field_k < 1.0f) {
-          var2_ref_jb = (jb) (this.field_a.e((byte) 102));
+          var2_ref_jb = (jb) (this.field_a.first((byte) 102));
           while (var2_ref_jb != null) {
             var2_ref_jb.field_t = var2_ref_jb.field_t + (1.0f - this.field_k);
-            var2_ref_jb = (jb) (this.field_a.a((byte) 123));
+            var2_ref_jb = (jb) (this.field_a.next((byte) 123));
           }
           this.field_k = 1.0f;
         }
         if (param0 > -28) {
           this.field_j = 0.7643955945968628f;
         }
-        var2_ref_jbLifetime1 = (jb) (this.field_a.e((byte) 94));
+        var2_ref_jbLifetime1 = (jb) (this.field_a.first((byte) 94));
         while (var2_ref_jbLifetime1 != null) {
           this.field_j = (float)((double)this.field_j + Math.pow((double)(var2_ref_jbLifetime1.field_t / this.field_k), 4.0));
-          var2_ref_jbLifetime1 = (jb) (this.field_a.a((byte) 123));
+          var2_ref_jbLifetime1 = (jb) (this.field_a.next((byte) 123));
         }
         var2 = (float)(Math.random() * (double)this.field_j);
-        var3 = (jb) (this.field_a.e((byte) 116));
+        var3 = (jb) (this.field_a.first((byte) 116));
         while (var3 != null) {
           var2 = (float)((double)var2 - Math.pow((double)(var3.field_t / this.field_k), 4.0));
           if (var2 <= 0.0f) {
             return var3;
           }
-          var3 = (jb) (this.field_a.a((byte) 123));
+          var3 = (jb) (this.field_a.next((byte) 123));
         }
         af.a((Throwable) null, -114, "ran out of orders! total " + this.field_j + ", num " + this.field_l + " w " + var2);
         return null;

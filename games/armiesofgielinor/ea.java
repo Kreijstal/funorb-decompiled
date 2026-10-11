@@ -22,7 +22,7 @@ final class ea {
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = param1.length();
           if (var2_int > 20) {
@@ -70,15 +70,15 @@ final class ea {
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
         Throwable decompiledCaughtException = null;
-        bv var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        bv var8 = null;
+        CipherPacketBuffer var8 = null;
         ar var9 = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var8 = mg.field_e;
         var2 = var8;
         var3 = var8.k(0);
@@ -154,14 +154,14 @@ final class ea {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2 = fk.a((byte) 102, param1, "jagex-last-login-method");
           if (var2 == null) {
             stackIn_3_0 = u.field_l;
             return stackIn_3_0;
           }
-          var3 = ca.c(0);
+          var3 = TileMetadata.c(0);
           var4 = param0;
           while (true) {
             if (var4 >= var3.length) {
@@ -236,15 +236,15 @@ final class ea {
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
         Throwable decompiledCaughtException = null;
-        bv var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        bv var8 = null;
+        CipherPacketBuffer var8 = null;
         ar var9 = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var8 = mg.field_e;
         var2 = var8;
         var3 = var8.k(0);

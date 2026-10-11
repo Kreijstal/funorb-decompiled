@@ -7,7 +7,7 @@ import java.util.*;
 final class pc extends du {
     static String field_i;
     static int[][] field_k;
-    static wk field_j;
+    static RgbSprite field_j;
     private java.net.ProxySelector field_l;
 
     final static void b(byte param0) {
@@ -50,7 +50,7 @@ final class pc extends du {
         ug var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
           System.setProperty("java.net.useSystemProxies", "true");
         }
@@ -240,7 +240,7 @@ final class pc extends du {
         int var12 = 0;
         java.net.Socket var13 = null;
         String var14 = null;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var13 = new java.net.Socket(param1, param3);
           var13.setSoTimeout(10000);

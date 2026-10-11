@@ -4,7 +4,7 @@
 final class mv {
     static sa field_c;
     static boolean field_b;
-    static wk[] field_a;
+    static RgbSprite[] field_a;
     static String field_d;
     static String field_e;
 
@@ -21,7 +21,7 @@ final class mv {
         int var5_intLifetime1;
         int var6Lifetime1;
         int var7Lifetime1;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 >= -40) {
             mv.a(6, (byte) -96, -115, -102, -81);
@@ -81,7 +81,7 @@ final class mv {
             return;
           }
           pv.field_e.b();
-          qn.b();
+          SoftwareRaster.b();
           hh.field_d.d(0, hh.field_d.field_v >> 1, op.field_c[0][param3]);
           so.field_b.a(5605);
           pv.field_e.d(-20 + param0, -200 + param4, 75, 210, 255);

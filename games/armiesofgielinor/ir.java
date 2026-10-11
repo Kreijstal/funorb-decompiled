@@ -11,8 +11,8 @@ final class ir {
     private int field_e;
     private int field_c;
     static String field_l;
-    private ne[] field_m;
-    static ka field_h;
+    private MapTile[] field_m;
+    static BitmapFont field_h;
     static String field_k;
     private int field_g;
     private int[] field_i;
@@ -31,19 +31,19 @@ final class ir {
         int var15 = 0;
         float var16 = 0.0f;
         int var17 = 0;
-        jd var18 = null;
-        jd var19 = null;
-        var17 = ArmiesOfGielinor.field_M ? 1 : 0;
+        Unit var18 = null;
+        Unit var19 = null;
+        var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param4 != -4) {
             this.field_b = 94;
           }
           var18 = wg.field_b[param3];
           var19 = var18;
-          var19.field_J = param7;
-          var19.field_w = param6;
+          var19.tileX = param7;
+          var19.tileY = param6;
           this.a(var19, 120);
-          var10 = 3 * bw.field_m[var18.field_N][3];
+          var10 = 3 * bw.unitDefinitions[var18.unitType][3];
           for (var12 = this.field_b; var12 <= this.field_n; var12++) {
             var11 = this.field_e + this.field_a * var12;
             for (var13 = this.field_e; var13 <= this.field_c; var13++) {
@@ -72,7 +72,7 @@ final class ir {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, bv param6) {
+    final static int a(int param0, int param1, int param2, int param3, int param4, int param5, CipherPacketBuffer param6) {
         int stackIn_5_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_16_0 = 0;
@@ -88,7 +88,7 @@ final class ir {
         int var7_intLifetime1;
         int var7_intLifetime2;
         int var7_intLifetime3;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param5 != 0) {
             var7_int = 1 << -1 + param5;
@@ -177,13 +177,13 @@ final class ir {
 
     final static String a(int param0, int param1) {
         if (param0 != 10602) {
-          bv var3 = (bv) null;
-          ir.a(12, 72, -87, -119, -83, -86, (bv) null);
+          CipherPacketBuffer var3 = (CipherPacketBuffer) null;
+          ir.a(12, 72, -87, -119, -83, -86, (CipherPacketBuffer) null);
         }
         return Integer.toString(param1);
     }
 
-    final void a(float[][] param0, int param1, int param2, jd param3) {
+    final void a(float[][] param0, int param1, int param2, Unit param3) {
         int var9 = 0;
         int var10 = 0;
         float[] dupTemp$0 = null;
@@ -209,7 +209,7 @@ final class ir {
         int var12Lifetime1;
         int var13Lifetime1;
         int var14Lifetime1;
-        var15 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param3.field_S) {
             return;
@@ -218,7 +218,7 @@ final class ir {
           var6 = param3.i(-21428) ? 1 : 0;
           this.a(param3, 124);
           var7 = 0;
-          var8 = bw.field_m[param3.field_N][7];
+          var8 = bw.unitDefinitions[param3.unitType][7];
           this.field_n = Math.min(this.field_n + var8, this.field_g - 1);
           this.field_c = Math.min(var8 + this.field_c, this.field_a - 1);
           this.field_b = Math.max(-var8 + this.field_b, 0);
@@ -279,7 +279,7 @@ final class ir {
         }
     }
 
-    final static void a(int[] param0, byte param1, vh param2, int[] param3) {
+    final static void a(int[] param0, byte param1, PacketBuffer param2, int[] param3) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -291,7 +291,7 @@ final class ir {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 100) {
             field_l = (String) null;
@@ -327,7 +327,7 @@ final class ir {
         }
     }
 
-    private final void a(jd param0, int param1) {
+    private final void a(Unit param0, int param1) {
         int var7 = 0;
         int var8 = 0;
         RuntimeException stackIn_60_0 = null;
@@ -348,24 +348,24 @@ final class ir {
         int var10Lifetime1;
         int var10Lifetime2;
         int var10Lifetime3;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           for (var3_int = 0; this.field_i.length > var3_int; var3_int++) {
             this.field_i[var3_int] = 268435455;
           }
-          this.field_b = param0.field_w;
-          this.field_c = param0.field_J;
-          this.field_n = param0.field_w;
-          this.field_e = param0.field_J;
+          this.field_b = param0.tileY;
+          this.field_c = param0.tileX;
+          this.field_n = param0.tileY;
+          this.field_e = param0.tileX;
           this.field_c = Math.min(this.field_c + 1, -1 + this.field_a);
           this.field_n = Math.min(1 + this.field_n, this.field_g - 1);
           this.field_e = Math.max(-1 + this.field_e, 0);
           this.field_b = Math.max(-1 + this.field_b, 0);
-          this.field_i[param0.field_J + param0.field_w * this.field_a] = 0;
+          this.field_i[param0.tileX + param0.tileY * this.field_a] = 0;
           if (param1 < 118) {
             this.field_e = -1;
           }
-          var3_intLifetime1 = 3 * bw.field_m[param0.field_N][3];
+          var3_intLifetime1 = 3 * bw.unitDefinitions[param0.unitType][3];
           var4 = 0;
           while (500 > var4) {
             var5 = 0;
@@ -376,7 +376,7 @@ final class ir {
               for (var8 = this.field_e; this.field_c >= var8; var8++) {
                 var9 = 2147483647;
                 if (var8 > 0) {
-                  var10 = this.field_i[-1 + var12] + pj.a(this.field_a, this.field_m, false, var12, param0.field_O, this.field_g, -1, param0, var12 - 1, false, true);
+                  var10 = this.field_i[-1 + var12] + TrinketUseEvent.a(this.field_a, this.field_m, false, var12, param0.ownerPlayer, this.field_g, -1, param0, var12 - 1, false, true);
                   if (var3_intLifetime1 < (65535 & var10)) {
                     var10 = -var3_intLifetime1 + (((var10 >> 16) + 1 << 16) + (65535 & var10));
                   }
@@ -385,7 +385,7 @@ final class ir {
                   }
                 }
                 if (var7 > 0) {
-                  var10Lifetime1 = this.field_i[var12 - this.field_a] + pj.a(this.field_a, this.field_m, false, var12, param0.field_O, this.field_g, -1, param0, var12 - this.field_a, false, true);
+                  var10Lifetime1 = this.field_i[var12 - this.field_a] + TrinketUseEvent.a(this.field_a, this.field_m, false, var12, param0.ownerPlayer, this.field_g, -1, param0, var12 - this.field_a, false, true);
                   if (var3_intLifetime1 < (var10Lifetime1 & 65535)) {
                     var10Lifetime1 = (65535 & var10Lifetime1) + ((1 + (var10Lifetime1 >> 16) << 16) - var3_intLifetime1);
                   }
@@ -394,7 +394,7 @@ final class ir {
                   }
                 }
                 if (-1 + this.field_a > var8) {
-                  var10Lifetime2 = this.field_i[1 + var12] + pj.a(this.field_a, this.field_m, false, var12, param0.field_O, this.field_g, -1, param0, var12 + 1, false, true);
+                  var10Lifetime2 = this.field_i[1 + var12] + TrinketUseEvent.a(this.field_a, this.field_m, false, var12, param0.ownerPlayer, this.field_g, -1, param0, var12 + 1, false, true);
                   if ((var10Lifetime2 & 65535) > var3_intLifetime1) {
                     var10Lifetime2 = (1 + (var10Lifetime2 >> 16) << 16) + (var10Lifetime2 & 65535) - var3_intLifetime1;
                   }
@@ -403,7 +403,7 @@ final class ir {
                   }
                 }
                 if (-1 + this.field_g > var7) {
-                  var10Lifetime3 = this.field_i[this.field_a + var12] + pj.a(this.field_a, this.field_m, false, var12, param0.field_O, this.field_g, -1, param0, var12 + this.field_a, false, true);
+                  var10Lifetime3 = this.field_i[this.field_a + var12] + TrinketUseEvent.a(this.field_a, this.field_m, false, var12, param0.ownerPlayer, this.field_g, -1, param0, var12 + this.field_a, false, true);
                   if ((var10Lifetime3 & 65535) > var3_intLifetime1) {
                     var10Lifetime3 = -var3_intLifetime1 + ((var10Lifetime3 >> 16) + 1 << 16) + (65535 & var10Lifetime3);
                   }
@@ -474,7 +474,7 @@ final class ir {
         int var8Lifetime1Lifetime1;
         int var9Lifetime1Lifetime1;
         int var9Lifetime1Lifetime1Lifetime1;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 + param3 >= 0 &&
           param3 + param0 < this.field_a &&
           param5 + param4 >= 0 &&
@@ -491,7 +491,7 @@ final class ir {
               while (!(decompiledNaturalLoopExit0 = (var8 >= param4))) {
                 var9 = param0 + (var8 * var7 + param5) * this.field_a;
                 if ((param2 ||
-                  2 != this.field_m[var9].field_h) && this.field_m[var9].field_h != 3) {
+                  2 != this.field_m[var9].terrainType) && this.field_m[var9].terrainType != 3) {
                   var8++;
                   continue;
                 }
@@ -515,10 +515,10 @@ final class ir {
               for (var8 = 1; var8 < param4; var8++) {
                 var9 = param0 + (var8 * var7 + param5) * this.field_a;
                 if (!param2 &&
-                  2 == this.field_m[var9].field_h) {
+                  2 == this.field_m[var9].terrainType) {
                   return false;
                 }
-                if (this.field_m[var9].field_h == 3) {
+                if (this.field_m[var9].terrainType == 3) {
                   return false;
                 }
               }
@@ -541,7 +541,7 @@ final class ir {
                 }
                 var9Lifetime1 = param5 * this.field_a + var7Lifetime1 * var8Lifetime1 + param0;
                 if ((param2 ||
-                  this.field_m[var9Lifetime1].field_h != 2) && this.field_m[var9Lifetime1].field_h != 3) {
+                  this.field_m[var9Lifetime1].terrainType != 2) && this.field_m[var9Lifetime1].terrainType != 3) {
                   var8Lifetime1++;
                   continue;
                 }
@@ -566,7 +566,7 @@ final class ir {
                 var10 = var9Lifetime1Lifetime1 * param4 / param3;
                 var11 = (var10 * var8Lifetime1Lifetime1 + param5) * this.field_a + var9Lifetime1Lifetime1 * var7Lifetime1Lifetime1 + param0;
                 if ((param2 ||
-                  this.field_m[var11].field_h != 2) && this.field_m[var11].field_h != 3) {
+                  this.field_m[var11].terrainType != 2) && this.field_m[var11].terrainType != 3) {
                   var9Lifetime1Lifetime1++;
                   continue;
                 }
@@ -582,7 +582,7 @@ final class ir {
                 var10Lifetime1 = param3 * var9Lifetime1Lifetime1Lifetime1 / param4;
                 var11Lifetime1 = (var9Lifetime1Lifetime1Lifetime1 * var8Lifetime1Lifetime1 + param5) * this.field_a + var7Lifetime1Lifetime1 * var10Lifetime1 + param0;
                 if ((param2 ||
-                  2 != this.field_m[var11Lifetime1].field_h) && this.field_m[var11Lifetime1].field_h != 3) {
+                  2 != this.field_m[var11Lifetime1].terrainType) && this.field_m[var11Lifetime1].terrainType != 3) {
                   var9Lifetime1Lifetime1Lifetime1++;
                   continue;
                 }
@@ -596,7 +596,7 @@ final class ir {
         return false;
     }
 
-    private final int a(int[] param0, jd param1, int param2, int param3, byte param4) {
+    private final int a(int[] param0, Unit param1, int param2, int param3, byte param4) {
         int var11 = 0;
         int var12 = 0;
         int stackIn_3_0 = 0;
@@ -618,7 +618,7 @@ final class ir {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        var17 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var6_int = 1000000;
           var7 = 1000000;
@@ -626,10 +626,10 @@ final class ir {
             stackIn_3_0 = 115;
             return stackIn_3_0;
           }
-          stackIn_7_0 = (bw.field_m[param1.field_N][0] != 4) ? 0 : 1;
+          stackIn_7_0 = (bw.unitDefinitions[param1.unitType][0] != 4) ? 0 : 1;
           var8 = stackIn_7_0;
-          var9 = bw.field_m[param1.field_N][6];
-          var10 = bw.field_m[param1.field_N][7];
+          var9 = bw.unitDefinitions[param1.unitType][6];
+          var10 = bw.unitDefinitions[param1.unitType][7];
           for (var11 = -var10; var11 <= var10; var11++) {
             for (var12 = -var10; var10 >= var12; var12++) {
               var13 = Math.abs(var11) + Math.abs(var12);
@@ -670,8 +670,8 @@ final class ir {
     final void a(int param0, int param1, float param2, int param3, int param4, float[][][] param5, int param6) {
         try {
           if (param0 >= -18) {
-            jd var9 = (jd) null;
-            this.a((jd) null, 43);
+            Unit var9 = (Unit) null;
+            this.a((Unit) null, 43);
           }
           this.a(param3, param6, param2, param1, param5, false, param4, true);
         } catch (RuntimeException runtimeException) {
@@ -679,7 +679,7 @@ final class ir {
         }
     }
 
-    ir(ne[] param0, int param1, int param2) {
+    ir(MapTile[] param0, int param1, int param2) {
         int[] var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -700,23 +700,23 @@ final class ir {
           this.field_m = param0;
           this.field_i = new int[this.field_m.length];
           if (null == wg.field_b) {
-            wg.field_b = new jd[8];
+            wg.field_b = new Unit[8];
             var12 = new int[wg.field_b.length];
             var11 = var12;
             var9 = var11;
             var4 = var9;
             for (var5 = 0; 75 > var5; var5++) {
-              var6 = bw.field_m[var5][0];
-              var7 = bw.field_m[var5][3];
+              var6 = bw.unitDefinitions[var5][0];
+              var7 = bw.unitDefinitions[var5][3];
               if (var12[var6] == 0 ||
-                !(bw.field_m[var12[var6]][3] >= var7)) {
+                !(bw.unitDefinitions[var12[var6]][3] >= var7)) {
                 var12[var6] = var5;
               }
             }
             var10 = 0;
             var5Lifetime1 = var10;
             while (wg.field_b.length > var10) {
-              wg.field_b[var10] = new jd(0, 0, var12[var10]);
+              wg.field_b[var10] = new Unit(0, 0, var12[var10]);
               var10++;
             }
             return;
@@ -756,19 +756,19 @@ final class ir {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        bv var14 = null;
+        CipherPacketBuffer var14 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var14 = mg.field_e;
           var2 = var14.k(0);
-          var3 = (nt) (s.field_a.e((byte) 120));
+          var3 = (nt) (s.field_a.first((byte) 120));
           while (var3 != null) {
             if (var2 != var3.field_o) {
-              var3 = (nt) (s.field_a.a((byte) 123));
+              var3 = (nt) (s.field_a.next((byte) 123));
               continue;
             }
             break;
@@ -788,13 +788,13 @@ final class ir {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               jp.a(var14, -83);
               if (0 == var6_intLifetime1) {
-                var3.field_r = rt.field_D;
+                var3.field_r = RevivalEvent.field_D;
                 var3.field_s = ov.field_e;
                 var3.field_k = la.field_d;
                 var3.field_m = nk.field_m;
-                ut.a(rt.field_D, nk.field_m, ov.field_e, la.field_d, (byte) 127, var6_intLifetime1);
+                ut.a(RevivalEvent.field_D, nk.field_m, ov.field_e, la.field_d, (byte) 127, var6_intLifetime1);
               } else {
-                ut.a(rt.field_D, nk.field_m, ov.field_e, la.field_d, (byte) 125, var6_intLifetime1);
+                ut.a(RevivalEvent.field_D, nk.field_m, ov.field_e, la.field_d, (byte) 125, var6_intLifetime1);
               }
             }
             jm.a(var5, 0);
@@ -812,10 +812,10 @@ final class ir {
               var6[0][var10] = gm.field_a[var11];
               var7[0][var10 * 4] = no.field_U[var11];
               var7[0][1 + 4 * var10] = wp.field_w[var11];
-              var7[0][var10 * 4 + 2] = ci.field_c[var11];
+              var7[0][var10 * 4 + 2] = TutorialController.field_c[var11];
               var7[0][3 + var10 * 4] = pe.field_s[var11];
               if (gt.a(gm.field_a[var11], (byte) 121) &&
-                0 == ci.field_c[var11] + wp.field_w[var11] + pe.field_s[var11]) {
+                0 == TutorialController.field_c[var11] + wp.field_w[var11] + pe.field_s[var11]) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -830,10 +830,10 @@ final class ir {
               var6[1][var13] = gm.field_a[var11Lifetime1];
               var7[1][4 * var13] = no.field_U[var11Lifetime1];
               var7[1][var13 * 4 + 1] = wp.field_w[var11Lifetime1];
-              var7[1][var13 * 4 + 2] = ci.field_c[var11Lifetime1];
+              var7[1][var13 * 4 + 2] = TutorialController.field_c[var11Lifetime1];
               var7[1][var13 * 4 + 3] = pe.field_s[var11Lifetime1];
               if (gt.a(gm.field_a[var11Lifetime1], (byte) 109) &&
-                pe.field_s[var11Lifetime1] + (wp.field_w[var11Lifetime1] + ci.field_c[var11Lifetime1]) == 0) {
+                pe.field_s[var11Lifetime1] + (wp.field_w[var11Lifetime1] + TutorialController.field_c[var11Lifetime1]) == 0) {
                 var6[1][var13] = null;
                 var13--;
               }
@@ -844,7 +844,7 @@ final class ir {
           stackIn_37_0 = var3;
           stackIn_38_1 = (param0);
           stackIn_37_0.field_l = stackIn_38_1;
-          var3.d(50);
+          var3.unlink(50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

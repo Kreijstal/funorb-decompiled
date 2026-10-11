@@ -6,13 +6,13 @@ final class fu {
     String field_i;
     private static long[] field_f;
     static String field_b;
-    wk field_h;
+    RgbSprite field_h;
     String field_c;
     static String field_a;
-    static wk field_e;
+    static RgbSprite field_e;
     static af field_g;
 
-    final static void a(int param0, jd param1, vh param2) {
+    final static void a(int param0, Unit param1, PacketBuffer param2) {
         try {
           bu.a(0, param1, 2, param2);
           if (param0 != 29712) {
@@ -37,17 +37,17 @@ final class fu {
     final static void a(String param0, int param1, long param2, int param3, boolean param4, int param5) {
         int var7_int = 0;
         vl.field_n.h(param3 ^ 3982, param5);
-        vl.field_n.field_q = vl.field_n.field_q + 1;
+        vl.field_n.position = vl.field_n.position + 1;
         if (param3 != 29231) {
           return;
         }
         try {
-          var7_int = vl.field_n.field_q;
+          var7_int = vl.field_n.position;
           vl.field_n.a(param2, param3 ^ 38346879);
           vl.field_n.b(param0, param3 ^ 17460);
           vl.field_n.b(1, param1);
           vl.field_n.b(param3 - 29230, param4 ? 1 : 0);
-          vl.field_n.e(-var7_int + vl.field_n.field_q, 5930);
+          vl.field_n.e(-var7_int + vl.field_n.position, 5930);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "fu.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -70,7 +70,7 @@ final class fu {
                 this.field_h = null;
               }
             } else {
-              this.field_h = lf.field_h[uc.field_d[param1][2]];
+              this.field_h = lf.field_h[uc.spellDefinitions[param1][2]];
             }
           }
           if (param0 != null) {

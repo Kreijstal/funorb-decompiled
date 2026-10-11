@@ -21,12 +21,12 @@ final class fk implements kh {
         field_f = null;
     }
 
-    final static wk[] a(String param0, byte param1, kl param2, String param3) {
+    final static RgbSprite[] a(String param0, byte param1, kl param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         String var6 = null;
-        wk[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -103,7 +103,7 @@ final class fk implements kh {
             if (mo.field_j != var5.field_q) {
               throw new ef(var5.field_s);
             }
-            var4.field_k = new at();
+            var4.field_k = new NodeDeque();
             while (true) {
               if (param0.a(127)) {
                 throw new ef(var4.field_s);
@@ -113,7 +113,7 @@ final class fk implements kh {
                 return stackIn_23_0;
               }
               param0.field_a = param0.field_a - 1;
-              var4.field_k.a((byte) -119, (tc) (fk.a(param0, -32)));
+              var4.field_k.a((byte) -119, (IntrusiveNode) (fk.a(param0, -32)));
               if (param0.a(127)) {
                 throw new ef(var4.field_s);
               }
@@ -170,11 +170,11 @@ final class fk implements kh {
           }
           var6_int = param1 + param0.field_B;
           var7 = param4 + param0.field_p;
-          qq.a(param0.field_l, var6_int, param0.field_w, -127, var7);
+          StateChangeEvent.a(param0.field_l, var6_int, param0.field_w, -127, var7);
           if (param0.a(false)) {
             na.c(-4 + param0.field_l, 2 + var6_int, -67, param0.field_w - 4, 2 + var7);
           }
-          qn.f(var6_int, var7, var6_int + param0.field_l - 2, param0.field_w + var7);
+          SoftwareRaster.f(var6_int, var7, var6_int + param0.field_l - 2, param0.field_w + var7);
           var8 = this.field_c.field_O.j(-6508);
           if (var8 != null) {
             var9 = var8.toString();
@@ -182,10 +182,10 @@ final class fk implements kh {
             if (this.field_c.a(false) &&
               var9.startsWith(this.field_c.field_I)) {
               var10 = this.field_c.field_K.a(this.field_c.field_I);
-              qn.b(var6_int + 2, 2 + var7, var10, -4 + param0.field_w, 2188450, 100);
+              SoftwareRaster.b(var6_int + 2, 2 + var7, var10, -4 + param0.field_w, 2188450, 100);
             }
           }
-          qn.a();
+          SoftwareRaster.a();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -230,7 +230,7 @@ final class fk implements kh {
         }
     }
 
-    final static bq[] a(int param0, bv param1) {
+    final static bq[] a(int param0, CipherPacketBuffer param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -245,7 +245,7 @@ final class fk implements kh {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = param1.g(114, 8);
           if (var2_int > 0) {
@@ -304,7 +304,7 @@ final class fk implements kh {
           Throwable decompiledCaughtException = null;
           Throwable var3_ref = null;
           RuntimeException var3_ref2 = null;
-          var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             try {
               var3 = (String) (lj.a("getcookies", (byte) -105, param1));

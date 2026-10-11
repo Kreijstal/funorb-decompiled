@@ -12,9 +12,9 @@ final class pe extends bd {
     static je field_x;
     private int field_z;
 
-    final void a(int param0, ha param1) {
+    final void a(int param0, Battlefield param1) {
         try {
-          param1.field_l.a((byte) -119, (tc) (new kf(this.field_u, this.field_y, this.field_t, this.field_A, this.field_z, this.field_m)));
+          param1.pendingEvents.a((byte) -119, (IntrusiveNode) (new GrowthEvent(this.field_u, this.field_y, this.field_t, this.field_A, this.field_z, this.field_m)));
           if (param0 != 64) {
             pe.a(53, false, (String[][]) null);
           }
@@ -71,7 +71,7 @@ final class pe extends bd {
         int var19;
         int var20;
         int var21;
-        var21 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var21 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = (double)(255 & param1 >> 16) / 256.0;
         var4 = (double)((param1 & 65459) >> 8) / 256.0;
         if (param0 < 22) {

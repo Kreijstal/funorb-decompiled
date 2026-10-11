@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ig extends tc {
+final class ig extends IntrusiveNode {
     int[] field_p;
     static uv field_n;
     int field_k;
@@ -46,15 +46,15 @@ final class ig extends tc {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        vh var7 = null;
-        vh var8 = null;
+        PacketBuffer var7 = null;
+        PacketBuffer var8 = null;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
         int var4Lifetime4;
         try {
           this.field_k = param0;
-          var7 = new vh(param1);
+          var7 = new PacketBuffer(param1);
           var8 = var7;
           this.field_o = var8.k(0);
           this.field_l = new int[this.field_o][];
@@ -102,7 +102,7 @@ final class ig extends tc {
           String var2 = (String) null;
           ig.a((Throwable) null, (String) null);
         }
-        return da.a(23660, ag.d((byte) 16));
+        return da.a(23660, CombatEvent.d((byte) 16));
     }
 
     static {

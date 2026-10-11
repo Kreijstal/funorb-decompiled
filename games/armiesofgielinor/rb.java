@@ -93,12 +93,12 @@ abstract class rb implements n {
         }
     }
 
-    final static ne a(int param0, byte param1, bv param2) {
-        ne var3 = null;
+    final static MapTile a(int param0, byte param1, CipherPacketBuffer param2) {
+        MapTile var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         Object stackIn_2_0 = null;
-        ne stackIn_4_0 = null;
+        MapTile stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -106,9 +106,9 @@ abstract class rb implements n {
         try {
           if (param0 == 0) {
             stackIn_2_0 = null;
-            return (ne) (stackIn_2_0);
+            return (MapTile) (stackIn_2_0);
           }
-          var3 = new ne();
+          var3 = new MapTile();
           no.a(param2, var3, param0, -24721);
           var3.j(-78);
           var4 = -72 / ((-5 - param1) / 60);
@@ -164,7 +164,7 @@ abstract class rb implements n {
         double var10Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
-        var19 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           mn.field_t = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = iq.field_a.length;
@@ -279,43 +279,43 @@ abstract class rb implements n {
         int var14Lifetime1;
         int var14Lifetime2;
         int var14Lifetime3;
-        var20 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var6_int = (-param4 + param3 << 8) / param5.field_g;
           var7 = var6_int * param5.field_i + (param4 << 8);
           param2 = param2 + param5.field_i;
           param0 = param0 + param5.field_d;
-          var8 = param2 + qn.field_l * param0;
+          var8 = param2 + SoftwareRaster.field_l * param0;
           var9 = 0;
           var10 = param5.field_h;
           var11 = param5.field_e;
-          var12 = qn.field_l - var11;
-          if (param0 < qn.field_a) {
-            var14 = qn.field_a - param0;
-            param0 = qn.field_a;
+          var12 = SoftwareRaster.field_l - var11;
+          if (param0 < SoftwareRaster.field_a) {
+            var14 = SoftwareRaster.field_a - param0;
+            param0 = SoftwareRaster.field_a;
             var10 = var10 - var14;
             var9 = var9 + var11 * var14;
-            var8 = var8 + qn.field_l * var14;
+            var8 = var8 + SoftwareRaster.field_l * var14;
           }
           if (param1 != -1708086482) {
             rb.e(-63);
           }
           var13 = 0;
-          if (param2 < qn.field_j) {
-            var14Lifetime1 = qn.field_j - param2;
+          if (param2 < SoftwareRaster.field_j) {
+            var14Lifetime1 = SoftwareRaster.field_j - param2;
             var9 = var9 + var14Lifetime1;
             var8 = var8 + var14Lifetime1;
-            param2 = qn.field_j;
+            param2 = SoftwareRaster.field_j;
             var13 = var13 + var14Lifetime1;
             var12 = var12 + var14Lifetime1;
             var7 = var7 + var6_int * var14Lifetime1;
             var11 = var11 - var14Lifetime1;
           }
-          if (qn.field_f < var10 + param0) {
-            var10 = var10 - (param0 + var10 - qn.field_f);
+          if (SoftwareRaster.field_f < var10 + param0) {
+            var10 = var10 - (param0 + var10 - SoftwareRaster.field_f);
           }
-          if (qn.field_e < var11 + param2) {
-            var14Lifetime2 = -qn.field_e + param2 + var11;
+          if (SoftwareRaster.field_e < var11 + param2) {
+            var14Lifetime2 = -SoftwareRaster.field_e + param2 + var11;
             var12 = var12 + var14Lifetime2;
             var13 = var13 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;
@@ -334,11 +334,11 @@ abstract class rb implements n {
                   var17 = param5.field_j[param5.field_k[incrementValue$0] & 255];
                   if (0 != var17) {
                     if (255 < var15) {
-                      qn.field_d[var8] = var17;
+                      SoftwareRaster.field_d[var8] = var17;
                     } else {
-                      var18 = qn.field_d[var8];
+                      var18 = SoftwareRaster.field_d[var8];
                       var19 = (var17 & 16711935) * var15 + (16711935 & var18) * var16 >> 8 & 16711935;
-                      qn.field_d[var8] = var19 + rn.a(65280, rn.a(var17, 65280) * var15 + rn.a(var18, 65280) * var16 >> 8);
+                      SoftwareRaster.field_d[var8] = var19 + rn.a(65280, rn.a(var17, 65280) * var15 + rn.a(var18, 65280) * var16 >> 8);
                     }
                   }
                   var8++;

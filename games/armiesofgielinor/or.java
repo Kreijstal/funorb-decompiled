@@ -12,7 +12,7 @@ final class or implements kh {
     private int field_l;
     static String field_e;
     private int field_b;
-    private ka field_g;
+    private BitmapFont field_g;
     static String field_j;
     private int field_k;
 
@@ -31,24 +31,24 @@ final class or implements kh {
           var14 = param0 instanceof ws ? (ws) (param0) : null;
           if (var14 == null) {
           }
-          qn.f(param1 + param0.field_B, param4 + param0.field_p, param0.field_l, param0.field_w, this.field_b);
+          SoftwareRaster.f(param1 + param0.field_B, param4 + param0.field_p, param0.field_l, param0.field_w, this.field_b);
           var7 = var14.field_S + param0.field_B + param1;
           if (param2 > -79) {
             field_e = (String) null;
           }
           var8 = param0.field_p + param4 + var14.field_M;
-          qn.a(var7, var8, var14.field_Q, this.field_i);
+          SoftwareRaster.a(var7, var8, var14.field_Q, this.field_i);
           if (var14.field_N != -1) {
             var9 = 2.0 * ((double)var14.field_N * 3.141592653589793) / (double)var14.field_L;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_Q);
             var12 = (int)(Math.cos(var9) * (double)var14.field_Q);
-            qn.a(var11 + var7, var12 + var8, 1, this.field_k);
+            SoftwareRaster.a(var11 + var7, var12 + var8, 1, this.field_k);
           }
-          qn.a(var7, var8, 2, 1);
+          SoftwareRaster.a(var7, var8, 2, 1);
           var9Lifetime1 = (double)var14.field_R * 3.141592653589793 * 2.0 / (double)var14.field_L;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_Q);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_Q);
-          qn.h(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          SoftwareRaster.h(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (this.field_g != null) {
             var13 = this.field_h + var14.field_Q + var14.field_S;
             this.field_g.a(param0.field_v, param1 + param0.field_B + var13, this.field_d + param4 + param0.field_p, param0.field_l - this.field_h - var13, param0.field_w - (this.field_h << 1), this.field_m, this.field_l, 1, 1, 0);
@@ -70,7 +70,7 @@ final class or implements kh {
         field_a = null;
     }
 
-    or(ka param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    or(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_g = param0;
           this.field_k = param6;

@@ -29,17 +29,17 @@ final class ep {
         return (-mj.field_b + so.field_b.field_g >> 1) + param1;
     }
 
-    private final wk b(int param0, int param1) {
+    private final RgbSprite b(int param0, int param1) {
         if (param0 >= -15) {
           this.a(29);
         }
-        return new wk(ql.field_j.a("intro" + (param1 + 1) + ".jpg", -125, ""), (java.awt.Component) ((Object) ll.p(0)));
+        return new RgbSprite(ql.field_j.a("intro" + (param1 + 1) + ".jpg", -125, ""), (java.awt.Component) ((Object) ll.p(0)));
     }
 
     final void a(boolean param0) {
         int fieldTemp$0 = 0;
         int var3;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_l = this.field_l + 1;
         if (0 < this.field_m) {
           fieldTemp$0 = this.field_m - 1;
@@ -60,7 +60,7 @@ final class ep {
         }
         if (this.field_n <= 0) {
           if (this.field_i.length <= this.field_c) {
-            bv.a(false, 0, 1, jt.field_a);
+            CipherPacketBuffer.a(false, 0, 1, jt.field_a);
           }
           if (this.field_g != 0) {
             if (1 == this.field_g) {
@@ -131,12 +131,12 @@ final class ep {
         int var6Lifetime1;
         int var8Lifetime1;
         int var8Lifetime1Lifetime1;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 256) {
           discarded$0 = this.a(53, -105);
         }
         if (this.field_j != 3) {
-          qn.b();
+          SoftwareRaster.b();
           var12 = new String[10];
           var13 = var12;
           var3_int = nr.field_e.a(ts.field_b, new int[]{1000}, var13);
@@ -149,14 +149,14 @@ final class ep {
             if (this.field_j == 2) {
               var4Lifetime1 = 256 - var4Lifetime1;
             }
-            qn.b(this.a(0, param0 ^ 4336), this.a((byte) -56, 0), so.field_b.field_a, so.field_b.field_g, 65793, var4Lifetime1);
+            SoftwareRaster.b(this.a(0, param0 ^ 4336), this.a((byte) -56, 0), so.field_b.field_a, so.field_b.field_g, 65793, var4Lifetime1);
           }
         } else {
           if (ck.field_c == null) {
-            ck.field_c = new wk[16];
+            ck.field_c = new RgbSprite[16];
             try {
               for (var2 = 0; var2 < 16; var2++) {
-                ck.field_c[var2] = this.b(kf.b(param0, -383), var2);
+                ck.field_c[var2] = this.b(GrowthEvent.b(param0, -383), var2);
               }
             } catch (java.lang.OutOfMemoryError decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -169,7 +169,7 @@ final class ep {
           if (var2 > 0) {
             var3 = (double)this.a(-320, 4592);
             this.a(var5, (byte) -79);
-            qn.b(0, 0, so.field_b.field_a, so.field_b.field_g, 65793, var2);
+            SoftwareRaster.b(0, 0, so.field_b.field_a, so.field_b.field_g, 65793, var2);
           } else {
             this.a(var5, (byte) -79);
           }
@@ -179,9 +179,9 @@ final class ep {
               var6++;
             }
             if (var6 >= 0 &&
-              md.field_A.length > var6) {
+              ParasiteEvent.field_A.length > var6) {
               var7_ref_String__ = new String[10];
-              var8 = hh.field_i.a(md.field_A[var6], new int[]{620}, var7_ref_String__);
+              var8 = hh.field_i.a(ParasiteEvent.field_A[var6], new int[]{620}, var7_ref_String__);
               for (var9 = 0; var9 < var8; var9++) {
                 var10 = 435 + 16 * var9;
                 hh.field_i.a(var7_ref_String__[var9], this.a(320, 4592), this.a((byte) -104, var10), 16777215, 65793, 256 - (int)(this.field_e * 256.0 / 11.904));
@@ -203,24 +203,24 @@ final class ep {
               } else {
                 stackIn_44_5 = 256;
               }
-              qn.b(stackIn_43_0, stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_43_4, stackIn_44_5);
+              SoftwareRaster.b(stackIn_43_0, stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_43_4, stackIn_44_5);
             }
             var8Lifetime1 = this.field_q << 2;
             stackIn_48_0 = (var8Lifetime1 <= 256) ? var8Lifetime1 : 256;
             var8Lifetime1Lifetime1 = stackIn_48_0;
             ol.field_y.e(this.a(-(int)this.field_k + 3002, 4592), this.a((byte) -81, 90), var8Lifetime1Lifetime1);
             if (var7 >= 160000) {
-              bv.a(false, 0, 1, jt.field_a);
+              CipherPacketBuffer.a(false, 0, 1, jt.field_a);
             }
           } else {
-            qn.a((int)(16.0 * (-var3 + (double)this.a(1105, param0 + 4336))), this.a((byte) -73, 119) << 4, 480, (ae.b(var6Lifetime1, 100) >> 13) + 32, fe.field_o[1]);
-            qn.a((int)(16.0 * (-var3 + (double)this.a(1068, 4592))), this.a((byte) -42, 219) << 4, 480, 32 + (ae.b(800 + var6Lifetime1, 100) >> 13), fe.field_o[2]);
-            qn.a((int)(16.0 * ((double)this.a(1105, 4592) - var3)), this.a((byte) -39, 286) << 4, 480, (ae.b(var6Lifetime1 + 1600, param0 - 156) >> 13) + 32, fe.field_o[3]);
-            qn.a((int)(16.0 * (-var3 + (double)this.a(1443, 4592))), this.a((byte) -89, 116) << 4, 480, 32 + (ae.b(2400 + var6Lifetime1, 100) >> 13), fe.field_o[4]);
-            qn.a((int)((-var3 + (double)this.a(1478, 4592)) * 16.0), this.a((byte) -62, 207) << 4, 480, 32 + (ae.b(var6Lifetime1 + 3200, param0 ^ 356) >> 13), fe.field_o[5]);
-            qn.a((int)(16.0 * (-var3 + (double)this.a(1446, 4592))), this.a((byte) -103, 295) << 4, 480, 32 + (ae.b(4000 + var6Lifetime1, 100) >> 13), fe.field_o[6]);
-            qn.b((int)(this.a(1890.0 - this.field_k, 16) * 16.0), this.a((byte) -78, 160) << 4, 1600, 32 + (ae.b(150 + (var6Lifetime1 >> 1), 100) >> 14), fe.field_o[0]);
-            qn.a((int)(16.0 * (-var3 + (double)this.a(2614, 4592))), this.a((byte) -74, 219) << 4, 80, (ae.b(var6Lifetime1, 100) >> 13) + 32 >> 2, fe.field_o[1]);
+            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1105, param0 + 4336))), this.a((byte) -73, 119) << 4, 480, (ae.b(var6Lifetime1, 100) >> 13) + 32, fe.field_o[1]);
+            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1068, 4592))), this.a((byte) -42, 219) << 4, 480, 32 + (ae.b(800 + var6Lifetime1, 100) >> 13), fe.field_o[2]);
+            SoftwareRaster.a((int)(16.0 * ((double)this.a(1105, 4592) - var3)), this.a((byte) -39, 286) << 4, 480, (ae.b(var6Lifetime1 + 1600, param0 - 156) >> 13) + 32, fe.field_o[3]);
+            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1443, 4592))), this.a((byte) -89, 116) << 4, 480, 32 + (ae.b(2400 + var6Lifetime1, 100) >> 13), fe.field_o[4]);
+            SoftwareRaster.a((int)((-var3 + (double)this.a(1478, 4592)) * 16.0), this.a((byte) -62, 207) << 4, 480, 32 + (ae.b(var6Lifetime1 + 3200, param0 ^ 356) >> 13), fe.field_o[5]);
+            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1446, 4592))), this.a((byte) -103, 295) << 4, 480, 32 + (ae.b(4000 + var6Lifetime1, 100) >> 13), fe.field_o[6]);
+            SoftwareRaster.b((int)(this.a(1890.0 - this.field_k, 16) * 16.0), this.a((byte) -78, 160) << 4, 1600, 32 + (ae.b(150 + (var6Lifetime1 >> 1), 100) >> 14), fe.field_o[0]);
+            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(2614, 4592))), this.a((byte) -74, 219) << 4, 80, (ae.b(var6Lifetime1, 100) >> 13) + 32 >> 2, fe.field_o[1]);
             var7 = 256 + (ae.b(var6Lifetime1 / 4, 100) - 65536);
             if (var7 > 0) {
               ih.field_H.e((int)(-var3 + (double)this.a(2568, 4592)), this.a((byte) -29, 141), var7);
@@ -240,10 +240,10 @@ final class ep {
     final static void a(je param0, int param1, je param2) {
         try {
           if (null == param2.field_fb) {
-            param2.field_fb = new at();
+            param2.field_fb = new NodeDeque();
           }
           if (null == param0.field_fb) {
-            param0.field_fb = new at();
+            param0.field_fb = new NodeDeque();
           }
           if (null == nh.field_K) {
             nh.field_K = new tp(64);
@@ -275,18 +275,18 @@ final class ep {
         int var13;
         int[] var17;
         int var6Lifetime1;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 != -79) {
           return;
         }
-        var17 = new int[qn.field_g];
+        var17 = new int[SoftwareRaster.field_g];
         var4 = -param0;
         var4 = var4 + kv.field_F;
         var5 = -1;
         for (var6 = us.field_a; var6 < 16; var6++) {
           var7 = var4;
           var8 = (var7 >> 4) + this.a(0, 4592);
-          if (qn.field_l > var8) {
+          if (SoftwareRaster.field_l > var8) {
             if (null == ck.field_c[var6]) {
               ck.field_c[var6] = this.b(-99, var6);
             }
@@ -300,8 +300,8 @@ final class ep {
                 var11 = var11 - (var8 << 4);
                 var8 = 0;
               }
-              if (qn.field_l < var10) {
-                var9 = var9 - (var10 - qn.field_l);
+              if (SoftwareRaster.field_l < var10) {
+                var9 = var9 - (var10 - SoftwareRaster.field_l);
               }
               var12 = this.a((byte) -34, 0);
               if (var5 < 0) {
@@ -321,7 +321,7 @@ final class ep {
           break;
         }
         for (var6Lifetime1 = 0; var6Lifetime1 < 64; var6Lifetime1++) {
-          qn.d(var6Lifetime1 + var5, this.a((byte) -45, 0), qn.field_g, 0, 255 - (var6Lifetime1 << 2));
+          SoftwareRaster.d(var6Lifetime1 + var5, this.a((byte) -45, 0), SoftwareRaster.field_g, 0, 255 - (var6Lifetime1 << 2));
         }
         return;
     }
@@ -337,7 +337,7 @@ final class ep {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          vh var2 = null;
+          PacketBuffer var2 = null;
           if (ai.field_T.field_q >= 4) {
             if (-1 == ai.field_T.field_p) {
               return 3;
@@ -354,7 +354,7 @@ final class ep {
             }
             if (ta.field_N == 1) {
               if (2 == kd.field_R.field_g) {
-                stackIn_13_0 = as.a(-1, (byte) 101);
+                stackIn_13_0 = OwnerChangeEvent.a(-1, (byte) 101);
                 return stackIn_13_0;
               }
               if (1 == kd.field_R.field_g) {
@@ -363,24 +363,24 @@ final class ep {
             }
             if (ta.field_N == 2) {
               jj.field_g = new hi((java.net.Socket) (kd.field_R.field_f), vq.field_c);
-              var2 = new vh(13);
+              var2 = new PacketBuffer(13);
               it.a(hq.field_e, false, am.field_x, var2, ek.field_e);
               var2.b(1, 15);
               var2.a((byte) -124, vq.field_d);
-              jj.field_g.a(var2.field_o, (byte) 20, 0, 13);
+              jj.field_g.a(var2.payload, (byte) 20, 0, 13);
               ta.field_N = ta.field_N + 1;
               fi.field_s = 30000L + vi.b(103);
             }
             if (3 == ta.field_N) {
               if (jj.field_g.d((byte) 43) <= 0) {
                 if (vi.b(97) > fi.field_s) {
-                  stackIn_30_0 = as.a(-2, (byte) 101);
+                  stackIn_30_0 = OwnerChangeEvent.a(-2, (byte) 101);
                   return stackIn_30_0;
                 }
               } else {
                 var1_int = jj.field_g.a(70);
                 if (var1_int != 0) {
-                  stackIn_25_0 = as.a(var1_int, (byte) 101);
+                  stackIn_25_0 = OwnerChangeEvent.a(var1_int, (byte) 101);
                   return stackIn_25_0;
                 }
                 ta.field_N = ta.field_N + 1;
@@ -403,7 +403,7 @@ final class ep {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return as.a(-3, (byte) 101);
+            return OwnerChangeEvent.a(-3, (byte) 101);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -467,7 +467,7 @@ final class ep {
     }
 
     private final double a(double param0, int param1) {
-        wk discarded$0 = null;
+        RgbSprite discarded$0 = null;
         if (param1 != 16) {
           discarded$0 = this.b(-62, 105);
         }

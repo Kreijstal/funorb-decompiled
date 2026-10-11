@@ -5,7 +5,7 @@ final class vo implements Runnable {
     static String field_h;
     static String field_e;
     static String[] field_f;
-    static wk field_d;
+    static RgbSprite field_d;
     private ui field_g;
     private boolean field_a;
     int field_b;
@@ -71,7 +71,7 @@ final class vo implements Runnable {
           Throwable decompiledCaughtException = null;
           Exception var2_ref = null;
           String var6 = null;
-          var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           while (!this.field_a) {
             var2 = this.field_g;
             synchronized (var2) {
@@ -175,7 +175,7 @@ final class vo implements Runnable {
         int stackIn_6_0 = 0;
         int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = 33 / ((19 - param0) / 63);
           var4 = 0;
@@ -253,12 +253,12 @@ final class vo implements Runnable {
         if (param1 != 1) {
           field_e = (String) null;
         }
-        if (nw.g(76)) {
+        if (DamageEvent.g(76)) {
           return;
         }
         try {
           var6 = param0 ? 1 : 0;
-          qq.a((byte) 6, var5 + var4_int * 1000, var6, param2);
+          StateChangeEvent.a((byte) 6, var5 + var4_int * 1000, var6, param2);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "vo.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -355,7 +355,7 @@ final class vo implements Runnable {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         Throwable decompiledCaughtException = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4 = new nh();
           var4.field_L = 1;

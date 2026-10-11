@@ -14,7 +14,7 @@ final class jp {
     final boolean a(int param0) {
         int var3;
         we var4;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 2189) {
           this.field_b = (String) null;
         }
@@ -46,7 +46,7 @@ final class jp {
         return true;
     }
 
-    final static void a(int param0, int param1, int param2, wk[] param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, RgbSprite[] param3, int param4, int param5) {
         try {
           if (param5 != -8991) {
             field_g = (int[]) null;
@@ -59,19 +59,19 @@ final class jp {
         }
     }
 
-    final static void a(vh param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
           la.field_d = param0.e((byte) -104) << 5;
           var2_int = param0.k(0);
-          rt.field_D = (var2_int & 7) << 18;
+          RevivalEvent.field_D = (var2_int & 7) << 18;
           la.field_d = la.field_d + (var2_int >> 3);
-          rt.field_D = rt.field_D + (param0.e((byte) -104) << 2);
+          RevivalEvent.field_D = RevivalEvent.field_D + (param0.e((byte) -104) << 2);
           var2_intLifetime1 = param0.k(0);
           nk.field_m = 2064384 & var2_intLifetime1 << 15;
-          rt.field_D = rt.field_D + (var2_intLifetime1 >> 6);
+          RevivalEvent.field_D = RevivalEvent.field_D + (var2_intLifetime1 >> 6);
           nk.field_m = nk.field_m + (param0.k(0) << 7);
           int var3 = 16 % ((param1 + 45) / 34);
           var2_intLifetime2 = param0.k(0);
@@ -102,13 +102,13 @@ final class jp {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (qn.field_l >= param2 + param0) {
+        if (SoftwareRaster.field_l >= param2 + param0) {
           return param0;
         }
         if (~(param0 + param1 - param2) <= param3) {
           return -param2 + (param1 + param0);
         }
-        return -param2 + qn.field_l;
+        return -param2 + SoftwareRaster.field_l;
     }
 
     public static void a(byte param0) {

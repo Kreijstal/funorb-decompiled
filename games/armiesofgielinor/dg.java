@@ -108,7 +108,7 @@ final class dg {
 
     final void b(int param0) {
         int var2 = 0;
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         of.field_Mb = lo.a("cantmove", -28106, "basic", this.field_d);
         bk.field_d = lo.a("attacktargets", -28106, "basic", this.field_d);
         hq.field_a = lo.a("surround_tiles", -28106, "basic", this.field_d);
@@ -119,7 +119,7 @@ final class dg {
         }
         es.field_d = lo.a("bones", param0 - 28106, "basic", this.field_d);
         wf.field_B = fk.a("boneshadows", (byte) -124, this.field_d, "basic");
-        go.field_g = nh.a("player_ring", "basic", this.field_d, false);
+        TeamRoster.field_g = nh.a("player_ring", "basic", this.field_d, false);
         wl.field_N = fk.a("shadows", (byte) -128, this.field_d, "basic")[0];
     }
 

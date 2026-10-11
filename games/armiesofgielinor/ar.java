@@ -6,7 +6,7 @@ final class ar extends ms {
     static String field_v;
     int[] field_A;
     private int[][] field_u;
-    static wk field_D;
+    static RgbSprite field_D;
     static String field_y;
     private String[] field_z;
     static int field_C;
@@ -26,15 +26,15 @@ final class ar extends ms {
 
     final void a(boolean param0) {
         int var2 = 0;
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_A != null) {
           for (var2 = 0; this.field_A.length > var2; var2++) {
             this.field_A[var2] = oe.c(this.field_A[var2], 32768);
           }
         }
         if (!param0) {
-          vh var4 = (vh) null;
-          this.a((byte) -5, 7, (vh) null);
+          PacketBuffer var4 = (PacketBuffer) null;
+          this.a((byte) -5, 7, (PacketBuffer) null);
         }
     }
 
@@ -70,7 +70,7 @@ final class ar extends ms {
         return var4.field_n[param1];
     }
 
-    final static void a(wk[][] param0, int[] param1, byte param2, byte[] param3, int param4, kl param5, kl param6, byte[] param7, String[] param8, int[] param9, boolean param10, int param11, String[][] param12, ru[] param13, kl param14, String[][] param15, wk[][] param16) {
+    final static void a(RgbSprite[][] param0, int[] param1, byte param2, byte[] param3, int param4, kl param5, kl param6, byte[] param7, String[] param8, int[] param9, boolean param10, int param11, String[][] param12, ru[] param13, kl param14, String[][] param15, RgbSprite[][] param16) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -193,7 +193,7 @@ final class ar extends ms {
         }
     }
 
-    final void a(vh param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -201,7 +201,7 @@ final class ar extends ms {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 91) {
             return;
@@ -231,7 +231,7 @@ final class ar extends ms {
         int var3 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
         if (this.field_z == null) {
@@ -243,7 +243,7 @@ final class ar extends ms {
           discarded$2 = var5.append(this.field_z[var3]);
         }
         if (param0 != 97) {
-          field_D = (wk) null;
+          field_D = (RgbSprite) null;
         }
         return var2.toString();
     }
@@ -261,7 +261,7 @@ final class ar extends ms {
     ar() {
     }
 
-    private final void a(byte param0, int param1, vh param2) {
+    private final void a(byte param0, int param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var9 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -275,7 +275,7 @@ final class ar extends ms {
         int var7 = 0;
         me var8 = null;
         int var10 = 0;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = -110 % ((13 - param0) / 56);
           if (param1 != 1) {

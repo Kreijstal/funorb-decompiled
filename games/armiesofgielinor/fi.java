@@ -3,15 +3,15 @@
  */
 import java.util.*;
 
-final class fi extends tc {
+final class fi extends IntrusiveNode {
     private int field_n;
-    static at field_u;
+    static NodeDeque field_u;
     private boolean field_p;
     private int field_t;
     private int field_q;
     private int field_k;
     static long field_s;
-    jd field_r;
+    Unit field_r;
     private int field_o;
     private int field_m;
     static String field_l;
@@ -21,7 +21,7 @@ final class fi extends tc {
         me[] var2;
         int var4;
         me[] var5;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var5 = uj.c((byte) 105);
         var2 = var5;
         for (var3 = param0; var5.length > var3; var3++) {
@@ -32,7 +32,7 @@ final class fi extends tc {
         return null;
     }
 
-    final void a(jd param0, int param1, int param2, int param3, int param4, ha param5) {
+    final void a(Unit param0, int param1, int param2, int param3, int param4, Battlefield param5) {
         String var7 = null;
         int var8 = 0;
         int var13 = 0;
@@ -60,65 +60,65 @@ final class fi extends tc {
         int var11 = 0;
         int var12 = 0;
         int var9Lifetime1;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           uf.field_j.b();
-          qn.b();
+          SoftwareRaster.b();
           fe.b(0, 0, 134, 61, io.field_m, nd.field_b, 0, 0);
           qt.field_e.b(2, 2);
-          qn.b(5, 5, 124, 18, 0, 192);
-          qn.b(5, 25, 30, 30, 0, 192);
-          var7 = this.field_r.field_K;
-          qn.f(5, param2, 95, 23);
+          SoftwareRaster.b(5, 5, 124, 18, 0, 192);
+          SoftwareRaster.b(5, 25, 30, 30, 0, 192);
+          var7 = this.field_r.displayName;
+          SoftwareRaster.f(5, param2, 95, 23);
           stackIn_3_0 = en.field_E;
           stackIn_3_1 = var7;
           stackIn_3_2 = 10 - (this.field_q >> 1);
           stackIn_3_3 = 17;
           stackIn_3_4 = op.field_c;
-          if (param5.field_wb) {
+          if (param5.teamGame) {
             stackIn_4_5 = 1;
           } else {
             stackIn_4_5 = 0;
           }
-          ((tu) (Object) stackIn_3_0).b(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4[stackIn_4_5][this.field_r.field_O], -1);
-          qn.a();
+          ((tu) (Object) stackIn_3_0).b(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4[stackIn_4_5][this.field_r.ownerPlayer], -1);
+          SoftwareRaster.a();
           var8 = this.field_r.g((byte) 122);
           if (var8 < 0) {
             var8 = 0;
           }
           stackIn_8_0 = en.field_E;
-          stackIn_8_1 = var8 + "/" + this.field_r.field_t;
+          stackIn_8_1 = var8 + "/" + this.field_r.maximumStrength;
           stackIn_8_2 = 126;
           stackIn_8_3 = 18;
           stackIn_8_4 = op.field_c;
-          if (!param5.field_wb) {
+          if (!param5.teamGame) {
             stackIn_9_5 = 0;
           } else {
             stackIn_9_5 = 1;
           }
-          ((tu) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4[stackIn_9_5][this.field_r.field_O], -1);
-          if (param1 == this.field_r.field_O) {
-            qn.b(99, 25, 30, 30, 0, 128);
-            qn.b(53, 25, 30, 30, 0, 128);
+          ((tu) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4[stackIn_9_5][this.field_r.ownerPlayer], -1);
+          if (param1 == this.field_r.ownerPlayer) {
+            SoftwareRaster.b(99, 25, 30, 30, 0, 128);
+            SoftwareRaster.b(53, 25, 30, 30, 0, 128);
             var9 = this.field_r.l(-27014);
             cp.field_e[eb.a((byte) -97, ~var9 & 3)].a(56, 25);
           } else {
             if (param0 == null) {
-              qn.b(99, 25, 30, 30, 0, 128);
+              SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             } else {
-              qn.b(37, 25, 92, 30, 0, 128);
+              SoftwareRaster.b(37, 25, 92, 30, 0, 128);
               ro.field_rb[param0.g(0)].a(43, 32);
               sg.field_b[this.a(param0.g(0), this.field_r.g(param2 - 5), -46)].a(75, 32);
             }
           }
           ro.field_rb[this.field_r.g(0)].a(106, 32);
-          en.field_E.c(-param5.a(param5.field_v * this.field_r.field_w + this.field_r.field_J, param2 - 9, this.field_r) + 100 + "%", 20, 45, 16777215, -1);
+          en.field_E.c(-param5.a(param5.mapWidth * this.field_r.tileY + this.field_r.tileX, param2 - 9, this.field_r) + 100 + "%", 20, 45, 16777215, -1);
           vb.field_t.b(68, 60, nd.field_b[-1 + nd.field_b.length]);
           so.field_b.a(param2 + 5600);
           var9Lifetime1 = this.field_k - param3 - 75;
           var10 = this.field_t - (param4 + 80);
           uf.field_j.e(var9Lifetime1, var10, -this.field_m + 32 << 3);
-          var11 = bw.field_m[this.field_r.field_N][12];
+          var11 = bw.unitDefinitions[this.field_r.unitType][12];
           if (var11 != -1) {
             bd.a(32 - this.field_m << 3, true, var9Lifetime1 + 96, e.field_b, 40, 60 + var10);
             if (var11 < lb.field_e.length) {
@@ -182,8 +182,8 @@ final class fi extends tc {
 
     final void a(byte param0, boolean param1) {
         int var4;
-        ha var5;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        Battlefield var5;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1) {
           if (this.field_m > 0) {
             this.field_m = this.field_m - 4;
@@ -219,16 +219,16 @@ final class fi extends tc {
             this.field_m = this.field_m + 4;
           }
           if (this.field_m >= 32) {
-            this.d(108);
+            this.unlink(108);
           }
         }
         if (param0 > -100) {
-          var5 = (ha) null;
-          this.a((jd) null, -88, 39, -11, 35, (ha) null);
+          var5 = (Battlefield) null;
+          this.a((Unit) null, -88, 39, -11, 35, (Battlefield) null);
         }
     }
 
-    fi(jd param0, int param1, int param2) {
+    fi(Unit param0, int param1, int param2) {
         try {
           this.field_k = param1;
           this.field_m = 32;
@@ -236,7 +236,7 @@ final class fi extends tc {
           this.field_q = 0;
           this.field_r = param0;
           this.field_t = param2;
-          this.field_o = -110 + rs.field_n.a(this.field_r.field_K);
+          this.field_o = -110 + rs.field_n.a(this.field_r.displayName);
           if (this.field_o < 0) {
             this.field_o = 0;
           }
@@ -247,23 +247,23 @@ final class fi extends tc {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4, boolean param5, int param6, ha param7, Random param8) {
-        ne[] stackIn_22_0 = null;
+    final static void a(int param0, byte param1, int param2, int param3, int param4, boolean param5, int param6, Battlefield param7, Random param8) {
+        MapTile[] stackIn_22_0 = null;
         int stackIn_22_1 = 0;
         int stackIn_23_2 = 0;
         int stackIn_26_0;
-        ne[] stackIn_26_1;
+        MapTile[] stackIn_26_1;
         int stackIn_26_2;
         int stackIn_26_3;
         int stackIn_27_4 = 0;
         Object stackIn_31_0;
-        ne[] stackIn_31_1;
+        MapTile[] stackIn_31_1;
         int stackIn_31_2;
         int stackIn_31_3;
         int stackIn_31_4;
         int stackIn_32_5 = 0;
         int stackIn_35_0;
-        ne[] stackIn_35_1;
+        MapTile[] stackIn_35_1;
         int stackIn_35_2;
         int stackIn_35_3;
         int stackIn_36_4 = 0;
@@ -288,13 +288,13 @@ final class fi extends tc {
         int var12 = 0;
         int var13 = 0;
         Random var14 = null;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var9_int = -param0 + param4;
           var10 = -param3 + param6;
           if (param1 != 101) {
             var14 = (Random) null;
-            fi.a(-20, (byte) 51, -30, 104, -20, false, -76, (ha) null, (Random) null);
+            fi.a(-20, (byte) 51, -30, 104, -20, false, -76, (Battlefield) null, (Random) null);
           }
           var11 = 0;
           var12 = 0;
@@ -303,26 +303,26 @@ final class fi extends tc {
               var9_int == var12) {
               return;
             }
-            if (param7.field_Eb[var12 + param0 + (var11 + param3) * param7.field_v] != null &&
-              param7.field_Eb[var12 + (param0 + (var11 + param3) * param7.field_v)].field_h == param2) {
+            if (param7.tiles[var12 + param0 + (var11 + param3) * param7.mapWidth] != null &&
+              param7.tiles[var12 + (param0 + (var11 + param3) * param7.mapWidth)].terrainType == param2) {
               return;
             }
-            if (param7.field_Eb[param0 + var12 + (var11 + param3) * param7.field_v] == null) {
-              param7.field_Eb[param7.field_v * (var11 + param3) + (param0 + var12)] = new ne(param2, param7);
+            if (param7.tiles[param0 + var12 + (var11 + param3) * param7.mapWidth] == null) {
+              param7.tiles[param7.mapWidth * (var11 + param3) + (param0 + var12)] = new MapTile(param2, param7);
             } else {
-              if (param7.field_Eb[param7.field_v * (var11 + param3) + (var12 + param0)].field_h == 4 ||
-                6 == param7.field_Eb[(var11 + param3) * param7.field_v + (var12 + param0)].field_h &&
+              if (param7.tiles[param7.mapWidth * (var11 + param3) + (var12 + param0)].terrainType == 4 ||
+                6 == param7.tiles[(var11 + param3) * param7.mapWidth + (var12 + param0)].terrainType &&
                 param5) {
                 if (param2 == 1) {
-                  param7.field_Eb[(param3 + var11) * param7.field_v + var12 + param0] = new ne(10, param7);
+                  param7.tiles[(param3 + var11) * param7.mapWidth + var12 + param0] = new MapTile(10, param7);
                 } else {
-                  param7.field_Eb[(param3 + var11) * param7.field_v + param0 + var12] = new ne(param2, param7);
+                  param7.tiles[(param3 + var11) * param7.mapWidth + param0 + var12] = new MapTile(param2, param7);
                 }
               }
             }
             if (var9_int != var12) {
-              stackIn_22_0 = param7.field_Eb;
-              stackIn_22_1 = param7.field_v * (var11 + param3) + (param0 + var12);
+              stackIn_22_0 = param7.tiles;
+              stackIn_22_1 = param7.mapWidth * (var11 + param3) + (param0 + var12);
               if (var9_int > 0) {
                 stackIn_23_2 = 1;
               } else {
@@ -330,7 +330,7 @@ final class fi extends tc {
               }
               if (stackIn_22_0[stackIn_22_1 + stackIn_23_2] != null) {
                 stackIn_26_0 = param2;
-                stackIn_26_1 = param7.field_Eb;
+                stackIn_26_1 = param7.tiles;
                 stackIn_26_2 = param0;
                 stackIn_26_3 = var12;
                 if (var9_int <= 0) {
@@ -338,15 +338,15 @@ final class fi extends tc {
                 } else {
                   stackIn_27_4 = 1;
                 }
-                if (stackIn_26_0 == stackIn_26_1[stackIn_26_2 + (stackIn_26_3 + (stackIn_27_4 + param7.field_v * (var11 + param3)))].field_h) {
+                if (stackIn_26_0 == stackIn_26_1[stackIn_26_2 + (stackIn_26_3 + (stackIn_27_4 + param7.mapWidth * (var11 + param3)))].terrainType) {
                   return;
                 }
               }
             }
             if (var10 != var11) {
               stackIn_31_0 = null;
-              stackIn_31_1 = param7.field_Eb;
-              stackIn_31_2 = param7.field_v;
+              stackIn_31_1 = param7.tiles;
+              stackIn_31_2 = param7.mapWidth;
               stackIn_31_3 = param3;
               stackIn_31_4 = var11;
               if (var10 > 0) {
@@ -356,15 +356,15 @@ final class fi extends tc {
               }
               if (stackIn_31_0 != stackIn_31_1[stackIn_31_2 * (stackIn_31_3 + (stackIn_31_4 + stackIn_32_5)) + param0 + var12]) {
                 stackIn_35_0 = ~param2;
-                stackIn_35_1 = param7.field_Eb;
+                stackIn_35_1 = param7.tiles;
                 stackIn_35_2 = var12 + param0;
-                stackIn_35_3 = param7.field_v;
+                stackIn_35_3 = param7.mapWidth;
                 if (var10 > 0) {
                   stackIn_36_4 = 1;
                 } else {
                   stackIn_36_4 = -1;
                 }
-                if (stackIn_35_0 == ~stackIn_35_1[stackIn_35_2 + stackIn_35_3 * (stackIn_36_4 + param3 + var11)].field_h) {
+                if (stackIn_35_0 == ~stackIn_35_1[stackIn_35_2 + stackIn_35_3 * (stackIn_36_4 + param3 + var11)].terrainType) {
                   return;
                 }
               }
@@ -385,7 +385,7 @@ final class fi extends tc {
             } else {
               stackIn_47_3 = -(var9_int - var12);
             }
-            if (stackIn_41_0 > ns.a(stackIn_43_1, stackIn_44_2 + stackIn_47_3, param8) &&
+            if (stackIn_41_0 > AttackEvent.a(stackIn_43_1, stackIn_44_2 + stackIn_47_3, param8) &&
               var12 != var9_int) {
               stackIn_51_0 = var12;
               if (0 >= var9_int) {
@@ -428,7 +428,7 @@ final class fi extends tc {
     }
 
     static {
-        field_u = new at();
+        field_u = new NodeDeque();
         field_l = "Rock";
     }
 }

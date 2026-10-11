@@ -64,7 +64,7 @@ final class ib extends mk {
             stackIn_29_0 = er.field_b;
             return stackIn_29_0;
           }
-          if (!ha.a(var5, (byte) -26, var6)) {
+          if (!Battlefield.a(var5, (byte) -26, var6)) {
             stackIn_34_0 = mp.field_Pb;
             return stackIn_34_0;
           }
@@ -178,7 +178,7 @@ final class ib extends mk {
         int var13Lifetime1;
         int var14Lifetime1;
         int var13Lifetime1Lifetime1;
-        var17 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var9_int = fs.a(param3, 24340, param2, param8, param4, param5, param1);
           fe.a(param2, param8, param5, param1, tb.field_j, jh.field_k, 0, 128, false);
@@ -188,7 +188,7 @@ final class ib extends mk {
             param3 - param8 < 40 &&
             0 < dd.field_e) {
             if (!param0) {
-              fe.a(8 + param2, param8 + 8, param5 - 16, 32, il.field_s, ci.field_e, 0, 128, true);
+              fe.a(8 + param2, param8 + 8, param5 - 16, 32, il.field_s, TutorialController.field_e, 0, 128, true);
             } else {
               fe.a(param2 + 8, param8 + 8, param5 - 16, 32, il.field_s, nd.field_b, 0, 128, true);
             }
@@ -201,7 +201,7 @@ final class ib extends mk {
             if (param0) {
               fe.a(param2 + 8, param8 + (param1 - 40), -16 + param5, 32, il.field_s, nd.field_b, 0, 128, true);
             } else {
-              fe.a(8 + param2, -40 + param1 + param8, -16 + param5, 32, il.field_s, ci.field_e, 0, 128, true);
+              fe.a(8 + param2, -40 + param1 + param8, -16 + param5, 32, il.field_s, TutorialController.field_e, 0, 128, true);
             }
           } else {
             fe.a(8 + param2, -40 + param1 + param8, param5 - 16, 32, il.field_s, jh.field_k, 0, 128, true);
@@ -222,10 +222,10 @@ final class ib extends mk {
             var11 = -1;
           }
           var12_int = 0;
-          L7: while (true) {
+          scanLoop1: while (true) {
             stackIn_25_0 = (!od.field_c[kd.field_X]) ? 0 : 1;
             if (stackIn_25_0 + bc.field_j[kd.field_X].length > var12_int) {
-              qn.f(8 + param2, 44 + param8, param2 + param5 - 8, param1 + (param8 - 40 - 4));
+              SoftwareRaster.f(8 + param2, 44 + param8, param2 + param5 - 8, param1 + (param8 - 40 - 4));
               if (var12_int % 2 != 1) {
                 stackIn_29_0 = 0;
               } else {
@@ -241,7 +241,7 @@ final class ib extends mk {
                   if (!ue.a(stackIn_40_0, stackIn_40_1, stackIn_41_2, var11, -1208926000, ei.field_e[0])) {
                     fe.a(var13, var14, (param5 >> 1) - 9, 78, io.field_m, ld.field_x, 0, 128, false);
                   } else {
-                    fe.a(var13, var14, -9 + (param5 >> 1), 78, io.field_m, ci.field_e, 0, 128, false);
+                    fe.a(var13, var14, -9 + (param5 >> 1), 78, io.field_m, TutorialController.field_e, 0, 128, false);
                   }
                 } else {
                   stackIn_34_0 = kd.field_X;
@@ -276,7 +276,7 @@ final class ib extends mk {
               } else {
                 stackIn_53_3 = -44 + (param8 + param1);
               }
-              qn.f(stackIn_52_0, stackIn_52_1, stackIn_52_2, stackIn_53_3);
+              SoftwareRaster.f(stackIn_52_0, stackIn_52_1, stackIn_52_2, stackIn_53_3);
               if ((uh.field_e[kd.field_X][1] >> 1) + var10 >= 0) {
                 if (var11 > -1) {
                   if (kd.field_X != 1) {
@@ -323,12 +323,12 @@ final class ib extends mk {
                   }
                 }
                 if (u.a(80 + param1, (byte) 94) < var10) {
-                  break L7;
+                  break scanLoop1;
                 }
                 if (1 == var12_int % 2) {
                   var10 += 80;
                 }
-                qn.f(param2 + 8, 40 + param8 + 4, param2 + param5 - 8, -4 + param8 - (-param1 + 40));
+                SoftwareRaster.f(param2 + 8, 40 + param8 + 4, param2 + param5 - 8, -4 + param8 - (-param1 + 40));
                 var11++;
               } else {
                 var11++;
@@ -341,7 +341,7 @@ final class ib extends mk {
             }
             break;
           }
-          qn.a();
+          SoftwareRaster.a();
           if (kd.field_X > -1) {
             stackIn_87_0 = kd.field_X;
             stackIn_87_1 = pg.field_d.a(0);
@@ -387,7 +387,7 @@ final class ib extends mk {
                 if (10 + param3 > u.a(480, (byte) 94)) {
                   param3 -= 30;
                 }
-                qn.a(-6 + param4, param3 - 11, var13Lifetime1Lifetime1 + 12, 15, 5, 0, 128);
+                SoftwareRaster.a(-6 + param4, param3 - 11, var13Lifetime1Lifetime1 + 12, 15, 5, 0, 128);
                 en.field_E.b((String) (var12), param4, param3, 16777215, -1);
               }
             }
@@ -466,9 +466,9 @@ final class ib extends mk {
         if (!iu.field_h) {
           return;
         }
-        as.field_E.a(true, param1);
+        OwnerChangeEvent.field_E.a(true, param1);
         int var4 = qd.field_I.d((byte) 91) ? 1 : 0;
-        if (tr.field_A != 0 &&
+        if (DeployEvent.field_A != 0 &&
           var4 == 0) {
           param1 = false;
           qu.e(-3);
@@ -477,15 +477,15 @@ final class ib extends mk {
           qd.field_I.a(param3, (byte) -42, param2);
         }
         if (var4 != 0) {
-          as.field_E.a(true, param1);
+          OwnerChangeEvent.field_E.a(true, param1);
         }
         int var5 = qd.field_I.e((byte) -123) + qd.field_I.field_V;
         if (var5 > 640) {
-          kn.field_z = kn.field_z + 5;
+          TelefragEvent.field_z = TelefragEvent.field_z + 5;
         } else {
           if (635 > var5 &&
-            !(0 >= kn.field_z)) {
-            kn.field_z = kn.field_z - 5;
+            !(0 >= TelefragEvent.field_z)) {
+            TelefragEvent.field_z = TelefragEvent.field_z - 5;
           }
         }
     }

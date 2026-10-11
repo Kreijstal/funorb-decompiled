@@ -21,7 +21,7 @@ final class wm {
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, nr param6, int param7, byte param8, int param9, int param10, int param11, nr param12, int param13, ka param14, int param15, int param16, ka param17, int param18, int param19, nr param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, nr param6, int param7, byte param8, int param9, int param10, int param11, nr param12, int param13, BitmapFont param14, int param15, int param16, BitmapFont param17, int param18, int param19, nr param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -112,7 +112,7 @@ final class wm {
         int var9Lifetime3;
         int var8Lifetime1;
         int var9Lifetime1Lifetime1;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         vq.field_a.field_Jb.field_fb.b(108);
         var4 = null;
         var5 = 0;
@@ -130,16 +130,16 @@ final class wm {
           }
           if (var9 != 0) {
             if (null == var8_ref_mo.field_u ||
-              kr.field_J) {
+              MoveEvent.field_J) {
               if (null == var8_ref_mo.field_u) {
                 s.field_d = s.field_d + 1;
               }
               var10 = af.a(var8_ref_mo, (byte) 103);
-              var11 = var10 + ka.c(var8_ref_mo.field_h);
+              var11 = var10 + BitmapFont.c(var8_ref_mo.field_h);
               var12 = hm.a(var8_ref_mo, -5);
               var8_ref_mo.field_u = new je(0L, uf.field_i, var11);
               var8_ref_mo.field_u.field_T = (uf.field_i.field_T >> 1 & 8355711) + (var12 - ((var12 & 16711423) >> 1));
-              var8_ref_mo.field_u.field_Z = tc.field_e;
+              var8_ref_mo.field_u.field_Z = IntrusiveNode.field_e;
               var8_ref_mo.field_u.field_W = (uf.field_i.field_W >> 1 & 8355711) + var12 - (8355711 & var12 >> 1);
               var6 = var6 + param0;
               var8_ref_mo.field_u.field_N = var12;
@@ -169,13 +169,13 @@ final class wm {
         var8Lifetime1 = -var7Lifetime1 + (var6 + (vq.field_a.field_Jb.field_ob + vq.field_a.field_Jb.field_nb));
         vq.field_a.field_Jb.field_ob = vq.field_a.field_Jb.field_ob - var8Lifetime1;
         vq.field_a.field_Jb.field_ab = vq.field_a.field_Jb.field_ab + var8Lifetime1;
-        if (kr.field_J) {
+        if (MoveEvent.field_J) {
           vq.field_a.field_Jb.field_ob = var7Lifetime1;
           vq.field_a.field_Jb.field_nb = -vq.field_a.field_Jb.field_ob + var7Lifetime1;
-          if (kr.field_J) {
+          if (MoveEvent.field_J) {
             vq.field_a.field_Jb.field_ab = vq.field_a.field_Nb.field_ob - vq.field_a.field_Jb.field_ob;
             vq.field_a.field_Jb.field_db = 0;
-            kr.field_J = false;
+            MoveEvent.field_J = false;
             cu.field_c = true;
           }
           if (hf.field_c) {
@@ -205,10 +205,10 @@ final class wm {
           return (mo) (var4);
         }
         vq.field_a.field_Jb.field_nb = -vq.field_a.field_Jb.field_ob + var7Lifetime1;
-        if (kr.field_J) {
+        if (MoveEvent.field_J) {
           vq.field_a.field_Jb.field_ab = vq.field_a.field_Nb.field_ob - vq.field_a.field_Jb.field_ob;
           vq.field_a.field_Jb.field_db = 0;
-          kr.field_J = false;
+          MoveEvent.field_J = false;
           cu.field_c = true;
         }
         if (hf.field_c) {

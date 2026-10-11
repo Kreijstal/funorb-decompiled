@@ -3,7 +3,7 @@
  */
 final class wd {
     int field_d;
-    static wk field_k;
+    static RgbSprite field_k;
     boolean field_a;
     String[] field_c;
     static String field_l;
@@ -35,10 +35,10 @@ final class wd {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
-        ne var7 = null;
+        MapTile var7 = null;
         int var8 = 0;
         int var9 = 0;
-        ca var10 = null;
+        TileMetadata var10 = null;
         int var11 = 0;
         try {
           if (param5 >= 0 &&
@@ -57,21 +57,21 @@ final class wd {
               po.a((byte) 91, param3, param4, param1, var9, var8, var6_int, param5);
               sf.b(param3, param5, param2 + 128, param1, var6_int, param4);
             }
-            tc.a(78, param5, param3, param4 + 19, var6_int, param1 + 39);
+            IntrusiveNode.a(78, param5, param3, param4 + 19, var6_int, param1 + 39);
             cw.a(var6_int, param4 + 19, 39 + param1, -125, param5, param3);
             em.a(var9, param0, param3, param4, var6_int, param2 ^ -128, param5, param1, var8);
-            var10 = var7.field_n;
+            var10 = var7.metadata;
             if (null != var10 &&
-              (var10.field_c & 1) != 0 &&
-              -1 < vs.field_e[var6_int].field_a) {
-              var11 = var7.field_a;
-              if (null != bv.field_w) {
-                var11 = bv.field_w.o(var11, -1);
+              (var10.modifierFlags & 1) != 0 &&
+              -1 < vs.field_e[var6_int].ownerPlayer) {
+              var11 = var7.ownerPlayer;
+              if (null != CipherPacketBuffer.currentBattlefield) {
+                var11 = CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var11, -1);
               }
               eu.a(param1 + 22, var11, ug.field_b + var6_int, 92, 20 + param4);
             }
-            if (var7.e((byte) -125)) {
-              oj.a(20 + param4, true, var6_int + ug.field_b, var7.field_a, param1 + 22);
+            if (var7.hasModifierFlag4((byte) -125)) {
+              GameEvent.a(20 + param4, true, var6_int + ug.field_b, var7.ownerPlayer, param1 + 22);
             }
             fs.a(param4, false, param0, var9, param1, var6_int, param5, var8, param3);
             return;
@@ -95,7 +95,7 @@ final class wd {
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = param1.field_Ob - param2.field_Ob;
           if (vl.field_p != param1.field_Ib) {
@@ -156,7 +156,7 @@ final class wd {
         String var8 = null;
         int var9 = 0;
         int var10 = 0;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0) {
             wd.a((byte) -13);
@@ -199,7 +199,7 @@ final class wd {
             if (var6 == 2) {
               var4 = fo.a(4800, ta.field_Q, new String[]{qd.field_G});
               var8 = fo.a(4800, ov.field_l, new String[]{var3});
-              var7 = rb.field_b.field_gb + qj.field_z.field_gb - 485 - (-tc.field_e.a(var8) + tc.field_e.a(var4));
+              var7 = rb.field_b.field_gb + UpkeepEvent.field_z.field_gb - 485 - (-IntrusiveNode.field_e.a(var8) + IntrusiveNode.field_e.a(var4));
               if (var7 < 0) {
                 var7 = 0;
               }
@@ -240,24 +240,24 @@ final class wd {
                 var5 = "";
                 var4 = "<col=999999>" + var4 + ps.field_z + "</col>";
               }
-              var9 = tc.field_e.a(var4);
+              var9 = IntrusiveNode.field_e.a(var4);
               if (!us.a(true)) {
-                if (qj.field_z.field_eb &&
-                  var9 > (-qj.field_z.field_V + sm.field_d)) {
+                if (UpkeepEvent.field_z.field_eb &&
+                  var9 > (-UpkeepEvent.field_z.field_V + sm.field_d)) {
                   if (!bb.field_a) {
                     var1 = ps.field_z;
                   } else {
                     var1 = "Broken!";
                   }
                 }
-                if (qj.field_z.field_yb != 0 &&
-                  qj.field_z.field_bb < var9 &&
+                if (UpkeepEvent.field_z.field_yb != 0 &&
+                  UpkeepEvent.field_z.field_bb < var9 &&
                   !bb.field_a) {
                   np.k(92);
                 }
               }
             }
-            fs.a(ag.field_A[var6], var5, var4 + ka.c(qj.field_C.toString()), 33, var7);
+            fs.a(CombatEvent.field_A[var6], var5, var4 + BitmapFont.c(UpkeepEvent.field_C.toString()), 33, var7);
             if (!hf.field_c) {
               rb.field_b.field_eb = false;
             }

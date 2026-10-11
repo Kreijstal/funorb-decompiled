@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vt extends tc {
+abstract class vt extends IntrusiveNode {
     static int[] field_m;
-    static wk field_k;
+    static RgbSprite field_k;
     static int field_n;
     static int field_l;
 
@@ -23,7 +23,7 @@ abstract class vt extends tc {
         if (param3 > 25) {
           return ro.b(param1, (byte) -59, param2);
         }
-        field_k = (wk) null;
+        field_k = (RgbSprite) null;
         return ro.b(param1, (byte) -59, param2);
     }
 
@@ -36,33 +36,33 @@ abstract class vt extends tc {
     }
 
     final static void a(int param0) {
-        kr.field_G = new rk();
-        kr.field_G.n(111);
-        ft var1 = kr.field_G.e((byte) 126);
+        MoveEvent.field_G = new rk();
+        MoveEvent.field_G.n(111);
+        ft var1 = MoveEvent.field_G.e((byte) 126);
         if (var1 == null) {
           return;
         }
-        ft var2 = kr.field_G.a((byte) -108);
+        ft var2 = MoveEvent.field_G.a((byte) -108);
         if (var2 == null) {
           return;
         }
-        int var3 = kr.field_G.o(-1);
+        int var3 = MoveEvent.field_G.o(-1);
         if (var3 < 0) {
           return;
         }
         if (param0 > -112) {
           return;
         }
-        if (null == kr.field_G.field_w) {
+        if (null == MoveEvent.field_G.field_w) {
           return;
         }
-        if (kr.field_G.field_w.length != 0) {
-          gb.a(var3, 7, var1.field_k, var2.field_k, var1.field_n, var2.field_n, kr.field_G.field_w, -40);
+        if (MoveEvent.field_G.field_w.length != 0) {
+          gb.a(var3, 7, var1.field_k, var2.field_k, var1.field_n, var2.field_n, MoveEvent.field_G.field_w, -40);
           return;
         }
     }
 
-    final static int a(int param0, int param1, int param2, bv param3) {
+    final static int a(int param0, int param1, int param2, CipherPacketBuffer param3) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -94,7 +94,7 @@ abstract class vt extends tc {
     vt() {
     }
 
-    final static boolean a(int param0, tu param1, int param2, wk[] param3, String param4, int param5) {
+    final static boolean a(int param0, tu param1, int param2, RgbSprite[] param3, String param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

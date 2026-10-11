@@ -141,7 +141,7 @@ final class ls {
         }
     }
 
-    final static void a(vh param0, int param1, java.math.BigInteger param2, int param3, int param4, java.math.BigInteger param5, byte[] param6) {
+    final static void a(PacketBuffer param0, int param1, java.math.BigInteger param2, int param3, int param4, java.math.BigInteger param5, byte[] param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -161,7 +161,7 @@ final class ls {
         int[] var12 = null;
         int[] var13 = null;
         int var9Lifetime1;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var7_int = jq.b(7, param4);
           if (dt.field_b == null) {
@@ -174,21 +174,21 @@ final class ls {
             var8[var9] = dt.field_b.nextInt();
           }
           if (null == sb.field_h ||
-            !(sb.field_h.field_o.length >= var7_int)) {
-            sb.field_h = new vh(var7_int);
+            !(sb.field_h.payload.length >= var7_int)) {
+            sb.field_h = new PacketBuffer(var7_int);
           }
           if (param3 != 6727) {
             return;
           }
-          sb.field_h.field_q = 0;
+          sb.field_h.position = 0;
           sb.field_h.a(param6, param1, param4, param3 - 6621);
           sb.field_h.b(var7_int, (byte) 100);
           sb.field_h.a((byte) 31, var13);
           if (ArmiesOfGielinor.field_L == null ||
-            !(ArmiesOfGielinor.field_L.field_o.length >= 100)) {
-            ArmiesOfGielinor.field_L = new vh(100);
+            !(ArmiesOfGielinor.field_L.payload.length >= 100)) {
+            ArmiesOfGielinor.field_L = new PacketBuffer(100);
           }
-          ArmiesOfGielinor.field_L.field_q = 0;
+          ArmiesOfGielinor.field_L.position = 0;
           ArmiesOfGielinor.field_L.b(1, 10);
           var11 = 0;
           var9Lifetime1 = var11;
@@ -198,8 +198,8 @@ final class ls {
           }
           ArmiesOfGielinor.field_L.b(true, param4);
           ArmiesOfGielinor.field_L.a(-5247, param5, param2);
-          param0.a(ArmiesOfGielinor.field_L.field_o, 0, ArmiesOfGielinor.field_L.field_q, 99);
-          param0.a(sb.field_h.field_o, 0, sb.field_h.field_q, 109);
+          param0.a(ArmiesOfGielinor.field_L.payload, 0, ArmiesOfGielinor.field_L.position, 99);
+          param0.a(sb.field_h.payload, 0, sb.field_h.position, 109);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

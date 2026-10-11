@@ -32,8 +32,8 @@ final class hq {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            mg.field_e = new bv(param3);
-            vl.field_n = new bv(param1);
+            mg.field_e = new CipherPacketBuffer(param3);
+            vl.field_n = new CipherPacketBuffer(param1);
             io.field_t = param5;
             k.field_c = param10;
             aw.field_l = param9;

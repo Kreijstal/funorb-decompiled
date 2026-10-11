@@ -7,7 +7,7 @@ final class pr {
     static String[] field_a;
     private int field_j;
     static String field_i;
-    private at[] field_b;
+    private NodeDeque[] field_b;
     private int field_e;
     private int field_c;
     static int[] field_f;
@@ -15,9 +15,9 @@ final class pr {
     private int[] field_d;
     private ru field_h;
 
-    final at a(int param0, int param1) {
+    final NodeDeque a(int param0, int param1) {
         if (param1 != 1) {
-          return (at) null;
+          return (NodeDeque) null;
         }
         return this.field_b[1 + param0];
     }
@@ -26,7 +26,7 @@ final class pr {
         if (11 == p.field_b) {
           wp.d((byte) -13);
         }
-        to.a(dd.field_a, q.field_C, wa.field_e, -1);
+        to.a(dd.field_a, TelepopEvent.field_C, wa.field_e, -1);
         if (param0 <= 106) {
           return;
         }
@@ -40,12 +40,12 @@ final class pr {
     private final void a(int param0, int param1, int param2, byte param3) {
         param2++;
         if (this.field_b[param2] == null) {
-          this.field_b[param2] = new at();
+          this.field_b[param2] = new NodeDeque();
         }
         if (param3 >= -95) {
           this.a(-65, (byte) -99, 28);
         }
-        this.field_b[param2].a((byte) -119, (tc) (new a(param1, param0)));
+        this.field_b[param2].a((byte) -119, (IntrusiveNode) (new a(param1, param0)));
     }
 
     final static boolean b(int param0) {
@@ -56,7 +56,7 @@ final class pr {
         return stackIn_4_0;
     }
 
-    final static void a(vh param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -71,7 +71,7 @@ final class pr {
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
           RuntimeException var2_ref = null;
-          var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             if (param1 != -84) {
               var6 = (java.awt.Canvas) null;
@@ -127,7 +127,7 @@ final class pr {
         }
     }
 
-    final static je a(int param0, int param1, int param2, int param3, int param4, int param5, ka param6, int param7, int param8, int param9, int param10, byte param11, int param12) {
+    final static je a(int param0, int param1, int param2, int param3, int param4, int param5, BitmapFont param6, int param7, int param8, int param9, int param10, byte param11, int param12) {
         int var13_int = 0;
         RuntimeException var13 = null;
         je var14 = null;
@@ -172,7 +172,7 @@ final class pr {
         field_f = null;
     }
 
-    final wk a(int param0, int param1, byte param2, int param3) {
+    final RgbSprite a(int param0, int param1, byte param2, int param3) {
         int var11_int = 0;
         int[] stackIn_20_0 = null;
         int stackIn_20_1 = 0;
@@ -183,7 +183,7 @@ final class pr {
         int var8;
         int var9;
         int var10;
-        wk var11;
+        RgbSprite var11;
         int var12;
         int var13;
         int var14;
@@ -194,7 +194,7 @@ final class pr {
         int var10Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
-        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var5 = this.field_h.field_e;
         var6 = 0;
         var7 = this.field_h.field_h;
@@ -222,7 +222,7 @@ final class pr {
         }
         var10Lifetime1 = var10Lifetime1 + 2 * param3;
         var9Lifetime1 = var9Lifetime1 + param3 * 2;
-        var11 = new wk(var10Lifetime1, var9Lifetime1);
+        var11 = new RgbSprite(var10Lifetime1, var9Lifetime1);
         for (var12Lifetime1 = var7; var8 >= var12Lifetime1; var12Lifetime1++) {
           var17 = var5;
           var13Lifetime1 = var17;
@@ -300,8 +300,8 @@ final class pr {
         int var2Lifetime1;
         int var4Lifetime1;
         int var5Lifetime1;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
-        this.field_b = new at[257];
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        this.field_b = new NodeDeque[257];
         this.field_d = new int[256];
         for (var2 = 0; var2 < this.field_d.length; var2++) {
           this.field_d[var2] = -1;
@@ -360,9 +360,9 @@ final class pr {
         int[] var19 = null;
         int[] var20 = null;
         int[] var21 = null;
-        var18 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var18 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var21 = qn.field_d;
+          var21 = SoftwareRaster.field_d;
           var20 = var21;
           var19 = var20;
           var6 = var19;
@@ -372,18 +372,18 @@ final class pr {
             this.a(52, 9);
           }
           var9 = this.field_h.field_e;
-          if (qn.field_j > var7 + param1) {
-            var7 = qn.field_j - param1;
+          if (SoftwareRaster.field_j > var7 + param1) {
+            var7 = SoftwareRaster.field_j - param1;
           }
-          if (var9 + param1 >= qn.field_e) {
-            var9 = -param1 + qn.field_e;
+          if (var9 + param1 >= SoftwareRaster.field_e) {
+            var9 = -param1 + SoftwareRaster.field_e;
           }
           var10 = this.field_h.field_h;
-          if (qn.field_a > var8 + param3) {
-            var8 = -param3 + qn.field_a;
+          if (SoftwareRaster.field_a > var8 + param3) {
+            var8 = -param3 + SoftwareRaster.field_a;
           }
-          if (qn.field_f <= var10 + param3) {
-            var10 = -param3 + qn.field_f;
+          if (SoftwareRaster.field_f <= var10 + param3) {
+            var10 = -param3 + SoftwareRaster.field_f;
           }
           for (var11 = var8; var11 < var10; var11++) {
             for (var12 = var7; var12 < var9; var12++) {
@@ -394,7 +394,7 @@ final class pr {
                 var15 < param2.length &&
                 param2[var15]) {
                 var16 = param4.field_j[255 & param4.field_k[var13]];
-                var17 = qn.field_l * (param3 + var11) + (param1 + var12);
+                var17 = SoftwareRaster.field_l * (param3 + var11) + (param1 + var12);
                 if (var21.length <= var17) {
                   System.out.println(var21.length);
                 }

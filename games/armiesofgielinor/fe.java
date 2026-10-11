@@ -6,9 +6,9 @@ final class fe {
     static int field_b;
     private static String[] field_k;
     private static int field_a;
-    private static wk field_g;
+    private static RgbSprite field_g;
     private static int field_f;
-    static wk[] field_l;
+    static RgbSprite[] field_l;
     private static int[] field_d;
     private static int field_n;
     static int[][] field_o;
@@ -18,7 +18,7 @@ final class fe {
     private static int field_m;
     private static int[] field_e;
 
-    private final static void a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5, boolean param6) {
+    private final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int[] param5, boolean param6) {
         int var14 = 0;
         int var7;
         int var8;
@@ -53,7 +53,7 @@ final class fe {
           }
           var10 = param5[var9 >> 16];
           var9 = var9 + var8;
-          var17 = (param1 + var14) * qn.field_l + param0;
+          var17 = (param1 + var14) * SoftwareRaster.field_l + param0;
           var18 = 0;
           while (var18 < 3) {
             var19 = var7 % var12 * var11;
@@ -65,7 +65,7 @@ final class fe {
                   if ((var20 & -65281) == 0) {
                     var20 = fe.a(var10, var20 >> 8, 0, 0);
                   }
-                  qn.field_d[var17] = var20;
+                  SoftwareRaster.field_d[var17] = var20;
                 }
                 var15++;
                 var19++;
@@ -84,7 +84,7 @@ final class fe {
                   }
                   var15 = -var16;
                   while (var15 < 0) {
-                    qn.field_d[var17] = var20;
+                    SoftwareRaster.field_d[var17] = var20;
                     var15++;
                     var17++;
                   }
@@ -100,7 +100,7 @@ final class fe {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int[] param5, int param6, int param7) {
         fe.a(param0, param1, param2, param3, param4, param5, param6, param7, true);
     }
 
@@ -158,7 +158,7 @@ final class fe {
         return false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wk[] param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int param5) {
         int var6;
         int var7;
         int var8;
@@ -172,12 +172,12 @@ final class fe {
         for (param1 = 0; param1 < param3; param1++) {
           if (param1 >= param4[0].field_v) {
             if (param1 < var7) {
-              qn.d(param0, var6, param0 + param2 - 1, var6, 0, param5);
+              SoftwareRaster.d(param0, var6, param0 + param2 - 1, var6, 0, param5);
             } else {
-              qn.d(param0 + param4[0].field_y, var6, param0 + var8 - 1, var6, 0, param5);
+              SoftwareRaster.d(param0 + param4[0].field_y, var6, param0 + var8 - 1, var6, 0, param5);
             }
           } else {
-            qn.d(param0 + param4[0].field_y, var6, param0 + var8 - 1, var6, 0, param5);
+            SoftwareRaster.d(param0 + param4[0].field_y, var6, param0 + var8 - 1, var6, 0, param5);
           }
           var6++;
         }
@@ -193,11 +193,11 @@ final class fe {
         for (var8 = 0; var8 < param3; var8++) {
           var9 = (double)param4 * 3.141592653589793 * 2.0 / 100.0;
           var11 = (double)var8 * 3.141592653589793 * 2.0 / (double)param3;
-          qn.a((int)(((double)param0 + (Math.cos(var9) * Math.cos(var11) * (double)param5 - Math.sin(var9) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)param1 + (Math.sin(var9) * Math.cos(var11) * (double)var7 + Math.cos(var9) * Math.sin(var11) * (double)param5)) * 16.0), param6, 15, field_o[param2]);
+          SoftwareRaster.a((int)(((double)param0 + (Math.cos(var9) * Math.cos(var11) * (double)param5 - Math.sin(var9) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)param1 + (Math.sin(var9) * Math.cos(var11) * (double)var7 + Math.cos(var9) * Math.sin(var11) * (double)param5)) * 16.0), param6, 15, field_o[param2]);
           var9Lifetime1 = (double)(param4 + 5) * 3.141592653589793 * 2.0 / 100.0;
-          qn.a((int)(((double)param0 + (Math.cos(var9Lifetime1) * Math.cos(var11) * (double)param5 - Math.sin(var9Lifetime1) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)param1 + (Math.sin(var9Lifetime1) * Math.cos(var11) * (double)var7 + Math.cos(var9Lifetime1) * Math.sin(var11) * (double)param5)) * 16.0), param6, 31, field_o[param2]);
+          SoftwareRaster.a((int)(((double)param0 + (Math.cos(var9Lifetime1) * Math.cos(var11) * (double)param5 - Math.sin(var9Lifetime1) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)param1 + (Math.sin(var9Lifetime1) * Math.cos(var11) * (double)var7 + Math.cos(var9Lifetime1) * Math.sin(var11) * (double)param5)) * 16.0), param6, 31, field_o[param2]);
           var9Lifetime2 = (double)(param4 + 10) * 3.141592653589793 * 2.0 / 100.0;
-          qn.a((int)(((double)param0 + (Math.cos(var9Lifetime2) * Math.cos(var11) * (double)param5 - Math.sin(var9Lifetime2) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)param1 + (Math.sin(var9Lifetime2) * Math.cos(var11) * (double)var7 + Math.cos(var9Lifetime2) * Math.sin(var11) * (double)param5)) * 16.0), param6, 63, field_o[param2]);
+          SoftwareRaster.a((int)(((double)param0 + (Math.cos(var9Lifetime2) * Math.cos(var11) * (double)param5 - Math.sin(var9Lifetime2) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)param1 + (Math.sin(var9Lifetime2) * Math.cos(var11) * (double)var7 + Math.cos(var9Lifetime2) * Math.sin(var11) * (double)param5)) * 16.0), param6, 63, field_o[param2]);
         }
     }
 
@@ -289,9 +289,9 @@ final class fe {
     final static void a(String param0, int param1, int param2, int[] param3, boolean param4) {
         int var8 = 0;
         fe.a();
-        int[] var5 = qn.field_d;
-        int var6 = qn.field_l;
-        int var7 = qn.field_g;
+        int[] var5 = SoftwareRaster.field_d;
+        int var6 = SoftwareRaster.field_l;
+        int var7 = SoftwareRaster.field_g;
         if (field_g != null) {
           if (field_i == null) {
             return;
@@ -302,9 +302,9 @@ final class fe {
             var8++;
           }
           field_g.b();
-          qn.b();
+          SoftwareRaster.b();
           field_i.b(param0, 0, field_i.field_H + 3, 0, -1);
-          qn.a(var5, var6, var7);
+          SoftwareRaster.a(var5, var6, var7);
           fe.c();
           if (param4) {
             fe.a(field_g, param1, param2, var8, param3);
@@ -315,7 +315,7 @@ final class fe {
         }
     }
 
-    final static void a(wk param0, int param1, int param2, int param3, int param4) {
+    final static void a(RgbSprite param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -359,67 +359,67 @@ final class fe {
           if (var6 < var10) {
             param4 = ((var6 << 16) - var8 + var12 - 1) / var12;
           }
-          var13Lifetime2 = param1 + param2 * qn.field_l;
-          var14 = qn.field_l - param3;
-          if (param2 + param4 > qn.field_f) {
-            param4 = param4 - (param2 + param4 - qn.field_f);
+          var13Lifetime2 = param1 + param2 * SoftwareRaster.field_l;
+          var14 = SoftwareRaster.field_l - param3;
+          if (param2 + param4 > SoftwareRaster.field_f) {
+            param4 = param4 - (param2 + param4 - SoftwareRaster.field_f);
           }
-          if (param2 < qn.field_a) {
-            var15 = qn.field_a - param2;
+          if (param2 < SoftwareRaster.field_a) {
+            var15 = SoftwareRaster.field_a - param2;
             param4 = param4 - var15;
-            var13Lifetime2 = var13Lifetime2 + var15 * qn.field_l;
+            var13Lifetime2 = var13Lifetime2 + var15 * SoftwareRaster.field_l;
             var8 = var8 + var12 * var15;
           }
-          if (param1 + param3 > qn.field_e) {
-            var15Lifetime1 = param1 + param3 - qn.field_e;
+          if (param1 + param3 > SoftwareRaster.field_e) {
+            var15Lifetime1 = param1 + param3 - SoftwareRaster.field_e;
             param3 = param3 - var15Lifetime1;
             var14 = var14 + var15Lifetime1;
           }
-          if (param1 < qn.field_j) {
-            var15Lifetime2 = qn.field_j - param1;
+          if (param1 < SoftwareRaster.field_j) {
+            var15Lifetime2 = SoftwareRaster.field_j - param1;
             param3 = param3 - var15Lifetime2;
             var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          fe.a(0, 0, 0, var7, param0.field_B, qn.field_d, 0, 0, -param4, var8, var13Lifetime2, var14, param3, var11, var12, var5);
+          fe.a(0, 0, 0, var7, param0.field_B, SoftwareRaster.field_d, 0, 0, -param4, var8, var13Lifetime2, var14, param3, var11, var12, var5);
           return;
         }
     }
 
-    final static void a(wk param0, int param1, int param2, int param3) {
+    final static void a(RgbSprite param0, int param1, int param2, int param3) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
         param1 = param1 + param0.field_w;
         param2 = param2 + param0.field_z;
-        int var4 = param1 + param2 * qn.field_l;
+        int var4 = param1 + param2 * SoftwareRaster.field_l;
         int var5 = 0;
         int var6 = param0.field_v;
         int var7 = param0.field_y;
-        int var8 = qn.field_l - var7;
+        int var8 = SoftwareRaster.field_l - var7;
         int var9 = 0;
-        if (param2 < qn.field_a) {
-          var10 = qn.field_a - param2;
+        if (param2 < SoftwareRaster.field_a) {
+          var10 = SoftwareRaster.field_a - param2;
           var6 = var6 - var10;
-          param2 = qn.field_a;
+          param2 = SoftwareRaster.field_a;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * qn.field_l;
+          var4 = var4 + var10 * SoftwareRaster.field_l;
         }
-        if (param2 + var6 > qn.field_f) {
-          var6 = var6 - (param2 + var6 - qn.field_f);
+        if (param2 + var6 > SoftwareRaster.field_f) {
+          var6 = var6 - (param2 + var6 - SoftwareRaster.field_f);
         }
-        if (param1 < qn.field_j) {
-          var10Lifetime1 = qn.field_j - param1;
+        if (param1 < SoftwareRaster.field_j) {
+          var10Lifetime1 = SoftwareRaster.field_j - param1;
           var7 = var7 - var10Lifetime1;
-          param1 = qn.field_j;
+          param1 = SoftwareRaster.field_j;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param1 + var7 > qn.field_e) {
-          var10Lifetime2 = param1 + var7 - qn.field_e;
+        if (param1 + var7 > SoftwareRaster.field_e) {
+          var10Lifetime2 = param1 + var7 - SoftwareRaster.field_e;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -428,7 +428,7 @@ final class fe {
           if (var6 <= 0) {
             return;
           }
-          fe.a(0, qn.field_d, param0.field_B, 0, var5, var4, var7, var6, var8, var9, param3);
+          fe.a(0, SoftwareRaster.field_d, param0.field_B, 0, var5, var4, var7, var6, var8, var9, param3);
           return;
         }
     }
@@ -436,9 +436,9 @@ final class fe {
     final static void a(String param0, int param1, int param2, int param3, boolean param4) {
         int var8 = 0;
         fe.a();
-        int[] var5 = qn.field_d;
-        int var6 = qn.field_l;
-        int var7 = qn.field_g;
+        int[] var5 = SoftwareRaster.field_d;
+        int var6 = SoftwareRaster.field_l;
+        int var7 = SoftwareRaster.field_g;
         if (field_g != null) {
           if (field_i == null) {
             return;
@@ -449,9 +449,9 @@ final class fe {
             var8++;
           }
           field_g.b();
-          qn.b();
+          SoftwareRaster.b();
           field_i.b(param0, 0, field_i.field_H + 3, 0, -1);
-          qn.a(var5, var6, var7);
+          SoftwareRaster.a(var5, var6, var7);
           fe.c();
           if (param4) {
             fe.b(field_g, param1, param2, var8, param3);
@@ -467,9 +467,9 @@ final class fe {
         fe.a(param0, param1, param2, param3, param4);
     }
 
-    final static wk[] a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int[] param5) {
         int var14 = 0;
-        wk[] var6;
+        RgbSprite[] var6;
         int var7;
         int var8;
         int var9;
@@ -481,11 +481,11 @@ final class fe {
         int var16;
         int var17;
         int var11Lifetime1;
-        var6 = new wk[4];
-        var6[0] = new wk(param2, param4[0].field_v);
-        var6[3] = new wk(param2, param4[0].field_v);
-        var6[1] = new wk(param4[0].field_y, param3 - param4[0].field_v * 2);
-        var6[2] = new wk(param4[0].field_y, param3 - param4[0].field_v * 2);
+        var6 = new RgbSprite[4];
+        var6[0] = new RgbSprite(param2, param4[0].field_v);
+        var6[3] = new RgbSprite(param2, param4[0].field_v);
+        var6[1] = new RgbSprite(param4[0].field_y, param3 - param4[0].field_v * 2);
+        var6[2] = new RgbSprite(param4[0].field_y, param3 - param4[0].field_v * 2);
         var9 = 0;
         var10 = 0;
         var11 = 0;
@@ -575,7 +575,7 @@ final class fe {
         return var6;
     }
 
-    final static void a(wk param0) {
+    final static void a(RgbSprite param0) {
         int var1 = 0;
         if (param0 == null) {
           return;
@@ -594,7 +594,7 @@ final class fe {
         fe.a(param0, param1, param2, false);
     }
 
-    final static void a(wk param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    final static void a(RgbSprite param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         Throwable decompiledCaughtException = null;
         int var7 = 0;
         int var8 = 0;
@@ -619,19 +619,19 @@ final class fe {
         int var13Lifetime1;
         int var14Lifetime1;
         if (field_e == null ||
-          field_e.length != qn.field_l) {
-          field_e = new int[qn.field_l];
+          field_e.length != SoftwareRaster.field_l) {
+          field_e = new int[SoftwareRaster.field_l];
         }
         var7 = param2 & 15;
         var8 = param1 & 15;
         param2 = param2 >> 4;
         param1 = param1 >> 4;
-        var15 = param3 + param4 * qn.field_l;
-        var16 = qn.field_l - param5;
+        var15 = param3 + param4 * SoftwareRaster.field_l;
+        var16 = SoftwareRaster.field_l - param5;
         var17 = param2 * param0.field_y + param1;
         var18 = param0.field_y - param5;
         try {
-          var19_int = -qn.field_g;
+          var19_int = -SoftwareRaster.field_g;
           while (var19_int < 0) {
             var20 = param6[-1 - var19_int];
             var21 = param5 - 1;
@@ -649,7 +649,7 @@ final class fe {
               var13Lifetime1 = var10Lifetime1 * var7 & -16711936;
               var14Lifetime1 = var9Lifetime1 * var7 & 16711680;
               var12Lifetime1 = var13Lifetime1 | var14Lifetime1;
-              qn.field_d[var15] = var12Lifetime1 + field_e[var21] >> 8;
+              SoftwareRaster.field_d[var15] = var12Lifetime1 + field_e[var21] >> 8;
               field_e[var21] = (var11Lifetime1 << 4) - var12Lifetime1;
               var21--;
               var15++;
@@ -695,31 +695,31 @@ final class fe {
         var7 = var5 - var6;
         var8 = param0 - param2 - 1;
         var9 = param0 + param2 + 1;
-        if (var8 < qn.field_j) {
-          var8 = qn.field_j;
+        if (var8 < SoftwareRaster.field_j) {
+          var8 = SoftwareRaster.field_j;
         }
-        if (var8 > qn.field_e) {
+        if (var8 > SoftwareRaster.field_e) {
           return;
         }
-        if (var9 < qn.field_j) {
+        if (var9 < SoftwareRaster.field_j) {
           return;
         }
-        if (var9 > qn.field_e) {
-          var9 = qn.field_e;
+        if (var9 > SoftwareRaster.field_e) {
+          var9 = SoftwareRaster.field_e;
         }
         var10 = param1 - param2 - 1;
         var11 = param1 + param2 + 1;
-        if (var10 < qn.field_a) {
-          var10 = qn.field_a;
+        if (var10 < SoftwareRaster.field_a) {
+          var10 = SoftwareRaster.field_a;
         }
-        if (var10 > qn.field_f) {
+        if (var10 > SoftwareRaster.field_f) {
           return;
         }
-        if (var11 < qn.field_a) {
+        if (var11 < SoftwareRaster.field_a) {
           return;
         }
-        if (var11 > qn.field_f) {
-          var11 = qn.field_f;
+        if (var11 > SoftwareRaster.field_f) {
+          var11 = SoftwareRaster.field_f;
         }
         if (field_m > 0) {
           var12 = field_f - field_m;
@@ -751,8 +751,8 @@ final class fe {
             var11 = var15;
           }
         }
-        var12Lifetime1 = var8 + var10 * qn.field_l;
-        var13Lifetime1 = qn.field_l + var8 - var9;
+        var12Lifetime1 = var8 + var10 * SoftwareRaster.field_l;
+        var13Lifetime1 = SoftwareRaster.field_l + var8 - var9;
         for (var14Lifetime1 = var10; var14Lifetime1 < var11; var14Lifetime1++) {
           var15Lifetime1 = var8;
           while (var15Lifetime1 < var9) {
@@ -766,9 +766,9 @@ final class fe {
               if (var18 < var5) {
                 if (var18 >= var6) {
                   var18 = 256 - (var18 - var6 << 8) / var7;
-                  qn.field_d[var12Lifetime1] = fe.a(qn.field_d[var12Lifetime1], param3, var18);
+                  SoftwareRaster.field_d[var12Lifetime1] = fe.a(SoftwareRaster.field_d[var12Lifetime1], param3, var18);
                 } else {
-                  qn.field_d[var12Lifetime1] = param3;
+                  SoftwareRaster.field_d[var12Lifetime1] = param3;
                   if (var16 > 0) {
                     var19 = 0;
                     while (true) {
@@ -782,7 +782,7 @@ final class fe {
                         decompiledFrameCompleted0 = false;
                         break;
                       }
-                      qn.field_d[var12Lifetime1] = param3;
+                      SoftwareRaster.field_d[var12Lifetime1] = param3;
                       var12Lifetime1++;
                       var15Lifetime1++;
                       if (!fe.c(var15Lifetime1, var14Lifetime1)) {
@@ -842,7 +842,7 @@ final class fe {
         field_e = null;
     }
 
-    final static void c(wk param0, int param1, int param2, int param3, int param4) {
+    final static void c(RgbSprite param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var5;
@@ -915,23 +915,23 @@ final class fe {
     }
 
     private final static void a() {
-        field_h = qn.field_j;
-        field_a = qn.field_a;
-        field_j = qn.field_e;
-        field_c = qn.field_f;
+        field_h = SoftwareRaster.field_j;
+        field_a = SoftwareRaster.field_a;
+        field_j = SoftwareRaster.field_e;
+        field_c = SoftwareRaster.field_f;
     }
 
     private final static void b(int param0, int param1, int param2, int param3) {
-        if (param0 < qn.field_j) {
+        if (param0 < SoftwareRaster.field_j) {
           return;
         }
-        if (param0 >= qn.field_e) {
+        if (param0 >= SoftwareRaster.field_e) {
           return;
         }
-        if (param1 < qn.field_a) {
+        if (param1 < SoftwareRaster.field_a) {
           return;
         }
-        if (param1 >= qn.field_f) {
+        if (param1 >= SoftwareRaster.field_f) {
           return;
         }
         int var4 = param2 & 65280;
@@ -940,46 +940,46 @@ final class fe {
         param2 = param2 * param3;
         var4 = var4 & 16711680;
         param2 = param2 & -16711936;
-        int var5 = qn.field_l * param1 + param0;
-        int var6 = qn.field_d[var5];
+        int var5 = SoftwareRaster.field_l * param1 + param0;
+        int var6 = SoftwareRaster.field_d[var5];
         var4 = var4 + ((var6 & 65280) * (256 - param3) & 16711680);
         param2 = param2 + ((var6 & 16711935) * (256 - param3) & -16711936);
-        qn.field_d[var5] = (param2 | var4) >>> 8;
+        SoftwareRaster.field_d[var5] = (param2 | var4) >>> 8;
     }
 
-    final static void a(wk param0, int param1, int param2) {
+    final static void a(RgbSprite param0, int param1, int param2) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
         param1 = param1 + param0.field_w;
         param2 = param2 + param0.field_z;
-        int var3 = param1 + param2 * qn.field_l;
+        int var3 = param1 + param2 * SoftwareRaster.field_l;
         int var4 = 0;
         int var5 = param0.field_v;
         int var6 = param0.field_y;
-        int var7 = qn.field_l - var6;
+        int var7 = SoftwareRaster.field_l - var6;
         int var8 = 0;
-        if (param2 < qn.field_a) {
-          var9 = qn.field_a - param2;
+        if (param2 < SoftwareRaster.field_a) {
+          var9 = SoftwareRaster.field_a - param2;
           var5 = var5 - var9;
-          param2 = qn.field_a;
+          param2 = SoftwareRaster.field_a;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * qn.field_l;
+          var3 = var3 + var9 * SoftwareRaster.field_l;
         }
-        if (param2 + var5 > qn.field_f) {
-          var5 = var5 - (param2 + var5 - qn.field_f);
+        if (param2 + var5 > SoftwareRaster.field_f) {
+          var5 = var5 - (param2 + var5 - SoftwareRaster.field_f);
         }
-        if (param1 < qn.field_j) {
-          var9Lifetime1 = qn.field_j - param1;
+        if (param1 < SoftwareRaster.field_j) {
+          var9Lifetime1 = SoftwareRaster.field_j - param1;
           var6 = var6 - var9Lifetime1;
-          param1 = qn.field_j;
+          param1 = SoftwareRaster.field_j;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param1 + var6 > qn.field_e) {
-          var9Lifetime2 = param1 + var6 - qn.field_e;
+        if (param1 + var6 > SoftwareRaster.field_e) {
+          var9Lifetime2 = param1 + var6 - SoftwareRaster.field_e;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -988,12 +988,12 @@ final class fe {
           if (var5 <= 0) {
             return;
           }
-          fe.a(0, qn.field_d, param0.field_B, 0, var4, var3, var6, var5, var7, var8);
+          fe.a(0, SoftwareRaster.field_d, param0.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void a(wk param0, int param1, int param2, int param3, int[] param4) {
+    private final static void a(RgbSprite param0, int param1, int param2, int param3, int[] param4) {
         int var7 = 0;
         int var9 = 0;
         int incrementValue$20 = 0;
@@ -1038,13 +1038,13 @@ final class fe {
     }
 
     private final static void c() {
-        qn.field_j = field_h;
-        qn.field_a = field_a;
-        qn.field_e = field_j;
-        qn.field_f = field_c;
+        SoftwareRaster.field_j = field_h;
+        SoftwareRaster.field_a = field_a;
+        SoftwareRaster.field_e = field_j;
+        SoftwareRaster.field_f = field_c;
     }
 
-    private final static void b(wk param0, int param1, int param2, int param3, int param4) {
+    private final static void b(RgbSprite param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$20 = 0;
@@ -1113,7 +1113,7 @@ final class fe {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5, int param6, int param7, boolean param8) {
+    final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int[] param5, int param6, int param7, boolean param8) {
         int var16 = 0;
         int var9;
         int var10;
@@ -1130,12 +1130,12 @@ final class fe {
         int var22;
         int var10Lifetime1;
         if (param7 > 0) {
-          qn.b(param0, param1, param2, param3, param6, param7);
+          SoftwareRaster.b(param0, param1, param2, param3, param6, param7);
         }
-        if (param0 >= qn.field_j &&
-          param1 >= qn.field_a &&
-          param0 + param2 < qn.field_e &&
-          param1 + param3 < qn.field_f) {
+        if (param0 >= SoftwareRaster.field_j &&
+          param1 >= SoftwareRaster.field_a &&
+          param0 + param2 < SoftwareRaster.field_e &&
+          param1 + param3 < SoftwareRaster.field_f) {
           fe.a(param0, param1, param2, param3, param4, param5, param8);
           return;
         }
@@ -1172,7 +1172,7 @@ final class fe {
                   if ((var22 & -65281) == 0) {
                     var22 = fe.a(var10Lifetime1, var22 >> 8, 0, 0);
                   }
-                  qn.a(var19, param1 + var16, var22);
+                  SoftwareRaster.a(var19, param1 + var16, var22);
                 }
                 var17++;
                 var21++;
@@ -1191,7 +1191,7 @@ final class fe {
                     if ((var22 & -65281) == 0) {
                       var22 = fe.a(var10Lifetime1, var22 >> 8, 0, 0);
                     }
-                    qn.a(var19, param1 + var16, var22);
+                    SoftwareRaster.a(var19, param1 + var16, var22);
                     var17++;
                     var19++;
                   }
@@ -1219,10 +1219,10 @@ final class fe {
         if ((var2 & 1) == 1) {
           var2++;
         }
-        field_g = new wk(var1, var2);
+        field_g = new RgbSprite(var1, var2);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5, int param6, int param7, String param8, boolean param9, int[] param10) {
+    final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int[] param5, int param6, int param7, String param8, boolean param9, int[] param10) {
         fe.b(param0, param1, param2, param3, param4, param5, param6, param7);
         int var11 = param0 + param2 / 2;
         int var12 = param1 + field_i.field_v / (param9 ? 2 : 1) - 4;
@@ -1256,7 +1256,7 @@ final class fe {
         return param0;
     }
 
-    final static void b(int param0, int param1, int param2, int param3, wk[] param4, int[] param5, int param6, int param7) {
+    final static void b(int param0, int param1, int param2, int param3, RgbSprite[] param4, int[] param5, int param6, int param7) {
         fe.a(param0, param1, param2, param3, param4, param5, param6, param7, false);
     }
 
@@ -1294,7 +1294,7 @@ final class fe {
         }
     }
 
-    private final static void b(wk param0, int param1, int param2, int param3, int[] param4) {
+    private final static void b(RgbSprite param0, int param1, int param2, int param3, int[] param4) {
         int var6 = 0;
         int var8 = 0;
         int var5;

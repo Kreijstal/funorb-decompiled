@@ -30,7 +30,7 @@ abstract class jk {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1.length != param3.length) {
             return null;

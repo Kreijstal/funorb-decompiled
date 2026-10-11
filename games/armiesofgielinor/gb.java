@@ -7,20 +7,20 @@ final class gb extends iu {
     static boolean field_B;
     static int field_z;
 
-    gb(ic param0) {
+    gb(GameplayController param0) {
         super(param0);
         RuntimeException runtimeException = null;
         int var2_int = 0;
-        jd var2 = null;
+        Unit var2 = null;
         int var3 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_C = -1;
         try {
-          if (!param0.field_xb.field_Cb) {
+          if (!param0.battlefield.field_Cb) {
             this.e(-119, 2);
             if (var3 != 0) {
               this.e(-124, 1);
@@ -28,40 +28,40 @@ final class gb extends iu {
           } else {
             this.e(-124, 1);
           }
-          param0.field_xb.field_f = true;
-          param0.field_xb.field_Eb[157].field_a = 1;
-          param0.field_xb.field_mb[0] = 10;
-          param0.field_xb.field_Eb[217].field_a = 1;
-          param0.field_xb.field_Eb[56].field_a = 1;
-          param0.field_xb.field_Eb[157].field_a = 1;
-          param0.field_xb.field_Eb[217].field_a = 1;
-          param0.field_xb.field_Eb[330].field_a = 1;
-          param0.field_xb.field_Eb[166].field_a = 0;
-          param0.field_xb.field_Eb[65].field_a = 0;
+          param0.battlefield.field_f = true;
+          param0.battlefield.tiles[157].ownerPlayer = 1;
+          param0.battlefield.playerTurnCounts[0] = 10;
+          param0.battlefield.tiles[217].ownerPlayer = 1;
+          param0.battlefield.tiles[56].ownerPlayer = 1;
+          param0.battlefield.tiles[157].ownerPlayer = 1;
+          param0.battlefield.tiles[217].ownerPlayer = 1;
+          param0.battlefield.tiles[330].ownerPlayer = 1;
+          param0.battlefield.tiles[166].ownerPlayer = 0;
+          param0.battlefield.tiles[65].ownerPlayer = 0;
           var2_int = 0;
           do {
             if (!(br.field_c.length > var2_int)) {
-              param0.field_xb.a(true, 14, 74, 13, 1, 1, 0);
-              param0.field_xb.a(true, 17, 0, 8, 1, 1, 0);
-              param0.field_xb.a(true, 10, 0, 14, 1, 1, 0);
-              param0.field_xb.a(true, 9, 9, 4, 1, 1, 1);
-              param0.field_xb.a(true, 4, 9, 14, 1, 1, 0);
-              param0.field_xb.a(true, 1, 16, 11, 1, 1, 3);
-              param0.field_xb.a(true, 16, 16, 4, 1, 1, 0);
-              param0.field_xb.a(true, 14, 22, 9, 1, 1, 0);
-              param0.field_xb.a(true, 3, 22, 12, 1, 1, 1);
-              param0.field_xb.a(true, 8, 52, 5, 1, 1, 2);
-              param0.field_xb.a(true, 7, 52, 10, 1, 1, 0);
-              param0.field_xb.a(true, 5, 52, 5, 1, 1, 3);
+              param0.battlefield.a(true, 14, 74, 13, 1, 1, 0);
+              param0.battlefield.a(true, 17, 0, 8, 1, 1, 0);
+              param0.battlefield.a(true, 10, 0, 14, 1, 1, 0);
+              param0.battlefield.a(true, 9, 9, 4, 1, 1, 1);
+              param0.battlefield.a(true, 4, 9, 14, 1, 1, 0);
+              param0.battlefield.a(true, 1, 16, 11, 1, 1, 3);
+              param0.battlefield.a(true, 16, 16, 4, 1, 1, 0);
+              param0.battlefield.a(true, 14, 22, 9, 1, 1, 0);
+              param0.battlefield.a(true, 3, 22, 12, 1, 1, 1);
+              param0.battlefield.a(true, 8, 52, 5, 1, 1, 2);
+              param0.battlefield.a(true, 7, 52, 10, 1, 1, 0);
+              param0.battlefield.a(true, 5, 52, 5, 1, 1, 3);
               break;
             }
-            param0.field_xb.field_Eb[br.field_c[var2_int]].a(126);
+            param0.battlefield.tiles[br.field_c[var2_int]].a(126);
             var2_int++;
           } while (var3 == 0);
-          var2 = (jd) (param0.field_xb.field_t[1].e((byte) 95));
+          var2 = (Unit) (param0.battlefield.unitsByPlayer[1].first((byte) 95));
           while (null != var2) {
-            var2.a((jd) (param0.field_xb.field_t[0].e((byte) 94)), 2048);
-            var2 = (jd) (param0.field_xb.field_t[1].a((byte) 123));
+            var2.a((Unit) (param0.battlefield.unitsByPlayer[0].first((byte) 94)), 2048);
+            var2 = (Unit) (param0.battlefield.unitsByPlayer[1].next((byte) 123));
             if (var3 != 0) {
               return;
             }
@@ -108,7 +108,7 @@ final class gb extends iu {
               boolean decompiledSharedTail0 = (th.a(param0 + param1, 1, 2) != 0);
               if (!decompiledSharedTail0) {
                 hq.field_a[0].a(param2, param3);
-                decompiledSharedTail0 = (ArmiesOfGielinor.field_M);
+                decompiledSharedTail0 = (ArmiesOfGielinor.obfuscationControl);
               }
               if (decompiledSharedTail0) {
                 hq.field_a[(og.field_p[th.a(param1, 1, ks.field_y) + th.a(param0, 1, ef.field_c) * ks.field_y] % 6 + 1 << 2) - 1 + var5_int].a(param2, param3);
@@ -130,7 +130,7 @@ final class gb extends iu {
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (0 == this.field_q.field_xb.field_E[0][param0]) {
+          if (0 == this.field_q.battlefield.godFavourLevels[0][param0]) {
             return true;
           }
           if (param1 <= 81) {
@@ -151,10 +151,10 @@ final class gb extends iu {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          kr.field_y[param1] = param6;
-          kr.field_D.a(param3, param5, (byte) 18, param4, param2, param0, param1);
+          MoveEvent.field_y[param1] = param6;
+          MoveEvent.field_D.a(param3, param5, (byte) 18, param4, param2, param0, param1);
           if (param7 >= -26) {
-            gb.a((wk[]) null, -121, -66, -22, -91);
+            gb.a((RgbSprite[]) null, -121, -66, -22, -91);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -177,7 +177,7 @@ final class gb extends iu {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = this.field_k;
           switch ((var5 == 0
@@ -235,7 +235,7 @@ final class gb extends iu {
               if (param2 != 25) {
                 break;
               }
-              if (param0 != this.field_q.field_xb.field_B[0][this.field_C]) {
+              if (param0 != this.field_q.battlefield.field_B[0][this.field_C]) {
                 break;
               }
               this.h(51);
@@ -246,7 +246,7 @@ final class gb extends iu {
               if (param2 != 25) {
                 break;
               }
-              if (this.field_q.field_xb.field_B[0][this.field_C] != param0) {
+              if (this.field_q.battlefield.field_B[0][this.field_C] != param0) {
                 break;
               }
               this.h(85);
@@ -255,11 +255,11 @@ final class gb extends iu {
               }
             case 10:
               if (25 != param2 ||
-                param0 == this.field_q.field_xb.field_B[0][this.field_C]) {
+                param0 == this.field_q.battlefield.field_B[0][this.field_C]) {
                 if (param2 != 27) {
                   break;
                 }
-                if (param0 != this.field_q.field_xb.field_B[0][this.field_C]) {
+                if (param0 != this.field_q.battlefield.field_B[0][this.field_C]) {
                   break;
                 }
                 this.e(param1 - 122, 12);
@@ -273,11 +273,11 @@ final class gb extends iu {
               }
             case 6:
               if (param2 != 25 ||
-                param0 == this.field_q.field_xb.field_B[0][this.field_C]) {
+                param0 == this.field_q.battlefield.field_B[0][this.field_C]) {
                 if ((param2 == 28 ||
                   param2 == 4) &&
                   this.j(-36)) {
-                  if (uc.field_d[this.field_q.field_xb.field_B[0][this.field_C]][4] != 5) {
+                  if (uc.spellDefinitions[this.field_q.battlefield.field_B[0][this.field_C]][4] != 5) {
                     break;
                   }
                   this.e(-123, 10);
@@ -288,7 +288,7 @@ final class gb extends iu {
                 if (param2 != 27) {
                   break;
                 }
-                if (this.field_q.field_xb.field_B[0][this.field_C] != param0) {
+                if (this.field_q.battlefield.field_B[0][this.field_C] != param0) {
                   break;
                 }
                 this.e(-115, 12);
@@ -330,10 +330,10 @@ final class gb extends iu {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = b.a(false, param0);
-          if (this.field_q.field_xb.field_E[0][-1 + jv.a(false, param0)] == 0) {
+          if (this.field_q.battlefield.godFavourLevels[0][-1 + jv.a(false, param0)] == 0) {
             return true;
           }
-          if ((this.field_q.field_xb.field_a[0][jv.a(false, param0) - 1] & 1 << var3_int) == 0) {
+          if ((this.field_q.battlefield.field_a[0][jv.a(false, param0) - 1] & 1 << var3_int) == 0) {
             return true;
           }
           if (param1 > 0) {
@@ -359,9 +359,9 @@ final class gb extends iu {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (uc.field_d[param1][3] == 4 &&
-            1 == uc.field_d[param1][5] &&
-            this.c(uc.field_d[param1][6], 121)) {
+          if (uc.spellDefinitions[param1][3] == 4 &&
+            1 == uc.spellDefinitions[param1][5] &&
+            this.c(uc.spellDefinitions[param1][6], 121)) {
             stackIn_10_0 = r.field_E[23];
             return stackIn_10_0;
           }
@@ -413,54 +413,54 @@ final class gb extends iu {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          L0: {
-            var2_int = this.field_q.field_xb.field_B[0][this.field_C];
+          regionExit1: {
+            var2_int = this.field_q.battlefield.field_B[0][this.field_C];
             var3 = var2_int;
             if (-1 != var3) {
-              L1: {
-                L2: {
-                  L3: {
-                    L4: {
-                      L5: {
-                        L6: {
-                          L7: {
-                            L8: {
-                              L9: {
-                                L10: {
-                                  L11: {
-                                    L12: {
-                                      L13: {
-                                        L14: {
-                                          L15: {
-                                            L16: {
-                                              L17: {
-                                                L18: {
-                                                  L19: {
-                                                    L20: {
-                                                      L21: {
-                                                        L22: {
-                                                          L23: {
-                                                            L24: {
-                                                              L25: {
-                                                                L26: {
-                                                                  L27: {
-                                                                    L28: {
-                                                                      L29: {
-                                                                        L30: {
-                                                                          L31: {
-                                                                            L32: {
-                                                                              L33: {
-                                                                                L34: {
-                                                                                  L35: {
-                                                                                    L36: {
-                                                                                      L37: {
-                                                                                        L38: {
-                                                                                          L39: {
-                                                                                            L40: {
-                                                                                              L41: {
-                                                                                                L42: {
+              regionExit2: {
+                regionExit3: {
+                  regionExit4: {
+                    regionExit5: {
+                      regionExit6: {
+                        regionExit7: {
+                          regionExit8: {
+                            regionExit9: {
+                              regionExit10: {
+                                regionExit11: {
+                                  regionExit12: {
+                                    regionExit13: {
+                                      regionExit14: {
+                                        regionExit15: {
+                                          regionExit16: {
+                                            regionExit17: {
+                                              regionExit18: {
+                                                regionExit19: {
+                                                  regionExit20: {
+                                                    regionExit21: {
+                                                      regionExit22: {
+                                                        regionExit23: {
+                                                          regionExit24: {
+                                                            regionExit25: {
+                                                              regionExit26: {
+                                                                regionExit27: {
+                                                                  regionExit28: {
+                                                                    regionExit29: {
+                                                                      regionExit30: {
+                                                                        regionExit31: {
+                                                                          regionExit32: {
+                                                                            regionExit33: {
+                                                                              regionExit34: {
+                                                                                regionExit35: {
+                                                                                  regionExit36: {
+                                                                                    regionExit37: {
+                                                                                      regionExit38: {
+                                                                                        regionExit39: {
+                                                                                          regionExit40: {
+                                                                                            regionExit41: {
+                                                                                              regionExit42: {
+                                                                                                regionExit43: {
                                                                                                   {
                                                                                                     boolean decompiledFrameRemainder2 = true;
                                                                                                     {
@@ -513,412 +513,412 @@ final class gb extends iu {
                                                                                                                                           if (decompiledFrameRemainder2) {
                                                                                                                                             if (var3 == 18 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L42;
+                                                                                                                                              break regionExit43;
                                                                                                                                             }
                                                                                                                                             if (var3 == 19) {
-                                                                                                                                              break L42;
+                                                                                                                                              break regionExit43;
                                                                                                                                             }
                                                                                                                                             if (var3 == 20 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L42;
+                                                                                                                                              break regionExit43;
                                                                                                                                             }
                                                                                                                                             if (21 == var3) {
-                                                                                                                                              break L42;
+                                                                                                                                              break regionExit43;
                                                                                                                                             }
                                                                                                                                             if (var3 == 22) {
-                                                                                                                                              break L42;
+                                                                                                                                              break regionExit43;
                                                                                                                                             }
                                                                                                                                             if (var3 == 23) {
-                                                                                                                                              break L41;
+                                                                                                                                              break regionExit42;
                                                                                                                                             }
                                                                                                                                             if (var3 == 24 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L40;
+                                                                                                                                              break regionExit41;
                                                                                                                                             }
                                                                                                                                             if (var3 == 25) {
-                                                                                                                                              break L39;
+                                                                                                                                              break regionExit40;
                                                                                                                                             }
                                                                                                                                             if (var3 == 26) {
-                                                                                                                                              break L38;
+                                                                                                                                              break regionExit39;
                                                                                                                                             }
                                                                                                                                             if (27 == var3 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L37;
+                                                                                                                                              break regionExit38;
                                                                                                                                             }
                                                                                                                                             if (var3 == 28 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L36;
+                                                                                                                                              break regionExit37;
                                                                                                                                             }
                                                                                                                                             if (var3 == 29) {
-                                                                                                                                              break L36;
+                                                                                                                                              break regionExit37;
                                                                                                                                             }
                                                                                                                                             if (var3 == 30 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L36;
+                                                                                                                                              break regionExit37;
                                                                                                                                             }
                                                                                                                                             if (var3 == 31 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L36;
+                                                                                                                                              break regionExit37;
                                                                                                                                             }
                                                                                                                                             if (32 == var3) {
-                                                                                                                                              break L36;
+                                                                                                                                              break regionExit37;
                                                                                                                                             }
                                                                                                                                             if (var3 == 33) {
-                                                                                                                                              break L36;
+                                                                                                                                              break regionExit37;
                                                                                                                                             }
                                                                                                                                             if (var3 == 34 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L36;
+                                                                                                                                              break regionExit37;
                                                                                                                                             }
                                                                                                                                             if (var3 == 35 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L36;
+                                                                                                                                              break regionExit37;
                                                                                                                                             }
                                                                                                                                             if (var3 == 36 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L35;
+                                                                                                                                              break regionExit36;
                                                                                                                                             }
                                                                                                                                             if (var3 == 37) {
-                                                                                                                                              break L34;
+                                                                                                                                              break regionExit35;
                                                                                                                                             }
                                                                                                                                             if (var3 == 38) {
-                                                                                                                                              break L34;
+                                                                                                                                              break regionExit35;
                                                                                                                                             }
                                                                                                                                             if (39 == var3 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L34;
+                                                                                                                                              break regionExit35;
                                                                                                                                             }
                                                                                                                                             if (var3 == 40 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L34;
+                                                                                                                                              break regionExit35;
                                                                                                                                             }
                                                                                                                                             if (var3 == 41 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L34;
+                                                                                                                                              break regionExit35;
                                                                                                                                             }
                                                                                                                                             if (var3 == 42) {
-                                                                                                                                              break L34;
+                                                                                                                                              break regionExit35;
                                                                                                                                             }
                                                                                                                                             if (var3 == 43 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L33;
+                                                                                                                                              break regionExit34;
                                                                                                                                             }
                                                                                                                                             if (var3 == 44) {
-                                                                                                                                              break L32;
+                                                                                                                                              break regionExit33;
                                                                                                                                             }
                                                                                                                                             if (var3 == 45 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L31;
+                                                                                                                                              break regionExit32;
                                                                                                                                             }
                                                                                                                                             if (var3 == 46) {
-                                                                                                                                              break L30;
+                                                                                                                                              break regionExit31;
                                                                                                                                             }
                                                                                                                                             if (var3 == 47) {
-                                                                                                                                              break L29;
+                                                                                                                                              break regionExit30;
                                                                                                                                             }
                                                                                                                                             if (48 == var3) {
-                                                                                                                                              break L29;
+                                                                                                                                              break regionExit30;
                                                                                                                                             }
                                                                                                                                             if (var3 == 49) {
-                                                                                                                                              break L29;
+                                                                                                                                              break regionExit30;
                                                                                                                                             }
                                                                                                                                             if (var3 == 50 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L29;
+                                                                                                                                              break regionExit30;
                                                                                                                                             }
                                                                                                                                             if (51 == var3 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L29;
+                                                                                                                                              break regionExit30;
                                                                                                                                             }
                                                                                                                                             if (var3 == 52) {
-                                                                                                                                              break L29;
+                                                                                                                                              break regionExit30;
                                                                                                                                             }
                                                                                                                                             if (var3 == 53) {
-                                                                                                                                              break L29;
+                                                                                                                                              break regionExit30;
                                                                                                                                             }
                                                                                                                                             if (var3 == 54 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L28;
+                                                                                                                                              break regionExit29;
                                                                                                                                             }
                                                                                                                                             if (55 == var3) {
-                                                                                                                                              break L28;
+                                                                                                                                              break regionExit29;
                                                                                                                                             }
                                                                                                                                             if (var3 == 56 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L28;
+                                                                                                                                              break regionExit29;
                                                                                                                                             }
                                                                                                                                             if (var3 == 57) {
-                                                                                                                                              break L28;
+                                                                                                                                              break regionExit29;
                                                                                                                                             }
                                                                                                                                             if (var3 == 58 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L28;
+                                                                                                                                              break regionExit29;
                                                                                                                                             }
                                                                                                                                             if (var3 == 59 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L28;
+                                                                                                                                              break regionExit29;
                                                                                                                                             }
                                                                                                                                             if (var3 == 60) {
-                                                                                                                                              break L28;
+                                                                                                                                              break regionExit29;
                                                                                                                                             }
                                                                                                                                             if (var3 == 61 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L27;
+                                                                                                                                              break regionExit28;
                                                                                                                                             }
                                                                                                                                             if (var3 == 62) {
-                                                                                                                                              break L27;
+                                                                                                                                              break regionExit28;
                                                                                                                                             }
                                                                                                                                             if (var3 == 63) {
-                                                                                                                                              break L27;
+                                                                                                                                              break regionExit28;
                                                                                                                                             }
                                                                                                                                             if (var3 == 64) {
-                                                                                                                                              break L27;
+                                                                                                                                              break regionExit28;
                                                                                                                                             }
                                                                                                                                             if (var3 == 65 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L27;
+                                                                                                                                              break regionExit28;
                                                                                                                                             }
                                                                                                                                             if (var3 == 66) {
-                                                                                                                                              break L27;
+                                                                                                                                              break regionExit28;
                                                                                                                                             }
                                                                                                                                             if (67 == var3) {
-                                                                                                                                              break L27;
+                                                                                                                                              break regionExit28;
                                                                                                                                             }
                                                                                                                                             if (var3 == 68) {
-                                                                                                                                              break L26;
+                                                                                                                                              break regionExit27;
                                                                                                                                             }
                                                                                                                                             if (var3 == 69 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 70) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 71 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (72 == var3) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 73 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 74 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (75 == var3 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 76) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 77) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 78) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 79) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 80) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 81) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 82 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 83) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (84 == var3 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (85 == var3 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 86 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 87) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 88 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 89) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (90 == var3) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (91 == var3) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 92 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 93 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 94) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (95 == var3 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 96) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 97) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 98 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 99 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 100 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 101) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 102) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 103) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (104 == var3) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 105 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 106 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 107 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (108 == var3 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 109 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 110) {
-                                                                                                                                              break L25;
+                                                                                                                                              break regionExit26;
                                                                                                                                             }
                                                                                                                                             if (var3 == 111) {
-                                                                                                                                              break L24;
+                                                                                                                                              break regionExit25;
                                                                                                                                             }
                                                                                                                                             if (var3 == 112) {
-                                                                                                                                              break L23;
+                                                                                                                                              break regionExit24;
                                                                                                                                             }
                                                                                                                                             if (113 == var3 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L22;
+                                                                                                                                              break regionExit23;
                                                                                                                                             }
                                                                                                                                             if (var3 == 114 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L21;
+                                                                                                                                              break regionExit22;
                                                                                                                                             }
                                                                                                                                             if (var3 == 115) {
-                                                                                                                                              break L20;
+                                                                                                                                              break regionExit21;
                                                                                                                                             }
                                                                                                                                             if (var3 == 116 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L19;
+                                                                                                                                              break regionExit20;
                                                                                                                                             }
                                                                                                                                             if (var3 == 117 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L18;
+                                                                                                                                              break regionExit19;
                                                                                                                                             }
                                                                                                                                             if (var3 == 118) {
-                                                                                                                                              break L17;
+                                                                                                                                              break regionExit18;
                                                                                                                                             }
                                                                                                                                             if (var3 == 119) {
-                                                                                                                                              break L16;
+                                                                                                                                              break regionExit17;
                                                                                                                                             }
                                                                                                                                             if (120 == var3 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L15;
+                                                                                                                                              break regionExit16;
                                                                                                                                             }
                                                                                                                                             if (var3 == 121) {
-                                                                                                                                              break L14;
+                                                                                                                                              break regionExit15;
                                                                                                                                             }
                                                                                                                                             if (var3 == 122) {
-                                                                                                                                              break L13;
+                                                                                                                                              break regionExit14;
                                                                                                                                             }
                                                                                                                                             if (var3 == 123) {
-                                                                                                                                              break L12;
+                                                                                                                                              break regionExit13;
                                                                                                                                             }
                                                                                                                                             if (var3 == 124) {
-                                                                                                                                              break L11;
+                                                                                                                                              break regionExit12;
                                                                                                                                             }
                                                                                                                                             if (125 == var3 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L10;
+                                                                                                                                              break regionExit11;
                                                                                                                                             }
                                                                                                                                             if (var3 == 126 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L9;
+                                                                                                                                              break regionExit10;
                                                                                                                                             }
                                                                                                                                             if (var3 == 127 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L8;
+                                                                                                                                              break regionExit9;
                                                                                                                                             }
                                                                                                                                             if (128 == var3) {
-                                                                                                                                              break L7;
+                                                                                                                                              break regionExit8;
                                                                                                                                             }
                                                                                                                                             if (var3 == 129 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L6;
+                                                                                                                                              break regionExit7;
                                                                                                                                             }
                                                                                                                                             if (var3 == 130) {
-                                                                                                                                              break L5;
+                                                                                                                                              break regionExit6;
                                                                                                                                             }
                                                                                                                                             if (var3 == 131) {
-                                                                                                                                              break L4;
+                                                                                                                                              break regionExit5;
                                                                                                                                             }
                                                                                                                                             if (var3 == 132 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L3;
+                                                                                                                                              break regionExit4;
                                                                                                                                             }
                                                                                                                                             if (133 == var3 &&
                                                                                                                                               var4 == 0) {
-                                                                                                                                              break L2;
+                                                                                                                                              break regionExit3;
                                                                                                                                             }
                                                                                                                                             if (var3 != 134) {
-                                                                                                                                              break L0;
+                                                                                                                                              break regionExit1;
                                                                                                                                             }
                                                                                                                                             if (var4 == 0) {
-                                                                                                                                              break L1;
+                                                                                                                                              break regionExit2;
                                                                                                                                             }
                                                                                                                                           }
                                                                                                                                         }
@@ -944,7 +944,7 @@ final class gb extends iu {
                                                                                                           this.a(r.field_E[8], (byte) 122);
                                                                                                           this.e(-128, 6);
                                                                                                           if (var4 == 0) {
-                                                                                                            break L0;
+                                                                                                            break regionExit1;
                                                                                                           }
                                                                                                         }
                                                                                                       }
@@ -952,300 +952,300 @@ final class gb extends iu {
                                                                                                     if (decompiledFrameRemainder2) {
                                                                                                       this.e(-114, 12);
                                                                                                       if (var4 == 0) {
-                                                                                                        break L0;
+                                                                                                        break regionExit1;
                                                                                                       }
                                                                                                     }
                                                                                                   }
                                                                                                   this.a(r.field_E[9], (byte) 118);
                                                                                                   this.e(-122, 6);
                                                                                                   if (var4 == 0) {
-                                                                                                    break L0;
+                                                                                                    break regionExit1;
                                                                                                   }
                                                                                                 }
                                                                                                 this.a(r.field_E[8], (byte) 113);
                                                                                                 this.e(-124, 6);
                                                                                                 if (var4 == 0) {
-                                                                                                  break L0;
+                                                                                                  break regionExit1;
                                                                                                 }
                                                                                               }
                                                                                               this.a(r.field_E[15], (byte) 115);
                                                                                               this.e(-121, 6);
                                                                                               if (var4 == 0) {
-                                                                                                break L0;
+                                                                                                break regionExit1;
                                                                                               }
                                                                                             }
                                                                                             this.a(r.field_E[13], (byte) 116);
                                                                                             this.e(-117, 6);
                                                                                             if (var4 == 0) {
-                                                                                              break L0;
+                                                                                              break regionExit1;
                                                                                             }
                                                                                           }
                                                                                           this.a(r.field_E[12], (byte) 125);
                                                                                           this.e(-126, 6);
                                                                                           if (var4 == 0) {
-                                                                                            break L0;
+                                                                                            break regionExit1;
                                                                                           }
                                                                                         }
                                                                                         this.a(r.field_E[13], (byte) 114);
                                                                                         this.e(-123, 6);
                                                                                         if (var4 == 0) {
-                                                                                          break L0;
+                                                                                          break regionExit1;
                                                                                         }
                                                                                       }
                                                                                       this.a(r.field_E[11], (byte) 116);
                                                                                       this.e(-123, 6);
                                                                                       if (var4 == 0) {
-                                                                                        break L0;
+                                                                                        break regionExit1;
                                                                                       }
                                                                                     }
                                                                                     this.a(r.field_E[9], (byte) 115);
                                                                                     this.e(-126, 6);
                                                                                     if (var4 == 0) {
-                                                                                      break L0;
+                                                                                      break regionExit1;
                                                                                     }
                                                                                   }
                                                                                   this.a(r.field_E[8], (byte) 112);
                                                                                   this.e(-116, 6);
                                                                                   if (var4 == 0) {
-                                                                                    break L0;
+                                                                                    break regionExit1;
                                                                                   }
                                                                                 }
-                                                                                if (!this.c(uc.field_d[var2_int][6], 120)) {
+                                                                                if (!this.c(uc.spellDefinitions[var2_int][6], 120)) {
                                                                                   this.e(-119, 12);
                                                                                   if (var4 == 0) {
-                                                                                    break L0;
+                                                                                    break regionExit1;
                                                                                   }
                                                                                 }
                                                                                 this.a(r.field_E[23], (byte) 119);
                                                                                 this.e(-122, 9);
                                                                                 if (var4 == 0) {
-                                                                                  break L0;
+                                                                                  break regionExit1;
                                                                                 }
                                                                               }
                                                                               this.a(r.field_E[10], (byte) 125);
                                                                               this.e(-114, 6);
                                                                               if (var4 == 0) {
-                                                                                break L0;
+                                                                                break regionExit1;
                                                                               }
                                                                             }
                                                                             this.a(r.field_E[14], (byte) 123);
                                                                             this.e(-119, 6);
                                                                             if (var4 == 0) {
-                                                                              break L0;
+                                                                              break regionExit1;
                                                                             }
                                                                           }
                                                                           this.e(-114, 12);
                                                                           if (var4 == 0) {
-                                                                            break L0;
+                                                                            break regionExit1;
                                                                           }
                                                                         }
                                                                         this.a(r.field_E[9], (byte) 126);
                                                                         this.e(-121, 6);
                                                                         if (var4 == 0) {
-                                                                          break L0;
+                                                                          break regionExit1;
                                                                         }
                                                                       }
                                                                       this.a(r.field_E[13], (byte) 125);
                                                                       this.e(-115, 6);
                                                                       if (var4 == 0) {
-                                                                        break L0;
+                                                                        break regionExit1;
                                                                       }
                                                                     }
                                                                     this.a(r.field_E[9], (byte) 115);
                                                                     this.e(-118, 6);
                                                                     if (var4 == 0) {
-                                                                      break L0;
+                                                                      break regionExit1;
                                                                     }
                                                                   }
                                                                   this.a(r.field_E[13], (byte) 114);
                                                                   this.e(-116, 6);
                                                                   if (var4 == 0) {
-                                                                    break L0;
+                                                                    break regionExit1;
                                                                   }
                                                                 }
                                                                 this.a(r.field_E[8], (byte) 121);
                                                                 this.e(-116, 6);
                                                                 if (var4 == 0) {
-                                                                  break L0;
+                                                                  break regionExit1;
                                                                 }
                                                               }
                                                               this.a(r.field_E[9], (byte) 120);
                                                               this.e(-114, 6);
                                                               if (var4 == 0) {
-                                                                break L0;
+                                                                break regionExit1;
                                                               }
                                                             }
                                                             this.a(r.field_E[13], (byte) 125);
                                                             this.e(-117, 6);
                                                             if (var4 == 0) {
-                                                              break L0;
+                                                              break regionExit1;
                                                             }
                                                           }
                                                           this.a(r.field_E[13], (byte) 123);
                                                           this.e(-115, 6);
                                                           if (var4 == 0) {
-                                                            break L0;
+                                                            break regionExit1;
                                                           }
                                                         }
                                                         this.a(r.field_E[13], (byte) 112);
                                                         this.e(-115, 6);
                                                         if (var4 == 0) {
-                                                          break L0;
+                                                          break regionExit1;
                                                         }
                                                       }
                                                       this.a(r.field_E[13], (byte) 122);
                                                       this.e(-124, 6);
                                                       if (var4 == 0) {
-                                                        break L0;
+                                                        break regionExit1;
                                                       }
                                                     }
                                                     if (!this.b(63, (byte) -72)) {
                                                       this.a(r.field_E[18], (byte) 114);
                                                       this.e(-116, 6);
                                                       if (var4 == 0) {
-                                                        break L0;
+                                                        break regionExit1;
                                                       }
                                                     }
                                                     this.a(r.field_E[25], (byte) 116);
                                                     this.e(-116, 9);
                                                     if (var4 == 0) {
-                                                      break L0;
+                                                      break regionExit1;
                                                     }
                                                   }
                                                   if (this.b(58, (byte) -35)) {
                                                     this.a(r.field_E[25], (byte) 118);
                                                     this.e(-118, 9);
                                                     if (var4 == 0) {
-                                                      break L0;
+                                                      break regionExit1;
                                                     }
                                                   }
                                                   this.a(r.field_E[20], (byte) 115);
                                                   this.e(-128, 6);
                                                   if (var4 == 0) {
-                                                    break L0;
+                                                    break regionExit1;
                                                   }
                                                 }
                                                 if (!this.b(53, (byte) -32)) {
                                                   this.a(r.field_E[19], (byte) 112);
                                                   this.e(-115, 6);
                                                   if (var4 == 0) {
-                                                    break L0;
+                                                    break regionExit1;
                                                   }
                                                 }
                                                 this.a(r.field_E[25], (byte) 117);
                                                 this.e(-123, 9);
                                                 if (var4 == 0) {
-                                                  break L0;
+                                                  break regionExit1;
                                                 }
                                               }
                                               if (!this.b(59, (byte) -39)) {
                                                 this.a(r.field_E[17], (byte) 124);
                                                 this.e(-117, 6);
                                                 if (var4 == 0) {
-                                                  break L0;
+                                                  break regionExit1;
                                                 }
                                               }
                                               this.a(r.field_E[25], (byte) 119);
                                               this.e(-114, 9);
                                               if (var4 == 0) {
-                                                break L0;
+                                                break regionExit1;
                                               }
                                             }
                                             if (this.b(43, (byte) -79)) {
                                               this.a(r.field_E[25], (byte) 115);
                                               this.e(-125, 9);
                                               if (var4 == 0) {
-                                                break L0;
+                                                break regionExit1;
                                               }
                                             }
                                             this.a(r.field_E[21], (byte) 111);
                                             this.e(-117, 6);
                                             if (var4 == 0) {
-                                              break L0;
+                                              break regionExit1;
                                             }
                                           }
                                           this.a(r.field_E[9], (byte) 124);
                                           this.e(-115, 6);
                                           if (var4 == 0) {
-                                            break L0;
+                                            break regionExit1;
                                           }
                                         }
                                         this.a(r.field_E[8], (byte) 121);
                                         this.e(-116, 6);
                                         if (var4 == 0) {
-                                          break L0;
+                                          break regionExit1;
                                         }
                                       }
                                       this.a(r.field_E[8], (byte) 109);
                                       this.e(-128, 6);
                                       if (var4 == 0) {
-                                        break L0;
+                                        break regionExit1;
                                       }
                                     }
                                     this.a(r.field_E[8], (byte) 114);
                                     this.e(-128, 6);
                                     if (var4 == 0) {
-                                      break L0;
+                                      break regionExit1;
                                     }
                                   }
                                   this.a(r.field_E[9], (byte) 120);
                                   this.e(-121, 6);
                                   if (var4 == 0) {
-                                    break L0;
+                                    break regionExit1;
                                   }
                                 }
                                 this.a(r.field_E[9], (byte) 123);
                                 this.e(-116, 6);
                                 if (var4 == 0) {
-                                  break L0;
+                                  break regionExit1;
                                 }
                               }
                               this.a(r.field_E[9], (byte) 125);
                               this.e(-123, 6);
                               if (var4 == 0) {
-                                break L0;
+                                break regionExit1;
                               }
                             }
                             this.a(r.field_E[9], (byte) 126);
                             this.e(-126, 6);
                             if (var4 == 0) {
-                              break L0;
+                              break regionExit1;
                             }
                           }
                           this.a(r.field_E[9], (byte) 118);
                           this.e(-123, 6);
                           if (var4 == 0) {
-                            break L0;
+                            break regionExit1;
                           }
                         }
                         this.a(r.field_E[9], (byte) 119);
                         this.e(-116, 6);
                         if (var4 == 0) {
-                          break L0;
+                          break regionExit1;
                         }
                       }
                       this.a(r.field_E[9], (byte) 126);
                       this.e(-122, 6);
                       if (var4 == 0) {
-                        break L0;
+                        break regionExit1;
                       }
                     }
                     this.a(r.field_E[9], (byte) 125);
                     this.e(-126, 6);
                     if (var4 == 0) {
-                      break L0;
+                      break regionExit1;
                     }
                   }
                   this.a(r.field_E[9], (byte) 120);
                   this.e(-117, 6);
                   if (var4 == 0) {
-                    break L0;
+                    break regionExit1;
                   }
                 }
                 this.a(r.field_E[9], (byte) 123);
                 this.e(-124, 6);
                 if (var4 == 0) {
-                  break L0;
+                  break regionExit1;
                 }
               }
               this.a(r.field_E[9], (byte) 112);
@@ -1263,7 +1263,7 @@ final class gb extends iu {
         }
     }
 
-    final static void a(wk[] param0, int param1, int param2, int param3, int param4) {
+    final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -1282,17 +1282,17 @@ final class gb extends iu {
             var7 = param0[1].field_A;
             param0[0].g(param1, param2);
             param0[2].g(param3 + (param1 - var6), param2);
-            qn.b(an.field_H);
-            qn.b(param1 + var5_int, param2, param1 + (param3 - var6), param0[1].field_x + param2);
+            SoftwareRaster.b(an.field_H);
+            SoftwareRaster.b(param1 + var5_int, param2, param1 + (param3 - var6), param0[1].field_x + param2);
             var8 = var5_int + param1;
             var9 = param3 + param1 - var6;
             for (param1 = var8; var9 > param1; param1 = param1 + var7) {
               param0[1].g(param1, param2);
             }
             if (param4 != 8941) {
-              gb.a((wk[]) null, -52, 126, 81, -73);
+              gb.a((RgbSprite[]) null, -52, 126, 81, -73);
             }
-            qn.a(an.field_H);
+            SoftwareRaster.a(an.field_H);
             return;
           }
           return;
@@ -1454,9 +1454,9 @@ final class gb extends iu {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2_int = this.field_q.field_xb.field_B[0][this.field_C];
+          var2_int = this.field_q.battlefield.field_B[0][this.field_C];
           if (param0 != -134) {
             stackIn_3_0 = 8;
             return stackIn_3_0;
@@ -2097,7 +2097,7 @@ final class gb extends iu {
         int var6 = 0;
         int var7 = 0;
         int var6Lifetime1;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 > -113) {
             discarded$0 = this.a((byte) -54, -8);
@@ -2169,10 +2169,10 @@ final class gb extends iu {
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2)) {
             this.field_C = this.field_C + 1;
-            if (-1 == this.field_q.field_xb.field_B[0][this.field_C]) {
+            if (-1 == this.field_q.battlefield.field_B[0][this.field_C]) {
               this.a(r.field_E[24], (byte) 117);
               while (this.field_C < 5) {
-                if (-1 == this.field_q.field_xb.field_B[0][this.field_C]) {
+                if (-1 == this.field_q.battlefield.field_B[0][this.field_C]) {
                   this.field_C = this.field_C + 1;
                   if (var7 == 0) {
                     continue;
@@ -2186,20 +2186,20 @@ final class gb extends iu {
               return;
             }
             var6Lifetime1 = 0;
-            L16: while (true) {
+            scanLoop1: while (true) {
               if (var6Lifetime1 < this.field_C) {
-                stackIn_87_0 = ~this.field_q.field_xb.field_B[0][var6Lifetime1];
+                stackIn_87_0 = ~this.field_q.battlefield.field_B[0][var6Lifetime1];
                 if (var7 != 0) {
-                  break L16;
+                  break scanLoop1;
                 }
-                if (stackIn_87_0 == ~this.field_q.field_xb.field_B[0][this.field_C]) {
-                  this.a(fo.a(4800, r.field_E[31], new String[]{fq.field_f[this.field_q.field_xb.field_B[0][this.field_C]]}), (byte) 119);
+                if (stackIn_87_0 == ~this.field_q.battlefield.field_B[0][this.field_C]) {
+                  this.a(fo.a(4800, r.field_E[31], new String[]{fq.field_f[this.field_q.battlefield.field_B[0][this.field_C]]}), (byte) 119);
                   this.field_w = 0;
                   this.field_k = 9;
                   while (true) {
                     if (this.field_C < 5 &&
                       var7 == 0 &&
-                      ~this.field_q.field_xb.field_B[0][this.field_C] == ~this.field_q.field_xb.field_B[0][var6Lifetime1]) {
+                      ~this.field_q.battlefield.field_B[0][this.field_C] == ~this.field_q.battlefield.field_B[0][var6Lifetime1]) {
                       this.field_C = this.field_C + 1;
                       if (var7 == 0) {
                         continue;
@@ -2215,11 +2215,11 @@ final class gb extends iu {
                   continue;
                 }
               }
-              stackIn_87_0 = uc.field_d[this.field_q.field_xb.field_B[0][this.field_C]][3];
+              stackIn_87_0 = uc.spellDefinitions[this.field_q.battlefield.field_B[0][this.field_C]][3];
               break;
             }
             var3_int = stackIn_87_0;
-            var4 = this.a((byte) 66, this.field_q.field_xb.field_B[0][this.field_C]);
+            var4 = this.a((byte) 66, this.field_q.battlefield.field_B[0][this.field_C]);
             boolean decompiledSharedTail0 = (var4 == null);
             if (!decompiledSharedTail0) {
               this.field_k = 9;
@@ -2234,12 +2234,12 @@ final class gb extends iu {
                 var7 != 0) {
                 var4 = r.field_E[22];
               }
-              var4 = fo.a(4800, var4, new String[]{fq.field_f[this.field_q.field_xb.field_B[0][this.field_C]]});
+              var4 = fo.a(4800, var4, new String[]{fq.field_f[this.field_q.battlefield.field_B[0][this.field_C]]});
               this.field_w = 1;
               this.field_k = 8;
               this.d(-37, this.field_C);
             }
-            this.a(fo.a(4800, r.field_E[3 + this.field_C], new String[]{fq.field_f[this.field_q.field_xb.field_B[0][this.field_C]], mn.field_l[this.field_q.field_xb.field_B[0][this.field_C]], var4}), (byte) 109);
+            this.a(fo.a(4800, r.field_E[3 + this.field_C], new String[]{fq.field_f[this.field_q.battlefield.field_B[0][this.field_C]], mn.field_l[this.field_q.battlefield.field_B[0][this.field_C]], var4}), (byte) 109);
             if (var7 == 0) {
               return;
             }
@@ -2249,7 +2249,7 @@ final class gb extends iu {
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
             var4 = r.field_E[26];
-            var4 = fo.a(4800, var4, new String[]{fq.field_f[this.field_q.field_xb.field_B[0][this.field_C]]});
+            var4 = fo.a(4800, var4, new String[]{fq.field_f[this.field_q.battlefield.field_B[0][this.field_C]]});
             stackIn_101_1 = 4800;
             stackIn_101_2 = r.field_E;
             if (this.field_q.field_gc < 0) {
@@ -2306,49 +2306,49 @@ final class gb extends iu {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (this.field_q.field_T == null) {
+          if (this.field_q.selectedUnit == null) {
             return false;
           }
-          L0: {
-            var2_int = this.field_q.field_xb.field_B[0][this.field_C];
+          regionExit1: {
+            var2_int = this.field_q.battlefield.field_B[0][this.field_C];
             if (var2_int != 36 ||
               var3 != 0) {
               switch (var2_int) {
                 case 34:
-                  if (this.field_q.field_T.field_O != 0) {
-                    break L0;
+                  if (this.field_q.selectedUnit.ownerPlayer != 0) {
+                    break regionExit1;
                   }
-                  if (this.field_q.field_T.field_s) {
-                    break L0;
+                  if (this.field_q.selectedUnit.packedFlag4) {
+                    break regionExit1;
                   }
                   return true;
                 case 35:
-                  if (this.field_q.field_T.field_O != 0) {
-                    break L0;
+                  if (this.field_q.selectedUnit.ownerPlayer != 0) {
+                    break regionExit1;
                   }
-                  if (this.field_q.field_T.field_s) {
-                    break L0;
+                  if (this.field_q.selectedUnit.packedFlag4) {
+                    break regionExit1;
                   }
                   return true;
                 default:
-                  break L0;
+                  break regionExit1;
                 case 109:
                   if (var3 == 0) {
-                    if (this.field_q.field_T.field_O != 0) {
-                      break L0;
+                    if (this.field_q.selectedUnit.ownerPlayer != 0) {
+                      break regionExit1;
                     }
-                    if (this.field_q.field_T.field_s) {
-                      break L0;
+                    if (this.field_q.selectedUnit.packedFlag4) {
+                      break regionExit1;
                     }
                     return true;
                   }
                   break;
               }
             }
-            if (this.field_q.field_T.field_O != 0 &&
-              !this.field_q.field_T.field_s) {
+            if (this.field_q.selectedUnit.ownerPlayer != 0 &&
+              !this.field_q.selectedUnit.packedFlag4) {
               return true;
             }
           }

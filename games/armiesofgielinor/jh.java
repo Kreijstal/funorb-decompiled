@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jh extends mk {
-    static wk[] field_l;
+    static RgbSprite[] field_l;
     static String field_j;
     static int[] field_k;
 
-    final static void a(vh param0, hd param1, int param2, int param3) {
+    final static void a(PacketBuffer param0, hd param1, int param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -40,7 +40,7 @@ final class jh extends mk {
           String var21 = null;
           byte[][] var22 = null;
           int var13Lifetime1;
-          var14 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             var18 = new dc();
             var18.field_p = param0.k(0);
@@ -67,7 +67,7 @@ final class jh extends mk {
                     var9 = param0.k(0);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param0.g(kf.b(param3, -2));
+                      var10[var11_int] = param0.g(GrowthEvent.b(param3, -2));
                     }
                     var22 = new byte[var9][];
                     var19 = var22;
@@ -124,7 +124,7 @@ final class jh extends mk {
                 var18.field_m[var5] = -5;
               }
             }
-            tp.field_e.a((byte) -119, (tc) (var18));
+            tp.field_e.a((byte) -119, (IntrusiveNode) (var18));
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -199,21 +199,21 @@ final class jh extends mk {
 
     final static boolean g(int param0) {
         if (param0 != 2) {
-          field_l = (wk[]) null;
+          field_l = (RgbSprite[]) null;
         }
         if (fk.field_b == -1) {
           if (!es.a(-122, 1)) {
             return false;
           }
           fk.field_b = mg.field_e.k(0);
-          mg.field_e.field_q = 0;
+          mg.field_e.position = 0;
         }
         if (-2 == fk.field_b) {
           if (!es.a(-96, 2)) {
             return false;
           }
           fk.field_b = mg.field_e.e((byte) -104);
-          mg.field_e.field_q = 0;
+          mg.field_e.position = 0;
         }
         return es.a(-105, fk.field_b);
     }
@@ -227,7 +227,7 @@ final class jh extends mk {
         }
         try {
           lq.field_d = true;
-          rt.field_z = param1;
+          RevivalEvent.field_z = param1;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "jh.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -242,7 +242,7 @@ final class jh extends mk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 89) {
-            field_l = (wk[]) null;
+            field_l = (RgbSprite[]) null;
           }
           if (this.a(-3137, param1) != rn.field_e) {
             return null;

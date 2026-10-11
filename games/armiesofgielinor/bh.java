@@ -51,7 +51,7 @@ final class bh extends nl {
           this.field_E.a(this.field_B + param0, param1 + this.field_p, (byte) -125, param3);
           return;
         }
-        wk var6 = new wk(this.field_E.field_l, this.field_E.field_w);
+        RgbSprite var6 = new RgbSprite(this.field_E.field_l, this.field_E.field_w);
         if (param2 < -82) {
           vn.a(var6, 3);
           this.field_E.a(0, 0, (byte) -86, param3);
@@ -82,8 +82,8 @@ final class bh extends nl {
         int var2 = mj.field_c * mj.field_c;
         int var3 = -(gk.field_J * gk.field_J) + var2;
         if (!param0) {
-          no.field_T.a(-4 + (qn.field_g - 120) - 90, -20500, 199, 90, var1 - var3 * 199 / var2);
-          ov.field_i.a(-4 + (qn.field_g - 120), -20500, 438, 0, var3 * 438 / var2 + 202 + var1);
+          no.field_T.a(-4 + (SoftwareRaster.field_g - 120) - 90, -20500, 199, 90, var1 - var3 * 199 / var2);
+          ov.field_i.a(-4 + (SoftwareRaster.field_g - 120), -20500, 438, 0, var3 * 438 / var2 + 202 + var1);
           return;
         }
     }

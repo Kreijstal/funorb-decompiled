@@ -3,19 +3,19 @@
  */
 class wv extends af {
     private long field_f;
-    static wk[] field_h;
+    static RgbSprite[] field_h;
     static String field_d;
     private String field_i;
     static int[] field_g;
     static String field_e;
 
-    final void a(vh param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           param0.a(this.field_f, 38359632);
           param0.a(-28, this.field_i);
           if (param1 != -11436) {
-            vh var4 = (vh) null;
-            this.a((vh) null, 16);
+            PacketBuffer var4 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, 16);
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "wv.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -7,7 +7,7 @@ final class gn {
     private boolean field_b;
 
     final static void a(int param0, wj param1, int param2) {
-        bv var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           var3 = vl.field_n;
           var3.h(32161, param0);
@@ -89,7 +89,7 @@ final class gn {
             String var4 = (String) null;
             this.a((byte) 62, (String) null);
           }
-          this.a((byte) 19, pj.a(593277313, (CharSequence[]) ((Object) param0)));
+          this.a((byte) 19, TrinketUseEvent.a(593277313, (CharSequence[]) ((Object) param0)));
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "gn.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -117,7 +117,7 @@ final class gn {
     private final void a(int param0) {
         int var2 = 0;
         StringBuilder discarded$0 = null;
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         for (var2 = param0; var2 < this.field_c; var2++) {
           discarded$0 = this.field_a.append(" ");
         }

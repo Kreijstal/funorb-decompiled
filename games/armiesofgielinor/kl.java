@@ -234,7 +234,7 @@ final class kl {
     final synchronized int[] b(int param0, int param1) {
         int[] var6 = null;
         int var4 = 0;
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 > -24) {
           ((int[]) (this.field_h[0]))[43] = ((int[]) (((Object[]) (((Object[]) (this.field_h[0]))[13]))[2]))[6];
         }
@@ -362,7 +362,7 @@ final class kl {
         int var2;
         int var4;
         int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (!this.a((byte) 82)) {
           return false;
         }
@@ -510,17 +510,17 @@ final class kl {
           if (param0 != -20193) {
             field_d = (String) null;
           }
-          stackIn_5_0 = (tr.field_A != 1) ? 0 : 1;
+          stackIn_5_0 = (DeployEvent.field_A != 1) ? 0 : 1;
           var3 = stackIn_5_0;
           stackIn_8_0 = (ro.field_ub != 1) ? 0 : 1;
           var4 = stackIn_8_0;
-          st.field_z.a(87, var4 != 0, var3 != 0, var1_int, var2, el.field_d);
+          TurnEffectEvent.field_z.a(87, var4 != 0, var3 != 0, var1_int, var2, el.field_d);
           while (true) {
-            if (!jd.i((byte) -61)) {
+            if (!Unit.i((byte) -61)) {
               return;
             }
             if (13 == rs.field_q) {
-              bv.a(true, 0, param0 + 20194, jt.field_a);
+              CipherPacketBuffer.a(true, 0, param0 + 20194, jt.field_a);
             }
             if (12 == rs.field_q) {
               stackIn_17_0 = !(ln.field_e);
@@ -669,10 +669,10 @@ final class kl {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        vh var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        vh var29 = null;
-        vh var31 = null;
+        PacketBuffer var29 = null;
+        PacketBuffer var31 = null;
         int[] var32 = null;
         byte[][] var33 = null;
         int[] var34 = null;
@@ -683,7 +683,7 @@ final class kl {
         byte[] var43 = null;
         byte[] var44 = null;
         int var14_intLifetime1;
-        var22 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var22 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (!this.c(param3, -24876)) {
             return false;
@@ -724,8 +724,8 @@ final class kl {
             var35 = ko.a(true, 42, this.field_h[param3]);
             var25 = var35;
             var9 = var25;
-            var26 = new vh(var35);
-            var26.a(param2, var26.field_o.length, 5, -12366);
+            var26 = new PacketBuffer(var35);
+            var26.a(param2, var26.payload.length, 5, -12366);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -753,10 +753,10 @@ final class kl {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - var12 * var5_int * 4;
-              var29 = new vh(var43);
+              var29 = new PacketBuffer(var43);
               var14_int = 0;
               var15_int = 0;
-              var29.field_q = var11;
+              var29.position = var11;
               for (var16 = 0; var16 < var12; var16++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
@@ -776,7 +776,7 @@ final class kl {
                 return true;
               }
               var44 = new byte[var14_int];
-              var29.field_q = var11;
+              var29.position = var11;
               var14_intLifetime1 = 0;
               var17 = 0;
               for (var18 = 0; var18 < var12; var18++) {
@@ -801,11 +801,11 @@ final class kl {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - 4 * (var12 * var5_int);
-              var31 = new vh(var43);
+              var31 = new PacketBuffer(var43);
               var39 = new int[var5_int];
               var32 = var39;
               var14 = var32;
-              var31.field_q = var11;
+              var31.position = var11;
               for (var15_int = 0; var12 > var15_int; var15_int++) {
                 var16 = 0;
                 for (var17 = 0; var17 < var5_int; var17++) {
@@ -821,7 +821,7 @@ final class kl {
                 var15[var16] = array$1;
                 var39[var16] = 0;
               }
-              var31.field_q = var11;
+              var31.position = var11;
               var16 = 0;
               for (var17 = 0; var12 > var17; var17++) {
                 var18 = 0;

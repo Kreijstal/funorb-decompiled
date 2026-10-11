@@ -7,7 +7,7 @@ final class da {
 
     final static void c(int param0) {
         ms var1 = null;
-        int var2 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         ms var1Lifetime1;
         try {
           vl.field_p = null;
@@ -74,9 +74,9 @@ final class da {
           Throwable decompiledCaughtException = null;
           Throwable var2_ref = null;
           RuntimeException var2_ref2 = null;
-          var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
-            if (at.field_a) {
+            if (NodeDeque.field_a) {
               return true;
             }
             try {
@@ -140,9 +140,9 @@ final class da {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          param0 = ha.b(param0, param4, -4);
+          param0 = Battlefield.b(param0, param4, -4);
           var5_int = param2[param0].length;
           for (var6 = param1; var6 < var5_int; var6++) {
             var7 = var6;
@@ -178,13 +178,13 @@ final class da {
         if (jj.b((byte) -73)) {
           param1 = false;
         }
-        ca.a(5295, param1);
+        TileMetadata.a(5295, param1);
         jg.a((byte) 102);
     }
 
     final static void b(int param0) {
         t.field_c = kv.k(5);
-        rl.field_C = new gk();
+        KingBlackDragonEvent.field_C = new gk();
         if (param0 != -2) {
           java.applet.Applet var2 = (java.applet.Applet) null;
           da.a(43, (java.applet.Applet) null);
@@ -204,10 +204,10 @@ final class da {
         rs var5_ref_rs = null;
         int[] var6 = null;
         int var8 = 0;
-        bv var9 = null;
+        CipherPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var9 = mg.field_e;
           var2 = var9.k(0);
@@ -216,12 +216,12 @@ final class da {
           }
           var3 = var9.k(0);
           if (0 == var2) {
-            var4 = (on) (ss.field_t.e((byte) 96));
+            var4 = (on) (ss.field_t.first((byte) 96));
             if (var4 == null) {
               dj.a((byte) -124);
               return;
             }
-            var5 = fk.field_b - var9.field_q;
+            var5 = fk.field_b - var9.position;
             var11 = var4.field_m;
             var10 = var11;
             var6 = var10;
@@ -231,22 +231,22 @@ final class da {
             for (var7 = 0; var5 > var7; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var9.k(0) << rn.a(var7 << 8, 768));
             }
-            var4.d(-116);
+            var4.unlink(-116);
             return;
           }
           if (1 == var2) {
             var4_int = var9.a(100);
-            var5_ref_rs = (rs) (gg.field_F.e((byte) 107));
+            var5_ref_rs = (rs) (gg.field_F.first((byte) 107));
             while (var5_ref_rs != null) {
               if (var5_ref_rs.field_r != var3 ||
                 var4_int != var5_ref_rs.field_l) {
-                var5_ref_rs = (rs) (gg.field_F.a((byte) 123));
+                var5_ref_rs = (rs) (gg.field_F.next((byte) 123));
                 continue;
               }
               break;
             }
             if (var5_ref_rs != null) {
-              var5_ref_rs.d(-105);
+              var5_ref_rs.unlink(-105);
               return;
             }
             dj.a((byte) -125);

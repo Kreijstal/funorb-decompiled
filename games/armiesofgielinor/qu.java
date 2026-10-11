@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qu extends tc {
+final class qu extends IntrusiveNode {
     static String field_r;
     static String field_n;
     static ru[] field_k;
@@ -28,25 +28,25 @@ final class qu extends tc {
     }
 
     final static String a(int param0, byte param1) {
-        int var9 = ArmiesOfGielinor.field_M ? 1 : 0;
-        ic var10 = rd.field_j;
-        ic var11 = var10;
+        int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        GameplayController var10 = rd.field_j;
+        GameplayController var11 = var10;
         if (var11 == null) {
           return "No game in progress.";
         }
         if (param0 < 0) {
           return "Please choose a player, 0-based.";
         }
-        if (var11.field_xb.field_W < param0) {
+        if (var11.battlefield.playerCount < param0) {
           return "Please choose a player, 0-based.";
         }
-        var11.field_xb.b(10001, param0, false);
+        var11.battlefield.b(10001, param0, false);
         kw.field_R = 2297;
         cg.field_j = 72584621;
         wr.field_L = 224;
         ii.field_b = 4452;
-        int var3 = var10.field_xb.field_mb[var10.field_q];
-        int var4 = var10.field_xb.field_zb[var10.field_q];
+        int var3 = var10.battlefield.playerTurnCounts[var10.field_q];
+        int var4 = var10.battlefield.field_zb[var10.field_q];
         hc.field_b = hc.field_b + 1;
         hc.field_b = hc.field_b + (ko.field_b ^ sm.field_d);
         if (param1 <= 31) {
@@ -89,9 +89,9 @@ final class qu extends tc {
             !(param2 <= wp.field_w.length)) {
             wp.field_w = new int[param2 * 2];
           }
-          if (ci.field_c == null ||
-            !(param2 <= ci.field_c.length)) {
-            ci.field_c = new int[param2 * 2];
+          if (TutorialController.field_c == null ||
+            !(param2 <= TutorialController.field_c.length)) {
+            TutorialController.field_c = new int[param2 * 2];
           }
           if (null == pe.field_s ||
             !(param2 <= pe.field_s.length)) {
@@ -154,9 +154,9 @@ final class qu extends tc {
               !(param2 <= wp.field_w.length)) {
               wp.field_w = new int[param2 * 2];
             }
-            if (ci.field_c == null ||
-              !(param2 <= ci.field_c.length)) {
-              ci.field_c = new int[param2 * 2];
+            if (TutorialController.field_c == null ||
+              !(param2 <= TutorialController.field_c.length)) {
+              TutorialController.field_c = new int[param2 * 2];
             }
             if (null == pe.field_s ||
               !(param2 <= pe.field_s.length)) {
@@ -219,9 +219,9 @@ final class qu extends tc {
               !(param2 <= wp.field_w.length)) {
               wp.field_w = new int[param2 * 2];
             }
-            if (ci.field_c == null ||
-              !(param2 <= ci.field_c.length)) {
-              ci.field_c = new int[param2 * 2];
+            if (TutorialController.field_c == null ||
+              !(param2 <= TutorialController.field_c.length)) {
+              TutorialController.field_c = new int[param2 * 2];
             }
             if (null == pe.field_s ||
               !(param2 <= pe.field_s.length)) {

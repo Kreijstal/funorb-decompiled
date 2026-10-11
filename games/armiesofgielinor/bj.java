@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bj extends tc {
+final class bj extends IntrusiveNode {
     static String field_o;
     static String field_l;
     int field_n;
     static String field_q;
     static boolean field_k;
     int field_m;
-    static wk[] field_p;
+    static RgbSprite[] field_p;
 
-    final static wk e(int param0) {
+    final static RgbSprite e(int param0) {
         int var5 = 0;
         int var6 = 0;
         int var1;
@@ -22,18 +22,18 @@ final class bj extends tc {
         int[] var13;
         byte[] var16;
         byte[] var17;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var1 = qm.field_K[0] * c.field_e[0];
         var17 = vj.field_j[0];
         if (param0 != 12722) {
           bj.a(-13);
         }
-        if (!ne.field_e[0]) {
+        if (!MapTile.field_e[0]) {
           var9 = new int[var1];
           for (var5 = 0; var1 > var5; var5++) {
             var9[var5] = qv.field_j[rn.a(255, (int) var17[var5])];
           }
-          var3 = new wk(lg.field_d, wr.field_J, j.field_e[0], iq.field_g[0], qm.field_K[0], c.field_e[0], var9);
+          var3 = new RgbSprite(lg.field_d, wr.field_J, j.field_e[0], iq.field_g[0], qm.field_K[0], c.field_e[0], var9);
         } else {
           var16 = cq.field_z[0];
           var13 = new int[var1];
@@ -45,7 +45,7 @@ final class bj extends tc {
           var3 = new nj(lg.field_d, wr.field_J, j.field_e[0], iq.field_g[0], qm.field_K[0], c.field_e[0], var13);
         }
         rj.d((byte) 113);
-        return (wk) (var3);
+        return (RgbSprite) (var3);
     }
 
     public static void a(int param0) {

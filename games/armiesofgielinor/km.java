@@ -12,7 +12,7 @@ final class km {
     private int field_e;
     private int field_g;
     static String field_a;
-    static wk[] field_h;
+    static RgbSprite[] field_h;
     private vj field_i;
     static String[] field_j;
 
@@ -36,19 +36,19 @@ final class km {
         int var6;
         int var7;
         int var9;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param3 != -44) {
           this.field_i = (vj) null;
         }
         for (var8 = 0; var8 < 6; var8++) {
           if (var8 * 8 < this.field_f) {
             if (param2) {
-              var7 = -((this.field_f - var8 * 4) * 2) + (this.field_k + ns.a(false, var8 + 1, li.field_n));
-              var5 = -(this.field_g - 5 * (-(4 * var8) + this.field_f)) + ns.a(false, var8 + 1, li.field_n);
+              var7 = -((this.field_f - var8 * 4) * 2) + (this.field_k + AttackEvent.a(false, var8 + 1, li.field_n));
+              var5 = -(this.field_g - 5 * (-(4 * var8) + this.field_f)) + AttackEvent.a(false, var8 + 1, li.field_n);
               var6 = this.field_d;
             } else {
-              var7 = this.field_k - 2 * (-24 + var8 * 4 + this.field_f) + ns.a(false, 1 + var8, li.field_n);
-              var5 = -((var8 * 4 + (-24 + this.field_f)) * 5) + (this.field_g + ns.a(false, var8 + 1, li.field_n));
+              var7 = this.field_k - 2 * (-24 + var8 * 4 + this.field_f) + AttackEvent.a(false, 1 + var8, li.field_n);
+              var5 = -((var8 * 4 + (-24 + this.field_f)) * 5) + (this.field_g + AttackEvent.a(false, var8 + 1, li.field_n));
               var6 = this.field_d;
             }
             fh.$cfr$intArgs$a$e0bc7fdb2979(var7, -(var8 * 40) + 400, 56, fe.field_o[param0 + 1], -(5 * var8) + 63, var5, var6);
@@ -62,13 +62,13 @@ final class km {
         nt var4;
         int var5;
         nt var4Lifetime1;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
-        var4 = (nt) (s.field_a.e((byte) 112));
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = (nt) (s.field_a.first((byte) 112));
         while (var4 != null) {
           if (~var4.field_o == ~param0) {
             return var4;
           }
-          var4 = (nt) (s.field_a.a((byte) 123));
+          var4 = (nt) (s.field_a.next((byte) 123));
         }
         if (param1 < 65) {
           field_j = (String[]) null;
@@ -76,7 +76,7 @@ final class km {
         var4Lifetime1 = new nt();
         var4Lifetime1.field_o = param0;
         var4Lifetime1.field_q = param2;
-        s.field_a.a((byte) -119, (tc) (var4Lifetime1));
+        s.field_a.a((byte) -119, (IntrusiveNode) (var4Lifetime1));
         tf.a(param3, var4Lifetime1, (byte) -64);
         return var4Lifetime1;
     }
@@ -126,7 +126,7 @@ final class km {
         int var11;
         int var12;
         var4 = null;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param2 > ~this.field_f) {
           return;
         }
@@ -176,7 +176,7 @@ final class km {
 
     final void a(boolean param0, int param1, boolean param2, int param3) {
         int var6;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 != -8) {
           field_j = (String[]) null;
         }
@@ -203,7 +203,7 @@ final class km {
         int var5;
         int var6;
         int var8;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 6) {
           km.a(52);
         }

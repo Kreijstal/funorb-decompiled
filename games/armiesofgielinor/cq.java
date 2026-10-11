@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cq extends tc {
+final class cq extends IntrusiveNode {
     int field_k;
     static byte[][] field_z;
     bg field_n;
@@ -10,7 +10,7 @@ final class cq extends tc {
     int field_D;
     String field_r;
     int field_A;
-    wk field_m;
+    RgbSprite field_m;
     int field_t;
     boolean field_l;
     int field_x;
@@ -23,7 +23,7 @@ final class cq extends tc {
     int field_o;
     static String field_E;
     int field_y;
-    wk field_s;
+    RgbSprite field_s;
 
     public static void a(int param0) {
         field_z = (byte[][]) null;
@@ -112,7 +112,7 @@ final class cq extends tc {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           oh.field_L = lm.field_d;
           if (param1 != -14) {
@@ -156,7 +156,7 @@ final class cq extends tc {
         int var4;
         int var5;
         int var6;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = 0;
         var3 = ib.field_j;
         if (var3 >= 5) {
@@ -221,16 +221,16 @@ final class cq extends tc {
         pd.field_a = ek.a(-125, var4 * var2, var2 * var5);
     }
 
-    final static wk[] a(int param0, int param1, int param2, byte param3, int param4) {
-        wk[] var6 = new wk[9];
-        wk[] var5 = var6;
-        wk dupTemp$0 = hl.a(false, param2, param1);
+    final static RgbSprite[] a(int param0, int param1, int param2, byte param3, int param4) {
+        RgbSprite[] var6 = new RgbSprite[9];
+        RgbSprite[] var5 = var6;
+        RgbSprite dupTemp$0 = hl.a(false, param2, param1);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        wk dupTemp$1 = hl.a(false, param4, param1);
+        RgbSprite dupTemp$1 = hl.a(false, param4, param1);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -260,14 +260,14 @@ final class cq extends tc {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        ne[] var3 = null;
-        ne[] var4_ref_ne__ = null;
+        MapTile[] var3 = null;
+        MapTile[] var4_ref_ne__ = null;
         int var5 = 0;
         int var7 = 0;
         int var9 = 0;
         int var10 = 0;
         lo var12 = null;
-        ne var13 = null;
+        MapTile var13 = null;
         sd var14 = null;
         int[] var18 = null;
         int var5Lifetime1;
@@ -279,15 +279,15 @@ final class cq extends tc {
           this.field_k = param0.field_v;
           this.field_n = new bg(16);
           var12 = param0.a(-114);
-          var3 = var12.a(115, (ha) null);
+          var3 = var12.a(115, (Battlefield) null);
           var4_ref_ne__ = var3;
           for (var5 = 0; var5 < var4_ref_ne__.length; var5++) {
             var13 = var4_ref_ne__[var5];
-            if (null != var13.field_c &&
-              var13.field_c.field_O != param0.field_w) {
-              var7 = var13.field_c.g(0);
+            if (null != var13.occupant &&
+              var13.occupant.ownerPlayer != param0.field_w) {
+              var7 = var13.occupant.g(0);
               if (this.field_n.a(-57, (long)var7) == null) {
-                this.field_n.a(new tc(), (long)var7, 108);
+                this.field_n.a(new IntrusiveNode(), (long)var7, 108);
               }
             }
           }
@@ -299,9 +299,9 @@ final class cq extends tc {
                 var18 = var14.field_p;
                 for (var8 = 0; var18.length > var8; var8++) {
                   var9 = var18[var8];
-                  var10 = bw.field_m[var9][0];
+                  var10 = bw.unitDefinitions[var9][0];
                   if (this.field_n.a(-96, (long)var10) == null) {
-                    this.field_n.a(new tc(), (long)var10, 126);
+                    this.field_n.a(new IntrusiveNode(), (long)var10, 126);
                   }
                 }
               }

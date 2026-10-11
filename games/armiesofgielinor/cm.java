@@ -20,7 +20,7 @@ final class cm {
         ho var6 = null;
         om var7 = null;
         int var8 = 0;
-        int var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null == this.field_d[param1]) {
           return 0;
         }
@@ -48,14 +48,14 @@ final class cm {
         String var6;
         String var7;
         String var8;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var6 = "(" + me.field_c + " " + ba.field_F + " " + sj.field_e + ") " + nm.field_o;
         var1 = var6;
         if (fk.field_b > 0) {
           var1 = var6 + ":";
           for (var2 = 0; var2 < fk.field_b; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & mg.field_e.field_o[var2];
+            var3 = 255 & mg.field_e.payload[var2];
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 < 10) {
@@ -78,7 +78,7 @@ final class cm {
         return (String) null;
     }
 
-    final void a(int param0, vh param1, int param2) {
+    final void a(int param0, PacketBuffer param1, int param2) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -92,7 +92,7 @@ final class cm {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = param1.e((byte) -104);
           var5 = 0;
@@ -185,7 +185,7 @@ final class cm {
         }
         nm.a((byte) 95, param1);
         if (gl.field_b) {
-          qn.d(ij.field_w.field_a.field_S, ij.field_w.field_a.field_ab, ij.field_w.field_a.field_gb, ij.field_w.field_a.field_ob);
+          SoftwareRaster.d(ij.field_w.field_a.field_S, ij.field_w.field_a.field_ab, ij.field_w.field_a.field_gb, ij.field_w.field_a.field_ob);
           ij.field_w.field_a.b(param1, 20);
         }
         if (param0 != 2000) {

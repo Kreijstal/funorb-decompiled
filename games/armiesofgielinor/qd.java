@@ -38,7 +38,7 @@ final class qd extends tj implements nq, he {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 0) {
             if (param0 == 1) {
@@ -102,7 +102,7 @@ final class qd extends tj implements nq, he {
             var4 = (uv) null;
             qd.a((kl) null, (byte) 120, (uv) null, -19);
           }
-          if (!ha.a(param0, (byte) -26, param1)) {
+          if (!Battlefield.a(param0, (byte) -26, param1)) {
             return true;
           }
           return false;

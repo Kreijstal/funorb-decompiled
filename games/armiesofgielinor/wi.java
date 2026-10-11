@@ -36,7 +36,7 @@ final class wi {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        at var10 = null;
+        NodeDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         of var12 = null;
@@ -79,7 +79,7 @@ final class wi {
         int var26Lifetime1;
         int var30_intLifetime1;
         int var26Lifetime2;
-        var31 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var31 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = 0;
           var6 = 0;
@@ -136,7 +136,7 @@ final class wi {
           if (param1 != 255) {
             return;
           }
-          var12 = (of) (var10.e((byte) 124));
+          var12 = (of) (var10.first((byte) 124));
           while (var12 != null) {
             var13 = 0;
             if (var12.field_fb == null) {
@@ -180,10 +180,10 @@ final class wi {
             var19 = 0;
             var32 = var12.field_Yb;
             var21 = 72;
-            if (ne.field_f == param4) {
+            if (MapTile.field_f == param4) {
               var21 += 42;
             }
-            var33 = ka.a(var12.field_ac.field_Z, var32, var21);
+            var33 = BitmapFont.a(var12.field_ac.field_Z, var32, var21);
             var20 = var33;
             stackIn_60_0 = (var33.equals(var12.field_Yb)) ? 0 : 1;
             var22 = stackIn_60_0;
@@ -192,7 +192,7 @@ final class wi {
                 var20 = "<img=" + (-1 + var12.field_Qb) + ">" + var33;
               }
             } else {
-              var20 = "<img=" + (var12.field_Qb - (4 - vh.field_n)) + ">" + var33;
+              var20 = "<img=" + (var12.field_Qb - (4 - PacketBuffer.field_n)) + ">" + var33;
             }
             var12.field_ac.field_X = var20;
             if (!var12.k(0)) {
@@ -224,7 +224,7 @@ final class wi {
                   var12.field_ec.field_X = ac.field_s;
                 } else {
                   if (var12.field_Ub) {
-                    var12.field_ac.field_X = fo.a(param1 + 4545, tr.field_G, new String[]{var20});
+                    var12.field_ac.field_X = fo.a(param1 + 4545, DeployEvent.field_G, new String[]{var20});
                     var12.field_dc.field_X = gm.field_g;
                     var12.field_ec.field_X = uf.field_l;
                   } else {
@@ -316,7 +316,7 @@ final class wi {
             var11 = var12;
             if (var12.field_jb) {
               if (var12.k(0)) {
-                var12 = (of) (var10.a((byte) 123));
+                var12 = (of) (var10.next((byte) 123));
                 continue;
               }
               var24Lifetime2 = null;
@@ -466,7 +466,7 @@ final class wi {
                 ad.field_I = (String) (var24Lifetime2);
               }
             }
-            var12 = (of) (var10.a((byte) 123));
+            var12 = (of) (var10.next((byte) 123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -62,7 +62,7 @@ final class df extends tj implements fb, he {
         RuntimeException decompiledCaughtException = null;
         nu var6 = null;
         RuntimeException var6_ref = null;
-        ka var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         pf var9 = null;
         ta var12 = null;
@@ -133,7 +133,7 @@ final class df extends tj implements fb, he {
             this.field_p = this.field_p + (5 + var7.a(this.field_I, this.field_l - 40, var7.field_H));
           }
           var8 = bh.field_J;
-          var9 = ea.a(0, ag.d((byte) 34));
+          var9 = ea.a(0, CombatEvent.d((byte) 34));
           if (var9 != vn.field_j) {
             if (var9 == ps.field_y) {
               var8 = ui.field_h;
@@ -247,7 +247,7 @@ final class df extends tj implements fb, he {
           ArmiesOfGielinor.field_J.a(this.field_I, param0 - (-this.field_B - 20), 15 + param1 + this.field_p, -40 + this.field_l, this.field_w, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.field_H);
         }
         if (this.field_R != null) {
-          qn.e(10 + param0, 134 + param1, -20 + this.field_l, 4210752);
+          SoftwareRaster.e(10 + param0, 134 + param1, -20 + this.field_l, 4210752);
         }
         super.a(param0, param1, (byte) -104, param3);
     }
@@ -259,7 +259,7 @@ final class df extends tj implements fb, he {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 11) {
             this.m(64);
@@ -325,7 +325,7 @@ final class df extends tj implements fb, he {
           String var2 = (String) null;
           df.a((String) null, -20, (kl) null, -114, (String) null);
         }
-        kr.field_C = new cv();
+        MoveEvent.field_C = new cv();
         gb.a(30, 21, 220, 420, 440, 470, new int[]{7}, -121);
         gb.a(30, 22, 490, 610, 20, 50, new int[]{47}, param0 - 55);
     }

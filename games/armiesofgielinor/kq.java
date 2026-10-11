@@ -6,9 +6,9 @@ class kq extends fw {
     private kb field_Q;
     static me field_M;
     static je field_N;
-    static wk field_P;
+    static RgbSprite field_P;
 
-    final static String a(int param0, int param1, int param2, ha param3, int param4) {
+    final static String a(int param0, int param1, int param2, Battlefield param3, int param4) {
         String[] array$0 = null;
         String[] array$1 = null;
         String[] array$2 = null;
@@ -47,24 +47,24 @@ class kq extends fw {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        jd var7 = null;
-        jd var8 = null;
+        Unit var7 = null;
+        Unit var8 = null;
         int var6Lifetime1;
         int var6Lifetime2;
         try {
           if (param1 != 7) {
             field_N = (je) null;
           }
-          if (uc.field_d[param2][3] != 0) {
+          if (uc.spellDefinitions[param2][3] != 0) {
             return null;
           }
-          var7 = param3.c(param0, true, param4);
+          var7 = param3.getUnitAt(param0, true, param4);
           var8 = var7;
           if (var8 == null) {
             stackIn_7_0 = null;
             return (String) (stackIn_7_0);
           }
-          if (uc.field_d[param2][4] == 1 &&
+          if (uc.spellDefinitions[param2][4] == 1 &&
             var8.c((byte) 81) > 0) {
             var6 = dl.field_e[var7.c((byte) 81)][var7.j(20640)];
             array$0 = new String[3];
@@ -89,7 +89,7 @@ class kq extends fw {
             stackIn_18_0 = fo.a(stackIn_13_0, stackIn_13_1, stackIn_13_2);
             return stackIn_18_0;
           }
-          if (uc.field_d[param2][4] == 0 &&
+          if (uc.spellDefinitions[param2][4] == 0 &&
             0 != var8.field_P) {
             var6Lifetime1 = pr.field_f[var7.field_P];
             if (7 != var8.field_P &&
@@ -118,7 +118,7 @@ class kq extends fw {
             stackIn_34_0 = fo.a(stackIn_29_0, stackIn_29_1, stackIn_29_2);
             return stackIn_34_0;
           }
-          if (uc.field_d[param2][4] != 3) {
+          if (uc.spellDefinitions[param2][4] != 3) {
             stackIn_48_0 = null;
             return (String) (stackIn_48_0);
           }
@@ -167,8 +167,8 @@ class kq extends fw {
         cn.field_o = param1;
         ia.field_g = param3;
         if (param2 != 87) {
-          ha var6 = (ha) null;
-          kq.a(-11, 19, 8, (ha) null, -83);
+          Battlefield var6 = (Battlefield) null;
+          kq.a(-11, 19, 8, (Battlefield) null, -83);
         }
     }
 
@@ -187,7 +187,7 @@ class kq extends fw {
         field_M = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, bv param4) {
+    final static void a(int param0, int param1, int param2, int param3, CipherPacketBuffer param4) {
         int var5_int = 0;
         if (param3 <= param2) {
           param4.d((byte) -88, param0 + param2);
@@ -272,6 +272,6 @@ class kq extends fw {
     static {
         field_L = 0;
         field_M = new me(15, 0, 1, 0);
-        field_P = new wk(270, 70);
+        field_P = new RgbSprite(270, 70);
     }
 }

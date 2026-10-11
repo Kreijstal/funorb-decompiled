@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class il extends bd {
-    static wk[] field_s;
+    static RgbSprite[] field_s;
     static String[] field_t;
 
     final static String b(int param0, int param1) {
@@ -26,10 +26,10 @@ final class il extends bd {
         }
     }
 
-    final void a(int param0, ha param1) {
+    final void a(int param0, Battlefield param1) {
         try {
           if (param0 != 64) {
-            field_s = (wk[]) null;
+            field_s = (RgbSprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "il.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -69,9 +69,9 @@ final class il extends bd {
         }
     }
 
-    il(int param0, int param1, jd param2, ne param3) {
+    il(int param0, int param1, Unit param2, MapTile param3) {
         try {
-          if (null != param3.field_c) {
+          if (null != param3.occupant) {
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "il.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

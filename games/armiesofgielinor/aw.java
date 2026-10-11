@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class aw extends sm {
-    static wk field_m;
+    static RgbSprite field_m;
     static String field_k;
     static boolean field_l;
     static int[][][] field_j;
@@ -14,7 +14,7 @@ final class aw extends sm {
         long var3;
         int var5;
         int var6;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (!param0) {
           return false;
         }
@@ -110,7 +110,7 @@ final class aw extends sm {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6Lifetime1;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           fieldTemp$4 = param1.field_c - 1;
           param1.field_c = param1.field_c - 1;
@@ -177,12 +177,12 @@ final class aw extends sm {
         int var3 = 0;
         nt var4 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4 = (nt) (s.field_a.e((byte) 104));
+          var4 = (nt) (s.field_a.first((byte) 104));
           while (var4 != null) {
             tf.a(param0, var4, (byte) -64);
-            var4 = (nt) (s.field_a.a((byte) 123));
+            var4 = (nt) (s.field_a.next((byte) 123));
           }
           if (param1 == 1742) {
             return;
@@ -205,7 +205,7 @@ final class aw extends sm {
         field_i = null;
     }
 
-    aw(ej param0) {
+    aw(AiPlanner param0) {
         super(param0);
     }
 

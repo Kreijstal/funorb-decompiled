@@ -80,7 +80,7 @@ final class lc {
         return 1.0f - (float)Math.pow(10.0, (double)(-var4 / 20.0f));
     }
 
-    final void a(vh param0, gr param1) {
+    final void a(PacketBuffer param0, gr param1) {
         int var3;
         int var4;
         int var5;

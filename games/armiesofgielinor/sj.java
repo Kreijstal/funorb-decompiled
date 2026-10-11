@@ -24,13 +24,13 @@ final class sj {
         int var8;
         int var9;
         int var10;
-        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (!this.field_i) {
           vg.field_q[0].g(param1, param0);
         } else {
           var4 = 0;
-          var5 = qn.field_l * param0 + param1;
-          var6 = qn.field_l - cm.field_b;
+          var5 = SoftwareRaster.field_l * param0 + param1;
+          var6 = SoftwareRaster.field_l - cm.field_b;
           var12 = 0;
           while (ac.field_m > var12) {
             var13 = 0;
@@ -42,7 +42,7 @@ final class sj {
                   if (this.field_f[var4] <= this.field_h) {
                     var7 = vg.field_q[1].field_B[var4];
                   }
-                  qn.field_d[var5] = var7;
+                  SoftwareRaster.field_d[var5] = var7;
                 } else {
                   if (this.field_h >= this.field_f[var4]) {
                     var7 = vg.field_q[1].field_B[var4];
@@ -53,14 +53,14 @@ final class sj {
                   var7 = 256 - var11;
                   var8 = var8 * var7;
                   var9 = var9 * var7;
-                  var7 = qn.field_d[var5];
+                  var7 = SoftwareRaster.field_d[var5];
                   var10 = var7 & 16711935;
                   var10 = var10 * var11;
                   var9 = var9 + var9;
                   var8 = var8 + var10;
                   var8 = var8 & -16711936;
                   var9 = var9 & 16711680;
-                  qn.field_d[var5] = oe.c(var9, var8) >>> 8;
+                  SoftwareRaster.field_d[var5] = oe.c(var9, var8) >>> 8;
                 }
               }
               var4++;
@@ -71,7 +71,7 @@ final class sj {
             var5 = var5 + var6;
           }
         }
-        tr.field_z.b(384, 2464, param1 + (cm.field_b >> 1) << 4, param0 + (ac.field_m >> 1) << 4, this.field_h * 65535 / this.field_c, 1024);
+        DeployEvent.field_z.b(384, 2464, param1 + (cm.field_b >> 1) << 4, param0 + (ac.field_m >> 1) << 4, this.field_h * 65535 / this.field_c, 1024);
         if (param2 == 121) {
           return;
         }
@@ -101,7 +101,7 @@ final class sj {
         }
     }
 
-    final static int a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, bv param9) {
+    final static int a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, CipherPacketBuffer param9) {
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -198,7 +198,7 @@ final class sj {
         sn[] array$0 = null;
         int var4 = 0;
         sn var5 = null;
-        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           wh.field_f = false;
           td.field_d = new sn[cr.field_W.length][];
@@ -265,7 +265,7 @@ final class sj {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static int $cfr$intArgs$a$eb6d2a313bbb(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, bv param9) {
+    final static int $cfr$intArgs$a$eb6d2a313bbb(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, CipherPacketBuffer param9) {
         int stackIn_4_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;

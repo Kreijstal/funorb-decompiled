@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rq extends tc {
+final class rq extends IntrusiveNode {
     static int[] field_n;
     String field_l;
-    static wk[] field_k;
+    static RgbSprite[] field_k;
     static int field_m;
     static String field_o;
-    static ci[] field_p;
+    static TutorialController[] field_p;
 
     public static void a(int param0) {
         field_p = null;
@@ -27,8 +27,8 @@ final class rq extends tc {
           var1 = new fg();
         }
         if (param0 == -56) {
-          var1.a(qn.field_f, qn.field_j, qn.field_e, qn.field_d, qn.field_a, qn.field_g, qn.field_l, -89);
-          md.field_y.a((byte) -119, (tc) (var1));
+          var1.a(SoftwareRaster.field_f, SoftwareRaster.field_j, SoftwareRaster.field_e, SoftwareRaster.field_d, SoftwareRaster.field_a, SoftwareRaster.field_g, SoftwareRaster.field_l, -89);
+          ParasiteEvent.field_y.a((byte) -119, (IntrusiveNode) (var1));
           return;
         }
     }
@@ -54,6 +54,6 @@ final class rq extends tc {
     static {
         field_n = ce.a(-68);
         field_o = "Invalid password.";
-        field_p = new ci[29];
+        field_p = new TutorialController[29];
     }
 }

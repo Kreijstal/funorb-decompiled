@@ -37,7 +37,7 @@ final class ij extends dv {
         String var12 = null;
         int var9Lifetime1;
         int var10Lifetime1;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (!this.a(-31501)) {
             stackIn_3_0 = super.a(-30847, param1, param2);
@@ -146,7 +146,7 @@ final class ij extends dv {
         }
     }
 
-    ij(at param0, ka param1, hd param2) {
+    ij(NodeDeque param0, BitmapFont param1, hd param2) {
         super(param1, param2);
         int incrementValue$3 = 0;
         int var4_int = 0;
@@ -167,12 +167,12 @@ final class ij extends dv {
         try {
           this.field_z = new dr[param0.b(false)];
           var4_int = 0;
-          var5 = (dr) (param0.e((byte) 94));
+          var5 = (dr) (param0.first((byte) 94));
           while (var5 != null) {
             incrementValue$3 = var4_int;
             var4_int++;
             this.field_z[incrementValue$3] = var5;
-            var5 = (dr) (param0.a((byte) 123));
+            var5 = (dr) (param0.next((byte) 123));
           }
           this.a(-1, "# <col=ffaaff>FunOrbConsole (loaded " + this.field_z.length + " methods at " + new Date() + ")</col>");
           return;
@@ -244,7 +244,7 @@ final class ij extends dv {
         String var6Lifetime1;
         String var6Lifetime2;
         int var9Lifetime1;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var13 = this.field_o.q(0);
           var6 = var13;
@@ -358,7 +358,7 @@ final class ij extends dv {
         String var6Lifetime1;
         String var6Lifetime2;
         int var12Lifetime1;
-        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var15 = this.field_o.q(0);
           var6 = var15;
@@ -451,7 +451,7 @@ final class ij extends dv {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != -75) {
             stackIn_3_0 = (ui) null;
@@ -484,7 +484,7 @@ final class ij extends dv {
     final boolean a(String param0, boolean param1) {
         try {
           og var5 = null;
-          at var6 = null;
+          NodeDeque var6 = null;
           es var7 = null;
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;

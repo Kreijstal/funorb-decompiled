@@ -6,7 +6,7 @@ final class mp extends je {
     static jl field_Mb;
     je field_Ib;
     je field_Nb;
-    static wk field_Jb;
+    static RgbSprite field_Jb;
     dn field_Kb;
     static bl field_Sb;
     static String field_Pb;

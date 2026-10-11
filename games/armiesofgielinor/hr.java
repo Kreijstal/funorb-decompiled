@@ -5,10 +5,10 @@ final class hr {
     static je field_m;
     private gd field_a;
     private int field_f;
-    static wk field_b;
+    static RgbSprite field_b;
     private int field_j;
     int[] field_e;
-    static wk[] field_d;
+    static RgbSprite[] field_d;
     private int field_c;
     static String field_h;
     static int field_i;
@@ -119,7 +119,7 @@ final class hr {
           this.a(-298276720);
           return;
         }
-        field_d = (wk[]) null;
+        field_d = (RgbSprite[]) null;
         this.a(-23162, param0);
         if (this.field_g != null) {
           this.field_g.a(-115);
@@ -139,7 +139,7 @@ final class hr {
         if (param1 > -1) {
           if (2048 <= param1) {
             if (param0) {
-              field_d = (wk[]) null;
+              field_d = (RgbSprite[]) null;
               return;
             }
             return;
@@ -149,7 +149,7 @@ final class hr {
         if (!param0) {
           return;
         }
-        field_d = (wk[]) null;
+        field_d = (RgbSprite[]) null;
     }
 
     private final void b(int param0, int param1, byte param2) {

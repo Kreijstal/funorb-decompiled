@@ -10,7 +10,7 @@ final class uf {
     int field_k;
     static String field_l;
     static int field_e;
-    static wk field_j;
+    static RgbSprite field_j;
     int field_d;
     static kl field_f;
     private String field_h;
@@ -26,7 +26,7 @@ final class uf {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = param0.length;
           if (param1 != 1680474497) {
@@ -91,16 +91,16 @@ final class uf {
         if (param0 != 1619620993) {
           return;
         }
-        qn.b(0, 0, var2, var3, 0, 128);
+        SoftwareRaster.b(0, 0, var2, var3, 0, 128);
         int var4 = 5 + (rs.field_n.a(this.field_h, 200, 0) + 30);
         fe.b(212, -(var4 >> 1) + (-8 + var3 / 2), 216, 16 + var4, io.field_m, nd.field_b, 0, 128);
         rs.field_n.a(this.field_h, var2 / 2 - 100, -(var4 >> 1) + var3 / 2, 200, var4, 16777215, 0, 1, 0, 0);
-        int[] var10 = wg.a(param0 - 1619621026, var2 / 2 - 100, 318, -30 + var3 / 2 + (var4 >> 1), (var4 >> 1) + var3 / 2) ? ci.field_e : nd.field_b;
+        int[] var10 = wg.a(param0 - 1619621026, var2 / 2 - 100, 318, -30 + var3 / 2 + (var4 >> 1), (var4 >> 1) + var3 / 2) ? TutorialController.field_e : nd.field_b;
         int[] var8 = var10;
         int[] var6 = var8;
         int[] var5 = var6;
         fe.a(-100 + var2 / 2, (var4 >> 1) + (var3 / 2 - 30), 98, 30, il.field_s, var10, 0, 128, true);
-        int[] var11 = wg.a(-33, 2 + var2 / 2, var2 / 2 + 100, var3 / 2 - (-(var4 >> 1) + 30), var3 / 2 + (var4 >> 1)) ? ci.field_e : nd.field_b;
+        int[] var11 = wg.a(-33, 2 + var2 / 2, var2 / 2 + 100, var3 / 2 - (-(var4 >> 1) + 30), var3 / 2 + (var4 >> 1)) ? TutorialController.field_e : nd.field_b;
         int[] var9 = var11;
         int[] var7 = var9;
         var5 = var7;
@@ -109,7 +109,7 @@ final class uf {
         fe.c(oa.field_G, -50 + var2 / 2 + 100, 2 + (var3 / 2 + (var4 >> 1)), 0, true);
     }
 
-    uf(int param0, int param1, int param2, int param3, String param4, ic param5) {
+    uf(int param0, int param1, int param2, int param3, String param4, GameplayController param5) {
         try {
           this.field_c = param3;
           this.field_k = param1;
@@ -124,6 +124,6 @@ final class uf {
     static {
         field_g = "Open <%0> portal";
         field_l = "Reject";
-        field_j = new wk(150, 150);
+        field_j = new RgbSprite(150, 150);
     }
 }

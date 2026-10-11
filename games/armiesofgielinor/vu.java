@@ -70,7 +70,7 @@ final class vu extends fw {
         int var11 = 0;
         ru var12 = null;
         int var13 = 0;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null != nr.field_c &&
             param4 >= 0 &&

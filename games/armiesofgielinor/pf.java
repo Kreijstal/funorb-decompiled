@@ -13,7 +13,7 @@ final class pf {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
-        var2 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (!cd.c(9501)) {
             if (wq.field_a != null &&
@@ -25,7 +25,7 @@ final class pf {
           }
           ee.field_v.a(true, -6226, en.field_F, cl.field_s);
           ee.field_v.d((byte) -117);
-          while (jd.i((byte) 107)) {
+          while (Unit.i((byte) 107)) {
             ee.field_v.a(rs.field_q, ui.field_i, 80);
           }
           if (param0 >= 10) {
@@ -84,7 +84,7 @@ final class pf {
         throw new IllegalStateException();
     }
 
-    final static om a(int param0, byte param1, bv param2) {
+    final static om a(int param0, byte param1, CipherPacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         om var4 = null;
@@ -164,7 +164,7 @@ final class pf {
 
     final void a(int param0, java.applet.Applet param1) {
         try {
-          tc.a(param1, this.field_c, (byte) 29, "jagex-last-login-method", 31536000L);
+          IntrusiveNode.a(param1, this.field_c, (byte) 29, "jagex-last-login-method", 31536000L);
           if (param0 != -137) {
             pf.a((byte) 95);
           }

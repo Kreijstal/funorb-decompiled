@@ -33,7 +33,7 @@ final class es {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (mg.field_e.field_q >= param1) {
+          if (mg.field_e.position >= param1) {
             return true;
           }
           if (param0 >= -63) {
@@ -45,20 +45,20 @@ final class es {
           try {
             var2_int = am.field_z.d((byte) 43);
             if (var2_int > 0) {
-              if (param1 - mg.field_e.field_q < var2_int) {
-                var2_int = -mg.field_e.field_q + param1;
+              if (param1 - mg.field_e.position < var2_int) {
+                var2_int = -mg.field_e.position + param1;
               }
-              am.field_z.a(0, mg.field_e.field_q, var2_int, mg.field_e.field_o);
+              am.field_z.a(0, mg.field_e.position, var2_int, mg.field_e.payload);
               iq.field_h = vi.b(46);
-              mg.field_e.field_q = mg.field_e.field_q + var2_int;
-              if (mg.field_e.field_q < param1) {
+              mg.field_e.position = mg.field_e.position + var2_int;
+              if (mg.field_e.position < param1) {
                 return false;
               }
-              mg.field_e.field_q = 0;
+              mg.field_e.position = 0;
               return true;
             }
             if (0 <= var2_int &&
-              ca.b(0) <= 30000L) {
+              TileMetadata.b(0) <= 30000L) {
               return false;
             }
             dj.a((byte) -127);
@@ -109,7 +109,7 @@ final class es {
         int[] var18 = null;
         int var11Lifetime1;
         int var14_intLifetime1;
-        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var8_int = -49 % ((2 - param6) / 56);
           if (param3 >= param1) {
@@ -128,11 +128,11 @@ final class es {
               var11_ref_int__ = var17;
               var12 = 0;
               var13 = 0;
-              L19: while (true) {
+              scanLoop1: while (true) {
                 if (var13 >= var18.length) {
                   if (var12 == 0 &&
                     param3 != tq.field_b) {
-                    break L19;
+                    break scanLoop1;
                   }
                   var9_int = 0;
                   for (var13 = 0; var18.length > var13; var13 += 2) {
@@ -145,7 +145,7 @@ final class es {
                       }
                     }
                   }
-                  break L19;
+                  break scanLoop1;
                 }
                 var14_intLifetime1 = var18[var13];
                 var15 = var11_ref_int__[var13 + 1];
@@ -155,15 +155,15 @@ final class es {
                     var12 = 1;
                   } else {
                     if (param3 <= var14_intLifetime1) {
-                      break L19;
+                      break scanLoop1;
                     }
                     if (var15 != (255 & ur.field_B[var14_intLifetime1])) {
-                      break L19;
+                      break scanLoop1;
                     }
                   }
                 } else {
                   if (var15 != lm.field_e[param7]) {
-                    break L19;
+                    break scanLoop1;
                   }
                 }
                 var13 += 2;
@@ -281,7 +281,7 @@ final class es {
         }
     }
 
-    es(at param0) {
+    es(NodeDeque param0) {
         int incrementValue$2 = 0;
         int var2_int = 0;
         og var3 = null;
@@ -294,13 +294,13 @@ final class es {
         try {
           this.field_e = new og[param0.b(false)];
           var2_int = 0;
-          var3 = (og) (param0.e((byte) 105));
+          var3 = (og) (param0.first((byte) 105));
           while (var3 != null) {
-            var3.d(121);
+            var3.unlink(121);
             incrementValue$2 = var2_int;
             var2_int++;
             this.field_e[incrementValue$2] = var3;
-            var3 = (og) (param0.a((byte) 123));
+            var3 = (og) (param0.next((byte) 123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

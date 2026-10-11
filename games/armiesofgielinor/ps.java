@@ -4,7 +4,7 @@
 final class ps extends lk {
     static kl field_u;
     static int field_E;
-    static wk[] field_w;
+    static RgbSprite[] field_w;
     static String field_x;
     private ru[] field_B;
     static int[] field_D;
@@ -22,7 +22,7 @@ final class ps extends lk {
         va stackIn_4_0 = null;
         Throwable decompiledCaughtException = null;
         IllegalArgumentException var2 = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var1 = 55 / ((param0 - 21) / 34);
         try {
           var2_int = 0;
@@ -81,7 +81,7 @@ final class ps extends lk {
         int var12 = 0;
         int var13 = 0;
         try {
-          qn.b(param0.field_B + param1, param4 + param0.field_p, param0.field_l, param0.field_w, 10197915);
+          SoftwareRaster.b(param0.field_B + param1, param4 + param0.field_p, param0.field_l, param0.field_w, 10197915);
           if (param2 > -79) {
             field_A = (String) null;
           }
@@ -136,7 +136,7 @@ final class ps extends lk {
           var3 = var2 - sj.field_d * sj.field_d;
           param0 = param0 + var3 * (gb.field_y - param0) / var2;
         }
-        ag.field_I.a(120, -20500, 640, param0, va.field_u);
+        CombatEvent.field_I.a(120, -20500, 640, param0, va.field_u);
         hm.a(-1, mi.field_l, 0, io.field_n, 5, gb.field_y - 24, 640);
         if (param1) {
           return;
@@ -166,7 +166,7 @@ final class ps extends lk {
     }
 
     static {
-        field_w = new wk[3];
+        field_w = new RgbSprite[3];
         field_D = new int[]{100, 100, 200, 100, 100, 100, 200, 200, 200, 200, 300, 200, 200, 200, 300, 500, 100, 100, 100, 200, 300, 300, 100, 100, 100, 100, 100, 100, 100, 100, 200, 200, 200, 200, 200, 200, 200, 200, 200, 300, 500, 300, 300, 500, 200, 300, 500, 300, 300, 500, 200, 300, 500, 200, 300, 500};
         field_E = 250;
         field_x = "This ground produces no Mana";

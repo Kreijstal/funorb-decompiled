@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class om extends tc implements uo {
+final class om extends IntrusiveNode implements TaggedFieldReader {
     int field_k;
     int field_l;
     static String field_s;
@@ -29,7 +29,7 @@ final class om extends tc implements uo {
     String field_J;
     private int field_t;
 
-    public final void a(int param0, bv param1, String param2, byte param3) {
+    public final void decodeTaggedField(int encodedLength, CipherPacketBuffer packet, String fieldName, byte obfuscationGuard) {
         RuntimeException stackIn_91_0 = null;
         StringBuilder stackIn_91_1 = null;
         String stackIn_92_2 = null;
@@ -40,176 +40,176 @@ final class om extends tc implements uo {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param3 != 37) {
+          if (obfuscationGuard != 37) {
             this.g(-112);
           }
-          if (!param2.equals("id")) {
-            if (param2.equals("flg")) {
-              if (param0 <= 0) {
+          if (!fieldName.equals("id")) {
+            if (fieldName.equals("flg")) {
+              if (encodedLength <= 0) {
                 return;
               }
-              this.field_k = (int)tn.a(false, param0, param1);
+              this.field_k = (int)tn.a(false, encodedLength, packet);
             } else {
-              if (param2.equals("name")) {
-                if (param0 <= 0) {
+              if (fieldName.equals("name")) {
+                if (encodedLength <= 0) {
                   return;
                 }
-                this.field_J = up.a(param1, param0, (byte) -82);
+                this.field_J = up.a(packet, encodedLength, (byte) -82);
                 return;
               }
-              if (!param2.equals("key")) {
-                if (param2.equals("pos")) {
-                  if (param0 > 0) {
-                    this.field_w = (int)tn.a(false, param0, param1);
+              if (!fieldName.equals("key")) {
+                if (fieldName.equals("pos")) {
+                  if (encodedLength > 0) {
+                    this.field_w = (int)tn.a(false, encodedLength, packet);
                     return;
                   }
                 } else {
-                  if (!param2.equals("w")) {
-                    if (param2.equals("h")) {
-                      if (0 >= param0) {
+                  if (!fieldName.equals("w")) {
+                    if (fieldName.equals("h")) {
+                      if (0 >= encodedLength) {
                         return;
                       }
-                      tn.a(false, param0, param1);
+                      tn.a(false, encodedLength, packet);
                       return;
                     }
-                    if (!param2.equals("mid")) {
-                      if (param2.equals("ngb")) {
-                        if (param0 <= 0) {
+                    if (!fieldName.equals("mid")) {
+                      if (fieldName.equals("ngb")) {
+                        if (encodedLength <= 0) {
                           return;
                         }
-                        var5_int = ai.a(param1, true);
+                        var5_int = ai.a(packet, true);
                         this.field_y = new int[var5_int];
                         for (var6 = 0; var6 < var5_int; var6++) {
-                          this.field_y[var6] = (int)tn.a(false, 2, param1);
+                          this.field_y[var6] = (int)tn.a(false, 2, packet);
                         }
                       } else {
-                        if (param2.equals("mpsz")) {
-                          if (0 < param0) {
-                            this.field_o = (int)tn.a(false, param0, param1);
+                        if (fieldName.equals("mpsz")) {
+                          if (0 < encodedLength) {
+                            this.field_o = (int)tn.a(false, encodedLength, packet);
                             return;
                           }
                         } else {
-                          if (!param2.equals("mpt")) {
-                            if (param2.equals("ptc")) {
-                              if (param0 <= 0) {
+                          if (!fieldName.equals("mpt")) {
+                            if (fieldName.equals("ptc")) {
+                              if (encodedLength <= 0) {
                                 return;
                               }
-                              var5_int = ai.a(param1, true);
+                              var5_int = ai.a(packet, true);
                               this.field_B = new int[var5_int];
                               for (var6 = 0; var5_int > var6; var6++) {
-                                this.field_B[var6] = (int)tn.a(false, 2, param1);
+                                this.field_B[var6] = (int)tn.a(false, 2, packet);
                               }
                             } else {
-                              if (!param2.equals("rwd")) {
-                                if (param2.equals("mbr")) {
-                                  if (0 >= param0) {
+                              if (!fieldName.equals("rwd")) {
+                                if (fieldName.equals("mbr")) {
+                                  if (0 >= encodedLength) {
                                     return;
                                   }
-                                  this.field_u = (int)tn.a(false, param0, param1);
+                                  this.field_u = (int)tn.a(false, encodedLength, packet);
                                   return;
                                 }
-                                if (param2.equals("tr")) {
-                                  if (param0 <= 0) {
+                                if (fieldName.equals("tr")) {
+                                  if (encodedLength <= 0) {
                                     return;
                                   }
-                                  this.field_l = (int)tn.a(false, param0, param1);
+                                  this.field_l = (int)tn.a(false, encodedLength, packet);
                                   return;
                                 }
-                                if (!param2.equals("df")) {
-                                  if (param2.equals("dsc")) {
-                                    if (0 >= param0) {
+                                if (!fieldName.equals("df")) {
+                                  if (fieldName.equals("dsc")) {
+                                    if (0 >= encodedLength) {
                                       return;
                                     }
-                                    this.field_n = up.a(param1, param0, (byte) -119);
+                                    this.field_n = up.a(packet, encodedLength, (byte) -119);
                                     return;
                                   }
-                                  if (param2.equals("gt")) {
-                                    if (0 >= param0) {
+                                  if (fieldName.equals("gt")) {
+                                    if (0 >= encodedLength) {
                                       return;
                                     }
-                                    this.field_m = (int)tn.a(false, param0, param1);
+                                    this.field_m = (int)tn.a(false, encodedLength, packet);
                                     return;
                                   }
-                                  if (param2.equals("gd")) {
-                                    if (param0 > 0) {
-                                      this.field_F = (int)tn.a(false, param0, param1);
+                                  if (fieldName.equals("gd")) {
+                                    if (encodedLength > 0) {
+                                      this.field_F = (int)tn.a(false, encodedLength, packet);
                                       return;
                                     }
                                   } else {
-                                    if (param2.equals("ach")) {
-                                      if (0 >= param0) {
+                                    if (fieldName.equals("ach")) {
+                                      if (0 >= encodedLength) {
                                         return;
                                       }
-                                      tn.a(false, param0, param1);
+                                      tn.a(false, encodedLength, packet);
                                       return;
                                     }
-                                    if (param2.equals("song")) {
-                                      if (param0 > 0) {
-                                        this.field_q = (int)tn.a(false, param0, param1);
+                                    if (fieldName.equals("song")) {
+                                      if (encodedLength > 0) {
+                                        this.field_q = (int)tn.a(false, encodedLength, packet);
                                         return;
                                       }
                                     } else {
-                                      if (!param2.equals("team")) {
+                                      if (!fieldName.equals("team")) {
                                         return;
                                       }
-                                      if (param0 > 0) {
-                                        var5_int = ai.a(param1, true);
+                                      if (encodedLength > 0) {
+                                        var5_int = ai.a(packet, true);
                                         this.field_x = new int[var5_int];
                                         for (var6 = 0; var5_int > var6; var6++) {
-                                          this.field_x[var6] = (int)tn.a(false, 2, param1);
+                                          this.field_x[var6] = (int)tn.a(false, 2, packet);
                                         }
                                       }
                                     }
                                   }
                                 } else {
-                                  if (0 < param0) {
-                                    this.field_E = (int)tn.a(false, param0, param1);
+                                  if (0 < encodedLength) {
+                                    this.field_E = (int)tn.a(false, encodedLength, packet);
                                     return;
                                   }
                                 }
                               } else {
-                                if (param0 > 0) {
-                                  var5_int = ai.a(param1, true);
+                                if (encodedLength > 0) {
+                                  var5_int = ai.a(packet, true);
                                   this.field_D = new int[var5_int];
                                   for (var6 = 0; var6 < var5_int; var6++) {
-                                    this.field_D[var6] = (int)tn.a(false, 2, param1);
+                                    this.field_D[var6] = (int)tn.a(false, 2, packet);
                                   }
                                 }
                               }
                             }
                           } else {
-                            if (param0 > 0) {
-                              this.field_z = (int)tn.a(false, param0, param1);
+                            if (encodedLength > 0) {
+                              this.field_z = (int)tn.a(false, encodedLength, packet);
                               return;
                             }
                           }
                         }
                       }
                     } else {
-                      if (0 < param0) {
-                        this.field_t = (int)tn.a(false, param0, param1);
+                      if (0 < encodedLength) {
+                        this.field_t = (int)tn.a(false, encodedLength, packet);
                         return;
                       }
                     }
                   } else {
-                    if (param0 > 0) {
-                      this.field_A = (int)tn.a(false, param0, param1);
+                    if (encodedLength > 0) {
+                      this.field_A = (int)tn.a(false, encodedLength, packet);
                       return;
                     }
                   }
                 }
               } else {
-                if (param0 > 0) {
-                  up.a(param1, param0, (byte) -82);
+                if (encodedLength > 0) {
+                  up.a(packet, encodedLength, (byte) -82);
                   return;
                 }
               }
             }
           } else {
-            if (param0 > 0) {
-              this.field_v = (int)tn.a(false, param0, param1);
+            if (encodedLength > 0) {
+              this.field_v = (int)tn.a(false, encodedLength, packet);
               return;
             }
           }
@@ -218,19 +218,19 @@ final class om extends tc implements uo {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_91_0 = var5;
-          stackIn_91_1 = new StringBuilder().append("om.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_91_1 = new StringBuilder().append("om.B(").append(encodedLength).append(',');
+          if (packet == null) {
             stackIn_92_2 = "null";
           } else {
             stackIn_92_2 = "{...}";
           }
           stackIn_94_1 = ((StringBuilder) (Object) stackIn_91_1).append(stackIn_92_2).append(',');
-          if (param2 == null) {
+          if (fieldName == null) {
             stackIn_95_2 = "null";
           } else {
             stackIn_95_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -269,7 +269,7 @@ final class om extends tc implements uo {
         sd var4;
         int var5;
         String[] var6;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != -23209) {
           return (String[]) null;
         }
@@ -305,13 +305,13 @@ final class om extends tc implements uo {
         return new fu(this.field_D, this.field_l, this.field_u);
     }
 
-    final static wk[] a(byte param0, String param1, String param2, kl param3) {
-        wk[] var4 = null;
+    final static RgbSprite[] a(byte param0, String param1, String param2, kl param3) {
+        RgbSprite[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
-        wk[] var7 = null;
-        wk[] stackIn_5_0 = null;
+        RgbSprite[] var7 = null;
+        RgbSprite[] stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -321,7 +321,7 @@ final class om extends tc implements uo {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var5Lifetime1;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var7 = fk.a(param1, (byte) -126, param3, param2);
           var4 = var7;
@@ -359,7 +359,7 @@ final class om extends tc implements uo {
 
     final void a(boolean param0) {
         int var2 = 0;
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         for (var2 = 0; var2 < hs.field_G.length; var2++) {
           if (hs.field_G[var2] == this.field_A) {
             this.field_o = var2;

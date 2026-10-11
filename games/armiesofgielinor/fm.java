@@ -16,14 +16,14 @@ final class fm {
         }
     }
 
-    final static void a(wk[] param0, int param1, int param2, int param3, int param4) {
+    final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4) {
         try {
           param0[0].g(param2, param3);
           param0[1].c(param0[1].field_y + param2, param3, -(param0[2].field_y << 1) + param1, param0[2].field_v);
           param0[2].g(param2 + param1 - param0[2].field_y, param3);
           if (param4 > -38) {
-            wk[] var6 = (wk[]) null;
-            fm.a((wk[]) null, -67, 44, -43, -95);
+            RgbSprite[] var6 = (RgbSprite[]) null;
+            fm.a((RgbSprite[]) null, -67, 44, -43, -95);
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "fm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -51,8 +51,8 @@ final class fm {
           var9 = (-(var4 * var3 >> 8) + (var4 + var3) & 255) << 24;
           return var7 | (var9 | var6) | var8;
         }
-        wk[] var10 = (wk[]) null;
-        fm.a((wk[]) null, 127, 84, -117, 90);
+        RgbSprite[] var10 = (RgbSprite[]) null;
+        fm.a((RgbSprite[]) null, 127, 84, -117, 90);
         var5Lifetime1 = var3 + var4;
         var6Lifetime1 = (((255 & param1 >> 16) * var4 + var3 * ((16711680 & param0) >> 16)) / var5Lifetime1 & 1697972479) << 16;
         var7Lifetime1 = (-1660944129 & (((65280 & param1) >> 8) * var4 + var3 * ((65280 & param0) >> 8)) / var5Lifetime1) << 8;

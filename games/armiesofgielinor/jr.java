@@ -44,7 +44,7 @@ final class jr {
 
     final void a(int param0, int param1, boolean param2, int param3) {
         int var6;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param2) {
           jr.a(false);
         }
@@ -127,7 +127,7 @@ final class jr {
         int var11 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           param0 = param0 | param0 << 8;
           var5_int = param0 ^ param0 >> 1;
@@ -194,7 +194,7 @@ final class jr {
         RuntimeException var10 = null;
         int var11 = 0;
         int var12 = 0;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           uf.field_a = param7;
           t.field_b = param3;
@@ -219,7 +219,7 @@ final class jr {
             var11++;
           } while (var12 == 0);
           if (param9.field_fb == null) {
-            param9.field_fb = new at();
+            param9.field_fb = new NodeDeque();
           }
           be.field_u = param9.field_fb;
           be.field_u.b(80);
@@ -229,13 +229,13 @@ final class jr {
           oo.field_a = 0;
           al.field_g = -1;
           if (null == param1.field_fb) {
-            param1.field_fb = new at();
+            param1.field_fb = new NodeDeque();
           }
           qc.field_g = param1.field_fb;
           qc.field_g.b(120);
           qm.field_J = new tp(param6);
           if (null == param5.field_fb) {
-            param5.field_fb = new at();
+            param5.field_fb = new NodeDeque();
           }
           wl.field_F = param5.field_fb;
           wl.field_F.b(122);

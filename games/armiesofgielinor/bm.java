@@ -21,10 +21,10 @@ final class bm extends ew {
     private ks field_n;
     private vo field_A;
     private int field_s;
-    private at field_i;
+    private NodeDeque field_i;
     private boolean field_o;
     private boolean field_u;
-    private at field_m;
+    private NodeDeque field_m;
     private boolean field_l;
     private long field_v;
 
@@ -38,16 +38,16 @@ final class bm extends ew {
         int var2_int = 0;
         ks var2_ref = null;
         RuntimeException var2_ref2 = null;
-        tc var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = 0;
         int var5 = 0;
-        tc var6 = null;
-        tc var7 = null;
-        tc var3Lifetime1;
+        IntrusiveNode var6 = null;
+        IntrusiveNode var7 = null;
+        IntrusiveNode var3Lifetime1;
         int var2_intLifetime1;
         int var4Lifetime1;
         var2 = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != -26132) {
             return;
@@ -59,18 +59,18 @@ final class bm extends ew {
             }
             if (this.field_o) {
               var2_int = 1;
-              var3 = this.field_i.e((byte) 101);
+              var3 = this.field_i.first((byte) 101);
               while (var3 != null) {
-                var4 = (int)var3.field_i;
+                var4 = (int)var3.key;
                 if (0 == this.field_C[var4]) {
                   discarded$3 = this.a(1, var4, 1);
                 }
                 if (this.field_C[var4] == 0) {
                   var2_int = 0;
                 } else {
-                  var3.d(-115);
+                  var3.unlink(-115);
                 }
-                var3 = this.field_i.a((byte) 123);
+                var3 = this.field_i.next((byte) 123);
               }
               while (this.field_s < this.field_q.field_p.length) {
                 if (this.field_q.field_p[this.field_s] == 0) {
@@ -82,8 +82,8 @@ final class bm extends ew {
                     discarded$2 = this.a(1, this.field_s, 1);
                   }
                   if (this.field_C[this.field_s] == 0) {
-                    var6 = new tc();
-                    var6.field_i = (long)this.field_s;
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_s;
                     var2_int = 0;
                     this.field_i.a((byte) -119, var6);
                   }
@@ -102,32 +102,32 @@ final class bm extends ew {
             else {
               if (this.field_u) {
                 var2_intLifetime1 = 1;
-                var3Lifetime1 = this.field_i.e((byte) 92);
+                var3Lifetime1 = this.field_i.first((byte) 92);
                 while (var3Lifetime1 != null) {
-                  var4Lifetime1 = (int)var3Lifetime1.field_i;
+                  var4Lifetime1 = (int)var3Lifetime1.key;
                   if (1 != this.field_C[var4Lifetime1]) {
                     discarded$1 = this.a(1, var4Lifetime1, 2);
                   }
                   if (this.field_C[var4Lifetime1] != 1) {
                     var2_intLifetime1 = 0;
                   } else {
-                    var3Lifetime1.d(param0 ^ 26237);
+                    var3Lifetime1.unlink(param0 ^ 26237);
                   }
-                  var3Lifetime1 = this.field_i.a((byte) 123);
+                  var3Lifetime1 = this.field_i.next((byte) 123);
                 }
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (this.field_q.field_p.length > this.field_s) {
                     if (0 != this.field_q.field_p[this.field_s]) {
                       if (this.field_x.a((byte) 51)) {
                         var2_intLifetime1 = 0;
-                        break L3;
+                        break scanLoop1;
                       }
                       if (this.field_C[this.field_s] != 1) {
                         discarded$0 = this.a(1, this.field_s, 2);
                       }
                       if (this.field_C[this.field_s] != 1) {
-                        var7 = new tc();
-                        var7.field_i = (long)this.field_s;
+                        var7 = new IntrusiveNode();
+                        var7.key = (long)this.field_s;
                         this.field_i.a((byte) -119, var7);
                         var2_intLifetime1 = 0;
                       }
@@ -159,7 +159,7 @@ final class bm extends ew {
                   if (!var2_ref.field_z) {
                     throw new RuntimeException();
                   }
-                  var2_ref.d(-128);
+                  var2_ref.unlink(-128);
                 } else {
                   var2_ref.field_w = true;
                 }
@@ -190,7 +190,7 @@ final class bm extends ew {
         byte[] var5 = null;
         byte[] var6 = null;
         byte[] var7 = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_q != null) {
             stackIn_3_0 = this.field_q;
@@ -293,7 +293,7 @@ final class bm extends ew {
         byte[] var28 = null;
         byte[] var29 = null;
         byte[] var30 = null;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 1) {
             stackIn_3_0 = (ks) null;
@@ -305,7 +305,7 @@ final class bm extends ew {
             0 == param2 &&
             !var12.field_z &&
             var12.field_x) {
-            var12.d(35);
+            var12.unlink(35);
             var4 = null;
           }
           if (var4 == null) {
@@ -341,7 +341,7 @@ final class bm extends ew {
                 var4 = this.field_A.a((byte) 56, param1, this.field_w);
               }
             }
-            this.field_t.a((tc) (var4), (long)param1, 108);
+            this.field_t.a((IntrusiveNode) (var4), (long)param1, 108);
           }
           if (((ks) (var4)).field_x) {
             return null;
@@ -379,7 +379,7 @@ final class bm extends ew {
                   this.field_C[param1] = (byte) 1;
                 }
                 if (!((ks) (var4)).field_z) {
-                  ((ks) (var4)).d(param0 ^ -99);
+                  ((ks) (var4)).unlink(param0 ^ -99);
                 }
                 stackIn_76_0 = var4;
                 return (ks) (stackIn_76_0);
@@ -389,13 +389,13 @@ final class bm extends ew {
               decompiledCaughtException = decompiledCaughtParameter1;
               var6_ref = (Exception) (Object) decompiledCaughtException;
               this.field_C[param1] = (byte)-1;
-              ((ks) (var4)).d(116);
+              ((ks) (var4)).unlink(116);
               if (((ks) (var4)).field_z) {
                 if (this.field_x.d(18)) {
                   return null;
                 }
                 var4 = this.field_x.a(param1, false, this.field_r, (byte) 2, true);
-                this.field_t.a((tc) (var4), (long)param1, 98);
+                this.field_t.a((IntrusiveNode) (var4), (long)param1, 98);
               }
               stackIn_84_0 = null;
               return (ks) (stackIn_84_0);
@@ -432,11 +432,11 @@ final class bm extends ew {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (RuntimeException) (Object) decompiledCaughtException;
             this.field_x.b((byte) 4);
-            ((ks) (var4)).d(-109);
+            ((ks) (var4)).unlink(-109);
             if (((ks) (var4)).field_z &&
               !this.field_x.d(59)) {
               var4 = this.field_x.a(param1, false, this.field_r, (byte) 2, true);
-              this.field_t.a((tc) (var4), (long)param1, 120);
+              this.field_t.a((IntrusiveNode) (var4), (long)param1, 120);
             }
             stackIn_112_0 = null;
             return (ks) (stackIn_112_0);
@@ -450,7 +450,7 @@ final class bm extends ew {
             }
           }
           if (!((ks) (var4)).field_z) {
-            ((ks) (var4)).d(105);
+            ((ks) (var4)).unlink(105);
           }
           stackIn_120_0 = var4;
           return (ks) (stackIn_120_0);
@@ -488,7 +488,7 @@ final class bm extends ew {
             this.b(-9);
           }
           var4 = var3.d((byte) -113);
-          var3.d(121);
+          var3.unlink(121);
           stackIn_6_0 = var4;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -550,7 +550,7 @@ final class bm extends ew {
             this.a(-26);
           }
           if (null == this.field_i) {
-            this.field_i = new at();
+            this.field_i = new NodeDeque();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -564,12 +564,12 @@ final class bm extends ew {
         ks discarded$0 = null;
         ks discarded$1 = null;
         RuntimeException decompiledCaughtException = null;
-        tc var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_i == null) {
             return;
@@ -578,9 +578,9 @@ final class bm extends ew {
             return;
           }
           var3 = 1 % ((72 - param0) / 39);
-          var2 = this.field_m.e((byte) 120);
+          var2 = this.field_m.first((byte) 120);
           while (var2 != null) {
-            var4 = (int)var2.field_i;
+            var4 = (int)var2.key;
             if (var4 >= 0) {
               if (var4 < this.field_q.field_i) {
                 if (this.field_q.field_p[var4] != 0) {
@@ -591,18 +591,18 @@ final class bm extends ew {
                     discarded$1 = this.a(1, var4, 2);
                   }
                   if (1 == this.field_C[var4]) {
-                    var2.d(-121);
+                    var2.unlink(-121);
                   }
                 } else {
-                  var2.d(-111);
+                  var2.unlink(-111);
                 }
               } else {
-                var2.d(-111);
+                var2.unlink(-111);
               }
             } else {
-              var2.d(-111);
+              var2.unlink(-111);
             }
-            var2 = this.field_m.a((byte) 123);
+            var2 = this.field_m.next((byte) 123);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -637,14 +637,14 @@ final class bm extends ew {
         RuntimeException var10 = null;
         this.field_t = new bg(16);
         this.field_s = 0;
-        this.field_m = new at();
+        this.field_m = new NodeDeque();
         this.field_v = 0L;
         try {
           this.field_r = param0;
           this.field_w = param1;
           if (this.field_w != null) {
             this.field_o = true;
-            this.field_i = new at();
+            this.field_i = new NodeDeque();
           } else {
             this.field_o = false;
           }

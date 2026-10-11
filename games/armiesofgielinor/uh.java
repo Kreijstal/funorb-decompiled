@@ -37,11 +37,11 @@ final class uh {
 
     final static void a(int param0, boolean param1, int[] param2, int[] param3, String param4, boolean param5, int param6) {
         try {
-          no.field_P.field_y = qn.field_l;
-          no.field_P.field_v = qn.field_g;
-          no.field_P.field_B = qn.field_d;
+          no.field_P.field_y = SoftwareRaster.field_l;
+          no.field_P.field_v = SoftwareRaster.field_g;
+          no.field_P.field_B = SoftwareRaster.field_d;
           ku.field_J.b();
-          qn.b();
+          SoftwareRaster.b();
           dm.a(-1, -1, param2, -1, param5, param3, -1, false, 0, false, 0, param4);
           no.field_P.b();
           ku.field_J.g(param6, param0);

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vg extends tc {
+final class vg extends IntrusiveNode {
     static int field_p;
-    static wk[] field_q;
+    static RgbSprite[] field_q;
     byte[] field_s;
     static String field_t;
     static String field_k;

@@ -11,7 +11,7 @@ final class ql implements pa {
     private vb field_b;
     private v field_k;
     private int[][] field_t;
-    private ne[] field_g;
+    private MapTile[] field_g;
     private int field_s;
     static String field_e;
     private int field_m;
@@ -21,8 +21,8 @@ final class ql implements pa {
     private int field_h;
     static String field_l;
     private int field_r;
-    private ha field_o;
-    private jd field_d;
+    private Battlefield field_o;
+    private Unit field_d;
     private int field_f;
 
     private final void f(int param0) {
@@ -34,14 +34,14 @@ final class ql implements pa {
 
     public final void a(int param0) {
         if (param0 <= 94) {
-          this.field_o = (ha) null;
+          this.field_o = (Battlefield) null;
         }
     }
 
     public final void a(byte param0) {
         int var2;
         int var3;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = this.field_n;
         if (0 == var2) {
           this.c(param0 + 55);
@@ -55,11 +55,11 @@ final class ql implements pa {
           }
         }
         if (param0 != -52) {
-          this.field_g = (ne[]) null;
+          this.field_g = (MapTile[]) null;
         }
     }
 
-    public final void b(oj param0, byte param1) {
+    public final void b(GameEvent param0, byte param1) {
         int var4 = 0;
         int[] stackIn_13_0 = null;
         int stackIn_13_1 = 0;
@@ -72,7 +72,7 @@ final class ql implements pa {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var5 = 0;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_k.field_c[0] = this.field_b.field_x % this.field_s;
           this.field_k.field_c[1] = this.field_b.field_x / this.field_s;
@@ -96,16 +96,16 @@ final class ql implements pa {
             for (var4 = 0; var4 < 10; var4++) {
               stackIn_13_0 = this.field_t[var4];
               stackIn_13_1 = 0;
-              stackIn_13_2 = ns.a(false, 20, li.field_n) + 20;
-              if (10 >= ns.a(false, 20, li.field_n)) {
+              stackIn_13_2 = AttackEvent.a(false, 20, li.field_n) + 20;
+              if (10 >= AttackEvent.a(false, 20, li.field_n)) {
                 stackIn_14_3 = -1;
               } else {
                 stackIn_14_3 = 1;
               }
               stackIn_13_0[stackIn_13_1] = stackIn_13_2 * stackIn_14_3;
-              this.field_t[var4][1] = -60 + -1 * ns.a(false, 40, li.field_n);
+              this.field_t[var4][1] = -60 + -1 * AttackEvent.a(false, 40, li.field_n);
             }
-            param0.a(this.field_o, -26661);
+            param0.applyToBattlefield(this.field_o, -26661);
             return;
           }
           return;
@@ -128,14 +128,14 @@ final class ql implements pa {
         int var5;
         int var6;
         int var7;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_h < 40 &&
           this.field_h < 20) {
           hh.field_d.d(-40 + param2, param1 - 40, 80, 80, 255 * this.field_h / 20);
           hh.field_d.d(param2 - 40, param1 - 40, 80, 80, this.field_h * 255 / 20);
         }
         if (param0 > -124) {
-          this.field_d = (jd) null;
+          this.field_d = (Unit) null;
         }
         if (null != this.field_t) {
           for (var4 = 0; this.field_t.length > var4; var4++) {
@@ -146,7 +146,7 @@ final class ql implements pa {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, oj param3) {
+    final boolean a(int param0, int param1, int param2, GameEvent param3) {
         RuntimeException stackIn_61_0 = null;
         StringBuilder stackIn_61_1 = null;
         String stackIn_62_2 = null;
@@ -155,16 +155,16 @@ final class ql implements pa {
         int var6 = 0;
         wa var7 = null;
         wa var8 = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_h = 0;
           this.field_b.field_x = param2 + this.field_s * param1;
           if (param3.field_m == 12) {
             this.field_n = 1;
-            this.field_d = this.field_o.c(param1, true, param2);
+            this.field_d = this.field_o.getUnitAt(param1, true, param2);
             if (null != this.field_d &&
-              this.field_d.field_O == ((qq) (param3)).field_G &&
-              this.field_d.field_Y < this.field_d.field_t) {
+              this.field_d.ownerPlayer == ((StateChangeEvent) (param3)).field_G &&
+              this.field_d.strength < this.field_d.maximumStrength) {
               this.field_i = 16711935;
               this.field_m = 1;
             } else {
@@ -175,11 +175,11 @@ final class ql implements pa {
           }
           if (param3.field_m == 14) {
             this.field_n = 2;
-            this.field_d = this.field_o.c(param1, true, param2);
-            this.field_f = ns.a(false, 21, li.field_n) - 10;
-            this.field_r = ns.a(false, 21, li.field_n) - 10;
+            this.field_d = this.field_o.getUnitAt(param1, true, param2);
+            this.field_f = AttackEvent.a(false, 21, li.field_n) - 10;
+            this.field_r = AttackEvent.a(false, 21, li.field_n) - 10;
             if (this.field_d != null &&
-              this.field_d.field_O == ((qq) (param3)).field_G &&
+              this.field_d.ownerPlayer == ((StateChangeEvent) (param3)).field_G &&
               this.field_d.field_A != 5) {
               this.field_i = 16711935;
               this.field_m = -this.field_d.field_A + 5;
@@ -191,14 +191,14 @@ final class ql implements pa {
           }
           if (16 == param3.field_m) {
             this.field_n = 1;
-            this.field_d = this.field_o.c(param1, true, param2);
-            this.field_f = ns.a(false, 21, li.field_n) - 10;
-            this.field_r = -10 + ns.a(false, 21, li.field_n);
-            if ((!this.field_g[param2 + this.field_s * param1].c(92) ||
+            this.field_d = this.field_o.getUnitAt(param1, true, param2);
+            this.field_f = AttackEvent.a(false, 21, li.field_n) - 10;
+            this.field_r = -10 + AttackEvent.a(false, 21, li.field_n);
+            if ((!this.field_g[param2 + this.field_s * param1].hasCorpse(92) ||
               null != this.field_d) && (this.field_d == null ||
               !this.field_d.a(23072) ||
-              this.field_d.field_O != ((qq) (param3)).field_G ||
-              this.field_d.field_t == this.field_d.field_Y)) {
+              this.field_d.ownerPlayer != ((StateChangeEvent) (param3)).field_G ||
+              this.field_d.maximumStrength == this.field_d.strength)) {
               this.field_h = 50;
               this.field_n = -1;
               return false;
@@ -206,14 +206,14 @@ final class ql implements pa {
             if (null == this.field_d) {
               this.field_m = 5;
             } else {
-              this.field_m = -this.field_d.field_Y + this.field_d.field_t;
+              this.field_m = -this.field_d.strength + this.field_d.maximumStrength;
             }
             if (this.field_m > 5) {
               this.field_m = 5;
             }
           }
           if (param0 > -68) {
-            this.field_g = (ne[]) null;
+            this.field_g = (MapTile[]) null;
           }
           if (param3.field_m == 25) {
             this.field_n = 7;
@@ -229,22 +229,22 @@ final class ql implements pa {
             return true;
           }
           this.field_n = 7;
-          var7 = (wa) (((pj) (param3)).field_B);
+          var7 = (wa) (((TrinketUseEvent) (param3)).field_B);
           var8 = var7;
-          if (6 == uc.field_d[var7.field_c][4]) {
+          if (6 == uc.spellDefinitions[var7.field_c][4]) {
             this.field_n = 10;
           }
-          if (uc.field_d[var7.field_c][4] == 4 &&
-            uc.field_d[var7.field_c][5] != 64 &&
-            uc.field_d[var7.field_c][5] != 0) {
-            if (uc.field_d[var7.field_c][6] >= 0) {
-              if (uc.field_d[var8.field_c][7] <= 0) {
+          if (uc.spellDefinitions[var7.field_c][4] == 4 &&
+            uc.spellDefinitions[var7.field_c][5] != 64 &&
+            uc.spellDefinitions[var7.field_c][5] != 0) {
+            if (uc.spellDefinitions[var7.field_c][6] >= 0) {
+              if (uc.spellDefinitions[var8.field_c][7] <= 0) {
                 this.field_n = 12;
               } else {
                 this.field_n = 11;
               }
             } else {
-              if (uc.field_d[var7.field_c][7] > 0) {
+              if (uc.spellDefinitions[var7.field_c][7] > 0) {
                 this.field_n = 14;
               } else {
                 this.field_n = 13;
@@ -280,7 +280,7 @@ final class ql implements pa {
         int var2Lifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (40 > this.field_h) {
           var2 = 0;
           var3 = 0;
@@ -289,15 +289,15 @@ final class ql implements pa {
               break;
             }
             stackIn_6_0 = var2;
-            if (ns.a(false, 100, li.field_n) > 50) {
+            if (AttackEvent.a(false, 100, li.field_n) > 50) {
               stackIn_7_1 = 0;
             } else {
-              stackIn_7_1 = ns.a(false, 100, li.field_n) - 50 >> 4;
+              stackIn_7_1 = AttackEvent.a(false, 100, li.field_n) - 50 >> 4;
             }
             var2 = stackIn_6_0 + stackIn_7_1;
             stackIn_9_0 = var3;
-            if (ns.a(false, 100, li.field_n) <= 50) {
-              stackIn_10_1 = -50 + ns.a(false, 100, li.field_n) >> 4;
+            if (AttackEvent.a(false, 100, li.field_n) <= 50) {
+              stackIn_10_1 = -50 + AttackEvent.a(false, 100, li.field_n) >> 4;
             } else {
               stackIn_10_1 = 0;
             }
@@ -319,7 +319,7 @@ final class ql implements pa {
 
     private final void e(byte param0) {
         int var2 = 0;
-        wk stackIn_4_0;
+        RgbSprite stackIn_4_0;
         int stackIn_4_1;
         int stackIn_4_2;
         int stackIn_4_3;
@@ -328,10 +328,10 @@ final class ql implements pa {
         int var3;
         int var4;
         int var5;
-        oj var6;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        GameEvent var6;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_h < 20) {
-          stackIn_4_0 = hs.field_F[ns.a(false, hs.field_F.length, li.field_n)];
+          stackIn_4_0 = hs.field_F[AttackEvent.a(false, hs.field_F.length, li.field_n)];
           stackIn_4_1 = this.field_b.field_m + 30;
           stackIn_4_2 = -90 + (this.field_b.field_v + this.field_h * 4);
           stackIn_4_3 = 20;
@@ -341,18 +341,18 @@ final class ql implements pa {
           } else {
             stackIn_5_5 = 255;
           }
-          ((wk) (Object) stackIn_4_0).d(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_5_5);
+          ((RgbSprite) (Object) stackIn_4_0).d(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_5_5);
         }
         if (null != this.field_t) {
           for (var2 = 0; var2 < this.field_t.length; var2++) {
             var3 = this.field_b.field_m + (this.field_t[var2][0] * (this.field_h - 20) / 20 + 35);
             var4 = -10 + this.field_b.field_v + (-20 + this.field_h) * this.field_t[var2][1] / 20;
-            hs.field_F[ns.a(false, hs.field_F.length, li.field_n)].d(-((-20 + this.field_h) / 4) + var3, -((-40 + this.field_h) / 4) + (this.field_h - 20) * (this.field_h - 20) / 10 + var4, (-20 + this.field_h) / 2 + 10, (-20 + this.field_h) / 2 + 10, (-this.field_h + 60) * 255 / 40);
+            hs.field_F[AttackEvent.a(false, hs.field_F.length, li.field_n)].d(-((-20 + this.field_h) / 4) + var3, -((-40 + this.field_h) / 4) + (this.field_h - 20) * (this.field_h - 20) / 10 + var4, (-20 + this.field_h) / 2 + 10, (-20 + this.field_h) / 2 + 10, (-this.field_h + 60) * 255 / 40);
           }
         }
         if (param0 != -117) {
-          var6 = (oj) null;
-          this.a((oj) null, (byte) -72);
+          var6 = (GameEvent) null;
+          this.a((GameEvent) null, (byte) -72);
         }
     }
 
@@ -361,7 +361,7 @@ final class ql implements pa {
         int var3;
         int var4;
         int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_h < 40 &&
           this.field_h < 20) {
           hh.field_d.d(this.field_b.field_m - 10, this.field_b.field_v - 30, 100, 50, this.field_h * 255 / 20);
@@ -383,11 +383,11 @@ final class ql implements pa {
         int stackIn_25_1 = 0;
         int var2;
         int var3;
-        oj var4;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        GameEvent var4;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 >= -119) {
-          var4 = (oj) null;
-          this.a(116, -87, 41, (oj) null);
+          var4 = (GameEvent) null;
+          this.a(116, -87, 41, (GameEvent) null);
         }
         var2 = this.field_n;
         if (var2 == 1) {
@@ -460,7 +460,7 @@ final class ql implements pa {
         int var3;
         int var4;
         int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 20) {
           return;
         }
@@ -521,7 +521,7 @@ final class ql implements pa {
     }
 
     private final void c(int param0) {
-        qn.a(this.field_b.field_m + 40, -20 + this.field_b.field_v, 10, this.field_i);
+        SoftwareRaster.a(this.field_b.field_m + 40, -20 + this.field_b.field_v, 10, this.field_i);
         mv.field_a[this.field_a ? 1 : 0].g(20 + this.field_b.field_m, this.field_b.field_v - 35);
         if (param0 != 3) {
           this.c((byte) -24);
@@ -530,20 +530,20 @@ final class ql implements pa {
     }
 
     private final void g(int param0) {
-        wk stackIn_6_0;
+        RgbSprite stackIn_6_0;
         int stackIn_6_1;
         int stackIn_6_2;
         int stackIn_6_3;
         int stackIn_6_4;
         int stackIn_7_5 = 0;
-        wk stackIn_9_0;
+        RgbSprite stackIn_9_0;
         int stackIn_9_1;
         int stackIn_9_2;
         int stackIn_9_3;
         int stackIn_9_4;
         int stackIn_10_5;
         int var3;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 10) {
           return;
         }
@@ -567,7 +567,7 @@ final class ql implements pa {
             } else {
               stackIn_7_5 = 255 * this.field_h / 10;
             }
-            ((wk) (Object) stackIn_6_0).d(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
+            ((RgbSprite) (Object) stackIn_6_0).d(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
             stackIn_9_0 = hh.field_d;
             stackIn_9_1 = this.field_b.field_m + 15;
             stackIn_9_2 = this.field_b.field_v - 120 + this.field_h * 3;
@@ -578,7 +578,7 @@ final class ql implements pa {
             } else {
               stackIn_10_5 = 255 * this.field_h / 10;
             }
-            ((wk) (Object) stackIn_9_0).d(stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_9_4, stackIn_10_5);
+            ((RgbSprite) (Object) stackIn_9_0).d(stackIn_9_1, stackIn_9_2, stackIn_9_3, stackIn_9_4, stackIn_10_5);
           }
         }
     }
@@ -601,7 +601,7 @@ final class ql implements pa {
         return stackIn_9_0;
     }
 
-    public final boolean a(oj param0, byte param1) {
+    public final boolean a(GameEvent param0, byte param1) {
         int stackIn_8_1 = 0;
         RuntimeException stackIn_52_0 = null;
         StringBuilder stackIn_52_1 = null;
@@ -610,20 +610,20 @@ final class ql implements pa {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        mb var6 = null;
-        ec var7 = null;
-        pj var8 = null;
-        as var9 = null;
-        qj var10 = null;
-        st var11 = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        SummonEvent var6 = null;
+        TeleportEvent var7 = null;
+        TrinketUseEvent var8 = null;
+        OwnerChangeEvent var9 = null;
+        UpkeepEvent var10 = null;
+        TurnEffectEvent var11 = null;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_h = 0;
           if (param0.field_m != 15) {
             if (19 == param0.field_m) {
               this.field_m = 1;
-              var11 = (st) (param0);
-              var4 = var11.field_D;
+              var11 = (TurnEffectEvent) (param0);
+              var4 = var11.effectType;
               if (var4 != 5) {
                 if (var4 == 1) {
                   this.field_n = 1;
@@ -649,68 +649,68 @@ final class ql implements pa {
                 this.field_n = 2;
                 this.field_m = -1;
               }
-              this.field_f = ns.a(false, 21, li.field_n) - 10;
-              this.field_r = ns.a(false, 21, li.field_n) - 10;
-              if (param0.field_w == null) {
+              this.field_f = AttackEvent.a(false, 21, li.field_n) - 10;
+              this.field_r = AttackEvent.a(false, 21, li.field_n) - 10;
+              if (param0.unit == null) {
                 return false;
               }
-              if (param0.field_w.field_S) {
+              if (param0.unit.field_S) {
                 return false;
               }
-              this.field_b.field_x = this.field_s * param0.field_w.field_w + param0.field_w.field_J;
+              this.field_b.field_x = this.field_s * param0.unit.tileY + param0.unit.tileX;
             } else {
               if (20 == param0.field_m) {
                 this.field_m = 3;
                 this.field_n = 6;
-                var10 = (qj) (param0);
-                this.field_f = ns.a(false, 21, li.field_n) - 10;
-                this.field_r = ns.a(false, 21, li.field_n) - 10;
+                var10 = (UpkeepEvent) (param0);
+                this.field_f = AttackEvent.a(false, 21, li.field_n) - 10;
+                this.field_r = AttackEvent.a(false, 21, li.field_n) - 10;
                 this.field_b.field_x = var10.field_y * this.field_s + var10.field_D;
               } else {
                 if (param0.field_m != 2) {
                   if (param0.field_m == 23) {
                     this.field_n = 7;
-                    var9 = (as) (param0);
-                    this.field_b.field_x = var9.field_w.field_J + var9.field_w.field_w * this.field_s;
+                    var9 = (OwnerChangeEvent) (param0);
+                    this.field_b.field_x = var9.unit.tileX + var9.unit.tileY * this.field_s;
                   } else {
                     if (param0.field_m == 24) {
-                      var8 = (pj) (param0);
+                      var8 = (TrinketUseEvent) (param0);
                       this.field_n = 8;
                       if (var8.field_y >= 0) {
                         this.field_f = (int)(64.0 * Math.sin((double)var8.field_y * 3.141592653589793 / 4.0)) + 130;
-                        this.field_r = -95 + (int)(Math.cos(3.141592653589793 * (double)var8.field_y / 4.0) * -64.0) + ag.field_I.field_D;
+                        this.field_r = -95 + (int)(Math.cos(3.141592653589793 * (double)var8.field_y / 4.0) * -64.0) + CombatEvent.field_I.field_D;
                       } else {
                         this.field_f = 130;
-                        this.field_r = -95 + ag.field_I.field_D;
+                        this.field_r = -95 + CombatEvent.field_I.field_D;
                       }
                     } else {
                       if (param0.field_m == 26) {
-                        var7 = (ec) (param0);
-                        var7.field_w = this.field_o.c(var7.field_B, true, var7.field_A);
-                        if (var7.field_w.field_bb) {
-                          var7.field_w = var7.field_w.b(false);
+                        var7 = (TeleportEvent) (param0);
+                        var7.unit = this.field_o.getUnitAt(var7.field_B, true, var7.field_A);
+                        if (var7.unit.packedFlag256) {
+                          var7.unit = var7.unit.b(false);
                         }
                         this.field_n = 7;
-                        this.field_b.field_x = this.field_s * var7.field_w.field_w + var7.field_w.field_J;
+                        this.field_b.field_x = this.field_s * var7.unit.tileY + var7.unit.tileX;
                       }
                     }
                   }
                 } else {
-                  var6 = (mb) (param0);
+                  var6 = (SummonEvent) (param0);
                   this.field_n = 7;
                   this.field_b.field_x = var6.field_z + this.field_s * var6.field_H;
                 }
               }
             }
           } else {
-            this.field_a = ((nw) (param0)).field_A;
+            this.field_a = ((DamageEvent) (param0)).poison;
             this.field_n = 0;
-            if (null == param0.field_w) {
+            if (null == param0.unit) {
               return false;
             }
-            this.field_b.field_x = this.field_s * param0.field_w.field_w + param0.field_w.field_J;
-            this.field_m = ((nw) (param0)).field_D;
-            if (!((nw) (param0)).field_A) {
+            this.field_b.field_x = this.field_s * param0.unit.tileY + param0.unit.tileX;
+            this.field_m = ((DamageEvent) (param0)).damageAmount;
+            if (!((DamageEvent) (param0)).poison) {
               stackIn_8_1 = 16711680;
             } else {
               stackIn_8_1 = 65280;
@@ -741,7 +741,7 @@ final class ql implements pa {
         }
     }
 
-    ql(ha param0, v param1, vb param2) {
+    ql(Battlefield param0, v param1, vb param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -753,11 +753,11 @@ final class ql implements pa {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_o = param0;
-          this.field_s = param0.field_v;
+          this.field_s = param0.mapWidth;
           this.field_k = param1;
           this.field_b = param2;
           this.field_q = new int[2];
-          this.field_g = param0.field_Eb;
+          this.field_g = param0.tiles;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

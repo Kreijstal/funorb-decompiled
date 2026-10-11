@@ -3,7 +3,7 @@
  */
 class hv extends fw {
     static int[] field_R;
-    private at field_P;
+    private NodeDeque field_P;
     private String[] field_Q;
     static String field_O;
     private ct field_M;
@@ -39,8 +39,8 @@ class hv extends fw {
         ct var15;
         int var16;
         int var7Lifetime1;
-        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
-        this.field_P = new at();
+        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        this.field_P = new NodeDeque();
         var2 = 0;
         var3 = (pm) ((Object) this.field_k);
         var4 = var3.a(-77, (kb) (this));
@@ -81,7 +81,7 @@ class hv extends fw {
             if (var10 != null) {
               ((ct) (var10)).field_k = var15;
             }
-            this.field_P.a((byte) -119, (tc) (var15));
+            this.field_P.a((byte) -119, (IntrusiveNode) (var15));
             var10 = var15;
           }
         }
@@ -116,8 +116,8 @@ class hv extends fw {
 
     private final ct a(int param0, byte param1, int param2) {
         ct var5 = null;
-        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
-        ct var4 = (ct) (this.field_P.e((byte) 107));
+        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        ct var4 = (ct) (this.field_P.first((byte) 107));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -128,7 +128,7 @@ class hv extends fw {
             }
             var5 = var5.field_k;
           }
-          var4 = (ct) (this.field_P.a((byte) 123));
+          var4 = (ct) (this.field_P.next((byte) 123));
         }
         if (param1 == -61) {
           return null;
@@ -209,7 +209,7 @@ class hv extends fw {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null == this.field_Q ||
             this.field_Q.length <= param2) {
@@ -246,7 +246,7 @@ class hv extends fw {
     final void a(int param0, int param1, int param2, int param3) {
         this.a(param2, param0, param3, 8192, ((pm) ((Object) this.field_k)).a((kb) (this), -2));
         if (param1 != 9567) {
-          this.field_P = (at) null;
+          this.field_P = (NodeDeque) null;
         }
     }
 

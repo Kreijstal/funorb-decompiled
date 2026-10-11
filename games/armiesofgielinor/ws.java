@@ -22,7 +22,7 @@ final class ws extends fw {
         int var9 = 0;
         double var10 = 0.0;
         int var12 = 0;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (!super.a(param0, param1, param2, 120, param4, param5, param6)) {
             if (param3 >= 103) {
@@ -69,16 +69,16 @@ final class ws extends fw {
         if (param0) {
           hw.a((byte) 52, wf.field_y, 6);
           hw.a((byte) 33, sh.field_r, 26);
-          kr.field_D.a(kr.field_D.a(26, (byte) -107) + 30, 26, (byte) 126);
+          MoveEvent.field_D.a(MoveEvent.field_D.a(26, (byte) -107) + 30, 26, (byte) 126);
           hw.a((byte) 111, pu.field_B, 8);
           hw.a((byte) 67, sh.field_r, 27);
-          kr.field_D.a(30 + kr.field_D.a(27, (byte) -126), 27, (byte) 125);
+          MoveEvent.field_D.a(30 + MoveEvent.field_D.a(27, (byte) -126), 27, (byte) 125);
           hw.a((byte) 78, sh.field_r, 28);
-          kr.field_D.a(kr.field_D.a(28, (byte) -122) + 30, 28, (byte) 120);
+          MoveEvent.field_D.a(MoveEvent.field_D.a(28, (byte) -122) + 30, 28, (byte) 120);
           hw.a((byte) 45, pu.field_B, 9);
           if (!rf.a(27875)) {
             hw.a((byte) 54, cg.field_b, 1);
-            hw.a((byte) 91, oj.field_t, 24);
+            hw.a((byte) 91, GameEvent.field_t, 24);
             hw.a((byte) 101, op.field_f, 17);
             hw.a((byte) 39, sa.field_i, 3);
             hw.a((byte) 78, wp.field_D, 4);
@@ -89,16 +89,16 @@ final class ws extends fw {
         field_P = (je) null;
         hw.a((byte) 52, wf.field_y, 6);
         hw.a((byte) 33, sh.field_r, 26);
-        kr.field_D.a(kr.field_D.a(26, (byte) -107) + 30, 26, (byte) 126);
+        MoveEvent.field_D.a(MoveEvent.field_D.a(26, (byte) -107) + 30, 26, (byte) 126);
         hw.a((byte) 111, pu.field_B, 8);
         hw.a((byte) 67, sh.field_r, 27);
-        kr.field_D.a(30 + kr.field_D.a(27, (byte) -126), 27, (byte) 125);
+        MoveEvent.field_D.a(30 + MoveEvent.field_D.a(27, (byte) -126), 27, (byte) 125);
         hw.a((byte) 78, sh.field_r, 28);
-        kr.field_D.a(kr.field_D.a(28, (byte) -122) + 30, 28, (byte) 120);
+        MoveEvent.field_D.a(MoveEvent.field_D.a(28, (byte) -122) + 30, 28, (byte) 120);
         hw.a((byte) 45, pu.field_B, 9);
         if (!rf.a(27875)) {
           hw.a((byte) 54, cg.field_b, 1);
-          hw.a((byte) 91, oj.field_t, 24);
+          hw.a((byte) 91, GameEvent.field_t, 24);
           hw.a((byte) 101, op.field_f, 17);
           hw.a((byte) 39, sa.field_i, 3);
           hw.a((byte) 78, wp.field_D, 4);

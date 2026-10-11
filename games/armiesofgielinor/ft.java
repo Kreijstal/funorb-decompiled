@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ft extends tc {
+final class ft extends IntrusiveNode {
     int field_k;
     static String field_l;
     static String field_o;
@@ -21,10 +21,10 @@ final class ft extends tc {
         field_o = null;
     }
 
-    final static wk[] a(int param0, byte param1, int param2, int param3) {
-        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
-        wk[] var7 = new wk[9];
-        wk[] var4 = var7;
+    final static RgbSprite[] a(int param0, byte param1, int param2, int param3) {
+        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        RgbSprite[] var7 = new RgbSprite[9];
+        RgbSprite[] var4 = var7;
         var7[0] = hl.a(false, param2, param3);
         int var5 = 1;
         if (param1 > -8) {

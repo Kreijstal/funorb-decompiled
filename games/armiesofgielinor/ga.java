@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ga {
-    static wk[] field_k;
+    static RgbSprite[] field_k;
     private int[] field_e;
     private int[] field_c;
     static je field_i;
     private int field_f;
-    static wk[] field_a;
+    static RgbSprite[] field_a;
     private int field_j;
     static kd field_g;
     private int field_b;
@@ -16,7 +16,7 @@ final class ga {
 
     private final void b(boolean param0) {
         int var2 = 0;
-        int var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var9 = -1640531527;
         int var4 = -1640531527;
         int var5 = -1640531527;
@@ -157,7 +157,7 @@ final class ga {
         int var3;
         int var4;
         int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int fieldTemp$0 = this.field_h + 1;
         this.field_h = this.field_h + 1;
         this.field_j = this.field_j + fieldTemp$0;

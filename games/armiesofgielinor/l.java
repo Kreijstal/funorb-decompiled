@@ -45,7 +45,7 @@ final class l {
         int[] var20 = null;
         char[] var21 = null;
         int var12Lifetime1;
-        var17 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 == null) {
             return null;
@@ -97,7 +97,7 @@ final class l {
                 }
                 var10[var14 + var12Lifetime1] = param0.field_y[var14];
               } else {
-                var8[var14 + var12Lifetime1] = oj.field_x;
+                var8[var14 + var12Lifetime1] = GameEvent.field_x;
                 var9[var12Lifetime1 + var14] = param0.field_v[var14];
                 var10[var14 + var12Lifetime1] = param0.field_y[var14];
               }

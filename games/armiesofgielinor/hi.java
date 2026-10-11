@@ -64,7 +64,7 @@ final class hi implements Runnable {
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var8 = 0;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_k) {
             return;
@@ -116,7 +116,7 @@ final class hi implements Runnable {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 0) {
             this.run();
@@ -171,7 +171,7 @@ final class hi implements Runnable {
           InterruptedException var4 = null;
           int var6 = 0;
           String var7 = null;
-          var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             while (true) {
               var3 = this;
@@ -276,7 +276,7 @@ final class hi implements Runnable {
           int var4 = 0;
           Throwable decompiledCaughtException = null;
           Object var2_ref = null;
-          var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           if (this.field_k) {
             return;
           }

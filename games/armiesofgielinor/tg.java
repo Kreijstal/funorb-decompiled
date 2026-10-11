@@ -20,11 +20,11 @@ final class tg {
 
     private final boolean b(int param0, byte param1, int param2) {
         int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 0) {
           if (param0 != 1) {
             if (param0 == 2) {
-              ag.a(param2, -48, this.field_c);
+              CombatEvent.a(param2, -48, this.field_c);
             } else {
               if (param0 == 3) {
                 pq.a(-119, this.field_c, param2);
@@ -82,7 +82,7 @@ final class tg {
               }
               var4_ref = se.a(this.field_m, param0, -127);
             } else {
-              var4_ref = nw.a(this.field_m, (byte) -27, param0);
+              var4_ref = DamageEvent.a(this.field_m, (byte) -27, param0);
             }
           } else {
             var4_ref = op.a(20, this.field_m, param0);
@@ -102,7 +102,7 @@ final class tg {
           return true;
         }
         if (param2 == 5) {
-          var7 = nw.a(this.field_m, (byte) -27, param0);
+          var7 = DamageEvent.a(this.field_m, (byte) -27, param0);
           if (var7 == null) {
             return true;
           }
@@ -211,7 +211,7 @@ final class tg {
         of var10;
         of var11;
         of var4Lifetime1;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 23899) {
           this.field_e = 127;
           if (this.field_m == null) {
@@ -226,7 +226,7 @@ final class tg {
           if (!vu.b(false)) {
             return;
           }
-          var11 = tr.a((byte) 121, this.field_f);
+          var11 = DeployEvent.a((byte) 121, this.field_f);
           var4 = hr.a(this.field_f, -86);
           var5 = this.b(param0 - 24004);
           if (var4 != null) {
@@ -274,7 +274,7 @@ final class tg {
         if (!vu.b(false)) {
           return;
         }
-        var10 = tr.a((byte) 121, this.field_f);
+        var10 = DeployEvent.a((byte) 121, this.field_f);
         var7 = var10;
         var4Lifetime1 = hr.a(this.field_f, -86);
         var5 = this.b(param0 - 24004);
@@ -319,7 +319,7 @@ final class tg {
         au var5;
         au var6;
         au var7;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 > 46) {
           if (vu.field_M != null) {
             return;
@@ -402,7 +402,7 @@ final class tg {
 
     private final boolean a(int param0, int param1, byte param2) {
         int var4 = 0;
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;

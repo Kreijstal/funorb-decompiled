@@ -38,13 +38,13 @@ final class hb {
           if (null != am.field_z) {
             if (param1 >= 0) {
               decompiledFrameRemainder0 = (kl.field_k == ov.field_g);
-              if ((decompiledFrameRemainder0) && (0 == vl.field_n.field_q &&
-                (10000L + mb.field_G) < vi.b(-60))) {
+              if ((decompiledFrameRemainder0) && (0 == vl.field_n.position &&
+                (10000L + SummonEvent.field_G) < vi.b(-60))) {
                 vl.field_n.h(32161, param1);
               }
             } else {
-              if (0 == vl.field_n.field_q &&
-                (10000L + mb.field_G) < vi.b(-60)) {
+              if (0 == vl.field_n.position &&
+                (10000L + SummonEvent.field_G) < vi.b(-60)) {
                 vl.field_n.h(32161, param1);
               }
             }
@@ -52,21 +52,21 @@ final class hb {
               if (param0 < 8) {
                 return;
               }
-              if (vl.field_n.field_q > 0) {
+              if (vl.field_n.position > 0) {
                 try {
-                  am.field_z.a(vl.field_n.field_o, (byte) 20, 0, vl.field_n.field_q);
-                  mb.field_G = vi.b(51);
+                  am.field_z.a(vl.field_n.payload, (byte) 20, 0, vl.field_n.position);
+                  SummonEvent.field_G = vi.b(51);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   dj.a((byte) -127);
                 }
-                vl.field_n.field_q = 0;
+                vl.field_n.position = 0;
               }
               return;
             }
           }
-          vl.field_n.field_q = 0;
+          vl.field_n.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -88,13 +88,13 @@ final class hb {
           if (null != am.field_z) {
             if (param1 >= 0) {
               decompiledFrameRemainder0 = (kl.field_k == ov.field_g);
-              if ((decompiledFrameRemainder0) && (0 == vl.field_n.field_q &&
-                (10000L + mb.field_G) < vi.b(-60))) {
+              if ((decompiledFrameRemainder0) && (0 == vl.field_n.position &&
+                (10000L + SummonEvent.field_G) < vi.b(-60))) {
                 vl.field_n.h(32161, param1);
               }
             } else {
-              if (0 == vl.field_n.field_q &&
-                (10000L + mb.field_G) < vi.b(-60)) {
+              if (0 == vl.field_n.position &&
+                (10000L + SummonEvent.field_G) < vi.b(-60)) {
                 vl.field_n.h(32161, param1);
               }
             }
@@ -102,21 +102,21 @@ final class hb {
               if (param0 < 8) {
                 return;
               }
-              if (vl.field_n.field_q > 0) {
+              if (vl.field_n.position > 0) {
                 try {
-                  am.field_z.a(vl.field_n.field_o, (byte) 20, 0, vl.field_n.field_q);
-                  mb.field_G = vi.b(51);
+                  am.field_z.a(vl.field_n.payload, (byte) 20, 0, vl.field_n.position);
+                  SummonEvent.field_G = vi.b(51);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   dj.a((byte) -127);
                 }
-                vl.field_n.field_q = 0;
+                vl.field_n.position = 0;
               }
               return;
             }
           }
-          vl.field_n.field_q = 0;
+          vl.field_n.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

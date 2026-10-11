@@ -71,7 +71,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             !rh.field_c) {
             ol.field_z = true;
             if (se.field_c &&
-              -ns.field_P + vi.b(62) > 1000L) {
+              -AttackEvent.field_P + vi.b(62) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
                 if (ce.field_N > var2.width) {
@@ -111,7 +111,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             !rh.field_c) {
             mn.field_s = vi.b(-46);
             nu.a(5000L, 0);
-            vh.field_s = null;
+            PacketBuffer.field_s = null;
             this.a(false, -1251);
             return;
           }
@@ -196,7 +196,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
-          var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             try {
               if (lr.field_a != null) {
@@ -219,10 +219,10 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               if (param3 != 10) {
                 return;
               }
-              vu.field_L = ag.d((byte) 10);
+              vu.field_L = CombatEvent.d((byte) 10);
               dupTemp$0 = new hd(param1, param2, param5, true);
               ft.field_m = dupTemp$0;
-              vh.field_s = dupTemp$0;
+              PacketBuffer.field_s = dupTemp$0;
               var8 = ft.field_m.a(1, 0, (Runnable) (this));
               while (true) {
                 if (var8.field_g == 0) {
@@ -310,7 +310,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             this.field_i = true;
             System.out.println("error_game_" + param0);
             try {
-              lj.a("loggedout", (byte) -121, ag.d((byte) -123));
+              lj.a("loggedout", (byte) -121, CombatEvent.d((byte) -123));
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -417,7 +417,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
           if (f.field_E >= 10) {
@@ -430,7 +430,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               if (decompiledFrameRemainder0) {
                 pr.a((byte) 111, param2);
                 if (var4 != 0) {
-                  qn.b();
+                  SoftwareRaster.b();
                   sc.a(240, 320, -121);
                   pt.a(0, 12, param2, 0);
                   var3_int = 0;
@@ -438,11 +438,11 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                     ol.field_z = false;
                     var3_int = 1;
                   }
-                  tl.a(-5790, st.field_F, pj.g(-15862), var3_int != 0, dd.a(false));
+                  tl.a(-5790, TurnEffectEvent.field_F, TrinketUseEvent.g(-15862), var3_int != 0, dd.a(false));
                 }
               }
             } else {
-              qn.b();
+              SoftwareRaster.b();
               sc.a(240, 320, -121);
               pt.a(0, 12, param2, 0);
               if (var4 != 0) {
@@ -451,7 +451,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                   ol.field_z = false;
                   var3_int = 1;
                 }
-                tl.a(-5790, st.field_F, pj.g(-15862), var3_int != 0, dd.a(false));
+                tl.a(-5790, TurnEffectEvent.field_F, TrinketUseEvent.g(-15862), var3_int != 0, dd.a(false));
               }
             }
           } else {
@@ -460,7 +460,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               ol.field_z = false;
               var3_int = 1;
             }
-            tl.a(-5790, st.field_F, pj.g(-15862), var3_int != 0, dd.a(false));
+            tl.a(-5790, TurnEffectEvent.field_F, TrinketUseEvent.g(-15862), var3_int != 0, dd.a(false));
           }
           if (param0) {
             field_m = (String) null;
@@ -508,7 +508,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           Throwable var3_ref_Throwable = null;
           String var4 = null;
           int var5 = 0;
-          var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             try {
               boolean decompiledFrameRemainder3 = true;
@@ -630,7 +630,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                   do {
                     if (!(kb.field_A > var3)) {
                       this.c(-11);
-                      ne.a(ft.field_m, si.field_b, true);
+                      MapTile.a(ft.field_m, si.field_b, true);
                       break;
                     }
                     this.b(17684);
@@ -803,7 +803,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               cs.field_bb == null) {
               var6 = g.field_f.getInsets();
               si.field_b.setLocation(sp.field_b + var6.left, mh.field_c + var6.top);
-              if (ArmiesOfGielinor.field_M) {
+              if (ArmiesOfGielinor.obfuscationControl) {
                 si.field_b.setLocation(sp.field_b, mh.field_c);
               }
             } else {
@@ -830,7 +830,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         java.awt.Insets var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (si.field_b != null) {
             si.field_b.removeFocusListener((java.awt.event.FocusListener) (this));
@@ -887,7 +887,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           wj.field_l = true;
           ol.field_z = true;
           tq.field_a = false;
-          ns.field_P = vi.b(param0 + 7);
+          AttackEvent.field_P = vi.b(param0 + 7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

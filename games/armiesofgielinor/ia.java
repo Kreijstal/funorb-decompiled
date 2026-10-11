@@ -8,19 +8,19 @@ final class ia {
     private tu field_a;
     private int field_c;
     private String field_d;
-    private wk[] field_f;
+    private RgbSprite[] field_f;
     static int field_g;
     private int field_j;
     private int field_e;
 
     final void a(int param0) {
-        qn.f(this.field_e, this.field_i, this.field_j, this.field_c, 7829367);
+        SoftwareRaster.f(this.field_e, this.field_i, this.field_j, this.field_c, 7829367);
         i.a(this.field_f, this.field_c, this.field_e, (byte) -47, this.field_i, this.field_j);
         if (param0 >= 24) {
           this.b(-11727);
           return;
         }
-        this.field_f = (wk[]) null;
+        this.field_f = (RgbSprite[]) null;
         this.b(-11727);
     }
 
@@ -53,7 +53,7 @@ final class ia {
         StringBuilder var8 = null;
         int var9 = 0;
         int var10 = 0;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = param0.length();
           var5 = param3.length();
@@ -224,7 +224,7 @@ final class ia {
         this.field_c = var6Lifetime1 + (var5Lifetime1 + var7Lifetime1);
     }
 
-    ia(wk[] param0, tu param1, int[] param2, String param3, int param4, int param5) {
+    ia(RgbSprite[] param0, tu param1, int[] param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

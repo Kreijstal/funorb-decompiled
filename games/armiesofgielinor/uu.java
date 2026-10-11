@@ -51,7 +51,7 @@ final class uu {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        at var17 = null;
+        NodeDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         of var18_ref = null;
@@ -68,7 +68,7 @@ final class uu {
         int var13_intLifetime1;
         int var18_intLifetime1;
         var18 = null;
-        var19 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param3 != 0) {
             uu.a((byte) -86);
@@ -103,11 +103,11 @@ final class uu {
                 lm.field_b.field_X = em.field_d.toUpperCase();
                 lm.field_b.field_xb = true;
                 if (var19 != 0) {
-                  lm.field_b.field_X = kn.field_y.toUpperCase();
+                  lm.field_b.field_X = TelefragEvent.field_y.toUpperCase();
                   lm.field_b.field_xb = false;
                 }
               } else {
-                lm.field_b.field_X = kn.field_y.toUpperCase();
+                lm.field_b.field_X = TelefragEvent.field_y.toUpperCase();
                 lm.field_b.field_xb = false;
               }
               lm.field_b.field_G = nd.field_a.field_G;
@@ -147,12 +147,12 @@ final class uu {
                   dt.field_d[var11_int] = false;
                   var11_int++;
                 } while (var19 == 0);
-                L18: while (true) {
+                scanLoop1: while (true) {
                   if (2 > var10) {
                     var11_int = 0;
                     stackIn_73_0 = 0;
                     if (var19 != 0) {
-                      break L18;
+                      break scanLoop1;
                     }
                     var12 = stackIn_73_0;
                     while (true) {
@@ -165,7 +165,7 @@ final class uu {
                         var13 = var20;
                         stackIn_69_0 = 0;
                         var14_int = stackIn_69_0;
-                        L25: while (true) {
+                        scanLoop2: while (true) {
                           if (var25.length > var14_int) {
                             var15 = var25[var14_int];
                             var16 = var20[1 + var14_int];
@@ -180,12 +180,12 @@ final class uu {
                               var17_int = stackIn_48_0;
                               if (var17_int != var16 &&
                                 var19 == 0) {
-                                break L25;
+                                break scanLoop2;
                               }
                             } else {
                               if (var16 != (vu.field_M.field_pc[var15] & 255) &&
                                 var19 == 0) {
-                                break L25;
+                                break scanLoop2;
                               }
                             }
                             var14_int += 2;
@@ -285,15 +285,15 @@ final class uu {
                   var16 = 0;
                 }
                 var17 = bu.field_a.field_Jb.field_fb;
-                var18_ref = (of) (var17.e((byte) 110));
-                L48: while (true) {
+                var18_ref = (of) (var17.first((byte) 110));
+                scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
                   if (var18_ref != null) {
                     stackOut_113_0 = var18_ref.k(param3 ^ 0);
                     stackIn_132_0 = stackOut_113_0 ? 1 : 0;
                     stackIn_114_0 = stackOut_113_0;
                     if (var19 != 0) {
-                      break L48;
+                      break scanLoop3;
                     }
                     if (!stackIn_114_0 ||
                       var19 != 0) {
@@ -328,7 +328,7 @@ final class uu {
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      var18_ref = (of) (var17.a((byte) 123));
+                      var18_ref = (of) (var17.next((byte) 123));
                       continue;
                     }
                   }
@@ -343,7 +343,7 @@ final class uu {
                   so.field_d.field_xb = false;
                   if (so.field_d.field_jb) {
                     if (ij.field_w.field_a.field_Kb != 0) {
-                      ad.field_I = fo.a(4800, ha.field_pb, new String[]{ob.field_O});
+                      ad.field_I = fo.a(4800, Battlefield.field_pb, new String[]{ob.field_O});
                       if (var19 != 0) {
                         ad.field_I = kl.field_f;
                       }
@@ -397,7 +397,7 @@ final class uu {
                   } else {
                     var13_ref = rd.field_f;
                     if (var12 == 0) {
-                      var14 = fo.a(param3 ^ 4800, go.field_d, new String[]{(String) (var11)});
+                      var14 = fo.a(param3 ^ 4800, TeamRoster.field_d, new String[]{(String) (var11)});
                       if (var19 != 0) {
                         var14 = ol.field_x + (String) (var11);
                       }

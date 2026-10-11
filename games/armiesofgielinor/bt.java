@@ -33,26 +33,26 @@ final class bt {
     }
 
     final static void a(int param0) {
-        kr.field_E = new dm();
-        kr.field_E.i(1);
-        ft var1 = kr.field_E.b((byte) -72);
+        MoveEvent.field_E = new dm();
+        MoveEvent.field_E.i(1);
+        ft var1 = MoveEvent.field_E.b((byte) -72);
         if (var1 == null) {
           return;
         }
-        ft var2 = kr.field_E.h((byte) 94);
+        ft var2 = MoveEvent.field_E.h((byte) 94);
         if (var2 == null) {
           return;
         }
         int var3 = 9 % ((param0 + 41) / 55);
-        int var4 = kr.field_E.h(-10754);
+        int var4 = MoveEvent.field_E.h(-10754);
         if (var4 < 0) {
           return;
         }
-        if (null == kr.field_E.field_N) {
+        if (null == MoveEvent.field_E.field_N) {
           return;
         }
-        if (kr.field_E.field_N.length != 0) {
-          gb.a(var4, 5, var1.field_k, var2.field_k, var1.field_n, var2.field_n, kr.field_E.field_N, -52);
+        if (MoveEvent.field_E.field_N.length != 0) {
+          gb.a(var4, 5, var1.field_k, var2.field_k, var1.field_n, var2.field_n, MoveEvent.field_E.field_N, -52);
           return;
         }
     }

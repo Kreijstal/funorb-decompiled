@@ -19,7 +19,7 @@ final class ri {
         }
         Object var5 = var7.b(false);
         if (var5 == null) {
-          var7.d(123);
+          var7.unlink(123);
           var7.c((byte) -76);
           this.field_a = this.field_a + var7.field_z;
           return null;
@@ -30,10 +30,10 @@ final class ri {
             var7.field_q = 0L;
           } else {
             var6 = new f(var5, var7.field_z);
-            this.field_g.a(var6, false, var7.field_i);
+            this.field_g.a(var6, false, var7.key);
             this.field_e.a(-96, var6);
             ((uq) ((Object) var6)).field_q = 0L;
-            var7.d(97);
+            var7.unlink(97);
             var7.c((byte) -76);
           }
           return var5;
@@ -44,10 +44,10 @@ final class ri {
           var7.field_q = 0L;
         } else {
           var6Lifetime1 = new f(var5, var7.field_z);
-          this.field_g.a(var6Lifetime1, false, var7.field_i);
+          this.field_g.a(var6Lifetime1, false, var7.key);
           this.field_e.a(-96, var6Lifetime1);
           ((uq) ((Object) var6Lifetime1)).field_q = 0L;
-          var7.d(97);
+          var7.unlink(97);
           var7.c((byte) -76);
         }
         return var5;
@@ -61,7 +61,7 @@ final class ri {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != null) {
-            param0.d(param1 ^ -115);
+            param0.unlink(param1 ^ -115);
             param0.c((byte) -76);
             this.field_a = this.field_a + param0.field_z;
           }
@@ -87,7 +87,7 @@ final class ri {
     private final void a(Object param0, byte param1, int param2, long param3) {
         uq var9 = null;
         f var7 = null;
-        int var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_f < param2) {
             throw new IllegalStateException();

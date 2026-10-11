@@ -25,13 +25,13 @@ final class pd {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (param0 + param3 + param2 <= qn.field_g) {
+        if (param0 + param3 + param2 <= SoftwareRaster.field_g) {
           return param3 + param2;
         }
         if (param2 - param0 >= param1) {
           return -param0 + param2;
         }
-        return -param0 + qn.field_g;
+        return -param0 + SoftwareRaster.field_g;
     }
 
     final static boolean a(String param0, int param1) {
@@ -66,7 +66,7 @@ final class pd {
         }
     }
 
-    final static void a(int param0, int param1, vh param2, int param3) {
+    final static void a(int param0, int param1, PacketBuffer param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

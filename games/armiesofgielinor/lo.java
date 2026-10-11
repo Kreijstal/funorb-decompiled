@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lo extends tc {
+final class lo extends IntrusiveNode {
     private int field_t;
     private byte[] field_s;
     int field_p;
-    private ne[] field_r;
+    private MapTile[] field_r;
     int field_l;
     static me field_q;
     int field_n;
@@ -23,7 +23,7 @@ final class lo extends tc {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null == param0.field_h) {
             return;
@@ -61,14 +61,14 @@ final class lo extends tc {
         }
     }
 
-    private final void a(ne[] param0, vh param1, int param2) {
+    private final void a(MapTile[] param0, PacketBuffer param1, int param2) {
         int var6 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        jd var9 = null;
+        Unit var9 = null;
         int var10 = 0;
         int var11 = 0;
         RuntimeException stackIn_19_0 = null;
@@ -77,7 +77,7 @@ final class lo extends tc {
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 < 86) {
             return;
@@ -94,12 +94,12 @@ final class lo extends tc {
               this.field_l > var7 &&
               var8 >= 0 &&
               var8 < this.field_n) {
-              var9 = new jd(var7, var8, 0);
+              var9 = new Unit(var7, var8, 0);
               var10 = var7 + var8 * this.field_l;
               if (0 <= var10 &&
                 var10 <= param0.length) {
-                param0[var10].field_c = var9;
-                param0[var10].field_c.field_O = var5;
+                param0[var10].occupant = var9;
+                param0[var10].occupant.ownerPlayer = var5;
                 var5++;
               }
             }
@@ -129,19 +129,19 @@ final class lo extends tc {
         int var3 = 0;
         int var5 = 0;
         int[][] var2;
-        vh var3_ref_vh;
+        PacketBuffer var3_ref_vh;
         int var4;
         int var6;
         int[][] var7;
         int[][] var8;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var8 = new int[this.field_n][this.field_l];
         var7 = var8;
         var2 = var7;
         if (this.field_r != null) {
           for (var3 = 0; this.field_n > var3; var3++) {
             for (var4 = 0; var4 < this.field_l; var4++) {
-              var8[var3][var4] = this.field_r[var4 + this.field_l * var3].field_h;
+              var8[var3][var4] = this.field_r[var4 + this.field_l * var3].terrainType;
             }
           }
         } else {
@@ -158,35 +158,35 @@ final class lo extends tc {
         return (int[][]) null;
     }
 
-    private final ne[] a(int[] param0, int param1, ha param2) {
+    private final MapTile[] a(int[] param0, int param1, Battlefield param2) {
         int var7 = 0;
         int var8 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
-        ne[] var5 = null;
+        MapTile[] var5 = null;
         int var6 = 0;
         int var9 = 0;
-        ne[] stackIn_15_0 = null;
+        MapTile[] stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = this.field_n * this.field_l;
           if (param1 != 22654) {
             this.e(117);
           }
-          var5 = new ne[var4_int];
+          var5 = new MapTile[var4_int];
           var6 = 0;
           for (var7 = 0; this.field_n > var7; var7++) {
             for (var8 = 0; var8 < this.field_l; var8++) {
               if (var5.length >= var6) {
-                var5[var6] = new ne(param0[var6], param2);
-                if (var5[var6].field_h == 11) {
-                  var5[var6].field_h = 0;
+                var5[var6] = new MapTile(param0[var6], param2);
+                if (var5[var6].terrainType == 11) {
+                  var5[var6].terrainType = 0;
                 }
                 var6++;
               }
@@ -214,19 +214,19 @@ final class lo extends tc {
         }
     }
 
-    private final vh a(byte param0) {
+    private final PacketBuffer a(byte param0) {
         int var5 = 0;
         sc var3_ref_sc;
         int var3;
-        ne[] var4;
-        ne var6;
+        MapTile[] var4;
+        MapTile var6;
         int var7;
-        bv var8;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        CipherPacketBuffer var8;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_s.length < 4) {
           return null;
         }
-        var8 = new bv(this.field_s);
+        var8 = new CipherPacketBuffer(this.field_s);
         this.field_t = bs.a(var8, 3);
         if (param0 != 126) {
           this.field_l = 72;
@@ -256,11 +256,11 @@ final class lo extends tc {
           this.field_k = var8.k(0);
         } else {
           var3 = this.field_l * this.field_n;
-          var8.field_q = var8.field_q + var3;
+          var8.position = var8.position + var3;
           this.field_k = var8.k(0);
-          var8.field_q = var8.field_q - (var3 + 1);
+          var8.position = var8.position - (var3 + 1);
         }
-        return (vh) ((Object) var8);
+        return (PacketBuffer) ((Object) var8);
     }
 
     final static void a(va param0, int param1) {
@@ -336,37 +336,37 @@ final class lo extends tc {
         }
     }
 
-    final ne[] a(int param0, ha param1) {
-        vh discarded$0 = null;
+    final MapTile[] a(int param0, Battlefield param1) {
+        PacketBuffer discarded$0 = null;
         int var4_int = 0;
         int var7_int = 0;
         int var10 = 0;
-        ne[] stackIn_12_0 = null;
-        ne[] stackIn_34_0 = null;
+        MapTile[] stackIn_12_0 = null;
+        MapTile[] stackIn_34_0 = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         String stackIn_38_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
-        ne[] var3 = null;
+        MapTile[] var3 = null;
         RuntimeException var3_ref = null;
-        vh var4 = null;
+        PacketBuffer var4 = null;
         int var5 = 0;
-        ne var5_ref_ne = null;
+        MapTile var5_ref_ne = null;
         int[] var6 = null;
-        ne[] var7 = null;
+        MapTile[] var7 = null;
         int var8 = 0;
         tf var9 = null;
         int var11 = 0;
         int var12 = 0;
         int var13_int = 0;
-        ne var13 = null;
-        jd var14 = null;
+        MapTile var13 = null;
+        Unit var14 = null;
         int var15 = 0;
-        ne[] var16 = null;
+        MapTile[] var16 = null;
         int[] var17 = null;
         int[] var18 = null;
-        var15 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null != this.field_r) {
             discarded$0 = this.a((byte) 126);
@@ -375,9 +375,9 @@ final class lo extends tc {
             for (var4_int = 0; var4_int < var16.length; var4_int++) {
               var5_ref_ne = var16[var4_int];
               var5_ref_ne.a((byte) -68, param1);
-              if (var5_ref_ne.e((byte) -122) &&
-                var5_ref_ne.a((byte) -107) == 0) {
-                var5_ref_ne.a(true, 1);
+              if (var5_ref_ne.hasModifierFlag4((byte) -122) &&
+                var5_ref_ne.getTag((byte) -107) == 0) {
+                var5_ref_ne.setTag(true, 1);
               }
             }
             stackIn_12_0 = this.field_r;
@@ -407,9 +407,9 @@ final class lo extends tc {
                 var9.field_o = var4.k(0);
                 var12 = var4.k(0);
                 var13_int = var4.k(0);
-                var14 = new jd(var9.field_n, var9.field_o, var12);
-                var14.field_O = var13_int;
-                var7[var9.field_o * this.field_l + var9.field_n].field_c = var14;
+                var14 = new Unit(var9.field_n, var9.field_o, var12);
+                var14.ownerPlayer = var13_int;
+                var7[var9.field_o * this.field_l + var9.field_n].occupant = var14;
               } else {
                 if (1 != var12) {
                   throw new RuntimeException("Illegal saved item type: " + var11);
@@ -419,8 +419,8 @@ final class lo extends tc {
                 var12 = var4.k(0);
                 var13 = var7[var9.field_n + var9.field_o * this.field_l];
                 if (var13.a(false) ||
-                  var13.e((byte) -125)) {
-                  var13.field_a = var12;
+                  var13.hasModifierFlag4((byte) -125)) {
+                  var13.ownerPlayer = var12;
                 }
               }
             }
@@ -444,7 +444,7 @@ final class lo extends tc {
     }
 
     lo(int param0, byte[] param1) {
-        vh discarded$0 = null;
+        PacketBuffer discarded$0 = null;
         try {
           this.field_s = param1;
           this.field_r = null;

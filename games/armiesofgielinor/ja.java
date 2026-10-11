@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja extends tc {
+final class ja extends IntrusiveNode {
     private int field_p;
     private boolean field_k;
     private int field_m;
@@ -30,8 +30,8 @@ final class ja extends tc {
           this.field_n = this.field_n + 1;
           return 40 > fieldTemp$0 ? true : false;
         }
-        jd var3 = (jd) null;
-        this.a((jd) null, 101);
+        Unit var3 = (Unit) null;
+        this.a((Unit) null, 101);
         int fieldTemp$1 = this.field_n;
         this.field_n = this.field_n + 1;
         return 40 > fieldTemp$1 ? true : false;
@@ -41,7 +41,7 @@ final class ja extends tc {
         if (param0 != -66) {
           return false;
         }
-        return ej.b(param3, param2, param0 ^ 76, param1);
+        return AiPlanner.b(param3, param2, param0 ^ 76, param1);
     }
 
     final boolean a(byte param0) {
@@ -96,7 +96,7 @@ final class ja extends tc {
         }
     }
 
-    final boolean a(jd param0, int param1) {
+    final boolean a(Unit param0, int param1) {
         RuntimeException var3 = null;
         ja var4 = null;
         boolean stackIn_3_0 = false;
@@ -109,7 +109,7 @@ final class ja extends tc {
             var4 = (ja) null;
             this.a(114, (ja) null);
           }
-          stackIn_3_0 = this.a(param0.field_J, param0.field_w, (byte) -95);
+          stackIn_3_0 = this.a(param0.tileX, param0.tileY, (byte) -95);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -125,12 +125,12 @@ final class ja extends tc {
         }
     }
 
-    final void a(byte param0, jd param1) {
+    final void a(byte param0, Unit param1) {
         if (param0 > -59) {
           return;
         }
         try {
-          this.b(param1.field_J, param1.field_w, (byte) 108);
+          this.b(param1.tileX, param1.tileY, (byte) 108);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "ja.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -228,11 +228,11 @@ final class ja extends tc {
         int var1 = 107 % ((param0 + 36) / 54);
     }
 
-    ja(jd param0) {
+    ja(Unit param0) {
         try {
           this.field_l = 1;
-          this.field_p = param0.field_w;
-          this.field_m = param0.field_J;
+          this.field_p = param0.tileY;
+          this.field_m = param0.tileX;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "ja.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -253,6 +253,6 @@ final class ja extends tc {
         if (param0 != -66) {
           return false;
         }
-        return ej.b(param3, param2, param0 ^ 76, param1);
+        return AiPlanner.b(param3, param2, param0 ^ 76, param1);
     }
 }

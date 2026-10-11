@@ -9,7 +9,7 @@ final class pp extends kq {
     static int[] field_R;
     int field_Z;
     private gh field_V;
-    private ka field_U;
+    private BitmapFont field_U;
     int field_T;
     static String field_S;
 
@@ -30,7 +30,7 @@ final class pp extends kq {
         }
     }
 
-    pp(gh param0, ka param1, Object[] param2, int param3) {
+    pp(gh param0, BitmapFont param1, Object[] param2, int param3) {
         super(param0);
         try {
           this.field_U = param1;
@@ -86,14 +86,14 @@ final class pp extends kq {
         int var6Lifetime1;
         int var7Lifetime1;
         int var8Lifetime1;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param3 != 0) {
           return;
         }
         var5 = param0 + this.field_B;
         if (param2 <= -82) {
           var6 = this.field_p + param1;
-          qn.f(var5, var6, this.field_l, this.field_w, 0);
+          SoftwareRaster.f(var5, var6, this.field_l, this.field_w, 0);
           var7 = this.field_T;
           if (-1 != this.field_O) {
             var7 = this.field_O;
@@ -105,7 +105,7 @@ final class pp extends kq {
             var16 = this.field_W[var8];
             var17 = var16.toString();
             if (var7 == var8) {
-              qn.b(var5 + 2, 4 + var6, this.field_l - 4, this.field_Z, 2188450, 128);
+              SoftwareRaster.b(var5 + 2, 4 + var6, this.field_l - 4, this.field_Z, 2188450, 128);
             }
             var6 = var6 + this.field_Z;
             this.field_U.b(var17, var5 + 2, var6, 10000536, -1);
@@ -114,7 +114,7 @@ final class pp extends kq {
         }
         this.b(((int[]) (this.field_W[13]))[3], -51, -121, ((int[]) (this.field_W[9]))[0], -117);
         var6Lifetime1 = this.field_p + param1;
-        qn.f(var5, var6Lifetime1, this.field_l, this.field_w, 0);
+        SoftwareRaster.f(var5, var6Lifetime1, this.field_l, this.field_w, 0);
         var7Lifetime1 = this.field_T;
         if (-1 != this.field_O) {
           var7Lifetime1 = this.field_O;
@@ -126,7 +126,7 @@ final class pp extends kq {
           var14 = this.field_W[var8Lifetime1];
           var15 = var14.toString();
           if (var7Lifetime1 == var8Lifetime1) {
-            qn.b(var5 + 2, 4 + var6Lifetime1, this.field_l - 4, this.field_Z, 2188450, 128);
+            SoftwareRaster.b(var5 + 2, 4 + var6Lifetime1, this.field_l - 4, this.field_Z, 2188450, 128);
           }
           var6Lifetime1 = var6Lifetime1 + this.field_Z;
           this.field_U.b(var15, var5 + 2, var6Lifetime1, 10000536, -1);

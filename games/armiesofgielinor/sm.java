@@ -6,9 +6,9 @@ abstract class sm {
     static int field_c;
     static String field_g;
     static String field_e;
-    at field_a;
+    NodeDeque field_a;
     static int field_d;
-    private at field_f;
+    private NodeDeque field_f;
 
     final static hl a(int param0, int param1, boolean param2) {
         dn stackIn_4_0;
@@ -25,7 +25,7 @@ abstract class sm {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        at var4 = null;
+        NodeDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
         hl var7 = null;
@@ -43,7 +43,7 @@ abstract class sm {
         int var19 = 0;
         tg var17Lifetime1;
         String var18Lifetime1;
-        var19 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           stackIn_4_0 = mw.field_E.field_Kb;
           stackIn_4_1 = param2;
@@ -76,7 +76,7 @@ abstract class sm {
             bn.field_c.field_X = fo.a(4800, ps.field_A, new String[]{vl.field_p});
             mw.field_E.field_Kb.field_Nb.field_X = null;
             var6 = null;
-            var7 = (hl) (var4.e((byte) 109));
+            var7 = (hl) (var4.first((byte) 109));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (var7 != null) {
@@ -133,7 +133,7 @@ abstract class sm {
                   if (var14 <= 0) {
                     stackIn_45_1 = var7.field_Mb;
                   } else {
-                    stackIn_45_1 = ka.a(var7.field_Qb.field_Z, var7.field_Mb, var14);
+                    stackIn_45_1 = BitmapFont.a(var7.field_Qb.field_Z, var7.field_Mb, var14);
                   }
                   stackIn_44_0.field_X = stackIn_45_1;
                   var7.field_Qb.a(jn.field_d, -20500, var14, var9, var13);
@@ -180,7 +180,7 @@ abstract class sm {
                     }
                     var5 = var7;
                   }
-                  var7 = (hl) (var4.a((byte) 123));
+                  var7 = (hl) (var4.next((byte) 123));
                   continue;
                 }
               } else {
@@ -317,7 +317,7 @@ abstract class sm {
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           mh.field_b = lm.field_d;
           if (param3 != 255) {
@@ -406,7 +406,7 @@ abstract class sm {
           if (param0 != 16777062) {
             return;
           }
-          this.field_a.a((byte) -119, (tc) (param1));
+          this.field_a.a((byte) -119, (IntrusiveNode) (param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -435,7 +435,7 @@ abstract class sm {
           var7.field_o = param5;
           this.a(16777062, var7);
           if (param3 > -114) {
-            this.field_f = (at) null;
+            this.field_f = (NodeDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -450,11 +450,11 @@ abstract class sm {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
           if (0 >= df.field_M) {
-            if (nw.g(80)) {
+            if (DamageEvent.g(80)) {
               var2_int = 0;
               decompiledFrameRemainder0 = (var3 != 0);
             }
@@ -499,15 +499,15 @@ abstract class sm {
         }
     }
 
-    sm(ej param0) {
+    sm(AiPlanner param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_a = new at();
-          this.field_f = new at();
+          this.field_a = new NodeDeque();
+          this.field_f = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

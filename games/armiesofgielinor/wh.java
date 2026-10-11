@@ -9,7 +9,7 @@ final class wh {
     static je field_g;
     static boolean field_f;
     static String field_d;
-    static at field_c;
+    static NodeDeque field_c;
 
     final static boolean a(kl param0, byte param1, kl param2, kl param3) {
         RuntimeException var4 = null;
@@ -124,7 +124,7 @@ final class wh {
         String var10;
         String var11;
         int var6Lifetime1;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = 77 / ((param0 + 24) / 63);
         var1 = fd.field_n.length;
         var3 = fd.field_n[0].length;

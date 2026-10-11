@@ -55,7 +55,7 @@ abstract class dr extends ms {
         RuntimeException var4 = null;
         Class var6 = null;
         int var7 = 0;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (!this.field_B.equals(param0)) {
             return false;
@@ -75,8 +75,8 @@ abstract class dr extends ms {
                 this.field_u[var5] != Character.TYPE) {
                 return false;
               }
-              if (rt.a(false, var6) &&
-                !rt.a(false, this.field_u[var5])) {
+              if (RevivalEvent.a(false, var6) &&
+                !RevivalEvent.a(false, this.field_u[var5])) {
                 return false;
               }
             } else {

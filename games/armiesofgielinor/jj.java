@@ -77,7 +77,7 @@ final class jj {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4 = param2[param3][param1];
           var6 = -73 / ((12 - param0) / 61);
@@ -110,7 +110,7 @@ final class jj {
         }
     }
 
-    final static void a(byte param0, int param1, vh param2, int[] param3) {
+    final static void a(byte param0, int param1, PacketBuffer param2, int[] param3) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -121,7 +121,7 @@ final class jj {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param3 != null &&
             param1 != 0) {
@@ -174,18 +174,18 @@ final class jj {
         pu var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        bv var8 = null;
+        CipherPacketBuffer var8 = null;
         int var9 = 0;
-        bv var10 = null;
+        CipherPacketBuffer var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var4Lifetime1;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var8 = new bv(param1.a("", 97, "logo.fo3d"));
+          var8 = new CipherPacketBuffer(param1.a("", 97, "logo.fo3d"));
           var10 = var8;
           var3 = var10.k(0);
           var10.o(90);
@@ -196,7 +196,7 @@ final class jj {
           iq.field_a = new pu[var3];
           sd.field_s = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
-            iq.field_a[var4] = oj.a(-86, var8);
+            iq.field_a[var4] = GameEvent.a(-86, var8);
           }
           var10.n(-2);
           var9 = 0;

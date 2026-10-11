@@ -78,7 +78,7 @@ final class oi implements kh {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        wk var8 = null;
+        RgbSprite var8 = null;
         kb var9 = null;
         try {
           var6_int = param1 + param0.field_B;
@@ -87,7 +87,7 @@ final class oi implements kh {
             this.a((kb) null, 118, -124, false, 7);
           }
           var7 = param0.field_p + param4;
-          qq.a(param0.field_l, var6_int, param0.field_w, -52, var7);
+          StateChangeEvent.a(param0.field_l, var6_int, param0.field_w, -52, var7);
           var8 = db.field_a[1];
           if (param0 instanceof fw &&
             ((fw) (param0)).field_K) {

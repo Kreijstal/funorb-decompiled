@@ -6,7 +6,7 @@ final class kt extends mk {
     private String field_k;
     static String field_m;
     static boolean field_l;
-    static wk[] field_o;
+    static RgbSprite[] field_o;
     private di field_q;
     static int field_p;
     private boolean field_j;

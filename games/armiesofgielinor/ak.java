@@ -3,7 +3,7 @@
  */
 final class ak extends ju {
     static String field_e;
-    private ka field_m;
+    private BitmapFont field_m;
     private int field_k;
     private int field_d;
     private int field_i;
@@ -13,7 +13,7 @@ final class ak extends ju {
     private String field_h;
     private int field_f;
 
-    final void a(String param0, byte param1, int param2, int param3, int param4, int param5, int param6, ka param7) {
+    final void a(String param0, byte param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7) {
         ts stackIn_36_0;
         ts stackIn_36_1;
         int stackIn_36_2;
@@ -38,7 +38,7 @@ final class ak extends ju {
         String[] var16 = null;
         String[] var17 = null;
         int var12Lifetime1;
-        var15 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param4 == 0) {
             param4 = param7.field_v;
@@ -145,7 +145,7 @@ final class ak extends ju {
         }
     }
 
-    final void a(int param0, String param1, ka param2, int param3, int param4) {
+    final void a(int param0, String param1, BitmapFont param2, int param3, int param4) {
         ts var9 = null;
         ts var10 = null;
         if (param3 != -31932) {
@@ -221,7 +221,7 @@ final class ak extends ju {
         }
     }
 
-    final void a(int param0, byte param1, ka param2, String param3, int param4) {
+    final void a(int param0, byte param1, BitmapFont param2, String param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         ts var8 = null;
@@ -284,7 +284,7 @@ final class ak extends ju {
         field_e = null;
     }
 
-    private final ts a(ka param0, String param1, byte param2, int param3) {
+    private final ts a(BitmapFont param0, String param1, byte param2, int param3) {
         ts var5 = null;
         RuntimeException var5_ref = null;
         ts var6 = null;
@@ -324,7 +324,7 @@ final class ak extends ju {
         }
     }
 
-    final void a(String param0, int param1, ka param2, int param3, int param4) {
+    final void a(String param0, int param1, BitmapFont param2, int param3, int param4) {
         ts var7 = null;
         ts var8 = null;
         if (param0 == null) {
@@ -351,10 +351,10 @@ final class ak extends ju {
     }
 
     final static void b(boolean param0) {
-        tq.field_c = qn.field_l;
-        bm.field_p = qn.field_g;
+        tq.field_c = SoftwareRaster.field_l;
+        bm.field_p = SoftwareRaster.field_g;
         bh.d(false);
-        pj.field_E.a(-2 + no.field_T.field_ob - 40, (byte) -124, 0, no.field_T.field_gb, 0);
+        TrinketUseEvent.field_E.a(-2 + no.field_T.field_ob - 40, (byte) -124, 0, no.field_T.field_gb, 0);
         t.field_g.a(jn.field_d, -20500, al.field_f.field_gb, 0, 0);
         int var1 = 2 + jn.field_d;
         nf.field_Kb.a(al.field_f.field_ob - (!fh.field_c ? 0 : var1), -20500, al.field_f.field_gb, !fh.field_c ? 0 : var1, 0);
@@ -369,7 +369,7 @@ final class ak extends ju {
         int var2 = !fh.field_c ? 200 : 250;
         ee.field_A.a(30, -20500, -var2 + 363, 5, var2 + 5);
         wl.field_K.a(30, -20500, -370 + (-5 + ov.field_i.field_gb), 5, 370);
-        bv.field_x.a(5, param0, of.field_Lb.field_gb - 5 - 5, 2, jn.field_c, 37, -32 + (of.field_Lb.field_ob - 5 - 5));
+        CipherPacketBuffer.field_x.a(5, param0, of.field_Lb.field_gb - 5 - 5, 2, jn.field_c, 37, -32 + (of.field_Lb.field_ob - 5 - 5));
         int var3 = (ov.field_i.field_gb + 2) / 2;
         fj.field_d.a(40, -20500, var3 - 2, ov.field_i.field_ob - 40, 0);
         if (!fh.field_c) {
@@ -382,7 +382,7 @@ final class ak extends ju {
         int fieldTemp$0 = 0;
         int var4 = 0;
         int var4Lifetime1;
-        vd.field_b.field_q = 0;
+        vd.field_b.position = 0;
         vd.field_b.b(1, 12);
         vd.field_b.a((byte) -128, iq.field_e.nextInt());
         vd.field_b.a((byte) -75, iq.field_e.nextInt());
@@ -392,11 +392,11 @@ final class ak extends ju {
           vd.field_b.b(true, param2);
           vd.field_b.a(-5247, cs.field_cb, mu.field_c);
           vl.field_n.h(32161, 18);
-          fieldTemp$0 = vl.field_n.field_q + 1;
-          vl.field_n.field_q = vl.field_n.field_q + 1;
+          fieldTemp$0 = vl.field_n.position + 1;
+          vl.field_n.position = vl.field_n.position + 1;
           var4 = fieldTemp$0;
-          vl.field_n.a(vd.field_b.field_o, 0, vd.field_b.field_q, param3 + 69);
-          vl.field_n.e(-var4 + vl.field_n.field_q, param3 + 5900);
+          vl.field_n.a(vd.field_b.payload, 0, vd.field_b.position, param3 + 69);
+          vl.field_n.e(-var4 + vl.field_n.position, param3 + 5900);
           return;
         }
         kl var5 = (kl) null;
@@ -406,23 +406,23 @@ final class ak extends ju {
         vd.field_b.b(true, param2);
         vd.field_b.a(-5247, cs.field_cb, mu.field_c);
         vl.field_n.h(32161, 18);
-        int fieldTemp$1 = vl.field_n.field_q + 1;
-        vl.field_n.field_q = vl.field_n.field_q + 1;
+        int fieldTemp$1 = vl.field_n.position + 1;
+        vl.field_n.position = vl.field_n.position + 1;
         var4Lifetime1 = fieldTemp$1;
-        vl.field_n.a(vd.field_b.field_o, 0, vd.field_b.field_q, param3 + 69);
-        vl.field_n.e(-var4Lifetime1 + vl.field_n.field_q, param3 + 5900);
+        vl.field_n.a(vd.field_b.payload, 0, vd.field_b.position, param3 + 69);
+        vl.field_n.e(-var4Lifetime1 + vl.field_n.position, param3 + 5900);
     }
 
-    final static wk[] b(int param0, int param1) {
-        wk[] var3 = null;
-        wk[] var2 = null;
+    final static RgbSprite[] b(int param0, int param1) {
+        RgbSprite[] var3 = null;
+        RgbSprite[] var2 = null;
         if (param1 == 5) {
-          var3 = new wk[9];
+          var3 = new RgbSprite[9];
           var2 = var3;
           var3[4] = hl.a(false, param0, 64);
           return var2;
         }
-        return (wk[]) null;
+        return (RgbSprite[]) null;
     }
 
     public ak() {

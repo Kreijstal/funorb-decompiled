@@ -180,7 +180,7 @@ final class p {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.d(param0 + 648691815);
+          var9.unlink(param0 + 648691815);
           if (param0 != -648691772) {
             stackIn_17_0 = (sn) null;
             return stackIn_17_0;

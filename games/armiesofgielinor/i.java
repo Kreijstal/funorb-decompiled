@@ -17,7 +17,7 @@ final class i extends je {
     private je field_Rb;
     private je field_Pb;
 
-    final static void a(wk[] param0, int param1, int param2, byte param3, int param4, int param5) {
+    final static void a(RgbSprite[] param0, int param1, int param2, byte param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
@@ -48,7 +48,7 @@ final class i extends je {
         int var20Lifetime2;
         int var20Lifetime3;
         int var20Lifetime4;
-        var22 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var22 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 == null) {
             return;
@@ -100,71 +100,71 @@ final class i extends je {
               var19 = param4 + var8 * param1 / (var9 + var8);
               var18 = param4 + var8 * param1 / (var9 + var8);
             }
-            qn.b(pd.field_g);
+            SoftwareRaster.b(pd.field_g);
             if (null != param0[0]) {
-              qn.b(param2, param4, var16, var18);
+              SoftwareRaster.b(param2, param4, var16, var18);
               param0[0].g(param2, param4);
-              qn.a(pd.field_g);
+              SoftwareRaster.a(pd.field_g);
             }
             if (param0[2] != null) {
-              qn.b(var17, param4, var10, var18);
+              SoftwareRaster.b(var17, param4, var10, var18);
               param0[2].g(var13, param4);
-              qn.a(pd.field_g);
+              SoftwareRaster.a(pd.field_g);
             }
             if (param0[6] != null) {
-              qn.b(param2, var19, var16, var11);
+              SoftwareRaster.b(param2, var19, var16, var11);
               param0[6].g(param2, var15);
-              qn.a(pd.field_g);
+              SoftwareRaster.a(pd.field_g);
             }
             if (null != param0[8]) {
-              qn.b(var17, var19, var10, var11);
+              SoftwareRaster.b(var17, var19, var10, var11);
               param0[8].g(var13, var15);
-              qn.a(pd.field_g);
+              SoftwareRaster.a(pd.field_g);
             }
             if (param0[1] != null &&
               param0[1].field_A != 0) {
-              qn.b(var16, param4, var17, var18);
+              SoftwareRaster.b(var16, param4, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param0[1].field_A) {
                 param0[1].g(var20, param4);
               }
-              qn.a(pd.field_g);
+              SoftwareRaster.a(pd.field_g);
             }
             if (null != param0[7] &&
               0 != param0[7].field_A) {
-              qn.b(var16, var19, var17, var11);
+              SoftwareRaster.b(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param0[7].field_A) {
                 param0[7].g(var20Lifetime1, var15);
               }
-              qn.a(pd.field_g);
+              SoftwareRaster.a(pd.field_g);
             }
             if (null != param0[3] &&
               0 != param0[3].field_x) {
-              qn.b(param2, var18, var16, var19);
+              SoftwareRaster.b(param2, var18, var16, var19);
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param0[3].field_x) {
                 param0[3].g(param2, var20Lifetime2);
               }
-              qn.a(pd.field_g);
+              SoftwareRaster.a(pd.field_g);
             }
             if (null != param0[5] &&
               param0[5].field_x != 0) {
-              qn.b(var17, var18, var10, var19);
+              SoftwareRaster.b(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param0[5].field_x) {
                 param0[5].g(var13, var20Lifetime3);
               }
-              qn.a(pd.field_g);
+              SoftwareRaster.a(pd.field_g);
             }
             if (null != param0[4] &&
               param0[4].field_A != 0) {
               if (param0[4].field_x == 0) {
                 return;
               }
-              qn.b(var16, var18, var17, var19);
+              SoftwareRaster.b(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param0[4].field_x) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param0[4].field_A) {
                   param0[4].g(var21, var20Lifetime4);
                 }
               }
-              qn.a(pd.field_g);
+              SoftwareRaster.a(pd.field_g);
             }
             return;
           }
@@ -260,7 +260,7 @@ final class i extends je {
         boolean stackIn_16_1 = false;
         int var3;
         int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.a(true, param0);
         var3 = 80 / ((param1 + 36) / 58);
         if (this.field_Rb != null) {
@@ -289,7 +289,7 @@ final class i extends je {
           return -1;
         }
         if (param0 &&
-          0 != tr.field_A &&
+          0 != DeployEvent.field_A &&
           this.field_yb == 0) {
           return -1;
         }
@@ -340,7 +340,7 @@ final class i extends je {
         var2[2] = 16777215;
         var2[0] = 1;
         var2[1] = param0;
-        st.field_z = new hc(oh.field_J, ga.field_k, rs.field_n, var2, 0, 0);
+        TurnEffectEvent.field_z = new hc(oh.field_J, ga.field_k, rs.field_n, var2, 0, 0);
     }
 
     final boolean o(int param0) {
@@ -451,7 +451,7 @@ final class i extends je {
             this.field_Rb.field_I = "|";
             if (!(tf.field_l < 5) ||
               !(hi.field_j < 2)) {
-              L3: {
+              regionExit1: {
                 stackIn_6_0 = this;
                 stackIn_6_1 = null;
                 stackIn_6_2 = null;
@@ -465,7 +465,7 @@ final class i extends je {
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
                     stackIn_8_5 = jq.field_E;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_8_0Lifetime1 = this;
@@ -662,8 +662,8 @@ final class i extends je {
     final static void a(boolean param0, int param1, int param2) {
         cd.a(108, param2, param1, 2);
         if (param0) {
-          wk[] var4 = (wk[]) null;
-          i.a((wk[]) null, -22, 63, (byte) 45, 53, 9);
+          RgbSprite[] var4 = (RgbSprite[]) null;
+          i.a((RgbSprite[]) null, -22, 63, (byte) 45, 53, 9);
         }
     }
 

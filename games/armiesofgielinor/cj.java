@@ -57,7 +57,7 @@ final class cj extends mg {
     final static int[] a(int param0, int param1, int param2) {
         int var11 = 0;
         int var12 = 0;
-        int var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int[] var14 = new int[256];
         int[] var3 = var14;
         int var5 = 34 % ((76 - param2) / 50);

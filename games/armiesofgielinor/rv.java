@@ -33,7 +33,7 @@ final class rv {
           StringBuilder var7 = null;
           Exception var8 = null;
           int var9 = 0;
-          var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             var5 = param4.getFile();
             var6 = param2;
@@ -154,7 +154,7 @@ final class rv {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0) {
             field_a = (String) null;
@@ -168,12 +168,12 @@ final class rv {
               }
             }
             vv.a(param2, -96, false, param3, us.a(param3, (byte) 87), param1);
-            var4 = (vb) (jf.field_C.field_pc.e((byte) 125));
+            var4 = (vb) (jf.field_C.field_pc.first((byte) 125));
             while (var4 != null) {
               if (param3 == var4.field_x) {
                 var4.a(ug.field_b, 31785, true);
               }
-              var4 = (vb) (jf.field_C.field_pc.a((byte) 123));
+              var4 = (vb) (jf.field_C.field_pc.next((byte) 123));
             }
             return;
           }

@@ -5,14 +5,14 @@ final class pv {
     static int field_b;
     static String field_d;
     static boolean field_c;
-    static wk field_e;
+    static RgbSprite field_e;
     static qb[][] field_a;
 
     final static char a(int param0, char param1) {
         int var2;
         int var3;
         int var2Lifetime1;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 > 114) {
           var2 = param1;
           if (var2 != 32) {
@@ -311,7 +311,7 @@ final class pv {
 
     static {
         field_d = "Back to Map";
-        field_e = new wk(64, 64);
+        field_e = new RgbSprite(64, 64);
         field_a = new qb[6][];
     }
 }

@@ -8,33 +8,33 @@ final class gq {
         int var10Lifetime2;
         param1 = param1 + param0.field_i;
         param2 = param2 + param0.field_d;
-        int var4 = param1 + param2 * qn.field_l;
+        int var4 = param1 + param2 * SoftwareRaster.field_l;
         int var5 = 0;
         int var6 = param0.field_h;
         int var7 = param0.field_e;
-        int var8 = qn.field_l - var7;
+        int var8 = SoftwareRaster.field_l - var7;
         int var9 = 0;
-        if (param2 < qn.field_a) {
-          var10 = qn.field_a - param2;
+        if (param2 < SoftwareRaster.field_a) {
+          var10 = SoftwareRaster.field_a - param2;
           var6 = var6 - var10;
-          param2 = qn.field_a;
+          param2 = SoftwareRaster.field_a;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * qn.field_l;
+          var4 = var4 + var10 * SoftwareRaster.field_l;
         }
-        if (param2 + var6 > qn.field_f) {
-          var6 = var6 - (param2 + var6 - qn.field_f);
+        if (param2 + var6 > SoftwareRaster.field_f) {
+          var6 = var6 - (param2 + var6 - SoftwareRaster.field_f);
         }
-        if (param1 < qn.field_j) {
-          var10Lifetime1 = qn.field_j - param1;
+        if (param1 < SoftwareRaster.field_j) {
+          var10Lifetime1 = SoftwareRaster.field_j - param1;
           var7 = var7 - var10Lifetime1;
-          param1 = qn.field_j;
+          param1 = SoftwareRaster.field_j;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param1 + var7 > qn.field_e) {
-          var10Lifetime2 = param1 + var7 - qn.field_e;
+        if (param1 + var7 > SoftwareRaster.field_e) {
+          var10Lifetime2 = param1 + var7 - SoftwareRaster.field_e;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -43,7 +43,7 @@ final class gq {
           var6 <= 0) {
           return;
         }
-        gq.b(qn.field_d, param0.field_k, param0.field_j, param3, var5, var4, var7, var6, var8, var9);
+        gq.b(SoftwareRaster.field_d, param0.field_k, param0.field_j, param3, var5, var4, var7, var6, var8, var9);
     }
 
     final static int b(int param0) {
@@ -90,33 +90,33 @@ final class gq {
         int var10Lifetime2;
         param1 = param1 + param0.field_i;
         param2 = param2 + param0.field_d;
-        int var4 = param1 + param2 * qn.field_l;
+        int var4 = param1 + param2 * SoftwareRaster.field_l;
         int var5 = 0;
         int var6 = param0.field_h;
         int var7 = param0.field_e;
-        int var8 = qn.field_l - var7;
+        int var8 = SoftwareRaster.field_l - var7;
         int var9 = 0;
-        if (param2 < qn.field_a) {
-          var10 = qn.field_a - param2;
+        if (param2 < SoftwareRaster.field_a) {
+          var10 = SoftwareRaster.field_a - param2;
           var6 = var6 - var10;
-          param2 = qn.field_a;
+          param2 = SoftwareRaster.field_a;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * qn.field_l;
+          var4 = var4 + var10 * SoftwareRaster.field_l;
         }
-        if (param2 + var6 > qn.field_f) {
-          var6 = var6 - (param2 + var6 - qn.field_f);
+        if (param2 + var6 > SoftwareRaster.field_f) {
+          var6 = var6 - (param2 + var6 - SoftwareRaster.field_f);
         }
-        if (param1 < qn.field_j) {
-          var10Lifetime1 = qn.field_j - param1;
+        if (param1 < SoftwareRaster.field_j) {
+          var10Lifetime1 = SoftwareRaster.field_j - param1;
           var7 = var7 - var10Lifetime1;
-          param1 = qn.field_j;
+          param1 = SoftwareRaster.field_j;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param1 + var7 > qn.field_e) {
-          var10Lifetime2 = param1 + var7 - qn.field_e;
+        if (param1 + var7 > SoftwareRaster.field_e) {
+          var10Lifetime2 = param1 + var7 - SoftwareRaster.field_e;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -125,7 +125,7 @@ final class gq {
           var6 <= 0) {
           return;
         }
-        gq.a(qn.field_d, param0.field_k, param0.field_j, var5, var4, var7, var6, var8, var9, param3);
+        gq.a(SoftwareRaster.field_d, param0.field_k, param0.field_j, var5, var4, var7, var6, var8, var9, param3);
     }
 
     final static int a(int param0) {

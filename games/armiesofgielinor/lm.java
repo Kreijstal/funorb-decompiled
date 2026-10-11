@@ -4,7 +4,7 @@
 final class lm {
     static wm field_d;
     static int[] field_e;
-    static wk[] field_h;
+    static RgbSprite[] field_h;
     static String field_f;
     static je field_b;
     static String field_a;

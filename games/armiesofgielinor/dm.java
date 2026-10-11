@@ -99,11 +99,11 @@ final class dm {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
-        wk var7 = null;
+        RgbSprite var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var11 = 0;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 != null &&
             param4 != null) {
@@ -133,7 +133,7 @@ final class dm {
                 var9 = this.field_F;
               }
               for (var10 = 0; this.field_L > var10; var10++) {
-                qn.b(db.a(true, param2.field_k + var10), u.a(var10 + param2.field_n, (byte) 94), -(var10 << 1) + (param4.field_k - param2.field_k), -param2.field_n + (param4.field_n - (var10 << 1)), var9);
+                SoftwareRaster.b(db.a(true, param2.field_k + var10), u.a(var10 + param2.field_n, (byte) 94), -(var10 << 1) + (param4.field_k - param2.field_k), -param2.field_n + (param4.field_n - (var10 << 1)), var9);
               }
               return;
             }
@@ -204,7 +204,7 @@ final class dm {
             if (var5 == 0) {
               return;
             }
-            fe.b(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, io.field_m, ci.field_e, this.field_Q, this.field_p);
+            fe.b(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, io.field_m, TutorialController.field_e, this.field_Q, this.field_p);
             if (param0 != 33) {
               discarded$0 = this.d(true);
             }
@@ -332,9 +332,9 @@ final class dm {
             var8 = u.a(param5.field_n, (byte) 94);
             var9 = -var7_int + param2.field_k;
             var10 = param2.field_n - var8;
-            qn.b(var7_int, var8, var9, var10, this.field_Q, this.field_p);
+            SoftwareRaster.b(var7_int, var8, var9, var10, this.field_Q, this.field_p);
             if (this.field_y) {
-              qn.b(var7_int, var8, var9, var10, this.field_P);
+              SoftwareRaster.b(var7_int, var8, var9, var10, this.field_P);
             }
             if (param1 != null &&
               param1.length() != 0) {
@@ -346,7 +346,7 @@ final class dm {
               if (!param4) {
                 stackIn_12_0 = nd.field_b;
               } else {
-                stackIn_12_0 = ci.field_e;
+                stackIn_12_0 = TutorialController.field_e;
               }
               var16 = stackIn_12_0;
               var15 = var16;
@@ -541,7 +541,7 @@ final class dm {
             if (var5 == 0) {
               return;
             }
-            fe.b(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, io.field_m, ci.field_e, this.field_Q, this.field_p);
+            fe.b(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, io.field_m, TutorialController.field_e, this.field_Q, this.field_p);
             return;
           }
         }
@@ -559,7 +559,7 @@ final class dm {
         int var9;
         String var10;
         String var11;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null != this.field_N) {
           if (this.field_N.length == 0) {
             return;
@@ -585,7 +585,7 @@ final class dm {
                       } else {
                         stackIn_27_0 = 0;
                       }
-                      L7: {
+                      regionExit1: {
                         var7 = stackIn_27_0;
                         if (var4 != null &&
                           var5 != null) {
@@ -596,10 +596,10 @@ final class dm {
                                 var2 <= this.field_h) {
                                 if (var2 == this.field_n) {
                                   if (this.field_g == null) {
-                                    break L7;
+                                    break regionExit1;
                                   }
                                   if (null == this.field_S) {
-                                    break L7;
+                                    break regionExit1;
                                   }
                                   if (this.field_r >= 0) {
                                     if (this.field_n <= this.field_r) {
@@ -614,7 +614,7 @@ final class dm {
                                   this.a(this.field_u, this.field_U, this.field_S, ~param0, var8 != 0, this.field_g);
                                 }
                                 this.a(var2, var7 != 0, var4, 67, var5);
-                                break L7;
+                                break regionExit1;
                               }
                               this.a(-1, var11, var5, -1, var7 != 0, var4);
                             } else {
@@ -683,7 +683,7 @@ final class dm {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != null &&
             param1.length() != 0) {
@@ -876,7 +876,7 @@ final class dm {
             if (param4 != 26709) {
               this.field_v = true;
             }
-            qn.f(db.a(true, var6_int), u.a(var7, (byte) 94), var8, var9, this.field_M);
+            SoftwareRaster.f(db.a(true, var6_int), u.a(var7, (byte) 94), var8, var9, this.field_M);
             fe.b(db.a(true, var6_int), u.a(var7, (byte) 94), var8, var9, io.field_m, nd.field_b, this.field_Q, this.field_p);
             var10 = u.a(param0.field_n, (byte) 94);
             var11 = u.a(param3.field_n, (byte) 94);
@@ -884,7 +884,7 @@ final class dm {
             var12 = mp.k(-57);
             var7Lifetime1 = var12 + var7Lifetime1;
             if (param2) {
-              stackIn_11_0 = ci.field_e;
+              stackIn_11_0 = TutorialController.field_e;
             } else {
               stackIn_11_0 = nd.field_b;
             }
@@ -933,21 +933,21 @@ final class dm {
         boolean stackIn_27_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var1_int = sm.field_d;
           var2 = ko.field_b;
-          stackIn_4_0 = (tr.field_A != 1) ? 0 : 1;
+          stackIn_4_0 = (DeployEvent.field_A != 1) ? 0 : 1;
           var3 = stackIn_4_0;
           stackIn_7_0 = (ro.field_ub != 1) ? 0 : 1;
           var4 = stackIn_7_0;
           ll.field_Rb.a(el.field_d, param0 - 56, var2, var3 != 0, var1_int, var4 != 0);
           while (true) {
-            if (!jd.i((byte) 90)) {
+            if (!Unit.i((byte) 90)) {
               return;
             }
             if (rs.field_q == 13) {
-              bv.a(true, 0, 1, jt.field_a);
+              CipherPacketBuffer.a(true, 0, 1, jt.field_a);
               if (null != ll.field_Rb.field_k) {
                 ll.field_Rb.field_k.field_H = null;
                 ll.field_Rb.field_k.field_A = null;
@@ -1013,10 +1013,10 @@ final class dm {
             var9 = param2.field_n - var7;
             var10 = nd.field_b;
             if (param0) {
-              var10 = ci.field_e;
+              var10 = TutorialController.field_e;
             }
             fe.a(db.a(true, var6_int), u.a(var7, (byte) 94), var8, var9, il.field_s, var10, this.field_Q, this.field_b, true);
-            fe.b(db.a(true, var6_int), u.a(var7, (byte) 94), var8, var9, io.field_m, ci.field_e, this.field_Q, this.field_A);
+            fe.b(db.a(true, var6_int), u.a(var7, (byte) 94), var8, var9, io.field_m, TutorialController.field_e, this.field_Q, this.field_A);
             var11 = param1.field_n;
             var12 = param2.field_n;
             var7Lifetime1 = var11 + var12 >> 1;
@@ -1117,7 +1117,7 @@ final class dm {
         int var14 = 0;
         String var15 = null;
         int var16 = 0;
-        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var12_int = -1;
           if (param7) {
@@ -1160,7 +1160,7 @@ final class dm {
               }
               if (var14 == 3 &&
                 !param4) {
-                var15 = ka.a(nr.field_e, param11, -10 + uh.field_e[var14][0] << 1);
+                var15 = BitmapFont.a(nr.field_e, param11, -10 + uh.field_e[var14][0] << 1);
                 fe.c(var15, (uh.field_e[var14][0] >> 1) + dp.field_Vb[var14][0] + param8, 20 + (uh.field_e[var14][1] >> 1) + (dp.field_Vb[var14][1] + param10), 0, true);
               }
             }
@@ -1304,7 +1304,7 @@ final class dm {
         int var3;
         int var5;
         String var4;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_N == null) {
           return;
         }

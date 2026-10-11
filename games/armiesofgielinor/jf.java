@@ -4,9 +4,9 @@
 final class jf extends ks {
     static sa field_D;
     byte field_B;
-    vh field_E;
+    PacketBuffer field_E;
     int field_F;
-    static ic field_C;
+    static GameplayController field_C;
     static String field_G;
 
     public static void h(int param0) {
@@ -24,21 +24,21 @@ final class jf extends ks {
           if (null == this.field_E) {
             return 0;
           }
-          return this.field_E.field_q * 100 / (-this.field_B + this.field_E.field_o.length);
+          return this.field_E.position * 100 / (-this.field_B + this.field_E.payload.length);
         }
         if (null == this.field_E) {
           return 0;
         }
-        return this.field_E.field_q * 100 / (-this.field_B + this.field_E.field_o.length);
+        return this.field_E.position * 100 / (-this.field_B + this.field_E.payload.length);
     }
 
     final byte[] d(byte param0) {
         if (this.field_x) {
           throw new RuntimeException();
         }
-        if (this.field_E.field_q >= this.field_E.field_o.length - this.field_B) {
+        if (this.field_E.position >= this.field_E.payload.length - this.field_B) {
           int var2 = -74 / ((-35 - param0) / 45);
-          return this.field_E.field_o;
+          return this.field_E.payload;
         }
         throw new RuntimeException();
     }
@@ -54,7 +54,7 @@ final class jf extends ks {
           }
           return;
         }
-        field_C = (ic) null;
+        field_C = (GameplayController) null;
         if (null != au.field_Kb) {
           au.field_Kb.f(-122, param0);
         }

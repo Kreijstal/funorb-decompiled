@@ -13,7 +13,7 @@ final class sl {
     int[] field_j;
     private int field_b;
 
-    final boolean a(int param0, int param1, bv param2) {
+    final boolean a(int param0, int param1, CipherPacketBuffer param2) {
         RuntimeException var4 = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
@@ -45,7 +45,7 @@ final class sl {
         }
     }
 
-    final void a(int param0, vh param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           this.b(8, param1);
           param1.a(this.field_c, param0, this.field_c.length, 104);
@@ -54,10 +54,10 @@ final class sl {
         }
     }
 
-    private final void b(int param0, vh param1) {
+    private final void b(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
-        vh stackIn_3_0 = null;
+        PacketBuffer stackIn_3_0 = null;
         boolean stackIn_3_1 = false;
         int stackIn_4_2 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -65,19 +65,19 @@ final class sl {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           param1.b(1, this.field_g);
           param1.b(param0 - 7, this.field_e);
           param1.b(true, this.field_d);
-          stackIn_3_0 = (vh) (param1);
+          stackIn_3_0 = (PacketBuffer) (param1);
           stackIn_3_1 = true;
           if (this.field_f) {
             stackIn_4_2 = 1;
           } else {
             stackIn_4_2 = 0;
           }
-          ((vh) (Object) stackIn_3_0).b(stackIn_3_1, stackIn_4_2);
+          ((PacketBuffer) (Object) stackIn_3_0).b(stackIn_3_1, stackIn_4_2);
           if (this.field_j != null) {
             param1.b(1, this.field_j.length);
             for (var3_int = 0; this.field_j.length > var3_int; var3_int++) {
@@ -112,7 +112,7 @@ final class sl {
         int var1 = -54 % ((param0 + 65) / 39);
     }
 
-    sl(vh param0, int param1, boolean param2) {
+    sl(PacketBuffer param0, int param1, boolean param2) {
         int var5 = 0;
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_19_0 = null;
@@ -168,20 +168,20 @@ final class sl {
         }
     }
 
-    sl(int param0, int param1, ha param2, int param3, boolean param4) {
-        vh var7 = null;
+    sl(int param0, int param1, Battlefield param2, int param3, boolean param4) {
+        PacketBuffer var7 = null;
         try {
           this.field_e = param1;
           this.field_g = param0;
           this.field_b = -1;
-          var7 = new vh(30000);
+          var7 = new PacketBuffer(30000);
           param2.a(var7, -25771, param2.field_K.field_w);
           this.field_c = var7.g((byte) -82);
           this.field_h = param2.field_e;
           this.field_f = param4 ? true : false;
           this.field_d = param3;
-          this.field_j = new int[param2.field_H.length];
-          vm.a(param2.field_H, 0, this.field_j, 0, param2.field_H.length);
+          this.field_j = new int[param2.playerMana.length];
+          vm.a(param2.playerMana, 0, this.field_j, 0, param2.playerMana.length);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "sl.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

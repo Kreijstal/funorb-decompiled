@@ -53,7 +53,7 @@ final class iq {
           fe.c(this.field_d, db.a(true, this.field_i / 2 + this.field_f), u.a(this.field_c + 30, (byte) 94), param0, true);
           return;
         }
-        fe.a(db.a(true, this.field_f), u.a(this.field_c, (byte) 94), this.field_i, 30, il.field_s, ci.field_e, 0, 0);
+        fe.a(db.a(true, this.field_f), u.a(this.field_c, (byte) 94), this.field_i, 30, il.field_s, TutorialController.field_e, 0, 0);
         fe.c(this.field_d, db.a(true, this.field_i / 2 + this.field_f), u.a(this.field_c + 30, (byte) 94), param0, true);
     }
 

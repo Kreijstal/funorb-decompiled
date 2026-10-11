@@ -36,7 +36,7 @@ final class so {
         int var2;
         int var3;
         int var2Lifetime1;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 == 0) {
           return 0;
         }

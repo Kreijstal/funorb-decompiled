@@ -43,11 +43,11 @@ final class js extends ni {
     private final void b(byte[] param0) {
         int var2;
         int var3;
-        vh var4;
-        vh var5;
-        vh var6;
-        vh var7;
-        vh var8;
+        PacketBuffer var4;
+        PacketBuffer var5;
+        PacketBuffer var6;
+        PacketBuffer var7;
+        PacketBuffer var8;
         int var9;
         int var10;
         int var11;
@@ -98,12 +98,12 @@ final class js extends ni {
         int var44Lifetime1;
         var2 = 0;
         var3 = 0;
-        var4 = new vh(param0);
-        var5 = new vh(param0);
-        var6 = new vh(param0);
-        var7 = new vh(param0);
-        var8 = new vh(param0);
-        var4.field_q = param0.length - 18;
+        var4 = new PacketBuffer(param0);
+        var5 = new PacketBuffer(param0);
+        var6 = new PacketBuffer(param0);
+        var7 = new PacketBuffer(param0);
+        var8 = new PacketBuffer(param0);
+        var4.position = param0.length - 18;
         var9 = var4.e((byte) -104);
         var10 = var4.e((byte) -104);
         var11 = var4.k(0);
@@ -186,11 +186,11 @@ final class js extends ni {
           this.field_e = new int[var10];
         }
         this.field_i = new short[var10];
-        var4.field_q = var22;
-        var5.field_q = var32;
-        var6.field_q = var33;
-        var7.field_q = var34;
-        var8.field_q = var27;
+        var4.position = var22;
+        var5.position = var32;
+        var6.position = var33;
+        var7.position = var34;
+        var8.position = var27;
         var35 = 0;
         var36 = 0;
         var37 = 0;
@@ -218,11 +218,11 @@ final class js extends ni {
             this.field_m[var38] = var8.k(0);
           }
         }
-        var4.field_q = var30;
-        var5.field_q = var26;
-        var6.field_q = var24;
-        var7.field_q = var28;
-        var8.field_q = var25;
+        var4.position = var30;
+        var5.position = var26;
+        var6.position = var24;
+        var7.position = var28;
+        var8.position = var25;
         for (var38Lifetime1 = 0; var38Lifetime1 < var10; var38Lifetime1++) {
           this.field_i[var38Lifetime1] = (short)var4.e((byte) -104);
           if (var12 == 1) {
@@ -256,8 +256,8 @@ final class js extends ni {
           }
         }
         this.field_v = -1;
-        var4.field_q = var29;
-        var5.field_q = var23;
+        var4.position = var29;
+        var5.position = var23;
         var38Lifetime2 = 0;
         var39Lifetime2 = 0;
         var40Lifetime1 = 0;
@@ -321,7 +321,7 @@ final class js extends ni {
           }
         }
         this.field_v = this.field_v + 1;
-        var4.field_q = var31;
+        var4.position = var31;
         for (var42Lifetime2 = 0; var42Lifetime2 < var11; var42Lifetime2++) {
           this.field_t[var42Lifetime2] = (byte) 0;
           this.field_M[var42Lifetime2] = (short)var4.e((byte) -104);
@@ -361,13 +361,13 @@ final class js extends ni {
         byte dupTemp$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        vh var2;
-        vh var3;
-        vh var4;
-        vh var5;
-        vh var6;
-        vh var7;
-        vh var8;
+        PacketBuffer var2;
+        PacketBuffer var3;
+        PacketBuffer var4;
+        PacketBuffer var5;
+        PacketBuffer var6;
+        PacketBuffer var7;
+        PacketBuffer var8;
         int var9;
         int var10;
         int var11;
@@ -431,14 +431,14 @@ final class js extends ni {
         int var57Lifetime3;
         int var58Lifetime1;
         int var58Lifetime2;
-        var2 = new vh(param0);
-        var3 = new vh(param0);
-        var4 = new vh(param0);
-        var5 = new vh(param0);
-        var6 = new vh(param0);
-        var7 = new vh(param0);
-        var8 = new vh(param0);
-        var2.field_q = param0.length - 23;
+        var2 = new PacketBuffer(param0);
+        var3 = new PacketBuffer(param0);
+        var4 = new PacketBuffer(param0);
+        var5 = new PacketBuffer(param0);
+        var6 = new PacketBuffer(param0);
+        var7 = new PacketBuffer(param0);
+        var8 = new PacketBuffer(param0);
+        var2.position = param0.length - 23;
         var9 = var2.e((byte) -104);
         var10 = var2.e((byte) -104);
         var11 = var2.k(0);
@@ -462,7 +462,7 @@ final class js extends ni {
         var27 = 0;
         if (var11 > 0) {
           this.field_t = new byte[var11];
-          var2.field_q = 0;
+          var2.position = 0;
           for (var28 = 0; var28 < var11; var28++) {
             dupTemp$0 = var2.a((byte) 107);
             this.field_t[var28] = dupTemp$0;
@@ -582,11 +582,11 @@ final class js extends ni {
             this.field_z = new byte[var27];
           }
         }
-        var2.field_q = var29Lifetime1;
-        var3.field_q = var40;
-        var4.field_q = var41;
-        var5.field_q = var42;
-        var6.field_q = var34;
+        var2.position = var29Lifetime1;
+        var3.position = var40;
+        var4.position = var41;
+        var5.position = var42;
+        var6.position = var34;
         var50 = 0;
         var51 = 0;
         var52 = 0;
@@ -614,13 +614,13 @@ final class js extends ni {
             this.field_m[var53] = var6.k(0);
           }
         }
-        var2.field_q = var39;
-        var3.field_q = var30;
-        var4.field_q = var32;
-        var5.field_q = var35;
-        var6.field_q = var33;
-        var7.field_q = var37;
-        var8.field_q = var38;
+        var2.position = var39;
+        var3.position = var30;
+        var4.position = var32;
+        var5.position = var35;
+        var6.position = var33;
+        var7.position = var37;
+        var8.position = var38;
         for (var53Lifetime1 = 0; var53Lifetime1 < var10; var53Lifetime1++) {
           this.field_i[var53Lifetime1] = (short)var2.e((byte) -104);
           if (var13 != 0) {
@@ -647,8 +647,8 @@ final class js extends ni {
           }
         }
         this.field_v = -1;
-        var2.field_q = var36;
-        var3.field_q = var31;
+        var2.position = var36;
+        var3.position = var31;
         var53Lifetime2 = 0;
         var54Lifetime1 = 0;
         var55Lifetime1 = 0;
@@ -712,12 +712,12 @@ final class js extends ni {
           }
         }
         this.field_v = this.field_v + 1;
-        var2.field_q = var43;
-        var3.field_q = var44;
-        var4.field_q = var45;
-        var5.field_q = var46;
-        var6.field_q = var47;
-        var7.field_q = var48;
+        var2.position = var43;
+        var3.position = var44;
+        var4.position = var45;
+        var5.position = var46;
+        var6.position = var47;
+        var7.position = var48;
         for (var57Lifetime2 = 0; var57Lifetime2 < var11; var57Lifetime2++) {
           var58Lifetime1 = this.field_t[var57Lifetime2] & 255;
           if (var58Lifetime1 == 0) {
@@ -762,14 +762,14 @@ final class js extends ni {
           }
         }
         if (var14 != 0) {
-          var2.field_q = var49;
+          var2.position = var49;
           var57Lifetime3 = var2.k(0);
           if (var57Lifetime3 > 0) {
-            var2.field_q = var2.field_q + 4 * var57Lifetime3;
+            var2.position = var2.position + 4 * var57Lifetime3;
           }
           var58Lifetime2 = var2.k(0);
           if (var58Lifetime2 > 0) {
-            var2.field_q = var2.field_q + 4 * var58Lifetime2;
+            var2.position = var2.position + 4 * var58Lifetime2;
           }
         }
     }

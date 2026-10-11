@@ -54,7 +54,7 @@ final class fo {
         int var11 = 0;
         int var5Lifetime1;
         int var8Lifetime1;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = param1.length();
           var4 = var3_int;

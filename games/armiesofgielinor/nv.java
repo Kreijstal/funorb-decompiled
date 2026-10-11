@@ -352,7 +352,7 @@ final class nv extends hs implements he {
     }
 
     final void a(byte param0, int param1) {
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 < 0) {
           this.field_W = 0;
           if (param0 != -123) {
@@ -385,19 +385,19 @@ final class nv extends hs implements he {
     final static boolean c(int param0, int param1) {
         if (param0 != 0) {
           nv.l(106);
-          if (!(param1 < bw.field_m.length)) {
+          if (!(param1 < bw.unitDefinitions.length)) {
             return false;
           }
-          return 3 == bw.field_m[param1][0] ? true : false;
+          return 3 == bw.unitDefinitions[param1][0] ? true : false;
         }
-        if (!(param1 < bw.field_m.length)) {
+        if (!(param1 < bw.unitDefinitions.length)) {
           return false;
         }
-        return 3 == bw.field_m[param1][0] ? true : false;
+        return 3 == bw.unitDefinitions[param1][0] ? true : false;
     }
 
     private final void e(int param0, int param1) {
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var3 = 123 % ((param0 - 2) / 56);
         if (param1 < 0) {
           this.field_T = 0;
@@ -424,7 +424,7 @@ final class nv extends hs implements he {
         int var7 = 0;
         int var5_intLifetime1;
         int var5_intLifetime2;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           super.a(param0, param1, param2, param3);
           if ((!(this.field_O.field_E instanceof fw) ||
@@ -654,7 +654,7 @@ final class nv extends hs implements he {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 == 1 &&
             this.field_N) {
@@ -804,7 +804,7 @@ final class nv extends hs implements he {
     }
 
     final void d(byte param0) {
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 < 84) {
           return;
         }

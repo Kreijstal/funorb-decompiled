@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bd extends tc {
+abstract class bd extends IntrusiveNode {
     static int[] field_q;
     static int field_r;
     static je field_o;
@@ -9,7 +9,7 @@ abstract class bd extends tc {
     static String field_k;
     static String field_l;
     int field_m;
-    static wk field_p;
+    static RgbSprite field_p;
 
     final static void a(String[][] param0, String[] param1, int param2, int param3) {
         int var5 = 0;
@@ -24,7 +24,7 @@ abstract class bd extends tc {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param3 != 2378077) {
             return;
@@ -68,13 +68,13 @@ abstract class bd extends tc {
         field_q = null;
     }
 
-    final static void a(int param0, boolean param1, int param2, wk[] param3, int param4, int param5) {
+    final static void a(int param0, boolean param1, int param2, RgbSprite[] param3, int param4, int param5) {
         try {
           param3[0].e(param2, param5, param0);
           param3[1].c(param2 + param3[1].field_y, param5, param4 - (param3[2].field_y << 1), param3[2].field_v, param0);
           param3[2].e(param4 + (param2 - param3[2].field_y), param5, param0);
           if (!param1) {
-            field_p = (wk) null;
+            field_p = (RgbSprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "bd.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
@@ -118,7 +118,7 @@ abstract class bd extends tc {
     protected bd() {
     }
 
-    abstract void a(int param0, ha param1);
+    abstract void a(int param0, Battlefield param1);
 
     static {
         field_k = "End Game";

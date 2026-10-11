@@ -6,7 +6,7 @@ final class ko {
     static int field_e;
     boolean field_d;
     String field_c;
-    static wk field_g;
+    static RgbSprite field_g;
     static int field_b;
     static String field_a;
 
@@ -71,7 +71,7 @@ final class ko {
     }
 
     static {
-        field_g = new wk(56, 56);
+        field_g = new RgbSprite(56, 56);
         field_b = 0;
         field_a = "Player";
     }

@@ -20,8 +20,8 @@ abstract class en extends tj implements eg {
     void a(byte param0, sb param1) {
         try {
           if (param0 >= -21) {
-            vh var4 = (vh) null;
-            en.a((vh) null, (byte) -110);
+            PacketBuffer var4 = (PacketBuffer) null;
+            en.a((PacketBuffer) null, (byte) -110);
           }
           this.field_H = param1;
           this.field_H.field_j = this;
@@ -32,7 +32,7 @@ abstract class en extends tj implements eg {
 
     abstract int l(int param0);
 
-    final static int[] a(vh param0, byte param1) {
+    final static int[] a(PacketBuffer param0, byte param1) {
         int var3 = 0;
         int[] var2 = null;
         RuntimeException var2_ref = null;
@@ -43,7 +43,7 @@ abstract class en extends tj implements eg {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != -24) {
             en.n(-95);
@@ -75,8 +75,8 @@ abstract class en extends tj implements eg {
 
     public final n a(int param0) {
         if (param0 != -918933630) {
-          vh var3 = (vh) null;
-          en.a((vh) null, (byte) 126);
+          PacketBuffer var3 = (PacketBuffer) null;
+          en.a((PacketBuffer) null, (byte) 126);
           return (n) ((Object) this.field_H);
         }
         return (n) ((Object) this.field_H);

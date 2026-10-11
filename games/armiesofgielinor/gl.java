@@ -3,7 +3,7 @@
  */
 final class gl {
     private String field_a;
-    static ka field_e;
+    static BitmapFont field_e;
     private boolean field_d;
     static int field_c;
     static boolean field_b;

@@ -6,7 +6,7 @@ import java.util.*;
 abstract class vf {
     private short[] field_g;
     static String field_h;
-    static wk[] field_j;
+    static RgbSprite[] field_j;
     private int field_d;
     static String field_e;
     private int field_a;
@@ -28,7 +28,7 @@ abstract class vf {
     }
 
     private final void b(int param0) {
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_g = new short[this.field_b];
         int var2 = 0;
         int var3 = -49 / ((-69 - param0) / 56);
@@ -138,7 +138,7 @@ abstract class vf {
         int var16Lifetime1;
         int var18Lifetime1;
         int var16Lifetime2;
-        var26 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var26 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1) {
             stackIn_12_0 = (ua.field_s) ? 0 : 1;
@@ -242,7 +242,7 @@ abstract class vf {
                         ln.field_d[var9] = (byte) 0;
                       }
                     } else {
-                      ln.field_d[var7 / 8] = (byte)kf.b((int) ln.field_d[var7 / 8], 1 << rn.a(var7, 7));
+                      ln.field_d[var7 / 8] = (byte)GrowthEvent.b((int) ln.field_d[var7 / 8], 1 << rn.a(var7, 7));
                     }
                   }
                 }
@@ -464,7 +464,7 @@ abstract class vf {
                       tg.field_d[var18 / 8] = (byte)rn.a((int) tg.field_d[var18 / 8], ~(1 << rn.a(7, var18)));
                     }
                   } else {
-                    tg.field_d[(var6Lifetime3 + var9) / 8] = (byte)kf.b((int) tg.field_d[(var6Lifetime3 + var9) / 8], 1 << rn.a(var9 + var6Lifetime3, 7));
+                    tg.field_d[(var6Lifetime3 + var9) / 8] = (byte)GrowthEvent.b((int) tg.field_d[(var6Lifetime3 + var9) / 8], 1 << rn.a(var9 + var6Lifetime3, 7));
                   }
                 }
               }
@@ -537,7 +537,7 @@ abstract class vf {
                       }
                     }
                     if (var14 != 0) {
-                      var22 = md.field_F;
+                      var22 = ParasiteEvent.field_F;
                       if (var15 > 0 &&
                         jl.field_c != null &&
                         var15 <= jl.field_c.length &&
@@ -696,7 +696,7 @@ abstract class vf {
         int var27Lifetime2;
         int var18Lifetime1;
         int var19Lifetime1;
-        var28 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var28 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 != 1) {
           field_l = (String) null;
         }
@@ -849,7 +849,7 @@ abstract class vf {
         int var6;
         int var7;
         int var3Lifetime1;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != -256) {
           field_f = 9;
         }
@@ -859,7 +859,7 @@ abstract class vf {
         }
         for (var3Lifetime1 = 0; var3Lifetime1 < 255; var3Lifetime1++) {
           var4 = 255 - var3Lifetime1;
-          var5 = ns.a(false, var4, var2);
+          var5 = AttackEvent.a(false, var4, var2);
           var6 = this.field_k[var5];
           this.field_k[var5] = this.field_k[var4];
           this.field_k[256 + var4] = (short) var6;

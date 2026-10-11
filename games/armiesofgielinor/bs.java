@@ -20,7 +20,7 @@ final class bs {
         return fc.field_b;
     }
 
-    final static int a(vh param0, int param1) {
+    final static int a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -29,10 +29,10 @@ final class bs {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          var2_int = param0.field_o[param1 + param0.field_q];
-          if (param0.field_o[param0.field_q] == we.field_a[0] &&
-            param0.field_o[param0.field_q + 1] == we.field_a[1] &&
-            we.field_a[2] == param0.field_o[param0.field_q + 2]) {
+          var2_int = param0.payload[param1 + param0.position];
+          if (param0.payload[param0.position] == we.field_a[0] &&
+            param0.payload[param0.position + 1] == we.field_a[1] &&
+            we.field_a[2] == param0.payload[param0.position + 2]) {
             param0.i(1);
           } else {
             var2_int = -1;

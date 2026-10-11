@@ -53,17 +53,17 @@ final class vq {
         int var8Lifetime3;
         int var5Lifetime2Lifetime1;
         int var7Lifetime1Lifetime1;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           no.field_J = param0;
           ip.field_e = true;
           if (no.field_J == 0) {
             var3_int = iu.a(pf.field_d, hw.field_z, 7502, sc.field_b, du.field_b);
             var4 = 3 + var3_int;
-            ca.field_h = new int[var4];
+            TileMetadata.field_h = new int[var4];
             wp.field_v = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              ca.field_h[var5] = -1;
+              TileMetadata.field_h[var5] = -1;
             }
             mi.field_G = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
@@ -71,18 +71,18 @@ final class vq {
             }
             wp.field_v[-3 + var4] = "";
             wp.field_v[-2 + var4] = tg.field_j;
-            ca.field_h[var4 - 2] = 0;
+            TileMetadata.field_h[var4 - 2] = 0;
             mi.field_G[0] = 4;
             wp.field_v[-1 + var4] = pd.field_f;
-            ca.field_h[-1 + var4] = 1;
+            TileMetadata.field_h[-1 + var4] = 1;
             mi.field_G[1] = 5;
           } else if (1 == no.field_J) {
             var3_int = iu.a(pf.field_d, hw.field_z, 7502, sc.field_b, du.field_b);
             var4 = var3_int + 2;
-            ca.field_h = new int[var4];
+            TileMetadata.field_h = new int[var4];
             wp.field_v = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              ca.field_h[var5] = -1;
+              TileMetadata.field_h[var5] = -1;
             }
             mi.field_G = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
@@ -90,7 +90,7 @@ final class vq {
             }
             wp.field_v[var4 - 2] = "";
             wp.field_v[-1 + var4] = pd.field_f;
-            ca.field_h[-1 + var4] = 0;
+            TileMetadata.field_h[-1 + var4] = 0;
             mi.field_G[0] = 5;
           } else if (no.field_J != 2) {
             if (no.field_J == 3) {
@@ -100,10 +100,10 @@ final class vq {
                 var3_int = iu.a(pf.field_d, ud.field_ab, 7502, sc.field_b, du.field_b);
               }
               var4 = var3_int + 2;
-              ca.field_h = new int[var4];
+              TileMetadata.field_h = new int[var4];
               wp.field_v = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                ca.field_h[var5] = -1;
+                TileMetadata.field_h[var5] = -1;
               }
               mi.field_G = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -111,15 +111,15 @@ final class vq {
               }
               wp.field_v[-2 + var4] = "";
               wp.field_v[var4 - 1] = pd.field_f;
-              ca.field_h[-1 + var4] = 0;
+              TileMetadata.field_h[-1 + var4] = 0;
               mi.field_G[0] = 5;
             } else if (no.field_J == 4) {
               var3_int = iu.a(pf.field_d, am.field_y, 7502, sc.field_b, du.field_b);
               var4 = 2 + var3_int;
               wp.field_v = new String[var4];
-              ca.field_h = new int[var4];
+              TileMetadata.field_h = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                ca.field_h[var5] = -1;
+                TileMetadata.field_h[var5] = -1;
               }
               mi.field_G = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -127,7 +127,7 @@ final class vq {
               }
               wp.field_v[-2 + var4] = "";
               wp.field_v[-1 + var4] = pd.field_f;
-              ca.field_h[-1 + var4] = 0;
+              TileMetadata.field_h[-1 + var4] = 0;
               mi.field_G[0] = 5;
             } else {
               if (no.field_J != 5) {
@@ -136,9 +136,9 @@ final class vq {
               var3_int = iu.a(pf.field_d, hb.field_a, 7502, sc.field_b, du.field_b);
               var4 = 3 + var3_int;
               wp.field_v = new String[var4];
-              ca.field_h = new int[var4];
+              TileMetadata.field_h = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                ca.field_h[var5] = -1;
+                TileMetadata.field_h[var5] = -1;
               }
               mi.field_G = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -146,10 +146,10 @@ final class vq {
               }
               wp.field_v[var4 - 3] = "";
               wp.field_v[var4 - 2] = oo.field_j;
-              ca.field_h[-2 + var4] = 0;
+              TileMetadata.field_h[-2 + var4] = 0;
               mi.field_G[0] = 3;
               wp.field_v[-1 + var4] = pd.field_f;
-              ca.field_h[var4 - 1] = 1;
+              TileMetadata.field_h[var4 - 1] = 1;
               mi.field_G[1] = 5;
             }
           } else {
@@ -183,27 +183,27 @@ final class vq {
             }
             va.field_A = new String[var4];
             vm.a(du.field_b, 0, va.field_A, 0, var4);
-            tc.field_f = new String[var3_int - var4 - 1];
-            vm.a(du.field_b, var4 + 1, tc.field_f, 0, -1 + (-var4 + var3_int));
+            IntrusiveNode.field_f = new String[var3_int - var4 - 1];
+            vm.a(du.field_b, var4 + 1, IntrusiveNode.field_f, 0, -1 + (-var4 + var3_int));
             if (va.field_A.length <= mo.field_i.length) {
               stackIn_31_0 = mo.field_i.length;
             } else {
               stackIn_31_0 = va.field_A.length;
             }
             var5 = stackIn_31_0;
-            if (tc.field_f.length > hg.field_d.length) {
-              stackIn_34_0 = tc.field_f.length;
+            if (IntrusiveNode.field_f.length > hg.field_d.length) {
+              stackIn_34_0 = IntrusiveNode.field_f.length;
             } else {
               stackIn_34_0 = hg.field_d.length;
             }
             var6 = stackIn_34_0;
             var7 = var6 + var5 + 7;
-            ca.field_h = new int[var7];
+            TileMetadata.field_h = new int[var7];
             wp.field_v = new String[var7];
             for (var8 = 0; var8 < var7; var8++) {
-              ca.field_h[var8] = -1;
+              TileMetadata.field_h[var8] = -1;
             }
-            ca.field_h[1] = 0;
+            TileMetadata.field_h[1] = 0;
             mi.field_G = new int[2];
             wp.field_v[0] = c.field_d;
             wp.field_v[1] = ui.field_e;
@@ -213,7 +213,7 @@ final class vq {
             wp.field_v[4] = ts.field_f;
             wp.field_v[2] = od.field_e;
             wp.field_v[3] = ge.field_m;
-            ca.field_h[3] = 1;
+            TileMetadata.field_h[3] = 1;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_41_0 = wp.field_v;
               stackIn_41_1 = 6 + var8Lifetime2;
@@ -225,14 +225,14 @@ final class vq {
               stackIn_41_0[stackIn_41_1] = stackIn_42_2;
             }
             wp.field_v[var5 + 6] = null;
-            ca.field_h[6 + var5] = -2;
+            TileMetadata.field_h[6 + var5] = -2;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
               stackIn_47_0 = wp.field_v;
               stackIn_47_1 = var5 + 7 + var8Lifetime3;
-              if (tc.field_f.length <= var8Lifetime3) {
+              if (IntrusiveNode.field_f.length <= var8Lifetime3) {
                 stackIn_48_2 = "";
               } else {
-                stackIn_48_2 = tc.field_f[var8Lifetime3];
+                stackIn_48_2 = IntrusiveNode.field_f[var8Lifetime3];
               }
               stackIn_47_0[stackIn_47_1] = stackIn_48_2;
             }
@@ -242,7 +242,7 @@ final class vq {
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < wp.field_v.length; var4Lifetime1++) {
             stackIn_89_0 = wp.field_v[var4Lifetime1];
-            stackIn_90_1 = !(ca.field_h[var4Lifetime1] < 0);
+            stackIn_90_1 = !(TileMetadata.field_h[var4Lifetime1] < 0);
             var5Lifetime1 = lg.a(stackIn_89_0, stackIn_90_1, (byte) -101);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
@@ -272,10 +272,10 @@ final class vq {
           var5Lifetime3 = -42 % ((-39 - param2) / 37);
           while (wp.field_v.length > var4Lifetime2) {
             stackIn_115_0 = m.field_i;
-            if (0 > ca.field_h[var4Lifetime2]) {
+            if (0 > TileMetadata.field_h[var4Lifetime2]) {
               stackIn_116_1 = fh.field_e;
             } else {
-              stackIn_116_1 = q.field_B;
+              stackIn_116_1 = TelepopEvent.field_B;
             }
             m.field_i = stackIn_115_0 + stackIn_116_1;
             var4Lifetime2++;
@@ -285,7 +285,7 @@ final class vq {
           var4Lifetime3 = 0;
           var5Lifetime4 = od.field_b;
           while (wp.field_v.length > var4Lifetime3) {
-            var6Lifetime1 = ca.field_h[var4Lifetime3];
+            var6Lifetime1 = TileMetadata.field_h[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = lg.a(wp.field_v[var4Lifetime3], true, (byte) -89);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + rk.field_B;
@@ -294,15 +294,15 @@ final class vq {
               lg.field_b[var4Lifetime3][0] = var8Lifetime1 - et.field_b;
               lg.field_b[var4Lifetime3][1] = var5Lifetime4;
               lg.field_b[var4Lifetime3][2] = var7Lifetime2 + (et.field_b << 1);
-              var5Lifetime4 = var5Lifetime4 + (q.field_B + (cp.field_a + (el.field_c << 1)));
-              lg.field_b[var4Lifetime3][3] = q.field_B + (el.field_c << 1);
+              var5Lifetime4 = var5Lifetime4 + (TelepopEvent.field_B + (cp.field_a + (el.field_c << 1)));
+              lg.field_b[var4Lifetime3][3] = TelepopEvent.field_B + (el.field_c << 1);
             } else {
               var5Lifetime4 = var5Lifetime4 + fh.field_e;
             }
             var4Lifetime3++;
           }
           if (no.field_J != 2) {
-            ug.field_c.a(0, param1, ec.a(sm.field_d, 120, ko.field_b), 0);
+            ug.field_c.a(0, param1, TeleportEvent.a(sm.field_d, 120, ko.field_b), 0);
           } else {
             ug.field_c.a(-1, param1, -1, 0);
           }
@@ -353,7 +353,7 @@ final class vq {
         }
     }
 
-    final static boolean a(bv param0, int param1) {
+    final static boolean a(CipherPacketBuffer param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;

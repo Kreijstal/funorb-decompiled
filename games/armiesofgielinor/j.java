@@ -43,7 +43,7 @@ final class j {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var1_intLifetime1;
-        var2 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null != il.field_t) {
             return;
@@ -97,28 +97,28 @@ final class j {
           cf.field_m = new String[3];
           il.field_t[52] = oa.field_G;
           il.field_t[38] = up.field_f;
-          md.field_A = new String[]{wi.field_a, rf.field_e, je.field_lb, ob.field_P};
+          ParasiteEvent.field_A = new String[]{wi.field_a, rf.field_e, je.field_lb, ob.field_P};
           il.field_t[43] = kg.field_c;
           il.field_t[33] = gv.field_b;
           il.field_t[59] = em.field_e;
           il.field_t[41] = dk.field_x;
           il.field_t[45] = oa.field_G;
-          il.field_t[50] = oj.field_u;
+          il.field_t[50] = GameEvent.field_u;
           il.field_t[34] = pf.field_e;
           il.field_t[29] = qm.field_I;
-          il.field_t[39] = qq.field_y;
+          il.field_t[39] = StateChangeEvent.field_y;
           wb.field_b = new String[29];
           cf.field_m[0] = on.field_o;
           cf.field_m[2] = uq.field_v;
           cf.field_m[1] = uh.field_b;
           wb.field_b[0] = null;
-          wb.field_b[10] = nw.field_z;
+          wb.field_b[10] = DamageEvent.field_z;
           if (param0 < 81) {
             return;
           }
           wb.field_b[6] = el.field_a;
           wb.field_b[13] = ar.field_y;
-          du.field_g = new String[]{tg.field_l, gk.field_N, tv.field_c, tv.field_b, vn.field_g, dn.field_Kb, qu.field_r, r.field_I, we.field_h, kd.field_Q, og.field_t, mg.field_c, fg.field_l, pi.field_P, qq.field_H, ut.field_ib};
+          du.field_g = new String[]{tg.field_l, gk.field_N, tv.field_c, tv.field_b, vn.field_g, dn.field_Kb, qu.field_r, r.field_I, we.field_h, kd.field_Q, og.field_t, mg.field_c, fg.field_l, pi.field_P, StateChangeEvent.field_H, ut.field_ib};
           wb.field_b[18] = dd.field_g;
           wb.field_b[4] = gg.field_H;
           wb.field_b[14] = ov.field_d;
@@ -240,7 +240,7 @@ final class j {
         Object var11Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           qb.a(bd.field_r, param0 + 114);
           if (no.field_K != null) {
@@ -402,7 +402,7 @@ final class j {
             }
             if (so.field_d.field_yb != 0) {
               if (ua.field_s) {
-                vp.a((byte) 69, param3);
+                ManaEvent.a((byte) 69, param3);
               } else {
                 gs.a(param3, -8006);
               }

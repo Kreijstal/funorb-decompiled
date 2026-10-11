@@ -49,7 +49,7 @@ class ih extends hn {
         long var4;
         int var6;
         int var7;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = this.field_K;
         var3 = this.field_t;
         var4 = this.field_Y;
@@ -191,7 +191,7 @@ class ih extends hn {
     synchronized void a(int param0, int param1, byte param2) {
         int var4 = 0;
         int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param2 > -13) {
           return;
         }
@@ -253,7 +253,7 @@ class ih extends hn {
     synchronized void a(boolean param0, byte param1, boolean param2, um param3) {
         int var5_int = 0;
         int var6 = 0;
-        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.a(param2, -128);
         if (param1 > -78) {
           return;
@@ -310,7 +310,7 @@ class ih extends hn {
         int var11 = 0;
         io var12 = null;
         io var13 = null;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           param3.b();
           var6_int = 1;
@@ -323,7 +323,7 @@ class ih extends hn {
           }
           var8 = (vc) (param3.field_l.b(1));
           while (var8 != null) {
-            var9 = (int)var8.field_i;
+            var9 = (int)var8.key;
             var12 = (io) (this.field_T.a(-27, (long)var9));
             if (var12 == null) {
               var13 = wl.a(param1, var9, true);
@@ -377,7 +377,7 @@ class ih extends hn {
 
     private final void a(int param0, byte param1, int param2) {
         int var4 = 0;
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param2 != this.field_O[param0]) {
           this.field_O[param0] = param2;
           for (var4 = 0; 128 > var4; var4++) {
@@ -399,7 +399,7 @@ class ih extends hn {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_q.g()) {
             var4_int = this.field_U * this.field_q.field_c / rc.field_d;
@@ -452,7 +452,7 @@ class ih extends hn {
             return false;
           }
           if (param1.field_x >= 0) {
-            param1.d(56);
+            param1.unlink(56);
             if (param1.field_F > 0) {
               if (this.field_I[param1.field_m][param1.field_F] != param1) {
                 return true;
@@ -476,7 +476,7 @@ class ih extends hn {
     }
 
     final synchronized void h(int param0) {
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         io var5 = (io) (this.field_T.b(1));
         int var3 = -125 % ((-68 - param0) / 49);
         while (var5 != null) {
@@ -489,20 +489,20 @@ class ih extends hn {
         mi var3;
         int var4;
         um var5;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (0 != (2 & this.field_o[param1])) {
-          var3 = (mi) (this.field_Q.field_p.e((byte) 89));
+          var3 = (mi) (this.field_Q.field_p.first((byte) 89));
           while (var3 != null) {
             if (var3.field_m == param1) {
               if (null != this.field_M[param1][var3.field_D]) {
-                var3 = (mi) (this.field_Q.field_p.a((byte) 123));
+                var3 = (mi) (this.field_Q.field_p.next((byte) 123));
                 continue;
               }
               if (0 > var3.field_x) {
                 var3.field_x = 0;
               }
             }
-            var3 = (mi) (this.field_Q.field_p.a((byte) 123));
+            var3 = (mi) (this.field_Q.field_p.next((byte) 123));
           }
         }
         if (param0) {
@@ -532,23 +532,23 @@ class ih extends hn {
 
     final static String e(int param0) {
         int var3 = 0;
-        at var4 = null;
-        jd var5 = null;
-        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
-        ic var1 = rd.field_j;
+        NodeDeque var4 = null;
+        Unit var5 = null;
+        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        GameplayController var1 = rd.field_j;
         if (var1 == null) {
           return "No game in progress.";
         }
-        at[] var2 = var1.field_xb.field_t;
+        NodeDeque[] var2 = var1.battlefield.unitsByPlayer;
         if (param0 <= 10) {
           return (String) null;
         }
         for (var3 = 0; var3 < var2.length; var3++) {
           var4 = var2[var3];
-          var5 = (jd) (var4.e((byte) 99));
+          var5 = (Unit) (var4.first((byte) 99));
           while (var5 != null) {
             var5.field_u = false;
-            var5 = (jd) (var4.a((byte) 123));
+            var5 = (Unit) (var4.next((byte) 123));
           }
         }
         return "Did that work?";
@@ -560,7 +560,7 @@ class ih extends hn {
 
     private final void a(int param0, int param1, int param2, int param3) {
         mi var6 = null;
-        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         mi var8 = this.field_M[param3][param1];
         if (var8 == null) {
           return;
@@ -572,7 +572,7 @@ class ih extends hn {
         if ((this.field_o[param3] & 2) == 0) {
           var8.field_x = 0;
         } else {
-          var6 = (mi) (this.field_Q.field_p.e((byte) 87));
+          var6 = (mi) (this.field_Q.field_p.first((byte) 87));
           while (var6 != null) {
             if (var6.field_m == var8.field_m &&
               var6.field_x < 0 &&
@@ -580,7 +580,7 @@ class ih extends hn {
               var8.field_x = 0;
               break;
             }
-            var6 = (mi) (this.field_Q.field_p.a((byte) 123));
+            var6 = (mi) (this.field_Q.field_p.next((byte) 123));
           }
         }
     }
@@ -657,13 +657,13 @@ class ih extends hn {
         int var8 = 0;
         double var9 = 0.0;
         int var11 = 0;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           param2.field_w = rc.field_d / 100;
           if (0 <= param2.field_x && (param2.field_K == null ||
             param2.field_K.i())) {
             param2.e(13301);
-            param2.d(-119);
+            param2.unlink(-119);
             if (param2.field_F > 0 &&
               param2 == this.field_I[param2.field_m][param2.field_F]) {
               this.field_I[param2.field_m][param2.field_F] = null;
@@ -751,7 +751,7 @@ class ih extends hn {
           }
           param2.e(13301);
           if (param2.field_x >= 0) {
-            param2.d(93);
+            param2.unlink(93);
             if (0 < param2.field_F &&
               this.field_I[param2.field_m][param2.field_F] == param2) {
               this.field_I[param2.field_m][param2.field_F] = null;
@@ -781,11 +781,11 @@ class ih extends hn {
     private final void b(int param0, int param1) {
         mi var3;
         int var4;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 != 0) {
           this.f(81, -106);
         }
-        var3 = (mi) (this.field_Q.field_p.e((byte) 105));
+        var3 = (mi) (this.field_Q.field_p.first((byte) 105));
         while (var3 != null) {
           if ((0 > param0 ||
             var3.field_m == param0) &&
@@ -793,13 +793,13 @@ class ih extends hn {
             this.field_M[var3.field_m][var3.field_D] = null;
             var3.field_x = 0;
           }
-          var3 = (mi) (this.field_Q.field_p.a((byte) 123));
+          var3 = (mi) (this.field_Q.field_p.next((byte) 123));
         }
     }
 
     private final void e(int param0, int param1) {
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
-        mi var3 = (mi) (this.field_Q.field_p.e((byte) 121));
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        mi var3 = (mi) (this.field_Q.field_p.first((byte) 121));
         if (param0 != -23024) {
           this.field_W = (int[]) null;
         }
@@ -816,9 +816,9 @@ class ih extends hn {
             if (var3.field_x < 0) {
               this.field_M[var3.field_m][var3.field_D] = null;
             }
-            var3.d(-118);
+            var3.unlink(-118);
           }
-          var3 = (mi) (this.field_Q.field_p.a((byte) 123));
+          var3 = (mi) (this.field_Q.field_p.next((byte) 123));
         }
     }
 
@@ -844,7 +844,7 @@ class ih extends hn {
 
     private final void d(int param0, int param1) {
         int var4;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 < 0) {
           for (param1 = 0; param1 < 16; param1++) {
             this.d(59, param1);
@@ -892,7 +892,7 @@ class ih extends hn {
         int var4Lifetime3Lifetime2;
         int var5Lifetime3Lifetime1;
         int var5Lifetime3Lifetime2;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var3 = 240 & param1;
         if (param0 < 102) {
           return;
@@ -1064,7 +1064,7 @@ class ih extends hn {
         int var5;
         int var6;
         boolean decompiledFrameCompleted0 = true;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_q.g()) {
           var2 = this.field_q.field_c * this.field_U / rc.field_d;
           while (true) {
@@ -1103,7 +1103,7 @@ class ih extends hn {
         io var10;
         io var11;
         io var12;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.a(param0, param1, -44, param3);
         if ((2 & this.field_o[param3]) != 0) {
           var5 = (mi) (this.field_Q.field_p.d((byte) -83));
@@ -1166,7 +1166,7 @@ class ih extends hn {
           }
           this.field_I[param3][var7.field_F] = var7;
         }
-        this.field_Q.field_p.a((byte) -119, (tc) (var7));
+        this.field_Q.field_p.a((byte) -119, (IntrusiveNode) (var7));
         this.field_M[param3][param1] = var7;
         return;
     }
@@ -1201,15 +1201,15 @@ class ih extends hn {
 
     private final void a(int param0, byte param1) {
         mi var4 = null;
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var3 = -88 / ((param1 - 1) / 57);
         if ((4 & this.field_o[param0]) != 0) {
-          var4 = (mi) (this.field_Q.field_p.e((byte) 107));
+          var4 = (mi) (this.field_Q.field_p.first((byte) 107));
           while (var4 != null) {
             if (var4.field_m == param0) {
               var4.field_B = 0;
             }
-            var4 = (mi) (this.field_Q.field_p.a((byte) 123));
+            var4 = (mi) (this.field_Q.field_p.next((byte) 123));
           }
         }
     }
@@ -1219,11 +1219,11 @@ class ih extends hn {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
-        wk var8 = null;
+        RgbSprite var8 = null;
         int var9 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           param2 = param2 << 8 | param2;
           var4_int = param2 ^ param2 >> 1;
@@ -1295,7 +1295,7 @@ class ih extends hn {
 
     private final void a(boolean param0, boolean param1) {
         int var3 = 0;
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var3Lifetime1;
         if (!param0) {
           return;

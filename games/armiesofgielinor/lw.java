@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lw extends pt {
-    static wk field_ob;
+    static RgbSprite field_ob;
     static String field_nb;
     static String field_lb;
     static int field_mb;
@@ -11,7 +11,7 @@ final class lw extends pt {
 
     final static void a(byte param0, mq param1) {
         try {
-          as.field_E.a(param1, 80);
+          OwnerChangeEvent.field_E.a(param1, 80);
           if (param0 != 79) {
             field_nb = (String) null;
           }

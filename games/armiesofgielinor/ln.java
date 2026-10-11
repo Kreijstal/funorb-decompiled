@@ -53,7 +53,7 @@ final class ln {
 
     final String a(byte param0) {
         int var4 = 0;
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         String var2 = "coat=";
         int var3 = -16 % ((param0 + 23) / 40);
         for (var4 = 0; this.field_a.length > var4; var4++) {
@@ -93,7 +93,7 @@ final class ln {
         int var12 = 0;
         String var5Lifetime1;
         int var4_intLifetime1;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           ck.field_e = new qb[or.field_f.length][];
           for (var4_int = param3; or.field_f.length > var4_int; var4_int++) {
@@ -117,7 +117,7 @@ final class ln {
                 pv.field_a[var12] = new qb[]{};
               } else {
                 pv.field_a[var12] = new qb[1];
-                var6 = bv.field_u[var12];
+                var6 = CipherPacketBuffer.field_u[var12];
                 pv.field_a[var12][0] = new qb(param0, var11, var6);
               }
               var12++;
@@ -160,7 +160,7 @@ final class ln {
         this.field_a[param2] = param1;
     }
 
-    final wk a(String param0, byte param1, boolean param2) {
+    final RgbSprite a(String param0, byte param1, boolean param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String var5 = null;
@@ -170,15 +170,15 @@ final class ln {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          no.field_P.field_v = qn.field_g;
+          no.field_P.field_v = SoftwareRaster.field_g;
           if (param1 != -70) {
             var5 = (String) null;
             this.a(false, true, (byte) -47, true, false, true, -69, (String) null, 102);
           }
-          no.field_P.field_B = qn.field_d;
-          no.field_P.field_y = qn.field_l;
+          no.field_P.field_B = SoftwareRaster.field_d;
+          no.field_P.field_y = SoftwareRaster.field_l;
           ku.field_J.b();
-          qn.b();
+          SoftwareRaster.b();
           if (!param2) {
             var4_int = this.field_a[3];
             this.field_a[3] = -1;
@@ -188,7 +188,7 @@ final class ln {
           dm.a(-1, -1, this.field_a, -1, false, this.field_b, -1, false, 0, false, 0, param0);
           no.field_P.b();
           stackIn_5_0 = ew.a((byte) 107, ku.field_J);
-          return (wk) ((Object) stackIn_5_0);
+          return (RgbSprite) ((Object) stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -221,11 +221,11 @@ final class ln {
         int[] var19 = null;
         int[] var20 = null;
         int[] var21 = null;
-        var17 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          no.field_P.field_v = qn.field_g;
-          no.field_P.field_B = qn.field_d;
-          no.field_P.field_y = qn.field_l;
+          no.field_P.field_v = SoftwareRaster.field_g;
+          no.field_P.field_B = SoftwareRaster.field_d;
+          no.field_P.field_y = SoftwareRaster.field_l;
           if (param8) {
             if (null == dv.field_k ||
               param1 != t.field_f) {
@@ -245,7 +245,7 @@ final class ln {
             dv.field_k.d(-20 + param4, param2 - 15, 92, 92, 256);
           }
           ku.field_J.b();
-          qn.b();
+          SoftwareRaster.b();
           if (param6) {
             cc.a(0, -1, this.field_a, -1, -1, false, -1, param5, this.field_b, 0);
           } else {
@@ -296,13 +296,13 @@ final class ln {
         int var10_int = 0;
         RuntimeException var10 = null;
         int var11 = 0;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          no.field_P.field_v = qn.field_g;
-          no.field_P.field_B = qn.field_d;
-          no.field_P.field_y = qn.field_l;
+          no.field_P.field_v = SoftwareRaster.field_g;
+          no.field_P.field_B = SoftwareRaster.field_d;
+          no.field_P.field_y = SoftwareRaster.field_l;
           ku.field_J.b();
-          qn.b();
+          SoftwareRaster.b();
           if (!param3) {
             var10_int = this.field_a[3];
             this.field_a[3] = -1;
@@ -327,7 +327,7 @@ final class ln {
             field_d = (byte[]) null;
           }
           ko.field_g.b();
-          qn.b();
+          SoftwareRaster.b();
           ku.field_J.e(0, 0);
           no.field_P.b();
           ko.field_g.h(param8, param6);
@@ -360,19 +360,19 @@ final class ln {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var9 = null;
         int var10 = 0;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param7 <= 16) {
             field_d = (byte[]) null;
           }
-          no.field_P.field_y = qn.field_l;
-          no.field_P.field_B = qn.field_d;
-          no.field_P.field_v = qn.field_g;
+          no.field_P.field_y = SoftwareRaster.field_l;
+          no.field_P.field_B = SoftwareRaster.field_d;
+          no.field_P.field_v = SoftwareRaster.field_g;
           if (param6) {
             a.field_m[0].d(-40 + param0, -30 + param4, 184, 184, 256);
           }
           ku.field_J.b();
-          qn.b();
+          SoftwareRaster.b();
           cc.a(0, -1, this.field_a, -1, -1, false, -1, param1, this.field_b, 0);
           if (!param3) {
             if (!param2) {

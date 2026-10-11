@@ -36,18 +36,18 @@ final class fj {
         this.c((byte) -71);
     }
 
-    final static void a(byte param0, tc param1, tc param2) {
+    final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
-          if (param1.field_j != null) {
-            param1.d(-105);
+          if (param1.previous != null) {
+            param1.unlink(-105);
           }
-          param1.field_j = param2.field_j;
+          param1.previous = param2.previous;
           if (param0 != -123) {
             field_a = (String) null;
           }
-          param1.field_b = param2;
-          param1.field_j.field_b = param1;
-          param1.field_b.field_j = param1;
+          param1.next = param2;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "fj.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -72,7 +72,7 @@ final class fj {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 != -2) {
             return;
@@ -171,8 +171,8 @@ final class fj {
     final static void a(java.awt.Component param0, byte param1) {
         try {
           if (param1 != 35) {
-            tc var3 = (tc) null;
-            fj.$cfr$intArgs$a$f94c566f195c(-121, (tc) null, (tc) null);
+            IntrusiveNode var3 = (IntrusiveNode) null;
+            fj.$cfr$intArgs$a$f94c566f195c(-121, (IntrusiveNode) null, (IntrusiveNode) null);
           }
           param0.removeKeyListener(va.field_w);
           param0.removeFocusListener(va.field_w);
@@ -285,7 +285,7 @@ final class fj {
         int var3Lifetime1;
         int var4Lifetime1;
         int var4Lifetime2;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = this.field_m;
         if (param0 == 56) {
           var3 = this.field_g;
@@ -442,18 +442,18 @@ final class fj {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$f94c566f195c(int param0, tc param1, tc param2) {
+    final static void $cfr$intArgs$a$f94c566f195c(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
-          if (param1.field_j != null) {
-            param1.d(-105);
+          if (param1.previous != null) {
+            param1.unlink(-105);
           }
-          param1.field_j = param2.field_j;
+          param1.previous = param2.previous;
           if (param0 != -123) {
             field_a = (String) null;
           }
-          param1.field_b = param2;
-          param1.field_j.field_b = param1;
-          param1.field_b.field_j = param1;
+          param1.next = param2;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "fj.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

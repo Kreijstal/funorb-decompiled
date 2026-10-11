@@ -19,7 +19,7 @@ final class rr {
         return var1;
     }
 
-    final static boolean a(byte param0, vh param1) {
+    final static boolean a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

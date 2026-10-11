@@ -8,7 +8,7 @@ final class ai extends hs {
     qm field_S;
     static bp field_T;
     static String field_J;
-    static at field_P;
+    static NodeDeque field_P;
     static String field_V;
     static String field_R;
     private boolean field_O;
@@ -42,7 +42,7 @@ final class ai extends hs {
         }
     }
 
-    final static int a(bv param0, boolean param1) {
+    final static int a(CipherPacketBuffer param0, boolean param1) {
         RuntimeException var2 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -126,7 +126,7 @@ final class ai extends hs {
     }
 
     private final void f(byte param0) {
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != -3) {
           return;
         }
@@ -839,6 +839,6 @@ final class ai extends hs {
         field_V = "Campaigns";
         field_N = "Select a unit to use this item on.";
         field_M = 1;
-        field_P = new at();
+        field_P = new NodeDeque();
     }
 }

@@ -107,7 +107,7 @@ final class ut extends sf implements he {
           this.field_jb = stackIn_31_1;
           stackIn_34_0 = (!pr.b(85)) ? 0 : 1;
           var2_intLifetime1 = stackIn_34_0;
-          stackIn_37_1 = !(nw.g(79));
+          stackIn_37_1 = !(DamageEvent.g(79));
           this.field_hb = stackIn_37_1;
           stackIn_40_0 = (var2_intLifetime1 != 0) ? 3 : 2;
           var3Lifetime1 = stackIn_40_0;
@@ -148,7 +148,7 @@ final class ut extends sf implements he {
           this.a((byte) 10, (kb) (this.field_gb));
           this.field_mb = this.a((qo) (this), oq.field_j, oa.field_H, false);
           if (var2_intLifetime1 != 0) {
-            this.field_Z = this.a((qo) (this), jd.field_n, dq.field_e, false);
+            this.field_Z = this.a((qo) (this), Unit.field_n, dq.field_e, false);
           }
           this.field_bb = this.a((qo) (this), oo.field_e, tg.field_b, false);
           if (var2_intLifetime1 != 0) {
@@ -190,7 +190,7 @@ final class ut extends sf implements he {
           if (var2_intLifetime1 != 0 ||
             var4Lifetime1 != 0) {
             if (var2_intLifetime1 != 0) {
-              stackIn_74_0 = oj.field_l;
+              stackIn_74_0 = GameEvent.field_l;
             } else {
               stackIn_74_0 = fj.field_w;
             }
@@ -250,7 +250,7 @@ final class ut extends sf implements he {
         RuntimeException var6 = null;
         int var7 = 0;
         ru[] var8 = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 11) {
             var8 = (ru[]) null;
@@ -317,7 +317,7 @@ final class ut extends sf implements he {
 
     private final void r(int param0) {
         int var2 = 0;
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_mb == this.field_Y) {
           ck.b(param0 - 59);
           jb.e(param0 ^ -17024);
@@ -347,7 +347,7 @@ final class ut extends sf implements he {
     private final void q(int param0) {
         int var3 = 0;
         fw var4 = null;
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         fw[] var6 = this.field_kb;
         fw[] var2 = var6;
         for (var3 = 0; var6.length > var3; var3++) {
@@ -370,7 +370,7 @@ final class ut extends sf implements he {
           sq.field_k = param2;
         }
         wp.field_w[kt.field_p] = param3;
-        ci.field_c[kt.field_p] = param0;
+        TutorialController.field_c[kt.field_p] = param0;
         pe.field_s[kt.field_p] = param1;
         int var6 = param0 + (param3 + param1);
         int var7 = var6 == 0 ? 0 : 1000 * param3 / var6;
@@ -387,7 +387,7 @@ final class ut extends sf implements he {
         }
     }
 
-    final static sc a(bv param0, byte param1, int param2) {
+    final static sc a(CipherPacketBuffer param0, byte param1, int param2) {
         sc var3 = null;
         RuntimeException var3_ref = null;
         sc stackIn_5_0 = null;
@@ -450,7 +450,7 @@ final class ut extends sf implements he {
         int[] var1Lifetime2;
         int var2Lifetime1;
         int var2Lifetime2;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           mu.field_a = null;
           qc.field_j = 0;
@@ -462,7 +462,7 @@ final class ut extends sf implements he {
           }
           if (pv.field_c) {
             pq.field_f = null;
-            fi.field_u = new at();
+            fi.field_u = new NodeDeque();
             var10 = ei.field_e;
             var7 = var10;
             var4 = var7;
@@ -487,7 +487,7 @@ final class ut extends sf implements he {
             pv.field_c = false;
           }
           if (cl.field_t) {
-            vh.i((byte) -97);
+            PacketBuffer.i((byte) -97);
             pu.d(-112);
             da.c(-120);
             cl.field_t = false;
@@ -615,7 +615,7 @@ final class ut extends sf implements he {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           super.a(param0, param1, param2, param3);
           if (lk.field_f) {
@@ -630,7 +630,7 @@ final class ut extends sf implements he {
             }
           }
           if (!this.field_hb &&
-            !nw.g(115)) {
+            !DamageEvent.g(115)) {
             this.n(88);
             this.field_G.a(new ut(this.field_G), 0);
           }
@@ -681,7 +681,7 @@ final class ut extends sf implements he {
         Object var5 = null;
         int var6 = 0;
         int var7 = 0;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5 = null;
           if (!this.field_mb.a(false)) {

@@ -3,7 +3,7 @@
  */
 final class td implements kh {
     static je field_g;
-    private ka field_b;
+    private BitmapFont field_b;
     private int field_e;
     static String field_h;
     static sn[][] field_d;
@@ -39,7 +39,7 @@ final class td implements kh {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 > -79) {
             return;
@@ -89,7 +89,7 @@ final class td implements kh {
     }
 
     final static int a(int param0, byte param1) {
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var2 = param0;
         if (var2 == 59) {
           return 2;
@@ -126,7 +126,7 @@ final class td implements kh {
         this.field_c = 1;
     }
 
-    td(ka param0, int param1, int param2) {
+    td(BitmapFont param0, int param1, int param2) {
         try {
           this.field_b = param0;
           this.field_c = param2;

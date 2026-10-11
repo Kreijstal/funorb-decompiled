@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class lk implements kh, pm {
-    ka field_q;
+    BitmapFont field_q;
     int field_m;
     int field_n;
     int field_g;
@@ -23,7 +23,7 @@ class lk implements kh, pm {
     int field_t;
     int field_k;
 
-    lk(ka param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    lk(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -178,7 +178,7 @@ class lk implements kh, pm {
         int var7 = 0;
         int var8 = 0;
         int var7Lifetime1;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0.field_u == null) {
             param0.field_u = (ju) ((Object) new ak());
@@ -502,7 +502,7 @@ class lk implements kh, pm {
         int var16 = 0;
         ju var17 = null;
         ju var18 = null;
-        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != -21259) {
             return;
@@ -599,7 +599,7 @@ class lk implements kh, pm {
         int var12 = 0;
         int var13 = 0;
         int var12Lifetime1;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param7 != 2) {
             this.field_b = -74;
@@ -727,13 +727,13 @@ class lk implements kh, pm {
     final static void a(hd param0, int param1, nm param2, byte param3, boolean param4, java.awt.Component param5) {
         try {
           int var6_int = -98 / ((param3 + 3) / 46);
-          ca.a(param5, 1024, param0, param4, -115, param2, param1, param1);
+          TileMetadata.a(param5, 1024, param0, param4, -115, param2, param1, param1);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "lk.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    lk(ka param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    lk(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_g = param3;
           this.field_c = param12 ? true : false;

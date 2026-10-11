@@ -126,12 +126,12 @@ final class hw extends mn {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        wk var5 = null;
+        RgbSprite var5 = null;
         int var6 = 0;
-        wk var7 = null;
-        wk var5Lifetime1;
+        RgbSprite var7 = null;
+        RgbSprite var5Lifetime1;
         int var4Lifetime1;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = -1;
           if (null != gv.field_a &&
@@ -173,7 +173,7 @@ final class hw extends mn {
         }
     }
 
-    final bd a(int param0, ha param1) {
+    final bd a(int param0, Battlefield param1) {
         int var6 = 0;
         String discarded$0 = null;
         String discarded$1 = null;
@@ -193,21 +193,21 @@ final class hw extends mn {
         int var7 = 0;
         int var8 = 0;
         int var4Lifetime1;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.d(-114);
+          this.unlink(-114);
           if (this.field_v == 74 &&
-            param1.field_Bb) {
+            param1.kingBlackDragonSummoned) {
             this.field_v = 4;
           }
           if (this.field_v == 4 &&
-            param1.field_hb == 2) {
+            param1.mapTheme == 2) {
             this.field_v = 81;
           }
-          var3_int = bw.field_m[this.field_v][1];
+          var3_int = bw.unitDefinitions[this.field_v][1];
           if (var3_int != -1) {
             var4 = 0;
-            var5 = param1.field_c[this.field_p];
+            var5 = param1.chosenGods[this.field_p];
             for (var6 = 0; var6 < var5.length; var6++) {
               var7 = var5[var6];
               if (~var7 != ~var3_int) {
@@ -225,19 +225,19 @@ final class hw extends mn {
             var3_int = 12;
           }
           if (0 == (param1.c(this.field_E, -27300, this.field_A, this.field_p) & 1 << var3_int)) {
-            discarded$1 = this.a(new String[]{"Can't summon followers of god: ", Integer.toString(var3_int), " at ", ci.c(this.field_E, 0, this.field_A)}, (byte) -111);
+            discarded$1 = this.a(new String[]{"Can't summon followers of god: ", Integer.toString(var3_int), " at ", TutorialController.c(this.field_E, 0, this.field_A)}, (byte) -111);
             stackIn_24_0 = null;
             return (bd) (stackIn_24_0);
           }
           if (!param1.b(this.field_A, -26813, this.field_v, this.field_E, this.field_p)) {
-            discarded$2 = this.a(new String[]{"Can't afford creature type: ", Integer.toString(this.field_v), " at ", ci.c(this.field_E, 0, this.field_A)}, (byte) -87);
+            discarded$2 = this.a(new String[]{"Can't afford creature type: ", Integer.toString(this.field_v), " at ", TutorialController.c(this.field_E, 0, this.field_A)}, (byte) -87);
             stackIn_27_0 = null;
             return (bd) (stackIn_27_0);
           }
           if (param0 < 31) {
             field_y = (String) null;
           }
-          var4Lifetime1 = param1.a(bw.field_m[this.field_v][1], this.field_A, this.field_E, 0, this.field_p, bw.field_m[this.field_v][2]);
+          var4Lifetime1 = param1.a(bw.unitDefinitions[this.field_v][1], this.field_A, this.field_E, 0, this.field_p, bw.unitDefinitions[this.field_v][2]);
           stackIn_31_0 = new be(this.field_E, this.field_A, this.field_v, var4Lifetime1, this.field_p);
           return (bd) ((Object) stackIn_31_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -263,8 +263,8 @@ final class hw extends mn {
 
     final static void a(byte param0, int[] param1, int param2) {
         try {
-          kr.field_y[param2] = param1;
-          rq.field_p[param2] = new ci(param2);
+          MoveEvent.field_y[param2] = param1;
+          rq.field_p[param2] = new TutorialController(param2);
           if (param0 <= 17) {
             field_B = -14;
           }

@@ -18,7 +18,7 @@ final class pn extends nr {
         }
     }
 
-    pn(wk[] param0, int[] param1, int param2, int param3, boolean param4) {
+    pn(RgbSprite[] param0, int[] param1, int param2, int param3, boolean param4) {
         super(param0);
         try {
           this.field_j = param4 ? true : false;

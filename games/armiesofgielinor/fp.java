@@ -78,7 +78,7 @@ final class fp extends je {
         int var15Lifetime1;
         int var14Lifetime2;
         int var15Lifetime2;
-        var40 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var40 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param7 != 120) {
             field_Ib = (String) null;
@@ -161,11 +161,11 @@ final class fp extends je {
               stackIn_41_0 = null;
             }
             var21 = stackIn_41_0;
-            var22 = ca.field_f[var15Lifetime1];
+            var22 = TileMetadata.field_f[var15Lifetime1];
             var23 = fa.field_k[var15Lifetime1];
-            var24 = ca.field_f[var16];
+            var24 = TileMetadata.field_f[var16];
             var25 = fa.field_k[var16];
-            var26 = ca.field_f[var17];
+            var26 = TileMetadata.field_f[var17];
             var27 = fa.field_k[var17];
             if (var18 == var19 &&
               var20 == var19) {
@@ -222,7 +222,7 @@ final class fp extends je {
         }
     }
 
-    fp(long param0, wk param1, wk param2, int param3, je param4, String param5) {
+    fp(long param0, RgbSprite param1, RgbSprite param2, int param3, je param4, String param5) {
         this(param0, (je) null, param4, param5);
         try {
           this.field_Jb.field_cb = param2;
@@ -245,12 +245,12 @@ final class fp extends je {
         return new gl(sk.i(-4938), gi.a(false));
     }
 
-    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, byte param2, vh param3, vh param4) {
+    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, byte param2, PacketBuffer param3, PacketBuffer param4) {
         try {
           if (param2 != 26) {
             field_Lb = (je) null;
           }
-          ls.a(param4, 0, param0, 6727, param3.field_q, param1, param3.field_o);
+          ls.a(param4, 0, param0, 6727, param3.position, param1, param3.payload);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "fp.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

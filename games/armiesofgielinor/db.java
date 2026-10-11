@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class db {
-    static wk[] field_a;
+    static RgbSprite[] field_a;
     static String field_c;
     static int field_g;
     static String field_f;
@@ -117,7 +117,7 @@ final class db {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null == bk.field_a) {
             stackIn_3_0 = null;

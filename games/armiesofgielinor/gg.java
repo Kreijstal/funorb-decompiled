@@ -5,7 +5,7 @@ import java.util.*;
 
 final class gg extends dr {
     static int field_G;
-    static at field_F;
+    static NodeDeque field_F;
     static int field_I;
     static Random field_J;
     static String field_H;
@@ -58,7 +58,7 @@ final class gg extends dr {
 
     static {
         field_G = 6;
-        field_F = new at();
+        field_F = new NodeDeque();
         field_H = "Options";
         field_I = 2;
         field_J = new Random();

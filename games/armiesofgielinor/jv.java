@@ -5,7 +5,7 @@ final class jv {
     static boolean field_a;
     static int field_c;
     static int[][] field_d;
-    static wk[] field_b;
+    static RgbSprite[] field_b;
     static String field_e;
 
     final static int a(boolean param0, int param1) {
@@ -17,7 +17,7 @@ final class jv {
         int stackIn_11_0 = 0;
         int stackIn_15_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0) {
             stackIn_3_0 = -40;
@@ -59,9 +59,9 @@ final class jv {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 <= 26) {
-            field_b = (wk[]) null;
+            field_b = (RgbSprite[]) null;
           }
-          stackIn_3_0 = ne.a(-92, aa.a(param0, 100, param2, param1));
+          stackIn_3_0 = MapTile.a(-92, aa.a(param0, 100, param2, param1));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

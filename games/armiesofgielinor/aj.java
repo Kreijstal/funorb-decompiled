@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aj extends tc {
+final class aj extends IntrusiveNode {
     int field_m;
     static String field_p;
     int field_q;

@@ -20,7 +20,7 @@ final class kv extends tj implements he {
         RuntimeException var3 = null;
         td var4 = null;
         int var6 = 0;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_D.b(param0 - 11);
           if (param1 != null &&
@@ -28,7 +28,7 @@ final class kv extends tj implements he {
             var3_int = param1.length;
             this.field_H = new String[var3_int];
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.field_H[var4_int] = ug.a(kf.b(param0, 116), (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
+              this.field_H[var4_int] = ug.a(GrowthEvent.b(param0, 116), (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
             var4 = new td(ArmiesOfGielinor.field_J, 0, 1);
             this.field_E = new fw[var3_int + 1];
@@ -100,7 +100,7 @@ final class kv extends tj implements he {
         if (0 != param3) {
           return;
         }
-        ka var5 = ArmiesOfGielinor.field_J;
+        BitmapFont var5 = ArmiesOfGielinor.field_J;
         if (param2 > -82) {
           kv.b(true);
         }
@@ -206,7 +206,7 @@ final class kv extends tj implements he {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 11) {
             kv.a(false, (CharSequence) null, 'ﾪ');

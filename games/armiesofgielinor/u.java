@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class u extends tc {
+final class u extends IntrusiveNode {
     lv field_m;
     static pf field_l;
     static int[][] field_o;
@@ -34,7 +34,7 @@ final class u extends tc {
         int stackIn_63_0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_55_0;
-        bv var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         Object var3 = null;
@@ -51,7 +51,7 @@ final class u extends tc {
         String var4_ref_StringLifetime1;
         String var5Lifetime1;
         hl var6Lifetime1;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var1 = mg.field_e;
           var2 = var1.k(0);
@@ -88,7 +88,7 @@ final class u extends tc {
               fieldTemp$1 = vg.field_p;
               vg.field_p = vg.field_p + 1;
               var6.field_Ob = fieldTemp$1;
-              ot.field_E.a((byte) -119, (tc) (var6));
+              ot.field_E.a((byte) -119, (IntrusiveNode) (var6));
             }
             var6.field_Nb = var7_ref;
             var6.field_Pb = var5;
@@ -146,7 +146,7 @@ final class u extends tc {
             fieldTemp$0 = dj.field_a;
             dj.field_a = dj.field_a + 1;
             var6Lifetime1.field_Ob = fieldTemp$0;
-            wh.field_c.a((byte) -119, (tc) (var6Lifetime1));
+            wh.field_c.a((byte) -119, (IntrusiveNode) (var6Lifetime1));
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -154,9 +154,9 @@ final class u extends tc {
           var6Lifetime1.field_Ib = (String) (var3Lifetime1);
           var6Lifetime1.field_Nb = var5Lifetime1;
           var6Lifetime1.field_Mb = var4_ref_StringLifetime1;
-          var6Lifetime1.d(-124);
-          var7 = (hl) (wh.field_c.e((byte) 111));
-          L10: while (true) {
+          var6Lifetime1.unlink(-124);
+          var7 = (hl) (wh.field_c.first((byte) 111));
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (null != var7) {
               stackOut_55_0 = wd.a(false, var6Lifetime1, var7);
@@ -165,13 +165,13 @@ final class u extends tc {
               decompiledFrameRemainder0 = (var9 == 0);
               if ((decompiledFrameRemainder0) &&
                 (stackIn_56_0)) {
-                var7 = (hl) (wh.field_c.a((byte) 123));
+                var7 = (hl) (wh.field_c.next((byte) 123));
                 continue;
               }
             }
             if (decompiledFrameRemainder0) {
               if (null == var7) {
-                break L10;
+                break scanLoop1;
               }
               stackIn_63_0 = -123;
             }
@@ -181,7 +181,7 @@ final class u extends tc {
             }
             break;
           }
-          wh.field_c.a((byte) -119, (tc) (var6Lifetime1));
+          wh.field_c.a((byte) -119, (IntrusiveNode) (var6Lifetime1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

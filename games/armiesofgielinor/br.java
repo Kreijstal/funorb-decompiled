@@ -33,7 +33,7 @@ final class br {
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
         Throwable decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           try {
             if (!hd.field_n.startsWith("win")) {
@@ -88,12 +88,12 @@ final class br {
         return cd.field_a[param0];
     }
 
-    final static void a(ka param0, int param1, int param2, ka param3) {
+    final static void a(BitmapFont param0, int param1, int param2, BitmapFont param3) {
         try {
           pf.field_d = param1;
           sc.field_b = param0;
           ir.field_h = param3;
-          pt.c(qn.field_l / 2, qn.field_g / 2, 75);
+          pt.c(SoftwareRaster.field_l / 2, SoftwareRaster.field_g / 2, 75);
           uc.a(param0.field_L + param0.field_z, param0.field_z, param3.field_z, false, param3.field_L + param3.field_z);
           if (param2 != 333) {
             field_f = (boolean[]) null;

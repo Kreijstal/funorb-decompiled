@@ -15,7 +15,7 @@ final class la {
         int var3 = 0;
         int var2;
         int var4;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = aw.field_j[this.field_f].length;
         for (var3 = 0; var2 > var3; var3++) {
           if (aw.field_j[this.field_f][var3][0] >= 0) {
@@ -48,7 +48,7 @@ final class la {
         int[] var6 = null;
         int var2 = 0;
         int var3 = 0;
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var6 = jp.field_g;
           int[] var1 = var6;
@@ -87,7 +87,7 @@ final class la {
           var6 = ur.field_z;
           var4Lifetime1.field_i.a(0, var6, 0, (byte) -118, var5);
         }
-        tr.a(-115, param0, param1);
+        DeployEvent.a(-115, param0, param1);
         if (param2 != -1) {
           field_g = (java.applet.Applet) null;
         }
@@ -167,7 +167,7 @@ final class la {
         int var7 = 0;
         int var8 = 0;
         int var10 = 0;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           param1 = param1 | param1 << 8;
           if (param5) {

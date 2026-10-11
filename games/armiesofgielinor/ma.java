@@ -50,7 +50,7 @@ final class ma extends fn implements eg {
         wo var8 = null;
         int[] var9 = null;
         int[] var10 = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (!param1.b(false)) {
             stackIn_3_0 = new ls[]{};

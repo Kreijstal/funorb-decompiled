@@ -8,10 +8,10 @@ final class tb implements pa {
     private int[] field_k;
     private int field_m;
     static volatile int field_g;
-    private ha field_c;
+    private Battlefield field_c;
     static oc field_e;
     static int[] field_h;
-    static wk[] field_j;
+    static RgbSprite[] field_j;
     private v field_i;
     private vb field_f;
     static String field_b;
@@ -20,8 +20,8 @@ final class tb implements pa {
 
     public final void a(int param0) {
         if (param0 <= 94) {
-          oj var3 = (oj) null;
-          this.a((oj) null, (byte) -97);
+          GameEvent var3 = (GameEvent) null;
+          this.a((GameEvent) null, (byte) -97);
         }
     }
 
@@ -43,7 +43,7 @@ final class tb implements pa {
         ou.a(true);
         pl.field_A = true;
         fh.field_i = true;
-        rl.field_C.j(-102);
+        KingBlackDragonEvent.field_C.j(-102);
         if (param0 != 7) {
           tb.c(101);
         }
@@ -76,7 +76,7 @@ final class tb implements pa {
         int var13 = 0;
         int var14 = 0;
         int var16 = 0;
-        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param5 != -1 &&
             param5 != 255) {
@@ -111,8 +111,8 @@ final class tb implements pa {
                   stackIn_34_0 = var11;
                   stackIn_34_1 = param3 - (-((20 - (var10 >> 1)) * var7) - (-var15 - var12));
                   stackIn_34_2 = op.field_c;
-                  if (bv.field_w != null &&
-                    bv.field_w.field_wb) {
+                  if (CipherPacketBuffer.currentBattlefield != null &&
+                    CipherPacketBuffer.currentBattlefield.teamGame) {
                     stackIn_35_3 = 1;
                   } else {
                     stackIn_35_3 = 0;
@@ -124,7 +124,7 @@ final class tb implements pa {
                   } else {
                     stackIn_38_4 = var14;
                   }
-                  qn.g(stackIn_34_0, stackIn_34_1, stackIn_37_2, stackIn_37_3 - stackIn_38_4);
+                  SoftwareRaster.g(stackIn_34_0, stackIn_34_1, stackIn_37_2, stackIn_37_3 - stackIn_38_4);
                   var14 = var14 - var13;
                 }
               }
@@ -145,7 +145,7 @@ final class tb implements pa {
         field_a = null;
         field_d = null;
         if (param0 > -58) {
-          field_j = (wk[]) null;
+          field_j = (RgbSprite[]) null;
         }
         field_h = null;
         field_e = null;
@@ -160,7 +160,7 @@ final class tb implements pa {
           return false;
         }
         dupTemp$2 = vi.b(82);
-        mb.field_G = dupTemp$2;
+        SummonEvent.field_G = dupTemp$2;
         iq.field_h = dupTemp$2;
         if (kd.field_J.field_g != 1) {
         }
@@ -169,7 +169,7 @@ final class tb implements pa {
         return true;
     }
 
-    public final void b(oj param0, byte param1) {
+    public final void b(GameEvent param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
@@ -189,7 +189,7 @@ final class tb implements pa {
           if (param0 == null) {
             return;
           }
-          this.field_l = this.field_f.field_u.a(this.field_f.field_m + 1, -35, this.field_f.field_v - 6, -1, param0.field_w);
+          this.field_l = this.field_f.field_u.a(this.field_f.field_m + 1, -35, this.field_f.field_v - 6, -1, param0.unit);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,7 +205,7 @@ final class tb implements pa {
         }
     }
 
-    final static void a(int[] param0, vh param1, boolean param2, int[] param3) {
+    final static void a(int[] param0, PacketBuffer param1, boolean param2, int[] param3) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -217,7 +217,7 @@ final class tb implements pa {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = 0;
           if (param2) {
@@ -258,7 +258,7 @@ final class tb implements pa {
         }
     }
 
-    public final boolean a(oj param0, byte param1) {
+    public final boolean a(GameEvent param0, byte param1) {
         RuntimeException stackIn_74_0 = null;
         StringBuilder stackIn_74_1 = null;
         String stackIn_75_2 = null;
@@ -267,194 +267,194 @@ final class tb implements pa {
         int var4 = 0;
         String var4_ref_String = null;
         int var6 = 0;
-        hp var7 = null;
+        DeathEvent var7 = null;
         String var8 = null;
-        kf var9 = null;
+        GrowthEvent var9 = null;
         String var10 = null;
-        qq var11 = null;
+        StateChangeEvent var11 = null;
         String var12 = null;
-        ec var13 = null;
+        TeleportEvent var13 = null;
         String var14 = null;
-        tr var15 = null;
+        DeployEvent var15 = null;
         String var16 = null;
         String var17 = null;
         Object var18 = null;
-        qq var18_ref = null;
+        StateChangeEvent var18_ref = null;
         String var19 = null;
         Object var20 = null;
-        kn var20_ref = null;
+        TelefragEvent var20_ref = null;
         Object var21 = null;
-        q var21_ref = null;
+        TelepopEvent var21_ref = null;
         String var22 = null;
         Object var23 = null;
-        qq var23_ref = null;
+        StateChangeEvent var23_ref = null;
         String var24 = null;
         var18 = null;
         var20 = null;
         var21 = null;
         var23 = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
           if (param0.field_m != 10) {
             if (param0.field_m != 11) {
               if (3 == param0.field_m) {
-                var23_ref = (qq) (param0);
+                var23_ref = (StateChangeEvent) (param0);
                 var4 = this.field_m * var23_ref.field_J + var23_ref.field_I;
                 this.field_f.field_x = var4;
-                var23_ref.field_w = this.field_c.c(var23_ref.field_J, true, var23_ref.field_I);
-                if (var23_ref.field_w == null) {
+                var23_ref.unit = this.field_c.getUnitAt(var23_ref.field_J, true, var23_ref.field_I);
+                if (var23_ref.unit == null) {
                   var24 = nv.field_bb + ": Can see capture";
                   this.field_c.a(param1 ^ 57, var24, param0);
                   return false;
                 }
                 ub.$cfr$intArgs$a$6d836999ad61(91, im.field_v[8]);
-                var23_ref.field_w.field_z = 5;
-                var23_ref.a(var23_ref.field_w, 12);
+                var23_ref.unit.field_z = 5;
+                var23_ref.a(var23_ref.unit, 12);
                 this.b(var23_ref, (byte) -95);
               } else {
                 if (param0.field_m != 17) {
                   if (param0.field_m != 21) {
                     if (param0.field_m == 6) {
-                      var21_ref = (q) (param0);
-                      var21_ref.field_w = this.field_c.c(var21_ref.field_E, true, var21_ref.field_z);
+                      var21_ref = (TelepopEvent) (param0);
+                      var21_ref.unit = this.field_c.getUnitAt(var21_ref.field_E, true, var21_ref.field_z);
                       var4 = var21_ref.field_z + this.field_m * var21_ref.field_E;
                       this.field_f.field_x = var4;
-                      if (null != var21_ref.field_w &&
-                        var21_ref.field_w.field_bb) {
-                        var21_ref.field_w = var21_ref.field_w.b(false);
+                      if (null != var21_ref.unit &&
+                        var21_ref.unit.packedFlag256) {
+                        var21_ref.unit = var21_ref.unit.b(false);
                       }
-                      if (null == var21_ref.field_w) {
+                      if (null == var21_ref.unit) {
                         var22 = nv.field_bb + ": Can see telepop";
                         this.field_c.a(0, var22, param0);
                         return false;
                       }
-                      var21_ref.field_w.field_z = 2;
-                      var21_ref.a(var21_ref.field_w, 12);
+                      var21_ref.unit.field_z = 2;
+                      var21_ref.a(var21_ref.unit, 12);
                       this.b(var21_ref, (byte) -103);
                     } else {
                       if (param0.field_m == 5) {
-                        var20_ref = (kn) (param0);
-                        if (var20_ref.field_w == null) {
+                        var20_ref = (TelefragEvent) (param0);
+                        if (var20_ref.unit == null) {
                           var4_ref_String = nv.field_bb + ": Telefrag unit null";
                           this.field_c.a(0, var4_ref_String, param0);
                           return false;
                         }
-                        var4 = var20_ref.field_w.field_J + var20_ref.field_w.field_w * this.field_m;
-                        var20_ref.field_w.field_z = 1;
+                        var4 = var20_ref.unit.tileX + var20_ref.unit.tileY * this.field_m;
+                        var20_ref.unit.field_z = 1;
                         this.field_f.field_x = var4;
-                        dh.a(var20_ref.field_w.field_N, 0, param1 ^ 25);
-                        var20_ref.a(var20_ref.field_w, 12);
+                        dh.a(var20_ref.unit.unitType, 0, param1 ^ 25);
+                        var20_ref.a(var20_ref.unit, 12);
                         this.b(var20_ref, (byte) -115);
                       } else {
                         if (12 != param0.field_m &&
                           param0.field_m != 16 &&
                           param0.field_m != 14) {
                           if ((param0.field_m == 18)) {
-                            var15 = (tr) (param0);
+                            var15 = (DeployEvent) (param0);
                             var4 = var15.field_E + this.field_m * var15.field_D;
                             this.field_f.field_x = var4;
-                            var15.field_w = this.field_c.c(var15.field_D, true, var15.field_E);
-                            if (var15.field_w == null) {
+                            var15.unit = this.field_c.getUnitAt(var15.field_D, true, var15.field_E);
+                            if (var15.unit == null) {
                               var16 = nv.field_bb + ": Can see deployment";
                               this.field_c.a(0, var16, param0);
                               return false;
                             }
-                            if (34 == var15.field_w.field_N) {
-                              var15.field_w.c(75, param1 ^ 49);
-                              var15.field_w.field_z = 1;
+                            if (34 == var15.unit.unitType) {
+                              var15.unit.c(75, param1 ^ 49);
+                              var15.unit.field_z = 1;
                             } else {
-                              if (var15.field_w.field_N != 7 &&
-                                17 != var15.field_w.field_N) {
+                              if (var15.unit.unitType != 7 &&
+                                17 != var15.unit.unitType) {
                                 var17 = nv.field_bb + ": Unit not deployable";
                                 this.field_c.a(0, var17, param0);
                                 return false;
                               }
-                              var15.field_w.field_z = 4;
+                              var15.unit.field_z = 4;
                             }
-                            var15.a(var15.field_w, 12);
+                            var15.a(var15.unit, 12);
                             this.b(var15, (byte) -75);
                           }
                           decompiledFrameRemainder0 = false;
                         }
                         else {
-                          var18_ref = (qq) (param0);
+                          var18_ref = (StateChangeEvent) (param0);
                           var4 = var18_ref.field_I + var18_ref.field_J * this.field_m;
                           this.field_f.field_x = var4;
-                          var18_ref.field_w = this.field_c.c(var18_ref.field_J, true, var18_ref.field_I);
-                          if (var18_ref.field_w == null) {
+                          var18_ref.unit = this.field_c.getUnitAt(var18_ref.field_J, true, var18_ref.field_I);
+                          if (var18_ref.unit == null) {
                             var19 = nv.field_bb + ": Can see heal, raise, pump";
                             this.field_c.a(0, var19, param0);
                             return false;
                           }
-                          var18_ref.field_w.field_z = 8;
-                          var18_ref.a(var18_ref.field_w, 12);
+                          var18_ref.unit.field_z = 8;
+                          var18_ref.a(var18_ref.unit, 12);
                           this.b(var18_ref, (byte) -124);
                         }
                       }
                     }
                   } else {
-                    var13 = (ec) (param0);
+                    var13 = (TeleportEvent) (param0);
                     var4 = var13.field_A + var13.field_B * this.field_m;
-                    var13.field_w = this.field_c.c(var13.field_B, true, var13.field_A);
-                    if (null != var13.field_w &&
-                      var13.field_w.field_bb) {
-                      var13.field_w = var13.field_w.b(false);
+                    var13.unit = this.field_c.getUnitAt(var13.field_B, true, var13.field_A);
+                    if (null != var13.unit &&
+                      var13.unit.packedFlag256) {
+                      var13.unit = var13.unit.b(false);
                     }
                     this.field_f.field_x = var4;
-                    if (var13.field_w == null) {
+                    if (var13.unit == null) {
                       var14 = nv.field_bb + ": Can see teleport";
                       this.field_c.a(0, var14, param0);
                       return false;
                     }
-                    dh.a(var13.field_w.field_N, 0, 32);
-                    var13.field_w.field_z = 2;
-                    var13.a(var13.field_w, 12);
+                    dh.a(var13.unit.unitType, 0, 32);
+                    var13.unit.field_z = 2;
+                    var13.a(var13.unit, 12);
                     this.b(var13, (byte) 73);
                   }
                 } else {
-                  var11 = (qq) (param0);
+                  var11 = (StateChangeEvent) (param0);
                   var4 = this.field_m * var11.field_J + var11.field_I;
                   this.field_f.field_x = var4;
-                  var11.field_w = this.field_c.c(var11.field_J, true, var11.field_I);
-                  if (null == var11.field_w) {
+                  var11.unit = this.field_c.getUnitAt(var11.field_J, true, var11.field_I);
+                  if (null == var11.unit) {
                     var12 = nv.field_bb + ": Can see burial";
                     this.field_c.a(0, var12, param0);
                     return false;
                   }
-                  var11.field_w.field_z = 4;
-                  var11.a(var11.field_w, 12);
+                  var11.unit.field_z = 4;
+                  var11.a(var11.unit, 12);
                   this.b(var11, (byte) -126);
                 }
               }
             } else {
-              var9 = (kf) (param0);
+              var9 = (GrowthEvent) (param0);
               var4 = var9.field_H + var9.field_F * this.field_m;
               this.field_f.field_x = var4;
-              if (null == var9.field_w) {
+              if (null == var9.unit) {
                 var10 = nv.field_bb + ": Can see growth";
                 this.field_c.a(0, var10, param0);
                 return false;
               }
-              var9.field_w.field_z = 1;
-              var9.a(var9.field_w, 12);
+              var9.unit.field_z = 1;
+              var9.a(var9.unit, 12);
               this.b(var9, (byte) 123);
             }
           } else {
-            var7 = (hp) (param0);
+            var7 = (DeathEvent) (param0);
             var4 = var7.field_y + var7.field_D * this.field_m;
             this.field_f.field_x = var4;
-            if (null == var7.field_w) {
-              var7.field_w = this.field_c.c(var7.field_D, true, var7.field_y);
+            if (null == var7.unit) {
+              var7.unit = this.field_c.getUnitAt(var7.field_D, true, var7.field_y);
             }
-            if (null == var7.field_w) {
+            if (null == var7.unit) {
               var8 = nv.field_bb + ": Can see death";
               this.field_c.a(0, var8, param0);
               return false;
             }
-            var7.field_w.field_z = 7;
-            dh.a(var7.field_w.field_N, 5, param1 - 25);
-            var7.a(var7.field_w, 12);
+            var7.unit.field_z = 7;
+            dh.a(var7.unit.unitType, 5, param1 - 25);
+            var7.a(var7.unit, 12);
             this.b(var7, (byte) 68);
           }
           if (param1 == 57) {
@@ -488,7 +488,7 @@ final class tb implements pa {
         }
     }
 
-    tb(ha param0, v param1, vb param2) {
+    tb(Battlefield param0, v param1, vb param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -499,7 +499,7 @@ final class tb implements pa {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_m = param0.field_v;
+          this.field_m = param0.mapWidth;
           this.field_i = param1;
           this.field_f = param2;
           this.field_c = param0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jb extends tc {
+final class jb extends IntrusiveNode {
     int field_m;
     int field_k;
     static String field_n;
@@ -38,7 +38,7 @@ final class jb extends tc {
         return this.field_k != -1 ? true : false;
     }
 
-    final int a(byte param0, ej param1) {
+    final int a(byte param0, AiPlanner param1) {
         int stackIn_15_0 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -113,7 +113,7 @@ final class jb extends tc {
         int var5 = 0;
         char[] var6 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 16150) {
             return true;

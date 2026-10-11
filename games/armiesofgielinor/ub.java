@@ -19,7 +19,7 @@ final class ub {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 24) {
-            stackIn_4_0 = ne.a(-69, aa.a(param1, 100, 96));
+            stackIn_4_0 = MapTile.a(-69, aa.a(param1, 100, 96));
             return stackIn_4_0;
           }
           stackIn_2_0 = (te) null;
@@ -39,7 +39,7 @@ final class ub {
     }
 
     final boolean b(byte param0, int param1, int param2, int param3, int param4) {
-        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var6 = 0;
         if (param0 != 117) {
           sn var8 = (sn) null;
@@ -56,7 +56,7 @@ final class ub {
 
     final int a(byte param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
-        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 >= -92) {
           field_d = 33;
         }
@@ -79,7 +79,7 @@ final class ub {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var8 = 0;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var6_int = param2[6];
           for (var7 = 0; this.field_c > var7; var7++) {
@@ -90,12 +90,12 @@ final class ub {
                 this.field_b[var7].a(param2[-1 + this.field_b[var7].field_c], param4 + 16, false, param3 + 16);
               }
             } else {
-              if (-1 != bw.field_m[this.field_b[var7].field_i][1]) {
-                var6_int = param2[bw.field_m[this.field_b[var7].field_i][1]];
+              if (-1 != bw.unitDefinitions[this.field_b[var7].field_i][1]) {
+                var6_int = param2[bw.unitDefinitions[this.field_b[var7].field_i][1]];
               }
               stackIn_9_0 = this.field_b[var7];
-              if (param0 >= bw.field_m[this.field_b[var7].field_i][8] &&
-                var6_int >= bw.field_m[this.field_b[var7].field_i][2]) {
+              if (param0 >= bw.unitDefinitions[this.field_b[var7].field_i][8] &&
+                var6_int >= bw.unitDefinitions[this.field_b[var7].field_i][2]) {
                 stackIn_10_1 = 1;
               } else {
                 stackIn_10_1 = 0;
@@ -123,7 +123,7 @@ final class ub {
 
     final static String a(byte param0, int param1) {
         int var3 = 0;
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (0 > param1 ||
           param1 >= 3) {
           return "Unkown Campaign " + param1;
@@ -141,7 +141,7 @@ final class ub {
     final jr a(int param0, int param1) {
         int var3;
         int var4;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var3 = 0;
         if (param1 != -15050) {
           field_a = (String) null;
@@ -217,7 +217,7 @@ final class ub {
         }
     }
 
-    final static vb a(oj param0, ha param1, boolean param2, int param3, ic param4, int param5, int param6, eo param7) {
+    final static vb a(GameEvent param0, Battlefield param1, boolean param2, int param3, GameplayController param4, int param5, int param6, eo param7) {
         int var8_int = 0;
         RuntimeException var8 = null;
         vb var9 = null;
@@ -289,7 +289,7 @@ final class ub {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 24) {
-            stackIn_4_0 = ne.a(-69, aa.a(param1, 100, 96));
+            stackIn_4_0 = MapTile.a(-69, aa.a(param1, 100, 96));
             return stackIn_4_0;
           }
           stackIn_2_0 = (te) null;

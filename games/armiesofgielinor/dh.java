@@ -7,9 +7,9 @@ final class dh extends bi implements java.awt.image.ImageProducer, java.awt.imag
     private java.awt.image.ImageConsumer field_m;
     static byte[][] field_j;
     static int[] field_l;
-    static wk[] field_n;
+    static RgbSprite[] field_n;
     static String field_i;
-    static wk field_k;
+    static RgbSprite field_k;
     private java.awt.image.ColorModel field_o;
 
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
@@ -92,7 +92,7 @@ final class dh extends bi implements java.awt.image.ImageProducer, java.awt.imag
           if (var3 <= -1) {
             return;
           }
-          var4 = ns.a(false, td.field_d[var3].length, li.field_n);
+          var4 = AttackEvent.a(false, td.field_d[var3].length, li.field_n);
           if (null == td.field_d[var3][var4]) {
             return;
           }
@@ -107,7 +107,7 @@ final class dh extends bi implements java.awt.image.ImageProducer, java.awt.imag
         if (var3Lifetime1 <= -1) {
           return;
         }
-        var4Lifetime1 = ns.a(false, td.field_d[var3Lifetime1].length, li.field_n);
+        var4Lifetime1 = AttackEvent.a(false, td.field_d[var3Lifetime1].length, li.field_n);
         if (null == td.field_d[var3Lifetime1][var4Lifetime1]) {
           return;
         }

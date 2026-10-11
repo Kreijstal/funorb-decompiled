@@ -8,21 +8,21 @@ class je extends im {
     private int field_ib;
     static je field_Q;
     boolean field_ub;
-    wk[] field_A;
-    at field_fb;
-    wk[] field_mb;
+    RgbSprite[] field_A;
+    NodeDeque field_fb;
+    RgbSprite[] field_mb;
     int field_R;
     int field_N;
     boolean field_M;
     int field_hb;
-    wk[] field_G;
+    RgbSprite[] field_G;
     boolean field_eb;
     int field_O;
     int field_W;
     private int field_E;
     private boolean field_Cb;
     String field_X;
-    wk field_cb;
+    RgbSprite field_cb;
     int field_tb;
     static String field_zb;
     String field_I;
@@ -31,7 +31,7 @@ class je extends im {
     boolean field_Gb;
     int field_Bb;
     int field_pb;
-    wk[] field_H;
+    RgbSprite[] field_H;
     int field_nb;
     int field_F;
     private int field_J;
@@ -44,7 +44,7 @@ class je extends im {
     int field_yb;
     int field_S;
     int field_ob;
-    wk field_P;
+    RgbSprite field_P;
     int field_z;
     int field_db;
     static String field_lb;
@@ -55,17 +55,17 @@ class je extends im {
     boolean field_Y;
     int field_Fb;
     private int field_Ab;
-    wk[] field_U;
+    RgbSprite[] field_U;
     static int[][] field_K;
-    wk field_sb;
+    RgbSprite field_sb;
     private int field_kb;
-    wk field_vb;
+    RgbSprite field_vb;
     int field_ab;
-    wk field_qb;
-    ka field_Z;
+    RgbSprite field_qb;
+    BitmapFont field_Z;
 
     final void b(boolean param0, int param1) {
-        this.a((byte) -26, qn.field_g, param0, qn.field_l, 0, false, false, false, 0, true, false);
+        this.a((byte) -26, SoftwareRaster.field_g, param0, SoftwareRaster.field_l, 0, false, false, false, 0, true, false);
         if (param1 != 20) {
           je var4 = (je) null;
           this.a((je) null, false, 64, (je) null);
@@ -74,7 +74,7 @@ class je extends im {
 
     final static void c(boolean param0, int param1) {
         int var3;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 > -101) {
           field_K = (int[][]) null;
         }
@@ -109,7 +109,7 @@ class je extends im {
                 } else {
                   if (mj.field_c > gk.field_J) {
                     if (gk.field_J == 0) {
-                      tr.h(14570);
+                      DeployEvent.h(14570);
                     }
                     gk.field_J = gk.field_J + 1;
                   }
@@ -297,9 +297,9 @@ class je extends im {
         RuntimeException var3 = null;
         try {
           if (null == this.field_fb) {
-            this.field_fb = new at();
+            this.field_fb = new NodeDeque();
           }
-          this.field_fb.a((byte) -119, (tc) (param0));
+          this.field_fb.a((byte) -119, (IntrusiveNode) (param0));
           if (param1 < 36) {
             this.field_M = true;
           }
@@ -321,7 +321,7 @@ class je extends im {
     final void a(boolean param0, int param1, int param2, int param3) {
         je var10_ref_je = null;
         int var9 = 0;
-        int var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var9Lifetime1;
         if (param3 != -1379) {
           return;
@@ -332,11 +332,11 @@ class je extends im {
         int var8 = this.field_nb + var7;
         if (!param0) {
           var9 = 0;
-          var10_ref_je = (je) (this.field_fb.e((byte) 124));
+          var10_ref_je = (je) (this.field_fb.first((byte) 124));
           while (var10_ref_je != null) {
             var10_ref_je.field_db = -var10_ref_je.field_ab + var9;
             var9 = var9 + (param2 + (var10_ref_je.field_nb + var10_ref_je.field_ob));
-            var10_ref_je = (je) (this.field_fb.a((byte) 123));
+            var10_ref_je = (je) (this.field_fb.next((byte) 123));
           }
           var8 = var9 - param2;
         }
@@ -378,7 +378,7 @@ class je extends im {
         int var7Lifetime1;
         int var7Lifetime2;
         int var7Lifetime3;
-        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_J > 0) {
           var7 = -(-this.field_J >> 2);
         } else {
@@ -410,31 +410,31 @@ class je extends im {
         this.field_ob = this.field_ob + var7Lifetime3;
         this.field_nb = this.field_nb - var7Lifetime3;
         this.field_D = this.field_ab + param2;
-        var8 = qn.field_j;
-        var9 = qn.field_a;
-        var10 = qn.field_e;
-        var11 = qn.field_f;
-        qn.b(this.field_V, this.field_D, this.field_V + this.field_gb, this.field_D + this.field_ob);
+        var8 = SoftwareRaster.field_j;
+        var9 = SoftwareRaster.field_a;
+        var10 = SoftwareRaster.field_e;
+        var11 = SoftwareRaster.field_f;
+        SoftwareRaster.b(this.field_V, this.field_D, this.field_V + this.field_gb, this.field_D + this.field_ob);
         var12 = param1 ? 1 : 0;
         if (!bc.field_e &&
           param0 &&
-          tr.field_A != 0 &&
-          qn.field_j <= iu.field_t &&
-          iu.field_t < qn.field_e &&
-          ur.field_z >= qn.field_a &&
-          ur.field_z < qn.field_f) {
-          this.field_yb = tr.field_A;
-          this.field_hb = tr.field_A;
+          DeployEvent.field_A != 0 &&
+          SoftwareRaster.field_j <= iu.field_t &&
+          iu.field_t < SoftwareRaster.field_e &&
+          ur.field_z >= SoftwareRaster.field_a &&
+          ur.field_z < SoftwareRaster.field_f) {
+          this.field_yb = DeployEvent.field_A;
+          this.field_hb = DeployEvent.field_A;
           this.field_bb = -this.field_V + iu.field_t;
           var12 = 1;
           this.field_Ab = -this.field_D + ur.field_z;
         } else {
           this.field_yb = 0;
-          if (tr.field_A != 0) {
+          if (DeployEvent.field_A != 0) {
             this.field_hb = 0;
           }
         }
-        stackIn_30_1 = (!bl.field_f) && (qn.field_j <= sm.field_d) && (qn.field_e > sm.field_d) && (qn.field_a <= ko.field_b) && (qn.field_f > ko.field_b);
+        stackIn_30_1 = (!bl.field_f) && (SoftwareRaster.field_j <= sm.field_d) && (SoftwareRaster.field_e > sm.field_d) && (SoftwareRaster.field_a <= ko.field_b) && (SoftwareRaster.field_f > ko.field_b);
         this.field_jb = stackIn_30_1;
         if (ro.field_ub == 0) {
           this.field_hb = 0;
@@ -454,7 +454,7 @@ class je extends im {
         if (this.field_jb) {
           bl.field_f = true;
         }
-        qn.f(var8, var9, var10, var11);
+        SoftwareRaster.f(var8, var9, var10, var11);
         if (this.field_hb != 0 &&
           this.field_Gb) {
           this.field_S = -this.field_bb + sm.field_d - param5;
@@ -488,7 +488,7 @@ class je extends im {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 3) {
             this.a(true, 119, -41, -35);
@@ -548,10 +548,10 @@ class je extends im {
         int var12 = 0;
         int var13 = 0;
         je var14 = null;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          tq.field_c = qn.field_l;
-          bm.field_p = qn.field_g;
+          tq.field_c = SoftwareRaster.field_l;
+          bm.field_p = SoftwareRaster.field_g;
           if (param1) {
             stackIn_4_0 = bd.field_r;
           } else {
@@ -570,7 +570,7 @@ class je extends im {
             stackIn_7_4 = 0;
           }
           ((je) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, stackIn_6_3 - stackIn_7_4, 2 + jn.field_d, 0);
-          pj.field_D.a(18, -20500, 42 + jn.field_c, 2 + jn.field_d, -40 + (eb.field_c.field_gb - jn.field_c - 2));
+          TrinketUseEvent.field_D.a(18, -20500, 42 + jn.field_c, 2 + jn.field_d, -40 + (eb.field_c.field_gb - jn.field_c - 2));
           bu.field_a.a(0, false, eb.field_c.field_gb, 2, jn.field_c, 20 + (2 + jn.field_d), -20 + (-2 + (-jn.field_d + eb.field_c.field_ob)));
           mp.field_Lb.a(40, -20500, lk.field_a.field_gb, lk.field_a.field_ob - 40, 0);
           kd.field_F.a(30, -20500, pd.field_c.field_gb, 0, 0);
@@ -601,8 +601,8 @@ class je extends im {
               !(1 >= ei.field_h))) {
               if (!param1 &&
                 var6 == 3) {
-                var7 = rl.field_z[var6];
-                rl.field_z[var6].field_ob = 0;
+                var7 = KingBlackDragonEvent.field_z[var6];
+                KingBlackDragonEvent.field_z[var6].field_ob = 0;
                 var7.field_gb = 0;
                 for (var8 = 0; var8 < pu.field_k[var6].length; var8++) {
                   if (null != pu.field_k[var6][var8]) {
@@ -613,9 +613,9 @@ class je extends im {
                 }
               } else if (param1 &&
                 var6 == 0) {
-                var14 = rl.field_z[var6];
+                var14 = KingBlackDragonEvent.field_z[var6];
                 var7 = var14;
-                rl.field_z[var6].field_ob = 0;
+                KingBlackDragonEvent.field_z[var6].field_ob = 0;
                 var14.field_gb = 0;
                 for (var8 = 0; pu.field_k[var6].length > var8; var8++) {
                   if (null != pu.field_k[var6][var8]) {
@@ -640,8 +640,8 @@ class je extends im {
                 }
                 var7_int = stackIn_43_0;
                 if (var7_int != 0) {
-                  var8_ref_je = rl.field_z[var6];
-                  rl.field_z[var6].field_ob = 0;
+                  var8_ref_je = KingBlackDragonEvent.field_z[var6];
+                  KingBlackDragonEvent.field_z[var6].field_ob = 0;
                   var8_ref_je.field_gb = 0;
                   for (var9_int = 0; var9_int < pu.field_k[var6].length; var9_int++) {
                     if (pu.field_k[var6][var9_int] != null) {
@@ -651,7 +651,7 @@ class je extends im {
                     }
                   }
                 } else {
-                  rl.field_z[var6].a(var3, -20500, 103, var5, 5);
+                  KingBlackDragonEvent.field_z[var6].a(var3, -20500, 103, var5, 5);
                   var8 = 110;
                   if (param1) {
                     pu.field_k[var6][0].a(var3, 2, -30061, 38, var5, var8, io.field_n);
@@ -674,7 +674,7 @@ class je extends im {
               }
             }
           }
-          ta.field_R.a(-134 + (qn.field_g - 10), -20500, 360, 10, qn.field_l - 360 >> 1);
+          ta.field_R.a(-134 + (SoftwareRaster.field_g - 10), -20500, 360, 10, SoftwareRaster.field_l - 360 >> 1);
           bk.field_f.a(24, -20500, ta.field_R.field_gb, 0, 0);
           df.field_K.a(-24 + ta.field_R.field_ob, -20500, ta.field_R.field_gb, 24, 0);
           df.field_K.field_G = tq.a(11579568, false, df.field_K.field_ob, 1, 3, 8421504);
@@ -692,7 +692,7 @@ class je extends im {
     final void a(boolean param0, boolean param1) {
         bc.field_e = !param1 ? true : false;
         bl.field_f = !param1 ? true : false;
-        this.a(param0, false, 0, qn.field_g, qn.field_l, 0);
+        this.a(param0, false, 0, SoftwareRaster.field_g, SoftwareRaster.field_l, 0);
     }
 
     je(long param0, je param1, String param2) {
@@ -701,7 +701,7 @@ class je extends im {
 
     final void i(int param0) {
         je var4 = null;
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null != this.field_fb) {
           var4 = (je) (this.field_fb.d((byte) -112));
           while (var4 != null) {
@@ -711,7 +711,7 @@ class je extends im {
           }
         }
         if (param0 != -10027) {
-          this.field_fb = (at) null;
+          this.field_fb = (NodeDeque) null;
         }
     }
 
@@ -761,8 +761,8 @@ class je extends im {
         int var13;
         int var14;
         int var15;
-        wk[] var16;
-        wk var17;
+        RgbSprite[] var16;
+        RgbSprite var17;
         int var18;
         int var19;
         int var20;
@@ -776,14 +776,14 @@ class je extends im {
         String var26;
         String var23Lifetime1;
         String var23Lifetime2;
-        var25 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var25 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_V = this.field_S + param8;
         this.field_D = this.field_ab + param4;
-        var12 = qn.field_j;
-        var13 = qn.field_a;
-        var14 = qn.field_e;
-        var15 = qn.field_f;
-        qn.b(this.field_V, this.field_D, this.field_gb + this.field_V, this.field_ob + this.field_D);
+        var12 = SoftwareRaster.field_j;
+        var13 = SoftwareRaster.field_a;
+        var14 = SoftwareRaster.field_e;
+        var15 = SoftwareRaster.field_f;
+        SoftwareRaster.b(this.field_V, this.field_D, this.field_gb + this.field_V, this.field_ob + this.field_D);
         param9 = param9 & this.field_xb;
         if (!this.field_Cb) {
           param7 = this.field_rb;
@@ -929,13 +929,13 @@ class je extends im {
           }
         }
         if (this.field_fb != null) {
-          var23_ref = (je) (this.field_fb.e((byte) 118));
+          var23_ref = (je) (this.field_fb.first((byte) 118));
           while (var23_ref != null) {
             var23_ref.a((byte) -26, this.field_ob, param2, this.field_gb, var20 + this.field_D, param5, this.field_Y, param7, this.field_V + var19, param9, param10);
-            var23_ref = (je) (this.field_fb.a((byte) 123));
+            var23_ref = (je) (this.field_fb.next((byte) 123));
           }
         }
-        qn.f(var12, var13, var14, var15);
+        SoftwareRaster.f(var12, var13, var14, var15);
         return;
     }
 
@@ -962,7 +962,7 @@ class je extends im {
         je var4 = null;
         int var5 = 0;
         int var4_int = 0;
-        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var4_intLifetime1;
         if (!param0) {
           this.field_ab = -10;
@@ -982,13 +982,13 @@ class je extends im {
           }
         }
         if (this.field_fb != null) {
-          var4 = (je) (this.field_fb.e((byte) 93));
+          var4 = (je) (this.field_fb.first((byte) 93));
           while (var4 != null) {
             var5 = var4.field_S + var4.field_gb;
             if (var5 > var3) {
               var3 = var5;
             }
-            var4 = (je) (this.field_fb.a((byte) 123));
+            var4 = (je) (this.field_fb.next((byte) 123));
           }
         }
         return var3;
@@ -1043,7 +1043,7 @@ class je extends im {
           this.field_S = param2;
           this.field_ab = param3;
           this.field_gb = param4;
-          this.field_i = param0;
+          this.key = param0;
           this.a(0, param1);
           if (param6 != null) {
             this.field_X = param6;

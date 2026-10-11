@@ -20,7 +20,7 @@ final class lf {
     boolean field_H;
     private int[] field_F;
     private vj field_x;
-    static wk[] field_h;
+    static RgbSprite[] field_h;
     private boolean field_B;
     private int[] field_r;
     private boolean field_n;
@@ -37,7 +37,7 @@ final class lf {
     private boolean field_E;
     static pq field_q;
     static java.awt.Font field_g;
-    static at field_c;
+    static NodeDeque field_c;
     static int[] field_i;
     static int field_t;
 
@@ -87,7 +87,7 @@ final class lf {
         int var7;
         int var9;
         int var6Lifetime1;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.a((byte) -118);
         this.field_J = this.field_J + 1;
         var2 = 8;
@@ -105,7 +105,7 @@ final class lf {
               stackIn_9_0 = this.field_s;
               stackIn_10_1 = (!this.field_u) ? 1 : -1;
               jg.a(stackIn_9_0, stackIn_10_1 * this.field_a, 512, 0, this.field_C);
-              this.field_J = this.field_J + ns.a(false, 10, li.field_n);
+              this.field_J = this.field_J + AttackEvent.a(false, 10, li.field_n);
             }
           } else {
             this.field_s = this.field_p;
@@ -373,7 +373,7 @@ final class lf {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         int var8 = 0;
-        int var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_w = param2;
         if (param6 != 122) {
           this.field_o = (int[]) null;
@@ -381,20 +381,20 @@ final class lf {
         for (var8 = 0; lb.field_a > var8; var8++) {
           this.field_z[var8] = param4 << 16;
           this.field_I[var8] = param5 << 16;
-          this.field_k[var8] = ns.a(false, param1 >> 1, li.field_n) + param1;
-          this.field_o[var8] = (!this.field_u ? 1 : -1) * (param3 << 16) + (int)(Math.sin((double)ns.a(false, 256, li.field_n) * 3.141592653589793 / 128.0) * 10000.0 * (double)(param1 + ns.a(false, param1 >> 1, li.field_n)));
-          this.field_r[var8] = (int)(10000.0 * Math.sin(3.141592653589793 * (double)ns.a(false, 256, li.field_n) / 128.0) * (double)(ns.a(false, param1 >> 1, li.field_n) + param1)) + (param0 << 16);
+          this.field_k[var8] = AttackEvent.a(false, param1 >> 1, li.field_n) + param1;
+          this.field_o[var8] = (!this.field_u ? 1 : -1) * (param3 << 16) + (int)(Math.sin((double)AttackEvent.a(false, 256, li.field_n) * 3.141592653589793 / 128.0) * 10000.0 * (double)(param1 + AttackEvent.a(false, param1 >> 1, li.field_n)));
+          this.field_r[var8] = (int)(10000.0 * Math.sin(3.141592653589793 * (double)AttackEvent.a(false, 256, li.field_n) / 128.0) * (double)(AttackEvent.a(false, param1 >> 1, li.field_n) + param1)) + (param0 << 16);
         }
     }
 
-    final static wk[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        wk[] var10;
-        wk[] var11_ref_wk__;
+        RgbSprite[] var10;
+        RgbSprite[] var11_ref_wk__;
         int var11;
         int var12;
-        wk var13;
+        RgbSprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -403,10 +403,10 @@ final class lf {
         int var12Lifetime2;
         int var12Lifetime3;
         int var12Lifetime4;
-        wk[] var10Lifetime1;
-        var15 = ArmiesOfGielinor.field_M ? 1 : 0;
+        RgbSprite[] var10Lifetime1;
+        var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var9 = param7 + param1 + param3;
-        var10 = new wk[]{new wk(var9, var9), new wk(param4, var9), new wk(var9, var9), new wk(var9, param4), new wk(64, 64), new wk(var9, param4), new wk(var9, var9), new wk(param4, var9), new wk(var9, var9)};
+        var10 = new RgbSprite[]{new RgbSprite(var9, var9), new RgbSprite(param4, var9), new RgbSprite(var9, var9), new RgbSprite(var9, param4), new RgbSprite(64, 64), new RgbSprite(var9, param4), new RgbSprite(var9, var9), new RgbSprite(param4, var9), new RgbSprite(var9, var9)};
         var11_ref_wk__ = var10;
         for (var12 = 0; var11_ref_wk__.length > var12; var12++) {
           var13 = var11_ref_wk__[var12];
@@ -477,7 +477,7 @@ final class lf {
         int stackIn_48_5;
         int stackIn_49_6;
         int stackIn_58_0 = 0;
-        wk stackIn_58_1 = null;
+        RgbSprite stackIn_58_1 = null;
         int stackIn_59_2 = 0;
         int stackIn_61_3;
         int stackIn_62_4;
@@ -493,7 +493,7 @@ final class lf {
         int var9Lifetime1;
         int var10Lifetime1;
         int var9Lifetime1Lifetime1;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null == this.field_A) {
           return;
         }
@@ -568,7 +568,7 @@ final class lf {
             return;
           }
           if (this.field_w == 0) {
-            var9Lifetime1Lifetime1 = bw.field_m[this.field_C][1] + 1;
+            var9Lifetime1Lifetime1 = bw.unitDefinitions[this.field_C][1] + 1;
             var12 = 0;
             var10Lifetime1 = var12;
             while (var12 < lb.field_a) {
@@ -632,7 +632,7 @@ final class lf {
         int var7;
         int var8;
         int var5Lifetime1;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 >= -85) {
           return;
         }
@@ -754,7 +754,7 @@ final class lf {
         }
     }
 
-    final static om a(cf param0, bv param1, kl param2, byte param3) {
+    final static om a(cf param0, CipherPacketBuffer param1, kl param2, byte param3) {
         om var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -830,7 +830,7 @@ final class lf {
             this.field_G = 89;
           }
         }
-        var7 = ns.a(false, mn.field_k[this.field_G].length, li.field_n);
+        var7 = AttackEvent.a(false, mn.field_k[this.field_G].length, li.field_n);
         this.field_A = (gd) (mn.field_k[this.field_G][var7]);
         if (null == this.field_A) {
           af.a((Throwable) null, 100, "BattleCharacter: no model found - model_index: " + this.field_G + " variation: " + var7);
@@ -860,7 +860,7 @@ final class lf {
         field_b = Math.atan2(1.0, 0.0);
         field_v = "The magic of creating Mana.";
         field_q = new pq();
-        field_c = new at();
+        field_c = new NodeDeque();
         field_i = new int[]{0, 25, 75, 150, 0};
         field_t = -7;
     }

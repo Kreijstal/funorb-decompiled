@@ -7,7 +7,7 @@ abstract class ik {
     static String field_a;
     static i field_b;
 
-    abstract void a(int param0, ha param1, int param2);
+    abstract void a(int param0, Battlefield param1, int param2);
 
     abstract int a(int param0);
 
@@ -30,9 +30,9 @@ abstract class ik {
         }
     }
 
-    abstract void a(ha param0, int param1);
+    abstract void a(Battlefield param0, int param1);
 
-    abstract void a(byte param0, ha param1);
+    abstract void a(byte param0, Battlefield param1);
 
     public static void b(int param0) {
         field_b = null;
@@ -50,7 +50,7 @@ abstract class ik {
         this.field_c = param0;
     }
 
-    abstract void a(int param0, vh param1);
+    abstract void a(int param0, PacketBuffer param1);
 
     final static int a(long param0, long param1, int param2) {
         if (param2 != -1700635440) {

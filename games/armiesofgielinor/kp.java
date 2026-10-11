@@ -3,7 +3,7 @@
  */
 final class kp implements kh {
     private int field_f;
-    private ka field_a;
+    private BitmapFont field_a;
     static String field_k;
     private int field_g;
     static String field_c;
@@ -42,7 +42,7 @@ final class kp implements kh {
         int var9 = 0;
         int var11 = 0;
         pi var12 = null;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 instanceof pi) {
             stackIn_4_0 = (kb) (param0);
@@ -50,7 +50,7 @@ final class kp implements kh {
             stackIn_4_0 = null;
           }
           var12 = (pi) (stackIn_4_0);
-          qn.f(param0.field_B + param1, param4 + param0.field_p, param0.field_l, param0.field_w, this.field_d);
+          SoftwareRaster.f(param0.field_B + param1, param4 + param0.field_p, param0.field_l, param0.field_w, this.field_d);
           if (var12 != null) {
           }
           var7 = param0.field_l - 2 * var12.field_R;
@@ -59,9 +59,9 @@ final class kp implements kh {
             return;
           }
           var9 = param4 - (-param0.field_p - var12.field_S);
-          qn.h(var8, var9, var7 + var8, var9, this.field_b);
+          SoftwareRaster.h(var8, var9, var7 + var8, var9, this.field_b);
           for (var10 = var12.d((byte) -39) - 1; var10 >= 0; var10--) {
-            qn.a(var7 * var12.a(var10, (byte) -47) / var12.a(-1) + var8, var9, this.field_h, this.field_f);
+            SoftwareRaster.a(var7 * var12.a(var10, (byte) -47) / var12.a(-1) + var8, var9, this.field_h, this.field_f);
           }
           if (null == this.field_a) {
             return;
@@ -128,7 +128,7 @@ final class kp implements kh {
         }
     }
 
-    kp(ka param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    kp(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_b = param3;
           this.field_a = param0;

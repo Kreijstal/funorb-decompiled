@@ -6,13 +6,13 @@ final class hh {
     private em field_k;
     private int field_h;
     int field_b;
-    static wk field_d;
+    static RgbSprite field_d;
     static String field_j;
     static nc field_i;
     static int field_c;
     static int[] field_e;
     private int field_g;
-    static wk field_f;
+    static RgbSprite field_f;
 
     public static void b(int param0) {
         field_d = null;
@@ -29,7 +29,7 @@ final class hh {
     final static void a(byte param0) {
         vs.a(256, wn.field_jb);
         if (param0 < 113) {
-          field_d = (wk) null;
+          field_d = (RgbSprite) null;
         }
     }
 
@@ -114,7 +114,7 @@ final class hh {
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (0 == param2) {
             stackIn_3_0 = "";
@@ -164,7 +164,7 @@ final class hh {
         }
     }
 
-    final static void a(au param0, boolean param1, vh param2, int param3) {
+    final static void a(au param0, boolean param1, PacketBuffer param2, int param3) {
         int var8 = 0;
         au stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
@@ -192,7 +192,7 @@ final class hh {
         int var6 = 0;
         int var7 = 0;
         int var9 = 0;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1) {
             param0.field_Ub = param2.k(0);
@@ -235,14 +235,14 @@ final class hh {
             param0.field_bc = param2.i(1);
           }
           param0.field_dc = param2.j((byte) -2);
-          var7 = param2.field_q;
+          var7 = param2.position;
           if (param3 < 73) {
             return;
           }
           param0.field_rc = param2.g(1);
           if (var6 != 0) {
             param0.field_jc = new String[param0.field_Ub];
-            param2.field_q = var7;
+            param2.position = var7;
             for (var8 = 0; var8 < param0.field_Ub; var8++) {
               param0.field_jc[var8] = param2.g(1);
             }

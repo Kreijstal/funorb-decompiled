@@ -3,7 +3,7 @@
  */
 final class ad extends tj implements he {
     private ro field_L;
-    private ka field_J;
+    private BitmapFont field_J;
     static gu field_K;
     private String field_G;
     private int field_E;
@@ -55,7 +55,7 @@ final class ad extends tj implements he {
 
     private final void b(int param0, int param1) {
         int var6 = 0;
-        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_E >= param0) {
           return;
         }
@@ -83,7 +83,7 @@ final class ad extends tj implements he {
     public final void a(int param0, int param1, int param2, int param3, fw param4) {
         int var6_int = 0;
         int var7 = 0;
-        int var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           for (var6_int = 0; this.field_E > var6_int; var6_int++) {
             if (this.field_H[var6_int] == param4) {
@@ -104,7 +104,7 @@ final class ad extends tj implements he {
         }
     }
 
-    ad(ro param0, ka param1, String param2) {
+    ad(ro param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (kh) null);
         int var4_int = 0;
         this.field_E = 0;
@@ -135,49 +135,49 @@ final class ad extends tj implements he {
         int var2 = 0;
         int var3 = 0;
         of var1Lifetime1;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var1 = (of) (be.field_u.e((byte) 97));
+          var1 = (of) (be.field_u.first((byte) 97));
           while (var1 != null) {
             if (0 < var1.field_Rb) {
               var1.field_Rb = var1.field_Rb - 1;
               if (var1.field_Rb == 0) {
                 var1.field_Kb = 0;
                 if (var1.k(0)) {
-                  var1.d(-126);
+                  var1.unlink(-126);
                 }
               }
             }
-            var1 = (of) (be.field_u.a((byte) 123));
+            var1 = (of) (be.field_u.next((byte) 123));
           }
-          var1_ref = (au) (qc.field_g.e((byte) 89));
+          var1_ref = (au) (qc.field_g.first((byte) 89));
           while (var1_ref != null) {
             if (0 < var1_ref.field_Lb) {
               var1_ref.field_Lb = var1_ref.field_Lb - 1;
               if (var1_ref.field_Lb == 0) {
                 var1_ref.field_mc = 0;
                 if (var1_ref.k(-7)) {
-                  var1_ref.d(106);
+                  var1_ref.unlink(106);
                 }
               }
             }
-            var1_ref = (au) (qc.field_g.a((byte) 123));
+            var1_ref = (au) (qc.field_g.next((byte) 123));
           }
           var2 = -62 % ((param0 + 41) / 60);
-          var1Lifetime1 = (of) (wl.field_F.e((byte) 115));
+          var1Lifetime1 = (of) (wl.field_F.first((byte) 115));
           while (var1Lifetime1 != null) {
             if (0 < var1Lifetime1.field_Rb) {
               var1Lifetime1.field_Rb = var1Lifetime1.field_Rb - 1;
               if (var1Lifetime1.field_Rb != 0) {
-                var1Lifetime1 = (of) (wl.field_F.a((byte) 123));
+                var1Lifetime1 = (of) (wl.field_F.next((byte) 123));
                 continue;
               }
               var1Lifetime1.field_Kb = 0;
               if (var1Lifetime1.k(0)) {
-                var1Lifetime1.d(-123);
+                var1Lifetime1.unlink(-123);
               }
             }
-            var1Lifetime1 = (of) (wl.field_F.a((byte) 123));
+            var1Lifetime1 = (of) (wl.field_F.next((byte) 123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

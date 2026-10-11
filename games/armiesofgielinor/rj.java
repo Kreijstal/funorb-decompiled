@@ -8,18 +8,18 @@ final class rj extends kb {
     private int field_N;
     int field_D;
     static je field_F;
-    private wk field_S;
+    private RgbSprite field_S;
     private int field_E;
     private int field_L;
-    private wk[] field_O;
-    private wk field_J;
+    private RgbSprite[] field_O;
+    private RgbSprite field_J;
     private int field_H;
     boolean field_R;
-    private wk field_K;
+    private RgbSprite field_K;
     static String field_G;
     static int[] field_Q;
 
-    private final wk b(int param0, int param1, int param2) {
+    private final RgbSprite b(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -27,15 +27,15 @@ final class rj extends kb {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = ArmiesOfGielinor.field_M ? 1 : 0;
-        wk var14 = new wk(this.field_C * 2, this.field_w);
+        int var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        RgbSprite var14 = new RgbSprite(this.field_C * 2, this.field_w);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         vn.a(var14, 3);
         int var5 = this.field_w >> 1;
         if (param1 >= -54) {
-          return (wk) null;
+          return (RgbSprite) null;
         }
         for (var6 = 0; var6 < this.field_w; var6++) {
           var7 = (this.field_C * 2 - 1) * (var6 >> 1) % (this.field_C * 2);
@@ -44,13 +44,13 @@ final class rj extends kb {
           var10 = var6 - var5;
           var11 = (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0) + 128;
           var12 = var11 < 256 ? (var8 * var11 & -16711936 | 16711680 & var11 * var9) >>> 8 : var9 | var8;
-          qn.e(var7, var6, this.field_C, var12);
+          SoftwareRaster.e(var7, var6, this.field_C, var12);
           var8Lifetime1 = 16711935 & param0;
-          qn.e(var7 - this.field_C * 2, var6, this.field_C, var12);
+          SoftwareRaster.e(var7 - this.field_C * 2, var6, this.field_C, var12);
           var9Lifetime1 = 65280 & param0;
           var12Lifetime1 = var11 >= 256 ? var9Lifetime1 | var8Lifetime1 : (16711680 & var9Lifetime1 * var11 | -16711936 & var11 * var8Lifetime1) >>> 8;
-          qn.e(var7 + this.field_C, var6, this.field_C, var12Lifetime1);
-          qn.e(-this.field_C + var7, var6, this.field_C, var12Lifetime1);
+          SoftwareRaster.e(var7 + this.field_C, var6, this.field_C, var12Lifetime1);
+          SoftwareRaster.e(-this.field_C + var7, var6, this.field_C, var12Lifetime1);
         }
         rf.b(-18862);
         return var14;
@@ -72,7 +72,7 @@ final class rj extends kb {
         }
     }
 
-    private final void a(int param0, int param1, wk param2, int param3) {
+    private final void a(int param0, int param1, RgbSprite param2, int param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -83,7 +83,7 @@ final class rj extends kb {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = param3 + this.field_l;
           id.a(this.field_J.field_y + param3, -this.field_J.field_y + var5_int, param1 + this.field_w, param1, (byte) 87);
@@ -94,7 +94,7 @@ final class rj extends kb {
             var6 = var6 + param2.field_y;
           }
           rf.b(-18862);
-          if (qn.field_j <= param3 + this.field_J.field_y) {
+          if (SoftwareRaster.field_j <= param3 + this.field_J.field_y) {
             vn.a(this.field_K, 3);
             param2.g(-this.field_N, 0);
             param2.g(this.field_C * 2 - this.field_N, 0);
@@ -102,7 +102,7 @@ final class rj extends kb {
             rf.b(-18862);
             this.field_K.g(param3, param1);
           }
-          if (-this.field_J.field_y + var5_int <= qn.field_e) {
+          if (-this.field_J.field_y + var5_int <= SoftwareRaster.field_e) {
             vn.a(this.field_K, 3);
             for (var8 = -this.field_J.field_y + this.field_l + this.field_N; var8 > this.field_C * 2; var8 = var8 - this.field_C * 2) {
             }
@@ -212,7 +212,7 @@ final class rj extends kb {
     }
 
     final void a(int param0, int param1, int param2, kb param3) {
-        wk discarded$1 = null;
+        RgbSprite discarded$1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -244,7 +244,7 @@ final class rj extends kb {
     }
 
     final static void a(int param0) {
-        if (nw.g(125)) {
+        if (DamageEvent.g(125)) {
           return;
         }
         if (!ps.field_v) {
@@ -264,17 +264,17 @@ final class rj extends kb {
         ps.field_v = false;
     }
 
-    private final wk j(int param0) {
+    private final RgbSprite j(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
-        int var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var2 = this.field_w >> 1;
-        wk var3 = new wk(var2, this.field_w);
+        RgbSprite var3 = new RgbSprite(var2, this.field_w);
         vn.a(var3, param0 - 747);
         if (param0 != 750) {
-          return (wk) null;
+          return (RgbSprite) null;
         }
         for (var4 = 0; var4 < this.field_w; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
@@ -284,7 +284,7 @@ final class rj extends kb {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = 1.0 <= var6 ? 255 : (int)(var6 * 255.0);
             }
-            qn.a(var5, var4, var8 | var8 << 8 | var8 << 16);
+            SoftwareRaster.a(var5, var4, var8 | var8 << 8 | var8 << 16);
           }
         }
         rf.b(param0 - 19612);
@@ -292,13 +292,13 @@ final class rj extends kb {
     }
 
     private final void i(int param0) {
-        this.field_O = new wk[]{this.b(this.field_H, -61, this.field_L), this.b(this.field_E, -120, this.field_P)};
+        this.field_O = new RgbSprite[]{this.b(this.field_H, -61, this.field_L), this.b(this.field_E, -120, this.field_P)};
         this.field_J = this.j(750);
         this.field_S = this.field_J.e();
         if (param0 != 3) {
           field_Q = (int[]) null;
         }
-        this.field_K = new wk(this.field_w >> 1, this.field_w);
+        this.field_K = new RgbSprite(this.field_w >> 1, this.field_w);
     }
 
     final static void d(byte param0) {

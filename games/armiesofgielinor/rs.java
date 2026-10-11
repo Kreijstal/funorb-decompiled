@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rs extends tc {
+final class rs extends IntrusiveNode {
     int field_l;
     static me field_v;
     int field_s;
@@ -10,11 +10,11 @@ final class rs extends tc {
     int field_r;
     static String field_x;
     static tu field_n;
-    static wk field_o;
+    static RgbSprite field_o;
     int field_u;
     static int field_q;
     static int field_k;
-    static wk[] field_p;
+    static RgbSprite[] field_p;
     static int field_t;
 
     final static int a(byte param0, CharSequence param1) {
@@ -29,7 +29,7 @@ final class rs extends tc {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = param1.length();
           var3 = 0;
@@ -75,7 +75,7 @@ final class rs extends tc {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        wk var5 = null;
+        RgbSprite var5 = null;
         if (!cu.field_a) {
           return;
         }
@@ -96,7 +96,7 @@ final class rs extends tc {
         param1 = param1 | param1 >>> 2;
         param1 = param1 | param1 >>> 4;
         if (param0 < 75) {
-          field_o = (wk) null;
+          field_o = (RgbSprite) null;
         }
         param1 = param1 | param1 >>> 8;
         param1 = param1 | param1 >>> 16;

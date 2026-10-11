@@ -10,7 +10,7 @@ final class hk extends je {
         if (param0 != 102) {
           hk.k(-40);
           this.a(true, true);
-          if (tr.field_A == 0) {
+          if (DeployEvent.field_A == 0) {
             return this.field_Kb.field_yb != 0 ? true : false;
           }
           if (this.field_yb != 0) {
@@ -19,7 +19,7 @@ final class hk extends je {
           return true;
         }
         this.a(true, true);
-        if (tr.field_A != 0) {
+        if (DeployEvent.field_A != 0) {
           if (this.field_yb == 0) {
             return true;
           }
@@ -33,7 +33,7 @@ final class hk extends je {
 
     final static void k(int param0) {
         te var1 = null;
-        int var2 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         te var1Lifetime1;
         try {
           l.field_a.d();
@@ -44,20 +44,20 @@ final class hk extends je {
           }
           if (qu.field_p == 0) {
             qu.field_p = 200;
-            var1 = (te) (bl.field_h.e((byte) 118));
+            var1 = (te) (bl.field_h.first((byte) 118));
             while (var1 != null) {
               if (!var1.field_k.c(param0 ^ 65408)) {
-                var1.d(param0 ^ 247);
+                var1.unlink(param0 ^ 247);
               }
-              var1 = (te) (bl.field_h.a((byte) 123));
+              var1 = (te) (bl.field_h.next((byte) 123));
             }
             if (null != ts.field_e) {
-              var1Lifetime1 = (te) (ts.field_e.e((byte) 120));
+              var1Lifetime1 = (te) (ts.field_e.first((byte) 120));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_k.c(65280)) {
-                  var1Lifetime1.d(-126);
+                  var1Lifetime1.unlink(-126);
                 }
-                var1Lifetime1 = (te) (ts.field_e.a((byte) 123));
+                var1Lifetime1 = (te) (ts.field_e.next((byte) 123));
               }
             }
           }
@@ -106,7 +106,7 @@ final class hk extends je {
         je var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new je(0L, param1, oj.field_x.toUpperCase());
+          var17 = new je(0L, param1, GameEvent.field_x.toUpperCase());
           var17.field_Eb = 1;
           this.field_Kb = new je(0L, param2);
           var8 = new je(0L, param3);

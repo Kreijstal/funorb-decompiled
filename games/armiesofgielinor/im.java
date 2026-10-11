@@ -5,7 +5,7 @@ class im extends ms {
     private static int[] field_u;
     static sn[] field_v;
     static je field_x;
-    static wk field_y;
+    static RgbSprite field_y;
     static boolean field_w;
 
     final static int a(om param0, int param1) {
@@ -81,7 +81,7 @@ class im extends ms {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = -1;
           for (var5 = param2; var5 < param0; var5++) {
@@ -121,7 +121,7 @@ class im extends ms {
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2 = param1;
           var3 = dj.a(14, ':', var2.substring(var2.indexOf('=') + 1));

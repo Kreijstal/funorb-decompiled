@@ -1247,7 +1247,7 @@ final class em {
                 }
                 var2 = fk.a(false, "LABEL_AWARD_MOSTHONOURABLE");
                 if (var2 != null) {
-                  qq.field_H = uu.a(var2, (byte) 85);
+                  StateChangeEvent.field_H = uu.a(var2, (byte) 85);
                 }
                 var2 = fk.a(false, "LABEL_AWARD_MOSTCRUEL");
                 if (null != var2) {
@@ -1295,7 +1295,7 @@ final class em {
                 }
                 var2 = fk.a(false, "QUICKSAVING");
                 if (var2 != null) {
-                  vh.field_p = uu.a(var2, (byte) -125);
+                  PacketBuffer.field_p = uu.a(var2, (byte) -125);
                 }
                 var2 = fk.a(false, "SAVE_AND_QUIT");
                 if (null != var2) {
@@ -1339,7 +1339,7 @@ final class em {
                 }
                 var2 = fk.a(false, "RESTARTMISSION");
                 if (null != var2) {
-                  vh.field_r = uu.a(var2, (byte) 66);
+                  PacketBuffer.field_r = uu.a(var2, (byte) 66);
                 }
                 var2 = fk.a(false, "STALEMATEWARNIGN");
                 if (null != var2) {
@@ -1655,31 +1655,31 @@ final class em {
                 }
                 var2 = fk.a(false, "WEAPON_CLASSES,0");
                 if (null != var2) {
-                  vp.field_y[0] = uu.a(var2, (byte) -118);
+                  ManaEvent.field_y[0] = uu.a(var2, (byte) -118);
                 }
                 var2 = fk.a(false, "WEAPON_CLASSES,1");
                 if (null != var2) {
-                  vp.field_y[1] = uu.a(var2, (byte) 5);
+                  ManaEvent.field_y[1] = uu.a(var2, (byte) 5);
                 }
                 var2 = fk.a(false, "WEAPON_CLASSES,2");
                 if (var2 != null) {
-                  vp.field_y[2] = uu.a(var2, (byte) -120);
+                  ManaEvent.field_y[2] = uu.a(var2, (byte) -120);
                 }
                 var2 = fk.a(false, "WEAPON_CLASSES,3");
                 if (var2 != null) {
-                  vp.field_y[3] = uu.a(var2, (byte) 28);
+                  ManaEvent.field_y[3] = uu.a(var2, (byte) 28);
                 }
                 var2 = fk.a(false, "WEAPON_CLASSES,4");
                 if (var2 != null) {
-                  vp.field_y[4] = uu.a(var2, (byte) 9);
+                  ManaEvent.field_y[4] = uu.a(var2, (byte) 9);
                 }
                 var2 = fk.a(false, "WEAPON_CLASSES,5");
                 if (null != var2) {
-                  vp.field_y[5] = uu.a(var2, (byte) -119);
+                  ManaEvent.field_y[5] = uu.a(var2, (byte) -119);
                 }
                 var2 = fk.a(false, "WEAPON_CLASSES,6");
                 if (null != var2) {
-                  vp.field_y[6] = uu.a(var2, (byte) -113);
+                  ManaEvent.field_y[6] = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "BUTTON_CHATTAB");
                 if (null != var2) {
@@ -1729,7 +1729,7 @@ final class em {
                 }
                 var2 = fk.a(false, "ANNOUNCE_WINNERYOU");
                 if (var2 != null) {
-                  tr.field_y = uu.a(var2, (byte) 89);
+                  DeployEvent.field_y = uu.a(var2, (byte) 89);
                 }
                 var2 = fk.a(false, "ANNOUNCE_DRAW");
                 if (var2 != null) {
@@ -2405,7 +2405,7 @@ final class em {
                 }
                 var2 = fk.a(false, "STATS_SINGLERANGE");
                 if (var2 != null) {
-                  jd.field_y = uu.a(var2, (byte) 88);
+                  Unit.field_y = uu.a(var2, (byte) 88);
                 }
                 var2 = fk.a(false, "STATS_CANNONRANGE");
                 if (null != var2) {
@@ -2441,7 +2441,7 @@ final class em {
                 }
                 var2 = fk.a(false, "LABEL_ENDTURN");
                 if (var2 != null) {
-                  kf.field_I = uu.a(var2, (byte) -118);
+                  GrowthEvent.field_I = uu.a(var2, (byte) -118);
                 }
                 var2 = fk.a(false, "LABEL_ALIGNMENTS");
                 if (var2 != null) {
@@ -3059,23 +3059,23 @@ final class em {
                 }
                 var2 = fk.a(false, "SUMMON_ERRORS,0");
                 if (null != var2) {
-                  go.field_c[0] = uu.a(var2, (byte) -98);
+                  TeamRoster.field_c[0] = uu.a(var2, (byte) -98);
                 }
                 var2 = fk.a(false, "SUMMON_ERRORS,1");
                 if (null != var2) {
-                  go.field_c[1] = uu.a(var2, (byte) -98);
+                  TeamRoster.field_c[1] = uu.a(var2, (byte) -98);
                 }
                 var2 = fk.a(false, "SUMMON_ERRORS,2");
                 if (var2 != null) {
-                  go.field_c[2] = uu.a(var2, (byte) -97);
+                  TeamRoster.field_c[2] = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "SUMMON_ERRORS,3");
                 if (null != var2) {
-                  go.field_c[3] = uu.a(var2, (byte) -101);
+                  TeamRoster.field_c[3] = uu.a(var2, (byte) -101);
                 }
                 var2 = fk.a(false, "SUMMON_ERRORS,4");
                 if (null != var2) {
-                  go.field_c[4] = uu.a(var2, (byte) -104);
+                  TeamRoster.field_c[4] = uu.a(var2, (byte) -104);
                 }
                 var2 = fk.a(false, "directions,0");
                 if (null != var2) {
@@ -3099,7 +3099,7 @@ final class em {
                 }
                 var2 = fk.a(false, "QUIT_MULTI");
                 if (var2 != null) {
-                  tc.field_g = uu.a(var2, (byte) 12);
+                  IntrusiveNode.field_g = uu.a(var2, (byte) 12);
                 }
                 var2 = fk.a(false, "QUIT_HOTSEAT");
                 if (var2 != null) {
@@ -3311,7 +3311,7 @@ final class em {
                 }
                 var2 = fk.a(false, "LABEL_INVITE_LOGIN");
                 if (var2 != null) {
-                  nw.field_z = uu.a(var2, (byte) -93);
+                  DamageEvent.field_z = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "LABEL_ERROR");
                 if (var2 != null) {
@@ -3399,7 +3399,7 @@ final class em {
                 }
                 var2 = fk.a(false, "RESULTS_DAMAGETAKEN");
                 if (null != var2) {
-                  as.field_y = uu.a(var2, (byte) 91);
+                  OwnerChangeEvent.field_y = uu.a(var2, (byte) 91);
                 }
                 var2 = fk.a(false, "RESULTS_FINALSCORE");
                 if (var2 != null) {
@@ -3435,117 +3435,117 @@ final class em {
                 }
                 var2 = fk.a(false, "TUT_TEXT,0");
                 if (null != var2) {
-                  ci.field_f[0] = uu.a(var2, (byte) 103);
+                  TutorialController.field_f[0] = uu.a(var2, (byte) 103);
                 }
                 var2 = fk.a(false, "TUT_TEXT,1");
                 if (null != var2) {
-                  ci.field_f[1] = uu.a(var2, (byte) -102);
+                  TutorialController.field_f[1] = uu.a(var2, (byte) -102);
                 }
             }
             void runChunk4() throws java.lang.RuntimeException {
                 var2 = fk.a(false, "TUT_TEXT,2");
                 if (var2 != null) {
-                  ci.field_f[2] = uu.a(var2, (byte) 10);
+                  TutorialController.field_f[2] = uu.a(var2, (byte) 10);
                 }
                 var2 = fk.a(false, "TUT_TEXT,3");
                 if (null != var2) {
-                  ci.field_f[3] = uu.a(var2, (byte) 106);
+                  TutorialController.field_f[3] = uu.a(var2, (byte) 106);
                 }
                 var2 = fk.a(false, "TUT_TEXT,4");
                 if (null != var2) {
-                  ci.field_f[4] = uu.a(var2, (byte) 83);
+                  TutorialController.field_f[4] = uu.a(var2, (byte) 83);
                 }
                 var2 = fk.a(false, "TUT_TEXT,5");
                 if (null != var2) {
-                  ci.field_f[5] = uu.a(var2, (byte) 80);
+                  TutorialController.field_f[5] = uu.a(var2, (byte) 80);
                 }
                 var2 = fk.a(false, "TUT_TEXT,6");
                 if (var2 != null) {
-                  ci.field_f[6] = uu.a(var2, (byte) 106);
+                  TutorialController.field_f[6] = uu.a(var2, (byte) 106);
                 }
                 var2 = fk.a(false, "TUT_TEXT,7");
                 if (var2 != null) {
-                  ci.field_f[7] = uu.a(var2, (byte) 93);
+                  TutorialController.field_f[7] = uu.a(var2, (byte) 93);
                 }
                 var2 = fk.a(false, "TUT_TEXT,8");
                 if (var2 != null) {
-                  ci.field_f[8] = uu.a(var2, (byte) -108);
+                  TutorialController.field_f[8] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "TUT_TEXT,9");
                 if (var2 != null) {
-                  ci.field_f[9] = uu.a(var2, (byte) 123);
+                  TutorialController.field_f[9] = uu.a(var2, (byte) 123);
                 }
                 var2 = fk.a(false, "TUT_TEXT,10");
                 if (var2 != null) {
-                  ci.field_f[10] = uu.a(var2, (byte) 35);
+                  TutorialController.field_f[10] = uu.a(var2, (byte) 35);
                 }
                 var2 = fk.a(false, "TUT_TEXT,11");
                 if (var2 != null) {
-                  ci.field_f[11] = uu.a(var2, (byte) -127);
+                  TutorialController.field_f[11] = uu.a(var2, (byte) -127);
                 }
                 var2 = fk.a(false, "TUT_TEXT,12");
                 if (null != var2) {
-                  ci.field_f[12] = uu.a(var2, (byte) -102);
+                  TutorialController.field_f[12] = uu.a(var2, (byte) -102);
                 }
                 var2 = fk.a(false, "TUT_TEXT,13");
                 if (null != var2) {
-                  ci.field_f[13] = uu.a(var2, (byte) -114);
+                  TutorialController.field_f[13] = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "TUT_TEXT,14");
                 if (var2 != null) {
-                  ci.field_f[14] = uu.a(var2, (byte) 28);
+                  TutorialController.field_f[14] = uu.a(var2, (byte) 28);
                 }
                 var2 = fk.a(false, "TUT_TEXT,15");
                 if (var2 != null) {
-                  ci.field_f[15] = uu.a(var2, (byte) 13);
+                  TutorialController.field_f[15] = uu.a(var2, (byte) 13);
                 }
                 var2 = fk.a(false, "TUT_TEXT,16");
                 if (var2 != null) {
-                  ci.field_f[16] = uu.a(var2, (byte) -110);
+                  TutorialController.field_f[16] = uu.a(var2, (byte) -110);
                 }
                 var2 = fk.a(false, "TUT_TEXT,17");
                 if (null != var2) {
-                  ci.field_f[17] = uu.a(var2, (byte) -107);
+                  TutorialController.field_f[17] = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "TUT_TEXT,18");
                 if (var2 != null) {
-                  ci.field_f[18] = uu.a(var2, (byte) 48);
+                  TutorialController.field_f[18] = uu.a(var2, (byte) 48);
                 }
                 var2 = fk.a(false, "TUT_TEXT,19");
                 if (var2 != null) {
-                  ci.field_f[19] = uu.a(var2, (byte) -124);
+                  TutorialController.field_f[19] = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "TUT_TEXT,20");
                 if (var2 != null) {
-                  ci.field_f[20] = uu.a(var2, (byte) 69);
+                  TutorialController.field_f[20] = uu.a(var2, (byte) 69);
                 }
                 var2 = fk.a(false, "TUT_TEXT,21");
                 if (null != var2) {
-                  ci.field_f[21] = uu.a(var2, (byte) -125);
+                  TutorialController.field_f[21] = uu.a(var2, (byte) -125);
                 }
                 var2 = fk.a(false, "TUT_TEXT,22");
                 if (null != var2) {
-                  ci.field_f[22] = uu.a(var2, (byte) 26);
+                  TutorialController.field_f[22] = uu.a(var2, (byte) 26);
                 }
                 var2 = fk.a(false, "TUT_TEXT,23");
                 if (var2 != null) {
-                  ci.field_f[23] = uu.a(var2, (byte) 96);
+                  TutorialController.field_f[23] = uu.a(var2, (byte) 96);
                 }
                 var2 = fk.a(false, "TUT_TEXT,24");
                 if (var2 != null) {
-                  ci.field_f[24] = uu.a(var2, (byte) -99);
+                  TutorialController.field_f[24] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "TUT_TEXT,25");
                 if (null != var2) {
-                  ci.field_f[25] = uu.a(var2, (byte) 62);
+                  TutorialController.field_f[25] = uu.a(var2, (byte) 62);
                 }
                 var2 = fk.a(false, "TUT_TEXT,26");
                 if (var2 != null) {
-                  ci.field_f[26] = uu.a(var2, (byte) -107);
+                  TutorialController.field_f[26] = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "TUT_TEXT,27");
                 if (null != var2) {
-                  ci.field_f[27] = uu.a(var2, (byte) 15);
+                  TutorialController.field_f[27] = uu.a(var2, (byte) 15);
                 }
                 var2 = fk.a(false, "DEFEATLEADER");
                 if (null != var2) {
@@ -3617,7 +3617,7 @@ final class em {
                 }
                 var2 = fk.a(false, "SPELLBOOK_FREE");
                 if (var2 != null) {
-                  tc.field_d = uu.a(var2, (byte) -121);
+                  IntrusiveNode.field_d = uu.a(var2, (byte) -121);
                 }
                 var2 = fk.a(false, "SPELLBOOK_RUNES");
                 if (null != var2) {
@@ -3637,7 +3637,7 @@ final class em {
                 }
                 var2 = fk.a(false, "MESSAGE_LOADING");
                 if (var2 != null) {
-                  vp.field_A = uu.a(var2, (byte) 78);
+                  ManaEvent.field_A = uu.a(var2, (byte) 78);
                 }
                 var2 = fk.a(false, "MESSAGE_QUIT");
                 if (null != var2) {
@@ -3653,7 +3653,7 @@ final class em {
                 }
                 var2 = fk.a(false, "MESSAGE_UNDRAW");
                 if (null != var2) {
-                  q.field_y = uu.a(var2, (byte) 113);
+                  TelepopEvent.field_y = uu.a(var2, (byte) 113);
                 }
                 var2 = fk.a(false, "trinketnames,0");
                 if (null != var2) {
@@ -4775,7 +4775,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TTREEN_PADDED");
                 if (var2 != null) {
-                  ci.field_b = uu.a(var2, (byte) -114);
+                  TutorialController.field_b = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "TTREEN_ENCHANTED");
                 if (null != var2) {
@@ -4831,7 +4831,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TTREEN_INSTANTS");
                 if (var2 != null) {
-                  go.field_h = uu.a(var2, (byte) -119);
+                  TeamRoster.field_h = uu.a(var2, (byte) -119);
                 }
                 var2 = fk.a(false, "TTREEN_LANDSCAPE");
                 if (var2 != null) {
@@ -4975,7 +4975,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TTREED_INSTANTS");
                 if (var2 != null) {
-                  st.field_A = uu.a(var2, (byte) -106);
+                  TurnEffectEvent.field_A = uu.a(var2, (byte) -106);
                 }
                 var2 = fk.a(false, "TTREED_LANDSCAPE");
                 if (null != var2) {
@@ -5039,7 +5039,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TERROR_NOTENOUGHRUNES");
                 if (null != var2) {
-                  nn.field_v = uu.a(var2, (byte) 63);
+                  MovementPlanner.field_v = uu.a(var2, (byte) 63);
                 }
                 var2 = fk.a(false, "TERROR_NOGOD");
                 if (var2 != null) {
@@ -5087,7 +5087,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TERROR_NOTCYCLOPS");
                 if (var2 != null) {
-                  pj.field_A = uu.a(var2, (byte) -119);
+                  TrinketUseEvent.field_A = uu.a(var2, (byte) -119);
                 }
                 var2 = fk.a(false, "TERROR_NOTOGRE");
                 if (var2 != null) {
@@ -5131,7 +5131,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TERROR_NOTRINKET");
                 if (null != var2) {
-                  qq.field_A = uu.a(var2, (byte) -100);
+                  StateChangeEvent.field_A = uu.a(var2, (byte) -100);
                 }
                 var2 = fk.a(false, "TERROR_GOTONE");
                 if (var2 != null) {
@@ -5205,7 +5205,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TERROR_POISONED");
                 if (var2 != null) {
-                  jd.field_T = uu.a(var2, (byte) 73);
+                  Unit.field_T = uu.a(var2, (byte) 73);
                 }
                 var2 = fk.a(false, "TRINKET_WORTH");
                 if (null != var2) {
@@ -5568,7 +5568,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TRINKET_EMPTY");
                 if (null != var2) {
-                  st.field_y = uu.a(var2, (byte) -111);
+                  TurnEffectEvent.field_y = uu.a(var2, (byte) -111);
                 }
                 var2 = fk.a(false, "TRINKET_SCROLL");
                 if (null != var2) {
@@ -5585,7 +5585,7 @@ final class em {
                 sb.field_e = null;
             }
             void run() {
-                var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+                var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
                 try {
                   runChunk0();
                   if (finished) return;
@@ -5623,7 +5623,7 @@ final class em {
         decompiledBody.run();
     }
 
-    final static void a(cf param0, byte param1, bv param2) {
+    final static void a(cf param0, byte param1, CipherPacketBuffer param2) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -5639,7 +5639,7 @@ final class em {
         sd var7 = null;
         id[] var8 = null;
         int var9 = 0;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3 = new id();
           var3.field_a = param2.k(0);
@@ -5695,37 +5695,37 @@ final class em {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (gs.field_a) {
             var9_int = param4 + og.field_p[param4];
-            if (vs.field_e[param4].c((byte) -79)) {
-              var10 = vs.field_e[param4].b((byte) -102);
+            if (vs.field_e[param4].hasExplicitOwner((byte) -79)) {
+              var10 = vs.field_e[param4].getExplicitOwner((byte) -102);
               var11 = 0;
               if (param6 == 0 ||
-                var10 != vs.field_e[param4 - 1].b((byte) -34)) {
+                var10 != vs.field_e[param4 - 1].getExplicitOwner((byte) -34)) {
                 var11 = var11 | 1;
               }
               if (0 == param2 ||
-                vs.field_e[-ks.field_y + param4].b((byte) -96) != var10) {
+                vs.field_e[-ks.field_y + param4].getExplicitOwner((byte) -96) != var10) {
                 var11 = var11 | 2;
               }
               if (param6 == -1 + ks.field_y ||
-                ~vs.field_e[param4 + 1].b((byte) -95) != ~var10) {
+                ~vs.field_e[param4 + 1].getExplicitOwner((byte) -95) != ~var10) {
                 var11 = var11 | 4;
               }
               if (~(ef.field_c - 1) == ~param2 ||
-                vs.field_e[ks.field_y + param4].b((byte) -55) != var10) {
+                vs.field_e[ks.field_y + param4].getExplicitOwner((byte) -55) != var10) {
                 var11 = var11 | 8;
               }
               dm.a(var10, false, 20 + param3, param7 + 40, var11, true);
             }
-            L10: {
-              var10 = fn.field_Q[vs.field_e[param4].field_h];
+            regionExit1: {
+              var10 = fn.field_Q[vs.field_e[param4].terrainType];
               if (var10 > -1) {
-                var11 = vs.field_e[param4].field_a;
-                if (bv.field_w != null) {
-                  var11 = bv.field_w.o(var11, -1);
+                var11 = vs.field_e[param4].ownerPlayer;
+                if (CipherPacketBuffer.currentBattlefield != null) {
+                  var11 = CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var11, -1);
                 }
                 if (var10 == 2) {
                   l.field_b[17].b(param7, -40 + param3, param0, param8);
@@ -5747,7 +5747,7 @@ final class em {
                   if (var10 == 1) {
                     l.field_b[8 + var9_int % 3].b(param7, -50 + param3, param0, param8);
                     if (var11 <= -1) {
-                      break L10;
+                      break regionExit1;
                     }
                     wb.a(7816226, 21 + param7, var11, param4 + ug.field_b, param3 - 30);
                   }
@@ -5758,30 +5758,30 @@ final class em {
                         case 9:
                           l.field_b[var9_int % 2 + 14].a(param7, -40 + param3);
                           if (var13 == 0) {
-                            break L10;
+                            break regionExit1;
                           }
                           break;
                         case 0:
                           l.field_b[0 + var9_int % 8].b(param7, param3 - 40, param0, param8);
                           if (var11 <= -1) {
-                            break L10;
+                            break regionExit1;
                           }
                           wb.a(7816226, 20 + param7, var11, param4 + ug.field_b, param3 + 10);
                           if (var13 == 0) {
-                            break L10;
+                            break regionExit1;
                           }
                           break;
                         case 4:
                           la.a(param3 + 20, og.field_p[param4] + param4, param8, 40 + param7, param0, false);
                           if (var13 == 0) {
-                            break L10;
+                            break regionExit1;
                           }
                         default:
-                          break L10;
+                          break regionExit1;
                         case 6:
                           ui.a(param2, param7, (byte) -107, param6, param3);
                           if (var13 == 0) {
-                            break L10;
+                            break regionExit1;
                           }
                           break;
                       }
@@ -5801,11 +5801,11 @@ final class em {
                     }
                   }}}
             }
-            if (vs.field_e[param4].c(-26)) {
+            if (vs.field_e[param4].hasCorpse(-26)) {
               es.field_d[var9_int % 4].b(param7, -25 + param3, param0, param8);
             }
-            var11 = bv.field_w.b(param5 + 31, param2, param6, -1);
-            var12 = vs.field_e[param4].field_h;
+            var11 = CipherPacketBuffer.currentBattlefield.b(param5 + 31, param2, param6, -1);
+            var12 = vs.field_e[param4].terrainType;
             if (4 != var12 &&
               var12 != 6 &&
               var12 != 2 &&
@@ -5814,7 +5814,7 @@ final class em {
             }
           }
           if (param5 != 0) {
-            em.a((cf) null, (byte) -46, (bv) null);
+            em.a((cf) null, (byte) -46, (CipherPacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

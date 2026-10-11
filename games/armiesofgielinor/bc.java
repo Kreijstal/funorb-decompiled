@@ -13,7 +13,7 @@ final class bc {
     static String field_k;
     private ue field_l;
     private int field_b;
-    static ic field_a;
+    static GameplayController field_a;
     static boolean field_e;
     static String field_i;
 
@@ -82,7 +82,7 @@ final class bc {
         int var5 = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
             am.field_D[var2_int] = 0;
@@ -154,7 +154,7 @@ final class bc {
           int var14 = 0;
           EOFException var15 = null;
           int var17 = 0;
-          var17 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             var6 = this.field_l;
             synchronized (var6) {
@@ -187,7 +187,7 @@ final class bc {
                 this.field_g.a(6, 0, (byte) 56, tn.field_db);
                 var9 = 0;
                 var10 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (param3 > var9) {
                     boolean decompiledFrameRemainder0 = true;
                     var11 = 0;
@@ -203,7 +203,7 @@ final class bc {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var13 = (tn.field_db[3] & 255) + (65280 & tn.field_db[2] << 8);
                         var11 = (255 & tn.field_db[6]) + ((16711680 & tn.field_db[4] << 16) + (tn.field_db[5] << 8 & 65280));
@@ -219,7 +219,7 @@ final class bc {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var11 = (255 & tn.field_db[8]) + (16711680 & tn.field_db[6] << 16) + (65280 & tn.field_db[7] << 8);
                         var12 = (255 & tn.field_db[3]) + ((tn.field_db[1] << 16 & 16711680) + (((255 & tn.field_db[0]) << 24) + ((255 & tn.field_db[2]) << 8)));
@@ -348,7 +348,7 @@ final class bc {
           Object stackIn_52_0 = null;
           Throwable decompiledCaughtException = null;
           IOException var4 = null;
-          var18 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var18 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           var3_ref = this.field_l;
           synchronized (var3_ref) {
             try {

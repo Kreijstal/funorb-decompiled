@@ -6,7 +6,7 @@ final class uk extends qc {
     private int field_m;
     private long field_r;
     static int field_q;
-    static ka field_s;
+    static BitmapFont field_s;
     private int field_o;
     private long field_u;
     private long field_t;
@@ -16,7 +16,7 @@ final class uk extends qc {
 
     final static void b(int param0) {
         int var1_int = 0;
-        int var2 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 22963) {
             uk.d(-122);
@@ -43,7 +43,7 @@ final class uk extends qc {
 
     private final long c(int param0) {
         int var8 = 0;
-        int var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != -28757) {
           this.a(122);
         }
@@ -68,7 +68,7 @@ final class uk extends qc {
     final int a(long param0, int param1) {
         int var4;
         int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 != 0) {
           uk.d(98);
         }

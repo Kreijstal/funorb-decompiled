@@ -5,7 +5,7 @@ final class nh extends ks {
     static String field_H;
     static boolean[] field_D;
     byte[] field_F;
-    static wk[] field_G;
+    static RgbSprite[] field_G;
     static String field_J;
     static String field_I;
     static volatile int field_B;
@@ -14,11 +14,11 @@ final class nh extends ks {
     static int field_E;
     static tp field_K;
 
-    final static wk a(String param0, String param1, kl param2, boolean param3) {
+    final static RgbSprite a(String param0, String param1, kl param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        wk stackIn_3_0 = null;
+        RgbSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -30,10 +30,10 @@ final class nh extends ks {
         try {
           var4_int = param2.a(param1, 96);
           if (param3) {
-            field_G = (wk[]) null;
+            field_G = (RgbSprite[]) null;
           }
           var5 = param2.a((byte) -107, var4_int, param0);
-          stackIn_3_0 = vh.a(-1, var4_int, param2, var5);
+          stackIn_3_0 = PacketBuffer.a(-1, var4_int, param2, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

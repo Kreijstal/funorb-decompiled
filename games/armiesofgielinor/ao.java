@@ -7,7 +7,7 @@ final class ao extends lk {
     static String field_x;
     private ip field_v;
 
-    final static void a(int param0, int param1, int param2, bv param3, int param4) {
+    final static void a(int param0, int param1, int param2, CipherPacketBuffer param3, int param4) {
         try {
           int var5_int = 58 / ((param1 + 86) / 38);
           if (param2 < param4) {
@@ -150,7 +150,7 @@ final class ao extends lk {
         }
     }
 
-    final void a(int param0, wk param1) {
+    final void a(int param0, RgbSprite param1) {
         int var4 = 0;
         ip[] var3 = null;
         ip var5 = null;
@@ -161,7 +161,7 @@ final class ao extends lk {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var7 = this.field_w;
           var3 = var7;
@@ -210,7 +210,7 @@ final class ao extends lk {
         var1.a(false);
     }
 
-    final void a(int param0, wk[] param1) {
+    final void a(int param0, RgbSprite[] param1) {
         ip[] var3 = null;
         int var4 = 0;
         ip var5 = null;
@@ -220,7 +220,7 @@ final class ao extends lk {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3 = this.field_w;
           var4 = 0;
@@ -258,7 +258,7 @@ final class ao extends lk {
         return dupTemp$0;
     }
 
-    final void a(wk[] param0, int param1, int param2) {
+    final void a(RgbSprite[] param0, int param1, int param2) {
         int var4_int = 0;
         try {
           var4_int = param1;
@@ -266,8 +266,8 @@ final class ao extends lk {
             this.field_w[var4_int] = new ip();
           }
           if (param2 != -7) {
-            wk[] var5 = (wk[]) null;
-            this.a((wk[]) null, 15, 64);
+            RgbSprite[] var5 = (RgbSprite[]) null;
+            this.a((RgbSprite[]) null, 15, 64);
           }
           this.field_w[param1].field_d = param0;
         } catch (RuntimeException runtimeException) {
@@ -290,7 +290,7 @@ final class ao extends lk {
         ip var6 = null;
         int var7 = 0;
         ao var8 = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 != 6) {
             var8 = (ao) null;

@@ -9,12 +9,12 @@ final class mo {
     static String[] field_i;
     int field_p;
     static boolean field_w;
-    static wk[] field_g;
+    static RgbSprite[] field_g;
     String field_q;
     static boolean field_r;
-    static wk field_t;
+    static RgbSprite field_t;
     int field_b;
-    static wk field_s;
+    static RgbSprite field_s;
     je field_u;
     static String field_o;
     long field_n;

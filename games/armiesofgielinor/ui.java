@@ -27,12 +27,12 @@ final class ui {
         return (ms) null;
     }
 
-    final static ca a(bv param0, int param1, int param2) {
-        ca var3 = null;
+    final static TileMetadata a(CipherPacketBuffer param0, int param1, int param2) {
+        TileMetadata var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         Object stackIn_2_0 = null;
-        ca stackIn_4_0 = null;
+        TileMetadata stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -40,9 +40,9 @@ final class ui {
         try {
           if (0 == param1) {
             stackIn_2_0 = null;
-            return (ca) (stackIn_2_0);
+            return (TileMetadata) (stackIn_2_0);
           }
-          var3 = new ca();
+          var3 = new TileMetadata();
           no.a(param0, var3, param1, -24721);
           var4 = -10 % ((param2 + 23) / 54);
           stackIn_4_0 = var3;
@@ -85,7 +85,7 @@ final class ui {
 
     final int a(int param0) {
         ms var3 = null;
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var2 = 0;
         ms var3Lifetime1;
         if (param0 == 30578) {
@@ -154,7 +154,7 @@ final class ui {
         int var11Lifetime3;
         int var11Lifetime4;
         int var11Lifetime1Lifetime1;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         stackIn_3_0 = (11 != sr.a(param3, -1 + param0, 11, (byte) -122)) ? 0 : 1;
         var5 = stackIn_3_0;
         stackIn_6_0 = (11 != sr.a(param3, param0 + 1, 11, (byte) -115)) ? 0 : 1;

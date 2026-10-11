@@ -6,7 +6,7 @@ final class ck {
     static qb[][] field_e;
     static long field_b;
     static String field_a;
-    static wk[] field_c;
+    static RgbSprite[] field_c;
 
     final static boolean a(int param0, int param1) {
         if (param1 != -12) {

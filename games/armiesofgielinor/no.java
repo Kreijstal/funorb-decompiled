@@ -5,7 +5,7 @@ final class no extends en {
     static au field_K;
     static int[] field_U;
     static je field_M;
-    static wk field_P;
+    static RgbSprite field_P;
     static int field_J;
     private fn field_Q;
     static int field_S;
@@ -69,7 +69,7 @@ final class no extends en {
         }
     }
 
-    final static void a(bv param0, uo param1, int param2, int param3) {
+    final static void a(CipherPacketBuffer param0, TaggedFieldReader param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String var5 = null;
@@ -83,16 +83,16 @@ final class no extends en {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = param2 + param0.a(false);
           while (param0.a(false) < var4_int) {
             var5 = mt.a(param0, true);
             var6 = param0.a(false);
-            var7 = ej.a(param0, true);
+            var7 = AiPlanner.a(param0, true);
             var8 = param0.a(false) - var6;
             kq.a(var6, param3 + 489, var8, var7, param0);
-            param1.a(var7, param0, var5, (byte) 37);
+            param1.decodeTaggedField(var7, param0, var5, (byte) 37);
             ao.a(var6, 4, var8, param0, var7);
           }
           if (param3 == -24721) {
@@ -179,7 +179,7 @@ final class no extends en {
     }
 
     final static void b(boolean param0) {
-        tf.a((byte) -99, ag.d((byte) -111));
+        tf.a((byte) -99, CombatEvent.d((byte) -111));
         if (param0) {
           field_N = (String) null;
         }
@@ -202,7 +202,7 @@ final class no extends en {
 
     final static String a(char param0, boolean param1, int param2) {
         int var4 = 0;
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         char[] var6 = new char[param2];
         char[] var3 = var6;
         if (param1) {
@@ -269,6 +269,6 @@ final class no extends en {
     }
 
     static {
-        field_P = new wk(0, 0);
+        field_P = new RgbSprite(0, 0);
     }
 }

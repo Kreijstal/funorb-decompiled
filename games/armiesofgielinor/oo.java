@@ -3,7 +3,7 @@
  */
 final class oo {
     private String field_c;
-    private wk field_b;
+    private RgbSprite field_b;
     private int field_p;
     private ru[] field_i;
     private dl field_h;
@@ -11,9 +11,9 @@ final class oo {
     static byte[][] field_d;
     private int field_n;
     private int field_l;
-    private wk field_t;
+    private RgbSprite field_t;
     private int field_r;
-    private wk field_m;
+    private RgbSprite field_m;
     static int field_a;
     private boolean field_s;
     private int field_f;
@@ -132,7 +132,7 @@ final class oo {
         int var6 = 0;
         int[] var7 = null;
         int var4Lifetime1;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_l = this.field_l + 65536;
           while (ev.b(-101, qk.field_d, this.field_l) >= 65536) {
@@ -141,7 +141,7 @@ final class oo {
           }
           if (param1 > -95) {
             var7 = (int[]) null;
-            this.a((wk) null, 114, -82, (String) null, (ka) null, (int[]) null, 110, 33, 0, 0.8778258562088013f);
+            this.a((RgbSprite) null, 114, -82, (String) null, (BitmapFont) null, (int[]) null, 110, 33, 0, 0.8778258562088013f);
           }
           var3_int = -1;
           if (this.field_i != null) {
@@ -184,7 +184,7 @@ final class oo {
           }
           if (null != mg.field_d) {
             var4 = 0;
-            if (tr.field_A != 0 &&
+            if (DeployEvent.field_A != 0 &&
               ur.field_z > 257 &&
               290 > ur.field_z) {
               if (9 < iu.field_t &&
@@ -227,7 +227,7 @@ final class oo {
               }
             }
             if (mk.field_h) {
-              while (jd.i((byte) -71)) {
+              while (Unit.i((byte) -71)) {
                 var5 = this.c(127);
                 if (0 == var5) {
                   continue;
@@ -257,7 +257,7 @@ final class oo {
         RuntimeException var2_ref = null;
         try {
           try {
-            rf.a(32767, ag.d((byte) 73));
+            rf.a(32767, CombatEvent.d((byte) 73));
             if (param0 >= -84) {
               this.field_n = 29;
             }
@@ -311,7 +311,7 @@ final class oo {
         }
     }
 
-    private final void a(int[] param0, int param1, String param2, int param3, ka param4, byte param5, int param6, int param7) {
+    private final void a(int[] param0, int param1, String param2, int param3, BitmapFont param4, byte param5, int param6, int param7) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -329,11 +329,11 @@ final class oo {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var9 = null;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           rq.a((byte) -56);
           for (var9_int = param7; var9_int < param6; var9_int++) {
-            qn.f(param3, var9_int, param1, var9_int + 1);
+            SoftwareRaster.f(param3, var9_int, param1, var9_int + 1);
             var10 = var9_int * param0.length / param6;
             var11 = param0[param0.length - var10 - 1];
             param4.a(param2, param3, param7, param1, param6, var11, -1, 1, 1, 0);
@@ -384,15 +384,15 @@ final class oo {
         int var2_intLifetime1;
         int var2_intLifetime2;
         int var3Lifetime1;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          qn.a(9, 9, 622, 47, 4540749, 65793);
-          qn.f(9, 257, 622, 33, 2585);
-          qn.a(9, 265, 622, 11, 2585, 1515566);
+          SoftwareRaster.a(9, 9, 622, 47, 4540749, 65793);
+          SoftwareRaster.f(9, 257, 622, 33, 2585);
+          SoftwareRaster.a(9, 265, 622, 11, 2585, 1515566);
           var2_int = 0;
           var3 = 14;
           while (4 > var2_int) {
-            qn.a(var3, 331, 117, 90, 460551, 3881787);
+            SoftwareRaster.a(var3, 331, 117, 90, 460551, 3881787);
             var2_int++;
             var3 += 121;
           }
@@ -402,8 +402,8 @@ final class oo {
           }
           var3Lifetime1 = 299;
           while (var2_intLifetime1 < 2) {
-            qn.a(508, var3Lifetime1, 127, 42, 1130115, 3365268);
-            qn.f(508, 42 + var3Lifetime1, 127, 42, 12410);
+            SoftwareRaster.a(508, var3Lifetime1, 127, 42, 1130115, 3365268);
+            SoftwareRaster.f(508, 42 + var3Lifetime1, 127, 42, 12410);
             var3Lifetime1 += 91;
             var2_intLifetime1++;
           }
@@ -418,7 +418,7 @@ final class oo {
             bh.field_H.a(28979, "arialish12") &&
             bh.field_H.a(28979, "pump32")) {
             mc.field_a = pv.a("members_expansion_screen", "frame", iw.field_p, 24914);
-            mg.field_d = ic.a("arrow", (byte) 51, "members_expansion_screen", iw.field_p);
+            mg.field_d = GameplayController.a("arrow", (byte) 51, "members_expansion_screen", iw.field_p);
             ll.field_Sb = gs.a("arialish12", iw.field_p, bh.field_H, (byte) -53, "");
             kt.field_n = it.a("", iw.field_p, bh.field_H, (byte) -87, "pump32");
             hr.field_b = nh.a("benefit_orbs", "members_expansion_screen", iw.field_p, false);
@@ -493,7 +493,7 @@ final class oo {
         ru var6 = null;
         ru var7 = null;
         ru var2Lifetime1;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null == this.field_i) {
             if (null != ll.field_Sb) {
@@ -534,7 +534,7 @@ final class oo {
         }
     }
 
-    private final void a(wk param0, int param1, int param2, String param3, ka param4, int[] param5, int param6, int param7, int param8, float param9) {
+    private final void a(RgbSprite param0, int param1, int param2, String param3, BitmapFont param4, int[] param5, int param6, int param7, int param8, float param9) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -554,11 +554,11 @@ final class oo {
         int var11_int = 0;
         RuntimeException var11 = null;
         int var12 = 0;
-        wk var13 = null;
+        RgbSprite var13 = null;
         try {
           var11_int = (int)((float)param8 / param9);
           var12 = (int)((float)param7 / param9);
-          var13 = new wk(var11_int, var12);
+          var13 = new RgbSprite(var11_int, var12);
           vn.a(var13, 3);
           if (param6 >= -108) {
             oo.b(-32);
@@ -653,10 +653,10 @@ final class oo {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
-        wk var5 = null;
+        RgbSprite var5 = null;
         String var6 = null;
         String var7 = null;
-        ka var8 = null;
+        BitmapFont var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         int[] var11 = null;
@@ -665,9 +665,9 @@ final class oo {
         try {
           if (this.field_t == null &&
             null != kt.field_n) {
-            this.field_t = new wk(622, 47);
+            this.field_t = new RgbSprite(622, 47);
             vn.a(this.field_t, 3);
-            qn.a(0, 0, 622, 47, 4540749, 65793);
+            SoftwareRaster.a(0, 0, 622, 47, 4540749, 65793);
             var2_int = 16448250;
             var3 = 10068666;
             var12 = cj.a(var3, var2_int, -60);
@@ -675,24 +675,24 @@ final class oo {
             var9 = var11;
             this.a(var12, 622, this.field_c, 0, kt.field_n, (byte) 66, 47, 0);
             rf.b(-18862);
-            this.field_m = new wk(475, 24);
+            this.field_m = new RgbSprite(475, 24);
             this.a(this.field_m, -4, 0, hr.field_h, kt.field_n, var9, -124, 24, 475, 0.75f);
             if (param0 >= -103) {
-              var8 = (ka) null;
-              this.a((int[]) null, -60, (String) null, -5, (ka) null, (byte) 31, 126, -81);
+              var8 = (BitmapFont) null;
+              this.a((int[]) null, -60, (String) null, -5, (BitmapFont) null, (byte) 31, 126, -81);
             }
             var10 = cj.a(526344, 526344, 126);
-            var5 = new wk(121, 122);
+            var5 = new RgbSprite(121, 122);
             vn.a(var5, 3);
-            qn.a(0, 0, var5.field_y, var5.field_v / 2, 16180917, 16306250);
-            qn.a(0, var5.field_v / 2, var5.field_y, var5.field_v, 16306250, 15568919);
+            SoftwareRaster.a(0, 0, var5.field_y, var5.field_v / 2, 16180917, 16306250);
+            SoftwareRaster.a(0, var5.field_v / 2, var5.field_y, var5.field_v, 16306250, 15568919);
             var6 = rv.field_a;
             var7 = wp.field_B;
             this.a(var5, -16, 0, var6, kt.field_n, var10, -112, var5.field_v, var5.field_y, 0.5f);
             this.a(var5, 20, 0, var7, kt.field_n, var10, -123, var5.field_v, var5.field_y, 0.5f);
             this.a(var5, 12 - kt.field_n.field_H + var5.field_v / 2, 0, qb.field_c[this.field_r], kt.field_n, var10, -125, var5.field_v / 3, var5.field_y, 0.699999988079071f);
             rf.b(-18862);
-            this.field_b = new wk(121, 122);
+            this.field_b = new RgbSprite(121, 122);
             vn.a(this.field_b, 3);
             var5.a(this.field_b.field_y / 2, this.field_b.field_v / 2, -2048, 4096);
             rf.b(-18862);

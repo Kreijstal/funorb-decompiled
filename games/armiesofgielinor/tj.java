@@ -6,11 +6,11 @@ import java.util.*;
 
 class tj extends kb implements gw {
     static na field_C;
-    at field_D;
+    NodeDeque field_D;
 
     final int g(int param0) {
         int var5 = 0;
-        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var2 = 0;
         bb var3 = new bb(this.field_D);
         if (param0 != -31989) {
@@ -38,7 +38,7 @@ class tj extends kb implements gw {
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_D.a(false)) {
             return false;
@@ -79,7 +79,7 @@ class tj extends kb implements gw {
     }
 
     void f(int param0) {
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         bb var2 = new bb(this.field_D);
         if (param0 != 1) {
           field_C = (na) null;
@@ -95,10 +95,10 @@ class tj extends kb implements gw {
         bb var2;
         kb var3;
         int var4;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = new bb(this.field_D);
         if (param0 < 24) {
-          this.field_D = (at) null;
+          this.field_D = (NodeDeque) null;
         }
         var3 = (kb) (var2.c(50));
         while (var3 != null) {
@@ -119,7 +119,7 @@ class tj extends kb implements gw {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3 = new bb(this.field_D);
           if (param0 != 11) {
@@ -163,7 +163,7 @@ class tj extends kb implements gw {
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0) {
             var8 = (kb) null;
@@ -212,7 +212,7 @@ class tj extends kb implements gw {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var8 = new bb(this.field_D);
           var9 = (kb) (var8.c(50));
@@ -248,7 +248,7 @@ class tj extends kb implements gw {
 
     final void a(byte param0, kb param1) {
         try {
-          this.field_D.a((byte) -119, (tc) (param1));
+          this.field_D.a((byte) -119, (IntrusiveNode) (param1));
           if (param0 != 10) {
             this.f(-101);
           }
@@ -259,7 +259,7 @@ class tj extends kb implements gw {
 
     String h(int param0) {
         String var4 = null;
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         bb var2 = new bb(this.field_D);
         kb var3 = (kb) (var2.c(param0 ^ 21434));
         while (var3 != null) {
@@ -272,7 +272,7 @@ class tj extends kb implements gw {
         if (param0 == 21384) {
           return null;
         }
-        this.field_D = (at) null;
+        this.field_D = (NodeDeque) null;
         return null;
     }
 
@@ -285,7 +285,7 @@ class tj extends kb implements gw {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param3 <= 103) {
             field_C = (na) null;
@@ -319,7 +319,7 @@ class tj extends kb implements gw {
 
     boolean a(boolean param0) {
         if (param0) {
-          this.field_D = (at) null;
+          this.field_D = (NodeDeque) null;
         }
         return null != this.e((byte) 94) ? true : false;
     }
@@ -387,7 +387,7 @@ class tj extends kb implements gw {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5 = new bb(this.field_D);
           var6 = (kb) (var5.c(50));
@@ -433,7 +433,7 @@ class tj extends kb implements gw {
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var7 = new bb(this.field_D);
           var8 = -73 / ((-58 - param3) / 53);
@@ -472,7 +472,7 @@ class tj extends kb implements gw {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var9 = new bb(this.field_D);
           var8 = (kb) (var9.c(50));
@@ -492,7 +492,7 @@ class tj extends kb implements gw {
             if (param3 == -12215) {
               return false;
             }
-            this.field_D = (at) null;
+            this.field_D = (NodeDeque) null;
             return false;
           }
           if (!br.field_f[81]) {
@@ -524,7 +524,7 @@ class tj extends kb implements gw {
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           super.a(param0, param1, param2, param3);
           var5 = new bb(this.field_D);
@@ -553,7 +553,7 @@ class tj extends kb implements gw {
     }
 
     private final void i(int param0) {
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         bb var2 = new bb(this.field_D);
         kb var3 = (kb) (var2.c(50));
         if (param0 != 0) {
@@ -567,7 +567,7 @@ class tj extends kb implements gw {
 
     tj(int param0, int param1, int param2, int param3, kh param4) {
         super(param0, param1, param2, param3, param4, (qo) null);
-        this.field_D = new at();
+        this.field_D = new NodeDeque();
     }
 
     public static void d(byte param0) {
@@ -578,7 +578,7 @@ class tj extends kb implements gw {
     }
 
     void a(int param0, int param1, byte param2, int param3) {
-        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (0 == param3 &&
           null != this.field_k) {
           this.field_k.a((kb) (this), param0, -94, true, param1);
@@ -603,7 +603,7 @@ class tj extends kb implements gw {
           Throwable decompiledCaughtException = null;
           RuntimeException var1 = null;
           IOException var3 = null;
-          var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             if (ai.field_T != null) {
               ai.field_T.c(-5758);

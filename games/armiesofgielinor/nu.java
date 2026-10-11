@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nu extends lk {
-    private wk[] field_v;
+    private RgbSprite[] field_v;
     private int field_y;
     private int field_x;
     static int[] field_z;
@@ -25,7 +25,7 @@ final class nu extends lk {
         RuntimeException decompiledCaughtException = null;
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        bv var4 = null;
+        CipherPacketBuffer var4 = null;
         String var5 = null;
         int var6 = 0;
         String var7 = null;
@@ -46,13 +46,13 @@ final class nu extends lk {
         sd var21 = null;
         om var22 = null;
         byte[] var23 = null;
-        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var23 = param1.a("missions", -91, gk.field_O[param2]);
           var18 = var23;
           var17 = var18;
           var3 = var17;
-          var4 = new bv(var23);
+          var4 = new CipherPacketBuffer(var23);
           var5 = var4.h((byte) 121);
           var6 = var4.k(param0 - 23948);
           var7 = var4.h((byte) 121);
@@ -205,7 +205,7 @@ final class nu extends lk {
         this.field_x = param0;
         this.field_v = bb.field_b;
         this.field_u = param1;
-        this.field_q = bv.field_t;
+        this.field_q = CipherPacketBuffer.field_t;
         this.field_y = param2;
     }
 

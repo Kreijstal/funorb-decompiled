@@ -4,7 +4,7 @@
 final class oe extends ro implements he {
     private boolean field_Ab;
     private kd field_xb;
-    static at field_Bb;
+    static NodeDeque field_Bb;
     private boolean field_yb;
     static je field_Cb;
     static String field_zb;
@@ -57,31 +57,31 @@ final class oe extends ro implements he {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != -6) {
           return;
         }
         if (param6 >= param4) {
           if (param2 > param6) {
-            vp.a(param6, param4, param7, param2, param1, param5, qn.field_d, param3, (byte) 20);
+            ManaEvent.a(param6, param4, param7, param2, param1, param5, SoftwareRaster.field_d, param3, (byte) 20);
             return;
           }
           if (param4 >= param2) {
-            vp.a(param4, param2, param1, param6, param3, param5, qn.field_d, param7, (byte) 20);
+            ManaEvent.a(param4, param2, param1, param6, param3, param5, SoftwareRaster.field_d, param7, (byte) 20);
             return;
           }
-          vp.a(param2, param4, param1, param6, param7, param5, qn.field_d, param3, (byte) 20);
+          ManaEvent.a(param2, param4, param1, param6, param7, param5, SoftwareRaster.field_d, param3, (byte) 20);
           return;
         }
         if (param2 > param4) {
-          vp.a(param4, param6, param7, param2, param3, param5, qn.field_d, param1, (byte) 20);
+          ManaEvent.a(param4, param6, param7, param2, param3, param5, SoftwareRaster.field_d, param1, (byte) 20);
           return;
         }
         if (param6 >= param2) {
-          vp.a(param6, param2, param3, param4, param1, param5, qn.field_d, param7, (byte) 20);
+          ManaEvent.a(param6, param2, param3, param4, param1, param5, SoftwareRaster.field_d, param7, (byte) 20);
           return;
         }
-        vp.a(param2, param6, param3, param4, param7, param5, qn.field_d, param1, (byte) 20);
+        ManaEvent.a(param2, param6, param3, param4, param7, param5, SoftwareRaster.field_d, param1, (byte) 20);
     }
 
     public final void a(int param0, int param1, int param2, int param3, fw param4) {
@@ -106,7 +106,7 @@ final class oe extends ro implements he {
         RuntimeException var4_ref = null;
         ad var5 = null;
         int var6 = 0;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_Ab = true;
           if (!param2.field_a) {
@@ -131,7 +131,7 @@ final class oe extends ro implements he {
           if (param1 >= -2) {
             this.field_xb = (kd) null;
           }
-          var5 = new ad((ro) (this), bv.field_t, var4);
+          var5 = new ad((ro) (this), CipherPacketBuffer.field_t, var4);
           if (param2.field_a) {
             if (param2.field_h) {
               this.a(new qd(this), (byte) -81);
@@ -153,7 +153,7 @@ final class oe extends ro implements he {
               var5.a(te.field_m, 7, 1);
             } else {
               if (6 == param2.field_d) {
-                var5.a(ag.field_O, 9, 1);
+                var5.a(CombatEvent.field_O, 9, 1);
               }
             }
           }
@@ -174,7 +174,7 @@ final class oe extends ro implements he {
     }
 
     oe(gk param0, kd param1) {
-        super(param0, bv.field_t, wm.field_d, false, false);
+        super(param0, CipherPacketBuffer.field_t, wm.field_d, false, false);
         try {
           this.field_xb = param1;
         } catch (RuntimeException runtimeException) {
@@ -198,7 +198,7 @@ final class oe extends ro implements he {
     }
 
     static {
-        field_Bb = new at();
+        field_Bb = new NodeDeque();
         field_zb = "Withdraw invitation to <%0> to join this game";
     }
 }

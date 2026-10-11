@@ -20,23 +20,23 @@ final class wp extends ms {
     final boolean f(byte param0) {
         int var2;
         int var3_int;
-        at var3;
+        NodeDeque var3;
         int var4;
         int var6;
-        vh var8;
+        PacketBuffer var8;
         int var9;
         Object var10;
         ig var11;
         int var12;
         int var13;
-        vh var16;
+        PacketBuffer var16;
         int[] var27;
         byte[] var28;
         int[] var29;
         byte[] var30;
         int var3_intLifetime1;
         int var6Lifetime1;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != -65) {
           field_v = (String[]) null;
         }
@@ -58,8 +58,8 @@ final class wp extends ms {
         var3_intLifetime1 = var13;
         while (var13 < this.field_x.length) {
           var28 = this.field_x[var13];
-          var16 = new vh(var28);
-          var16.field_q = 1;
+          var16 = new PacketBuffer(var28);
+          var16.position = 1;
           var6 = var16.e((byte) -104);
           var2 = var2 != 0 & up.field_e.a(var6, (byte) -56) ? 1 : 0;
           var13++;
@@ -67,20 +67,20 @@ final class wp extends ms {
         if (var2 == 0) {
           return false;
         }
-        var3 = new at();
+        var3 = new NodeDeque();
         var4 = jj.field_c.d(this.field_C, param0 ^ 65);
         this.field_A = new ht[var4];
         var29 = jj.field_c.b(-92, this.field_C);
         for (var6Lifetime1 = 0; var6Lifetime1 < var29.length; var6Lifetime1++) {
           var30 = this.field_x[var6Lifetime1];
-          var8 = new vh(var30);
-          var8.field_q = 1;
+          var8 = new PacketBuffer(var30);
+          var8.position = 1;
           var9 = var8.e((byte) -104);
           var10 = null;
-          var11 = (ig) (var3.e((byte) 124));
+          var11 = (ig) (var3.first((byte) 124));
           while (var11 != null) {
             if (~var11.field_k != ~var9) {
-              var11 = (ig) (var3.a((byte) 123));
+              var11 = (ig) (var3.next((byte) 123));
               continue;
             }
             var10 = var11;
@@ -88,7 +88,7 @@ final class wp extends ms {
           }
           if (var10 == null) {
             var10 = new ig(var9, up.field_e.c(var9, (byte) 81));
-            var3.a((byte) -119, (tc) (var10));
+            var3.a((byte) -119, (IntrusiveNode) (var10));
           }
           this.field_A[var29[var6Lifetime1]] = new ht(var30, (ig) (var10));
         }

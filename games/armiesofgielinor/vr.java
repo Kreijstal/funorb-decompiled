@@ -5,9 +5,9 @@ final class vr {
     static int[] field_a;
 
     final static void a(kl param0, int param1) {
-        wk[][] array$0 = null;
+        RgbSprite[][] array$0 = null;
         int var4 = 0;
-        wk[] array$1 = null;
+        RgbSprite[] array$1 = null;
         int var6 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -22,9 +22,9 @@ final class vr {
         String var9 = null;
         int var10 = 0;
         int var3Lifetime1;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          gv.field_a = new wk[es.field_c.length][][];
+          gv.field_a = new RgbSprite[es.field_c.length][][];
           var9 = "basic";
           var2 = var9;
           var3 = 0;
@@ -33,17 +33,17 @@ final class vr {
           }
           while (es.field_c.length > var3) {
             if (es.field_c[var3] != null) {
-              array$0 = new wk[es.field_c[var3].length][];
+              array$0 = new RgbSprite[es.field_c[var3].length][];
               gv.field_a[var3] = array$0;
               for (var4 = 0; es.field_c[var3].length > var4; var4++) {
                 var5 = es.field_c[var3][var4];
                 if (var5 != null) {
-                  array$1 = new wk[var5.length];
+                  array$1 = new RgbSprite[var5.length];
                   gv.field_a[var3][var4] = array$1;
                   for (var6 = 0; var5.length > var6; var6++) {
                     var7 = var5[var6];
                     if (var7 != null) {
-                      gv.field_a[var3][var4][var6] = ic.a(var7, (byte) 51, var9, param0);
+                      gv.field_a[var3][var4][var6] = GameplayController.a(var7, (byte) 51, var9, param0);
                     }
                   }
                   if (var3 == 14 &&
@@ -55,13 +55,13 @@ final class vr {
             }
             var3++;
           }
-          bj.field_p = new wk[4];
+          bj.field_p = new RgbSprite[4];
           var10 = 0;
           var3Lifetime1 = var10;
           while (bj.field_p.length > var10) {
-            bj.field_p[var10] = new wk(100, 110);
+            bj.field_p[var10] = new RgbSprite(100, 110);
             bj.field_p[var10].b();
-            qn.b();
+            SoftwareRaster.b();
             td.field_f.a(var10, 0);
             ds.a(10, 50, va.field_G[0], 27066, false, var10, true, va.field_G[3]);
             ds.a(10, 50, va.field_G[0], 27066, false, var10, false, va.field_G[3]);

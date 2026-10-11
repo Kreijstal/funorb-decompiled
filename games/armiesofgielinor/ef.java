@@ -9,7 +9,7 @@ final class ef extends Exception {
 
     final static void b(int param0) {
         ro.field_lb = null;
-        bv.field_w = null;
+        CipherPacketBuffer.currentBattlefield = null;
         og.field_p = null;
         vs.field_e = null;
         jf.field_C = null;

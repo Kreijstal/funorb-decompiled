@@ -143,24 +143,24 @@ final class of extends je {
         field_Lb = null;
     }
 
-    final static void a(ha param0, int param1, int param2, byte param3, int param4, int param5) {
+    final static void a(Battlefield param0, int param1, int param2, byte param3, int param4, int param5) {
         sl var9 = null;
         int var7 = 0;
-        if (nw.g(121)) {
+        if (DamageEvent.g(121)) {
           return;
         }
         try {
           var9 = new sl(param5, param4, param0, param1, param2 > 0 ? true : false);
           bu.field_b = var9;
           vl.field_n.h(32161, 80);
-          vl.field_n.field_q = vl.field_n.field_q + 2;
+          vl.field_n.position = vl.field_n.position + 2;
           if (param3 != -80) {
-            ha var8 = (ha) null;
-            of.a((ha) null, -98, 73, (byte) 105, 55, -24);
+            Battlefield var8 = (Battlefield) null;
+            of.a((Battlefield) null, -98, 73, (byte) 105, 55, -24);
           }
-          var7 = vl.field_n.field_q;
+          var7 = vl.field_n.position;
           var9.a(0, vl.field_n);
-          vl.field_n.f(0, vl.field_n.field_q - var7);
+          vl.field_n.f(0, vl.field_n.position - var7);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "of.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

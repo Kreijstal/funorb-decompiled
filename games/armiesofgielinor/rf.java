@@ -29,12 +29,12 @@ final class rf {
     final static boolean a(int param0) {
         if (param0 != 27875) {
           field_d = (je) null;
-          if (!nw.g(81)) {
+          if (!DamageEvent.g(81)) {
             return df.field_M <= 0 ? true : false;
           }
           return true;
         }
-        if (nw.g(81)) {
+        if (DamageEvent.g(81)) {
           return true;
         }
         if (df.field_M > 0) {
@@ -115,23 +115,23 @@ final class rf {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          param1.d(76);
-          var2 = (au) (qc.field_g.e((byte) 92));
+          param1.unlink(76);
+          var2 = (au) (qc.field_g.first((byte) 92));
           if (param0 > -66) {
             var4 = (java.applet.Applet) null;
             rf.a(-6, (java.applet.Applet) null);
           }
           while (var2 != null) {
             if (var2.a((byte) -76, param1)) {
-              var2 = (au) (qc.field_g.a((byte) 123));
+              var2 = (au) (qc.field_g.next((byte) 123));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            qc.field_g.a((byte) -119, (tc) (param1));
+            qc.field_g.a((byte) -119, (IntrusiveNode) (param1));
             return;
           }
           stackIn_9_0 = -123;
@@ -157,24 +157,24 @@ final class rf {
         fg var1_refLifetime1;
         if (param0 != -18862) {
           field_a = (String) null;
-          var1_ref = (fg) (md.field_y.c((byte) -125));
+          var1_ref = (fg) (ParasiteEvent.field_y.c((byte) -125));
           if (var1_ref == null) {
             throw new IllegalStateException();
           }
-          qn.a(var1_ref.field_t, var1_ref.field_u, var1_ref.field_q);
-          qn.f(var1_ref.field_p, var1_ref.field_r, var1_ref.field_s, var1_ref.field_o);
+          SoftwareRaster.a(var1_ref.field_t, var1_ref.field_u, var1_ref.field_q);
+          SoftwareRaster.f(var1_ref.field_p, var1_ref.field_r, var1_ref.field_s, var1_ref.field_o);
           var1_ref.field_t = null;
-          vb.field_q.a((byte) -119, (tc) (var1_ref));
+          vb.field_q.a((byte) -119, (IntrusiveNode) (var1_ref));
           return;
         }
-        var1_refLifetime1 = (fg) (md.field_y.c((byte) -125));
+        var1_refLifetime1 = (fg) (ParasiteEvent.field_y.c((byte) -125));
         if (var1_refLifetime1 == null) {
           throw new IllegalStateException();
         }
-        qn.a(var1_refLifetime1.field_t, var1_refLifetime1.field_u, var1_refLifetime1.field_q);
-        qn.f(var1_refLifetime1.field_p, var1_refLifetime1.field_r, var1_refLifetime1.field_s, var1_refLifetime1.field_o);
+        SoftwareRaster.a(var1_refLifetime1.field_t, var1_refLifetime1.field_u, var1_refLifetime1.field_q);
+        SoftwareRaster.f(var1_refLifetime1.field_p, var1_refLifetime1.field_r, var1_refLifetime1.field_s, var1_refLifetime1.field_o);
         var1_refLifetime1.field_t = null;
-        vb.field_q.a((byte) -119, (tc) (var1_refLifetime1));
+        vb.field_q.a((byte) -119, (IntrusiveNode) (var1_refLifetime1));
     }
 
     final ar a(int param0, int param1) {
@@ -191,7 +191,7 @@ final class rf {
         }
         ar var6 = new ar();
         if (var5 != null) {
-          var6.a(new vh(var5), (byte) 91);
+          var6.a(new PacketBuffer(var5), (byte) 91);
           if (32768 <= param0) {
             var6.a(true);
             this.field_b.a(var6, 100, (long)param0);

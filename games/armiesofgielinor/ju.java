@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ju {
-    static wk[][] field_a;
+    static RgbSprite[][] field_a;
     ts[] field_b;
     static int[] field_c;
 
@@ -23,7 +23,7 @@ abstract class ju {
         int var5 = 0;
         ts var6 = null;
         int var7 = 0;
-        int var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_b == null ||
           0 == this.field_b.length ||
           this.field_b[0].field_n > param1) {
@@ -51,10 +51,10 @@ abstract class ju {
         return -1;
     }
 
-    final static int a(bv param0, int param1, int param2, int param3, byte param4, int param5) {
+    final static int a(CipherPacketBuffer param0, int param1, int param2, int param3, byte param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
-        bv var7 = null;
+        CipherPacketBuffer var7 = null;
         int stackIn_6_0 = 0;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -63,8 +63,8 @@ abstract class ju {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 > -121) {
-            var7 = (bv) null;
-            ju.a((bv) null, 120, 29, -83, (byte) -93, 59);
+            var7 = (CipherPacketBuffer) null;
+            ju.a((CipherPacketBuffer) null, 120, 29, -83, (byte) -93, 59);
           }
           var6_int = param0.g(-106, 1);
           if (0 != var6_int) {
@@ -128,7 +128,7 @@ abstract class ju {
         ts var5;
         int var7;
         int var6;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = -1;
         if (this.field_b != null) {
           var3 = this.field_b;
@@ -143,7 +143,7 @@ abstract class ju {
           }
         }
         if (param0) {
-          field_a = (wk[][]) null;
+          field_a = (RgbSprite[][]) null;
         }
         return var2;
     }
@@ -154,7 +154,7 @@ abstract class ju {
         ts var5;
         int var6;
         ts[] var7;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var7 = this.field_b;
         var3 = var7;
         for (var4 = 0; var4 < var7.length; var4++) {
@@ -174,7 +174,7 @@ abstract class ju {
     final int a(int param0, int param1) {
         int var3 = 0;
         ts var4 = null;
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         for (var3 = param0; this.field_b.length > var3; var3++) {
           var4 = this.field_b[var3];
           if (!(var4.field_i.length <= param1)) {
@@ -191,7 +191,7 @@ abstract class ju {
           ju.a(-42, 6, (CharSequence) null);
         }
         field_c = null;
-        field_a = (wk[][]) null;
+        field_a = (RgbSprite[][]) null;
     }
 
     final int a(int param0, String param1, int param2, int param3) {
@@ -208,7 +208,7 @@ abstract class ju {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = 0;
           var6 = 0;

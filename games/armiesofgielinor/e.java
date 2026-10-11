@@ -3,7 +3,7 @@
  */
 final class e {
     static int[] field_a;
-    static wk[] field_b;
+    static RgbSprite[] field_b;
 
     final static void a(byte param0) {
         if (param0 >= -88) {
@@ -14,10 +14,10 @@ final class e {
           }
           if (0 != rs.field_t) {
             rd.b(8445);
-            kn.field_z = 0;
+            TelefragEvent.field_z = 0;
             return;
           }
-          kn.field_z = 0;
+          TelefragEvent.field_z = 0;
           return;
         }
         iu.field_h = false;
@@ -25,11 +25,11 @@ final class e {
           qd.field_I.f((byte) -106);
         }
         if (0 == rs.field_t) {
-          kn.field_z = 0;
+          TelefragEvent.field_z = 0;
           return;
         }
         rd.b(8445);
-        kn.field_z = 0;
+        TelefragEvent.field_z = 0;
     }
 
     public static void b(byte param0) {

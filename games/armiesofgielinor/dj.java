@@ -71,7 +71,7 @@ final class dj {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = param1.length();
           var5 = param2.length();
@@ -154,10 +154,10 @@ final class dj {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var11 = (CharSequence) ((Object) param2);
-          var3_int = rt.a(var11, 0, param1);
+          var3_int = RevivalEvent.a(var11, 0, param1);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;

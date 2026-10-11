@@ -38,7 +38,7 @@ final class er {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param3 >= 2 &&
             param3 <= 36) {
@@ -105,8 +105,8 @@ final class er {
 
     final static void a(byte param0) {
         int var1 = -52 % ((param0 + 85) / 37);
-        if (null != rl.field_C) {
-          rl.field_C.k(0);
+        if (null != KingBlackDragonEvent.field_C) {
+          KingBlackDragonEvent.field_C.k(0);
         }
         if (pq.field_a != null) {
           pq.field_a.i((byte) 2);

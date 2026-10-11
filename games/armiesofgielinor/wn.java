@@ -26,7 +26,7 @@ final class wn extends ih {
         StringBuilder stackIn_37_1 = null;
         String stackIn_38_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 == null) {
             return false;
@@ -96,7 +96,7 @@ final class wn extends ih {
         this.k(3933);
     }
 
-    final static void a(int param0, wk[] param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -108,7 +108,7 @@ final class wn extends ih {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != null &&
             param2 > 0) {
@@ -117,8 +117,8 @@ final class wn extends ih {
             var8 = param1[1].field_A;
             param1[0].b(param3, param4, param0);
             param1[2].b(-var7 + param2 + param3, param4, param0);
-            qn.b(an.field_H);
-            qn.b(var6_int + param3, param4, param3 + param2 - var7, param1[1].field_x + param4);
+            SoftwareRaster.b(an.field_H);
+            SoftwareRaster.b(var6_int + param3, param4, param3 + param2 - var7, param1[1].field_x + param4);
             if (param5 != -3225) {
               wn.a(true);
             }
@@ -127,7 +127,7 @@ final class wn extends ih {
             for (param3 = var9; var10 > param3; param3 = param3 + var8) {
               param1[1].b(param3, param4, param0);
             }
-            qn.a(an.field_H);
+            SoftwareRaster.a(an.field_H);
             return;
           }
           return;
@@ -172,7 +172,7 @@ final class wn extends ih {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = this.i(4096);
           this.f(-87, this.field_ib * var4_int >> 8);
@@ -227,7 +227,7 @@ final class wn extends ih {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_hb = param1;
           if (param2 != -20751) {
@@ -327,13 +327,13 @@ final class wn extends ih {
 
     private final void k(int param0) {
         int var2 = 0;
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         for (var2 = 0; var2 < 16; var2++) {
           this.field_S[var2] = 1048576;
         }
         if (param0 != 3933) {
-          wk[] var4 = (wk[]) null;
-          wn.a(47, (wk[]) null, 67, -125, 49, -47);
+          RgbSprite[] var4 = (RgbSprite[]) null;
+          wn.a(47, (RgbSprite[]) null, 67, -125, 49, -47);
         }
         super.a(256, -1, (byte) -20);
     }

@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class tk implements kh {
-    private ka field_g;
+    private BitmapFont field_g;
     private int field_e;
     private int field_l;
     private int field_i;
@@ -99,17 +99,17 @@ final class tk implements kh {
             this.field_e = -101;
           }
           var7 = 5592405;
-          qn.f(param1 + param0.field_B, param0.field_p + param4, param0.field_l, param0.field_w, this.field_l);
+          SoftwareRaster.f(param1 + param0.field_B, param0.field_p + param4, param0.field_l, param0.field_w, this.field_l);
           if (param3) {
             var7 = 16777215;
           }
           var8 = this.field_i + (param1 + param0.field_B);
           var9 = param0.field_p + (param4 + this.field_m);
-          qn.g(var8, var9, this.field_h, this.field_j, 5592405);
-          qn.f(var8, var9, this.field_h, this.field_j, var7);
+          SoftwareRaster.g(var8, var9, this.field_h, this.field_j, 5592405);
+          SoftwareRaster.f(var8, var9, this.field_h, this.field_j, var7);
           if (var11.field_K) {
-            qn.h(var8, var9, this.field_h + var8, this.field_j + var9, 1);
-            qn.h(var8 + this.field_h, var9, var8, this.field_j + var9, 1);
+            SoftwareRaster.h(var8, var9, this.field_h + var8, this.field_j + var9, 1);
+            SoftwareRaster.h(var8 + this.field_h, var9, var8, this.field_j + var9, 1);
           }
           if (this.field_g != null) {
             var10 = this.field_a + this.field_h + this.field_i;
@@ -130,7 +130,7 @@ final class tk implements kh {
         }
     }
 
-    tk(ka param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    tk(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_e = 1;
         this.field_d = 1;
         try {

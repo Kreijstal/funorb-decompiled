@@ -5,7 +5,7 @@ final class gm implements lv {
     static tu field_f;
     static String field_b;
     static String[] field_a;
-    private jd[] field_c;
+    private Unit[] field_c;
     static String field_e;
     static int field_d;
     static int[][] field_h;
@@ -54,10 +54,10 @@ final class gm implements lv {
 
     public final boolean b(int param0) {
         int var3 = 0;
-        jd var4 = null;
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
-        jd[] var6 = this.field_c;
-        jd[] var2 = var6;
+        Unit var4 = null;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        Unit[] var6 = this.field_c;
+        Unit[] var2 = var6;
         for (var3 = param0; var3 < var6.length; var3++) {
           var4 = var6[var3];
           if (!var4.field_G) {
@@ -67,7 +67,7 @@ final class gm implements lv {
         return true;
     }
 
-    gm(int param0, jd[] param1) {
+    gm(int param0, Unit[] param1) {
         try {
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
@@ -182,12 +182,12 @@ final class gm implements lv {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        bv var27 = null;
+        CipherPacketBuffer var27 = null;
         long[][] var31 = null;
         int var3Lifetime1;
         int var25Lifetime1;
         int var25Lifetime2;
-        var26 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var26 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var27 = mg.field_e;
           if (param0 != 9) {
@@ -196,10 +196,10 @@ final class gm implements lv {
           var2 = var27.k(0);
           if (0 == var2) {
             var3 = var27.e((byte) -104);
-            var4_ref = (wj) (lf.field_c.e((byte) 100));
+            var4_ref = (wj) (lf.field_c.first((byte) 100));
             while (var4_ref != null) {
               if (var4_ref.field_r != var3) {
-                var4_ref = (wj) (lf.field_c.a((byte) 123));
+                var4_ref = (wj) (lf.field_c.next((byte) 123));
                 continue;
               }
               break;
@@ -244,7 +244,7 @@ final class gm implements lv {
                   var20 = var27.k(0);
                   var21 = th.field_b[var20].field_f;
                   var22 = var27.j((byte) -2);
-                  var24 = var27.field_q;
+                  var24 = var27.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
                     var9[0][var12] = th.field_b[var20].field_c;
@@ -262,11 +262,11 @@ final class gm implements lv {
                     var9[1][var13] = null;
                     var31[1][var13] = var22;
                     var13++;
-                    var27.field_q = var24;
+                    var27.position = var24;
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$3 = var16;
                       var16++;
-                      var11[1][incrementValue$3] = var27.i(kf.b(param0, 8));
+                      var11[1][incrementValue$3] = var27.i(GrowthEvent.b(param0, 8));
                     }
                   }
                   if (var6 > var14 &&
@@ -276,7 +276,7 @@ final class gm implements lv {
                     var9[2][var14] = th.field_b[var20].field_c;
                     var31[2][var14] = var22;
                     var14++;
-                    var27.field_q = var24;
+                    var27.position = var24;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$4 = var17;
                       var17++;
@@ -287,22 +287,22 @@ final class gm implements lv {
               }
             }
             var4_ref.field_o = true;
-            var4_ref.d(86);
+            var4_ref.unlink(86);
             return;
           }
           if (var2 == 1) {
             var3Lifetime1 = var27.e((byte) -104);
             var27.j((byte) -2);
-            var4 = (aj) (oj.field_r.e((byte) 99));
+            var4 = (aj) (GameEvent.field_r.first((byte) 99));
             while (var4 != null) {
               if (var4.field_s != var3Lifetime1) {
-                var4 = (aj) (oj.field_r.a((byte) 123));
+                var4 = (aj) (GameEvent.field_r.next((byte) 123));
                 continue;
               }
               break;
             }
             if (var4 != null) {
-              var4.d(param0 ^ -103);
+              var4.unlink(param0 ^ -103);
               return;
             }
             dj.a((byte) -126);

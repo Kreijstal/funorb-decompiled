@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ce extends tj implements he {
-    static wk[] field_F;
+    static RgbSprite[] field_F;
     static int[] field_I;
     static String field_P;
     static String field_H;
@@ -66,7 +66,7 @@ final class ce extends tj implements he {
           super.a(param0, param1, (byte) -107, param3);
           return;
         }
-        field_F = (wk[]) null;
+        field_F = (RgbSprite[]) null;
         ArmiesOfGielinor.field_J.a(aq.field_a, 20 + var5, var6 + 20, -40 + this.field_l, -50 + this.field_w, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.field_H);
         super.a(param0, param1, (byte) -107, param3);
     }
@@ -122,7 +122,7 @@ final class ce extends tj implements he {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         fw var8 = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_G == param4) {
             ou.b((byte) 126);

@@ -26,32 +26,32 @@ final class mw extends dr {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var7Lifetime1;
-        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var6_int = 493 + (param2 + (8 - (-2 - param1)));
-          mp.field_Qb.a(ag.field_I.field_ob - 6, param5 ^ -20499, -6 + var6_int, 3, 3);
+          mp.field_Qb.a(CombatEvent.field_I.field_ob - 6, param5 ^ -20499, -6 + var6_int, 3, 3);
           var7 = mp.field_Qb.field_ob - 5;
           if (param5 != 1) {
             mw.g(78);
           }
           we.field_f.a(param4, -20500, 2 + (485 + param2 + param1), -param4 + var7, 5);
-          qj.field_z.a(param4, -20500, -rb.field_b.field_gb + (we.field_f.field_gb - param2), 0, param2);
+          UpkeepEvent.field_z.a(param4, -20500, -rb.field_b.field_gb + (we.field_f.field_gb - param2), 0, param2);
           var7 = var7 - (2 + param4);
-          rb.field_b.a(param4, -20500, rb.field_b.field_gb, 0, param2 + qj.field_z.field_gb);
+          rb.field_b.a(param4, -20500, rb.field_b.field_gb, 0, param2 + UpkeepEvent.field_z.field_gb);
           vq.field_a.a(5, false, 2 + param2 + (485 + param1), 2, param1, 5, -5 + var7);
           if (null != aw.field_i) {
             aw.field_i.a(vq.field_a.field_S, vq.field_a.field_gb, vq.field_a.field_ab, param5 ^ 8193, vq.field_a.field_ob);
           }
-          var8 = -var6_int + (-param2 + ag.field_I.field_gb);
+          var8 = -var6_int + (-param2 + CombatEvent.field_I.field_gb);
           var9 = var8 / 2;
           var10 = param0 + var9 + param2;
           var11 = 0;
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
               null != gt.field_b[var12]) {
-              var13 = 3 + var11 * (2 + (-6 + ag.field_I.field_ob)) / (1 + se.field_d);
+              var13 = 3 + var11 * (2 + (-6 + CombatEvent.field_I.field_ob)) / (1 + se.field_d);
               var11++;
-              var7Lifetime1 = 3 + (var11 * (2 + ag.field_I.field_ob - 6) / (se.field_d + 1) - 2 - var13);
+              var7Lifetime1 = 3 + (var11 * (2 + CombatEvent.field_I.field_ob - 6) / (se.field_d + 1) - 2 - var13);
               if (5 <= var12) {
                 mc.field_f.a(var7Lifetime1, param5 ^ -20499, var8, var13, var6_int);
               } else {
@@ -108,7 +108,7 @@ final class mw extends dr {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != -63) {
             field_F = (int[]) null;

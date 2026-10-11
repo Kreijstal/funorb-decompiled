@@ -19,8 +19,8 @@ final class hc {
     static boolean field_i;
     private ia field_n;
     private int field_r;
-    private wk[] field_c;
-    private wk[] field_v;
+    private RgbSprite[] field_c;
+    private RgbSprite[] field_v;
     static int field_q;
     private int field_t;
     private r field_x;
@@ -47,7 +47,7 @@ final class hc {
 
     private final void a(int param0, byte param1) {
         int discarded$0 = 0;
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_a = param0;
         this.field_p.b(0, this.field_a);
         this.field_f.a(0, this.field_a);
@@ -97,7 +97,7 @@ final class hc {
 
     private final void a(boolean param0) {
         if (param0) {
-          this.field_v = (wk[]) null;
+          this.field_v = (RgbSprite[]) null;
         }
         int var2 = so.field_b.field_a >> 1;
         int var3 = -this.field_l.field_H + (so.field_b.field_g - (this.field_l.field_L << 1));
@@ -191,21 +191,21 @@ final class hc {
 
     final static void a(int param0, boolean param1) {
         int var2_int = 0;
-        ne var3 = null;
-        jd var4 = null;
+        MapTile var3 = null;
+        Unit var4 = null;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1) {
             hc.a(-115, false);
           }
           for (var2_int = 0; var2_int < vs.field_e.length; var2_int++) {
             var3 = vs.field_e[var2_int];
-            var4 = var3.field_c;
+            var4 = var3.occupant;
             if (var4 != null &&
-              param0 == var4.field_O) {
+              param0 == var4.ownerPlayer) {
               kl.field_a.a((byte) 53, var2_int);
               return;
             }
@@ -219,7 +219,7 @@ final class hc {
     }
 
     final void c(byte param0) {
-        qn.b();
+        SoftwareRaster.b();
         this.field_n.a(71);
         this.field_u.a(45);
         this.field_l.c("shift: " + nh.field_D[this.field_a], 480, 230, 16777215, -1);
@@ -249,10 +249,10 @@ final class hc {
         int var7;
         int var8;
         int[] var9;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var9 = aw.field_j[this.field_a][param0];
         var3 = var9;
-        var4 = var3[ns.a(false, var9.length, new Random())];
+        var4 = var3[AttackEvent.a(false, var9.length, new Random())];
         if (0 <= var4) {
           return var4;
         }
@@ -271,7 +271,7 @@ final class hc {
 
     private final void a(int param0, int param1, int param2) {
         int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_p.g((byte) 97) &&
           this.field_p.c(param1, param0 - 1, param2)) {
           this.field_p.j(0);
@@ -376,7 +376,7 @@ final class hc {
         int var11;
         int var12;
         int var13;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var6 = param3 / 3;
         for (var7 = param0; var7 < 4; var7++) {
           var8 = this.a(param0 - 100, var7);
@@ -400,7 +400,7 @@ final class hc {
         }
     }
 
-    hc(wk[] param0, wk[] param1, tu param2, int[] param3, int param4, int param5) {
+    hc(RgbSprite[] param0, RgbSprite[] param1, tu param2, int[] param3, int param4, int param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

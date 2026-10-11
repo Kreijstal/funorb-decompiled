@@ -18,9 +18,9 @@ final class sp implements Iterator {
         }
         if (param0 != 0) {
           field_g = (String) null;
-          return (java.awt.Container) ((Object) ag.d((byte) -124));
+          return (java.awt.Container) ((Object) CombatEvent.d((byte) -124));
         }
-        return (java.awt.Container) ((Object) ag.d((byte) -124));
+        return (java.awt.Container) ((Object) CombatEvent.d((byte) -124));
     }
 
     final static d a(kl param0, int param1, int param2, int param3, kl param4) {
@@ -72,9 +72,9 @@ final class sp implements Iterator {
     final static je b(byte param0) {
         if (param0 >= -80) {
           sp.b((byte) -47);
-          return bv.field_x.field_Jb;
+          return CipherPacketBuffer.field_x.field_Jb;
         }
-        return bv.field_x.field_Jb;
+        return CipherPacketBuffer.field_x.field_Jb;
     }
 
     public final boolean hasNext() {

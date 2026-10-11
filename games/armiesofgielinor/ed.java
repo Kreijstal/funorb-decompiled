@@ -24,7 +24,7 @@ final class ed {
 
     final static boolean a(int param0) {
         if (param0 <= -66) {
-          st.field_C = true;
+          TurnEffectEvent.field_C = true;
           jl.field_a = vi.b(124) + 15000L;
           return 11 == p.field_b ? true : false;
         }

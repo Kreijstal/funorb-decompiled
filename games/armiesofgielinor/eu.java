@@ -4,8 +4,8 @@
 final class eu {
     static tp field_e;
     static int field_a;
-    private tc field_c;
-    private at field_b;
+    private IntrusiveNode field_c;
+    private NodeDeque field_b;
     static String field_d;
     private bb field_f;
     static je field_g;
@@ -45,7 +45,7 @@ final class eu {
         int var19Lifetime2;
         int var17Lifetime1Lifetime1;
         int var19Lifetime1Lifetime1;
-        var20 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = op.field_c[0][param1];
           var6 = var5_int << 1 & 105984 | (13566159 & var5_int) << 1;
@@ -69,23 +69,23 @@ final class eu {
             var12 = param4 + var8 * 2;
             var13 = -var10 + (var9 / 5 + 1);
             var14 = var9 >> var7;
-            qn.c(var11, var12, var13, var6, var14);
-            qn.c(var11, var12 + 1, var13, var6, var14);
+            SoftwareRaster.c(var11, var12, var13, var6, var14);
+            SoftwareRaster.c(var11, var12 + 1, var13, var6, var14);
             var15 = var11;
             var15 = var11 + var15 >> 1 << 8;
             var16 = (var13 << 8) / 6;
             var17 = var16 / 2 + (var15 + (g.a(-1, param2 + var8 << 5) * 4 >> 8));
             var18 = var9 >> 3;
             for (var19 = 0; 3 > var19; var19++) {
-              qn.c(var17 >> 8, var12, var16 >> 8, var5_int, var18);
-              qn.c(var17 >> 8, 1 + var12, var16 >> 8, var5_int, var18);
+              SoftwareRaster.c(var17 >> 8, var12, var16 >> 8, var5_int, var18);
+              SoftwareRaster.c(var17 >> 8, 1 + var12, var16 >> 8, var5_int, var18);
               var17 = var17 + 2 * var16;
             }
             var17Lifetime2 = var16 / 4 + (var16 / 2 + var15);
             var16 = var16 / 2;
             for (var19Lifetime2 = 0; var19Lifetime2 < 3; var19Lifetime2++) {
-              qn.c(var17Lifetime2 >> 8, var12, var16 >> 8, var5_int, var18);
-              qn.c(var17Lifetime2 >> 8, 1 + var12, var16 >> 8, var5_int, var18);
+              SoftwareRaster.c(var17Lifetime2 >> 8, var12, var16 >> 8, var5_int, var18);
+              SoftwareRaster.c(var17Lifetime2 >> 8, 1 + var12, var16 >> 8, var5_int, var18);
               var17Lifetime2 = var17Lifetime2 + var16 * 4;
             }
           }
@@ -104,23 +104,23 @@ final class eu {
             var12Lifetime1 = param4 + var8Lifetime1 * 2;
             var13Lifetime1 = 1 + var9Lifetime1 / 5 - var10Lifetime1;
             var14Lifetime1 = var9Lifetime1 >> 3;
-            qn.c(var11Lifetime1, var12Lifetime1, var13Lifetime1, var6, var14Lifetime1);
-            qn.c(var11Lifetime1, 1 + var12Lifetime1, var13Lifetime1, var6, var14Lifetime1);
+            SoftwareRaster.c(var11Lifetime1, var12Lifetime1, var13Lifetime1, var6, var14Lifetime1);
+            SoftwareRaster.c(var11Lifetime1, 1 + var12Lifetime1, var13Lifetime1, var6, var14Lifetime1);
             var15Lifetime1 = var11Lifetime1;
             var15Lifetime1 = var15Lifetime1 + var11Lifetime1 >> 1 << 8;
             var16Lifetime1 = (var13Lifetime1 << 8) / 6;
             var17Lifetime1 = var15Lifetime1 - (-(var16Lifetime1 / 2) - (4 * ae.b(var8Lifetime1 + param2 << 4, 100) >> 8));
             var18Lifetime1 = var9Lifetime1 >> 4;
             for (var19Lifetime1 = 0; 3 > var19Lifetime1; var19Lifetime1++) {
-              qn.c(var17Lifetime1 >> 8, var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);
-              qn.c(var17Lifetime1 >> 8, 1 + var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);
+              SoftwareRaster.c(var17Lifetime1 >> 8, var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);
+              SoftwareRaster.c(var17Lifetime1 >> 8, 1 + var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);
               var17Lifetime1 = var17Lifetime1 + var16Lifetime1 * 2;
             }
             var17Lifetime1Lifetime1 = var16Lifetime1 / 4 + var15Lifetime1 + var16Lifetime1 / 2;
             var16Lifetime1 = var16Lifetime1 / 2;
             for (var19Lifetime1Lifetime1 = 0; var19Lifetime1Lifetime1 < 3; var19Lifetime1Lifetime1++) {
-              qn.c(var17Lifetime1Lifetime1 >> 8, var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);
-              qn.c(var17Lifetime1Lifetime1 >> 8, 1 + var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);
+              SoftwareRaster.c(var17Lifetime1Lifetime1 >> 8, var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);
+              SoftwareRaster.c(var17Lifetime1Lifetime1 >> 8, 1 + var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);
               var17Lifetime1Lifetime1 = var17Lifetime1Lifetime1 + 4 * var16Lifetime1;
             }
           }
@@ -132,10 +132,10 @@ final class eu {
         }
     }
 
-    final tc d(byte param0) {
+    final IntrusiveNode d(byte param0) {
         if (param0 < 42) {
-          jd var3 = (jd) null;
-          this.a(57, (jd) null);
+          Unit var3 = (Unit) null;
+          this.a(57, (Unit) null);
         }
         return this.field_c;
     }
@@ -151,7 +151,7 @@ final class eu {
 
     private final boolean c(byte param0) {
         if (null != this.field_c &&
-          this.field_c.field_b != null) {
+          this.field_c.next != null) {
           if (param0 == -33) {
             return false;
           }
@@ -162,7 +162,7 @@ final class eu {
         return true;
     }
 
-    final void a(int param0, jd param1) {
+    final void a(int param0, Unit param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -173,7 +173,7 @@ final class eu {
             return;
           }
           if (this.field_c != param1) {
-            this.field_c = (tc) ((Object) param1);
+            this.field_c = (IntrusiveNode) ((Object) param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -211,7 +211,7 @@ final class eu {
         return this.field_b.b(false);
     }
 
-    final static void a(int param0, int param1, int param2, jd param3) {
+    final static void a(int param0, int param1, int param2, Unit param3) {
         try {
           cd.a(27, param2 - 16, param1, 2);
           int var4_int = 110 / ((49 - param0) / 39);
@@ -245,7 +245,7 @@ final class eu {
         }
     }
 
-    eu(at param0) {
+    eu(NodeDeque param0) {
         try {
           this.field_b = param0;
           this.field_f = new bb(this.field_b);

@@ -5,11 +5,11 @@ final class dd {
     private vo field_b;
     private java.math.BigInteger field_h;
     static String field_g;
-    static wk field_k;
+    static RgbSprite field_k;
     private bm[] field_i;
     private bp field_d;
     private jf field_c;
-    private vh field_f;
+    private PacketBuffer field_f;
     private java.math.BigInteger field_j;
     static boolean field_a;
     static int field_e;
@@ -38,7 +38,7 @@ final class dd {
               stackIn_8_0 = this.field_i[param2];
               return stackIn_8_0;
             }
-            this.field_f.field_q = 72 * param2 + 6;
+            this.field_f.position = 72 * param2 + 6;
             var6_int = this.field_f.i(1);
             var7 = this.field_f.i(1);
             var13 = new byte[64];
@@ -150,7 +150,7 @@ final class dd {
         int var3;
         int var4;
         int var2Lifetime1;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_i == null) {
           return;
         }
@@ -192,12 +192,12 @@ final class dd {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        vh var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
         byte[] var15;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null != this.field_f) {
           return true;
         }
@@ -210,14 +210,14 @@ final class dd {
         if (this.field_c.field_x) {
           return false;
         }
-        var10 = new vh(this.field_c.d((byte) 43));
+        var10 = new PacketBuffer(this.field_c.d((byte) 43));
         if (param0 != 14) {
           return true;
         }
-        var10.field_q = 5;
+        var10.position = 5;
         var3 = var10.k(0);
-        var10.field_q = var10.field_q + var3 * 72;
-        var13 = new byte[var10.field_o.length - var10.field_q];
+        var10.position = var10.position + var3 * 72;
+        var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
         var10.a(0, var13.length, 0, var13);
@@ -232,7 +232,7 @@ final class dd {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = ua.a(-18423, -5 + (var10.field_q - var13.length), var10.field_o, 5);
+        var15 = ua.a(-18423, -5 + (var10.position - var13.length), var10.payload, 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (var5[1 + var7] != var15[var7]) {
             throw new RuntimeException();

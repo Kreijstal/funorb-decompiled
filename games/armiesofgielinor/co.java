@@ -5,7 +5,7 @@ import java.util.*;
 
 final class co {
     String field_c;
-    wk[] field_b;
+    RgbSprite[] field_b;
     String field_x;
     String field_a;
     static int[][] field_p;
@@ -19,7 +19,7 @@ final class co {
     int[] field_i;
     String field_e;
     ru[] field_g;
-    wk[] field_u;
+    RgbSprite[] field_u;
     static String field_j;
     String field_q;
     private sn[] field_t;
@@ -50,8 +50,8 @@ final class co {
           }
           boolean decompiledFrameRemainder1 = true;
           if (no.field_U[param1] >= no.field_U[param2]) {
-            var4 = pe.field_s[param2] + wp.field_w[param2] + ci.field_c[param2];
-            var5 = pe.field_s[param1] + (wp.field_w[param1] + ci.field_c[param1]);
+            var4 = pe.field_s[param2] + wp.field_w[param2] + TutorialController.field_c[param2];
+            var5 = pe.field_s[param1] + (wp.field_w[param1] + TutorialController.field_c[param1]);
             if (var4 < var5) {
               return true;
             }
@@ -80,8 +80,8 @@ final class co {
         }
         boolean decompiledFrameRemainder0 = true;
         if (tb.field_h[param1] >= tb.field_h[param2]) {
-          var4Lifetime1 = pe.field_s[param2] + wp.field_w[param2] + ci.field_c[param2];
-          var5Lifetime1 = pe.field_s[param1] + (wp.field_w[param1] + ci.field_c[param1]);
+          var4Lifetime1 = pe.field_s[param2] + wp.field_w[param2] + TutorialController.field_c[param2];
+          var5Lifetime1 = pe.field_s[param1] + (wp.field_w[param1] + TutorialController.field_c[param1]);
           if (var4Lifetime1 < var5Lifetime1) {
             return true;
           }
@@ -109,7 +109,7 @@ final class co {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null == this.field_o) {
             return;
@@ -139,7 +139,7 @@ final class co {
 
     final sn b(int param0) {
         int var2 = 27 % ((50 - param0) / 33);
-        return this.field_t[ns.a(false, this.field_t.length, li.field_n)];
+        return this.field_t[AttackEvent.a(false, this.field_t.length, li.field_n)];
     }
 
     public static void a(byte param0) {
@@ -155,7 +155,7 @@ final class co {
         field_j = null;
     }
 
-    final wk c(byte param0) {
+    final RgbSprite c(byte param0) {
         int var2 = -68 / ((53 - param0) / 32);
         return this.c(34);
     }
@@ -177,7 +177,7 @@ final class co {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var11 = new char[param1];
           var10 = var11;
@@ -257,7 +257,7 @@ final class co {
         this.field_g = lo.a(this.field_q, -28106, "basic", ae.field_u);
         this.field_u = fk.a(this.field_e, (byte) -128, ae.field_u, "basic");
         if (param0 > -63) {
-          this.field_u = (wk[]) null;
+          this.field_u = (RgbSprite[]) null;
           this.field_b = fk.a(this.field_c, (byte) -127, ae.field_u, "basic");
           return;
         }
@@ -278,13 +278,13 @@ final class co {
         this.field_g = null;
     }
 
-    private final wk c(int param0) {
+    private final RgbSprite c(int param0) {
         if (param0 != 34) {
-          return (wk) null;
+          return (RgbSprite) null;
         }
         byte[] var3 = fd.field_m.a(this.field_x, param0 ^ 108, "");
         byte[] var2 = var3;
-        return new wk(var3, (java.awt.Component) ((Object) ll.p(0)));
+        return new RgbSprite(var3, (java.awt.Component) ((Object) ll.p(0)));
     }
 
     static {

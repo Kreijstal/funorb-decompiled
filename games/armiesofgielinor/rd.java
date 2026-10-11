@@ -11,7 +11,7 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
     static String field_f;
     static je field_e;
     java.awt.Frame field_c;
-    static ic field_j;
+    static GameplayController field_j;
     static long field_i;
 
     public static void a(int param0) {
@@ -40,11 +40,11 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
     final static void b(int param0) {
         if (param0 != 8445) {
           rd.b(33);
-          qj.field_C.setLength(0);
+          UpkeepEvent.field_C.setLength(0);
           rs.field_t = 0;
           return;
         }
-        qj.field_C.setLength(0);
+        UpkeepEvent.field_C.setLength(0);
         rs.field_t = 0;
     }
 

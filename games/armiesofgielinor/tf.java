@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tf extends tc {
+final class tf extends IntrusiveNode {
     static String field_m;
     int field_n;
     static String field_p;
@@ -20,7 +20,7 @@ final class tf extends tc {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != -1432128863) {
             return;
@@ -61,7 +61,7 @@ final class tf extends tc {
     }
 
     final static void a(int param0, nt param1, byte param2) {
-        bv var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           var3 = vl.field_n;
           var3.h(32161, param0);
@@ -78,7 +78,7 @@ final class tf extends tc {
     final static void a(byte param0, java.applet.Applet param1) {
         String var3 = null;
         long var4 = 0L;
-        at.field_a = true;
+        NodeDeque.field_a = true;
         String var2 = "tuhstatbut";
         if (param0 != -99) {
           return;
@@ -86,7 +86,7 @@ final class tf extends tc {
         try {
           var3 = "rvnadlm";
           var4 = -1L;
-          tc.a(param1, var3, (byte) 120, var2, var4);
+          IntrusiveNode.a(param1, var3, (byte) 120, var2, var4);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "tf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

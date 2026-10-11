@@ -2,25 +2,25 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class it {
-    static wk field_a;
+    static RgbSprite field_a;
     static boolean field_b;
 
-    final static wk[] a(int param0, wk param1) {
-        wk[] var2 = null;
+    final static RgbSprite[] a(int param0, RgbSprite param1) {
+        RgbSprite[] var2 = null;
         RuntimeException var2_ref = null;
-        vh var3 = null;
-        wk[] var4 = null;
-        wk[] stackIn_3_0 = null;
+        PacketBuffer var3 = null;
+        RgbSprite[] var4 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 17) {
-            var3 = (vh) null;
-            it.a(-86, true, 3, (vh) null, -126);
+            var3 = (PacketBuffer) null;
+            it.a(-86, true, 3, (PacketBuffer) null, -126);
           }
-          var4 = new wk[9];
+          var4 = new RgbSprite[9];
           var2 = var4;
           var4[4] = param1;
           stackIn_3_0 = var2;
@@ -58,7 +58,7 @@ final class it {
           var5_int = param1.a(param4, 110);
           var6 = param1.a((byte) -15, var5_int, param0);
           if (param3 != -87) {
-            field_a = (wk) null;
+            field_a = (RgbSprite) null;
           }
           stackIn_3_0 = ue.a(param1, var5_int, param2, (byte) -118, var6);
           return stackIn_3_0;
@@ -94,7 +94,7 @@ final class it {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, vh param3, int param4) {
+    final static void a(int param0, boolean param1, int param2, PacketBuffer param3, int param4) {
         if (param1) {
           return;
         }
@@ -110,18 +110,18 @@ final class it {
     }
 
     final static void a(int param0, int param1, int param2, String param3, int param4, String param5) {
-        bv var9 = null;
+        CipherPacketBuffer var9 = null;
         int var7 = 0;
         try {
           var9 = vl.field_n;
-          bv var6 = var9;
+          CipherPacketBuffer var6 = var9;
           if (param1 > -71) {
             String var8 = (String) null;
             it.a((String) null, (kl) null, (kl) null, (byte) -14, (String) null);
           }
           var9.h(32161, param4);
-          var9.field_q = var9.field_q + 1;
-          var7 = var9.field_q;
+          var9.position = var9.position + 1;
+          var7 = var9.position;
           var9.b(1, param2);
           if (param2 == 2) {
             var9.b(param3, 13851);
@@ -131,7 +131,7 @@ final class it {
           } else {
             var9.b(true, param0);
           }
-          var9.e(-var7 + var9.field_q, 5930);
+          var9.e(-var7 + var9.position, 5930);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "it.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

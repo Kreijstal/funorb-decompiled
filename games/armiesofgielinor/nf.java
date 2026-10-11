@@ -104,7 +104,7 @@ final class nf extends je {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = param1.length();
           if (!param0) {
@@ -130,7 +130,7 @@ final class nf extends je {
         }
     }
 
-    nf(long param0, je param1, je param2, je param3, wk param4, String param5) {
+    nf(long param0, je param1, je param2, je param3, RgbSprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

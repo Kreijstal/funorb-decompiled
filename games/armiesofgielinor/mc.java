@@ -5,7 +5,7 @@ final class mc implements lv {
     static je field_f;
     static ru field_a;
     private int field_b;
-    private ha field_e;
+    private Battlefield field_e;
     static co[] field_d;
     static String field_c;
 
@@ -34,7 +34,7 @@ final class mc implements lv {
         field_a = null;
     }
 
-    mc(int param0, ha param1) {
+    mc(int param0, Battlefield param1) {
         try {
           this.field_b = param0;
           this.field_e = param1;
@@ -46,12 +46,12 @@ final class mc implements lv {
     public final boolean c(int param0) {
         int var2 = 0;
         int var4;
-        at var3;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
-        for (var2 = 0; var2 < this.field_e.field_W; var2++) {
+        NodeDeque var3;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        for (var2 = 0; var2 < this.field_e.playerCount; var2++) {
           if ((null == this.field_e.field_K ||
             var2 == this.field_b) &&
-            this.field_e.c(this.field_b, -16985, var2)) {
+            this.field_e.arePlayersAllied(this.field_b, -16985, var2)) {
             var3 = this.field_e.f(var2, 0);
             if (var3 != null &&
               var3.b(false) > 0) {

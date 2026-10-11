@@ -22,7 +22,7 @@ final class jc extends mn {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = param0.length();
           var3 = new char[var2_int];
@@ -59,13 +59,13 @@ final class jc extends mn {
         b var2Lifetime1;
         if (param0 == -1) {
           var2 = new b();
-          ta.field_O.a((byte) -119, (tc) (var2));
+          ta.field_O.a((byte) -119, (IntrusiveNode) (var2));
           a.a(param1, (byte) -32);
           return var2;
         }
         field_w = (String) null;
         var2Lifetime1 = new b();
-        ta.field_O.a((byte) -119, (tc) (var2Lifetime1));
+        ta.field_O.a((byte) -119, (IntrusiveNode) (var2Lifetime1));
         a.a(param1, (byte) -32);
         return var2Lifetime1;
     }
@@ -114,7 +114,7 @@ final class jc extends mn {
         this.field_z = param2;
     }
 
-    final bd a(int param0, ha param1) {
+    final bd a(int param0, Battlefield param1) {
         String discarded$11 = null;
         String discarded$10 = null;
         String discarded$9 = null;
@@ -122,9 +122,9 @@ final class jc extends mn {
         String discarded$6 = null;
         String discarded$7 = null;
         RuntimeException var3 = null;
-        ne var4 = null;
-        jd var5 = null;
-        jd var6 = null;
+        MapTile var4 = null;
+        Unit var5 = null;
+        Unit var6 = null;
         Object stackIn_2_0 = null;
         Object stackIn_5_0 = null;
         Object stackIn_8_0 = null;
@@ -138,39 +138,39 @@ final class jc extends mn {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.d(96);
-          var5 = param1.c(this.field_z, true, this.field_A);
+          this.unlink(96);
+          var5 = param1.getUnitAt(this.field_z, true, this.field_A);
           var6 = var5;
           if (var6 == null) {
-            discarded$11 = this.a(new String[]{"no unit at ", ci.c(this.field_A, 0, this.field_z)}, false);
+            discarded$11 = this.a(new String[]{"no unit at ", TutorialController.c(this.field_A, 0, this.field_z)}, false);
             stackIn_2_0 = null;
             return (bd) (stackIn_2_0);
           }
-          if (this.field_p != var6.field_O) {
-            discarded$10 = this.a(new String[]{"unit at ", ci.c(this.field_A, 0, this.field_z), "not owned by player ", "" + this.field_p}, false);
+          if (this.field_p != var6.ownerPlayer) {
+            discarded$10 = this.a(new String[]{"unit at ", TutorialController.c(this.field_A, 0, this.field_z), "not owned by player ", "" + this.field_p}, false);
             stackIn_5_0 = null;
             return (bd) (stackIn_5_0);
           }
-          if (var6.field_s) {
-            discarded$9 = this.a(new String[]{"unit at ", ci.c(this.field_A, 0, this.field_z), " has moved"}, false);
+          if (var6.packedFlag4) {
+            discarded$9 = this.a(new String[]{"unit at ", TutorialController.c(this.field_A, 0, this.field_z), " has moved"}, false);
             stackIn_8_0 = null;
             return (bd) (stackIn_8_0);
           }
-          if (0 >= (bw.field_m[var5.field_N][10] & 1024)) {
-            discarded$8 = this.a(new String[]{"unit at ", ci.c(this.field_A, 0, this.field_z), " cannot deploy"}, false);
+          if (0 >= (bw.unitDefinitions[var5.unitType][10] & 1024)) {
+            discarded$8 = this.a(new String[]{"unit at ", TutorialController.c(this.field_A, 0, this.field_z), " cannot deploy"}, false);
             stackIn_11_0 = null;
             return (bd) (stackIn_11_0);
           }
-          var4 = param1.field_Eb[var6.field_J + var6.field_w * param1.field_v];
-          if (34 == var6.field_N &&
+          var4 = param1.tiles[var6.tileX + var6.tileY * param1.mapWidth];
+          if (34 == var6.unitType &&
             !var4.f(19725)) {
-            discarded$6 = this.a(new String[]{"can't deploy on top of structure at ", ci.c(this.field_A, 0, this.field_z)}, false);
+            discarded$6 = this.a(new String[]{"can't deploy on top of structure at ", TutorialController.c(this.field_A, 0, this.field_z)}, false);
             stackIn_15_0 = null;
             return (bd) (stackIn_15_0);
           }
-          if (var6.field_N == 7 &&
-            var4.field_h != 0) {
-            discarded$7 = this.a(new String[]{"can't deploy on top of structure at ", ci.c(this.field_A, 0, this.field_z)}, false);
+          if (var6.unitType == 7 &&
+            var4.terrainType != 0) {
+            discarded$7 = this.a(new String[]{"can't deploy on top of structure at ", TutorialController.c(this.field_A, 0, this.field_z)}, false);
             stackIn_19_0 = null;
             return (bd) (stackIn_19_0);
           }

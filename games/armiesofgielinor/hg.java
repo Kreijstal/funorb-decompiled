@@ -26,21 +26,21 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static at a(int param0) {
-        at var1 = new at();
-        var1.a((byte) -119, (tc) (new re("hello", new Class[]{}, "Be friendly.")));
-        var1.a((byte) -119, (tc) (new ba("printCoat", new Class[]{}, "Print out your current coat of arms in a line ready for the config file.")));
-        var1.a((byte) -119, (tc) (new jq("setCoat", new Class[]{String.class}, "Set your coat of arms to one indicated by the format used in the config file (including coat=).")));
+    final static NodeDeque a(int param0) {
+        NodeDeque var1 = new NodeDeque();
+        var1.a((byte) -119, (IntrusiveNode) (new re("hello", new Class[]{}, "Be friendly.")));
+        var1.a((byte) -119, (IntrusiveNode) (new ba("printCoat", new Class[]{}, "Print out your current coat of arms in a line ready for the config file.")));
+        var1.a((byte) -119, (IntrusiveNode) (new jq("setCoat", new Class[]{String.class}, "Set your coat of arms to one indicated by the format used in the config file (including coat=).")));
         int var2 = -43 % ((param0 - 32) / 63);
-        var1.a((byte) -119, (tc) (new qa("channelFadeTime", new Class[]{Integer.TYPE}, "Change the time to fade between channel sets in the campaign menu, in milliseconds.")));
-        var1.a((byte) -119, (tc) (new oh("channelBaseVolume", new Class[]{Integer.TYPE}, "(From 0 to 256) Change the volume of the base (<=3) channels in the campaign menu when in a campaign map.")));
-        var1.a((byte) -119, (tc) (new mw("listMissions", new Class[]{Integer.TYPE}, "List available missions.")));
-        var1.a((byte) -119, (tc) (new wt("giveTo", new Class[]{Integer.TYPE}, "Change ownership of a selected tile in the map.")));
-        var1.a((byte) -119, (tc) (new qp("defeat", new Class[]{Integer.TYPE, Integer.TYPE, Integer.TYPE}, "Defeat the given player. And specify it as happening in the given number of turns and damage taken")));
-        var1.a((byte) -119, (tc) (new an("defeat", new Class[]{Integer.TYPE}, "Defeat the given player.")));
-        var1.a((byte) -119, (tc) (new oa("toggleSkip", new Class[]{}, "Toggle Automatically Skipping Player Turns")));
-        var1.a((byte) -119, (tc) (new gg("printVictoryConditions", new Class[]{}, "Print out victory conditions for current player")));
-        var1.a((byte) -119, (tc) (new ot("fixInvisible", new Class[]{}, "Make invisible units visible")));
+        var1.a((byte) -119, (IntrusiveNode) (new qa("channelFadeTime", new Class[]{Integer.TYPE}, "Change the time to fade between channel sets in the campaign menu, in milliseconds.")));
+        var1.a((byte) -119, (IntrusiveNode) (new oh("channelBaseVolume", new Class[]{Integer.TYPE}, "(From 0 to 256) Change the volume of the base (<=3) channels in the campaign menu when in a campaign map.")));
+        var1.a((byte) -119, (IntrusiveNode) (new mw("listMissions", new Class[]{Integer.TYPE}, "List available missions.")));
+        var1.a((byte) -119, (IntrusiveNode) (new wt("giveTo", new Class[]{Integer.TYPE}, "Change ownership of a selected tile in the map.")));
+        var1.a((byte) -119, (IntrusiveNode) (new qp("defeat", new Class[]{Integer.TYPE, Integer.TYPE, Integer.TYPE}, "Defeat the given player. And specify it as happening in the given number of turns and damage taken")));
+        var1.a((byte) -119, (IntrusiveNode) (new an("defeat", new Class[]{Integer.TYPE}, "Defeat the given player.")));
+        var1.a((byte) -119, (IntrusiveNode) (new oa("toggleSkip", new Class[]{}, "Toggle Automatically Skipping Player Turns")));
+        var1.a((byte) -119, (IntrusiveNode) (new gg("printVictoryConditions", new Class[]{}, "Print out victory conditions for current player")));
+        var1.a((byte) -119, (IntrusiveNode) (new ot("fixInvisible", new Class[]{}, "Make invisible units visible")));
         return var1;
     }
 
@@ -186,7 +186,7 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 > -5) {
             return true;

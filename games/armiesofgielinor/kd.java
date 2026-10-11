@@ -32,7 +32,7 @@ final class kd extends tj implements nq, he, mf {
         try {
           if (param0 != -1) {
             byte[] var5 = (byte[]) null;
-            kd.a(11, (bv) null, (byte[]) null, (byte) -8);
+            kd.a(11, (CipherPacketBuffer) null, (byte[]) null, (byte) -8);
           }
           var3 = this.field_O;
           var4 = param1;
@@ -42,7 +42,7 @@ final class kd extends tj implements nq, he, mf {
         }
     }
 
-    final static byte[] a(int param0, bv param1, byte[] param2, byte param3) {
+    final static byte[] a(int param0, CipherPacketBuffer param1, byte[] param2, byte param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -57,11 +57,11 @@ final class kd extends tj implements nq, he, mf {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param3 > -101) {
             var9 = (byte[]) null;
-            kd.a(-26, (bv) null, (byte[]) null, (byte) -65);
+            kd.a(-26, (CipherPacketBuffer) null, (byte[]) null, (byte) -65);
           }
           var4_int = param1.g(-122, param0);
           if (var4_int == 0) {
@@ -104,7 +104,7 @@ final class kd extends tj implements nq, he, mf {
         }
     }
 
-    final static void a(int param0, String param1, ts param2, ka param3, byte param4) {
+    final static void a(int param0, String param1, ts param2, BitmapFont param3, byte param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -119,7 +119,7 @@ final class kd extends tj implements nq, he, mf {
         int var6 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param4 <= 78) {
             return;
@@ -207,12 +207,12 @@ final class kd extends tj implements nq, he, mf {
         ol dupTemp$1 = new ol(10000536);
         this.field_K.field_k = (kh) ((Object) dupTemp$1);
         this.field_V.field_k = (kh) ((Object) dupTemp$1);
-        String var2 = fo.a(4800, qq.field_D, new String[]{this.m(150), this.l(29406)});
+        String var2 = fo.a(4800, StateChangeEvent.field_D, new String[]{this.m(150), this.l(29406)});
         int var3 = 20;
         var3 = var3 + this.a(tn.field_X, var3, 170, (byte) 18, this.field_I);
         var3 = var3 + (this.a(false, 170, this.field_H, hh.field_j, 20, "", var3) + 5);
         var3 = var3 + this.a(jj.field_h, var3, 170, (byte) 18, this.field_V);
-        var3 = var3 + (this.a(st.field_B, this.field_K, 170, tf.field_m, 210, var3) + 5);
+        var3 = var3 + (this.a(TurnEffectEvent.field_B, this.field_K, 170, tf.field_m, 210, var3) + 5);
         var3 = var3 + (5 + this.a(dn.field_Ob, this.field_O, 170, fq.field_k, 210, var3));
         var3 = var3 + this.a(var3, this.field_N, 170, field_S, 27270);
         ta var4 = new ta(46, var3, this.field_l - 90, 25, this.field_ab, true, this.field_l - 120, 5, gl.field_e, 11579568, wg.field_c);
@@ -313,7 +313,7 @@ final class kd extends tj implements nq, he, mf {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 < 102) {
             field_F = (je) null;
@@ -651,7 +651,7 @@ final class kd extends tj implements nq, he, mf {
                 var5Lifetime1 = op.a(20, var4, param1);
               }
               if (ut.field_fb == 1) {
-                var5Lifetime1 = nw.a(var4, (byte) -27, param1);
+                var5Lifetime1 = DamageEvent.a(var4, (byte) -27, param1);
               }
               if (ut.field_fb == 2) {
                 var5Lifetime1 = se.a(var4, param1, param0 - 83);

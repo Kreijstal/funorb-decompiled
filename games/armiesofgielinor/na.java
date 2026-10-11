@@ -151,7 +151,7 @@ final class na extends tj implements mf, he {
         if (!this.a(-29967)) {
           return;
         }
-        q.a(param0, this.field_P.field_v);
+        TelepopEvent.a(param0, this.field_P.field_v);
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4) {
@@ -177,84 +177,84 @@ final class na extends tj implements mf, he {
         int var12Lifetime2;
         int var12Lifetime3;
         int var13Lifetime1;
-        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = param1 + param0;
           var6 = param3 + param4;
-          if (param1 > qn.field_j) {
+          if (param1 > SoftwareRaster.field_j) {
             stackIn_4_0 = param1;
           } else {
-            stackIn_4_0 = qn.field_j;
+            stackIn_4_0 = SoftwareRaster.field_j;
           }
           var7 = stackIn_4_0;
-          if (qn.field_a < param4) {
+          if (SoftwareRaster.field_a < param4) {
             stackIn_7_0 = param4;
           } else {
-            stackIn_7_0 = qn.field_a;
+            stackIn_7_0 = SoftwareRaster.field_a;
           }
           var8 = stackIn_7_0;
-          if (var5_int >= qn.field_e) {
-            stackIn_10_0 = qn.field_e;
+          if (var5_int >= SoftwareRaster.field_e) {
+            stackIn_10_0 = SoftwareRaster.field_e;
           } else {
             stackIn_10_0 = var5_int;
           }
           var9 = stackIn_10_0;
-          if (var6 >= qn.field_f) {
-            stackIn_13_0 = qn.field_f;
+          if (var6 >= SoftwareRaster.field_f) {
+            stackIn_13_0 = SoftwareRaster.field_f;
           } else {
             stackIn_13_0 = var6;
           }
           var10 = stackIn_13_0;
-          if (param1 >= qn.field_j &&
-            param1 < qn.field_e) {
-            var11 = var8 * qn.field_l + param1;
+          if (param1 >= SoftwareRaster.field_j &&
+            param1 < SoftwareRaster.field_e) {
+            var11 = var8 * SoftwareRaster.field_l + param1;
             var12 = 1 + var10 - var8 >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              qn.field_d[var11] = 16777215;
-              var11 = var11 + 2 * qn.field_l;
+              SoftwareRaster.field_d[var11] = 16777215;
+              var11 = var11 + 2 * SoftwareRaster.field_l;
             }
           }
-          if (qn.field_a <= param4 &&
-            qn.field_f > var6) {
-            var11Lifetime1 = qn.field_l * param4 + var7;
+          if (SoftwareRaster.field_a <= param4 &&
+            SoftwareRaster.field_f > var6) {
+            var11Lifetime1 = SoftwareRaster.field_l * param4 + var7;
             var12Lifetime1 = -var7 + var9 + 1 >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              qn.field_d[var11Lifetime1] = 16777215;
+              SoftwareRaster.field_d[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
           var11Lifetime2 = 72 / ((param2 - 79) / 37);
-          if (qn.field_j <= var5_int &&
-            qn.field_e > var5_int) {
-            var12Lifetime2 = var5_int + qn.field_l * ((1 & var5_int - param1) + var8);
+          if (SoftwareRaster.field_j <= var5_int &&
+            SoftwareRaster.field_e > var5_int) {
+            var12Lifetime2 = var5_int + SoftwareRaster.field_l * ((1 & var5_int - param1) + var8);
             var13 = 1 + var10 - var8 >> 1;
             while (true) {
               var13--;
               if (var13 < 0) {
                 break;
               }
-              qn.field_d[var12Lifetime2] = 16777215;
-              var12Lifetime2 = var12Lifetime2 + 2 * qn.field_l;
+              SoftwareRaster.field_d[var12Lifetime2] = 16777215;
+              var12Lifetime2 = var12Lifetime2 + 2 * SoftwareRaster.field_l;
             }
           }
-          if (qn.field_a <= param4 &&
-            var6 < qn.field_f) {
-            var12Lifetime3 = var7 + (qn.field_l * var6 + (-param4 + var6 & 1));
+          if (SoftwareRaster.field_a <= param4 &&
+            var6 < SoftwareRaster.field_f) {
+            var12Lifetime3 = var7 + (SoftwareRaster.field_l * var6 + (-param4 + var6 & 1));
             var13Lifetime1 = 1 + var9 - var7 >> 1;
             while (true) {
               var13Lifetime1--;
               if (0 > var13Lifetime1) {
                 return;
               }
-              qn.field_d[var12Lifetime3] = 16777215;
+              SoftwareRaster.field_d[var12Lifetime3] = 16777215;
               var12Lifetime3 += 2;
             }
           }
@@ -339,7 +339,7 @@ final class na extends tj implements mf, he {
         int var7 = 0;
         StringBuilder var8 = null;
         int var5Lifetime1;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5 = 5 / ((-46 - param1) / 37);
           for (var4_int = 0; param0.length > var4_int; var4_int++) {
@@ -440,7 +440,7 @@ final class na extends tj implements mf, he {
         }
     }
 
-    final static om a(bv param0, int param1) {
+    final static om a(CipherPacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         om var3 = null;

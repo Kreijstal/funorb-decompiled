@@ -76,7 +76,7 @@ final class ra extends ik {
     }
 
     final static void a(int param0, int param1, om param2, boolean param3, int param4, int param5) {
-        bv stackIn_32_0 = null;
+        CipherPacketBuffer stackIn_32_0 = null;
         int stackIn_32_1 = 0;
         int stackIn_33_2 = 0;
         RuntimeException stackIn_39_0 = null;
@@ -89,14 +89,14 @@ final class ra extends ik {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (nw.g(117)) {
+          if (DamageEvent.g(117)) {
             return;
           }
           var6_int = param2.field_G.field_r;
           var7 = param2.field_v;
-          kr.field_C.a(var7, (byte) 33, param4);
+          MoveEvent.field_C.a(var7, (byte) 33, param4);
           if (!(pg.field_d.field_g.a(var6_int, -63, var7) >= param4) ||
             param4 == 1) {
             if (1 < param4) {
@@ -160,11 +160,11 @@ final class ra extends ik {
             } else {
               stackIn_33_2 = 1;
             }
-            ((bv) (Object) stackIn_32_0).b(stackIn_32_1, stackIn_33_2);
+            ((CipherPacketBuffer) (Object) stackIn_32_0).b(stackIn_32_1, stackIn_33_2);
             vl.field_n.a((byte) -108, km.a(-59));
             vl.field_n.a((byte) -124, oq.a(false));
             vl.field_n.a((byte) -59, jr.a(false));
-            vl.field_n.a((byte) -50, rt.g(0));
+            vl.field_n.a((byte) -50, RevivalEvent.g(0));
           }
           qh.b((byte) 27);
           if (param0 == 4) {
@@ -194,7 +194,7 @@ final class ra extends ik {
         tq.field_a = true;
         so.field_b = null;
         int[] var4 = (int[]) null;
-        qn.a((int[]) null, 0, 0);
+        SoftwareRaster.a((int[]) null, 0, 0);
         so.field_b = rj.a(param0, param2, 1423111778, (java.awt.Component) ((Object) si.field_b));
         so.field_b.a(param1 - 17900);
         g.a((byte) -85, param0 / 2, param2 / 2);
@@ -223,11 +223,11 @@ final class ra extends ik {
         }
     }
 
-    final void a(int param0, ha param1, int param2) {
+    final void a(int param0, Battlefield param1, int param2) {
         try {
           if (param2 != 26123) {
-            ha var5 = (ha) null;
-            this.a((ha) null, 42);
+            Battlefield var5 = (Battlefield) null;
+            this.a((Battlefield) null, 42);
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "ra.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -236,14 +236,14 @@ final class ra extends ik {
 
     final int a(int param0) {
         if (param0 != 25365) {
-          vh var3 = (vh) null;
-          this.a(-112, (vh) null);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a(-112, (PacketBuffer) null);
           return 2;
         }
         return 2;
     }
 
-    final void a(ha param0, int param1) {
+    final void a(Battlefield param0, int param1) {
         RuntimeException var3 = null;
         om var4 = null;
         RuntimeException stackIn_7_0 = null;
@@ -275,19 +275,19 @@ final class ra extends ik {
         }
     }
 
-    final void a(byte param0, ha param1) {
+    final void a(byte param0, Battlefield param1) {
         try {
           this.field_h = this.field_g.a(param0 ^ -26, param1);
           if (param0 != -37) {
-            ha var4 = (ha) null;
-            this.a((ha) null, -62);
+            Battlefield var4 = (Battlefield) null;
+            this.a((Battlefield) null, -62);
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "ra.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, vh param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           param1.b(true, this.field_c);
           if (param0 != -11637) {
@@ -299,13 +299,13 @@ final class ra extends ik {
     }
 
     final static void a(long param0, int param1, int param2) {
-        bv var4 = vl.field_n;
+        CipherPacketBuffer var4 = vl.field_n;
         var4.h(32161, param1);
-        var4.field_q = var4.field_q + 1;
-        int var5 = var4.field_q;
+        var4.position = var4.position + 1;
+        int var5 = var4.position;
         var4.b(1, param2);
         var4.a(param0, param2 ^ 38359638);
-        var4.e(-var5 + var4.field_q, 5930);
+        var4.e(-var5 + var4.position, 5930);
     }
 
     final static int b(boolean param0) {

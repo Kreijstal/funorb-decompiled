@@ -17,8 +17,8 @@ final class ua extends bd {
         ps.a(param1, true);
     }
 
-    final void a(int param0, ha param1) {
-        param1.field_l.a((byte) -119, (tc) (new pj(this.field_x, this.field_w, this.field_m)));
+    final void a(int param0, Battlefield param1) {
+        param1.pendingEvents.a((byte) -119, (IntrusiveNode) (new TrinketUseEvent(this.field_x, this.field_w, this.field_m)));
         if (param0 != 64) {
           return;
         }
@@ -43,7 +43,7 @@ final class ua extends bd {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param3 > 0) {
             var9 = new byte[param1];

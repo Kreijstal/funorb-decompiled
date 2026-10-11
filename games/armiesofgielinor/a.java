@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class a extends tc {
+final class a extends IntrusiveNode {
     int field_p;
-    static wk[] field_m;
+    static RgbSprite[] field_m;
     static String field_n;
     static String field_k;
     int field_l;
@@ -26,38 +26,38 @@ final class a extends tc {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = 16777215;
-          var5 = ic.field_f >> 1 << 24;
-          if (vs.field_e[param2].h(-1)) {
-            var6 = vs.field_e[param2].field_a;
-            if (null != bv.field_w) {
-              var6 = bv.field_w.o(var6, param0 ^ -16711681);
+          var5 = GameplayController.field_f >> 1 << 24;
+          if (vs.field_e[param2].hasModifierFlag2(-1)) {
+            var6 = vs.field_e[param2].ownerPlayer;
+            if (null != CipherPacketBuffer.currentBattlefield) {
+              var6 = CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var6, param0 ^ -16711681);
             }
             var4_int = bo.field_g[1 + var6] | -2147483648;
           }
-          if (jf.field_C.field_T != null) {
-            if (param2 == ks.field_y * jf.field_C.field_T.field_w + jf.field_C.field_T.field_J) {
+          if (jf.field_C.selectedUnit != null) {
+            if (param2 == ks.field_y * jf.field_C.selectedUnit.tileY + jf.field_C.selectedUnit.tileX) {
               var4_int = 16777215 | var5;
             } else {
-              if (!jf.field_C.field_vb.field_w) {
-                var6 = jf.field_C.field_vb.c(27732);
-                if (!jf.field_C.field_T.field_s) {
-                  if (bv.field_w.field_gb != jf.field_C.field_q) {
-                    if (var6 <= jf.field_C.field_vb.field_q[param2]) {
-                      if ((jf.field_C.field_vb.field_e[param2] & 2) != 0) {
+              if (!jf.field_C.movementPlanner.field_w) {
+                var6 = jf.field_C.movementPlanner.c(27732);
+                if (!jf.field_C.selectedUnit.packedFlag4) {
+                  if (CipherPacketBuffer.currentBattlefield.currentPlayer != jf.field_C.field_q) {
+                    if (var6 <= jf.field_C.movementPlanner.field_q[param2]) {
+                      if ((jf.field_C.movementPlanner.field_e[param2] & 2) != 0) {
                         var4_int = var5 | 5570560;
                       }
                     } else {
                       var4_int = 21760 | var5;
                     }
                   } else {
-                    if (jf.field_C.field_vb.field_q[param2] <= var6) {
+                    if (jf.field_C.movementPlanner.field_q[param2] <= var6) {
                       var4_int = var5 | 43264;
                     } else {
-                      if (0 == (jf.field_C.field_vb.field_e[param2] & 2)) {
-                        if (jf.field_C.field_vb.field_k[param2] < var6) {
+                      if (0 == (jf.field_C.movementPlanner.field_e[param2] & 2)) {
+                        if (jf.field_C.movementPlanner.field_k[param2] < var6) {
                           var4_int = 11118848 | var5;
                         }
                       } else {
@@ -66,44 +66,44 @@ final class a extends tc {
                     }
                   }
                 } else {
-                  if (jf.field_C.field_T.field_B == 0) {
-                    if (var6 < jf.field_C.field_vb.field_q[param2]) {
-                      if ((2 & jf.field_C.field_vb.field_e[param2]) != 0) {
+                  if (jf.field_C.selectedUnit.packedLowFlags == 0) {
+                    if (var6 < jf.field_C.movementPlanner.field_q[param2]) {
+                      if ((2 & jf.field_C.movementPlanner.field_e[param2]) != 0) {
                         var4_int = var5 | 5570560;
                       }
                     } else {
                       var4_int = var5 | 21760;
                     }
                   } else {
-                    if ((1 & jf.field_C.field_vb.field_e[param2]) != 0) {
+                    if ((1 & jf.field_C.movementPlanner.field_e[param2]) != 0) {
                       var4_int = var5 | 5570560;
                     }
                   }
                 }
               } else {
-                if (jf.field_C.field_T.field_B > 0) {
-                  if (!jf.field_C.field_T.field_s) {
-                    if ((jf.field_C.field_vb.field_e[param2] & 2) != 0) {
+                if (jf.field_C.selectedUnit.packedLowFlags > 0) {
+                  if (!jf.field_C.selectedUnit.packedFlag4) {
+                    if ((jf.field_C.movementPlanner.field_e[param2] & 2) != 0) {
                       var4_int = var5 | 16711680;
                     }
                   } else {
-                    if ((1 & jf.field_C.field_vb.field_e[param2]) != 0) {
+                    if ((1 & jf.field_C.movementPlanner.field_e[param2]) != 0) {
                       var4_int = var5 | 16711680;
                     }
                   }
                 }
               }
             }
-            if (!jf.field_C.field_T.field_s &&
-              jf.field_C.field_T.field_O == jf.field_C.field_q &&
-              !jf.field_C.field_T.h(-13494)) {
-              var6 = jf.field_C.field_T.B(3257);
-              var7 = jf.field_C.field_T.l((byte) -79);
-              var8 = jf.field_C.field_vb.field_n;
-              var9 = jf.field_C.field_vb.field_b;
-              if (jf.field_C.field_T.o(-28467)) {
-                var8 = jf.field_C.field_T.a(false);
-                var9 = jf.field_C.field_T.D(param0 - 16711795);
+            if (!jf.field_C.selectedUnit.packedFlag4 &&
+              jf.field_C.selectedUnit.ownerPlayer == jf.field_C.field_q &&
+              !jf.field_C.selectedUnit.h(-13494)) {
+              var6 = jf.field_C.selectedUnit.B(3257);
+              var7 = jf.field_C.selectedUnit.l((byte) -79);
+              var8 = jf.field_C.movementPlanner.field_n;
+              var9 = jf.field_C.movementPlanner.field_b;
+              if (jf.field_C.selectedUnit.o(-28467)) {
+                var8 = jf.field_C.selectedUnit.a(false);
+                var9 = jf.field_C.selectedUnit.D(param0 - 16711795);
               }
               var10 = Math.abs(var8 - param3);
               var11 = Math.abs(-param1 + var9);
@@ -112,9 +112,9 @@ final class a extends tc {
                 stackIn_52_0 = (var10 + var11 != 1) ? 0 : 1;
                 var12 = stackIn_52_0;
                 if (var12 == 0) {
-                  if (0 == (2 & bv.field_w.b(31, var9, var8, jf.field_C.field_T.field_O))) {
-                    if ((bv.field_w.b(31, param1, param3, jf.field_C.field_T.field_O) & 2) == 0) {
-                      stackIn_62_0 = (bv.field_w.field_j.a(var9, param3, var8, jf.field_C.field_T.x(-97), var6, param1, (byte) 62)) ? 1 : 0;
+                  if (0 == (2 & CipherPacketBuffer.currentBattlefield.b(31, var9, var8, jf.field_C.selectedUnit.ownerPlayer))) {
+                    if ((CipherPacketBuffer.currentBattlefield.b(31, param1, param3, jf.field_C.selectedUnit.ownerPlayer) & 2) == 0) {
+                      stackIn_62_0 = (CipherPacketBuffer.currentBattlefield.field_j.a(var9, param3, var8, jf.field_C.selectedUnit.x(-97), var6, param1, (byte) 62)) ? 1 : 0;
                     } else {
                       stackIn_62_0 = 0;
                     }
@@ -132,7 +132,7 @@ final class a extends tc {
               }
             }
             if (jf.field_C.field_lc) {
-              var6 = -jf.field_C.field_T.field_J - ks.field_y * jf.field_C.field_T.field_w + param2;
+              var6 = -jf.field_C.selectedUnit.tileX - ks.field_y * jf.field_C.selectedUnit.tileY + param2;
               if (var6 == ks.field_y ||
                 -ks.field_y == var6 ||
                 1 == var6 ||
@@ -144,7 +144,7 @@ final class a extends tc {
           if (param2 == jf.field_C.field_h) {
             var4_int = var4_int & 16777215 | var5 + var4_int & -16777216;
           }
-          L11: {
+          regionExit1: {
             if (jf.field_C.field_cc > -1 &&
               jf.field_C.field_ic > -1) {
               if (jf.field_C.field_gc == 44 &&
@@ -154,54 +154,54 @@ final class a extends tc {
                 switch (var6) {
                   case 1:
                     if (jf.field_C.field_cc != param3) {
-                      break L11;
+                      break regionExit1;
                     }
                     if (jf.field_C.field_eb < param1) {
-                      break L11;
+                      break regionExit1;
                     }
                     if (param1 < -jf.field_C.field_ic + jf.field_C.field_eb) {
-                      break L11;
+                      break regionExit1;
                     }
                     var4_int = 43264 | var5;
-                    break L11;
+                    break regionExit1;
                   case 0:
                     if (jf.field_C.field_eb != param1) {
-                      break L11;
+                      break regionExit1;
                     }
                     if (jf.field_C.field_cc > param3) {
-                      break L11;
+                      break regionExit1;
                     }
                     if (jf.field_C.field_ic + jf.field_C.field_cc < param3) {
-                      break L11;
+                      break regionExit1;
                     }
                     var4_int = 43264 | var5;
-                    break L11;
+                    break regionExit1;
                   case 2:
                     if (param3 != jf.field_C.field_cc) {
-                      break L11;
+                      break regionExit1;
                     }
                     if (param1 < jf.field_C.field_eb) {
-                      break L11;
+                      break regionExit1;
                     }
                     if (jf.field_C.field_eb + jf.field_C.field_ic < param1) {
-                      break L11;
+                      break regionExit1;
                     }
                     var4_int = var5 | 43264;
-                    break L11;
+                    break regionExit1;
                   default:
-                    break L11;
+                    break regionExit1;
                   case 3:
                     if (param1 != jf.field_C.field_eb) {
-                      break L11;
+                      break regionExit1;
                     }
                     if (param3 > jf.field_C.field_cc) {
-                      break L11;
+                      break regionExit1;
                     }
                     if (param3 < jf.field_C.field_cc - jf.field_C.field_ic) {
-                      break L11;
+                      break regionExit1;
                     }
                     var4_int = 43264 | var5;
-                    break L11;
+                    break regionExit1;
                 }
               }
               var6 = Math.abs(jf.field_C.field_cc - param3);
@@ -216,7 +216,7 @@ final class a extends tc {
               }
             }
           }
-          var6 = bv.field_w.a(param2, -1, true) & 28;
+          var6 = CipherPacketBuffer.currentBattlefield.a(param2, -1, true) & 28;
           if (param0 != 16711680) {
             field_o = (kl) null;
           }
@@ -245,10 +245,10 @@ final class a extends tc {
         }
     }
 
-    final static jd a(int param0, int param1, bv param2) {
-        jd var3 = null;
+    final static Unit a(int param0, int param1, CipherPacketBuffer param2) {
+        Unit var3 = null;
         RuntimeException var3_ref = null;
-        jd stackIn_6_0 = null;
+        Unit stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -257,7 +257,7 @@ final class a extends tc {
           if (param0 == 0) {
             return null;
           }
-          var3 = new jd();
+          var3 = new Unit();
           if (param1 <= 31) {
             a.a(96, (byte) -94);
           }
@@ -280,9 +280,9 @@ final class a extends tc {
 
     final static void a(int param0, byte param1) {
         if (param1 != -32) {
-          field_m = (wk[]) null;
+          field_m = (RgbSprite[]) null;
         }
-        bv var2 = vl.field_n;
+        CipherPacketBuffer var2 = vl.field_n;
         var2.h(32161, param0);
         var2.b(1, 1);
         var2.b(1, 2);

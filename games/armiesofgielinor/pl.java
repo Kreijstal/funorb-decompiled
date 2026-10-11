@@ -4,13 +4,13 @@
 final class pl extends bd {
     static boolean field_A;
     static String field_t;
-    static wk[] field_x;
+    static RgbSprite[] field_x;
     static String field_z;
-    private jd field_u;
+    private Unit field_u;
     static String[] field_y;
     static String field_C;
     static int[] field_s;
-    static wk[] field_D;
+    static RgbSprite[] field_D;
     static String field_v;
     private int field_w;
 
@@ -28,27 +28,27 @@ final class pl extends bd {
         }
     }
 
-    final void a(int param0, ha param1) {
+    final void a(int param0, Battlefield param1) {
         RuntimeException var3 = null;
-        ha var4 = null;
+        Battlefield var4 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_u.field_N == 39) {
-            param1.field_l.a((byte) -119, (tc) (new hp(this.field_u)));
+          if (this.field_u.unitType == 39) {
+            param1.pendingEvents.a((byte) -119, (IntrusiveNode) (new DeathEvent(this.field_u)));
           }
           if (param0 != 64) {
-            var4 = (ha) null;
-            this.a(10, (ha) null);
+            var4 = (Battlefield) null;
+            this.a(10, (Battlefield) null);
           }
-          if (34 != this.field_u.field_N &&
-            this.field_u.field_N != 7 &&
-            17 != this.field_u.field_N) {
+          if (34 != this.field_u.unitType &&
+            this.field_u.unitType != 7 &&
+            17 != this.field_u.unitType) {
             return;
           }
-          param1.field_l.a((byte) -119, (tc) (new tr(this.field_u.field_J, this.field_u.field_w, this.field_w)));
+          param1.pendingEvents.a((byte) -119, (IntrusiveNode) (new DeployEvent(this.field_u.tileX, this.field_u.tileY, this.field_w)));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -65,19 +65,19 @@ final class pl extends bd {
     }
 
     final static wj a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
-        wj var5 = (wj) (lf.field_c.e((byte) 114));
+        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        wj var5 = (wj) (lf.field_c.first((byte) 114));
         while (var5 != null) {
           if (param1 == var5.field_r) {
             return var5;
           }
-          var5 = (wj) (lf.field_c.a((byte) 123));
+          var5 = (wj) (lf.field_c.next((byte) 123));
         }
         var5 = new wj();
         var5.field_p = param4;
         var5.field_k = param3;
         var5.field_r = param1;
-        lf.field_c.a((byte) -119, (tc) (var5));
+        lf.field_c.a((byte) -119, (IntrusiveNode) (var5));
         gn.a(param2, var5, 0);
         if (param0 == 34) {
           return var5;
@@ -86,7 +86,7 @@ final class pl extends bd {
         return var5;
     }
 
-    pl(int param0, jd param1, int param2) {
+    pl(int param0, Unit param1, int param2) {
         try {
           this.field_u = param1;
           this.field_w = param2;

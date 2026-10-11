@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class jg extends tc {
+final class jg extends IntrusiveNode {
     int field_l;
-    static wk field_m;
+    static RgbSprite field_m;
     static String field_n;
     static int field_k;
 
@@ -22,7 +22,7 @@ final class jg extends tc {
         }
         int var5 = kd.field_Z[param4][param3];
         if (var5 > -1) {
-          var6 = ns.a(false, td.field_d[var5].length, li.field_n);
+          var6 = AttackEvent.a(false, td.field_d[var5].length, li.field_n);
           if (td.field_d[var5][var6] != null &&
             td.field_d[var5][var6].field_o.length != 0) {
             param0 = 512 - (param0 - 800);
@@ -35,8 +35,8 @@ final class jg extends tc {
 
     final static void a(byte param0) {
         if (iu.field_h) {
-          qn.d(qn.field_j, qn.field_a, qn.field_e - qn.field_j, qn.field_f - qn.field_a);
-          as.field_E.b(false, 20);
+          SoftwareRaster.d(SoftwareRaster.field_j, SoftwareRaster.field_a, SoftwareRaster.field_e - SoftwareRaster.field_j, SoftwareRaster.field_f - SoftwareRaster.field_a);
+          OwnerChangeEvent.field_E.b(false, 20);
         }
         if (param0 != 102) {
           jg.a(-122, true, false, -112, 41, -27, 39);
@@ -77,9 +77,9 @@ final class jg extends tc {
         int stackIn_36_0 = 0;
         int stackIn_72_0 = 0;
         int stackIn_83_0 = 0;
-        wk[] stackIn_85_0 = null;
+        RgbSprite[] stackIn_85_0 = null;
         int stackIn_86_1 = 0;
-        wk[] stackIn_93_0 = null;
+        RgbSprite[] stackIn_93_0 = null;
         int stackIn_94_1 = 0;
         String stackIn_156_0 = null;
         String stackIn_166_0 = null;
@@ -87,7 +87,7 @@ final class jg extends tc {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        at var8 = null;
+        NodeDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
         au var12 = null;
@@ -121,7 +121,7 @@ final class jg extends tc {
         int var39 = 0;
         int var40 = 0;
         int var41 = 0;
-        wk var42 = null;
+        RgbSprite var42 = null;
         je var43 = null;
         je var44 = null;
         je var45 = null;
@@ -130,14 +130,14 @@ final class jg extends tc {
         je var48 = null;
         je var49 = null;
         Object var50 = null;
-        wk var50_ref = null;
+        RgbSprite var50_ref = null;
         Object var51 = null;
-        wk var51_ref = null;
+        RgbSprite var51_ref = null;
         Object var52 = null;
-        wk var52_ref = null;
+        RgbSprite var52_ref = null;
         Object var53 = null;
-        wk var53_ref = null;
-        wk var54 = null;
+        RgbSprite var53_ref = null;
+        RgbSprite var54 = null;
         int var14Lifetime1;
         int var33_intLifetime1;
         int var34_intLifetime1;
@@ -151,18 +151,18 @@ final class jg extends tc {
         var51 = null;
         var52 = null;
         var53 = null;
-        var41 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var41 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          stackIn_3_0 = bv.field_x;
+          stackIn_3_0 = CipherPacketBuffer.field_x;
           stackIn_3_1 = param1;
           stackIn_3_2 = param3 * (8 + 4 * jn.field_d);
           stackIn_3_3 = jn.field_d * 2 + 4;
-          stackIn_4_4 = (bv.field_x == pq.field_b);
+          stackIn_4_4 = (CipherPacketBuffer.field_x == pq.field_b);
           var7_int = ((dn) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param0, 2) ? 1 : 0;
-          var8 = bv.field_x.field_Jb.field_fb;
+          var8 = CipherPacketBuffer.field_x.field_Jb.field_fb;
           var9 = vi.b(-118);
           var11 = null;
-          var12 = (au) (var8.e((byte) 120));
+          var12 = (au) (var8.first((byte) 120));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_fb) {
@@ -328,7 +328,7 @@ final class jg extends tc {
             var30 = var12.field_Wb;
             var12.field_Wb.field_ob = 0;
             var30.field_gb = 0;
-            var12.field_gb = bv.field_x.field_Jb.field_gb;
+            var12.field_gb = CipherPacketBuffer.field_x.field_Jb.field_gb;
             var31 = 0;
             var32 = var12.field_rc;
             if (!var12.k(param0 ^ -7)) {
@@ -369,7 +369,7 @@ final class jg extends tc {
               } else {
                 var12.field_Yb.a(jn.field_d, -20500, 68, var31, 0);
               }
-              var12.field_lc.field_X = ka.a(var12.field_lc.field_Z, var32, 78);
+              var12.field_lc.field_X = BitmapFont.a(var12.field_lc.field_Z, var32, 78);
               var12.field_lc.a(jn.field_d, -20500, 78, var31, 70);
               if (var12.field_lc.field_eb &&
                 !var12.field_lc.field_X.equals(var32)) {
@@ -496,7 +496,7 @@ final class jg extends tc {
                 var31 = var31 + jn.field_d;
               }
               if (var12.field_gc) {
-                var12.field_sc.field_X = fo.a(4800, ic.field_A, new String[]{var32});
+                var12.field_sc.field_X = fo.a(4800, GameplayController.field_A, new String[]{var32});
                 var12.field_sc.a(jn.field_d, -20500, var12.field_gb - 2 * mi.field_l, var31, mi.field_l);
                 var31 = var31 + jn.field_d;
               }
@@ -513,7 +513,7 @@ final class jg extends tc {
               var12.field_nb = var31 - var12.field_ob;
             }
             if (var13 != 0) {
-              bv.field_x.field_Jb.a(var12, true, 2, (je) (var11));
+              CipherPacketBuffer.field_x.field_Jb.a(var12, true, 2, (je) (var11));
             }
             for (var34_intLifetime2 = 0; var34_intLifetime2 < tq.field_b; var34_intLifetime2++) {
               if (var12.field_Qb[var34_intLifetime2].field_eb) {
@@ -558,7 +558,7 @@ final class jg extends tc {
                   stackIn_166_0 = hw.field_y;
                 }
               } else {
-                stackIn_166_0 = ns.field_K;
+                stackIn_166_0 = AttackEvent.field_K;
               }
               ad.field_I = stackIn_166_0;
             }
@@ -573,7 +573,7 @@ final class jg extends tc {
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_yb != 0) {
               if (var12.k(param0 ^ -7)) {
-                var12 = (au) (var8.a((byte) 123));
+                var12 = (au) (var8.next((byte) 123));
                 continue;
               }
               if (var12.field_Yb.field_yb == 0) {
@@ -586,11 +586,11 @@ final class jg extends tc {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  ag.a(param6, -99, var12.d((byte) -97));
+                  CombatEvent.a(param6, -99, var12.d((byte) -97));
                 }
               }
             }
-            var12 = (au) (var8.a((byte) 123));
+            var12 = (au) (var8.next((byte) 123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -607,16 +607,16 @@ final class jg extends tc {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        bv var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         iw var11 = null;
         b var12 = null;
-        bv var13 = null;
+        CipherPacketBuffer var13 = null;
         b var14 = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var13 = mg.field_e;
           var2 = var13.k(param0);
@@ -626,37 +626,37 @@ final class jg extends tc {
             var9 = var10;
             var4 = var9;
             var5 = var13;
-            var6 = ((vh) ((Object) var5)).k(0);
+            var6 = ((PacketBuffer) ((Object) var5)).k(0);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((vh) ((Object) var5)).i(1);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).i(1);
             }
-            var12 = (b) (ta.field_O.e((byte) 98));
+            var12 = (b) (ta.field_O.first((byte) 98));
             if (var12 == null) {
               dj.a((byte) -127);
               return;
             }
             var12.field_m = true;
             var12.field_l = var3;
-            var12.d(param0 + 65);
+            var12.unlink(param0 + 65);
             return;
           }
           if (var2 == 1) {
-            var11 = (iw) (cg.field_c.e((byte) 104));
+            var11 = (iw) (cg.field_c.first((byte) 104));
             if (var11 == null) {
               dj.a((byte) -126);
               return;
             }
-            var11.d(41);
+            var11.unlink(41);
           } else {
             if (var2 == 2) {
-              var14 = (b) (ta.field_O.e((byte) 125));
+              var14 = (b) (ta.field_O.first((byte) 125));
               if (var14 == null) {
                 dj.a((byte) -125);
                 return;
               }
               var14.field_l = ce.a(-120);
               var14.field_m = true;
-              var14.d(param0 ^ 35);
+              var14.unlink(param0 ^ 35);
             } else {
               af.a((Throwable) null, 78, "A1: " + cm.b(false));
               dj.a((byte) -127);

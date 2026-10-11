@@ -9,14 +9,14 @@ final class sk implements pa {
     private v field_B;
     static jp field_G;
     static kl field_M;
-    wk field_H;
+    RgbSprite field_H;
     private boolean field_d;
     private vb field_k;
-    private ha field_x;
+    private Battlefield field_x;
     private boolean field_o;
     private int field_a;
     private lf[] field_i;
-    wk field_A;
+    RgbSprite field_A;
     private int field_I;
     private int field_e;
     private int[] field_l;
@@ -51,7 +51,7 @@ final class sk implements pa {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_i[0].field_d) {
             return;
@@ -66,7 +66,7 @@ final class sk implements pa {
             }
             if (this.field_s[var2_int] != null &&
               this.field_s[var2_int].b((byte) 44)) {
-              this.field_s[var2_int].field_m = ns.a(false, 20, vv.field_b);
+              this.field_s[var2_int].field_m = AttackEvent.a(false, 20, vv.field_b);
               this.field_s[var2_int].field_f = 1;
             }
             var2_int++;
@@ -92,7 +92,7 @@ final class sk implements pa {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var6 = new int[-param1 + 3];
           var7 = 0;
@@ -157,7 +157,7 @@ final class sk implements pa {
               this.field_C = -127;
             }
             boolean decompiledFrameRemainder0 = true;
-            var9 = var6[ns.a(false, var7, vv.field_b)];
+            var9 = var6[AttackEvent.a(false, var7, vv.field_b)];
             if (1 != param1 ||
               param0[2] != null) {
               if (param1 == 0) {
@@ -234,7 +234,7 @@ final class sk implements pa {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != -4925) {
             sk.c(-81);
@@ -247,7 +247,7 @@ final class sk implements pa {
             if (null != param0[var3_int] &&
               param0[var3_int].b((byte) 121)) {
               param0[var3_int].field_f = 5;
-              param0[var3_int].field_m = ns.a(false, 20, vv.field_b);
+              param0[var3_int].field_m = AttackEvent.a(false, 20, vv.field_b);
             }
             var3_int++;
           }
@@ -282,7 +282,7 @@ final class sk implements pa {
         int var8 = 0;
         int var9 = 0;
         int var8Lifetime1;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 != 83) {
             return;
@@ -299,7 +299,7 @@ final class sk implements pa {
           } while (var9 == 0);
           var5 = new int[param0];
           var6 = 0;
-          L6: while (true) {
+          scanLoop1: while (true) {
             if (var6 < param1.length) {
               stackIn_58_0 = param1[var6];
               if (var9 == 0) {
@@ -358,7 +358,7 @@ final class sk implements pa {
                 while (var6 < param0) {
                   stackIn_58_0 = param1[var5[var6]];
                   if (var9 != 0) {
-                    break L6;
+                    break scanLoop1;
                   }
                   if (stackIn_58_0 != null) {
                     param1[var5[var6]].a(this.field_C, -84, true);
@@ -435,7 +435,7 @@ final class sk implements pa {
         }
     }
 
-    public final boolean a(oj param0, byte param1) {
+    public final boolean a(GameEvent param0, byte param1) {
         boolean stackIn_8_1 = false;
         int stackIn_37_1 = 0;
         int stackIn_40_1 = 0;
@@ -472,13 +472,13 @@ final class sk implements pa {
         StringBuilder stackIn_271_1 = null;
         String stackIn_272_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ag var3 = null;
+        CombatEvent var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        jd var6 = null;
+        Unit var6 = null;
         String var6_ref = null;
-        jd var7 = null;
+        Unit var7 = null;
         int var8 = 0;
         String var8_ref_String = null;
         int var9 = 0;
@@ -487,31 +487,31 @@ final class sk implements pa {
         int stackIn_227_1Lifetime1;
         int var8Lifetime1;
         int var9Lifetime1;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder3 = true;
           if (1 == param0.field_m) {
-            var3 = (ag) (param0);
-            var4 = this.field_x.field_v * var3.field_G + var3.field_Q;
-            var5 = var3.field_F + (var4 + var3.field_B * this.field_x.field_v);
+            var3 = (CombatEvent) (param0);
+            var4 = this.field_x.mapWidth * var3.field_G + var3.field_Q;
+            var5 = var3.field_F + (var4 + var3.field_B * this.field_x.mapWidth);
             stackIn_8_1 = !(var3.field_B * var3.field_B + var3.field_F * var3.field_F <= 1);
             this.field_d = stackIn_8_1;
             if (var4 >= 0 &&
-              var4 < this.field_x.field_Eb.length &&
+              var4 < this.field_x.tiles.length &&
               var5 >= 0 &&
-              var5 < this.field_x.field_Eb.length) {
-              var6 = this.field_x.field_Eb[var4].field_c;
-              var7 = this.field_x.field_Eb[var5].field_c;
+              var5 < this.field_x.tiles.length) {
+              var6 = this.field_x.tiles[var4].occupant;
+              var7 = this.field_x.tiles[var5].occupant;
               if (var6 != null &&
                 var7 != null) {
                 this.field_k.field_x = var4;
-                this.b((byte) 54, this.field_x.field_hb);
+                this.b((byte) 54, this.field_x.mapTheme);
                 this.field_g = -1;
                 this.field_e = -1;
-                var8 = var6.field_A + var6.field_Y;
-                var9 = var6.field_t + var6.field_A;
-                this.field_e = var6.field_O;
-                this.field_J = bw.field_m[var6.field_N][9];
+                var8 = var6.field_A + var6.strength;
+                var9 = var6.maximumStrength + var6.field_A;
+                this.field_e = var6.ownerPlayer;
+                this.field_J = bw.unitDefinitions[var6.unitType][9];
                 if (0 < vu.field_N[this.field_J] * var8 % var9) {
                   stackIn_37_1 = 1;
                 } else {
@@ -529,20 +529,20 @@ final class sk implements pa {
                   var6.field_P == 8) {
                   this.field_v = 0;
                 }
-                this.field_c = var6.field_N;
+                this.field_c = var6.unitType;
                 if (this.field_v > this.field_y) {
                   this.field_v = this.field_y;
                 }
-                stackIn_57_1 = (var6.g(0) == 3) || (var7.field_N == 7);
+                stackIn_57_1 = (var6.g(0) == 3) || (var7.unitType == 7);
                 this.field_E = stackIn_57_1;
-                var8Lifetime1 = var7.field_Y + var7.field_A;
-                var9Lifetime1 = var7.field_A + var7.field_t;
-                if (var7.field_N == 34 &&
-                  var7.field_W) {
+                var8Lifetime1 = var7.strength + var7.field_A;
+                var9Lifetime1 = var7.field_A + var7.maximumStrength;
+                if (var7.unitType == 34 &&
+                  var7.packedFlag8) {
                   this.field_q = true;
                 }
-                this.field_g = var7.field_O;
-                this.field_u = bw.field_m[var7.field_N][9];
+                this.field_g = var7.ownerPlayer;
+                this.field_u = bw.unitDefinitions[var7.unitType][9];
                 if (vu.field_N[this.field_u] * var8Lifetime1 % var9Lifetime1 <= 0) {
                   stackIn_67_1 = 0;
                 } else {
@@ -562,8 +562,8 @@ final class sk implements pa {
                 if (this.field_w < this.field_O) {
                   this.field_O = this.field_w;
                 }
-                this.field_a = var7.field_N;
-                stackIn_87_1 = (var7.g(0) == 3) || (7 == var7.field_N);
+                this.field_a = var7.unitType;
+                stackIn_87_1 = (var7.g(0) == 3) || (7 == var7.unitType);
                 boolean decompiledFrameRemainder2 = true;
                 this.field_P = stackIn_87_1;
                 if (!this.field_d) {
@@ -598,7 +598,7 @@ final class sk implements pa {
                   }
                   if (decompiledFrameRemainder1) {
                     if (var6.g(param1 ^ 57) == 3) {
-                      this.field_z = 8 + bw.field_m[var6.field_N][1];
+                      this.field_z = 8 + bw.unitDefinitions[var6.unitType][1];
                       decompiledFrameRemainder1 = (var10 != 0);
                     }
                     if (decompiledFrameRemainder1) {
@@ -637,7 +637,7 @@ final class sk implements pa {
                       }
                     }
                   }
-                  this.field_p = this.field_O - (-ns.a(false, this.field_y, vv.field_b) - this.field_y);
+                  this.field_p = this.field_O - (-AttackEvent.a(false, this.field_y, vv.field_b) - this.field_y);
                   this.field_D = new km[this.field_p];
                   this.field_b = this.a(this.field_w, (byte) -128);
                   this.field_n = 5;
@@ -658,7 +658,7 @@ final class sk implements pa {
                   this.field_s = new lf[6];
                   var8Lifetime1 = 0;
                   while (this.field_y > var8Lifetime1) {
-                    this.field_s[1 + var8Lifetime1] = new lf(this.field_c, true, id.field_d[var8Lifetime1], kr.field_F[var8Lifetime1], false, 0);
+                    this.field_s[1 + var8Lifetime1] = new lf(this.field_c, true, id.field_d[var8Lifetime1], MoveEvent.field_F[var8Lifetime1], false, 0);
                     var8Lifetime1++;
                     if (var10 != 0) {
                       decompiledFrameCompleted7 = false;
@@ -677,7 +677,7 @@ final class sk implements pa {
                   this.field_i = new lf[6];
                   var8Lifetime1 = 0;
                   while (this.field_w > var8Lifetime1) {
-                    this.field_i[1 + var8Lifetime1] = new lf(this.field_a, false, id.field_d[var8Lifetime1], kr.field_F[var8Lifetime1], false, 0);
+                    this.field_i[1 + var8Lifetime1] = new lf(this.field_a, false, id.field_d[var8Lifetime1], MoveEvent.field_F[var8Lifetime1], false, 0);
                     var8Lifetime1++;
                     if (var10 != 0) {
                       decompiledFrameCompleted6 = false;
@@ -701,7 +701,7 @@ final class sk implements pa {
                 if (this.field_q) {
                   this.field_a = 75;
                   this.field_w = 1;
-                  if (var7.field_A + var7.field_Y > var3.field_K) {
+                  if (var7.field_A + var7.strength > var3.field_K) {
                     stackIn_192_1 = 0;
                   } else {
                     stackIn_192_1 = 1;
@@ -743,7 +743,7 @@ final class sk implements pa {
                     } else {
                       stackIn_205_2 = null;
                       stackIn_205_3 = null;
-                      stackIn_205_9 = 1300 + ns.a(false, 700, vv.field_b);
+                      stackIn_205_9 = 1300 + AttackEvent.a(false, 700, vv.field_b);
                     }
                     stackIn_227_0[stackIn_227_1] = new lf(stackIn_204_4, stackIn_204_5, stackIn_204_6, stackIn_204_7, stackIn_204_8, stackIn_205_9);
                     var8Lifetime1++;
@@ -772,7 +772,7 @@ final class sk implements pa {
                     if (!this.field_d) {
                       stackIn_215_2 = null;
                       stackIn_215_3 = null;
-                      stackIn_215_9 = 1300 + ns.a(false, 700, vv.field_b);
+                      stackIn_215_9 = 1300 + AttackEvent.a(false, 700, vv.field_b);
                     } else {
                       stackIn_215_2 = null;
                       stackIn_215_3 = null;
@@ -855,13 +855,13 @@ final class sk implements pa {
                 boolean decompiledSharedTail0 = (this.field_d &&
                   this.field_L == 8);
                 if (!decompiledSharedTail0) {
-                  this.field_t = this.field_x.field_v * var3.field_G + var3.field_Q;
+                  this.field_t = this.field_x.mapWidth * var3.field_G + var3.field_Q;
                   decompiledSharedTail0 = (var10 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  this.field_t = var3.field_F + var3.field_Q + this.field_x.field_v * (var3.field_B + var3.field_G);
+                  this.field_t = var3.field_F + var3.field_Q + this.field_x.mapWidth * (var3.field_B + var3.field_G);
                 }
-                u.field_p.b(var3.field_G * this.field_x.field_v + var3.field_Q, param1 ^ 65);
+                u.field_p.b(var3.field_G * this.field_x.mapWidth + var3.field_Q, param1 ^ 65);
                 decompiledFrameRemainder3 = false;
               }
               else {
@@ -882,7 +882,7 @@ final class sk implements pa {
             }
           }
           if (param1 != 57) {
-            this.a((oj) null, (byte) -19);
+            this.a((GameEvent) null, (byte) -19);
           }
           this.b(param0, (byte) 32);
           return true;
@@ -919,7 +919,7 @@ final class sk implements pa {
         }
     }
 
-    public final void b(oj param0, byte param1) {
+    public final void b(GameEvent param0, byte param1) {
         RuntimeException stackIn_56_0 = null;
         StringBuilder stackIn_56_1 = null;
         String stackIn_57_2 = null;
@@ -927,7 +927,7 @@ final class sk implements pa {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.e(2);
           if (u.field_p != null) {
@@ -1002,7 +1002,7 @@ final class sk implements pa {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 1) {
             this.b(-67);
@@ -1013,9 +1013,9 @@ final class sk implements pa {
               return;
             }
             if (var2_int < this.field_O) {
-              this.field_D[var2_int] = new km(this.field_i[this.field_b[var2_int]].field_a, 600 - pk.field_T[this.field_a][0], this.field_i[this.field_b[var2_int]].field_s, 200 + ns.a(false, 600, vv.field_b), this.field_z);
+              this.field_D[var2_int] = new km(this.field_i[this.field_b[var2_int]].field_a, 600 - pk.field_T[this.field_a][0], this.field_i[this.field_b[var2_int]].field_s, 200 + AttackEvent.a(false, 600, vv.field_b), this.field_z);
             } else {
-              this.field_D[var2_int] = new km(100 + ns.a(false, 600, vv.field_b), 600, ns.a(false, 850, vv.field_b) + 900, ns.a(false, 600, vv.field_b) + 200, this.field_z);
+              this.field_D[var2_int] = new km(100 + AttackEvent.a(false, 600, vv.field_b), 600, AttackEvent.a(false, 850, vv.field_b) + 900, AttackEvent.a(false, 600, vv.field_b) + 200, this.field_z);
             }
             var2_int++;
           }
@@ -1030,7 +1030,7 @@ final class sk implements pa {
     public final void a(byte param0) {
         try {
           if (param0 != -52) {
-            this.a(61, (jd) null, 33, true, (jd) null);
+            this.a(61, (Unit) null, 33, true, (Unit) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "sk.O(" + param0 + ')');
@@ -1072,12 +1072,12 @@ final class sk implements pa {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.b(true);
           var2_int = 1;
           var3 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var3 < this.field_s.length) {
               stackIn_80_0 = this.field_s[var3];
@@ -1140,16 +1140,16 @@ final class sk implements pa {
                 this.m(-13146);
                 this.e((byte) 105);
                 if (0 != this.field_v) {
-                  break L1;
+                  break scanLoop1;
                 }
                 if (this.field_O <= 0) {
-                  break L1;
+                  break scanLoop1;
                 }
                 if (var2_int == 0) {
-                  break L1;
+                  break scanLoop1;
                 }
                 if (this.field_F <= 400) {
-                  break L1;
+                  break scanLoop1;
                 }
                 this.field_O = this.field_O - 1;
                 this.field_i[0].field_d = true;
@@ -1159,7 +1159,7 @@ final class sk implements pa {
             if (decompiledFrameRemainder0) {
               ((lf) (Object) stackIn_80_0).a(2, (byte) -101);
               if (var4 == 0) {
-                break L1;
+                break scanLoop1;
               }
             }
             if (this.field_F % 50 == 0) {
@@ -1169,7 +1169,7 @@ final class sk implements pa {
             break;
           }
           if (param0 != -9) {
-            this.a((oj) null, (byte) 69);
+            this.a((GameEvent) null, (byte) 69);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1187,7 +1187,7 @@ final class sk implements pa {
         int var5 = 0;
         lf stackIn_25_0 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_p == 0) {
             return;
@@ -1217,7 +1217,7 @@ final class sk implements pa {
               return;
             }
             this.field_p = this.field_p - 1;
-            var4 = var3[ns.a(false, var2_int, vv.field_b)];
+            var4 = var3[AttackEvent.a(false, var2_int, vv.field_b)];
             stackIn_25_0 = this.field_s[var4];
           }
           ((lf) (Object) stackIn_25_0).c((byte) 102);
@@ -1271,14 +1271,14 @@ final class sk implements pa {
         int var6Lifetime1;
         int var6Lifetime2;
         int var6Lifetime3;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2 = new int[this.field_s.length];
           var3 = new int[this.field_i.length];
           var4 = 0;
           var5 = 0;
-          L3: while (true) {
-            L4: {
+          scanLoop1: while (true) {
+            regionExit2: {
               boolean decompiledFrameCompleted0 = true;
               if (this.field_s.length > var5) {
                 stackIn_124_0 = null;
@@ -1307,7 +1307,7 @@ final class sk implements pa {
                 this.field_y = var4;
                 var4 = 0;
                 var5 = 0;
-                L10: while (true) {
+                scanLoop3: while (true) {
                   if (this.field_i.length > var5) {
                     stackIn_171_0 = this.field_i[var5];
                     if (var7 == 0) {
@@ -1320,12 +1320,12 @@ final class sk implements pa {
                   } else {
                     this.field_w = var4;
                     var5 = 0;
-                    L13: while (true) {
+                    scanLoop4: while (true) {
                       if (this.field_y > var5) {
                         var4 = var5;
                         stackIn_36_0 = 1 + var5;
                         if (var7 != 0) {
-                          break L13;
+                          break scanLoop4;
                         }
                         var6 = stackIn_36_0;
                         while (var6 < this.field_y) {
@@ -1344,7 +1344,7 @@ final class sk implements pa {
                           var2[var5] = var6;
                         }
                         var5++;
-                        continue L13;
+                        continue scanLoop4;
                       }
                       var5 = 0;
                       stackIn_36_0 = param0 ? 1 : 0;
@@ -1353,12 +1353,12 @@ final class sk implements pa {
                     if (stackIn_36_0 != 1) {
                       return;
                     }
-                    L21: while (true) {
+                    scanLoop5: while (true) {
                       if (this.field_w > var5) {
                         var4 = var5;
                         stackIn_55_0 = var5 + 1;
                         if (var7 != 0) {
-                          break L21;
+                          break scanLoop5;
                         }
                         var6Lifetime2 = stackIn_55_0;
                         while (this.field_w > var6Lifetime2) {
@@ -1377,7 +1377,7 @@ final class sk implements pa {
                           var3[var5] = var6Lifetime2;
                         }
                         var5++;
-                        continue L21;
+                        continue scanLoop5;
                       }
                       stackIn_55_0 = cu.field_a ? 1 : 0;
                       break;
@@ -1388,7 +1388,7 @@ final class sk implements pa {
                         if (!this.field_o) {
                           var5 = 0;
                           var6Lifetime3 = 0;
-                          L34: while (true) {
+                          scanLoop6: while (true) {
                             boolean decompiledFrameRemainder2 = true;
                             if (this.field_y <= var5) {
                               stackIn_70_0 = var6Lifetime3;
@@ -1396,7 +1396,7 @@ final class sk implements pa {
                               decompiledFrameRemainder2 = (var7 == 0);
                               if ((decompiledFrameRemainder2) &&
                                 (stackIn_70_0 >= stackIn_70_1)) {
-                                break L34;
+                                break scanLoop6;
                               }
                             }
                             if (decompiledFrameRemainder2) {
@@ -1450,7 +1450,7 @@ final class sk implements pa {
                           while (this.field_y > var5) {
                             stackIn_171_0 = this.field_s[var2[var5]];
                             if (var7 != 0) {
-                              break L10;
+                              break scanLoop3;
                             }
                             if (stackIn_171_0 != null) {
                               this.field_s[var2[var5]].a(this.field_C, -86, true);
@@ -1465,7 +1465,7 @@ final class sk implements pa {
                         while (var5 < this.field_w) {
                           stackIn_171_0 = this.field_i[var3[var5]];
                           if (var7 != 0) {
-                            break L10;
+                            break scanLoop3;
                           }
                           if (stackIn_171_0 != null) {
                             this.field_i[var3[var5]].a(this.field_C, -46, true);
@@ -1476,7 +1476,7 @@ final class sk implements pa {
                       this.a((byte) 114, 0, 0, 128);
                     }
                     if (!this.field_f) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var5 = 0;
                     while (this.field_w > var5) {
@@ -1490,7 +1490,7 @@ final class sk implements pa {
                       }
                       var5++;
                     }
-                    break L4;
+                    break regionExit2;
                   }
                   break;
                 }
@@ -1517,7 +1517,7 @@ final class sk implements pa {
           if (!this.field_o) {
             var5Lifetime1 = 0;
             var6Lifetime1 = 0;
-            L53: while (true) {
+            scanLoop7: while (true) {
               boolean decompiledFrameRemainder1 = true;
               if (var5Lifetime1 >= this.field_y) {
                 stackIn_140_0 = var6Lifetime1;
@@ -1525,7 +1525,7 @@ final class sk implements pa {
                 decompiledFrameRemainder1 = (var7 == 0);
                 if ((decompiledFrameRemainder1) &&
                   (stackIn_140_0 >= stackIn_140_1)) {
-                  break L53;
+                  break scanLoop7;
                 }
               }
               if (decompiledFrameRemainder1) {
@@ -1602,7 +1602,7 @@ final class sk implements pa {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = param0 ? 1 : 0;
           var3 = 0;
@@ -1713,7 +1713,7 @@ final class sk implements pa {
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_D != null &&
             0 != this.field_D.length) {
@@ -1722,7 +1722,7 @@ final class sk implements pa {
             var4 = new int[this.field_D.length];
             var5 = 0;
             var6 = 0;
-            L2: while (true) {
+            scanLoop1: while (true) {
               boolean decompiledFrameCompleted1 = true;
               boolean decompiledFrameCompleted0 = true;
               boolean decompiledFrameRemainder3 = true;
@@ -1792,7 +1792,7 @@ final class sk implements pa {
                 var6 = 0;
                 while (var6 < this.field_D.length) {
                   if (var12 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   stackIn_35_0 = null;
                   if (stackIn_35_0 != this.field_D[var6]) {
@@ -1806,12 +1806,12 @@ final class sk implements pa {
               var6 = 0;
               break;
             }
-            L16: while (true) {
+            scanLoop2: while (true) {
               if (this.field_y > var6) {
                 var5Lifetime1 = var6;
                 stackIn_55_0 = 1 + var6;
                 if (var12 != 0) {
-                  break L16;
+                  break scanLoop2;
                 }
                 var7 = stackIn_55_0;
                 while (var7 < this.field_y) {
@@ -1830,18 +1830,18 @@ final class sk implements pa {
                   var2[var6] = var7;
                 }
                 var6++;
-                continue L16;
+                continue scanLoop2;
               }
               stackIn_55_0 = 0;
               break;
             }
             var6 = stackIn_55_0;
-            L24: while (true) {
+            scanLoop3: while (true) {
               if (this.field_w > var6) {
                 var5Lifetime2 = var6;
                 stackIn_72_0 = 1 + var6;
                 if (var12 != 0) {
-                  break L24;
+                  break scanLoop3;
                 }
                 var7 = stackIn_72_0;
                 while (var7 < this.field_w) {
@@ -1860,18 +1860,18 @@ final class sk implements pa {
                   var3[var6] = var7;
                 }
                 var6++;
-                continue L24;
+                continue scanLoop3;
               }
               stackIn_72_0 = 0;
               break;
             }
             var6 = stackIn_72_0;
-            L32: while (true) {
+            scanLoop4: while (true) {
               if (this.field_p > var6) {
                 var5Lifetime3 = var6;
                 stackIn_89_0 = 1 + var6;
                 if (var12 != 0) {
-                  break L32;
+                  break scanLoop4;
                 }
                 var7 = stackIn_89_0;
                 while (var7 < this.field_p) {
@@ -1890,7 +1890,7 @@ final class sk implements pa {
                   var4[var6] = var7;
                 }
                 var6++;
-                continue L32;
+                continue scanLoop4;
               }
               var6 = 0;
               stackIn_89_0 = 0;
@@ -1905,7 +1905,7 @@ final class sk implements pa {
               if (this.field_f) {
                 var6 = this.field_y;
               }
-              L44: while (true) {
+              scanLoop5: while (true) {
                 boolean decompiledFrameRemainder1 = true;
                 if (this.field_y <= var6) {
                   stackIn_110_0 = ~this.field_w;
@@ -1913,7 +1913,7 @@ final class sk implements pa {
                   decompiledFrameRemainder1 = (var12 == 0);
                   if ((decompiledFrameRemainder1) && (stackIn_110_0 >= stackIn_110_1 &&
                     var8 >= this.field_p)) {
-                    break L44;
+                    break scanLoop5;
                   }
                 }
                 if (decompiledFrameRemainder1) {
@@ -2103,7 +2103,7 @@ final class sk implements pa {
         lf stackIn_139_0Lifetime1;
         lf stackIn_139_0Lifetime1Lifetime1;
         int var2_intLifetime1;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 13047) {
             this.a((byte) 42, -38, -15, 53);
@@ -2118,7 +2118,7 @@ final class sk implements pa {
                 null != this.field_i[var2_int] &&
                 this.field_s[var2_int].b((byte) -74) &&
                 this.field_i[var2_int].b((byte) -110)) {
-                if (ns.a(false, 1000, vv.field_b) >= 500) {
+                if (AttackEvent.a(false, 1000, vv.field_b) >= 500) {
                   this.field_s[var2_int].a(2, (byte) -113);
                   this.field_s[var2_int].field_m = je.field_K[this.field_a][0];
                   this.field_i[var2_int].a(1, (byte) -119);
@@ -2138,15 +2138,15 @@ final class sk implements pa {
             this.field_u == 2) {
             var2_intLifetime1 = 1;
             var3 = 0;
-            L10: while (true) {
+            scanLoop1: while (true) {
               if ((-this.field_J + 3) > var3) {
                 stackIn_139_0 = this.field_s[var3];
                 if (var4 != 0) {
                   while (true) {
-                    stackIn_139_0.field_m = ns.a(false, 5, vv.field_b);
+                    stackIn_139_0.field_m = AttackEvent.a(false, 5, vv.field_b);
                     while (true) {
                       var3++;
-                      break L10;
+                      break scanLoop1;
                     }
                   }
                 }
@@ -2177,9 +2177,9 @@ final class sk implements pa {
                   if (var2_intLifetime1 == 0) {
                     break;
                   }
-                  if (ns.a(false, 1000, vv.field_b) < 500) {
+                  if (AttackEvent.a(false, 1000, vv.field_b) < 500) {
                     boolean decompiledFrameRemainder5 = true;
-                    L21: {
+                    regionExit2: {
                       boolean decompiledSharedTail2 = (this.field_J == 2);
                       if (!decompiledSharedTail2) {
                         var3 = 0;
@@ -2190,17 +2190,17 @@ final class sk implements pa {
                             while (true) {
                               if (stackIn_91_0 != stackIn_91_1) {
                                 this.field_i[var3].field_f = 2;
-                                this.field_i[var3].field_m = je.field_K[this.field_c][0] - ns.a(false, 5, vv.field_b);
+                                this.field_i[var3].field_m = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                               }
                               var3++;
-                              break L21;
+                              break regionExit2;
                             }
                           }
                           if (stackIn_91_0 != stackIn_91_1) {
                             this.field_s[var3].field_f = 1;
                           }
                           if (null != this.field_s[var3]) {
-                            this.field_s[var3].field_m = ns.a(false, 5, vv.field_b);
+                            this.field_s[var3].field_m = AttackEvent.a(false, 5, vv.field_b);
                           }
                           var3++;
                           if (var4 == 0) {
@@ -2219,13 +2219,13 @@ final class sk implements pa {
                         var3 = 0;
                         while (3 - this.field_u > var3) {
                           if (var4 != 0) {
-                            break L10;
+                            break scanLoop1;
                           }
                           stackIn_91_0Lifetime1 = null;
                           stackIn_91_1Lifetime1 = this.field_i[var3];
                           if (stackIn_91_0Lifetime1 != stackIn_91_1Lifetime1) {
                             this.field_i[var3].field_f = 2;
-                            this.field_i[var3].field_m = je.field_K[this.field_c][0] - ns.a(false, 5, vv.field_b);
+                            this.field_i[var3].field_m = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                           }
                           var3++;
                         }
@@ -2264,7 +2264,7 @@ final class sk implements pa {
                         this.field_s[var3].field_f = 2;
                       }
                       if (this.field_s[var3] != null) {
-                        this.field_s[var3].field_m = je.field_K[this.field_a][0] - ns.a(false, 5, vv.field_b);
+                        this.field_s[var3].field_m = je.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
                       }
                       var3++;
                     }
@@ -2289,25 +2289,25 @@ final class sk implements pa {
                       if (stackIn_136_0 != stackIn_136_1) {
                         this.field_i[var3].field_f = 1;
                         stackIn_139_0Lifetime1 = this.field_i[var3];
-                        stackIn_139_0Lifetime1.field_m = ns.a(false, 5, vv.field_b);
+                        stackIn_139_0Lifetime1.field_m = AttackEvent.a(false, 5, vv.field_b);
                       }
                       var3++;
                     }
-                    break L10;
+                    break scanLoop1;
                   }
                 }
                 while (true) {
                   if (stackIn_136_0 != stackIn_136_1) {
                     this.field_i[var3].field_f = 1;
                     stackIn_139_0Lifetime1Lifetime1 = this.field_i[var3];
-                    stackIn_139_0Lifetime1Lifetime1.field_m = ns.a(false, 5, vv.field_b);
+                    stackIn_139_0Lifetime1Lifetime1.field_m = AttackEvent.a(false, 5, vv.field_b);
                   }
                   var3++;
                   if (var4 != 0) {
-                    break L10;
+                    break scanLoop1;
                   }
                   if (var3 >= (3 - this.field_u)) {
-                    break L10;
+                    break scanLoop1;
                   }
                   stackIn_136_0 = null;
                   stackIn_136_1 = this.field_i[var3];
@@ -2330,41 +2330,41 @@ final class sk implements pa {
                 decompiledFrameRemainder3 = !(!this.field_i[1].b((byte) 33));
               }
               if (decompiledFrameRemainder3) {
-                if (500 > ns.a(false, 1000, vv.field_b)) {
+                if (500 > AttackEvent.a(false, 1000, vv.field_b)) {
                   if (null != this.field_s[0]) {
-                    this.field_s[0].field_m = je.field_K[this.field_a][0] - ns.a(false, 5, vv.field_b);
+                    this.field_s[0].field_m = je.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
                     this.field_s[0].field_f = 2;
                   }
                   if (this.field_i[1] != null &&
                     this.field_i[1].b((byte) -80)) {
-                    this.field_i[1].field_m = je.field_K[this.field_c][0] - ns.a(false, 5, vv.field_b);
+                    this.field_i[1].field_m = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                     this.field_i[1].field_f = 1;
                     decompiledFrameRemainder3 = (var4 != 0);
                   }
                   if ((decompiledFrameRemainder3) &&
                     (decompiledFrameRemainder3 = (this.field_i[0] != null))) {
-                    this.field_i[0].field_m = je.field_K[this.field_c][0] - ns.a(false, 5, vv.field_b);
+                    this.field_i[0].field_m = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                     this.field_i[0].field_f = 1;
                     decompiledFrameRemainder3 = (var4 != 0);
                   }
                 }
                 if (decompiledFrameRemainder3) {
                   if (this.field_s[0] != null) {
-                    this.field_s[0].field_m = ns.a(false, 5, vv.field_b);
+                    this.field_s[0].field_m = AttackEvent.a(false, 5, vv.field_b);
                     this.field_s[0].field_f = 1;
                   }
                   if (this.field_i[1] == null ||
                     !this.field_i[1].b((byte) -56)) {
                     if (null != this.field_i[0]) {
-                      this.field_i[0].field_m = je.field_K[this.field_c][0] - ns.a(false, 5, vv.field_b);
+                      this.field_i[0].field_m = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                       this.field_i[0].field_f = 2;
                       if (var4 != 0) {
-                        this.field_i[1].field_m = je.field_K[this.field_c][0] - ns.a(false, 5, vv.field_b);
+                        this.field_i[1].field_m = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                         this.field_i[1].field_f = 2;
                       }
                     }
                   } else {
-                    this.field_i[1].field_m = je.field_K[this.field_c][0] - ns.a(false, 5, vv.field_b);
+                    this.field_i[1].field_m = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                     this.field_i[1].field_f = 2;
                   }
                 }
@@ -2380,39 +2380,39 @@ final class sk implements pa {
                 decompiledFrameRemainder2 = !(!this.field_i[2].b((byte) 29));
               }
               if (decompiledFrameRemainder2) {
-                if (ns.a(false, 1000, vv.field_b) >= 500) {
+                if (AttackEvent.a(false, 1000, vv.field_b) >= 500) {
                   if (this.field_s[1] != null) {
-                    this.field_s[1].field_m = ns.a(false, 5, vv.field_b);
+                    this.field_s[1].field_m = AttackEvent.a(false, 5, vv.field_b);
                     this.field_s[1].field_f = 1;
                   }
                   if ((this.field_i[2] == null ||
                     !this.field_i[2].b((byte) -114)) &&
                     (decompiledFrameRemainder2 = (null != this.field_i[0]))) {
-                    this.field_i[0].field_m = je.field_K[this.field_c][0] - ns.a(false, 30, vv.field_b);
+                    this.field_i[0].field_m = je.field_K[this.field_c][0] - AttackEvent.a(false, 30, vv.field_b);
                     this.field_i[0].field_f = 2;
                     decompiledFrameRemainder2 = (var4 != 0);
                   }
                   if (decompiledFrameRemainder2) {
-                    this.field_i[2].field_m = je.field_K[this.field_c][0] - ns.a(false, 5, vv.field_b);
+                    this.field_i[2].field_m = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                     this.field_i[2].field_f = 2;
                     decompiledFrameRemainder2 = (var4 != 0);
                   }
                 }
                 if (decompiledFrameRemainder2) {
                   if (null != this.field_s[1]) {
-                    this.field_s[1].field_m = je.field_K[this.field_a][0] - ns.a(false, 5, vv.field_b);
+                    this.field_s[1].field_m = je.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
                     this.field_s[1].field_f = 2;
                   }
                   boolean decompiledSharedTail1 = (null == this.field_i[2] ||
                     !(this.field_i[2].b((byte) -112)));
                   if (!decompiledSharedTail1) {
-                    this.field_i[2].field_m = ns.a(false, 5, vv.field_b);
+                    this.field_i[2].field_m = AttackEvent.a(false, 5, vv.field_b);
                     this.field_i[2].field_f = 1;
                     decompiledSharedTail1 = (var4 != 0);
                   }
                   if ((decompiledSharedTail1) &&
                     (this.field_i[0] != null)) {
-                    this.field_i[0].field_m = ns.a(false, 5, vv.field_b);
+                    this.field_i[0].field_m = AttackEvent.a(false, 5, vv.field_b);
                     this.field_i[0].field_f = 1;
                   }
                 }
@@ -2439,7 +2439,7 @@ final class sk implements pa {
                 if (null == this.field_i[0]) {
                   return;
                 }
-                this.field_i[0].field_m = this.field_i[2].field_m + ns.a(false, 5, vv.field_b);
+                this.field_i[0].field_m = this.field_i[2].field_m + AttackEvent.a(false, 5, vv.field_b);
                 this.field_i[0].field_f = this.field_i[2].field_f;
                 if (var4 == 0) {
                   return;
@@ -2448,17 +2448,17 @@ final class sk implements pa {
               if (null == this.field_i[0]) {
                 return;
               }
-              this.field_i[0].field_m = this.field_i[1].field_m + ns.a(false, 5, vv.field_b);
+              this.field_i[0].field_m = this.field_i[1].field_m + AttackEvent.a(false, 5, vv.field_b);
               this.field_i[0].field_f = this.field_i[1].field_f;
               if (var4 == 0) {
                 return;
               }
             }
-            if (ns.a(false, 1000, vv.field_b) >= 500) {
+            if (AttackEvent.a(false, 1000, vv.field_b) >= 500) {
               if (this.field_i[0] == null) {
                 return;
               }
-              this.field_i[0].field_m = this.field_i[1].field_m + ns.a(false, 5, vv.field_b);
+              this.field_i[0].field_m = this.field_i[1].field_m + AttackEvent.a(false, 5, vv.field_b);
               this.field_i[0].field_f = this.field_i[1].field_f;
               if (var4 == 0) {
                 return;
@@ -2467,7 +2467,7 @@ final class sk implements pa {
             if (null == this.field_i[0]) {
               return;
             }
-            this.field_i[0].field_m = this.field_i[2].field_m + ns.a(false, 5, vv.field_b);
+            this.field_i[0].field_m = this.field_i[2].field_m + AttackEvent.a(false, 5, vv.field_b);
             this.field_i[0].field_f = this.field_i[2].field_f;
             if (var4 == 0) {
               return;
@@ -2483,39 +2483,39 @@ final class sk implements pa {
               decompiledFrameRemainder1 = !(!this.field_s[1].b((byte) 117));
             }
             if (decompiledFrameRemainder1) {
-              if (ns.a(false, 1000, vv.field_b) >= 500) {
+              if (AttackEvent.a(false, 1000, vv.field_b) >= 500) {
                 if (this.field_i[0] != null) {
-                  this.field_i[0].field_m = ns.a(false, 5, vv.field_b);
+                  this.field_i[0].field_m = AttackEvent.a(false, 5, vv.field_b);
                   this.field_i[0].field_f = 1;
                 }
                 if ((null == this.field_s[1] ||
                   !this.field_s[1].b((byte) 126)) &&
                   (decompiledFrameRemainder1 = (null != this.field_s[0]))) {
-                  this.field_s[0].field_m = je.field_K[this.field_a][0] - ns.a(false, 5, vv.field_b);
+                  this.field_s[0].field_m = je.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
                   this.field_s[0].field_f = 2;
                   decompiledFrameRemainder1 = (var4 != 0);
                 }
                 if (decompiledFrameRemainder1) {
-                  this.field_s[1].field_m = je.field_K[this.field_a][0] - ns.a(false, 5, vv.field_b);
+                  this.field_s[1].field_m = je.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
                   this.field_s[1].field_f = 2;
                   decompiledFrameRemainder1 = (var4 != 0);
                 }
               }
               if (decompiledFrameRemainder1) {
-                this.field_i[0].field_m = je.field_K[this.field_c][0] - ns.a(false, 5, vv.field_b);
+                this.field_i[0].field_m = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                 this.field_i[0].field_f = 2;
                 if (null == this.field_s[1] ||
                   !this.field_s[1].b((byte) 112)) {
                   if (this.field_s[0] != null) {
-                    this.field_s[0].field_m = ns.a(false, 5, vv.field_b);
+                    this.field_s[0].field_m = AttackEvent.a(false, 5, vv.field_b);
                     this.field_s[0].field_f = 1;
                     if (var4 != 0) {
-                      this.field_s[1].field_m = ns.a(false, 5, vv.field_b);
+                      this.field_s[1].field_m = AttackEvent.a(false, 5, vv.field_b);
                       this.field_s[1].field_f = 1;
                     }
                   }
                 } else {
-                  this.field_s[1].field_m = ns.a(false, 5, vv.field_b);
+                  this.field_s[1].field_m = AttackEvent.a(false, 5, vv.field_b);
                   this.field_s[1].field_f = 1;
                 }
               }
@@ -2531,39 +2531,39 @@ final class sk implements pa {
               decompiledFrameRemainder0 = !(!this.field_s[2].b((byte) 99));
             }
             if (decompiledFrameRemainder0) {
-              if (ns.a(false, 1000, vv.field_b) < 500) {
+              if (AttackEvent.a(false, 1000, vv.field_b) < 500) {
                 if (null != this.field_i[1]) {
-                  this.field_i[1].field_m = je.field_K[this.field_c][0] - ns.a(false, 5, vv.field_b);
+                  this.field_i[1].field_m = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                   this.field_i[1].field_f = 2;
                 }
                 if (null != this.field_s[2] &&
                   this.field_s[2].b((byte) -50)) {
-                  this.field_s[2].field_m = ns.a(false, 5, vv.field_b);
+                  this.field_s[2].field_m = AttackEvent.a(false, 5, vv.field_b);
                   this.field_s[2].field_f = 1;
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = (this.field_s[0] != null))) {
-                  this.field_s[0].field_m = ns.a(false, 5, vv.field_b);
+                  this.field_s[0].field_m = AttackEvent.a(false, 5, vv.field_b);
                   this.field_s[0].field_f = 1;
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
               }
               if (decompiledFrameRemainder0) {
                 if (null != this.field_i[1]) {
-                  this.field_i[1].field_m = ns.a(false, 5, vv.field_b);
+                  this.field_i[1].field_m = AttackEvent.a(false, 5, vv.field_b);
                   this.field_i[1].field_f = 1;
                 }
                 boolean decompiledSharedTail0 = (this.field_s[2] == null ||
                   !(this.field_s[2].b((byte) -122)));
                 if (!decompiledSharedTail0) {
-                  this.field_s[2].field_m = je.field_K[this.field_a][0] - ns.a(false, 5, vv.field_b);
+                  this.field_s[2].field_m = je.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
                   this.field_s[2].field_f = 2;
                   decompiledSharedTail0 = (var4 != 0);
                 }
                 if ((decompiledSharedTail0) &&
                   (null != this.field_s[0])) {
-                  this.field_s[0].field_m = je.field_K[this.field_a][0] - ns.a(false, 5, vv.field_b);
+                  this.field_s[0].field_m = je.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
                   this.field_s[0].field_f = 2;
                 }
               }
@@ -2586,7 +2586,7 @@ final class sk implements pa {
                 if (null == this.field_s[0]) {
                   return;
                 }
-                this.field_s[0].field_m = this.field_s[2].field_m + ns.a(false, 5, vv.field_b);
+                this.field_s[0].field_m = this.field_s[2].field_m + AttackEvent.a(false, 5, vv.field_b);
                 this.field_s[0].field_f = this.field_s[2].field_f;
                 if (var4 == 0) {
                   return;
@@ -2595,24 +2595,24 @@ final class sk implements pa {
               if (null == this.field_s[0]) {
                 return;
               }
-              this.field_s[0].field_m = this.field_s[1].field_m + ns.a(false, 5, vv.field_b);
+              this.field_s[0].field_m = this.field_s[1].field_m + AttackEvent.a(false, 5, vv.field_b);
               this.field_s[0].field_f = this.field_s[1].field_f;
               if (var4 == 0) {
                 return;
               }
             }
-            if (ns.a(false, 1000, vv.field_b) >= 500) {
+            if (AttackEvent.a(false, 1000, vv.field_b) >= 500) {
               if (null == this.field_s[0]) {
                 return;
               }
-              this.field_s[0].field_m = this.field_s[1].field_m + ns.a(false, 5, vv.field_b);
+              this.field_s[0].field_m = this.field_s[1].field_m + AttackEvent.a(false, 5, vv.field_b);
               this.field_s[0].field_f = this.field_s[1].field_f;
               if (var4 == 0) {
                 return;
               }
             }
             if (this.field_s[0] != null) {
-              this.field_s[0].field_m = this.field_s[1].field_m + ns.a(false, 5, vv.field_b);
+              this.field_s[0].field_m = this.field_s[1].field_m + AttackEvent.a(false, 5, vv.field_b);
               this.field_s[0].field_f = this.field_s[2].field_f;
             }
           }
@@ -2719,7 +2719,7 @@ final class sk implements pa {
         int var6Lifetime1;
         int var7Lifetime1;
         int var6Lifetime1Lifetime1;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
           this.field_H.b();
@@ -2752,14 +2752,14 @@ final class sk implements pa {
           if (decompiledFrameRemainder0) {
             this.f((byte) -15);
             if (this.field_o) {
-              qn.f(320, 0, 640, 480, 0);
+              SoftwareRaster.f(320, 0, 640, 480, 0);
               if ((var9 != 0) &&
                 (this.field_f)) {
-                qn.f(0, 0, 320, 480, 0);
+                SoftwareRaster.f(0, 0, 320, 480, 0);
               }
             } else {
               if (this.field_f) {
-                qn.f(0, 0, 320, 480, 0);
+                SoftwareRaster.f(0, 0, 320, 480, 0);
               }
             }
           }
@@ -2771,7 +2771,7 @@ final class sk implements pa {
           var7 = var3 + 0;
           if (iu.field_n &&
             this.b((byte) -96)) {
-            stackIn_50_0 = ci.field_e;
+            stackIn_50_0 = TutorialController.field_e;
           } else {
             stackIn_50_0 = nd.field_b;
           }
@@ -2800,13 +2800,13 @@ final class sk implements pa {
             var4Lifetime1 = stackIn_67_0;
             var2_intLifetime2 = 17;
             var6Lifetime1 = 0 + var2_intLifetime2;
-            var7Lifetime1 = -var5Lifetime1 + (ag.field_I.field_D - var3Lifetime2);
+            var7Lifetime1 = -var5Lifetime1 + (CombatEvent.field_I.field_D - var3Lifetime2);
             if (this.field_e > -1) {
-              this.field_x.field_T[this.field_e].a(var6Lifetime1, this.field_x.field_lb[this.field_e], false, false, var7Lifetime1, false, false, 122);
+              this.field_x.field_T[this.field_e].a(var6Lifetime1, this.field_x.playerNames[this.field_e], false, false, var7Lifetime1, false, false, 122);
             }
             var6Lifetime1Lifetime1 = -var2_intLifetime2 + (so.field_b.field_a - var4Lifetime1);
             if (this.field_g > -1) {
-              this.field_x.field_T[this.field_g].a(var6Lifetime1Lifetime1, this.field_x.field_lb[this.field_g], false, false, var7Lifetime1, false, false, 28);
+              this.field_x.field_T[this.field_g].a(var6Lifetime1Lifetime1, this.field_x.playerNames[this.field_g], false, false, var7Lifetime1, false, false, 28);
             }
           }
           fe.b(0, 0, rs.field_k, se.field_a, dq.field_i, nd.field_b, 0, 0);
@@ -2839,7 +2839,7 @@ final class sk implements pa {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var6 = new int[3 - param2];
           var7 = param1;
@@ -2914,7 +2914,7 @@ final class sk implements pa {
             }
             boolean decompiledFrameRemainder0 = true;
             var8 = -1;
-            var9 = var6[ns.a(false, var7, vv.field_b)];
+            var9 = var6[AttackEvent.a(false, var7, vv.field_b)];
             if (1 == param2 &&
               param4[2] != null) {
               var8 = 2;
@@ -3005,19 +3005,19 @@ final class sk implements pa {
         RuntimeException var2 = null;
         int var3 = 0;
         Object stackIn_19_0Lifetime1;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var2_int < this.field_s.length) {
               stackIn_19_0 = null;
               if (var3 != 0) {
                 if (stackIn_19_0 != this.field_D[var2_int]) {
                   this.field_D[var2_int].d(59);
                   var2_int++;
-                  break L1;
+                  break scanLoop1;
                 }
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_19_0 != this.field_s[var2_int]) {
                 this.field_s[var2_int].d((byte) 113);
@@ -3070,14 +3070,14 @@ final class sk implements pa {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 < 86) {
             field_j = (int[][]) null;
           }
           if (jv.field_a ||
             null == this.field_A) {
-            qn.b();
+            SoftwareRaster.b();
             if (var6 == 0) {
               return;
             }
@@ -3112,7 +3112,7 @@ final class sk implements pa {
         int var8 = 0;
         int var9 = 0;
         int var8Lifetime1;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 > -126) {
             stackIn_3_0 = (int[]) null;
@@ -3127,7 +3127,7 @@ final class sk implements pa {
               break;
             }
             var3[var5] = var5;
-            var4[var5] = ns.a(false, 2147483647, vv.field_b);
+            var4[var5] = AttackEvent.a(false, 2147483647, vv.field_b);
             var5++;
           } while (var9 == 0);
           while (true) {
@@ -3176,7 +3176,7 @@ final class sk implements pa {
         int var3 = 0;
         int var4 = 0;
         int var3Lifetime1;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_v == 0) {
             return;
@@ -3208,7 +3208,7 @@ final class sk implements pa {
               if (var2_int == 0) {
                 return;
               }
-              var2_int = ns.a(false, var2_int, vv.field_b) + 1;
+              var2_int = AttackEvent.a(false, var2_int, vv.field_b) + 1;
               var3Lifetime1 = 0;
               var3Lifetime1 = 0;
               while (var3Lifetime1 < this.field_s.length) {
@@ -3234,7 +3234,7 @@ final class sk implements pa {
           }
           ((lf) (Object) stackIn_43_0).a(0, 30, 1, 20, u.field_o[this.field_a][1], pk.field_T[this.field_a][1], (byte) 122);
           this.field_v = this.field_v - 1;
-          this.field_I = 20 + ns.a(false, 20, vv.field_b);
+          this.field_I = 20 + AttackEvent.a(false, 20, vv.field_b);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3330,7 +3330,7 @@ final class sk implements pa {
           }
           if ((decompiledFrameRemainder0) &&
             (param1 == 1 ||
-            ArmiesOfGielinor.field_M)) {
+            ArmiesOfGielinor.obfuscationControl)) {
             if (null != param4[0] &&
               !param4[0].field_d &&
               param4[0].b(2166) && (param2[0] != null &&
@@ -3364,7 +3364,7 @@ final class sk implements pa {
           if (var7 == 0) {
             return false;
           }
-          var8 = var6[ns.a(false, var7, vv.field_b)];
+          var8 = var6[AttackEvent.a(false, var7, vv.field_b)];
           if (param0 != -93) {
             return true;
           }
@@ -3428,7 +3428,7 @@ final class sk implements pa {
         int var11Lifetime1;
         int var11Lifetime2;
         int var11Lifetime1Lifetime1;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           param3 = 0;
           var6_int = 0;
@@ -3476,11 +3476,11 @@ final class sk implements pa {
             param3 = var6_int;
           }
           var9 = 0;
-          L12: while (true) {
+          scanLoop1: while (true) {
             if (param3 > var9) {
               var10 = var9;
               if (var12 != 0) {
-                break L12;
+                break scanLoop1;
               }
               stackIn_37_0 = null;
               stackIn_37_1 = param1[var7[var10]];
@@ -3503,18 +3503,18 @@ final class sk implements pa {
                   }
                 }
                 var9++;
-                continue L12;
+                continue scanLoop1;
               }
             }
             var9 = 0;
             break;
           }
-          L20: while (true) {
+          scanLoop2: while (true) {
             if (var8.length > var9) {
               var10Lifetime1 = var9;
               stackIn_67_0 = var9 + 1;
               if (var12 != 0) {
-                break L20;
+                break scanLoop2;
               }
               var11Lifetime1 = stackIn_67_0;
               while (var11Lifetime1 < var8.length) {
@@ -3533,7 +3533,7 @@ final class sk implements pa {
                 var8[var9] = var11Lifetime1Lifetime1;
               }
               var9++;
-              continue L20;
+              continue scanLoop2;
             }
             var9 = 0;
             stackIn_67_0 = param2;
@@ -3543,7 +3543,7 @@ final class sk implements pa {
             return;
           }
           if (cu.field_a) {
-            L30: while (true) {
+            scanLoop3: while (true) {
               boolean decompiledFrameRemainder1 = true;
               if (var8.length <= var6_int) {
                 stackIn_79_0 = var9;
@@ -3551,7 +3551,7 @@ final class sk implements pa {
                 decompiledFrameRemainder1 = (var12 == 0);
                 if ((decompiledFrameRemainder1) &&
                   (stackIn_79_0 >= stackIn_79_1)) {
-                  break L30;
+                  break scanLoop3;
                 }
               }
               if (decompiledFrameRemainder1) {
@@ -3745,7 +3745,7 @@ final class sk implements pa {
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4 = 34 / ((-38 - param0) / 44);
           var3_int = 0;
@@ -3778,7 +3778,7 @@ final class sk implements pa {
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = 0;
           while (param0.length > var3_int) {
@@ -3814,7 +3814,7 @@ final class sk implements pa {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 < 26) {
             this.field_w = -32;
@@ -3845,7 +3845,7 @@ final class sk implements pa {
           }
           if (var2_int > 0 &&
             0 < var3) {
-            if (ns.a(false, this.field_O + this.field_v, vv.field_b) <= this.field_v) {
+            if (AttackEvent.a(false, this.field_O + this.field_v, vv.field_b) <= this.field_v) {
               if (!this.a((byte) -93, this.field_J, this.field_i, this.field_u, this.field_s)) {
                 return;
               }
@@ -3924,7 +3924,7 @@ final class sk implements pa {
         }
     }
 
-    final void a(int param0, jd param1, int param2, boolean param3, jd param4) {
+    final void a(int param0, Unit param1, int param2, boolean param3, Unit param4) {
         int stackIn_11_0 = 0;
         int stackIn_17_0 = 0;
         boolean stackIn_21_1 = false;
@@ -3982,27 +3982,27 @@ final class sk implements pa {
         lf stackIn_220_3Lifetime1;
         lf[] stackIn_236_0Lifetime1;
         int stackIn_236_1Lifetime1;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null == this.field_x) {
             this.b((byte) 54, 0);
             if (var9 != 0) {
-              this.b((byte) 54, this.field_x.field_hb);
+              this.b((byte) 54, this.field_x.mapTheme);
             }
           } else {
-            this.b((byte) 54, this.field_x.field_hb);
+            this.b((byte) 54, this.field_x.mapTheme);
           }
-          stackIn_11_0 = (param1.field_Y > param0) ? 0 : 1;
+          stackIn_11_0 = (param1.strength > param0) ? 0 : 1;
           var6_int = stackIn_11_0;
           if (var6_int != 0) {
             param2 = 0;
           }
-          stackIn_17_0 = (param4.field_Y > param2) ? 0 : 1;
+          stackIn_17_0 = (param4.strength > param2) ? 0 : 1;
           var7 = stackIn_17_0;
-          stackIn_21_1 = !(1 >= bw.field_m[param4.field_N][7]);
+          stackIn_21_1 = !(1 >= bw.unitDefinitions[param4.unitType][7]);
           this.field_d = stackIn_21_1;
-          if (param4.field_N == 34 &&
-            param4.field_W) {
+          if (param4.unitType == 34 &&
+            param4.packedFlag8) {
             this.field_d = true;
           }
           if (!param3) {
@@ -4011,50 +4011,50 @@ final class sk implements pa {
           if (this.field_d) {
             param2 = 0;
           }
-          this.field_J = bw.field_m[param4.field_N][9];
-          if (vu.field_N[this.field_J] * param4.field_Y % param4.field_t <= 0) {
+          this.field_J = bw.unitDefinitions[param4.unitType][9];
+          if (vu.field_N[this.field_J] * param4.strength % param4.maximumStrength <= 0) {
             stackIn_38_1 = 0;
           } else {
             stackIn_38_1 = 1;
           }
-          this.field_y = stackIn_38_1 + param4.field_Y * vu.field_N[this.field_J] / param4.field_t;
-          stackIn_41_1 = -((-param2 + param4.field_Y) * vu.field_N[this.field_J] / param4.field_t);
-          if (vu.field_N[this.field_J] * (param4.field_Y - param2) % param4.field_t > 0) {
+          this.field_y = stackIn_38_1 + param4.strength * vu.field_N[this.field_J] / param4.maximumStrength;
+          stackIn_41_1 = -((-param2 + param4.strength) * vu.field_N[this.field_J] / param4.maximumStrength);
+          if (vu.field_N[this.field_J] * (param4.strength - param2) % param4.maximumStrength > 0) {
             stackIn_42_2 = 1;
           } else {
             stackIn_42_2 = 0;
           }
           this.field_v = stackIn_41_1 + (-stackIn_42_2 + this.field_y);
-          this.field_c = param4.field_N;
+          this.field_c = param4.unitType;
           if (this.field_v > this.field_y) {
             this.field_v = this.field_y;
           }
-          stackIn_52_1 = (3 == param4.g(0)) || (7 == param1.field_N);
+          stackIn_52_1 = (3 == param4.g(0)) || (7 == param1.unitType);
           this.field_E = stackIn_52_1;
-          if (param1.field_N == 34 &&
-            param1.field_W) {
+          if (param1.unitType == 34 &&
+            param1.packedFlag8) {
             this.field_q = true;
           }
-          this.field_u = bw.field_m[param1.field_N][9];
-          stackIn_62_1 = param1.field_Y * vu.field_N[this.field_u] / param1.field_t;
-          if (vu.field_N[this.field_u] * param1.field_Y % param1.field_t <= 0) {
+          this.field_u = bw.unitDefinitions[param1.unitType][9];
+          stackIn_62_1 = param1.strength * vu.field_N[this.field_u] / param1.maximumStrength;
+          if (vu.field_N[this.field_u] * param1.strength % param1.maximumStrength <= 0) {
             stackIn_63_2 = 0;
           } else {
             stackIn_63_2 = 1;
           }
           this.field_w = stackIn_62_1 + stackIn_63_2;
           stackIn_66_1 = this.field_w;
-          if ((-param0 + param1.field_Y) * vu.field_N[this.field_u] % param1.field_t <= 0) {
+          if ((-param0 + param1.strength) * vu.field_N[this.field_u] % param1.maximumStrength <= 0) {
             stackIn_67_2 = 0;
           } else {
             stackIn_67_2 = 1;
           }
-          this.field_O = stackIn_66_1 - stackIn_67_2 - vu.field_N[this.field_u] * (param1.field_Y - param0) / param1.field_t;
-          this.field_a = param1.field_N;
+          this.field_O = stackIn_66_1 - stackIn_67_2 - vu.field_N[this.field_u] * (param1.strength - param0) / param1.maximumStrength;
+          this.field_a = param1.unitType;
           if (this.field_w < this.field_O) {
             this.field_O = this.field_w;
           }
-          stackIn_77_1 = (param1.g(0) == 3) || (param1.field_N == 7);
+          stackIn_77_1 = (param1.g(0) == 3) || (param1.unitType == 7);
           boolean decompiledFrameRemainder4 = true;
           this.field_P = stackIn_77_1;
           if (!this.field_d) {
@@ -4082,7 +4082,7 @@ final class sk implements pa {
             }
             if (decompiledFrameRemainder3) {
               if (param4.g(0) == 3) {
-                this.field_z = bw.field_m[param4.field_N][1] + 8;
+                this.field_z = bw.unitDefinitions[param4.unitType][1] + 8;
                 decompiledFrameRemainder3 = (var9 != 0);
               }
               if (decompiledFrameRemainder3) {
@@ -4122,7 +4122,7 @@ final class sk implements pa {
                 }
               }
             }
-            this.field_p = this.field_O - (-ns.a(false, this.field_y, vv.field_b) - this.field_y);
+            this.field_p = this.field_O - (-AttackEvent.a(false, this.field_y, vv.field_b) - this.field_y);
             this.field_D = new km[this.field_p];
             this.field_b = this.a(this.field_w, (byte) -127);
             this.field_n = 5;
@@ -4138,12 +4138,12 @@ final class sk implements pa {
           boolean decompiledFrameCompleted7 = true;
           fn.a(this.field_d, this.field_c, -32596);
           fn.a(this.field_d, this.field_a, -32596);
-          if ((param4.field_N == 7 ||
-            param4.field_N == 34) && param4.field_W) {
+          if ((param4.unitType == 7 ||
+            param4.unitType == 34) && param4.packedFlag8) {
             this.field_s = new lf[6];
             var8 = 0;
             while (var8 < this.field_y) {
-              this.field_s[1 + var8] = new lf(this.field_c, true, id.field_d[var8], kr.field_F[var8], false, 0);
+              this.field_s[1 + var8] = new lf(this.field_c, true, id.field_d[var8], MoveEvent.field_F[var8], false, 0);
               var8++;
               if (var9 != 0) {
                 decompiledFrameCompleted7 = false;
@@ -4159,9 +4159,9 @@ final class sk implements pa {
           }
           boolean decompiledFrameCompleted6 = true;
           boolean decompiledFrameRemainder2 = true;
-          if (param1.field_N != 7 &&
-            param1.field_N != 34 ||
-            !param1.field_W) {
+          if (param1.unitType != 7 &&
+            param1.unitType != 34 ||
+            !param1.packedFlag8) {
             this.field_i = new lf[vu.field_N[this.field_u]];
             decompiledFrameRemainder2 = (var9 != 0);
           }
@@ -4169,7 +4169,7 @@ final class sk implements pa {
             this.field_i = new lf[6];
             var8 = 0;
             while (var8 < this.field_w) {
-              this.field_i[var8 + 1] = new lf(this.field_a, false, id.field_d[var8], kr.field_F[var8], false, 0);
+              this.field_i[var8 + 1] = new lf(this.field_a, false, id.field_d[var8], MoveEvent.field_F[var8], false, 0);
               var8++;
               if (var9 != 0) {
                 decompiledFrameCompleted6 = false;
@@ -4177,10 +4177,10 @@ final class sk implements pa {
               }
             }
           }
-          if ((decompiledFrameCompleted6) && (param1.field_N == 34 &&
-            param1.field_W)) {
+          if ((decompiledFrameCompleted6) && (param1.unitType == 34 &&
+            param1.packedFlag8)) {
             this.field_w = 1;
-            if ((param1.field_Y + param1.field_A) > param0) {
+            if ((param1.strength + param1.field_A) > param0) {
               stackIn_188_1 = 0;
             } else {
               stackIn_188_1 = 1;
@@ -4193,8 +4193,8 @@ final class sk implements pa {
             }
             this.field_q = true;
           }
-          if (34 == param4.field_N &&
-            param4.field_W) {
+          if (34 == param4.unitType &&
+            param4.packedFlag8) {
             this.field_y = 1;
             this.field_J = 2;
             this.field_c = 75;
@@ -4237,7 +4237,7 @@ final class sk implements pa {
                 }
                 stackIn_211_2 = null;
                 stackIn_211_3 = null;
-                stackIn_211_9 = stackIn_209_9 + ns.a(stackIn_210_10, 700, vv.field_b);
+                stackIn_211_9 = stackIn_209_9 + AttackEvent.a(stackIn_210_10, 700, vv.field_b);
               } else {
                 stackIn_211_2 = null;
                 stackIn_211_3 = null;
@@ -4280,7 +4280,7 @@ final class sk implements pa {
                 }
                 stackIn_224_2 = null;
                 stackIn_224_3 = null;
-                stackIn_224_9 = stackIn_222_9 + ns.a(stackIn_223_10, 700, vv.field_b);
+                stackIn_224_9 = stackIn_222_9 + AttackEvent.a(stackIn_223_10, 700, vv.field_b);
               } else {
                 stackIn_224_2 = null;
                 stackIn_224_3 = null;
@@ -4381,7 +4381,7 @@ final class sk implements pa {
         }
     }
 
-    sk(ha param0, v param1, vb param2) {
+    sk(Battlefield param0, v param1, vb param2) {
         RuntimeException runtimeException = null;
         um var4 = null;
         RuntimeException stackIn_17_0 = null;
@@ -4399,7 +4399,7 @@ final class sk implements pa {
           this.field_k = param2;
           this.field_x = param0;
           if (this.field_x != null) {
-            this.field_r = param0.field_v;
+            this.field_r = param0.mapWidth;
             this.field_l = new int[2];
             this.field_x = param0;
           }
@@ -4407,15 +4407,15 @@ final class sk implements pa {
             this.field_B = param1;
             if (null != u.field_p) {
               u.field_p.field_k = this.field_B;
-              if (ArmiesOfGielinor.field_M) {
+              if (ArmiesOfGielinor.obfuscationControl) {
                 u.field_p = new sr(rs.field_k, se.field_a, param1);
               }
             } else {
               u.field_p = new sr(rs.field_k, se.field_a, param1);
             }
           }
-          this.field_H = new wk(640, 480);
-          var4 = cb.field_a[ns.a(false, cb.field_a.length, vv.field_b)];
+          this.field_H = new RgbSprite(640, 480);
+          var4 = cb.field_a[AttackEvent.a(false, cb.field_a.length, vv.field_b)];
           hh.a(-16147, 50, var4, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

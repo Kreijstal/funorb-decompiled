@@ -9,7 +9,7 @@ final class mj {
     final static void a(byte param0) {
         rj.field_F.a(18, -20500, nf.field_Kb.field_gb - (!fh.field_c ? 0 : 40 + (jn.field_c + 4)), 0, 0);
         cm.field_a.a(18, -20500, jn.field_c + 42, 0, -2 + (nf.field_Kb.field_gb - jn.field_c - 40));
-        ne.field_f.a(0, false, nf.field_Kb.field_gb, 2, jn.field_c, 20, nf.field_Kb.field_ob - 20);
+        MapTile.field_f.a(0, false, nf.field_Kb.field_gb, 2, jn.field_c, 20, nf.field_Kb.field_ob - 20);
         if (param0 >= 29) {
           return;
         }

@@ -3,7 +3,7 @@
  */
 final class pk extends hv {
     private n field_Z;
-    private wk field_Y;
+    private RgbSprite field_Y;
     private int field_U;
     static String field_S;
     static int field_X;
@@ -66,15 +66,15 @@ final class pk extends hv {
         int var10;
         int var11;
         int var12;
-        wk var14;
-        wk var15;
-        wk var16;
-        wk var17;
-        wk var18;
+        RgbSprite var14;
+        RgbSprite var15;
+        RgbSprite var16;
+        RgbSprite var17;
+        RgbSprite var18;
         int var11Lifetime1;
         int var12Lifetime1;
         gu var6Lifetime1;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var6 = this.field_Z.a(false);
         if (ad.field_K != var6 &&
           var6 != so.field_e) {
@@ -102,19 +102,19 @@ final class pk extends hv {
           var11 = var18.field_A << 1;
           var12 = var18.field_x << 1;
           if (this.field_Y == null) {
-            this.field_Y = new wk(var11, var12);
+            this.field_Y = new RgbSprite(var11, var12);
             vn.a(this.field_Y, 3);
           } else {
             if (this.field_Y.field_y < var11) {
-              this.field_Y = new wk(var11, var12);
+              this.field_Y = new RgbSprite(var11, var12);
               vn.a(this.field_Y, 3);
             } else {
               if (var12 > this.field_Y.field_v) {
-                this.field_Y = new wk(var11, var12);
+                this.field_Y = new RgbSprite(var11, var12);
                 vn.a(this.field_Y, 3);
               } else {
                 vn.a(this.field_Y, 3);
-                qn.b();
+                SoftwareRaster.b();
               }
             }
           }
@@ -141,19 +141,19 @@ final class pk extends hv {
         var11Lifetime1 = var17.field_A << 1;
         var12Lifetime1 = var17.field_x << 1;
         if (this.field_Y == null) {
-          this.field_Y = new wk(var11Lifetime1, var12Lifetime1);
+          this.field_Y = new RgbSprite(var11Lifetime1, var12Lifetime1);
           vn.a(this.field_Y, 3);
         } else {
           if (this.field_Y.field_y < var11Lifetime1) {
-            this.field_Y = new wk(var11Lifetime1, var12Lifetime1);
+            this.field_Y = new RgbSprite(var11Lifetime1, var12Lifetime1);
             vn.a(this.field_Y, 3);
           } else {
             if (var12Lifetime1 > this.field_Y.field_v) {
-              this.field_Y = new wk(var11Lifetime1, var12Lifetime1);
+              this.field_Y = new RgbSprite(var11Lifetime1, var12Lifetime1);
               vn.a(this.field_Y, 3);
             } else {
               vn.a(this.field_Y, 3);
-              qn.b();
+              SoftwareRaster.b();
             }
           }
         }

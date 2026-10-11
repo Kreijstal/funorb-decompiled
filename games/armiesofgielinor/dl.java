@@ -137,12 +137,12 @@ final class dl {
         if (param0 != 95) {
           dl.f(46);
         }
-        stackIn_12_0 = ((as.field_B &&
+        stackIn_12_0 = ((OwnerChangeEvent.field_B &&
           im.field_w &&
           sh.field_h &&
           ve.field_b &&
           mv.field_b) ||
-          nw.g(105));
+          DamageEvent.g(105));
         return stackIn_12_0;
     }
 
@@ -170,7 +170,7 @@ final class dl {
         int var7 = 0;
         String var8 = null;
         mo var9 = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (mj.field_c > sj.field_d) {
             sj.field_d = sj.field_d + 1;
@@ -183,10 +183,10 @@ final class dl {
             return;
           }
           vi.a(-68);
-          ag.field_I.a(true, param3);
+          CombatEvent.field_I.a(true, param3);
           if (aw.field_i != null) {
             if (bb.field_a) {
-              aw.field_i.a(param3, -6226, ag.field_I.field_V, ag.field_I.field_D);
+              aw.field_i.a(param3, -6226, CombatEvent.field_I.field_V, CombatEvent.field_I.field_D);
             } else {
               aw.field_i = null;
             }
@@ -230,9 +230,9 @@ final class dl {
         }
         this.field_a = 0;
         this.field_j = 0;
-        if (param0 != tr.field_A) {
-          this.field_f = tr.field_A;
-          this.field_a = tr.field_A;
+        if (param0 != DeployEvent.field_A) {
+          this.field_f = DeployEvent.field_A;
+          this.field_a = DeployEvent.field_A;
           this.field_b = true;
           this.field_h = param1;
           this.field_g = eu.field_a;
@@ -240,11 +240,11 @@ final class dl {
         if (this.field_f != 0 &&
           0 != ro.field_ub) {
           if (this.field_g <= 0) {
-            this.field_g = oj.field_k;
+            this.field_g = GameEvent.field_k;
           }
           this.field_g = this.field_g - 1;
         }
-        if (tr.field_A == 0 &&
+        if (DeployEvent.field_A == 0 &&
           ro.field_ub == 0) {
           this.field_f = 0;
         }
@@ -264,7 +264,7 @@ final class dl {
     }
 
     final static void f(int param0) {
-        st.a(8, eq.field_h, jm.field_b, cb.field_c, hr.field_m);
+        TurnEffectEvent.a(8, eq.field_h, jm.field_b, cb.field_c, hr.field_m);
         if (param0 != 0) {
           field_i = 123;
         }

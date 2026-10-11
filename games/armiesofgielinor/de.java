@@ -7,7 +7,7 @@ final class de {
     static String field_b;
     static boolean field_a;
 
-    final static String a(byte param0, int param1, ha param2, int param3, int param4, int param5) {
+    final static String a(byte param0, int param1, Battlefield param2, int param3, int param4, int param5) {
         int var7_int = 0;
         String stackIn_4_0 = null;
         String stackIn_8_0 = null;
@@ -81,39 +81,39 @@ final class de {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
-        jd var7 = null;
+        Unit var7 = null;
         int var8 = 0;
         int var9 = 0;
-        ne var10 = null;
-        ne var11 = null;
+        MapTile var10 = null;
+        MapTile var11 = null;
         int var8Lifetime1;
         int var8Lifetime2;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param5 != param2.field_gb) {
+          if (param5 != param2.currentPlayer) {
             stackIn_4_0 = sj.field_g;
             return stackIn_4_0;
           }
           if (0 < param2.e(20, param5, param4)) {
-            stackIn_8_0 = fo.a(4800, kv.field_I, new String[]{Integer.toString(uc.field_d[param4][1] + 1)});
+            stackIn_8_0 = fo.a(4800, kv.field_I, new String[]{Integer.toString(uc.spellDefinitions[param4][1] + 1)});
             return stackIn_8_0;
           }
-          if (uc.field_d[param4][3] == 4) {
-            if (uc.field_d[param4][5] == 1) {
-              if (0 == param2.field_E[param5][uc.field_d[param4][6]]) {
-                stackIn_21_0 = fo.a(4800, a.field_n, new String[]{wf.field_q[1 + uc.field_d[param4][6]]});
+          if (uc.spellDefinitions[param4][3] == 4) {
+            if (uc.spellDefinitions[param4][5] == 1) {
+              if (0 == param2.godFavourLevels[param5][uc.spellDefinitions[param4][6]]) {
+                stackIn_21_0 = fo.a(4800, a.field_n, new String[]{wf.field_q[1 + uc.spellDefinitions[param4][6]]});
                 return stackIn_21_0;
               }
-              if (param2.field_E[param5][uc.field_d[param4][6]] < 5) {
+              if (param2.godFavourLevels[param5][uc.spellDefinitions[param4][6]] < 5) {
                 return null;
               }
-              stackIn_25_0 = fo.a(4800, rr.field_b, new String[]{wf.field_q[uc.field_d[param4][6] + 1]});
+              stackIn_25_0 = fo.a(4800, rr.field_b, new String[]{wf.field_q[uc.spellDefinitions[param4][6] + 1]});
               return stackIn_25_0;
             }
-            if (uc.field_d[param4][5] != 2) {
+            if (uc.spellDefinitions[param4][5] != 2) {
               return null;
             }
-            if (!param2.field_Bb) {
+            if (!param2.kingBlackDragonSummoned) {
               stackIn_17_0 = ij.field_B;
               return stackIn_17_0;
             }
@@ -122,17 +122,17 @@ final class de {
           }
           if (0 <= param3 &&
             param1 >= 0) {
-            if (param2.field_v > param3 &&
-              param2.field_db > param1) {
+            if (param2.mapWidth > param3 &&
+              param2.mapHeight > param1) {
               var6_int = 98 % ((param0 - 5) / 61);
-              for (var7_int = -uc.field_d[param4][7] + param3; var7_int <= uc.field_d[param4][7] + param3; var7_int++) {
-                for (var8 = -uc.field_d[param4][7] + param1; uc.field_d[param4][7] + param1 >= var8; var8++) {
+              for (var7_int = -uc.spellDefinitions[param4][7] + param3; var7_int <= uc.spellDefinitions[param4][7] + param3; var7_int++) {
+                for (var8 = -uc.spellDefinitions[param4][7] + param1; uc.spellDefinitions[param4][7] + param1 >= var8; var8++) {
                   if (var7_int >= 0 &&
                     0 <= var8 &&
-                    param2.field_v > var7_int &&
-                    param2.field_db > var8) {
-                    if (param2.field_Eb[param2.field_v * var8 + var7_int].field_h != 7 &&
-                      param2.field_Eb[param2.field_v * var8 + var7_int].field_h != 11) {
+                    param2.mapWidth > var7_int &&
+                    param2.mapHeight > var8) {
+                    if (param2.tiles[param2.mapWidth * var8 + var7_int].terrainType != 7 &&
+                      param2.tiles[param2.mapWidth * var8 + var7_int].terrainType != 11) {
                       continue;
                     }
                     stackIn_52_0 = kp.field_c;
@@ -141,27 +141,27 @@ final class de {
                   break;
                 }
               }
-              var10 = param2.field_Eb[param3 + param2.field_v * param1];
+              var10 = param2.tiles[param3 + param2.mapWidth * param1];
               var11 = var10;
-              var7 = var10.field_c;
-              var8Lifetime1 = uc.field_d[param4][3];
+              var7 = var10.occupant;
+              var8Lifetime1 = uc.spellDefinitions[param4][3];
               if (var8Lifetime1 != 0) {
                 if (var8Lifetime1 == 1) {
                   if (var7 == null) {
                     stackIn_283_0 = ai.field_N;
                     return stackIn_283_0;
                   }
-                  if (param2.c(var7.field_O, -16985, param5)) {
+                  if (param2.arePlayersAllied(var7.ownerPlayer, -16985, param5)) {
                     stackIn_286_0 = qv.field_r;
                     return stackIn_286_0;
                   }
                   if (param4 != 68) {
                     return null;
                   }
-                  if (!var7.field_I) {
+                  if (!var7.poisoned) {
                     return null;
                   }
-                  stackIn_292_0 = jd.field_T;
+                  stackIn_292_0 = Unit.field_T;
                   return stackIn_292_0;
                 }
                 if (var8Lifetime1 == 2) {
@@ -179,27 +179,27 @@ final class de {
                     }
                   } else {
                     if (var8Lifetime1 == 5) {
-                      if (8 != var11.field_h) {
+                      if (8 != var11.terrainType) {
                         stackIn_311_0 = mt.field_g;
                         return stackIn_311_0;
                       }
-                      if (param2.c(var11.field_a, -16985, param5)) {
+                      if (param2.arePlayersAllied(var11.ownerPlayer, -16985, param5)) {
                         return null;
                       }
                       stackIn_315_0 = ra.field_k;
                       return stackIn_315_0;
                     }
                     if (var8Lifetime1 == 7) {
-                      if (var11.field_h != 8 &&
-                        9 != var11.field_h) {
+                      if (var11.terrainType != 8 &&
+                        9 != var11.terrainType) {
                         stackIn_320_0 = tv.field_d;
                         return stackIn_320_0;
                       }
-                      if (param2.c(var11.field_a, -16985, param5)) {
+                      if (param2.arePlayersAllied(var11.ownerPlayer, -16985, param5)) {
                         stackIn_323_0 = uc.field_c;
                         return stackIn_323_0;
                       }
-                      if (var11.field_a == -1) {
+                      if (var11.ownerPlayer == -1) {
                         stackIn_327_0 = uc.field_c;
                         return stackIn_327_0;
                       }
@@ -210,7 +210,7 @@ final class de {
                     stackIn_300_0 = ai.field_N;
                     return stackIn_300_0;
                   }
-                  if (param5 == var7.field_O) {
+                  if (param5 == var7.ownerPlayer) {
                     stackIn_304_0 = na.field_N;
                     return stackIn_304_0;
                   }
@@ -222,29 +222,29 @@ final class de {
                 stackIn_69_0 = ai.field_N;
                 return stackIn_69_0;
               }
-              if (!param2.c(var7.field_O, -16985, param5)) {
+              if (!param2.arePlayersAllied(var7.ownerPlayer, -16985, param5)) {
                 stackIn_73_0 = gp.field_a;
                 return stackIn_73_0;
               }
               var8Lifetime2 = param4;
               if (115 != var8Lifetime2) {
                 if (var8Lifetime2 == 119) {
-                  if (var7.field_N != 43) {
+                  if (var7.unitType != 43) {
                     stackIn_96_0 = fg.field_n;
                     return stackIn_96_0;
                   }
-                  if (var7.field_F) {
+                  if (var7.packedFlag32) {
                     stackIn_100_0 = fo.a(4800, ti.field_b, new String[]{fq.field_f[param4]});
                     return stackIn_100_0;
                   }
                 } else {
                   if (var8Lifetime2 != 118) {
                     if (var8Lifetime2 == 116) {
-                      if (var7.field_N != 58) {
+                      if (var7.unitType != 58) {
                         stackIn_110_0 = al.field_i;
                         return stackIn_110_0;
                       }
-                      if (var7.field_F) {
+                      if (var7.packedFlag32) {
                         stackIn_113_0 = fo.a(4800, ti.field_b, new String[]{fq.field_f[param4]});
                         return stackIn_113_0;
                       }
@@ -252,84 +252,84 @@ final class de {
                       if (var8Lifetime2 != 117) {
                         if (var8Lifetime2 != 120) {
                           if (var8Lifetime2 == 46) {
-                            if (34 == var7.field_N &&
-                              var7.field_W &&
-                              var7.field_B > 0) {
+                            if (34 == var7.unitType &&
+                              var7.packedFlag8 &&
+                              var7.packedLowFlags > 0) {
                               stackIn_132_0 = eq.field_g;
                               return stackIn_132_0;
                             }
-                            if (!var7.field_s) {
+                            if (!var7.packedFlag4) {
                               stackIn_130_0 = eq.field_g;
                               return stackIn_130_0;
                             }
                           }
                         } else {
-                          if (var7.field_C) {
+                          if (var7.packedFlag64) {
                             stackIn_123_0 = fo.a(4800, ti.field_b, new String[]{fq.field_f[param4]});
                             return stackIn_123_0;
                           }
                         }
                       } else {
-                        if (53 != var7.field_N) {
+                        if (53 != var7.unitType) {
                           stackIn_117_0 = cs.field_X;
                           return stackIn_117_0;
                         }
-                        if (var7.field_F) {
+                        if (var7.packedFlag32) {
                           stackIn_120_0 = fo.a(4800, ti.field_b, new String[]{fq.field_f[param4]});
                           return stackIn_120_0;
                         }
                       }
                     }
                   } else {
-                    if (var7.field_N != 59) {
-                      stackIn_103_0 = pj.field_A;
+                    if (var7.unitType != 59) {
+                      stackIn_103_0 = TrinketUseEvent.field_A;
                       return stackIn_103_0;
                     }
-                    if (var7.field_F) {
+                    if (var7.packedFlag32) {
                       stackIn_107_0 = fo.a(4800, ti.field_b, new String[]{fq.field_f[param4]});
                       return stackIn_107_0;
                     }
                   }
                 }
               } else {
-                if (var7.field_N != 63) {
+                if (var7.unitType != 63) {
                   stackIn_89_0 = eq.field_k;
                   return stackIn_89_0;
                 }
-                if (var7.field_F) {
+                if (var7.packedFlag32) {
                   stackIn_92_0 = fo.a(4800, ti.field_b, new String[]{fq.field_f[param4]});
                   return stackIn_92_0;
                 }
               }
-              if (uc.field_d[param4][4] == 5) {
-                if (param5 != var7.field_O) {
+              if (uc.spellDefinitions[param4][4] == 5) {
+                if (param5 != var7.ownerPlayer) {
                   stackIn_138_0 = ji.field_a;
                   return stackIn_138_0;
                 }
-                if (var7.field_s) {
+                if (var7.packedFlag4) {
                   stackIn_141_0 = vg.field_o;
                   return stackIn_141_0;
                 }
-                if (param4 == 109 && (var7.field_N == 39 ||
-                  51 == var7.field_N)) {
+                if (param4 == 109 && (var7.unitType == 39 ||
+                  51 == var7.unitType)) {
                   stackIn_147_0 = sc.field_i;
                   return stackIn_147_0;
                 }
               }
               boolean decompiledFrameRemainder1 = true;
-              if (uc.field_d[param4][4] == 2 &&
-                19 == uc.field_d[param4][5]) {
-                if (uc.field_d[param4][6] < bw.field_m[var7.field_N][2]) {
-                  stackIn_154_0 = fo.a(4800, sq.field_s, new String[]{Integer.toString(uc.field_d[param4][6]), Integer.toString(bw.field_m[var7.field_N][2])});
+              if (uc.spellDefinitions[param4][4] == 2 &&
+                19 == uc.spellDefinitions[param4][5]) {
+                if (uc.spellDefinitions[param4][6] < bw.unitDefinitions[var7.unitType][2]) {
+                  stackIn_154_0 = fo.a(4800, sq.field_s, new String[]{Integer.toString(uc.spellDefinitions[param4][6]), Integer.toString(bw.unitDefinitions[var7.unitType][2])});
                   return stackIn_154_0;
                 }
-                if (var7.field_bb) {
+                if (var7.packedFlag256) {
                   stackIn_158_0 = lb.field_b;
                   return stackIn_158_0;
                 }
-                if ((!var7.field_s &&
+                if ((!var7.packedFlag4 &&
                   8 != var7.field_P) &&
-                  (decompiledFrameRemainder1 = (var7.field_N == 39))) {
+                  (decompiledFrameRemainder1 = (var7.unitType == 39))) {
                   stackIn_167_0 = oi.field_b;
                   return stackIn_167_0;
                 }
@@ -338,13 +338,13 @@ final class de {
                   return stackIn_163_0;
                 }
               }
-              if (uc.field_d[param4][4] == 1) {
-                if (var7.c((byte) 81) == uc.field_d[param4][6] &&
-                  var7.j(20640) == uc.field_d[param4][5]) {
+              if (uc.spellDefinitions[param4][4] == 1) {
+                if (var7.c((byte) 81) == uc.spellDefinitions[param4][6] &&
+                  var7.j(20640) == uc.spellDefinitions[param4][5]) {
                   stackIn_172_0 = fo.a(4800, ti.field_b, new String[]{fq.field_f[param4]});
                   return stackIn_172_0;
                 }
-                if (uc.field_d[param4][5] == 0) {
+                if (uc.spellDefinitions[param4][5] == 0) {
                   if (4 == var7.g(0)) {
                     stackIn_177_0 = ah.field_c;
                     return stackIn_177_0;
@@ -353,28 +353,28 @@ final class de {
                     stackIn_180_0 = qa.field_E;
                     return stackIn_180_0;
                   }
-                  if (var7.field_N == 34 &&
-                    var7.field_W) {
+                  if (var7.unitType == 34 &&
+                    var7.packedFlag8) {
                     stackIn_185_0 = fc.field_c;
                     return stackIn_185_0;
                   }
                 }
-                if (uc.field_d[param4][5] == 1) {
-                  if (var7.field_N == 34 &&
-                    var7.field_W) {
+                if (uc.spellDefinitions[param4][5] == 1) {
+                  if (var7.unitType == 34 &&
+                    var7.packedFlag8) {
                     stackIn_190_0 = fc.field_c;
                     return stackIn_190_0;
                   }
                   if (2 != var7.g(0) &&
-                    var7.field_N != 18 &&
-                    var7.field_N != 28) {
+                    var7.unitType != 18 &&
+                    var7.unitType != 28) {
                     stackIn_195_0 = wn.field_bb;
                     return stackIn_195_0;
                   }
                 }
-                if (2 == uc.field_d[param4][5]) {
-                  if (34 == var7.field_N &&
-                    var7.field_W) {
+                if (2 == uc.spellDefinitions[param4][5]) {
+                  if (34 == var7.unitType &&
+                    var7.packedFlag8) {
                     stackIn_200_0 = fc.field_c;
                     return stackIn_200_0;
                   }
@@ -383,9 +383,9 @@ final class de {
                     return stackIn_204_0;
                   }
                 }
-                if (uc.field_d[param4][5] == 4) {
-                  if (var7.field_N == 34 &&
-                    var7.field_W) {
+                if (uc.spellDefinitions[param4][5] == 4) {
+                  if (var7.unitType == 34 &&
+                    var7.packedFlag8) {
                     stackIn_209_0 = fc.field_c;
                     return stackIn_209_0;
                   }
@@ -394,58 +394,58 @@ final class de {
                     return stackIn_212_0;
                   }
                 }
-                if (3 == uc.field_d[param4][5] &&
-                  var7.field_N != 81 &&
-                  var7.field_N != 4 &&
-                  74 != var7.field_N &&
-                  var7.field_N != 34) {
+                if (3 == uc.spellDefinitions[param4][5] &&
+                  var7.unitType != 81 &&
+                  var7.unitType != 4 &&
+                  74 != var7.unitType &&
+                  var7.unitType != 34) {
                   stackIn_219_0 = sd.field_r;
                   return stackIn_219_0;
                 }
-                if (uc.field_d[param4][6] == 6 &&
-                  (64 & bw.field_m[var7.field_N][10]) != 0) {
+                if (uc.spellDefinitions[param4][6] == 6 &&
+                  (64 & bw.unitDefinitions[var7.unitType][10]) != 0) {
                   stackIn_224_0 = iu.field_r;
                   return stackIn_224_0;
                 }
               }
-              if (uc.field_d[param4][4] == 0 &&
-                uc.field_d[param4][6] == var7.field_o &&
-                var7.field_P == uc.field_d[param4][5]) {
+              if (uc.spellDefinitions[param4][4] == 0 &&
+                uc.spellDefinitions[param4][6] == var7.field_o &&
+                var7.field_P == uc.spellDefinitions[param4][5]) {
                 stackIn_230_0 = fo.a(4800, ti.field_b, new String[]{fq.field_f[param4]});
                 return stackIn_230_0;
               }
-              if (uc.field_d[param4][4] == 3) {
-                if (uc.field_d[param4][5] == var7.field_ab) {
+              if (uc.spellDefinitions[param4][4] == 3) {
+                if (uc.spellDefinitions[param4][5] == var7.field_ab) {
                   stackIn_236_0 = fo.a(4800, ti.field_b, new String[]{fq.field_f[param4]});
                   return stackIn_236_0;
                 }
-                if (3 == uc.field_d[param4][5] && (4 == var7.g(0) ||
+                if (3 == uc.spellDefinitions[param4][5] && (4 == var7.g(0) ||
                   var7.r((byte) 115) ||
                   var7.o((byte) 98) ||
-                  var7.field_N == 39 ||
-                  var7.field_N == 51)) {
+                  var7.unitType == 39 ||
+                  var7.unitType == 51)) {
                   stackIn_245_0 = sp.field_d;
                   return stackIn_245_0;
                 }
-                if (uc.field_d[param4][5] == 4 && (var7.g(0) == 4 ||
+                if (uc.spellDefinitions[param4][5] == 4 && (var7.g(0) == 4 ||
                   var7.o((byte) 98) ||
-                  var7.field_N == 39 ||
-                  var7.field_N == 51)) {
+                  var7.unitType == 39 ||
+                  var7.unitType == 51)) {
                   stackIn_253_0 = sp.field_d;
                   return stackIn_253_0;
                 }
                 boolean decompiledFrameRemainder0 = true;
-                if (2 == uc.field_d[param4][5]) {
+                if (2 == uc.spellDefinitions[param4][5]) {
                   if (var7.g(0) != 4 &&
                     !var7.j((byte) -83) &&
-                    bw.field_m[var7.field_N][7] <= 1) {
-                    if (var7.field_N == 34 &&
-                      var7.field_W) {
+                    bw.unitDefinitions[var7.unitType][7] <= 1) {
+                    if (var7.unitType == 34 &&
+                      var7.packedFlag8) {
                       stackIn_262_0 = 1;
                     } else {
                       stackIn_262_0 = 0;
                     }
-                    if (var7.field_N != 51) {
+                    if (var7.unitType != 51) {
                       stackIn_265_1 = 0;
                     } else {
                       stackIn_265_1 = 1;
@@ -457,18 +457,18 @@ final class de {
                     return stackIn_267_0;
                   }
                 }
-                if (uc.field_d[param4][5] == 1 &&
+                if (uc.spellDefinitions[param4][5] == 1 &&
                   var7.i(-21428)) {
                   stackIn_271_0 = sp.field_d;
                   return stackIn_271_0;
                 }
-                if (uc.field_d[param4][5] == 5 &&
-                  var7.c(false)) {
+                if (uc.spellDefinitions[param4][5] == 5 &&
+                  var7.hasMovementFlag1(false)) {
                   stackIn_276_0 = cl.field_w;
                   return stackIn_276_0;
                 }
               }
-              if (!var7.field_D) {
+              if (!var7.packedFlag512) {
                 return null;
               }
               stackIn_280_0 = po.field_a;
@@ -502,7 +502,7 @@ final class de {
         field_d = null;
     }
 
-    final static int a(int param0, bv param1, int param2, int param3, int param4, int param5) {
+    final static int a(int param0, CipherPacketBuffer param1, int param2, int param3, int param4, int param5) {
         RuntimeException var6 = null;
         int stackIn_2_0 = 0;
         int stackIn_6_0 = 0;

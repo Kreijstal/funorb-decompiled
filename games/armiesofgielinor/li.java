@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class li extends tc {
+final class li extends IntrusiveNode {
     static Random field_n;
     static int[] field_k;
     static String field_p;
@@ -20,18 +20,18 @@ final class li extends tc {
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var1_int = pr.field_g.field_i >> 16;
           var2 = we.a(var1_int, true);
           io.a(var2, (byte) -34);
-          if (bv.field_w.field_sb <= -1) {
-            stackIn_4_0 = bv.field_w.field_gb;
+          if (CipherPacketBuffer.currentBattlefield.localPlayer <= -1) {
+            stackIn_4_0 = CipherPacketBuffer.currentBattlefield.currentPlayer;
           } else {
-            stackIn_4_0 = bv.field_w.field_sb;
+            stackIn_4_0 = CipherPacketBuffer.currentBattlefield.localPlayer;
           }
-          ne.field_i = stackIn_4_0;
-          ic.field_f = (int)(106.0 + Math.sin((double)uk.field_n / 3.141592653589793 / (double)param0) * 50.0);
+          MapTile.field_i = stackIn_4_0;
+          GameplayController.field_f = (int)(106.0 + Math.sin((double)uk.field_n / 3.141592653589793 / (double)param0) * 50.0);
           if (!cu.field_a) {
             kl.field_a.g(200);
             return;

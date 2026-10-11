@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vb extends tc {
+final class vb extends IntrusiveNode {
     eo field_u;
     int field_v;
     boolean field_z;
-    private ha field_k;
+    private Battlefield field_k;
     int field_m;
     int field_x;
     private int field_p;
     private boolean field_s;
     boolean field_w;
     boolean field_n;
-    static at field_q;
-    private ic field_y;
+    static NodeDeque field_q;
+    private GameplayController field_y;
     pa field_B;
-    oj field_r;
+    GameEvent field_r;
     static String field_l;
     static boolean[] field_o;
-    static wk field_t;
+    static RgbSprite field_t;
 
     final boolean e(int param0) {
-        nn stackIn_17_0 = null;
+        MovementPlanner stackIn_17_0 = null;
         boolean stackIn_18_1 = false;
         int stackIn_22_0 = 0;
         int stackIn_29_0 = 0;
@@ -46,11 +46,11 @@ final class vb extends tc {
         int stackIn_131_0 = 0;
         int stackIn_135_0 = 0;
         int var2;
-        kn var3;
+        TelefragEvent var3;
         int var3_int;
         int var4;
         int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = 0;
         if (0 != this.field_r.field_m) {
           if (this.field_r.field_m == 1) {
@@ -68,9 +68,9 @@ final class vb extends tc {
               if (this.field_r.field_m != 21) {
                 if (this.field_r.field_m != 26) {
                   if (this.field_r.field_m == 5) {
-                    var3 = (kn) (this.field_r);
+                    var3 = (TelefragEvent) (this.field_r);
                     if (var3.b(this.field_k, -75)) {
-                      new hp(this.field_k.c(var3.field_w.field_w, true, var3.field_w.field_J), true).a(this.field_y.field_pc, (byte) -86, this.field_y);
+                      new DeathEvent(this.field_k.getUnitAt(var3.unit.tileY, true, var3.unit.tileX), true).a(this.field_y.field_pc, (byte) -86, this.field_y);
                     }
                     this.field_z = false;
                     this.field_B = (pa) ((Object) new tb(this.field_k, this.field_y.field_M, this));
@@ -91,7 +91,7 @@ final class vb extends tc {
                       } else {
                         if (this.field_r.field_m == 11) {
                           this.field_z = false;
-                          this.field_r.a(this.field_k, -26661);
+                          this.field_r.applyToBattlefield(this.field_k, -26661);
                           this.field_B = (pa) ((Object) new tb(this.field_k, this.field_y.field_M, this));
                           stackIn_112_0 = (!this.field_B.a(this.field_r, (byte) 57)) ? 0 : 1;
                           var2 = stackIn_112_0;
@@ -198,7 +198,7 @@ final class vb extends tc {
                             }
                           } else {
                             this.field_z = false;
-                            this.field_r.a(this.field_k, -26661);
+                            this.field_r.applyToBattlefield(this.field_k, -26661);
                             this.field_n = true;
                             this.field_B = (pa) ((Object) new ql(this.field_k, this.field_y.field_M, this));
                             stackIn_43_0 = (!this.field_B.a(this.field_r, (byte) 57)) ? 0 : 1;
@@ -224,27 +224,27 @@ final class vb extends tc {
             }
           }
         } else {
-          var3_int = ((kr) (this.field_r)).field_H;
-          var4 = ((kr) (this.field_r)).field_I;
+          var3_int = ((MoveEvent) (this.field_r)).startX;
+          var4 = ((MoveEvent) (this.field_r)).startY;
           if (var3_int < 0) {
             return false;
           }
-          if (this.field_k.field_v <= var3_int) {
+          if (this.field_k.mapWidth <= var3_int) {
             return false;
           }
           if (0 > var4) {
             return false;
           }
-          if (var4 >= this.field_k.field_db) {
+          if (var4 >= this.field_k.mapHeight) {
             return false;
           }
-          if (this.field_k.field_Eb[((kr) (this.field_r)).field_H + ((kr) (this.field_r)).field_I * this.field_k.field_v].field_c == null) {
+          if (this.field_k.tiles[((MoveEvent) (this.field_r)).startX + ((MoveEvent) (this.field_r)).startY * this.field_k.mapWidth].occupant == null) {
             return false;
           }
-          if (null != this.field_y.field_T) {
-            stackIn_17_0 = this.field_y.field_vb;
+          if (null != this.field_y.selectedUnit) {
+            stackIn_17_0 = this.field_y.movementPlanner;
             stackIn_18_1 = (null != this.field_y.field_oc) ? false : true;
-            ((nn) (Object) stackIn_17_0).a(stackIn_18_1, param0 + 19769, this.field_y.field_q, this.field_y.field_T, this.field_y.field_vb.field_y, this.field_y.field_vb.field_p);
+            ((MovementPlanner) (Object) stackIn_17_0).a(stackIn_18_1, param0 + 19769, this.field_y.field_q, this.field_y.selectedUnit, this.field_y.movementPlanner.field_y, this.field_y.movementPlanner.field_p);
           }
           this.field_B = (pa) ((Object) new qv(this.field_k, this.field_y.field_M, this));
           stackIn_22_0 = (!this.field_B.a(this.field_r, (byte) 57)) ? 0 : 1;
@@ -270,7 +270,7 @@ final class vb extends tc {
     }
 
     final void a(int param0, int param1, boolean param2) {
-        wk stackIn_14_0;
+        RgbSprite stackIn_14_0;
         int stackIn_14_1;
         int stackIn_14_2;
         int[][] stackIn_14_3;
@@ -289,28 +289,28 @@ final class vb extends tc {
         if (param2) {
           return;
         }
-        if (null == this.field_r.field_w) {
+        if (null == this.field_r.unit) {
           return;
         }
-        if (this.field_r.field_w.field_x == null) {
+        if (this.field_r.unit.field_x == null) {
           return;
         }
-        var4 = -40 + this.field_r.field_w.field_x.field_e[0];
-        var5 = -20 + this.field_r.field_w.field_x.field_e[1];
-        stackIn_14_0 = go.field_g;
+        var4 = -40 + this.field_r.unit.field_x.field_e[0];
+        var5 = -20 + this.field_r.unit.field_x.field_e[1];
+        stackIn_14_0 = TeamRoster.field_g;
         stackIn_14_1 = 10 + var4;
         stackIn_14_2 = var5 + 5;
         stackIn_14_3 = op.field_c;
-        stackIn_15_4 = (this.field_k.field_wb) ? 1 : 0;
-        ((wk) (Object) stackIn_14_0).b(stackIn_14_1, stackIn_14_2, stackIn_14_3[stackIn_15_4][this.field_r.field_w.field_O]);
+        stackIn_15_4 = (this.field_k.teamGame) ? 1 : 0;
+        ((RgbSprite) (Object) stackIn_14_0).b(stackIn_14_1, stackIn_14_2, stackIn_14_3[stackIn_15_4][this.field_r.unit.ownerPlayer]);
         if (param1 != 31785) {
           this.field_s = false;
         }
-        if (this.field_y.field_T == this.field_r.field_w ||
-          this.field_y.field_oc == this.field_r.field_w) {
-          go.field_g.f(var4 + 10, 5 + var5, 128 + (int)(64.0 * Math.sin((double)param0 / 3.141592653589793)));
+        if (this.field_y.selectedUnit == this.field_r.unit ||
+          this.field_y.field_oc == this.field_r.unit) {
+          TeamRoster.field_g.f(var4 + 10, 5 + var5, 128 + (int)(64.0 * Math.sin((double)param0 / 3.141592653589793)));
         }
-        this.field_r.field_w.field_x.a((byte) -72, false);
+        this.field_r.unit.field_x.a((byte) -72, false);
         return;
     }
 
@@ -347,7 +347,7 @@ final class vb extends tc {
 
     final void a(int param0) {
         int var3;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_r.field_m != param0 &&
           null != this.field_B) {
           if (this.field_B.b(8865) &&
@@ -373,7 +373,7 @@ final class vb extends tc {
         }
     }
 
-    vb(ic param0, ha param1, eo param2, oj param3, boolean param4) {
+    vb(GameplayController param0, Battlefield param1, eo param2, GameEvent param3, boolean param4) {
         j discarded$0 = null;
         this.field_z = false;
         this.field_x = -1;
@@ -393,7 +393,7 @@ final class vb extends tc {
         }
     }
 
-    vb(ic param0, ha param1, eo param2, oj param3, int param4, int param5, boolean param6) {
+    vb(GameplayController param0, Battlefield param1, eo param2, GameEvent param3, int param4, int param5, boolean param6) {
         j discarded$0 = null;
         this.field_z = false;
         this.field_x = -1;
@@ -413,6 +413,6 @@ final class vb extends tc {
 
     static {
         field_l = "You have not yet unlocked this option for use.";
-        field_q = new at();
+        field_q = new NodeDeque();
     }
 }

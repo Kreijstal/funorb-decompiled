@@ -17,7 +17,7 @@ final class ue {
     static String field_e;
     private long field_h;
     private int field_d;
-    static wk[] field_k;
+    static RgbSprite[] field_k;
 
     final static int a(long param0, long param1, byte param2) {
         if (param2 != 97) {
@@ -70,7 +70,7 @@ final class ue {
         long var7 = 0L;
         int var9 = 0;
         int var10 = 0;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           try {
             if ((long)param0 + this.field_h > this.field_g) {
@@ -209,7 +209,7 @@ final class ue {
 
     public static void b(byte param0) {
         if (param0 <= 40) {
-          field_k = (wk[]) null;
+          field_k = (RgbSprite[]) null;
         }
         field_a = null;
         field_k = null;
@@ -232,7 +232,7 @@ final class ue {
         this.field_j.b(param0 + 702);
     }
 
-    final static wk[] a(int param0, int param1, int param2, int param3) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3) {
         if (param2 != 1) {
           ue.b((byte) 15);
         }
@@ -258,7 +258,7 @@ final class ue {
         int var9_intLifetime1;
         int var9_intLifetime2;
         int var9_intLifetime1Lifetime1;
-        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           try {
             if (param0 + param3 > param1.length) {
@@ -403,7 +403,7 @@ final class ue {
         int var3;
         int var4;
         kl var5;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_d = 0;
         if (param0 != -42) {
           var5 = (kl) null;
@@ -435,7 +435,7 @@ final class ue {
           ue.a(59, -15, 35, -65);
         }
         ee.field_v = new gk();
-        ci.h((byte) 74);
+        TutorialController.h((byte) 74);
     }
 
     private final void d(byte param0) throws IOException {
@@ -443,9 +443,9 @@ final class ue {
         long var4;
         int var6;
         int var7;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 111) {
-          field_k = (wk[]) null;
+          field_k = (RgbSprite[]) null;
         }
         if (this.field_m != -1L) {
           if (~this.field_m != ~this.field_l) {

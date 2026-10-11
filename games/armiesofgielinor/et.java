@@ -42,7 +42,7 @@ final class et {
         int var10Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
-        var19 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = wl.b((-param3 + param4) * 3, param1 ^ 13329);
           var6 = 3 * param3;
@@ -64,10 +64,10 @@ final class et {
             stackIn_11_0 = stackOut_10_0;
             if (var19 == 0) {
               if (stackIn_11_0) {
-                var12 = ca.field_f[var9];
+                var12 = TileMetadata.field_f[var9];
                 var13 = fa.field_k[var9];
-                var14 = ca.field_f[var10] - var12;
-                var15 = ca.field_f[var11] - var12;
+                var14 = TileMetadata.field_f[var10] - var12;
+                var15 = TileMetadata.field_f[var11] - var12;
                 var16 = -var13 + fa.field_k[var10];
                 var17 = fa.field_k[var11] - var13;
               }
@@ -164,15 +164,15 @@ final class et {
         int stackIn_31_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
-        var2 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          rl.field_C.a(true, -6226, pf.field_b, dl.field_i);
-          rl.field_C.d((byte) -102);
+          KingBlackDragonEvent.field_C.a(true, -6226, pf.field_b, dl.field_i);
+          KingBlackDragonEvent.field_C.d((byte) -102);
           if (param0 != -3) {
             et.a(103);
           }
           do {
-            if (!jd.i((byte) 80)) {
+            if (!Unit.i((byte) 80)) {
               if (cn.field_r == -1) {
                 if (ac.field_n) {
                   stackIn_18_0 = 3;
@@ -195,7 +195,7 @@ final class et {
               }
               break;
             }
-            rl.field_C.a(rs.field_q, ui.field_i, 80);
+            KingBlackDragonEvent.field_C.a(rs.field_q, ui.field_i, 80);
           } while (var2 == 0);
           var1_int = cn.field_r;
           gl.a(param0 ^ -127, -1);

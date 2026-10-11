@@ -35,7 +35,7 @@ final class mq extends je {
         int var8;
         int var9;
         int var7Lifetime1;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_Qb = this.field_Jb + 2 * param0;
         this.a(this.field_Sb, param5 ^ 18789, this.field_Qb, -this.field_Sb + param2, param3);
         if (this.field_Zb != param4) {
@@ -60,7 +60,7 @@ final class mq extends je {
     final boolean d(byte param0) {
         nf var5 = null;
         int var4 = 0;
-        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var2 = 0;
         nf[] var3 = this.field_Vb;
         int var4Lifetime1;
@@ -78,7 +78,7 @@ final class mq extends je {
 
     final boolean a(boolean param0, int param1, int param2) {
         int var6 = 0;
-        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var4 = 85 == rs.field_q ? 1 : 0;
         if (this.field_Ob != null) {
           if (var4 != 0 &&
@@ -115,7 +115,7 @@ final class mq extends je {
     final void f(byte param0) {
         int var3 = 0;
         nf var4 = null;
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         nf[] var6 = this.field_Vb;
         nf[] var2 = var6;
         if (param0 != -106) {
@@ -128,7 +128,7 @@ final class mq extends je {
         }
         if (this.field_Ob != null) {
           this.field_Ob.f((byte) -106);
-          this.field_Ob.d(param0 ^ 25);
+          this.field_Ob.unlink(param0 ^ 25);
         }
         this.field_Pb = -1;
         this.field_Ob = null;
@@ -138,7 +138,7 @@ final class mq extends je {
     private final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
-        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 != 23312) {
           this.a(-87, (byte) 117, -22);
         }
@@ -250,49 +250,49 @@ final class mq extends je {
 
     final static void a(je param0, int param1, boolean param2) {
         tg var8 = null;
-        wk var10 = null;
+        RgbSprite var10 = null;
         String var9 = null;
         tg var11 = null;
-        wk var13 = null;
+        RgbSprite var13 = null;
         String var12 = null;
         tg var14 = null;
-        wk var16 = null;
+        RgbSprite var16 = null;
         String var15 = null;
         tg var17 = null;
-        wk var19 = null;
+        RgbSprite var19 = null;
         String var18 = null;
         tg var20 = null;
-        wk var22 = null;
+        RgbSprite var22 = null;
         String var21 = null;
         tg var23 = null;
-        wk var25 = null;
+        RgbSprite var25 = null;
         String var24 = null;
         tg var26 = null;
         String var27 = null;
         tg var29 = null;
-        wk var31 = null;
+        RgbSprite var31 = null;
         String var30 = null;
         tg var32 = null;
-        wk var34 = null;
+        RgbSprite var34 = null;
         String var33 = null;
         tg var35 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        wk var28 = null;
-        wk var28Lifetime1;
-        wk var28Lifetime2;
-        wk var28Lifetime3;
-        wk var28Lifetime4;
-        wk var28Lifetime5;
-        wk var28Lifetime6;
-        wk var28Lifetime7;
-        wk var28Lifetime1Lifetime1;
-        wk var28Lifetime1Lifetime2;
-        wk var28Lifetime1Lifetime3;
-        wk var28Lifetime1Lifetime4;
-        wk var28Lifetime1Lifetime5;
+        RgbSprite var28 = null;
+        RgbSprite var28Lifetime1;
+        RgbSprite var28Lifetime2;
+        RgbSprite var28Lifetime3;
+        RgbSprite var28Lifetime4;
+        RgbSprite var28Lifetime5;
+        RgbSprite var28Lifetime6;
+        RgbSprite var28Lifetime7;
+        RgbSprite var28Lifetime1Lifetime1;
+        RgbSprite var28Lifetime1Lifetime2;
+        RgbSprite var28Lifetime1Lifetime3;
+        RgbSprite var28Lifetime1Lifetime4;
+        RgbSprite var28Lifetime1Lifetime5;
         ng.a((dn) null, param0, (int[]) null, (String) null, -1, 2, param1, (String) null, 0L);
         if (param2) {
           return;
@@ -372,7 +372,7 @@ final class mq extends je {
         int var6 = 0;
         int var4 = 0;
         int var5 = 0;
-        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var3 = 61 % ((-72 - param1) / 51);
         this.field_Yb = param0;
         for (var6 = 0; var6 < this.field_Tb; var6++) {
@@ -390,7 +390,7 @@ final class mq extends je {
         boolean stackIn_10_1 = false;
         mq var4;
         mq var7;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 != -42) {
           return;
         }
@@ -439,8 +439,8 @@ final class mq extends je {
         String var12 = null;
         Object var14 = null;
         int var15 = 0;
-        ka var17 = null;
-        ka var18 = null;
+        BitmapFont var17 = null;
+        BitmapFont var18 = null;
         this.field_Pb = -1;
         try {
           this.field_Ub = param5;
@@ -464,7 +464,7 @@ final class mq extends je {
               this.field_Ub[var13] == -1) {
               var14 = s.field_c;
             }
-            this.field_Vb[var13] = new nf(0L, param2, (je) null, param3, (wk) (var14), param6[var13]);
+            this.field_Vb[var13] = new nf(0L, param2, (je) null, param3, (RgbSprite) (var14), param6[var13]);
             this.a(this.field_Vb[var13], 55);
             var15 = var17.a(param6[var13]);
             if (this.field_Jb < var15) {

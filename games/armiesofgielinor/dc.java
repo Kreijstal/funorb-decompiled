@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dc extends tc {
+final class dc extends IntrusiveNode {
     static String field_l;
     int field_p;
     int[] field_m;
     int[] field_v;
     wo[] field_k;
     wo[] field_r;
-    static wk field_n;
+    static RgbSprite field_n;
     byte[][][] field_u;
     static String field_s;
     static long field_o;
@@ -61,7 +61,7 @@ final class dc extends tc {
 
     static {
         field_l = "Chat is currently disabled.";
-        field_n = new wk(540, 140);
+        field_n = new RgbSprite(540, 140);
         field_s = "High";
     }
 }

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class qs extends tc {
+final class qs extends IntrusiveNode {
     private int field_L;
     private int field_Q;
     private byte[][] field_s;
@@ -693,7 +693,7 @@ final class qs extends tc {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        vh var2 = new vh(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_m = var2.i(1);
         this.field_F = var2.i(1);
         this.field_D = var2.i(1);

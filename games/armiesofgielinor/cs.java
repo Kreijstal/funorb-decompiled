@@ -31,7 +31,7 @@ final class cs extends sf implements he {
           this.field_ab.field_B = 0;
           this.field_ab.field_p = 20 + (var3.field_p + var3.field_w);
           this.field_ab.field_w = 80;
-          this.field_ab.field_k = (kh) ((Object) new lk(bv.field_t, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.field_ab.field_k = (kh) ((Object) new lk(CipherPacketBuffer.field_t, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, this.field_ab);
           this.field_Z = this.a(ui.field_e, -63, (qo) (this));
           this.field_gb = this.a(ge.field_m, -74, (qo) (this));
@@ -164,7 +164,7 @@ final class cs extends sf implements he {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         kb var7 = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = param1;
           if (99 == var5_int) {

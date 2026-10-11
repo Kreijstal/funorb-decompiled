@@ -3,7 +3,7 @@
  */
 final class ds {
     static dq field_c;
-    static wk[] field_a;
+    static RgbSprite[] field_a;
     static String field_b;
 
     public static void a(int param0) {
@@ -28,7 +28,7 @@ final class ds {
           lk.field_f = ku.field_I;
           var2 = 48 / ((36 - param0) / 56);
           ku.field_I = false;
-          tr.field_A = jm.field_k;
+          DeployEvent.field_A = jm.field_k;
           iu.field_t = mq.field_Xb;
           ur.field_z = ei.field_d;
           jm.field_k = 0;
@@ -39,7 +39,7 @@ final class ds {
     final static void a(int param0, int param1) {
         try {
           try {
-            lj.a(ag.d((byte) -117), "resizing", new Object[]{new Integer(param0)}, 90);
+            lj.a(CombatEvent.d((byte) -117), "resizing", new Object[]{new Integer(param0)}, 90);
           } catch (Throwable throwable) {
           }
           int var2 = 87 % ((param1 - 39) / 40);
@@ -62,7 +62,7 @@ final class ds {
         int var12 = 0;
         ru var13 = null;
         int var14 = 0;
-        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null != ac.field_k &&
             0 <= param5 &&

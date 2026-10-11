@@ -115,7 +115,7 @@ final class fh {
     private final int a(int param0, int param1) {
         int var3;
         int var4;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var3 = this.field_d.length;
         while (param0 >= var3) {
           if (!this.field_g) {
@@ -177,7 +177,7 @@ final class fh {
           }
           var13 = (param5 << 9) / var12 + var7_int;
           var14 = var8 + (var11 << 9) / var12;
-          qn.a(var13 << 4, var14 << 4, param1, param4, param3);
+          SoftwareRaster.a(var13 << 4, var14 << 4, param1, param4, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -230,7 +230,7 @@ final class fh {
           }
           var13 = (param5 << 9) / var12 + var7_int;
           var14 = var8 + (var11 << 9) / var12;
-          qn.a(var13 << 4, var14 << 4, param1, param4, param3);
+          SoftwareRaster.a(var13 << 4, var14 << 4, param1, param4, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

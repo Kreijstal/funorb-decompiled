@@ -24,8 +24,8 @@ final class op {
         try {
           var7 = jp.a(var2_int, 12, var5, -1);
           var8 = pd.a(var6, 0, var3, 20);
-          qn.b(var7, var8, var5, var6, 0);
-          qn.f(1 + var7, var8 + 1, var5 - 2, -2 + var6, 16777088);
+          SoftwareRaster.b(var7, var8, var5, var6, 0);
+          SoftwareRaster.f(1 + var7, var8 + 1, var5 - 2, -2 + var6, 16777088);
           eq.field_h.field_Z.a(param1, 3 + var7, -eq.field_h.field_Z.field_H + is.field_b + (var8 + 1), 500, 1000, 0, -1, 0, 0, jn.field_d);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "op.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -52,21 +52,21 @@ final class op {
         on var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var5 = (rs) (gg.field_F.e((byte) 94));
+          var5 = (rs) (gg.field_F.first((byte) 94));
           while (var5 != null) {
-            tc.a(param0, var5, (byte) 105);
-            var5 = (rs) (gg.field_F.a((byte) 123));
+            IntrusiveNode.a(param0, var5, (byte) 105);
+            var5 = (rs) (gg.field_F.next((byte) 123));
           }
           if (!param1) {
             var4 = (nr) null;
             op.a(108, -59, (nr) null, (nr) null, -23, 0);
           }
-          var6 = (on) (ss.field_t.e((byte) 112));
+          var6 = (on) (ss.field_t.first((byte) 112));
           while (var6 != null) {
             s.a(127, param0, var6);
-            var6 = (on) (ss.field_t.a((byte) 123));
+            var6 = (on) (ss.field_t.next((byte) 123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -92,7 +92,7 @@ final class op {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        bv var5 = null;
+        CipherPacketBuffer var5 = null;
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param1);
@@ -127,15 +127,15 @@ final class op {
           }
           var5 = vl.field_n;
           var5.h(32161, param2);
-          var5.field_q = var5.field_q + 1;
-          var4 = var5.field_q;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.b(1, 0);
           if (param0 != 20) {
             stackIn_27_0 = (String) null;
             return stackIn_27_0;
           }
           var5.b(param1, 13851);
-          var5.e(-var4 + var5.field_q, 5930);
+          var5.e(-var4 + var5.position, 5930);
           stackIn_29_0 = null;
           return (String) (stackIn_29_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

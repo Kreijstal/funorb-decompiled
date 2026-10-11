@@ -258,7 +258,7 @@ final class hu {
         return 0;
     }
 
-    final void a(vh param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_g = new gr();
@@ -267,7 +267,7 @@ final class hu {
         this.field_a.a(param0);
         int var2 = param0.k(0);
         if (var2 != 0) {
-          param0.field_q = param0.field_q - 1;
+          param0.position = param0.position - 1;
           this.field_n = new gr();
           this.field_n.a(param0);
           this.field_m = new gr();
@@ -275,7 +275,7 @@ final class hu {
         }
         var2 = param0.k(0);
         if (var2 != 0) {
-          param0.field_q = param0.field_q - 1;
+          param0.position = param0.position - 1;
           this.field_x = new gr();
           this.field_x.a(param0);
           this.field_u = new gr();
@@ -283,7 +283,7 @@ final class hu {
         }
         var2 = param0.k(0);
         if (var2 != 0) {
-          param0.field_q = param0.field_q - 1;
+          param0.position = param0.position - 1;
           this.field_h = new gr();
           this.field_h.a(param0);
           this.field_l = new gr();

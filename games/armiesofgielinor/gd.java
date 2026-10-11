@@ -978,7 +978,7 @@ final class gd extends kk {
           field_x = 0;
         }
         for (var8Lifetime1 = 0; var8Lifetime1 < this.field_Y; var8Lifetime1++) {
-          L45: {
+          regionExit1: {
             if (this.field_R[var8Lifetime1] != -2) {
               var9 = this.field_jb[var8Lifetime1];
               var10 = this.field_bb[var8Lifetime1];
@@ -1025,7 +1025,7 @@ final class gd extends kk {
                       var28 = field_T[var27];
                       if (var28 == 64) {
                         if (field_x == 512) {
-                          break L45;
+                          break regionExit1;
                         }
                         fieldTemp$7 = field_x;
                         field_x = field_x + 1;
@@ -1040,7 +1040,7 @@ final class gd extends kk {
                     }
                   }
                 }
-                break L45;
+                break regionExit1;
               }
               if (param1 &&
                 this.a(ot.field_G + tm.field_c, vl.field_j + tm.field_j, field_V[var9], field_V[var10], field_V[var11], var12, var13, var14_int)) {
@@ -1067,7 +1067,7 @@ final class gd extends kk {
                     var16Lifetime2 = field_T[var15_intLifetime2];
                     if (var16Lifetime2 == 64) {
                       if (field_x == 512) {
-                        break L45;
+                        break regionExit1;
                       }
                       fieldTemp$14 = field_x;
                       field_x = field_x + 1;

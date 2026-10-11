@@ -4,7 +4,7 @@
 final class rg {
     int field_f;
     int[] field_i;
-    static wk[] field_h;
+    static RgbSprite[] field_h;
     static int[] field_m;
     int field_e;
     String field_k;
@@ -14,16 +14,16 @@ final class rg {
     rg[] field_a;
     static String field_l;
     static String field_d;
-    wk field_c;
+    RgbSprite field_c;
 
-    final int a(int param0, int param1, int param2, int param3, ci param4, int param5, int param6) {
+    final int a(int param0, int param1, int param2, int param3, TutorialController param4, int param5, int param6) {
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
-        wk stackIn_57_0 = null;
+        RgbSprite stackIn_57_0 = null;
         int stackIn_57_1 = 0;
         int stackIn_57_2 = 0;
         int stackIn_58_3 = 0;
-        wk stackIn_60_0 = null;
+        RgbSprite stackIn_60_0 = null;
         int stackIn_60_1 = 0;
         int stackIn_60_2 = 0;
         int stackIn_61_3;
@@ -43,7 +43,7 @@ final class rg {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param3 != 40) {
             rg.a(-65);
@@ -71,12 +71,12 @@ final class rg {
           var11 = stackIn_14_0;
           if (param0 <= 0 &&
             this.field_j != null) {
-            go.field_e.f(130 + param2, 177, var11);
+            TeamRoster.field_e.f(130 + param2, 177, var11);
             if (param0 == 0 &&
               ml.a(212, 165, 20, false)) {
               vi.field_f = fo.a(4800, rr.field_a, new String[]{this.field_j.field_k});
               var9 = 40;
-              go.field_e.f(db.a(true, 130 + param2), u.a(177, (byte) 94), 128);
+              TeamRoster.field_e.f(db.a(true, 130 + param2), u.a(177, (byte) 94), 128);
             }
             this.field_c.e(db.a(true, param2 + 145), u.a(192, (byte) 94), var11);
             km.field_h[1].e(db.a(true, 142 + param2), u.a(189, (byte) 94), var11);
@@ -102,11 +102,11 @@ final class rg {
                 ml.a(var15, var14, 20, false)) {
                 vi.field_f = this.field_a[var17].field_k;
                 var9 = 50 + var17;
-                go.field_e.f(db.a(true, var14 - 35), u.a(var15 - 35, (byte) 94), 128);
+                TeamRoster.field_e.f(db.a(true, var14 - 35), u.a(var15 - 35, (byte) 94), 128);
               }
               if (param0 < 0 &&
                 param6 == var17) {
-                go.field_e.f(db.a(true, var14 - 35), u.a(var15 - 35, (byte) 94), -param0);
+                TeamRoster.field_e.f(db.a(true, var14 - 35), u.a(var15 - 35, (byte) 94), -param0);
               }
               stackIn_57_0 = this.field_a[var17].field_c;
               stackIn_57_1 = db.a(true, -20 + var14);
@@ -116,7 +116,7 @@ final class rg {
               } else {
                 stackIn_58_3 = 256;
               }
-              ((wk) (Object) stackIn_57_0).e(stackIn_57_1, stackIn_57_2, stackIn_58_3);
+              ((RgbSprite) (Object) stackIn_57_0).e(stackIn_57_1, stackIn_57_2, stackIn_58_3);
               stackIn_60_0 = km.field_h[1];
               stackIn_60_1 = db.a(true, var14 - 23);
               stackIn_60_2 = u.a(-23 + var15, (byte) 94);
@@ -125,7 +125,7 @@ final class rg {
               } else {
                 stackIn_61_3 = var11;
               }
-              ((wk) (Object) stackIn_60_0).e(stackIn_60_1, stackIn_60_2, stackIn_61_3);
+              ((RgbSprite) (Object) stackIn_60_0).e(stackIn_60_1, stackIn_60_2, stackIn_61_3);
               var17++;
             }
           } else {
@@ -138,20 +138,20 @@ final class rg {
                   ml.a(var15, var14, 20, false)) {
                   vi.field_f = fq.field_f[this.field_i[var13]];
                   var9 = 50 + var13;
-                  go.field_e.f(db.a(true, -35 + var14), u.a(-35 + var15, (byte) 94), 128);
+                  TeamRoster.field_e.f(db.a(true, -35 + var14), u.a(-35 + var15, (byte) 94), 128);
                 }
                 if (ev.field_d == this.field_i[var13]) {
-                  go.field_e.f(db.a(true, -35 + var14), u.a(var15 - 35, (byte) 94), param1);
+                  TeamRoster.field_e.f(db.a(true, -35 + var14), u.a(var15 - 35, (byte) 94), param1);
                 }
                 if (this.field_i[var13] == ab.field_a) {
-                  go.field_e.f(db.a(true, var14 - 35), u.a(var15 - 35, (byte) 94), 256 - param1);
+                  TeamRoster.field_e.f(db.a(true, var14 - 35), u.a(var15 - 35, (byte) 94), 256 - param1);
                 }
-                lf.field_h[uc.field_d[this.field_i[var13]][2]].g(db.a(true, var14 - 20), u.a(-20 + var15, (byte) 94));
+                lf.field_h[uc.spellDefinitions[this.field_i[var13]][2]].g(db.a(true, var14 - 20), u.a(-20 + var15, (byte) 94));
                 if (ev.field_d == this.field_i[var13]) {
-                  lf.field_h[uc.field_d[this.field_i[var13]][2]].f(db.a(true, -20 + var14), u.a(var15 - 20, (byte) 94), param1);
+                  lf.field_h[uc.spellDefinitions[this.field_i[var13]][2]].f(db.a(true, -20 + var14), u.a(var15 - 20, (byte) 94), param1);
                 }
                 if (this.field_i[var13] == ab.field_a) {
-                  lf.field_h[uc.field_d[this.field_i[var13]][2]].f(db.a(true, var14 - 20), u.a(var15 - 20, (byte) 94), 256 - param1);
+                  lf.field_h[uc.spellDefinitions[this.field_i[var13]][2]].f(db.a(true, var14 - 20), u.a(var15 - 20, (byte) 94), 256 - param1);
                 }
                 km.field_h[0].g(db.a(true, -23 + var14), u.a(var15 - 23, (byte) 94));
               }

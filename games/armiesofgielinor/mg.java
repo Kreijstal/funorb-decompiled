@@ -5,14 +5,14 @@ abstract class mg {
     static String field_c;
     static String field_b;
     static int field_f;
-    static bv field_e;
-    static wk field_d;
+    static CipherPacketBuffer field_e;
+    static RgbSprite field_d;
     static String field_a;
     static int field_g;
 
     abstract void a(byte param0, byte[] param1);
 
-    final static wk[] a(int param0, int param1, byte param2, int param3, int param4) {
+    final static RgbSprite[] a(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 <= -23) {
           return lf.a(param3, 1, param4, 1, 3, param1, -1, 1, param0);
         }
@@ -51,7 +51,7 @@ abstract class mg {
           Throwable decompiledCaughtException = null;
           Throwable var2 = null;
           RuntimeException var2_ref = null;
-          var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             try {
               var9 = param1.getParameter("cookieprefix");

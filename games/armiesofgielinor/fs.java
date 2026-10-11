@@ -22,58 +22,58 @@ final class fs {
         int var11 = 0;
         int var12 = 0;
         int var10Lifetime1;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1) {
             field_a = (String) null;
           }
           if (param2 &&
-            null == vs.field_e[param5].field_c) {
+            null == vs.field_e[param5].occupant) {
             return;
           }
           var9_int = param5 + og.field_p[param5];
-          if (vs.field_e[param5].field_h == 3) {
+          if (vs.field_e[param5].terrainType == 3) {
             eq.$cfr$intArgs$a$de73e65787eb(20 + param0, true, 126, var9_int, param3, false, 40 + param4, param7);
           }
-          rl.a(1, param5, param4, false, param0);
-          var10_ref_vb = (vb) (jf.field_C.field_pc.e((byte) 122));
+          KingBlackDragonEvent.a(1, param5, param4, false, param0);
+          var10_ref_vb = (vb) (jf.field_C.field_pc.first((byte) 122));
           while (var10_ref_vb != null) {
             if (~param5 == ~var10_ref_vb.field_x) {
               var10_ref_vb.a(ug.field_b, 31785, false);
             }
-            var10_ref_vb = (vb) (jf.field_C.field_pc.a((byte) 123));
+            var10_ref_vb = (vb) (jf.field_C.field_pc.next((byte) 123));
           }
-          if (vs.field_e[param5].field_h == 3) {
+          if (vs.field_e[param5].terrainType == 3) {
             stackIn_20_0 = param0 + 20;
             stackIn_20_1 = false;
             stackIn_20_2 = 126;
             stackIn_20_3 = var9_int;
             stackIn_20_4 = param3;
-            stackIn_21_5 = (null != vs.field_e[param5].field_c);
+            stackIn_21_5 = (null != vs.field_e[param5].occupant);
             eq.$cfr$intArgs$a$de73e65787eb(stackIn_20_0, stackIn_20_1, stackIn_20_2, stackIn_20_3, stackIn_20_4, stackIn_21_5, 40 + param4, param7);
           }
-          if (vs.field_e[param5].c((byte) -79)) {
-            var10 = vs.field_e[param5].b((byte) -56);
+          if (vs.field_e[param5].hasExplicitOwner((byte) -79)) {
+            var10 = vs.field_e[param5].getExplicitOwner((byte) -56);
             var11 = 0;
             if (param6 == 0 ||
-              vs.field_e[param5 - 1].b((byte) -55) != var10) {
+              vs.field_e[param5 - 1].getExplicitOwner((byte) -55) != var10) {
               var11 = var11 | 1;
             }
             if (param8 == 0 ||
-              vs.field_e[param5 - ks.field_y].b((byte) -22) != var10) {
+              vs.field_e[param5 - ks.field_y].getExplicitOwner((byte) -22) != var10) {
               var11 = var11 | 2;
             }
             if (-1 + ks.field_y == param6 ||
-              var10 != vs.field_e[param5 + 1].b((byte) -90)) {
+              var10 != vs.field_e[param5 + 1].getExplicitOwner((byte) -90)) {
               var11 = var11 | 4;
             }
             if (param8 == -1 + ef.field_c ||
-              var10 != vs.field_e[param5 + ks.field_y].b((byte) -75)) {
+              var10 != vs.field_e[param5 + ks.field_y].getExplicitOwner((byte) -75)) {
               var11 = var11 | 8;
             }
             dm.a(var10, false, param0 + 20, param4 + 40, var11, false);
           }
-          var10Lifetime1 = bv.field_w.b(31, param8, param6, -1);
+          var10Lifetime1 = CipherPacketBuffer.currentBattlefield.b(31, param8, param6, -1);
           if ((2 & var10Lifetime1) == 0) {
             return;
           }
@@ -208,14 +208,14 @@ final class fs {
 
     final static void a(int param0, String param1, String param2, int param3, int param4) {
         try {
-          qj.field_z.field_I = param1;
-          qj.field_z.field_X = param2;
-          qj.field_z.field_N = param0;
+          UpkeepEvent.field_z.field_I = param1;
+          UpkeepEvent.field_z.field_X = param2;
+          UpkeepEvent.field_z.field_N = param0;
           int var5_int = 112 % ((param3 + 51) / 39);
-          qj.field_z.field_gb = qj.field_z.field_gb + rb.field_b.field_gb;
+          UpkeepEvent.field_z.field_gb = UpkeepEvent.field_z.field_gb + rb.field_b.field_gb;
           rb.field_b.field_S = rb.field_b.field_S + rb.field_b.field_gb;
           rb.field_b.field_gb = param4;
-          qj.field_z.field_gb = qj.field_z.field_gb - rb.field_b.field_gb;
+          UpkeepEvent.field_z.field_gb = UpkeepEvent.field_z.field_gb - rb.field_b.field_gb;
           rb.field_b.field_S = rb.field_b.field_S - rb.field_b.field_gb;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "fs.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

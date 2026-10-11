@@ -6,7 +6,7 @@ final class sb extends rb implements fb, rp {
     static int[] field_g;
     static je field_i;
     static String field_f;
-    static vh field_h;
+    static PacketBuffer field_h;
     static int field_d;
     static kl field_e;
 
@@ -76,7 +76,7 @@ final class sb extends rb implements fb, rp {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        return qq.field_z;
+        return StateChangeEvent.field_z;
     }
 
     final static rn a(String param0, byte param1) {
@@ -95,7 +95,7 @@ final class sb extends rb implements fb, rp {
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = param0.length();
           if (0 == var2_int) {
@@ -189,7 +189,7 @@ final class sb extends rb implements fb, rp {
     public final void a(fn param0, int param1) {
         try {
           if (param1 != 80) {
-            field_h = (vh) null;
+            field_h = (PacketBuffer) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "sb.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

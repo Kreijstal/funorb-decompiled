@@ -24,7 +24,7 @@ final class k {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 == null) {
             stackIn_3_0 = null;

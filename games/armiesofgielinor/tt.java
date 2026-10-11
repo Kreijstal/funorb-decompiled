@@ -3,9 +3,9 @@
  */
 final class tt {
     static int field_c;
-    private at[] field_b;
+    private NodeDeque[] field_b;
     static String[] field_a;
-    static wk[] field_d;
+    static RgbSprite[] field_d;
 
     final String[] a(int param0) {
         int var4_int = 0;
@@ -23,7 +23,7 @@ final class tt {
         u var7_ref_u;
         int var8;
         int var6Lifetime1;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = param0;
         var3 = new String[this.field_b.length][];
         for (var4_int = 0; this.field_b.length > var4_int; var4_int++) {
@@ -57,19 +57,19 @@ final class tt {
 
     final void a(byte param0) {
         int var3 = 0;
-        at var4 = null;
+        NodeDeque var4 = null;
         bb var5 = null;
         u var6 = null;
-        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
-        at[] var8 = this.field_b;
-        at[] var2 = var8;
+        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        NodeDeque[] var8 = this.field_b;
+        NodeDeque[] var2 = var8;
         for (var3 = 0; var8.length > var3; var3++) {
           var4 = var8[var3];
           var5 = new bb(var4);
           var6 = (u) (var5.c(50));
           while (var6 != null) {
             if (var6.field_m instanceof up) {
-              var6.d(87);
+              var6.unlink(87);
             }
             var6 = (u) (var5.b(50));
           }
@@ -92,7 +92,7 @@ final class tt {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 >= -10 &&
             param0 >= -10 &&
@@ -116,7 +116,7 @@ final class tt {
               }
             }
             if (param3) {
-              field_d = (wk[]) null;
+              field_d = (RgbSprite[]) null;
             }
             stackIn_24_0 = -1;
             return stackIn_24_0;
@@ -138,7 +138,7 @@ final class tt {
     }
 
     final void b(int param0, int param1) {
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         bb var3 = new bb(this.field_b[param1]);
         if (param0 != 244) {
           return;
@@ -146,7 +146,7 @@ final class tt {
         u var4 = (u) (var3.c(50));
         while (var4 != null) {
           if (var4.field_m instanceof up) {
-            var4.d(-115);
+            var4.unlink(-115);
           }
           var4 = (u) (var3.b(50));
         }
@@ -161,7 +161,7 @@ final class tt {
     }
 
     final boolean a(byte param0, int param1) {
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         bb var3 = new bb(this.field_b[param1]);
         if (param0 > -49) {
           return false;
@@ -177,7 +177,7 @@ final class tt {
     }
 
     final boolean a(int param0, int param1) {
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         bb var3 = new bb(this.field_b[param0]);
         u var4 = (u) (var3.c(50));
         if (param1 > -46) {
@@ -194,9 +194,9 @@ final class tt {
 
     tt(int param0) {
         int var2 = 0;
-        this.field_b = new at[param0];
+        this.field_b = new NodeDeque[param0];
         for (var2 = 0; var2 < this.field_b.length; var2++) {
-          this.field_b[var2] = new at();
+          this.field_b[var2] = new NodeDeque();
         }
     }
 

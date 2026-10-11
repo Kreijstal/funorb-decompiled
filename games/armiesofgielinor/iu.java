@@ -15,7 +15,7 @@ class iu {
     private boolean field_v;
     private boolean field_o;
     boolean field_c;
-    ic field_q;
+    GameplayController field_q;
     static String field_l;
     static String field_r;
     int field_k;
@@ -28,8 +28,8 @@ class iu {
     static String field_u;
 
     private final boolean c(byte param0) {
-        if (this.field_q.field_xb.field_t[1].b(false) == 0 &&
-          this.field_q.field_xb.field_Eb[pl.field_s[0]].field_a == 0) {
+        if (this.field_q.battlefield.unitsByPlayer[1].b(false) == 0 &&
+          this.field_q.battlefield.tiles[pl.field_s[0]].ownerPlayer == 0) {
           return true;
         }
         if (param0 != -62) {
@@ -50,7 +50,7 @@ class iu {
             this.field_c) {
             this.field_a = 50 + rs.field_n.a(this.field_e, 220, 0);
             this.field_f = 240;
-            if (ArmiesOfGielinor.field_M) {
+            if (ArmiesOfGielinor.obfuscationControl) {
               this.field_a = 40;
               if (this.field_k == 34) {
                 this.field_f = 100;
@@ -83,7 +83,7 @@ class iu {
     void b(int param0, int param1, int param2) {
         int var4;
         int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 != -3) {
           return;
         }
@@ -95,16 +95,16 @@ class iu {
           this.b(28, -30659);
           return;
         }
-        L2: {
+        regionExit1: {
           boolean decompiledFrameRemainder1 = true;
-          L4: {
-            L5: {
-              L6: {
-                L7: {
-                  L8: {
-                    L9: {
-                      L10: {
-                        L11: {
+          regionExit2: {
+            regionExit3: {
+              regionExit4: {
+                regionExit5: {
+                  regionExit6: {
+                    regionExit7: {
+                      regionExit8: {
+                        regionExit9: {
                           boolean decompiledFrameRemainder22 = true;
                           boolean decompiledFrameRemainder21 = true;
                           boolean decompiledFrameRemainder20 = true;
@@ -130,11 +130,11 @@ class iu {
                           var4 = this.field_k;
                           if (var4 == 0) {
                             if (param2 != 1) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(1, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           } else {
                             if ((var4 != 1) &&
@@ -170,35 +170,35 @@ class iu {
                               (decompiledFrameRemainder22 = (20 != var4))) {
                               if (var4 == 21 &&
                                 var5 == 0) {
-                                break L11;
+                                break regionExit9;
                               }
                               if (var4 == 29) {
-                                break L10;
+                                break regionExit8;
                               }
                               if (var4 == 22) {
-                                break L9;
+                                break regionExit7;
                               }
                               if (var4 == 23 &&
                                 var5 == 0) {
-                                break L8;
+                                break regionExit6;
                               }
                               if (var4 == 24) {
-                                break L7;
+                                break regionExit5;
                               }
                               if (var4 == 25 &&
                                 var5 == 0) {
-                                break L6;
+                                break regionExit4;
                               }
                               if (var4 == 26) {
-                                break L5;
+                                break regionExit3;
                               }
                               if (27 == var4 &&
                                 var5 == 0) {
-                                break L4;
+                                break regionExit2;
                               }
                               decompiledFrameRemainder1 = (var4 != 34);
                               if (decompiledFrameRemainder1) {
-                                break L2;
+                                break regionExit1;
                               }
                             }
                           }
@@ -226,11 +226,11 @@ class iu {
                             (decompiledFrameRemainder1) &&
                             (decompiledFrameRemainder0)) {
                             if (param2 != 2) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(2, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -256,11 +256,11 @@ class iu {
                             (decompiledFrameRemainder2) &&
                             (decompiledFrameRemainder1)) {
                             if (param2 != 3) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(3, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -286,16 +286,16 @@ class iu {
                             (decompiledFrameRemainder1)) {
                             if (2 != param2) {
                               if (param2 != 4) {
-                                break L2;
+                                break regionExit1;
                               }
                               this.b(5, param1 - 30656);
                               if (var5 == 0) {
-                                break L2;
+                                break regionExit1;
                               }
                             }
                             this.b(4, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -319,11 +319,11 @@ class iu {
                             (decompiledFrameRemainder4) &&
                             (decompiledFrameRemainder1)) {
                             if (param2 != 4) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(5, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -348,27 +348,27 @@ class iu {
                             if (param2 == 2) {
                               this.b(6, -30659);
                               if (var5 == 0) {
-                                break L2;
+                                break regionExit1;
                               }
                             }
                             if (param2 == 6) {
                               this.b(8, -30659);
                               if (var5 == 0) {
-                                break L2;
+                                break regionExit1;
                               }
                             }
                             if (7 == param2) {
                               this.b(9, -30659);
                               if (var5 == 0) {
-                                break L2;
+                                break regionExit1;
                               }
                             }
                             if (param2 != 9) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(10, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -392,11 +392,11 @@ class iu {
                             if (param2 != 18 &&
                               5 != param2 &&
                               param2 != 9) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(7, param1 ^ 30656);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -420,20 +420,20 @@ class iu {
                               if (param2 == 7) {
                                 this.b(9, param1 ^ 30656);
                                 if (var5 == 0) {
-                                  break L2;
+                                  break regionExit1;
                                 }
                               }
                               if (param2 != 9) {
-                                break L2;
+                                break regionExit1;
                               }
                               this.b(10, param1 - 30656);
                               if (var5 == 0) {
-                                break L2;
+                                break regionExit1;
                               }
                             }
                             this.b(8, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -455,15 +455,15 @@ class iu {
                             if (param2 == 2) {
                               this.b(30, -30659);
                               if (var5 == 0) {
-                                break L2;
+                                break regionExit1;
                               }
                             }
                             if (param2 != 14) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(12, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -484,15 +484,15 @@ class iu {
                             if (param2 == 2) {
                               this.b(30, -30659);
                               if (var5 == 0) {
-                                break L2;
+                                break regionExit1;
                               }
                             }
                             if (14 != param2) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(12, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -512,15 +512,15 @@ class iu {
                             if (param2 == 2) {
                               this.b(11, -30659);
                               if (var5 == 0) {
-                                break L2;
+                                break regionExit1;
                               }
                             }
                             if (param2 != 14) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(12, param1 ^ 30656);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -537,11 +537,11 @@ class iu {
                             (decompiledFrameRemainder11) &&
                             (decompiledFrameRemainder1)) {
                             if (param2 != 14) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(12, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -557,11 +557,11 @@ class iu {
                             (decompiledFrameRemainder12) &&
                             (decompiledFrameRemainder1)) {
                             if (param2 != 14) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(12, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -580,33 +580,33 @@ class iu {
                               if (this.field_o ||
                                 param2 != 7) {
                                 if (param2 != 2) {
-                                  break L2;
+                                  break regionExit1;
                                 }
                                 if (!this.field_s) {
                                   this.b(13, -30659);
                                   if (var5 == 0) {
-                                    break L2;
+                                    break regionExit1;
                                   }
                                 }
                                 if (this.field_o) {
                                   this.b(31, param1 - 30656);
                                   if (var5 == 0) {
-                                    break L2;
+                                    break regionExit1;
                                   }
                                 }
                                 this.b(16, param1 - 30656);
                                 if (var5 == 0) {
-                                  break L2;
+                                  break regionExit1;
                                 }
                               }
                               this.b(17, param1 - 30656);
                               if (var5 == 0) {
-                                break L2;
+                                break regionExit1;
                               }
                             }
                             this.b(14, param1 ^ 30656);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -620,11 +620,11 @@ class iu {
                             (decompiledFrameRemainder14) &&
                             (decompiledFrameRemainder1)) {
                             if (6 != param2) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(14, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -647,11 +647,11 @@ class iu {
                               }
                             }
                             if (2 != param2) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(15, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -680,11 +680,11 @@ class iu {
                             (decompiledFrameRemainder17) &&
                             (decompiledFrameRemainder1)) {
                             if (7 != param2) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(17, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -704,11 +704,11 @@ class iu {
                               }
                             }
                             if (param2 != 2) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(18, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
@@ -731,32 +731,32 @@ class iu {
                             (decompiledFrameRemainder20) &&
                             (decompiledFrameRemainder1)) {
                             if (param2 != 2) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(32, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
                             (decompiledFrameRemainder21) &&
                             (decompiledFrameRemainder1)) {
                             if (param2 != 2) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(19, -30659);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if ((decompiledFrameRemainder22) &&
                             (decompiledFrameRemainder1)) {
                             if (param2 != 3) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(20, param1 - 30656);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                           if (decompiledFrameRemainder1) {
@@ -764,95 +764,95 @@ class iu {
                               this.b(21, -30659);
                             }
                             if (param2 != 16) {
-                              break L2;
+                              break regionExit1;
                             }
                             this.b(29, param1 - 30656);
                             if (var5 == 0) {
-                              break L2;
+                              break regionExit1;
                             }
                           }
                         }
                         if (decompiledFrameRemainder1) {
                           if (param2 != 16) {
-                            break L2;
+                            break regionExit1;
                           }
                           this.b(29, -30659);
                           if (var5 == 0) {
-                            break L2;
+                            break regionExit1;
                           }
                         }
                       }
                       if (decompiledFrameRemainder1) {
                         if (param2 != 17) {
-                          break L2;
+                          break regionExit1;
                         }
                         this.b(22, -30659);
                         if (var5 == 0) {
-                          break L2;
+                          break regionExit1;
                         }
                       }
                     }
                     if (decompiledFrameRemainder1) {
                       if (10 != param2) {
-                        break L2;
+                        break regionExit1;
                       }
                       this.b(23, -30659);
                       if (var5 == 0) {
-                        break L2;
+                        break regionExit1;
                       }
                     }
                   }
                   if (decompiledFrameRemainder1) {
                     if (11 != param2) {
-                      break L2;
+                      break regionExit1;
                     }
                     this.b(24, -30659);
                     if (var5 == 0) {
-                      break L2;
+                      break regionExit1;
                     }
                   }
                 }
                 if (decompiledFrameRemainder1) {
                   if (param2 != 12) {
-                    break L2;
+                    break regionExit1;
                   }
                   this.b(25, -30659);
                   if (var5 == 0) {
-                    break L2;
+                    break regionExit1;
                   }
                 }
               }
               if (decompiledFrameRemainder1) {
                 if (param2 != 2) {
-                  break L2;
+                  break regionExit1;
                 }
                 this.b(26, param1 - 30656);
                 if (var5 == 0) {
-                  break L2;
+                  break regionExit1;
                 }
               }
             }
             if (decompiledFrameRemainder1) {
               if (param2 != 2) {
-                break L2;
+                break regionExit1;
               }
               this.b(27, -30659);
               if (var5 == 0) {
-                break L2;
+                break regionExit1;
               }
             }
           }
           if (decompiledFrameRemainder1) {
             if (param2 != 13 &&
               param2 != 15) {
-              break L2;
+              break regionExit1;
             }
             if (!this.c((byte) -62)) {
-              break L2;
+              break regionExit1;
             }
             this.b(28, param1 - 30656);
             if (var5 == 0) {
-              break L2;
+              break regionExit1;
             }
           }
           if (param2 == 2) {
@@ -880,7 +880,7 @@ class iu {
         if (this.field_k != 33) {
           if (this.field_c) {
             var2 = this.field_a;
-            if (ArmiesOfGielinor.field_M) {
+            if (ArmiesOfGielinor.obfuscationControl) {
               var2 = 0;
             }
           }
@@ -956,23 +956,23 @@ class iu {
     private final void b(int param0, int param1) {
         int var3;
         int var4;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_c = true;
         this.field_k = param0;
         this.d((byte) 37);
         if (param1 != -30659) {
           this.field_g = -114;
         }
-        L1: {
-          L2: {
-            L3: {
-              L4: {
-                L5: {
-                  L6: {
-                    L7: {
-                      L8: {
-                        L9: {
-                          L10: {
+        regionExit1: {
+          regionExit2: {
+            regionExit3: {
+              regionExit4: {
+                regionExit5: {
+                  regionExit6: {
+                    regionExit7: {
+                      regionExit8: {
+                        regionExit9: {
+                          regionExit10: {
                             boolean decompiledFrameRemainder23 = true;
                             boolean decompiledFrameRemainder22 = true;
                             boolean decompiledFrameRemainder21 = true;
@@ -1002,8 +1002,8 @@ class iu {
                               var4 == 0) {
                               this.field_w = 2;
                               this.field_m = 150;
-                              this.field_e = ci.field_f[0];
-                              break L2;
+                              this.field_e = TutorialController.field_f[0];
+                              break regionExit2;
                             } else if (var3 != 1 ||
                               var4 != 0) {
                               decompiledFrameRemainder0 = (2 != var3 ||
@@ -1044,32 +1044,32 @@ class iu {
                                 (decompiledFrameRemainder22 = (var3 != 21)) &&
                                 (decompiledFrameRemainder23 = (var3 != 22))) {
                                 if (var3 == 23) {
-                                  break L10;
+                                  break regionExit10;
                                 }
                                 if (var3 == 24 &&
                                   var4 == 0) {
-                                  break L9;
+                                  break regionExit9;
                                 }
                                 if (var3 == 25) {
-                                  break L8;
+                                  break regionExit8;
                                 }
                                 if (26 == var3) {
-                                  break L7;
+                                  break regionExit7;
                                 }
                                 if (var3 == 27 &&
                                   var4 == 0) {
-                                  break L6;
+                                  break regionExit6;
                                 }
                                 switch (var3) {
                                   case 28:
-                                    break L5;
+                                    break regionExit5;
                                   case 29:
-                                    break L4;
+                                    break regionExit4;
                                   case 34:
-                                    break L3;
+                                    break regionExit3;
                                   default:
                                     this.a(this.field_e, (byte) 112);
-                                    break L1;
+                                    break regionExit1;
                                 }
                               }
                             }
@@ -1097,9 +1097,9 @@ class iu {
                               (decompiledFrameRemainder2) &&
                               (decompiledFrameRemainder1) &&
                               (decompiledFrameRemainder0)) {
-                              this.field_e = ci.field_f[1];
+                              this.field_e = TutorialController.field_f[1];
                               this.field_w = 0;
-                              break L2;
+                              break regionExit2;
                             }
                             if ((decompiledFrameRemainder23) &&
                               (decompiledFrameRemainder22) &&
@@ -1128,7 +1128,7 @@ class iu {
                               this.a(3, 4, param1 + 30685);
                               this.field_w = 2;
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1154,10 +1154,10 @@ class iu {
                               (decompiledFrameRemainder3) &&
                               (decompiledFrameRemainder2)) {
                               this.d(-4);
-                              this.field_e = ci.field_f[2];
+                              this.field_e = TutorialController.field_f[2];
                               this.field_w = 0;
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1181,11 +1181,11 @@ class iu {
                               (decompiledFrameRemainder5) &&
                               (decompiledFrameRemainder4) &&
                               (decompiledFrameRemainder3)) {
-                              this.field_e = ci.field_f[3];
+                              this.field_e = TutorialController.field_f[3];
                               this.field_w = 1;
                               this.a((byte) -122);
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1208,11 +1208,11 @@ class iu {
                               (decompiledFrameRemainder6) &&
                               (decompiledFrameRemainder5) &&
                               (decompiledFrameRemainder4)) {
-                              this.field_e = ci.field_f[4];
+                              this.field_e = TutorialController.field_f[4];
                               this.field_w = 0;
                               this.f((byte) -34);
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1235,9 +1235,9 @@ class iu {
                               (decompiledFrameRemainder6) &&
                               (decompiledFrameRemainder5)) {
                               this.field_w = 1;
-                              this.field_e = ci.field_f[5];
+                              this.field_e = TutorialController.field_f[5];
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1259,9 +1259,9 @@ class iu {
                               (decompiledFrameRemainder7) &&
                               (decompiledFrameRemainder6)) {
                               this.field_w = 1;
-                              this.field_e = ci.field_f[6];
+                              this.field_e = TutorialController.field_f[6];
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1282,10 +1282,10 @@ class iu {
                               (decompiledFrameRemainder8) &&
                               (decompiledFrameRemainder7)) {
                               this.field_w = 0;
-                              this.field_e = ci.field_f[8];
+                              this.field_e = TutorialController.field_f[8];
                               this.field_s = true;
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1306,9 +1306,9 @@ class iu {
                               (decompiledFrameRemainder8)) {
                               this.field_o = true;
                               this.field_w = 0;
-                              this.field_e = ci.field_f[7];
+                              this.field_e = TutorialController.field_f[7];
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1327,9 +1327,9 @@ class iu {
                               (decompiledFrameRemainder10) &&
                               (decompiledFrameRemainder9)) {
                               this.field_w = 0;
-                              this.field_e = ci.field_f[25];
+                              this.field_e = TutorialController.field_f[25];
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1348,9 +1348,9 @@ class iu {
                               (decompiledFrameRemainder10)) {
                               this.b((byte) 113);
                               this.field_w = 1;
-                              this.field_e = ci.field_f[9];
+                              this.field_e = TutorialController.field_f[9];
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1368,9 +1368,9 @@ class iu {
                               (decompiledFrameRemainder11)) {
                               this.b((byte) 111);
                               this.field_w = 1;
-                              this.field_e = ci.field_f[10];
+                              this.field_e = TutorialController.field_f[10];
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1386,10 +1386,10 @@ class iu {
                               (decompiledFrameRemainder13) &&
                               (decompiledFrameRemainder12)) {
                               this.field_w = 0;
-                              this.field_e = ci.field_f[11];
+                              this.field_e = TutorialController.field_f[11];
                               this.e(31);
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1404,10 +1404,10 @@ class iu {
                               (decompiledFrameRemainder14) &&
                               (decompiledFrameRemainder13)) {
                               this.field_w = 1;
-                              this.field_e = ci.field_f[12];
+                              this.field_e = TutorialController.field_f[12];
                               this.g(26);
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1420,12 +1420,12 @@ class iu {
                               (decompiledFrameRemainder16) &&
                               (decompiledFrameRemainder15) &&
                               (decompiledFrameRemainder14)) {
-                              this.field_e = ci.field_f[8];
+                              this.field_e = TutorialController.field_f[8];
                               this.f((byte) -34);
                               this.field_s = true;
                               this.field_w = 0;
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1437,12 +1437,12 @@ class iu {
                               (decompiledFrameRemainder17) &&
                               (decompiledFrameRemainder16) &&
                               (decompiledFrameRemainder15)) {
-                              this.field_e = ci.field_f[14];
+                              this.field_e = TutorialController.field_f[14];
                               this.f((byte) -34);
                               this.b((byte) 120);
                               this.field_w = 1;
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1453,11 +1453,11 @@ class iu {
                               (decompiledFrameRemainder18) &&
                               (decompiledFrameRemainder17) &&
                               (decompiledFrameRemainder16)) {
-                              this.field_e = ci.field_f[13];
+                              this.field_e = TutorialController.field_f[13];
                               this.field_w = 1;
                               this.a(5);
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1467,12 +1467,12 @@ class iu {
                               (decompiledFrameRemainder19) &&
                               (decompiledFrameRemainder18) &&
                               (decompiledFrameRemainder17)) {
-                              this.field_e = ci.field_f[7];
+                              this.field_e = TutorialController.field_f[7];
                               this.f((byte) -34);
                               this.field_w = 0;
                               this.field_o = true;
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1481,12 +1481,12 @@ class iu {
                               (decompiledFrameRemainder20) &&
                               (decompiledFrameRemainder19) &&
                               (decompiledFrameRemainder18)) {
-                              this.field_e = ci.field_f[14];
+                              this.field_e = TutorialController.field_f[14];
                               this.f((byte) -34);
                               this.b((byte) 90);
                               this.field_w = 1;
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1494,22 +1494,22 @@ class iu {
                               (decompiledFrameRemainder21) &&
                               (decompiledFrameRemainder20) &&
                               (decompiledFrameRemainder19)) {
-                              this.field_e = ci.field_f[26];
+                              this.field_e = TutorialController.field_f[26];
                               this.field_w = 0;
                               this.j((byte) -119);
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
                               (decompiledFrameRemainder22) &&
                               (decompiledFrameRemainder21) &&
                               (decompiledFrameRemainder20)) {
-                              this.field_e = ci.field_f[27];
+                              this.field_e = TutorialController.field_f[27];
                               this.field_w = 0;
                               this.k((byte) -120);
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
@@ -1520,74 +1520,74 @@ class iu {
                               this.c(param1 ^ -30659);
                               this.a(13, 17, 26);
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if ((decompiledFrameRemainder23) &&
                               (decompiledFrameRemainder22)) {
                               this.field_w = 0;
-                              this.field_e = ci.field_f[15];
+                              this.field_e = TutorialController.field_f[15];
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
                             if (decompiledFrameRemainder23) {
-                              this.field_e = ci.field_f[16];
+                              this.field_e = TutorialController.field_f[16];
                               this.field_w = 1;
                               if (var4 == 0) {
-                                break L2;
+                                break regionExit2;
                               }
                             }
-                            this.field_e = ci.field_f[17];
+                            this.field_e = TutorialController.field_f[17];
                             this.field_w = 1;
                             if (var4 == 0) {
-                              break L2;
+                              break regionExit2;
                             }
                           }
-                          this.field_e = ci.field_f[18];
+                          this.field_e = TutorialController.field_f[18];
                           this.field_w = 1;
                           if (var4 == 0) {
-                            break L2;
+                            break regionExit2;
                           }
                         }
-                        this.field_e = ci.field_f[19];
+                        this.field_e = TutorialController.field_f[19];
                         this.field_w = 1;
                         if (var4 == 0) {
-                          break L2;
+                          break regionExit2;
                         }
                       }
-                      this.field_e = ci.field_f[20];
+                      this.field_e = TutorialController.field_f[20];
                       this.field_w = 0;
                       this.g((byte) 59);
                       if (var4 == 0) {
-                        break L2;
+                        break regionExit2;
                       }
                     }
                     this.field_w = 0;
-                    this.field_e = ci.field_f[21];
+                    this.field_e = TutorialController.field_f[21];
                     this.e((byte) 115);
                     if (var4 == 0) {
-                      break L2;
+                      break regionExit2;
                     }
                   }
-                  this.field_e = ci.field_f[22];
+                  this.field_e = TutorialController.field_f[22];
                   this.f((byte) -34);
                   this.field_w = 1;
                   if (var4 == 0) {
-                    break L2;
+                    break regionExit2;
                   }
                 }
-                this.field_e = ci.field_f[23];
+                this.field_e = TutorialController.field_f[23];
                 this.field_w = 3;
                 this.i((byte) 44);
                 if (var4 == 0) {
-                  break L2;
+                  break regionExit2;
                 }
               }
               this.field_w = 1;
-              this.field_e = ci.field_f[24];
+              this.field_e = TutorialController.field_f[24];
               if (var4 == 0) {
-                break L2;
+                break regionExit2;
               }
             }
             this.field_e = vl.field_m[this.field_p];
@@ -1605,11 +1605,11 @@ class iu {
     }
 
     private final void c(int param0) {
-        this.field_q.field_xb.field_Eb[9 + this.field_q.field_xb.field_v * 12].field_h = 10;
+        this.field_q.battlefield.tiles[9 + this.field_q.battlefield.mapWidth * 12].terrainType = 10;
         nk.a((byte) 106);
-        this.field_q.field_xb.field_l.a((byte) -119, (tc) (new mb(0, 9, 12, -4, 1)));
-        this.field_q.field_xb.field_l.a((byte) -119, (tc) (new mb(0, 15, 13, param0, 1)));
-        this.field_q.field_xb.field_l.a((byte) -119, (tc) (new mb(5, 16, 17, 0, 1)));
+        this.field_q.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new SummonEvent(0, 9, 12, -4, 1)));
+        this.field_q.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new SummonEvent(0, 15, 13, param0, 1)));
+        this.field_q.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new SummonEvent(5, 16, 17, 0, 1)));
         this.field_v = true;
     }
 
@@ -1625,7 +1625,7 @@ class iu {
         int stackIn_12_1;
         int stackIn_12_2;
         int stackIn_12_3;
-        wk[] stackIn_12_4;
+        RgbSprite[] stackIn_12_4;
         int[] stackIn_13_5 = null;
         int stackIn_20_0 = 0;
         String stackIn_24_0 = null;
@@ -1634,7 +1634,7 @@ class iu {
         int var3;
         int var4;
         int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 21) {
           this.field_a = -21;
         }
@@ -1650,7 +1650,7 @@ class iu {
         boolean decompiledFrameRemainder0 = true;
         var2 = so.field_b.field_a;
         var3 = so.field_b.field_g;
-        qn.f(-10 + var2 - this.field_g, -this.field_j + var3 - 10, -10 + var2, var3);
+        SoftwareRaster.f(-10 + var2 - this.field_g, -this.field_j + var3 - 10, -10 + var2, var3);
         fe.b(-10 + (-this.field_g + var2), -10 - this.field_j + var3, this.field_g, this.field_j, io.field_m, nd.field_b, 0, 192);
         if (4 != this.field_w) {
           stackIn_12_0 = -5 + var2 - this.field_g;
@@ -1660,7 +1660,7 @@ class iu {
           stackIn_12_4 = il.field_s;
           if (this.field_w != 2 &&
             wg.a(param0 - 54, -5 - this.field_g + var2, var2 - 15, -45 + var3, var3 - 15)) {
-            stackIn_13_5 = ci.field_e;
+            stackIn_13_5 = TutorialController.field_e;
           } else {
             stackIn_13_5 = nd.field_b;
           }
@@ -1722,10 +1722,10 @@ class iu {
           fe.a(-5 - this.field_g + var2, -45 + var3, -10 + this.field_g, 30, il.field_s, jh.field_k, 0, 192, true);
         }
         if (this.field_e != null) {
-          qn.f(var2 - this.field_g, -this.field_j + var3, var2 - 10, var3 - 45);
+          SoftwareRaster.f(var2 - this.field_g, -this.field_j + var3, var2 - 10, var3 - 45);
           rs.field_n.a(this.field_e, -this.field_g + var2, -this.field_j + var3, 220, 400, 16777215, -1, 0, 0, 0);
         }
-        qn.a();
+        SoftwareRaster.a();
     }
 
     private final void a(int param0, int param1, int param2) {
@@ -1761,7 +1761,7 @@ class iu {
     }
 
     private final void i(byte param0) {
-        rt.d((byte) 113);
+        RevivalEvent.d((byte) 113);
         int var2 = 47 / ((param0 + 75) / 34);
         this.field_q.a(0, (byte) 30, 255);
     }
@@ -1770,7 +1770,7 @@ class iu {
         int var3;
         boolean stackIn_13_1 = false;
         int stackIn_18_1 = 0;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0) {
           this.a((byte) -26);
         }
@@ -1831,7 +1831,7 @@ class iu {
     }
 
     private final void d(int param0) {
-        this.field_q.field_xb.field_l.a((byte) -119, (tc) (new mb(0, 3, 4, 5, 0, true)));
+        this.field_q.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new SummonEvent(0, 3, 4, 5, 0, true)));
         int var2 = -44 % ((-70 - param0) / 43);
     }
 
@@ -1841,7 +1841,7 @@ class iu {
         if (param1 > -108) {
           return -34;
         }
-        var3 = this.field_q.field_xb.field_Eb[param0].field_h;
+        var3 = this.field_q.battlefield.tiles[param0].terrainType;
         var4 = var3;
         if (var4 == 7) {
           return 6;
@@ -1869,7 +1869,7 @@ class iu {
         }
     }
 
-    final static int a(int param0, String param1, int param2, ka param3, String[] param4) {
+    final static int a(int param0, String param1, int param2, BitmapFont param3, String[] param4) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1896,7 +1896,7 @@ class iu {
         int var12 = 0;
         int var13 = 0;
         int var6Lifetime1;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = param3.a(param1);
           if (param0 >= var5_int &&
@@ -1999,7 +1999,7 @@ class iu {
         field_r = null;
     }
 
-    iu(ic param0, int param1) {
+    iu(GameplayController param0, int param1) {
         this.field_g = 240;
         this.field_w = 0;
         this.field_m = 0;
@@ -2014,7 +2014,7 @@ class iu {
         }
     }
 
-    iu(ic param0) {
+    iu(GameplayController param0) {
         this.field_g = 240;
         this.field_w = 0;
         this.field_m = 0;
@@ -2027,9 +2027,9 @@ class iu {
           this.field_v = false;
           this.field_o = false;
           this.b(0, -30659);
-          this.field_q.field_xb.field_Eb[pl.field_s[0]].field_a = 1;
-          this.field_q.field_xb.field_f = true;
-          this.field_q.field_xb.field_z[1][1] = 1;
+          this.field_q.battlefield.tiles[pl.field_s[0]].ownerPlayer = 1;
+          this.field_q.battlefield.field_f = true;
+          this.field_q.battlefield.field_z[1][1] = 1;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "iu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

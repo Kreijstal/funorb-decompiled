@@ -10,13 +10,13 @@ class ev implements ok {
 
     public static void a(int param0) {
         if (param0 != 960112080) {
-          vh var2 = (vh) null;
-          ev.a((vh) null, (byte) 105);
+          PacketBuffer var2 = (PacketBuffer) null;
+          ev.a((PacketBuffer) null, (byte) 105);
         }
         field_e = null;
     }
 
-    final static int[] a(vh param0, byte param1) {
+    final static int[] a(PacketBuffer param0, byte param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -27,7 +27,7 @@ class ev implements ok {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = param0.k(param1 ^ -98);
           if (var2_int == 0) {

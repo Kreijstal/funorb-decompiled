@@ -3,11 +3,11 @@
  */
 abstract class wl extends tj {
     static String field_J;
-    static wk field_N;
+    static RgbSprite field_N;
     static String[] field_M;
     static je field_K;
     static int field_E;
-    static at field_F;
+    static NodeDeque field_F;
     private int field_H;
     gk field_G;
     static String field_I;
@@ -83,10 +83,10 @@ abstract class wl extends tj {
         if (bo.field_b == null ||
           !(this.field_l <= bo.field_b.field_y) ||
           !(bo.field_b.field_v >= this.field_w)) {
-          bo.field_b = new wk(this.field_l, this.field_w);
+          bo.field_b = new RgbSprite(this.field_l, this.field_w);
         }
         vn.a(bo.field_b, 3);
-        qn.b();
+        SoftwareRaster.b();
         this.b(0, 1851680193, 0);
         super.a(-param0 - this.field_B, -param1 - this.field_p, (byte) -106, param3);
         rf.b(-18862);
@@ -195,7 +195,7 @@ abstract class wl extends tj {
           stackIn_25_0 = false;
           stackIn_25_1 = var3;
           stackIn_26_2 = (param1) && (sq.c((byte) -103));
-          rt.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
+          RevivalEvent.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
         }
     }
 
@@ -230,7 +230,7 @@ abstract class wl extends tj {
 
     final static void a(int param0) {
         int var1_int = 0;
-        int var2 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var1_intLifetime1;
         try {
           qc.field_h.a(param0);

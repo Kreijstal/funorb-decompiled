@@ -43,7 +43,7 @@ final class nm extends hn {
         int var11 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_x <= 0) {
             this.a(param2);
@@ -230,7 +230,7 @@ final class nm extends hn {
 
     final synchronized void a(int param0) {
         int var3;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_G > 0 &&
           this.field_p != null) {
           this.field_w.a(param0);
@@ -313,7 +313,7 @@ final class nm extends hn {
         RuntimeException var7 = null;
         int var8 = 0;
         ih var9 = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_F &&
             param1) {
@@ -461,7 +461,7 @@ final class nm extends hn {
         boolean stackIn_24_1 = false;
         je stackIn_27_0 = null;
         boolean stackIn_28_1 = false;
-        id.a(-640 + qn.field_l >> 1, 640 + qn.field_l >> 1, qn.field_g, 0, (byte) 91);
+        id.a(-640 + SoftwareRaster.field_l >> 1, 640 + SoftwareRaster.field_l >> 1, SoftwareRaster.field_g, 0, (byte) 91);
         if (gk.field_J > 0) {
           if (null != dh.field_k) {
             dh.field_k.f(no.field_T.field_S, 0);
@@ -502,8 +502,8 @@ final class nm extends hn {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new li(param2);
-          s.field_e.a((byte) -119, (tc) (var3));
-          hp.a(var3, param1, 25522);
+          s.field_e.a((byte) -119, (IntrusiveNode) (var3));
+          DeathEvent.a(var3, param1, 25522);
           if (param0 == 0) {
             stackIn_4_0 = var3;
             return stackIn_4_0;

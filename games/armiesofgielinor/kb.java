@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class kb extends tc {
+class kb extends IntrusiveNode {
     static int field_A;
     static int[] field_o;
     int field_p;
@@ -85,7 +85,7 @@ class kb extends tc {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_B).append(",").append(this.field_p).append(" ").append(this.field_l).append("x").append(this.field_w);
           if (this.field_v != null) {
@@ -308,24 +308,24 @@ class kb extends tc {
         wc var23;
         wc var27;
         wc var28;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.a(32722, param2, param3, this);
         if (param1 == -6226) {
-          L0: {
+          regionExit1: {
             var5 = this.a(false) ? 1 : 0;
             if (param0) {
               if (el.field_d != 0) {
                 if (var5 == 0) {
-                  if (tr.field_A != 0) {
-                    if (!this.a(iu.field_t, param2, param3, 113, this, ur.field_z, tr.field_A)) {
+                  if (DeployEvent.field_A != 0) {
+                    if (!this.a(iu.field_t, param2, param3, 113, this, ur.field_z, DeployEvent.field_A)) {
                       if (ro.field_ub != 0) {
                         au.field_Ob = ro.field_ub;
-                        as.a(param1 ^ 6225, this.h(21384));
+                        OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                         return param0;
                       }
                       if (au.field_Ob == 0) {
                         au.field_Ob = ro.field_ub;
-                        as.a(param1 ^ 6225, this.h(21384));
+                        OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                         return param0;
                       }
                       this.a(param3, this, sm.field_d, (byte) -127, ko.field_b, param2);
@@ -338,23 +338,23 @@ class kb extends tc {
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
-                        tr.field_A != 0) {
+                        DeployEvent.field_A != 0) {
                         this.f(1);
                       }
                       au.field_Ob = ro.field_ub;
-                      as.a(param1 ^ 6225, this.h(21384));
+                      OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                       return param0;
                     }
                     param0 = false;
                   }
                   if (ro.field_ub != 0) {
                     au.field_Ob = ro.field_ub;
-                    as.a(param1 ^ 6225, this.h(21384));
+                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
                   if (au.field_Ob == 0) {
                     au.field_Ob = ro.field_ub;
-                    as.a(param1 ^ 6225, this.h(21384));
+                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
                   this.a(param3, this, sm.field_d, (byte) -127, ko.field_b, param2);
@@ -367,33 +367,33 @@ class kb extends tc {
                   }
                   if (var7 == 0) {
                     au.field_Ob = ro.field_ub;
-                    as.a(param1 ^ 6225, this.h(21384));
+                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
                   if (var5 == 0) {
                     au.field_Ob = ro.field_ub;
-                    as.a(param1 ^ 6225, this.h(21384));
+                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
-                  if (tr.field_A == 0) {
+                  if (DeployEvent.field_A == 0) {
                     au.field_Ob = ro.field_ub;
-                    as.a(param1 ^ 6225, this.h(21384));
+                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
                   this.f(1);
                   au.field_Ob = ro.field_ub;
-                  as.a(param1 ^ 6225, this.h(21384));
+                  OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                   return param0;
                 }
                 this.a(sm.field_d, param2, param3, ko.field_b, el.field_d, param1 + 6327, this);
               }
-              if (tr.field_A != 0) {
-                if (!this.a(iu.field_t, param2, param3, 113, this, ur.field_z, tr.field_A)) {
+              if (DeployEvent.field_A != 0) {
+                if (!this.a(iu.field_t, param2, param3, 113, this, ur.field_z, DeployEvent.field_A)) {
                   if (var5 == 0) {
                     if (ro.field_ub == 0) {
                       if (au.field_Ob == 0) {
                         au.field_Ob = ro.field_ub;
-                        as.a(param1 ^ 6225, this.h(21384));
+                        OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                         return param0;
                       }
                       this.a(param3, this, sm.field_d, (byte) -127, ko.field_b, param2);
@@ -407,15 +407,15 @@ class kb extends tc {
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
-                        tr.field_A != 0) {
+                        DeployEvent.field_A != 0) {
                         this.f(1);
                         au.field_Ob = ro.field_ub;
-                        as.a(param1 ^ 6225, this.h(21384));
+                        OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                         return param0;
                       }
                     }
                     au.field_Ob = ro.field_ub;
-                    as.a(param1 ^ 6225, this.h(21384));
+                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
                   this.f(1);
@@ -427,11 +427,11 @@ class kb extends tc {
                 }
               }
               if (ro.field_ub != 0) {
-                break L0;
+                break regionExit1;
               }
               if (au.field_Ob == 0) {
                 au.field_Ob = ro.field_ub;
-                as.a(param1 ^ 6225, this.h(21384));
+                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
               this.a(param3, this, sm.field_d, (byte) -127, ko.field_b, param2);
@@ -443,14 +443,14 @@ class kb extends tc {
                 bn.field_f = null;
               }
               if (var7 == 0) {
-                break L0;
+                break regionExit1;
               }
             }
             if (var5 != 0 &&
-              tr.field_A != 0) {
+              DeployEvent.field_A != 0) {
               this.f(1);
               au.field_Ob = ro.field_ub;
-              as.a(param1 ^ 6225, this.h(21384));
+              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
           }
@@ -459,8 +459,8 @@ class kb extends tc {
           var5 = this.a(false) ? 1 : 0;
           if (param0) {
             if (el.field_d == 0) {
-              if (tr.field_A != 0) {
-                if (!this.a(iu.field_t, param2, param3, 113, this, ur.field_z, tr.field_A)) {
+              if (DeployEvent.field_A != 0) {
+                if (!this.a(iu.field_t, param2, param3, 113, this, ur.field_z, DeployEvent.field_A)) {
                   if (var5 != 0) {
                     this.f(1);
                     if (var7 != 0) {
@@ -473,12 +473,12 @@ class kb extends tc {
               }
               if (ro.field_ub != 0) {
                 au.field_Ob = ro.field_ub;
-                as.a(param1 ^ 6225, this.h(21384));
+                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
               if (au.field_Ob == 0) {
                 au.field_Ob = ro.field_ub;
-                as.a(param1 ^ 6225, this.h(21384));
+                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
               this.a(param3, this, sm.field_d, (byte) -127, ko.field_b, param2);
@@ -492,25 +492,25 @@ class kb extends tc {
               }
               if (var7 != 0 &&
                 var5 != 0 &&
-                tr.field_A != 0) {
+                DeployEvent.field_A != 0) {
                 this.f(1);
               }
               au.field_Ob = ro.field_ub;
-              as.a(param1 ^ 6225, this.h(21384));
+              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
             if (var5 != 0) {
               this.a(sm.field_d, param2, param3, ko.field_b, el.field_d, param1 + 6327, this);
             }
-            if (tr.field_A == 0) {
+            if (DeployEvent.field_A == 0) {
               if (ro.field_ub != 0) {
                 au.field_Ob = ro.field_ub;
-                as.a(param1 ^ 6225, this.h(21384));
+                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
               if (au.field_Ob == 0) {
                 au.field_Ob = ro.field_ub;
-                as.a(param1 ^ 6225, this.h(21384));
+                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
               this.a(param3, this, sm.field_d, (byte) -127, ko.field_b, param2);
@@ -524,23 +524,23 @@ class kb extends tc {
               }
               if (var7 != 0 &&
                 var5 != 0 &&
-                tr.field_A != 0) {
+                DeployEvent.field_A != 0) {
                 this.f(1);
               }
               au.field_Ob = ro.field_ub;
-              as.a(param1 ^ 6225, this.h(21384));
+              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
-            if (!this.a(iu.field_t, param2, param3, 113, this, ur.field_z, tr.field_A)) {
+            if (!this.a(iu.field_t, param2, param3, 113, this, ur.field_z, DeployEvent.field_A)) {
               if (var5 == 0) {
                 if (ro.field_ub != 0) {
                   au.field_Ob = ro.field_ub;
-                  as.a(param1 ^ 6225, this.h(21384));
+                  OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                   return param0;
                 }
                 if (au.field_Ob == 0) {
                   au.field_Ob = ro.field_ub;
-                  as.a(param1 ^ 6225, this.h(21384));
+                  OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                   return param0;
                 }
                 this.a(param3, this, sm.field_d, (byte) -127, ko.field_b, param2);
@@ -553,11 +553,11 @@ class kb extends tc {
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
-                  tr.field_A != 0) {
+                  DeployEvent.field_A != 0) {
                   this.f(1);
                 }
                 au.field_Ob = ro.field_ub;
-                as.a(param1 ^ 6225, this.h(21384));
+                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
               this.f(1);
@@ -569,12 +569,12 @@ class kb extends tc {
             }
             if (ro.field_ub != 0) {
               au.field_Ob = ro.field_ub;
-              as.a(param1 ^ 6225, this.h(21384));
+              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
             if (au.field_Ob == 0) {
               au.field_Ob = ro.field_ub;
-              as.a(param1 ^ 6225, this.h(21384));
+              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
             this.a(param3, this, sm.field_d, (byte) -127, ko.field_b, param2);
@@ -587,17 +587,17 @@ class kb extends tc {
             }
             if (var7 == 0) {
               au.field_Ob = ro.field_ub;
-              as.a(param1 ^ 6225, this.h(21384));
+              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
           }
           if (var5 != 0 &&
-            tr.field_A != 0) {
+            DeployEvent.field_A != 0) {
             this.f(1);
           }
         }
         au.field_Ob = ro.field_ub;
-        as.a(param1 ^ 6225, this.h(21384));
+        OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
         return param0;
     }
 
@@ -783,7 +783,7 @@ class kb extends tc {
         String var12;
         String var9Lifetime1;
         String var12Lifetime1;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 <= -117) {
           var4 = this.g(-31989);
           var5_int = 0;

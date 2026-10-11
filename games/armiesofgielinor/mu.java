@@ -29,7 +29,7 @@ final class mu {
         return false;
     }
 
-    final static void a(ka param0, int param1, kl param2) {
+    final static void a(BitmapFont param0, int param1, kl param2) {
         int var8 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -45,12 +45,12 @@ final class mu {
         int var9 = 0;
         Throwable var10 = null;
         Throwable var11 = null;
-        ka var12 = null;
+        BitmapFont var12 = null;
         int[] var16 = null;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = og.field_m;
-          as.field_E = new je(0L, (je) null);
+          OwnerChangeEvent.field_E = new je(0L, (je) null);
           if (param2 == null) {
             var10 = (Throwable) null;
             af.a((Throwable) null, -116, "QC1");
@@ -67,21 +67,21 @@ final class mu {
             return;
           }
           lo.a(var4, 19003);
-          var12 = (ka) null;
-          hf.field_f = pr.a(65793, 2245737, 65793, 65793, 8947848, 0, (ka) null, 1127256, 1513239, 4020342, 5138823, (byte) 39, 1513239);
+          var12 = (BitmapFont) null;
+          hf.field_f = pr.a(65793, 2245737, 65793, 65793, 8947848, 0, (BitmapFont) null, 1127256, 1513239, 4020342, 5138823, (byte) 39, 1513239);
           vs.field_g = pr.a(param1, 0, 0, 0, 0, 16764006, param0, 0, 0, 0, 0, (byte) 107, 0);
           uj.field_n = pr.a(0, 0, 0, 0, 0, 16777215, param0, 0, 0, 0, 0, (byte) -124, 0);
-          var5 = qn.field_l;
-          var6 = qn.field_g;
-          var16 = qn.field_d;
-          s.field_c = new wk(10, 14);
+          var5 = SoftwareRaster.field_l;
+          var6 = SoftwareRaster.field_g;
+          var16 = SoftwareRaster.field_d;
+          s.field_c = new RgbSprite(10, 14);
           s.field_c.b();
           for (var8 = 2; var8 < 7; var8++) {
-            qn.h(var8, var8 + 1, 14 - (var8 << 1), 16777215);
+            SoftwareRaster.h(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
-          qn.a(var16, var5, var6);
+          SoftwareRaster.a(var16, var5, var6);
           wn.field_jb = l.a(var4, hf.field_f, param1 ^ 0, vs.field_g, uj.field_n);
-          as.field_E.field_fb = new at();
+          OwnerChangeEvent.field_E.field_fb = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

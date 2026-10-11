@@ -5,7 +5,7 @@ final class to extends mn {
     private ik field_v;
     private int field_w;
 
-    final static short[] a(short[] param0, int param1, bv param2, int param3) {
+    final static short[] a(short[] param0, int param1, CipherPacketBuffer param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -20,7 +20,7 @@ final class to extends mn {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = param2.g(45, param1);
           if (var4_int == 0) {
@@ -92,12 +92,12 @@ final class to extends mn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (pq.field_a == null) {
-            pq.field_a = new cr(rl.field_C, aw.field_h);
-            rl.field_C.a(pq.field_a, param3 + 1);
+            pq.field_a = new cr(KingBlackDragonEvent.field_C, aw.field_h);
+            KingBlackDragonEvent.field_C.a(pq.field_a, param3 + 1);
           }
           pq.field_a.a(param1, 30, param0, param2);
-          qn.b();
-          nw.b((byte) 92, true);
+          SoftwareRaster.b();
+          DamageEvent.b((byte) 92, true);
           if (param3 == -1) {
             return;
           }
@@ -117,7 +117,7 @@ final class to extends mn {
         }
     }
 
-    final bd a(int param0, ha param1) {
+    final bd a(int param0, Battlefield param1) {
         RuntimeException var3 = null;
         String var4 = null;
         ua stackIn_3_0 = null;
@@ -126,7 +126,7 @@ final class to extends mn {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.d(-104);
+          this.unlink(-104);
           if (param0 <= 31) {
             var4 = (String) null;
             to.a(true, -1.1208561658859253f, (String) null, -70);

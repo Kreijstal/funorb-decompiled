@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class wf extends iv {
-    static wk[] field_B;
+    static RgbSprite[] field_B;
     static String field_u;
     static int[] field_y;
     static String field_A;
@@ -114,7 +114,7 @@ abstract class wf extends iv {
           return var2;
         }
         if (var2 != 1) {
-          if (!st.field_C) {
+          if (!TurnEffectEvent.field_C) {
             this.a("reconnect", (byte) -81);
           }
           er.b(-11);
@@ -139,7 +139,7 @@ abstract class wf extends iv {
           return;
         }
         String var2 = hr.b((byte) 61);
-        dj.a(ag.d((byte) 47), 0, var2);
+        dj.a(CombatEvent.d((byte) 47), 0, var2);
     }
 
     private final void m(int param0) {
@@ -190,7 +190,7 @@ abstract class wf extends iv {
         int var4 = fk.field_b - 1;
         byte[] var5 = new byte[var4];
         mg.field_e.a(var4, var5, false, 0);
-        ua.a(ag.d((byte) -125), 87, uu.a(var5, (byte) 127), var3 != 0);
+        ua.a(CombatEvent.d((byte) -125), 87, uu.a(var5, (byte) 127), var3 != 0);
         if (param0 != 16433) {
           this.j(-76);
         }
@@ -207,14 +207,14 @@ abstract class wf extends iv {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          vh var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
-          var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           if (param2 >= -68) {
             this.field_r = true;
           }
-          var4 = tc.a(el.field_d, param0, true, og.field_m);
+          var4 = IntrusiveNode.a(el.field_d, param0, true, og.field_m);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -263,36 +263,36 @@ abstract class wf extends iv {
           }
           if (var4 == 4) {
             if (aw.field_l) {
-              bl.a(ag.d((byte) -116), true);
+              bl.a(CombatEvent.d((byte) -116), true);
             } else {
               bl.field_b = true;
               p.field_b = 10;
             }
           }
           if (5 == var4) {
-            ho.a(ag.d((byte) -115), (byte) -3);
+            ho.a(CombatEvent.d((byte) -115), (byte) -3);
           }
           if (6 == var4 &&
             it.field_b) {
             p.field_b = 10;
           }
           if (var4 == 7) {
-            ws.a(ag.d((byte) 53), -126);
+            ws.a(CombatEvent.d((byte) 53), -126);
           }
           if (var4 == 8) {
-            bl.a(ag.d((byte) -120), true);
+            bl.a(CombatEvent.d((byte) -120), true);
           }
           if (9 == var4) {
-            ov.a(ag.d((byte) 48), 11982);
+            ov.a(CombatEvent.d((byte) 48), 11982);
           }
           if (10 == var4) {
             vl.field_n.h(32161, 17);
           }
           if (11 == var4) {
-            t.a((byte) -118, ag.d((byte) 7));
+            t.a((byte) -118, CombatEvent.d((byte) 7));
           }
           if (var4 == 12) {
-            ra.a(ag.d((byte) -123), -69, ob.j(-129));
+            ra.a(CombatEvent.d((byte) -123), -69, ob.j(-129));
           }
           if (var4 == 13) {
             try {
@@ -302,7 +302,7 @@ abstract class wf extends iv {
               if (fq.field_h.b(0)) {
                 var12 = fq.field_h.a(3);
                 if (var12 != null) {
-                  var7 = co.a(0, var12.field_q, -127, var12.field_o);
+                  var7 = co.a(0, var12.position, -127, var12.payload);
                   df.a(var7, -73);
                 } else {
                   var9 = (String) null;
@@ -370,14 +370,14 @@ abstract class wf extends iv {
         int discarded$7 = 0;
         int var3;
         boolean stackIn_6_1 = false;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 4) {
           this.a((byte) 113, true);
         }
         if (!wd.a((byte) 60)) {
           if (f.field_E >= 10) {
             if (!lk.b(true)) {
-              qq.e((byte) -84);
+              StateChangeEvent.e((byte) -84);
             } else {
               if (p.field_b == 0) {
                 discarded$6 = this.a(false, false, (byte) -92);
@@ -398,14 +398,14 @@ abstract class wf extends iv {
         int var2;
         mo var3;
         int var4;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = nm.field_o;
         if (var2 < 64 &&
           tk.field_f[var2]) {
           if (0 == var2) {
             return;
           }
-          L1: {
+          regionExit1: {
             switch (var2) {
               case 2:
                 gm.d(9);
@@ -425,17 +425,17 @@ abstract class wf extends iv {
                   switch (var2) {
                     case 13:
                       u.a(param0 - 11);
-                      break L1;
+                      break regionExit1;
                     case 17:
                       this.n(16433);
-                      break L1;
+                      break regionExit1;
                     case 18:
                       fq.b((byte) 119);
-                      break L1;
+                      break regionExit1;
                     default:
                       af.a((Throwable) null, param0 ^ -100, "MGS1: " + cm.b(false));
                       dj.a((byte) -124);
-                      break L1;
+                      break regionExit1;
                   }
                 }
                 stackIn_30_0 = -34;
@@ -461,7 +461,7 @@ abstract class wf extends iv {
             }
           }
           if (param0 != 12) {
-            field_B = (wk[]) null;
+            field_B = (RgbSprite[]) null;
           }
           return;
         }
@@ -493,7 +493,7 @@ abstract class wf extends iv {
           this.k(-13);
         }
         if (param4 <= 6) {
-          field_B = (wk[]) null;
+          field_B = (RgbSprite[]) null;
         }
     }
 
@@ -510,7 +510,7 @@ abstract class wf extends iv {
         java.awt.Container var6;
         int var3Lifetime1;
         int var3Lifetime2;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null != ra.field_e) {
           if (null == wq.field_a) {
             var6 = sp.a(0);
@@ -531,7 +531,7 @@ abstract class wf extends iv {
         if (om.field_I != null) {
           el.field_d = om.field_I.a(9);
         }
-        if (go.a(99)) {
+        if (TeamRoster.a(99)) {
           var3 = tp.b(-113) * 1200;
           if (this.field_r ||
             !(var3 >= bs.a((byte) 99)) &&
@@ -549,7 +549,7 @@ abstract class wf extends iv {
           0 == gk.field_K) {
           stackIn_25_0 = (gk.field_K != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_25_0;
-          gk.field_K = tc.b(86);
+          gk.field_K = IntrusiveNode.b(86);
           if (var3Lifetime1 != 0 &&
             gk.field_K == 0 &&
             11 == p.field_b &&
@@ -628,9 +628,9 @@ abstract class wf extends iv {
           if (og.field_m != 0) {
             nf.field_Nb = nu.a(on.field_n, true);
           }
-          ps.field_u = nw.a(1, mo.field_c, (byte) 119, false, true);
-          sk.field_M = nw.a(1, wl.field_E, (byte) 122, false, true);
-          h.field_g = nw.a(1, ms.field_t, (byte) 127, false, true);
+          ps.field_u = DamageEvent.a(1, mo.field_c, (byte) 119, false, true);
+          sk.field_M = DamageEvent.a(1, wl.field_E, (byte) 122, false, true);
+          h.field_g = DamageEvent.a(1, ms.field_t, (byte) 127, false, true);
           gg.field_K = ps.field_u;
           f.field_E = 2;
           ks.field_A = sk.field_M;
@@ -659,7 +659,7 @@ abstract class wf extends iv {
           vl.c((byte) 91);
           it.field_b = false;
           wa.field_e = ef.field_a;
-          qq.a(sk.field_M, ps.field_u, h.field_g, 0, aw.field_l);
+          StateChangeEvent.a(sk.field_M, ps.field_u, h.field_g, 0, aw.field_l);
           if (mo.field_r ||
             pd.field_b != null) {
             stackIn_96_0 = 3;
@@ -821,7 +821,7 @@ abstract class wf extends iv {
         String var9 = null;
         int var10 = 0;
         og[] var11 = null;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3 = 107 % ((param1 + 11) / 61);
           var11 = vv.a(param0, 119);

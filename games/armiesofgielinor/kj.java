@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kj extends bd {
-    static wk[] field_s;
+    static RgbSprite[] field_s;
     static String field_t;
 
-    final void a(int param0, ha param1) {
+    final void a(int param0, Battlefield param1) {
         try {
           if (param0 != 64) {
             kj.a(true, -124);

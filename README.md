@@ -1,7 +1,7 @@
 # funorb-decompiled
 
 Current Java source for the complete 44-game FunOrb / AlterOrb catalog lives
-only in `games/<game>/`. GeoBlox and Deko Bloko have named sources directly in
+only in `games/<game>/`. GeoBlox, Deko Bloko and Armies of Gielinor have named sources directly in
 those directories, with a reading guide beside the Java. There is no separate
 readable mirror and no committed compilation binaries.
 
@@ -13,6 +13,7 @@ current reverse dictionaries belong here.
 ## Read the games
 
 - [GeoBlox](games/geoblox/README.md): gameplay, tutorial, screens and rendering.
+- [Armies of Gielinor](games/armiesofgielinor/README.md): first gameplay pass for battlefield state, units, tiles, teams, events, movement, AI and tutorial anchors.
 - [Deko Bloko](games/dekobloko/README.md): buckets, falling pieces, controls,
   feedback shapes, multiplayer snapshots, assets and UI.
 
@@ -20,6 +21,10 @@ Generic control-flow, lifetime, predicate, cast and formatting recovery runs
 by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
+
+Armies has 39 reviewed class names, not a complete semantic map. Its raw/named
+core probe checks map lookups, alliances, status packing, damage and tile metadata
+under a controlled headless boundary. Three dispatcher files remain.
 
 ## Reproduce
 
@@ -32,6 +37,9 @@ env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check
 env -u JAVA_TOOL_OPTIONS node readable/build-dekobloko-rules.mjs --check
 env -u JAVA_TOOL_OPTIONS node readable/reproduce-dekobloko.mjs --update
 env -u JAVA_TOOL_OPTIONS node readable/reproduce-dekobloko.mjs --check
+env -u JAVA_TOOL_OPTIONS node readable/build-armiesofgielinor-rules.mjs --check
+env -u JAVA_TOOL_OPTIONS node readable/reproduce-armiesofgielinor.mjs --update
+env -u JAVA_TOOL_OPTIONS node readable/reproduce-armiesofgielinor.mjs --check
 node scripts/check-source-catalog.mjs /absolute/path/to/funorb-decompiled
 node readable/restore-game.mjs dekobloko /tmp/original-dekobloko
 ```

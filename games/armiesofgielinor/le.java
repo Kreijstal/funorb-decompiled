@@ -3,7 +3,7 @@
  */
 final class le extends java.awt.Canvas {
     static cg field_b;
-    static wk[] field_c;
+    static RgbSprite[] field_c;
     static ue field_d;
     private java.awt.Component field_a;
 
@@ -21,7 +21,7 @@ final class le extends java.awt.Canvas {
 
     final static boolean a(byte param0, String param1) {
         RuntimeException var2 = null;
-        vh var3 = null;
+        PacketBuffer var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -33,8 +33,8 @@ final class le extends java.awt.Canvas {
           if (param0 == -125) {
             return false;
           }
-          var3 = (vh) null;
-          le.a(94, (byte) 20, (vh) null);
+          var3 = (PacketBuffer) null;
+          le.a(94, (byte) 20, (PacketBuffer) null);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -66,7 +66,7 @@ final class le extends java.awt.Canvas {
         }
     }
 
-    final static String a(int param0, byte param1, vh param2) {
+    final static String a(int param0, byte param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -90,7 +90,7 @@ final class le extends java.awt.Canvas {
               var3_int = param0;
             }
             var4 = new byte[var3_int];
-            param2.field_q = param2.field_q + ds.field_c.a(param2.field_o, param2.field_q, false, var3_int, 0, var4);
+            param2.position = param2.position + ds.field_c.a(param2.payload, param2.position, false, var3_int, 0, var4);
             var5 = co.a(0, var3_int, -107, var4);
             stackIn_7_0 = var5;
             return stackIn_7_0;

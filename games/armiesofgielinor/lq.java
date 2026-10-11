@@ -50,7 +50,7 @@ final class lq {
         int var4 = 0;
         int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = 1;
           while (param1 > 1) {

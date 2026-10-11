@@ -6,7 +6,7 @@ class nr {
     static d field_e;
     static int[] field_a;
     static String field_d;
-    wk[] field_b;
+    RgbSprite[] field_b;
     static String field_f;
 
     void a(byte param0, int param1, int param2, int param3, int param4) {
@@ -28,7 +28,7 @@ class nr {
         byte[] var3 = null;
         int var5 = 0;
         int var6 = 0;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1) {
             field_a = (int[]) null;
@@ -162,7 +162,7 @@ class nr {
         field_f = null;
     }
 
-    nr(wk[] param0) {
+    nr(RgbSprite[] param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {

@@ -4,8 +4,8 @@
 final class lt extends ev {
     static String field_f;
     static lw field_g;
-    static wk[] field_h;
-    static wk[] field_i;
+    static RgbSprite[] field_h;
+    static RgbSprite[] field_i;
 
     final static String a(int param0, long param1) {
         int var3 = 0;
@@ -15,7 +15,7 @@ final class lt extends ev {
         int var9 = 0;
         int var10 = 0;
         StringBuilder discarded$0 = null;
-        int var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 <= 0L) {
           return null;
         }
@@ -63,7 +63,7 @@ final class lt extends ev {
         field_g = null;
         field_i = null;
         if (param0 >= -8) {
-          field_h = (wk[]) null;
+          field_h = (RgbSprite[]) null;
           field_h = null;
           return;
         }

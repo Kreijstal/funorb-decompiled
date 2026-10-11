@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dk extends bd {
-    static wk field_v;
+    static RgbSprite field_v;
     static vk field_u;
     static String[] field_s;
     static String field_t;
@@ -60,7 +60,7 @@ final class dk extends bd {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 < param0) {
             var5_int = (param0 + param1) / 2;
@@ -114,7 +114,7 @@ final class dk extends bd {
         }
     }
 
-    final void a(int param0, ha param1) {
+    final void a(int param0, Battlefield param1) {
         try {
           if (param0 != 64) {
             int[] var4 = (int[]) null;

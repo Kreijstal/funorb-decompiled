@@ -14,7 +14,7 @@ final class cb extends Exception {
         field_a = null;
     }
 
-    final static void a(int param0, wk param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, RgbSprite param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -49,26 +49,26 @@ final class cb extends Exception {
         }
     }
 
-    final static wk[] a(boolean param0, kl param1, int param2, int param3) {
+    final static RgbSprite[] a(boolean param0, kl param1, int param2, int param3) {
         RuntimeException var4 = null;
-        wk[] stackIn_2_0 = null;
+        RgbSprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        wk[] stackIn_7_0 = null;
+        RgbSprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_2_0 = (wk[]) null;
+            stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
           if (kp.a(param0, param2, param1, param3)) {
-            stackIn_7_0 = md.g(122);
+            stackIn_7_0 = ParasiteEvent.g(122);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
-          return (wk[]) (stackIn_5_0);
+          return (RgbSprite[]) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

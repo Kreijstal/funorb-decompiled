@@ -44,7 +44,7 @@ abstract class pt extends sf {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int var3;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null == this.field_bb) {
           if (param0 == -1) {
             return super.a((byte) -1);
@@ -243,7 +243,7 @@ abstract class pt extends sf {
     private final void b(int param0, kb param1) {
         try {
           if (this.field_cb != null) {
-            this.field_cb.d(92);
+            this.field_cb.unlink(92);
           }
           if (param1 != null) {
             param1.a(6, param1.field_l, 6 + this.field_ab, 8192, param1.field_w);

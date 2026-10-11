@@ -36,12 +36,12 @@ final class qp extends dr {
     final static int e(byte param0) {
         if (param0 >= -123) {
           Random var2 = (Random) null;
-          qp.a(-126, -81, -63, -13, -70, -42, (ha) null, -51, (Random) null);
+          qp.a(-126, -81, -63, -13, -70, -42, (Battlefield) null, -51, (Random) null);
         }
         return nm.field_z;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5, boolean param6, int param7, boolean param8, wk param9) {
+    final static void a(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5, boolean param6, int param7, boolean param8, RgbSprite param9) {
         int var11 = 0;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -57,14 +57,14 @@ final class qp extends dr {
         int[] var17 = null;
         int[] var18 = null;
         int[] var19 = null;
-        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          no.field_P.field_v = qn.field_g;
+          no.field_P.field_v = SoftwareRaster.field_g;
           if (param0 != 1) {
             qp.g(111);
           }
-          no.field_P.field_y = qn.field_l;
-          no.field_P.field_B = qn.field_d;
+          no.field_P.field_y = SoftwareRaster.field_l;
+          no.field_P.field_B = SoftwareRaster.field_d;
           if (param6) {
             if (dv.field_k == null ||
               t.field_f != param7) {
@@ -100,7 +100,7 @@ final class qp extends dr {
             }
           } else {
             ku.field_J.b();
-            qn.b();
+            SoftwareRaster.b();
             param9.g(0, 0);
             if (!param1) {
               if (param8) {
@@ -141,13 +141,13 @@ final class qp extends dr {
 
     public static void g(int param0) {
         if (param0 < 114) {
-          wk var2 = (wk) null;
-          qp.a(-47, true, -89, 99, true, true, false, -24, false, (wk) null);
+          RgbSprite var2 = (RgbSprite) null;
+          qp.a(-47, true, -89, 99, true, true, false, -24, false, (RgbSprite) null);
         }
         field_E = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, ha param6, int param7, Random param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, Battlefield param6, int param7, Random param8) {
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
@@ -203,7 +203,7 @@ final class qp extends dr {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        var15 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (5 == param5) {
             return;
@@ -246,15 +246,15 @@ final class qp extends dr {
                   break;
                 }
               }
-              if (null != param6.field_Eb[(param0 + var11) * param6.field_v + var12 + param4] &&
-                param6.field_Eb[param6.field_v * (var11 + param0) + (var12 + param4)].field_h == param7) {
+              if (null != param6.tiles[(param0 + var11) * param6.mapWidth + var12 + param4] &&
+                param6.tiles[param6.mapWidth * (var11 + param0) + (var12 + param4)].terrainType == param7) {
                 var14 = 1;
                 decompiledFrameCompleted12 = false;
                 break;
               }
               var13++;
-              if (null == param6.field_Eb[var12 - (-param4 - param6.field_v * (var11 + param0))]) {
-                param6.field_Eb[param6.field_v * (var11 + param0) + (param4 + var12)] = new ne(param7, param6);
+              if (null == param6.tiles[var12 - (-param4 - param6.mapWidth * (var11 + param0))]) {
+                param6.tiles[param6.mapWidth * (var11 + param0) + (param4 + var12)] = new MapTile(param7, param6);
               }
               stackIn_22_0 = var11;
               if (var10 > 0) {
@@ -285,14 +285,14 @@ final class qp extends dr {
                     break;
                   }
                 }
-                if (null != param6.field_Eb[(var11 + param0) * param6.field_v + (param4 + var12)] &&
-                  param7 == param6.field_Eb[(param0 + var11) * param6.field_v + (var12 + param4)].field_h) {
+                if (null != param6.tiles[(var11 + param0) * param6.mapWidth + (param4 + var12)] &&
+                  param7 == param6.tiles[(param0 + var11) * param6.mapWidth + (var12 + param4)].terrainType) {
                   var14 = 1;
                   decompiledFrameCompleted9 = false;
                   break;
                 }
-                if (param6.field_Eb[param4 + (var12 + param6.field_v * (var11 + param0))] == null) {
-                  param6.field_Eb[param4 + (var12 + param6.field_v * (var11 + param0))] = new ne(param7, param6);
+                if (param6.tiles[param4 + (var12 + param6.mapWidth * (var11 + param0))] == null) {
+                  param6.tiles[param4 + (var12 + param6.mapWidth * (var11 + param0))] = new MapTile(param7, param6);
                 }
                 var13++;
                 stackIn_44_0 = var12;
@@ -325,15 +325,15 @@ final class qp extends dr {
                       break;
                     }
                   }
-                  if (null != param6.field_Eb[(var11 + param0) * param6.field_v + (var12 + param4)] &&
-                    param6.field_Eb[param4 + (var12 + (var11 + param0) * param6.field_v)].field_h == param7) {
+                  if (null != param6.tiles[(var11 + param0) * param6.mapWidth + (var12 + param4)] &&
+                    param6.tiles[param4 + (var12 + (var11 + param0) * param6.mapWidth)].terrainType == param7) {
                     var14 = 1;
                     decompiledFrameCompleted6 = false;
                     break;
                   }
                   var13++;
-                  if (param6.field_Eb[(var11 + param0) * param6.field_v + var12 + param4] == null) {
-                    param6.field_Eb[var12 + param4 + (param0 + var11) * param6.field_v] = new ne(param7, param6);
+                  if (param6.tiles[(var11 + param0) * param6.mapWidth + var12 + param4] == null) {
+                    param6.tiles[var12 + param4 + (param0 + var11) * param6.mapWidth] = new MapTile(param7, param6);
                   }
                   stackIn_183_0 = var11;
                   if (var10 <= 0) {
@@ -363,15 +363,15 @@ final class qp extends dr {
                         break;
                       }
                     }
-                    if (null != param6.field_Eb[var12 + param4 + (var11 + param0) * param6.field_v] &&
-                      param7 == param6.field_Eb[var12 + param4 + (param0 + var11) * param6.field_v].field_h) {
+                    if (null != param6.tiles[var12 + param4 + (var11 + param0) * param6.mapWidth] &&
+                      param7 == param6.tiles[var12 + param4 + (param0 + var11) * param6.mapWidth].terrainType) {
                       var14 = 1;
                       decompiledFrameCompleted3 = false;
                       break;
                     }
                     var13++;
-                    if (null == param6.field_Eb[param6.field_v * (var11 + param0) + (var12 + param4)]) {
-                      param6.field_Eb[param6.field_v * (param0 + var11) + param4 + var12] = new ne(param7, param6);
+                    if (null == param6.tiles[param6.mapWidth * (var11 + param0) + (var12 + param4)]) {
+                      param6.tiles[param6.mapWidth * (param0 + var11) + param4 + var12] = new MapTile(param7, param6);
                     }
                     stackIn_163_0 = var12;
                     if (var9_int > 0) {
@@ -385,7 +385,7 @@ final class qp extends dr {
                 if ((decompiledFrameCompleted5) &&
                   (decompiledFrameCompleted4) &&
                   (decompiledFrameCompleted3)) {
-                  if (ns.a(false, 100, param8) > 50) {
+                  if (AttackEvent.a(false, 100, param8) > 50) {
                     stackIn_102_0 = (var9_int > 0) ? 1 : -1;
                     var12 = stackIn_102_0;
                     while (true) {
@@ -401,38 +401,38 @@ final class qp extends dr {
                           break;
                         }
                       }
-                      if (param6.field_Eb[param4 + (var12 + param6.field_v * (param0 + var11))] != null &&
-                        param6.field_Eb[var12 + (param4 + param6.field_v * (var11 + param0))].field_h == param7) {
+                      if (param6.tiles[param4 + (var12 + param6.mapWidth * (param0 + var11))] != null &&
+                        param6.tiles[var12 + (param4 + param6.mapWidth * (var11 + param0))].terrainType == param7) {
                         var14 = 1;
                         decompiledFrameCompleted0 = false;
                         break;
                       }
-                      if (param6.field_Eb[param4 + (var12 + (param0 + var11) * param6.field_v)] == null) {
-                        param6.field_Eb[param4 + var12 + param6.field_v * (param0 + var11)] = new ne(param7, param6);
+                      if (param6.tiles[param4 + (var12 + (param0 + var11) * param6.mapWidth)] == null) {
+                        param6.tiles[param4 + var12 + param6.mapWidth * (param0 + var11)] = new MapTile(param7, param6);
                       }
                       var13++;
                       if (var12 == var9_int >> 1) {
                         stackIn_120_0 = (var10 <= 0) ? -1 : 1;
                         var11 = stackIn_120_0;
-                        L26: while (true) {
+                        scanLoop1: while (true) {
                           if (var10 < var11 ||
                             var10 <= 0) {
                             stackIn_125_0 = var11;
                             stackIn_125_1 = var10;
                             if (stackIn_125_0 < stackIn_125_1) {
-                              break L26;
+                              break scanLoop1;
                             }
                             if (var10 > 0) {
-                              break L26;
+                              break scanLoop1;
                             }
                           }
-                          if (param6.field_Eb[var12 + param4 + (var11 + param0) * param6.field_v] != null &&
-                            param7 == param6.field_Eb[(param0 + var11) * param6.field_v + (var12 + param4)].field_h) {
-                            break L26;
+                          if (param6.tiles[var12 + param4 + (var11 + param0) * param6.mapWidth] != null &&
+                            param7 == param6.tiles[(param0 + var11) * param6.mapWidth + (var12 + param4)].terrainType) {
+                            break scanLoop1;
                           }
                           var13++;
-                          if (null == param6.field_Eb[(param0 + var11) * param6.field_v + (param4 + var12)]) {
-                            param6.field_Eb[param6.field_v * (var11 + param0) + param4 + var12] = new ne(param7, param6);
+                          if (null == param6.tiles[(param0 + var11) * param6.mapWidth + (param4 + var12)]) {
+                            param6.tiles[param6.mapWidth * (var11 + param0) + param4 + var12] = new MapTile(param7, param6);
                           }
                           stackIn_136_0 = var11;
                           if (var10 <= 0) {
@@ -478,37 +478,37 @@ final class qp extends dr {
                           break;
                         }
                       }
-                      if (null != param6.field_Eb[param4 + (var12 + (param0 + var11) * param6.field_v)] &&
-                        param6.field_Eb[var12 + param4 + param6.field_v * (var11 + param0)].field_h == param7) {
+                      if (null != param6.tiles[param4 + (var12 + (param0 + var11) * param6.mapWidth)] &&
+                        param6.tiles[var12 + param4 + param6.mapWidth * (var11 + param0)].terrainType == param7) {
                         var14 = 1;
                         break;
                       }
-                      if (null == param6.field_Eb[(var11 + param0) * param6.field_v + (param4 + var12)]) {
-                        param6.field_Eb[var12 + param4 + param6.field_v * (param0 + var11)] = new ne(param7, param6);
+                      if (null == param6.tiles[(var11 + param0) * param6.mapWidth + (param4 + var12)]) {
+                        param6.tiles[var12 + param4 + param6.mapWidth * (param0 + var11)] = new MapTile(param7, param6);
                       }
                       var13++;
                       if (var11 == var10 >> 1) {
                         stackIn_74_0 = (var9_int > 0) ? 1 : -1;
                         var12 = stackIn_74_0;
-                        L43: while (true) {
+                        scanLoop2: while (true) {
                           if (var9_int < var12 ||
                             0 >= var9_int) {
                             stackIn_79_0 = ~var9_int;
                             stackIn_79_1 = ~var12;
                             if (stackIn_79_0 < stackIn_79_1) {
-                              break L43;
+                              break scanLoop2;
                             }
                             if (var9_int > 0) {
-                              break L43;
+                              break scanLoop2;
                             }
                           }
-                          if (param6.field_Eb[(param0 + var11) * param6.field_v + (var12 + param4)] != null &&
-                            param7 == param6.field_Eb[(var11 + param0) * param6.field_v + (param4 + var12)].field_h) {
-                            break L43;
+                          if (param6.tiles[(param0 + var11) * param6.mapWidth + (var12 + param4)] != null &&
+                            param7 == param6.tiles[(var11 + param0) * param6.mapWidth + (param4 + var12)].terrainType) {
+                            break scanLoop2;
                           }
                           var13++;
-                          if (null == param6.field_Eb[param6.field_v * (param0 + var11) + (param4 + var12)]) {
-                            param6.field_Eb[param4 + (var12 + (param0 + var11) * param6.field_v)] = new ne(param7, param6);
+                          if (null == param6.tiles[param6.mapWidth * (param0 + var11) + (param4 + var12)]) {
+                            param6.tiles[param4 + (var12 + (param0 + var11) * param6.mapWidth)] = new MapTile(param7, param6);
                           }
                           stackIn_89_0 = var12;
                           if (var9_int > 0) {

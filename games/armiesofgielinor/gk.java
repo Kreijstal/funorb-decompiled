@@ -6,7 +6,7 @@ final class gk extends nl {
     static String field_L;
     static int field_J;
     static int field_K;
-    private at field_M;
+    private NodeDeque field_M;
     static String field_N;
     static String[] field_O;
     static long field_I;
@@ -14,11 +14,11 @@ final class gk extends nl {
 
     public gk() {
         super(0, 0, te.field_l, ij.field_x, (kh) null, (qo) null);
-        this.field_M = new at();
+        this.field_M = new NodeDeque();
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_k != null) {
           this.field_k.a((kb) (this), param0, -80, true, param1);
         }
@@ -37,7 +37,7 @@ final class gk extends nl {
         bb var2;
         wl var3;
         int var4;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = new bb(this.field_M);
         if (param0 != 89) {
           field_N = (String) null;
@@ -53,7 +53,7 @@ final class gk extends nl {
     }
 
     final void j(int param0) {
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         bb var2 = new bb(this.field_M);
         wl var3 = (wl) (var2.c(50));
         while (var3 != null) {
@@ -67,7 +67,7 @@ final class gk extends nl {
     }
 
     final void a(int param0, int param1, byte param2) {
-        int var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 == this.field_l &&
           this.field_w == param1) {
           return;
@@ -116,12 +116,12 @@ final class gk extends nl {
     }
 
     final void d(byte param0) {
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         bb var2 = new bb(this.field_M);
         wl var3 = (wl) (var2.c(50));
         while (var3 != null) {
           if (var3.a((byte) -1)) {
-            var3.d(-116);
+            var3.unlink(-116);
           }
           var3 = (wl) (var2.b(50));
         }
@@ -130,15 +130,15 @@ final class gk extends nl {
     }
 
     final void k(int param0) {
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         bb var2 = new bb(this.field_M);
         if (param0 != 0) {
-          this.field_M = (at) null;
+          this.field_M = (NodeDeque) null;
         }
         wl var3 = (wl) (var2.c(50));
         while (var3 != null) {
           if (var3.k(122)) {
-            var3.d(param0 + 37);
+            var3.unlink(param0 + 37);
           }
           var3 = (wl) (var2.b(param0 ^ 50));
         }
@@ -160,7 +160,7 @@ final class gk extends nl {
           var3.field_L = true;
           var3.a(11, (kb) (this));
           if (param1 != 0) {
-            this.field_M = (at) null;
+            this.field_M = (NodeDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -178,7 +178,7 @@ final class gk extends nl {
     }
 
     final kb a(int param0) {
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         bb var2 = new bb(this.field_M);
         wl var3 = (wl) (var2.c(50));
         while (var3 != null) {

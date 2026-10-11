@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tp {
-    static at field_e;
+    static NodeDeque field_e;
     private long field_d;
     private ms[] field_h;
     private int field_b;
@@ -18,7 +18,7 @@ final class tp {
 
     final ms d(int param0) {
         ms var3 = null;
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_g == null) {
           return null;
         }
@@ -47,7 +47,7 @@ final class tp {
 
     final ms a(byte param0, long param1) {
         ms var5 = null;
-        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_d = param1;
         ms var4 = this.field_h[(int)((long)(this.field_b - 1) & param1)];
         this.field_g = var4.field_s;
@@ -111,7 +111,7 @@ final class tp {
         ms var5;
         ms var6;
         ms var9;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_i <= 0) {
           do {
             if (this.field_i >= this.field_b) {
@@ -166,7 +166,7 @@ final class tp {
     }
 
     static {
-        field_e = new at();
+        field_e = new NodeDeque();
         field_f = "Your game";
         field_c = "Try changing the '<%0>' setting.";
     }

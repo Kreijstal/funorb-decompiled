@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sc implements uo {
+final class sc implements TaggedFieldReader {
     static String field_i;
     int field_j;
     int field_k;
     static mp field_g;
-    ne[] field_c;
-    static ka field_b;
+    MapTile[] field_c;
+    static BitmapFont field_b;
     int field_e;
     static String field_d;
-    static wk[] field_f;
+    static RgbSprite[] field_f;
     int field_a;
     static String field_h;
 
     final static void a(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
-        int var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var6Lifetime1;
         int var6Lifetime2;
         int var7Lifetime1;
@@ -40,10 +40,10 @@ final class sc implements uo {
         }
         vn.a(dc.field_n, 3);
         tm.a();
-        qn.b();
+        SoftwareRaster.b();
         rb.e(9);
         if (var5 < 256) {
-          qn.b(0, 0, qn.field_l, qn.field_g, 0, -var5 + 256);
+          SoftwareRaster.b(0, 0, SoftwareRaster.field_l, SoftwareRaster.field_g, 0, -var5 + 256);
           rf.b(-18862);
           if (param2 > -60) {
             return;
@@ -242,7 +242,7 @@ final class sc implements uo {
         field_i = null;
     }
 
-    public final void a(int param0, bv param1, String param2, byte param3) {
+    public final void decodeTaggedField(int encodedLength, CipherPacketBuffer packet, String fieldName, byte obfuscationGuard) {
         int var6 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -256,53 +256,53 @@ final class sc implements uo {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param3 != 37) {
+          if (obfuscationGuard != 37) {
             field_i = (String) null;
           }
-          if (!param2.equals("nump")) {
-            if (param2.equals("w")) {
-              if (param0 <= 0) {
+          if (!fieldName.equals("nump")) {
+            if (fieldName.equals("w")) {
+              if (encodedLength <= 0) {
                 return;
               }
-              this.field_k = (int)tn.a(false, param0, param1);
+              this.field_k = (int)tn.a(false, encodedLength, packet);
             } else {
-              if (!param2.equals("h")) {
-                if (param2.equals("them")) {
-                  if (0 >= param0) {
+              if (!fieldName.equals("h")) {
+                if (fieldName.equals("them")) {
+                  if (0 >= encodedLength) {
                     return;
                   }
-                  this.field_a = (int)tn.a(false, param0, param1);
+                  this.field_a = (int)tn.a(false, encodedLength, packet);
                   return;
                 }
-                if (!param2.equals("map")) {
+                if (!fieldName.equals("map")) {
                   return;
                 }
-                if (param0 <= 0) {
+                if (encodedLength <= 0) {
                   return;
                 }
-                var5_int = ai.a(param1, true);
-                this.field_c = new ne[var5_int];
+                var5_int = ai.a(packet, true);
+                this.field_c = new MapTile[var5_int];
                 for (var6 = 0; var5_int > var6; var6++) {
-                  mt.a(param1, true);
-                  var7 = param1.a(false);
-                  var8 = ej.a(param1, true);
-                  var9 = -var7 + param1.a(false);
-                  kq.a(var7, -24232, var9, var8, param1);
-                  this.field_c[var6] = rb.a(var8, (byte) 70, param1);
-                  ao.a(var7, -126, var9, param1, var8);
+                  mt.a(packet, true);
+                  var7 = packet.a(false);
+                  var8 = AiPlanner.a(packet, true);
+                  var9 = -var7 + packet.a(false);
+                  kq.a(var7, -24232, var9, var8, packet);
+                  this.field_c[var6] = rb.a(var8, (byte) 70, packet);
+                  ao.a(var7, -126, var9, packet, var8);
                 }
               } else {
-                if (0 < param0) {
-                  this.field_e = (int)tn.a(false, param0, param1);
+                if (0 < encodedLength) {
+                  this.field_e = (int)tn.a(false, encodedLength, packet);
                   return;
                 }
               }
             }
           } else {
-            if (0 < param0) {
-              this.field_j = (int)tn.a(false, param0, param1);
+            if (0 < encodedLength) {
+              this.field_j = (int)tn.a(false, encodedLength, packet);
             }
           }
           return;
@@ -310,19 +310,19 @@ final class sc implements uo {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_28_0 = var5;
-          stackIn_28_1 = new StringBuilder().append("sc.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_28_1 = new StringBuilder().append("sc.B(").append(encodedLength).append(',');
+          if (packet == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
           }
           stackIn_31_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',');
-          if (param2 == null) {
+          if (fieldName == null) {
             stackIn_32_2 = "null";
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

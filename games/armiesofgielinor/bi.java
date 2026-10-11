@@ -30,7 +30,7 @@ abstract class bi {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var4Lifetime1;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           fieldTemp$2 = param1.field_c - 1;
           param1.field_c = param1.field_c - 1;
@@ -81,11 +81,11 @@ abstract class bi {
 
     final void a(int param0) {
         if (param0 == 5605) {
-          qn.a(this.field_b, this.field_a, this.field_g);
+          SoftwareRaster.a(this.field_b, this.field_a, this.field_g);
           return;
         }
         field_f = (kl) null;
-        qn.a(this.field_b, this.field_a, this.field_g);
+        SoftwareRaster.a(this.field_b, this.field_a, this.field_g);
     }
 
     public static void b(int param0) {
@@ -193,7 +193,7 @@ abstract class bi {
         mq.a(param2, var7, var6, param4, param1, var8, -116, param5);
         pk.a(param1, param5, param4, var6, var7, -29403, var8, param2);
         if (param3 > 71) {
-          if (jd.field_L) {
+          if (Unit.field_L) {
             oh.field_I.g(param2, param1);
           }
           return;

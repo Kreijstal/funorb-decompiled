@@ -92,17 +92,17 @@ final class wr extends hs implements he {
     }
 
     final static void a(byte param0, aj param1, int param2) {
-        bv var8 = null;
-        bv var9 = null;
+        CipherPacketBuffer var8 = null;
+        CipherPacketBuffer var9 = null;
         int var4 = 0;
         int var5 = 0;
-        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var8 = vl.field_n;
           var9 = var8;
           var9.h(32161, param2);
-          var9.field_q = var9.field_q + 1;
-          var4 = var9.field_q;
+          var9.position = var9.position + 1;
+          var4 = var9.position;
           var9.b(1, 1);
           var9.b(true, param1.field_s);
           var9.b(true, param1.field_n);
@@ -120,7 +120,7 @@ final class wr extends hs implements he {
             wr.a((byte) -126, (aj) null, 112);
           }
           var9.b((byte) -39, var4);
-          var9.e(var9.field_q - var4, 5930);
+          var9.e(var9.position - var4, 5930);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "wr.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

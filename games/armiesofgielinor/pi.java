@@ -9,7 +9,7 @@ final class pi extends fw {
     static int[][] field_M;
     static String field_P;
     static je field_N;
-    static wk field_T;
+    static RgbSprite field_T;
     static String field_O;
 
     final int a(int param0, byte param1) {
@@ -45,7 +45,7 @@ final class pi extends fw {
         int var11 = 0;
         int var13 = 0;
         int var14 = 0;
-        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param3 <= 103) {
             field_N = (je) null;

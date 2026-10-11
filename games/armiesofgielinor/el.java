@@ -24,7 +24,7 @@ abstract class el {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != -105) {
             return;
@@ -90,7 +90,7 @@ abstract class el {
         int var5_int = 0;
         byte[] var6 = null;
         Object var7 = null;
-        vh var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
@@ -99,11 +99,11 @@ abstract class el {
           if (param0) {
             field_c = 69;
           }
-          var9 = new vh(param1);
+          var9 = new PacketBuffer(param1);
           var3 = var9.k(0);
           var4 = var9.i(1);
-          if (0 <= var4 && (ag.field_P == 0 ||
-            !(var4 > ag.field_P))) {
+          if (0 <= var4 && (CombatEvent.field_P == 0 ||
+            !(var4 > CombatEvent.field_P))) {
             if (0 == var3) {
               var13 = new byte[var4];
               var11 = var13;
@@ -113,8 +113,8 @@ abstract class el {
               return stackIn_23_0;
             }
             var5_int = var9.i(1);
-            if (var5_int >= 0 && (ag.field_P == 0 ||
-              !(ag.field_P < var5_int))) {
+            if (var5_int >= 0 && (CombatEvent.field_P == 0 ||
+              !(CombatEvent.field_P < var5_int))) {
               var12 = new byte[var5_int];
               var10 = var12;
               var6 = var10;

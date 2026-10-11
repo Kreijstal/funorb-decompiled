@@ -9,7 +9,7 @@ final class vs {
     static String field_i;
     static int field_f;
     static je field_g;
-    static ne[] field_e;
+    static MapTile[] field_e;
     static String field_h;
     static String field_b;
 
@@ -19,8 +19,8 @@ final class vs {
         }
         try {
           qd.field_I = param1;
-          as.field_E.field_fb.b(75);
-          as.field_E.a(qd.field_I, 105);
+          OwnerChangeEvent.field_E.field_fb.b(75);
+          OwnerChangeEvent.field_E.a(qd.field_I, 105);
           if (param0 != 256) {
             field_j = true;
           }

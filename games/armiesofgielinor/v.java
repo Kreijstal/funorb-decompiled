@@ -71,7 +71,7 @@ final class v {
         int var12;
         int var13;
         int var14;
-        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var6 = param0;
         if (param2 == 0) {
           return 0;
@@ -107,7 +107,7 @@ final class v {
         }
         var12 = stackIn_32_0;
         stackIn_35_0 = (param4 <= param0) ? 0 : 1;
-        L7: {
+        regionExit1: {
           var13 = stackIn_35_0;
           if (var9 != 0) {
             var6 = param0 >> 3;
@@ -119,10 +119,10 @@ final class v {
               } else {
                 if (var13 != 0) {
                   var6 = param0 + 1;
-                  break L7;
+                  break regionExit1;
                 }
               }
-              break L7;
+              break regionExit1;
             }
             var6 = param0 * 7 >> 3;
           }
@@ -153,7 +153,7 @@ final class v {
     }
 
     private final boolean a(byte param0, int param1, int param2) {
-        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var4 = param1;
         int var5 = 0;
         while (var4 > 0) {
@@ -183,7 +183,7 @@ final class v {
     private final int b(int param0, int param1, int param2) {
         int var4;
         int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var4 = 0;
         if (-1 < param2 &&
           param2 < this.field_j &&
@@ -264,7 +264,7 @@ final class v {
         int var7 = 0;
         int var4Lifetime1;
         int var5Lifetime1;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = 40 * this.field_j >> 1;
           if (param0 >= -76) {
@@ -338,7 +338,7 @@ final class v {
         int var12;
         int var13;
         int var14;
-        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 != 1745035905) {
           return;
         }
@@ -357,7 +357,7 @@ final class v {
         var10 = var4;
         var11 = so.field_b.field_a;
         var12 = so.field_b.field_g;
-        qn.f(0, 0, var11, var12);
+        SoftwareRaster.f(0, 0, var11, var12);
         var13 = 0;
         while (var8 < 256 + var12 + 40) {
           while (80 + var11 > var7) {
@@ -435,7 +435,7 @@ final class v {
         int var18;
         int var19;
         int var20;
-        var20 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_e[0] = 0;
         this.field_e[1] = 0;
         this.c(false);
@@ -517,7 +517,7 @@ final class v {
         int var13;
         int var14;
         int var15;
-        var15 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var11 = 255;
         var12 = 255;
         var13 = 255;
@@ -567,7 +567,7 @@ final class v {
         int var7;
         int var8;
         int var9;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var7 = 0;
         if (param5 ||
           param1 ||
@@ -686,7 +686,7 @@ final class v {
         int var17;
         int var19;
         int var21;
-        var21 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var21 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_e[0] = 0;
         this.field_e[1] = 0;
         this.c(false);
@@ -796,7 +796,7 @@ final class v {
         int var38;
         int var39;
         int[] var40;
-        var39 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var39 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (0 <= param11 &&
           0 <= param1 &&
           this.field_m - 1 >= param13 &&
@@ -849,7 +849,7 @@ final class v {
                 var28 >= 0 &&
                 var23 > var28) {
                 var29 = var24 + var22 * var28;
-                var30 = qn.field_d[var29];
+                var30 = SoftwareRaster.field_d[var29];
                 var31 = dd.field_k.field_B[var21 + var25 * 80];
                 if (var30 != 0) {
                   var32 = (16745529 & var26) >> 15;
@@ -868,7 +868,7 @@ final class v {
                   var37 = var37 >> 8;
                   var38 = var38 >> 8;
                   var30 = (var33 * var36 & -16777216 | 65280 & var37 * var34 | 16711680 & var38 * var35) >> 8;
-                  qn.field_d[var29] = var30;
+                  SoftwareRaster.field_d[var29] = var30;
                 }
               }
               var26 = var26 + var27;
@@ -919,7 +919,7 @@ final class v {
         int var36;
         int var37;
         int var38;
-        var38 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var38 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var12 = param6 << 16;
         var13 = (-var12 + (param10 << 16)) / 40;
         var14 = param7 << 16;
@@ -972,7 +972,7 @@ final class v {
               0 <= var27 &&
               var20 > var27)) {
               var28 = var21 + var19 * var27;
-              var29 = qn.field_d[var28];
+              var29 = SoftwareRaster.field_d[var28];
               var30 = dd.field_k.field_B[var22 * 80 + var18];
               if (var29 != 0) {
                 var31 = (16772243 & var23) >> 15;
@@ -991,7 +991,7 @@ final class v {
                 var37 = var37 >> 8;
                 var36 = var36 >> 8;
                 var29 = (var37 * var34 & 16711680 | (var36 * var33 & 65280 | var32 * var35 & -16777216)) >> 8;
-                qn.field_d[var28] = var29;
+                SoftwareRaster.field_d[var28] = var29;
               }
             }
             var25++;
@@ -1040,7 +1040,7 @@ final class v {
         int var11;
         int var12;
         int var13;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = this.field_n[0];
         var3 = this.field_n[1];
         this.field_c[0] = var2;
@@ -1059,7 +1059,7 @@ final class v {
         var9 = var3;
         var10 = so.field_b.field_a;
         var11 = so.field_b.field_g;
-        qn.f(0, 0, var10, var11);
+        SoftwareRaster.f(0, 0, var10, var11);
         var12 = 0;
         while (var11 + 200 + 256 > var7) {
           while (var6 < var10 + 80) {
@@ -1104,7 +1104,7 @@ final class v {
         return this.b((byte) -125, param0);
     }
 
-    final void a(byte param0, at param1) {
+    final void a(byte param0, NodeDeque param1) {
         boolean discarded$0 = false;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -1117,7 +1117,7 @@ final class v {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3 = (vb) (param1.d((byte) -77));
           while (var3 != null) {
@@ -1184,9 +1184,9 @@ final class v {
 
     private final void b(int param0) {
         int var4 = 0;
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var2 = -71 % ((4 - param0) / 32);
-        byte[] var3 = new cn(ns.a(false, 2147483647, li.field_n), 4, this.field_j / 5, this.field_m / 5, 7, 0.5f, true).a(this.field_m, (byte) 93, this.field_j);
+        byte[] var3 = new cn(AttackEvent.a(false, 2147483647, li.field_n), 4, this.field_j / 5, this.field_m / 5, 7, 0.5f, true).a(this.field_m, (byte) 93, this.field_j);
         this.field_o = new int[var3.length];
         for (var4 = 0; var3.length > var4; var4++) {
           this.field_o[var4] = 256 - rn.a((int) var3[var4], 255);

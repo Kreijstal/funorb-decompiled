@@ -11,7 +11,7 @@ final class lg {
     static int field_d;
 
     final static void a(int param0, kl param1) {
-        wk var2 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
@@ -19,14 +19,14 @@ final class lg {
             String var5 = (String) null;
             lg.a((String) null, (byte) 32);
           }
-          var2 = new wk(param1.a("", 49, "final_frame.jpg"), (java.awt.Component) ((Object) si.field_b));
+          var2 = new RgbSprite(param1.a("", 49, "final_frame.jpg"), (java.awt.Component) ((Object) si.field_b));
           var3 = var2.field_y;
           var4 = var2.field_v;
           rq.a((byte) -56);
-          wd.field_k = new wk(var3, 3 * var4 / 4);
+          wd.field_k = new RgbSprite(var3, 3 * var4 / 4);
           wd.field_k.b();
           var2.f(0, 0);
-          vt.field_k = new wk(var3, var4 - wd.field_k.field_v);
+          vt.field_k = new RgbSprite(var3, var4 - wd.field_k.field_v);
           vt.field_k.b();
           var2.f(0, -wd.field_k.field_v);
           vt.field_k.field_z = wd.field_k.field_v;
@@ -54,7 +54,7 @@ final class lg {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (nh.field_K == null) {
             return null;
@@ -102,7 +102,7 @@ final class lg {
     private lg(int param0, int param1, int param2) {
     }
 
-    final void a(byte param0, vh param1, byte[] param2) {
+    final void a(byte param0, PacketBuffer param1, byte[] param2) {
         try {
           Exception exception = null;
           RuntimeException var4 = null;
@@ -113,13 +113,13 @@ final class lg {
           String stackIn_18_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (param1.field_o[param1.field_q] == 31 &&
-              -117 == param1.field_o[param1.field_q + 1]) {
+            if (param1.payload[param1.position] == 31 &&
+              -117 == param1.payload[param1.position + 1]) {
               if (null == this.field_a) {
                 this.field_a = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_a.setInput(param1.field_o, param1.field_q + 10, param1.field_o.length + (-10 - param1.field_q - 8));
+                this.field_a.setInput(param1.payload, param1.position + 10, param1.payload.length + (-10 - param1.position - 8));
                 this.field_a.inflate(param2);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

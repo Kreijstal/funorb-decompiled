@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cl extends tc {
-    jd field_l;
+final class cl extends IntrusiveNode {
+    Unit field_l;
     static String field_w;
     int field_u;
     jb field_k;
@@ -10,30 +10,30 @@ final class cl extends tc {
     private float field_p;
     private int field_y;
     static String[] field_z;
-    jd field_o;
+    Unit field_o;
     static int field_s;
     private float field_x;
     int field_n;
     static boolean field_t;
-    ej field_r;
+    AiPlanner field_r;
     private float field_v;
     int field_m;
 
-    private final jd e(int param0) {
+    private final Unit e(int param0) {
         if (this.field_k == null) {
           return null;
         }
         if (param0 != -8786) {
-          return (jd) null;
+          return (Unit) null;
         }
         Object var2 = null;
         if (this.field_k.g(81)) {
-          var2 = this.field_r.field_D.c(this.field_k.field_o, true, this.field_k.field_k);
+          var2 = this.field_r.battlefield.getUnitAt(this.field_k.field_o, true, this.field_k.field_k);
         }
-        return (jd) (var2);
+        return (Unit) (var2);
     }
 
-    private final float a(int param0, int param1, boolean param2, nn param3) {
+    private final float a(int param0, int param1, boolean param2, MovementPlanner param3) {
         float stackIn_10_0 = 0.0f;
         int stackIn_17_0 = 0;
         float stackIn_26_0 = 0.0f;
@@ -53,12 +53,12 @@ final class cl extends tc {
         int var5_int = 0;
         RuntimeException var5 = null;
         float var6 = 0.0f;
-        ha var7 = null;
+        Battlefield var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ne var12 = null;
+        MapTile var12 = null;
         Object var13 = null;
         float var14 = 0.0f;
         float var15 = 0.0f;
@@ -95,22 +95,22 @@ final class cl extends tc {
         int var24Lifetime2;
         float var27Lifetime1;
         int var27_intLifetime1;
-        var29 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var29 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = 1000000;
           if (param1 != -5) {
             this.g(-12);
           }
           var6 = -3.4028234663852886e+38f;
-          var7 = this.field_r.field_D;
-          var8 = param0 % var7.field_v;
-          var9 = param0 / var7.field_v;
+          var7 = this.field_r.battlefield;
+          var8 = param0 % var7.mapWidth;
+          var9 = param0 / var7.mapWidth;
           if (this == this.field_r.field_J &&
             this.field_r.field_N[param0] != -3.4028234663852886e+38f) {
             var6Lifetime1 = this.field_r.field_N[param0];
           } else {
-            var10 = this.field_o.field_J + var7.field_v * this.field_o.field_w;
-            if (this.field_o.field_bb &&
+            var10 = this.field_o.tileX + var7.mapWidth * this.field_o.tileY;
+            if (this.field_o.packedFlag256 &&
               param0 == var10) {
               stackIn_10_0 = -3.4028234663852886e+38f;
               return stackIn_10_0;
@@ -121,12 +121,12 @@ final class cl extends tc {
               stackIn_17_0 = 0;
             }
             var11 = stackIn_17_0;
-            var12 = var7.field_Eb[param0];
+            var12 = var7.tiles[param0];
             if (var11 == 0 &&
-              this.field_o.c(false) &&
+              this.field_o.hasMovementFlag1(false) &&
               var10 != param0 &&
-              this.field_o.field_H == 0 &&
-              this.field_o.field_Y >= this.field_o.field_t) {
+              this.field_o.objectiveId == 0 &&
+              this.field_o.strength >= this.field_o.maximumStrength) {
               var11 = 1;
             }
             param3.a(var9, false, var8, (byte) 93);
@@ -135,12 +135,12 @@ final class cl extends tc {
               stackIn_26_0 = -3.4028234663852886e+38f;
               return stackIn_26_0;
             }
-            if (!param3.field_u && (var8 != this.field_o.field_J ||
-              var9 != this.field_o.field_w)) {
+            if (!param3.field_u && (var8 != this.field_o.tileX ||
+              var9 != this.field_o.tileY)) {
               stackIn_32_0 = -3.4028234663852886e+38f;
               return stackIn_32_0;
             }
-            var13 = var12.field_c;
+            var13 = var12.occupant;
             if (var13 == this.field_o) {
               var13 = null;
             }
@@ -156,7 +156,7 @@ final class cl extends tc {
               if (0.0f != this.field_x) {
                 var17_int = 1000000;
                 var18 = -3.4028234663852886e+38f;
-                stackIn_46_0 = (bw.field_m[this.field_o.field_N][0] != 4) ? 0 : 1;
+                stackIn_46_0 = (bw.unitDefinitions[this.field_o.unitType][0] != 4) ? 0 : 1;
                 var19_int = stackIn_46_0;
                 var20_int = this.field_o.B(3257);
                 var21_int = this.field_o.l((byte) -79);
@@ -166,14 +166,14 @@ final class cl extends tc {
                     if (var24 >= var21_int &&
                       var20_int >= var24 &&
                       this.field_r.field_m.a(var8, -42, var19_int != 0, var23, var22, var9)) {
-                      var26_int = var23 + var8 + var7.field_v * (var22 + var9);
-                      if (var7.field_Eb[var26_int].field_c == null ||
-                        var7.field_Eb[var26_int].field_c == this.field_o) {
+                      var26_int = var23 + var8 + var7.mapWidth * (var22 + var9);
+                      if (var7.tiles[var26_int].occupant == null ||
+                        var7.tiles[var26_int].occupant == this.field_o) {
                         var27 = this.a(param0, var8 + var23, var9 + var22, param1 ^ -2);
                         if (var27 != -3.4028234663852886e+38f) {
-                          if ((var12.field_h == 11 ||
-                            var12.field_h == 7) &&
-                            var12.a(this.field_r.field_z, (byte) 91)) {
+                          if ((var12.terrainType == 11 ||
+                            var12.terrainType == 7) &&
+                            var12.isAlliedToPlayer(this.field_r.field_z, (byte) 91)) {
                             if (var27 < 1.0f) {
                               var27 = 1.0f;
                             }
@@ -208,25 +208,25 @@ final class cl extends tc {
               }
             }
             if (var13 == null &&
-              var12.a(this.field_r.field_z, (byte) 91) &&
-              11 != var12.field_h) {
+              var12.isAlliedToPlayer(this.field_r.field_z, (byte) 91) &&
+              11 != var12.terrainType) {
               stackIn_96_0 = var6Lifetime1;
-              if (var12.field_h != 7) {
+              if (var12.terrainType != 7) {
                 stackIn_97_1 = 1;
               } else {
                 stackIn_97_1 = 2;
               }
-              var6Lifetime1 = stackIn_96_0 + (float)stackIn_97_1 * ((float)(-this.field_o.field_Y + this.field_o.field_t) * this.field_r.field_P[12]);
+              var6Lifetime1 = stackIn_96_0 + (float)stackIn_97_1 * ((float)(-this.field_o.strength + this.field_o.maximumStrength) * this.field_r.field_P[12]);
             }
             if (var10 == param0 &&
               !this.field_o.a(23072)) {
-              var6Lifetime1 = var6Lifetime1 + (float)(-this.field_o.field_Y + this.field_o.field_t) * this.field_r.field_P[12];
+              var6Lifetime1 = var6Lifetime1 + (float)(-this.field_o.strength + this.field_o.maximumStrength) * this.field_r.field_P[12];
             }
-            if ((var12.field_h == 11 ||
-              var12.field_h == 7) &&
-              (var12.a(this.field_r.field_z, (byte) 91) &&
-              this.field_r.field_P[53] < (float)var7.field_H[this.field_r.field_z])) {
-              var6Lifetime1 = var6Lifetime1 - this.field_r.field_P[52] * (float)var7.field_H[this.field_r.field_z];
+            if ((var12.terrainType == 11 ||
+              var12.terrainType == 7) &&
+              (var12.isAlliedToPlayer(this.field_r.field_z, (byte) 91) &&
+              this.field_r.field_P[53] < (float)var7.playerMana[this.field_r.field_z])) {
+              var6Lifetime1 = var6Lifetime1 - this.field_r.field_P[52] * (float)var7.playerMana[this.field_r.field_z];
             }
             var17 = 0.0f;
             var18Lifetime1 = 0.0f;
@@ -258,7 +258,7 @@ final class cl extends tc {
             if (0.0f == var16 &&
               this.field_v != 0.0f) {
               var15Lifetime1 = this.field_r.field_P[6] * this.field_r.field_n[var23Lifetime1][9][param0];
-              if (this.field_o.field_O != var12.field_a &&
+              if (this.field_o.ownerPlayer != var12.ownerPlayer &&
                 var12.a(false)) {
                 var15Lifetime1 = var15Lifetime1 * this.field_r.field_P[41];
               }
@@ -266,16 +266,16 @@ final class cl extends tc {
               var15Lifetime1 = var15Lifetime1 - this.field_r.field_P[7] * var17;
               var15Lifetime1 = var15Lifetime1 - var19Lifetime1 * this.field_r.field_P[8];
               if (var12.a(false) &&
-                this.field_o.field_J == var8 &&
-                var9 == this.field_o.field_w &&
+                this.field_o.tileX == var8 &&
+                var9 == this.field_o.tileY &&
                 var12.field_m < this.field_o.g((byte) 122) * 4 &&
-                var12.field_a != this.field_o.field_O) {
+                var12.ownerPlayer != this.field_o.ownerPlayer) {
                 var15Lifetime1 = var15Lifetime1 + 999999.0f;
               }
               var6Lifetime1 = var6Lifetime1 + var15Lifetime1 * this.field_v;
             }
             if (this.field_o.u(8)) {
-              stackIn_146_0 = (this.field_o.field_H == 0) ? 1 : 0;
+              stackIn_146_0 = (this.field_o.objectiveId == 0) ? 1 : 0;
             } else {
               stackIn_146_0 = 0;
             }
@@ -284,10 +284,10 @@ final class cl extends tc {
               !param2)) {
               var25 = this.field_r.field_n[var23Lifetime1][9][param0];
               if (0.0f == this.field_v &&
-                !this.field_o.c(false)) {
+                !this.field_o.hasMovementFlag1(false)) {
                 var25 = var25 - this.field_r.field_V[param0];
               }
-              if (this.field_o.field_H != 0) {
+              if (this.field_o.objectiveId != 0) {
                 var25 = var25 * this.field_r.field_P[60];
               }
               var14Lifetime1 = this.field_r.field_P[4] * var25;
@@ -296,34 +296,34 @@ final class cl extends tc {
               if (this.field_o.i(-21428)) {
                 var26 = var26 * this.field_r.field_P[58];
               }
-              if (this.field_o.c(false)) {
+              if (this.field_o.hasMovementFlag1(false)) {
                 var26 = var26 * this.field_r.field_P[49];
               }
               var14Lifetime1 = var14Lifetime1 - var26 * (var17 * this.field_r.field_P[40]);
-              if (this.field_o.c(false)) {
+              if (this.field_o.hasMovementFlag1(false)) {
                 var14Lifetime1 = var14Lifetime1 + var20 * this.field_r.field_P[57];
               }
               if (!this.field_o.i(-21428) &&
                 var12.a(false) &&
-                this.field_r.field_z != var12.field_a) {
+                this.field_r.field_z != var12.ownerPlayer) {
                 var14Lifetime1 = var14Lifetime1 - this.field_r.field_P[38] * var19Lifetime1;
               }
               if (this.field_o.f((byte) -109)) {
                 var27_int = 0;
                 if (0 < var8 &&
-                  var7.field_Eb[-1 + param0].c(-58)) {
+                  var7.tiles[-1 + param0].hasCorpse(-58)) {
                   var27_int++;
                 }
-                if (var7.field_v - 1 > var8 &&
-                  var7.field_Eb[param0 + 1].c(117)) {
+                if (var7.mapWidth - 1 > var8 &&
+                  var7.tiles[param0 + 1].hasCorpse(117)) {
                   var27_int++;
                 }
                 if (var9 > 0 &&
-                  var7.field_Eb[param0 - var7.field_v].c(param1 ^ 79)) {
+                  var7.tiles[param0 - var7.mapWidth].hasCorpse(param1 ^ 79)) {
                   var27_int++;
                 }
-                if (var9 < -1 + var7.field_db &&
-                  var7.field_Eb[var7.field_v + param0].c(-117)) {
+                if (var9 < -1 + var7.mapHeight &&
+                  var7.tiles[var7.mapWidth + param0].hasCorpse(-117)) {
                   var27_int++;
                 }
                 var14Lifetime1 = var14Lifetime1 + this.field_r.field_P[10] * (float)var27_int;
@@ -333,42 +333,42 @@ final class cl extends tc {
                 var27_intLifetime1 = 0;
                 if (var10 != param0 - 1 &&
                   var8 > 0 &&
-                  null != var7.field_Eb[param0 - 1].field_c &&
-                  this.field_o.field_O == var7.field_Eb[-1 + param0].field_c.field_O) {
+                  null != var7.tiles[param0 - 1].occupant &&
+                  this.field_o.ownerPlayer == var7.tiles[-1 + param0].occupant.ownerPlayer) {
                   var27_intLifetime1++;
                 }
                 if (var10 != 1 + param0 &&
-                  var8 < var7.field_v - 1 &&
-                  null != var7.field_Eb[1 + param0].field_c &&
-                  this.field_o.field_O == var7.field_Eb[param0 + 1].field_c.field_O) {
+                  var8 < var7.mapWidth - 1 &&
+                  null != var7.tiles[1 + param0].occupant &&
+                  this.field_o.ownerPlayer == var7.tiles[param0 + 1].occupant.ownerPlayer) {
                   var27_intLifetime1++;
                 }
-                if (-var7.field_v + param0 != var10 &&
+                if (-var7.mapWidth + param0 != var10 &&
                   var9 > 0 &&
-                  null != var7.field_Eb[-var7.field_v + param0].field_c &&
-                  var7.field_Eb[-var7.field_v + param0].field_c.field_O == this.field_o.field_O) {
+                  null != var7.tiles[-var7.mapWidth + param0].occupant &&
+                  var7.tiles[-var7.mapWidth + param0].occupant.ownerPlayer == this.field_o.ownerPlayer) {
                   var27_intLifetime1++;
                 }
-                if (var10 != param0 + var7.field_v &&
-                  var9 < -1 + var7.field_db &&
-                  null != var7.field_Eb[var7.field_v + param0].field_c &&
-                  var7.field_Eb[var7.field_v + param0].field_c.field_O == this.field_o.field_O) {
+                if (var10 != param0 + var7.mapWidth &&
+                  var9 < -1 + var7.mapHeight &&
+                  null != var7.tiles[var7.mapWidth + param0].occupant &&
+                  var7.tiles[var7.mapWidth + param0].occupant.ownerPlayer == this.field_o.ownerPlayer) {
                   var27_intLifetime1++;
                 }
                 var14Lifetime1 = var14Lifetime1 + (float)var27_intLifetime1 * this.field_r.field_P[11];
               }
               if (this.field_o.s(124) &&
-                var7.field_Eb[param0].c(81)) {
+                var7.tiles[param0].hasCorpse(81)) {
                 var14Lifetime1 = var14Lifetime1 + this.field_r.field_P[51];
               }
-              if (0 != this.field_o.field_H) {
-                if (!this.field_o.c(false)) {
+              if (0 != this.field_o.objectiveId) {
+                if (!this.field_o.hasMovementFlag1(false)) {
                   stackIn_218_0 = 1.0f;
                 } else {
                   stackIn_218_0 = this.field_r.field_P[48];
                 }
                 var27Lifetime1 = stackIn_218_0;
-                var14Lifetime1 = var14Lifetime1 + this.field_r.field_I[this.field_o.g(0)][this.field_o.field_H - 1][param0] * var27Lifetime1;
+                var14Lifetime1 = var14Lifetime1 + this.field_r.field_I[this.field_o.g(0)][this.field_o.objectiveId - 1][param0] * var27Lifetime1;
               }
               var6Lifetime1 = var6Lifetime1 + var14Lifetime1 * this.field_p;
             }
@@ -385,7 +385,7 @@ final class cl extends tc {
                 this.field_r.a(this, (byte) 85).a(var9, var8, param1 ^ 104, var6Lifetime1);
               }
             } else {
-              this.field_r.a(this, (byte) -88).a(var5_int / var7.field_v, var8, var5_int % var7.field_v, -120, var6Lifetime1, var9);
+              this.field_r.a(this, (byte) -88).a(var5_int / var7.mapWidth, var8, var5_int % var7.mapWidth, -120, var6Lifetime1, var9);
             }
           }
           stackIn_231_0 = var6Lifetime1;
@@ -405,23 +405,23 @@ final class cl extends tc {
     }
 
     final float a(boolean param0, byte param1) {
-        jd discarded$0 = null;
-        nn stackIn_7_0 = null;
+        Unit discarded$0 = null;
+        MovementPlanner stackIn_7_0 = null;
         float[] stackIn_27_0 = null;
         int stackIn_27_1 = 0;
         float stackIn_28_2 = 0.0f;
-        nn var3;
+        MovementPlanner var3;
         sm var4;
         float var5;
         int var6;
         float var7;
         int var8;
-        nn var9;
+        MovementPlanner var9;
         int var6Lifetime1;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 &&
-          this.field_o.field_s &&
-          this.field_o.field_B <= 0) {
+          this.field_o.packedFlag4 &&
+          this.field_o.packedLowFlags <= 0) {
           return -3.4028234663852886e+38f;
         }
         if (param0) {
@@ -438,7 +438,7 @@ final class cl extends tc {
         if (param0) {
           var4.b((byte) 72);
         }
-        var9.a(false, 20, this.field_o.field_O, this.field_o, -1, -1);
+        var9.a(false, 20, this.field_o.ownerPlayer, this.field_o, -1, -1);
         if (this.field_r.field_J == this) {
           for (var6 = 0; this.field_r.field_N.length > var6; var6++) {
             this.field_r.field_N[var6] = -3.4028234663852886e+38f;
@@ -481,12 +481,12 @@ final class cl extends tc {
         int var5 = 0;
         int[] var4;
         int var7;
-        nn var8;
+        MovementPlanner var8;
         int[] var9;
         int[] var10;
         int[] stackIn_3_0 = null;
-        ne var6;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        MapTile var6;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var8 = this.field_r.field_U;
         if (param1) {
           stackIn_3_0 = var8.field_q;
@@ -502,11 +502,11 @@ final class cl extends tc {
         for (var5 = 0; var5 < var8.field_q.length; var5++) {
           if (0 < var10[var5] &&
             var10[var5] <= var8.c(27732)) {
-            var6 = this.field_r.field_D.field_Eb[var5];
+            var6 = this.field_r.battlefield.tiles[var5];
             if (var6.a(false) &&
-              !var6.a(this.field_r.field_z, (byte) 91) && (null == var6.field_c ||
+              !var6.isAlliedToPlayer(this.field_r.field_z, (byte) 91) && (null == var6.occupant ||
               !param1 &&
-              this.field_r.field_z == var6.field_c.field_O)) {
+              this.field_r.field_z == var6.occupant.ownerPlayer)) {
               return var5;
             }
           }
@@ -515,16 +515,16 @@ final class cl extends tc {
     }
 
     final static void b(int param0, int param1) {
-        bv var2 = vl.field_n;
+        CipherPacketBuffer var2 = vl.field_n;
         var2.h(param0 ^ 32164, param1);
-        var2.field_q = var2.field_q + 1;
-        int var3 = var2.field_q;
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
         var2.b(1, param0);
         var2.b(1, vu.field_M.field_nc);
         int var4 = (vu.field_M.field_ac << 6) + vu.field_M.field_Tb;
         var2.b(1, var4);
         var2.a(vu.field_M.field_pc, 0, vu.field_M.field_pc.length, -38);
-        var2.e(var2.field_q - var3, param0 ^ 5935);
+        var2.e(var2.position - var3, param0 ^ 5935);
     }
 
     public static void a(int param0) {
@@ -551,7 +551,7 @@ final class cl extends tc {
             return true;
           }
           if (this.field_y == param1.field_y) {
-            stackIn_10_0 = !(param1.field_o.field_J + param1.field_o.field_w >= this.field_o.field_J + this.field_o.field_w);
+            stackIn_10_0 = !(param1.field_o.tileX + param1.field_o.tileY >= this.field_o.tileX + this.field_o.tileY);
             return stackIn_10_0;
           }
           if (param0 < -78) {
@@ -573,7 +573,7 @@ final class cl extends tc {
     }
 
     private final void a(byte param0) {
-        nn var2 = this.field_r.field_U;
+        MovementPlanner var2 = this.field_r.field_U;
         var2.a(false, 81, this.field_r.field_z, this.field_o, -1, -1);
         if (param0 <= 23) {
           this.field_y = -31;
@@ -582,11 +582,11 @@ final class cl extends tc {
 
     private final void c(int param0, int param1) {
         int var4 = 0 / ((param1 - 80) / 41);
-        int var3 = param0 % this.field_r.field_D.field_v;
-        int var5 = param0 / this.field_r.field_D.field_v;
+        int var3 = param0 % this.field_r.battlefield.mapWidth;
+        int var5 = param0 / this.field_r.battlefield.mapWidth;
         float var6 = this.field_r.field_P[54] * this.field_r.field_n[0][9][param0];
         this.field_r.field_m.a(this.field_r.field_V, true, var6, 0, (byte) -4, 9, var5, var3);
-        this.field_r.field_m.a(this.field_r.field_V, true, var6, 0, (byte) -4, 9, this.field_o.field_w, this.field_o.field_J);
+        this.field_r.field_m.a(this.field_r.field_V, true, var6, 0, (byte) -4, 9, this.field_o.tileY, this.field_o.tileX);
     }
 
     final void g(int param0) {
@@ -603,10 +603,10 @@ final class cl extends tc {
     final void f(int param0) {
         int var2;
         int var3;
-        ne var4;
+        MapTile var4;
         int var2Lifetime1;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (this.field_o.field_s) {
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        if (this.field_o.packedFlag4) {
           return;
         }
         if (this.field_o.i(-21428)) {
@@ -640,20 +640,20 @@ final class cl extends tc {
             }
           }
         }
-        if (this.field_o.c(false)) {
+        if (this.field_o.hasMovementFlag1(false)) {
           this.field_y = this.field_y - 300;
         }
-        if (this.field_o.field_H != 0) {
-          var4 = this.field_r.field_D.field_Eb[this.field_r.field_D.field_v * this.field_o.field_w + this.field_o.field_J];
-          if (var4.a((byte) -107) == this.field_o.field_H) {
-            this.field_o.field_H = 0;
+        if (this.field_o.objectiveId != 0) {
+          var4 = this.field_r.battlefield.tiles[this.field_r.battlefield.mapWidth * this.field_o.tileY + this.field_o.tileX];
+          if (var4.getTag((byte) -107) == this.field_o.objectiveId) {
+            this.field_o.objectiveId = 0;
           }
         }
         var2Lifetime1 = -97 % ((param0 + 13) / 63);
-        if (this.field_o.field_H != 0) {
+        if (this.field_o.objectiveId != 0) {
           this.field_y = this.field_y + 300;
         }
-        if (this.field_o.field_bb) {
+        if (this.field_o.packedFlag256) {
           this.field_y = this.field_y + 500;
         }
         this.field_y = this.field_y + this.field_o.g((byte) 122);
@@ -665,11 +665,11 @@ final class cl extends tc {
         float stackIn_33_0 = 0.0f;
         float stackIn_36_0 = 0.0f;
         float var5;
-        ha var6;
+        Battlefield var6;
         int var7;
         int var8;
-        ne var9;
-        jd var10;
+        MapTile var9;
+        Unit var10;
         int var11;
         int var12;
         int var13;
@@ -686,11 +686,11 @@ final class cl extends tc {
         float var21Lifetime3;
         float var21Lifetime4;
         var5 = 0.0f;
-        var6 = this.field_r.field_D;
-        var7 = param0 % var6.field_v;
-        var8 = param0 / var6.field_v;
-        var9 = var6.field_Eb[param0];
-        var10 = var9.field_c;
+        var6 = this.field_r.battlefield;
+        var7 = param0 % var6.mapWidth;
+        var8 = param0 / var6.mapWidth;
+        var9 = var6.tiles[param0];
+        var10 = var9.occupant;
         var11 = -param1 + var7;
         var12 = var8 - param2;
         stackIn_3_0 = (Math.abs(var11) + Math.abs(var12) != 1) ? 0 : 1;
@@ -703,22 +703,22 @@ final class cl extends tc {
           var15 = var10.g((byte) 122);
         }
         var18 = 0;
-        if (this.field_o.field_C &&
+        if (this.field_o.packedFlag64 &&
           var13 != 0) {
           var17 = var15;
-          if (var17 > -this.field_o.field_Y + this.field_o.field_t) {
-            var17 = -this.field_o.field_Y + this.field_o.field_t;
+          if (var17 > -this.field_o.strength + this.field_o.maximumStrength) {
+            var17 = -this.field_o.strength + this.field_o.maximumStrength;
           }
         }
         if (this.field_o.g((byte) 122) + var17 < var16) {
           var16 = var17 + this.field_o.g((byte) 122);
         }
         if ((2 & var25[2]) == 0) {
-          if (var10.field_C &&
+          if (var10.packedFlag64 &&
             var13 != 0) {
             var18 = var16;
-            if (-var10.field_Y + var10.field_t < var18) {
-              var18 = -var10.field_Y + var10.field_t;
+            if (-var10.strength + var10.maximumStrength < var18) {
+              var18 = -var10.strength + var10.maximumStrength;
             }
           }
           if (0 != (var25[2] & 1)) {
@@ -737,14 +737,14 @@ final class cl extends tc {
         }
         var19 = var15 - var18;
         var20 = var16 - var17;
-        if (!var10.c(false)) {
+        if (!var10.hasMovementFlag1(false)) {
           stackIn_30_0 = 1.0f;
         } else {
           stackIn_30_0 = this.field_r.field_P[61];
         }
         var21 = stackIn_30_0;
         var5 = var5 + (float)var19 * this.field_r.field_P[0] * var21;
-        if (!this.field_o.c(false)) {
+        if (!this.field_o.hasMovementFlag1(false)) {
           stackIn_33_0 = 1.0f;
         } else {
           var21Lifetime1 = this.field_r.field_P[48];
@@ -752,7 +752,7 @@ final class cl extends tc {
         }
         var21Lifetime2 = stackIn_33_0;
         var5 = var5 - (float)var20 * this.field_r.field_P[1] * var21Lifetime2;
-        if (var9.k(12)) {
+        if (var9.hasModifierFlag1(12)) {
           var21Lifetime3 = this.field_r.field_P[50];
           stackIn_36_0 = var21Lifetime3;
         } else {
@@ -761,7 +761,7 @@ final class cl extends tc {
         var21Lifetime4 = stackIn_36_0;
         var5 = var5 + this.field_r.field_P[2] * var21Lifetime4 * this.field_r.field_n[0][9][param0];
         if (0 != (var25[2] & 1) &&
-          !var10.c(false)) {
+          !var10.hasMovementFlag1(false)) {
           var5 = var5 - this.field_r.field_P[32];
         }
         if (var10.a(23072)) {
@@ -772,8 +772,8 @@ final class cl extends tc {
         }
         if (var10.i(-21428)) {
           var5 = var5 * this.field_r.field_P[30];
-          if (var6.field_Eb[param0].a(false) &&
-            var6.field_Eb[param0].field_a != var10.field_O) {
+          if (var6.tiles[param0].a(false) &&
+            var6.tiles[param0].ownerPlayer != var10.ownerPlayer) {
             var5 = var5 * this.field_r.field_P[30];
           }
         }
@@ -784,7 +784,7 @@ final class cl extends tc {
         return var5;
     }
 
-    cl(ej param0, jd param1) {
+    cl(AiPlanner param0, Unit param1) {
         try {
           this.field_r = param0;
           this.field_o = param1;

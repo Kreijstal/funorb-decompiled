@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og extends tc {
+final class og extends IntrusiveNode {
     static int field_m;
     static String field_t;
-    at field_k;
+    NodeDeque field_k;
     int field_q;
     static int[] field_p;
     static String field_l;
@@ -108,7 +108,7 @@ final class og extends tc {
         nd[] var7 = null;
         nd[] var8 = null;
         String var9 = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           try {
             if (param0 != 1) {
@@ -118,12 +118,12 @@ final class og extends tc {
               var7 = new nd[this.field_k.b(false)];
               var8 = var7;
               var4 = 0;
-              var5 = (og) (this.field_k.e((byte) 106));
+              var5 = (og) (this.field_k.first((byte) 106));
               while (var5 != null) {
                 incrementValue$0 = var4;
                 var4++;
                 var7[incrementValue$0] = var5.a(1, param1);
-                var5 = (og) (this.field_k.a((byte) 123));
+                var5 = (og) (this.field_k.next((byte) 123));
               }
               stackIn_9_0 = na.a(param1, (byte) 2, var8, this.field_o);
               return stackIn_9_0;

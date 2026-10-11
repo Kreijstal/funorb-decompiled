@@ -11,9 +11,9 @@ final class ld extends bd {
     private int field_u;
     private int field_E;
     private int field_A;
-    private jd field_z;
+    private Unit field_z;
     private int field_t;
-    private jd field_y;
+    private Unit field_y;
     private int field_w;
     private int field_B;
     private int[] field_C;
@@ -40,7 +40,7 @@ final class ld extends bd {
         int var9Lifetime1;
         int var8Lifetime1;
         int var8Lifetime2;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           jm.field_g = true;
           ui.field_f = param0;
@@ -52,7 +52,7 @@ final class ld extends bd {
           }
           var6 = stackIn_4_0;
           if (ui.field_f == 0) {
-            var7 = iu.a(480, var11, param3 ^ 7444, ej.field_G, fs.field_c);
+            var7 = iu.a(480, var11, param3 ^ 7444, AiPlanner.field_G, fs.field_c);
             var8 = 3 + var7;
             cj.field_k = new int[var8];
             nb.field_h = new String[var8];
@@ -74,7 +74,7 @@ final class ld extends bd {
             if (ui.field_f != 1) {
               throw new IllegalArgumentException();
             }
-            var7 = iu.a(480, var11, param3 + 7412, ej.field_G, fs.field_c);
+            var7 = iu.a(480, var11, param3 + 7412, AiPlanner.field_G, fs.field_c);
             var8 = 2 + var7;
             cj.field_k = new int[var8];
             nb.field_h = new String[var8];
@@ -90,7 +90,7 @@ final class ld extends bd {
             cj.field_k[var8 - 1] = 0;
             rg.field_m[0] = 2;
           }
-          nn.field_z.field_k = rg.field_m.length;
+          MovementPlanner.field_z.field_k = rg.field_m.length;
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; var8Lifetime1 < nb.field_h.length; var8Lifetime1++) {
             stackIn_25_0 = nb.field_h[var8Lifetime1];
@@ -105,7 +105,7 @@ final class ld extends bd {
           }
           bm.field_h = var7Lifetime1 + bt.field_g - (var7Lifetime1 >> 1);
           co.field_f = bt.field_g - (var7Lifetime1 >> 1);
-          ms.field_r = (ar.field_w + rd.field_b << 1) * nn.field_z.field_k;
+          ms.field_r = (ar.field_w + rd.field_b << 1) * MovementPlanner.field_z.field_k;
           var8Lifetime2 = 0;
           while (nb.field_h.length > var8Lifetime2) {
             stackIn_38_0 = ms.field_r;
@@ -122,7 +122,7 @@ final class ld extends bd {
             field_x = (int[]) null;
           }
           rk.field_r = -(ms.field_r >> 1) + lm.field_g;
-          nn.field_z.a(0, param2, vo.a((byte) -73, ko.field_b, sm.field_d), 0);
+          MovementPlanner.field_z.a(0, param2, vo.a((byte) -73, ko.field_b, sm.field_d), 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -193,7 +193,7 @@ final class ld extends bd {
         }
     }
 
-    final void a(int param0, ha param1) {
+    final void a(int param0, Battlefield param1) {
         int var4 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -205,7 +205,7 @@ final class ld extends bd {
         int var6 = 0;
         int[] var7 = null;
         int[] var8 = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_E = this.field_u;
           var8 = new int[this.field_D];
@@ -231,20 +231,20 @@ final class ld extends bd {
             }
             var3[var4] = this.field_C[var4];
           }
-          if (!this.field_y.field_W ||
-            this.field_y.field_N == 0) {
-            param1.field_l.a((byte) -119, (tc) (new kr(this.field_u, this.field_v, var8)));
+          if (!this.field_y.packedFlag8 ||
+            this.field_y.unitType == 0) {
+            param1.pendingEvents.a((byte) -119, (IntrusiveNode) (new MoveEvent(this.field_u, this.field_v, var8)));
           }
           if (param0 != 64) {
             ld.a((byte) -102, 105);
           }
           if (this.field_w != 0 ||
             0 != this.field_t) {
-            if (this.field_y.field_W &&
-              7 == this.field_y.field_N) {
+            if (this.field_y.packedFlag8 &&
+              7 == this.field_y.unitType) {
               return;
             }
-            param1.field_l.a((byte) -119, (tc) (new ns(this.field_E, this.field_F, this.field_w, this.field_t, this.field_z, this.field_A, this.field_B)));
+            param1.pendingEvents.a((byte) -119, (IntrusiveNode) (new AttackEvent(this.field_E, this.field_F, this.field_w, this.field_t, this.field_z, this.field_A, this.field_B)));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -261,7 +261,7 @@ final class ld extends bd {
         }
     }
 
-    final static void a(int param0, wk[] param1, tu param2, String param3, int param4, int param5, int param6) {
+    final static void a(int param0, RgbSprite[] param1, tu param2, String param3, int param4, int param5, int param6) {
         int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
@@ -324,7 +324,7 @@ final class ld extends bd {
         field_x = null;
     }
 
-    ld(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, jd param7, jd param8) {
+    ld(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, Unit param7, Unit param8) {
         int stackIn_4_1 = 0;
         int stackIn_5_2 = 0;
         int stackIn_8_1 = 0;
@@ -354,21 +354,21 @@ final class ld extends bd {
             this.field_t = 0;
           } else {
             this.field_z = param8.b(false);
-            var10_int = bw.field_m[this.field_y.field_N][9];
-            stackIn_4_1 = this.field_y.field_Y * vu.field_N[var10_int] / this.field_y.field_t;
-            if (this.field_y.field_Y * vu.field_N[var10_int] % this.field_y.field_t != 0) {
+            var10_int = bw.unitDefinitions[this.field_y.unitType][9];
+            stackIn_4_1 = this.field_y.strength * vu.field_N[var10_int] / this.field_y.maximumStrength;
+            if (this.field_y.strength * vu.field_N[var10_int] % this.field_y.maximumStrength != 0) {
               stackIn_5_2 = 1;
             } else {
               stackIn_5_2 = 0;
             }
             this.field_A = stackIn_4_1 + stackIn_5_2;
-            var11 = bw.field_m[this.field_z.field_N][9];
-            if (0 != this.field_z.field_Y * vu.field_N[var11] % this.field_z.field_t) {
+            var11 = bw.unitDefinitions[this.field_z.unitType][9];
+            if (0 != this.field_z.strength * vu.field_N[var11] % this.field_z.maximumStrength) {
               stackIn_8_1 = 1;
             } else {
               stackIn_8_1 = 0;
             }
-            this.field_B = stackIn_8_1 + this.field_z.field_Y * vu.field_N[var11] / this.field_z.field_t;
+            this.field_B = stackIn_8_1 + this.field_z.strength * vu.field_N[var11] / this.field_z.maximumStrength;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class s {
-    static wk field_c;
-    static at field_a;
-    static at field_e;
+    static RgbSprite field_c;
+    static NodeDeque field_a;
+    static NodeDeque field_e;
     static int field_d;
     static String field_b;
 
     final static void a(int param0, int param1, on param2) {
-        bv var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           var3 = vl.field_n;
           var3.h(32161, param1);
@@ -44,7 +44,7 @@ final class s {
         RuntimeException var3 = null;
         try {
           if (param2 == 1) {
-            stackIn_2_0 = fo.a(4800, kf.field_B, new String[]{param1});
+            stackIn_2_0 = fo.a(4800, GrowthEvent.field_B, new String[]{param1});
             return stackIn_2_0;
           }
           if (2 == param2) {
@@ -115,8 +115,8 @@ final class s {
     }
 
     static {
-        field_a = new at();
-        field_e = new at();
+        field_a = new NodeDeque();
+        field_e = new NodeDeque();
         field_b = "Achievements";
     }
 }

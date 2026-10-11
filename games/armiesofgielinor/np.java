@@ -9,7 +9,7 @@ final class np extends je {
     private int field_Xb;
     static int[][] field_Vb;
     static String field_Jb;
-    private wk[] field_Ub;
+    private RgbSprite[] field_Ub;
     private je field_Tb;
     private je field_Nb;
     static String field_Ob;
@@ -20,7 +20,7 @@ final class np extends je {
     private int[] field_Mb;
     private int field_Ib;
 
-    final void a(boolean param0, String param1, int param2, wk param3) {
+    final void a(boolean param0, String param1, int param2, RgbSprite param3) {
         try {
           if (param0) {
             this.d((byte) 111);
@@ -46,7 +46,7 @@ final class np extends je {
           return;
         }
         if (param0) {
-          qn.b(0, 0, qn.field_l, qn.field_g, 0, 192);
+          SoftwareRaster.b(0, 0, SoftwareRaster.field_l, SoftwareRaster.field_g, 0, 192);
         }
         ee.field_v.a(0, -118, 0);
         if (param1 >= -111) {
@@ -86,9 +86,9 @@ final class np extends je {
         int var11;
         int var7Lifetime1;
         int var8Lifetime1;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_Lb == 0) {
-          this.field_Sb[this.field_Lb] = new nf(0L, (je) null, (je) null, this.field_Nb, (wk) null, va.field_F);
+          this.field_Sb[this.field_Lb] = new nf(0L, (je) null, (je) null, this.field_Nb, (RgbSprite) null, va.field_F);
           this.field_Sb[this.field_Lb].field_Fb = 1;
           this.a(this.field_Sb[this.field_Lb], 43);
           this.field_Mb[this.field_Lb] = -1;
@@ -115,7 +115,7 @@ final class np extends je {
         return;
     }
 
-    np(je param0, wk[] param1, je param2, je param3, int param4, int param5, int param6, int param7, int param8) {
+    np(je param0, RgbSprite[] param1, je param2, je param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Sb = new nf[256];
         this.field_Kb = -2;
@@ -149,7 +149,7 @@ final class np extends je {
           if (param2 >= -98) {
             np.k(-112);
           }
-          this.field_Sb[this.field_Lb] = new nf(0L, (je) null, (je) null, this.field_Tb, (wk) null, param1);
+          this.field_Sb[this.field_Lb] = new nf(0L, (je) null, (je) null, this.field_Tb, (RgbSprite) null, param1);
           this.field_Sb[this.field_Lb].field_mb = this.field_Ub;
           this.field_Sb[this.field_Lb].field_ub = true;
           this.field_Sb[this.field_Lb].field_Fb = 1;
@@ -163,7 +163,7 @@ final class np extends je {
 
     final static void a(boolean param0, gd param1) {
         int var2_int = 0;
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0) {
             np.e((byte) 102);
@@ -182,7 +182,7 @@ final class np extends je {
     final int a(byte param0, boolean param1) {
         int var3;
         int var4;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.a(true, param1);
         if (!param1) {
           return -2;
@@ -197,7 +197,7 @@ final class np extends je {
           }
           var3++;
         }
-        if (tr.field_A != 0) {
+        if (DeployEvent.field_A != 0) {
           return -1;
         }
         return this.field_Kb;

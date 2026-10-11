@@ -3,10 +3,10 @@
  */
 final class bu {
     static dn field_a;
-    static wk[] field_c;
+    static RgbSprite[] field_c;
     static sl field_b;
 
-    final static void a(int param0, jd param1, int param2, vh param3) {
+    final static void a(int param0, Unit param1, int param2, PacketBuffer param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -17,34 +17,34 @@ final class bu {
         RuntimeException var4 = null;
         int var5 = 0;
         try {
-          var4_int = param1.h((byte) 117);
-          param3.b(param2 - 1, param1.field_A & 31 | param1.field_O << 5);
+          var4_int = param1.packStatusFlags((byte) 117);
+          param3.b(param2 - 1, param1.field_A & 31 | param1.ownerPlayer << 5);
           param3.b(true, var4_int);
-          param3.b(1, param0 + param1.field_t);
-          param3.b(1, param1.field_Y + param0);
+          param3.b(1, param0 + param1.maximumStrength);
+          param3.b(1, param1.strength + param0);
           param3.b(1, param1.field_o << 4 | param1.field_P);
           param3.b(1, param1.field_ab);
           param3.b(1, param1.field_r);
           param3.b(param2 - 1, param1.field_cb);
-          param3.b(1, param1.field_V);
-          if ((4 & param1.field_V) != 0) {
-            param3.a(param1.field_K, 413740432);
+          param3.b(1, param1.movementFlags);
+          if ((4 & param1.movementFlags) != 0) {
+            param3.a(param1.displayName, 413740432);
           }
           var5 = 0;
-          if (0 != param1.field_E) {
+          if (0 != param1.tag) {
             var5 = var5 | 2;
           }
-          if (param1.field_H != 0) {
+          if (param1.objectiveId != 0) {
             var5 = var5 | 1;
           }
           param3.b(1, var5);
           if (0 != (var5 & param2)) {
-            param3.b(1, param1.field_E);
+            param3.b(1, param1.tag);
           }
           if ((var5 & 1) == 0) {
             return;
           }
-          param3.b(1, param1.field_H);
+          param3.b(1, param1.objectiveId);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

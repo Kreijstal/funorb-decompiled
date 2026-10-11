@@ -56,7 +56,7 @@ final class wt extends dr {
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = -83 % ((-9 - param1) / 39);
           if (!wn.a(param0, 1, param2)) {

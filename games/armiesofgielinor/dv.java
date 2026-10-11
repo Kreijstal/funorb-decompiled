@@ -5,13 +5,13 @@ abstract class dv implements ap {
     dn field_d;
     static je field_m;
     String field_c;
-    static wk field_k;
+    static RgbSprite field_k;
     static String field_i;
     static String field_g;
     je field_s;
     static String field_r;
-    private at field_j;
-    ka field_t;
+    private NodeDeque field_j;
+    BitmapFont field_t;
     private int field_l;
     dp field_o;
     private je field_q;
@@ -26,18 +26,18 @@ abstract class dv implements ap {
     private final void a(int param0, String param1, int param2) {
         int var4_int = 0;
         je var5 = null;
-        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_d.field_Jb.a(this.a(param0, param1, (byte) -68), param2 + 368);
           if (~this.field_d.field_Jb.field_fb.b(false) < param2) {
             this.field_d.field_Jb.field_fb.a(0);
           }
           var4_int = 5;
-          var5 = (je) (this.field_d.field_Jb.field_fb.e((byte) 107));
+          var5 = (je) (this.field_d.field_Jb.field_fb.first((byte) 107));
           while (var5 != null) {
             var5.field_ab = var4_int;
             var4_int = var4_int + this.field_l;
-            var5 = (je) (this.field_d.field_Jb.field_fb.a((byte) 123));
+            var5 = (je) (this.field_d.field_Jb.field_fb.next((byte) 123));
           }
           this.field_d.field_Jb.field_ob = var4_int;
           this.field_d.field_Jb.field_ab = this.field_d.field_ob - var4_int;
@@ -49,7 +49,7 @@ abstract class dv implements ap {
     abstract boolean a(String param0, boolean param1);
 
     final static String a(String param0, int param1, String param2, String param3) {
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var4 = param0.indexOf(param2);
         if (param1 > -45) {
           field_g = (String) null;
@@ -66,26 +66,26 @@ abstract class dv implements ap {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var2Lifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
         if (!(this.field_q.field_ob + this.field_q.field_ab <= 0)) {
-          qn.b(this.field_q.field_V, this.field_q.field_D, this.field_d.field_S, this.field_q.field_ob, 5592405, 230);
-          qn.b(this.field_d.field_gb + this.field_d.field_V, this.field_q.field_D, this.field_d.field_S, this.field_q.field_ob, 5592405, 230);
-          qn.b(this.field_d.field_V, this.field_q.field_D, this.field_d.field_gb, this.field_d.field_ab, 5592405, 230);
-          qn.b(this.field_d.field_V, this.field_d.field_ob + this.field_d.field_D, this.field_d.field_gb, this.field_o.field_D + (-this.field_d.field_D - this.field_d.field_ob), 5592405, 230);
-          qn.b(this.field_d.field_V, this.field_o.field_ob + this.field_o.field_D, this.field_d.field_gb, -this.field_o.field_ob + this.field_q.field_ob - this.field_o.field_ab, 5592405, 230);
-          qn.b(this.field_d.field_V, this.field_d.field_D, this.field_d.field_gb, this.field_d.field_ob, 2236962, 240);
-          qn.b(this.field_o.field_V, this.field_o.field_D, this.field_o.field_gb, this.field_o.field_ob, 2236962, 240);
+          SoftwareRaster.b(this.field_q.field_V, this.field_q.field_D, this.field_d.field_S, this.field_q.field_ob, 5592405, 230);
+          SoftwareRaster.b(this.field_d.field_gb + this.field_d.field_V, this.field_q.field_D, this.field_d.field_S, this.field_q.field_ob, 5592405, 230);
+          SoftwareRaster.b(this.field_d.field_V, this.field_q.field_D, this.field_d.field_gb, this.field_d.field_ab, 5592405, 230);
+          SoftwareRaster.b(this.field_d.field_V, this.field_d.field_ob + this.field_d.field_D, this.field_d.field_gb, this.field_o.field_D + (-this.field_d.field_D - this.field_d.field_ob), 5592405, 230);
+          SoftwareRaster.b(this.field_d.field_V, this.field_o.field_ob + this.field_o.field_D, this.field_d.field_gb, -this.field_o.field_ob + this.field_q.field_ob - this.field_o.field_ab, 5592405, 230);
+          SoftwareRaster.b(this.field_d.field_V, this.field_d.field_D, this.field_d.field_gb, this.field_d.field_ob, 2236962, 240);
+          SoftwareRaster.b(this.field_o.field_V, this.field_o.field_D, this.field_o.field_gb, this.field_o.field_ob, 2236962, 240);
           var2 = this.field_q.field_ab + 256;
           if (var2 < 0) {
             var2 = 0;
           }
-          qn.b(this.field_q.field_V, this.field_q.field_D + this.field_q.field_ob, this.field_q.field_gb, -this.field_q.field_ob + (-this.field_q.field_D + dt.field_a), 0, var2 >> 1);
+          SoftwareRaster.b(this.field_q.field_V, this.field_q.field_D + this.field_q.field_ob, this.field_q.field_gb, -this.field_q.field_ob + (-this.field_q.field_D + dt.field_a), 0, var2 >> 1);
           var3 = 5 + this.field_q.field_ab + this.field_q.field_ob;
           for (var4 = 0; var4 < 6; var4++) {
-            qn.e(0, var3, bn.field_b, 0, var4 << 5);
+            SoftwareRaster.e(0, var3, bn.field_b, 0, var4 << 5);
             var3--;
           }
           this.field_q.b(0 == (8 & this.field_n) ? true : false, 20);
@@ -133,7 +133,7 @@ abstract class dv implements ap {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = (rq) (this.field_j.e((byte) 90));
+          var3 = (rq) (this.field_j.first((byte) 90));
           if (var3 == null ||
             !param0.equals(var3.field_l)) {
             this.field_j.a(750, new rq(param0));
@@ -164,7 +164,7 @@ abstract class dv implements ap {
         int var3;
         int var5;
         int var6;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_f &&
           this.field_p > 0) {
           this.field_p = this.field_p - 1;
@@ -207,11 +207,11 @@ abstract class dv implements ap {
 
     final static void a(boolean param0) {
         int var2;
-        var2 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if ((rd.field_j.field_xb.field_C & 1 << rd.field_j.field_q) != 0) {
+        var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        if ((rd.field_j.battlefield.field_C & 1 << rd.field_j.field_q) != 0) {
           il.field_t[10] = np.field_Jb;
         } else {
-          if ((~rd.field_j.field_xb.field_e & rd.field_j.field_xb.field_C) == 0) {
+          if ((~rd.field_j.battlefield.field_e & rd.field_j.battlefield.field_C) == 0) {
             il.field_t[10] = uu.field_c;
           } else {
             il.field_t[10] = dm.field_O;
@@ -228,7 +228,7 @@ abstract class dv implements ap {
         String[] var5 = null;
         String[] var6 = null;
         String var8 = null;
-        at var9 = null;
+        NodeDeque var9 = null;
         rq var10 = null;
         int var11 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -236,7 +236,7 @@ abstract class dv implements ap {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = -10 + (this.field_d.field_gb - 15);
           var5 = dj.a(-100, '\n', param0);
@@ -248,10 +248,10 @@ abstract class dv implements ap {
             var8 = var6[var7];
             if (var4_int <= this.field_t.a(var8)) {
               var9 = this.a(var8, var4_int, (byte) -98);
-              var10 = (rq) (var9.e((byte) 123));
+              var10 = (rq) (var9.first((byte) 123));
               while (var10 != null) {
                 this.a(param1, var10.field_l, -257);
-                var10 = (rq) (var9.a((byte) 123));
+                var10 = (rq) (var9.next((byte) 123));
               }
             } else {
               this.a(param1, var8, -257);
@@ -272,26 +272,26 @@ abstract class dv implements ap {
         }
     }
 
-    private final at a(String param0, int param1, byte param2) {
+    private final NodeDeque a(String param0, int param1, byte param2) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
-        at stackIn_21_0 = null;
+        NodeDeque stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
-        at var4 = null;
+        NodeDeque var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 != -98) {
             this.field_h = (String) null;
           }
-          var4 = new at();
+          var4 = new NodeDeque();
           while (param0 != null) {
             boolean decompiledFrameRemainder0 = true;
             var5 = this.field_t.a(param0);
@@ -324,7 +324,7 @@ abstract class dv implements ap {
             else {
               param0 = null;
             }
-            var4.a((byte) -119, (tc) (new rq(var6)));
+            var4.a((byte) -119, (IntrusiveNode) (new rq(var6)));
           }
           stackIn_21_0 = var4;
           return stackIn_21_0;
@@ -370,7 +370,7 @@ abstract class dv implements ap {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -68) {
-            field_k = (wk) null;
+            field_k = (RgbSprite) null;
           }
           var4 = new je(0L, (je) null, param1);
           var4.field_N = param0;
@@ -433,39 +433,39 @@ abstract class dv implements ap {
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17;
-        var17 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param3 != -66) {
           return;
         }
         if (param15 > param0) {
           if (param8 > param15) {
-            q.a(qn.field_d, param5, param13, param12, param4, param1, param7, param9, param6, param11, param15, param8, param14, true, param2, param0, param10);
+            TelepopEvent.a(SoftwareRaster.field_d, param5, param13, param12, param4, param1, param7, param9, param6, param11, param15, param8, param14, true, param2, param0, param10);
           } else {
             if (param8 > param0) {
-              q.a(qn.field_d, param5, param12, param13, param4, param9, param10, param1, param6, param14, param8, param15, param11, true, param2, param0, param7);
+              TelepopEvent.a(SoftwareRaster.field_d, param5, param12, param13, param4, param9, param10, param1, param6, param14, param8, param15, param11, true, param2, param0, param7);
             } else {
-              q.a(qn.field_d, param1, param4, param13, param12, param9, param6, param5, param10, param14, param0, param15, param2, true, param11, param8, param7);
+              TelepopEvent.a(SoftwareRaster.field_d, param1, param4, param13, param12, param9, param6, param5, param10, param14, param0, param15, param2, true, param11, param8, param7);
             }
           }
         } else {
           if (param8 <= param0) {
             if (param8 > param15) {
-              q.a(qn.field_d, param9, param12, param4, param13, param5, param10, param1, param7, param2, param8, param0, param11, true, param14, param15, param6);
+              TelepopEvent.a(SoftwareRaster.field_d, param9, param12, param4, param13, param5, param10, param1, param7, param2, param8, param0, param11, true, param14, param15, param6);
             } else {
-              q.a(qn.field_d, param1, param13, param4, param12, param5, param7, param9, param10, param2, param15, param0, param14, true, param11, param8, param6);
+              TelepopEvent.a(SoftwareRaster.field_d, param1, param13, param4, param12, param5, param7, param9, param10, param2, param15, param0, param14, true, param11, param8, param6);
             }
           } else {
-            q.a(qn.field_d, param9, param4, param12, param13, param1, param6, param5, param7, param11, param0, param8, param2, true, param14, param15, param10);
+            TelepopEvent.a(SoftwareRaster.field_d, param9, param4, param12, param13, param1, param6, param5, param7, param11, param0, param8, param2, true, param14, param15, param10);
           }
         }
     }
 
     boolean a(int param0, char param1, int param2) {
-        tc stackIn_25_1 = null;
+        IntrusiveNode stackIn_25_1 = null;
         je var5;
         int var6;
         String var7;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != -30847) {
           dv.a(false);
         }
@@ -479,11 +479,11 @@ abstract class dv implements ap {
         if (84 != param2) {
           if (98 == param2) {
             if (null == this.field_b ||
-              this.field_b.field_b != this.field_j.field_d) {
+              this.field_b.next != this.field_j.sentinel) {
               if (this.field_b == null) {
-                stackIn_25_1 = this.field_j.e((byte) 119);
+                stackIn_25_1 = this.field_j.first((byte) 119);
               } else {
-                stackIn_25_1 = this.field_b.field_b;
+                stackIn_25_1 = this.field_b.next;
               }
               this.field_b = (rq) (stackIn_25_1);
               if (this.field_b != null) {
@@ -493,8 +493,8 @@ abstract class dv implements ap {
           } else {
             if (param2 == 99) {
               if (this.field_b != null &&
-                this.field_j.field_d != this.field_b.field_j) {
-                this.field_b = (rq) (this.field_b.field_j);
+                this.field_j.sentinel != this.field_b.previous) {
+                this.field_b = (rq) (this.field_b.previous);
                 this.field_o.a(this.field_b.field_l, (byte) 45);
               }
             } else {
@@ -528,7 +528,7 @@ abstract class dv implements ap {
         return var3;
     }
 
-    dv(ka param0, hd param1) {
+    dv(BitmapFont param0, hd param1) {
         int var3_int = 0;
         je var4 = null;
         je var5 = null;
@@ -543,7 +543,7 @@ abstract class dv implements ap {
         je var14 = null;
         je var15 = null;
         this.field_c = "# ";
-        this.field_j = new at();
+        this.field_j = new NodeDeque();
         this.field_e = null;
         this.field_f = false;
         this.field_n = 0;
@@ -565,9 +565,9 @@ abstract class dv implements ap {
           this.field_q.a(200, -20500, bn.field_b, -200, 0);
           var13 = new ll(0L, var8, var8, var9, var10);
           var14 = new je();
-          var14.field_fb = new at();
+          var14.field_fb = new NodeDeque();
           this.field_d = new dn(0L, var14, var6, var13);
-          this.field_d.field_Jb.field_fb = new at();
+          this.field_d.field_Jb.field_fb = new NodeDeque();
           this.field_d.a(5, false, this.field_q.field_gb - 10, 0, 15, 5, 185 - var3_int);
           this.field_q.a(this.field_d, 71);
           var15 = new je();

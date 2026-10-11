@@ -29,7 +29,7 @@ final class cv {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 <= 13) {
             this.field_t = (iq) null;
@@ -78,7 +78,7 @@ final class cv {
           var3 = ar.a(var2.field_g, var2.field_e, 0);
           ts.a(var3, -1, var2);
           var4 = var3.field_w;
-          var5 = rd.field_j.field_xb.field_mb[var4];
+          var5 = rd.field_j.battlefield.playerTurnCounts[var4];
           if (~var5 < param0) {
             vo.a(false, 1, var5, var3);
           }
@@ -139,7 +139,7 @@ final class cv {
         RuntimeException var2 = null;
         String var3 = null;
         int var4 = 0;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           ef.b(-1);
           if (rd.field_j != null) {
@@ -151,9 +151,9 @@ final class cv {
           rd.field_j = null;
           bc.field_a = null;
           System.gc();
-          vk.field_e[0] = new wk(vc.field_m.a("campaign_1.jpg", -105, ""), (java.awt.Component) ((Object) ll.p(0)));
-          vk.field_e[1] = new wk(vc.field_m.a("campaign_2.jpg", 13, ""), (java.awt.Component) ((Object) ll.p(0)));
-          vk.field_e[2] = new wk(vc.field_m.a("campaign_3.jpg", -91, ""), (java.awt.Component) ((Object) ll.p(0)));
+          vk.field_e[0] = new RgbSprite(vc.field_m.a("campaign_1.jpg", -105, ""), (java.awt.Component) ((Object) ll.p(0)));
+          vk.field_e[1] = new RgbSprite(vc.field_m.a("campaign_2.jpg", 13, ""), (java.awt.Component) ((Object) ll.p(0)));
+          vk.field_e[2] = new RgbSprite(vc.field_m.a("campaign_3.jpg", -91, ""), (java.awt.Component) ((Object) ll.p(0)));
           mu.field_g = new ru[3][3];
           var2_int = 0;
           while (3 > var2_int) {
@@ -169,7 +169,7 @@ final class cv {
           if (param0 > -62) {
             cv.d((byte) -46);
           }
-          pl.field_D = new wk[3];
+          pl.field_D = new RgbSprite[3];
           pl.field_D[0] = nh.a("takenicon_zamorak", "campaign", iw.field_l, false);
           pl.field_D[1] = nh.a("takenicon_saradomin", "campaign", iw.field_l, false);
           pl.field_D[2] = nh.a("takenicon_guthix", "campaign", iw.field_l, false);
@@ -186,7 +186,7 @@ final class cv {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = 0;
           while (var2_int < 3) {
@@ -233,7 +233,7 @@ final class cv {
         try {
           var2 = ku.j(111);
           var3 = ar.a(var2.field_g, var2.field_e, 0);
-          var4 = ha.a(var3.field_B.length, var2.field_c, false);
+          var4 = Battlefield.a(var3.field_B.length, var2.field_c, false);
           var5 = fo.a(4800, wd.field_e, new String[]{var3.field_J, Integer.toString(var4)});
           var6 = fo.a(4800, hi.field_h, new String[]{var5});
           if (this.field_h == null) {
@@ -246,7 +246,7 @@ final class cv {
             if (var7 < var9) {
               var7 = var9;
             }
-            if (ArmiesOfGielinor.field_M) {
+            if (ArmiesOfGielinor.obfuscationControl) {
               var7 = this.field_h.field_i;
             }
           } else {
@@ -258,7 +258,7 @@ final class cv {
           var11 = -(var8Lifetime1 / 2) + 320;
           var12 = -(var10 / 2) + 240;
           var13 = 13 + var11;
-          fe.b(db.a(true, var11), u.a(var12, (byte) 94), var8Lifetime1, var10, io.field_m, ci.field_e, 0, 192);
+          fe.b(db.a(true, var11), u.a(var12, (byte) 94), var8Lifetime1, var10, io.field_m, TutorialController.field_e, 0, 192);
           var14 = -26 + var8Lifetime1;
           var15 = var13;
           var16 = var12 + 30;
@@ -292,7 +292,7 @@ final class cv {
         int stackIn_11_1;
         int stackIn_11_2;
         int stackIn_11_3;
-        wk[] stackIn_11_4;
+        RgbSprite[] stackIn_11_4;
         int[] stackIn_12_5 = null;
         boolean stackIn_31_0 = false;
         int stackIn_43_0 = 0;
@@ -308,7 +308,7 @@ final class cv {
         int var7 = 0;
         int var8 = 0;
         int var4Lifetime1;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           fe.a(db.a(true, 32), u.a(71, (byte) 94), 305, 228, io.field_m, jh.field_k, 0, 128, ai.field_V, true, nd.field_b);
           fe.a(db.a(true, 32), u.a(321, (byte) 94), 305, 92, io.field_m, jh.field_k, 0, 128, be.field_A, true, nd.field_b);
@@ -328,7 +328,7 @@ final class cv {
             if (!wg.a(-33, db.a(true, 354), db.a(true, 354) + 246, u.a(361, (byte) 94), u.a(361, (byte) 94) + 41)) {
               stackIn_12_5 = nd.field_b;
             } else {
-              stackIn_12_5 = ci.field_e;
+              stackIn_12_5 = TutorialController.field_e;
             }
             fe.a(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_12_5, 0, 0);
             var3 = io.field_o;
@@ -359,7 +359,7 @@ final class cv {
           }
           var2 = null;
           var3_ref = (cq) (this.field_g.b(param0 ^ 397));
-          L7: while (true) {
+          scanLoop1: while (true) {
             if (null != var3_ref) {
               stackOut_30_0 = var3_ref.field_l;
               stackIn_53_0 = stackOut_30_0 ? 1 : 0;
@@ -384,10 +384,10 @@ final class cv {
               }
             } else {
               if (this.field_u == var2) {
-                break L7;
+                break scanLoop1;
               }
               if (null == var2) {
-                break L7;
+                break scanLoop1;
               }
               stackIn_53_0 = 55;
             }
@@ -432,7 +432,7 @@ final class cv {
         int stackIn_17_1;
         int stackIn_17_2;
         int stackIn_17_3;
-        wk[] stackIn_17_4;
+        RgbSprite[] stackIn_17_4;
         int[] stackIn_18_5 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -458,7 +458,7 @@ final class cv {
             var8 = 48;
             stackIn_5_0 = (param2.field_k == 2) ? 2 : 0;
             var9Lifetime1 = stackIn_5_0 + 1;
-            if (ArmiesOfGielinor.field_M) {
+            if (ArmiesOfGielinor.obfuscationControl) {
               if (param3) {
                 var8 = (int)(Math.sin((double)uk.field_n / 3.141592653589793 / 6.0) * 20.0 + 235.0);
               }
@@ -520,7 +520,7 @@ final class cv {
           var3_int = 12 % ((param2 + 16) / 40);
           if (0 == param1) {
             nu.a(23948, param0, 0);
-            if (!ArmiesOfGielinor.field_M) {
+            if (!ArmiesOfGielinor.obfuscationControl) {
               return;
             }
           }
@@ -547,17 +547,17 @@ final class cv {
         String stackIn_91_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
-        at var6 = null;
+        NodeDeque var6 = null;
         RuntimeException var6_ref = null;
         a var7 = null;
         int var7_int = 0;
         Object var8 = null;
-        wk var9 = null;
+        RgbSprite var9 = null;
         int var10 = 0;
         int var11 = 0;
         float var12 = 0.0f;
         int var13 = 0;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var6_int = 36 / ((param0 + 78) / 43);
           if (this.field_b == param3 ||
@@ -573,7 +573,7 @@ final class cv {
             param3.field_m = this.field_e.a(param3.field_k, 3355443, (byte) -73, 0);
             var6 = this.field_e.a(param3.field_k, 1);
             if (null != var6) {
-              var7 = (a) (var6.e((byte) 95));
+              var7 = (a) (var6.first((byte) 95));
               if (null != var7) {
                 param3.field_y = var7.field_p;
                 param3.field_x = var7.field_l;
@@ -582,29 +582,29 @@ final class cv {
           }
           if (param3.field_m != null) {
             if (null != param3.field_r) {
-              L6: {
-                L7: {
+              regionExit1: {
+                regionExit2: {
                   var6_int = 8421504;
                   var7_int = this.field_l;
                   switch (var7_int) {
                     case 1:
                       break;
                     default:
-                      break L6;
+                      break regionExit1;
                     case 2:
                       if (var13 == 0) {
-                        break L7;
+                        break regionExit2;
                       }
                     case 0:
                       var6_int = 8388608;
                       if (var13 == 0) {
-                        break L6;
+                        break regionExit1;
                       }
                       break;
                   }
                   var6_int = 10066380;
                   if (var13 == 0) {
-                    break L6;
+                    break regionExit1;
                   }
                 }
                 var6_int = 8573219;
@@ -628,7 +628,7 @@ final class cv {
             if (param3.field_l) {
               var6 = this.field_e.a(param3.field_k, 1);
               if (var6 != null) {
-                var7 = (a) (var6.e((byte) 120));
+                var7 = (a) (var6.first((byte) 120));
                 if (null != var7) {
                   var8 = null;
                   var10 = param3.field_p.field_E;
@@ -678,7 +678,7 @@ final class cv {
                       var12 = 1.0f;
                     }
                   }
-                  this.a((wk) (var8), var11, var10, var7.field_l, var9, 1, var12, var7.field_p);
+                  this.a((RgbSprite) (var8), var11, var10, var7.field_l, var9, 1, var12, var7.field_p);
                 }
               }
             }
@@ -721,12 +721,12 @@ final class cv {
         try {
           var2 = ku.j(97);
           var3 = ar.a(var2.field_g, var2.field_e, param0 - 26);
-          var4 = ha.a(var3.field_B.length, var2.field_c, false);
+          var4 = Battlefield.a(var3.field_B.length, var2.field_c, false);
           var5 = fo.a(4800, sb.field_f, new String[]{Integer.toString(var4)});
           boolean decompiledSharedTail0 = (null == this.field_c);
           if (!decompiledSharedTail0) {
             var6 = this.field_c.field_i;
-            decompiledSharedTail0 = (ArmiesOfGielinor.field_M);
+            decompiledSharedTail0 = (ArmiesOfGielinor.obfuscationControl);
           }
           if (decompiledSharedTail0) {
             var6 = 164;
@@ -734,7 +734,7 @@ final class cv {
             if (var6 < var7) {
               var6 = var7;
             }
-            var8 = 26 + nr.field_e.a(vh.field_r) / 2;
+            var8 = 26 + nr.field_e.a(PacketBuffer.field_r) / 2;
             if (var6 < var8) {
               var6 = var8;
             }
@@ -749,7 +749,7 @@ final class cv {
           var10 = -(var7Lifetime1 / 2) + 320;
           var11 = 240 - var9Lifetime1 / 2;
           var12 = var10 + 13;
-          fe.b(db.a(true, var10), u.a(var11, (byte) 94), var7Lifetime1, var9Lifetime1, io.field_m, ci.field_e, 0, 192);
+          fe.b(db.a(true, var10), u.a(var11, (byte) 94), var7Lifetime1, var9Lifetime1, io.field_m, TutorialController.field_e, 0, 192);
           var13 = var7Lifetime1 - 26;
           var14 = var12;
           var15 = 30 + var11;
@@ -763,7 +763,7 @@ final class cv {
           this.field_c.a(param0 - 26);
           var15 += 40;
           if (null == this.field_j) {
-            this.field_j = new iq(vh.field_r, var14, var15, var6);
+            this.field_j = new iq(PacketBuffer.field_r, var14, var15, var6);
           }
           var15 += 40;
           this.field_j.a(0);
@@ -794,7 +794,7 @@ final class cv {
         int var8 = 0;
         int var9 = 0;
         int var3Lifetime1;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
           hh.a(-16147, 50, qf.field_f, true);
@@ -917,7 +917,7 @@ final class cv {
         int var15_int = 0;
         om var15 = null;
         int var16 = 0;
-        tc var16_ref_tc = null;
+        IntrusiveNode var16_ref_tc = null;
         int var17 = 0;
         String var17_ref_String = null;
         int var18 = 0;
@@ -929,7 +929,7 @@ final class cv {
         int[] var23 = null;
         fu var23_ref = null;
         int var24_int = 0;
-        wk var24 = null;
+        RgbSprite var24 = null;
         int var25_int = 0;
         sl var25 = null;
         sd var26_ref_sd = null;
@@ -962,7 +962,7 @@ final class cv {
         int var27Lifetime2;
         int var28Lifetime1;
         int var28Lifetime2;
-        var29 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var29 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_b != null &&
             this.field_b.field_l) {
@@ -984,7 +984,7 @@ final class cv {
             }
             var3Lifetime1 = var2_int + 26;
             var4Lifetime1 = -26 + var3Lifetime1;
-            fe.b(db.a(true, 5), u.a(4, (byte) 94), var3Lifetime1, 472, io.field_m, ci.field_e, 0, 112);
+            fe.b(db.a(true, 5), u.a(4, (byte) 94), var3Lifetime1, 472, io.field_m, TutorialController.field_e, 0, 112);
             var5 = 18;
             var6 = 34;
             var6Lifetime1 = 34;
@@ -1002,11 +1002,11 @@ final class cv {
             var13 = var7.e(28554);
             var14 = var13[0].length - 1;
             var15_int = 0;
-            L4: while (true) {
+            scanLoop1: while (true) {
               if (var15_int < var13.length) {
                 stackIn_26_0 = 0;
                 if (var29 != 0) {
-                  break L4;
+                  break scanLoop1;
                 }
                 var16 = stackIn_26_0;
                 while (var16 < var13[0].length) {
@@ -1014,17 +1014,17 @@ final class cv {
                   var18 = mc.field_d[var7.field_p].field_i[var17];
                   var19_int = db.a(true, var8Lifetime1 + var9Lifetime1 * (var14 - var16) + var5);
                   var20 = u.a(var6Lifetime1 + var10Lifetime1 * var15_int, (byte) 94);
-                  qn.f(var19_int, var20, var9Lifetime1, var10Lifetime1, var18);
-                  qn.e(var19_int, var20, var19_int + var9Lifetime1, var20, 16777215, 16);
-                  qn.e(var19_int, 1 + var20, var19_int, var20 + var10Lifetime1, 16777215, 16);
-                  qn.d(1 + var19_int, var10Lifetime1 + (var20 - 1), var9Lifetime1 + var19_int, -1 + (var10Lifetime1 + var20), 0, 16);
-                  qn.e(var9Lifetime1 + (var19_int - 1), var20 + 1, var19_int + var9Lifetime1 - 1, var20 + var10Lifetime1 - 1, 0, 16);
+                  SoftwareRaster.f(var19_int, var20, var9Lifetime1, var10Lifetime1, var18);
+                  SoftwareRaster.e(var19_int, var20, var19_int + var9Lifetime1, var20, 16777215, 16);
+                  SoftwareRaster.e(var19_int, 1 + var20, var19_int, var20 + var10Lifetime1, 16777215, 16);
+                  SoftwareRaster.d(1 + var19_int, var10Lifetime1 + (var20 - 1), var9Lifetime1 + var19_int, -1 + (var10Lifetime1 + var20), 0, 16);
+                  SoftwareRaster.e(var9Lifetime1 + (var19_int - 1), var20 + 1, var19_int + var9Lifetime1 - 1, var20 + var10Lifetime1 - 1, 0, 16);
                   var16++;
                 }
                 var15_int++;
-                continue L4;
+                continue scanLoop1;
               }
-              fe.b(db.a(true, var5 + var8Lifetime1), u.a(var6Lifetime1, (byte) 94), var9Lifetime1 * var7.field_l, var7.field_n * var10Lifetime1, io.field_m, ci.field_e, 0, 0);
+              fe.b(db.a(true, var5 + var8Lifetime1), u.a(var6Lifetime1, (byte) 94), var9Lifetime1 * var7.field_l, var7.field_n * var10Lifetime1, io.field_m, TutorialController.field_e, 0, 0);
               var6Lifetime1 = var6Lifetime1 + (124 + ro.field_rb[0].field_f);
               stackIn_26_0 = 18;
               break;
@@ -1033,7 +1033,7 @@ final class cv {
             var16_ref_tc = this.field_b.field_n.b(param0 ^ 21);
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var16_ref_tc == null))) {
-              var17Lifetime1 = (int)var16_ref_tc.field_i;
+              var17Lifetime1 = (int)var16_ref_tc.key;
               ro.field_rb[var17Lifetime1].a(db.a(true, var15_intLifetime1), u.a(var6Lifetime1 - ro.field_rb[var17Lifetime1].field_f, (byte) 94));
               var15_intLifetime1 = var15_intLifetime1 + ro.field_rb[var17Lifetime1].field_g;
               stackIn_31_0 = this.field_b;
@@ -1142,7 +1142,7 @@ final class cv {
               }
               var27Lifetime1 = rs.field_n.a(var23_ref.field_i, var25_intLifetime1, 0);
               var28Lifetime1 = var6Lifetime2 - var27Lifetime1 / 2;
-              qn.b(db.a(true, var26), u.a(var28Lifetime1, (byte) 94), var25_intLifetime1, var27Lifetime1 + 2, 0, 128);
+              SoftwareRaster.b(db.a(true, var26), u.a(var28Lifetime1, (byte) 94), var25_intLifetime1, var27Lifetime1 + 2, 0, 128);
               rs.field_n.a(var23_ref.field_i, db.a(true, var26), u.a(var28Lifetime1, (byte) 94), var25_intLifetime1, 472, 16777215, 1, 1, 0, 0);
             }
             rs.field_n.a(ft.field_l + var23_ref.field_c, db.a(true, var23_ref.field_h.field_A + 31), u.a(-10 + var6Lifetime2, (byte) 94), -13 + (-var23_ref.field_h.field_A + var4Lifetime1), var23_ref.field_h.field_x, 16776960, 0, 0, 1, 0);
@@ -1151,7 +1151,7 @@ final class cv {
               var26Lifetime1 = sm.field_d;
               var27Lifetime2 = rs.field_n.a(((sd) (var19)).field_u, var25_intLifetime2, 0);
               var28Lifetime2 = -(var27Lifetime2 / 2) + (25 + ko.field_b);
-              qn.b(db.a(true, var26Lifetime1), u.a(var28Lifetime2, (byte) 94), var25_intLifetime2, var27Lifetime2 + 2, 0, 255);
+              SoftwareRaster.b(db.a(true, var26Lifetime1), u.a(var28Lifetime2, (byte) 94), var25_intLifetime2, var27Lifetime2 + 2, 0, 255);
               rs.field_n.a(((sd) (var19)).field_u, db.a(true, var26Lifetime1), u.a(var28Lifetime2, (byte) 94), var25_intLifetime2, 472, 16777215, 1, 1, 0, 0);
             }
             var6Lifetime3 = 436;
@@ -1190,7 +1190,7 @@ final class cv {
         }
     }
 
-    private final void a(wk param0, int param1, int param2, int param3, wk param4, int param5, float param6, int param7) {
+    private final void a(RgbSprite param0, int param1, int param2, int param3, RgbSprite param4, int param5, float param6, int param7) {
         RuntimeException stackIn_58_0 = null;
         StringBuilder stackIn_58_1 = null;
         String stackIn_59_2 = null;
@@ -1205,7 +1205,7 @@ final class cv {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        var15 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var9_int = param4.field_y;
           param7 = db.a(true, param7);
@@ -1283,9 +1283,9 @@ final class cv {
         }
     }
 
-    private final wk a(om param0, sl param1, int param2, int param3, int param4) {
+    private final RgbSprite a(om param0, sl param1, int param2, int param3, int param4) {
         RuntimeException runtimeException = null;
-        wk var6 = null;
+        RgbSprite var6 = null;
         lo var7 = null;
         int var8 = 0;
         int var9 = 0;
@@ -1294,16 +1294,16 @@ final class cv {
         int[][] var12 = null;
         String[] var13 = null;
         int var14_int = 0;
-        ha var14 = null;
+        Battlefield var14 = null;
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        ne var18 = null;
+        MapTile var18 = null;
         int var19 = 0;
         int var23 = 0;
         int stackIn_20_0 = 0;
         int stackIn_20_1 = 0;
-        wk stackIn_21_0 = null;
+        RgbSprite stackIn_21_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -1312,12 +1312,12 @@ final class cv {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6_ref = null;
         int var20 = 0;
-        jd var21_ref_jd = null;
+        Unit var21_ref_jd = null;
         int var21 = 0;
         int var22 = 0;
-        var23 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var23 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var6 = new wk(param4, param2);
+          var6 = new RgbSprite(param4, param2);
           var7 = param0.a(-98);
           var8 = var6.field_v / var7.field_n;
           var9 = var6.field_y / var7.field_l;
@@ -1334,25 +1334,25 @@ final class cv {
             }
             break;
           }
-          var14 = new ha(0, var13, -1, var12, 0, true, false, param0.field_o, 1, var7.field_p, false, (int[][]) null, 4, 0, 0, param0);
-          var14.field_sb = 0;
+          var14 = new Battlefield(0, var13, -1, var12, 0, true, false, param0.field_o, 1, var7.field_p, false, (int[][]) null, 4, 0, 0, param0);
+          var14.localPlayer = 0;
           try {
             ml.a(param0, (byte) -26);
-            var14.b(param3 ^ param3, new vh(param1.field_c));
+            var14.b(param3 ^ param3, new PacketBuffer(param1.field_c));
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             runtimeException = decompiledCaughtException;
             runtimeException.printStackTrace();
           }
           vn.a(var6, 3);
-          qn.f(0, 0, var6.field_y, var6.field_v, 4473924);
+          SoftwareRaster.f(0, 0, var6.field_y, var6.field_v, 4473924);
           var15 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var15 < var14.field_Eb.length)))) {
-            var16 = var15 / var14.field_v;
-            var17 = var15 % var14.field_v;
-            var18 = var14.field_Eb[var15];
-            var19 = var18.field_h;
+          while (!(decompiledNaturalLoopExit0 = (!(var15 < var14.tiles.length)))) {
+            var16 = var15 / var14.mapWidth;
+            var17 = var15 % var14.mapWidth;
+            var18 = var14.tiles[var15];
+            var19 = var18.terrainType;
             stackIn_20_0 = -17;
             stackIn_20_1 = ~var19;
             if (var23 == 0) {
@@ -1360,17 +1360,17 @@ final class cv {
                 var19 = 0;
               }
               var20 = mc.field_d[var7.field_p].field_i[var19];
-              if (null != var18.field_c) {
-                var21_ref_jd = var18.field_c;
-                var20 = op.field_c[0][var21_ref_jd.field_O];
+              if (null != var18.occupant) {
+                var21_ref_jd = var18.occupant;
+                var20 = op.field_c[0][var21_ref_jd.ownerPlayer];
               }
               var21 = var9 * var17 + var10;
               var22 = var11 + var8 * var16;
-              qn.f(var21, var22, var9, var8, var20);
-              qn.e(var21, var22, var21 + var9, var22, 16777215, 16);
-              qn.e(var21, var22 + 1, var21, var8 + var22, 16777215, 16);
-              qn.d(1 + var21, -1 + (var8 + var22), var21 + var9, -1 + var22 + var8, 0, 16);
-              qn.e(var21 + var9 - 1, var22 + 1, var21 + (var9 - 1), var8 + (var22 - 1), 0, 16);
+              SoftwareRaster.f(var21, var22, var9, var8, var20);
+              SoftwareRaster.e(var21, var22, var21 + var9, var22, 16777215, 16);
+              SoftwareRaster.e(var21, var22 + 1, var21, var8 + var22, 16777215, 16);
+              SoftwareRaster.d(1 + var21, -1 + (var8 + var22), var21 + var9, -1 + var22 + var8, 0, 16);
+              SoftwareRaster.e(var21 + var9 - 1, var22 + 1, var21 + (var9 - 1), var8 + (var22 - 1), 0, 16);
               var15++;
               continue;
             }
@@ -1465,14 +1465,14 @@ final class cv {
             if (!ei.a(var2.field_g, param0 + 11906) &&
               rf.a(27875)) {
               pr.field_i = bn.field_g;
-              bv.a(false, 11, param0 ^ 1, jt.field_a);
+              CipherPacketBuffer.a(false, 11, param0 ^ 1, jt.field_a);
               return;
             }
             this.b(var2.field_g, 53);
             var3 = ar.a(var2.field_g, var2.field_e, 0);
             l.field_c = var3;
-            bv.a(true, -11, param0 + 1, 0);
-            if (ArmiesOfGielinor.field_M) {
+            CipherPacketBuffer.a(true, -11, param0 + 1, 0);
+            if (ArmiesOfGielinor.obfuscationControl) {
               this.a(this.field_d.field_k, true);
             }
           } else {
@@ -1503,7 +1503,7 @@ final class cv {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           fe.field_b = fe.field_b + 1;
           fe.field_b = fe.field_b % 100;
@@ -1539,7 +1539,7 @@ final class cv {
               this.field_b.field_v = this.field_b.field_v + 1;
             }
             boolean decompiledFrameCompleted0 = true;
-            if (tr.field_A == 1 &&
+            if (DeployEvent.field_A == 1 &&
               null != this.field_e) {
               if (null != this.field_b &&
                 this.field_b.field_l &&
@@ -1644,7 +1644,7 @@ final class cv {
             }
             if (decompiledFrameCompleted0) {
               stackIn_189_0 = -3;
-              stackIn_189_1 = ~tr.field_A;
+              stackIn_189_1 = ~DeployEvent.field_A;
             }
             if (stackIn_189_0 == stackIn_189_1) {
               this.field_b = null;
@@ -1652,22 +1652,22 @@ final class cv {
           } else {
             if (this.field_a != 0) {
               if (this.field_a == 3) {
-                if (tr.field_A == 1 &&
+                if (DeployEvent.field_A == 1 &&
                   this.field_c != null &&
                   this.field_c.a((byte) -49)) {
                   var2 = ku.j(86);
                   var3 = ar.a(((sl) (var2)).field_g, ((sl) (var2)).field_e, 0);
                   l.field_c = (om) (var3);
-                  bv.a(true, -11, 1, 0);
+                  CipherPacketBuffer.a(true, -11, 1, 0);
                 }
-                if (tr.field_A == 1 &&
+                if (DeployEvent.field_A == 1 &&
                   null != this.field_j &&
                   this.field_j.a((byte) 121)) {
                   this.f(-2);
                   l.field_c = this.field_b.field_p;
-                  bv.a(true, -10, 1, 0);
+                  CipherPacketBuffer.a(true, -10, 1, 0);
                 }
-                if (tr.field_A == 1 &&
+                if (DeployEvent.field_A == 1 &&
                   this.field_o != null &&
                   this.field_o.a((byte) -52)) {
                   this.field_a = 1;
@@ -1675,14 +1675,14 @@ final class cv {
                 return;
               }
               if (this.field_a == 2) {
-                if (tr.field_A == 1 &&
+                if (DeployEvent.field_A == 1 &&
                   null != this.field_h &&
                   this.field_h.a((byte) 86)) {
                   this.f(-2);
                   l.field_c = this.field_b.field_p;
-                  bv.a(true, -10, 1, 0);
+                  CipherPacketBuffer.a(true, -10, 1, 0);
                 }
-                if (tr.field_A == 1 &&
+                if (DeployEvent.field_A == 1 &&
                   this.field_f != null &&
                   this.field_f.a((byte) -69)) {
                   this.field_a = 1;
@@ -1694,18 +1694,18 @@ final class cv {
                 this.field_d.field_v = this.field_d.field_v + 1;
               }
               if (null != this.field_d &&
-                tr.field_A == 1 &&
+                DeployEvent.field_A == 1 &&
                 wg.a(-33, db.a(true, 354), db.a(true, 600), u.a(361, (byte) 94), u.a(402, (byte) 94))) {
                 this.g(0);
                 return;
               }
             }
           }
-          if (2 == tr.field_A) {
+          if (2 == DeployEvent.field_A) {
             this.field_b = null;
             this.field_d = null;
           }
-          if (tr.field_A == 1) {
+          if (DeployEvent.field_A == 1) {
             var2 = null;
             var3 = null;
             var4_int = this.field_a;
@@ -1775,12 +1775,12 @@ final class cv {
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2 = ku.j(91);
           if (null == var2) {
             l.field_c = this.field_b.field_p;
-            bv.a(true, -10, 1, 0);
+            CipherPacketBuffer.a(true, -10, 1, 0);
             if (var4 != 0) {
               if (this.field_b.field_k == var2.field_e &&
                 var2.field_g == this.field_l) {
@@ -1828,11 +1828,11 @@ final class cv {
         Object var4 = null;
         int var5 = 0;
         int var6_int = 0;
-        wk var6 = null;
-        wk var7 = null;
+        RgbSprite var6 = null;
+        RgbSprite var7 = null;
         int var8 = 0;
         int var9 = 0;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (!param0) {
             stackIn_3_0 = (cq) null;
@@ -1865,17 +1865,17 @@ final class cv {
             if (decompiledFrameCompleted0) {
               var3.field_r = fo.a(4800, og.field_l, new String[]{Integer.toString(var4_int), Integer.toString(var5)});
               var6 = ps.field_w[var3.field_k];
-              var7 = new wk(var6.field_A, var6.field_x);
+              var7 = new RgbSprite(var6.field_A, var6.field_x);
               vn.a(var7, 3);
               var6.f(0, 0);
               var8 = 18;
               boolean decompiledSharedTail0 = (var3.field_k == 1);
               if (!decompiledSharedTail0) {
-                qn.c(var8, var8, 0, 0, var6.field_A, var6.field_x);
+                SoftwareRaster.c(var8, var8, 0, 0, var6.field_A, var6.field_x);
                 decompiledSharedTail0 = (var9 != 0);
               }
               if (decompiledSharedTail0) {
-                qn.c(var8, var8, 0, var8, var6.field_A, -var8 + var6.field_x);
+                SoftwareRaster.c(var8, var8, 0, var8, var6.field_A, -var8 + var6.field_x);
               }
               rf.b(-18862);
               var3.field_m = var7;
@@ -1891,7 +1891,7 @@ final class cv {
           }
           var4 = stackIn_34_0;
           if (null != var4) {
-            ((tc) (var4)).d(-100);
+            ((IntrusiveNode) (var4)).unlink(-100);
           }
           this.field_g.a(var3, (long)var3.field_k, 97);
           stackIn_39_0 = var3;
@@ -1937,7 +1937,7 @@ final class cv {
         int var20 = 0;
         cq stackIn_42_0Lifetime1;
         int var5Lifetime1;
-        var20 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_e = new pr(mu.field_g[param0][1], 1, 16777215);
           this.field_i = new bg(32);
@@ -2027,14 +2027,14 @@ final class cv {
     }
 
     final void a(int param0, boolean param1) {
-        wk discarded$1 = null;
+        RgbSprite discarded$1 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
           if (!ei.a(param0, 11906) &&
             rf.a(27875)) {
             pr.field_i = bn.field_g;
-            bv.a(false, 11, 1, jt.field_a);
+            CipherPacketBuffer.a(false, 11, 1, jt.field_a);
             return;
           }
           if (null == mu.field_g) {
@@ -2062,7 +2062,7 @@ final class cv {
         int var5 = 0;
         int var6 = 0;
         int var5Lifetime1;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 == 13) {
             if (this.field_a != 1) {
@@ -2071,12 +2071,12 @@ final class cv {
                   this.field_a == 3) {
                   this.field_a = 1;
                   if (var6 != 0) {
-                    bv.a(false, 0, 1, jt.field_a);
+                    CipherPacketBuffer.a(false, 0, 1, jt.field_a);
                     this.a(0, (byte) 42);
                   }
                 }
               } else {
-                bv.a(false, 0, 1, jt.field_a);
+                CipherPacketBuffer.a(false, 0, 1, jt.field_a);
                 if (var6 != 0) {
                   this.a(0, (byte) 42);
                 }
@@ -2160,7 +2160,7 @@ final class cv {
         Object stackIn_70_0Lifetime1;
         int var6Lifetime1;
         int var7Lifetime1;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2 = mu.field_g[this.field_l][0];
           var2.b(db.a(true, 0), u.a(0, (byte) 94));
@@ -2226,7 +2226,7 @@ final class cv {
               } else {
                 stackIn_61_0 = 0;
               }
-              L18: {
+              regionExit1: {
                 boolean decompiledFrameRemainder0 = true;
                 var7Lifetime1 = stackIn_61_0;
                 stackIn_68_0 = this;
@@ -2245,7 +2245,7 @@ final class cv {
                   }
                   if (decompiledFrameRemainder0) {
                     stackIn_71_5 = false;
-                    break L18;
+                    break regionExit1;
                   }
                 }
                 stackIn_71_5 = true;
@@ -2319,13 +2319,13 @@ final class cv {
         om var12 = null;
         cq var12_ref = null;
         int var13_int = 0;
-        tc var13 = null;
+        IntrusiveNode var13 = null;
         String var14 = null;
-        wk var15 = null;
+        RgbSprite var15 = null;
         int var16 = 0;
         int var5Lifetime1;
         int var6Lifetime1;
-        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_a = param0;
           var10 = this.field_a;
@@ -2357,7 +2357,7 @@ final class cv {
                   var11.field_o = 57;
                   var11.field_y = 45;
                   var12 = ar.a(var10_ref_sl.field_g, var10_ref_sl.field_e, 0);
-                  var13_int = ha.a(var12.field_B.length, var10_ref_sl.field_c, false);
+                  var13_int = Battlefield.a(var12.field_B.length, var10_ref_sl.field_c, false);
                   var14 = fo.a(4800, wd.field_e, new String[]{var12.field_J, Integer.toString(var13_int)});
                   var11.field_w = var12.field_G.field_k;
                   var11.field_l = true;
@@ -2381,7 +2381,7 @@ final class cv {
                 qh.b((byte) 27);
               }
               var10 = 0;
-              L10: while (true) {
+              scanLoop1: while (true) {
                 if (var10 < 3) {
                   var11_ref = br.a(var10, (byte) -12);
                   if (var16 == 0) {
@@ -2392,7 +2392,7 @@ final class cv {
                       var12_ref.field_l = false;
                       var13 = this.field_g.a(-89, (long)var12_ref.field_k);
                       if (null != var13) {
-                        var13.d(param1 + 14);
+                        var13.unlink(param1 + 14);
                       }
                       this.field_g.a(var12_ref, (long)var12_ref.field_k, 105);
                     }
@@ -2406,18 +2406,18 @@ final class cv {
                   }
                 } else {
                   if (this.field_d == null) {
-                    break L10;
+                    break scanLoop1;
                   }
                 }
                 this.field_d = (cq) (this.field_g.a(-19, (long)this.field_d.field_k));
                 break;
               }
-              bv.a(true, 21, 1, 0);
+              CipherPacketBuffer.a(true, 21, 1, 0);
               if (var16 != 0) {
-                bv.a(true, 22, 1, 21);
+                CipherPacketBuffer.a(true, 22, 1, 21);
               }
             } else {
-              bv.a(true, 22, 1, 21);
+              CipherPacketBuffer.a(true, 22, 1, 21);
             }
           }
           if (param1 != 42) {

@@ -4,7 +4,7 @@
 final class oq extends wv {
     static String field_j;
     static sa field_m;
-    static wk[] field_l;
+    static RgbSprite[] field_l;
     static String field_k;
 
     oq(long param0, String param1) {

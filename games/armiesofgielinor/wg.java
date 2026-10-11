@@ -9,7 +9,7 @@ final class wg implements Iterable {
     static String field_c;
     ms field_f;
     static String field_d;
-    static jd[] field_b;
+    static Unit[] field_b;
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4) {
         if (param0 != -33) {
@@ -88,7 +88,7 @@ final class wg implements Iterable {
           }
           return true;
         }
-        field_b = (jd[]) null;
+        field_b = (Unit[]) null;
         if (Character.isISOControl(param0)) {
           return false;
         }

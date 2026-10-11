@@ -22,7 +22,7 @@ final class qb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var1_intLifetime1;
-        var2 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var1_int = 0;
           if (param0 != -8) {
@@ -46,7 +46,7 @@ final class qb {
         }
     }
 
-    private final void a(int param0, vh param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var7 = 0;
         RuntimeException stackIn_58_0 = null;
@@ -58,7 +58,7 @@ final class qb {
         int var5 = 0;
         int var6 = 0;
         int var8 = 0;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 == 1) {
             var4_int = param1.e((byte) -104);
@@ -175,11 +175,11 @@ final class qb {
         int var4 = -54 / ((33 - param1) / 47);
         int var3 = mj.field_c * mj.field_c;
         int var5 = -(param0 * param0) + var3;
-        lk.field_a.a(-90 + (-120 + (qn.field_g - 4)), -20500, 199, 90, -(199 * var5 / var3) + var2);
-        pd.field_c.a(qn.field_g - 124, -20500, 438, 0, 202 + var2 + 438 * var5 / var3);
+        lk.field_a.a(-90 + (-120 + (SoftwareRaster.field_g - 4)), -20500, 199, 90, -(199 * var5 / var3) + var2);
+        pd.field_c.a(SoftwareRaster.field_g - 124, -20500, 438, 0, 202 + var2 + 438 * var5 / var3);
     }
 
-    private final void a(int param0, vh param1) {
+    private final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -187,7 +187,7 @@ final class qb {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           while (true) {
             var3_int = param1.k(0);
@@ -253,7 +253,7 @@ final class qb {
           var9 = var10;
           var4 = var9;
           if (var9 != null) {
-            this.a(32737, new vh(var11));
+            this.a(32737, new PacketBuffer(var11));
           }
           var5 = 0;
           for (var6 = 0; this.field_a.length > var6; var6++) {

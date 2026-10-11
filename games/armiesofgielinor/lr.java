@@ -47,7 +47,7 @@ final class lr {
 
     final static ru[] a(int param0) {
         int var2 = 0;
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         ru[] var1 = new ru[iw.field_n];
         for (var2 = 0; var2 < iw.field_n; var2++) {
           var1[var2] = new ru(lg.field_d, wr.field_J, j.field_e[var2], iq.field_g[var2], qm.field_K[var2], c.field_e[var2], vj.field_j[var2], qv.field_j);
@@ -65,7 +65,7 @@ final class lr {
         int var4;
         int var5;
         int var6;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var3 = -1 + (this.field_b.length >> 1);
         if (param1 != 1) {
           return -110;
@@ -93,7 +93,7 @@ final class lr {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5 = param0;
           var2 = var5;

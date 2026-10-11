@@ -11,7 +11,7 @@ final class cp {
     static String field_f;
     static je field_d;
 
-    final static vb a(ic param0, int param1, ha param2, boolean param3, oj param4, eo param5) {
+    final static vb a(GameplayController param0, int param1, Battlefield param2, boolean param3, GameEvent param4, eo param5) {
         vb var6 = null;
         RuntimeException var6_ref = null;
         vb stackIn_2_0 = null;
@@ -80,7 +80,7 @@ final class cp {
           return;
         }
         eo var2 = (eo) null;
-        cp.a((ic) null, -1, (ha) null, false, (oj) null, (eo) null);
+        cp.a((GameplayController) null, -1, (Battlefield) null, false, (GameEvent) null, (eo) null);
         field_b = null;
         field_g = null;
         field_c = null;

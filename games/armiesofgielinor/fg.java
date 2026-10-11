@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class fg extends tc {
+final class fg extends IntrusiveNode {
     static String field_l;
     int field_q;
     static String field_k;
@@ -30,10 +30,10 @@ final class fg extends tc {
         int var7;
         int var8;
         int var9;
-        ca var10;
+        TileMetadata var10;
         int var11;
         int var12;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var7 = param1 + ks.field_y * param0;
         if (param1 >= 0 &&
           param0 >= 0 &&
@@ -53,22 +53,22 @@ final class fg extends tc {
                 } else {
                   po.a((byte) -7, param0, param3, param5, var9, var8, var7, param1);
                   sf.b(param0, param1, 0, param5, var7, param3);
-                  tc.a(62, param1, param0, 19 + param3, var7, 39 + param5);
+                  IntrusiveNode.a(62, param1, param0, 19 + param3, var7, 39 + param5);
                   cw.a(var7, 19 + param3, param5 + 39, -118, param1, param0);
                   em.a(var9, false, param0, param3, var7, 0, param1, param5, var8);
-                  var10 = vs.field_e[var7].field_n;
+                  var10 = vs.field_e[var7].metadata;
                   if (var10 != null &&
-                    (var10.field_c & 1) != 0 &&
-                    -1 < vs.field_e[var7].field_a) {
-                    var11 = vs.field_e[var7].field_a;
-                    if (null != bv.field_w) {
-                      var11 = bv.field_w.o(var11, -1);
+                    (var10.modifierFlags & 1) != 0 &&
+                    -1 < vs.field_e[var7].ownerPlayer) {
+                    var11 = vs.field_e[var7].ownerPlayer;
+                    if (null != CipherPacketBuffer.currentBattlefield) {
+                      var11 = CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var11, -1);
                     }
                     eu.a(22 + param5, var11, var7 + ug.field_b, 119, param3 + 20);
                   }
                   fs.a(param3, false, false, var9, param5, var7, param1, var8, param0);
-                  if (vs.field_e[var7].e((byte) -115)) {
-                    oj.a(param3 + 20, true, ug.field_b + var7, vs.field_e[var7].field_a, 22 + param5);
+                  if (vs.field_e[var7].hasModifierFlag4((byte) -115)) {
+                    GameEvent.a(param3 + 20, true, ug.field_b + var7, vs.field_e[var7].ownerPlayer, 22 + param5);
                   }
                 }
               } else {
@@ -76,7 +76,7 @@ final class fg extends tc {
                   mq.a(param5, var8, var7, param1, param3, var9, 54, param0);
                 }
                 pk.a(param3, param0, param1, var7, var8, -29403, var9, param5);
-                if (jd.field_L) {
+                if (Unit.field_L) {
                   oh.field_I.g(param5, param3);
                 }
               }
@@ -98,7 +98,7 @@ final class fg extends tc {
 
     final static void a(byte param0) {
         int var1_int = 0;
-        int var2 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var1_intLifetime1;
         try {
           if (ck.field_c != null) {
@@ -139,7 +139,7 @@ final class fg extends tc {
         String stackIn_24_2 = null;
         Throwable decompiledCaughtException = null;
         Exception var10 = null;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = param2.length;
           var6 = new String[var5_int];
@@ -217,7 +217,7 @@ final class fg extends tc {
         }
     }
 
-    final static void a(int param0, bv param1) {
+    final static void a(int param0, CipherPacketBuffer param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -266,9 +266,9 @@ final class fg extends tc {
           var16 = null;
           var22 = null;
           var23 = null;
-          var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
-            var13 = (dc) (tp.field_e.e((byte) 125));
+            var13 = (dc) (tp.field_e.first((byte) 125));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -295,7 +295,7 @@ final class fg extends tc {
             if (var3 != 0) {
               return;
             }
-            var4 = param1.field_q;
+            var4 = param1.position;
             param1.a((byte) -66, var17.field_q);
             for (var5 = param0; var17.field_p > var5; var5++) {
               if (var17.field_m[var5] != 0) {
@@ -403,7 +403,7 @@ final class fg extends tc {
               }
             }
             param1.b((byte) -39, var4);
-            var17.d(-115);
+            var17.unlink(-115);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;

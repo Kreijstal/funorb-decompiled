@@ -16,7 +16,7 @@ final class rm {
         if (var3 == null) {
           return null;
         }
-        return new rm(new vh(var3));
+        return new rm(new PacketBuffer(var3));
     }
 
     private final byte[] a() {
@@ -59,14 +59,14 @@ final class rm {
         return var3;
     }
 
-    private rm(vh param0) {
+    private rm(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_a = new hu[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.k(0);
           if (var3 != 0) {
-            param0.field_q = param0.field_q - 1;
+            param0.position = param0.position - 1;
             this.field_a[var2] = new hu();
             this.field_a[var2].a(param0);
           }

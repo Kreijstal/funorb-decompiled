@@ -69,20 +69,20 @@ final class kw extends fw {
         int var9;
         int var10;
         int var11;
-        wk var14;
-        wk var15;
-        wk var16;
-        wk var17;
-        wk var18;
-        wk var19;
-        wk var20;
-        wk var21;
+        RgbSprite var14;
+        RgbSprite var15;
+        RgbSprite var16;
+        RgbSprite var17;
+        RgbSprite var18;
+        RgbSprite var19;
+        RgbSprite var20;
+        RgbSprite var21;
         int var9Lifetime1;
         int var9Lifetime2;
         int var10Lifetime1;
         int var10Lifetime2;
         gu var8Lifetime1;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         super.a(param0, param1, (byte) -120, param3);
         if (param3 != 0) {
           return;
@@ -109,18 +109,18 @@ final class kw extends fw {
           var9 = var21.field_A << 1;
           var10 = var21.field_x << 1;
           if (null == bd.field_p) {
-            bd.field_p = new wk(var9, var10);
+            bd.field_p = new RgbSprite(var9, var10);
             vn.a(bd.field_p, 3);
           } else {
             if (var9 > bd.field_p.field_y) {
-              bd.field_p = new wk(var9, var10);
+              bd.field_p = new RgbSprite(var9, var10);
               vn.a(bd.field_p, 3);
             } else {
               if (var10 <= bd.field_p.field_v) {
                 vn.a(bd.field_p, 3);
-                qn.b();
+                SoftwareRaster.b();
               } else {
-                bd.field_p = new wk(var9, var10);
+                bd.field_p = new RgbSprite(var9, var10);
                 vn.a(bd.field_p, 3);
               }
             }
@@ -140,9 +140,9 @@ final class kw extends fw {
             var9Lifetime1 <= bd.field_p.field_y &&
             var10Lifetime1 <= bd.field_p.field_v) {
             vn.a(bd.field_p, 3);
-            qn.b();
+            SoftwareRaster.b();
           } else {
-            bd.field_p = new wk(var9Lifetime1, var10Lifetime1);
+            bd.field_p = new RgbSprite(var9Lifetime1, var10Lifetime1);
             vn.a(bd.field_p, 3);
           }
           var15.b(112, 144, var15.field_A << 4, var15.field_x << 4, -this.field_L << 10, 4096);
@@ -168,18 +168,18 @@ final class kw extends fw {
         var9Lifetime2 = var16.field_A << 1;
         var10Lifetime2 = var16.field_x << 1;
         if (null == bd.field_p) {
-          bd.field_p = new wk(var9Lifetime2, var10Lifetime2);
+          bd.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
           vn.a(bd.field_p, 3);
         } else {
           if (var9Lifetime2 > bd.field_p.field_y) {
-            bd.field_p = new wk(var9Lifetime2, var10Lifetime2);
+            bd.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
             vn.a(bd.field_p, 3);
           } else {
             if (var10Lifetime2 <= bd.field_p.field_v) {
               vn.a(bd.field_p, 3);
-              qn.b();
+              SoftwareRaster.b();
             } else {
-              bd.field_p = new wk(var9Lifetime2, var10Lifetime2);
+              bd.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
               vn.a(bd.field_p, 3);
             }
           }
@@ -204,7 +204,7 @@ final class kw extends fw {
         int var2Lifetime1;
         int var2Lifetime2;
         int var2Lifetime3;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var3 = -112 % ((param1 + 33) / 51);
         if (param0 <= 0) {
           if (160 <= param0 &&

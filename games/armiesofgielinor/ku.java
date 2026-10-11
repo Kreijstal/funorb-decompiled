@@ -5,7 +5,7 @@ final class ku extends nl {
     static String[][] field_L;
     static volatile boolean field_I;
     static int field_K;
-    static wk field_J;
+    static RgbSprite field_J;
 
     public static void k(int param0) {
         if (param0 <= 43) {
@@ -77,6 +77,6 @@ final class ku extends nl {
     static {
         field_I = false;
         field_L = new String[][]{new String[]{"240", "180", "150", "120", "90", "60", "30"}, new String[]{"Small", "Medium", "Large", "Epic"}, new String[]{"Regular", "Double", "Triple", "Quadruple"}, new String[]{null, null, null, null, null}, new String[]{"Free For All", "Team Game"}, new String[]{"Off", "25", "75", "150", "No limit"}};
-        field_J = new wk(224, 224);
+        field_J = new RgbSprite(224, 224);
     }
 }

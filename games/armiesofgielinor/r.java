@@ -7,11 +7,11 @@ final class r extends vt {
     static String field_G;
     static int field_B;
     private boolean field_F;
-    private wk[] field_H;
+    private RgbSprite[] field_H;
     private boolean field_r;
     static boolean field_s;
     private int field_L;
-    private wk[] field_D;
+    private RgbSprite[] field_D;
     private int field_K;
     private int field_A;
     private int[] field_q;
@@ -27,7 +27,7 @@ final class r extends vt {
     private tu field_C;
     static String field_w;
 
-    private final wk k(int param0) {
+    private final RgbSprite k(int param0) {
         int var2 = 0;
         if (this.field_p) {
           var2 = 1;
@@ -35,7 +35,7 @@ final class r extends vt {
         if (this.field_r) {
           var2 = 2;
         }
-        wk var3 = this.field_H[var2];
+        RgbSprite var3 = this.field_H[var2];
         if (param0 != 3) {
           this.n(-61);
         }
@@ -128,7 +128,7 @@ final class r extends vt {
     }
 
     private final void a(int param0, boolean param1) {
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var3 = 114 / ((44 - param0) / 34);
         this.field_x = false;
         if (this.field_F) {
@@ -259,7 +259,7 @@ final class r extends vt {
         int var4 = 0;
         Throwable decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var1 = va.field_w;
           synchronized (var1) {
@@ -334,7 +334,7 @@ final class r extends vt {
     }
 
     private final void c(byte param0) {
-        wk var2 = this.k(3);
+        RgbSprite var2 = this.k(3);
         int var3 = this.field_D[5].field_A;
         int var4 = var2.field_A;
         int var5 = -var3 + this.field_A - (-this.field_t + var4);
@@ -360,7 +360,7 @@ final class r extends vt {
     }
 
     private final void b(boolean param0) {
-        qn.f(this.field_A, this.field_K, this.field_t, this.field_o, 7829367);
+        SoftwareRaster.f(this.field_A, this.field_K, this.field_t, this.field_o, 7829367);
         i.a(this.field_D, this.field_o, this.field_A, (byte) -47, this.field_K, this.field_t);
         if (param0) {
           this.field_q = (int[]) null;
@@ -399,7 +399,7 @@ final class r extends vt {
         return var1;
     }
 
-    r(wk[] param0, wk[] param1, tu param2, int[] param3, String[] param4, int param5, int param6) {
+    r(RgbSprite[] param0, RgbSprite[] param1, tu param2, int[] param3, String[] param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -468,7 +468,7 @@ final class r extends vt {
         int var3;
         int var4;
         String var4_ref_String;
-        wk var5;
+        RgbSprite var5;
         int var5_int;
         int var6;
         int var7;
@@ -477,7 +477,7 @@ final class r extends vt {
         int var10;
         int var11;
         int var3Lifetime1;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = 0;
         for (var3 = 0; this.field_z.u(117) > var3; var3++) {
           var4_ref_String = this.field_z.a((byte) -126, var3);

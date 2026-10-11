@@ -80,58 +80,58 @@ final class ei {
 
     final static void a(int param0, boolean param1, boolean param2, boolean param3) {
         int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 == -1) {
           wl.a(19, param1);
         } else {
           if (19 == param0) {
             wl.a(65, false);
-            qn.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+            SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
             rq.field_p[param0].e(param3);
           } else {
             if (param0 == 25) {
               wl.a(65, false);
-              qn.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+              SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
               rq.field_p[param0].e(param3);
             } else {
               if (param0 == 1) {
                 wl.a(65, false);
-                qn.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+                SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                 rq.field_p[param0].e(param3);
               } else {
                 if (param0 == 24) {
                   wl.a(65, false);
-                  qn.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+                  SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                   rq.field_p[param0].e(param3);
                 } else {
                   if (param0 == 2) {
                     wl.a(65, false);
-                    qn.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+                    SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                     rq.field_p[param0].e(param3);
                   } else {
                     if (param0 == 17) {
                       wl.a(65, false);
-                      qn.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+                      SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                       rq.field_p[param0].e(param3);
                     } else {
                       if (param0 == 3) {
                         wl.a(65, false);
-                        qn.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+                        SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                         rq.field_p[param0].e(param3);
                       } else {
                         if (param0 == 4) {
                           wl.a(65, false);
-                          qn.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+                          SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                           rq.field_p[param0].e(param3);
                         } else {
                           if (param0 == -2) {
-                            qn.b();
+                            SoftwareRaster.b();
                           } else {
                             if (param0 == -4) {
-                              qn.b();
+                              SoftwareRaster.b();
                             } else {
                               if (param0 == -5) {
-                                qn.b();
+                                SoftwareRaster.b();
                               } else {
                                 if (-6 == param0) {
                                   ee.e(0);
@@ -144,7 +144,7 @@ final class ei {
                                     } else {
                                       wl.a(61, false);
                                     }
-                                    qn.d(0, 0, so.field_b.field_a, so.field_b.field_g);
+                                    SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                                     rq.field_p[param0].e(false);
                                   }
                                 }

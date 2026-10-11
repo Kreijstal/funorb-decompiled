@@ -22,7 +22,7 @@ final class lp {
             stackIn_6_0 = uk.field_s.a(param0);
             return stackIn_6_0;
           }
-          stackIn_4_0 = ej.field_G.a(param0);
+          stackIn_4_0 = AiPlanner.field_G.a(param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

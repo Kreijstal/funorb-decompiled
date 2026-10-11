@@ -103,22 +103,22 @@ final class ah {
     }
 
     final static void a(byte param0, int param1) {
-        tc var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         iw var4 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4 = (iw) (cg.field_c.e((byte) 107));
+          var4 = (iw) (cg.field_c.first((byte) 107));
           while (var4 != null) {
             ot.a((byte) 112, param1, var4);
-            var4 = (iw) (cg.field_c.a((byte) 123));
+            var4 = (iw) (cg.field_c.next((byte) 123));
           }
-          var2 = ta.field_O.e((byte) 116);
+          var2 = ta.field_O.first((byte) 116);
           while (var2 != null) {
             a.a(param1, (byte) -32);
-            var2 = ta.field_O.a((byte) 123);
+            var2 = ta.field_O.next((byte) 123);
           }
           if (param0 == 33) {
             return;

@@ -15,7 +15,7 @@ final class re extends dr {
         return (hf.field_a & 1 << param0) != 0 ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, wk[] param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int param5) {
         try {
           if (param2 >= -112) {
             field_E = (String) null;

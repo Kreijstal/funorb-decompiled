@@ -54,11 +54,11 @@ final class nk {
         int var3 = 0;
         int var4 = 0;
         int var1_intLifetime1;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           cq.field_u = new int[vs.field_e.length];
           for (var1_int = 0; var1_int < vs.field_e.length; var1_int++) {
-            cq.field_u[var1_int] = va.field_G[vs.field_e[var1_int].field_h];
+            cq.field_u[var1_int] = va.field_G[vs.field_e[var1_int].terrainType];
           }
           if (param0 <= 79) {
             nk.a((byte) 84);
@@ -110,7 +110,7 @@ final class nk {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3 = be.a(-127, param1, param0);
           if (param2 > -34) {
@@ -147,10 +147,10 @@ final class nk {
         }
     }
 
-    final static wk[] a(int param0, byte param1, int param2, kl param3) {
+    final static RgbSprite[] a(int param0, byte param1, int param2, kl param3) {
         RuntimeException var4 = null;
-        wk[] stackIn_5_0 = null;
-        wk[] stackIn_7_0 = null;
+        RgbSprite[] stackIn_5_0 = null;
+        RgbSprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -163,7 +163,7 @@ final class nk {
             stackIn_7_0 = se.a((byte) 32);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (wk[]) null;
+          stackIn_5_0 = (RgbSprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

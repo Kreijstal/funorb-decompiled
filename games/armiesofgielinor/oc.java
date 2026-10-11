@@ -31,12 +31,12 @@ final class oc extends je {
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
         int var4;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.a(param0, param1);
         if (!param1) {
           this.field_Mb.field_X = this.field_Qb.toString();
           if (param1 &&
-            0 != tr.field_A &&
+            0 != DeployEvent.field_A &&
             this.field_yb == 0) {
             this.field_Kb = 1;
           }
@@ -46,10 +46,10 @@ final class oc extends je {
           return this.field_Kb;
         }
         while (true) {
-          if (!jd.i((byte) -51)) {
+          if (!Unit.i((byte) -51)) {
             this.field_Mb.field_X = this.field_Qb.toString();
             if (param1 &&
-              0 != tr.field_A &&
+              0 != DeployEvent.field_A &&
               this.field_yb == 0) {
               this.field_Kb = 1;
               if (param0) {

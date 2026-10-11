@@ -11,7 +11,7 @@ final class vj {
     static String field_n;
     boolean field_c;
     int field_i;
-    static at field_b;
+    static NodeDeque field_b;
     int field_m;
     private int field_e;
     private qb field_f;

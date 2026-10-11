@@ -170,7 +170,7 @@ abstract class nl extends kb implements gw {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           discarded$11 = param3.append('\n');
           var5_int = -96 / ((param2 - 43) / 54);
@@ -242,7 +242,7 @@ abstract class nl extends kb implements gw {
         }
     }
 
-    final static void a(byte[] param0, int param1, int param2, String[] param3, String[][] param4, byte[] param5, String[][] param6, kl param7, wk[][] param8, wk[][] param9, String[] param10, int[] param11, String[] param12, boolean param13, int param14) {
+    final static void a(byte[] param0, int param1, int param2, String[] param3, String[][] param4, byte[] param5, String[][] param6, kl param7, RgbSprite[][] param8, RgbSprite[][] param9, String[] param10, int[] param11, String[] param12, boolean param13, int param14) {
         nf[] array$0 = null;
         nf[] array$1 = null;
         nf[] array$2 = null;
@@ -295,9 +295,9 @@ abstract class nl extends kb implements gw {
         int var17_intLifetime2;
         int var17_intLifetime3;
         int var17_intLifetime4;
-        var21 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var21 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          tr.field_F = param5;
+          DeployEvent.field_F = param5;
           lm.field_e = param11;
           ob.field_M = param10;
           ll.field_Mb = param6;
@@ -317,20 +317,20 @@ abstract class nl extends kb implements gw {
           ks.field_u[1] = pc.field_i;
           ks.field_u[3] = ek.field_f;
           ks.field_u[2] = kd.field_L;
-          ks.field_u[0] = ns.field_D;
+          ks.field_u[0] = AttackEvent.field_D;
           ks.field_u[4] = io.field_p;
           nf.field_Kb = new je(0L, (je) null);
           rj.field_F = new je(0L, te.field_p, su.field_b);
           cm.field_a = new je(0L, br.field_e, rh.field_g);
-          ne.field_f = new dn(0L, new je(0L, (je) null), cb.field_c, ri.field_b);
+          MapTile.field_f = new dn(0L, new je(0L, (je) null), cb.field_c, ri.field_b);
           nf.field_Kb.a(rj.field_F, 79);
           if (fh.field_c) {
             nf.field_Kb.a(cm.field_a, 69);
           }
-          nf.field_Kb.a(ne.field_f, 59);
-          ne.field_f.field_Nb.a(0, eq.field_h);
-          ne.field_f.field_Nb.field_Fb = 1;
-          var24 = ne.field_f.field_Nb;
+          nf.field_Kb.a(MapTile.field_f, 59);
+          MapTile.field_f.field_Nb.a(0, eq.field_h);
+          MapTile.field_f.field_Nb.field_Fb = 1;
+          var24 = MapTile.field_f.field_Nb;
           var25 = var24;
           var25.field_Eb = 1;
           t.field_g = new je(0L, eq.field_h);
@@ -338,13 +338,13 @@ abstract class nl extends kb implements gw {
           cp.field_d = new je(0L, kd.field_M, eq.field_e.toUpperCase());
           tg.field_n = new je(0L, be.field_y, nr.field_d.toUpperCase());
           of.field_Lb = new je(0L, sh.field_m);
-          r.field_v = new je(0L, te.field_p, tc.field_a);
+          r.field_v = new je(0L, te.field_p, IntrusiveNode.field_a);
           ek.field_c = new je(0L, ho.field_a, wb.field_c);
           sr.field_p = new je(0L, ho.field_a, fk.field_g);
           bs.field_a = new je(0L, ho.field_a, fw.field_H);
           ee.field_A = new je(0L, ho.field_a, hs.field_D);
-          wl.field_K = new je(0L, br.field_e, rt.field_B);
-          bv.field_x = new dn(0L, new je(0L, (je) null), cb.field_c, ri.field_b);
+          wl.field_K = new je(0L, br.field_e, RevivalEvent.field_B);
+          CipherPacketBuffer.field_x = new dn(0L, new je(0L, (je) null), cb.field_c, ri.field_b);
           fj.field_d = new je(0L, nd.field_a, l.field_f.toUpperCase());
           fj.field_d.field_xb = fh.field_c;
           stackIn_5_0 = null;
@@ -372,7 +372,7 @@ abstract class nl extends kb implements gw {
           }
           of.field_Lb.a(ee.field_A, 78);
           of.field_Lb.a(wl.field_K, 99);
-          of.field_Lb.a(bv.field_x, 70);
+          of.field_Lb.a(CipherPacketBuffer.field_x, 70);
           if (fh.field_c) {
             ov.field_i.a(fj.field_d, 127);
           }
@@ -393,50 +393,50 @@ abstract class nl extends kb implements gw {
           gg.field_E = new je(0L, eq.field_h);
           gg.field_E.field_Eb = 1;
           di.field_l = new je(0L, te.field_p, su.field_b);
-          pj.field_D = new je(0L, br.field_e, rh.field_g);
+          TrinketUseEvent.field_D = new je(0L, br.field_e, rh.field_g);
           bu.field_a = new dn(0L, new je(0L, (je) null), cb.field_c, ri.field_b);
           eb.field_c.a(gg.field_E, 72);
           eb.field_c.a(di.field_l, 83);
           if (fh.field_c) {
-            eb.field_c.a(pj.field_D, 107);
+            eb.field_c.a(TrinketUseEvent.field_D, 107);
           }
           eb.field_c.a(bu.field_a, 109);
           mp.field_Lb = new je(0L, kd.field_M, pl.field_v.toUpperCase());
           kd.field_F = new je(0L, be.field_y);
           vc.field_l = new je(0L, sh.field_m);
           iu.field_d = new je(0L, rn.field_a, tb.field_d.toUpperCase());
-          rl.field_z = new je[param1 + 4];
+          KingBlackDragonEvent.field_z = new je[param1 + 4];
           pu.field_k = new nf[4 + param1][];
-          rl.field_z[0] = new je(0L, fp.field_Lb, et.field_c);
+          KingBlackDragonEvent.field_z[0] = new je(0L, fp.field_Lb, et.field_c);
           pu.field_k[0] = new nf[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
             pu.field_k[0][var17_int + 1] = new nf(0L, eb.field_a, (je) null, ms.field_k, rs.field_p[var17_int], ks.field_u[var17_int]);
           }
           if (lm.field_e.length >= 2) {
-            rl.field_z[1] = new je(0L, fp.field_Lb, ep.field_h);
+            KingBlackDragonEvent.field_z[1] = new je(0L, fp.field_Lb, ep.field_h);
             array$0 = new nf[1 + lm.field_e.length];
             pu.field_k[1] = array$0;
-            pu.field_k[1][0] = new nf(0L, eb.field_a, (je) null, ms.field_k, (wk) null, ki.field_a);
+            pu.field_k[1][0] = new nf(0L, eb.field_a, (je) null, ms.field_k, (RgbSprite) null, ki.field_a);
             for (var17_intLifetime1 = 0; lm.field_e.length > var17_intLifetime1; var17_intLifetime1++) {
-              pu.field_k[1][var17_intLifetime1 + 1] = new nf(0L, eb.field_a, (je) null, ms.field_k, (wk) null, Integer.toString(lm.field_e[var17_intLifetime1]));
+              pu.field_k[1][var17_intLifetime1 + 1] = new nf(0L, eb.field_a, (je) null, ms.field_k, (RgbSprite) null, Integer.toString(lm.field_e[var17_intLifetime1]));
             }
           }
-          rl.field_z[2] = new je(0L, fp.field_Lb, oj.field_p);
-          pu.field_k[2] = new nf[]{new nf(0L, eb.field_a, (je) null, ms.field_k, (wk) null, ki.field_a), new nf(0L, eb.field_a, (je) null, ms.field_k, lm.field_h[0], gm.field_e), new nf(0L, eb.field_a, (je) null, ms.field_k, lm.field_h[1], po.field_b)};
+          KingBlackDragonEvent.field_z[2] = new je(0L, fp.field_Lb, GameEvent.field_p);
+          pu.field_k[2] = new nf[]{new nf(0L, eb.field_a, (je) null, ms.field_k, (RgbSprite) null, ki.field_a), new nf(0L, eb.field_a, (je) null, ms.field_k, lm.field_h[0], gm.field_e), new nf(0L, eb.field_a, (je) null, ms.field_k, lm.field_h[1], po.field_b)};
           if (ei.field_h > 1) {
-            rl.field_z[3] = new je(0L, fp.field_Lb, wp.field_u);
+            KingBlackDragonEvent.field_z[3] = new je(0L, fp.field_Lb, wp.field_u);
             array$1 = new nf[1 + ei.field_h];
             pu.field_k[3] = array$1;
-            pu.field_k[3][0] = new nf(0L, eb.field_a, (je) null, ms.field_k, (wk) null, ki.field_a);
+            pu.field_k[3][0] = new nf(0L, eb.field_a, (je) null, ms.field_k, (RgbSprite) null, ki.field_a);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < ei.field_h; var17_intLifetime2++) {
-              pu.field_k[3][1 + var17_intLifetime2] = new nf(0L, eb.field_a, (je) null, ms.field_k, (wk) null, gt.field_f[var17_intLifetime2]);
+              pu.field_k[3][1 + var17_intLifetime2] = new nf(0L, eb.field_a, (je) null, ms.field_k, (RgbSprite) null, gt.field_f[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param1 > var17_intLifetime3; var17_intLifetime3++) {
-            rl.field_z[var17_intLifetime3 + 4] = new je(0L, fp.field_Lb, ob.field_M[var17_intLifetime3]);
+            KingBlackDragonEvent.field_z[var17_intLifetime3 + 4] = new je(0L, fp.field_Lb, ob.field_M[var17_intLifetime3]);
             array$2 = new nf[rn.a(255, (int) mi.field_r[var17_intLifetime3]) + 1];
             pu.field_k[var17_intLifetime3 + 4] = array$2;
-            pu.field_k[var17_intLifetime3 + 4][0] = new nf(0L, eb.field_a, (je) null, ms.field_k, (wk) null, ki.field_a);
+            pu.field_k[var17_intLifetime3 + 4][0] = new nf(0L, eb.field_a, (je) null, ms.field_k, (RgbSprite) null, ki.field_a);
             for (var18 = 0; var18 < (mi.field_r[var17_intLifetime3] & 255); var18++) {
               if (jn.field_b == null) {
                 var19_ref = null;
@@ -456,12 +456,12 @@ abstract class nl extends kb implements gw {
               } else {
                 var20 = null;
               }
-              pu.field_k[var17_intLifetime3 + 4][1 + var18] = new nf(0L, eb.field_a, (je) null, ms.field_k, (wk) (var19_ref), (String) (var20));
+              pu.field_k[var17_intLifetime3 + 4][1 + var18] = new nf(0L, eb.field_a, (je) null, ms.field_k, (RgbSprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; param1 + 4 > var17_intLifetime4; var17_intLifetime4++) {
-            if (null != rl.field_z[var17_intLifetime4]) {
-              rl.field_z[var17_intLifetime4].field_pb = 11;
+            if (null != KingBlackDragonEvent.field_z[var17_intLifetime4]) {
+              KingBlackDragonEvent.field_z[var17_intLifetime4].field_pb = 11;
             }
             if (pu.field_k[var17_intLifetime4] != null) {
               for (var18Lifetime1 = 0; pu.field_k[var17_intLifetime4].length > var18Lifetime1; var18Lifetime1++) {
@@ -491,7 +491,7 @@ abstract class nl extends kb implements gw {
             if ((var18Lifetime2 != 1 ||
               !(2 > lm.field_e.length)) && (var18Lifetime2 != 3 ||
               !(ei.field_h <= 1))) {
-              vc.field_l.a(rl.field_z[var18Lifetime2], 86);
+              vc.field_l.a(KingBlackDragonEvent.field_z[var18Lifetime2], 86);
               for (var19 = 0; var19 < pu.field_k[var18Lifetime2].length; var19++) {
                 if (pu.field_k[var18Lifetime2][var19] != null) {
                   vc.field_l.a(pu.field_k[var18Lifetime2][var19], 48);
@@ -677,7 +677,7 @@ abstract class nl extends kb implements gw {
         try {
           if (param3 != -12215) {
             var6 = (String[]) null;
-            nl.a((byte[]) null, 101, 110, (String[]) null, (String[][]) null, (byte[]) null, (String[][]) null, (kl) null, (wk[][]) null, (wk[][]) null, (String[]) null, (int[]) null, (String[]) null, true, 39);
+            nl.a((byte[]) null, 101, 110, (String[]) null, (String[][]) null, (byte[]) null, (String[][]) null, (kl) null, (RgbSprite[][]) null, (RgbSprite[][]) null, (String[]) null, (int[]) null, (String[]) null, true, 39);
           }
           if (this.field_E != null &&
             this.field_E.a(false) &&
@@ -714,7 +714,7 @@ abstract class nl extends kb implements gw {
             iw var4 = (iw) null;
             nl.a(30, -59, (iw) null);
           }
-          cg.field_c.a((byte) -119, (tc) (param2));
+          cg.field_c.a((byte) -119, (IntrusiveNode) (param2));
           ot.a((byte) 112, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "nl.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -750,7 +750,7 @@ abstract class nl extends kb implements gw {
         int var15 = 0;
         int[] var16 = null;
         int[] var17 = null;
-        var15 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 == null) {
             return;
@@ -773,9 +773,9 @@ abstract class nl extends kb implements gw {
                       if (var13 == 0) {
                         var14 = new fd(param2, param0, var12);
                         if (null == bk.field_e) {
-                          bk.field_e = new at();
+                          bk.field_e = new NodeDeque();
                         }
-                        bk.field_e.a((byte) -119, (tc) (var14));
+                        bk.field_e.a((byte) -119, (IntrusiveNode) (var14));
                       }
                     }
                   }

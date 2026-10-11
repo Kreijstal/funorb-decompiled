@@ -21,7 +21,7 @@ final class ve {
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 13) {
             stackIn_3_0 = (String) null;

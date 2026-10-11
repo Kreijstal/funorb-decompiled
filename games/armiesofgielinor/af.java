@@ -21,7 +21,7 @@ abstract class af {
         String var5 = null;
         Object var3Lifetime1;
         Object var3Lifetime1Lifetime1;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2 = null;
           if (param0.field_q != null) {
@@ -87,7 +87,7 @@ abstract class af {
         }
     }
 
-    abstract void a(vh param0, int param1);
+    abstract void a(PacketBuffer param0, int param1);
 
     public static void b(byte param0) {
         if (param0 >= -95) {
@@ -117,7 +117,7 @@ abstract class af {
           String var9 = null;
           String var10 = null;
           String var11 = null;
-          var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             var3_int = 16 % ((7 - param1) / 62);
             var4 = "";
@@ -138,7 +138,7 @@ abstract class af {
             if (vu.field_L == null) {
               return;
             }
-            stackIn_12_0 = vh.field_s;
+            stackIn_12_0 = PacketBuffer.field_s;
             stackIn_12_1 = null;
             stackIn_12_2 = null;
             stackIn_12_3 = vu.field_L.getCodeBase();
@@ -181,8 +181,8 @@ abstract class af {
         try {
           se.field_f = param0;
           ac.field_n = true;
-          qc.field_a = new ro(rl.field_C, bv.field_t, param1, fh.field_i, se.field_f);
-          rl.field_C.a(qc.field_a, param2 ^ param2);
+          qc.field_a = new ro(KingBlackDragonEvent.field_C, CipherPacketBuffer.field_t, param1, fh.field_i, se.field_f);
+          KingBlackDragonEvent.field_C.a(qc.field_a, param2 ^ param2);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "af.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

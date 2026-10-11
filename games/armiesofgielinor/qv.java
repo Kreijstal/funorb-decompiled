@@ -15,7 +15,7 @@ final class qv implements pa {
     private int[] field_c;
     private int[] field_b;
     private int[] field_n;
-    private ha field_o;
+    private Battlefield field_o;
     private int field_w;
     private int[] field_e;
     private int[] field_d;
@@ -48,17 +48,17 @@ final class qv implements pa {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, byte[] param4, int param5) {
-        bv var6 = null;
+        CipherPacketBuffer var6 = null;
         int var7 = 0;
         int var8 = 0;
         try {
           var6 = vl.field_n;
           var6.h(32161, param0);
-          var6.field_q = var6.field_q + 1;
+          var6.position = var6.position + 1;
           if (param5 != 5623) {
             field_i = (char[]) null;
           }
-          var7 = var6.field_q;
+          var7 = var6.position;
           var6.b(1, 4);
           var6.b(1, param1);
           var8 = param2;
@@ -67,13 +67,13 @@ final class qv implements pa {
           }
           var6.b(1, var8);
           var6.a(param4, 0, param4.length, 102);
-          var6.e(var6.field_q - var7, 5930);
+          var6.e(var6.position - var7, 5930);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "qv.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
-    public final boolean a(oj param0, byte param1) {
+    public final boolean a(GameEvent param0, byte param1) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -82,14 +82,14 @@ final class qv implements pa {
         int var4 = 0;
         int var6 = 0;
         int[] var7 = null;
-        kr var8 = null;
+        MoveEvent var8 = null;
         String var9 = null;
-        md var10 = null;
+        ParasiteEvent var10 = null;
         String var11 = null;
         int[] var12 = null;
         int[] var14 = null;
         int[] var17 = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 57) {
             this.field_u = 46;
@@ -97,11 +97,11 @@ final class qv implements pa {
           this.field_u = 0;
           if (param0.field_m != 0) {
             if (7 == param0.field_m) {
-              var10 = (md) (param0);
+              var10 = (ParasiteEvent) (param0);
               var4 = var10.field_D + var10.field_B * this.field_t;
-              var10.field_w = this.field_o.c(var10.field_B, true, var10.field_D);
-              if (null == var10.field_w) {
-                var11 = ha.field_q + ": Can see parasite";
+              var10.unit = this.field_o.getUnitAt(var10.field_B, true, var10.field_D);
+              if (null == var10.unit) {
+                var11 = Battlefield.field_q + ": Can see parasite";
                 this.field_o.a(0, var11, param0);
                 return false;
               }
@@ -122,28 +122,28 @@ final class qv implements pa {
                   var14[0] = 3;
                 }
               }
-              var10.a(var10.field_w, param1 - 45);
+              var10.a(var10.unit, param1 - 45);
               this.a(var17, true, var4);
               this.b(var10, (byte) -94);
             }
           } else {
-            var8 = (kr) (param0);
-            var4 = this.field_t * var8.field_I + var8.field_H;
-            this.a(var8.field_B, true, var4);
-            if (null == var8.field_w) {
-              var8.field_w = this.field_o.c(var8.field_I, true, var8.field_H);
+            var8 = (MoveEvent) (param0);
+            var4 = this.field_t * var8.startY + var8.startX;
+            this.a(var8.pathDirections, true, var4);
+            if (null == var8.unit) {
+              var8.unit = this.field_o.getUnitAt(var8.startY, true, var8.startX);
             }
-            if (var8.field_w == null) {
-              var9 = ha.field_q + ": Can see start";
+            if (var8.unit == null) {
+              var9 = Battlefield.field_q + ": Can see start";
               this.field_o.a(0, var9, param0);
               return false;
             }
-            if (var8.field_w.field_bb) {
-              var8.field_w = var8.field_w.b(false);
+            if (var8.unit.packedFlag256) {
+              var8.unit = var8.unit.b(false);
               hs.b(-90, 29);
             }
-            var8.field_w.field_z = 1;
-            var8.a(var8.field_w, 12);
+            var8.unit.field_z = 1;
+            var8.a(var8.unit, 12);
             this.b(var8, (byte) 58);
           }
           return true;
@@ -172,7 +172,7 @@ final class qv implements pa {
         int var7 = 0;
         String[][][] var8 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var8 = wh.a(117);
           var1 = var8;
@@ -309,7 +309,7 @@ final class qv implements pa {
         String var2Lifetime3Lifetime10;
         String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (!(param1 instanceof g)) {
           var2 = "";
           var11 = var2;
@@ -420,7 +420,7 @@ final class qv implements pa {
 
     private final void i(int param0) {
         int var2 = 0;
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_n[0] = this.field_d[0];
         this.field_n[1] = this.field_d[1];
         this.field_k[0] = 0;
@@ -464,7 +464,7 @@ final class qv implements pa {
         return this.field_s <= this.field_u ? true : false;
     }
 
-    private final void a(boolean param0, oj param1) {
+    private final void a(boolean param0, GameEvent param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -509,11 +509,11 @@ final class qv implements pa {
         if (param0 != -11) {
           return false;
         }
-        stackIn_7_0 = (p.field_b >= 10) && (!bl.field_b) && (!go.a(-103));
+        stackIn_7_0 = (p.field_b >= 10) && (!bl.field_b) && (!TeamRoster.a(-103));
         return stackIn_7_0;
     }
 
-    qv(ha param0, v param1, vb param2) {
+    qv(Battlefield param0, v param1, vb param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -529,7 +529,7 @@ final class qv implements pa {
           this.field_o = param0;
           this.field_m = new int[2];
           this.field_v = param1;
-          this.field_t = param0.field_v;
+          this.field_t = param0.mapWidth;
           this.field_q = param2;
           this.field_b = new int[2];
           this.field_g = new int[2];
@@ -596,10 +596,10 @@ final class qv implements pa {
         }
     }
 
-    public final void b(oj param0, byte param1) {
+    public final void b(GameEvent param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        jd var4 = null;
+        Unit var4 = null;
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -607,7 +607,7 @@ final class qv implements pa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(false)) {
-            dh.a(param0.field_w.field_N, 0, 32);
+            dh.a(param0.unit.unitType, 0, 32);
           }
           if (param0 == null) {
             return;
@@ -618,7 +618,7 @@ final class qv implements pa {
           this.field_q.field_m = this.field_b[0];
           this.field_q.field_v = this.field_b[1];
           var3_int = this.e((byte) -69);
-          var4 = param0.field_w;
+          var4 = param0.unit;
           if (param0.field_m != 7) {
             var4.field_z = 1;
           } else {

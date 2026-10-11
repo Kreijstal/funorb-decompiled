@@ -30,7 +30,7 @@ final class vi {
         int var2 = -(sj.field_d * sj.field_d) + var1;
         int var3 = sh.field_l + var2 * (-sh.field_l + gb.field_y) / var1;
         if (param0 < -53) {
-          ag.field_I.a(120, -20500, 640, var3, va.field_u);
+          CombatEvent.field_I.a(120, -20500, 640, var3, va.field_u);
           hm.a(-1, mi.field_l, 0, io.field_n, 5, gb.field_y - 24, 640);
           return;
         }

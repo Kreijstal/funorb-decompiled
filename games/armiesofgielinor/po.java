@@ -18,7 +18,7 @@ final class po {
         ac.field_k[183 + ls.a(sr.a(param7 - 1, param1 + 1, 2, (byte) -122), 1, sr.a(param7, param1 + 1, 2, (byte) -116), sr.a(-1 + param7, param1, 2, (byte) -114), -118)].b(param3, param2, param4, param5);
     }
 
-    final static sc a(bv param0, int param1) {
+    final static sc a(CipherPacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         sc var3 = null;
@@ -81,7 +81,7 @@ final class po {
               return false;
             }
             if (vt.field_l == 2 &&
-              !wq.a(rt.field_z, wn.field_db, (byte) 78)) {
+              !wq.a(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
               return false;
             }
             if (vt.field_l != 2 &&
@@ -115,7 +115,7 @@ final class po {
                 return false;
               }
             } else {
-              if (!wq.a(rt.field_z, wn.field_db, (byte) 78)) {
+              if (!wq.a(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
                 return false;
               }
               if (vt.field_l != 2 &&
@@ -167,7 +167,7 @@ final class po {
               return false;
             }
           } else {
-            if (!wq.a(rt.field_z, wn.field_db, (byte) 78)) {
+            if (!wq.a(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
               return false;
             }
             if (vt.field_l != 2 &&
@@ -207,7 +207,7 @@ final class po {
             return false;
           }
         } else {
-          if (!wq.a(rt.field_z, wn.field_db, (byte) 78)) {
+          if (!wq.a(RevivalEvent.field_z, wn.field_db, (byte) 78)) {
             return false;
           }
           if (vt.field_l != 2 &&

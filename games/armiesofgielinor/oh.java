@@ -3,11 +3,11 @@
  */
 final class oh extends dr {
     static wm field_L;
-    static wk[] field_J;
+    static RgbSprite[] field_J;
     static boolean[] field_G;
     static String field_F;
     static um field_K;
-    static wk field_I;
+    static RgbSprite field_I;
     static int field_E;
     static long field_H;
     static kl field_M;

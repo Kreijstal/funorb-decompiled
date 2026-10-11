@@ -4,7 +4,7 @@
 final class vn {
     private int[] field_i;
     sk field_k;
-    private wk[] field_f;
+    private RgbSprite[] field_f;
     private int field_c;
     static pf field_j;
     private ia field_d;
@@ -14,7 +14,7 @@ final class vn {
     private ia field_h;
     static String field_g;
     static String field_e;
-    private wk[] field_b;
+    private RgbSprite[] field_b;
 
     private final void b(byte param0) {
         this.field_d = new ia(this.field_b, this.field_m, this.field_i, "Attacker", 0, 0);
@@ -71,7 +71,7 @@ final class vn {
         int var3;
         int var4;
         int var2Lifetime1;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         for (var2 = param0; this.field_l.length > var2; var2++) {
           if (!this.field_l[var2].g((byte) 97)) {
             this.field_l[var2].f((byte) 124);
@@ -121,27 +121,27 @@ final class vn {
     }
 
     private final void a(boolean param0, int param1, int param2, boolean param3, int param4, boolean param5) {
-        jd stackIn_24_0;
-        jd stackIn_24_1;
+        Unit stackIn_24_0;
+        Unit stackIn_24_1;
         int stackIn_24_2;
         int stackIn_24_3;
         int stackIn_24_4;
         int stackIn_24_5;
         int stackIn_24_6;
         int stackIn_24_7;
-        jd stackIn_25_0 = null;
-        jd stackIn_25_1 = null;
+        Unit stackIn_25_0 = null;
+        Unit stackIn_25_1 = null;
         int stackIn_25_8 = 0;
-        jd stackIn_27_0;
-        jd stackIn_27_1;
+        Unit stackIn_27_0;
+        Unit stackIn_27_1;
         int stackIn_27_2;
         int stackIn_27_3;
         int stackIn_27_4;
         int stackIn_27_5;
         int stackIn_27_6;
         int stackIn_27_7;
-        jd stackIn_28_0 = null;
-        jd stackIn_28_1 = null;
+        Unit stackIn_28_0 = null;
+        Unit stackIn_28_1 = null;
         int stackIn_28_8 = 0;
         int var7;
         int var8;
@@ -154,15 +154,15 @@ final class vn {
         int var15;
         int var16;
         int var17;
-        jd var18;
-        jd var19;
+        Unit var18;
+        Unit var19;
         int var20;
         int var21;
         int var22;
         int var23;
         int var24;
         int var8Lifetime1;
-        var24 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var24 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.a((byte) -121, param2, param4);
         var7 = param5 ? 1 : 0;
         for (var8 = 0; var8 < this.field_l.length; var8++) {
@@ -196,9 +196,9 @@ final class vn {
             var13 = 1;
             var8Lifetime1 = 7;
           }
-          var14 = bw.field_m[var8Lifetime1][4];
+          var14 = bw.unitDefinitions[var8Lifetime1][4];
           var15 = var14 / (1 + this.field_l[4].h(5));
-          var16 = bw.field_m[var9][4];
+          var16 = bw.unitDefinitions[var9][4];
           var17 = var16 / (1 + this.field_l[5].h(5));
           if (var15 == 0) {
             var15++;
@@ -223,7 +223,7 @@ final class vn {
             stackIn_25_1 = null;
             stackIn_25_8 = 8;
           }
-          var18 = new jd(stackIn_24_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, 0, 0, (ha) null, 0, 0, -1, true, 0);
+          var18 = new Unit(stackIn_24_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, 0, 0, (Battlefield) null, 0, 0, -1, true, 0);
           stackIn_27_0 = null;
           stackIn_27_1 = null;
           stackIn_27_2 = 0;
@@ -241,27 +241,27 @@ final class vn {
             stackIn_28_1 = null;
             stackIn_28_8 = 8;
           }
-          var19 = new jd(stackIn_27_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, 0, 0, (ha) null, 0, 0, -1, true, 0);
-          var20 = bw.field_m[var8Lifetime1][0];
-          var21 = bw.field_m[var9][0];
+          var19 = new Unit(stackIn_27_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, 0, 0, (Battlefield) null, 0, 0, -1, true, 0);
+          var20 = bw.unitDefinitions[var8Lifetime1][0];
+          var21 = bw.unitDefinitions[var9][0];
           var22 = ri.field_c[var11] * (var15 * fk.field_d[var20][var21]) / 10000;
           if (var22 > var17) {
             var22 = var17;
           }
           var23 = (var17 - var22) * (fk.field_d[var21][var20] * ri.field_c[var10]) / 10000;
-          this.field_k = new sk((ha) null, (v) null, (vb) null);
+          this.field_k = new sk((Battlefield) null, (v) null, (vb) null);
           this.field_k.a(var22, var19, var23, true, var18);
           le.field_b = new cg();
         }
     }
 
-    final static void a(wk param0, int param1) {
+    final static void a(RgbSprite param0, int param1) {
         if (param1 != 3) {
           return;
         }
         try {
           rq.a((byte) -56);
-          qn.a(param0.field_B, param0.field_A, param0.field_x);
+          SoftwareRaster.a(param0.field_B, param0.field_A, param0.field_x);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "vn.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -280,7 +280,7 @@ final class vn {
         int var6;
         int var7;
         int var5Lifetime1;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var4 = 0;
         while (true) {
           if (var4 >= this.field_l.length) {
@@ -313,7 +313,7 @@ final class vn {
         return;
     }
 
-    vn(wk[] param0, wk[] param1, tu param2, int[] param3, int param4, int param5) {
+    vn(RgbSprite[] param0, RgbSprite[] param1, tu param2, int[] param3, int param4, int param5) {
         this.field_c = 0;
         try {
           this.field_b = param0;
@@ -406,7 +406,7 @@ final class vn {
           }
         }
         if (null != this.field_k) {
-          this.field_k.b((oj) null, (byte) -121);
+          this.field_k.b((GameEvent) null, (byte) -121);
           if (this.field_k.b(8865)) {
             this.field_k = null;
             le.field_b = new cg();

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ur extends bd {
-    private jd field_y;
-    static wk[] field_w;
+    private Unit field_y;
+    static RgbSprite[] field_w;
     static String field_x;
     private int field_t;
     static String field_u;
@@ -83,9 +83,9 @@ final class ur extends bd {
         return var1;
     }
 
-    final void a(int param0, ha param1) {
+    final void a(int param0, Battlefield param1) {
         try {
-          param1.field_l.a((byte) -119, (tc) (new ec(this.field_y.field_J, this.field_y.field_w, this.field_s, this.field_t, this.field_A)));
+          param1.pendingEvents.a((byte) -119, (IntrusiveNode) (new TeleportEvent(this.field_y.tileX, this.field_y.tileY, this.field_s, this.field_t, this.field_A)));
           if (param0 != 64) {
             field_z = 2;
           }
@@ -106,7 +106,7 @@ final class ur extends bd {
         field_w = null;
     }
 
-    ur(int param0, int param1, int param2, int param3, int param4, jd param5, boolean param6) {
+    ur(int param0, int param1, int param2, int param3, int param4, Unit param5, boolean param6) {
         try {
           this.field_A = param6 ? true : false;
           this.field_t = param3;

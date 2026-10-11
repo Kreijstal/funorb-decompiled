@@ -12,7 +12,7 @@ final class jm {
     int field_s;
     private int[][] field_j;
     private byte[] field_n;
-    static at field_o;
+    static NodeDeque field_o;
     static String field_d;
     lr[] field_f;
     static String field_u;
@@ -57,7 +57,7 @@ final class jm {
         int var15 = 0;
         int var16 = 0;
         byte[] var17 = null;
-        vh var18 = null;
+        PacketBuffer var18 = null;
         byte[] var22 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -72,9 +72,9 @@ final class jm {
         int var12Lifetime1;
         int var10Lifetime1Lifetime1;
         int var13Lifetime1Lifetime1;
-        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var18 = new vh(el.a(param1, param0));
+          var18 = new PacketBuffer(el.a(param1, param0));
           var4 = var18.k(0);
           if (5 <= var4 &&
             var4 <= 7) {
@@ -249,13 +249,13 @@ final class jm {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          vh.a(0, df.field_T, false, pd.field_e, kt.field_p, param0, true);
+          PacketBuffer.a(0, df.field_T, false, pd.field_e, kt.field_p, param0, true);
           for (var2_int = param1; kt.field_p > var2_int; var2_int++) {
             vt.field_m[param0 + var2_int] = var2_int;
           }
-          vh.a(param0, se.field_e, false, sq.field_k, kt.field_p + param0, param0 + param0, false);
+          PacketBuffer.a(param0, se.field_e, false, sq.field_k, kt.field_p + param0, param0 + param0, false);
           if (param0 < kt.field_p) {
             kt.field_p = param0;
           }
@@ -269,15 +269,15 @@ final class jm {
 
     final static void a(je param0, int param1) {
         je var5 = null;
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
-        je var4 = (je) (param0.field_fb.e((byte) 121));
+        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        je var4 = (je) (param0.field_fb.first((byte) 121));
         je var2 = var4;
         while (var4 != null) {
           var4.field_nb = 0;
           var4.field_ob = 0;
           var4.field_db = 0;
           var4.field_ab = 0;
-          var5 = (je) (param0.field_fb.a((byte) 123));
+          var5 = (je) (param0.field_fb.next((byte) 123));
           var5 = var5;
         }
         param0.field_nb = 0;
@@ -333,7 +333,7 @@ final class jm {
         field_u = "Remove name";
         field_d = "Accessories";
         field_g = false;
-        field_o = new at();
+        field_o = new NodeDeque();
         field_k = 0;
     }
 }

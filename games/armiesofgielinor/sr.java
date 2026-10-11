@@ -62,7 +62,7 @@ final class sr {
         }
     }
 
-    final void a(int param0, wk param1) {
+    final void a(int param0, RgbSprite param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

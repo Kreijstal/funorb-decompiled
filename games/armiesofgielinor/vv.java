@@ -33,7 +33,7 @@ final class vv {
 
     final static og[] a(String param0, int param1) {
         int incrementValue$1 = 0;
-        at var2 = null;
+        NodeDeque var2 = null;
         RuntimeException var2_ref = null;
         og[] var3 = null;
         int var4 = 0;
@@ -46,7 +46,7 @@ final class vv {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0.equals(no.field_N)) {
             stackIn_4_0 = ol.field_w;
@@ -59,12 +59,12 @@ final class vv {
             stackIn_7_0 = (og[]) null;
             return stackIn_7_0;
           }
-          var5 = (og) (var2.e((byte) 100));
+          var5 = (og) (var2.first((byte) 100));
           while (var5 != null) {
             incrementValue$1 = var4;
             var4++;
             var3[incrementValue$1] = var5;
-            var5 = (og) (var2.a((byte) 123));
+            var5 = (og) (var2.next((byte) 123));
           }
           no.field_N = param0;
           ol.field_w = var3;
@@ -172,19 +172,19 @@ final class vv {
         int stackIn_277_5 = 0;
         int var7;
         int var8;
-        ne var9;
+        MapTile var9;
         int var10;
         int var11;
-        jd var12;
+        Unit var12;
         int var10Lifetime1;
         int var10Lifetime2;
         int var10Lifetime3;
         int var10Lifetime4;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 >= -72) {
           return;
         }
-        var12 = vs.field_e[param3].field_c;
+        var12 = vs.field_e[param3].occupant;
         stackIn_5_0 = (var12 == null) ? 0 : 1;
         var7 = stackIn_5_0;
         if (param2) {
@@ -195,44 +195,44 @@ final class vv {
         }
         var8 = jf.field_C.field_q;
         if (0 > var8) {
-          var8 = bv.field_w.field_gb;
+          var8 = CipherPacketBuffer.currentBattlefield.currentPlayer;
         }
         var9 = vs.field_e[param3];
         if (var12.field_u) {
           return;
         }
-        if (var12.field_s) {
+        if (var12.packedFlag4) {
           if (var12.h(-13494)) {
             if (var12.field_ab == 1) {
               i.a(false, param5, param0);
             }
-            if (var12.c(false)) {
+            if (var12.hasMovementFlag1(false)) {
               eu.a(111, param5, param0, var12);
             }
             if (var12.u(8)) {
               nb.a(param0, param5, (byte) -97, var12);
             }
             if (var12.field_x != null) {
-              if (var12.field_O == ne.field_i &&
-                !var12.field_s &&
+              if (var12.ownerPlayer == MapTile.field_i &&
+                !var12.packedFlag4 &&
                 jf.field_C.field_L > 0) {
-                go.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
-                go.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
+                TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
+                TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
               }
               if (var9.a(false) &&
-                !bv.field_w.c(var9.field_a, -16985, var12.field_O) &&
+                !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
                 var12.i(-21428)) {
-                qn.b(param0 + 18, param5 + 30, 42, 6, 11184810);
-                if (var9.field_a > -1) {
+                SoftwareRaster.b(param0 + 18, param5 + 30, 42, 6, 11184810);
+                if (var9.ownerPlayer > -1) {
                   stackIn_41_0 = param0 + 19;
                   stackIn_41_1 = param5 + 31;
                   stackIn_41_2 = 40;
                   stackIn_41_3 = 4;
                   stackIn_41_4 = op.field_c;
-                  stackIn_42_5 = (bv.field_w.field_wb) ? 1 : 0;
-                  qn.f(stackIn_41_0, stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4[stackIn_42_5][var9.field_a]);
+                  stackIn_42_5 = (CipherPacketBuffer.currentBattlefield.teamGame) ? 1 : 0;
+                  SoftwareRaster.f(stackIn_41_0, stackIn_41_1, stackIn_41_2, stackIn_41_3, stackIn_41_4[stackIn_42_5][var9.ownerPlayer]);
                 } else {
-                  qn.f(param0 + 19, param5 + 31, 40, 4, 0);
+                  SoftwareRaster.f(param0 + 19, param5 + 31, 40, 4, 0);
                 }
                 var10 = var9.e(10) - var9.field_m;
                 if (10 != var9.e(10)) {
@@ -249,46 +249,46 @@ final class vv {
                 }
                 stackIn_51_3 = 4;
                 stackIn_51_4 = op.field_c;
-                stackIn_52_5 = (!bv.field_w.field_wb) ? 0 : 1;
-                qn.f(stackIn_48_0, stackIn_48_1, stackIn_49_2, stackIn_51_3, stackIn_51_4[stackIn_52_5][bv.field_w.o(var12.field_O, -1)]);
+                stackIn_52_5 = (!CipherPacketBuffer.currentBattlefield.teamGame) ? 0 : 1;
+                SoftwareRaster.f(stackIn_48_0, stackIn_48_1, stackIn_49_2, stackIn_51_3, stackIn_51_4[stackIn_52_5][CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var12.ownerPlayer, -1)]);
               }
               if (param4 > 0) {
                 bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
               }
             }
           } else {
-            if (var12.field_B == 0) {
+            if (var12.packedLowFlags == 0) {
               of.field_Mb[2].a(param0 + 8, param5 + 12);
               if (var12.field_ab == 1) {
                 i.a(false, param5, param0);
               }
-              if (var12.c(false)) {
+              if (var12.hasMovementFlag1(false)) {
                 eu.a(111, param5, param0, var12);
               }
               if (var12.u(8)) {
                 nb.a(param0, param5, (byte) -97, var12);
               }
               if (var12.field_x != null) {
-                if (var12.field_O == ne.field_i &&
-                  !var12.field_s &&
+                if (var12.ownerPlayer == MapTile.field_i &&
+                  !var12.packedFlag4 &&
                   jf.field_C.field_L > 0) {
-                  go.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
-                  go.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
+                  TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
+                  TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
                 }
                 if (var9.a(false) &&
-                  !bv.field_w.c(var9.field_a, -16985, var12.field_O) &&
+                  !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
                   var12.i(-21428)) {
-                  qn.b(param0 + 18, param5 + 30, 42, 6, 11184810);
-                  if (var9.field_a > -1) {
+                  SoftwareRaster.b(param0 + 18, param5 + 30, 42, 6, 11184810);
+                  if (var9.ownerPlayer > -1) {
                     stackIn_123_0 = param0 + 19;
                     stackIn_123_1 = param5 + 31;
                     stackIn_123_2 = 40;
                     stackIn_123_3 = 4;
                     stackIn_123_4 = op.field_c;
-                    stackIn_124_5 = (bv.field_w.field_wb) ? 1 : 0;
-                    qn.f(stackIn_123_0, stackIn_123_1, stackIn_123_2, stackIn_123_3, stackIn_123_4[stackIn_124_5][var9.field_a]);
+                    stackIn_124_5 = (CipherPacketBuffer.currentBattlefield.teamGame) ? 1 : 0;
+                    SoftwareRaster.f(stackIn_123_0, stackIn_123_1, stackIn_123_2, stackIn_123_3, stackIn_123_4[stackIn_124_5][var9.ownerPlayer]);
                   } else {
-                    qn.f(param0 + 19, param5 + 31, 40, 4, 0);
+                    SoftwareRaster.f(param0 + 19, param5 + 31, 40, 4, 0);
                   }
                   var10 = var9.e(10) - var9.field_m;
                   if (10 != var9.e(10)) {
@@ -305,8 +305,8 @@ final class vv {
                   }
                   stackIn_133_3 = 4;
                   stackIn_133_4 = op.field_c;
-                  stackIn_134_5 = (!bv.field_w.field_wb) ? 0 : 1;
-                  qn.f(stackIn_130_0, stackIn_130_1, stackIn_131_2, stackIn_133_3, stackIn_133_4[stackIn_134_5][bv.field_w.o(var12.field_O, -1)]);
+                  stackIn_134_5 = (!CipherPacketBuffer.currentBattlefield.teamGame) ? 0 : 1;
+                  SoftwareRaster.f(stackIn_130_0, stackIn_130_1, stackIn_131_2, stackIn_133_3, stackIn_133_4[stackIn_134_5][CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var12.ownerPlayer, -1)]);
                 }
                 if (param4 > 0) {
                   bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
@@ -317,33 +317,33 @@ final class vv {
               if (var12.field_ab == 1) {
                 i.a(false, param5, param0);
               }
-              if (var12.c(false)) {
+              if (var12.hasMovementFlag1(false)) {
                 eu.a(111, param5, param0, var12);
               }
               if (var12.u(8)) {
                 nb.a(param0, param5, (byte) -97, var12);
               }
               if (var12.field_x != null) {
-                if (var12.field_O == ne.field_i &&
-                  !var12.field_s &&
+                if (var12.ownerPlayer == MapTile.field_i &&
+                  !var12.packedFlag4 &&
                   jf.field_C.field_L > 0) {
-                  go.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
-                  go.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
+                  TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
+                  TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
                 }
                 if (var9.a(false) &&
-                  !bv.field_w.c(var9.field_a, -16985, var12.field_O) &&
+                  !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
                   var12.i(-21428)) {
-                  qn.b(param0 + 18, param5 + 30, 42, 6, 11184810);
-                  if (var9.field_a > -1) {
+                  SoftwareRaster.b(param0 + 18, param5 + 30, 42, 6, 11184810);
+                  if (var9.ownerPlayer > -1) {
                     stackIn_82_0 = param0 + 19;
                     stackIn_82_1 = param5 + 31;
                     stackIn_82_2 = 40;
                     stackIn_82_3 = 4;
                     stackIn_82_4 = op.field_c;
-                    stackIn_83_5 = (bv.field_w.field_wb) ? 1 : 0;
-                    qn.f(stackIn_82_0, stackIn_82_1, stackIn_82_2, stackIn_82_3, stackIn_82_4[stackIn_83_5][var9.field_a]);
+                    stackIn_83_5 = (CipherPacketBuffer.currentBattlefield.teamGame) ? 1 : 0;
+                    SoftwareRaster.f(stackIn_82_0, stackIn_82_1, stackIn_82_2, stackIn_82_3, stackIn_82_4[stackIn_83_5][var9.ownerPlayer]);
                   } else {
-                    qn.f(param0 + 19, param5 + 31, 40, 4, 0);
+                    SoftwareRaster.f(param0 + 19, param5 + 31, 40, 4, 0);
                   }
                   var10 = var9.e(10) - var9.field_m;
                   if (10 != var9.e(10)) {
@@ -360,8 +360,8 @@ final class vv {
                   }
                   stackIn_92_3 = 4;
                   stackIn_92_4 = op.field_c;
-                  stackIn_93_5 = (!bv.field_w.field_wb) ? 0 : 1;
-                  qn.f(stackIn_89_0, stackIn_89_1, stackIn_90_2, stackIn_92_3, stackIn_92_4[stackIn_93_5][bv.field_w.o(var12.field_O, -1)]);
+                  stackIn_93_5 = (!CipherPacketBuffer.currentBattlefield.teamGame) ? 0 : 1;
+                  SoftwareRaster.f(stackIn_89_0, stackIn_89_1, stackIn_90_2, stackIn_92_3, stackIn_92_4[stackIn_93_5][CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var12.ownerPlayer, -1)]);
                 }
                 if (param4 > 0) {
                   bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
@@ -374,7 +374,7 @@ final class vv {
         if (var12.field_ab == 1) {
           i.a(false, param5, param0);
         }
-        if (var12.c(false)) {
+        if (var12.hasMovementFlag1(false)) {
           eu.a(111, param5, param0, var12);
         }
         if (var12.u(8)) {
@@ -383,21 +383,21 @@ final class vv {
         if (var12.field_x == null) {
           return;
         }
-        if (var12.field_O != ne.field_i) {
+        if (var12.ownerPlayer != MapTile.field_i) {
           if (var9.a(false) &&
-            !bv.field_w.c(var9.field_a, -16985, var12.field_O) &&
+            !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
             var12.i(-21428)) {
-            qn.b(param0 + 18, param5 + 30, 42, 6, 11184810);
-            if (var9.field_a > -1) {
+            SoftwareRaster.b(param0 + 18, param5 + 30, 42, 6, 11184810);
+            if (var9.ownerPlayer > -1) {
               stackIn_159_0 = param0 + 19;
               stackIn_159_1 = param5 + 31;
               stackIn_159_2 = 40;
               stackIn_159_3 = 4;
               stackIn_159_4 = op.field_c;
-              stackIn_160_5 = (bv.field_w.field_wb) ? 1 : 0;
-              qn.f(stackIn_159_0, stackIn_159_1, stackIn_159_2, stackIn_159_3, stackIn_159_4[stackIn_160_5][var9.field_a]);
+              stackIn_160_5 = (CipherPacketBuffer.currentBattlefield.teamGame) ? 1 : 0;
+              SoftwareRaster.f(stackIn_159_0, stackIn_159_1, stackIn_159_2, stackIn_159_3, stackIn_159_4[stackIn_160_5][var9.ownerPlayer]);
             } else {
-              qn.f(param0 + 19, param5 + 31, 40, 4, 0);
+              SoftwareRaster.f(param0 + 19, param5 + 31, 40, 4, 0);
             }
             var10Lifetime1 = var9.e(10) - var9.field_m;
             if (10 != var9.e(10)) {
@@ -414,29 +414,29 @@ final class vv {
             }
             stackIn_169_3 = 4;
             stackIn_169_4 = op.field_c;
-            stackIn_170_5 = (!bv.field_w.field_wb) ? 0 : 1;
-            qn.f(stackIn_166_0, stackIn_166_1, stackIn_167_2, stackIn_169_3, stackIn_169_4[stackIn_170_5][bv.field_w.o(var12.field_O, -1)]);
+            stackIn_170_5 = (!CipherPacketBuffer.currentBattlefield.teamGame) ? 0 : 1;
+            SoftwareRaster.f(stackIn_166_0, stackIn_166_1, stackIn_167_2, stackIn_169_3, stackIn_169_4[stackIn_170_5][CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var12.ownerPlayer, -1)]);
           }
           if (param4 > 0) {
             bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
           }
           return;
         }
-        if (var12.field_s) {
+        if (var12.packedFlag4) {
           if (var9.a(false) &&
-            !bv.field_w.c(var9.field_a, -16985, var12.field_O) &&
+            !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
             var12.i(-21428)) {
-            qn.b(param0 + 18, param5 + 30, 42, 6, 11184810);
-            if (var9.field_a > -1) {
+            SoftwareRaster.b(param0 + 18, param5 + 30, 42, 6, 11184810);
+            if (var9.ownerPlayer > -1) {
               stackIn_191_0 = param0 + 19;
               stackIn_191_1 = param5 + 31;
               stackIn_191_2 = 40;
               stackIn_191_3 = 4;
               stackIn_191_4 = op.field_c;
-              stackIn_192_5 = (bv.field_w.field_wb) ? 1 : 0;
-              qn.f(stackIn_191_0, stackIn_191_1, stackIn_191_2, stackIn_191_3, stackIn_191_4[stackIn_192_5][var9.field_a]);
+              stackIn_192_5 = (CipherPacketBuffer.currentBattlefield.teamGame) ? 1 : 0;
+              SoftwareRaster.f(stackIn_191_0, stackIn_191_1, stackIn_191_2, stackIn_191_3, stackIn_191_4[stackIn_192_5][var9.ownerPlayer]);
             } else {
-              qn.f(param0 + 19, param5 + 31, 40, 4, 0);
+              SoftwareRaster.f(param0 + 19, param5 + 31, 40, 4, 0);
             }
             var10Lifetime2 = var9.e(10) - var9.field_m;
             if (10 != var9.e(10)) {
@@ -453,8 +453,8 @@ final class vv {
             }
             stackIn_201_3 = 4;
             stackIn_201_4 = op.field_c;
-            stackIn_202_5 = (!bv.field_w.field_wb) ? 0 : 1;
-            qn.f(stackIn_198_0, stackIn_198_1, stackIn_199_2, stackIn_201_3, stackIn_201_4[stackIn_202_5][bv.field_w.o(var12.field_O, -1)]);
+            stackIn_202_5 = (!CipherPacketBuffer.currentBattlefield.teamGame) ? 0 : 1;
+            SoftwareRaster.f(stackIn_198_0, stackIn_198_1, stackIn_199_2, stackIn_201_3, stackIn_201_4[stackIn_202_5][CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var12.ownerPlayer, -1)]);
           }
           if (param4 > 0) {
             bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
@@ -463,19 +463,19 @@ final class vv {
         }
         if (jf.field_C.field_L <= 0) {
           if (var9.a(false) &&
-            !bv.field_w.c(var9.field_a, -16985, var12.field_O) &&
+            !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
             var12.i(-21428)) {
-            qn.b(param0 + 18, param5 + 30, 42, 6, 11184810);
-            if (var9.field_a > -1) {
+            SoftwareRaster.b(param0 + 18, param5 + 30, 42, 6, 11184810);
+            if (var9.ownerPlayer > -1) {
               stackIn_227_0 = param0 + 19;
               stackIn_227_1 = param5 + 31;
               stackIn_227_2 = 40;
               stackIn_227_3 = 4;
               stackIn_227_4 = op.field_c;
-              stackIn_228_5 = (bv.field_w.field_wb) ? 1 : 0;
-              qn.f(stackIn_227_0, stackIn_227_1, stackIn_227_2, stackIn_227_3, stackIn_227_4[stackIn_228_5][var9.field_a]);
+              stackIn_228_5 = (CipherPacketBuffer.currentBattlefield.teamGame) ? 1 : 0;
+              SoftwareRaster.f(stackIn_227_0, stackIn_227_1, stackIn_227_2, stackIn_227_3, stackIn_227_4[stackIn_228_5][var9.ownerPlayer]);
             } else {
-              qn.f(param0 + 19, param5 + 31, 40, 4, 0);
+              SoftwareRaster.f(param0 + 19, param5 + 31, 40, 4, 0);
             }
             var10Lifetime3 = var9.e(10) - var9.field_m;
             if (10 != var9.e(10)) {
@@ -492,16 +492,16 @@ final class vv {
             }
             stackIn_237_3 = 4;
             stackIn_237_4 = op.field_c;
-            stackIn_238_5 = (!bv.field_w.field_wb) ? 0 : 1;
-            qn.f(stackIn_234_0, stackIn_234_1, stackIn_235_2, stackIn_237_3, stackIn_237_4[stackIn_238_5][bv.field_w.o(var12.field_O, -1)]);
+            stackIn_238_5 = (!CipherPacketBuffer.currentBattlefield.teamGame) ? 0 : 1;
+            SoftwareRaster.f(stackIn_234_0, stackIn_234_1, stackIn_235_2, stackIn_237_3, stackIn_237_4[stackIn_238_5][CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var12.ownerPlayer, -1)]);
           }
           if (param4 > 0) {
             bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
           }
           return;
         }
-        go.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
-        go.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
+        TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
+        TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
         if (!var9.a(false)) {
           if (param4 <= 0) {
             return;
@@ -509,7 +509,7 @@ final class vv {
           bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
           return;
         }
-        if (bv.field_w.c(var9.field_a, -16985, var12.field_O)) {
+        if (CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer)) {
           if (param4 <= 0) {
             return;
           }
@@ -522,17 +522,17 @@ final class vv {
           }
           return;
         }
-        qn.b(param0 + 18, param5 + 30, 42, 6, 11184810);
-        if (var9.field_a > -1) {
+        SoftwareRaster.b(param0 + 18, param5 + 30, 42, 6, 11184810);
+        if (var9.ownerPlayer > -1) {
           stackIn_266_0 = param0 + 19;
           stackIn_266_1 = param5 + 31;
           stackIn_266_2 = 40;
           stackIn_266_3 = 4;
           stackIn_266_4 = op.field_c;
-          stackIn_267_5 = (bv.field_w.field_wb) ? 1 : 0;
-          qn.f(stackIn_266_0, stackIn_266_1, stackIn_266_2, stackIn_266_3, stackIn_266_4[stackIn_267_5][var9.field_a]);
+          stackIn_267_5 = (CipherPacketBuffer.currentBattlefield.teamGame) ? 1 : 0;
+          SoftwareRaster.f(stackIn_266_0, stackIn_266_1, stackIn_266_2, stackIn_266_3, stackIn_266_4[stackIn_267_5][var9.ownerPlayer]);
         } else {
-          qn.f(param0 + 19, param5 + 31, 40, 4, 0);
+          SoftwareRaster.f(param0 + 19, param5 + 31, 40, 4, 0);
         }
         var10Lifetime4 = var9.e(10) - var9.field_m;
         if (10 != var9.e(10)) {
@@ -549,8 +549,8 @@ final class vv {
         }
         stackIn_276_3 = 4;
         stackIn_276_4 = op.field_c;
-        stackIn_277_5 = (!bv.field_w.field_wb) ? 0 : 1;
-        qn.f(stackIn_273_0, stackIn_273_1, stackIn_274_2, stackIn_276_3, stackIn_276_4[stackIn_277_5][bv.field_w.o(var12.field_O, -1)]);
+        stackIn_277_5 = (!CipherPacketBuffer.currentBattlefield.teamGame) ? 0 : 1;
+        SoftwareRaster.f(stackIn_273_0, stackIn_273_1, stackIn_274_2, stackIn_276_3, stackIn_276_4[stackIn_277_5][CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var12.ownerPlayer, -1)]);
         if (param4 <= 0) {
           return;
         }

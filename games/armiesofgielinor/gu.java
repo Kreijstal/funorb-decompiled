@@ -13,23 +13,23 @@ final class gu {
         return false;
     }
 
-    final static at a(boolean param0, String param1) {
-        at var2 = null;
+    final static NodeDeque a(boolean param0, String param1) {
+        NodeDeque var2 = null;
         mt var3 = null;
         int var4 = 0;
         int var5 = 0;
-        at stackIn_18_0 = null;
+        NodeDeque stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0) {
             gu.a(102);
           }
-          var2 = new at();
+          var2 = new NodeDeque();
           var3 = new mt(param1);
           while (!var3.a((byte) 16)) {
             var4 = var3.b(-1);
@@ -39,21 +39,21 @@ final class gu {
             if (var4 != 34 &&
               var4 != 39) {
               if (var4 == 40) {
-                var2.a((byte) -119, (tc) (new og(mo.field_j, -1 + var3.field_c)));
+                var2.a((byte) -119, (IntrusiveNode) (new og(mo.field_j, -1 + var3.field_c)));
                 continue;
               }
               if (var4 == 41) {
-                var2.a((byte) -119, (tc) (new og(gm.field_d, -1 + var3.field_c)));
+                var2.a((byte) -119, (IntrusiveNode) (new og(gm.field_d, -1 + var3.field_c)));
                 continue;
               }
               if (44 != var4) {
-                var2.a((byte) -119, (tc) (bi.a((byte) -118, var3)));
+                var2.a((byte) -119, (IntrusiveNode) (bi.a((byte) -118, var3)));
                 continue;
               }
-              var2.a((byte) -119, (tc) (new og(sb.field_d, var3.field_c - 1)));
+              var2.a((byte) -119, (IntrusiveNode) (new og(sb.field_d, var3.field_c - 1)));
               continue;
             }
-            var2.a((byte) -119, (tc) (aw.a((byte) 121, var3)));
+            var2.a((byte) -119, (IntrusiveNode) (aw.a((byte) 121, var3)));
           }
           stackIn_18_0 = var2;
           return stackIn_18_0;
@@ -80,7 +80,7 @@ final class gu {
     }
 
     final static void a(int param0, int param1) {
-        bv var2 = vl.field_n;
+        CipherPacketBuffer var2 = vl.field_n;
         if (param0 < -31) {
           var2.h(32161, param1);
           var2.b(1, 1);

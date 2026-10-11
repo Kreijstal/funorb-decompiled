@@ -42,7 +42,7 @@ final class fq {
         field_a = null;
     }
 
-    final static void a(at param0, String param1, int param2, boolean param3) {
+    final static void a(NodeDeque param0, String param1, int param2, boolean param3) {
         int var7 = 0;
         int var4_int = 0;
         String[] var5 = null;
@@ -58,7 +58,7 @@ final class fq {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = rs.field_n.a(param1) + 8;
           if (var4_int <= 200) {
@@ -72,7 +72,7 @@ final class fq {
           for (var7 = param2; var6.length > var7; var7++) {
             var8 = var6[var7];
             var9 = new sq(var8, param3, param0);
-            param0.a((byte) -119, (tc) (var9));
+            param0.a((byte) -119, (IntrusiveNode) (var9));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,20 +117,20 @@ final class fq {
         vg var2Lifetime1;
         if (param0 == 14663) {
           var2 = new vg();
-          oe.field_Bb.a((byte) -119, (tc) (var2));
+          oe.field_Bb.a((byte) -119, (IntrusiveNode) (var2));
           tq.a(param1, 0);
           return var2;
         }
         fq.a((byte) -111, -125L);
         var2Lifetime1 = new vg();
-        oe.field_Bb.a((byte) -119, (tc) (var2Lifetime1));
+        oe.field_Bb.a((byte) -119, (IntrusiveNode) (var2Lifetime1));
         tq.a(param1, 0);
         return var2Lifetime1;
     }
 
     final static String a(int param0, String param1, boolean param2, String param3) {
         RuntimeException var4 = null;
-        bv var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         hl var7 = null;
         CharSequence var8 = null;
@@ -160,20 +160,20 @@ final class fq {
             stackIn_10_0 = fo.a(4800, uq.field_x, new String[]{param1});
             return stackIn_10_0;
           }
-          var7.d(-124);
+          var7.unlink(-124);
           var7.c((byte) -76);
           vg.field_p = vg.field_p - 1;
           var5 = vl.field_n;
           var5.h(32161, param0);
-          var5.field_q = var5.field_q + 1;
-          var6 = var5.field_q;
+          var5.position = var5.position + 1;
+          var6 = var5.position;
           var5.b(1, 3);
           if (param2) {
             stackIn_13_0 = (String) null;
             return stackIn_13_0;
           }
           var5.b(param3, 13851);
-          var5.e(var5.field_q - var6, 5930);
+          var5.e(var5.position - var6, 5930);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

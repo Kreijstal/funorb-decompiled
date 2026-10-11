@@ -45,7 +45,7 @@ final class g extends RuntimeException {
         je var7 = null;
         je var3 = null;
         try {
-          tl.field_e = ic.a("display_name_changed", (byte) 51, "basic", param1);
+          tl.field_e = GameplayController.a("display_name_changed", (byte) 51, "basic", param1);
           mw.field_E = new mp(0L, br.field_g, h.field_b, wp.field_y);
           sc.field_g = new mp(0L, br.field_g, lm.field_a, jm.field_u);
           su.field_d = new je(0L, (je) null);
@@ -79,7 +79,7 @@ final class g extends RuntimeException {
 
     final static void b(int param0) {
         int var2;
-        var2 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (0 < gk.field_J) {
           gk.field_J = gk.field_J - 1;
         } else {
@@ -117,9 +117,9 @@ final class g extends RuntimeException {
         int var3 = 0;
         dc var4 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4 = (dc) (tp.field_e.e((byte) 115));
+          var4 = (dc) (tp.field_e.first((byte) 115));
           var1 = var4;
           if (var1 == null) {
             return false;

@@ -26,7 +26,7 @@ final class hm {
         }
     }
 
-    hm(vh param0, boolean param1) {
+    hm(PacketBuffer param0, boolean param1) {
         this();
         int discarded$0 = 0;
         try {
@@ -46,7 +46,7 @@ final class hm {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var2_intLifetime1;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != -5) {
             hm.a(-8, 127, -35, 78, 58, -62, -122);
@@ -57,7 +57,7 @@ final class hm {
               var2_intLifetime1 = fm.field_d[param0.field_b];
             } else {
               if (~oh.field_H == ~param0.field_n) {
-                var2_intLifetime1 = ag.field_A[param0.field_b];
+                var2_intLifetime1 = CombatEvent.field_A[param0.field_b];
               } else {
                 var2_intLifetime1 = fm.field_d[param0.field_b];
               }
@@ -66,7 +66,7 @@ final class hm {
             if (!param0.field_f) {
               if (0 == param0.field_a &&
                 param0.field_e == 0) {
-                var2_intLifetime1 = ag.field_A[param0.field_b];
+                var2_intLifetime1 = CombatEvent.field_A[param0.field_b];
               } else {
                 var2_intLifetime1 = fm.field_d[param0.field_b];
               }
@@ -112,11 +112,11 @@ final class hm {
     final int a(int param0) {
         int var4 = 0;
         int var5 = 0;
-        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
-        int var2 = at.field_c.length;
+        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var2 = NodeDeque.field_c.length;
         int var3 = this.field_j + this.field_c;
         for (var4 = param0; var4 < var2; var4++) {
-          var5 = at.field_c[var4];
+          var5 = NodeDeque.field_c[var4];
           var3 = var3 - var5;
           if (0 > var3) {
             return var4;
@@ -125,7 +125,7 @@ final class hm {
         return var2;
     }
 
-    private final int a(vh param0, int param1, boolean param2) {
+    private final int a(PacketBuffer param0, int param1, boolean param2) {
         int stackIn_26_0 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -141,7 +141,7 @@ final class hm {
         int var6Lifetime1;
         int var6Lifetime2;
         int var6Lifetime3;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = param0.k(param1 + 2);
           if (9 < var4_int) {
@@ -171,7 +171,7 @@ final class hm {
             this.field_k = 0;
             this.field_j = 0;
             for (var6Lifetime1 = 0; var6Lifetime1 < var5Lifetime1; var6Lifetime1++) {
-              var7 = at.field_c[var6Lifetime1];
+              var7 = NodeDeque.field_c[var6Lifetime1];
               this.field_j = this.field_j + var7;
             }
           } else {
@@ -196,9 +196,9 @@ final class hm {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        as.field_E.a(param5, -20500, param6, param2, param4);
+        OwnerChangeEvent.field_E.a(param5, -20500, param6, param2, param4);
         if (qd.field_I != null) {
-          qd.field_I.b(param1, param3, param5, -kn.field_z + param1, param5, param0 ^ 6518);
+          qd.field_I.b(param1, param3, param5, -TelefragEvent.field_z + param1, param5, param0 ^ 6518);
         }
         if (param0 != -1) {
           field_i = (String[]) null;

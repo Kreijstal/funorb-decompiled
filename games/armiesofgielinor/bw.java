@@ -3,7 +3,7 @@
  */
 final class bw {
     private long[] field_l;
-    static int[][] field_m;
+    static int[][] unitDefinitions;
     private int field_c;
     private long[] field_k;
     private int field_d;
@@ -18,13 +18,13 @@ final class bw {
 
     final static void d(int param0) {
         int var2;
-        var2 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (rd.field_j.field_u) {
-          if (0 == (1 << rd.field_j.field_q & rd.field_j.field_xb.field_i)) {
-            if (rd.field_j.field_xb.field_i != 0) {
+          if (0 == (1 << rd.field_j.field_q & rd.field_j.battlefield.field_i)) {
+            if (rd.field_j.battlefield.field_i != 0) {
               il.field_t[12] = id.field_c;
             } else {
-              if ((1 << rd.field_j.field_q | rd.field_j.field_hb) != (1 << rd.field_j.field_xb.field_W) - 1) {
+              if ((1 << rd.field_j.field_q | rd.field_j.field_hb) != (1 << rd.field_j.battlefield.playerCount) - 1) {
                 il.field_t[12] = fa.field_e;
               } else {
                 il.field_t[12] = ml.field_Nb;
@@ -34,13 +34,13 @@ final class bw {
             il.field_t[12] = ti.field_a;
           }
         } else {
-          if (0 != (1 << rd.field_j.field_q & rd.field_j.field_xb.field_i)) {
+          if (0 != (1 << rd.field_j.field_q & rd.field_j.battlefield.field_i)) {
             il.field_t[12] = is.field_c;
           } else {
-            if (rd.field_j.field_xb.field_i != 0) {
+            if (rd.field_j.battlefield.field_i != 0) {
               il.field_t[12] = lk.field_s;
             } else {
-              if (-1 + (1 << rd.field_j.field_xb.field_W) != (1 << rd.field_j.field_q | rd.field_j.field_hb)) {
+              if (-1 + (1 << rd.field_j.battlefield.playerCount) != (1 << rd.field_j.field_q | rd.field_j.field_hb)) {
                 il.field_t[12] = db.field_h;
               } else {
                 il.field_t[12] = ji.field_b;
@@ -68,7 +68,7 @@ final class bw {
         int var12 = 0;
         int var13 = 0;
         int var8Lifetime1;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = 0;
           var6 = 8 - ((int)param1 & 7) & 7;
@@ -147,20 +147,20 @@ final class bw {
         wj var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4 = (aj) (oj.field_r.e((byte) 110));
+          var4 = (aj) (GameEvent.field_r.first((byte) 110));
           while (var4 != null) {
             wr.a((byte) -71, var4, param1);
-            var4 = (aj) (oj.field_r.a((byte) 123));
+            var4 = (aj) (GameEvent.field_r.next((byte) 123));
           }
-          var5 = (wj) (lf.field_c.e((byte) 117));
+          var5 = (wj) (lf.field_c.first((byte) 117));
           while (var5 != null) {
             gn.a(param1, var5, 0);
-            var5 = (wj) (lf.field_c.a((byte) 123));
+            var5 = (wj) (lf.field_c.next((byte) 123));
           }
           if (param0 < 120) {
-            field_m = (int[][]) null;
+            unitDefinitions = (int[][]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -172,7 +172,7 @@ final class bw {
 
     final void b(int param0) {
         int var2 = 0;
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var2Lifetime1;
         for (var2 = 0; 32 > var2; var2++) {
           this.field_b[var2] = (byte) 0;
@@ -191,7 +191,7 @@ final class bw {
     final static void a(int param0, int param1, byte param2) {
         au var6 = null;
         au var7 = null;
-        bv var4 = null;
+        CipherPacketBuffer var4 = null;
         if (param1 != oo.field_a) {
           var6 = (au) (qm.field_J.a((byte) -27, (long)oo.field_a));
           var7 = var6;
@@ -206,7 +206,7 @@ final class bw {
           var4.b(true, param1);
         }
         if (param2 != -116) {
-          field_m = (int[][]) null;
+          unitDefinitions = (int[][]) null;
         }
     }
 
@@ -215,7 +215,7 @@ final class bw {
         if (param0 != -28911) {
           return;
         }
-        field_m = (int[][]) null;
+        unitDefinitions = (int[][]) null;
         field_h = null;
     }
 
@@ -237,7 +237,7 @@ final class bw {
         int var3Lifetime1Lifetime1;
         int var3Lifetime1Lifetime2;
         int var3Lifetime1Lifetime3;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
@@ -313,7 +313,7 @@ final class bw {
         int var5 = 0;
         long var6 = 0L;
         int var8 = 0;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_i[this.field_d] = (byte)oe.c((int) this.field_i[this.field_d], 128 >>> rn.a(this.field_c, 7));
           this.field_d = this.field_d + 1;
@@ -368,6 +368,6 @@ final class bw {
 
     static {
         field_f = new int[]{0, 108, 28, 12, 110, 69};
-        field_m = new int[][]{new int[]{0, -1, 1, 6, 5, 5, 1, 1, 50, 0, 512, 0, 19}, new int[]{4, -1, 2, 6, 20, 7, 1, 1, 400, 0, 0, 0, -1}, new int[]{1, -1, 2, 4, 20, 3, 1, 1, 250, 0, 0, 0, -1}, new int[]{2, -1, 3, 6, 7, 3, 2, 3, 125, 0, 512, 0, 19}, new int[]{4, -1, 5, 6, 40, 7, 1, 2, 750, 2, 0, 0, 11}, new int[]{1, -1, 4, 4, 35, 3, 1, 1, 300, 1, 0, 0, -1}, new int[]{1, -1, 4, 6, 30, 3, 1, 1, 400, 0, 6144, 0, 21}, new int[]{5, -1, 5, 7, 5, 3, 1, 1, 200, 0, 1152, 0, -1}, new int[]{1, 0, 1, 6, 10, 5, 1, 1, 100, 0, 0, 0, -1}, new int[]{4, 0, 1, 6, 5, 7, 1, 1, 100, 0, 0, 0, -1}, new int[]{5, 0, 1, 6, 10, 3, 1, 1, 150, 0, 38, 0, 0}, new int[]{3, 0, 3, 3, 20, 3, 3, 5, 250, 0, 0, 0, -1}, new int[]{1, 0, 2, 5, 25, 3, 1, 1, 250, 0, 0, 0, -1}, new int[]{0, 0, 3, 8, 30, 3, 1, 1, 350, 0, 0, 0, -1}, new int[]{2, 0, 4, 9, 25, 5, 1, 3, 300, 0, 0, 3, -1}, new int[]{1, 0, 3, 4, 40, 3, 1, 1, 350, 0, 0, 3, -1}, new int[]{2, 0, 2, 6, 20, 5, 2, 3, 200, 0, 0, 2, -1}, new int[]{5, 0, 4, 6, 20, 3, 1, 1, 300, 0, 1030, 4, 22}, new int[]{4, 0, 5, 8, 40, 7, 1, 3, 800, 1, 0, 5, 11}, new int[]{1, 1, 1, 6, 10, 5, 1, 1, 100, 0, 0, 0, -1}, new int[]{0, 1, 1, 5, 15, 1, 1, 1, 100, 0, 256, 0, 18}, new int[]{5, 1, 1, 6, 10, 3, 1, 1, 150, 0, 8, 0, 2}, new int[]{3, 1, 3, 3, 20, 3, 3, 5, 250, 0, 0, 0, -1}, new int[]{1, 1, 2, 5, 25, 3, 1, 1, 250, 0, 0, 0, -1}, new int[]{1, 1, 4, 4, 50, 3, 1, 1, 450, 1, 0, 0, -1}, new int[]{2, 1, 2, 6, 20, 5, 2, 3, 200, 0, 0, 2, -1}, new int[]{0, 1, 3, 8, 30, 3, 1, 1, 350, 0, 0, 3, -1}, new int[]{0, 1, 3, 3, 10, 1, 1, 1, 100, 0, 4097, 3, 9}, new int[]{4, 1, 4, 6, 30, 7, 1, 3, 600, 0, 0, 4, 11}, new int[]{7, 1, 5, 3, 50, 3, 1, 1, 750, 0, 0, 5, 13}, new int[]{0, 2, 2, 10, 15, 5, 1, 1, 200, 0, 0, 0, -1}, new int[]{0, 2, 1, 8, 10, 5, 1, 1, 150, 0, 0, 0, -1}, new int[]{5, 2, 1, 6, 10, 3, 1, 1, 150, 0, 20, 0, 1}, new int[]{1, 2, 2, 4, 20, 3, 1, 1, 175, 0, 0, 0, -1}, new int[]{1, 2, 3, 4, 10, 3, 1, 1, 250, 0, 1024, 3, -1}, new int[]{1, 2, 4, 4, 40, 5, 1, 1, 400, 1, 0, 0, -1}, new int[]{1, 2, 2, 6, 25, 5, 1, 1, 250, 0, 0, 2, -1}, new int[]{1, 2, 4, 3, 45, 5, 1, 1, 400, 1, 0, 4, -1}, new int[]{4, 2, 3, 10, 20, 7, 1, 1, 450, 0, 0, 0, -1}, new int[]{6, 2, 4, 1, 5, 1, 0, 0, 100, 0, 1025, 4, 8}, new int[]{7, 2, 5, 4, 45, 3, 1, 1, 700, 0, 1, 5, 14}, new int[]{4, 3, 2, 10, 5, 7, 1, 1, 150, 0, 0, 0, -1}, new int[]{0, 3, 1, 5, 15, 3, 1, 1, 150, 0, 0, 0, -1}, new int[]{5, 3, 3, 6, 20, 5, 1, 1, 300, 0, 0, 12, 5}, new int[]{1, 3, 3, 6, 30, 5, 1, 1, 300, 0, 0, 0, -1}, new int[]{0, 3, 3, 6, 8, 3, 1, 1, 50, 0, 0, 12, -1}, new int[]{0, 3, 2, 8, 20, 5, 1, 1, 250, 0, 0, 0, -1}, new int[]{1, 3, 2, 6, 25, 5, 1, 1, 250, 0, 0, 0, -1}, new int[]{2, 3, 2, 6, 25, 5, 2, 4, 300, 0, 0, 8, -1}, new int[]{1, 3, 4, 6, 40, 5, 1, 1, 400, 0, 0, 16, -1}, new int[]{0, 3, 4, 8, 35, 5, 1, 1, 400, 0, 0, 0, -1}, new int[]{1, 3, 5, 6, 25, 3, 1, 1, 750, 0, 1, 20, 7}, new int[]{1, 4, 1, 5, 5, 5, 1, 1, 50, 0, 0, 0, -1}, new int[]{5, 4, 1, 5, 10, 5, 1, 1, 150, 0, 0, 0, 3}, new int[]{1, 4, 1, 3, 20, 3, 1, 1, 175, 1, 0, 0, -1}, new int[]{1, 4, 2, 4, 25, 3, 1, 1, 225, 1, 0, 0, -1}, new int[]{1, 4, 4, 4, 30, 3, 1, 1, 300, 1, 4096, 16, 20}, new int[]{1, 4, 2, 6, 15, 4, 1, 1, 150, 0, 2048, 12, 10}, new int[]{5, 4, 3, 3, 20, 3, 1, 1, 300, 1, 0, 12, 16}, new int[]{1, 4, 3, 3, 40, 5, 1, 1, 500, 1, 0, 0, 4}, new int[]{1, 4, 4, 5, 30, 5, 1, 1, 275, 0, 0, 0, -1}, new int[]{1, 4, 3, 7, 20, 3, 1, 1, 200, 1, 0, 12, -1}, new int[]{7, 4, 5, 3, 55, 5, 1, 1, 800, 2, 0, 20, 12}, new int[]{5, 5, 4, 3, 50, 4, 1, 1, 600, 2, 0, 16, 17}, new int[]{0, 5, 1, 6, 15, 3, 1, 1, 150, 0, 0, 0, -1}, new int[]{1, 5, 3, 3, 35, 2, 1, 1, 300, 0, 320, 0, 18}, new int[]{4, 5, 2, 7, 10, 7, 1, 1, 200, 0, 65, 8, 6}, new int[]{2, 5, 2, 6, 20, 7, 2, 3, 200, 0, 0, 0, -1}, new int[]{1, 5, 1, 6, 10, 3, 1, 1, 100, 0, 0, 0, -1}, new int[]{1, 5, 2, 6, 25, 5, 1, 1, 250, 0, 0, 8, -1}, new int[]{0, 5, 1, 3, 20, 3, 1, 1, 200, 0, 4096, 0, 20}, new int[]{3, 5, 3, 4, 30, 5, 3, 5, 450, 0, 64, 12, 6}, new int[]{5, 5, 4, 6, 25, 4, 1, 1, 350, 1, 1, 0, -1}, new int[]{7, 5, 5, 3, 45, 5, 1, 1, 700, 1, 1, 20, 15}, new int[]{4, -1, 5, 6, 99, 7, 1, 3, 2000, 2, 0, 0, 11}, new int[]{1, 2, 3, 4, 20, 3, 2, 7, 250, 0, 1024, 3, -1}, new int[]{-1}, new int[]{-1}, new int[]{-1}, new int[]{-1}, new int[]{-1}, new int[]{4, -1, 5, 6, 40, 7, 1, 2, 750, 2, 0, 0, 11}, new int[]{3, 0, 3, 3, 30, 3, 3, 5, 250, 2, 0, 0, -1}, new int[]{1, 2, 2, 6, 40, 5, 1, 1, 250, 2, 0, 2, -1}, new int[]{1, 0, 2, 6, 45, 5, 1, 1, 250, 2, 0, 0, -1}, new int[]{2, 0, 2, 6, 30, 5, 2, 3, 200, 2, 0, 2, -1}, new int[]{1, 2, 2, 6, 45, 5, 1, 1, 250, 2, 0, 2, -1}, new int[]{1, 0, 4, 5, 30, 5, 1, 1, 275, 2, 0, 0, -1}, new int[]{5, 1, 1, 6, 30, 3, 1, 1, 150, 2, 8, 0, 2}};
+        unitDefinitions = new int[][]{new int[]{0, -1, 1, 6, 5, 5, 1, 1, 50, 0, 512, 0, 19}, new int[]{4, -1, 2, 6, 20, 7, 1, 1, 400, 0, 0, 0, -1}, new int[]{1, -1, 2, 4, 20, 3, 1, 1, 250, 0, 0, 0, -1}, new int[]{2, -1, 3, 6, 7, 3, 2, 3, 125, 0, 512, 0, 19}, new int[]{4, -1, 5, 6, 40, 7, 1, 2, 750, 2, 0, 0, 11}, new int[]{1, -1, 4, 4, 35, 3, 1, 1, 300, 1, 0, 0, -1}, new int[]{1, -1, 4, 6, 30, 3, 1, 1, 400, 0, 6144, 0, 21}, new int[]{5, -1, 5, 7, 5, 3, 1, 1, 200, 0, 1152, 0, -1}, new int[]{1, 0, 1, 6, 10, 5, 1, 1, 100, 0, 0, 0, -1}, new int[]{4, 0, 1, 6, 5, 7, 1, 1, 100, 0, 0, 0, -1}, new int[]{5, 0, 1, 6, 10, 3, 1, 1, 150, 0, 38, 0, 0}, new int[]{3, 0, 3, 3, 20, 3, 3, 5, 250, 0, 0, 0, -1}, new int[]{1, 0, 2, 5, 25, 3, 1, 1, 250, 0, 0, 0, -1}, new int[]{0, 0, 3, 8, 30, 3, 1, 1, 350, 0, 0, 0, -1}, new int[]{2, 0, 4, 9, 25, 5, 1, 3, 300, 0, 0, 3, -1}, new int[]{1, 0, 3, 4, 40, 3, 1, 1, 350, 0, 0, 3, -1}, new int[]{2, 0, 2, 6, 20, 5, 2, 3, 200, 0, 0, 2, -1}, new int[]{5, 0, 4, 6, 20, 3, 1, 1, 300, 0, 1030, 4, 22}, new int[]{4, 0, 5, 8, 40, 7, 1, 3, 800, 1, 0, 5, 11}, new int[]{1, 1, 1, 6, 10, 5, 1, 1, 100, 0, 0, 0, -1}, new int[]{0, 1, 1, 5, 15, 1, 1, 1, 100, 0, 256, 0, 18}, new int[]{5, 1, 1, 6, 10, 3, 1, 1, 150, 0, 8, 0, 2}, new int[]{3, 1, 3, 3, 20, 3, 3, 5, 250, 0, 0, 0, -1}, new int[]{1, 1, 2, 5, 25, 3, 1, 1, 250, 0, 0, 0, -1}, new int[]{1, 1, 4, 4, 50, 3, 1, 1, 450, 1, 0, 0, -1}, new int[]{2, 1, 2, 6, 20, 5, 2, 3, 200, 0, 0, 2, -1}, new int[]{0, 1, 3, 8, 30, 3, 1, 1, 350, 0, 0, 3, -1}, new int[]{0, 1, 3, 3, 10, 1, 1, 1, 100, 0, 4097, 3, 9}, new int[]{4, 1, 4, 6, 30, 7, 1, 3, 600, 0, 0, 4, 11}, new int[]{7, 1, 5, 3, 50, 3, 1, 1, 750, 0, 0, 5, 13}, new int[]{0, 2, 2, 10, 15, 5, 1, 1, 200, 0, 0, 0, -1}, new int[]{0, 2, 1, 8, 10, 5, 1, 1, 150, 0, 0, 0, -1}, new int[]{5, 2, 1, 6, 10, 3, 1, 1, 150, 0, 20, 0, 1}, new int[]{1, 2, 2, 4, 20, 3, 1, 1, 175, 0, 0, 0, -1}, new int[]{1, 2, 3, 4, 10, 3, 1, 1, 250, 0, 1024, 3, -1}, new int[]{1, 2, 4, 4, 40, 5, 1, 1, 400, 1, 0, 0, -1}, new int[]{1, 2, 2, 6, 25, 5, 1, 1, 250, 0, 0, 2, -1}, new int[]{1, 2, 4, 3, 45, 5, 1, 1, 400, 1, 0, 4, -1}, new int[]{4, 2, 3, 10, 20, 7, 1, 1, 450, 0, 0, 0, -1}, new int[]{6, 2, 4, 1, 5, 1, 0, 0, 100, 0, 1025, 4, 8}, new int[]{7, 2, 5, 4, 45, 3, 1, 1, 700, 0, 1, 5, 14}, new int[]{4, 3, 2, 10, 5, 7, 1, 1, 150, 0, 0, 0, -1}, new int[]{0, 3, 1, 5, 15, 3, 1, 1, 150, 0, 0, 0, -1}, new int[]{5, 3, 3, 6, 20, 5, 1, 1, 300, 0, 0, 12, 5}, new int[]{1, 3, 3, 6, 30, 5, 1, 1, 300, 0, 0, 0, -1}, new int[]{0, 3, 3, 6, 8, 3, 1, 1, 50, 0, 0, 12, -1}, new int[]{0, 3, 2, 8, 20, 5, 1, 1, 250, 0, 0, 0, -1}, new int[]{1, 3, 2, 6, 25, 5, 1, 1, 250, 0, 0, 0, -1}, new int[]{2, 3, 2, 6, 25, 5, 2, 4, 300, 0, 0, 8, -1}, new int[]{1, 3, 4, 6, 40, 5, 1, 1, 400, 0, 0, 16, -1}, new int[]{0, 3, 4, 8, 35, 5, 1, 1, 400, 0, 0, 0, -1}, new int[]{1, 3, 5, 6, 25, 3, 1, 1, 750, 0, 1, 20, 7}, new int[]{1, 4, 1, 5, 5, 5, 1, 1, 50, 0, 0, 0, -1}, new int[]{5, 4, 1, 5, 10, 5, 1, 1, 150, 0, 0, 0, 3}, new int[]{1, 4, 1, 3, 20, 3, 1, 1, 175, 1, 0, 0, -1}, new int[]{1, 4, 2, 4, 25, 3, 1, 1, 225, 1, 0, 0, -1}, new int[]{1, 4, 4, 4, 30, 3, 1, 1, 300, 1, 4096, 16, 20}, new int[]{1, 4, 2, 6, 15, 4, 1, 1, 150, 0, 2048, 12, 10}, new int[]{5, 4, 3, 3, 20, 3, 1, 1, 300, 1, 0, 12, 16}, new int[]{1, 4, 3, 3, 40, 5, 1, 1, 500, 1, 0, 0, 4}, new int[]{1, 4, 4, 5, 30, 5, 1, 1, 275, 0, 0, 0, -1}, new int[]{1, 4, 3, 7, 20, 3, 1, 1, 200, 1, 0, 12, -1}, new int[]{7, 4, 5, 3, 55, 5, 1, 1, 800, 2, 0, 20, 12}, new int[]{5, 5, 4, 3, 50, 4, 1, 1, 600, 2, 0, 16, 17}, new int[]{0, 5, 1, 6, 15, 3, 1, 1, 150, 0, 0, 0, -1}, new int[]{1, 5, 3, 3, 35, 2, 1, 1, 300, 0, 320, 0, 18}, new int[]{4, 5, 2, 7, 10, 7, 1, 1, 200, 0, 65, 8, 6}, new int[]{2, 5, 2, 6, 20, 7, 2, 3, 200, 0, 0, 0, -1}, new int[]{1, 5, 1, 6, 10, 3, 1, 1, 100, 0, 0, 0, -1}, new int[]{1, 5, 2, 6, 25, 5, 1, 1, 250, 0, 0, 8, -1}, new int[]{0, 5, 1, 3, 20, 3, 1, 1, 200, 0, 4096, 0, 20}, new int[]{3, 5, 3, 4, 30, 5, 3, 5, 450, 0, 64, 12, 6}, new int[]{5, 5, 4, 6, 25, 4, 1, 1, 350, 1, 1, 0, -1}, new int[]{7, 5, 5, 3, 45, 5, 1, 1, 700, 1, 1, 20, 15}, new int[]{4, -1, 5, 6, 99, 7, 1, 3, 2000, 2, 0, 0, 11}, new int[]{1, 2, 3, 4, 20, 3, 2, 7, 250, 0, 1024, 3, -1}, new int[]{-1}, new int[]{-1}, new int[]{-1}, new int[]{-1}, new int[]{-1}, new int[]{4, -1, 5, 6, 40, 7, 1, 2, 750, 2, 0, 0, 11}, new int[]{3, 0, 3, 3, 30, 3, 3, 5, 250, 2, 0, 0, -1}, new int[]{1, 2, 2, 6, 40, 5, 1, 1, 250, 2, 0, 2, -1}, new int[]{1, 0, 2, 6, 45, 5, 1, 1, 250, 2, 0, 0, -1}, new int[]{2, 0, 2, 6, 30, 5, 2, 3, 200, 2, 0, 2, -1}, new int[]{1, 2, 2, 6, 45, 5, 1, 1, 250, 2, 0, 2, -1}, new int[]{1, 0, 4, 5, 30, 5, 1, 1, 275, 2, 0, 0, -1}, new int[]{5, 1, 1, 6, 30, 3, 1, 1, 150, 2, 8, 0, 2}};
     }
 }

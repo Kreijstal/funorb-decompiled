@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ms extends tc {
+class ms extends IntrusiveNode {
     static String field_m;
     ms field_l;
     static int field_t;
@@ -48,7 +48,7 @@ class ms extends tc {
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = 0;
           while (true) {
@@ -115,7 +115,7 @@ class ms extends tc {
     final static void e(int param0) {
         int var1;
         int var2;
-        var2 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 >= 111) {
           ac.field_n = false;
           aw.field_h = null;
@@ -130,7 +130,7 @@ class ms extends tc {
             } else {
               aw.field_h = hh.field_a;
             }
-            aw.field_h = pj.a(593277313, new CharSequence[]{(CharSequence) ((Object) aw.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) c.field_a)});
+            aw.field_h = TrinketUseEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) aw.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) c.field_a)});
           }
           qc.field_a.b(true);
           qf.a(56);
@@ -149,7 +149,7 @@ class ms extends tc {
             } else {
               aw.field_h = hh.field_a;
             }
-            aw.field_h = pj.a(593277313, new CharSequence[]{(CharSequence) ((Object) aw.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) c.field_a)});
+            aw.field_h = TrinketUseEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) aw.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) c.field_a)});
           }
           qc.field_a.b(true);
           qf.a(56);

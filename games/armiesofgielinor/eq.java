@@ -14,7 +14,7 @@ final class eq extends af {
     static String field_j;
     private String field_f;
 
-    final void a(vh param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           param0.a(this.field_f, 413740432);
           param0.a(-33, this.field_d);
@@ -36,7 +36,7 @@ final class eq extends af {
         int var9 = 0;
         int var10 = 0;
         int var12 = 0;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 <= 125) {
             field_g = (String) null;
@@ -119,7 +119,7 @@ final class eq extends af {
         int var9 = 0;
         int var10 = 0;
         int var12 = 0;
-        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 <= 125) {
             field_g = (String) null;

@@ -8,7 +8,7 @@ final class up implements lv {
     private int field_a;
     static String[][][] field_g;
     static String field_f;
-    private ha field_d;
+    private Battlefield field_d;
 
     public static void d(int param0) {
         field_f = null;
@@ -32,7 +32,7 @@ final class up implements lv {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = param2.length();
           param2.setLength(param1);
@@ -66,7 +66,7 @@ final class up implements lv {
         return "Defeat: Total Portal Loss";
     }
 
-    final static String a(bv param0, int param1, byte param2) {
+    final static String a(CipherPacketBuffer param0, int param1, byte param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String stackIn_2_0 = null;
@@ -118,7 +118,7 @@ final class up implements lv {
         return stackIn_6_0;
     }
 
-    up(int param0, ha param1) {
+    up(int param0, Battlefield param1) {
         try {
           this.field_a = param0;
           this.field_d = param1;

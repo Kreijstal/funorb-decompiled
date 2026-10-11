@@ -9,7 +9,7 @@ abstract class hs extends kb implements gw {
     static String field_I;
     static fp field_H;
     static int[] field_G;
-    static wk[] field_F;
+    static RgbSprite[] field_F;
     static String[] field_E;
 
     void a(int param0, int param1, int param2, kb param3) {
@@ -23,7 +23,7 @@ abstract class hs extends kb implements gw {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           super.a(param0 ^ 0, param1, param2, param3);
           if (null == this.field_C) {
@@ -71,7 +71,7 @@ abstract class hs extends kb implements gw {
           if (param1 != 235) {
             hs.a(124);
           }
-          var3 = js.a(mb.field_B, param0, param2);
+          var3 = js.a(SummonEvent.field_B, param0, param2);
           if (var3 != null) {
             var3.field_B = null;
           }
@@ -97,14 +97,14 @@ abstract class hs extends kb implements gw {
         }
     }
 
-    final static void a(boolean param0, boolean param1, jd param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(boolean param0, boolean param1, Unit param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_35_0 = 0;
         int stackIn_44_0 = 0;
-        wk[] stackIn_54_0 = null;
+        RgbSprite[] stackIn_54_0 = null;
         int[] stackIn_54_1 = null;
         int stackIn_55_2 = 0;
         int stackIn_71_0 = 0;
-        jd stackIn_82_0 = null;
+        Unit stackIn_82_0 = null;
         boolean stackIn_83_1 = false;
         int stackIn_95_0 = 0;
         int stackIn_110_0 = 0;
@@ -124,47 +124,47 @@ abstract class hs extends kb implements gw {
         int var16 = 0;
         int var17 = 0;
         int var18_int = 0;
-        ne var18 = null;
+        MapTile var18 = null;
         int var19 = 0;
         int var20 = 0;
         String var21 = null;
         int var17Lifetime1;
         int var17Lifetime2;
         int var19Lifetime1;
-        var20 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           cf.field_t.b(param4 + 2, param7 + param6 - 73);
           fe.b(param4 + 0, -76 + param6 + param7, 309, 71, io.field_m, nd.field_b, 0, 0);
-          qn.b(param4 + 7, param7 - 70 + param6, 25, 25, 0, 128);
-          qn.b(37 + param4, param7 - 70 + param6, 265, 25, 0, 128);
+          SoftwareRaster.b(param4 + 7, param7 - 70 + param6, 25, 25, 0, 128);
+          SoftwareRaster.b(37 + param4, param7 - 70 + param6, 265, 25, 0, 128);
           var21 = param2.q((byte) 67);
           var8 = var21.toLowerCase();
-          qn.f(param4 + 37, param7 - 70 + param6, 245 + param4, param6 + (param7 - 45));
+          SoftwareRaster.f(param4 + 37, param7 - 70 + param6, 245 + param4, param6 + (param7 - 45));
           fe.a(var8, -param3 + (param4 + 42), param6 - 43 + param7, 16777215, true);
-          qn.a();
-          fe.c(param2.field_Y + param2.field_A + "/" + param2.field_t, param4 + 272, param6 - (42 - param7), 16777215, param1);
+          SoftwareRaster.a();
+          fe.c(param2.strength + param2.field_A + "/" + param2.maximumStrength, param4 + 272, param6 - (42 - param7), 16777215, param1);
           ro.field_rb[param2.g(0)].a(param4 + 9, param7 - 66 + param6);
           var9 = param2.l(-27014);
-          qn.b(59 + param4, param7 - 41 + param6, 30, 30, 0, 128);
+          SoftwareRaster.b(59 + param4, param7 - 41 + param6, 30, 30, 0, 128);
           cp.field_e[eb.a((byte) -120, ~var9 & 3)].a(param4 + 62, param7 - (-param6 + 41));
-          var10 = param2.field_N;
+          var10 = param2.unitType;
           if (var10 == 34 &&
-            param2.field_W) {
+            param2.packedFlag8) {
             var10 = 75;
           }
-          var11 = bw.field_m[var10][6];
-          var12 = bw.field_m[var10][7];
-          if (param2.field_W &&
-            34 == param2.field_N) {
+          var11 = bw.unitDefinitions[var10][6];
+          var12 = bw.unitDefinitions[var10][7];
+          if (param2.packedFlag8 &&
+            34 == param2.unitType) {
             var12 = 7;
             var11 = 2;
             if (param2.j(20640) == 3) {
               var12 = var12 + param2.d(1, -105);
             }
           }
-          if ((param2.field_N == 81 ||
-            param2.field_N == 4 ||
-            74 == param2.field_N) &&
+          if ((param2.unitType == 81 ||
+            param2.unitType == 4 ||
+            74 == param2.unitType) &&
             param2.j(20640) == 3) {
             var12 = var12 + param2.d(1, 96);
           } else if (param2.g(0) == 3 &&
@@ -177,20 +177,20 @@ abstract class hs extends kb implements gw {
             }
           }
           if (var11 != var12) {
-            qn.b(param4 + 92, param7 - 41 + param6, 39, 30, 0, 128);
+            SoftwareRaster.b(param4 + 92, param7 - 41 + param6, 39, 30, 0, 128);
             fe.c(fo.a(4800, td.field_a, new String[]{Integer.toString(var11), Integer.toString(var12)}), param4 + 111, param7 - 41 + (param6 + 30), 16777215, true);
           } else {
-            qn.b(96 + param4, -41 - (-param6 - param7), 30, 30, 0, 128);
+            SoftwareRaster.b(96 + param4, -41 - (-param6 - param7), 30, 30, 0, 128);
             fe.c(Integer.toString(var11), param4 + 111, -41 - (-param6 - (param7 + 30)), 16777215, true);
           }
           var13 = 0;
-          qn.a(307 + param4 - 20, param7 - 26 + param6, 17, 0, 128);
-          var14 = bw.field_m[param2.field_N][12];
+          SoftwareRaster.a(307 + param4 - 20, param7 - 26 + param6, 17, 0, 128);
+          var14 = bw.unitDefinitions[param2.unitType][12];
           if (var14 > -1) {
             if (var14 < lb.field_e.length) {
               lb.field_e[var14].a(-35 + (308 + param4), -42 + param6 + param7);
             } else {
-              qn.a(-35 + (param4 + 308), param7 + param6 - 42, 25, (int)(Math.random() * 16777215.0), 128);
+              SoftwareRaster.a(-35 + (param4 + 308), param7 + param6 - 42, 25, (int)(Math.random() * 16777215.0), 128);
             }
           }
           var15 = eb.a((byte) -104, var9 >> 2);
@@ -201,7 +201,7 @@ abstract class hs extends kb implements gw {
             stackIn_35_0 = 1;
           }
           var16 = stackIn_35_0 + (var15 >> 2);
-          qn.b(param4 + 284 - 150, -41 + param6 + param7, 130, 30 * var16, 0, 128);
+          SoftwareRaster.b(param4 + 284 - 150, -41 + param6 + param7, 130, 30 * var16, 0, 128);
           for (var17 = 5; 1 < var17; var17--) {
             if ((var9 & 1 << var17) != 0) {
               cp.field_e[var17 + 1].a(-(30 * (3 & var13)) + 235 + param4, (var13 >> 2) * 30 + (param7 - 41 + param6));
@@ -237,22 +237,22 @@ abstract class hs extends kb implements gw {
             } else {
               stackIn_55_2 = 2;
             }
-            ((wk) (Object) stackIn_54_0[stackIn_54_1[stackIn_55_2]]).h(235 + param4 - (var13 & 3) * 30, param7 + (-36 + param6) + 30 * (var13 >> 2));
+            ((RgbSprite) (Object) stackIn_54_0[stackIn_54_1[stackIn_55_2]]).h(235 + param4 - (var13 & 3) * 30, param7 + (-36 + param6) + 30 * (var13 >> 2));
             km.field_h[0].h(-((var13 & 3) * 30) + (233 + param4), (var13 >> 2) * 30 + param7 - (-param6 + 37));
             var13++;
           }
-          if (param2.field_C) {
+          if (param2.packedFlag64) {
             lf.field_h[133].h(-((3 & var13) * 30) + 235 + param4, param6 - (36 - param7 - 30 * (var13 >> 2)));
             km.field_h[0].h(param4 + 233 - 30 * (3 & var13), -37 + (param6 + param7) + (var13 >> 2) * 30);
             var13++;
           }
-          if (param2.field_bb) {
-            lf.field_h[122 + bw.field_m[param2.field_N][2]].h(param4 + (235 - (var13 & 3) * 30), param7 - 36 - (-param6 - (var13 >> 2) * 30));
+          if (param2.packedFlag256) {
+            lf.field_h[122 + bw.unitDefinitions[param2.unitType][2]].h(param4 + (235 - (var13 & 3) * 30), param7 - 36 - (-param6 - (var13 >> 2) * 30));
             km.field_h[0].h(param4 + 233 - 30 * (var13 & 3), param7 - 37 - (-param6 - (var13 >> 2) * 30));
             var13++;
           }
-          if (param2.field_F) {
-            lf.field_h[j.field_j[td.a(param2.field_N, (byte) -125)]].h(-((3 & var13) * 30) + 235 + param4, 30 * (var13 >> 2) + param7 + param6 - 36);
+          if (param2.packedFlag32) {
+            lf.field_h[j.field_j[td.a(param2.unitType, (byte) -125)]].h(-((3 & var13) * 30) + 235 + param4, 30 * (var13 >> 2) + param7 + param6 - 36);
             km.field_h[0].h(-((var13 & 3) * 30) + (param4 + 233), param6 - 37 + (param7 + (var13 >> 2) * 30));
             var13++;
           }
@@ -265,28 +265,28 @@ abstract class hs extends kb implements gw {
           } else {
             stackIn_71_0 = 0;
           }
-          L22: {
+          regionExit1: {
             var17Lifetime2 = stackIn_71_0;
-            if (param2.field_N == 39) {
-              if (!param2.field_s &&
-                param2.field_B != 0) {
+            if (param2.unitType == 39) {
+              if (!param2.packedFlag4 &&
+                param2.packedLowFlags != 0) {
                 lw.field_ob.g(11 + param4, param6 + (-36 + param7));
                 ii.field_a[2].g(11 + param4, -36 + (param6 + param7));
                 if ((var17Lifetime2 != 0)) {
                   lw.field_ob.f(11 + param4, param7 - (-param6 + 36), 128);
                 }
-                break L22;
+                break regionExit1;
               }
               lw.field_ob.g(param4 + 11, param7 + param6 - 36, 128);
               ii.field_a[2].g(param4 + 11, param7 + param6 - 36, 128);
             } else {
-              if (param2.field_N != 72) {
-                if (param2.field_N == 17) {
-                  stackIn_82_0 = (jd) (param2);
+              if (param2.unitType != 72) {
+                if (param2.unitType == 17) {
+                  stackIn_82_0 = (Unit) (param2);
                   stackIn_83_1 = !(param1);
-                  if (!((jd) (Object) stackIn_82_0).c(stackIn_83_1)) {
-                    if (!param2.field_s &&
-                      param2.field_B != 0) {
+                  if (!((Unit) (Object) stackIn_82_0).hasMovementFlag1(stackIn_83_1)) {
+                    if (!param2.packedFlag4 &&
+                      param2.packedLowFlags != 0) {
                       lw.field_ob.g(11 + param4, param7 - 36 + param6);
                       ii.field_a[1].g(param4 + 11, param7 + param6 - 36);
                       if ((var17Lifetime2 != 0)) {
@@ -296,16 +296,16 @@ abstract class hs extends kb implements gw {
                       lw.field_ob.g(param4 + 11, param6 - 36 + param7, 128);
                       ii.field_a[1].g(11 + param4, param6 - 36 + param7, 128);
                     }
-                    break L22;
+                    break regionExit1;
                   }
                 }
-                if (param2.field_N == 7 &&
-                  !param2.field_W) {
-                  var18_int = param2.field_l.field_Eb[param2.field_J + param2.field_w * param2.field_l.field_v].field_h;
+                if (param2.unitType == 7 &&
+                  !param2.packedFlag8) {
+                  var18_int = param2.battlefield.tiles[param2.tileX + param2.tileY * param2.battlefield.mapWidth].terrainType;
                   stackIn_95_0 = (0 == var18_int) ? 0 : 1;
                   var19 = stackIn_95_0;
-                  if (!param2.field_s &&
-                    param2.field_B != 0 &&
+                  if (!param2.packedFlag4 &&
+                    param2.packedLowFlags != 0 &&
                     var19 == 0) {
                     lw.field_ob.g(param4 + 11, param7 + (param6 - 36));
                     ii.field_a[4].g(param4 + 11, param7 + param6 - 36);
@@ -316,39 +316,39 @@ abstract class hs extends kb implements gw {
                     lw.field_ob.g(11 + param4, param6 + (-36 + param7), 128);
                     ii.field_a[4].g(11 + param4, -36 + param6 + param7, 128);
                   }
-                  break L22;
+                  break regionExit1;
                 }
-                if (param2.field_N == 34 &&
-                  !param2.field_W) {
-                  var18 = param2.field_l.field_Eb[param2.field_w * param2.field_l.field_v + param2.field_J];
+                if (param2.unitType == 34 &&
+                  !param2.packedFlag8) {
+                  var18 = param2.battlefield.tiles[param2.tileY * param2.battlefield.mapWidth + param2.tileX];
                   stackIn_110_0 = (var18.f(19725)) ? 0 : 1;
                   var19Lifetime1 = stackIn_110_0;
-                  if (!param2.field_s &&
-                    param2.field_B != 0 &&
+                  if (!param2.packedFlag4 &&
+                    param2.packedLowFlags != 0 &&
                     var19Lifetime1 == 0) {
                     lw.field_ob.g(param4 + 11, -36 + (param6 + param7));
                     ii.field_a[0].g(11 + param4, -36 + param6 + param7);
                     if (var17Lifetime2 != 0) {
                       lw.field_ob.f(param4 + 11, -36 + param6 + param7, 128);
-                      break L22;
+                      break regionExit1;
                     }
                     km.field_h[1].g(7 + param4, -40 + (param6 + param7));
                     return;
                   }
                   lw.field_ob.g(11 + param4, param6 - 36 + param7, 128);
                   ii.field_a[0].g(11 + param4, param7 - 36 + param6, 128);
-                  break L22;
+                  break regionExit1;
                 }
                 lw.field_ob.g(11 + param4, -36 - (-param6 - param7), 128);
               } else {
-                if (!param2.field_s &&
-                  0 != param2.field_B) {
+                if (!param2.packedFlag4 &&
+                  0 != param2.packedLowFlags) {
                   lw.field_ob.g(11 + param4, param7 - (-param6 + 36));
                   ii.field_a[3].g(param4 + 11, param6 - (36 - param7));
                   if ((var17Lifetime2 != 0)) {
                     lw.field_ob.f(param4 + 11, param6 + (-36 + param7), 128);
                   }
-                  break L22;
+                  break regionExit1;
                 }
                 lw.field_ob.g(11 + param4, param6 + (-36 + param7), 128);
                 ii.field_a[3].g(param4 + 11, param7 - (-param6 + 36), 128);
@@ -379,7 +379,7 @@ abstract class hs extends kb implements gw {
         int var7;
         kb var8;
         int var6;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = 0;
         if (param0 != -31989) {
           var8 = (kb) null;
@@ -409,7 +409,7 @@ abstract class hs extends kb implements gw {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null == this.field_C) {
             return false;
@@ -446,7 +446,7 @@ abstract class hs extends kb implements gw {
         int var5 = 0;
         kb var6;
         int var7;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param3 == 0 &&
           null != this.field_k) {
           this.field_k.a((kb) (this), param0, -121, true, param1);
@@ -477,7 +477,7 @@ abstract class hs extends kb implements gw {
         RuntimeException decompiledCaughtException = null;
         kb var6Lifetime1;
         kb var6Lifetime2;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_C == null) {
             return false;
@@ -574,7 +574,7 @@ abstract class hs extends kb implements gw {
         RuntimeException decompiledCaughtException = null;
         kb var6Lifetime1;
         kb var6Lifetime2;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null == this.field_C) {
             return false;
@@ -627,7 +627,7 @@ abstract class hs extends kb implements gw {
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_C == null) {
             return false;
@@ -688,7 +688,7 @@ abstract class hs extends kb implements gw {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_C == null) {
             return;
@@ -735,7 +735,7 @@ abstract class hs extends kb implements gw {
           return;
         }
         int var2 = 0 % ((43 - param0) / 60);
-        param1 = uc.field_d[param1][8];
+        param1 = uc.spellDefinitions[param1][8];
         if (param1 < 0) {
           return;
         }
@@ -752,7 +752,7 @@ abstract class hs extends kb implements gw {
         kb var4;
         int var6;
         String var5;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null == this.field_C) {
           return null;
         }
@@ -790,7 +790,7 @@ abstract class hs extends kb implements gw {
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_C == null) {
             return false;
@@ -840,7 +840,7 @@ abstract class hs extends kb implements gw {
         kb var4;
         int var5;
         kb[] var6;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 1) {
           field_D = (String) null;
         }
@@ -892,7 +892,7 @@ abstract class hs extends kb implements gw {
         kb var4;
         int var5;
         kb[] var6;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_C == null) {
           return null;
         }
@@ -923,7 +923,7 @@ abstract class hs extends kb implements gw {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7_ref = null;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_C == null) {
             return;
@@ -963,7 +963,7 @@ abstract class hs extends kb implements gw {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 11) {
             return false;

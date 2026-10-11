@@ -1,0 +1,231 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SummonEvent extends GameEvent {
+    int field_D;
+    private int field_I;
+    private boolean field_E;
+    static je field_F;
+    int field_z;
+    static long field_G;
+    static kl field_B;
+    int field_H;
+    private int field_A;
+    private boolean field_y;
+
+    final static rn a(String param0, int param1) {
+        int var3 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var4 = 0;
+        int var5 = 0;
+        rn stackIn_12_0 = null;
+        rn stackIn_14_0 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        try {
+          var2_int = param0.length();
+          for (var3 = 0; var3 < var2_int; var3++) {
+            var4 = param0.charAt(var3);
+            if (var4 < 48) {
+              return null;
+            }
+            if (var4 > 57) {
+              return null;
+            }
+          }
+          if (param1 < -12) {
+            stackIn_14_0 = ov.field_h;
+            return stackIn_14_0;
+          }
+          stackIn_12_0 = (rn) null;
+          return stackIn_12_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_17_0 = var2;
+          stackIn_17_1 = new StringBuilder().append("mb.B(");
+          if (param0 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {
+        if (this.field_E) {
+          return;
+        }
+        try {
+          this.field_E = true;
+          battlefield.a(false, this.field_z, this.field_A, this.field_H, 1, this.field_D, this.field_I);
+          this.unit = battlefield.getUnitAt(this.field_H, true, this.field_z);
+          this.unit.packedFlag8 = this.unit.packedFlag8 | this.field_y;
+          if (obfuscationGuard != -26661) {
+            this.field_A = -119;
+          }
+          fl.a(battlefield, obfuscationGuard + 26537);
+        } catch (RuntimeException runtimeException) {
+          throw ig.a((Throwable) ((Object) runtimeException), "mb.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+        }
+    }
+
+    final static Unit a(int param0, int param1, int param2, int param3, PacketBuffer param4, Battlefield param5, int param6, boolean param7) {
+        Unit stackIn_2_0 = null;
+        Unit stackIn_15_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_19_2 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var8_int = 0;
+        RuntimeException var8 = null;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        Unit var16 = null;
+        int var17 = 0;
+        try {
+          if (param6 > -75) {
+            stackIn_2_0 = (Unit) null;
+            return stackIn_2_0;
+          }
+          var8_int = param4.k(0);
+          var9 = param4.e((byte) -104);
+          var10 = param4.k(0);
+          var11 = param4.a((byte) 110);
+          var12 = param4.k(0);
+          var13 = param4.k(0);
+          var14 = param4.k(0);
+          var15 = param4.k(0);
+          if (var14 == 255) {
+            var14 = -1;
+          }
+          var16 = new Unit(param3, param2, param0, var8_int >> 5, var10, var11, var9, var13, 7 & var8_int, param5, var12 & 15, var12 >> 4, var14, param7, var15);
+          var16.movementFlags = param4.k(0);
+          if ((var16.movementFlags & 4) != 0) {
+            var16.displayName = param4.h((byte) 121);
+          }
+          if (param1 > 0) {
+            var17 = param4.k(0);
+            if ((2 & var17) != 0) {
+              var16.tag = param4.k(0);
+            }
+            if (0 != (1 & var17)) {
+              var16.objectiveId = param4.k(0);
+            }
+          }
+          stackIn_15_0 = var16;
+          return stackIn_15_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          stackIn_18_0 = var8;
+          stackIn_18_1 = new StringBuilder().append("mb.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
+          if (param5 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
+          }
+          throw ig.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+        }
+    }
+
+    final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
+        RuntimeException var4 = null;
+        Battlefield var5 = null;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          param2.field_y = -2;
+          if (param1 > -84) {
+            var5 = (Battlefield) null;
+            this.applyToBattlefield((Battlefield) null, 15);
+          }
+          stackIn_3_0 = this.a((byte) -39, param2, param0, true);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_6_0 = var4;
+          stackIn_6_1 = new StringBuilder().append("mb.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    final String describeEvent(byte obfuscationGuard, boolean verbose) {
+        int var4 = 46 % ((53 - obfuscationGuard) / 51);
+        if (verbose) {
+          System.out.println("Summon event debug");
+          System.out.println("Player " + this.field_D);
+          System.out.println("Unit at " + this.field_z + "," + this.field_H);
+          System.out.println("Type " + this.field_A + " Bonus" + this.field_I);
+        }
+        String var3 = "EventSummon: pos: (" + this.field_z + "," + this.field_H + "), bonus: " + this.field_I + ", player: " + this.field_D;
+        return var3;
+    }
+
+    public static void d(byte param0) {
+        field_F = null;
+        if (param0 <= 103) {
+          Battlefield var2 = (Battlefield) null;
+          SummonEvent.a(48, -43, -111, 118, (PacketBuffer) null, (Battlefield) null, -109, true);
+        }
+        field_B = null;
+    }
+
+    SummonEvent(int param0, int param1, int param2, int param3, int param4, boolean param5) {
+        this.field_H = param2;
+        this.field_y = param5 ? true : false;
+        this.field_m = 2;
+        this.field_D = param4;
+        this.field_I = param3;
+        this.field_A = param0;
+        this.field_z = param1;
+    }
+
+    SummonEvent(int param0, int param1, int param2, int param3, int param4) {
+        this.field_H = param2;
+        this.field_A = param0;
+        this.field_m = 2;
+        this.field_y = false;
+        this.field_D = param4;
+        this.field_z = param1;
+        this.field_I = param3;
+    }
+
+    static {
+    }
+}

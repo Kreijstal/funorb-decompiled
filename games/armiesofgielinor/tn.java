@@ -5,7 +5,7 @@ final class tn extends sf implements he {
     private fw field_bb;
     static rn field_ab;
     private fw field_fb;
-    static wk[] field_eb;
+    static RgbSprite[] field_eb;
     static jl field_cb;
     static byte[] field_db;
     static tg field_Z;
@@ -38,7 +38,7 @@ final class tn extends sf implements he {
           var2.field_p = 50;
           var2.field_k = (kh) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, var2);
-          if (nw.g(98)) {
+          if (DamageEvent.g(98)) {
             this.field_fb = this.a((qo) (this), true, tg.field_j);
           }
           this.field_bb = this.a((qo) (this), true, pd.field_f);
@@ -82,8 +82,8 @@ final class tn extends sf implements he {
 
     private final void o(int param0) {
         if (param0 != 1) {
-          bv var3 = (bv) null;
-          tn.a(false, 35, (bv) null);
+          CipherPacketBuffer var3 = (CipherPacketBuffer) null;
+          tn.a(false, 35, (CipherPacketBuffer) null);
         }
         if (!this.field_L) {
           return;
@@ -174,7 +174,7 @@ final class tn extends sf implements he {
         }
     }
 
-    final static void a(byte param0, wk[] param1) {
+    final static void a(byte param0, RgbSprite[] param1) {
         int var3 = 0;
         int var8 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -194,7 +194,7 @@ final class tn extends sf implements he {
         int var13 = 0;
         int[] var14 = null;
         int[] var15 = null;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 < 67) {
             field_ab = (rn) null;
@@ -245,7 +245,7 @@ final class tn extends sf implements he {
         }
     }
 
-    final static long a(boolean param0, int param1, bv param2) {
+    final static long a(boolean param0, int param1, CipherPacketBuffer param2) {
         RuntimeException var3 = null;
         long stackIn_2_0 = 0L;
         long stackIn_4_0 = 0L;
@@ -274,10 +274,10 @@ final class tn extends sf implements he {
         }
     }
 
-    final static wk[] a(boolean param0, int param1, int param2) {
+    final static RgbSprite[] a(boolean param0, int param1, int param2) {
         if (!param0) {
-          bv var4 = (bv) null;
-          tn.a(false, 58, (bv) null);
+          CipherPacketBuffer var4 = (CipherPacketBuffer) null;
+          tn.a(false, 58, (CipherPacketBuffer) null);
         }
         return ft.a(param1, (byte) -114, param2, 1);
     }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vd {
-    static vh field_b;
+    static PacketBuffer field_b;
     static String field_a;
     private static String field_z;
 
@@ -19,7 +19,7 @@ final class vd {
 
     static {
         field_z = "vd.A(";
-        field_b = new vh(256);
+        field_b = new PacketBuffer(256);
         field_a = "Are you sure you wish to restart this mission from the beginning?";
     }
 }

@@ -6,7 +6,7 @@ final class ts {
     static String field_a;
     static boolean field_m;
     static String field_g;
-    static at field_e;
+    static NodeDeque field_e;
     int field_n;
     int[] field_i;
     static long field_h;
@@ -21,7 +21,7 @@ final class ts {
         int var3;
         int var4;
         int var3Lifetime1;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null == this.field_i) {
           return 0;
         }
@@ -59,10 +59,10 @@ final class ts {
           }
           var9_int = 495;
           var10 = 5;
-          mb.field_F.a(param5, -20500, -10 + var9_int, var10, 5);
-          qj.field_z.a(param5, -20500, -rb.field_b.field_gb + mb.field_F.field_gb, 0, 0);
+          SummonEvent.field_F.a(param5, -20500, -10 + var9_int, var10, 5);
+          UpkeepEvent.field_z.a(param5, -20500, -rb.field_b.field_gb + SummonEvent.field_F.field_gb, 0, 0);
           var10 = var10 + (param5 + param2);
-          rb.field_b.a(param5, -20500, rb.field_b.field_gb, 0, qj.field_z.field_gb);
+          rb.field_b.a(param5, -20500, rb.field_b.field_gb, 0, UpkeepEvent.field_z.field_gb);
           qf.field_e.a(param4, -20500, qf.field_e.j(param7 - 15550), var10, 5);
           var11 = ed.field_e.j(param7 ^ 15717);
           ed.field_e.a(param4, -20500, var11, var10, -5 + (var9_int - var11));
@@ -106,8 +106,8 @@ final class ts {
     }
 
     final static void a(om param0, int param1, sl param2) {
-        ic stackIn_4_0;
-        ic stackIn_4_1;
+        GameplayController stackIn_4_0;
+        GameplayController stackIn_4_1;
         boolean stackIn_4_2;
         int stackIn_4_3;
         String[] stackIn_4_4;
@@ -120,8 +120,8 @@ final class ts {
         boolean stackIn_4_11;
         int stackIn_4_12;
         int stackIn_4_13;
-        ic stackIn_5_0;
-        ic stackIn_5_1;
+        GameplayController stackIn_5_0;
+        GameplayController stackIn_5_1;
         boolean stackIn_5_14;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -134,19 +134,19 @@ final class ts {
         int var4 = 0;
         int var5_int = 0;
         Exception var5 = null;
-        jd var6 = null;
+        Unit var6 = null;
         sd var6_ref = null;
         int var7 = 0;
         String[] var8 = null;
         sd var9 = null;
-        ic stackIn_4_0Lifetime1;
-        ic stackIn_4_1Lifetime1;
-        ic stackIn_5_0Lifetime1;
-        ic stackIn_5_1Lifetime1;
+        GameplayController stackIn_4_0Lifetime1;
+        GameplayController stackIn_4_1Lifetime1;
+        GameplayController stackIn_5_0Lifetime1;
+        GameplayController stackIn_5_1Lifetime1;
         int var5_intLifetime1;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          L0: {
+          regionExit1: {
             l.field_c = param0;
             pq.field_f = null;
             var8 = param0.e(-23209);
@@ -176,33 +176,33 @@ final class ts {
                 stackIn_5_0 = null;
                 stackIn_5_1 = null;
                 stackIn_5_14 = true;
-                break L0;
+                break regionExit1;
               }
             }
             stackIn_5_0Lifetime1 = null;
             stackIn_5_1Lifetime1 = null;
             stackIn_5_14 = false;
           }
-          rd.field_j = new ic(stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_4_6, stackIn_4_7, stackIn_4_8, stackIn_4_9, stackIn_4_10, stackIn_4_11, stackIn_4_12, stackIn_4_13, stackIn_5_14, param0);
-          rd.field_j.field_xb.field_F = true;
-          rd.field_j.field_xb.field_T = new ln[param0.field_B.length];
-          for (var5_int = 0; rd.field_j.field_xb.field_T.length > var5_int; var5_int++) {
+          rd.field_j = new GameplayController(stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_4_6, stackIn_4_7, stackIn_4_8, stackIn_4_9, stackIn_4_10, stackIn_4_11, stackIn_4_12, stackIn_4_13, stackIn_5_14, param0);
+          rd.field_j.battlefield.field_F = true;
+          rd.field_j.battlefield.field_T = new ln[param0.field_B.length];
+          for (var5_int = 0; rd.field_j.battlefield.field_T.length > var5_int; var5_int++) {
             if (~var5_int == ~param0.field_w) {
-              rd.field_j.field_xb.field_T[var5_int] = ah.field_a;
+              rd.field_j.battlefield.field_T[var5_int] = ah.field_a;
             } else {
               var9 = param0.field_G.field_q[param0.field_B[var5_int]];
               var6_ref = var9;
-              rd.field_j.field_xb.field_T[var5_int] = var9.field_q;
+              rd.field_j.battlefield.field_T[var5_int] = var9.field_q;
             }
           }
           if ((1 & param0.field_k) != 0) {
             var5_intLifetime1 = -1 + param0.field_B.length;
-            var6 = (jd) (rd.field_j.field_xb.f(var5_intLifetime1, ~param1).e((byte) 97));
+            var6 = (Unit) (rd.field_j.battlefield.f(var5_intLifetime1, ~param1).first((byte) 97));
             while (var6 != null) {
-              if (var6.field_Y > 10) {
-                var6.field_Y = 10;
+              if (var6.strength > 10) {
+                var6.strength = 10;
               }
-              var6 = (jd) (rd.field_j.field_xb.f(var5_intLifetime1, ~param1).a((byte) 123));
+              var6 = (Unit) (rd.field_j.battlefield.f(var5_intLifetime1, ~param1).next((byte) 123));
             }
           }
           if (param2 == null) {

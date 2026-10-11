@@ -187,7 +187,7 @@ final class sh {
         int var5;
         int var6;
         int var7;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (!this.field_b) {
           return;
         }
@@ -253,9 +253,9 @@ final class sh {
     final static je d(byte param0) {
         if (param0 < 69) {
           sh.b((byte) 50);
-          return ne.field_f.field_Jb;
+          return MapTile.field_f.field_Jb;
         }
-        return ne.field_f.field_Jb;
+        return MapTile.field_f.field_Jb;
     }
 
     private final void c(byte param0) {

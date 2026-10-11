@@ -12,7 +12,7 @@ final class ml extends je {
     final static void a(p param0, byte param1) {
         int var2_int = 0;
         sn var3 = null;
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           wh.field_f = false;
           am.field_v = new sn[47];
@@ -61,7 +61,7 @@ final class ml extends je {
         int var7;
         int var8;
         int var4Lifetime1;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var4 = 0;
         if (param2 != -20199) {
           ml.a(96, -94, -90, false);
@@ -107,7 +107,7 @@ final class ml extends je {
         String var13 = null;
         tg var14 = null;
         try {
-          ng.a(bv.field_x, param1, (int[]) null, (String) null, param1.d((byte) -84), 92, -1, (String) null, 0L);
+          ng.a(CipherPacketBuffer.field_x, param1, (int[]) null, (String) null, param1.d((byte) -84), 92, -1, (String) null, 0L);
           if (param1.field_kc && (2 == param1.field_ac ||
             !(hi.field_j < 2))) {
             var8 = tn.field_Z;
@@ -158,7 +158,7 @@ final class ml extends je {
         je dupTemp$1 = null;
         int var3;
         String var4;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 10000) {
           var4 = (String) null;
           ml.a(10, (au) null, false, (String) null);
@@ -192,7 +192,7 @@ final class ml extends je {
         String[] var8 = null;
         String[] var9 = null;
         int var3Lifetime1;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var8 = param0.e(-23209);
           var9 = var8;

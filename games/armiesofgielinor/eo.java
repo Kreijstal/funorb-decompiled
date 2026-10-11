@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eo {
-    static wk field_a;
+    static RgbSprite field_a;
     static String field_c;
     private v field_b;
 
@@ -11,8 +11,8 @@ final class eo {
         int var3 = this.field_b.field_e[0];
         int var4 = this.field_b.field_e[1];
         if (param0 > -77) {
-          jd var7 = (jd) null;
-          this.a(-96, -101, (jd) null);
+          Unit var7 = (Unit) null;
+          this.a(-96, -101, (Unit) null);
         }
         int var5 = so.field_b.field_a;
         int var6 = so.field_b.field_g;
@@ -38,7 +38,7 @@ final class eo {
         return kl.field_a.field_p[1];
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, jd param4) {
+    final boolean a(int param0, int param1, int param2, int param3, Unit param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         boolean stackIn_18_0 = false;
@@ -57,9 +57,9 @@ final class eo {
             param4.field_fb = param3;
           }
           if (null == param4.field_x) {
-            var6_int = param4.field_N;
+            var6_int = param4.unitType;
             if (var6_int == 34 &&
-              param4.field_W) {
+              param4.packedFlag8) {
               var6_int = 75;
             }
             param4.field_x = new hr(param4.field_R, var6_int, param4.field_fb);
@@ -86,21 +86,21 @@ final class eo {
         }
     }
 
-    final void a(int param0, byte param1, int param2, ne[] param3) {
+    final void a(int param0, byte param1, int param2, MapTile[] param3) {
         int var7 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
-        jd var6 = null;
+        Unit var6 = null;
         int var8 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = param2 * param0;
           for (var7 = 0; var5_int > var7; var7++) {
-            var6 = param3[var7].field_c;
+            var6 = param3[var7].occupant;
             if (var6 != null &&
               !var6.field_u) {
               this.a(79, var7, var6);
@@ -137,7 +137,7 @@ final class eo {
         RuntimeException var5 = null;
         int var8 = 0;
         int var11 = 0;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 > -55) {
             return;
@@ -157,7 +157,7 @@ final class eo {
                       -1 >= var6 + var10 ||
                       !(param3.field_h > var10 + var6) ||
                       param3.field_k[(var10 + var6) * param3.field_e + (var7 + var9)] == 0) {
-                      qn.g(var7 + (param0 + var9), var10 + param4 + var6, param1, var9 * var9 + var10 * var10);
+                      SoftwareRaster.g(var7 + (param0 + var9), var10 + param4 + var6, param1, var9 * var9 + var10 * var10);
                     }
                   }
                 }
@@ -187,7 +187,7 @@ final class eo {
         }
     }
 
-    private final void a(int param0, int param1, jd param2) {
+    private final void a(int param0, int param1, Unit param2) {
         RuntimeException var4 = null;
         String var5 = null;
         RuntimeException stackIn_13_0 = null;
@@ -243,8 +243,8 @@ final class eo {
           if (nb.field_i != oh.field_L) {
             return false;
           }
-          var9 = new oe(rl.field_C, param1);
-          rl.field_C.a(var9, 0);
+          var9 = new oe(KingBlackDragonEvent.field_C, param1);
+          KingBlackDragonEvent.field_C.a(var9, 0);
           if (!ig.a(-8327)) {
             cd.field_e = param3;
             p.field_a = null;

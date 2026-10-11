@@ -18,23 +18,23 @@ final class su {
         field_c = null;
     }
 
-    final ej a(byte param0, ha param1, id[] param2, int param3, boolean param4) {
-        ej var6 = null;
+    final AiPlanner a(byte param0, Battlefield param1, id[] param2, int param3, boolean param4) {
+        AiPlanner var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        ej var10 = null;
-        ej stackIn_5_0 = null;
+        AiPlanner var10 = null;
+        AiPlanner stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var10 = new ej(param1, param3, param4, param2);
+          var10 = new AiPlanner(param1, param3, param4, param2);
           var6 = var10;
           var7 = 0;
           var8 = -40 / ((param0 + 12) / 61);

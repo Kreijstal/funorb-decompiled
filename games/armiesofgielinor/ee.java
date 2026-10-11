@@ -14,12 +14,12 @@ final class ee extends mn {
         bj var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4 = (bj) (jm.field_o.e((byte) 121));
+          var4 = (bj) (jm.field_o.first((byte) 121));
           while (var4 != null) {
             te.a(param0, var4, -17006);
-            var4 = (bj) (jm.field_o.a((byte) 123));
+            var4 = (bj) (jm.field_o.next((byte) 123));
           }
           if (param1 <= 33) {
             field_v = (gk) null;
@@ -33,10 +33,10 @@ final class ee extends mn {
     }
 
     final static void a(ru[] param0, kl param1, int param2, int[] param3, kl param4) {
-        wk[] dupTemp$0 = null;
-        wk[] dupTemp$1 = null;
-        wk[] dupTemp$2 = null;
-        wk[] dupTemp$3 = null;
+        RgbSprite[] dupTemp$0 = null;
+        RgbSprite[] dupTemp$1 = null;
+        RgbSprite[] dupTemp$2 = null;
+        RgbSprite[] dupTemp$3 = null;
         ru[] var5 = null;
         ru[] var6 = null;
         int[] var6_array = null;
@@ -64,27 +64,27 @@ final class ee extends mn {
         je var9 = null;
         je var10 = null;
         je var11 = null;
-        wk[] var12 = null;
-        wk[] var13 = null;
-        wk[] var14 = null;
+        RgbSprite[] var12 = null;
+        RgbSprite[] var13 = null;
+        RgbSprite[] var14 = null;
         je var15 = null;
-        wk[] var16 = null;
-        wk[] var17 = null;
+        RgbSprite[] var16 = null;
+        RgbSprite[] var17 = null;
         int var7_intLifetime1;
         int var7_intLifetime2;
         int var7_intLifetime3;
-        var18 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var18 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var20 = lo.a("crowns", -28106, "lobby", param1);
           var5 = var20;
-          vh.field_n = var20.length;
+          PacketBuffer.field_n = var20.length;
           if (param0 != null) {
-            var6 = new ru[param0.length + vh.field_n];
-            for (var7_int = 0; var7_int < vh.field_n; var7_int++) {
+            var6 = new ru[param0.length + PacketBuffer.field_n];
+            for (var7_int = 0; var7_int < PacketBuffer.field_n; var7_int++) {
               var6[var7_int] = var20[var7_int];
             }
             for (var7_intLifetime3 = 0; var7_intLifetime3 < param0.length; var7_intLifetime3++) {
-              var6[var7_intLifetime3 + vh.field_n] = param0[var7_intLifetime3];
+              var6[var7_intLifetime3 + PacketBuffer.field_n] = param0[var7_intLifetime3];
             }
             var5 = var6;
           }
@@ -94,17 +94,17 @@ final class ee extends mn {
           var24 = var19;
           var22 = var24;
           var6_array = var22;
-          for (var7_intLifetime1 = 0; vh.field_n > var7_intLifetime1; var7_intLifetime1++) {
+          for (var7_intLifetime1 = 0; PacketBuffer.field_n > var7_intLifetime1; var7_intLifetime1++) {
             var23[var7_intLifetime1] = 10;
           }
           if (param0 != null) {
             if (param3 != null) {
               for (var7_intLifetime2 = 0; param0.length > var7_intLifetime2; var7_intLifetime2++) {
-                var6_array[vh.field_n + var7_intLifetime2] = param3[var7_intLifetime2];
+                var6_array[PacketBuffer.field_n + var7_intLifetime2] = param3[var7_intLifetime2];
               }
             } else {
               for (var7_intLifetime2 = 0; var7_intLifetime2 < param0.length; var7_intLifetime2++) {
-                var6_array[var7_intLifetime2 + vh.field_n] = param0[var7_intLifetime2].field_f;
+                var6_array[var7_intLifetime2 + PacketBuffer.field_n] = param0[var7_intLifetime2].field_f;
               }
             }
           }
@@ -120,7 +120,7 @@ final class ee extends mn {
           t.field_a.a(var5, var24);
           gm.field_f.a(var5, var24);
           var8 = new je(0L, (je) null);
-          var8.field_Z = (ka) ((Object) var7);
+          var8.field_Z = (BitmapFont) ((Object) var7);
           var8.field_N = 16777215;
           var8.field_pb = jn.field_d;
           var8.field_Fb = 1;
@@ -128,7 +128,7 @@ final class ee extends mn {
           var9.field_Eb = 1;
           var10 = new je(0L, (je) null);
           var10.field_N = 16777215;
-          var10.field_Z = (ka) ((Object) t.field_a);
+          var10.field_Z = (BitmapFont) ((Object) t.field_a);
           var10.field_pb = jn.field_d;
           var10.field_Fb = 1;
           var11 = var10;
@@ -147,8 +147,8 @@ final class ee extends mn {
           hr.field_m = new je(0L, var8);
           hr.field_m.field_G = var14;
           uc.field_b = new je(0L, (je) null);
-          uc.field_b.field_cb = ic.a("closebutton", (byte) 51, "lobby", param1);
-          uc.field_b.field_vb = ic.a("closebutton_mouseover", (byte) 51, "lobby", param1);
+          uc.field_b.field_cb = GameplayController.a("closebutton", (byte) 51, "lobby", param1);
+          uc.field_b.field_vb = GameplayController.a("closebutton_mouseover", (byte) 51, "lobby", param1);
           rn.field_a = new je(0L, var8);
           rn.field_a.field_G = jq.a(true, 2039583, -20600, 40, true, 3815994);
           te.field_p = new je(0L, var10);
@@ -161,7 +161,7 @@ final class ee extends mn {
           br.field_e.field_O = 2;
           br.field_e.field_G = jq.a(false, 2039583, -20600, 30, true, 3815994);
           eq.field_h = new je(0L, (je) null);
-          eq.field_h.field_Z = (ka) ((Object) t.field_a);
+          eq.field_h.field_Z = (BitmapFont) ((Object) t.field_a);
           eq.field_h.field_pb = jn.field_d;
           eq.field_h.field_Fb = 1;
           eq.field_h.field_N = 13421772;
@@ -177,7 +177,7 @@ final class ee extends mn {
           var15 = new je(0L, ms.field_k);
           var15.field_pb = jn.field_d;
           var15.field_N = 16777215;
-          var15.field_Z = (ka) ((Object) var7);
+          var15.field_Z = (BitmapFont) ((Object) var7);
           ke.field_e = new je(0L, eq.field_h);
           ke.field_e.field_G = jq.a(false, 2236962, -20600, 16, false, 2236962);
           ke.field_e.field_O = 2;
@@ -271,25 +271,25 @@ final class ee extends mn {
           var17 = fk.a("checkbox", (byte) -124, param1, "lobby");
           hs.field_H = new fp(0L, var17[1], var17[0], 1, ms.field_k, (String) null);
           oe.field_Cb = new je(0L, (je) null);
-          oe.field_Cb.field_G = it.a(17, ic.a("slideregion", (byte) 51, "lobby", param1));
-          oe.field_Cb.field_mb = it.a(17, ic.a("slideregion_mouseover", (byte) 51, "lobby", param1));
-          oe.field_Cb.field_U = it.a(17, ic.a("slideregion_mouseheld", (byte) 51, "lobby", param1));
-          oe.field_Cb.field_A = it.a(17, ic.a("slideregion_disabled", (byte) 51, "lobby", param1));
+          oe.field_Cb.field_G = it.a(17, GameplayController.a("slideregion", (byte) 51, "lobby", param1));
+          oe.field_Cb.field_mb = it.a(17, GameplayController.a("slideregion_mouseover", (byte) 51, "lobby", param1));
+          oe.field_Cb.field_U = it.a(17, GameplayController.a("slideregion_mouseheld", (byte) 51, "lobby", param1));
+          oe.field_Cb.field_A = it.a(17, GameplayController.a("slideregion_disabled", (byte) 51, "lobby", param1));
           ke.field_c = new je(0L, (je) null);
           ke.field_c.field_G = wj.a(-12310, fk.a("dragbar", (byte) -126, param1, "lobby"));
           ke.field_c.field_mb = wj.a(-12310, fk.a("dragbar_mouseover", (byte) -127, param1, "lobby"));
           ke.field_c.field_U = wj.a(-12310, fk.a("dragbar_mouseheld", (byte) -127, param1, "lobby"));
           ke.field_c.field_A = wj.a(-12310, fk.a("dragbar_disabled", (byte) -125, param1, "lobby"));
           no.field_M = new je(0L, (je) null);
-          no.field_M.field_cb = ic.a("upbutton", (byte) 51, "lobby", param1);
-          no.field_M.field_vb = ic.a("upbutton_mouseover", (byte) 51, "lobby", param1);
-          no.field_M.field_qb = ic.a("upbutton_mouseheld", (byte) 51, "lobby", param1);
-          no.field_M.field_sb = ic.a("upbutton_disabled", (byte) 51, "lobby", param1);
+          no.field_M.field_cb = GameplayController.a("upbutton", (byte) 51, "lobby", param1);
+          no.field_M.field_vb = GameplayController.a("upbutton_mouseover", (byte) 51, "lobby", param1);
+          no.field_M.field_qb = GameplayController.a("upbutton_mouseheld", (byte) 51, "lobby", param1);
+          no.field_M.field_sb = GameplayController.a("upbutton_disabled", (byte) 51, "lobby", param1);
           wh.field_g = new je(0L, (je) null);
-          wh.field_g.field_cb = ic.a("downbutton", (byte) 51, "lobby", param1);
-          wh.field_g.field_vb = ic.a("downbutton_mouseover", (byte) 51, "lobby", param1);
-          wh.field_g.field_qb = ic.a("downbutton_mouseheld", (byte) 51, "lobby", param1);
-          wh.field_g.field_sb = ic.a("downbutton_disabled", (byte) 51, "lobby", param1);
+          wh.field_g.field_cb = GameplayController.a("downbutton", (byte) 51, "lobby", param1);
+          wh.field_g.field_vb = GameplayController.a("downbutton_mouseover", (byte) 51, "lobby", param1);
+          wh.field_g.field_qb = GameplayController.a("downbutton_mouseheld", (byte) 51, "lobby", param1);
+          wh.field_g.field_sb = GameplayController.a("downbutton_disabled", (byte) 51, "lobby", param1);
           ri.field_b = new ll(0L, no.field_M, wh.field_g, oe.field_Cb, ke.field_c);
           br.field_g = new mp(0L, (je) null, cb.field_c, ri.field_b, je.field_Q, (String) null, (String) null);
           return;
@@ -364,14 +364,14 @@ final class ee extends mn {
     }
 
     final static void e(int param0) {
-        st.field_z.c((byte) -115);
+        TurnEffectEvent.field_z.c((byte) -115);
         if (param0 != 0) {
           ee.f(64);
           return;
         }
     }
 
-    final bd a(int param0, ha param1) {
+    final bd a(int param0, Battlefield param1) {
         String discarded$0 = null;
         String discarded$2 = null;
         String discarded$1 = null;
@@ -385,29 +385,29 @@ final class ee extends mn {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         kl var4 = null;
-        jd var5 = null;
+        Unit var5 = null;
         try {
-          this.d(44);
+          this.unlink(44);
           if (param0 <= 31) {
             var4 = (kl) null;
             ee.a((ru[]) null, (kl) null, 4, (int[]) null, (kl) null);
           }
-          var5 = param1.c(this.field_w, true, this.field_z);
+          var5 = param1.getUnitAt(this.field_w, true, this.field_z);
           if (var5 == null) {
-            discarded$0 = this.a(new String[]{"no unit at ", ci.c(this.field_z, 0, this.field_w)}, 30536);
+            discarded$0 = this.a(new String[]{"no unit at ", TutorialController.c(this.field_z, 0, this.field_w)}, 30536);
             stackIn_5_0 = null;
             return (bd) (stackIn_5_0);
           }
-          if (var5.field_B == 0) {
-            discarded$2 = this.a(new String[]{"unit at ", ci.c(this.field_z, 0, this.field_w), " has attacked"}, 30536);
+          if (var5.packedLowFlags == 0) {
+            discarded$2 = this.a(new String[]{"unit at ", TutorialController.c(this.field_z, 0, this.field_w), " has attacked"}, 30536);
             stackIn_8_0 = null;
             return (bd) (stackIn_8_0);
           }
-          if (72 == var5.field_N) {
+          if (72 == var5.unitType) {
             stackIn_13_0 = this.field_y.a(100, param1);
             return stackIn_13_0;
           }
-          discarded$1 = this.a(new String[]{"unit at ", ci.c(this.field_z, 0, this.field_w), " is not TYPE_SPHINX"}, 30536);
+          discarded$1 = this.a(new String[]{"unit at ", TutorialController.c(this.field_z, 0, this.field_w), " is not TYPE_SPHINX"}, 30536);
           stackIn_11_0 = null;
           return (bd) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

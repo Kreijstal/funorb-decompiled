@@ -20,7 +20,7 @@ final class ht {
     ht(byte[] param0, ig param1) {
         Throwable decompiledCaughtException = null;
         Exception var3 = null;
-        vh var4 = null;
+        PacketBuffer var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -30,21 +30,21 @@ final class ht {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        vh var14 = null;
+        PacketBuffer var14 = null;
         int var9Lifetime1;
         this.field_d = -1;
         this.field_n = null;
         this.field_n = param1;
         try {
-          var14 = new vh(param0);
-          var4 = new vh(param0);
+          var14 = new PacketBuffer(param0);
+          var4 = new PacketBuffer(param0);
           var14.k(0);
-          var14.field_q = var14.field_q + 2;
+          var14.position = var14.position + 2;
           var5 = var14.k(0);
           var6 = 0;
           var7 = -1;
           var8 = -1;
-          var4.field_q = var14.field_q + var5;
+          var4.position = var14.position + var5;
           for (var9 = 0; var9 < var5; var9++) {
             var10 = this.field_n.field_p[var9];
             if (var10 == 0) {
@@ -97,7 +97,7 @@ final class ht {
               var6++;
             }
           }
-          if (var4.field_q != param0.length) {
+          if (var4.position != param0.length) {
             throw new RuntimeException();
           }
           this.field_d = var6;

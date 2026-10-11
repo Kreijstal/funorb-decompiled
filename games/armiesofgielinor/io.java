@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class io extends tc {
+final class io extends IntrusiveNode {
     static int field_n;
     static String field_u;
     static int field_t;
     int field_s;
     static boolean field_w;
     static String field_p;
-    static wk field_z;
+    static RgbSprite field_z;
     byte[] field_x;
     short[] field_r;
     private int[] field_q;
@@ -16,14 +16,14 @@ final class io extends tc {
     static String field_o;
     byte[] field_l;
     byte[] field_k;
-    static wk[] field_m;
+    static RgbSprite[] field_m;
     sn[] field_y;
 
     final static void a(wp param0, byte param1) {
         try {
           ft.field_q = param0;
           if (param1 != -34) {
-            field_m = (wk[]) null;
+            field_m = (RgbSprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "io.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -57,7 +57,7 @@ final class io extends tc {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 <= 106) {
             var4 = (int[]) null;
@@ -106,7 +106,7 @@ final class io extends tc {
         Object var7 = null;
         int var9 = 0;
         int var10 = 0;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = 1;
           var6 = 0;
@@ -218,7 +218,7 @@ final class io extends tc {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        vh var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         fq var40 = null;
         byte[] var41 = null;
@@ -303,8 +303,8 @@ final class io extends tc {
           this.field_q = new int[128];
           this.field_v = new fq[128];
           this.field_l = new byte[128];
-          var38 = new vh(param0);
-          for (var3 = 0; var38.field_o[var3 + var38.field_q] != 0; var3++) {
+          var38 = new PacketBuffer(param0);
+          for (var3 = 0; var38.payload[var3 + var38.position] != 0; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
@@ -313,10 +313,10 @@ final class io extends tc {
             var4[var5] = var38.a((byte) 8);
           }
           var3++;
-          var38.field_q = var38.field_q + 1;
-          var5Lifetime1 = var38.field_q;
-          var38.field_q = var38.field_q + var3;
-          for (var6 = 0; var38.field_o[var6 + var38.field_q] != 0; var6++) {
+          var38.position = var38.position + 1;
+          var5Lifetime1 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; var38.payload[var6 + var38.position] != 0; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
@@ -325,10 +325,10 @@ final class io extends tc {
             var7[var8] = var38.a((byte) -120);
           }
           var6++;
-          var38.field_q = var38.field_q + 1;
-          var8Lifetime1 = var38.field_q;
-          var38.field_q = var38.field_q + var6;
-          for (var9 = 0; var38.field_o[var9 + var38.field_q] != 0; var9++) {
+          var38.position = var38.position + 1;
+          var8Lifetime1 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; var38.payload[var9 + var38.position] != 0; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
@@ -337,7 +337,7 @@ final class io extends tc {
             var10[var11_int] = var38.a((byte) -113);
           }
           var9++;
-          var38.field_q = var38.field_q + 1;
+          var38.position = var38.position + 1;
           var53 = new byte[var9];
           var39 = var53;
           var11 = var39;
@@ -395,7 +395,7 @@ final class io extends tc {
           var58 = stackIn_42_0;
           var47 = var58;
           var16 = var47;
-          for (var17 = 0; 0 != var38.field_o[var38.field_q + var17]; var17++) {
+          for (var17 = 0; 0 != var38.payload[var38.position + var17]; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
@@ -404,7 +404,7 @@ final class io extends tc {
             var18[var19] = var38.a((byte) -53);
           }
           var17++;
-          var38.field_q = var38.field_q + 1;
+          var38.position = var38.position + 1;
           var19Lifetime1 = 0;
           for (var20 = 0; 128 > var20; var20++) {
             var19Lifetime1 = var19Lifetime1 + var38.k(0);
@@ -439,7 +439,7 @@ final class io extends tc {
               if (var20Lifetime3 == 0) {
                 incrementValue$5 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = -1 + var38.field_o[incrementValue$5];
+                var23Lifetime1 = -1 + var38.payload[incrementValue$5];
                 if (var21Lifetime1 >= var55.length) {
                   var20Lifetime3 = -1;
                 } else {
@@ -458,7 +458,7 @@ final class io extends tc {
               if (var20Lifetime4 == 0) {
                 incrementValue$3 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = 16 + var38.field_o[incrementValue$3] << 2;
+                var24Lifetime1 = 16 + var38.payload[incrementValue$3] << 2;
                 if (var56.length > var21Lifetime2) {
                   var20Lifetime4 = var7[var21Lifetime2++];
                 } else {

@@ -34,12 +34,12 @@ final class mt {
         field_e = null;
         field_g = null;
         if (param0 > -116) {
-          bv var2 = (bv) null;
-          mt.a((bv) null, false);
+          CipherPacketBuffer var2 = (CipherPacketBuffer) null;
+          mt.a((CipherPacketBuffer) null, false);
         }
     }
 
-    final static String a(bv param0, boolean param1) {
+    final static String a(CipherPacketBuffer param0, boolean param1) {
         int var4_int = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -51,7 +51,7 @@ final class mt {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = param0.g(61, 2) + 1;
           var3 = new byte[var2_int];

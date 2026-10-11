@@ -5,38 +5,38 @@ final class ud extends sf implements he {
     static String field_Y;
     static String field_Z;
     static String field_W;
-    static wk[] field_X;
+    static RgbSprite[] field_X;
     static String field_ab;
     private fw field_bb;
 
     final static void b(int param0, boolean param1, int param2, int param3) {
         if (param1) {
-          field_X = (wk[]) null;
+          field_X = (RgbSprite[]) null;
           if (param2 != 0) {
             if (param2 == 1) {
               if (va.field_D == param0) {
                 if (2 == param2 &&
                   cd.field_c != param0) {
                   cd.field_c = param0;
-                  kr.field_J = true;
+                  MoveEvent.field_J = true;
                   ae.a(896, param3);
                 }
                 return;
               }
               va.field_D = param0;
-              kr.field_J = true;
+              MoveEvent.field_J = true;
               ae.a(896, param3);
             }
           } else {
             if (param0 != ol.field_B) {
               ol.field_B = param0;
-              kr.field_J = true;
+              MoveEvent.field_J = true;
               ae.a(896, param3);
             }
             if (param2 == 1 &&
               va.field_D != param0) {
               va.field_D = param0;
-              kr.field_J = true;
+              MoveEvent.field_J = true;
               ae.a(896, param3);
             }
           }
@@ -44,13 +44,13 @@ final class ud extends sf implements he {
           if (param2 == 0 &&
             param0 != ol.field_B) {
             ol.field_B = param0;
-            kr.field_J = true;
+            MoveEvent.field_J = true;
             ae.a(896, param3);
           }
           if (param2 == 1 &&
             va.field_D != param0) {
             va.field_D = param0;
-            kr.field_J = true;
+            MoveEvent.field_J = true;
             ae.a(896, param3);
           }
         }
@@ -61,7 +61,7 @@ final class ud extends sf implements he {
           return;
         }
         cd.field_c = param0;
-        kr.field_J = true;
+        MoveEvent.field_J = true;
         ae.a(896, param3);
     }
 

@@ -12,9 +12,9 @@ abstract class uq extends ms {
     final static int a(String param0, gl param1, int param2, int param3, int param4, gl param5, boolean param6) {
         int var12 = 0;
         int stackIn_4_0 = 0;
-        vh stackIn_10_0 = null;
+        PacketBuffer stackIn_10_0 = null;
         String stackIn_11_1 = null;
-        vh stackIn_13_0 = null;
+        PacketBuffer stackIn_13_0 = null;
         String stackIn_14_1 = null;
         int stackIn_31_0 = 0;
         int stackIn_44_0 = 0;
@@ -43,7 +43,7 @@ abstract class uq extends ms {
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var14 = param1.a(param2 ^ -20049);
           var8 = param5.a(-91);
@@ -53,11 +53,11 @@ abstract class uq extends ms {
             return stackIn_4_0;
           }
           if (ov.field_g == sg.field_a) {
-            vl.field_n.field_q = 0;
+            vl.field_n.position = 0;
             cv.field_s = null;
             if (param0 != null) {
               var9 = 0;
-              vd.field_b.field_q = 0;
+              vd.field_b.position = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
@@ -71,17 +71,17 @@ abstract class uq extends ms {
               vd.field_b.b(1, param3);
               vd.field_b.b(param2 + 20033, var9);
               vl.field_n.b(param2 + 20033, 18);
-              vl.field_n.field_q = vl.field_n.field_q + 2;
-              var10 = vl.field_n.field_q;
-              var11_ref_String = mg.a(0, ag.d((byte) 55));
+              vl.field_n.position = vl.field_n.position + 2;
+              var10 = vl.field_n.position;
+              var11_ref_String = mg.a(0, CombatEvent.d((byte) 55));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               vl.field_n.b(var11_ref_String, param2 + 33883);
               fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.field_n);
-              vl.field_n.f(0, -var10 + vl.field_n.field_q);
+              vl.field_n.f(0, -var10 + vl.field_n.position);
             } else {
-              vd.field_b.field_q = 0;
+              vd.field_b.position = 0;
               vd.field_b.a((byte) -57, iq.field_e.nextInt());
               vd.field_b.a((byte) -54, iq.field_e.nextInt());
               stackIn_10_0 = vd.field_b;
@@ -90,19 +90,19 @@ abstract class uq extends ms {
               } else {
                 stackIn_11_1 = var14;
               }
-              ((vh) (Object) stackIn_10_0).a(stackIn_11_1, param2 ^ -413754288);
+              ((PacketBuffer) (Object) stackIn_10_0).a(stackIn_11_1, param2 ^ -413754288);
               stackIn_13_0 = vd.field_b;
               if (param5.a((byte) -111)) {
                 stackIn_14_1 = var8;
               } else {
                 stackIn_14_1 = "";
               }
-              ((vh) (Object) stackIn_13_0).a(stackIn_14_1, 413740432);
+              ((PacketBuffer) (Object) stackIn_13_0).a(stackIn_14_1, 413740432);
               vl.field_n.b(1, 16);
-              vl.field_n.field_q = vl.field_n.field_q + 1;
-              var9 = vl.field_n.field_q;
+              vl.field_n.position = vl.field_n.position + 1;
+              var9 = vl.field_n.position;
               fp.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.field_n);
-              vl.field_n.e(vl.field_n.field_q - var9, 5930);
+              vl.field_n.e(vl.field_n.position - var9, 5930);
             }
             hb.$cfr$intArgs$a$e9dea5688aa5(54, -1);
             ov.field_g = cj.field_m;
@@ -110,14 +110,14 @@ abstract class uq extends ms {
           if (ov.field_g == cj.field_m &&
             es.a(param2 ^ 20080, 1)) {
             var9Lifetime1 = mg.field_e.k(0);
-            mg.field_e.field_q = 0;
+            mg.field_e.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               ov.field_g = mv.field_c;
               br.field_b = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
-                tf.a((byte) -99, ag.d((byte) -127));
+                tf.a((byte) -99, CombatEvent.d((byte) -127));
                 lk.field_r = om.field_s;
                 dj.a((byte) -128);
                 ev.field_b = false;
@@ -127,7 +127,7 @@ abstract class uq extends ms {
               if (var9Lifetime1 == 99) {
                 es.a(-81, qa.h(1));
                 cv.field_s = new Boolean(rr.a((byte) -76, mg.field_e));
-                mg.field_e.field_q = 0;
+                mg.field_e.position = 0;
               } else {
                 fk.field_b = -1;
                 nm.field_o = var9Lifetime1;
@@ -139,7 +139,7 @@ abstract class uq extends ms {
             var9Lifetime2 = 2;
             if (es.a(-79, var9Lifetime2)) {
               var10Lifetime1 = mg.field_e.e((byte) -104);
-              mg.field_e.field_q = 0;
+              mg.field_e.position = 0;
               if (es.a(-83, var10Lifetime1)) {
                 var11 = br.field_b.length;
                 for (var12 = 0; var12 < var11; var12++) {
@@ -157,7 +157,7 @@ abstract class uq extends ms {
             if (nm.field_o == 255) {
               var9_ref_String = mg.field_e.c((byte) -85);
               if (var9_ref_String != null) {
-                ph.a(var9_ref_String, ag.d((byte) -5), false);
+                ph.a(var9_ref_String, CombatEvent.d((byte) -5), false);
               }
             } else {
               lk.field_r = mg.field_e.g(1);
@@ -172,10 +172,10 @@ abstract class uq extends ms {
           }
           if (am.field_z == null) {
             if (ev.field_b) {
-              if (ca.b(0) > 30000L) {
+              if (TileMetadata.b(0) > 30000L) {
                 lk.field_r = gu.field_a;
               } else {
-                lk.field_r = nw.field_y;
+                lk.field_r = DamageEvent.field_y;
               }
               ev.field_b = false;
               stackIn_62_0 = 249;
@@ -233,7 +233,7 @@ abstract class uq extends ms {
         this.field_z = param0;
     }
 
-    final static ln a(vh param0, boolean param1) {
+    final static ln a(PacketBuffer param0, boolean param1) {
         int var3 = 0;
         ln var2 = null;
         RuntimeException var2_ref = null;
@@ -244,7 +244,7 @@ abstract class uq extends ms {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5 = new ln();
           var2 = var5;

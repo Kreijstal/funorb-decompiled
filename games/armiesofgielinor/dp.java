@@ -28,7 +28,7 @@ final class dp extends je {
         int var6 = 0;
         int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 48) {
             this.field_Qb = -37;
@@ -99,7 +99,7 @@ final class dp extends je {
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5 = am.field_K;
           var1 = var5;
@@ -182,7 +182,7 @@ final class dp extends je {
           this.field_Pb.field_X = this.field_Rb.toString();
           this.field_Ob.field_X = "";
           this.field_Ob.field_I = "|";
-          this.field_fb = new at();
+          this.field_fb = new NodeDeque();
           this.a(this.field_Xb, 48);
           this.a(this.field_Pb, 48);
           this.a(this.field_Ob, 89);
@@ -226,7 +226,7 @@ final class dp extends je {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = this.field_Rb.length();
           if (0 > param1) {
@@ -695,7 +695,7 @@ final class dp extends je {
           int var6 = 0;
           java.awt.datatransfer.Transferable var7 = null;
           String var8 = null;
-          var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             boolean decompiledFrameRemainder0 = true;
             var2_int = this.c(param0 ^ 48, sm.field_d - (this.field_V + this.field_Pb.field_F));
@@ -792,7 +792,7 @@ final class dp extends je {
         int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (~this.field_Qb == param0) {
             stackIn_3_0 = this.field_Qb;
@@ -821,7 +821,7 @@ final class dp extends je {
         int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 109) {
             this.field_Ib = false;

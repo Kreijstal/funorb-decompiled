@@ -5,7 +5,7 @@ class lu extends lk {
     static je field_u;
     static String field_v;
 
-    lu(ka param0, int param1) {
+    lu(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_H, -1, 2147483647, false);
     }
 
@@ -22,7 +22,7 @@ class lu extends lk {
     }
 
     final static void a(int param0, int param1) {
-        bv var2 = vl.field_n;
+        CipherPacketBuffer var2 = vl.field_n;
         var2.h(32161, param1);
         if (param0 < -99) {
           var2.b(1, 1);
@@ -42,7 +42,7 @@ class lu extends lk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3) {
-            qq.a(param0.field_l, param0.field_B + param1, param0.field_w, 94, param4 + param0.field_p);
+            StateChangeEvent.a(param0.field_l, param0.field_B + param1, param0.field_w, 94, param4 + param0.field_p);
           }
           super.a(param0, param1, -120, param3, param4);
           if (param2 <= -79) {

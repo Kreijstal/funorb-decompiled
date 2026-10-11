@@ -29,7 +29,7 @@ final class ab {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           for (var2_int = param1; var2_int < param0.length(); var2_int++) {
             var3 = param0.charAt(var2_int);
@@ -59,11 +59,11 @@ final class ab {
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
-        wk var10 = null;
-        wk var11 = null;
+        RgbSprite var10 = null;
+        RgbSprite var11 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           param1 = param1 | param1 << 8;
           var4_int = param1 >> 1 ^ param1;

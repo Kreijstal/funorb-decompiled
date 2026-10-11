@@ -8,7 +8,7 @@ final class t {
     static int field_e;
     static je field_g;
     static byte[] field_b;
-    static wk[] field_d;
+    static RgbSprite[] field_d;
 
     public static void a(int param0) {
         field_d = null;
@@ -37,7 +37,7 @@ final class t {
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 == null) {
             stackIn_3_0 = -1;

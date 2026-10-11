@@ -10,7 +10,7 @@ final class rk {
     static int field_D;
     private ft field_b;
     private int field_g;
-    private wk[] field_X;
+    private RgbSprite[] field_X;
     private hh field_hb;
     private int field_cb;
     private int field_bb;
@@ -31,7 +31,7 @@ final class rk {
     private hr field_fb;
     private hr field_S;
     private ft field_K;
-    private jd field_q;
+    private Unit field_q;
     private int field_m;
     static String field_gb;
     private String field_k;
@@ -46,10 +46,10 @@ final class rk {
     private int field_e;
     private ft field_V;
     private hr field_v;
-    private jd field_W;
+    private Unit field_W;
     private ft field_C;
     private hr field_s;
-    private jd field_d;
+    private Unit field_d;
     private int field_l;
     private boolean field_I;
     private ft field_R;
@@ -91,7 +91,7 @@ final class rk {
         int var8;
         int var9;
         int var10;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null == this.field_H) {
           return;
         }
@@ -139,12 +139,12 @@ final class rk {
     final static String c(int param0) {
         int var5 = 0;
         String var6 = null;
-        int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
-        ic var1 = rd.field_j;
+        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        GameplayController var1 = rd.field_j;
         if (var1 == null) {
           return "No game in progress.";
         }
-        String[] var2 = var1.field_xb.e(26524);
+        String[] var2 = var1.battlefield.e(26524);
         if (param0 != -29288) {
           field_B = -83;
         }
@@ -161,7 +161,7 @@ final class rk {
         this.field_S = null;
         this.field_S = new hr(18);
         if (param0 > -101) {
-          this.field_W = (jd) null;
+          this.field_W = (Unit) null;
         }
     }
 
@@ -256,7 +256,7 @@ final class rk {
     private final void a(byte param0, int param1, boolean param2, boolean param3) {
         int var5;
         int var6;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.p(31559);
         if (param3) {
           this.field_o = true;
@@ -292,7 +292,7 @@ final class rk {
     private final void m(int param0) {
         int var2 = 0;
         int var3;
-        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_f = -1;
         if (null == this.field_X) {
           return;
@@ -317,7 +317,7 @@ final class rk {
         int var9;
         int var10;
         String[] var11;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_N >= 0 &&
           this.field_N < this.field_p) {
           if (null == up.field_b[this.field_N]) {
@@ -333,10 +333,10 @@ final class rk {
             return;
           }
           var4 = up.field_c[this.field_N];
-          if (null == go.field_f[this.field_N]) {
+          if (null == TeamRoster.field_f[this.field_N]) {
             return;
           }
-          var5 = go.field_f[this.field_N];
+          var5 = TeamRoster.field_f[this.field_N];
           if (da.field_a[this.field_N] == null) {
             return;
           }
@@ -450,7 +450,7 @@ final class rk {
         int var8;
         int var9;
         int var10;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param4 == -1) {
           return;
         }
@@ -554,7 +554,7 @@ final class rk {
         int var3 = this.field_Z.field_n;
         int var4 = this.field_n.field_k - var2;
         int var5 = -var3 + this.field_n.field_n;
-        qn.f(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, this.field_cb);
+        SoftwareRaster.f(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, this.field_cb);
         fe.b(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, io.field_m, nd.field_b, this.field_A, this.field_e);
         int var6 = this.field_Z.field_n;
         int var7 = this.field_n.field_n;
@@ -566,7 +566,7 @@ final class rk {
           var9.length() == 0) {
           return;
         }
-        int[] var12 = this.field_P ? ci.field_e : nd.field_b;
+        int[] var12 = this.field_P ? TutorialController.field_e : nd.field_b;
         int[] var11 = var12;
         int[] var10 = var11;
         fe.c(var9, db.a(true, this.field_F.field_k), u.a(var3, (byte) 94), var12, true);
@@ -578,7 +578,7 @@ final class rk {
         int var3;
         int var4;
         int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_C = new ft(25, 33);
         this.field_V = new ft(614, 446);
         this.field_A = 0;
@@ -638,31 +638,31 @@ final class rk {
         this.j((byte) -7);
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, jd param5, jd param6, int param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, Unit param5, Unit param6, int param7) {
         int var9_int = 0;
-        int var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         uf.field_j.b();
-        qn.b();
+        SoftwareRaster.b();
         fe.b(0, 0, 134, 61, io.field_m, nd.field_b, 0, 0);
         qt.field_e.b(2, 2);
-        qn.b(5, 5, 124, 18, 0, 192);
+        SoftwareRaster.b(5, 5, 124, 18, 0, 192);
         if (param4 < 70) {
           return;
         }
         try {
-          qn.b(5, 25, 30, 30, 0, 192);
-          en.field_E.b(dn.field_Pb[param5.field_N], 10, 17, op.field_c[0][param5.field_O], -1);
-          en.field_E.a(param5.field_A + param5.field_Y + "/" + param5.field_t, 126, 18, op.field_c[0][param5.field_O], -1);
-          if (param5.field_O == param2) {
-            qn.b(99, 25, 30, 30, 0, 128);
-            qn.b(52, 25, 30, 30, 0, 128);
+          SoftwareRaster.b(5, 25, 30, 30, 0, 192);
+          en.field_E.b(dn.field_Pb[param5.unitType], 10, 17, op.field_c[0][param5.ownerPlayer], -1);
+          en.field_E.a(param5.field_A + param5.strength + "/" + param5.maximumStrength, 126, 18, op.field_c[0][param5.ownerPlayer], -1);
+          if (param5.ownerPlayer == param2) {
+            SoftwareRaster.b(99, 25, 30, 30, 0, 128);
+            SoftwareRaster.b(52, 25, 30, 30, 0, 128);
             var9_int = param5.l(-27014);
             cp.field_e[eb.a((byte) -126, ~var9_int & 3)].a(56, 25);
           } else {
             if (param6 == null) {
-              qn.b(99, 25, 30, 30, 0, 128);
+              SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             } else {
-              qn.b(37, 25, 92, 30, 0, 128);
+              SoftwareRaster.b(37, 25, 92, 30, 0, 128);
               ro.field_rb[param6.g(0)].a(43, 32);
               sg.field_b[this.a(param6.g(0), (byte) -6, param5.g(0))].a(75, 32);
             }
@@ -808,7 +808,7 @@ final class rk {
         var3 = this.field_R.field_n;
         var4 = this.field_b.field_k - var2;
         var5 = this.field_b.field_n - var3;
-        qn.b(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, this.field_A, this.field_e);
+        SoftwareRaster.b(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, this.field_A, this.field_e);
         var6 = this.field_R.field_n;
         if (param0 != 10) {
           this.j(76);
@@ -820,7 +820,7 @@ final class rk {
         var2Lifetime1 = this.field_bb;
         var13 = this.field_k;
         if (this.field_j) {
-          stackIn_5_0 = ci.field_e;
+          stackIn_5_0 = TutorialController.field_e;
         } else {
           stackIn_5_0 = nd.field_b;
         }
@@ -834,7 +834,7 @@ final class rk {
           fe.a(var13, db.a(true, var2Lifetime1), u.a(var3Lifetime1, (byte) 94), var17, true);
         }
         if (this.field_Q) {
-          stackIn_12_0 = ci.field_e;
+          stackIn_12_0 = TutorialController.field_e;
         } else {
           stackIn_12_0 = nd.field_b;
         }
@@ -851,7 +851,7 @@ final class rk {
         }
         var2Lifetime3 = this.field_F.field_k;
         var9 = qk.a(this.field_p, -2823, this.field_N);
-        fe.c(var9, db.a(true, var2Lifetime3), u.a(var3Lifetime1, (byte) 94), ci.field_e, true);
+        fe.c(var9, db.a(true, var2Lifetime3), u.a(var3Lifetime1, (byte) 94), TutorialController.field_e, true);
     }
 
     private final int d(int param0) {
@@ -865,7 +865,7 @@ final class rk {
         if (null != this.field_v) {
           this.field_v.a(db.a(true, 40 + param1), u.a(param2 + 50, (byte) 94), (byte) -117);
           this.field_v.a((byte) -72, false);
-          nb.a(db.a(true, param1), u.a(param2 + 38, (byte) 94), (byte) -97, (jd) null);
+          nb.a(db.a(true, param1), u.a(param2 + 38, (byte) 94), (byte) -97, (Unit) null);
         }
         if (param0 != 50) {
           return;
@@ -904,7 +904,7 @@ final class rk {
         int var6;
         int var7;
         int var8;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 != 16) {
           this.field_F = (ft) null;
         }
@@ -946,7 +946,7 @@ final class rk {
         return new ft(0, 0);
     }
 
-    private final jd b(int param0, int param1, int param2, int param3) {
+    private final Unit b(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         if (~param3 > param1) {
@@ -958,10 +958,10 @@ final class rk {
         if (param0 < 0) {
           return null;
         }
-        if (param0 >= bw.field_m.length) {
+        if (param0 >= bw.unitDefinitions.length) {
           return null;
         }
-        int var7 = bw.field_m[param0][4];
+        int var7 = bw.unitDefinitions[param0][4];
         int var8 = -1 + var7;
         if (var8 <= 0) {
           var8 = 1;
@@ -970,7 +970,7 @@ final class rk {
         int var10 = 0;
         Object var11 = null;
         int var12 = 1;
-        jd var13 = new jd(var5, var6, param0, param3, var7, var8, var9, 0, var10, (ha) (var11), 0, 0, -1, var12 != 0, 0);
+        Unit var13 = new Unit(var5, var6, param0, param3, var7, var8, var9, 0, var10, (Battlefield) (var11), 0, 0, -1, var12 != 0, 0);
         return var13;
     }
 
@@ -1019,7 +1019,7 @@ final class rk {
         return (nr.field_e.field_y >> 2) - nr.field_e.field_L + nr.field_e.field_v + (-(nr.field_e.field_H >> 1) + 3);
     }
 
-    private final void a(wk param0, int param1, int param2, wk param3, int param4, int param5) {
+    private final void a(RgbSprite param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
         RuntimeException stackIn_30_0 = null;
@@ -1041,17 +1041,17 @@ final class rk {
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
-        wk var19 = null;
-        wk var20 = null;
+        RgbSprite var19 = null;
+        RgbSprite var20 = null;
         int var21 = 0;
         int var22 = 0;
-        wk var23 = null;
+        RgbSprite var23 = null;
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
         int var27 = 0;
         int var8Lifetime1;
-        var27 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var27 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 >= 0 &&
             param1 < ue.field_k.length &&
@@ -1060,9 +1060,9 @@ final class rk {
             if (param3 != null &&
               param0 != null &&
               this.field_J != null) {
-              qn.b(this.field_J);
+              SoftwareRaster.b(this.field_J);
               param3.b();
-              qn.b();
+              SoftwareRaster.b();
               var7_int = this.field_hb.a(-122) ? 1 : 0;
               var8 = this.field_hb.c(-1953891327);
               var9 = this.field_hb.field_b;
@@ -1102,15 +1102,15 @@ final class rk {
               var23 = gt.field_c[1 + param1];
               var23.g(var21 - var17, var22 - var18);
               so.field_b.a(5605);
-              qn.a(this.field_J);
-              qn.b(this.field_J);
+              SoftwareRaster.a(this.field_J);
+              SoftwareRaster.b(this.field_J);
               param0.b();
-              qn.b();
+              SoftwareRaster.b();
               var25 = param0.field_A;
               var26 = param0.field_x;
               param3.d(param5, param2, var25, var26);
               so.field_b.a(5605);
-              qn.a(this.field_J);
+              SoftwareRaster.a(this.field_J);
               fe.a(param0);
               param0.a();
               return;
@@ -1157,7 +1157,7 @@ final class rk {
         return null;
     }
 
-    private final wk b(int param0, int param1) {
+    private final RgbSprite b(int param0, int param1) {
         if (null == this.field_X) {
           return null;
         }
@@ -1168,7 +1168,7 @@ final class rk {
           return null;
         }
         if (param0 != 20255) {
-          return (wk) null;
+          return (RgbSprite) null;
         }
         return this.field_X[param1];
     }
@@ -1227,7 +1227,7 @@ final class rk {
         return new ft(var2, var3);
     }
 
-    private final ft a(byte param0, int param1, int param2, wk param3, int param4, ru param5) {
+    private final ft a(byte param0, int param1, int param2, RgbSprite param3, int param4, ru param5) {
         Object stackIn_4_0 = null;
         ft stackIn_8_0 = null;
         ft stackIn_15_0 = null;
@@ -1244,7 +1244,7 @@ final class rk {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var7_int = -82 % ((param0 + 58) / 54);
           if (param3 == null &&
@@ -1314,17 +1314,17 @@ final class rk {
 
     final static void e(int param0) {
         int var2 = 122 % ((param0 + 31) / 56);
-        bj var1 = (bj) (jm.field_o.e((byte) 126));
+        bj var1 = (bj) (jm.field_o.first((byte) 126));
         if (var1 == null) {
           dj.a((byte) -128);
           return;
         }
-        bv var3 = mg.field_e;
+        CipherPacketBuffer var3 = mg.field_e;
         var3.i(1);
         var3.i(1);
         var3.i(1);
         var3.i(1);
-        var1.d(-115);
+        var1.unlink(-115);
     }
 
     private final int i(int param0) {
@@ -1359,7 +1359,7 @@ final class rk {
         }
     }
 
-    private final ft a(int param0, int param1, int param2, int param3, wk param4) {
+    private final ft a(int param0, int param1, int param2, int param3, RgbSprite param4) {
         Object stackIn_2_0 = null;
         ft stackIn_6_0 = null;
         ft stackIn_12_0 = null;
@@ -1466,7 +1466,7 @@ final class rk {
         int var13;
         String var14;
         int var11Lifetime1;
-        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (nr.field_c != null &&
           param0 >= 0 &&
           param0 < nr.field_c.length &&
@@ -1717,7 +1717,7 @@ final class rk {
           var8 == null) {
           return null;
         }
-        return this.a((byte) 114, param3, param5, (wk) (var7), param0, (ru) (var8));
+        return this.a((byte) 114, param3, param5, (RgbSprite) (var7), param0, (ru) (var8));
     }
 
     final int g(int param0, int param1) {
@@ -1807,7 +1807,7 @@ final class rk {
         if (this.field_S != null) {
           this.field_S.a(db.a(true, 40 + param2), u.a(90 + param0, (byte) 94), (byte) -3);
           this.field_S.a((byte) -72, false);
-          eu.a(-10, u.a(38 + param0, (byte) 94), db.a(true, param2), (jd) null);
+          eu.a(-10, u.a(38 + param0, (byte) 94), db.a(true, param2), (Unit) null);
         }
     }
 
@@ -1896,8 +1896,8 @@ final class rk {
         int var6;
         int var8;
         int var9;
-        wk var10;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        RgbSprite var10;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (null != this.field_X &&
           this.field_X.length == 3 &&
           this.field_N == this.field_f) {
@@ -1930,15 +1930,15 @@ final class rk {
           if (stackIn_28_0 <= stackIn_28_1) {
             if (var2 > 0 &&
               var3 > 0) {
-              var10 = new wk(var2, var3);
+              var10 = new RgbSprite(var2, var3);
               var5 = 3 * var2 >> 2;
               if (!param0) {
                 this.field_v = (hr) null;
               }
-              this.field_X = new wk[3];
+              this.field_X = new RgbSprite[3];
               var6 = var3 * 3 >> 2;
               for (var7 = 0; this.field_X.length > var7; var7++) {
-                this.field_X[var7] = new wk(var5, var6);
+                this.field_X[var7] = new RgbSprite(var5, var6);
                 var8 = var7;
                 if (this.field_N == 13) {
                   var8 = this.field_X.length + var7;
@@ -1990,7 +1990,7 @@ final class rk {
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 <= 17) {
             this.field_N = 84;
@@ -2051,7 +2051,7 @@ final class rk {
         int var6Lifetime2;
         int var7Lifetime1;
         int var6Lifetime3;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param1 >= 0 &&
           param1 <= 1) {
           boolean decompiledFrameRemainder0 = true;
@@ -2086,7 +2086,7 @@ final class rk {
             this.a(7 * (var10.field_n >> 3) + param2, 88, this.field_h, (var10.field_k >> 1) + param0);
             var6Lifetime1 = ri.field_c[0];
             var7 = 0;
-            this.a(var7, param0, this.field_d.field_O, var6Lifetime1, 110, this.field_d, this.field_d, param2);
+            this.a(var7, param0, this.field_d.ownerPlayer, var6Lifetime1, 110, this.field_d, this.field_d, param2);
             return;
           }
           if (1 == param1 &&
@@ -2099,7 +2099,7 @@ final class rk {
             this.a(7 * (var9.field_n >> 3) + param2, 57, this.field_M, param0 + (var9.field_k >> 1));
             var6Lifetime2 = ri.field_c[0];
             var7Lifetime1 = 0;
-            this.a(var7Lifetime1, param0, this.field_d.field_O, var6Lifetime2, 102, this.field_q, this.field_d, param2);
+            this.a(var7Lifetime1, param0, this.field_d.ownerPlayer, var6Lifetime2, 102, this.field_q, this.field_d, param2);
           }
           return;
         }
@@ -2107,11 +2107,11 @@ final class rk {
 
     private final boolean c(int param0, int param1) {
         ft discarded$1 = null;
-        wk var4;
+        RgbSprite var4;
         boolean stackIn_8_0 = false;
         if (param1 != 256) {
-          var4 = (wk) null;
-          discarded$1 = this.a(-114, 69, 36, -82, (wk) null);
+          var4 = (RgbSprite) null;
+          discarded$1 = this.a(-114, 69, 36, -82, (RgbSprite) null);
         }
         stackIn_8_0 = (param0 == -1) || (param0 == 0) || !(param0 <= 0);
         return stackIn_8_0;
@@ -2215,7 +2215,7 @@ final class rk {
         int var18 = 0;
         int var19 = 0;
         int var18Lifetime1;
-        var19 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param5 > -111) {
             stackIn_3_0 = 69;
@@ -2343,7 +2343,7 @@ final class rk {
           int var6_intLifetime1;
           int var6_intLifetime2;
           int var8Lifetime1;
-          var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+          var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             if (null == am.field_z &&
               !tb.a(param5, 0)) {
@@ -2357,7 +2357,7 @@ final class rk {
               } else {
                 fu.field_g = ml.a(false, param4, (byte) 10, param3);
               }
-              vl.field_n.field_q = 0;
+              vl.field_n.position = 0;
               vl.field_n.b(1, 14);
               vl.field_n.b(param0 ^ -54, fu.field_g.a((byte) -16).field_c);
               hb.$cfr$intArgs$a$e9dea5688aa5(67, -1);
@@ -2373,12 +2373,12 @@ final class rk {
               } else {
                 ov.field_g = mh.field_a;
               }
-              mg.field_e.field_q = 0;
+              mg.field_e.position = 0;
             }
             if (mh.field_a == ov.field_g &&
               es.a(-115, 8)) {
               ts.field_h = mg.field_e.j((byte) -2);
-              mg.field_e.field_q = 0;
+              mg.field_e.position = 0;
               bk.a(param2, param5, fu.field_g, 0, param1);
               ov.field_g = jf.field_D;
             }
@@ -2386,7 +2386,7 @@ final class rk {
             if (ov.field_g == jf.field_D &&
               es.a(-90, 1)) {
               var6_intLifetime1 = mg.field_e.k(param0 + 53);
-              mg.field_e.field_q = 0;
+              mg.field_e.position = 0;
               gh.field_P = null;
               nm.field_o = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
@@ -2467,26 +2467,26 @@ final class rk {
               ov.field_g = kl.field_k;
               if (fu.field_g.a((byte) 50) != pt.field_db) {
                 if (fu.field_g.a((byte) -11) == fl.field_u) {
-                  ps.field_y.a(param0 - 84, ag.d((byte) -120));
+                  ps.field_y.a(param0 - 84, CombatEvent.d((byte) -120));
                 }
               } else {
-                vn.field_j.a(param0 - 84, ag.d((byte) -127));
+                vn.field_j.a(param0 - 84, CombatEvent.d((byte) -127));
               }
               ev.field_b = false;
               if (var6 != null) {
-                ph.a(var6, ag.d((byte) -117), false);
+                ph.a(var6, CombatEvent.d((byte) -117), false);
               }
               if (df.field_M <= 0 &&
                 !ul.field_m) {
                 try {
-                  lj.a("unzap", (byte) -52, ag.d((byte) -128));
+                  lj.a("unzap", (byte) -52, CombatEvent.d((byte) -128));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  lj.a(ag.d((byte) -115), "zap", new Object[]{lt.a(param0 + 53, dc.field_o)}, 106);
+                  lj.a(CombatEvent.d((byte) -115), "zap", new Object[]{lt.a(param0 + 53, dc.field_o)}, 106);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -2495,11 +2495,11 @@ final class rk {
               if (df.field_M > 0) {
                 aw.field_l = true;
               }
-              vl.field_n.a(ag.field_L, -106);
+              vl.field_n.a(CombatEvent.field_L, -106);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
-                ag.field_L[var8Lifetime1] = ag.field_L[var8Lifetime1] + 50;
+                CombatEvent.field_L[var8Lifetime1] = CombatEvent.field_L[var8Lifetime1] + 50;
               }
-              mg.field_e.a(ag.field_L, param0 - 66);
+              mg.field_e.a(CombatEvent.field_L, param0 - 66);
               stackIn_88_0 = nm.field_o;
               return stackIn_88_0;
             }
@@ -2522,8 +2522,8 @@ final class rk {
             }
             if (null == am.field_z) {
               if (ev.field_b) {
-                if (ca.b(0) <= 30000L) {
-                  lk.field_r = nw.field_y;
+                if (TileMetadata.b(0) <= 30000L) {
+                  lk.field_r = DamageEvent.field_y;
                 } else {
                   lk.field_r = gu.field_a;
                 }
@@ -2688,7 +2688,7 @@ final class rk {
         int var21Lifetime1;
         int var22Lifetime1;
         int var23Lifetime1;
-        var24 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var24 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var10_int = param8;
           if (param4 != 9) {
@@ -2842,8 +2842,8 @@ final class rk {
             param2 = param2 + var6;
             var7 = 42;
             var8 = 6;
-            qn.b(param0, param2, var7, var8, 16777215);
-            qn.f(param0 + 1, param2 + 1, -2 + var7, var8 - 2, 0);
+            SoftwareRaster.b(param0, param2, var7, var8, 16777215);
+            SoftwareRaster.f(param0 + 1, param2 + 1, -2 + var7, var8 - 2, 0);
             var9 = 0;
             if (this.field_L.field_f > 0) {
               var9 = 1 + this.field_L.field_a * (var7 - 2) / 100;
@@ -2854,7 +2854,7 @@ final class rk {
             if (var9 > var7 - 2) {
               var9 = var7 - 2;
             }
-            qn.f(param0 + 1, param2 + 1, var9, var8 - 2, op.field_c[0][param1]);
+            SoftwareRaster.f(param0 + 1, param2 + 1, var9, var8 - 2, op.field_c[0][param1]);
             return;
           }
           return;
@@ -2878,7 +2878,7 @@ final class rk {
         var3 = this.field_x.field_n;
         var4 = -var2 + this.field_K.field_k;
         var5 = -var3 + this.field_K.field_n;
-        fe.b(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, io.field_m, ci.field_e, this.field_A, this.field_e);
+        fe.b(db.a(true, var2), u.a(var3, (byte) 94), var4, var5, io.field_m, TutorialController.field_e, this.field_A, this.field_e);
         this.k(-107);
         this.l(param0 + 19);
         this.g((byte) 10);

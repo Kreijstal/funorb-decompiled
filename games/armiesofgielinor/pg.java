@@ -8,7 +8,7 @@ final class pg {
     static bq[] field_a;
     static int field_e;
     static hm field_d;
-    static wk field_c;
+    static RgbSprite field_c;
     static String[] field_b;
 
     final static boolean a(int param0, int param1) {
@@ -21,7 +21,7 @@ final class pg {
     final static qb a(int param0, int param1, boolean param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        int var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 < 0 ||
           param0 >= 9) {
           param0 = 0;
@@ -30,7 +30,7 @@ final class pg {
         int[] var11 = var13;
         int[] var10 = var11;
         int[] var4 = var10;
-        int var5 = var10[ns.a(false, var13.length, gg.field_J)];
+        int var5 = var10[AttackEvent.a(false, var13.length, gg.field_J)];
         if (var5 >= 0) {
           return ck.field_e[sf.field_P[param3]][var5];
         }

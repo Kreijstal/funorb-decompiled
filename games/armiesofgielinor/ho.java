@@ -10,7 +10,7 @@ final class ho {
     final static void a(int param0) {
         int var1 = 20 % ((param0 + 6) / 45);
         ud.field_X = null;
-        kr.field_C.a(123);
+        MoveEvent.field_C.a(123);
     }
 
     public final String toString() {

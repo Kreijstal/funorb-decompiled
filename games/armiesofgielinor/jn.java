@@ -7,7 +7,7 @@ final class jn {
     static int field_d;
     static String field_a;
     static String field_e;
-    static wk[][] field_b;
+    static RgbSprite[][] field_b;
 
     public static void a(int param0) {
         if (param0 > -94) {
@@ -15,7 +15,7 @@ final class jn {
         }
         field_a = null;
         field_f = null;
-        field_b = (wk[][]) null;
+        field_b = (RgbSprite[][]) null;
         field_e = null;
     }
 
@@ -33,7 +33,7 @@ final class jn {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10_ref = null;
-        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           while (true) {
             param5--;

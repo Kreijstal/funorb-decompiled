@@ -3,12 +3,12 @@
  */
 final class gt {
     static je[] field_b;
-    static wk[] field_c;
+    static RgbSprite[] field_c;
     static String field_g;
     static int field_i;
     static String field_a;
     static int[] field_d;
-    static wk field_e;
+    static RgbSprite field_e;
     static String field_h;
     static String[] field_f;
 
@@ -103,19 +103,19 @@ final class gt {
         }
     }
 
-    final static int[] a(int param0, vh param1) {
+    final static int[] a(int param0, PacketBuffer param1) {
         int var3 = 0;
         int[] var2 = null;
         RuntimeException var2_ref = null;
         int var4 = 0;
-        vh var5 = null;
+        PacketBuffer var5 = null;
         int[] var6 = null;
         int[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var6 = new int[6];
           var2 = var6;
@@ -123,8 +123,8 @@ final class gt {
             var6[var3] = param1.k(param0 + 2);
           }
           if (param0 != -2) {
-            var5 = (vh) null;
-            gt.a(115, (vh) null);
+            var5 = (PacketBuffer) null;
+            gt.a(115, (PacketBuffer) null);
           }
           stackIn_7_0 = var2;
           return stackIn_7_0;

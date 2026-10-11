@@ -11,8 +11,8 @@ final class wc extends nl {
     private int field_L;
     private boolean field_I;
     private int field_N;
-    static wk[] field_Q;
-    static wk field_J;
+    static RgbSprite[] field_Q;
+    static RgbSprite field_J;
     private int field_M;
 
     final boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
@@ -146,7 +146,7 @@ final class wc extends nl {
     final static void a(boolean param0, int param1) {
         td.a(param0, false, 108);
         if (param1 != -49) {
-          field_J = (wk) null;
+          field_J = (RgbSprite) null;
         }
     }
 
@@ -265,7 +265,7 @@ final class wc extends nl {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_long = (long)param1;
           var4 = param0.length();

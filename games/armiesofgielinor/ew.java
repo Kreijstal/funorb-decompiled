@@ -8,7 +8,7 @@ abstract class ew {
     static je field_d;
     static String field_c;
 
-    final static nj a(byte param0, wk param1) {
+    final static nj a(byte param0, RgbSprite param1) {
         int var9 = 0;
         int var19 = 0;
         nj stackIn_24_0 = null;
@@ -39,7 +39,7 @@ abstract class ew {
         int[] var23 = null;
         int var13Lifetime1;
         int var18Lifetime1;
-        var20 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = param1.field_y;
           var3 = param1.field_v;
@@ -112,8 +112,8 @@ abstract class ew {
         field_b = null;
         field_a = null;
         if (param0) {
-          wk var2 = (wk) null;
-          ew.a((byte) 24, (wk) null);
+          RgbSprite var2 = (RgbSprite) null;
+          ew.a((byte) 24, (RgbSprite) null);
         }
         field_e = null;
         field_d = null;
@@ -138,7 +138,7 @@ abstract class ew {
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
@@ -164,7 +164,7 @@ abstract class ew {
               return stackIn_17_0;
             }
           }
-          stackIn_20_0 = mb.a(var4[-1 + var4.length], -19);
+          stackIn_20_0 = SummonEvent.a(var4[-1 + var4.length], -19);
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

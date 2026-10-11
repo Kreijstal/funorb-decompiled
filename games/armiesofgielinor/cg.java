@@ -6,7 +6,7 @@ final class cg {
     static int[] field_b;
     private int field_l;
     private int[] field_e;
-    static at field_c;
+    static NodeDeque field_c;
     private int field_k;
     private int field_h;
     private int field_g;
@@ -19,11 +19,11 @@ final class cg {
     private final void a(int param0) {
         int var2 = 0;
         int var3 = 0;
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         ub.$cfr$intArgs$a$6d836999ad61(70, im.field_v[13]);
         for (var2 = param0; this.field_h > var2; var2++) {
           for (var3 = 0; var3 < this.field_f; var3++) {
-            this.field_e[var2 + this.field_h * var3] = qn.field_d[this.field_l + var2 + (this.field_k + var3) * qn.field_l];
+            this.field_e[var2 + this.field_h * var3] = SoftwareRaster.field_d[this.field_l + var2 + (this.field_k + var3) * SoftwareRaster.field_l];
           }
         }
     }
@@ -48,22 +48,22 @@ final class cg {
         int var8;
         int var9;
         int var10;
-        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 8) {
           cg.a((byte) -21);
         }
         for (var3 = 0; this.field_h > var3; var3++) {
           for (var4 = 0; this.field_f > var4; var4++) {
             var5 = this.field_h * var4 + var3;
-            var6 = this.field_l + (var3 + qn.field_l * (var4 + this.field_k));
+            var6 = this.field_l + (var3 + SoftwareRaster.field_l * (var4 + this.field_k));
             if (this.field_d[var5] > param1) {
               if (this.field_d[var5] <= 8 + param1) {
-                var7 = qn.field_d[var6];
+                var7 = SoftwareRaster.field_d[var6];
                 var8 = this.field_e[var5];
                 var9 = (-param1 + this.field_d[var5]) * 256 / 8;
-                qn.field_d[var6] = oe.c(oe.c(var9 * rn.a(var8, 255) + rn.a(var7, 255) * (-var9 + 256) >> 8, rn.a(var9 * (rn.a(var8, 65280) >> 8) + (-var9 + 256) * (rn.a(var7, 65280) >> 8), 65280)), rn.a((rn.a(var7, 16711680) >> 16) * (256 - var9) + (rn.a(var8, 16711680) >> 16) * var9 << 8, 16711851));
+                SoftwareRaster.field_d[var6] = oe.c(oe.c(var9 * rn.a(var8, 255) + rn.a(var7, 255) * (-var9 + 256) >> 8, rn.a(var9 * (rn.a(var8, 65280) >> 8) + (-var9 + 256) * (rn.a(var7, 65280) >> 8), 65280)), rn.a((rn.a(var7, 16711680) >> 16) * (256 - var9) + (rn.a(var8, 16711680) >> 16) * var9 << 8, 16711851));
               } else {
-                qn.field_d[var6] = this.field_e[var5];
+                SoftwareRaster.field_d[var6] = this.field_e[var5];
               }
             }
           }
@@ -111,7 +111,7 @@ final class cg {
     static {
         field_b = new int[]{2, 17, 18, 36, 37, 38, 6, 5, 9};
         field_i = "Hint: to start quickly, choose 'Don't mind' for as many options as you can!";
-        field_c = new at();
+        field_c = new NodeDeque();
         field_m = new boolean[]{false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, true, true, false, true, true, false, true, false, true, true, false, false, false, false, false, false, false, false, false, false, false, true, false, true, false, false, false, false, false, true, false, false, false, true, false};
     }
 }

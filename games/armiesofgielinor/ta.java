@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ta extends nl {
-    static at field_O;
+    static NodeDeque field_O;
     private int field_H;
     private int field_S;
     private String field_K;
@@ -13,7 +13,7 @@ final class ta extends nl {
     static String field_M;
     static je field_R;
     private boolean field_J;
-    private ka field_P;
+    private BitmapFont field_P;
 
     final String h(int param0) {
         int var2 = 0;
@@ -90,7 +90,7 @@ final class ta extends nl {
         }
     }
 
-    ta(int param0, int param1, int param2, int param3, kb param4, boolean param5, int param6, int param7, ka param8, int param9, String param10) {
+    ta(int param0, int param1, int param2, int param3, kb param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (kh) null, (qo) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -172,7 +172,7 @@ final class ta extends nl {
     }
 
     static {
-        field_O = new at();
+        field_O = new NodeDeque();
         field_Q = "To <%0>: ";
         field_L = false;
         field_M = "Unpacking music";

@@ -6,8 +6,8 @@ final class gh extends tj implements he {
     private int field_J;
     String field_I;
     private boolean field_F;
-    static wk field_M;
-    ka field_K;
+    static RgbSprite field_M;
+    BitmapFont field_K;
     private fw field_E;
     boolean field_H;
     pp field_O;
@@ -142,7 +142,7 @@ final class gh extends tj implements he {
           discarded$0 = this.a(-114, (String) null);
         }
         this.field_H = false;
-        this.field_Q.d(124);
+        this.field_Q.unlink(124);
     }
 
     public final void a(int param0, int param1, int param2, int param3, fw param4) {
@@ -153,7 +153,7 @@ final class gh extends tj implements he {
         RuntimeException var6 = null;
         try {
           if (param1 != 11) {
-            this.field_K = (ka) null;
+            this.field_K = (BitmapFont) null;
           }
           if (this.l(11180)) {
             this.k(-128);
@@ -230,9 +230,9 @@ final class gh extends tj implements he {
         int[] var17 = null;
         int[] var1Lifetime1;
         int var3Lifetime1;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (!as.field_B) {
+          if (!OwnerChangeEvent.field_B) {
             if (null == gu.field_b) {
               gu.field_b = jc.b(-1, 4);
             }
@@ -257,14 +257,14 @@ final class gh extends tj implements he {
                 var9++;
               }
               gu.field_b = null;
-              as.field_B = true;
-              jd.m(77);
+              OwnerChangeEvent.field_B = true;
+              Unit.m(77);
               if (rb.a(0, ei.field_e, 1)) {
-                rt.d((byte) 125);
+                RevivalEvent.d((byte) 125);
               }
             }
-            if (as.field_B) {
-              qj.h(-78);
+            if (OwnerChangeEvent.field_B) {
+              UpkeepEvent.h(-78);
               ws.b(true);
               if (tg.field_a == 9 &&
                 !io.a(i.field_Nb, (byte) 116)) {
@@ -379,7 +379,7 @@ final class gh extends tj implements he {
         int var7 = 0;
         kb var8 = null;
         int var6_intLifetime1;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (!this.a(false)) {
             return false;
@@ -489,7 +489,7 @@ final class gh extends tj implements he {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           param1 = param1.toLowerCase();
           for (var3_int = param0; this.field_O.field_W.length > var3_int; var3_int++) {
@@ -533,7 +533,7 @@ final class gh extends tj implements he {
         return super.h(param0 + 0);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, ka param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, nr param12, int param13, nr param14, int param15, int param16, int param17, nr param18, ka param19) {
+    final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, nr param12, int param13, nr param14, int param15, int param16, int param17, nr param18, BitmapFont param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -549,7 +549,7 @@ final class gh extends tj implements he {
         RuntimeException var20 = null;
         try {
           uk.field_s = param4;
-          ej.field_G = param19;
+          AiPlanner.field_G = param19;
           kq.a(param3, param17, (byte) 87, param10, param2);
           cv.a((byte) 123, param18, param5, param16);
           if (param11 != -99) {

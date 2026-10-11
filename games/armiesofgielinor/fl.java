@@ -7,7 +7,7 @@ final class fl {
     kh field_i;
     private int field_v;
     int field_x;
-    ka field_m;
+    BitmapFont field_m;
     static h field_u;
     kh field_j;
     static int field_e;
@@ -27,7 +27,7 @@ final class fl {
     kh field_q;
     static int[] field_f;
 
-    final static void a(ha param0, int param1) {
+    final static void a(Battlefield param0, int param1) {
         try {
           if (param1 >= -107) {
             field_f = (int[]) null;
@@ -42,7 +42,7 @@ final class fl {
         if (param3 < 44) {
           this.a(69, 37, 82, 84, -66);
         }
-        qn.h(param2, param4, param5, param1, param0);
+        SoftwareRaster.h(param2, param4, param5, param1, param0);
     }
 
     private final void a(int param0, int param1, int param2, String param3) {
@@ -54,15 +54,15 @@ final class fl {
           var5_int = this.field_m.a(param3);
           var6 = this.field_m.field_z + this.field_m.field_L;
           var7 = param1;
-          if (var5_int + (var7 - param0) > qn.field_l) {
-            var7 = -6 - var5_int + qn.field_l;
+          if (var5_int + (var7 - param0) > SoftwareRaster.field_l) {
+            var7 = -6 - var5_int + SoftwareRaster.field_l;
           }
           var8 = 32 + (param2 - this.field_m.field_z);
-          if (qn.field_g < var6 + (var8 + 6)) {
-            var8 = -6 - var6 + qn.field_g;
+          if (SoftwareRaster.field_g < var6 + (var8 + 6)) {
+            var8 = -6 - var6 + SoftwareRaster.field_g;
           }
-          qn.b(var7, var8, 6 + var5_int, var6 + 6, this.field_v);
-          qn.f(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_c);
+          SoftwareRaster.b(var7, var8, 6 + var5_int, var6 + 6, this.field_v);
+          SoftwareRaster.f(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_c);
           this.field_m.b(param3, var7 + 3, this.field_m.field_z + var8 + 3, this.field_v, -1);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "fl.J(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -73,8 +73,8 @@ final class fl {
         field_f = null;
         field_u = null;
         if (param0 <= 75) {
-          ha var2 = (ha) null;
-          fl.a((ha) null, -110);
+          Battlefield var2 = (Battlefield) null;
+          fl.a((Battlefield) null, -110);
         }
         field_l = null;
     }
@@ -129,7 +129,7 @@ final class fl {
         int var11Lifetime1;
         int var13Lifetime1;
         int var13Lifetime2;
-        var15 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = this.field_r + this.field_x;
           var6 = this.field_d + this.field_h;
@@ -137,7 +137,7 @@ final class fl {
           if (var7 == -1) {
             var7 = this.field_m.field_H + this.field_m.field_L;
           }
-          var8 = qn.field_l >> 2;
+          var8 = SoftwareRaster.field_l >> 2;
           var9 = this.field_m.a(param3);
           var10 = this.field_m.field_L + this.field_m.field_H;
           var11 = 1;
@@ -163,18 +163,18 @@ final class fl {
             }
           }
           var12 = param2;
-          if (qn.field_l < var5_int + var9 + var12) {
-            var12 = -var5_int + (qn.field_l - var9);
+          if (SoftwareRaster.field_l < var5_int + var9 + var12) {
+            var12 = -var5_int + (SoftwareRaster.field_l - var9);
           }
           if (!param0) {
             this.field_w = (kh) null;
           }
           var13Lifetime1 = 32 + param1 - this.field_m.field_z;
-          if (qn.field_g < var6 + var13Lifetime1 + var10) {
+          if (SoftwareRaster.field_g < var6 + var13Lifetime1 + var10) {
             var13Lifetime1 = -var10 + (param1 - var6);
           }
-          qn.b(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_s);
-          qn.f(var12 + 1, 1 + var13Lifetime1, var5_int + (var9 - 2), -2 + (var10 + var6), this.field_c);
+          SoftwareRaster.b(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_s);
+          SoftwareRaster.f(var12 + 1, 1 + var13Lifetime1, var5_int + (var9 - 2), -2 + (var10 + var6), this.field_c);
           this.field_m.a(param3, var12 + this.field_x, this.field_h + var13Lifetime1, var9, var10, this.field_v, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -197,7 +197,7 @@ final class fl {
     }
 
     final void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
-        qn.b(param1, param2, param5, param4, param6, param0);
+        SoftwareRaster.b(param1, param2, param5, param4, param6, param0);
         if (!param3) {
           fl.a((byte) 3);
         }
@@ -210,10 +210,10 @@ final class fl {
         }
     }
 
-    final void a(int param0, ka param1) {
+    final void a(int param0, BitmapFont param1) {
         lk var17 = null;
         ao var4 = null;
-        wk[] var5 = null;
+        RgbSprite[] var5 = null;
         nj var16 = null;
         nj var18 = null;
         int var7_int = 0;
@@ -222,15 +222,15 @@ final class fl {
         or discarded$0 = null;
         kp discarded$1 = null;
         ao var8 = null;
-        wk[] var9 = null;
-        wk[] var10 = null;
-        wk dupTemp$2 = null;
+        RgbSprite[] var9 = null;
+        RgbSprite[] var10 = null;
+        RgbSprite dupTemp$2 = null;
         ao var11 = null;
         ao var12 = null;
-        wk var13 = null;
+        RgbSprite var13 = null;
         ao var14 = null;
         ao var19 = null;
-        int var15 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         ao var14Lifetime1;
         ao var14Lifetime2;
         try {
@@ -253,13 +253,13 @@ final class fl {
           var4.a(0, (byte) -102).a(15658734, (byte) -108).a(ue.a(10066329, 8947848, 1, 7829367), 53);
           var4.a(1, (byte) -119).a(ue.a(10066329, 11184810, 1, 13421772), 31);
           var4.a(3, (byte) -128).a(ue.a(7829367, 8947848, 1, 10066329), -128).a(1, 1).a((byte) 81, 1);
-          var5 = new wk[9];
+          var5 = new RgbSprite[9];
           var16 = new nj(32, 32);
           var18 = var16;
           for (var7_int = 0; var7_int < var18.field_B.length; var7_int++) {
             var16.field_B[var7_int] = 1077952576;
           }
-          var5[4] = (wk) ((Object) var18);
+          var5[4] = (RgbSprite) ((Object) var18);
           var4.a(4, (byte) -105).a(true, (byte) 66).a(var5, param0 - 13421900);
           var4.a(5, (byte) -113).a(mg.a(65793, 0, (byte) -125, 0, 0), -126).a(true, (byte) 121).a(-1, (byte) -109);
           this.field_j = (kh) ((Object) var4);
@@ -277,10 +277,10 @@ final class fl {
           var8.a(0, (byte) -128).a(ue.a(7829367, 15658734, param0 ^ 13421773, 10066329), 36).a(1118481, (byte) 27).b(-1, param0 ^ 13421751);
           var8.a(4, (byte) -108).a(true, (byte) 104).a(var5, -126);
           this.field_w = (kh) ((Object) var8);
-          var9 = new wk[9];
-          var10 = new wk[9];
-          var9[4] = new wk(2, 1);
-          var10[4] = new wk(1, 2);
+          var9 = new RgbSprite[9];
+          var10 = new RgbSprite[9];
+          var9[4] = new RgbSprite(2, 1);
+          var10[4] = new RgbSprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_B = new int[]{6710886, 7829367};
           var10[4].field_B = new int[]{6710886, 7829367};
@@ -290,7 +290,7 @@ final class fl {
           var12.a(var10, 0, param0 - 13421779);
           this.field_k = (kh) ((Object) var12);
           this.field_p = (kh) ((Object) var4);
-          var13 = new wk(7, 4);
+          var13 = new RgbSprite(7, 4);
           var13.field_B = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, param0, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           this.field_a = 10;
           var14 = new ao(var4, true);

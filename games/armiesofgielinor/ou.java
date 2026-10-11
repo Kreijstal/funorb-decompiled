@@ -6,7 +6,7 @@ final class ou {
     static String field_f;
     static char[] field_a;
     static vo field_h;
-    private at[][] field_i;
+    private NodeDeque[][] field_i;
     private lo[] field_b;
     static String field_g;
     private kl[] field_e;
@@ -109,7 +109,7 @@ final class ou {
         bb var6 = null;
         lo var7 = null;
         int var8 = 0;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_i != null &&
             param2 >= 0 &&
@@ -159,7 +159,7 @@ final class ou {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_b = new lo[wn.field_eb.length];
           var2_int = 0;
@@ -202,17 +202,17 @@ final class ou {
         lo var7 = null;
         int var8 = 0;
         int var9 = 0;
-        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (null != this.field_i &&
             param3 >= 0 &&
             param3 < this.field_i.length &&
-            ns.field_A.length > param3) {
+            AttackEvent.field_A.length > param3) {
             if (null != this.field_i[param3] &&
               0 <= param2 &&
               param2 < this.field_i[param3].length) {
-              if (this.field_i.length == ns.field_A.length &&
-                ns.field_A[param3].length == this.field_i[param3].length) {
+              if (this.field_i.length == AttackEvent.field_A.length &&
+                AttackEvent.field_A[param3].length == this.field_i[param3].length) {
                 if (param3 == 1 &&
                   !this.field_d &&
                   df.field_M < 0) {
@@ -298,7 +298,7 @@ final class ou {
         int var28 = 0;
         int var29 = 0;
         int var30 = 0;
-        var30 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var30 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var7_int = 2147483647;
           var8 = -2147483648;
@@ -332,7 +332,7 @@ final class ou {
           var21 = tm.field_c;
           var22 = tm.field_j;
           var23 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var23 < param0.field_O) {
               var24 = param0.field_z[var23];
               var25 = param0.field_y[var23];
@@ -345,7 +345,7 @@ final class ou {
               if (var30 != 0) {
                 if (stackIn_59_0 > stackIn_59_1) {
                   if (var18 >= ArmiesOfGielinor.field_I.length) {
-                    break L2;
+                    break scanLoop1;
                   }
                   var19 = param0.field_l[var18];
                   var20 = param0.field_f[var18];
@@ -354,14 +354,14 @@ final class ou {
                   kb.field_m[var18] = var16 * var21 + var10 * var19 + var20 * var13 >> 16;
                   rj.field_Q[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> 16;
                   var18++;
-                  break L2;
+                  break scanLoop1;
                 }
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_59_0 > stackIn_59_1) {
                 ls.field_c[var23] = -2147483648;
               } else {
-                ca.field_f[var23] = var21 + var27 / var29;
+                TileMetadata.field_f[var23] = var21 + var27 / var29;
                 fa.field_k[var23] = var28 / var29 + var22;
                 ls.field_c[var23] = var29;
                 if (var29 > var8) {
@@ -489,17 +489,17 @@ final class ou {
         RuntimeException decompiledCaughtException = null;
         int stackIn_23_0Lifetime1;
         int stackIn_23_1Lifetime1;
-        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = -1;
           var4 = 0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var4 <= 1) {
               stackIn_31_0 = -1;
               stackIn_31_1 = ~var4;
               if (var6 != 0) {
-                break L0;
+                break scanLoop1;
               }
               if (stackIn_31_0 >= stackIn_31_1 &&
                 var4 < lp.field_a.length) {
@@ -521,7 +521,7 @@ final class ou {
                   var6 != 0);
                 if (decompiledFrameRemainder0) {
                   var4++;
-                  continue L0;
+                  continue scanLoop1;
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -560,7 +560,7 @@ final class ou {
           if (this.field_e != null &&
             this.field_e.length == 2) {
             if (param1 >= 0 &&
-              ns.field_A.length > param1) {
+              AttackEvent.field_A.length > param1) {
               var3_int = this.b(0, param1);
               if (~var3_int != param0 &&
                 var3_int != 1) {
@@ -589,19 +589,19 @@ final class ou {
     }
 
     private final void b(int param0) {
-        at[] array$1 = null;
+        NodeDeque[] array$1 = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.field_i = new at[ns.field_A.length][];
+          this.field_i = new NodeDeque[AttackEvent.field_A.length][];
           var2_int = 35 / ((70 - param0) / 47);
           var3 = 0;
-          while (var3 < ns.field_A.length) {
-            array$1 = new at[ns.field_A[var3].length];
+          while (var3 < AttackEvent.field_A.length) {
+            array$1 = new NodeDeque[AttackEvent.field_A[var3].length];
             this.field_i[var3] = array$1;
             var3++;
             if (var4 == 0) {
@@ -626,7 +626,7 @@ final class ou {
         int var7 = 0;
         int var8 = 0;
         RuntimeException decompiledCaughtException = null;
-        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 0 &&
             param1 != 1) {
@@ -645,9 +645,9 @@ final class ou {
           while (var4 < var3.length) {
             boolean decompiledFrameCompleted0 = true;
             var5 = var3[var4];
-            if (var5 >= 0 && (!(var5 >= ns.field_A.length) ||
+            if (var5 >= 0 && (!(var5 >= AttackEvent.field_A.length) ||
               var8 != 0)) {
-              var6 = ns.field_A[var5].length;
+              var6 = AttackEvent.field_A[var5].length;
               var7 = 0;
               while (var6 > var7) {
                 this.a(5301, var7, var5);
@@ -741,7 +741,7 @@ final class ou {
         byte[] var6 = null;
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
-        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4 = this.a(param0 ^ -5302, param2);
           if (param0 != 5301) {
@@ -750,13 +750,13 @@ final class ou {
           if (var4 == null) {
             return;
           }
-          this.field_i[param2][param1] = new at();
+          this.field_i[param2][param1] = new NodeDeque();
           var5 = 0;
-          while (ns.field_A[param2][param1].length > var5) {
-            var6 = var4.a(ns.field_A[param2][param1][var5], param0 - 5249, "");
+          while (AttackEvent.field_A[param2][param1].length > var5) {
+            var6 = var4.a(AttackEvent.field_A[param2][param1][var5], param0 - 5249, "");
             if (var6 != null && (var6.length != 0 ||
               var7 != 0)) {
-              this.field_i[param2][param1].a((byte) -119, (tc) (new lo(var5, var6)));
+              this.field_i[param2][param1].a((byte) -119, (IntrusiveNode) (new lo(var5, var6)));
             }
             var5++;
             if (var7 == 0) {

@@ -8,7 +8,7 @@ final class bo {
     private int[] field_h;
     static String field_c;
     private int[] field_d;
-    static wk field_b;
+    static RgbSprite field_b;
     static int[] field_g;
 
     final int a(byte param0, int param1) {
@@ -44,8 +44,8 @@ final class bo {
         if (param1 == 29) {
           return (-640 + so.field_b.field_a >> 1) + this.field_a[param0];
         }
-        vh var4 = (vh) null;
-        bo.a(-13, (vh) null, 83);
+        PacketBuffer var4 = (PacketBuffer) null;
+        bo.a(-13, (PacketBuffer) null, 83);
         return (-640 + so.field_b.field_a >> 1) + this.field_a[param0];
     }
 
@@ -56,7 +56,7 @@ final class bo {
         }
     }
 
-    final static ik a(int param0, vh param1, int param2) {
+    final static ik a(int param0, PacketBuffer param1, int param2) {
         al stackIn_16_0 = null;
         ra stackIn_21_0 = null;
         al stackIn_23_0 = null;
@@ -69,15 +69,15 @@ final class bo {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        vh var6 = null;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        PacketBuffer var6 = null;
+        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 != 4368051) {
-            var6 = (vh) null;
-            bo.a(-35, (vh) null, 62);
+            var6 = (PacketBuffer) null;
+            bo.a(-35, (PacketBuffer) null, 62);
           }
           var3_int = param1.e((byte) -104);
-          var4 = uc.field_d[var3_int][3];
+          var4 = uc.spellDefinitions[var3_int][3];
           if (var4 == 4) {
             stackIn_16_0 = new al(var3_int);
             return (ik) ((Object) stackIn_16_0);
@@ -92,7 +92,7 @@ final class bo {
             7 != var4) {
             return null;
           }
-          if (uc.field_d[var3_int][4] != 5) {
+          if (uc.spellDefinitions[var3_int][4] != 5) {
             stackIn_25_0 = new wa(var3_int, param1.k(param2 ^ 4368051), param1.k(0));
             return (ik) ((Object) stackIn_25_0);
           }
@@ -144,9 +144,9 @@ final class bo {
     }
 
     final static void a(boolean param0) {
-        tp.field_e = new at();
+        tp.field_e = new NodeDeque();
         if (!param0) {
-          field_b = (wk) null;
+          field_b = (RgbSprite) null;
         }
     }
 
