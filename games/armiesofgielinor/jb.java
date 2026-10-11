@@ -19,8 +19,8 @@ final class jb extends IntrusiveNode {
         if (param0 != 17023) {
           field_p = (int[]) null;
         }
-        if (ra.field_e != null) {
-          ra.field_e.field_h = false;
+        if (AreaSpell.field_e != null) {
+          AreaSpell.field_e.field_h = false;
         }
         ds.a(0, param0 ^ -16982);
     }
@@ -46,18 +46,18 @@ final class jb extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         hw var3 = null;
         RuntimeException var3_ref = null;
-        mn var4 = null;
+        SpellAreaSelection var4 = null;
         try {
           if (this.field_s != -1) {
             if (this.field_l == -1) {
-              param1.field_U.a(this.field_q, (byte) -116, this.field_s);
-              if (param1.field_U.field_m <= 0 &&
+              param1.field_U.reconstructPath(this.field_q, (byte) -116, this.field_s);
+              if (param1.field_U.pathLength <= 0 &&
                 this.field_k == -1) {
                 this.field_r = -2;
               }
               if (this.field_k != -1) {
-                param1.field_U.field_l = -this.field_s + this.field_k;
-                param1.field_U.field_j = this.field_o - this.field_q;
+                param1.field_U.targetDeltaX = -this.field_s + this.field_k;
+                param1.field_U.targetDeltaY = this.field_o - this.field_q;
               }
               var4 = param1.field_U.a(param1.field_z, 103);
               if (!param1.a(var4, -125)) {

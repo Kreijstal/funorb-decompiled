@@ -227,7 +227,7 @@ final class jr {
           vj.field_a = 0;
           be.field_s = -1;
           oo.field_a = 0;
-          al.field_g = -1;
+          GlobalSpell.field_g = -1;
           if (null == param1.field_fb) {
             param1.field_fb = new NodeDeque();
           }

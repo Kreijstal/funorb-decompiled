@@ -249,31 +249,31 @@ final class wm {
         int var4Lifetime1;
         if (param0 != 0) {
           wm.a(-77, -115, (byte) -120, -123);
-          if (null == ik.field_b) {
+          if (null == Spell.field_b) {
             return;
           }
-          var3 = ik.field_b.a(param2, (byte) -112);
+          var3 = Spell.field_b.a(param2, (byte) -112);
           if (var3 != -2) {
             if (var3 != -1) {
-              var4 = ik.field_b.o(0) ? 1 : 0;
-              fu.a(ik.field_b.k(1), var3, ik.field_b.field_Sb, 29231, var4 != 0, param1);
+              var4 = Spell.field_b.o(0) ? 1 : 0;
+              fu.a(Spell.field_b.k(1), var3, Spell.field_b.field_Sb, 29231, var4 != 0, param1);
             }
-            ik.field_b = null;
+            Spell.field_b = null;
             ot.g(76);
             return;
           }
           return;
         }
-        if (null == ik.field_b) {
+        if (null == Spell.field_b) {
           return;
         }
-        var3Lifetime1 = ik.field_b.a(param2, (byte) -112);
+        var3Lifetime1 = Spell.field_b.a(param2, (byte) -112);
         if (var3Lifetime1 != -2) {
           if (var3Lifetime1 != -1) {
-            var4Lifetime1 = ik.field_b.o(0) ? 1 : 0;
-            fu.a(ik.field_b.k(1), var3Lifetime1, ik.field_b.field_Sb, 29231, var4Lifetime1 != 0, param1);
+            var4Lifetime1 = Spell.field_b.o(0) ? 1 : 0;
+            fu.a(Spell.field_b.k(1), var3Lifetime1, Spell.field_b.field_Sb, 29231, var4Lifetime1 != 0, param1);
           }
-          ik.field_b = null;
+          Spell.field_b = null;
           ot.g(76);
           return;
         }

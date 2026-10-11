@@ -147,8 +147,8 @@ final class AiPlanner extends IntrusiveNode implements mm {
         return -3.4028234663852886e+38f;
     }
 
-    final boolean a(mn param0, int param1) {
-        bd var3 = null;
+    final boolean a(SpellAreaSelection param0, int param1) {
+        SpellAreaEffect var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -156,9 +156,9 @@ final class AiPlanner extends IntrusiveNode implements mm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != null) {
-            var3 = param0.a(58, this.battlefield);
+            var3 = param0.createEffect(58, this.battlefield);
             if (var3 != null) {
-              var3.a(64, this.battlefield);
+              var3.applyEffect(64, this.battlefield);
               return true;
             }
           }
@@ -980,7 +980,7 @@ final class AiPlanner extends IntrusiveNode implements mm {
         int var6 = 0;
         jb var7 = null;
         int var8_int = 0;
-        wa var8 = null;
+        UnitSpell var8 = null;
         int var9_int = 0;
         to var9 = null;
         float var10 = 0.0f;
@@ -1411,7 +1411,7 @@ final class AiPlanner extends IntrusiveNode implements mm {
                 }
                 case 68: {
                     this.battlefield.field_J = true;
-                    var8 = new wa(var4, var7.field_s, var7.field_q);
+                    var8 = new UnitSpell(var4, var7.field_s, var7.field_q);
                     var9 = new to(var8, -1, this.field_z);
                     this.a(var9, -126);
                     statePc = 69;
@@ -1507,7 +1507,7 @@ final class AiPlanner extends IntrusiveNode implements mm {
               this.a(3, -14092, var8.tileY * this.battlefield.mapWidth + var8.tileX, var8.tag, 1);
             }
             this.a(66, var8, 1);
-            this.field_m.a(this.field_n[var7.g(0)], 1, param0 - 19545, var8);
+            this.field_m.a(this.field_n[var7.getUnitCategory(0)], 1, param0 - 19545, var8);
             var8.field_X = false;
           }
         }
@@ -1553,7 +1553,7 @@ final class AiPlanner extends IntrusiveNode implements mm {
         }
         if (-3.4028234663852886e+38f != var2 &&
           this.field_M.field_k.field_r != -2 &&
-          this.field_M.field_o.packedLowFlags > 0) {
+          this.field_M.field_o.attacksRemaining > 0) {
           return;
         }
         this.field_M = (cl) (this.field_p.next((byte) 123));
@@ -1589,7 +1589,7 @@ final class AiPlanner extends IntrusiveNode implements mm {
           }
           if (var2.field_p == null) {
             var2.field_p = new cl(this, var2);
-            this.field_p.a(param0 + 873, var2.field_p);
+            this.field_p.addFirst(param0 + 873, var2.field_p);
           }
           var2 = (Unit) (this.battlefield.unitsByPlayer[this.field_z].next((byte) 123));
         }
@@ -1864,9 +1864,9 @@ final class AiPlanner extends IntrusiveNode implements mm {
         if (param2 != -14) {
           field_G = (BitmapFont) null;
         }
-        if (null != ik.field_d &&
+        if (null != Spell.field_d &&
           rs.field_q == 13) {
-          ik.field_d = null;
+          Spell.field_d = null;
           return true;
         }
         if (!hf.field_c) {
@@ -1917,11 +1917,11 @@ final class AiPlanner extends IntrusiveNode implements mm {
           return;
         }
         try {
-          var5_float = (float)param3.g((byte) 122);
+          var5_float = (float)param3.getEffectiveStrength((byte) 122);
           if (param3.hasMovementFlag1(false)) {
             var5_float = var5_float * this.field_P[59];
           }
-          this.field_m.a(param2 ^ -19507, param3.tileY, (float)param0 * var5_float, param1, param3.g(0), this.field_n, param3.tileX);
+          this.field_m.a(param2 ^ -19507, param3.tileY, (float)param0 * var5_float, param1, param3.getUnitCategory(0), this.field_n, param3.tileX);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "ej.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -1939,7 +1939,7 @@ final class AiPlanner extends IntrusiveNode implements mm {
         RuntimeException var3_ref = null;
         id var5 = null;
         int var6 = 0;
-        mn var7 = null;
+        SpellAreaSelection var7 = null;
         id[] var8 = null;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
@@ -1960,15 +1960,15 @@ final class AiPlanner extends IntrusiveNode implements mm {
             }
           }
           var3 = new cl(this, param0);
-          this.field_p.a((byte) -119, (IntrusiveNode) (var3));
+          this.field_p.addLast((byte) -119, (IntrusiveNode) (var3));
           if (param1 > -66) {
-            var7 = (mn) null;
-            this.a((mn) null, 49);
+            var7 = (SpellAreaSelection) null;
+            this.a((SpellAreaSelection) null, 49);
           }
           if (param0.objectiveId != 0 &&
-            null == this.field_I[param0.g(0)][-1 + param0.objectiveId]) {
+            null == this.field_I[param0.getUnitCategory(0)][-1 + param0.objectiveId]) {
             array$0 = new float[this.battlefield.tiles.length];
-            this.field_I[param0.g(0)][param0.objectiveId - 1] = array$0;
+            this.field_I[param0.getUnitCategory(0)][param0.objectiveId - 1] = array$0;
           }
           stackIn_16_0 = var3;
           return stackIn_16_0;
@@ -1999,7 +1999,7 @@ final class AiPlanner extends IntrusiveNode implements mm {
           this.field_z = param1;
           this.field_P = new float[62];
           AttackEvent.a(false, 3, li.field_n);
-          this.battlefield.unitObservers.a((byte) -119, (IntrusiveNode) (this));
+          this.battlefield.unitObservers.addLast((byte) -119, (IntrusiveNode) (this));
           aj.a(this.field_P, 117);
           this.field_u = param3;
           var5_int = 0;

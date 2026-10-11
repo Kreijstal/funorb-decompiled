@@ -139,7 +139,7 @@ final class qv implements pa {
               return false;
             }
             if (var8.unit.packedFlag256) {
-              var8.unit = var8.unit.b(false);
+              var8.unit = var8.unit.copyDetached(false);
               hs.b(-90, 29);
             }
             var8.unit.field_z = 1;
@@ -188,7 +188,7 @@ final class qv implements pa {
           for (var4 = 0; var4 < var2; var4++) {
             var5 = sf.field_P[var4];
             var6 = jq.field_I[var5];
-            bd.a(var8[var4], var6, var4, 2378077);
+            SpellAreaEffect.a(var8[var4], var6, var4, 2378077);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

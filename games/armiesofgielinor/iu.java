@@ -1607,9 +1607,9 @@ class iu {
     private final void c(int param0) {
         this.field_q.battlefield.tiles[9 + this.field_q.battlefield.mapWidth * 12].terrainType = 10;
         nk.a((byte) 106);
-        this.field_q.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new SummonEvent(0, 9, 12, -4, 1)));
-        this.field_q.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new SummonEvent(0, 15, 13, param0, 1)));
-        this.field_q.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new SummonEvent(5, 16, 17, 0, 1)));
+        this.field_q.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(0, 9, 12, -4, 1)));
+        this.field_q.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(0, 15, 13, param0, 1)));
+        this.field_q.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(5, 16, 17, 0, 1)));
         this.field_v = true;
     }
 
@@ -1710,7 +1710,7 @@ class iu {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (this.field_w == 5)) {
-                  fe.c(al.field_m, -120 + var2 - 10, var3 - 16, 0, true);
+                  fe.c(GlobalSpell.field_m, -120 + var2 - 10, var3 - 16, 0, true);
                   if (var5 != 0) {
                     fe.a(-5 - this.field_g + var2, -45 + var3, -10 + this.field_g, 30, il.field_s, jh.field_k, 0, 192, true);
                   }
@@ -1831,7 +1831,7 @@ class iu {
     }
 
     private final void d(int param0) {
-        this.field_q.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new SummonEvent(0, 3, 4, 5, 0, true)));
+        this.field_q.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(0, 3, 4, 5, 0, true)));
         int var2 = -44 % ((-70 - param0) / 43);
     }
 

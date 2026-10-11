@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pl extends bd {
+final class pl extends SpellAreaEffect {
     static boolean field_A;
     static String field_t;
     static RgbSprite[] field_x;
@@ -28,7 +28,7 @@ final class pl extends bd {
         }
     }
 
-    final void a(int param0, Battlefield param1) {
+    final void applyEffect(int obfuscationGuard, Battlefield battlefield) {
         RuntimeException var3 = null;
         Battlefield var4 = null;
         RuntimeException stackIn_13_0 = null;
@@ -37,25 +37,25 @@ final class pl extends bd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_u.unitType == 39) {
-            param1.pendingEvents.a((byte) -119, (IntrusiveNode) (new DeathEvent(this.field_u)));
+            battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeathEvent(this.field_u)));
           }
-          if (param0 != 64) {
+          if (obfuscationGuard != 64) {
             var4 = (Battlefield) null;
-            this.a(10, (Battlefield) null);
+            this.applyEffect(10, (Battlefield) null);
           }
           if (34 != this.field_u.unitType &&
             this.field_u.unitType != 7 &&
             17 != this.field_u.unitType) {
             return;
           }
-          param1.pendingEvents.a((byte) -119, (IntrusiveNode) (new DeployEvent(this.field_u.tileX, this.field_u.tileY, this.field_w)));
+          battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeployEvent(this.field_u.tileX, this.field_u.tileY, this.field_w)));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_13_0 = var3;
-          stackIn_13_1 = new StringBuilder().append("pl.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_13_1 = new StringBuilder().append("pl.C(").append(obfuscationGuard).append(',');
+          if (battlefield == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -77,7 +77,7 @@ final class pl extends bd {
         var5.field_p = param4;
         var5.field_k = param3;
         var5.field_r = param1;
-        lf.field_c.a((byte) -119, (IntrusiveNode) (var5));
+        lf.field_c.addLast((byte) -119, (IntrusiveNode) (var5));
         gn.a(param2, var5, 0);
         if (param0 == 34) {
           return var5;

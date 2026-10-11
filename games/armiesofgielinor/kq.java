@@ -65,8 +65,8 @@ class kq extends fw {
             return (String) (stackIn_7_0);
           }
           if (uc.spellDefinitions[param2][4] == 1 &&
-            var8.c((byte) 81) > 0) {
-            var6 = dl.field_e[var7.c((byte) 81)][var7.j(20640)];
+            var8.getEquipmentId((byte) 81) > 0) {
+            var6 = dl.field_e[var7.getEquipmentId((byte) 81)][var7.getEquipmentCategory(20640)];
             array$0 = new String[3];
             stackIn_13_0 = 4800;
             stackIn_13_1 = rb.field_c;
@@ -90,11 +90,11 @@ class kq extends fw {
             return stackIn_18_0;
           }
           if (uc.spellDefinitions[param2][4] == 0 &&
-            0 != var8.field_P) {
-            var6Lifetime1 = pr.field_f[var7.field_P];
-            if (7 != var8.field_P &&
-              var8.field_P != 8) {
-              var6Lifetime1 = var6Lifetime1 + (-1 + var8.field_o);
+            0 != var8.statusEffectType) {
+            var6Lifetime1 = pr.field_f[var7.statusEffectType];
+            if (7 != var8.statusEffectType &&
+              var8.statusEffectType != 8) {
+              var6Lifetime1 = var6Lifetime1 + (-1 + var8.statusEffectValue);
             }
             array$1 = new String[3];
             stackIn_29_0 = 4800;
@@ -122,10 +122,10 @@ class kq extends fw {
             stackIn_48_0 = null;
             return (String) (stackIn_48_0);
           }
-          if (var8.field_ab == 0) {
+          if (var8.accessoryType == 0) {
             return null;
           }
-          var6Lifetime2 = bw.field_f[var7.field_ab];
+          var6Lifetime2 = bw.field_f[var7.accessoryType];
           array$2 = new String[3];
           stackIn_41_0 = 4800;
           stackIn_41_1 = io.field_u;

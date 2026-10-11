@@ -195,7 +195,7 @@ final class id {
                 }
                 var2 = bb.a(50, "mu_x_withdrew_request");
                 if (var2 != null) {
-                  ik.field_a = uu.a(var2, (byte) 52);
+                  Spell.field_a = uu.a(var2, (byte) 52);
                 }
                 var2 = bb.a(50, "mu_x_removed");
                 if (null != var2) {
@@ -235,7 +235,7 @@ final class id {
                 }
                 var2 = bb.a(50, "mu_all_players_have_left");
                 if (null != var2) {
-                  ra.field_i = uu.a(var2, (byte) 37);
+                  AreaSpell.field_i = uu.a(var2, (byte) 37);
                 }
                 var2 = bb.a(50, "mu_lobby_name");
                 if (var2 != null) {
@@ -471,7 +471,7 @@ final class id {
                 }
                 var2 = bb.a(50, "you_have_been_removed_from_xs_game");
                 if (var2 != null) {
-                  ra.field_l = uu.a(var2, (byte) 121);
+                  AreaSpell.field_l = uu.a(var2, (byte) 121);
                 }
                 var2 = bb.a(50, "your_rating_is_x");
                 if (null != var2) {
@@ -495,7 +495,7 @@ final class id {
                 }
                 var2 = bb.a(50, "searching_for_opponent_singular");
                 if (null != var2) {
-                  bd.field_l = uu.a(var2, (byte) 72);
+                  SpellAreaEffect.field_l = uu.a(var2, (byte) 72);
                 }
                 var2 = bb.a(50, "searching_for_opponents_plural");
                 if (null != var2) {
@@ -535,7 +535,7 @@ final class id {
                 }
                 var2 = bb.a(50, "join_requests_many");
                 if (null != var2) {
-                  wa.field_h = uu.a(var2, (byte) 20);
+                  UnitSpell.field_h = uu.a(var2, (byte) 20);
                 }
                 var2 = bb.a(50, "xs_game");
                 if (var2 != null) {
@@ -767,7 +767,7 @@ final class id {
                 }
                 var2 = bb.a(param0 + 132, "thisisrunescapeclan");
                 if (var2 != null) {
-                  ra.field_f = uu.a(var2, (byte) -121);
+                  AreaSpell.field_f = uu.a(var2, (byte) -121);
                 }
                 var2 = bb.a(param0 + 132, "thisisrunescapeclan_notowner");
                 if (null != var2) {
@@ -835,7 +835,7 @@ final class id {
                 }
                 var2 = bb.a(param0 ^ -100, "gameopt_youneedratedgames");
                 if (var2 != null) {
-                  al.field_j = uu.a(var2, (byte) -108);
+                  GlobalSpell.field_j = uu.a(var2, (byte) -108);
                 }
                 var2 = bb.a(50, "gameopt_playerneeds1ratedgame");
                 if (null != var2) {
@@ -2023,7 +2023,7 @@ final class id {
                 }
                 var2 = bb.a(50, "endgame");
                 if (var2 != null) {
-                  bd.field_k = uu.a(var2, (byte) 101);
+                  SpellAreaEffect.field_k = uu.a(var2, (byte) 101);
                 }
                 var2 = bb.a(param0 + 132, "endtutorial");
                 if (var2 != null) {

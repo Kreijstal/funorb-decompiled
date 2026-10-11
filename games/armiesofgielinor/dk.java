@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dk extends bd {
+final class dk extends SpellAreaEffect {
     static RgbSprite field_v;
     static vk field_u;
     static String[] field_s;
@@ -114,14 +114,14 @@ final class dk extends bd {
         }
     }
 
-    final void a(int param0, Battlefield param1) {
+    final void applyEffect(int obfuscationGuard, Battlefield battlefield) {
         try {
-          if (param0 != 64) {
+          if (obfuscationGuard != 64) {
             int[] var4 = (int[]) null;
             dk.a(12, -29, (byte) 33, (int[]) null, (int[]) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "dk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "dk.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 

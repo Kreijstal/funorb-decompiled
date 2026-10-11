@@ -15,7 +15,7 @@ final class bn {
           if (param0 != -24) {
             field_a = (kk[]) null;
           }
-          wa.field_e = param2;
+          UnitSpell.field_e = param2;
           TelepopEvent.field_C = param1;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "bn.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -88,8 +88,8 @@ final class bn {
         int var5;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         bh.d(false);
-        if (al.field_g >= 0) {
-          t.field_g.field_X = fo.a(4800, AttackEvent.field_F, new String[]{Integer.toString(al.field_g)});
+        if (GlobalSpell.field_g >= 0) {
+          t.field_g.field_X = fo.a(4800, AttackEvent.field_F, new String[]{Integer.toString(GlobalSpell.field_g)});
           stackIn_56_0 = no.field_T;
           stackIn_56_1 = true;
           stackIn_57_2 = (param0) && (!param1) && (!bw.field_g) && (vu.field_M == null) && (null == no.field_K);
@@ -102,7 +102,7 @@ final class bn {
           stackIn_68_1 = true;
           stackIn_69_2 = (param0) && (!param1) && (bw.field_g);
           ((je) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_69_2);
-          TrinketUseEvent.field_E.field_a.l(10000);
+          SpellCastEvent.field_E.field_a.l(10000);
           if (cp.field_d.field_yb != 0) {
             cg.field_a = true;
           }
@@ -139,7 +139,7 @@ final class bn {
           stackIn_19_1 = true;
           stackIn_20_2 = (param0) && (!param1) && (bw.field_g);
           ((je) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
-          TrinketUseEvent.field_E.field_a.l(10000);
+          SpellCastEvent.field_E.field_a.l(10000);
           if (cp.field_d.field_yb != 0) {
             cg.field_a = true;
           }

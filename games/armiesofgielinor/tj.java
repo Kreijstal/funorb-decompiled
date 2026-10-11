@@ -248,7 +248,7 @@ class tj extends kb implements gw {
 
     final void a(byte param0, kb param1) {
         try {
-          this.field_D.a((byte) -119, (IntrusiveNode) (param1));
+          this.field_D.addLast((byte) -119, (IntrusiveNode) (param1));
           if (param0 != 10) {
             this.f(-101);
           }

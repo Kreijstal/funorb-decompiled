@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bd extends IntrusiveNode {
+abstract class SpellAreaEffect extends IntrusiveNode {
     static int[] field_q;
     static int field_r;
     static je field_o;
@@ -89,9 +89,9 @@ abstract class bd extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          ra.field_e = param1;
-          if (ra.field_e != null &&
-            ra.field_e.field_h) {
+          AreaSpell.field_e = param1;
+          if (AreaSpell.field_e != null &&
+            AreaSpell.field_e.field_h) {
             stackIn_4_0 = 1;
           } else {
             stackIn_4_0 = 0;
@@ -115,10 +115,10 @@ abstract class bd extends IntrusiveNode {
         }
     }
 
-    protected bd() {
+    protected SpellAreaEffect() {
     }
 
-    abstract void a(int param0, Battlefield param1);
+    abstract void applyEffect(int obfuscationGuard, Battlefield battlefield);
 
     static {
         field_k = "End Game";

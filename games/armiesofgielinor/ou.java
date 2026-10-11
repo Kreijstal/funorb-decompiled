@@ -756,7 +756,7 @@ final class ou {
             var6 = var4.a(AttackEvent.field_A[param2][param1][var5], param0 - 5249, "");
             if (var6 != null && (var6.length != 0 ||
               var7 != 0)) {
-              this.field_i[param2][param1].a((byte) -119, (IntrusiveNode) (new lo(var5, var6)));
+              this.field_i[param2][param1].addLast((byte) -119, (IntrusiveNode) (new lo(var5, var6)));
             }
             var5++;
             if (var7 == 0) {

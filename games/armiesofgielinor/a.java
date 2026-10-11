@@ -42,10 +42,10 @@ final class a extends IntrusiveNode {
               var4_int = 16777215 | var5;
             } else {
               if (!jf.field_C.movementPlanner.field_w) {
-                var6 = jf.field_C.movementPlanner.c(27732);
-                if (!jf.field_C.selectedUnit.packedFlag4) {
+                var6 = jf.field_C.movementPlanner.getMovementBudget(27732);
+                if (!jf.field_C.selectedUnit.movementSpent) {
                   if (CipherPacketBuffer.currentBattlefield.currentPlayer != jf.field_C.field_q) {
-                    if (var6 <= jf.field_C.movementPlanner.field_q[param2]) {
+                    if (var6 <= jf.field_C.movementPlanner.movementCosts[param2]) {
                       if ((jf.field_C.movementPlanner.field_e[param2] & 2) != 0) {
                         var4_int = var5 | 5570560;
                       }
@@ -53,7 +53,7 @@ final class a extends IntrusiveNode {
                       var4_int = 21760 | var5;
                     }
                   } else {
-                    if (jf.field_C.movementPlanner.field_q[param2] <= var6) {
+                    if (jf.field_C.movementPlanner.movementCosts[param2] <= var6) {
                       var4_int = var5 | 43264;
                     } else {
                       if (0 == (jf.field_C.movementPlanner.field_e[param2] & 2)) {
@@ -66,8 +66,8 @@ final class a extends IntrusiveNode {
                     }
                   }
                 } else {
-                  if (jf.field_C.selectedUnit.packedLowFlags == 0) {
-                    if (var6 < jf.field_C.movementPlanner.field_q[param2]) {
+                  if (jf.field_C.selectedUnit.attacksRemaining == 0) {
+                    if (var6 < jf.field_C.movementPlanner.movementCosts[param2]) {
                       if ((2 & jf.field_C.movementPlanner.field_e[param2]) != 0) {
                         var4_int = var5 | 5570560;
                       }
@@ -81,8 +81,8 @@ final class a extends IntrusiveNode {
                   }
                 }
               } else {
-                if (jf.field_C.selectedUnit.packedLowFlags > 0) {
-                  if (!jf.field_C.selectedUnit.packedFlag4) {
+                if (jf.field_C.selectedUnit.attacksRemaining > 0) {
+                  if (!jf.field_C.selectedUnit.movementSpent) {
                     if ((jf.field_C.movementPlanner.field_e[param2] & 2) != 0) {
                       var4_int = var5 | 16711680;
                     }
@@ -94,14 +94,14 @@ final class a extends IntrusiveNode {
                 }
               }
             }
-            if (!jf.field_C.selectedUnit.packedFlag4 &&
+            if (!jf.field_C.selectedUnit.movementSpent &&
               jf.field_C.selectedUnit.ownerPlayer == jf.field_C.field_q &&
               !jf.field_C.selectedUnit.h(-13494)) {
-              var6 = jf.field_C.selectedUnit.B(3257);
-              var7 = jf.field_C.selectedUnit.l((byte) -79);
-              var8 = jf.field_C.movementPlanner.field_n;
-              var9 = jf.field_C.movementPlanner.field_b;
-              if (jf.field_C.selectedUnit.o(-28467)) {
+              var6 = jf.field_C.selectedUnit.getMaximumAttackRange(3257);
+              var7 = jf.field_C.selectedUnit.getMinimumAttackRange((byte) -79);
+              var8 = jf.field_C.movementPlanner.targetX;
+              var9 = jf.field_C.movementPlanner.targetY;
+              if (jf.field_C.selectedUnit.hasMovementTarget(-28467)) {
                 var8 = jf.field_C.selectedUnit.a(false);
                 var9 = jf.field_C.selectedUnit.D(param0 - 16711795);
               }

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DeployEvent extends GameEvent {
-    int field_D;
+    int tileY;
     static String field_y;
-    int field_E;
+    int tileX;
     static String field_G;
     static RgbSprite field_z;
     static byte[] field_F;
-    private int field_B;
+    private int modifiers;
     static int[][] field_C;
     static int field_A;
 
@@ -24,17 +24,17 @@ final class DeployEvent extends GameEvent {
     }
 
     final static void h(int param0) {
-        al.field_f = new je(0L, (je) null);
+        GlobalSpell.field_f = new je(0L, (je) null);
         if (fh.field_c) {
-          al.field_f.a(t.field_g, 84);
+          GlobalSpell.field_f.a(t.field_g, 84);
         }
-        al.field_f.a(nf.field_Kb, 104);
-        TrinketUseEvent.field_E = new ea(sa.field_c, al.field_f);
+        GlobalSpell.field_f.a(nf.field_Kb, 104);
+        SpellCastEvent.field_E = new ea(sa.field_c, GlobalSpell.field_f);
         if (param0 != 14570) {
           return;
         }
         no.field_T = new je(0L, (je) null);
-        no.field_T.a(TrinketUseEvent.field_E.field_a, 127);
+        no.field_T.a(SpellCastEvent.field_E.field_a, 127);
         no.field_T.a(cp.field_d, 39);
         ak.b(false);
     }
@@ -43,9 +43,9 @@ final class DeployEvent extends GameEvent {
         int var3 = -17 % ((obfuscationGuard - 53) / 51);
         if (verbose) {
           System.out.println("Deploy event debug");
-          System.out.println("Unit at " + this.field_E + "," + this.field_D);
+          System.out.println("Unit at " + this.tileX + "," + this.tileY);
         }
-        String var4 = "EventDeploy: pos: (" + this.field_E + "," + this.field_D + "), mods: " + this.field_B;
+        String var4 = "EventDeploy: pos: (" + this.tileX + "," + this.tileY + "), mods: " + this.modifiers;
         return var4;
     }
 
@@ -107,21 +107,21 @@ final class DeployEvent extends GameEvent {
           if (obfuscationGuard != -26661) {
             return;
           }
-          var6 = battlefield.getUnitAt(this.field_D, true, this.field_E);
+          var6 = battlefield.getUnitAt(this.tileY, true, this.tileX);
           if (var6 != null &&
             !var6.hasMovementFlag1(false)) {
             if (var6.unitType == 7) {
               var6.removeFromBattlefield(obfuscationGuard + 26577);
-              var4_ref_ne = battlefield.tiles[this.field_E + this.field_D * battlefield.mapWidth];
+              var4_ref_ne = battlefield.tiles[this.tileX + this.tileY * battlefield.mapWidth];
               var4_ref_ne.terrainType = 11;
               var4_ref_ne.field_j = 1;
               var4_ref_ne.field_b = true;
-              var4_ref_ne.godId = this.field_B;
+              var4_ref_ne.godId = this.modifiers;
               var4_ref_ne.ownerPlayer = var6.ownerPlayer;
             }
             if (var6.unitType == 34) {
               var6.packedFlag8 = true;
-              var6.packedFlag4 = true;
+              var6.movementSpent = true;
               var6.strength = 20;
               var6.maximumStrength = 20;
               var6.refreshTileEffects((byte) 71);
@@ -129,13 +129,13 @@ final class DeployEvent extends GameEvent {
             }
             if (var6.unitType == 17) {
               var6.removeFromBattlefield(obfuscationGuard ^ 26692);
-              if ((1 & this.field_B) > 0) {
+              if ((1 & this.modifiers) > 0) {
                 stackIn_13_0 = -1 + var6.tileX;
               } else {
                 stackIn_13_0 = var6.tileX;
               }
               var4 = stackIn_13_0;
-              if ((2 & this.field_B) > 0) {
+              if ((2 & this.modifiers) > 0) {
                 stackIn_16_0 = var6.tileY - 1;
               } else {
                 stackIn_16_0 = var6.tileY;
@@ -291,10 +291,10 @@ final class DeployEvent extends GameEvent {
     }
 
     DeployEvent(int param0, int param1, int param2) {
-        this.field_B = param2;
-        this.field_E = param0;
+        this.modifiers = param2;
+        this.tileX = param0;
         this.field_m = 18;
-        this.field_D = param1;
+        this.tileY = param1;
     }
 
     static {

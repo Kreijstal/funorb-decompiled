@@ -406,7 +406,7 @@ abstract class sm {
           if (param0 != 16777062) {
             return;
           }
-          this.field_a.a((byte) -119, (IntrusiveNode) (param1));
+          this.field_a.addLast((byte) -119, (IntrusiveNode) (param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -464,14 +464,14 @@ abstract class sm {
             }
           }
           if (decompiledFrameRemainder0) {
-            if (ra.field_e == null) {
+            if (AreaSpell.field_e == null) {
               wq.field_a = dj.a(640, 0, ft.field_m, -36, 0, 480);
               if (var3 != 0) {
-                wq.field_a = ra.field_e.c(-1);
+                wq.field_a = AreaSpell.field_e.c(-1);
                 ds.a(2, 99);
               }
             } else {
-              wq.field_a = ra.field_e.c(-1);
+              wq.field_a = AreaSpell.field_e.c(-1);
               ds.a(2, 99);
             }
             if (null != wq.field_a) {
@@ -487,7 +487,7 @@ abstract class sm {
           if (param1 != 8028) {
             field_e = (String) null;
           }
-          if (null == ra.field_e &&
+          if (null == AreaSpell.field_e &&
             bn.field_e) {
             vq.a(var2_int, param0, (byte) 13);
           }

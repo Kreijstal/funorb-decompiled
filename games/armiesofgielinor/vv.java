@@ -201,9 +201,9 @@ final class vv {
         if (var12.field_u) {
           return;
         }
-        if (var12.packedFlag4) {
+        if (var12.movementSpent) {
           if (var12.h(-13494)) {
-            if (var12.field_ab == 1) {
+            if (var12.accessoryType == 1) {
               i.a(false, param5, param0);
             }
             if (var12.hasMovementFlag1(false)) {
@@ -214,7 +214,7 @@ final class vv {
             }
             if (var12.field_x != null) {
               if (var12.ownerPlayer == MapTile.field_i &&
-                !var12.packedFlag4 &&
+                !var12.movementSpent &&
                 jf.field_C.field_L > 0) {
                 TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
                 TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
@@ -257,9 +257,9 @@ final class vv {
               }
             }
           } else {
-            if (var12.packedLowFlags == 0) {
+            if (var12.attacksRemaining == 0) {
               of.field_Mb[2].a(param0 + 8, param5 + 12);
-              if (var12.field_ab == 1) {
+              if (var12.accessoryType == 1) {
                 i.a(false, param5, param0);
               }
               if (var12.hasMovementFlag1(false)) {
@@ -270,7 +270,7 @@ final class vv {
               }
               if (var12.field_x != null) {
                 if (var12.ownerPlayer == MapTile.field_i &&
-                  !var12.packedFlag4 &&
+                  !var12.movementSpent &&
                   jf.field_C.field_L > 0) {
                   TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
                   TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
@@ -314,7 +314,7 @@ final class vv {
               }
             } else {
               of.field_Mb[1].a(param0 + 8, param5 + 12);
-              if (var12.field_ab == 1) {
+              if (var12.accessoryType == 1) {
                 i.a(false, param5, param0);
               }
               if (var12.hasMovementFlag1(false)) {
@@ -325,7 +325,7 @@ final class vv {
               }
               if (var12.field_x != null) {
                 if (var12.ownerPlayer == MapTile.field_i &&
-                  !var12.packedFlag4 &&
+                  !var12.movementSpent &&
                   jf.field_C.field_L > 0) {
                   TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
                   TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
@@ -371,7 +371,7 @@ final class vv {
           }
           return;
         }
-        if (var12.field_ab == 1) {
+        if (var12.accessoryType == 1) {
           i.a(false, param5, param0);
         }
         if (var12.hasMovementFlag1(false)) {
@@ -422,7 +422,7 @@ final class vv {
           }
           return;
         }
-        if (var12.packedFlag4) {
+        if (var12.movementSpent) {
           if (var9.a(false) &&
             !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
             var12.i(-21428)) {

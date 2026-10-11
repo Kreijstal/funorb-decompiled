@@ -214,7 +214,7 @@ final class ir {
           if (param3.field_S) {
             return;
           }
-          var5_int = param3.g(param2 ^ param2);
+          var5_int = param3.getUnitCategory(param2 ^ param2);
           var6 = param3.i(-21428) ? 1 : 0;
           this.a(param3, 124);
           var7 = 0;
@@ -234,7 +234,7 @@ final class ir {
                 var14 = var13 + 1;
                 var14 = var14 * var14;
                 dupTemp$0 = param0[var5_int];
-                dupTemp$0[var16] = dupTemp$0[var16] + (float)(param1 * param3.g((byte) 122)) / (float)var14;
+                dupTemp$0[var16] = dupTemp$0[var16] + (float)(param1 * param3.getEffectiveStrength((byte) 122)) / (float)var14;
               }
               if (var6 != 0) {
                 var12Lifetime1 = this.field_i[var16];
@@ -242,7 +242,7 @@ final class ir {
                 var14Lifetime1 = var13Lifetime1 + 1;
                 var14Lifetime1 = var14Lifetime1 * var14Lifetime1;
                 dupTemp$1 = param0[8];
-                dupTemp$1[var16] = dupTemp$1[var16] + (float)(param1 * param3.g((byte) 122)) / (float)var14Lifetime1;
+                dupTemp$1[var16] = dupTemp$1[var16] + (float)(param1 * param3.getEffectiveStrength((byte) 122)) / (float)var14Lifetime1;
               }
               var16++;
             }
@@ -376,7 +376,7 @@ final class ir {
               for (var8 = this.field_e; this.field_c >= var8; var8++) {
                 var9 = 2147483647;
                 if (var8 > 0) {
-                  var10 = this.field_i[-1 + var12] + TrinketUseEvent.a(this.field_a, this.field_m, false, var12, param0.ownerPlayer, this.field_g, -1, param0, var12 - 1, false, true);
+                  var10 = this.field_i[-1 + var12] + SpellCastEvent.a(this.field_a, this.field_m, false, var12, param0.ownerPlayer, this.field_g, -1, param0, var12 - 1, false, true);
                   if (var3_intLifetime1 < (65535 & var10)) {
                     var10 = -var3_intLifetime1 + (((var10 >> 16) + 1 << 16) + (65535 & var10));
                   }
@@ -385,7 +385,7 @@ final class ir {
                   }
                 }
                 if (var7 > 0) {
-                  var10Lifetime1 = this.field_i[var12 - this.field_a] + TrinketUseEvent.a(this.field_a, this.field_m, false, var12, param0.ownerPlayer, this.field_g, -1, param0, var12 - this.field_a, false, true);
+                  var10Lifetime1 = this.field_i[var12 - this.field_a] + SpellCastEvent.a(this.field_a, this.field_m, false, var12, param0.ownerPlayer, this.field_g, -1, param0, var12 - this.field_a, false, true);
                   if (var3_intLifetime1 < (var10Lifetime1 & 65535)) {
                     var10Lifetime1 = (65535 & var10Lifetime1) + ((1 + (var10Lifetime1 >> 16) << 16) - var3_intLifetime1);
                   }
@@ -394,7 +394,7 @@ final class ir {
                   }
                 }
                 if (-1 + this.field_a > var8) {
-                  var10Lifetime2 = this.field_i[1 + var12] + TrinketUseEvent.a(this.field_a, this.field_m, false, var12, param0.ownerPlayer, this.field_g, -1, param0, var12 + 1, false, true);
+                  var10Lifetime2 = this.field_i[1 + var12] + SpellCastEvent.a(this.field_a, this.field_m, false, var12, param0.ownerPlayer, this.field_g, -1, param0, var12 + 1, false, true);
                   if ((var10Lifetime2 & 65535) > var3_intLifetime1) {
                     var10Lifetime2 = (1 + (var10Lifetime2 >> 16) << 16) + (var10Lifetime2 & 65535) - var3_intLifetime1;
                   }
@@ -403,7 +403,7 @@ final class ir {
                   }
                 }
                 if (-1 + this.field_g > var7) {
-                  var10Lifetime3 = this.field_i[this.field_a + var12] + TrinketUseEvent.a(this.field_a, this.field_m, false, var12, param0.ownerPlayer, this.field_g, -1, param0, var12 + this.field_a, false, true);
+                  var10Lifetime3 = this.field_i[this.field_a + var12] + SpellCastEvent.a(this.field_a, this.field_m, false, var12, param0.ownerPlayer, this.field_g, -1, param0, var12 + this.field_a, false, true);
                   if ((var10Lifetime3 & 65535) > var3_intLifetime1) {
                     var10Lifetime3 = -var3_intLifetime1 + ((var10Lifetime3 >> 16) + 1 << 16) + (65535 & var10Lifetime3);
                   }

@@ -3,9 +3,9 @@
  */
 final class RevivalEvent extends GameEvent {
     static String field_B;
-    private int field_y;
+    private int destinationX;
     static int field_D;
-    private int field_C;
+    private int destinationY;
     static long field_z;
 
     final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
@@ -19,7 +19,7 @@ final class RevivalEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= -84) {
-            stackIn_4_0 = this.a((byte) -39, param2, param0, true) | this.a(this.field_C, 15, param2, param0, this.field_y);
+            stackIn_4_0 = this.a((byte) -39, param2, param0, true) | this.a(this.destinationY, 15, param2, param0, this.destinationX);
             return stackIn_4_0;
           }
           return true;
@@ -166,16 +166,16 @@ final class RevivalEvent extends GameEvent {
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {
         try {
           battlefield.tiles[battlefield.mapWidth * this.unit.tileY + this.unit.tileX].occupant = null;
-          battlefield.tiles[battlefield.mapWidth * this.field_C + this.field_y].occupant = this.unit;
-          battlefield.tiles[battlefield.mapWidth * this.field_C + this.field_y].field_l = false;
-          this.unit.tileY = this.field_C;
+          battlefield.tiles[battlefield.mapWidth * this.destinationY + this.destinationX].occupant = this.unit;
+          battlefield.tiles[battlefield.mapWidth * this.destinationY + this.destinationX].field_l = false;
+          this.unit.tileY = this.destinationY;
           this.unit.poisoned = false;
           if (obfuscationGuard != -26661) {
             RevivalEvent.e((byte) -101);
           }
           this.unit.strength = this.unit.maximumStrength;
-          this.unit.tileX = this.field_y;
-          this.unit.field_ab = 0;
+          this.unit.tileX = this.destinationX;
+          this.unit.accessoryType = 0;
           this.unit.refreshTileEffects((byte) -96);
           this.unit.field_S = false;
         } catch (RuntimeException runtimeException) {
@@ -217,8 +217,8 @@ final class RevivalEvent extends GameEvent {
         try {
           this.unit = param0;
           this.field_m = 25;
-          this.field_C = param2;
-          this.field_y = param1;
+          this.destinationY = param2;
+          this.destinationX = param1;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "rt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

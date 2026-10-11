@@ -4,48 +4,48 @@
 final class Unit extends IntrusiveNode implements TaggedFieldReader {
     int tag;
     hr field_x;
-    int field_ab;
+    int accessoryType;
     boolean field_eb;
     boolean field_Z;
     boolean field_U;
     int strength;
     static String field_n;
-    int packedLowFlags;
+    int attacksRemaining;
     int unitType;
-    private int field_k;
+    private int movementTargetY;
     int tileX;
     Battlefield battlefield;
     boolean poisoned;
     boolean packedFlag32;
-    int field_fb;
-    int field_m;
+    int facingAngle;
+    int attacksMade;
     int maximumStrength;
     boolean packedFlag512;
     static boolean field_L;
-    int field_A;
+    int bonusStrength;
     boolean field_u;
     int movementFlags;
     static String field_y;
-    int field_o;
-    int field_cb;
+    int statusEffectValue;
+    int immobilizedTurns;
     int objectiveId;
     cl field_p;
     int[] field_R;
     static String field_T;
     int field_z;
-    boolean packedFlag64;
+    boolean meleeLifeSteal;
     boolean field_X;
     boolean field_S;
-    private int field_db;
-    int field_r;
+    private int movementTargetX;
+    int equipmentDescriptor;
     int tankId;
     int tileY;
     String displayName;
-    int field_P;
+    int statusEffectType;
     int ownerPlayer;
-    int field_M;
+    int attacksReceived;
     boolean packedFlag8;
-    boolean packedFlag4;
+    boolean movementSpent;
     boolean field_G;
     boolean field_v;
     boolean packedFlag256;
@@ -62,12 +62,12 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           Unit var3 = (Unit) null;
           this.a((Unit) null, (byte) 94);
         }
-        return this.field_db;
+        return this.movementTargetX;
     }
 
     final boolean p(byte param0) {
         if (param0 >= -94) {
-          this.field_m = -85;
+          this.attacksMade = -85;
         }
         return (2 & bw.unitDefinitions[this.unitType][10]) > 0 ? true : false;
     }
@@ -83,22 +83,22 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (this.packedFlag8) {
           var2 = var2 | 8;
         }
-        if (this.packedFlag64) {
+        if (this.meleeLifeSteal) {
           var2 = var2 | 64;
         }
         if (this.packedFlag32) {
           var2 = var2 | 32;
         }
-        if (this.packedFlag4) {
+        if (this.movementSpent) {
           var2 = var2 | 4;
         }
         if (this.packedFlag512) {
           var2 = var2 | 512;
         }
         if (obfuscationGuard < 96) {
-          this.field_ab = -60;
+          this.accessoryType = -60;
         }
-        var2 = var2 | 3 & this.packedLowFlags;
+        var2 = var2 | 3 & this.attacksRemaining;
         return var2;
     }
 
@@ -114,7 +114,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           this.n((byte) 80);
         }
         if (this.field_x == null) {
-          this.field_x = new hr(this.field_R, param0, this.field_fb);
+          this.field_x = new hr(this.field_R, param0, this.facingAngle);
         } else {
           this.field_x.a((byte) 59, param0);
         }
@@ -146,8 +146,8 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         int var4Lifetime2;
         int var4Lifetime3;
         int var4Lifetime4;
-        if (0 < this.field_A) {
-          this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this, 5)));
+        if (0 < this.bonusStrength) {
+          this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this, 5)));
         }
         if (this.a(param0 ^ -23050)) {
           var3 = this;
@@ -189,20 +189,20 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           }
           var4Lifetime4 = stackIn_18_0 | stackIn_19_1;
           if (var4Lifetime4 == 0) {
-            this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this, 3)));
+            this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this, 3)));
           }
         }
         if (this.poisoned) {
-          this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this, 2)));
+          this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this, 2)));
         }
         if (param0 != -42) {
           Unit.m(45);
         }
     }
 
-    final int l(byte param0) {
-        if (param0 != -79) {
-          this.c((byte) -122);
+    final int getMinimumAttackRange(byte obfuscationGuard) {
+        if (obfuscationGuard != -79) {
+          this.getEquipmentId((byte) -122);
         }
         int var2 = bw.unitDefinitions[this.unitType][6];
         if (this.packedFlag8 &&
@@ -212,14 +212,14 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return var2;
     }
 
-    final int j(int param0) {
-        if (0 > this.field_r) {
+    final int getEquipmentCategory(int obfuscationGuard) {
+        if (0 > this.equipmentDescriptor) {
           return -1;
         }
-        if (param0 != 20640) {
-          this.packedFlag64 = true;
+        if (obfuscationGuard != 20640) {
+          this.meleeLifeSteal = true;
         }
-        return this.field_r >> 5;
+        return this.equipmentDescriptor >> 5;
     }
 
     final boolean i(int param0) {
@@ -227,30 +227,30 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (param0 != -21428) {
           return false;
         }
-        stackIn_7_0 = !((512 & bw.unitDefinitions[this.unitType][10]) <= 0) || (this.field_ab == 1);
+        stackIn_7_0 = !((512 & bw.unitDefinitions[this.unitType][10]) <= 0) || (this.accessoryType == 1);
         return stackIn_7_0;
     }
 
-    final int d(int param0, int param1) {
-        if (0 > this.field_r) {
+    final int getEquipmentProperty(int propertyIndex, int obfuscationGuard) {
+        if (0 > this.equipmentDescriptor) {
           return 0;
         }
-        int var3 = 62 / ((-23 - param1) / 63);
-        return np.field_Vb[this.field_r & 31][param0];
+        int var3 = 62 / ((-23 - obfuscationGuard) / 63);
+        return np.field_Vb[this.equipmentDescriptor & 31][propertyIndex];
     }
 
-    final int g(byte param0) {
-        if (param0 != 122) {
+    final int getEffectiveStrength(byte obfuscationGuard) {
+        if (obfuscationGuard != 122) {
           return 34;
         }
-        return this.strength + this.field_A;
+        return this.strength + this.bonusStrength;
     }
 
     final boolean n(int param0) {
         int var2;
         boolean stackIn_5_0 = false;
         var2 = 106 % ((80 - param0) / 34);
-        stackIn_5_0 = !((bw.unitDefinitions[this.unitType][10] & 2048) <= 0) || (this.field_ab == 2);
+        stackIn_5_0 = !((bw.unitDefinitions[this.unitType][10] & 2048) <= 0) || (this.accessoryType == 2);
         return stackIn_5_0;
     }
 
@@ -262,10 +262,10 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (this.field_S) {
           return null;
         }
-        if (this.strength + this.field_A == 0) {
+        if (this.strength + this.bonusStrength == 0) {
           return null;
         }
-        Unit var3 = new Unit(this.tileX, this.tileY, this.unitType, newOwnerPlayer, this.maximumStrength, this.strength, this.packStatusFlags((byte) 105), this.field_ab, this.field_A, this.battlefield, this.field_P, this.field_o, this.field_r, false, this.field_cb);
+        Unit var3 = new Unit(this.tileX, this.tileY, this.unitType, newOwnerPlayer, this.maximumStrength, this.strength, this.packStatusFlags((byte) 105), this.accessoryType, this.bonusStrength, this.battlefield, this.statusEffectType, this.statusEffectValue, this.equipmentDescriptor, false, this.immobilizedTurns);
         this.battlefield.registerUnit(8288, var3);
         return var3;
     }
@@ -280,10 +280,10 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
 
     final int l(int param0) {
         int var2 = 0;
-        if (!this.packedFlag4) {
+        if (!this.movementSpent) {
           var2 = var2 | 1;
         }
-        if (0 < this.packedLowFlags) {
+        if (0 < this.attacksRemaining) {
           var2 = var2 | 2;
         }
         if (this.poisoned) {
@@ -304,22 +304,22 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (this.packedFlag256) {
           var2 = var2 | 128;
         }
-        if (this.packedFlag64) {
+        if (this.meleeLifeSteal) {
           var2 = var2 | 256;
         }
         if (param0 != -27014) {
           return 27;
         }
-        if (-1 < this.field_r) {
+        if (-1 < this.equipmentDescriptor) {
           var2 = var2 | 512;
         }
-        if (0 < this.field_o) {
+        if (0 < this.statusEffectValue) {
           var2 = var2 | 1024;
         }
-        if (this.field_ab != 0) {
+        if (this.accessoryType != 0) {
           var2 = var2 | 2048;
         }
-        if (this.field_cb > 0) {
+        if (this.immobilizedTurns > 0) {
           var2 = var2 | 4096;
         }
         return var2;
@@ -343,7 +343,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           if (param1 < 113) {
             this.field_z = -18;
           }
-          stackIn_12_0 = !(this.field_A + this.strength < param0.strength + param0.field_A);
+          stackIn_12_0 = !(this.bonusStrength + this.strength < param0.strength + param0.bonusStrength);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -362,14 +362,14 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
     final void applyStrengthDamage(int damage, boolean updateAfterDamage) {
         int var4;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.field_P != 7 &&
-          this.field_P != 8) {
+        if (this.statusEffectType != 7 &&
+          this.statusEffectType != 8) {
           this.strength = this.strength - damage;
         } else {
-          if (this.field_o > 1) {
-            this.field_o = this.field_o - 1;
+          if (this.statusEffectValue > 1) {
+            this.statusEffectValue = this.statusEffectValue - 1;
           } else {
-            this.field_P = 0;
+            this.statusEffectType = 0;
           }
         }
         if (!updateAfterDamage) {
@@ -386,7 +386,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           this.packedFlag8) {
           return true;
         }
-        stackIn_11_0 = (bw.unitDefinitions[this.unitType][0] == 4) || (bw.unitDefinitions[this.unitType][0] == 3) || (bw.unitDefinitions[this.unitType][0] == 2) || !((2048 & bw.unitDefinitions[this.unitType][10]) <= 0) || (this.field_ab == 2);
+        stackIn_11_0 = (bw.unitDefinitions[this.unitType][0] == 4) || (bw.unitDefinitions[this.unitType][0] == 3) || (bw.unitDefinitions[this.unitType][0] == 2) || !((2048 & bw.unitDefinitions[this.unitType][10]) <= 0) || (this.accessoryType == 2);
         return stackIn_11_0;
     }
 
@@ -394,7 +394,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (param0 > -63) {
           this.tileX = 66;
         }
-        return this.field_k;
+        return this.movementTargetY;
     }
 
     final static boolean i(byte param0) {
@@ -421,27 +421,27 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (!this.poisoned &&
           !this.a(23072) &&
           this.maximumStrength > this.strength &&
-          !this.packedFlag4 &&
-          0 < this.packedLowFlags) {
-          this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this, 1)));
+          !this.movementSpent &&
+          0 < this.attacksRemaining) {
+          this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this, 1)));
         }
-        if (0 < this.field_cb) {
-          this.field_cb = this.field_cb - 1;
+        if (0 < this.immobilizedTurns) {
+          this.immobilizedTurns = this.immobilizedTurns - 1;
         }
         if (obfuscationGuard != -36) {
           this.field_x = (hr) null;
         }
-        if (this.field_cb != 0) {
+        if (this.immobilizedTurns != 0) {
         } else {
           if (!this.h(obfuscationGuard - 13458)) {
-            this.packedFlag4 = false;
+            this.movementSpent = false;
           } else {
-            this.packedFlag4 = true;
+            this.movementSpent = true;
           }
-          this.packedLowFlags = 1;
+          this.attacksRemaining = 1;
           this.packedFlag512 = false;
           if (74 == this.unitType) {
-            this.packedLowFlags = 2;
+            this.attacksRemaining = 2;
           }
         }
     }
@@ -455,7 +455,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
 
     final String q(byte param0) {
         if (param0 <= 37) {
-          this.b(true);
+          this.copyDetached(true);
         }
         String var2 = new String(this.displayName);
         if (this.hasMovementFlag1(false)) {
@@ -467,8 +467,8 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return var2;
     }
 
-    final boolean t(int param0) {
-        if (param0 != 26440) {
+    final boolean isDisplacedFromTile(int obfuscationGuard) {
+        if (obfuscationGuard != 26440) {
           return true;
         }
         return this != this.battlefield.tiles[this.battlefield.mapWidth * this.tileY + this.tileX].occupant ? true : false;
@@ -492,21 +492,21 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
     final boolean o(byte param0) {
         boolean stackIn_7_0 = false;
         if (param0 != 98) {
-          this.o(-50);
+          this.hasMovementTarget(-50);
         }
-        stackIn_7_0 = (this.unitType == 73) || (this.field_ab == 4);
+        stackIn_7_0 = (this.unitType == 73) || (this.accessoryType == 4);
         return stackIn_7_0;
     }
 
-    final void e(int param0, int param1) {
-        if (param1 > -1 &&
-          param1 < 2048) {
-          this.field_fb = param1;
+    final void setFacingAngle(int obfuscationGuard, int angle) {
+        if (angle > -1 &&
+          angle < 2048) {
+          this.facingAngle = angle;
         }
         if (this.field_x != null) {
-          this.field_x.a(false, param1);
+          this.field_x.a(false, angle);
         }
-        int var3 = 114 / ((-56 - param0) / 54);
+        int var3 = 114 / ((-56 - obfuscationGuard) / 54);
     }
 
     public static void q(int param0) {
@@ -532,9 +532,9 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         boolean stackIn_5_1 = false;
         boolean stackIn_9_0 = false;
         if (param0 != 23072) {
-          this.field_o = -127;
+          this.statusEffectValue = -127;
         }
-        stackIn_4_0 = this.packedFlag64;
+        stackIn_4_0 = this.meleeLifeSteal;
         stackIn_5_1 = ((256 & bw.unitDefinitions[this.unitType][10]) <= 0) ? false : true;
         stackIn_9_0 = (stackIn_4_0 | stackIn_5_1) && (!this.hasMovementFlag1(false));
         return stackIn_9_0;
@@ -660,17 +660,17 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (this.field_S) {
           return;
         }
-        if (this.g((byte) 122) < 1) {
+        if (this.getEffectiveStrength((byte) 122) < 1) {
           this.field_S = true;
           var2 = -1;
-          if (this.field_ab == 5) {
+          if (this.accessoryType == 5) {
             var2 = this.battlefield.a(this.tileY, this.ownerPlayer, this.tileX, (byte) -53);
           }
           if (var2 > -1) {
             this.battlefield.tiles[var2].field_l = true;
-            this.battlefield.pendingEvents.a(750, new RevivalEvent(this, var2 % this.battlefield.mapWidth, var2 / this.battlefield.mapWidth));
+            this.battlefield.pendingEvents.addFirst(750, new RevivalEvent(this, var2 % this.battlefield.mapWidth, var2 / this.battlefield.mapWidth));
           } else {
-            this.battlefield.pendingEvents.a(750, new DeathEvent(this));
+            this.battlefield.pendingEvents.addFirst(750, new DeathEvent(this));
           }
         }
     }
@@ -692,7 +692,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.strength = 0;
         this.field_S = true;
-        this.field_A = 0;
+        this.bonusStrength = 0;
         var6 = this.battlefield.tiles[this.tileX + this.battlefield.mapWidth * this.tileY];
         var3 = var6;
         var3.field_m = var6.e(10);
@@ -773,48 +773,48 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return (32 & bw.unitDefinitions[this.unitType][10]) > 0 ? true : false;
     }
 
-    final boolean o(int param0) {
+    final boolean hasMovementTarget(int obfuscationGuard) {
         boolean stackIn_9_0 = false;
-        if (this.field_db == this.tileX &&
-          this.field_k == this.tileY) {
-          this.A(-1);
+        if (this.movementTargetX == this.tileX &&
+          this.movementTargetY == this.tileY) {
+          this.resetMovementTarget(-1);
         }
-        if (param0 != -28467) {
+        if (obfuscationGuard != -28467) {
           this.packedFlag8 = false;
         }
-        stackIn_9_0 = (this.field_db != -1) && (this.field_k != -1);
+        stackIn_9_0 = (this.movementTargetX != -1) && (this.movementTargetY != -1);
         return stackIn_9_0;
     }
 
-    final int g(int param0) {
-        if (param0 != 0) {
-          this.o(82);
+    final int getUnitCategory(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
+          this.hasMovementTarget(82);
         }
         return bw.unitDefinitions[this.unitType][0];
     }
 
-    final int c(byte param0) {
-        if (param0 != 81) {
-          this.g((byte) -105);
+    final int getEquipmentId(byte obfuscationGuard) {
+        if (obfuscationGuard != 81) {
+          this.getEffectiveStrength((byte) -105);
         }
-        if (0 > this.field_r) {
+        if (0 > this.equipmentDescriptor) {
           return 0;
         }
-        return 31 & this.field_r;
+        return 31 & this.equipmentDescriptor;
     }
 
-    final boolean y(int param0) {
-        if (param0 > -92) {
-          this.field_A = -12;
+    final boolean hasPoisonousAttacks(int obfuscationGuard) {
+        if (obfuscationGuard > -92) {
+          this.bonusStrength = -12;
         }
         return (64 & bw.unitDefinitions[this.unitType][10]) > 0 ? true : false;
     }
 
-    final Unit b(boolean param0) {
-        if (param0) {
+    final Unit copyDetached(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           return (Unit) null;
         }
-        return new Unit(this.tileX, this.tileY, this.unitType, this.ownerPlayer, this.maximumStrength, this.strength, this.packStatusFlags((byte) 110), this.field_ab, this.field_A, this.battlefield, this.field_P, this.field_o, this.field_r, true, this.field_cb);
+        return new Unit(this.tileX, this.tileY, this.unitType, this.ownerPlayer, this.maximumStrength, this.strength, this.packStatusFlags((byte) 110), this.accessoryType, this.bonusStrength, this.battlefield, this.statusEffectType, this.statusEffectValue, this.equipmentDescriptor, true, this.immobilizedTurns);
     }
 
     final int f(int param0) {
@@ -841,15 +841,15 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return -1;
     }
 
-    final void a(Unit param0, int param1) {
-        if (this.tileX == param0.tileX &&
-          this.tileY == param0.tileY) {
+    final void faceUnit(Unit targetUnit, int obfuscationGuard) {
+        if (this.tileX == targetUnit.tileX &&
+          this.tileY == targetUnit.tileY) {
           return;
         }
         try {
-          this.e(param1 ^ 2079, 256 + (param1 - (int)(2048.0 * Math.atan2((double)(-(this.tileY - param0.tileY)), (double)(this.tileX - param0.tileX)) / 3.141592653589793 / 2.0)) & 2047);
+          this.setFacingAngle(obfuscationGuard ^ 2079, 256 + (obfuscationGuard - (int)(2048.0 * Math.atan2((double)(-(this.tileY - targetUnit.tileY)), (double)(this.tileX - targetUnit.tileX)) / 3.141592653589793 / 2.0)) & 2047);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "jd.HB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "jd.HB(" + (targetUnit != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -865,9 +865,9 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
     final boolean x(int param0) {
         if (param0 >= -80) {
           Unit var3 = (Unit) null;
-          this.a((Unit) null, -117);
+          this.faceUnit((Unit) null, -117);
         }
-        return 4 == this.g(0) ? true : false;
+        return 4 == this.getUnitCategory(0) ? true : false;
     }
 
     final boolean r(byte param0) {
@@ -875,35 +875,35 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (param0 <= 41) {
           return false;
         }
-        stackIn_7_0 = (0 != (bw.unitDefinitions[this.unitType][10] & 4096)) || (this.field_ab == 3);
+        stackIn_7_0 = (0 != (bw.unitDefinitions[this.unitType][10] & 4096)) || (this.accessoryType == 3);
         return stackIn_7_0;
     }
 
     final void k(int param0) {
         if (this.e((byte) 102)) {
-          this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new UpkeepEvent(this.tileX, this.tileY)));
+          this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new UpkeepEvent(this.tileX, this.tileY)));
         }
         if (this.p((byte) -128)) {
-          this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new StateChangeEvent(2, this.tileX, this.tileY, this.ownerPlayer)));
+          this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new StateChangeEvent(2, this.tileX, this.tileY, this.ownerPlayer)));
         }
         if (this.d((byte) 105)) {
-          this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new StateChangeEvent(3, this.tileX, this.tileY, this.ownerPlayer)));
+          this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new StateChangeEvent(3, this.tileX, this.tileY, this.ownerPlayer)));
         }
         if (this.f((byte) -116)) {
-          this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new StateChangeEvent(1, this.tileX, this.tileY, this.ownerPlayer)));
+          this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new StateChangeEvent(1, this.tileX, this.tileY, this.ownerPlayer)));
         }
         if (param0 != -1) {
           return;
         }
         if (this.s(124)) {
-          this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new StateChangeEvent(4, this.tileX, this.tileY, this.ownerPlayer)));
+          this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new StateChangeEvent(4, this.tileX, this.tileY, this.ownerPlayer)));
         }
-        if (this.t(26440)) {
-          this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new TelefragEvent(this)));
+        if (this.isDisplacedFromTile(26440)) {
+          this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TelefragEvent(this)));
         }
     }
 
-    final int B(int param0) {
+    final int getMaximumAttackRange(int obfuscationGuard) {
         int var2;
         int var3;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -911,25 +911,25 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (this.packedFlag8 &&
           this.unitType == 34) {
           var2 = 7;
-          if (this.j(20640) == 3) {
-            var2 = var2 + this.d(1, -93);
+          if (this.getEquipmentCategory(20640) == 3) {
+            var2 = var2 + this.getEquipmentProperty(1, -93);
           }
         }
         if ((this.unitType == 81 ||
           this.unitType == 4 ||
           this.unitType == 74) &&
-          3 == this.j(20640)) {
-          var2 = var2 + this.d(1, 83);
-        } else if (3 == this.g(param0 - 3257) &&
-          this.j(20640) == 2) {
-          var2 = var2 + this.d(1, param0 - 3158);
+          3 == this.getEquipmentCategory(20640)) {
+          var2 = var2 + this.getEquipmentProperty(1, 83);
+        } else if (3 == this.getUnitCategory(obfuscationGuard - 3257) &&
+          this.getEquipmentCategory(20640) == 2) {
+          var2 = var2 + this.getEquipmentProperty(1, obfuscationGuard - 3158);
         } else {
-          if (this.g(0) == 2 &&
-            this.j(20640) == 1) {
-            var2 = var2 + this.d(1, 88);
+          if (this.getUnitCategory(0) == 2 &&
+            this.getEquipmentCategory(20640) == 1) {
+            var2 = var2 + this.getEquipmentProperty(1, 88);
           }
         }
-        if (param0 == 3257) {
+        if (obfuscationGuard == 3257) {
           return var2;
         }
         return 117;
@@ -942,16 +942,16 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return (bw.unitDefinitions[this.unitType][10] & 1) > 0 ? true : false;
     }
 
-    final boolean r(int param0) {
-        if (param0 != -40) {
+    final boolean grantsGrowthOnDeath(int obfuscationGuard) {
+        if (obfuscationGuard != -40) {
           return true;
         }
         return this.unitType != 39 ? true : false;
     }
 
-    final void A(int param0) {
-        this.field_db = param0;
-        this.field_k = -1;
+    final void resetMovementTarget(int targetX) {
+        this.movementTargetX = targetX;
+        this.movementTargetY = -1;
     }
 
     final boolean d(byte param0) {
@@ -1008,7 +1008,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           }
           for (var1_int = 0; var1_int < so.field_a.length; var1_int++) {
             if (rb.a(var1_int, rq.field_n, 1)) {
-              ai.field_P.a((byte) -119, (IntrusiveNode) (new jg(var1_int)));
+              ai.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(var1_int)));
             }
           }
           var18 = ei.field_e;
@@ -1050,7 +1050,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         this.battlefield.a(this, -97);
     }
 
-    Unit(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, Battlefield param9, int param10, int param11, int param12, boolean param13, int param14) {
+    Unit(int tileX, int tileY, int unitType, int ownerPlayer, int maximumStrength, int strength, int packedStatusFlags, int accessoryType, int bonusStrength, Battlefield battlefield, int statusEffectType, int statusEffectValue, int equipmentDescriptor, boolean detached, int immobilizedTurns) {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
@@ -1065,49 +1065,49 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         RuntimeException var16 = null;
         this.tag = 0;
         this.tankId = -1;
-        this.field_k = -1;
-        this.field_db = -1;
+        this.movementTargetY = -1;
+        this.movementTargetX = -1;
         this.objectiveId = 0;
         this.field_S = false;
         this.field_G = false;
         try {
-          this.tileX = param0;
-          this.field_A = param8;
-          stackIn_4_1 = ((param6 & 64) != 0);
-          this.packedFlag64 = stackIn_4_1;
-          this.packedLowFlags = 3 & param6;
-          stackIn_7_1 = ((256 & param6) != 0);
+          this.tileX = tileX;
+          this.bonusStrength = bonusStrength;
+          stackIn_4_1 = ((packedStatusFlags & 64) != 0);
+          this.meleeLifeSteal = stackIn_4_1;
+          this.attacksRemaining = 3 & packedStatusFlags;
+          stackIn_7_1 = ((256 & packedStatusFlags) != 0);
           this.packedFlag256 = stackIn_7_1;
-          this.field_r = param12;
-          stackIn_10_1 = ((param6 & 4) != 0);
-          this.packedFlag4 = stackIn_10_1;
-          this.battlefield = param9;
-          this.field_m = 0;
-          this.maximumStrength = param4;
-          this.field_M = 0;
-          this.field_cb = param14;
-          this.unitType = param2;
-          this.field_ab = param7;
-          stackIn_13_1 = (0 != (param6 & 8));
+          this.equipmentDescriptor = equipmentDescriptor;
+          stackIn_10_1 = ((packedStatusFlags & 4) != 0);
+          this.movementSpent = stackIn_10_1;
+          this.battlefield = battlefield;
+          this.attacksMade = 0;
+          this.maximumStrength = maximumStrength;
+          this.attacksReceived = 0;
+          this.immobilizedTurns = immobilizedTurns;
+          this.unitType = unitType;
+          this.accessoryType = accessoryType;
+          stackIn_13_1 = (0 != (packedStatusFlags & 8));
           this.packedFlag8 = stackIn_13_1;
-          stackIn_16_1 = ((512 & param6) != 0);
+          stackIn_16_1 = ((512 & packedStatusFlags) != 0);
           this.packedFlag512 = stackIn_16_1;
-          this.ownerPlayer = param3;
-          stackIn_19_1 = (0 != (param6 & 32));
+          this.ownerPlayer = ownerPlayer;
+          stackIn_19_1 = (0 != (packedStatusFlags & 32));
           this.packedFlag32 = stackIn_19_1;
-          this.strength = param5;
-          stackIn_22_1 = ((16 & param6) != 0);
+          this.strength = strength;
+          stackIn_22_1 = ((16 & packedStatusFlags) != 0);
           this.poisoned = stackIn_22_1;
-          this.field_o = param11;
-          this.field_P = param10;
-          this.tileY = param1;
-          if (!param13) {
-            param9.tiles[param0 + param9.mapWidth * param1].occupant = this;
+          this.statusEffectValue = statusEffectValue;
+          this.statusEffectType = statusEffectType;
+          this.tileY = tileY;
+          if (!detached) {
+            battlefield.tiles[tileX + battlefield.mapWidth * tileY].occupant = this;
             this.refreshTileEffects((byte) -122);
           }
           this.field_z = -1;
           this.field_R = new int[3];
-          this.field_fb = 1792;
+          this.facingAngle = 1792;
           if (0 == this.unitType &&
             this.packedFlag8) {
             this.displayName = ov.field_a;
@@ -1121,37 +1121,37 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           decompiledCaughtException = decompiledCaughtParameter0;
           var16 = decompiledCaughtException;
           stackIn_32_0 = var16;
-          stackIn_32_1 = new StringBuilder().append("jd.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
-          if (param9 == null) {
+          stackIn_32_1 = new StringBuilder().append("jd.<init>(").append(tileX).append(',').append(tileY).append(',').append(unitType).append(',').append(ownerPlayer).append(',').append(maximumStrength).append(',').append(strength).append(',').append(packedStatusFlags).append(',').append(accessoryType).append(',').append(bonusStrength).append(',');
+          if (battlefield == null) {
             stackIn_33_2 = "null";
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(statusEffectType).append(',').append(statusEffectValue).append(',').append(equipmentDescriptor).append(',').append(detached).append(',').append(immobilizedTurns).append(')').toString());
         }
     }
 
     Unit() {
         this.tag = 0;
         this.tankId = -1;
-        this.field_k = -1;
-        this.field_db = -1;
+        this.movementTargetY = -1;
+        this.movementTargetX = -1;
         this.objectiveId = 0;
         this.field_S = false;
         this.field_G = false;
     }
 
-    Unit(int param0, int param1, int param2) {
+    Unit(int tileX, int tileY, int unitType) {
         this.tag = 0;
         this.tankId = -1;
-        this.field_k = -1;
-        this.field_db = -1;
+        this.movementTargetY = -1;
+        this.movementTargetX = -1;
         this.objectiveId = 0;
         this.field_S = false;
         this.field_G = false;
-        this.tileY = param1;
-        this.tileX = param0;
-        this.unitType = param2;
+        this.tileY = tileY;
+        this.tileX = tileX;
+        this.unitType = unitType;
     }
 
     static {

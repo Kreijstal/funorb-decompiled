@@ -226,10 +226,10 @@ final class jj {
     }
 
     final static void a(int param0) {
-        if (null == ra.field_e) {
+        if (null == AreaSpell.field_e) {
           throw new IllegalStateException("NGR");
         }
-        ra.field_e.field_h = true;
+        AreaSpell.field_e.field_h = true;
         if (param0 != -4223) {
           field_b = (String) null;
           ds.a(1, -54);
@@ -249,7 +249,7 @@ final class jj {
           if (dn.l(0)) {
             return true;
           }
-          if (ik.field_b != null) {
+          if (Spell.field_b != null) {
             stackIn_20_0 = true;
           } else {
             if (vg.a(10)) {
@@ -267,7 +267,7 @@ final class jj {
         if (dn.l(0)) {
           return true;
         }
-        if (ik.field_b != null) {
+        if (Spell.field_b != null) {
           stackIn_10_0 = true;
         } else {
           if (vg.a(10)) {

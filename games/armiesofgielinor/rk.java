@@ -489,7 +489,7 @@ final class rk {
                   mv.a(db.a(true, 20 + param0), (byte) -70, var7, param2, u.a(param1, (byte) 94));
                 }
                 if (-1 < param2) {
-                  ks.a(mn.field_k[76][param2], false, u.a(-40 + param1, (byte) 94), this.field_ab, 128, 150, db.a(true, param0), (js) null, -10374);
+                  ks.a(SpellAreaSelection.field_k[76][param2], false, u.a(-40 + param1, (byte) 94), this.field_ab, 128, 150, db.a(true, param0), (js) null, -10374);
                 }
                 l.field_b[16].a(db.a(true, param0), u.a(param1 - 40, (byte) 94));
                 return;
@@ -652,7 +652,7 @@ final class rk {
         try {
           SoftwareRaster.b(5, 25, 30, 30, 0, 192);
           en.field_E.b(dn.field_Pb[param5.unitType], 10, 17, op.field_c[0][param5.ownerPlayer], -1);
-          en.field_E.a(param5.field_A + param5.strength + "/" + param5.maximumStrength, 126, 18, op.field_c[0][param5.ownerPlayer], -1);
+          en.field_E.a(param5.bonusStrength + param5.strength + "/" + param5.maximumStrength, 126, 18, op.field_c[0][param5.ownerPlayer], -1);
           if (param5.ownerPlayer == param2) {
             SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             SoftwareRaster.b(52, 25, 30, 30, 0, 128);
@@ -663,11 +663,11 @@ final class rk {
               SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             } else {
               SoftwareRaster.b(37, 25, 92, 30, 0, 128);
-              ro.field_rb[param6.g(0)].a(43, 32);
-              sg.field_b[this.a(param6.g(0), (byte) -6, param5.g(0))].a(75, 32);
+              ro.field_rb[param6.getUnitCategory(0)].a(43, 32);
+              sg.field_b[this.a(param6.getUnitCategory(0), (byte) -6, param5.getUnitCategory(0))].a(75, 32);
             }
           }
-          ro.field_rb[param5.g(0)].a(106, 32);
+          ro.field_rb[param5.getUnitCategory(0)].a(106, 32);
           en.field_E.c(100 - param3 + "%", 20, 45, 16777215, -1);
           vb.field_t.b(68, 60, nd.field_b[-1 + nd.field_b.length]);
           so.field_b.a(5605);

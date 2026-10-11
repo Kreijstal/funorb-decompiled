@@ -142,8 +142,8 @@ abstract class hs extends kb implements gw {
           SoftwareRaster.f(param4 + 37, param7 - 70 + param6, 245 + param4, param6 + (param7 - 45));
           fe.a(var8, -param3 + (param4 + 42), param6 - 43 + param7, 16777215, true);
           SoftwareRaster.a();
-          fe.c(param2.strength + param2.field_A + "/" + param2.maximumStrength, param4 + 272, param6 - (42 - param7), 16777215, param1);
-          ro.field_rb[param2.g(0)].a(param4 + 9, param7 - 66 + param6);
+          fe.c(param2.strength + param2.bonusStrength + "/" + param2.maximumStrength, param4 + 272, param6 - (42 - param7), 16777215, param1);
+          ro.field_rb[param2.getUnitCategory(0)].a(param4 + 9, param7 - 66 + param6);
           var9 = param2.l(-27014);
           SoftwareRaster.b(59 + param4, param7 - 41 + param6, 30, 30, 0, 128);
           cp.field_e[eb.a((byte) -120, ~var9 & 3)].a(param4 + 62, param7 - (-param6 + 41));
@@ -158,22 +158,22 @@ abstract class hs extends kb implements gw {
             34 == param2.unitType) {
             var12 = 7;
             var11 = 2;
-            if (param2.j(20640) == 3) {
-              var12 = var12 + param2.d(1, -105);
+            if (param2.getEquipmentCategory(20640) == 3) {
+              var12 = var12 + param2.getEquipmentProperty(1, -105);
             }
           }
           if ((param2.unitType == 81 ||
             param2.unitType == 4 ||
             74 == param2.unitType) &&
-            param2.j(20640) == 3) {
-            var12 = var12 + param2.d(1, 96);
-          } else if (param2.g(0) == 3 &&
-            param2.j(20640) == 2) {
-            var12 = var12 + param2.d(1, -102);
+            param2.getEquipmentCategory(20640) == 3) {
+            var12 = var12 + param2.getEquipmentProperty(1, 96);
+          } else if (param2.getUnitCategory(0) == 3 &&
+            param2.getEquipmentCategory(20640) == 2) {
+            var12 = var12 + param2.getEquipmentProperty(1, -102);
           } else {
-            if (param2.g(0) == 2 &&
-              param2.j(20640) == 1) {
-              var12 = var12 + param2.d(1, -116);
+            if (param2.getUnitCategory(0) == 2 &&
+              param2.getEquipmentCategory(20640) == 1) {
+              var12 = var12 + param2.getEquipmentProperty(1, -116);
             }
           }
           if (var11 != var12) {
@@ -208,32 +208,32 @@ abstract class hs extends kb implements gw {
               var13++;
             }
           }
-          if (param2.field_P != 0) {
-            if (7 <= param2.field_P) {
+          if (param2.statusEffectType != 0) {
+            if (7 <= param2.statusEffectType) {
               stackIn_44_0 = 0;
             } else {
-              stackIn_44_0 = -1 + param2.field_o;
+              stackIn_44_0 = -1 + param2.statusEffectValue;
             }
             var17Lifetime1 = stackIn_44_0;
-            lf.field_h[vr.field_a[param2.field_P - 1] + var17Lifetime1].h(-(30 * (var13 & 3)) + (235 + param4), param7 + (-36 + param6) + (var13 >> 2) * 30);
+            lf.field_h[vr.field_a[param2.statusEffectType - 1] + var17Lifetime1].h(-(30 * (var13 & 3)) + (235 + param4), param7 + (-36 + param6) + (var13 >> 2) * 30);
             km.field_h[0].h(param4 + 233 - 30 * (3 & var13), 30 * (var13 >> 2) + param7 - 37 + param6);
             var13++;
           }
-          if (param2.field_r > -1) {
-            lf.field_h[co.field_p[param2.j(20640)][param2.c((byte) 81)]].h(235 + param4 - (var13 & 3) * 30, (var13 >> 2) * 30 + param7 + (-36 + param6));
+          if (param2.equipmentDescriptor > -1) {
+            lf.field_h[co.field_p[param2.getEquipmentCategory(20640)][param2.getEquipmentId((byte) 81)]].h(235 + param4 - (var13 & 3) * 30, (var13 >> 2) * 30 + param7 + (-36 + param6));
             km.field_h[0].h(-((var13 & 3) * 30) + (param4 + 233), (var13 >> 2) * 30 - 37 + param6 + param7);
             var13++;
           }
-          if (param2.field_ab > 0) {
-            lf.field_h[uj.field_o[param2.field_ab - 1]].h(-((3 & var13) * 30) + (235 + param4), 30 * (var13 >> 2) - 36 - (-param6 - param7));
+          if (param2.accessoryType > 0) {
+            lf.field_h[uj.field_o[param2.accessoryType - 1]].h(-((3 & var13) * 30) + (235 + param4), 30 * (var13 >> 2) - 36 - (-param6 - param7));
             km.field_h[0].h(param4 + 233 - 30 * (3 & var13), (var13 >> 2) * 30 + param7 + param6 - 37);
             var13++;
           }
-          if (param2.field_cb > 0) {
+          if (param2.immobilizedTurns > 0) {
             stackIn_54_0 = lf.field_h;
             stackIn_54_1 = jq.field_H;
-            if (3 >= param2.field_cb) {
-              stackIn_55_2 = -1 + param2.field_cb;
+            if (3 >= param2.immobilizedTurns) {
+              stackIn_55_2 = -1 + param2.immobilizedTurns;
             } else {
               stackIn_55_2 = 2;
             }
@@ -241,7 +241,7 @@ abstract class hs extends kb implements gw {
             km.field_h[0].h(-((var13 & 3) * 30) + (233 + param4), (var13 >> 2) * 30 + param7 - (-param6 + 37));
             var13++;
           }
-          if (param2.packedFlag64) {
+          if (param2.meleeLifeSteal) {
             lf.field_h[133].h(-((3 & var13) * 30) + 235 + param4, param6 - (36 - param7 - 30 * (var13 >> 2)));
             km.field_h[0].h(param4 + 233 - 30 * (3 & var13), -37 + (param6 + param7) + (var13 >> 2) * 30);
             var13++;
@@ -268,8 +268,8 @@ abstract class hs extends kb implements gw {
           regionExit1: {
             var17Lifetime2 = stackIn_71_0;
             if (param2.unitType == 39) {
-              if (!param2.packedFlag4 &&
-                param2.packedLowFlags != 0) {
+              if (!param2.movementSpent &&
+                param2.attacksRemaining != 0) {
                 lw.field_ob.g(11 + param4, param6 + (-36 + param7));
                 ii.field_a[2].g(11 + param4, -36 + (param6 + param7));
                 if ((var17Lifetime2 != 0)) {
@@ -285,8 +285,8 @@ abstract class hs extends kb implements gw {
                   stackIn_82_0 = (Unit) (param2);
                   stackIn_83_1 = !(param1);
                   if (!((Unit) (Object) stackIn_82_0).hasMovementFlag1(stackIn_83_1)) {
-                    if (!param2.packedFlag4 &&
-                      param2.packedLowFlags != 0) {
+                    if (!param2.movementSpent &&
+                      param2.attacksRemaining != 0) {
                       lw.field_ob.g(11 + param4, param7 - 36 + param6);
                       ii.field_a[1].g(param4 + 11, param7 + param6 - 36);
                       if ((var17Lifetime2 != 0)) {
@@ -304,8 +304,8 @@ abstract class hs extends kb implements gw {
                   var18_int = param2.battlefield.tiles[param2.tileX + param2.tileY * param2.battlefield.mapWidth].terrainType;
                   stackIn_95_0 = (0 == var18_int) ? 0 : 1;
                   var19 = stackIn_95_0;
-                  if (!param2.packedFlag4 &&
-                    param2.packedLowFlags != 0 &&
+                  if (!param2.movementSpent &&
+                    param2.attacksRemaining != 0 &&
                     var19 == 0) {
                     lw.field_ob.g(param4 + 11, param7 + (param6 - 36));
                     ii.field_a[4].g(param4 + 11, param7 + param6 - 36);
@@ -323,8 +323,8 @@ abstract class hs extends kb implements gw {
                   var18 = param2.battlefield.tiles[param2.tileY * param2.battlefield.mapWidth + param2.tileX];
                   stackIn_110_0 = (var18.f(19725)) ? 0 : 1;
                   var19Lifetime1 = stackIn_110_0;
-                  if (!param2.packedFlag4 &&
-                    param2.packedLowFlags != 0 &&
+                  if (!param2.movementSpent &&
+                    param2.attacksRemaining != 0 &&
                     var19Lifetime1 == 0) {
                     lw.field_ob.g(param4 + 11, -36 + (param6 + param7));
                     ii.field_a[0].g(11 + param4, -36 + param6 + param7);
@@ -341,8 +341,8 @@ abstract class hs extends kb implements gw {
                 }
                 lw.field_ob.g(11 + param4, -36 - (-param6 - param7), 128);
               } else {
-                if (!param2.packedFlag4 &&
-                  0 != param2.packedLowFlags) {
+                if (!param2.movementSpent &&
+                  0 != param2.attacksRemaining) {
                   lw.field_ob.g(11 + param4, param7 - (-param6 + 36));
                   ii.field_a[3].g(param4 + 11, param6 - (36 - param7));
                   if ((var17Lifetime2 != 0)) {

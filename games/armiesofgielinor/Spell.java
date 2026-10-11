@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ik {
-    int field_c;
+abstract class Spell {
+    int spellId;
     static hk field_d;
     static String field_a;
     static i field_b;
 
-    abstract void a(int param0, Battlefield param1, int param2);
+    abstract void applyEffect(int castingPlayer, Battlefield battlefield, int obfuscationGuard);
 
-    abstract int a(int param0);
+    abstract int getPayloadSize(int obfuscationGuard);
 
     final static void a(String param0, byte param1) {
         try {
           if (param1 < 33) {
-            ik.b(-9);
+            Spell.b(-9);
           }
           if (null != rd.field_j) {
             rd.field_j.field_pc.b(87);
@@ -30,14 +30,14 @@ abstract class ik {
         }
     }
 
-    abstract void a(Battlefield param0, int param1);
+    abstract void finishEffect(Battlefield battlefield, int obfuscationGuard);
 
-    abstract void a(byte param0, Battlefield param1);
+    abstract void prepareEffect(byte obfuscationGuard, Battlefield battlefield);
 
     public static void b(int param0) {
         field_b = null;
         if (param0 != -1700635440) {
-          ik.b(-53);
+          Spell.b(-53);
           field_d = null;
           field_a = null;
           return;
@@ -46,11 +46,11 @@ abstract class ik {
         field_a = null;
     }
 
-    ik(int param0) {
-        this.field_c = param0;
+    Spell(int spellId) {
+        this.spellId = spellId;
     }
 
-    abstract void a(int param0, PacketBuffer param1);
+    abstract void writePayload(int obfuscationGuard, PacketBuffer packet);
 
     final static int a(long param0, long param1, int param2) {
         if (param2 != -1700635440) {

@@ -11,7 +11,7 @@ final class MoveEvent extends GameEvent {
     static rk field_G;
     static bo field_D;
     int startY;
-    private boolean field_A;
+    private boolean applied;
     static boolean field_J;
     int startX;
 
@@ -279,10 +279,10 @@ final class MoveEvent extends GameEvent {
         int var12 = 0;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (this.field_A) {
+          if (this.applied) {
             return;
           }
-          this.field_A = true;
+          this.applied = true;
           var3_int = this.startX;
           var4 = this.startY;
           if (obfuscationGuard != -26661) {
@@ -432,25 +432,25 @@ final class MoveEvent extends GameEvent {
                 nk.a((byte) 101);
               }
               if (var12 != 0) {
-                var6.packedFlag4 = true;
-                var9.occupant = var6.b(false);
+                var6.movementSpent = true;
+                var9.occupant = var6.copyDetached(false);
                 var9.occupant.tileX = var3_int;
                 var9.occupant.tileY = var4;
                 var9.occupant.refreshTileEffects((byte) -35);
-                var9.occupant.packedFlag4 = true;
+                var9.occupant.movementSpent = true;
                 battlefield.registerUnit(obfuscationGuard ^ -18501, var9.occupant);
               }
             }
           } else {
-            var6.packedFlag4 = true;
-            var9.occupant = var6.b(false);
+            var6.movementSpent = true;
+            var9.occupant = var6.copyDetached(false);
             var9.occupant.tileX = var3_int;
             var9.occupant.tileY = var4;
             var9.occupant.refreshTileEffects((byte) -35);
-            var9.occupant.packedFlag4 = true;
+            var9.occupant.movementSpent = true;
             battlefield.registerUnit(obfuscationGuard ^ -18501, var9.occupant);
           }
-          this.unit.packedFlag4 = true;
+          this.unit.movementSpent = true;
           fl.a(battlefield, obfuscationGuard ^ 26718);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -489,25 +489,25 @@ final class MoveEvent extends GameEvent {
         }
     }
 
-    MoveEvent(int param0, int param1, int[] param2) {
+    MoveEvent(int startX, int startY, int[] pathDirections) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_A = false;
+        this.applied = false;
         try {
-          this.startX = param0;
+          this.startX = startX;
           this.field_m = 0;
-          this.pathDirections = param2;
-          this.startY = param1;
+          this.pathDirections = pathDirections;
+          this.startY = startY;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_6_0 = runtimeException;
-          stackIn_6_1 = new StringBuilder().append("kr.<init>(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_6_1 = new StringBuilder().append("kr.<init>(").append(startX).append(',').append(startY).append(',');
+          if (pathDirections == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

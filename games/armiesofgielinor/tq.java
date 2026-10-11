@@ -8,7 +8,7 @@ final class tq {
     static int field_b;
 
     final static void a(boolean param0, boolean param1) {
-        al.a(-47, param0);
+        GlobalSpell.a(-47, param0);
         if (param1) {
           tq.a((byte) 89);
           wc.a(param0, true);

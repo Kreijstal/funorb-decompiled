@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class ra extends ik {
+final class AreaSpell extends Spell {
     static int field_j;
     static String field_i;
     static String field_l;
-    private mn field_g;
+    private SpellAreaSelection selection;
     static String field_k;
-    private bd field_h;
+    private SpellAreaEffect preparedEffect;
     static String field_f;
     static fj field_e;
 
@@ -170,7 +170,7 @@ final class ra extends ik {
           if (param0 == 4) {
             return;
           }
-          ra.b(true);
+          AreaSpell.b(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -204,46 +204,46 @@ final class ra extends ik {
           pt.c(param0 / 2, param2 / 2, 9);
           return;
         }
-        ra.a(-106, -34, -122);
+        AreaSpell.a(-106, -34, -122);
         ni.a(-8994, param0, param2);
         om.a(param2, -22696, param0);
         pt.c(param0 / 2, param2 / 2, 9);
     }
 
-    ra(int param0, mn param1) {
-        super(param0);
+    AreaSpell(int spellId, SpellAreaSelection selection) {
+        super(spellId);
         try {
-          this.field_g = param1;
-          if (this.field_c == 36) {
-            this.field_g.field_u = true;
+          this.selection = selection;
+          if (this.spellId == 36) {
+            this.selection.field_u = true;
           }
-          this.field_g.field_o = param0;
+          this.selection.field_o = spellId;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ra.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ra.<init>(" + spellId + ',' + (selection != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, Battlefield param1, int param2) {
+    final void applyEffect(int castingPlayer, Battlefield battlefield, int obfuscationGuard) {
         try {
-          if (param2 != 26123) {
+          if (obfuscationGuard != 26123) {
             Battlefield var5 = (Battlefield) null;
-            this.a((Battlefield) null, 42);
+            this.finishEffect((Battlefield) null, 42);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ra.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ra.A(" + castingPlayer + ',' + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    final int a(int param0) {
-        if (param0 != 25365) {
+    final int getPayloadSize(int obfuscationGuard) {
+        if (obfuscationGuard != 25365) {
           PacketBuffer var3 = (PacketBuffer) null;
-          this.a(-112, (PacketBuffer) null);
+          this.writePayload(-112, (PacketBuffer) null);
           return 2;
         }
         return 2;
     }
 
-    final void a(Battlefield param0, int param1) {
+    final void finishEffect(Battlefield battlefield, int obfuscationGuard) {
         RuntimeException var3 = null;
         om var4 = null;
         RuntimeException stackIn_7_0 = null;
@@ -251,50 +251,50 @@ final class ra extends ik {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != this.field_h) {
-            this.field_h.a(64, param0);
-            this.field_h = null;
+          if (null != this.preparedEffect) {
+            this.preparedEffect.applyEffect(64, battlefield);
+            this.preparedEffect = null;
           }
-          if (param1 == -1700635440) {
+          if (obfuscationGuard == -1700635440) {
             return;
           }
           var4 = (om) null;
-          ra.a(112, -111, (om) null, true, 116, 78);
+          AreaSpell.a(112, -111, (om) null, true, 116, 78);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
           stackIn_7_1 = new StringBuilder().append("ra.G(");
-          if (param0 == null) {
+          if (battlefield == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final void a(byte param0, Battlefield param1) {
+    final void prepareEffect(byte obfuscationGuard, Battlefield battlefield) {
         try {
-          this.field_h = this.field_g.a(param0 ^ -26, param1);
-          if (param0 != -37) {
+          this.preparedEffect = this.selection.createEffect(obfuscationGuard ^ -26, battlefield);
+          if (obfuscationGuard != -37) {
             Battlefield var4 = (Battlefield) null;
-            this.a((Battlefield) null, -62);
+            this.finishEffect((Battlefield) null, -62);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ra.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ra.D(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, PacketBuffer param1) {
+    final void writePayload(int obfuscationGuard, PacketBuffer packet) {
         try {
-          param1.b(true, this.field_c);
-          if (param0 != -11637) {
+          packet.b(true, this.spellId);
+          if (obfuscationGuard != -11637) {
             field_i = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ra.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ra.E(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -312,7 +312,7 @@ final class ra extends ik {
         if (param0) {
           return 1900 + new Date().getYear();
         }
-        ra.b(false);
+        AreaSpell.b(false);
         return 1900 + new Date().getYear();
     }
 

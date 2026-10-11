@@ -36,7 +36,7 @@ final class UpkeepEvent extends GameEvent {
             return;
           }
           if (battlefield.playerMana[var4.ownerPlayer] < 10) {
-            battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new DeathEvent(this.field_D, this.field_y)));
+            battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeathEvent(this.field_D, this.field_y)));
           } else {
             battlefield.playerMana[var4.ownerPlayer] = battlefield.playerMana[var4.ownerPlayer] - 10;
             if (battlefield.field_b) {

@@ -60,7 +60,7 @@ final class gb extends iu {
           } while (var3 == 0);
           var2 = (Unit) (param0.battlefield.unitsByPlayer[1].first((byte) 95));
           while (null != var2) {
-            var2.a((Unit) (param0.battlefield.unitsByPlayer[0].first((byte) 94)), 2048);
+            var2.faceUnit((Unit) (param0.battlefield.unitsByPlayer[0].first((byte) 94)), 2048);
             var2 = (Unit) (param0.battlefield.unitsByPlayer[1].next((byte) 123));
             if (var3 != 0) {
               return;
@@ -2239,7 +2239,7 @@ final class gb extends iu {
               this.field_k = 8;
               this.d(-37, this.field_C);
             }
-            this.a(fo.a(4800, r.field_E[3 + this.field_C], new String[]{fq.field_f[this.field_q.battlefield.field_B[0][this.field_C]], mn.field_l[this.field_q.battlefield.field_B[0][this.field_C]], var4}), (byte) 109);
+            this.a(fo.a(4800, r.field_E[3 + this.field_C], new String[]{fq.field_f[this.field_q.battlefield.field_B[0][this.field_C]], SpellAreaSelection.field_l[this.field_q.battlefield.field_B[0][this.field_C]], var4}), (byte) 109);
             if (var7 == 0) {
               return;
             }
@@ -2320,7 +2320,7 @@ final class gb extends iu {
                   if (this.field_q.selectedUnit.ownerPlayer != 0) {
                     break regionExit1;
                   }
-                  if (this.field_q.selectedUnit.packedFlag4) {
+                  if (this.field_q.selectedUnit.movementSpent) {
                     break regionExit1;
                   }
                   return true;
@@ -2328,7 +2328,7 @@ final class gb extends iu {
                   if (this.field_q.selectedUnit.ownerPlayer != 0) {
                     break regionExit1;
                   }
-                  if (this.field_q.selectedUnit.packedFlag4) {
+                  if (this.field_q.selectedUnit.movementSpent) {
                     break regionExit1;
                   }
                   return true;
@@ -2339,7 +2339,7 @@ final class gb extends iu {
                     if (this.field_q.selectedUnit.ownerPlayer != 0) {
                       break regionExit1;
                     }
-                    if (this.field_q.selectedUnit.packedFlag4) {
+                    if (this.field_q.selectedUnit.movementSpent) {
                       break regionExit1;
                     }
                     return true;
@@ -2348,7 +2348,7 @@ final class gb extends iu {
               }
             }
             if (this.field_q.selectedUnit.ownerPlayer != 0 &&
-              !this.field_q.selectedUnit.packedFlag4) {
+              !this.field_q.selectedUnit.movementSpent) {
               return true;
             }
           }

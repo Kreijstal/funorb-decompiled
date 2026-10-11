@@ -234,8 +234,8 @@ final class wc extends nl {
           tn.field_Z.a((byte) -108, param0);
         }
         hw.a(param0, (byte) -89);
-        if (ik.field_b != null) {
-          ik.field_b.b(param0, 20);
+        if (Spell.field_b != null) {
+          Spell.field_b.b(param0, 20);
         }
         qh.a(param0, 0);
     }

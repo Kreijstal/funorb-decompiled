@@ -18,14 +18,14 @@ final class bu {
         int var5 = 0;
         try {
           var4_int = param1.packStatusFlags((byte) 117);
-          param3.b(param2 - 1, param1.field_A & 31 | param1.ownerPlayer << 5);
+          param3.b(param2 - 1, param1.bonusStrength & 31 | param1.ownerPlayer << 5);
           param3.b(true, var4_int);
           param3.b(1, param0 + param1.maximumStrength);
           param3.b(1, param1.strength + param0);
-          param3.b(1, param1.field_o << 4 | param1.field_P);
-          param3.b(1, param1.field_ab);
-          param3.b(1, param1.field_r);
-          param3.b(param2 - 1, param1.field_cb);
+          param3.b(1, param1.statusEffectValue << 4 | param1.statusEffectType);
+          param3.b(1, param1.accessoryType);
+          param3.b(1, param1.equipmentDescriptor);
+          param3.b(param2 - 1, param1.immobilizedTurns);
           param3.b(1, param1.movementFlags);
           if ((4 & param1.movementFlags) != 0) {
             param3.a(param1.displayName, 413740432);

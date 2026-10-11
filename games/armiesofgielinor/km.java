@@ -76,7 +76,7 @@ final class km {
         var4Lifetime1 = new nt();
         var4Lifetime1.field_o = param0;
         var4Lifetime1.field_q = param2;
-        s.field_a.a((byte) -119, (IntrusiveNode) (var4Lifetime1));
+        s.field_a.addLast((byte) -119, (IntrusiveNode) (var4Lifetime1));
         tf.a(param3, var4Lifetime1, (byte) -64);
         return var4Lifetime1;
     }

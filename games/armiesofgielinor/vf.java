@@ -194,7 +194,7 @@ abstract class vf {
               if (!vu.b(false)) {
                 ad.field_I = fo.a(4800, op.field_a, new String[]{vu.field_M.field_rc});
               } else {
-                ad.field_I = ra.field_f;
+                ad.field_I = AreaSpell.field_f;
               }
             }
             decompiledFrameRemainder1 = !(lm.field_e.length < 2);
@@ -376,7 +376,7 @@ abstract class vf {
                     var10 = 1;
                   }
                   if (0 < var16 &&
-                    al.field_g < var16) {
+                    GlobalSpell.field_g < var16) {
                     var12 = 1;
                   }
                 }
@@ -523,7 +523,7 @@ abstract class vf {
                       }
                     }
                     if (var12 != 0) {
-                      var31 = fo.a(4800, qb.field_k, new String[]{Integer.toString(al.field_g), Integer.toString(iv.field_e[var7][var9])});
+                      var31 = fo.a(4800, qb.field_k, new String[]{Integer.toString(GlobalSpell.field_g), Integer.toString(iv.field_e[var7][var9])});
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;

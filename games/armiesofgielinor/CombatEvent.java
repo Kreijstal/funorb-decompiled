@@ -2,25 +2,25 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CombatEvent extends GameEvent {
-    private int field_y;
-    int field_Q;
+    private int defenderAnimationCount;
+    int attackerX;
     static int[] field_L;
-    boolean field_N;
-    private boolean field_E;
-    boolean field_M;
-    int field_G;
-    int field_K;
+    boolean attackerDies;
+    private boolean defenderDeployed;
+    boolean defenderDies;
+    int attackerY;
+    int attackerDamage;
     int battleId;
-    int field_R;
+    int defenderDamage;
     static int[] field_A;
     static je field_I;
-    boolean field_J;
-    private int field_z;
-    int field_F;
+    boolean attackerDeployed;
+    private int unseenUnitType;
+    int targetDeltaX;
     static int field_P;
-    int field_B;
+    int targetDeltaY;
     static String field_O;
-    private int field_H;
+    private int attackerAnimationCount;
 
     public static void e(byte param0) {
         field_A = null;
@@ -55,23 +55,23 @@ final class CombatEvent extends GameEvent {
         String var3Lifetime1;
         if (verbose) {
           System.out.println("Combat event debug");
-          System.out.println("Attacker at " + this.field_Q + "," + this.field_G);
-          System.out.println("Attacks " + (this.field_Q + this.field_F) + "," + (this.field_G + this.field_B));
-          System.out.println("Attacker deals " + this.field_K + " damage");
-          System.out.println("Defender deals " + this.field_R + " damage");
-          if (this.field_N) {
+          System.out.println("Attacker at " + this.attackerX + "," + this.attackerY);
+          System.out.println("Attacks " + (this.attackerX + this.targetDeltaX) + "," + (this.attackerY + this.targetDeltaY));
+          System.out.println("Attacker deals " + this.attackerDamage + " damage");
+          System.out.println("Defender deals " + this.defenderDamage + " damage");
+          if (this.attackerDies) {
             System.out.println("Attacker dies");
           }
-          if (this.field_M) {
+          if (this.defenderDies) {
             System.out.println("Defender dies");
           }
-          System.out.println(this.field_H + " attackers in anim");
-          System.out.println(this.field_y + " defenders in anim");
-          System.out.println("Unseen type is" + this.field_z);
-          var3 = "EventCombat: creature: " + this.field_z + ", com:(" + this.field_Q + "," + this.field_G + ")" + ", att:(" + this.field_F + "," + this.field_B + ")" + ", dam:(" + this.field_K + "," + this.field_R + ")" + "\n" + "die:(" + this.field_N + "," + this.field_M + ")" + ", count:(" + this.field_H + "," + this.field_y + ")" + ", deployed:(" + this.field_J + "," + this.field_E + ")" + ", battleid:" + this.battleId;
+          System.out.println(this.attackerAnimationCount + " attackers in anim");
+          System.out.println(this.defenderAnimationCount + " defenders in anim");
+          System.out.println("Unseen type is" + this.unseenUnitType);
+          var3 = "EventCombat: creature: " + this.unseenUnitType + ", com:(" + this.attackerX + "," + this.attackerY + ")" + ", att:(" + this.targetDeltaX + "," + this.targetDeltaY + ")" + ", dam:(" + this.attackerDamage + "," + this.defenderDamage + ")" + "\n" + "die:(" + this.attackerDies + "," + this.defenderDies + ")" + ", count:(" + this.attackerAnimationCount + "," + this.defenderAnimationCount + ")" + ", deployed:(" + this.attackerDeployed + "," + this.defenderDeployed + ")" + ", battleid:" + this.battleId;
           return var3;
         }
-        var3Lifetime1 = "EventCombat: creature: " + this.field_z + ", com:(" + this.field_Q + "," + this.field_G + ")" + ", att:(" + this.field_F + "," + this.field_B + ")" + ", dam:(" + this.field_K + "," + this.field_R + ")" + "\n" + "die:(" + this.field_N + "," + this.field_M + ")" + ", count:(" + this.field_H + "," + this.field_y + ")" + ", deployed:(" + this.field_J + "," + this.field_E + ")" + ", battleid:" + this.battleId;
+        var3Lifetime1 = "EventCombat: creature: " + this.unseenUnitType + ", com:(" + this.attackerX + "," + this.attackerY + ")" + ", att:(" + this.targetDeltaX + "," + this.targetDeltaY + ")" + ", dam:(" + this.attackerDamage + "," + this.defenderDamage + ")" + "\n" + "die:(" + this.attackerDies + "," + this.defenderDies + ")" + ", count:(" + this.attackerAnimationCount + "," + this.defenderAnimationCount + ")" + ", deployed:(" + this.attackerDeployed + "," + this.defenderDeployed + ")" + ", battleid:" + this.battleId;
         return var3Lifetime1;
     }
 
@@ -87,42 +87,42 @@ final class CombatEvent extends GameEvent {
         Unit var5 = null;
         Unit var6 = null;
         try {
-          var6 = param2.battlefield.getUnitAt(this.field_G, true, this.field_Q);
+          var6 = param2.battlefield.getUnitAt(this.attackerY, true, this.attackerX);
           if (param1 > -84) {
-            this.field_G = -99;
+            this.attackerY = -99;
           }
-          var5 = param2.battlefield.getUnitAt(this.field_B + this.field_G, true, this.field_Q + this.field_F);
-          if (this.field_B * this.field_B + this.field_F * this.field_F != 1) {
+          var5 = param2.battlefield.getUnitAt(this.targetDeltaY + this.attackerY, true, this.attackerX + this.targetDeltaX);
+          if (this.targetDeltaY * this.targetDeltaY + this.targetDeltaX * this.targetDeltaX != 1) {
             if (var6 != null) {
-              var6.e(118, 2048 - (int)(2048.0 * Math.atan2((double)this.field_B, (double)(-this.field_F)) / 3.141592653589793 / 2.0) + 256 & 2047);
+              var6.setFacingAngle(118, 2048 - (int)(2048.0 * Math.atan2((double)this.targetDeltaY, (double)(-this.targetDeltaX)) / 3.141592653589793 / 2.0) + 256 & 2047);
             }
           } else {
             if (var6 != null) {
-              if (this.field_F > 0) {
-                var6.e(74, 1280);
+              if (this.targetDeltaX > 0) {
+                var6.setFacingAngle(74, 1280);
               }
-              if (this.field_B > 0) {
-                var6.e(-118, 1792);
+              if (this.targetDeltaY > 0) {
+                var6.setFacingAngle(-118, 1792);
               }
-              if (this.field_F < 0) {
-                var6.e(-127, 256);
+              if (this.targetDeltaX < 0) {
+                var6.setFacingAngle(-127, 256);
               }
-              if (this.field_B < 0) {
-                var6.e(-122, 768);
+              if (this.targetDeltaY < 0) {
+                var6.setFacingAngle(-122, 768);
               }
             }
             if (var5 != null) {
-              if (this.field_F > 0) {
-                var5.e(72, 256);
+              if (this.targetDeltaX > 0) {
+                var5.setFacingAngle(72, 256);
               }
-              if (this.field_B > 0) {
-                var5.e(-117, 768);
+              if (this.targetDeltaY > 0) {
+                var5.setFacingAngle(-117, 768);
               }
-              if (this.field_F < 0) {
-                var5.e(-121, 1280);
+              if (this.targetDeltaX < 0) {
+                var5.setFacingAngle(-121, 1280);
               }
-              if (this.field_B < 0) {
-                var5.e(3, 1792);
+              if (this.targetDeltaY < 0) {
+                var5.setFacingAngle(3, 1792);
               }
             }
           }
@@ -158,10 +158,10 @@ final class CombatEvent extends GameEvent {
 
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {
         try {
-          battlefield.a(this.field_G, this.field_F, this.field_N, this.field_Q, this.field_B, 111, this.field_M, this.field_K, this.field_R, this.field_z);
+          battlefield.queueCombatConsequences(this.attackerY, this.targetDeltaX, this.attackerDies, this.attackerX, this.targetDeltaY, 111, this.defenderDies, this.attackerDamage, this.defenderDamage, this.unseenUnitType);
           hf.a(battlefield, (byte) 9, true);
           if (obfuscationGuard != -26661) {
-            this.field_B = -38;
+            this.targetDeltaY = -38;
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "ag.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
@@ -176,22 +176,22 @@ final class CombatEvent extends GameEvent {
         return (java.applet.Applet) ((Object) lr.field_a);
     }
 
-    CombatEvent(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, boolean param8, int param9, int param10, boolean param11, boolean param12, int param13) {
+    CombatEvent(int unseenUnitType, int attackerX, int attackerY, int targetDeltaX, int targetDeltaY, int attackerDamage, int defenderDamage, boolean attackerDies, boolean defenderDies, int attackerAnimationCount, int defenderAnimationCount, boolean attackerDeployed, boolean defenderDeployed, int battleId) {
         this.field_m = 1;
-        this.field_K = param5;
-        this.battleId = param13;
-        this.field_J = param11 ? true : false;
-        this.field_y = param10;
-        this.field_G = param2;
-        this.field_F = param3;
-        this.field_N = param7 ? true : false;
-        this.field_R = param6;
-        this.field_E = param12 ? true : false;
-        this.field_H = param9;
-        this.field_M = param8 ? true : false;
-        this.field_z = param0;
-        this.field_B = param4;
-        this.field_Q = param1;
+        this.attackerDamage = attackerDamage;
+        this.battleId = battleId;
+        this.attackerDeployed = attackerDeployed ? true : false;
+        this.defenderAnimationCount = defenderAnimationCount;
+        this.attackerY = attackerY;
+        this.targetDeltaX = targetDeltaX;
+        this.attackerDies = attackerDies ? true : false;
+        this.defenderDamage = defenderDamage;
+        this.defenderDeployed = defenderDeployed ? true : false;
+        this.attackerAnimationCount = attackerAnimationCount;
+        this.defenderDies = defenderDies ? true : false;
+        this.unseenUnitType = unseenUnitType;
+        this.targetDeltaY = targetDeltaY;
+        this.attackerX = attackerX;
     }
 
     static {

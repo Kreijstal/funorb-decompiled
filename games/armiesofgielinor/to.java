@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class to extends mn {
-    private ik field_v;
+final class to extends SpellAreaSelection {
+    private Spell field_v;
     private int field_w;
 
     final static short[] a(short[] param0, int param1, CipherPacketBuffer param2, int param3) {
@@ -117,7 +117,7 @@ final class to extends mn {
         }
     }
 
-    final bd a(int param0, Battlefield param1) {
+    final SpellAreaEffect createEffect(int obfuscationGuard, Battlefield battlefield) {
         RuntimeException var3 = null;
         String var4 = null;
         ua stackIn_3_0 = null;
@@ -127,19 +127,19 @@ final class to extends mn {
         RuntimeException decompiledCaughtException = null;
         try {
           this.unlink(-104);
-          if (param0 <= 31) {
+          if (obfuscationGuard <= 31) {
             var4 = (String) null;
             to.a(true, -1.1208561658859253f, (String) null, -70);
           }
-          this.field_v.a((byte) -37, param1);
+          this.field_v.prepareEffect((byte) -37, battlefield);
           stackIn_3_0 = new ua(this.field_v, this.field_w, this.field_p);
-          return (bd) ((Object) stackIn_3_0);
+          return (SpellAreaEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("to.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("to.C(").append(obfuscationGuard).append(',');
+          if (battlefield == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -148,7 +148,7 @@ final class to extends mn {
         }
     }
 
-    to(ik param0, int param1, int param2) {
+    to(Spell param0, int param1, int param2) {
         try {
           this.field_w = param1;
           this.field_p = param2;

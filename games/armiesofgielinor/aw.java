@@ -63,7 +63,7 @@ final class aw extends sm {
             param1.field_t > var3.field_t) {
             var3 = param1;
           }
-          this.field_a.a(750, var3);
+          this.field_a.addFirst(750, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

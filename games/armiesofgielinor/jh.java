@@ -124,7 +124,7 @@ final class jh extends mk {
                 var18.field_m[var5] = -5;
               }
             }
-            tp.field_e.a((byte) -119, (IntrusiveNode) (var18));
+            tp.field_e.addLast((byte) -119, (IntrusiveNode) (var18));
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

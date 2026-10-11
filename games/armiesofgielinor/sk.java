@@ -492,9 +492,9 @@ final class sk implements pa {
           boolean decompiledFrameRemainder3 = true;
           if (1 == param0.field_m) {
             var3 = (CombatEvent) (param0);
-            var4 = this.field_x.mapWidth * var3.field_G + var3.field_Q;
-            var5 = var3.field_F + (var4 + var3.field_B * this.field_x.mapWidth);
-            stackIn_8_1 = !(var3.field_B * var3.field_B + var3.field_F * var3.field_F <= 1);
+            var4 = this.field_x.mapWidth * var3.attackerY + var3.attackerX;
+            var5 = var3.targetDeltaX + (var4 + var3.targetDeltaY * this.field_x.mapWidth);
+            stackIn_8_1 = !(var3.targetDeltaY * var3.targetDeltaY + var3.targetDeltaX * var3.targetDeltaX <= 1);
             this.field_d = stackIn_8_1;
             if (var4 >= 0 &&
               var4 < this.field_x.tiles.length &&
@@ -508,8 +508,8 @@ final class sk implements pa {
                 this.b((byte) 54, this.field_x.mapTheme);
                 this.field_g = -1;
                 this.field_e = -1;
-                var8 = var6.field_A + var6.strength;
-                var9 = var6.maximumStrength + var6.field_A;
+                var8 = var6.bonusStrength + var6.strength;
+                var9 = var6.maximumStrength + var6.bonusStrength;
                 this.field_e = var6.ownerPlayer;
                 this.field_J = bw.unitDefinitions[var6.unitType][9];
                 if (0 < vu.field_N[this.field_J] * var8 % var9) {
@@ -518,25 +518,25 @@ final class sk implements pa {
                   stackIn_37_1 = 0;
                 }
                 this.field_y = stackIn_37_1 + var8 * vu.field_N[this.field_J] / var9;
-                stackIn_40_1 = this.field_y - vu.field_N[this.field_J] * (var8 - var3.field_R) / var9;
-                if ((-var3.field_R + var8) * vu.field_N[this.field_J] % var9 > 0) {
+                stackIn_40_1 = this.field_y - vu.field_N[this.field_J] * (var8 - var3.defenderDamage) / var9;
+                if ((-var3.defenderDamage + var8) * vu.field_N[this.field_J] % var9 > 0) {
                   stackIn_41_2 = 1;
                 } else {
                   stackIn_41_2 = 0;
                 }
                 this.field_v = stackIn_40_1 - stackIn_41_2;
-                if (var6.field_P == 7 ||
-                  var6.field_P == 8) {
+                if (var6.statusEffectType == 7 ||
+                  var6.statusEffectType == 8) {
                   this.field_v = 0;
                 }
                 this.field_c = var6.unitType;
                 if (this.field_v > this.field_y) {
                   this.field_v = this.field_y;
                 }
-                stackIn_57_1 = (var6.g(0) == 3) || (var7.unitType == 7);
+                stackIn_57_1 = (var6.getUnitCategory(0) == 3) || (var7.unitType == 7);
                 this.field_E = stackIn_57_1;
-                var8Lifetime1 = var7.strength + var7.field_A;
-                var9Lifetime1 = var7.field_A + var7.maximumStrength;
+                var8Lifetime1 = var7.strength + var7.bonusStrength;
+                var9Lifetime1 = var7.bonusStrength + var7.maximumStrength;
                 if (var7.unitType == 34 &&
                   var7.packedFlag8) {
                   this.field_q = true;
@@ -549,28 +549,28 @@ final class sk implements pa {
                   stackIn_67_1 = 1;
                 }
                 this.field_w = stackIn_67_1 + var8Lifetime1 * vu.field_N[this.field_u] / var9Lifetime1;
-                if (0 >= (var8Lifetime1 - var3.field_K) * vu.field_N[this.field_u] % var9Lifetime1) {
+                if (0 >= (var8Lifetime1 - var3.attackerDamage) * vu.field_N[this.field_u] % var9Lifetime1) {
                   stackIn_71_1 = 0;
                 } else {
                   stackIn_71_1 = 1;
                 }
-                this.field_O = -stackIn_71_1 - ((var8Lifetime1 - var3.field_K) * vu.field_N[this.field_u] / var9Lifetime1 - this.field_w);
-                if (var7.field_P == 7 ||
-                  var7.field_P == 8) {
+                this.field_O = -stackIn_71_1 - ((var8Lifetime1 - var3.attackerDamage) * vu.field_N[this.field_u] / var9Lifetime1 - this.field_w);
+                if (var7.statusEffectType == 7 ||
+                  var7.statusEffectType == 8) {
                   this.field_O = 0;
                 }
                 if (this.field_w < this.field_O) {
                   this.field_O = this.field_w;
                 }
                 this.field_a = var7.unitType;
-                stackIn_87_1 = (var7.g(0) == 3) || (7 == var7.unitType);
+                stackIn_87_1 = (var7.getUnitCategory(0) == 3) || (7 == var7.unitType);
                 boolean decompiledFrameRemainder2 = true;
                 this.field_P = stackIn_87_1;
                 if (!this.field_d) {
-                  if (var3.field_M) {
+                  if (var3.defenderDies) {
                     this.field_L = 2;
                     if (var10 != 0) {
-                      if (var3.field_N) {
+                      if (var3.attackerDies) {
                         this.field_L = 3;
                         this.field_L = 4;
                       } else {
@@ -578,7 +578,7 @@ final class sk implements pa {
                       }
                     }
                   } else {
-                    if (var3.field_N) {
+                    if (var3.attackerDies) {
                       this.field_L = 3;
                       if (var10 != 0) {
                         this.field_L = 4;
@@ -597,7 +597,7 @@ final class sk implements pa {
                     decompiledFrameRemainder1 = (var10 != 0);
                   }
                   if (decompiledFrameRemainder1) {
-                    if (var6.g(param1 ^ 57) == 3) {
+                    if (var6.getUnitCategory(param1 ^ 57) == 3) {
                       this.field_z = 8 + bw.unitDefinitions[var6.unitType][1];
                       decompiledFrameRemainder1 = (var10 != 0);
                     }
@@ -641,7 +641,7 @@ final class sk implements pa {
                   this.field_D = new km[this.field_p];
                   this.field_b = this.a(this.field_w, (byte) -128);
                   this.field_n = 5;
-                  if (!var3.field_M) {
+                  if (!var3.defenderDies) {
                     this.field_L = 8;
                     if (var10 != 0) {
                       this.field_L = 7;
@@ -654,7 +654,7 @@ final class sk implements pa {
                 fn.a(this.field_d, this.field_c, param1 - 32653);
                 fn.a(this.field_d, this.field_a, param1 ^ -32619);
                 if (this.field_c == 34 &&
-                  var3.field_J) {
+                  var3.attackerDeployed) {
                   this.field_s = new lf[6];
                   var8Lifetime1 = 0;
                   while (this.field_y > var8Lifetime1) {
@@ -692,7 +692,7 @@ final class sk implements pa {
                   this.field_i = new lf[vu.field_N[this.field_u]];
                 }
                 if (this.field_c == 34 &&
-                  var3.field_J) {
+                  var3.attackerDeployed) {
                   this.field_h = true;
                   this.field_y = 1;
                   this.field_c = 75;
@@ -701,7 +701,7 @@ final class sk implements pa {
                 if (this.field_q) {
                   this.field_a = 75;
                   this.field_w = 1;
-                  if (var7.field_A + var7.strength > var3.field_K) {
+                  if (var7.bonusStrength + var7.strength > var3.attackerDamage) {
                     stackIn_192_1 = 0;
                   } else {
                     stackIn_192_1 = 1;
@@ -855,13 +855,13 @@ final class sk implements pa {
                 boolean decompiledSharedTail0 = (this.field_d &&
                   this.field_L == 8);
                 if (!decompiledSharedTail0) {
-                  this.field_t = this.field_x.mapWidth * var3.field_G + var3.field_Q;
+                  this.field_t = this.field_x.mapWidth * var3.attackerY + var3.attackerX;
                   decompiledSharedTail0 = (var10 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  this.field_t = var3.field_F + var3.field_Q + this.field_x.mapWidth * (var3.field_B + var3.field_G);
+                  this.field_t = var3.targetDeltaX + var3.attackerX + this.field_x.mapWidth * (var3.targetDeltaY + var3.attackerY);
                 }
-                u.field_p.b(var3.field_G * this.field_x.mapWidth + var3.field_Q, param1 ^ 65);
+                u.field_p.b(var3.attackerY * this.field_x.mapWidth + var3.attackerX, param1 ^ 65);
                 decompiledFrameRemainder3 = false;
               }
               else {
@@ -4029,7 +4029,7 @@ final class sk implements pa {
           if (this.field_v > this.field_y) {
             this.field_v = this.field_y;
           }
-          stackIn_52_1 = (3 == param4.g(0)) || (7 == param1.unitType);
+          stackIn_52_1 = (3 == param4.getUnitCategory(0)) || (7 == param1.unitType);
           this.field_E = stackIn_52_1;
           if (param1.unitType == 34 &&
             param1.packedFlag8) {
@@ -4054,7 +4054,7 @@ final class sk implements pa {
           if (this.field_w < this.field_O) {
             this.field_O = this.field_w;
           }
-          stackIn_77_1 = (param1.g(0) == 3) || (param1.unitType == 7);
+          stackIn_77_1 = (param1.getUnitCategory(0) == 3) || (param1.unitType == 7);
           boolean decompiledFrameRemainder4 = true;
           this.field_P = stackIn_77_1;
           if (!this.field_d) {
@@ -4081,7 +4081,7 @@ final class sk implements pa {
               decompiledFrameRemainder3 = (var9 != 0);
             }
             if (decompiledFrameRemainder3) {
-              if (param4.g(0) == 3) {
+              if (param4.getUnitCategory(0) == 3) {
                 this.field_z = bw.unitDefinitions[param4.unitType][1] + 8;
                 decompiledFrameRemainder3 = (var9 != 0);
               }
@@ -4180,7 +4180,7 @@ final class sk implements pa {
           if ((decompiledFrameCompleted6) && (param1.unitType == 34 &&
             param1.packedFlag8)) {
             this.field_w = 1;
-            if ((param1.strength + param1.field_A) > param0) {
+            if ((param1.strength + param1.bonusStrength) > param0) {
               stackIn_188_1 = 0;
             } else {
               stackIn_188_1 = 1;

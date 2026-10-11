@@ -113,7 +113,7 @@ final class Battlefield {
           if (this.unitsByPlayer.length <= unit.ownerPlayer) {
             return;
           }
-          this.unitsByPlayer[unit.ownerPlayer].a((byte) -119, (IntrusiveNode) (unit));
+          this.unitsByPlayer[unit.ownerPlayer].addLast((byte) -119, (IntrusiveNode) (unit));
           if (obfuscationGuard != 8288) {
             this.l(-73, -26);
           }
@@ -170,7 +170,7 @@ final class Battlefield {
           if (param1 != -16) {
             this.teams = (TeamRoster[]) null;
           }
-          stackIn_3_0 = TrinketUseEvent.a(this.mapWidth, this.tiles, param5, param2, param3, this.mapHeight, this.getPlayerTeamIndex(param3, param1 ^ 15), param4, param0, false, true);
+          stackIn_3_0 = SpellCastEvent.a(this.mapWidth, this.tiles, param5, param2, param3, this.mapHeight, this.getPlayerTeamIndex(param3, param1 ^ 15), param4, param0, false, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -274,7 +274,7 @@ final class Battlefield {
             stackIn_36_0 = var5_ref_jd.i(-21428);
             if (var8 == 0) {
               if (stackIn_36_0 &&
-                !var5_ref_jd.t(param2 + 26440)) {
+                !var5_ref_jd.isDisplacedFromTile(param2 + 26440)) {
                 var6_int = var5_ref_jd.tileX + var5_ref_jd.tileY * this.mapWidth;
                 if (var5_ref_jd.tileX >= 0 &&
                   this.tiles.length > var5_ref_jd.tileX &&
@@ -283,13 +283,13 @@ final class Battlefield {
                   var7 = this.tiles[var6_int];
                   if (var7.a(false) && (!(var7.ownerPlayer >= 0) ||
                     !this.arePlayersAllied(var7.ownerPlayer, -16985, this.currentPlayer))) {
-                    var7.field_m = var7.field_m - var5_ref_jd.g((byte) 122);
+                    var7.field_m = var7.field_m - var5_ref_jd.getEffectiveStrength((byte) 122);
                     if (var7.field_m <= 0 &&
                       this.field_b) {
                       if (!param1) {
-                        this.pendingEvents.a((byte) -119, (IntrusiveNode) (new StateChangeEvent(0, var5_ref_jd.tileX, var5_ref_jd.tileY, var5_ref_jd.ownerPlayer)));
+                        this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new StateChangeEvent(0, var5_ref_jd.tileX, var5_ref_jd.tileY, var5_ref_jd.ownerPlayer)));
                       } else {
-                        ((NodeDeque) (var4)).a((byte) -119, (IntrusiveNode) (new ss(var5_ref_jd.tileX, var5_ref_jd.tileY, 0, this.currentPlayer)));
+                        ((NodeDeque) (var4)).addLast((byte) -119, (IntrusiveNode) (new ss(var5_ref_jd.tileX, var5_ref_jd.tileY, 0, this.currentPlayer)));
                       }
                     }
                   }
@@ -326,17 +326,17 @@ final class Battlefield {
           if (var8 == 0) {
             if (!stackIn_60_0) {
               if (param1) {
-                if (var5_ref_jdLifetime1.t(26440)) {
-                  ((NodeDeque) (var4)).a((byte) -119, (IntrusiveNode) (new il(var5_ref_jdLifetime1.tileX, var5_ref_jdLifetime1.tileY, var5_ref_jdLifetime1, this.tiles[var5_ref_jdLifetime1.tileY * this.mapWidth + var5_ref_jdLifetime1.tileX])));
+                if (var5_ref_jdLifetime1.isDisplacedFromTile(26440)) {
+                  ((NodeDeque) (var4)).addLast((byte) -119, (IntrusiveNode) (new il(var5_ref_jdLifetime1.tileX, var5_ref_jdLifetime1.tileY, var5_ref_jdLifetime1, this.tiles[var5_ref_jdLifetime1.tileY * this.mapWidth + var5_ref_jdLifetime1.tileX])));
                 }
                 if (var5_ref_jdLifetime1.e((byte) 79) &&
                   this.playerMana[var5_ref_jdLifetime1.ownerPlayer] < 10) {
-                  ((NodeDeque) (var4)).a((byte) -119, (IntrusiveNode) (new pl(var5_ref_jdLifetime1.ownerPlayer, var5_ref_jdLifetime1, 0)));
+                  ((NodeDeque) (var4)).addLast((byte) -119, (IntrusiveNode) (new pl(var5_ref_jdLifetime1.ownerPlayer, var5_ref_jdLifetime1, 0)));
                 }
                 if (var5_ref_jdLifetime1.unitType == 10 &&
                   this.tiles[var5_ref_jdLifetime1.tileX + var5_ref_jdLifetime1.tileY * this.mapWidth].hasCorpse(93) &&
                   var5_ref_jdLifetime1.maximumStrength == 19) {
-                  ((NodeDeque) (var4)).a((byte) -119, (IntrusiveNode) (new dk(var5_ref_jdLifetime1.ownerPlayer, this.playerCount)));
+                  ((NodeDeque) (var4)).addLast((byte) -119, (IntrusiveNode) (new dk(var5_ref_jdLifetime1.ownerPlayer, this.playerCount)));
                 }
               }
               var5_ref_jdLifetime1.k(-1);
@@ -375,7 +375,7 @@ final class Battlefield {
             if (stackIn_69_0 > stackIn_69_1) {
               break;
             }
-            ((NodeDeque) (var4)).a((byte) -119, (IntrusiveNode) (new kj(this.currentPlayer, this.playerCount)));
+            ((NodeDeque) (var4)).addLast((byte) -119, (IntrusiveNode) (new kj(this.currentPlayer, this.playerCount)));
             break;
           }
         }
@@ -576,7 +576,7 @@ final class Battlefield {
                     } else {
                         /* Inlined CFG state: 23. */
                         {
-                            this.pendingEvents.a((byte) -119, (IntrusiveNode) (new DeathEvent(var11, true)));
+                            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeathEvent(var11, true)));
                             var11 = (Unit) (this.unitsByPlayer[param1].next((byte) 123));
                             if (var9 != 0) {
                                 statePc = 43;
@@ -695,7 +695,7 @@ final class Battlefield {
                             if (param1 == var8.ownerPlayer) {
                                 /* Inlined CFG state: 41. */
                                 {
-                                    this.pendingEvents.a((byte) -119, (IntrusiveNode) (new OwnerChangeEvent(var8, var10[var5 % var10.length], false)));
+                                    this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new OwnerChangeEvent(var8, var10[var5 % var10.length], false)));
                                     var5++;
                                     statePc = 42;
                                     continue scanLoop1;
@@ -800,7 +800,7 @@ final class Battlefield {
                     } else {
                         /* Inlined CFG state: 54. */
                         {
-                            this.pendingEvents.a((byte) -119, (IntrusiveNode) (new DeathEvent(var12, true)));
+                            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeathEvent(var12, true)));
                             var12 = (Unit) (this.unitsByPlayer[param1].next((byte) 123));
                             if (var9 != 0) {
                                 statePc = 60;
@@ -1146,7 +1146,7 @@ final class Battlefield {
         }
         var11 = new Unit(param1, param3, param2, param5, var9, var9, var10, 0, 0, this, 0, 0, -1, false, 0);
         this.registerUnit(8288, var11);
-        if (var11.g(0) != 4) {
+        if (var11.getUnitCategory(0) != 4) {
         }
         if (re.a(0, (byte) -98) &&
           this.field_b) {
@@ -1383,7 +1383,7 @@ final class Battlefield {
             param1.hasCorpse(-32)) {
             param1.clearCorpse(param0 + 114);
             if (param1.occupant.maximumStrength < 99) {
-              this.pendingEvents.a((byte) -119, (IntrusiveNode) (new TurnEffectEvent(param1.occupant, 4)));
+              this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(param1.occupant, 4)));
             }
           }
           if (param0 != -100) {
@@ -1762,7 +1762,7 @@ final class Battlefield {
         }
     }
 
-    final void a(byte param0, ik param1, int param2, int param3) {
+    final void a(byte param0, Spell param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int stackIn_4_0 = 0;
@@ -1787,7 +1787,7 @@ final class Battlefield {
           }
           if (var5_int != 0) {
             this.field_B[param3][param2] = -1;
-            this.remainingRuneCap[param3] = this.remainingRuneCap[param3] - uc.spellDefinitions[param1.field_c][0];
+            this.remainingRuneCap[param3] = this.remainingRuneCap[param3] - uc.spellDefinitions[param1.spellId][0];
           }
           this.field_J = false;
           return;
@@ -1865,7 +1865,7 @@ final class Battlefield {
             this.a(103, false, (int[]) null);
           }
           var7 = (var3_int & 31) >> 3;
-          this.pendingEvents.a((byte) -119, (IntrusiveNode) (new StateChangeEvent(var7, var4, var5, var6)));
+          this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new StateChangeEvent(var7, var4, var5, var6)));
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "ha.GD(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -1936,8 +1936,8 @@ final class Battlefield {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = this.a(param0.tileX + param0.tileY * this.mapWidth, -4, param0);
-          if (~(param2 | hh.field_e[param0.field_P]) == ~hh.field_e[param0.field_P]) {
-            var5_int = var5_int - param0.field_o * 10;
+          if (~(param2 | hh.field_e[param0.statusEffectType]) == ~hh.field_e[param0.statusEffectType]) {
+            var5_int = var5_int - param0.statusEffectValue * 10;
           }
           if (param1 > -111) {
             this.field_eb = false;
@@ -2229,8 +2229,8 @@ final class Battlefield {
         if (-1 < param2) {
           var10 = this.getUnitAt(param0, true, param1);
           if (var10 != null &&
-            1 == var10.field_ab) {
-            var10.field_ab = 0;
+            1 == var10.accessoryType) {
+            var10.accessoryType = 0;
           }
         }
         boolean decompiledFrameRemainder2 = true;
@@ -2446,17 +2446,17 @@ final class Battlefield {
                 if (var23.unitType != 81 &&
                   var23.unitType != 4 &&
                   var23.unitType != 74) {
-                  if (var23.g(0) != 3) {
+                  if (var23.getUnitCategory(0) != 3) {
                     var13 = 2;
-                    decompiledFrameRemainder1 = (var23.j(20640) == 1);
+                    decompiledFrameRemainder1 = (var23.getEquipmentCategory(20640) == 1);
                     if (decompiledFrameRemainder1) {
-                      var15 = var23.d(0, 80);
+                      var15 = var23.getEquipmentProperty(0, 80);
                       decompiledFrameRemainder1 = (var22 != 0);
                     }
                   }
                   if (decompiledFrameRemainder1) {
-                    if (var23.j(20640) == 2) {
-                      var15 = var23.d(0, 58);
+                    if (var23.getEquipmentCategory(20640) == 2) {
+                      var15 = var23.getEquipmentProperty(0, 58);
                     }
                     var13 = 4;
                     decompiledFrameRemainder1 = (var22 != 0);
@@ -2464,18 +2464,18 @@ final class Battlefield {
                 }
                 if (decompiledFrameRemainder1) {
                   var13 = 8;
-                  decompiledFrameRemainder1 = (var23.j(20640) == 3);
+                  decompiledFrameRemainder1 = (var23.getEquipmentCategory(20640) == 3);
                   if (decompiledFrameRemainder1) {
-                    var15 = var23.d(0, 106);
+                    var15 = var23.getEquipmentProperty(0, 106);
                     decompiledFrameRemainder1 = (var22 != 0);
                   }
                 }
               }
               if (decompiledFrameRemainder1) {
                 var13 = 8;
-                decompiledFrameRemainder1 = (var23.j(20640) == 3);
+                decompiledFrameRemainder1 = (var23.getEquipmentCategory(20640) == 3);
                 if (decompiledFrameRemainder1) {
-                  var15 = var23.d(0, 118);
+                  var15 = var23.getEquipmentProperty(0, 118);
                 }
               }
             }
@@ -2485,36 +2485,36 @@ final class Battlefield {
               if (var23.unitType == 34 &&
                 var23.packedFlag8) {
                 var13 = 8;
-                decompiledFrameRemainder1 = (var23.j(20640) == 3);
+                decompiledFrameRemainder1 = (var23.getEquipmentCategory(20640) == 3);
                 if (decompiledFrameRemainder1) {
-                  var15 = var23.d(0, 55);
+                  var15 = var23.getEquipmentProperty(0, 55);
                   decompiledFrameRemainder1 = (var22 != 0);
                 }
               }
               if (decompiledFrameRemainder1) {
                 if (var23.x(-126)) {
-                  if (var23.j(20640) == 4) {
-                    var15 = var23.d(0, -95);
+                  if (var23.getEquipmentCategory(20640) == 4) {
+                    var15 = var23.getEquipmentProperty(0, -95);
                   }
                   var13 = 16;
                   decompiledFrameRemainder1 = (var22 != 0);
                 }
                 if (decompiledFrameRemainder1) {
-                  if (var23.g(0) == 3) {
+                  if (var23.getUnitCategory(0) == 3) {
                     var13 = 4;
-                    if (var23.j(20640) == 2) {
-                      var15 = var23.d(0, -102);
+                    if (var23.getEquipmentCategory(20640) == 2) {
+                      var15 = var23.getEquipmentProperty(0, -102);
                       if (var22 != 0) {
                         var13 = 1;
-                        if (0 == var23.j(20640)) {
-                          var15 = var23.d(0, -93);
+                        if (0 == var23.getEquipmentCategory(20640)) {
+                          var15 = var23.getEquipmentProperty(0, -93);
                         }
                       }
                     }
                   } else {
                     var13 = 1;
-                    if (0 == var23.j(20640)) {
-                      var15 = var23.d(0, -93);
+                    if (0 == var23.getEquipmentCategory(20640)) {
+                      var15 = var23.getEquipmentProperty(0, -93);
                     }
                   }
                 }
@@ -2526,74 +2526,74 @@ final class Battlefield {
                 !var9.packedFlag8) {
                 if (var9.x(-109)) {
                   var14 = 16;
-                  decompiledFrameRemainder0 = (var9.j(20640) == 4);
+                  decompiledFrameRemainder0 = (var9.getEquipmentCategory(20640) == 4);
                   if (decompiledFrameRemainder0) {
-                    var16 = var9.d(0, 122);
+                    var16 = var9.getEquipmentProperty(0, 122);
                     decompiledFrameRemainder0 = (var22 != 0);
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  if (3 == var9.g(0)) {
-                    if (var9.j(20640) == 2) {
-                      var16 = var9.d(0, 69);
+                  if (3 == var9.getUnitCategory(0)) {
+                    if (var9.getEquipmentCategory(20640) == 2) {
+                      var16 = var9.getEquipmentProperty(0, 69);
                     }
                     var14 = 4;
                     if (var22 != 0) {
-                      if (var9.j(20640) == 0) {
-                        var16 = var9.d(0, -123);
+                      if (var9.getEquipmentCategory(20640) == 0) {
+                        var16 = var9.getEquipmentProperty(0, -123);
                       }
                       var14 = 1;
-                      if (var9.j(20640) == 3) {
-                        var16 = var9.d(0, 116);
+                      if (var9.getEquipmentCategory(20640) == 3) {
+                        var16 = var9.getEquipmentProperty(0, 116);
                       }
                       var14 = 8;
                     }
                   } else {
-                    if (var9.j(20640) == 0) {
-                      var16 = var9.d(0, -123);
+                    if (var9.getEquipmentCategory(20640) == 0) {
+                      var16 = var9.getEquipmentProperty(0, -123);
                     }
                     var14 = 1;
                     if (var22 != 0) {
-                      if (var9.j(20640) == 3) {
-                        var16 = var9.d(0, 116);
+                      if (var9.getEquipmentCategory(20640) == 3) {
+                        var16 = var9.getEquipmentProperty(0, 116);
                       }
                       var14 = 8;
                     }
                   }
                 }
               } else {
-                if (var9.j(20640) == 3) {
-                  var16 = var9.d(0, 116);
+                if (var9.getEquipmentCategory(20640) == 3) {
+                  var16 = var9.getEquipmentProperty(0, 116);
                 }
                 var14 = 8;
               }
             }
             if (var11 >= 0 &&
               bw.unitDefinitions.length > var11) {
-              var18 = param4.B(3257);
-              var19 = param4.l((byte) -79);
+              var18 = param4.getMaximumAttackRange(3257);
+              var19 = param4.getMinimumAttackRange((byte) -79);
               if (param4.unitType != 81 &&
                 4 != param4.unitType &&
                 param4.unitType != 74 ||
-                param4.j(20640) != 3) {
-                if (param4.g(0) != 3 ||
-                  param4.j(20640) != 2) {
-                  if ((param4.g(0) == 2) &&
-                    (1 == param4.j(20640))) {
-                    var18 = var18 + param4.d(1, 117);
+                param4.getEquipmentCategory(20640) != 3) {
+                if (param4.getUnitCategory(0) != 3 ||
+                  param4.getEquipmentCategory(20640) != 2) {
+                  if ((param4.getUnitCategory(0) == 2) &&
+                    (1 == param4.getEquipmentCategory(20640))) {
+                    var18 = var18 + param4.getEquipmentProperty(1, 117);
                     if (var22 != 0) {
-                      var18 = var18 + param4.d(1, -124);
-                      var18 = var18 + param4.d(1, -87);
+                      var18 = var18 + param4.getEquipmentProperty(1, -124);
+                      var18 = var18 + param4.getEquipmentProperty(1, -87);
                     }
                   }
                 } else {
-                  var18 = var18 + param4.d(1, -124);
+                  var18 = var18 + param4.getEquipmentProperty(1, -124);
                   if (var22 != 0) {
-                    var18 = var18 + param4.d(1, -87);
+                    var18 = var18 + param4.getEquipmentProperty(1, -87);
                   }
                 }
               } else {
-                var18 = var18 + param4.d(1, -87);
+                var18 = var18 + param4.getEquipmentProperty(1, -87);
               }
               if (var12 > var18) {
                 stackIn_97_0 = var10;
@@ -2617,9 +2617,9 @@ final class Battlefield {
                 stackIn_108_0 = var10;
                 return stackIn_108_0;
               }
-              if (var17 != 0 && (!(var20 >= var9.field_A + var9.strength) ||
-                param0.field_P == 7 ||
-                8 == param0.field_P)) {
+              if (var17 != 0 && (!(var20 >= var9.bonusStrength + var9.strength) ||
+                param0.statusEffectType == 7 ||
+                8 == param0.statusEffectType)) {
                 var19Lifetime1 = bw.unitDefinitions[var9.unitType][6];
                 if (var19Lifetime1 > 1) {
                   var21 = this.a(var8, (byte) -123, var14, this.a(param1 + param3, var20, param6 + param5, var23, var9, (byte) -128) * 3 / 20 + var16);
@@ -2636,14 +2636,14 @@ final class Battlefield {
                 }
                 var10[1] = var21;
               }
-              if (var23.field_A + var23.strength <= var21 &&
-                param4.field_P != 7 &&
-                param4.field_P != 8) {
+              if (var23.bonusStrength + var23.strength <= var21 &&
+                param4.statusEffectType != 7 &&
+                param4.statusEffectType != 8) {
                 var10[2] = oe.c(var10[2], 1);
               }
-              if (var20 >= var9.strength + var9.field_A &&
-                7 != param0.field_P &&
-                param0.field_P != 8) {
+              if (var20 >= var9.strength + var9.bonusStrength &&
+                7 != param0.statusEffectType &&
+                param0.statusEffectType != 8) {
                 var10[2] = oe.c(var10[2], 2);
               }
               stackIn_133_0 = var10;
@@ -2692,15 +2692,15 @@ final class Battlefield {
           if (param1.packedFlag8) {
             param2.a((byte) 19, "deployed");
           }
-          if (param1.packedFlag4) {
+          if (param1.movementSpent) {
             param2.a((byte) 19, "moved");
           }
           if (param1.packedFlag512) {
             param2.a((byte) 19, "trinket used");
           }
-          param2.a((byte) 19, "attacksleft: " + param1.packedLowFlags);
-          if (param1.field_A != 0) {
-            param2.a(new String[]{"bonus: ", Integer.toString(param1.field_A)}, (byte) -54);
+          param2.a((byte) 19, "attacksleft: " + param1.attacksRemaining);
+          if (param1.bonusStrength != 0) {
+            param2.a(new String[]{"bonus: ", Integer.toString(param1.bonusStrength)}, (byte) -54);
           }
           param2.a(new String[]{"strength: ", Integer.toString(param1.strength), "/", Integer.toString(param1.maximumStrength)}, (byte) -105);
           param2.a(0, -2);
@@ -2761,11 +2761,11 @@ final class Battlefield {
         RuntimeException var7 = null;
         int var8 = 0;
         try {
-          if (param3.field_P == 7 ||
-            param3.field_P == 8) {
+          if (param3.statusEffectType == 7 ||
+            param3.statusEffectType == 8) {
             param1 = 0;
           }
-          var7_int = fk.field_d[param4.g(0)][param3.g(0)];
+          var7_int = fk.field_d[param4.getUnitCategory(0)][param3.getUnitCategory(0)];
           if (param5 > -127) {
             discarded$0 = this.a((byte) -69, -60, (MapTile) null);
           }
@@ -2776,7 +2776,7 @@ final class Battlefield {
             param3.x(-121)) {
             var7_int = 90;
           }
-          var8 = var7_int * (param4.field_A + (param4.strength - param1)) / 100;
+          var8 = var7_int * (param4.bonusStrength + (param4.strength - param1)) / 100;
           stackIn_15_0 = (var8 <= 0) ? 0 : var8;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2808,7 +2808,7 @@ final class Battlefield {
         try {
           var5_int = param2.k(0);
           var6 = SummonEvent.a(var5_int, 0, param3, param0, param2, this, -102, true);
-          this.unitsByPlayer[var6.ownerPlayer].a((byte) -119, (IntrusiveNode) (var6));
+          this.unitsByPlayer[var6.ownerPlayer].addLast((byte) -119, (IntrusiveNode) (var6));
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "ha.WD(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -2904,11 +2904,11 @@ final class Battlefield {
         try {
           var3_int = param0.k(param1 ^ -84) & 31;
           if (var3_int == 13) {
-            this.pendingEvents.a((byte) -119, (IntrusiveNode) (new KingBlackDragonEvent(param0.k(0))));
+            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new KingBlackDragonEvent(param0.k(0))));
             return;
           }
           if (var3_int == 14) {
-            this.pendingEvents.a((byte) -119, (IntrusiveNode) (new ManaEvent(3, param0.k(0), this.localPlayer)));
+            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new ManaEvent(3, param0.k(0), this.localPlayer)));
             return;
           }
           if (param1 != -84) {
@@ -2920,7 +2920,7 @@ final class Battlefield {
             if (var5 == 15) {
               var5 = -1;
             }
-            this.pendingEvents.a((byte) -119, (IntrusiveNode) (new TrinketUseEvent(bo.a(-1, param0, 4368051), var5, var4 >> 4)));
+            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SpellCastEvent(bo.a(-1, param0, 4368051), var5, var4 >> 4)));
           }
           regionExit1: {
             regionExit2: {
@@ -2961,17 +2961,17 @@ final class Battlefield {
                         }
                       }
                       if (decompiledFrameRemainder0) {
-                        this.pendingEvents.a((byte) -119, (IntrusiveNode) (new TelepopEvent(var4Lifetime1, var5Lifetime1)));
+                        this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TelepopEvent(var4Lifetime1, var5Lifetime1)));
                         if (var7 == 0) {
                           return;
                         }
                       }
-                      this.pendingEvents.a((byte) -119, (IntrusiveNode) (new TeleportEvent(var4Lifetime1, var5Lifetime1, param0.e((byte) -104), true)));
+                      this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TeleportEvent(var4Lifetime1, var5Lifetime1, param0.e((byte) -104), true)));
                       if (var7 == 0) {
                         return;
                       }
                     }
-                    this.pendingEvents.a((byte) -119, (IntrusiveNode) (new TeleportEvent(var4Lifetime1, var5Lifetime1, param0.e((byte) -104), false)));
+                    this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TeleportEvent(var4Lifetime1, var5Lifetime1, param0.e((byte) -104), false)));
                     if (var7 == 0) {
                       return;
                     }
@@ -2981,22 +2981,22 @@ final class Battlefield {
                     return;
                   }
                 }
-                this.pendingEvents.a((byte) -119, (IntrusiveNode) (new DeathEvent(var4Lifetime1, var5Lifetime1)));
+                this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeathEvent(var4Lifetime1, var5Lifetime1)));
                 if (var7 == 0) {
                   return;
                 }
               }
-              this.pendingEvents.a((byte) -119, (IntrusiveNode) (new DeployEvent(var4Lifetime1, var5Lifetime1, 0)));
+              this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeployEvent(var4Lifetime1, var5Lifetime1, 0)));
               if (var7 == 0) {
                 return;
               }
             }
-            this.pendingEvents.a((byte) -119, (IntrusiveNode) (new DeployEvent(var4Lifetime1, var5Lifetime1, param0.k(0))));
+            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeployEvent(var4Lifetime1, var5Lifetime1, param0.k(0))));
             if (var7 == 0) {
               return;
             }
           }
-          this.pendingEvents.a((byte) -119, (IntrusiveNode) (new GrowthEvent(var4Lifetime1, var5Lifetime1, param0.k(0), param0.k(param1 ^ -84), param0.k(0), param0.k(0))));
+          this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new GrowthEvent(var4Lifetime1, var5Lifetime1, param0.k(0), param0.k(param1 ^ -84), param0.k(0), param0.k(0))));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3032,7 +3032,7 @@ final class Battlefield {
           this.j(7);
           var4 = param1 + "\n" + var4;
           this.pendingEvents.b(param0 ^ 98);
-          ik.a("Dropping conection: turn: " + this.turnNumber + ", player: " + this.currentPlayer + "\n" + var4, (byte) 40);
+          Spell.a("Dropping conection: turn: " + this.turnNumber + ", player: " + this.currentPlayer + "\n" + var4, (byte) 40);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "ha.JC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -3105,7 +3105,7 @@ final class Battlefield {
           var12 = param0.k(0);
           var13 = param0.k(0);
           if (param1 > ~(4 & var3_int)) {
-            this.pendingEvents.a((byte) -119, (IntrusiveNode) (new ParasiteEvent(var5, var6, var8, var9, var10)));
+            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new ParasiteEvent(var5, var6, var8, var9, var10)));
             if (!ArmiesOfGielinor.obfuscationControl) {
               return;
             }
@@ -3159,7 +3159,7 @@ final class Battlefield {
             stackIn_6_3Lifetime3 = null;
             stackIn_15_16 = true;
           }
-          ((NodeDeque) (Object) stackIn_5_0).a((byte) stackIn_5_1, (IntrusiveNode) (new CombatEvent(stackIn_5_4, stackIn_5_5, stackIn_5_6, stackIn_5_7, stackIn_5_8, stackIn_5_9, stackIn_5_10, stackIn_6_11, stackIn_9_12, stackIn_11_13, stackIn_11_14, stackIn_12_15, stackIn_15_16, var13)));
+          ((NodeDeque) (Object) stackIn_5_0).addLast((byte) stackIn_5_1, (IntrusiveNode) (new CombatEvent(stackIn_5_4, stackIn_5_5, stackIn_5_6, stackIn_5_7, stackIn_5_8, stackIn_5_9, stackIn_5_10, stackIn_6_11, stackIn_9_12, stackIn_11_13, stackIn_11_14, stackIn_12_15, stackIn_15_16, var13)));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3609,7 +3609,7 @@ final class Battlefield {
               stackIn_98_6 = -94;
               stackIn_99_7 = ((128 & var11Lifetime1) != 0);
               var12 = SummonEvent.a(stackIn_98_0, stackIn_98_1, stackIn_98_2, stackIn_98_3, stackIn_98_4, this, stackIn_98_6, stackIn_99_7);
-              this.unitsByPlayer[var12.ownerPlayer].a((byte) -119, (IntrusiveNode) (var12));
+              this.unitsByPlayer[var12.ownerPlayer].addLast((byte) -119, (IntrusiveNode) (var12));
               var8++;
             }
             break;
@@ -3681,7 +3681,7 @@ final class Battlefield {
         Unit var5 = this.getUnitAt(param3, true, param0);
         if (var5 != null &&
           this.arePlayersAllied(var5.ownerPlayer, -16985, param1)) {
-          var5.field_A = 5;
+          var5.bonusStrength = 5;
         }
         if (param2 < 117) {
           this.field_Cb = true;
@@ -4410,7 +4410,7 @@ final class Battlefield {
         int var16 = 0;
         Unit var17 = null;
         PacketBuffer var18 = null;
-        ik var19 = null;
+        Spell var19 = null;
         int var20 = 0;
         MapTile var21 = null;
         Unit var22 = null;
@@ -4553,11 +4553,11 @@ final class Battlefield {
                     var18.position = 0;
                     var19 = bo.a(var26.ownerPlayer, var18, 4368051);
                     if (var19 != null) {
-                      var19.a(var26.ownerPlayer, this, 26123);
+                      var19.applyEffect(var26.ownerPlayer, this, 26123);
                     }
                   }
                   var21.occupant = var17;
-                  this.unitsByPlayer[var9].a((byte) -119, (IntrusiveNode) (var17));
+                  this.unitsByPlayer[var9].addLast((byte) -119, (IntrusiveNode) (var17));
                 }
               }
               if ((decompiledFrameRemainder3) &&
@@ -4820,7 +4820,7 @@ final class Battlefield {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 14336) {
-            stackIn_4_0 = TrinketUseEvent.a(this.mapWidth, this.tiles, param3, param4, param6, this.mapHeight, this.getPlayerTeamIndex(param6, -1), param0, param5, param1, true);
+            stackIn_4_0 = SpellCastEvent.a(this.mapWidth, this.tiles, param3, param4, param6, this.mapHeight, this.getPlayerTeamIndex(param6, -1), param0, param5, param1, true);
             return stackIn_4_0;
           }
           stackIn_2_0 = 112;
@@ -4883,7 +4883,7 @@ final class Battlefield {
           var6 = param0.k(0);
           var7 = 31 & var4;
           var7 = (16 ^ var7) - 16;
-          this.pendingEvents.a((byte) -119, (IntrusiveNode) (new SummonEvent(var3_int, var5, var6, var7, var4 >> 5)));
+          this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(var3_int, var5, var6, var7, var4 >> 5)));
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "ha.CB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -4905,8 +4905,8 @@ final class Battlefield {
           if (param1.packedFlag8) {
             var3_int = var3_int ^ 757314;
           }
-          var3_int = var3_int ^ 12643 * param1.packedLowFlags;
-          if (param1.packedFlag4) {
+          var3_int = var3_int ^ 12643 * param1.attacksRemaining;
+          if (param1.movementSpent) {
             var3_int = var3_int ^ 76756163;
           }
           if (param1.packedFlag512) {
@@ -4914,7 +4914,7 @@ final class Battlefield {
           }
           var3_int = var3_int ^ 38 * param1.tileX;
           var3_int = var3_int ^ param1.tileY * 391;
-          var3_int = var3_int ^ param1.field_A * 874;
+          var3_int = var3_int ^ param1.bonusStrength * 874;
           var3_int = var3_int ^ 23874 * param1.unitType;
           var3_int = var3_int ^ param1.strength * 584668;
           var3_int = var3_int ^ 445235 * param1.maximumStrength;
@@ -5006,7 +5006,7 @@ final class Battlefield {
         this.field_n = (int[]) null;
     }
 
-    final void a(int param0, int param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7, int param8, int param9) {
+    final void queueCombatConsequences(int attackerY, int targetDeltaX, boolean attackerDies, int attackerX, int targetDeltaY, int obfuscationGuard, boolean defenderDies, int attackerDamage, int defenderDamage, int unseenUnitType) {
         int stackIn_7_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_19_0 = 0;
@@ -5044,16 +5044,16 @@ final class Battlefield {
         boolean stackIn_122_6 = false;
         int stackIn_130_0 = 0;
         int stackIn_136_0 = 0;
-        Unit var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        Unit var20 = null;
-        Unit var21 = null;
+        Unit defender = null;
+        int attackDistance = 0;
+        int attackerEquipmentPoisons = 0;
+        int defenderEquipmentPoisons = 0;
+        int meleeAttack = 0;
+        int guardQuotient = 0;
+        int defenderHealingIndex = 0;
+        int obfuscationControlSnapshot = 0;
+        Unit attackerLookup = null;
+        Unit attacker = null;
         DamageEvent stackIn_112_2Lifetime1;
         DamageEvent stackIn_112_3Lifetime1;
         DamageEvent stackIn_114_2Lifetime1;
@@ -5066,217 +5066,217 @@ final class Battlefield {
         DamageEvent stackIn_121_3Lifetime1;
         DamageEvent stackIn_122_2Lifetime1;
         DamageEvent stackIn_122_3Lifetime1;
-        int var18Lifetime1;
-        int var18Lifetime2;
-        var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var20 = this.getUnitAt(param0, true, param3);
-        var21 = var20;
-        var12 = this.getUnitAt(param0 + param4, true, param1 + param3);
-        var13 = Math.abs(param1) + Math.abs(param4);
-        if (var12 != null &&
-          var21 != null) {
-          var14 = 0;
-          var15 = 0;
-          stackIn_7_0 = (var13 != 1) ? 0 : 1;
+        int campaignKillMarker;
+        int attackerHealingIndex;
+        obfuscationControlSnapshot = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        attackerLookup = this.getUnitAt(attackerY, true, attackerX);
+        attacker = attackerLookup;
+        defender = this.getUnitAt(attackerY + targetDeltaY, true, targetDeltaX + attackerX);
+        attackDistance = Math.abs(targetDeltaX) + Math.abs(targetDeltaY);
+        if (defender != null &&
+          attacker != null) {
+          attackerEquipmentPoisons = 0;
+          defenderEquipmentPoisons = 0;
+          stackIn_7_0 = (attackDistance != 1) ? 0 : 1;
           boolean decompiledFrameRemainder2 = true;
-          var16 = stackIn_7_0;
-          if (var16 != 0) {
-            if (var21.g(0) == 4) {
-              if (var21.j(20640) == 4 &&
-                (var21.d(2, 122) & 1) == 1) {
+          meleeAttack = stackIn_7_0;
+          if (meleeAttack != 0) {
+            if (attacker.getUnitCategory(0) == 4) {
+              if (attacker.getEquipmentCategory(20640) == 4 &&
+                (attacker.getEquipmentProperty(2, 122) & 1) == 1) {
                 stackIn_13_0 = 1;
               } else {
                 stackIn_13_0 = 0;
               }
-              var14 = stackIn_13_0;
-              decompiledFrameRemainder2 = (var19 != 0);
+              attackerEquipmentPoisons = stackIn_13_0;
+              decompiledFrameRemainder2 = (obfuscationControlSnapshot != 0);
             }
             if (decompiledFrameRemainder2) {
-              if (var21.g(0) == 3) {
-                if (2 == var21.j(20640) &&
-                  (var21.d(2, -90) & 1) == 1) {
+              if (attacker.getUnitCategory(0) == 3) {
+                if (2 == attacker.getEquipmentCategory(20640) &&
+                  (attacker.getEquipmentProperty(2, -90) & 1) == 1) {
                   stackIn_19_0 = 1;
                 } else {
                   stackIn_19_0 = 0;
                 }
-                var14 = stackIn_19_0;
-                decompiledFrameRemainder2 = (var19 != 0);
+                attackerEquipmentPoisons = stackIn_19_0;
+                decompiledFrameRemainder2 = (obfuscationControlSnapshot != 0);
               }
               if (decompiledFrameRemainder2) {
-                if (var21.unitType == 34 &&
-                  var21.packedFlag8) {
-                  if (var21.j(20640) == 3 &&
-                    (1 & var21.d(2, -97)) == 1) {
+                if (attacker.unitType == 34 &&
+                  attacker.packedFlag8) {
+                  if (attacker.getEquipmentCategory(20640) == 3 &&
+                    (1 & attacker.getEquipmentProperty(2, -97)) == 1) {
                     stackIn_26_0 = 1;
                   } else {
                     stackIn_26_0 = 0;
                   }
-                  var14 = stackIn_26_0;
-                  decompiledFrameRemainder2 = (var19 != 0);
+                  attackerEquipmentPoisons = stackIn_26_0;
+                  decompiledFrameRemainder2 = (obfuscationControlSnapshot != 0);
                 }
                 if (decompiledFrameRemainder2) {
-                  if (var21.j(20640) == 0 &&
-                    (1 & var21.d(2, 121)) == 1) {
+                  if (attacker.getEquipmentCategory(20640) == 0 &&
+                    (1 & attacker.getEquipmentProperty(2, 121)) == 1) {
                     stackIn_31_0 = 1;
                   } else {
                     stackIn_31_0 = 0;
                   }
-                  var14 = stackIn_31_0;
+                  attackerEquipmentPoisons = stackIn_31_0;
                 }
               }
             }
           }
           if ((decompiledFrameRemainder2) &&
-            (var16 == 0 ||
-            var19 != 0)) {
-            if (34 == var21.unitType &&
-              var21.packedFlag8) {
-              if (var21.j(20640) == 3 &&
-                1 == (1 & var21.d(2, 99))) {
+            (meleeAttack == 0 ||
+            obfuscationControlSnapshot != 0)) {
+            if (34 == attacker.unitType &&
+              attacker.packedFlag8) {
+              if (attacker.getEquipmentCategory(20640) == 3 &&
+                1 == (1 & attacker.getEquipmentProperty(2, 99))) {
                 stackIn_38_0 = 1;
               } else {
                 stackIn_38_0 = 0;
               }
-              var14 = stackIn_38_0;
-              decompiledFrameRemainder2 = (var19 != 0);
+              attackerEquipmentPoisons = stackIn_38_0;
+              decompiledFrameRemainder2 = (obfuscationControlSnapshot != 0);
             }
             if (decompiledFrameRemainder2) {
-              if (var21.unitType == 81 ||
-                var21.unitType == 4 ||
-                74 == var21.unitType) {
-                if (3 == var21.j(20640) &&
-                  1 == (var21.d(2, -112) & 1)) {
+              if (attacker.unitType == 81 ||
+                attacker.unitType == 4 ||
+                74 == attacker.unitType) {
+                if (3 == attacker.getEquipmentCategory(20640) &&
+                  1 == (attacker.getEquipmentProperty(2, -112) & 1)) {
                   stackIn_47_0 = 1;
                 } else {
                   stackIn_47_0 = 0;
                 }
-                var14 = stackIn_47_0;
-                decompiledFrameRemainder2 = (var19 != 0);
+                attackerEquipmentPoisons = stackIn_47_0;
+                decompiledFrameRemainder2 = (obfuscationControlSnapshot != 0);
               }
               if (decompiledFrameRemainder2) {
-                boolean decompiledSharedTail0 = (3 != var21.g(0));
+                boolean decompiledSharedTail0 = (3 != attacker.getUnitCategory(0));
                 if (!decompiledSharedTail0) {
-                  if (var21.j(20640) == 2 &&
-                    (var21.d(2, -123) & 1) == 1) {
+                  if (attacker.getEquipmentCategory(20640) == 2 &&
+                    (attacker.getEquipmentProperty(2, -123) & 1) == 1) {
                     stackIn_53_0 = 1;
                   } else {
                     stackIn_53_0 = 0;
                   }
-                  var14 = stackIn_53_0;
-                  decompiledSharedTail0 = (var19 != 0);
+                  attackerEquipmentPoisons = stackIn_53_0;
+                  decompiledSharedTail0 = (obfuscationControlSnapshot != 0);
                 }
                 if (decompiledSharedTail0) {
-                  if (1 == var21.j(20640) &&
-                    (1 & var21.d(2, 116)) == 1) {
+                  if (1 == attacker.getEquipmentCategory(20640) &&
+                    (1 & attacker.getEquipmentProperty(2, 116)) == 1) {
                     stackIn_58_0 = 1;
                   } else {
                     stackIn_58_0 = 0;
                   }
-                  var14 = stackIn_58_0;
+                  attackerEquipmentPoisons = stackIn_58_0;
                 }
               }
             }
           }
           boolean decompiledFrameRemainder1 = true;
-          var17 = -37 / ((35 - param5) / 34);
-          if (var16 != 0) {
-            if (4 == var12.g(0)) {
-              if (4 == var12.j(20640) &&
-                1 == (var12.d(2, -117) & 1)) {
+          guardQuotient = -37 / ((35 - obfuscationGuard) / 34);
+          if (meleeAttack != 0) {
+            if (4 == defender.getUnitCategory(0)) {
+              if (4 == defender.getEquipmentCategory(20640) &&
+                1 == (defender.getEquipmentProperty(2, -117) & 1)) {
                 stackIn_65_0 = 1;
               } else {
                 stackIn_65_0 = 0;
               }
-              var15 = stackIn_65_0;
-              decompiledFrameRemainder1 = (var19 != 0);
+              defenderEquipmentPoisons = stackIn_65_0;
+              decompiledFrameRemainder1 = (obfuscationControlSnapshot != 0);
             }
             if (decompiledFrameRemainder1) {
-              if (var12.g(0) != 3) {
-                if (var12.unitType != 34 ||
-                  !var12.packedFlag8) {
-                  if (var12.j(20640) == 0 &&
-                    (1 & var12.d(2, -94)) == 1) {
+              if (defender.getUnitCategory(0) != 3) {
+                if (defender.unitType != 34 ||
+                  !defender.packedFlag8) {
+                  if (defender.getEquipmentCategory(20640) == 0 &&
+                    (1 & defender.getEquipmentProperty(2, -94)) == 1) {
                     stackIn_74_0 = 1;
                   } else {
                     stackIn_74_0 = 0;
                   }
-                  var15 = stackIn_74_0;
-                  if (var19 != 0) {
-                    if (var12.j(20640) == 3 &&
-                      1 == (var12.d(2, -114) & 1)) {
+                  defenderEquipmentPoisons = stackIn_74_0;
+                  if (obfuscationControlSnapshot != 0) {
+                    if (defender.getEquipmentCategory(20640) == 3 &&
+                      1 == (defender.getEquipmentProperty(2, -114) & 1)) {
                       stackIn_79_0 = 1;
                     } else {
                       stackIn_79_0 = 0;
                     }
-                    var15 = stackIn_79_0;
-                    if (var12.j(20640) == 2 &&
-                      1 == (1 & var12.d(2, 117))) {
+                    defenderEquipmentPoisons = stackIn_79_0;
+                    if (defender.getEquipmentCategory(20640) == 2 &&
+                      1 == (1 & defender.getEquipmentProperty(2, 117))) {
                       stackIn_84_0 = 1;
                     } else {
                       stackIn_84_0 = 0;
                     }
-                    var15 = stackIn_84_0;
+                    defenderEquipmentPoisons = stackIn_84_0;
                   }
                 } else {
-                  if (var12.j(20640) == 3 &&
-                    1 == (var12.d(2, -114) & 1)) {
+                  if (defender.getEquipmentCategory(20640) == 3 &&
+                    1 == (defender.getEquipmentProperty(2, -114) & 1)) {
                     stackIn_79_0 = 1;
                   } else {
                     stackIn_79_0 = 0;
                   }
-                  var15 = stackIn_79_0;
-                  if (var19 != 0) {
-                    if (var12.j(20640) == 2 &&
-                      1 == (1 & var12.d(2, 117))) {
+                  defenderEquipmentPoisons = stackIn_79_0;
+                  if (obfuscationControlSnapshot != 0) {
+                    if (defender.getEquipmentCategory(20640) == 2 &&
+                      1 == (1 & defender.getEquipmentProperty(2, 117))) {
                       stackIn_84_0 = 1;
                     } else {
                       stackIn_84_0 = 0;
                     }
-                    var15 = stackIn_84_0;
+                    defenderEquipmentPoisons = stackIn_84_0;
                   }
                 }
               } else {
-                if (var12.j(20640) == 2 &&
-                  1 == (1 & var12.d(2, 117))) {
+                if (defender.getEquipmentCategory(20640) == 2 &&
+                  1 == (1 & defender.getEquipmentProperty(2, 117))) {
                   stackIn_84_0 = 1;
                 } else {
                   stackIn_84_0 = 0;
                 }
-                var15 = stackIn_84_0;
+                defenderEquipmentPoisons = stackIn_84_0;
               }
             }
           }
-          if (param2 &&
-            var12.maximumStrength < 99 &&
-            var21.r(-40)) {
-            this.pendingEvents.a(750, new TurnEffectEvent(var12, 4));
+          if (attackerDies &&
+            defender.maximumStrength < 99 &&
+            attacker.grantsGrowthOnDeath(-40)) {
+            this.pendingEvents.addFirst(750, new TurnEffectEvent(defender, 4));
           }
-          if (param6 &&
-            var21.maximumStrength < 99 &&
-            var12.r(-40)) {
-            this.pendingEvents.a(750, new TurnEffectEvent(var21, 4));
+          if (defenderDies &&
+            attacker.maximumStrength < 99 &&
+            defender.grantsGrowthOnDeath(-40)) {
+            this.pendingEvents.addFirst(750, new TurnEffectEvent(attacker, 4));
           }
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameCompleted1 = true;
-          if (var16 != 0 &&
-            var12.packedFlag64) {
-            var18 = 0;
-            while (var18 < param8) {
-              this.pendingEvents.a(750, new TurnEffectEvent(var12, 1));
-              var18++;
-              if (var19 != 0) {
+          if (meleeAttack != 0 &&
+            defender.meleeLifeSteal) {
+            defenderHealingIndex = 0;
+            while (defenderHealingIndex < defenderDamage) {
+              this.pendingEvents.addFirst(750, new TurnEffectEvent(defender, 1));
+              defenderHealingIndex++;
+              if (obfuscationControlSnapshot != 0) {
                 decompiledFrameCompleted1 = false;
                 break;
               }
             }
           }
-          if ((decompiledFrameCompleted1) && (var16 != 0 &&
-            var21.packedFlag64)) {
-            var18Lifetime2 = 0;
-            while (var18Lifetime2 < param7) {
-              this.pendingEvents.a(750, new TurnEffectEvent(var21, 1));
-              var18Lifetime2++;
-              if (var19 != 0) {
+          if ((decompiledFrameCompleted1) && (meleeAttack != 0 &&
+            attacker.meleeLifeSteal)) {
+            attackerHealingIndex = 0;
+            while (attackerHealingIndex < attackerDamage) {
+              this.pendingEvents.addFirst(750, new TurnEffectEvent(attacker, 1));
+              attackerHealingIndex++;
+              if (obfuscationControlSnapshot != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
@@ -5289,12 +5289,12 @@ final class Battlefield {
                 stackIn_112_1 = 750;
                 stackIn_112_2 = null;
                 stackIn_112_3 = null;
-                stackIn_112_4 = var21;
-                stackIn_112_5 = param8;
-                if (!var12.y(-113)) {
+                stackIn_112_4 = attacker;
+                stackIn_112_5 = defenderDamage;
+                if (!defender.hasPoisonousAttacks(-113)) {
                   stackIn_114_2 = null;
                   stackIn_114_3 = null;
-                  if (var15 == 0) {
+                  if (defenderEquipmentPoisons == 0) {
                     break regionExit2;
                   }
                   stackIn_112_2Lifetime1 = null;
@@ -5302,7 +5302,7 @@ final class Battlefield {
                 }
                 stackIn_114_2Lifetime1 = null;
                 stackIn_114_3Lifetime1 = null;
-                if (param8 > 0) {
+                if (defenderDamage > 0) {
                   stackIn_115_2 = null;
                   stackIn_115_3 = null;
                   stackIn_115_6 = true;
@@ -5313,7 +5313,7 @@ final class Battlefield {
               stackIn_115_3Lifetime1 = null;
               stackIn_115_6 = false;
             }
-            ((NodeDeque) (Object) stackIn_112_0).a(stackIn_112_1, new DamageEvent(stackIn_112_4, stackIn_112_5, stackIn_115_6));
+            ((NodeDeque) (Object) stackIn_112_0).addFirst(stackIn_112_1, new DamageEvent(stackIn_112_4, stackIn_112_5, stackIn_115_6));
           }
           boolean decompiledFrameRemainder3 = true;
           boolean decompiledFrameRemainder0 = true;
@@ -5321,12 +5321,12 @@ final class Battlefield {
           stackIn_119_1 = 750;
           stackIn_119_2 = null;
           stackIn_119_3 = null;
-          stackIn_119_4 = var12;
-          stackIn_119_5 = param7;
-          if (!var21.y(-119)) {
+          stackIn_119_4 = defender;
+          stackIn_119_5 = attackerDamage;
+          if (!attacker.hasPoisonousAttacks(-119)) {
             stackIn_121_2 = null;
             stackIn_121_3 = null;
-            decompiledFrameRemainder0 = (var14 != 0);
+            decompiledFrameRemainder0 = (attackerEquipmentPoisons != 0);
             if (decompiledFrameRemainder0) {
               stackIn_119_2Lifetime1 = null;
               stackIn_119_3Lifetime1 = null;
@@ -5335,7 +5335,7 @@ final class Battlefield {
           if (decompiledFrameRemainder0) {
             stackIn_121_2Lifetime1 = null;
             stackIn_121_3Lifetime1 = null;
-            if (param7 > 0) {
+            if (attackerDamage > 0) {
               stackIn_122_2 = null;
               stackIn_122_3 = null;
               stackIn_122_6 = true;
@@ -5347,37 +5347,37 @@ final class Battlefield {
             stackIn_122_3Lifetime1 = null;
             stackIn_122_6 = false;
           }
-          ((NodeDeque) (Object) stackIn_119_0).a(stackIn_119_1, new DamageEvent(stackIn_119_4, stackIn_119_5, stackIn_122_6));
-          var21.packedLowFlags = var21.packedLowFlags - 1;
+          ((NodeDeque) (Object) stackIn_119_0).addFirst(stackIn_119_1, new DamageEvent(stackIn_119_4, stackIn_119_5, stackIn_122_6));
+          attacker.attacksRemaining = attacker.attacksRemaining - 1;
           if (this.field_b) {
-            var12.field_M = var12.field_M + 1;
-            var21.field_m = var21.field_m + 1;
-            this.d(var21.ownerPlayer, var21.field_m, 112, 7);
-            this.d(var12.ownerPlayer, var12.field_M, 79, 6);
-            var18Lifetime1 = 0;
-            if (param2) {
-              this.field_g[var12.ownerPlayer] = this.field_g[var12.ownerPlayer] + 1;
-              this.d(var12.ownerPlayer, this.field_g[var12.ownerPlayer], 120, 4);
-              if (var21.tag == 10 &&
-                11 == var12.tag) {
+            defender.attacksReceived = defender.attacksReceived + 1;
+            attacker.attacksMade = attacker.attacksMade + 1;
+            this.d(attacker.ownerPlayer, attacker.attacksMade, 112, 7);
+            this.d(defender.ownerPlayer, defender.attacksReceived, 79, 6);
+            campaignKillMarker = 0;
+            if (attackerDies) {
+              this.field_g[defender.ownerPlayer] = this.field_g[defender.ownerPlayer] + 1;
+              this.d(defender.ownerPlayer, this.field_g[defender.ownerPlayer], 120, 4);
+              if (attacker.tag == 10 &&
+                11 == defender.tag) {
                 stackIn_130_0 = 1;
               } else {
                 stackIn_130_0 = 0;
               }
-              var18Lifetime1 = stackIn_130_0;
+              campaignKillMarker = stackIn_130_0;
             }
-            if (param6) {
-              this.field_g[var20.ownerPlayer] = this.field_g[var20.ownerPlayer] + 1;
-              this.d(var21.ownerPlayer, this.field_g[var20.ownerPlayer], 91, 4);
-              if (var12.tag == 10 &&
-                var21.tag == 11) {
+            if (defenderDies) {
+              this.field_g[attackerLookup.ownerPlayer] = this.field_g[attackerLookup.ownerPlayer] + 1;
+              this.d(attacker.ownerPlayer, this.field_g[attackerLookup.ownerPlayer], 91, 4);
+              if (defender.tag == 10 &&
+                attacker.tag == 11) {
                 stackIn_136_0 = 1;
               } else {
                 stackIn_136_0 = 0;
               }
-              var18Lifetime1 = stackIn_136_0;
+              campaignKillMarker = stackIn_136_0;
             }
-            if (var18Lifetime1 != 0 &&
+            if (campaignKillMarker != 0 &&
               this.field_K != null &&
               this.field_K.field_G.field_r == 2) {
               if (this.field_K.field_v != 5) {
@@ -5388,7 +5388,7 @@ final class Battlefield {
           }
           return;
         }
-        boolean discarded$0 = this.a(var21, param1, param7, param2, param0, -1, param4, var12, param3, param8, param9, param6, 0);
+        boolean discarded$0 = this.a(attacker, targetDeltaX, attackerDamage, attackerDies, attackerY, -1, targetDeltaY, defender, attackerX, defenderDamage, unseenUnitType, defenderDies, 0);
     }
 
     final void l(int param0, int param1) {
@@ -5672,7 +5672,7 @@ final class Battlefield {
             }
             break;
           }
-          this.pendingEvents.a((byte) -119, (IntrusiveNode) (new MoveEvent(var5, var6, var13)));
+          this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new MoveEvent(var5, var6, var13)));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

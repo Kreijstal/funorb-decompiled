@@ -78,9 +78,9 @@ final class ut extends sf implements he {
                     this.field_db[var3] = null;
                   }
                 }
-                if (null != ra.field_e &&
+                if (null != AreaSpell.field_e &&
                   null != this.field_db[var2_int] &&
-                  !ra.field_e.c(this.field_db[var2_int].field_b, 122, this.field_db[var2_int].field_a)) {
+                  !AreaSpell.field_e.c(this.field_db[var2_int].field_b, 122, this.field_db[var2_int].field_a)) {
                   this.field_db[var2_int] = null;
                 }
               }
@@ -112,8 +112,8 @@ final class ut extends sf implements he {
           stackIn_40_0 = (var2_intLifetime1 != 0) ? 3 : 2;
           var3Lifetime1 = stackIn_40_0;
           if (var2_intLifetime1 == 0) {
-            if (null != ra.field_e) {
-              stackIn_48_0 = (ra.field_e.d((byte) 122)) ? 1 : 0;
+            if (null != AreaSpell.field_e) {
+              stackIn_48_0 = (AreaSpell.field_e.d((byte) 122)) ? 1 : 0;
             } else {
               stackIn_48_0 = 0;
             }
@@ -169,15 +169,15 @@ final class ut extends sf implements he {
             for (var7_int = 0; var7_int < this.field_db.length; var7_int++) {
               var8 = this.field_db[var7_int];
               if (null != wq.field_a &&
-                var8.field_b == ra.field_e.field_f &&
-                ra.field_e.field_n == var8.field_a) {
+                var8.field_b == AreaSpell.field_e.field_f &&
+                AreaSpell.field_e.field_n == var8.field_a) {
                 var6_int = var7_int;
               }
               var5_ref_String__[var7_int] = var8.field_b + "<times>" + var8.field_a;
             }
             this.field_lb = new gh(var5_ref_String__, var6_int, 150);
             this.field_lb.a(this.field_bb.field_B + this.field_gb.field_B, 126, this.field_bb.field_w + this.field_bb.field_p + (this.field_gb.field_p - 19), 8192, 18);
-            this.field_D.a(750, this.field_lb);
+            this.field_D.addFirst(750, this.field_lb);
           }
           this.field_X = this.a((byte) 38, pe.field_w, (qo) (this));
           var5Lifetime1 = this.field_X.field_l / 2 + this.field_X.field_B;
@@ -231,8 +231,8 @@ final class ut extends sf implements he {
         if (wq.field_a != null) {
           return this.field_bb;
         }
-        if (ra.field_e != null &&
-          ra.field_e.field_h &&
+        if (AreaSpell.field_e != null &&
+          AreaSpell.field_e.field_h &&
           this.field_Z != null) {
           return this.field_Z;
         }
@@ -330,7 +330,7 @@ final class ut extends sf implements he {
               if (this.field_lb != null) {
                 var2 = this.field_lb.a((byte) 71);
                 if (var2 >= 0) {
-                  ra.field_e.a(this.field_db[var2].field_b, this.field_db[var2].field_a, -8717);
+                  AreaSpell.field_e.a(this.field_db[var2].field_b, this.field_db[var2].field_a, -8717);
                 }
               }
               sm.a(true, param0 + 8029);
@@ -531,8 +531,8 @@ final class ut extends sf implements he {
               if (this.field_lb != null) {
                 var4 = this.field_lb.a((byte) 71);
                 var5 = this.field_db[var4];
-                if (ra.field_e.field_f != var5.field_b ||
-                  ra.field_e.field_n != var5.field_a) {
+                if (AreaSpell.field_e.field_f != var5.field_b ||
+                  AreaSpell.field_e.field_n != var5.field_a) {
                   this.field_ab.field_I = true;
                 }
                 this.q(-108);

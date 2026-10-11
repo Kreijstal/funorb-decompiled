@@ -244,7 +244,7 @@ final class vb extends IntrusiveNode {
           if (null != this.field_y.selectedUnit) {
             stackIn_17_0 = this.field_y.movementPlanner;
             stackIn_18_1 = (null != this.field_y.field_oc) ? false : true;
-            ((MovementPlanner) (Object) stackIn_17_0).a(stackIn_18_1, param0 + 19769, this.field_y.field_q, this.field_y.selectedUnit, this.field_y.movementPlanner.field_y, this.field_y.movementPlanner.field_p);
+            ((MovementPlanner) (Object) stackIn_17_0).prepareForUnit(stackIn_18_1, param0 + 19769, this.field_y.field_q, this.field_y.selectedUnit, this.field_y.movementPlanner.field_y, this.field_y.movementPlanner.spellId);
           }
           this.field_B = (pa) ((Object) new qv(this.field_k, this.field_y.field_M, this));
           stackIn_22_0 = (!this.field_B.a(this.field_r, (byte) 57)) ? 0 : 1;

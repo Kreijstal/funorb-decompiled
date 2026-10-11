@@ -830,8 +830,8 @@ final class lf {
             this.field_G = 89;
           }
         }
-        var7 = AttackEvent.a(false, mn.field_k[this.field_G].length, li.field_n);
-        this.field_A = (gd) (mn.field_k[this.field_G][var7]);
+        var7 = AttackEvent.a(false, SpellAreaSelection.field_k[this.field_G].length, li.field_n);
+        this.field_A = (gd) (SpellAreaSelection.field_k[this.field_G][var7]);
         if (null == this.field_A) {
           af.a((Throwable) null, 100, "BattleCharacter: no model found - model_index: " + this.field_G + " variation: " + var7);
         }

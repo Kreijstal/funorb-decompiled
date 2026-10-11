@@ -85,7 +85,7 @@ class je extends im {
         if (!param0) {
           if (null != vu.field_M) {
             if (gk.field_J <= 0) {
-              if (bd.field_r <= 0) {
+              if (SpellAreaEffect.field_r <= 0) {
                 if (mj.field_c > rk.field_D) {
                   if (rk.field_D == 0) {
                     ub.a(false, false);
@@ -93,7 +93,7 @@ class je extends im {
                   rk.field_D = rk.field_D + 1;
                 }
               } else {
-                bd.field_r = bd.field_r - 1;
+                SpellAreaEffect.field_r = SpellAreaEffect.field_r - 1;
               }
             } else {
               gk.field_J = gk.field_J - 1;
@@ -101,8 +101,8 @@ class je extends im {
           } else {
             if (null == no.field_K) {
               vk.field_f = false;
-              if (bd.field_r > 0) {
-                bd.field_r = bd.field_r - 1;
+              if (SpellAreaEffect.field_r > 0) {
+                SpellAreaEffect.field_r = SpellAreaEffect.field_r - 1;
               } else {
                 if (rk.field_D > 0) {
                   rk.field_D = rk.field_D - 1;
@@ -120,11 +120,11 @@ class je extends im {
                 gk.field_J = gk.field_J - 1;
               } else {
                 if (rk.field_D <= 0) {
-                  if (mj.field_c > bd.field_r) {
-                    if (0 == bd.field_r) {
+                  if (mj.field_c > SpellAreaEffect.field_r) {
+                    if (0 == SpellAreaEffect.field_r) {
                       ub.a(false, true);
                     }
-                    bd.field_r = bd.field_r + 1;
+                    SpellAreaEffect.field_r = SpellAreaEffect.field_r + 1;
                   }
                 } else {
                   rk.field_D = rk.field_D - 1;
@@ -136,12 +136,12 @@ class je extends im {
           if (0 < gk.field_J) {
             gk.field_J = gk.field_J - 1;
           } else {
-            if (bd.field_r <= 0) {
+            if (SpellAreaEffect.field_r <= 0) {
               if (0 < rk.field_D) {
                 rk.field_D = rk.field_D - 1;
               }
             } else {
-              bd.field_r = bd.field_r - 1;
+              SpellAreaEffect.field_r = SpellAreaEffect.field_r - 1;
             }
           }
         }
@@ -299,7 +299,7 @@ class je extends im {
           if (null == this.field_fb) {
             this.field_fb = new NodeDeque();
           }
-          this.field_fb.a((byte) -119, (IntrusiveNode) (param0));
+          this.field_fb.addLast((byte) -119, (IntrusiveNode) (param0));
           if (param1 < 36) {
             this.field_M = true;
           }
@@ -553,7 +553,7 @@ class je extends im {
           tq.field_c = SoftwareRaster.field_l;
           bm.field_p = SoftwareRaster.field_g;
           if (param1) {
-            stackIn_4_0 = bd.field_r;
+            stackIn_4_0 = SpellAreaEffect.field_r;
           } else {
             stackIn_4_0 = rk.field_D;
           }
@@ -570,7 +570,7 @@ class je extends im {
             stackIn_7_4 = 0;
           }
           ((je) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, stackIn_6_3 - stackIn_7_4, 2 + jn.field_d, 0);
-          TrinketUseEvent.field_D.a(18, -20500, 42 + jn.field_c, 2 + jn.field_d, -40 + (eb.field_c.field_gb - jn.field_c - 2));
+          SpellCastEvent.field_D.a(18, -20500, 42 + jn.field_c, 2 + jn.field_d, -40 + (eb.field_c.field_gb - jn.field_c - 2));
           bu.field_a.a(0, false, eb.field_c.field_gb, 2, jn.field_c, 20 + (2 + jn.field_d), -20 + (-2 + (-jn.field_d + eb.field_c.field_ob)));
           mp.field_Lb.a(40, -20500, lk.field_a.field_gb, lk.field_a.field_ob - 40, 0);
           kd.field_F.a(30, -20500, pd.field_c.field_gb, 0, 0);

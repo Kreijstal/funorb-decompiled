@@ -203,7 +203,7 @@ final class dl {
             }
           }
           if (mc.field_f.field_yb != 0) {
-            ik.field_b = new i(mc.field_f.field_V, mc.field_f.field_D, mc.field_f.field_gb, mc.field_f.field_ob, param0, jm.field_b, hr.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k, (String) null, 0L);
+            Spell.field_b = new i(mc.field_f.field_V, mc.field_f.field_D, mc.field_f.field_gb, mc.field_f.field_ob, param0, jm.field_b, hr.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k, (String) null, 0L);
           }
           var9 = wm.a(jn.field_d, mi.field_l, (byte) 127, param1);
           if (var9 != null) {

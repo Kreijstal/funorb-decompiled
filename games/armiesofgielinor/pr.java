@@ -26,7 +26,7 @@ final class pr {
         if (11 == p.field_b) {
           wp.d((byte) -13);
         }
-        to.a(dd.field_a, TelepopEvent.field_C, wa.field_e, -1);
+        to.a(dd.field_a, TelepopEvent.field_C, UnitSpell.field_e, -1);
         if (param0 <= 106) {
           return;
         }
@@ -45,14 +45,14 @@ final class pr {
         if (param3 >= -95) {
           this.a(-65, (byte) -99, 28);
         }
-        this.field_b[param2].a((byte) -119, (IntrusiveNode) (new a(param1, param0)));
+        this.field_b[param2].addLast((byte) -119, (IntrusiveNode) (new a(param1, param0)));
     }
 
     final static boolean b(int param0) {
         int var1;
         boolean stackIn_4_0 = false;
         var1 = -21 % ((param0 + 25) / 55);
-        stackIn_4_0 = (null != ra.field_e) && (ra.field_e.a((byte) 103));
+        stackIn_4_0 = (null != AreaSpell.field_e) && (AreaSpell.field_e.a((byte) 103));
         return stackIn_4_0;
     }
 

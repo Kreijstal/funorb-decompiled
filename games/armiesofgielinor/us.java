@@ -36,14 +36,14 @@ final class us {
         if (jf.field_C.movementPlanner.field_w) {
           return 0;
         }
-        if (!jf.field_C.selectedUnit.packedFlag4) {
+        if (!jf.field_C.selectedUnit.movementSpent) {
           if ((2 & jf.field_C.movementPlanner.field_e[param0]) == 0) {
             return 0;
           }
           stackIn_22_0 = (CipherPacketBuffer.currentBattlefield.currentPlayer != jf.field_C.field_q) ? 128 : 256;
           return stackIn_22_0;
         }
-        if (jf.field_C.selectedUnit.packedLowFlags == 0) {
+        if (jf.field_C.selectedUnit.attacksRemaining == 0) {
           stackIn_16_0 = (0 == (jf.field_C.movementPlanner.field_e[param0] & 2)) ? 0 : 128;
           return stackIn_16_0;
         }

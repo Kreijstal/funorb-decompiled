@@ -81,7 +81,7 @@ class hv extends fw {
             if (var10 != null) {
               ((ct) (var10)).field_k = var15;
             }
-            this.field_P.a((byte) -119, (IntrusiveNode) (var15));
+            this.field_P.addLast((byte) -119, (IntrusiveNode) (var15));
             var10 = var15;
           }
         }

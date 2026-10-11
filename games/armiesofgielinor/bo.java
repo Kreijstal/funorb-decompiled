@@ -56,11 +56,11 @@ final class bo {
         }
     }
 
-    final static ik a(int param0, PacketBuffer param1, int param2) {
-        al stackIn_16_0 = null;
-        ra stackIn_21_0 = null;
-        al stackIn_23_0 = null;
-        wa stackIn_25_0 = null;
+    final static Spell a(int param0, PacketBuffer param1, int param2) {
+        GlobalSpell stackIn_16_0 = null;
+        AreaSpell stackIn_21_0 = null;
+        GlobalSpell stackIn_23_0 = null;
+        UnitSpell stackIn_25_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -79,8 +79,8 @@ final class bo {
           var3_int = param1.e((byte) -104);
           var4 = uc.spellDefinitions[var3_int][3];
           if (var4 == 4) {
-            stackIn_16_0 = new al(var3_int);
-            return (ik) ((Object) stackIn_16_0);
+            stackIn_16_0 = new GlobalSpell(var3_int);
+            return (Spell) ((Object) stackIn_16_0);
           }
           if (var4 != 0 &&
             var4 != 1 &&
@@ -93,15 +93,15 @@ final class bo {
             return null;
           }
           if (uc.spellDefinitions[var3_int][4] != 5) {
-            stackIn_25_0 = new wa(var3_int, param1.k(param2 ^ 4368051), param1.k(0));
-            return (ik) ((Object) stackIn_25_0);
+            stackIn_25_0 = new UnitSpell(var3_int, param1.k(param2 ^ 4368051), param1.k(0));
+            return (Spell) ((Object) stackIn_25_0);
           }
           if (param0 > -1) {
-            stackIn_21_0 = new ra(var3_int, new am(param1, param0));
-            return (ik) ((Object) stackIn_21_0);
+            stackIn_21_0 = new AreaSpell(var3_int, new am(param1, param0));
+            return (Spell) ((Object) stackIn_21_0);
           }
-          stackIn_23_0 = new al(var3_int);
-          return (ik) ((Object) stackIn_23_0);
+          stackIn_23_0 = new GlobalSpell(var3_int);
+          return (Spell) ((Object) stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

@@ -56,7 +56,7 @@ final class mi extends IntrusiveNode {
     final static void a(int param0, int param1, int param2, int param3) {
         jv.field_c = param2;
         ui.field_g = param1;
-        mn.field_n = param0;
+        SpellAreaSelection.field_n = param0;
         if (param3 != 3815) {
           mi.a(-70, -81, 66, 75);
         }

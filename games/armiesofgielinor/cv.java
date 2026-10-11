@@ -1522,7 +1522,7 @@ final class cv {
             while (true) {
               if (java.lang.reflect.Array.getLength(var2) > var3_int) {
                 var4 = ((Object[]) (var2))[var3_int];
-                ra.a(4, -1, (om) (var4), true, 1, -1);
+                AreaSpell.a(4, -1, (om) (var4), true, 1, -1);
                 var3_int++;
                 if (var7 == 0) {
                   continue;
@@ -1612,7 +1612,7 @@ final class cv {
                           throw new IllegalStateException("");
                       }
                       var5 = b.a(2, 10, 12, (byte) 25, 3);
-                      ra.a(4, 12, ((cq) (var3)).field_p, true, var5, 3);
+                      AreaSpell.a(4, 12, ((cq) (var3)).field_p, true, var5, 3);
                       this.a(((cq) (var3)).field_p.field_G.field_r, true);
                       System.out.println("m  id " + ((cq) (var3)).field_k + " " + ((cq) (var3)).field_w);
                       var4_int = 1;
@@ -1621,7 +1621,7 @@ final class cv {
                     if ((decompiledSharedTail0) &&
                       (br.field_f[82])) {
                       var4_int = 1;
-                      ra.a(4, -1, ((cq) (var3)).field_p, true, 1, -1);
+                      AreaSpell.a(4, -1, ((cq) (var3)).field_p, true, 1, -1);
                       this.a(((cq) (var3)).field_p.field_G.field_r, true);
                     }
                   }

@@ -292,7 +292,7 @@ abstract class wf extends iv {
             t.a((byte) -118, CombatEvent.d((byte) 7));
           }
           if (var4 == 12) {
-            ra.a(CombatEvent.d((byte) -123), -69, ob.j(-129));
+            AreaSpell.a(CombatEvent.d((byte) -123), -69, ob.j(-129));
           }
           if (var4 == 13) {
             try {
@@ -511,13 +511,13 @@ abstract class wf extends iv {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (null != ra.field_e) {
+        if (null != AreaSpell.field_e) {
           if (null == wq.field_a) {
             var6 = sp.a(0);
             var4 = var6.getSize();
-            ra.field_e.b(var4.height, var4.width, -30514);
+            AreaSpell.field_e.b(var4.height, var4.width, -30514);
           }
-          ra.field_e.a(0);
+          AreaSpell.field_e.a(0);
         }
         r.c(true);
         ds.a((byte) 118);
@@ -658,7 +658,7 @@ abstract class wf extends iv {
           cd.a(12);
           vl.c((byte) 91);
           it.field_b = false;
-          wa.field_e = ef.field_a;
+          UnitSpell.field_e = ef.field_a;
           StateChangeEvent.a(sk.field_M, ps.field_u, h.field_g, 0, aw.field_l);
           if (mo.field_r ||
             pd.field_b != null) {

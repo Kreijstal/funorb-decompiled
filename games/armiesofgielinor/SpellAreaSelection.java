@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mn extends IntrusiveNode {
+abstract class SpellAreaSelection extends IntrusiveNode {
     int field_p;
     boolean field_u;
     int field_o;
@@ -54,7 +54,7 @@ abstract class mn extends IntrusiveNode {
           if (1 == param1.length) {
             stackIn_3_0 = param1[0];
           } else {
-            stackIn_3_0 = TrinketUseEvent.a(593277313, (CharSequence[]) ((Object) param1));
+            stackIn_3_0 = SpellCastEvent.a(593277313, (CharSequence[]) ((Object) param1));
           }
           var4 = stackIn_3_0;
           var4 = "Illegal move (" + param2 + "); player " + this.field_p + ": " + var4 + ".";
@@ -80,7 +80,7 @@ abstract class mn extends IntrusiveNode {
         }
     }
 
-    abstract bd a(int param0, Battlefield param1);
+    abstract SpellAreaEffect createEffect(int obfuscationGuard, Battlefield battlefield);
 
     public static void a(int param0) {
         field_q = null;
@@ -98,7 +98,7 @@ abstract class mn extends IntrusiveNode {
         field_m = (String[][]) null;
     }
 
-    protected mn() {
+    protected SpellAreaSelection() {
         this.field_o = -1;
     }
 

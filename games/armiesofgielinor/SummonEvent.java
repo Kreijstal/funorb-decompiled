@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SummonEvent extends GameEvent {
-    int field_D;
-    private int field_I;
-    private boolean field_E;
+    int playerId;
+    private int strengthBonus;
+    private boolean applied;
     static je field_F;
-    int field_z;
+    int tileX;
     static long field_G;
     static kl field_B;
-    int field_H;
-    private int field_A;
+    int tileY;
+    private int unitType;
     private boolean field_y;
 
     final static rn a(String param0, int param1) {
@@ -58,16 +58,16 @@ final class SummonEvent extends GameEvent {
     }
 
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {
-        if (this.field_E) {
+        if (this.applied) {
           return;
         }
         try {
-          this.field_E = true;
-          battlefield.a(false, this.field_z, this.field_A, this.field_H, 1, this.field_D, this.field_I);
-          this.unit = battlefield.getUnitAt(this.field_H, true, this.field_z);
+          this.applied = true;
+          battlefield.a(false, this.tileX, this.unitType, this.tileY, 1, this.playerId, this.strengthBonus);
+          this.unit = battlefield.getUnitAt(this.tileY, true, this.tileX);
           this.unit.packedFlag8 = this.unit.packedFlag8 | this.field_y;
           if (obfuscationGuard != -26661) {
-            this.field_A = -119;
+            this.unitType = -119;
           }
           fl.a(battlefield, obfuscationGuard + 26537);
         } catch (RuntimeException runtimeException) {
@@ -189,11 +189,11 @@ final class SummonEvent extends GameEvent {
         int var4 = 46 % ((53 - obfuscationGuard) / 51);
         if (verbose) {
           System.out.println("Summon event debug");
-          System.out.println("Player " + this.field_D);
-          System.out.println("Unit at " + this.field_z + "," + this.field_H);
-          System.out.println("Type " + this.field_A + " Bonus" + this.field_I);
+          System.out.println("Player " + this.playerId);
+          System.out.println("Unit at " + this.tileX + "," + this.tileY);
+          System.out.println("Type " + this.unitType + " Bonus" + this.strengthBonus);
         }
-        String var3 = "EventSummon: pos: (" + this.field_z + "," + this.field_H + "), bonus: " + this.field_I + ", player: " + this.field_D;
+        String var3 = "EventSummon: pos: (" + this.tileX + "," + this.tileY + "), bonus: " + this.strengthBonus + ", player: " + this.playerId;
         return var3;
     }
 
@@ -207,23 +207,23 @@ final class SummonEvent extends GameEvent {
     }
 
     SummonEvent(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        this.field_H = param2;
+        this.tileY = param2;
         this.field_y = param5 ? true : false;
         this.field_m = 2;
-        this.field_D = param4;
-        this.field_I = param3;
-        this.field_A = param0;
-        this.field_z = param1;
+        this.playerId = param4;
+        this.strengthBonus = param3;
+        this.unitType = param0;
+        this.tileX = param1;
     }
 
     SummonEvent(int param0, int param1, int param2, int param3, int param4) {
-        this.field_H = param2;
-        this.field_A = param0;
+        this.tileY = param2;
+        this.unitType = param0;
         this.field_m = 2;
         this.field_y = false;
-        this.field_D = param4;
-        this.field_z = param1;
-        this.field_I = param3;
+        this.playerId = param4;
+        this.tileX = param1;
+        this.strengthBonus = param3;
     }
 
     static {

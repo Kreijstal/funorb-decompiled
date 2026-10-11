@@ -330,7 +330,7 @@ class ro extends pt implements he {
             gl.a(122, 3);
             this.b(true);
           } else {
-            ra.a(CombatEvent.d((byte) -125), -113, "tochangedisplayname.ws");
+            AreaSpell.a(CombatEvent.d((byte) -125), -113, "tochangedisplayname.ws");
           }
           if (param1 != 11) {
             ro.n(46);

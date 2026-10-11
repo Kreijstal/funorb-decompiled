@@ -368,7 +368,7 @@ final class OwnerChangeEvent extends GameEvent {
             this.unit.e((byte) 123)) {
             stackIn_7_0 = (battlefield.localPlayer == this.unit.ownerPlayer);
             if (stackIn_7_0 & this.field_z) {
-              battlefield.pendingEvents.a(obfuscationGuard + 27411, new UpkeepEvent(this.unit.tileX, this.unit.tileY));
+              battlefield.pendingEvents.addFirst(obfuscationGuard + 27411, new UpkeepEvent(this.unit.tileX, this.unit.tileY));
             }
           }
           if (obfuscationGuard == -26661) {

@@ -14,7 +14,7 @@ final class dj {
           String var4 = null;
           String var5 = null;
           try {
-            al.field_n = param2;
+            GlobalSpell.field_n = param2;
             try {
               var3 = param0.getParameter("cookieprefix");
               var4 = param0.getParameter("cookiehost");

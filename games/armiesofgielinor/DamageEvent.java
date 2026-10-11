@@ -222,13 +222,13 @@ final class DamageEvent extends GameEvent {
         }
         try {
           this.applied = true;
-          if (this.unit.field_P != 7 &&
-            this.unit.field_P != 8) {
+          if (this.unit.statusEffectType != 7 &&
+            this.unit.statusEffectType != 8) {
             this.unit.poisoned = this.unit.poisoned | this.poison;
           }
           var3_int = this.damageAmount;
-          if (!(var3_int <= this.unit.field_A + this.unit.strength)) {
-            var3_int = this.unit.strength + this.unit.field_A;
+          if (!(var3_int <= this.unit.bonusStrength + this.unit.strength)) {
+            var3_int = this.unit.strength + this.unit.bonusStrength;
           }
           this.unit.applyStrengthDamage(this.damageAmount, true);
           if (obfuscationGuard != -26661) {

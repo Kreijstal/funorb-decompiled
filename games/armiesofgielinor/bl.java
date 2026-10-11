@@ -242,7 +242,7 @@ final class bl {
                                     stackIn_80_0.field_Zb = stackIn_81_1;
                                     var7.field_Qb = ((PacketBuffer) ((Object) var1)).k(0);
                                     var7.field_Ob = ((PacketBuffer) ((Object) var1)).k(0);
-                                    wl.field_F.a((byte) -119, (IntrusiveNode) (var7));
+                                    wl.field_F.addLast((byte) -119, (IntrusiveNode) (var7));
                                     break regionExit1;
                                   case 19:
                                     var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
@@ -273,7 +273,7 @@ final class bl {
                                     ph.field_d = vi.b(-59) + (long)var3;
                                     break regionExit1;
                                   case 22:
-                                    al.field_g = ((PacketBuffer) ((Object) var1)).e((byte) -104);
+                                    GlobalSpell.field_g = ((PacketBuffer) ((Object) var1)).e((byte) -104);
                                     be.field_s = ((PacketBuffer) ((Object) var1)).h(95);
                                     break regionExit1;
                                   case 23:
@@ -455,12 +455,12 @@ final class bl {
         try {
           SummonEvent.field_B = param1;
           var9 = "";
-          nh.field_D = new boolean[mn.field_m.length];
-          for (var3 = param0; mn.field_m.length > var3; var3++) {
-            array$0 = new kk[mn.field_m[var3].length];
-            mn.field_k[var3] = array$0;
+          nh.field_D = new boolean[SpellAreaSelection.field_m.length];
+          for (var3 = param0; SpellAreaSelection.field_m.length > var3; var3++) {
+            array$0 = new kk[SpellAreaSelection.field_m[var3].length];
+            SpellAreaSelection.field_k[var3] = array$0;
             nh.field_D[var3] = false;
-            var8 = mn.field_m[var3][0];
+            var8 = SpellAreaSelection.field_m[var3][0];
             var10 = hs.a(var8, 235, var9);
             var5 = var10;
             if (var10 != null) {
@@ -479,9 +479,9 @@ final class bl {
                   }
                 }
               }
-              mn.field_k[var3][0] = var10.a(be.field_x, fm.field_a, ol.field_A, lf.field_t, ni.field_a);
-              for (var6Lifetime2 = 1; var6Lifetime2 < mn.field_m[var3].length; var6Lifetime2++) {
-                mn.field_k[var3][var6Lifetime2] = null;
+              SpellAreaSelection.field_k[var3][0] = var10.a(be.field_x, fm.field_a, ol.field_A, lf.field_t, ni.field_a);
+              for (var6Lifetime2 = 1; var6Lifetime2 < SpellAreaSelection.field_m[var3].length; var6Lifetime2++) {
+                SpellAreaSelection.field_k[var3][var6Lifetime2] = null;
               }
             }
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hw extends mn {
+final class hw extends SpellAreaSelection {
     static String field_z;
     static String field_x;
     private int field_A;
@@ -173,7 +173,7 @@ final class hw extends mn {
         }
     }
 
-    final bd a(int param0, Battlefield param1) {
+    final SpellAreaEffect createEffect(int obfuscationGuard, Battlefield battlefield) {
         int var6 = 0;
         String discarded$0 = null;
         String discarded$1 = null;
@@ -197,17 +197,17 @@ final class hw extends mn {
         try {
           this.unlink(-114);
           if (this.field_v == 74 &&
-            param1.kingBlackDragonSummoned) {
+            battlefield.kingBlackDragonSummoned) {
             this.field_v = 4;
           }
           if (this.field_v == 4 &&
-            param1.mapTheme == 2) {
+            battlefield.mapTheme == 2) {
             this.field_v = 81;
           }
           var3_int = bw.unitDefinitions[this.field_v][1];
           if (var3_int != -1) {
             var4 = 0;
-            var5 = param1.chosenGods[this.field_p];
+            var5 = battlefield.chosenGods[this.field_p];
             for (var6 = 0; var6 < var5.length; var6++) {
               var7 = var5[var6];
               if (~var7 != ~var3_int) {
@@ -219,33 +219,33 @@ final class hw extends mn {
             if (var4 == 0) {
               discarded$0 = this.a(new String[]{"God not selected: ", Integer.toString(var3_int)}, (byte) -62);
               stackIn_20_0 = null;
-              return (bd) (stackIn_20_0);
+              return (SpellAreaEffect) (stackIn_20_0);
             }
           } else {
             var3_int = 12;
           }
-          if (0 == (param1.c(this.field_E, -27300, this.field_A, this.field_p) & 1 << var3_int)) {
+          if (0 == (battlefield.c(this.field_E, -27300, this.field_A, this.field_p) & 1 << var3_int)) {
             discarded$1 = this.a(new String[]{"Can't summon followers of god: ", Integer.toString(var3_int), " at ", TutorialController.c(this.field_E, 0, this.field_A)}, (byte) -111);
             stackIn_24_0 = null;
-            return (bd) (stackIn_24_0);
+            return (SpellAreaEffect) (stackIn_24_0);
           }
-          if (!param1.b(this.field_A, -26813, this.field_v, this.field_E, this.field_p)) {
+          if (!battlefield.b(this.field_A, -26813, this.field_v, this.field_E, this.field_p)) {
             discarded$2 = this.a(new String[]{"Can't afford creature type: ", Integer.toString(this.field_v), " at ", TutorialController.c(this.field_E, 0, this.field_A)}, (byte) -87);
             stackIn_27_0 = null;
-            return (bd) (stackIn_27_0);
+            return (SpellAreaEffect) (stackIn_27_0);
           }
-          if (param0 < 31) {
+          if (obfuscationGuard < 31) {
             field_y = (String) null;
           }
-          var4Lifetime1 = param1.a(bw.unitDefinitions[this.field_v][1], this.field_A, this.field_E, 0, this.field_p, bw.unitDefinitions[this.field_v][2]);
+          var4Lifetime1 = battlefield.a(bw.unitDefinitions[this.field_v][1], this.field_A, this.field_E, 0, this.field_p, bw.unitDefinitions[this.field_v][2]);
           stackIn_31_0 = new be(this.field_E, this.field_A, this.field_v, var4Lifetime1, this.field_p);
-          return (bd) ((Object) stackIn_31_0);
+          return (SpellAreaEffect) ((Object) stackIn_31_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_34_0 = var3;
-          stackIn_34_1 = new StringBuilder().append("hw.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_34_1 = new StringBuilder().append("hw.C(").append(obfuscationGuard).append(',');
+          if (battlefield == null) {
             stackIn_35_2 = "null";
           } else {
             stackIn_35_2 = "{...}";

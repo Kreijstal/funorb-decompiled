@@ -85,7 +85,7 @@ final class bm extends ew {
                     var6 = new IntrusiveNode();
                     var6.key = (long)this.field_s;
                     var2_int = 0;
-                    this.field_i.a((byte) -119, var6);
+                    this.field_i.addLast((byte) -119, var6);
                   }
                   this.field_s = this.field_s + 1;
                   continue;
@@ -128,7 +128,7 @@ final class bm extends ew {
                       if (this.field_C[this.field_s] != 1) {
                         var7 = new IntrusiveNode();
                         var7.key = (long)this.field_s;
-                        this.field_i.a((byte) -119, var7);
+                        this.field_i.addLast((byte) -119, var7);
                         var2_intLifetime1 = 0;
                       }
                     }

@@ -354,10 +354,10 @@ final class ak extends ju {
         tq.field_c = SoftwareRaster.field_l;
         bm.field_p = SoftwareRaster.field_g;
         bh.d(false);
-        TrinketUseEvent.field_E.a(-2 + no.field_T.field_ob - 40, (byte) -124, 0, no.field_T.field_gb, 0);
-        t.field_g.a(jn.field_d, -20500, al.field_f.field_gb, 0, 0);
+        SpellCastEvent.field_E.a(-2 + no.field_T.field_ob - 40, (byte) -124, 0, no.field_T.field_gb, 0);
+        t.field_g.a(jn.field_d, -20500, GlobalSpell.field_f.field_gb, 0, 0);
         int var1 = 2 + jn.field_d;
-        nf.field_Kb.a(al.field_f.field_ob - (!fh.field_c ? 0 : var1), -20500, al.field_f.field_gb, !fh.field_c ? 0 : var1, 0);
+        nf.field_Kb.a(GlobalSpell.field_f.field_ob - (!fh.field_c ? 0 : var1), -20500, GlobalSpell.field_f.field_gb, !fh.field_c ? 0 : var1, 0);
         mj.a((byte) 91);
         cp.field_d.a(40, -20500, no.field_T.field_gb, no.field_T.field_ob - 40, 0);
         tg.field_n.a(30, -20500, ov.field_i.field_gb, 0, 0);

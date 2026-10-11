@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be extends bd {
+final class be extends SpellAreaEffect {
     static NodeDeque field_u;
     static kl field_w;
     static String field_D;
@@ -18,16 +18,16 @@ final class be extends bd {
     static int field_s;
     static int field_x;
 
-    final void a(int param0, Battlefield param1) {
+    final void applyEffect(int obfuscationGuard, Battlefield battlefield) {
         try {
-          this.field_C = param1.a(bw.unitDefinitions[this.field_t][1], this.field_B, this.field_G, 0, this.field_m, bw.unitDefinitions[this.field_t][2]);
-          if (param0 != 64) {
+          this.field_C = battlefield.a(bw.unitDefinitions[this.field_t][1], this.field_B, this.field_G, 0, this.field_m, bw.unitDefinitions[this.field_t][2]);
+          if (obfuscationGuard != 64) {
             CharSequence var4 = (CharSequence) null;
             be.a(-2, (CharSequence) null, false);
           }
-          param1.pendingEvents.a((byte) -119, (IntrusiveNode) (new SummonEvent(this.field_t, this.field_G, this.field_B, this.field_C, this.field_m)));
+          battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(this.field_t, this.field_G, this.field_B, this.field_C, this.field_m)));
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "be.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "be.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 

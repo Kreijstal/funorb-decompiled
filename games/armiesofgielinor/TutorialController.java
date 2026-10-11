@@ -1634,7 +1634,7 @@ final class TutorialController {
                                                                                               }
                                                                                               jq.field_F = -1;
                                                                                               li.field_q = -1;
-                                                                                              this.a((String) null, -1, wf.field_q[0], (String) null, (byte) -64, al.field_l[0]);
+                                                                                              this.a((String) null, -1, wf.field_q[0], (String) null, (byte) -64, GlobalSpell.field_l[0]);
                                                                                               var6 = param0 ? 1 : 0;
                                                                                               CipherPacketBuffer.a(var6 != 0, 12, 1, 0);
                                                                                               if (var9 == 0) {
@@ -1654,7 +1654,7 @@ final class TutorialController {
                                                                                           }
                                                                                           li.field_q = -1;
                                                                                           jq.field_F = -1;
-                                                                                          this.a((String) null, -1, wf.field_q[0], (String) null, (byte) -99, al.field_l[0]);
+                                                                                          this.a((String) null, -1, wf.field_q[0], (String) null, (byte) -99, GlobalSpell.field_l[0]);
                                                                                           var6 = param0 ? 1 : 0;
                                                                                           CipherPacketBuffer.a(var6 != 0, 12, 1, 0);
                                                                                           if (var9 == 0) {
@@ -2344,7 +2344,7 @@ final class TutorialController {
             if (-1 < param1) {
               var4 = fq.field_f[param1];
               var6 = uc.spellDefinitions[param1][2];
-              var5 = mn.field_l[param1];
+              var5 = SpellAreaSelection.field_l[param1];
             }
             if (!(-1 < param1) ||
               ArmiesOfGielinor.obfuscationControl) {
@@ -3957,10 +3957,10 @@ final class TutorialController {
                 vf.field_f = jq.field_F;
                 kq.field_L = 0;
                 jq.field_F = -1;
-                ri.field_d = al.field_h;
+                ri.field_d = GlobalSpell.field_h;
                 b.field_n = null;
-                al.field_h = 256;
-                this.a((String) null, -1, ve.a((byte) 13, wf.field_q[li.field_q + 1]), (String) null, (byte) -99, al.field_l[1 + li.field_q]);
+                GlobalSpell.field_h = 256;
+                this.a((String) null, -1, ve.a((byte) 13, wf.field_q[li.field_q + 1]), (String) null, (byte) -99, GlobalSpell.field_l[1 + li.field_q]);
                 return;
               }
               var2_int++;
@@ -3992,16 +3992,16 @@ final class TutorialController {
                 vf.field_f = jq.field_F;
                 jq.field_F = var4Lifetime1;
                 b.field_n = new la(wp.field_H[li.field_q + 1][jq.field_F]);
-                ri.field_d = al.field_h;
-                al.field_h = 256;
+                ri.field_d = GlobalSpell.field_h;
+                GlobalSpell.field_h = 256;
               } else {
                 vf.field_f = jq.field_F;
                 ld.field_s = li.field_q;
-                ri.field_d = al.field_h;
+                ri.field_d = GlobalSpell.field_h;
                 kq.field_L = 0;
                 jq.field_F = -1;
                 b.field_n = null;
-                al.field_h = 256;
+                GlobalSpell.field_h = 256;
               }
               if (jq.field_F > -1) {
                 var5 = wp.field_H[1 + li.field_q][jq.field_F];
@@ -4010,7 +4010,7 @@ final class TutorialController {
                 var7 = bh.field_M[var5];
                 this.a(var7, bw.unitDefinitions[var5][0], ve.a((byte) 13, dn.field_Pb[var5]), this.f(var5, 8), (byte) 116, var6Lifetime1);
               } else {
-                this.a((String) null, -1, ve.a((byte) 13, wf.field_q[li.field_q + 1]), (String) null, (byte) -55, al.field_l[li.field_q + 1]);
+                this.a((String) null, -1, ve.a((byte) 13, wf.field_q[li.field_q + 1]), (String) null, (byte) -55, GlobalSpell.field_l[li.field_q + 1]);
               }
               ub.$cfr$intArgs$a$6d836999ad61(100, im.field_v[12]);
               return;
@@ -4191,7 +4191,7 @@ final class TutorialController {
         try {
           na.field_F = -1;
           fe.b(db.a(true, 30), u.a(50, (byte) 94), 580, 90, tb.field_j, jh.field_k, 0, 256);
-          var2_int = (int)(-(128.0 * Math.cos((double)al.field_h * 3.141592653589793 / 256.0)) + 128.0);
+          var2_int = (int)(-(128.0 * Math.cos((double)GlobalSpell.field_h * 3.141592653589793 / 256.0)) + 128.0);
           var3 = (int)(128.0 - Math.cos((double)ri.field_d * 3.141592653589793 / 256.0) * 128.0);
           var4 = (int)(128.0 - 128.0 * Math.cos((double)tf.field_k * 3.141592653589793 / 256.0));
           var5 = (int)(-(128.0 * Math.cos((double)vs.field_f * 3.141592653589793 / 256.0)) + 128.0);
@@ -4587,7 +4587,7 @@ final class TutorialController {
           }
           if (this.tutorialStage == 15) {
             stackIn_10_0 = br.field_a;
-            stackIn_11_1 = !(al.a(false));
+            stackIn_11_1 = !(GlobalSpell.a(false));
             var2_int = ((oo) (Object) stackIn_10_0).a(stackIn_11_1, -121);
             if (var2_int == 3) {
               if (null != wq.field_a) {
@@ -4619,8 +4619,8 @@ final class TutorialController {
                   RevivalEvent.d((byte) 122);
                   var3_ref_int__ = ei.field_e;
                   var3_ref_int__[0] = oe.c(var3_ref_int__[0], 2);
-                  ai.field_P.a((byte) -119, (IntrusiveNode) (new jg(0)));
-                  fi.field_u.a((byte) -119, (IntrusiveNode) (new iw(0, 255, 0, 0, 0, 0)));
+                  ai.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(0)));
+                  fi.field_u.addLast((byte) -119, (IntrusiveNode) (new iw(0, 255, 0, 0, 0, 0)));
                 }
                 if (rs.field_q == 13) {
                   boolean decompiledSharedTail0 = (1 != this.tutorialStage &&
@@ -4680,10 +4680,10 @@ final class TutorialController {
                   tf.field_k == 0) {
                   ld.field_s = li.field_q;
                   vf.field_f = jq.field_F;
-                  ri.field_d = al.field_h;
+                  ri.field_d = GlobalSpell.field_h;
                   jq.field_F = -1;
                   li.field_q = li.field_q + 1;
-                  al.field_h = 256;
+                  GlobalSpell.field_h = 256;
                   li.field_q = li.field_q % 7;
                   kq.field_L = 0;
                   tf.field_k = 256;
@@ -4873,8 +4873,8 @@ final class TutorialController {
                       if (ri.field_d < 256) {
                         ri.field_d = ri.field_d + var3;
                       }
-                      if (al.field_h > 0) {
-                        al.field_h = al.field_h - var3;
+                      if (GlobalSpell.field_h > 0) {
+                        GlobalSpell.field_h = GlobalSpell.field_h - var3;
                       }
                       if (GameplayController.field_J != na.field_F) {
                         ub.$cfr$intArgs$a$6d836999ad61(116, im.field_v[1]);
@@ -6117,7 +6117,7 @@ final class TutorialController {
                     fe.a(var6, var7, 20, 40, tb.field_j, jh.field_k, 0, 128, false);
                   }
                   if (-1 < kd.field_X) {
-                    SoftwareRaster.f(db.a(true, var5Lifetime1 * 21 + 44), u.a(334 + var4Lifetime1 * 42, (byte) 94), 12, 32, bd.field_q[var5Lifetime1 + var4Lifetime1 * 16]);
+                    SoftwareRaster.f(db.a(true, var5Lifetime1 * 21 + 44), u.a(334 + var4Lifetime1 * 42, (byte) 94), 12, 32, SpellAreaEffect.field_q[var5Lifetime1 + var4Lifetime1 * 16]);
                   }
                   var5Lifetime1++;
                 }

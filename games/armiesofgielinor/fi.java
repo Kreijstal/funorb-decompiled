@@ -82,7 +82,7 @@ final class fi extends IntrusiveNode {
           }
           ((tu) (Object) stackIn_3_0).b(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4[stackIn_4_5][this.field_r.ownerPlayer], -1);
           SoftwareRaster.a();
-          var8 = this.field_r.g((byte) 122);
+          var8 = this.field_r.getEffectiveStrength((byte) 122);
           if (var8 < 0) {
             var8 = 0;
           }
@@ -107,11 +107,11 @@ final class fi extends IntrusiveNode {
               SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             } else {
               SoftwareRaster.b(37, 25, 92, 30, 0, 128);
-              ro.field_rb[param0.g(0)].a(43, 32);
-              sg.field_b[this.a(param0.g(0), this.field_r.g(param2 - 5), -46)].a(75, 32);
+              ro.field_rb[param0.getUnitCategory(0)].a(43, 32);
+              sg.field_b[this.a(param0.getUnitCategory(0), this.field_r.getUnitCategory(param2 - 5), -46)].a(75, 32);
             }
           }
-          ro.field_rb[this.field_r.g(0)].a(106, 32);
+          ro.field_rb[this.field_r.getUnitCategory(0)].a(106, 32);
           en.field_E.c(-param5.a(param5.mapWidth * this.field_r.tileY + this.field_r.tileX, param2 - 9, this.field_r) + 100 + "%", 20, 45, 16777215, -1);
           vb.field_t.b(68, 60, nd.field_b[-1 + nd.field_b.length]);
           so.field_b.a(param2 + 5600);
@@ -120,14 +120,14 @@ final class fi extends IntrusiveNode {
           uf.field_j.e(var9Lifetime1, var10, -this.field_m + 32 << 3);
           var11 = bw.unitDefinitions[this.field_r.unitType][12];
           if (var11 != -1) {
-            bd.a(32 - this.field_m << 3, true, var9Lifetime1 + 96, e.field_b, 40, 60 + var10);
+            SpellAreaEffect.a(32 - this.field_m << 3, true, var9Lifetime1 + 96, e.field_b, 40, 60 + var10);
             if (var11 < lb.field_e.length) {
               lb.field_e[var11].a(var9Lifetime1 + 101, var10 + 58, -this.field_m + 32 << 3);
             }
           }
           var12 = this.field_r.f(param2 + 11);
           if (var12 != -1) {
-            bd.a(-this.field_m + 32 << 3, true, var9Lifetime1, e.field_b, 40, var10 + 60);
+            SpellAreaEffect.a(-this.field_m + 32 << 3, true, var9Lifetime1, e.field_b, 40, var10 + 60);
             ii.field_a[var12].c(var9Lifetime1 + 8, 60 + var10, 24, 24, -this.field_m + 32 << 3);
           }
           return;

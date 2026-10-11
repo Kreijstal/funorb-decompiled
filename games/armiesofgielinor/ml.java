@@ -215,7 +215,7 @@ final class ml extends je {
             return;
           }
           while (var7 < op.field_c[0].length) {
-            mn.field_k[76][var7] = ge.b(op.field_c[0][var7], -20849);
+            SpellAreaSelection.field_k[76][var7] = ge.b(op.field_c[0][var7], -20849);
             bp.a(var7, op.field_c[0][var7], param1 - 100);
             var7++;
           }

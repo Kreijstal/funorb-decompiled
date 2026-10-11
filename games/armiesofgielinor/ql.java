@@ -153,8 +153,8 @@ final class ql implements pa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        wa var7 = null;
-        wa var8 = null;
+        UnitSpell var7 = null;
+        UnitSpell var8 = null;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_h = 0;
@@ -163,7 +163,7 @@ final class ql implements pa {
             this.field_n = 1;
             this.field_d = this.field_o.getUnitAt(param1, true, param2);
             if (null != this.field_d &&
-              this.field_d.ownerPlayer == ((StateChangeEvent) (param3)).field_G &&
+              this.field_d.ownerPlayer == ((StateChangeEvent) (param3)).playerId &&
               this.field_d.strength < this.field_d.maximumStrength) {
               this.field_i = 16711935;
               this.field_m = 1;
@@ -179,10 +179,10 @@ final class ql implements pa {
             this.field_f = AttackEvent.a(false, 21, li.field_n) - 10;
             this.field_r = AttackEvent.a(false, 21, li.field_n) - 10;
             if (this.field_d != null &&
-              this.field_d.ownerPlayer == ((StateChangeEvent) (param3)).field_G &&
-              this.field_d.field_A != 5) {
+              this.field_d.ownerPlayer == ((StateChangeEvent) (param3)).playerId &&
+              this.field_d.bonusStrength != 5) {
               this.field_i = 16711935;
-              this.field_m = -this.field_d.field_A + 5;
+              this.field_m = -this.field_d.bonusStrength + 5;
             } else {
               this.field_n = -1;
               this.field_h = 50;
@@ -197,7 +197,7 @@ final class ql implements pa {
             if ((!this.field_g[param2 + this.field_s * param1].hasCorpse(92) ||
               null != this.field_d) && (this.field_d == null ||
               !this.field_d.a(23072) ||
-              this.field_d.ownerPlayer != ((StateChangeEvent) (param3)).field_G ||
+              this.field_d.ownerPlayer != ((StateChangeEvent) (param3)).playerId ||
               this.field_d.maximumStrength == this.field_d.strength)) {
               this.field_h = 50;
               this.field_n = -1;
@@ -229,22 +229,22 @@ final class ql implements pa {
             return true;
           }
           this.field_n = 7;
-          var7 = (wa) (((TrinketUseEvent) (param3)).field_B);
+          var7 = (UnitSpell) (((SpellCastEvent) (param3)).spell);
           var8 = var7;
-          if (6 == uc.spellDefinitions[var7.field_c][4]) {
+          if (6 == uc.spellDefinitions[var7.spellId][4]) {
             this.field_n = 10;
           }
-          if (uc.spellDefinitions[var7.field_c][4] == 4 &&
-            uc.spellDefinitions[var7.field_c][5] != 64 &&
-            uc.spellDefinitions[var7.field_c][5] != 0) {
-            if (uc.spellDefinitions[var7.field_c][6] >= 0) {
-              if (uc.spellDefinitions[var8.field_c][7] <= 0) {
+          if (uc.spellDefinitions[var7.spellId][4] == 4 &&
+            uc.spellDefinitions[var7.spellId][5] != 64 &&
+            uc.spellDefinitions[var7.spellId][5] != 0) {
+            if (uc.spellDefinitions[var7.spellId][6] >= 0) {
+              if (uc.spellDefinitions[var8.spellId][7] <= 0) {
                 this.field_n = 12;
               } else {
                 this.field_n = 11;
               }
             } else {
-              if (uc.spellDefinitions[var7.field_c][7] > 0) {
+              if (uc.spellDefinitions[var7.spellId][7] > 0) {
                 this.field_n = 14;
               } else {
                 this.field_n = 13;
@@ -612,7 +612,7 @@ final class ql implements pa {
         int var5 = 0;
         SummonEvent var6 = null;
         TeleportEvent var7 = null;
-        TrinketUseEvent var8 = null;
+        SpellCastEvent var8 = null;
         OwnerChangeEvent var9 = null;
         UpkeepEvent var10 = null;
         TurnEffectEvent var11 = null;
@@ -674,7 +674,7 @@ final class ql implements pa {
                     this.field_b.field_x = var9.unit.tileX + var9.unit.tileY * this.field_s;
                   } else {
                     if (param0.field_m == 24) {
-                      var8 = (TrinketUseEvent) (param0);
+                      var8 = (SpellCastEvent) (param0);
                       this.field_n = 8;
                       if (var8.field_y >= 0) {
                         this.field_f = (int)(64.0 * Math.sin((double)var8.field_y * 3.141592653589793 / 4.0)) + 130;
@@ -686,9 +686,9 @@ final class ql implements pa {
                     } else {
                       if (param0.field_m == 26) {
                         var7 = (TeleportEvent) (param0);
-                        var7.unit = this.field_o.getUnitAt(var7.field_B, true, var7.field_A);
+                        var7.unit = this.field_o.getUnitAt(var7.sourceY, true, var7.sourceX);
                         if (var7.unit.packedFlag256) {
-                          var7.unit = var7.unit.b(false);
+                          var7.unit = var7.unit.copyDetached(false);
                         }
                         this.field_n = 7;
                         this.field_b.field_x = this.field_s * var7.unit.tileY + var7.unit.tileX;
@@ -698,7 +698,7 @@ final class ql implements pa {
                 } else {
                   var6 = (SummonEvent) (param0);
                   this.field_n = 7;
-                  this.field_b.field_x = var6.field_z + this.field_s * var6.field_H;
+                  this.field_b.field_x = var6.tileX + this.field_s * var6.tileY;
                 }
               }
             }

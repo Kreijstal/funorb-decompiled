@@ -177,12 +177,12 @@ class fn extends fw {
             }
           }
           if (param1 == 76) {
-            bn.field_a = new kk[mn.field_m[param1].length];
-            bn.field_a[0] = mn.field_k[param1][0];
+            bn.field_a = new kk[SpellAreaSelection.field_m[param1].length];
+            bn.field_a[0] = SpellAreaSelection.field_k[param1][0];
           }
-          for (var4 = 1; var4 < mn.field_m[param1].length; var4++) {
-            if (null == mn.field_k[param1][var4]) {
-              var5 = mn.field_m[param1][var4];
+          for (var4 = 1; var4 < SpellAreaSelection.field_m[param1].length; var4++) {
+            if (null == SpellAreaSelection.field_k[param1][var4]) {
+              var5 = SpellAreaSelection.field_m[param1][var4];
               var6 = hs.a(var5, param2 ^ -32697, var9);
               if (var6 != null) {
                 if (th.a(var6, -17900)) {
@@ -197,12 +197,12 @@ class fn extends fw {
                     }
                   }
                 }
-                mn.field_k[param1][var4] = var6.a(be.field_x, fm.field_a, ol.field_A, lf.field_t, ni.field_a);
+                SpellAreaSelection.field_k[param1][var4] = var6.a(be.field_x, fm.field_a, ol.field_A, lf.field_t, ni.field_a);
                 if (param1 == 76) {
-                  bn.field_a[var4] = mn.field_k[param1][var4];
+                  bn.field_a[var4] = SpellAreaSelection.field_k[param1][var4];
                 }
-                if (0 == ((gd) (mn.field_k[param1][var4])).field_I) {
-                  mn.field_k[param1] = null;
+                if (0 == ((gd) (SpellAreaSelection.field_k[param1][var4])).field_I) {
+                  SpellAreaSelection.field_k[param1] = null;
                 }
               }
               continue;

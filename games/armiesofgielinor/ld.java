@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ld extends bd {
+final class ld extends SpellAreaEffect {
     private int field_v;
     static int field_s;
     private int field_F;
@@ -193,7 +193,7 @@ final class ld extends bd {
         }
     }
 
-    final void a(int param0, Battlefield param1) {
+    final void applyEffect(int obfuscationGuard, Battlefield battlefield) {
         int var4 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -233,9 +233,9 @@ final class ld extends bd {
           }
           if (!this.field_y.packedFlag8 ||
             this.field_y.unitType == 0) {
-            param1.pendingEvents.a((byte) -119, (IntrusiveNode) (new MoveEvent(this.field_u, this.field_v, var8)));
+            battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new MoveEvent(this.field_u, this.field_v, var8)));
           }
-          if (param0 != 64) {
+          if (obfuscationGuard != 64) {
             ld.a((byte) -102, 105);
           }
           if (this.field_w != 0 ||
@@ -244,15 +244,15 @@ final class ld extends bd {
               7 == this.field_y.unitType) {
               return;
             }
-            param1.pendingEvents.a((byte) -119, (IntrusiveNode) (new AttackEvent(this.field_E, this.field_F, this.field_w, this.field_t, this.field_z, this.field_A, this.field_B)));
+            battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new AttackEvent(this.field_E, this.field_F, this.field_w, this.field_t, this.field_z, this.field_A, this.field_B)));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_32_0 = var3_ref;
-          stackIn_32_1 = new StringBuilder().append("ld.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_32_1 = new StringBuilder().append("ld.C(").append(obfuscationGuard).append(',');
+          if (battlefield == null) {
             stackIn_33_2 = "null";
           } else {
             stackIn_33_2 = "{...}";
@@ -353,7 +353,7 @@ final class ld extends bd {
             this.field_z = null;
             this.field_t = 0;
           } else {
-            this.field_z = param8.b(false);
+            this.field_z = param8.copyDetached(false);
             var10_int = bw.unitDefinitions[this.field_y.unitType][9];
             stackIn_4_1 = this.field_y.strength * vu.field_N[var10_int] / this.field_y.maximumStrength;
             if (this.field_y.strength * vu.field_N[var10_int] % this.field_y.maximumStrength != 0) {

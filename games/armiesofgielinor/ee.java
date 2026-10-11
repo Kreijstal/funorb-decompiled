@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ee extends mn {
+final class ee extends SpellAreaSelection {
     private int field_w;
     static int[] field_x;
     private int field_z;
     static je field_A;
-    private mn field_y;
+    private SpellAreaSelection field_y;
     static gk field_v;
 
     final static void a(int param0, byte param1) {
@@ -227,7 +227,7 @@ final class ee extends mn {
           pt.field_X = new je(0L, je.field_Q);
           kd.field_M = new je(0L, nd.field_a);
           rd.field_e = new je(0L, je.field_Q);
-          bd.field_o = new je(0L, je.field_Q);
+          SpellAreaEffect.field_o = new je(0L, je.field_Q);
           eb.field_a = new je(0L, je.field_Q);
           je.field_Q.field_G = wj.a(-12310, fk.a("smallbutton", (byte) -128, param1, "lobby"));
           je.field_Q.field_mb = wj.a(-12310, fk.a("smallbutton_mouseover", (byte) -125, param1, "lobby"));
@@ -263,11 +263,11 @@ final class ee extends mn {
           dupTemp$2 = wj.a(-12310, fk.a("chatbutton_active", (byte) -124, param1, "lobby"));
           rd.field_e.field_H = dupTemp$2;
           rd.field_e.field_U = dupTemp$2;
-          bd.field_o.field_G = wj.a(-12310, fk.a("chatfilterbutton", (byte) -127, param1, "lobby"));
-          bd.field_o.field_mb = wj.a(-12310, fk.a("chatfilterbutton_mouseover", (byte) -127, param1, "lobby"));
+          SpellAreaEffect.field_o.field_G = wj.a(-12310, fk.a("chatfilterbutton", (byte) -127, param1, "lobby"));
+          SpellAreaEffect.field_o.field_mb = wj.a(-12310, fk.a("chatfilterbutton_mouseover", (byte) -127, param1, "lobby"));
           dupTemp$3 = wj.a(-12310, fk.a("chatfilterbutton_active", (byte) -124, param1, "lobby"));
-          bd.field_o.field_H = dupTemp$3;
-          bd.field_o.field_U = dupTemp$3;
+          SpellAreaEffect.field_o.field_H = dupTemp$3;
+          SpellAreaEffect.field_o.field_U = dupTemp$3;
           var17 = fk.a("checkbox", (byte) -124, param1, "lobby");
           hs.field_H = new fp(0L, var17[1], var17[0], 1, ms.field_k, (String) null);
           oe.field_Cb = new je(0L, (je) null);
@@ -371,14 +371,14 @@ final class ee extends mn {
         }
     }
 
-    final bd a(int param0, Battlefield param1) {
+    final SpellAreaEffect createEffect(int obfuscationGuard, Battlefield battlefield) {
         String discarded$0 = null;
         String discarded$2 = null;
         String discarded$1 = null;
         Object stackIn_5_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_11_0 = null;
-        bd stackIn_13_0 = null;
+        SpellAreaEffect stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -388,34 +388,34 @@ final class ee extends mn {
         Unit var5 = null;
         try {
           this.unlink(44);
-          if (param0 <= 31) {
+          if (obfuscationGuard <= 31) {
             var4 = (kl) null;
             ee.a((ru[]) null, (kl) null, 4, (int[]) null, (kl) null);
           }
-          var5 = param1.getUnitAt(this.field_w, true, this.field_z);
+          var5 = battlefield.getUnitAt(this.field_w, true, this.field_z);
           if (var5 == null) {
             discarded$0 = this.a(new String[]{"no unit at ", TutorialController.c(this.field_z, 0, this.field_w)}, 30536);
             stackIn_5_0 = null;
-            return (bd) (stackIn_5_0);
+            return (SpellAreaEffect) (stackIn_5_0);
           }
-          if (var5.packedLowFlags == 0) {
+          if (var5.attacksRemaining == 0) {
             discarded$2 = this.a(new String[]{"unit at ", TutorialController.c(this.field_z, 0, this.field_w), " has attacked"}, 30536);
             stackIn_8_0 = null;
-            return (bd) (stackIn_8_0);
+            return (SpellAreaEffect) (stackIn_8_0);
           }
           if (72 == var5.unitType) {
-            stackIn_13_0 = this.field_y.a(100, param1);
+            stackIn_13_0 = this.field_y.createEffect(100, battlefield);
             return stackIn_13_0;
           }
           discarded$1 = this.a(new String[]{"unit at ", TutorialController.c(this.field_z, 0, this.field_w), " is not TYPE_SPHINX"}, 30536);
           stackIn_11_0 = null;
-          return (bd) (stackIn_11_0);
+          return (SpellAreaEffect) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_16_0 = var3;
-          stackIn_16_1 = new StringBuilder().append("ee.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_16_1 = new StringBuilder().append("ee.C(").append(obfuscationGuard).append(',');
+          if (battlefield == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -424,7 +424,7 @@ final class ee extends mn {
         }
     }
 
-    ee(int param0, int param1, int param2, mn param3) {
+    ee(int param0, int param1, int param2, SpellAreaSelection param3) {
         try {
           this.field_y = param3;
           this.field_y.field_u = true;

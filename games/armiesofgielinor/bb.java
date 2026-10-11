@@ -101,9 +101,9 @@ final class bb {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (null == tn.field_Z) {
-          if (null != ik.field_b &&
-            ik.field_b.l(18585)) {
-            ik.field_b = null;
+          if (null != Spell.field_b &&
+            Spell.field_b.l(18585)) {
+            Spell.field_b = null;
             ot.g(76);
             return true;
           }
@@ -115,7 +115,7 @@ final class bb {
             ot.g(76);
             return true;
           }
-          if (null == ik.field_b) {
+          if (null == Spell.field_b) {
             if (param3 != 50) {
               field_b = (RgbSprite[]) null;
             }
@@ -127,8 +127,8 @@ final class bb {
             }
             return true;
           }
-          if (ik.field_b.l(18585)) {
-            ik.field_b = null;
+          if (Spell.field_b.l(18585)) {
+            Spell.field_b = null;
             ot.g(76);
             return true;
           }

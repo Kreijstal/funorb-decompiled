@@ -60,7 +60,7 @@ class ev implements ok {
         if (param1 != -32263) {
           return;
         }
-        ra.a(param2, param1 ^ -9688, param0);
+        AreaSpell.a(param2, param1 ^ -9688, param0);
     }
 
     final static int b(int param0, int param1, int param2) {

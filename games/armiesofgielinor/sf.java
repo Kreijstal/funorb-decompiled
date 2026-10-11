@@ -255,7 +255,7 @@ abstract class sf extends wl {
             break;
           }
           if (var3 == null) {
-            be.field_u.a((byte) -119, (IntrusiveNode) (param1));
+            be.field_u.addLast((byte) -119, (IntrusiveNode) (param1));
           } else {
             stackIn_7_0 = -123;
             fj.$cfr$intArgs$a$f94c566f195c(stackIn_7_0, param1, var3);

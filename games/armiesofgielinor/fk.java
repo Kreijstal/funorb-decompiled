@@ -113,7 +113,7 @@ final class fk implements kh {
                 return stackIn_23_0;
               }
               param0.field_a = param0.field_a - 1;
-              var4.field_k.a((byte) -119, (IntrusiveNode) (fk.a(param0, -32)));
+              var4.field_k.addLast((byte) -119, (IntrusiveNode) (fk.a(param0, -32)));
               if (param0.a(127)) {
                 throw new ef(var4.field_s);
               }

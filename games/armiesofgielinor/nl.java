@@ -393,12 +393,12 @@ abstract class nl extends kb implements gw {
           gg.field_E = new je(0L, eq.field_h);
           gg.field_E.field_Eb = 1;
           di.field_l = new je(0L, te.field_p, su.field_b);
-          TrinketUseEvent.field_D = new je(0L, br.field_e, rh.field_g);
+          SpellCastEvent.field_D = new je(0L, br.field_e, rh.field_g);
           bu.field_a = new dn(0L, new je(0L, (je) null), cb.field_c, ri.field_b);
           eb.field_c.a(gg.field_E, 72);
           eb.field_c.a(di.field_l, 83);
           if (fh.field_c) {
-            eb.field_c.a(TrinketUseEvent.field_D, 107);
+            eb.field_c.a(SpellCastEvent.field_D, 107);
           }
           eb.field_c.a(bu.field_a, 109);
           mp.field_Lb = new je(0L, kd.field_M, pl.field_v.toUpperCase());
@@ -714,7 +714,7 @@ abstract class nl extends kb implements gw {
             iw var4 = (iw) null;
             nl.a(30, -59, (iw) null);
           }
-          cg.field_c.a((byte) -119, (IntrusiveNode) (param2));
+          cg.field_c.addLast((byte) -119, (IntrusiveNode) (param2));
           ot.a((byte) 112, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "nl.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -775,7 +775,7 @@ abstract class nl extends kb implements gw {
                         if (null == bk.field_e) {
                           bk.field_e = new NodeDeque();
                         }
-                        bk.field_e.a((byte) -119, (IntrusiveNode) (var14));
+                        bk.field_e.addLast((byte) -119, (IntrusiveNode) (var14));
                       }
                     }
                   }

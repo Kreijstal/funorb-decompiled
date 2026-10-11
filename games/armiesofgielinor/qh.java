@@ -13,7 +13,7 @@ final class qh {
           }
           pi.field_N.field_O = ke.field_e.field_O;
           pi.field_N.field_Eb = 1;
-          if (param7 > ~bd.field_r) {
+          if (param7 > ~SpellAreaEffect.field_r) {
             j.a(1, param9, param0, param5);
           }
           if (0 < rk.field_D) {
@@ -40,7 +40,7 @@ final class qh {
               }
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
-              if (param7 > ~bd.field_r) {
+              if (param7 > ~SpellAreaEffect.field_r) {
                 j.a(1, param9, param0, param5);
               }
               if (0 < rk.field_D) {
@@ -64,7 +64,7 @@ final class qh {
               }
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
-              if (param7 > ~bd.field_r) {
+              if (param7 > ~SpellAreaEffect.field_r) {
                 j.a(1, param9, param0, param5);
               }
               if (0 < rk.field_D) {
@@ -101,7 +101,7 @@ final class qh {
               }
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
-              if (param7 > ~bd.field_r) {
+              if (param7 > ~SpellAreaEffect.field_r) {
                 j.a(1, param9, param0, param5);
               }
               if (0 < rk.field_D) {
@@ -136,7 +136,7 @@ final class qh {
             }
             pi.field_N.field_O = ke.field_e.field_O;
             pi.field_N.field_Eb = 1;
-            if (param7 > ~bd.field_r) {
+            if (param7 > ~SpellAreaEffect.field_r) {
               j.a(1, param9, param0, param5);
             }
             if (0 < rk.field_D) {
@@ -159,7 +159,7 @@ final class qh {
               bn.a(param0, param9, 117, param5);
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
-              if (param7 > ~bd.field_r) {
+              if (param7 > ~SpellAreaEffect.field_r) {
                 j.a(1, param9, param0, param5);
               }
               if (0 < rk.field_D) {
@@ -178,7 +178,7 @@ final class qh {
             } else {
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
-              if (param7 > ~bd.field_r) {
+              if (param7 > ~SpellAreaEffect.field_r) {
                 j.a(1, param9, param0, param5);
               }
               if (0 < rk.field_D) {
@@ -209,16 +209,16 @@ final class qh {
 
     final static void a(boolean param0, int param1) {
         if (param1 == 0) {
-          if (null != ik.field_d) {
+          if (null != Spell.field_d) {
             SoftwareRaster.d(SoftwareRaster.field_j, SoftwareRaster.field_a, -SoftwareRaster.field_j + SoftwareRaster.field_e, -SoftwareRaster.field_a + SoftwareRaster.field_f);
-            ik.field_d.b(param0, 20);
+            Spell.field_d.b(param0, 20);
           }
           return;
         }
         qh.a((byte) -15);
-        if (null != ik.field_d) {
+        if (null != Spell.field_d) {
           SoftwareRaster.d(SoftwareRaster.field_j, SoftwareRaster.field_a, -SoftwareRaster.field_j + SoftwareRaster.field_e, -SoftwareRaster.field_a + SoftwareRaster.field_f);
-          ik.field_d.b(param0, 20);
+          Spell.field_d.b(param0, 20);
         }
     }
 

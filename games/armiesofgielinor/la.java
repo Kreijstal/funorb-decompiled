@@ -153,7 +153,7 @@ final class la {
         if (param0 == 43) {
           param0 = 77;
         }
-        this.field_c = (gd) (mn.field_k[param0][0]);
+        this.field_c = (gd) (SpellAreaSelection.field_k[param0][0]);
         this.field_h = nh.field_D[param0];
         this.field_b = 0;
         this.c(0);

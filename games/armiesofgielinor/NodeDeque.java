@@ -140,7 +140,7 @@ final class NodeDeque {
         return null;
     }
 
-    final void a(int param0, IntrusiveNode param1) {
+    final void addFirst(int obfuscationGuard, IntrusiveNode node) {
         RuntimeException var3 = null;
         NodeDeque var4 = null;
         RuntimeException stackIn_7_0 = null;
@@ -148,14 +148,14 @@ final class NodeDeque {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1.previous != null) {
-            param1.unlink(66);
+          if (node.previous != null) {
+            node.unlink(66);
           }
-          param1.previous = this.sentinel;
-          param1.next = this.sentinel.next;
-          param1.previous.next = param1;
-          param1.next.previous = param1;
-          if (param0 == 750) {
+          node.previous = this.sentinel;
+          node.next = this.sentinel.next;
+          node.previous.next = node;
+          node.next.previous = node;
+          if (obfuscationGuard == 750) {
             return;
           }
           var4 = (NodeDeque) null;
@@ -165,8 +165,8 @@ final class NodeDeque {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("at.H(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("at.H(").append(obfuscationGuard).append(',');
+          if (node == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -216,7 +216,7 @@ final class NodeDeque {
           return;
         }
         IntrusiveNode var4 = (IntrusiveNode) null;
-        this.a((byte) -117, (IntrusiveNode) null);
+        this.addLast((byte) -117, (IntrusiveNode) null);
     }
 
     final boolean a(boolean param0) {
@@ -294,20 +294,20 @@ final class NodeDeque {
         return var2Lifetime1;
     }
 
-    final void a(byte param0, IntrusiveNode param1) {
+    final void addLast(byte obfuscationGuard, IntrusiveNode node) {
         try {
-          if (param1.previous != null) {
-            param1.unlink(param0 + 181);
+          if (node.previous != null) {
+            node.unlink(obfuscationGuard + 181);
           }
-          param1.previous = this.sentinel.previous;
-          param1.next = this.sentinel;
-          if (param0 != -119) {
+          node.previous = this.sentinel.previous;
+          node.next = this.sentinel;
+          if (obfuscationGuard != -119) {
             field_a = true;
           }
-          param1.previous.next = param1;
-          param1.next.previous = param1;
+          node.previous.next = node;
+          node.next.previous = node;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "at.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "at.B(" + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 

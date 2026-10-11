@@ -61,7 +61,7 @@ final class sb extends rb implements fb, rp {
             this.c(-41);
           }
           var4 = this.field_j.a((byte) -77);
-          var5 = ra.b(true);
+          var5 = AreaSpell.b(true);
           if (var4 >= 1890 &&
             var4 <= var5 - 3) {
             if (dt.a(var4, -24375, var3, var2_int)) {
@@ -157,7 +157,7 @@ final class sb extends rb implements fb, rp {
           var2_int = this.field_j.l(50);
           var3 = this.field_j.m(-26458);
           var4 = this.field_j.a((byte) -77);
-          var5 = ra.b(true);
+          var5 = AreaSpell.b(true);
           if (var4 < 1890) {
             stackIn_2_0 = rn.field_e;
             return stackIn_2_0;

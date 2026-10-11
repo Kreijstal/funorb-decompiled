@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends bd {
+final class pe extends SpellAreaEffect {
     private int field_y;
     static int[] field_s;
     static String field_w;
@@ -12,14 +12,14 @@ final class pe extends bd {
     static je field_x;
     private int field_z;
 
-    final void a(int param0, Battlefield param1) {
+    final void applyEffect(int obfuscationGuard, Battlefield battlefield) {
         try {
-          param1.pendingEvents.a((byte) -119, (IntrusiveNode) (new GrowthEvent(this.field_u, this.field_y, this.field_t, this.field_A, this.field_z, this.field_m)));
-          if (param0 != 64) {
+          battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new GrowthEvent(this.field_u, this.field_y, this.field_t, this.field_A, this.field_z, this.field_m)));
+          if (obfuscationGuard != 64) {
             pe.a(53, false, (String[][]) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "pe.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "pe.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 

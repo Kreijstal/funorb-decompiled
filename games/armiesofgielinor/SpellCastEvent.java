@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class TrinketUseEvent extends GameEvent {
+final class SpellCastEvent extends GameEvent {
     static String field_A;
-    private boolean field_C;
-    ik field_B;
-    private int field_z;
+    private boolean applied;
+    Spell spell;
+    private int castingPlayer;
     static je field_D;
     int field_y;
     static ea field_E;
 
     final String describeEvent(byte obfuscationGuard, boolean verbose) {
         int var3 = 3 % ((53 - obfuscationGuard) / 51);
-        String var4 = "Trinketused! " + this.field_B.field_c;
+        String var4 = "Trinketused! " + this.spell.spellId;
         if (verbose) {
           System.out.println(var4);
         }
@@ -23,13 +23,13 @@ final class TrinketUseEvent extends GameEvent {
         if (obfuscationGuard != -26661) {
           field_A = (String) null;
         }
-        if (this.field_C) {
+        if (this.applied) {
           return;
         }
         try {
-          this.field_C = true;
-          this.field_B.a(this.field_z, battlefield, 26123);
-          battlefield.a((byte) -49, this.field_B, this.field_y, this.field_z);
+          this.applied = true;
+          this.spell.applyEffect(this.castingPlayer, battlefield, 26123);
+          battlefield.a((byte) -49, this.spell, this.field_y, this.castingPlayer);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "pj.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
@@ -70,7 +70,7 @@ final class TrinketUseEvent extends GameEvent {
                 var5 = ui.field_g;
               }
             } else {
-              var5 = mn.field_n;
+              var5 = SpellAreaSelection.field_n;
             }
             var6 = nb.field_h[var3];
             stackIn_12_0 = var6;
@@ -173,7 +173,7 @@ final class TrinketUseEvent extends GameEvent {
         field_E = null;
         field_A = null;
         if (!param0) {
-          TrinketUseEvent.b(-127, -31);
+          SpellCastEvent.b(-127, -31);
         }
         field_D = null;
     }
@@ -212,12 +212,12 @@ final class TrinketUseEvent extends GameEvent {
           var23 = param1[param3].occupant;
           if (param2 &&
             var23 != null && (!param9 ||
-            var23.packedFlag4 ||
+            var23.movementSpent ||
             param4 != var23.ownerPlayer)) {
             stackIn_8_0 = 1000000;
             return stackIn_8_0;
           }
-          var12 = param7.g(0);
+          var12 = param7.getUnitCategory(0);
           var13 = param1[param8].terrainType;
           var14 = param1[param3].terrainType;
           var15 = 0;
@@ -350,20 +350,20 @@ final class TrinketUseEvent extends GameEvent {
         int var12Lifetime1;
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          hs.b(-103, this.field_B.field_c);
+          hs.b(-103, this.spell.spellId);
           to.a(3, (byte) -121, 38);
-          param2.g(27, this.field_B.field_c, -91);
+          param2.g(27, this.spell.spellId, -91);
           var4_int = 0;
           if (param1 >= -84) {
-            TrinketUseEvent.b(30, -93);
+            SpellCastEvent.b(30, -93);
           }
           var4_int = var4_int != 0 | this.a((byte) -39, param2, param0, false) ? 1 : 0;
-          if (uc.spellDefinitions[this.field_B.field_c][3] != 4 &&
-            uc.spellDefinitions[this.field_B.field_c][4] != 5) {
-            var5 = ((wa) (this.field_B)).field_g;
-            var6 = ((wa) (this.field_B)).field_f;
-            if (6 != uc.spellDefinitions[this.field_B.field_c][3]) {
-              var7 = uc.spellDefinitions[this.field_B.field_c][7];
+          if (uc.spellDefinitions[this.spell.spellId][3] != 4 &&
+            uc.spellDefinitions[this.spell.spellId][4] != 5) {
+            var5 = ((UnitSpell) (this.spell)).targetX;
+            var6 = ((UnitSpell) (this.spell)).targetY;
+            if (6 != uc.spellDefinitions[this.spell.spellId][3]) {
+              var7 = uc.spellDefinitions[this.spell.spellId][7];
               for (var8 = -var7 + var5; var8 <= var7 + var5; var8++) {
                 if (var8 >= 0 &&
                   var8 < param2.battlefield.mapWidth) {
@@ -412,7 +412,7 @@ final class TrinketUseEvent extends GameEvent {
               var4_int = var4_int != 0 | this.a(var10, 15, param2, param0, var9) ? 1 : 0;
             }
           }
-          ul.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, jr.field_e, new String[]{param2.battlefield.playerNames[this.field_z], fq.field_f[this.field_B.field_c]}), param2.field_Nb);
+          ul.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, jr.field_e, new String[]{param2.battlefield.playerNames[this.castingPlayer], fq.field_f[this.spell.spellId]}), param2.field_Nb);
           stackIn_39_0 = var4_int;
           return stackIn_39_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -435,11 +435,11 @@ final class TrinketUseEvent extends GameEvent {
         }
     }
 
-    TrinketUseEvent(ik param0, int param1, int param2) {
+    SpellCastEvent(Spell param0, int param1, int param2) {
         try {
-          this.field_z = param2;
+          this.castingPlayer = param2;
           this.field_y = param1;
-          this.field_B = param0;
+          this.spell = param0;
           this.field_m = 24;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "pj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -457,7 +457,7 @@ final class TrinketUseEvent extends GameEvent {
         try {
           if (param0 != 593277313) {
             var3 = (Unit) null;
-            TrinketUseEvent.a(73, (MapTile[]) null, true, -35, 53, 62, 17, (Unit) null, 87, false, false);
+            SpellCastEvent.a(73, (MapTile[]) null, true, -35, 53, 62, 17, (Unit) null, 87, false, false);
           }
           stackIn_3_0 = hh.a(param1, 0, param1.length, 0);
           return stackIn_3_0;

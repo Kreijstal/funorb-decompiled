@@ -116,7 +116,7 @@ final class TurnEffectEvent extends GameEvent {
                 break regionExit1;
               }
             }
-            this.unit.field_A = this.unit.field_A - 1;
+            this.unit.bonusStrength = this.unit.bonusStrength - 1;
             this.unit.queueDeathOrRevival(22331);
           }
           fl.a(battlefield, -112);

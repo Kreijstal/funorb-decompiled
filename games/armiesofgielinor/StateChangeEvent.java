@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class StateChangeEvent extends GameEvent {
-    int field_J;
-    private boolean field_C;
-    private int field_F;
-    int field_I;
+    int tileY;
+    private boolean applied;
+    private int effectType;
+    int tileX;
     static String field_D;
     static String field_z;
     static String field_y;
     static String field_A;
     static String field_H;
-    int field_G;
+    int playerId;
 
     final static void e(byte param0) {
         if (param0 >= -73) {
@@ -46,7 +46,7 @@ final class StateChangeEvent extends GameEvent {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = 0;
-          var6 = this.field_F;
+          var6 = this.effectType;
           if (2 != var6 &&
             var6 != 3) {
             if (var6 != 1) {
@@ -56,60 +56,60 @@ final class StateChangeEvent extends GameEvent {
                 } else if (this.a((byte) -39, param2, param0, true)) {
                   var4_int = 1;
                 }
-              } else if (!param2.battlefield.tiles[param2.battlefield.mapWidth * this.field_J + this.field_I].hasCorpse(111)) {
+              } else if (!param2.battlefield.tiles[param2.battlefield.mapWidth * this.tileY + this.tileX].hasCorpse(111)) {
                 this.c((byte) -74);
               } else if (this.a((byte) -39, param2, param0, true)) {
                 var4_int = 1;
               }
             } else {
-              if (this.field_I > 0) {
-                var13 = param2.battlefield.getUnitAt(this.field_J, true, this.field_I - 1);
-                if (param2.battlefield.tiles[this.field_I - (1 - param2.battlefield.mapWidth * this.field_J)].hasCorpse(-65) &&
+              if (this.tileX > 0) {
+                var13 = param2.battlefield.getUnitAt(this.tileY, true, this.tileX - 1);
+                if (param2.battlefield.tiles[this.tileX - (1 - param2.battlefield.mapWidth * this.tileY)].hasCorpse(-65) &&
                   null == this.unit ||
                   var13 != null &&
-                  param2.battlefield.arePlayersAllied(var13.ownerPlayer, -16985, this.field_G) &&
+                  param2.battlefield.arePlayersAllied(var13.ownerPlayer, -16985, this.playerId) &&
                   var13.a(23072)) {
                   this.field_s = this.field_s + 1;
-                  if (this.a(this.field_J, 15, param2, param0, this.field_I - 1)) {
+                  if (this.a(this.tileY, 15, param2, param0, this.tileX - 1)) {
                     var4_int = 1;
                   }
                 }
               }
-              if (this.field_I < param2.battlefield.mapWidth - 1) {
-                var14 = param2.battlefield.getUnitAt(this.field_J, true, this.field_I + 1);
-                if (param2.battlefield.tiles[this.field_I + 1 + param2.battlefield.mapWidth * this.field_J].hasCorpse(-26) &&
+              if (this.tileX < param2.battlefield.mapWidth - 1) {
+                var14 = param2.battlefield.getUnitAt(this.tileY, true, this.tileX + 1);
+                if (param2.battlefield.tiles[this.tileX + 1 + param2.battlefield.mapWidth * this.tileY].hasCorpse(-26) &&
                   this.unit == null ||
                   var14 != null &&
-                  param2.battlefield.arePlayersAllied(var14.ownerPlayer, -16985, this.field_G) &&
+                  param2.battlefield.arePlayersAllied(var14.ownerPlayer, -16985, this.playerId) &&
                   var14.a(23072)) {
                   this.field_s = this.field_s + 1;
-                  if (this.a(this.field_J, 15, param2, param0, 1 + this.field_I)) {
+                  if (this.a(this.tileY, 15, param2, param0, 1 + this.tileX)) {
                     var4_int = 1;
                   }
                 }
               }
-              if (0 < this.field_J) {
-                var15 = param2.battlefield.getUnitAt(-1 + this.field_J, true, this.field_I);
-                if (param2.battlefield.tiles[(this.field_J - 1) * param2.battlefield.mapWidth + this.field_I].hasCorpse(-45) &&
+              if (0 < this.tileY) {
+                var15 = param2.battlefield.getUnitAt(-1 + this.tileY, true, this.tileX);
+                if (param2.battlefield.tiles[(this.tileY - 1) * param2.battlefield.mapWidth + this.tileX].hasCorpse(-45) &&
                   this.unit == null ||
                   var15 != null &&
-                  param2.battlefield.arePlayersAllied(var15.ownerPlayer, -16985, this.field_G) &&
+                  param2.battlefield.arePlayersAllied(var15.ownerPlayer, -16985, this.playerId) &&
                   var15.a(23072)) {
                   this.field_s = this.field_s + 1;
-                  if (this.a(-1 + this.field_J, 15, param2, param0, this.field_I)) {
+                  if (this.a(-1 + this.tileY, 15, param2, param0, this.tileX)) {
                     var4_int = 1;
                   }
                 }
               }
-              if (-1 + param2.battlefield.mapHeight > this.field_J) {
-                var16 = param2.battlefield.getUnitAt(this.field_J + 1, true, this.field_I);
-                if (param2.battlefield.tiles[this.field_I + (1 + this.field_J) * param2.battlefield.mapWidth].hasCorpse(-44) &&
+              if (-1 + param2.battlefield.mapHeight > this.tileY) {
+                var16 = param2.battlefield.getUnitAt(this.tileY + 1, true, this.tileX);
+                if (param2.battlefield.tiles[this.tileX + (1 + this.tileY) * param2.battlefield.mapWidth].hasCorpse(-44) &&
                   null == this.unit ||
                   var16 != null &&
-                  param2.battlefield.arePlayersAllied(var16.ownerPlayer, -16985, this.field_G) &&
+                  param2.battlefield.arePlayersAllied(var16.ownerPlayer, -16985, this.playerId) &&
                   var16.a(23072)) {
                   this.field_s = this.field_s + 1;
-                  if (this.a(this.field_J + 1, 15, param2, param0, this.field_I)) {
+                  if (this.a(this.tileY + 1, 15, param2, param0, this.tileX)) {
                     var4_int = 1;
                   }
                 }
@@ -121,42 +121,42 @@ final class StateChangeEvent extends GameEvent {
               }
             }
           } else {
-            if (this.field_I > 0) {
-              var9 = param2.battlefield.getUnitAt(this.field_J, true, this.field_I - 1);
+            if (this.tileX > 0) {
+              var9 = param2.battlefield.getUnitAt(this.tileY, true, this.tileX - 1);
               if (var9 != null &&
-                param2.battlefield.arePlayersAllied(var9.ownerPlayer, -16985, this.field_G)) {
+                param2.battlefield.arePlayersAllied(var9.ownerPlayer, -16985, this.playerId)) {
                 this.field_s = this.field_s + 1;
-                if (this.a(this.field_J, 15, param2, param0, this.field_I - 1)) {
+                if (this.a(this.tileY, 15, param2, param0, this.tileX - 1)) {
                   var4_int = 1;
                 }
               }
             }
-            if (param2.battlefield.mapWidth - 1 > this.field_I) {
-              var10 = param2.battlefield.getUnitAt(this.field_J, true, this.field_I + 1);
+            if (param2.battlefield.mapWidth - 1 > this.tileX) {
+              var10 = param2.battlefield.getUnitAt(this.tileY, true, this.tileX + 1);
               if (var10 != null &&
-                param2.battlefield.arePlayersAllied(var10.ownerPlayer, -16985, this.field_G)) {
+                param2.battlefield.arePlayersAllied(var10.ownerPlayer, -16985, this.playerId)) {
                 this.field_s = this.field_s + 1;
-                if (this.a(this.field_J, 15, param2, param0, this.field_I + 1)) {
+                if (this.a(this.tileY, 15, param2, param0, this.tileX + 1)) {
                   var4_int = 1;
                 }
               }
             }
-            if (this.field_J > 0) {
-              var11 = param2.battlefield.getUnitAt(this.field_J - 1, true, this.field_I);
+            if (this.tileY > 0) {
+              var11 = param2.battlefield.getUnitAt(this.tileY - 1, true, this.tileX);
               if (var11 != null &&
-                param2.battlefield.arePlayersAllied(var11.ownerPlayer, -16985, this.field_G)) {
+                param2.battlefield.arePlayersAllied(var11.ownerPlayer, -16985, this.playerId)) {
                 this.field_s = this.field_s + 1;
-                if (this.a(-1 + this.field_J, 15, param2, param0, this.field_I)) {
+                if (this.a(-1 + this.tileY, 15, param2, param0, this.tileX)) {
                   var4_int = 1;
                 }
               }
             }
-            if (this.field_J < param2.battlefield.mapHeight - 1) {
-              var12 = param2.battlefield.getUnitAt(1 + this.field_J, true, this.field_I);
+            if (this.tileY < param2.battlefield.mapHeight - 1) {
+              var12 = param2.battlefield.getUnitAt(1 + this.tileY, true, this.tileX);
               if (var12 != null &&
-                param2.battlefield.arePlayersAllied(var12.ownerPlayer, -16985, this.field_G)) {
+                param2.battlefield.arePlayersAllied(var12.ownerPlayer, -16985, this.playerId)) {
                 this.field_s = this.field_s + 1;
-                if (this.a(1 + this.field_J, 15, param2, param0, this.field_I)) {
+                if (this.a(1 + this.tileY, 15, param2, param0, this.tileX)) {
                   var4_int = 1;
                 }
               }
@@ -280,49 +280,49 @@ final class StateChangeEvent extends GameEvent {
         GameplayController var5 = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (this.field_C) {
+          if (this.applied) {
             return;
           }
-          this.field_C = true;
-          var3_int = this.field_F;
+          this.applied = true;
+          var3_int = this.effectType;
           if (var3_int != 0) {
             if (var3_int == 1) {
-              battlefield.healOrRaiseSkeletonAt((byte) 34, this.field_G, this.field_J, this.field_I + 1);
-              battlefield.healOrRaiseSkeletonAt((byte) 30, this.field_G, this.field_J, -1 + this.field_I);
-              battlefield.healOrRaiseSkeletonAt((byte) 61, this.field_G, this.field_J + 1, this.field_I);
-              battlefield.healOrRaiseSkeletonAt((byte) 35, this.field_G, this.field_J - 1, this.field_I);
+              battlefield.healOrRaiseSkeletonAt((byte) 34, this.playerId, this.tileY, this.tileX + 1);
+              battlefield.healOrRaiseSkeletonAt((byte) 30, this.playerId, this.tileY, -1 + this.tileX);
+              battlefield.healOrRaiseSkeletonAt((byte) 61, this.playerId, this.tileY + 1, this.tileX);
+              battlefield.healOrRaiseSkeletonAt((byte) 35, this.playerId, this.tileY - 1, this.tileX);
             } else {
               if (var3_int != 2) {
                 if (3 == var3_int) {
-                  battlefield.f(this.field_I + 1, this.field_G, 126, this.field_J);
-                  battlefield.f(-1 + this.field_I, this.field_G, obfuscationGuard + 26785, this.field_J);
-                  battlefield.f(this.field_I, this.field_G, 121, this.field_J + 1);
-                  battlefield.f(this.field_I, this.field_G, 119, -1 + this.field_J);
+                  battlefield.f(this.tileX + 1, this.playerId, 126, this.tileY);
+                  battlefield.f(-1 + this.tileX, this.playerId, obfuscationGuard + 26785, this.tileY);
+                  battlefield.f(this.tileX, this.playerId, 121, this.tileY + 1);
+                  battlefield.f(this.tileX, this.playerId, 119, -1 + this.tileY);
                 } else {
                   if (4 == var3_int) {
-                    battlefield.a(-100, battlefield.tiles[battlefield.mapWidth * this.field_J + this.field_I]);
+                    battlefield.a(-100, battlefield.tiles[battlefield.mapWidth * this.tileY + this.tileX]);
                   }
                 }
               } else {
-                battlefield.a(-122, false, this.field_I + 1, this.field_J, this.field_G, 3);
-                battlefield.a(-125, false, -1 + this.field_I, this.field_J, this.field_G, 3);
-                battlefield.a(-119, false, this.field_I, 1 + this.field_J, this.field_G, 3);
-                battlefield.a(-128, false, this.field_I, -1 + this.field_J, this.field_G, 3);
+                battlefield.a(-122, false, this.tileX + 1, this.tileY, this.playerId, 3);
+                battlefield.a(-125, false, -1 + this.tileX, this.tileY, this.playerId, 3);
+                battlefield.a(-119, false, this.tileX, 1 + this.tileY, this.playerId, 3);
+                battlefield.a(-128, false, this.tileX, -1 + this.tileY, this.playerId, 3);
               }
             }
           } else {
-            battlefield.c(this.field_J, this.field_I, this.field_G, (byte) -115);
+            battlefield.c(this.tileY, this.tileX, this.playerId, (byte) -115);
           }
           if (obfuscationGuard != -26661) {
             var5 = (GameplayController) null;
             this.a((NodeDeque) null, (byte) -124, (GameplayController) null);
           }
-          if (2 == this.field_F ||
-            3 == this.field_F) {
-            battlefield.e(14, this.field_I + 1, this.field_G, this.field_J);
-            battlefield.e(14, -1 + this.field_I, this.field_G, this.field_J);
-            battlefield.e(14, this.field_I, this.field_G, 1 + this.field_J);
-            battlefield.e(obfuscationGuard + 26675, this.field_I, this.field_G, -1 + this.field_J);
+          if (2 == this.effectType ||
+            3 == this.effectType) {
+            battlefield.e(14, this.tileX + 1, this.playerId, this.tileY);
+            battlefield.e(14, -1 + this.tileX, this.playerId, this.tileY);
+            battlefield.e(14, this.tileX, this.playerId, 1 + this.tileY);
+            battlefield.e(obfuscationGuard + 26675, this.tileX, this.playerId, -1 + this.tileY);
           }
           fl.a(battlefield, -111);
           return;
@@ -407,9 +407,9 @@ final class StateChangeEvent extends GameEvent {
         var3 = -2 / ((53 - obfuscationGuard) / 51);
         if (verbose) {
           System.out.println("State change event debug");
-          System.out.println("At " + this.field_I + "," + this.field_J);
-          System.out.println("Player" + this.field_G);
-          var4_int = this.field_F;
+          System.out.println("At " + this.tileX + "," + this.tileY);
+          System.out.println("Player" + this.playerId);
+          var4_int = this.effectType;
           if (var4_int != 0) {
             if (var4_int == 1) {
               System.out.println("Raise");
@@ -419,7 +419,7 @@ final class StateChangeEvent extends GameEvent {
               } else {
                 if (var4_int != 3) {
                   if (var4_int != 4) {
-                    var4 = "EventStateChange: pos: (" + this.field_I + "," + this.field_J + "), type: " + this.field_F + ", player: " + this.field_G;
+                    var4 = "EventStateChange: pos: (" + this.tileX + "," + this.tileY + "), type: " + this.effectType + ", player: " + this.playerId;
                     return var4;
                   }
                   System.out.println("Bury");
@@ -432,18 +432,18 @@ final class StateChangeEvent extends GameEvent {
             System.out.println("Capture");
           }
         }
-        var4Lifetime1 = "EventStateChange: pos: (" + this.field_I + "," + this.field_J + "), type: " + this.field_F + ", player: " + this.field_G;
+        var4Lifetime1 = "EventStateChange: pos: (" + this.tileX + "," + this.tileY + "), type: " + this.effectType + ", player: " + this.playerId;
         return var4Lifetime1;
     }
 
     StateChangeEvent(int param0, int param1, int param2, int param3) {
         int var5;
-        this.field_G = param3;
-        this.field_F = param0;
-        this.field_I = param1;
-        this.field_J = param2;
+        this.playerId = param3;
+        this.effectType = param0;
+        this.tileX = param1;
+        this.tileY = param2;
         this.field_m = -1;
-        var5 = this.field_F;
+        var5 = this.effectType;
         if (var5 == 0) {
           this.field_m = 3;
         } else {

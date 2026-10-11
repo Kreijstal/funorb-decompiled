@@ -49,7 +49,7 @@ final class uv extends hn {
     }
 
     final synchronized void a(hn param0) {
-        this.field_r.a(750, param0);
+        this.field_r.addFirst(750, param0);
     }
 
     private final void a(bf param0) {

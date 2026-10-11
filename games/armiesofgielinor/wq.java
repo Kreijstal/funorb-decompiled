@@ -77,10 +77,10 @@ final class wq {
     }
 
     final void a(int param0, wq param1) {
-        int var3_int = ik.a((long)param1.field_b, (long)this.field_b, -1700635440) - ik.a((long)param1.field_f, (long)this.field_f, -1700635440) - (ik.a((long)param1.field_d, (long)this.field_d, -1700635440) + ik.a((long)param1.field_e, (long)this.field_e, param0 - 1700635441));
-        int var4 = ik.a((long)param1.field_b, (long)this.field_f, -1700635440) + (ik.a((long)param1.field_f, (long)this.field_b, -1700635440) + ik.a((long)param1.field_d, (long)this.field_e, -1700635440)) - ik.a((long)param1.field_e, (long)this.field_d, -1700635440);
-        int var5 = ik.a((long)param1.field_b, (long)this.field_d, -1700635440) - ik.a((long)param1.field_f, (long)this.field_e, -1700635440) + (ik.a((long)param1.field_d, (long)this.field_b, -1700635440) + ik.a((long)param1.field_e, (long)this.field_f, -1700635440));
-        this.field_e = ik.a((long)param1.field_b, (long)this.field_e, param0 - 1700635441) + ik.a((long)param1.field_f, (long)this.field_d, -1700635440) + (-ik.a((long)param1.field_d, (long)this.field_f, -1700635440) + ik.a((long)param1.field_e, (long)this.field_b, -1700635440));
+        int var3_int = Spell.a((long)param1.field_b, (long)this.field_b, -1700635440) - Spell.a((long)param1.field_f, (long)this.field_f, -1700635440) - (Spell.a((long)param1.field_d, (long)this.field_d, -1700635440) + Spell.a((long)param1.field_e, (long)this.field_e, param0 - 1700635441));
+        int var4 = Spell.a((long)param1.field_b, (long)this.field_f, -1700635440) + (Spell.a((long)param1.field_f, (long)this.field_b, -1700635440) + Spell.a((long)param1.field_d, (long)this.field_e, -1700635440)) - Spell.a((long)param1.field_e, (long)this.field_d, -1700635440);
+        int var5 = Spell.a((long)param1.field_b, (long)this.field_d, -1700635440) - Spell.a((long)param1.field_f, (long)this.field_e, -1700635440) + (Spell.a((long)param1.field_d, (long)this.field_b, -1700635440) + Spell.a((long)param1.field_e, (long)this.field_f, -1700635440));
+        this.field_e = Spell.a((long)param1.field_b, (long)this.field_e, param0 - 1700635441) + Spell.a((long)param1.field_f, (long)this.field_d, -1700635440) + (-Spell.a((long)param1.field_d, (long)this.field_f, -1700635440) + Spell.a((long)param1.field_e, (long)this.field_b, -1700635440));
         if (param0 != 1) {
           return;
         }
@@ -98,7 +98,7 @@ final class wq {
         if (param0 <= 65) {
           return;
         }
-        int var2 = ik.a((long)this.field_b, (long)this.field_b, -1700635440) + ik.a((long)this.field_f, (long)this.field_f, -1700635440) + (ik.a((long)this.field_d, (long)this.field_d, -1700635440) + ik.a((long)this.field_e, (long)this.field_e, -1700635440));
+        int var2 = Spell.a((long)this.field_b, (long)this.field_b, -1700635440) + Spell.a((long)this.field_f, (long)this.field_f, -1700635440) + (Spell.a((long)this.field_d, (long)this.field_d, -1700635440) + Spell.a((long)this.field_e, (long)this.field_e, -1700635440));
         if (var2 < 65535) {
           var2 = so.a(var2, -129);
           this.field_b = ue.a((long)this.field_b, (long)var2, (byte) 97);
@@ -122,9 +122,9 @@ final class wq {
         int var6 = sr.c(param4, 125);
         int var7 = ld.a((byte) 67, param4);
         this.field_b = var7;
-        this.field_f = ik.a((long)param1, (long)var6, -1700635440);
-        this.field_d = ik.a((long)param3, (long)var6, param0 ^ -1700635393);
-        this.field_e = ik.a((long)param2, (long)var6, -1700635440);
+        this.field_f = Spell.a((long)param1, (long)var6, -1700635440);
+        this.field_d = Spell.a((long)param3, (long)var6, param0 ^ -1700635393);
+        this.field_e = Spell.a((long)param2, (long)var6, -1700635440);
         if (param0 == 47) {
           return;
         }

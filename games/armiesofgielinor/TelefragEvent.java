@@ -79,14 +79,14 @@ final class TelefragEvent extends GameEvent {
           var3.occupant = this.unit;
           this.unit.refreshTileEffects((byte) 82);
           if (this.unit.unitType == 74) {
-            this.unit.packedLowFlags = 2;
+            this.unit.attacksRemaining = 2;
           } else {
-            this.unit.packedLowFlags = 1;
+            this.unit.attacksRemaining = 1;
           }
           if (obfuscationGuard != -26661) {
             TelefragEvent.g(99);
           }
-          this.unit.packedFlag4 = true;
+          this.unit.movementSpent = true;
           fl.a(battlefield, -114);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "kn.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');

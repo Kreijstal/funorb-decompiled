@@ -476,7 +476,7 @@ final class nm extends hn {
         if (param0 != 95) {
           return;
         }
-        if (!(0 >= bd.field_r) ||
+        if (!(0 >= SpellAreaEffect.field_r) ||
           !(rk.field_D <= 0)) {
           if (dh.field_k != null) {
             dh.field_k.f(lk.field_a.field_S, 0);
@@ -502,7 +502,7 @@ final class nm extends hn {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new li(param2);
-          s.field_e.a((byte) -119, (IntrusiveNode) (var3));
+          s.field_e.addLast((byte) -119, (IntrusiveNode) (var3));
           DeathEvent.a(var3, param1, 25522);
           if (param0 == 0) {
             stackIn_4_0 = var3;

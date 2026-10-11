@@ -78,10 +78,10 @@ final class sh {
 
     final void a(int param0, int param1) {
         this.field_c = param1;
-        if (mn.field_k[this.field_c] == null) {
+        if (SpellAreaSelection.field_k[this.field_c] == null) {
           this.field_c = 24;
         }
-        this.field_e = (gd) (mn.field_k[this.field_c][param0]);
+        this.field_e = (gd) (SpellAreaSelection.field_k[this.field_c][param0]);
         this.field_q = nh.field_D[this.field_c];
     }
 

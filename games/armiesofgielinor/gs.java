@@ -543,7 +543,7 @@ final class gs implements kh {
                         if (var6 >= fk.field_b) {
                             /* Inlined CFG state: 40. */
                             {
-                                vj.field_b.a((byte) -119, (IntrusiveNode) (var5));
+                                vj.field_b.addLast((byte) -119, (IntrusiveNode) (var5));
                                 mg.field_f = -1;
                                 statePc = 21;
                                 continue scanLoop1;

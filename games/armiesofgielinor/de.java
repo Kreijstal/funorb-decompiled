@@ -186,7 +186,7 @@ final class de {
                       if (param2.arePlayersAllied(var11.ownerPlayer, -16985, param5)) {
                         return null;
                       }
-                      stackIn_315_0 = ra.field_k;
+                      stackIn_315_0 = AreaSpell.field_k;
                       return stackIn_315_0;
                     }
                     if (var8Lifetime1 == 7) {
@@ -241,7 +241,7 @@ final class de {
                   if (var8Lifetime2 != 118) {
                     if (var8Lifetime2 == 116) {
                       if (var7.unitType != 58) {
-                        stackIn_110_0 = al.field_i;
+                        stackIn_110_0 = GlobalSpell.field_i;
                         return stackIn_110_0;
                       }
                       if (var7.packedFlag32) {
@@ -254,17 +254,17 @@ final class de {
                           if (var8Lifetime2 == 46) {
                             if (34 == var7.unitType &&
                               var7.packedFlag8 &&
-                              var7.packedLowFlags > 0) {
+                              var7.attacksRemaining > 0) {
                               stackIn_132_0 = eq.field_g;
                               return stackIn_132_0;
                             }
-                            if (!var7.packedFlag4) {
+                            if (!var7.movementSpent) {
                               stackIn_130_0 = eq.field_g;
                               return stackIn_130_0;
                             }
                           }
                         } else {
-                          if (var7.packedFlag64) {
+                          if (var7.meleeLifeSteal) {
                             stackIn_123_0 = fo.a(4800, ti.field_b, new String[]{fq.field_f[param4]});
                             return stackIn_123_0;
                           }
@@ -282,7 +282,7 @@ final class de {
                     }
                   } else {
                     if (var7.unitType != 59) {
-                      stackIn_103_0 = TrinketUseEvent.field_A;
+                      stackIn_103_0 = SpellCastEvent.field_A;
                       return stackIn_103_0;
                     }
                     if (var7.packedFlag32) {
@@ -306,7 +306,7 @@ final class de {
                   stackIn_138_0 = ji.field_a;
                   return stackIn_138_0;
                 }
-                if (var7.packedFlag4) {
+                if (var7.movementSpent) {
                   stackIn_141_0 = vg.field_o;
                   return stackIn_141_0;
                 }
@@ -327,8 +327,8 @@ final class de {
                   stackIn_158_0 = lb.field_b;
                   return stackIn_158_0;
                 }
-                if ((!var7.packedFlag4 &&
-                  8 != var7.field_P) &&
+                if ((!var7.movementSpent &&
+                  8 != var7.statusEffectType) &&
                   (decompiledFrameRemainder1 = (var7.unitType == 39))) {
                   stackIn_167_0 = oi.field_b;
                   return stackIn_167_0;
@@ -339,17 +339,17 @@ final class de {
                 }
               }
               if (uc.spellDefinitions[param4][4] == 1) {
-                if (var7.c((byte) 81) == uc.spellDefinitions[param4][6] &&
-                  var7.j(20640) == uc.spellDefinitions[param4][5]) {
+                if (var7.getEquipmentId((byte) 81) == uc.spellDefinitions[param4][6] &&
+                  var7.getEquipmentCategory(20640) == uc.spellDefinitions[param4][5]) {
                   stackIn_172_0 = fo.a(4800, ti.field_b, new String[]{fq.field_f[param4]});
                   return stackIn_172_0;
                 }
                 if (uc.spellDefinitions[param4][5] == 0) {
-                  if (4 == var7.g(0)) {
+                  if (4 == var7.getUnitCategory(0)) {
                     stackIn_177_0 = ah.field_c;
                     return stackIn_177_0;
                   }
-                  if (var7.g(0) == 3) {
+                  if (var7.getUnitCategory(0) == 3) {
                     stackIn_180_0 = qa.field_E;
                     return stackIn_180_0;
                   }
@@ -365,7 +365,7 @@ final class de {
                     stackIn_190_0 = fc.field_c;
                     return stackIn_190_0;
                   }
-                  if (2 != var7.g(0) &&
+                  if (2 != var7.getUnitCategory(0) &&
                     var7.unitType != 18 &&
                     var7.unitType != 28) {
                     stackIn_195_0 = wn.field_bb;
@@ -378,7 +378,7 @@ final class de {
                     stackIn_200_0 = fc.field_c;
                     return stackIn_200_0;
                   }
-                  if (3 != var7.g(0)) {
+                  if (3 != var7.getUnitCategory(0)) {
                     stackIn_204_0 = hv.field_O;
                     return stackIn_204_0;
                   }
@@ -389,7 +389,7 @@ final class de {
                     stackIn_209_0 = fc.field_c;
                     return stackIn_209_0;
                   }
-                  if (var7.g(0) != 4) {
+                  if (var7.getUnitCategory(0) != 4) {
                     stackIn_212_0 = bc.field_h;
                     return stackIn_212_0;
                   }
@@ -409,17 +409,17 @@ final class de {
                 }
               }
               if (uc.spellDefinitions[param4][4] == 0 &&
-                uc.spellDefinitions[param4][6] == var7.field_o &&
-                var7.field_P == uc.spellDefinitions[param4][5]) {
+                uc.spellDefinitions[param4][6] == var7.statusEffectValue &&
+                var7.statusEffectType == uc.spellDefinitions[param4][5]) {
                 stackIn_230_0 = fo.a(4800, ti.field_b, new String[]{fq.field_f[param4]});
                 return stackIn_230_0;
               }
               if (uc.spellDefinitions[param4][4] == 3) {
-                if (uc.spellDefinitions[param4][5] == var7.field_ab) {
+                if (uc.spellDefinitions[param4][5] == var7.accessoryType) {
                   stackIn_236_0 = fo.a(4800, ti.field_b, new String[]{fq.field_f[param4]});
                   return stackIn_236_0;
                 }
-                if (3 == uc.spellDefinitions[param4][5] && (4 == var7.g(0) ||
+                if (3 == uc.spellDefinitions[param4][5] && (4 == var7.getUnitCategory(0) ||
                   var7.r((byte) 115) ||
                   var7.o((byte) 98) ||
                   var7.unitType == 39 ||
@@ -427,7 +427,7 @@ final class de {
                   stackIn_245_0 = sp.field_d;
                   return stackIn_245_0;
                 }
-                if (uc.spellDefinitions[param4][5] == 4 && (var7.g(0) == 4 ||
+                if (uc.spellDefinitions[param4][5] == 4 && (var7.getUnitCategory(0) == 4 ||
                   var7.o((byte) 98) ||
                   var7.unitType == 39 ||
                   var7.unitType == 51)) {
@@ -436,7 +436,7 @@ final class de {
                 }
                 boolean decompiledFrameRemainder0 = true;
                 if (2 == uc.spellDefinitions[param4][5]) {
-                  if (var7.g(0) != 4 &&
+                  if (var7.getUnitCategory(0) != 4 &&
                     !var7.j((byte) -83) &&
                     bw.unitDefinitions[var7.unitType][7] <= 1) {
                     if (var7.unitType == 34 &&

@@ -80,7 +80,7 @@ final class s {
             return stackIn_30_0;
           }
           if (param2 == 11) {
-            stackIn_33_0 = fo.a(4800, ik.field_a, new String[]{param1});
+            stackIn_33_0 = fo.a(4800, Spell.field_a, new String[]{param1});
             return stackIn_33_0;
           }
           if (param2 == 12) {

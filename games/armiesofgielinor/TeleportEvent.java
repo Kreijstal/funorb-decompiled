@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TeleportEvent extends GameEvent {
-    private boolean field_C;
-    int field_B;
+    private boolean applied;
+    int sourceY;
     private boolean field_D;
-    private int field_y;
-    int field_A;
-    private int field_z;
+    private int destinationY;
+    int sourceX;
+    private int destinationX;
 
     final String describeEvent(byte obfuscationGuard, boolean verbose) {
         int var4 = 0;
@@ -16,14 +16,14 @@ final class TeleportEvent extends GameEvent {
         int var4Lifetime1;
         if (!verbose) {
           var4 = -18 / ((obfuscationGuard - 53) / 51);
-          var3 = "EventTeleport: pos: (" + this.field_A + "," + this.field_B + ")" + ",d: (" + this.field_z + "," + this.field_y + ")";
+          var3 = "EventTeleport: pos: (" + this.sourceX + "," + this.sourceY + ")" + ",d: (" + this.destinationX + "," + this.destinationY + ")";
           return var3;
         }
         System.out.println("Teleport event debug");
-        System.out.println("Unit at " + this.field_A + "," + this.field_B);
-        System.out.println("Jumped to " + (this.field_z + this.field_A) + "," + (this.field_y + this.field_B));
+        System.out.println("Unit at " + this.sourceX + "," + this.sourceY);
+        System.out.println("Jumped to " + (this.destinationX + this.sourceX) + "," + (this.destinationY + this.sourceY));
         var4Lifetime1 = -18 / ((obfuscationGuard - 53) / 51);
-        var3Lifetime1 = "EventTeleport: pos: (" + this.field_A + "," + this.field_B + ")" + ",d: (" + this.field_z + "," + this.field_y + ")";
+        var3Lifetime1 = "EventTeleport: pos: (" + this.sourceX + "," + this.sourceY + ")" + ",d: (" + this.destinationX + "," + this.destinationY + ")";
         return var3Lifetime1;
     }
 
@@ -45,7 +45,7 @@ final class TeleportEvent extends GameEvent {
             TeleportEvent.a(-83, -34, -127);
           }
           if (!this.field_D) {
-            var4_int = var4_int != 0 | this.a(this.field_B + this.field_y, 15, param2, param0, this.field_A + this.field_z) ? 1 : 0;
+            var4_int = var4_int != 0 | this.a(this.sourceY + this.destinationY, 15, param2, param0, this.sourceX + this.destinationX) ? 1 : 0;
           }
           stackIn_8_0 = var4_int;
           return stackIn_8_0 != 0;
@@ -78,26 +78,26 @@ final class TeleportEvent extends GameEvent {
         RuntimeException var3_ref = null;
         MapTile var4 = null;
         try {
-          if (this.field_C) {
+          if (this.applied) {
             return;
           }
-          this.field_C = true;
-          var4 = battlefield.tiles[this.field_A + this.field_B * battlefield.mapWidth];
+          this.applied = true;
+          var4 = battlefield.tiles[this.sourceX + this.sourceY * battlefield.mapWidth];
           var3 = var4;
           if (this.unit.packedFlag256) {
             this.unit.packedFlag256 = false;
             var4.occupant.packedFlag256 = false;
-            battlefield.unitsByPlayer[this.unit.ownerPlayer].a((byte) -119, (IntrusiveNode) (this.unit));
+            battlefield.unitsByPlayer[this.unit.ownerPlayer].addLast((byte) -119, (IntrusiveNode) (this.unit));
           } else {
             var3.occupant = null;
             var3.field_m = var4.e(10);
             if (this.unit.p(-43)) {
-              battlefield.a(this.field_B, this.field_A, obfuscationGuard + 26661, 3);
+              battlefield.a(this.sourceY, this.sourceX, obfuscationGuard + 26661, 3);
             }
           }
-          this.unit.packedFlag4 = true;
-          this.unit.tileX = this.unit.tileX + this.field_z;
-          this.unit.tileY = this.unit.tileY + this.field_y;
+          this.unit.movementSpent = true;
+          this.unit.tileX = this.unit.tileX + this.destinationX;
+          this.unit.tileY = this.unit.tileY + this.destinationY;
           if (obfuscationGuard != -26661) {
             return;
           }
@@ -169,22 +169,22 @@ final class TeleportEvent extends GameEvent {
     }
 
     TeleportEvent(int param0, int param1, int param2, boolean param3) {
-        this.field_z = param2 >> 8;
-        this.field_y = 255 & param2;
-        this.field_B = param1;
-        this.field_A = param0;
-        this.field_z = -128 + (this.field_z ^ 128);
-        this.field_y = (128 ^ this.field_y) - 128;
+        this.destinationX = param2 >> 8;
+        this.destinationY = 255 & param2;
+        this.sourceY = param1;
+        this.sourceX = param0;
+        this.destinationX = -128 + (this.destinationX ^ 128);
+        this.destinationY = (128 ^ this.destinationY) - 128;
         this.field_D = param3 ? true : false;
         this.field_m = this.field_D ? 21 : 26;
     }
 
     TeleportEvent(int param0, int param1, int param2, int param3, boolean param4) {
-        this.field_A = param0;
-        this.field_B = param1;
-        this.field_z = param2;
+        this.sourceX = param0;
+        this.sourceY = param1;
+        this.destinationX = param2;
         this.field_D = param4 ? true : false;
-        this.field_y = param3;
+        this.destinationY = param3;
         this.field_m = this.field_D ? 21 : 26;
     }
 

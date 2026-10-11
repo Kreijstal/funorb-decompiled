@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ss extends bd {
+final class ss extends SpellAreaEffect {
     static NodeDeque field_t;
     static String[] field_s;
 
@@ -15,13 +15,13 @@ final class ss extends bd {
         int var1 = -80 / ((48 - param0) / 47);
     }
 
-    final void a(int param0, Battlefield param1) {
+    final void applyEffect(int obfuscationGuard, Battlefield battlefield) {
         try {
-          if (param0 != 64) {
+          if (obfuscationGuard != 64) {
             field_s = (String[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ss.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ss.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 

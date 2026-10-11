@@ -1391,31 +1391,31 @@ final class em {
                 }
                 var2 = fk.a(false, "goddescriptions,0");
                 if (var2 != null) {
-                  al.field_l[0] = uu.a(var2, (byte) 22);
+                  GlobalSpell.field_l[0] = uu.a(var2, (byte) 22);
                 }
                 var2 = fk.a(false, "goddescriptions,1");
                 if (var2 != null) {
-                  al.field_l[1] = uu.a(var2, (byte) 60);
+                  GlobalSpell.field_l[1] = uu.a(var2, (byte) 60);
                 }
                 var2 = fk.a(false, "goddescriptions,2");
                 if (null != var2) {
-                  al.field_l[2] = uu.a(var2, (byte) 6);
+                  GlobalSpell.field_l[2] = uu.a(var2, (byte) 6);
                 }
                 var2 = fk.a(false, "goddescriptions,3");
                 if (var2 != null) {
-                  al.field_l[3] = uu.a(var2, (byte) -125);
+                  GlobalSpell.field_l[3] = uu.a(var2, (byte) -125);
                 }
                 var2 = fk.a(false, "goddescriptions,4");
                 if (var2 != null) {
-                  al.field_l[4] = uu.a(var2, (byte) -120);
+                  GlobalSpell.field_l[4] = uu.a(var2, (byte) -120);
                 }
                 var2 = fk.a(false, "goddescriptions,5");
                 if (var2 != null) {
-                  al.field_l[5] = uu.a(var2, (byte) -121);
+                  GlobalSpell.field_l[5] = uu.a(var2, (byte) -121);
                 }
                 var2 = fk.a(false, "goddescriptions,6");
                 if (var2 != null) {
-                  al.field_l[6] = uu.a(var2, (byte) 41);
+                  GlobalSpell.field_l[6] = uu.a(var2, (byte) 41);
                 }
                 var2 = fk.a(false, "ACTION_VINE");
                 if (null != var2) {
@@ -1913,7 +1913,7 @@ final class em {
                 }
                 var2 = fk.a(false, "UN_OWNABLE");
                 if (null != var2) {
-                  al.field_k = uu.a(var2, (byte) 104);
+                  GlobalSpell.field_k = uu.a(var2, (byte) 104);
                 }
                 var2 = fk.a(false, "OWNED_BY");
                 if (null != var2) {
@@ -1921,7 +1921,7 @@ final class em {
                 }
                 var2 = fk.a(false, "OWNED_BY_YOU");
                 if (null != var2) {
-                  al.field_e = uu.a(var2, (byte) -93);
+                  GlobalSpell.field_e = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "MANA_SCORE");
                 if (null != var2) {
@@ -3227,7 +3227,7 @@ final class em {
                 }
                 var2 = fk.a(false, "LABEL_BATTLE_VIEWER");
                 if (null != var2) {
-                  mn.field_r = uu.a(var2, (byte) -108);
+                  SpellAreaSelection.field_r = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "LABEL_FOG_SELECT");
                 if (null != var2) {
@@ -3573,7 +3573,7 @@ final class em {
                 }
                 var2 = fk.a(false, "CLOSE");
                 if (var2 != null) {
-                  al.field_m = uu.a(var2, (byte) 73);
+                  GlobalSpell.field_m = uu.a(var2, (byte) 73);
                 }
                 var2 = fk.a(false, "CONTINUE");
                 if (null != var2) {
@@ -4197,545 +4197,545 @@ final class em {
                 }
                 var2 = fk.a(false, "trinketdescriptions,0");
                 if (var2 != null) {
-                  mn.field_l[0] = uu.a(var2, (byte) -125);
+                  SpellAreaSelection.field_l[0] = uu.a(var2, (byte) -125);
                 }
                 var2 = fk.a(false, "trinketdescriptions,1");
                 if (var2 != null) {
-                  mn.field_l[1] = uu.a(var2, (byte) 46);
+                  SpellAreaSelection.field_l[1] = uu.a(var2, (byte) 46);
                 }
                 var2 = fk.a(false, "trinketdescriptions,2");
                 if (var2 != null) {
-                  mn.field_l[2] = uu.a(var2, (byte) 45);
+                  SpellAreaSelection.field_l[2] = uu.a(var2, (byte) 45);
                 }
                 var2 = fk.a(false, "trinketdescriptions,3");
                 if (null != var2) {
-                  mn.field_l[3] = uu.a(var2, (byte) -110);
+                  SpellAreaSelection.field_l[3] = uu.a(var2, (byte) -110);
                 }
                 var2 = fk.a(false, "trinketdescriptions,4");
                 if (var2 != null) {
-                  mn.field_l[4] = uu.a(var2, (byte) 12);
+                  SpellAreaSelection.field_l[4] = uu.a(var2, (byte) 12);
                 }
                 var2 = fk.a(false, "trinketdescriptions,5");
                 if (null != var2) {
-                  mn.field_l[5] = uu.a(var2, (byte) -118);
+                  SpellAreaSelection.field_l[5] = uu.a(var2, (byte) -118);
                 }
                 var2 = fk.a(false, "trinketdescriptions,6");
                 if (null != var2) {
-                  mn.field_l[6] = uu.a(var2, (byte) 80);
+                  SpellAreaSelection.field_l[6] = uu.a(var2, (byte) 80);
                 }
                 var2 = fk.a(false, "trinketdescriptions,7");
                 if (null != var2) {
-                  mn.field_l[7] = uu.a(var2, (byte) 27);
+                  SpellAreaSelection.field_l[7] = uu.a(var2, (byte) 27);
                 }
                 var2 = fk.a(false, "trinketdescriptions,8");
                 if (var2 != null) {
-                  mn.field_l[8] = uu.a(var2, (byte) -111);
+                  SpellAreaSelection.field_l[8] = uu.a(var2, (byte) -111);
                 }
                 var2 = fk.a(false, "trinketdescriptions,9");
                 if (var2 != null) {
-                  mn.field_l[9] = uu.a(var2, (byte) -112);
+                  SpellAreaSelection.field_l[9] = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "trinketdescriptions,10");
                 if (null != var2) {
-                  mn.field_l[10] = uu.a(var2, (byte) -128);
+                  SpellAreaSelection.field_l[10] = uu.a(var2, (byte) -128);
                 }
                 var2 = fk.a(false, "trinketdescriptions,11");
                 if (var2 != null) {
-                  mn.field_l[11] = uu.a(var2, (byte) 116);
+                  SpellAreaSelection.field_l[11] = uu.a(var2, (byte) 116);
                 }
                 var2 = fk.a(false, "trinketdescriptions,12");
                 if (var2 != null) {
-                  mn.field_l[12] = uu.a(var2, (byte) 36);
+                  SpellAreaSelection.field_l[12] = uu.a(var2, (byte) 36);
                 }
                 var2 = fk.a(false, "trinketdescriptions,13");
                 if (var2 != null) {
-                  mn.field_l[13] = uu.a(var2, (byte) -104);
+                  SpellAreaSelection.field_l[13] = uu.a(var2, (byte) -104);
                 }
                 var2 = fk.a(false, "trinketdescriptions,14");
                 if (null != var2) {
-                  mn.field_l[14] = uu.a(var2, (byte) 35);
+                  SpellAreaSelection.field_l[14] = uu.a(var2, (byte) 35);
                 }
                 var2 = fk.a(false, "trinketdescriptions,15");
                 if (var2 != null) {
-                  mn.field_l[15] = uu.a(var2, (byte) 28);
+                  SpellAreaSelection.field_l[15] = uu.a(var2, (byte) 28);
                 }
                 var2 = fk.a(false, "trinketdescriptions,16");
                 if (null != var2) {
-                  mn.field_l[16] = uu.a(var2, (byte) -124);
+                  SpellAreaSelection.field_l[16] = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "trinketdescriptions,17");
                 if (null != var2) {
-                  mn.field_l[17] = uu.a(var2, (byte) 36);
+                  SpellAreaSelection.field_l[17] = uu.a(var2, (byte) 36);
                 }
                 var2 = fk.a(false, "trinketdescriptions,18");
                 if (var2 != null) {
-                  mn.field_l[18] = uu.a(var2, (byte) 112);
+                  SpellAreaSelection.field_l[18] = uu.a(var2, (byte) 112);
                 }
                 var2 = fk.a(false, "trinketdescriptions,19");
                 if (var2 != null) {
-                  mn.field_l[19] = uu.a(var2, (byte) -112);
+                  SpellAreaSelection.field_l[19] = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "trinketdescriptions,20");
                 if (null != var2) {
-                  mn.field_l[20] = uu.a(var2, (byte) -125);
+                  SpellAreaSelection.field_l[20] = uu.a(var2, (byte) -125);
                 }
                 var2 = fk.a(false, "trinketdescriptions,21");
                 if (null != var2) {
-                  mn.field_l[21] = uu.a(var2, (byte) -108);
+                  SpellAreaSelection.field_l[21] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "trinketdescriptions,22");
                 if (null != var2) {
-                  mn.field_l[22] = uu.a(var2, (byte) -96);
+                  SpellAreaSelection.field_l[22] = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "trinketdescriptions,23");
                 if (null != var2) {
-                  mn.field_l[23] = uu.a(var2, (byte) 98);
+                  SpellAreaSelection.field_l[23] = uu.a(var2, (byte) 98);
                 }
                 var2 = fk.a(false, "trinketdescriptions,24");
                 if (null != var2) {
-                  mn.field_l[24] = uu.a(var2, (byte) 45);
+                  SpellAreaSelection.field_l[24] = uu.a(var2, (byte) 45);
                 }
                 var2 = fk.a(false, "trinketdescriptions,25");
                 if (null != var2) {
-                  mn.field_l[25] = uu.a(var2, (byte) -123);
+                  SpellAreaSelection.field_l[25] = uu.a(var2, (byte) -123);
                 }
                 var2 = fk.a(false, "trinketdescriptions,26");
                 if (var2 != null) {
-                  mn.field_l[26] = uu.a(var2, (byte) -126);
+                  SpellAreaSelection.field_l[26] = uu.a(var2, (byte) -126);
                 }
             }
             void runChunk5() throws java.lang.RuntimeException {
                 var2 = fk.a(false, "trinketdescriptions,27");
                 if (null != var2) {
-                  mn.field_l[27] = uu.a(var2, (byte) 82);
+                  SpellAreaSelection.field_l[27] = uu.a(var2, (byte) 82);
                 }
                 var2 = fk.a(false, "trinketdescriptions,28");
                 if (var2 != null) {
-                  mn.field_l[28] = uu.a(var2, (byte) -93);
+                  SpellAreaSelection.field_l[28] = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "trinketdescriptions,29");
                 if (null != var2) {
-                  mn.field_l[29] = uu.a(var2, (byte) -101);
+                  SpellAreaSelection.field_l[29] = uu.a(var2, (byte) -101);
                 }
                 var2 = fk.a(false, "trinketdescriptions,30");
                 if (null != var2) {
-                  mn.field_l[30] = uu.a(var2, (byte) 65);
+                  SpellAreaSelection.field_l[30] = uu.a(var2, (byte) 65);
                 }
                 var2 = fk.a(false, "trinketdescriptions,31");
                 if (null != var2) {
-                  mn.field_l[31] = uu.a(var2, (byte) -107);
+                  SpellAreaSelection.field_l[31] = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "trinketdescriptions,32");
                 if (null != var2) {
-                  mn.field_l[32] = uu.a(var2, (byte) 77);
+                  SpellAreaSelection.field_l[32] = uu.a(var2, (byte) 77);
                 }
                 var2 = fk.a(false, "trinketdescriptions,33");
                 if (null != var2) {
-                  mn.field_l[33] = uu.a(var2, (byte) -106);
+                  SpellAreaSelection.field_l[33] = uu.a(var2, (byte) -106);
                 }
                 var2 = fk.a(false, "trinketdescriptions,34");
                 if (null != var2) {
-                  mn.field_l[34] = uu.a(var2, (byte) -123);
+                  SpellAreaSelection.field_l[34] = uu.a(var2, (byte) -123);
                 }
                 var2 = fk.a(false, "trinketdescriptions,35");
                 if (null != var2) {
-                  mn.field_l[35] = uu.a(var2, (byte) -115);
+                  SpellAreaSelection.field_l[35] = uu.a(var2, (byte) -115);
                 }
                 var2 = fk.a(false, "trinketdescriptions,36");
                 if (var2 != null) {
-                  mn.field_l[36] = uu.a(var2, (byte) -93);
+                  SpellAreaSelection.field_l[36] = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "trinketdescriptions,37");
                 if (var2 != null) {
-                  mn.field_l[37] = uu.a(var2, (byte) -121);
+                  SpellAreaSelection.field_l[37] = uu.a(var2, (byte) -121);
                 }
                 var2 = fk.a(false, "trinketdescriptions,38");
                 if (null != var2) {
-                  mn.field_l[38] = uu.a(var2, (byte) -120);
+                  SpellAreaSelection.field_l[38] = uu.a(var2, (byte) -120);
                 }
                 var2 = fk.a(false, "trinketdescriptions,39");
                 if (null != var2) {
-                  mn.field_l[39] = uu.a(var2, (byte) 19);
+                  SpellAreaSelection.field_l[39] = uu.a(var2, (byte) 19);
                 }
                 var2 = fk.a(false, "trinketdescriptions,40");
                 if (null != var2) {
-                  mn.field_l[40] = uu.a(var2, (byte) 46);
+                  SpellAreaSelection.field_l[40] = uu.a(var2, (byte) 46);
                 }
                 var2 = fk.a(false, "trinketdescriptions,41");
                 if (null != var2) {
-                  mn.field_l[41] = uu.a(var2, (byte) -110);
+                  SpellAreaSelection.field_l[41] = uu.a(var2, (byte) -110);
                 }
                 var2 = fk.a(false, "trinketdescriptions,42");
                 if (null != var2) {
-                  mn.field_l[42] = uu.a(var2, (byte) -107);
+                  SpellAreaSelection.field_l[42] = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "trinketdescriptions,43");
                 if (null != var2) {
-                  mn.field_l[43] = uu.a(var2, (byte) 31);
+                  SpellAreaSelection.field_l[43] = uu.a(var2, (byte) 31);
                 }
                 var2 = fk.a(false, "trinketdescriptions,44");
                 if (var2 != null) {
-                  mn.field_l[44] = uu.a(var2, (byte) -110);
+                  SpellAreaSelection.field_l[44] = uu.a(var2, (byte) -110);
                 }
                 var2 = fk.a(false, "trinketdescriptions,45");
                 if (var2 != null) {
-                  mn.field_l[45] = uu.a(var2, (byte) 4);
+                  SpellAreaSelection.field_l[45] = uu.a(var2, (byte) 4);
                 }
                 var2 = fk.a(false, "trinketdescriptions,46");
                 if (null != var2) {
-                  mn.field_l[46] = uu.a(var2, (byte) -114);
+                  SpellAreaSelection.field_l[46] = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "trinketdescriptions,47");
                 if (null != var2) {
-                  mn.field_l[47] = uu.a(var2, (byte) 40);
+                  SpellAreaSelection.field_l[47] = uu.a(var2, (byte) 40);
                 }
                 var2 = fk.a(false, "trinketdescriptions,48");
                 if (null != var2) {
-                  mn.field_l[48] = uu.a(var2, (byte) -103);
+                  SpellAreaSelection.field_l[48] = uu.a(var2, (byte) -103);
                 }
                 var2 = fk.a(false, "trinketdescriptions,49");
                 if (null != var2) {
-                  mn.field_l[49] = uu.a(var2, (byte) -92);
+                  SpellAreaSelection.field_l[49] = uu.a(var2, (byte) -92);
                 }
                 var2 = fk.a(false, "trinketdescriptions,50");
                 if (null != var2) {
-                  mn.field_l[50] = uu.a(var2, (byte) 124);
+                  SpellAreaSelection.field_l[50] = uu.a(var2, (byte) 124);
                 }
                 var2 = fk.a(false, "trinketdescriptions,51");
                 if (var2 != null) {
-                  mn.field_l[51] = uu.a(var2, (byte) -95);
+                  SpellAreaSelection.field_l[51] = uu.a(var2, (byte) -95);
                 }
                 var2 = fk.a(false, "trinketdescriptions,52");
                 if (null != var2) {
-                  mn.field_l[52] = uu.a(var2, (byte) -115);
+                  SpellAreaSelection.field_l[52] = uu.a(var2, (byte) -115);
                 }
                 var2 = fk.a(false, "trinketdescriptions,53");
                 if (var2 != null) {
-                  mn.field_l[53] = uu.a(var2, (byte) 97);
+                  SpellAreaSelection.field_l[53] = uu.a(var2, (byte) 97);
                 }
                 var2 = fk.a(false, "trinketdescriptions,54");
                 if (null != var2) {
-                  mn.field_l[54] = uu.a(var2, (byte) -117);
+                  SpellAreaSelection.field_l[54] = uu.a(var2, (byte) -117);
                 }
                 var2 = fk.a(false, "trinketdescriptions,55");
                 if (var2 != null) {
-                  mn.field_l[55] = uu.a(var2, (byte) 10);
+                  SpellAreaSelection.field_l[55] = uu.a(var2, (byte) 10);
                 }
                 var2 = fk.a(false, "trinketdescriptions,56");
                 if (null != var2) {
-                  mn.field_l[56] = uu.a(var2, (byte) -121);
+                  SpellAreaSelection.field_l[56] = uu.a(var2, (byte) -121);
                 }
                 var2 = fk.a(false, "trinketdescriptions,57");
                 if (null != var2) {
-                  mn.field_l[57] = uu.a(var2, (byte) -96);
+                  SpellAreaSelection.field_l[57] = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "trinketdescriptions,58");
                 if (null != var2) {
-                  mn.field_l[58] = uu.a(var2, (byte) -112);
+                  SpellAreaSelection.field_l[58] = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "trinketdescriptions,59");
                 if (var2 != null) {
-                  mn.field_l[59] = uu.a(var2, (byte) -127);
+                  SpellAreaSelection.field_l[59] = uu.a(var2, (byte) -127);
                 }
                 var2 = fk.a(false, "trinketdescriptions,60");
                 if (null != var2) {
-                  mn.field_l[60] = uu.a(var2, (byte) 36);
+                  SpellAreaSelection.field_l[60] = uu.a(var2, (byte) 36);
                 }
                 var2 = fk.a(false, "trinketdescriptions,61");
                 if (null != var2) {
-                  mn.field_l[61] = uu.a(var2, (byte) 42);
+                  SpellAreaSelection.field_l[61] = uu.a(var2, (byte) 42);
                 }
                 var2 = fk.a(false, "trinketdescriptions,62");
                 if (null != var2) {
-                  mn.field_l[62] = uu.a(var2, (byte) 47);
+                  SpellAreaSelection.field_l[62] = uu.a(var2, (byte) 47);
                 }
                 var2 = fk.a(false, "trinketdescriptions,63");
                 if (var2 != null) {
-                  mn.field_l[63] = uu.a(var2, (byte) -107);
+                  SpellAreaSelection.field_l[63] = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "trinketdescriptions,64");
                 if (null != var2) {
-                  mn.field_l[64] = uu.a(var2, (byte) 119);
+                  SpellAreaSelection.field_l[64] = uu.a(var2, (byte) 119);
                 }
                 var2 = fk.a(false, "trinketdescriptions,65");
                 if (var2 != null) {
-                  mn.field_l[65] = uu.a(var2, (byte) 85);
+                  SpellAreaSelection.field_l[65] = uu.a(var2, (byte) 85);
                 }
                 var2 = fk.a(false, "trinketdescriptions,66");
                 if (var2 != null) {
-                  mn.field_l[66] = uu.a(var2, (byte) 34);
+                  SpellAreaSelection.field_l[66] = uu.a(var2, (byte) 34);
                 }
                 var2 = fk.a(false, "trinketdescriptions,67");
                 if (null != var2) {
-                  mn.field_l[67] = uu.a(var2, (byte) -92);
+                  SpellAreaSelection.field_l[67] = uu.a(var2, (byte) -92);
                 }
                 var2 = fk.a(false, "trinketdescriptions,68");
                 if (null != var2) {
-                  mn.field_l[68] = uu.a(var2, (byte) 116);
+                  SpellAreaSelection.field_l[68] = uu.a(var2, (byte) 116);
                 }
                 var2 = fk.a(false, "trinketdescriptions,69");
                 if (var2 != null) {
-                  mn.field_l[69] = uu.a(var2, (byte) -111);
+                  SpellAreaSelection.field_l[69] = uu.a(var2, (byte) -111);
                 }
                 var2 = fk.a(false, "trinketdescriptions,70");
                 if (var2 != null) {
-                  mn.field_l[70] = uu.a(var2, (byte) -104);
+                  SpellAreaSelection.field_l[70] = uu.a(var2, (byte) -104);
                 }
                 var2 = fk.a(false, "trinketdescriptions,71");
                 if (null != var2) {
-                  mn.field_l[71] = uu.a(var2, (byte) 73);
+                  SpellAreaSelection.field_l[71] = uu.a(var2, (byte) 73);
                 }
                 var2 = fk.a(false, "trinketdescriptions,72");
                 if (var2 != null) {
-                  mn.field_l[72] = uu.a(var2, (byte) 13);
+                  SpellAreaSelection.field_l[72] = uu.a(var2, (byte) 13);
                 }
                 var2 = fk.a(false, "trinketdescriptions,73");
                 if (var2 != null) {
-                  mn.field_l[73] = uu.a(var2, (byte) -104);
+                  SpellAreaSelection.field_l[73] = uu.a(var2, (byte) -104);
                 }
                 var2 = fk.a(false, "trinketdescriptions,74");
                 if (null != var2) {
-                  mn.field_l[74] = uu.a(var2, (byte) 59);
+                  SpellAreaSelection.field_l[74] = uu.a(var2, (byte) 59);
                 }
                 var2 = fk.a(false, "trinketdescriptions,75");
                 if (null != var2) {
-                  mn.field_l[75] = uu.a(var2, (byte) -122);
+                  SpellAreaSelection.field_l[75] = uu.a(var2, (byte) -122);
                 }
                 var2 = fk.a(false, "trinketdescriptions,76");
                 if (var2 != null) {
-                  mn.field_l[76] = uu.a(var2, (byte) -126);
+                  SpellAreaSelection.field_l[76] = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "trinketdescriptions,77");
                 if (null != var2) {
-                  mn.field_l[77] = uu.a(var2, (byte) -96);
+                  SpellAreaSelection.field_l[77] = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "trinketdescriptions,78");
                 if (var2 != null) {
-                  mn.field_l[78] = uu.a(var2, (byte) 14);
+                  SpellAreaSelection.field_l[78] = uu.a(var2, (byte) 14);
                 }
                 var2 = fk.a(false, "trinketdescriptions,79");
                 if (null != var2) {
-                  mn.field_l[79] = uu.a(var2, (byte) 30);
+                  SpellAreaSelection.field_l[79] = uu.a(var2, (byte) 30);
                 }
                 var2 = fk.a(false, "trinketdescriptions,80");
                 if (null != var2) {
-                  mn.field_l[80] = uu.a(var2, (byte) -94);
+                  SpellAreaSelection.field_l[80] = uu.a(var2, (byte) -94);
                 }
                 var2 = fk.a(false, "trinketdescriptions,81");
                 if (var2 != null) {
-                  mn.field_l[81] = uu.a(var2, (byte) 57);
+                  SpellAreaSelection.field_l[81] = uu.a(var2, (byte) 57);
                 }
                 var2 = fk.a(false, "trinketdescriptions,82");
                 if (var2 != null) {
-                  mn.field_l[82] = uu.a(var2, (byte) 98);
+                  SpellAreaSelection.field_l[82] = uu.a(var2, (byte) 98);
                 }
                 var2 = fk.a(false, "trinketdescriptions,83");
                 if (null != var2) {
-                  mn.field_l[83] = uu.a(var2, (byte) 60);
+                  SpellAreaSelection.field_l[83] = uu.a(var2, (byte) 60);
                 }
                 var2 = fk.a(false, "trinketdescriptions,84");
                 if (var2 != null) {
-                  mn.field_l[84] = uu.a(var2, (byte) -102);
+                  SpellAreaSelection.field_l[84] = uu.a(var2, (byte) -102);
                 }
                 var2 = fk.a(false, "trinketdescriptions,85");
                 if (var2 != null) {
-                  mn.field_l[85] = uu.a(var2, (byte) -127);
+                  SpellAreaSelection.field_l[85] = uu.a(var2, (byte) -127);
                 }
                 var2 = fk.a(false, "trinketdescriptions,86");
                 if (var2 != null) {
-                  mn.field_l[86] = uu.a(var2, (byte) 43);
+                  SpellAreaSelection.field_l[86] = uu.a(var2, (byte) 43);
                 }
                 var2 = fk.a(false, "trinketdescriptions,87");
                 if (null != var2) {
-                  mn.field_l[87] = uu.a(var2, (byte) 77);
+                  SpellAreaSelection.field_l[87] = uu.a(var2, (byte) 77);
                 }
                 var2 = fk.a(false, "trinketdescriptions,88");
                 if (null != var2) {
-                  mn.field_l[88] = uu.a(var2, (byte) 102);
+                  SpellAreaSelection.field_l[88] = uu.a(var2, (byte) 102);
                 }
                 var2 = fk.a(false, "trinketdescriptions,89");
                 if (var2 != null) {
-                  mn.field_l[89] = uu.a(var2, (byte) -116);
+                  SpellAreaSelection.field_l[89] = uu.a(var2, (byte) -116);
                 }
                 var2 = fk.a(false, "trinketdescriptions,90");
                 if (null != var2) {
-                  mn.field_l[90] = uu.a(var2, (byte) -94);
+                  SpellAreaSelection.field_l[90] = uu.a(var2, (byte) -94);
                 }
                 var2 = fk.a(false, "trinketdescriptions,91");
                 if (null != var2) {
-                  mn.field_l[91] = uu.a(var2, (byte) -124);
+                  SpellAreaSelection.field_l[91] = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "trinketdescriptions,92");
                 if (null != var2) {
-                  mn.field_l[92] = uu.a(var2, (byte) -98);
+                  SpellAreaSelection.field_l[92] = uu.a(var2, (byte) -98);
                 }
                 var2 = fk.a(false, "trinketdescriptions,93");
                 if (var2 != null) {
-                  mn.field_l[93] = uu.a(var2, (byte) -118);
+                  SpellAreaSelection.field_l[93] = uu.a(var2, (byte) -118);
                 }
                 var2 = fk.a(false, "trinketdescriptions,94");
                 if (null != var2) {
-                  mn.field_l[94] = uu.a(var2, (byte) 67);
+                  SpellAreaSelection.field_l[94] = uu.a(var2, (byte) 67);
                 }
                 var2 = fk.a(false, "trinketdescriptions,95");
                 if (null != var2) {
-                  mn.field_l[95] = uu.a(var2, (byte) -99);
+                  SpellAreaSelection.field_l[95] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "trinketdescriptions,96");
                 if (var2 != null) {
-                  mn.field_l[96] = uu.a(var2, (byte) -111);
+                  SpellAreaSelection.field_l[96] = uu.a(var2, (byte) -111);
                 }
                 var2 = fk.a(false, "trinketdescriptions,97");
                 if (null != var2) {
-                  mn.field_l[97] = uu.a(var2, (byte) -112);
+                  SpellAreaSelection.field_l[97] = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "trinketdescriptions,98");
                 if (null != var2) {
-                  mn.field_l[98] = uu.a(var2, (byte) 44);
+                  SpellAreaSelection.field_l[98] = uu.a(var2, (byte) 44);
                 }
                 var2 = fk.a(false, "trinketdescriptions,99");
                 if (var2 != null) {
-                  mn.field_l[99] = uu.a(var2, (byte) 54);
+                  SpellAreaSelection.field_l[99] = uu.a(var2, (byte) 54);
                 }
                 var2 = fk.a(false, "trinketdescriptions,100");
                 if (var2 != null) {
-                  mn.field_l[100] = uu.a(var2, (byte) 69);
+                  SpellAreaSelection.field_l[100] = uu.a(var2, (byte) 69);
                 }
                 var2 = fk.a(false, "trinketdescriptions,101");
                 if (var2 != null) {
-                  mn.field_l[101] = uu.a(var2, (byte) -116);
+                  SpellAreaSelection.field_l[101] = uu.a(var2, (byte) -116);
                 }
                 var2 = fk.a(false, "trinketdescriptions,102");
                 if (var2 != null) {
-                  mn.field_l[102] = uu.a(var2, (byte) 30);
+                  SpellAreaSelection.field_l[102] = uu.a(var2, (byte) 30);
                 }
                 var2 = fk.a(false, "trinketdescriptions,103");
                 if (null != var2) {
-                  mn.field_l[103] = uu.a(var2, (byte) 79);
+                  SpellAreaSelection.field_l[103] = uu.a(var2, (byte) 79);
                 }
                 var2 = fk.a(false, "trinketdescriptions,104");
                 if (null != var2) {
-                  mn.field_l[104] = uu.a(var2, (byte) 97);
+                  SpellAreaSelection.field_l[104] = uu.a(var2, (byte) 97);
                 }
                 var2 = fk.a(false, "trinketdescriptions,105");
                 if (null != var2) {
-                  mn.field_l[105] = uu.a(var2, (byte) -108);
+                  SpellAreaSelection.field_l[105] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "trinketdescriptions,106");
                 if (var2 != null) {
-                  mn.field_l[106] = uu.a(var2, (byte) -113);
+                  SpellAreaSelection.field_l[106] = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "trinketdescriptions,107");
                 if (null != var2) {
-                  mn.field_l[107] = uu.a(var2, (byte) -95);
+                  SpellAreaSelection.field_l[107] = uu.a(var2, (byte) -95);
                 }
                 var2 = fk.a(false, "trinketdescriptions,108");
                 if (null != var2) {
-                  mn.field_l[108] = uu.a(var2, (byte) -126);
+                  SpellAreaSelection.field_l[108] = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "trinketdescriptions,109");
                 if (null != var2) {
-                  mn.field_l[109] = uu.a(var2, (byte) 113);
+                  SpellAreaSelection.field_l[109] = uu.a(var2, (byte) 113);
                 }
                 var2 = fk.a(false, "trinketdescriptions,110");
                 if (null != var2) {
-                  mn.field_l[110] = uu.a(var2, (byte) -98);
+                  SpellAreaSelection.field_l[110] = uu.a(var2, (byte) -98);
                 }
                 var2 = fk.a(false, "trinketdescriptions,111");
                 if (null != var2) {
-                  mn.field_l[111] = uu.a(var2, (byte) 109);
+                  SpellAreaSelection.field_l[111] = uu.a(var2, (byte) 109);
                 }
                 var2 = fk.a(false, "trinketdescriptions,112");
                 if (var2 != null) {
-                  mn.field_l[112] = uu.a(var2, (byte) 58);
+                  SpellAreaSelection.field_l[112] = uu.a(var2, (byte) 58);
                 }
                 var2 = fk.a(false, "trinketdescriptions,113");
                 if (var2 != null) {
-                  mn.field_l[113] = uu.a(var2, (byte) -125);
+                  SpellAreaSelection.field_l[113] = uu.a(var2, (byte) -125);
                 }
                 var2 = fk.a(false, "trinketdescriptions,114");
                 if (var2 != null) {
-                  mn.field_l[114] = uu.a(var2, (byte) -128);
+                  SpellAreaSelection.field_l[114] = uu.a(var2, (byte) -128);
                 }
                 var2 = fk.a(false, "trinketdescriptions,115");
                 if (var2 != null) {
-                  mn.field_l[115] = uu.a(var2, (byte) 102);
+                  SpellAreaSelection.field_l[115] = uu.a(var2, (byte) 102);
                 }
                 var2 = fk.a(false, "trinketdescriptions,116");
                 if (null != var2) {
-                  mn.field_l[116] = uu.a(var2, (byte) -99);
+                  SpellAreaSelection.field_l[116] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "trinketdescriptions,117");
                 if (null != var2) {
-                  mn.field_l[117] = uu.a(var2, (byte) -108);
+                  SpellAreaSelection.field_l[117] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "trinketdescriptions,118");
                 if (null != var2) {
-                  mn.field_l[118] = uu.a(var2, (byte) -112);
+                  SpellAreaSelection.field_l[118] = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "trinketdescriptions,119");
                 if (null != var2) {
-                  mn.field_l[119] = uu.a(var2, (byte) 36);
+                  SpellAreaSelection.field_l[119] = uu.a(var2, (byte) 36);
                 }
                 var2 = fk.a(false, "trinketdescriptions,120");
                 if (null != var2) {
-                  mn.field_l[120] = uu.a(var2, (byte) -114);
+                  SpellAreaSelection.field_l[120] = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "trinketdescriptions,121");
                 if (var2 != null) {
-                  mn.field_l[121] = uu.a(var2, (byte) -107);
+                  SpellAreaSelection.field_l[121] = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "trinketdescriptions,122");
                 if (var2 != null) {
-                  mn.field_l[122] = uu.a(var2, (byte) -113);
+                  SpellAreaSelection.field_l[122] = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "trinketdescriptions,123");
                 if (var2 != null) {
-                  mn.field_l[123] = uu.a(var2, (byte) 96);
+                  SpellAreaSelection.field_l[123] = uu.a(var2, (byte) 96);
                 }
                 var2 = fk.a(false, "trinketdescriptions,124");
                 if (null != var2) {
-                  mn.field_l[124] = uu.a(var2, (byte) 84);
+                  SpellAreaSelection.field_l[124] = uu.a(var2, (byte) 84);
                 }
                 var2 = fk.a(false, "trinketdescriptions,125");
                 if (var2 != null) {
-                  mn.field_l[125] = uu.a(var2, (byte) -126);
+                  SpellAreaSelection.field_l[125] = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "trinketdescriptions,126");
                 if (var2 != null) {
-                  mn.field_l[126] = uu.a(var2, (byte) -115);
+                  SpellAreaSelection.field_l[126] = uu.a(var2, (byte) -115);
                 }
                 var2 = fk.a(false, "trinketdescriptions,127");
                 if (null != var2) {
-                  mn.field_l[127] = uu.a(var2, (byte) -113);
+                  SpellAreaSelection.field_l[127] = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "trinketdescriptions,128");
                 if (null != var2) {
-                  mn.field_l[128] = uu.a(var2, (byte) -126);
+                  SpellAreaSelection.field_l[128] = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "trinketdescriptions,129");
                 if (var2 != null) {
-                  mn.field_l[129] = uu.a(var2, (byte) 96);
+                  SpellAreaSelection.field_l[129] = uu.a(var2, (byte) 96);
                 }
                 var2 = fk.a(false, "trinketdescriptions,130");
                 if (null != var2) {
-                  mn.field_l[130] = uu.a(var2, (byte) -93);
+                  SpellAreaSelection.field_l[130] = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "trinketdescriptions,131");
                 if (null != var2) {
-                  mn.field_l[131] = uu.a(var2, (byte) -126);
+                  SpellAreaSelection.field_l[131] = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "trinketdescriptions,132");
                 if (null != var2) {
-                  mn.field_l[132] = uu.a(var2, (byte) -106);
+                  SpellAreaSelection.field_l[132] = uu.a(var2, (byte) -106);
                 }
                 var2 = fk.a(false, "trinketdescriptions,133");
                 if (null != var2) {
-                  mn.field_l[133] = uu.a(var2, (byte) 91);
+                  SpellAreaSelection.field_l[133] = uu.a(var2, (byte) 91);
                 }
                 var2 = fk.a(false, "trinketdescriptions,134");
                 if (var2 != null) {
-                  mn.field_l[134] = uu.a(var2, (byte) 27);
+                  SpellAreaSelection.field_l[134] = uu.a(var2, (byte) 27);
                 }
                 var2 = fk.a(false, "TXT_BACKTO");
                 if (var2 != null) {
@@ -4959,7 +4959,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TTREED_FLAME");
                 if (null != var2) {
-                  mn.field_q = uu.a(var2, (byte) 24);
+                  SpellAreaSelection.field_q = uu.a(var2, (byte) 24);
                 }
                 var2 = fk.a(false, "TTREED_HEALING");
                 if (var2 != null) {
@@ -5087,11 +5087,11 @@ final class em {
                 }
                 var2 = fk.a(false, "TERROR_NOTCYCLOPS");
                 if (var2 != null) {
-                  TrinketUseEvent.field_A = uu.a(var2, (byte) -119);
+                  SpellCastEvent.field_A = uu.a(var2, (byte) -119);
                 }
                 var2 = fk.a(false, "TERROR_NOTOGRE");
                 if (var2 != null) {
-                  al.field_i = uu.a(var2, (byte) 115);
+                  GlobalSpell.field_i = uu.a(var2, (byte) 115);
                 }
                 var2 = fk.a(false, "TERROR_NOTGOBLIN");
                 if (null != var2) {
@@ -5119,7 +5119,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TERROR_NOTYOURS");
                 if (null != var2) {
-                  ra.field_k = uu.a(var2, (byte) 29);
+                  AreaSpell.field_k = uu.a(var2, (byte) 29);
                 }
                 var2 = fk.a(false, "TERROR_NOREVOLT");
                 if (null != var2) {
@@ -5731,7 +5731,7 @@ final class em {
                   l.field_b[17].b(param7, -40 + param3, param0, param8);
                   mv.a(param7 + 20, (byte) -95, ug.field_b + param4, var11, param3);
                   if (var11 > -1) {
-                    ks.a(mn.field_k[76][var11], false, -40 + param3, pr.field_g, 128, 150, param7, (js) null, -10374);
+                    ks.a(SpellAreaSelection.field_k[76][var11], false, -40 + param3, pr.field_g, 128, 150, param7, (js) null, -10374);
                   }
                   l.field_b[16].b(param7, -40 + param3, param0, param8);
                 }
@@ -5739,7 +5739,7 @@ final class em {
                   if (var11 > -1) {
                     mv.a(param7 + 20, (byte) -74, param4 + ug.field_b, var11, param3);
                   }
-                  ks.a(mn.field_k[76][var11], false, param3 - 40, pr.field_g, 128, 150, param7, (js) null, -10374);
+                  ks.a(SpellAreaSelection.field_k[76][var11], false, param3 - 40, pr.field_g, 128, 150, param7, (js) null, -10374);
                 }
                 if ((var10 != 3 ||
                   var13 != 0) &&

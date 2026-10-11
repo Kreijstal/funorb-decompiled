@@ -202,7 +202,7 @@ final class tt {
 
     final void a(lv param0, byte param1, int param2) {
         try {
-          this.field_b[param2].a(750, new u(param0));
+          this.field_b[param2].addFirst(750, new u(param0));
           if (param1 < 81) {
             field_a = (String[]) null;
           }

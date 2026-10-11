@@ -131,7 +131,7 @@ final class TileMetadata implements TaggedFieldReader {
           SoftwareRaster.d(0, 0, SoftwareRaster.field_l, CombatEvent.field_I.field_D);
           qc.field_c.b(param1, 20);
         }
-        if ((!(bd.field_r <= 0) ||
+        if ((!(SpellAreaEffect.field_r <= 0) ||
           !(0 >= rk.field_D)) &&
           vk.field_f) {
           SoftwareRaster.d(0, 0, SoftwareRaster.field_l, CombatEvent.field_I.field_D);

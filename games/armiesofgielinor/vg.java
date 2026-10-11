@@ -16,12 +16,12 @@ final class vg extends IntrusiveNode {
     final static boolean a(int param0) {
         if (param0 != 10) {
           vg.a((byte) 89);
-          if (ik.field_d == null) {
+          if (Spell.field_d == null) {
             return iu.field_h ? true : false;
           }
           return true;
         }
-        if (ik.field_d != null) {
+        if (Spell.field_d != null) {
           return true;
         }
         if (!iu.field_h) {

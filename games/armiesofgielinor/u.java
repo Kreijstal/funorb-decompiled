@@ -88,7 +88,7 @@ final class u extends IntrusiveNode {
               fieldTemp$1 = vg.field_p;
               vg.field_p = vg.field_p + 1;
               var6.field_Ob = fieldTemp$1;
-              ot.field_E.a((byte) -119, (IntrusiveNode) (var6));
+              ot.field_E.addLast((byte) -119, (IntrusiveNode) (var6));
             }
             var6.field_Nb = var7_ref;
             var6.field_Pb = var5;
@@ -146,7 +146,7 @@ final class u extends IntrusiveNode {
             fieldTemp$0 = dj.field_a;
             dj.field_a = dj.field_a + 1;
             var6Lifetime1.field_Ob = fieldTemp$0;
-            wh.field_c.a((byte) -119, (IntrusiveNode) (var6Lifetime1));
+            wh.field_c.addLast((byte) -119, (IntrusiveNode) (var6Lifetime1));
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -181,7 +181,7 @@ final class u extends IntrusiveNode {
             }
             break;
           }
-          wh.field_c.a((byte) -119, (IntrusiveNode) (var6Lifetime1));
+          wh.field_c.addLast((byte) -119, (IntrusiveNode) (var6Lifetime1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ua extends bd {
+final class ua extends SpellAreaEffect {
     static String field_y;
     static String field_v;
     static char[] field_u;
     private int field_w;
-    private ik field_x;
+    private Spell field_x;
     static boolean field_t;
     static boolean field_s;
 
@@ -17,15 +17,15 @@ final class ua extends bd {
         ps.a(param1, true);
     }
 
-    final void a(int param0, Battlefield param1) {
-        param1.pendingEvents.a((byte) -119, (IntrusiveNode) (new TrinketUseEvent(this.field_x, this.field_w, this.field_m)));
-        if (param0 != 64) {
+    final void applyEffect(int obfuscationGuard, Battlefield battlefield) {
+        battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SpellCastEvent(this.field_x, this.field_w, this.field_m)));
+        if (obfuscationGuard != 64) {
           return;
         }
         try {
-          this.field_x.a(param1, param0 - 1700635504);
+          this.field_x.finishEffect(battlefield, obfuscationGuard - 1700635504);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ua.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ua.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -134,7 +134,7 @@ final class ua extends bd {
         }
     }
 
-    ua(ik param0, int param1, int param2) {
+    ua(Spell param0, int param1, int param2) {
         try {
           this.field_w = param1;
           this.field_x = param0;

@@ -130,7 +130,7 @@ class ms extends IntrusiveNode {
             } else {
               aw.field_h = hh.field_a;
             }
-            aw.field_h = TrinketUseEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) aw.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) c.field_a)});
+            aw.field_h = SpellCastEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) aw.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) c.field_a)});
           }
           qc.field_a.b(true);
           qf.a(56);
@@ -149,7 +149,7 @@ class ms extends IntrusiveNode {
             } else {
               aw.field_h = hh.field_a;
             }
-            aw.field_h = TrinketUseEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) aw.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) c.field_a)});
+            aw.field_h = SpellCastEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) aw.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) c.field_a)});
           }
           qc.field_a.b(true);
           qf.a(56);

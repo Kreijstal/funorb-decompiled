@@ -156,7 +156,7 @@ final class gk extends nl {
             throw new IllegalArgumentException();
           }
           var3 = (wl) (param0);
-          this.field_M.a(750, var3);
+          this.field_M.addFirst(750, var3);
           var3.field_L = true;
           var3.a(11, (kb) (this));
           if (param1 != 0) {

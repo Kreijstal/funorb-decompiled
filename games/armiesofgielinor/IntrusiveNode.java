@@ -31,15 +31,15 @@ class IntrusiveNode {
         int[] var14;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var6 = 50 + GameplayController.field_f;
-        var14 = jf.field_C.movementPlanner.field_q;
+        var14 = jf.field_C.movementPlanner.movementCosts;
         var13 = var14;
         var7 = var13;
         var8 = 43 % ((-48 - param0) / 51);
         if (jf.field_C.selectedUnit != null &&
           CipherPacketBuffer.currentBattlefield.currentPlayer == jf.field_C.field_q &&
-          !jf.field_C.selectedUnit.packedFlag4 && (jf.field_C.selectedUnit.ownerPlayer == jf.field_C.field_q ||
+          !jf.field_C.selectedUnit.movementSpent && (jf.field_C.selectedUnit.ownerPlayer == jf.field_C.field_q ||
           !jf.field_C.movementPlanner.field_w) && !jf.field_C.selectedUnit.h(-13494)) {
-          var9 = jf.field_C.movementPlanner.c(27732);
+          var9 = jf.field_C.movementPlanner.getMovementBudget(27732);
           if (var9 < var14[param4]) {
             return;
           }

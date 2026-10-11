@@ -58,7 +58,7 @@ final class j {
           il.field_t[3] = lb.field_d;
           il.field_t[53] = gk.field_P;
           il.field_t[6] = ir.field_k;
-          il.field_t[9] = bd.field_k;
+          il.field_t[9] = SpellAreaEffect.field_k;
           il.field_t[8] = null;
           il.field_t[4] = el.field_a;
           il.field_t[54] = mh.field_d;
@@ -85,7 +85,7 @@ final class j {
           }
           il.field_t[42] = nt.field_p;
           il.field_t[40] = vg.field_l;
-          il.field_t[32] = mn.field_r;
+          il.field_t[32] = SpellAreaSelection.field_r;
           il.field_t[36] = rj.field_G;
           il.field_t[31] = ij.field_C;
           il.field_t[35] = wd.field_j;
@@ -242,7 +242,7 @@ final class j {
         int var10Lifetime1;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          qb.a(bd.field_r, param0 + 114);
+          qb.a(SpellAreaEffect.field_r, param0 + 114);
           if (no.field_K != null) {
             var15 = lm.field_b;
             var17 = var15;
@@ -358,7 +358,7 @@ final class j {
               if (var8 != 0) {
                 stackIn_23_0 = p.field_f;
               } else {
-                stackIn_23_0 = bd.field_l;
+                stackIn_23_0 = SpellAreaEffect.field_l;
               }
               var16 = stackIn_23_0;
               var9 = var16;

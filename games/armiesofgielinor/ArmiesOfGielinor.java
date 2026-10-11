@@ -433,7 +433,7 @@ public final class ArmiesOfGielinor extends wf {
                       if (((GameplayController) (var2)).battlefield.field_X) {
                         continue;
                       }
-                      ((GameplayController) (var2)).battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new TurnChangeEvent(var4Lifetime3, var3Lifetime2)));
+                      ((GameplayController) (var2)).battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnChangeEvent(var4Lifetime3, var3Lifetime2)));
                       continue;
                     }
                     ((GameplayController) (var2)).field_ub = null;
@@ -566,7 +566,7 @@ public final class ArmiesOfGielinor extends wf {
               bw.a(127, 3);
               ah.a((byte) 33, 4);
               op.a(5, true);
-              TrinketUseEvent.b(6, -32666);
+              SpellCastEvent.b(6, -32666);
               aw.a(7, 1742);
               bo.a(true);
               if (var3Lifetime1 != 1) {
@@ -917,7 +917,7 @@ public final class ArmiesOfGielinor extends wf {
               if (decompiledFrameRemainder4) {
                 if (!DamageEvent.g(119)) {
                   if (pq.field_f != null) {
-                    wa.a(3, 1, pq.field_f);
+                    UnitSpell.a(3, 1, pq.field_f);
                   }
                   sk.n(param0 ^ -110);
                   CipherPacketBuffer.a(false, tg.field_a, 1, 0);
@@ -1144,7 +1144,7 @@ public final class ArmiesOfGielinor extends wf {
           hc.b(1017);
           qt.a((byte) 93);
           s.a(53);
-          ik.b(param0 - 1700635368);
+          Spell.b(param0 - 1700635368);
           hg.a(true);
           t.a(0);
           cd.a(false);
@@ -1265,8 +1265,8 @@ public final class ArmiesOfGielinor extends wf {
           jc.a((byte) 44);
           ee.f(-27538);
           hw.a((byte) -58);
-          al.a((byte) 103);
-          wa.c(6);
+          GlobalSpell.a((byte) 103);
+          UnitSpell.c(6);
           hr.b(param0 ^ 298276648);
           uf.a(param0 + 173);
           MovementPlanner.b(-104);
@@ -1279,8 +1279,8 @@ public final class ArmiesOfGielinor extends wf {
           vb.f(-126);
           GameEvent.a((byte) -103);
           fi.a(param0 ^ 101);
-          ra.a(false);
-          mn.a(100);
+          AreaSpell.a(false);
+          SpellAreaSelection.a(100);
           CipherPacketBuffer.k((byte) -97);
           km.e(param0 + 77);
           sk.c(-128);
@@ -1293,7 +1293,7 @@ public final class ArmiesOfGielinor extends wf {
           DamageEvent.d((byte) -26);
           StateChangeEvent.d((byte) 35);
           OwnerChangeEvent.g(-19269);
-          TrinketUseEvent.a(true);
+          SpellCastEvent.a(true);
           UpkeepEvent.g(10);
           cn.f(123);
           ab.a((byte) 32);
@@ -1402,7 +1402,7 @@ public final class ArmiesOfGielinor extends wf {
           mv.a((byte) -48);
           ht.a();
           rv.a(param0 ^ -72);
-          bd.a(28038);
+          SpellAreaEffect.a(28038);
           pe.a((byte) 119);
           ld.e(param0 + 4);
           ur.a(false);
@@ -1615,7 +1615,7 @@ public final class ArmiesOfGielinor extends wf {
         try {
           li.field_n = new Random(vi.b(-108));
           this.a(4, 68, 24, 2, -119, 0, 1);
-          wa.a(52, new lt());
+          UnitSpell.a(52, new lt());
           var2 = new wn();
           var3 = new wn(var2);
           var4 = new nm(var2, var3);

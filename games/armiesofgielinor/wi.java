@@ -304,7 +304,7 @@ final class wi {
             if (var12.field_yb != 0 &&
               !var12.k(0)) {
               if (var12.field_dc.field_yb != 0) {
-                ra.a(var12.field_Pb, param3, 6);
+                AreaSpell.a(var12.field_Pb, param3, 6);
               } else {
                 if (0 == var12.field_ec.field_yb) {
                   bk.a(false, 0, iu.field_t, 0, var12, param4, ur.field_z);
@@ -363,7 +363,7 @@ final class wi {
                     if (var25_int == 1) {
                       var24Lifetime2 = tn.field_Y;
                     }
-                    var24Lifetime2 = fo.a(4800, al.field_j, new String[]{null, Integer.toString(var25_int)});
+                    var24Lifetime2 = fo.a(4800, GlobalSpell.field_j, new String[]{null, Integer.toString(var25_int)});
                   } else {
                     if (var6 <= var12.field_Sb) {
                       if (0 != (var8 & ~var12.field_Ob)) {

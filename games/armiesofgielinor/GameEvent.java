@@ -134,7 +134,7 @@ abstract class GameEvent extends IntrusiveNode {
           }
           var5 = cp.a(param1, 10120, param1.battlefield, this.e(1023) & param3, this, param1.field_gb);
           if (var5 != null) {
-            param2.a((byte) -119, (IntrusiveNode) (var5));
+            param2.addLast((byte) -119, (IntrusiveNode) (var5));
           }
           if (var5 != null) {
             stackIn_10_0 = var5.field_w;
@@ -232,7 +232,7 @@ abstract class GameEvent extends IntrusiveNode {
         try {
           var6 = ub.a(this, param2.battlefield, this.e(param1 + 1008), param0, param2, 17, param4, param2.field_gb);
           if (var6 != null) {
-            param3.a((byte) -119, (IntrusiveNode) (var6));
+            param3.addLast((byte) -119, (IntrusiveNode) (var6));
           }
           if (param1 != 15) {
             return true;

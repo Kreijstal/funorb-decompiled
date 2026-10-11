@@ -72,7 +72,7 @@ final class fq {
           for (var7 = param2; var6.length > var7; var7++) {
             var8 = var6[var7];
             var9 = new sq(var8, param3, param0);
-            param0.a((byte) -119, (IntrusiveNode) (var9));
+            param0.addLast((byte) -119, (IntrusiveNode) (var9));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,13 +117,13 @@ final class fq {
         vg var2Lifetime1;
         if (param0 == 14663) {
           var2 = new vg();
-          oe.field_Bb.a((byte) -119, (IntrusiveNode) (var2));
+          oe.field_Bb.addLast((byte) -119, (IntrusiveNode) (var2));
           tq.a(param1, 0);
           return var2;
         }
         fq.a((byte) -111, -125L);
         var2Lifetime1 = new vg();
-        oe.field_Bb.a((byte) -119, (IntrusiveNode) (var2Lifetime1));
+        oe.field_Bb.addLast((byte) -119, (IntrusiveNode) (var2Lifetime1));
         tq.a(param1, 0);
         return var2Lifetime1;
     }

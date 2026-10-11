@@ -129,13 +129,13 @@ final class sj {
             if (param8 == 0) {
               stackIn_4_0 = 0;
             } else {
-              stackIn_4_0 = wa.a(param9, param8, 1);
+              stackIn_4_0 = UnitSpell.a(param9, param8, 1);
             }
             return stackIn_4_0;
           }
           if (1 == var10_intLifetime1) {
             if (0 != param7) {
-              stackIn_9_0 = wa.a(param9, param7, 1);
+              stackIn_9_0 = UnitSpell.a(param9, param7, 1);
             } else {
               stackIn_9_0 = 0;
             }
@@ -150,7 +150,7 @@ final class sj {
           }
           if (var10_intLifetime1 == 2) {
             if (param4 != 0) {
-              stackIn_26_0 = wa.a(param9, param4, 1);
+              stackIn_26_0 = UnitSpell.a(param9, param4, 1);
             } else {
               stackIn_26_0 = 0;
             }
@@ -169,7 +169,7 @@ final class sj {
           if (0 == param3) {
             stackIn_18_0 = 0;
           } else {
-            stackIn_18_0 = wa.a(param9, param3, 1);
+            stackIn_18_0 = UnitSpell.a(param9, param3, 1);
           }
           var11Lifetime2 = stackIn_18_0;
           var12Lifetime2 = param5 + param1 + param6;
@@ -293,13 +293,13 @@ final class sj {
             if (param8 == 0) {
               stackIn_4_0 = 0;
             } else {
-              stackIn_4_0 = wa.a(param9, param8, 1);
+              stackIn_4_0 = UnitSpell.a(param9, param8, 1);
             }
             return stackIn_4_0;
           }
           if (1 == var10_intLifetime1) {
             if (0 != param7) {
-              stackIn_9_0 = wa.a(param9, param7, 1);
+              stackIn_9_0 = UnitSpell.a(param9, param7, 1);
             } else {
               stackIn_9_0 = 0;
             }
@@ -314,7 +314,7 @@ final class sj {
           }
           if (var10_intLifetime1 == 2) {
             if (param4 != 0) {
-              stackIn_26_0 = wa.a(param9, param4, 1);
+              stackIn_26_0 = UnitSpell.a(param9, param4, 1);
             } else {
               stackIn_26_0 = 0;
             }
@@ -333,7 +333,7 @@ final class sj {
           if (0 == param3) {
             stackIn_18_0 = 0;
           } else {
-            stackIn_18_0 = wa.a(param9, param3, 1);
+            stackIn_18_0 = UnitSpell.a(param9, param3, 1);
           }
           var11Lifetime2 = stackIn_18_0;
           var12Lifetime2 = param5 + param1 + param6;

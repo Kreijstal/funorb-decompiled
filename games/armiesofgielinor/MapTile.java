@@ -346,17 +346,17 @@ final class MapTile implements TaggedFieldReader {
         if (var13 != 11) {
           if (var13 == 7) {
             if (var10 != 0) {
-              this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this.occupant, 1)));
+              this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this.occupant, 1)));
               if (-1 + this.occupant.maximumStrength > this.occupant.strength) {
-                this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this.occupant, 1)));
+                this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this.occupant, 1)));
               }
               this.battlefield.e(14, param1, this.ownerPlayer, param0);
             }
             if (var11 != 0) {
-              this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new DamageEvent(this.occupant, 3, false)));
+              this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DamageEvent(this.occupant, 3, false)));
             }
             if (var9 != 0) {
-              this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new OwnerChangeEvent(this.occupant, param2, true)));
+              this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new OwnerChangeEvent(this.occupant, param2, true)));
             }
             stackIn_102_0 = this.battlefield;
             stackIn_102_1 = param2;
@@ -367,7 +367,7 @@ final class MapTile implements TaggedFieldReader {
             }
             var5Lifetime1 = ((Battlefield) (Object) stackIn_102_0).d(stackIn_102_1, stackIn_103_2, 6);
             if (var7Lifetime1 != 0) {
-              this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new ManaEvent(0, var5Lifetime1, param2)));
+              this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new ManaEvent(0, var5Lifetime1, param2)));
               return;
             }
             this.battlefield.playerMana[param2] = this.battlefield.playerMana[param2] + var5Lifetime1;
@@ -384,7 +384,7 @@ final class MapTile implements TaggedFieldReader {
           }
           if (var13 == 8) {
             if (var12 != 0) {
-              this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this.occupant, 1)));
+              this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this.occupant, 1)));
               this.battlefield.e(14, param1, this.ownerPlayer, param0);
             }
             stackIn_115_0 = this.battlefield;
@@ -396,7 +396,7 @@ final class MapTile implements TaggedFieldReader {
             }
             var5Lifetime1Lifetime1 = ((Battlefield) (Object) stackIn_115_0).d(stackIn_115_1, stackIn_116_2, param3 ^ 6);
             if (var7Lifetime1 != 0) {
-              this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new ManaEvent(2, var5Lifetime1Lifetime1, param2)));
+              this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new ManaEvent(2, var5Lifetime1Lifetime1, param2)));
               return;
             }
             this.battlefield.playerMana[param2] = this.battlefield.playerMana[param2] + var5Lifetime1Lifetime1;
@@ -413,7 +413,7 @@ final class MapTile implements TaggedFieldReader {
             return;
           }
           if (var12 != 0) {
-            this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this.occupant, 1)));
+            this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(this.occupant, 1)));
             this.battlefield.e(param3 + 14, param1, this.ownerPlayer, param0);
           }
           stackIn_125_0 = this.battlefield;
@@ -425,7 +425,7 @@ final class MapTile implements TaggedFieldReader {
           }
           var5Lifetime1Lifetime2 = ((Battlefield) (Object) stackIn_125_0).d(stackIn_125_1, stackIn_126_2, 6);
           if (var7Lifetime1 != 0) {
-            this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new ManaEvent(1, var5Lifetime1Lifetime2, param2)));
+            this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new ManaEvent(1, var5Lifetime1Lifetime2, param2)));
             return;
           }
           this.battlefield.playerMana[param2] = this.battlefield.playerMana[param2] + var5Lifetime1Lifetime2;
@@ -437,10 +437,10 @@ final class MapTile implements TaggedFieldReader {
           this.battlefield.teamManaCollected[this.battlefield.getPlayerTeamIndex(param2, -1)] = 1000000000;
         } else {
           if (var11 != 0) {
-            this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new DamageEvent(this.occupant, 3, false)));
+            this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DamageEvent(this.occupant, 3, false)));
           }
           if (var9 != 0) {
-            this.battlefield.pendingEvents.a((byte) -119, (IntrusiveNode) (new OwnerChangeEvent(this.occupant, param2, true)));
+            this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new OwnerChangeEvent(this.occupant, param2, true)));
             return;
           }
         }
@@ -664,7 +664,7 @@ final class MapTile implements TaggedFieldReader {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new te(param1, param1);
-          bl.field_h.a((byte) -119, (IntrusiveNode) (var2));
+          bl.field_h.addLast((byte) -119, (IntrusiveNode) (var2));
           if (param0 > -35) {
             stackIn_2_0 = (te) null;
             return stackIn_2_0;

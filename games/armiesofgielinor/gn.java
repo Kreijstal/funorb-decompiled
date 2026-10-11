@@ -89,14 +89,14 @@ final class gn {
             String var4 = (String) null;
             this.a((byte) 62, (String) null);
           }
-          this.a((byte) 19, TrinketUseEvent.a(593277313, (CharSequence[]) ((Object) param0)));
+          this.a((byte) 19, SpellCastEvent.a(593277313, (CharSequence[]) ((Object) param0)));
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "gn.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void d(int param0) {
-        ik.field_d = new hk(jm.field_b, hr.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k);
+        Spell.field_d = new hk(jm.field_b, hr.field_m, uc.field_b, eq.field_h, hs.field_H, ms.field_k);
         if (param0 != 5) {
           gn.d(-31);
         }

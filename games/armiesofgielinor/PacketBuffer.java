@@ -400,7 +400,7 @@ class PacketBuffer extends IntrusiveNode {
     final static void i(byte param0) {
         ot.g(76);
         dh.d(-1);
-        ik.field_b = null;
+        Spell.field_b = null;
         int var1 = -111 % ((-16 - param0) / 46);
         e.a((byte) -117);
     }

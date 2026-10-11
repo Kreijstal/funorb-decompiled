@@ -109,7 +109,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         try {
           if (lr.field_a == this &&
             !rh.field_c) {
-            mn.field_s = vi.b(-46);
+            SpellAreaSelection.field_s = vi.b(-46);
             nu.a(5000L, 0);
             PacketBuffer.field_s = null;
             this.a(false, -1251);
@@ -175,7 +175,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           return;
         }
         try {
-          mn.field_s = 4000L + vi.b(-62);
+          SpellAreaSelection.field_s = 4000L + vi.b(-62);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "iv.stop()");
         }
@@ -438,7 +438,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                     ol.field_z = false;
                     var3_int = 1;
                   }
-                  tl.a(-5790, TurnEffectEvent.field_F, TrinketUseEvent.g(-15862), var3_int != 0, dd.a(false));
+                  tl.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
                 }
               }
             } else {
@@ -451,7 +451,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                   ol.field_z = false;
                   var3_int = 1;
                 }
-                tl.a(-5790, TurnEffectEvent.field_F, TrinketUseEvent.g(-15862), var3_int != 0, dd.a(false));
+                tl.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
               }
             }
           } else {
@@ -460,7 +460,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               ol.field_z = false;
               var3_int = 1;
             }
-            tl.a(-5790, TurnEffectEvent.field_F, TrinketUseEvent.g(-15862), var3_int != 0, dd.a(false));
+            tl.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
           }
           if (param0) {
             field_m = (String) null;
@@ -614,8 +614,8 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                 qc.field_h = wc.c(false);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (0L != mn.field_s) {
-                    stackIn_102_0 = $cfr$lcmp(mn.field_s, vi.b(-56));
+                  if (0L != SpellAreaSelection.field_s) {
+                    stackIn_102_0 = $cfr$lcmp(SpellAreaSelection.field_s, vi.b(-56));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_102_0 <= 0)) {
@@ -687,7 +687,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           return;
         }
         try {
-          mn.field_s = 0L;
+          SpellAreaSelection.field_s = 0L;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "iv.start()");
         }

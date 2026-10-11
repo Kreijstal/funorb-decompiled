@@ -136,7 +136,7 @@ abstract class dv implements ap {
           var3 = (rq) (this.field_j.first((byte) 90));
           if (var3 == null ||
             !param0.equals(var3.field_l)) {
-            this.field_j.a(750, new rq(param0));
+            this.field_j.addFirst(750, new rq(param0));
           }
           if (param1 < 37) {
             this.field_d = (dn) null;
@@ -324,7 +324,7 @@ abstract class dv implements ap {
             else {
               param0 = null;
             }
-            var4.a((byte) -119, (IntrusiveNode) (new rq(var6)));
+            var4.addLast((byte) -119, (IntrusiveNode) (new rq(var6)));
           }
           stackIn_21_0 = var4;
           return stackIn_21_0;

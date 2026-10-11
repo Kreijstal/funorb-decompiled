@@ -39,21 +39,21 @@ final class gu {
             if (var4 != 34 &&
               var4 != 39) {
               if (var4 == 40) {
-                var2.a((byte) -119, (IntrusiveNode) (new og(mo.field_j, -1 + var3.field_c)));
+                var2.addLast((byte) -119, (IntrusiveNode) (new og(mo.field_j, -1 + var3.field_c)));
                 continue;
               }
               if (var4 == 41) {
-                var2.a((byte) -119, (IntrusiveNode) (new og(gm.field_d, -1 + var3.field_c)));
+                var2.addLast((byte) -119, (IntrusiveNode) (new og(gm.field_d, -1 + var3.field_c)));
                 continue;
               }
               if (44 != var4) {
-                var2.a((byte) -119, (IntrusiveNode) (bi.a((byte) -118, var3)));
+                var2.addLast((byte) -119, (IntrusiveNode) (bi.a((byte) -118, var3)));
                 continue;
               }
-              var2.a((byte) -119, (IntrusiveNode) (new og(sb.field_d, var3.field_c - 1)));
+              var2.addLast((byte) -119, (IntrusiveNode) (new og(sb.field_d, var3.field_c - 1)));
               continue;
             }
-            var2.a((byte) -119, (IntrusiveNode) (aw.a((byte) 121, var3)));
+            var2.addLast((byte) -119, (IntrusiveNode) (aw.a((byte) 121, var3)));
           }
           stackIn_18_0 = var2;
           return stackIn_18_0;

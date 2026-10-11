@@ -115,7 +115,7 @@ final class cl extends IntrusiveNode {
               stackIn_10_0 = -3.4028234663852886e+38f;
               return stackIn_10_0;
             }
-            if (param3.field_q[param0] > param3.c(param1 + 27737)) {
+            if (param3.movementCosts[param0] > param3.getMovementBudget(param1 + 27737)) {
               stackIn_17_0 = (var10 != param0) ? 1 : 0;
             } else {
               stackIn_17_0 = 0;
@@ -129,13 +129,13 @@ final class cl extends IntrusiveNode {
               this.field_o.strength >= this.field_o.maximumStrength) {
               var11 = 1;
             }
-            param3.a(var9, false, var8, (byte) 93);
+            param3.selectTarget(var9, false, var8, (byte) 93);
             if ((4 & param3.field_e[param0]) == 0 &&
               var11 != 0) {
               stackIn_26_0 = -3.4028234663852886e+38f;
               return stackIn_26_0;
             }
-            if (!param3.field_u && (var8 != this.field_o.tileX ||
+            if (!param3.actionAllowed && (var8 != this.field_o.tileX ||
               var9 != this.field_o.tileY)) {
               stackIn_32_0 = -3.4028234663852886e+38f;
               return stackIn_32_0;
@@ -158,8 +158,8 @@ final class cl extends IntrusiveNode {
                 var18 = -3.4028234663852886e+38f;
                 stackIn_46_0 = (bw.unitDefinitions[this.field_o.unitType][0] != 4) ? 0 : 1;
                 var19_int = stackIn_46_0;
-                var20_int = this.field_o.B(3257);
-                var21_int = this.field_o.l((byte) -79);
+                var20_int = this.field_o.getMaximumAttackRange(3257);
+                var21_int = this.field_o.getMinimumAttackRange((byte) -79);
                 for (var22 = -var20_int; var22 <= var20_int; var22++) {
                   for (var23 = -var20_int; var20_int >= var23; var23++) {
                     var24 = Math.abs(var22) + Math.abs(var23);
@@ -233,8 +233,8 @@ final class cl extends IntrusiveNode {
             var19 = 0.0f;
             var20 = 0.0f;
             var21 = 0.0f;
-            var22Lifetime1 = this.field_o.g(param1 ^ -5);
-            var23Lifetime1 = this.field_o.g(param1 + 5);
+            var22Lifetime1 = this.field_o.getUnitCategory(param1 ^ -5);
+            var23Lifetime1 = this.field_o.getUnitCategory(param1 + 5);
             for (var24Lifetime1 = 0; var24Lifetime1 < 8; var24Lifetime1++) {
               if (1 != var24Lifetime1 &&
                 0 != var24Lifetime1 ||
@@ -268,7 +268,7 @@ final class cl extends IntrusiveNode {
               if (var12.a(false) &&
                 this.field_o.tileX == var8 &&
                 var9 == this.field_o.tileY &&
-                var12.field_m < this.field_o.g((byte) 122) * 4 &&
+                var12.field_m < this.field_o.getEffectiveStrength((byte) 122) * 4 &&
                 var12.ownerPlayer != this.field_o.ownerPlayer) {
                 var15Lifetime1 = var15Lifetime1 + 999999.0f;
               }
@@ -368,7 +368,7 @@ final class cl extends IntrusiveNode {
                   stackIn_218_0 = this.field_r.field_P[48];
                 }
                 var27Lifetime1 = stackIn_218_0;
-                var14Lifetime1 = var14Lifetime1 + this.field_r.field_I[this.field_o.g(0)][this.field_o.objectiveId - 1][param0] * var27Lifetime1;
+                var14Lifetime1 = var14Lifetime1 + this.field_r.field_I[this.field_o.getUnitCategory(0)][this.field_o.objectiveId - 1][param0] * var27Lifetime1;
               }
               var6Lifetime1 = var6Lifetime1 + var14Lifetime1 * this.field_p;
             }
@@ -420,8 +420,8 @@ final class cl extends IntrusiveNode {
         int var6Lifetime1;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 &&
-          this.field_o.packedFlag4 &&
-          this.field_o.packedLowFlags <= 0) {
+          this.field_o.movementSpent &&
+          this.field_o.attacksRemaining <= 0) {
           return -3.4028234663852886e+38f;
         }
         if (param0) {
@@ -438,14 +438,14 @@ final class cl extends IntrusiveNode {
         if (param0) {
           var4.b((byte) 72);
         }
-        var9.a(false, 20, this.field_o.ownerPlayer, this.field_o, -1, -1);
+        var9.prepareForUnit(false, 20, this.field_o.ownerPlayer, this.field_o, -1, -1);
         if (this.field_r.field_J == this) {
           for (var6 = 0; this.field_r.field_N.length > var6; var6++) {
             this.field_r.field_N[var6] = -3.4028234663852886e+38f;
           }
         }
         var5 = -3.4028234663852886e+38f;
-        for (var6Lifetime1 = 0; var9.field_q.length > var6Lifetime1; var6Lifetime1++) {
+        for (var6Lifetime1 = 0; var9.movementCosts.length > var6Lifetime1; var6Lifetime1++) {
           if (!param0) {
             fs.field_b[var6Lifetime1] = 0.0f;
           }
@@ -465,7 +465,7 @@ final class cl extends IntrusiveNode {
           }
         }
         if (!param0) {
-          var9.d(-57);
+          var9.clearSelection(-57);
         } else {
           this.field_k = var4.a((byte) -90);
           this.field_l = this.e(-8786);
@@ -489,7 +489,7 @@ final class cl extends IntrusiveNode {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var8 = this.field_r.field_U;
         if (param1) {
-          stackIn_3_0 = var8.field_q;
+          stackIn_3_0 = var8.movementCosts;
         } else {
           stackIn_3_0 = var8.field_k;
         }
@@ -499,9 +499,9 @@ final class cl extends IntrusiveNode {
         if (param0 <= 14) {
           this.field_x = 1.991025686264038f;
         }
-        for (var5 = 0; var5 < var8.field_q.length; var5++) {
+        for (var5 = 0; var5 < var8.movementCosts.length; var5++) {
           if (0 < var10[var5] &&
-            var10[var5] <= var8.c(27732)) {
+            var10[var5] <= var8.getMovementBudget(27732)) {
             var6 = this.field_r.battlefield.tiles[var5];
             if (var6.a(false) &&
               !var6.isAlliedToPlayer(this.field_r.field_z, (byte) 91) && (null == var6.occupant ||
@@ -574,7 +574,7 @@ final class cl extends IntrusiveNode {
 
     private final void a(byte param0) {
         MovementPlanner var2 = this.field_r.field_U;
-        var2.a(false, 81, this.field_r.field_z, this.field_o, -1, -1);
+        var2.prepareForUnit(false, 81, this.field_r.field_z, this.field_o, -1, -1);
         if (param0 <= 23) {
           this.field_y = -31;
         }
@@ -597,7 +597,7 @@ final class cl extends IntrusiveNode {
         if (param0 != 4) {
           return;
         }
-        this.field_r.field_U.d(param0 - 34);
+        this.field_r.field_U.clearSelection(param0 - 34);
     }
 
     final void f(int param0) {
@@ -606,7 +606,7 @@ final class cl extends IntrusiveNode {
         MapTile var4;
         int var2Lifetime1;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.field_o.packedFlag4) {
+        if (this.field_o.movementSpent) {
           return;
         }
         if (this.field_o.i(-21428)) {
@@ -620,11 +620,11 @@ final class cl extends IntrusiveNode {
         }
         this.field_y = 100;
         if (!this.field_o.i(-21428)) {
-          if (this.field_o.g(0) == 5) {
+          if (this.field_o.getUnitCategory(0) == 5) {
             this.field_y = 10;
           }
-          if (2 == this.field_o.g(0) ||
-            3 == this.field_o.g(0)) {
+          if (2 == this.field_o.getUnitCategory(0) ||
+            3 == this.field_o.getUnitCategory(0)) {
             this.field_y = 200;
           }
         } else {
@@ -656,7 +656,7 @@ final class cl extends IntrusiveNode {
         if (this.field_o.packedFlag256) {
           this.field_y = this.field_y + 500;
         }
-        this.field_y = this.field_y + this.field_o.g((byte) 122);
+        this.field_y = this.field_y + this.field_o.getEffectiveStrength((byte) 122);
     }
 
     private final float a(int param0, int param1, int param2, int param3) {
@@ -699,22 +699,22 @@ final class cl extends IntrusiveNode {
         var15 = var25[0];
         var16 = var25[1];
         var17 = 0;
-        if (var10.g((byte) 122) < var15) {
-          var15 = var10.g((byte) 122);
+        if (var10.getEffectiveStrength((byte) 122) < var15) {
+          var15 = var10.getEffectiveStrength((byte) 122);
         }
         var18 = 0;
-        if (this.field_o.packedFlag64 &&
+        if (this.field_o.meleeLifeSteal &&
           var13 != 0) {
           var17 = var15;
           if (var17 > -this.field_o.strength + this.field_o.maximumStrength) {
             var17 = -this.field_o.strength + this.field_o.maximumStrength;
           }
         }
-        if (this.field_o.g((byte) 122) + var17 < var16) {
-          var16 = var17 + this.field_o.g((byte) 122);
+        if (this.field_o.getEffectiveStrength((byte) 122) + var17 < var16) {
+          var16 = var17 + this.field_o.getEffectiveStrength((byte) 122);
         }
         if ((2 & var25[2]) == 0) {
-          if (var10.packedFlag64 &&
+          if (var10.meleeLifeSteal &&
             var13 != 0) {
             var18 = var16;
             if (-var10.strength + var10.maximumStrength < var18) {
@@ -732,7 +732,7 @@ final class cl extends IntrusiveNode {
           !var10.x(-99)) {
           var17 = 0;
           var18 = 0;
-          var15 = var10.g((byte) 122);
+          var15 = var10.getEffectiveStrength((byte) 122);
           var16 = 0;
         }
         var19 = var15 - var18;
@@ -767,7 +767,7 @@ final class cl extends IntrusiveNode {
         if (var10.a(23072)) {
           var5 = var5 * this.field_r.field_P[47];
         }
-        if (var10.g(0) == param3) {
+        if (var10.getUnitCategory(0) == param3) {
           var5 = var5 * this.field_r.field_P[31];
         }
         if (var10.i(-21428)) {

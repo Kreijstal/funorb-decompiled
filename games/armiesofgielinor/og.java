@@ -19,21 +19,21 @@ final class og extends IntrusiveNode {
     }
 
     final static void a(int param0, boolean param1) {
-        if (ik.field_d == null) {
+        if (Spell.field_d == null) {
           if (param0 != 16756) {
             og.a(-87, true);
             return;
           }
           return;
         }
-        if (!ik.field_d.a((byte) 102, param1)) {
+        if (!Spell.field_d.a((byte) 102, param1)) {
           if (param0 != 16756) {
             og.a(-87, true);
             return;
           }
           return;
         }
-        ik.field_d = null;
+        Spell.field_d = null;
         if (param0 == 16756) {
           return;
         }

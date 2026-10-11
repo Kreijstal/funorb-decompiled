@@ -70,9 +70,9 @@ final class ck {
             var4Lifetime2 = var3;
           }
           var4Lifetime1 = null;
-          if (null != al.field_n &&
-            !al.field_n.equals(param2.getParameter("session"))) {
-            var4Lifetime1 = al.field_n;
+          if (null != GlobalSpell.field_n &&
+            !GlobalSpell.field_n.equals(param2.getParameter("session"))) {
+            var4Lifetime1 = GlobalSpell.field_n;
           }
           stackIn_11_0 = rv.a((String) (var3), (String) (var4Lifetime1), 0, -1, param1);
           return stackIn_11_0;
@@ -113,8 +113,8 @@ final class ck {
         dt.a(wq.field_a, 23678);
         wq.field_a.a(-30918, ft.field_m);
         wq.field_a = null;
-        if (null != ra.field_e) {
-          ra.field_e.b(124);
+        if (null != AreaSpell.field_e) {
+          AreaSpell.field_e.b(124);
         }
         si.field_b.requestFocus();
         if (param0 < -50) {

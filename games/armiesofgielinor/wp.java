@@ -88,7 +88,7 @@ final class wp extends ms {
           }
           if (var10 == null) {
             var10 = new ig(var9, up.field_e.c(var9, (byte) 81));
-            var3.a((byte) -119, (IntrusiveNode) (var10));
+            var3.addLast((byte) -119, (IntrusiveNode) (var10));
           }
           this.field_A[var29[var6Lifetime1]] = new ht(var30, (ig) (var10));
         }

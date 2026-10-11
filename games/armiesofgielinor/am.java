@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class am extends mn {
+final class am extends SpellAreaSelection {
     private int field_J;
     private int field_E;
     static hi field_z;
@@ -62,11 +62,11 @@ final class am extends mn {
         field_A = null;
     }
 
-    private final bd a(Unit param0, byte param1, Battlefield param2) {
+    private final SpellAreaEffect a(Unit param0, byte param1, Battlefield param2) {
         Object stackIn_3_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_23_0 = null;
-        bd stackIn_26_0 = null;
+        SpellAreaEffect stackIn_26_0 = null;
         Object stackIn_32_0 = null;
         pe stackIn_34_0 = null;
         RuntimeException stackIn_37_0 = null;
@@ -82,15 +82,15 @@ final class am extends mn {
         int var7 = 0;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0.packedFlag4) {
+          if (param0.movementSpent) {
             this.a(-84, new String[]{"vine at ", TutorialController.c(param0.tileX, param1 ^ 32, param0.tileY), " has already grown"}, "vine growth");
             stackIn_3_0 = null;
-            return (bd) (stackIn_3_0);
+            return (SpellAreaEffect) (stackIn_3_0);
           }
           if (this.field_H.length != 1) {
             this.a(-98, new String[]{"vine at ", TutorialController.c(param0.tileX, param1 - 32, param0.tileY), " attempted to grow more than one step"}, "vine growth");
             stackIn_6_0 = null;
-            return (bd) (stackIn_6_0);
+            return (SpellAreaEffect) (stackIn_6_0);
           }
           var4_int = this.field_J;
           var5 = this.field_G;
@@ -115,7 +115,7 @@ final class am extends mn {
             var4_int < param2.mapWidth &&
             param2.mapHeight > var5) {
             if (param1 != 32) {
-              stackIn_26_0 = (bd) null;
+              stackIn_26_0 = (SpellAreaEffect) null;
               return stackIn_26_0;
             }
             var6 = param2.tiles[var5 * param2.mapWidth + var4_int].terrainType;
@@ -123,15 +123,15 @@ final class am extends mn {
               4 != var6 &&
               var6 != 6) {
               stackIn_34_0 = new pe(var4_int, var5, this.field_J, this.field_G, param0.strength, this.field_p);
-              return (bd) ((Object) stackIn_34_0);
+              return (SpellAreaEffect) ((Object) stackIn_34_0);
             }
             this.a(120, new String[]{"vine at ", TutorialController.c(param0.tileX, param1 - 32, param0.tileY), " attempted to grow onto ground type: ", Integer.toString(var6)}, "vine growth");
             stackIn_32_0 = null;
-            return (bd) (stackIn_32_0);
+            return (SpellAreaEffect) (stackIn_32_0);
           }
           this.a(127, new String[]{"vine at ", TutorialController.c(param0.tileX, 0, param0.tileY), " attempted to escape the map"}, "vine growth");
           stackIn_23_0 = null;
-          return (bd) (stackIn_23_0);
+          return (SpellAreaEffect) (stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -152,15 +152,15 @@ final class am extends mn {
         }
     }
 
-    final bd a(int param0, Battlefield param1) {
+    final SpellAreaEffect createEffect(int obfuscationGuard, Battlefield battlefield) {
         String discarded$3 = null;
         String discarded$0 = null;
         String discarded$1 = null;
         String discarded$2 = null;
         Object stackIn_3_0 = null;
         Object stackIn_7_0 = null;
-        bd stackIn_13_0 = null;
-        bd stackIn_16_0 = null;
+        SpellAreaEffect stackIn_13_0 = null;
+        SpellAreaEffect stackIn_16_0 = null;
         int stackIn_20_0 = 0;
         Object stackIn_52_0 = null;
         int stackIn_65_0 = 0;
@@ -192,32 +192,32 @@ final class am extends mn {
         var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.unlink(-107);
-          var16 = param1.getUnitAt(this.field_G, true, this.field_J);
+          var16 = battlefield.getUnitAt(this.field_G, true, this.field_J);
           var17 = var16;
           if (var17 == null) {
             discarded$3 = this.a(new String[]{"no unit at ", TutorialController.c(this.field_J, 0, this.field_G)}, 0);
             stackIn_3_0 = null;
-            return (bd) (stackIn_3_0);
+            return (SpellAreaEffect) (stackIn_3_0);
           }
           if (this.field_p != var17.ownerPlayer &&
             !this.field_u) {
             discarded$0 = this.a(new String[]{"unit at ", TutorialController.c(this.field_J, 0, this.field_G), " not owned by this player"}, 0);
             stackIn_7_0 = null;
-            return (bd) (stackIn_7_0);
+            return (SpellAreaEffect) (stackIn_7_0);
           }
           if (var17.unitType != 51 && (!(this.field_o > -1) ||
             uc.spellDefinitions[this.field_o][5] != 24)) {
             if (var17.unitType == 39) {
-              stackIn_16_0 = this.a(var17, (byte) 32, param1);
+              stackIn_16_0 = this.a(var17, (byte) 32, battlefield);
               return stackIn_16_0;
             }
-            if (!var17.packedFlag4) {
+            if (!var17.movementSpent) {
               stackIn_20_0 = 3 * bw.unitDefinitions[var16.unitType][3];
             } else {
               stackIn_20_0 = 0;
             }
             var4 = stackIn_20_0;
-            if (0 != (param1.b(31, var17.tileY, var17.tileX, var17.ownerPlayer) & 4) &&
+            if (0 != (battlefield.b(31, var17.tileY, var17.tileX, var17.ownerPlayer) & 4) &&
               null != this.field_H &&
               this.field_H.length > 0) {
               var4 = 0;
@@ -227,10 +227,10 @@ final class am extends mn {
               uc.spellDefinitions[this.field_o][5] == 18) {
               var4 = var4 << 1;
             }
-            if (7 == var17.field_P) {
+            if (7 == var17.statusEffectType) {
               var4 = var4 >> 1;
             }
-            if (var17.field_P == 8) {
+            if (var17.statusEffectType == 8) {
               var4 = 0;
             }
             var5 = this.field_J;
@@ -238,7 +238,7 @@ final class am extends mn {
             var7 = 0;
             while (this.field_H.length > var7 &&
               var4 > 0) {
-              var8_int = param1.mapWidth * var6 + var5;
+              var8_int = battlefield.mapWidth * var6 + var5;
               var9 = this.field_H[var7];
               if (var9 == 1) {
                 var6--;
@@ -257,9 +257,9 @@ final class am extends mn {
               }
               if (0 <= var5 &&
                 0 <= var6 &&
-                param1.mapWidth > var5 &&
-                param1.mapHeight > var6) {
-                var9Lifetime2 = param1.a(var8_int, -16, var5 + param1.mapWidth * var6, var17.ownerPlayer, var17, true);
+                battlefield.mapWidth > var5 &&
+                battlefield.mapHeight > var6) {
+                var9Lifetime2 = battlefield.a(var8_int, -16, var5 + battlefield.mapWidth * var6, var17.ownerPlayer, var17, true);
                 if (var9Lifetime2 <= var4) {
                   var4 = var4 - var9Lifetime2;
                   var7++;
@@ -270,15 +270,15 @@ final class am extends mn {
               } else {
                 discarded$2 = this.a(new String[]{"unit at ", TutorialController.c(this.field_J, 0, this.field_G), " attempted to escape the map"}, 0);
                 stackIn_52_0 = null;
-                return (bd) (stackIn_52_0);
+                return (SpellAreaEffect) (stackIn_52_0);
               }
               break;
             }
-            if (var17.packedLowFlags == 0) {
+            if (var17.attacksRemaining == 0) {
               this.field_E = 0;
               this.field_w = 0;
             }
-            var8 = param1.getUnitAt(this.field_E + var6, true, var5 + this.field_w);
+            var8 = battlefield.getUnitAt(this.field_E + var6, true, var5 + this.field_w);
             if (var8 == null) {
               this.field_E = 0;
               this.field_w = 0;
@@ -294,27 +294,27 @@ final class am extends mn {
               var17.unitType == 34) {
               var12 = 2;
               var13 = 7;
-              if (var17.j(20640) == 3) {
-                var13 = var13 + var17.d(1, 57);
+              if (var17.getEquipmentCategory(20640) == 3) {
+                var13 = var13 + var17.getEquipmentProperty(1, 57);
               }
             }
             {
               if (81 != var17.unitType &&
                 4 != var17.unitType && (var17.unitType != 74 ||
-                3 != var17.j(20640))) {
-                if (var17.g(0) == 3 &&
-                  var17.j(20640) == 2) {
-                  var13 = var13 + var17.d(1, -108);
-                } else if (2 != var17.g(0)) {
-                } else if (var17.j(20640) != 1) {
+                3 != var17.getEquipmentCategory(20640))) {
+                if (var17.getUnitCategory(0) == 3 &&
+                  var17.getEquipmentCategory(20640) == 2) {
+                  var13 = var13 + var17.getEquipmentProperty(1, -108);
+                } else if (2 != var17.getUnitCategory(0)) {
+                } else if (var17.getEquipmentCategory(20640) != 1) {
                 } else {
-                  var13 = var13 + var17.d(1, -87);
+                  var13 = var13 + var17.getEquipmentProperty(1, -87);
                 }
               } else {
-                var13 = var13 + var17.d(1, 118);
+                var13 = var13 + var17.getEquipmentProperty(1, 118);
               }
             }
-            if (param0 < 31) {
+            if (obfuscationGuard < 31) {
               field_I = (long[]) null;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -327,7 +327,7 @@ final class am extends mn {
             else {
               if (1 >= var11) {
                 if (var11 == 1 &&
-                  4 == var8.g(0) &&
+                  4 == var8.getUnitCategory(0) &&
                   !var17.j((byte) 78)) {
                   this.field_w = 0;
                   this.field_E = 0;
@@ -335,12 +335,12 @@ final class am extends mn {
               } else {
                 stackIn_97_0 = (bw.unitDefinitions[var17.unitType][0] != 4) ? 0 : 1;
                 var14 = stackIn_97_0;
-                if (!param1.field_j.a(var6, this.field_w + var5, var5, var14 != 0, var13, this.field_E + var6, (byte) 81)) {
+                if (!battlefield.field_j.a(var6, this.field_w + var5, var5, var14 != 0, var13, this.field_E + var6, (byte) 81)) {
                   this.field_w = 0;
                   this.field_E = 0;
                 }
-                if ((param1.b(31, var6 + this.field_E, var5 + this.field_w, var17.ownerPlayer) & 2) != 0 ||
-                  0 != (param1.b(31, var6, var5, var17.ownerPlayer) & 2)) {
+                if ((battlefield.b(31, var6 + this.field_E, var5 + this.field_w, var17.ownerPlayer) & 2) != 0 ||
+                  0 != (battlefield.b(31, var6, var5, var17.ownerPlayer) & 2)) {
                   this.field_w = 0;
                   this.field_E = 0;
                 }
@@ -351,17 +351,17 @@ final class am extends mn {
               0 == this.field_E) {
               return null;
             }
-            stackIn_114_0 = new ld(this.field_J, this.field_G, this.field_H, var7, this.field_w, this.field_E, this.field_p, var17, param1.getUnitAt(var6 + this.field_E, true, this.field_w + var5));
-            return (bd) ((Object) stackIn_114_0);
+            stackIn_114_0 = new ld(this.field_J, this.field_G, this.field_H, var7, this.field_w, this.field_E, this.field_p, var17, battlefield.getUnitAt(var6 + this.field_E, true, this.field_w + var5));
+            return (SpellAreaEffect) ((Object) stackIn_114_0);
           }
-          stackIn_13_0 = this.a(param1, 0, var17);
+          stackIn_13_0 = this.a(battlefield, 0, var17);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_117_0 = var3;
-          stackIn_117_1 = new StringBuilder().append("am.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_117_1 = new StringBuilder().append("am.C(").append(obfuscationGuard).append(',');
+          if (battlefield == null) {
             stackIn_118_2 = "null";
           } else {
             stackIn_118_2 = "{...}";
@@ -370,7 +370,7 @@ final class am extends mn {
         }
     }
 
-    private final bd a(Battlefield param0, int param1, Unit param2) {
+    private final SpellAreaEffect a(Battlefield param0, int param1, Unit param2) {
         Object stackIn_6_0 = null;
         Object stackIn_12_0 = null;
         ur stackIn_16_0 = null;
@@ -399,18 +399,18 @@ final class am extends mn {
               if (param1 > ~this.field_o &&
                 uc.spellDefinitions[this.field_o][5] == 24) {
                 stackIn_16_0 = new ur(this.field_J, this.field_G, this.field_w, this.field_E, this.field_p, param2, false);
-                return (bd) ((Object) stackIn_16_0);
+                return (SpellAreaEffect) ((Object) stackIn_16_0);
               }
               stackIn_18_0 = new ur(this.field_J, this.field_G, this.field_w, this.field_E, this.field_p, param2, true);
-              return (bd) ((Object) stackIn_18_0);
+              return (SpellAreaEffect) ((Object) stackIn_18_0);
             }
             this.a(126, new String[]{"unit at ", TutorialController.c(param2.tileX, 0, param2.tileY), " attempted to teleport onto ground type: ", Integer.toString(var6)}, "teleport");
             stackIn_12_0 = null;
-            return (bd) (stackIn_12_0);
+            return (SpellAreaEffect) (stackIn_12_0);
           }
           this.a(param1 + 124, new String[]{"unit at ", TutorialController.c(param2.tileX, 0, param2.tileY), " attempted to teleport off the map"}, "teleport");
           stackIn_6_0 = null;
-          return (bd) (stackIn_6_0);
+          return (SpellAreaEffect) (stackIn_6_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

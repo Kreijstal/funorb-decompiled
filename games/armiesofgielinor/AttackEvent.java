@@ -4,15 +4,15 @@
 import java.util.*;
 
 final class AttackEvent extends GameEvent {
-    private boolean field_J;
-    private int field_H;
+    private boolean applied;
+    private int targetDeltaY;
     static String[][][] field_A;
-    private int field_z;
-    private int field_C;
-    private int field_Q;
+    private int targetDeltaX;
+    private int attackerAnimationCount;
+    private int defenderAnimationCount;
     static String field_D;
     static volatile long field_P;
-    private Unit field_N;
+    private Unit targetUnit;
     static RgbSprite field_E;
     static String field_K;
     private int field_M;
@@ -69,7 +69,7 @@ final class AttackEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -84) {
-            this.field_H = 109;
+            this.targetDeltaY = 109;
           }
           stackIn_3_0 = this.a((byte) -39, param2, param0, true);
           return stackIn_3_0;
@@ -209,31 +209,31 @@ final class AttackEvent extends GameEvent {
             var6 = (GameplayController) null;
             this.a((NodeDeque) null, (byte) 68, (GameplayController) null);
           }
-          if (this.field_J) {
+          if (this.applied) {
             return;
           }
-          this.field_J = true;
+          this.applied = true;
           this.unit = battlefield.getUnitAt(this.field_M, true, this.field_L);
           if (null == this.unit) {
             return;
           }
           var3_int = this.unit.tileX;
           var4 = this.unit.tileY;
-          if (!this.unit.a(this.field_N, (byte) 119)) {
-            if (this.field_N.g(0) == 4 &&
+          if (!this.unit.a(this.targetUnit, (byte) 119)) {
+            if (this.targetUnit.getUnitCategory(0) == 4 &&
               !this.unit.j((byte) 103)) {
               return;
             }
-            var10 = battlefield.a(this.field_N, var4, (byte) -128, this.field_H, this.unit, this.field_z, var3_int);
+            var10 = battlefield.a(this.targetUnit, var4, (byte) -128, this.targetDeltaY, this.unit, this.targetDeltaX, var3_int);
             stackIn_13_0 = battlefield.pendingEvents;
             stackIn_13_1 = obfuscationGuard ^ -27339;
             stackIn_13_2 = null;
             stackIn_13_3 = null;
-            stackIn_13_4 = this.field_N.unitType;
+            stackIn_13_4 = this.targetUnit.unitType;
             stackIn_13_5 = var3_int;
             stackIn_13_6 = var4;
-            stackIn_13_7 = this.field_z;
-            stackIn_13_8 = this.field_H;
+            stackIn_13_7 = this.targetDeltaX;
+            stackIn_13_8 = this.targetDeltaY;
             stackIn_13_9 = var10[0];
             stackIn_13_10 = var10[1];
             if ((1 & var10[2]) <= 0) {
@@ -254,10 +254,10 @@ final class AttackEvent extends GameEvent {
               stackIn_14_3Lifetime1 = null;
               stackIn_17_12 = true;
             }
-            ((NodeDeque) (Object) stackIn_13_0).a(stackIn_13_1, new CombatEvent(stackIn_13_4, stackIn_13_5, stackIn_13_6, stackIn_13_7, stackIn_13_8, stackIn_13_9, stackIn_13_10, stackIn_14_11, stackIn_17_12, this.field_C, this.field_Q, this.unit.packedFlag8, this.field_N.packedFlag8, 0));
+            ((NodeDeque) (Object) stackIn_13_0).addFirst(stackIn_13_1, new CombatEvent(stackIn_13_4, stackIn_13_5, stackIn_13_6, stackIn_13_7, stackIn_13_8, stackIn_13_9, stackIn_13_10, stackIn_14_11, stackIn_17_12, this.attackerAnimationCount, this.defenderAnimationCount, this.unit.packedFlag8, this.targetUnit.packedFlag8, 0));
             return;
           }
-          battlefield.pendingEvents.a(750, new ParasiteEvent(var3_int, var4, this.field_z, this.field_H, this.unit.ownerPlayer));
+          battlefield.pendingEvents.addFirst(750, new ParasiteEvent(var3_int, var4, this.targetDeltaX, this.targetDeltaY, this.unit.ownerPlayer));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -276,14 +276,14 @@ final class AttackEvent extends GameEvent {
     AttackEvent(int param0, int param1, int param2, int param3, Unit param4, int param5, int param6) {
         try {
           this.field_L = param0;
-          this.field_H = param3;
+          this.targetDeltaY = param3;
           this.field_m = 27;
           this.field_M = param1;
-          this.field_J = false;
-          this.field_C = param5;
-          this.field_N = param4;
-          this.field_z = param2;
-          this.field_Q = param6;
+          this.applied = false;
+          this.attackerAnimationCount = param5;
+          this.targetUnit = param4;
+          this.targetDeltaX = param2;
+          this.defenderAnimationCount = param6;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "ns.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }

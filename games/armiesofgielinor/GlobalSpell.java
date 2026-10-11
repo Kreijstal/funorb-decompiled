@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class al extends ik {
+final class GlobalSpell extends Spell {
     static String field_k;
     static je field_f;
     static int field_h;
@@ -13,16 +13,16 @@ final class al extends ik {
     static String field_m;
     static int field_g;
 
-    final int a(int param0) {
-        if (param0 != 25365) {
+    final int getPayloadSize(int obfuscationGuard) {
+        if (obfuscationGuard != 25365) {
           field_j = (String) null;
           return 2;
         }
         return 2;
     }
 
-    al(int param0) {
-        super(param0);
+    GlobalSpell(int spellId) {
+        super(spellId);
     }
 
     final static boolean a(boolean param0) {
@@ -33,80 +33,80 @@ final class al extends ik {
         return ed.a(-111);
     }
 
-    final void a(Battlefield param0, int param1) {
+    final void finishEffect(Battlefield battlefield, int obfuscationGuard) {
         try {
-          if (param1 != -1700635440) {
+          if (obfuscationGuard != -1700635440) {
             field_m = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "al.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "al.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    final void a(int param0, PacketBuffer param1) {
+    final void writePayload(int obfuscationGuard, PacketBuffer packet) {
         try {
-          param1.b(true, this.field_c);
-          if (param0 != -11637) {
-            this.a(-111);
+          packet.b(true, this.spellId);
+          if (obfuscationGuard != -11637) {
+            this.getPayloadSize(-111);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "al.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "al.E(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, Battlefield param1, int param2) {
+    final void applyEffect(int castingPlayer, Battlefield battlefield, int obfuscationGuard) {
         RuntimeException var4 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (uc.spellDefinitions[this.field_c][5] == 1) {
-            param1.b(uc.spellDefinitions[this.field_c][6], param0, 1, (byte) 92);
+          if (uc.spellDefinitions[this.spellId][5] == 1) {
+            battlefield.b(uc.spellDefinitions[this.spellId][6], castingPlayer, 1, (byte) 92);
           }
-          if (uc.spellDefinitions[this.field_c][5] == 0) {
-            param1.pendingEvents.a((byte) -119, (IntrusiveNode) (new ManaEvent(4, uc.spellDefinitions[this.field_c][6], param0)));
+          if (uc.spellDefinitions[this.spellId][5] == 0) {
+            battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new ManaEvent(4, uc.spellDefinitions[this.spellId][6], castingPlayer)));
           }
-          if (uc.spellDefinitions[this.field_c][5] == 2) {
-            param1.kingBlackDragonSummoned = false;
+          if (uc.spellDefinitions[this.spellId][5] == 2) {
+            battlefield.kingBlackDragonSummoned = false;
           }
-          if (param2 == 26123) {
+          if (obfuscationGuard == 26123) {
             return;
           }
-          al.a(false);
+          GlobalSpell.a(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_13_0 = var4;
-          stackIn_13_1 = new StringBuilder().append("al.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_13_1 = new StringBuilder().append("al.A(").append(castingPlayer).append(',');
+          if (battlefield == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     final static void a(int param0, boolean param1) {
         cm.a(2000, param1);
         if (param0 >= -21) {
-          al.a(-83, true);
+          GlobalSpell.a(-83, true);
           da.a(-10820, param1);
           return;
         }
         da.a(-10820, param1);
     }
 
-    final void a(byte param0, Battlefield param1) {
+    final void prepareEffect(byte obfuscationGuard, Battlefield battlefield) {
         try {
-          if (param0 != -37) {
+          if (obfuscationGuard != -37) {
             Battlefield var4 = (Battlefield) null;
-            this.a(-41, (Battlefield) null, -67);
+            this.applyEffect(-41, (Battlefield) null, -67);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "al.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "al.D(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 

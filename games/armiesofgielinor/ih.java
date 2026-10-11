@@ -1166,7 +1166,7 @@ class ih extends hn {
           }
           this.field_I[param3][var7.field_F] = var7;
         }
-        this.field_Q.field_p.a((byte) -119, (IntrusiveNode) (var7));
+        this.field_Q.field_p.addLast((byte) -119, (IntrusiveNode) (var7));
         this.field_M[param3][param1] = var7;
         return;
     }

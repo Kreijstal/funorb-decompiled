@@ -30,7 +30,7 @@ final class oh extends dr {
         if (ql.field_e != null) {
           var2 = ql.field_e;
           String var1 = var2;
-          wr.a((byte) 68, fo.a(4800, ra.field_l, new String[]{var2}));
+          wr.a((byte) 68, fo.a(4800, AreaSpell.field_l, new String[]{var2}));
           ql.field_e = null;
         }
         if (param0 <= -127) {

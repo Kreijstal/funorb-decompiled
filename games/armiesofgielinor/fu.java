@@ -87,7 +87,7 @@ final class fu {
               }
             } else {
               this.field_c = fq.field_f[param1];
-              this.field_i = mn.field_l[param1];
+              this.field_i = SpellAreaSelection.field_l[param1];
             }
           }
           return;

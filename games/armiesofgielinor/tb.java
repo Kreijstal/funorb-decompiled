@@ -300,9 +300,9 @@ final class tb implements pa {
             if (param0.field_m != 11) {
               if (3 == param0.field_m) {
                 var23_ref = (StateChangeEvent) (param0);
-                var4 = this.field_m * var23_ref.field_J + var23_ref.field_I;
+                var4 = this.field_m * var23_ref.tileY + var23_ref.tileX;
                 this.field_f.field_x = var4;
-                var23_ref.unit = this.field_c.getUnitAt(var23_ref.field_J, true, var23_ref.field_I);
+                var23_ref.unit = this.field_c.getUnitAt(var23_ref.tileY, true, var23_ref.tileX);
                 if (var23_ref.unit == null) {
                   var24 = nv.field_bb + ": Can see capture";
                   this.field_c.a(param1 ^ 57, var24, param0);
@@ -322,7 +322,7 @@ final class tb implements pa {
                       this.field_f.field_x = var4;
                       if (null != var21_ref.unit &&
                         var21_ref.unit.packedFlag256) {
-                        var21_ref.unit = var21_ref.unit.b(false);
+                        var21_ref.unit = var21_ref.unit.copyDetached(false);
                       }
                       if (null == var21_ref.unit) {
                         var22 = nv.field_bb + ": Can see telepop";
@@ -352,9 +352,9 @@ final class tb implements pa {
                           param0.field_m != 14) {
                           if ((param0.field_m == 18)) {
                             var15 = (DeployEvent) (param0);
-                            var4 = var15.field_E + this.field_m * var15.field_D;
+                            var4 = var15.tileX + this.field_m * var15.tileY;
                             this.field_f.field_x = var4;
-                            var15.unit = this.field_c.getUnitAt(var15.field_D, true, var15.field_E);
+                            var15.unit = this.field_c.getUnitAt(var15.tileY, true, var15.tileX);
                             if (var15.unit == null) {
                               var16 = nv.field_bb + ": Can see deployment";
                               this.field_c.a(0, var16, param0);
@@ -379,9 +379,9 @@ final class tb implements pa {
                         }
                         else {
                           var18_ref = (StateChangeEvent) (param0);
-                          var4 = var18_ref.field_I + var18_ref.field_J * this.field_m;
+                          var4 = var18_ref.tileX + var18_ref.tileY * this.field_m;
                           this.field_f.field_x = var4;
-                          var18_ref.unit = this.field_c.getUnitAt(var18_ref.field_J, true, var18_ref.field_I);
+                          var18_ref.unit = this.field_c.getUnitAt(var18_ref.tileY, true, var18_ref.tileX);
                           if (var18_ref.unit == null) {
                             var19 = nv.field_bb + ": Can see heal, raise, pump";
                             this.field_c.a(0, var19, param0);
@@ -395,11 +395,11 @@ final class tb implements pa {
                     }
                   } else {
                     var13 = (TeleportEvent) (param0);
-                    var4 = var13.field_A + var13.field_B * this.field_m;
-                    var13.unit = this.field_c.getUnitAt(var13.field_B, true, var13.field_A);
+                    var4 = var13.sourceX + var13.sourceY * this.field_m;
+                    var13.unit = this.field_c.getUnitAt(var13.sourceY, true, var13.sourceX);
                     if (null != var13.unit &&
                       var13.unit.packedFlag256) {
-                      var13.unit = var13.unit.b(false);
+                      var13.unit = var13.unit.copyDetached(false);
                     }
                     this.field_f.field_x = var4;
                     if (var13.unit == null) {
@@ -414,9 +414,9 @@ final class tb implements pa {
                   }
                 } else {
                   var11 = (StateChangeEvent) (param0);
-                  var4 = this.field_m * var11.field_J + var11.field_I;
+                  var4 = this.field_m * var11.tileY + var11.tileX;
                   this.field_f.field_x = var4;
-                  var11.unit = this.field_c.getUnitAt(var11.field_J, true, var11.field_I);
+                  var11.unit = this.field_c.getUnitAt(var11.tileY, true, var11.tileX);
                   if (null == var11.unit) {
                     var12 = nv.field_bb + ": Can see burial";
                     this.field_c.a(0, var12, param0);
@@ -429,7 +429,7 @@ final class tb implements pa {
               }
             } else {
               var9 = (GrowthEvent) (param0);
-              var4 = var9.field_H + var9.field_F * this.field_m;
+              var4 = var9.tileX + var9.tileY * this.field_m;
               this.field_f.field_x = var4;
               if (null == var9.unit) {
                 var10 = nv.field_bb + ": Can see growth";

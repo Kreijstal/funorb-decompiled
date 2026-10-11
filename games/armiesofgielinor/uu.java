@@ -118,7 +118,7 @@ final class uu {
                   decompiledSharedTail0 = (var19 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  var10_ref_String = fo.a(4800, wa.field_h, new String[]{Integer.toString(vj.field_a)});
+                  var10_ref_String = fo.a(4800, UnitSpell.field_h, new String[]{Integer.toString(vj.field_a)});
                 }
                 if (0 == (16 & hg.field_b) &&
                   !vk.field_f) {

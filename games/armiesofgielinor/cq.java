@@ -285,7 +285,7 @@ final class cq extends IntrusiveNode {
             var13 = var4_ref_ne__[var5];
             if (null != var13.occupant &&
               var13.occupant.ownerPlayer != param0.field_w) {
-              var7 = var13.occupant.g(0);
+              var7 = var13.occupant.getUnitCategory(0);
               if (this.field_n.a(-57, (long)var7) == null) {
                 this.field_n.a(new IntrusiveNode(), (long)var7, 108);
               }

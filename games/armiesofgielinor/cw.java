@@ -37,15 +37,15 @@ final class cw {
               jf.field_C.selectedUnit.ownerPlayer == jf.field_C.field_q) {
               return;
             }
-            if (jf.field_C.selectedUnit.packedLowFlags > 0) {
-              if (!jf.field_C.selectedUnit.packedFlag4 &&
+            if (jf.field_C.selectedUnit.attacksRemaining > 0) {
+              if (!jf.field_C.selectedUnit.movementSpent &&
                 jf.field_C.selectedUnit.ownerPlayer == jf.field_C.field_q &&
                 !jf.field_C.selectedUnit.h(-13494)) {
-                var7 = jf.field_C.selectedUnit.B(3257);
-                var8 = jf.field_C.selectedUnit.l((byte) -79);
-                var9 = jf.field_C.movementPlanner.field_n;
-                var10 = jf.field_C.movementPlanner.field_b;
-                if (jf.field_C.selectedUnit.o(-28467)) {
+                var7 = jf.field_C.selectedUnit.getMaximumAttackRange(3257);
+                var8 = jf.field_C.selectedUnit.getMinimumAttackRange((byte) -79);
+                var9 = jf.field_C.movementPlanner.targetX;
+                var10 = jf.field_C.movementPlanner.targetY;
+                if (jf.field_C.selectedUnit.hasMovementTarget(-28467)) {
                   var9 = jf.field_C.selectedUnit.a(false);
                   var10 = jf.field_C.selectedUnit.D(-65);
                 }
@@ -79,35 +79,35 @@ final class cw {
                   }
                 }
               }
-              stackIn_38_0 = (jf.field_C.selectedUnit.packedFlag4) ? 1 : 3;
+              stackIn_38_0 = (jf.field_C.selectedUnit.movementSpent) ? 1 : 3;
               var7Lifetime1 = stackIn_38_0;
-              var8Lifetime1 = jf.field_C.movementPlanner.c(27732);
+              var8Lifetime1 = jf.field_C.movementPlanner.getMovementBudget(27732);
               if ((jf.field_C.movementPlanner.field_e[param0] & var7Lifetime1) != 0) {
-                if (!jf.field_C.selectedUnit.packedFlag4 &&
-                  jf.field_C.movementPlanner.field_q[param0] <= var8Lifetime1) {
+                if (!jf.field_C.selectedUnit.movementSpent &&
+                  jf.field_C.movementPlanner.movementCosts[param0] <= var8Lifetime1) {
                   return;
                 }
                 if (param5 == 0 ||
-                  (!(var8Lifetime1 >= jf.field_C.movementPlanner.field_q[-CipherPacketBuffer.currentBattlefield.mapWidth + param0]) ||
-                  jf.field_C.selectedUnit.packedFlag4) &&
+                  (!(var8Lifetime1 >= jf.field_C.movementPlanner.movementCosts[-CipherPacketBuffer.currentBattlefield.mapWidth + param0]) ||
+                  jf.field_C.selectedUnit.movementSpent) &&
                   (var7Lifetime1 & jf.field_C.movementPlanner.field_e[param0 - ks.field_y]) == 0) {
                   SoftwareRaster.d(-40 + param2, param1, param2, -20 + param1, 16711680, var6_int);
                 }
                 if (param5 == -1 + ef.field_c ||
-                  (!(var8Lifetime1 >= jf.field_C.movementPlanner.field_q[ks.field_y + param0]) ||
-                  jf.field_C.selectedUnit.packedFlag4) &&
+                  (!(var8Lifetime1 >= jf.field_C.movementPlanner.movementCosts[ks.field_y + param0]) ||
+                  jf.field_C.selectedUnit.movementSpent) &&
                   (jf.field_C.movementPlanner.field_e[ks.field_y + param0] & var7Lifetime1) == 0) {
                   SoftwareRaster.d(40 + param2, param1, param2, param1 + 20, 16711680, var6_int);
                 }
                 if (0 == param4 ||
-                  (!(jf.field_C.movementPlanner.field_q[-1 + param0] <= var8Lifetime1) ||
-                  jf.field_C.selectedUnit.packedFlag4) &&
+                  (!(jf.field_C.movementPlanner.movementCosts[-1 + param0] <= var8Lifetime1) ||
+                  jf.field_C.selectedUnit.movementSpent) &&
                   (var7Lifetime1 & jf.field_C.movementPlanner.field_e[param0 - 1]) == 0) {
                   SoftwareRaster.d(param2 - 40, param1, param2, 20 + param1, 16711680, var6_int);
                 }
                 if (param4 != -1 + ks.field_y) {
-                  if (var8Lifetime1 >= jf.field_C.movementPlanner.field_q[1 + param0] &&
-                    !jf.field_C.selectedUnit.packedFlag4) {
+                  if (var8Lifetime1 >= jf.field_C.movementPlanner.movementCosts[1 + param0] &&
+                    !jf.field_C.selectedUnit.movementSpent) {
                     return;
                   }
                   if ((var7Lifetime1 & jf.field_C.movementPlanner.field_e[param0 + 1]) != 0) {

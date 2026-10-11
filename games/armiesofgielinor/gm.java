@@ -121,7 +121,7 @@ final class gm implements lv {
           if (param0 != 14) {
             return null;
           }
-          stackIn_27_0 = fo.a(param1 ^ 4806, ra.field_i, new String[]{param2});
+          stackIn_27_0 = fo.a(param1 ^ 4806, AreaSpell.field_i, new String[]{param2});
           return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
