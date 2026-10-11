@@ -125,7 +125,7 @@ final class df extends tj implements fb, he {
               this.field_N.field_k = (kh) ((Object) new td());
             }
           } else {
-            this.field_N.field_s = pe.field_v;
+            this.field_N.field_s = VineGrowthAction.field_v;
           }
           this.field_p = 15;
           var7 = ArmiesOfGielinor.field_J;
@@ -139,7 +139,7 @@ final class df extends tj implements fb, he {
               var8 = ui.field_h;
             }
           } else {
-            var8 = pl.field_t;
+            var8 = DeployAction.field_t;
           }
           dupTemp$0 = new ta(10, this.field_p, this.field_l - 20, 25, this.field_Q, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;

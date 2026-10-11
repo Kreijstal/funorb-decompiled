@@ -83,19 +83,19 @@ final class g extends RuntimeException {
         if (0 < gk.field_J) {
           gk.field_J = gk.field_J - 1;
         } else {
-          if (SpellAreaEffect.field_r <= 0) {
+          if (PreparedAction.field_r <= 0) {
             if (rk.field_D > 0) {
               rk.field_D = rk.field_D - 1;
             }
           } else {
-            SpellAreaEffect.field_r = SpellAreaEffect.field_r - 1;
+            PreparedAction.field_r = PreparedAction.field_r - 1;
           }
         }
         if (gk.field_J > 0) {
           bh.d(false);
         }
-        if (SpellAreaEffect.field_r > 0) {
-          qb.a(SpellAreaEffect.field_r, -71);
+        if (PreparedAction.field_r > 0) {
+          qb.a(PreparedAction.field_r, -71);
         }
         if (param0 != -6145) {
           return;

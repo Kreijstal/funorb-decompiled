@@ -35,7 +35,7 @@ final class qb {
           var3 = 0;
           var1_intLifetime1 = var3;
           while (var3 < bn.field_a.length) {
-            SpellAreaSelection.field_k[76][var3] = bn.field_a[var3];
+            ActionRequest.field_k[76][var3] = bn.field_a[var3];
             var3++;
           }
           return;

@@ -37,7 +37,7 @@ final class se {
             return stackIn_5_0;
           }
           if (gt.a(param0, (byte) -114)) {
-            stackIn_8_0 = am.field_F;
+            stackIn_8_0 = MoveAttackRequest.field_F;
             return stackIn_8_0;
           }
           if (2 != th.field_a) {

@@ -99,12 +99,12 @@ final class uf {
         int[] var8 = var10;
         int[] var6 = var8;
         int[] var5 = var6;
-        fe.a(-100 + var2 / 2, (var4 >> 1) + (var3 / 2 - 30), 98, 30, il.field_s, var10, 0, 128, true);
+        fe.a(-100 + var2 / 2, (var4 >> 1) + (var3 / 2 - 30), 98, 30, DisplacedUnitMarker.field_s, var10, 0, 128, true);
         int[] var11 = wg.a(-33, 2 + var2 / 2, var2 / 2 + 100, var3 / 2 - (-(var4 >> 1) + 30), var3 / 2 + (var4 >> 1)) ? TutorialController.field_e : nd.field_b;
         int[] var9 = var11;
         int[] var7 = var9;
         var5 = var7;
-        fe.a(var2 / 2 + 2, -30 + (var3 / 2 + (var4 >> 1)), 98, 30, il.field_s, var11, 0, 128, true);
+        fe.a(var2 / 2 + 2, -30 + (var3 / 2 + (var4 >> 1)), 98, 30, DisplacedUnitMarker.field_s, var11, 0, 128, true);
         fe.c(nt.field_p, 50 + (-100 + var2 / 2), 17 + (var4 >> 1) + var3 / 2 - 15, 0, true);
         fe.c(oa.field_G, -50 + var2 / 2 + 100, 2 + (var3 / 2 + (var4 >> 1)), 0, true);
     }

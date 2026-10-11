@@ -230,8 +230,8 @@ final class StateChangeEvent extends GameEvent {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          wd.field_b = rs.field_n.a(il.field_t[17]) + 20;
-          var1_int = rs.field_n.a(il.field_t[18]);
+          wd.field_b = rs.field_n.a(DisplacedUnitMarker.field_t[17]) + 20;
+          var1_int = rs.field_n.a(DisplacedUnitMarker.field_t[18]);
           if (wd.field_b < var1_int) {
             wd.field_b = var1_int;
           }

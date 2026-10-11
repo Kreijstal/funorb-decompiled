@@ -317,7 +317,7 @@ class kb extends IntrusiveNode {
               if (el.field_d != 0) {
                 if (var5 == 0) {
                   if (DeployEvent.field_A != 0) {
-                    if (!this.a(iu.field_t, param2, param3, 113, this, ur.field_z, DeployEvent.field_A)) {
+                    if (!this.a(iu.field_t, param2, param3, 113, this, TeleportAction.field_z, DeployEvent.field_A)) {
                       if (ro.field_ub != 0) {
                         au.field_Ob = ro.field_ub;
                         OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
@@ -388,7 +388,7 @@ class kb extends IntrusiveNode {
                 this.a(AiPlanningStrategy.field_d, param2, param3, ko.field_b, el.field_d, param1 + 6327, this);
               }
               if (DeployEvent.field_A != 0) {
-                if (!this.a(iu.field_t, param2, param3, 113, this, ur.field_z, DeployEvent.field_A)) {
+                if (!this.a(iu.field_t, param2, param3, 113, this, TeleportAction.field_z, DeployEvent.field_A)) {
                   if (var5 == 0) {
                     if (ro.field_ub == 0) {
                       if (au.field_Ob == 0) {
@@ -460,7 +460,7 @@ class kb extends IntrusiveNode {
           if (param0) {
             if (el.field_d == 0) {
               if (DeployEvent.field_A != 0) {
-                if (!this.a(iu.field_t, param2, param3, 113, this, ur.field_z, DeployEvent.field_A)) {
+                if (!this.a(iu.field_t, param2, param3, 113, this, TeleportAction.field_z, DeployEvent.field_A)) {
                   if (var5 != 0) {
                     this.f(1);
                     if (var7 != 0) {
@@ -531,7 +531,7 @@ class kb extends IntrusiveNode {
               OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
-            if (!this.a(iu.field_t, param2, param3, 113, this, ur.field_z, DeployEvent.field_A)) {
+            if (!this.a(iu.field_t, param2, param3, 113, this, TeleportAction.field_z, DeployEvent.field_A)) {
               if (var5 == 0) {
                 if (ro.field_ub != 0) {
                   au.field_Ob = ro.field_ub;

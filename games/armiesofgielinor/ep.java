@@ -364,7 +364,7 @@ final class ep {
             if (ta.field_N == 2) {
               jj.field_g = new hi((java.net.Socket) (kd.field_R.field_f), vq.field_c);
               var2 = new PacketBuffer(13);
-              it.a(hq.field_e, false, am.field_x, var2, ek.field_e);
+              it.a(hq.field_e, false, MoveAttackRequest.field_x, var2, ek.field_e);
               var2.b(1, 15);
               var2.a((byte) -124, vq.field_d);
               jj.field_g.a(var2.payload, (byte) 20, 0, 13);

@@ -830,8 +830,8 @@ final class BattleCharacter {
             this.modelIndex = 89;
           }
         }
-        var7 = AttackEvent.a(false, SpellAreaSelection.field_k[this.modelIndex].length, li.field_n);
-        this.model = (ModelMesh) (SpellAreaSelection.field_k[this.modelIndex][var7]);
+        var7 = AttackEvent.a(false, ActionRequest.field_k[this.modelIndex].length, li.field_n);
+        this.model = (ModelMesh) (ActionRequest.field_k[this.modelIndex][var7]);
         if (null == this.model) {
           af.a((Throwable) null, 100, "BattleCharacter: no model found - model_index: " + this.modelIndex + " variation: " + var7);
         }

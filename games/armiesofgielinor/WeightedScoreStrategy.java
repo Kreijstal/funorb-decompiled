@@ -18,7 +18,7 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
         }
         js var8 = new js(pd.field_d, true, false, true, true);
         js var2 = var8;
-        int var3 = pe.b(param1 + 20938, param0);
+        int var3 = VineGrowthAction.b(param1 + 20938, param0);
         int var4 = 127;
         for (var5 = 0; var5 < var2.field_i.length; var5++) {
           var6 = (var4 & var8.field_i[var5]) - 16;
@@ -27,7 +27,7 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
           }
           var2.field_i[var5] = (short)oe.c(var6, rn.a(~var4, var3));
         }
-        return var2.a(be.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, ni.field_a);
+        return var2.a(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, ni.field_a);
     }
 
     final static boolean a(int param0, int param1) {

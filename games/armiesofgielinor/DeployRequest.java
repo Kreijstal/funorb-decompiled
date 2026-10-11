@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jc extends SpellAreaSelection {
-    private int field_y;
+final class DeployRequest extends ActionRequest {
+    private int deployModifier;
     static String[] field_v;
     static String field_x;
     static um field_B;
-    private int field_A;
+    private int tileX;
     static String field_w;
-    private int field_z;
+    private int tileY;
 
     final static String a(String param0, byte param1) {
         int var4 = 0;
@@ -70,7 +70,7 @@ final class jc extends SpellAreaSelection {
         return var2Lifetime1;
     }
 
-    private final String a(String[] param0, boolean param1) {
+    private final String formatDeployRejection(String[] messageParts, boolean obfuscationGuard) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -79,8 +79,8 @@ final class jc extends SpellAreaSelection {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1) {
-            stackIn_4_0 = this.a(125, param0, "deploy");
+          if (!obfuscationGuard) {
+            stackIn_4_0 = this.formatIllegalMove(125, messageParts, "deploy");
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -90,12 +90,12 @@ final class jc extends SpellAreaSelection {
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
           stackIn_7_1 = new StringBuilder().append("jc.F(");
-          if (param0 == null) {
+          if (messageParts == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -107,14 +107,14 @@ final class jc extends SpellAreaSelection {
         field_w = null;
     }
 
-    jc(int param0, int param1, int param2, int param3) {
-        this.field_p = param0;
-        this.field_A = param1;
-        this.field_y = param3;
-        this.field_z = param2;
+    DeployRequest(int actingPlayer, int tileX, int tileY, int deployModifier) {
+        this.actingPlayer = actingPlayer;
+        this.tileX = tileX;
+        this.deployModifier = deployModifier;
+        this.tileY = tileY;
     }
 
-    final SpellAreaEffect createEffect(int obfuscationGuard, Battlefield battlefield) {
+    final PreparedAction prepareAction(int obfuscationGuard, Battlefield battlefield) {
         String discarded$11 = null;
         String discarded$10 = null;
         String discarded$9 = null;
@@ -131,54 +131,54 @@ final class jc extends SpellAreaSelection {
         Object stackIn_11_0 = null;
         Object stackIn_15_0 = null;
         Object stackIn_19_0 = null;
-        SpellAreaEffect stackIn_22_0 = null;
-        pl stackIn_24_0 = null;
+        PreparedAction stackIn_22_0 = null;
+        DeployAction stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           this.unlink(96);
-          var5 = battlefield.getUnitAt(this.field_z, true, this.field_A);
+          var5 = battlefield.getUnitAt(this.tileY, true, this.tileX);
           var6 = var5;
           if (var6 == null) {
-            discarded$11 = this.a(new String[]{"no unit at ", TutorialController.c(this.field_A, 0, this.field_z)}, false);
+            discarded$11 = this.formatDeployRejection(new String[]{"no unit at ", TutorialController.c(this.tileX, 0, this.tileY)}, false);
             stackIn_2_0 = null;
-            return (SpellAreaEffect) (stackIn_2_0);
+            return (PreparedAction) (stackIn_2_0);
           }
-          if (this.field_p != var6.ownerPlayer) {
-            discarded$10 = this.a(new String[]{"unit at ", TutorialController.c(this.field_A, 0, this.field_z), "not owned by player ", "" + this.field_p}, false);
+          if (this.actingPlayer != var6.ownerPlayer) {
+            discarded$10 = this.formatDeployRejection(new String[]{"unit at ", TutorialController.c(this.tileX, 0, this.tileY), "not owned by player ", "" + this.actingPlayer}, false);
             stackIn_5_0 = null;
-            return (SpellAreaEffect) (stackIn_5_0);
+            return (PreparedAction) (stackIn_5_0);
           }
           if (var6.movementSpent) {
-            discarded$9 = this.a(new String[]{"unit at ", TutorialController.c(this.field_A, 0, this.field_z), " has moved"}, false);
+            discarded$9 = this.formatDeployRejection(new String[]{"unit at ", TutorialController.c(this.tileX, 0, this.tileY), " has moved"}, false);
             stackIn_8_0 = null;
-            return (SpellAreaEffect) (stackIn_8_0);
+            return (PreparedAction) (stackIn_8_0);
           }
           if (0 >= (bw.unitDefinitions[var5.unitType][10] & 1024)) {
-            discarded$8 = this.a(new String[]{"unit at ", TutorialController.c(this.field_A, 0, this.field_z), " cannot deploy"}, false);
+            discarded$8 = this.formatDeployRejection(new String[]{"unit at ", TutorialController.c(this.tileX, 0, this.tileY), " cannot deploy"}, false);
             stackIn_11_0 = null;
-            return (SpellAreaEffect) (stackIn_11_0);
+            return (PreparedAction) (stackIn_11_0);
           }
           var4 = battlefield.tiles[var6.tileX + var6.tileY * battlefield.mapWidth];
           if (34 == var6.unitType &&
             !var4.f(19725)) {
-            discarded$6 = this.a(new String[]{"can't deploy on top of structure at ", TutorialController.c(this.field_A, 0, this.field_z)}, false);
+            discarded$6 = this.formatDeployRejection(new String[]{"can't deploy on top of structure at ", TutorialController.c(this.tileX, 0, this.tileY)}, false);
             stackIn_15_0 = null;
-            return (SpellAreaEffect) (stackIn_15_0);
+            return (PreparedAction) (stackIn_15_0);
           }
           if (var6.unitType == 7 &&
             var4.terrainType != 0) {
-            discarded$7 = this.a(new String[]{"can't deploy on top of structure at ", TutorialController.c(this.field_A, 0, this.field_z)}, false);
+            discarded$7 = this.formatDeployRejection(new String[]{"can't deploy on top of structure at ", TutorialController.c(this.tileX, 0, this.tileY)}, false);
             stackIn_19_0 = null;
-            return (SpellAreaEffect) (stackIn_19_0);
+            return (PreparedAction) (stackIn_19_0);
           }
           if (obfuscationGuard > 31) {
-            stackIn_24_0 = new pl(this.field_p, var6, this.field_y);
-            return (SpellAreaEffect) ((Object) stackIn_24_0);
+            stackIn_24_0 = new DeployAction(this.actingPlayer, var6, this.deployModifier);
+            return (PreparedAction) ((Object) stackIn_24_0);
           }
-          stackIn_22_0 = (SpellAreaEffect) null;
+          stackIn_22_0 = (PreparedAction) null;
           return stackIn_22_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

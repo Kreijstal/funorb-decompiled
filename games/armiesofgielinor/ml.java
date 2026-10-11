@@ -15,13 +15,13 @@ final class ml extends je {
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           wh.field_f = false;
-          am.field_v = new sn[47];
+          MoveAttackRequest.field_v = new sn[47];
           for (var2_int = 0; var2_int < 47; var2_int++) {
             var3 = param0.a(wl.field_M[var2_int], (byte) -97, "");
             if (var3 == null) {
               var3 = param0.a((byte) -128, "", wl.field_M[var2_int]);
             }
-            am.field_v[var2_int] = var3;
+            MoveAttackRequest.field_v[var2_int] = var3;
           }
           if (param1 != 123) {
             String var5 = (String) null;
@@ -128,7 +128,7 @@ final class ml extends je {
           }
           var14 = tn.field_Z;
           var5 = iu.field_t;
-          var6 = ur.field_z;
+          var6 = TeleportAction.field_z;
           var7 = 125 / ((22 - param0) / 38);
           var14.field_i.a(0, var6, 0, (byte) -118, var5);
           return;
@@ -215,7 +215,7 @@ final class ml extends je {
             return;
           }
           while (var7 < op.field_c[0].length) {
-            SpellAreaSelection.field_k[76][var7] = WeightedScoreStrategy.b(op.field_c[0][var7], -20849);
+            ActionRequest.field_k[76][var7] = WeightedScoreStrategy.b(op.field_c[0][var7], -20849);
             bp.a(var7, op.field_c[0][var7], param1 - 100);
             var7++;
           }

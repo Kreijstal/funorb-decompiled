@@ -84,7 +84,7 @@ final class la {
           var4.field_i.a(5, var5_ref_String, (byte) -109);
           var4Lifetime1 = tn.field_Z;
           var5 = iu.field_t;
-          var6 = ur.field_z;
+          var6 = TeleportAction.field_z;
           var4Lifetime1.field_i.a(0, var6, 0, (byte) -118, var5);
         }
         DeployEvent.a(-115, param0, param1);
@@ -134,7 +134,7 @@ final class la {
           la.b(104);
         }
         lk.field_h = 0;
-        am.field_D = new int[3];
+        MoveAttackRequest.field_D = new int[3];
         an.field_F = new mo[param1 * 15];
         vj.field_g = param1;
     }
@@ -153,7 +153,7 @@ final class la {
         if (param0 == 43) {
           param0 = 77;
         }
-        this.field_c = (ModelMesh) (SpellAreaSelection.field_k[param0][0]);
+        this.field_c = (ModelMesh) (ActionRequest.field_k[param0][0]);
         this.field_h = nh.field_D[param0];
         this.field_b = 0;
         this.c(0);

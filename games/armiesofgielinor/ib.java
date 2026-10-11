@@ -188,23 +188,23 @@ final class ib extends mk {
             param3 - param8 < 40 &&
             0 < dd.field_e) {
             if (!param0) {
-              fe.a(8 + param2, param8 + 8, param5 - 16, 32, il.field_s, TutorialController.field_e, 0, 128, true);
+              fe.a(8 + param2, param8 + 8, param5 - 16, 32, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 128, true);
             } else {
-              fe.a(param2 + 8, param8 + 8, param5 - 16, 32, il.field_s, nd.field_b, 0, 128, true);
+              fe.a(param2 + 8, param8 + 8, param5 - 16, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true);
             }
           } else {
-            fe.a(8 + param2, 8 + param8, -16 + param5, 32, il.field_s, jh.field_k, 0, 128, true);
+            fe.a(8 + param2, 8 + param8, -16 + param5, 32, DisplacedUnitMarker.field_s, jh.field_k, 0, 128, true);
           }
           if (var9_int == -3 &&
             -param8 + param3 + 40 > param1 &&
             uk.field_q > dd.field_e) {
             if (param0) {
-              fe.a(param2 + 8, param8 + (param1 - 40), -16 + param5, 32, il.field_s, nd.field_b, 0, 128, true);
+              fe.a(param2 + 8, param8 + (param1 - 40), -16 + param5, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true);
             } else {
-              fe.a(8 + param2, -40 + param1 + param8, -16 + param5, 32, il.field_s, TutorialController.field_e, 0, 128, true);
+              fe.a(8 + param2, -40 + param1 + param8, -16 + param5, 32, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 128, true);
             }
           } else {
-            fe.a(8 + param2, -40 + param1 + param8, param5 - 16, 32, il.field_s, jh.field_k, 0, 128, true);
+            fe.a(8 + param2, -40 + param1 + param8, param5 - 16, 32, DisplacedUnitMarker.field_s, jh.field_k, 0, 128, true);
           }
           sa.field_a.e(param2 + ((param5 >> 1) - 29), param8 + 14, 128);
           sa.field_a.e(11 + ((param5 >> 1) + param2), 14 + param8, 128);
@@ -239,7 +239,7 @@ final class ib extends mk {
                   stackIn_40_1 = pg.field_d.a(param7 ^ -40);
                   stackIn_41_2 = !(2 > hi.field_j);
                   if (!ue.a(stackIn_40_0, stackIn_40_1, stackIn_41_2, var11, -1208926000, ei.field_e[0])) {
-                    fe.a(var13, var14, (param5 >> 1) - 9, 78, io.field_m, ld.field_x, 0, 128, false);
+                    fe.a(var13, var14, (param5 >> 1) - 9, 78, io.field_m, MoveAttackAction.field_x, 0, 128, false);
                   } else {
                     fe.a(var13, var14, -9 + (param5 >> 1), 78, io.field_m, TutorialController.field_e, 0, 128, false);
                   }

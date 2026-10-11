@@ -35,7 +35,7 @@ final class hb {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
           boolean decompiledFrameRemainder0 = true;
-          if (null != am.field_z) {
+          if (null != MoveAttackRequest.field_z) {
             if (param1 >= 0) {
               decompiledFrameRemainder0 = (kl.field_k == ov.field_g);
               if ((decompiledFrameRemainder0) && (0 == vl.field_n.position &&
@@ -54,7 +54,7 @@ final class hb {
               }
               if (vl.field_n.position > 0) {
                 try {
-                  am.field_z.a(vl.field_n.payload, (byte) 20, 0, vl.field_n.position);
+                  MoveAttackRequest.field_z.a(vl.field_n.payload, (byte) 20, 0, vl.field_n.position);
                   SummonEvent.field_G = vi.b(51);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,7 +85,7 @@ final class hb {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
           boolean decompiledFrameRemainder0 = true;
-          if (null != am.field_z) {
+          if (null != MoveAttackRequest.field_z) {
             if (param1 >= 0) {
               decompiledFrameRemainder0 = (kl.field_k == ov.field_g);
               if ((decompiledFrameRemainder0) && (0 == vl.field_n.position &&
@@ -104,7 +104,7 @@ final class hb {
               }
               if (vl.field_n.position > 0) {
                 try {
-                  am.field_z.a(vl.field_n.payload, (byte) 20, 0, vl.field_n.position);
+                  MoveAttackRequest.field_z.a(vl.field_n.payload, (byte) 20, 0, vl.field_n.position);
                   SummonEvent.field_G = vi.b(51);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;

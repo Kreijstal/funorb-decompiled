@@ -739,7 +739,7 @@ abstract class hs extends kb implements gw {
         if (param1 < 0) {
           return;
         }
-        sn var3 = am.field_v[param1];
+        sn var3 = MoveAttackRequest.field_v[param1];
         if (var3 != null &&
           0 != var3.field_o.length) {
           ub.$cfr$intArgs$a$6d836999ad61(127, var3);

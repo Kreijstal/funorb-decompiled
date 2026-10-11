@@ -160,7 +160,7 @@ final class ph {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            ld.a(16058, param1);
+            MoveAttackAction.a(16058, param1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

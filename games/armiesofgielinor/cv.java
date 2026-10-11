@@ -169,10 +169,10 @@ final class cv {
           if (param0 > -62) {
             cv.d((byte) -46);
           }
-          pl.field_D = new RgbSprite[3];
-          pl.field_D[0] = nh.a("takenicon_zamorak", "campaign", iw.field_l, false);
-          pl.field_D[1] = nh.a("takenicon_saradomin", "campaign", iw.field_l, false);
-          pl.field_D[2] = nh.a("takenicon_guthix", "campaign", iw.field_l, false);
+          DeployAction.field_D = new RgbSprite[3];
+          DeployAction.field_D[0] = nh.a("takenicon_zamorak", "campaign", iw.field_l, false);
+          DeployAction.field_D[1] = nh.a("takenicon_saradomin", "campaign", iw.field_l, false);
+          DeployAction.field_D[2] = nh.a("takenicon_guthix", "campaign", iw.field_l, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -200,7 +200,7 @@ final class cv {
             this.b(4, 127);
           }
           mu.field_g = (ru[][]) null;
-          pl.field_D = null;
+          DeployAction.field_D = null;
           System.gc();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -311,10 +311,10 @@ final class cv {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           fe.a(db.a(true, 32), u.a(71, (byte) 94), 305, 228, io.field_m, jh.field_k, 0, 128, ai.field_V, true, nd.field_b);
-          fe.a(db.a(true, 32), u.a(321, (byte) 94), 305, 92, io.field_m, jh.field_k, 0, 128, be.field_A, true, nd.field_b);
+          fe.a(db.a(true, 32), u.a(321, (byte) 94), 305, 92, io.field_m, jh.field_k, 0, 128, SummonAction.field_A, true, nd.field_b);
           if (null != this.field_d) {
             if (this.field_d.field_k == -1) {
-              stackIn_8_0 = be.field_A;
+              stackIn_8_0 = SummonAction.field_A;
             } else {
               stackIn_8_0 = this.field_d.field_w;
             }
@@ -324,7 +324,7 @@ final class cv {
             stackIn_11_1 = u.a(361, (byte) 94);
             stackIn_11_2 = 246;
             stackIn_11_3 = 41;
-            stackIn_11_4 = il.field_s;
+            stackIn_11_4 = DisplacedUnitMarker.field_s;
             if (!wg.a(-33, db.a(true, 354), db.a(true, 354) + 246, u.a(361, (byte) 94), u.a(361, (byte) 94) + 41)) {
               stackIn_12_5 = nd.field_b;
             } else {
@@ -634,7 +634,7 @@ final class cv {
                   var10 = param3.field_p.field_E;
                   if (param3.field_r != null) {
                     var10 = 0;
-                    var9 = pl.field_D[this.field_l];
+                    var9 = DeployAction.field_D[this.field_l];
                   } else {
                     var8 = km.field_h[2];
                     var9 = param3.field_p.g(-1).field_h;
@@ -1069,17 +1069,17 @@ final class cv {
               var19_intLifetime1 = this.field_b.field_A;
               if (1000 >= var19_intLifetime1) {
                 if (var19_intLifetime1 > 500) {
-                  am.field_C[1].g(db.a(true, 5 + var18Lifetime1 + var5), u.a(var6Lifetime1 + rs.field_n.field_H - rs.field_n.field_z, (byte) 94));
+                  MoveAttackRequest.field_C[1].g(db.a(true, 5 + var18Lifetime1 + var5), u.a(var6Lifetime1 + rs.field_n.field_H - rs.field_n.field_z, (byte) 94));
                 }
                 if ((!(var19_intLifetime1 > 500) ||
                   var29 != 0) &&
                   (!(10 >= var19_intLifetime1))) {
-                  am.field_C[2].g(db.a(true, var5 + var18Lifetime1 + 5), u.a(-rs.field_n.field_z + rs.field_n.field_H + var6Lifetime1, (byte) 94));
+                  MoveAttackRequest.field_C[2].g(db.a(true, var5 + var18Lifetime1 + 5), u.a(-rs.field_n.field_z + rs.field_n.field_H + var6Lifetime1, (byte) 94));
                   if (var29 != 0) {
-                    am.field_C[0].g(db.a(true, var5 - (-var18Lifetime1 - 5)), u.a(-rs.field_n.field_z + rs.field_n.field_H + var6Lifetime1, (byte) 94));
+                    MoveAttackRequest.field_C[0].g(db.a(true, var5 - (-var18Lifetime1 - 5)), u.a(-rs.field_n.field_z + rs.field_n.field_H + var6Lifetime1, (byte) 94));
                   }
                 }} else {
-                am.field_C[0].g(db.a(true, var5 - (-var18Lifetime1 - 5)), u.a(-rs.field_n.field_z + rs.field_n.field_H + var6Lifetime1, (byte) 94));
+                MoveAttackRequest.field_C[0].g(db.a(true, var5 - (-var18Lifetime1 - 5)), u.a(-rs.field_n.field_z + rs.field_n.field_H + var6Lifetime1, (byte) 94));
               }
             }
             var6Lifetime1 = var6Lifetime1 + rs.field_n.field_v * (-1 + var16Lifetime1);
@@ -1522,7 +1522,7 @@ final class cv {
             while (true) {
               if (java.lang.reflect.Array.getLength(var2) > var3_int) {
                 var4 = ((Object[]) (var2))[var3_int];
-                AreaSpell.a(4, -1, (om) (var4), true, 1, -1);
+                ActionSpell.a(4, -1, (om) (var4), true, 1, -1);
                 var3_int++;
                 if (var7 == 0) {
                   continue;
@@ -1612,7 +1612,7 @@ final class cv {
                           throw new IllegalStateException("");
                       }
                       var5 = b.a(2, 10, 12, (byte) 25, 3);
-                      AreaSpell.a(4, 12, ((cq) (var3)).field_p, true, var5, 3);
+                      ActionSpell.a(4, 12, ((cq) (var3)).field_p, true, var5, 3);
                       this.a(((cq) (var3)).field_p.field_G.field_r, true);
                       System.out.println("m  id " + ((cq) (var3)).field_k + " " + ((cq) (var3)).field_w);
                       var4_int = 1;
@@ -1621,7 +1621,7 @@ final class cv {
                     if ((decompiledSharedTail0) &&
                       (br.field_f[82])) {
                       var4_int = 1;
-                      AreaSpell.a(4, -1, ((cq) (var3)).field_p, true, 1, -1);
+                      ActionSpell.a(4, -1, ((cq) (var3)).field_p, true, 1, -1);
                       this.a(((cq) (var3)).field_p.field_G.field_r, true);
                     }
                   }
@@ -2351,7 +2351,7 @@ final class cv {
               try {
                 var10_ref_sl = ku.j(84);
                 if (var10_ref_sl != null) {
-                  var11 = new cq(-1, be.field_A);
+                  var11 = new cq(-1, SummonAction.field_A);
                   var11.field_B = 278;
                   var11.field_x = 341;
                   var11.field_o = 57;

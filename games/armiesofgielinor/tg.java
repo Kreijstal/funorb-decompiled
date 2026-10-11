@@ -47,7 +47,7 @@ final class tg {
             te.a(param2, this.field_f, (byte) 108);
           }
         } else {
-          AreaSpell.a(this.field_f, param2, 6);
+          ActionSpell.a(this.field_f, param2, 6);
         }
         if (param1 == 101) {
           return true;
@@ -163,7 +163,7 @@ final class tg {
           }
           if (param0.field_b == 2) {
             if (cd.field_c == 0) {
-              this.field_i.a(12, hw.field_C, (byte) -120);
+              this.field_i.a(12, SummonRequest.field_C, (byte) -120);
             }
             this.field_i.a(13, ai.field_R, (byte) -119);
           }
@@ -174,7 +174,7 @@ final class tg {
 
     final static void a(kl param0, int param1, boolean param2, kl param3) {
         try {
-          bk.a(param2, fp.field_Lb, eq.field_h, gm.field_f, ms.field_k, -106, ke.field_e, im.field_x, qc.field_e, ri.field_b, SpellAreaEffect.field_o, rd.field_e);
+          bk.a(param2, fp.field_Lb, eq.field_h, gm.field_f, ms.field_k, -106, ke.field_e, im.field_x, qc.field_e, ri.field_b, PreparedAction.field_o, rd.field_e);
           dh.field_n = fk.a("chatfilter", (byte) -125, param3, "lobby");
           co.field_k[0] = ar.field_v;
           co.field_k[1] = wg.field_a;
@@ -544,7 +544,7 @@ final class tg {
                 if (!vi.field_d) {
                   this.field_i.a(8, fo.a(4800, mi.field_k, new String[]{var7}), (byte) -114);
                 }
-                this.field_i.a(18, fo.a(param1 ^ 4807, jc.field_w, new String[]{var7}), (byte) -111);
+                this.field_i.a(18, fo.a(param1 ^ 4807, DeployRequest.field_w, new String[]{var7}), (byte) -111);
                 if (param0 != null) {
                   this.field_o = param0;
                   this.field_i.a(19, fo.a(4800, kt.field_m, new String[]{var7}), (byte) -115);

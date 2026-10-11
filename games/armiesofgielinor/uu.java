@@ -134,8 +134,8 @@ final class uu {
               stackIn_23_0.field_xb = stackIn_24_1;
               var10 = 2;
               if (null != fs.field_d) {
-                if (null == ur.field_B) {
-                  ur.field_B = new byte[tq.field_b];
+                if (null == TeleportAction.field_B) {
+                  TeleportAction.field_B = new byte[tq.field_b];
                   dt.field_d = new boolean[tq.field_b];
                 }
                 var11_int = 0;
@@ -415,7 +415,7 @@ final class uu {
               if (1 > var9) {
                 var9 = 1;
               }
-              var8.field_X = fo.a(4800, dk.field_t, new String[]{Integer.toString(var9)});
+              var8.field_X = fo.a(4800, CorpseConditionMarker.field_t, new String[]{Integer.toString(var9)});
             }
             gg.field_E.field_X = fo.a(4800, ws.field_T, new String[]{Integer.toString(vu.field_M.field_Ub), Integer.toString(vu.field_M.field_nc)});
           }

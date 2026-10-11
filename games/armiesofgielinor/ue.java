@@ -434,7 +434,7 @@ final class ue {
         if (param0 < 78) {
           ue.a(59, -15, 35, -65);
         }
-        ee.field_v = new gk();
+        SphinxActionRequest.field_v = new gk();
         TutorialController.h((byte) 74);
     }
 

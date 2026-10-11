@@ -109,7 +109,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         try {
           if (lr.field_a == this &&
             !rh.field_c) {
-            SpellAreaSelection.field_s = vi.b(-46);
+            ActionRequest.field_s = vi.b(-46);
             nu.a(5000L, 0);
             PacketBuffer.field_s = null;
             this.a(false, -1251);
@@ -175,7 +175,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           return;
         }
         try {
-          SpellAreaSelection.field_s = 4000L + vi.b(-62);
+          ActionRequest.field_s = 4000L + vi.b(-62);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "iv.stop()");
         }
@@ -212,7 +212,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               bn.field_b = param0;
               ce.field_N = param0;
               sp.field_b = 0;
-              hw.field_B = param4;
+              SummonRequest.field_B = param4;
               dt.field_a = param6;
               dm.field_D = param6;
               lr.field_a = this;
@@ -614,8 +614,8 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                 qc.field_h = wc.c(false);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (0L != SpellAreaSelection.field_s) {
-                    stackIn_102_0 = $cfr$lcmp(SpellAreaSelection.field_s, vi.b(-56));
+                  if (0L != ActionRequest.field_s) {
+                    stackIn_102_0 = $cfr$lcmp(ActionRequest.field_s, vi.b(-56));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_102_0 <= 0)) {
@@ -687,7 +687,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           return;
         }
         try {
-          SpellAreaSelection.field_s = 0L;
+          ActionRequest.field_s = 0L;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "iv.start()");
         }

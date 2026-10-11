@@ -29,7 +29,7 @@ class iu {
 
     private final boolean c(byte param0) {
         if (this.field_q.battlefield.unitsByPlayer[1].b(false) == 0 &&
-          this.field_q.battlefield.tiles[pl.field_s[0]].ownerPlayer == 0) {
+          this.field_q.battlefield.tiles[DeployAction.field_s[0]].ownerPlayer == 0) {
           return true;
         }
         if (param0 != -62) {
@@ -1657,7 +1657,7 @@ class iu {
           stackIn_12_1 = -45 + var3;
           stackIn_12_2 = this.field_g - 10;
           stackIn_12_3 = 30;
-          stackIn_12_4 = il.field_s;
+          stackIn_12_4 = DisplacedUnitMarker.field_s;
           if (this.field_w != 2 &&
             wg.a(param0 - 54, -5 - this.field_g + var2, var2 - 15, -45 + var3, var3 - 15)) {
             stackIn_13_5 = TutorialController.field_e;
@@ -1677,14 +1677,14 @@ class iu {
                 if (var4 != 0) {
                   stackIn_24_0 = vg.field_k;
                 } else {
-                  stackIn_24_0 = pl.field_z;
+                  stackIn_24_0 = DeployAction.field_z;
                 }
                 fe.c(stackIn_24_0, var2 - this.field_g / 2 - 10, var3 - 16, 0, true);
                 if (var5 != 0) {
                   if (var4 == 0) {
                     stackIn_28_0 = jk.field_a;
                   } else {
-                    stackIn_28_0 = kj.field_t;
+                    stackIn_28_0 = SkeletonLimitMarker.field_t;
                   }
                   fe.c(stackIn_28_0, -10 + (var2 - this.field_g / 2), var3 - 16, 0, true);
                 }
@@ -1692,7 +1692,7 @@ class iu {
                 if (var4 == 0) {
                   stackIn_28_0 = jk.field_a;
                 } else {
-                  stackIn_28_0 = kj.field_t;
+                  stackIn_28_0 = SkeletonLimitMarker.field_t;
                 }
                 fe.c(stackIn_28_0, -10 + (var2 - this.field_g / 2), var3 - 16, 0, true);
               }
@@ -1712,14 +1712,14 @@ class iu {
                   (this.field_w == 5)) {
                   fe.c(GlobalSpell.field_m, -120 + var2 - 10, var3 - 16, 0, true);
                   if (var5 != 0) {
-                    fe.a(-5 - this.field_g + var2, -45 + var3, -10 + this.field_g, 30, il.field_s, jh.field_k, 0, 192, true);
+                    fe.a(-5 - this.field_g + var2, -45 + var3, -10 + this.field_g, 30, DisplacedUnitMarker.field_s, jh.field_k, 0, 192, true);
                   }
                 }
               }
             }
           }
         } else {
-          fe.a(-5 - this.field_g + var2, -45 + var3, -10 + this.field_g, 30, il.field_s, jh.field_k, 0, 192, true);
+          fe.a(-5 - this.field_g + var2, -45 + var3, -10 + this.field_g, 30, DisplacedUnitMarker.field_s, jh.field_k, 0, 192, true);
         }
         if (this.field_e != null) {
           SoftwareRaster.f(var2 - this.field_g, -this.field_j + var3, var2 - 10, var3 - 45);
@@ -1757,7 +1757,7 @@ class iu {
         if (param0 <= 90) {
           return;
         }
-        uh.a(pl.field_s, -91);
+        uh.a(DeployAction.field_s, -91);
     }
 
     private final void i(byte param0) {
@@ -2027,7 +2027,7 @@ class iu {
           this.field_v = false;
           this.field_o = false;
           this.b(0, -30659);
-          this.field_q.battlefield.tiles[pl.field_s[0]].ownerPlayer = 1;
+          this.field_q.battlefield.tiles[DeployAction.field_s[0]].ownerPlayer = 1;
           this.field_q.battlefield.field_f = true;
           this.field_q.battlefield.field_z[1][1] = 1;
         } catch (RuntimeException runtimeException) {

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj extends SpellAreaEffect {
+final class SkeletonLimitMarker extends PreparedAction {
     static RgbSprite[] field_s;
     static String field_t;
 
-    final void applyEffect(int obfuscationGuard, Battlefield battlefield) {
+    final void applyToBattlefield(int obfuscationGuard, Battlefield battlefield) {
         try {
           if (obfuscationGuard != 64) {
-            kj.a(true, -124);
+            SkeletonLimitMarker.a(true, -124);
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "kj.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
@@ -32,7 +32,7 @@ final class kj extends SpellAreaEffect {
         try {
           var2_int = param0.length;
           if (param1 != 31732) {
-            kj.a((byte) -52);
+            SkeletonLimitMarker.a((byte) -52);
           }
           var3 = new byte[var2_int];
           vm.a(param0, 0, var3, 0, var2_int);
@@ -52,16 +52,16 @@ final class kj extends SpellAreaEffect {
         }
     }
 
-    kj(int param0, int param1) {
-        this.field_m = param0;
-        this.field_n = new int[param1];
-        this.field_n[this.field_m] = 8192;
+    SkeletonLimitMarker(int actingPlayer, int playerCount) {
+        this.actingPlayer = actingPlayer;
+        this.playerFlags = new int[playerCount];
+        this.playerFlags[this.actingPlayer] = 8192;
     }
 
     public static void a(boolean param0) {
         field_t = null;
         if (param0) {
-          kj.a((byte) 66);
+          SkeletonLimitMarker.a((byte) 66);
           field_s = null;
           return;
         }
@@ -77,7 +77,7 @@ final class kj extends SpellAreaEffect {
           return var1;
         }
         byte[] var2 = (byte[]) null;
-        kj.a((byte[]) null, -39);
+        SkeletonLimitMarker.a((byte[]) null, -39);
         var1Lifetime1 = ah.field_a.a((byte) -109);
         System.out.println(var1Lifetime1);
         return var1Lifetime1;

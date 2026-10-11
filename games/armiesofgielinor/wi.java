@@ -270,15 +270,15 @@ final class wi {
               if (var12.field_ac.field_eb &&
                 var22 != 0) {
                 ad.field_I = var12.field_Yb;
-                if (jc.field_v != null &&
-                  jc.field_v[var12.field_Qb] != null) {
-                  ad.field_I = ad.field_I + " - " + jc.field_v[var12.field_Qb];
+                if (DeployRequest.field_v != null &&
+                  DeployRequest.field_v[var12.field_Qb] != null) {
+                  ad.field_I = ad.field_I + " - " + DeployRequest.field_v[var12.field_Qb];
                 }
               } else {
                 if (var12.field_ac.field_eb &&
-                  jc.field_v != null &&
-                  null != jc.field_v[var12.field_Qb]) {
-                  ad.field_I = jc.field_v[var12.field_Qb];
+                  DeployRequest.field_v != null &&
+                  null != DeployRequest.field_v[var12.field_Qb]) {
+                  ad.field_I = DeployRequest.field_v[var12.field_Qb];
                 }
               }
               var19 = var19 + jn.field_d;
@@ -304,10 +304,10 @@ final class wi {
             if (var12.field_yb != 0 &&
               !var12.k(0)) {
               if (var12.field_dc.field_yb != 0) {
-                AreaSpell.a(var12.field_Pb, param3, 6);
+                ActionSpell.a(var12.field_Pb, param3, 6);
               } else {
                 if (0 == var12.field_ec.field_yb) {
-                  bk.a(false, 0, iu.field_t, 0, var12, param4, ur.field_z);
+                  bk.a(false, 0, iu.field_t, 0, var12, param4, TeleportAction.field_z);
                 } else {
                   te.a(param3, var12.field_Pb, (byte) 97);
                 }

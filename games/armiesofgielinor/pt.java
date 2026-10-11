@@ -29,7 +29,7 @@ abstract class pt extends sf {
     }
 
     final void m(int param0) {
-        if (this.field_bb == ur.field_v) {
+        if (this.field_bb == TeleportAction.field_v) {
           return;
         }
         this.field_bb = ki.field_e;
@@ -52,7 +52,7 @@ abstract class pt extends sf {
           this.k(117);
           return super.a((byte) -1);
         }
-        if (ur.field_v == this.field_bb) {
+        if (TeleportAction.field_v == this.field_bb) {
           fieldTemp$2 = this.field_hb + 1;
           this.field_hb = this.field_hb + 1;
           if (this.field_ib != fieldTemp$2) {
@@ -143,10 +143,10 @@ abstract class pt extends sf {
             this.field_hb = 0;
             return;
           }
-          if (this.field_bb == ur.field_v) {
+          if (this.field_bb == TeleportAction.field_v) {
             return;
           }
-          this.field_bb = ur.field_v;
+          this.field_bb = TeleportAction.field_v;
           this.field_hb = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

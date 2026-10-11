@@ -1072,7 +1072,7 @@ final class BattleCamera {
               stackIn_23_0 = !(var7 <= var11 + 120);
               wd.a(stackIn_23_0, var6, (byte) -128, var9 - 2, -80 + var7, var8 + 2);
               stackIn_26_0 = !(var7 <= 200 + var11);
-              SpellAreaSelection.a(stackIn_26_0, 4 + var8, var6, (byte) 120, var9 - 4, var7 - 160);
+              ActionRequest.a(stackIn_26_0, 4 + var8, var6, (byte) 120, var9 - 4, var7 - 160);
             }
             var9++;
             var8++;

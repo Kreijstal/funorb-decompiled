@@ -72,10 +72,10 @@ final class pu {
         try {
           vu.field_M = null;
           no.field_K = null;
-          ua.field_s = false;
-          if (null != be.field_u) {
-            be.field_u.b(76);
-            be.field_u = null;
+          SpellCastAction.field_s = false;
+          if (null != SummonAction.field_u) {
+            SummonAction.field_u.b(76);
+            SummonAction.field_u = null;
           }
           oi.field_d = null;
           if (param0 > -86) {

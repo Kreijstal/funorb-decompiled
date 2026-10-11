@@ -289,7 +289,7 @@ final class Battlefield {
                       if (!param1) {
                         this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new StateChangeEvent(0, var5_ref_jd.tileX, var5_ref_jd.tileY, var5_ref_jd.ownerPlayer)));
                       } else {
-                        ((NodeDeque) (var4)).addLast((byte) -119, (IntrusiveNode) (new ss(var5_ref_jd.tileX, var5_ref_jd.tileY, 0, this.currentPlayer)));
+                        ((NodeDeque) (var4)).addLast((byte) -119, (IntrusiveNode) (new StateChangeMarker(var5_ref_jd.tileX, var5_ref_jd.tileY, 0, this.currentPlayer)));
                       }
                     }
                   }
@@ -327,16 +327,16 @@ final class Battlefield {
             if (!stackIn_60_0) {
               if (param1) {
                 if (var5_ref_jdLifetime1.isDisplacedFromTile(26440)) {
-                  ((NodeDeque) (var4)).addLast((byte) -119, (IntrusiveNode) (new il(var5_ref_jdLifetime1.tileX, var5_ref_jdLifetime1.tileY, var5_ref_jdLifetime1, this.tiles[var5_ref_jdLifetime1.tileY * this.mapWidth + var5_ref_jdLifetime1.tileX])));
+                  ((NodeDeque) (var4)).addLast((byte) -119, (IntrusiveNode) (new DisplacedUnitMarker(var5_ref_jdLifetime1.tileX, var5_ref_jdLifetime1.tileY, var5_ref_jdLifetime1, this.tiles[var5_ref_jdLifetime1.tileY * this.mapWidth + var5_ref_jdLifetime1.tileX])));
                 }
                 if (var5_ref_jdLifetime1.e((byte) 79) &&
                   this.playerMana[var5_ref_jdLifetime1.ownerPlayer] < 10) {
-                  ((NodeDeque) (var4)).addLast((byte) -119, (IntrusiveNode) (new pl(var5_ref_jdLifetime1.ownerPlayer, var5_ref_jdLifetime1, 0)));
+                  ((NodeDeque) (var4)).addLast((byte) -119, (IntrusiveNode) (new DeployAction(var5_ref_jdLifetime1.ownerPlayer, var5_ref_jdLifetime1, 0)));
                 }
                 if (var5_ref_jdLifetime1.unitType == 10 &&
                   this.tiles[var5_ref_jdLifetime1.tileX + var5_ref_jdLifetime1.tileY * this.mapWidth].hasCorpse(93) &&
                   var5_ref_jdLifetime1.maximumStrength == 19) {
-                  ((NodeDeque) (var4)).addLast((byte) -119, (IntrusiveNode) (new dk(var5_ref_jdLifetime1.ownerPlayer, this.playerCount)));
+                  ((NodeDeque) (var4)).addLast((byte) -119, (IntrusiveNode) (new CorpseConditionMarker(var5_ref_jdLifetime1.ownerPlayer, this.playerCount)));
                 }
               }
               var5_ref_jdLifetime1.k(-1);
@@ -375,7 +375,7 @@ final class Battlefield {
             if (stackIn_69_0 > stackIn_69_1) {
               break;
             }
-            ((NodeDeque) (var4)).addLast((byte) -119, (IntrusiveNode) (new kj(this.currentPlayer, this.playerCount)));
+            ((NodeDeque) (var4)).addLast((byte) -119, (IntrusiveNode) (new SkeletonLimitMarker(this.currentPlayer, this.playerCount)));
             break;
           }
         }

@@ -188,7 +188,7 @@ final class MovementPresentation implements EventPresentation {
           for (var4 = 0; var4 < var2; var4++) {
             var5 = sf.field_P[var4];
             var6 = jq.field_I[var5];
-            SpellAreaEffect.a(var8[var4], var6, var4, 2378077);
+            PreparedAction.a(var8[var4], var6, var4, 2378077);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

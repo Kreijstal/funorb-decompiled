@@ -166,7 +166,7 @@ final class bn {
             }
           }
         }
-        if (pe.field_x.field_yb != 0) {
+        if (VineGrowthAction.field_x.field_yb != 0) {
           if (lm.field_e.length == 1 &&
             mt.field_d != lm.field_e[0]) {
             mt.field_d = lm.field_e[0];

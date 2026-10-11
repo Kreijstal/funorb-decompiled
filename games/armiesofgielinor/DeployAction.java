@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pl extends SpellAreaEffect {
+final class DeployAction extends PreparedAction {
     static boolean field_A;
     static String field_t;
     static RgbSprite[] field_x;
     static String field_z;
-    private Unit field_u;
+    private Unit unit;
     static String[] field_y;
     static String field_C;
     static int[] field_s;
     static RgbSprite[] field_D;
     static String field_v;
-    private int field_w;
+    private int deployModifier;
 
     public static void a(boolean param0) {
         field_y = null;
@@ -24,11 +24,11 @@ final class pl extends SpellAreaEffect {
         field_D = null;
         field_z = null;
         if (!param0) {
-          pl.a(-31, -19, 87, -24, -42);
+          DeployAction.a(-31, -19, 87, -24, -42);
         }
     }
 
-    final void applyEffect(int obfuscationGuard, Battlefield battlefield) {
+    final void applyToBattlefield(int obfuscationGuard, Battlefield battlefield) {
         RuntimeException var3 = null;
         Battlefield var4 = null;
         RuntimeException stackIn_13_0 = null;
@@ -36,19 +36,19 @@ final class pl extends SpellAreaEffect {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_u.unitType == 39) {
-            battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeathEvent(this.field_u)));
+          if (this.unit.unitType == 39) {
+            battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeathEvent(this.unit)));
           }
           if (obfuscationGuard != 64) {
             var4 = (Battlefield) null;
-            this.applyEffect(10, (Battlefield) null);
+            this.applyToBattlefield(10, (Battlefield) null);
           }
-          if (34 != this.field_u.unitType &&
-            this.field_u.unitType != 7 &&
-            17 != this.field_u.unitType) {
+          if (34 != this.unit.unitType &&
+            this.unit.unitType != 7 &&
+            17 != this.unit.unitType) {
             return;
           }
-          battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeployEvent(this.field_u.tileX, this.field_u.tileY, this.field_w)));
+          battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeployEvent(this.unit.tileX, this.unit.tileY, this.deployModifier)));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,13 +86,13 @@ final class pl extends SpellAreaEffect {
         return var5;
     }
 
-    pl(int param0, Unit param1, int param2) {
+    DeployAction(int actingPlayer, Unit unit, int deployModifier) {
         try {
-          this.field_u = param1;
-          this.field_w = param2;
-          this.field_m = param0;
+          this.unit = unit;
+          this.deployModifier = deployModifier;
+          this.actingPlayer = actingPlayer;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "pl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "pl.<init>(" + actingPlayer + ',' + (unit != null ? "{...}" : "null") + ',' + deployModifier + ')');
         }
     }
 

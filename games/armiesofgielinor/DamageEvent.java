@@ -106,7 +106,7 @@ final class DamageEvent extends GameEvent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          ee.a(param14, param8, -84, param19, param18);
+          SphinxActionRequest.a(param14, param8, -84, param19, param18);
           g.a(param10 - 716, param8);
           nl.a(param16, param7, param2, param17, param6, param0, param1, param8, param11, param3, param9, param15, param12, false, param4);
           if (param10 != -5429) {

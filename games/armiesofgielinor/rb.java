@@ -166,7 +166,7 @@ abstract class rb implements n {
         int var13Lifetime1;
         var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          SpellAreaSelection.field_t = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          ActionRequest.field_t = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = iq.field_a.length;
           var21 = new int[var1_int];
           var20 = var21;
@@ -178,17 +178,17 @@ abstract class rb implements n {
             var5 = var4_ref_pu.field_L + var4_ref_pu.field_p >> 1;
             var6 = var4_ref_pu.field_H + var4_ref_pu.field_P >> 1;
             var7 = var4_ref_pu.field_D + var4_ref_pu.field_J >> 1;
-            var8 = SpellAreaSelection.field_t[9] >> 2;
-            var9 = SpellAreaSelection.field_t[10] >> 2;
-            var10_int = SpellAreaSelection.field_t[11] >> 2;
+            var8 = ActionRequest.field_t[9] >> 2;
+            var9 = ActionRequest.field_t[10] >> 2;
+            var10_int = ActionRequest.field_t[11] >> 2;
             var11 = var8 * pd.field_a[3] + pd.field_a[4] * var9 + pd.field_a[5] * var10_int >> 14;
             var12 = var10_int * pd.field_a[8] + (var8 * pd.field_a[6] + var9 * pd.field_a[7]) >> 14;
             var13 = pd.field_a[10] * var9 + pd.field_a[9] * var8 + pd.field_a[11] * var10_int >> 14;
             var2[var3] = var11 * var5 + var12 * var6 + var7 * var13 >> 16;
           }
-          var3Lifetime1 = SpellAreaSelection.field_t[param0] >> 8;
-          var4 = SpellAreaSelection.field_t[10] >> 8;
-          var5Lifetime1 = SpellAreaSelection.field_t[11] >> 8;
+          var3Lifetime1 = ActionRequest.field_t[param0] >> 8;
+          var4 = ActionRequest.field_t[10] >> 8;
+          var5Lifetime1 = ActionRequest.field_t[11] >> 8;
           var6Lifetime1 = ib.field_j << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = ae.b(var6Lifetime1, 100) >> 8;
@@ -223,7 +223,7 @@ abstract class rb implements n {
             for (var18 = 0; var18 < 3; var18++) {
               pd.field_a[var18] = pd.field_a[var18] + sd.field_s[var15][var18];
             }
-            ou.a(var17, true, true, false, false, pd.field_a, SpellAreaSelection.field_t);
+            ou.a(var17, true, true, false, false, pd.field_a, ActionRequest.field_t);
             fp.a(var13Lifetime1, var17, var9Lifetime1, var8Lifetime1, var12Lifetime1, var7Lifetime1, var14, (byte) 120);
           }
           return;

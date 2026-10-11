@@ -147,8 +147,8 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         return -3.4028234663852886e+38f;
     }
 
-    final boolean executeSelection(SpellAreaSelection selection, int obfuscationGuard) {
-        SpellAreaEffect var3 = null;
+    final boolean executeSelection(ActionRequest selection, int obfuscationGuard) {
+        PreparedAction var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -156,9 +156,9 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         RuntimeException decompiledCaughtException = null;
         try {
           if (selection != null) {
-            var3 = selection.createEffect(58, this.battlefield);
+            var3 = selection.prepareAction(58, this.battlefield);
             if (var3 != null) {
-              var3.applyEffect(64, this.battlefield);
+              var3.applyToBattlefield(64, this.battlefield);
               return true;
             }
           }
@@ -613,7 +613,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         if (param0 != -25523) {
           this.influenceMap = (AiInfluenceMap) null;
         }
-        this.field_M.f(-119);
+        this.field_M.refreshDecisionPriority(-119);
         this.field_S = this.field_M;
         this.field_M = (AiUnitPlanner) (this.unitPlanners.next((byte) 123));
     }
@@ -982,7 +982,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         int var8_int = 0;
         UnitSpell var8 = null;
         int var9_int = 0;
-        to var9 = null;
+        SpellCastRequest var9 = null;
         float var10 = 0.0f;
         int var11 = 0;
         int var12 = 0;
@@ -1412,7 +1412,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                 case 68: {
                     this.battlefield.field_J = true;
                     var8 = new UnitSpell(var4, var7.destinationX, var7.destinationY);
-                    var9 = new to(var8, -1, this.playerId);
+                    var9 = new SpellCastRequest(var8, -1, this.playerId);
                     this.executeSelection(var9, -126);
                     statePc = 69;
                     continue scanLoop1;
@@ -1447,7 +1447,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
             return;
           }
           var3 = this.registerUnitPlanner(param1, (byte) -98);
-          var3.f(param0 ^ 14);
+          var3.refreshDecisionPriority(param0 ^ 14);
           if (param0 != 80) {
             AiPlanner.a(-94);
           }
@@ -1490,13 +1490,13 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
               }
             }
             this.field_S.unit.field_X = false;
-            var2_int = this.field_S.field_u;
-            var3 = this.field_S.field_n;
-            var4 = this.field_S.field_m;
+            var2_int = this.field_S.previousSourceTile;
+            var3 = this.field_S.previousTargetTile;
+            var4 = this.field_S.previousDestinationTile;
             this.a(new int[]{var2_int, var3, var4}, -1, (byte) 113);
-            this.field_S.field_n = -1;
-            this.field_S.field_u = -1;
-            this.field_S.field_m = -1;
+            this.field_S.previousTargetTile = -1;
+            this.field_S.previousSourceTile = -1;
+            this.field_S.previousDestinationTile = -1;
           }
           var7 = this.field_S.selectedTarget;
           var8 = var7;
@@ -1542,9 +1542,9 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
             var5 = this.field_M.selectedAction.destinationX + this.battlefield.mapWidth * this.field_M.selectedAction.destinationY;
           }
           this.a(new int[]{var3, var4, var5}, -1, (byte) 98);
-          this.field_M.field_n = var4;
-          this.field_M.field_m = var5;
-          this.field_M.field_u = var3;
+          this.field_M.previousTargetTile = var4;
+          this.field_M.previousDestinationTile = var5;
+          this.field_M.previousSourceTile = var3;
           this.field_M.executeSelectedAction(4);
           this.field_M.unit.field_X = true;
           if (var6 != null) {
@@ -1816,11 +1816,11 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                       }
                       var29 = new Unit(var16, var17, var18, this.playerId, var23, var23, var28Lifetime2, 0, 0, this.battlefield, 0, 0, -1, true, 0);
                       var30 = new AiUnitPlanner(this, var29);
-                      var30.f(-86);
+                      var30.refreshDecisionPriority(-86);
                       var31 = var30.evaluateActions(false, (byte) -127);
                       var22Lifetime1 = var22Lifetime1 + var31;
                       if (var20 != 0) {
-                        var34.a(var17, var18, var22Lifetime1, this.playerId, var16, true);
+                        var34.submitSummonCandidate(var17, var18, var22Lifetime1, this.playerId, var16, true);
                         var12 = 1;
                         if (var3 < var22Lifetime1) {
                           var3 = var22Lifetime1;
@@ -1828,7 +1828,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                       } else {
                         if (var21 != 0) {
                           var22Lifetime1 = var22Lifetime1 - this.weights[42];
-                          var34.a((byte) -68, var18, var22Lifetime1);
+                          var34.submitResultCandidate((byte) -68, var18, var22Lifetime1);
                         }
                       }
                     }
@@ -1939,7 +1939,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         RuntimeException var3_ref = null;
         CampaignUnitOverride var5 = null;
         int var6 = 0;
-        SpellAreaSelection var7 = null;
+        ActionRequest var7 = null;
         CampaignUnitOverride[] var8 = null;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
@@ -1962,8 +1962,8 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           var3 = new AiUnitPlanner(this, unit);
           this.unitPlanners.addLast((byte) -119, (IntrusiveNode) (var3));
           if (obfuscationGuard > -66) {
-            var7 = (SpellAreaSelection) null;
-            this.executeSelection((SpellAreaSelection) null, 49);
+            var7 = (ActionRequest) null;
+            this.executeSelection((ActionRequest) null, 49);
           }
           if (unit.objectiveId != 0 &&
             null == this.objectiveInfluence[unit.getUnitCategory(0)][-1 + unit.objectiveId]) {

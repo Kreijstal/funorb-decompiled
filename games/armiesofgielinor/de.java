@@ -186,7 +186,7 @@ final class de {
                       if (param2.arePlayersAllied(var11.ownerPlayer, -16985, param5)) {
                         return null;
                       }
-                      stackIn_315_0 = AreaSpell.field_k;
+                      stackIn_315_0 = ActionSpell.field_k;
                       return stackIn_315_0;
                     }
                     if (var8Lifetime1 == 7) {
@@ -474,10 +474,10 @@ final class de {
               stackIn_280_0 = po.field_a;
               return stackIn_280_0;
             }
-            stackIn_37_0 = ld.field_G;
+            stackIn_37_0 = MoveAttackAction.field_G;
             return stackIn_37_0;
           }
-          stackIn_32_0 = ld.field_G;
+          stackIn_32_0 = MoveAttackAction.field_G;
           return stackIn_32_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

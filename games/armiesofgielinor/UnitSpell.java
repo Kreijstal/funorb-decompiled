@@ -236,7 +236,7 @@ final class UnitSpell extends Spell {
 
     final static void a(int param0, ok param1) {
         try {
-          SpellAreaEffect.a((byte) 111, new fj(param1));
+          PreparedAction.a((byte) 111, new fj(param1));
           if (param0 < 8) {
             field_h = (String) null;
           }

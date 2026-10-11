@@ -285,7 +285,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                   rq.field_p[param1].a(85, param0, var4);
                 }
                 if (param1 == 15) {
-                  kj.a(param0, param2 - 1);
+                  SkeletonLimitMarker.a(param0, param2 - 1);
                 }
                 if (jt.field_a == 16) {
                   fg.a((byte) 111);
@@ -329,7 +329,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             rq.field_p[param1].a(85, param0, var4Lifetime1);
           }
           if (param1 == 15) {
-            kj.a(param0, param2 - 1);
+            SkeletonLimitMarker.a(param0, param2 - 1);
           }
         }
         if (jt.field_a == 16) {

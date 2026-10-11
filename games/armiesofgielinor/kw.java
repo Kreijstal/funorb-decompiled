@@ -108,26 +108,26 @@ final class kw extends fw {
           var21 = db.field_a[0];
           var9 = var21.field_A << 1;
           var10 = var21.field_x << 1;
-          if (null == SpellAreaEffect.field_p) {
-            SpellAreaEffect.field_p = new RgbSprite(var9, var10);
-            vn.a(SpellAreaEffect.field_p, 3);
+          if (null == PreparedAction.field_p) {
+            PreparedAction.field_p = new RgbSprite(var9, var10);
+            vn.a(PreparedAction.field_p, 3);
           } else {
-            if (var9 > SpellAreaEffect.field_p.field_y) {
-              SpellAreaEffect.field_p = new RgbSprite(var9, var10);
-              vn.a(SpellAreaEffect.field_p, 3);
+            if (var9 > PreparedAction.field_p.field_y) {
+              PreparedAction.field_p = new RgbSprite(var9, var10);
+              vn.a(PreparedAction.field_p, 3);
             } else {
-              if (var10 <= SpellAreaEffect.field_p.field_v) {
-                vn.a(SpellAreaEffect.field_p, 3);
+              if (var10 <= PreparedAction.field_p.field_v) {
+                vn.a(PreparedAction.field_p, 3);
                 SoftwareRaster.b();
               } else {
-                SpellAreaEffect.field_p = new RgbSprite(var9, var10);
-                vn.a(SpellAreaEffect.field_p, 3);
+                PreparedAction.field_p = new RgbSprite(var9, var10);
+                vn.a(PreparedAction.field_p, 3);
               }
             }
           }
           var21.b(112, 144, var21.field_A << 4, var21.field_x << 4, -this.field_L << 10, 4096);
           rf.b(-18862);
-          SpellAreaEffect.field_p.f(-var21.field_A + var5, -var21.field_x + var6, 256);
+          PreparedAction.field_p.f(-var21.field_A + var5, -var21.field_x + var6, 256);
           return;
         }
         this.a(105, -107, (byte) -98, -86);
@@ -136,18 +136,18 @@ final class kw extends fw {
           var15 = db.field_a[0];
           var9Lifetime1 = var15.field_A << 1;
           var10Lifetime1 = var15.field_x << 1;
-          if (null != SpellAreaEffect.field_p &&
-            var9Lifetime1 <= SpellAreaEffect.field_p.field_y &&
-            var10Lifetime1 <= SpellAreaEffect.field_p.field_v) {
-            vn.a(SpellAreaEffect.field_p, 3);
+          if (null != PreparedAction.field_p &&
+            var9Lifetime1 <= PreparedAction.field_p.field_y &&
+            var10Lifetime1 <= PreparedAction.field_p.field_v) {
+            vn.a(PreparedAction.field_p, 3);
             SoftwareRaster.b();
           } else {
-            SpellAreaEffect.field_p = new RgbSprite(var9Lifetime1, var10Lifetime1);
-            vn.a(SpellAreaEffect.field_p, 3);
+            PreparedAction.field_p = new RgbSprite(var9Lifetime1, var10Lifetime1);
+            vn.a(PreparedAction.field_p, 3);
           }
           var15.b(112, 144, var15.field_A << 4, var15.field_x << 4, -this.field_L << 10, 4096);
           rf.b(-18862);
-          SpellAreaEffect.field_p.f(-var15.field_A + var5, -var15.field_x + var6, 256);
+          PreparedAction.field_p.f(-var15.field_A + var5, -var15.field_x + var6, 256);
           return;
         }
         if (so.field_e != var8Lifetime1) {
@@ -167,26 +167,26 @@ final class kw extends fw {
         var14 = var16;
         var9Lifetime2 = var16.field_A << 1;
         var10Lifetime2 = var16.field_x << 1;
-        if (null == SpellAreaEffect.field_p) {
-          SpellAreaEffect.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
-          vn.a(SpellAreaEffect.field_p, 3);
+        if (null == PreparedAction.field_p) {
+          PreparedAction.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
+          vn.a(PreparedAction.field_p, 3);
         } else {
-          if (var9Lifetime2 > SpellAreaEffect.field_p.field_y) {
-            SpellAreaEffect.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
-            vn.a(SpellAreaEffect.field_p, 3);
+          if (var9Lifetime2 > PreparedAction.field_p.field_y) {
+            PreparedAction.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
+            vn.a(PreparedAction.field_p, 3);
           } else {
-            if (var10Lifetime2 <= SpellAreaEffect.field_p.field_v) {
-              vn.a(SpellAreaEffect.field_p, 3);
+            if (var10Lifetime2 <= PreparedAction.field_p.field_v) {
+              vn.a(PreparedAction.field_p, 3);
               SoftwareRaster.b();
             } else {
-              SpellAreaEffect.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
-              vn.a(SpellAreaEffect.field_p, 3);
+              PreparedAction.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
+              vn.a(PreparedAction.field_p, 3);
             }
           }
         }
         var16.b(112, 144, var16.field_A << 4, var16.field_x << 4, -this.field_L << 10, 4096);
         rf.b(-18862);
-        SpellAreaEffect.field_p.f(-var16.field_A + var5, -var16.field_x + var6, 256);
+        PreparedAction.field_p.f(-var16.field_A + var5, -var16.field_x + var6, 256);
     }
 
     kw(n param0) {

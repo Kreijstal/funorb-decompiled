@@ -263,7 +263,7 @@ final class r extends vt {
         try {
           var1 = va.field_w;
           synchronized (var1) {
-            be.field_E = rd.field_d;
+            SummonAction.field_E = rd.field_d;
             if (!param0) {
               r.d((byte) 47);
             }
@@ -275,7 +275,7 @@ final class r extends vt {
               us.field_c = cc.field_a;
             } else {
               while (cc.field_a != us.field_c) {
-                var2 = ee.field_x[cc.field_a];
+                var2 = SphinxActionRequest.field_x[cc.field_a];
                 cc.field_a = 127 & 1 + cc.field_a;
                 if (0 > var2) {
                   br.field_f[~var2] = false;

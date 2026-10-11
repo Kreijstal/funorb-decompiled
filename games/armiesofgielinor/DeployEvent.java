@@ -267,7 +267,7 @@ final class DeployEvent extends GameEvent {
               var16.field_i.a(7, var13_ref_String, (byte) -100);
               var17 = tn.field_Z;
               var13 = iu.field_t;
-              var14 = ur.field_z;
+              var14 = TeleportAction.field_z;
               var17.field_i.a(0, var14, 0, (byte) -118, var13);
             }
             var5 = var6;

@@ -113,9 +113,9 @@ final class mw extends dr {
           if (param0 != -63) {
             field_F = (int[]) null;
           }
-          var1_int = am.field_K[0];
-          for (var2 = 1; am.field_K.length > var2; var2++) {
-            var3 = am.field_K[var2];
+          var1_int = MoveAttackRequest.field_K[0];
+          for (var2 = 1; MoveAttackRequest.field_K.length > var2; var2++) {
+            var3 = MoveAttackRequest.field_K[var2];
             vm.a(ab.field_c, var2 << 4, ab.field_c, var1_int, var3);
             var1_int = var1_int + var3;
           }

@@ -185,8 +185,8 @@ final class oo {
           if (null != mg.field_d) {
             var4 = 0;
             if (DeployEvent.field_A != 0 &&
-              ur.field_z > 257 &&
-              290 > ur.field_z) {
+              TeleportAction.field_z > 257 &&
+              290 > TeleportAction.field_z) {
               if (9 < iu.field_t &&
                 82 > iu.field_t) {
                 var4 = 1;
@@ -202,8 +202,8 @@ final class oo {
             }
             if (var4 == 0 &&
               this.field_p > qk.field_a &&
-              257 < ur.field_z &&
-              290 > ur.field_z) {
+              257 < TeleportAction.field_z &&
+              290 > TeleportAction.field_z) {
               if (AiPlanningStrategy.field_d > 9 &&
                 AiPlanningStrategy.field_d < 82) {
                 this.field_p = qk.field_a;
@@ -215,7 +215,7 @@ final class oo {
             }
           }
           if (param0) {
-            this.field_h.a(0, this.a(iu.field_t, ur.field_z, -387), this.a(AiPlanningStrategy.field_d, ko.field_b, -387));
+            this.field_h.a(0, this.a(iu.field_t, TeleportAction.field_z, -387), this.a(AiPlanningStrategy.field_d, ko.field_b, -387));
             var4Lifetime1 = 0;
             if (this.field_h.d((byte) 96)) {
               if (0 == this.field_h.field_h) {

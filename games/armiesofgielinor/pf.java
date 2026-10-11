@@ -19,14 +19,14 @@ final class pf {
             if (wq.field_a != null &&
               wq.field_a.field_k) {
               ck.b(-110);
-              ee.field_v.a(new ud(ee.field_v, mp.field_Mb), 0);
+              SphinxActionRequest.field_v.a(new ud(SphinxActionRequest.field_v, mp.field_Mb), 0);
             }
             return;
           }
-          ee.field_v.a(true, -6226, en.field_F, AiUnitPlanner.field_s);
-          ee.field_v.d((byte) -117);
+          SphinxActionRequest.field_v.a(true, -6226, en.field_F, AiUnitPlanner.field_s);
+          SphinxActionRequest.field_v.d((byte) -117);
           while (Unit.i((byte) 107)) {
-            ee.field_v.a(rs.field_q, ui.field_i, 80);
+            SphinxActionRequest.field_v.a(rs.field_q, ui.field_i, 80);
           }
           if (param0 >= 10) {
             return;
@@ -146,7 +146,7 @@ final class pf {
             stackIn_13_0 = (byte[]) (param1);
             return stackIn_13_0;
           }
-          stackIn_11_0 = kj.a(param1, 31732);
+          stackIn_11_0 = SkeletonLimitMarker.a(param1, 31732);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

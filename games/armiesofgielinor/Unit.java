@@ -405,13 +405,13 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         Throwable decompiledCaughtException = null;
         var1 = va.field_w;
         synchronized (var1) {
-          if (rd.field_d == be.field_E) {
+          if (rd.field_d == SummonAction.field_E) {
             return false;
           }
-          rs.field_q = gt.field_d[be.field_E];
-          ui.field_i = ua.field_u[be.field_E];
+          rs.field_q = gt.field_d[SummonAction.field_E];
+          ui.field_i = SpellCastAction.field_u[SummonAction.field_E];
           var2 = 86 % ((param0 - 0) / 48);
-          be.field_E = 127 & be.field_E + 1;
+          SummonAction.field_E = 127 & SummonAction.field_E + 1;
           stackIn_6_0 = true;
         }
         return stackIn_6_0;

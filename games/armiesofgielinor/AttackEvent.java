@@ -15,9 +15,9 @@ final class AttackEvent extends GameEvent {
     private Unit targetUnit;
     static RgbSprite field_E;
     static String field_K;
-    private int field_M;
+    private int attackerY;
     static RgbSprite[] field_y;
-    private int field_L;
+    private int attackerX;
     static RgbSprite field_O;
     static String field_F;
 
@@ -213,7 +213,7 @@ final class AttackEvent extends GameEvent {
             return;
           }
           this.applied = true;
-          this.unit = battlefield.getUnitAt(this.field_M, true, this.field_L);
+          this.unit = battlefield.getUnitAt(this.attackerY, true, this.attackerX);
           if (null == this.unit) {
             return;
           }
@@ -273,19 +273,19 @@ final class AttackEvent extends GameEvent {
         }
     }
 
-    AttackEvent(int param0, int param1, int param2, int param3, Unit param4, int param5, int param6) {
+    AttackEvent(int attackerX, int attackerY, int targetDeltaX, int targetDeltaY, Unit targetUnit, int attackerAnimationCount, int defenderAnimationCount) {
         try {
-          this.field_L = param0;
-          this.targetDeltaY = param3;
+          this.attackerX = attackerX;
+          this.targetDeltaY = targetDeltaY;
           this.eventKind = 27;
-          this.field_M = param1;
+          this.attackerY = attackerY;
           this.applied = false;
-          this.attackerAnimationCount = param5;
-          this.targetUnit = param4;
-          this.targetDeltaX = param2;
-          this.defenderAnimationCount = param6;
+          this.attackerAnimationCount = attackerAnimationCount;
+          this.targetUnit = targetUnit;
+          this.targetDeltaX = targetDeltaX;
+          this.defenderAnimationCount = defenderAnimationCount;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ns.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ns.<init>(" + attackerX + ',' + attackerY + ',' + targetDeltaX + ',' + targetDeltaY + ',' + (targetUnit != null ? "{...}" : "null") + ',' + attackerAnimationCount + ',' + defenderAnimationCount + ')');
         }
     }
 

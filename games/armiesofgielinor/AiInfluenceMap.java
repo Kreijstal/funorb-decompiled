@@ -813,9 +813,9 @@ final class AiInfluenceMap {
               var7[0][var10 * 4] = no.field_U[var11];
               var7[0][1 + 4 * var10] = wp.field_w[var11];
               var7[0][var10 * 4 + 2] = TutorialController.field_c[var11];
-              var7[0][3 + var10 * 4] = pe.field_s[var11];
+              var7[0][3 + var10 * 4] = VineGrowthAction.field_s[var11];
               if (gt.a(gm.field_a[var11], (byte) 121) &&
-                0 == TutorialController.field_c[var11] + wp.field_w[var11] + pe.field_s[var11]) {
+                0 == TutorialController.field_c[var11] + wp.field_w[var11] + VineGrowthAction.field_s[var11]) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -831,9 +831,9 @@ final class AiInfluenceMap {
               var7[1][4 * var13] = no.field_U[var11Lifetime1];
               var7[1][var13 * 4 + 1] = wp.field_w[var11Lifetime1];
               var7[1][var13 * 4 + 2] = TutorialController.field_c[var11Lifetime1];
-              var7[1][var13 * 4 + 3] = pe.field_s[var11Lifetime1];
+              var7[1][var13 * 4 + 3] = VineGrowthAction.field_s[var11Lifetime1];
               if (gt.a(gm.field_a[var11Lifetime1], (byte) 109) &&
-                pe.field_s[var11Lifetime1] + (wp.field_w[var11Lifetime1] + TutorialController.field_c[var11Lifetime1]) == 0) {
+                VineGrowthAction.field_s[var11Lifetime1] + (wp.field_w[var11Lifetime1] + TutorialController.field_c[var11Lifetime1]) == 0) {
                 var6[1][var13] = null;
                 var13--;
               }

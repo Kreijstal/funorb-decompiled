@@ -63,10 +63,10 @@ final class op {
             var4 = (nr) null;
             op.a(108, -59, (nr) null, (nr) null, -23, 0);
           }
-          var6 = (on) (ss.field_t.first((byte) 112));
+          var6 = (on) (StateChangeMarker.field_t.first((byte) 112));
           while (var6 != null) {
             s.a(127, param0, var6);
-            var6 = (on) (ss.field_t.next((byte) 123));
+            var6 = (on) (StateChangeMarker.field_t.next((byte) 123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -105,7 +105,7 @@ final class op {
             return stackIn_6_0;
           }
           if (gt.a(param1, (byte) -89)) {
-            stackIn_9_0 = am.field_F;
+            stackIn_9_0 = MoveAttackRequest.field_F;
             return stackIn_9_0;
           }
           if (jj.a(param0 ^ 58, param1)) {

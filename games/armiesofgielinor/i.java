@@ -471,7 +471,7 @@ final class i extends je {
                 stackIn_8_0Lifetime1 = this;
                 stackIn_8_1Lifetime1 = null;
                 stackIn_8_2Lifetime1 = null;
-                stackIn_8_5 = ua.field_v;
+                stackIn_8_5 = SpellCastAction.field_v;
               }
               this.field_Qb = new fp(stackIn_6_3, stackIn_6_4, stackIn_8_5);
               this.field_Tb.a(this.field_Qb, 65);
@@ -504,7 +504,7 @@ final class i extends je {
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_Z.a(ua.field_y);
+            var17Lifetime2 = param6.field_Z.a(SpellCastAction.field_y);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
@@ -537,7 +537,7 @@ final class i extends je {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.a(param6, var18Lifetime4, var28[1], var16Lifetime2, ua.field_y, 24);
+            var18Lifetime4 = this.a(param6, var18Lifetime4, var28[1], var16Lifetime2, SpellCastAction.field_y, 24);
             var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.field_Ub[16], var18Lifetime4);
             var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.field_Ub[17], var18Lifetime4);
             var18Lifetime4 = this.a(var16Lifetime2, 2, var28[1], this.field_Ub[18], var18Lifetime4);

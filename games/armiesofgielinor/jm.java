@@ -315,7 +315,7 @@ final class jm {
             if (64 != param2.length) {
               throw new RuntimeException();
             }
-            this.field_n = ua.a(-18423, param0.length, param0, 0);
+            this.field_n = SpellCastAction.a(-18423, param0.length, param0, 0);
             for (var4_int = 0; 64 > var4_int; var4_int++) {
               if (this.field_n[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

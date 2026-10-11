@@ -1592,7 +1592,7 @@ final class GameplayController {
                 default:
                   throw new IllegalStateException("");
               }
-              AreaSpell.a(4, var5, l.field_c, var4 != 0, var6, var3);
+              ActionSpell.a(4, var5, l.field_c, var4 != 0, var6, var3);
               if (1 == l.field_c.field_G.field_r &&
                 l.field_c.field_v == 3) {
                 var7 = 0;
@@ -2279,7 +2279,7 @@ final class GameplayController {
               var11 = 0;
               var12 = 0;
               if (this.field_lb) {
-                var11 = nr.field_e.a(il.field_t[12]) / 2;
+                var11 = nr.field_e.a(DisplacedUnitMarker.field_t[12]) / 2;
                 var12 = -65 - var11 + (rs.field_k - var9);
               }
               if (this.f(128, db.a(true, var12)) >= u.a(se.field_a, (byte) 94)) {
@@ -2734,14 +2734,14 @@ final class GameplayController {
               var8Lifetime5 = this.camera.field_e[1];
               var9Lifetime5 = -1;
               if (this.field_k != null) {
-                var9Lifetime5 = this.field_k.a((byte) -124, ur.field_z, var7Lifetime8 + 16, iu.field_t, var8Lifetime5 + 16);
+                var9Lifetime5 = this.field_k.a((byte) -124, TeleportAction.field_z, var7Lifetime8 + 16, iu.field_t, var8Lifetime5 + 16);
               }
               if (var9Lifetime5 > -1) {
                 stackIn_425_0 = 14;
                 return stackIn_425_0;
               }
               if (this.field_y != -1) {
-                var9Lifetime5Lifetime1 = this.field_w[this.field_y].a((byte) -110, ur.field_z, var7Lifetime8 + 16, iu.field_t, 16 + var8Lifetime5);
+                var9Lifetime5Lifetime1 = this.field_w[this.field_y].a((byte) -110, TeleportAction.field_z, var7Lifetime8 + 16, iu.field_t, 16 + var8Lifetime5);
                 if (var9Lifetime5Lifetime1 > -1) {
                   stackIn_429_0 = 15;
                   return stackIn_429_0;
@@ -2844,7 +2844,7 @@ final class GameplayController {
             stackIn_42_0 = TutorialController.field_e;
           }
           var7 = stackIn_42_0;
-          fe.a(db.a(true, param1 + 3), u.a(param0 + 3, (byte) 94), 217, 29, il.field_s, var7, 0, 128, true);
+          fe.a(db.a(true, param1 + 3), u.a(param0 + 3, (byte) 94), 217, 29, DisplacedUnitMarker.field_s, var7, 0, 128, true);
           fe.c(var5, db.a(true, 483), u.a(34 + param0, (byte) 94), 0, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3064,7 +3064,7 @@ final class GameplayController {
         RuntimeException var3 = null;
         MapTile var4 = null;
         int var4_int = 0;
-        SpellAreaEffect var4_ref = null;
+        PreparedAction var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var4_intLifetime1;
@@ -3167,16 +3167,16 @@ final class GameplayController {
             }
             if ((var6 != 0) &&
               (!this.selectedUnit.movementSpent)) {
-              var4_ref = new jc(this.field_q, this.selectedUnit.tileX, this.selectedUnit.tileY, param0).createEffect(118, this.battlefield);
+              var4_ref = new DeployRequest(this.field_q, this.selectedUnit.tileX, this.selectedUnit.tileY, param0).prepareAction(118, this.battlefield);
               if (var4_ref != null) {
-                var4_ref.applyEffect(64, this.battlefield);
+                var4_ref.applyToBattlefield(64, this.battlefield);
               }
             }
           } else {
             if (!this.selectedUnit.movementSpent) {
-              var4_ref = new jc(this.field_q, this.selectedUnit.tileX, this.selectedUnit.tileY, param0).createEffect(118, this.battlefield);
+              var4_ref = new DeployRequest(this.field_q, this.selectedUnit.tileX, this.selectedUnit.tileY, param0).prepareAction(118, this.battlefield);
               if (var4_ref != null) {
-                var4_ref.applyEffect(64, this.battlefield);
+                var4_ref.applyToBattlefield(64, this.battlefield);
               }
             }
           }
@@ -4154,7 +4154,7 @@ final class GameplayController {
               var2_int != 0) {
               hh.field_d.d(0, -12 + this.field_Fb, 134, 50, (int)(128.0 + Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) * 64.0));
             }
-            ld.a(this.field_Fb, ga.field_a, en.field_E, GrowthEvent.field_I, this.n((byte) -69), 67, param0 ^ -25);
+            MoveAttackAction.a(this.field_Fb, ga.field_a, en.field_E, GrowthEvent.field_I, this.n((byte) -69), 67, param0 ^ -25);
           }
           if (param0 != 82) {
             return;
@@ -4353,7 +4353,7 @@ final class GameplayController {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        SpellAreaEffect var5 = null;
+        PreparedAction var5 = null;
         try {
           if (this.field_mb) {
             return;
@@ -4381,9 +4381,9 @@ final class GameplayController {
             decompiledSharedTail0 = (ArmiesOfGielinor.obfuscationControl);
           }
           if (decompiledSharedTail0) {
-            var5 = new hw(this.field_q, this.field_X, this.field_ec, param0).createEffect(param1 ^ 27, this.battlefield);
+            var5 = new SummonRequest(this.field_q, this.field_X, this.field_ec, param0).prepareAction(param1 ^ 27, this.battlefield);
             if (var5 != null) {
-              var5.applyEffect(64, this.battlefield);
+              var5.applyToBattlefield(64, this.battlefield);
             }
           }
           if (param1 != 65) {
@@ -5142,7 +5142,7 @@ final class GameplayController {
             stackIn_37_0 = TutorialController.field_e;
           }
           var7 = stackIn_37_0;
-          fe.a(param0 + 3, 3 + param2, 217, 29, il.field_s, var7, 0, 128, true);
+          fe.a(param0 + 3, 3 + param2, 217, 29, DisplacedUnitMarker.field_s, var7, 0, 128, true);
           fe.c(var5, param0 + 108, param2 + 34, 0, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5161,13 +5161,13 @@ final class GameplayController {
         int var5 = 0;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (this.aiPlanners.length >= AreaSpell.field_j &&
-            this.aiPlanners[AreaSpell.field_j] != null) {
-            this.aiPlanners[AreaSpell.field_j].a(mu.field_f, dg.field_c, (byte) 18, param1);
+          if (this.aiPlanners.length >= ActionSpell.field_j &&
+            this.aiPlanners[ActionSpell.field_j] != null) {
+            this.aiPlanners[ActionSpell.field_j].a(mu.field_f, dg.field_c, (byte) 18, param1);
             if (param0 != 0) {
               discarded$0 = this.a((EventPresenter) null, false);
             }
-            var3 = "ai " + (AreaSpell.field_j + 1) + " ";
+            var3 = "ai " + (ActionSpell.field_j + 1) + " ";
             var4 = mu.field_f;
             switch ((var5 == 0
               || var4 == 1
@@ -5446,12 +5446,12 @@ final class GameplayController {
               this.c(0, true);
             }
             if (rs.field_q == 3) {
-              var2_int = (AreaSpell.field_j + 1) % this.battlefield.playerCount;
+              var2_int = (ActionSpell.field_j + 1) % this.battlefield.playerCount;
               while (true) {
-                if (AreaSpell.field_j % this.battlefield.playerCount != var2_int &&
+                if (ActionSpell.field_j % this.battlefield.playerCount != var2_int &&
                   var8 == 0) {
                   if (this.aiPlanners[var2_int] != null) {
-                    AreaSpell.field_j = var2_int;
+                    ActionSpell.field_j = var2_int;
                   } else {
                     var2_int = (var2_int + 1) % this.battlefield.playerCount;
                     continue;
@@ -7554,7 +7554,7 @@ final class GameplayController {
                   stackIn_40_1 = 1;
                 }
                 ((RgbSprite) (Object) stackIn_39_0[stackIn_40_1]).g(28, var9 - 36);
-                var6 = nr.field_e.a(il.field_t[12]) / 2;
+                var6 = nr.field_e.a(DisplacedUnitMarker.field_t[12]) / 2;
                 var7 = -65 - var5 - var6 + rs.field_k;
                 var9Lifetime1 = this.f(128, db.a(true, var7));
                 if (u.a(0, (byte) 94) + se.field_a > var9Lifetime1) {
@@ -7567,7 +7567,7 @@ final class GameplayController {
               if (this.field_lb &&
                 -1 < this.field_q) {
                 fm.a(e.field_b, var6 + 30, db.a(true, -15 + var7), u.a(var3_int, (byte) 94), -87);
-                fe.a(il.field_t[12], db.a(true, var7), u.a(var3_int + 28, (byte) 94), 16777215, true);
+                fe.a(DisplacedUnitMarker.field_t[12], db.a(true, var7), u.a(var3_int + 28, (byte) 94), 16777215, true);
               }
               return;
             }
@@ -8166,7 +8166,7 @@ final class GameplayController {
           boolean decompiledFrameRemainder12 = true;
           if (var7Lifetime1 != 0) {
             var8Lifetime2 = iu.field_t;
-            var9Lifetime1 = ur.field_z;
+            var9Lifetime1 = TeleportAction.field_z;
             this.j(true);
             if (this.field_V) {
               this.field_j = 0;
@@ -8607,7 +8607,7 @@ final class GameplayController {
                 var12Lifetime1Lifetime1 = this.camera.field_e[1];
                 var13Lifetime1Lifetime1 = -1;
                 if (this.field_k != null) {
-                  var13Lifetime1Lifetime1 = this.field_k.a((byte) -122, ur.field_z, var11Lifetime1Lifetime1 + 16, iu.field_t, var12Lifetime1Lifetime1 + 16);
+                  var13Lifetime1Lifetime1 = this.field_k.a((byte) -122, TeleportAction.field_z, var11Lifetime1Lifetime1 + 16, iu.field_t, var12Lifetime1Lifetime1 + 16);
                 }
                 if (-1 < var13Lifetime1Lifetime1) {
                   this.a(11, -119);
@@ -8622,13 +8622,13 @@ final class GameplayController {
                 this.camera.c(9470337);
                 var11Lifetime1Lifetime1 = this.camera.field_e[0] + 24;
                 var12Lifetime1Lifetime1 = this.camera.field_e[1];
-                var13Lifetime1Lifetime2 = this.field_w[this.field_y].a((byte) -113, ur.field_z, var11Lifetime1Lifetime1 + 16, iu.field_t, var12Lifetime1Lifetime1 + 16);
+                var13Lifetime1Lifetime2 = this.field_w[this.field_y].a((byte) -113, TeleportAction.field_z, var11Lifetime1Lifetime1 + 16, iu.field_t, var12Lifetime1Lifetime1 + 16);
                 if (this.field_lb &&
                   ~this.battlefield.localPlayer != ~this.battlefield.currentPlayer) {
                   var13Lifetime1Lifetime2 = -1;
                 }
                 if (var13Lifetime1Lifetime2 > -1) {
-                  this.a(var13Lifetime1Lifetime2, 65, this.field_w[this.field_y].b((byte) 117, ur.field_z, var12Lifetime1Lifetime1 + 16, var11Lifetime1Lifetime1 + 16, iu.field_t));
+                  this.a(var13Lifetime1Lifetime2, 65, this.field_w[this.field_y].b((byte) 117, TeleportAction.field_z, var12Lifetime1Lifetime1 + 16, var11Lifetime1Lifetime1 + 16, iu.field_t));
                   return;
                 }
               }
@@ -8747,7 +8747,7 @@ final class GameplayController {
           }
           if (DeployEvent.field_A == 2) {
             this.j(true);
-            this.field_U = ur.field_z;
+            this.field_U = TeleportAction.field_z;
             this.field_t = iu.field_t;
           }
           if (0 == (eq.field_l & 4) &&
@@ -8894,7 +8894,7 @@ final class GameplayController {
 
     private final void f(byte param0) {
         RuntimeException decompiledCaughtException = null;
-        SpellAreaEffect var2 = null;
+        PreparedAction var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -8922,27 +8922,27 @@ final class GameplayController {
                 this.movementPlanner.writeAttackMovementPacket(vl.field_n, (byte) -120, this.field_oc);
                 if (var3 != 0) {
                   if (null == this.field_oc) {
-                    var2 = this.movementPlanner.a(this.field_q, 43).createEffect(90, this.battlefield);
+                    var2 = this.movementPlanner.createActionRequest(this.field_q, 43).prepareAction(90, this.battlefield);
                     if (var2 != null) {
-                      var2.applyEffect(64, this.battlefield);
+                      var2.applyToBattlefield(64, this.battlefield);
                     }
-                    new ee(this.field_q, this.field_oc.tileX, this.field_oc.tileY, this.movementPlanner.a(this.field_q, 50)).createEffect(47, this.battlefield).applyEffect(64, this.battlefield);
+                    new SphinxActionRequest(this.field_q, this.field_oc.tileX, this.field_oc.tileY, this.movementPlanner.createActionRequest(this.field_q, 50)).prepareAction(47, this.battlefield).applyToBattlefield(64, this.battlefield);
                   } else {
-                    new ee(this.field_q, this.field_oc.tileX, this.field_oc.tileY, this.movementPlanner.a(this.field_q, 50)).createEffect(47, this.battlefield).applyEffect(64, this.battlefield);
+                    new SphinxActionRequest(this.field_q, this.field_oc.tileX, this.field_oc.tileY, this.movementPlanner.createActionRequest(this.field_q, 50)).prepareAction(47, this.battlefield).applyToBattlefield(64, this.battlefield);
                   }
                 }
               }
             } else {
               boolean decompiledSharedTail0 = (null != this.field_oc);
               if (!decompiledSharedTail0) {
-                var2 = this.movementPlanner.a(this.field_q, 43).createEffect(90, this.battlefield);
+                var2 = this.movementPlanner.createActionRequest(this.field_q, 43).prepareAction(90, this.battlefield);
                 if (var2 != null) {
-                  var2.applyEffect(64, this.battlefield);
+                  var2.applyToBattlefield(64, this.battlefield);
                 }
                 decompiledSharedTail0 = (var3 != 0);
               }
               if (decompiledSharedTail0) {
-                new ee(this.field_q, this.field_oc.tileX, this.field_oc.tileY, this.movementPlanner.a(this.field_q, 50)).createEffect(47, this.battlefield).applyEffect(64, this.battlefield);
+                new SphinxActionRequest(this.field_q, this.field_oc.tileX, this.field_oc.tileY, this.movementPlanner.createActionRequest(this.field_q, 50)).prepareAction(47, this.battlefield).applyToBattlefield(64, this.battlefield);
               }
             }
             if (this.movementPlanner.spellId > -1) {
@@ -8981,7 +8981,7 @@ final class GameplayController {
               if (!this.field_a) {
                 var3 = this.battlefield.g(-1);
                 if (var3 > 0) {
-                  fq.a(this.field_Nb, fo.a(4800, jc.field_x, new String[]{Integer.toString(var3)}), 0, true);
+                  fq.a(this.field_Nb, fo.a(4800, DeployRequest.field_x, new String[]{Integer.toString(var3)}), 0, true);
                 }
               }
             }
@@ -9984,7 +9984,7 @@ final class GameplayController {
                   this.a(var8Lifetime1, 6, 30, 24 + var3Lifetime1, -36 + (-(var9Lifetime1 / 2) + var2_int), (byte) -116);
                   if (0 < var7[var8Lifetime1] &&
                     !this.field_z) {
-                    ur.field_w[var7[var8Lifetime1] - 1].g(-(var9Lifetime1 / 2) - 60 + var2_int, 16 + var3Lifetime1);
+                    TeleportAction.field_w[var7[var8Lifetime1] - 1].g(-(var9Lifetime1 / 2) - 60 + var2_int, 16 + var3Lifetime1);
                   }
                 }
                 var3Lifetime1 += 30;
@@ -10007,7 +10007,7 @@ final class GameplayController {
                     var10Lifetime1 = -52 - var9Lifetime1 / 2 + var2_int;
                     var11Lifetime1 = 44 + var3Lifetime1 + 8;
                     SoftwareRaster.a(var10Lifetime1 << 4, var11Lifetime1 << 4, 256, 62, fe.field_o[0]);
-                    ur.field_w[-1 + var7[var8Lifetime1]].g(-10 + var10Lifetime1, -10 + var11Lifetime1);
+                    TeleportAction.field_w[-1 + var7[var8Lifetime1]].g(-10 + var10Lifetime1, -10 + var11Lifetime1);
                   }
                 }
                 var3Lifetime1 += 60;
@@ -10417,7 +10417,7 @@ final class GameplayController {
             return;
           }
           var6_int = 200;
-          var7 = SpellAreaSelection.field_l[param0];
+          var7 = ActionRequest.field_l[param0];
           if (this.battlefield.field_Q != 4) {
             var7 = var7 + fo.a(4800, lt.field_f, new String[]{Integer.toString(uc.spellDefinitions[param0][0]), Integer.toString(this.battlefield.remainingRuneCap[this.field_q])});
           }
@@ -10787,7 +10787,7 @@ final class GameplayController {
               return;
             }
           }
-          new ua((Spell) (var8), param0, this.field_q).applyEffect(param3 ^ 66, this.battlefield);
+          new SpellCastAction((Spell) (var8), param0, this.field_q).applyToBattlefield(param3 ^ 66, this.battlefield);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -10893,7 +10893,7 @@ final class GameplayController {
           var7 = var6 - this.f(128, this.g(2));
           if (this.field_dc[2] < 256) {
             SoftwareRaster.b(0, 0, var5, var6, 0, (-var4[2] + 255) / 2);
-            rs.field_n.a(be.field_F, var5 / 2, -(var7 >> 1) + (-20 + var6 / 2), 16763904, 0, -var4[2] + 255);
+            rs.field_n.a(SummonAction.field_F, var5 / 2, -(var7 >> 1) + (-20 + var6 / 2), 16763904, 0, -var4[2] + 255);
           }
           this.n(-12);
           var8 = 0;
@@ -11568,7 +11568,7 @@ final class GameplayController {
                   }
                   var12 = var5 - 2 * (225 - this.field_H) + (var3 * var9 + var3 * var10);
                   var13 = var6 + (215 + var9 * var4) - var10 * var4;
-                  kj.field_s[this.battlefield.mapSizeSetting].b(var12, var13, var11);
+                  SkeletonLimitMarker.field_s[this.battlefield.mapSizeSetting].b(var12, var13, var11);
                   if (null != this.battlefield.tiles[var2_int].occupant) {
                     stackIn_105_0 = op.field_c;
                     if (!this.battlefield.teamGame) {
@@ -11577,10 +11577,10 @@ final class GameplayController {
                       stackIn_106_1 = 1;
                     }
                     var11 = stackIn_105_0[stackIn_106_1][this.battlefield.tiles[var2_int].occupant.ownerPlayer];
-                    kj.field_s[this.battlefield.mapSizeSetting + 4].b(var12, var13, var11);
+                    SkeletonLimitMarker.field_s[this.battlefield.mapSizeSetting + 4].b(var12, var13, var11);
                     if (this.battlefield.tiles[var2_int].occupant.hasMovementFlag1(false)) {
                       var14 = 255 - (80 * ae.b(uk.field_n << 8, 100) >> 16);
-                      kj.field_s[4 + this.battlefield.mapSizeSetting].f(var12, var13, var14);
+                      SkeletonLimitMarker.field_s[4 + this.battlefield.mapSizeSetting].f(var12, var13, var14);
                     }
                   }
                   var2_int++;

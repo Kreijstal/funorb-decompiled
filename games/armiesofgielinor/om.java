@@ -377,8 +377,8 @@ final class om extends IntrusiveNode implements TaggedFieldReader {
         }
         ij.field_x = param0;
         te.field_l = param2;
-        if (null != ee.field_v) {
-          ee.field_v.a(param2, param0, (byte) -14);
+        if (null != SphinxActionRequest.field_v) {
+          SphinxActionRequest.field_v.a(param2, param0, (byte) -14);
         }
     }
 

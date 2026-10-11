@@ -476,7 +476,7 @@ final class nm extends hn {
         if (param0 != 95) {
           return;
         }
-        if (!(0 >= SpellAreaEffect.field_r) ||
+        if (!(0 >= PreparedAction.field_r) ||
           !(rk.field_D <= 0)) {
           if (dh.field_k != null) {
             dh.field_k.f(lk.field_a.field_S, 0);

@@ -209,12 +209,12 @@ abstract class dv implements ap {
         int var2;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if ((rd.field_j.battlefield.field_C & 1 << rd.field_j.field_q) != 0) {
-          il.field_t[10] = np.field_Jb;
+          DisplacedUnitMarker.field_t[10] = np.field_Jb;
         } else {
           if ((~rd.field_j.battlefield.field_e & rd.field_j.battlefield.field_C) == 0) {
-            il.field_t[10] = uu.field_c;
+            DisplacedUnitMarker.field_t[10] = uu.field_c;
           } else {
-            il.field_t[10] = dm.field_O;
+            DisplacedUnitMarker.field_t[10] = dm.field_O;
           }
         }
         if (!param0) {

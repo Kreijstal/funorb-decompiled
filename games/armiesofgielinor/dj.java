@@ -25,7 +25,7 @@ final class dj {
               lj.a((byte) -110, param0, "document.cookie=\"" + var5 + "\"");
             } catch (Throwable throwable) {
             }
-            ld.a(16058, param0);
+            MoveAttackAction.a(16058, param0);
           } catch (RuntimeException runtimeException) {
             throw ig.a((Throwable) ((Object) runtimeException), "dj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
@@ -37,9 +37,9 @@ final class dj {
     }
 
     final static void a(byte param0) {
-        if (null != am.field_z) {
-          am.field_z.c((byte) -45);
-          am.field_z = null;
+        if (null != MoveAttackRequest.field_z) {
+          MoveAttackRequest.field_z.c((byte) -45);
+          MoveAttackRequest.field_z = null;
         }
         if (param0 > -123) {
           field_b = (int[]) null;

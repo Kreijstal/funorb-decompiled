@@ -701,7 +701,7 @@ class lk implements kh, pm {
             return;
           }
           oq.a(27080, (java.awt.Component) ((Object) param1));
-          il.a((java.awt.Component) ((Object) param1), (byte) 74);
+          DisplacedUnitMarker.a((java.awt.Component) ((Object) param1), (byte) 74);
           if (om.field_I == null) {
             return;
           }

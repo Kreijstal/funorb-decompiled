@@ -353,7 +353,7 @@ final class na extends tj implements mf, he {
           var5Lifetime1 = var7;
           while (param2.length > var7) {
             if (!param2[var7].field_e) {
-              discarded$1 = var8.append(hw.a(640, param2[var7].field_c.getClass()));
+              discarded$1 = var8.append(SummonRequest.a(640, param2[var7].field_c.getClass()));
             } else {
               discarded$2 = var8.append(cq.a(param2[var7].field_c, (byte) -75).toString());
             }

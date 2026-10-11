@@ -13,7 +13,7 @@ final class qh {
           }
           pi.field_N.field_O = ke.field_e.field_O;
           pi.field_N.field_Eb = 1;
-          if (param7 > ~SpellAreaEffect.field_r) {
+          if (param7 > ~PreparedAction.field_r) {
             j.a(1, param9, param0, param5);
           }
           if (0 < rk.field_D) {
@@ -40,7 +40,7 @@ final class qh {
               }
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
-              if (param7 > ~SpellAreaEffect.field_r) {
+              if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
               if (0 < rk.field_D) {
@@ -64,7 +64,7 @@ final class qh {
               }
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
-              if (param7 > ~SpellAreaEffect.field_r) {
+              if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
               if (0 < rk.field_D) {
@@ -101,7 +101,7 @@ final class qh {
               }
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
-              if (param7 > ~SpellAreaEffect.field_r) {
+              if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
               if (0 < rk.field_D) {
@@ -136,7 +136,7 @@ final class qh {
             }
             pi.field_N.field_O = ke.field_e.field_O;
             pi.field_N.field_Eb = 1;
-            if (param7 > ~SpellAreaEffect.field_r) {
+            if (param7 > ~PreparedAction.field_r) {
               j.a(1, param9, param0, param5);
             }
             if (0 < rk.field_D) {
@@ -159,7 +159,7 @@ final class qh {
               bn.a(param0, param9, 117, param5);
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
-              if (param7 > ~SpellAreaEffect.field_r) {
+              if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
               if (0 < rk.field_D) {
@@ -178,7 +178,7 @@ final class qh {
             } else {
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
-              if (param7 > ~SpellAreaEffect.field_r) {
+              if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
               if (0 < rk.field_D) {

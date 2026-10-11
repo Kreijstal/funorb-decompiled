@@ -212,13 +212,13 @@ final class wd {
                 if (null != vu.field_M) {
                   var6 = 1;
                   if (!mt.field_f ||
-                    ur.field_C == null) {
+                    TeleportAction.field_C == null) {
                     var4 = "[" + fo.a(4800, cv.field_m, new String[]{vu.field_M.field_rc}) + "] ";
                     if (var10 != 0) {
-                      var4 = "[" + ur.field_C + "] ";
+                      var4 = "[" + TeleportAction.field_C + "] ";
                     }
                   } else {
-                    var4 = "[" + ur.field_C + "] ";
+                    var4 = "[" + TeleportAction.field_C + "] ";
                   }
                 }
               }

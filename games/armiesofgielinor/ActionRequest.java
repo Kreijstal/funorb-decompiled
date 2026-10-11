@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class SpellAreaSelection extends IntrusiveNode {
-    int field_p;
-    boolean field_u;
-    int field_o;
+abstract class ActionRequest extends IntrusiveNode {
+    int actingPlayer;
+    boolean allowOtherPlayer;
+    int spellId;
     static String[][] field_m;
     static long field_s;
     static int field_n;
@@ -37,7 +37,7 @@ abstract class SpellAreaSelection extends IntrusiveNode {
         rv.a(false, param5, param2, var6);
     }
 
-    final String a(int param0, String[] param1, String param2) {
+    final String formatIllegalMove(int obfuscationGuard, String[] messageParts, String actionKind) {
         String var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -50,28 +50,28 @@ abstract class SpellAreaSelection extends IntrusiveNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = 115 % ((param0 - 77) / 34);
-          if (1 == param1.length) {
-            stackIn_3_0 = param1[0];
+          var5 = 115 % ((obfuscationGuard - 77) / 34);
+          if (1 == messageParts.length) {
+            stackIn_3_0 = messageParts[0];
           } else {
-            stackIn_3_0 = SpellCastEvent.a(593277313, (CharSequence[]) ((Object) param1));
+            stackIn_3_0 = SpellCastEvent.a(593277313, (CharSequence[]) ((Object) messageParts));
           }
           var4 = stackIn_3_0;
-          var4 = "Illegal move (" + param2 + "); player " + this.field_p + ": " + var4 + ".";
+          var4 = "Illegal move (" + actionKind + "); player " + this.actingPlayer + ": " + var4 + ".";
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_7_0 = var4_ref;
-          stackIn_7_1 = new StringBuilder().append("mn.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("mn.B(").append(obfuscationGuard).append(',');
+          if (messageParts == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param2 == null) {
+          if (actionKind == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -80,7 +80,7 @@ abstract class SpellAreaSelection extends IntrusiveNode {
         }
     }
 
-    abstract SpellAreaEffect createEffect(int obfuscationGuard, Battlefield battlefield);
+    abstract PreparedAction prepareAction(int obfuscationGuard, Battlefield battlefield);
 
     public static void a(int param0) {
         field_q = null;
@@ -98,8 +98,8 @@ abstract class SpellAreaSelection extends IntrusiveNode {
         field_m = (String[][]) null;
     }
 
-    protected SpellAreaSelection() {
-        this.field_o = -1;
+    protected ActionRequest() {
+        this.spellId = -1;
     }
 
     static {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dk extends SpellAreaEffect {
+final class CorpseConditionMarker extends PreparedAction {
     static RgbSprite field_v;
     static vk field_u;
     static String[] field_s;
@@ -87,8 +87,8 @@ final class dk extends SpellAreaEffect {
             param3[var6] = var7;
             param4[param0] = param4[var6];
             param4[var6] = var8;
-            dk.a(-1 + var6, param1, (byte) -127, param3, param4);
-            dk.a(param0, 1 + var6, (byte) -127, param3, param4);
+            CorpseConditionMarker.a(-1 + var6, param1, (byte) -127, param3, param4);
+            CorpseConditionMarker.a(param0, 1 + var6, (byte) -127, param3, param4);
           }
           if (param2 != -127) {
             field_w = (kl) null;
@@ -114,21 +114,21 @@ final class dk extends SpellAreaEffect {
         }
     }
 
-    final void applyEffect(int obfuscationGuard, Battlefield battlefield) {
+    final void applyToBattlefield(int obfuscationGuard, Battlefield battlefield) {
         try {
           if (obfuscationGuard != 64) {
             int[] var4 = (int[]) null;
-            dk.a(12, -29, (byte) 33, (int[]) null, (int[]) null);
+            CorpseConditionMarker.a(12, -29, (byte) 33, (int[]) null, (int[]) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "dk.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 
-    dk(int param0, int param1) {
-        this.field_m = param0;
-        this.field_n = new int[param1];
-        this.field_n[this.field_m] = 1024;
+    CorpseConditionMarker(int actingPlayer, int playerCount) {
+        this.actingPlayer = actingPlayer;
+        this.playerFlags = new int[playerCount];
+        this.playerFlags[this.actingPlayer] = 1024;
     }
 
     public static void a(boolean param0) {

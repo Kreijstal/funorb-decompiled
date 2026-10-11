@@ -31,10 +31,10 @@ abstract class el {
           }
           var5_int = 0;
           while (true) {
-            if (var5_int >= am.field_K.length) {
+            if (var5_int >= MoveAttackRequest.field_K.length) {
               return;
             }
-            param4 = am.field_K[var5_int];
+            param4 = MoveAttackRequest.field_K[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param4;

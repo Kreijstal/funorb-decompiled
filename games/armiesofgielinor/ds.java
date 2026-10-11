@@ -30,7 +30,7 @@ final class ds {
           ku.field_I = false;
           DeployEvent.field_A = jm.field_k;
           iu.field_t = mq.field_Xb;
-          ur.field_z = ei.field_d;
+          TeleportAction.field_z = ei.field_d;
           jm.field_k = 0;
           eq.field_l = EffectPresentation.field_g;
         }

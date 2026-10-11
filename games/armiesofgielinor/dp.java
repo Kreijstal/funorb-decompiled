@@ -101,7 +101,7 @@ final class dp extends je {
         RuntimeException var1_ref = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var5 = am.field_K;
+          var5 = MoveAttackRequest.field_K;
           var1 = var5;
           var2 = param0;
           var3 = var5.length;

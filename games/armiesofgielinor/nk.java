@@ -112,7 +112,7 @@ final class nk {
         RuntimeException var3_ref = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3 = be.a(-127, param1, param0);
+          var3 = SummonAction.a(-127, param1, param0);
           if (param2 > -34) {
             nk.b((byte) -25);
           }

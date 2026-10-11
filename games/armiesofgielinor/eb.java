@@ -35,8 +35,8 @@ final class eb {
           if (!param2) {
             return;
           }
-          for (var3_int = 1; var3_int < SpellAreaSelection.field_m[param1].length; var3_int++) {
-            SpellAreaSelection.field_k[param1][var3_int] = null;
+          for (var3_int = 1; var3_int < ActionRequest.field_m[param1].length; var3_int++) {
+            ActionRequest.field_k[param1][var3_int] = null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

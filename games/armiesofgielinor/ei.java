@@ -134,7 +134,7 @@ final class ei {
                                 SoftwareRaster.b();
                               } else {
                                 if (-6 == param0) {
-                                  ee.e(0);
+                                  SphinxActionRequest.e(0);
                                 } else {
                                   if (-7 == param0) {
                                     tl.b((byte) -90);

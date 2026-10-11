@@ -131,18 +131,18 @@ final class cd {
     final static boolean c(int param0) {
         if (param0 != 9501) {
           field_d = (String) null;
-          if (ee.field_v == null) {
+          if (SphinxActionRequest.field_v == null) {
             return false;
           }
-          if (null != ee.field_v.a((byte) 89)) {
+          if (null != SphinxActionRequest.field_v.a((byte) 89)) {
             return true;
           }
           return false;
         }
-        if (ee.field_v == null) {
+        if (SphinxActionRequest.field_v == null) {
           return false;
         }
-        if (null != ee.field_v.a((byte) 89)) {
+        if (null != SphinxActionRequest.field_v.a((byte) 89)) {
           return true;
         }
         return false;

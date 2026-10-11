@@ -489,7 +489,7 @@ final class rk {
                   mv.a(db.a(true, 20 + param0), (byte) -70, var7, param2, u.a(param1, (byte) 94));
                 }
                 if (-1 < param2) {
-                  ks.a(SpellAreaSelection.field_k[76][param2], false, u.a(-40 + param1, (byte) 94), this.field_ab, 128, 150, db.a(true, param0), (js) null, -10374);
+                  ks.a(ActionRequest.field_k[76][param2], false, u.a(-40 + param1, (byte) 94), this.field_ab, 128, 150, db.a(true, param0), (js) null, -10374);
                 }
                 l.field_b[16].a(db.a(true, param0), u.a(param1 - 40, (byte) 94));
                 return;
@@ -594,21 +594,21 @@ final class rk {
         this.field_K = new ft(597, 417);
         this.n(99);
         this.field_cb = 3223077;
-        if (il.field_t != null) {
-          if (il.field_t.length <= 8) {
+        if (DisplacedUnitMarker.field_t != null) {
+          if (DisplacedUnitMarker.field_t.length <= 8) {
             this.field_O = null;
           } else {
-            this.field_O = il.field_t[8];
+            this.field_O = DisplacedUnitMarker.field_t[8];
           }
-          if (il.field_t.length > 22) {
-            this.field_k = il.field_t[22];
+          if (DisplacedUnitMarker.field_t.length > 22) {
+            this.field_k = DisplacedUnitMarker.field_t[22];
           } else {
             this.field_k = null;
           }
-          if (il.field_t.length <= 23) {
+          if (DisplacedUnitMarker.field_t.length <= 23) {
             this.field_eb = null;
           } else {
-            this.field_eb = il.field_t[23];
+            this.field_eb = DisplacedUnitMarker.field_t[23];
           }
         }
         this.field_bb = 58;
@@ -2345,7 +2345,7 @@ final class rk {
           int var8Lifetime1;
           var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
-            if (null == am.field_z &&
+            if (null == MoveAttackRequest.field_z &&
               !EffectPresentation.a(param5, 0)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
@@ -2369,7 +2369,7 @@ final class rk {
               if (0 != var6_int) {
                 nm.field_o = var6_int;
                 fk.field_b = -1;
-                ov.field_g = be.field_z;
+                ov.field_g = SummonAction.field_z;
               } else {
                 ov.field_g = mh.field_a;
               }
@@ -2392,7 +2392,7 @@ final class rk {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  ov.field_g = be.field_z;
+                  ov.field_g = SummonAction.field_z;
                   fk.field_b = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -2503,7 +2503,7 @@ final class rk {
               stackIn_88_0 = nm.field_o;
               return stackIn_88_0;
             }
-            if (be.field_z == ov.field_g &&
+            if (SummonAction.field_z == ov.field_g &&
               jh.g(2)) {
               dj.a((byte) -128);
               if (nm.field_o == 7 &&
@@ -2520,7 +2520,7 @@ final class rk {
               stackIn_99_0 = nm.field_o;
               return stackIn_99_0;
             }
-            if (null == am.field_z) {
+            if (null == MoveAttackRequest.field_z) {
               if (ev.field_b) {
                 if (TileMetadata.b(0) <= 30000L) {
                   lk.field_r = DamageEvent.field_y;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AiActionCandidate extends IntrusiveNode {
-    int spellId;
+    int summoningPlayer;
     int targetX;
     static String field_n;
     int destinationX;
@@ -12,15 +12,15 @@ final class AiActionCandidate extends IntrusiveNode {
     int executionResult;
     int destinationY;
     static String field_v;
-    int selectionVariant;
+    int summonUnitType;
     static int[] field_p;
 
     final static void e(int param0) {
         if (param0 != 17023) {
           field_p = (int[]) null;
         }
-        if (AreaSpell.field_e != null) {
-          AreaSpell.field_e.field_h = false;
+        if (ActionSpell.field_e != null) {
+          ActionSpell.field_e.field_h = false;
         }
         ds.a(0, param0 ^ -16982);
     }
@@ -44,12 +44,12 @@ final class AiActionCandidate extends IntrusiveNode {
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        hw var3 = null;
+        SummonRequest var3 = null;
         RuntimeException var3_ref = null;
-        SpellAreaSelection var4 = null;
+        ActionRequest var4 = null;
         try {
           if (this.destinationX != -1) {
-            if (this.selectionVariant == -1) {
+            if (this.summonUnitType == -1) {
               planner.actionMovement.reconstructPath(this.destinationY, (byte) -116, this.destinationX);
               if (planner.actionMovement.pathLength <= 0 &&
                 this.targetX == -1) {
@@ -59,12 +59,12 @@ final class AiActionCandidate extends IntrusiveNode {
                 planner.actionMovement.targetDeltaX = -this.destinationX + this.targetX;
                 planner.actionMovement.targetDeltaY = this.targetY - this.destinationY;
               }
-              var4 = planner.actionMovement.a(planner.playerId, 103);
+              var4 = planner.actionMovement.createActionRequest(planner.playerId, 103);
               if (!planner.executeSelection(var4, -125)) {
                 this.executionResult = -2;
               }
             } else {
-              var3 = new hw(this.spellId, this.destinationX, this.destinationY, this.selectionVariant);
+              var3 = new SummonRequest(this.summoningPlayer, this.destinationX, this.destinationY, this.summonUnitType);
               planner.executeSelection(var3, -124);
             }
           }
@@ -88,10 +88,10 @@ final class AiActionCandidate extends IntrusiveNode {
     }
 
     final void reset(int targetY) {
-        this.spellId = -1;
+        this.summoningPlayer = -1;
         this.score = 1.401298464324817e-45f;
         this.destinationX = -1;
-        this.selectionVariant = -1;
+        this.summonUnitType = -1;
         this.destinationY = -1;
         this.executionResult = -1;
         this.targetY = targetY;

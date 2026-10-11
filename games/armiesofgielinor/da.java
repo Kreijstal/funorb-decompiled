@@ -216,7 +216,7 @@ final class da {
           }
           var3 = var9.k(0);
           if (0 == var2) {
-            var4 = (on) (ss.field_t.first((byte) 96));
+            var4 = (on) (StateChangeMarker.field_t.first((byte) 96));
             if (var4 == null) {
               dj.a((byte) -124);
               return;

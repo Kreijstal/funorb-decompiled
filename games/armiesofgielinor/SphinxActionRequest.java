@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ee extends SpellAreaSelection {
-    private int field_w;
+final class SphinxActionRequest extends ActionRequest {
+    private int sphinxY;
     static int[] field_x;
-    private int field_z;
+    private int sphinxX;
     static je field_A;
-    private SpellAreaSelection field_y;
+    private ActionRequest delegatedRequest;
     static gk field_v;
 
     final static void a(int param0, byte param1) {
@@ -133,8 +133,8 @@ final class ee extends SpellAreaSelection {
           var10.field_Fb = 1;
           var11 = var10;
           var11.field_Eb = 1;
-          be.field_y = new je(0L, var8);
-          be.field_y.field_G = wj.a(-12310, fk.a("heading", (byte) -126, param1, "lobby"));
+          SummonAction.field_y = new je(0L, var8);
+          SummonAction.field_y.field_G = wj.a(-12310, fk.a("heading", (byte) -126, param1, "lobby"));
           im.field_x = new je(0L, (je) null);
           im.field_x.field_G = jq.a(false, 4210752, -20600, 120, false, 8421504);
           qc.field_e = new je(0L, (je) null);
@@ -227,7 +227,7 @@ final class ee extends SpellAreaSelection {
           pt.field_X = new je(0L, je.field_Q);
           kd.field_M = new je(0L, nd.field_a);
           rd.field_e = new je(0L, je.field_Q);
-          SpellAreaEffect.field_o = new je(0L, je.field_Q);
+          PreparedAction.field_o = new je(0L, je.field_Q);
           eb.field_a = new je(0L, je.field_Q);
           je.field_Q.field_G = wj.a(-12310, fk.a("smallbutton", (byte) -128, param1, "lobby"));
           je.field_Q.field_mb = wj.a(-12310, fk.a("smallbutton_mouseover", (byte) -125, param1, "lobby"));
@@ -263,11 +263,11 @@ final class ee extends SpellAreaSelection {
           dupTemp$2 = wj.a(-12310, fk.a("chatbutton_active", (byte) -124, param1, "lobby"));
           rd.field_e.field_H = dupTemp$2;
           rd.field_e.field_U = dupTemp$2;
-          SpellAreaEffect.field_o.field_G = wj.a(-12310, fk.a("chatfilterbutton", (byte) -127, param1, "lobby"));
-          SpellAreaEffect.field_o.field_mb = wj.a(-12310, fk.a("chatfilterbutton_mouseover", (byte) -127, param1, "lobby"));
+          PreparedAction.field_o.field_G = wj.a(-12310, fk.a("chatfilterbutton", (byte) -127, param1, "lobby"));
+          PreparedAction.field_o.field_mb = wj.a(-12310, fk.a("chatfilterbutton_mouseover", (byte) -127, param1, "lobby"));
           dupTemp$3 = wj.a(-12310, fk.a("chatfilterbutton_active", (byte) -124, param1, "lobby"));
-          SpellAreaEffect.field_o.field_H = dupTemp$3;
-          SpellAreaEffect.field_o.field_U = dupTemp$3;
+          PreparedAction.field_o.field_H = dupTemp$3;
+          PreparedAction.field_o.field_U = dupTemp$3;
           var17 = fk.a("checkbox", (byte) -124, param1, "lobby");
           hs.field_H = new fp(0L, var17[1], var17[0], 1, ms.field_k, (String) null);
           oe.field_Cb = new je(0L, (je) null);
@@ -325,7 +325,7 @@ final class ee extends SpellAreaSelection {
         }
     }
 
-    private final String a(String[] param0, int param1) {
+    private final String formatMindControlRejection(String[] messageParts, int obfuscationGuard) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -334,8 +334,8 @@ final class ee extends SpellAreaSelection {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == 30536) {
-            stackIn_4_0 = this.a(12, param0, "mind control");
+          if (obfuscationGuard == 30536) {
+            stackIn_4_0 = this.formatIllegalMove(12, messageParts, "mind control");
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -345,12 +345,12 @@ final class ee extends SpellAreaSelection {
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
           stackIn_7_1 = new StringBuilder().append("ee.F(");
-          if (param0 == null) {
+          if (messageParts == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -366,19 +366,19 @@ final class ee extends SpellAreaSelection {
     final static void e(int param0) {
         TurnEffectEvent.field_z.c((byte) -115);
         if (param0 != 0) {
-          ee.f(64);
+          SphinxActionRequest.f(64);
           return;
         }
     }
 
-    final SpellAreaEffect createEffect(int obfuscationGuard, Battlefield battlefield) {
+    final PreparedAction prepareAction(int obfuscationGuard, Battlefield battlefield) {
         String discarded$0 = null;
         String discarded$2 = null;
         String discarded$1 = null;
         Object stackIn_5_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_11_0 = null;
-        SpellAreaEffect stackIn_13_0 = null;
+        PreparedAction stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -390,26 +390,26 @@ final class ee extends SpellAreaSelection {
           this.unlink(44);
           if (obfuscationGuard <= 31) {
             var4 = (kl) null;
-            ee.a((ru[]) null, (kl) null, 4, (int[]) null, (kl) null);
+            SphinxActionRequest.a((ru[]) null, (kl) null, 4, (int[]) null, (kl) null);
           }
-          var5 = battlefield.getUnitAt(this.field_w, true, this.field_z);
+          var5 = battlefield.getUnitAt(this.sphinxY, true, this.sphinxX);
           if (var5 == null) {
-            discarded$0 = this.a(new String[]{"no unit at ", TutorialController.c(this.field_z, 0, this.field_w)}, 30536);
+            discarded$0 = this.formatMindControlRejection(new String[]{"no unit at ", TutorialController.c(this.sphinxX, 0, this.sphinxY)}, 30536);
             stackIn_5_0 = null;
-            return (SpellAreaEffect) (stackIn_5_0);
+            return (PreparedAction) (stackIn_5_0);
           }
           if (var5.attacksRemaining == 0) {
-            discarded$2 = this.a(new String[]{"unit at ", TutorialController.c(this.field_z, 0, this.field_w), " has attacked"}, 30536);
+            discarded$2 = this.formatMindControlRejection(new String[]{"unit at ", TutorialController.c(this.sphinxX, 0, this.sphinxY), " has attacked"}, 30536);
             stackIn_8_0 = null;
-            return (SpellAreaEffect) (stackIn_8_0);
+            return (PreparedAction) (stackIn_8_0);
           }
           if (72 == var5.unitType) {
-            stackIn_13_0 = this.field_y.createEffect(100, battlefield);
+            stackIn_13_0 = this.delegatedRequest.prepareAction(100, battlefield);
             return stackIn_13_0;
           }
-          discarded$1 = this.a(new String[]{"unit at ", TutorialController.c(this.field_z, 0, this.field_w), " is not TYPE_SPHINX"}, 30536);
+          discarded$1 = this.formatMindControlRejection(new String[]{"unit at ", TutorialController.c(this.sphinxX, 0, this.sphinxY), " is not TYPE_SPHINX"}, 30536);
           stackIn_11_0 = null;
-          return (SpellAreaEffect) (stackIn_11_0);
+          return (PreparedAction) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -424,15 +424,15 @@ final class ee extends SpellAreaSelection {
         }
     }
 
-    ee(int param0, int param1, int param2, SpellAreaSelection param3) {
+    SphinxActionRequest(int actingPlayer, int sphinxX, int sphinxY, ActionRequest delegatedRequest) {
         try {
-          this.field_y = param3;
-          this.field_y.field_u = true;
-          this.field_p = param0;
-          this.field_z = param1;
-          this.field_w = param2;
+          this.delegatedRequest = delegatedRequest;
+          this.delegatedRequest.allowOtherPlayer = true;
+          this.actingPlayer = actingPlayer;
+          this.sphinxX = sphinxX;
+          this.sphinxY = sphinxY;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ee.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ee.<init>(" + actingPlayer + ',' + sphinxX + ',' + sphinxY + ',' + (delegatedRequest != null ? "{...}" : "null") + ')');
         }
     }
 

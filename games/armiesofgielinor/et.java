@@ -81,14 +81,14 @@ final class et {
                     if (var14 != -2147483648) {
                       var15 = var14 + (var13Lifetime1 + var12Lifetime1) - var6;
                       stackIn_24_0 = -1;
-                      stackIn_24_1 = am.field_K.length;
+                      stackIn_24_1 = MoveAttackRequest.field_K.length;
                       if (0 <= var7) {
                         stackIn_25_2 = var15 >> var7;
                       } else {
                         stackIn_25_2 = var15 << -var7;
                       }
                       var16 = stackIn_24_0 + (stackIn_24_1 - stackIn_25_2);
-                      var17 = am.field_K[var16];
+                      var17 = MoveAttackRequest.field_K[var16];
                       while (true) {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -97,13 +97,13 @@ final class et {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = am.field_K[var16];
+                          var17 = MoveAttackRequest.field_K[var16];
                           continue;
                         }
                         stackIn_35_0Lifetime1 = var17 + (var16 << 4);
                         var18 = stackIn_35_0Lifetime1;
                         ab.field_c[var18] = var8;
-                        am.field_K[var16] = 1 + var17;
+                        MoveAttackRequest.field_K[var16] = 1 + var17;
                         if (param0.field_E > 0 &&
                           null != param0.field_K) {
                           dupTemp$0 = param0.field_K[var8];

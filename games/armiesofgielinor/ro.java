@@ -301,8 +301,8 @@ class ro extends pt implements he {
           }
           return true;
         }
-        if (ur.field_C != null) {
-          var52 = "[" + ur.field_C + "] ";
+        if (TeleportAction.field_C != null) {
+          var52 = "[" + TeleportAction.field_C + "] ";
           var53 = var52 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var53);
           if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {
@@ -330,7 +330,7 @@ class ro extends pt implements he {
             gl.a(122, 3);
             this.b(true);
           } else {
-            AreaSpell.a(CombatEvent.d((byte) -125), -113, "tochangedisplayname.ws");
+            ActionSpell.a(CombatEvent.d((byte) -125), -113, "tochangedisplayname.ws");
           }
           if (param1 != 11) {
             ro.n(46);

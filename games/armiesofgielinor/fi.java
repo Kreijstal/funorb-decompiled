@@ -120,14 +120,14 @@ final class fi extends IntrusiveNode {
           uf.field_j.e(var9Lifetime1, var10, -this.field_m + 32 << 3);
           var11 = bw.unitDefinitions[this.field_r.unitType][12];
           if (var11 != -1) {
-            SpellAreaEffect.a(32 - this.field_m << 3, true, var9Lifetime1 + 96, e.field_b, 40, 60 + var10);
+            PreparedAction.a(32 - this.field_m << 3, true, var9Lifetime1 + 96, e.field_b, 40, 60 + var10);
             if (var11 < lb.field_e.length) {
               lb.field_e[var11].a(var9Lifetime1 + 101, var10 + 58, -this.field_m + 32 << 3);
             }
           }
           var12 = this.field_r.f(param2 + 11);
           if (var12 != -1) {
-            SpellAreaEffect.a(-this.field_m + 32 << 3, true, var9Lifetime1, e.field_b, 40, var10 + 60);
+            PreparedAction.a(-this.field_m + 32 << 3, true, var9Lifetime1, e.field_b, 40, var10 + 60);
             ii.field_a[var12].c(var9Lifetime1 + 8, 60 + var10, 24, 24, -this.field_m + 32 << 3);
           }
           return;

@@ -120,7 +120,7 @@ final class wq {
     final void a(byte param0, int param1, int param2, int param3, int param4) {
         param4 = param4 >> 1;
         int var6 = CombatViewTransition.c(param4, 125);
-        int var7 = ld.a((byte) 67, param4);
+        int var7 = MoveAttackAction.a((byte) 67, param4);
         this.field_b = var7;
         this.field_f = Spell.a((long)param1, (long)var6, -1700635440);
         this.field_d = Spell.a((long)param3, (long)var6, param0 ^ -1700635393);

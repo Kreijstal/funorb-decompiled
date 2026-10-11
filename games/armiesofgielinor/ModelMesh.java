@@ -1046,7 +1046,7 @@ final class ModelMesh extends kk {
                 this.a(ot.field_G + tm.field_c, vl.field_j + tm.field_j, field_V[var9], field_V[var10], field_V[var11], var12, var13, var14_int)) {
                 fieldTemp$13 = ws.field_O;
                 ws.field_O = ws.field_O + 1;
-                am.field_I[fieldTemp$13] = param2;
+                MoveAttackRequest.field_I[fieldTemp$13] = param2;
                 param1 = false;
               }
               if ((var12 - var13) * (field_V[var11] - field_V[var10]) - (field_V[var9] - field_V[var10]) * (var14_int - var13) > 0) {
@@ -1096,7 +1096,7 @@ final class ModelMesh extends kk {
           }
         }
         if (field_f) {
-          dk.a(var7 - 1, 0, (byte) -127, field_hb, field_W);
+          CorpseConditionMarker.a(var7 - 1, 0, (byte) -127, field_hb, field_W);
           if (this.field_ob == null) {
             for (var8Lifetime2 = 0; var8Lifetime2 < var7; var8Lifetime2++) {
               this.b(field_W[var8Lifetime2]);

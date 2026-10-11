@@ -16,7 +16,7 @@ final class ba extends dr {
           if (param0 != -24872) {
             field_E = (String[]) null;
           }
-          stackIn_3_0 = new nd(kj.a((byte) 119));
+          stackIn_3_0 = new nd(SkeletonLimitMarker.a((byte) 119));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,7 +70,7 @@ final class ba extends dr {
             }
             var1_int = 1;
           }
-          MovementPlanner.field_z.a(0, vo.a((byte) -47, ur.field_z, iu.field_t), vo.a((byte) 93, ko.field_b, AiPlanningStrategy.field_d));
+          MovementPlanner.field_z.a(0, vo.a((byte) -47, TeleportAction.field_z, iu.field_t), vo.a((byte) 93, ko.field_b, AiPlanningStrategy.field_d));
           if (MovementPlanner.field_z.d((byte) 46)) {
             var1_int = 1;
           }

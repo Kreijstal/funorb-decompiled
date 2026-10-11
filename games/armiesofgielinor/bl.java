@@ -161,11 +161,11 @@ final class bl {
                 }
               } else {
                 if (var2 == 7) {
-                  var31 = (of) (be.field_u.first((byte) 106));
+                  var31 = (of) (SummonAction.field_u.first((byte) 106));
                   while (var31 != null) {
                     var31.unlink(122);
                     var31.c((byte) -76);
-                    var31 = (of) (be.field_u.next((byte) 123));
+                    var31 = (of) (SummonAction.field_u.next((byte) 123));
                   }
                   vj.field_a = 0;
                 } else {
@@ -274,7 +274,7 @@ final class bl {
                                     break regionExit1;
                                   case 22:
                                     GlobalSpell.field_g = ((PacketBuffer) ((Object) var1)).e((byte) -104);
-                                    be.field_s = ((PacketBuffer) ((Object) var1)).h(95);
+                                    SummonAction.field_s = ((PacketBuffer) ((Object) var1)).h(95);
                                     break regionExit1;
                                   case 23:
                                     oh.field_H = ((PacketBuffer) ((Object) var1)).j((byte) -2);
@@ -381,9 +381,9 @@ final class bl {
               }
             }
             if (3 != var2) {
-              ua.field_s = false;
+              SpellCastAction.field_s = false;
             } else {
-              ua.field_s = true;
+              SpellCastAction.field_s = true;
               for (var3 = 0; var3 < ln.field_d.length; var3++) {
                 ln.field_d[var3] = ((PacketBuffer) ((Object) var1)).a((byte) -1);
               }
@@ -455,12 +455,12 @@ final class bl {
         try {
           SummonEvent.field_B = param1;
           var9 = "";
-          nh.field_D = new boolean[SpellAreaSelection.field_m.length];
-          for (var3 = param0; SpellAreaSelection.field_m.length > var3; var3++) {
-            array$0 = new kk[SpellAreaSelection.field_m[var3].length];
-            SpellAreaSelection.field_k[var3] = array$0;
+          nh.field_D = new boolean[ActionRequest.field_m.length];
+          for (var3 = param0; ActionRequest.field_m.length > var3; var3++) {
+            array$0 = new kk[ActionRequest.field_m[var3].length];
+            ActionRequest.field_k[var3] = array$0;
             nh.field_D[var3] = false;
-            var8 = SpellAreaSelection.field_m[var3][0];
+            var8 = ActionRequest.field_m[var3][0];
             var10 = hs.a(var8, 235, var9);
             var5 = var10;
             if (var10 != null) {
@@ -479,9 +479,9 @@ final class bl {
                   }
                 }
               }
-              SpellAreaSelection.field_k[var3][0] = var10.a(be.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, ni.field_a);
-              for (var6Lifetime2 = 1; var6Lifetime2 < SpellAreaSelection.field_m[var3].length; var6Lifetime2++) {
-                SpellAreaSelection.field_k[var3][var6Lifetime2] = null;
+              ActionRequest.field_k[var3][0] = var10.a(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, ni.field_a);
+              for (var6Lifetime2 = 1; var6Lifetime2 < ActionRequest.field_m[var3].length; var6Lifetime2++) {
+                ActionRequest.field_k[var3][var6Lifetime2] = null;
               }
             }
           }
@@ -499,7 +499,7 @@ final class bl {
                 }
               }
             }
-            cs.field_db[var3Lifetime1] = var5Lifetime1.a(be.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, ni.field_a);
+            cs.field_db[var3Lifetime1] = var5Lifetime1.a(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, ni.field_a);
             if (((ModelMesh) (cs.field_db[var3Lifetime1])).field_I == 0) {
               cs.field_db[var3Lifetime1] = null;
             }

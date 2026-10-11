@@ -246,16 +246,16 @@ abstract class sf extends wl {
         try {
           param1.unlink(-123);
           var2_int = -20 % ((param0 + 16) / 62);
-          var3 = (of) (be.field_u.first((byte) 125));
+          var3 = (of) (SummonAction.field_u.first((byte) 125));
           while (var3 != null) {
             if (var3.a(9687, param1)) {
-              var3 = (of) (be.field_u.next((byte) 123));
+              var3 = (of) (SummonAction.field_u.next((byte) 123));
               continue;
             }
             break;
           }
           if (var3 == null) {
-            be.field_u.addLast((byte) -119, (IntrusiveNode) (param1));
+            SummonAction.field_u.addLast((byte) -119, (IntrusiveNode) (param1));
           } else {
             stackIn_7_0 = -123;
             fj.$cfr$intArgs$a$f94c566f195c(stackIn_7_0, param1, var3);

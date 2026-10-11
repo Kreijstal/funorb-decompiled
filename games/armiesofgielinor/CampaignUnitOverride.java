@@ -151,7 +151,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(param0 ^ -100, "mu_chat_tips");
                 if (var2 != null) {
-                  ur.field_x = uu.a(var2, (byte) -100);
+                  TeleportAction.field_x = uu.a(var2, (byte) -100);
                 }
                 var2 = bb.a(50, "mu_chat_game");
                 if (var2 != null) {
@@ -235,7 +235,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "mu_all_players_have_left");
                 if (null != var2) {
-                  AreaSpell.field_i = uu.a(var2, (byte) 37);
+                  ActionSpell.field_i = uu.a(var2, (byte) 37);
                 }
                 var2 = bb.a(50, "mu_lobby_name");
                 if (var2 != null) {
@@ -363,7 +363,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "send_qc_to_x");
                 if (null != var2) {
-                  jc.field_w = uu.a(var2, (byte) 24);
+                  DeployRequest.field_w = uu.a(var2, (byte) 24);
                 }
                 var2 = bb.a(50, "send_pm");
                 if (null != var2) {
@@ -459,7 +459,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "mu_chat_pm_friends_only");
                 if (var2 != null) {
-                  hw.field_C = uu.a(var2, (byte) -100);
+                  SummonRequest.field_C = uu.a(var2, (byte) -100);
                 }
                 var2 = bb.a(50, "mu_chat_pm_friends");
                 if (null != var2) {
@@ -471,7 +471,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "you_have_been_removed_from_xs_game");
                 if (var2 != null) {
-                  AreaSpell.field_l = uu.a(var2, (byte) 121);
+                  ActionSpell.field_l = uu.a(var2, (byte) 121);
                 }
                 var2 = bb.a(50, "your_rating_is_x");
                 if (null != var2) {
@@ -495,7 +495,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "searching_for_opponent_singular");
                 if (null != var2) {
-                  SpellAreaEffect.field_l = uu.a(var2, (byte) 72);
+                  PreparedAction.field_l = uu.a(var2, (byte) 72);
                 }
                 var2 = bb.a(50, "searching_for_opponents_plural");
                 if (null != var2) {
@@ -547,7 +547,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "game_options_changed");
                 if (null != var2) {
-                  dk.field_t = uu.a(var2, (byte) -104);
+                  CorpseConditionMarker.field_t = uu.a(var2, (byte) -104);
                 }
                 var2 = bb.a(50, "players_x_of_y");
                 if (null != var2) {
@@ -647,7 +647,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "you_cannot_join_in_progress");
                 if (var2 != null) {
-                  hw.field_y = uu.a(var2, (byte) 82);
+                  SummonRequest.field_y = uu.a(var2, (byte) 82);
                 }
                 var2 = bb.a(param0 + 132, "you_can_spectate");
                 if (null != var2) {
@@ -671,7 +671,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "connecting_to_friend_server_twoline");
                 if (null != var2) {
-                  ur.field_u = uu.a(var2, (byte) -111);
+                  TeleportAction.field_u = uu.a(var2, (byte) -111);
                 }
                 var2 = bb.a(50, "loading");
                 if (null != var2) {
@@ -767,7 +767,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(param0 + 132, "thisisrunescapeclan");
                 if (var2 != null) {
-                  AreaSpell.field_f = uu.a(var2, (byte) -121);
+                  ActionSpell.field_f = uu.a(var2, (byte) -121);
                 }
                 var2 = bb.a(param0 + 132, "thisisrunescapeclan_notowner");
                 if (null != var2) {
@@ -921,7 +921,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "ra_mutethisplayer");
                 if (var2 != null) {
-                  ua.field_v = uu.a(var2, (byte) 108);
+                  SpellCastAction.field_v = uu.a(var2, (byte) 108);
                 }
                 var2 = bb.a(param0 ^ -100, "ra_suggestmute");
                 if (null != var2) {
@@ -969,7 +969,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "rule_pillar_1");
                 if (null != var2) {
-                  ua.field_y = uu.a(var2, (byte) 59);
+                  SpellCastAction.field_y = uu.a(var2, (byte) 59);
                 }
                 var2 = bb.a(50, "rule_1_0");
                 if (null != var2) {
@@ -1033,7 +1033,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "pleasetryagain");
                 if (null != var2) {
-                  be.field_D = uu.a(var2, (byte) 125);
+                  SummonAction.field_D = uu.a(var2, (byte) 125);
                 }
                 var2 = bb.a(50, "pleasereenterpass");
                 if (var2 != null) {
@@ -1153,7 +1153,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(param0 + 132, "warning_ifyouquit");
                 if (var2 != null) {
-                  pe.field_v = uu.a(var2, (byte) 72);
+                  VineGrowthAction.field_v = uu.a(var2, (byte) 72);
                 }
                 var2 = bb.a(50, "warning_ifyouquitorleavepage");
                 if (null != var2) {
@@ -1485,7 +1485,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "login_email");
                 if (var2 != null) {
-                  pl.field_t = uu.a(var2, (byte) 108);
+                  DeployAction.field_t = uu.a(var2, (byte) 108);
                 }
                 var2 = bb.a(50, "login_username_tooltip");
                 if (var2 != null) {
@@ -1677,7 +1677,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "cannot_add_yourself");
                 if (null != var2) {
-                  am.field_F = uu.a(var2, (byte) 113);
+                  MoveAttackRequest.field_F = uu.a(var2, (byte) 113);
                 }
                 var2 = bb.a(param0 ^ -100, "unable_to_add_friend");
                 if (null != var2) {
@@ -2023,7 +2023,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "endgame");
                 if (var2 != null) {
-                  SpellAreaEffect.field_k = uu.a(var2, (byte) 101);
+                  PreparedAction.field_k = uu.a(var2, (byte) 101);
                 }
                 var2 = bb.a(param0 + 132, "endtutorial");
                 if (var2 != null) {
@@ -2098,7 +2098,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "returntolobby");
                 if (null != var2) {
-                  pl.field_v = uu.a(var2, (byte) 86);
+                  DeployAction.field_v = uu.a(var2, (byte) 86);
                 }
                 var2 = bb.a(50, "cont");
                 if (null != var2) {
@@ -2678,11 +2678,11 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "fs_accept_countdown_pl");
                 if (var2 != null) {
-                  be.field_v = uu.a(var2, (byte) 30);
+                  SummonAction.field_v = uu.a(var2, (byte) 30);
                 }
                 var2 = bb.a(50, "fs_nonmember");
                 if (var2 != null) {
-                  hw.field_z = uu.a(var2, (byte) -126);
+                  SummonRequest.field_z = uu.a(var2, (byte) -126);
                 }
                 var2 = bb.a(param0 ^ -100, "fs_button_close");
                 if (null != var2) {
@@ -2702,7 +2702,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "fs_focus");
                 if (null != var2) {
-                  am.field_y = uu.a(var2, (byte) -127);
+                  MoveAttackRequest.field_y = uu.a(var2, (byte) -127);
                 }
                 var2 = bb.a(param0 ^ -100, "fs_focus_or_resolution");
                 if (var2 != null) {
@@ -2808,7 +2808,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "graphics_config_done");
                 if (var2 != null) {
-                  pe.field_w = uu.a(var2, (byte) 20);
+                  VineGrowthAction.field_w = uu.a(var2, (byte) 20);
                 }
                 var2 = bb.a(param0 + 132, "graphics_config_apply");
                 if (null != var2) {
@@ -2884,31 +2884,31 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "mustlogin3,1");
                 if (null != var2) {
-                  pl.field_y[1] = uu.a(var2, (byte) -94);
+                  DeployAction.field_y[1] = uu.a(var2, (byte) -94);
                 }
                 var2 = bb.a(50, "mustlogin3,2");
                 if (null != var2) {
-                  pl.field_y[2] = uu.a(var2, (byte) -95);
+                  DeployAction.field_y[2] = uu.a(var2, (byte) -95);
                 }
                 var2 = bb.a(50, "mustlogin3,3");
                 if (null != var2) {
-                  pl.field_y[3] = uu.a(var2, (byte) -96);
+                  DeployAction.field_y[3] = uu.a(var2, (byte) -96);
                 }
                 var2 = bb.a(param0 + 132, "mustlogin3,4");
                 if (var2 != null) {
-                  pl.field_y[4] = uu.a(var2, (byte) 94);
+                  DeployAction.field_y[4] = uu.a(var2, (byte) 94);
                 }
                 var2 = bb.a(param0 ^ -100, "mustlogin3,5");
                 if (var2 != null) {
-                  pl.field_y[5] = uu.a(var2, (byte) -117);
+                  DeployAction.field_y[5] = uu.a(var2, (byte) -117);
                 }
                 var2 = bb.a(50, "mustlogin3,6");
                 if (var2 != null) {
-                  pl.field_y[6] = uu.a(var2, (byte) -128);
+                  DeployAction.field_y[6] = uu.a(var2, (byte) -128);
                 }
                 var2 = bb.a(50, "mustlogin3,7");
                 if (null != var2) {
-                  pl.field_y[7] = uu.a(var2, (byte) 54);
+                  DeployAction.field_y[7] = uu.a(var2, (byte) 54);
                 }
                 var2 = bb.a(50, "discard");
                 if (var2 != null) {
@@ -2916,31 +2916,31 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(param0 + 132, "mustlogin4,1");
                 if (null != var2) {
-                  ss.field_s[1] = uu.a(var2, (byte) 115);
+                  StateChangeMarker.field_s[1] = uu.a(var2, (byte) 115);
                 }
                 var2 = bb.a(50, "mustlogin4,2");
                 if (null != var2) {
-                  ss.field_s[2] = uu.a(var2, (byte) 100);
+                  StateChangeMarker.field_s[2] = uu.a(var2, (byte) 100);
                 }
                 var2 = bb.a(param0 ^ -100, "mustlogin4,3");
                 if (null != var2) {
-                  ss.field_s[3] = uu.a(var2, (byte) -110);
+                  StateChangeMarker.field_s[3] = uu.a(var2, (byte) -110);
                 }
                 var2 = bb.a(50, "mustlogin4,4");
                 if (var2 != null) {
-                  ss.field_s[4] = uu.a(var2, (byte) 26);
+                  StateChangeMarker.field_s[4] = uu.a(var2, (byte) 26);
                 }
                 var2 = bb.a(50, "mustlogin4,5");
                 if (var2 != null) {
-                  ss.field_s[5] = uu.a(var2, (byte) -113);
+                  StateChangeMarker.field_s[5] = uu.a(var2, (byte) -113);
                 }
                 var2 = bb.a(50, "mustlogin4,6");
                 if (var2 != null) {
-                  ss.field_s[6] = uu.a(var2, (byte) -104);
+                  StateChangeMarker.field_s[6] = uu.a(var2, (byte) -104);
                 }
                 var2 = bb.a(50, "mustlogin4,7");
                 if (var2 != null) {
-                  ss.field_s[7] = uu.a(var2, (byte) -113);
+                  StateChangeMarker.field_s[7] = uu.a(var2, (byte) -113);
                 }
                 var2 = bb.a(50, "mustlogin_notloggedin");
                 if (null != var2) {

@@ -88,9 +88,9 @@ final class jf extends ks {
           }
           var5_int = dq.a((byte) -105, param1);
           if (param1 != var5_int) {
-            var6_ref_String = pe.a(var5_int, false, param0);
+            var6_ref_String = VineGrowthAction.a(var5_int, false, param0);
             if (var6_ref_String != null) {
-              var7 = ua.a(var5_int, (byte) 83, var6_ref_String);
+              var7 = SpellCastAction.a(var5_int, (byte) 83, var6_ref_String);
               stackIn_7_0 = var7;
               return stackIn_7_0;
             }

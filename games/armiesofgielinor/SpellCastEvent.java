@@ -70,7 +70,7 @@ final class SpellCastEvent extends GameEvent {
                 var5 = ui.field_g;
               }
             } else {
-              var5 = SpellAreaSelection.field_n;
+              var5 = ActionRequest.field_n;
             }
             var6 = nb.field_h[var3];
             stackIn_12_0 = var6;
@@ -351,7 +351,7 @@ final class SpellCastEvent extends GameEvent {
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           hs.b(-103, this.spell.spellId);
-          to.a(3, (byte) -121, 38);
+          SpellCastRequest.a(3, (byte) -121, 38);
           param2.g(27, this.spell.spellId, -91);
           var4_int = 0;
           if (param1 >= -84) {

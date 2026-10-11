@@ -58,7 +58,7 @@ final class vq {
           no.field_J = param0;
           ip.field_e = true;
           if (no.field_J == 0) {
-            var3_int = iu.a(pf.field_d, hw.field_z, 7502, sc.field_b, du.field_b);
+            var3_int = iu.a(pf.field_d, SummonRequest.field_z, 7502, sc.field_b, du.field_b);
             var4 = 3 + var3_int;
             TileMetadata.field_h = new int[var4];
             wp.field_v = new String[var4];
@@ -77,7 +77,7 @@ final class vq {
             TileMetadata.field_h[-1 + var4] = 1;
             mi.field_G[1] = 5;
           } else if (1 == no.field_J) {
-            var3_int = iu.a(pf.field_d, hw.field_z, 7502, sc.field_b, du.field_b);
+            var3_int = iu.a(pf.field_d, SummonRequest.field_z, 7502, sc.field_b, du.field_b);
             var4 = var3_int + 2;
             TileMetadata.field_h = new int[var4];
             wp.field_v = new String[var4];
@@ -114,7 +114,7 @@ final class vq {
               TileMetadata.field_h[-1 + var4] = 0;
               mi.field_G[0] = 5;
             } else if (no.field_J == 4) {
-              var3_int = iu.a(pf.field_d, am.field_y, 7502, sc.field_b, du.field_b);
+              var3_int = iu.a(pf.field_d, MoveAttackRequest.field_y, 7502, sc.field_b, du.field_b);
               var4 = 2 + var3_int;
               wp.field_v = new String[var4];
               TileMetadata.field_h = new int[var4];
@@ -170,7 +170,7 @@ final class vq {
             hg.field_d = new String[var3_int + (-var4 - 1)];
             vm.a(du.field_b, 1 + var4, hg.field_d, 0, -1 + var3_int - var4);
             var4 = -1;
-            var3_int = iu.a(pf.field_d, fo.a(4800, be.field_v, new String[]{"<br><%0><br>"}), 7502, sc.field_b, du.field_b);
+            var3_int = iu.a(pf.field_d, fo.a(4800, SummonAction.field_v, new String[]{"<br><%0><br>"}), 7502, sc.field_b, du.field_b);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(du.field_b[var5])) {
                 continue;

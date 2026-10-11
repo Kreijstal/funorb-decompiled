@@ -48,7 +48,7 @@ final class np extends je {
         if (param0) {
           SoftwareRaster.b(0, 0, SoftwareRaster.field_l, SoftwareRaster.field_g, 0, 192);
         }
-        ee.field_v.a(0, -118, 0);
+        SphinxActionRequest.field_v.a(0, -118, 0);
         if (param1 >= -111) {
           ModelMesh var3 = (ModelMesh) null;
           np.a(false, (ModelMesh) null);

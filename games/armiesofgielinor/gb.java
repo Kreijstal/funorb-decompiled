@@ -2239,7 +2239,7 @@ final class gb extends iu {
               this.field_k = 8;
               this.d(-37, this.field_C);
             }
-            this.a(fo.a(4800, r.field_E[3 + this.field_C], new String[]{fq.field_f[this.field_q.battlefield.field_B[0][this.field_C]], SpellAreaSelection.field_l[this.field_q.battlefield.field_B[0][this.field_C]], var4}), (byte) 109);
+            this.a(fo.a(4800, r.field_E[3 + this.field_C], new String[]{fq.field_f[this.field_q.battlefield.field_B[0][this.field_C]], ActionRequest.field_l[this.field_q.battlefield.field_B[0][this.field_C]], var4}), (byte) 109);
             if (var7 == 0) {
               return;
             }

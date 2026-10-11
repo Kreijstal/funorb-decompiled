@@ -125,7 +125,7 @@ final class wt extends dr {
           cg.field_a = false;
         }
         if (mo.field_w) {
-          ld.a(1, uh.field_a, true, (byte) 90, false);
+          MoveAttackAction.a(1, uh.field_a, true, (byte) 90, false);
           mo.field_w = false;
         }
         var3 = 121 / ((-20 - param0) / 45);

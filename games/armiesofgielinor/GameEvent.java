@@ -290,32 +290,32 @@ abstract class GameEvent extends IntrusiveNode {
           var4 = vq.a(param1, -2) ? 1 : 0;
           var6 = new pu();
           var6.field_O = (short)param1.g(61, 16);
-          var6.field_z = to.a(var6.field_z, 16, param1, 10064);
-          var6.field_y = to.a(var6.field_y, 16, param1, 10064);
-          var6.field_o = to.a(var6.field_o, 16, param1, 10064);
+          var6.field_z = SpellCastRequest.a(var6.field_z, 16, param1, 10064);
+          var6.field_y = SpellCastRequest.a(var6.field_y, 16, param1, 10064);
+          var6.field_o = SpellCastRequest.a(var6.field_o, 16, param1, 10064);
           var6.field_q = (short)param1.g(107, 16);
-          var6.field_c = to.a(var6.field_c, 16, param1, 10064);
-          var6.field_j = to.a(var6.field_j, 16, param1, 10064);
-          var6.field_e = to.a(var6.field_e, 16, param1, 10064);
+          var6.field_c = SpellCastRequest.a(var6.field_c, 16, param1, 10064);
+          var6.field_j = SpellCastRequest.a(var6.field_j, 16, param1, 10064);
+          var6.field_e = SpellCastRequest.a(var6.field_e, 16, param1, 10064);
           if (var3 != 0) {
             var6.field_t = (short)param1.g(-100, 16);
-            var6.field_l = to.a(var6.field_l, 16, param1, 10064);
-            var6.field_f = to.a(var6.field_f, 16, param1, 10064);
-            var6.field_x = to.a(var6.field_x, 16, param1, 10064);
-            var6.field_w = to.a(var6.field_w, 16, param1, 10064);
-            var6.field_Q = to.a(var6.field_Q, 16, param1, 10064);
-            var6.field_d = to.a(var6.field_d, 16, param1, 10064);
+            var6.field_l = SpellCastRequest.a(var6.field_l, 16, param1, 10064);
+            var6.field_f = SpellCastRequest.a(var6.field_f, 16, param1, 10064);
+            var6.field_x = SpellCastRequest.a(var6.field_x, 16, param1, 10064);
+            var6.field_w = SpellCastRequest.a(var6.field_w, 16, param1, 10064);
+            var6.field_Q = SpellCastRequest.a(var6.field_Q, 16, param1, 10064);
+            var6.field_d = SpellCastRequest.a(var6.field_d, 16, param1, 10064);
           }
           if (var4 != 0) {
             param1.g(-102, 16);
-            var6.field_r = to.a(var6.field_r, 16, param1, 10064);
-            var6.field_s = to.a(var6.field_s, 16, param1, 10064);
-            var6.field_A = to.a(var6.field_A, 16, param1, 10064);
-            var6.field_i = to.a(var6.field_i, 16, param1, 10064);
-            var6.field_b = to.a(var6.field_b, 16, param1, 10064);
+            var6.field_r = SpellCastRequest.a(var6.field_r, 16, param1, 10064);
+            var6.field_s = SpellCastRequest.a(var6.field_s, 16, param1, 10064);
+            var6.field_A = SpellCastRequest.a(var6.field_A, 16, param1, 10064);
+            var6.field_i = SpellCastRequest.a(var6.field_i, 16, param1, 10064);
+            var6.field_b = SpellCastRequest.a(var6.field_b, 16, param1, 10064);
           }
           if (vq.a(param1, -2)) {
-            var6.field_u = to.a(var6.field_u, 16, param1, 10064);
+            var6.field_u = SpellCastRequest.a(var6.field_u, 16, param1, 10064);
           }
           if (vq.a(param1, -2)) {
             var6.field_K = kd.a(16, param1, var6.field_K, (byte) -122);

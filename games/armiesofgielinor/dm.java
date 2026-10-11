@@ -1015,7 +1015,7 @@ final class dm {
             if (param0) {
               var10 = TutorialController.field_e;
             }
-            fe.a(db.a(true, var6_int), u.a(var7, (byte) 94), var8, var9, il.field_s, var10, this.field_Q, this.field_b, true);
+            fe.a(db.a(true, var6_int), u.a(var7, (byte) 94), var8, var9, DisplacedUnitMarker.field_s, var10, this.field_Q, this.field_b, true);
             fe.b(db.a(true, var6_int), u.a(var7, (byte) 94), var8, var9, io.field_m, TutorialController.field_e, this.field_Q, this.field_A);
             var11 = param1.field_n;
             var12 = param2.field_n;
@@ -1154,7 +1154,7 @@ final class dm {
                 eo.a(dp.field_Vb[var14][0] + param8, 16777215, (byte) -88, bc.field_j[var14][param2[var14]], dp.field_Vb[var14][1] + param10);
               }
               if (!param4) {
-                gq.b(bc.field_j[var14][param2[var14]], dp.field_Vb[var14][0] + param8, param10 + dp.field_Vb[var14][1], SpellAreaEffect.field_q[param5[var14]]);
+                gq.b(bc.field_j[var14][param2[var14]], dp.field_Vb[var14][0] + param8, param10 + dp.field_Vb[var14][1], PreparedAction.field_q[param5[var14]]);
               } else {
                 gq.a(bc.field_j[var14][param2[var14]], dp.field_Vb[var14][0] + param8, param10 + dp.field_Vb[var14][1], 1);
               }
@@ -1308,27 +1308,27 @@ final class dm {
         if (this.field_N == null) {
           return;
         }
-        if (null == il.field_t) {
+        if (null == DisplacedUnitMarker.field_t) {
           return;
         }
         this.field_t = new String[this.field_N.length];
         for (var2 = 0; var2 < this.field_N.length; var2++) {
           var3 = this.field_N[var2];
           if (var3 >= 0 &&
-            il.field_t.length > var3) {
-            var4 = il.field_t[var3];
+            DisplacedUnitMarker.field_t.length > var3) {
+            var4 = DisplacedUnitMarker.field_t[var3];
             if (var4 != null) {
               this.field_t[var2] = var4;
             }
           }
         }
-        if (0 == il.field_t.length) {
+        if (0 == DisplacedUnitMarker.field_t.length) {
           return;
         }
         if (param0 <= 54) {
           return;
         }
-        this.field_U = il.field_t[-1 + il.field_t.length];
+        this.field_U = DisplacedUnitMarker.field_t[-1 + DisplacedUnitMarker.field_t.length];
     }
 
     final void i(int param0) {

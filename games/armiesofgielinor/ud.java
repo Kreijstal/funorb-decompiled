@@ -123,7 +123,7 @@ final class ud extends sf implements he {
           if (param1 != hm.field_h) {
             if (mp.field_Mb == param1) {
               this.field_w = this.field_w + 10;
-              var3 = am.field_y;
+              var3 = MoveAttackRequest.field_y;
               if (pr.b(-108)) {
                 this.field_w = this.field_w + 20;
                 var3 = field_W;

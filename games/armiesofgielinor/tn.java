@@ -31,7 +31,7 @@ final class tn extends sf implements he {
         super(param0, 200, 130);
         kb var2 = null;
         try {
-          var2 = new kb(hw.field_z, (qo) null);
+          var2 = new kb(SummonRequest.field_z, (qo) null);
           var2.field_w = 80;
           var2.field_l = this.field_l;
           var2.field_B = 0;

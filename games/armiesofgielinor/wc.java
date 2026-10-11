@@ -233,7 +233,7 @@ final class wc extends nl {
         if (null != tn.field_Z) {
           tn.field_Z.a((byte) -108, param0);
         }
-        hw.a(param0, (byte) -89);
+        SummonRequest.a(param0, (byte) -89);
         if (Spell.field_b != null) {
           Spell.field_b.b(param0, 20);
         }

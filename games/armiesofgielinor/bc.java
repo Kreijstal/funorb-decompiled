@@ -85,23 +85,23 @@ final class bc {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            am.field_D[var2_int] = 0;
+            MoveAttackRequest.field_D[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < lk.field_h; var2_intLifetime1++) {
             if (param1.field_b == an.field_F[var2_intLifetime1].field_b) {
               dupTemp$3 = an.field_F[var2_intLifetime1].a(true);
-              am.field_D[dupTemp$3] = am.field_D[dupTemp$3] + 1;
+              MoveAttackRequest.field_D[dupTemp$3] = MoveAttackRequest.field_D[dupTemp$3] + 1;
             }
           }
           dupTemp$0 = param1.a(true);
-          am.field_D[dupTemp$0] = am.field_D[dupTemp$0] + 1;
+          MoveAttackRequest.field_D[dupTemp$0] = MoveAttackRequest.field_D[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < lk.field_h; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (~param1.field_b == ~an.field_F[var3].field_b) {
               var4 = an.field_F[var3].a(true);
-              if (am.field_D[var4] > vj.field_g) {
-                am.field_D[var4] = am.field_D[var4] - 1;
+              if (MoveAttackRequest.field_D[var4] > vj.field_g) {
+                MoveAttackRequest.field_D[var4] = MoveAttackRequest.field_D[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }

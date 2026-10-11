@@ -2776,7 +2776,7 @@ final class CombatPresentation implements EventPresentation {
             stackIn_50_0 = nd.field_b;
           }
           var8 = stackIn_50_0;
-          fe.a(var6, var7, var4, var5, il.field_s, var8, 0, 0, true);
+          fe.a(var6, var7, var4, var5, DisplacedUnitMarker.field_s, var8, 0, 0, true);
           if (obfuscationGuard >= -119) {
             this.field_C = 65;
           }

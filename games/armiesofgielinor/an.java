@@ -20,7 +20,7 @@ final class an extends dr {
 
     final static void h(int param0) {
         int var2 = 0;
-        int var1 = hw.a(true);
+        int var1 = SummonRequest.a(true);
         int var2Lifetime1;
         if (param0 == 1976460609) {
           var2 = so.a(param0 - 1976435396);

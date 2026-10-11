@@ -76,42 +76,42 @@ final class jr {
             lw.field_ob.b(param3 - (-this.field_b + 20), -20 + (this.field_g + param1), bo.field_g[this.field_c]);
             if (var6 == 0) {
               if (this.field_i != 81) {
-                pl.field_x[this.field_i].g(this.field_b + param3 - 20, this.field_g + param1 - 20);
+                DeployAction.field_x[this.field_i].g(this.field_b + param3 - 20, this.field_g + param1 - 20);
                 km.field_h[0].g(-23 + (this.field_b + param3), -23 + param1 + this.field_g);
                 return;
               }
-              pl.field_x[4].g(-20 + this.field_b + param3, -20 + (param1 + this.field_g));
+              DeployAction.field_x[4].g(-20 + this.field_b + param3, -20 + (param1 + this.field_g));
               km.field_h[0].g(-23 + (this.field_b + param3), -23 + param1 + this.field_g);
               return;
             }
           }
           lw.field_ob.d(-20 + this.field_b + param3, param1 + this.field_g - 20, bo.field_g[this.field_c]);
           if (this.field_i == 81) {
-            pl.field_x[4].g(-20 + this.field_b + param3, -20 + (param1 + this.field_g));
+            DeployAction.field_x[4].g(-20 + this.field_b + param3, -20 + (param1 + this.field_g));
             if (var6 != 0) {
-              pl.field_x[this.field_i].g(this.field_b + param3 - 20, this.field_g + param1 - 20);
+              DeployAction.field_x[this.field_i].g(this.field_b + param3 - 20, this.field_g + param1 - 20);
             }
           } else {
-            pl.field_x[this.field_i].g(this.field_b + param3 - 20, this.field_g + param1 - 20);
+            DeployAction.field_x[this.field_i].g(this.field_b + param3 - 20, this.field_g + param1 - 20);
           }
           km.field_h[0].g(-23 + (this.field_b + param3), -23 + param1 + this.field_g);
           if (var6 != 0) {
             lw.field_ob.d(this.field_b + (param3 - 20), -20 + param1 + this.field_g, fe.b(bo.field_g[this.field_c], 128));
             if (this.field_i != 81) {
-              pl.field_x[this.field_i].g(-20 + this.field_b + param3, -20 + (param1 + this.field_g), 0);
+              DeployAction.field_x[this.field_i].g(-20 + this.field_b + param3, -20 + (param1 + this.field_g), 0);
             }
-            pl.field_x[4].g(-20 + (param3 + this.field_b), param1 + this.field_g - 20, 0);
+            DeployAction.field_x[4].g(-20 + (param3 + this.field_b), param1 + this.field_g - 20, 0);
             km.field_h[0].g(-23 + param3 + this.field_b, -23 + (param1 + this.field_g), 10);
           }
           return;
         }
         lw.field_ob.d(this.field_b + (param3 - 20), -20 + param1 + this.field_g, fe.b(bo.field_g[this.field_c], 128));
         if (this.field_i == 81) {
-          pl.field_x[4].g(-20 + (param3 + this.field_b), param1 + this.field_g - 20, 0);
+          DeployAction.field_x[4].g(-20 + (param3 + this.field_b), param1 + this.field_g - 20, 0);
         } else {
-          pl.field_x[this.field_i].g(-20 + this.field_b + param3, -20 + (param1 + this.field_g), 0);
+          DeployAction.field_x[this.field_i].g(-20 + this.field_b + param3, -20 + (param1 + this.field_g), 0);
           if (var6 != 0) {
-            pl.field_x[4].g(-20 + (param3 + this.field_b), param1 + this.field_g - 20, 0);
+            DeployAction.field_x[4].g(-20 + (param3 + this.field_b), param1 + this.field_g - 20, 0);
           }
         }
         km.field_h[0].g(-23 + param3 + this.field_b, -23 + (param1 + this.field_g), 10);
@@ -201,7 +201,7 @@ final class jr {
           oh.field_H = -1L;
           tq.field_b = param3.length;
           no.field_K = null;
-          ua.field_s = false;
+          SpellCastAction.field_s = false;
           if (param8 >= -52) {
             field_h = (int[][]) null;
           }
@@ -221,11 +221,11 @@ final class jr {
           if (param9.field_fb == null) {
             param9.field_fb = new NodeDeque();
           }
-          be.field_u = param9.field_fb;
-          be.field_u.b(80);
+          SummonAction.field_u = param9.field_fb;
+          SummonAction.field_u.b(80);
           oi.field_d = new tp(param4);
           vj.field_a = 0;
-          be.field_s = -1;
+          SummonAction.field_s = -1;
           oo.field_a = 0;
           GlobalSpell.field_g = -1;
           if (null == param1.field_fb) {

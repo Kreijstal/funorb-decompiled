@@ -4,10 +4,10 @@
 final class TeleportEvent extends GameEvent {
     private boolean applied;
     int sourceY;
-    private boolean field_D;
-    private int destinationY;
+    private boolean skipDestinationPlacement;
+    private int targetDeltaY;
     int sourceX;
-    private int destinationX;
+    private int targetDeltaX;
 
     final String describeEvent(byte obfuscationGuard, boolean verbose) {
         int var4 = 0;
@@ -16,14 +16,14 @@ final class TeleportEvent extends GameEvent {
         int var4Lifetime1;
         if (!verbose) {
           var4 = -18 / ((obfuscationGuard - 53) / 51);
-          var3 = "EventTeleport: pos: (" + this.sourceX + "," + this.sourceY + ")" + ",d: (" + this.destinationX + "," + this.destinationY + ")";
+          var3 = "EventTeleport: pos: (" + this.sourceX + "," + this.sourceY + ")" + ",d: (" + this.targetDeltaX + "," + this.targetDeltaY + ")";
           return var3;
         }
         System.out.println("Teleport event debug");
         System.out.println("Unit at " + this.sourceX + "," + this.sourceY);
-        System.out.println("Jumped to " + (this.destinationX + this.sourceX) + "," + (this.destinationY + this.sourceY));
+        System.out.println("Jumped to " + (this.targetDeltaX + this.sourceX) + "," + (this.targetDeltaY + this.sourceY));
         var4Lifetime1 = -18 / ((obfuscationGuard - 53) / 51);
-        var3Lifetime1 = "EventTeleport: pos: (" + this.sourceX + "," + this.sourceY + ")" + ",d: (" + this.destinationX + "," + this.destinationY + ")";
+        var3Lifetime1 = "EventTeleport: pos: (" + this.sourceX + "," + this.sourceY + ")" + ",d: (" + this.targetDeltaX + "," + this.targetDeltaY + ")";
         return var3Lifetime1;
     }
 
@@ -44,8 +44,8 @@ final class TeleportEvent extends GameEvent {
           if (param1 > -84) {
             TeleportEvent.a(-83, -34, -127);
           }
-          if (!this.field_D) {
-            var4_int = var4_int != 0 | this.a(this.sourceY + this.destinationY, 15, param2, param0, this.sourceX + this.destinationX) ? 1 : 0;
+          if (!this.skipDestinationPlacement) {
+            var4_int = var4_int != 0 | this.a(this.sourceY + this.targetDeltaY, 15, param2, param0, this.sourceX + this.targetDeltaX) ? 1 : 0;
           }
           stackIn_8_0 = var4_int;
           return stackIn_8_0 != 0;
@@ -96,12 +96,12 @@ final class TeleportEvent extends GameEvent {
             }
           }
           this.unit.movementSpent = true;
-          this.unit.tileX = this.unit.tileX + this.destinationX;
-          this.unit.tileY = this.unit.tileY + this.destinationY;
+          this.unit.tileX = this.unit.tileX + this.targetDeltaX;
+          this.unit.tileY = this.unit.tileY + this.targetDeltaY;
           if (obfuscationGuard != -26661) {
             return;
           }
-          if (!this.field_D) {
+          if (!this.skipDestinationPlacement) {
             battlefield.tiles[battlefield.mapWidth * this.unit.tileY + this.unit.tileX].occupant = this.unit;
             if (this.unit.p(-70)) {
               battlefield.a(this.unit.tileY, this.unit.tileX, 0, 3);
@@ -168,24 +168,24 @@ final class TeleportEvent extends GameEvent {
         }
     }
 
-    TeleportEvent(int param0, int param1, int param2, boolean param3) {
-        this.destinationX = param2 >> 8;
-        this.destinationY = 255 & param2;
-        this.sourceY = param1;
-        this.sourceX = param0;
-        this.destinationX = -128 + (this.destinationX ^ 128);
-        this.destinationY = (128 ^ this.destinationY) - 128;
-        this.field_D = param3 ? true : false;
-        this.eventKind = this.field_D ? 21 : 26;
+    TeleportEvent(int sourceX, int sourceY, int packedTargetDelta, boolean skipDestinationPlacement) {
+        this.targetDeltaX = packedTargetDelta >> 8;
+        this.targetDeltaY = 255 & packedTargetDelta;
+        this.sourceY = sourceY;
+        this.sourceX = sourceX;
+        this.targetDeltaX = -128 + (this.targetDeltaX ^ 128);
+        this.targetDeltaY = (128 ^ this.targetDeltaY) - 128;
+        this.skipDestinationPlacement = skipDestinationPlacement ? true : false;
+        this.eventKind = this.skipDestinationPlacement ? 21 : 26;
     }
 
-    TeleportEvent(int param0, int param1, int param2, int param3, boolean param4) {
-        this.sourceX = param0;
-        this.sourceY = param1;
-        this.destinationX = param2;
-        this.field_D = param4 ? true : false;
-        this.destinationY = param3;
-        this.eventKind = this.field_D ? 21 : 26;
+    TeleportEvent(int sourceX, int sourceY, int targetDeltaX, int targetDeltaY, boolean skipDestinationPlacement) {
+        this.sourceX = sourceX;
+        this.sourceY = sourceY;
+        this.targetDeltaX = targetDeltaX;
+        this.skipDestinationPlacement = skipDestinationPlacement ? true : false;
+        this.targetDeltaY = targetDeltaY;
+        this.eventKind = this.skipDestinationPlacement ? 21 : 26;
     }
 
     static {

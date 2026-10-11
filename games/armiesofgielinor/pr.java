@@ -26,7 +26,7 @@ final class pr {
         if (11 == p.field_b) {
           wp.d((byte) -13);
         }
-        to.a(dd.field_a, TelepopEvent.field_C, UnitSpell.field_e, -1);
+        SpellCastRequest.a(dd.field_a, TelepopEvent.field_C, UnitSpell.field_e, -1);
         if (param0 <= 106) {
           return;
         }
@@ -52,7 +52,7 @@ final class pr {
         int var1;
         boolean stackIn_4_0 = false;
         var1 = -21 % ((param0 + 25) / 55);
-        stackIn_4_0 = (null != AreaSpell.field_e) && (AreaSpell.field_e.a((byte) 103));
+        stackIn_4_0 = (null != ActionSpell.field_e) && (ActionSpell.field_e.a((byte) 103));
         return stackIn_4_0;
     }
 

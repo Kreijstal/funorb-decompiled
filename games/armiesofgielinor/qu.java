@@ -93,9 +93,9 @@ final class qu extends IntrusiveNode {
             !(param2 <= TutorialController.field_c.length)) {
             TutorialController.field_c = new int[param2 * 2];
           }
-          if (null == pe.field_s ||
-            !(param2 <= pe.field_s.length)) {
-            pe.field_s = new int[param2 * 2];
+          if (null == VineGrowthAction.field_s ||
+            !(param2 <= VineGrowthAction.field_s.length)) {
+            VineGrowthAction.field_s = new int[param2 * 2];
           }
           if (EffectPresentation.field_h == null) {
             EffectPresentation.field_h = new int[2 * param2];
@@ -158,9 +158,9 @@ final class qu extends IntrusiveNode {
               !(param2 <= TutorialController.field_c.length)) {
               TutorialController.field_c = new int[param2 * 2];
             }
-            if (null == pe.field_s ||
-              !(param2 <= pe.field_s.length)) {
-              pe.field_s = new int[param2 * 2];
+            if (null == VineGrowthAction.field_s ||
+              !(param2 <= VineGrowthAction.field_s.length)) {
+              VineGrowthAction.field_s = new int[param2 * 2];
             }
             if (EffectPresentation.field_h == null) {
               EffectPresentation.field_h = new int[2 * param2];
@@ -223,9 +223,9 @@ final class qu extends IntrusiveNode {
               !(param2 <= TutorialController.field_c.length)) {
               TutorialController.field_c = new int[param2 * 2];
             }
-            if (null == pe.field_s ||
-              !(param2 <= pe.field_s.length)) {
-              pe.field_s = new int[param2 * 2];
+            if (null == VineGrowthAction.field_s ||
+              !(param2 <= VineGrowthAction.field_s.length)) {
+              VineGrowthAction.field_s = new int[param2 * 2];
             }
             if (EffectPresentation.field_h == null) {
               EffectPresentation.field_h = new int[2 * param2];

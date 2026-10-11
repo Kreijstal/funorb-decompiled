@@ -113,8 +113,8 @@ final class ck {
         dt.a(wq.field_a, 23678);
         wq.field_a.a(-30918, ft.field_m);
         wq.field_a = null;
-        if (null != AreaSpell.field_e) {
-          AreaSpell.field_e.b(124);
+        if (null != ActionSpell.field_e) {
+          ActionSpell.field_e.b(124);
         }
         si.field_b.requestFocus();
         if (param0 < -50) {

@@ -821,12 +821,12 @@ final class MovementPlanner {
         }
     }
 
-    final SpellAreaSelection a(int param0, int param1) {
+    final ActionRequest createActionRequest(int actingPlayer, int obfuscationGuard) {
         int var4_int = 0;
         int[] var3;
         int var6;
         int[] var7;
-        am var4;
+        MoveAttackRequest var4;
         int var5;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var7 = new int[this.pathLength];
@@ -838,13 +838,13 @@ final class MovementPlanner {
         } else {
           var3 = new int[]{};
         }
-        var5 = 51 / ((-19 - param1) / 39);
-        var4 = new am(param0, this.pathLength, var3, this.unit.tileX, this.unit.tileY, this.targetDeltaX, this.targetDeltaY);
+        var5 = 51 / ((-19 - obfuscationGuard) / 39);
+        var4 = new MoveAttackRequest(actingPlayer, this.pathLength, var3, this.unit.tileX, this.unit.tileY, this.targetDeltaX, this.targetDeltaY);
         if (this.spellId <= -1) {
-          return (SpellAreaSelection) ((Object) var4);
+          return (ActionRequest) ((Object) var4);
         }
         this.battlefield.field_J = true;
-        return (SpellAreaSelection) ((Object) new to(new AreaSpell(this.spellId, var4), this.field_y, param0));
+        return (ActionRequest) ((Object) new SpellCastRequest(new ActionSpell(this.spellId, var4), this.field_y, actingPlayer));
     }
 
     final static void a(byte param0, Battlefield param1) {

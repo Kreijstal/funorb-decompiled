@@ -36,7 +36,7 @@ final class oa extends dr {
         try {
           if (param1 != null) {
             hh.a(-16147, 50, param1, true);
-            ((wn) (lk.field_e.field_y)).a((byte) -111, 1, dk.field_u);
+            ((wn) (lk.field_e.field_y)).a((byte) -111, 1, CorpseConditionMarker.field_u);
           }
           int var2_int = 100 / ((-17 - param0) / 33);
         } catch (RuntimeException runtimeException) {

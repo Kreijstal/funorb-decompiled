@@ -362,7 +362,7 @@ final class bm extends ew {
                 if (this.field_q.field_v != null &&
                   null != this.field_q.field_v[param1]) {
                   var27 = this.field_q.field_v[param1];
-                  var28 = ua.a(param0 ^ -18424, -2 + var18.length, var18, 0);
+                  var28 = SpellCastAction.a(param0 ^ -18424, -2 + var18.length, var18, 0);
                   for (var9 = 0; var9 < 64; var9++) {
                     if (~var27[var9] != ~var28[var9]) {
                       throw new RuntimeException();
@@ -413,7 +413,7 @@ final class bm extends ew {
               if (null != this.field_q.field_v &&
                 this.field_q.field_v[param1] != null) {
                 var29 = this.field_q.field_v[param1];
-                var30 = ua.a(-18423, -2 + var18.length, var18, 0);
+                var30 = SpellCastAction.a(-18423, -2 + var18.length, var18, 0);
                 var11 = 0;
                 var9 = var11;
                 while (var11 < 64) {

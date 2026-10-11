@@ -336,13 +336,13 @@ abstract class nl extends kb implements gw {
           t.field_g = new je(0L, eq.field_h);
           t.field_g.field_Eb = 1;
           cp.field_d = new je(0L, kd.field_M, eq.field_e.toUpperCase());
-          tg.field_n = new je(0L, be.field_y, nr.field_d.toUpperCase());
+          tg.field_n = new je(0L, SummonAction.field_y, nr.field_d.toUpperCase());
           of.field_Lb = new je(0L, sh.field_m);
           r.field_v = new je(0L, te.field_p, IntrusiveNode.field_a);
           ek.field_c = new je(0L, ho.field_a, wb.field_c);
           CombatViewTransition.field_p = new je(0L, ho.field_a, fk.field_g);
           bs.field_a = new je(0L, ho.field_a, fw.field_H);
-          ee.field_A = new je(0L, ho.field_a, hs.field_D);
+          SphinxActionRequest.field_A = new je(0L, ho.field_a, hs.field_D);
           wl.field_K = new je(0L, br.field_e, RevivalEvent.field_B);
           CipherPacketBuffer.field_x = new dn(0L, new je(0L, (je) null), cb.field_c, ri.field_b);
           fj.field_d = new je(0L, nd.field_a, l.field_f.toUpperCase());
@@ -360,7 +360,7 @@ abstract class nl extends kb implements gw {
             stackIn_6_1 = null;
             stackIn_6_4 = cq.field_C;
           }
-          pe.field_x = new je(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
+          VineGrowthAction.field_x = new je(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
           ov.field_i = new je(0L, (je) null);
           ov.field_i.a(tg.field_n, 92);
           ov.field_i.a(of.field_Lb, 47);
@@ -370,13 +370,13 @@ abstract class nl extends kb implements gw {
           if (fh.field_c) {
             of.field_Lb.a(bs.field_a, 114);
           }
-          of.field_Lb.a(ee.field_A, 78);
+          of.field_Lb.a(SphinxActionRequest.field_A, 78);
           of.field_Lb.a(wl.field_K, 99);
           of.field_Lb.a(CipherPacketBuffer.field_x, 70);
           if (fh.field_c) {
             ov.field_i.a(fj.field_d, 127);
           }
-          ov.field_i.a(pe.field_x, 93);
+          ov.field_i.a(VineGrowthAction.field_x, 93);
           vu.field_Q = new je(0L, eq.field_h);
           vu.field_Q.field_Eb = 1;
           vu.field_Q.field_Fb = 0;
@@ -401,8 +401,8 @@ abstract class nl extends kb implements gw {
             eb.field_c.a(SpellCastEvent.field_D, 107);
           }
           eb.field_c.a(bu.field_a, 109);
-          mp.field_Lb = new je(0L, kd.field_M, pl.field_v.toUpperCase());
-          kd.field_F = new je(0L, be.field_y);
+          mp.field_Lb = new je(0L, kd.field_M, DeployAction.field_v.toUpperCase());
+          kd.field_F = new je(0L, SummonAction.field_y);
           vc.field_l = new je(0L, sh.field_m);
           iu.field_d = new je(0L, rn.field_a, EffectPresentation.field_d.toUpperCase());
           KingBlackDragonEvent.field_z = new je[param1 + 4];

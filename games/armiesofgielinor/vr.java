@@ -48,7 +48,7 @@ final class vr {
                   }
                   if (var3 == 14 &&
                     var4 == 0) {
-                    hw.a((byte) 29, var3, var4);
+                    SummonRequest.a((byte) 29, var3, var4);
                   }
                 }
               }

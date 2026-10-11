@@ -137,7 +137,7 @@ final class fh {
 
     final static boolean b(byte param0) {
         int var1 = -84 % ((-51 - param0) / 32);
-        if (null == am.field_z) {
+        if (null == MoveAttackRequest.field_z) {
           return false;
         }
         if (ov.field_g.b((byte) -121)) {

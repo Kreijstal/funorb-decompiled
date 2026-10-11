@@ -156,7 +156,7 @@ final class ub {
     }
 
     final static void a(boolean param0, boolean param1) {
-        ij.field_w = !param1 ? new ea(ob.field_O, eb.field_c) : new ea(ur.field_x, uj.field_l);
+        ij.field_w = !param1 ? new ea(ob.field_O, eb.field_c) : new ea(TeleportAction.field_x, uj.field_l);
         if (param0) {
           return;
         }

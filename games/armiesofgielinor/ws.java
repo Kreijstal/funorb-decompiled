@@ -67,42 +67,42 @@ final class ws extends fw {
 
     final static void b(boolean param0) {
         if (param0) {
-          hw.a((byte) 52, wf.field_y, 6);
-          hw.a((byte) 33, sh.field_r, 26);
+          SummonRequest.a((byte) 52, wf.field_y, 6);
+          SummonRequest.a((byte) 33, sh.field_r, 26);
           MoveEvent.field_D.a(MoveEvent.field_D.a(26, (byte) -107) + 30, 26, (byte) 126);
-          hw.a((byte) 111, pu.field_B, 8);
-          hw.a((byte) 67, sh.field_r, 27);
+          SummonRequest.a((byte) 111, pu.field_B, 8);
+          SummonRequest.a((byte) 67, sh.field_r, 27);
           MoveEvent.field_D.a(30 + MoveEvent.field_D.a(27, (byte) -126), 27, (byte) 125);
-          hw.a((byte) 78, sh.field_r, 28);
+          SummonRequest.a((byte) 78, sh.field_r, 28);
           MoveEvent.field_D.a(MoveEvent.field_D.a(28, (byte) -122) + 30, 28, (byte) 120);
-          hw.a((byte) 45, pu.field_B, 9);
+          SummonRequest.a((byte) 45, pu.field_B, 9);
           if (!rf.a(27875)) {
-            hw.a((byte) 54, cg.field_b, 1);
-            hw.a((byte) 91, GameEvent.field_t, 24);
-            hw.a((byte) 101, op.field_f, 17);
-            hw.a((byte) 39, sa.field_i, 3);
-            hw.a((byte) 78, wp.field_D, 4);
-            il.field_t[40] = od.field_f;
+            SummonRequest.a((byte) 54, cg.field_b, 1);
+            SummonRequest.a((byte) 91, GameEvent.field_t, 24);
+            SummonRequest.a((byte) 101, op.field_f, 17);
+            SummonRequest.a((byte) 39, sa.field_i, 3);
+            SummonRequest.a((byte) 78, wp.field_D, 4);
+            DisplacedUnitMarker.field_t[40] = od.field_f;
           }
           return;
         }
         field_P = (je) null;
-        hw.a((byte) 52, wf.field_y, 6);
-        hw.a((byte) 33, sh.field_r, 26);
+        SummonRequest.a((byte) 52, wf.field_y, 6);
+        SummonRequest.a((byte) 33, sh.field_r, 26);
         MoveEvent.field_D.a(MoveEvent.field_D.a(26, (byte) -107) + 30, 26, (byte) 126);
-        hw.a((byte) 111, pu.field_B, 8);
-        hw.a((byte) 67, sh.field_r, 27);
+        SummonRequest.a((byte) 111, pu.field_B, 8);
+        SummonRequest.a((byte) 67, sh.field_r, 27);
         MoveEvent.field_D.a(30 + MoveEvent.field_D.a(27, (byte) -126), 27, (byte) 125);
-        hw.a((byte) 78, sh.field_r, 28);
+        SummonRequest.a((byte) 78, sh.field_r, 28);
         MoveEvent.field_D.a(MoveEvent.field_D.a(28, (byte) -122) + 30, 28, (byte) 120);
-        hw.a((byte) 45, pu.field_B, 9);
+        SummonRequest.a((byte) 45, pu.field_B, 9);
         if (!rf.a(27875)) {
-          hw.a((byte) 54, cg.field_b, 1);
-          hw.a((byte) 91, GameEvent.field_t, 24);
-          hw.a((byte) 101, op.field_f, 17);
-          hw.a((byte) 39, sa.field_i, 3);
-          hw.a((byte) 78, wp.field_D, 4);
-          il.field_t[40] = od.field_f;
+          SummonRequest.a((byte) 54, cg.field_b, 1);
+          SummonRequest.a((byte) 91, GameEvent.field_t, 24);
+          SummonRequest.a((byte) 101, op.field_f, 17);
+          SummonRequest.a((byte) 39, sa.field_i, 3);
+          SummonRequest.a((byte) 78, wp.field_D, 4);
+          DisplacedUnitMarker.field_t[40] = od.field_f;
         }
     }
 

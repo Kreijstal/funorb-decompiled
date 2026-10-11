@@ -236,7 +236,7 @@ final class TutorialController {
                       pg.field_d.field_d[var2_int] > -1) {
                       pg.field_d.field_d[var2_int] = -1;
                       AttackEvent.b(false);
-                      ub.$cfr$intArgs$a$6d836999ad61(101, am.field_v[45]);
+                      ub.$cfr$intArgs$a$6d836999ad61(101, MoveAttackRequest.field_v[45]);
                     }
                     if (pg.field_d.field_d[var2_int] > -1) {
                       if (hi.field_j >= 2 &&
@@ -257,10 +257,10 @@ final class TutorialController {
                       ih.field_p = ct.field_o[ev.field_d];
                       this.a((byte) 88, ev.field_d, (rg) null);
                       if (ts.field_j != ih.field_p) {
-                        ub.$cfr$intArgs$a$6d836999ad61(127, am.field_v[44]);
+                        ub.$cfr$intArgs$a$6d836999ad61(127, MoveAttackRequest.field_v[44]);
                         return;
                       }
-                      ub.$cfr$intArgs$a$6d836999ad61(31, am.field_v[42]);
+                      ub.$cfr$intArgs$a$6d836999ad61(31, MoveAttackRequest.field_v[42]);
                     }
                     return;
                   }
@@ -303,7 +303,7 @@ final class TutorialController {
                     KingBlackDragonEvent.field_A = -248;
                     ts.field_j = ts.field_j.field_j;
                     this.a((byte) 51, -1, ts.field_j);
-                    ub.$cfr$intArgs$a$6d836999ad61(118, am.field_v[43]);
+                    ub.$cfr$intArgs$a$6d836999ad61(118, MoveAttackRequest.field_v[43]);
                     ab.field_a = ev.field_d;
                     ev.field_d = -1;
                   }
@@ -331,7 +331,7 @@ final class TutorialController {
                       wj.field_q = 248;
                       KingBlackDragonEvent.field_A = 248;
                       this.a((byte) 92, -1, ts.field_j);
-                      ub.$cfr$intArgs$a$6d836999ad61(79, am.field_v[42]);
+                      ub.$cfr$intArgs$a$6d836999ad61(79, MoveAttackRequest.field_v[42]);
                       ab.field_a = ev.field_d;
                       ev.field_d = -1;
                       return;
@@ -366,7 +366,7 @@ final class TutorialController {
                     wj.field_q = 248;
                     TelepopEvent.field_D = true;
                     this.a((byte) 90, ev.field_d, (rg) null);
-                    ub.$cfr$intArgs$a$6d836999ad61(113, am.field_v[45]);
+                    ub.$cfr$intArgs$a$6d836999ad61(113, MoveAttackRequest.field_v[45]);
                     ub.$cfr$intArgs$a$6d836999ad61(124, im.field_v[12]);
                     return;
                   }
@@ -550,7 +550,7 @@ final class TutorialController {
           } while (var4 == 0);
           boolean decompiledSharedTail1 = !(pg.field_d.a(0) <= ah.field_b);
           if (!decompiledSharedTail1) {
-            rs.field_n.a(fo.a(4800, hw.field_w, new String[]{this.c(param0 ^ 23558, var2_int), this.c(-38, var3)}), db.a(true, 320), u.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
+            rs.field_n.a(fo.a(4800, SummonRequest.field_w, new String[]{this.c(param0 ^ 23558, var2_int), this.c(-38, var3)}), db.a(true, 320), u.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
             decompiledSharedTail1 = (var4 != 0);
           }
           if (decompiledSharedTail1) {
@@ -562,12 +562,12 @@ final class TutorialController {
               pg.field_d.a((byte) 123) >= NodeDeque.field_c[pg.field_d.a(0)]) {
               boolean decompiledSharedTail0 = !(wg.a(-33, db.a(true, 469), db.a(true, 606), u.a(384, (byte) 94), u.a(416, (byte) 94)));
               if (!decompiledSharedTail0) {
-                fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, il.field_s, field_e, 0, 0);
+                fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
                 na.field_F = 52;
                 decompiledSharedTail0 = (var4 != 0);
               }
               if (decompiledSharedTail0) {
-                fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, il.field_s, nd.field_b, 0, 0);
+                fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
               }
               fe.c(wv.field_e, db.a(true, 537), u.a(416, (byte) 94), 0, true);
             }
@@ -711,7 +711,7 @@ final class TutorialController {
                 break;
               }
               var10 = MoveEvent.field_y[this.tutorialStage][var9];
-              var11_ref_String = il.field_t[var10];
+              var11_ref_String = DisplacedUnitMarker.field_t[var10];
               var8 = var8 + (nr.field_e.a(var11_ref_String) >> 1);
               var9++;
             } while (var14 == 0);
@@ -729,7 +729,7 @@ final class TutorialController {
                 break;
               }
               var12 = MoveEvent.field_y[this.tutorialStage][var11];
-              var13 = il.field_t[var12];
+              var13 = DisplacedUnitMarker.field_t[var12];
               var8 = var8 + (nr.field_e.a(var13) >> 1);
               var11++;
             } while (var14 == 0);
@@ -976,7 +976,7 @@ final class TutorialController {
               TelepopEvent.field_D = true;
               ts.field_j = param0;
               this.a((byte) 62, ev.field_d, (rg) null);
-              ub.$cfr$intArgs$a$6d836999ad61(59, am.field_v[45]);
+              ub.$cfr$intArgs$a$6d836999ad61(59, MoveAttackRequest.field_v[45]);
               ub.$cfr$intArgs$a$6d836999ad61(38, im.field_v[12]);
               stackIn_42_0 = -1;
               return stackIn_42_0;
@@ -1316,7 +1316,7 @@ final class TutorialController {
                                                                                                                                                 return;
                                                                                                                                               }
                                                                                                                                               if (DamageEvent.g(123)) {
-                                                                                                                                                ld.a(0, bi.field_e, param0, (byte) 90, true);
+                                                                                                                                                MoveAttackAction.a(0, bi.field_e, param0, (byte) 90, true);
                                                                                                                                                 if (var9 == 0) {
                                                                                                                                                   return;
                                                                                                                                                 }
@@ -1358,7 +1358,7 @@ final class TutorialController {
                                                                                                                                             return;
                                                                                                                                           }
                                                                                                                                           if (DamageEvent.g(116)) {
-                                                                                                                                            ld.a(0, rg.field_l, param0, (byte) 90, true);
+                                                                                                                                            MoveAttackAction.a(0, rg.field_l, param0, (byte) 90, true);
                                                                                                                                             if (var9 == 0) {
                                                                                                                                               return;
                                                                                                                                             }
@@ -1671,7 +1671,7 @@ final class TutorialController {
                                                                                             return;
                                                                                           }
                                                                                         }
-                                                                                        ld.a(0, r.field_G, param0, (byte) 90, true);
+                                                                                        MoveAttackAction.a(0, r.field_G, param0, (byte) 90, true);
                                                                                         if (var9 == 0) {
                                                                                           return;
                                                                                         }
@@ -2344,7 +2344,7 @@ final class TutorialController {
             if (-1 < param1) {
               var4 = fq.field_f[param1];
               var6 = uc.spellDefinitions[param1][2];
-              var5 = SpellAreaSelection.field_l[param1];
+              var5 = ActionRequest.field_l[param1];
             }
             if (!(-1 < param1) ||
               ArmiesOfGielinor.obfuscationControl) {
@@ -2667,8 +2667,8 @@ final class TutorialController {
 
     final static void h(byte param0) {
         try {
-          ee.field_v.j(-128);
-          ee.field_v.a(new ut(ee.field_v), 0);
+          SphinxActionRequest.field_v.j(-128);
+          SphinxActionRequest.field_v.a(new ut(SphinxActionRequest.field_v), 0);
           if (param0 < 44) {
             TutorialController.h((byte) -22);
           }
@@ -2805,7 +2805,7 @@ final class TutorialController {
                       df.field_M <= 0) {
                       stackIn_35_0 = DeathEvent.field_A;
                     } else {
-                      stackIn_35_0 = am.field_A;
+                      stackIn_35_0 = MoveAttackRequest.field_A;
                     }
                     var7_ref_wk = stackIn_35_0;
                     var7_ref_wk.e(var3_intLifetime1, var4Lifetime1);
@@ -2857,7 +2857,7 @@ final class TutorialController {
             if (var17 != 0) {
               if (!pn.field_n[var6] ||
                 !(df.field_M <= 0)) {
-                am.field_A.g(db.a(true, 82), -14 + var10);
+                MoveAttackRequest.field_A.g(db.a(true, 82), -14 + var10);
                 DeathEvent.field_A.g(db.a(true, 82), -14 + var10);
               } else {
                 DeathEvent.field_A.g(db.a(true, 82), -14 + var10);
@@ -2866,7 +2866,7 @@ final class TutorialController {
           } else {
             if (!pn.field_n[var6] ||
               !(df.field_M <= 0)) {
-              am.field_A.g(db.a(true, 82), -14 + var10);
+              MoveAttackRequest.field_A.g(db.a(true, 82), -14 + var10);
               if (var17 != 0) {
                 DeathEvent.field_A.g(db.a(true, 82), -14 + var10);
               }
@@ -2898,14 +2898,14 @@ final class TutorialController {
             var10 = var10 + var7;
             var14++;
           } while (var17 == 0);
-          var15 = var10 - (rs.field_n.field_H + dk.field_v.field_v) / 2;
+          var15 = var10 - (rs.field_n.field_H + CorpseConditionMarker.field_v.field_v) / 2;
           var16 = 0;
           while (true) {
             if (var16 >= na.field_J[var6]) {
               return;
             }
-            dk.field_v.g(var14, var15);
-            var14 = var14 + dk.field_v.field_y / 3;
+            CorpseConditionMarker.field_v.g(var14, var15);
+            var14 = var14 + CorpseConditionMarker.field_v.field_y / 3;
             var16++;
             if (var17 != 0) {
               return;
@@ -2931,12 +2931,12 @@ final class TutorialController {
             if (pg.field_d.a((byte) 120) >= 50) {
               boolean decompiledSharedTail0 = !(wg.a(-33, db.a(true, 469), db.a(true, 606), u.a(384, (byte) 94), u.a(416, (byte) 94)));
               if (!decompiledSharedTail0) {
-                fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, il.field_s, field_e, 0, 0);
+                fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
                 na.field_F = 53;
                 decompiledSharedTail0 = (ArmiesOfGielinor.obfuscationControl);
               }
               if (decompiledSharedTail0) {
-                fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, il.field_s, nd.field_b, 0, 0);
+                fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
               }
               fe.c(wv.field_e, db.a(true, 537), u.a(416, (byte) 94), 0, true);
             }
@@ -3160,7 +3160,7 @@ final class TutorialController {
               var2 = ai.field_U;
             }
           } else {
-            var2 = il.field_t[7];
+            var2 = DisplacedUnitMarker.field_t[7];
           }
           if (!param0) {
             this.f(73);
@@ -3483,7 +3483,7 @@ final class TutorialController {
                 var5 = 1;
               }
             }
-            sj.field_a = pl.a(34, var5, 3, 10, 1);
+            sj.field_a = DeployAction.a(34, var5, 3, 10, 1);
           }
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameCompleted0 = true;
@@ -3618,22 +3618,22 @@ final class TutorialController {
           }
           boolean decompiledSharedTail2 = !(!wg.a(-33, db.a(true, 171), db.a(true, 286), u.a(384, (byte) 94), u.a(416, (byte) 94)));
           if (!decompiledSharedTail2) {
-            fe.a(db.a(true, 171), u.a(384, (byte) 94), 115, 32, il.field_s, nd.field_b, 0, 0);
+            fe.a(db.a(true, 171), u.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
             decompiledSharedTail2 = (var8 != 0);
           }
           if (decompiledSharedTail2) {
-            fe.a(db.a(true, 171), u.a(384, (byte) 94), 115, 32, il.field_s, field_e, 0, 0);
+            fe.a(db.a(true, 171), u.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
             na.field_F = 8;
           }
           fe.c(nu.field_w, db.a(true, 228), u.a(416, (byte) 94), 0, true);
           boolean decompiledSharedTail1 = !(wg.a(-33, db.a(true, 44), db.a(true, 159), u.a(384, (byte) 94), u.a(416, (byte) 94)));
           if (!decompiledSharedTail1) {
-            fe.a(db.a(true, 44), u.a(384, (byte) 94), 115, 32, il.field_s, field_e, 0, 0);
+            fe.a(db.a(true, 44), u.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
             na.field_F = 9;
             decompiledSharedTail1 = (var8 != 0);
           }
           if (decompiledSharedTail1) {
-            fe.a(db.a(true, 44), u.a(384, (byte) 94), 115, 32, il.field_s, nd.field_b, 0, 0);
+            fe.a(db.a(true, 44), u.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
           }
           fe.c(fu.field_b, db.a(true, 101), u.a(416, (byte) 94), 0, true);
           if (param0 != 100) {
@@ -3823,28 +3823,28 @@ final class TutorialController {
         int var4 = 0;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3 = il.field_t[param0];
+          var3 = DisplacedUnitMarker.field_t[param0];
           if (param0 == 8) {
             var3 = this.f(true);
           }
           if (param0 == 28) {
-            var3 = il.field_t[28] + r.field_B;
+            var3 = DisplacedUnitMarker.field_t[28] + r.field_B;
           }
           if (param0 == 46) {
-            var3 = il.field_t[28] + mg.field_g;
+            var3 = DisplacedUnitMarker.field_t[28] + mg.field_g;
           }
           if (param0 == 33) {
             if (vg.field_m) {
-              var3 = il.field_t[33] + dn.field_Mb;
+              var3 = DisplacedUnitMarker.field_t[33] + dn.field_Mb;
               if (var4 != 0) {
-                var3 = il.field_t[33] + qd.field_J;
+                var3 = DisplacedUnitMarker.field_t[33] + qd.field_J;
               }
             } else {
-              var3 = il.field_t[33] + qd.field_J;
+              var3 = DisplacedUnitMarker.field_t[33] + qd.field_J;
             }
           }
           if (36 == param0) {
-            stackIn_25_0 = new StringBuilder().append(il.field_t[36]);
+            stackIn_25_0 = new StringBuilder().append(DisplacedUnitMarker.field_t[36]);
             if (!cu.field_a) {
               stackIn_26_1 = uk.field_k;
             } else {
@@ -3853,7 +3853,7 @@ final class TutorialController {
             var3 = ((StringBuilder) (Object) stackIn_25_0).append(stackIn_26_1).toString();
           }
           if (param0 == 37) {
-            stackIn_33_0 = new StringBuilder().append(il.field_t[37]);
+            stackIn_33_0 = new StringBuilder().append(DisplacedUnitMarker.field_t[37]);
             if (!uc.field_a) {
               stackIn_34_1 = fk.field_a;
             } else {
@@ -3862,10 +3862,10 @@ final class TutorialController {
             var3 = ((StringBuilder) (Object) stackIn_33_0).append(stackIn_34_1).toString();
           }
           if (param0 == 38) {
-            var3 = il.field_t[38] + cf.field_m[ek.field_d];
+            var3 = DisplacedUnitMarker.field_t[38] + cf.field_m[ek.field_d];
           }
           if (param0 == 29) {
-            var3 = il.field_t[29] + h.field_e[t.field_e];
+            var3 = DisplacedUnitMarker.field_t[29] + h.field_e[t.field_e];
           }
           if (param1 != 29) {
             this.g((byte) 101);
@@ -3949,7 +3949,7 @@ final class TutorialController {
                 if (li.field_q == -1 + var2_int) {
                   return;
                 }
-                ld.field_s = li.field_q;
+                MoveAttackAction.field_s = li.field_q;
                 vs.field_f = tf.field_k;
                 li.field_q = -1 + var2_int;
                 tf.field_k = 256;
@@ -3988,7 +3988,7 @@ final class TutorialController {
               }
               ep.field_o = 0;
               if (var4Lifetime1 != jq.field_F) {
-                ld.field_s = li.field_q;
+                MoveAttackAction.field_s = li.field_q;
                 vf.field_f = jq.field_F;
                 jq.field_F = var4Lifetime1;
                 b.field_n = new la(wp.field_H[li.field_q + 1][jq.field_F]);
@@ -3996,7 +3996,7 @@ final class TutorialController {
                 GlobalSpell.field_h = 256;
               } else {
                 vf.field_f = jq.field_F;
-                ld.field_s = li.field_q;
+                MoveAttackAction.field_s = li.field_q;
                 ri.field_d = GlobalSpell.field_h;
                 kq.field_L = 0;
                 jq.field_F = -1;
@@ -4214,7 +4214,7 @@ final class TutorialController {
                 ue.field_k[var7].f(db.a(true, var8 - 19), u.a(var9 - 22, (byte) 94), 256 - var4);
                 ue.field_k[var7].f(db.a(true, -19 + var8), u.a(-22 + var9, (byte) 94), 256 - var4);
               }
-              if (~(var7 - 1) == ~ld.field_s) {
+              if (~(var7 - 1) == ~MoveAttackAction.field_s) {
                 ue.field_k[var7].f(db.a(true, -19 + var8), u.a(var9 - 22, (byte) 94), 256 - var5);
                 ue.field_k[var7].f(db.a(true, -19 + var8), u.a(var9 - 22, (byte) 94), 256 - var5);
               }
@@ -4232,7 +4232,7 @@ final class TutorialController {
           }
           SoftwareRaster.f(stackIn_18_0, u.a(154, (byte) 94), db.a(true, 296), u.a(416, (byte) 94));
           ce.field_F[li.field_q + 1].f(db.a(true, 36), u.a(156, (byte) 94), 256 - var4);
-          ce.field_F[1 + ld.field_s].f(db.a(true, 36), u.a(156, (byte) 94), 256 - var5);
+          ce.field_F[1 + MoveAttackAction.field_s].f(db.a(true, 36), u.a(156, (byte) 94), 256 - var5);
           if (null != b.field_n) {
             tm.a(db.a(true, 34), u.a(154, (byte) 94), db.a(true, 296), u.a(416, (byte) 94));
             tm.c();
@@ -4245,9 +4245,9 @@ final class TutorialController {
           var7Lifetime2 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
-            if (var7Lifetime2 < wp.field_H[1 + ld.field_s].length) {
-              var8Lifetime1 = 135 + ((int)(Math.sin(3.141592653589793 * (double)var7Lifetime2 * 2.0 / (double)wp.field_H[1 + ld.field_s].length) * (double)(100 + var5 * 150 / 256)) + 30);
-              var9Lifetime1 = 285 + (int)(-(Math.cos(3.141592653589793 * (double)var7Lifetime2 * 2.0 / (double)wp.field_H[ld.field_s + 1].length) * (double)(100 + var5 * 150 / 256)));
+            if (var7Lifetime2 < wp.field_H[1 + MoveAttackAction.field_s].length) {
+              var8Lifetime1 = 135 + ((int)(Math.sin(3.141592653589793 * (double)var7Lifetime2 * 2.0 / (double)wp.field_H[1 + MoveAttackAction.field_s].length) * (double)(100 + var5 * 150 / 256)) + 30);
+              var9Lifetime1 = 285 + (int)(-(Math.cos(3.141592653589793 * (double)var7Lifetime2 * 2.0 / (double)wp.field_H[MoveAttackAction.field_s + 1].length) * (double)(100 + var5 * 150 / 256)));
               stackIn_43_0 = vf.field_f;
               stackIn_43_1 = var7Lifetime2;
               if (var10 != 0) {
@@ -4265,13 +4265,13 @@ final class TutorialController {
                 if (stackIn_43_0 == stackIn_43_1) {
                   TeamRoster.field_e.f(db.a(true, var8Lifetime1 - 35), u.a(-35 + var9Lifetime1, (byte) 94), var2_int);
                 }
-                lw.field_ob.d(db.a(true, var8Lifetime1 - 20), u.a(-20 + var9Lifetime1, (byte) 94), bo.field_g[ld.field_s + 1]);
+                lw.field_ob.d(db.a(true, var8Lifetime1 - 20), u.a(-20 + var9Lifetime1, (byte) 94), bo.field_g[MoveAttackAction.field_s + 1]);
                 km.field_h[0].g(db.a(true, var8Lifetime1 - 23), u.a(-23 + var9Lifetime1, (byte) 94));
-                if ((1 << var7Lifetime2 & pg.field_d.field_b[1 + ld.field_s]) > 0) {
-                  pl.field_x[wp.field_H[ld.field_s + 1][var7Lifetime2]].g(db.a(true, -19 + var8Lifetime1), u.a(-19 + var9Lifetime1, (byte) 94));
+                if ((1 << var7Lifetime2 & pg.field_d.field_b[1 + MoveAttackAction.field_s]) > 0) {
+                  DeployAction.field_x[wp.field_H[MoveAttackAction.field_s + 1][var7Lifetime2]].g(db.a(true, -19 + var8Lifetime1), u.a(-19 + var9Lifetime1, (byte) 94));
                   km.field_h[0].g(db.a(true, var8Lifetime1 - 23), u.a(-23 + var9Lifetime1, (byte) 94));
                 } else {
-                  pl.field_x[wp.field_H[ld.field_s + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1 - 19), u.a(var9Lifetime1 - 19, (byte) 94), 0);
+                  DeployAction.field_x[wp.field_H[MoveAttackAction.field_s + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1 - 19), u.a(var9Lifetime1 - 19, (byte) 94), 0);
                   km.field_h[0].g(db.a(true, -23 + var8Lifetime1), u.a(-23 + var9Lifetime1, (byte) 94), 10);
                 }
                 var7Lifetime2++;
@@ -4303,15 +4303,15 @@ final class TutorialController {
                   TeamRoster.field_e.f(db.a(true, var8Lifetime1Lifetime1 - 35), u.a(var9Lifetime1Lifetime1 - 35, (byte) 94), var3);
                 }
                 if (vf.field_f == var7Lifetime2 &&
-                  ld.field_s == li.field_q) {
+                  MoveAttackAction.field_s == li.field_q) {
                   TeamRoster.field_e.f(db.a(true, var8Lifetime1Lifetime1 - 35), u.a(var9Lifetime1Lifetime1 - 35, (byte) 94), var2_int);
                 }
                 lw.field_ob.d(db.a(true, var8Lifetime1Lifetime1 - 20), u.a(var9Lifetime1Lifetime1 - 20, (byte) 94), bo.field_g[1 + li.field_q]);
                 if ((1 << var7Lifetime2 & pg.field_d.field_b[li.field_q + 1]) <= 0) {
-                  pl.field_x[wp.field_H[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), u.a(var9Lifetime1Lifetime1 - 19, (byte) 94), 0);
+                  DeployAction.field_x[wp.field_H[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), u.a(var9Lifetime1Lifetime1 - 19, (byte) 94), 0);
                   km.field_h[0].g(db.a(true, var8Lifetime1Lifetime1 - 23), u.a(var9Lifetime1Lifetime1 - 23, (byte) 94), 10);
                 } else {
-                  pl.field_x[wp.field_H[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), u.a(var9Lifetime1Lifetime1 - 19, (byte) 94));
+                  DeployAction.field_x[wp.field_H[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), u.a(var9Lifetime1Lifetime1 - 19, (byte) 94));
                   km.field_h[0].g(db.a(true, -23 + var8Lifetime1Lifetime1), u.a(var9Lifetime1Lifetime1 - 23, (byte) 94));
                 }
                 var7Lifetime2++;
@@ -4604,7 +4604,7 @@ final class TutorialController {
             return;
           }
           var2_intLifetime1 = 69 / ((param0 + 36) / 37);
-          if (!ua.field_t &&
+          if (!SpellCastAction.field_t &&
             !dn.field_Qb &&
             null == mu.field_a) {
             while (true) {
@@ -4678,7 +4678,7 @@ final class TutorialController {
                 if (rs.field_q == 80 &&
                   this.tutorialStage == 12 &&
                   tf.field_k == 0) {
-                  ld.field_s = li.field_q;
+                  MoveAttackAction.field_s = li.field_q;
                   vf.field_f = jq.field_F;
                   ri.field_d = GlobalSpell.field_h;
                   jq.field_F = -1;
@@ -4707,7 +4707,7 @@ final class TutorialController {
                 }
               } else {
                 ac.field_p = this.b(ko.field_b, AiPlanningStrategy.field_d, 31);
-                this.field_d.a(0, this.b(ur.field_z, iu.field_t, 31), ac.field_p);
+                this.field_d.a(0, this.b(TeleportAction.field_z, iu.field_t, 31), ac.field_p);
               }
               if (~pn.field_m != ~ac.field_p) {
                 ub.$cfr$intArgs$a$6d836999ad61(90, im.field_v[1]);
@@ -4816,13 +4816,13 @@ final class TutorialController {
                             }
                             if (decompiledFrameRemainder1) {
                               if (stackIn_284_0 != stackIn_284_1) {
-                                ub.$cfr$intArgs$a$6d836999ad61(98, am.field_v[44]);
+                                ub.$cfr$intArgs$a$6d836999ad61(98, MoveAttackRequest.field_v[44]);
                                 if (var4 == 0) {
                                   break;
                                 }
                               }
                               ih.field_p = null;
-                              ub.$cfr$intArgs$a$6d836999ad61(83, am.field_v[42]);
+                              ub.$cfr$intArgs$a$6d836999ad61(83, MoveAttackRequest.field_v[42]);
                               if (var4 == 0) {
                                 break;
                               }
@@ -4830,7 +4830,7 @@ final class TutorialController {
                             vu.field_O = ts.field_j;
                             ts.field_j = ts.field_j.field_j;
                             KingBlackDragonEvent.field_A = -240;
-                            ub.$cfr$intArgs$a$6d836999ad61(41, am.field_v[45]);
+                            ub.$cfr$intArgs$a$6d836999ad61(41, MoveAttackRequest.field_v[45]);
                             break;
                           }
                         }
@@ -5179,12 +5179,12 @@ final class TutorialController {
             }
             boolean decompiledSharedTail0 = !(wg.a(-33, db.a(true, 469), db.a(true, 606), u.a(384, (byte) 94), u.a(416, (byte) 94)));
             if (!decompiledSharedTail0) {
-              fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, il.field_s, field_e, 0, 0);
+              fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
               na.field_F = 52;
               decompiledSharedTail0 = (var6 != 0);
             }
             if (decompiledSharedTail0) {
-              fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, il.field_s, nd.field_b, 0, 0);
+              fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
             }
             fe.c(wv.field_e, db.a(true, 537), u.a(416, (byte) 94), 0, true);
             if (var6 == 0) {
@@ -5226,11 +5226,11 @@ final class TutorialController {
               pg.field_d.field_a[param0] < 250) {
               boolean decompiledSharedTail2 = !(!wg.a(-33, db.a(true, 469), db.a(true, 606), u.a(384, (byte) 94), u.a(416, (byte) 94)));
               if (!decompiledSharedTail2) {
-                fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, il.field_s, nd.field_b, 0, 0);
+                fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
                 decompiledSharedTail2 = (var7 != 0);
               }
               if (decompiledSharedTail2) {
-                fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, il.field_s, field_e, 0, 0);
+                fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
                 na.field_F = 8;
               }
               fe.c(wv.field_e, db.a(true, 537), u.a(416, (byte) 94), 0, true);
@@ -5258,12 +5258,12 @@ final class TutorialController {
                 if (var5 != 0) {
                   boolean decompiledSharedTail1 = !(wg.a(-33, db.a(true, 469), db.a(true, 606), u.a(334, (byte) 94), u.a(366, (byte) 94)));
                   if (!decompiledSharedTail1) {
-                    fe.a(db.a(true, 469), u.a(334, (byte) 94), 137, 32, il.field_s, field_e, 0, 0);
+                    fe.a(db.a(true, 469), u.a(334, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
                     na.field_F = 8;
                     decompiledSharedTail1 = (var7 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    fe.a(db.a(true, 469), u.a(334, (byte) 94), 137, 32, il.field_s, nd.field_b, 0, 0);
+                    fe.a(db.a(true, 469), u.a(334, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
                   }
                   fe.c(wi.field_h, db.a(true, 537), u.a(366, (byte) 94), 0, true);
                 }
@@ -5277,12 +5277,12 @@ final class TutorialController {
             }
             boolean decompiledSharedTail0 = !(wg.a(stackIn_47_0, stackIn_47_1, db.a(true, 606), u.a(384, (byte) 94), u.a(416, (byte) 94)));
             if (!decompiledSharedTail0) {
-              fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, il.field_s, field_e, 0, 0);
+              fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
               na.field_F = 8;
               decompiledSharedTail0 = (var7 != 0);
             }
             if (decompiledSharedTail0) {
-              fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, il.field_s, nd.field_b, 0, 0);
+              fe.a(db.a(true, 469), u.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
             }
             fe.c(ni.field_c, db.a(true, 537), u.a(416, (byte) 94), 0, true);
             return;
@@ -5368,7 +5368,7 @@ final class TutorialController {
           lm.field_c = this.d(AiPlanningStrategy.field_d, -1, ko.field_b);
           if (1 == DeployEvent.field_A) {
             ub.$cfr$intArgs$a$6d836999ad61(94, im.field_v[2]);
-            var2_int = this.d(iu.field_t, -1, ur.field_z);
+            var2_int = this.d(iu.field_t, -1, TeleportAction.field_z);
             if (vs.field_a == var2_int) {
               vs.field_a = -1;
               if ((ArmiesOfGielinor.obfuscationControl) &&
@@ -5899,7 +5899,7 @@ final class TutorialController {
             }
             if (ml.a(u.a(98, (byte) 94), db.a(true, 350 + 55 * var2_int), 22, false)) {
               pg.field_d.field_d[var2_int] = ev.field_d;
-              ub.$cfr$intArgs$a$6d836999ad61(51, am.field_v[44]);
+              ub.$cfr$intArgs$a$6d836999ad61(51, MoveAttackRequest.field_v[44]);
               AttackEvent.b(false);
               return;
             }
@@ -6117,7 +6117,7 @@ final class TutorialController {
                     fe.a(var6, var7, 20, 40, EffectPresentation.field_j, jh.field_k, 0, 128, false);
                   }
                   if (-1 < kd.field_X) {
-                    SoftwareRaster.f(db.a(true, var5Lifetime1 * 21 + 44), u.a(334 + var4Lifetime1 * 42, (byte) 94), 12, 32, SpellAreaEffect.field_q[var5Lifetime1 + var4Lifetime1 * 16]);
+                    SoftwareRaster.f(db.a(true, var5Lifetime1 * 21 + 44), u.a(334 + var4Lifetime1 * 42, (byte) 94), 12, 32, PreparedAction.field_q[var5Lifetime1 + var4Lifetime1 * 16]);
                   }
                   var5Lifetime1++;
                 }

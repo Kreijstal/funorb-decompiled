@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ld extends SpellAreaEffect {
-    private int field_v;
+final class MoveAttackAction extends PreparedAction {
+    private int startY;
     static int field_s;
-    private int field_F;
+    private int attackOriginY;
     static String field_G;
     static int[] field_x;
-    private int field_D;
-    private int field_u;
-    private int field_E;
-    private int field_A;
-    private Unit field_z;
-    private int field_t;
-    private Unit field_y;
-    private int field_w;
-    private int field_B;
-    private int[] field_C;
+    private int pathLength;
+    private int startX;
+    private int attackOriginX;
+    private int attackerAnimationCount;
+    private Unit defenderSnapshot;
+    private int targetDeltaY;
+    private Unit movingUnit;
+    private int targetDeltaX;
+    private int defenderAnimationCount;
+    private int[] pathDirections;
 
     final static void a(int param0, String param1, boolean param2, byte param3, boolean param4) {
         String stackIn_4_0 = null;
@@ -141,7 +141,7 @@ final class ld extends SpellAreaEffect {
     final static int a(byte param0, int param1) {
         if (param0 < 62) {
           java.applet.Applet var3 = (java.applet.Applet) null;
-          ld.a(-105, (java.applet.Applet) null);
+          MoveAttackAction.a(-105, (java.applet.Applet) null);
         }
         return tm.field_e[param1 & 2047];
     }
@@ -193,58 +193,58 @@ final class ld extends SpellAreaEffect {
         }
     }
 
-    final void applyEffect(int obfuscationGuard, Battlefield battlefield) {
-        int var4 = 0;
+    final void applyToBattlefield(int obfuscationGuard, Battlefield battlefield) {
+        int pathIndex = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int[] var3 = null;
+        int[] copiedPath = null;
         RuntimeException var3_ref = null;
-        int var5 = 0;
+        int direction = 0;
         int var6 = 0;
-        int[] var7 = null;
-        int[] var8 = null;
+        int[] pathBuffer = null;
+        int[] eventPath = null;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.field_E = this.field_u;
-          var8 = new int[this.field_D];
-          var7 = var8;
-          var3 = var7;
-          this.field_F = this.field_v;
-          for (var4 = 0; var4 < this.field_D; var4++) {
-            var5 = this.field_C[var4];
-            if (var5 == 1) {
-              this.field_F = this.field_F - 1;
+          this.attackOriginX = this.startX;
+          eventPath = new int[this.pathLength];
+          pathBuffer = eventPath;
+          copiedPath = pathBuffer;
+          this.attackOriginY = this.startY;
+          for (pathIndex = 0; pathIndex < this.pathLength; pathIndex++) {
+            direction = this.pathDirections[pathIndex];
+            if (direction == 1) {
+              this.attackOriginY = this.attackOriginY - 1;
             } else {
-              if (var5 == 2) {
-                this.field_F = this.field_F + 1;
+              if (direction == 2) {
+                this.attackOriginY = this.attackOriginY + 1;
               } else {
-                if (var5 != 0) {
-                  if (var5 == 3) {
-                    this.field_E = this.field_E - 1;
+                if (direction != 0) {
+                  if (direction == 3) {
+                    this.attackOriginX = this.attackOriginX - 1;
                   }
                 } else {
-                  this.field_E = this.field_E + 1;
+                  this.attackOriginX = this.attackOriginX + 1;
                 }
               }
             }
-            var3[var4] = this.field_C[var4];
+            copiedPath[pathIndex] = this.pathDirections[pathIndex];
           }
-          if (!this.field_y.packedFlag8 ||
-            this.field_y.unitType == 0) {
-            battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new MoveEvent(this.field_u, this.field_v, var8)));
+          if (!this.movingUnit.packedFlag8 ||
+            this.movingUnit.unitType == 0) {
+            battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new MoveEvent(this.startX, this.startY, eventPath)));
           }
           if (obfuscationGuard != 64) {
-            ld.a((byte) -102, 105);
+            MoveAttackAction.a((byte) -102, 105);
           }
-          if (this.field_w != 0 ||
-            0 != this.field_t) {
-            if (this.field_y.packedFlag8 &&
-              7 == this.field_y.unitType) {
+          if (this.targetDeltaX != 0 ||
+            0 != this.targetDeltaY) {
+            if (this.movingUnit.packedFlag8 &&
+              7 == this.movingUnit.unitType) {
               return;
             }
-            battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new AttackEvent(this.field_E, this.field_F, this.field_w, this.field_t, this.field_z, this.field_A, this.field_B)));
+            battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new AttackEvent(this.attackOriginX, this.attackOriginY, this.targetDeltaX, this.targetDeltaY, this.defenderSnapshot, this.attackerAnimationCount, this.defenderAnimationCount)));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -324,7 +324,7 @@ final class ld extends SpellAreaEffect {
         field_x = null;
     }
 
-    ld(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, Unit param7, Unit param8) {
+    MoveAttackAction(int startX, int startY, int[] pathDirections, int pathLength, int targetDeltaX, int targetDeltaY, int actingPlayer, Unit movingUnit, Unit defender) {
         int stackIn_4_1 = 0;
         int stackIn_5_2 = 0;
         int stackIn_8_1 = 0;
@@ -340,55 +340,55 @@ final class ld extends SpellAreaEffect {
         RuntimeException var10 = null;
         int var11 = 0;
         try {
-          this.field_v = param1;
-          this.field_w = param4;
-          this.field_y = param7;
-          this.field_D = param3;
-          this.field_u = param0;
-          this.field_t = param5;
-          this.field_m = param6;
-          this.field_C = param2;
-          if (param8 == null) {
-            this.field_w = 0;
-            this.field_z = null;
-            this.field_t = 0;
+          this.startY = startY;
+          this.targetDeltaX = targetDeltaX;
+          this.movingUnit = movingUnit;
+          this.pathLength = pathLength;
+          this.startX = startX;
+          this.targetDeltaY = targetDeltaY;
+          this.actingPlayer = actingPlayer;
+          this.pathDirections = pathDirections;
+          if (defender == null) {
+            this.targetDeltaX = 0;
+            this.defenderSnapshot = null;
+            this.targetDeltaY = 0;
           } else {
-            this.field_z = param8.copyDetached(false);
-            var10_int = bw.unitDefinitions[this.field_y.unitType][9];
-            stackIn_4_1 = this.field_y.strength * vu.field_N[var10_int] / this.field_y.maximumStrength;
-            if (this.field_y.strength * vu.field_N[var10_int] % this.field_y.maximumStrength != 0) {
+            this.defenderSnapshot = defender.copyDetached(false);
+            var10_int = bw.unitDefinitions[this.movingUnit.unitType][9];
+            stackIn_4_1 = this.movingUnit.strength * vu.field_N[var10_int] / this.movingUnit.maximumStrength;
+            if (this.movingUnit.strength * vu.field_N[var10_int] % this.movingUnit.maximumStrength != 0) {
               stackIn_5_2 = 1;
             } else {
               stackIn_5_2 = 0;
             }
-            this.field_A = stackIn_4_1 + stackIn_5_2;
-            var11 = bw.unitDefinitions[this.field_z.unitType][9];
-            if (0 != this.field_z.strength * vu.field_N[var11] % this.field_z.maximumStrength) {
+            this.attackerAnimationCount = stackIn_4_1 + stackIn_5_2;
+            var11 = bw.unitDefinitions[this.defenderSnapshot.unitType][9];
+            if (0 != this.defenderSnapshot.strength * vu.field_N[var11] % this.defenderSnapshot.maximumStrength) {
               stackIn_8_1 = 1;
             } else {
               stackIn_8_1 = 0;
             }
-            this.field_B = stackIn_8_1 + this.field_z.strength * vu.field_N[var11] / this.field_z.maximumStrength;
+            this.defenderAnimationCount = stackIn_8_1 + this.defenderSnapshot.strength * vu.field_N[var11] / this.defenderSnapshot.maximumStrength;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
           stackIn_13_0 = var10;
-          stackIn_13_1 = new StringBuilder().append("ld.<init>(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_13_1 = new StringBuilder().append("ld.<init>(").append(startX).append(',').append(startY).append(',');
+          if (pathDirections == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-          if (param7 == null) {
+          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(pathLength).append(',').append(targetDeltaX).append(',').append(targetDeltaY).append(',').append(actingPlayer).append(',');
+          if (movingUnit == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
           stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
-          if (param8 == null) {
+          if (defender == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";

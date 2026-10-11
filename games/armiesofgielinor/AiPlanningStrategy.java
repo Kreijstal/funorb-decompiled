@@ -63,10 +63,10 @@ abstract class AiPlanningStrategy {
             if (1 != th.field_a) {
               mw.field_E.field_Kb.field_Nb.field_X = ef.field_a;
               if (var19 != 0) {
-                mw.field_E.field_Kb.field_Nb.field_X = ur.field_u;
+                mw.field_E.field_Kb.field_Nb.field_X = TeleportAction.field_u;
               }
             } else {
-              mw.field_E.field_Kb.field_Nb.field_X = ur.field_u;
+              mw.field_E.field_Kb.field_Nb.field_X = TeleportAction.field_u;
             }
             jm.a(mw.field_E.field_Nb, -47);
             decompiledFrameRemainder1 = (var19 != 0);
@@ -175,7 +175,7 @@ abstract class AiPlanningStrategy {
                         var17.field_i.a(8, var18, (byte) -115);
                       }
                       var17Lifetime1 = tn.field_Z;
-                      var18Lifetime1 = fo.a(4800, jc.field_w, new String[]{var16});
+                      var18Lifetime1 = fo.a(4800, DeployRequest.field_w, new String[]{var16});
                       var17Lifetime1.field_i.a(18, var18Lifetime1, (byte) -100);
                     }
                     var5 = var7;
@@ -236,19 +236,19 @@ abstract class AiPlanningStrategy {
 
     abstract AiActionCandidate selectCandidate(byte obfuscationGuard);
 
-    final void a(int param0, int param1, int param2, float param3) {
+    final void submitMoveCandidate(int destinationY, int destinationX, int obfuscationGuard, float score) {
         AiActionCandidate var5 = null;
-        if (param2 >= -69) {
+        if (obfuscationGuard >= -69) {
           return;
         }
         try {
           var5 = this.acquireCandidate(640);
-          var5.score = param3;
-          var5.destinationY = param0;
-          var5.destinationX = param1;
+          var5.score = score;
+          var5.destinationY = destinationY;
+          var5.destinationX = destinationX;
           this.submitCandidate(16777062, var5);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "sm.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "sm.N(" + destinationY + ',' + destinationX + ',' + obfuscationGuard + ',' + score + ')');
         }
     }
 
@@ -263,7 +263,7 @@ abstract class AiPlanningStrategy {
           var7 = this.acquireCandidate(param4 ^ 711);
           var7.score = param3;
           var7.destinationX = param1;
-          var7.spellId = param5;
+          var7.summoningPlayer = param5;
           var7.destinationY = param2;
           this.submitCandidate(16777062, var7);
           return;
@@ -274,23 +274,23 @@ abstract class AiPlanningStrategy {
         }
     }
 
-    final void a(byte param0, int param1, float param2) {
+    final void submitResultCandidate(byte obfuscationGuard, int executionResult, float score) {
         AiActionCandidate var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
-          if (param0 != -68) {
+          if (obfuscationGuard != -68) {
             field_g = (String) null;
           }
           var4 = this.acquireCandidate(640);
-          var4.executionResult = param1;
-          var4.score = param2;
+          var4.executionResult = executionResult;
+          var4.score = score;
           this.submitCandidate(16777062, var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4_ref), "sm.P(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) var4_ref), "sm.P(" + obfuscationGuard + ',' + executionResult + ',' + score + ')');
         }
     }
 
@@ -327,13 +327,13 @@ abstract class AiPlanningStrategy {
               fw.a(-1, var4);
               vl.field_k = ei.a(2, param1);
               if (var5 != 0) {
-                vl.field_k = il.a(-1, param3, param2);
+                vl.field_k = DisplacedUnitMarker.a(-1, param3, param2);
                 stackIn_18_0 = !(nm.field_z >= 13);
                 vl.field_k = dc.a(stackIn_18_0, false);
                 fw.a(-1, (String[]) null);
               }
             } else {
-              vl.field_k = il.a(-1, param3, param2);
+              vl.field_k = DisplacedUnitMarker.a(-1, param3, param2);
               if (var5 != 0) {
                 stackIn_18_0 = !(nm.field_z >= 13);
                 vl.field_k = dc.a(stackIn_18_0, false);
@@ -369,21 +369,21 @@ abstract class AiPlanningStrategy {
         }
     }
 
-    final void a(int param0, int param1, float param2, int param3, int param4, boolean param5) {
+    final void submitSummonCandidate(int destinationY, int unitType, float score, int actingPlayer, int destinationX, boolean submit) {
         AiActionCandidate var7 = this.acquireCandidate(640);
         var7.executionResult = -2;
-        if (!param5) {
+        if (!submit) {
           return;
         }
         try {
-          var7.destinationY = param0;
-          var7.spellId = param3;
-          var7.score = param2;
-          var7.selectionVariant = param1;
-          var7.destinationX = param4;
+          var7.destinationY = destinationY;
+          var7.summoningPlayer = actingPlayer;
+          var7.score = score;
+          var7.summonUnitType = unitType;
+          var7.destinationX = destinationX;
           this.submitCandidate(16777062, var7);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "sm.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "sm.J(" + destinationY + ',' + unitType + ',' + score + ',' + actingPlayer + ',' + destinationX + ',' + submit + ')');
         }
     }
 
@@ -422,26 +422,26 @@ abstract class AiPlanningStrategy {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, float param4, int param5) {
+    final void submitAttackCandidate(int destinationY, int targetX, int destinationX, int obfuscationGuard, float score, int targetY) {
         RuntimeException runtimeException = null;
         AiActionCandidate var7 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var7 = this.acquireCandidate(640);
-          var7.score = param4;
-          var7.destinationX = param2;
-          var7.targetX = param1;
-          var7.destinationY = param0;
-          var7.targetY = param5;
+          var7.score = score;
+          var7.destinationX = destinationX;
+          var7.targetX = targetX;
+          var7.destinationY = destinationY;
+          var7.targetY = targetY;
           this.submitCandidate(16777062, var7);
-          if (param3 > -114) {
+          if (obfuscationGuard > -114) {
             this.recycledCandidates = (NodeDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "sm.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "sm.M(" + destinationY + ',' + targetX + ',' + destinationX + ',' + obfuscationGuard + ',' + score + ',' + targetY + ')');
         }
     }
 
@@ -464,14 +464,14 @@ abstract class AiPlanningStrategy {
             }
           }
           if (decompiledFrameRemainder0) {
-            if (AreaSpell.field_e == null) {
+            if (ActionSpell.field_e == null) {
               wq.field_a = dj.a(640, 0, ft.field_m, -36, 0, 480);
               if (var3 != 0) {
-                wq.field_a = AreaSpell.field_e.c(-1);
+                wq.field_a = ActionSpell.field_e.c(-1);
                 ds.a(2, 99);
               }
             } else {
-              wq.field_a = AreaSpell.field_e.c(-1);
+              wq.field_a = ActionSpell.field_e.c(-1);
               ds.a(2, 99);
             }
             if (null != wq.field_a) {
@@ -487,7 +487,7 @@ abstract class AiPlanningStrategy {
           if (param1 != 8028) {
             field_e = (String) null;
           }
-          if (null == AreaSpell.field_e &&
+          if (null == ActionSpell.field_e &&
             bn.field_e) {
             vq.a(var2_int, param0, (byte) 13);
           }

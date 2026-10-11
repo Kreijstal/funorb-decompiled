@@ -30,7 +30,7 @@ final class oh extends dr {
         if (PopupPresentation.field_e != null) {
           var2 = PopupPresentation.field_e;
           String var1 = var2;
-          wr.a((byte) 68, fo.a(4800, AreaSpell.field_l, new String[]{var2}));
+          wr.a((byte) 68, fo.a(4800, ActionSpell.field_l, new String[]{var2}));
           PopupPresentation.field_e = null;
         }
         if (param0 <= -127) {
@@ -49,7 +49,7 @@ final class oh extends dr {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -24872) {
-            stackIn_4_0 = new nd(il.b(256, param1[0].a(2)));
+            stackIn_4_0 = new nd(DisplacedUnitMarker.b(256, param1[0].a(2)));
             return stackIn_4_0;
           }
           stackIn_2_0 = (nd) null;

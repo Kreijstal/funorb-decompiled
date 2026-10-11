@@ -234,7 +234,7 @@ final class gh extends tj implements he {
         try {
           if (!OwnerChangeEvent.field_B) {
             if (null == gu.field_b) {
-              gu.field_b = jc.b(-1, 4);
+              gu.field_b = DeployRequest.b(-1, 4);
             }
             if (gu.field_b.field_m) {
               var12 = ei.field_e;

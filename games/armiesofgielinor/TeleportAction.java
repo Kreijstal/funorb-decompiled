@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ur extends SpellAreaEffect {
-    private Unit field_y;
+final class TeleportAction extends PreparedAction {
+    private Unit unit;
     static RgbSprite[] field_w;
     static String field_x;
-    private int field_t;
+    private int targetDeltaY;
     static String field_u;
     static byte[] field_B;
     static tv field_v;
-    private boolean field_A;
+    private boolean skipDestinationPlacement;
     static String field_C;
     static int field_z;
-    private int field_s;
+    private int targetDeltaX;
 
     final static co[] e(int param0) {
         co[] var4 = new co[5];
@@ -83,9 +83,9 @@ final class ur extends SpellAreaEffect {
         return var1;
     }
 
-    final void applyEffect(int obfuscationGuard, Battlefield battlefield) {
+    final void applyToBattlefield(int obfuscationGuard, Battlefield battlefield) {
         try {
-          battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TeleportEvent(this.field_y.tileX, this.field_y.tileY, this.field_s, this.field_t, this.field_A)));
+          battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TeleportEvent(this.unit.tileX, this.unit.tileY, this.targetDeltaX, this.targetDeltaY, this.skipDestinationPlacement)));
           if (obfuscationGuard != 64) {
             field_z = 2;
           }
@@ -106,15 +106,15 @@ final class ur extends SpellAreaEffect {
         field_w = null;
     }
 
-    ur(int param0, int param1, int param2, int param3, int param4, Unit param5, boolean param6) {
+    TeleportAction(int suppliedSourceX, int suppliedSourceY, int targetDeltaX, int targetDeltaY, int actingPlayer, Unit unit, boolean skipDestinationPlacement) {
         try {
-          this.field_A = param6 ? true : false;
-          this.field_t = param3;
-          this.field_y = param5;
-          this.field_m = param4;
-          this.field_s = param2;
+          this.skipDestinationPlacement = skipDestinationPlacement ? true : false;
+          this.targetDeltaY = targetDeltaY;
+          this.unit = unit;
+          this.actingPlayer = actingPlayer;
+          this.targetDeltaX = targetDeltaX;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ur.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ur.<init>(" + suppliedSourceX + ',' + suppliedSourceY + ',' + targetDeltaX + ',' + targetDeltaY + ',' + actingPlayer + ',' + (unit != null ? "{...}" : "null") + ',' + skipDestinationPlacement + ')');
         }
     }
 

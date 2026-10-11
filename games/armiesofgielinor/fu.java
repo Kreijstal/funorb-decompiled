@@ -61,7 +61,7 @@ final class fu {
         RuntimeException var4 = null;
         try {
           if (param0 != null) {
-            this.field_h = pl.field_x[param0[0]];
+            this.field_h = DeployAction.field_x[param0[0]];
           } else {
             if (param1 == -1) {
               if (param2 > 0) {
@@ -80,14 +80,14 @@ final class fu {
             if (-1 == param1) {
               if (param2 > 0) {
                 this.field_c = dj.a(6609, hf.field_b, "<MANA>", Integer.toString(param2));
-                this.field_i = hw.field_D;
+                this.field_i = SummonRequest.field_D;
               } else {
                 this.field_c = null;
                 this.field_i = null;
               }
             } else {
               this.field_c = fq.field_f[param1];
-              this.field_i = SpellAreaSelection.field_l[param1];
+              this.field_i = ActionRequest.field_l[param1];
             }
           }
           return;

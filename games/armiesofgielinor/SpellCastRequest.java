@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class to extends SpellAreaSelection {
-    private Spell field_v;
-    private int field_w;
+final class SpellCastRequest extends ActionRequest {
+    private Spell spell;
+    private int selectionMode;
 
     final static short[] a(short[] param0, int param1, CipherPacketBuffer param2, int param3) {
         int var4_int = 0;
@@ -101,7 +101,7 @@ final class to extends SpellAreaSelection {
           if (param3 == -1) {
             return;
           }
-          to.a(-96, (byte) 21, 26);
+          SpellCastRequest.a(-96, (byte) 21, 26);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -117,10 +117,10 @@ final class to extends SpellAreaSelection {
         }
     }
 
-    final SpellAreaEffect createEffect(int obfuscationGuard, Battlefield battlefield) {
+    final PreparedAction prepareAction(int obfuscationGuard, Battlefield battlefield) {
         RuntimeException var3 = null;
         String var4 = null;
-        ua stackIn_3_0 = null;
+        SpellCastAction stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -129,11 +129,11 @@ final class to extends SpellAreaSelection {
           this.unlink(-104);
           if (obfuscationGuard <= 31) {
             var4 = (String) null;
-            to.a(true, -1.1208561658859253f, (String) null, -70);
+            SpellCastRequest.a(true, -1.1208561658859253f, (String) null, -70);
           }
-          this.field_v.prepareEffect((byte) -37, battlefield);
-          stackIn_3_0 = new ua(this.field_v, this.field_w, this.field_p);
-          return (SpellAreaEffect) ((Object) stackIn_3_0);
+          this.spell.prepareEffect((byte) -37, battlefield);
+          stackIn_3_0 = new SpellCastAction(this.spell, this.selectionMode, this.actingPlayer);
+          return (PreparedAction) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -148,13 +148,13 @@ final class to extends SpellAreaSelection {
         }
     }
 
-    to(Spell param0, int param1, int param2) {
+    SpellCastRequest(Spell spell, int selectionMode, int actingPlayer) {
         try {
-          this.field_w = param1;
-          this.field_p = param2;
-          this.field_v = param0;
+          this.selectionMode = selectionMode;
+          this.actingPlayer = actingPlayer;
+          this.spell = spell;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "to.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "to.<init>(" + (spell != null ? "{...}" : "null") + ',' + selectionMode + ',' + actingPlayer + ')');
         }
     }
 

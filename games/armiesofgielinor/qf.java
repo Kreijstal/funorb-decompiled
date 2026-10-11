@@ -22,7 +22,7 @@ final class qf {
     }
 
     final static void a(int param0, String param1, int param2, byte param3, int param4, int param5, int param6, int param7, hd param8) {
-        am.field_x = param5;
+        MoveAttackRequest.field_x = param5;
         vq.field_d = param2;
         vq.field_c = param8;
         ek.field_e = param4;

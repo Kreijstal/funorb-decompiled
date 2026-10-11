@@ -61,8 +61,8 @@ abstract class af {
               var3_ref = "[" + fo.a(param1 + 4697, cv.field_m, new String[]{param0.field_k}) + "] ";
             }
             if (4 == param0.field_b &&
-              null != ur.field_C) {
-              var3_ref = "[" + ur.field_C + "] ";
+              null != TeleportAction.field_C) {
+              var3_ref = "[" + TeleportAction.field_C + "] ";
             }
             if (param0.field_b == 3) {
               var3_ref = "[#" + param0.field_k + "] ";
@@ -142,7 +142,7 @@ abstract class af {
             stackIn_12_1 = null;
             stackIn_12_2 = null;
             stackIn_12_3 = vu.field_L.getCodeBase();
-            stackIn_12_4 = new StringBuilder().append("clienterror.ws?c=").append(hw.field_B).append("&u=");
+            stackIn_12_4 = new StringBuilder().append("clienterror.ws?c=").append(SummonRequest.field_B).append("&u=");
             if (uk.field_l == null) {
               stackIn_13_1 = null;
               stackIn_13_2 = null;

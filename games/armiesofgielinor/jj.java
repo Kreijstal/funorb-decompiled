@@ -85,7 +85,7 @@ final class jj {
             var5 = var4;
           } else {
             if (iq.a(30, var4)) {
-              var5 = ua.a(param3, (byte) 78, var4);
+              var5 = SpellCastAction.a(param3, (byte) 78, var4);
             } else {
               if (!kq.a(var4, false)) {
                 var5 = null;
@@ -226,10 +226,10 @@ final class jj {
     }
 
     final static void a(int param0) {
-        if (null == AreaSpell.field_e) {
+        if (null == ActionSpell.field_e) {
           throw new IllegalStateException("NGR");
         }
-        AreaSpell.field_e.field_h = true;
+        ActionSpell.field_e.field_h = true;
         if (param0 != -4223) {
           field_b = (String) null;
           ds.a(1, -54);

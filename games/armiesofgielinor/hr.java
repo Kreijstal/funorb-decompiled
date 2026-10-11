@@ -67,46 +67,46 @@ final class hr {
         if (this.field_c < 0) {
           this.field_c = 0;
           if (param0 >= 42) {
-            this.field_a = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][0]);
+            this.field_a = (ModelMesh) (ActionRequest.field_k[this.field_c][0]);
             this.field_k = nh.field_D[this.field_c];
             return;
           }
           this.a(54, 25, (byte) -41);
-          this.field_a = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][0]);
+          this.field_a = (ModelMesh) (ActionRequest.field_k[this.field_c][0]);
           this.field_k = nh.field_D[this.field_c];
           return;
         }
-        if (SpellAreaSelection.field_k.length <= this.field_c) {
+        if (ActionRequest.field_k.length <= this.field_c) {
           this.field_c = 0;
           if (param0 >= 42) {
-            this.field_a = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][0]);
+            this.field_a = (ModelMesh) (ActionRequest.field_k[this.field_c][0]);
             this.field_k = nh.field_D[this.field_c];
             return;
           }
           this.a(54, 25, (byte) -41);
-          this.field_a = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][0]);
+          this.field_a = (ModelMesh) (ActionRequest.field_k[this.field_c][0]);
           this.field_k = nh.field_D[this.field_c];
           return;
         }
-        if (SpellAreaSelection.field_k[this.field_c] == null) {
+        if (ActionRequest.field_k[this.field_c] == null) {
           this.field_c = 0;
           if (param0 >= 42) {
-            this.field_a = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][0]);
+            this.field_a = (ModelMesh) (ActionRequest.field_k[this.field_c][0]);
             this.field_k = nh.field_D[this.field_c];
             return;
           }
           this.a(54, 25, (byte) -41);
-          this.field_a = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][0]);
+          this.field_a = (ModelMesh) (ActionRequest.field_k[this.field_c][0]);
           this.field_k = nh.field_D[this.field_c];
           return;
         }
         if (param0 >= 42) {
-          this.field_a = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][0]);
+          this.field_a = (ModelMesh) (ActionRequest.field_k[this.field_c][0]);
           this.field_k = nh.field_D[this.field_c];
           return;
         }
         this.a(54, 25, (byte) -41);
-        this.field_a = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][0]);
+        this.field_a = (ModelMesh) (ActionRequest.field_k[this.field_c][0]);
         this.field_k = nh.field_D[this.field_c];
     }
 

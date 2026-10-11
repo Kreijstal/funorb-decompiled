@@ -40,7 +40,7 @@ final class ko {
           if (param2 instanceof byte[]) {
             var3 = (byte[]) (param2);
             if (param0) {
-              stackIn_8_0 = kj.a(var3, 31732);
+              stackIn_8_0 = SkeletonLimitMarker.a(var3, 31732);
               return stackIn_8_0;
             }
             stackIn_6_0 = var3;

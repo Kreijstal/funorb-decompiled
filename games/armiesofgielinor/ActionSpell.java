@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class AreaSpell extends Spell {
+final class ActionSpell extends Spell {
     static int field_j;
     static String field_i;
     static String field_l;
-    private SpellAreaSelection selection;
+    private ActionRequest request;
     static String field_k;
-    private SpellAreaEffect preparedEffect;
+    private PreparedAction preparedAction;
     static String field_f;
     static fj field_e;
 
@@ -42,7 +42,7 @@ final class AreaSpell extends Spell {
             try {
               var3 = new java.net.URL(param0.getCodeBase(), param2);
               var3 = ck.a(-3780, var3, param0);
-              ua.a(param0, -109, var3.toString(), true);
+              SpellCastAction.a(param0, -109, var3.toString(), true);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -170,7 +170,7 @@ final class AreaSpell extends Spell {
           if (param0 == 4) {
             return;
           }
-          AreaSpell.b(true);
+          ActionSpell.b(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -204,22 +204,22 @@ final class AreaSpell extends Spell {
           pt.c(param0 / 2, param2 / 2, 9);
           return;
         }
-        AreaSpell.a(-106, -34, -122);
+        ActionSpell.a(-106, -34, -122);
         ni.a(-8994, param0, param2);
         om.a(param2, -22696, param0);
         pt.c(param0 / 2, param2 / 2, 9);
     }
 
-    AreaSpell(int spellId, SpellAreaSelection selection) {
+    ActionSpell(int spellId, ActionRequest request) {
         super(spellId);
         try {
-          this.selection = selection;
+          this.request = request;
           if (this.spellId == 36) {
-            this.selection.field_u = true;
+            this.request.allowOtherPlayer = true;
           }
-          this.selection.field_o = spellId;
+          this.request.spellId = spellId;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ra.<init>(" + spellId + ',' + (selection != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ra.<init>(" + spellId + ',' + (request != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -251,15 +251,15 @@ final class AreaSpell extends Spell {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != this.preparedEffect) {
-            this.preparedEffect.applyEffect(64, battlefield);
-            this.preparedEffect = null;
+          if (null != this.preparedAction) {
+            this.preparedAction.applyToBattlefield(64, battlefield);
+            this.preparedAction = null;
           }
           if (obfuscationGuard == -1700635440) {
             return;
           }
           var4 = (om) null;
-          AreaSpell.a(112, -111, (om) null, true, 116, 78);
+          ActionSpell.a(112, -111, (om) null, true, 116, 78);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -277,7 +277,7 @@ final class AreaSpell extends Spell {
 
     final void prepareEffect(byte obfuscationGuard, Battlefield battlefield) {
         try {
-          this.preparedEffect = this.selection.createEffect(obfuscationGuard ^ -26, battlefield);
+          this.preparedAction = this.request.prepareAction(obfuscationGuard ^ -26, battlefield);
           if (obfuscationGuard != -37) {
             Battlefield var4 = (Battlefield) null;
             this.finishEffect((Battlefield) null, -62);
@@ -312,7 +312,7 @@ final class AreaSpell extends Spell {
         if (param0) {
           return 1900 + new Date().getYear();
         }
-        AreaSpell.b(false);
+        ActionSpell.b(false);
         return 1900 + new Date().getYear();
     }
 

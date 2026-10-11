@@ -41,7 +41,7 @@ final class EffectPresentation implements EventPresentation {
 
     final static void d(int param0) {
         ou.a(true);
-        pl.field_A = true;
+        DeployAction.field_A = true;
         fh.field_i = true;
         KingBlackDragonEvent.field_C.j(-102);
         if (param0 != 7) {

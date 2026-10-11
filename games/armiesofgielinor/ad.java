@@ -137,7 +137,7 @@ final class ad extends tj implements he {
         of var1Lifetime1;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var1 = (of) (be.field_u.first((byte) 97));
+          var1 = (of) (SummonAction.field_u.first((byte) 97));
           while (var1 != null) {
             if (0 < var1.field_Rb) {
               var1.field_Rb = var1.field_Rb - 1;
@@ -148,7 +148,7 @@ final class ad extends tj implements he {
                 }
               }
             }
-            var1 = (of) (be.field_u.next((byte) 123));
+            var1 = (of) (SummonAction.field_u.next((byte) 123));
           }
           var1_ref = (au) (qc.field_g.first((byte) 89));
           while (var1_ref != null) {

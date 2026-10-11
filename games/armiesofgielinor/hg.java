@@ -63,7 +63,7 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             if (us.field_c >= 0 &&
               var2_int >= 0) {
-              ee.field_x[us.field_c] = ~var2_int;
+              SphinxActionRequest.field_x[us.field_c] = ~var2_int;
               us.field_c = 127 & 1 + us.field_c;
               if (cc.field_a == us.field_c) {
                 us.field_c = -1;
@@ -98,9 +98,9 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
             if (var2_int != 0 && var2_int != 65535 &&
               AiActionCandidate.a((char) var2_int, 16150)) {
               var3 = 127 & cr.field_Z + 1;
-              if (var3 != be.field_E) {
+              if (var3 != SummonAction.field_E) {
                 gt.field_d[cr.field_Z] = -1;
-                ua.field_u[cr.field_Z] = (char)var2_int;
+                SpellCastAction.field_u[cr.field_Z] = (char)var2_int;
                 cr.field_Z = var3;
               }
             }
@@ -135,7 +135,7 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             if (us.field_c >= 0 &&
               0 <= var2_int) {
-              ee.field_x[us.field_c] = var2_int;
+              SphinxActionRequest.field_x[us.field_c] = var2_int;
               us.field_c = us.field_c + 1 & 127;
               if (cc.field_a == us.field_c) {
                 us.field_c = -1;
@@ -143,9 +143,9 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             if (var2_int >= 0) {
               var3 = 127 & cr.field_Z + 1;
-              if (var3 != be.field_E) {
+              if (var3 != SummonAction.field_E) {
                 gt.field_d[cr.field_Z] = var2_int;
-                ua.field_u[cr.field_Z] = (char)0;
+                SpellCastAction.field_u[cr.field_Z] = (char)0;
                 cr.field_Z = var3;
               }
             }

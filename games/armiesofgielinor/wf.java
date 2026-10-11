@@ -190,7 +190,7 @@ abstract class wf extends iv {
         int var4 = fk.field_b - 1;
         byte[] var5 = new byte[var4];
         mg.field_e.a(var4, var5, false, 0);
-        ua.a(CombatEvent.d((byte) -125), 87, uu.a(var5, (byte) 127), var3 != 0);
+        SpellCastAction.a(CombatEvent.d((byte) -125), 87, uu.a(var5, (byte) 127), var3 != 0);
         if (param0 != 16433) {
           this.j(-76);
         }
@@ -292,7 +292,7 @@ abstract class wf extends iv {
             t.a((byte) -118, CombatEvent.d((byte) 7));
           }
           if (var4 == 12) {
-            AreaSpell.a(CombatEvent.d((byte) -123), -69, ob.j(-129));
+            ActionSpell.a(CombatEvent.d((byte) -123), -69, ob.j(-129));
           }
           if (var4 == 13) {
             try {
@@ -511,13 +511,13 @@ abstract class wf extends iv {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (null != AreaSpell.field_e) {
+        if (null != ActionSpell.field_e) {
           if (null == wq.field_a) {
             var6 = sp.a(0);
             var4 = var6.getSize();
-            AreaSpell.field_e.b(var4.height, var4.width, -30514);
+            ActionSpell.field_e.b(var4.height, var4.width, -30514);
           }
-          AreaSpell.field_e.a(0);
+          ActionSpell.field_e.a(0);
         }
         r.c(true);
         ds.a((byte) 118);

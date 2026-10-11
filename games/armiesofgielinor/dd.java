@@ -232,7 +232,7 @@ final class dd {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = ua.a(-18423, -5 + (var10.position - var13.length), var10.payload, 5);
+        var15 = SpellCastAction.a(-18423, -5 + (var10.position - var13.length), var10.payload, 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (var5[1 + var7] != var15[var7]) {
             throw new RuntimeException();

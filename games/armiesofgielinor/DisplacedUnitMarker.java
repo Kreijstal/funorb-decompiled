@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class il extends SpellAreaEffect {
+final class DisplacedUnitMarker extends PreparedAction {
     static RgbSprite[] field_s;
     static String[] field_t;
 
@@ -22,11 +22,11 @@ final class il extends SpellAreaEffect {
         field_s = null;
         field_t = null;
         if (param0 != 1223) {
-          il.e(41);
+          DisplacedUnitMarker.e(41);
         }
     }
 
-    final void applyEffect(int obfuscationGuard, Battlefield battlefield) {
+    final void applyToBattlefield(int obfuscationGuard, Battlefield battlefield) {
         try {
           if (obfuscationGuard != 64) {
             field_s = (RgbSprite[]) null;
@@ -69,12 +69,12 @@ final class il extends SpellAreaEffect {
         }
     }
 
-    il(int param0, int param1, Unit param2, MapTile param3) {
+    DisplacedUnitMarker(int suppliedX, int suppliedY, Unit unit, MapTile tile) {
         try {
-          if (null != param3.occupant) {
+          if (null != tile.occupant) {
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "il.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "il.<init>(" + suppliedX + ',' + suppliedY + ',' + (unit != null ? "{...}" : "null") + ',' + (tile != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -74,7 +74,7 @@ final class uj extends mk {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param1);
-          var3 = hw.a(var5, false);
+          var3 = SummonRequest.a(var5, false);
           if (var3 != null) {
             stackIn_2_0 = var3;
             return stackIn_2_0;

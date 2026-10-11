@@ -43,7 +43,7 @@ class wv extends af {
             String var4 = (String) null;
             wv.a((String) null, -77, -29);
           }
-          pl.field_A = false;
+          DeployAction.field_A = false;
           ac.field_n = false;
           if (qc.field_a != null &&
             qc.field_a.field_L) {
@@ -63,11 +63,11 @@ class wv extends af {
               var3_int = 0;
             }
             if (var3_int != 0) {
-              if (pl.field_A) {
+              if (DeployAction.field_A) {
                 param0 = fo.a(4800, field_d, new String[]{param0});
               }
               if (se.field_f) {
-                param0 = be.field_D;
+                param0 = SummonAction.field_D;
               }
               qc.field_a.a(param2, (byte) 98, param0);
             }

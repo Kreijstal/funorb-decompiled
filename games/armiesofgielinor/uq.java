@@ -47,7 +47,7 @@ abstract class uq extends ms {
         try {
           var14 = param1.a(param2 ^ -20049);
           var8 = param5.a(-91);
-          if (null == am.field_z &&
+          if (null == MoveAttackRequest.field_z &&
             !EffectPresentation.a(false, 0)) {
             stackIn_4_0 = -1;
             return stackIn_4_0;
@@ -170,7 +170,7 @@ abstract class uq extends ms {
           if (param2 != -20032) {
             field_v = (String) null;
           }
-          if (am.field_z == null) {
+          if (MoveAttackRequest.field_z == null) {
             if (ev.field_b) {
               if (TileMetadata.b(0) > 30000L) {
                 lk.field_r = gu.field_a;

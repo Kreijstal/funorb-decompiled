@@ -120,7 +120,7 @@ abstract class dr extends ms {
           var7 = new StringBuilder(this.field_B).append('(');
           var8 = var7;
           for (var5 = 0; var5 < this.field_u.length; var5++) {
-            discarded$18 = var7.append(hw.a(640, this.field_u[var5]));
+            discarded$18 = var7.append(SummonRequest.a(640, this.field_u[var5]));
             if (-1 + this.field_u.length > var5) {
               discarded$19 = var8.append(", ");
             }

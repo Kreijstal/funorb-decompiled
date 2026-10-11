@@ -141,7 +141,7 @@ abstract class vf {
         var26 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param1) {
-            stackIn_12_0 = (ua.field_s) ? 0 : 1;
+            stackIn_12_0 = (SpellCastAction.field_s) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
             if (vu.b(false)) {
@@ -194,7 +194,7 @@ abstract class vf {
               if (!vu.b(false)) {
                 ad.field_I = fo.a(4800, op.field_a, new String[]{vu.field_M.field_rc});
               } else {
-                ad.field_I = AreaSpell.field_f;
+                ad.field_I = ActionSpell.field_f;
               }
             }
             decompiledFrameRemainder1 = !(lm.field_e.length < 2);
@@ -384,7 +384,7 @@ abstract class vf {
                   jv.field_d[var7] != null) {
                   var16Lifetime2 = jv.field_d[var7][var9];
                   if (0 < var16Lifetime2 &&
-                    var16Lifetime2 > be.field_s) {
+                    var16Lifetime2 > SummonAction.field_s) {
                     var11 = 1;
                   }
                   if (var16Lifetime2 != 0 &&
@@ -430,11 +430,11 @@ abstract class vf {
               if (var16Lifetime1 == 0 &&
                 0 <= var9 &&
                 null != fs.field_d && (!param1 ||
-                !ua.field_s)) {
+                !SpellCastAction.field_s)) {
                 jp.field_a = false;
                 fc.field_a = false;
-                if (null == ur.field_B) {
-                  ur.field_B = new byte[tq.field_b];
+                if (null == TeleportAction.field_B) {
+                  TeleportAction.field_B = new byte[tq.field_b];
                   dt.field_d = new boolean[tq.field_b];
                 }
                 for (var17_int = 0; var17_int < var7; var17_int++) {
@@ -515,7 +515,7 @@ abstract class vf {
                     var21 = gt.field_a;
                   } else {
                     if (var11 != 0) {
-                      var22_int = jv.field_d[var7][var9] - be.field_s;
+                      var22_int = jv.field_d[var7][var9] - SummonAction.field_s;
                       if (var22_int != 1) {
                         var21 = fo.a(4800, mg.field_a, new String[]{Integer.toString(var22_int)});
                       } else {

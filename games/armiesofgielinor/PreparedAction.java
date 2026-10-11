@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class SpellAreaEffect extends IntrusiveNode {
+abstract class PreparedAction extends IntrusiveNode {
     static int[] field_q;
     static int field_r;
     static je field_o;
-    int[] field_n;
+    int[] playerFlags;
     static String field_k;
     static String field_l;
-    int field_m;
+    int actingPlayer;
     static RgbSprite field_p;
 
     final static void a(String[][] param0, String[] param1, int param2, int param3) {
@@ -89,9 +89,9 @@ abstract class SpellAreaEffect extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          AreaSpell.field_e = param1;
-          if (AreaSpell.field_e != null &&
-            AreaSpell.field_e.field_h) {
+          ActionSpell.field_e = param1;
+          if (ActionSpell.field_e != null &&
+            ActionSpell.field_e.field_h) {
             stackIn_4_0 = 1;
           } else {
             stackIn_4_0 = 0;
@@ -115,10 +115,10 @@ abstract class SpellAreaEffect extends IntrusiveNode {
         }
     }
 
-    protected SpellAreaEffect() {
+    protected PreparedAction() {
     }
 
-    abstract void applyEffect(int obfuscationGuard, Battlefield battlefield);
+    abstract void applyToBattlefield(int obfuscationGuard, Battlefield battlefield);
 
     static {
         field_k = "End Game";

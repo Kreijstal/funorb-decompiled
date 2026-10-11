@@ -555,7 +555,7 @@ final class jg extends IntrusiveNode {
                 if (var12.field_tc) {
                   stackIn_166_0 = mv.field_e;
                 } else {
-                  stackIn_166_0 = hw.field_y;
+                  stackIn_166_0 = SummonRequest.field_y;
                 }
               } else {
                 stackIn_166_0 = AttackEvent.field_K;

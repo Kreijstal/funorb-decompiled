@@ -22,28 +22,28 @@ final class bw {
         if (rd.field_j.field_u) {
           if (0 == (1 << rd.field_j.field_q & rd.field_j.battlefield.field_i)) {
             if (rd.field_j.battlefield.field_i != 0) {
-              il.field_t[12] = CampaignUnitOverride.field_c;
+              DisplacedUnitMarker.field_t[12] = CampaignUnitOverride.field_c;
             } else {
               if ((1 << rd.field_j.field_q | rd.field_j.field_hb) != (1 << rd.field_j.battlefield.playerCount) - 1) {
-                il.field_t[12] = fa.field_e;
+                DisplacedUnitMarker.field_t[12] = fa.field_e;
               } else {
-                il.field_t[12] = ml.field_Nb;
+                DisplacedUnitMarker.field_t[12] = ml.field_Nb;
               }
             }
           } else {
-            il.field_t[12] = ti.field_a;
+            DisplacedUnitMarker.field_t[12] = ti.field_a;
           }
         } else {
           if (0 != (1 << rd.field_j.field_q & rd.field_j.battlefield.field_i)) {
-            il.field_t[12] = is.field_c;
+            DisplacedUnitMarker.field_t[12] = is.field_c;
           } else {
             if (rd.field_j.battlefield.field_i != 0) {
-              il.field_t[12] = lk.field_s;
+              DisplacedUnitMarker.field_t[12] = lk.field_s;
             } else {
               if (-1 + (1 << rd.field_j.battlefield.playerCount) != (1 << rd.field_j.field_q | rd.field_j.field_hb)) {
-                il.field_t[12] = db.field_h;
+                DisplacedUnitMarker.field_t[12] = db.field_h;
               } else {
-                il.field_t[12] = ji.field_b;
+                DisplacedUnitMarker.field_t[12] = ji.field_b;
               }
             }
           }

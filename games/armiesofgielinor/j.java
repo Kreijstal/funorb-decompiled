@@ -45,68 +45,68 @@ final class j {
         int var1_intLifetime1;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (null != il.field_t) {
+          if (null != DisplacedUnitMarker.field_t) {
             return;
           }
-          il.field_t = new String[60];
-          il.field_t[24] = ma.field_Y;
-          il.field_t[11] = tf.field_p;
-          il.field_t[0] = od.field_g;
-          il.field_t[1] = la.field_e;
-          il.field_t[13] = pl.field_v;
-          il.field_t[7] = gp.field_c;
-          il.field_t[3] = lb.field_d;
-          il.field_t[53] = gk.field_P;
-          il.field_t[6] = AiInfluenceMap.field_k;
-          il.field_t[9] = SpellAreaEffect.field_k;
-          il.field_t[8] = null;
-          il.field_t[4] = el.field_a;
-          il.field_t[54] = mh.field_d;
-          il.field_t[2] = sa.field_b;
-          il.field_t[5] = pq.field_d;
-          il.field_t[25] = ig.field_m;
-          il.field_t[22] = hq.field_d;
-          il.field_t[16] = rk.field_y;
-          il.field_t[28] = wf.field_s;
-          il.field_t[19] = s.field_b;
-          il.field_t[21] = dv.field_r;
-          il.field_t[26] = bj.field_l;
-          il.field_t[46] = hc.field_d;
-          il.field_t[17] = su.field_c;
-          il.field_t[23] = sa.field_e;
-          il.field_t[27] = bg.field_b;
-          il.field_t[30] = pf.field_e;
-          il.field_t[20] = tl.field_h;
-          il.field_t[18] = rk.field_c;
-          il.field_t[14] = qu.field_s[0];
-          il.field_t[15] = qu.field_s[1];
+          DisplacedUnitMarker.field_t = new String[60];
+          DisplacedUnitMarker.field_t[24] = ma.field_Y;
+          DisplacedUnitMarker.field_t[11] = tf.field_p;
+          DisplacedUnitMarker.field_t[0] = od.field_g;
+          DisplacedUnitMarker.field_t[1] = la.field_e;
+          DisplacedUnitMarker.field_t[13] = DeployAction.field_v;
+          DisplacedUnitMarker.field_t[7] = gp.field_c;
+          DisplacedUnitMarker.field_t[3] = lb.field_d;
+          DisplacedUnitMarker.field_t[53] = gk.field_P;
+          DisplacedUnitMarker.field_t[6] = AiInfluenceMap.field_k;
+          DisplacedUnitMarker.field_t[9] = PreparedAction.field_k;
+          DisplacedUnitMarker.field_t[8] = null;
+          DisplacedUnitMarker.field_t[4] = el.field_a;
+          DisplacedUnitMarker.field_t[54] = mh.field_d;
+          DisplacedUnitMarker.field_t[2] = sa.field_b;
+          DisplacedUnitMarker.field_t[5] = pq.field_d;
+          DisplacedUnitMarker.field_t[25] = ig.field_m;
+          DisplacedUnitMarker.field_t[22] = hq.field_d;
+          DisplacedUnitMarker.field_t[16] = rk.field_y;
+          DisplacedUnitMarker.field_t[28] = wf.field_s;
+          DisplacedUnitMarker.field_t[19] = s.field_b;
+          DisplacedUnitMarker.field_t[21] = dv.field_r;
+          DisplacedUnitMarker.field_t[26] = bj.field_l;
+          DisplacedUnitMarker.field_t[46] = hc.field_d;
+          DisplacedUnitMarker.field_t[17] = su.field_c;
+          DisplacedUnitMarker.field_t[23] = sa.field_e;
+          DisplacedUnitMarker.field_t[27] = bg.field_b;
+          DisplacedUnitMarker.field_t[30] = pf.field_e;
+          DisplacedUnitMarker.field_t[20] = tl.field_h;
+          DisplacedUnitMarker.field_t[18] = rk.field_c;
+          DisplacedUnitMarker.field_t[14] = qu.field_s[0];
+          DisplacedUnitMarker.field_t[15] = qu.field_s[1];
           for (var1_int = 55; 59 > var1_int; var1_int++) {
-            il.field_t[var1_int] = null;
+            DisplacedUnitMarker.field_t[var1_int] = null;
           }
-          il.field_t[42] = nt.field_p;
-          il.field_t[40] = vg.field_l;
-          il.field_t[32] = SpellAreaSelection.field_r;
-          il.field_t[36] = rj.field_G;
-          il.field_t[31] = ij.field_C;
-          il.field_t[35] = wd.field_j;
-          il.field_t[47] = qk.field_f;
-          il.field_t[51] = nt.field_p;
-          il.field_t[48] = lw.field_lb;
-          il.field_t[44] = dd.field_g;
-          il.field_t[37] = lg.field_c;
+          DisplacedUnitMarker.field_t[42] = nt.field_p;
+          DisplacedUnitMarker.field_t[40] = vg.field_l;
+          DisplacedUnitMarker.field_t[32] = ActionRequest.field_r;
+          DisplacedUnitMarker.field_t[36] = rj.field_G;
+          DisplacedUnitMarker.field_t[31] = ij.field_C;
+          DisplacedUnitMarker.field_t[35] = wd.field_j;
+          DisplacedUnitMarker.field_t[47] = qk.field_f;
+          DisplacedUnitMarker.field_t[51] = nt.field_p;
+          DisplacedUnitMarker.field_t[48] = lw.field_lb;
+          DisplacedUnitMarker.field_t[44] = dd.field_g;
+          DisplacedUnitMarker.field_t[37] = lg.field_c;
           cf.field_m = new String[3];
-          il.field_t[52] = oa.field_G;
-          il.field_t[38] = up.field_f;
+          DisplacedUnitMarker.field_t[52] = oa.field_G;
+          DisplacedUnitMarker.field_t[38] = up.field_f;
           ParasiteEvent.field_A = new String[]{wi.field_a, rf.field_e, je.field_lb, ob.field_P};
-          il.field_t[43] = kg.field_c;
-          il.field_t[33] = gv.field_b;
-          il.field_t[59] = em.field_e;
-          il.field_t[41] = dk.field_x;
-          il.field_t[45] = oa.field_G;
-          il.field_t[50] = GameEvent.field_u;
-          il.field_t[34] = pf.field_e;
-          il.field_t[29] = qm.field_I;
-          il.field_t[39] = StateChangeEvent.field_y;
+          DisplacedUnitMarker.field_t[43] = kg.field_c;
+          DisplacedUnitMarker.field_t[33] = gv.field_b;
+          DisplacedUnitMarker.field_t[59] = em.field_e;
+          DisplacedUnitMarker.field_t[41] = CorpseConditionMarker.field_x;
+          DisplacedUnitMarker.field_t[45] = oa.field_G;
+          DisplacedUnitMarker.field_t[50] = GameEvent.field_u;
+          DisplacedUnitMarker.field_t[34] = pf.field_e;
+          DisplacedUnitMarker.field_t[29] = qm.field_I;
+          DisplacedUnitMarker.field_t[39] = StateChangeEvent.field_y;
           wb.field_b = new String[29];
           cf.field_m[0] = on.field_o;
           cf.field_m[2] = uq.field_v;
@@ -141,11 +141,11 @@ final class j {
           wb.field_b[11] = nh.field_J;
           wb.field_b[19] = hm.field_e;
           wb.field_b[9] = jn.field_e;
-          wb.field_b[20] = dk.field_x;
+          wb.field_b[20] = CorpseConditionMarker.field_x;
           oi.field_a[10] = fo.a(4800, oi.field_a[10], new String[]{Integer.toString(20)});
           vl.field_m = new String[6];
           vl.field_m[3] = jj.field_f;
-          vl.field_m[0] = pl.field_C;
+          vl.field_m[0] = DeployAction.field_C;
           vl.field_m[4] = pp.field_Y;
           vl.field_m[2] = qt.field_a;
           vl.field_m[1] = bk.field_c;
@@ -242,7 +242,7 @@ final class j {
         int var10Lifetime1;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          qb.a(SpellAreaEffect.field_r, param0 + 114);
+          qb.a(PreparedAction.field_r, param0 + 114);
           if (no.field_K != null) {
             var15 = lm.field_b;
             var17 = var15;
@@ -288,7 +288,7 @@ final class j {
               }
             }
             so.field_d.field_xb = true;
-            if (!ua.field_s) {
+            if (!SpellCastAction.field_s) {
               stackIn_32_0 = so.field_d;
               if (var8 != 0) {
                 stackIn_33_1 = qp.field_E;
@@ -310,9 +310,9 @@ final class j {
               if (fs.field_d != null) {
                 jp.field_a = false;
                 fc.field_a = false;
-                if (null == ur.field_B) {
+                if (null == TeleportAction.field_B) {
                   dt.field_d = new boolean[tq.field_b];
-                  ur.field_B = new byte[tq.field_b];
+                  TeleportAction.field_B = new byte[tq.field_b];
                 }
                 var13 = 0;
                 var9_intLifetime1 = var13;
@@ -358,7 +358,7 @@ final class j {
               if (var8 != 0) {
                 stackIn_23_0 = p.field_f;
               } else {
-                stackIn_23_0 = SpellAreaEffect.field_l;
+                stackIn_23_0 = PreparedAction.field_l;
               }
               var16 = stackIn_23_0;
               var9 = var16;
@@ -401,7 +401,7 @@ final class j {
               lu.a(-127, param3);
             }
             if (so.field_d.field_yb != 0) {
-              if (ua.field_s) {
+              if (SpellCastAction.field_s) {
                 ManaEvent.a((byte) 69, param3);
               } else {
                 gs.a(param3, -8006);

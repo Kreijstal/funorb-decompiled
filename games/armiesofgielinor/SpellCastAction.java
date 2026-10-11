@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ua extends SpellAreaEffect {
+final class SpellCastAction extends PreparedAction {
     static String field_y;
     static String field_v;
     static char[] field_u;
-    private int field_w;
-    private Spell field_x;
+    private int selectionMode;
+    private Spell spell;
     static boolean field_t;
     static boolean field_s;
 
@@ -17,13 +17,13 @@ final class ua extends SpellAreaEffect {
         ps.a(param1, true);
     }
 
-    final void applyEffect(int obfuscationGuard, Battlefield battlefield) {
-        battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SpellCastEvent(this.field_x, this.field_w, this.field_m)));
+    final void applyToBattlefield(int obfuscationGuard, Battlefield battlefield) {
+        battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SpellCastEvent(this.spell, this.selectionMode, this.actingPlayer)));
         if (obfuscationGuard != 64) {
           return;
         }
         try {
-          this.field_x.finishEffect(battlefield, obfuscationGuard - 1700635504);
+          this.spell.finishEffect(battlefield, obfuscationGuard - 1700635504);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "ua.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
@@ -59,7 +59,7 @@ final class ua extends SpellAreaEffect {
           var5.a((byte) -57, (long)(8 * param1), var4);
           if (param0 != -18423) {
             var8 = (String) null;
-            ua.a(44, (byte) 45, (String) null);
+            SpellCastAction.a(44, (byte) 45, (String) null);
           }
           var6 = new byte[64];
           var5.a(var6, 0, true);
@@ -93,7 +93,7 @@ final class ua extends SpellAreaEffect {
         try {
           if (param1 < 51) {
             var6 = (String) null;
-            ua.a((java.applet.Applet) null, 31, (String) null, false);
+            SpellCastAction.a((java.applet.Applet) null, 31, (String) null, false);
           }
           var3 = pt.field_W[param0];
           var4 = db.a(true, '_');
@@ -134,15 +134,15 @@ final class ua extends SpellAreaEffect {
         }
     }
 
-    ua(Spell param0, int param1, int param2) {
+    SpellCastAction(Spell spell, int selectionMode, int actingPlayer) {
         try {
-          this.field_w = param1;
-          this.field_x = param0;
-          this.field_m = param2;
-          if (this.field_w > -1) {
+          this.selectionMode = selectionMode;
+          this.spell = spell;
+          this.actingPlayer = actingPlayer;
+          if (this.selectionMode > -1) {
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (spell != null ? "{...}" : "null") + ',' + selectionMode + ',' + actingPlayer + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class ua extends SpellAreaEffect {
         field_u = null;
         field_y = null;
         if (param0 != -4541) {
-          ua.b(-26, 75);
+          SpellCastAction.b(-26, 75);
         }
     }
 

@@ -50,8 +50,8 @@ final class co {
           }
           boolean decompiledFrameRemainder1 = true;
           if (no.field_U[param1] >= no.field_U[param2]) {
-            var4 = pe.field_s[param2] + wp.field_w[param2] + TutorialController.field_c[param2];
-            var5 = pe.field_s[param1] + (wp.field_w[param1] + TutorialController.field_c[param1]);
+            var4 = VineGrowthAction.field_s[param2] + wp.field_w[param2] + TutorialController.field_c[param2];
+            var5 = VineGrowthAction.field_s[param1] + (wp.field_w[param1] + TutorialController.field_c[param1]);
             if (var4 < var5) {
               return true;
             }
@@ -80,8 +80,8 @@ final class co {
         }
         boolean decompiledFrameRemainder0 = true;
         if (EffectPresentation.field_h[param1] >= EffectPresentation.field_h[param2]) {
-          var4Lifetime1 = pe.field_s[param2] + wp.field_w[param2] + TutorialController.field_c[param2];
-          var5Lifetime1 = pe.field_s[param1] + (wp.field_w[param1] + TutorialController.field_c[param1]);
+          var4Lifetime1 = VineGrowthAction.field_s[param2] + wp.field_w[param2] + TutorialController.field_c[param2];
+          var5Lifetime1 = VineGrowthAction.field_s[param1] + (wp.field_w[param1] + TutorialController.field_c[param1]);
           if (var4Lifetime1 < var5Lifetime1) {
             return true;
           }

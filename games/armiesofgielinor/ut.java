@@ -78,9 +78,9 @@ final class ut extends sf implements he {
                     this.field_db[var3] = null;
                   }
                 }
-                if (null != AreaSpell.field_e &&
+                if (null != ActionSpell.field_e &&
                   null != this.field_db[var2_int] &&
-                  !AreaSpell.field_e.c(this.field_db[var2_int].field_b, 122, this.field_db[var2_int].field_a)) {
+                  !ActionSpell.field_e.c(this.field_db[var2_int].field_b, 122, this.field_db[var2_int].field_a)) {
                   this.field_db[var2_int] = null;
                 }
               }
@@ -112,8 +112,8 @@ final class ut extends sf implements he {
           stackIn_40_0 = (var2_intLifetime1 != 0) ? 3 : 2;
           var3Lifetime1 = stackIn_40_0;
           if (var2_intLifetime1 == 0) {
-            if (null != AreaSpell.field_e) {
-              stackIn_48_0 = (AreaSpell.field_e.d((byte) 122)) ? 1 : 0;
+            if (null != ActionSpell.field_e) {
+              stackIn_48_0 = (ActionSpell.field_e.d((byte) 122)) ? 1 : 0;
             } else {
               stackIn_48_0 = 0;
             }
@@ -169,8 +169,8 @@ final class ut extends sf implements he {
             for (var7_int = 0; var7_int < this.field_db.length; var7_int++) {
               var8 = this.field_db[var7_int];
               if (null != wq.field_a &&
-                var8.field_b == AreaSpell.field_e.field_f &&
-                AreaSpell.field_e.field_n == var8.field_a) {
+                var8.field_b == ActionSpell.field_e.field_f &&
+                ActionSpell.field_e.field_n == var8.field_a) {
                 var6_int = var7_int;
               }
               var5_ref_String__[var7_int] = var8.field_b + "<times>" + var8.field_a;
@@ -179,7 +179,7 @@ final class ut extends sf implements he {
             this.field_lb.a(this.field_bb.field_B + this.field_gb.field_B, 126, this.field_bb.field_w + this.field_bb.field_p + (this.field_gb.field_p - 19), 8192, 18);
             this.field_D.addFirst(750, this.field_lb);
           }
-          this.field_X = this.a((byte) 38, pe.field_w, (qo) (this));
+          this.field_X = this.a((byte) 38, VineGrowthAction.field_w, (qo) (this));
           var5Lifetime1 = this.field_X.field_l / 2 + this.field_X.field_B;
           this.field_X.field_l = 150;
           this.field_X.field_B = -this.field_X.field_l - 20 + var5Lifetime1;
@@ -231,8 +231,8 @@ final class ut extends sf implements he {
         if (wq.field_a != null) {
           return this.field_bb;
         }
-        if (AreaSpell.field_e != null &&
-          AreaSpell.field_e.field_h &&
+        if (ActionSpell.field_e != null &&
+          ActionSpell.field_e.field_h &&
           this.field_Z != null) {
           return this.field_Z;
         }
@@ -330,7 +330,7 @@ final class ut extends sf implements he {
               if (this.field_lb != null) {
                 var2 = this.field_lb.a((byte) 71);
                 if (var2 >= 0) {
-                  AreaSpell.field_e.a(this.field_db[var2].field_b, this.field_db[var2].field_a, -8717);
+                  ActionSpell.field_e.a(this.field_db[var2].field_b, this.field_db[var2].field_a, -8717);
                 }
               }
               AiPlanningStrategy.a(true, param0 + 8029);
@@ -371,7 +371,7 @@ final class ut extends sf implements he {
         }
         wp.field_w[kt.field_p] = param3;
         TutorialController.field_c[kt.field_p] = param0;
-        pe.field_s[kt.field_p] = param1;
+        VineGrowthAction.field_s[kt.field_p] = param1;
         int var6 = param0 + (param3 + param1);
         int var7 = var6 == 0 ? 0 : 1000 * param3 / var6;
         EffectPresentation.field_h[kt.field_p] = var7;
@@ -531,8 +531,8 @@ final class ut extends sf implements he {
               if (this.field_lb != null) {
                 var4 = this.field_lb.a((byte) 71);
                 var5 = this.field_db[var4];
-                if (AreaSpell.field_e.field_f != var5.field_b ||
-                  AreaSpell.field_e.field_n != var5.field_a) {
+                if (ActionSpell.field_e.field_f != var5.field_b ||
+                  ActionSpell.field_e.field_n != var5.field_a) {
                   this.field_ab.field_I = true;
                 }
                 this.q(-108);

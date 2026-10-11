@@ -1,31 +1,31 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be extends SpellAreaEffect {
+final class SummonAction extends PreparedAction {
     static NodeDeque field_u;
     static kl field_w;
     static String field_D;
     static int field_E;
-    private int field_t;
+    private int unitType;
     static je field_y;
     static sa field_z;
-    private int field_C;
-    private int field_G;
+    private int summoningBonus;
+    private int tileX;
     static String field_A;
     static String field_v;
-    private int field_B;
+    private int tileY;
     static String field_F;
     static int field_s;
     static int field_x;
 
-    final void applyEffect(int obfuscationGuard, Battlefield battlefield) {
+    final void applyToBattlefield(int obfuscationGuard, Battlefield battlefield) {
         try {
-          this.field_C = battlefield.a(bw.unitDefinitions[this.field_t][1], this.field_B, this.field_G, 0, this.field_m, bw.unitDefinitions[this.field_t][2]);
+          this.summoningBonus = battlefield.a(bw.unitDefinitions[this.unitType][1], this.tileY, this.tileX, 0, this.actingPlayer, bw.unitDefinitions[this.unitType][2]);
           if (obfuscationGuard != 64) {
             CharSequence var4 = (CharSequence) null;
-            be.a(-2, (CharSequence) null, false);
+            SummonAction.a(-2, (CharSequence) null, false);
           }
-          battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(this.field_t, this.field_G, this.field_B, this.field_C, this.field_m)));
+          battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(this.unitType, this.tileX, this.tileY, this.summoningBonus, this.actingPlayer)));
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "be.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
@@ -124,11 +124,11 @@ final class be extends SpellAreaEffect {
         field_z = null;
     }
 
-    be(int param0, int param1, int param2, int param3, int param4) {
-        this.field_B = param1;
-        this.field_G = param0;
-        this.field_t = param2;
-        this.field_m = param4;
+    SummonAction(int tileX, int tileY, int unitType, int preparedBonus, int actingPlayer) {
+        this.tileY = tileY;
+        this.tileX = tileX;
+        this.unitType = unitType;
+        this.actingPlayer = actingPlayer;
     }
 
     static {

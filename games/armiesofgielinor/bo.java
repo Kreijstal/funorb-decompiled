@@ -58,7 +58,7 @@ final class bo {
 
     final static Spell a(int param0, PacketBuffer param1, int param2) {
         GlobalSpell stackIn_16_0 = null;
-        AreaSpell stackIn_21_0 = null;
+        ActionSpell stackIn_21_0 = null;
         GlobalSpell stackIn_23_0 = null;
         UnitSpell stackIn_25_0 = null;
         RuntimeException stackIn_29_0 = null;
@@ -97,7 +97,7 @@ final class bo {
             return (Spell) ((Object) stackIn_25_0);
           }
           if (param0 > -1) {
-            stackIn_21_0 = new AreaSpell(var3_int, new am(param1, param0));
+            stackIn_21_0 = new ActionSpell(var3_int, new MoveAttackRequest(param1, param0));
             return (Spell) ((Object) stackIn_21_0);
           }
           stackIn_23_0 = new GlobalSpell(var3_int);

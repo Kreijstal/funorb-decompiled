@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends SpellAreaEffect {
-    private int field_y;
+final class VineGrowthAction extends PreparedAction {
+    private int tileY;
     static int[] field_s;
     static String field_w;
-    private int field_t;
-    private int field_u;
+    private int originX;
+    private int tileX;
     static String field_v;
-    private int field_A;
+    private int originY;
     static je field_x;
-    private int field_z;
+    private int strength;
 
-    final void applyEffect(int obfuscationGuard, Battlefield battlefield) {
+    final void applyToBattlefield(int obfuscationGuard, Battlefield battlefield) {
         try {
-          battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new GrowthEvent(this.field_u, this.field_y, this.field_t, this.field_A, this.field_z, this.field_m)));
+          battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new GrowthEvent(this.tileX, this.tileY, this.originX, this.originY, this.strength, this.actingPlayer)));
           if (obfuscationGuard != 64) {
-            pe.a(53, false, (String[][]) null);
+            VineGrowthAction.a(53, false, (String[][]) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "pe.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
@@ -307,13 +307,13 @@ final class pe extends SpellAreaEffect {
         return ((var18 & 255) >> 2 << 10) - (-(var19 >> 5 << 7) - (var20 >> 1));
     }
 
-    pe(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.field_u = param0;
-        this.field_t = param2;
-        this.field_y = param1;
-        this.field_A = param3;
-        this.field_z = param4;
-        this.field_m = param5;
+    VineGrowthAction(int tileX, int tileY, int originX, int originY, int strength, int actingPlayer) {
+        this.tileX = tileX;
+        this.originX = originX;
+        this.tileY = tileY;
+        this.originY = originY;
+        this.strength = strength;
+        this.actingPlayer = actingPlayer;
     }
 
     static {
