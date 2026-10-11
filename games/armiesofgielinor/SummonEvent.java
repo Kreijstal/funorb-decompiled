@@ -75,7 +75,7 @@ final class SummonEvent extends GameEvent {
         }
     }
 
-    final static Unit a(int param0, int param1, int param2, int param3, PacketBuffer param4, Battlefield param5, int param6, boolean param7) {
+    final static Unit readStoredUnit(int unitType, int formatVersion, int tileY, int tileX, PacketBuffer packet, Battlefield battlefield, int obfuscationGuard, boolean detached) {
         Unit stackIn_2_0 = null;
         Unit stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
@@ -96,33 +96,33 @@ final class SummonEvent extends GameEvent {
         Unit var16 = null;
         int var17 = 0;
         try {
-          if (param6 > -75) {
+          if (obfuscationGuard > -75) {
             stackIn_2_0 = (Unit) null;
             return stackIn_2_0;
           }
-          var8_int = param4.readUnsignedByte(0);
-          var9 = param4.readUnsignedShort((byte) -104);
-          var10 = param4.readUnsignedByte(0);
-          var11 = param4.readByte((byte) 110);
-          var12 = param4.readUnsignedByte(0);
-          var13 = param4.readUnsignedByte(0);
-          var14 = param4.readUnsignedByte(0);
-          var15 = param4.readUnsignedByte(0);
+          var8_int = packet.readUnsignedByte(0);
+          var9 = packet.readUnsignedShort((byte) -104);
+          var10 = packet.readUnsignedByte(0);
+          var11 = packet.readByte((byte) 110);
+          var12 = packet.readUnsignedByte(0);
+          var13 = packet.readUnsignedByte(0);
+          var14 = packet.readUnsignedByte(0);
+          var15 = packet.readUnsignedByte(0);
           if (var14 == 255) {
             var14 = -1;
           }
-          var16 = new Unit(param3, param2, param0, var8_int >> 5, var10, var11, var9, var13, 7 & var8_int, param5, var12 & 15, var12 >> 4, var14, param7, var15);
-          var16.movementFlags = param4.readUnsignedByte(0);
+          var16 = new Unit(tileX, tileY, unitType, var8_int >> 5, var10, var11, var9, var13, 7 & var8_int, battlefield, var12 & 15, var12 >> 4, var14, detached, var15);
+          var16.movementFlags = packet.readUnsignedByte(0);
           if ((var16.movementFlags & 4) != 0) {
-            var16.displayName = param4.h((byte) 121);
+            var16.displayName = packet.readNullCircumfixedString((byte) 121);
           }
-          if (param1 > 0) {
-            var17 = param4.readUnsignedByte(0);
+          if (formatVersion > 0) {
+            var17 = packet.readUnsignedByte(0);
             if ((2 & var17) != 0) {
-              var16.tag = param4.readUnsignedByte(0);
+              var16.tag = packet.readUnsignedByte(0);
             }
             if (0 != (1 & var17)) {
-              var16.objectiveId = param4.readUnsignedByte(0);
+              var16.objectiveId = packet.readUnsignedByte(0);
             }
           }
           stackIn_15_0 = var16;
@@ -131,19 +131,19 @@ final class SummonEvent extends GameEvent {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_18_0 = var8;
-          stackIn_18_1 = new StringBuilder().append("mb.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_18_1 = new StringBuilder().append("mb.D(").append(unitType).append(',').append(formatVersion).append(',').append(tileY).append(',').append(tileX).append(',');
+          if (packet == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
           stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
-          if (param5 == null) {
+          if (battlefield == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(obfuscationGuard).append(',').append(detached).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class SummonEvent extends GameEvent {
         field_F = null;
         if (param0 <= 103) {
           Battlefield var2 = (Battlefield) null;
-          SummonEvent.a(48, -43, -111, 118, (PacketBuffer) null, (Battlefield) null, -109, true);
+          SummonEvent.readStoredUnit(48, -43, -111, 118, (PacketBuffer) null, (Battlefield) null, -109, true);
         }
         field_B = null;
     }
@@ -216,14 +216,14 @@ final class SummonEvent extends GameEvent {
         this.tileX = param1;
     }
 
-    SummonEvent(int param0, int param1, int param2, int param3, int param4) {
-        this.tileY = param2;
-        this.unitType = param0;
+    SummonEvent(int unitType, int tileX, int tileY, int strengthBonus, int playerId) {
+        this.tileY = tileY;
+        this.unitType = unitType;
         this.eventKind = 2;
         this.field_y = false;
-        this.playerId = param4;
-        this.tileX = param1;
-        this.strengthBonus = param3;
+        this.playerId = playerId;
+        this.tileX = tileX;
+        this.strengthBonus = strengthBonus;
     }
 
     static {

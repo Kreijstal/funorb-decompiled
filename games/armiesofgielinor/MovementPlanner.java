@@ -28,7 +28,7 @@ final class MovementPlanner {
     int[] field_k;
     private int mapHeight;
     private int unitType;
-    static dl field_z;
+    static UiSelectionState field_z;
     static String field_v;
     boolean field_w;
 
@@ -1237,6 +1237,6 @@ final class MovementPlanner {
         field_s = "Show chat (<%0> unread messages)";
         field_c = new me(7, 0, 1, 1);
         field_v = "You can only use a further <%0> runes of trinkets in this game. This trinket is worth <%1>.";
-        field_z = new dl(1);
+        field_z = new UiSelectionState(1);
     }
 }

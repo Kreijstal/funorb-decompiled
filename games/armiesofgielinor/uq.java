@@ -143,7 +143,7 @@ abstract class uq extends ms {
               if (es.a(-83, var10Lifetime1)) {
                 var11 = br.field_b.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  br.field_b[var12] = mg.field_e.h((byte) 121);
+                  br.field_b[var12] = mg.field_e.readNullCircumfixedString((byte) 121);
                 }
                 dj.a((byte) -128);
                 ev.field_b = false;

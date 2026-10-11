@@ -73,7 +73,7 @@ final class jr {
         }
         if (0 < param0) {
           if (this.b(31, AiPlanningStrategy.field_d, param1, param3, ko.field_b)) {
-            lw.field_ob.b(param3 - (-this.field_b + 20), -20 + (this.field_g + param1), bo.field_g[this.field_c]);
+            lw.field_ob.b(param3 - (-this.field_b + 20), -20 + (this.field_g + param1), TutorialLayout.field_g[this.field_c]);
             if (var6 == 0) {
               if (this.field_i != 81) {
                 DeployAction.field_x[this.field_i].g(this.field_b + param3 - 20, this.field_g + param1 - 20);
@@ -85,7 +85,7 @@ final class jr {
               return;
             }
           }
-          lw.field_ob.d(-20 + this.field_b + param3, param1 + this.field_g - 20, bo.field_g[this.field_c]);
+          lw.field_ob.d(-20 + this.field_b + param3, param1 + this.field_g - 20, TutorialLayout.field_g[this.field_c]);
           if (this.field_i == 81) {
             DeployAction.field_x[4].g(-20 + this.field_b + param3, -20 + (param1 + this.field_g));
             if (var6 != 0) {
@@ -96,7 +96,7 @@ final class jr {
           }
           km.field_h[0].g(-23 + (this.field_b + param3), -23 + param1 + this.field_g);
           if (var6 != 0) {
-            lw.field_ob.d(this.field_b + (param3 - 20), -20 + param1 + this.field_g, fe.b(bo.field_g[this.field_c], 128));
+            lw.field_ob.d(this.field_b + (param3 - 20), -20 + param1 + this.field_g, fe.b(TutorialLayout.field_g[this.field_c], 128));
             if (this.field_i != 81) {
               DeployAction.field_x[this.field_i].g(-20 + this.field_b + param3, -20 + (param1 + this.field_g), 0);
             }
@@ -105,7 +105,7 @@ final class jr {
           }
           return;
         }
-        lw.field_ob.d(this.field_b + (param3 - 20), -20 + param1 + this.field_g, fe.b(bo.field_g[this.field_c], 128));
+        lw.field_ob.d(this.field_b + (param3 - 20), -20 + param1 + this.field_g, fe.b(TutorialLayout.field_g[this.field_c], 128));
         if (this.field_i == 81) {
           DeployAction.field_x[4].g(-20 + (param3 + this.field_b), param1 + this.field_g - 20, 0);
         } else {

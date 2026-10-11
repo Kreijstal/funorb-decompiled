@@ -52,7 +52,7 @@ final class bt {
           return;
         }
         if (MoveEvent.field_E.field_N.length != 0) {
-          gb.a(var4, 5, var1.field_k, var2.field_k, var1.field_n, var2.field_n, MoveEvent.field_E.field_N, -52);
+          gb.configureTutorialStage(var4, 5, var1.field_k, var2.field_k, var1.field_n, var2.field_n, MoveEvent.field_E.field_N, -52);
           return;
         }
     }

@@ -238,7 +238,7 @@ final class vq {
             }
             vi.b(71);
           }
-          ug.field_c.field_k = mi.field_G.length;
+          ug.field_c.itemCount = mi.field_G.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < wp.field_v.length; var4Lifetime1++) {
             stackIn_89_0 = wp.field_v[var4Lifetime1];
@@ -267,7 +267,7 @@ final class vq {
               }
             }
           }
-          m.field_i = (el.field_c + cp.field_a << 1) * ug.field_c.field_k;
+          m.field_i = (el.field_c + cp.field_a << 1) * ug.field_c.itemCount;
           var4Lifetime2 = 0;
           var5Lifetime3 = -42 % ((-39 - param2) / 37);
           while (wp.field_v.length > var4Lifetime2) {
@@ -302,9 +302,9 @@ final class vq {
             var4Lifetime3++;
           }
           if (no.field_J != 2) {
-            ug.field_c.a(0, param1, TeleportEvent.a(AiPlanningStrategy.field_d, 120, ko.field_b), 0);
+            ug.field_c.restoreSelection(0, param1, TeleportEvent.a(AiPlanningStrategy.field_d, 120, ko.field_b), 0);
           } else {
-            ug.field_c.a(-1, param1, -1, 0);
+            ug.field_c.restoreSelection(-1, param1, -1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

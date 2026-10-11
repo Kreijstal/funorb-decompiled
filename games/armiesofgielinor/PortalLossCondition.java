@@ -84,7 +84,7 @@ final class PortalLossCondition implements MatchCondition {
             return null;
           }
           param0.endBitReading(-2);
-          var3 = param0.h((byte) 121);
+          var3 = param0.readNullCircumfixedString((byte) 121);
           param0.beginBitReading(72);
           stackIn_7_0 = var3;
           return stackIn_7_0;

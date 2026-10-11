@@ -142,35 +142,35 @@ final class DeployRequest extends ActionRequest {
           var5 = battlefield.getUnitAt(this.tileY, true, this.tileX);
           var6 = var5;
           if (var6 == null) {
-            discarded$11 = this.formatDeployRejection(new String[]{"no unit at ", TutorialController.c(this.tileX, 0, this.tileY)}, false);
+            discarded$11 = this.formatDeployRejection(new String[]{"no unit at ", TutorialController.formatCoordinatePair(this.tileX, 0, this.tileY)}, false);
             stackIn_2_0 = null;
             return (PreparedAction) (stackIn_2_0);
           }
           if (this.actingPlayer != var6.ownerPlayer) {
-            discarded$10 = this.formatDeployRejection(new String[]{"unit at ", TutorialController.c(this.tileX, 0, this.tileY), "not owned by player ", "" + this.actingPlayer}, false);
+            discarded$10 = this.formatDeployRejection(new String[]{"unit at ", TutorialController.formatCoordinatePair(this.tileX, 0, this.tileY), "not owned by player ", "" + this.actingPlayer}, false);
             stackIn_5_0 = null;
             return (PreparedAction) (stackIn_5_0);
           }
           if (var6.movementSpent) {
-            discarded$9 = this.formatDeployRejection(new String[]{"unit at ", TutorialController.c(this.tileX, 0, this.tileY), " has moved"}, false);
+            discarded$9 = this.formatDeployRejection(new String[]{"unit at ", TutorialController.formatCoordinatePair(this.tileX, 0, this.tileY), " has moved"}, false);
             stackIn_8_0 = null;
             return (PreparedAction) (stackIn_8_0);
           }
           if (0 >= (bw.unitDefinitions[var5.unitType][10] & 1024)) {
-            discarded$8 = this.formatDeployRejection(new String[]{"unit at ", TutorialController.c(this.tileX, 0, this.tileY), " cannot deploy"}, false);
+            discarded$8 = this.formatDeployRejection(new String[]{"unit at ", TutorialController.formatCoordinatePair(this.tileX, 0, this.tileY), " cannot deploy"}, false);
             stackIn_11_0 = null;
             return (PreparedAction) (stackIn_11_0);
           }
           var4 = battlefield.tiles[var6.tileX + var6.tileY * battlefield.mapWidth];
           if (34 == var6.unitType &&
             !var4.f(19725)) {
-            discarded$6 = this.formatDeployRejection(new String[]{"can't deploy on top of structure at ", TutorialController.c(this.tileX, 0, this.tileY)}, false);
+            discarded$6 = this.formatDeployRejection(new String[]{"can't deploy on top of structure at ", TutorialController.formatCoordinatePair(this.tileX, 0, this.tileY)}, false);
             stackIn_15_0 = null;
             return (PreparedAction) (stackIn_15_0);
           }
           if (var6.unitType == 7 &&
             var4.terrainType != 0) {
-            discarded$7 = this.formatDeployRejection(new String[]{"can't deploy on top of structure at ", TutorialController.c(this.tileX, 0, this.tileY)}, false);
+            discarded$7 = this.formatDeployRejection(new String[]{"can't deploy on top of structure at ", TutorialController.formatCoordinatePair(this.tileX, 0, this.tileY)}, false);
             stackIn_19_0 = null;
             return (PreparedAction) (stackIn_19_0);
           }

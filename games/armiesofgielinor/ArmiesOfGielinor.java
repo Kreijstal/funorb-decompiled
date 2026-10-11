@@ -115,7 +115,7 @@ public final class ArmiesOfGielinor extends wf {
             }
           }
           if (decompiledFrameRemainder0) {
-            if (dl.d(95)) {
+            if (UiSelectionState.d(95)) {
               if (!ed.a(-83)) {
                 if (an.e((byte) 89)) {
                   if (~pg.field_f != ~pg.field_e) {
@@ -313,7 +313,7 @@ public final class ArmiesOfGielinor extends wf {
                   var9 = mg.field_e.readByte((byte) 123);
                   var10_int = 0;
                   while (var8.length > var10_int) {
-                    var8[var10_int] = mg.field_e.h((byte) 121);
+                    var8[var10_int] = mg.field_e.readNullCircumfixedString((byte) 121);
                     stackIn_337_0 = ~nm.field_o;
                     stackIn_337_1 = -65;
                     if (stackIn_337_0 == stackIn_337_1 &&
@@ -394,14 +394,14 @@ public final class ArmiesOfGielinor extends wf {
                 }
                 if (var2 != null) {
                   if (nm.field_o == 77) {
-                    ((GameplayController) (var2)).battlefield.a(fk.field_b, mg.field_e, (byte) -81);
+                    ((GameplayController) (var2)).battlefield.appendSnapshotChunk(fk.field_b, mg.field_e, (byte) -81);
                     continue;
                   }
                   if (nm.field_o == 67) {
                     if (!((GameplayController) (var2)).battlefield.field_Ab) {
-                      ((GameplayController) (var2)).battlefield.field_Z.position = 0;
-                      ((GameplayController) (var2)).battlefield.readLegacySnapshot(0, ((GameplayController) (var2)).battlefield.field_Z);
-                      ((GameplayController) (var2)).battlefield.field_Z = null;
+                      ((GameplayController) (var2)).battlefield.snapshotBuffer.position = 0;
+                      ((GameplayController) (var2)).battlefield.readLegacySnapshot(0, ((GameplayController) (var2)).battlefield.snapshotBuffer);
+                      ((GameplayController) (var2)).battlefield.snapshotBuffer = null;
                       mu.field_a = new cg();
                       ((GameplayController) (var2)).field_Ib.a(((GameplayController) (var2)).battlefield.mapTheme, 0);
                       ((GameplayController) (var2)).field_d = UnitLossCondition.field_d[((GameplayController) (var2)).battlefield.mapTheme].field_n;
@@ -442,7 +442,7 @@ public final class ArmiesOfGielinor extends wf {
                     continue;
                   }
                   if (68 == nm.field_o) {
-                    ((GameplayController) (var2)).battlefield.a((PacketBuffer) (mg.field_e), (byte) -67);
+                    ((GameplayController) (var2)).battlefield.readGameEvent((PacketBuffer) (mg.field_e), (byte) -67);
                     if (((GameplayController) (var2)).battlefield.currentPlayer != ((GameplayController) (var2)).battlefield.localPlayer) {
                       continue;
                     }
@@ -568,7 +568,7 @@ public final class ArmiesOfGielinor extends wf {
               op.a(5, true);
               SpellCastEvent.b(6, -32666);
               BestScoreStrategy.a(7, 1742);
-              bo.a(true);
+              TutorialLayout.a(true);
               if (var3Lifetime1 != 1) {
                 if (kg.field_d) {
                   du.field_h = false;
@@ -585,7 +585,7 @@ public final class ArmiesOfGielinor extends wf {
                     CipherPacketBuffer.a(false, 11, 1, 0);
                   }
                   ut.i((byte) 126);
-                  rq.field_p[jt.field_a].a(100, false, 0);
+                  rq.field_p[jt.field_a].restoreStageSelection(100, false, 0);
                   gk.field_H = false;
                   fj.field_c = false;
                   kg.field_d = false;
@@ -1023,7 +1023,7 @@ public final class ArmiesOfGielinor extends wf {
             pr.a((byte) 121, var2);
             return;
           }
-          if (!dl.d(param0 + 95)) {
+          if (!UiSelectionState.d(param0 + 95)) {
             bn.a((byte) -24, 100.0f, en.field_G);
             pr.a((byte) 122, var2);
             return;
@@ -1249,9 +1249,9 @@ public final class ArmiesOfGielinor extends wf {
           sg.a((byte) 93);
           ft.a(-10);
           rg.a(-84);
-          bo.a(param0 ^ -4368117);
+          TutorialLayout.a(param0 ^ -4368117);
           oo.b(-8616);
-          dl.c((byte) 110);
+          UiSelectionState.c((byte) 110);
           fs.a(-1);
           SpellCastAction.e(-4541);
           AiPlanner.a(-27464);
@@ -2328,12 +2328,12 @@ public final class ArmiesOfGielinor extends wf {
               }
               break;
             }
-            fe.field_o[1][var17] = fe.a(bo.field_g[1], var17 << 3);
-            fe.field_o[2][var17] = fe.a(bo.field_g[2], var17 << 3);
-            fe.field_o[3][var17] = fe.a(bo.field_g[3], var17 << 3);
-            fe.field_o[4][var17] = fe.a(bo.field_g[4], var17 << 3);
-            fe.field_o[5][var17] = fe.a(bo.field_g[5], var17 << 3);
-            fe.field_o[6][var17] = fe.a(bo.field_g[6], var17 << 3);
+            fe.field_o[1][var17] = fe.a(TutorialLayout.field_g[1], var17 << 3);
+            fe.field_o[2][var17] = fe.a(TutorialLayout.field_g[2], var17 << 3);
+            fe.field_o[3][var17] = fe.a(TutorialLayout.field_g[3], var17 << 3);
+            fe.field_o[4][var17] = fe.a(TutorialLayout.field_g[4], var17 << 3);
+            fe.field_o[5][var17] = fe.a(TutorialLayout.field_g[5], var17 << 3);
+            fe.field_o[6][var17] = fe.a(TutorialLayout.field_g[6], var17 << 3);
             fe.field_o[0][var17] = (var17 << 2) + (var17 << 10) + (var17 << 18);
             var17++;
           } while (var18 == 0);

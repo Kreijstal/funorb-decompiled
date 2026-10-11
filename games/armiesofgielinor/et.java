@@ -166,7 +166,7 @@ final class et {
         int var1_int = 0;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          KingBlackDragonEvent.field_C.a(true, -6226, pf.field_b, dl.field_i);
+          KingBlackDragonEvent.field_C.a(true, -6226, pf.field_b, UiSelectionState.field_i);
           KingBlackDragonEvent.field_C.d((byte) -102);
           if (param0 != -3) {
             et.a(103);

@@ -4,7 +4,7 @@
 final class KingBlackDragonEvent extends GameEvent {
     static gk field_C;
     static int field_A;
-    private int field_B;
+    private int playerId;
     static je[] field_z;
     static String field_y;
 
@@ -106,10 +106,10 @@ final class KingBlackDragonEvent extends GameEvent {
     final String describeEvent(byte obfuscationGuard, boolean verbose) {
         if (verbose) {
           System.out.println("KBD summon event debug");
-          System.out.println("Player " + this.field_B + " summonned KBD");
+          System.out.println("Player " + this.playerId + " summonned KBD");
         }
         int var4 = 71 % ((53 - obfuscationGuard) / 51);
-        String var3 = "EventKBD: player: " + this.field_B;
+        String var3 = "EventKBD: player: " + this.playerId;
         return var3;
     }
 
@@ -126,8 +126,8 @@ final class KingBlackDragonEvent extends GameEvent {
         field_z = null;
     }
 
-    KingBlackDragonEvent(int param0) {
-        this.field_B = param0;
+    KingBlackDragonEvent(int playerId) {
+        this.playerId = playerId;
         this.eventKind = -1;
     }
 

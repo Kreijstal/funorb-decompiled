@@ -6,7 +6,7 @@ final class oo {
     private RgbSprite field_b;
     private int field_p;
     private ru[] field_i;
-    private dl field_h;
+    private UiSelectionState field_h;
     private String[] field_k;
     static byte[][] field_d;
     private int field_n;
@@ -66,7 +66,7 @@ final class oo {
             this.field_r = 2;
           }
           this.field_c = param0;
-          this.field_h = new dl(2);
+          this.field_h = new UiSelectionState(2);
           this.field_k = param5;
           if (param1 != 71) {
             return;
@@ -215,13 +215,13 @@ final class oo {
             }
           }
           if (param0) {
-            this.field_h.a(0, this.a(iu.field_t, TeleportAction.field_z, -387), this.a(AiPlanningStrategy.field_d, ko.field_b, -387));
+            this.field_h.updatePointerSelection(0, this.a(iu.field_t, TeleportAction.field_z, -387), this.a(AiPlanningStrategy.field_d, ko.field_b, -387));
             var4Lifetime1 = 0;
-            if (this.field_h.d((byte) 96)) {
-              if (0 == this.field_h.field_h) {
+            if (this.field_h.hasActivationInput((byte) 96)) {
+              if (0 == this.field_h.selectedIndex) {
                 var4Lifetime1 = 1;
               }
-              if (this.field_h.field_h == 1) {
+              if (this.field_h.selectedIndex == 1) {
                 stackIn_73_0 = 2;
                 return stackIn_73_0;
               }
@@ -286,14 +286,14 @@ final class oo {
           if (param0 <= 126) {
             discarded$1 = this.c(-121);
           }
-          this.field_h.b((byte) -120);
-          if (this.field_h.d((byte) 73)) {
-            if (this.field_h.field_h == 0) {
+          this.field_h.pollNavigationKeys((byte) -120);
+          if (this.field_h.hasActivationInput((byte) 73)) {
+            if (this.field_h.selectedIndex == 0) {
               this.b((byte) -95);
               stackIn_5_0 = 3;
               return stackIn_5_0;
             }
-            if (this.field_h.field_h == 1) {
+            if (this.field_h.selectedIndex == 1) {
               stackIn_10_0 = 1;
               return stackIn_10_0;
             }
@@ -468,8 +468,8 @@ final class oo {
           ll.field_Sb.a(db.field_e[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ll.field_Sb.a(db.field_e[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ar.field_D.g((127 - ar.field_D.field_A) / 2 + 508, 315);
-          if (0 != this.field_h.field_h) {
-            if (this.field_h.field_h == 1) {
+          if (0 != this.field_h.selectedIndex) {
+            if (this.field_h.selectedIndex == 1) {
               nh.field_G[1].g(508, 387);
             }
           } else {

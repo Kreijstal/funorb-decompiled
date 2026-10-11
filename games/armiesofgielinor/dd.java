@@ -42,7 +42,7 @@ final class dd {
             var6_int = this.field_f.readInt(1);
             var7 = this.field_f.readInt(1);
             var13 = new byte[64];
-            this.field_f.a(param3, 64, 0, var13);
+            this.field_f.readBytes(param3, 64, 0, var13);
             var9 = new bm(param2, param1, param4, this.field_d, this.field_b, var6_int, var13, var7, param0);
             this.field_i[param2] = var9;
             stackIn_10_0 = var9;
@@ -220,7 +220,7 @@ final class dd {
         var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
-        var10.a(0, var13.length, 0, var13);
+        var10.readBytes(0, var13.length, 0, var13);
         if (null != this.field_h &&
           null != this.field_j) {
           var12 = new java.math.BigInteger(var13);

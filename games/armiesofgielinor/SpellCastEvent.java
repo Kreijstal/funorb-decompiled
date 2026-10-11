@@ -7,7 +7,7 @@ final class SpellCastEvent extends GameEvent {
     Spell spell;
     private int castingPlayer;
     static je field_D;
-    int field_y;
+    int selectionMode;
     static ea field_E;
 
     final String describeEvent(byte obfuscationGuard, boolean verbose) {
@@ -29,7 +29,7 @@ final class SpellCastEvent extends GameEvent {
         try {
           this.applied = true;
           this.spell.applyEffect(this.castingPlayer, battlefield, 26123);
-          battlefield.a((byte) -49, this.spell, this.field_y, this.castingPlayer);
+          battlefield.a((byte) -49, this.spell, this.selectionMode, this.castingPlayer);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "pj.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
@@ -64,7 +64,7 @@ final class SpellCastEvent extends GameEvent {
           for (var3 = 0; nb.field_h.length > var3; var3++) {
             var4 = cj.field_k[var3];
             if (var4 >= 0) {
-              if (var4 == MovementPlanner.field_z.field_h) {
+              if (var4 == MovementPlanner.field_z.selectedIndex) {
                 var5 = jv.field_c;
               } else {
                 var5 = ui.field_g;
@@ -79,7 +79,7 @@ final class SpellCastEvent extends GameEvent {
             var8 = bt.field_g - (var7 >> 1);
             if (0 <= var4) {
               var2 = var2 + ar.field_w;
-              if (MovementPlanner.field_z.field_h != var4) {
+              if (MovementPlanner.field_z.selectedIndex != var4) {
                 stackIn_17_0 = ov.field_m;
               } else {
                 stackIn_17_0 = ed.field_d;
@@ -435,14 +435,14 @@ final class SpellCastEvent extends GameEvent {
         }
     }
 
-    SpellCastEvent(Spell param0, int param1, int param2) {
+    SpellCastEvent(Spell spell, int selectionMode, int castingPlayer) {
         try {
-          this.castingPlayer = param2;
-          this.field_y = param1;
-          this.spell = param0;
+          this.castingPlayer = castingPlayer;
+          this.selectionMode = selectionMode;
+          this.spell = spell;
           this.eventKind = 24;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "pj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "pj.<init>(" + (spell != null ? "{...}" : "null") + ',' + selectionMode + ',' + castingPlayer + ')');
         }
     }
 

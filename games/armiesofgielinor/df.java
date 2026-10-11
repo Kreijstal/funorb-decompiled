@@ -326,8 +326,8 @@ final class df extends tj implements fb, he {
           df.a((String) null, -20, (kl) null, -114, (String) null);
         }
         MoveEvent.field_C = new cv();
-        gb.a(30, 21, 220, 420, 440, 470, new int[]{7}, -121);
-        gb.a(30, 22, 490, 610, 20, 50, new int[]{47}, param0 - 55);
+        gb.configureTutorialStage(30, 21, 220, 420, 440, 470, new int[]{7}, -121);
+        gb.configureTutorialStage(30, 22, 490, 610, 20, 50, new int[]{47}, param0 - 55);
     }
 
     final String m(int param0) {

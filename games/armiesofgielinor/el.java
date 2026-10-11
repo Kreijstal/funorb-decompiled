@@ -108,7 +108,7 @@ abstract class el {
               var13 = new byte[var4];
               var11 = var13;
               var5 = var11;
-              var9.a(0, var4, 0, var13);
+              var9.readBytes(0, var4, 0, var13);
               stackIn_23_0 = var5;
               return stackIn_23_0;
             }

@@ -24,7 +24,7 @@ final class sl {
           if (null == this.field_c) {
             return true;
           }
-          param2.a(0, param0, this.field_b, this.field_c);
+          param2.readBytes(0, param0, this.field_b, this.field_c);
           if (param1 != -1) {
             return true;
           }
@@ -150,7 +150,7 @@ final class sl {
               return;
             }
             this.field_b = -1;
-            param0.a(0, var4_intLifetime1, 0, this.field_c);
+            param0.readBytes(0, var4_intLifetime1, 0, this.field_c);
             return;
           }
           return;

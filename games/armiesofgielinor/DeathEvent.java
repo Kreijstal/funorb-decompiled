@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DeathEvent extends GameEvent {
-    int field_y;
-    int field_D;
+    int tileX;
+    int tileY;
     private boolean field_z;
     static RgbSprite field_A;
     private boolean field_B;
@@ -112,27 +112,27 @@ final class DeathEvent extends GameEvent {
         int var3Lifetime2;
         if (!verbose) {
           var3 = 58 / ((53 - obfuscationGuard) / 51);
-          var4 = "EventDeath: pos: (" + this.field_y + "," + this.field_D + ")";
+          var4 = "EventDeath: pos: (" + this.tileX + "," + this.tileY + ")";
           return var4;
         }
         System.out.println("Death event debug");
-        System.out.println("Unit at " + this.field_y + "," + this.field_D);
+        System.out.println("Unit at " + this.tileX + "," + this.tileY);
         if (this.field_z) {
           System.out.println("Bones devoured");
           var3Lifetime1 = 58 / ((53 - obfuscationGuard) / 51);
-          var4Lifetime1 = "EventDeath: pos: (" + this.field_y + "," + this.field_D + ")";
+          var4Lifetime1 = "EventDeath: pos: (" + this.tileX + "," + this.tileY + ")";
           return var4Lifetime1;
         }
         var3Lifetime2 = 58 / ((53 - obfuscationGuard) / 51);
-        var4Lifetime2 = "EventDeath: pos: (" + this.field_y + "," + this.field_D + ")";
+        var4Lifetime2 = "EventDeath: pos: (" + this.tileX + "," + this.tileY + ")";
         return var4Lifetime2;
     }
 
     DeathEvent(int param0, int param1) {
         this.field_B = false;
         this.field_z = false;
-        this.field_y = param0;
-        this.field_D = param1;
+        this.tileX = param0;
+        this.tileY = param1;
         this.eventKind = 10;
         this.unit = null;
     }
@@ -192,8 +192,8 @@ final class DeathEvent extends GameEvent {
     DeathEvent(Unit param0) {
         this.field_B = false;
         try {
-          this.field_D = param0.tileY;
-          this.field_y = param0.tileX;
+          this.tileY = param0.tileY;
+          this.tileX = param0.tileX;
           this.unit = param0;
           this.eventKind = 10;
           this.field_z = false;
@@ -216,7 +216,7 @@ final class DeathEvent extends GameEvent {
           }
           this.field_B = true;
           if (null == this.unit) {
-            this.unit = battlefield.getUnitAt(this.field_D, true, this.field_y);
+            this.unit = battlefield.getUnitAt(this.tileY, true, this.tileX);
           }
           if (this.unit != null) {
             stackIn_8_0 = this.unit;
@@ -248,8 +248,8 @@ final class DeathEvent extends GameEvent {
         try {
           this.field_z = param1 ? true : false;
           this.eventKind = 10;
-          this.field_D = param0.tileY;
-          this.field_y = param0.tileX;
+          this.tileY = param0.tileY;
+          this.tileX = param0.tileX;
           this.unit = param0;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "hp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

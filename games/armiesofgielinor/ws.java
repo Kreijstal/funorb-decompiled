@@ -69,12 +69,12 @@ final class ws extends fw {
         if (param0) {
           SummonRequest.a((byte) 52, wf.field_y, 6);
           SummonRequest.a((byte) 33, sh.field_r, 26);
-          MoveEvent.field_D.a(MoveEvent.field_D.a(26, (byte) -107) + 30, 26, (byte) 126);
+          MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(26, (byte) -107) + 30, 26, (byte) 126);
           SummonRequest.a((byte) 111, pu.field_B, 8);
           SummonRequest.a((byte) 67, sh.field_r, 27);
-          MoveEvent.field_D.a(30 + MoveEvent.field_D.a(27, (byte) -126), 27, (byte) 125);
+          MoveEvent.tutorialLayout.setTopY(30 + MoveEvent.tutorialLayout.getTopY(27, (byte) -126), 27, (byte) 125);
           SummonRequest.a((byte) 78, sh.field_r, 28);
-          MoveEvent.field_D.a(MoveEvent.field_D.a(28, (byte) -122) + 30, 28, (byte) 120);
+          MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(28, (byte) -122) + 30, 28, (byte) 120);
           SummonRequest.a((byte) 45, pu.field_B, 9);
           if (!rf.a(27875)) {
             SummonRequest.a((byte) 54, cg.field_b, 1);
@@ -89,12 +89,12 @@ final class ws extends fw {
         field_P = (je) null;
         SummonRequest.a((byte) 52, wf.field_y, 6);
         SummonRequest.a((byte) 33, sh.field_r, 26);
-        MoveEvent.field_D.a(MoveEvent.field_D.a(26, (byte) -107) + 30, 26, (byte) 126);
+        MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(26, (byte) -107) + 30, 26, (byte) 126);
         SummonRequest.a((byte) 111, pu.field_B, 8);
         SummonRequest.a((byte) 67, sh.field_r, 27);
-        MoveEvent.field_D.a(30 + MoveEvent.field_D.a(27, (byte) -126), 27, (byte) 125);
+        MoveEvent.tutorialLayout.setTopY(30 + MoveEvent.tutorialLayout.getTopY(27, (byte) -126), 27, (byte) 125);
         SummonRequest.a((byte) 78, sh.field_r, 28);
-        MoveEvent.field_D.a(MoveEvent.field_D.a(28, (byte) -122) + 30, 28, (byte) 120);
+        MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(28, (byte) -122) + 30, 28, (byte) 120);
         SummonRequest.a((byte) 45, pu.field_B, 9);
         if (!rf.a(27875)) {
           SummonRequest.a((byte) 54, cg.field_b, 1);

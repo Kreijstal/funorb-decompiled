@@ -714,7 +714,7 @@ final class qs extends IntrusiveNode {
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a(0, var5, 0, var6);
+          var2.readBytes(0, var5, 0, var6);
           this.field_s[var4] = var6;
         }
     }

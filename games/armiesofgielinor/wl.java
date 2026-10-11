@@ -80,12 +80,12 @@ abstract class wl extends tj {
           super.a(param0, param1, (byte) -121, param3);
           return;
         }
-        if (bo.field_b == null ||
-          !(this.field_l <= bo.field_b.field_y) ||
-          !(bo.field_b.field_v >= this.field_w)) {
-          bo.field_b = new RgbSprite(this.field_l, this.field_w);
+        if (TutorialLayout.field_b == null ||
+          !(this.field_l <= TutorialLayout.field_b.field_y) ||
+          !(TutorialLayout.field_b.field_v >= this.field_w)) {
+          TutorialLayout.field_b = new RgbSprite(this.field_l, this.field_w);
         }
-        CombatSandbox.a(bo.field_b, 3);
+        CombatSandbox.a(TutorialLayout.field_b, 3);
         SoftwareRaster.b();
         this.b(0, 1851680193, 0);
         super.a(-param0 - this.field_B, -param1 - this.field_p, (byte) -106, param3);
@@ -93,7 +93,7 @@ abstract class wl extends tj {
         if (param2 >= -82) {
           field_J = (String) null;
         }
-        bo.field_b.e(this.field_B + param0, this.field_p + param1, this.field_H);
+        TutorialLayout.field_b.e(this.field_B + param0, this.field_p + param1, this.field_H);
     }
 
     final static int b(int param0, int param1) {

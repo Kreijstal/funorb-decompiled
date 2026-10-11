@@ -62,7 +62,7 @@ final class cd {
             var9 = var10;
             var7 = var9;
             var5 = var7;
-            var8.a(0, var4_int, 0, var10);
+            var8.readBytes(0, var4_int, 0, var10);
           } else {
             var5 = null;
           }

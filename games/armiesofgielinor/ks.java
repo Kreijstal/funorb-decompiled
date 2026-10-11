@@ -42,7 +42,7 @@ abstract class ks extends ms {
           }
           var3 = new sd();
           var3.field_m = param2.readUnsignedByte(0);
-          var3.field_u = param2.h((byte) 121);
+          var3.field_u = param2.readNullCircumfixedString((byte) 121);
           var3.field_p = ev.a(param2, (byte) -98);
           var3.field_q = uq.a(param2, false);
           var3.field_t = gt.a(-2, param2);

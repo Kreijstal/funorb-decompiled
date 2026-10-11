@@ -3,13 +3,13 @@
  */
 final class TutorialController {
     static int[] field_e;
-    private dl field_d;
+    private UiSelectionState selectionState;
     static String field_b;
     private int tutorialStage;
     static int[] field_c;
     static String[] field_f;
 
-    private final void b(boolean param0, int param1, int param2) {
+    private final void drawStageItem(boolean highlighted, int itemIndex, int obfuscationGuard) {
         int stackIn_53_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -26,19 +26,19 @@ final class TutorialController {
         int var14 = 0;
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param1 == 49) {
+          if (itemIndex == 49) {
             return;
           }
-          var4_int = MoveEvent.field_y[this.tutorialStage][param1];
+          var4_int = MoveEvent.tutorialStageItems[this.tutorialStage][itemIndex];
           if ((var4_int == 32 ||
             var4_int == 31) && hi.field_j < 2) {
             return;
           }
-          var5 = this.e(var4_int, 29);
+          var5 = this.getItemText(var4_int, 29);
           var6 = nr.field_e.a(var5) / 2;
-          var7 = this.a(true, param1);
-          var8 = this.a(param1, -3858);
-          var9 = this.a(param1, true);
+          var7 = this.getItemLeftX(true, itemIndex);
+          var8 = this.getItemRightX(itemIndex, -3858);
+          var9 = this.getItemTopY(itemIndex, true);
           if (var4_int == 17 ||
             var4_int == 18) {
             var6 = kt.field_o[0].field_y + wd.field_b;
@@ -61,17 +61,17 @@ final class TutorialController {
             og.field_m == 2) {
             var11 = 10 + var10;
           }
-          if (param2 != 28115) {
+          if (obfuscationGuard != 28115) {
             this.f(93);
           }
-          if (!param0) {
+          if (!highlighted) {
             fe.a(var5, var11, 25 + var9, nd.field_b, true);
           }
-          if (param0 ||
+          if (highlighted ||
             var14 != 0) {
             fe.a(var5, var11, var9 + 25, field_e, true);
           }
-          var12 = this.b((byte) 84, param1);
+          var12 = this.b((byte) 84, itemIndex);
           if (var12 > -1) {
             BestScoreStrategy.field_m.f(var12, -2 + var9);
           }
@@ -94,7 +94,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ci.RA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) var4), "ci.RA(" + highlighted + ',' + itemIndex + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -126,7 +126,7 @@ final class TutorialController {
         }
     }
 
-    private final int d(int param0, int param1) {
+    private final int getItemHeight(int obfuscationGuard, int itemIndex) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
@@ -136,7 +136,7 @@ final class TutorialController {
         int stackIn_25_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 12) {
+          if (obfuscationGuard != 12) {
             field_f = (String[]) null;
           }
           if (this.tutorialStage == 16) {
@@ -145,7 +145,7 @@ final class TutorialController {
           }
           if (this.tutorialStage == 7 &&
             null != MoveEvent.field_G) {
-            stackIn_11_0 = MoveEvent.field_G.a(param1, false);
+            stackIn_11_0 = MoveEvent.field_G.a(itemIndex, false);
             return stackIn_11_0;
           }
           if (this.tutorialStage == 7) {
@@ -154,7 +154,7 @@ final class TutorialController {
           }
           if (this.tutorialStage == 5 &&
             null != MoveEvent.field_E) {
-            stackIn_20_0 = MoveEvent.field_E.a(false, param1);
+            stackIn_20_0 = MoveEvent.field_E.a(false, itemIndex);
             return stackIn_20_0;
           }
           if (5 != this.tutorialStage) {
@@ -166,7 +166,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.EA(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var3), "ci.EA(" + obfuscationGuard + ',' + itemIndex + ')');
         }
     }
 
@@ -693,10 +693,10 @@ final class TutorialController {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
-          var4_int = MoveEvent.field_D.b(this.tutorialStage, 29);
-          var5 = MoveEvent.field_D.a((byte) 119, this.tutorialStage);
+          var4_int = MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29);
+          var5 = MoveEvent.tutorialLayout.getRightX((byte) 119, this.tutorialStage);
           var6 = -var4_int + var5;
-          var7 = MoveEvent.field_y[this.tutorialStage].length;
+          var7 = MoveEvent.tutorialStageItems[this.tutorialStage].length;
           if (0 != var7 &&
             param2 >= 0 &&
             param2 < var7) {
@@ -710,7 +710,7 @@ final class TutorialController {
                 var9 = (-var8 + var6) / var7;
                 break;
               }
-              var10 = MoveEvent.field_y[this.tutorialStage][var9];
+              var10 = MoveEvent.tutorialStageItems[this.tutorialStage][var9];
               var11_ref_String = DisplacedUnitMarker.field_t[var10];
               var8 = var8 + (nr.field_e.a(var11_ref_String) >> 1);
               var9++;
@@ -728,7 +728,7 @@ final class TutorialController {
                 var11 = var8 + var9 * var10;
                 break;
               }
-              var12 = MoveEvent.field_y[this.tutorialStage][var11];
+              var12 = MoveEvent.tutorialStageItems[this.tutorialStage][var11];
               var13 = DisplacedUnitMarker.field_t[var12];
               var8 = var8 + (nr.field_e.a(var13) >> 1);
               var11++;
@@ -758,20 +758,20 @@ final class TutorialController {
           if (MoveEvent.field_G == null) {
             return;
           }
-          if (MoveEvent.field_y != null &&
-            this.tutorialStage < MoveEvent.field_y.length) {
-            if (MoveEvent.field_y[this.tutorialStage] != null &&
-              MoveEvent.field_y[this.tutorialStage].length >= this.field_d.field_k) {
+          if (MoveEvent.tutorialStageItems != null &&
+            this.tutorialStage < MoveEvent.tutorialStageItems.length) {
+            if (MoveEvent.tutorialStageItems[this.tutorialStage] != null &&
+              MoveEvent.tutorialStageItems[this.tutorialStage].length >= this.selectionState.itemCount) {
               var2_int = 0;
               var4 = 103 / ((60 - param0) / 59);
               var3 = 0;
               var5 = 0;
-              while (this.field_d.field_k > var5) {
+              while (this.selectionState.itemCount > var5) {
                 if (var6 != 0) {
                   return;
                 }
-                if (MoveEvent.field_y[this.tutorialStage][var5] != 22) {
-                  if (23 == MoveEvent.field_y[this.tutorialStage][var5]) {
+                if (MoveEvent.tutorialStageItems[this.tutorialStage][var5] != 22) {
+                  if (23 == MoveEvent.tutorialStageItems[this.tutorialStage][var5]) {
                     var3 = this.a((byte) 45, var5) ? 1 : 0;
                   }
                 } else {
@@ -779,7 +779,7 @@ final class TutorialController {
                 }
                 var5++;
               }
-              MoveEvent.field_G.a(this.f(true), var2_int != 0, 100, this.field_d.field_h, var3 != 0, ij.field_y);
+              MoveEvent.field_G.a(this.f(true), var2_int != 0, 100, this.selectionState.selectedIndex, var3 != 0, ij.field_y);
               return;
             }
             return;
@@ -1026,8 +1026,8 @@ final class TutorialController {
         int var7Lifetime2;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4_int = MoveEvent.field_y[this.tutorialStage][param2];
-          if (this.field_d.d((byte) 124)) {
+          var4_int = MoveEvent.tutorialStageItems[this.tutorialStage][param2];
+          if (this.selectionState.hasActivationInput((byte) 124)) {
             ub.$cfr$intArgs$a$6d836999ad61(64, im.field_v[2]);
           }
           if (param1 != 0) {
@@ -1289,7 +1289,7 @@ final class TutorialController {
                                                                                                                         }
                                                                                                                       }
                                                                                                                     } else {
-                                                                                                                      if (!this.field_d.d((byte) 103)) {
+                                                                                                                      if (!this.selectionState.hasActivationInput((byte) 103)) {
                                                                                                                         return;
                                                                                                                       }
                                                                                                                       IntrusiveNode.field_h = false;
@@ -1312,7 +1312,7 @@ final class TutorialController {
                                                                                                                                         if (decompiledFrameRemainder2) {
                                                                                                                                           if (decompiledFrameRemainder1) {
                                                                                                                                             if (decompiledFrameRemainder0) {
-                                                                                                                                              if (!this.field_d.d((byte) 49)) {
+                                                                                                                                              if (!this.selectionState.hasActivationInput((byte) 49)) {
                                                                                                                                                 return;
                                                                                                                                               }
                                                                                                                                               if (DamageEvent.g(123)) {
@@ -1322,7 +1322,7 @@ final class TutorialController {
                                                                                                                                                 }
                                                                                                                                               }
                                                                                                                                               MoveEvent.field_C.a(false);
-                                                                                                                                              this.field_d.field_h = -1;
+                                                                                                                                              this.selectionState.selectedIndex = -1;
                                                                                                                                               var6 = param0 ? 1 : 0;
                                                                                                                                               CipherPacketBuffer.a(var6 != 0, 21, 1, jt.field_a);
                                                                                                                                               if (var9 == 0) {
@@ -1354,7 +1354,7 @@ final class TutorialController {
                                                                                                                                     if (decompiledFrameRemainder3) {
                                                                                                                                       if (decompiledFrameRemainder2) {
                                                                                                                                         if (decompiledFrameRemainder1) {
-                                                                                                                                          if (!this.field_d.d((byte) 48)) {
+                                                                                                                                          if (!this.selectionState.hasActivationInput((byte) 48)) {
                                                                                                                                             return;
                                                                                                                                           }
                                                                                                                                           if (DamageEvent.g(116)) {
@@ -1392,7 +1392,7 @@ final class TutorialController {
                                                                                                                                 if (decompiledFrameRemainder4) {
                                                                                                                                   if (decompiledFrameRemainder3) {
                                                                                                                                     if (decompiledFrameRemainder2) {
-                                                                                                                                      if (!this.field_d.d((byte) 127)) {
+                                                                                                                                      if (!this.selectionState.hasActivationInput((byte) 127)) {
                                                                                                                                         return;
                                                                                                                                       }
                                                                                                                                       if (this.tutorialStage != 2) {
@@ -1429,7 +1429,7 @@ final class TutorialController {
                                                                                                                             if (decompiledFrameRemainder5) {
                                                                                                                               if (decompiledFrameRemainder4) {
                                                                                                                                 if (decompiledFrameRemainder3) {
-                                                                                                                                  if (!this.field_d.d((byte) 107)) {
+                                                                                                                                  if (!this.selectionState.hasActivationInput((byte) 107)) {
                                                                                                                                     return;
                                                                                                                                   }
                                                                                                                                   var6 = param0 ? 1 : 0;
@@ -1457,7 +1457,7 @@ final class TutorialController {
                                                                                                                         if (decompiledFrameRemainder6) {
                                                                                                                           if (decompiledFrameRemainder5) {
                                                                                                                             if (decompiledFrameRemainder4) {
-                                                                                                                              if (!this.field_d.d((byte) 55)) {
+                                                                                                                              if (!this.selectionState.hasActivationInput((byte) 55)) {
                                                                                                                                 return;
                                                                                                                               }
                                                                                                                               if (jt.field_a == 13) {
@@ -1491,7 +1491,7 @@ final class TutorialController {
                                                                                                                     if (decompiledFrameRemainder7) {
                                                                                                                       if (decompiledFrameRemainder6) {
                                                                                                                         if (decompiledFrameRemainder5) {
-                                                                                                                          if (!this.field_d.d((byte) 54)) {
+                                                                                                                          if (!this.selectionState.hasActivationInput((byte) 54)) {
                                                                                                                             return;
                                                                                                                           }
                                                                                                                           var6 = param0 ? 1 : 0;
@@ -1516,7 +1516,7 @@ final class TutorialController {
                                                                                                                 if (decompiledFrameRemainder8) {
                                                                                                                   if (decompiledFrameRemainder7) {
                                                                                                                     if (decompiledFrameRemainder6) {
-                                                                                                                      if (!this.field_d.d((byte) 105)) {
+                                                                                                                      if (!this.selectionState.hasActivationInput((byte) 105)) {
                                                                                                                         return;
                                                                                                                       }
                                                                                                                       var6 = param0 ? 1 : 0;
@@ -1538,7 +1538,7 @@ final class TutorialController {
                                                                                                             if (decompiledFrameRemainder9) {
                                                                                                               if (decompiledFrameRemainder8) {
                                                                                                                 if (decompiledFrameRemainder7) {
-                                                                                                                  if (!this.field_d.d((byte) 80)) {
+                                                                                                                  if (!this.selectionState.hasActivationInput((byte) 80)) {
                                                                                                                     return;
                                                                                                                   }
                                                                                                                   var6 = param0 ? 1 : 0;
@@ -1558,7 +1558,7 @@ final class TutorialController {
                                                                                                         if (decompiledFrameRemainder10) {
                                                                                                           if (decompiledFrameRemainder9) {
                                                                                                             if (decompiledFrameRemainder8) {
-                                                                                                              if (!this.field_d.d((byte) 81)) {
+                                                                                                              if (!this.selectionState.hasActivationInput((byte) 81)) {
                                                                                                                 return;
                                                                                                               }
                                                                                                               var6 = param0 ? 1 : 0;
@@ -1576,7 +1576,7 @@ final class TutorialController {
                                                                                                     if (decompiledFrameRemainder11) {
                                                                                                       if (decompiledFrameRemainder10) {
                                                                                                         if (decompiledFrameRemainder9) {
-                                                                                                          if (!this.field_d.d((byte) 126)) {
+                                                                                                          if (!this.selectionState.hasActivationInput((byte) 126)) {
                                                                                                             return;
                                                                                                           }
                                                                                                           var6 = param0 ? 1 : 0;
@@ -1592,7 +1592,7 @@ final class TutorialController {
                                                                                                 if (decompiledFrameRemainder12) {
                                                                                                   if (decompiledFrameRemainder11) {
                                                                                                     if (decompiledFrameRemainder10) {
-                                                                                                      if (!this.field_d.d((byte) 81)) {
+                                                                                                      if (!this.selectionState.hasActivationInput((byte) 81)) {
                                                                                                         return;
                                                                                                       }
                                                                                                       vs.field_j = true;
@@ -1609,7 +1609,7 @@ final class TutorialController {
                                                                                               }
                                                                                               if (decompiledFrameRemainder12) {
                                                                                                 if (decompiledFrameRemainder11) {
-                                                                                                  if (!this.field_d.d((byte) 103)) {
+                                                                                                  if (!this.selectionState.hasActivationInput((byte) 103)) {
                                                                                                     return;
                                                                                                   }
                                                                                                   if (fj.field_c ||
@@ -1626,7 +1626,7 @@ final class TutorialController {
                                                                                               }
                                                                                             }
                                                                                             if (decompiledFrameRemainder12) {
-                                                                                              if (!this.field_d.d((byte) 111)) {
+                                                                                              if (!this.selectionState.hasActivationInput((byte) 111)) {
                                                                                                 return;
                                                                                               }
                                                                                               if (this.tutorialStage == 12) {
@@ -1642,7 +1642,7 @@ final class TutorialController {
                                                                                               }
                                                                                             }
                                                                                           }
-                                                                                          if (!this.field_d.d((byte) 79)) {
+                                                                                          if (!this.selectionState.hasActivationInput((byte) 79)) {
                                                                                             return;
                                                                                           }
                                                                                           if (rf.a(27875)) {
@@ -1661,7 +1661,7 @@ final class TutorialController {
                                                                                             return;
                                                                                           }
                                                                                         }
-                                                                                        if (!this.field_d.d((byte) 124)) {
+                                                                                        if (!this.selectionState.hasActivationInput((byte) 124)) {
                                                                                           return;
                                                                                         }
                                                                                         if (!DamageEvent.g(param1 + 89)) {
@@ -1676,7 +1676,7 @@ final class TutorialController {
                                                                                           return;
                                                                                         }
                                                                                       }
-                                                                                      if (!this.field_d.d((byte) 89)) {
+                                                                                      if (!this.selectionState.hasActivationInput((byte) 89)) {
                                                                                         return;
                                                                                       }
                                                                                       var6 = param0 ? 1 : 0;
@@ -1685,7 +1685,7 @@ final class TutorialController {
                                                                                         return;
                                                                                       }
                                                                                     }
-                                                                                    if (!this.field_d.d((byte) 49)) {
+                                                                                    if (!this.selectionState.hasActivationInput((byte) 49)) {
                                                                                       return;
                                                                                     }
                                                                                     if (this.tutorialStage == 13) {
@@ -1701,7 +1701,7 @@ final class TutorialController {
                                                                                       return;
                                                                                     }
                                                                                   }
-                                                                                  if (!this.field_d.d((byte) 100)) {
+                                                                                  if (!this.selectionState.hasActivationInput((byte) 100)) {
                                                                                     return;
                                                                                   }
                                                                                   if (18 == jt.field_a) {
@@ -1721,7 +1721,7 @@ final class TutorialController {
                                                                                     return;
                                                                                   }
                                                                                 }
-                                                                                if (!this.field_d.d((byte) 83)) {
+                                                                                if (!this.selectionState.hasActivationInput((byte) 83)) {
                                                                                   return;
                                                                                 }
                                                                                 var6 = param0 ? 1 : 0;
@@ -1730,7 +1730,7 @@ final class TutorialController {
                                                                                   return;
                                                                                 }
                                                                               }
-                                                                              if (!this.field_d.d((byte) 121)) {
+                                                                              if (!this.selectionState.hasActivationInput((byte) 121)) {
                                                                                 return;
                                                                               }
                                                                               var6 = param0 ? 1 : 0;
@@ -1739,7 +1739,7 @@ final class TutorialController {
                                                                                 return;
                                                                               }
                                                                             }
-                                                                            if (!this.field_d.d((byte) 85)) {
+                                                                            if (!this.selectionState.hasActivationInput((byte) 85)) {
                                                                               return;
                                                                             }
                                                                             ps.field_v = true;
@@ -1750,7 +1750,7 @@ final class TutorialController {
                                                                               return;
                                                                             }
                                                                           }
-                                                                          if (!this.field_d.d((byte) 98)) {
+                                                                          if (!this.selectionState.hasActivationInput((byte) 98)) {
                                                                             return;
                                                                           }
                                                                           stackIn_431_0 = !(uc.field_a);
@@ -1761,7 +1761,7 @@ final class TutorialController {
                                                                             return;
                                                                           }
                                                                         }
-                                                                        if (!this.field_d.d((byte) 59)) {
+                                                                        if (!this.selectionState.hasActivationInput((byte) 59)) {
                                                                           return;
                                                                         }
                                                                         ek.field_d = ek.field_d + 1;
@@ -1774,7 +1774,7 @@ final class TutorialController {
                                                                           return;
                                                                         }
                                                                       }
-                                                                      if (!this.field_d.d((byte) 55)) {
+                                                                      if (!this.selectionState.hasActivationInput((byte) 55)) {
                                                                         return;
                                                                       }
                                                                       var6 = param0 ? 1 : 0;
@@ -1784,18 +1784,18 @@ final class TutorialController {
                                                                       }
                                                                     }
                                                                     var5 = 0;
-                                                                    if (this.field_d.e(94) &&
+                                                                    if (this.selectionState.e(94) &&
                                                                       0 < bp.field_e) {
                                                                       var5 = 1;
                                                                       mh.a(0, (byte) -35);
                                                                     }
-                                                                    if (this.field_d.b(96) &&
+                                                                    if (this.selectionState.b(96) &&
                                                                       256 > bp.field_e) {
                                                                       var5 = 1;
                                                                       mh.a(256, (byte) -96);
                                                                     }
-                                                                    if (this.field_d.a(false)) {
-                                                                      var6 = -100 + this.a(true, param2) - (-this.a(param2, param1 - 3858) - wd.field_b) >> 1;
+                                                                    if (this.selectionState.isPointerPressed(false)) {
+                                                                      var6 = -100 + this.getItemLeftX(true, param2) - (-this.getItemRightX(param2, param1 - 3858) - wd.field_b) >> 1;
                                                                       var7Lifetime2 = AiPlanningStrategy.field_d - var6;
                                                                       var8 = 256 * var7Lifetime2 / 100;
                                                                       if (var8 <= 0) {
@@ -1820,12 +1820,12 @@ final class TutorialController {
                                                                       }
                                                                       var5 = 1;
                                                                     }
-                                                                    if (this.field_d.a((byte) -67) &&
+                                                                    if (this.selectionState.isDecrementKeyPressed((byte) -67) &&
                                                                       bp.field_e > 0) {
                                                                       hi.b(false);
                                                                       var5 = 1;
                                                                     }
-                                                                    if (this.field_d.a(-98) &&
+                                                                    if (this.selectionState.isIncrementKeyPressed(-98) &&
                                                                       bp.field_e < 256) {
                                                                       hs.a(30);
                                                                       var5 = 1;
@@ -1833,7 +1833,7 @@ final class TutorialController {
                                                                     if (var5 == 0) {
                                                                       return;
                                                                     }
-                                                                    if (this.field_d.a(false) &&
+                                                                    if (this.selectionState.isPointerPressed(false) &&
                                                                       uk.field_n <= pn.field_h) {
                                                                       return;
                                                                     }
@@ -1843,14 +1843,14 @@ final class TutorialController {
                                                                       return;
                                                                     }
                                                                   }
-                                                                  if (this.field_d.e(-100)) {
+                                                                  if (this.selectionState.e(-100)) {
                                                                     jf.b(0, 123);
                                                                   }
-                                                                  if (this.field_d.b(param1 + 96)) {
+                                                                  if (this.selectionState.b(param1 + 96)) {
                                                                     jf.b(256, param1 + 89);
                                                                   }
-                                                                  if (this.field_d.a(false)) {
-                                                                    var6 = -100 + (this.a(true, param2) + this.a(param2, -3858) + wd.field_b) >> 1;
+                                                                  if (this.selectionState.isPointerPressed(false)) {
+                                                                    var6 = -100 + (this.getItemLeftX(true, param2) + this.getItemRightX(param2, -3858) + wd.field_b) >> 1;
                                                                     var7Lifetime1 = -var6 + AiPlanningStrategy.field_d;
                                                                     var8Lifetime1 = 256 * var7Lifetime1 / 100;
                                                                     if (var8Lifetime1 <= 0) {
@@ -1874,10 +1874,10 @@ final class TutorialController {
                                                                       }
                                                                     }
                                                                   }
-                                                                  if (this.field_d.a((byte) -62)) {
+                                                                  if (this.selectionState.isDecrementKeyPressed((byte) -62)) {
                                                                     wn.a(true);
                                                                   }
-                                                                  if (!this.field_d.a(param1 ^ -98)) {
+                                                                  if (!this.selectionState.isIncrementKeyPressed(param1 ^ -98)) {
                                                                     return;
                                                                   }
                                                                   vv.a(-30647);
@@ -1885,7 +1885,7 @@ final class TutorialController {
                                                                     return;
                                                                   }
                                                                 }
-                                                                if (!this.field_d.d((byte) 76)) {
+                                                                if (!this.selectionState.hasActivationInput((byte) 76)) {
                                                                   return;
                                                                 }
                                                                 mi.f(param1 - 28093);
@@ -1893,7 +1893,7 @@ final class TutorialController {
                                                                   return;
                                                                 }
                                                               }
-                                                              if (!this.field_d.d((byte) 111)) {
+                                                              if (!this.selectionState.hasActivationInput((byte) 111)) {
                                                                 return;
                                                               }
                                                               rd.field_j.d(122, param0);
@@ -1903,7 +1903,7 @@ final class TutorialController {
                                                                 return;
                                                               }
                                                             }
-                                                            if (!this.field_d.d((byte) 117)) {
+                                                            if (!this.selectionState.hasActivationInput((byte) 117)) {
                                                               return;
                                                             }
                                                             rd.field_j.h((byte) 69);
@@ -1913,7 +1913,7 @@ final class TutorialController {
                                                               return;
                                                             }
                                                           }
-                                                          if (!this.field_d.d((byte) 96)) {
+                                                          if (!this.selectionState.hasActivationInput((byte) 96)) {
                                                             return;
                                                           }
                                                           rd.field_j.r(122);
@@ -1923,7 +1923,7 @@ final class TutorialController {
                                                             return;
                                                           }
                                                         }
-                                                        if (!this.field_d.d((byte) 72)) {
+                                                        if (!this.selectionState.hasActivationInput((byte) 72)) {
                                                           return;
                                                         }
                                                         rd.field_j.l((byte) 108);
@@ -1933,7 +1933,7 @@ final class TutorialController {
                                                           return;
                                                         }
                                                       }
-                                                      if (!this.field_d.d((byte) 73)) {
+                                                      if (!this.selectionState.hasActivationInput((byte) 73)) {
                                                         return;
                                                       }
                                                       if (fj.field_c) {
@@ -1957,7 +1957,7 @@ final class TutorialController {
                                                         return;
                                                       }
                                                     }
-                                                    if (!this.field_d.d((byte) 45)) {
+                                                    if (!this.selectionState.hasActivationInput((byte) 45)) {
                                                       return;
                                                     }
                                                     var6 = param0 ? 1 : 0;
@@ -1966,7 +1966,7 @@ final class TutorialController {
                                                       return;
                                                     }
                                                   }
-                                                  if (!this.field_d.d((byte) 38)) {
+                                                  if (!this.selectionState.hasActivationInput((byte) 38)) {
                                                     return;
                                                   }
                                                   nf.field_Mb = 0;
@@ -1974,7 +1974,7 @@ final class TutorialController {
                                                     return;
                                                   }
                                                 }
-                                                if (!this.field_d.d((byte) 74)) {
+                                                if (!this.selectionState.hasActivationInput((byte) 74)) {
                                                   return;
                                                 }
                                                 nf.field_Mb = 1;
@@ -1982,7 +1982,7 @@ final class TutorialController {
                                                   return;
                                                 }
                                               }
-                                              if (!this.field_d.d((byte) 124)) {
+                                              if (!this.selectionState.hasActivationInput((byte) 124)) {
                                                 return;
                                               }
                                               if (this.tutorialStage != 10) {
@@ -2003,7 +2003,7 @@ final class TutorialController {
                                                 return;
                                               }
                                             }
-                                            if (!this.field_d.d((byte) 100)) {
+                                            if (!this.selectionState.hasActivationInput((byte) 100)) {
                                               return;
                                             }
                                             if (!this.a((byte) -95, param2)) {
@@ -2014,15 +2014,15 @@ final class TutorialController {
                                             if (fieldTemp$0 != 0) {
                                               return;
                                             }
-                                            if (this.field_d.field_h != 0) {
+                                            if (this.selectionState.selectedIndex != 0) {
                                               return;
                                             }
-                                            this.field_d.field_h = 2;
+                                            this.selectionState.selectedIndex = 2;
                                             if (var9 == 0) {
                                               return;
                                             }
                                           }
-                                          if (!this.field_d.d((byte) 71)) {
+                                          if (!this.selectionState.hasActivationInput((byte) 71)) {
                                             return;
                                           }
                                           if (!this.a((byte) 70, param2)) {
@@ -2033,15 +2033,15 @@ final class TutorialController {
                                           if (~fieldTemp$1 != ~(-1 + PortalLossCondition.field_c.length)) {
                                             return;
                                           }
-                                          if (this.field_d.field_h != 2) {
+                                          if (this.selectionState.selectedIndex != 2) {
                                             return;
                                           }
-                                          this.field_d.field_h = 0;
+                                          this.selectionState.selectedIndex = 0;
                                           if (var9 == 0) {
                                             return;
                                           }
                                         }
-                                        if (!this.field_d.d((byte) 112)) {
+                                        if (!this.selectionState.hasActivationInput((byte) 112)) {
                                           return;
                                         }
                                         var6 = param0 ? 1 : 0;
@@ -2050,7 +2050,7 @@ final class TutorialController {
                                           return;
                                         }
                                       }
-                                      if (!this.field_d.d((byte) 46)) {
+                                      if (!this.selectionState.hasActivationInput((byte) 46)) {
                                         return;
                                       }
                                       var6 = param0 ? 1 : 0;
@@ -2059,7 +2059,7 @@ final class TutorialController {
                                         return;
                                       }
                                     }
-                                    if (!this.field_d.d((byte) 127)) {
+                                    if (!this.selectionState.hasActivationInput((byte) 127)) {
                                       return;
                                     }
                                     var6 = param0 ? 1 : 0;
@@ -2068,7 +2068,7 @@ final class TutorialController {
                                       return;
                                     }
                                   }
-                                  if (!this.field_d.d((byte) 95)) {
+                                  if (!this.selectionState.hasActivationInput((byte) 95)) {
                                     return;
                                   }
                                   var6 = param0 ? 1 : 0;
@@ -2077,7 +2077,7 @@ final class TutorialController {
                                     return;
                                   }
                                 }
-                                if (!this.field_d.d((byte) 67)) {
+                                if (!this.selectionState.hasActivationInput((byte) 67)) {
                                   return;
                                 }
                                 ho.a(CombatEvent.d((byte) -128), (byte) -3);
@@ -2085,7 +2085,7 @@ final class TutorialController {
                                   return;
                                 }
                               }
-                              if (!this.field_d.d((byte) 58)) {
+                              if (!this.selectionState.hasActivationInput((byte) 58)) {
                                 return;
                               }
                               var6 = param0 ? 1 : 0;
@@ -2094,7 +2094,7 @@ final class TutorialController {
                                 return;
                               }
                             }
-                            if (!this.field_d.d((byte) 41)) {
+                            if (!this.selectionState.hasActivationInput((byte) 41)) {
                               return;
                             }
                             IntrusiveNode.field_h = true;
@@ -2104,7 +2104,7 @@ final class TutorialController {
                               return;
                             }
                           }
-                          if (!this.field_d.d((byte) 47)) {
+                          if (!this.selectionState.hasActivationInput((byte) 47)) {
                             return;
                           }
                           var6 = param0 ? 1 : 0;
@@ -2113,7 +2113,7 @@ final class TutorialController {
                             return;
                           }
                         }
-                        if (!this.field_d.d((byte) 111)) {
+                        if (!this.selectionState.hasActivationInput((byte) 111)) {
                           return;
                         }
                         stackIn_693_0 = r.field_B;
@@ -2155,7 +2155,7 @@ final class TutorialController {
                           return;
                         }
                       }
-                      if (!this.field_d.d((byte) 124)) {
+                      if (!this.selectionState.hasActivationInput((byte) 124)) {
                         return;
                       }
                       stackIn_740_0 = mg.field_g;
@@ -2176,7 +2176,7 @@ final class TutorialController {
                         return;
                       }
                     }
-                    if (!this.field_d.d((byte) 91)) {
+                    if (!this.selectionState.hasActivationInput((byte) 91)) {
                       return;
                     }
                     stackIn_757_0 = !(vg.field_m);
@@ -2185,7 +2185,7 @@ final class TutorialController {
                       return;
                     }
                   }
-                  if (!this.field_d.d((byte) 61)) {
+                  if (!this.selectionState.hasActivationInput((byte) 61)) {
                     return;
                   }
                   t.field_e = t.field_e + 1;
@@ -2215,7 +2215,7 @@ final class TutorialController {
                     return;
                   }
                 }
-                if (!this.field_d.d((byte) 102)) {
+                if (!this.selectionState.hasActivationInput((byte) 102)) {
                   return;
                 }
                 i.n(14737632);
@@ -2225,7 +2225,7 @@ final class TutorialController {
                   return;
                 }
               }
-              if (!this.field_d.d((byte) 89)) {
+              if (!this.selectionState.hasActivationInput((byte) 89)) {
                 return;
               }
               kv.a(-28541);
@@ -2235,7 +2235,7 @@ final class TutorialController {
                 return;
               }
             }
-            if (!this.field_d.d((byte) 88)) {
+            if (!this.selectionState.hasActivationInput((byte) 88)) {
               return;
             }
             this.a((byte) 93, ev.field_d, ts.field_j);
@@ -2247,7 +2247,7 @@ final class TutorialController {
           }
           if (var4_int >= 55 &&
             param2 < 59 &&
-            this.field_d.d((byte) 121)) {
+            this.selectionState.hasActivationInput((byte) 121)) {
             var6Lifetime1 = -55 + var4_int;
             if (var6Lifetime1 > 1 &&
               rf.a(param1 + 27875) &&
@@ -2655,7 +2655,7 @@ final class TutorialController {
           if (MoveEvent.field_E == null) {
             return;
           }
-          MoveEvent.field_E.a(this.field_d.field_h, (byte) -28, t.field_e, wf.field_D, vg.field_m, mg.field_g, r.field_B, this.f(true));
+          MoveEvent.field_E.a(this.selectionState.selectedIndex, (byte) -28, t.field_e, wf.field_D, vg.field_m, mg.field_g, r.field_B, this.f(true));
           var2_int = -9 % ((61 - param0) / 60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2774,7 +2774,7 @@ final class TutorialController {
           var3_int = db.a(true, 55);
           var4 = MatchConditionEntry.a(53, (byte) 94);
           if (param1 != -4) {
-            discarded$0 = this.a(-41, 32);
+            discarded$0 = this.getItemRightX(-41, 32);
           }
           if (param0) {
             stackIn_8_0 = i.field_Nb;
@@ -2985,21 +2985,21 @@ final class TutorialController {
         try {
           var4_int = 0;
           if (param2 != 31) {
-            discarded$0 = this.a(false, -54);
+            discarded$0 = this.getItemLeftX(false, -54);
           }
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(MoveEvent.field_y[this.tutorialStage].length > var4_int)))) {
-            var5 = -5 + this.a(var4_int, true);
+          while (!(decompiledNaturalLoopExit0 = (!(MoveEvent.tutorialStageItems[this.tutorialStage].length > var4_int)))) {
+            var5 = -5 + this.getItemTopY(var4_int, true);
             stackOut_5_0 = this.a((byte) -110, var4_int);
             stackIn_36_0 = stackOut_5_0 ? 1 : 0;
             stackIn_6_0 = stackOut_5_0;
             if (var7 == 0) {
               if (stackIn_6_0 &&
-                this.a(true, var4_int) <= param1 &&
-                this.a(var4_int, -3858) > param1 &&
+                this.getItemLeftX(true, var4_int) <= param1 &&
+                this.getItemRightX(var4_int, -3858) > param1 &&
                 param0 >= var5 &&
-                param0 < this.d(12, var4_int) + var5) {
-                var6 = MoveEvent.field_y[this.tutorialStage][var4_int];
+                param0 < this.getItemHeight(12, var4_int) + var5) {
+                var6 = MoveEvent.tutorialStageItems[this.tutorialStage][var4_int];
                 if ((var6 == 32 ||
                   var6 == 31) && hi.field_j < 2) {
                   stackIn_31_0 = -1;
@@ -3236,52 +3236,52 @@ final class TutorialController {
             discarded$0 = this.a((byte) 126, 58);
           }
           if (96 == rs.field_q) {
-            if (this.field_d.field_h <= 0) {
-              this.field_d.a(1, false);
+            if (this.selectionState.selectedIndex <= 0) {
+              this.selectionState.selectIndex(1, false);
               if ((var3 != 0) &&
-                (this.field_d.field_h != 2)) {
-                this.field_d.a(0, false);
+                (this.selectionState.selectedIndex != 2)) {
+                this.selectionState.selectIndex(0, false);
               }
             } else {
-              if (this.field_d.field_h != 2) {
-                this.field_d.a(0, false);
+              if (this.selectionState.selectedIndex != 2) {
+                this.selectionState.selectIndex(0, false);
               }
             }
           }
           if (rs.field_q == 97) {
-            if (this.field_d.field_h != 1) {
-              if (this.field_d.field_h != 2) {
-                this.field_d.a(1, false);
+            if (this.selectionState.selectedIndex != 1) {
+              if (this.selectionState.selectedIndex != 2) {
+                this.selectionState.selectIndex(1, false);
                 if (var3 != 0) {
-                  this.field_d.a(0, false);
+                  this.selectionState.selectIndex(0, false);
                 }
               }
             } else {
-              this.field_d.a(0, false);
+              this.selectionState.selectIndex(0, false);
             }
           }
           if (99 == rs.field_q) {
-            if (!(this.field_d.field_h >= 0) ||
-              !(this.field_d.field_h <= 1)) {
-              this.field_d.a(nf.field_Mb, false);
+            if (!(this.selectionState.selectedIndex >= 0) ||
+              !(this.selectionState.selectedIndex <= 1)) {
+              this.selectionState.selectIndex(nf.field_Mb, false);
               if (var3 != 0) {
-                this.field_d.a(2, false);
+                this.selectionState.selectIndex(2, false);
               }
             } else {
-              this.field_d.a(2, false);
+              this.selectionState.selectIndex(2, false);
             }
           }
           if (rs.field_q == 98) {
-            if (2 != this.field_d.field_h) {
-              this.field_d.a(2, false);
+            if (2 != this.selectionState.selectedIndex) {
+              this.selectionState.selectIndex(2, false);
               if (var3 != 0) {
-                this.field_d.a(nf.field_Mb, false);
+                this.selectionState.selectIndex(nf.field_Mb, false);
               }
             } else {
-              this.field_d.a(nf.field_Mb, false);
+              this.selectionState.selectIndex(nf.field_Mb, false);
             }
           }
-          this.field_d.c(0);
+          this.selectionState.pollKeyForButtonState(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3290,12 +3290,12 @@ final class TutorialController {
         }
     }
 
-    final void d(boolean param0) {
+    final void clearSelectionResources(boolean obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.field_d.field_h = -1;
-          if (!param0) {
+          this.selectionState.selectedIndex = -1;
+          if (!obfuscationGuard) {
             this.k(-81);
           }
           b.field_n = null;
@@ -3311,11 +3311,11 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.P(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "ci.P(" + obfuscationGuard + ')');
         }
     }
 
-    private final int a(int param0, boolean param1) {
+    private final int getItemTopY(int itemIndex, boolean obfuscationGuard) {
         int stackIn_8_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_28_0 = 0;
@@ -3332,13 +3332,13 @@ final class TutorialController {
         int var3_int = 0;
         RuntimeException var3 = null;
         try {
-          var3_int = MoveEvent.field_D.a(this.tutorialStage, (byte) -118);
+          var3_int = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -118);
           if (this.tutorialStage == 3 &&
             ma.field_Z) {
             var3_int -= 32;
           }
-          if (param0 == -1) {
-            stackIn_8_0 = var3_int - MoveEvent.field_D.b(this.tutorialStage, (byte) 106);
+          if (itemIndex == -1) {
+            stackIn_8_0 = var3_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 106);
             return stackIn_8_0;
           }
           if ((!DamageEvent.g(97) ||
@@ -3346,15 +3346,15 @@ final class TutorialController {
             9 != this.tutorialStage) {
             if (6 == this.tutorialStage &&
               !DamageEvent.g(78)) {
-              if (param0 < 2) {
+              if (itemIndex < 2) {
                 stackIn_28_0 = var3_int;
                 return stackIn_28_0;
               }
-              stackIn_30_0 = MoveEvent.field_D.b(this.tutorialStage, (byte) 116) + var3_int;
+              stackIn_30_0 = MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 116) + var3_int;
               return stackIn_30_0;
             }
             if (this.tutorialStage == 11) {
-              stackIn_33_0 = MoveEvent.field_D.a(-6, this.tutorialStage) - MoveEvent.field_D.b(this.tutorialStage, (byte) -102);
+              stackIn_33_0 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -102);
               return stackIn_33_0;
             }
             if (this.tutorialStage != 13 &&
@@ -3363,19 +3363,19 @@ final class TutorialController {
               this.tutorialStage != 20) {
               if (this.tutorialStage == 7 &&
                 MoveEvent.field_G != null) {
-                stackIn_51_0 = MoveEvent.field_G.g(-95, param0);
+                stackIn_51_0 = MoveEvent.field_G.g(-95, itemIndex);
                 return stackIn_51_0;
               }
               if (this.tutorialStage == 7) {
                 stackIn_56_0 = 1;
                 return stackIn_56_0;
               }
-              if (!param1) {
-                this.field_d = (dl) null;
+              if (!obfuscationGuard) {
+                this.selectionState = (UiSelectionState) null;
               }
               if (this.tutorialStage == 5 &&
                 MoveEvent.field_E != null) {
-                stackIn_65_0 = MoveEvent.field_E.a(param0, 1084326849);
+                stackIn_65_0 = MoveEvent.field_E.a(itemIndex, 1084326849);
                 return stackIn_65_0;
               }
               if (5 == this.tutorialStage) {
@@ -3383,18 +3383,18 @@ final class TutorialController {
                 return stackIn_70_0;
               }
               if (this.tutorialStage == 25 &&
-                param0 > -1) {
+                itemIndex > -1) {
                 var3_int = var3_int + (nr.field_e.a(vd.field_a, 500, 0) >> 1);
               }
               if (19 == this.tutorialStage &&
-                -1 < param0) {
+                -1 < itemIndex) {
                 var3_int = var3_int + (nr.field_e.a(mu.field_e, 500, 0) >> 1);
               }
               if (this.tutorialStage != 0) {
-                stackIn_85_0 = var3_int + param0 * MoveEvent.field_D.b(this.tutorialStage, (byte) -29);
+                stackIn_85_0 = var3_int + itemIndex * MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -29);
                 return stackIn_85_0;
               }
-              stackIn_83_0 = MoveEvent.field_D.b(this.tutorialStage, (byte) -59) * param0 + (var3_int + 5);
+              stackIn_83_0 = MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -59) * itemIndex + (var3_int + 5);
               return stackIn_83_0;
             }
             stackIn_45_0 = var3_int;
@@ -3405,7 +3405,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.S(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var3), "ci.S(" + itemIndex + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -3811,7 +3811,7 @@ final class TutorialController {
         }
     }
 
-    private final String e(int param0, int param1) {
+    private final String getItemText(int itemId, int obfuscationGuard) {
         StringBuilder stackIn_25_0 = null;
         String stackIn_26_1 = null;
         StringBuilder stackIn_33_0 = null;
@@ -3823,17 +3823,17 @@ final class TutorialController {
         int var4 = 0;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3 = DisplacedUnitMarker.field_t[param0];
-          if (param0 == 8) {
+          var3 = DisplacedUnitMarker.field_t[itemId];
+          if (itemId == 8) {
             var3 = this.f(true);
           }
-          if (param0 == 28) {
+          if (itemId == 28) {
             var3 = DisplacedUnitMarker.field_t[28] + r.field_B;
           }
-          if (param0 == 46) {
+          if (itemId == 46) {
             var3 = DisplacedUnitMarker.field_t[28] + mg.field_g;
           }
-          if (param0 == 33) {
+          if (itemId == 33) {
             if (vg.field_m) {
               var3 = DisplacedUnitMarker.field_t[33] + dn.field_Mb;
               if (var4 != 0) {
@@ -3843,7 +3843,7 @@ final class TutorialController {
               var3 = DisplacedUnitMarker.field_t[33] + qd.field_J;
             }
           }
-          if (36 == param0) {
+          if (36 == itemId) {
             stackIn_25_0 = new StringBuilder().append(DisplacedUnitMarker.field_t[36]);
             if (!cu.field_a) {
               stackIn_26_1 = uk.field_k;
@@ -3852,7 +3852,7 @@ final class TutorialController {
             }
             var3 = ((StringBuilder) (Object) stackIn_25_0).append(stackIn_26_1).toString();
           }
-          if (param0 == 37) {
+          if (itemId == 37) {
             stackIn_33_0 = new StringBuilder().append(DisplacedUnitMarker.field_t[37]);
             if (!uc.field_a) {
               stackIn_34_1 = fk.field_a;
@@ -3861,16 +3861,16 @@ final class TutorialController {
             }
             var3 = ((StringBuilder) (Object) stackIn_33_0).append(stackIn_34_1).toString();
           }
-          if (param0 == 38) {
+          if (itemId == 38) {
             var3 = DisplacedUnitMarker.field_t[38] + cf.field_m[ek.field_d];
           }
-          if (param0 == 29) {
+          if (itemId == 29) {
             var3 = DisplacedUnitMarker.field_t[29] + h.field_e[t.field_e];
           }
-          if (param1 != 29) {
+          if (obfuscationGuard != 29) {
             this.g((byte) 101);
           }
-          if (param0 == 9 &&
+          if (itemId == 9 &&
             rd.field_j != null) {
             if (rd.field_j.field_z) {
               var3 = ac.field_u;
@@ -3884,7 +3884,7 @@ final class TutorialController {
               }
             }
           }
-          if (47 == param0 &&
+          if (47 == itemId &&
             this.tutorialStage == 22) {
             var3 = lb.field_c;
           }
@@ -3893,24 +3893,24 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3_ref), "ci.C(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var3_ref), "ci.C(" + itemId + ',' + obfuscationGuard + ')');
         }
     }
 
-    final static String c(int param0, int param1, int param2) {
+    final static String formatCoordinatePair(int x, int obfuscationGuard, int y) {
         RuntimeException var3 = null;
         String stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 0) {
+          if (obfuscationGuard != 0) {
             TutorialController.h(-12);
           }
-          stackIn_4_0 = "(" + param0 + ", " + param2 + ")";
+          stackIn_4_0 = "(" + x + ", " + y + ")";
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.CB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) var3), "ci.CB(" + x + ',' + obfuscationGuard + ',' + y + ')');
         }
     }
 
@@ -4110,7 +4110,7 @@ final class TutorialController {
             stackIn_11_0 = param0;
           }
           if (stackIn_11_0 != -92) {
-            discarded$1 = this.a(124, 23);
+            discarded$1 = this.getItemRightX(124, 23);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4120,19 +4120,19 @@ final class TutorialController {
         }
     }
 
-    final void a(int param0, boolean param1, int param2) {
+    final void restoreStageSelection(int obfuscationGuard, boolean pointerDriven, int fallbackIndex) {
         String discarded$1 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (this.field_d.field_h != -1) {
-            param2 = this.field_d.field_h;
+          if (this.selectionState.selectedIndex != -1) {
+            fallbackIndex = this.selectionState.selectedIndex;
           }
-          this.field_d.a(param2, param1, this.b(ko.field_b, AiPlanningStrategy.field_d, 31), 0);
+          this.selectionState.restoreSelection(fallbackIndex, pointerDriven, this.b(ko.field_b, AiPlanningStrategy.field_d, 31), 0);
           vs.field_a = -1;
           lm.field_c = -1;
-          ac.field_p = param2;
-          pn.field_m = param2;
+          ac.field_p = fallbackIndex;
+          pn.field_m = fallbackIndex;
           pn.field_h = uk.field_n;
           if (this.tutorialStage == 22 ||
             21 == this.tutorialStage) {
@@ -4141,8 +4141,8 @@ final class TutorialController {
             MoveEvent.field_C.c((byte) -120);
             MoveEvent.field_C.b(92);
           }
-          if (param0 < 50) {
-            discarded$1 = this.e(-53, 92);
+          if (obfuscationGuard < 50) {
+            discarded$1 = this.getItemText(-53, 92);
           }
           if (this.tutorialStage == 8) {
             this.n(21666);
@@ -4151,7 +4151,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ci.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) var4), "ci.E(" + obfuscationGuard + ',' + pointerDriven + ',' + fallbackIndex + ')');
         }
     }
 
@@ -4265,7 +4265,7 @@ final class TutorialController {
                 if (stackIn_43_0 == stackIn_43_1) {
                   TeamRoster.field_e.f(db.a(true, var8Lifetime1 - 35), MatchConditionEntry.a(-35 + var9Lifetime1, (byte) 94), var2_int);
                 }
-                lw.field_ob.d(db.a(true, var8Lifetime1 - 20), MatchConditionEntry.a(-20 + var9Lifetime1, (byte) 94), bo.field_g[MoveAttackAction.field_s + 1]);
+                lw.field_ob.d(db.a(true, var8Lifetime1 - 20), MatchConditionEntry.a(-20 + var9Lifetime1, (byte) 94), TutorialLayout.field_g[MoveAttackAction.field_s + 1]);
                 km.field_h[0].g(db.a(true, var8Lifetime1 - 23), MatchConditionEntry.a(-23 + var9Lifetime1, (byte) 94));
                 if ((1 << var7Lifetime2 & pg.field_d.field_b[1 + MoveAttackAction.field_s]) > 0) {
                   DeployAction.field_x[wp.field_H[MoveAttackAction.field_s + 1][var7Lifetime2]].g(db.a(true, -19 + var8Lifetime1), MatchConditionEntry.a(-19 + var9Lifetime1, (byte) 94));
@@ -4306,7 +4306,7 @@ final class TutorialController {
                   MoveAttackAction.field_s == li.field_q) {
                   TeamRoster.field_e.f(db.a(true, var8Lifetime1Lifetime1 - 35), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 35, (byte) 94), var2_int);
                 }
-                lw.field_ob.d(db.a(true, var8Lifetime1Lifetime1 - 20), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 20, (byte) 94), bo.field_g[1 + li.field_q]);
+                lw.field_ob.d(db.a(true, var8Lifetime1Lifetime1 - 20), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 20, (byte) 94), TutorialLayout.field_g[1 + li.field_q]);
                 if ((1 << var7Lifetime2 & pg.field_d.field_b[li.field_q + 1]) <= 0) {
                   DeployAction.field_x[wp.field_H[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94), 0);
                   km.field_h[0].g(db.a(true, var8Lifetime1Lifetime1 - 23), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 23, (byte) 94), 10);
@@ -4368,7 +4368,7 @@ final class TutorialController {
         try {
           var10_int = og.field_m;
           if (param6 != 310) {
-            this.b(true, 56, 5);
+            this.drawStageItem(true, 56, 5);
           }
           if (!(og.field_m >= 0) ||
             !(og.field_m < jr.field_h.length)) {
@@ -4422,7 +4422,7 @@ final class TutorialController {
         }
     }
 
-    TutorialController(int param0) {
+    TutorialController(int tutorialStage) {
         int stackIn_20_0 = 0;
         int stackIn_20_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -4438,25 +4438,25 @@ final class TutorialController {
         int var9 = 0;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.tutorialStage = param0;
-          this.field_d = new dl(MoveEvent.field_y[this.tutorialStage].length);
+          this.tutorialStage = tutorialStage;
+          this.selectionState = new UiSelectionState(MoveEvent.tutorialStageItems[this.tutorialStage].length);
           if (0 == this.tutorialStage) {
-            this.field_d.field_h = 2;
+            this.selectionState.selectedIndex = 2;
           }
           if (this.tutorialStage == 7) {
-            this.field_d.field_h = 1;
+            this.selectionState.selectedIndex = 1;
           }
           if (this.tutorialStage == 8) {
             this.n(21666);
           }
-          var2_int = MoveEvent.field_D.a((byte) -55, this.tutorialStage) - MoveEvent.field_D.b(this.tutorialStage, 29);
+          var2_int = MoveEvent.tutorialLayout.getRightX((byte) -55, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29);
           var3 = var2_int;
-          var4_ref_int__ = MoveEvent.field_y[this.tutorialStage];
+          var4_ref_int__ = MoveEvent.tutorialStageItems[this.tutorialStage];
           var5 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4_ref_int__.length <= var5))) {
             var6 = var4_ref_int__[var5];
-            var7 = this.e(var6, 29);
+            var7 = this.getItemText(var6, 29);
             var8 = nr.field_e.a(var7) / 2 + 20;
             stackIn_20_0 = var2_int;
             stackIn_20_1 = var8;
@@ -4474,13 +4474,13 @@ final class TutorialController {
             stackIn_20_1 = var2_int;
           }
           var4 = stackIn_20_0 + stackIn_20_1;
-          MoveEvent.field_D.a(-1, MoveEvent.field_D.b(this.tutorialStage, 29) - var4 / 2, this.tutorialStage);
-          MoveEvent.field_D.b(-128, MoveEvent.field_D.a((byte) -106, this.tutorialStage) + var4 / 2, this.tutorialStage);
+          MoveEvent.tutorialLayout.setLeftX(-1, MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29) - var4 / 2, this.tutorialStage);
+          MoveEvent.tutorialLayout.setRightX(-128, MoveEvent.tutorialLayout.getRightX((byte) -106, this.tutorialStage) + var4 / 2, this.tutorialStage);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.<init>(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "ci.<init>(" + tutorialStage + ')');
         }
     }
 
@@ -4698,23 +4698,23 @@ final class TutorialController {
                   }
                 }
                 this.j(108);
-                if (this.field_d.field_h == -1) {
+                if (this.selectionState.selectedIndex == -1) {
                   continue;
                 }
-                this.a(false, 0, this.field_d.field_h);
+                this.a(false, 0, this.selectionState.selectedIndex);
                 if (var4 == 0) {
                   continue;
                 }
               } else {
                 ac.field_p = this.b(ko.field_b, AiPlanningStrategy.field_d, 31);
-                this.field_d.a(0, this.b(TeleportAction.field_z, iu.field_t, 31), ac.field_p);
+                this.selectionState.updatePointerSelection(0, this.b(TeleportAction.field_z, iu.field_t, 31), ac.field_p);
               }
               if (~pn.field_m != ~ac.field_p) {
                 ub.$cfr$intArgs$a$6d836999ad61(90, im.field_v[1]);
                 pn.field_m = ac.field_p;
               }
-              if (this.field_d.field_h != -1) {
-                this.a(true, 0, this.field_d.field_h);
+              if (this.selectionState.selectedIndex != -1) {
+                this.a(true, 0, this.selectionState.selectedIndex);
               }
               if (DeployEvent.field_A == 1 &&
                 this.tutorialStage == 12) {
@@ -5098,21 +5098,21 @@ final class TutorialController {
                   jt.field_a != 18) {
                   if (8 != this.tutorialStage &&
                     this.tutorialStage != 9) {
-                    this.field_d.b((byte) -120);
+                    this.selectionState.pollNavigationKeys((byte) -120);
                     if (var3 != 0) {
-                      this.field_d.a(0, (byte) -7);
-                      this.field_d.a(1, (byte) 127);
+                      this.selectionState.pollNavigationKeysWithFallback(0, (byte) -7);
+                      this.selectionState.pollNavigationKeysWithFallback(1, (byte) 127);
                       this.f((byte) 100);
                     }
                   } else {
-                    this.field_d.a(0, (byte) -7);
+                    this.selectionState.pollNavigationKeysWithFallback(0, (byte) -7);
                     if (var3 != 0) {
-                      this.field_d.a(1, (byte) 127);
+                      this.selectionState.pollNavigationKeysWithFallback(1, (byte) 127);
                       this.f((byte) 100);
                     }
                   }
                 } else {
-                  this.field_d.a(1, (byte) 127);
+                  this.selectionState.pollNavigationKeysWithFallback(1, (byte) 127);
                   if (var3 != 0) {
                     this.f((byte) 100);
                   }
@@ -5122,20 +5122,20 @@ final class TutorialController {
           } else {
             this.f((byte) 100);
           }
-          if (0 > this.field_d.field_h) {
+          if (0 > this.selectionState.selectedIndex) {
             return;
           }
-          var2_intLifetime1 = MoveEvent.field_y[this.tutorialStage][this.field_d.field_h];
+          var2_intLifetime1 = MoveEvent.tutorialStageItems[this.tutorialStage][this.selectionState.selectedIndex];
           if (32 != var2_intLifetime1 &&
             var2_intLifetime1 != 31) {
             return;
           }
           if (2 > hi.field_j) {
             if (rs.field_q == 98) {
-              this.field_d.field_h = -1 + this.field_d.field_k;
+              this.selectionState.selectedIndex = -1 + this.selectionState.itemCount;
             }
             if (rs.field_q == 99) {
-              this.field_d.field_h = 2;
+              this.selectionState.selectedIndex = 2;
             }
           }
           return;
@@ -5295,7 +5295,7 @@ final class TutorialController {
         }
     }
 
-    private final int a(boolean param0, int param1) {
+    private final int getItemLeftX(boolean obfuscationGuard, int itemIndex) {
         int discarded$0 = 0;
         boolean stackIn_18_0 = false;
         int stackIn_19_1 = 0;
@@ -5314,8 +5314,8 @@ final class TutorialController {
             (!DamageEvent.g(108) ||
             8 != this.tutorialStage &&
             9 != this.tutorialStage)) {
-            if (!param0) {
-              discarded$0 = this.a(false, -88);
+            if (!obfuscationGuard) {
+              discarded$0 = this.getItemLeftX(false, -88);
             }
             if (this.tutorialStage != 13 &&
               this.tutorialStage != 12 &&
@@ -5323,7 +5323,7 @@ final class TutorialController {
               20 != this.tutorialStage) {
               if (7 == this.tutorialStage &&
                 null != MoveEvent.field_G) {
-                stackIn_48_0 = MoveEvent.field_G.a(param1, (byte) 4);
+                stackIn_48_0 = MoveEvent.field_G.a(itemIndex, (byte) 4);
                 return stackIn_48_0;
               }
               if (7 == this.tutorialStage) {
@@ -5332,22 +5332,22 @@ final class TutorialController {
               }
               if (this.tutorialStage == 5 &&
                 MoveEvent.field_E != null) {
-                stackIn_59_0 = MoveEvent.field_E.a(param1, true);
+                stackIn_59_0 = MoveEvent.field_E.a(itemIndex, true);
                 return stackIn_59_0;
               }
               if (5 != this.tutorialStage) {
-                stackIn_61_0 = MoveEvent.field_D.b(this.tutorialStage, 29);
+                stackIn_61_0 = MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29);
                 return stackIn_61_0;
               }
               stackIn_57_0 = 1;
               return stackIn_57_0;
             }
-            stackIn_35_0 = this.a((byte) -50, 0, param1);
+            stackIn_35_0 = this.a((byte) -50, 0, itemIndex);
             return stackIn_35_0;
           }
           stackIn_18_0 = true;
-          if (param1 < 2) {
-            stackIn_19_1 = 100 + param1 * 240;
+          if (itemIndex < 2) {
+            stackIn_19_1 = 100 + itemIndex * 240;
           } else {
             stackIn_19_1 = 260;
           }
@@ -5356,7 +5356,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.BB(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var3), "ci.BB(" + obfuscationGuard + ',' + itemIndex + ')');
         }
     }
 
@@ -5400,7 +5400,7 @@ final class TutorialController {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -72) {
-            this.field_d = (dl) null;
+            this.selectionState = (UiSelectionState) null;
           }
           if (this.tutorialStage != 9) {
             stackIn_7_0 = ei.field_e;
@@ -5428,8 +5428,8 @@ final class TutorialController {
           if ((this.tutorialStage == 13 ||
             this.tutorialStage == 12 ||
             this.tutorialStage == 18 ||
-            this.tutorialStage == 20) && param1 < (MoveEvent.field_y[this.tutorialStage].length - 1)) {
-            stackIn_14_0 = this.a(true, param1 + 1) + this.a(param1, -3858) >> 1;
+            this.tutorialStage == 20) && param1 < (MoveEvent.tutorialStageItems[this.tutorialStage].length - 1)) {
+            stackIn_14_0 = this.getItemLeftX(true, param1 + 1) + this.getItemRightX(param1, -3858) >> 1;
             return stackIn_14_0;
           }
           stackIn_16_0 = -1;
@@ -5552,7 +5552,7 @@ final class TutorialController {
                   28 != this.tutorialStage) {
                   if (18 == this.tutorialStage) {
                     fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, io.field_m, nd.field_b, 0, 180);
-                    fe.b(MoveEvent.field_D.b(this.tutorialStage, 29), MoveEvent.field_D.a(this.tutorialStage, (byte) -117) - 10, MoveEvent.field_D.a((byte) -73, this.tutorialStage) - MoveEvent.field_D.b(this.tutorialStage, 29), MoveEvent.field_D.a(-6, this.tutorialStage) + (-MoveEvent.field_D.a(this.tutorialStage, (byte) -125) + 10), io.field_m, nd.field_b, 0, 256);
+                    fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -117) - 10, MoveEvent.tutorialLayout.getRightX((byte) -73, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) + 10), io.field_m, nd.field_b, 0, 256);
                     this.m(100);
                     fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
                     fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), nd.field_b, false);
@@ -5561,7 +5561,7 @@ final class TutorialController {
                   if (decompiledFrameRemainder0) {
                     if (this.tutorialStage == 12) {
                       fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, io.field_m, nd.field_b, 0, 180);
-                      fe.b(MoveEvent.field_D.b(this.tutorialStage, 29), -10 + MoveEvent.field_D.a(this.tutorialStage, (byte) -118), MoveEvent.field_D.a((byte) -101, this.tutorialStage) - MoveEvent.field_D.b(this.tutorialStage, 29), MoveEvent.field_D.a(-6, this.tutorialStage) - MoveEvent.field_D.a(this.tutorialStage, (byte) -109) + 10, io.field_m, nd.field_b, 0, 256);
+                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -118), MoveEvent.tutorialLayout.getRightX((byte) -101, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -109) + 10, io.field_m, nd.field_b, 0, 256);
                       this.k(-128);
                       stackIn_68_0 = wb.field_b[this.tutorialStage];
                       stackIn_69_1 = !(param0);
@@ -5573,7 +5573,7 @@ final class TutorialController {
                       if (20 != this.tutorialStage) {
                         if (this.tutorialStage == 13) {
                           fe.b(db.a(!param0, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, io.field_m, nd.field_b, 0, 180);
-                          fe.b(MoveEvent.field_D.b(this.tutorialStage, 29), MoveEvent.field_D.a(this.tutorialStage, (byte) -127) - 10, MoveEvent.field_D.a((byte) 115, this.tutorialStage) - MoveEvent.field_D.b(this.tutorialStage, 29), MoveEvent.field_D.a(-6, this.tutorialStage) - (MoveEvent.field_D.a(this.tutorialStage, (byte) -114) - 10), io.field_m, nd.field_b, 0, 256);
+                          fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -127) - 10, MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - (MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -114) - 10), io.field_m, nd.field_b, 0, 256);
                           this.i((byte) 41);
                           fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
                           fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), nd.field_b, false);
@@ -5581,10 +5581,10 @@ final class TutorialController {
                         }
                         if (decompiledFrameRemainder0) {
                           if (this.tutorialStage == 0) {
-                            fe.b(MoveEvent.field_D.b(this.tutorialStage, 29), MoveEvent.field_D.a(this.tutorialStage, (byte) -106) - (-MoveEvent.field_D.b(this.tutorialStage, (byte) -33) - 10), MoveEvent.field_D.a((byte) -125, this.tutorialStage) - MoveEvent.field_D.b(this.tutorialStage, 29), -10 + (MoveEvent.field_D.a(-6, this.tutorialStage) - MoveEvent.field_D.a(this.tutorialStage, (byte) -125) - MoveEvent.field_D.b(this.tutorialStage, (byte) 113)), io.field_m, nd.field_b, 0, 128);
-                            fe.b(10 + MoveEvent.field_D.b(this.tutorialStage, 29), 10 + MoveEvent.field_D.a(this.tutorialStage, (byte) -104) + (MoveEvent.field_D.b(this.tutorialStage, (byte) -22) + 10), -20 + MoveEvent.field_D.a((byte) 115, this.tutorialStage) - MoveEvent.field_D.b(this.tutorialStage, 29), MoveEvent.field_D.a(-6, this.tutorialStage) + (-MoveEvent.field_D.a(this.tutorialStage, (byte) -120) - MoveEvent.field_D.b(this.tutorialStage, (byte) -125) - 10) - 20, io.field_m, field_e, 0, 128);
+                            fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -106) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -33) - 10), MoveEvent.tutorialLayout.getRightX((byte) -125, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 113)), io.field_m, nd.field_b, 0, 128);
+                            fe.b(10 + MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -104) + (MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -22) + 10), -20 + MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -120) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -125) - 10) - 20, io.field_m, field_e, 0, 128);
                             var2_int = so.field_b.field_a;
-                            ol.field_y.g(var2_int / 2 - ol.field_y.field_A / 2, 50 + MoveEvent.field_D.a(this.tutorialStage, (byte) -111) - ol.field_y.field_x);
+                            ol.field_y.g(var2_int / 2 - ol.field_y.field_A / 2, 50 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -111) - ol.field_y.field_x);
                             decompiledFrameRemainder0 = (var4 != 0);
                           }
                           if (decompiledFrameRemainder0) {
@@ -5597,13 +5597,13 @@ final class TutorialController {
                                 21 == this.tutorialStage) {
                                 fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, io.field_m, nd.field_b, 0, 180);
                                 MoveEvent.field_C.e((byte) 17);
-                                fe.b(MoveEvent.field_D.b(this.tutorialStage, 29), MoveEvent.field_D.a(this.tutorialStage, (byte) -119) - 10, MoveEvent.field_D.a((byte) 103, this.tutorialStage) - MoveEvent.field_D.b(this.tutorialStage, 29), MoveEvent.field_D.a(-6, this.tutorialStage) - (MoveEvent.field_D.a(this.tutorialStage, (byte) -119) - 10), io.field_m, nd.field_b, 0, 256);
+                                fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - 10, MoveEvent.tutorialLayout.getRightX((byte) 103, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - (MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - 10), io.field_m, nd.field_b, 0, 256);
                                 decompiledFrameRemainder0 = (var4 != 0);
                               }
                               if (decompiledFrameRemainder0) {
                                 if (this.tutorialStage == 16) {
                                   hi.field_i.a(256);
-                                  fe.b(-3 + MoveEvent.field_D.b(16, 29), MoveEvent.field_D.a(16, (byte) -118) - 3, 6 + (MoveEvent.field_D.a((byte) -83, 16) - MoveEvent.field_D.b(16, 29)), 6 + this.d(12, 0), io.field_m, nd.field_b, 0, 128);
+                                  fe.b(-3 + MoveEvent.tutorialLayout.getLeftX(16, 29), MoveEvent.tutorialLayout.getTopY(16, (byte) -118) - 3, 6 + (MoveEvent.tutorialLayout.getRightX((byte) -83, 16) - MoveEvent.tutorialLayout.getLeftX(16, 29)), 6 + this.getItemHeight(12, 0), io.field_m, nd.field_b, 0, 128);
                                   decompiledFrameRemainder0 = (var4 != 0);
                                 }
                                 if (decompiledFrameRemainder0) {
@@ -5613,26 +5613,26 @@ final class TutorialController {
                                       this.tutorialStage != 2 &&
                                       this.tutorialStage != 17 &&
                                       this.tutorialStage != 24) {
-                                      var2_int = MoveEvent.field_D.a(this.tutorialStage, (byte) -118);
+                                      var2_int = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -118);
                                       if (3 == this.tutorialStage &&
                                         ma.field_Z) {
                                         var2_int -= 32;
                                       }
-                                      fe.b(MoveEvent.field_D.b(this.tutorialStage, 29), var2_int - MoveEvent.field_D.b(this.tutorialStage, (byte) -64), MoveEvent.field_D.a((byte) 92, this.tutorialStage) - MoveEvent.field_D.b(this.tutorialStage, 29), MoveEvent.field_D.a(-6, this.tutorialStage) + (-MoveEvent.field_D.a(this.tutorialStage, (byte) -115) + MoveEvent.field_D.b(this.tutorialStage, (byte) 112)), io.field_m, nd.field_b, 0, 128);
+                                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -64), MoveEvent.tutorialLayout.getRightX((byte) 92, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -115) + MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112)), io.field_m, nd.field_b, 0, 128);
                                       if (wb.field_b[this.tutorialStage] != null) {
-                                        fe.b(wb.field_b[this.tutorialStage], this.a(true, 0) + this.a(this.field_d.field_k - 1, -3858) >> 1, this.a(-1, true));
-                                        fe.c(wb.field_b[this.tutorialStage], this.a(true, 0) + this.a(this.field_d.field_k - 1, -3858) >> 1, this.a(-1, true), nd.field_b, false);
+                                        fe.b(wb.field_b[this.tutorialStage], this.getItemLeftX(true, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true));
+                                        fe.c(wb.field_b[this.tutorialStage], this.getItemLeftX(true, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true), nd.field_b, false);
                                       }
                                       decompiledFrameRemainder0 = (var4 != 0);
                                     }
                                     if (decompiledFrameRemainder0) {
-                                      var2_int = MoveEvent.field_D.a(this.tutorialStage, (byte) -102);
-                                      fe.b(MoveEvent.field_D.b(this.tutorialStage, 29), var2_int - MoveEvent.field_D.b(this.tutorialStage, (byte) -34), MoveEvent.field_D.a((byte) 97, this.tutorialStage) - MoveEvent.field_D.b(this.tutorialStage, 29), (1 + MoveEvent.field_y[this.tutorialStage].length) * MoveEvent.field_D.b(this.tutorialStage, (byte) -121) + (MoveEvent.field_D.b(this.tutorialStage, (byte) 117) >> 2), io.field_m, nd.field_b, 0, 128);
+                                      var2_int = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -102);
+                                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -34), MoveEvent.tutorialLayout.getRightX((byte) 97, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), (1 + MoveEvent.tutorialStageItems[this.tutorialStage].length) * MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -121) + (MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 117) >> 2), io.field_m, nd.field_b, 0, 128);
                                       if (null != wb.field_b[this.tutorialStage]) {
-                                        fe.b(wb.field_b[this.tutorialStage], this.a(true, 0) + this.a(this.field_d.field_k - 1, -3858) >> 1, this.a(-1, true));
+                                        fe.b(wb.field_b[this.tutorialStage], this.getItemLeftX(true, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true));
                                         stackIn_143_0 = wb.field_b[this.tutorialStage];
                                         stackIn_144_2 = !(param0);
-                                        fe.c(stackIn_143_0, this.a(stackIn_144_2, 0) + this.a(-1 + this.field_d.field_k, -3858) >> 1, this.a(-1, true), nd.field_b, false);
+                                        fe.c(stackIn_143_0, this.getItemLeftX(stackIn_144_2, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, this.getItemTopY(-1, true), nd.field_b, false);
                                       }
                                       decompiledFrameRemainder0 = (var4 != 0);
                                     }
@@ -5647,8 +5647,8 @@ final class TutorialController {
                                     decompiledFrameRemainder0 = (null != wb.field_b[this.tutorialStage]);
                                     if (decompiledFrameRemainder0) {
                                       var2_int = MatchConditionEntry.a(33, (byte) 94);
-                                      fe.b(wb.field_b[this.tutorialStage], MoveEvent.field_D.b(this.tutorialStage, 29) + MoveEvent.field_D.a((byte) -63, this.tutorialStage) >> 1, var2_int);
-                                      fe.c(wb.field_b[this.tutorialStage], MoveEvent.field_D.b(this.tutorialStage, 29) + MoveEvent.field_D.a((byte) -77, this.tutorialStage) >> 1, var2_int, nd.field_b, false);
+                                      fe.b(wb.field_b[this.tutorialStage], MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29) + MoveEvent.tutorialLayout.getRightX((byte) -63, this.tutorialStage) >> 1, var2_int);
+                                      fe.c(wb.field_b[this.tutorialStage], MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29) + MoveEvent.tutorialLayout.getRightX((byte) -77, this.tutorialStage) >> 1, var2_int, nd.field_b, false);
                                       decompiledFrameRemainder0 = (var4 != 0);
                                     }
                                   }
@@ -5666,7 +5666,7 @@ final class TutorialController {
                       }
                       if (decompiledFrameRemainder0) {
                         fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, io.field_m, nd.field_b, 0, 180);
-                        fe.b(MoveEvent.field_D.b(this.tutorialStage, 29), MoveEvent.field_D.a(this.tutorialStage, (byte) -108) - 10, MoveEvent.field_D.a((byte) -85, this.tutorialStage) - MoveEvent.field_D.b(this.tutorialStage, 29), 10 + (MoveEvent.field_D.a(-6, this.tutorialStage) - MoveEvent.field_D.a(this.tutorialStage, (byte) -105)), io.field_m, nd.field_b, 0, 256);
+                        fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -108) - 10, MoveEvent.tutorialLayout.getRightX((byte) -85, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -105)), io.field_m, nd.field_b, 0, 256);
                         this.l(-23588);
                         fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
                         fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), nd.field_b, false);
@@ -5692,52 +5692,52 @@ final class TutorialController {
               }
             }
             if (decompiledFrameRemainder0) {
-              var2_int = MoveEvent.field_D.a(this.tutorialStage, (byte) -117);
-              var3 = MoveEvent.field_D.a(-6, this.tutorialStage) - MoveEvent.field_D.a(this.tutorialStage, (byte) -119) - (-MoveEvent.field_D.b(this.tutorialStage, (byte) -66) - (nr.field_e.a(vd.field_a, 500, 0) >> 1));
-              fe.b(MoveEvent.field_D.b(this.tutorialStage, 29), var2_int - MoveEvent.field_D.b(this.tutorialStage, (byte) 112), MoveEvent.field_D.a((byte) 94, this.tutorialStage) - MoveEvent.field_D.b(this.tutorialStage, 29), var3, io.field_m, nd.field_b, 0, 128);
-              fe.a(vd.field_a, this.a(true, 0) + this.a(-1 + this.field_d.field_k, -3858) >> 1, var2_int + 20, 250, 16777215, true);
+              var2_int = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -117);
+              var3 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -66) - (nr.field_e.a(vd.field_a, 500, 0) >> 1));
+              fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112), MoveEvent.tutorialLayout.getRightX((byte) 94, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3, io.field_m, nd.field_b, 0, 128);
+              fe.a(vd.field_a, this.getItemLeftX(true, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, var2_int + 20, 250, 16777215, true);
               stackIn_180_0 = wb.field_b[this.tutorialStage];
-              stackIn_180_1 = this.a(true, 0) + this.a(-1 + this.field_d.field_k, -3858) >> 1;
+              stackIn_180_1 = this.getItemLeftX(true, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1;
               stackIn_180_2 = this;
               stackIn_180_3 = -1;
               stackIn_181_4 = !(param0);
-              fe.b(stackIn_180_0, stackIn_180_1, this.a(stackIn_180_3, stackIn_181_4));
+              fe.b(stackIn_180_0, stackIn_180_1, this.getItemTopY(stackIn_180_3, stackIn_181_4));
               stackIn_184_0 = wb.field_b[this.tutorialStage];
               stackIn_185_2 = !(param0);
-              fe.c(stackIn_184_0, this.a(stackIn_185_2, 0) + this.a(this.field_d.field_k - 1, -3858) >> 1, this.a(-1, true), nd.field_b, false);
+              fe.c(stackIn_184_0, this.getItemLeftX(stackIn_185_2, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true), nd.field_b, false);
               decompiledFrameRemainder0 = (var4 != 0);
             }
           }
           if (decompiledFrameRemainder0) {
-            var2_intLifetime2 = MoveEvent.field_D.a(this.tutorialStage, (byte) -124);
-            var3Lifetime1 = MoveEvent.field_D.a(-6, this.tutorialStage) - MoveEvent.field_D.a(this.tutorialStage, (byte) -103) - (-MoveEvent.field_D.b(this.tutorialStage, (byte) 122) - (nr.field_e.a(mu.field_e, 500, 0) >> 1));
-            fe.b(MoveEvent.field_D.b(this.tutorialStage, 29), -MoveEvent.field_D.b(this.tutorialStage, (byte) 123) + var2_intLifetime2, MoveEvent.field_D.a((byte) -61, this.tutorialStage) - MoveEvent.field_D.b(this.tutorialStage, 29), var3Lifetime1, io.field_m, nd.field_b, 0, 128);
+            var2_intLifetime2 = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -124);
+            var3Lifetime1 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -103) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 122) - (nr.field_e.a(mu.field_e, 500, 0) >> 1));
+            fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 123) + var2_intLifetime2, MoveEvent.tutorialLayout.getRightX((byte) -61, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3Lifetime1, io.field_m, nd.field_b, 0, 128);
             stackIn_189_0 = mu.field_e;
             stackIn_190_2 = !(param0);
-            fe.a(stackIn_189_0, this.a(stackIn_190_2, 0) + this.a(-1 + this.field_d.field_k, -3858) >> 1, 20 + var2_intLifetime2, 250, 16777215, true);
+            fe.a(stackIn_189_0, this.getItemLeftX(stackIn_190_2, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, 20 + var2_intLifetime2, 250, 16777215, true);
             stackIn_193_0 = wb.field_b[this.tutorialStage];
-            stackIn_193_1 = this.a(true, 0) + this.a(-1 + this.field_d.field_k, -3858) >> 1;
+            stackIn_193_1 = this.getItemLeftX(true, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1;
             stackIn_193_2 = this;
             stackIn_193_3 = -1;
             stackIn_194_4 = !(param0);
-            fe.b(stackIn_193_0, stackIn_193_1, this.a(stackIn_193_3, stackIn_194_4));
+            fe.b(stackIn_193_0, stackIn_193_1, this.getItemTopY(stackIn_193_3, stackIn_194_4));
             stackIn_197_0 = wb.field_b[this.tutorialStage];
             stackIn_198_2 = !(param0);
-            fe.c(stackIn_197_0, this.a(stackIn_198_2, 0) + this.a(-1 + this.field_d.field_k, -3858) >> 1, this.a(-1, true), nd.field_b, false);
+            fe.c(stackIn_197_0, this.getItemLeftX(stackIn_198_2, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, this.getItemTopY(-1, true), nd.field_b, false);
           }
           var2_intLifetime1 = 0;
           if (param0) {
             return;
           }
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var2_intLifetime1 < this.field_d.field_k)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(var2_intLifetime1 < this.selectionState.itemCount)))) {
             stackOut_202_0 = this.a((byte) 82, var2_intLifetime1);
             stackIn_215_0 = stackOut_202_0 ? 1 : 0;
             stackIn_203_0 = stackOut_202_0;
             if (var4 == 0) {
               if (stackIn_203_0) {
-                stackIn_212_1 = (~var2_intLifetime1 == ~this.field_d.field_h);
-                this.b(stackIn_212_1, var2_intLifetime1, 28115);
+                stackIn_212_1 = (~var2_intLifetime1 == ~this.selectionState.selectedIndex);
+                this.drawStageItem(stackIn_212_1, var2_intLifetime1, 28115);
               }
               var2_intLifetime1++;
               continue;
@@ -5772,7 +5772,7 @@ final class TutorialController {
               if (this.tutorialStage != 11) {
                 return;
               }
-              hh.field_i.a(pr.field_i, MoveEvent.field_D.b(11, 29) + 20, 20 + MoveEvent.field_D.a(11, (byte) -105), -40 + MoveEvent.field_D.a((byte) 105, 11) - MoveEvent.field_D.b(11, 29), 1000, 16777215, -1, 0, 0, hh.field_i.field_H);
+              hh.field_i.a(pr.field_i, MoveEvent.tutorialLayout.getLeftX(11, 29) + 20, 20 + MoveEvent.tutorialLayout.getTopY(11, (byte) -105), -40 + MoveEvent.tutorialLayout.getRightX((byte) 105, 11) - MoveEvent.tutorialLayout.getLeftX(11, 29), 1000, 16777215, -1, 0, 0, hh.field_i.field_H);
               if (var4 == 0) {
                 return;
               }
@@ -5808,30 +5808,30 @@ final class TutorialController {
           var2_int = stackIn_7_0;
           stackIn_11_0 = (!this.a((byte) -102, 2)) ? 1 : 2;
           var3 = stackIn_11_0;
-          if (!this.field_d.a(false)) {
+          if (!this.selectionState.isPointerPressed(false)) {
             if (rs.field_q == 96) {
-              if (this.field_d.field_h <= var2_int) {
-                this.field_d.a(var3, false);
+              if (this.selectionState.selectedIndex <= var2_int) {
+                this.selectionState.selectIndex(var3, false);
                 if (var4 != 0) {
-                  this.field_d.a(-1 + this.field_d.field_h, false);
+                  this.selectionState.selectIndex(-1 + this.selectionState.selectedIndex, false);
                 }
               } else {
-                this.field_d.a(-1 + this.field_d.field_h, false);
+                this.selectionState.selectIndex(-1 + this.selectionState.selectedIndex, false);
               }
             }
             if (rs.field_q == 97) {
-              if (0 <= this.field_d.field_h &&
-                this.field_d.field_h < var3) {
-                this.field_d.a(this.field_d.field_h + 1, false);
+              if (0 <= this.selectionState.selectedIndex &&
+                this.selectionState.selectedIndex < var3) {
+                this.selectionState.selectIndex(this.selectionState.selectedIndex + 1, false);
                 if (var4 != 0) {
-                  this.field_d.a(var2_int, false);
+                  this.selectionState.selectIndex(var2_int, false);
                 }
               } else {
-                this.field_d.a(var2_int, false);
+                this.selectionState.selectIndex(var2_int, false);
               }
             }
           }
-          this.field_d.c(0);
+          this.selectionState.pollKeyForButtonState(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5952,7 +5952,7 @@ final class TutorialController {
         }
     }
 
-    private final int a(int param0, int param1) {
+    private final int getItemRightX(int itemIndex, int obfuscationGuard) {
         int stackIn_22_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_37_0 = 0;
@@ -5964,11 +5964,11 @@ final class TutorialController {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param1 != -3858) {
+          if (obfuscationGuard != -3858) {
             field_f = (String[]) null;
           }
           if ((this.tutorialStage != 6 ||
-            DamageEvent.g(param1 + 3964)) &&
+            DamageEvent.g(obfuscationGuard + 3964)) &&
             (!DamageEvent.g(77) ||
             this.tutorialStage != 8 &&
             this.tutorialStage != 9)) {
@@ -5978,7 +5978,7 @@ final class TutorialController {
               20 != this.tutorialStage) {
               if (this.tutorialStage == 7 &&
                 MoveEvent.field_G != null) {
-                stackIn_43_0 = MoveEvent.field_G.a(false, param0);
+                stackIn_43_0 = MoveEvent.field_G.a(false, itemIndex);
                 return stackIn_43_0;
               }
               if (this.tutorialStage == 7) {
@@ -5987,30 +5987,30 @@ final class TutorialController {
               }
               if (this.tutorialStage == 5 &&
                 null != MoveEvent.field_E) {
-                stackIn_54_0 = MoveEvent.field_E.b(true, param0);
+                stackIn_54_0 = MoveEvent.field_E.b(true, itemIndex);
                 return stackIn_54_0;
               }
               if (5 == this.tutorialStage) {
                 stackIn_59_0 = 1;
                 return stackIn_59_0;
               }
-              stackIn_61_0 = MoveEvent.field_D.a((byte) -71, this.tutorialStage);
+              stackIn_61_0 = MoveEvent.tutorialLayout.getRightX((byte) -71, this.tutorialStage);
               return stackIn_61_0;
             }
-            stackIn_37_0 = this.a((byte) -88, 1, param0);
+            stackIn_37_0 = this.a((byte) -88, 1, itemIndex);
             return stackIn_37_0;
           }
-          if (param0 >= 2) {
+          if (itemIndex >= 2) {
             stackIn_22_0 = 380;
           } else {
-            stackIn_22_0 = 300 + 240 * param0;
+            stackIn_22_0 = 300 + 240 * itemIndex;
           }
           stackIn_23_0 = MatchConditionEntry.a(stackIn_22_0, (byte) 94);
           return stackIn_23_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.FB(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var3), "ci.FB(" + itemIndex + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -6093,7 +6093,7 @@ final class TutorialController {
           }
           var4Lifetime1 = 0;
           if (param0 != 41) {
-            discarded$0 = this.e(13, -56);
+            discarded$0 = this.getItemText(13, -56);
           }
           while (true) {
             stackIn_59_0 = 2;

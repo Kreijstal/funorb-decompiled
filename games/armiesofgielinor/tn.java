@@ -211,9 +211,9 @@ final class tn extends sf implements he {
             var15 = param1[var3].field_B;
             var14 = var15;
             var4 = var14;
-            var5 = 16711680 & bo.field_g[var2_int + var3];
-            var6 = 65280 & bo.field_g[var2_int + var3];
-            var7 = 255 & bo.field_g[var3 + var2_int];
+            var5 = 16711680 & TutorialLayout.field_g[var2_int + var3];
+            var6 = 65280 & TutorialLayout.field_g[var2_int + var3];
+            var7 = 255 & TutorialLayout.field_g[var3 + var2_int];
             for (var8 = 0; var15.length > var8; var8++) {
               var9 = var15[var8] & 16711680;
               var10 = 65280 & var15[var8];

@@ -35,7 +35,7 @@ final class a extends IntrusiveNode {
             if (null != CipherPacketBuffer.currentBattlefield) {
               var6 = CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var6, param0 ^ -16711681);
             }
-            var4_int = bo.field_g[1 + var6] | -2147483648;
+            var4_int = TutorialLayout.field_g[1 + var6] | -2147483648;
           }
           if (jf.field_C.selectedUnit != null) {
             if (param2 == ks.field_y * jf.field_C.selectedUnit.tileY + jf.field_C.selectedUnit.tileX) {

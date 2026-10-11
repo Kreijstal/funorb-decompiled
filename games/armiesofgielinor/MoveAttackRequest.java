@@ -83,12 +83,12 @@ final class MoveAttackRequest extends ActionRequest {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (unit.movementSpent) {
-            this.formatIllegalMove(-84, new String[]{"vine at ", TutorialController.c(unit.tileX, obfuscationGuard ^ 32, unit.tileY), " has already grown"}, "vine growth");
+            this.formatIllegalMove(-84, new String[]{"vine at ", TutorialController.formatCoordinatePair(unit.tileX, obfuscationGuard ^ 32, unit.tileY), " has already grown"}, "vine growth");
             stackIn_3_0 = null;
             return (PreparedAction) (stackIn_3_0);
           }
           if (this.pathDirections.length != 1) {
-            this.formatIllegalMove(-98, new String[]{"vine at ", TutorialController.c(unit.tileX, obfuscationGuard - 32, unit.tileY), " attempted to grow more than one step"}, "vine growth");
+            this.formatIllegalMove(-98, new String[]{"vine at ", TutorialController.formatCoordinatePair(unit.tileX, obfuscationGuard - 32, unit.tileY), " attempted to grow more than one step"}, "vine growth");
             stackIn_6_0 = null;
             return (PreparedAction) (stackIn_6_0);
           }
@@ -125,11 +125,11 @@ final class MoveAttackRequest extends ActionRequest {
               stackIn_34_0 = new VineGrowthAction(var4_int, var5, this.startX, this.startY, unit.strength, this.actingPlayer);
               return (PreparedAction) ((Object) stackIn_34_0);
             }
-            this.formatIllegalMove(120, new String[]{"vine at ", TutorialController.c(unit.tileX, obfuscationGuard - 32, unit.tileY), " attempted to grow onto ground type: ", Integer.toString(var6)}, "vine growth");
+            this.formatIllegalMove(120, new String[]{"vine at ", TutorialController.formatCoordinatePair(unit.tileX, obfuscationGuard - 32, unit.tileY), " attempted to grow onto ground type: ", Integer.toString(var6)}, "vine growth");
             stackIn_32_0 = null;
             return (PreparedAction) (stackIn_32_0);
           }
-          this.formatIllegalMove(127, new String[]{"vine at ", TutorialController.c(unit.tileX, 0, unit.tileY), " attempted to escape the map"}, "vine growth");
+          this.formatIllegalMove(127, new String[]{"vine at ", TutorialController.formatCoordinatePair(unit.tileX, 0, unit.tileY), " attempted to escape the map"}, "vine growth");
           stackIn_23_0 = null;
           return (PreparedAction) (stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -195,13 +195,13 @@ final class MoveAttackRequest extends ActionRequest {
           var16 = battlefield.getUnitAt(this.startY, true, this.startX);
           var17 = var16;
           if (var17 == null) {
-            discarded$3 = this.formatMoveRejection(new String[]{"no unit at ", TutorialController.c(this.startX, 0, this.startY)}, 0);
+            discarded$3 = this.formatMoveRejection(new String[]{"no unit at ", TutorialController.formatCoordinatePair(this.startX, 0, this.startY)}, 0);
             stackIn_3_0 = null;
             return (PreparedAction) (stackIn_3_0);
           }
           if (this.actingPlayer != var17.ownerPlayer &&
             !this.allowOtherPlayer) {
-            discarded$0 = this.formatMoveRejection(new String[]{"unit at ", TutorialController.c(this.startX, 0, this.startY), " not owned by this player"}, 0);
+            discarded$0 = this.formatMoveRejection(new String[]{"unit at ", TutorialController.formatCoordinatePair(this.startX, 0, this.startY), " not owned by this player"}, 0);
             stackIn_7_0 = null;
             return (PreparedAction) (stackIn_7_0);
           }
@@ -221,7 +221,7 @@ final class MoveAttackRequest extends ActionRequest {
               null != this.pathDirections &&
               this.pathDirections.length > 0) {
               var4 = 0;
-              discarded$1 = this.formatMoveRejection(new String[]{"unit at ", TutorialController.c(this.startX, 0, this.startY), "Moved when in range of cyclops"}, 0);
+              discarded$1 = this.formatMoveRejection(new String[]{"unit at ", TutorialController.formatCoordinatePair(this.startX, 0, this.startY), "Moved when in range of cyclops"}, 0);
             }
             if (this.spellId > -1 &&
               uc.spellDefinitions[this.spellId][5] == 18) {
@@ -268,7 +268,7 @@ final class MoveAttackRequest extends ActionRequest {
                 this.targetDeltaX = 0;
                 this.targetDeltaY = 0;
               } else {
-                discarded$2 = this.formatMoveRejection(new String[]{"unit at ", TutorialController.c(this.startX, 0, this.startY), " attempted to escape the map"}, 0);
+                discarded$2 = this.formatMoveRejection(new String[]{"unit at ", TutorialController.formatCoordinatePair(this.startX, 0, this.startY), " attempted to escape the map"}, 0);
                 stackIn_52_0 = null;
                 return (PreparedAction) (stackIn_52_0);
               }
@@ -404,11 +404,11 @@ final class MoveAttackRequest extends ActionRequest {
               stackIn_18_0 = new TeleportAction(this.startX, this.startY, this.targetDeltaX, this.targetDeltaY, this.actingPlayer, unit, true);
               return (PreparedAction) ((Object) stackIn_18_0);
             }
-            this.formatIllegalMove(126, new String[]{"unit at ", TutorialController.c(unit.tileX, 0, unit.tileY), " attempted to teleport onto ground type: ", Integer.toString(var6)}, "teleport");
+            this.formatIllegalMove(126, new String[]{"unit at ", TutorialController.formatCoordinatePair(unit.tileX, 0, unit.tileY), " attempted to teleport onto ground type: ", Integer.toString(var6)}, "teleport");
             stackIn_12_0 = null;
             return (PreparedAction) (stackIn_12_0);
           }
-          this.formatIllegalMove(obfuscationGuard + 124, new String[]{"unit at ", TutorialController.c(unit.tileX, 0, unit.tileY), " attempted to teleport off the map"}, "teleport");
+          this.formatIllegalMove(obfuscationGuard + 124, new String[]{"unit at ", TutorialController.formatCoordinatePair(unit.tileX, 0, unit.tileY), " attempted to teleport off the map"}, "teleport");
           stackIn_6_0 = null;
           return (PreparedAction) (stackIn_6_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

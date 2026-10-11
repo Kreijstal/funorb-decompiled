@@ -130,24 +130,24 @@ final class RevivalEvent extends GameEvent {
           if (param0 <= 102) {
             RevivalEvent.e((byte) -63);
           }
-          if (MoveEvent.field_y[0] == null) {
+          if (MoveEvent.tutorialStageItems[0] == null) {
             return;
           }
-          if (2 >= MoveEvent.field_y[0].length) {
+          if (2 >= MoveEvent.tutorialStageItems[0].length) {
             return;
           }
           var1_int = 0;
           while (true) {
-            if (MoveEvent.field_y[0].length <= var1_int) {
+            if (MoveEvent.tutorialStageItems[0].length <= var1_int) {
               return;
             }
-            if (MoveEvent.field_y[0][var1_int] != 25) {
+            if (MoveEvent.tutorialStageItems[0][var1_int] != 25) {
               var1_int++;
               continue;
             }
             break;
           }
-          MoveEvent.field_y[0][var1_int] = 0;
+          MoveEvent.tutorialStageItems[0][var1_int] = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

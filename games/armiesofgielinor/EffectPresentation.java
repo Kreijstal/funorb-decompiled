@@ -317,8 +317,8 @@ final class EffectPresentation implements EventPresentation {
                   if (event.eventKind != 21) {
                     if (event.eventKind == 6) {
                       var21_ref = (TelepopEvent) (event);
-                      var21_ref.unit = this.battlefield.getUnitAt(var21_ref.field_E, true, var21_ref.field_z);
-                      var4 = var21_ref.field_z + this.mapWidth * var21_ref.field_E;
+                      var21_ref.unit = this.battlefield.getUnitAt(var21_ref.tileY, true, var21_ref.tileX);
+                      var4 = var21_ref.tileX + this.mapWidth * var21_ref.tileY;
                       this.presenter.tileIndex = var4;
                       if (null != var21_ref.unit &&
                         var21_ref.unit.packedFlag256) {
@@ -442,10 +442,10 @@ final class EffectPresentation implements EventPresentation {
             }
           } else {
             var7 = (DeathEvent) (event);
-            var4 = var7.field_y + var7.field_D * this.mapWidth;
+            var4 = var7.tileX + var7.tileY * this.mapWidth;
             this.presenter.tileIndex = var4;
             if (null == var7.unit) {
-              var7.unit = this.battlefield.getUnitAt(var7.field_D, true, var7.field_y);
+              var7.unit = this.battlefield.getUnitAt(var7.tileY, true, var7.tileX);
             }
             if (null == var7.unit) {
               var8 = nv.field_bb + ": Can see death";

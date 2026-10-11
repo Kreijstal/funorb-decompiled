@@ -53,10 +53,10 @@ final class nu extends lk {
           var17 = var18;
           var3 = var17;
           var4 = new CipherPacketBuffer(var23);
-          var5 = var4.h((byte) 121);
+          var5 = var4.readNullCircumfixedString((byte) 121);
           var6 = var4.readUnsignedByte(param0 - 23948);
-          var7 = var4.h((byte) 121);
-          var8 = var4.h((byte) 121);
+          var7 = var4.readNullCircumfixedString((byte) 121);
+          var8 = var4.readNullCircumfixedString((byte) 121);
           var9 = ev.a(var4, (byte) -98);
           var10 = new cf(var5);
           var10.field_o = var8;

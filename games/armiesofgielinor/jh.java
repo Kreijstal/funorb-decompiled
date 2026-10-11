@@ -77,7 +77,7 @@ final class jh extends mk {
                         var13 = param0.readInt(1);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param0.a(0, var13, 0, var22[var12_int]);
+                        param0.readBytes(0, var13, 0, var22[var12_int]);
                       }
                     }
                     var18.field_t[var5] = var6_int;

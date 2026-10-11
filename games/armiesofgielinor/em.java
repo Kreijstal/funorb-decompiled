@@ -1781,7 +1781,7 @@ final class em {
                 }
                 var2 = fk.a(false, "MANA_COUNTER_VICTORY2");
                 if (null != var2) {
-                  bo.field_c = uu.a(var2, (byte) -125);
+                  TutorialLayout.field_c = uu.a(var2, (byte) -125);
                 }
                 var2 = fk.a(false, "TERRAIN_BONUS");
                 if (null != var2) {
@@ -2433,7 +2433,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TXT_LEVEL");
                 if (var2 != null) {
-                  dl.field_d = uu.a(var2, (byte) -96);
+                  UiSelectionState.field_d = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "TXT_MANA");
                 if (var2 != null) {
@@ -5643,7 +5643,7 @@ final class em {
         try {
           var3 = new CampaignUnitOverride();
           var3.unitType = param2.readUnsignedByte(0);
-          var3.displayName = param2.h((byte) 121);
+          var3.displayName = param2.readNullCircumfixedString((byte) 121);
           var3.strength = param2.readUnsignedShort((byte) -104);
           if (param1 != -7) {
             return;

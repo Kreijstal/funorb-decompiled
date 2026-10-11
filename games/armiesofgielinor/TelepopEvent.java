@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TelepopEvent extends GameEvent {
-    int field_z;
+    int tileX;
     static String field_y;
-    int field_E;
+    int tileY;
     static float field_C;
     static int field_B;
     static boolean field_D;
@@ -29,16 +29,16 @@ final class TelepopEvent extends GameEvent {
     final String describeEvent(byte obfuscationGuard, boolean verbose) {
         if (verbose) {
           System.out.println("Teleport disappear event debug");
-          System.out.println("Unit at " + this.field_z + "," + this.field_E);
+          System.out.println("Unit at " + this.tileX + "," + this.tileY);
         }
-        String var3 = "EventTelepop: pos: (" + this.field_z + "," + this.field_E + ")";
+        String var3 = "EventTelepop: pos: (" + this.tileX + "," + this.tileY + ")";
         int var4 = -35 % ((obfuscationGuard - 53) / 51);
         return var3;
     }
 
     TelepopEvent(int param0, int param1) {
-        this.field_E = param1;
-        this.field_z = param0;
+        this.tileY = param1;
+        this.tileX = param0;
         this.eventKind = 6;
     }
 
@@ -82,12 +82,12 @@ final class TelepopEvent extends GameEvent {
         Unit var6 = null;
         try {
           if (obfuscationGuard != -26661) {
-            this.field_E = -18;
+            this.tileY = -18;
           }
           if (!this.unit.packedFlag256) {
             this.unit.removeFromBattlefield(obfuscationGuard + 26574);
           } else {
-            var5 = battlefield.getUnitAt(this.field_E, true, this.field_z);
+            var5 = battlefield.getUnitAt(this.tileY, true, this.tileX);
             var6 = var5;
             var6.packedFlag256 = false;
             this.unit.unlink(obfuscationGuard ^ 26707);

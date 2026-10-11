@@ -680,7 +680,7 @@ class PacketBuffer extends IntrusiveNode {
         return (this.payload[-3 + this.position] << 16 & 16711680) + ((this.payload[-2 + this.position] << 8 & 65280) + (this.payload[-1 + this.position] & 255));
     }
 
-    final String h(byte param0) {
+    final String readNullCircumfixedString(byte obfuscationGuard) {
         int fieldTemp$1 = 0;
         int var2;
         int var3;
@@ -692,7 +692,7 @@ class PacketBuffer extends IntrusiveNode {
           throw new IllegalStateException("");
         }
         var3 = this.position;
-        if (param0 != 121) {
+        if (obfuscationGuard != 121) {
           return (String) null;
         }
         do {
@@ -701,7 +701,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (0 != this.payload[fieldTemp$1]);
         var4 = -1 + this.position - var3;
         if (var4 != 0) {
-          return co.a(var3, var4, param0 - 231, this.payload);
+          return co.a(var3, var4, obfuscationGuard - 231, this.payload);
         }
         return "";
     }
@@ -720,7 +720,7 @@ class PacketBuffer extends IntrusiveNode {
           var4_int = this.position;
           this.position = 0;
           var5 = new byte[var4_int];
-          this.a(0, var4_int, 0, var5);
+          this.readBytes(0, var4_int, 0, var5);
           var6 = new java.math.BigInteger(var5);
           var7 = var6.modPow(param1, param2);
           var8 = var7.toByteArray();
@@ -795,7 +795,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) {
+    final void readBytes(int obfuscationGuard, int length, int destinationOffset, byte[] destination) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -806,21 +806,21 @@ class PacketBuffer extends IntrusiveNode {
         int var6 = 0;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0 != 0) {
+          if (obfuscationGuard != 0) {
             this.d(74, 42);
           }
-          for (var5_int = param2; var5_int < param2 + param1; var5_int++) {
+          for (var5_int = destinationOffset; var5_int < destinationOffset + length; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param3[var5_int] = this.payload[fieldTemp$0];
+            destination[var5_int] = this.payload[fieldTemp$0];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_9_0 = var5;
-          stackIn_9_1 = new StringBuilder().append("vh.EA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_9_1 = new StringBuilder().append("vh.EA(").append(obfuscationGuard).append(',').append(length).append(',').append(destinationOffset).append(',');
+          if (destination == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";

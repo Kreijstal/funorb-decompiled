@@ -11,7 +11,7 @@ final class pc extends du {
     private java.net.ProxySelector field_l;
 
     final static void b(byte param0) {
-        dl.f(0);
+        UiSelectionState.f(0);
         if (param0 != 16) {
           pc.d(-107);
         }

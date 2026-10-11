@@ -394,12 +394,12 @@ final class SphinxActionRequest extends ActionRequest {
           }
           var5 = battlefield.getUnitAt(this.sphinxY, true, this.sphinxX);
           if (var5 == null) {
-            discarded$0 = this.formatMindControlRejection(new String[]{"no unit at ", TutorialController.c(this.sphinxX, 0, this.sphinxY)}, 30536);
+            discarded$0 = this.formatMindControlRejection(new String[]{"no unit at ", TutorialController.formatCoordinatePair(this.sphinxX, 0, this.sphinxY)}, 30536);
             stackIn_5_0 = null;
             return (PreparedAction) (stackIn_5_0);
           }
           if (var5.attacksRemaining == 0) {
-            discarded$2 = this.formatMindControlRejection(new String[]{"unit at ", TutorialController.c(this.sphinxX, 0, this.sphinxY), " has attacked"}, 30536);
+            discarded$2 = this.formatMindControlRejection(new String[]{"unit at ", TutorialController.formatCoordinatePair(this.sphinxX, 0, this.sphinxY), " has attacked"}, 30536);
             stackIn_8_0 = null;
             return (PreparedAction) (stackIn_8_0);
           }
@@ -407,7 +407,7 @@ final class SphinxActionRequest extends ActionRequest {
             stackIn_13_0 = this.delegatedRequest.prepareAction(100, battlefield);
             return stackIn_13_0;
           }
-          discarded$1 = this.formatMindControlRejection(new String[]{"unit at ", TutorialController.c(this.sphinxX, 0, this.sphinxY), " is not TYPE_SPHINX"}, 30536);
+          discarded$1 = this.formatMindControlRejection(new String[]{"unit at ", TutorialController.formatCoordinatePair(this.sphinxX, 0, this.sphinxY), " is not TYPE_SPHINX"}, 30536);
           stackIn_11_0 = null;
           return (PreparedAction) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

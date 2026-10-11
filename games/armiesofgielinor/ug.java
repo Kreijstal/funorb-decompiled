@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class ug extends IOException {
-    static dl field_c;
+    static UiSelectionState field_c;
     static int field_b;
     static int field_a;
 
@@ -146,7 +146,7 @@ final class ug extends IOException {
     public static void a(int param0) {
         field_c = null;
         if (param0 != 16) {
-          field_c = (dl) null;
+          field_c = (UiSelectionState) null;
         }
     }
 
@@ -155,6 +155,6 @@ final class ug extends IOException {
     }
 
     static {
-        field_c = new dl(1);
+        field_c = new UiSelectionState(1);
     }
 }

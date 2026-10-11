@@ -436,12 +436,12 @@ final class StateChangeEvent extends GameEvent {
         return var4Lifetime1;
     }
 
-    StateChangeEvent(int param0, int param1, int param2, int param3) {
+    StateChangeEvent(int effectType, int tileX, int tileY, int playerId) {
         int var5;
-        this.playerId = param3;
-        this.effectType = param0;
-        this.tileX = param1;
-        this.tileY = param2;
+        this.playerId = playerId;
+        this.effectType = effectType;
+        this.tileX = tileX;
+        this.tileY = tileY;
         this.eventKind = -1;
         var5 = this.effectType;
         if (var5 == 0) {

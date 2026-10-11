@@ -225,12 +225,12 @@ final class SummonRequest extends ActionRequest {
             requiredGod = 12;
           }
           if (0 == (battlefield.getSummoningGodMaskAt(this.tileX, -27300, this.tileY, this.actingPlayer) & 1 << requiredGod)) {
-            discarded$1 = this.formatSummonRejection(new String[]{"Can't summon followers of god: ", Integer.toString(requiredGod), " at ", TutorialController.c(this.tileX, 0, this.tileY)}, (byte) -111);
+            discarded$1 = this.formatSummonRejection(new String[]{"Can't summon followers of god: ", Integer.toString(requiredGod), " at ", TutorialController.formatCoordinatePair(this.tileX, 0, this.tileY)}, (byte) -111);
             stackIn_24_0 = null;
             return (PreparedAction) (stackIn_24_0);
           }
           if (!battlefield.canSummonUnitAt(this.tileY, -26813, this.unitType, this.tileX, this.actingPlayer)) {
-            discarded$2 = this.formatSummonRejection(new String[]{"Can't afford creature type: ", Integer.toString(this.unitType), " at ", TutorialController.c(this.tileX, 0, this.tileY)}, (byte) -87);
+            discarded$2 = this.formatSummonRejection(new String[]{"Can't afford creature type: ", Integer.toString(this.unitType), " at ", TutorialController.formatCoordinatePair(this.tileX, 0, this.tileY)}, (byte) -87);
             stackIn_27_0 = null;
             return (PreparedAction) (stackIn_27_0);
           }
@@ -263,7 +263,7 @@ final class SummonRequest extends ActionRequest {
 
     final static void a(byte param0, int[] param1, int param2) {
         try {
-          MoveEvent.field_y[param2] = param1;
+          MoveEvent.tutorialStageItems[param2] = param1;
           rq.field_p[param2] = new TutorialController(param2);
           if (param0 <= 17) {
             field_B = -14;

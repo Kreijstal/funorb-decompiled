@@ -57,7 +57,7 @@ abstract class vt extends IntrusiveNode {
           return;
         }
         if (MoveEvent.field_G.field_w.length != 0) {
-          gb.a(var3, 7, var1.field_k, var2.field_k, var1.field_n, var2.field_n, MoveEvent.field_G.field_w, -40);
+          gb.configureTutorialStage(var3, 7, var1.field_k, var2.field_k, var1.field_n, var2.field_n, MoveEvent.field_G.field_w, -40);
           return;
         }
     }

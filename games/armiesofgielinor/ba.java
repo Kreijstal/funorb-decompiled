@@ -64,20 +64,20 @@ final class ba extends dr {
           }
           var1_int = 0;
           while (Unit.i((byte) -52)) {
-            MovementPlanner.field_z.b((byte) -120);
-            if (!MovementPlanner.field_z.d((byte) 82)) {
+            MovementPlanner.field_z.pollNavigationKeys((byte) -120);
+            if (!MovementPlanner.field_z.hasActivationInput((byte) 82)) {
               continue;
             }
             var1_int = 1;
           }
-          MovementPlanner.field_z.a(0, vo.a((byte) -47, TeleportAction.field_z, iu.field_t), vo.a((byte) 93, ko.field_b, AiPlanningStrategy.field_d));
-          if (MovementPlanner.field_z.d((byte) 46)) {
+          MovementPlanner.field_z.updatePointerSelection(0, vo.a((byte) -47, TeleportAction.field_z, iu.field_t), vo.a((byte) 93, ko.field_b, AiPlanningStrategy.field_d));
+          if (MovementPlanner.field_z.hasActivationInput((byte) 46)) {
             var1_int = 1;
           }
           var2 = 0;
           if (var1_int != 0 &&
-            MovementPlanner.field_z.field_h >= 0) {
-            var2 = rg.field_m[MovementPlanner.field_z.field_h];
+            MovementPlanner.field_z.selectedIndex >= 0) {
+            var2 = rg.field_m[MovementPlanner.field_z.selectedIndex];
             if (var2 == 2) {
               CombatPresentation.n(-112);
             }

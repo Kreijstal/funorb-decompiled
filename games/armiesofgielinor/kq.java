@@ -66,7 +66,7 @@ class kq extends fw {
           }
           if (uc.spellDefinitions[param2][4] == 1 &&
             var8.getEquipmentId((byte) 81) > 0) {
-            var6 = dl.field_e[var7.getEquipmentId((byte) 81)][var7.getEquipmentCategory(20640)];
+            var6 = UiSelectionState.field_e[var7.getEquipmentId((byte) 81)][var7.getEquipmentCategory(20640)];
             array$0 = new String[3];
             stackIn_13_0 = 4800;
             stackIn_13_1 = rb.field_c;

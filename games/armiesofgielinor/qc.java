@@ -4,7 +4,7 @@
 abstract class qc {
     static ro field_a;
     static String field_b;
-    static dl field_d;
+    static UiSelectionState field_d;
     static qc field_h;
     static String field_i;
     static int field_j;

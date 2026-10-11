@@ -1,43 +1,43 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dl {
+final class UiSelectionState {
     static int field_i;
     static String field_d;
     static int[][] field_e;
-    private int field_a;
-    private boolean field_b;
-    private int field_j;
-    int field_h;
-    private int field_g;
-    int field_k;
+    private int buttonPress;
+    private boolean pointerDrivenSelection;
+    private int keyCode;
+    int selectedIndex;
+    private int repeatCountdown;
+    int itemCount;
     static int[] field_c;
-    private int field_f;
+    private int pressedPointerButton;
 
-    final void b(byte param0) {
-        this.field_j = 0;
-        this.field_a = 0;
-        if (this.field_f == 0 &&
+    final void pollNavigationKeys(byte obfuscationGuard) {
+        this.keyCode = 0;
+        this.buttonPress = 0;
+        if (this.pressedPointerButton == 0 &&
           rs.field_q == 98) {
-          if (this.field_h <= 0) {
-            this.field_h = this.field_k;
+          if (this.selectedIndex <= 0) {
+            this.selectedIndex = this.itemCount;
           }
-          this.field_h = this.field_h - 1;
-          this.field_b = false;
+          this.selectedIndex = this.selectedIndex - 1;
+          this.pointerDrivenSelection = false;
         }
-        if (param0 != -120) {
+        if (obfuscationGuard != -120) {
           return;
         }
-        if (0 == this.field_f) {
-          this.field_j = rs.field_q;
+        if (0 == this.pressedPointerButton) {
+          this.keyCode = rs.field_q;
         }
-        if (this.field_f == 0 &&
+        if (this.pressedPointerButton == 0 &&
           rs.field_q == 99) {
-          this.field_h = this.field_h + 1;
-          if (this.field_h >= this.field_k) {
-            this.field_h = 0;
+          this.selectedIndex = this.selectedIndex + 1;
+          if (this.selectedIndex >= this.itemCount) {
+            this.selectedIndex = 0;
           }
-          this.field_b = false;
+          this.pointerDrivenSelection = false;
         }
     }
 
@@ -45,22 +45,22 @@ final class dl {
         if (param0 != 96) {
           return true;
         }
-        return this.field_j == 103 ? true : false;
+        return this.keyCode == 103 ? true : false;
     }
 
-    final boolean a(boolean param0) {
-        if (param0) {
+    final boolean isPointerPressed(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           return false;
         }
-        return this.field_f != 0 ? true : false;
+        return this.pressedPointerButton != 0 ? true : false;
     }
 
-    final boolean d(byte param0) {
+    final boolean hasActivationInput(byte obfuscationGuard) {
         boolean stackIn_8_0 = false;
-        if (param0 < 35) {
-          this.field_a = -104;
+        if (obfuscationGuard < 35) {
+          this.buttonPress = -104;
         }
-        stackIn_8_0 = (0 != this.field_a) || (this.field_j == 84) || (this.field_j == 83);
+        stackIn_8_0 = (0 != this.buttonPress) || (this.keyCode == 84) || (this.keyCode == 83);
         return stackIn_8_0;
     }
 
@@ -71,12 +71,12 @@ final class dl {
         field_d = null;
     }
 
-    final void a(int param0, boolean param1) {
-        if (this.field_f == 0) {
-          this.field_b = false;
-          this.field_h = param0;
+    final void selectIndex(int index, boolean obfuscationGuard) {
+        if (this.pressedPointerButton == 0) {
+          this.pointerDrivenSelection = false;
+          this.selectedIndex = index;
         }
-        if (param1) {
+        if (obfuscationGuard) {
           this.b(15);
         }
     }
@@ -90,52 +90,52 @@ final class dl {
 
     final boolean e(int param0) {
         int var2 = -105 % ((param0 + 19) / 60);
-        return this.field_j == 102 ? true : false;
+        return this.keyCode == 102 ? true : false;
     }
 
-    final void a(int param0, byte param1) {
-        this.field_j = 0;
-        int var3 = 61 % ((param1 - 78) / 48);
-        this.field_a = 0;
-        if (this.field_f == 0) {
-          this.field_j = rs.field_q;
+    final void pollNavigationKeysWithFallback(int fallbackIndex, byte obfuscationGuard) {
+        this.keyCode = 0;
+        int var3 = 61 % ((obfuscationGuard - 78) / 48);
+        this.buttonPress = 0;
+        if (this.pressedPointerButton == 0) {
+          this.keyCode = rs.field_q;
         }
-        if (0 == this.field_f &&
+        if (0 == this.pressedPointerButton &&
           rs.field_q == 96) {
-          if (this.field_h <= 0) {
-            this.field_h = this.field_k;
+          if (this.selectedIndex <= 0) {
+            this.selectedIndex = this.itemCount;
           }
-          this.field_h = this.field_h - 1;
-          this.field_b = false;
+          this.selectedIndex = this.selectedIndex - 1;
+          this.pointerDrivenSelection = false;
         }
-        if (0 == this.field_f &&
+        if (0 == this.pressedPointerButton &&
           rs.field_q == 97) {
-          this.field_h = this.field_h + 1;
-          this.field_b = false;
-          if (this.field_h >= this.field_k) {
-            this.field_h = 0;
+          this.selectedIndex = this.selectedIndex + 1;
+          this.pointerDrivenSelection = false;
+          if (this.selectedIndex >= this.itemCount) {
+            this.selectedIndex = 0;
           }
         }
-        if (this.field_f == 0 &&
+        if (this.pressedPointerButton == 0 &&
           (rs.field_q == 98 || rs.field_q == 99)) {
-          this.field_b = false;
-          if (this.field_h < 0) {
-            this.field_h = param0;
+          this.pointerDrivenSelection = false;
+          if (this.selectedIndex < 0) {
+            this.selectedIndex = fallbackIndex;
           }
         }
     }
 
-    final boolean a(int param0) {
-        if (param0 != -98) {
-          this.c(6);
+    final boolean isIncrementKeyPressed(int obfuscationGuard) {
+        if (obfuscationGuard != -98) {
+          this.pollKeyForButtonState(6);
         }
-        return this.field_j == 97 ? true : false;
+        return this.keyCode == 97 ? true : false;
     }
 
     final static boolean d(int param0) {
         boolean stackIn_12_0 = false;
         if (param0 != 95) {
-          dl.f(46);
+          UiSelectionState.f(46);
         }
         stackIn_12_0 = ((OwnerChangeEvent.field_B &&
           im.field_w &&
@@ -146,19 +146,19 @@ final class dl {
         return stackIn_12_0;
     }
 
-    final void c(int param0) {
-        this.field_a = 0;
-        this.field_j = 0;
-        if (param0 == this.field_f) {
-          this.field_j = rs.field_q;
+    final void pollKeyForButtonState(int pointerButton) {
+        this.buttonPress = 0;
+        this.keyCode = 0;
+        if (pointerButton == this.pressedPointerButton) {
+          this.keyCode = rs.field_q;
         }
     }
 
-    final boolean a(byte param0) {
-        if (param0 >= -48) {
-          this.field_f = 73;
+    final boolean isDecrementKeyPressed(byte obfuscationGuard) {
+        if (obfuscationGuard >= -48) {
+          this.pressedPointerButton = 73;
         }
-        return 96 == this.field_j ? true : false;
+        return 96 == this.keyCode ? true : false;
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
@@ -221,44 +221,44 @@ final class dl {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
-        if (param2 >= this.field_k) {
+    final void updatePointerSelection(int previousButton, int pressedIndex, int hoverIndex) {
+        if (hoverIndex >= this.itemCount) {
           throw new IllegalArgumentException();
         }
-        if (param1 >= this.field_k) {
+        if (pressedIndex >= this.itemCount) {
           throw new IllegalArgumentException();
         }
-        this.field_a = 0;
-        this.field_j = 0;
-        if (param0 != DeployEvent.field_A) {
-          this.field_f = DeployEvent.field_A;
-          this.field_a = DeployEvent.field_A;
-          this.field_b = true;
-          this.field_h = param1;
-          this.field_g = eu.field_a;
+        this.buttonPress = 0;
+        this.keyCode = 0;
+        if (previousButton != DeployEvent.field_A) {
+          this.pressedPointerButton = DeployEvent.field_A;
+          this.buttonPress = DeployEvent.field_A;
+          this.pointerDrivenSelection = true;
+          this.selectedIndex = pressedIndex;
+          this.repeatCountdown = eu.field_a;
         }
-        if (this.field_f != 0 &&
+        if (this.pressedPointerButton != 0 &&
           0 != ro.field_ub) {
-          if (this.field_g <= 0) {
-            this.field_g = GameEvent.field_k;
+          if (this.repeatCountdown <= 0) {
+            this.repeatCountdown = GameEvent.field_k;
           }
-          this.field_g = this.field_g - 1;
+          this.repeatCountdown = this.repeatCountdown - 1;
         }
         if (DeployEvent.field_A == 0 &&
           ro.field_ub == 0) {
-          this.field_f = 0;
+          this.pressedPointerButton = 0;
         }
-        if (this.field_f == 0 && (this.field_b ||
+        if (this.pressedPointerButton == 0 && (this.pointerDrivenSelection ||
           lk.field_f)) {
-          if (0 > param2) {
-            if (this.field_b) {
-              this.field_h = -1;
+          if (0 > hoverIndex) {
+            if (this.pointerDrivenSelection) {
+              this.selectedIndex = -1;
             }
           } else {
-            if (param2 == this.field_h) {
+            if (hoverIndex == this.selectedIndex) {
             }
-            this.field_b = true;
-            this.field_h = param2;
+            this.pointerDrivenSelection = true;
+            this.selectedIndex = hoverIndex;
           }
         }
     }
@@ -270,19 +270,19 @@ final class dl {
         }
     }
 
-    dl(int param0) {
-        this.field_b = false;
-        this.field_h = 0;
-        this.field_k = param0;
+    UiSelectionState(int itemCount) {
+        this.pointerDrivenSelection = false;
+        this.selectedIndex = 0;
+        this.itemCount = itemCount;
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
-        this.field_f = param3;
-        this.field_b = param1 ? true : false;
-        if (this.field_b) {
-          this.field_h = param2;
+    final void restoreSelection(int fallbackIndex, boolean pointerDriven, int pointerIndex, int pointerButton) {
+        this.pressedPointerButton = pointerButton;
+        this.pointerDrivenSelection = pointerDriven ? true : false;
+        if (this.pointerDrivenSelection) {
+          this.selectedIndex = pointerIndex;
         } else {
-          this.field_h = param0;
+          this.selectedIndex = fallbackIndex;
         }
     }
 

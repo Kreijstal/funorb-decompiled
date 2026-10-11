@@ -43,7 +43,7 @@ final class Battlefield {
     private int[] field_N;
     MapTile[] tiles;
     NodeDeque unitObservers;
-    PacketBuffer field_Z;
+    PacketBuffer snapshotBuffer;
     int[] field_S;
     boolean field_Ab;
     int mapSizeSetting;
@@ -1638,7 +1638,7 @@ final class Battlefield {
         try {
           var5_int = 0;
           if (param1 != 12534) {
-            this.a((PacketBuffer) null, (byte) -4);
+            this.readGameEvent((PacketBuffer) null, (byte) -4);
           }
           do {
             if (this.teamCount <= var5_int) {
@@ -1850,24 +1850,24 @@ final class Battlefield {
         return this.matchConditions.describeConditions(param0 ^ 26524);
     }
 
-    private final void a(int param0, PacketBuffer param1) {
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+    private final void readStateChangeEvent(int obfuscationGuard, PacketBuffer packet) {
+        int header = 0;
+        int tileX = 0;
+        int tileY = 0;
+        int playerId = 0;
+        int effectType = 0;
         try {
-          var3_int = param1.readUnsignedByte(param0 + 30531);
-          var4 = param1.readUnsignedByte(0);
-          var5 = param1.readUnsignedByte(0);
-          var6 = 7 & var3_int;
-          if (param0 != -30531) {
+          header = packet.readUnsignedByte(obfuscationGuard + 30531);
+          tileX = packet.readUnsignedByte(0);
+          tileY = packet.readUnsignedByte(0);
+          playerId = 7 & header;
+          if (obfuscationGuard != -30531) {
             this.applyMatchOutcome(103, false, (int[]) null);
           }
-          var7 = (var3_int & 31) >> 3;
-          this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new StateChangeEvent(var7, var4, var5, var6)));
+          effectType = (header & 31) >> 3;
+          this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new StateChangeEvent(effectType, tileX, tileY, playerId)));
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ha.GD(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ha.GD(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -2683,7 +2683,7 @@ final class Battlefield {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          param2.a(new String[]{"unit type: ", dn.unitDisplayNames[param1.unitType].toLowerCase(), " at ", TutorialController.c(param1.tileX, 0, param1.tileY)}, (byte) -120);
+          param2.a(new String[]{"unit type: ", dn.unitDisplayNames[param1.unitType].toLowerCase(), " at ", TutorialController.formatCoordinatePair(param1.tileX, 0, param1.tileY)}, (byte) -120);
           param2.a(0, 2);
           param2.a(new String[]{"owner: ", this.e(param1.ownerPlayer, -1)}, (byte) -120);
           if (param1.poisoned) {
@@ -2799,18 +2799,18 @@ final class Battlefield {
         }
     }
 
-    private final void a(int param0, int param1, PacketBuffer param2, int param3) {
+    private final void readStoredUnitAt(int tileX, int obfuscationGuard, PacketBuffer packet, int tileY) {
         int var5_int = 0;
         Unit var6 = null;
-        if (param1 >= -22) {
+        if (obfuscationGuard >= -22) {
           return;
         }
         try {
-          var5_int = param2.readUnsignedByte(0);
-          var6 = SummonEvent.a(var5_int, 0, param3, param0, param2, this, -102, true);
+          var5_int = packet.readUnsignedByte(0);
+          var6 = SummonEvent.readStoredUnit(var5_int, 0, tileY, tileX, packet, this, -102, true);
           this.unitsByPlayer[var6.ownerPlayer].addLast((byte) -119, (IntrusiveNode) (var6));
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ha.WD(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ha.WD(" + tileX + ',' + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ',' + tileY + ')');
         }
     }
 
@@ -2892,35 +2892,35 @@ final class Battlefield {
         StringBuilder stackIn_49_1 = null;
         String stackIn_50_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
+        int specialKind = 0;
         RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int playerAndMode = 0;
+        int selectionMode = 0;
+        int dispatchKind = 0;
         int var7 = 0;
-        int var4Lifetime1;
-        int var5Lifetime1;
+        int tileX;
+        int tileY;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3_int = packet.readUnsignedByte(obfuscationGuard ^ -84) & 31;
-          if (var3_int == 13) {
+          specialKind = packet.readUnsignedByte(obfuscationGuard ^ -84) & 31;
+          if (specialKind == 13) {
             this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new KingBlackDragonEvent(packet.readUnsignedByte(0))));
             return;
           }
-          if (var3_int == 14) {
+          if (specialKind == 14) {
             this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new ManaEvent(3, packet.readUnsignedByte(0), this.localPlayer)));
             return;
           }
           if (obfuscationGuard != -84) {
             this.registerUnit(-22, (Unit) null);
           }
-          if (var3_int == 5) {
-            var4 = packet.readUnsignedByte(0);
-            var5 = 15 & var4;
-            if (var5 == 15) {
-              var5 = -1;
+          if (specialKind == 5) {
+            playerAndMode = packet.readUnsignedByte(0);
+            selectionMode = 15 & playerAndMode;
+            if (selectionMode == 15) {
+              selectionMode = -1;
             }
-            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SpellCastEvent(bo.a(-1, packet, 4368051), var5, var4 >> 4)));
+            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SpellCastEvent(TutorialLayout.readSpell(-1, packet, 4368051), selectionMode, playerAndMode >> 4)));
           }
           regionExit1: {
             regionExit2: {
@@ -2929,31 +2929,31 @@ final class Battlefield {
                   regionExit5: {
                     regionExit6: {
                       boolean decompiledFrameRemainder0 = true;
-                      var4Lifetime1 = packet.readUnsignedByte(0);
-                      var5Lifetime1 = packet.readUnsignedByte(obfuscationGuard ^ -84);
-                      var6 = var3_int;
-                      if ((var6 != 1) &&
-                        (decompiledFrameRemainder0 = (var6 != 11))) {
-                        if (17 == var6 &&
+                      tileX = packet.readUnsignedByte(0);
+                      tileY = packet.readUnsignedByte(obfuscationGuard ^ -84);
+                      dispatchKind = specialKind;
+                      if ((dispatchKind != 1) &&
+                        (decompiledFrameRemainder0 = (dispatchKind != 11))) {
+                        if (17 == dispatchKind &&
                           var7 == 0) {
                           break regionExit6;
                         }
-                        if (var6 == 16) {
+                        if (dispatchKind == 16) {
                           break regionExit5;
                         }
-                        if (2 == var6 &&
+                        if (2 == dispatchKind &&
                           var7 == 0) {
                           break regionExit4;
                         }
-                        if (var6 == 7 &&
+                        if (dispatchKind == 7 &&
                           var7 == 0) {
                           break regionExit3;
                         }
-                        if (var6 == 8 &&
+                        if (dispatchKind == 8 &&
                           var7 == 0) {
                           break regionExit2;
                         }
-                        if (15 != var6) {
+                        if (15 != dispatchKind) {
                           return;
                         }
                         if (var7 == 0) {
@@ -2961,42 +2961,42 @@ final class Battlefield {
                         }
                       }
                       if (decompiledFrameRemainder0) {
-                        this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TelepopEvent(var4Lifetime1, var5Lifetime1)));
+                        this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TelepopEvent(tileX, tileY)));
                         if (var7 == 0) {
                           return;
                         }
                       }
-                      this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TeleportEvent(var4Lifetime1, var5Lifetime1, packet.readUnsignedShort((byte) -104), true)));
+                      this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TeleportEvent(tileX, tileY, packet.readUnsignedShort((byte) -104), true)));
                       if (var7 == 0) {
                         return;
                       }
                     }
-                    this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TeleportEvent(var4Lifetime1, var5Lifetime1, packet.readUnsignedShort((byte) -104), false)));
+                    this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TeleportEvent(tileX, tileY, packet.readUnsignedShort((byte) -104), false)));
                     if (var7 == 0) {
                       return;
                     }
                   }
-                  this.a(var4Lifetime1, -47, packet, var5Lifetime1);
+                  this.readStoredUnitAt(tileX, -47, packet, tileY);
                   if (var7 == 0) {
                     return;
                   }
                 }
-                this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeathEvent(var4Lifetime1, var5Lifetime1)));
+                this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeathEvent(tileX, tileY)));
                 if (var7 == 0) {
                   return;
                 }
               }
-              this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeployEvent(var4Lifetime1, var5Lifetime1, 0)));
+              this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeployEvent(tileX, tileY, 0)));
               if (var7 == 0) {
                 return;
               }
             }
-            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeployEvent(var4Lifetime1, var5Lifetime1, packet.readUnsignedByte(0))));
+            this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new DeployEvent(tileX, tileY, packet.readUnsignedByte(0))));
             if (var7 == 0) {
               return;
             }
           }
-          this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new GrowthEvent(var4Lifetime1, var5Lifetime1, packet.readUnsignedByte(0), packet.readUnsignedByte(obfuscationGuard ^ -84), packet.readUnsignedByte(0), packet.readUnsignedByte(0))));
+          this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new GrowthEvent(tileX, tileY, packet.readUnsignedByte(0), packet.readUnsignedByte(obfuscationGuard ^ -84), packet.readUnsignedByte(0), packet.readUnsignedByte(0))));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3608,7 +3608,7 @@ final class Battlefield {
               stackIn_98_5 = this;
               stackIn_98_6 = -94;
               stackIn_99_7 = ((128 & var11Lifetime1) != 0);
-              var12 = SummonEvent.a(stackIn_98_0, stackIn_98_1, stackIn_98_2, stackIn_98_3, stackIn_98_4, this, stackIn_98_6, stackIn_99_7);
+              var12 = SummonEvent.readStoredUnit(stackIn_98_0, stackIn_98_1, stackIn_98_2, stackIn_98_3, stackIn_98_4, this, stackIn_98_6, stackIn_99_7);
               this.unitsByPlayer[var12.ownerPlayer].addLast((byte) -119, (IntrusiveNode) (var12));
               var8++;
             }
@@ -4551,7 +4551,7 @@ final class Battlefield {
                     var18.writeByte(1, var26.tileX);
                     var18.writeByte(1, var26.tileY);
                     var18.position = 0;
-                    var19 = bo.a(var26.ownerPlayer, var18, 4368051);
+                    var19 = TutorialLayout.readSpell(var26.ownerPlayer, var18, 4368051);
                     if (var19 != null) {
                       var19.applyEffect(var26.ownerPlayer, this, 26123);
                     }
@@ -4651,7 +4651,7 @@ final class Battlefield {
             -1 == param1.ownerPlayer) {
             return;
           }
-          param4.a(new String[]{"cell at ", TutorialController.c(param5, 0, param3), ": "}, (byte) -95);
+          param4.a(new String[]{"cell at ", TutorialController.formatCoordinatePair(param5, 0, param3), ": "}, (byte) -95);
           param4.a(0, 2);
           if (param1.field_b) {
             param4.a(new String[]{"changed type: ", Integer.toString(param1.terrainType)}, (byte) -106);
@@ -4667,7 +4667,7 @@ final class Battlefield {
           }
           param4.a(0, -2);
           if (param2 != -40) {
-            this.a((byte) -3, (PacketBuffer) null);
+            this.readMoveEvent((byte) -3, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4839,19 +4839,19 @@ final class Battlefield {
         }
     }
 
-    final void a(int param0, PacketBuffer param1, byte param2) {
+    final void appendSnapshotChunk(int chunkLength, PacketBuffer packet, byte obfuscationGuard) {
         try {
-          if (param2 > -71) {
+          if (obfuscationGuard > -71) {
             this.playerCount = 26;
           }
-          if (this.field_Z == null) {
-            param0 -= 2;
-            this.field_Z = new PacketBuffer(param1.readUnsignedShort((byte) -104));
+          if (this.snapshotBuffer == null) {
+            chunkLength -= 2;
+            this.snapshotBuffer = new PacketBuffer(packet.readUnsignedShort((byte) -104));
           }
-          param1.a(0, param0, this.field_Z.position, this.field_Z.payload);
-          this.field_Z.position = this.field_Z.position + param0;
+          packet.readBytes(0, chunkLength, this.snapshotBuffer.position, this.snapshotBuffer.payload);
+          this.snapshotBuffer.position = this.snapshotBuffer.position + chunkLength;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ha.AC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ha.AC(" + chunkLength + ',' + (packet != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -4866,26 +4866,26 @@ final class Battlefield {
         return this.tiles[tileX + this.mapWidth * tileY].getEffectsForPlayer((byte) 97, playerId, var5);
     }
 
-    private final void a(PacketBuffer param0, boolean param1) {
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
+    private final void readSummonEvent(PacketBuffer packet, boolean obfuscationGuard) {
+        int unitType = 0;
+        int ownerAndBonus = 0;
+        int tileX = 0;
+        int tileY = 0;
+        int strengthBonus = 0;
         try {
-          param0.readUnsignedByte(0);
-          if (!param1) {
+          packet.readUnsignedByte(0);
+          if (!obfuscationGuard) {
             this.f(-120);
           }
-          var3_int = param0.readUnsignedByte(0);
-          var4 = param0.readUnsignedByte(0);
-          var5 = param0.readUnsignedByte(0);
-          var6 = param0.readUnsignedByte(0);
-          var7 = 31 & var4;
-          var7 = (16 ^ var7) - 16;
-          this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(var3_int, var5, var6, var7, var4 >> 5)));
+          unitType = packet.readUnsignedByte(0);
+          ownerAndBonus = packet.readUnsignedByte(0);
+          tileX = packet.readUnsignedByte(0);
+          tileY = packet.readUnsignedByte(0);
+          strengthBonus = 31 & ownerAndBonus;
+          strengthBonus = (16 ^ strengthBonus) - 16;
+          this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(unitType, tileX, tileY, strengthBonus, ownerAndBonus >> 5)));
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ha.CB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ha.CB(" + (packet != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -5620,19 +5620,19 @@ final class Battlefield {
         return false;
     }
 
-    private final void a(byte param0, PacketBuffer param1) {
+    private final void readMoveEvent(byte obfuscationGuard, PacketBuffer packet) {
         RuntimeException runtimeException = null;
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int[] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
+        int stepsRemaining = 0;
+        int guardArithmetic = 0;
+        int startX = 0;
+        int startY = 0;
+        int[] directions = null;
+        int stepIndex = 0;
+        int packedDirections = 0;
+        int stepsInByte = 0;
         int var11 = 0;
-        int[] var12 = null;
-        int[] var13 = null;
+        int[] directionArray = null;
+        int[] decodedDirections = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -5640,30 +5640,30 @@ final class Battlefield {
         RuntimeException decompiledCaughtException = null;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4 = -72 % ((-9 - param0) / 57);
-          var3_int = param1.readUnsignedShort((byte) -104) & 8191;
-          var5 = param1.readUnsignedByte(0);
-          var6 = param1.readUnsignedByte(0);
-          var13 = new int[var3_int];
-          var12 = var13;
-          var7 = var12;
-          var8 = 0;
+          guardArithmetic = -72 % ((-9 - obfuscationGuard) / 57);
+          stepsRemaining = packet.readUnsignedShort((byte) -104) & 8191;
+          startX = packet.readUnsignedByte(0);
+          startY = packet.readUnsignedByte(0);
+          decodedDirections = new int[stepsRemaining];
+          directionArray = decodedDirections;
+          directions = directionArray;
+          stepIndex = 0;
           scanLoop1: while (true) {
-            stackIn_3_0 = var3_int;
+            stackIn_3_0 = stepsRemaining;
             if (stackIn_3_0 > 0) {
-              var9 = param1.readUnsignedByte(0);
+              packedDirections = packet.readUnsignedByte(0);
               if (var11 != 0) {
                 return;
               }
-              var10 = 0;
-              while (var10 < 4) {
-                stackIn_3_0 = var3_int;
+              stepsInByte = 0;
+              while (stepsInByte < 4) {
+                stackIn_3_0 = stepsRemaining;
                 if (stackIn_3_0 > 0) {
-                  var7[var8] = rn.a(3, var9);
-                  var9 = var9 >> 2;
-                  var8++;
-                  var3_int--;
-                  var10++;
+                  directions[stepIndex] = rn.a(3, packedDirections);
+                  packedDirections = packedDirections >> 2;
+                  stepIndex++;
+                  stepsRemaining--;
+                  stepsInByte++;
                   continue;
                 }
                 break;
@@ -5672,14 +5672,14 @@ final class Battlefield {
             }
             break;
           }
-          this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new MoveEvent(var5, var6, var13)));
+          this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new MoveEvent(startX, startY, decodedDirections)));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_15_0 = runtimeException;
-          stackIn_15_1 = new StringBuilder().append("ha.MD(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("ha.MD(").append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -5722,9 +5722,9 @@ final class Battlefield {
         return this.playerNames[param0];
     }
 
-    final void a(PacketBuffer param0, byte param1) {
-        int var3_int = 0;
-        int var4 = 0;
+    final void readGameEvent(PacketBuffer packet, byte obfuscationGuard) {
+        int header = 0;
+        int eventCategory = 0;
         int var5 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -5733,39 +5733,39 @@ final class Battlefield {
         RuntimeException var3 = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3_int = param0.payload[param0.position];
-          var4 = (var3_int & 237) >> 5;
+          header = packet.payload[packet.position];
+          eventCategory = (header & 237) >> 5;
           switch ((var5 == 0
-            || var4 == 3
-            || var4 == 5
-            || var4 == 6
-            ) ? var4 : -1) {
+            || eventCategory == 3
+            || eventCategory == 5
+            || eventCategory == 6
+            ) ? eventCategory : -1) {
             case 0:
-              this.a((byte) 91, param0);
+              this.readMoveEvent((byte) 91, packet);
               if (var5 == 0) {
                 break;
               }
             case 1:
-              this.a(param0, true);
+              this.readSummonEvent(packet, true);
               if (var5 == 0) {
                 break;
               }
             case 3:
-              this.readCombatEvent(param0, -1);
+              this.readCombatEvent(packet, -1);
               if (var5 == 0) {
                 break;
               }
             case 5:
-              this.a(-30531, param0);
+              this.readStateChangeEvent(-30531, packet);
               if (var5 == 0) {
                 break;
               }
             case 6:
-              this.readSpecialEvent(param0, (byte) -84);
+              this.readSpecialEvent(packet, (byte) -84);
             default:
               break;
           }
-          if (param1 >= -50) {
+          if (obfuscationGuard >= -50) {
             this.a(true, 103, -100, 43, -48, -87, -117);
           }
           return;
@@ -5774,12 +5774,12 @@ final class Battlefield {
           var3 = decompiledCaughtException;
           stackIn_24_0 = var3;
           stackIn_24_1 = new StringBuilder().append("ha.SA(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -6994,7 +6994,7 @@ final class Battlefield {
         this.winnerCount = 0;
         this.field_eb = false;
         this.field_bb = 1.0f;
-        this.field_Z = null;
+        this.snapshotBuffer = null;
         this.field_Cb = false;
         this.field_D = 0;
         this.field_J = false;

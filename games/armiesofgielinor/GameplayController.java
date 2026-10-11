@@ -4240,7 +4240,7 @@ final class GameplayController {
           var5_int = param3;
           var6 = param0;
           param3 = 75;
-          wc.field_J.d(var5_int - 73, var6 - 73, bo.field_g[bw.unitDefinitions[param1][1] + 1]);
+          wc.field_J.d(var5_int - 73, var6 - 73, TutorialLayout.field_g[bw.unitDefinitions[param1][1] + 1]);
           param0 = 75;
           fe.a(var5_int - 50, -46 + var6, 100, 30, jh.field_l, 128);
           fe.a(-50 + var5_int, var6 + 1, 100, 15, jh.field_l, 128);
@@ -4249,7 +4249,7 @@ final class GameplayController {
           uf.field_j.b();
           SoftwareRaster.b();
           en.field_E.a(dn.unitDisplayNames[param1].toUpperCase(), -47 + param3, param0 - 48, 94, 30, 16763904, -1, 1, 1, 0);
-          en.field_E.b(dl.field_d, param3 - 45, -4 + param0, 16777215, -1);
+          en.field_E.b(UiSelectionState.field_d, param3 - 45, -4 + param0, 16777215, -1);
           var7 = (int)(Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) * 64.0 + 128.0);
           var7 = var7 << 16 | 65283 & var7 << 6;
           stackIn_4_0 = bw.unitDefinitions[param1][2];
@@ -7840,7 +7840,7 @@ final class GameplayController {
           }
           if (var9 <= 3 &&
             var9 > 1) {
-            stackIn_16_0 = param0 + " - " + fo.a(4800, bo.field_c, new String[]{var6, var7, var8, Integer.toString(var9)});
+            stackIn_16_0 = param0 + " - " + fo.a(4800, TutorialLayout.field_c, new String[]{var6, var7, var8, Integer.toString(var9)});
             return stackIn_16_0;
           }
           stackIn_18_0 = param0 + " - " + fo.a(4800, lu.field_v, new String[]{var6, var7, var8});
@@ -10971,7 +10971,7 @@ final class GameplayController {
                 var16 = 10 + (-(var4[var8Lifetime1] * 54) + 13824) / 256;
                 pv.field_e.b();
                 SoftwareRaster.b();
-                hh.field_d.b(0, 0, bo.field_g[1 + this.field_e[var8Lifetime1]]);
+                hh.field_d.b(0, 0, TutorialLayout.field_g[1 + this.field_e[var8Lifetime1]]);
                 so.field_b.a(5605);
                 pv.field_e.d(var14 - var16 / 2, var15 - var16 / 2, var16, var16, 255);
                 decompiledFrameRemainder0 = false;
@@ -10982,7 +10982,7 @@ final class GameplayController {
                   var10Lifetime1Lifetime1 = -30 + this.f(128, this.g(2));
                   if (this.field_dc[var8Lifetime1] < 320) {
                     pv.field_e.b();
-                    hh.field_d.b(0, 0, bo.field_g[this.field_e[var8Lifetime1] + 1]);
+                    hh.field_d.b(0, 0, TutorialLayout.field_g[this.field_e[var8Lifetime1] + 1]);
                     so.field_b.a(5605);
                     pv.field_e.d(var9Lifetime1Lifetime1 - 5, -5 + var10Lifetime1Lifetime1, 10, 10, 255);
                   }

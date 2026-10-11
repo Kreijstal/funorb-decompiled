@@ -90,7 +90,7 @@ final class MoveAttackAction extends PreparedAction {
             cj.field_k[var8 - 1] = 0;
             rg.field_m[0] = 2;
           }
-          MovementPlanner.field_z.field_k = rg.field_m.length;
+          MovementPlanner.field_z.itemCount = rg.field_m.length;
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; var8Lifetime1 < nb.field_h.length; var8Lifetime1++) {
             stackIn_25_0 = nb.field_h[var8Lifetime1];
@@ -105,7 +105,7 @@ final class MoveAttackAction extends PreparedAction {
           }
           bm.field_h = var7Lifetime1 + bt.field_g - (var7Lifetime1 >> 1);
           co.field_f = bt.field_g - (var7Lifetime1 >> 1);
-          ms.field_r = (ar.field_w + rd.field_b << 1) * MovementPlanner.field_z.field_k;
+          ms.field_r = (ar.field_w + rd.field_b << 1) * MovementPlanner.field_z.itemCount;
           var8Lifetime2 = 0;
           while (nb.field_h.length > var8Lifetime2) {
             stackIn_38_0 = ms.field_r;
@@ -122,7 +122,7 @@ final class MoveAttackAction extends PreparedAction {
             field_x = (int[]) null;
           }
           rk.field_r = -(ms.field_r >> 1) + lm.field_g;
-          MovementPlanner.field_z.a(0, param2, vo.a((byte) -73, ko.field_b, AiPlanningStrategy.field_d), 0);
+          MovementPlanner.field_z.restoreSelection(0, param2, vo.a((byte) -73, ko.field_b, AiPlanningStrategy.field_d), 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

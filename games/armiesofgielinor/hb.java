@@ -24,10 +24,10 @@ final class hb {
         if (!param8) {
           field_b = (String) null;
         } else {
-          dl.a(param13, param4, 0, param11);
+          UiSelectionState.a(param13, param4, 0, param11);
           return;
         }
-        dl.a(param13, param4, 0, param11);
+        UiSelectionState.a(param13, param4, 0, param11);
     }
 
     final static void a(byte param0, int param1) {

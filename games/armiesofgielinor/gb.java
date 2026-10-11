@@ -144,16 +144,16 @@ final class gb extends iu {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7) {
+    final static void configureTutorialStage(int itemSpacing, int stage, int leftX, int rightX, int topY, int bottomY, int[] itemIds, int obfuscationGuard) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          MoveEvent.field_y[param1] = param6;
-          MoveEvent.field_D.a(param3, param5, (byte) 18, param4, param2, param0, param1);
-          if (param7 >= -26) {
+          MoveEvent.tutorialStageItems[stage] = itemIds;
+          MoveEvent.tutorialLayout.setStageLayout(rightX, bottomY, (byte) 18, topY, leftX, itemSpacing, stage);
+          if (obfuscationGuard >= -26) {
             gb.a((RgbSprite[]) null, -121, -66, -22, -91);
           }
           return;
@@ -161,13 +161,13 @@ final class gb extends iu {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_6_0 = runtimeException;
-          stackIn_6_1 = new StringBuilder().append("gb.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
+          stackIn_6_1 = new StringBuilder().append("gb.L(").append(itemSpacing).append(',').append(stage).append(',').append(leftX).append(',').append(rightX).append(',').append(topY).append(',').append(bottomY).append(',');
+          if (itemIds == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param7).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

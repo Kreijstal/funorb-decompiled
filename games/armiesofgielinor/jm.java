@@ -144,7 +144,7 @@ final class jm {
             if (var7 != 0) {
               for (var10Lifetime3 = 0; var10Lifetime3 < this.field_r; var10Lifetime3++) {
                 var22 = new byte[64];
-                var18.a(0, 64, 0, var22);
+                var18.readBytes(0, 64, 0, var22);
                 this.field_v[this.field_q[var10Lifetime3]] = var22;
               }
             }

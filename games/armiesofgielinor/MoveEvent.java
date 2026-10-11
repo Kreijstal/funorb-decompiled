@@ -5,11 +5,11 @@ final class MoveEvent extends GameEvent {
     static int[] field_F;
     static dm field_E;
     static RgbSprite field_z;
-    static int[][] field_y;
+    static int[][] tutorialStageItems;
     int[] pathDirections;
     static cv field_C;
     static rk field_G;
-    static bo field_D;
+    static TutorialLayout tutorialLayout;
     int startY;
     private boolean applied;
     static boolean field_J;
@@ -479,8 +479,8 @@ final class MoveEvent extends GameEvent {
             MoveEvent.g(-45);
           }
           field_C = null;
-          field_D = null;
-          field_y = (int[][]) null;
+          tutorialLayout = null;
+          tutorialStageItems = (int[][]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -517,37 +517,37 @@ final class MoveEvent extends GameEvent {
     }
 
     static {
-        field_y = new int[29][];
+        tutorialStageItems = new int[29][];
         field_F = new int[]{1000, 1150, 850, 1300, 700};
         field_J = true;
-        field_D = new bo();
-        gb.a(24, 0, 180, 460, 160, 465, new int[]{32, 31, 47, 1, 25, 30, 40, 35, 5, 48, 19, 16}, -59);
-        gb.a(30, 23, 180, 460, 160, 320, new int[]{3, 53, 54, 4, 7}, -52);
+        tutorialLayout = new TutorialLayout();
+        gb.configureTutorialStage(24, 0, 180, 460, 160, 465, new int[]{32, 31, 47, 1, 25, 30, 40, 35, 5, 48, 19, 16}, -59);
+        gb.configureTutorialStage(30, 23, 180, 460, 160, 320, new int[]{3, 53, 54, 4, 7}, -52);
         bt.a(26);
-        gb.a(30, 1, 180, 460, 100, 400, new int[]{2, 17, 18, 36, 37, 38, 5, 9}, -90);
-        gb.a(30, 24, 180, 460, 100, 400, new int[]{2, 17, 18, 36, 37, 38, 5, 50, 9}, -43);
-        gb.a(30, 2, 180, 460, 100, 400, new int[]{2, 43, 5, 10, 11, 13}, -75);
-        gb.a(30, 19, 180, 460, 100, 170, new int[]{45, 42}, -115);
-        gb.a(30, 25, 180, 460, 100, 170, new int[]{52, 51}, -54);
-        gb.a(30, 3, 180, 460, 100, 400, new int[]{2, 17, 18, 36, 37, 38, 5, 12, 13}, -41);
-        gb.a(30, 4, 180, 460, 100, 400, new int[]{2, 17, 18, 36, 37, 38, 5, 13}, -86);
-        gb.a(30, 6, 180, 460, 400, 460, new int[]{20, 8}, -115);
-        gb.a(30, 26, 180, 460, 400, 460, new int[]{20, 8}, -51);
-        gb.a(30, 27, 180, 460, 400, 460, new int[]{20, 8}, -111);
-        gb.a(30, 28, 180, 460, 400, 460, new int[]{20, 8}, -117);
-        gb.a(30, 12, 60, 580, 440, 470, new int[]{41, 24, 44, 7}, -114);
-        gb.a(30, 13, 60, 580, 440, 470, new int[]{7}, -78);
-        gb.a(30, 20, 60, 580, 440, 470, new int[]{41, 24, 44, 7}, -95);
+        gb.configureTutorialStage(30, 1, 180, 460, 100, 400, new int[]{2, 17, 18, 36, 37, 38, 5, 9}, -90);
+        gb.configureTutorialStage(30, 24, 180, 460, 100, 400, new int[]{2, 17, 18, 36, 37, 38, 5, 50, 9}, -43);
+        gb.configureTutorialStage(30, 2, 180, 460, 100, 400, new int[]{2, 43, 5, 10, 11, 13}, -75);
+        gb.configureTutorialStage(30, 19, 180, 460, 100, 170, new int[]{45, 42}, -115);
+        gb.configureTutorialStage(30, 25, 180, 460, 100, 170, new int[]{52, 51}, -54);
+        gb.configureTutorialStage(30, 3, 180, 460, 100, 400, new int[]{2, 17, 18, 36, 37, 38, 5, 12, 13}, -41);
+        gb.configureTutorialStage(30, 4, 180, 460, 100, 400, new int[]{2, 17, 18, 36, 37, 38, 5, 13}, -86);
+        gb.configureTutorialStage(30, 6, 180, 460, 400, 460, new int[]{20, 8}, -115);
+        gb.configureTutorialStage(30, 26, 180, 460, 400, 460, new int[]{20, 8}, -51);
+        gb.configureTutorialStage(30, 27, 180, 460, 400, 460, new int[]{20, 8}, -111);
+        gb.configureTutorialStage(30, 28, 180, 460, 400, 460, new int[]{20, 8}, -117);
+        gb.configureTutorialStage(30, 12, 60, 580, 440, 470, new int[]{41, 24, 44, 7}, -114);
+        gb.configureTutorialStage(30, 13, 60, 580, 440, 470, new int[]{7}, -78);
+        gb.configureTutorialStage(30, 20, 60, 580, 440, 470, new int[]{41, 24, 44, 7}, -95);
         vt.a(-120);
-        gb.a(30, 8, 280, 360, 438, 440, new int[]{20, 8}, -119);
-        gb.a(30, 9, 280, 360, 438, 440, new int[]{7}, -27);
-        gb.a(30, 10, 180, 460, 400, 460, new int[]{20, 21}, -70);
-        gb.a(30, 11, 100, 540, 100, 400, new int[]{7}, -52);
-        gb.a(30, 15, 180, 460, 100, 400, new int[]{}, -102);
-        gb.a(30, 14, 180, 460, 120, 350, new int[]{17, 18, 36, 37, 38, 6, 7}, -96);
-        gb.a(30, 16, 532, 633, 390, 420, new int[]{39}, -36);
-        gb.a(30, 17, 180, 460, 100, 400, new int[]{2, 17, 18, 36, 37, 38, 43}, -63);
-        gb.a(30, 18, 60, 580, 440, 470, new int[]{41, 24, 44, 7}, -87);
+        gb.configureTutorialStage(30, 8, 280, 360, 438, 440, new int[]{20, 8}, -119);
+        gb.configureTutorialStage(30, 9, 280, 360, 438, 440, new int[]{7}, -27);
+        gb.configureTutorialStage(30, 10, 180, 460, 400, 460, new int[]{20, 21}, -70);
+        gb.configureTutorialStage(30, 11, 100, 540, 100, 400, new int[]{7}, -52);
+        gb.configureTutorialStage(30, 15, 180, 460, 100, 400, new int[]{}, -102);
+        gb.configureTutorialStage(30, 14, 180, 460, 120, 350, new int[]{17, 18, 36, 37, 38, 6, 7}, -96);
+        gb.configureTutorialStage(30, 16, 532, 633, 390, 420, new int[]{39}, -36);
+        gb.configureTutorialStage(30, 17, 180, 460, 100, 400, new int[]{2, 17, 18, 36, 37, 38, 43}, -63);
+        gb.configureTutorialStage(30, 18, 60, 580, 440, 470, new int[]{41, 24, 44, 7}, -87);
         df.a(-20);
     }
 }

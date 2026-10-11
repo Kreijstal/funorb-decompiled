@@ -223,7 +223,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           }
           qc.field_j = 0;
           if (nm.a(jt.field_a, true)) {
-            rq.field_p[jt.field_a].d(true);
+            rq.field_p[jt.field_a].clearSelectionResources(true);
           }
         } else {
           ui.field_c = 0;
@@ -234,7 +234,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             }
             qc.field_j = 0;
             if (nm.a(jt.field_a, true)) {
-              rq.field_p[jt.field_a].d(true);
+              rq.field_p[jt.field_a].clearSelectionResources(true);
             }
           } else {
             ui.field_c = 0;
@@ -242,7 +242,7 @@ final class CipherPacketBuffer extends PacketBuffer {
               mu.field_a = new cg();
               qc.field_j = 0;
               if (nm.a(jt.field_a, true)) {
-                rq.field_p[jt.field_a].d(true);
+                rq.field_p[jt.field_a].clearSelectionResources(true);
               }
             } else {
               qc.field_j = 0;
@@ -280,9 +280,9 @@ final class CipherPacketBuffer extends PacketBuffer {
                   var4 = 2;
                 }
                 if (var4 == -2) {
-                  rq.field_p[param1].a(71, param0, 0);
+                  rq.field_p[param1].restoreStageSelection(71, param0, 0);
                 } else {
-                  rq.field_p[param1].a(85, param0, var4);
+                  rq.field_p[param1].restoreStageSelection(85, param0, var4);
                 }
                 if (param1 == 15) {
                   SkeletonLimitMarker.a(param0, param2 - 1);
@@ -299,7 +299,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                 CipherPacketBuffer.k((byte) -51);
                 return;
               }
-              rq.field_p[jt.field_a].d(true);
+              rq.field_p[jt.field_a].clearSelectionResources(true);
             }
           }
         }
@@ -324,9 +324,9 @@ final class CipherPacketBuffer extends PacketBuffer {
             var4Lifetime1 = 2;
           }
           if (var4Lifetime1 == -2) {
-            rq.field_p[param1].a(71, param0, 0);
+            rq.field_p[param1].restoreStageSelection(71, param0, 0);
           } else {
-            rq.field_p[param1].a(85, param0, var4Lifetime1);
+            rq.field_p[param1].restoreStageSelection(85, param0, var4Lifetime1);
           }
           if (param1 == 15) {
             SkeletonLimitMarker.a(param0, param2 - 1);

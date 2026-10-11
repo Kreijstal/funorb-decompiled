@@ -676,9 +676,9 @@ final class PopupPresentation implements EventPresentation {
                     if (event.eventKind == 24) {
                       var8 = (SpellCastEvent) (event);
                       this.field_n = 8;
-                      if (var8.field_y >= 0) {
-                        this.field_f = (int)(64.0 * Math.sin((double)var8.field_y * 3.141592653589793 / 4.0)) + 130;
-                        this.field_r = -95 + (int)(Math.cos(3.141592653589793 * (double)var8.field_y / 4.0) * -64.0) + CombatEvent.field_I.field_D;
+                      if (var8.selectionMode >= 0) {
+                        this.field_f = (int)(64.0 * Math.sin((double)var8.selectionMode * 3.141592653589793 / 4.0)) + 130;
+                        this.field_r = -95 + (int)(Math.cos(3.141592653589793 * (double)var8.selectionMode / 4.0) * -64.0) + CombatEvent.field_I.field_D;
                       } else {
                         this.field_f = 130;
                         this.field_r = -95 + CombatEvent.field_I.field_D;
