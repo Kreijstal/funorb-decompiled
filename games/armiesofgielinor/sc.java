@@ -38,7 +38,7 @@ final class sc implements TaggedFieldReader {
         if (!(ib.field_j <= 200)) {
           var5 = (250 - ib.field_j << 8) / 50;
         }
-        vn.a(dc.field_n, 3);
+        CombatSandbox.a(dc.field_n, 3);
         tm.a();
         SoftwareRaster.b();
         rb.e(9);

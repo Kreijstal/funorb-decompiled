@@ -437,7 +437,7 @@ final class de {
                 boolean decompiledFrameRemainder0 = true;
                 if (2 == uc.spellDefinitions[param4][5]) {
                   if (var7.getUnitCategory(0) != 4 &&
-                    !var7.j((byte) -83) &&
+                    !var7.canAttackFlying((byte) -83) &&
                     bw.unitDefinitions[var7.unitType][7] <= 1) {
                     if (var7.unitType == 34 &&
                       var7.packedFlag8) {
@@ -458,7 +458,7 @@ final class de {
                   }
                 }
                 if (uc.spellDefinitions[param4][5] == 1 &&
-                  var7.i(-21428)) {
+                  var7.canCaptureStructures(-21428)) {
                   stackIn_271_0 = sp.field_d;
                   return stackIn_271_0;
                 }

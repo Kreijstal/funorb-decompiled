@@ -180,7 +180,7 @@ final class AiUnitPlanner extends IntrusiveNode {
                             var27 = var27 * this.planner.weights[39];
                           }
                           if (this.field_v != 0.0f &&
-                            tile.a(false)) {
+                            tile.isStructure(false)) {
                             var27 = var27 * this.field_v;
                           } else {
                             var27 = var27 * this.field_x;
@@ -239,16 +239,16 @@ final class AiUnitPlanner extends IntrusiveNode {
               if (1 != var24Lifetime1 &&
                 0 != var24Lifetime1 ||
                 var22Lifetime1 != 4) {
-                var17 = var17 + (float)fk.field_d[var24Lifetime1][var22Lifetime1] * this.planner.field_K[var24Lifetime1][tileIndex] / 100.0f;
+                var17 = var17 + (float)fk.matchupDamagePercent[var24Lifetime1][var22Lifetime1] * this.planner.field_K[var24Lifetime1][tileIndex] / 100.0f;
               }
               if (var24Lifetime1 != 4 ||
-                this.unit.j((byte) 92)) {
-                var18Lifetime1 = var18Lifetime1 + (float)fk.field_d[var22Lifetime1][var24Lifetime1] * this.planner.field_n[var23Lifetime1][var24Lifetime1][tileIndex] / 100.0f;
+                this.unit.canAttackFlying((byte) 92)) {
+                var18Lifetime1 = var18Lifetime1 + (float)fk.matchupDamagePercent[var22Lifetime1][var24Lifetime1] * this.planner.field_n[var23Lifetime1][var24Lifetime1][tileIndex] / 100.0f;
               }
               var30 = 0;
               var25_int = var30;
               while (8 > var30) {
-                var20 = var20 + this.planner.field_A[var30][tileIndex] * this.planner.field_K[var24Lifetime1][tileIndex] * (float)fk.field_d[var30][var24Lifetime1] / 100.0f;
+                var20 = var20 + this.planner.field_A[var30][tileIndex] * this.planner.field_K[var24Lifetime1][tileIndex] * (float)fk.matchupDamagePercent[var30][var24Lifetime1] / 100.0f;
                 var30++;
               }
               var21 = var21 + this.planner.field_K[var24Lifetime1][tileIndex];
@@ -259,16 +259,16 @@ final class AiUnitPlanner extends IntrusiveNode {
               this.field_v != 0.0f) {
               var15Lifetime1 = this.planner.weights[6] * this.planner.field_n[var23Lifetime1][9][tileIndex];
               if (this.unit.ownerPlayer != tile.ownerPlayer &&
-                tile.a(false)) {
+                tile.isStructure(false)) {
                 var15Lifetime1 = var15Lifetime1 * this.planner.weights[41];
               }
               var15Lifetime1 = var15Lifetime1 + this.planner.weights[46] * var20;
               var15Lifetime1 = var15Lifetime1 - this.planner.weights[7] * var17;
               var15Lifetime1 = var15Lifetime1 - var19Lifetime1 * this.planner.weights[8];
-              if (tile.a(false) &&
+              if (tile.isStructure(false) &&
                 this.unit.tileX == tileX &&
                 tileY == this.unit.tileY &&
-                tile.field_m < this.unit.getEffectiveStrength((byte) 122) * 4 &&
+                tile.captureStrength < this.unit.getEffectiveStrength((byte) 122) * 4 &&
                 tile.ownerPlayer != this.unit.ownerPlayer) {
                 var15Lifetime1 = var15Lifetime1 + 999999.0f;
               }
@@ -293,7 +293,7 @@ final class AiUnitPlanner extends IntrusiveNode {
               var14Lifetime1 = this.planner.weights[4] * var25;
               var14Lifetime1 = var14Lifetime1 + var18Lifetime1 * this.planner.weights[5];
               var26 = 1.0f;
-              if (this.unit.i(-21428)) {
+              if (this.unit.canCaptureStructures(-21428)) {
                 var26 = var26 * this.planner.weights[58];
               }
               if (this.unit.hasMovementFlag1(false)) {
@@ -303,8 +303,8 @@ final class AiUnitPlanner extends IntrusiveNode {
               if (this.unit.hasMovementFlag1(false)) {
                 var14Lifetime1 = var14Lifetime1 + var20 * this.planner.weights[57];
               }
-              if (!this.unit.i(-21428) &&
-                tile.a(false) &&
+              if (!this.unit.canCaptureStructures(-21428) &&
+                tile.isStructure(false) &&
                 this.planner.playerId != tile.ownerPlayer) {
                 var14Lifetime1 = var14Lifetime1 - this.planner.weights[38] * var19Lifetime1;
               }
@@ -503,7 +503,7 @@ final class AiUnitPlanner extends IntrusiveNode {
           if (0 < var10[var5] &&
             var10[var5] <= var8.getMovementBudget(27732)) {
             var6 = this.planner.battlefield.tiles[var5];
-            if (var6.a(false) &&
+            if (var6.isStructure(false) &&
               !var6.isAlliedToPlayer(this.planner.playerId, (byte) 91) && (null == var6.occupant ||
               !param1 &&
               this.planner.playerId == var6.occupant.ownerPlayer)) {
@@ -609,7 +609,7 @@ final class AiUnitPlanner extends IntrusiveNode {
         if (this.unit.movementSpent) {
           return;
         }
-        if (this.unit.i(-21428)) {
+        if (this.unit.canCaptureStructures(-21428)) {
           this.field_v = this.planner.weights[33];
           this.field_x = this.planner.weights[34];
           this.field_p = this.planner.weights[35];
@@ -619,7 +619,7 @@ final class AiUnitPlanner extends IntrusiveNode {
           this.field_p = this.planner.weights[37];
         }
         this.decisionPriority = 100;
-        if (!this.unit.i(-21428)) {
+        if (!this.unit.canCaptureStructures(-21428)) {
           if (this.unit.getUnitCategory(0) == 5) {
             this.decisionPriority = 10;
           }
@@ -664,86 +664,86 @@ final class AiUnitPlanner extends IntrusiveNode {
         float stackIn_30_0 = 0.0f;
         float stackIn_33_0 = 0.0f;
         float stackIn_36_0 = 0.0f;
-        float var5;
-        Battlefield var6;
-        int var7;
-        int var8;
-        MapTile var9;
-        Unit var10;
-        int var11;
-        int var12;
-        int var13;
-        int var15;
-        int var16;
-        int var17;
-        int var18;
-        int var19;
-        int var20;
+        float score;
+        Battlefield battlefield;
+        int targetX;
+        int targetY;
+        MapTile targetTile;
+        Unit targetUnit;
+        int targetDeltaX;
+        int targetDeltaY;
+        int meleeRange;
+        int targetDamage;
+        int unitDamage;
+        int unitHealing;
+        int targetHealing;
+        int netTargetDamage;
+        int netUnitDamage;
         float var21;
-        int[] var25;
+        int[] combatPrediction;
         float var21Lifetime1;
         float var21Lifetime2;
         float var21Lifetime3;
         float var21Lifetime4;
-        var5 = 0.0f;
-        var6 = this.planner.battlefield;
-        var7 = targetTileIndex % var6.mapWidth;
-        var8 = targetTileIndex / var6.mapWidth;
-        var9 = var6.tiles[targetTileIndex];
-        var10 = var9.occupant;
-        var11 = -attackOriginX + var7;
-        var12 = var8 - attackOriginY;
-        stackIn_3_0 = (Math.abs(var11) + Math.abs(var12) != 1) ? 0 : 1;
-        var13 = stackIn_3_0;
-        var25 = var6.a(var10, attackOriginY, (byte) -123, var12, this.unit, var11, attackOriginX);
-        var15 = var25[0];
-        var16 = var25[1];
-        var17 = 0;
-        if (var10.getEffectiveStrength((byte) 122) < var15) {
-          var15 = var10.getEffectiveStrength((byte) 122);
+        score = 0.0f;
+        battlefield = this.planner.battlefield;
+        targetX = targetTileIndex % battlefield.mapWidth;
+        targetY = targetTileIndex / battlefield.mapWidth;
+        targetTile = battlefield.tiles[targetTileIndex];
+        targetUnit = targetTile.occupant;
+        targetDeltaX = -attackOriginX + targetX;
+        targetDeltaY = targetY - attackOriginY;
+        stackIn_3_0 = (Math.abs(targetDeltaX) + Math.abs(targetDeltaY) != 1) ? 0 : 1;
+        meleeRange = stackIn_3_0;
+        combatPrediction = battlefield.predictCombat(targetUnit, attackOriginY, (byte) -123, targetDeltaY, this.unit, targetDeltaX, attackOriginX);
+        targetDamage = combatPrediction[0];
+        unitDamage = combatPrediction[1];
+        unitHealing = 0;
+        if (targetUnit.getEffectiveStrength((byte) 122) < targetDamage) {
+          targetDamage = targetUnit.getEffectiveStrength((byte) 122);
         }
-        var18 = 0;
+        targetHealing = 0;
         if (this.unit.meleeLifeSteal &&
-          var13 != 0) {
-          var17 = var15;
-          if (var17 > -this.unit.strength + this.unit.maximumStrength) {
-            var17 = -this.unit.strength + this.unit.maximumStrength;
+          meleeRange != 0) {
+          unitHealing = targetDamage;
+          if (unitHealing > -this.unit.strength + this.unit.maximumStrength) {
+            unitHealing = -this.unit.strength + this.unit.maximumStrength;
           }
         }
-        if (this.unit.getEffectiveStrength((byte) 122) + var17 < var16) {
-          var16 = var17 + this.unit.getEffectiveStrength((byte) 122);
+        if (this.unit.getEffectiveStrength((byte) 122) + unitHealing < unitDamage) {
+          unitDamage = unitHealing + this.unit.getEffectiveStrength((byte) 122);
         }
-        if ((2 & var25[2]) == 0) {
-          if (var10.meleeLifeSteal &&
-            var13 != 0) {
-            var18 = var16;
-            if (-var10.strength + var10.maximumStrength < var18) {
-              var18 = -var10.strength + var10.maximumStrength;
+        if ((2 & combatPrediction[2]) == 0) {
+          if (targetUnit.meleeLifeSteal &&
+            meleeRange != 0) {
+            targetHealing = unitDamage;
+            if (-targetUnit.strength + targetUnit.maximumStrength < targetHealing) {
+              targetHealing = -targetUnit.strength + targetUnit.maximumStrength;
             }
           }
-          if (0 != (var25[2] & 1)) {
-            var18++;
+          if (0 != (combatPrediction[2] & 1)) {
+            targetHealing++;
           }
         } else {
-          var16 = 0;
-          var17++;
+          unitDamage = 0;
+          unitHealing++;
         }
-        if (this.unit.a(var10, (byte) 115) &&
-          !var10.x(-99)) {
-          var17 = 0;
-          var18 = 0;
-          var15 = var10.getEffectiveStrength((byte) 122);
-          var16 = 0;
+        if (this.unit.canParasitize(targetUnit, (byte) 115) &&
+          !targetUnit.isFlying(-99)) {
+          unitHealing = 0;
+          targetHealing = 0;
+          targetDamage = targetUnit.getEffectiveStrength((byte) 122);
+          unitDamage = 0;
         }
-        var19 = var15 - var18;
-        var20 = var16 - var17;
-        if (!var10.hasMovementFlag1(false)) {
+        netTargetDamage = targetDamage - targetHealing;
+        netUnitDamage = unitDamage - unitHealing;
+        if (!targetUnit.hasMovementFlag1(false)) {
           stackIn_30_0 = 1.0f;
         } else {
           stackIn_30_0 = this.planner.weights[61];
         }
         var21 = stackIn_30_0;
-        var5 = var5 + (float)var19 * this.planner.weights[0] * var21;
+        score = score + (float)netTargetDamage * this.planner.weights[0] * var21;
         if (!this.unit.hasMovementFlag1(false)) {
           stackIn_33_0 = 1.0f;
         } else {
@@ -751,37 +751,37 @@ final class AiUnitPlanner extends IntrusiveNode {
           stackIn_33_0 = var21Lifetime1;
         }
         var21Lifetime2 = stackIn_33_0;
-        var5 = var5 - (float)var20 * this.planner.weights[1] * var21Lifetime2;
-        if (var9.hasModifierFlag1(12)) {
+        score = score - (float)netUnitDamage * this.planner.weights[1] * var21Lifetime2;
+        if (targetTile.hasModifierFlag1(12)) {
           var21Lifetime3 = this.planner.weights[50];
           stackIn_36_0 = var21Lifetime3;
         } else {
           stackIn_36_0 = 1.0f;
         }
         var21Lifetime4 = stackIn_36_0;
-        var5 = var5 + this.planner.weights[2] * var21Lifetime4 * this.planner.field_n[0][9][targetTileIndex];
-        if (0 != (var25[2] & 1) &&
-          !var10.hasMovementFlag1(false)) {
-          var5 = var5 - this.planner.weights[32];
+        score = score + this.planner.weights[2] * var21Lifetime4 * this.planner.field_n[0][9][targetTileIndex];
+        if (0 != (combatPrediction[2] & 1) &&
+          !targetUnit.hasMovementFlag1(false)) {
+          score = score - this.planner.weights[32];
         }
-        if (var10.a(23072)) {
-          var5 = var5 * this.planner.weights[47];
+        if (targetUnit.a(23072)) {
+          score = score * this.planner.weights[47];
         }
-        if (var10.getUnitCategory(0) == matchupCategory) {
-          var5 = var5 * this.planner.weights[31];
+        if (targetUnit.getUnitCategory(0) == matchupCategory) {
+          score = score * this.planner.weights[31];
         }
-        if (var10.i(-21428)) {
-          var5 = var5 * this.planner.weights[30];
-          if (var6.tiles[targetTileIndex].a(false) &&
-            var6.tiles[targetTileIndex].ownerPlayer != var10.ownerPlayer) {
-            var5 = var5 * this.planner.weights[30];
+        if (targetUnit.canCaptureStructures(-21428)) {
+          score = score * this.planner.weights[30];
+          if (battlefield.tiles[targetTileIndex].isStructure(false) &&
+            battlefield.tiles[targetTileIndex].ownerPlayer != targetUnit.ownerPlayer) {
+            score = score * this.planner.weights[30];
           }
         }
-        if ((var25[2] & 1) != 0 &&
-          1 >= var25[0]) {
+        if ((combatPrediction[2] & 1) != 0 &&
+          1 >= combatPrediction[0]) {
           return -3.4028234663852886e+38f;
         }
-        return var5;
+        return score;
     }
 
     AiUnitPlanner(AiPlanner planner, Unit unit) {

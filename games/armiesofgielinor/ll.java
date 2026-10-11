@@ -3,7 +3,7 @@
  */
 final class ll extends je {
     private je field_Ub;
-    static vn field_Rb;
+    static CombatSandbox field_Rb;
     static String field_Jb;
     static char[] field_Nb;
     static String field_Kb;

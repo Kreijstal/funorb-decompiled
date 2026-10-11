@@ -2910,7 +2910,7 @@ final class GameplayController {
             this.field_d = (um) null;
           }
           if (this.field_y != -2) {
-            if (0 == this.battlefield.c(this.field_X, -27300, this.field_ec, this.field_q)) {
+            if (0 == this.battlefield.getSummoningGodMaskAt(this.field_X, -27300, this.field_ec, this.field_q)) {
               this.field_y = -2;
               return;
             }
@@ -3232,8 +3232,8 @@ final class GameplayController {
             }
             boolean decompiledFrameRemainder0 = true;
             stackIn_18_0 = var3;
-            if (!var4.movementSpent && (!var4.i(-21428) ||
-              !var5.a(false) ||
+            if (!var4.movementSpent && (!var4.canCaptureStructures(-21428) ||
+              !var5.isStructure(false) ||
               var5.isAlliedToPlayer(this.field_q, (byte) 91))) {
               stackIn_21_1 = 0;
               decompiledFrameRemainder0 = false;
@@ -3298,7 +3298,7 @@ final class GameplayController {
               this.field_X = var3 % this.battlefield.mapWidth;
               this.a(false, 58, (Unit) null);
               this.field_y = -1;
-              this.field_hc = this.battlefield.a(this.field_ec, (byte) 63, this.field_X, this.field_q);
+              this.field_hc = this.battlefield.getSummoningFavourAt(this.field_ec, (byte) 63, this.field_X, this.field_q);
             }
             if (var3 < 0) {
               return;
@@ -4248,7 +4248,7 @@ final class GameplayController {
           fe.a(-50 + var5_int, 35 + var6, 100, 15, jh.field_l, 128);
           uf.field_j.b();
           SoftwareRaster.b();
-          en.field_E.a(dn.field_Pb[param1].toUpperCase(), -47 + param3, param0 - 48, 94, 30, 16763904, -1, 1, 1, 0);
+          en.field_E.a(dn.unitDisplayNames[param1].toUpperCase(), -47 + param3, param0 - 48, 94, 30, 16763904, -1, 1, 1, 0);
           en.field_E.b(dl.field_d, param3 - 45, -4 + param0, 16777215, -1);
           var7 = (int)(Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) * 64.0 + 128.0);
           var7 = var7 << 16 | 65283 & var7 << 6;
@@ -4325,7 +4325,7 @@ final class GameplayController {
 
     private final void i(byte param0) {
         RuntimeException runtimeException = null;
-        fi var2 = null;
+        UnitInfoPopup var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -4333,10 +4333,10 @@ final class GameplayController {
           if (param0 != -69) {
             return;
           }
-          var2 = (fi) (this.field_o.first((byte) 91));
+          var2 = (UnitInfoPopup) (this.field_o.first((byte) 91));
           while (var2 != null) {
             var2.a(this.selectedUnit, this.field_q, param0 + 74, this.camera.currentPosition[0], this.camera.currentPosition[1], this.battlefield);
-            var2 = (fi) (this.field_o.next((byte) 123));
+            var2 = (UnitInfoPopup) (this.field_o.next((byte) 123));
             if (var3 != 0) {
               return;
             }
@@ -4364,7 +4364,7 @@ final class GameplayController {
           if (this.field_p <= 0) {
             return;
           }
-          var4_int = this.battlefield.a(this.field_q, param1 + 190, param0, this.field_ec, this.field_X);
+          var4_int = this.battlefield.getSummonFailureFlags(this.field_q, param1 + 190, param0, this.field_ec, this.field_X);
           if (var4_int > 0) {
             this.a(param2, TeamRoster.field_c[var4_int], (byte) -124);
             return;
@@ -6676,7 +6676,7 @@ final class GameplayController {
                 var2 = "";
                 var13_ref_ne = this.battlefield.tiles[this.field_h];
                 if (wg.a(-33, 260, 285, 12, 44)) {
-                  if (!var13_ref_ne.a(false)) {
+                  if (!var13_ref_ne.isStructure(false)) {
                     var2 = GlobalSpell.field_k;
                     decompiledFrameRemainder7 = (var20 != 0);
                   }
@@ -6760,13 +6760,13 @@ final class GameplayController {
                   }
                 }
                 if (ml.a(50, 535, 16, false)) {
-                  boolean decompiledSharedTail1 = (ri.field_c[var13_ref_ne.terrainType] != 100);
+                  boolean decompiledSharedTail1 = (ri.terrainDamageTakenPercent[var13_ref_ne.terrainType] != 100);
                   if (!decompiledSharedTail1) {
                     var2 = ek.field_b[1][17];
                     decompiledSharedTail1 = (var20 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var2 = fo.a(4800, ek.field_b[0][17], new String[]{Integer.toString(ri.field_c[var13_ref_ne.terrainType])});
+                    var2 = fo.a(4800, ek.field_b[0][17], new String[]{Integer.toString(ri.terrainDamageTakenPercent[var13_ref_ne.terrainType])});
                   }
                 }
                 var14 = 23;
@@ -6837,8 +6837,8 @@ final class GameplayController {
                   }
                   var15++;
                 }
-                var16 = var13_ref_ne.a((byte) 97, this.field_q, this.battlefield.getPlayerTeamIndex(this.field_q, -1));
-                var17 = var13_ref_ne.a((byte) 97, -1, -1);
+                var16 = var13_ref_ne.getEffectsForPlayer((byte) 97, this.field_q, this.battlefield.getPlayerTeamIndex(this.field_q, -1));
+                var17 = var13_ref_ne.getEffectsForPlayer((byte) 97, -1, -1);
                 var18 = 0;
                 while (true) {
                   if (var18 < 5) {
@@ -7022,7 +7022,7 @@ final class GameplayController {
                   var15 = this.field_w[this.field_y].a((byte) -121, ko.field_b, 16 + var13, AiPlanningStrategy.field_d, var14 + 16);
                   var4 = this.field_w[this.field_y].b((byte) 117, ko.field_b, 16 + var14, var13 + 16, AiPlanningStrategy.field_d) ? 1 : 0;
                   if (var15 > -1) {
-                    var16 = this.battlefield.a(this.field_q, 255, var15, this.field_ec, this.field_X);
+                    var16 = this.battlefield.getSummonFailureFlags(this.field_q, 255, var15, this.field_ec, this.field_X);
                     if (var16 > 0) {
                       var2 = TeamRoster.field_c[var16];
                       if (var20 != 0) {
@@ -7130,7 +7130,7 @@ final class GameplayController {
                     }
                   }
                   if (decompiledFrameRemainder13) {
-                    if ((this.battlefield.c(var13, -27300, var14, this.field_q) <= 0) &&
+                    if ((this.battlefield.getSummoningGodMaskAt(var13, -27300, var14, this.field_q) <= 0) &&
                       (decompiledFrameRemainder13 = !(this.field_z))) {
                       boolean decompiledFrameRemainder3 = true;
                       boolean decompiledFrameRemainder2 = true;
@@ -7908,7 +7908,7 @@ final class GameplayController {
         Object var5 = null;
         int var6 = 0;
         int var7 = 0;
-        fi var7_ref_fi = null;
+        UnitInfoPopup var7_ref_fi = null;
         int var8 = 0;
         int var9 = 0;
         Unit var9_ref_jd = null;
@@ -8116,7 +8116,7 @@ final class GameplayController {
               break;
             }
             if (null != var5) {
-              this.field_o.addLast((byte) -119, (IntrusiveNode) (new fi((Unit) (var5), 40 + (var3_int >> 1) + var7Lifetime2, -40 + var8Lifetime4 + (var4 >> 1))));
+              this.field_o.addLast((byte) -119, (IntrusiveNode) (new UnitInfoPopup((Unit) (var5), 40 + (var3_int >> 1) + var7Lifetime2, -40 + var8Lifetime4 + (var4 >> 1))));
             }
             decompiledFrameRemainder7 = false;
           }
@@ -8136,17 +8136,17 @@ final class GameplayController {
           if (null != mu.field_a) {
             return;
           }
-          var7_ref_fi = (fi) (this.field_o.first((byte) 97));
+          var7_ref_fi = (UnitInfoPopup) (this.field_o.first((byte) 97));
           scanLoop3: while (true) {
             if (null != var7_ref_fi) {
               var8Lifetime1 = 0;
               if (var16 == 0) {
-                if (var5 == var7_ref_fi.field_r) {
+                if (var5 == var7_ref_fi.unit) {
                   var5 = null;
                   var8Lifetime1 = 1;
                 }
-                var7_ref_fi.a((byte) -111, var8Lifetime1 != 0);
-                var7_ref_fi = (fi) (this.field_o.next((byte) 123));
+                var7_ref_fi.advanceAnimation((byte) -111, var8Lifetime1 != 0);
+                var7_ref_fi = (UnitInfoPopup) (this.field_o.next((byte) 123));
                 continue;
               }
             } else {
@@ -8711,11 +8711,11 @@ final class GameplayController {
                   this.a(var8Lifetime2 + var9Lifetime1 * this.battlefield.mapWidth, false, (byte) 46);
                 }
                 if (this.battlefield.currentPlayer == this.field_q &&
-                  this.battlefield.c(var8Lifetime2, -27300, var9Lifetime1, this.field_q) > 0) {
+                  this.battlefield.getSummoningGodMaskAt(var8Lifetime2, -27300, var9Lifetime1, this.field_q) > 0) {
                   this.field_y = -1;
                   this.field_X = var8Lifetime2;
                   this.field_ec = var9Lifetime1;
-                  this.field_hc = this.battlefield.a(var9Lifetime1, (byte) 95, var8Lifetime2, this.field_q);
+                  this.field_hc = this.battlefield.getSummoningFavourAt(var9Lifetime1, (byte) 95, var8Lifetime2, this.field_q);
                   this.field_Pb = false;
                   this.field_Xb = true;
                   this.a(10, -122);
@@ -10291,17 +10291,17 @@ final class GameplayController {
           stackIn_67_0 = lp.field_b[17 + param7];
           stackIn_67_1 = 268 + param3;
           stackIn_67_2 = param5 + (-42 + param0);
-          if (ri.field_c[param4.terrainType] < 100) {
+          if (ri.terrainDamageTakenPercent[param4.terrainType] < 100) {
             stackIn_68_3 = 255;
           } else {
             stackIn_68_3 = 128;
           }
           ((ru) (Object) stackIn_67_0).b(stackIn_67_1, stackIn_67_2, stackIn_68_3, 0);
           stackIn_71_0 = rs.field_n;
-          stackIn_71_1 = 100 - ri.field_c[param4.terrainType] + "%";
+          stackIn_71_1 = 100 - ri.terrainDamageTakenPercent[param4.terrainType] + "%";
           stackIn_71_2 = 284 + param3;
           stackIn_71_3 = param0 + (param5 - 24);
-          if (ri.field_c[param4.terrainType] < 100) {
+          if (ri.terrainDamageTakenPercent[param4.terrainType] < 100) {
             stackIn_72_4 = 16777215;
           } else {
             stackIn_72_4 = 7829367;
@@ -10347,8 +10347,8 @@ final class GameplayController {
             lp.field_b[3].a(72 - (-param3 - var13 * var12Lifetime1), param0 - 42 + param5);
             var12Lifetime1++;
           }
-          var14Lifetime1 = param4.a((byte) 97, param6, this.battlefield.getPlayerTeamIndex(param6, -1));
-          var15 = param4.a((byte) 97, -1, -1);
+          var14Lifetime1 = param4.getEffectsForPlayer((byte) 97, param6, this.battlefield.getPlayerTeamIndex(param6, -1));
+          var15 = param4.getEffectsForPlayer((byte) 97, -1, -1);
           var16 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (5 <= var16))) {
@@ -11350,7 +11350,7 @@ final class GameplayController {
           var4Lifetime1[var5Lifetime1 >> 5] = oe.c(var4Lifetime1[var5Lifetime1 >> 5], 1 << rn.a(31, var5Lifetime1));
           ai.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(param0)));
           if (!this.field_R) {
-            fi.field_u.addLast((byte) -119, (IntrusiveNode) (new iw(param0, param2, -1, -1, -1, -1)));
+            UnitInfoPopup.field_u.addLast((byte) -119, (IntrusiveNode) (new iw(param0, param2, -1, -1, -1, -1)));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

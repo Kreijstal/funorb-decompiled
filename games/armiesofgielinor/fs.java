@@ -73,7 +73,7 @@ final class fs {
             }
             dm.a(var10, false, param0 + 20, param4 + 40, var11, false);
           }
-          var10Lifetime1 = CipherPacketBuffer.currentBattlefield.b(31, param8, param6, -1);
+          var10Lifetime1 = CipherPacketBuffer.currentBattlefield.getTileEffects(31, param8, param6, -1);
           if ((2 & var10Lifetime1) == 0) {
             return;
           }

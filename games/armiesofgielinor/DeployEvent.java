@@ -114,7 +114,7 @@ final class DeployEvent extends GameEvent {
               var6.removeFromBattlefield(obfuscationGuard + 26577);
               var4_ref_ne = battlefield.tiles[this.tileX + this.tileY * battlefield.mapWidth];
               var4_ref_ne.terrainType = 11;
-              var4_ref_ne.field_j = 1;
+              var4_ref_ne.godFavourLevel = 1;
               var4_ref_ne.field_b = true;
               var4_ref_ne.godId = this.modifiers;
               var4_ref_ne.ownerPlayer = var6.ownerPlayer;

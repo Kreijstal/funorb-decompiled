@@ -219,9 +219,9 @@ final class vv {
                 TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
                 TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
               }
-              if (var9.a(false) &&
+              if (var9.isStructure(false) &&
                 !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
-                var12.i(-21428)) {
+                var12.canCaptureStructures(-21428)) {
                 SoftwareRaster.b(param0 + 18, param5 + 30, 42, 6, 11184810);
                 if (var9.ownerPlayer > -1) {
                   stackIn_41_0 = param0 + 19;
@@ -234,8 +234,8 @@ final class vv {
                 } else {
                   SoftwareRaster.f(param0 + 19, param5 + 31, 40, 4, 0);
                 }
-                var10 = var9.e(10) - var9.field_m;
-                if (10 != var9.e(10)) {
+                var10 = var9.getDefaultCaptureStrength(10) - var9.captureStrength;
+                if (10 != var9.getDefaultCaptureStrength(10)) {
                   var10 = (var10 << 3) / 3;
                 } else {
                   var10 = var10 << 2;
@@ -275,9 +275,9 @@ final class vv {
                   TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
                   TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
                 }
-                if (var9.a(false) &&
+                if (var9.isStructure(false) &&
                   !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
-                  var12.i(-21428)) {
+                  var12.canCaptureStructures(-21428)) {
                   SoftwareRaster.b(param0 + 18, param5 + 30, 42, 6, 11184810);
                   if (var9.ownerPlayer > -1) {
                     stackIn_123_0 = param0 + 19;
@@ -290,8 +290,8 @@ final class vv {
                   } else {
                     SoftwareRaster.f(param0 + 19, param5 + 31, 40, 4, 0);
                   }
-                  var10 = var9.e(10) - var9.field_m;
-                  if (10 != var9.e(10)) {
+                  var10 = var9.getDefaultCaptureStrength(10) - var9.captureStrength;
+                  if (10 != var9.getDefaultCaptureStrength(10)) {
                     var10 = (var10 << 3) / 3;
                   } else {
                     var10 = var10 << 2;
@@ -330,9 +330,9 @@ final class vv {
                   TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
                   TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
                 }
-                if (var9.a(false) &&
+                if (var9.isStructure(false) &&
                   !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
-                  var12.i(-21428)) {
+                  var12.canCaptureStructures(-21428)) {
                   SoftwareRaster.b(param0 + 18, param5 + 30, 42, 6, 11184810);
                   if (var9.ownerPlayer > -1) {
                     stackIn_82_0 = param0 + 19;
@@ -345,8 +345,8 @@ final class vv {
                   } else {
                     SoftwareRaster.f(param0 + 19, param5 + 31, 40, 4, 0);
                   }
-                  var10 = var9.e(10) - var9.field_m;
-                  if (10 != var9.e(10)) {
+                  var10 = var9.getDefaultCaptureStrength(10) - var9.captureStrength;
+                  if (10 != var9.getDefaultCaptureStrength(10)) {
                     var10 = (var10 << 3) / 3;
                   } else {
                     var10 = var10 << 2;
@@ -384,9 +384,9 @@ final class vv {
           return;
         }
         if (var12.ownerPlayer != MapTile.field_i) {
-          if (var9.a(false) &&
+          if (var9.isStructure(false) &&
             !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
-            var12.i(-21428)) {
+            var12.canCaptureStructures(-21428)) {
             SoftwareRaster.b(param0 + 18, param5 + 30, 42, 6, 11184810);
             if (var9.ownerPlayer > -1) {
               stackIn_159_0 = param0 + 19;
@@ -399,8 +399,8 @@ final class vv {
             } else {
               SoftwareRaster.f(param0 + 19, param5 + 31, 40, 4, 0);
             }
-            var10Lifetime1 = var9.e(10) - var9.field_m;
-            if (10 != var9.e(10)) {
+            var10Lifetime1 = var9.getDefaultCaptureStrength(10) - var9.captureStrength;
+            if (10 != var9.getDefaultCaptureStrength(10)) {
               var10Lifetime1 = (var10Lifetime1 << 3) / 3;
             } else {
               var10Lifetime1 = var10Lifetime1 << 2;
@@ -423,9 +423,9 @@ final class vv {
           return;
         }
         if (var12.movementSpent) {
-          if (var9.a(false) &&
+          if (var9.isStructure(false) &&
             !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
-            var12.i(-21428)) {
+            var12.canCaptureStructures(-21428)) {
             SoftwareRaster.b(param0 + 18, param5 + 30, 42, 6, 11184810);
             if (var9.ownerPlayer > -1) {
               stackIn_191_0 = param0 + 19;
@@ -438,8 +438,8 @@ final class vv {
             } else {
               SoftwareRaster.f(param0 + 19, param5 + 31, 40, 4, 0);
             }
-            var10Lifetime2 = var9.e(10) - var9.field_m;
-            if (10 != var9.e(10)) {
+            var10Lifetime2 = var9.getDefaultCaptureStrength(10) - var9.captureStrength;
+            if (10 != var9.getDefaultCaptureStrength(10)) {
               var10Lifetime2 = (var10Lifetime2 << 3) / 3;
             } else {
               var10Lifetime2 = var10Lifetime2 << 2;
@@ -462,9 +462,9 @@ final class vv {
           return;
         }
         if (jf.field_C.field_L <= 0) {
-          if (var9.a(false) &&
+          if (var9.isStructure(false) &&
             !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
-            var12.i(-21428)) {
+            var12.canCaptureStructures(-21428)) {
             SoftwareRaster.b(param0 + 18, param5 + 30, 42, 6, 11184810);
             if (var9.ownerPlayer > -1) {
               stackIn_227_0 = param0 + 19;
@@ -477,8 +477,8 @@ final class vv {
             } else {
               SoftwareRaster.f(param0 + 19, param5 + 31, 40, 4, 0);
             }
-            var10Lifetime3 = var9.e(10) - var9.field_m;
-            if (10 != var9.e(10)) {
+            var10Lifetime3 = var9.getDefaultCaptureStrength(10) - var9.captureStrength;
+            if (10 != var9.getDefaultCaptureStrength(10)) {
               var10Lifetime3 = (var10Lifetime3 << 3) / 3;
             } else {
               var10Lifetime3 = var10Lifetime3 << 2;
@@ -502,7 +502,7 @@ final class vv {
         }
         TeamRoster.field_g.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
         TeamRoster.field_g.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)jf.field_C.field_L * 3.141592653589793 / 200.0)));
-        if (!var9.a(false)) {
+        if (!var9.isStructure(false)) {
           if (param4 <= 0) {
             return;
           }
@@ -516,7 +516,7 @@ final class vv {
           bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
           return;
         }
-        if (!var12.i(-21428)) {
+        if (!var12.canCaptureStructures(-21428)) {
           if (param4 > 0) {
             bk.field_d[1].b(30 + param0, -50 + param5, param4, 0);
           }
@@ -534,8 +534,8 @@ final class vv {
         } else {
           SoftwareRaster.f(param0 + 19, param5 + 31, 40, 4, 0);
         }
-        var10Lifetime4 = var9.e(10) - var9.field_m;
-        if (10 != var9.e(10)) {
+        var10Lifetime4 = var9.getDefaultCaptureStrength(10) - var9.captureStrength;
+        if (10 != var9.getDefaultCaptureStrength(10)) {
           var10Lifetime4 = (var10Lifetime4 << 3) / 3;
         } else {
           var10Lifetime4 = var10Lifetime4 << 2;

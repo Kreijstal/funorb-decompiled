@@ -108,7 +108,7 @@ final class ce extends tj implements he {
         this.field_L.field_x = (qo) (this);
         this.field_E.field_x = (qo) (this);
         this.field_L.field_s = hb.field_b;
-        this.field_E.field_s = vn.field_e;
+        this.field_E.field_s = CombatSandbox.field_e;
         this.a((byte) 10, (kb) (this.field_G));
         this.a((byte) 10, (kb) (this.field_L));
         this.a((byte) 10, (kb) (this.field_E));

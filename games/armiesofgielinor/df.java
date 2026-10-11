@@ -119,7 +119,7 @@ final class df extends tj implements fb, he {
           }
           if (!this.field_P) {
             if (this.field_F) {
-              this.field_N.field_s = vn.field_e;
+              this.field_N.field_s = CombatSandbox.field_e;
               this.field_N.field_k = (kh) ((Object) new td());
             } else {
               this.field_N.field_k = (kh) ((Object) new td());
@@ -134,7 +134,7 @@ final class df extends tj implements fb, he {
           }
           var8 = bh.field_J;
           var9 = ea.a(0, CombatEvent.d((byte) 34));
-          if (var9 != vn.field_j) {
+          if (var9 != CombatSandbox.field_j) {
             if (var9 == ps.field_y) {
               var8 = ui.field_h;
             }

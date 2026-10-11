@@ -5,8 +5,8 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
     int tag;
     hr field_x;
     int accessoryType;
-    boolean field_eb;
-    boolean field_Z;
+    boolean hasTileEffect8;
+    boolean hasTileEffect4;
     boolean field_U;
     int strength;
     static String field_n;
@@ -47,7 +47,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
     boolean packedFlag8;
     boolean movementSpent;
     boolean field_G;
-    boolean field_v;
+    boolean hasTileEffect16;
     boolean packedFlag256;
 
     final boolean hasMovementFlag1(boolean obfuscationGuard) {
@@ -60,7 +60,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
     final int a(boolean param0) {
         if (param0) {
           Unit var3 = (Unit) null;
-          this.a((Unit) null, (byte) 94);
+          this.canParasitize((Unit) null, (byte) 94);
         }
         return this.movementTargetX;
     }
@@ -102,8 +102,8 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return var2;
     }
 
-    final boolean e(byte param0) {
-        if (param0 < 73) {
+    final boolean isJadeVine(byte obfuscationGuard) {
+        if (obfuscationGuard < 73) {
           this.tileY = -27;
         }
         return this.unitType == 39 ? true : false;
@@ -120,8 +120,8 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         }
     }
 
-    final boolean k(byte param0) {
-        if (param0 < 75) {
+    final boolean isSeaSlug(byte obfuscationGuard) {
+        if (obfuscationGuard < 75) {
           this.aiPlanner = (AiUnitPlanner) null;
         }
         return this.unitType == 27 ? true : false;
@@ -222,9 +222,9 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return this.equipmentDescriptor >> 5;
     }
 
-    final boolean i(int param0) {
+    final boolean canCaptureStructures(int obfuscationGuard) {
         boolean stackIn_7_0 = false;
-        if (param0 != -21428) {
+        if (obfuscationGuard != -21428) {
           return false;
         }
         stackIn_7_0 = !((512 & bw.unitDefinitions[this.unitType][10]) <= 0) || (this.accessoryType == 1);
@@ -246,10 +246,10 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return this.strength + this.bonusStrength;
     }
 
-    final boolean n(int param0) {
+    final boolean hasAntiFlyingBonus(int obfuscationGuard) {
         int var2;
         boolean stackIn_5_0 = false;
-        var2 = 106 % ((80 - param0) / 34);
+        var2 = 106 % ((80 - obfuscationGuard) / 34);
         stackIn_5_0 = !((bw.unitDefinitions[this.unitType][10] & 2048) <= 0) || (this.accessoryType == 2);
         return stackIn_5_0;
     }
@@ -289,13 +289,13 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (this.poisoned) {
           var2 = var2 | 4;
         }
-        if (this.field_Z) {
+        if (this.hasTileEffect4) {
           var2 = var2 | 8;
         }
-        if (this.field_v) {
+        if (this.hasTileEffect16) {
           var2 = var2 | 16;
         }
-        if (this.field_eb) {
+        if (this.hasTileEffect8) {
           var2 = var2 | 32;
         }
         if (this.packedFlag32) {
@@ -325,7 +325,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return var2;
     }
 
-    final boolean a(Unit param0, byte param1) {
+    final boolean canParasitize(Unit target, byte obfuscationGuard) {
         RuntimeException var3 = null;
         boolean stackIn_12_0 = false;
         RuntimeException stackIn_15_0 = null;
@@ -333,29 +333,29 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.k((byte) 107)) {
+          if (!this.isSeaSlug((byte) 107)) {
             return false;
           }
-          if (param0.packedFlag8 &&
-            param0.unitType != 0) {
+          if (target.packedFlag8 &&
+            target.unitType != 0) {
             return false;
           }
-          if (param1 < 113) {
+          if (obfuscationGuard < 113) {
             this.field_z = -18;
           }
-          stackIn_12_0 = !(this.bonusStrength + this.strength < param0.strength + param0.bonusStrength);
+          stackIn_12_0 = !(this.bonusStrength + this.strength < target.strength + target.bonusStrength);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_15_0 = var3;
           stackIn_15_1 = new StringBuilder().append("jd.T(");
-          if (param0 == null) {
+          if (target == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -378,10 +378,10 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         this.queueDeathOrRevival(22331);
     }
 
-    final boolean j(byte param0) {
+    final boolean canAttackFlying(byte obfuscationGuard) {
         int var2;
         boolean stackIn_11_0 = false;
-        var2 = 31 % ((-9 - param0) / 61);
+        var2 = 31 % ((-9 - obfuscationGuard) / 61);
         if (this.unitType == 34 &&
           this.packedFlag8) {
           return true;
@@ -695,7 +695,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         this.bonusStrength = 0;
         var6 = this.battlefield.tiles[this.tileX + this.battlefield.mapWidth * this.tileY];
         var3 = var6;
-        var3.field_m = var6.e(10);
+        var3.captureStrength = var6.getDefaultCaptureStrength(10);
         if (0 == this.unitType &&
           !this.packedFlag8) {
         }
@@ -768,7 +768,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
 
     final boolean s(int param0) {
         if (param0 < 123) {
-          this.k((byte) -126);
+          this.isSeaSlug((byte) -126);
         }
         return (32 & bw.unitDefinitions[this.unitType][10]) > 0 ? true : false;
     }
@@ -862,8 +862,8 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return stackIn_6_0;
     }
 
-    final boolean x(int param0) {
-        if (param0 >= -80) {
+    final boolean isFlying(int obfuscationGuard) {
+        if (obfuscationGuard >= -80) {
           Unit var3 = (Unit) null;
           this.faceUnit((Unit) null, -117);
         }
@@ -880,7 +880,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
     }
 
     final void k(int param0) {
-        if (this.e((byte) 102)) {
+        if (this.isJadeVine((byte) 102)) {
           this.battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new UpkeepEvent(this.tileX, this.tileY)));
         }
         if (this.p((byte) -128)) {
@@ -1047,7 +1047,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
 
     final void refreshTileEffects(byte obfuscationGuard) {
         int var2 = 8 / ((19 - obfuscationGuard) / 34);
-        this.battlefield.a(this, -97);
+        this.battlefield.refreshUnitTileEffects(this, -97);
     }
 
     Unit(int tileX, int tileY, int unitType, int ownerPlayer, int maximumStrength, int strength, int packedStatusFlags, int accessoryType, int bonusStrength, Battlefield battlefield, int statusEffectType, int statusEffectValue, int equipmentDescriptor, boolean detached, int immobilizedTurns) {
@@ -1113,8 +1113,8 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
             this.displayName = ov.field_a;
             return;
           }
-          if (this.unitType < dn.field_Pb.length) {
-            this.displayName = dn.field_Pb[this.unitType];
+          if (this.unitType < dn.unitDisplayNames.length) {
+            this.displayName = dn.unitDisplayNames[this.unitType];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

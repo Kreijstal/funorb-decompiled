@@ -941,20 +941,20 @@ final class dm {
           var3 = stackIn_4_0;
           stackIn_7_0 = (ro.field_ub != 1) ? 0 : 1;
           var4 = stackIn_7_0;
-          ll.field_Rb.a(el.field_d, param0 - 56, var2, var3 != 0, var1_int, var4 != 0);
+          ll.field_Rb.advanceFrame(el.field_d, param0 - 56, var2, var3 != 0, var1_int, var4 != 0);
           while (true) {
             if (!Unit.i((byte) 90)) {
               return;
             }
             if (rs.field_q == 13) {
               CipherPacketBuffer.a(true, 0, 1, jt.field_a);
-              if (null != ll.field_Rb.field_k) {
-                ll.field_Rb.field_k.framebuffer = null;
-                ll.field_Rb.field_k.field_A = null;
+              if (null != ll.field_Rb.combatPresentation) {
+                ll.field_Rb.combatPresentation.framebuffer = null;
+                ll.field_Rb.combatPresentation.field_A = null;
               }
               le.field_b = null;
-              if (ll.field_Rb.field_k != null) {
-                ll.field_Rb.field_k = null;
+              if (ll.field_Rb.combatPresentation != null) {
+                ll.field_Rb.combatPresentation = null;
               }
               ll.field_Rb = null;
             }

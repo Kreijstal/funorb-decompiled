@@ -217,7 +217,7 @@ final class MoveAttackRequest extends ActionRequest {
               stackIn_20_0 = 0;
             }
             var4 = stackIn_20_0;
-            if (0 != (battlefield.b(31, var17.tileY, var17.tileX, var17.ownerPlayer) & 4) &&
+            if (0 != (battlefield.getTileEffects(31, var17.tileY, var17.tileX, var17.ownerPlayer) & 4) &&
               null != this.pathDirections &&
               this.pathDirections.length > 0) {
               var4 = 0;
@@ -328,7 +328,7 @@ final class MoveAttackRequest extends ActionRequest {
               if (1 >= var11) {
                 if (var11 == 1 &&
                   4 == var8.getUnitCategory(0) &&
-                  !var17.j((byte) 78)) {
+                  !var17.canAttackFlying((byte) 78)) {
                   this.targetDeltaX = 0;
                   this.targetDeltaY = 0;
                 }
@@ -339,8 +339,8 @@ final class MoveAttackRequest extends ActionRequest {
                   this.targetDeltaX = 0;
                   this.targetDeltaY = 0;
                 }
-                if ((battlefield.b(31, var6 + this.targetDeltaY, var5 + this.targetDeltaX, var17.ownerPlayer) & 2) != 0 ||
-                  0 != (battlefield.b(31, var6, var5, var17.ownerPlayer) & 2)) {
+                if ((battlefield.getTileEffects(31, var6 + this.targetDeltaY, var5 + this.targetDeltaX, var17.ownerPlayer) & 2) != 0 ||
+                  0 != (battlefield.getTileEffects(31, var6, var5, var17.ownerPlayer) & 2)) {
                   this.targetDeltaX = 0;
                   this.targetDeltaY = 0;
                 }

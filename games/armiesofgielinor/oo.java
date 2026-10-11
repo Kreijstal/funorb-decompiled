@@ -559,14 +559,14 @@ final class oo {
           var11_int = (int)((float)param8 / param9);
           var12 = (int)((float)param7 / param9);
           var13 = new RgbSprite(var11_int, var12);
-          vn.a(var13, 3);
+          CombatSandbox.a(var13, 3);
           if (param6 >= -108) {
             oo.b(-32);
           }
           param0.c((int)((float)(-param2) / param9), (int)((float)(-param1) / param9), (int)((float)param0.field_y / param9), (int)((float)param0.field_v / param9));
           this.a(param5, var11_int, param3, 0, param4, (byte) 79, var12, 0);
           rf.b(-18862);
-          vn.a(param0, 3);
+          CombatSandbox.a(param0, 3);
           var13.d(param2, param1, param8, param7);
           rf.b(-18862);
           return;
@@ -666,7 +666,7 @@ final class oo {
           if (this.field_t == null &&
             null != kt.field_n) {
             this.field_t = new RgbSprite(622, 47);
-            vn.a(this.field_t, 3);
+            CombatSandbox.a(this.field_t, 3);
             SoftwareRaster.a(0, 0, 622, 47, 4540749, 65793);
             var2_int = 16448250;
             var3 = 10068666;
@@ -683,7 +683,7 @@ final class oo {
             }
             var10 = cj.a(526344, 526344, 126);
             var5 = new RgbSprite(121, 122);
-            vn.a(var5, 3);
+            CombatSandbox.a(var5, 3);
             SoftwareRaster.a(0, 0, var5.field_y, var5.field_v / 2, 16180917, 16306250);
             SoftwareRaster.a(0, var5.field_v / 2, var5.field_y, var5.field_v, 16306250, 15568919);
             var6 = rv.field_a;
@@ -693,7 +693,7 @@ final class oo {
             this.a(var5, 12 - kt.field_n.field_H + var5.field_v / 2, 0, qb.field_c[this.field_r], kt.field_n, var10, -125, var5.field_v / 3, var5.field_y, 0.699999988079071f);
             rf.b(-18862);
             this.field_b = new RgbSprite(121, 122);
-            vn.a(this.field_b, 3);
+            CombatSandbox.a(this.field_b, 3);
             var5.a(this.field_b.field_y / 2, this.field_b.field_v / 2, -2048, 4096);
             rf.b(-18862);
             return;

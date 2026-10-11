@@ -1344,7 +1344,7 @@ final class cv {
             runtimeException = decompiledCaughtException;
             runtimeException.printStackTrace();
           }
-          vn.a(var6, 3);
+          CombatSandbox.a(var6, 3);
           SoftwareRaster.f(0, 0, var6.field_y, var6.field_v, 4473924);
           var15 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -1866,7 +1866,7 @@ final class cv {
               var3.field_r = fo.a(4800, og.field_l, new String[]{Integer.toString(var4_int), Integer.toString(var5)});
               var6 = ps.field_w[var3.field_k];
               var7 = new RgbSprite(var6.field_A, var6.field_x);
-              vn.a(var7, 3);
+              CombatSandbox.a(var7, 3);
               var6.f(0, 0);
               var8 = 18;
               boolean decompiledSharedTail0 = (var3.field_k == 1);

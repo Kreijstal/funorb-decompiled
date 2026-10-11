@@ -276,7 +276,7 @@ final class SpellCastEvent extends GameEvent {
           if (var16Lifetime1 < 0) {
             var16Lifetime1 = 1000000;
           }
-          var21 = param1[param8 % param0 + param8 / param5 * param0].a((byte) 97, param4, param6);
+          var21 = param1[param8 % param0 + param8 / param5 * param0].getEffectsForPlayer((byte) 97, param4, param6);
           if (var20 == 0 &&
             (1 & var21) != 0 &&
             var13 != 4 &&
@@ -286,7 +286,7 @@ final class SpellCastEvent extends GameEvent {
             15 != var13) {
             var15Lifetime1 = 9;
           }
-          var21Lifetime1 = param1[param3 % param0 + param0 * (param3 / param5)].a((byte) 97, param4, param6);
+          var21Lifetime1 = param1[param3 % param0 + param0 * (param3 / param5)].getEffectsForPlayer((byte) 97, param4, param6);
           if (var20 == 0 &&
             (1 & var21Lifetime1) != 0 &&
             var14 != 4 &&

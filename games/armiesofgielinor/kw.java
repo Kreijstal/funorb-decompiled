@@ -110,18 +110,18 @@ final class kw extends fw {
           var10 = var21.field_x << 1;
           if (null == PreparedAction.field_p) {
             PreparedAction.field_p = new RgbSprite(var9, var10);
-            vn.a(PreparedAction.field_p, 3);
+            CombatSandbox.a(PreparedAction.field_p, 3);
           } else {
             if (var9 > PreparedAction.field_p.field_y) {
               PreparedAction.field_p = new RgbSprite(var9, var10);
-              vn.a(PreparedAction.field_p, 3);
+              CombatSandbox.a(PreparedAction.field_p, 3);
             } else {
               if (var10 <= PreparedAction.field_p.field_v) {
-                vn.a(PreparedAction.field_p, 3);
+                CombatSandbox.a(PreparedAction.field_p, 3);
                 SoftwareRaster.b();
               } else {
                 PreparedAction.field_p = new RgbSprite(var9, var10);
-                vn.a(PreparedAction.field_p, 3);
+                CombatSandbox.a(PreparedAction.field_p, 3);
               }
             }
           }
@@ -139,11 +139,11 @@ final class kw extends fw {
           if (null != PreparedAction.field_p &&
             var9Lifetime1 <= PreparedAction.field_p.field_y &&
             var10Lifetime1 <= PreparedAction.field_p.field_v) {
-            vn.a(PreparedAction.field_p, 3);
+            CombatSandbox.a(PreparedAction.field_p, 3);
             SoftwareRaster.b();
           } else {
             PreparedAction.field_p = new RgbSprite(var9Lifetime1, var10Lifetime1);
-            vn.a(PreparedAction.field_p, 3);
+            CombatSandbox.a(PreparedAction.field_p, 3);
           }
           var15.b(112, 144, var15.field_A << 4, var15.field_x << 4, -this.field_L << 10, 4096);
           rf.b(-18862);
@@ -169,18 +169,18 @@ final class kw extends fw {
         var10Lifetime2 = var16.field_x << 1;
         if (null == PreparedAction.field_p) {
           PreparedAction.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
-          vn.a(PreparedAction.field_p, 3);
+          CombatSandbox.a(PreparedAction.field_p, 3);
         } else {
           if (var9Lifetime2 > PreparedAction.field_p.field_y) {
             PreparedAction.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
-            vn.a(PreparedAction.field_p, 3);
+            CombatSandbox.a(PreparedAction.field_p, 3);
           } else {
             if (var10Lifetime2 <= PreparedAction.field_p.field_v) {
-              vn.a(PreparedAction.field_p, 3);
+              CombatSandbox.a(PreparedAction.field_p, 3);
               SoftwareRaster.b();
             } else {
               PreparedAction.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
-              vn.a(PreparedAction.field_p, 3);
+              CombatSandbox.a(PreparedAction.field_p, 3);
             }
           }
         }

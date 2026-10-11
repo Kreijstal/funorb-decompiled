@@ -291,7 +291,7 @@ final class ar extends ms {
               this.field_u = new int[var5][];
               for (var6 = 0; var5 > var6; var6++) {
                 var7 = param2.e((byte) -104);
-                var8 = fi.b(0, var7);
+                var8 = UnitInfoPopup.b(0, var7);
                 if (var8 != null) {
                   this.field_B[var6] = var7;
                   array$0 = new int[var8.field_f];

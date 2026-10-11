@@ -394,7 +394,7 @@ final class MoveEvent extends GameEvent {
               boolean decompiledSharedTail0 = !(!var6.packedFlag256);
               if (!decompiledSharedTail0) {
                 var5.occupant = null;
-                var5.field_m = var5.e(10);
+                var5.captureStrength = var5.getDefaultCaptureStrength(10);
                 decompiledSharedTail0 = (var12 != 0);
               }
               if (decompiledSharedTail0) {

@@ -147,7 +147,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         return -3.4028234663852886e+38f;
     }
 
-    final boolean executeSelection(ActionRequest selection, int obfuscationGuard) {
+    final boolean executeActionRequest(ActionRequest request, int obfuscationGuard) {
         PreparedAction var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_13_0 = null;
@@ -155,8 +155,8 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (selection != null) {
-            var3 = selection.prepareAction(58, this.battlefield);
+          if (request != null) {
+            var3 = request.prepareAction(58, this.battlefield);
             if (var3 != null) {
               var3.applyToBattlefield(64, this.battlefield);
               return true;
@@ -171,7 +171,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           var3_ref = decompiledCaughtException;
           stackIn_13_0 = var3_ref;
           stackIn_13_1 = new StringBuilder().append("ej.F(");
-          if (selection == null) {
+          if (request == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -193,7 +193,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         var5 = param0 % this.battlefield.mapWidth;
         var6 = param0 / this.battlefield.mapWidth;
         var7 = this.battlefield.tiles[param0];
-        if (!var7.a(param1)) {
+        if (!var7.isStructure(param1)) {
           return;
         }
         if (var7.d(-60)) {
@@ -215,7 +215,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           }
           if (null != var7.occupant &&
             var7.occupant.ownerPlayer == this.playerId &&
-            var7.occupant.i(-21428)) {
+            var7.occupant.canCaptureStructures(-21428)) {
             var4 = 0.0f;
           }
         }
@@ -772,9 +772,9 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         var4 = 0.0f;
         var5 = 0;
         var6 = bw.unitDefinitions[unitType][0];
-        var4 = var4 + this.weights[43] * (this.field_K[8][tileIndex] * (float)fk.field_d[var6][0]);
+        var4 = var4 + this.weights[43] * (this.field_K[8][tileIndex] * (float)fk.matchupDamagePercent[var6][0]);
         if (var5 != 0) {
-          System.out.println("Analyzing " + dn.field_Pb[unitType] + " base score " + var4);
+          System.out.println("Analyzing " + dn.unitDisplayNames[unitType] + " base score " + var4);
         }
         var7 = 0.0f;
         var8 = 0.0f;
@@ -785,13 +785,13 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           var10 = var10 + this.field_K[var11][tileIndex];
           if (var11 != 4 ||
             c.a(unitType, (byte) -69)) {
-            var7 = var7 + this.field_n[var6][var11][tileIndex] * (float)fk.field_d[var6][var11] * this.weights[28];
+            var7 = var7 + this.field_n[var6][var11][tileIndex] * (float)fk.matchupDamagePercent[var6][var11] * this.weights[28];
           }
           if (var6 != 4 ||
             4 == var11 ||
             2 == var11 ||
             var11 == 3) {
-            var8 = var8 + this.field_K[var11][tileIndex] * (float)fk.field_d[var11][var6] * this.weights[29];
+            var8 = var8 + this.field_K[var11][tileIndex] * (float)fk.matchupDamagePercent[var11][var6] * this.weights[29];
           }
         }
         if (var5 != 0) {
@@ -803,7 +803,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
         var4 = var4 - var8 / var10;
         if (var5 != 0) {
-          System.out.println("Damage-wise: " + dn.field_Pb[unitType] + " score " + var4);
+          System.out.println("Damage-wise: " + dn.unitDisplayNames[unitType] + " score " + var4);
         }
         return var4;
     }
@@ -1413,7 +1413,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                     this.battlefield.field_J = true;
                     var8 = new UnitSpell(var4, var7.destinationX, var7.destinationY);
                     var9 = new SpellCastRequest(var8, -1, this.playerId);
-                    this.executeSelection(var9, -126);
+                    this.executeActionRequest(var9, -126);
                     statePc = 69;
                     continue scanLoop1;
                 }
@@ -1710,7 +1710,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           var34.reset((byte) -122);
           var37 = (Unit) (this.battlefield.unitsByPlayer[this.playerId].first((byte) 89));
           while (var37 != null) {
-            if (var37.i(-21428)) {
+            if (var37.canCaptureStructures(-21428)) {
               var4 = var4 - (double)(this.weights[22] * 2.0f / (float)this.battlefield.playerCount);
             } else {
               if (!var37.f((byte) -125)) {
@@ -1734,7 +1734,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
             var36 = var35;
             var36Lifetime2 = var35;
             if (this.playerId != var35.ownerPlayer &&
-              var35.a(false)) {
+              var35.isStructure(false)) {
               var4 = var4 + (double)(this.weights[21] * 2.0f / (float)this.battlefield.playerCount);
             }
             if (var35.hasCorpse(83)) {
@@ -1763,11 +1763,11 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                     var36Lifetime1.godId == var19) &&
                     (-1 != var19 ||
                     (this.battlefield.field_a[this.playerId][var19 + 1] & 1 << b.a(false, var18)) != 0)) {
-                    var20 = this.battlefield.b(var17, -26813, var18, var16, this.playerId) ? 1 : 0;
+                    var20 = this.battlefield.canSummonUnitAt(var17, -26813, var18, var16, this.playerId) ? 1 : 0;
                     var21 = var20;
                     if (var20 == 0) {
                       this.battlefield.playerMana[this.playerId] = this.battlefield.playerMana[this.playerId] + this.battlefield.k(-116, this.playerId);
-                      stackIn_75_0 = (!this.battlefield.b(var17, param0 ^ -26813, var18, var16, this.playerId)) ? 0 : 1;
+                      stackIn_75_0 = (!this.battlefield.canSummonUnitAt(var17, param0 ^ -26813, var18, var16, this.playerId)) ? 0 : 1;
                       var21 = stackIn_75_0;
                       this.battlefield.playerMana[this.playerId] = this.battlefield.playerMana[this.playerId] - this.battlefield.k(-101, this.playerId);
                     }
@@ -1963,7 +1963,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           this.unitPlanners.addLast((byte) -119, (IntrusiveNode) (var3));
           if (obfuscationGuard > -66) {
             var7 = (ActionRequest) null;
-            this.executeSelection((ActionRequest) null, 49);
+            this.executeActionRequest((ActionRequest) null, 49);
           }
           if (unit.objectiveId != 0 &&
             null == this.objectiveInfluence[unit.getUnitCategory(0)][-1 + unit.objectiveId]) {

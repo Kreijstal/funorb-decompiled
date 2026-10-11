@@ -214,7 +214,7 @@ final class UnitSpell extends Spell {
                     param1.pendingEvents.addFirst(750, new TurnEffectEvent(var6, 1));
                   }
                 } else {
-                  param1.pendingEvents.addFirst(750, new DamageEvent(var6, param1.a(var6, (byte) -128, uc.spellDefinitions[this.spellId][5], uc.spellDefinitions[this.spellId][6]), false));
+                  param1.pendingEvents.addFirst(750, new DamageEvent(var6, param1.scaleIncomingDamage(var6, (byte) -128, uc.spellDefinitions[this.spellId][5], uc.spellDefinitions[this.spellId][6]), false));
                 }
               }
             }

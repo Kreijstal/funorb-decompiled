@@ -85,7 +85,7 @@ abstract class wl extends tj {
           !(bo.field_b.field_v >= this.field_w)) {
           bo.field_b = new RgbSprite(this.field_l, this.field_w);
         }
-        vn.a(bo.field_b, 3);
+        CombatSandbox.a(bo.field_b, 3);
         SoftwareRaster.b();
         this.b(0, 1851680193, 0);
         super.a(-param0 - this.field_B, -param1 - this.field_p, (byte) -106, param3);

@@ -4008,7 +4008,7 @@ final class TutorialController {
                 var6 = "";
                 var6Lifetime1 = ut.field_cb[var5];
                 var7 = bh.field_M[var5];
-                this.a(var7, bw.unitDefinitions[var5][0], ve.a((byte) 13, dn.field_Pb[var5]), this.f(var5, 8), (byte) 116, var6Lifetime1);
+                this.a(var7, bw.unitDefinitions[var5][0], ve.a((byte) 13, dn.unitDisplayNames[var5]), this.f(var5, 8), (byte) 116, var6Lifetime1);
               } else {
                 this.a((String) null, -1, ve.a((byte) 13, wf.field_q[li.field_q + 1]), (String) null, (byte) -55, GlobalSpell.field_l[li.field_q + 1]);
               }
@@ -4620,7 +4620,7 @@ final class TutorialController {
                   var3_ref_int__ = ei.field_e;
                   var3_ref_int__[0] = oe.c(var3_ref_int__[0], 2);
                   ai.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(0)));
-                  fi.field_u.addLast((byte) -119, (IntrusiveNode) (new iw(0, 255, 0, 0, 0, 0)));
+                  UnitInfoPopup.field_u.addLast((byte) -119, (IntrusiveNode) (new iw(0, 255, 0, 0, 0, 0)));
                 }
                 if (rs.field_q == 13) {
                   boolean decompiledSharedTail0 = (1 != this.tutorialStage &&

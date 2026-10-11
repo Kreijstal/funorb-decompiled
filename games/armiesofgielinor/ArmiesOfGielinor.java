@@ -175,7 +175,7 @@ public final class ArmiesOfGielinor extends wf {
           boolean decompiledFrameCompleted0 = true;
           if (!DamageEvent.g(100)) {
             while (true) {
-              var2 = (iw) (fi.field_u.a(0));
+              var2 = (iw) (UnitInfoPopup.field_u.a(0));
               if (var2 == null) {
                 break;
               }
@@ -1140,7 +1140,7 @@ public final class ArmiesOfGielinor extends wf {
           cv.d((byte) 44);
           dg.a((byte) -12);
           ve.a(1);
-          vn.a((byte) -8);
+          CombatSandbox.a((byte) -8);
           hc.b(1017);
           qt.a((byte) 93);
           s.a(53);
@@ -1278,7 +1278,7 @@ public final class ArmiesOfGielinor extends wf {
           iu.b(1);
           EventPresenter.f(-126);
           GameEvent.a((byte) -103);
-          fi.a(param0 ^ 101);
+          UnitInfoPopup.a(param0 ^ 101);
           ActionSpell.a(false);
           ActionRequest.a(100);
           CipherPacketBuffer.k((byte) -97);

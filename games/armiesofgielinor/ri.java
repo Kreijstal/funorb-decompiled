@@ -4,7 +4,7 @@
 final class ri {
     private int field_f;
     private int field_a;
-    static int[] field_c;
+    static int[] terrainDamageTakenPercent;
     static int field_d;
     private wg field_e;
     private m field_g;
@@ -130,7 +130,7 @@ final class ri {
     public static void a(byte param0) {
         int var1 = -24 % ((14 - param0) / 59);
         field_b = null;
-        field_c = null;
+        terrainDamageTakenPercent = null;
     }
 
     ri(int param0) {
@@ -159,7 +159,7 @@ final class ri {
     }
 
     static {
-        field_c = new int[]{100, 100, 60, 80, 90, 90, 100, 100, 80, 70, 100, 100, 90, 100, 70, 90};
+        terrainDamageTakenPercent = new int[]{100, 100, 60, 80, 90, 90, 100, 100, 80, 70, 100, 100, 90, 100, 70, 90};
         field_d = 0;
     }
 }

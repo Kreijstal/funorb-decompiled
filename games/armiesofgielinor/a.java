@@ -112,9 +112,9 @@ final class a extends IntrusiveNode {
                 stackIn_52_0 = (var10 + var11 != 1) ? 0 : 1;
                 var12 = stackIn_52_0;
                 if (var12 == 0) {
-                  if (0 == (2 & CipherPacketBuffer.currentBattlefield.b(31, var9, var8, jf.field_C.selectedUnit.ownerPlayer))) {
-                    if ((CipherPacketBuffer.currentBattlefield.b(31, param1, param3, jf.field_C.selectedUnit.ownerPlayer) & 2) == 0) {
-                      stackIn_62_0 = (CipherPacketBuffer.currentBattlefield.field_j.a(var9, param3, var8, jf.field_C.selectedUnit.x(-97), var6, param1, (byte) 62)) ? 1 : 0;
+                  if (0 == (2 & CipherPacketBuffer.currentBattlefield.getTileEffects(31, var9, var8, jf.field_C.selectedUnit.ownerPlayer))) {
+                    if ((CipherPacketBuffer.currentBattlefield.getTileEffects(31, param1, param3, jf.field_C.selectedUnit.ownerPlayer) & 2) == 0) {
+                      stackIn_62_0 = (CipherPacketBuffer.currentBattlefield.field_j.a(var9, param3, var8, jf.field_C.selectedUnit.isFlying(-97), var6, param1, (byte) 62)) ? 1 : 0;
                     } else {
                       stackIn_62_0 = 0;
                     }

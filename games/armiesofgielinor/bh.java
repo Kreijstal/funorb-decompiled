@@ -53,14 +53,14 @@ final class bh extends nl {
         }
         RgbSprite var6 = new RgbSprite(this.field_E.field_l, this.field_E.field_w);
         if (param2 < -82) {
-          vn.a(var6, 3);
+          CombatSandbox.a(var6, 3);
           this.field_E.a(0, 0, (byte) -86, param3);
           rf.b(-18862);
           var6.e(this.field_B + param0, param1 + this.field_p, this.field_K);
           return;
         }
         field_M = (String[]) null;
-        vn.a(var6, 3);
+        CombatSandbox.a(var6, 3);
         this.field_E.a(0, 0, (byte) -86, param3);
         rf.b(-18862);
         var6.e(this.field_B + param0, param1 + this.field_p, this.field_K);

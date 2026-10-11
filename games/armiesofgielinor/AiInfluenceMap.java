@@ -215,7 +215,7 @@ final class AiInfluenceMap {
             return;
           }
           var5_int = param3.getUnitCategory(param2 ^ param2);
-          var6 = param3.i(-21428) ? 1 : 0;
+          var6 = param3.canCaptureStructures(-21428) ? 1 : 0;
           this.a(param3, 124);
           var7 = 0;
           var8 = bw.unitDefinitions[param3.unitType][7];

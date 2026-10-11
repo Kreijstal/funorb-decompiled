@@ -203,8 +203,8 @@ final class rk {
     }
 
     private final int a(int param0, byte param1, int param2) {
-        int var4 = fk.field_d[param2][param0];
-        int var5 = fk.field_d[param0][param2];
+        int var4 = fk.matchupDamagePercent[param2][param0];
+        int var5 = fk.matchupDamagePercent[param0][param2];
         if (var5 < var4) {
           if (-var5 + var4 <= 45) {
             return 1;
@@ -651,7 +651,7 @@ final class rk {
         }
         try {
           SoftwareRaster.b(5, 25, 30, 30, 0, 192);
-          en.field_E.b(dn.field_Pb[param5.unitType], 10, 17, op.field_c[0][param5.ownerPlayer], -1);
+          en.field_E.b(dn.unitDisplayNames[param5.unitType], 10, 17, op.field_c[0][param5.ownerPlayer], -1);
           en.field_E.a(param5.bonusStrength + param5.strength + "/" + param5.maximumStrength, 126, 18, op.field_c[0][param5.ownerPlayer], -1);
           if (param5.ownerPlayer == param2) {
             SoftwareRaster.b(99, 25, 30, 30, 0, 128);
@@ -2084,7 +2084,7 @@ final class rk {
               return;
             }
             this.a(7 * (var10.field_n >> 3) + param2, 88, this.field_h, (var10.field_k >> 1) + param0);
-            var6Lifetime1 = ri.field_c[0];
+            var6Lifetime1 = ri.terrainDamageTakenPercent[0];
             var7 = 0;
             this.a(var7, param0, this.field_d.ownerPlayer, var6Lifetime1, 110, this.field_d, this.field_d, param2);
             return;
@@ -2097,7 +2097,7 @@ final class rk {
               return;
             }
             this.a(7 * (var9.field_n >> 3) + param2, 57, this.field_M, param0 + (var9.field_k >> 1));
-            var6Lifetime2 = ri.field_c[0];
+            var6Lifetime2 = ri.terrainDamageTakenPercent[0];
             var7Lifetime1 = 0;
             this.a(var7Lifetime1, param0, this.field_d.ownerPlayer, var6Lifetime2, 102, this.field_q, this.field_d, param2);
           }
@@ -2470,7 +2470,7 @@ final class rk {
                   ps.field_y.a(param0 - 84, CombatEvent.d((byte) -120));
                 }
               } else {
-                vn.field_j.a(param0 - 84, CombatEvent.d((byte) -127));
+                CombatSandbox.field_j.a(param0 - 84, CombatEvent.d((byte) -127));
               }
               ev.field_b = false;
               if (var6 != null) {

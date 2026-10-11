@@ -219,12 +219,12 @@ final class AttackEvent extends GameEvent {
           }
           var3_int = this.unit.tileX;
           var4 = this.unit.tileY;
-          if (!this.unit.a(this.targetUnit, (byte) 119)) {
+          if (!this.unit.canParasitize(this.targetUnit, (byte) 119)) {
             if (this.targetUnit.getUnitCategory(0) == 4 &&
-              !this.unit.j((byte) 103)) {
+              !this.unit.canAttackFlying((byte) 103)) {
               return;
             }
-            var10 = battlefield.a(this.targetUnit, var4, (byte) -128, this.targetDeltaY, this.unit, this.targetDeltaX, var3_int);
+            var10 = battlefield.predictCombat(this.targetUnit, var4, (byte) -128, this.targetDeltaY, this.unit, this.targetDeltaX, var3_int);
             stackIn_13_0 = battlefield.pendingEvents;
             stackIn_13_1 = obfuscationGuard ^ -27339;
             stackIn_13_2 = null;

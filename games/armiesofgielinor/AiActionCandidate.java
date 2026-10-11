@@ -60,12 +60,12 @@ final class AiActionCandidate extends IntrusiveNode {
                 planner.actionMovement.targetDeltaY = this.targetY - this.destinationY;
               }
               var4 = planner.actionMovement.createActionRequest(planner.playerId, 103);
-              if (!planner.executeSelection(var4, -125)) {
+              if (!planner.executeActionRequest(var4, -125)) {
                 this.executionResult = -2;
               }
             } else {
               var3 = new SummonRequest(this.summoningPlayer, this.destinationX, this.destinationY, this.summonUnitType);
-              planner.executeSelection(var3, -124);
+              planner.executeActionRequest(var3, -124);
             }
           }
           if (obfuscationGuard != 5) {

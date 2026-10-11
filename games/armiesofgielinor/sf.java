@@ -303,7 +303,7 @@ abstract class sf extends wl {
           }
           var6_int = og.field_p[param4] + param4;
           if (cu.field_a) {
-            var7_int = CipherPacketBuffer.currentBattlefield.b(31, param0, param1, -1);
+            var7_int = CipherPacketBuffer.currentBattlefield.getTileEffects(31, param0, param1, -1);
             var8 = vs.field_e[param4].terrainType;
             if (4 != var8 &&
               6 != var8 &&

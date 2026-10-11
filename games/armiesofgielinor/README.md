@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild from pinned raw Git input using Deko’s `readable/reproduce-armiesofgielinor.mjs`. The current reverse dictionary is `../../decompilation/armiesofgielinor-naming.json`.
 
-This gameplay naming pass reviews 78 class identities across all 542 compiled classes. Other class/member names remain unresolved. Unresolved packed flags use bit-position names without guessing gameplay effects. Renamed identifiers have no opaque suffixes; the dictionary records their original identities.
+This gameplay naming pass reviews 80 class identities across all 542 compiled classes. Other class/member names remain unresolved. Unresolved packed flags use bit-position names without guessing gameplay effects. Renamed identifiers have no opaque suffixes; the dictionary records their original identities.
 
 | Start here | Follow |
 | --- | --- |
@@ -23,6 +23,7 @@ This gameplay naming pass reviews 78 class identities across all 542 compiled cl
 | [CombatPresentation](CombatPresentation.java) / [MovementPresentation](MovementPresentation.java) / [EffectPresentation](EffectPresentation.java) / [PopupPresentation](PopupPresentation.java) | Combat, movement, effects and popups. |
 | [AiPlanner](AiPlanner.java) → [AiUnitPlanner](AiUnitPlanner.java) / [AiActionCandidate](AiActionCandidate.java) | Per-unit AI evaluation and selected actions. |
 | [AiPlanningStrategy](AiPlanningStrategy.java) → [BestScoreStrategy](BestScoreStrategy.java) / [WeightedScoreStrategy](WeightedScoreStrategy.java) | Highest-score and weighted candidate selection, recycling and reset. |
+| [CombatSandbox](CombatSandbox.java) / [UnitInfoPopup](UnitInfoPopup.java) | Standalone combat sandbox and animated unit information popups. |
 | [TutorialController](TutorialController.java) | Tutorial stages, prompts and flashing controls. |
 | [PacketBuffer](PacketBuffer.java) / [CipherPacketBuffer](CipherPacketBuffer.java) / [TaggedFieldReader](TaggedFieldReader.java) | Packet data, ciphered opcodes and tagged-field decoding. |
 
@@ -32,6 +33,8 @@ Combat payloads now name attacker/defender positions, offsets, damage, death fla
 
 ActionRequest and PreparedAction replace the overly narrow SpellArea names: all five request subclasses and ten prepared-action subclasses have been reviewed. ActionSpell wraps an action rather than defining a geometric area. AI summoningPlayer and summonUnitType replace the misleading spellId/selectionVariant pair. Teleport target deltas are relative offsets, not absolute destination coordinates. PreparedAction.playerFlags is indexed by player, not by tile. Unused constructor arguments and no-op marker application remain unchanged.
 
+Battlefield.predictCombat returns [defenderDamage, attackerDamage, deathFlags], where flags 1/2 mean attacker/defender death. computeAttackPower, scaleIncomingDamage and getDamageTakenPercent expose matchup strength, cover and protection; integer truncation, damage caps and unusual protected-target behavior are preserved. Unit capability names distinguish flying eligibility, anti-flying bonus, structure capture and Sea Slug parasitism. Tile effects are indexed by team, while summoning permissions and local god favour are separate checks.
+
 The naming pass changes identifiers and lexical labels, not control flow. Three files still retain compiler dispatcher fallbacks, and large methods remain. More semantic work is needed in combat, spells, AI, tutorial stages and multiplayer packet handling.
 
-The exporter compiles both complete corpora and verifies bindings/overrides. A headless raw-versus-named probe checks rectangular map lookup, team membership, unit flags/damage, equipment/ranges, combat payloads, spell serialization, tile metadata, AI candidate selection/recycling, packed move request decoding, prepared action event payloads and event presentation acknowledgement against independent expectations. It bypasses battlefield construction and the Applet graph; it does not establish whole-game playability, AI quality or server compatibility. Exact dictionary reversal recovers every original source byte.
+The exporter compiles both complete corpora and verifies bindings/overrides. A headless raw-versus-named probe checks rectangular map lookup, team membership, unit flags/damage, equipment/ranges, combat payloads, spell serialization, tile metadata, AI candidate selection/recycling, packed move request decoding, prepared action event payloads, combat/cover calculations, team tile effects, summoning permissions, popup animation and event presentation acknowledgement against independent expectations. It bypasses battlefield construction and the Applet graph; it does not establish whole-game playability, AI quality or server compatibility. Exact dictionary reversal recovers every original source byte.

@@ -1505,7 +1505,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = bb.a(50, "login_justplay_tooltip");
                 if (var2 != null) {
-                  vn.field_e = uu.a(var2, (byte) 56);
+                  CombatSandbox.field_e = uu.a(var2, (byte) 56);
                 }
                 var2 = bb.a(50, "login_back_tooltip");
                 if (var2 != null) {

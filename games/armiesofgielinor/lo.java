@@ -241,7 +241,7 @@ final class lo extends IntrusiveNode {
           var4 = this.field_r;
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
-            var6.field_m = var6.e(10);
+            var6.captureStrength = var6.getDefaultCaptureStrength(10);
           }
           return null;
         }
@@ -418,7 +418,7 @@ final class lo extends IntrusiveNode {
                 var9.field_o = var4.k(0);
                 var12 = var4.k(0);
                 var13 = var7[var9.field_n + var9.field_o * this.field_l];
-                if (var13.a(false) ||
+                if (var13.isStructure(false) ||
                   var13.hasModifierFlag4((byte) -125)) {
                   var13.ownerPlayer = var12;
                 }

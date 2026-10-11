@@ -90,7 +90,7 @@ final class TeleportEvent extends GameEvent {
             battlefield.unitsByPlayer[this.unit.ownerPlayer].addLast((byte) -119, (IntrusiveNode) (this.unit));
           } else {
             var3.occupant = null;
-            var3.field_m = var4.e(10);
+            var3.captureStrength = var4.getDefaultCaptureStrength(10);
             if (this.unit.p(-43)) {
               battlefield.a(this.sourceY, this.sourceX, obfuscationGuard + 26661, 3);
             }

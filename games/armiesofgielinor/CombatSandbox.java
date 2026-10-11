@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vn {
+final class CombatSandbox {
     private int[] field_i;
-    CombatPresentation field_k;
+    CombatPresentation combatPresentation;
     private RgbSprite[] field_f;
     private int field_c;
     static pf field_j;
@@ -244,13 +244,13 @@ final class vn {
           var19 = new Unit(stackIn_27_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, 0, 0, (Battlefield) null, 0, 0, -1, true, 0);
           var20 = bw.unitDefinitions[var8Lifetime1][0];
           var21 = bw.unitDefinitions[var9][0];
-          var22 = ri.field_c[var11] * (var15 * fk.field_d[var20][var21]) / 10000;
+          var22 = ri.terrainDamageTakenPercent[var11] * (var15 * fk.matchupDamagePercent[var20][var21]) / 10000;
           if (var22 > var17) {
             var22 = var17;
           }
-          var23 = (var17 - var22) * (fk.field_d[var21][var20] * ri.field_c[var10]) / 10000;
-          this.field_k = new CombatPresentation((Battlefield) null, (BattleCamera) null, (EventPresenter) null);
-          this.field_k.a(var22, var19, var23, true, var18);
+          var23 = (var17 - var22) * (fk.matchupDamagePercent[var21][var20] * ri.terrainDamageTakenPercent[var10]) / 10000;
+          this.combatPresentation = new CombatPresentation((Battlefield) null, (BattleCamera) null, (EventPresenter) null);
+          this.combatPresentation.a(var22, var19, var23, true, var18);
           le.field_b = new cg();
         }
     }
@@ -313,7 +313,7 @@ final class vn {
         return;
     }
 
-    vn(RgbSprite[] param0, RgbSprite[] param1, tu param2, int[] param3, int param4, int param5) {
+    CombatSandbox(RgbSprite[] param0, RgbSprite[] param1, tu param2, int[] param3, int param4, int param5) {
         this.field_c = 0;
         try {
           this.field_b = param0;
@@ -327,9 +327,9 @@ final class vn {
         }
     }
 
-    final void c(int param0) {
-        if (null != this.field_k) {
-          this.field_k.drawBaseLayer((byte) -120);
+    final void draw(int obfuscationGuard) {
+        if (null != this.combatPresentation) {
+          this.combatPresentation.drawBaseLayer((byte) -120);
         } else {
           this.field_d.a(113);
           this.field_h.a(71);
@@ -337,7 +337,7 @@ final class vn {
           this.b(0);
         }
         this.a(0);
-        if (param0 != 2) {
+        if (obfuscationGuard != 2) {
           return;
         }
         if (null != le.field_b) {
@@ -394,8 +394,8 @@ final class vn {
         this.a(320 - this.a(6, (byte) -42) / 2, -84, 6, 360);
     }
 
-    final void a(int param0, int param1, int param2, boolean param3, int param4, boolean param5) {
-        if (param1 != 5) {
+    final void advanceFrame(int inputValue, int obfuscationGuard, int screenY, boolean inputActive, int screenX, boolean secondaryInput) {
+        if (obfuscationGuard != 5) {
           this.field_c = 0;
         }
         if (le.field_b != null) {
@@ -405,15 +405,15 @@ final class vn {
             this.field_c = 0;
           }
         }
-        if (null != this.field_k) {
-          this.field_k.advanceFrame((GameEvent) null, (byte) -121);
-          if (this.field_k.isFinished(8865)) {
-            this.field_k = null;
+        if (null != this.combatPresentation) {
+          this.combatPresentation.advanceFrame((GameEvent) null, (byte) -121);
+          if (this.combatPresentation.isFinished(8865)) {
+            this.combatPresentation = null;
             le.field_b = new cg();
           }
           return;
         }
-        this.a(param3, param0, param4, param5, param2, false);
+        this.a(inputActive, inputValue, screenX, secondaryInput, screenY, false);
     }
 
     public static void a(byte param0) {

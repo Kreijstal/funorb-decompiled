@@ -10,10 +10,10 @@ final class MapTile implements TaggedFieldReader {
     int godId;
     boolean field_l;
     int ownerPlayer;
-    int field_j;
+    int godFavourLevel;
     TileMetadata metadata;
-    int[] field_k;
-    int field_m;
+    int[] teamEffectFlags;
+    int captureStrength;
     static boolean[] field_e;
     static int field_i;
 
@@ -317,7 +317,7 @@ final class MapTile implements TaggedFieldReader {
         if (this.occupant != null) {
           if (var8 == 0) {
             if (this.ownerPlayer != -1) {
-              stackIn_71_0 = (this.occupant.i(-21428)) ? 0 : 1;
+              stackIn_71_0 = (this.occupant.canCaptureStructures(-21428)) ? 0 : 1;
             } else {
               stackIn_71_0 = 0;
             }
@@ -452,7 +452,7 @@ final class MapTile implements TaggedFieldReader {
           return -1;
         }
         if (obfuscationGuard > -19) {
-          this.field_m = -105;
+          this.captureStrength = -105;
         }
         if (this.metadata.ownerPlayer == 255) {
           return -1;
@@ -496,17 +496,17 @@ final class MapTile implements TaggedFieldReader {
         return var2;
     }
 
-    final boolean a(boolean param0) {
-        if (param0) {
+    final boolean isStructure(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           this.ownerPlayer = -78;
         }
-        return ck.a(this.terrainType, -12);
+        return ck.isStructureTerrain(this.terrainType, -12);
     }
 
     private MapTile(int param0) {
         this();
         this.terrainType = param0;
-        this.field_m = this.e(10);
+        this.captureStrength = this.getDefaultCaptureStrength(10);
     }
 
     final void j(int param0) {
@@ -526,8 +526,8 @@ final class MapTile implements TaggedFieldReader {
         this.metadata.modifierFlags = this.metadata.modifierFlags | 8;
     }
 
-    final int e(int param0) {
-        if (param0 != 10) {
+    final int getDefaultCaptureStrength(int obfuscationGuard) {
+        if (obfuscationGuard != 10) {
           return 18;
         }
         if (this.terrainType != 9 &&
@@ -553,7 +553,7 @@ final class MapTile implements TaggedFieldReader {
           if (param1 == null) {
             return;
           }
-          this.field_k = new int[this.battlefield.teamCount];
+          this.teamEffectFlags = new int[this.battlefield.teamCount];
           if (this.occupant != null) {
             this.occupant.battlefield = this.battlefield;
             this.battlefield.registerUnit(8288, this.occupant);
@@ -585,41 +585,41 @@ final class MapTile implements TaggedFieldReader {
         if (param0 != -1) {
           this.occupant = (Unit) null;
         }
-        return this.field_m != this.e(10) ? true : false;
+        return this.captureStrength != this.getDefaultCaptureStrength(10) ? true : false;
     }
 
-    final int a(byte param0, int param1, int param2) {
-        int var4;
-        int var5;
+    final int getEffectsForPlayer(byte obfuscationGuard, int playerId, int teamIndex) {
+        int effectFlags;
+        int effectTeamIndex;
         int var6;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var4 = 0;
-        if (this.field_k == null) {
+        effectFlags = 0;
+        if (this.teamEffectFlags == null) {
           return 0;
         }
-        var5 = 0;
-        if (param0 != 97) {
+        effectTeamIndex = 0;
+        if (obfuscationGuard != 97) {
           this.field_b = false;
         }
-        while (this.field_k.length > var5) {
-          if (param1 < 0) {
-            var4 = var4 | this.field_k[var5];
+        while (this.teamEffectFlags.length > effectTeamIndex) {
+          if (playerId < 0) {
+            effectFlags = effectFlags | this.teamEffectFlags[effectTeamIndex];
           } else {
-            if (param2 == var5) {
-              var4 = var4 | 16 & this.field_k[var5];
+            if (teamIndex == effectTeamIndex) {
+              effectFlags = effectFlags | 16 & this.teamEffectFlags[effectTeamIndex];
             } else {
-              var4 = var4 | 15 & this.field_k[var5];
+              effectFlags = effectFlags | 15 & this.teamEffectFlags[effectTeamIndex];
             }
           }
-          var5++;
+          effectTeamIndex++;
         }
-        return var4;
+        return effectFlags;
     }
 
     final boolean hasExplicitOwner(byte obfuscationGuard) {
         boolean stackIn_6_0 = false;
         if (obfuscationGuard != -79) {
-          this.field_j = -3;
+          this.godFavourLevel = -3;
         }
         stackIn_6_0 = (this.metadata != null) && (0 != (16 & this.metadata.modifierFlags));
         return stackIn_6_0;
@@ -697,7 +697,7 @@ final class MapTile implements TaggedFieldReader {
 
     final int getTag(byte obfuscationGuard) {
         if (obfuscationGuard != -107) {
-          this.field_j = -71;
+          this.godFavourLevel = -71;
         }
         if (this.metadata != null) {
           return this.metadata.tag;
@@ -714,7 +714,7 @@ final class MapTile implements TaggedFieldReader {
 
     final void a(int param0, int param1) {
         int var3 = -116 % ((-35 - param0) / 61);
-        this.field_m = this.e(10);
+        this.captureStrength = this.getDefaultCaptureStrength(10);
         if (this.terrainType != 11) {
           this.ownerPlayer = param1;
         } else {
@@ -739,20 +739,20 @@ final class MapTile implements TaggedFieldReader {
         if (param0 != 19725) {
           this.d((byte) -22);
         }
-        return !this.a(false) ? true : false;
+        return !this.isStructure(false) ? true : false;
     }
 
     MapTile() {
         this.field_l = false;
         this.field_b = false;
         this.ownerPlayer = -1;
-        this.field_m = 10;
+        this.captureStrength = 10;
         this.occupant = null;
         this.godId = -1;
         this.ownerPlayer = -1;
         this.battlefield = null;
-        this.field_j = 0;
-        this.field_k = null;
+        this.godFavourLevel = 0;
+        this.teamEffectFlags = null;
     }
 
     static {

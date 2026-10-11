@@ -8,39 +8,39 @@ final class ck {
     static String field_a;
     static RgbSprite[] field_c;
 
-    final static boolean a(int param0, int param1) {
-        if (param1 != -12) {
-          ck.a(-80, -6);
-          if (param0 == 8) {
+    final static boolean isStructureTerrain(int terrainType, int obfuscationGuard) {
+        if (obfuscationGuard != -12) {
+          ck.isStructureTerrain(-80, -6);
+          if (terrainType == 8) {
             return true;
           }
-          if (param0 == 9) {
+          if (terrainType == 9) {
             return true;
           }
-          if (param0 == 7) {
+          if (terrainType == 7) {
             return true;
           }
-          if (param0 == 11) {
+          if (terrainType == 11) {
             return true;
           }
-          if (param0 != 14) {
+          if (terrainType != 14) {
             return false;
           }
           return true;
         }
-        if (param0 == 8) {
+        if (terrainType == 8) {
           return true;
         }
-        if (param0 == 9) {
+        if (terrainType == 9) {
           return true;
         }
-        if (param0 == 7) {
+        if (terrainType == 7) {
           return true;
         }
-        if (param0 == 11) {
+        if (terrainType == 11) {
           return true;
         }
-        if (param0 != 14) {
+        if (terrainType != 14) {
           return false;
         }
         return true;

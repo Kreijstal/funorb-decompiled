@@ -7,14 +7,14 @@ final class fk implements kh {
     static String field_f;
     private gh field_c;
     static int field_b;
-    static int[][] field_d;
+    static int[][] matchupDamagePercent;
     static String field_e;
 
     public static void a(boolean param0) {
         field_g = null;
         field_e = null;
         field_a = null;
-        field_d = (int[][]) null;
+        matchupDamagePercent = (int[][]) null;
         if (!param0) {
           field_f = (String) null;
         }
@@ -356,7 +356,7 @@ final class fk implements kh {
         field_f = "This game has been updated! Please reload this page.";
         field_g = "Players";
         field_a = "No";
-        field_d = new int[][]{new int[]{50, 25, 50, 50, 25, 50, 90, 50}, new int[]{90, 50, 90, 50, 25, 50, 90, 50}, new int[]{50, 25, 50, 90, 90, 50, 90, 50}, new int[]{90, 90, 25, 25, 90, 50, 90, 50}, new int[]{90, 90, 50, 90, 50, 50, 90, 50}, new int[]{50, 50, 50, 50, 50, 50, 50, 50}, new int[]{50, 50, 50, 50, 50, 50, 90, 50}, new int[]{90, 90, 90, 90, 90, 90, 90, 90}};
+        matchupDamagePercent = new int[][]{new int[]{50, 25, 50, 50, 25, 50, 90, 50}, new int[]{90, 50, 90, 50, 25, 50, 90, 50}, new int[]{50, 25, 50, 90, 90, 50, 90, 50}, new int[]{90, 90, 25, 25, 90, 50, 90, 50}, new int[]{90, 90, 50, 90, 50, 50, 90, 50}, new int[]{50, 50, 50, 50, 50, 50, 50, 50}, new int[]{50, 50, 50, 50, 50, 50, 90, 50}, new int[]{90, 90, 90, 90, 90, 90, 90, 90}};
         field_e = "Find opponent";
     }
 }

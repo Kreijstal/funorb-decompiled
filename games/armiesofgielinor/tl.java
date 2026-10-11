@@ -119,10 +119,10 @@ final class tl implements Iterator {
         SoftwareRaster.b();
         if (param0 != -90) {
           field_i = (me) null;
-          ll.field_Rb.c(2);
+          ll.field_Rb.draw(2);
           return;
         }
-        ll.field_Rb.c(2);
+        ll.field_Rb.draw(2);
     }
 
     public final Object next() {

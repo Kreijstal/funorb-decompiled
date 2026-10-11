@@ -224,12 +224,12 @@ final class SummonRequest extends ActionRequest {
           } else {
             requiredGod = 12;
           }
-          if (0 == (battlefield.c(this.tileX, -27300, this.tileY, this.actingPlayer) & 1 << requiredGod)) {
+          if (0 == (battlefield.getSummoningGodMaskAt(this.tileX, -27300, this.tileY, this.actingPlayer) & 1 << requiredGod)) {
             discarded$1 = this.formatSummonRejection(new String[]{"Can't summon followers of god: ", Integer.toString(requiredGod), " at ", TutorialController.c(this.tileX, 0, this.tileY)}, (byte) -111);
             stackIn_24_0 = null;
             return (PreparedAction) (stackIn_24_0);
           }
-          if (!battlefield.b(this.tileY, -26813, this.unitType, this.tileX, this.actingPlayer)) {
+          if (!battlefield.canSummonUnitAt(this.tileY, -26813, this.unitType, this.tileX, this.actingPlayer)) {
             discarded$2 = this.formatSummonRejection(new String[]{"Can't afford creature type: ", Integer.toString(this.unitType), " at ", TutorialController.c(this.tileX, 0, this.tileY)}, (byte) -87);
             stackIn_27_0 = null;
             return (PreparedAction) (stackIn_27_0);

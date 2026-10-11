@@ -103,17 +103,17 @@ final class pk extends hv {
           var12 = var18.field_x << 1;
           if (this.field_Y == null) {
             this.field_Y = new RgbSprite(var11, var12);
-            vn.a(this.field_Y, 3);
+            CombatSandbox.a(this.field_Y, 3);
           } else {
             if (this.field_Y.field_y < var11) {
               this.field_Y = new RgbSprite(var11, var12);
-              vn.a(this.field_Y, 3);
+              CombatSandbox.a(this.field_Y, 3);
             } else {
               if (var12 > this.field_Y.field_v) {
                 this.field_Y = new RgbSprite(var11, var12);
-                vn.a(this.field_Y, 3);
+                CombatSandbox.a(this.field_Y, 3);
               } else {
-                vn.a(this.field_Y, 3);
+                CombatSandbox.a(this.field_Y, 3);
                 SoftwareRaster.b();
               }
             }
@@ -142,17 +142,17 @@ final class pk extends hv {
         var12Lifetime1 = var17.field_x << 1;
         if (this.field_Y == null) {
           this.field_Y = new RgbSprite(var11Lifetime1, var12Lifetime1);
-          vn.a(this.field_Y, 3);
+          CombatSandbox.a(this.field_Y, 3);
         } else {
           if (this.field_Y.field_y < var11Lifetime1) {
             this.field_Y = new RgbSprite(var11Lifetime1, var12Lifetime1);
-            vn.a(this.field_Y, 3);
+            CombatSandbox.a(this.field_Y, 3);
           } else {
             if (var12Lifetime1 > this.field_Y.field_v) {
               this.field_Y = new RgbSprite(var11Lifetime1, var12Lifetime1);
-              vn.a(this.field_Y, 3);
+              CombatSandbox.a(this.field_Y, 3);
             } else {
-              vn.a(this.field_Y, 3);
+              CombatSandbox.a(this.field_Y, 3);
               SoftwareRaster.b();
             }
           }

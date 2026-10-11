@@ -32,7 +32,7 @@ final class rj extends kb {
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
-        vn.a(var14, 3);
+        CombatSandbox.a(var14, 3);
         int var5 = this.field_w >> 1;
         if (param1 >= -54) {
           return (RgbSprite) null;
@@ -95,7 +95,7 @@ final class rj extends kb {
           }
           rf.b(-18862);
           if (SoftwareRaster.field_j <= param3 + this.field_J.field_y) {
-            vn.a(this.field_K, 3);
+            CombatSandbox.a(this.field_K, 3);
             param2.g(-this.field_N, 0);
             param2.g(this.field_C * 2 - this.field_N, 0);
             this.field_S.b(0, 0);
@@ -103,7 +103,7 @@ final class rj extends kb {
             this.field_K.g(param3, param1);
           }
           if (-this.field_J.field_y + var5_int <= SoftwareRaster.field_e) {
-            vn.a(this.field_K, 3);
+            CombatSandbox.a(this.field_K, 3);
             for (var8 = -this.field_J.field_y + this.field_l + this.field_N; var8 > this.field_C * 2; var8 = var8 - this.field_C * 2) {
             }
             param2.g(-var8, 0);
@@ -272,7 +272,7 @@ final class rj extends kb {
         int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var2 = this.field_w >> 1;
         RgbSprite var3 = new RgbSprite(var2, this.field_w);
-        vn.a(var3, param0 - 747);
+        CombatSandbox.a(var3, param0 - 747);
         if (param0 != 750) {
           return (RgbSprite) null;
         }

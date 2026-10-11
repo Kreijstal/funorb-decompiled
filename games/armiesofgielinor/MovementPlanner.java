@@ -128,7 +128,7 @@ final class MovementPlanner {
         Unit var9;
         int var10;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (0 != (4 & this.battlefield.b(31, this.unit.tileY, this.unit.tileX, this.unit.ownerPlayer))) {
+        if (0 != (4 & this.battlefield.getTileEffects(31, this.unit.tileY, this.unit.tileX, this.unit.ownerPlayer))) {
           param1 = 0;
         }
         if (param1 < 0) {
@@ -401,8 +401,8 @@ final class MovementPlanner {
                 this.mapHeight > param0 + var10 &&
                 var11 <= var4 &&
                 var5 <= var11 && (1 == var11 ||
-                (2 & this.battlefield.b(31, var10 + param0, param1 + var9, this.unit.ownerPlayer)) == 0 &&
-                0 == (this.battlefield.b(31, param0, param1, this.unit.ownerPlayer) & 2)) && this.movementCosts[param1 + (var9 + this.mapWidth * (param0 + var10))] <= var6) {
+                (2 & this.battlefield.getTileEffects(31, var10 + param0, param1 + var9, this.unit.ownerPlayer)) == 0 &&
+                0 == (this.battlefield.getTileEffects(31, param0, param1, this.unit.ownerPlayer) & 2)) && this.movementCosts[param1 + (var9 + this.mapWidth * (param0 + var10))] <= var6) {
                 stackIn_74_0 = this.battlefield.field_j;
                 stackIn_74_1 = var10 + param0;
                 stackIn_74_2 = param1;
@@ -631,7 +631,7 @@ final class MovementPlanner {
               var2 = 0;
             }
           }
-          if ((4 & this.battlefield.b(31, this.unit.tileY, this.unit.tileX, this.unit.ownerPlayer)) != 0) {
+          if ((4 & this.battlefield.getTileEffects(31, this.unit.tileY, this.unit.tileX, this.unit.ownerPlayer)) != 0) {
             var2 = 0;
           }
         }
@@ -798,7 +798,7 @@ final class MovementPlanner {
           }
           stackIn_75_0 = (4 != bw.unitDefinitions[unit.unitType][0]) ? 0 : 1;
           var14Lifetime1 = stackIn_75_0;
-          stackIn_78_0 = (!this.unit.j((byte) 102)) ? 0 : 1;
+          stackIn_78_0 = (!this.unit.canAttackFlying((byte) 102)) ? 0 : 1;
           var15Lifetime1 = stackIn_78_0;
           this.battlefield.field_j.a(var8, var15Lifetime1 != 0, -1, var10, var13, this.unit.ownerPlayer, this.field_a, this.movementCosts, var7_int, var11, var14Lifetime1 != 0, this.field_e, var9, var12);
           if (this.unit.packedFlag8 &&
@@ -1029,7 +1029,7 @@ final class MovementPlanner {
                 }
                 param1.tiles[param1.mapWidth * var9 + var8] = new MapTile(7, param1);
                 if (0 != var3Lifetime1) {
-                  fi.a(var8, (byte) 101, 1, var9, 20 * (var6 + 1) + 10, false, (var7 + 1) * 20 + 10, param1, var13);
+                  UnitInfoPopup.a(var8, (byte) 101, 1, var9, 20 * (var6 + 1) + 10, false, (var7 + 1) * 20 + 10, param1, var13);
                 }
                 for (var10 = 0; var10 < var4Lifetime1; var10++) {
                   while (null != param1.tiles[var9 * param1.mapWidth + var8]) {

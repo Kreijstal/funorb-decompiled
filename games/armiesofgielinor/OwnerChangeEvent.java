@@ -365,7 +365,7 @@ final class OwnerChangeEvent extends GameEvent {
           this.applied = true;
           this.unit = this.unit.replaceWithOwner(this.newOwnerPlayer, -1);
           if (null != this.unit &&
-            this.unit.e((byte) 123)) {
+            this.unit.isJadeVine((byte) 123)) {
             stackIn_7_0 = (battlefield.localPlayer == this.unit.ownerPlayer);
             if (stackIn_7_0 & this.field_z) {
               battlefield.pendingEvents.addFirst(obfuscationGuard + 27411, new UpkeepEvent(this.unit.tileX, this.unit.tileY));

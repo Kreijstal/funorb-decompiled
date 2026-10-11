@@ -74,7 +74,7 @@ final class fu {
             }
           }
           if (param0 != null) {
-            this.field_c = dn.field_Pb[param0[0]];
+            this.field_c = dn.unitDisplayNames[param0[0]];
             this.field_i = ut.field_cb[param0[0]];
           } else {
             if (-1 == param1) {

@@ -3,17 +3,17 @@
  */
 import java.util.*;
 
-final class fi extends IntrusiveNode {
-    private int field_n;
+final class UnitInfoPopup extends IntrusiveNode {
+    private int scrollPauseFrames;
     static NodeDeque field_u;
-    private boolean field_p;
-    private int field_t;
-    private int field_q;
-    private int field_k;
+    private boolean scrollForward;
+    private int screenY;
+    private int nameScrollOffset;
+    private int screenX;
     static long field_s;
-    Unit field_r;
-    private int field_o;
-    private int field_m;
+    Unit unit;
+    private int maximumNameScroll;
+    private int fadeOffset;
     static String field_l;
 
     final static me b(int param0, int param1) {
@@ -68,11 +68,11 @@ final class fi extends IntrusiveNode {
           qt.field_e.b(2, 2);
           SoftwareRaster.b(5, 5, 124, 18, 0, 192);
           SoftwareRaster.b(5, 25, 30, 30, 0, 192);
-          var7 = this.field_r.displayName;
+          var7 = this.unit.displayName;
           SoftwareRaster.f(5, param2, 95, 23);
           stackIn_3_0 = en.field_E;
           stackIn_3_1 = var7;
-          stackIn_3_2 = 10 - (this.field_q >> 1);
+          stackIn_3_2 = 10 - (this.nameScrollOffset >> 1);
           stackIn_3_3 = 17;
           stackIn_3_4 = op.field_c;
           if (param5.teamGame) {
@@ -80,14 +80,14 @@ final class fi extends IntrusiveNode {
           } else {
             stackIn_4_5 = 0;
           }
-          ((tu) (Object) stackIn_3_0).b(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4[stackIn_4_5][this.field_r.ownerPlayer], -1);
+          ((tu) (Object) stackIn_3_0).b(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4[stackIn_4_5][this.unit.ownerPlayer], -1);
           SoftwareRaster.a();
-          var8 = this.field_r.getEffectiveStrength((byte) 122);
+          var8 = this.unit.getEffectiveStrength((byte) 122);
           if (var8 < 0) {
             var8 = 0;
           }
           stackIn_8_0 = en.field_E;
-          stackIn_8_1 = var8 + "/" + this.field_r.maximumStrength;
+          stackIn_8_1 = var8 + "/" + this.unit.maximumStrength;
           stackIn_8_2 = 126;
           stackIn_8_3 = 18;
           stackIn_8_4 = op.field_c;
@@ -96,11 +96,11 @@ final class fi extends IntrusiveNode {
           } else {
             stackIn_9_5 = 1;
           }
-          ((tu) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4[stackIn_9_5][this.field_r.ownerPlayer], -1);
-          if (param1 == this.field_r.ownerPlayer) {
+          ((tu) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4[stackIn_9_5][this.unit.ownerPlayer], -1);
+          if (param1 == this.unit.ownerPlayer) {
             SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             SoftwareRaster.b(53, 25, 30, 30, 0, 128);
-            var9 = this.field_r.l(-27014);
+            var9 = this.unit.l(-27014);
             cp.field_e[eb.a((byte) -97, ~var9 & 3)].a(56, 25);
           } else {
             if (param0 == null) {
@@ -108,27 +108,27 @@ final class fi extends IntrusiveNode {
             } else {
               SoftwareRaster.b(37, 25, 92, 30, 0, 128);
               ro.field_rb[param0.getUnitCategory(0)].a(43, 32);
-              sg.field_b[this.a(param0.getUnitCategory(0), this.field_r.getUnitCategory(param2 - 5), -46)].a(75, 32);
+              sg.field_b[this.a(param0.getUnitCategory(0), this.unit.getUnitCategory(param2 - 5), -46)].a(75, 32);
             }
           }
-          ro.field_rb[this.field_r.getUnitCategory(0)].a(106, 32);
-          en.field_E.c(-param5.a(param5.mapWidth * this.field_r.tileY + this.field_r.tileX, param2 - 9, this.field_r) + 100 + "%", 20, 45, 16777215, -1);
+          ro.field_rb[this.unit.getUnitCategory(0)].a(106, 32);
+          en.field_E.c(-param5.getDamageTakenPercent(param5.mapWidth * this.unit.tileY + this.unit.tileX, param2 - 9, this.unit) + 100 + "%", 20, 45, 16777215, -1);
           EventPresenter.field_t.b(68, 60, nd.field_b[-1 + nd.field_b.length]);
           so.field_b.a(param2 + 5600);
-          var9Lifetime1 = this.field_k - param3 - 75;
-          var10 = this.field_t - (param4 + 80);
-          uf.field_j.e(var9Lifetime1, var10, -this.field_m + 32 << 3);
-          var11 = bw.unitDefinitions[this.field_r.unitType][12];
+          var9Lifetime1 = this.screenX - param3 - 75;
+          var10 = this.screenY - (param4 + 80);
+          uf.field_j.e(var9Lifetime1, var10, -this.fadeOffset + 32 << 3);
+          var11 = bw.unitDefinitions[this.unit.unitType][12];
           if (var11 != -1) {
-            PreparedAction.a(32 - this.field_m << 3, true, var9Lifetime1 + 96, e.field_b, 40, 60 + var10);
+            PreparedAction.a(32 - this.fadeOffset << 3, true, var9Lifetime1 + 96, e.field_b, 40, 60 + var10);
             if (var11 < lb.field_e.length) {
-              lb.field_e[var11].a(var9Lifetime1 + 101, var10 + 58, -this.field_m + 32 << 3);
+              lb.field_e[var11].a(var9Lifetime1 + 101, var10 + 58, -this.fadeOffset + 32 << 3);
             }
           }
-          var12 = this.field_r.f(param2 + 11);
+          var12 = this.unit.f(param2 + 11);
           if (var12 != -1) {
-            PreparedAction.a(-this.field_m + 32 << 3, true, var9Lifetime1, e.field_b, 40, var10 + 60);
-            ii.field_a[var12].c(var9Lifetime1 + 8, 60 + var10, 24, 24, -this.field_m + 32 << 3);
+            PreparedAction.a(-this.fadeOffset + 32 << 3, true, var9Lifetime1, e.field_b, 40, var10 + 60);
+            ii.field_a[var12].c(var9Lifetime1 + 8, 60 + var10, 24, 24, -this.fadeOffset + 32 << 3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -152,8 +152,8 @@ final class fi extends IntrusiveNode {
     }
 
     private final int a(int param0, int param1, int param2) {
-        int var4 = fk.field_d[param1][param0];
-        int var5 = fk.field_d[param0][param1];
+        int var4 = fk.matchupDamagePercent[param1][param0];
+        int var5 = fk.matchupDamagePercent[param0][param1];
         if (var5 < var4) {
           if (-var5 + var4 <= 45) {
             return 1;
@@ -180,68 +180,68 @@ final class fi extends IntrusiveNode {
         }
     }
 
-    final void a(byte param0, boolean param1) {
+    final void advanceAnimation(byte obfuscationGuard, boolean show) {
         int var4;
         Battlefield var5;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param1) {
-          if (this.field_m > 0) {
-            this.field_m = this.field_m - 4;
+        if (show) {
+          if (this.fadeOffset > 0) {
+            this.fadeOffset = this.fadeOffset - 4;
           } else {
-            if (this.field_o > 0) {
-              if (this.field_p) {
-                if (this.field_q < this.field_o) {
-                  this.field_q = this.field_q + 1;
+            if (this.maximumNameScroll > 0) {
+              if (this.scrollForward) {
+                if (this.nameScrollOffset < this.maximumNameScroll) {
+                  this.nameScrollOffset = this.nameScrollOffset + 1;
                 }
-                if (this.field_q >= this.field_o) {
-                  this.field_n = this.field_n - 1;
-                  if (this.field_n <= 0) {
-                    this.field_n = 50;
-                    this.field_p = false;
+                if (this.nameScrollOffset >= this.maximumNameScroll) {
+                  this.scrollPauseFrames = this.scrollPauseFrames - 1;
+                  if (this.scrollPauseFrames <= 0) {
+                    this.scrollPauseFrames = 50;
+                    this.scrollForward = false;
                   }
                 }
               } else {
-                if (this.field_q > 0) {
-                  this.field_q = this.field_q - 1;
+                if (this.nameScrollOffset > 0) {
+                  this.nameScrollOffset = this.nameScrollOffset - 1;
                 }
-                if (this.field_q <= 0) {
-                  this.field_n = this.field_n - 1;
-                  if (this.field_n <= 0) {
-                    this.field_n = 50;
-                    this.field_p = true;
+                if (this.nameScrollOffset <= 0) {
+                  this.scrollPauseFrames = this.scrollPauseFrames - 1;
+                  if (this.scrollPauseFrames <= 0) {
+                    this.scrollPauseFrames = 50;
+                    this.scrollForward = true;
                   }
                 }
               }
             }
           }
         } else {
-          if (this.field_m < 32) {
-            this.field_m = this.field_m + 4;
+          if (this.fadeOffset < 32) {
+            this.fadeOffset = this.fadeOffset + 4;
           }
-          if (this.field_m >= 32) {
+          if (this.fadeOffset >= 32) {
             this.unlink(108);
           }
         }
-        if (param0 > -100) {
+        if (obfuscationGuard > -100) {
           var5 = (Battlefield) null;
           this.a((Unit) null, -88, 39, -11, 35, (Battlefield) null);
         }
     }
 
-    fi(Unit param0, int param1, int param2) {
+    UnitInfoPopup(Unit param0, int param1, int param2) {
         try {
-          this.field_k = param1;
-          this.field_m = 32;
-          this.field_p = false;
-          this.field_q = 0;
-          this.field_r = param0;
-          this.field_t = param2;
-          this.field_o = -110 + rs.field_n.a(this.field_r.displayName);
-          if (this.field_o < 0) {
-            this.field_o = 0;
+          this.screenX = param1;
+          this.fadeOffset = 32;
+          this.scrollForward = false;
+          this.nameScrollOffset = 0;
+          this.unit = param0;
+          this.screenY = param2;
+          this.maximumNameScroll = -110 + rs.field_n.a(this.unit.displayName);
+          if (this.maximumNameScroll < 0) {
+            this.maximumNameScroll = 0;
           }
-          this.field_n = 100;
-          this.field_o = this.field_o << 1;
+          this.scrollPauseFrames = 100;
+          this.maximumNameScroll = this.maximumNameScroll << 1;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "fi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -294,7 +294,7 @@ final class fi extends IntrusiveNode {
           var10 = -param3 + param6;
           if (param1 != 101) {
             var14 = (Random) null;
-            fi.a(-20, (byte) 51, -30, 104, -20, false, -76, (Battlefield) null, (Random) null);
+            UnitInfoPopup.a(-20, (byte) 51, -30, 104, -20, false, -76, (Battlefield) null, (Random) null);
           }
           var11 = 0;
           var12 = 0;

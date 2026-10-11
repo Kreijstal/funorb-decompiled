@@ -122,7 +122,7 @@ final class TileMetadata implements TaggedFieldReader {
         if (param0 != 0) {
           TileMetadata.c(-90);
         }
-        return new pf[]{vn.field_j, ps.field_y, u.field_l};
+        return new pf[]{CombatSandbox.field_j, ps.field_y, u.field_l};
     }
 
     final static void a(int param0, boolean param1) {

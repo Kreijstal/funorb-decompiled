@@ -10,7 +10,7 @@ final class hh {
     static String field_j;
     static nc field_i;
     static int field_c;
-    static int[] field_e;
+    static int[] statusProtectionMasks;
     private int field_g;
     static RgbSprite field_f;
 
@@ -19,7 +19,7 @@ final class hh {
         field_i = null;
         field_j = null;
         field_f = null;
-        field_e = null;
+        statusProtectionMasks = null;
         if (param0 != 16) {
           return;
         }
@@ -295,7 +295,7 @@ final class hh {
     static {
         field_a = "You have 1 unread message!";
         field_j = "Confirm Email:";
-        field_e = new int[]{0, 1, 2, 4, 8, 31, 16, 0, 0};
+        statusProtectionMasks = new int[]{0, 1, 2, 4, 8, 31, 16, 0, 0};
         field_c = 0;
     }
 }

@@ -1207,7 +1207,7 @@ final class em {
                 }
                 var2 = fk.a(false, "LABEL_AWARD_KILLS");
                 if (null != var2) {
-                  vn.field_g = uu.a(var2, (byte) -102);
+                  CombatSandbox.field_g = uu.a(var2, (byte) -102);
                 }
                 var2 = fk.a(false, "LABEL_AWARD_SUMMONS");
                 if (null != var2) {
@@ -2045,359 +2045,359 @@ final class em {
                 }
                 var2 = fk.a(false, "unitnames,0");
                 if (null != var2) {
-                  dn.field_Pb[0] = uu.a(var2, (byte) 94);
+                  dn.unitDisplayNames[0] = uu.a(var2, (byte) 94);
                 }
                 var2 = fk.a(false, "unitnames,1");
                 if (null != var2) {
-                  dn.field_Pb[1] = uu.a(var2, (byte) 70);
+                  dn.unitDisplayNames[1] = uu.a(var2, (byte) 70);
                 }
                 var2 = fk.a(false, "unitnames,2");
                 if (var2 != null) {
-                  dn.field_Pb[2] = uu.a(var2, (byte) -100);
+                  dn.unitDisplayNames[2] = uu.a(var2, (byte) -100);
                 }
                 var2 = fk.a(false, "unitnames,3");
                 if (var2 != null) {
-                  dn.field_Pb[3] = uu.a(var2, (byte) -113);
+                  dn.unitDisplayNames[3] = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "unitnames,4");
                 if (null != var2) {
-                  dn.field_Pb[4] = uu.a(var2, (byte) -128);
+                  dn.unitDisplayNames[4] = uu.a(var2, (byte) -128);
                 }
                 var2 = fk.a(false, "unitnames,5");
                 if (var2 != null) {
-                  dn.field_Pb[5] = uu.a(var2, (byte) -119);
+                  dn.unitDisplayNames[5] = uu.a(var2, (byte) -119);
                 }
                 var2 = fk.a(false, "unitnames,6");
                 if (null != var2) {
-                  dn.field_Pb[6] = uu.a(var2, (byte) -117);
+                  dn.unitDisplayNames[6] = uu.a(var2, (byte) -117);
                 }
                 var2 = fk.a(false, "unitnames,7");
                 if (null != var2) {
-                  dn.field_Pb[7] = uu.a(var2, (byte) 125);
+                  dn.unitDisplayNames[7] = uu.a(var2, (byte) 125);
                 }
                 var2 = fk.a(false, "unitnames,8");
                 if (var2 != null) {
-                  dn.field_Pb[8] = uu.a(var2, (byte) -116);
+                  dn.unitDisplayNames[8] = uu.a(var2, (byte) -116);
                 }
                 var2 = fk.a(false, "unitnames,9");
                 if (var2 != null) {
-                  dn.field_Pb[9] = uu.a(var2, (byte) 102);
+                  dn.unitDisplayNames[9] = uu.a(var2, (byte) 102);
                 }
                 var2 = fk.a(false, "unitnames,10");
                 if (null != var2) {
-                  dn.field_Pb[10] = uu.a(var2, (byte) 23);
+                  dn.unitDisplayNames[10] = uu.a(var2, (byte) 23);
                 }
                 var2 = fk.a(false, "unitnames,11");
                 if (var2 != null) {
-                  dn.field_Pb[11] = uu.a(var2, (byte) 32);
+                  dn.unitDisplayNames[11] = uu.a(var2, (byte) 32);
                 }
                 var2 = fk.a(false, "unitnames,12");
                 if (null != var2) {
-                  dn.field_Pb[12] = uu.a(var2, (byte) -97);
+                  dn.unitDisplayNames[12] = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "unitnames,13");
                 if (null != var2) {
-                  dn.field_Pb[13] = uu.a(var2, (byte) 117);
+                  dn.unitDisplayNames[13] = uu.a(var2, (byte) 117);
                 }
                 var2 = fk.a(false, "unitnames,14");
                 if (null != var2) {
-                  dn.field_Pb[14] = uu.a(var2, (byte) -106);
+                  dn.unitDisplayNames[14] = uu.a(var2, (byte) -106);
                 }
                 var2 = fk.a(false, "unitnames,15");
                 if (var2 != null) {
-                  dn.field_Pb[15] = uu.a(var2, (byte) 41);
+                  dn.unitDisplayNames[15] = uu.a(var2, (byte) 41);
                 }
                 var2 = fk.a(false, "unitnames,16");
                 if (null != var2) {
-                  dn.field_Pb[16] = uu.a(var2, (byte) 112);
+                  dn.unitDisplayNames[16] = uu.a(var2, (byte) 112);
                 }
                 var2 = fk.a(false, "unitnames,17");
                 if (null != var2) {
-                  dn.field_Pb[17] = uu.a(var2, (byte) -123);
+                  dn.unitDisplayNames[17] = uu.a(var2, (byte) -123);
                 }
                 var2 = fk.a(false, "unitnames,18");
                 if (null != var2) {
-                  dn.field_Pb[18] = uu.a(var2, (byte) 59);
+                  dn.unitDisplayNames[18] = uu.a(var2, (byte) 59);
                 }
                 var2 = fk.a(false, "unitnames,19");
                 if (null != var2) {
-                  dn.field_Pb[19] = uu.a(var2, (byte) -124);
+                  dn.unitDisplayNames[19] = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "unitnames,20");
                 if (var2 != null) {
-                  dn.field_Pb[20] = uu.a(var2, (byte) -110);
+                  dn.unitDisplayNames[20] = uu.a(var2, (byte) -110);
                 }
                 var2 = fk.a(false, "unitnames,21");
                 if (var2 != null) {
-                  dn.field_Pb[21] = uu.a(var2, (byte) -99);
+                  dn.unitDisplayNames[21] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "unitnames,22");
                 if (null != var2) {
-                  dn.field_Pb[22] = uu.a(var2, (byte) -94);
+                  dn.unitDisplayNames[22] = uu.a(var2, (byte) -94);
                 }
                 var2 = fk.a(false, "unitnames,23");
                 if (var2 != null) {
-                  dn.field_Pb[23] = uu.a(var2, (byte) -108);
+                  dn.unitDisplayNames[23] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "unitnames,24");
                 if (null != var2) {
-                  dn.field_Pb[24] = uu.a(var2, (byte) 125);
+                  dn.unitDisplayNames[24] = uu.a(var2, (byte) 125);
                 }
                 var2 = fk.a(false, "unitnames,25");
                 if (var2 != null) {
-                  dn.field_Pb[25] = uu.a(var2, (byte) -124);
+                  dn.unitDisplayNames[25] = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "unitnames,26");
                 if (var2 != null) {
-                  dn.field_Pb[26] = uu.a(var2, (byte) 92);
+                  dn.unitDisplayNames[26] = uu.a(var2, (byte) 92);
                 }
                 var2 = fk.a(false, "unitnames,27");
                 if (null != var2) {
-                  dn.field_Pb[27] = uu.a(var2, (byte) 109);
+                  dn.unitDisplayNames[27] = uu.a(var2, (byte) 109);
                 }
                 var2 = fk.a(false, "unitnames,28");
                 if (var2 != null) {
-                  dn.field_Pb[28] = uu.a(var2, (byte) -96);
+                  dn.unitDisplayNames[28] = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "unitnames,29");
                 if (var2 != null) {
-                  dn.field_Pb[29] = uu.a(var2, (byte) 20);
+                  dn.unitDisplayNames[29] = uu.a(var2, (byte) 20);
                 }
                 var2 = fk.a(false, "unitnames,30");
                 if (null != var2) {
-                  dn.field_Pb[30] = uu.a(var2, (byte) -106);
+                  dn.unitDisplayNames[30] = uu.a(var2, (byte) -106);
                 }
                 var2 = fk.a(false, "unitnames,31");
                 if (null != var2) {
-                  dn.field_Pb[31] = uu.a(var2, (byte) -99);
+                  dn.unitDisplayNames[31] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "unitnames,32");
                 if (var2 != null) {
-                  dn.field_Pb[32] = uu.a(var2, (byte) 70);
+                  dn.unitDisplayNames[32] = uu.a(var2, (byte) 70);
                 }
                 var2 = fk.a(false, "unitnames,33");
                 if (var2 != null) {
-                  dn.field_Pb[33] = uu.a(var2, (byte) 70);
+                  dn.unitDisplayNames[33] = uu.a(var2, (byte) 70);
                 }
                 var2 = fk.a(false, "unitnames,34");
                 if (null != var2) {
-                  dn.field_Pb[34] = uu.a(var2, (byte) -128);
+                  dn.unitDisplayNames[34] = uu.a(var2, (byte) -128);
                 }
                 var2 = fk.a(false, "unitnames,35");
                 if (null != var2) {
-                  dn.field_Pb[35] = uu.a(var2, (byte) -109);
+                  dn.unitDisplayNames[35] = uu.a(var2, (byte) -109);
                 }
                 var2 = fk.a(false, "unitnames,36");
                 if (null != var2) {
-                  dn.field_Pb[36] = uu.a(var2, (byte) -105);
+                  dn.unitDisplayNames[36] = uu.a(var2, (byte) -105);
                 }
                 var2 = fk.a(false, "unitnames,37");
                 if (var2 != null) {
-                  dn.field_Pb[37] = uu.a(var2, (byte) 11);
+                  dn.unitDisplayNames[37] = uu.a(var2, (byte) 11);
                 }
                 var2 = fk.a(false, "unitnames,38");
                 if (null != var2) {
-                  dn.field_Pb[38] = uu.a(var2, (byte) 109);
+                  dn.unitDisplayNames[38] = uu.a(var2, (byte) 109);
                 }
                 var2 = fk.a(false, "unitnames,39");
                 if (var2 != null) {
-                  dn.field_Pb[39] = uu.a(var2, (byte) 75);
+                  dn.unitDisplayNames[39] = uu.a(var2, (byte) 75);
                 }
                 var2 = fk.a(false, "unitnames,40");
                 if (null != var2) {
-                  dn.field_Pb[40] = uu.a(var2, (byte) -128);
+                  dn.unitDisplayNames[40] = uu.a(var2, (byte) -128);
                 }
                 var2 = fk.a(false, "unitnames,41");
                 if (var2 != null) {
-                  dn.field_Pb[41] = uu.a(var2, (byte) 63);
+                  dn.unitDisplayNames[41] = uu.a(var2, (byte) 63);
                 }
                 var2 = fk.a(false, "unitnames,42");
                 if (null != var2) {
-                  dn.field_Pb[42] = uu.a(var2, (byte) 90);
+                  dn.unitDisplayNames[42] = uu.a(var2, (byte) 90);
                 }
                 var2 = fk.a(false, "unitnames,43");
                 if (var2 != null) {
-                  dn.field_Pb[43] = uu.a(var2, (byte) 107);
+                  dn.unitDisplayNames[43] = uu.a(var2, (byte) 107);
                 }
                 var2 = fk.a(false, "unitnames,44");
                 if (var2 != null) {
-                  dn.field_Pb[44] = uu.a(var2, (byte) -112);
+                  dn.unitDisplayNames[44] = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "unitnames,45");
                 if (var2 != null) {
-                  dn.field_Pb[45] = uu.a(var2, (byte) 62);
+                  dn.unitDisplayNames[45] = uu.a(var2, (byte) 62);
                 }
                 var2 = fk.a(false, "unitnames,46");
                 if (var2 != null) {
-                  dn.field_Pb[46] = uu.a(var2, (byte) 12);
+                  dn.unitDisplayNames[46] = uu.a(var2, (byte) 12);
                 }
                 var2 = fk.a(false, "unitnames,47");
                 if (var2 != null) {
-                  dn.field_Pb[47] = uu.a(var2, (byte) 35);
+                  dn.unitDisplayNames[47] = uu.a(var2, (byte) 35);
                 }
                 var2 = fk.a(false, "unitnames,48");
                 if (null != var2) {
-                  dn.field_Pb[48] = uu.a(var2, (byte) 36);
+                  dn.unitDisplayNames[48] = uu.a(var2, (byte) 36);
                 }
                 var2 = fk.a(false, "unitnames,49");
                 if (null != var2) {
-                  dn.field_Pb[49] = uu.a(var2, (byte) -110);
+                  dn.unitDisplayNames[49] = uu.a(var2, (byte) -110);
                 }
                 var2 = fk.a(false, "unitnames,50");
                 if (null != var2) {
-                  dn.field_Pb[50] = uu.a(var2, (byte) 102);
+                  dn.unitDisplayNames[50] = uu.a(var2, (byte) 102);
                 }
                 var2 = fk.a(false, "unitnames,51");
                 if (null != var2) {
-                  dn.field_Pb[51] = uu.a(var2, (byte) 54);
+                  dn.unitDisplayNames[51] = uu.a(var2, (byte) 54);
                 }
                 var2 = fk.a(false, "unitnames,52");
                 if (null != var2) {
-                  dn.field_Pb[52] = uu.a(var2, (byte) -106);
+                  dn.unitDisplayNames[52] = uu.a(var2, (byte) -106);
                 }
                 var2 = fk.a(false, "unitnames,53");
                 if (var2 != null) {
-                  dn.field_Pb[53] = uu.a(var2, (byte) 18);
+                  dn.unitDisplayNames[53] = uu.a(var2, (byte) 18);
                 }
                 var2 = fk.a(false, "unitnames,54");
                 if (var2 != null) {
-                  dn.field_Pb[54] = uu.a(var2, (byte) 18);
+                  dn.unitDisplayNames[54] = uu.a(var2, (byte) 18);
                 }
                 var2 = fk.a(false, "unitnames,55");
                 if (var2 != null) {
-                  dn.field_Pb[55] = uu.a(var2, (byte) -93);
+                  dn.unitDisplayNames[55] = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "unitnames,56");
                 if (null != var2) {
-                  dn.field_Pb[56] = uu.a(var2, (byte) 70);
+                  dn.unitDisplayNames[56] = uu.a(var2, (byte) 70);
                 }
                 var2 = fk.a(false, "unitnames,57");
                 if (null != var2) {
-                  dn.field_Pb[57] = uu.a(var2, (byte) 107);
+                  dn.unitDisplayNames[57] = uu.a(var2, (byte) 107);
                 }
                 var2 = fk.a(false, "unitnames,58");
                 if (null != var2) {
-                  dn.field_Pb[58] = uu.a(var2, (byte) -126);
+                  dn.unitDisplayNames[58] = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "unitnames,59");
                 if (null != var2) {
-                  dn.field_Pb[59] = uu.a(var2, (byte) -105);
+                  dn.unitDisplayNames[59] = uu.a(var2, (byte) -105);
                 }
                 var2 = fk.a(false, "unitnames,60");
                 if (null != var2) {
-                  dn.field_Pb[60] = uu.a(var2, (byte) -124);
+                  dn.unitDisplayNames[60] = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "unitnames,61");
                 if (null != var2) {
-                  dn.field_Pb[61] = uu.a(var2, (byte) -106);
+                  dn.unitDisplayNames[61] = uu.a(var2, (byte) -106);
                 }
                 var2 = fk.a(false, "unitnames,62");
                 if (var2 != null) {
-                  dn.field_Pb[62] = uu.a(var2, (byte) -94);
+                  dn.unitDisplayNames[62] = uu.a(var2, (byte) -94);
                 }
                 var2 = fk.a(false, "unitnames,63");
                 if (var2 != null) {
-                  dn.field_Pb[63] = uu.a(var2, (byte) -115);
+                  dn.unitDisplayNames[63] = uu.a(var2, (byte) -115);
                 }
                 var2 = fk.a(false, "unitnames,64");
                 if (null != var2) {
-                  dn.field_Pb[64] = uu.a(var2, (byte) -92);
+                  dn.unitDisplayNames[64] = uu.a(var2, (byte) -92);
                 }
                 var2 = fk.a(false, "unitnames,65");
                 if (var2 != null) {
-                  dn.field_Pb[65] = uu.a(var2, (byte) -116);
+                  dn.unitDisplayNames[65] = uu.a(var2, (byte) -116);
                 }
                 var2 = fk.a(false, "unitnames,66");
                 if (var2 != null) {
-                  dn.field_Pb[66] = uu.a(var2, (byte) 35);
+                  dn.unitDisplayNames[66] = uu.a(var2, (byte) 35);
                 }
                 var2 = fk.a(false, "unitnames,67");
                 if (var2 != null) {
-                  dn.field_Pb[67] = uu.a(var2, (byte) 56);
+                  dn.unitDisplayNames[67] = uu.a(var2, (byte) 56);
                 }
                 var2 = fk.a(false, "unitnames,68");
                 if (var2 != null) {
-                  dn.field_Pb[68] = uu.a(var2, (byte) -121);
+                  dn.unitDisplayNames[68] = uu.a(var2, (byte) -121);
                 }
                 var2 = fk.a(false, "unitnames,69");
                 if (null != var2) {
-                  dn.field_Pb[69] = uu.a(var2, (byte) 118);
+                  dn.unitDisplayNames[69] = uu.a(var2, (byte) 118);
                 }
                 var2 = fk.a(false, "unitnames,70");
                 if (var2 != null) {
-                  dn.field_Pb[70] = uu.a(var2, (byte) -119);
+                  dn.unitDisplayNames[70] = uu.a(var2, (byte) -119);
                 }
                 var2 = fk.a(false, "unitnames,71");
                 if (null != var2) {
-                  dn.field_Pb[71] = uu.a(var2, (byte) -117);
+                  dn.unitDisplayNames[71] = uu.a(var2, (byte) -117);
                 }
                 var2 = fk.a(false, "unitnames,72");
                 if (var2 != null) {
-                  dn.field_Pb[72] = uu.a(var2, (byte) 19);
+                  dn.unitDisplayNames[72] = uu.a(var2, (byte) 19);
                 }
                 var2 = fk.a(false, "unitnames,73");
                 if (null != var2) {
-                  dn.field_Pb[73] = uu.a(var2, (byte) -128);
+                  dn.unitDisplayNames[73] = uu.a(var2, (byte) -128);
                 }
                 var2 = fk.a(false, "unitnames,74");
                 if (var2 != null) {
-                  dn.field_Pb[74] = uu.a(var2, (byte) -128);
+                  dn.unitDisplayNames[74] = uu.a(var2, (byte) -128);
                 }
                 var2 = fk.a(false, "unitnames,75");
                 if (var2 != null) {
-                  dn.field_Pb[75] = uu.a(var2, (byte) 14);
+                  dn.unitDisplayNames[75] = uu.a(var2, (byte) 14);
                 }
                 var2 = fk.a(false, "unitnames,76");
                 if (null != var2) {
-                  dn.field_Pb[76] = uu.a(var2, (byte) -118);
+                  dn.unitDisplayNames[76] = uu.a(var2, (byte) -118);
                 }
                 var2 = fk.a(false, "unitnames,77");
                 if (var2 != null) {
-                  dn.field_Pb[77] = uu.a(var2, (byte) 72);
+                  dn.unitDisplayNames[77] = uu.a(var2, (byte) 72);
                 }
                 var2 = fk.a(false, "unitnames,78");
                 if (var2 != null) {
-                  dn.field_Pb[78] = uu.a(var2, (byte) 113);
+                  dn.unitDisplayNames[78] = uu.a(var2, (byte) 113);
                 }
                 var2 = fk.a(false, "unitnames,79");
                 if (var2 != null) {
-                  dn.field_Pb[79] = uu.a(var2, (byte) 124);
+                  dn.unitDisplayNames[79] = uu.a(var2, (byte) 124);
                 }
                 var2 = fk.a(false, "unitnames,80");
                 if (var2 != null) {
-                  dn.field_Pb[80] = uu.a(var2, (byte) -92);
+                  dn.unitDisplayNames[80] = uu.a(var2, (byte) -92);
                 }
                 var2 = fk.a(false, "unitnames,81");
                 if (var2 != null) {
-                  dn.field_Pb[81] = uu.a(var2, (byte) 98);
+                  dn.unitDisplayNames[81] = uu.a(var2, (byte) 98);
                 }
                 var2 = fk.a(false, "unitnames,82");
                 if (var2 != null) {
-                  dn.field_Pb[82] = uu.a(var2, (byte) 63);
+                  dn.unitDisplayNames[82] = uu.a(var2, (byte) 63);
                 }
                 var2 = fk.a(false, "unitnames,83");
                 if (null != var2) {
-                  dn.field_Pb[83] = uu.a(var2, (byte) -115);
+                  dn.unitDisplayNames[83] = uu.a(var2, (byte) -115);
                 }
                 var2 = fk.a(false, "unitnames,84");
                 if (var2 != null) {
-                  dn.field_Pb[84] = uu.a(var2, (byte) 31);
+                  dn.unitDisplayNames[84] = uu.a(var2, (byte) 31);
                 }
                 var2 = fk.a(false, "unitnames,85");
                 if (var2 != null) {
-                  dn.field_Pb[85] = uu.a(var2, (byte) 69);
+                  dn.unitDisplayNames[85] = uu.a(var2, (byte) 69);
                 }
                 var2 = fk.a(false, "unitnames,86");
                 if (var2 != null) {
-                  dn.field_Pb[86] = uu.a(var2, (byte) -107);
+                  dn.unitDisplayNames[86] = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "unitnames,87");
                 if (var2 != null) {
-                  dn.field_Pb[87] = uu.a(var2, (byte) -99);
+                  dn.unitDisplayNames[87] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "unitnames,88");
                 if (var2 != null) {
-                  dn.field_Pb[88] = uu.a(var2, (byte) -109);
+                  dn.unitDisplayNames[88] = uu.a(var2, (byte) -109);
                 }
                 var2 = fk.a(false, "STATS_MULTIRANGE");
                 if (var2 != null) {
@@ -4795,7 +4795,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TTREEN_SACRIFICIAL");
                 if (null != var2) {
-                  fi.field_l = uu.a(var2, (byte) 49);
+                  UnitInfoPopup.field_l = uu.a(var2, (byte) 49);
                 }
                 var2 = fk.a(false, "TTREEN_MELEE");
                 if (var2 != null) {
@@ -5804,7 +5804,7 @@ final class em {
             if (vs.field_e[param4].hasCorpse(-26)) {
               es.field_d[var9_int % 4].b(param7, -25 + param3, param0, param8);
             }
-            var11 = CipherPacketBuffer.currentBattlefield.b(param5 + 31, param2, param6, -1);
+            var11 = CipherPacketBuffer.currentBattlefield.getTileEffects(param5 + 31, param2, param6, -1);
             var12 = vs.field_e[param4].terrainType;
             if (4 != var12 &&
               var12 != 6 &&

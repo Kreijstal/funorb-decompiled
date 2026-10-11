@@ -462,7 +462,7 @@ final class ut extends sf implements he {
           }
           if (pv.field_c) {
             pq.field_f = null;
-            fi.field_u = new NodeDeque();
+            UnitInfoPopup.field_u = new NodeDeque();
             var10 = ei.field_e;
             var7 = var10;
             var4 = var7;
