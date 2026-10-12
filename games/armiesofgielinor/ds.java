@@ -29,7 +29,7 @@ final class ds {
           var2 = 48 / ((36 - obfuscationGuard) / 56);
           ku.pointerChanged = false;
           DeployEvent.pointerPressButton = ArchiveIndex.pressedPointerButton;
-          BattleTutorial.pointerPressX = mq.lastPointerPressX;
+          BattleTutorial.pointerPressX = QuickChatMenu.lastPointerPressX;
           TeleportAction.pointerPressY = BoundedFile.lastPointerPressY;
           ArchiveIndex.pressedPointerButton = 0;
           eq.pointerButtonMask = EffectPresentation.livePointerButtonMask;

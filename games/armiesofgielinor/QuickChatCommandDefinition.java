@@ -37,7 +37,7 @@ final class QuickChatCommandDefinition {
     }
 
     final static boolean a(int param0, String param1, int[] param2, long param3, int param4) {
-        mq var6 = null;
+        QuickChatMenu var6 = null;
         RuntimeException var6_ref = null;
         CharSequence var7 = null;
         RuntimeException stackIn_12_0 = null;

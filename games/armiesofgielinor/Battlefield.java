@@ -7227,7 +7227,7 @@ final class Battlefield {
           if (param1 != -26) {
             return true;
           }
-          var3 = nf.a(true, param2);
+          var3 = IconTextComponent.a(true, param2);
           stackIn_8_0 = (param0.indexOf(param2) != -1) || (param0.indexOf(var3) != -1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

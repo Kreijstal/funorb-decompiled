@@ -5,7 +5,7 @@ class kq extends fw {
     static int field_L;
     private Widget field_Q;
     static QuickChatCommandDefinition field_M;
-    static je field_N;
+    static ClientUiComponent field_N;
     static RgbSprite field_P;
 
     final static String getSpellConfirmationPrompt(int tileY, int obfuscationGuard, int spellId, Battlefield battlefield, int tileX) {
@@ -53,7 +53,7 @@ class kq extends fw {
         int var6Lifetime2;
         try {
           if (obfuscationGuard != 7) {
-            field_N = (je) null;
+            field_N = (ClientUiComponent) null;
           }
           if (uc.spellDefinitions[spellId][3] != 0) {
             return null;

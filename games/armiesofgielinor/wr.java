@@ -13,7 +13,7 @@ final class wr extends hs implements he {
           Widget var6 = (Widget) null;
           this.a(51, -1, -80, (Widget) null);
         }
-        gl.field_e.b(mq.field_Nb, param0 - (-this.x - 4), 4 + (param1 + this.y) + gl.field_e.field_H, 16777215, -1);
+        gl.field_e.b(QuickChatMenu.field_Nb, param0 - (-this.x - 4), 4 + (param1 + this.y) + gl.field_e.field_H, 16777215, -1);
     }
 
     wr(int param0, int param1, int param2, int param3) {
@@ -42,18 +42,18 @@ final class wr extends hs implements he {
         int var5 = 0;
         try {
           bw.field_g = true;
-          vu.field_Q.field_X = param1;
+          vu.field_Q.text = param1;
           var2_int = so.field_b.field_a;
           var3 = so.field_b.field_g;
-          var4 = vu.field_Q.field_Z.getParagraphHeight(param1, 272, vu.field_Q.field_pb);
+          var4 = vu.field_Q.font.getParagraphHeight(param1, 272, vu.field_Q.field_pb);
           var5 = -(var4 / 2) + var3 / 2 - 103;
           if (param0 < 27) {
             field_J = -20;
           }
-          qc.field_c.a(-(var5 * 2) + (-120 + var3), -20500, 320, var5, (var2_int - 320) / 2);
-          qc.field_c.field_G = tq.a(11579568, false, qc.field_c.field_ob, 2105376, 3, 8421504);
-          vu.field_Q.a(-20 + (qc.field_c.field_ob - 24), -20500, qc.field_c.field_gb - 48, 16, 24);
-          td.field_g.a(24, -20500, 80, qc.field_c.field_ob - 20 - 24, 120);
+          qc.field_c.setBounds(-(var5 * 2) + (-120 + var3), -20500, 320, var5, (var2_int - 320) / 2);
+          qc.field_c.field_G = tq.a(11579568, false, qc.field_c.height, 2105376, 3, 8421504);
+          vu.field_Q.setBounds(-20 + (qc.field_c.height - 24), -20500, qc.field_c.width - 48, 16, 24);
+          td.field_g.setBounds(24, -20500, 80, qc.field_c.height - 20 - 24, 120);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wr.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -6,7 +6,7 @@ final class wh {
     static String field_b;
     static String field_h;
     static String field_e;
-    static je field_g;
+    static ClientUiComponent field_g;
     static boolean field_f;
     static String field_d;
     static NodeDeque field_c;

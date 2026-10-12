@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class UnitModelPreview {
-    static je field_m;
+    static ClientUiComponent field_m;
     private ModelMesh model;
     private int animationIndex;
     static RgbSprite field_b;

@@ -136,7 +136,7 @@ final class ps extends lk {
           var3 = var2 - TurnTimerDial.field_d * TurnTimerDial.field_d;
           param0 = param0 + var3 * (EquipmentBattleTutorial.field_y - param0) / var2;
         }
-        CombatEvent.field_I.a(120, -20500, 640, param0, QuickChatCategory.field_u);
+        CombatEvent.field_I.setBounds(120, -20500, 640, param0, QuickChatCategory.field_u);
         PlayerProfile.a(-1, mi.field_l, 0, io.field_n, 5, EquipmentBattleTutorial.field_y - 24, 640);
         if (param1) {
           return;

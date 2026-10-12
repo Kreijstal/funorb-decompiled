@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class te extends IntrusiveNode {
-    static je field_p;
+    static ClientUiComponent field_p;
     static String field_m;
     static int field_n;
     static int field_l;

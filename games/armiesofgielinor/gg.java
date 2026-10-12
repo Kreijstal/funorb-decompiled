@@ -10,7 +10,7 @@ final class gg extends dr {
     static Random animationRandom;
     static String field_H;
     static ResourceArchive field_K;
-    static je field_E;
+    static ClientUiComponent field_E;
 
     final nd a(int param0, nd[] param1) {
         RuntimeException var3 = null;

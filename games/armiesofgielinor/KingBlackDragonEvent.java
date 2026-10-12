@@ -5,7 +5,7 @@ final class KingBlackDragonEvent extends GameEvent {
     static gk field_C;
     static int field_A;
     private int playerId;
-    static je[] field_z;
+    static ClientUiComponent[] field_z;
     static String field_y;
 
     final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
@@ -120,7 +120,7 @@ final class KingBlackDragonEvent extends GameEvent {
           field_z = null;
           return;
         }
-        field_z = (je[]) null;
+        field_z = (ClientUiComponent[]) null;
         field_C = null;
         field_y = null;
         field_z = null;

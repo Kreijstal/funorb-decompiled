@@ -1,110 +1,110 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mq extends je {
-    private int[] field_Ub;
-    private int field_Sb;
-    private int field_Yb;
+final class QuickChatMenu extends ClientUiComponent {
+    private int[] phraseIds;
+    private int menuHeight;
+    private int collapseTicks;
     static volatile int lastPointerPressX;
-    private int field_Qb;
-    private int field_Pb;
+    private int menuWidth;
+    private int openItemIndex;
     static String field_Mb;
     static String[] field_Lb;
-    private nf[] field_Vb;
+    private IconTextComponent[] items;
     static int field_Wb;
     static String field_Nb;
-    private int field_Tb;
-    private int field_Zb;
-    private int field_Ib;
-    private mq field_Ob;
-    private char[] field_Kb;
-    private mq[] field_Rb;
-    private int field_Jb;
+    private int itemCount;
+    private int animationAnchorY;
+    private int rowHeight;
+    private QuickChatMenu activeSubmenu;
+    private char[] shortcuts;
+    private QuickChatMenu[] submenus;
+    private int contentWidth;
 
     public static void k(int param0) {
         field_Nb = null;
         field_Lb = null;
         if (param0 != 85) {
-          mq.k(22);
+          QuickChatMenu.k(22);
         }
         field_Mb = null;
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void layoutMenu(int padding, int iconTextGap, int bottomY, int x, int animationAnchorY, int obfuscationGuard) {
         int var7;
         int var8;
         int var9;
         int var7Lifetime1;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.field_Qb = this.field_Jb + 2 * param0;
-        this.a(this.field_Sb, param5 ^ 18789, this.field_Qb, -this.field_Sb + param2, param3);
-        if (this.field_Zb != param4) {
-          this.field_Zb = param4;
-          this.c(this.field_Yb, 48);
+        this.menuWidth = this.contentWidth + 2 * padding;
+        this.setBounds(this.menuHeight, obfuscationGuard ^ 18789, this.menuWidth, -this.menuHeight + bottomY, x);
+        if (this.animationAnchorY != animationAnchorY) {
+          this.animationAnchorY = animationAnchorY;
+          this.setCollapseTicks(this.collapseTicks, 48);
         }
-        for (var7 = 0; var7 < this.field_Tb; var7++) {
-          this.field_Vb[var7].a(this.field_Ib, param0, -30061, this.field_Qb, this.field_Vb[var7].field_ab, 0, param1);
+        for (var7 = 0; var7 < this.itemCount; var7++) {
+          this.items[var7].setLayout(this.rowHeight, padding, -30061, this.menuWidth, this.items[var7].y, 0, iconTextGap);
         }
-        if (param5 != -6519) {
-          this.field_Jb = 23;
+        if (obfuscationGuard != -6519) {
+          this.contentWidth = 23;
         }
-        if (this.field_Pb != -1 &&
-          this.field_Rb[this.field_Pb] != null) {
-          var7Lifetime1 = this.field_Rb[this.field_Pb].field_Tb;
-          for (var8 = this.field_Ib * (var7Lifetime1 + this.field_Pb) + this.field_ab; param2 < var8; var8 = var8 - this.field_Ib) {
+        if (this.openItemIndex != -1 &&
+          this.submenus[this.openItemIndex] != null) {
+          var7Lifetime1 = this.submenus[this.openItemIndex].itemCount;
+          for (var8 = this.rowHeight * (var7Lifetime1 + this.openItemIndex) + this.y; bottomY < var8; var8 = var8 - this.rowHeight) {
           }
-          this.field_Rb[this.field_Pb].b(param0, param1, var8, this.field_Qb + param3, this.field_Vb[this.field_Pb].field_D, -6519);
+          this.submenus[this.openItemIndex].layoutMenu(padding, iconTextGap, var8, this.menuWidth + x, this.items[this.openItemIndex].screenY, -6519);
         }
     }
 
-    final boolean d(byte param0) {
-        nf var5 = null;
+    final boolean hasPressedItem(byte obfuscationGuard) {
+        IconTextComponent var5 = null;
         int var4 = 0;
         int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var2 = 0;
-        nf[] var3 = this.field_Vb;
+        IconTextComponent[] var3 = this.items;
         int var4Lifetime1;
         for (var4 = 0; var3.length > var4; var4++) {
           var5 = var3[var4];
-          var2 = var2 | (var5.field_yb != 0 ? 1 : 0);
+          var2 = var2 | (var5.pressedButton != 0 ? 1 : 0);
         }
-        var4Lifetime1 = 98 % ((-22 - param0) / 32);
-        if (var2 == 0 && this.field_Pb != -1 &&
-          null != this.field_Rb[this.field_Pb]) {
-          var2 = this.field_Rb[this.field_Pb].d((byte) -58) ? 1 : 0;
+        var4Lifetime1 = 98 % ((-22 - obfuscationGuard) / 32);
+        if (var2 == 0 && this.openItemIndex != -1 &&
+          null != this.submenus[this.openItemIndex]) {
+          var2 = this.submenus[this.openItemIndex].hasPressedItem((byte) -58) ? 1 : 0;
         }
         return var2 != 0;
     }
 
-    final boolean a(boolean param0, int param1, int param2) {
+    final boolean handleKeyboard(boolean obfuscationGuard, int selectionContext, int messageContext) {
         int var6 = 0;
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var4 = 85 == rs.field_q ? 1 : 0;
-        if (this.field_Ob != null) {
+        if (this.activeSubmenu != null) {
           if (var4 != 0 &&
-            -1 == this.field_Ob.field_Pb) {
-            this.f((byte) -106);
-            this.c(0, -125);
+            -1 == this.activeSubmenu.openItemIndex) {
+            this.resetSelection((byte) -106);
+            this.setCollapseTicks(0, -125);
             return true;
           }
-          return this.field_Ob.a(false, param1, param2);
+          return this.activeSubmenu.handleKeyboard(false, selectionContext, messageContext);
         }
-        if (null == this.field_Ob && this == qd.field_I &&
+        if (null == this.activeSubmenu && this == qd.field_I &&
           var4 != 0) {
           e.a((byte) -101);
           return true;
         }
         int var5 = DualNodeDeque.field_i;
-        if (param0) {
-          this.a(-72, (byte) -60, -60);
+        if (obfuscationGuard) {
+          this.advanceMenu(-72, (byte) -60, -60);
         }
         if (var5 > 0) {
           if (var5 == et.field_a) {
             var5 = 63;
           }
-          for (var6 = 0; this.field_Kb.length > var6; var6++) {
-            if (var5 == this.field_Kb[var6]) {
-              this.a(param2, 23312, var6, param1);
+          for (var6 = 0; this.shortcuts.length > var6; var6++) {
+            if (var5 == this.shortcuts[var6]) {
+              this.activateItem(messageContext, 23312, var6, selectionContext);
               return true;
             }
           }
@@ -112,64 +112,64 @@ final class mq extends je {
         return false;
     }
 
-    final void f(byte param0) {
+    final void resetSelection(byte obfuscationGuard) {
         int var3 = 0;
-        nf var4 = null;
+        IconTextComponent var4 = null;
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        nf[] var6 = this.field_Vb;
-        nf[] var2 = var6;
-        if (param0 != -106) {
-          this.a(true, -115, -112);
+        IconTextComponent[] var6 = this.items;
+        IconTextComponent[] var2 = var6;
+        if (obfuscationGuard != -106) {
+          this.handleKeyboard(true, -115, -112);
         }
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
-          var4.field_yb = 0;
-          var4.field_rb = false;
+          var4.pressedButton = 0;
+          var4.selected = false;
         }
-        if (this.field_Ob != null) {
-          this.field_Ob.f((byte) -106);
-          this.field_Ob.unlink(param0 ^ 25);
+        if (this.activeSubmenu != null) {
+          this.activeSubmenu.resetSelection((byte) -106);
+          this.activeSubmenu.unlink(obfuscationGuard ^ 25);
         }
-        this.field_Pb = -1;
-        this.field_Ob = null;
-        this.c(12, -127);
+        this.openItemIndex = -1;
+        this.activeSubmenu = null;
+        this.setCollapseTicks(12, -127);
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void activateItem(int messageContext, int obfuscationGuard, int itemIndex, int selectionContext) {
         int var5 = 0;
         int var6 = 0;
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param1 != 23312) {
-          this.a(-87, (byte) 117, -22);
+        if (obfuscationGuard != 23312) {
+          this.advanceMenu(-87, (byte) 117, -22);
         }
-        if (param2 == this.field_Pb) {
-          this.f((byte) -106);
-          this.c(0, -123);
+        if (itemIndex == this.openItemIndex) {
+          this.resetSelection((byte) -106);
+          this.setCollapseTicks(0, -123);
         } else {
-          if (null != this.field_Rb[param2]) {
-            this.f((byte) -106);
-            this.c(0, -124);
-            this.field_Pb = param2;
-            this.field_Ob = this.field_Rb[this.field_Pb];
-            lw.a((byte) 79, this.field_Ob);
-            this.field_Ob.c(12, 42);
+          if (null != this.submenus[itemIndex]) {
+            this.resetSelection((byte) -106);
+            this.setCollapseTicks(0, -124);
+            this.openItemIndex = itemIndex;
+            this.activeSubmenu = this.submenus[this.openItemIndex];
+            lw.a((byte) 79, this.activeSubmenu);
+            this.activeSubmenu.setCollapseTicks(12, 42);
           } else {
-            if (this.field_Ub[param2] == -1) {
+            if (this.phraseIds[itemIndex] == -1) {
               gn.d(5);
               e.a((byte) -115);
             } else {
-              var5 = 32768 | this.field_Ub[param2];
+              var5 = 32768 | this.phraseIds[itemIndex];
               var6 = rs.field_t;
               if (var6 == 0 &&
                 null != vu.field_M) {
                 var6 = 1;
               }
               if (kp.a(var6, 114) == 2) {
-                ud.b(1, false, var6, param3);
+                ud.b(1, false, var6, selectionContext);
               }
               String var8 = (String) null;
-              it.a(var5, -91, rs.field_t, qd.field_G, param0, (String) null);
-              jh.a(qd.field_G, dj.field_e, var5, rs.field_t, param1 ^ 4124);
+              it.a(var5, -91, rs.field_t, qd.field_G, messageContext, (String) null);
+              jh.a(qd.field_G, dj.field_e, var5, rs.field_t, obfuscationGuard ^ 4124);
               e.a((byte) -126);
               wf.g(-20873);
             }
@@ -248,7 +248,7 @@ final class mq extends je {
         return;
     }
 
-    final static void a(je param0, int param1, boolean param2) {
+    final static void a(ClientUiComponent param0, int param1, boolean param2) {
         tg var8 = null;
         RgbSprite var10 = null;
         String var9 = null;
@@ -353,71 +353,71 @@ final class mq extends je {
             var32.field_i.a(false, var33, 13, var34);
           }
           var35 = tn.field_Z;
-          var4 = param0.field_V;
-          var5 = param0.field_D;
-          var6 = param0.field_gb;
-          var7 = param0.field_ob;
+          var4 = param0.screenX;
+          var5 = param0.screenY;
+          var6 = param0.width;
+          var7 = param0.height;
           var35.field_i.a(var7, var5, var6, (byte) -118, var4);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mq.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final int e(byte param0) {
-        int var2 = 6 / ((-76 - param0) / 46);
-        return this.field_Qb + (this.field_Ob == null ? 0 : this.field_Ob.e((byte) -124));
+    final int getOpenMenuWidth(byte obfuscationGuard) {
+        int var2 = 6 / ((-76 - obfuscationGuard) / 46);
+        return this.menuWidth + (this.activeSubmenu == null ? 0 : this.activeSubmenu.getOpenMenuWidth((byte) -124));
     }
 
-    private final void c(int param0, int param1) {
-        int var6 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        int var3 = 61 % ((-72 - param1) / 51);
-        this.field_Yb = param0;
-        for (var6 = 0; var6 < this.field_Tb; var6++) {
-          var4 = this.field_Ib * var6;
-          var5 = this.field_Yb * this.field_Yb;
-          this.field_Vb[var6].field_ab = ((-var5 + 144) * var4 + (this.field_Zb - this.field_D) * var5) / 144;
+    private final void setCollapseTicks(int ticks, int obfuscationGuard) {
+        int itemIndex = 0;
+        int expandedY = 0;
+        int ticksSquared = 0;
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int guardRemainder = 61 % ((-72 - obfuscationGuard) / 51);
+        this.collapseTicks = ticks;
+        for (itemIndex = 0; itemIndex < this.itemCount; itemIndex++) {
+          expandedY = this.rowHeight * itemIndex;
+          ticksSquared = this.collapseTicks * this.collapseTicks;
+          this.items[itemIndex].y = ((-ticksSquared + 144) * expandedY + (this.animationAnchorY - this.screenY) * ticksSquared) / 144;
         }
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void advanceMenu(int selectionContext, byte obfuscationGuard, int messageContext) {
         int var4_int = 0;
-        nf var5;
+        IconTextComponent var5;
         int var6;
-        nf stackIn_9_0 = null;
+        IconTextComponent stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
-        mq var4;
-        mq var7;
+        QuickChatMenu var4;
+        QuickChatMenu var7;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param1 != -42) {
+        if (obfuscationGuard != -42) {
           return;
         }
-        for (var4_int = 0; var4_int < this.field_Vb.length; var4_int++) {
-          var5 = this.field_Vb[var4_int];
-          if (var5.field_yb == 1) {
-            this.a(param2, 23312, var4_int, param0);
+        for (var4_int = 0; var4_int < this.items.length; var4_int++) {
+          var5 = this.items[var4_int];
+          if (var5.pressedButton == 1) {
+            this.activateItem(messageContext, 23312, var4_int, selectionContext);
             stackIn_9_0 = var5;
-            stackIn_10_1 = (this.field_Pb == var4_int);
-            stackIn_9_0.field_rb = stackIn_10_1;
+            stackIn_10_1 = (this.openItemIndex == var4_int);
+            stackIn_9_0.selected = stackIn_10_1;
           }
         }
-        if (this.field_Pb != -1) {
-          var7 = this.field_Rb[this.field_Pb];
+        if (this.openItemIndex != -1) {
+          var7 = this.submenus[this.openItemIndex];
           var4 = var7;
           if (var4 != null) {
-            var7.a(param0, (byte) -42, param2);
+            var7.advanceMenu(selectionContext, (byte) -42, messageContext);
           }
         }
-        if (0 < this.field_Yb) {
-          this.c(this.field_Yb - 1, -126);
+        if (0 < this.collapseTicks) {
+          this.setCollapseTicks(this.collapseTicks - 1, -126);
         }
     }
 
-    mq(long param0, je param1, je param2, je param3, mq[] param4, int[] param5, String[] param6, char[] param7) {
-        super(param0, param1);
-        int var13 = 0;
+    QuickChatMenu(long key, ClientUiComponent style, ClientUiComponent itemStyle, ClientUiComponent textStyle, QuickChatMenu[] submenus, int[] phraseIds, String[] labels, char[] shortcuts) {
+        super(key, style);
+        int itemIndex = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -435,87 +435,87 @@ final class mq extends je {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
-        String var11 = null;
-        String var12 = null;
-        Object var14 = null;
-        int var15 = 0;
-        BitmapFont var17 = null;
-        BitmapFont var18 = null;
-        this.field_Pb = -1;
+        String shortcutPrefix = null;
+        String shortcutSuffix = null;
+        Object arrow = null;
+        int labelWidth = 0;
+        BitmapFont measurementFont = null;
+        BitmapFont rowFont = null;
+        this.openItemIndex = -1;
         try {
-          this.field_Ub = param5;
-          this.field_Rb = param4;
-          this.field_Kb = param7;
-          this.field_Tb = this.field_Ub.length;
-          var17 = param3.field_Z;
-          var18 = var17;
-          this.field_Ib = var18.field_L + var18.field_H + 2;
-          this.field_Sb = this.field_Ib * this.field_Tb;
-          this.field_Jb = 0;
-          this.field_Vb = new nf[this.field_Tb];
-          var11 = "<col=999999>";
-          var12 = "</col>";
-          for (var13 = 0; this.field_Tb > var13; var13++) {
-            if (this.field_Kb[var13] > 0) {
-              param6[var13] = var11 + db.a(true, this.field_Kb[var13]).toUpperCase() + ": " + var12 + param6[var13];
+          this.phraseIds = phraseIds;
+          this.submenus = submenus;
+          this.shortcuts = shortcuts;
+          this.itemCount = this.phraseIds.length;
+          measurementFont = textStyle.font;
+          rowFont = measurementFont;
+          this.rowHeight = rowFont.field_L + rowFont.field_H + 2;
+          this.menuHeight = this.rowHeight * this.itemCount;
+          this.contentWidth = 0;
+          this.items = new IconTextComponent[this.itemCount];
+          shortcutPrefix = "<col=999999>";
+          shortcutSuffix = "</col>";
+          for (itemIndex = 0; this.itemCount > itemIndex; itemIndex++) {
+            if (this.shortcuts[itemIndex] > 0) {
+              labels[itemIndex] = shortcutPrefix + db.a(true, this.shortcuts[itemIndex]).toUpperCase() + ": " + shortcutSuffix + labels[itemIndex];
             }
-            var14 = null;
-            if (this.field_Rb[var13] != null ||
-              this.field_Ub[var13] == -1) {
-              var14 = s.field_c;
+            arrow = null;
+            if (this.submenus[itemIndex] != null ||
+              this.phraseIds[itemIndex] == -1) {
+              arrow = s.quickChatArrow;
             }
-            this.field_Vb[var13] = new nf(0L, param2, (je) null, param3, (RgbSprite) (var14), param6[var13]);
-            this.a(this.field_Vb[var13], 55);
-            var15 = var17.a(param6[var13]);
-            if (this.field_Jb < var15) {
-              this.field_Jb = var15;
+            this.items[itemIndex] = new IconTextComponent(0L, itemStyle, (ClientUiComponent) null, textStyle, (RgbSprite) (arrow), labels[itemIndex]);
+            this.addChild(this.items[itemIndex], 55);
+            labelWidth = measurementFont.a(labels[itemIndex]);
+            if (this.contentWidth < labelWidth) {
+              this.contentWidth = labelWidth;
             }
           }
-          this.field_Jb = this.field_Jb + (10 + s.field_c.canvasWidth);
-          this.c(12, -8);
+          this.contentWidth = this.contentWidth + (10 + s.quickChatArrow.canvasWidth);
+          this.setCollapseTicks(12, -8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
           stackIn_15_0 = var10;
-          stackIn_15_1 = new StringBuilder().append("mq.<init>(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("mq.<init>(").append(key).append(',');
+          if (style == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
           stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-          if (param2 == null) {
+          if (itemStyle == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
           stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
-          if (param3 == null) {
+          if (textStyle == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
           stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',');
-          if (param4 == null) {
+          if (submenus == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
           stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',');
-          if (param5 == null) {
+          if (phraseIds == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";
           }
           stackIn_30_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',');
-          if (param6 == null) {
+          if (labels == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
           stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',');
-          if (param7 == null) {
+          if (shortcuts == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";

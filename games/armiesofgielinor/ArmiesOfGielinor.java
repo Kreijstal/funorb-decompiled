@@ -266,7 +266,7 @@ public final class ArmiesOfGielinor extends wf {
                 if (nm.deliveredOpcode == 75) {
                   var2 = ByteStorage.incomingPacket;
                   EffectPresentation.readCoatOfArms(ah.localCoat.parts, (PacketBuffer) (var2), false, ah.localCoat.colourIndices);
-                  im.field_w = true;
+                  ClientUiNode.field_w = true;
                   continue;
                 }
                 if (81 == nm.deliveredOpcode) {
@@ -932,7 +932,7 @@ public final class ArmiesOfGielinor extends wf {
                     ut.i((byte) 125);
                   }
                 }
-                pg.field_f = mq.field_Wb;
+                pg.field_f = QuickChatMenu.field_Wb;
               }
             }
           }
@@ -1210,7 +1210,7 @@ public final class ArmiesOfGielinor extends wf {
           os.f(1048575);
           dj.b((byte) 116);
           it.a(param0 + 76);
-          je.h(-117);
+          ClientUiComponent.h(-117);
           au.e((byte) -58);
           tp.a(-116);
           of.e((byte) 20);
@@ -1300,11 +1300,11 @@ public final class ArmiesOfGielinor extends wf {
           vv.b((byte) 82);
           bu.a(-128);
           mh.a((byte) -119);
-          nf.k(param0 ^ -72);
+          IconTextComponent.k(param0 ^ -72);
           dn.k(0);
           fp.k(21755);
           ll.k(-1);
-          im.g(31343);
+          ClientUiNode.g(31343);
           np.e((byte) 5);
           mp.l(-8291);
           tg.a(-97);
@@ -1429,7 +1429,7 @@ public final class ArmiesOfGielinor extends wf {
           lp.a(param0 ^ -13095008);
           cu.a((byte) -121);
           e.b((byte) -13);
-          mq.k(85);
+          QuickChatMenu.k(85);
           QuickChatCategoryRepository.a(40);
           QuickChatPhraseRepository.a((byte) -110);
           QuickChatCategory.h(-97);
@@ -1975,24 +1975,24 @@ public final class ArmiesOfGielinor extends wf {
                                                 bn.a((byte) -24, 70.0f, ph.field_a);
                                                 this.a(0);
                                                 jl.field_d = new p(br.field_d, SpellConfirmationDialog.field_f);
-                                                im.field_v[0] = jl.field_d.a("sword_slash_4", (byte) -97, "");
-                                                im.field_v[1] = jl.field_d.a("runewars_menu_mouseover", (byte) -97, "");
-                                                im.field_v[2] = jl.field_d.a("runewars_select_menu_item", (byte) -97, "");
-                                                im.field_v[3] = jl.field_d.a("runewars_select_unit", (byte) -97, "");
-                                                im.field_v[4] = jl.field_d.a("runewars_select_position", (byte) -97, "");
-                                                im.field_v[5] = jl.field_d.a("runewars_errorsound", (byte) -97, "");
-                                                im.field_v[6] = jl.field_d.a("runewars_teleport_all", (byte) -97, "");
-                                                im.field_v[8] = jl.field_d.a((byte) -128, "", "runewars_capture_fanfare");
-                                                im.field_v[9] = jl.field_d.a("runewars_select_flag", (byte) -97, "");
-                                                im.field_v[10] = jl.field_d.a("runewars_paint_flag", (byte) -97, "");
-                                                im.field_v[11] = jl.field_d.a("runewars_swap_spellbook", (byte) -97, "");
-                                                im.field_v[12] = jl.field_d.a("runewars_select_spell", (byte) -97, "");
-                                                im.field_v[13] = jl.field_d.a("runewars_transition", (byte) -97, "");
-                                                im.field_v[14] = jl.field_d.a("runewars_purchase_unit", (byte) -97, "");
-                                                im.field_v[15] = jl.field_d.a("runewars_choose_alignment", (byte) -97, "");
-                                                im.field_v[16] = jl.field_d.a("runewars_clock_tick", (byte) -97, "");
-                                                im.field_v[17] = jl.field_d.a("runewars_time_over_dong", (byte) -97, "");
-                                                im.field_v[18] = jl.field_d.a("runewars_turnover_page_map", (byte) -97, "");
+                                                ClientUiNode.field_v[0] = jl.field_d.a("sword_slash_4", (byte) -97, "");
+                                                ClientUiNode.field_v[1] = jl.field_d.a("runewars_menu_mouseover", (byte) -97, "");
+                                                ClientUiNode.field_v[2] = jl.field_d.a("runewars_select_menu_item", (byte) -97, "");
+                                                ClientUiNode.field_v[3] = jl.field_d.a("runewars_select_unit", (byte) -97, "");
+                                                ClientUiNode.field_v[4] = jl.field_d.a("runewars_select_position", (byte) -97, "");
+                                                ClientUiNode.field_v[5] = jl.field_d.a("runewars_errorsound", (byte) -97, "");
+                                                ClientUiNode.field_v[6] = jl.field_d.a("runewars_teleport_all", (byte) -97, "");
+                                                ClientUiNode.field_v[8] = jl.field_d.a((byte) -128, "", "runewars_capture_fanfare");
+                                                ClientUiNode.field_v[9] = jl.field_d.a("runewars_select_flag", (byte) -97, "");
+                                                ClientUiNode.field_v[10] = jl.field_d.a("runewars_paint_flag", (byte) -97, "");
+                                                ClientUiNode.field_v[11] = jl.field_d.a("runewars_swap_spellbook", (byte) -97, "");
+                                                ClientUiNode.field_v[12] = jl.field_d.a("runewars_select_spell", (byte) -97, "");
+                                                ClientUiNode.field_v[13] = jl.field_d.a("runewars_transition", (byte) -97, "");
+                                                ClientUiNode.field_v[14] = jl.field_d.a("runewars_purchase_unit", (byte) -97, "");
+                                                ClientUiNode.field_v[15] = jl.field_d.a("runewars_choose_alignment", (byte) -97, "");
+                                                ClientUiNode.field_v[16] = jl.field_d.a("runewars_clock_tick", (byte) -97, "");
+                                                ClientUiNode.field_v[17] = jl.field_d.a("runewars_time_over_dong", (byte) -97, "");
+                                                ClientUiNode.field_v[18] = jl.field_d.a("runewars_turnover_page_map", (byte) -97, "");
                                                 var5_array2 = UnitLossCondition.field_d;
                                                 var6_int = 0;
                                                 do {
@@ -2386,7 +2386,7 @@ public final class ArmiesOfGielinor extends wf {
           CombatEvent.field_I.b(param1, param0 ^ 20);
           var2 = BestScoreStrategy.field_i;
           if (null != var2) {
-            var2.a(CombatEvent.field_I.field_V, -125, CombatEvent.field_I.field_D);
+            var2.a(CombatEvent.field_I.screenX, -125, CombatEvent.field_I.screenY);
           }
           if (param0 != 0) {
             field_H = (String) null;

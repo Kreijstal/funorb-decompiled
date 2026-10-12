@@ -9,7 +9,7 @@ final class VineGrowthAction extends PreparedAction {
     private int tileX;
     static String field_v;
     private int originY;
-    static je field_x;
+    static ClientUiComponent field_x;
     private int strength;
 
     final void applyToBattlefield(int obfuscationGuard, Battlefield battlefield) {

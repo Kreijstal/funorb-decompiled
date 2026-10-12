@@ -4,7 +4,7 @@
 final class uc {
     static int[][] spellDefinitions;
     static boolean field_a;
-    static je field_b;
+    static ClientUiComponent field_b;
     static String field_c;
 
     public static void a(byte param0) {
@@ -12,7 +12,7 @@ final class uc {
         field_b = null;
         spellDefinitions = (int[][]) null;
         if (param0 != -39) {
-          field_b = (je) null;
+          field_b = (ClientUiComponent) null;
         }
     }
 
@@ -26,7 +26,7 @@ final class uc {
     final static void a(dq param0, int param1) {
         try {
           if (param1 != 4) {
-            field_b = (je) null;
+            field_b = (ClientUiComponent) null;
           }
           ds.field_c = param0;
         } catch (RuntimeException runtimeException) {

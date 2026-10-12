@@ -11,7 +11,7 @@ final class bw {
     static int[] field_f;
     private long[] field_j;
     private long[] field_a;
-    static je field_h;
+    static ClientUiComponent field_h;
     static boolean field_g;
     private long[] field_e;
     private byte[] field_i;

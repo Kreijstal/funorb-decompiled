@@ -4,7 +4,7 @@
 final class rn {
     static gu field_e;
     static int field_d;
-    static je field_a;
+    static ClientUiComponent field_a;
     static int field_c;
     static String field_b;
 

@@ -5,12 +5,12 @@ final class wn extends ih {
     private boolean field_cb;
     private int[] field_fb;
     private int field_ib;
-    static je field_kb;
+    static ClientUiComponent field_kb;
     static String field_db;
     static String field_gb;
     private int[] field_S;
     static String[] field_eb;
-    static mq field_jb;
+    static QuickChatMenu field_jb;
     private vk field_hb;
     static String field_bb;
 
@@ -231,7 +231,7 @@ final class wn extends ih {
         try {
           this.field_hb = param1;
           if (param2 != -20751) {
-            field_kb = (je) null;
+            field_kb = (ClientUiComponent) null;
           }
           for (var4_int = 0; 16 > var4_int; var4_int++) {
             this.c(param0, var4_int, -128, this.field_hb.field_a[var4_int]);
@@ -298,7 +298,7 @@ final class wn extends ih {
           NetworkResourceRequest.b(te.field_n - var1, 108);
         }
         if (!param0) {
-          field_jb = (mq) null;
+          field_jb = (QuickChatMenu) null;
         }
     }
 

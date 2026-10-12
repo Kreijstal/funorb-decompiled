@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hl extends je {
+final class hl extends ClientUiComponent {
     static String field_Lb;
     String field_Pb;
-    je field_Kb;
-    je field_Qb;
-    je field_Jb;
+    ClientUiComponent field_Kb;
+    ClientUiComponent field_Qb;
+    ClientUiComponent field_Jb;
     int field_Ob;
     String field_Mb;
     String field_Nb;
     String field_Ib;
 
     hl() {
-        super(0L, (je) null);
+        super(0L, (ClientUiComponent) null);
     }
 
     final static RgbSprite a(boolean param0, int param1, int param2) {

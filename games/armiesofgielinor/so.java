@@ -5,7 +5,7 @@ final class so {
     static gu field_e;
     static String[] field_a;
     static String[] field_c;
-    static je field_d;
+    static ClientUiComponent field_d;
     static bi field_b;
 
     public static void b(int param0) {
@@ -17,7 +17,7 @@ final class so {
           field_e = null;
           return;
         }
-        field_d = (je) null;
+        field_d = (ClientUiComponent) null;
         field_c = null;
         field_b = null;
         field_d = null;

@@ -24,18 +24,18 @@ final class DeployEvent extends GameEvent {
     }
 
     final static void h(int param0) {
-        GlobalSpell.field_f = new je(0L, (je) null);
+        GlobalSpell.field_f = new ClientUiComponent(0L, (ClientUiComponent) null);
         if (fh.field_c) {
-          GlobalSpell.field_f.a(t.field_g, 84);
+          GlobalSpell.field_f.addChild(t.field_g, 84);
         }
-        GlobalSpell.field_f.a(nf.field_Kb, 104);
+        GlobalSpell.field_f.addChild(IconTextComponent.field_Kb, 104);
         SpellCastEvent.field_E = new ea(ClientConnectionState.field_c, GlobalSpell.field_f);
         if (param0 != 14570) {
           return;
         }
-        no.field_T = new je(0L, (je) null);
-        no.field_T.a(SpellCastEvent.field_E.field_a, 127);
-        no.field_T.a(cp.field_d, 39);
+        no.field_T = new ClientUiComponent(0L, (ClientUiComponent) null);
+        no.field_T.addChild(SpellCastEvent.field_E.field_a, 127);
+        no.field_T.addChild(cp.field_d, 39);
         ak.b(false);
     }
 
@@ -166,7 +166,7 @@ final class DeployEvent extends GameEvent {
         int stackIn_5_2;
         int stackIn_5_3;
         boolean stackIn_6_4 = false;
-        je stackIn_21_0 = null;
+        ClientUiComponent stackIn_21_0 = null;
         String stackIn_22_1 = null;
         int stackIn_25_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -197,40 +197,40 @@ final class DeployEvent extends GameEvent {
           stackIn_5_3 = jn.field_d + 2;
           stackIn_6_4 = (PointerInputHandler.field_b == TaggedMapData.field_g.field_Kb);
           var3_int = ((dn) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, 0, 2) ? 1 : 0;
-          var4 = TaggedMapData.field_g.field_Nb.field_fb;
+          var4 = TaggedMapData.field_g.field_Nb.children;
           if (th.field_a != 2 &&
             th.field_a != 1) {
-            TaggedMapData.field_g.field_Kb.field_Nb.field_X = ef.field_a;
-            TaggedMapData.field_g.field_xb = false;
+            TaggedMapData.field_g.field_Kb.field_Nb.text = ef.field_a;
+            TaggedMapData.field_g.inputEnabled = false;
             ArchiveIndex.a(TaggedMapData.field_g.field_Nb, -71);
             return;
           }
-          TaggedMapData.field_g.field_Kb.field_Nb.field_X = null;
-          TaggedMapData.field_g.field_xb = true;
+          TaggedMapData.field_g.field_Kb.field_Nb.text = null;
+          TaggedMapData.field_g.inputEnabled = true;
           var5 = null;
           var6 = (hl) (var4.first((byte) 110));
           while (var6 != null) {
             var7 = 0;
-            if (var6.field_fb == null) {
-              var6.field_Qb = new je(0L, IsaacRandom.field_i);
-              var6.a(var6.field_Qb, 114);
-              var6.field_Jb = new je(0L, IsaacRandom.field_i);
-              var6.a(var6.field_Jb, 113);
-              var6.i(-10027);
+            if (var6.children == null) {
+              var6.field_Qb = new ClientUiComponent(0L, IsaacRandom.field_i);
+              var6.addChild(var6.field_Qb, 114);
+              var6.field_Jb = new ClientUiComponent(0L, IsaacRandom.field_i);
+              var6.addChild(var6.field_Jb, 113);
+              var6.useParentClipForDescendants(-10027);
               var7 = 1;
             }
-            var6.field_gb = TaggedMapData.field_g.field_Nb.field_gb;
-            var6.field_Qb.a(jn.field_d, -20500, var6.field_gb, 0, 0);
+            var6.width = TaggedMapData.field_g.field_Nb.width;
+            var6.field_Qb.setBounds(jn.field_d, -20500, var6.width, 0, 0);
             var8 = 0;
             if (null != var6.field_Nb &&
               !var6.field_Nb.equals("")) {
-              var6.field_Jb.field_cb = NodeHashIterator.field_e;
+              var6.field_Jb.sprite = NodeHashIterator.field_e;
               var6.field_Jb.field_W = 16737894;
-              var6.field_Jb.a(jn.field_d, -20500, NodeHashIterator.field_e.canvasWidth + 3, 0, 0);
+              var6.field_Jb.setBounds(jn.field_d, -20500, NodeHashIterator.field_e.canvasWidth + 3, 0, 0);
               var8 = 1;
             }
             var9 = 0;
-            var10 = var6.field_gb;
+            var10 = var6.width;
             if (var8 != 0) {
               var9 = 3 + NodeHashIterator.field_e.canvasWidth;
               var10 = var10 - var9;
@@ -239,28 +239,28 @@ final class DeployEvent extends GameEvent {
             if (var10 <= 0) {
               stackIn_22_1 = var6.field_Mb;
             } else {
-              stackIn_22_1 = BitmapFont.a(var6.field_Qb.field_Z, var6.field_Mb, var10);
+              stackIn_22_1 = BitmapFont.a(var6.field_Qb.font, var6.field_Mb, var10);
             }
-            stackIn_21_0.field_X = stackIn_22_1;
-            stackIn_25_0 = (var6.field_Qb.field_X.equals(var6.field_Mb)) ? 0 : 1;
+            stackIn_21_0.text = stackIn_22_1;
+            stackIn_25_0 = (var6.field_Qb.text.equals(var6.field_Mb)) ? 0 : 1;
             var11 = stackIn_25_0;
-            var6.field_Qb.a(jn.field_d, -20500, var10, 0, var9);
+            var6.field_Qb.setBounds(jn.field_d, -20500, var10, 0, var9);
             if (var3_int == 0) {
-              var6.field_nb = -var6.field_ob + jn.field_d;
+              var6.pendingHeightDelta = -var6.height + jn.field_d;
             }
             if (var7 != 0) {
-              TaggedMapData.field_g.field_Nb.a(var6, true, 2, (je) (var5));
+              TaggedMapData.field_g.field_Nb.a(var6, true, 2, (ClientUiComponent) (var5));
             }
             if (var6.field_Jb != null &&
-              var6.field_Jb.field_eb) {
+              var6.field_Jb.heldButtonMatches) {
               ad.field_I = var6.field_Nb;
             } else {
-              if (var6.field_Qb.field_eb &&
+              if (var6.field_Qb.heldButtonMatches &&
                 var11 != 0) {
                 ad.field_I = var6.field_Mb;
               }
             }
-            if (0 != var6.field_yb) {
+            if (0 != var6.pressedButton) {
               ng.a(TaggedMapData.field_g.field_Kb, var6, (int[]) null, var6.field_Mb, -1, -110, -1, var6.field_Pb, 0L);
               var16 = tn.field_Z;
               var13_ref_String = ArchiveIndex.field_u;
@@ -273,14 +273,14 @@ final class DeployEvent extends GameEvent {
             var5 = var6;
             var6 = (hl) (var4.next((byte) 123));
           }
-          if (0 != TaggedMapData.field_g.field_Ib.field_yb) {
-            EffectPresentation.field_e = new oc(TaggedMapData.field_g.field_Ib.field_V, TaggedMapData.field_g.field_Ib.field_D, TaggedMapData.field_g.field_Ib.field_gb, TaggedMapData.field_g.field_Ib.field_ob, iw.field_o, kq.field_N, eq.field_h, eq.field_h);
+          if (0 != TaggedMapData.field_g.field_Ib.pressedButton) {
+            EffectPresentation.field_e = new oc(TaggedMapData.field_g.field_Ib.screenX, TaggedMapData.field_g.field_Ib.screenY, TaggedMapData.field_g.field_Ib.width, TaggedMapData.field_g.field_Ib.height, iw.field_o, kq.field_N, eq.field_h, eq.field_h);
             ut.field_fb = 2;
           }
-          if (TaggedMapData.field_g.field_Rb.field_yb == 0) {
+          if (TaggedMapData.field_g.field_Rb.pressedButton == 0) {
             return;
           }
-          EffectPresentation.field_e = new oc(TaggedMapData.field_g.field_Rb.field_V, TaggedMapData.field_g.field_Rb.field_D, TaggedMapData.field_g.field_Rb.field_gb, TaggedMapData.field_g.field_Rb.field_ob, lw.field_kb, kq.field_N, eq.field_h, eq.field_h);
+          EffectPresentation.field_e = new oc(TaggedMapData.field_g.field_Rb.screenX, TaggedMapData.field_g.field_Rb.screenY, TaggedMapData.field_g.field_Rb.width, TaggedMapData.field_g.field_Rb.height, lw.field_kb, kq.field_N, eq.field_h, eq.field_h);
           ut.field_fb = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

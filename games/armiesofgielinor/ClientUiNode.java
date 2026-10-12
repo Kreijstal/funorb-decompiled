@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class im extends DualLinkedNode {
+class ClientUiNode extends DualLinkedNode {
     private static int[] field_u;
     static sn[] field_v;
-    static je field_x;
+    static ClientUiComponent field_x;
     static RgbSprite field_y;
     static boolean field_w;
 
@@ -19,7 +19,7 @@ class im extends DualLinkedNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 19) {
-            im.b(49, 30);
+            ClientUiNode.b(49, 30);
           }
           var2_int = mission.campaign.campaignIndex;
           var3 = mission.missionId;
@@ -42,7 +42,7 @@ class im extends DualLinkedNode {
     final static void b(int param0, int param1) {
         ol.field_B = (param0 & 51) >> 4;
         if (param1 != -27498) {
-          field_x = (je) null;
+          field_x = (ClientUiComponent) null;
         }
         QuickChatCategory.field_D = (param0 & 13) >> 2;
         if (2 < ol.field_B) {
@@ -67,7 +67,7 @@ class im extends DualLinkedNode {
         field_y = null;
     }
 
-    im() {
+    ClientUiNode() {
     }
 
     final static int a(int param0, byte[] param1, int param2, int param3) {

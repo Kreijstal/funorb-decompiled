@@ -212,10 +212,10 @@ final class ij extends dv {
         String var3 = null;
         try {
           int var2_int = -78 / ((param0 - 13) / 33);
-          var3 = this.field_o.field_Pb.field_X;
-          this.field_o.field_Pb.field_X = vs.field_c;
+          var3 = this.field_o.field_Pb.text;
+          this.field_o.field_Pb.text = vs.field_c;
           super.b(-100);
-          this.field_o.field_Pb.field_X = var3;
+          this.field_o.field_Pb.text = var3;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ij.M(" + param0 + ')');
         }
@@ -252,7 +252,7 @@ final class ij extends dv {
           var3 = this.field_o.o(95);
           var4 = vv.a(var13, 114);
           var5 = DualLinkedNode.a(var3, var4, -122);
-          this.field_s.field_S = 0;
+          this.field_s.x = 0;
           var6Lifetime2 = "";
           if (0 <= var5) {
             var14 = var4[var5];
@@ -260,7 +260,7 @@ final class ij extends dv {
             if (rn.field_c == var14.field_q &&
               var8_int > 0) {
               var6Lifetime2 = var14.field_o.substring(0, Math.min(var14.field_o.length(), var8_int));
-              this.field_s.field_S = this.field_t.a(var13.substring(0, var14.field_s));
+              this.field_s.x = this.field_t.a(var13.substring(0, var14.field_s));
             } else {
               var9 = var5;
               var10_int = 0;
@@ -280,7 +280,7 @@ final class ij extends dv {
               if (0 < var9 &&
                 var4[var9 - 1].field_q == rn.field_c) {
                 var6Lifetime2 = var4[-1 + var9].field_o;
-                this.field_s.field_S = this.field_t.a(var13.substring(0, var4[-1 + var9].field_s));
+                this.field_s.x = this.field_t.a(var13.substring(0, var4[-1 + var9].field_s));
               }
             }
           }
@@ -493,7 +493,7 @@ final class ij extends dv {
           ef var3 = null;
           cb var3_ref = null;
           RuntimeException var3_ref2 = null;
-          je var4 = null;
+          ClientUiComponent var4 = null;
           try {
             try {
               if (false) throw (ef) null;
@@ -512,8 +512,8 @@ final class ij extends dv {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (ef) (Object) decompiledCaughtException;
               param0 = "<col=55ff55>" + param0.substring(0, var3.field_b) + "</col>" + param0.substring(var3.field_b);
-              var4 = (je) (this.field_d.field_Jb.field_fb.last((byte) -98));
-              var4.field_X = this.field_c + param0;
+              var4 = (ClientUiComponent) (this.field_d.field_Jb.children.last((byte) -98));
+              var4.text = this.field_c + param0;
               return false;
             } catch (cb decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

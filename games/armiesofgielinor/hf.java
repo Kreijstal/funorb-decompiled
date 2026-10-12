@@ -9,7 +9,7 @@ final class hf {
     static int field_h;
     static String field_b;
     static String field_i;
-    static je field_f;
+    static ClientUiComponent field_f;
     static String[] field_d;
 
     public static void a(byte param0) {

@@ -13,7 +13,7 @@ final class PlayerProfile {
     int[] equippedSpellIds;
     static jl field_h;
     static int[] field_l;
-    static je field_f;
+    static ClientUiComponent field_f;
 
     public static void b(int param0) {
         field_f = null;
@@ -22,7 +22,7 @@ final class PlayerProfile {
         field_i = null;
         field_h = null;
         if (param0 != 0) {
-          field_f = (je) null;
+          field_f = (ClientUiComponent) null;
         }
     }
 
@@ -196,9 +196,9 @@ final class PlayerProfile {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        OwnerChangeEvent.field_E.a(param5, -20500, param6, param2, param4);
+        OwnerChangeEvent.field_E.setBounds(param5, -20500, param6, param2, param4);
         if (qd.field_I != null) {
-          qd.field_I.b(param1, param3, param5, -TelefragEvent.field_z + param1, param5, param0 ^ 6518);
+          qd.field_I.layoutMenu(param1, param3, param5, -TelefragEvent.field_z + param1, param5, param0 ^ 6518);
         }
         if (param0 != -1) {
           field_i = (String[]) null;

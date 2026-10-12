@@ -16,9 +16,9 @@ abstract class AiPlanningStrategy {
         int stackIn_4_2;
         int stackIn_4_3;
         boolean stackIn_5_4 = false;
-        je stackIn_44_0 = null;
+        ClientUiComponent stackIn_44_0 = null;
         String stackIn_45_1 = null;
-        je stackIn_48_0 = null;
+        ClientUiComponent stackIn_48_0 = null;
         String stackIn_49_1 = null;
         int stackIn_53_0 = 0;
         Object stackIn_102_0 = null;
@@ -51,30 +51,30 @@ abstract class AiPlanningStrategy {
           stackIn_4_3 = 2 + jn.field_d;
           stackIn_5_4 = (mw.field_E.field_Kb == PointerInputHandler.field_b);
           var3_int = ((dn) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, 0, 2) ? 1 : 0;
-          var4 = mw.field_E.field_Nb.field_fb;
+          var4 = mw.field_E.field_Nb.children;
           if (param0 <= 20) {
             AiPlanningStrategy.a(-8, (String[]) null, (String) null, -108);
           }
           boolean decompiledFrameRemainder1 = true;
           var5 = null;
           if (th.field_a != 2) {
-            su.field_d.field_xb = false;
-            bn.field_c.field_X = fm.field_c;
+            su.field_d.inputEnabled = false;
+            bn.field_c.text = fm.field_c;
             if (1 != th.field_a) {
-              mw.field_E.field_Kb.field_Nb.field_X = ef.field_a;
+              mw.field_E.field_Kb.field_Nb.text = ef.field_a;
               if (var19 != 0) {
-                mw.field_E.field_Kb.field_Nb.field_X = TeleportAction.field_u;
+                mw.field_E.field_Kb.field_Nb.text = TeleportAction.field_u;
               }
             } else {
-              mw.field_E.field_Kb.field_Nb.field_X = TeleportAction.field_u;
+              mw.field_E.field_Kb.field_Nb.text = TeleportAction.field_u;
             }
             ArchiveIndex.a(mw.field_E.field_Nb, -47);
             decompiledFrameRemainder1 = (var19 != 0);
           }
           if (decompiledFrameRemainder1) {
-            su.field_d.field_xb = true;
-            bn.field_c.field_X = fo.a(4800, ps.field_A, new String[]{vl.field_p});
-            mw.field_E.field_Kb.field_Nb.field_X = null;
+            su.field_d.inputEnabled = true;
+            bn.field_c.text = fo.a(4800, ps.field_A, new String[]{vl.field_p});
+            mw.field_E.field_Kb.field_Nb.text = null;
             var6 = null;
             var7 = (hl) (var4.first((byte) 109));
             while (true) {
@@ -82,18 +82,18 @@ abstract class AiPlanningStrategy {
               if (var7 != null) {
                 var8 = 0;
                 if (var19 == 0) {
-                  if (null == var7.field_fb) {
-                    var7.field_Qb = new je(0L, IsaacRandom.field_i);
-                    var7.a(var7.field_Qb, 87);
-                    var7.field_Kb = new je(0L, ws.field_P);
-                    var7.a(var7.field_Kb, 96);
-                    var7.field_Jb = new je(0L, IsaacRandom.field_i);
-                    var7.a(var7.field_Jb, 69);
-                    var7.field_Kb.field_Eb = 2;
-                    var7.i(-10027);
+                  if (null == var7.children) {
+                    var7.field_Qb = new ClientUiComponent(0L, IsaacRandom.field_i);
+                    var7.addChild(var7.field_Qb, 87);
+                    var7.field_Kb = new ClientUiComponent(0L, ws.field_P);
+                    var7.addChild(var7.field_Kb, 96);
+                    var7.field_Jb = new ClientUiComponent(0L, IsaacRandom.field_i);
+                    var7.addChild(var7.field_Jb, 69);
+                    var7.field_Kb.horizontalAlignment = 2;
+                    var7.useParentClipForDescendants(-10027);
                     var8 = 1;
                   }
-                  var7.field_gb = mw.field_E.field_Nb.field_gb;
+                  var7.width = mw.field_E.field_Nb.width;
                   var9 = 0;
                   if (null != var7.field_Ib) {
                     if (vl.field_p != var7.field_Ib) {
@@ -111,9 +111,9 @@ abstract class AiPlanningStrategy {
                   if (var7.field_Nb != null &&
                     !var7.field_Nb.equals("")) {
                     var7.field_Jb.field_W = var11;
-                    var7.field_Jb.field_cb = NodeHashIterator.field_e;
+                    var7.field_Jb.sprite = NodeHashIterator.field_e;
                     var12 = 1;
-                    var7.field_Jb.a(jn.field_d, -20500, 3 + NodeHashIterator.field_e.canvasWidth, var9, 0);
+                    var7.field_Jb.setBounds(jn.field_d, -20500, 3 + NodeHashIterator.field_e.canvasWidth, var9, 0);
                   }
                   var7.field_Kb.field_wb = var11;
                   var7.field_Qb.field_wb = var11;
@@ -124,7 +124,7 @@ abstract class AiPlanningStrategy {
                   var7.field_Kb.field_T = var11;
                   var7.field_Qb.field_T = var11;
                   var13 = 0;
-                  var14 = -82 + var7.field_gb;
+                  var14 = -82 + var7.width;
                   if (var12 != 0) {
                     var13 = NodeHashIterator.field_e.canvasWidth + 3;
                     var14 = var14 - var13;
@@ -133,33 +133,33 @@ abstract class AiPlanningStrategy {
                   if (var14 <= 0) {
                     stackIn_45_1 = var7.field_Mb;
                   } else {
-                    stackIn_45_1 = BitmapFont.a(var7.field_Qb.field_Z, var7.field_Mb, var14);
+                    stackIn_45_1 = BitmapFont.a(var7.field_Qb.font, var7.field_Mb, var14);
                   }
-                  stackIn_44_0.field_X = stackIn_45_1;
-                  var7.field_Qb.a(jn.field_d, -20500, var14, var9, var13);
+                  stackIn_44_0.text = stackIn_45_1;
+                  var7.field_Qb.setBounds(jn.field_d, -20500, var14, var9, var13);
                   stackIn_48_0 = var7.field_Kb;
                   if (null != var7.field_Ib) {
                     stackIn_49_1 = var7.field_Ib;
                   } else {
                     stackIn_49_1 = BattleTutorial.field_i;
                   }
-                  stackIn_48_0.field_X = stackIn_49_1;
-                  var7.field_Kb.a(jn.field_d, -20500, 80, var9, -80 + var7.field_gb);
-                  stackIn_53_0 = (var7.field_Qb.field_X.equals(var7.field_Mb)) ? 0 : 1;
+                  stackIn_48_0.text = stackIn_49_1;
+                  var7.field_Kb.setBounds(jn.field_d, -20500, 80, var9, -80 + var7.width);
+                  stackIn_53_0 = (var7.field_Qb.text.equals(var7.field_Mb)) ? 0 : 1;
                   var15 = stackIn_53_0;
                   var9 = var9 + jn.field_d;
                   if (var3_int == 0) {
-                    var7.field_nb = var9 - var7.field_ob;
+                    var7.pendingHeightDelta = var9 - var7.height;
                   }
                   if (var8 != 0) {
-                    mw.field_E.field_Nb.a(var7, true, 2, (je) (var6));
+                    mw.field_E.field_Nb.a(var7, true, 2, (ClientUiComponent) (var6));
                   }
                   var6 = var7;
                   if (var7.field_Jb != null &&
-                    var7.field_Jb.field_eb) {
+                    var7.field_Jb.heldButtonMatches) {
                     ad.field_I = var7.field_Nb;
-                  } else if (var7.field_yb == 0) {
-                    if (var7.field_Qb.field_eb &&
+                  } else if (var7.pressedButton == 0) {
+                    if (var7.field_Qb.heldButtonMatches &&
                       var15 != 0) {
                       ad.field_I = var7.field_Mb;
                     }
@@ -184,18 +184,18 @@ abstract class AiPlanningStrategy {
                   continue;
                 }
               } else {
-                decompiledFrameRemainder0 = (0 != mw.field_E.field_Ib.field_yb);
+                decompiledFrameRemainder0 = (0 != mw.field_E.field_Ib.pressedButton);
                 if (decompiledFrameRemainder0) {
-                  EffectPresentation.field_e = new oc(mw.field_E.field_Ib.field_V, mw.field_E.field_Ib.field_D, mw.field_E.field_Ib.field_gb, mw.field_E.field_Ib.field_ob, iv.field_a, kq.field_N, eq.field_h, eq.field_h);
+                  EffectPresentation.field_e = new oc(mw.field_E.field_Ib.screenX, mw.field_E.field_Ib.screenY, mw.field_E.field_Ib.width, mw.field_E.field_Ib.height, iv.field_a, kq.field_N, eq.field_h, eq.field_h);
                 }
               }
               if (decompiledFrameRemainder0) {
                 ut.field_fb = 0;
               }
-              if (mw.field_E.field_Rb.field_yb == 0) {
+              if (mw.field_E.field_Rb.pressedButton == 0) {
                 break;
               }
-              EffectPresentation.field_e = new oc(mw.field_E.field_Rb.field_V, mw.field_E.field_Rb.field_D, mw.field_E.field_Rb.field_gb, mw.field_E.field_Rb.field_ob, se.field_b, kq.field_N, eq.field_h, eq.field_h);
+              EffectPresentation.field_e = new oc(mw.field_E.field_Rb.screenX, mw.field_E.field_Rb.screenY, mw.field_E.field_Rb.width, mw.field_E.field_Rb.height, se.field_b, kq.field_N, eq.field_h, eq.field_h);
               ut.field_fb = 1;
               break;
             }

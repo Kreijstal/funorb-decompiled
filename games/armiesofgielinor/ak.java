@@ -354,28 +354,28 @@ final class ak extends ju {
         tq.field_c = SoftwareRaster.width;
         CachedArchiveProvider.field_p = SoftwareRaster.height;
         bh.d(false);
-        SpellCastEvent.field_E.a(-2 + no.field_T.field_ob - 40, (byte) -124, 0, no.field_T.field_gb, 0);
-        t.field_g.a(jn.field_d, -20500, GlobalSpell.field_f.field_gb, 0, 0);
+        SpellCastEvent.field_E.a(-2 + no.field_T.height - 40, (byte) -124, 0, no.field_T.width, 0);
+        t.field_g.setBounds(jn.field_d, -20500, GlobalSpell.field_f.width, 0, 0);
         int var1 = 2 + jn.field_d;
-        nf.field_Kb.a(GlobalSpell.field_f.field_ob - (!fh.field_c ? 0 : var1), -20500, GlobalSpell.field_f.field_gb, !fh.field_c ? 0 : var1, 0);
+        IconTextComponent.field_Kb.setBounds(GlobalSpell.field_f.height - (!fh.field_c ? 0 : var1), -20500, GlobalSpell.field_f.width, !fh.field_c ? 0 : var1, 0);
         mj.a((byte) 91);
-        cp.field_d.a(40, -20500, no.field_T.field_gb, no.field_T.field_ob - 40, 0);
-        tg.field_n.a(30, -20500, ov.field_i.field_gb, 0, 0);
-        of.field_Lb.a(-30 + (-40 + ov.field_i.field_ob) - 2, -20500, ov.field_i.field_gb, 30, 0);
-        r.field_v.a(30, -20500, 68, 5, 5);
-        ek.field_c.a(30, -20500, 78, 5, 75);
-        CombatViewTransition.field_p.a(30, -20500, 48, 5, 155);
-        bs.field_a.a(30, -20500, 48, 5, 205);
+        cp.field_d.setBounds(40, -20500, no.field_T.width, no.field_T.height - 40, 0);
+        tg.field_n.setBounds(30, -20500, ov.field_i.width, 0, 0);
+        of.field_Lb.setBounds(-30 + (-40 + ov.field_i.height) - 2, -20500, ov.field_i.width, 30, 0);
+        r.field_v.setBounds(30, -20500, 68, 5, 5);
+        ek.field_c.setBounds(30, -20500, 78, 5, 75);
+        CombatViewTransition.field_p.setBounds(30, -20500, 48, 5, 155);
+        bs.field_a.setBounds(30, -20500, 48, 5, 205);
         int var2 = !fh.field_c ? 200 : 250;
-        SphinxActionRequest.field_A.a(30, -20500, -var2 + 363, 5, var2 + 5);
-        wl.field_K.a(30, -20500, -370 + (-5 + ov.field_i.field_gb), 5, 370);
-        CipherPacketBuffer.field_x.a(5, param0, of.field_Lb.field_gb - 5 - 5, 2, jn.field_c, 37, -32 + (of.field_Lb.field_ob - 5 - 5));
-        int var3 = (ov.field_i.field_gb + 2) / 2;
-        fj.field_d.a(40, -20500, var3 - 2, ov.field_i.field_ob - 40, 0);
+        SphinxActionRequest.field_A.setBounds(30, -20500, -var2 + 363, 5, var2 + 5);
+        wl.field_K.setBounds(30, -20500, -370 + (-5 + ov.field_i.width), 5, 370);
+        CipherPacketBuffer.field_x.a(5, param0, of.field_Lb.width - 5 - 5, 2, jn.field_c, 37, -32 + (of.field_Lb.height - 5 - 5));
+        int var3 = (ov.field_i.width + 2) / 2;
+        fj.field_d.setBounds(40, -20500, var3 - 2, ov.field_i.height - 40, 0);
         if (!fh.field_c) {
           var3 = 0;
         }
-        VineGrowthAction.field_x.a(40, -20500, ov.field_i.field_gb - var3, -40 + ov.field_i.field_ob, var3);
+        VineGrowthAction.field_x.setBounds(40, -20500, ov.field_i.width - var3, -40 + ov.field_i.height, var3);
     }
 
     final static void a(int param0, int param1, int param2, int param3) {

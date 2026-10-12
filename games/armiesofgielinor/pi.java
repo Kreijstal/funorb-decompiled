@@ -8,7 +8,7 @@ final class pi extends fw {
     int field_S;
     static int[][] field_M;
     static String field_P;
-    static je field_N;
+    static ClientUiComponent field_N;
     static RgbSprite field_T;
     static String field_O;
 
@@ -48,7 +48,7 @@ final class pi extends fw {
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param3 <= 103) {
-            field_N = (je) null;
+            field_N = (ClientUiComponent) null;
           }
           if (!super.a(param0, param1, param2, 122, param4, param5, param6)) {
             return false;

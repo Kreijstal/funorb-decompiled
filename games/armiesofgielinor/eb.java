@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eb {
-    static je field_a;
+    static ClientUiComponent field_a;
     static int field_b;
     static String field_e;
     static String field_d;
-    static je field_c;
+    static ClientUiComponent field_c;
 
     final static void a(boolean param0, int param1, boolean param2) {
         int var3_int = 0;
@@ -50,7 +50,7 @@ final class eb {
         field_c = null;
         field_e = null;
         if (param0 != 1) {
-          field_c = (je) null;
+          field_c = (ClientUiComponent) null;
           field_a = null;
           field_d = null;
           return;

@@ -3,7 +3,7 @@
  */
 final class vu extends fw {
     static SpellMenuGroup field_O;
-    static je field_Q;
+    static ClientUiComponent field_Q;
     static java.applet.Applet field_L;
     static String field_P;
     static int[] field_N;

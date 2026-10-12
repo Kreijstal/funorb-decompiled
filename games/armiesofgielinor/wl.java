@@ -5,7 +5,7 @@ abstract class wl extends tj {
     static String field_J;
     static RgbSprite field_N;
     static String[] field_M;
-    static je field_K;
+    static ClientUiComponent field_K;
     static int field_E;
     static NodeDeque field_F;
     private int field_H;
@@ -53,7 +53,7 @@ abstract class wl extends tj {
 
     final void a(int param0, byte param1, int param2) {
         if (param1 < 95) {
-          field_K = (je) null;
+          field_K = (ClientUiComponent) null;
         }
         this.setBounds(te.field_l - param0 >> 1, param0, ij.field_x - param2 >> 1, 8192, param2);
     }
@@ -112,7 +112,7 @@ abstract class wl extends tj {
           var2 += 4;
         }
         if (param1 != -13337) {
-          field_K = (je) null;
+          field_K = (ClientUiComponent) null;
         }
         if (param0 >= 4) {
           param0 = param0 >>> 2;
@@ -135,7 +135,7 @@ abstract class wl extends tj {
           this.field_H = this.field_H + (-1 + (var3 + 8)) / 8;
         }
         if (param0 != -1) {
-          field_K = (je) null;
+          field_K = (ClientUiComponent) null;
         }
         if (var3 < 0) {
           this.field_H = this.field_H + (var3 - 15) / 16;

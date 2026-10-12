@@ -14,7 +14,7 @@ final class df extends tj implements fb, he {
     private String field_I;
     private fn field_S;
     private boolean field_F;
-    static je field_K;
+    static ClientUiComponent field_K;
 
     final void a(int param0, String param1) {
         fn var3 = null;

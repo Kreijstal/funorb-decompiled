@@ -453,25 +453,25 @@ final class nm extends hn {
     }
 
     final static void a(byte param0, boolean param1) {
-        je stackIn_6_0 = null;
+        ClientUiComponent stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
-        je stackIn_10_0 = null;
+        ClientUiComponent stackIn_10_0 = null;
         boolean stackIn_11_1 = false;
-        je stackIn_23_0 = null;
+        ClientUiComponent stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
-        je stackIn_27_0 = null;
+        ClientUiComponent stackIn_27_0 = null;
         boolean stackIn_28_1 = false;
         CampaignUnitOverride.a(-640 + SoftwareRaster.width >> 1, 640 + SoftwareRaster.width >> 1, SoftwareRaster.height, 0, (byte) 91);
         if (gk.field_J > 0) {
           if (null != dh.field_k) {
-            dh.field_k.f(no.field_T.field_S, 0);
+            dh.field_k.f(no.field_T.x, 0);
           }
           stackIn_6_0 = no.field_T;
           stackIn_7_1 = (param1) && (!bw.field_g);
-          ((je) (Object) stackIn_6_0).b(stackIn_7_1, 20);
+          ((ClientUiComponent) (Object) stackIn_6_0).b(stackIn_7_1, 20);
           stackIn_10_0 = ov.field_i;
           stackIn_11_1 = (param1) && (!bw.field_g);
-          ((je) (Object) stackIn_10_0).b(stackIn_11_1, 20);
+          ((ClientUiComponent) (Object) stackIn_10_0).b(stackIn_11_1, 20);
         }
         if (param0 != 95) {
           return;
@@ -479,14 +479,14 @@ final class nm extends hn {
         if (!(0 >= PreparedAction.field_r) ||
           !(InstructionsPanel.field_D <= 0)) {
           if (dh.field_k != null) {
-            dh.field_k.f(lk.field_a.field_S, 0);
+            dh.field_k.f(lk.field_a.x, 0);
           }
           stackIn_23_0 = lk.field_a;
           stackIn_24_1 = (param1) && (!vk.field_f);
-          ((je) (Object) stackIn_23_0).b(stackIn_24_1, 20);
+          ((ClientUiComponent) (Object) stackIn_23_0).b(stackIn_24_1, 20);
           stackIn_27_0 = pd.field_c;
           stackIn_28_1 = (param1) && (!vk.field_f);
-          ((je) (Object) stackIn_27_0).b(stackIn_28_1, 20);
+          ((ClientUiComponent) (Object) stackIn_27_0).b(stackIn_28_1, 20);
         }
         QuickChatPhraseRepository.b(-18862);
     }

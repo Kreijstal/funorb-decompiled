@@ -4,7 +4,7 @@
 abstract class rb implements n {
     private long field_a;
     static String field_c;
-    static je field_b;
+    static ClientUiComponent field_b;
 
     final static boolean a(String param0, String param1, int param2) {
         String var3 = null;
@@ -19,7 +19,7 @@ abstract class rb implements n {
         RuntimeException var3_ref = null;
         try {
           var4 = -107 / ((param2 - 41) / 55);
-          var3 = nf.a(true, param0);
+          var3 = IconTextComponent.a(true, param0);
           if (param1.indexOf(param0) != -1) {
             return true;
           }
@@ -61,7 +61,7 @@ abstract class rb implements n {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -17231) {
-            field_b = (je) null;
+            field_b = (ClientUiComponent) null;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param4 != null && (param3 != 2 ||
@@ -376,7 +376,7 @@ abstract class rb implements n {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 1) {
-            field_b = (je) null;
+            field_b = (ClientUiComponent) null;
           }
           stackIn_5_0 = ((param1[param0 >> 5] & 1 << (param0 & 31)) != 0);
           return stackIn_5_0;

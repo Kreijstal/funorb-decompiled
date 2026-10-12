@@ -412,7 +412,7 @@ class ro extends pt implements he {
                 var6.a(CombatEvent.field_O, 9, 1);
               }
             } else {
-              var6.a(nf.field_Jb, 8, 1);
+              var6.a(IconTextComponent.field_Jb, 8, 1);
             }
           }
           this.a(var6, param1);

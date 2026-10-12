@@ -4,7 +4,7 @@
 final class qd extends tj implements nq, he {
     static String field_G;
     static int field_K;
-    static mq field_I;
+    static QuickChatMenu field_I;
     private hv field_F;
     private oe field_H;
     private fw field_M;

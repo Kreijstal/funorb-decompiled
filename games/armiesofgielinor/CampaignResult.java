@@ -4,7 +4,7 @@
 final class CampaignResult {
     int damageTaken;
     static String field_d;
-    static je field_a;
+    static ClientUiComponent field_a;
     int turnsTaken;
 
     final static void a(int param0) {

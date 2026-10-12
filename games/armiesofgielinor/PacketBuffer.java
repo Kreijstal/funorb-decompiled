@@ -548,7 +548,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final int b(byte param0, int param1) {
-        int var3 = im.a(this.position, this.payload, param1, -8779);
+        int var3 = ClientUiNode.a(this.position, this.payload, param1, -8779);
         this.writeInt((byte) -87, var3);
         if (param0 != -39) {
           this.c((byte) -110, 112);
@@ -647,7 +647,7 @@ class PacketBuffer extends IntrusiveNode {
           field_k = (byte[][][]) null;
         }
         this.position = this.position - 4;
-        int var2 = im.a(this.position, this.payload, 0, -8779);
+        int var2 = ClientUiNode.a(this.position, this.payload, 0, -8779);
         int var3 = this.readInt(1);
         if (var3 == var2) {
           return true;

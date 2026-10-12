@@ -3,18 +3,18 @@
  */
 abstract class dv implements ap {
     dn field_d;
-    static je field_m;
+    static ClientUiComponent field_m;
     String field_c;
     static RgbSprite field_k;
     static String field_i;
     static String field_g;
-    je field_s;
+    ClientUiComponent field_s;
     static String field_r;
     private NodeDeque field_j;
     BitmapFont field_t;
     private int field_l;
     dp field_o;
-    private je field_q;
+    private ClientUiComponent field_q;
     private String[] field_e;
     private boolean field_f;
     private int field_n;
@@ -25,22 +25,22 @@ abstract class dv implements ap {
 
     private final void a(int param0, String param1, int param2) {
         int var4_int = 0;
-        je var5 = null;
+        ClientUiComponent var5 = null;
         int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.field_d.field_Jb.a(this.a(param0, param1, (byte) -68), param2 + 368);
-          if (~this.field_d.field_Jb.field_fb.size(false) < param2) {
-            this.field_d.field_Jb.field_fb.popFirst(0);
+          this.field_d.field_Jb.addChild(this.a(param0, param1, (byte) -68), param2 + 368);
+          if (~this.field_d.field_Jb.children.size(false) < param2) {
+            this.field_d.field_Jb.children.popFirst(0);
           }
           var4_int = 5;
-          var5 = (je) (this.field_d.field_Jb.field_fb.first((byte) 107));
+          var5 = (ClientUiComponent) (this.field_d.field_Jb.children.first((byte) 107));
           while (var5 != null) {
-            var5.field_ab = var4_int;
+            var5.y = var4_int;
             var4_int = var4_int + this.field_l;
-            var5 = (je) (this.field_d.field_Jb.field_fb.next((byte) 123));
+            var5 = (ClientUiComponent) (this.field_d.field_Jb.children.next((byte) 123));
           }
-          this.field_d.field_Jb.field_ob = var4_int;
-          this.field_d.field_Jb.field_ab = this.field_d.field_ob - var4_int;
+          this.field_d.field_Jb.height = var4_int;
+          this.field_d.field_Jb.y = this.field_d.height - var4_int;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dv.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -70,20 +70,20 @@ abstract class dv implements ap {
         int var2Lifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
-        if (!(this.field_q.field_ob + this.field_q.field_ab <= 0)) {
-          SoftwareRaster.b(this.field_q.field_V, this.field_q.field_D, this.field_d.field_S, this.field_q.field_ob, 5592405, 230);
-          SoftwareRaster.b(this.field_d.field_gb + this.field_d.field_V, this.field_q.field_D, this.field_d.field_S, this.field_q.field_ob, 5592405, 230);
-          SoftwareRaster.b(this.field_d.field_V, this.field_q.field_D, this.field_d.field_gb, this.field_d.field_ab, 5592405, 230);
-          SoftwareRaster.b(this.field_d.field_V, this.field_d.field_ob + this.field_d.field_D, this.field_d.field_gb, this.field_o.field_D + (-this.field_d.field_D - this.field_d.field_ob), 5592405, 230);
-          SoftwareRaster.b(this.field_d.field_V, this.field_o.field_ob + this.field_o.field_D, this.field_d.field_gb, -this.field_o.field_ob + this.field_q.field_ob - this.field_o.field_ab, 5592405, 230);
-          SoftwareRaster.b(this.field_d.field_V, this.field_d.field_D, this.field_d.field_gb, this.field_d.field_ob, 2236962, 240);
-          SoftwareRaster.b(this.field_o.field_V, this.field_o.field_D, this.field_o.field_gb, this.field_o.field_ob, 2236962, 240);
-          var2 = this.field_q.field_ab + 256;
+        if (!(this.field_q.height + this.field_q.y <= 0)) {
+          SoftwareRaster.b(this.field_q.screenX, this.field_q.screenY, this.field_d.x, this.field_q.height, 5592405, 230);
+          SoftwareRaster.b(this.field_d.width + this.field_d.screenX, this.field_q.screenY, this.field_d.x, this.field_q.height, 5592405, 230);
+          SoftwareRaster.b(this.field_d.screenX, this.field_q.screenY, this.field_d.width, this.field_d.y, 5592405, 230);
+          SoftwareRaster.b(this.field_d.screenX, this.field_d.height + this.field_d.screenY, this.field_d.width, this.field_o.screenY + (-this.field_d.screenY - this.field_d.height), 5592405, 230);
+          SoftwareRaster.b(this.field_d.screenX, this.field_o.height + this.field_o.screenY, this.field_d.width, -this.field_o.height + this.field_q.height - this.field_o.y, 5592405, 230);
+          SoftwareRaster.b(this.field_d.screenX, this.field_d.screenY, this.field_d.width, this.field_d.height, 2236962, 240);
+          SoftwareRaster.b(this.field_o.screenX, this.field_o.screenY, this.field_o.width, this.field_o.height, 2236962, 240);
+          var2 = this.field_q.y + 256;
           if (var2 < 0) {
             var2 = 0;
           }
-          SoftwareRaster.b(this.field_q.field_V, this.field_q.field_D + this.field_q.field_ob, this.field_q.field_gb, -this.field_q.field_ob + (-this.field_q.field_D + dt.field_a), 0, var2 >> 1);
-          var3 = 5 + this.field_q.field_ab + this.field_q.field_ob;
+          SoftwareRaster.b(this.field_q.screenX, this.field_q.screenY + this.field_q.height, this.field_q.width, -this.field_q.height + (-this.field_q.screenY + dt.field_a), 0, var2 >> 1);
+          var3 = 5 + this.field_q.y + this.field_q.height;
           for (var4 = 0; var4 < 6; var4++) {
             SoftwareRaster.e(0, var3, bn.field_b, 0, var4 << 5);
             var3--;
@@ -93,14 +93,14 @@ abstract class dv implements ap {
         var2Lifetime1 = 126 / ((13 - param0) / 33);
         if (this.field_e != null &&
           this.field_f) {
-          var3Lifetime1 = this.field_q.field_ob + this.field_q.field_ab;
-          this.field_s.field_ab = var3Lifetime1;
+          var3Lifetime1 = this.field_q.height + this.field_q.y;
+          this.field_s.y = var3Lifetime1;
           this.field_s.b(false, 20);
           var3Lifetime1 = var3Lifetime1 + (this.field_l + 5);
           var6 = 0;
           var4Lifetime1 = var6;
           while (this.field_e.length > var6) {
-            this.field_t.b(this.field_e[var6], 10 + this.field_s.field_V, var3Lifetime1, 13421772, -1);
+            this.field_t.b(this.field_e[var6], 10 + this.field_s.screenX, var3Lifetime1, 13421772, -1);
             var3Lifetime1 = var3Lifetime1 + this.field_l;
             var6++;
           }
@@ -109,9 +109,9 @@ abstract class dv implements ap {
 
     abstract void a(byte param0);
 
-    private final je a(byte param0, int param1) {
+    private final ClientUiComponent a(byte param0, int param1) {
         int var4 = -63 % ((param0 + 36) / 61);
-        je var3 = new je(0L, (je) null);
+        ClientUiComponent var3 = new ClientUiComponent(0L, (ClientUiComponent) null);
         var3.field_G = ak.b(param1, 5);
         return var3;
     }
@@ -168,11 +168,11 @@ abstract class dv implements ap {
         if (this.field_f &&
           this.field_p > 0) {
           this.field_p = this.field_p - 1;
-          this.field_q.field_ab = -200 * (this.field_p * this.field_p) / 225;
+          this.field_q.y = -200 * (this.field_p * this.field_p) / 225;
         } else {
           if (!this.field_f &&
-            this.field_q.field_ab + 200 > 0) {
-            this.field_q.field_ab = this.field_q.field_ab - 28;
+            this.field_q.y + 200 > 0) {
+            this.field_q.y = this.field_q.y - 28;
           }
         }
         if (!this.field_o.q(0).equals(this.field_h) ||
@@ -192,15 +192,15 @@ abstract class dv implements ap {
                 var3 = var5;
               }
             }
-            this.field_s.field_gb = var3 + 20;
-            this.field_s.field_ob = 15 + this.field_e.length * this.field_l;
+            this.field_s.width = var3 + 20;
+            this.field_s.height = 15 + this.field_e.length * this.field_l;
           }
         }
         this.field_n = this.field_n + 1;
         if (param0 > -58) {
           return;
         }
-        this.field_q.a(true, param1);
+        this.field_q.updateInput(true, param1);
         this.field_d.a(this.field_l, true, el.field_d * (2 * this.field_l), false);
         this.field_o.m(0);
     }
@@ -238,7 +238,7 @@ abstract class dv implements ap {
         RuntimeException var4 = null;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4_int = -10 + (this.field_d.field_gb - 15);
+          var4_int = -10 + (this.field_d.width - 15);
           var5 = dj.a(-100, '\n', param0);
           var6 = var5;
           if (param2 > -25) {
@@ -342,8 +342,8 @@ abstract class dv implements ap {
         }
     }
 
-    private final je a(int param0, int param1, int param2) {
-        je var4 = new je(0L, (je) null);
+    private final ClientUiComponent a(int param0, int param1, int param2) {
+        ClientUiComponent var4 = new ClientUiComponent(0L, (ClientUiComponent) null);
         var4.field_G = tn.a(true, param1, param2);
         if (param0 != 5592405) {
           this.field_d = (dn) null;
@@ -360,10 +360,10 @@ abstract class dv implements ap {
         }
     }
 
-    private final je a(int param0, String param1, byte param2) {
-        je var4 = null;
+    private final ClientUiComponent a(int param0, String param1, byte param2) {
+        ClientUiComponent var4 = null;
         RuntimeException var4_ref = null;
-        je stackIn_3_0 = null;
+        ClientUiComponent stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -372,10 +372,10 @@ abstract class dv implements ap {
           if (param2 != -68) {
             field_k = (RgbSprite) null;
           }
-          var4 = new je(0L, (je) null, param1);
+          var4 = new ClientUiComponent(0L, (ClientUiComponent) null, param1);
           var4.field_N = param0;
-          var4.field_Z = this.field_t;
-          var4.a(this.field_l, -20500, this.field_t.a(var4.field_X), 0, 5);
+          var4.font = this.field_t;
+          var4.setBounds(this.field_l, -20500, this.field_t.a(var4.text), 0, 5);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -418,7 +418,7 @@ abstract class dv implements ap {
         this.field_f = stackIn_3_1;
         if (!this.field_f) {
           if (null != this.field_q) {
-            this.field_q.b(3, (je) null);
+            this.field_q.b(3, (ClientUiComponent) null);
           }
         } else {
           this.field_p = 15;
@@ -462,7 +462,7 @@ abstract class dv implements ap {
 
     boolean a(int param0, char param1, int param2) {
         IntrusiveNode stackIn_25_1 = null;
-        je var5;
+        ClientUiComponent var5;
         int var6;
         String var7;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -511,7 +511,7 @@ abstract class dv implements ap {
             return true;
           }
           this.a(this.field_c + var7, 5635925, param0 + 30734);
-          var5 = (je) (this.field_d.field_Jb.field_fb.last((byte) -81));
+          var5 = (ClientUiComponent) (this.field_d.field_Jb.children.last((byte) -81));
           if (!this.a(var7, true)) {
             var5.field_N = 16733525;
           }
@@ -522,26 +522,26 @@ abstract class dv implements ap {
         return true;
     }
 
-    private final je a(boolean param0, int param1) {
-        je var3 = new je();
+    private final ClientUiComponent a(boolean param0, int param1) {
+        ClientUiComponent var3 = new ClientUiComponent();
         var3.field_G = tn.a(param0, 0, param1);
         return var3;
     }
 
     dv(BitmapFont param0, hd param1) {
         int var3_int = 0;
-        je var4 = null;
-        je var5 = null;
-        je var6 = null;
-        je var7 = null;
-        je var8 = null;
-        je var9 = null;
-        je var10 = null;
-        je var11 = null;
-        je var12 = null;
+        ClientUiComponent var4 = null;
+        ClientUiComponent var5 = null;
+        ClientUiComponent var6 = null;
+        ClientUiComponent var7 = null;
+        ClientUiComponent var8 = null;
+        ClientUiComponent var9 = null;
+        ClientUiComponent var10 = null;
+        ClientUiComponent var11 = null;
+        ClientUiComponent var12 = null;
         ll var13 = null;
-        je var14 = null;
-        je var15 = null;
+        ClientUiComponent var14 = null;
+        ClientUiComponent var15 = null;
         this.field_c = "# ";
         this.field_j = new NodeDeque();
         this.field_e = null;
@@ -561,26 +561,26 @@ abstract class dv implements ap {
           var10 = this.a(5592405, 3355443, 65793);
           var11 = this.a((byte) 71, 2263074);
           var12 = this.a(5592405, 2236962, 65793);
-          this.field_q = new je(0L, var5);
-          this.field_q.a(200, -20500, bn.field_b, -200, 0);
+          this.field_q = new ClientUiComponent(0L, var5);
+          this.field_q.setBounds(200, -20500, bn.field_b, -200, 0);
           var13 = new ll(0L, var8, var8, var9, var10);
-          var14 = new je();
-          var14.field_fb = new NodeDeque();
+          var14 = new ClientUiComponent();
+          var14.children = new NodeDeque();
           this.field_d = new dn(0L, var14, var6, var13);
-          this.field_d.field_Jb.field_fb = new NodeDeque();
-          this.field_d.a(5, false, this.field_q.field_gb - 10, 0, 15, 5, 185 - var3_int);
-          this.field_q.a(this.field_d, 71);
-          var15 = new je();
-          var15.field_Z = this.field_t;
+          this.field_d.field_Jb.children = new NodeDeque();
+          this.field_d.a(5, false, this.field_q.width - 10, 0, 15, 5, 185 - var3_int);
+          this.field_q.addChild(this.field_d, 71);
+          var15 = new ClientUiComponent();
+          var15.font = this.field_t;
           var15.field_N = 13421772;
           var15.field_F = 5;
           var15.field_z = 2;
           this.field_o = new dp(0L, var7, var11, var15);
-          this.field_o.b(this.field_d.field_ab - (-this.field_d.field_ob - 5), 0, this.field_d.field_gb, var3_int, this.field_d.field_S);
+          this.field_o.b(this.field_d.y - (-this.field_d.height - 5), 0, this.field_d.width, var3_int, this.field_d.x);
           this.field_o.a(param1, 176);
-          this.field_q.a(this.field_o, 87);
-          this.field_s = new je(0L, var12);
-          this.field_s.field_S = 0;
+          this.field_q.addChild(this.field_o, 87);
+          this.field_s = new ClientUiComponent(0L, var12);
+          this.field_s.x = 0;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

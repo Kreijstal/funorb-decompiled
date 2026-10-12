@@ -179,7 +179,7 @@ final class RadialSummonItem {
         return true;
     }
 
-    final static void a(int param0, je param1, int param2, byte[] param3, int param4, je param5, int param6, int param7, int param8, je param9) {
+    final static void a(int param0, ClientUiComponent param1, int param2, byte[] param3, int param4, ClientUiComponent param5, int param6, int param7, int param8, ClientUiComponent param9) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -218,26 +218,26 @@ final class RadialSummonItem {
             var10_int = var10_int + (t.field_b[var11] & 255);
             var11++;
           } while (var12 == 0);
-          if (param9.field_fb == null) {
-            param9.field_fb = new NodeDeque();
+          if (param9.children == null) {
+            param9.children = new NodeDeque();
           }
-          SummonAction.field_u = param9.field_fb;
+          SummonAction.field_u = param9.children;
           SummonAction.field_u.clear(80);
           oi.field_d = new tp(param4);
           AnimationPlayer.field_a = 0;
           SummonAction.field_s = -1;
           oo.field_a = 0;
           GlobalSpell.field_g = -1;
-          if (null == param1.field_fb) {
-            param1.field_fb = new NodeDeque();
+          if (null == param1.children) {
+            param1.children = new NodeDeque();
           }
-          qc.field_g = param1.field_fb;
+          qc.field_g = param1.children;
           qc.field_g.clear(120);
           qm.field_J = new tp(param6);
-          if (null == param5.field_fb) {
-            param5.field_fb = new NodeDeque();
+          if (null == param5.children) {
+            param5.children = new NodeDeque();
           }
-          wl.field_F = param5.field_fb;
+          wl.field_F = param5.children;
           wl.field_F.clear(122);
           UnitCycler.field_e = new tp(param0);
           qd.field_K = param2;

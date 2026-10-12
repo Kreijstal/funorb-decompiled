@@ -175,8 +175,8 @@ final class AnimationSequence {
         int var4 = -54 / ((33 - param1) / 47);
         int var3 = mj.field_c * mj.field_c;
         int var5 = -(param0 * param0) + var3;
-        lk.field_a.a(-90 + (-120 + (SoftwareRaster.height - 4)), -20500, 199, 90, -(199 * var5 / var3) + var2);
-        pd.field_c.a(SoftwareRaster.height - 124, -20500, 438, 0, 202 + var2 + 438 * var5 / var3);
+        lk.field_a.setBounds(-90 + (-120 + (SoftwareRaster.height - 4)), -20500, 199, 90, -(199 * var5 / var3) + var2);
+        pd.field_c.setBounds(SoftwareRaster.height - 124, -20500, 438, 0, 202 + var2 + 438 * var5 / var3);
     }
 
     private final void decode(int obfuscationGuard, PacketBuffer packet) {

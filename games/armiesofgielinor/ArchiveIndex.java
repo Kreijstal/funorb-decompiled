@@ -7,7 +7,7 @@ final class ArchiveIndex {
     IntKeyLookup groupNameLookup;
     int[] groupCrcs;
     int[] groupIds;
-    static je field_b;
+    static ClientUiComponent field_b;
     private int[] groupNameHashes;
     int indexCrc;
     private int[][] fileNameHashes;
@@ -267,27 +267,27 @@ final class ArchiveIndex {
         }
     }
 
-    final static void a(je param0, int param1) {
-        je var5 = null;
+    final static void a(ClientUiComponent param0, int param1) {
+        ClientUiComponent var5 = null;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        je var4 = (je) (param0.field_fb.first((byte) 121));
-        je var2 = var4;
+        ClientUiComponent var4 = (ClientUiComponent) (param0.children.first((byte) 121));
+        ClientUiComponent var2 = var4;
         while (var4 != null) {
-          var4.field_nb = 0;
-          var4.field_ob = 0;
-          var4.field_db = 0;
-          var4.field_ab = 0;
-          var5 = (je) (param0.field_fb.next((byte) 123));
+          var4.pendingHeightDelta = 0;
+          var4.height = 0;
+          var4.pendingYDelta = 0;
+          var4.y = 0;
+          var5 = (ClientUiComponent) (param0.children.next((byte) 123));
           var5 = var5;
         }
-        param0.field_nb = 0;
-        param0.field_ob = 0;
-        param0.field_ab = 0;
+        param0.pendingHeightDelta = 0;
+        param0.height = 0;
+        param0.y = 0;
         if (param1 > -42) {
           return;
         }
         try {
-          param0.field_db = 0;
+          param0.pendingYDelta = 0;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "jm.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -100,13 +100,13 @@ final class cd {
             return true;
           }
           if (rs.field_q == 102) {
-            qd.field_I.f((byte) -106);
+            qd.field_I.resetSelection((byte) -106);
             return true;
           }
           if (qd.field_I == null) {
             return false;
           }
-          if (qd.field_I.a(param2, param0, param1)) {
+          if (qd.field_I.handleKeyboard(param2, param0, param1)) {
             return true;
           }
           return false;
@@ -116,13 +116,13 @@ final class cd {
           return true;
         }
         if (rs.field_q == 102) {
-          qd.field_I.f((byte) -106);
+          qd.field_I.resetSelection((byte) -106);
           return true;
         }
         if (qd.field_I == null) {
           return false;
         }
-        if (qd.field_I.a(param2, param0, param1)) {
+        if (qd.field_I.handleKeyboard(param2, param0, param1)) {
           return true;
         }
         return false;

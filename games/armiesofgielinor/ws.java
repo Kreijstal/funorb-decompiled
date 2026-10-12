@@ -3,7 +3,7 @@
  */
 final class ws extends fw {
     static int field_O;
-    static je field_P;
+    static ClientUiComponent field_P;
     int field_L;
     int field_Q;
     int field_N;
@@ -86,7 +86,7 @@ final class ws extends fw {
           }
           return;
         }
-        field_P = (je) null;
+        field_P = (ClientUiComponent) null;
         SummonRequest.a((byte) 52, wf.field_y, 6);
         SummonRequest.a((byte) 33, sh.field_r, 26);
         MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(26, (byte) -107) + 30, 26, (byte) 126);
@@ -153,7 +153,7 @@ final class ws extends fw {
     public static void a(int param0) {
         field_P = null;
         if (param0 < 124) {
-          field_P = (je) null;
+          field_P = (ClientUiComponent) null;
           field_T = null;
           return;
         }

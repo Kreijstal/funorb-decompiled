@@ -243,16 +243,16 @@ abstract class nl extends Widget implements gw {
     }
 
     final static void a(byte[] param0, int param1, int param2, String[] param3, String[][] param4, byte[] param5, String[][] param6, ResourceArchive param7, RgbSprite[][] param8, RgbSprite[][] param9, String[] param10, int[] param11, String[] param12, boolean param13, int param14) {
-        nf[] array$0 = null;
-        nf[] array$1 = null;
-        nf[] array$2 = null;
+        IconTextComponent[] array$0 = null;
+        IconTextComponent[] array$1 = null;
+        IconTextComponent[] array$2 = null;
         int var19 = 0;
-        je stackIn_5_0;
-        je stackIn_5_1;
+        ClientUiComponent stackIn_5_0;
+        ClientUiComponent stackIn_5_1;
         long stackIn_5_2;
-        je stackIn_5_3;
-        je stackIn_6_0 = null;
-        je stackIn_6_1 = null;
+        ClientUiComponent stackIn_5_3;
+        ClientUiComponent stackIn_6_0 = null;
+        ClientUiComponent stackIn_6_1 = null;
         String stackIn_6_4 = null;
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
@@ -279,16 +279,16 @@ abstract class nl extends Widget implements gw {
         String stackIn_107_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
-        je var16 = null;
+        ClientUiComponent var16 = null;
         int var17_int = 0;
-        je var17 = null;
+        ClientUiComponent var17 = null;
         int var18 = 0;
         Object var19_ref = null;
         Object var20 = null;
         int var21 = 0;
         iw var22 = null;
-        je var24 = null;
-        je var25 = null;
+        ClientUiComponent var24 = null;
+        ClientUiComponent var25 = null;
         int var18Lifetime1;
         int var18Lifetime2;
         int var17_intLifetime1;
@@ -319,34 +319,34 @@ abstract class nl extends Widget implements gw {
           ResourceRequest.field_u[2] = kd.field_L;
           ResourceRequest.field_u[0] = AttackEvent.field_D;
           ResourceRequest.field_u[4] = io.field_p;
-          nf.field_Kb = new je(0L, (je) null);
-          rj.field_F = new je(0L, te.field_p, su.field_b);
-          CampaignProgress.field_a = new je(0L, br.field_e, rh.field_g);
-          MapTile.field_f = new dn(0L, new je(0L, (je) null), cb.field_c, WeightedLruCache.field_b);
-          nf.field_Kb.a(rj.field_F, 79);
+          IconTextComponent.field_Kb = new ClientUiComponent(0L, (ClientUiComponent) null);
+          rj.field_F = new ClientUiComponent(0L, te.field_p, su.field_b);
+          CampaignProgress.field_a = new ClientUiComponent(0L, br.field_e, rh.field_g);
+          MapTile.field_f = new dn(0L, new ClientUiComponent(0L, (ClientUiComponent) null), cb.field_c, WeightedLruCache.field_b);
+          IconTextComponent.field_Kb.addChild(rj.field_F, 79);
           if (fh.field_c) {
-            nf.field_Kb.a(CampaignProgress.field_a, 69);
+            IconTextComponent.field_Kb.addChild(CampaignProgress.field_a, 69);
           }
-          nf.field_Kb.a(MapTile.field_f, 59);
-          MapTile.field_f.field_Nb.a(0, eq.field_h);
-          MapTile.field_f.field_Nb.field_Fb = 1;
+          IconTextComponent.field_Kb.addChild(MapTile.field_f, 59);
+          MapTile.field_f.field_Nb.applyStyle(0, eq.field_h);
+          MapTile.field_f.field_Nb.verticalAlignment = 1;
           var24 = MapTile.field_f.field_Nb;
           var25 = var24;
-          var25.field_Eb = 1;
-          t.field_g = new je(0L, eq.field_h);
-          t.field_g.field_Eb = 1;
-          cp.field_d = new je(0L, kd.field_M, eq.field_e.toUpperCase());
-          tg.field_n = new je(0L, SummonAction.field_y, nr.field_d.toUpperCase());
-          of.field_Lb = new je(0L, sh.field_m);
-          r.field_v = new je(0L, te.field_p, IntrusiveNode.field_a);
-          ek.field_c = new je(0L, CampaignResult.field_a, wb.field_c);
-          CombatViewTransition.field_p = new je(0L, CampaignResult.field_a, fk.field_g);
-          bs.field_a = new je(0L, CampaignResult.field_a, fw.field_H);
-          SphinxActionRequest.field_A = new je(0L, CampaignResult.field_a, hs.field_D);
-          wl.field_K = new je(0L, br.field_e, RevivalEvent.field_B);
-          CipherPacketBuffer.field_x = new dn(0L, new je(0L, (je) null), cb.field_c, WeightedLruCache.field_b);
-          fj.field_d = new je(0L, nd.field_a, l.field_f.toUpperCase());
-          fj.field_d.field_xb = fh.field_c;
+          var25.horizontalAlignment = 1;
+          t.field_g = new ClientUiComponent(0L, eq.field_h);
+          t.field_g.horizontalAlignment = 1;
+          cp.field_d = new ClientUiComponent(0L, kd.field_M, eq.field_e.toUpperCase());
+          tg.field_n = new ClientUiComponent(0L, SummonAction.field_y, nr.field_d.toUpperCase());
+          of.field_Lb = new ClientUiComponent(0L, sh.field_m);
+          r.field_v = new ClientUiComponent(0L, te.field_p, IntrusiveNode.field_a);
+          ek.field_c = new ClientUiComponent(0L, CampaignResult.field_a, wb.field_c);
+          CombatViewTransition.field_p = new ClientUiComponent(0L, CampaignResult.field_a, fk.field_g);
+          bs.field_a = new ClientUiComponent(0L, CampaignResult.field_a, fw.field_H);
+          SphinxActionRequest.field_A = new ClientUiComponent(0L, CampaignResult.field_a, hs.field_D);
+          wl.field_K = new ClientUiComponent(0L, br.field_e, RevivalEvent.field_B);
+          CipherPacketBuffer.field_x = new dn(0L, new ClientUiComponent(0L, (ClientUiComponent) null), cb.field_c, WeightedLruCache.field_b);
+          fj.field_d = new ClientUiComponent(0L, nd.field_a, l.field_f.toUpperCase());
+          fj.field_d.inputEnabled = fh.field_c;
           stackIn_5_0 = null;
           stackIn_5_1 = null;
           stackIn_5_2 = 0L;
@@ -360,83 +360,83 @@ abstract class nl extends Widget implements gw {
             stackIn_6_1 = null;
             stackIn_6_4 = CampaignMenuEntry.field_C;
           }
-          VineGrowthAction.field_x = new je(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
-          ov.field_i = new je(0L, (je) null);
-          ov.field_i.a(tg.field_n, 92);
-          ov.field_i.a(of.field_Lb, 47);
-          of.field_Lb.a(r.field_v, 38);
-          of.field_Lb.a(ek.field_c, 114);
-          of.field_Lb.a(CombatViewTransition.field_p, 121);
+          VineGrowthAction.field_x = new ClientUiComponent(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
+          ov.field_i = new ClientUiComponent(0L, (ClientUiComponent) null);
+          ov.field_i.addChild(tg.field_n, 92);
+          ov.field_i.addChild(of.field_Lb, 47);
+          of.field_Lb.addChild(r.field_v, 38);
+          of.field_Lb.addChild(ek.field_c, 114);
+          of.field_Lb.addChild(CombatViewTransition.field_p, 121);
           if (fh.field_c) {
-            of.field_Lb.a(bs.field_a, 114);
+            of.field_Lb.addChild(bs.field_a, 114);
           }
-          of.field_Lb.a(SphinxActionRequest.field_A, 78);
-          of.field_Lb.a(wl.field_K, 99);
-          of.field_Lb.a(CipherPacketBuffer.field_x, 70);
+          of.field_Lb.addChild(SphinxActionRequest.field_A, 78);
+          of.field_Lb.addChild(wl.field_K, 99);
+          of.field_Lb.addChild(CipherPacketBuffer.field_x, 70);
           if (fh.field_c) {
-            ov.field_i.a(fj.field_d, 127);
+            ov.field_i.addChild(fj.field_d, 127);
           }
-          ov.field_i.a(VineGrowthAction.field_x, 93);
-          vu.field_Q = new je(0L, eq.field_h);
-          vu.field_Q.field_Eb = 1;
-          vu.field_Q.field_Fb = 0;
-          td.field_g = new je(0L, bw.field_h, ul.field_f.toUpperCase());
-          qc.field_c = new je(0L, ArchiveIndex.field_b);
-          qc.field_c.a(vu.field_Q, 116);
-          qc.field_c.a(td.field_g, 89);
-          uj.field_l = new je(0L, cb.field_c);
-          uj.field_l.a(0, eq.field_h);
-          uj.field_l.field_Fb = 1;
+          ov.field_i.addChild(VineGrowthAction.field_x, 93);
+          vu.field_Q = new ClientUiComponent(0L, eq.field_h);
+          vu.field_Q.horizontalAlignment = 1;
+          vu.field_Q.verticalAlignment = 0;
+          td.field_g = new ClientUiComponent(0L, bw.field_h, ul.field_f.toUpperCase());
+          qc.field_c = new ClientUiComponent(0L, ArchiveIndex.field_b);
+          qc.field_c.addChild(vu.field_Q, 116);
+          qc.field_c.addChild(td.field_g, 89);
+          uj.field_l = new ClientUiComponent(0L, cb.field_c);
+          uj.field_l.applyStyle(0, eq.field_h);
+          uj.field_l.verticalAlignment = 1;
           var16 = uj.field_l;
-          var16.field_Eb = 1;
-          eb.field_c = new je(0L, (je) null);
-          gg.field_E = new je(0L, eq.field_h);
-          gg.field_E.field_Eb = 1;
-          di.field_l = new je(0L, te.field_p, su.field_b);
-          SpellCastEvent.field_D = new je(0L, br.field_e, rh.field_g);
-          bu.field_a = new dn(0L, new je(0L, (je) null), cb.field_c, WeightedLruCache.field_b);
-          eb.field_c.a(gg.field_E, 72);
-          eb.field_c.a(di.field_l, 83);
+          var16.horizontalAlignment = 1;
+          eb.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
+          gg.field_E = new ClientUiComponent(0L, eq.field_h);
+          gg.field_E.horizontalAlignment = 1;
+          di.field_l = new ClientUiComponent(0L, te.field_p, su.field_b);
+          SpellCastEvent.field_D = new ClientUiComponent(0L, br.field_e, rh.field_g);
+          bu.field_a = new dn(0L, new ClientUiComponent(0L, (ClientUiComponent) null), cb.field_c, WeightedLruCache.field_b);
+          eb.field_c.addChild(gg.field_E, 72);
+          eb.field_c.addChild(di.field_l, 83);
           if (fh.field_c) {
-            eb.field_c.a(SpellCastEvent.field_D, 107);
+            eb.field_c.addChild(SpellCastEvent.field_D, 107);
           }
-          eb.field_c.a(bu.field_a, 109);
-          mp.field_Lb = new je(0L, kd.field_M, DeployAction.field_v.toUpperCase());
-          kd.field_F = new je(0L, SummonAction.field_y);
-          vc.field_l = new je(0L, sh.field_m);
-          BattleTutorial.field_d = new je(0L, rn.field_a, EffectPresentation.field_d.toUpperCase());
-          KingBlackDragonEvent.field_z = new je[param1 + 4];
-          pu.field_k = new nf[4 + param1][];
-          KingBlackDragonEvent.field_z[0] = new je(0L, fp.field_Lb, et.field_c);
-          pu.field_k[0] = new nf[6];
+          eb.field_c.addChild(bu.field_a, 109);
+          mp.field_Lb = new ClientUiComponent(0L, kd.field_M, DeployAction.field_v.toUpperCase());
+          kd.field_F = new ClientUiComponent(0L, SummonAction.field_y);
+          vc.field_l = new ClientUiComponent(0L, sh.field_m);
+          BattleTutorial.field_d = new ClientUiComponent(0L, rn.field_a, EffectPresentation.field_d.toUpperCase());
+          KingBlackDragonEvent.field_z = new ClientUiComponent[param1 + 4];
+          pu.field_k = new IconTextComponent[4 + param1][];
+          KingBlackDragonEvent.field_z[0] = new ClientUiComponent(0L, fp.field_Lb, et.field_c);
+          pu.field_k[0] = new IconTextComponent[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            pu.field_k[0][var17_int + 1] = new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, rs.field_p[var17_int], ResourceRequest.field_u[var17_int]);
+            pu.field_k[0][var17_int + 1] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, rs.field_p[var17_int], ResourceRequest.field_u[var17_int]);
           }
           if (lm.field_e.length >= 2) {
-            KingBlackDragonEvent.field_z[1] = new je(0L, fp.field_Lb, ep.field_h);
-            array$0 = new nf[1 + lm.field_e.length];
+            KingBlackDragonEvent.field_z[1] = new ClientUiComponent(0L, fp.field_Lb, ep.field_h);
+            array$0 = new IconTextComponent[1 + lm.field_e.length];
             pu.field_k[1] = array$0;
-            pu.field_k[1][0] = new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
+            pu.field_k[1][0] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
             for (var17_intLifetime1 = 0; lm.field_e.length > var17_intLifetime1; var17_intLifetime1++) {
-              pu.field_k[1][var17_intLifetime1 + 1] = new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, (RgbSprite) null, Integer.toString(lm.field_e[var17_intLifetime1]));
+              pu.field_k[1][var17_intLifetime1 + 1] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, Integer.toString(lm.field_e[var17_intLifetime1]));
             }
           }
-          KingBlackDragonEvent.field_z[2] = new je(0L, fp.field_Lb, GameEvent.field_p);
-          pu.field_k[2] = new nf[]{new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a), new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, lm.field_h[0], LeaderEscortCondition.field_e), new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, lm.field_h[1], po.field_b)};
+          KingBlackDragonEvent.field_z[2] = new ClientUiComponent(0L, fp.field_Lb, GameEvent.field_p);
+          pu.field_k[2] = new IconTextComponent[]{new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a), new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, lm.field_h[0], LeaderEscortCondition.field_e), new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, lm.field_h[1], po.field_b)};
           if (BoundedFile.field_h > 1) {
-            KingBlackDragonEvent.field_z[3] = new je(0L, fp.field_Lb, AnimationFrameSet.field_u);
-            array$1 = new nf[1 + BoundedFile.field_h];
+            KingBlackDragonEvent.field_z[3] = new ClientUiComponent(0L, fp.field_Lb, AnimationFrameSet.field_u);
+            array$1 = new IconTextComponent[1 + BoundedFile.field_h];
             pu.field_k[3] = array$1;
-            pu.field_k[3][0] = new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
+            pu.field_k[3][0] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < BoundedFile.field_h; var17_intLifetime2++) {
-              pu.field_k[3][1 + var17_intLifetime2] = new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, (RgbSprite) null, gt.field_f[var17_intLifetime2]);
+              pu.field_k[3][1 + var17_intLifetime2] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, gt.field_f[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param1 > var17_intLifetime3; var17_intLifetime3++) {
-            KingBlackDragonEvent.field_z[var17_intLifetime3 + 4] = new je(0L, fp.field_Lb, ob.field_M[var17_intLifetime3]);
-            array$2 = new nf[rn.a(255, (int) mi.field_r[var17_intLifetime3]) + 1];
+            KingBlackDragonEvent.field_z[var17_intLifetime3 + 4] = new ClientUiComponent(0L, fp.field_Lb, ob.field_M[var17_intLifetime3]);
+            array$2 = new IconTextComponent[rn.a(255, (int) mi.field_r[var17_intLifetime3]) + 1];
             pu.field_k[var17_intLifetime3 + 4] = array$2;
-            pu.field_k[var17_intLifetime3 + 4][0] = new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
+            pu.field_k[var17_intLifetime3 + 4][0] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
             for (var18 = 0; var18 < (mi.field_r[var17_intLifetime3] & 255); var18++) {
               if (jn.field_b == null) {
                 var19_ref = null;
@@ -456,7 +456,7 @@ abstract class nl extends Widget implements gw {
               } else {
                 var20 = null;
               }
-              pu.field_k[var17_intLifetime3 + 4][1 + var18] = new nf(0L, eb.field_a, (je) null, DualLinkedNode.field_k, (RgbSprite) (var19_ref), (String) (var20));
+              pu.field_k[var17_intLifetime3 + 4][1 + var18] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; param1 + 4 > var17_intLifetime4; var17_intLifetime4++) {
@@ -466,44 +466,44 @@ abstract class nl extends Widget implements gw {
             if (pu.field_k[var17_intLifetime4] != null) {
               for (var18Lifetime1 = 0; pu.field_k[var17_intLifetime4].length > var18Lifetime1; var18Lifetime1++) {
                 if (pu.field_k[var17_intLifetime4][var18Lifetime1] != null &&
-                  null != pu.field_k[var17_intLifetime4][var18Lifetime1].field_Ob) {
-                  pu.field_k[var17_intLifetime4][var18Lifetime1].field_Ob.field_pb = 11;
+                  null != pu.field_k[var17_intLifetime4][var18Lifetime1].textComponent) {
+                  pu.field_k[var17_intLifetime4][var18Lifetime1].textComponent.field_pb = 11;
                 }
               }
             }
           }
-          lm.field_b = new je(0L, nd.field_a);
-          so.field_d = new je(0L, nd.field_a);
-          pi.field_N = new je(0L, ke.field_e);
-          pi.field_N.a(0, eq.field_h);
+          lm.field_b = new ClientUiComponent(0L, nd.field_a);
+          so.field_d = new ClientUiComponent(0L, nd.field_a);
+          pi.field_N = new ClientUiComponent(0L, ke.field_e);
+          pi.field_N.applyStyle(0, eq.field_h);
           var17 = pi.field_N;
-          pi.field_N.field_Fb = 1;
+          pi.field_N.verticalAlignment = 1;
           if (param13) {
             var22 = (iw) null;
             nl.a(-73, 39, (iw) null);
           }
-          var17.field_Eb = 1;
-          pd.field_c = new je(0L, (je) null);
-          pd.field_c.a(kd.field_F, 44);
-          pd.field_c.a(vc.field_l, 68);
-          vc.field_l.a(BattleTutorial.field_d, 106);
+          var17.horizontalAlignment = 1;
+          pd.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
+          pd.field_c.addChild(kd.field_F, 44);
+          pd.field_c.addChild(vc.field_l, 68);
+          vc.field_l.addChild(BattleTutorial.field_d, 106);
           for (var18Lifetime2 = 0; var18Lifetime2 < param1 + 4; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(2 > lm.field_e.length)) && (var18Lifetime2 != 3 ||
               !(BoundedFile.field_h <= 1))) {
-              vc.field_l.a(KingBlackDragonEvent.field_z[var18Lifetime2], 86);
+              vc.field_l.addChild(KingBlackDragonEvent.field_z[var18Lifetime2], 86);
               for (var19 = 0; var19 < pu.field_k[var18Lifetime2].length; var19++) {
                 if (pu.field_k[var18Lifetime2][var19] != null) {
-                  vc.field_l.a(pu.field_k[var18Lifetime2][var19], 48);
+                  vc.field_l.addChild(pu.field_k[var18Lifetime2][var19], 48);
                 }
               }
             }
           }
-          pd.field_c.a(lm.field_b, 77);
-          pd.field_c.a(so.field_d, 69);
-          pd.field_c.a(pi.field_N, 91);
-          bk.field_f = new je(0L, UnitModelPreview.field_m, TickCounter.field_d.toUpperCase());
-          dv.field_m = new je(0L, bw.field_h, dr.field_D.toUpperCase());
+          pd.field_c.addChild(lm.field_b, 77);
+          pd.field_c.addChild(so.field_d, 69);
+          pd.field_c.addChild(pi.field_N, 91);
+          bk.field_f = new ClientUiComponent(0L, UnitModelPreview.field_m, TickCounter.field_d.toUpperCase());
+          dv.field_m = new ClientUiComponent(0L, bw.field_h, dr.field_D.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

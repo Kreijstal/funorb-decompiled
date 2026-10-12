@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dp extends je {
+final class dp extends ClientUiComponent {
     private hd field_Tb;
-    private je field_Ob;
+    private ClientUiComponent field_Ob;
     private int field_Kb;
     static int[][] field_Vb;
     private boolean field_Nb;
@@ -12,11 +12,11 @@ final class dp extends je {
     static long field_Lb;
     private boolean field_Ib;
     private long field_Wb;
-    je field_Pb;
+    ClientUiComponent field_Pb;
     private int field_Ub;
     private StringBuilder field_Rb;
     private wo field_Sb;
-    private je field_Xb;
+    private ClientUiComponent field_Xb;
     private int field_Qb;
 
     private final int c(int param0, int param1) {
@@ -40,7 +40,7 @@ final class dp extends je {
             if (var5 > var3_int) {
               incrementValue$1 = var3_int;
               var3_int++;
-              var4 = var4 + this.field_Pb.field_Z.a(this.field_Rb.charAt(incrementValue$1));
+              var4 = var4 + this.field_Pb.font.a(this.field_Rb.charAt(incrementValue$1));
               continue;
             }
             break;
@@ -59,7 +59,7 @@ final class dp extends je {
           PortalLossCondition.a(' ', 0, this.field_Rb, param0);
           this.field_Qb = 0;
           this.field_Jb = 0;
-          this.field_Pb.field_X = this.field_Rb.toString();
+          this.field_Pb.text = this.field_Rb.toString();
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dp.A(" + param0 + ')');
         }
@@ -134,7 +134,7 @@ final class dp extends je {
         }
     }
 
-    private dp(long param0, je param1, je param2, je param3, int param4) {
+    private dp(long param0, ClientUiComponent param1, ClientUiComponent param2, ClientUiComponent param3, int param4) {
         super(param0, param1);
         StringBuilder stackIn_3_1 = null;
         StringBuilder stackIn_3_2 = null;
@@ -161,9 +161,9 @@ final class dp extends je {
         this.field_Wb = 0L;
         try {
           this.field_Ub = param4;
-          this.field_Xb = new je(0L, param2);
-          this.field_Pb = new je(0L, param3);
-          this.field_Ob = new je(0L, param3);
+          this.field_Xb = new ClientUiComponent(0L, param2);
+          this.field_Pb = new ClientUiComponent(0L, param3);
+          this.field_Ob = new ClientUiComponent(0L, param3);
           this.field_M = true;
           stackIn_3_1 = null;
           stackIn_3_2 = null;
@@ -179,13 +179,13 @@ final class dp extends je {
             stackIn_4_3 = this.field_Ub;
           }
           this.field_Rb = new StringBuilder(stackIn_4_3);
-          this.field_Pb.field_X = this.field_Rb.toString();
-          this.field_Ob.field_X = "";
+          this.field_Pb.text = this.field_Rb.toString();
+          this.field_Ob.text = "";
           this.field_Ob.field_I = "|";
-          this.field_fb = new NodeDeque();
-          this.a(this.field_Xb, 48);
-          this.a(this.field_Pb, 48);
-          this.a(this.field_Ob, 89);
+          this.children = new NodeDeque();
+          this.addChild(this.field_Xb, 48);
+          this.addChild(this.field_Pb, 48);
+          this.addChild(this.field_Ob, 89);
           this.field_Y = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -284,7 +284,7 @@ final class dp extends je {
             var4 = this.field_Rb.toString().substring(var3, this.field_Rb.length());
             PortalLossCondition.a(' ', var2_int, this.field_Rb, true);
             discarded$0 = this.field_Rb.append(var4);
-            this.field_Pb.field_X = this.field_Rb.toString();
+            this.field_Pb.text = this.field_Rb.toString();
           }
           if (param0 == 32) {
             return;
@@ -327,7 +327,7 @@ final class dp extends je {
             discarded$2 = this.field_Rb.append(var4);
           }
           var3_intLifetime1 = 109 / ((param0 - 44) / 40);
-          this.field_Pb.field_X = this.field_Rb.toString();
+          this.field_Pb.text = this.field_Rb.toString();
           this.field_Qb = this.field_Rb.length();
           this.field_Jb = this.field_Qb;
           return;
@@ -412,7 +412,7 @@ final class dp extends je {
               } else {
                 discarded$2 = this.field_Rb.append(param2);
               }
-              this.field_Pb.field_X = this.field_Rb.toString();
+              this.field_Pb.text = this.field_Rb.toString();
               this.field_Qb = this.field_Qb + 1;
               this.field_Jb = this.field_Qb;
             }
@@ -527,7 +527,7 @@ final class dp extends je {
           }
           this.p(-87);
           if (param0 <= 90) {
-            this.field_Xb = (je) null;
+            this.field_Xb = (ClientUiComponent) null;
             this.l(32);
           } else {
             this.l(32);
@@ -570,7 +570,7 @@ final class dp extends je {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.field_Xb = (je) null;
+            this.field_Xb = (ClientUiComponent) null;
           }
           stackIn_3_0 = this.field_Rb.toString();
           return stackIn_3_0;
@@ -618,7 +618,7 @@ final class dp extends je {
           dupTemp$5 = this.field_Rb.length();
           this.field_Jb = dupTemp$5;
           this.field_Qb = dupTemp$5;
-          this.field_Pb.field_X = this.field_Rb.toString();
+          this.field_Pb.text = this.field_Rb.toString();
           if (param1 == 45) {
             return;
           }
@@ -640,9 +640,9 @@ final class dp extends je {
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
         try {
-          this.a(param3, -20500, param2, param0, param4);
-          this.field_Pb.a(param3, -20500, param2, param1, 0);
-          this.field_Ob.a(param3, -20500, param2, 0, 0);
+          this.setBounds(param3, -20500, param2, param0, param4);
+          this.field_Pb.setBounds(param3, -20500, param2, param1, 0);
+          this.field_Ob.setBounds(param3, -20500, param2, 0, 0);
           this.field_Kb = -4 + param3;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dp.V(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -663,7 +663,7 @@ final class dp extends je {
         }
     }
 
-    dp(long param0, je param1, je param2, je param3) {
+    dp(long param0, ClientUiComponent param1, ClientUiComponent param2, ClientUiComponent param3) {
         this(param0, param1, param2, param3, -1);
     }
 
@@ -698,8 +698,8 @@ final class dp extends je {
           var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             boolean decompiledFrameRemainder0 = true;
-            var2_int = this.c(param0 ^ 48, AiPlanningStrategy.pointerX - (this.field_V + this.field_Pb.field_F));
-            if (this.field_yb == 1) {
+            var2_int = this.c(param0 ^ 48, AiPlanningStrategy.pointerX - (this.screenX + this.field_Pb.field_F));
+            if (this.pressedButton == 1) {
               this.b(var2_int, false);
               this.field_Ib = true;
               var3_long = vi.monotonicMillis(param0 - 95);
@@ -743,19 +743,19 @@ final class dp extends je {
               this.field_Jb = dupTemp$0;
               this.field_Qb = dupTemp$0;
             }
-            this.field_Ob.field_S = this.field_Pb.field_Z.a(this.field_Rb.toString().substring(param0, this.field_Qb));
+            this.field_Ob.x = this.field_Pb.font.a(this.field_Rb.toString().substring(param0, this.field_Qb));
             if (this.field_Jb == this.field_Qb) {
-              this.field_Xb.a(this.field_Kb, -20500, 0, 2, this.field_Ob.field_S);
+              this.field_Xb.setBounds(this.field_Kb, -20500, 0, 2, this.field_Ob.x);
             } else {
-              var3 = this.field_Pb.field_S + this.field_Pb.field_Z.a(this.field_Rb.toString().substring(0, this.field_Jb));
-              if (this.field_Ob.field_S <= var3) {
-                stackIn_32_0 = this.field_Ob.field_S;
+              var3 = this.field_Pb.x + this.field_Pb.font.a(this.field_Rb.toString().substring(0, this.field_Jb));
+              if (this.field_Ob.x <= var3) {
+                stackIn_32_0 = this.field_Ob.x;
               } else {
                 stackIn_32_0 = var3;
               }
               var4_int = stackIn_32_0;
-              var5 = Math.abs(var3 - this.field_Ob.field_S);
-              this.field_Xb.a(this.field_Kb, param0 - 20500, var5, 2, var4_int + this.field_Pb.field_F);
+              var5 = Math.abs(var3 - this.field_Ob.x);
+              this.field_Xb.setBounds(this.field_Kb, param0 - 20500, var5, 2, var4_int + this.field_Pb.field_F);
             }
             if (this.field_Sb != null) {
               if (this.field_Sb.field_g == 0) {

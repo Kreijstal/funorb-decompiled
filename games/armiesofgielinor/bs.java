@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bs {
-    static je field_a;
+    static ClientUiComponent field_a;
     static int[] field_b;
     static String field_c;
 

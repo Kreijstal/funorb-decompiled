@@ -3,7 +3,7 @@
  */
 final class CampaignProgress {
     static String field_c;
-    static je field_a;
+    static ClientUiComponent field_a;
     static int field_b;
     private CampaignResult[][] resultsByCampaign;
 
@@ -11,7 +11,7 @@ final class CampaignProgress {
         field_a = null;
         field_c = null;
         if (param0) {
-          field_a = (je) null;
+          field_a = (ClientUiComponent) null;
         }
     }
 
@@ -185,7 +185,7 @@ final class CampaignProgress {
         }
         nm.a((byte) 95, param1);
         if (gl.field_b) {
-          SoftwareRaster.d(ij.field_w.field_a.field_S, ij.field_w.field_a.field_ab, ij.field_w.field_a.field_gb, ij.field_w.field_a.field_ob);
+          SoftwareRaster.d(ij.field_w.field_a.x, ij.field_w.field_a.y, ij.field_w.field_a.width, ij.field_w.field_a.height);
           ij.field_w.field_a.b(param1, 20);
         }
         if (param0 != 2000) {

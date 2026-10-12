@@ -5,7 +5,7 @@ final class SummonEvent extends GameEvent {
     int playerId;
     private int strengthBonus;
     private boolean applied;
-    static je field_F;
+    static ClientUiComponent field_F;
     int tileX;
     static long field_G;
     static ResourceArchive field_B;

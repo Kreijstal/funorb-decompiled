@@ -4,7 +4,7 @@
 final class eq extends af {
     static String field_n;
     private String field_d;
-    static je field_h;
+    static ClientUiComponent field_h;
     static String field_k;
     static int pointerButtonMask;
     static String field_e;

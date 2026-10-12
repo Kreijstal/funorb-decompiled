@@ -6,7 +6,7 @@ final class ov {
     static int field_e;
     static rn field_h;
     static String field_f;
-    static je field_i;
+    static ClientUiComponent field_i;
     static String field_c;
     static ClientConnectionState connectionState;
     static nr field_m;

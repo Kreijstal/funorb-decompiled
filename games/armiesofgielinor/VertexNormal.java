@@ -20,7 +20,7 @@ final class VertexNormal {
         boolean stackIn_41_4 = false;
         int stackIn_44_0 = 0;
         int stackIn_60_0 = 0;
-        je stackIn_96_0;
+        ClientUiComponent stackIn_96_0;
         int stackIn_96_1;
         int stackIn_96_2;
         int stackIn_96_3;
@@ -41,11 +41,11 @@ final class VertexNormal {
         Object var11 = null;
         of var12 = null;
         int var13 = 0;
-        je var14 = null;
-        je var15 = null;
-        je var16 = null;
-        je var17 = null;
-        je var18 = null;
+        ClientUiComponent var14 = null;
+        ClientUiComponent var15 = null;
+        ClientUiComponent var16 = null;
+        ClientUiComponent var17 = null;
+        ClientUiComponent var18 = null;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
@@ -131,7 +131,7 @@ final class VertexNormal {
           stackIn_41_4 = (param4 == PointerInputHandler.field_b);
           stackIn_44_0 = (!((dn) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4, 0, 2)) ? 0 : 1;
           var9Lifetime1 = stackIn_44_0;
-          var10 = param4.field_Jb.field_fb;
+          var10 = param4.field_Jb.children;
           var11 = null;
           if (param1 != 255) {
             return;
@@ -139,51 +139,51 @@ final class VertexNormal {
           var12 = (of) (var10.first((byte) 124));
           while (var12 != null) {
             var13 = 0;
-            if (var12.field_fb == null) {
-              var12.field_ac = new je(0L, IsaacRandom.field_i);
-              var12.a(var12.field_ac, 106);
-              var12.field_Tb = new je(0L, ws.field_P);
+            if (var12.children == null) {
+              var12.field_ac = new ClientUiComponent(0L, IsaacRandom.field_i);
+              var12.addChild(var12.field_ac, 106);
+              var12.field_Tb = new ClientUiComponent(0L, ws.field_P);
               if (fh.field_c) {
-                var12.a(var12.field_Tb, param1 ^ 157);
+                var12.addChild(var12.field_Tb, param1 ^ 157);
               }
-              var12.field_Tb.field_Eb = 2;
-              var12.field_fc = new je(0L, eq.field_h);
-              var12.a(var12.field_fc, 62);
-              var12.i(-10027);
-              var12.field_dc = new je(0L, QuickChatPhraseRepository.field_d);
-              var12.a(var12.field_dc, param1 - 194);
-              var12.field_ec = new je(0L, pt.field_X);
-              var12.a(var12.field_ec, 90);
+              var12.field_Tb.horizontalAlignment = 2;
+              var12.field_fc = new ClientUiComponent(0L, eq.field_h);
+              var12.addChild(var12.field_fc, 62);
+              var12.useParentClipForDescendants(-10027);
+              var12.field_dc = new ClientUiComponent(0L, QuickChatPhraseRepository.field_d);
+              var12.addChild(var12.field_dc, param1 - 194);
+              var12.field_ec = new ClientUiComponent(0L, pt.field_X);
+              var12.addChild(var12.field_ec, 90);
               var13 = 1;
             }
-            var12.field_ac.field_X = null;
+            var12.field_ac.text = null;
             var14 = var12.field_ac;
-            var12.field_ac.field_ob = 0;
-            var12.field_Tb.field_X = null;
-            var14.field_gb = 0;
-            var12.field_Tb.field_ob = 0;
+            var12.field_ac.height = 0;
+            var12.field_Tb.text = null;
+            var14.width = 0;
+            var12.field_Tb.height = 0;
             var15 = var12.field_Tb;
-            var15.field_gb = 0;
-            var12.field_dc.field_X = null;
-            var12.field_dc.field_ob = 0;
+            var15.width = 0;
+            var12.field_dc.text = null;
+            var12.field_dc.height = 0;
             var16 = var12.field_dc;
-            var16.field_gb = 0;
-            var12.field_ec.field_X = null;
-            var12.field_ec.field_ob = 0;
+            var16.width = 0;
+            var12.field_ec.text = null;
+            var12.field_ec.height = 0;
             var17 = var12.field_ec;
-            var17.field_gb = 0;
-            var12.field_fc.field_X = null;
-            var12.field_fc.field_ob = 0;
+            var17.width = 0;
+            var12.field_fc.text = null;
+            var12.field_fc.height = 0;
             var18 = var12.field_fc;
-            var18.field_gb = 0;
-            var12.field_gb = param4.field_Jb.field_gb;
+            var18.width = 0;
+            var12.width = param4.field_Jb.width;
             var19 = 0;
             var32 = var12.field_Yb;
             var21 = 72;
             if (MapTile.field_f == param4) {
               var21 += 42;
             }
-            var33 = BitmapFont.a(var12.field_ac.field_Z, var32, var21);
+            var33 = BitmapFont.a(var12.field_ac.font, var32, var21);
             var20 = var33;
             stackIn_60_0 = (var33.equals(var12.field_Yb)) ? 0 : 1;
             var22 = stackIn_60_0;
@@ -194,7 +194,7 @@ final class VertexNormal {
             } else {
               var20 = "<img=" + (var12.field_Qb - (4 - PacketBuffer.field_n)) + ">" + var33;
             }
-            var12.field_ac.field_X = var20;
+            var12.field_ac.text = var20;
             if (!var12.k(0)) {
               var23_int = 16764006;
               var24_int = 16777215;
@@ -220,54 +220,54 @@ final class VertexNormal {
               var12.field_dc.field_W = var24_int;
               if (bu.field_a != param4) {
                 if (var12.field_Wb) {
-                  var12.field_ac.field_X = fo.a(param1 ^ 4671, AiPlanningStrategy.field_g, new String[]{var20});
-                  var12.field_ec.field_X = ac.field_s;
+                  var12.field_ac.text = fo.a(param1 ^ 4671, AiPlanningStrategy.field_g, new String[]{var20});
+                  var12.field_ec.text = ac.field_s;
                 } else {
                   if (var12.field_Ub) {
-                    var12.field_ac.field_X = fo.a(param1 + 4545, DeployEvent.field_G, new String[]{var20});
-                    var12.field_dc.field_X = LeaderEscortCondition.field_g;
-                    var12.field_ec.field_X = SpellConfirmationDialog.field_l;
+                    var12.field_ac.text = fo.a(param1 + 4545, DeployEvent.field_G, new String[]{var20});
+                    var12.field_dc.text = LeaderEscortCondition.field_g;
+                    var12.field_ec.text = SpellConfirmationDialog.field_l;
                   } else {
-                    var12.field_dc.field_X = bq.field_b;
+                    var12.field_dc.text = bq.field_b;
                   }
                 }
               } else {
                 if (!vu.field_M.field_kc) {
-                  var12.field_ec.field_X = bq.field_a;
+                  var12.field_ec.text = bq.field_a;
                 }
               }
               var25_int = 0;
               if (null != vu.field_M &&
                 vu.b(false) &&
                 oh.field_H != var12.field_Pb) {
-                if (null != var12.field_dc.field_X) {
-                  var26 = var12.field_dc.j(104) + mi.field_l * 2;
-                  var12.field_dc.a(jn.field_d, -20500, var26, var19, var25_int);
+                if (null != var12.field_dc.text) {
+                  var26 = var12.field_dc.getPreferredWidth(104) + mi.field_l * 2;
+                  var12.field_dc.setBounds(jn.field_d, -20500, var26, var19, var25_int);
                   var25_int = var25_int + var26;
                 }
-                if (var12.field_ec.field_X != null) {
+                if (var12.field_ec.text != null) {
                   if (bu.field_a != param4) {
-                    var26Lifetime2 = var12.field_ec.j(param1 - 328) + mi.field_l * 2;
+                    var26Lifetime2 = var12.field_ec.getPreferredWidth(param1 - 328) + mi.field_l * 2;
                   } else {
                     var26Lifetime2 = 40;
                   }
-                  var12.field_ec.a(jn.field_d, param1 - 20755, var26Lifetime2, var19, var25_int);
+                  var12.field_ec.setBounds(jn.field_d, param1 - 20755, var26Lifetime2, var19, var25_int);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
               stackIn_96_0 = var12.field_ac;
               stackIn_96_1 = jn.field_d;
               stackIn_96_2 = -20500;
-              stackIn_96_3 = -var25_int + var12.field_gb;
+              stackIn_96_3 = -var25_int + var12.width;
               if (fh.field_c) {
                 stackIn_97_4 = 42;
               } else {
                 stackIn_97_4 = 0;
               }
-              ((je) (Object) stackIn_96_0).a(stackIn_96_1, stackIn_96_2, stackIn_96_3 - stackIn_97_4, var19, var25_int);
-              var12.field_Tb.field_X = Integer.toString(var12.field_Sb);
-              var12.field_Tb.a(jn.field_d, -20500, 40, var19, var12.field_gb - 40);
-              if (var12.field_ac.field_eb &&
+              ((ClientUiComponent) (Object) stackIn_96_0).setBounds(stackIn_96_1, stackIn_96_2, stackIn_96_3 - stackIn_97_4, var19, var25_int);
+              var12.field_Tb.text = Integer.toString(var12.field_Sb);
+              var12.field_Tb.setBounds(jn.field_d, -20500, 40, var19, var12.width - 40);
+              if (var12.field_ac.heldButtonMatches &&
                 var22 != 0) {
                 ad.field_I = var12.field_Yb;
                 if (DeployRequest.field_v != null &&
@@ -275,7 +275,7 @@ final class VertexNormal {
                   ad.field_I = ad.field_I + " - " + DeployRequest.field_v[var12.field_Qb];
                 }
               } else {
-                if (var12.field_ac.field_eb &&
+                if (var12.field_ac.heldButtonMatches &&
                   DeployRequest.field_v != null &&
                   null != DeployRequest.field_v[var12.field_Qb]) {
                   ad.field_I = DeployRequest.field_v[var12.field_Qb];
@@ -289,24 +289,24 @@ final class VertexNormal {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_fc.field_Z.c(var23, -mi.field_l + (var12.field_gb - mi.field_l));
-              var12.field_fc.field_C = var12.field_Rb * 256 / qd.field_K;
-              var12.field_fc.field_X = var23;
-              var12.field_fc.a(var24_intLifetime1 * jn.field_d, -20500, var12.field_gb - 2 * mi.field_l, var19, mi.field_l);
+              var24_intLifetime1 = var12.field_fc.font.c(var23, -mi.field_l + (var12.width - mi.field_l));
+              var12.field_fc.opacity = var12.field_Rb * 256 / qd.field_K;
+              var12.field_fc.text = var23;
+              var12.field_fc.setBounds(var24_intLifetime1 * jn.field_d, -20500, var12.width - 2 * mi.field_l, var19, mi.field_l);
               var19 = var19 + jn.field_d * var24_intLifetime1;
             }
             if (var9Lifetime1 == 0) {
-              var12.field_nb = var19 - var12.field_ob;
+              var12.pendingHeightDelta = var19 - var12.height;
             }
             if (var13 != 0) {
-              param4.field_Jb.a(var12, true, 2, (je) (var11));
+              param4.field_Jb.a(var12, true, 2, (ClientUiComponent) (var11));
             }
-            if (var12.field_yb != 0 &&
+            if (var12.pressedButton != 0 &&
               !var12.k(0)) {
-              if (var12.field_dc.field_yb != 0) {
+              if (var12.field_dc.pressedButton != 0) {
                 ActionSpell.a(var12.field_Pb, param3, 6);
               } else {
-                if (0 == var12.field_ec.field_yb) {
+                if (0 == var12.field_ec.pressedButton) {
                   bk.a(false, 0, BattleTutorial.pointerPressX, 0, var12, param4, TeleportAction.pointerPressY);
                 } else {
                   te.a(param3, var12.field_Pb, (byte) 97);
@@ -314,7 +314,7 @@ final class VertexNormal {
               }
             }
             var11 = var12;
-            if (var12.field_jb) {
+            if (var12.hovered) {
               if (var12.k(0)) {
                 var12 = (of) (var10.next((byte) 123));
                 continue;

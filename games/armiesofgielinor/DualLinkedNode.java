@@ -7,7 +7,7 @@ class DualLinkedNode extends IntrusiveNode {
     static int field_t;
     static boolean field_o;
     long secondaryKey;
-    static je field_k;
+    static ClientUiComponent field_k;
     DualLinkedNode secondaryNext;
     static int field_r;
     static String field_n;

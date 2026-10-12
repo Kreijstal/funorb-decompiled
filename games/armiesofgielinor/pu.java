@@ -25,7 +25,7 @@ final class pu {
     short[] field_x;
     int[] field_v;
     static int[] field_B;
-    static nf[][] field_k;
+    static IconTextComponent[][] field_k;
     static String field_h;
     int field_L;
     static String field_G;
@@ -47,7 +47,7 @@ final class pu {
     short[] field_y;
 
     public static void a(byte param0) {
-        field_k = (nf[][]) null;
+        field_k = (IconTextComponent[][]) null;
         field_h = null;
         field_G = null;
         if (param0 > -63) {

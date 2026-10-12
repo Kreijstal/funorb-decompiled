@@ -9,7 +9,7 @@ final class cp {
     static String field_c;
     static String[] field_b;
     static String field_f;
-    static je field_d;
+    static ClientUiComponent field_d;
 
     final static EventPresenter a(GameplayController param0, int param1, Battlefield param2, boolean param3, GameEvent param4, BattleUnitRenderer param5) {
         EventPresenter var6 = null;

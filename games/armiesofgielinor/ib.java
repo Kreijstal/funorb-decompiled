@@ -466,20 +466,20 @@ final class ib extends mk {
         if (!BattleTutorial.field_h) {
           return;
         }
-        OwnerChangeEvent.field_E.a(true, param1);
-        int var4 = qd.field_I.d((byte) 91) ? 1 : 0;
+        OwnerChangeEvent.field_E.updateInput(true, param1);
+        int var4 = qd.field_I.hasPressedItem((byte) 91) ? 1 : 0;
         if (DeployEvent.pointerPressButton != 0 &&
           var4 == 0) {
           param1 = false;
           DelayedPacket.e(-3);
         }
         if (param1) {
-          qd.field_I.a(param3, (byte) -42, param2);
+          qd.field_I.advanceMenu(param3, (byte) -42, param2);
         }
         if (var4 != 0) {
-          OwnerChangeEvent.field_E.a(true, param1);
+          OwnerChangeEvent.field_E.updateInput(true, param1);
         }
-        int var5 = qd.field_I.e((byte) -123) + qd.field_I.field_V;
+        int var5 = qd.field_I.getOpenMenuWidth((byte) -123) + qd.field_I.screenX;
         if (var5 > 640) {
           TelefragEvent.field_z = TelefragEvent.field_z + 5;
         } else {

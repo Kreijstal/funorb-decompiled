@@ -9,9 +9,9 @@ final class lw extends pt {
     static String field_pb;
     static String field_kb;
 
-    final static void a(byte param0, mq param1) {
+    final static void a(byte param0, QuickChatMenu param1) {
         try {
-          OwnerChangeEvent.field_E.a(param1, 80);
+          OwnerChangeEvent.field_E.addChild(param1, 80);
           if (param0 != 79) {
             field_nb = (String) null;
           }
@@ -48,8 +48,8 @@ final class lw extends pt {
         if (param0 == 0) {
           return new nv(0, 0, t.field_c.field_a, 0, (WidgetPainter) null, t.field_c.field_k, t.field_c.field_p, t.field_c.field_a, t.field_c.field_a, t.field_c.field_b, t.field_c.field_n, false, true, 32768, 0);
         }
-        mq var2 = (mq) null;
-        lw.a((byte) -16, (mq) null);
+        QuickChatMenu var2 = (QuickChatMenu) null;
+        lw.a((byte) -16, (QuickChatMenu) null);
         return new nv(0, 0, t.field_c.field_a, 0, (WidgetPainter) null, t.field_c.field_k, t.field_c.field_p, t.field_c.field_a, t.field_c.field_a, t.field_c.field_b, t.field_c.field_n, false, true, 32768, 0);
     }
 

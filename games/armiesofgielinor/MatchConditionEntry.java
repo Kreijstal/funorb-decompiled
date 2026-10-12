@@ -120,7 +120,7 @@ final class MatchConditionEntry extends IntrusiveNode {
             var3 = var1.readNullTerminatedString(1);
             vl.field_p = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(0);
-            im.b(var4, param0 - 27499);
+            ClientUiNode.b(var4, param0 - 27499);
             return;
           }
           if (DiskCacheRequest.field_K == null) {

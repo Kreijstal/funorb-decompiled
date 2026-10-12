@@ -212,11 +212,11 @@ final class TutorialController {
                 ts.currentSpellMenu = ih.field_p;
                 wj.field_q = 0;
               }
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(123, im.field_v[2]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(123, ClientUiNode.field_v[2]);
             }
             if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 171), db.a(true, 286), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
               tg.field_k = 0;
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(121, im.field_v[2]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(121, ClientUiNode.field_v[2]);
             }
           }
           if (KingBlackDragonEvent.field_A == 0) {
@@ -279,7 +279,7 @@ final class TutorialController {
               }
               if (IterableDualNodeDeque.isPointerInBounds(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_70_3, MatchConditionEntry.a(e.field_b[0].pixelHeight + 19, (byte) 94))) {
                 CipherPacketBuffer.a(true, -9, 1, 0);
-                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, im.field_v[2]);
+                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, ClientUiNode.field_v[2]);
                 return;
               }
               if (tg.field_k == 0) {
@@ -292,7 +292,7 @@ final class TutorialController {
                     vl.outgoingPacket.writeShort(true, ev.field_d + 2000);
                     pg.playerProfile.spellQuantities[ev.field_d] = pg.playerProfile.spellQuantities[ev.field_d] + 1;
                     this.a((byte) 48, ev.field_d, (SpellMenuGroup) null);
-                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(58, im.field_v[2]);
+                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(58, ClientUiNode.field_v[2]);
                   }
                   return;
                 }
@@ -367,7 +367,7 @@ final class TutorialController {
                     TelepopEvent.field_D = true;
                     this.a((byte) 90, ev.field_d, (SpellMenuGroup) null);
                     RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(113, MoveAttackRequest.field_v[45]);
-                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(124, im.field_v[12]);
+                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(124, ClientUiNode.field_v[12]);
                     return;
                   }
                 }
@@ -840,8 +840,8 @@ final class TutorialController {
           if (decompiledFrameRemainder0) {
             if (AnimationFrameSet.field_z.field_t != null) {
               var7 = wd.field_l;
-              var8 = AnimationFrameSet.field_z.field_t[nf.field_Mb];
-              var9 = AnimationFrameSet.field_z.field_n[nf.field_Mb];
+              var8 = AnimationFrameSet.field_z.field_t[IconTextComponent.field_Mb];
+              var9 = AnimationFrameSet.field_z.field_n[IconTextComponent.field_Mb];
               var10 = 0;
               var11 = 0;
               scanLoop1: while (true) {
@@ -977,7 +977,7 @@ final class TutorialController {
               ts.currentSpellMenu = param0;
               this.a((byte) 62, ev.field_d, (SpellMenuGroup) null);
               RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(59, MoveAttackRequest.field_v[45]);
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(38, im.field_v[12]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(38, ClientUiNode.field_v[12]);
               stackIn_42_0 = -1;
               return stackIn_42_0;
             }
@@ -1028,7 +1028,7 @@ final class TutorialController {
         try {
           var4_int = MoveEvent.tutorialStageItems[this.tutorialStage][param2];
           if (this.selectionState.hasActivationInput((byte) 124)) {
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(64, im.field_v[2]);
+            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(64, ClientUiNode.field_v[2]);
           }
           if (param1 != 0) {
             this.b(false);
@@ -1837,7 +1837,7 @@ final class TutorialController {
                                                                       uk.field_n <= pn.field_h) {
                                                                       return;
                                                                     }
-                                                                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(33, im.field_v[0]);
+                                                                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(33, ClientUiNode.field_v[0]);
                                                                     pn.field_h = 20 + uk.field_n;
                                                                     if (var9 == 0) {
                                                                       return;
@@ -1969,7 +1969,7 @@ final class TutorialController {
                                                   if (!this.selectionState.hasActivationInput((byte) 38)) {
                                                     return;
                                                   }
-                                                  nf.field_Mb = 0;
+                                                  IconTextComponent.field_Mb = 0;
                                                   if (var9 == 0) {
                                                     return;
                                                   }
@@ -1977,7 +1977,7 @@ final class TutorialController {
                                                 if (!this.selectionState.hasActivationInput((byte) 74)) {
                                                   return;
                                                 }
-                                                nf.field_Mb = 1;
+                                                IconTextComponent.field_Mb = 1;
                                                 if (var9 == 0) {
                                                   return;
                                                 }
@@ -2437,7 +2437,7 @@ final class TutorialController {
             ko.pointerY > MatchConditionEntry.a(330, (byte) 94) &&
             ko.pointerY < MatchConditionEntry.a(414, (byte) 94)) {
             ah.localCoat.setColour(wh.field_a, (AiPlanningStrategy.pointerX - db.a(true, 40)) / 21 + 16 * ((ko.pointerY - MatchConditionEntry.a(330, (byte) 94)) / 42), (byte) -110);
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, im.field_v[10]);
+            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, ClientUiNode.field_v[10]);
             return;
           }
           var2_int = fs.a(ko.pointerY, 24340, db.a(true, 380), MatchConditionEntry.a(60, (byte) 94), AiPlanningStrategy.pointerX, 224, 352);
@@ -2450,12 +2450,12 @@ final class TutorialController {
             stackIn_26_2 = !(BufferedSocket.field_j < 2);
             if (BufferedFile.a(stackIn_25_0, stackIn_25_1, stackIn_26_2, var2_int, -1208926000, BoundedFile.field_e[0])) {
               ah.localCoat.setPart(73, var2_int, wh.field_a);
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(121, im.field_v[9]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(121, ClientUiNode.field_v[9]);
               if (var5 == 0) {
                 return;
               }
             }
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, im.field_v[5]);
+            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, ClientUiNode.field_v[5]);
             return;
           }
           if (-3 == var2_int) {
@@ -2482,7 +2482,7 @@ final class TutorialController {
                   kd.field_X = wh.field_a;
                   dg.b((byte) -61);
                 }
-                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(33, im.field_v[2]);
+                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(33, ClientUiNode.field_v[2]);
                 return;
               }
               var4++;
@@ -2501,7 +2501,7 @@ final class TutorialController {
               dd.field_e = 0;
               dg.b((byte) -61);
             }
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(68, im.field_v[2]);
+            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(68, ClientUiNode.field_v[2]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3263,7 +3263,7 @@ final class TutorialController {
           if (99 == rs.field_q) {
             if (!(this.selectionState.selectedIndex >= 0) ||
               !(this.selectionState.selectedIndex <= 1)) {
-              this.selectionState.selectIndex(nf.field_Mb, false);
+              this.selectionState.selectIndex(IconTextComponent.field_Mb, false);
               if (var3 != 0) {
                 this.selectionState.selectIndex(2, false);
               }
@@ -3275,10 +3275,10 @@ final class TutorialController {
             if (2 != this.selectionState.selectedIndex) {
               this.selectionState.selectIndex(2, false);
               if (var3 != 0) {
-                this.selectionState.selectIndex(nf.field_Mb, false);
+                this.selectionState.selectIndex(IconTextComponent.field_Mb, false);
               }
             } else {
-              this.selectionState.selectIndex(nf.field_Mb, false);
+              this.selectionState.selectIndex(IconTextComponent.field_Mb, false);
             }
           }
           this.selectionState.pollKeyForButtonState(0);
@@ -3953,7 +3953,7 @@ final class TutorialController {
                 vs.field_f = tf.field_k;
                 li.field_q = -1 + var2_int;
                 tf.field_k = 256;
-                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, im.field_v[11]);
+                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(91, ClientUiNode.field_v[11]);
                 vf.field_f = jq.field_F;
                 kq.field_L = 0;
                 jq.field_F = -1;
@@ -4012,7 +4012,7 @@ final class TutorialController {
               } else {
                 this.a((String) null, -1, ve.a((byte) 13, wf.field_q[li.field_q + 1]), (String) null, (byte) -55, GlobalSpell.field_l[li.field_q + 1]);
               }
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(100, im.field_v[12]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(100, ClientUiNode.field_v[12]);
               return;
             }
           }
@@ -4044,14 +4044,14 @@ final class TutorialController {
                   }
                   break;
                 }
-                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(stackIn_72_0, im.field_v[14]);
+                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(stackIn_72_0, ClientUiNode.field_v[14]);
                 if ((var8 != 0) && (jq.field_F > -1 &&
                   0 < pg.playerProfile.unitUnlockMasks[li.field_q + 1] &&
                   0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << jq.field_F) &&
                   pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[jq.field_F][11])) {
                   vl.outgoingPacket.writeCipheredOpcode(32161, 70);
                   vl.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][jq.field_F]);
-                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, im.field_v[14]);
+                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, ClientUiNode.field_v[14]);
                   pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
                 }
               }
@@ -4062,7 +4062,7 @@ final class TutorialController {
                 pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[jq.field_F][11]) {
                 vl.outgoingPacket.writeCipheredOpcode(32161, 70);
                 vl.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][jq.field_F]);
-                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, im.field_v[14]);
+                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(62, ClientUiNode.field_v[14]);
                 pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
               }
             }
@@ -4692,7 +4692,7 @@ final class TutorialController {
                   if (li.field_q == 6) {
                     li.field_q = -1;
                   }
-                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(126, im.field_v[11]);
+                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(126, ClientUiNode.field_v[11]);
                   if (var4 == 0) {
                     continue;
                   }
@@ -4710,7 +4710,7 @@ final class TutorialController {
                 this.selectionState.updatePointerSelection(0, this.b(TeleportAction.pointerPressY, BattleTutorial.pointerPressX, 31), ac.field_p);
               }
               if (~pn.field_m != ~ac.field_p) {
-                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(90, im.field_v[1]);
+                RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(90, ClientUiNode.field_v[1]);
                 pn.field_m = ac.field_p;
               }
               if (this.selectionState.selectedIndex != -1) {
@@ -4753,7 +4753,7 @@ final class TutorialController {
                   this.tutorialStage != 21) {
                   if (this.tutorialStage == 18) {
                     if (GameplayController.field_J != na.field_F) {
-                      RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(37, im.field_v[1]);
+                      RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(37, ClientUiNode.field_v[1]);
                       GameplayController.field_J = na.field_F;
                     }
                     if (KingBlackDragonEvent.field_A > 0) {
@@ -4852,7 +4852,7 @@ final class TutorialController {
                       if ((decompiledFrameRemainder3) &&
                         (decompiledFrameRemainder3 = (this.tutorialStage == 13))) {
                         if (na.field_F != GameplayController.field_J) {
-                          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(65, im.field_v[1]);
+                          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(65, ClientUiNode.field_v[1]);
                           GameplayController.field_J = na.field_F;
                         }
                         ul.a((byte) -102, 224, db.a(true, 380), ro.pointerButton, ko.pointerY, 352, AiPlanningStrategy.pointerX, MatchConditionEntry.a(60, (byte) 94));
@@ -4877,7 +4877,7 @@ final class TutorialController {
                         GlobalSpell.field_h = GlobalSpell.field_h - var3;
                       }
                       if (GameplayController.field_J != na.field_F) {
-                        RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(116, im.field_v[1]);
+                        RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(116, ClientUiNode.field_v[1]);
                         GameplayController.field_J = na.field_F;
                       }
                       decompiledFrameRemainder3 = (var4 != 0);
@@ -5367,7 +5367,7 @@ final class TutorialController {
         try {
           lm.field_c = this.d(AiPlanningStrategy.pointerX, -1, ko.pointerY);
           if (1 == DeployEvent.pointerPressButton) {
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(94, im.field_v[2]);
+            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(94, ClientUiNode.field_v[2]);
             var2_int = this.d(BattleTutorial.pointerPressX, -1, TeleportAction.pointerPressY);
             if (vs.field_a == var2_int) {
               vs.field_a = -1;

@@ -112,14 +112,14 @@ final class dd {
             return 80;
           }
         } else {
-          if (nf.field_Nb != null) {
-            if (!nf.field_Nb.ensureIndex((byte) 82)) {
+          if (IconTextComponent.field_Nb != null) {
+            if (!IconTextComponent.field_Nb.ensureIndex((byte) 82)) {
               return 14;
             }
-            if (!nf.field_Nb.containsGroupName((byte) -128, "")) {
+            if (!IconTextComponent.field_Nb.containsGroupName((byte) -128, "")) {
               return 29;
             }
-            if (!nf.field_Nb.ensureGroupAvailableByName(28979, "")) {
+            if (!IconTextComponent.field_Nb.ensureGroupAvailableByName(28979, "")) {
               return 29;
             }
           }

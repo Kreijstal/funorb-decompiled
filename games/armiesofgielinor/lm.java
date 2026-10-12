@@ -6,7 +6,7 @@ final class lm {
     static int[] field_e;
     static RgbSprite[] field_h;
     static String field_f;
-    static je field_b;
+    static ClientUiComponent field_b;
     static String field_a;
     static int field_c;
     static int field_g;

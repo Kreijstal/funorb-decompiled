@@ -3419,7 +3419,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "INTRO_3");
                 if (null != var2) {
-                  je.field_lb = uu.a(var2, (byte) 55);
+                  ClientUiComponent.field_lb = uu.a(var2, (byte) 55);
                 }
                 var2 = fk.a(false, "INTRO_4");
                 if (var2 != null) {
@@ -3645,7 +3645,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "MESSAGE_DEAD");
                 if (var2 != null) {
-                  mq.field_Mb = uu.a(var2, (byte) -126);
+                  QuickChatMenu.field_Mb = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "MESSAGE_DRAW");
                 if (null != var2) {
@@ -4979,7 +4979,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_LANDSCAPE");
                 if (null != var2) {
-                  nf.field_Pb = uu.a(var2, (byte) -109);
+                  IconTextComponent.field_Pb = uu.a(var2, (byte) -109);
                 }
                 var2 = fk.a(false, "TTREED_INFLUENCE");
                 if (var2 != null) {

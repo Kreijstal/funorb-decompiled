@@ -50,7 +50,7 @@ final class jg extends IntrusiveNode {
     final static void a(int param0, boolean param1, boolean param2, int param3, int param4, int param5, int param6) {
         int var18_int = 0;
         int var22_int = 0;
-        je dupTemp$0 = null;
+        ClientUiComponent dupTemp$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
@@ -61,19 +61,19 @@ final class jg extends IntrusiveNode {
         int stackIn_3_3;
         boolean stackIn_4_4;
         au stackIn_10_0;
-        je stackIn_10_1;
-        je stackIn_10_2;
+        ClientUiComponent stackIn_10_1;
+        ClientUiComponent stackIn_10_2;
         long stackIn_10_3;
-        je stackIn_11_1 = null;
-        je stackIn_11_2 = null;
-        je stackIn_11_4 = null;
+        ClientUiComponent stackIn_11_1 = null;
+        ClientUiComponent stackIn_11_2 = null;
+        ClientUiComponent stackIn_11_4 = null;
         au stackIn_31_0;
-        je stackIn_31_1;
-        je stackIn_31_2;
+        ClientUiComponent stackIn_31_1;
+        ClientUiComponent stackIn_31_2;
         long stackIn_31_3;
-        je stackIn_32_1;
-        je stackIn_32_2;
-        je stackIn_32_4;
+        ClientUiComponent stackIn_32_1;
+        ClientUiComponent stackIn_32_2;
+        ClientUiComponent stackIn_32_4;
         int stackIn_36_0 = 0;
         int stackIn_72_0 = 0;
         int stackIn_83_0 = 0;
@@ -93,19 +93,19 @@ final class jg extends IntrusiveNode {
         au var12 = null;
         int var13 = 0;
         int var14 = 0;
-        je var18 = null;
-        je var19 = null;
-        je var20 = null;
-        je var21 = null;
-        je var22 = null;
-        je var23 = null;
-        je var24 = null;
-        je var25 = null;
-        je var26 = null;
-        je var27 = null;
-        je var28 = null;
-        je var29 = null;
-        je var30 = null;
+        ClientUiComponent var18 = null;
+        ClientUiComponent var19 = null;
+        ClientUiComponent var20 = null;
+        ClientUiComponent var21 = null;
+        ClientUiComponent var22 = null;
+        ClientUiComponent var23 = null;
+        ClientUiComponent var24 = null;
+        ClientUiComponent var25 = null;
+        ClientUiComponent var26 = null;
+        ClientUiComponent var27 = null;
+        ClientUiComponent var28 = null;
+        ClientUiComponent var29 = null;
+        ClientUiComponent var30 = null;
         int var31 = 0;
         String var32 = null;
         int var33_int = 0;
@@ -122,13 +122,13 @@ final class jg extends IntrusiveNode {
         int var40 = 0;
         int var41 = 0;
         RgbSprite var42 = null;
-        je var43 = null;
-        je var44 = null;
-        je var45 = null;
-        je var46 = null;
-        je var47 = null;
-        je var48 = null;
-        je var49 = null;
+        ClientUiComponent var43 = null;
+        ClientUiComponent var44 = null;
+        ClientUiComponent var45 = null;
+        ClientUiComponent var46 = null;
+        ClientUiComponent var47 = null;
+        ClientUiComponent var48 = null;
+        ClientUiComponent var49 = null;
         Object var50 = null;
         RgbSprite var50_ref = null;
         Object var51 = null;
@@ -159,28 +159,28 @@ final class jg extends IntrusiveNode {
           stackIn_3_3 = jn.field_d * 2 + 4;
           stackIn_4_4 = (CipherPacketBuffer.field_x == PointerInputHandler.field_b);
           var7_int = ((dn) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param0, 2) ? 1 : 0;
-          var8 = CipherPacketBuffer.field_x.field_Jb.field_fb;
+          var8 = CipherPacketBuffer.field_x.field_Jb.children;
           var9 = vi.monotonicMillis(-118);
           var11 = null;
           var12 = (au) (var8.first((byte) 120));
           while (var12 != null) {
             var13 = 0;
-            if (null == var12.field_fb) {
-              var12.field_Xb = new je(0L, ws.field_P);
+            if (null == var12.children) {
+              var12.field_Xb = new ClientUiComponent(0L, ws.field_P);
               var14 = param4 | param5;
-              var12.a(var12.field_Xb, param0 + 107);
-              var12.field_Xb.field_Eb = 1;
-              var12.field_lc = new je(0L, IsaacRandom.field_i);
-              var12.a(var12.field_lc, 102);
-              var12.field_cc = new je(0L, ws.field_P);
-              var12.a(var12.field_cc, 59);
+              var12.addChild(var12.field_Xb, param0 + 107);
+              var12.field_Xb.horizontalAlignment = 1;
+              var12.field_lc = new ClientUiComponent(0L, IsaacRandom.field_i);
+              var12.addChild(var12.field_lc, 102);
+              var12.field_cc = new ClientUiComponent(0L, ws.field_P);
+              var12.addChild(var12.field_cc, 59);
               var12.field_cc.field_O = 0;
-              var12.field_hc = new je(0L, ws.field_P);
-              var12.a(var12.field_hc, 61);
+              var12.field_hc = new ClientUiComponent(0L, ws.field_P);
+              var12.addChild(var12.field_hc, 61);
               var12.field_hc.field_O = 0;
-              var12.field_Zb = new je(0L, IsaacRandom.field_i);
-              var12.a(var12.field_Zb, 78);
-              var12.field_Zb.field_Eb = 2;
+              var12.field_Zb = new ClientUiComponent(0L, IsaacRandom.field_i);
+              var12.addChild(var12.field_Zb, 78);
+              var12.field_Zb.horizontalAlignment = 2;
               stackIn_10_0 = var12;
               stackIn_10_1 = null;
               stackIn_10_2 = null;
@@ -194,38 +194,38 @@ final class jg extends IntrusiveNode {
                 stackIn_11_2 = null;
                 stackIn_11_4 = ws.field_P;
               }
-              stackIn_10_0.field_oc = new je(stackIn_10_3, stackIn_11_4);
-              var12.a(var12.field_oc, param0 ^ 63);
-              var12.field_Qb = new je[tq.field_b];
-              var12.field_ic = new je(0L, (je) null);
+              stackIn_10_0.field_oc = new ClientUiComponent(stackIn_10_3, stackIn_11_4);
+              var12.addChild(var12.field_oc, param0 ^ 63);
+              var12.field_Qb = new ClientUiComponent[tq.field_b];
+              var12.field_ic = new ClientUiComponent(0L, (ClientUiComponent) null);
               if (0 != (var14 & 1 << ev.field_c)) {
-                var12.field_oc.a(var12.field_ic, param0 + 62);
+                var12.field_oc.addChild(var12.field_ic, param0 + 62);
               }
-              var12.field_ec = new je(0L, (je) null);
+              var12.field_ec = new ClientUiComponent(0L, (ClientUiComponent) null);
               if ((1 << ai.field_M & var14) != 0) {
-                var12.field_oc.a(var12.field_ec, param0 + 59);
+                var12.field_oc.addChild(var12.field_ec, param0 + 59);
               }
-              var12.field_fc = new je(0L, (je) null);
+              var12.field_fc = new ClientUiComponent(0L, (ClientUiComponent) null);
               if ((var14 & 1 << gg.field_I) != 0) {
-                var12.field_oc.a(var12.field_fc, param0 + 121);
+                var12.field_oc.addChild(var12.field_fc, param0 + 121);
               }
-              var12.field_Vb = new je(0L, (je) null);
+              var12.field_Vb = new ClientUiComponent(0L, (ClientUiComponent) null);
               if ((var14 & 1 << uj.field_j) != 0) {
-                var12.field_oc.a(var12.field_Vb, 86);
+                var12.field_oc.addChild(var12.field_Vb, 86);
               }
               var45 = var12.field_ic;
               var44 = var12.field_Vb;
               var43 = var12.field_ec;
-              var12.field_fc.field_Fb = 1;
-              var43.field_Fb = 1;
-              var44.field_Fb = 1;
-              var45.field_Fb = 1;
+              var12.field_fc.verticalAlignment = 1;
+              var43.verticalAlignment = 1;
+              var44.verticalAlignment = 1;
+              var45.verticalAlignment = 1;
               for (var18_int = 0; tq.field_b > var18_int; var18_int++) {
-                var12.field_Qb[var18_int] = new je(0L, (je) null);
+                var12.field_Qb[var18_int] = new ClientUiComponent(0L, (ClientUiComponent) null);
                 if ((var14 & 1 << var18_int + na.field_E) != 0) {
-                  var12.field_oc.a(var12.field_Qb[var18_int], 39);
+                  var12.field_oc.addChild(var12.field_Qb[var18_int], 39);
                 }
-                var12.field_Qb[var18_int].field_Fb = 1;
+                var12.field_Qb[var18_int].verticalAlignment = 1;
               }
               stackIn_31_0 = var12;
               stackIn_31_1 = null;
@@ -240,95 +240,95 @@ final class jg extends IntrusiveNode {
                 stackIn_32_2 = null;
                 stackIn_32_4 = ws.field_P;
               }
-              stackIn_31_0.field_Rb = new je(stackIn_31_3, stackIn_32_4);
-              var12.a(var12.field_Rb, 39);
-              var12.field_Rb.field_Eb = 2;
-              var12.field_Pb = new je(0L, IsaacRandom.field_i);
-              var12.a(var12.field_Pb, 85);
-              var12.field_Ib = new je(0L, DualLinkedNode.field_k);
-              var12.a(var12.field_Ib, 78);
-              var12.field_sc = new je(0L, DualLinkedNode.field_k);
-              var12.a(var12.field_sc, param0 ^ 47);
-              var12.field_Wb = new je(0L, eq.field_h);
-              var12.a(var12.field_Wb, 51);
-              var12.i(param0 ^ -10027);
-              var12.field_Yb = new je(0L, QuickChatPhraseRepository.field_d);
-              var12.a(var12.field_Yb, 89);
+              stackIn_31_0.field_Rb = new ClientUiComponent(stackIn_31_3, stackIn_32_4);
+              var12.addChild(var12.field_Rb, 39);
+              var12.field_Rb.horizontalAlignment = 2;
+              var12.field_Pb = new ClientUiComponent(0L, IsaacRandom.field_i);
+              var12.addChild(var12.field_Pb, 85);
+              var12.field_Ib = new ClientUiComponent(0L, DualLinkedNode.field_k);
+              var12.addChild(var12.field_Ib, 78);
+              var12.field_sc = new ClientUiComponent(0L, DualLinkedNode.field_k);
+              var12.addChild(var12.field_sc, param0 ^ 47);
+              var12.field_Wb = new ClientUiComponent(0L, eq.field_h);
+              var12.addChild(var12.field_Wb, 51);
+              var12.useParentClipForDescendants(param0 ^ -10027);
+              var12.field_Yb = new ClientUiComponent(0L, QuickChatPhraseRepository.field_d);
+              var12.addChild(var12.field_Yb, 89);
               var13 = 1;
             }
-            var12.field_Xb.field_X = null;
+            var12.field_Xb.text = null;
             stackIn_36_0 = (var12.field_kc) ? param5 : param4;
             var14Lifetime1 = stackIn_36_0;
             var46 = var12.field_Xb;
-            var12.field_Xb.field_ob = 0;
-            var12.field_Yb.field_X = null;
-            var46.field_gb = 0;
-            var12.field_Yb.field_ob = 0;
+            var12.field_Xb.height = 0;
+            var12.field_Yb.text = null;
+            var46.width = 0;
+            var12.field_Yb.height = 0;
             var47 = var12.field_Yb;
-            var12.field_lc.field_X = null;
-            var47.field_gb = 0;
+            var12.field_lc.text = null;
+            var47.width = 0;
             var48 = var12.field_lc;
-            var12.field_lc.field_ob = 0;
-            var12.field_cc.field_X = null;
-            var48.field_gb = 0;
-            var12.field_cc.field_ob = 0;
+            var12.field_lc.height = 0;
+            var12.field_cc.text = null;
+            var48.width = 0;
+            var12.field_cc.height = 0;
             var18 = var12.field_cc;
-            var12.field_hc.field_X = null;
-            var18.field_gb = 0;
+            var12.field_hc.text = null;
+            var18.width = 0;
             var19 = var12.field_hc;
-            var12.field_hc.field_ob = 0;
-            var19.field_gb = 0;
-            var12.field_Zb.field_X = null;
+            var12.field_hc.height = 0;
+            var19.width = 0;
+            var12.field_Zb.text = null;
             var20 = var12.field_Zb;
-            var12.field_Zb.field_ob = 0;
-            var20.field_gb = 0;
-            var12.field_oc.field_X = null;
-            var12.field_oc.field_ob = 0;
+            var12.field_Zb.height = 0;
+            var20.width = 0;
+            var12.field_oc.text = null;
+            var12.field_oc.height = 0;
             var21 = var12.field_oc;
-            var21.field_gb = 0;
+            var21.width = 0;
             for (var22_int = 0; var22_int < tq.field_b; var22_int++) {
-              var12.field_Qb[var22_int].field_cb = null;
+              var12.field_Qb[var22_int].sprite = null;
               var23 = var12.field_Qb[var22_int];
-              var12.field_Qb[var22_int].field_ob = 0;
-              var23.field_gb = 0;
+              var12.field_Qb[var22_int].height = 0;
+              var23.width = 0;
             }
-            var12.field_ic.field_cb = null;
-            var12.field_ic.field_ob = 0;
+            var12.field_ic.sprite = null;
+            var12.field_ic.height = 0;
             var22 = var12.field_ic;
-            var22.field_gb = 0;
-            var12.field_Vb.field_cb = null;
+            var22.width = 0;
+            var12.field_Vb.sprite = null;
             var49 = var12.field_Vb;
-            var12.field_Vb.field_ob = 0;
-            var49.field_gb = 0;
-            var12.field_ec.field_cb = null;
+            var12.field_Vb.height = 0;
+            var49.width = 0;
+            var12.field_ec.sprite = null;
             var24 = var12.field_ec;
-            var12.field_ec.field_ob = 0;
-            var24.field_gb = 0;
-            var12.field_fc.field_cb = null;
+            var12.field_ec.height = 0;
+            var24.width = 0;
+            var12.field_fc.sprite = null;
             var25 = var12.field_fc;
-            var12.field_fc.field_ob = 0;
-            var25.field_gb = 0;
-            var12.field_Rb.field_X = null;
+            var12.field_fc.height = 0;
+            var25.width = 0;
+            var12.field_Rb.text = null;
             var26 = var12.field_Rb;
-            var12.field_Rb.field_ob = 0;
-            var12.field_Pb.field_X = null;
-            var26.field_gb = 0;
-            var12.field_Pb.field_ob = 0;
+            var12.field_Rb.height = 0;
+            var12.field_Pb.text = null;
+            var26.width = 0;
+            var12.field_Pb.height = 0;
             var27 = var12.field_Pb;
-            var27.field_gb = 0;
-            var12.field_Ib.field_X = null;
+            var27.width = 0;
+            var12.field_Ib.text = null;
             var28 = var12.field_Ib;
-            var12.field_Ib.field_ob = 0;
-            var12.field_sc.field_X = null;
-            var28.field_gb = 0;
+            var12.field_Ib.height = 0;
+            var12.field_sc.text = null;
+            var28.width = 0;
             var29 = var12.field_sc;
-            var12.field_sc.field_ob = 0;
-            var12.field_Wb.field_X = null;
-            var29.field_gb = 0;
+            var12.field_sc.height = 0;
+            var12.field_Wb.text = null;
+            var29.width = 0;
             var30 = var12.field_Wb;
-            var12.field_Wb.field_ob = 0;
-            var30.field_gb = 0;
-            var12.field_gb = CipherPacketBuffer.field_x.field_Jb.field_gb;
+            var12.field_Wb.height = 0;
+            var30.width = 0;
+            var12.width = CipherPacketBuffer.field_x.field_Jb.width;
             var31 = 0;
             var32 = var12.field_rc;
             if (!var12.k(param0 ^ -7)) {
@@ -337,65 +337,65 @@ final class jg extends IntrusiveNode {
                 if (var12.field_bc < 0) {
                   if (var12.field_tc && (var12.field_Sb ||
                     var12.field_Nb)) {
-                    var12.field_Yb.field_X = fl.field_l;
+                    var12.field_Yb.text = fl.field_l;
                     decompiledFrameRemainder1 = false;
                   }
                   else {
                     if (var12.field_ac != 2) {
-                      var12.field_Xb.field_X = bi.field_d;
+                      var12.field_Xb.text = bi.field_d;
                     } else {
-                      var12.field_Yb.field_X = re.field_E;
+                      var12.field_Yb.text = re.field_E;
                     }
                   }
                 } else {
-                  var12.field_Xb.field_X = kw.field_Q;
+                  var12.field_Xb.text = kw.field_Q;
                 }
               } else {
                 if (!var12.field_Sb &&
                   !var12.field_Nb) {
                   if (var12.field_uc) {
-                    var12.field_Xb.field_X = AnimationFrameSet.field_I;
+                    var12.field_Xb.text = AnimationFrameSet.field_I;
                   } else {
-                    var12.field_Xb.field_X = je.field_zb;
+                    var12.field_Xb.text = ClientUiComponent.field_zb;
                   }
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  var12.field_Yb.field_X = fl.field_l;
+                  var12.field_Yb.text = fl.field_l;
                 }
               }
-              if (var12.field_Yb.field_X == null) {
-                var12.field_Xb.a(jn.field_d, -20500, 68, var31, 0);
+              if (var12.field_Yb.text == null) {
+                var12.field_Xb.setBounds(jn.field_d, -20500, 68, var31, 0);
               } else {
-                var12.field_Yb.a(jn.field_d, -20500, 68, var31, 0);
+                var12.field_Yb.setBounds(jn.field_d, -20500, 68, var31, 0);
               }
-              var12.field_lc.field_X = BitmapFont.a(var12.field_lc.field_Z, var32, 78);
-              var12.field_lc.a(jn.field_d, -20500, 78, var31, 70);
-              if (var12.field_lc.field_eb &&
-                !var12.field_lc.field_X.equals(var32)) {
+              var12.field_lc.text = BitmapFont.a(var12.field_lc.font, var32, 78);
+              var12.field_lc.setBounds(jn.field_d, -20500, 78, var31, 70);
+              if (var12.field_lc.heldButtonMatches &&
+                !var12.field_lc.text.equals(var32)) {
                 ad.field_I = var32;
               }
-              var12.field_cc.field_X = Integer.toString(var12.field_Ub);
+              var12.field_cc.text = Integer.toString(var12.field_Ub);
               if (!var12.field_tc) {
-                var12.field_cc.field_Eb = 1;
-                var12.field_cc.a(jn.field_d, -20500, 48, var31, 150);
+                var12.field_cc.horizontalAlignment = 1;
+                var12.field_cc.setBounds(jn.field_d, -20500, 48, var31, 150);
               } else {
-                var12.field_cc.field_Eb = 2;
-                var12.field_hc.field_X = "/" + var12.field_nc;
-                var33_int = (-var12.field_hc.field_Z.a("/") + 348) / 2;
-                var12.field_cc.a(jn.field_d, -20500, -150 + var33_int, var31, 150);
-                var12.field_hc.a(jn.field_d, -20500, 198 - var33_int, var31, var33_int);
+                var12.field_cc.horizontalAlignment = 2;
+                var12.field_hc.text = "/" + var12.field_nc;
+                var33_int = (-var12.field_hc.font.a("/") + 348) / 2;
+                var12.field_cc.setBounds(jn.field_d, -20500, -150 + var33_int, var31, 150);
+                var12.field_hc.setBounds(jn.field_d, -20500, 198 - var33_int, var31, var33_int);
               }
-              var12.field_Zb.field_X = Integer.toString(var12.field_qc);
-              var12.field_Zb.a(jn.field_d, param0 - 20500, 48, var31, 200);
+              var12.field_Zb.text = Integer.toString(var12.field_qc);
+              var12.field_Zb.setBounds(jn.field_d, param0 - 20500, 48, var31, 200);
               stackIn_72_0 = (!fh.field_c) ? 200 : 250;
               var33_intLifetime1 = stackIn_72_0;
-              var12.field_oc.a(jn.field_d, param0 ^ -20500, 365 - var33_intLifetime1 - 2, var31, var33_intLifetime1);
+              var12.field_oc.setBounds(jn.field_d, param0 ^ -20500, 365 - var33_intLifetime1 - 2, var31, var33_intLifetime1);
               var34_int = io.field_n;
               if ((1 << ev.field_c & var14Lifetime1) != 0) {
                 var50_ref = rs.field_p[var12.field_Tb];
-                var12.field_ic.field_cb = var50_ref;
-                var12.field_ic.a(var12.field_oc.field_ob, param0 ^ -20500, var50_ref.canvasWidth, 0, var34_int);
+                var12.field_ic.sprite = var50_ref;
+                var12.field_ic.setBounds(var12.field_oc.height, param0 ^ -20500, var50_ref.canvasWidth, 0, var34_int);
                 var34_int = var34_int + (var50_ref.canvasWidth + io.field_n);
               }
               if ((1 << ai.field_M & var14Lifetime1) != 0) {
@@ -412,14 +412,14 @@ final class jg extends IntrusiveNode {
                   stackIn_86_1 = 1;
                 }
                 var51_ref = stackIn_85_0[stackIn_86_1];
-                var12.field_ec.field_cb = var51_ref;
-                var12.field_ec.a(var12.field_oc.field_ob, param0 ^ -20500, var51_ref.canvasWidth, 0, var34_int);
+                var12.field_ec.sprite = var51_ref;
+                var12.field_ec.setBounds(var12.field_oc.height, param0 ^ -20500, var51_ref.canvasWidth, 0, var34_int);
                 var34_int = var34_int + (var51_ref.canvasWidth + io.field_n);
               }
               if ((1 << gg.field_I & var14Lifetime1) != 0) {
                 var52_ref = lm.field_h[var12.field_ac - 1];
-                var12.field_fc.field_cb = var52_ref;
-                var12.field_fc.a(var12.field_oc.field_ob, -20500, var52_ref.canvasWidth, 0, var34_int);
+                var12.field_fc.sprite = var52_ref;
+                var12.field_fc.setBounds(var12.field_oc.height, -20500, var52_ref.canvasWidth, 0, var34_int);
                 var34_int = var34_int + (var52_ref.canvasWidth + io.field_n);
               }
               if ((1 << uj.field_j & var14Lifetime1) != 0) {
@@ -430,8 +430,8 @@ final class jg extends IntrusiveNode {
                   stackIn_94_1 = 1;
                 }
                 var53_ref = stackIn_93_0[stackIn_94_1];
-                var12.field_Vb.field_cb = var53_ref;
-                var12.field_Vb.a(var12.field_oc.field_ob, -20500, var53_ref.canvasWidth, 0, var34_int);
+                var12.field_Vb.sprite = var53_ref;
+                var12.field_Vb.setBounds(var12.field_oc.height, -20500, var53_ref.canvasWidth, 0, var34_int);
                 var34_int = var34_int + (io.field_n + var53_ref.canvasWidth);
               }
               if (ju.field_a != null) {
@@ -440,21 +440,21 @@ final class jg extends IntrusiveNode {
                     (1 << var36Lifetime1 + na.field_E & var14Lifetime1) != 0) {
                     var42 = ju.field_a[var36Lifetime1][var12.field_pc[var36Lifetime1] & 255];
                     var54 = var42;
-                    var12.field_Qb[var36Lifetime1].field_cb = var42;
-                    var12.field_Qb[var36Lifetime1].a(var12.field_oc.field_ob, -20500, var54.canvasWidth, 0, var34_int);
+                    var12.field_Qb[var36Lifetime1].sprite = var42;
+                    var12.field_Qb[var36Lifetime1].setBounds(var12.field_oc.height, -20500, var54.canvasWidth, 0, var34_int);
                     var34_int = var34_int + (var54.canvasWidth + io.field_n);
                   }
                 }
               }
-              var36Lifetime2 = (var12.field_oc.field_gb - var34_int) / 2;
+              var36Lifetime2 = (var12.field_oc.width - var34_int) / 2;
               if (0 < var36Lifetime2) {
-                var12.field_ic.field_S = var12.field_ic.field_S + var36Lifetime2;
-                var12.field_ec.field_S = var12.field_ec.field_S + var36Lifetime2;
-                var12.field_fc.field_S = var12.field_fc.field_S + var36Lifetime2;
-                var12.field_Vb.field_S = var12.field_Vb.field_S + var36Lifetime2;
+                var12.field_ic.x = var12.field_ic.x + var36Lifetime2;
+                var12.field_ec.x = var12.field_ec.x + var36Lifetime2;
+                var12.field_fc.x = var12.field_fc.x + var36Lifetime2;
+                var12.field_Vb.x = var12.field_Vb.x + var36Lifetime2;
                 for (var37_int = 0; var37_int < tq.field_b; var37_int++) {
                   dupTemp$0 = var12.field_Qb[var37_int];
-                  dupTemp$0.field_S = dupTemp$0.field_S + var36Lifetime2;
+                  dupTemp$0.x = dupTemp$0.x + var36Lifetime2;
                 }
               }
               if (var12.field_kc) {
@@ -468,12 +468,12 @@ final class jg extends IntrusiveNode {
                 if (var39 >= 60) {
                   var40 = var39 / 60;
                   var39 = var39 % 60;
-                  var12.field_Rb.field_X = var40 + ":" + var39 / 10 + var39 % 10 + ":" + var38_int / 10 + var38_int % 10;
+                  var12.field_Rb.text = var40 + ":" + var39 / 10 + var39 % 10 + ":" + var38_int / 10 + var38_int % 10;
                 } else {
-                  var12.field_Rb.field_X = var39 + ":" + var38_int / 10 + var38_int % 10;
+                  var12.field_Rb.text = var39 + ":" + var38_int / 10 + var38_int % 10;
                 }
               }
-              var12.field_Rb.a(jn.field_d, -20500, -365 + var12.field_gb, var31, 365);
+              var12.field_Rb.setBounds(jn.field_d, -20500, -365 + var12.width, var31, 365);
               var31 = var31 + jn.field_d;
               if (var12.field_jc != null) {
                 var31 += 2;
@@ -485,38 +485,38 @@ final class jg extends IntrusiveNode {
                   discarded$4 = var37.append(var12.field_jc[var38_intLifetime1]);
                 }
                 var38 = var37.toString();
-                var12.field_Pb.field_X = var38;
-                var39Lifetime1 = var12.field_Pb.field_Z.c(var38, var12.field_gb - var12.field_Pb.field_O * 2);
-                var12.field_Pb.a(var39Lifetime1 * jn.field_d, -20500, var12.field_gb, var31, 0);
+                var12.field_Pb.text = var38;
+                var39Lifetime1 = var12.field_Pb.font.c(var38, var12.width - var12.field_Pb.field_O * 2);
+                var12.field_Pb.setBounds(var39Lifetime1 * jn.field_d, -20500, var12.width, var31, 0);
                 var31 = var31 + jn.field_d * var39Lifetime1;
               }
               if (var12.field_Nb) {
-                var12.field_Ib.field_X = fo.a(4800, sq.field_n, new String[]{var32});
-                var12.field_Ib.a(jn.field_d, -20500, -(2 * mi.field_l) + var12.field_gb, var31, mi.field_l);
+                var12.field_Ib.text = fo.a(4800, sq.field_n, new String[]{var32});
+                var12.field_Ib.setBounds(jn.field_d, -20500, -(2 * mi.field_l) + var12.width, var31, mi.field_l);
                 var31 = var31 + jn.field_d;
               }
               if (var12.field_gc) {
-                var12.field_sc.field_X = fo.a(4800, GameplayController.field_A, new String[]{var32});
-                var12.field_sc.a(jn.field_d, -20500, var12.field_gb - 2 * mi.field_l, var31, mi.field_l);
+                var12.field_sc.text = fo.a(4800, GameplayController.field_A, new String[]{var32});
+                var12.field_sc.setBounds(jn.field_d, -20500, var12.width - 2 * mi.field_l, var31, mi.field_l);
                 var31 = var31 + jn.field_d;
               }
             }
             var33 = LeaderEscortCondition.a(var12.field_mc, 6, var32);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Wb.field_Z.c(var33, var12.field_gb - mi.field_l - mi.field_l);
-              var12.field_Wb.field_X = var33;
-              var12.field_Wb.field_C = var12.field_Lb * 256 / qd.field_K;
-              var12.field_Wb.a(jn.field_d * var34_intLifetime1, -20500, var12.field_gb - mi.field_l * 2, var31, mi.field_l);
+              var34_intLifetime1 = var12.field_Wb.font.c(var33, var12.width - mi.field_l - mi.field_l);
+              var12.field_Wb.text = var33;
+              var12.field_Wb.opacity = var12.field_Lb * 256 / qd.field_K;
+              var12.field_Wb.setBounds(jn.field_d * var34_intLifetime1, -20500, var12.width - mi.field_l * 2, var31, mi.field_l);
               var31 = var31 + var34_intLifetime1 * jn.field_d;
             }
             if (var7_int == 0) {
-              var12.field_nb = var31 - var12.field_ob;
+              var12.pendingHeightDelta = var31 - var12.height;
             }
             if (var13 != 0) {
-              CipherPacketBuffer.field_x.field_Jb.a(var12, true, 2, (je) (var11));
+              CipherPacketBuffer.field_x.field_Jb.a(var12, true, 2, (ClientUiComponent) (var11));
             }
             for (var34_intLifetime2 = 0; var34_intLifetime2 < tq.field_b; var34_intLifetime2++) {
-              if (var12.field_Qb[var34_intLifetime2].field_eb) {
+              if (var12.field_Qb[var34_intLifetime2].heldButtonMatches) {
                 if (wb.field_a == null) {
                   var35 = null;
                 } else {
@@ -533,7 +533,7 @@ final class jg extends IntrusiveNode {
                 }
               }
             }
-            if (var12.field_ic.field_eb) {
+            if (var12.field_ic.heldButtonMatches) {
               if (1 == var12.field_Tb) {
                 var34 = AiInfluenceMap.field_j;
               } else {
@@ -541,7 +541,7 @@ final class jg extends IntrusiveNode {
               }
               ad.field_I = vu.field_P + " - " + var34;
             }
-            if (var12.field_Vb.field_eb) {
+            if (var12.field_Vb.heldButtonMatches) {
               if (var12.field_vc) {
                 stackIn_156_0 = uu.field_a;
               } else {
@@ -549,7 +549,7 @@ final class jg extends IntrusiveNode {
               }
               ad.field_I = stackIn_156_0;
             }
-            if (var12.field_ec.field_eb) {
+            if (var12.field_ec.heldButtonMatches) {
               if (!var12.field_Sb &&
                 !var12.field_Nb) {
                 if (var12.field_tc) {
@@ -562,7 +562,7 @@ final class jg extends IntrusiveNode {
               }
               ad.field_I = stackIn_166_0;
             }
-            if (var12.field_fc.field_eb) {
+            if (var12.field_fc.heldButtonMatches) {
               if (var12.field_ac != 2) {
                 stackIn_171_0 = jj.field_d;
               } else {
@@ -571,12 +571,12 @@ final class jg extends IntrusiveNode {
               ad.field_I = stackIn_171_0;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (var12.field_yb != 0) {
+            if (var12.pressedButton != 0) {
               if (var12.k(param0 ^ -7)) {
                 var12 = (au) (var8.next((byte) 123));
                 continue;
               }
-              if (var12.field_Yb.field_yb == 0) {
+              if (var12.field_Yb.pressedButton == 0) {
                 ml.a(-114, var12, param2, var32);
               } else {
                 if (var12.field_kc && (!var12.field_tc ||

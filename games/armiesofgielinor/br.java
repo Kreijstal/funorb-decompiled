@@ -5,7 +5,7 @@ final class br {
     static oo field_a;
     static String[] field_b;
     static mp field_g;
-    static je field_e;
+    static ClientUiComponent field_e;
     static boolean[] field_f;
     static ResourceArchive field_d;
     static int[] field_c;
@@ -77,7 +77,7 @@ final class br {
         DiskCacheWorker.a(-10232);
         ContextualRuntimeException.b(-6145);
         if (param0 != -97) {
-          field_e = (je) null;
+          field_e = (ClientUiComponent) null;
         }
     }
 

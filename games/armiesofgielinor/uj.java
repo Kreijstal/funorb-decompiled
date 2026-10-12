@@ -3,10 +3,10 @@
  */
 final class uj extends mk {
     private boolean field_k;
-    static je field_n;
+    static ClientUiComponent field_n;
     private String field_m;
     static int[] field_o;
-    static je field_l;
+    static ClientUiComponent field_l;
     static int field_j;
 
     final gu a(int param0, String param1) {
@@ -133,10 +133,10 @@ final class uj extends mk {
 
     final static QuickChatCommandDefinition[] getQuickChatCommands(byte obfuscationGuard) {
         if (obfuscationGuard > 100) {
-          return new QuickChatCommandDefinition[]{jk.field_b, na.field_G, oa.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, Widget.field_y, MapLayout.field_q, nf.field_Ib, rs.field_v, kq.field_M};
+          return new QuickChatCommandDefinition[]{jk.field_b, na.field_G, oa.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, rs.field_v, kq.field_M};
         }
         uj.h(67);
-        return new QuickChatCommandDefinition[]{jk.field_b, na.field_G, oa.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, Widget.field_y, MapLayout.field_q, nf.field_Ib, rs.field_v, kq.field_M};
+        return new QuickChatCommandDefinition[]{jk.field_b, na.field_G, oa.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, rs.field_v, kq.field_M};
     }
 
     uj(fn param0) {

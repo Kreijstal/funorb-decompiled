@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class s {
-    static RgbSprite field_c;
+    static RgbSprite quickChatArrow;
     static NodeDeque field_a;
     static NodeDeque field_e;
     static int field_d;
@@ -108,7 +108,7 @@ final class s {
 
     public static void a(int param0) {
         field_a = null;
-        field_c = null;
+        quickChatArrow = null;
         field_e = null;
         int var1 = -122 / ((param0 + 19) / 34);
         field_b = null;

@@ -4,7 +4,7 @@
 abstract class PreparedAction extends IntrusiveNode {
     static int[] field_q;
     static int field_r;
-    static je field_o;
+    static ClientUiComponent field_o;
     int[] playerFlags;
     static String field_k;
     static String field_l;

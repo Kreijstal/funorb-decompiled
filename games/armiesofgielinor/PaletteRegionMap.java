@@ -127,25 +127,25 @@ final class PaletteRegionMap {
         }
     }
 
-    final static je a(int param0, int param1, int param2, int param3, int param4, int param5, BitmapFont param6, int param7, int param8, int param9, int param10, byte param11, int param12) {
+    final static ClientUiComponent a(int param0, int param1, int param2, int param3, int param4, int param5, BitmapFont param6, int param7, int param8, int param9, int param10, byte param11, int param12) {
         int var13_int = 0;
         RuntimeException var13 = null;
-        je var14 = null;
-        je stackIn_1_0 = null;
+        ClientUiComponent var14 = null;
+        ClientUiComponent stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var13_int = -103 % ((-17 - param11) / 52);
-          var14 = new je(0L, (je) null);
+          var14 = new ClientUiComponent(0L, (ClientUiComponent) null);
           var14.field_G = tn.a(true, param12, param3);
           var14.field_mb = tn.a(true, param4, param8);
           var14.field_U = tn.a(true, param1, param7);
           var14.field_H = tn.a(true, param10, param9);
           var14.field_A = tn.a(true, param2, param0);
           var14.field_N = param5;
-          var14.field_Z = param6;
+          var14.font = param6;
           stackIn_1_0 = var14;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

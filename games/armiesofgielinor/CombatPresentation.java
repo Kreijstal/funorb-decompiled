@@ -2120,12 +2120,12 @@ final class CombatPresentation implements EventPresentation {
                 this.defenders[var2_int].isIdle((byte) -110)) {
                 if (AttackEvent.a(false, 1000, vv.field_b) >= 500) {
                   this.attackers[var2_int].setAnimationState(2, (byte) -113);
-                  this.attackers[var2_int].animationDelay = je.field_K[this.field_a][0];
+                  this.attackers[var2_int].animationDelay = ClientUiComponent.field_K[this.field_a][0];
                   this.defenders[var2_int].setAnimationState(1, (byte) -119);
                 } else {
                   this.attackers[var2_int].setAnimationState(1, (byte) -116);
                   this.defenders[var2_int].animationFrame = 2;
-                  this.defenders[var2_int].animationDelay = je.field_K[this.field_c][0];
+                  this.defenders[var2_int].animationDelay = ClientUiComponent.field_K[this.field_c][0];
                 }
               }
               var2_int++;
@@ -2190,7 +2190,7 @@ final class CombatPresentation implements EventPresentation {
                             while (true) {
                               if (stackIn_91_0 != stackIn_91_1) {
                                 this.defenders[var3].animationFrame = 2;
-                                this.defenders[var3].animationDelay = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                                this.defenders[var3].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                               }
                               var3++;
                               break regionExit2;
@@ -2225,7 +2225,7 @@ final class CombatPresentation implements EventPresentation {
                           stackIn_91_1Lifetime1 = this.defenders[var3];
                           if (stackIn_91_0Lifetime1 != stackIn_91_1Lifetime1) {
                             this.defenders[var3].animationFrame = 2;
-                            this.defenders[var3].animationDelay = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                            this.defenders[var3].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                           }
                           var3++;
                         }
@@ -2239,7 +2239,7 @@ final class CombatPresentation implements EventPresentation {
                       break;
                     }
                     this.defenders[0].animationFrame = 2;
-                    this.defenders[0].animationDelay = je.field_K[this.field_c][0];
+                    this.defenders[0].animationDelay = ClientUiComponent.field_K[this.field_c][0];
                     if (var4 == 0) {
                       break;
                     }
@@ -2248,7 +2248,7 @@ final class CombatPresentation implements EventPresentation {
                   if ((this.field_J == 2) &&
                     (decompiledFrameRemainder4 = (null != this.attackers[0]))) {
                     this.attackers[0].animationFrame = 2;
-                    this.attackers[0].animationDelay = je.field_K[this.field_a][0];
+                    this.attackers[0].animationDelay = ClientUiComponent.field_K[this.field_a][0];
                     decompiledFrameRemainder4 = (var4 != 0);
                   }
                   if (decompiledFrameRemainder4) {
@@ -2264,7 +2264,7 @@ final class CombatPresentation implements EventPresentation {
                         this.attackers[var3].animationFrame = 2;
                       }
                       if (this.attackers[var3] != null) {
-                        this.attackers[var3].animationDelay = je.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
+                        this.attackers[var3].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
                       }
                       var3++;
                     }
@@ -2332,18 +2332,18 @@ final class CombatPresentation implements EventPresentation {
               if (decompiledFrameRemainder3) {
                 if (500 > AttackEvent.a(false, 1000, vv.field_b)) {
                   if (null != this.attackers[0]) {
-                    this.attackers[0].animationDelay = je.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
+                    this.attackers[0].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
                     this.attackers[0].animationFrame = 2;
                   }
                   if (this.defenders[1] != null &&
                     this.defenders[1].isIdle((byte) -80)) {
-                    this.defenders[1].animationDelay = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                    this.defenders[1].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                     this.defenders[1].animationFrame = 1;
                     decompiledFrameRemainder3 = (var4 != 0);
                   }
                   if ((decompiledFrameRemainder3) &&
                     (decompiledFrameRemainder3 = (this.defenders[0] != null))) {
-                    this.defenders[0].animationDelay = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                    this.defenders[0].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                     this.defenders[0].animationFrame = 1;
                     decompiledFrameRemainder3 = (var4 != 0);
                   }
@@ -2356,15 +2356,15 @@ final class CombatPresentation implements EventPresentation {
                   if (this.defenders[1] == null ||
                     !this.defenders[1].isIdle((byte) -56)) {
                     if (null != this.defenders[0]) {
-                      this.defenders[0].animationDelay = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                      this.defenders[0].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                       this.defenders[0].animationFrame = 2;
                       if (var4 != 0) {
-                        this.defenders[1].animationDelay = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                        this.defenders[1].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                         this.defenders[1].animationFrame = 2;
                       }
                     }
                   } else {
-                    this.defenders[1].animationDelay = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                    this.defenders[1].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                     this.defenders[1].animationFrame = 2;
                   }
                 }
@@ -2388,19 +2388,19 @@ final class CombatPresentation implements EventPresentation {
                   if ((this.defenders[2] == null ||
                     !this.defenders[2].isIdle((byte) -114)) &&
                     (decompiledFrameRemainder2 = (null != this.defenders[0]))) {
-                    this.defenders[0].animationDelay = je.field_K[this.field_c][0] - AttackEvent.a(false, 30, vv.field_b);
+                    this.defenders[0].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 30, vv.field_b);
                     this.defenders[0].animationFrame = 2;
                     decompiledFrameRemainder2 = (var4 != 0);
                   }
                   if (decompiledFrameRemainder2) {
-                    this.defenders[2].animationDelay = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                    this.defenders[2].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                     this.defenders[2].animationFrame = 2;
                     decompiledFrameRemainder2 = (var4 != 0);
                   }
                 }
                 if (decompiledFrameRemainder2) {
                   if (null != this.attackers[1]) {
-                    this.attackers[1].animationDelay = je.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
+                    this.attackers[1].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
                     this.attackers[1].animationFrame = 2;
                   }
                   boolean decompiledSharedTail1 = (null == this.defenders[2] ||
@@ -2491,18 +2491,18 @@ final class CombatPresentation implements EventPresentation {
                 if ((null == this.attackers[1] ||
                   !this.attackers[1].isIdle((byte) 126)) &&
                   (decompiledFrameRemainder1 = (null != this.attackers[0]))) {
-                  this.attackers[0].animationDelay = je.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
+                  this.attackers[0].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
                   this.attackers[0].animationFrame = 2;
                   decompiledFrameRemainder1 = (var4 != 0);
                 }
                 if (decompiledFrameRemainder1) {
-                  this.attackers[1].animationDelay = je.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
+                  this.attackers[1].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
                   this.attackers[1].animationFrame = 2;
                   decompiledFrameRemainder1 = (var4 != 0);
                 }
               }
               if (decompiledFrameRemainder1) {
-                this.defenders[0].animationDelay = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                this.defenders[0].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                 this.defenders[0].animationFrame = 2;
                 if (null == this.attackers[1] ||
                   !this.attackers[1].isIdle((byte) 112)) {
@@ -2533,7 +2533,7 @@ final class CombatPresentation implements EventPresentation {
             if (decompiledFrameRemainder0) {
               if (AttackEvent.a(false, 1000, vv.field_b) < 500) {
                 if (null != this.defenders[1]) {
-                  this.defenders[1].animationDelay = je.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
+                  this.defenders[1].animationDelay = ClientUiComponent.field_K[this.field_c][0] - AttackEvent.a(false, 5, vv.field_b);
                   this.defenders[1].animationFrame = 2;
                 }
                 if (null != this.attackers[2] &&
@@ -2557,13 +2557,13 @@ final class CombatPresentation implements EventPresentation {
                 boolean decompiledSharedTail0 = (this.attackers[2] == null ||
                   !(this.attackers[2].isIdle((byte) -122)));
                 if (!decompiledSharedTail0) {
-                  this.attackers[2].animationDelay = je.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
+                  this.attackers[2].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
                   this.attackers[2].animationFrame = 2;
                   decompiledSharedTail0 = (var4 != 0);
                 }
                 if ((decompiledSharedTail0) &&
                   (null != this.attackers[0])) {
-                  this.attackers[0].animationDelay = je.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
+                  this.attackers[0].animationDelay = ClientUiComponent.field_K[this.field_a][0] - AttackEvent.a(false, 5, vv.field_b);
                   this.attackers[0].animationFrame = 2;
                 }
               }
@@ -2800,7 +2800,7 @@ final class CombatPresentation implements EventPresentation {
             var4Lifetime1 = stackIn_67_0;
             var2_intLifetime2 = 17;
             var6Lifetime1 = 0 + var2_intLifetime2;
-            var7Lifetime1 = -var5Lifetime1 + (CombatEvent.field_I.field_D - var3Lifetime2);
+            var7Lifetime1 = -var5Lifetime1 + (CombatEvent.field_I.screenY - var3Lifetime2);
             if (this.field_e > -1) {
               this.battlefield.playerCoats[this.field_e].a(var6Lifetime1, this.battlefield.playerNames[this.field_e], false, false, var7Lifetime1, false, false, 122);
             }

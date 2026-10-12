@@ -1,55 +1,55 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dn extends je {
+final class dn extends ClientUiComponent {
     static String field_Ob;
     static boolean field_Qb;
     static String field_Lb;
-    je field_Jb;
+    ClientUiComponent field_Jb;
     static String[] unitDisplayNames;
-    je field_Nb;
+    ClientUiComponent field_Nb;
     static String field_Kb;
     static String field_Mb;
     ll field_Ib;
 
     final void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
-        this.field_gb = param2;
-        this.field_ob = param6;
-        this.field_S = param0;
-        this.field_ab = param5;
+        this.width = param2;
+        this.height = param6;
+        this.x = param0;
+        this.y = param5;
         this.a(param4, param1, param3);
     }
 
     private final void a(int param0, boolean param1, int param2) {
-        this.field_Nb.field_ob = this.field_ob;
+        this.field_Nb.height = this.height;
         if (!param1) {
-          this.field_Jb.field_S = 0;
-          this.field_Nb.field_gb = -param0 + (this.field_gb - param2);
-          this.field_Jb.field_gb = -param2 - param0 + this.field_gb;
-          this.field_Ib.a(201, param0, this.field_ob, 0, this.field_Jb.field_ob, this.field_Nb.field_ob, -param0 + this.field_gb, -this.field_Jb.field_ab);
+          this.field_Jb.x = 0;
+          this.field_Nb.width = -param0 + (this.width - param2);
+          this.field_Jb.width = -param2 - param0 + this.width;
+          this.field_Ib.a(201, param0, this.height, 0, this.field_Jb.height, this.field_Nb.height, -param0 + this.width, -this.field_Jb.y);
           return;
         }
         dn.l(-122);
-        this.field_Jb.field_S = 0;
-        this.field_Nb.field_gb = -param0 + (this.field_gb - param2);
-        this.field_Jb.field_gb = -param2 - param0 + this.field_gb;
-        this.field_Ib.a(201, param0, this.field_ob, 0, this.field_Jb.field_ob, this.field_Nb.field_ob, -param0 + this.field_gb, -this.field_Jb.field_ab);
+        this.field_Jb.x = 0;
+        this.field_Nb.width = -param0 + (this.width - param2);
+        this.field_Jb.width = -param2 - param0 + this.width;
+        this.field_Ib.a(201, param0, this.height, 0, this.field_Jb.height, this.field_Nb.height, -param0 + this.width, -this.field_Jb.y);
     }
 
     final void a(int param0, boolean param1, int param2, boolean param3) {
         if (!param3) {
-          this.a(0, param0, param1, param2, this.field_Nb.field_ob);
+          this.a(0, param0, param1, param2, this.field_Nb.height);
           return;
         }
         field_Lb = (String) null;
-        this.a(0, param0, param1, param2, this.field_Nb.field_ob);
+        this.a(0, param0, param1, param2, this.field_Nb.height);
     }
 
     final boolean a(boolean param0, int param1, int param2, boolean param3, int param4, int param5) {
         if (param4 != 0) {
           return true;
         }
-        return this.a(param0, param1, this.field_Nb.field_ob, param2, 0, param5, param3);
+        return this.a(param0, param1, this.field_Nb.height, param2, 0, param5, param3);
     }
 
     final static boolean l(int param0) {
@@ -79,142 +79,142 @@ final class dn extends je {
 
     private final void a(int param0, int param1, boolean param2, int param3, int param4) {
         if (this.field_Ib.m(-70)) {
-          this.field_Jb.field_db = this.field_Jb.field_db + param1;
+          this.field_Jb.pendingYDelta = this.field_Jb.pendingYDelta + param1;
         }
         if (this.field_Ib.n(57)) {
-          this.field_Jb.field_db = this.field_Jb.field_db - param1;
+          this.field_Jb.pendingYDelta = this.field_Jb.pendingYDelta - param1;
           if (this.field_Ib.o(-46)) {
-            this.field_Jb.field_db = this.field_Jb.field_db + param4;
+            this.field_Jb.pendingYDelta = this.field_Jb.pendingYDelta + param4;
           }
           if (this.field_Ib.l(28809)) {
-            this.field_Jb.field_db = this.field_Jb.field_db - param4;
+            this.field_Jb.pendingYDelta = this.field_Jb.pendingYDelta - param4;
           }
-          if (this.field_eb) {
-            this.field_Jb.field_db = this.field_Jb.field_db - param3;
+          if (this.heldButtonMatches) {
+            this.field_Jb.pendingYDelta = this.field_Jb.pendingYDelta - param3;
           }
           if (!param2) {
-            if (!(-(this.field_Jb.field_ab + this.field_Jb.field_db) <= this.field_Jb.field_ob - (-this.field_Jb.field_nb + this.field_Nb.field_ob))) {
-              this.field_Jb.field_db = -(-this.field_Nb.field_ob + (this.field_Jb.field_ob + this.field_Jb.field_nb)) - this.field_Jb.field_ab;
+            if (!(-(this.field_Jb.y + this.field_Jb.pendingYDelta) <= this.field_Jb.height - (-this.field_Jb.pendingHeightDelta + this.field_Nb.height))) {
+              this.field_Jb.pendingYDelta = -(-this.field_Nb.height + (this.field_Jb.height + this.field_Jb.pendingHeightDelta)) - this.field_Jb.y;
             }
-            if (-(this.field_Jb.field_ab + this.field_Jb.field_db) < 0) {
-              this.field_Jb.field_db = -this.field_Jb.field_ab;
+            if (-(this.field_Jb.y + this.field_Jb.pendingYDelta) < 0) {
+              this.field_Jb.pendingYDelta = -this.field_Jb.y;
               if (this.field_Ib.a(false)) {
-                this.field_Jb.field_ab = -this.field_Ib.a(this.field_Nb.field_ob, param2, this.field_Jb.field_ob, 112);
-                this.field_Jb.field_db = 0;
+                this.field_Jb.y = -this.field_Ib.a(this.field_Nb.height, param2, this.field_Jb.height, 112);
+                this.field_Jb.pendingYDelta = 0;
               }
-              this.field_Ib.a(param0 + param0, this.field_Jb.field_ob, this.field_Nb.field_ob, -this.field_Jb.field_ab);
+              this.field_Ib.a(param0 + param0, this.field_Jb.height, this.field_Nb.height, -this.field_Jb.y);
               return;
             }
             if (this.field_Ib.a(false)) {
-              this.field_Jb.field_ab = -this.field_Ib.a(this.field_Nb.field_ob, param2, this.field_Jb.field_ob, 112);
-              this.field_Jb.field_db = 0;
+              this.field_Jb.y = -this.field_Ib.a(this.field_Nb.height, param2, this.field_Jb.height, 112);
+              this.field_Jb.pendingYDelta = 0;
             }
-            this.field_Ib.a(param0 + param0, this.field_Jb.field_ob, this.field_Nb.field_ob, -this.field_Jb.field_ab);
+            this.field_Ib.a(param0 + param0, this.field_Jb.height, this.field_Nb.height, -this.field_Jb.y);
             return;
           }
-          if (!(-(this.field_Jb.field_ab + this.field_Jb.field_db) >= 0)) {
-            this.field_Jb.field_db = -this.field_Jb.field_ab;
+          if (!(-(this.field_Jb.y + this.field_Jb.pendingYDelta) >= 0)) {
+            this.field_Jb.pendingYDelta = -this.field_Jb.y;
           }
-          if (-this.field_Nb.field_ob + this.field_Jb.field_ob + this.field_Jb.field_nb < -(this.field_Jb.field_db + this.field_Jb.field_ab)) {
-            this.field_Jb.field_db = -this.field_Jb.field_ab - (-this.field_Nb.field_ob + (this.field_Jb.field_nb + this.field_Jb.field_ob));
+          if (-this.field_Nb.height + this.field_Jb.height + this.field_Jb.pendingHeightDelta < -(this.field_Jb.pendingYDelta + this.field_Jb.y)) {
+            this.field_Jb.pendingYDelta = -this.field_Jb.y - (-this.field_Nb.height + (this.field_Jb.pendingHeightDelta + this.field_Jb.height));
             if (this.field_Ib.a(false)) {
-              this.field_Jb.field_ab = -this.field_Ib.a(this.field_Nb.field_ob, param2, this.field_Jb.field_ob, 112);
-              this.field_Jb.field_db = 0;
+              this.field_Jb.y = -this.field_Ib.a(this.field_Nb.height, param2, this.field_Jb.height, 112);
+              this.field_Jb.pendingYDelta = 0;
             }
-            this.field_Ib.a(param0 + param0, this.field_Jb.field_ob, this.field_Nb.field_ob, -this.field_Jb.field_ab);
+            this.field_Ib.a(param0 + param0, this.field_Jb.height, this.field_Nb.height, -this.field_Jb.y);
             return;
           }
           if (this.field_Ib.a(false)) {
-            this.field_Jb.field_ab = -this.field_Ib.a(this.field_Nb.field_ob, param2, this.field_Jb.field_ob, 112);
-            this.field_Jb.field_db = 0;
+            this.field_Jb.y = -this.field_Ib.a(this.field_Nb.height, param2, this.field_Jb.height, 112);
+            this.field_Jb.pendingYDelta = 0;
           }
-          this.field_Ib.a(param0 + param0, this.field_Jb.field_ob, this.field_Nb.field_ob, -this.field_Jb.field_ab);
+          this.field_Ib.a(param0 + param0, this.field_Jb.height, this.field_Nb.height, -this.field_Jb.y);
           return;
         }
         if (this.field_Ib.o(-46)) {
-          this.field_Jb.field_db = this.field_Jb.field_db + param4;
+          this.field_Jb.pendingYDelta = this.field_Jb.pendingYDelta + param4;
         }
         if (this.field_Ib.l(28809)) {
-          this.field_Jb.field_db = this.field_Jb.field_db - param4;
+          this.field_Jb.pendingYDelta = this.field_Jb.pendingYDelta - param4;
         }
-        if (this.field_eb) {
-          this.field_Jb.field_db = this.field_Jb.field_db - param3;
+        if (this.heldButtonMatches) {
+          this.field_Jb.pendingYDelta = this.field_Jb.pendingYDelta - param3;
           if (!param2) {
-            if (!(-(this.field_Jb.field_ab + this.field_Jb.field_db) <= this.field_Jb.field_ob - (-this.field_Jb.field_nb + this.field_Nb.field_ob))) {
-              this.field_Jb.field_db = -(-this.field_Nb.field_ob + (this.field_Jb.field_ob + this.field_Jb.field_nb)) - this.field_Jb.field_ab;
+            if (!(-(this.field_Jb.y + this.field_Jb.pendingYDelta) <= this.field_Jb.height - (-this.field_Jb.pendingHeightDelta + this.field_Nb.height))) {
+              this.field_Jb.pendingYDelta = -(-this.field_Nb.height + (this.field_Jb.height + this.field_Jb.pendingHeightDelta)) - this.field_Jb.y;
             }
-            if (-(this.field_Jb.field_ab + this.field_Jb.field_db) >= 0) {
+            if (-(this.field_Jb.y + this.field_Jb.pendingYDelta) >= 0) {
               if (this.field_Ib.a(false)) {
-                this.field_Jb.field_ab = -this.field_Ib.a(this.field_Nb.field_ob, param2, this.field_Jb.field_ob, 112);
-                this.field_Jb.field_db = 0;
+                this.field_Jb.y = -this.field_Ib.a(this.field_Nb.height, param2, this.field_Jb.height, 112);
+                this.field_Jb.pendingYDelta = 0;
               }
-              this.field_Ib.a(param0 + param0, this.field_Jb.field_ob, this.field_Nb.field_ob, -this.field_Jb.field_ab);
+              this.field_Ib.a(param0 + param0, this.field_Jb.height, this.field_Nb.height, -this.field_Jb.y);
               return;
             }
-            this.field_Jb.field_db = -this.field_Jb.field_ab;
+            this.field_Jb.pendingYDelta = -this.field_Jb.y;
             if (this.field_Ib.a(false)) {
-              this.field_Jb.field_ab = -this.field_Ib.a(this.field_Nb.field_ob, param2, this.field_Jb.field_ob, 112);
-              this.field_Jb.field_db = 0;
+              this.field_Jb.y = -this.field_Ib.a(this.field_Nb.height, param2, this.field_Jb.height, 112);
+              this.field_Jb.pendingYDelta = 0;
             }
-            this.field_Ib.a(param0 + param0, this.field_Jb.field_ob, this.field_Nb.field_ob, -this.field_Jb.field_ab);
+            this.field_Ib.a(param0 + param0, this.field_Jb.height, this.field_Nb.height, -this.field_Jb.y);
             return;
           }
-          if (!(-(this.field_Jb.field_ab + this.field_Jb.field_db) >= 0)) {
-            this.field_Jb.field_db = -this.field_Jb.field_ab;
+          if (!(-(this.field_Jb.y + this.field_Jb.pendingYDelta) >= 0)) {
+            this.field_Jb.pendingYDelta = -this.field_Jb.y;
           }
-          if (-this.field_Nb.field_ob + this.field_Jb.field_ob + this.field_Jb.field_nb >= -(this.field_Jb.field_db + this.field_Jb.field_ab)) {
+          if (-this.field_Nb.height + this.field_Jb.height + this.field_Jb.pendingHeightDelta >= -(this.field_Jb.pendingYDelta + this.field_Jb.y)) {
             if (this.field_Ib.a(false)) {
-              this.field_Jb.field_ab = -this.field_Ib.a(this.field_Nb.field_ob, param2, this.field_Jb.field_ob, 112);
-              this.field_Jb.field_db = 0;
+              this.field_Jb.y = -this.field_Ib.a(this.field_Nb.height, param2, this.field_Jb.height, 112);
+              this.field_Jb.pendingYDelta = 0;
             }
-            this.field_Ib.a(param0 + param0, this.field_Jb.field_ob, this.field_Nb.field_ob, -this.field_Jb.field_ab);
+            this.field_Ib.a(param0 + param0, this.field_Jb.height, this.field_Nb.height, -this.field_Jb.y);
             return;
           }
-          this.field_Jb.field_db = -this.field_Jb.field_ab - (-this.field_Nb.field_ob + (this.field_Jb.field_nb + this.field_Jb.field_ob));
+          this.field_Jb.pendingYDelta = -this.field_Jb.y - (-this.field_Nb.height + (this.field_Jb.pendingHeightDelta + this.field_Jb.height));
           if (this.field_Ib.a(false)) {
-            this.field_Jb.field_ab = -this.field_Ib.a(this.field_Nb.field_ob, param2, this.field_Jb.field_ob, 112);
-            this.field_Jb.field_db = 0;
+            this.field_Jb.y = -this.field_Ib.a(this.field_Nb.height, param2, this.field_Jb.height, 112);
+            this.field_Jb.pendingYDelta = 0;
           }
-          this.field_Ib.a(param0 + param0, this.field_Jb.field_ob, this.field_Nb.field_ob, -this.field_Jb.field_ab);
+          this.field_Ib.a(param0 + param0, this.field_Jb.height, this.field_Nb.height, -this.field_Jb.y);
           return;
         }
         if (!param2) {
-          if (!(-(this.field_Jb.field_ab + this.field_Jb.field_db) <= this.field_Jb.field_ob - (-this.field_Jb.field_nb + this.field_Nb.field_ob))) {
-            this.field_Jb.field_db = -(-this.field_Nb.field_ob + (this.field_Jb.field_ob + this.field_Jb.field_nb)) - this.field_Jb.field_ab;
+          if (!(-(this.field_Jb.y + this.field_Jb.pendingYDelta) <= this.field_Jb.height - (-this.field_Jb.pendingHeightDelta + this.field_Nb.height))) {
+            this.field_Jb.pendingYDelta = -(-this.field_Nb.height + (this.field_Jb.height + this.field_Jb.pendingHeightDelta)) - this.field_Jb.y;
           }
-          if (-(this.field_Jb.field_ab + this.field_Jb.field_db) >= 0) {
+          if (-(this.field_Jb.y + this.field_Jb.pendingYDelta) >= 0) {
             if (this.field_Ib.a(false)) {
-              this.field_Jb.field_ab = -this.field_Ib.a(this.field_Nb.field_ob, param2, this.field_Jb.field_ob, 112);
-              this.field_Jb.field_db = 0;
+              this.field_Jb.y = -this.field_Ib.a(this.field_Nb.height, param2, this.field_Jb.height, 112);
+              this.field_Jb.pendingYDelta = 0;
             }
-            this.field_Ib.a(param0 + param0, this.field_Jb.field_ob, this.field_Nb.field_ob, -this.field_Jb.field_ab);
+            this.field_Ib.a(param0 + param0, this.field_Jb.height, this.field_Nb.height, -this.field_Jb.y);
             return;
           }
-          this.field_Jb.field_db = -this.field_Jb.field_ab;
+          this.field_Jb.pendingYDelta = -this.field_Jb.y;
           if (this.field_Ib.a(false)) {
-            this.field_Jb.field_ab = -this.field_Ib.a(this.field_Nb.field_ob, param2, this.field_Jb.field_ob, 112);
-            this.field_Jb.field_db = 0;
+            this.field_Jb.y = -this.field_Ib.a(this.field_Nb.height, param2, this.field_Jb.height, 112);
+            this.field_Jb.pendingYDelta = 0;
           }
-          this.field_Ib.a(param0 + param0, this.field_Jb.field_ob, this.field_Nb.field_ob, -this.field_Jb.field_ab);
+          this.field_Ib.a(param0 + param0, this.field_Jb.height, this.field_Nb.height, -this.field_Jb.y);
           return;
         }
-        if (!(-(this.field_Jb.field_ab + this.field_Jb.field_db) >= 0)) {
-          this.field_Jb.field_db = -this.field_Jb.field_ab;
+        if (!(-(this.field_Jb.y + this.field_Jb.pendingYDelta) >= 0)) {
+          this.field_Jb.pendingYDelta = -this.field_Jb.y;
         }
-        if (-this.field_Nb.field_ob + this.field_Jb.field_ob + this.field_Jb.field_nb >= -(this.field_Jb.field_db + this.field_Jb.field_ab)) {
+        if (-this.field_Nb.height + this.field_Jb.height + this.field_Jb.pendingHeightDelta >= -(this.field_Jb.pendingYDelta + this.field_Jb.y)) {
           if (this.field_Ib.a(false)) {
-            this.field_Jb.field_ab = -this.field_Ib.a(this.field_Nb.field_ob, param2, this.field_Jb.field_ob, 112);
-            this.field_Jb.field_db = 0;
+            this.field_Jb.y = -this.field_Ib.a(this.field_Nb.height, param2, this.field_Jb.height, 112);
+            this.field_Jb.pendingYDelta = 0;
           }
-          this.field_Ib.a(param0 + param0, this.field_Jb.field_ob, this.field_Nb.field_ob, -this.field_Jb.field_ab);
+          this.field_Ib.a(param0 + param0, this.field_Jb.height, this.field_Nb.height, -this.field_Jb.y);
           return;
         }
-        this.field_Jb.field_db = -this.field_Jb.field_ab - (-this.field_Nb.field_ob + (this.field_Jb.field_nb + this.field_Jb.field_ob));
+        this.field_Jb.pendingYDelta = -this.field_Jb.y - (-this.field_Nb.height + (this.field_Jb.pendingHeightDelta + this.field_Jb.height));
         if (this.field_Ib.a(false)) {
-          this.field_Jb.field_ab = -this.field_Ib.a(this.field_Nb.field_ob, param2, this.field_Jb.field_ob, 112);
-          this.field_Jb.field_db = 0;
+          this.field_Jb.y = -this.field_Ib.a(this.field_Nb.height, param2, this.field_Jb.height, 112);
+          this.field_Jb.pendingYDelta = 0;
         }
-        this.field_Ib.a(param0 + param0, this.field_Jb.field_ob, this.field_Nb.field_ob, -this.field_Jb.field_ab);
+        this.field_Ib.a(param0 + param0, this.field_Jb.height, this.field_Nb.height, -this.field_Jb.y);
     }
 
     private final boolean a(boolean param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
@@ -224,37 +224,37 @@ final class dn extends je {
         int var8Lifetime3;
         if (param6) {
           var8 = 1;
-          this.field_Jb.a(var8 != 0, this.field_Nb.field_ob, param5, -1379);
+          this.field_Jb.a(var8 != 0, this.field_Nb.height, param5, -1379);
           this.a(param4, param3, false, param1, param2);
           return var8 != 0;
         }
-        if (!this.field_eb) {
+        if (!this.heldButtonMatches) {
           var8Lifetime1 = 0;
-          this.field_Jb.a(var8Lifetime1 != 0, this.field_Nb.field_ob, param5, -1379);
+          this.field_Jb.a(var8Lifetime1 != 0, this.field_Nb.height, param5, -1379);
           this.a(param4, param3, false, param1, param2);
           return var8Lifetime1 != 0;
         }
         if (!param0) {
           var8Lifetime2 = 1;
-          this.field_Jb.a(var8Lifetime2 != 0, this.field_Nb.field_ob, param5, -1379);
+          this.field_Jb.a(var8Lifetime2 != 0, this.field_Nb.height, param5, -1379);
           this.a(param4, param3, false, param1, param2);
           return var8Lifetime2 != 0;
         }
         var8Lifetime3 = 0;
-        this.field_Jb.a(var8Lifetime3 != 0, this.field_Nb.field_ob, param5, -1379);
+        this.field_Jb.a(var8Lifetime3 != 0, this.field_Nb.height, param5, -1379);
         this.a(param4, param3, false, param1, param2);
         return var8Lifetime3 != 0;
     }
 
-    dn(long param0, je param1, je param2, ll param3) {
-        super(param0, (je) null);
+    dn(long param0, ClientUiComponent param1, ClientUiComponent param2, ll param3) {
+        super(param0, (ClientUiComponent) null);
         try {
-          this.field_Nb = new je(0L, param2);
+          this.field_Nb = new ClientUiComponent(0L, param2);
           this.field_Ib = new ll(0L, param3);
-          this.a(this.field_Nb, 53);
-          this.a(this.field_Ib, 39);
+          this.addChild(this.field_Nb, 53);
+          this.addChild(this.field_Ib, 39);
           this.field_Jb = param1;
-          this.field_Nb.a(param1, 54);
+          this.field_Nb.addChild(param1, 54);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dn.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

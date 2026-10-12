@@ -11,7 +11,7 @@ final class ta extends nl {
     static boolean field_L;
     static int field_N;
     static String field_M;
-    static je field_R;
+    static ClientUiComponent field_R;
     private boolean field_J;
     private BitmapFont field_P;
 

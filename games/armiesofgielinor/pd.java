@@ -5,7 +5,7 @@ final class pd {
     static int[] field_a;
     static int[] field_g;
     static String field_b;
-    static je field_c;
+    static ClientUiComponent field_c;
     static int field_e;
     static MeshData field_d;
     static String field_f;
@@ -20,7 +20,7 @@ final class pd {
           field_g = null;
           return;
         }
-        field_c = (je) null;
+        field_c = (ClientUiComponent) null;
         field_g = null;
     }
 

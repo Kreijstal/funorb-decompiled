@@ -73,7 +73,7 @@ final class fg extends IntrusiveNode {
                 }
               } else {
                 if (!cu.field_a) {
-                  mq.a(param5, var8, var7, param1, param3, var9, 54, param0);
+                  QuickChatMenu.a(param5, var8, var7, param1, param3, var9, 54, param0);
                 }
                 pk.a(param3, param0, param1, var7, var8, -29403, var9, param5);
                 if (Unit.field_L) {
@@ -81,7 +81,7 @@ final class fg extends IntrusiveNode {
                 }
               }
             } else {
-              mq.a(param5, var8, var7, param1, param3, var9, 101, param0);
+              QuickChatMenu.a(param5, var8, var7, param1, param3, var9, 101, param0);
             }
           } else {
             if (param2 == 2) {
@@ -114,20 +114,20 @@ final class fg extends IntrusiveNode {
         }
     }
 
-    final static mq a(int param0, je param1, int[] param2, je param3, je param4) {
+    final static QuickChatMenu a(int param0, ClientUiComponent param1, int[] param2, ClientUiComponent param3, ClientUiComponent param4) {
         int var10_int = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
         String[] var6 = null;
         char[] var7 = null;
-        mq[] var8 = null;
+        QuickChatMenu[] var8 = null;
         int var9 = 0;
         QuickChatPhrase var11 = null;
         int var12 = 0;
         char[] var13 = null;
         char[] var14 = null;
         Object stackIn_9_0 = null;
-        mq stackIn_11_0 = null;
+        QuickChatMenu stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -146,7 +146,7 @@ final class fg extends IntrusiveNode {
           var14 = new char[var5_int];
           var13 = var14;
           var7 = var13;
-          var8 = new mq[var5_int];
+          var8 = new QuickChatMenu[var5_int];
           var9 = 49;
           try {
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
@@ -163,9 +163,9 @@ final class fg extends IntrusiveNode {
             decompiledCaughtException = decompiledCaughtParameter0;
             var10 = (Exception) (Object) decompiledCaughtException;
             stackIn_9_0 = null;
-            return (mq) (stackIn_9_0);
+            return (QuickChatMenu) (stackIn_9_0);
           }
-          stackIn_11_0 = new mq(0L, param1, param4, param3, var8, param2, var6, var14);
+          stackIn_11_0 = new QuickChatMenu(0L, param1, param4, param3, var8, param2, var6, var14);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -206,8 +206,8 @@ final class fg extends IntrusiveNode {
           this.field_p = param1;
           this.field_t = param3;
           if (param7 > -55) {
-            je var10 = (je) null;
-            fg.a(-76, (je) null, (int[]) null, (je) null, (je) null);
+            ClientUiComponent var10 = (ClientUiComponent) null;
+            fg.a(-76, (ClientUiComponent) null, (int[]) null, (ClientUiComponent) null, (ClientUiComponent) null);
           }
           this.field_r = param4;
           this.field_s = param2;

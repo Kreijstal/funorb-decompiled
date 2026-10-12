@@ -4,7 +4,7 @@
 final class jl {
     static String[][] field_c;
     static p field_d;
-    static je field_b;
+    static ClientUiComponent field_b;
     static long field_a;
 
     public static void a(int param0) {

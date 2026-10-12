@@ -184,7 +184,7 @@ final class BattleCharacter {
         var7 = this.field_x.advance(param0 ^ -13) ? 1 : 0;
         if (1 != this.animationState) {
         }
-        if (this.field_J == je.field_K[this.modelIndex][1] &&
+        if (this.field_J == ClientUiComponent.field_K[this.modelIndex][1] &&
           this.animationState == 3 &&
           !this.field_B) {
           stackIn_56_0 = this.destinationY;
@@ -197,8 +197,8 @@ final class BattleCharacter {
           this.field_B = true;
           this.field_l = true;
         } else {
-          if (3 == this.animationState && (!(je.field_K[this.modelIndex][1] >= 0) ||
-            !(this.field_F[this.animationState] < je.field_K[this.modelIndex][1])) && !this.field_B) {
+          if (3 == this.animationState && (!(ClientUiComponent.field_K[this.modelIndex][1] >= 0) ||
+            !(this.field_F[this.animationState] < ClientUiComponent.field_K[this.modelIndex][1])) && !this.field_B) {
             stackIn_66_0 = this.destinationY;
             stackIn_66_1 = this.destinationX;
             if (!this.field_u) {
@@ -211,7 +211,7 @@ final class BattleCharacter {
             this.field_l = true;
           }
         }
-        if (this.field_J == je.field_K[this.modelIndex][0] &&
+        if (this.field_J == ClientUiComponent.field_K[this.modelIndex][0] &&
           1 == this.animationState &&
           !this.field_B) {
           stackIn_84_0 = this.destinationY;
@@ -225,8 +225,8 @@ final class BattleCharacter {
           this.field_e = true;
           this.field_B = true;
         } else {
-          if (this.animationState == 1 && (!(je.field_K[this.modelIndex][0] >= 0) ||
-            !(je.field_K[this.modelIndex][0] > this.field_F[this.animationState])) && !this.field_B) {
+          if (this.animationState == 1 && (!(ClientUiComponent.field_K[this.modelIndex][0] >= 0) ||
+            !(ClientUiComponent.field_K[this.modelIndex][0] > this.field_F[this.animationState])) && !this.field_B) {
             stackIn_80_0 = this.destinationY;
             if (this.field_u) {
               stackIn_81_1 = -1;

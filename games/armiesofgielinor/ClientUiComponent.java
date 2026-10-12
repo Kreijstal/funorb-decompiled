@@ -1,74 +1,74 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class je extends im {
+class ClientUiComponent extends ClientUiNode {
     private boolean field_Db;
-    int field_gb;
+    int width;
     int field_L;
     private int field_ib;
-    static je field_Q;
+    static ClientUiComponent field_Q;
     boolean field_ub;
     RgbSprite[] field_A;
-    NodeDeque field_fb;
+    NodeDeque children;
     RgbSprite[] field_mb;
     int field_R;
     int field_N;
     boolean field_M;
-    int field_hb;
+    int heldPressButton;
     RgbSprite[] field_G;
-    boolean field_eb;
+    boolean heldButtonMatches;
     int field_O;
     int field_W;
     private int field_E;
-    private boolean field_Cb;
-    String field_X;
-    RgbSprite field_cb;
+    private boolean inheritParentClip;
+    String text;
+    RgbSprite sprite;
     int field_tb;
     static String field_zb;
     String field_I;
-    int field_V;
-    int field_Eb;
-    boolean field_Gb;
+    int screenX;
+    int horizontalAlignment;
+    boolean draggable;
     int field_Bb;
     int field_pb;
     RgbSprite[] field_H;
-    int field_nb;
+    int pendingHeightDelta;
     int field_F;
-    private int field_J;
-    int field_C;
-    boolean field_xb;
-    boolean field_rb;
+    private int pendingXDelta;
+    int opacity;
+    boolean inputEnabled;
+    boolean selected;
     int field_bb;
     int field_B;
     int field_T;
-    int field_yb;
-    int field_S;
-    int field_ob;
+    int pressedButton;
+    int x;
+    int height;
     RgbSprite field_P;
     int field_z;
-    int field_db;
+    int pendingYDelta;
     static String field_lb;
-    private int field_Hb;
-    int field_D;
-    boolean field_jb;
+    private int pendingWidthDelta;
+    int screenY;
+    boolean hovered;
     int field_wb;
     boolean field_Y;
-    int field_Fb;
+    int verticalAlignment;
     private int field_Ab;
     RgbSprite[] field_U;
     static int[][] field_K;
     RgbSprite field_sb;
     private int field_kb;
     RgbSprite field_vb;
-    int field_ab;
+    int y;
     RgbSprite field_qb;
-    BitmapFont field_Z;
+    BitmapFont font;
 
     final void b(boolean param0, int param1) {
         this.a((byte) -26, SoftwareRaster.height, param0, SoftwareRaster.width, 0, false, false, false, 0, true, false);
         if (param1 != 20) {
-          je var4 = (je) null;
-          this.a((je) null, false, 64, (je) null);
+          ClientUiComponent var4 = (ClientUiComponent) null;
+          this.a((ClientUiComponent) null, false, 64, (ClientUiComponent) null);
         }
     }
 
@@ -147,7 +147,7 @@ class je extends im {
         }
     }
 
-    final void a(int param0, je param1) {
+    final void applyStyle(int obfuscationGuard, ClientUiComponent style) {
         boolean stackIn_72_1 = false;
         RuntimeException stackIn_101_0 = null;
         StringBuilder stackIn_101_1 = null;
@@ -155,123 +155,123 @@ class je extends im {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param1 != null) {
-            if (param1.field_qb != null) {
-              this.field_qb = param1.field_qb;
+          if (style != null) {
+            if (style.field_qb != null) {
+              this.field_qb = style.field_qb;
             }
-            if (param1.field_N != 0) {
-              this.field_N = param1.field_N;
+            if (style.field_N != 0) {
+              this.field_N = style.field_N;
             }
-            if (param1.field_ub) {
-              this.field_ub = param1.field_ub;
+            if (style.field_ub) {
+              this.field_ub = style.field_ub;
             }
-            if (param1.field_sb != null) {
-              this.field_sb = param1.field_sb;
+            if (style.field_sb != null) {
+              this.field_sb = style.field_sb;
             }
-            if (param1.field_O != 0) {
-              this.field_O = param1.field_O;
+            if (style.field_O != 0) {
+              this.field_O = style.field_O;
             }
-            if (param1.field_Cb) {
-              this.field_Cb = param1.field_Cb;
+            if (style.inheritParentClip) {
+              this.inheritParentClip = style.inheritParentClip;
             }
-            if (null != param1.field_mb) {
-              this.field_mb = param1.field_mb;
+            if (null != style.field_mb) {
+              this.field_mb = style.field_mb;
             }
-            if (param1.field_rb) {
-              this.field_rb = param1.field_rb;
+            if (style.selected) {
+              this.selected = style.selected;
             }
-            if (param1.field_A != null) {
-              this.field_A = param1.field_A;
+            if (style.field_A != null) {
+              this.field_A = style.field_A;
             }
-            if (param1.field_C != 256) {
-              this.field_C = param1.field_C;
+            if (style.opacity != 256) {
+              this.opacity = style.opacity;
             }
-            if (param1.field_M) {
-              this.field_M = param1.field_M;
+            if (style.field_M) {
+              this.field_M = style.field_M;
             }
-            if (0 != param1.field_pb) {
-              this.field_pb = param1.field_pb;
+            if (0 != style.field_pb) {
+              this.field_pb = style.field_pb;
             }
-            if (null != param1.field_G) {
-              this.field_G = param1.field_G;
+            if (null != style.field_G) {
+              this.field_G = style.field_G;
             }
-            if (param1.field_I != null) {
-              this.field_I = param1.field_I;
+            if (style.field_I != null) {
+              this.field_I = style.field_I;
             }
-            if (param1.field_P != null) {
-              this.field_P = param1.field_P;
+            if (style.field_P != null) {
+              this.field_P = style.field_P;
             }
-            if (null != param1.field_Z) {
-              this.field_Z = param1.field_Z;
+            if (null != style.font) {
+              this.font = style.font;
             }
-            if (null != param1.field_cb) {
-              this.field_cb = param1.field_cb;
+            if (null != style.sprite) {
+              this.sprite = style.sprite;
             }
-            if (param1.field_T >= 0) {
-              this.field_T = param1.field_T;
+            if (style.field_T >= 0) {
+              this.field_T = style.field_T;
             }
-            if (param1.field_wb >= 0) {
-              this.field_wb = param1.field_wb;
+            if (style.field_wb >= 0) {
+              this.field_wb = style.field_wb;
             }
-            if (!param1.field_xb) {
-              this.field_xb = param1.field_xb;
+            if (!style.inputEnabled) {
+              this.inputEnabled = style.inputEnabled;
             }
-            if (null != param1.field_X) {
-              this.field_X = param1.field_X;
+            if (null != style.text) {
+              this.text = style.text;
             }
-            if (param1.field_W >= 0) {
-              this.field_W = param1.field_W;
+            if (style.field_W >= 0) {
+              this.field_W = style.field_W;
             }
-            if (0 <= param1.field_L) {
-              this.field_L = param1.field_L;
+            if (0 <= style.field_L) {
+              this.field_L = style.field_L;
             }
-            if (param1.field_H != null) {
-              this.field_H = param1.field_H;
+            if (style.field_H != null) {
+              this.field_H = style.field_H;
             }
-            if (param1.field_U != null) {
-              this.field_U = param1.field_U;
+            if (style.field_U != null) {
+              this.field_U = style.field_U;
             }
-            if (null != param1.field_vb) {
-              this.field_vb = param1.field_vb;
+            if (null != style.field_vb) {
+              this.field_vb = style.field_vb;
             }
-            if (-2147483648 != param1.field_B) {
-              this.field_B = param1.field_B;
+            if (-2147483648 != style.field_B) {
+              this.field_B = style.field_B;
             }
-            stackIn_72_1 = (this.field_M) && (param1.field_Y);
+            stackIn_72_1 = (this.field_M) && (style.field_Y);
             this.field_Y = stackIn_72_1;
-            if (param1.field_R != -2147483648) {
-              this.field_R = param1.field_R;
+            if (style.field_R != -2147483648) {
+              this.field_R = style.field_R;
             }
-            if (param1.field_Gb) {
-              this.field_Gb = param1.field_Gb;
+            if (style.draggable) {
+              this.draggable = style.draggable;
             }
-            if (param1.field_ib != -2147483648) {
-              this.field_ib = param1.field_ib;
+            if (style.field_ib != -2147483648) {
+              this.field_ib = style.field_ib;
             }
-            this.field_Db = param1.field_Db;
-            if (param1.field_z != 0) {
-              this.field_z = param1.field_z;
+            this.field_Db = style.field_Db;
+            if (style.field_z != 0) {
+              this.field_z = style.field_z;
             }
-            if (0 != param1.field_Fb) {
-              this.field_Fb = param1.field_Fb;
+            if (0 != style.verticalAlignment) {
+              this.verticalAlignment = style.verticalAlignment;
             }
-            if (param1.field_E != -2147483648) {
-              this.field_E = param1.field_E;
+            if (style.field_E != -2147483648) {
+              this.field_E = style.field_E;
             }
-            if (param1.field_Bb != -2147483648) {
-              this.field_Bb = param1.field_Bb;
+            if (style.field_Bb != -2147483648) {
+              this.field_Bb = style.field_Bb;
             }
-            if (param1.field_Eb != 0) {
-              this.field_Eb = param1.field_Eb;
+            if (style.horizontalAlignment != 0) {
+              this.horizontalAlignment = style.horizontalAlignment;
             }
-            if (param1.field_tb != -2147483648) {
-              this.field_tb = param1.field_tb;
+            if (style.field_tb != -2147483648) {
+              this.field_tb = style.field_tb;
             }
-            if (param1.field_F != 0) {
-              this.field_F = param1.field_F;
+            if (style.field_F != 0) {
+              this.field_F = style.field_F;
             }
           }
-          if (param0 != 0) {
+          if (obfuscationGuard != 0) {
             this.field_M = true;
           }
           return;
@@ -279,8 +279,8 @@ class je extends im {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_101_0 = var3;
-          stackIn_101_1 = new StringBuilder().append("je.TA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_101_1 = new StringBuilder().append("je.TA(").append(obfuscationGuard).append(',');
+          if (style == null) {
             stackIn_102_2 = "null";
           } else {
             stackIn_102_2 = "{...}";
@@ -289,18 +289,18 @@ class je extends im {
         }
     }
 
-    final void a(je param0, int param1) {
+    final void addChild(ClientUiComponent child, int obfuscationGuard) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (null == this.field_fb) {
-            this.field_fb = new NodeDeque();
+          if (null == this.children) {
+            this.children = new NodeDeque();
           }
-          this.field_fb.addLast((byte) -119, (IntrusiveNode) (param0));
-          if (param1 < 36) {
+          this.children.addLast((byte) -119, (IntrusiveNode) (child));
+          if (obfuscationGuard < 36) {
             this.field_M = true;
           }
           return;
@@ -309,34 +309,34 @@ class je extends im {
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
           stackIn_8_1 = new StringBuilder().append("je.MA(");
-          if (param0 == null) {
+          if (child == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
-        je var10_ref_je = null;
+        ClientUiComponent var10_ref_je = null;
         int var9 = 0;
         int var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var9Lifetime1;
         if (param3 != -1379) {
           return;
         }
-        int var5 = -this.field_ab;
-        int var6 = -this.field_db + var5;
-        int var7 = this.field_ob;
-        int var8 = this.field_nb + var7;
+        int var5 = -this.y;
+        int var6 = -this.pendingYDelta + var5;
+        int var7 = this.height;
+        int var8 = this.pendingHeightDelta + var7;
         if (!param0) {
           var9 = 0;
-          var10_ref_je = (je) (this.field_fb.first((byte) 124));
+          var10_ref_je = (ClientUiComponent) (this.children.first((byte) 124));
           while (var10_ref_je != null) {
-            var10_ref_je.field_db = -var10_ref_je.field_ab + var9;
-            var9 = var9 + (param2 + (var10_ref_je.field_nb + var10_ref_je.field_ob));
-            var10_ref_je = (je) (this.field_fb.next((byte) 123));
+            var10_ref_je.pendingYDelta = -var10_ref_je.y + var9;
+            var9 = var9 + (param2 + (var10_ref_je.pendingHeightDelta + var10_ref_je.height));
+            var10_ref_je = (ClientUiComponent) (this.children.next((byte) 123));
           }
           var8 = var9 - param2;
         }
@@ -354,14 +354,14 @@ class je extends im {
         if (var5 < 0) {
           var5 = 0;
         }
-        this.field_ob = var7;
-        this.field_db = -var6 + var5;
-        this.field_nb = -var7 + var8;
-        this.field_ab = -var5;
+        this.height = var7;
+        this.pendingYDelta = -var6 + var5;
+        this.pendingHeightDelta = -var7 + var8;
+        this.y = -var5;
     }
 
-    je(long param0, je param1) {
-        this(param0, param1, 0, 0, 0, 0, (String) null);
+    ClientUiComponent(long key, ClientUiComponent style) {
+        this(key, style, 0, 0, 0, 0, (String) null);
     }
 
     private final void a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
@@ -373,48 +373,48 @@ class je extends im {
         int var10;
         int var11;
         int var12;
-        je var13;
+        ClientUiComponent var13;
         int var14;
         int var7Lifetime1;
         int var7Lifetime2;
         int var7Lifetime3;
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.field_J > 0) {
-          var7 = -(-this.field_J >> 2);
+        if (this.pendingXDelta > 0) {
+          var7 = -(-this.pendingXDelta >> 2);
         } else {
-          var7 = this.field_J >> 2;
+          var7 = this.pendingXDelta >> 2;
         }
-        this.field_J = this.field_J - var7;
-        this.field_S = this.field_S + var7;
-        if (0 < this.field_db) {
-          var7Lifetime1 = -(-this.field_db >> 2);
+        this.pendingXDelta = this.pendingXDelta - var7;
+        this.x = this.x + var7;
+        if (0 < this.pendingYDelta) {
+          var7Lifetime1 = -(-this.pendingYDelta >> 2);
         } else {
-          var7Lifetime1 = this.field_db >> 2;
+          var7Lifetime1 = this.pendingYDelta >> 2;
         }
-        this.field_ab = this.field_ab + var7Lifetime1;
-        this.field_db = this.field_db - var7Lifetime1;
-        if (this.field_Hb > 0) {
-          var7Lifetime2 = -(-this.field_Hb >> 2);
+        this.y = this.y + var7Lifetime1;
+        this.pendingYDelta = this.pendingYDelta - var7Lifetime1;
+        if (this.pendingWidthDelta > 0) {
+          var7Lifetime2 = -(-this.pendingWidthDelta >> 2);
         } else {
-          var7Lifetime2 = this.field_Hb >> 2;
+          var7Lifetime2 = this.pendingWidthDelta >> 2;
         }
-        this.field_gb = this.field_gb + var7Lifetime2;
-        this.field_Hb = this.field_Hb - var7Lifetime2;
-        if (this.field_nb > 0) {
-          var7Lifetime3 = -(-this.field_nb >> 2);
+        this.width = this.width + var7Lifetime2;
+        this.pendingWidthDelta = this.pendingWidthDelta - var7Lifetime2;
+        if (this.pendingHeightDelta > 0) {
+          var7Lifetime3 = -(-this.pendingHeightDelta >> 2);
         } else {
-          var7Lifetime3 = this.field_nb >> 2;
+          var7Lifetime3 = this.pendingHeightDelta >> 2;
         }
-        this.field_V = param5 + this.field_S;
-        param0 = param0 & this.field_xb;
-        this.field_ob = this.field_ob + var7Lifetime3;
-        this.field_nb = this.field_nb - var7Lifetime3;
-        this.field_D = this.field_ab + param2;
+        this.screenX = param5 + this.x;
+        param0 = param0 & this.inputEnabled;
+        this.height = this.height + var7Lifetime3;
+        this.pendingHeightDelta = this.pendingHeightDelta - var7Lifetime3;
+        this.screenY = this.y + param2;
         var8 = SoftwareRaster.clipLeft;
         var9 = SoftwareRaster.clipTop;
         var10 = SoftwareRaster.clipRight;
         var11 = SoftwareRaster.clipBottom;
-        SoftwareRaster.b(this.field_V, this.field_D, this.field_V + this.field_gb, this.field_D + this.field_ob);
+        SoftwareRaster.b(this.screenX, this.screenY, this.screenX + this.width, this.screenY + this.height);
         var12 = param1 ? 1 : 0;
         if (!SectorCacheStore.field_e &&
           param0 &&
@@ -423,64 +423,64 @@ class je extends im {
           BattleTutorial.pointerPressX < SoftwareRaster.clipRight &&
           TeleportAction.pointerPressY >= SoftwareRaster.clipTop &&
           TeleportAction.pointerPressY < SoftwareRaster.clipBottom) {
-          this.field_yb = DeployEvent.pointerPressButton;
-          this.field_hb = DeployEvent.pointerPressButton;
-          this.field_bb = -this.field_V + BattleTutorial.pointerPressX;
+          this.pressedButton = DeployEvent.pointerPressButton;
+          this.heldPressButton = DeployEvent.pointerPressButton;
+          this.field_bb = -this.screenX + BattleTutorial.pointerPressX;
           var12 = 1;
-          this.field_Ab = -this.field_D + TeleportAction.pointerPressY;
+          this.field_Ab = -this.screenY + TeleportAction.pointerPressY;
         } else {
-          this.field_yb = 0;
+          this.pressedButton = 0;
           if (DeployEvent.pointerPressButton != 0) {
-            this.field_hb = 0;
+            this.heldPressButton = 0;
           }
         }
         stackIn_30_1 = (!QuickChatCategoryRepository.field_f) && (SoftwareRaster.clipLeft <= AiPlanningStrategy.pointerX) && (SoftwareRaster.clipRight > AiPlanningStrategy.pointerX) && (SoftwareRaster.clipTop <= ko.pointerY) && (SoftwareRaster.clipBottom > ko.pointerY);
-        this.field_jb = stackIn_30_1;
+        this.hovered = stackIn_30_1;
         if (ro.pointerButton == 0) {
-          this.field_hb = 0;
+          this.heldPressButton = 0;
         }
-        stackIn_38_1 = (this.field_jb) && (ro.pointerButton == this.field_hb) && (param0);
-        this.field_eb = stackIn_38_1;
-        if (null != this.field_fb) {
-          var13 = (je) (this.field_fb.last((byte) -82));
+        stackIn_38_1 = (this.hovered) && (ro.pointerButton == this.heldPressButton) && (param0);
+        this.heldButtonMatches = stackIn_38_1;
+        if (null != this.children) {
+          var13 = (ClientUiComponent) (this.children.last((byte) -82));
           while (var13 != null) {
-            var13.a(param0, param1, this.field_D, this.field_ob, this.field_gb, this.field_V);
-            var13 = (je) (this.field_fb.previous((byte) 88));
+            var13.a(param0, param1, this.screenY, this.height, this.width, this.screenX);
+            var13 = (ClientUiComponent) (this.children.previous((byte) 88));
           }
         }
         if (var12 != 0) {
           SectorCacheStore.field_e = true;
         }
-        if (this.field_jb) {
+        if (this.hovered) {
           QuickChatCategoryRepository.field_f = true;
         }
         SoftwareRaster.f(var8, var9, var10, var11);
-        if (this.field_hb != 0 &&
-          this.field_Gb) {
-          this.field_S = -this.field_bb + AiPlanningStrategy.pointerX - param5;
-          this.field_ab = -this.field_Ab + ko.pointerY - param2;
-          if (0 > this.field_S) {
-            this.field_S = 0;
+        if (this.heldPressButton != 0 &&
+          this.draggable) {
+          this.x = -this.field_bb + AiPlanningStrategy.pointerX - param5;
+          this.y = -this.field_Ab + ko.pointerY - param2;
+          if (0 > this.x) {
+            this.x = 0;
           }
-          if (this.field_ab < 0) {
-            this.field_ab = 0;
+          if (this.y < 0) {
+            this.y = 0;
           }
-          if (this.field_S > param4 - this.field_gb) {
-            this.field_S = -this.field_gb + param4;
+          if (this.x > param4 - this.width) {
+            this.x = -this.width + param4;
           }
-          this.field_db = 0;
-          if (this.field_ab > param3 - this.field_ob) {
-            this.field_ab = param3 - this.field_ob;
+          this.pendingYDelta = 0;
+          if (this.y > param3 - this.height) {
+            this.y = param3 - this.height;
           }
-          this.field_V = this.field_S + param5;
-          this.field_J = 0;
-          this.field_D = param2 + this.field_ab;
+          this.screenX = this.x + param5;
+          this.pendingXDelta = 0;
+          this.screenY = param2 + this.y;
         }
     }
 
-    final void b(int param0, je param1) {
+    final void b(int param0, ClientUiComponent param1) {
         NodeIterator var3 = null;
-        je var4 = null;
+        ClientUiComponent var4 = null;
         int var5 = 0;
         boolean stackIn_11_1 = false;
         RuntimeException stackIn_16_0 = null;
@@ -493,18 +493,18 @@ class je extends im {
           if (param0 != 3) {
             this.a(true, 119, -41, -35);
           }
-          if (null != this.field_fb) {
-            var3 = new NodeIterator(this.field_fb);
-            var4 = (je) (var3.first(param0 + 47));
+          if (null != this.children) {
+            var3 = new NodeIterator(this.children);
+            var4 = (ClientUiComponent) (var3.first(param0 + 47));
             while (var4 != null) {
               var4.b(param0 ^ 0, param1);
-              var4 = (je) (var3.next(param0 + 47));
+              var4 = (ClientUiComponent) (var3.next(param0 + 47));
             }
           }
           stackIn_11_1 = (param1 == this);
           this.field_Y = stackIn_11_1;
           if (this.field_Db) {
-            this.field_rb = this.field_Y;
+            this.selected = this.field_Y;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -525,7 +525,7 @@ class je extends im {
         int var6 = 0;
         int var11 = 0;
         int stackIn_4_0 = 0;
-        je stackIn_6_0;
+        ClientUiComponent stackIn_6_0;
         int stackIn_6_1;
         int stackIn_6_2;
         int stackIn_6_3;
@@ -537,17 +537,17 @@ class je extends im {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        je var7 = null;
+        ClientUiComponent var7 = null;
         int var7_int = 0;
         int var8 = 0;
-        je var8_ref_je = null;
-        nf var9 = null;
+        ClientUiComponent var8_ref_je = null;
+        IconTextComponent var9 = null;
         int var9_int = 0;
         int var10 = 0;
-        nf var10_ref_nf = null;
+        IconTextComponent var10_ref_nf = null;
         int var12 = 0;
         int var13 = 0;
-        je var14 = null;
+        ClientUiComponent var14 = null;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           tq.field_c = SoftwareRaster.width;
@@ -558,26 +558,26 @@ class je extends im {
             stackIn_4_0 = InstructionsPanel.field_D;
           }
           AnimationSequence.a(stackIn_4_0, -106);
-          ij.field_w.a(-40 + lk.field_a.field_ob - 2, (byte) -125, 0, lk.field_a.field_gb, 0);
-          gg.field_E.a(jn.field_d, -20500, eb.field_c.field_gb, 0, 0);
+          ij.field_w.a(-40 + lk.field_a.height - 2, (byte) -125, 0, lk.field_a.width, 0);
+          gg.field_E.setBounds(jn.field_d, -20500, eb.field_c.width, 0, 0);
           stackIn_6_0 = di.field_l;
           stackIn_6_1 = 18;
           stackIn_6_2 = -20500;
-          stackIn_6_3 = eb.field_c.field_gb;
+          stackIn_6_3 = eb.field_c.width;
           if (fh.field_c) {
             stackIn_7_4 = 2 + jn.field_c + 42;
           } else {
             stackIn_7_4 = 0;
           }
-          ((je) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, stackIn_6_3 - stackIn_7_4, 2 + jn.field_d, 0);
-          SpellCastEvent.field_D.a(18, -20500, 42 + jn.field_c, 2 + jn.field_d, -40 + (eb.field_c.field_gb - jn.field_c - 2));
-          bu.field_a.a(0, false, eb.field_c.field_gb, 2, jn.field_c, 20 + (2 + jn.field_d), -20 + (-2 + (-jn.field_d + eb.field_c.field_ob)));
-          mp.field_Lb.a(40, -20500, lk.field_a.field_gb, lk.field_a.field_ob - 40, 0);
-          kd.field_F.a(30, -20500, pd.field_c.field_gb, 0, 0);
+          ((ClientUiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, stackIn_6_3 - stackIn_7_4, 2 + jn.field_d, 0);
+          SpellCastEvent.field_D.setBounds(18, -20500, 42 + jn.field_c, 2 + jn.field_d, -40 + (eb.field_c.width - jn.field_c - 2));
+          bu.field_a.a(0, false, eb.field_c.width, 2, jn.field_c, 20 + (2 + jn.field_d), -20 + (-2 + (-jn.field_d + eb.field_c.height)));
+          mp.field_Lb.setBounds(40, -20500, lk.field_a.width, lk.field_a.height - 40, 0);
+          kd.field_F.setBounds(30, -20500, pd.field_c.width, 0, 0);
           if (param0 < 13) {
             return;
           }
-          vc.field_l.a(-2 + pd.field_c.field_ob - 70, -20500, pd.field_c.field_gb, 30, 0);
+          vc.field_l.setBounds(-2 + pd.field_c.height - 70, -20500, pd.field_c.width, 30, 0);
           var2_int = 3 + tq.field_b;
           if (2 > lm.field_e.length) {
             var2_int--;
@@ -585,15 +585,15 @@ class je extends im {
           if (param1) {
             var2_int--;
           }
-          var3 = -2 + (-15 + (-5 + vc.field_l.field_ob + (2 + (1 + var2_int) / 2))) / (var2_int + 1);
+          var3 = -2 + (-15 + (-5 + vc.field_l.height + (2 + (1 + var2_int) / 2))) / (var2_int + 1);
           if (var3 > 30) {
             var3 = 30;
           }
-          var4 = -5 + (vc.field_l.field_ob - (5 + (var3 + 2) * var2_int));
+          var4 = -5 + (vc.field_l.height - (5 + (var3 + 2) * var2_int));
           if (var4 > 40) {
             var4 = 40;
           }
-          BattleTutorial.field_d.a(var4, -20500, vc.field_l.field_gb - 5 - 5, 5, 5);
+          BattleTutorial.field_d.setBounds(var4, -20500, vc.field_l.width - 5 - 5, 5, 5);
           var5 = 5 + var4 + 2;
           for (var6 = 0; 4 + tq.field_b > var6; var6++) {
             if ((var6 != 1 ||
@@ -602,26 +602,26 @@ class je extends im {
               if (!param1 &&
                 var6 == 3) {
                 var7 = KingBlackDragonEvent.field_z[var6];
-                KingBlackDragonEvent.field_z[var6].field_ob = 0;
-                var7.field_gb = 0;
+                KingBlackDragonEvent.field_z[var6].height = 0;
+                var7.width = 0;
                 for (var8 = 0; var8 < pu.field_k[var6].length; var8++) {
                   if (null != pu.field_k[var6][var8]) {
                     var9 = pu.field_k[var6][var8];
-                    pu.field_k[var6][var8].field_ob = 0;
-                    var9.field_gb = 0;
+                    pu.field_k[var6][var8].height = 0;
+                    var9.width = 0;
                   }
                 }
               } else if (param1 &&
                 var6 == 0) {
                 var14 = KingBlackDragonEvent.field_z[var6];
                 var7 = var14;
-                KingBlackDragonEvent.field_z[var6].field_ob = 0;
-                var14.field_gb = 0;
+                KingBlackDragonEvent.field_z[var6].height = 0;
+                var14.width = 0;
                 for (var8 = 0; pu.field_k[var6].length > var8; var8++) {
                   if (null != pu.field_k[var6][var8]) {
                     var9 = pu.field_k[var6][var8];
-                    pu.field_k[var6][var8].field_ob = 0;
-                    var9.field_gb = 0;
+                    pu.field_k[var6][var8].height = 0;
+                    var9.width = 0;
                   }
                 }
               } else {
@@ -641,45 +641,45 @@ class je extends im {
                 var7_int = stackIn_43_0;
                 if (var7_int != 0) {
                   var8_ref_je = KingBlackDragonEvent.field_z[var6];
-                  KingBlackDragonEvent.field_z[var6].field_ob = 0;
-                  var8_ref_je.field_gb = 0;
+                  KingBlackDragonEvent.field_z[var6].height = 0;
+                  var8_ref_je.width = 0;
                   for (var9_int = 0; var9_int < pu.field_k[var6].length; var9_int++) {
                     if (pu.field_k[var6][var9_int] != null) {
                       var10_ref_nf = pu.field_k[var6][var9_int];
-                      pu.field_k[var6][var9_int].field_ob = 0;
-                      var10_ref_nf.field_gb = 0;
+                      pu.field_k[var6][var9_int].height = 0;
+                      var10_ref_nf.width = 0;
                     }
                   }
                 } else {
-                  KingBlackDragonEvent.field_z[var6].a(var3, -20500, 103, var5, 5);
+                  KingBlackDragonEvent.field_z[var6].setBounds(var3, -20500, 103, var5, 5);
                   var8 = 110;
                   if (param1) {
-                    pu.field_k[var6][0].a(var3, 2, -30061, 38, var5, var8, io.field_n);
+                    pu.field_k[var6][0].setLayout(var3, 2, -30061, 38, var5, var8, io.field_n);
                     var8 += 40;
                   } else {
                     if (pu.field_k[var6][0] != null) {
                       var9 = pu.field_k[var6][0];
-                      pu.field_k[var6][0].field_ob = 0;
-                      var9.field_gb = 0;
+                      pu.field_k[var6][0].height = 0;
+                      var9.width = 0;
                     }
                   }
-                  var9_int = -5 + (pd.field_c.field_gb + (-var8 + 2));
+                  var9_int = -5 + (pd.field_c.width + (-var8 + 2));
                   var10 = pu.field_k[var6].length - 1;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9_int / var10;
-                    pu.field_k[var6][var11 + 1].a(var3, 2, -30061, var9_int * (1 + var11) / var10 - 2 - var12, var5, var8 + var12, io.field_n);
+                    pu.field_k[var6][var11 + 1].setLayout(var3, 2, -30061, var9_int * (1 + var11) / var10 - 2 - var12, var5, var8 + var12, io.field_n);
                   }
                   var5 = var5 + (var3 + 2);
                 }
               }
             }
           }
-          ta.field_R.a(-134 + (SoftwareRaster.height - 10), -20500, 360, 10, SoftwareRaster.width - 360 >> 1);
-          bk.field_f.a(24, -20500, ta.field_R.field_gb, 0, 0);
-          df.field_K.a(-24 + ta.field_R.field_ob, -20500, ta.field_R.field_gb, 24, 0);
-          df.field_K.field_G = tq.a(11579568, false, df.field_K.field_ob, 1, 3, 8421504);
-          nf.field_Kb.a(df.field_K.field_ob - 36, -20500, df.field_K.field_gb - 10, 5, 5);
-          dv.field_m.a(24, -20500, 80, -24 + df.field_K.field_ob - 5, (df.field_K.field_gb - 80) / 2);
+          ta.field_R.setBounds(-134 + (SoftwareRaster.height - 10), -20500, 360, 10, SoftwareRaster.width - 360 >> 1);
+          bk.field_f.setBounds(24, -20500, ta.field_R.width, 0, 0);
+          df.field_K.setBounds(-24 + ta.field_R.height, -20500, ta.field_R.width, 24, 0);
+          df.field_K.field_G = tq.a(11579568, false, df.field_K.height, 1, 3, 8421504);
+          IconTextComponent.field_Kb.setBounds(df.field_K.height - 36, -20500, df.field_K.width - 10, 5, 5);
+          dv.field_m.setBounds(24, -20500, 80, -24 + df.field_K.height - 5, (df.field_K.width - 80) / 2);
           mj.a((byte) 120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -689,33 +689,33 @@ class je extends im {
         }
     }
 
-    final void a(boolean param0, boolean param1) {
-        SectorCacheStore.field_e = !param1 ? true : false;
-        QuickChatCategoryRepository.field_f = !param1 ? true : false;
-        this.a(param0, false, 0, SoftwareRaster.height, SoftwareRaster.width, 0);
+    final void updateInput(boolean inputAllowed, boolean enableCapture) {
+        SectorCacheStore.field_e = !enableCapture ? true : false;
+        QuickChatCategoryRepository.field_f = !enableCapture ? true : false;
+        this.a(inputAllowed, false, 0, SoftwareRaster.height, SoftwareRaster.width, 0);
     }
 
-    je(long param0, je param1, String param2) {
-        this(param0, param1, 0, 0, 0, 0, param2);
+    ClientUiComponent(long key, ClientUiComponent style, String text) {
+        this(key, style, 0, 0, 0, 0, text);
     }
 
-    final void i(int param0) {
-        je var4 = null;
+    final void useParentClipForDescendants(int obfuscationGuard) {
+        ClientUiComponent var4 = null;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (null != this.field_fb) {
-          var4 = (je) (this.field_fb.last((byte) -112));
+        if (null != this.children) {
+          var4 = (ClientUiComponent) (this.children.last((byte) -112));
           while (var4 != null) {
-            var4.field_Cb = true;
-            var4.i(-10027);
-            var4 = (je) (this.field_fb.previous((byte) -104));
+            var4.inheritParentClip = true;
+            var4.useParentClipForDescendants(-10027);
+            var4 = (ClientUiComponent) (this.children.previous((byte) -104));
           }
         }
-        if (param0 != -10027) {
-          this.field_fb = (NodeDeque) null;
+        if (obfuscationGuard != -10027) {
+          this.children = (NodeDeque) null;
         }
     }
 
-    final void a(je param0, boolean param1, int param2, je param3) {
+    final void a(ClientUiComponent param0, boolean param1, int param2, ClientUiComponent param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -725,14 +725,14 @@ class je extends im {
         RuntimeException var5 = null;
         try {
           if (!param1) {
-            je.a(-53, false);
+            ClientUiComponent.a(-53, false);
           }
           if (param3 == null) {
-            param0.field_db = 0;
-            param0.field_ab = 0;
+            param0.pendingYDelta = 0;
+            param0.y = 0;
           } else {
-            param0.field_db = param3.field_nb + param3.field_db;
-            param0.field_ab = param3.field_ab - (-param3.field_ob - param2);
+            param0.pendingYDelta = param3.pendingHeightDelta + param3.pendingYDelta;
+            param0.y = param3.y - (-param3.height - param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -770,32 +770,32 @@ class je extends im {
         int var22;
         int var23_int;
         String var23;
-        je var23_ref;
+        ClientUiComponent var23_ref;
         int var24;
         int var25;
         String var26;
         String var23Lifetime1;
         String var23Lifetime2;
         var25 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.field_V = this.field_S + param8;
-        this.field_D = this.field_ab + param4;
+        this.screenX = this.x + param8;
+        this.screenY = this.y + param4;
         var12 = SoftwareRaster.clipLeft;
         var13 = SoftwareRaster.clipTop;
         var14 = SoftwareRaster.clipRight;
         var15 = SoftwareRaster.clipBottom;
-        SoftwareRaster.b(this.field_V, this.field_D, this.field_gb + this.field_V, this.field_ob + this.field_D);
-        param9 = param9 & this.field_xb;
-        if (!this.field_Cb) {
-          param7 = this.field_rb;
-          param10 = this.field_eb;
-          stackIn_5_0 = (0 != this.field_hb);
+        SoftwareRaster.b(this.screenX, this.screenY, this.width + this.screenX, this.height + this.screenY);
+        param9 = param9 & this.inputEnabled;
+        if (!this.inheritParentClip) {
+          param7 = this.selected;
+          param10 = this.heldButtonMatches;
+          stackIn_5_0 = (0 != this.heldPressButton);
           param5 = stackIn_5_0;
         }
         if (param0 != -26) {
           return;
         }
         var16 = this.field_G;
-        var17 = this.field_cb;
+        var17 = this.sprite;
         var18 = this.field_N;
         var19 = 0;
         if (!param9) {
@@ -866,22 +866,22 @@ class je extends im {
         if (this.field_ub) {
           i.a(var16, param1, param8, (byte) -47, param4, param3);
         } else {
-          i.a(var16, this.field_ob, this.field_V, (byte) -47, this.field_D, this.field_gb);
+          i.a(var16, this.height, this.screenX, (byte) -47, this.screenY, this.width);
         }
         if (var17 != null) {
-          var23_int = var21 + this.field_V;
-          if (1 == this.field_Eb) {
-            var23_int = var23_int + (this.field_gb - var17.canvasWidth) / 2;
+          var23_int = var21 + this.screenX;
+          if (1 == this.horizontalAlignment) {
+            var23_int = var23_int + (this.width - var17.canvasWidth) / 2;
           }
-          var24 = this.field_D + var22;
-          if (this.field_Fb == 1) {
-            var24 = var24 + (-var17.canvasHeight + this.field_ob) / 2;
+          var24 = this.screenY + var22;
+          if (this.verticalAlignment == 1) {
+            var24 = var24 + (-var17.canvasHeight + this.height) / 2;
           }
-          if (2 == this.field_Eb) {
-            var23_int = var23_int + (this.field_gb - var17.canvasWidth);
+          if (2 == this.horizontalAlignment) {
+            var23_int = var23_int + (this.width - var17.canvasWidth);
           }
-          if (2 == this.field_Fb) {
-            var24 = var24 + (this.field_ob - var17.canvasHeight);
+          if (2 == this.verticalAlignment) {
+            var24 = var24 + (this.height - var17.canvasHeight);
           }
           if (256 <= this.field_kb) {
             var17.g(var23_int, var24);
@@ -890,9 +890,9 @@ class je extends im {
           }
         }
         boolean decompiledFrameRemainder0 = true;
-        if (null != this.field_X &&
-          this.field_Z != null) {
-          var26 = this.field_X;
+        if (null != this.text &&
+          this.font != null) {
+          var26 = this.text;
           var23 = var26;
           var23Lifetime1 = var26;
           var23Lifetime2 = var26;
@@ -900,95 +900,95 @@ class je extends im {
             null != this.field_I) {
             var23Lifetime2 = var26 + this.field_I;
           }
-          if (this.field_Z.a(var23Lifetime2) <= this.field_gb - 2 * this.field_O &&
+          if (this.font.a(var23Lifetime2) <= this.width - 2 * this.field_O &&
             var23Lifetime2.indexOf("<br>") < 0) {
-            if (this.field_Fb != 1) {
-              if (this.field_Fb == 2) {
-                var22 = var22 + (-this.field_Z.field_H + (-this.field_Z.field_L + this.field_ob));
+            if (this.verticalAlignment != 1) {
+              if (this.verticalAlignment == 2) {
+                var22 = var22 + (-this.font.field_H + (-this.font.field_L + this.height));
               }
             } else {
-              var22 = var22 + (-this.field_Z.field_L + this.field_ob - this.field_Z.field_H) / 2;
+              var22 = var22 + (-this.font.field_L + this.height - this.font.field_H) / 2;
             }
-            if (this.field_Eb == 0) {
-              this.field_Z.b(var23Lifetime2, this.field_O + this.field_V + var21, this.field_Z.field_H + (this.field_D + var22), var18, -1, this.field_C);
+            if (this.horizontalAlignment == 0) {
+              this.font.b(var23Lifetime2, this.field_O + this.screenX + var21, this.font.field_H + (this.screenY + var22), var18, -1, this.opacity);
             } else {
-              if (this.field_Eb == 1) {
-                this.field_Z.a(var23Lifetime2, var21 + (this.field_V + this.field_O + (this.field_gb - 2 * this.field_O) / 2), var22 + (this.field_D + this.field_Z.field_H), var18, -1, this.field_C);
+              if (this.horizontalAlignment == 1) {
+                this.font.a(var23Lifetime2, var21 + (this.screenX + this.field_O + (this.width - 2 * this.field_O) / 2), var22 + (this.screenY + this.font.field_H), var18, -1, this.opacity);
               } else {
-                if (2 != this.field_Eb) {
-                  this.field_Z.a(var23Lifetime2, this.field_V + this.field_O + var21, var22 + this.field_D, -(2 * this.field_O) + this.field_gb, this.field_ob, var18, -1, this.field_C, this.field_Eb, this.field_Fb, this.field_pb);
+                if (2 != this.horizontalAlignment) {
+                  this.font.a(var23Lifetime2, this.screenX + this.field_O + var21, var22 + this.screenY, -(2 * this.field_O) + this.width, this.height, var18, -1, this.opacity, this.horizontalAlignment, this.verticalAlignment, this.field_pb);
                 } else {
-                  this.field_Z.c(var23Lifetime2, this.field_V + this.field_O + var21 - (-this.field_gb + this.field_O * 2), var22 + this.field_D + this.field_Z.field_H, var18, -1, this.field_C);
+                  this.font.c(var23Lifetime2, this.screenX + this.field_O + var21 - (-this.width + this.field_O * 2), var22 + this.screenY + this.font.field_H, var18, -1, this.opacity);
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_Z.a(var23Lifetime2, this.field_O + this.field_V + var21, var22 + this.field_D, -(2 * this.field_O) + this.field_gb, this.field_ob, var18, -1, this.field_C, this.field_Eb, this.field_Fb, this.field_pb);
+            this.font.a(var23Lifetime2, this.field_O + this.screenX + var21, var22 + this.screenY, -(2 * this.field_O) + this.width, this.height, var18, -1, this.opacity, this.horizontalAlignment, this.verticalAlignment, this.field_pb);
           }
         }
-        if (this.field_fb != null) {
-          var23_ref = (je) (this.field_fb.first((byte) 118));
+        if (this.children != null) {
+          var23_ref = (ClientUiComponent) (this.children.first((byte) 118));
           while (var23_ref != null) {
-            var23_ref.a((byte) -26, this.field_ob, param2, this.field_gb, var20 + this.field_D, param5, this.field_Y, param7, this.field_V + var19, param9, param10);
-            var23_ref = (je) (this.field_fb.next((byte) 123));
+            var23_ref.a((byte) -26, this.height, param2, this.width, var20 + this.screenY, param5, this.field_Y, param7, this.screenX + var19, param9, param10);
+            var23_ref = (ClientUiComponent) (this.children.next((byte) 123));
           }
         }
         SoftwareRaster.f(var12, var13, var14, var15);
         return;
     }
 
-    final int j(int param0) {
-        int var2 = -17 % ((30 - param0) / 58);
-        return this.a(true, 2147483647);
+    final int getPreferredWidth(int obfuscationGuard) {
+        int var2 = -17 % ((30 - obfuscationGuard) / 58);
+        return this.measureContentWidth(true, 2147483647);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        this.field_ab = param3;
-        this.field_nb = 0;
-        this.field_gb = param2;
-        this.field_J = 0;
-        if (param1 != -20500) {
+    final void setBounds(int height, int obfuscationGuard, int width, int y, int x) {
+        this.y = y;
+        this.pendingHeightDelta = 0;
+        this.width = width;
+        this.pendingXDelta = 0;
+        if (obfuscationGuard != -20500) {
           return;
         }
-        this.field_db = 0;
-        this.field_Hb = 0;
-        this.field_S = param4;
-        this.field_ob = param0;
+        this.pendingYDelta = 0;
+        this.pendingWidthDelta = 0;
+        this.x = x;
+        this.height = height;
     }
 
-    final int a(boolean param0, int param1) {
-        je var4 = null;
+    final int measureContentWidth(boolean obfuscationGuard, int maximumTextWidth) {
+        ClientUiComponent var4 = null;
         int var5 = 0;
         int var4_int = 0;
         int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var4_intLifetime1;
-        if (!param0) {
-          this.field_ab = -10;
+        if (!obfuscationGuard) {
+          this.y = -10;
         }
         int var3 = 0;
-        if (null != this.field_X &&
-          null != this.field_Z) {
-          var4_int = this.field_Z.a(this.field_X, param1);
+        if (null != this.text &&
+          null != this.font) {
+          var4_int = this.font.a(this.text, maximumTextWidth);
           if (var3 < var4_int) {
             var3 = var4_int;
           }
         }
-        if (this.field_cb != null) {
-          var4_intLifetime1 = this.field_cb.canvasWidth;
+        if (this.sprite != null) {
+          var4_intLifetime1 = this.sprite.canvasWidth;
           if (var3 < var4_intLifetime1) {
             var3 = var4_intLifetime1;
           }
         }
-        if (this.field_fb != null) {
-          var4 = (je) (this.field_fb.first((byte) 93));
+        if (this.children != null) {
+          var4 = (ClientUiComponent) (this.children.first((byte) 93));
           while (var4 != null) {
-            var5 = var4.field_S + var4.field_gb;
+            var5 = var4.x + var4.width;
             if (var5 > var3) {
               var3 = var5;
             }
-            var4 = (je) (this.field_fb.next((byte) 123));
+            var4 = (ClientUiComponent) (this.children.next((byte) 123));
           }
         }
         return var3;
@@ -1002,10 +1002,10 @@ class je extends im {
         field_lb = null;
     }
 
-    public je() {
+    public ClientUiComponent() {
         this.field_L = -1;
         this.field_Db = false;
-        this.field_C = 256;
+        this.opacity = 256;
         this.field_ib = -2147483648;
         this.field_W = -1;
         this.field_B = -2147483648;
@@ -1014,17 +1014,17 @@ class je extends im {
         this.field_T = -1;
         this.field_E = -2147483648;
         this.field_R = -2147483648;
-        this.field_xb = true;
+        this.inputEnabled = true;
         this.field_Y = false;
         this.field_kb = 256;
         this.field_wb = -1;
         this.field_tb = -2147483648;
     }
 
-    je(long param0, je param1, int param2, int param3, int param4, int param5, String param6) {
+    ClientUiComponent(long key, ClientUiComponent style, int x, int y, int width, int height, String text) {
         this.field_L = -1;
         this.field_Db = false;
-        this.field_C = 256;
+        this.opacity = 256;
         this.field_ib = -2147483648;
         this.field_W = -1;
         this.field_B = -2147483648;
@@ -1033,23 +1033,23 @@ class je extends im {
         this.field_T = -1;
         this.field_E = -2147483648;
         this.field_R = -2147483648;
-        this.field_xb = true;
+        this.inputEnabled = true;
         this.field_Y = false;
         this.field_kb = 256;
         this.field_wb = -1;
         this.field_tb = -2147483648;
         try {
-          this.field_ob = param5;
-          this.field_S = param2;
-          this.field_ab = param3;
-          this.field_gb = param4;
-          this.key = param0;
-          this.a(0, param1);
-          if (param6 != null) {
-            this.field_X = param6;
+          this.height = height;
+          this.x = x;
+          this.y = y;
+          this.width = width;
+          this.key = key;
+          this.applyStyle(0, style);
+          if (text != null) {
+            this.text = text;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "je.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "je.<init>(" + key + ',' + (style != null ? "{...}" : "null") + ',' + x + ',' + y + ',' + width + ',' + height + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 

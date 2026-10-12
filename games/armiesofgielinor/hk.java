@@ -1,31 +1,31 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hk extends je {
+final class hk extends ClientUiComponent {
     static String field_Ib;
     static int[] field_Jb;
-    private je field_Kb;
+    private ClientUiComponent field_Kb;
 
     final boolean a(byte param0, boolean param1) {
         if (param0 != 102) {
           hk.k(-40);
-          this.a(true, true);
+          this.updateInput(true, true);
           if (DeployEvent.pointerPressButton == 0) {
-            return this.field_Kb.field_yb != 0 ? true : false;
+            return this.field_Kb.pressedButton != 0 ? true : false;
           }
-          if (this.field_yb != 0) {
-            return this.field_Kb.field_yb != 0 ? true : false;
+          if (this.pressedButton != 0) {
+            return this.field_Kb.pressedButton != 0 ? true : false;
           }
           return true;
         }
-        this.a(true, true);
+        this.updateInput(true, true);
         if (DeployEvent.pointerPressButton != 0) {
-          if (this.field_yb == 0) {
+          if (this.pressedButton == 0) {
             return true;
           }
-          return this.field_Kb.field_yb != 0 ? true : false;
+          return this.field_Kb.pressedButton != 0 ? true : false;
         }
-        if (this.field_Kb.field_yb == 0) {
+        if (this.field_Kb.pressedButton == 0) {
           return false;
         }
         return true;
@@ -79,7 +79,7 @@ final class hk extends je {
         field_Ib = null;
     }
 
-    hk(je param0, je param1, je param2, je param3, je param4, je param5) {
+    hk(ClientUiComponent param0, ClientUiComponent param1, ClientUiComponent param2, ClientUiComponent param3, ClientUiComponent param4, ClientUiComponent param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -96,50 +96,50 @@ final class hk extends je {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        je var8 = null;
-        je var9 = null;
+        ClientUiComponent var8 = null;
+        ClientUiComponent var9 = null;
         int var10 = 0;
         int var11 = 0;
-        je var13 = null;
-        je var14 = null;
+        ClientUiComponent var13 = null;
+        ClientUiComponent var14 = null;
         int var15 = 0;
-        je var17 = null;
+        ClientUiComponent var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new je(0L, param1, GameEvent.field_x.toUpperCase());
-          var17.field_Eb = 1;
-          this.field_Kb = new je(0L, param2);
-          var8 = new je(0L, param3);
-          var9 = new je(0L, param3, co.field_j);
-          var9.field_Eb = 1;
+          var17 = new ClientUiComponent(0L, param1, GameEvent.field_x.toUpperCase());
+          var17.horizontalAlignment = 1;
+          this.field_Kb = new ClientUiComponent(0L, param2);
+          var8 = new ClientUiComponent(0L, param3);
+          var9 = new ClientUiComponent(0L, param3, co.field_j);
+          var9.horizontalAlignment = 1;
           var10 = 50;
           var11 = 0;
           for (var12 = 0; AiUnitPlanner.field_z.length > var12; var12++) {
-            var13 = new je(0L, param3, bt.field_c[var12]);
-            var14 = new je(0L, param3, AiUnitPlanner.field_z[var12]);
-            var15 = param3.field_Z.a(AiUnitPlanner.field_z[var12]);
+            var13 = new ClientUiComponent(0L, param3, bt.field_c[var12]);
+            var14 = new ClientUiComponent(0L, param3, AiUnitPlanner.field_z[var12]);
+            var15 = param3.font.a(AiUnitPlanner.field_z[var12]);
             if (var11 < var15) {
               var11 = var15;
             }
-            var13.a(15, -20500, 65, var10, 20);
-            var14.a(15, -20500, 640, var10, 90);
-            var8.a(var13, 124);
-            var8.a(var14, 122);
+            var13.setBounds(15, -20500, 65, var10, 20);
+            var14.setBounds(15, -20500, 640, var10, 90);
+            var8.addChild(var13, 124);
+            var8.addChild(var14, 122);
             var10 += 30;
           }
           var10 += 15;
-          var17.a(24, -20500, var11 + 110, 0, 0);
-          this.a(var10 + var17.field_ob, -20500, var17.field_gb, 100, 100);
-          this.field_Kb.a(15, -20500, 15, 5, -20 + var17.field_gb);
-          var8.a(-var17.field_ob + this.field_ob, -20500, this.field_gb, var17.field_ob, 0);
-          var9.a(15, -20500, this.field_gb, 20, 0);
-          var8.field_G = tq.a(11579568, false, var8.field_ob, 2105376, 3, 8421504);
-          var17.a(this.field_Kb, 64);
-          var8.a(var9, 111);
-          this.a(var17, 98);
-          this.a(var8, 42);
-          this.field_S = -(this.field_gb >> 1) + 320;
-          var10Lifetime1 = 240 - (this.field_ob >> 1);
+          var17.setBounds(24, -20500, var11 + 110, 0, 0);
+          this.setBounds(var10 + var17.height, -20500, var17.width, 100, 100);
+          this.field_Kb.setBounds(15, -20500, 15, 5, -20 + var17.width);
+          var8.setBounds(-var17.height + this.height, -20500, this.width, var17.height, 0);
+          var9.setBounds(15, -20500, this.width, 20, 0);
+          var8.field_G = tq.a(11579568, false, var8.height, 2105376, 3, 8421504);
+          var17.addChild(this.field_Kb, 64);
+          var8.addChild(var9, 111);
+          this.addChild(var17, 98);
+          this.addChild(var8, 42);
+          this.x = -(this.width >> 1) + 320;
+          var10Lifetime1 = 240 - (this.height >> 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

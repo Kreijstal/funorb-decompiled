@@ -13,7 +13,7 @@ final class CombatEvent extends GameEvent {
     int battleId;
     int defenderDamage;
     static int[] field_A;
-    static je field_I;
+    static ClientUiComponent field_I;
     boolean attackerDeployed;
     private int unseenUnitType;
     int targetDeltaX;

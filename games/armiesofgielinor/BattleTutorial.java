@@ -8,7 +8,7 @@ class BattleTutorial {
     private int messageId;
     private int targetPanelWidth;
     int buttonMode;
-    static je field_d;
+    static ClientUiComponent field_d;
     static String field_b;
     private int autoAdvanceFrames;
     private int panelHeight;

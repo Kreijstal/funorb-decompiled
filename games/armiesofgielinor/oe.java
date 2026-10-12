@@ -6,7 +6,7 @@ final class oe extends ro implements he {
     private kd field_xb;
     static NodeDeque field_Bb;
     private boolean field_yb;
-    static je field_Cb;
+    static ClientUiComponent field_Cb;
     static String field_zb;
 
     final boolean a(byte param0) {

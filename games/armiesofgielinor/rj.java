@@ -7,7 +7,7 @@ final class rj extends Widget {
     private int field_P;
     private int field_N;
     int field_D;
-    static je field_F;
+    static ClientUiComponent field_F;
     private RgbSprite field_S;
     private int field_E;
     private int field_L;
@@ -68,7 +68,7 @@ final class rj extends Widget {
         this.field_E = 8355711 & param0 >> 1;
         this.i(3);
         if (param2 != 27178) {
-          field_F = (je) null;
+          field_F = (ClientUiComponent) null;
         }
     }
 

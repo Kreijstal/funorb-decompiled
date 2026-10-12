@@ -1,47 +1,47 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class au extends je {
+final class au extends ClientUiComponent {
     int field_Ub;
     boolean field_vc;
-    je field_ec;
-    je field_Wb;
+    ClientUiComponent field_ec;
+    ClientUiComponent field_Wb;
     int field_qc;
     static ih field_Kb;
-    je field_sc;
+    ClientUiComponent field_sc;
     static String field_Jb;
-    je field_hc;
+    ClientUiComponent field_hc;
     int field_mc;
-    je field_Rb;
-    je field_fc;
+    ClientUiComponent field_Rb;
+    ClientUiComponent field_fc;
     int field_ac;
     byte[] field_pc;
-    je field_Xb;
+    ClientUiComponent field_Xb;
     int field_Lb;
     String[] field_jc;
     long field_dc;
-    je field_ic;
+    ClientUiComponent field_ic;
     boolean field_Sb;
-    je field_oc;
+    ClientUiComponent field_oc;
     boolean field_uc;
     int field_bc;
-    je field_Pb;
+    ClientUiComponent field_Pb;
     int field_nc;
-    je field_cc;
-    je[] field_Qb;
-    je field_Zb;
+    ClientUiComponent field_cc;
+    ClientUiComponent[] field_Qb;
+    ClientUiComponent field_Zb;
     int field_Tb;
     boolean field_kc;
     String field_rc;
     long field_Mb;
-    je field_Yb;
-    je field_lc;
+    ClientUiComponent field_Yb;
+    ClientUiComponent field_lc;
     static int field_Ob;
     boolean field_gc;
     boolean field_Nb;
     boolean field_tc;
-    je field_Vb;
-    je field_Ib;
+    ClientUiComponent field_Vb;
+    ClientUiComponent field_Ib;
 
     public static void e(byte param0) {
         if (param0 > -52) {
@@ -65,7 +65,7 @@ final class au extends je {
     }
 
     au(int param0) {
-        super(0L, (je) null);
+        super(0L, (ClientUiComponent) null);
         this.field_pc = new byte[param0];
     }
 

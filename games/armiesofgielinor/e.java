@@ -10,7 +10,7 @@ final class e {
           e.a((byte) 98);
           BattleTutorial.field_h = false;
           if (null != qd.field_I) {
-            qd.field_I.f((byte) -106);
+            qd.field_I.resetSelection((byte) -106);
           }
           if (0 != rs.field_t) {
             rd.b(8445);
@@ -22,7 +22,7 @@ final class e {
         }
         BattleTutorial.field_h = false;
         if (null != qd.field_I) {
-          qd.field_I.f((byte) -106);
+          qd.field_I.resetSelection((byte) -106);
         }
         if (0 == rs.field_t) {
           TelefragEvent.field_z = 0;
@@ -54,7 +54,7 @@ final class e {
         try {
           param1 = ia.a(param1, '_', 3, "");
           var4 = 90 / ((39 - param0) / 35);
-          var3 = nf.a(true, param2);
+          var3 = IconTextComponent.a(true, param2);
           stackIn_5_0 = (param1.indexOf(param2) != -1) || (param1.indexOf(var3) != -1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

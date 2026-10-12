@@ -615,7 +615,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "status_private");
                 if (null != var2) {
-                  je.field_zb = uu.a(var2, (byte) -112);
+                  ClientUiComponent.field_zb = uu.a(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "status_full");
                 if (var2 != null) {
@@ -723,7 +723,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "dob_enterforchat");
                 if (null != var2) {
-                  mq.field_Nb = uu.a(var2, (byte) -122);
+                  QuickChatMenu.field_Nb = uu.a(var2, (byte) -122);
                 }
                 var2 = NodeIterator.a(50, "tab_hidechattemporarily");
                 if (var2 != null) {
@@ -1041,7 +1041,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "playfreeversion");
                 if (var2 != null) {
-                  nf.field_Jb = uu.a(var2, (byte) -114);
+                  IconTextComponent.field_Jb = uu.a(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "reloadgame");
                 if (var2 != null) {
@@ -2590,19 +2590,19 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "reconnect_lost_seq,0");
                 if (null != var2) {
-                  mq.field_Lb[0] = uu.a(var2, (byte) 121);
+                  QuickChatMenu.field_Lb[0] = uu.a(var2, (byte) 121);
                 }
                 var2 = NodeIterator.a(50, "reconnect_lost_seq,1");
                 if (null != var2) {
-                  mq.field_Lb[1] = uu.a(var2, (byte) -94);
+                  QuickChatMenu.field_Lb[1] = uu.a(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "reconnect_lost_seq,2");
                 if (var2 != null) {
-                  mq.field_Lb[2] = uu.a(var2, (byte) -93);
+                  QuickChatMenu.field_Lb[2] = uu.a(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(50, "reconnect_lost_seq,3");
                 if (var2 != null) {
-                  mq.field_Lb[3] = uu.a(var2, (byte) -121);
+                  QuickChatMenu.field_Lb[3] = uu.a(var2, (byte) -121);
                 }
                 var2 = NodeIterator.a(50, "reconnect_lost");
                 if (var2 != null) {

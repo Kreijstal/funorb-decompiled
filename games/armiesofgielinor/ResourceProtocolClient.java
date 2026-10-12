@@ -4,7 +4,7 @@
 abstract class ResourceProtocolClient {
     static String field_m;
     static RgbSprite[] field_d;
-    static je[] field_j;
+    static ClientUiComponent[] field_j;
     static int field_e;
     static String field_k;
     DualNodeDeque queuedPriority;

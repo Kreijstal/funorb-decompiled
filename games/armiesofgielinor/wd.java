@@ -199,7 +199,7 @@ final class wd {
             if (var6 == 2) {
               var4 = fo.a(4800, ta.field_Q, new String[]{qd.field_G});
               var8 = fo.a(4800, ov.field_l, new String[]{var3});
-              var7 = rb.field_b.field_gb + UpkeepEvent.field_z.field_gb - 485 - (-IntrusiveNode.field_e.a(var8) + IntrusiveNode.field_e.a(var4));
+              var7 = rb.field_b.width + UpkeepEvent.field_z.width - 485 - (-IntrusiveNode.field_e.a(var8) + IntrusiveNode.field_e.a(var4));
               if (var7 < 0) {
                 var7 = 0;
               }
@@ -242,15 +242,15 @@ final class wd {
               }
               var9 = IntrusiveNode.field_e.a(var4);
               if (!us.a(true)) {
-                if (UpkeepEvent.field_z.field_eb &&
-                  var9 > (-UpkeepEvent.field_z.field_V + AiPlanningStrategy.pointerX)) {
+                if (UpkeepEvent.field_z.heldButtonMatches &&
+                  var9 > (-UpkeepEvent.field_z.screenX + AiPlanningStrategy.pointerX)) {
                   if (!NodeIterator.field_a) {
                     var1 = ps.field_z;
                   } else {
                     var1 = "Broken!";
                   }
                 }
-                if (UpkeepEvent.field_z.field_yb != 0 &&
+                if (UpkeepEvent.field_z.pressedButton != 0 &&
                   UpkeepEvent.field_z.field_bb < var9 &&
                   !NodeIterator.field_a) {
                   np.k(92);
@@ -259,9 +259,9 @@ final class wd {
             }
             fs.a(CombatEvent.field_A[var6], var5, var4 + BitmapFont.c(UpkeepEvent.field_C.toString()), 33, var7);
             if (!hf.field_c) {
-              rb.field_b.field_eb = false;
+              rb.field_b.heldButtonMatches = false;
             }
-            if (rb.field_b.field_eb) {
+            if (rb.field_b.heldButtonMatches) {
               var1 = fo.a(4800, os.field_q, new String[]{var3, qd.field_G});
             }
           }

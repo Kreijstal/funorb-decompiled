@@ -5,9 +5,9 @@ final class tg {
     private long field_f;
     static String field_j;
     private String field_h;
-    static je field_n;
+    static ClientUiComponent field_n;
     private int[] field_o;
-    je field_g;
+    ClientUiComponent field_g;
     String field_m;
     static byte[] field_d;
     static String field_l;
@@ -174,7 +174,7 @@ final class tg {
 
     final static void a(ResourceArchive param0, int param1, boolean param2, ResourceArchive param3) {
         try {
-          bk.a(param2, fp.field_Lb, eq.field_h, LeaderEscortCondition.field_f, DualLinkedNode.field_k, -106, ke.field_e, im.field_x, qc.field_e, WeightedLruCache.field_b, PreparedAction.field_o, rd.field_e);
+          bk.a(param2, fp.field_Lb, eq.field_h, LeaderEscortCondition.field_f, DualLinkedNode.field_k, -106, ke.field_e, ClientUiNode.field_x, qc.field_e, WeightedLruCache.field_b, PreparedAction.field_o, rd.field_e);
           dh.field_n = fk.a("chatfilter", (byte) -125, param3, "lobby");
           co.field_k[0] = QuickChatPhrase.field_v;
           co.field_k[1] = IterableDualNodeDeque.field_a;
@@ -468,13 +468,13 @@ final class tg {
         if (param1 <= 38) {
           tg.a(-18);
           if (param0 == 17) {
-            Spell.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, this.field_m, this.field_f);
+            Spell.field_b = new i(this.field_g.screenX, this.field_g.screenY, this.field_g.width, this.field_g.height, param2, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, this.field_m, this.field_f);
             return true;
           }
           return false;
         }
         if (param0 == 17) {
-          Spell.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, this.field_m, this.field_f);
+          Spell.field_b = new i(this.field_g.screenX, this.field_g.screenY, this.field_g.width, this.field_g.height, param2, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, this.field_m, this.field_f);
           return true;
         }
         return false;
@@ -588,7 +588,7 @@ final class tg {
         field_l = (String) null;
     }
 
-    tg(je param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    tg(ClientUiComponent param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_i = new np(AnimationSequence.field_h);
           this.field_o = param6;
@@ -598,7 +598,7 @@ final class tg {
           this.field_g = param0;
           this.field_m = param2;
           this.field_e = param5;
-          param0.field_rb = true;
+          param0.selected = true;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

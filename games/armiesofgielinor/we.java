@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class we {
-    static je[] field_g;
+    static ClientUiComponent[] field_g;
     int field_d;
     String field_j;
     static String field_h;
     static byte[] field_a;
     String field_b;
     ResourceArchive field_c;
-    static je field_f;
+    static ClientUiComponent field_f;
     static String field_i;
     String field_e;
 

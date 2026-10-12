@@ -45,7 +45,7 @@ final class ot extends dr {
             PointerInputHandler.field_b = null;
             return;
           }
-          tn.field_Z.field_g.field_rb = false;
+          tn.field_Z.field_g.selected = false;
         }
         tn.field_Z = null;
         if (param0 == 76) {

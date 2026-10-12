@@ -6,7 +6,7 @@ class lk implements WidgetPainter, pm {
     int field_m;
     int field_n;
     int field_g;
-    static je field_a;
+    static ClientUiComponent field_a;
     static boolean pointerChangedSnapshot;
     private boolean field_c;
     int field_d;

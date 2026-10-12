@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oc extends je {
+final class oc extends ClientUiComponent {
     private int field_Kb;
     static String[] field_Pb;
     static String field_Nb;
-    private je field_Lb;
+    private ClientUiComponent field_Lb;
     private StringBuilder field_Qb;
-    private je field_Mb;
+    private ClientUiComponent field_Mb;
     static String field_Ib;
     static String field_Jb;
     static String field_Ob;
@@ -32,12 +32,12 @@ final class oc extends je {
         StringBuilder discarded$4 = null;
         int var4;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.a(param0, param1);
+        this.updateInput(param0, param1);
         if (!param1) {
-          this.field_Mb.field_X = this.field_Qb.toString();
+          this.field_Mb.text = this.field_Qb.toString();
           if (param1 &&
             0 != DeployEvent.pointerPressButton &&
-            this.field_yb == 0) {
+            this.pressedButton == 0) {
             this.field_Kb = 1;
           }
           if (!param0) {
@@ -47,10 +47,10 @@ final class oc extends je {
         }
         while (true) {
           if (!Unit.i((byte) -51)) {
-            this.field_Mb.field_X = this.field_Qb.toString();
+            this.field_Mb.text = this.field_Qb.toString();
             if (param1 &&
               0 != DeployEvent.pointerPressButton &&
-              this.field_yb == 0) {
+              this.pressedButton == 0) {
               this.field_Kb = 1;
               if (param0) {
                 return this.field_Kb;
@@ -96,7 +96,7 @@ final class oc extends je {
         if (this.field_Qb.length() <= 0) {
           return 1;
         }
-        this.field_X = this.field_Qb.toString();
+        this.text = this.field_Qb.toString();
         return 2;
     }
 
@@ -125,7 +125,7 @@ final class oc extends je {
               if (this.field_Qb.length() <= 0) {
                 this.field_Kb = 1;
               } else {
-                this.field_X = this.field_Qb.toString();
+                this.text = this.field_Qb.toString();
                 this.field_Kb = 2;
               }
             }
@@ -156,7 +156,7 @@ final class oc extends je {
               if (this.field_Qb.length() <= 0) {
                 this.field_Kb = 1;
               } else {
-                this.field_X = this.field_Qb.toString();
+                this.text = this.field_Qb.toString();
                 this.field_Kb = 2;
               }
             }
@@ -173,7 +173,7 @@ final class oc extends je {
               if (this.field_Qb.length() <= 0) {
                 this.field_Kb = 1;
               } else {
-                this.field_X = this.field_Qb.toString();
+                this.text = this.field_Qb.toString();
                 this.field_Kb = 2;
               }
             }
@@ -190,7 +190,7 @@ final class oc extends je {
             if (this.field_Qb.length() <= 0) {
               this.field_Kb = 1;
             } else {
-              this.field_X = this.field_Qb.toString();
+              this.text = this.field_Qb.toString();
               this.field_Kb = 2;
             }
           }
@@ -208,7 +208,7 @@ final class oc extends je {
               if (this.field_Qb.length() <= 0) {
                 this.field_Kb = 1;
               } else {
-                this.field_X = this.field_Qb.toString();
+                this.text = this.field_Qb.toString();
                 this.field_Kb = 2;
               }
             }
@@ -239,7 +239,7 @@ final class oc extends je {
               if (this.field_Qb.length() <= 0) {
                 this.field_Kb = 1;
               } else {
-                this.field_X = this.field_Qb.toString();
+                this.text = this.field_Qb.toString();
                 this.field_Kb = 2;
               }
             }
@@ -256,7 +256,7 @@ final class oc extends je {
               if (this.field_Qb.length() <= 0) {
                 this.field_Kb = 1;
               } else {
-                this.field_X = this.field_Qb.toString();
+                this.text = this.field_Qb.toString();
                 this.field_Kb = 2;
               }
             }
@@ -273,7 +273,7 @@ final class oc extends je {
             if (this.field_Qb.length() <= 0) {
               this.field_Kb = 1;
             } else {
-              this.field_X = this.field_Qb.toString();
+              this.text = this.field_Qb.toString();
               this.field_Kb = 2;
             }
           }
@@ -291,7 +291,7 @@ final class oc extends je {
             if (this.field_Qb.length() <= 0) {
               this.field_Kb = 1;
             } else {
-              this.field_X = this.field_Qb.toString();
+              this.text = this.field_Qb.toString();
               this.field_Kb = 2;
             }
           }
@@ -322,7 +322,7 @@ final class oc extends je {
             if (this.field_Qb.length() <= 0) {
               this.field_Kb = 1;
             } else {
-              this.field_X = this.field_Qb.toString();
+              this.text = this.field_Qb.toString();
               this.field_Kb = 2;
             }
           }
@@ -339,7 +339,7 @@ final class oc extends je {
             if (this.field_Qb.length() <= 0) {
               this.field_Kb = 1;
             } else {
-              this.field_X = this.field_Qb.toString();
+              this.text = this.field_Qb.toString();
               this.field_Kb = 2;
             }
           }
@@ -356,7 +356,7 @@ final class oc extends je {
           if (this.field_Qb.length() <= 0) {
             this.field_Kb = 1;
           } else {
-            this.field_X = this.field_Qb.toString();
+            this.text = this.field_Qb.toString();
             this.field_Kb = 2;
           }
         }
@@ -369,7 +369,7 @@ final class oc extends je {
         return false;
     }
 
-    oc(int param0, int param1, int param2, int param3, String param4, je param5, je param6, je param7) {
+    oc(int param0, int param1, int param2, int param3, String param4, ClientUiComponent param5, ClientUiComponent param6, ClientUiComponent param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -389,21 +389,21 @@ final class oc extends je {
         int var13 = 0;
         this.field_Kb = 0;
         try {
-          this.field_Lb = new je(0L, param6, param4);
-          this.a(this.field_Lb, 112);
-          this.field_Mb = new je(0L, param7);
+          this.field_Lb = new ClientUiComponent(0L, param6, param4);
+          this.addChild(this.field_Lb, 112);
+          this.field_Mb = new ClientUiComponent(0L, param7);
           this.field_Mb.field_N = 16764006;
-          this.a(this.field_Mb, 74);
+          this.addChild(this.field_Mb, 74);
           this.field_Mb.field_I = "|";
           this.field_Qb = new StringBuilder(12);
-          var9_int = this.field_Lb.j(122);
-          this.field_Lb.a(jn.field_d, -20500, var9_int, 3, 5);
-          this.field_Mb.a(jn.field_d, -20500, var9_int, 3 + jn.field_d, 5);
+          var9_int = this.field_Lb.getPreferredWidth(122);
+          this.field_Lb.setBounds(jn.field_d, -20500, var9_int, 3, 5);
+          this.field_Mb.setBounds(jn.field_d, -20500, var9_int, 3 + jn.field_d, 5);
           var10 = var9_int + 5 + 5;
           var11 = 3 + (2 * jn.field_d + 3);
           var12 = jp.a(param0, param2, var10, -1);
           var13 = pd.a(var11, 0, param1, param3);
-          this.a(var11, -20500, var10, var13, var12);
+          this.setBounds(var11, -20500, var10, var13, var12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

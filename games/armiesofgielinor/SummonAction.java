@@ -7,7 +7,7 @@ final class SummonAction extends PreparedAction {
     static String field_D;
     static int field_E;
     private int unitType;
-    static je field_y;
+    static ClientUiComponent field_y;
     static ClientConnectionState field_z;
     private int summoningBonus;
     private int tileX;

@@ -6,7 +6,7 @@ final class nd {
     static int[] field_b;
     static int[] field_d;
     Object field_c;
-    static je field_a;
+    static ClientUiComponent field_a;
 
     private final long b(int param0) {
         if (this.field_c instanceof Long) {

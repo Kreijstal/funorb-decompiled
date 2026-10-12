@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ll extends je {
-    private je field_Ub;
+final class ll extends ClientUiComponent {
+    private ClientUiComponent field_Ub;
     static CombatSandbox field_Rb;
     static String field_Jb;
     static char[] field_Nb;
     static String field_Kb;
-    private je field_Pb;
+    private ClientUiComponent field_Pb;
     static String[][] field_Mb;
     static String field_Tb;
     static tu field_Sb;
-    private je field_Ib;
-    private je field_Vb;
-    private je field_Lb;
+    private ClientUiComponent field_Ib;
+    private ClientUiComponent field_Vb;
+    private ClientUiComponent field_Lb;
     private int field_Ob;
-    private je field_Qb;
+    private ClientUiComponent field_Qb;
 
-    ll(long param0, je param1, je param2, je param3, je param4) {
-        super(param0, (je) null);
+    ll(long param0, ClientUiComponent param1, ClientUiComponent param2, ClientUiComponent param3, ClientUiComponent param4) {
+        super(param0, (ClientUiComponent) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -30,26 +30,26 @@ final class ll extends je {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        je var9 = null;
-        je var10 = null;
+        ClientUiComponent var9 = null;
+        ClientUiComponent var10 = null;
         try {
-          this.field_Ib = new je(0L, param1);
-          this.field_Qb = new je(0L, param2);
-          this.a(this.field_Ib, 42);
-          this.a(this.field_Qb, 59);
-          this.field_Lb = new je(0L, (je) null);
-          this.a(this.field_Lb, 101);
-          this.field_Vb = new je(0L, param3);
-          this.field_Pb = new je(0L, param3);
+          this.field_Ib = new ClientUiComponent(0L, param1);
+          this.field_Qb = new ClientUiComponent(0L, param2);
+          this.addChild(this.field_Ib, 42);
+          this.addChild(this.field_Qb, 59);
+          this.field_Lb = new ClientUiComponent(0L, (ClientUiComponent) null);
+          this.addChild(this.field_Lb, 101);
+          this.field_Vb = new ClientUiComponent(0L, param3);
+          this.field_Pb = new ClientUiComponent(0L, param3);
           this.field_Pb.field_ub = true;
           var9 = this.field_Vb;
           var10 = var9;
           var10.field_ub = true;
-          this.field_Lb.a(this.field_Vb, 81);
-          this.field_Lb.a(this.field_Pb, 53);
-          this.field_Ub = new je(0L, param4);
-          this.field_Ub.field_Gb = true;
-          this.field_Lb.a(this.field_Ub, 47);
+          this.field_Lb.addChild(this.field_Vb, 81);
+          this.field_Lb.addChild(this.field_Pb, 53);
+          this.field_Ub = new ClientUiComponent(0L, param4);
+          this.field_Ub.draggable = true;
+          this.field_Lb.addChild(this.field_Ub, 47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,28 +101,28 @@ final class ll extends je {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        this.field_ob = param2;
+        this.height = param2;
         if (param0 == 201) {
-          this.field_S = param6;
-          this.field_gb = param1;
-          this.field_ab = param3;
+          this.x = param6;
+          this.width = param1;
+          this.y = param3;
           this.a(param0 - 201, param4, param5, param7);
           return;
         }
         this.a(30, false, 45, -68);
-        this.field_S = param6;
-        this.field_gb = param1;
-        this.field_ab = param3;
+        this.x = param6;
+        this.width = param1;
+        this.y = param3;
         this.a(param0 - 201, param4, param5, param7);
     }
 
     final boolean n(int param0) {
-        if (this.field_Qb.field_yb != 0) {
+        if (this.field_Qb.pressedButton != 0) {
           this.field_Ob = 20;
           return true;
         }
         int var2 = -103 % ((param0 + 72) / 45);
-        if (0 == this.field_Qb.field_hb) {
+        if (0 == this.field_Qb.heldPressButton) {
           return false;
         }
         if (this.field_Ob > 0) {
@@ -142,28 +142,28 @@ final class ll extends je {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        je var14 = null;
-        je var15 = null;
-        je var16 = null;
-        je var17 = null;
-        je var18 = null;
-        je var19 = null;
-        je var14Lifetime1;
-        je var15Lifetime1;
-        je var16Lifetime1;
-        je var17Lifetime1;
-        je var18Lifetime1;
-        je var19Lifetime1;
+        ClientUiComponent var14 = null;
+        ClientUiComponent var15 = null;
+        ClientUiComponent var16 = null;
+        ClientUiComponent var17 = null;
+        ClientUiComponent var18 = null;
+        ClientUiComponent var19 = null;
+        ClientUiComponent var14Lifetime1;
+        ClientUiComponent var15Lifetime1;
+        ClientUiComponent var16Lifetime1;
+        ClientUiComponent var17Lifetime1;
+        ClientUiComponent var18Lifetime1;
+        ClientUiComponent var19Lifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
         int var12Lifetime1;
-        if (2 * this.field_gb <= this.field_ob) {
-          var5 = this.field_gb;
-          var6 = this.field_ob - this.field_gb;
+        if (2 * this.width <= this.height) {
+          var5 = this.width;
+          var6 = this.height - this.width;
         } else {
-          var6 = this.field_ob / 2;
-          var5 = this.field_ob / 2;
+          var6 = this.height / 2;
+          var5 = this.height / 2;
         }
         int var7 = -var5 + var6;
         int var8 = var7;
@@ -176,43 +176,43 @@ final class ll extends je {
           }
           var12 = var11 + var8 / 2;
           var14 = this.field_Ib;
-          var14.field_ob = var5;
-          var14.field_ab = 0;
-          var14.field_S = 0;
-          var14.field_gb = this.field_gb;
+          var14.height = var5;
+          var14.y = 0;
+          var14.x = 0;
+          var14.width = this.width;
           var15 = this.field_Qb;
-          var15.field_S = 0;
-          var15.field_gb = this.field_gb;
-          var15.field_ab = var6;
-          var15.field_ob = this.field_ob - var6;
+          var15.x = 0;
+          var15.width = this.width;
+          var15.y = var6;
+          var15.height = this.height - var6;
           var16 = this.field_Lb;
-          var16.field_ob = var7;
-          var16.field_ab = var5;
-          var16.field_S = 0;
-          var16.field_gb = this.field_gb;
+          var16.height = var7;
+          var16.y = var5;
+          var16.x = 0;
+          var16.width = this.width;
           var17 = this.field_Vb;
-          var17.field_ab = 0;
-          var17.field_ob = var12;
-          var17.field_gb = this.field_gb;
-          var17.field_S = 0;
+          var17.y = 0;
+          var17.height = var12;
+          var17.width = this.width;
+          var17.x = 0;
           var18 = this.field_Pb;
-          var18.field_S = param0;
-          var18.field_ab = var12;
-          var18.field_ob = var7 - var12;
-          var18.field_gb = this.field_gb;
+          var18.x = param0;
+          var18.y = var12;
+          var18.height = var7 - var12;
+          var18.width = this.width;
           var19 = this.field_Ub;
-          this.field_Lb.field_xb = param1 > param2 ? true : false;
-          this.field_Qb.field_xb = param1 > param2 ? true : false;
-          this.field_Ib.field_xb = param1 > param2 ? true : false;
-          var19.field_S = 0;
-          var19.field_ab = var11;
-          var19.field_ob = var8;
-          var19.field_gb = this.field_gb;
+          this.field_Lb.inputEnabled = param1 > param2 ? true : false;
+          this.field_Qb.inputEnabled = param1 > param2 ? true : false;
+          this.field_Ib.inputEnabled = param1 > param2 ? true : false;
+          var19.x = 0;
+          var19.y = var11;
+          var19.height = var8;
+          var19.width = this.width;
           return;
         }
         var8 = var8 * param2 / param1;
-        if (!(var8 >= this.field_gb)) {
-          var8 = this.field_gb;
+        if (!(var8 >= this.width)) {
+          var8 = this.width;
         }
         if (var7 < var8) {
           var8 = var7;
@@ -225,57 +225,57 @@ final class ll extends je {
         }
         var12Lifetime1 = var11Lifetime1 + var8 / 2;
         var14Lifetime1 = this.field_Ib;
-        var14Lifetime1.field_ob = var5;
-        var14Lifetime1.field_ab = 0;
-        var14Lifetime1.field_S = 0;
-        var14Lifetime1.field_gb = this.field_gb;
+        var14Lifetime1.height = var5;
+        var14Lifetime1.y = 0;
+        var14Lifetime1.x = 0;
+        var14Lifetime1.width = this.width;
         var15Lifetime1 = this.field_Qb;
-        var15Lifetime1.field_S = 0;
-        var15Lifetime1.field_gb = this.field_gb;
-        var15Lifetime1.field_ab = var6;
-        var15Lifetime1.field_ob = this.field_ob - var6;
+        var15Lifetime1.x = 0;
+        var15Lifetime1.width = this.width;
+        var15Lifetime1.y = var6;
+        var15Lifetime1.height = this.height - var6;
         var16Lifetime1 = this.field_Lb;
-        var16Lifetime1.field_ob = var7;
-        var16Lifetime1.field_ab = var5;
-        var16Lifetime1.field_S = 0;
-        var16Lifetime1.field_gb = this.field_gb;
+        var16Lifetime1.height = var7;
+        var16Lifetime1.y = var5;
+        var16Lifetime1.x = 0;
+        var16Lifetime1.width = this.width;
         var17Lifetime1 = this.field_Vb;
-        var17Lifetime1.field_ab = 0;
-        var17Lifetime1.field_ob = var12Lifetime1;
-        var17Lifetime1.field_gb = this.field_gb;
-        var17Lifetime1.field_S = 0;
+        var17Lifetime1.y = 0;
+        var17Lifetime1.height = var12Lifetime1;
+        var17Lifetime1.width = this.width;
+        var17Lifetime1.x = 0;
         var18Lifetime1 = this.field_Pb;
-        var18Lifetime1.field_S = param0;
-        var18Lifetime1.field_ab = var12Lifetime1;
-        var18Lifetime1.field_ob = var7 - var12Lifetime1;
-        var18Lifetime1.field_gb = this.field_gb;
+        var18Lifetime1.x = param0;
+        var18Lifetime1.y = var12Lifetime1;
+        var18Lifetime1.height = var7 - var12Lifetime1;
+        var18Lifetime1.width = this.width;
         var19Lifetime1 = this.field_Ub;
-        this.field_Lb.field_xb = param1 > param2 ? true : false;
-        this.field_Qb.field_xb = param1 > param2 ? true : false;
-        this.field_Ib.field_xb = param1 > param2 ? true : false;
-        var19Lifetime1.field_S = 0;
-        var19Lifetime1.field_ab = var11Lifetime1;
-        var19Lifetime1.field_ob = var8;
-        var19Lifetime1.field_gb = this.field_gb;
+        this.field_Lb.inputEnabled = param1 > param2 ? true : false;
+        this.field_Qb.inputEnabled = param1 > param2 ? true : false;
+        this.field_Ib.inputEnabled = param1 > param2 ? true : false;
+        var19Lifetime1.x = 0;
+        var19Lifetime1.y = var11Lifetime1;
+        var19Lifetime1.height = var8;
+        var19Lifetime1.width = this.width;
     }
 
     final boolean a(boolean param0) {
         if (!param0) {
-          return this.field_Ub.field_hb != 0 ? true : false;
+          return this.field_Ub.heldPressButton != 0 ? true : false;
         }
         ll.k(-78);
-        return this.field_Ub.field_hb != 0 ? true : false;
+        return this.field_Ub.heldPressButton != 0 ? true : false;
     }
 
     final boolean m(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         int var2Lifetime2;
-        if (this.field_Ib.field_yb != 0) {
+        if (this.field_Ib.pressedButton != 0) {
           this.field_Ob = 20;
           return true;
         }
-        if (this.field_Ib.field_hb == 0) {
+        if (this.field_Ib.heldPressButton == 0) {
           var2 = 33 % ((18 - param0) / 47);
           return false;
         }
@@ -302,9 +302,9 @@ final class ll extends je {
         int var7;
         int var8;
         var5 = 0;
-        var6 = this.field_Lb.field_ob - this.field_Ub.field_ob;
+        var6 = this.field_Lb.height - this.field_Ub.height;
         if (var6 > 0) {
-          var7 = this.field_Ub.field_ab;
+          var7 = this.field_Ub.y;
           var8 = -param0 + param2;
           var5 = (var7 * var8 + var6 / 2) / var6;
         }
@@ -326,7 +326,7 @@ final class ll extends je {
         if (param3 > 102) {
           return var5;
         }
-        this.field_Pb = (je) null;
+        this.field_Pb = (ClientUiComponent) null;
         return var5;
     }
 
@@ -339,14 +339,14 @@ final class ll extends je {
     }
 
     final boolean o(int param0) {
-        if (this.field_Vb.field_yb != 0) {
+        if (this.field_Vb.pressedButton != 0) {
           this.field_Ob = 20;
           return true;
         }
         if (param0 > -31) {
           this.n(109);
         }
-        if (this.field_Vb.field_hb == 0) {
+        if (this.field_Vb.heldPressButton == 0) {
           return false;
         }
         if (this.field_Ob > 0) {
@@ -355,7 +355,7 @@ final class ll extends je {
         if (this.field_Ob != 0) {
           return false;
         }
-        if (this.field_Ub.field_db + this.field_Ub.field_D <= ko.pointerY) {
+        if (this.field_Ub.pendingYDelta + this.field_Ub.screenY <= ko.pointerY) {
           return false;
         }
         this.field_Ob = 3;
@@ -363,35 +363,35 @@ final class ll extends je {
     }
 
     final boolean l(int param0) {
-        if (this.field_Pb.field_yb != 0) {
+        if (this.field_Pb.pressedButton != 0) {
           this.field_Ob = 20;
           return true;
         }
-        if (this.field_Pb.field_hb == 0) {
+        if (this.field_Pb.heldPressButton == 0) {
           if (param0 == 28809) {
             return false;
           }
-          this.field_Lb = (je) null;
+          this.field_Lb = (ClientUiComponent) null;
           return false;
         }
         if (this.field_Ob > 0) {
           this.field_Ob = this.field_Ob - 1;
         }
         if (0 == this.field_Ob) {
-          if (ko.pointerY >= this.field_Ub.field_nb + (this.field_Ub.field_ob + this.field_Ub.field_db + this.field_Ub.field_D)) {
+          if (ko.pointerY >= this.field_Ub.pendingHeightDelta + (this.field_Ub.height + this.field_Ub.pendingYDelta + this.field_Ub.screenY)) {
             this.field_Ob = 3;
             return true;
           }
           if (param0 == 28809) {
             return false;
           }
-          this.field_Lb = (je) null;
+          this.field_Lb = (ClientUiComponent) null;
           return false;
         }
         if (param0 == 28809) {
           return false;
         }
-        this.field_Lb = (je) null;
+        this.field_Lb = (ClientUiComponent) null;
         return false;
     }
 

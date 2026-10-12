@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mp extends je {
-    je field_Rb;
+final class mp extends ClientUiComponent {
+    ClientUiComponent field_Rb;
     static jl field_Mb;
-    je field_Ib;
-    je field_Nb;
+    ClientUiComponent field_Ib;
+    ClientUiComponent field_Nb;
     static RgbSprite field_Jb;
     dn field_Kb;
     static QuickChatCategoryRepository quickChatCategories;
     static String field_Pb;
-    static je field_Lb;
+    static ClientUiComponent field_Lb;
     static um field_Ob;
-    static je field_Qb;
+    static ClientUiComponent field_Qb;
 
     mp(long param0, mp param1, String param2, String param3) {
         this(param0, param1, param1.field_Kb.field_Nb, param1.field_Kb.field_Ib, param1.field_Ib, param2, param3);
@@ -20,18 +20,18 @@ final class mp extends je {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
         if (param7 <= -34) {
-          this.field_gb = param4;
-          this.field_S = param0;
-          this.field_ab = param5;
-          this.field_ob = param6;
+          this.width = param4;
+          this.x = param0;
+          this.y = param5;
+          this.height = param6;
           this.a((byte) -110, param1, param3, param2);
           return;
         }
         mp.k(17);
-        this.field_gb = param4;
-        this.field_S = param0;
-        this.field_ab = param5;
-        this.field_ob = param6;
+        this.width = param4;
+        this.x = param0;
+        this.y = param5;
+        this.height = param6;
         this.a((byte) -110, param1, param3, param2);
     }
 
@@ -53,18 +53,18 @@ final class mp extends je {
         field_Lb = null;
     }
 
-    mp(long param0, je param1, je param2, ll param3, je param4, String param5, String param6) {
+    mp(long param0, ClientUiComponent param1, ClientUiComponent param2, ll param3, ClientUiComponent param4, String param5, String param6) {
         super(param0, param1);
         try {
-          this.field_Nb = new je(0L, (je) null);
+          this.field_Nb = new ClientUiComponent(0L, (ClientUiComponent) null);
           this.field_Kb = new dn(0L, this.field_Nb, param2, param3);
-          this.field_Ib = new je(0L, param4);
-          this.field_Rb = new je(0L, param4);
-          this.field_Ib.field_X = param5;
-          this.field_Rb.field_X = param6;
-          this.a(this.field_Kb, 41);
-          this.a(this.field_Ib, 80);
-          this.a(this.field_Rb, 111);
+          this.field_Ib = new ClientUiComponent(0L, param4);
+          this.field_Rb = new ClientUiComponent(0L, param4);
+          this.field_Ib.text = param5;
+          this.field_Rb.text = param6;
+          this.addChild(this.field_Kb, 41);
+          this.addChild(this.field_Ib, 80);
+          this.addChild(this.field_Rb, 111);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
@@ -78,17 +78,17 @@ final class mp extends je {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5 = (this.field_gb + param3) / 2;
-        int var6 = this.field_ob - param2;
-        this.field_Kb.a(0, false, this.field_gb, param3, param1, 0, -param3 + var6);
-        this.field_Ib.field_S = 0;
-        this.field_Ib.field_ob = param2;
-        this.field_Ib.field_ab = var6;
-        this.field_Ib.field_gb = var5 - param3;
-        this.field_Rb.field_ab = var6;
-        this.field_Rb.field_gb = this.field_gb - var5;
-        this.field_Rb.field_S = var5;
-        this.field_Rb.field_ob = param2;
+        int var5 = (this.width + param3) / 2;
+        int var6 = this.height - param2;
+        this.field_Kb.a(0, false, this.width, param3, param1, 0, -param3 + var6);
+        this.field_Ib.x = 0;
+        this.field_Ib.height = param2;
+        this.field_Ib.y = var6;
+        this.field_Ib.width = var5 - param3;
+        this.field_Rb.y = var6;
+        this.field_Rb.width = this.width - var5;
+        this.field_Rb.x = var5;
+        this.field_Rb.height = param2;
         if (param0 == -110) {
           return;
         }

@@ -209,14 +209,14 @@ final class fs {
     final static void a(int param0, String param1, String param2, int param3, int param4) {
         try {
           UpkeepEvent.field_z.field_I = param1;
-          UpkeepEvent.field_z.field_X = param2;
+          UpkeepEvent.field_z.text = param2;
           UpkeepEvent.field_z.field_N = param0;
           int var5_int = 112 % ((param3 + 51) / 39);
-          UpkeepEvent.field_z.field_gb = UpkeepEvent.field_z.field_gb + rb.field_b.field_gb;
-          rb.field_b.field_S = rb.field_b.field_S + rb.field_b.field_gb;
-          rb.field_b.field_gb = param4;
-          UpkeepEvent.field_z.field_gb = UpkeepEvent.field_z.field_gb - rb.field_b.field_gb;
-          rb.field_b.field_S = rb.field_b.field_S - rb.field_b.field_gb;
+          UpkeepEvent.field_z.width = UpkeepEvent.field_z.width + rb.field_b.width;
+          rb.field_b.x = rb.field_b.x + rb.field_b.width;
+          rb.field_b.width = param4;
+          UpkeepEvent.field_z.width = UpkeepEvent.field_z.width - rb.field_b.width;
+          rb.field_b.x = rb.field_b.x - rb.field_b.width;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fs.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

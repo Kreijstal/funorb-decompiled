@@ -5,9 +5,9 @@ final class ke {
     static boolean field_a;
     static String field_f;
     static boolean[][] field_b;
-    static je field_c;
+    static ClientUiComponent field_c;
     static String field_d;
-    static je field_e;
+    static ClientUiComponent field_e;
 
     final static void a(byte param0, p param1) {
         int var3 = 0;
@@ -24,7 +24,7 @@ final class ke {
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 90) {
-            field_c = (je) null;
+            field_c = (ClientUiComponent) null;
           }
           vi.field_a = new sn[km.field_j.length];
           var7 = "";

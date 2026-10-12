@@ -41,37 +41,37 @@ final class ContextualRuntimeException extends RuntimeException {
     }
 
     final static void a(int param0, ResourceArchive param1) {
-        je var6 = null;
-        je var7 = null;
-        je var3 = null;
+        ClientUiComponent var6 = null;
+        ClientUiComponent var7 = null;
+        ClientUiComponent var3 = null;
         try {
           NodeHashIterator.field_e = GameplayController.a("display_name_changed", (byte) 51, "basic", param1);
           mw.field_E = new mp(0L, br.field_g, h.field_b, AnimationFrameSet.field_y);
           TaggedMapData.field_g = new mp(0L, br.field_g, lm.field_a, ArchiveIndex.field_u);
-          su.field_d = new je(0L, (je) null);
-          bn.field_c = new je(0L, eq.field_h);
-          bn.field_c.field_Eb = 1;
-          wn.field_kb = new je(0L, te.field_p, su.field_b);
-          ek.field_a = new je(0L, br.field_e, nl.field_C);
-          PlayerProfile.field_f = new je(0L, DualLinkedNode.field_k);
-          su.field_d.a(bn.field_c, 49);
-          su.field_d.a(wn.field_kb, 109);
-          su.field_d.a(ek.field_a, 49);
-          su.field_d.a(mw.field_E, 105);
-          su.field_d.a(PlayerProfile.field_f, 56);
-          mw.field_E.field_Kb.field_Nb.a(param0 + 6145, eq.field_h);
-          mw.field_E.field_Kb.field_Nb.field_Fb = 1;
+          su.field_d = new ClientUiComponent(0L, (ClientUiComponent) null);
+          bn.field_c = new ClientUiComponent(0L, eq.field_h);
+          bn.field_c.horizontalAlignment = 1;
+          wn.field_kb = new ClientUiComponent(0L, te.field_p, su.field_b);
+          ek.field_a = new ClientUiComponent(0L, br.field_e, nl.field_C);
+          PlayerProfile.field_f = new ClientUiComponent(0L, DualLinkedNode.field_k);
+          su.field_d.addChild(bn.field_c, 49);
+          su.field_d.addChild(wn.field_kb, 109);
+          su.field_d.addChild(ek.field_a, 49);
+          su.field_d.addChild(mw.field_E, 105);
+          su.field_d.addChild(PlayerProfile.field_f, 56);
+          mw.field_E.field_Kb.field_Nb.applyStyle(param0 + 6145, eq.field_h);
+          mw.field_E.field_Kb.field_Nb.verticalAlignment = 1;
           var6 = mw.field_E.field_Kb.field_Nb;
           var7 = var6;
-          var7.field_Eb = 1;
-          TaggedMapData.field_g.field_Kb.field_Nb.a(0, eq.field_h);
+          var7.horizontalAlignment = 1;
+          TaggedMapData.field_g.field_Kb.field_Nb.applyStyle(0, eq.field_h);
           if (param0 != -6145) {
             ResourceArchive var4 = (ResourceArchive) null;
             ContextualRuntimeException.a(-105, (ResourceArchive) null);
           }
-          TaggedMapData.field_g.field_Kb.field_Nb.field_Fb = 1;
+          TaggedMapData.field_g.field_Kb.field_Nb.verticalAlignment = 1;
           var3 = TaggedMapData.field_g.field_Kb.field_Nb;
-          var3.field_Eb = 1;
+          var3.horizontalAlignment = 1;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "g.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

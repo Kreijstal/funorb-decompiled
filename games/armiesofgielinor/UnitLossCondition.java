@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class UnitLossCondition implements MatchCondition {
-    static je field_f;
+    static ClientUiComponent field_f;
     static IndexedSprite field_a;
     private int playerId;
     private Battlefield battlefield;

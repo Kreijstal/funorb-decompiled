@@ -4,13 +4,13 @@
 final class no extends en {
     static au field_K;
     static int[] field_U;
-    static je field_M;
+    static ClientUiComponent field_M;
     static RgbSprite field_P;
     static int field_J;
     private fn field_Q;
     static int field_S;
     private fn field_O;
-    static je field_T;
+    static ClientUiComponent field_T;
     private boolean field_R;
     private fn field_L;
     static String field_N;
@@ -98,7 +98,7 @@ final class no extends en {
           if (obfuscationGuard == -24721) {
             return;
           }
-          field_M = (je) null;
+          field_M = (ClientUiComponent) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

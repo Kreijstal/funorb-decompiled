@@ -237,13 +237,13 @@ final class ep {
         }
     }
 
-    final static void a(je param0, int param1, je param2) {
+    final static void a(ClientUiComponent param0, int param1, ClientUiComponent param2) {
         try {
-          if (null == param2.field_fb) {
-            param2.field_fb = new NodeDeque();
+          if (null == param2.children) {
+            param2.children = new NodeDeque();
           }
-          if (null == param0.field_fb) {
-            param0.field_fb = new NodeDeque();
+          if (null == param0.children) {
+            param0.children = new NodeDeque();
           }
           if (null == DiskCacheRequest.field_K) {
             DiskCacheRequest.field_K = new tp(64);
@@ -254,8 +254,8 @@ final class ep {
           if (bk.field_a == null) {
             bk.field_a = new tp(64);
           }
-          ot.field_E = param0.field_fb;
-          wh.field_c = param2.field_fb;
+          ot.field_E = param0.children;
+          wh.field_c = param2.children;
           da.c(-123);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ep.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -418,11 +418,11 @@ final class ep {
           if (!param0) {
             field_p = (boolean[][]) null;
           }
-          var4 = sb.field_i.field_X;
+          var4 = sb.field_i.text;
           String var3 = var4;
-          sb.field_i.field_X = param1;
+          sb.field_i.text = param1;
           UnitCycler.field_g.b(param2, 20);
-          sb.field_i.field_X = var4;
+          sb.field_i.text = var4;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ep.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

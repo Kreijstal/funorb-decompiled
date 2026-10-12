@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ek {
-    static je field_c;
+    static ClientUiComponent field_c;
     static String[][] field_b;
     static int field_e;
     static int field_d;
     static String field_f;
-    static je field_a;
+    static ClientUiComponent field_a;
 
     final static void a(byte param0) {
         if (qc.field_a != null) {
@@ -60,7 +60,7 @@ final class ek {
           field_c = null;
           return;
         }
-        field_a = (je) null;
+        field_a = (ClientUiComponent) null;
         field_b = (String[][]) null;
         field_c = null;
     }

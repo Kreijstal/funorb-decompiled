@@ -5,7 +5,7 @@ final class IsaacRandom {
     static RgbSprite[] field_k;
     private int[] results;
     private int[] memory;
-    static je field_i;
+    static ClientUiComponent field_i;
     private int accumulator;
     static RgbSprite[] field_a;
     private int lastResult;

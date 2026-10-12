@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SpellConfirmationDialog {
-    static je field_i;
+    static ClientUiComponent field_i;
     int tileY;
     static String field_g;
     int tileX;
@@ -35,7 +35,7 @@ final class SpellConfirmationDialog {
           for (var3 = 1; var3 < var2_int; var3++) {
             var4 = param0[var3];
             for (var5 = var3 - 1; var5 >= 0; var5--) {
-              if (nf.a(var4, param0[var5], 30549)) {
+              if (IconTextComponent.a(var4, param0[var5], 30549)) {
                 param0[1 + var5] = param0[var5];
                 continue;
               }
@@ -69,7 +69,7 @@ final class SpellConfirmationDialog {
           return cancelAction;
         }
         if (obfuscationGuard < 41) {
-          field_i = (je) null;
+          field_i = (ClientUiComponent) null;
         }
         return -1;
     }

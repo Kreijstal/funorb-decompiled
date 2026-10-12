@@ -678,10 +678,10 @@ final class PopupPresentation implements EventPresentation {
                       this.field_n = 8;
                       if (var8.selectionMode >= 0) {
                         this.field_f = (int)(64.0 * Math.sin((double)var8.selectionMode * 3.141592653589793 / 4.0)) + 130;
-                        this.field_r = -95 + (int)(Math.cos(3.141592653589793 * (double)var8.selectionMode / 4.0) * -64.0) + CombatEvent.field_I.field_D;
+                        this.field_r = -95 + (int)(Math.cos(3.141592653589793 * (double)var8.selectionMode / 4.0) * -64.0) + CombatEvent.field_I.screenY;
                       } else {
                         this.field_f = 130;
-                        this.field_r = -95 + CombatEvent.field_I.field_D;
+                        this.field_r = -95 + CombatEvent.field_I.screenY;
                       }
                     } else {
                       if (event.eventKind == 26) {

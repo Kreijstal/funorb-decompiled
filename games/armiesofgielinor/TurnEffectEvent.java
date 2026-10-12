@@ -218,7 +218,7 @@ final class TurnEffectEvent extends GameEvent {
         }
     }
 
-    final static void a(int param0, je param1, je param2, je param3, je param4) {
+    final static void a(int param0, ClientUiComponent param1, ClientUiComponent param2, ClientUiComponent param3, ClientUiComponent param4) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -238,7 +238,7 @@ final class TurnEffectEvent extends GameEvent {
             return;
           }
           if (param0 != 8) {
-            TurnEffectEvent.a(-95, (je) null, (je) null, (je) null, (je) null);
+            TurnEffectEvent.a(-95, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null);
           }
           hf.field_c = false;
           if (!NodeIterator.field_a) {
@@ -263,22 +263,22 @@ final class TurnEffectEvent extends GameEvent {
           UpkeepEvent.field_z.field_T = (8355711 & SpellConfirmationDialog.field_i.field_T >> 1) + (MeshObject.field_d - ((MeshObject.field_d & 16711422) >> 1));
           UpkeepEvent.field_z.field_wb = -((16711423 & MeshObject.field_d) >> 1) + MeshObject.field_d + ((SpellConfirmationDialog.field_i.field_wb & 16711423) >> 1);
           ArchiveProvider.field_d = rb.field_b;
-          UnitCycler.field_g = new je(0L, param2);
-          sb.field_i = new je(0L, param4);
-          StrongCacheEntry.field_C = new je(0L, (je) null);
-          SummonEvent.field_F = new je(0L, param3);
-          UpkeepEvent.field_z = new je(0L, param1);
-          UpkeepEvent.field_z.field_Z = IntrusiveNode.field_e;
-          SummonEvent.field_F.a(UpkeepEvent.field_z, 102);
-          rb.field_b = new je(0L, ArchiveProvider.field_d);
-          SummonEvent.field_F.a(rb.field_b, 66);
-          qf.field_e = new je(0L, SpellConfirmationDialog.field_i, nk.field_t);
-          ed.field_e = new je(0L, SpellConfirmationDialog.field_i);
-          UnitCycler.field_g.a(sb.field_i, 103);
-          UnitCycler.field_g.a(StrongCacheEntry.field_C, 79);
-          StrongCacheEntry.field_C.a(SummonEvent.field_F, 64);
-          StrongCacheEntry.field_C.a(qf.field_e, 80);
-          StrongCacheEntry.field_C.a(ed.field_e, 123);
+          UnitCycler.field_g = new ClientUiComponent(0L, param2);
+          sb.field_i = new ClientUiComponent(0L, param4);
+          StrongCacheEntry.field_C = new ClientUiComponent(0L, (ClientUiComponent) null);
+          SummonEvent.field_F = new ClientUiComponent(0L, param3);
+          UpkeepEvent.field_z = new ClientUiComponent(0L, param1);
+          UpkeepEvent.field_z.font = IntrusiveNode.field_e;
+          SummonEvent.field_F.addChild(UpkeepEvent.field_z, 102);
+          rb.field_b = new ClientUiComponent(0L, ArchiveProvider.field_d);
+          SummonEvent.field_F.addChild(rb.field_b, 66);
+          qf.field_e = new ClientUiComponent(0L, SpellConfirmationDialog.field_i, nk.field_t);
+          ed.field_e = new ClientUiComponent(0L, SpellConfirmationDialog.field_i);
+          UnitCycler.field_g.addChild(sb.field_i, 103);
+          UnitCycler.field_g.addChild(StrongCacheEntry.field_C, 79);
+          StrongCacheEntry.field_C.addChild(SummonEvent.field_F, 64);
+          StrongCacheEntry.field_C.addChild(qf.field_e, 80);
+          StrongCacheEntry.field_C.addChild(ed.field_e, 123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -18,7 +18,7 @@ final class jq extends dr {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -24872) {
-            stackIn_4_0 = new nd(im.a(param0 + 24994, (String) (param1[0].field_c)));
+            stackIn_4_0 = new nd(ClientUiNode.a(param0 + 24994, (String) (param1[0].field_c)));
             return stackIn_4_0;
           }
           stackIn_2_0 = (nd) null;

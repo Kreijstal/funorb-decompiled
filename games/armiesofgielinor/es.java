@@ -83,7 +83,7 @@ final class es {
     }
 
     final static void a(int param0, int param1, au param2, int param3, boolean param4, int param5, byte param6, int param7) {
-        nf[][] stackIn_33_0 = null;
+        IconTextComponent[][] stackIn_33_0 = null;
         int stackIn_34_1 = 0;
         int stackIn_51_0 = 0;
         int stackIn_66_0 = 0;
@@ -94,14 +94,14 @@ final class es {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        nf[] var9 = null;
+        IconTextComponent[] var9 = null;
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
         int[] var11_ref_int__ = null;
         int var12 = 0;
         int var13 = 0;
-        nf var14 = null;
+        IconTextComponent var14 = null;
         int var14_int = 0;
         int var15 = 0;
         int var16 = 0;
@@ -239,9 +239,9 @@ final class es {
             } else {
               var14 = var9[1 + var12];
               if (param4) {
-                if (!var14.field_rb) {
+                if (!var14.selected) {
                   if (var10 != 0) {
-                    stackIn_75_0 = (var14.field_xb) ? 1 : 0;
+                    stackIn_75_0 = (var14.inputEnabled) ? 1 : 0;
                   } else {
                     stackIn_75_0 = 0;
                   }

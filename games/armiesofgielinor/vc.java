@@ -5,7 +5,7 @@ final class vc extends IntrusiveNode {
     static RgbSprite[] field_k;
     static ResourceArchive field_m;
     byte[] field_n;
-    static je field_l;
+    static ClientUiComponent field_l;
 
     public static void a(int param0) {
         field_m = null;

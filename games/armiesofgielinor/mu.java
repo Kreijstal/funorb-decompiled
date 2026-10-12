@@ -50,7 +50,7 @@ final class mu {
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = og.field_m;
-          OwnerChangeEvent.field_E = new je(0L, (je) null);
+          OwnerChangeEvent.field_E = new ClientUiComponent(0L, (ClientUiComponent) null);
           if (param2 == null) {
             var10 = (Throwable) null;
             af.a((Throwable) null, -116, "QC1");
@@ -74,14 +74,14 @@ final class mu {
           var5 = SoftwareRaster.width;
           var6 = SoftwareRaster.height;
           var16 = SoftwareRaster.pixels;
-          s.field_c = new RgbSprite(10, 14);
-          s.field_c.b();
+          s.quickChatArrow = new RgbSprite(10, 14);
+          s.quickChatArrow.b();
           for (var8 = 2; var8 < 7; var8++) {
             SoftwareRaster.h(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           SoftwareRaster.a(var16, var5, var6);
           wn.field_jb = l.buildQuickChatCategoryMenu(var4, hf.field_f, param1 ^ 0, vs.field_g, uj.field_n);
-          OwnerChangeEvent.field_E.field_fb = new NodeDeque();
+          OwnerChangeEvent.field_E.children = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

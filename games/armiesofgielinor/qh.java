@@ -7,12 +7,12 @@ final class qh {
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param9) {
           QuickChatCategory.field_u = qm.field_L;
-          je.c(param9, -120);
+          ClientUiComponent.c(param9, -120);
           if (gk.field_J > 0) {
             bn.a(param0, param9, 117, param5);
           }
           pi.field_N.field_O = ke.field_e.field_O;
-          pi.field_N.field_Eb = 1;
+          pi.field_N.horizontalAlignment = 1;
           if (param7 > ~PreparedAction.field_r) {
             j.a(1, param9, param0, param5);
           }
@@ -21,12 +21,12 @@ final class qh {
           }
           if (vk.field_f &&
             vu.field_M.field_Ub >= vu.field_M.field_nc) {
-            MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
-            nf.field_Kb.field_xb = false;
+            MapTile.field_f.field_Nb.text = TelefragEvent.field_y;
+            IconTextComponent.field_Kb.inputEnabled = false;
             ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
           } else {
-            nf.field_Kb.field_xb = true;
-            MapTile.field_f.field_Nb.field_X = null;
+            IconTextComponent.field_Kb.inputEnabled = true;
+            MapTile.field_f.field_Nb.text = null;
             VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
           }
         } else {
@@ -34,12 +34,12 @@ final class qh {
             SoftwareRaster.height == CachedArchiveProvider.field_p) {
             if (!param9) {
               QuickChatCategory.field_u = (-640 + tq.field_c) / 2;
-              je.c(param9, -120);
+              ClientUiComponent.c(param9, -120);
               if (gk.field_J > 0) {
                 bn.a(param0, param9, 117, param5);
               }
               pi.field_N.field_O = ke.field_e.field_O;
-              pi.field_N.field_Eb = 1;
+              pi.field_N.horizontalAlignment = 1;
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
@@ -48,22 +48,22 @@ final class qh {
               }
               if (vk.field_f &&
                 vu.field_M.field_Ub >= vu.field_M.field_nc) {
-                MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
-                nf.field_Kb.field_xb = false;
+                MapTile.field_f.field_Nb.text = TelefragEvent.field_y;
+                IconTextComponent.field_Kb.inputEnabled = false;
                 ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
               } else {
-                nf.field_Kb.field_xb = true;
-                MapTile.field_f.field_Nb.field_X = null;
+                IconTextComponent.field_Kb.inputEnabled = true;
+                MapTile.field_f.field_Nb.text = null;
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
             } else {
               QuickChatCategory.field_u = qm.field_L;
-              je.c(param9, -120);
+              ClientUiComponent.c(param9, -120);
               if (gk.field_J > 0) {
                 bn.a(param0, param9, 117, param5);
               }
               pi.field_N.field_O = ke.field_e.field_O;
-              pi.field_N.field_Eb = 1;
+              pi.field_N.horizontalAlignment = 1;
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
@@ -72,12 +72,12 @@ final class qh {
               }
               if (vk.field_f &&
                 vu.field_M.field_Ub >= vu.field_M.field_nc) {
-                MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
-                nf.field_Kb.field_xb = false;
+                MapTile.field_f.field_Nb.text = TelefragEvent.field_y;
+                IconTextComponent.field_Kb.inputEnabled = false;
                 ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
               } else {
-                nf.field_Kb.field_xb = true;
-                MapTile.field_f.field_Nb.field_X = null;
+                IconTextComponent.field_Kb.inputEnabled = true;
+                MapTile.field_f.field_Nb.text = null;
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
             }
@@ -89,18 +89,18 @@ final class qh {
           if (so.field_b.field_g == SoftwareRaster.height &&
             SoftwareRaster.width == so.field_b.field_a) {
             if (null != vu.field_M) {
-              je.a(45, false);
+              ClientUiComponent.a(45, false);
               if (param9) {
                 QuickChatCategory.field_u = qm.field_L;
               } else {
                 QuickChatCategory.field_u = (-640 + tq.field_c) / 2;
               }
-              je.c(param9, -120);
+              ClientUiComponent.c(param9, -120);
               if (gk.field_J > 0) {
                 bn.a(param0, param9, 117, param5);
               }
               pi.field_N.field_O = ke.field_e.field_O;
-              pi.field_N.field_Eb = 1;
+              pi.field_N.horizontalAlignment = 1;
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
@@ -109,12 +109,12 @@ final class qh {
               }
               if (vk.field_f &&
                 vu.field_M.field_Ub >= vu.field_M.field_nc) {
-                MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
-                nf.field_Kb.field_xb = false;
+                MapTile.field_f.field_Nb.text = TelefragEvent.field_y;
+                IconTextComponent.field_Kb.inputEnabled = false;
                 ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
               } else {
-                nf.field_Kb.field_xb = true;
-                MapTile.field_f.field_Nb.field_X = null;
+                IconTextComponent.field_Kb.inputEnabled = true;
+                MapTile.field_f.field_Nb.text = null;
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
               jg.a(0, param3, param6, param1, param2, param4, param5);
@@ -123,19 +123,19 @@ final class qh {
               return;
             }
             if (no.field_K != null) {
-              je.a(108, true);
+              ClientUiComponent.a(108, true);
             } else {
               ak.b(false);
             }
           }
           if (!param9) {
             QuickChatCategory.field_u = (-640 + tq.field_c) / 2;
-            je.c(param9, -120);
+            ClientUiComponent.c(param9, -120);
             if (gk.field_J > 0) {
               bn.a(param0, param9, 117, param5);
             }
             pi.field_N.field_O = ke.field_e.field_O;
-            pi.field_N.field_Eb = 1;
+            pi.field_N.horizontalAlignment = 1;
             if (param7 > ~PreparedAction.field_r) {
               j.a(1, param9, param0, param5);
             }
@@ -144,21 +144,21 @@ final class qh {
             }
             if (vk.field_f &&
               vu.field_M.field_Ub >= vu.field_M.field_nc) {
-              MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
-              nf.field_Kb.field_xb = false;
+              MapTile.field_f.field_Nb.text = TelefragEvent.field_y;
+              IconTextComponent.field_Kb.inputEnabled = false;
               ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
             } else {
-              nf.field_Kb.field_xb = true;
-              MapTile.field_f.field_Nb.field_X = null;
+              IconTextComponent.field_Kb.inputEnabled = true;
+              MapTile.field_f.field_Nb.text = null;
               VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
             }
           } else {
             QuickChatCategory.field_u = qm.field_L;
-            je.c(param9, -120);
+            ClientUiComponent.c(param9, -120);
             if (gk.field_J > 0) {
               bn.a(param0, param9, 117, param5);
               pi.field_N.field_O = ke.field_e.field_O;
-              pi.field_N.field_Eb = 1;
+              pi.field_N.horizontalAlignment = 1;
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
@@ -167,17 +167,17 @@ final class qh {
               }
               if (vk.field_f &&
                 vu.field_M.field_Ub >= vu.field_M.field_nc) {
-                MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
-                nf.field_Kb.field_xb = false;
+                MapTile.field_f.field_Nb.text = TelefragEvent.field_y;
+                IconTextComponent.field_Kb.inputEnabled = false;
                 ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
               } else {
-                nf.field_Kb.field_xb = true;
-                MapTile.field_f.field_Nb.field_X = null;
+                IconTextComponent.field_Kb.inputEnabled = true;
+                MapTile.field_f.field_Nb.text = null;
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
             } else {
               pi.field_N.field_O = ke.field_e.field_O;
-              pi.field_N.field_Eb = 1;
+              pi.field_N.horizontalAlignment = 1;
               if (param7 > ~PreparedAction.field_r) {
                 j.a(1, param9, param0, param5);
               }
@@ -185,17 +185,17 @@ final class qh {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
               if (!vk.field_f) {
-                nf.field_Kb.field_xb = true;
-                MapTile.field_f.field_Nb.field_X = null;
+                IconTextComponent.field_Kb.inputEnabled = true;
+                MapTile.field_f.field_Nb.text = null;
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               } else {
                 if (vu.field_M.field_Ub >= vu.field_M.field_nc) {
-                  MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
-                  nf.field_Kb.field_xb = false;
+                  MapTile.field_f.field_Nb.text = TelefragEvent.field_y;
+                  IconTextComponent.field_Kb.inputEnabled = false;
                   ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
                 } else {
-                  nf.field_Kb.field_xb = true;
-                  MapTile.field_f.field_Nb.field_X = null;
+                  IconTextComponent.field_Kb.inputEnabled = true;
+                  MapTile.field_f.field_Nb.text = null;
                   VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
                 }
               }

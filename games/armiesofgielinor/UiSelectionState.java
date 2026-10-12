@@ -138,7 +138,7 @@ final class UiSelectionState {
           UiSelectionState.f(46);
         }
         stackIn_12_0 = ((OwnerChangeEvent.field_B &&
-          im.field_w &&
+          ClientUiNode.field_w &&
           sh.field_h &&
           ve.field_b &&
           mv.field_b) ||
@@ -165,7 +165,7 @@ final class UiSelectionState {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        je var5 = null;
+        ClientUiComponent var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
@@ -183,10 +183,10 @@ final class UiSelectionState {
             return;
           }
           vi.a(-68);
-          CombatEvent.field_I.a(true, param3);
+          CombatEvent.field_I.updateInput(true, param3);
           if (BestScoreStrategy.field_i != null) {
             if (NodeIterator.field_a) {
-              BestScoreStrategy.field_i.a(param3, -6226, CombatEvent.field_I.field_V, CombatEvent.field_I.field_D);
+              BestScoreStrategy.field_i.a(param3, -6226, CombatEvent.field_I.screenX, CombatEvent.field_I.screenY);
             } else {
               BestScoreStrategy.field_i = null;
             }
@@ -194,16 +194,16 @@ final class UiSelectionState {
           for (var4_int = param2; var4_int < 5; var4_int++) {
             var5 = gt.field_b[var4_int];
             if (var5 != null) {
-              if (0 != var5.field_yb) {
-                mq.a(var5, var4_int, false);
+              if (0 != var5.pressedButton) {
+                QuickChatMenu.a(var5, var4_int, false);
               }
               var6 = kp.a(var4_int, -119);
-              we.field_g[var4_int].field_cb = dh.field_n[var6];
-              ResourceProtocolClient.field_j[var4_int].field_X = co.field_k[var6];
+              we.field_g[var4_int].sprite = dh.field_n[var6];
+              ResourceProtocolClient.field_j[var4_int].text = co.field_k[var6];
             }
           }
-          if (UnitLossCondition.field_f.field_yb != 0) {
-            Spell.field_b = new i(UnitLossCondition.field_f.field_V, UnitLossCondition.field_f.field_D, UnitLossCondition.field_f.field_gb, UnitLossCondition.field_f.field_ob, param0, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, (String) null, 0L);
+          if (UnitLossCondition.field_f.pressedButton != 0) {
+            Spell.field_b = new i(UnitLossCondition.field_f.screenX, UnitLossCondition.field_f.screenY, UnitLossCondition.field_f.width, UnitLossCondition.field_f.height, param0, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, (String) null, 0L);
           }
           var9 = wm.a(jn.field_d, mi.field_l, (byte) 127, param1);
           if (var9 != null) {

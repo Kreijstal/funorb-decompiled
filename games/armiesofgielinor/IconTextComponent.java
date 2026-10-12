@@ -1,60 +1,60 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nf extends je {
-    static je field_Kb;
+final class IconTextComponent extends ClientUiComponent {
+    static ClientUiComponent field_Kb;
     static QuickChatCommandDefinition field_Ib;
     static String field_Jb;
-    private je field_Lb;
+    private ClientUiComponent iconComponent;
     static int field_Mb;
-    je field_Ob;
+    ClientUiComponent textComponent;
     static String field_Pb;
     static ResourceArchive field_Nb;
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void layoutContent(byte obfuscationGuard, int iconTextGap, int padding) {
         int var4;
         int var5;
         int var6;
-        var4 = -param1;
-        var5 = -param1;
-        if (null != this.field_Lb) {
-          var4 = this.field_Lb.j(98);
+        var4 = -iconTextGap;
+        var5 = -iconTextGap;
+        if (null != this.iconComponent) {
+          var4 = this.iconComponent.getPreferredWidth(98);
         }
-        if (this.field_Ob != null) {
-          var5 = this.field_Ob.a(true, -var4 - param2 + this.field_gb - param1 - param2);
+        if (this.textComponent != null) {
+          var5 = this.textComponent.measureContentWidth(true, -var4 - padding + this.width - iconTextGap - padding);
         }
-        var6 = param2 + (var5 + param2) + var4 + param1;
-        if (this.field_gb < var6) {
-          var5 = var5 + (this.field_gb - var6);
-          var6 = this.field_gb;
+        var6 = padding + (var5 + padding) + var4 + iconTextGap;
+        if (this.width < var6) {
+          var5 = var5 + (this.width - var6);
+          var6 = this.width;
         }
-        if (this.field_Eb == 1) {
-          param2 = param2 + (this.field_gb - var6) / 2;
+        if (this.horizontalAlignment == 1) {
+          padding = padding + (this.width - var6) / 2;
         }
-        if (this.field_Eb == 2) {
-          param2 = param2 + (this.field_gb - var6);
+        if (this.horizontalAlignment == 2) {
+          padding = padding + (this.width - var6);
         }
-        if (null != this.field_Lb) {
-          this.field_Lb.a(this.field_ob, -20500, var4, 0, param2);
-          this.field_Lb.field_Fb = this.field_Fb;
+        if (null != this.iconComponent) {
+          this.iconComponent.setBounds(this.height, -20500, var4, 0, padding);
+          this.iconComponent.verticalAlignment = this.verticalAlignment;
         }
-        if (param0 != -81) {
-          nf.k(94);
+        if (obfuscationGuard != -81) {
+          IconTextComponent.k(94);
         }
-        if (null != this.field_Ob) {
-          this.field_Ob.a(this.field_ob, -20500, var5, 0, var4 + param2 + param1);
-          this.field_Ob.field_Fb = this.field_Fb;
-          if (this.field_Lb == null) {
-            this.field_Ob.field_Eb = this.field_Eb;
+        if (null != this.textComponent) {
+          this.textComponent.setBounds(this.height, -20500, var5, 0, var4 + padding + iconTextGap);
+          this.textComponent.verticalAlignment = this.verticalAlignment;
+          if (this.iconComponent == null) {
+            this.textComponent.horizontalAlignment = this.horizontalAlignment;
           } else {
-            this.field_Ob.field_Eb = 0;
+            this.textComponent.horizontalAlignment = 0;
           }
         }
     }
 
     final static int l(int param0) {
         if (param0 != 26136) {
-          nf.l(77);
+          IconTextComponent.l(77);
         }
         return ResourceArchive.field_a.currentPosition[0];
     }
@@ -76,21 +76,21 @@ final class nf extends je {
           return 57;
         }
         int var5 = -param1;
-        if (null != this.field_Lb) {
-          var4 = this.field_Lb.j(125);
+        if (null != this.iconComponent) {
+          var4 = this.iconComponent.getPreferredWidth(125);
         }
-        if (null != this.field_Ob) {
-          var5 = this.field_Ob.j(102);
+        if (null != this.textComponent) {
+          var5 = this.textComponent.getPreferredWidth(102);
         }
         return param2 - (-var4 - param1 - var5) + param2;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param2 != -30061) {
-          this.a(46, -50, -114, 23, 28, -56, -92);
+    final void setLayout(int height, int padding, int obfuscationGuard, int width, int y, int x, int iconTextGap) {
+        if (obfuscationGuard != -30061) {
+          this.setLayout(46, -50, -114, 23, 28, -56, -92);
         }
-        this.a(param0, param2 + 9561, param3, param4, param5);
-        this.a((byte) -81, param6, param1);
+        this.setBounds(height, obfuscationGuard + 9561, width, y, x);
+        this.layoutContent((byte) -81, iconTextGap, padding);
     }
 
     final static String a(boolean param0, String param1) {
@@ -130,8 +130,8 @@ final class nf extends je {
         }
     }
 
-    nf(long param0, je param1, je param2, je param3, RgbSprite param4, String param5) {
-        super(param0, param1);
+    IconTextComponent(long key, ClientUiComponent style, ClientUiComponent iconStyle, ClientUiComponent textStyle, RgbSprite icon, String text) {
+        super(key, style);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -146,49 +146,49 @@ final class nf extends je {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
         try {
-          if (param4 != null) {
-            this.field_Lb = new je(0L, param2);
-            this.field_Lb.field_cb = param4;
-            this.a(this.field_Lb, 60);
+          if (icon != null) {
+            this.iconComponent = new ClientUiComponent(0L, iconStyle);
+            this.iconComponent.sprite = icon;
+            this.addChild(this.iconComponent, 60);
           }
-          if (param5 != null) {
-            this.field_Ob = new je(0L, param3, param5);
-            this.a(this.field_Ob, 41);
-            this.i(-10027);
+          if (text != null) {
+            this.textComponent = new ClientUiComponent(0L, textStyle, text);
+            this.addChild(this.textComponent, 41);
+            this.useParentClipForDescendants(-10027);
           } else {
-            this.i(-10027);
+            this.useParentClipForDescendants(-10027);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_9_0 = var8;
-          stackIn_9_1 = new StringBuilder().append("nf.<init>(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("nf.<init>(").append(key).append(',');
+          if (style == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param2 == null) {
+          if (iconStyle == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
           stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
-          if (param3 == null) {
+          if (textStyle == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
           stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-          if (param4 == null) {
+          if (icon == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
           stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
-          if (param5 == null) {
+          if (text == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";

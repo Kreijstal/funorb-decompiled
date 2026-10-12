@@ -608,7 +608,7 @@ final class GameplayController {
             stackIn_12_1 = campaignMissions.length;
             scanLoop2: while (stackIn_12_0 < stackIn_12_1) {
               completedMission = campaignMissions[missionIndex];
-              if (im.getProfileMissionScore(completedMission, 19) > 0) {
+              if (ClientUiNode.getProfileMissionScore(completedMission, 19) > 0) {
                 boolean decompiledFrameRemainder0 = true;
                 boolean decompiledFrameCompleted0 = true;
                 if (null != completedMission.rewardUnitTypes) {
@@ -4106,7 +4106,7 @@ final class GameplayController {
           var2_int = -58 % ((param0 - 85) / 39);
           if (this.remainingTurnTicks <= 500 &&
             this.remainingTurnTicks % 50 == 0) {
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(76, im.field_v[16]);
+            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(76, ClientUiNode.field_v[16]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4369,7 +4369,7 @@ final class GameplayController {
             this.a(param2, TeamRoster.field_c[var4_int], (byte) -124);
             return;
           }
-          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(109, im.field_v[12]);
+          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(109, ClientUiNode.field_v[12]);
           boolean decompiledSharedTail0 = !(this.field_lb);
           if (!decompiledSharedTail0) {
             vl.outgoingPacket.writeCipheredOpcode(32161, 65);
@@ -4874,7 +4874,7 @@ final class GameplayController {
           if (param2 >= -117) {
             return;
           }
-          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(109, im.field_v[5]);
+          RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(109, ClientUiNode.field_v[5]);
           this.field_S = param0;
           this.field_yb = 50;
           this.field_wb = param1;
@@ -5892,7 +5892,7 @@ final class GameplayController {
 
     final void f(int param0, int param1, int param2) {
         this.battlefield.applyTurnChange(true, param1, param0);
-        RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(43, im.field_v[17]);
+        RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(43, ClientUiNode.field_v[17]);
         if (param2 != 0) {
           return;
         }
@@ -8259,7 +8259,7 @@ final class GameplayController {
                     this.field_e[this.field_Ob] = var13;
                     this.field_dc[this.field_Ob] = 0;
                     this.field_Ob = this.field_Ob + 1;
-                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(37, im.field_v[15]);
+                    RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(37, ClientUiNode.field_v[15]);
                     if (var16 == 0) {
                       return;
                     }
@@ -8320,7 +8320,7 @@ final class GameplayController {
               this.battlefield.mapSizeSetting != 4) {
               stackIn_336_1 = !(this.field_tb);
               this.field_tb = stackIn_336_1;
-              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(63, im.field_v[18]);
+              RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(63, ClientUiNode.field_v[18]);
               return;
             }
             if (param0 == 23) {
@@ -8612,7 +8612,7 @@ final class GameplayController {
                 if (-1 < var13Lifetime1Lifetime1) {
                   this.a(11, -119);
                   this.field_y = var13Lifetime1Lifetime1;
-                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(103, im.field_v[11]);
+                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(103, ClientUiNode.field_v[11]);
                   return;
                 }
               }
@@ -8719,13 +8719,13 @@ final class GameplayController {
                   this.field_Pb = false;
                   this.field_Xb = true;
                   this.a(10, -122);
-                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(101, im.field_v[11]);
+                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(101, ClientUiNode.field_v[11]);
                   decompiledFrameRemainder12 = (var16 != 0);
                 }
                 if (decompiledFrameRemainder12) {
                   this.field_sb = this.field_sb + 1;
                   var10Lifetime1Lifetime3 = this.battlefield.mapWidth * var9Lifetime1 + var8Lifetime2;
-                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(38, im.field_v[5]);
+                  RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(38, ClientUiNode.field_v[5]);
                   if (~this.field_nb != ~var10Lifetime1Lifetime3) {
                     this.field_sb = 1;
                     this.field_nb = var10Lifetime1Lifetime3;
@@ -9050,7 +9050,7 @@ final class GameplayController {
               this.field_V) {
               this.field_V = false;
             }
-            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(126, im.field_v[17]);
+            RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(126, ClientUiNode.field_v[17]);
           }
           wt.field_G = false;
           ep.field_f = false;
@@ -9073,11 +9073,11 @@ final class GameplayController {
           if (param0 != 128) {
             this.camera = (BattleCamera) null;
           }
-          if (param1 > CombatEvent.field_I.field_gb) {
+          if (param1 > CombatEvent.field_I.width) {
             stackIn_7_0 = so.field_b.field_g;
             return stackIn_7_0;
           }
-          stackIn_9_0 = CombatEvent.field_I.field_D;
+          stackIn_9_0 = CombatEvent.field_I.screenY;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -9217,7 +9217,7 @@ final class GameplayController {
                 continue;
               }
             } else {
-              var5 = nf.l(26136);
+              var5 = IconTextComponent.l(26136);
               stackIn_81_0 = param0;
             }
             if (stackIn_81_0 < 116) {
@@ -10118,7 +10118,7 @@ final class GameplayController {
                 ul.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, wd.field_g, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
               } else {
                 if ((this.field_ob & var3) != 0) {
-                  ul.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, mq.field_Mb, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                  ul.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, QuickChatMenu.field_Mb, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
                 }
               }
               if (0 != (var3 & this.field_x) &&
@@ -11590,7 +11590,7 @@ final class GameplayController {
                 continue;
               }
             } else {
-              var9 = nf.l(param0 ^ 26138);
+              var9 = IconTextComponent.l(param0 ^ 26138);
               stackIn_111_0 = BattleUnitRenderer.b(param0 - 1);
             }
             var10 = stackIn_111_0;

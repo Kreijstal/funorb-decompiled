@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class np extends je {
+final class np extends ClientUiComponent {
     static df field_Qb;
-    private nf[] field_Sb;
+    private IconTextComponent[] field_Sb;
     private int field_Kb;
     static int field_Wb;
     private int field_Xb;
     static int[][] field_Vb;
     static String field_Jb;
     private RgbSprite[] field_Ub;
-    private je field_Tb;
-    private je field_Nb;
+    private ClientUiComponent field_Tb;
+    private ClientUiComponent field_Nb;
     static String field_Ob;
     private int field_Pb;
     private int field_Lb;
@@ -25,11 +25,11 @@ final class np extends je {
           if (param0) {
             this.d((byte) 111);
           }
-          this.field_Sb[this.field_Lb] = new nf(0L, (je) null, (je) null, this.field_Tb, param3, param1);
+          this.field_Sb[this.field_Lb] = new IconTextComponent(0L, (ClientUiComponent) null, (ClientUiComponent) null, this.field_Tb, param3, param1);
           this.field_Sb[this.field_Lb].field_mb = this.field_Ub;
           this.field_Sb[this.field_Lb].field_ub = true;
-          this.field_Sb[this.field_Lb].field_Fb = 1;
-          this.a(this.field_Sb[this.field_Lb], 86);
+          this.field_Sb[this.field_Lb].verticalAlignment = 1;
+          this.addChild(this.field_Sb[this.field_Lb], 86);
           this.field_Mb[this.field_Lb] = param2;
           this.field_Lb = this.field_Lb + 1;
         } catch (RuntimeException runtimeException) {
@@ -88,9 +88,9 @@ final class np extends je {
         int var8Lifetime1;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_Lb == 0) {
-          this.field_Sb[this.field_Lb] = new nf(0L, (je) null, (je) null, this.field_Nb, (RgbSprite) null, QuickChatCategory.field_F);
-          this.field_Sb[this.field_Lb].field_Fb = 1;
-          this.a(this.field_Sb[this.field_Lb], 43);
+          this.field_Sb[this.field_Lb] = new IconTextComponent(0L, (ClientUiComponent) null, (ClientUiComponent) null, this.field_Nb, (RgbSprite) null, QuickChatCategory.field_F);
+          this.field_Sb[this.field_Lb].verticalAlignment = 1;
+          this.addChild(this.field_Sb[this.field_Lb], 43);
           this.field_Mb[this.field_Lb] = -1;
           this.field_Lb = this.field_Lb + 1;
         }
@@ -108,16 +108,16 @@ final class np extends je {
         var7Lifetime1 = this.field_Xb + this.field_Lb * this.field_Ib + this.field_Xb;
         var8Lifetime1 = jp.a(param4, param2, var6, -1);
         var9 = pd.a(var7Lifetime1, 0, param1, param0);
-        this.a(var7Lifetime1, -20500, var6, var9, var8Lifetime1);
+        this.setBounds(var7Lifetime1, -20500, var6, var9, var8Lifetime1);
         for (var10 = 0; this.field_Lb > var10; var10++) {
-          this.field_Sb[var10].a(this.field_Ib, this.field_Pb, -30061, -(2 * this.field_Rb) + var6, this.field_Ib * var10 + this.field_Xb, this.field_Rb, this.field_Yb);
+          this.field_Sb[var10].setLayout(this.field_Ib, this.field_Pb, -30061, -(2 * this.field_Rb) + var6, this.field_Ib * var10 + this.field_Xb, this.field_Rb, this.field_Yb);
         }
         return;
     }
 
-    np(je param0, RgbSprite[] param1, je param2, je param3, int param4, int param5, int param6, int param7, int param8) {
+    np(ClientUiComponent param0, RgbSprite[] param1, ClientUiComponent param2, ClientUiComponent param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
-        this.field_Sb = new nf[256];
+        this.field_Sb = new IconTextComponent[256];
         this.field_Kb = -2;
         this.field_Mb = new int[256];
         try {
@@ -149,11 +149,11 @@ final class np extends je {
           if (param2 >= -98) {
             np.k(-112);
           }
-          this.field_Sb[this.field_Lb] = new nf(0L, (je) null, (je) null, this.field_Tb, (RgbSprite) null, param1);
+          this.field_Sb[this.field_Lb] = new IconTextComponent(0L, (ClientUiComponent) null, (ClientUiComponent) null, this.field_Tb, (RgbSprite) null, param1);
           this.field_Sb[this.field_Lb].field_mb = this.field_Ub;
           this.field_Sb[this.field_Lb].field_ub = true;
-          this.field_Sb[this.field_Lb].field_Fb = 1;
-          this.a(this.field_Sb[this.field_Lb], 55);
+          this.field_Sb[this.field_Lb].verticalAlignment = 1;
+          this.addChild(this.field_Sb[this.field_Lb], 55);
           this.field_Mb[this.field_Lb] = param0;
           this.field_Lb = this.field_Lb + 1;
         } catch (RuntimeException runtimeException) {
@@ -183,7 +183,7 @@ final class np extends je {
         int var3;
         int var4;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.a(true, param1);
+        this.updateInput(true, param1);
         if (!param1) {
           return -2;
         }
@@ -192,7 +192,7 @@ final class np extends je {
           this.field_Kb = -92;
         }
         while (var3 < this.field_Lb) {
-          if (this.field_Sb[var3].field_yb != 0) {
+          if (this.field_Sb[var3].pressedButton != 0) {
             return this.field_Mb[var3];
           }
           var3++;

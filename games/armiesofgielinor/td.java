@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class td implements WidgetPainter {
-    static je field_g;
+    static ClientUiComponent field_g;
     private BitmapFont field_b;
     private int field_e;
     static String field_h;
@@ -20,7 +20,7 @@ final class td implements WidgetPainter {
           field_g = null;
           return;
         }
-        field_g = (je) null;
+        field_g = (ClientUiComponent) null;
         field_f = null;
         field_d = (sn[][]) null;
         field_g = null;

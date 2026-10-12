@@ -7,9 +7,9 @@ final class mj {
     static String field_a;
 
     final static void a(byte param0) {
-        rj.field_F.a(18, -20500, nf.field_Kb.field_gb - (!fh.field_c ? 0 : 40 + (jn.field_c + 4)), 0, 0);
-        CampaignProgress.field_a.a(18, -20500, jn.field_c + 42, 0, -2 + (nf.field_Kb.field_gb - jn.field_c - 40));
-        MapTile.field_f.a(0, false, nf.field_Kb.field_gb, 2, jn.field_c, 20, nf.field_Kb.field_ob - 20);
+        rj.field_F.setBounds(18, -20500, IconTextComponent.field_Kb.width - (!fh.field_c ? 0 : 40 + (jn.field_c + 4)), 0, 0);
+        CampaignProgress.field_a.setBounds(18, -20500, jn.field_c + 42, 0, -2 + (IconTextComponent.field_Kb.width - jn.field_c - 40));
+        MapTile.field_f.a(0, false, IconTextComponent.field_Kb.width, 2, jn.field_c, 20, IconTextComponent.field_Kb.height - 20);
         if (param0 >= 29) {
           return;
         }

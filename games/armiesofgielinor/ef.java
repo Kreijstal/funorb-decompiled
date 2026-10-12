@@ -30,7 +30,7 @@ final class ef extends Exception {
           return;
         }
         try {
-          if (0 == we.field_f.field_yb) {
+          if (0 == we.field_f.pressedButton) {
           } else {
             if (NodeIterator.field_a) {
             } else {
@@ -45,12 +45,12 @@ final class ef extends Exception {
             return;
           }
           ts.a(param7, param2, param4, 20, param0, param0, param5, 15676, param6);
-          UnitCycler.field_g.a(true, param3);
+          UnitCycler.field_g.updateInput(true, param3);
           if (param3) {
-            if (qf.field_e.field_yb != 0) {
+            if (qf.field_e.pressedButton != 0) {
               hf.field_c = false;
             }
-            if (ed.field_e.field_yb != 0) {
+            if (ed.field_e.pressedButton != 0) {
               rd.b(8445);
               hf.field_c = false;
               return;

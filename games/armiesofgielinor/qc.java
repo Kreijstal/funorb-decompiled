@@ -8,8 +8,8 @@ abstract class qc {
     static qc field_h;
     static String field_i;
     static int field_j;
-    static je field_e;
-    static je field_c;
+    static ClientUiComponent field_e;
+    static ClientUiComponent field_c;
     static String field_f;
     static NodeDeque field_g;
 
@@ -26,7 +26,7 @@ abstract class qc {
           field_f = null;
           return;
         }
-        field_c = (je) null;
+        field_c = (ClientUiComponent) null;
         field_c = null;
         field_a = null;
         field_d = null;

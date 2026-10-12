@@ -8,7 +8,7 @@ final class UnitCycler {
     private NodeDeque units;
     static String field_d;
     private NodeIterator iterator;
-    static je field_g;
+    static ClientUiComponent field_g;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
@@ -155,7 +155,7 @@ final class UnitCycler {
           if (obfuscationGuard == -33) {
             return false;
           }
-          field_g = (je) null;
+          field_g = (ClientUiComponent) null;
           return false;
         }
         this.selectedNode = null;

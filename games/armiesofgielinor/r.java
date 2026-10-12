@@ -23,7 +23,7 @@ final class r extends vt {
     private boolean field_y;
     static int field_u;
     static String field_I;
-    static je field_v;
+    static ClientUiComponent field_v;
     private tu field_C;
     static String field_w;
 
@@ -248,7 +248,7 @@ final class r extends vt {
 
     final int h(int param0) {
         if (param0 != 5) {
-          field_v = (je) null;
+          field_v = (ClientUiComponent) null;
         }
         return this.field_L;
     }

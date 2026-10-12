@@ -4,7 +4,7 @@
 final class di extends mk {
     private fn field_k;
     static String field_j;
-    static je field_l;
+    static ClientUiComponent field_l;
 
     final static void c(byte param0) {
         if (param0 > -120) {
@@ -42,7 +42,7 @@ final class di extends mk {
             }
           }
           if (param0 != -3137) {
-            field_l = (je) null;
+            field_l = (ClientUiComponent) null;
           }
           if (!param1.equals(this.field_k.field_v)) {
             stackIn_11_0 = rn.field_e;

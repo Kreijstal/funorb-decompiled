@@ -3,7 +3,7 @@
  */
 final class GlobalSpell extends Spell {
     static String field_k;
-    static je field_f;
+    static ClientUiComponent field_f;
     static int field_h;
     static String field_n;
     static String field_i;
@@ -122,7 +122,7 @@ final class GlobalSpell extends Spell {
           field_f = null;
           return;
         }
-        field_f = (je) null;
+        field_f = (ClientUiComponent) null;
         field_k = null;
         field_f = null;
     }

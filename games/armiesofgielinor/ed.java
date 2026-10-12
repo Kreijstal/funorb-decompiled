@@ -5,7 +5,7 @@ final class ed {
     static nr field_d;
     static String field_b;
     static String field_a;
-    static je field_e;
+    static ClientUiComponent field_e;
     static String field_c;
 
     public static void b(int param0) {

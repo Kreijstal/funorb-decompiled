@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gt {
-    static je[] field_b;
+    static ClientUiComponent[] field_b;
     static RgbSprite[] field_c;
     static String field_g;
     static int field_i;

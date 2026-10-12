@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bk {
-    static je field_f;
+    static ClientUiComponent field_f;
     static String field_g;
     static String field_b;
     static tp field_a;
@@ -85,7 +85,7 @@ final class bk {
         }
     }
 
-    final static void a(boolean param0, je param1, je param2, BitmapFont param3, je param4, int param5, je param6, je param7, je param8, ll param9, je param10, je param11) {
+    final static void a(boolean param0, ClientUiComponent param1, ClientUiComponent param2, BitmapFont param3, ClientUiComponent param4, int param5, ClientUiComponent param6, ClientUiComponent param7, ClientUiComponent param8, ll param9, ClientUiComponent param10, ClientUiComponent param11) {
         String stackIn_13_0 = null;
         int stackIn_28_0 = 0;
         RuntimeException stackIn_38_0 = null;
@@ -117,7 +117,7 @@ final class bk {
         int[] var15 = null;
         RgbSprite[] var16 = null;
         int var17 = 0;
-        je var18 = null;
+        ClientUiComponent var18 = null;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
@@ -148,26 +148,26 @@ final class bk {
           var16 = new RgbSprite[9];
           var16[4] = var12;
           var17 = 106 / ((param5 + 53) / 51);
-          CombatEvent.field_I = new je(0L, param7);
-          mp.field_Qb = new je(0L, param8);
-          CombatEvent.field_I.a(mp.field_Qb, 55);
-          var18 = new je(0L, (je) null);
-          var18.field_fb = new NodeDeque();
+          CombatEvent.field_I = new ClientUiComponent(0L, param7);
+          mp.field_Qb = new ClientUiComponent(0L, param8);
+          CombatEvent.field_I.addChild(mp.field_Qb, 55);
+          var18 = new ClientUiComponent(0L, (ClientUiComponent) null);
+          var18.children = new NodeDeque();
           vq.field_a = new dn(0L, var18, param1, param9);
-          mp.field_Qb.a(vq.field_a, 126);
-          we.field_f = new je(0L, param6);
-          mp.field_Qb.a(we.field_f, 110);
-          UpkeepEvent.field_z = new je(0L, param2);
-          UpkeepEvent.field_z.field_Z = IntrusiveNode.field_e;
-          we.field_f.a(UpkeepEvent.field_z, 82);
-          we.field_f.i(-10027);
-          rb.field_b = new je(0L, (je) null);
+          mp.field_Qb.addChild(vq.field_a, 126);
+          we.field_f = new ClientUiComponent(0L, param6);
+          mp.field_Qb.addChild(we.field_f, 110);
+          UpkeepEvent.field_z = new ClientUiComponent(0L, param2);
+          UpkeepEvent.field_z.font = IntrusiveNode.field_e;
+          we.field_f.addChild(UpkeepEvent.field_z, 82);
+          we.field_f.useParentClipForDescendants(-10027);
+          rb.field_b = new ClientUiComponent(0L, (ClientUiComponent) null);
           rb.field_b.field_G = var16;
-          we.field_f.a(rb.field_b, 99);
-          jj.field_i = new je[5];
-          ResourceProtocolClient.field_j = new je[5];
-          we.field_g = new je[5];
-          gt.field_b = new je[5];
+          we.field_f.addChild(rb.field_b, 99);
+          jj.field_i = new ClientUiComponent[5];
+          ResourceProtocolClient.field_j = new ClientUiComponent[5];
+          we.field_g = new ClientUiComponent[5];
+          gt.field_b = new ClientUiComponent[5];
           var19 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var19 >= 5))) {
@@ -191,17 +191,17 @@ final class bk {
                 }
               }
               if (decompiledFrameRemainder0) {
-                gt.field_b[var19] = new je(0L, param10);
-                jj.field_i[var19] = new je(0L, SpellConfirmationDialog.field_i, var20);
-                we.field_g[var19] = new je(0L, (je) null);
-                we.field_g[var19].field_Fb = 1;
-                ResourceProtocolClient.field_j[var19] = new je(0L, SpellConfirmationDialog.field_i);
-                ResourceProtocolClient.field_j[var19].field_Fb = 1;
-                gt.field_b[var19].a(jj.field_i[var19], 107);
-                gt.field_b[var19].a(we.field_g[var19], 45);
-                gt.field_b[var19].a(ResourceProtocolClient.field_j[var19], 85);
-                gt.field_b[var19].i(-10027);
-                CombatEvent.field_I.a(gt.field_b[var19], 121);
+                gt.field_b[var19] = new ClientUiComponent(0L, param10);
+                jj.field_i[var19] = new ClientUiComponent(0L, SpellConfirmationDialog.field_i, var20);
+                we.field_g[var19] = new ClientUiComponent(0L, (ClientUiComponent) null);
+                we.field_g[var19].verticalAlignment = 1;
+                ResourceProtocolClient.field_j[var19] = new ClientUiComponent(0L, SpellConfirmationDialog.field_i);
+                ResourceProtocolClient.field_j[var19].verticalAlignment = 1;
+                gt.field_b[var19].addChild(jj.field_i[var19], 107);
+                gt.field_b[var19].addChild(we.field_g[var19], 45);
+                gt.field_b[var19].addChild(ResourceProtocolClient.field_j[var19], 85);
+                gt.field_b[var19].useParentClipForDescendants(-10027);
+                CombatEvent.field_I.addChild(gt.field_b[var19], 121);
                 se.field_d = se.field_d + 1;
               }
               var19++;
@@ -210,9 +210,9 @@ final class bk {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            UnitLossCondition.field_f = new je(0L, param11);
-            UnitLossCondition.field_f.field_X = CampaignMenu.field_n;
-            CombatEvent.field_I.a(UnitLossCondition.field_f, 42);
+            UnitLossCondition.field_f = new ClientUiComponent(0L, param11);
+            UnitLossCondition.field_f.text = CampaignMenu.field_n;
+            CombatEvent.field_I.addChild(UnitLossCondition.field_f, 42);
             stackIn_28_0 = TeamRoster.a(4) ? 1 : 0;
           }
           if (stackIn_28_0 != 0 &&
@@ -358,7 +358,7 @@ final class bk {
           tn.field_Z.a((int[]) null, 7, 0);
           tn.field_Z.b((byte) 44);
           if (param0) {
-            bk.a(true, (je) null, (je) null, (BitmapFont) null, (je) null, 86, (je) null, (je) null, (je) null, (ll) null, (je) null, (je) null);
+            bk.a(true, (ClientUiComponent) null, (ClientUiComponent) null, (BitmapFont) null, (ClientUiComponent) null, 86, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null, (ll) null, (ClientUiComponent) null, (ClientUiComponent) null);
           }
           var7 = tn.field_Z;
           var8 = param2;

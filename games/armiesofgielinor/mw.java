@@ -29,36 +29,36 @@ final class mw extends dr {
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var6_int = 493 + (param2 + (8 - (-2 - param1)));
-          mp.field_Qb.a(CombatEvent.field_I.field_ob - 6, param5 ^ -20499, -6 + var6_int, 3, 3);
-          var7 = mp.field_Qb.field_ob - 5;
+          mp.field_Qb.setBounds(CombatEvent.field_I.height - 6, param5 ^ -20499, -6 + var6_int, 3, 3);
+          var7 = mp.field_Qb.height - 5;
           if (param5 != 1) {
             mw.g(78);
           }
-          we.field_f.a(param4, -20500, 2 + (485 + param2 + param1), -param4 + var7, 5);
-          UpkeepEvent.field_z.a(param4, -20500, -rb.field_b.field_gb + (we.field_f.field_gb - param2), 0, param2);
+          we.field_f.setBounds(param4, -20500, 2 + (485 + param2 + param1), -param4 + var7, 5);
+          UpkeepEvent.field_z.setBounds(param4, -20500, -rb.field_b.width + (we.field_f.width - param2), 0, param2);
           var7 = var7 - (2 + param4);
-          rb.field_b.a(param4, -20500, rb.field_b.field_gb, 0, param2 + UpkeepEvent.field_z.field_gb);
+          rb.field_b.setBounds(param4, -20500, rb.field_b.width, 0, param2 + UpkeepEvent.field_z.width);
           vq.field_a.a(5, false, 2 + param2 + (485 + param1), 2, param1, 5, -5 + var7);
           if (null != BestScoreStrategy.field_i) {
-            BestScoreStrategy.field_i.setBounds(vq.field_a.field_S, vq.field_a.field_gb, vq.field_a.field_ab, param5 ^ 8193, vq.field_a.field_ob);
+            BestScoreStrategy.field_i.setBounds(vq.field_a.x, vq.field_a.width, vq.field_a.y, param5 ^ 8193, vq.field_a.height);
           }
-          var8 = -var6_int + (-param2 + CombatEvent.field_I.field_gb);
+          var8 = -var6_int + (-param2 + CombatEvent.field_I.width);
           var9 = var8 / 2;
           var10 = param0 + var9 + param2;
           var11 = 0;
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
               null != gt.field_b[var12]) {
-              var13 = 3 + var11 * (2 + (-6 + CombatEvent.field_I.field_ob)) / (1 + se.field_d);
+              var13 = 3 + var11 * (2 + (-6 + CombatEvent.field_I.height)) / (1 + se.field_d);
               var11++;
-              var7Lifetime1 = 3 + (var11 * (2 + CombatEvent.field_I.field_ob - 6) / (se.field_d + 1) - 2 - var13);
+              var7Lifetime1 = 3 + (var11 * (2 + CombatEvent.field_I.height - 6) / (se.field_d + 1) - 2 - var13);
               if (5 <= var12) {
-                UnitLossCondition.field_f.a(var7Lifetime1, param5 ^ -20499, var8, var13, var6_int);
+                UnitLossCondition.field_f.setBounds(var7Lifetime1, param5 ^ -20499, var8, var13, var6_int);
               } else {
-                gt.field_b[var12].a(var7Lifetime1, param5 ^ -20499, var8, var13, var6_int);
-                jj.field_i[var12].a(var7Lifetime1, -20500, -param2 + var9, 0, param2);
-                we.field_g[var12].a(-param3 + (var7Lifetime1 - param3), -20500, param0, param3, var9);
-                ResourceProtocolClient.field_j[var12].a(-param3 + (-param3 + var7Lifetime1), param5 - 20501, -var10 + (-param2 + var8), param3, var10);
+                gt.field_b[var12].setBounds(var7Lifetime1, param5 ^ -20499, var8, var13, var6_int);
+                jj.field_i[var12].setBounds(var7Lifetime1, -20500, -param2 + var9, 0, param2);
+                we.field_g[var12].setBounds(-param3 + (var7Lifetime1 - param3), -20500, param0, param3, var9);
+                ResourceProtocolClient.field_j[var12].setBounds(-param3 + (-param3 + var7Lifetime1), param5 - 20501, -var10 + (-param2 + var8), param3, var10);
               }
             }
           }

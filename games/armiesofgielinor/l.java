@@ -11,11 +11,11 @@ final class l {
     static String field_d;
     static String field_f;
 
-    final static mq buildQuickChatCategoryMenu(QuickChatCategory category, je param1, int obfuscationGuard, je param3, je param4) {
+    final static QuickChatMenu buildQuickChatCategoryMenu(QuickChatCategory category, ClientUiComponent param1, int obfuscationGuard, ClientUiComponent param3, ClientUiComponent param4) {
         int var14 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
-        mq stackIn_28_0 = null;
+        QuickChatMenu stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -33,7 +33,7 @@ final class l {
         String[] var8 = null;
         char[] var9 = null;
         int[] var10 = null;
-        mq[] var11 = null;
+        QuickChatMenu[] var11 = null;
         int var12 = 0;
         QuickChatCategory var13_ref_va = null;
         int var13 = 0;
@@ -73,7 +73,7 @@ final class l {
           var20 = new int[var7];
           var18 = var20;
           var10 = var18;
-          var11 = new mq[var7];
+          var11 = new QuickChatMenu[var7];
           if (null != category.subcategoryIds) {
             for (var12 = 0; var12 < category.subcategoryIds.length; var12++) {
               var13_ref_va = mp.quickChatCategories.getCategory(category.subcategoryIds[var12], true);
@@ -103,7 +103,7 @@ final class l {
               }
             }
           }
-          stackIn_28_0 = new mq(0L, param4, param1, param3, var11, var20, var8, var21);
+          stackIn_28_0 = new QuickChatMenu(0L, param4, param1, param3, var11, var20, var8, var21);
           return stackIn_28_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

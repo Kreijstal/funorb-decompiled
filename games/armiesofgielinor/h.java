@@ -3,7 +3,7 @@
  */
 final class h {
     static String[] field_e;
-    static je field_d;
+    static ClientUiComponent field_d;
     int field_c;
     static ResourceArchive field_g;
     static String field_b;

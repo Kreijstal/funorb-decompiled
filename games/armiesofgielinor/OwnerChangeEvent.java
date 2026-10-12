@@ -3,7 +3,7 @@
  */
 final class OwnerChangeEvent extends GameEvent {
     private int newOwnerPlayer;
-    static je field_E;
+    static ClientUiComponent field_E;
     private boolean field_z;
     private boolean applied;
     static boolean field_B;

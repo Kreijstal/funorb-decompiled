@@ -57,7 +57,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
         try {
           if (BattleCharacter.pointerInputHandler != null) {
             av.pointerIdleTicks = 0;
-            mq.lastPointerPressX = event.getX();
+            QuickChatMenu.lastPointerPressX = event.getX();
             BoundedFile.lastPointerPressY = event.getY();
             vi.monotonicMillis(-112);
             if (javax.swing.SwingUtilities.isRightMouseButton(event)) {

@@ -15,7 +15,7 @@ final class mo {
     static RgbSprite field_t;
     int field_b;
     static RgbSprite field_s;
-    je field_u;
+    ClientUiComponent field_u;
     static String field_o;
     long field_n;
     int[] field_d;

@@ -97,7 +97,7 @@ final class j {
           CampaignDefinition.field_m = new String[3];
           DisplacedUnitMarker.field_t[52] = oa.field_G;
           DisplacedUnitMarker.field_t[38] = PortalLossCondition.field_f;
-          ParasiteEvent.field_A = new String[]{VertexNormal.field_a, QuickChatPhraseRepository.field_e, je.field_lb, ob.field_P};
+          ParasiteEvent.field_A = new String[]{VertexNormal.field_a, QuickChatPhraseRepository.field_e, ClientUiComponent.field_lb, ob.field_P};
           DisplacedUnitMarker.field_t[43] = FaceNormal.field_c;
           DisplacedUnitMarker.field_t[33] = gv.field_b;
           DisplacedUnitMarker.field_t[59] = TickCounter.field_e;
@@ -206,24 +206,24 @@ final class j {
     final static void a(int param0, boolean param1, boolean param2, int param3) {
         int stackIn_10_0 = 0;
         String stackIn_23_0 = null;
-        je stackIn_32_0 = null;
+        ClientUiComponent stackIn_32_0 = null;
         String stackIn_33_1 = null;
-        je stackIn_35_0 = null;
+        ClientUiComponent stackIn_35_0 = null;
         int stackIn_35_1 = 0;
         String stackIn_36_2 = null;
-        je stackIn_66_0 = null;
+        ClientUiComponent stackIn_66_0 = null;
         boolean stackIn_66_1 = false;
         boolean stackIn_67_2 = false;
-        je stackIn_71_0 = null;
+        ClientUiComponent stackIn_71_0 = null;
         boolean stackIn_71_1 = false;
         boolean stackIn_72_2 = false;
-        je stackIn_76_0 = null;
+        ClientUiComponent stackIn_76_0 = null;
         boolean stackIn_76_1 = false;
         boolean stackIn_77_2 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        je var5 = null;
-        je var6 = null;
+        ClientUiComponent var5 = null;
+        ClientUiComponent var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -234,9 +234,9 @@ final class j {
         String var11_ref = null;
         int var12 = 0;
         int var13 = 0;
-        je var15 = null;
+        ClientUiComponent var15 = null;
         String var16 = null;
-        je var17 = null;
+        ClientUiComponent var17 = null;
         Object var11Lifetime1;
         int var9_intLifetime1;
         int var10Lifetime1;
@@ -246,18 +246,18 @@ final class j {
           if (no.field_K != null) {
             var15 = lm.field_b;
             var17 = var15;
-            lm.field_b.field_ob = 0;
-            var17.field_gb = 0;
+            lm.field_b.height = 0;
+            var17.width = 0;
             var5 = so.field_d;
-            so.field_d.field_ob = 0;
-            var5.field_gb = 0;
-            pi.field_N.field_ob = 0;
+            so.field_d.height = 0;
+            var5.width = 0;
+            pi.field_N.height = 0;
             var6 = pi.field_N;
-            var6.field_gb = 0;
-            kd.field_F.field_X = uu.field_a.toUpperCase();
-            var7 = (2 + pd.field_c.field_gb) / 2;
-            pi.field_N.a(40, param0 - 20501, var7 - 2, -40 + pd.field_c.field_ob, 0);
-            so.field_d.a(40, param0 ^ -20499, -var7 + pd.field_c.field_gb, -40 + pd.field_c.field_ob, var7);
+            var6.width = 0;
+            kd.field_F.text = uu.field_a.toUpperCase();
+            var7 = (2 + pd.field_c.width) / 2;
+            pi.field_N.setBounds(40, param0 - 20501, var7 - 2, -40 + pd.field_c.height, 0);
+            so.field_d.setBounds(40, param0 ^ -20499, -var7 + pd.field_c.width, -40 + pd.field_c.height, var7);
             if (lm.field_e.length == 1 &&
               lm.field_e[0] == 2) {
               var8 = 0;
@@ -287,7 +287,7 @@ final class j {
                 break;
               }
             }
-            so.field_d.field_xb = true;
+            so.field_d.inputEnabled = true;
             if (!SpellCastAction.field_s) {
               stackIn_32_0 = so.field_d;
               if (var8 != 0) {
@@ -295,7 +295,7 @@ final class j {
               } else {
                 stackIn_33_1 = fk.field_e;
               }
-              stackIn_32_0.field_X = ((String) (Object) stackIn_33_1).toUpperCase();
+              stackIn_32_0.text = ((String) (Object) stackIn_33_1).toUpperCase();
               stackIn_35_0 = uj.field_l;
               stackIn_35_1 = 4800;
               if (var8 == 0) {
@@ -303,10 +303,10 @@ final class j {
               } else {
                 stackIn_36_2 = dr.field_x;
               }
-              stackIn_35_0.field_X = fo.a(stackIn_35_1, stackIn_36_2, new String[]{so.field_d.field_X});
-              mp.field_Lb.field_xb = true;
+              stackIn_35_0.text = fo.a(stackIn_35_1, stackIn_36_2, new String[]{so.field_d.text});
+              mp.field_Lb.inputEnabled = true;
               fc.field_a = true;
-              pi.field_N.field_X = cg.field_i;
+              pi.field_N.text = cg.field_i;
               if (fs.field_d != null) {
                 jp.field_a = false;
                 fc.field_a = false;
@@ -327,8 +327,8 @@ final class j {
                 }
               }
               if (!fc.field_a) {
-                so.field_d.field_xb = false;
-                if (so.field_d.field_jb) {
+                so.field_d.inputEnabled = false;
+                if (so.field_d.hovered) {
                   var9 = null;
                   if (jp.field_a) {
                     var9 = "<col=A00000>" + ep.field_h + "</col>";
@@ -353,8 +353,8 @@ final class j {
                 }
               }
             } else {
-              uj.field_l.field_X = AiActionCandidate.field_v;
-              mp.field_Lb.field_xb = false;
+              uj.field_l.text = AiActionCandidate.field_v;
+              mp.field_Lb.inputEnabled = false;
               if (var8 != 0) {
                 stackIn_23_0 = p.field_f;
               } else {
@@ -364,20 +364,20 @@ final class j {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = pi.field_N.field_Z.a(var16) + 3 * pi.field_N.field_Z.a('.');
-              pi.field_N.field_O = (-var10Lifetime1 + pi.field_N.field_gb) / 2;
+              var10Lifetime1 = pi.field_N.font.a(var16) + 3 * pi.field_N.font.a('.');
+              pi.field_N.field_O = (-var10Lifetime1 + pi.field_N.width) / 2;
               if ((hg.field_b & 48) == 16) {
                 var9 = var16 + ".";
               }
-              pi.field_N.field_Eb = 0;
+              pi.field_N.horizontalAlignment = 0;
               if (32 == (48 & hg.field_b)) {
                 var9 = (String) (var9) + "..";
               }
               if (48 == (48 & hg.field_b)) {
                 var9 = (String) (var9) + "...";
               }
-              pi.field_N.field_X = (String) (var9);
-              so.field_d.field_X = ac.field_s.toUpperCase();
+              pi.field_N.text = (String) (var9);
+              so.field_d.text = ac.field_s.toUpperCase();
             }
           }
           if (param0 != 1) {
@@ -386,21 +386,21 @@ final class j {
           stackIn_66_0 = lk.field_a;
           stackIn_66_1 = true;
           stackIn_67_2 = (param2) && (!param1) && (!vk.field_f);
-          ((je) (Object) stackIn_66_0).a(stackIn_66_1, stackIn_67_2);
+          ((ClientUiComponent) (Object) stackIn_66_0).updateInput(stackIn_66_1, stackIn_67_2);
           stackIn_71_0 = pd.field_c;
           stackIn_71_1 = true;
           stackIn_72_2 = (param2) && (!param1) && (!vk.field_f);
-          ((je) (Object) stackIn_71_0).a(stackIn_71_1, stackIn_72_2);
+          ((ClientUiComponent) (Object) stackIn_71_0).updateInput(stackIn_71_1, stackIn_72_2);
           stackIn_76_0 = ta.field_R;
           stackIn_76_1 = true;
           stackIn_77_2 = (param2) && (!param1) && (vk.field_f);
-          ((je) (Object) stackIn_76_0).a(stackIn_76_1, stackIn_77_2);
+          ((ClientUiComponent) (Object) stackIn_76_0).updateInput(stackIn_76_1, stackIn_77_2);
           ij.field_w.field_a.l(10000);
           if (null != no.field_K) {
-            if (0 != mp.field_Lb.field_yb) {
+            if (0 != mp.field_Lb.pressedButton) {
               lu.a(-127, param3);
             }
-            if (so.field_d.field_yb != 0) {
+            if (so.field_d.pressedButton != 0) {
               if (SpellCastAction.field_s) {
                 ManaEvent.a((byte) 69, param3);
               } else {

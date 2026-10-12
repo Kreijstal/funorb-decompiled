@@ -545,7 +545,7 @@ final class ng {
         return this.field_r;
     }
 
-    final static void a(dn param0, je param1, int[] param2, String param3, int param4, int param5, int param6, String param7, long param8) {
+    final static void a(dn param0, ClientUiComponent param1, int[] param2, String param3, int param4, int param5, int param6, String param7, long param8) {
         try {
           int var10_int = -119 % ((param5 + 47) / 32);
           PointerInputHandler.field_b = param0;
@@ -765,14 +765,14 @@ final class ng {
           ds.field_a = new RgbSprite[op.field_c[param1].length];
           le.field_c = new RgbSprite[op.field_c[0].length];
           DiskCacheWorker.field_d = param0;
-          im.field_y = param2;
+          ClientUiNode.field_y = param2;
           for (var3_int = 0; op.field_c[0].length > var3_int; var3_int++) {
             ds.field_a[var3_int] = new RgbSprite(DiskCacheWorker.field_d.pixelWidth, DiskCacheWorker.field_d.pixelHeight);
-            le.field_c[var3_int] = new RgbSprite(im.field_y.pixelWidth, im.field_y.pixelHeight);
+            le.field_c[var3_int] = new RgbSprite(ClientUiNode.field_y.pixelWidth, ClientUiNode.field_y.pixelHeight);
             ds.field_a[var3_int].b();
             DiskCacheWorker.field_d.d(0, 0, op.field_c[0][var3_int]);
             le.field_c[var3_int].b();
-            im.field_y.b(0, 0, op.field_c[0][var3_int]);
+            ClientUiNode.field_y.b(0, 0, op.field_c[0][var3_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

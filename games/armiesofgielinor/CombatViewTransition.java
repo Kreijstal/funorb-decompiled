@@ -12,7 +12,7 @@ final class CombatViewTransition {
     private int field_m;
     private int[] field_i;
     private boolean field_h;
-    static je field_p;
+    static ClientUiComponent field_p;
     private int field_l;
     BattleCamera camera;
     private int field_j;

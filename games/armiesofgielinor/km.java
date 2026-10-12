@@ -23,9 +23,9 @@ final class km {
         return kw.campaignPacketWord0;
     }
 
-    final static je c(int param0) {
+    final static ClientUiComponent c(int param0) {
         if (param0 != 0) {
-          return (je) null;
+          return (ClientUiComponent) null;
         }
         return mw.field_E.field_Nb;
     }

@@ -224,17 +224,17 @@ final class et {
         }
     }
 
-    final static je b(int param0) {
+    final static ClientUiComponent b(int param0) {
         RuntimeException var1 = null;
-        je stackIn_2_0 = null;
-        je stackIn_4_0 = null;
+        ClientUiComponent stackIn_2_0 = null;
+        ClientUiComponent stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -1) {
             stackIn_4_0 = bu.field_a.field_Jb;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (je) null;
+          stackIn_2_0 = (ClientUiComponent) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

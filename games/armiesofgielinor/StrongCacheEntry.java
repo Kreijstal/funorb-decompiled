@@ -4,7 +4,7 @@
 final class StrongCacheEntry extends CacheEntry {
     static int[] field_D;
     private Object value;
-    static je field_C;
+    static ClientUiComponent field_C;
     static int field_E;
     static String field_A;
 

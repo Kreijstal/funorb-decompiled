@@ -626,7 +626,7 @@ abstract class wf extends iv {
         }
         if (StrongCacheEntry.field_E == 1) {
           if (og.field_m != 0) {
-            nf.field_Nb = nu.a(on.field_n, true);
+            IconTextComponent.field_Nb = nu.a(on.field_n, true);
           }
           ps.field_u = DamageEvent.a(1, mo.field_c, (byte) 119, false, true);
           CombatPresentation.field_M = DamageEvent.a(1, wl.field_E, (byte) 122, false, true);
@@ -636,19 +636,19 @@ abstract class wf extends iv {
           ResourceRequest.field_A = CombatPresentation.field_M;
         }
         if (StrongCacheEntry.field_E == 2) {
-          if (null != nf.field_Nb &&
-            nf.field_Nb.ensureIndex((byte) 82)) {
-            if (!nf.field_Nb.containsGroupName((byte) -128, "")) {
-              nf.field_Nb = null;
+          if (null != IconTextComponent.field_Nb &&
+            IconTextComponent.field_Nb.ensureIndex((byte) 82)) {
+            if (!IconTextComponent.field_Nb.containsGroupName((byte) -128, "")) {
+              IconTextComponent.field_Nb = null;
             } else {
-              if (nf.field_Nb.ensureGroupAvailableByName(28979, "")) {
-                CampaignUnitOverride.a((byte) -82, nf.field_Nb);
-                nf.field_Nb = null;
+              if (IconTextComponent.field_Nb.ensureGroupAvailableByName(28979, "")) {
+                CampaignUnitOverride.a((byte) -82, IconTextComponent.field_Nb);
+                IconTextComponent.field_Nb = null;
                 wl.a(0);
               }
             }
           }
-          if (nf.field_Nb == null) {
+          if (IconTextComponent.field_Nb == null) {
             StrongCacheEntry.field_E = 3;
           }
         }

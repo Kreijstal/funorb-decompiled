@@ -4,7 +4,7 @@
 final class cb extends Exception {
     static String field_d;
     String field_b;
-    static je field_c;
+    static ClientUiComponent field_c;
     static um[] field_a;
 
     public static void a(int param0) {

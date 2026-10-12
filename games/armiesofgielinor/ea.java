@@ -198,19 +198,19 @@ final class ea {
           ea.$cfr$intArgs$a$72f70aa7c69d(-115, true);
         }
         this.field_a.a(param3, param4, param2, var7, 0, var6, param0);
-        bn.field_c.a(jn.field_d, -20500, su.field_d.field_gb, 0, 0);
-        wn.field_kb.a(18, -20500, -2 + (-2 + su.field_d.field_gb + (-jn.field_c - 80)), 2 + jn.field_d, 0);
-        ek.field_a.a(18, -20500, 82 + jn.field_c, jn.field_d + 2, -82 + (su.field_d.field_gb - jn.field_c));
-        mw.field_E.a(0, jn.field_c, 2, 20, su.field_d.field_gb, 20 + (2 + jn.field_d), -2 + (su.field_d.field_ob - jn.field_d) - 20, (byte) -92);
+        bn.field_c.setBounds(jn.field_d, -20500, su.field_d.width, 0, 0);
+        wn.field_kb.setBounds(18, -20500, -2 + (-2 + su.field_d.width + (-jn.field_c - 80)), 2 + jn.field_d, 0);
+        ek.field_a.setBounds(18, -20500, 82 + jn.field_c, jn.field_d + 2, -82 + (su.field_d.width - jn.field_c));
+        mw.field_E.a(0, jn.field_c, 2, 20, su.field_d.width, 20 + (2 + jn.field_d), -2 + (su.field_d.height - jn.field_d) - 20, (byte) -92);
         TaggedMapData.field_g.a((byte) -110, jn.field_c, 20, 2);
     }
 
-    ea(String param0, je param1) {
+    ea(String param0, ClientUiComponent param1) {
         String[] var3 = null;
-        je[] var4 = null;
+        ClientUiComponent[] var4 = null;
         try {
           var3 = new String[]{param0, IterableDualNodeDeque.field_a, op.field_e};
-          var4 = new je[]{param1, su.field_d, (je) ((Object) TaggedMapData.field_g)};
+          var4 = new ClientUiComponent[]{param1, su.field_d, (ClientUiComponent) ((Object) TaggedMapData.field_g)};
           this.field_a = new ml(0L, h.field_d, var3, wm.field_c, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

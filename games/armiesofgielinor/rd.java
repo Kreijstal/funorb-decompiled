@@ -9,7 +9,7 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
     static String field_g;
     static String field_h;
     static String field_f;
-    static je field_e;
+    static ClientUiComponent field_e;
     java.awt.Frame field_c;
     static GameplayController field_j;
     static long field_i;
@@ -22,7 +22,7 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_h = null;
         field_e = null;
         if (param0 != 20000000) {
-          field_e = (je) null;
+          field_e = (ClientUiComponent) null;
         }
     }
 

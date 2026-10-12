@@ -6,7 +6,7 @@ final class t {
     static int field_f;
     static fl field_c;
     static int field_e;
-    static je field_g;
+    static ClientUiComponent field_g;
     static byte[] field_b;
     static RgbSprite[] field_d;
 

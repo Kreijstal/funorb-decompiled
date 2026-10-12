@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class lu extends lk {
-    static je field_u;
+    static ClientUiComponent field_u;
     static String field_v;
 
     lu(BitmapFont param0, int param1) {
@@ -29,7 +29,7 @@ class lu extends lk {
           var2.writeByte(1, 1);
           return;
         }
-        field_u = (je) null;
+        field_u = (ClientUiComponent) null;
         var2.writeByte(1, 1);
         var2.writeByte(1, 1);
     }

@@ -4,7 +4,7 @@
 final class QuickChatPhraseRepository {
     private ResourceArchive localArchive;
     static String field_e;
-    static je field_d;
+    static ClientUiComponent field_d;
     private WeightedLruCache phrases;
     private ResourceArchive globalArchive;
     static String field_a;
@@ -28,7 +28,7 @@ final class QuickChatPhraseRepository {
 
     final static boolean a(int param0) {
         if (param0 != 27875) {
-          field_d = (je) null;
+          field_d = (ClientUiComponent) null;
           if (!DamageEvent.g(81)) {
             return df.field_M <= 0 ? true : false;
           }
@@ -59,7 +59,7 @@ final class QuickChatPhraseRepository {
           kw.field_M[47] = 73;
           return;
         }
-        field_d = (je) null;
+        field_d = (ClientUiComponent) null;
         kw.field_M[47] = 73;
     }
 

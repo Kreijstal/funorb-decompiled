@@ -4,7 +4,7 @@
 final class kd extends tj implements nq, he, mf {
     static String field_U;
     kv field_T;
-    static je field_M;
+    static ClientUiComponent field_M;
     static int[][] field_Z;
     static wo field_J;
     private ma field_I;
@@ -18,7 +18,7 @@ final class kd extends tj implements nq, he, mf {
     static int field_X;
     private ma field_V;
     static String field_Q;
-    static je field_F;
+    static ClientUiComponent field_F;
     static wo field_R;
     static String field_L;
     static String field_S;
@@ -316,7 +316,7 @@ final class kd extends tj implements nq, he, mf {
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 < 102) {
-            field_F = (je) null;
+            field_F = (ClientUiComponent) null;
           }
           if (0 == param0) {
             ak.a("terms.ws", (byte) -106);
@@ -636,12 +636,12 @@ final class kd extends tj implements nq, he, mf {
           if (0 == var3) {
           } else {
             if (var3 == 2 &&
-              EffectPresentation.field_e.field_X != null &&
-              !EffectPresentation.field_e.field_X.equals("")) {
-              if (EffectPresentation.field_e.field_X.charAt(0) == 91) {
-                var4 = EffectPresentation.field_e.field_X;
+              EffectPresentation.field_e.text != null &&
+              !EffectPresentation.field_e.text.equals("")) {
+              if (EffectPresentation.field_e.text.charAt(0) == 91) {
+                var4 = EffectPresentation.field_e.text;
               } else {
-                var6 = (CharSequence) ((Object) EffectPresentation.field_e.field_X);
+                var6 = (CharSequence) ((Object) EffectPresentation.field_e.text);
                 var4 = k.a(var6, false);
                 var5 = var4;
                 var5Lifetime2 = var4;
@@ -668,7 +668,7 @@ final class kd extends tj implements nq, he, mf {
           }
         }
         if (param0 != 2) {
-          field_F = (je) null;
+          field_F = (ClientUiComponent) null;
         }
     }
 

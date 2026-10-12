@@ -39,56 +39,56 @@ abstract class vf {
     }
 
     final static void a(int param0, boolean param1, int param2, au param3) {
-        nf dupTemp$0 = null;
+        IconTextComponent dupTemp$0 = null;
         int var17_int = 0;
         int var24 = 0;
         int stackIn_8_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_22_0 = 0;
-        nf stackIn_35_0 = null;
+        IconTextComponent stackIn_35_0 = null;
         boolean stackIn_36_1 = false;
-        nf stackIn_41_0 = null;
+        IconTextComponent stackIn_41_0 = null;
         boolean stackIn_42_1 = false;
         int stackIn_55_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_72_0 = 0;
-        nf stackIn_90_0 = null;
+        IconTextComponent stackIn_90_0 = null;
         boolean stackIn_91_1 = false;
-        nf stackIn_96_0 = null;
+        IconTextComponent stackIn_96_0 = null;
         boolean stackIn_96_1 = false;
         boolean stackIn_97_2 = false;
-        nf stackIn_100_0 = null;
+        IconTextComponent stackIn_100_0 = null;
         boolean stackIn_101_1 = false;
-        nf stackIn_105_0 = null;
+        IconTextComponent stackIn_105_0 = null;
         boolean stackIn_106_1 = false;
         int stackIn_110_0 = 0;
-        nf stackIn_123_0 = null;
+        IconTextComponent stackIn_123_0 = null;
         boolean stackIn_124_1 = false;
-        nf stackIn_128_0 = null;
+        IconTextComponent stackIn_128_0 = null;
         boolean stackIn_129_1 = false;
-        nf stackIn_132_0 = null;
+        IconTextComponent stackIn_132_0 = null;
         boolean stackIn_133_1 = false;
-        nf stackIn_136_0 = null;
+        IconTextComponent stackIn_136_0 = null;
         boolean stackIn_137_1 = false;
         String stackIn_153_0 = null;
-        nf stackIn_158_0 = null;
+        IconTextComponent stackIn_158_0 = null;
         boolean stackIn_159_1 = false;
-        nf stackIn_161_0 = null;
+        IconTextComponent stackIn_161_0 = null;
         boolean stackIn_162_1 = false;
         int stackIn_170_0 = 0;
         int stackIn_217_0 = 0;
         int stackIn_230_0 = 0;
-        nf stackIn_327_0 = null;
+        IconTextComponent stackIn_327_0 = null;
         boolean stackIn_328_1 = false;
-        nf stackIn_334_0 = null;
+        IconTextComponent stackIn_334_0 = null;
         boolean stackIn_334_1 = false;
         boolean stackIn_335_2 = false;
-        nf stackIn_337_0 = null;
+        IconTextComponent stackIn_337_0 = null;
         int stackIn_337_1 = 0;
         int stackIn_337_2 = 0;
         int stackIn_337_3 = 0;
         boolean stackIn_340_1 = false;
-        nf stackIn_344_0 = null;
+        IconTextComponent stackIn_344_0 = null;
         boolean stackIn_345_1 = false;
         RuntimeException stackIn_354_0 = null;
         StringBuilder stackIn_354_1 = null;
@@ -101,7 +101,7 @@ abstract class vf {
         int var7 = 0;
         int var8_int = 0;
         String var8 = null;
-        nf[] var8_array = null;
+        IconTextComponent[] var8_array = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -110,7 +110,7 @@ abstract class vf {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        nf var17 = null;
+        IconTextComponent var17 = null;
         int var18 = 0;
         Object var18_ref = null;
         Object var19 = null;
@@ -123,9 +123,9 @@ abstract class vf {
         String var25_ref = null;
         int var26 = 0;
         int var27 = 0;
-        nf var28 = null;
-        nf var29 = null;
-        nf[] var30 = null;
+        IconTextComponent var28 = null;
+        IconTextComponent var29 = null;
+        IconTextComponent[] var30 = null;
         String var31 = null;
         String var32 = null;
         Object var25Lifetime1;
@@ -174,23 +174,23 @@ abstract class vf {
           } else {
             for (var6 = 0; var6 < 5; var6++) {
               if (var4_int != 0 &&
-                pu.field_k[0][var6 + 1].field_yb != 0 &&
+                pu.field_k[0][var6 + 1].pressedButton != 0 &&
                 var6 != param3.field_Tb) {
                 var5 = 1;
                 param3.field_Tb = var6;
               }
               stackIn_35_0 = pu.field_k[0][1 + var6];
               stackIn_36_1 = (var4_int != 0);
-              stackIn_35_0.field_xb = stackIn_36_1;
+              stackIn_35_0.inputEnabled = stackIn_36_1;
               if (!fh.field_c &&
                 var6 == 3) {
-                pu.field_k[0][var6 + 1].field_xb = false;
+                pu.field_k[0][var6 + 1].inputEnabled = false;
               }
               stackIn_41_0 = pu.field_k[0][1 + var6];
               stackIn_42_1 = (var6 == param3.field_Tb);
-              stackIn_41_0.field_rb = stackIn_42_1;
+              stackIn_41_0.selected = stackIn_42_1;
             }
-            if (pu.field_k[0][2].field_jb) {
+            if (pu.field_k[0][2].hovered) {
               if (!vu.b(false)) {
                 ad.field_I = fo.a(4800, op.field_a, new String[]{vu.field_M.field_rc});
               } else {
@@ -228,7 +228,7 @@ abstract class vf {
               }
               var8_intLifetime1 = stackIn_72_0;
               if (var4_int != 0 &&
-                0 != pu.field_k[1][var7 + 1].field_yb) {
+                0 != pu.field_k[1][var7 + 1].pressedButton) {
                 if (!param1) {
                   var9 = lm.field_e[var7];
                   if (var9 != param3.field_nc) {
@@ -251,33 +251,33 @@ abstract class vf {
                 var9 = lm.field_e[var7];
                 stackIn_100_0 = pu.field_k[1][var7 + 1];
                 stackIn_101_1 = (var9 == param3.field_nc);
-                stackIn_100_0.field_rb = stackIn_101_1;
+                stackIn_100_0.selected = stackIn_101_1;
               } else {
                 if (var7 == -1) {
-                  pu.field_k[1][1 + var7].field_rb = true;
+                  pu.field_k[1][1 + var7].selected = true;
                   for (var9 = 0; var9 < lm.field_e.length; var9++) {
                     dupTemp$0 = pu.field_k[1][var7 + 1];
                     stackIn_96_0 = dupTemp$0;
-                    stackIn_96_1 = dupTemp$0.field_rb;
+                    stackIn_96_1 = dupTemp$0.selected;
                     stackIn_97_2 = (0 == (CoatOfArms.field_d[var9 / 8] & 1 << (7 & var9)));
-                    stackIn_96_0.field_rb = stackIn_96_1 & stackIn_97_2;
+                    stackIn_96_0.selected = stackIn_96_1 & stackIn_97_2;
                   }
                 } else {
                   stackIn_90_0 = pu.field_k[1][var7 + 1];
                   stackIn_91_1 = ((CoatOfArms.field_d[var7 / 8] & 1 << (var7 & 7)) != 0);
-                  stackIn_90_0.field_rb = stackIn_91_1;
+                  stackIn_90_0.selected = stackIn_91_1;
                 }
               }
               stackIn_105_0 = pu.field_k[1][var7 + 1];
               stackIn_106_1 = (var4_int != 0) && (var8_intLifetime1 == 0);
-              stackIn_105_0.field_xb = stackIn_106_1;
+              stackIn_105_0.inputEnabled = stackIn_106_1;
             }
           }
           stackIn_110_0 = (!param1) ? 1 : 0;
           for (var6Lifetime1 = stackIn_110_0; var6Lifetime1 < 3; var6Lifetime1++) {
             var28 = pu.field_k[2][var6Lifetime1];
             if (var4_int != 0 &&
-              var28.field_yb != 0) {
+              var28.pressedButton != 0) {
               if (param1) {
                 if (var6Lifetime1 == 0) {
                   AiPlanningStrategy.field_b = 0;
@@ -293,20 +293,20 @@ abstract class vf {
             }
             stackIn_123_0 = var28;
             stackIn_124_1 = (var4_int != 0);
-            stackIn_123_0.field_xb = stackIn_124_1;
+            stackIn_123_0.inputEnabled = stackIn_124_1;
             if (!param1) {
               stackIn_136_0 = var28;
               stackIn_137_1 = ((var6Lifetime1 & param3.field_ac) != 0);
-              stackIn_136_0.field_rb = stackIn_137_1;
+              stackIn_136_0.selected = stackIn_137_1;
             } else {
               if (var6Lifetime1 != 0) {
                 stackIn_132_0 = var28;
                 stackIn_133_1 = ((var6Lifetime1 & AiPlanningStrategy.field_b) != 0);
-                stackIn_132_0.field_rb = stackIn_133_1;
+                stackIn_132_0.selected = stackIn_133_1;
               } else {
                 stackIn_128_0 = var28;
                 stackIn_129_1 = (AiPlanningStrategy.field_b == 0);
-                stackIn_128_0.field_rb = stackIn_129_1;
+                stackIn_128_0.selected = stackIn_129_1;
               }
             }
           }
@@ -315,10 +315,10 @@ abstract class vf {
             for (var6Lifetime2 = 0; 1 + BoundedFile.field_h > var6Lifetime2; var6Lifetime2++) {
               var29 = pu.field_k[3][var6Lifetime2];
               if (var4_int != 0 &&
-                var29.field_yb != 0) {
+                var29.pressedButton != 0) {
                 DiskCacheRequest.field_E = var6Lifetime2;
               }
-              if (var29.field_jb &&
+              if (var29.hovered &&
                 0 < var6Lifetime2) {
                 if (DirectByteStorage.field_j != null) {
                   stackIn_153_0 = DirectByteStorage.field_j[var6Lifetime2 - 1];
@@ -332,10 +332,10 @@ abstract class vf {
               }
               stackIn_158_0 = var29;
               stackIn_159_1 = (var6Lifetime2 == DiskCacheRequest.field_E);
-              stackIn_158_0.field_rb = stackIn_159_1;
+              stackIn_158_0.selected = stackIn_159_1;
               stackIn_161_0 = var29;
               stackIn_162_1 = (var4_int != 0);
-              stackIn_161_0.field_xb = stackIn_162_1;
+              stackIn_161_0.inputEnabled = stackIn_162_1;
             }
           }
           var6Lifetime3 = 0;
@@ -451,7 +451,7 @@ abstract class vf {
               }
               var17 = var8_array[var9 + 1];
               if (var4_int != 0 &&
-                var17.field_yb != 0) {
+                var17.pressedButton != 0) {
                 if (!param1) {
                   if (var16Lifetime1 == 0 &&
                     param3.field_pc[var7] != (byte)var9) {
@@ -473,7 +473,7 @@ abstract class vf {
                 tg.field_d[(var6Lifetime3 + var9) / 8] = (byte)rn.a((int) tg.field_d[(var6Lifetime3 + var9) / 8], ~(1 << rn.a(var9 + var6Lifetime3, 7)));
               }
               if (var9 >= 0 &&
-                var17.field_jb) {
+                var17.hovered) {
                 if (ll.field_Mb == null) {
                   var18_ref = null;
                 } else {
@@ -601,14 +601,14 @@ abstract class vf {
               }
               if (param1) {
                 if (var9 == -1) {
-                  var17.field_rb = true;
+                  var17.selected = true;
                   var27 = var6Lifetime3;
                   var18Lifetime1 = var27;
                   while (var30.length + var6Lifetime3 - 1 > var27) {
                     stackIn_334_0 = var17;
-                    stackIn_334_1 = var17.field_rb;
+                    stackIn_334_1 = var17.selected;
                     stackIn_335_2 = ((tg.field_d[var27 / 8] & 1 << (var27 & 7)) == 0);
-                    stackIn_334_0.field_rb = stackIn_334_1 & stackIn_335_2;
+                    stackIn_334_0.selected = stackIn_334_1 & stackIn_335_2;
                     var27++;
                   }
                 } else {
@@ -617,16 +617,16 @@ abstract class vf {
                   stackIn_337_2 = tg.field_d[(var9 + var6Lifetime3) / 8] & 1 << (var9 + var6Lifetime3 & 7);
                   stackIn_337_3 = -1;
                   stackIn_340_1 = (stackIn_337_1 != (stackIn_337_2 ^ stackIn_337_3));
-                  stackIn_337_0.field_rb = stackIn_340_1;
+                  stackIn_337_0.selected = stackIn_340_1;
                 }
               } else {
                 stackIn_327_0 = var17;
                 stackIn_328_1 = (fc.field_a) && ((byte)var9 == param3.field_pc[var7]);
-                stackIn_327_0.field_rb = stackIn_328_1;
+                stackIn_327_0.selected = stackIn_328_1;
               }
               stackIn_344_0 = var17;
               stackIn_345_1 = (var4_int != 0) && (var16Lifetime1 == 0);
-              stackIn_344_0.field_xb = stackIn_345_1;
+              stackIn_344_0.inputEnabled = stackIn_345_1;
             }
             var6Lifetime3 = var6Lifetime3 + (255 & t.field_b[var7]);
           }

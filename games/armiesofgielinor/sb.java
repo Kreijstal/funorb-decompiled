@@ -4,7 +4,7 @@
 final class sb extends rb implements fb, rp {
     en field_j;
     static int[] field_g;
-    static je field_i;
+    static ClientUiComponent field_i;
     static String field_f;
     static PacketBuffer field_h;
     static int field_d;

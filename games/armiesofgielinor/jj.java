@@ -9,7 +9,7 @@ final class jj {
     static String field_f;
     static String field_e;
     static ResourceArchive animationFramesArchive;
-    static je[] field_i;
+    static ClientUiComponent[] field_i;
     static BufferedSocket field_g;
 
     public static void a(byte param0) {

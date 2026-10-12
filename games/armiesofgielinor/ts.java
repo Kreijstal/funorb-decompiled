@@ -51,30 +51,30 @@ final class ts {
         int var11 = 0;
         int var12 = 0;
         try {
-          sb.field_i.field_X = param0;
+          sb.field_i.text = param0;
           if (rs.field_t != 2) {
-            ed.field_e.field_X = FixedQuaternion.field_c;
+            ed.field_e.text = FixedQuaternion.field_c;
           } else {
-            ed.field_e.field_X = bq.field_d;
+            ed.field_e.text = bq.field_d;
           }
           var9_int = 495;
           var10 = 5;
-          SummonEvent.field_F.a(param5, -20500, -10 + var9_int, var10, 5);
-          UpkeepEvent.field_z.a(param5, -20500, -rb.field_b.field_gb + SummonEvent.field_F.field_gb, 0, 0);
+          SummonEvent.field_F.setBounds(param5, -20500, -10 + var9_int, var10, 5);
+          UpkeepEvent.field_z.setBounds(param5, -20500, -rb.field_b.width + SummonEvent.field_F.width, 0, 0);
           var10 = var10 + (param5 + param2);
-          rb.field_b.a(param5, -20500, rb.field_b.field_gb, 0, UpkeepEvent.field_z.field_gb);
-          qf.field_e.a(param4, -20500, qf.field_e.j(param7 - 15550), var10, 5);
-          var11 = ed.field_e.j(param7 ^ 15717);
-          ed.field_e.a(param4, -20500, var11, var10, -5 + (var9_int - var11));
+          rb.field_b.setBounds(param5, -20500, rb.field_b.width, 0, UpkeepEvent.field_z.width);
+          qf.field_e.setBounds(param4, -20500, qf.field_e.getPreferredWidth(param7 - 15550), var10, 5);
+          var11 = ed.field_e.getPreferredWidth(param7 ^ 15717);
+          ed.field_e.setBounds(param4, -20500, var11, var10, -5 + (var9_int - var11));
           if (param7 != 15676) {
             ts.b(-109);
           }
-          sb.field_i.a(param3, -20500, var9_int, 0, 0);
+          sb.field_i.setBounds(param3, -20500, var9_int, 0, 0);
           var12 = 5 + param4 + var10;
-          StrongCacheEntry.field_C.a(var12, -20500, var9_int, param3, 0);
-          StrongCacheEntry.field_C.field_G = tq.a(11579568, false, StrongCacheEntry.field_C.field_ob, 2105376, 3, 8421504);
+          StrongCacheEntry.field_C.setBounds(var12, -20500, var9_int, param3, 0);
+          StrongCacheEntry.field_C.field_G = tq.a(11579568, false, StrongCacheEntry.field_C.height, 2105376, 3, 8421504);
           var12 = var12 + param3;
-          UnitCycler.field_g.a(var12, -20500, var9_int, param8 - var12 / 2, -(var9_int / 2) + param1);
+          UnitCycler.field_g.setBounds(var12, -20500, var9_int, param8 - var12 / 2, -(var9_int / 2) + param1);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ts.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

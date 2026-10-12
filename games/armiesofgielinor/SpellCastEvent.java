@@ -6,7 +6,7 @@ final class SpellCastEvent extends GameEvent {
     private boolean applied;
     Spell spell;
     private int castingPlayer;
-    static je field_D;
+    static ClientUiComponent field_D;
     int selectionMode;
     static ea field_E;
 
@@ -120,7 +120,7 @@ final class SpellCastEvent extends GameEvent {
             var4 = (li) (s.field_e.next((byte) 123));
           }
           if (param1 != -32666) {
-            field_D = (je) null;
+            field_D = (ClientUiComponent) null;
           }
           var2 = oe.field_Bb.first((byte) 105);
           while (var2 != null) {
@@ -139,8 +139,8 @@ final class SpellCastEvent extends GameEvent {
         if (!(StrongCacheEntry.field_E >= 2)) {
           return BattleUnitRenderer.field_c;
         }
-        if (null != nf.field_Nb) {
-          if (!nf.field_Nb.ensureIndex((byte) 82)) {
+        if (null != IconTextComponent.field_Nb) {
+          if (!IconTextComponent.field_Nb.ensureIndex((byte) 82)) {
             return db.field_b;
           }
           return of.field_Jb;

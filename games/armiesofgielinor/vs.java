@@ -8,19 +8,19 @@ final class vs {
     static int field_a;
     static String field_i;
     static int field_f;
-    static je field_g;
+    static ClientUiComponent field_g;
     static MapTile[] field_e;
     static String field_h;
     static String field_b;
 
-    final static void a(int param0, mq param1) {
+    final static void a(int param0, QuickChatMenu param1) {
         if (param1 == null) {
           return;
         }
         try {
           qd.field_I = param1;
-          OwnerChangeEvent.field_E.field_fb.clear(75);
-          OwnerChangeEvent.field_E.a(qd.field_I, 105);
+          OwnerChangeEvent.field_E.children.clear(75);
+          OwnerChangeEvent.field_E.addChild(qd.field_I, 105);
           if (param0 != 256) {
             field_j = true;
           }

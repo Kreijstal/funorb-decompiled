@@ -7,7 +7,7 @@ final class uu {
     static String field_a;
 
     final static void a(boolean param0, boolean param1, int param2, int param3, boolean param4) {
-        je stackIn_23_0 = null;
+        ClientUiComponent stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
         int stackIn_39_0 = 0;
         int stackIn_39_1 = 0;
@@ -20,22 +20,22 @@ final class uu {
         int stackIn_132_0 = 0;
         boolean stackIn_148_0 = false;
         int stackIn_155_0 = 0;
-        je stackIn_173_0 = null;
+        ClientUiComponent stackIn_173_0 = null;
         boolean stackIn_173_1 = false;
         boolean stackIn_174_2 = false;
-        je stackIn_178_0 = null;
+        ClientUiComponent stackIn_178_0 = null;
         boolean stackIn_178_1 = false;
         boolean stackIn_179_2 = false;
-        je stackIn_183_0 = null;
+        ClientUiComponent stackIn_183_0 = null;
         boolean stackIn_183_1 = false;
         boolean stackIn_184_2 = false;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_113_0;
         boolean stackOut_147_0;
         RuntimeException var5 = null;
-        je var6 = null;
-        je var7 = null;
-        je var8 = null;
+        ClientUiComponent var6 = null;
+        ClientUiComponent var7 = null;
+        ClientUiComponent var8 = null;
         String var9_ref_String = null;
         int var9 = 0;
         String var10_ref_String = null;
@@ -57,11 +57,11 @@ final class uu {
         of var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
-        je var22 = null;
+        ClientUiComponent var22 = null;
         int[] var23 = null;
         String var24 = null;
         int[] var25 = null;
-        je var26 = null;
+        ClientUiComponent var26 = null;
         int stackIn_60_0Lifetime1;
         int stackIn_60_1Lifetime1;
         int stackIn_69_0Lifetime1;
@@ -76,39 +76,39 @@ final class uu {
           AnimationSequence.a(InstructionsPanel.field_D, 125);
           if (vu.field_M != null) {
             boolean decompiledFrameRemainder1 = true;
-            mp.field_Lb.field_xb = true;
-            lm.field_b.field_ob = 0;
+            mp.field_Lb.inputEnabled = true;
+            lm.field_b.height = 0;
             var22 = lm.field_b;
             var26 = var22;
-            var26.field_gb = 0;
-            so.field_d.field_ob = 0;
+            var26.width = 0;
+            so.field_d.height = 0;
             var6 = so.field_d;
-            var6.field_gb = 0;
+            var6.width = 0;
             var7 = pi.field_N;
-            pi.field_N.field_ob = 0;
-            var7.field_gb = 0;
+            pi.field_N.height = 0;
+            var7.width = 0;
             if (!vu.b(false)) {
               var9_ref_String = vu.field_M.field_rc;
-              kd.field_F.field_X = fo.a(4800, CampaignMenu.field_m, new String[]{var9_ref_String}).toUpperCase();
-              pi.field_N.a(40, param3 - 20500, pd.field_c.field_gb, -40 + pd.field_c.field_ob, 0);
-              pi.field_N.field_X = fo.a(4800, wt.field_F, new String[]{var9_ref_String});
+              kd.field_F.text = fo.a(4800, CampaignMenu.field_m, new String[]{var9_ref_String}).toUpperCase();
+              pi.field_N.setBounds(40, param3 - 20500, pd.field_c.width, -40 + pd.field_c.height, 0);
+              pi.field_N.text = fo.a(4800, wt.field_F, new String[]{var9_ref_String});
               var8 = pi.field_N;
               decompiledFrameRemainder1 = (var19 != 0);
             }
             if (decompiledFrameRemainder1) {
-              kd.field_F.field_X = tp.field_f.toUpperCase();
-              var9 = (2 + pd.field_c.field_gb) / 2;
-              lm.field_b.a(40, -20500, var9 - 2, -40 + pd.field_c.field_ob, 0);
+              kd.field_F.text = tp.field_f.toUpperCase();
+              var9 = (2 + pd.field_c.width) / 2;
+              lm.field_b.setBounds(40, -20500, var9 - 2, -40 + pd.field_c.height, 0);
               if (vu.field_M.field_nc > vu.field_M.field_Ub) {
-                lm.field_b.field_X = TickCounter.field_d.toUpperCase();
-                lm.field_b.field_xb = true;
+                lm.field_b.text = TickCounter.field_d.toUpperCase();
+                lm.field_b.inputEnabled = true;
                 if (var19 != 0) {
-                  lm.field_b.field_X = TelefragEvent.field_y.toUpperCase();
-                  lm.field_b.field_xb = false;
+                  lm.field_b.text = TelefragEvent.field_y.toUpperCase();
+                  lm.field_b.inputEnabled = false;
                 }
               } else {
-                lm.field_b.field_X = TelefragEvent.field_y.toUpperCase();
-                lm.field_b.field_xb = false;
+                lm.field_b.text = TelefragEvent.field_y.toUpperCase();
+                lm.field_b.inputEnabled = false;
               }
               lm.field_b.field_G = nd.field_a.field_G;
               if (0 < AnimationPlayer.field_a) {
@@ -124,14 +124,14 @@ final class uu {
                   !vk.field_f) {
                   lm.field_b.field_G = nd.field_a.field_mb;
                 }
-                lm.field_b.field_X = lm.field_b.field_X + "<br>" + var10_ref_String;
+                lm.field_b.text = lm.field_b.text + "<br>" + var10_ref_String;
               }
-              so.field_d.a(40, -20500, -var9 + pd.field_c.field_gb, pd.field_c.field_ob - 40, var9);
-              so.field_d.field_X = ArchiveProvider.field_b.toUpperCase();
+              so.field_d.setBounds(40, -20500, -var9 + pd.field_c.width, pd.field_c.height - 40, var9);
+              so.field_d.text = ArchiveProvider.field_b.toUpperCase();
               var8 = so.field_d;
               stackIn_23_0 = so.field_d;
               stackIn_24_1 = (param4) && (ph.field_d == 0L);
-              stackIn_23_0.field_xb = stackIn_24_1;
+              stackIn_23_0.inputEnabled = stackIn_24_1;
               var10 = 2;
               if (null != fs.field_d) {
                 if (null == TeleportAction.field_B) {
@@ -284,7 +284,7 @@ final class uu {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = bu.field_a.field_Jb.field_fb;
+                var17 = bu.field_a.field_Jb.children;
                 var18_ref = (of) (var17.first((byte) 110));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
@@ -340,8 +340,8 @@ final class uu {
                   var16 = 0;
                 }
                 if (var16 != 0) {
-                  so.field_d.field_xb = false;
-                  if (so.field_d.field_jb) {
+                  so.field_d.inputEnabled = false;
+                  if (so.field_d.hovered) {
                     if (ij.field_w.field_a.field_Kb != 0) {
                       ad.field_I = fo.a(4800, Battlefield.field_pb, new String[]{ob.field_O});
                       if (var19 != 0) {
@@ -356,8 +356,8 @@ final class uu {
               if ((decompiledFrameRemainder1) &&
                 (!(var10 >= 2) ||
                 var19 != 0)) {
-                so.field_d.field_xb = false;
-                if (so.field_d.field_jb) {
+                so.field_d.inputEnabled = false;
+                if (so.field_d.hovered) {
                   var11 = null;
                   var12 = 0;
                   var13_intLifetime1 = 0;
@@ -415,34 +415,34 @@ final class uu {
               if (1 > var9) {
                 var9 = 1;
               }
-              var8.field_X = fo.a(4800, CorpseConditionMarker.field_t, new String[]{Integer.toString(var9)});
+              var8.text = fo.a(4800, CorpseConditionMarker.field_t, new String[]{Integer.toString(var9)});
             }
-            gg.field_E.field_X = fo.a(4800, ws.field_T, new String[]{Integer.toString(vu.field_M.field_Ub), Integer.toString(vu.field_M.field_nc)});
+            gg.field_E.text = fo.a(4800, ws.field_T, new String[]{Integer.toString(vu.field_M.field_Ub), Integer.toString(vu.field_M.field_nc)});
           }
           stackIn_173_0 = lk.field_a;
           stackIn_173_1 = true;
           stackIn_174_2 = (param0) && (!param1) && (!vk.field_f);
-          ((je) (Object) stackIn_173_0).a(stackIn_173_1, stackIn_174_2);
+          ((ClientUiComponent) (Object) stackIn_173_0).updateInput(stackIn_173_1, stackIn_174_2);
           stackIn_178_0 = pd.field_c;
           stackIn_178_1 = true;
           stackIn_179_2 = (param0) && (!param1) && (!vk.field_f);
-          ((je) (Object) stackIn_178_0).a(stackIn_178_1, stackIn_179_2);
+          ((ClientUiComponent) (Object) stackIn_178_0).updateInput(stackIn_178_1, stackIn_179_2);
           stackIn_183_0 = ta.field_R;
           stackIn_183_1 = true;
           stackIn_184_2 = (param0) && (!param1) && (vk.field_f);
-          ((je) (Object) stackIn_183_0).a(stackIn_183_1, stackIn_184_2);
+          ((ClientUiComponent) (Object) stackIn_183_0).updateInput(stackIn_183_1, stackIn_184_2);
           ij.field_w.field_a.l(param3 ^ 10000);
           if (vu.field_M != null) {
-            if (mp.field_Lb.field_yb != 0) {
+            if (mp.field_Lb.pressedButton != 0) {
               PointerInputHandler.a(69, vu.field_M.d((byte) -68), param2);
             }
-            if (lm.field_b.field_yb != 0) {
+            if (lm.field_b.pressedButton != 0) {
               vk.field_f = true;
             }
-            if (0 != so.field_d.field_yb) {
+            if (0 != so.field_d.pressedButton) {
               cp.field_h = true;
             }
-            if (dv.field_m.field_yb != 0) {
+            if (dv.field_m.pressedButton != 0) {
               vk.field_f = false;
             }
             vf.a(param3 + 1, false, param2, vu.field_M);

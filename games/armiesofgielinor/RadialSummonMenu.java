@@ -160,16 +160,16 @@ final class RadialSummonMenu {
         if (param0) {
           return;
         }
-        lk.field_a = new je(0L, (je) null);
-        lk.field_a.a(ij.field_w.field_a, 126);
-        lk.field_a.a(mp.field_Lb, 97);
-        ta.field_R = new je(0L, ArchiveIndex.field_b);
-        df.field_K = new je(0L, (je) null);
-        ta.field_R.a(bk.field_f, 54);
-        ta.field_R.a(df.field_K, 70);
-        df.field_K.a(nf.field_Kb, 112);
-        df.field_K.a(dv.field_m, 74);
-        je.a(27, param1);
+        lk.field_a = new ClientUiComponent(0L, (ClientUiComponent) null);
+        lk.field_a.addChild(ij.field_w.field_a, 126);
+        lk.field_a.addChild(mp.field_Lb, 97);
+        ta.field_R = new ClientUiComponent(0L, ArchiveIndex.field_b);
+        df.field_K = new ClientUiComponent(0L, (ClientUiComponent) null);
+        ta.field_R.addChild(bk.field_f, 54);
+        ta.field_R.addChild(df.field_K, 70);
+        df.field_K.addChild(IconTextComponent.field_Kb, 112);
+        df.field_K.addChild(dv.field_m, 74);
+        ClientUiComponent.a(27, param1);
     }
 
     public static void a(byte param0) {

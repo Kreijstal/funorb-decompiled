@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ml extends je {
-    private je field_Mb;
-    private je[] field_Ib;
+final class ml extends ClientUiComponent {
+    private ClientUiComponent field_Mb;
+    private ClientUiComponent[] field_Ib;
     static String field_Nb;
     static String field_Lb;
     int field_Kb;
-    private je[] field_Jb;
+    private ClientUiComponent[] field_Jb;
 
     final static void a(p param0, byte param1) {
         int var2_int = 0;
@@ -34,10 +34,10 @@ final class ml extends je {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.field_ab = param1;
-        this.field_ob = param6;
-        this.field_S = param2;
-        this.field_gb = param0;
+        this.y = param1;
+        this.height = param6;
+        this.x = param2;
+        this.width = param0;
         if (param4 != 0) {
           return;
         }
@@ -54,7 +54,7 @@ final class ml extends je {
     }
 
     private final void a(int param0, int param1, int param2) {
-        je dupTemp$0 = null;
+        ClientUiComponent dupTemp$0 = null;
         int var4;
         int var5;
         int var6;
@@ -67,22 +67,22 @@ final class ml extends je {
           ml.a(96, -94, -90, false);
         }
         while (this.field_Ib.length > var4) {
-          var5 = this.field_gb * var4 / this.field_Ib.length;
-          var6 = this.field_gb * (1 + var4) / this.field_Ib.length;
-          this.field_Ib[var4].field_S = var5;
-          this.field_Ib[var4].field_ab = 0;
-          this.field_Ib[var4].field_gb = -var5 + var6;
-          this.field_Ib[var4].field_ob = param1;
+          var5 = this.width * var4 / this.field_Ib.length;
+          var6 = this.width * (1 + var4) / this.field_Ib.length;
+          this.field_Ib[var4].x = var5;
+          this.field_Ib[var4].y = 0;
+          this.field_Ib[var4].width = -var5 + var6;
+          this.field_Ib[var4].height = param1;
           var4++;
         }
-        this.field_Mb.a(-param1 + this.field_ob, -20500, this.field_gb, param1, 0);
+        this.field_Mb.setBounds(-param1 + this.height, -20500, this.width, param1, 0);
         var8 = 0;
         var4Lifetime1 = var8;
         while (var8 < this.field_Jb.length) {
-          this.field_Jb[var8].a(this.field_Mb.field_ob - 2 * param0, -20500, -(param0 * 2) + this.field_Mb.field_gb, param0, param0);
+          this.field_Jb[var8].setBounds(this.field_Mb.height - 2 * param0, -20500, -(param0 * 2) + this.field_Mb.width, param0, param0);
           if (var8 != this.field_Kb) {
             dupTemp$0 = this.field_Jb[var8];
-            dupTemp$0.field_S = dupTemp$0.field_S + 10000;
+            dupTemp$0.x = dupTemp$0.x + 10000;
           }
           var8++;
         }
@@ -154,8 +154,8 @@ final class ml extends je {
 
     final void l(int param0) {
         int var2 = 0;
-        je dupTemp$0 = null;
-        je dupTemp$1 = null;
+        ClientUiComponent dupTemp$0 = null;
+        ClientUiComponent dupTemp$1 = null;
         int var3;
         String var4;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -165,14 +165,14 @@ final class ml extends je {
         }
         for (var2 = 0; this.field_Ib.length > var2; var2++) {
           if (this.field_Kb != var2 &&
-            this.field_Ib[var2].field_yb != 0) {
-            this.field_Ib[this.field_Kb].field_rb = false;
+            this.field_Ib[var2].pressedButton != 0) {
+            this.field_Ib[this.field_Kb].selected = false;
             dupTemp$0 = this.field_Jb[this.field_Kb];
-            dupTemp$0.field_S = dupTemp$0.field_S + 10000;
+            dupTemp$0.x = dupTemp$0.x + 10000;
             this.field_Kb = var2;
-            this.field_Ib[var2].field_rb = true;
+            this.field_Ib[var2].selected = true;
             dupTemp$1 = this.field_Jb[var2];
-            dupTemp$1.field_S = dupTemp$1.field_S - 10000;
+            dupTemp$1.x = dupTemp$1.x - 10000;
           }
         }
     }
@@ -289,8 +289,8 @@ final class ml extends je {
         return (ko.pointerY - param0) * (-param0 + ko.pointerY) + (-param1 + AiPlanningStrategy.pointerX) * (-param1 + AiPlanningStrategy.pointerX) < param2 * param2 ? true : false;
     }
 
-    ml(long param0, je param1, String[] param2, je param3, je[] param4, int param5) {
-        super(param0, (je) null);
+    ml(long param0, ClientUiComponent param1, String[] param2, ClientUiComponent param3, ClientUiComponent[] param4, int param5) {
+        super(param0, (ClientUiComponent) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -303,28 +303,28 @@ final class ml extends je {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        je var9 = null;
+        ClientUiComponent var9 = null;
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_Ib = new je[param2.length];
-          this.field_Mb = new je(0L, param3);
+          this.field_Ib = new ClientUiComponent[param2.length];
+          this.field_Mb = new ClientUiComponent(0L, param3);
           this.field_Jb = param4;
           for (var8_int = 0; param2.length > var8_int; var8_int++) {
-            var9 = new je(0L, param1);
-            var9.field_X = param2[var8_int];
+            var9 = new ClientUiComponent(0L, param1);
+            var9.text = param2[var8_int];
             this.field_Ib[var8_int] = var9;
-            this.a(var9, 121);
+            this.addChild(var9, 121);
           }
-          this.a(this.field_Mb, 122);
+          this.addChild(this.field_Mb, 122);
           var11 = 0;
           var8_intLifetime1 = var11;
           while (param4.length > var11) {
-            this.field_Mb.a(param4[var11], 75);
+            this.field_Mb.addChild(param4[var11], 75);
             var11++;
           }
           this.field_Kb = param5;
-          this.field_Ib[param5].field_rb = true;
+          this.field_Ib[param5].selected = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

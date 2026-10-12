@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class of extends je {
+final class of extends ClientUiComponent {
     long field_Pb;
     String field_Yb;
     int field_Kb;
     static IndexedSprite[] field_Mb;
-    je field_dc;
+    ClientUiComponent field_dc;
     boolean field_Wb;
-    je field_fc;
+    ClientUiComponent field_fc;
     boolean field_Zb;
     static String field_bc;
     int field_Qb;
@@ -16,14 +16,14 @@ final class of extends je {
     String field_cc;
     static int field_Ib;
     int field_Sb;
-    je field_ac;
-    je field_ec;
+    ClientUiComponent field_ac;
+    ClientUiComponent field_ec;
     long field_Vb;
     int field_Rb;
-    static je field_Lb;
+    static ClientUiComponent field_Lb;
     static String field_Jb;
     static int field_Nb;
-    je field_Tb;
+    ClientUiComponent field_Tb;
     int field_Ob;
     boolean field_Ub;
 
@@ -52,7 +52,7 @@ final class of extends je {
     }
 
     of(String param0, String param1, long param2) {
-        super(0L, (je) null);
+        super(0L, (ClientUiComponent) null);
         CharSequence var6 = null;
         try {
           this.field_Pb = param2;

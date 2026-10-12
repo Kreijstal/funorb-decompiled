@@ -272,7 +272,7 @@ final class DropdownSelector extends tj implements he {
               }
             }
           }
-          if (!im.field_w &&
+          if (!ClientUiNode.field_w &&
             !de.field_a) {
             vl.outgoingPacket.writeCipheredOpcode(32161, 69);
             de.field_a = true;

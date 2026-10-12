@@ -4,7 +4,7 @@
 abstract class pt extends sf {
     private int field_Z;
     static String[] field_W;
-    static je field_X;
+    static ClientUiComponent field_X;
     private int field_ib;
     private int field_hb;
     private bh field_cb;

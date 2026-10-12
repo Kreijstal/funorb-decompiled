@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fp extends je {
-    static je field_Lb;
-    private je field_Kb;
-    private je field_Jb;
+final class fp extends ClientUiComponent {
+    static ClientUiComponent field_Lb;
+    private ClientUiComponent field_Kb;
+    private ClientUiComponent field_Jb;
     static String field_Ib;
 
     fp(long param0, fp param1, String param2) {
@@ -12,7 +12,7 @@ final class fp extends je {
     }
 
     final void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
-        this.a(param3, -20500, param5, param1, param4);
+        this.setBounds(param3, -20500, param5, param1, param4);
         if (param0 != 120) {
           field_Ib = (String) null;
         }
@@ -222,12 +222,12 @@ final class fp extends je {
         }
     }
 
-    fp(long param0, RgbSprite param1, RgbSprite param2, int param3, je param4, String param5) {
-        this(param0, (je) null, param4, param5);
+    fp(long param0, RgbSprite param1, RgbSprite param2, int param3, ClientUiComponent param4, String param5) {
+        this(param0, (ClientUiComponent) null, param4, param5);
         try {
-          this.field_Jb.field_cb = param2;
+          this.field_Jb.sprite = param2;
           this.field_Jb.field_P = param1;
-          this.field_Jb.field_Fb = param3;
+          this.field_Jb.verticalAlignment = param3;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -248,7 +248,7 @@ final class fp extends je {
     final static void a(java.math.BigInteger param0, java.math.BigInteger param1, byte param2, PacketBuffer param3, PacketBuffer param4) {
         try {
           if (param2 != 26) {
-            field_Lb = (je) null;
+            field_Lb = (ClientUiComponent) null;
           }
           ls.a(param4, 0, param0, 6727, param3.position, param1, param3.payload);
         } catch (RuntimeException runtimeException) {
@@ -256,24 +256,24 @@ final class fp extends je {
         }
     }
 
-    private fp(long param0, je param1, je param2, String param3) {
-        super(param0, (je) null);
+    private fp(long param0, ClientUiComponent param1, ClientUiComponent param2, String param3) {
+        super(param0, (ClientUiComponent) null);
         try {
-          this.field_Jb = new je(0L, param1);
-          this.field_Kb = new je(0L, param2);
-          this.field_Kb.field_X = param3;
-          this.a(this.field_Jb, 79);
-          this.a(this.field_Kb, 58);
-          this.i(-10027);
+          this.field_Jb = new ClientUiComponent(0L, param1);
+          this.field_Kb = new ClientUiComponent(0L, param2);
+          this.field_Kb.text = param3;
+          this.addChild(this.field_Jb, 79);
+          this.addChild(this.field_Kb, 58);
+          this.useParentClipForDescendants(-10027);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void c(int param0, int param1) {
-        this.field_Jb.a(this.field_ob, -20500, this.field_Jb.j(-53), 0, 0);
-        int var3 = this.field_Jb.field_gb + param1;
-        this.field_Kb.a(this.field_ob, param0 - 20500, this.field_gb - var3, param0, var3);
+        this.field_Jb.setBounds(this.height, -20500, this.field_Jb.getPreferredWidth(-53), 0, 0);
+        int var3 = this.field_Jb.width + param1;
+        this.field_Kb.setBounds(this.height, param0 - 20500, this.width - var3, param0, var3);
     }
 
     final static void a(String param0, byte param1) {
@@ -289,7 +289,7 @@ final class fp extends je {
 
     public static void k(int param0) {
         if (param0 != 21755) {
-          field_Lb = (je) null;
+          field_Lb = (ClientUiComponent) null;
         }
         field_Lb = null;
         field_Ib = null;
@@ -299,7 +299,7 @@ final class fp extends je {
         if (param0 < 23) {
           field_Ib = (String) null;
         }
-        return this.field_Jb.j(-35) + (param1 + this.field_Kb.j(102));
+        return this.field_Jb.getPreferredWidth(-35) + (param1 + this.field_Kb.getPreferredWidth(102));
     }
 
     static {

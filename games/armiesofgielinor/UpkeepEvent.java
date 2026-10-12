@@ -4,7 +4,7 @@
 final class UpkeepEvent extends GameEvent {
     int field_D;
     private boolean field_B;
-    static je field_z;
+    static ClientUiComponent field_z;
     int field_y;
     static StringBuilder field_C;
 
@@ -48,7 +48,7 @@ final class UpkeepEvent extends GameEvent {
           if (obfuscationGuard == -26661) {
             return;
           }
-          field_z = (je) null;
+          field_z = (ClientUiComponent) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

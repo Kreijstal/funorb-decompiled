@@ -70,7 +70,7 @@ final class pg {
 
     final static void a(int param0, mo param1) {
         Object stackIn_2_0;
-        je stackIn_2_1;
+        ClientUiComponent stackIn_2_1;
         Object stackIn_2_2;
         String stackIn_2_3;
         int stackIn_3_4 = 0;

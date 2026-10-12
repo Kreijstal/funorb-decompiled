@@ -6,7 +6,7 @@ final class fj {
     int field_n;
     static String field_a;
     private int field_s;
-    static je field_d;
+    static ClientUiComponent field_d;
     private int field_r;
     boolean field_h;
     private int field_o;

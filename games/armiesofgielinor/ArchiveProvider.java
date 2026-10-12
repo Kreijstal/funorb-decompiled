@@ -5,7 +5,7 @@ abstract class ArchiveProvider {
     static String field_b;
     static ou field_e;
     static int[] field_a;
-    static je field_d;
+    static ClientUiComponent field_d;
     static String field_c;
 
     final static nj a(byte param0, RgbSprite param1) {

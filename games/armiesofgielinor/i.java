@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class i extends je {
+final class i extends ClientUiComponent {
     private fp field_Qb;
-    private je field_Ib;
+    private ClientUiComponent field_Ib;
     long field_Sb;
     static ResourceArchive field_Lb;
-    private je field_Vb;
+    private ClientUiComponent field_Vb;
     private StringBuilder field_Jb;
     static int[] field_Nb;
-    private je field_Tb;
-    private je[] field_Ub;
-    private je field_Mb;
+    private ClientUiComponent field_Tb;
+    private ClientUiComponent[] field_Ub;
+    private ClientUiComponent field_Mb;
     private int field_Kb;
     static String field_Ob;
-    private je field_Rb;
-    private je field_Pb;
+    private ClientUiComponent field_Rb;
+    private ClientUiComponent field_Pb;
 
     final static void a(RgbSprite[] param0, int param1, int param2, byte param3, int param4, int param5) {
         int var21 = 0;
@@ -192,8 +192,8 @@ final class i extends je {
         field_Lb = null;
     }
 
-    private final int a(je param0, int param1, je param2, int param3, String param4, int param5) {
-        je var7 = null;
+    private final int a(ClientUiComponent param0, int param1, ClientUiComponent param2, int param3, String param4, int param5) {
+        ClientUiComponent var7 = null;
         RuntimeException var7_ref = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
@@ -205,8 +205,8 @@ final class i extends je {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new je(0L, param0, 0, param1, param3, param5, param4);
-          param2.a(var7, 87);
+          var7 = new ClientUiComponent(0L, param0, 0, param1, param3, param5, param4);
+          param2.addChild(var7, 87);
           param1 += 32;
           stackIn_1_0 = param1;
           return stackIn_1_0;
@@ -246,7 +246,7 @@ final class i extends je {
         }
         if (param0 != 18585) {
           String var3 = (String) null;
-          discarded$0 = this.a((je) null, 77, (je) null, -9, (String) null, 124);
+          discarded$0 = this.a((ClientUiComponent) null, 77, (ClientUiComponent) null, -9, (String) null, 124);
           return true;
         }
         return true;
@@ -256,47 +256,47 @@ final class i extends je {
         int var4 = 0;
         fp stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
-        je stackIn_15_0 = null;
+        ClientUiComponent stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
         int var3;
         int var5;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.a(true, param0);
+        this.updateInput(true, param0);
         var3 = 80 / ((param1 + 36) / 58);
         if (this.field_Rb != null) {
-          this.field_Rb.field_X = this.field_Jb.toString();
-          this.field_Rb.field_S = (this.field_gb - this.field_Rb.field_Z.a(this.field_Rb.field_X)) / 2;
-          this.field_Rb.field_gb = -this.field_Rb.field_S + this.field_gb;
+          this.field_Rb.text = this.field_Jb.toString();
+          this.field_Rb.x = (this.width - this.field_Rb.font.a(this.field_Rb.text)) / 2;
+          this.field_Rb.width = -this.field_Rb.x + this.width;
           if (null != this.field_Qb &&
-            0 != this.field_Qb.field_yb) {
+            0 != this.field_Qb.pressedButton) {
             stackIn_6_0 = this.field_Qb;
-            stackIn_7_1 = !(this.field_Qb.field_rb);
-            stackIn_6_0.field_rb = stackIn_7_1;
+            stackIn_7_1 = !(this.field_Qb.selected);
+            stackIn_6_0.selected = stackIn_7_1;
           }
           for (var4 = 0; CampaignMenuEntry.field_F > var4; var4++) {
             if (null != this.field_Ub[var4]) {
               stackIn_15_0 = this.field_Ub[var4];
               stackIn_16_1 = !(0 >= this.field_Jb.length());
-              stackIn_15_0.field_xb = stackIn_16_1;
-              if (this.field_Ub[var4].field_xb &&
-                this.field_Ub[var4].field_yb != 0) {
+              stackIn_15_0.inputEnabled = stackIn_16_1;
+              if (this.field_Ub[var4].inputEnabled &&
+                this.field_Ub[var4].pressedButton != 0) {
                 return var4;
               }
             }
           }
         }
-        if (this.field_Ib.field_yb != 0) {
+        if (this.field_Ib.pressedButton != 0) {
           return -1;
         }
         if (param0 &&
           0 != DeployEvent.pointerPressButton &&
-          this.field_yb == 0) {
+          this.pressedButton == 0) {
           return -1;
         }
         return this.field_Kb;
     }
 
-    private final int a(int param0, int param1, je param2, je param3, int param4) {
+    private final int a(int param0, int param1, ClientUiComponent param2, ClientUiComponent param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_1_0 = 0;
@@ -308,10 +308,10 @@ final class i extends je {
         RuntimeException decompiledCaughtException = null;
         try {
           param4 += 8;
-          var6_int = param3.field_Z.getParagraphHeight(param3.field_X, -(param3.field_O * param1) + param0, param3.field_pb);
-          param3.a(var6_int, -20500, param0, param4, 0);
+          var6_int = param3.font.getParagraphHeight(param3.text, -(param3.field_O * param1) + param0, param3.field_pb);
+          param3.setBounds(var6_int, -20500, param0, param4, 0);
           param4 = param4 + (var6_int - 0);
-          param2.a(param3, 57);
+          param2.addChild(param3, 57);
           stackIn_1_0 = param4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -346,9 +346,9 @@ final class i extends je {
     final boolean o(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
-          this.field_Ub = (je[]) null;
+          this.field_Ub = (ClientUiComponent[]) null;
         }
-        stackIn_6_0 = (null != this.field_Qb) && (this.field_Qb.field_rb);
+        stackIn_6_0 = (null != this.field_Qb) && (this.field_Qb.selected);
         return stackIn_6_0;
     }
 
@@ -359,7 +359,7 @@ final class i extends je {
         return this.field_Jb.toString();
     }
 
-    i(int param0, int param1, int param2, int param3, int param4, je param5, je param6, je param7, je param8, fp param9, je param10, String param11, long param12) {
+    i(int param0, int param1, int param2, int param3, int param4, ClientUiComponent param5, ClientUiComponent param6, ClientUiComponent param7, ClientUiComponent param8, fp param9, ClientUiComponent param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$0 = null;
         Object stackIn_6_0;
@@ -372,7 +372,7 @@ final class i extends je {
         fp stackIn_8_1;
         fp stackIn_8_2;
         String stackIn_8_5;
-        je stackIn_14_0 = null;
+        ClientUiComponent stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
@@ -391,7 +391,7 @@ final class i extends je {
         String stackIn_70_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var15_int = 0;
-        je[] var15 = null;
+        ClientUiComponent[] var15 = null;
         RuntimeException var15_ref = null;
         int var16 = 0;
         int var17 = 0;
@@ -404,7 +404,7 @@ final class i extends je {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        je[] var28 = null;
+        ClientUiComponent[] var28 = null;
         Object stackIn_6_0Lifetime1;
         Object stackIn_8_0Lifetime1;
         fp stackIn_8_1Lifetime1;
@@ -429,25 +429,25 @@ final class i extends je {
         this.field_Kb = -2;
         try {
           this.field_Sb = param12;
-          this.field_Mb = new je(0L, param6, ij.field_u.toUpperCase());
-          this.field_Mb.field_Eb = 1;
-          this.a(this.field_Mb, 69);
-          this.field_Ib = new je(0L, param7);
-          this.field_Mb.a(this.field_Ib, 126);
-          this.field_Tb = new je(0L, (je) null);
-          this.a(this.field_Tb, 106);
+          this.field_Mb = new ClientUiComponent(0L, param6, ij.field_u.toUpperCase());
+          this.field_Mb.horizontalAlignment = 1;
+          this.addChild(this.field_Mb, 69);
+          this.field_Ib = new ClientUiComponent(0L, param7);
+          this.field_Mb.addChild(this.field_Ib, 126);
+          this.field_Tb = new ClientUiComponent(0L, (ClientUiComponent) null);
+          this.addChild(this.field_Tb, 106);
           if (param11 != null) {
-            this.field_Vb = new je(0L, param8, ii.field_c);
-            this.field_Vb.field_Eb = 1;
+            this.field_Vb = new ClientUiComponent(0L, param8, ii.field_c);
+            this.field_Vb.horizontalAlignment = 1;
             this.field_Vb.field_N = 11184810;
-            this.field_Tb.a(this.field_Vb, 116);
-            this.field_Pb = new je(0L, param8, mk.field_d);
-            this.field_Pb.field_Eb = 1;
+            this.field_Tb.addChild(this.field_Vb, 116);
+            this.field_Pb = new ClientUiComponent(0L, param8, mk.field_d);
+            this.field_Pb.horizontalAlignment = 1;
             this.field_Pb.field_N = 11184810;
-            this.field_Tb.a(this.field_Pb, 119);
-            this.field_Rb = new je(0L, param8);
+            this.field_Tb.addChild(this.field_Pb, 119);
+            this.field_Rb = new ClientUiComponent(0L, param8);
             this.field_Rb.field_N = 16764006;
-            this.field_Tb.a(this.field_Rb, 63);
+            this.field_Tb.addChild(this.field_Rb, 63);
             this.field_Rb.field_I = "|";
             if (!(tf.field_l < 5) ||
               !(BufferedSocket.field_j < 2)) {
@@ -474,25 +474,25 @@ final class i extends je {
                 stackIn_8_5 = SpellCastAction.field_v;
               }
               this.field_Qb = new fp(stackIn_6_3, stackIn_6_4, stackIn_8_5);
-              this.field_Tb.a(this.field_Qb, 65);
+              this.field_Tb.addChild(this.field_Qb, 65);
             }
-            var28 = new je[3];
+            var28 = new ClientUiComponent[3];
             var15 = var28;
-            var28[0] = new je(0L, (je) null);
-            this.field_Tb.a(var28[0], 100);
-            var28[1] = new je(0L, (je) null);
-            this.field_Tb.a(var28[1], 65);
-            var28[2] = new je(0L, (je) null);
-            this.field_Tb.a(var28[2], 111);
-            this.field_Ub = new je[CampaignMenuEntry.field_F];
+            var28[0] = new ClientUiComponent(0L, (ClientUiComponent) null);
+            this.field_Tb.addChild(var28[0], 100);
+            var28[1] = new ClientUiComponent(0L, (ClientUiComponent) null);
+            this.field_Tb.addChild(var28[1], 65);
+            var28[2] = new ClientUiComponent(0L, (ClientUiComponent) null);
+            this.field_Tb.addChild(var28[2], 111);
+            this.field_Ub = new ClientUiComponent[CampaignMenuEntry.field_F];
             for (var16 = 0; var16 < CampaignMenuEntry.field_F; var16++) {
               if (ef.field_d[var16] != null) {
-                this.field_Ub[var16] = new je(0L, param10, ef.field_d[var16]);
-                this.field_Ub[var16].field_Eb = 0;
+                this.field_Ub[var16] = new ClientUiComponent(0L, param10, ef.field_d[var16]);
+                this.field_Ub[var16].horizontalAlignment = 0;
                 stackIn_14_0 = this.field_Ub[var16];
                 stackIn_15_1 = (param11 != null);
-                stackIn_14_0.field_xb = stackIn_15_1;
-                this.field_Tb.a(this.field_Ub[var16], 75);
+                stackIn_14_0.inputEnabled = stackIn_15_1;
+                this.field_Tb.addChild(this.field_Ub[var16], 75);
               }
             }
             this.field_Jb = new StringBuilder(12);
@@ -500,21 +500,21 @@ final class i extends je {
               discarded$0 = this.field_Jb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_Z.a(is.field_g);
+            var17 = param6.font.a(is.field_g);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_Z.a(SpellCastAction.field_y);
+            var17Lifetime2 = param6.font.a(SpellCastAction.field_y);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_Z.a(op.field_d);
+            var17Lifetime3 = param6.font.a(op.field_d);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
             for (var17Lifetime4 = 0; CampaignMenuEntry.field_F > var17Lifetime4; var17Lifetime4++) {
               if (this.field_Ub[var17Lifetime4] != null) {
-                var18 = this.field_Ub[var17Lifetime4].j(92);
+                var18 = this.field_Ub[var17Lifetime4].getPreferredWidth(92);
                 if (var16Lifetime2 < var18) {
                   var16Lifetime2 = var18;
                 }
@@ -555,7 +555,7 @@ final class i extends je {
               var17Lifetime5 = var18Lifetime5;
             }
             var19 = 26 + var16Lifetime2 * 3;
-            var20 = this.field_Mb.j(116);
+            var20 = this.field_Mb.getPreferredWidth(116);
             if (var19 < var20) {
               var19 = var20;
             }
@@ -565,49 +565,49 @@ final class i extends je {
                 var19 = var20Lifetime2;
               }
             }
-            this.field_Mb.a(24, -20500, 13 + (var19 + 13), 0, 0);
-            this.field_Ib.a(15, -20500, 15, 5, -20 + this.field_Mb.field_gb);
+            this.field_Mb.setBounds(24, -20500, 13 + (var19 + 13), 0, 0);
+            this.field_Ib.setBounds(15, -20500, 15, 5, -20 + this.field_Mb.width);
             var21 = 10;
-            this.field_Vb.a(jn.field_d * 2, -20500, var19, var21, 13);
+            this.field_Vb.setBounds(jn.field_d * 2, -20500, var19, var21, 13);
             var21 = var21 + jn.field_d * 2;
-            this.field_Pb.a(2 * jn.field_d, -20500, var19, var21, 13);
+            this.field_Pb.setBounds(2 * jn.field_d, -20500, var19, var21, 13);
             var21 = var21 + (10 + 2 * jn.field_d);
-            this.field_Rb.a(jn.field_d, -20500, 0, var21, 0);
+            this.field_Rb.setBounds(jn.field_d, -20500, 0, var21, 0);
             var21 = var21 + (10 + jn.field_d);
             if (null != this.field_Qb) {
               var20Lifetime3 = this.field_Qb.d(93, 4);
               this.field_Qb.a((byte) 120, var21, 4, jn.field_d, 13 + (-var20Lifetime3 + var19) / 2, var20Lifetime3);
               var21 = var21 + (10 + jn.field_d);
             }
-            var28[0].a(var17Lifetime5, -20500, var16Lifetime2, var21, 13);
-            var28[1].a(var17Lifetime5, -20500, var16Lifetime2, var21, 26 + var16Lifetime2);
-            var28[2].a(var17Lifetime5, -20500, var16Lifetime2, var21, 26 + (2 * var16Lifetime2 + 13));
+            var28[0].setBounds(var17Lifetime5, -20500, var16Lifetime2, var21, 13);
+            var28[1].setBounds(var17Lifetime5, -20500, var16Lifetime2, var21, 26 + var16Lifetime2);
+            var28[2].setBounds(var17Lifetime5, -20500, var16Lifetime2, var21, 26 + (2 * var16Lifetime2 + 13));
             var22 = var21;
-            this.field_Tb.a(10 + var17Lifetime5 + var22, -20500, var19 + 13 + 13, 24, 0);
-            this.field_Tb.field_G = tq.a(11579568, false, this.field_Tb.field_ob, 2105376, 3, 8421504);
+            this.field_Tb.setBounds(10 + var17Lifetime5 + var22, -20500, var19 + 13 + 13, 24, 0);
+            this.field_Tb.field_G = tq.a(11579568, false, this.field_Tb.height, 2105376, 3, 8421504);
             var23 = var19 + 26;
             var24 = 10 + (var17Lifetime5 + (var22 + 24));
             var25 = jp.a(param0, param2, var23, -1);
             var26 = pd.a(var24, 0, param1, param3);
-            this.a(var24, -20500, var23, var26, var25);
+            this.setBounds(var24, -20500, var23, var26, var25);
             return;
           }
-          this.field_Vb = new je(0L, param8, ot.field_F);
-          this.field_Vb.field_Eb = 1;
+          this.field_Vb = new ClientUiComponent(0L, param8, ot.field_F);
+          this.field_Vb.horizontalAlignment = 1;
           this.field_Vb.field_N = 11184810;
-          this.field_Tb.a(this.field_Vb, 43);
+          this.field_Tb.addChild(this.field_Vb, 43);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Vb.field_Z.c(this.field_Vb.field_X, var15_int);
-          this.field_Vb.a(jn.field_d * var17Lifetime1, -20500, var15_int, var16Lifetime1, 13);
+          var17Lifetime1 = this.field_Vb.font.c(this.field_Vb.text, var15_int);
+          this.field_Vb.setBounds(jn.field_d * var17Lifetime1, -20500, var15_int, var16Lifetime1, 13);
           var16Lifetime1 = var16Lifetime1 + jn.field_d * var17Lifetime1;
-          this.field_Tb.a(var16Lifetime1 + 10, -20500, 13 + (var15_int + 13), 24, 0);
-          this.field_Tb.field_G = tq.a(11579568, false, this.field_Tb.field_ob, 2105376, 3, 8421504);
+          this.field_Tb.setBounds(var16Lifetime1 + 10, -20500, 13 + (var15_int + 13), 24, 0);
+          this.field_Tb.field_G = tq.a(11579568, false, this.field_Tb.height, 2105376, 3, 8421504);
           var18Lifetime1 = 13 + var15_int + 13;
           var19Lifetime1 = var16Lifetime1 + 34;
           var20Lifetime1 = jp.a(param0, param2, var18Lifetime1, -1);
           var21Lifetime1 = pd.a(var19Lifetime1, 0, param1, param3);
-          this.a(var19Lifetime1, -20500, var18Lifetime1, var21Lifetime1, var20Lifetime1);
+          this.setBounds(var19Lifetime1, -20500, var18Lifetime1, var21Lifetime1, var20Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

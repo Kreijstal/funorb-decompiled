@@ -7,7 +7,7 @@ final class sh {
     private boolean field_q;
     static boolean field_h;
     private boolean field_b;
-    static je field_m;
+    static ClientUiComponent field_m;
     private int field_g;
     private int field_o;
     private boolean field_d;
@@ -32,7 +32,7 @@ final class sh {
           io.a(var3, (byte) -34);
           return;
         }
-        field_m = (je) null;
+        field_m = (ClientUiComponent) null;
         var2Lifetime1 = this.field_n.frameId >> 16;
         var3Lifetime1 = we.a(var2Lifetime1, true);
         io.a(var3Lifetime1, (byte) -34);
@@ -54,13 +54,13 @@ final class sh {
           return;
         }
         if (3 == this.field_o &&
-          this.field_n.frameIndex == je.field_K[this.field_c][0]) {
+          this.field_n.frameIndex == ClientUiComponent.field_K[this.field_c][0]) {
           dh.a(this.field_c, 4, 32);
         }
         if (this.field_o != 4) {
           return;
         }
-        if (this.field_n.frameIndex != je.field_K[this.field_c][1]) {
+        if (this.field_n.frameIndex != ClientUiComponent.field_K[this.field_c][1]) {
           return;
         }
         dh.a(this.field_c, 7, 32);
@@ -250,7 +250,7 @@ final class sh {
         field_m = null;
     }
 
-    final static je d(byte param0) {
+    final static ClientUiComponent d(byte param0) {
         if (param0 < 69) {
           sh.b((byte) 50);
           return MapTile.field_f.field_Jb;

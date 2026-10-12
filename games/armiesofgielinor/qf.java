@@ -3,7 +3,7 @@
  */
 final class qf {
     static String field_b;
-    static je field_e;
+    static ClientUiComponent field_e;
     static int[] field_d;
     static um field_f;
     static String field_g;
@@ -44,7 +44,7 @@ final class qf {
 
     final static void b(int param0) {
         if (param0 != 56) {
-          field_e = (je) null;
+          field_e = (ClientUiComponent) null;
         }
     }
 

@@ -6,7 +6,7 @@ final class su {
     private float[] field_e;
     static String field_b;
     static String field_c;
-    static je field_d;
+    static ClientUiComponent field_d;
 
     public static void a(boolean param0) {
         field_b = null;
