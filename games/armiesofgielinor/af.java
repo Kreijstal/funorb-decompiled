@@ -98,7 +98,7 @@ abstract class af {
 
     final static void a(Throwable param0, int param1, String param2) {
         try {
-          hd stackIn_12_0;
+          PlatformTaskService stackIn_12_0;
           java.net.URL stackIn_12_1;
           java.net.URL stackIn_12_2;
           java.net.URL stackIn_12_3;
@@ -110,7 +110,7 @@ abstract class af {
           int var3_int = 0;
           Exception var3 = null;
           String var4 = null;
-          wo var5 = null;
+          PlatformTask var5 = null;
           DataInputStream var6 = null;
           int var7 = 0;
           String var8 = null;
@@ -152,14 +152,14 @@ abstract class af {
               stackIn_13_2 = null;
               stackIn_13_5 = uk.field_l;
             }
-            var5 = ((hd) (Object) stackIn_12_0).a(new java.net.URL(stackIn_12_3, ((StringBuilder) (Object) stackIn_12_4).append(stackIn_13_5).append("&v1=").append(hd.field_t).append("&v2=").append(hd.field_u).append("&e=").append(var11).toString()), false);
-            while (var5.field_g == 0) {
+            var5 = ((PlatformTaskService) (Object) stackIn_12_0).openUrlStreamAsync(new java.net.URL(stackIn_12_3, ((StringBuilder) (Object) stackIn_12_4).append(stackIn_13_5).append("&v1=").append(PlatformTaskService.javaVendor).append("&v2=").append(PlatformTaskService.javaVersion).append("&e=").append(var11).toString()), false);
+            while (var5.status == 0) {
               nu.a(1L, 0);
             }
-            if (var5.field_g != 1) {
+            if (var5.status != 1) {
               return;
             }
-            var6 = (DataInputStream) (var5.field_f);
+            var6 = (DataInputStream) (var5.result);
             var6.read();
             var6.close();
             return;

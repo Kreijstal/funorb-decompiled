@@ -527,7 +527,7 @@ final class BattleCharacter {
           }
         }
         if (param2) {
-          np.a(false, var13);
+          ContextActionMenu.a(false, var13);
         }
         stackIn_26_0 = var13;
         stackIn_26_1 = var5;

@@ -104,12 +104,12 @@ final class MatchConditionRegistry {
                 param2[var5] = 0;
               }
               if (param2[var5] > -1) {
-                if (SectorCacheStore.field_j[var5][param2[var5]].containsOpaquePixel(dp.field_Vb[var5][0], dp.field_Vb[var5][1], param1, param0)) {
+                if (SectorCacheStore.field_j[var5][param2[var5]].containsOpaquePixel(EditableTextField.field_Vb[var5][0], EditableTextField.field_Vb[var5][1], param1, param0)) {
                   stackIn_19_0 = var5;
                   return stackIn_19_0;
                 }
               } else {
-                if (lt.field_h[var5].b(dp.field_Vb[var5][0], dp.field_Vb[var5][1], param1, param0)) {
+                if (lt.field_h[var5].b(EditableTextField.field_Vb[var5][0], EditableTextField.field_Vb[var5][1], param1, param0)) {
                   stackIn_16_0 = var5;
                   return stackIn_16_0;
                 }

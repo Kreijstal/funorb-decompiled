@@ -13,7 +13,7 @@ abstract class dv implements ap {
     private NodeDeque field_j;
     BitmapFont field_t;
     private int field_l;
-    dp field_o;
+    EditableTextField field_o;
     private ClientUiComponent field_q;
     private String[] field_e;
     private boolean field_f;
@@ -175,10 +175,10 @@ abstract class dv implements ap {
             this.field_q.y = this.field_q.y - 28;
           }
         }
-        if (!this.field_o.q(0).equals(this.field_h) ||
-          this.field_o.o(93) != this.field_a) {
-          this.field_h = this.field_o.q(0);
-          this.field_a = this.field_o.o(-29);
+        if (!this.field_o.getText(0).equals(this.field_h) ||
+          this.field_o.getCaretIndex(93) != this.field_a) {
+          this.field_h = this.field_o.getText(0);
+          this.field_a = this.field_o.getCaretIndex(-29);
           this.field_e = this.b(true);
           if (null != this.field_e &&
             this.field_e.length == 0) {
@@ -202,14 +202,14 @@ abstract class dv implements ap {
         }
         this.field_q.updateInput(true, param1);
         this.field_d.advanceScroll(this.field_l, true, el.field_d * (2 * this.field_l), false);
-        this.field_o.m(0);
+        this.field_o.advanceEditing(0);
     }
 
     final static void a(boolean param0) {
         int var2;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if ((rd.field_j.battlefield.field_C & 1 << rd.field_j.controlledPlayerId) != 0) {
-          DisplacedUnitMarker.field_t[10] = np.field_Jb;
+          DisplacedUnitMarker.field_t[10] = ContextActionMenu.field_Jb;
         } else {
           if ((~rd.field_j.battlefield.eliminatedPlayerMask & rd.field_j.battlefield.field_C) == 0) {
             DisplacedUnitMarker.field_t[10] = uu.field_c;
@@ -487,7 +487,7 @@ abstract class dv implements ap {
               }
               this.field_b = (rq) (stackIn_25_1);
               if (this.field_b != null) {
-                this.field_o.a(this.field_b.field_l, (byte) 45);
+                this.field_o.setText(this.field_b.field_l, (byte) 45);
               }
             }
           } else {
@@ -495,18 +495,18 @@ abstract class dv implements ap {
               if (this.field_b != null &&
                 this.field_j.sentinel != this.field_b.previous) {
                 this.field_b = (rq) (this.field_b.previous);
-                this.field_o.a(this.field_b.field_l, (byte) 45);
+                this.field_o.setText(this.field_b.field_l, (byte) 45);
               }
             } else {
               if (80 == param2) {
                 this.a((byte) 122);
               } else {
-                this.field_o.a(param2, param0 + 4721, param1);
+                this.field_o.handleKey(param2, param0 + 4721, param1);
               }
             }
           }
         } else {
-          var7 = this.field_o.q(0);
+          var7 = this.field_o.getText(0);
           if (var7.length() <= 0) {
             return true;
           }
@@ -515,7 +515,7 @@ abstract class dv implements ap {
           if (!this.a(var7, true)) {
             var5.textColour = 16733525;
           }
-          this.field_o.a(true);
+          this.field_o.clearText(true);
           this.a(var7, param0 + 30943);
           this.field_b = null;
         }
@@ -528,7 +528,7 @@ abstract class dv implements ap {
         return var3;
     }
 
-    dv(BitmapFont param0, hd param1) {
+    dv(BitmapFont param0, PlatformTaskService param1) {
         int var3_int = 0;
         ClientUiComponent var4 = null;
         ClientUiComponent var5 = null;
@@ -575,9 +575,9 @@ abstract class dv implements ap {
           var15.textColour = 13421772;
           var15.contentOffsetX = 5;
           var15.contentOffsetY = 2;
-          this.field_o = new dp(0L, var7, var11, var15);
-          this.field_o.b(this.field_d.y - (-this.field_d.height - 5), 0, this.field_d.width, var3_int, this.field_d.x);
-          this.field_o.a(param1, 176);
+          this.field_o = new EditableTextField(0L, var7, var11, var15);
+          this.field_o.setLayout(this.field_d.y - (-this.field_d.height - 5), 0, this.field_d.width, var3_int, this.field_d.x);
+          this.field_o.setPlatformService(param1, 176);
           this.field_q.addChild(this.field_o, 87);
           this.field_s = new ClientUiComponent(0L, var12);
           this.field_s.x = 0;

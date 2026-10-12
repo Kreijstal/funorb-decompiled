@@ -30,7 +30,7 @@ final class ug extends IOException {
         }
     }
 
-    final static java.awt.Frame a(int param0, int param1, int param2, hd param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, int param2, PlatformTaskService param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_10_0 = null;
         Object stackIn_27_0 = null;
@@ -47,14 +47,14 @@ final class ug extends IOException {
         int var9 = 0;
         CharSequence var10 = null;
         ls[] var11 = null;
-        wo var12 = null;
+        PlatformTask var12 = null;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param2 != -1) {
             var10 = (CharSequence) null;
             ug.a(99, (CharSequence) null);
           }
-          if (!param3.b(false)) {
+          if (!param3.supportsFullscreen(false)) {
             return null;
           }
           if (param0 == 0) {
@@ -81,14 +81,14 @@ final class ug extends IOException {
             }
           }
           var12 = param3.a(true, param5, param4, param1, param0);
-          while (var12.field_g == 0) {
+          while (var12.status == 0) {
             nu.a(10L, 0);
           }
-          var7 = (java.awt.Frame) (var12.field_f);
+          var7 = (java.awt.Frame) (var12.result);
           if (var7 == null) {
             return null;
           }
-          if (2 != var12.field_g) {
+          if (2 != var12.status) {
             stackIn_38_0 = var7;
             return stackIn_38_0;
           }

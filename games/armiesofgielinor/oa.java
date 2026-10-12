@@ -26,10 +26,10 @@ final class oa extends dr {
     final static void h(int param0) {
         if (param0 != 2) {
           field_H = (IndexedSprite[]) null;
-          np.a(true, (byte) -113);
+          ContextActionMenu.a(true, (byte) -113);
           return;
         }
-        np.a(true, (byte) -113);
+        ContextActionMenu.a(true, (byte) -113);
     }
 
     final static void a(int param0, um param1) {

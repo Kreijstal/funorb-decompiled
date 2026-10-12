@@ -276,18 +276,18 @@ final class fg extends IntrusiveNode {
             var3 = 0;
             for (var4 = 0; var4 < var17.field_p; var4++) {
               if (null != var13.field_k[var4]) {
-                if (var13.field_k[var4].field_g == 2) {
+                if (var13.field_k[var4].status == 2) {
                   var13.field_m[var4] = -5;
                 }
-                if (var13.field_k[var4].field_g == 0) {
+                if (var13.field_k[var4].status == 0) {
                   var3 = 1;
                 }
               }
               if (null != var13.field_r[var4]) {
-                if (var13.field_r[var4].field_g == 2) {
+                if (var13.field_r[var4].status == 2) {
                   var13.field_m[var4] = -6;
                 }
-                if (0 == var13.field_r[var4].field_g) {
+                if (0 == var13.field_r[var4].status) {
                   var3 = 1;
                 }
               }
@@ -305,26 +305,26 @@ final class fg extends IntrusiveNode {
                   var6_int = var17.field_t[var5];
                   if (var6_int != 0) {
                     if (var6_int == 1) {
-                      var16_ref = (java.lang.reflect.Field) (var17.field_k[var5].field_f);
+                      var16_ref = (java.lang.reflect.Field) (var17.field_k[var5].result);
                       var20 = var16_ref;
                       var20.setInt((Object) null, var17.field_v[var5]);
                       param1.writeByte(1, 0);
                     } else {
                       if (var6_int == 2) {
-                        var28 = (java.lang.reflect.Field) (var17.field_k[var5].field_f);
+                        var28 = (java.lang.reflect.Field) (var17.field_k[var5].result);
                         var8 = var28.getModifiers();
                         param1.writeByte(param0 + 1, 0);
                         param1.writeInt((byte) -79, var8);
                       }
                     }
                   } else {
-                    var27 = (java.lang.reflect.Field) (var17.field_k[var5].field_f);
+                    var27 = (java.lang.reflect.Field) (var17.field_k[var5].result);
                     var8 = var27.getInt((Object) null);
                     param1.writeByte(param0 ^ 1, 0);
                     param1.writeInt((byte) -75, var8);
                   }
                   if (var6_int == 3) {
-                    var29 = (java.lang.reflect.Method) (var17.field_r[var5].field_f);
+                    var29 = (java.lang.reflect.Method) (var17.field_r[var5].result);
                     var26 = var17.field_u[var5];
                     var9 = new Object[var26.length];
                     for (var10_int = 0; var26.length > var10_int; var10_int++) {
@@ -345,7 +345,7 @@ final class fg extends IntrusiveNode {
                     }
                   } else {
                     if (4 == var6_int) {
-                      var30 = (java.lang.reflect.Method) (var17.field_r[var5].field_f);
+                      var30 = (java.lang.reflect.Method) (var17.field_r[var5].result);
                       var8Lifetime1 = var30.getModifiers();
                       param1.writeByte(param0 ^ 1, 0);
                       param1.writeInt((byte) -115, var8Lifetime1);

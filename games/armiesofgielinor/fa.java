@@ -6,34 +6,34 @@ import java.io.*;
 final class fa implements Runnable {
     static String field_d;
     private java.net.URL field_b;
-    private wo field_l;
-    private wo field_a;
+    private PlatformTask field_l;
+    private PlatformTask field_a;
     private PacketBuffer field_o;
     private int field_n;
     static int[] field_k;
     static String field_c;
     static int field_j;
     static String field_g;
-    private hd field_h;
+    private PlatformTaskService field_h;
     static String field_f;
     static String field_e;
-    private wo field_i;
+    private PlatformTask field_i;
     private DataInputStream field_m;
 
     protected final void finalize() {
         if (this.field_a != null) {
-          if (this.field_a.field_f != null) {
+          if (this.field_a.result != null) {
             try {
-              ((DataInputStream) (this.field_a.field_f)).close();
+              ((DataInputStream) (this.field_a.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_a = null;
         }
         if (null != this.field_i) {
-          if (null != this.field_i.field_f) {
+          if (null != this.field_i.result) {
             try {
-              ((java.net.Socket) (this.field_i.field_f)).close();
+              ((java.net.Socket) (this.field_i.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -60,12 +60,12 @@ final class fa implements Runnable {
         }
         if (this.field_n == 0) {
           if (this.field_a == null) {
-            this.field_a = this.field_h.a(this.field_b, false);
+            this.field_a = this.field_h.openUrlStreamAsync(this.field_b, false);
           }
-          if (0 == this.field_a.field_g) {
+          if (0 == this.field_a.status) {
             return false;
           }
-          if (this.field_a.field_g != 1) {
+          if (this.field_a.status != 1) {
             this.field_n = this.field_n + 1;
             this.field_a = null;
             return false;
@@ -73,12 +73,12 @@ final class fa implements Runnable {
         }
         if (this.field_n == 1) {
           if (null == this.field_i) {
-            this.field_i = this.field_h.a(443, (byte) 124, this.field_b.getHost());
+            this.field_i = this.field_h.openSocketAsync(443, (byte) 124, this.field_b.getHost());
           }
-          if (this.field_i.field_g == 0) {
+          if (this.field_i.status == 0) {
             return false;
           }
-          if (1 != this.field_i.field_g) {
+          if (1 != this.field_i.status) {
             this.field_i = null;
             this.field_n = this.field_n + 1;
             return false;
@@ -86,12 +86,12 @@ final class fa implements Runnable {
         }
         if (null != this.field_m) {
           if (this.field_l == null) {
-            this.field_l = this.field_h.a(5, 0, (Runnable) (this));
+            this.field_l = this.field_h.startThreadAsync(5, 0, (Runnable) (this));
           }
-          if (param0 == this.field_l.field_g) {
+          if (param0 == this.field_l.status) {
             return false;
           }
-          if (this.field_l.field_g == 1) {
+          if (this.field_l.status == 1) {
             return false;
           }
           this.finalize();
@@ -100,10 +100,10 @@ final class fa implements Runnable {
         }
         try {
           if (this.field_n == 0) {
-            this.field_m = (DataInputStream) (this.field_a.field_f);
+            this.field_m = (DataInputStream) (this.field_a.result);
           }
           if (1 == this.field_n) {
-            var4 = (java.net.Socket) (this.field_i.field_f);
+            var4 = (java.net.Socket) (this.field_i.result);
             var4.setSoTimeout(10000);
             var3 = var4.getOutputStream();
             var3.write(17);
@@ -118,21 +118,21 @@ final class fa implements Runnable {
           this.finalize();
           this.field_n = this.field_n + 1;
           if (this.field_l != null) {
-            if (param0 == this.field_l.field_g) {
+            if (param0 == this.field_l.status) {
               return false;
             }
-            if (this.field_l.field_g == 1) {
+            if (this.field_l.status == 1) {
               return false;
             }
             this.finalize();
             this.field_n = this.field_n + 1;
             return false;
           }
-          this.field_l = this.field_h.a(5, 0, (Runnable) (this));
-          if (param0 == this.field_l.field_g) {
+          this.field_l = this.field_h.startThreadAsync(5, 0, (Runnable) (this));
+          if (param0 == this.field_l.status) {
             return false;
           }
-          if (this.field_l.field_g == 1) {
+          if (this.field_l.status == 1) {
             return false;
           }
           this.finalize();
@@ -140,12 +140,12 @@ final class fa implements Runnable {
           return false;
         }
         if (this.field_l == null) {
-          this.field_l = this.field_h.a(5, 0, (Runnable) (this));
+          this.field_l = this.field_h.startThreadAsync(5, 0, (Runnable) (this));
         }
-        if (param0 == this.field_l.field_g) {
+        if (param0 == this.field_l.status) {
           return false;
         }
-        if (this.field_l.field_g != 1) {
+        if (this.field_l.status != 1) {
           this.finalize();
           this.field_n = this.field_n + 1;
         }
@@ -215,7 +215,7 @@ final class fa implements Runnable {
         field_g = null;
     }
 
-    fa(hd param0, java.net.URL param1, int param2) {
+    fa(PlatformTaskService param0, java.net.URL param1, int param2) {
         try {
           this.field_h = param0;
           this.field_b = param1;

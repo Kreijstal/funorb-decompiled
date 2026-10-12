@@ -1305,7 +1305,7 @@ public final class ArmiesOfGielinor extends wf {
           fp.k(21755);
           VerticalScrollbar.k(-1);
           ClientUiNode.g(31343);
-          np.e((byte) 5);
+          ContextActionMenu.e((byte) 5);
           mp.l(-8291);
           tg.a(-97);
           i.m(73);
@@ -1322,7 +1322,7 @@ public final class ArmiesOfGielinor extends wf {
           dv.c((byte) -109);
           rq.a(-22823);
           cp.a(false);
-          dp.f((byte) -123);
+          EditableTextField.f((byte) -123);
           IndexedSpriteBase.a(18347);
           hf.a((byte) 19);
           dq.a(-1);

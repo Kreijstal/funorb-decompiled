@@ -154,15 +154,15 @@ final class EffectPresentation implements EventPresentation {
     final static boolean a(boolean param0, int param1) {
         long dupTemp$2 = 0L;
         if (kd.field_J == null) {
-          kd.field_J = wj.field_n.a(rn.field_d, (byte) 120, k.field_c);
+          kd.field_J = wj.field_n.openSocketAsync(rn.field_d, (byte) 120, k.field_c);
         }
-        if (param1 == kd.field_J.field_g) {
+        if (param1 == kd.field_J.status) {
           return false;
         }
         dupTemp$2 = vi.monotonicMillis(82);
         SummonEvent.field_G = dupTemp$2;
         CampaignMenuButton.lastPacketReadMillis = dupTemp$2;
-        if (kd.field_J.field_g != 1) {
+        if (kd.field_J.status != 1) {
         }
         ov.connectionState = DirectByteStorage.field_o;
         kd.field_J = null;

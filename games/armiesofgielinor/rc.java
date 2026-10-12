@@ -251,7 +251,7 @@ class rc {
     void b(int param0) throws Exception {
     }
 
-    final static rc a(hd param0, java.awt.Component param1, int param2, int param3) {
+    final static rc a(PlatformTaskService param0, java.awt.Component param1, int param2, int param3) {
         try {
           mr var4 = null;
           Throwable var4_ref = null;
@@ -291,7 +291,7 @@ class rc {
                 field_l == null) {
                 field_l = new rh();
                 field_l.field_b = param0;
-                param0.a(field_h, 0, (Runnable) ((Object) field_l));
+                param0.startThreadAsync(field_h, 0, (Runnable) ((Object) field_l));
               }
               if (field_l != null) {
                 if (field_l.field_d[param2] != null) {

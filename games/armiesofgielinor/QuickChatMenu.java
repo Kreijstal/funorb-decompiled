@@ -200,7 +200,7 @@ final class QuickChatMenu extends ClientUiComponent {
           pv.field_b = var9;
           gt.field_i = var9;
           cs.field_Y = var9;
-          np.field_Wb = var9;
+          ContextActionMenu.field_Wb = var9;
           QuickChatCategory.field_z = var9;
           rq.field_m = var9;
           j.field_b = var9;
@@ -212,7 +212,7 @@ final class QuickChatMenu extends ClientUiComponent {
           var12 = stackIn_12_0;
           if (param7 > 0) {
             if (var11 != 0) {
-              np.field_Wb = CampaignMenuEntry.field_u[-1 + (param2 - ResourceRequest.field_y)];
+              ContextActionMenu.field_Wb = CampaignMenuEntry.field_u[-1 + (param2 - ResourceRequest.field_y)];
             }
             pv.field_b = CampaignMenuEntry.field_u[param2 - ResourceRequest.field_y];
             if (var12 != 0) {
@@ -236,7 +236,7 @@ final class QuickChatMenu extends ClientUiComponent {
             }
           }
           ac.field_k[ls.a(rq.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -26) + (0 + var9)].b(param0, param4, param5, param1);
-          ac.field_k[var9 - (-1 - ls.a(np.field_Wb, j.field_b, pv.field_b, cs.field_Y, -87))].b(param0, param4, param5, param1);
+          ac.field_k[var9 - (-1 - ls.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -87))].b(param0, param4, param5, param1);
           ac.field_k[2 + var9 + ls.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, -68)].b(param0, param4, param5, param1);
           ac.field_k[3 + (var9 + ls.a(oh.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -72))].b(param0, param4, param5, param1);
           if (cu.field_a &&
@@ -304,19 +304,19 @@ final class QuickChatMenu extends ClientUiComponent {
             var28 = var10;
             var28Lifetime3 = var10;
             var9 = vl.field_o;
-            var8.field_i.a(false, var9, 11, var10);
+            var8.field_i.addIconAction(false, var9, 11, var10);
             var11 = tn.field_Z;
             var13 = dh.field_n[1];
             var28Lifetime4 = var13;
             var28Lifetime5 = var13;
             var12 = li.field_m;
-            var11.field_i.a(false, var12, 12, var13);
+            var11.field_i.addIconAction(false, var12, 12, var13);
             var14 = tn.field_Z;
             var16 = dh.field_n[2];
             var28Lifetime6 = var16;
             var28Lifetime7 = var16;
             var15 = ou.field_g;
-            var14.field_i.a(param2, var15, 13, var16);
+            var14.field_i.addIconAction(param2, var15, 13, var16);
           }
           if (param1 == 1) {
             var17 = tn.field_Z;
@@ -324,40 +324,40 @@ final class QuickChatMenu extends ClientUiComponent {
             var28Lifetime1 = var19;
             var28Lifetime1Lifetime1 = var19;
             var18 = vk.field_c;
-            var17.field_i.a(false, var18, 11, var19);
+            var17.field_i.addIconAction(false, var18, 11, var19);
             var20 = tn.field_Z;
             var22 = dh.field_n[1];
             var28Lifetime1Lifetime2 = var22;
             var28Lifetime1Lifetime3 = var22;
             var21 = fd.field_l;
-            var20.field_i.a(param2, var21, 12, var22);
+            var20.field_i.addIconAction(param2, var21, 12, var22);
             var23 = tn.field_Z;
             var25 = dh.field_n[2];
             var28Lifetime1Lifetime4 = var25;
             var28Lifetime1Lifetime5 = var25;
             var24 = fa.field_c;
-            var23.field_i.a(false, var24, 13, var25);
+            var23.field_i.addIconAction(false, var24, 13, var25);
           }
           if (param1 == 2) {
             var26 = tn.field_Z;
             var28Lifetime2 = dh.field_n[0];
             var27 = SocketResourceClient.field_v;
-            var26.field_i.a(param2, var27, 11, var28Lifetime2);
+            var26.field_i.addIconAction(param2, var27, 11, var28Lifetime2);
             var29 = tn.field_Z;
             var31 = dh.field_n[1];
             var30 = jj.field_e;
-            var29.field_i.a(param2, var30, 12, var31);
+            var29.field_i.addIconAction(param2, var30, 12, var31);
             var32 = tn.field_Z;
             var34 = dh.field_n[2];
             var33 = ai.field_R;
-            var32.field_i.a(false, var33, 13, var34);
+            var32.field_i.addIconAction(false, var33, 13, var34);
           }
           var35 = tn.field_Z;
           var4 = param0.screenX;
           var5 = param0.screenY;
           var6 = param0.width;
           var7 = param0.height;
-          var35.field_i.a(var7, var5, var6, (byte) -118, var4);
+          var35.field_i.layoutPopup(var7, var5, var6, (byte) -118, var4);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mq.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

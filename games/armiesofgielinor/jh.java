@@ -6,7 +6,7 @@ final class jh extends mk {
     static String field_j;
     static int[] field_k;
 
-    final static void a(PacketBuffer param0, hd param1, int param2, int param3) {
+    final static void a(PacketBuffer param0, PlatformTaskService param1, int param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -50,8 +50,8 @@ final class jh extends mk {
             if (param3 != -1) {
               return;
             }
-            var18.field_k = new wo[var18.field_p];
-            var18.field_r = new wo[var18.field_p];
+            var18.field_k = new PlatformTask[var18.field_p];
+            var18.field_r = new PlatformTask[var18.field_p];
             var18.field_t = new int[var18.field_p];
             var18.field_v = new int[var18.field_p];
             for (var5 = 0; var5 < var18.field_p; var5++) {
@@ -88,7 +88,7 @@ final class jh extends mk {
                       var12[var17] = ah.a(var10[var17], (byte) 90);
                       var17++;
                     }
-                    var18.field_r[var5] = param1.a(ah.a(var20, (byte) 90), 0, var12, var21);
+                    var18.field_r[var5] = param1.findDeclaredMethodAsync(ah.a(var20, (byte) 90), 0, var12, var21);
                     var18.field_u[var5] = var22;
                   }
                 } else {
@@ -100,7 +100,7 @@ final class jh extends mk {
                   }
                   var18.field_t[var5] = var6_int;
                   var18.field_v[var5] = var9;
-                  var18.field_k[var5] = param1.a(-30598, ah.a(var15, (byte) 90), var16);
+                  var18.field_k[var5] = param1.findDeclaredFieldAsync(-30598, ah.a(var15, (byte) 90), var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

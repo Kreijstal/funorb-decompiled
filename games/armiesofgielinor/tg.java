@@ -11,7 +11,7 @@ final class tg {
     String field_m;
     static byte[] field_d;
     static String field_l;
-    np field_i;
+    ContextActionMenu field_i;
     static int field_k;
     static int field_a;
     int field_c;
@@ -132,7 +132,7 @@ final class tg {
         if (param1 <= 60) {
           return true;
         }
-        int var6 = this.field_i.a((byte) 116, param4);
+        int var6 = this.field_i.pollAction((byte) 116, param4);
         if (var6 == -2) {
           return false;
         }
@@ -151,21 +151,21 @@ final class tg {
           this.field_e = param0.field_b;
           if (param1 == param0.field_b) {
             if (ol.field_B == 0) {
-              this.field_i.a(12, pk.field_S, (byte) -110);
+              this.field_i.addTextAction(12, pk.field_S, (byte) -110);
             }
-            this.field_i.a(13, ou.field_g, (byte) -116);
+            this.field_i.addTextAction(13, ou.field_g, (byte) -116);
           }
           if (param0.field_b == 1) {
             if (QuickChatCategory.field_D == 0) {
-              this.field_i.a(12, jj.field_b, (byte) -108);
+              this.field_i.addTextAction(12, jj.field_b, (byte) -108);
             }
-            this.field_i.a(13, fa.field_c, (byte) -121);
+            this.field_i.addTextAction(13, fa.field_c, (byte) -121);
           }
           if (param0.field_b == 2) {
             if (cd.field_c == 0) {
-              this.field_i.a(12, SummonRequest.field_C, (byte) -120);
+              this.field_i.addTextAction(12, SummonRequest.field_C, (byte) -120);
             }
-            this.field_i.a(13, ai.field_R, (byte) -119);
+            this.field_i.addTextAction(13, ai.field_R, (byte) -119);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -234,7 +234,7 @@ final class tg {
               vu.field_M.field_bc < 0) {
               return;
             }
-            this.field_i.a(1, fo.a(4800, wc.field_R, new String[]{var5}), (byte) -103);
+            this.field_i.addTextAction(1, fo.a(4800, wc.field_R, new String[]{var5}), (byte) -103);
             return;
           }
           if (var11 == null) {
@@ -247,16 +247,16 @@ final class tg {
             return;
           }
           if (var11.field_Wb) {
-            this.field_i.a(1, fo.a(4800, oe.field_zb, new String[]{var5}), (byte) -124);
+            this.field_i.addTextAction(1, fo.a(4800, oe.field_zb, new String[]{var5}), (byte) -124);
           } else {
             if (!param1) {
-              this.field_i.a(0, fo.a(4800, pk.field_W, new String[]{var5}), (byte) -118);
+              this.field_i.addTextAction(0, fo.a(4800, pk.field_W, new String[]{var5}), (byte) -118);
             } else {
               if (!var11.field_Ub) {
-                this.field_i.a(0, fo.a(4800, pk.field_W, new String[]{var5}), (byte) -118);
+                this.field_i.addTextAction(0, fo.a(4800, pk.field_W, new String[]{var5}), (byte) -118);
               } else {
-                this.field_i.a(0, fo.a(4800, ac.field_x, new String[]{var5}), (byte) -126);
-                this.field_i.a(1, fo.a(param0 - 19099, vq.field_g, new String[]{var5}), (byte) -113);
+                this.field_i.addTextAction(0, fo.a(4800, ac.field_x, new String[]{var5}), (byte) -126);
+                this.field_i.addTextAction(1, fo.a(param0 - 19099, vq.field_g, new String[]{var5}), (byte) -113);
               }
             }
           }
@@ -283,7 +283,7 @@ final class tg {
             vu.field_M.field_bc < 0) {
             return;
           }
-          this.field_i.a(1, fo.a(4800, wc.field_R, new String[]{var5}), (byte) -103);
+          this.field_i.addTextAction(1, fo.a(4800, wc.field_R, new String[]{var5}), (byte) -103);
           return;
         }
         if (var10 == null) {
@@ -296,16 +296,16 @@ final class tg {
           return;
         }
         if (var10.field_Wb) {
-          this.field_i.a(1, fo.a(4800, oe.field_zb, new String[]{var5}), (byte) -124);
+          this.field_i.addTextAction(1, fo.a(4800, oe.field_zb, new String[]{var5}), (byte) -124);
         } else {
           if (!param1) {
-            this.field_i.a(0, fo.a(4800, pk.field_W, new String[]{var5}), (byte) -118);
+            this.field_i.addTextAction(0, fo.a(4800, pk.field_W, new String[]{var5}), (byte) -118);
           } else {
             if (!var10.field_Ub) {
-              this.field_i.a(0, fo.a(4800, pk.field_W, new String[]{var5}), (byte) -118);
+              this.field_i.addTextAction(0, fo.a(4800, pk.field_W, new String[]{var5}), (byte) -118);
             } else {
-              this.field_i.a(0, fo.a(4800, ac.field_x, new String[]{var5}), (byte) -126);
-              this.field_i.a(1, fo.a(param0 - 19099, vq.field_g, new String[]{var5}), (byte) -113);
+              this.field_i.addTextAction(0, fo.a(4800, ac.field_x, new String[]{var5}), (byte) -126);
+              this.field_i.addTextAction(1, fo.a(param0 - 19099, vq.field_g, new String[]{var5}), (byte) -113);
             }
           }
         }
@@ -331,38 +331,38 @@ final class tg {
           }
           var3 = var6.field_rc;
           if (var6.field_Nb) {
-            this.field_i.a(2, fo.a(4800, ByteStorage.field_b, new String[]{var3}), (byte) -108);
-            this.field_i.a(3, fo.a(4800, or.field_a, new String[]{var3}), (byte) -120);
+            this.field_i.addTextAction(2, fo.a(4800, ByteStorage.field_b, new String[]{var3}), (byte) -108);
+            this.field_i.addTextAction(3, fo.a(4800, or.field_a, new String[]{var3}), (byte) -120);
             return;
           }
           if (var6.field_Sb) {
-            this.field_i.a(2, fo.a(4800, ev.field_e, new String[]{var3}), (byte) -114);
+            this.field_i.addTextAction(2, fo.a(4800, ev.field_e, new String[]{var3}), (byte) -114);
             if (var6.field_gc) {
-              this.field_i.a(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
+              this.field_i.addTextAction(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
             }
             return;
           }
           if (!var6.field_gc &&
             var6.field_tc) {
             if (!var6.field_kc) {
-              this.field_i.a(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
+              this.field_i.addTextAction(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
               if (var6.field_gc) {
-                this.field_i.a(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
+                this.field_i.addTextAction(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
               }
               return;
             }
             if (!var6.field_Sb) {
               if (var6.field_gc) {
-                this.field_i.a(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
+                this.field_i.addTextAction(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
               }
               return;
             }
-            this.field_i.a(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
+            this.field_i.addTextAction(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
           }
           if (!var6.field_gc) {
             return;
           }
-          this.field_i.a(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
+          this.field_i.addTextAction(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
           return;
         }
         discarded$0 = this.a(107, -75, (byte) 100);
@@ -375,20 +375,20 @@ final class tg {
         }
         var3 = var7.field_rc;
         if (var7.field_Nb) {
-          this.field_i.a(2, fo.a(4800, ByteStorage.field_b, new String[]{var3}), (byte) -108);
-          this.field_i.a(3, fo.a(4800, or.field_a, new String[]{var3}), (byte) -120);
+          this.field_i.addTextAction(2, fo.a(4800, ByteStorage.field_b, new String[]{var3}), (byte) -108);
+          this.field_i.addTextAction(3, fo.a(4800, or.field_a, new String[]{var3}), (byte) -120);
           return;
         }
         if (var7.field_Sb) {
-          this.field_i.a(2, fo.a(4800, ev.field_e, new String[]{var3}), (byte) -114);
+          this.field_i.addTextAction(2, fo.a(4800, ev.field_e, new String[]{var3}), (byte) -114);
         } else {
           if (!var7.field_gc &&
             var7.field_tc) {
             if (!var7.field_kc) {
-              this.field_i.a(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
+              this.field_i.addTextAction(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
             } else {
               if (var7.field_Sb) {
-                this.field_i.a(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
+                this.field_i.addTextAction(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
               }
             }
           }
@@ -396,7 +396,7 @@ final class tg {
         if (!var7.field_gc) {
           return;
         }
-        this.field_i.a(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
+        this.field_i.addTextAction(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
         return;
     }
 
@@ -441,7 +441,7 @@ final class tg {
           return true;
         }
         if (param0 == 20) {
-          np.k(110);
+          ContextActionMenu.k(110);
           var4Lifetime6 = 84 % ((param2 - 30) / 54);
           return true;
         }
@@ -495,7 +495,7 @@ final class tg {
           if (null == this.field_i) {
             return false;
           }
-          if (this.field_i.d((byte) 86)) {
+          if (this.field_i.isWaitingForAction((byte) 86)) {
             return true;
           }
           return false;
@@ -503,7 +503,7 @@ final class tg {
         if (null == this.field_i) {
           return false;
         }
-        if (this.field_i.d((byte) 86)) {
+        if (this.field_i.isWaitingForAction((byte) 86)) {
           return true;
         }
         return false;
@@ -529,31 +529,31 @@ final class tg {
             var6 = IndexedSpriteBase.a(this.field_m, -3404) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_i.a(4, fo.a(4800, vf.field_l, new String[]{var7}), (byte) -125);
-              this.field_i.a(6, fo.a(4800, sq.field_o, new String[]{var7}), (byte) -100);
+              this.field_i.addTextAction(4, fo.a(4800, vf.field_l, new String[]{var7}), (byte) -125);
+              this.field_i.addTextAction(6, fo.a(4800, sq.field_o, new String[]{var7}), (byte) -100);
               if (param0 != null &&
                 param2 != 2 &&
                 !NodeIterator.field_a) {
                 this.field_o = param0;
-                this.field_i.a(19, fo.a(4800, kt.field_m, new String[]{var7}), (byte) -115);
+                this.field_i.addTextAction(19, fo.a(4800, kt.field_m, new String[]{var7}), (byte) -115);
               }
             }
             if (var5 != null) {
               if (!fs.a((byte) 111, this.field_m) &&
                 !NodeIterator.field_a) {
                 if (!vi.field_d) {
-                  this.field_i.a(8, fo.a(4800, mi.field_k, new String[]{var7}), (byte) -114);
+                  this.field_i.addTextAction(8, fo.a(4800, mi.field_k, new String[]{var7}), (byte) -114);
                 }
-                this.field_i.a(18, fo.a(param1 ^ 4807, DeployRequest.field_w, new String[]{var7}), (byte) -111);
+                this.field_i.addTextAction(18, fo.a(param1 ^ 4807, DeployRequest.field_w, new String[]{var7}), (byte) -111);
                 if (param0 != null) {
                   this.field_o = param0;
-                  this.field_i.a(19, fo.a(4800, kt.field_m, new String[]{var7}), (byte) -115);
+                  this.field_i.addTextAction(19, fo.a(4800, kt.field_m, new String[]{var7}), (byte) -115);
                 }
               }
-              this.field_i.a(5, fo.a(4800, na.field_K, new String[]{var7}), (byte) -111);
+              this.field_i.addTextAction(5, fo.a(4800, na.field_K, new String[]{var7}), (byte) -111);
             }
             if (var6 != 0) {
-              this.field_i.a(7, fo.a(4800, oa.field_E, new String[]{var7}), (byte) -102);
+              this.field_i.addTextAction(7, fo.a(4800, oa.field_E, new String[]{var7}), (byte) -102);
             }
           }
           if (param1 != 7) {
@@ -580,7 +580,7 @@ final class tg {
           ~this.field_f != ~oh.field_H) {
           var3 = this.b(96);
           String var2 = var3;
-          this.field_i.a(17, fo.a(4800, IterableDualNodeDeque.field_e, new String[]{var3}), (byte) -127);
+          this.field_i.addTextAction(17, fo.a(4800, IterableDualNodeDeque.field_e, new String[]{var3}), (byte) -127);
         }
         if (param0 >= 42) {
           return;
@@ -590,7 +590,7 @@ final class tg {
 
     tg(ClientUiComponent param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_i = new np(AnimationSequence.field_h);
+          this.field_i = new ContextActionMenu(AnimationSequence.field_h);
           this.field_o = param6;
           this.field_c = param4;
           this.field_f = param1;

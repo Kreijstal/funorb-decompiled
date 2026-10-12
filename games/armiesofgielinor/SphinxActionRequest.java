@@ -189,7 +189,7 @@ final class SphinxActionRequest extends ActionRequest {
           IsaacRandom.field_i = new ClientUiComponent(0L, fp.field_Lb);
           IsaacRandom.field_i.applyStyle(0, DualLinkedNode.field_k);
           var16 = fk.a("button_mouseover", (byte) -128, param1, "lobby");
-          AnimationSequence.field_h = new np(kq.field_N, var12, eq.field_h, DualLinkedNode.field_k, 3, 2, io.field_n, 3, jn.field_d);
+          AnimationSequence.field_h = new ContextActionMenu(kq.field_N, var12, eq.field_h, DualLinkedNode.field_k, 3, 2, io.field_n, 3, jn.field_d);
           lu.field_u = new ClientUiComponent(0L, DualLinkedNode.field_k);
           lu.field_u.skinSprites = var13;
           lu.field_u.heldPressOffsetX = 1;

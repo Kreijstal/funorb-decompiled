@@ -73,12 +73,12 @@ final class wr extends hs implements he {
         }
     }
 
-    final static boolean a(char param0, byte param1) {
+    final static boolean isTextNavigationSeparator(char character, byte obfuscationGuard) {
         boolean stackIn_8_0 = false;
-        if (param1 != 95) {
+        if (obfuscationGuard != 95) {
           return false;
         }
-        stackIn_8_0 = (param0 == 32) || (param0 == 40) || (param0 == 41);
+        stackIn_8_0 = (character == 32) || (character == 40) || (character == 41);
         return stackIn_8_0;
     }
 

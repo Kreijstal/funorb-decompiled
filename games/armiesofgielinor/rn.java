@@ -45,11 +45,11 @@ final class rn {
         try {
           ou.a(true);
           KingBlackDragonEvent.field_C.j(param0 ^ -124);
-          np.field_Qb = new df(IsaacRandom.field_d, (String) null, fh.field_i, param2, param3);
+          ContextActionMenu.field_Qb = new df(IsaacRandom.field_d, (String) null, fh.field_i, param2, param3);
           if (param0 != 3) {
             field_d = -55;
           }
-          lt.field_g = new lw(KingBlackDragonEvent.field_C, np.field_Qb);
+          lt.field_g = new lw(KingBlackDragonEvent.field_C, ContextActionMenu.field_Qb);
           KingBlackDragonEvent.field_C.a(lt.field_g, 0);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

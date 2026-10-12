@@ -349,20 +349,20 @@ final class ep {
           }
           try {
             if (ta.field_N == 0) {
-              kd.field_R = vq.field_c.a(LeaderEscortCondition.field_i, (byte) 114, db.field_c);
+              kd.field_R = vq.field_c.openSocketAsync(LeaderEscortCondition.field_i, (byte) 114, db.field_c);
               ta.field_N = ta.field_N + 1;
             }
             if (ta.field_N == 1) {
-              if (2 == kd.field_R.field_g) {
+              if (2 == kd.field_R.status) {
                 stackIn_13_0 = OwnerChangeEvent.a(-1, (byte) 101);
                 return stackIn_13_0;
               }
-              if (1 == kd.field_R.field_g) {
+              if (1 == kd.field_R.status) {
                 ta.field_N = ta.field_N + 1;
               }
             }
             if (ta.field_N == 2) {
-              jj.field_g = new BufferedSocket((java.net.Socket) (kd.field_R.field_f), vq.field_c);
+              jj.field_g = new BufferedSocket((java.net.Socket) (kd.field_R.result), vq.field_c);
               var2 = new PacketBuffer(13);
               it.a(hq.field_e, false, MoveAttackRequest.field_x, var2, ek.field_e);
               var2.writeByte(1, 15);

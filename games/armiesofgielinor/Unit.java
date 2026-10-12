@@ -236,7 +236,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           return 0;
         }
         int var3 = 62 / ((-23 - obfuscationGuard) / 63);
-        return np.field_Vb[this.equipmentDescriptor & 31][propertyIndex];
+        return ContextActionMenu.field_Vb[this.equipmentDescriptor & 31][propertyIndex];
     }
 
     final int getEffectiveStrength(byte obfuscationGuard) {

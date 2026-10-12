@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 186 reviewed class names, not a complete semantic map. Shared widget
+Armies has 190 reviewed class names, not a complete semantic map. Shared widget
 bounds, dropdown options/prefix selection, painter dispatch and expansion now
 have reviewed names with pointer, selection and arrow-pixel fixtures. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
@@ -82,6 +82,15 @@ also name visual-state alternatives, focus, easing and drag grabs. The corrected
 inheritParentVisualState name describes state inheritance; child clipping still
 runs. Native geometry and sprite-pixel fixtures pass; complete interactive
 scrolling and text/skin pixel rendering remain unverified.
+
+EditableTextField now names buffer/caret/selection state, key handling and
+asynchronous clipboard completion. PlatformTaskService and PlatformTask name
+FIFO requests and volatile status/results; a controlled real worker verifies
+reflection, failures, queue drain and shutdown. ContextActionMenu exposes action
+rows, popup placement and waiting/cancellation. Native edit/clipboard/menu
+fixtures preserve existing quirks, including a short bounded paste deleting the
+old selection before failure. Actual system clipboard, pointer word-drag timing,
+network execution and full rendered interaction remain unverified.
 
 Camera overview grouping, centroid bounds, hold state and explicit tile focus
 now have reviewed names, alongside directional panning, dragging and velocity

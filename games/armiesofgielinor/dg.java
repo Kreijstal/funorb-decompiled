@@ -49,8 +49,8 @@ final class dg {
     final static String a(int param0) {
         String var1 = "";
         if (param0 <= -69) {
-          if (null != np.field_Qb) {
-            var1 = np.field_Qb.m(-15056);
+          if (null != ContextActionMenu.field_Qb) {
+            var1 = ContextActionMenu.field_Qb.m(-15056);
           }
           if (var1.length() == 0) {
             var1 = rn.b(true);
@@ -61,8 +61,8 @@ final class dg {
           return var1;
         }
         field_a = (String) null;
-        if (null != np.field_Qb) {
-          var1 = np.field_Qb.m(-15056);
+        if (null != ContextActionMenu.field_Qb) {
+          var1 = ContextActionMenu.field_Qb.m(-15056);
         }
         if (var1.length() == 0) {
           var1 = rn.b(true);

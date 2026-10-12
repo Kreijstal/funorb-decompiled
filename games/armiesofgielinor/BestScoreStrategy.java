@@ -19,9 +19,9 @@ final class BestScoreStrategy extends AiPlanningStrategy {
           return false;
         }
         var1 = vi.monotonicMillis(-45);
-        var3 = var1 - dp.field_Lb;
+        var3 = var1 - EditableTextField.field_Lb;
         if (var3 > 30000L) {
-          dp.field_Lb = var1;
+          EditableTextField.field_Lb = var1;
           mu.field_d = 0;
           return true;
         }
@@ -40,7 +40,7 @@ final class BestScoreStrategy extends AiPlanningStrategy {
         if (var3 <= (long)var5) {
           return false;
         }
-        dp.field_Lb = var1;
+        EditableTextField.field_Lb = var1;
         mu.field_d = mu.field_d + 1;
         return true;
     }

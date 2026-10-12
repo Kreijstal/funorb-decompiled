@@ -108,11 +108,11 @@ final class pg {
             if (!vi.field_d) {
               var5 = tn.field_Z;
               var6 = wh.field_b;
-              var5.field_i.a(14, var6, (byte) -128);
+              var5.field_i.addTextAction(14, var6, (byte) -128);
             }
             var7 = tn.field_Z;
             var8 = FixedQuaternion.field_g;
-            var7.field_i.a(20, var8, (byte) -115);
+            var7.field_i.addTextAction(20, var8, (byte) -115);
           }
           if (1 == param1.field_b &&
             !bn.a(false) &&
@@ -121,11 +121,11 @@ final class pg {
             if (!vi.field_d) {
               var9 = tn.field_Z;
               var10 = CampaignMenu.field_q;
-              var9.field_i.a(14, var10, (byte) -108);
+              var9.field_i.addTextAction(14, var10, (byte) -108);
             }
             var11 = tn.field_Z;
             var12 = CampaignMenuEntry.field_E;
-            var11.field_i.a(20, var12, (byte) -117);
+            var11.field_i.addTextAction(20, var12, (byte) -117);
           }
           tn.field_Z.a((byte) 68);
           tn.field_Z.a(param0 + 23899, false);
@@ -135,7 +135,7 @@ final class pg {
           var13 = tn.field_Z;
           var3 = BattleTutorial.pointerPressX;
           var4 = TeleportAction.pointerPressY;
-          var13.field_i.a(0, var4, param0, (byte) -118, var3);
+          var13.field_i.layoutPopup(0, var4, param0, (byte) -118, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

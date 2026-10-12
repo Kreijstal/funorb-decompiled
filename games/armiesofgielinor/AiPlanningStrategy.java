@@ -172,11 +172,11 @@ abstract class AiPlanningStrategy {
                       if (!vi.field_d) {
                         var17 = tn.field_Z;
                         var18 = fo.a(4800, mi.field_k, new String[]{var16});
-                        var17.field_i.a(8, var18, (byte) -115);
+                        var17.field_i.addTextAction(8, var18, (byte) -115);
                       }
                       var17Lifetime1 = tn.field_Z;
                       var18Lifetime1 = fo.a(4800, DeployRequest.field_w, new String[]{var16});
-                      var17Lifetime1.field_i.a(18, var18Lifetime1, (byte) -100);
+                      var17Lifetime1.field_i.addTextAction(18, var18Lifetime1, (byte) -100);
                     }
                     var5 = var7;
                   }

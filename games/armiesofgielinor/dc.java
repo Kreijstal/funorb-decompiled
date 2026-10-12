@@ -6,8 +6,8 @@ final class dc extends IntrusiveNode {
     int field_p;
     int[] field_m;
     int[] field_v;
-    wo[] field_k;
-    wo[] field_r;
+    PlatformTask[] field_k;
+    PlatformTask[] field_r;
     static RgbSprite field_n;
     byte[][][] field_u;
     static String field_s;

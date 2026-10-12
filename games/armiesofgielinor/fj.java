@@ -62,8 +62,8 @@ final class fj {
         this.field_o = 12;
     }
 
-    final static void a(java.awt.Frame param0, hd param1, int param2) {
-        wo var3 = null;
+    final static void a(java.awt.Frame param0, PlatformTaskService param1, int param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -78,11 +78,11 @@ final class fj {
             return;
           }
           while (true) {
-            var3 = param1.a((byte) -68, param0);
-            while (var3.field_g == 0) {
+            var3 = param1.exitFullscreenAsync((byte) -68, param0);
+            while (var3.status == 0) {
               nu.a(10L, 0);
             }
-            if (var3.field_g != 1) {
+            if (var3.status != 1) {
               nu.a(100L, 0);
               continue;
             }

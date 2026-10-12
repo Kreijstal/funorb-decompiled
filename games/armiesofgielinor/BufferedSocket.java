@@ -6,13 +6,13 @@ import java.io.*;
 final class BufferedSocket implements Runnable {
     static String field_h;
     private OutputStream output;
-    private hd threadLauncher;
+    private PlatformTaskService threadLauncher;
     static String[] field_m;
     private int readPosition;
     private boolean closed;
     private InputStream input;
     static ep field_i;
-    private wo writerTask;
+    private PlatformTask writerTask;
     static String field_a;
     private java.net.Socket socket;
     private byte[] writeBuffer;
@@ -51,7 +51,7 @@ final class BufferedSocket implements Runnable {
         field_a = null;
     }
 
-    BufferedSocket(java.net.Socket socket, hd threadLauncher) throws IOException {
+    BufferedSocket(java.net.Socket socket, PlatformTaskService threadLauncher) throws IOException {
         this(socket, threadLauncher, 5000);
     }
 
@@ -89,7 +89,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.writerTask) {
-              this.writerTask = this.threadLauncher.a(3, obfuscationGuard - 20, (Runnable) (this));
+              this.writerTask = this.threadLauncher.startThreadAsync(3, obfuscationGuard - 20, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -289,12 +289,12 @@ final class BufferedSocket implements Runnable {
             return;
           }
           if (this.writerTask != null) {
-            while (this.writerTask.field_g == 0) {
+            while (this.writerTask.status == 0) {
               nu.a(1L, 0);
             }
-            if (this.writerTask.field_g == 1) {
+            if (this.writerTask.status == 1) {
               try {
-                ((Thread) (this.writerTask.field_f)).join();
+                ((Thread) (this.writerTask.result)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2 = (InterruptedException) (Object) decompiledCaughtException;
@@ -338,7 +338,7 @@ final class BufferedSocket implements Runnable {
         return this.input.read();
     }
 
-    private BufferedSocket(java.net.Socket socket, hd threadLauncher, int bufferCapacity) throws IOException {
+    private BufferedSocket(java.net.Socket socket, PlatformTaskService threadLauncher, int bufferCapacity) throws IOException {
         this.readPosition = 0;
         this.writeError = false;
         this.writePosition = 0;

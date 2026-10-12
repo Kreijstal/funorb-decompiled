@@ -6611,7 +6611,7 @@ final class GameplayController {
                           }
                         }
                         if (decompiledFrameRemainder8) {
-                          var2 = np.field_Ob;
+                          var2 = ContextActionMenu.field_Ob;
                           if (var20 == 0) {
                             break regionExit3;
                           }
@@ -7079,7 +7079,7 @@ final class GameplayController {
                         var2 = DualNodeDeque.field_a;
                         if ((0 == (4 & this.movementPlanner.field_e[var16])) &&
                           (decompiledFrameRemainder13 = (var17 != 0))) {
-                          var2 = np.field_Ob;
+                          var2 = ContextActionMenu.field_Ob;
                           decompiledFrameRemainder13 = (var20 != 0);
                         }
                         if ((decompiledFrameRemainder13) &&

@@ -18,8 +18,8 @@ final class vi {
             String var4 = (String) null;
             vi.a((String) null, -8, (String) null);
           }
-          np.field_Qb = new df(param0, param2, false, true, true);
-          lt.field_g.a(np.field_Qb, (byte) -77);
+          ContextActionMenu.field_Qb = new df(param0, param2, false, true, true);
+          lt.field_g.a(ContextActionMenu.field_Qb, (byte) -77);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vi.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

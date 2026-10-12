@@ -3,7 +3,7 @@
  */
 final class wj extends IntrusiveNode {
     int[][] field_m;
-    static hd field_n;
+    static PlatformTaskService field_n;
     int field_p;
     static volatile boolean field_l;
     boolean field_o;
@@ -79,7 +79,7 @@ final class wj extends IntrusiveNode {
             }
           }
           if (param0 != 0) {
-            field_n = (hd) null;
+            field_n = (PlatformTaskService) null;
           }
           ByteStorage.incomingPacket.position = ByteStorage.incomingPacket.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {

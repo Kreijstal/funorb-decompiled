@@ -70,19 +70,19 @@ final class IconTextComponent extends ClientUiComponent {
         field_Nb = null;
     }
 
-    final int a(int param0, int param1, int param2) {
-        int var4 = -param1;
-        if (param0 > -32) {
+    final int measureRowWidth(int obfuscationGuard, int iconTextGap, int padding) {
+        int var4 = -iconTextGap;
+        if (obfuscationGuard > -32) {
           return 57;
         }
-        int var5 = -param1;
+        int var5 = -iconTextGap;
         if (null != this.iconComponent) {
           var4 = this.iconComponent.getPreferredWidth(125);
         }
         if (null != this.textComponent) {
           var5 = this.textComponent.getPreferredWidth(102);
         }
-        return param2 - (-var4 - param1 - var5) + param2;
+        return padding - (-var4 - iconTextGap - var5) + padding;
     }
 
     final void setLayout(int height, int padding, int obfuscationGuard, int width, int y, int x, int iconTextGap) {

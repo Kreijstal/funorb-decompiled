@@ -1439,7 +1439,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ACTION_SPHINX");
                 if (null != var2) {
-                  np.field_Ob = uu.a(var2, (byte) 70);
+                  ContextActionMenu.field_Ob = uu.a(var2, (byte) 70);
                 }
                 var2 = fk.a(false, "ACTION_PORTALMAGE");
                 if (var2 != null) {

@@ -164,16 +164,16 @@ final class AttackEvent extends GameEvent {
           qc.field_a.b(true);
         }
         String var1 = dg.a(-123);
-        np.field_Qb = new df(var1, (String) null, true, false, false);
+        ContextActionMenu.field_Qb = new df(var1, (String) null, true, false, false);
         if (param0 >= 75) {
           KingBlackDragonEvent.field_C.a(lt.field_g, 0);
-          lt.field_g.a(np.field_Qb, (byte) 55);
+          lt.field_g.a(ContextActionMenu.field_Qb, (byte) 55);
           lt.field_g.l(105);
           return;
         }
         AttackEvent.a(true);
         KingBlackDragonEvent.field_C.a(lt.field_g, 0);
-        lt.field_g.a(np.field_Qb, (byte) 55);
+        lt.field_g.a(ContextActionMenu.field_Qb, (byte) 55);
         lt.field_g.l(105);
     }
 

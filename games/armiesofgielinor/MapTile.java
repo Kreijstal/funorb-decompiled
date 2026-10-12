@@ -25,7 +25,7 @@ final class MapTile implements TaggedFieldReader {
         field_e = null;
     }
 
-    final static void a(hd param0, Object param1, boolean param2) {
+    final static void a(PlatformTaskService param0, Object param1, boolean param2) {
         int var3_int = 0;
         int var4 = 0;
         aa var5 = null;
@@ -39,11 +39,11 @@ final class MapTile implements TaggedFieldReader {
         RuntimeException var3_ref = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (null == param0.field_j) {
+          if (null == param0.eventQueue) {
             return;
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
-            if (null != param0.field_j.peekEvent()) {
+            if (null != param0.eventQueue.peekEvent()) {
               nu.a(1L, 0);
               continue;
             }
@@ -51,7 +51,7 @@ final class MapTile implements TaggedFieldReader {
           }
           try {
             if (null != param1) {
-              param0.field_j.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param1, 1001, "dummy")));
+              param0.eventQueue.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param1, 1001, "dummy")));
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

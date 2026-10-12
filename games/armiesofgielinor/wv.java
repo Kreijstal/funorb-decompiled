@@ -55,7 +55,7 @@ class wv extends af {
                 param0 = rq.field_o;
               }
               param2 = 2;
-              np.field_Qb.a(-17376, IsaacRandom.field_d);
+              ContextActionMenu.field_Qb.a(-17376, IsaacRandom.field_d);
             }
             var3_int = 1;
             if (param2 == 10) {
@@ -74,7 +74,7 @@ class wv extends af {
             if (param2 != 256 &&
               10 != param2 &&
               !fh.field_i) {
-              np.field_Qb.a((byte) -111);
+              ContextActionMenu.field_Qb.a((byte) -111);
               return;
             }
           }

@@ -6,7 +6,7 @@ final class kd extends tj implements nq, he, mf {
     kv field_T;
     static ClientUiComponent field_M;
     static int[][] field_Z;
-    static wo field_J;
+    static PlatformTask field_J;
     private ma field_I;
     private ma field_K;
     private hv field_W;
@@ -19,7 +19,7 @@ final class kd extends tj implements nq, he, mf {
     private ma field_V;
     static String field_Q;
     static ClientUiComponent field_F;
-    static wo field_R;
+    static PlatformTask field_R;
     static String field_L;
     static String field_S;
     static String field_E;

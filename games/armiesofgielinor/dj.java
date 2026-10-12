@@ -187,7 +187,7 @@ final class dj {
         }
     }
 
-    final static rd a(int param0, int param1, hd param2, int param3, int param4, int param5) {
+    final static rd a(int param0, int param1, PlatformTaskService param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         rd var7 = null;

@@ -2086,7 +2086,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "canceldraw");
                 if (null != var2) {
-                  np.field_Jb = uu.a(var2, (byte) 69);
+                  ContextActionMenu.field_Jb = uu.a(var2, (byte) 69);
                 }
                 var2 = NodeIterator.a(50, "acceptdraw");
                 if (null != var2) {

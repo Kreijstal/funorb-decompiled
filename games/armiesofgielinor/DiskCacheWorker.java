@@ -406,20 +406,20 @@ final class DiskCacheWorker implements Runnable {
         field_e = null;
     }
 
-    DiskCacheWorker(hd threadLauncher) {
-        wo var2 = null;
+    DiskCacheWorker(PlatformTaskService threadLauncher) {
+        PlatformTask var2 = null;
         this.requests = new DualNodeDeque();
         this.queuedCount = 0;
         this.stopRequested = false;
         try {
-          var2 = threadLauncher.a(5, 0, (Runnable) (this));
-          while (0 == var2.field_g) {
+          var2 = threadLauncher.startThreadAsync(5, 0, (Runnable) (this));
+          while (0 == var2.status) {
             nu.a(10L, 0);
           }
-          if (var2.field_g == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.workerThread = (Thread) (var2.field_f);
+          this.workerThread = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vo.<init>(" + (threadLauncher != null ? "{...}" : "null") + ')');
         }

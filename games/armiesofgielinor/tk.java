@@ -32,19 +32,19 @@ final class tk implements WidgetPainter {
               return stackIn_2_0;
             }
             var6 = null;
-            if (null != vq.field_c.field_r) {
-              SpellMenuGroup.field_b = new BufferedFile(vq.field_c.field_r, 5200, 0);
-              vq.field_c.field_r = null;
-              var6 = new SectorCacheStore(255, SpellMenuGroup.field_b, new BufferedFile(vq.field_c.field_d, 12000, 0), 2097152);
+            if (null != vq.field_c.cacheDataFile) {
+              SpellMenuGroup.field_b = new BufferedFile(vq.field_c.cacheDataFile, 5200, 0);
+              vq.field_c.cacheDataFile = null;
+              var6 = new SectorCacheStore(255, SpellMenuGroup.field_b, new BufferedFile(vq.field_c.masterIndexFile, 12000, 0), 2097152);
             }
             var7 = null;
             if (null != SpellMenuGroup.field_b) {
               if (mu.field_b == null) {
-                mu.field_b = new BufferedFile[vq.field_c.field_c.length];
+                mu.field_b = new BufferedFile[vq.field_c.cacheIndexFiles.length];
               }
               if (mu.field_b[param0] == null) {
-                mu.field_b[param0] = new BufferedFile(vq.field_c.field_c[param0], 12000, 0);
-                vq.field_c.field_c[param0] = null;
+                mu.field_b[param0] = new BufferedFile(vq.field_c.cacheIndexFiles[param0], 12000, 0);
+                vq.field_c.cacheIndexFiles[param0] = null;
               }
               var7 = new SectorCacheStore(param0, SpellMenuGroup.field_b, mu.field_b[param0], 2097152);
             }

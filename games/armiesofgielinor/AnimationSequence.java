@@ -9,7 +9,7 @@ final class AnimationSequence {
     boolean unlimitedLoops;
     int maximumLoops;
     static int[] field_f;
-    static np field_h;
+    static ContextActionMenu field_h;
     int[] frameIds;
     static String field_k;
     static String field_l;

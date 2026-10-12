@@ -71,7 +71,7 @@ final class po {
               if (var3 != 0) {
                 return false;
               }
-              np.k(param1 ^ 6217);
+              ContextActionMenu.k(param1 ^ 6217);
               return true;
             }
             if (11 != rs.field_q) {
@@ -93,7 +93,7 @@ final class po {
               if (var3 != 0) {
                 return false;
               }
-              np.k(param1 ^ 6217);
+              ContextActionMenu.k(param1 ^ 6217);
               return true;
             }
             if (11 != rs.field_q) {
@@ -145,7 +145,7 @@ final class po {
             if (var3 != 0) {
               return false;
             }
-            np.k(param1 ^ 6217);
+            ContextActionMenu.k(param1 ^ 6217);
             return true;
           }
           if (11 != rs.field_q) {
@@ -185,7 +185,7 @@ final class po {
           if (var3 != 0) {
             return false;
           }
-          np.k(param1 ^ 6217);
+          ContextActionMenu.k(param1 ^ 6217);
           return true;
         }
         if (11 != rs.field_q) {

@@ -48,7 +48,7 @@ abstract class wf extends iv {
     }
 
     final static void g(int param0) {
-        dp.field_Lb = vi.monotonicMillis(-83);
+        EditableTextField.field_Lb = vi.monotonicMillis(-83);
         mu.field_d = 0;
         if (param0 != -20873) {
           wf.h(-23);

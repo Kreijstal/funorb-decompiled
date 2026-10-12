@@ -724,7 +724,7 @@ class lk implements WidgetPainter, pm {
     protected lk() {
     }
 
-    final static void a(hd param0, int param1, nm param2, byte param3, boolean param4, java.awt.Component param5) {
+    final static void a(PlatformTaskService param0, int param1, nm param2, byte param3, boolean param4, java.awt.Component param5) {
         try {
           int var6_int = -98 / ((param3 + 3) / 46);
           TileMetadata.a(param5, 1024, param0, param4, -115, param2, param1, param1);

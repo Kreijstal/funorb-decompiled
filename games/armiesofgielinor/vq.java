@@ -3,7 +3,7 @@
  */
 final class vq {
     static int field_d;
-    static hd field_c;
+    static PlatformTaskService field_c;
     static ScrollContainer field_a;
     static String field_g;
     static String field_f;
@@ -94,7 +94,7 @@ final class vq {
             mi.field_G[0] = 5;
           } else if (no.field_J != 2) {
             if (no.field_J == 3) {
-              if (!IntPair.field_m.field_e) {
+              if (!IntPair.field_m.privilegedServicesEnabled) {
                 var3_int = BattleTutorial.a(pf.field_d, NodeHashIterator.field_a, 7502, TaggedMapData.field_b, du.field_b);
               } else {
                 var3_int = BattleTutorial.a(pf.field_d, ud.field_ab, 7502, TaggedMapData.field_b, du.field_b);
@@ -321,7 +321,7 @@ final class vq {
         field_g = null;
         field_a = null;
         if (param0 < 95) {
-          field_c = (hd) null;
+          field_c = (PlatformTaskService) null;
         }
         field_f = null;
     }

@@ -81,11 +81,11 @@ final class la {
           tn.field_Z.a(23899, false);
           var4 = tn.field_Z;
           var5_ref_String = AnimationFrameSet.field_y;
-          var4.field_i.a(5, var5_ref_String, (byte) -109);
+          var4.field_i.addTextAction(5, var5_ref_String, (byte) -109);
           var4Lifetime1 = tn.field_Z;
           var5 = BattleTutorial.pointerPressX;
           var6 = TeleportAction.pointerPressY;
-          var4Lifetime1.field_i.a(0, var6, 0, (byte) -118, var5);
+          var4Lifetime1.field_i.layoutPopup(0, var6, 0, (byte) -118, var5);
         }
         DeployEvent.a(-115, param0, param1);
         if (param2 != -1) {

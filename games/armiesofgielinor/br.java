@@ -36,7 +36,7 @@ final class br {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           try {
-            if (!hd.field_n.startsWith("win")) {
+            if (!PlatformTaskService.lowercaseOsName.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&

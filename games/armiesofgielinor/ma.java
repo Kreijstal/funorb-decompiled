@@ -33,7 +33,7 @@ final class ma extends fn implements eg {
         return this.field_s;
     }
 
-    final static ls[] a(int param0, hd param1) {
+    final static ls[] a(int param0, PlatformTaskService param1) {
         int var5 = 0;
         ls[] stackIn_3_0 = null;
         ls[] stackIn_9_0 = null;
@@ -47,24 +47,24 @@ final class ma extends fn implements eg {
         ls[] var4 = null;
         ls var6 = null;
         int var7 = 0;
-        wo var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (!param1.b(false)) {
+          if (!param1.supportsFullscreen(false)) {
             stackIn_3_0 = new ls[]{};
             return stackIn_3_0;
           }
-          var8 = param1.b(-20681);
-          while (0 == var8.field_g) {
+          var8 = param1.getDisplayModesAsync(-20681);
+          while (0 == var8.status) {
             nu.a(10L, 0);
           }
-          if (2 == var8.field_g) {
+          if (2 == var8.status) {
             stackIn_9_0 = new ls[]{};
             return stackIn_9_0;
           }
-          var10 = (int[]) (var8.field_f);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new ls[var10.length >> 2];

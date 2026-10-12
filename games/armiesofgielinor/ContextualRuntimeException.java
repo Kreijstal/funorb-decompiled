@@ -129,11 +129,11 @@ final class ContextualRuntimeException extends RuntimeException {
           }
           for (var2 = 0; var2 < var1.field_p; var2++) {
             if (var4.field_k[var2] != null &&
-              var4.field_k[var2].field_g == 0) {
+              var4.field_k[var2].status == 0) {
               return false;
             }
             if (var4.field_r[var2] != null &&
-              0 == var4.field_r[var2].field_g) {
+              0 == var4.field_r[var2].status) {
               return false;
             }
           }

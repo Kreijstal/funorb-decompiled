@@ -1135,33 +1135,33 @@ final class MatchSetupPanel {
             }
             if (param2[var14] <= -1) {
               if (var14 == param3) {
-                lt.field_h[var14].f(dp.field_Vb[var14][0] + param8, dp.field_Vb[var14][1] + param10, 256);
+                lt.field_h[var14].f(EditableTextField.field_Vb[var14][0] + param8, EditableTextField.field_Vb[var14][1] + param10, 256);
               } else {
                 if (var14 != var12_int) {
                   if (param1 > -1) {
-                    lt.field_h[var14].f(dp.field_Vb[var14][0] + param8, param10 + dp.field_Vb[var14][1], 128);
+                    lt.field_h[var14].f(EditableTextField.field_Vb[var14][0] + param8, param10 + EditableTextField.field_Vb[var14][1], 128);
                   }
                 } else {
-                  lt.field_h[var14].f(param8 + dp.field_Vb[var14][0], dp.field_Vb[var14][1] + param10, 128);
+                  lt.field_h[var14].f(param8 + EditableTextField.field_Vb[var14][0], EditableTextField.field_Vb[var14][1] + param10, 128);
                 }
               }
             } else {
               if (var14 != param3) {
                 if (var12_int == var14) {
-                  BattleUnitRenderer.a(dp.field_Vb[var14][0] + param8, 7829367, (byte) -80, SectorCacheStore.field_j[var14][param2[var14]], param10 + dp.field_Vb[var14][1]);
+                  BattleUnitRenderer.a(EditableTextField.field_Vb[var14][0] + param8, 7829367, (byte) -80, SectorCacheStore.field_j[var14][param2[var14]], param10 + EditableTextField.field_Vb[var14][1]);
                 }
               } else {
-                BattleUnitRenderer.a(dp.field_Vb[var14][0] + param8, 16777215, (byte) -88, SectorCacheStore.field_j[var14][param2[var14]], dp.field_Vb[var14][1] + param10);
+                BattleUnitRenderer.a(EditableTextField.field_Vb[var14][0] + param8, 16777215, (byte) -88, SectorCacheStore.field_j[var14][param2[var14]], EditableTextField.field_Vb[var14][1] + param10);
               }
               if (!param4) {
-                gq.b(SectorCacheStore.field_j[var14][param2[var14]], dp.field_Vb[var14][0] + param8, param10 + dp.field_Vb[var14][1], PreparedAction.field_q[param5[var14]]);
+                gq.b(SectorCacheStore.field_j[var14][param2[var14]], EditableTextField.field_Vb[var14][0] + param8, param10 + EditableTextField.field_Vb[var14][1], PreparedAction.field_q[param5[var14]]);
               } else {
-                gq.a(SectorCacheStore.field_j[var14][param2[var14]], dp.field_Vb[var14][0] + param8, param10 + dp.field_Vb[var14][1], 1);
+                gq.a(SectorCacheStore.field_j[var14][param2[var14]], EditableTextField.field_Vb[var14][0] + param8, param10 + EditableTextField.field_Vb[var14][1], 1);
               }
               if (var14 == 3 &&
                 !param4) {
                 var15 = BitmapFont.a(nr.field_e, param11, -10 + uh.field_e[var14][0] << 1);
-                fe.c(var15, (uh.field_e[var14][0] >> 1) + dp.field_Vb[var14][0] + param8, 20 + (uh.field_e[var14][1] >> 1) + (dp.field_Vb[var14][1] + param10), 0, true);
+                fe.c(var15, (uh.field_e[var14][0] >> 1) + EditableTextField.field_Vb[var14][0] + param8, 20 + (uh.field_e[var14][1] >> 1) + (EditableTextField.field_Vb[var14][1] + param10), 0, true);
               }
             }
             var13++;

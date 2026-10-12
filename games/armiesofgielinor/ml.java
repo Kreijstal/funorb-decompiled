@@ -112,25 +112,25 @@ final class ml extends ClientUiComponent {
             !(BufferedSocket.field_j < 2))) {
             var8 = tn.field_Z;
             var9 = fo.a(4800, SectorCacheStore.field_k, new String[]{param3});
-            var8.field_i.a(10, var9, (byte) -118);
+            var8.field_i.addTextAction(10, var9, (byte) -118);
           }
           tn.field_Z.a((byte) 96);
           if (param2) {
             if (oo.field_a != tn.field_Z.field_c) {
               var12 = tn.field_Z;
               var13 = fo.a(4800, fs.field_a, new String[]{param3});
-              var12.field_i.a(15, var13, (byte) -105);
+              var12.field_i.addTextAction(15, var13, (byte) -105);
             } else {
               var10 = tn.field_Z;
               var11 = fo.a(4800, cp.field_g, new String[]{param3});
-              var10.field_i.a(16, var11, (byte) -103);
+              var10.field_i.addTextAction(16, var11, (byte) -103);
             }
           }
           var14 = tn.field_Z;
           var5 = BattleTutorial.pointerPressX;
           var6 = TeleportAction.pointerPressY;
           var7 = 125 / ((22 - param0) / 38);
-          var14.field_i.a(0, var6, 0, (byte) -118, var5);
+          var14.field_i.layoutPopup(0, var6, 0, (byte) -118, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -187,12 +187,12 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
 
     final void a(int param0, int param1, String param2, int param3, int param4, int param5, int param6) {
         try {
-          hd dupTemp$0 = null;
+          PlatformTaskService dupTemp$0 = null;
           RuntimeException stackIn_25_0 = null;
           StringBuilder stackIn_25_1 = null;
           String stackIn_26_2 = null;
           Throwable decompiledCaughtException = null;
-          wo var8 = null;
+          PlatformTask var8 = null;
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
@@ -220,12 +220,12 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                 return;
               }
               vu.field_L = CombatEvent.d((byte) 10);
-              dupTemp$0 = new hd(param1, param2, param5, true);
+              dupTemp$0 = new PlatformTaskService(param1, param2, param5, true);
               IntPair.field_m = dupTemp$0;
               PacketBuffer.field_s = dupTemp$0;
-              var8 = IntPair.field_m.a(1, 0, (Runnable) (this));
+              var8 = IntPair.field_m.startThreadAsync(1, 0, (Runnable) (this));
               while (true) {
-                if (var8.field_g == 0) {
+                if (var8.status == 0) {
                   nu.a(10L, param3 ^ 10);
                   if (var9 == 0) {
                     continue;
@@ -383,7 +383,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           }
           if (null != IntPair.field_m) {
             try {
-              IntPair.field_m.a(true);
+              IntPair.field_m.stopAndClose(true);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -514,11 +514,11 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (null != hd.field_t) {
-                var1 = hd.field_t.toLowerCase();
+              if (null != PlatformTaskService.javaVendor) {
+                var1 = PlatformTaskService.javaVendor.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = hd.field_u;
+                  var2 = PlatformTaskService.javaVersion;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -560,8 +560,8 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (hd.field_u != null))) {
-                stackIn_68_0 = hd.field_u.startsWith("1.");
+                (decompiledFrameRemainder2 = (PlatformTaskService.javaVersion != null))) {
+                stackIn_68_0 = PlatformTaskService.javaVersion.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -570,8 +570,8 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (var1_int < hd.field_u.length()) {
-                    var3 = hd.field_u.charAt(var1_int);
+                  if (var1_int < PlatformTaskService.javaVersion.length()) {
+                    var3 = PlatformTaskService.javaVersion.charAt(var1_int);
                     stackIn_83_0 = ~var3;
                     stackIn_83_1 = -49;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -598,7 +598,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                 if (null != la.field_g) {
                   var1 = la.field_g;
                 }
-                var2_ref = hd.field_x;
+                var2_ref = PlatformTaskService.field_x;
                 if (var2_ref != null) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});

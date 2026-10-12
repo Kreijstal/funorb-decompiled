@@ -37,7 +37,7 @@ final class ef extends Exception {
               if (!vi.field_d) {
                 hf.field_c = true;
               } else {
-                np.k(86);
+                ContextActionMenu.k(86);
               }
             }
           }

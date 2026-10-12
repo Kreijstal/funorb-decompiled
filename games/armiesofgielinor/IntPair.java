@@ -8,7 +8,7 @@ final class IntPair extends IntrusiveNode {
     static String field_p;
     int second;
     static AnimationFrameSet field_q;
-    static hd field_m;
+    static PlatformTaskService field_m;
 
     public static void a(int param0) {
         if (param0 != -10) {

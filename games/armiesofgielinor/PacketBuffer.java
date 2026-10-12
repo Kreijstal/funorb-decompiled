@@ -6,7 +6,7 @@ class PacketBuffer extends IntrusiveNode {
     int position;
     static QuickChatCommandDefinition field_l;
     static String field_r;
-    static hd field_s;
+    static PlatformTaskService field_s;
     static String field_m;
     static String field_p;
     static byte[][][] field_k;

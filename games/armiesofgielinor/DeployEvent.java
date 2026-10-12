@@ -264,11 +264,11 @@ final class DeployEvent extends GameEvent {
               ng.a(TaggedMapData.field_g.field_Kb, var6, (int[]) null, var6.field_Mb, -1, -110, -1, var6.field_Pb, 0L);
               var16 = tn.field_Z;
               var13_ref_String = ArchiveIndex.field_u;
-              var16.field_i.a(7, var13_ref_String, (byte) -100);
+              var16.field_i.addTextAction(7, var13_ref_String, (byte) -100);
               var17 = tn.field_Z;
               var13 = BattleTutorial.pointerPressX;
               var14 = TeleportAction.pointerPressY;
-              var17.field_i.a(0, var14, 0, (byte) -118, var13);
+              var17.field_i.layoutPopup(0, var14, 0, (byte) -118, var13);
             }
             var5 = var6;
             var6 = (hl) (var4.next((byte) 123));

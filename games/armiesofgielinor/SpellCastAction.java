@@ -117,7 +117,7 @@ final class SpellCastAction extends PreparedAction {
     final static void a(java.applet.Applet param0, int param1, String param2, boolean param3) {
         try {
           int var4_int = 0;
-          if (hd.field_n.startsWith("win") &&
+          if (PlatformTaskService.lowercaseOsName.startsWith("win") &&
             br.a(param2, true)) {
             return;
           }

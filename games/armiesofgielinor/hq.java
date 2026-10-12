@@ -21,7 +21,7 @@ final class hq {
         field_c = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7, int param8, boolean param9, String param10, hd param11, long param12, int param13) {
+    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7, int param8, boolean param9, String param10, PlatformTaskService param11, long param12, int param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -45,9 +45,9 @@ final class hq {
             CampaignRewardPreview.field_d = param0;
             fl.field_e = param13;
             ng.field_v = param6;
-            if (null != wj.field_n.field_m) {
+            if (null != wj.field_n.randomDataFile) {
               try {
-                le.field_d = new BufferedFile(wj.field_n.field_m, 64, 0);
+                le.field_d = new BufferedFile(wj.field_n.randomDataFile, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;
@@ -57,7 +57,7 @@ final class hq {
             if (param7 == 0) {
               return;
             }
-            hq.a(58, -109, 31, 35, false, 42, -98, -22, -122, true, (String) null, (hd) null, -46L, 85);
+            hq.a(58, -109, 31, 35, false, 42, -98, -22, -122, true, (String) null, (PlatformTaskService) null, -46L, 85);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

@@ -54,7 +54,7 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void paint(java.awt.Graphics param0) {
     }
 
-    final void a(int param0, hd param1) {
+    final void a(int param0, PlatformTaskService param1) {
         try {
           fj.a(this.field_c, param1, param0 ^ 30916);
           if (param0 != -30918) {

@@ -43,8 +43,8 @@ final class ij extends dv {
             stackIn_3_0 = super.a(-30847, param1, param2);
             return stackIn_3_0;
           }
-          var12 = this.field_o.q(param0 ^ param0);
-          var5 = this.field_o.o(param0 ^ 30781);
+          var12 = this.field_o.getText(param0 ^ param0);
+          var5 = this.field_o.getCaretIndex(param0 ^ 30781);
           var6 = 0;
           var7 = 0;
           var8 = 0;
@@ -109,35 +109,35 @@ final class ij extends dv {
               var7 != 0 &&
               39 == var9Lifetime1 &&
               39 == var10Lifetime1)) {
-              this.field_o.a(101, -26126, '￿');
+              this.field_o.handleKey(101, -26126, '￿');
             }
             discarded$0 = super.a(-30847, param1, param2);
-            var4 = this.field_o.q(param0 ^ -30847);
-            var5 = this.field_o.o(param0 ^ -30779);
+            var4 = this.field_o.getText(param0 ^ -30847);
+            var5 = this.field_o.getCaretIndex(param0 ^ -30779);
             if (var6 == 0 &&
               var7 == 0 &&
               param1 == 40) {
-              this.field_o.a(-1, -26126, ')');
-              this.field_o.a(-98, var5, var5);
+              this.field_o.handleKey(-1, -26126, ')');
+              this.field_o.setSelection(-98, var5, var5);
             }
             if (var6 == 0 &&
               var7 == 0 &&
               param1 == 34) {
-              this.field_o.a(-1, -26126, '"');
-              this.field_o.a(param0 + 30749, var5, var5);
+              this.field_o.handleKey(-1, -26126, '"');
+              this.field_o.setSelection(param0 + 30749, var5, var5);
             }
             if (((var6 == 0)) &&
               ((var7 == 0)) &&
               ((param1 == 39))) {
-              this.field_o.a(-1, param0 + 4721, '\'');
-              this.field_o.a(-98, var5, var5);
+              this.field_o.handleKey(-1, param0 + 4721, '\'');
+              this.field_o.setSelection(-98, var5, var5);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_o.c(1 + var5, false);
+            this.field_o.setCollapsedSelection(1 + var5, false);
           }
-          vs.field_c = wf.a(this.field_o.q(0), -101);
+          vs.field_c = wf.a(this.field_o.getText(0), -101);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,7 +146,7 @@ final class ij extends dv {
         }
     }
 
-    ij(NodeDeque param0, BitmapFont param1, hd param2) {
+    ij(NodeDeque param0, BitmapFont param1, PlatformTaskService param2) {
         super(param1, param2);
         int incrementValue$3 = 0;
         int var4_int = 0;
@@ -212,10 +212,10 @@ final class ij extends dv {
         String var3 = null;
         try {
           int var2_int = -78 / ((param0 - 13) / 33);
-          var3 = this.field_o.field_Pb.text;
-          this.field_o.field_Pb.text = vs.field_c;
+          var3 = this.field_o.textComponent.text;
+          this.field_o.textComponent.text = vs.field_c;
           super.b(-100);
-          this.field_o.field_Pb.text = var3;
+          this.field_o.textComponent.text = var3;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ij.M(" + param0 + ')');
         }
@@ -246,10 +246,10 @@ final class ij extends dv {
         int var9Lifetime1;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var13 = this.field_o.q(0);
+          var13 = this.field_o.getText(0);
           var6 = var13;
           var6Lifetime1 = var13;
-          var3 = this.field_o.o(95);
+          var3 = this.field_o.getCaretIndex(95);
           var4 = vv.a(var13, 114);
           var5 = DualLinkedNode.a(var3, var4, -122);
           this.field_s.x = 0;
@@ -360,10 +360,10 @@ final class ij extends dv {
         int var12Lifetime1;
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var15 = this.field_o.q(0);
+          var15 = this.field_o.getText(0);
           var6 = var15;
           var6Lifetime1 = var15;
-          var3 = this.field_o.o(-105);
+          var3 = this.field_o.getCaretIndex(-105);
           var4 = vv.a(var15, param0 - 11);
           var5 = DualLinkedNode.a(var3, var4, -126);
           var6Lifetime2 = "";
@@ -425,11 +425,11 @@ final class ij extends dv {
               ((dr) (var17.first((byte) 44))).field_u.length == 0) {
               var12Lifetime1++;
             }
-            this.field_o.a(var15.substring(0, var3) + var8.toString() + var15.substring(var3), (byte) 45);
-            this.field_o.c(var12Lifetime1, false);
+            this.field_o.setText(var15.substring(0, var3) + var8.toString() + var15.substring(var3), (byte) 45);
+            this.field_o.setCollapsedSelection(var12Lifetime1, false);
           } else {
-            this.field_o.a(var15.substring(0, var3) + var8.toString() + var15.substring(var3), (byte) 45);
-            this.field_o.c(var12Lifetime1, false);
+            this.field_o.setText(var15.substring(0, var3) + var8.toString() + var15.substring(var3), (byte) 45);
+            this.field_o.setCollapsedSelection(var12Lifetime1, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
