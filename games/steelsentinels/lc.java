@@ -4,8 +4,8 @@
 final class lc {
     static int field_h;
     static boolean field_f;
-    static IndexedSprite[] field_a;
-    static RgbSprite field_b;
+    static gk[] field_a;
+    static wk field_b;
     static String field_d;
     static String field_i;
     static tc field_c;
@@ -26,7 +26,7 @@ final class lc {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
-        var17 = SteelSentinels.obfuscationControl;
+        var17 = SteelSentinels.field_G;
         try {
           var10_int = -128 / ((24 - param3) / 54);
           while (true) {
@@ -108,7 +108,7 @@ final class lc {
         int[] var20 = null;
         int var10Lifetime1;
         int var13_intLifetime1;
-        var15 = SteelSentinels.obfuscationControl;
+        var15 = SteelSentinels.field_G;
         try {
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
@@ -130,11 +130,11 @@ final class lc {
               var10_ref_int__ = var18;
               var11 = 0;
               var12 = 0;
-              scanLoop1: while (true) {
+              L18: while (true) {
                 if (var20.length <= var12) {
                   if (var11 == 0 &&
                     param4 != be.field_a) {
-                    break scanLoop1;
+                    break L18;
                   }
                   for (var12 = 0; var20.length > var12; var12 += 2) {
                     var13_int = var20[var12];
@@ -143,17 +143,17 @@ final class lc {
                         m.field_h[var13_int] = true;
                       }
                     } else {
-                      PacketBuffer.field_u = true;
+                      gi.field_u = true;
                     }
                   }
                   var8_int = 0;
-                  break scanLoop1;
+                  break L18;
                 }
                 var13_intLifetime1 = var20[var12];
                 var14 = var10_ref_int__[var12 + 1];
                 if (var13_intLifetime1 == -1) {
                   if (var14 != jg.field_l[param1]) {
-                    break scanLoop1;
+                    break L18;
                   }
                 } else {
                   if (var13_intLifetime1 == param4 &&
@@ -161,10 +161,10 @@ final class lc {
                     var11 = 1;
                   } else {
                     if (var13_intLifetime1 >= param4) {
-                      break scanLoop1;
+                      break L18;
                     }
                     if ((255 & dl.field_O[var13_intLifetime1]) != var14) {
-                      break scanLoop1;
+                      break L18;
                     }
                   }
                 }

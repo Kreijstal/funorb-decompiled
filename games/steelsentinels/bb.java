@@ -5,7 +5,7 @@ abstract class bb extends dl {
     static boolean field_T;
     static int[] field_X;
     static String[] field_R;
-    static SceneWidget field_W;
+    static gh field_W;
     static String field_P;
     private ka field_V;
     boolean field_Q;
@@ -24,7 +24,7 @@ abstract class bb extends dl {
     }
 
     bb(ka param0, int param1, int param2) {
-        super(-param1 + IntrusiveNode.field_l >> 1, DualNode.field_u - param2 >> 1, param1, param2, (qk) null);
+        super(-param1 + ck.field_l >> 1, kd.field_u - param2 >> 1, param1, param2, (qk) null);
         try {
           this.field_U = 0;
           this.field_Q = false;
@@ -75,19 +75,19 @@ abstract class bb extends dl {
         if (!mg.field_ac) {
           throw new IllegalStateException();
         }
-        IntrusiveNode.field_a = true;
+        ck.field_a = true;
         if (param0 > 66) {
           nj.a(true, 40);
           uj.field_d = 0;
           return;
         }
-        field_W = (SceneWidget) null;
+        field_W = (gh) null;
         nj.a(true, 40);
         uj.field_d = 0;
     }
 
     final void a(byte param0, int param1, int param2) {
-        this.a(-param1 + IntrusiveNode.field_l >> 1, (byte) -103, -param2 + DualNode.field_u >> 1, param1, param2);
+        this.a(-param1 + ck.field_l >> 1, (byte) -103, -param2 + kd.field_u >> 1, param1, param2);
         int var4 = 103 / ((param0 - 0) / 45);
     }
 
@@ -98,31 +98,31 @@ abstract class bb extends dl {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         pc var2Lifetime1;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         try {
           lb.field_ac = param0;
           if (param1 != 64) {
             bb.a((byte) 37);
           }
-          var2 = (pc) (mm.field_b.first(13058));
+          var2 = (pc) (mm.field_b.e(13058));
           while (var2 != null) {
             if (var2.field_u.b((byte) -12)) {
               var2.field_v.e(128 + lb.field_ac * var2.field_t >> 8);
             } else {
-              var2.unlink(param1 - 60);
+              var2.b(param1 - 60);
             }
-            var2 = (pc) (mm.field_b.next((byte) -84));
+            var2 = (pc) (mm.field_b.a((byte) -84));
           }
           if (null != rl.field_c) {
-            var2Lifetime1 = (pc) (rl.field_c.first(13058));
+            var2Lifetime1 = (pc) (rl.field_c.e(13058));
             while (var2Lifetime1 != null) {
               stackIn_14_0 = var2Lifetime1.field_u.b((byte) -12);
               if (stackIn_14_0) {
                 var2Lifetime1.field_v.e(128 + lb.field_ac * var2Lifetime1.field_t >> 8);
               } else {
-                var2Lifetime1.unlink(4);
+                var2Lifetime1.b(4);
               }
-              var2Lifetime1 = (pc) (rl.field_c.next((byte) -75));
+              var2Lifetime1 = (pc) (rl.field_c.a((byte) -75));
             }
             return;
           }
@@ -185,9 +185,9 @@ abstract class bb extends dl {
           return;
         }
         if (lc.field_b == null) {
-          lc.field_b = new RgbSprite(this.field_x, this.field_E);
+          lc.field_b = new wk(this.field_x, this.field_E);
           q.a(lc.field_b, (byte) -103);
-          SoftwareRaster.b();
+          pb.b();
           this.a(0, 0, true);
           super.a(-param0 - this.field_z, (byte) -108, -this.field_o - param2, param3);
           tk.$cfr$intArgs$f$20d51497949f(111);
@@ -195,9 +195,9 @@ abstract class bb extends dl {
           return;
         }
         if (this.field_x > lc.field_b.field_A) {
-          lc.field_b = new RgbSprite(this.field_x, this.field_E);
+          lc.field_b = new wk(this.field_x, this.field_E);
           q.a(lc.field_b, (byte) -103);
-          SoftwareRaster.b();
+          pb.b();
           this.a(0, 0, true);
           super.a(-param0 - this.field_z, (byte) -108, -this.field_o - param2, param3);
           tk.$cfr$intArgs$f$20d51497949f(111);
@@ -205,9 +205,9 @@ abstract class bb extends dl {
           return;
         }
         if (lc.field_b.field_F < this.field_E) {
-          lc.field_b = new RgbSprite(this.field_x, this.field_E);
+          lc.field_b = new wk(this.field_x, this.field_E);
           q.a(lc.field_b, (byte) -103);
-          SoftwareRaster.b();
+          pb.b();
           this.a(0, 0, true);
           super.a(-param0 - this.field_z, (byte) -108, -this.field_o - param2, param3);
           tk.$cfr$intArgs$f$20d51497949f(111);
@@ -215,7 +215,7 @@ abstract class bb extends dl {
           return;
         }
         q.a(lc.field_b, (byte) -103);
-        SoftwareRaster.b();
+        pb.b();
         this.a(0, 0, true);
         super.a(-param0 - this.field_z, (byte) -108, -this.field_o - param2, param3);
         tk.$cfr$intArgs$f$20d51497949f(111);

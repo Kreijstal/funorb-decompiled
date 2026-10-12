@@ -333,7 +333,7 @@ class tb {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          scanLoop1: while (true) {
+          L3: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -366,7 +366,7 @@ class tb {
                       var12.field_o = var12.field_o + var13;
                     }
                     if (var4 >= this.field_i) {
-                      break scanLoop1;
+                      break L3;
                     }
                     var14Lifetime2 = var11.d();
                     if (var14Lifetime2 != null) {

@@ -54,7 +54,7 @@ final class de {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, RgbSprite[] param2, int param3, int param4, byte param5, int param6) {
+    final static void a(int param0, int param1, wk[] param2, int param3, int param4, byte param5, int param6) {
         int var22 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
@@ -85,7 +85,7 @@ final class de {
         int var21Lifetime2;
         int var21Lifetime3;
         int var21Lifetime4;
-        var23 = SteelSentinels.obfuscationControl;
+        var23 = SteelSentinels.field_G;
         try {
           if (param2 == null) {
             return;
@@ -138,69 +138,69 @@ final class de {
               var20 = var9 * param6 / (var9 + var10) + param1;
               var19 = var9 * param6 / (var9 + var10) + param1;
             }
-            SoftwareRaster.b(me.field_g);
+            pb.b(me.field_g);
             if (null != param2[0]) {
-              SoftwareRaster.h(param0, param1, var17, var19);
+              pb.h(param0, param1, var17, var19);
               param2[0].b(param0, param1, param4);
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             if (null != param2[2]) {
-              SoftwareRaster.h(var18, param1, var11, var19);
+              pb.h(var18, param1, var11, var19);
               param2[2].b(var14, param1, param4);
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             if (null != param2[6]) {
-              SoftwareRaster.h(param0, var20, var17, var12);
+              pb.h(param0, var20, var17, var12);
               param2[6].b(param0, var16, param4);
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             if (param2[8] != null) {
-              SoftwareRaster.h(var18, var20, var11, var12);
+              pb.h(var18, var20, var11, var12);
               param2[8].b(var14, var16, param4);
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             if (null != param2[1] &&
               param2[1].field_z != 0) {
-              SoftwareRaster.h(var17, param1, var18, var19);
+              pb.h(var17, param1, var18, var19);
               for (var21 = var13; var14 > var21; var21 = var21 + param2[1].field_z) {
                 param2[1].b(var21, param1, param4);
               }
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             if (null != param2[7] &&
               param2[7].field_z != 0) {
-              SoftwareRaster.h(var17, var20, var18, var12);
+              pb.h(var17, var20, var18, var12);
               for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param2[7].field_z) {
                 param2[7].b(var21Lifetime1, var16, param4);
               }
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             if (param2[3] != null &&
               param2[3].field_B != 0) {
-              SoftwareRaster.h(param0, var19, var17, var20);
+              pb.h(param0, var19, var17, var20);
               for (var21Lifetime2 = var15; var21Lifetime2 < var16; var21Lifetime2 = var21Lifetime2 + param2[3].field_B) {
                 param2[3].b(param0, var21Lifetime2, param4);
               }
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             if (null != param2[5] &&
               0 != param2[5].field_B) {
-              SoftwareRaster.h(var18, var19, var11, var20);
+              pb.h(var18, var19, var11, var20);
               for (var21Lifetime3 = var15; var21Lifetime3 < var16; var21Lifetime3 = var21Lifetime3 + param2[5].field_B) {
                 param2[5].b(var14, var21Lifetime3, param4);
               }
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             if (param2[4] != null &&
               param2[4].field_z != 0 &&
               param2[4].field_B != 0) {
-              SoftwareRaster.h(var17, var19, var18, var20);
+              pb.h(var17, var19, var18, var20);
               for (var21Lifetime4 = var15; var16 > var21Lifetime4; var21Lifetime4 = var21Lifetime4 + param2[4].field_B) {
                 for (var22 = var13; var14 > var22; var22 = var22 + param2[4].field_z) {
                   param2[4].b(var22, var21Lifetime4, param4);
                 }
               }
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
               return;
             }
             return;

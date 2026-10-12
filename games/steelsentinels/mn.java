@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mn extends DualNode {
+final class mn extends kd {
     char[] field_F;
     String field_D;
     static rf field_G;
     int[] field_C;
     char[] field_z;
     int[] field_A;
-    static SceneWidget field_E;
+    static gh field_E;
     static int field_y;
     boolean field_B;
 
-    final void a(int param0, PacketBuffer param1) {
+    final void a(int param0, gi param1) {
         int var3_int = 0;
-        int var4 = SteelSentinels.obfuscationControl;
+        int var4 = SteelSentinels.field_G;
         int var3_intLifetime1;
         try {
           while (true) {
-            var3_int = param1.readUnsignedByte((byte) -107);
+            var3_int = param1.f((byte) -107);
             if (0 == var3_int) {
               break;
             }
@@ -65,7 +65,7 @@ final class mn extends DualNode {
     final void c(byte param0) {
         int var4 = 0;
         int var2 = 0;
-        int var3 = SteelSentinels.obfuscationControl;
+        int var3 = SteelSentinels.field_G;
         int var2Lifetime1;
         if (this.field_A != null) {
           for (var2 = 0; var2 < this.field_A.length; var2++) {
@@ -85,7 +85,7 @@ final class mn extends DualNode {
         }
     }
 
-    private final void a(PacketBuffer param0, int param1, byte param2) {
+    private final void a(gi param0, int param1, byte param2) {
         char[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
@@ -102,18 +102,18 @@ final class mn extends DualNode {
         int var6 = 0;
         int var7 = 0;
         int var4_intLifetime1;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           if (1 == param1) {
             this.field_D = param0.h(1);
           } else {
             if (param1 == 2) {
-              var4_int = param0.readUnsignedByte((byte) -59);
+              var4_int = param0.f((byte) -59);
               this.field_C = new int[var4_int];
               this.field_z = new char[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_C[var5] = param0.readUnsignedShort((byte) -60);
-                var6 = param0.readByte((byte) -2);
+                this.field_C[var5] = param0.c((byte) -60);
+                var6 = param0.d((byte) -2);
                 stackIn_16_0 = this.field_z;
                 stackIn_16_1 = var5;
                 if (var6 != 0) {
@@ -125,12 +125,12 @@ final class mn extends DualNode {
               }
             } else {
               if (param1 == 3) {
-                var4_int = param0.readUnsignedByte((byte) -66);
+                var4_int = param0.f((byte) -66);
                 this.field_F = new char[var4_int];
                 this.field_A = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  this.field_A[var5] = param0.readUnsignedShort((byte) -60);
-                  var6 = param0.readByte((byte) -2);
+                  this.field_A[var5] = param0.c((byte) -60);
+                  var6 = param0.d((byte) -2);
                   stackIn_8_0 = this.field_F;
                   stackIn_8_1 = var5;
                   if (0 != var6) {
@@ -167,7 +167,7 @@ final class mn extends DualNode {
         field_G = null;
         field_E = null;
         if (param0 != 1) {
-          field_E = (SceneWidget) null;
+          field_E = (gh) null;
         }
     }
 
@@ -189,7 +189,7 @@ final class mn extends DualNode {
         int var9 = 0;
         vc[] var10 = null;
         wj var11 = null;
-        var9 = SteelSentinels.obfuscationControl;
+        var9 = SteelSentinels.field_G;
         try {
           if (!param2.b(-98)) {
             return null;

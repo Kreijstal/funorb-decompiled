@@ -7,16 +7,16 @@ final class li extends ag {
     static String field_y;
     static String field_C;
     static int field_v;
-    static IndexedSprite[] field_z;
+    static gk[] field_z;
     static String[] field_B;
     static int field_A;
     static String field_E;
-    static RgbSprite[][] field_D;
+    static wk[][] field_D;
 
     final static boolean c(int param0) {
         if (param0 != 8) {
           li.d(28);
-          if (!ParticleEffect.g(2)) {
+          if (!qb.g(2)) {
             return false;
           }
           if ((8 & a.field_c) == 0) {
@@ -24,7 +24,7 @@ final class li extends ag {
           }
           return false;
         }
-        if (!ParticleEffect.g(2)) {
+        if (!qb.g(2)) {
           return false;
         }
         if ((8 & a.field_c) == 0) {
@@ -35,13 +35,13 @@ final class li extends ag {
 
     final static void e(int param0) {
         if (vb.field_e) {
-          SoftwareRaster.f(SoftwareRaster.field_i, SoftwareRaster.field_l, SoftwareRaster.field_b - SoftwareRaster.field_i, -SoftwareRaster.field_l + SoftwareRaster.field_d);
+          pb.f(pb.field_i, pb.field_l, pb.field_b - pb.field_i, -pb.field_l + pb.field_d);
           qf.field_c.a(false, (byte) 127);
         }
         if (param0 == 0) {
           return;
         }
-        field_D = (RgbSprite[][]) null;
+        field_D = (wk[][]) null;
     }
 
     li(int param0) {
@@ -80,7 +80,7 @@ final class li extends ag {
         field_y = null;
         field_C = null;
         field_z = null;
-        field_D = (RgbSprite[][]) null;
+        field_D = (wk[][]) null;
         if (param0 == -30874) {
           field_E = null;
           field_B = null;
@@ -91,7 +91,7 @@ final class li extends ag {
         field_B = null;
     }
 
-    private li(BitmapFont param0, int param1) {
+    private li(mi param0, int param1) {
         super(param0, param1);
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fg extends k implements ae {
-    static NodeDeque field_Ub;
+    static ul field_Ub;
     private boolean field_Nb;
     private vi field_Zb;
     static uf field_Tb;
@@ -73,7 +73,7 @@ final class fg extends k implements ae {
         RuntimeException var4_ref = null;
         bm var5 = null;
         int var6 = 0;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         try {
           this.field_Nb = true;
           if (!param2.field_d) {
@@ -155,13 +155,13 @@ final class fg extends k implements ae {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var7Lifetime1;
-        var14 = SteelSentinels.obfuscationControl;
+        var14 = SteelSentinels.field_G;
         try {
           var6_int = 8 + param4 + (485 + param3 + param0);
           vg.field_g.a(0, 3, -6 + qc.field_V.field_Lb, 3, -6 + var6_int);
           var7 = -5 + vg.field_g.field_Lb;
-          CombatWorld.field_H.a(0, var7 - param1, param1, 5, param3 + 485 + 2 + param4);
-          vd.field_d.a(0, 0, param1, param3, -wh.field_e.field_zb + (-param3 + CombatWorld.field_H.field_zb));
+          ee.field_H.a(0, var7 - param1, param1, 5, param3 + 485 + 2 + param4);
+          vd.field_d.a(0, 0, param1, param3, -wh.field_e.field_zb + (-param3 + ee.field_H.field_zb));
           wh.field_e.a(0, 0, param1, vd.field_d.field_zb + param3, wh.field_e.field_zb);
           var7 = var7 - (2 + param1);
           sn.field_j.a(param4 + param3 + 485 + 2, -2048, param4, var7 - 5, 2, 5, 5);
@@ -181,7 +181,7 @@ final class fg extends k implements ae {
               if (var12 < 5) {
                 ah.field_Yb[var12].a(0, var13, var7Lifetime1, var6_int, var8);
                 en.field_b[var12].a(0, 0, var7Lifetime1, param3, -param3 + var9);
-                IntKeyLookup.field_a[var12].a(0, param5, var7Lifetime1 - param5 - param5, var9, param2);
+                jk.field_a[var12].a(0, param5, var7Lifetime1 - param5 - param5, var9, param2);
                 gb.field_f[var12].a(0, param5, -param5 + (var7Lifetime1 - param5), var10, -var10 + (-param3 + var8));
               } else {
                 fm.field_b.a(param0 - 10, var13, var7Lifetime1, var6_int, var8);
@@ -216,7 +216,7 @@ final class fg extends k implements ae {
         if (param1 != 19999) {
           fg.a(125, 90);
         }
-        ic.field_D.addLast(3, var2);
+        ic.field_D.a(3, var2);
         eh.a(param0, -17274);
         return var2;
     }
@@ -277,7 +277,7 @@ final class fg extends k implements ae {
     }
 
     final void o(int param0) {
-        this.a(5, true, CachedArchiveProvider.a(123, ec.field_g, 248));
+        this.a(5, true, fi.a(123, ec.field_g, 248));
         if (param0 < 77) {
           field_Yb = (rf) null;
         }
@@ -287,7 +287,7 @@ final class fg extends k implements ae {
         field_Qb = "That name is not available";
         field_Rb = 0;
         field_Pb = "or";
-        field_Ub = new NodeDeque();
+        field_Ub = new ul();
         field_Vb = "Detail: Low";
         field_Yb = new rf();
         field_Wb = "Mission Complete";

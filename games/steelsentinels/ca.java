@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ca extends IntrusiveNode {
+final class ca extends ck {
     bj[] field_u;
     sk[] field_x;
     static int[] field_r;
@@ -30,7 +30,7 @@ final class ca extends IntrusiveNode {
         Object var7 = null;
         int var9 = 0;
         int var10 = 0;
-        var10 = SteelSentinels.obfuscationControl;
+        var10 = SteelSentinels.field_G;
         try {
           if (param1 != -12422) {
             this.field_p = (short[]) null;
@@ -119,7 +119,7 @@ final class ca extends IntrusiveNode {
     final static void a(int param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6) {
         int var18_int = 0;
         int var22_int = 0;
-        SceneWidget dupTemp$0 = null;
+        gh dupTemp$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
@@ -130,25 +130,25 @@ final class ca extends IntrusiveNode {
         int stackIn_3_3;
         boolean stackIn_4_4 = false;
         hk stackIn_12_0;
-        SceneWidget stackIn_12_1;
-        SceneWidget stackIn_12_2;
+        gh stackIn_12_1;
+        gh stackIn_12_2;
         long stackIn_12_3;
-        SceneWidget stackIn_13_1 = null;
-        SceneWidget stackIn_13_2 = null;
-        SceneWidget stackIn_13_4 = null;
+        gh stackIn_13_1 = null;
+        gh stackIn_13_2 = null;
+        gh stackIn_13_4 = null;
         hk stackIn_30_0;
-        SceneWidget stackIn_30_1;
-        SceneWidget stackIn_30_2;
+        gh stackIn_30_1;
+        gh stackIn_30_2;
         long stackIn_30_3;
-        SceneWidget stackIn_31_1;
-        SceneWidget stackIn_31_2;
-        SceneWidget stackIn_31_4;
+        gh stackIn_31_1;
+        gh stackIn_31_2;
+        gh stackIn_31_4;
         int stackIn_35_0 = 0;
         int stackIn_70_0 = 0;
         int stackIn_80_0 = 0;
-        RgbSprite[] stackIn_82_0 = null;
+        wk[] stackIn_82_0 = null;
         int stackIn_83_1 = 0;
-        RgbSprite[] stackIn_90_0 = null;
+        wk[] stackIn_90_0 = null;
         int stackIn_91_1 = 0;
         String stackIn_155_0 = null;
         String stackIn_164_0 = null;
@@ -156,25 +156,25 @@ final class ca extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        NodeDeque var8 = null;
+        ul var8 = null;
         long var9 = 0L;
         Object var11 = null;
         hk var12 = null;
         int var13 = 0;
         int var14 = 0;
-        SceneWidget var18 = null;
-        SceneWidget var19 = null;
-        SceneWidget var20 = null;
-        SceneWidget var21 = null;
-        SceneWidget var22 = null;
-        SceneWidget var23 = null;
-        SceneWidget var24 = null;
-        SceneWidget var25 = null;
-        SceneWidget var26 = null;
-        SceneWidget var27 = null;
-        SceneWidget var28 = null;
-        SceneWidget var29 = null;
-        SceneWidget var30 = null;
+        gh var18 = null;
+        gh var19 = null;
+        gh var20 = null;
+        gh var21 = null;
+        gh var22 = null;
+        gh var23 = null;
+        gh var24 = null;
+        gh var25 = null;
+        gh var26 = null;
+        gh var27 = null;
+        gh var28 = null;
+        gh var29 = null;
+        gh var30 = null;
         int var31 = 0;
         String var32 = null;
         int var33_int = 0;
@@ -190,23 +190,23 @@ final class ca extends IntrusiveNode {
         int var39 = 0;
         int var40 = 0;
         int var41 = 0;
-        RgbSprite var42 = null;
-        SceneWidget var43 = null;
-        SceneWidget var44 = null;
-        SceneWidget var45 = null;
-        SceneWidget var46 = null;
-        SceneWidget var47 = null;
-        SceneWidget var48 = null;
-        SceneWidget var49 = null;
+        wk var42 = null;
+        gh var43 = null;
+        gh var44 = null;
+        gh var45 = null;
+        gh var46 = null;
+        gh var47 = null;
+        gh var48 = null;
+        gh var49 = null;
         Object var50 = null;
-        RgbSprite var50_ref = null;
+        wk var50_ref = null;
         Object var51 = null;
-        RgbSprite var51_ref = null;
+        wk var51_ref = null;
         Object var52 = null;
-        RgbSprite var52_ref = null;
+        wk var52_ref = null;
         Object var53 = null;
-        RgbSprite var53_ref = null;
-        RgbSprite var54 = null;
+        wk var53_ref = null;
+        wk var54 = null;
         int var14Lifetime1;
         int var33_intLifetime1;
         int var34_intLifetime1;
@@ -220,7 +220,7 @@ final class ca extends IntrusiveNode {
         var51 = null;
         var52 = null;
         var53 = null;
-        var41 = SteelSentinels.obfuscationControl;
+        var41 = SteelSentinels.field_G;
         try {
           stackIn_3_0 = rn.field_y;
           stackIn_3_1 = 2;
@@ -234,23 +234,23 @@ final class ca extends IntrusiveNode {
           var8 = rn.field_y.field_Ub.field_M;
           var9 = mm.a(param1 - 114);
           var11 = null;
-          var12 = (hk) (var8.first(13058));
+          var12 = (hk) (var8.e(13058));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_M) {
               var14 = param0 | param4;
-              var12.field_kc = new SceneWidget(0L, SteelSentinels.field_J);
+              var12.field_kc = new gh(0L, SteelSentinels.field_J);
               var12.a(var12.field_kc, 125);
               var12.field_kc.field_Kb = 1;
-              var12.field_Cc = new SceneWidget(0L, bb.field_W);
+              var12.field_Cc = new gh(0L, bb.field_W);
               var12.a(var12.field_Cc, 127);
-              var12.field_qc = new SceneWidget(0L, SteelSentinels.field_J);
+              var12.field_qc = new gh(0L, SteelSentinels.field_J);
               var12.a(var12.field_qc, 123);
               var12.field_qc.field_ub = 0;
-              var12.field_zc = new SceneWidget(0L, SteelSentinels.field_J);
+              var12.field_zc = new gh(0L, SteelSentinels.field_J);
               var12.a(var12.field_zc, 123);
               var12.field_zc.field_ub = 0;
-              var12.field_Ic = new SceneWidget(0L, bb.field_W);
+              var12.field_Ic = new gh(0L, bb.field_W);
               var12.a(var12.field_Ic, 118);
               var12.field_Ic.field_Kb = 2;
               stackIn_12_0 = var12;
@@ -266,22 +266,22 @@ final class ca extends IntrusiveNode {
                 stackIn_13_2 = null;
                 stackIn_13_4 = bb.field_W;
               }
-              stackIn_12_0.field_uc = new SceneWidget(stackIn_12_3, stackIn_13_4);
+              stackIn_12_0.field_uc = new gh(stackIn_12_3, stackIn_13_4);
               var12.a(var12.field_uc, 118);
-              var12.field_Gc = new SceneWidget[be.field_a];
-              var12.field_Fc = new SceneWidget(0L, (SceneWidget) null);
+              var12.field_Gc = new gh[be.field_a];
+              var12.field_Fc = new gh(0L, (gh) null);
               if ((1 << ol.field_dc & var14) != 0) {
                 var12.field_uc.a(var12.field_Fc, 125);
               }
-              var12.field_Wb = new SceneWidget(0L, (SceneWidget) null);
+              var12.field_Wb = new gh(0L, (gh) null);
               if ((var14 & 1 << sn.field_b) != 0) {
                 var12.field_uc.a(var12.field_Wb, 124);
               }
-              var12.field_ac = new SceneWidget(0L, (SceneWidget) null);
+              var12.field_ac = new gh(0L, (gh) null);
               if ((var14 & 1 << jf.field_Z) != 0) {
                 var12.field_uc.a(var12.field_ac, 126);
               }
-              var12.field_tc = new SceneWidget(0L, (SceneWidget) null);
+              var12.field_tc = new gh(0L, (gh) null);
               if ((1 << ja.field_f & var14) != 0) {
                 var12.field_uc.a(var12.field_tc, 122);
               }
@@ -293,7 +293,7 @@ final class ca extends IntrusiveNode {
               var44.field_Fb = 1;
               var45.field_Fb = 1;
               for (var18_int = 0; var18_int < be.field_a; var18_int++) {
-                var12.field_Gc[var18_int] = new SceneWidget(0L, (SceneWidget) null);
+                var12.field_Gc[var18_int] = new gh(0L, (gh) null);
                 if ((1 << var18_int + ch.field_L & var14) != 0) {
                   var12.field_uc.a(var12.field_Gc[var18_int], param1 ^ 127);
                 }
@@ -312,19 +312,19 @@ final class ca extends IntrusiveNode {
                 stackIn_31_2 = null;
                 stackIn_31_4 = bb.field_W;
               }
-              stackIn_30_0.field_Lc = new SceneWidget(stackIn_30_3, stackIn_31_4);
+              stackIn_30_0.field_Lc = new gh(stackIn_30_3, stackIn_31_4);
               var12.a(var12.field_Lc, 119);
               var12.field_Lc.field_Kb = 2;
-              var12.field_Bc = new SceneWidget(0L, bb.field_W);
+              var12.field_Bc = new gh(0L, bb.field_W);
               var12.a(var12.field_Bc, 119);
-              var12.field_Dc = new SceneWidget(0L, ParticleEffect.field_K);
+              var12.field_Dc = new gh(0L, qb.field_K);
               var12.a(var12.field_Dc, 121);
-              var12.field_lc = new SceneWidget(0L, ParticleEffect.field_K);
+              var12.field_lc = new gh(0L, qb.field_K);
               var12.a(var12.field_lc, 124);
-              var12.field_xc = new SceneWidget(0L, bd.field_f);
+              var12.field_xc = new gh(0L, bd.field_f);
               var12.a(var12.field_xc, 121);
               var12.h(param1 ^ -104);
-              var12.field_gc = new SceneWidget(0L, ArchiveProvider.field_f);
+              var12.field_gc = new gh(0L, fa.field_f);
               var13 = 1;
               var12.a(var12.field_gc, 120);
             }
@@ -441,7 +441,7 @@ final class ca extends IntrusiveNode {
               } else {
                 var12.field_gc.a(0, var31, db.field_b, 0, 68);
               }
-              var12.field_Cc.field_S = BitmapFont.a(var12.field_Cc.field_L, var32, 78);
+              var12.field_Cc.field_S = mi.a(var12.field_Cc.field_L, var32, 78);
               var12.field_Cc.a(param1 ^ 1, var31, db.field_b, 70, 78);
               if (var12.field_Cc.field_kb &&
                 !var12.field_Cc.field_S.equals(var32)) {
@@ -585,7 +585,7 @@ final class ca extends IntrusiveNode {
               var12.field_lb = var31 - var12.field_Lb;
             }
             if (var13 != 0) {
-              rn.field_y.field_Ub.a(2, (byte) 111, (SceneWidget) (var11), var12);
+              rn.field_y.field_Ub.a(2, (byte) 111, (gh) (var11), var12);
             }
             for (var34_intLifetime2 = 0; var34_intLifetime2 < be.field_a; var34_intLifetime2++) {
               if (var12.field_Gc[var34_intLifetime2].field_kb) {
@@ -645,7 +645,7 @@ final class ca extends IntrusiveNode {
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_Eb != 0) {
               if (var12.k(4219)) {
-                var12 = (hk) (var8.next((byte) -123));
+                var12 = (hk) (var8.a((byte) -123));
                 continue;
               }
               if (0 != var12.field_gc.field_Eb) {
@@ -662,7 +662,7 @@ final class ca extends IntrusiveNode {
                 qa.a(var32, param5, var12, 88);
               }
             }
-            var12 = (hk) (var8.next((byte) -123));
+            var12 = (hk) (var8.a((byte) -123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -724,7 +724,7 @@ final class ca extends IntrusiveNode {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        PacketBuffer var38 = null;
+        gi var38 = null;
         byte[] var39 = null;
         bj var40 = null;
         byte[] var41 = null;
@@ -807,40 +807,40 @@ final class ca extends IntrusiveNode {
           this.field_o = new byte[128];
           this.field_s = new int[128];
           this.field_x = new sk[128];
-          var38 = new PacketBuffer(param0);
-          for (var3 = 0; var38.payload[var38.position + var3] != 0; var3++) {
+          var38 = new gi(param0);
+          for (var3 = 0; var38.field_t[var38.field_p + var3] != 0; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
           var4 = var42;
           for (var5 = 0; var3 > var5; var5++) {
-            var4[var5] = var38.readByte((byte) -2);
+            var4[var5] = var38.d((byte) -2);
           }
-          var38.position = var38.position + 1;
+          var38.field_p = var38.field_p + 1;
           var3++;
-          var5Lifetime1 = var38.position;
-          var38.position = var38.position + var3;
-          for (var6 = 0; 0 != var38.payload[var6 + var38.position]; var6++) {
+          var5Lifetime1 = var38.field_p;
+          var38.field_p = var38.field_p + var3;
+          for (var6 = 0; 0 != var38.field_t[var6 + var38.field_p]; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
           var7 = var43;
           for (var8 = 0; var6 > var8; var8++) {
-            var7[var8] = var38.readByte((byte) -2);
+            var7[var8] = var38.d((byte) -2);
           }
-          var38.position = var38.position + 1;
+          var38.field_p = var38.field_p + 1;
           var6++;
-          var8Lifetime1 = var38.position;
-          var38.position = var38.position + var6;
-          for (var9 = 0; var38.payload[var38.position + var9] != 0; var9++) {
+          var8Lifetime1 = var38.field_p;
+          var38.field_p = var38.field_p + var6;
+          for (var9 = 0; var38.field_t[var38.field_p + var9] != 0; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
           var10 = var44;
           for (var11_int = 0; var9 > var11_int; var11_int++) {
-            var10[var11_int] = var38.readByte((byte) -2);
+            var10[var11_int] = var38.d((byte) -2);
           }
-          var38.position = var38.position + 1;
+          var38.field_p = var38.field_p + 1;
           var9++;
           var53 = new byte[var9];
           var39 = var53;
@@ -850,7 +850,7 @@ final class ca extends IntrusiveNode {
             var12 = 2;
             var13_int = 1;
             for (var14 = 2; var9 > var14; var14++) {
-              var15_int = var38.readUnsignedByte((byte) -106);
+              var15_int = var38.f((byte) -106);
               if (var15_int != 0) {
                 if (var15_int <= var13_int) {
                   var15_int--;
@@ -872,17 +872,17 @@ final class ca extends IntrusiveNode {
             var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
-            var16_int = var38.readUnsignedByte((byte) -120);
+            var16_int = var38.f((byte) -120);
             if (var16_int > 0) {
               var15_ref.field_m = new byte[var16_int * 2];
             }
-            var16_intLifetime1 = var38.readUnsignedByte((byte) -55);
+            var16_intLifetime1 = var38.f((byte) -55);
             if (0 < var16_intLifetime1) {
               var15_ref.field_p = new byte[2 + var16_intLifetime1 * 2];
               var40.field_p[1] = (byte)64;
             }
           }
-          var14Lifetime2 = var38.readUnsignedByte((byte) -63);
+          var14Lifetime2 = var38.f((byte) -63);
           if (var14Lifetime2 > 0) {
             stackIn_39_0 = new byte[var14Lifetime2 * 2];
           } else {
@@ -891,7 +891,7 @@ final class ca extends IntrusiveNode {
           var58 = stackIn_39_0;
           var46 = var58;
           var15 = var46;
-          var14Lifetime3 = var38.readUnsignedByte((byte) -60);
+          var14Lifetime3 = var38.f((byte) -60);
           if (0 >= var14Lifetime3) {
             stackIn_42_0 = null;
           } else {
@@ -899,24 +899,24 @@ final class ca extends IntrusiveNode {
           }
           var47 = stackIn_42_0;
           var16 = var47;
-          for (var17 = 0; var38.payload[var38.position + var17] != 0; var17++) {
+          for (var17 = 0; var38.field_t[var38.field_p + var17] != 0; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
           var18 = var41;
           for (var19 = 0; var17 > var19; var19++) {
-            var18[var19] = var38.readByte((byte) -2);
+            var18[var19] = var38.d((byte) -2);
           }
-          var38.position = var38.position + 1;
+          var38.field_p = var38.field_p + 1;
           var17++;
           var19Lifetime1 = 0;
           for (var20 = 0; var20 < 128; var20++) {
-            var19Lifetime1 = var19Lifetime1 + var38.readUnsignedByte((byte) -88);
+            var19Lifetime1 = var19Lifetime1 + var38.f((byte) -88);
             this.field_p[var20] = (short)var19Lifetime1;
           }
           var19Lifetime2 = 0;
           for (var20Lifetime1 = 0; var20Lifetime1 < 128; var20Lifetime1++) {
-            var19Lifetime2 = var19Lifetime2 + var38.readUnsignedByte((byte) -111);
+            var19Lifetime2 = var19Lifetime2 + var38.f((byte) -111);
             this.field_p[var20Lifetime1] = (short)(this.field_p[var20Lifetime1] + (var19Lifetime2 << 8));
           }
           var20Lifetime2 = 0;
@@ -948,7 +948,7 @@ final class ca extends IntrusiveNode {
                 }
                 incrementValue$6 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = var38.payload[incrementValue$6] - 1;
+                var23Lifetime1 = var38.field_t[incrementValue$6] - 1;
               }
               var20Lifetime3--;
               this.field_v[var24] = (byte)var23Lifetime1;
@@ -962,7 +962,7 @@ final class ca extends IntrusiveNode {
               if (var20Lifetime4 == 0) {
                 incrementValue$3 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = 16 + var38.payload[incrementValue$3] << 2;
+                var24Lifetime1 = 16 + var38.field_t[incrementValue$3] << 2;
                 if (var21Lifetime2 >= var56.length) {
                   var20Lifetime4 = -1;
                 } else {
@@ -1001,34 +1001,34 @@ final class ca extends IntrusiveNode {
                 var20Lifetime6 = var18[var21Lifetime4++];
               }
               if (this.field_s[var27] > 0) {
-                var26Lifetime1 = var38.readUnsignedByte((byte) -74) + 1;
+                var26Lifetime1 = var38.f((byte) -74) + 1;
               }
             }
             this.field_q[var27] = (byte)var26Lifetime1;
             var20Lifetime6--;
           }
-          this.field_t = var38.readUnsignedByte((byte) -69) + 1;
+          this.field_t = var38.f((byte) -69) + 1;
           for (var27Lifetime1 = 0; var27Lifetime1 < var12; var27Lifetime1++) {
             var45 = var13[var27Lifetime1];
             if (null != var45.field_m) {
               for (var29 = 1; var29 < var45.field_m.length; var29 += 2) {
-                var45.field_m[var29] = var38.readByte((byte) -2);
+                var45.field_m[var29] = var38.d((byte) -2);
               }
             }
             if (null != var45.field_p) {
               for (var29Lifetime5 = 3; var29Lifetime5 < -2 + var45.field_p.length; var29Lifetime5 += 2) {
-                var45.field_p[var29Lifetime5] = var38.readByte((byte) -2);
+                var45.field_p[var29Lifetime5] = var38.d((byte) -2);
               }
             }
           }
           if (null != var15) {
             for (var27Lifetime2 = 1; var27Lifetime2 < var58.length; var27Lifetime2 += 2) {
-              var15[var27Lifetime2] = var38.readByte((byte) -2);
+              var15[var27Lifetime2] = var38.d((byte) -2);
             }
           }
           if (var16 != null) {
             for (var27Lifetime3 = 1; var47.length > var27Lifetime3; var27Lifetime3 += 2) {
-              var16[var27Lifetime3] = var38.readByte((byte) -2);
+              var16[var27Lifetime3] = var38.d((byte) -2);
             }
           }
           for (var27Lifetime4 = 0; var12 > var27Lifetime4; var27Lifetime4++) {
@@ -1036,7 +1036,7 @@ final class ca extends IntrusiveNode {
             if (null != var48.field_p) {
               var19Lifetime3 = 0;
               for (var29Lifetime1 = 2; var29Lifetime1 < var48.field_p.length; var29Lifetime1 += 2) {
-                var19Lifetime3 = 1 + (var19Lifetime3 + var38.readUnsignedByte((byte) -90));
+                var19Lifetime3 = 1 + (var19Lifetime3 + var38.f((byte) -90));
                 var48.field_p[var29Lifetime1] = (byte)var19Lifetime3;
               }
             }
@@ -1046,16 +1046,16 @@ final class ca extends IntrusiveNode {
             if (null != var49.field_m) {
               var19Lifetime4 = 0;
               for (var29Lifetime2 = 2; var29Lifetime2 < var49.field_m.length; var29Lifetime2 += 2) {
-                var19Lifetime4 = var19Lifetime4 - (-1 - var38.readUnsignedByte((byte) -61));
+                var19Lifetime4 = var19Lifetime4 - (-1 - var38.f((byte) -61));
                 var49.field_m[var29Lifetime2] = (byte)var19Lifetime4;
               }
             }
           }
           if (null != var15) {
-            var19Lifetime5 = var38.readUnsignedByte((byte) -90);
+            var19Lifetime5 = var38.f((byte) -90);
             var15[0] = (byte)var19Lifetime5;
             for (var27Lifetime6 = 2; var58.length > var27Lifetime6; var27Lifetime6 += 2) {
-              var19Lifetime5 = var38.readUnsignedByte((byte) -55) + (1 + var19Lifetime5);
+              var19Lifetime5 = var38.f((byte) -55) + (1 + var19Lifetime5);
               var15[var27Lifetime6] = (byte)var19Lifetime5;
             }
             var27Lifetime6Lifetime1 = var58[0];
@@ -1084,13 +1084,13 @@ final class ca extends IntrusiveNode {
           }
           if (var16 == null) {
             for (var27Lifetime7 = 0; var27Lifetime7 < var12; var27Lifetime7++) {
-              var13[var27Lifetime7].field_i = var38.readUnsignedByte((byte) -126);
+              var13[var27Lifetime7].field_i = var38.f((byte) -126);
             }
           } else {
-            var19Lifetime6 = var38.readUnsignedByte((byte) -114);
+            var19Lifetime6 = var38.f((byte) -114);
             var16[0] = (byte)var19Lifetime6;
             for (var27Lifetime7 = 2; var47.length > var27Lifetime7; var27Lifetime7 += 2) {
-              var19Lifetime6 = var38.readUnsignedByte((byte) -127) + (1 + var19Lifetime6);
+              var19Lifetime6 = var38.f((byte) -127) + (1 + var19Lifetime6);
               var16[var27Lifetime7] = (byte)var19Lifetime6;
             }
             var27Lifetime7 = var47[0];
@@ -1141,34 +1141,34 @@ final class ca extends IntrusiveNode {
               this.field_o[var30Lifetime1Lifetime2] = (byte)var31Lifetime1Lifetime1;
             }
             for (var27Lifetime7 = 0; var27Lifetime7 < var12; var27Lifetime7++) {
-              var13[var27Lifetime7].field_i = var38.readUnsignedByte((byte) -126);
+              var13[var27Lifetime7].field_i = var38.f((byte) -126);
             }
           }
           for (var27Lifetime8 = 0; var27Lifetime8 < var12; var27Lifetime8++) {
             var50 = var13[var27Lifetime8];
             if (null != var50.field_m) {
-              var50.field_k = var38.readUnsignedByte((byte) -96);
+              var50.field_k = var38.f((byte) -96);
             }
             if (null != var50.field_p) {
-              var50.field_g = var38.readUnsignedByte((byte) -99);
+              var50.field_g = var38.f((byte) -99);
             }
             if (var50.field_i > 0) {
-              var50.field_e = var38.readUnsignedByte((byte) -76);
+              var50.field_e = var38.f((byte) -76);
             }
           }
           for (var27Lifetime9 = 0; var12 > var27Lifetime9; var27Lifetime9++) {
-            var13[var27Lifetime9].field_q = var38.readUnsignedByte((byte) -58);
+            var13[var27Lifetime9].field_q = var38.f((byte) -58);
           }
           for (var27Lifetime10 = 0; var12 > var27Lifetime10; var27Lifetime10++) {
             var51 = var13[var27Lifetime10];
             if (0 < var51.field_q) {
-              var51.field_o = var38.readUnsignedByte((byte) -81);
+              var51.field_o = var38.f((byte) -81);
             }
           }
           for (var27Lifetime11 = 0; var27Lifetime11 < var12; var27Lifetime11++) {
             var52 = var13[var27Lifetime11];
             if (var52.field_o > 0) {
-              var52.field_n = var38.readUnsignedByte((byte) -61);
+              var52.field_n = var38.f((byte) -61);
             }
           }
           return;

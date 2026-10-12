@@ -3,17 +3,17 @@
  */
 final class ub {
     static wc field_e;
-    private ResourceArchive field_l;
-    private ResourceArchive field_c;
-    private NodeHashTable field_i;
+    private cm field_l;
+    private cm field_c;
+    private uh field_i;
     static int field_g;
     static String field_h;
     static boolean field_j;
-    static IndexedSprite[] field_a;
+    static gk[] field_a;
     static byte[] field_f;
     static String field_k;
     static String field_b;
-    private NodeHashTable field_d;
+    private uh field_d;
 
     final sk a(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
@@ -24,11 +24,11 @@ final class ub {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_c.getGroupCapacity((byte) -61) == 1) {
+          if (this.field_c.b((byte) -61) == 1) {
             stackIn_3_0 = this.a(param1, false, 0, param0);
             return stackIn_3_0;
           }
-          if (this.field_c.getFileCapacity(true, param1) == 1) {
+          if (this.field_c.a(true, param1) == 1) {
             stackIn_7_0 = this.a(0, false, param1, param0);
             return stackIn_7_0;
           }
@@ -51,23 +51,23 @@ final class ub {
     }
 
     final static void a(boolean param0) {
-        DualNode var1 = null;
-        int var2 = SteelSentinels.obfuscationControl;
-        DualNode var1Lifetime1;
+        kd var1 = null;
+        int var2 = SteelSentinels.field_G;
+        kd var1Lifetime1;
         try {
           nn.field_f = null;
           vd.field_h = 0;
           cc.field_gc = 0;
-          Sprite.field_c.clear(6);
-          am.field_c.clear(6);
+          ea.field_c.g(6);
+          am.field_c.g(6);
           var1 = pi.field_a.a(114);
           while (var1 != null) {
-            var1.unlinkDual(480);
+            var1.e(480);
             var1 = pi.field_a.a((byte) -55);
           }
           var1Lifetime1 = db.field_h.a(97);
           while (var1Lifetime1 != null) {
-            var1Lifetime1.unlinkDual(480);
+            var1Lifetime1.e(480);
             var1Lifetime1 = db.field_h.a((byte) -117);
           }
           if (!param0) {
@@ -166,11 +166,11 @@ final class ub {
           if (param0 != -35) {
             ub.a(-82);
           }
-          if (this.field_l.getGroupCapacity((byte) 121) == 1) {
+          if (this.field_l.b((byte) 121) == 1) {
             stackIn_4_0 = this.a(0, 0, param2, param1);
             return stackIn_4_0;
           }
-          if (1 != this.field_l.getFileCapacity(true, param2)) {
+          if (1 != this.field_l.a(true, param2)) {
             throw new RuntimeException();
           }
           stackIn_7_0 = this.a(param2, 0, 0, param1);
@@ -229,10 +229,10 @@ final class ub {
           var5_int = param2 ^ (65520 & param0 << 4 | param0 >>> 12);
           var5_int = var5_int | param0 << 16;
           if (param1 != 0) {
-            this.field_d = (NodeHashTable) null;
+            this.field_d = (uh) null;
           }
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (sk) (this.field_d.get(var6, 127));
+          var8 = (sk) (this.field_d.a(var6, 127));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -241,20 +241,20 @@ final class ub {
             param3[0] <= 0) {
             return null;
           }
-          var9 = (uk) (this.field_i.get(var6, 124));
+          var9 = (uk) (this.field_i.a(var6, 124));
           if (var9 == null) {
             var9 = uk.a(this.field_l, param0, param2);
             if (var9 == null) {
               return null;
             }
-            this.field_i.put(var6, var9, -1816);
+            this.field_i.a(var6, var9, -1816);
           }
           var8Lifetime1 = var9.a(param3);
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.unlink(4);
-          this.field_d.put(var6, var8Lifetime1, -1816);
+          var9.b(4);
+          this.field_d.a(var6, var8Lifetime1, -1816);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -287,7 +287,7 @@ final class ub {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_c.getGroupId(param0, 103);
+          var5_int = this.field_c.a(param0, 103);
           if (var5_int < 0) {
             return null;
           }
@@ -295,7 +295,7 @@ final class ub {
             var7 = (int[]) null;
             discarded$1 = this.a((String) null, 67, (String) null, (int[]) null);
           }
-          var6 = this.field_c.getFileId(var5_int, -32759, param2);
+          var6 = this.field_c.a(var5_int, -32759, param2);
           if (var6 < 0) {
             return null;
           }
@@ -384,7 +384,7 @@ final class ub {
             stackIn_2_0 = (sk) null;
             return stackIn_2_0;
           }
-          var8 = (sk) (this.field_d.get(var6, 124));
+          var8 = (sk) (this.field_d.a(var6, 124));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -399,7 +399,7 @@ final class ub {
           }
           var10 = var9.b();
           var8Lifetime1 = var10;
-          this.field_d.put(var6, var8Lifetime1, -1816);
+          this.field_d.a(var6, var8Lifetime1, -1816);
           if (param3 != null) {
             param3[0] = param3[0] - var10.field_r.length;
           }
@@ -423,7 +423,7 @@ final class ub {
         int var2;
         int var3;
         int var2Lifetime1;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         if (param0 > 115) {
           var2 = param1;
           if (var2 == 2) {
@@ -519,9 +519,9 @@ final class ub {
         return km.field_f;
     }
 
-    ub(ResourceArchive param0, ResourceArchive param1) {
-        this.field_i = new NodeHashTable(256);
-        this.field_d = new NodeHashTable(256);
+    ub(cm param0, cm param1) {
+        this.field_i = new uh(256);
+        this.field_d = new uh(256);
         try {
           this.field_c = param0;
           this.field_l = param1;

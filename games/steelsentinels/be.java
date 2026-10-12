@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class be {
-    static SceneWidget field_c;
+    static gh field_c;
     static int field_b;
     static String field_g;
     static int field_a;
-    static RgbSprite[] field_f;
+    static wk[] field_f;
     static int field_e;
     static long field_d;
 
@@ -23,13 +23,13 @@ final class be {
         Object var5 = null;
         int var6 = 0;
         byte[] var8 = null;
-        CipherPacketBuffer var9 = null;
+        kj var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         try {
           var9 = rf.field_d;
-          var2 = var9.readUnsignedByte((byte) -70);
+          var2 = var9.f((byte) -70);
           if (param0 != -16786) {
             return;
           }
@@ -39,17 +39,17 @@ final class be {
               pm.m(param0 ^ -16880);
               return;
             }
-            var3 = var9.readInt(0);
-            var4 = (rh) (ol.field_Vb.first(13058));
+            var3 = var9.i(0);
+            var4 = (rh) (ol.field_Vb.e(13058));
             while (var4 != null) {
               if (~var4.field_x != ~var3) {
-                var4 = (rh) (ol.field_Vb.next((byte) -59));
+                var4 = (rh) (ol.field_Vb.a((byte) -59));
                 continue;
               }
               break;
             }
             if (var4 != null) {
-              var4.unlink(param0 ^ -16790);
+              var4.b(param0 ^ -16790);
               return;
             }
             stackIn_24_0 = param0;
@@ -57,12 +57,12 @@ final class be {
             pm.m(stackIn_24_0 + stackIn_24_1);
             return;
           }
-          var3_ref_c = (c) (fg.field_Ub.first(13058));
+          var3_ref_c = (c) (fg.field_Ub.e(13058));
           if (var3_ref_c == null) {
             pm.m(111);
             return;
           }
-          var4_int = var9.readUnsignedByte((byte) -106);
+          var4_int = var9.f((byte) -106);
           if (var4_int == 0) {
             var5 = null;
           } else {
@@ -70,16 +70,16 @@ final class be {
             var10 = var11;
             var8 = var10;
             var5 = var8;
-            var9.readBytes(0, var11, 28, var4_int);
+            var9.a(0, var11, 28, var4_int);
           }
-          var9.position = var9.position + 4;
+          var9.field_p = var9.field_p + 4;
           if (!var9.a((byte) -32)) {
             pm.m(param0 ^ 16871);
             return;
           }
           var3_ref_c.field_q = true;
           var3_ref_c.field_t = (byte[]) (var5);
-          var3_ref_c.unlink(4);
+          var3_ref_c.b(4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -88,7 +88,7 @@ final class be {
         }
     }
 
-    final static u a(ResourceArchive param0, ResourceArchive param1, byte param2, String param3, String param4) {
+    final static u a(cm param0, cm param1, byte param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -105,12 +105,12 @@ final class be {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param0.getGroupId(param4, 34);
+          var5_int = param0.a(param4, 34);
           if (param2 >= -44) {
             stackIn_2_0 = (u) null;
             return stackIn_2_0;
           }
-          var6 = param0.getFileId(var5_int, -32759, param3);
+          var6 = param0.a(var5_int, -32759, param3);
           stackIn_4_0 = lj.a(param1, var6, -56, param0, var5_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

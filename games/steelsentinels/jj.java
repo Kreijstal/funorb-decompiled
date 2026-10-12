@@ -4,19 +4,19 @@
 final class jj {
     static String field_j;
     static String[] field_h;
-    static RgbSprite field_e;
+    static wk field_e;
     static int field_i;
     static int field_c;
     static int field_d;
-    static SceneWidget field_a;
+    static gh field_a;
     int field_g;
     static String field_f;
-    static RgbSprite[] field_k;
+    static wk[] field_k;
     static String field_b;
 
     final static boolean a(int param0) {
         if (param0 != -1) {
-          field_e = (RgbSprite) null;
+          field_e = (wk) null;
         }
         return gb.field_c.b(64);
     }
@@ -32,7 +32,7 @@ final class jj {
           return kh.field_z;
         }
         if (!param0) {
-          field_e = (RgbSprite) null;
+          field_e = (wk) null;
         }
         return cc.field_Xb;
     }
@@ -68,7 +68,7 @@ final class jj {
           int var6_intLifetime1;
           int var6_intLifetime2;
           int var8Lifetime1;
-          var9 = SteelSentinels.obfuscationControl;
+          var9 = SteelSentinels.field_G;
           try {
             if (param0 > -98) {
               field_d = -13;
@@ -85,16 +85,16 @@ final class jj {
               } else {
                 ic.field_T = ak.a(param2, param5, -20407, false);
               }
-              mm.field_g.position = 0;
-              mm.field_g.writeByte((byte) 115, 14);
-              mm.field_g.writeByte((byte) 109, ic.field_T.a((byte) 121).field_e);
+              mm.field_g.field_p = 0;
+              mm.field_g.a((byte) 115, 14);
+              mm.field_g.a((byte) 109, ic.field_T.a((byte) 121).field_e);
               gj.a(0, -1);
               rn.field_v = f.field_D;
             }
             if (rn.field_v == f.field_D &&
               ve.a((byte) -127, 1)) {
-              var6_int = rf.field_d.readUnsignedByte((byte) -55);
-              rf.field_d.position = 0;
+              var6_int = rf.field_d.f((byte) -55);
+              rf.field_d.field_p = 0;
               if (var6_int == 0) {
                 rn.field_v = od.field_d;
               } else {
@@ -106,15 +106,15 @@ final class jj {
             if (rn.field_v == od.field_d &&
               ve.a((byte) -108, 8)) {
               oa.field_G = rf.field_d.g((byte) -115);
-              rf.field_d.position = 0;
+              rf.field_d.field_p = 0;
               bc.a(param4, 2, param3, ic.field_T, param1);
               rn.field_v = uf.field_g;
             }
             boolean decompiledFrameRemainder0 = true;
             if (rn.field_v == uf.field_g &&
               ve.a((byte) -86, 1)) {
-              var6_intLifetime1 = rf.field_d.readUnsignedByte((byte) -68);
-              rf.field_d.position = 0;
+              var6_intLifetime1 = rf.field_d.f((byte) -68);
+              rf.field_d.field_p = 0;
               on.field_k = null;
               ch.field_N = var6_intLifetime1;
               if (0 != var6_intLifetime1 &&
@@ -133,23 +133,23 @@ final class jj {
               }
               if (decompiledFrameRemainder0) {
                 jg.field_f = -1;
-                rn.field_v = Projectile.field_N;
+                rn.field_v = wl.field_N;
               }
             }
-            if (Projectile.field_N == rn.field_v &&
+            if (wl.field_N == rn.field_v &&
               pm.n(121)) {
               li.field_w = rf.field_d.g((byte) -101);
               gj.field_b = param5;
-              NodeDeque.field_d = rf.field_d.readUnsignedByte((byte) -65);
-              di.field_h = rf.field_d.readUnsignedByte((byte) -54);
-              rd.field_b = rf.field_d.readUnsignedShort((byte) -60);
+              ul.field_d = rf.field_d.f((byte) -65);
+              di.field_h = rf.field_d.f((byte) -54);
+              rd.field_b = rf.field_d.c((byte) -60);
               var6 = rf.field_d.g(-122);
-              var7 = rf.field_d.readUnsignedByte((byte) -128);
+              var7 = rf.field_d.f((byte) -128);
               if (0 != (1 & var7)) {
                 ed.b((byte) -105);
               }
               stackIn_44_0 = ((16 & var7) != 0);
-              CipherPacketBuffer.field_B = stackIn_44_0;
+              kj.field_B = stackIn_44_0;
               if (!param4) {
                 stackIn_49_0 = ((8 & var7) != 0);
                 fj.field_e = stackIn_49_0;
@@ -162,42 +162,42 @@ final class jj {
                 }
               }
               if (cd.field_a) {
-                rf.field_d.readUnsignedByte((byte) -118);
-                rf.field_d.readUnsignedByte((byte) -83);
-                rf.field_d.readInt(0);
-                ag.field_q = rf.field_d.readUnsignedShort((byte) -60);
+                rf.field_d.f((byte) -118);
+                rf.field_d.f((byte) -83);
+                rf.field_d.i(0);
+                ag.field_q = rf.field_d.c((byte) -60);
                 nj.field_Y = new byte[ag.field_q];
                 for (var8 = 0; var8 < ag.field_q; var8++) {
-                  nj.field_Y[var8] = rf.field_d.readByte((byte) -2);
+                  nj.field_Y[var8] = rf.field_d.d((byte) -2);
                 }
               }
               g.field_l = rf.field_d.h(1);
               var11 = (CharSequence) ((Object) g.field_l);
               ng.field_r = ui.a(1, var11);
-              ua.field_o = rf.field_d.readUnsignedByte((byte) -106);
+              ua.field_o = rf.field_d.f((byte) -106);
               rn.field_v = jd.field_sb;
-              if (ic.field_T.a((byte) 69) == ArticulatedPart.field_F) {
-                PartInstruction.field_o.a(-48, Projectile.d((byte) -21));
+              if (ic.field_T.a((byte) 69) == nk.field_F) {
+                qd.field_o.a(-48, wl.d((byte) -21));
               } else {
                 if (ic.field_T.a((byte) 108) == ol.field_Sb) {
-                  mj.field_Vb.a(-70, Projectile.d((byte) -21));
+                  mj.field_Vb.a(-70, wl.d((byte) -21));
                 }
               }
               ui.field_T = false;
               if (var6 != null) {
-                ri.a(var6, Projectile.d((byte) -21), 124);
+                ri.a(var6, wl.d((byte) -21), 124);
               }
               if (0 >= rd.field_b &&
                 !ok.field_g) {
                 try {
-                  hn.a(Projectile.d((byte) -21), (byte) -96, "unzap");
+                  hn.a(wl.d((byte) -21), (byte) -96, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  hn.a("zap", (byte) -41, Projectile.d((byte) -21), new Object[]{hh.a(li.field_w, (byte) 65)});
+                  hn.a("zap", (byte) -41, wl.d((byte) -21), new Object[]{hh.a(li.field_w, (byte) 65)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -206,11 +206,11 @@ final class jj {
               if (0 < rd.field_b) {
                 ki.field_ib = true;
               }
-              mm.field_g.initializeOpcodeCipher(-1833430685, dj.field_k);
+              mm.field_g.a(-1833430685, dj.field_k);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 dj.field_k[var8Lifetime1] = dj.field_k[var8Lifetime1] + 50;
               }
-              rf.field_d.initializeOpcodeCipher(-1833430685, dj.field_k);
+              rf.field_d.a(-1833430685, dj.field_k);
               stackIn_86_0 = ch.field_N;
               return stackIn_86_0;
             }
@@ -236,7 +236,7 @@ final class jj {
                 if (30000L >= ki.l(150)) {
                   di.field_e = bc.field_mb;
                 } else {
-                  di.field_e = CipherPacketBuffer.field_E;
+                  di.field_e = kj.field_E;
                 }
                 ui.field_T = false;
                 stackIn_105_0 = 3;
@@ -282,7 +282,7 @@ final class jj {
         field_a = null;
         field_f = null;
         if (param0 > -116) {
-          field_k = (RgbSprite[]) null;
+          field_k = (wk[]) null;
         }
         field_k = null;
     }
@@ -291,7 +291,7 @@ final class jj {
         field_h = new String[]{"HEALTH", "<%0> kPm", "SHIELDS", "<%0> GJ", "ENERGY CAPACITY", "<%0> TJ", "ENERGY GENERATION", "<%0> GJ/s", "JUMP", "<%0>%", "THRUST", "<%0>%"};
         field_c = -1;
         field_j = "<%0> has entered another game.";
-        field_e = new RgbSprite(28, 28);
+        field_e = new wk(28, 28);
         field_f = "Waiting for <%0> to start the game...";
         field_b = "You have been removed from <%0>'s game.";
     }

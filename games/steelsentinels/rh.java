@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rh extends IntrusiveNode {
+final class rh extends ck {
     byte[] field_r;
     static String field_p;
-    static SceneWidget field_u;
+    static gh field_u;
     int field_x;
     static rj[] field_o;
     static cj field_q;
     static String[] field_t;
-    static RgbSprite[] field_v;
+    static wk[] field_v;
     static int field_s;
-    static SceneWidget field_w;
+    static gh field_w;
 
     final static void a(int param0, boolean param1, int param2, int param3) {
         int var4;
@@ -24,17 +24,17 @@ final class rh extends IntrusiveNode {
           return;
         }
         qf.field_c.a((byte) -80, param1);
-        var4 = IntKeyLookup.field_i.m(109) ? 1 : 0;
+        var4 = jk.field_i.m(109) ? 1 : 0;
         if (lb.field_gc != 0 &&
           var4 == 0) {
           pm.a((byte) 48);
           param1 = false;
         }
         if (param1) {
-          IntKeyLookup.field_i.a((byte) 68, param2, param0);
+          jk.field_i.a((byte) 68, param2, param0);
         }
         if (var4 == 0) {
-          var5 = IntKeyLookup.field_i.j(0) + IntKeyLookup.field_i.field_Rb;
+          var5 = jk.field_i.j(0) + jk.field_i.field_Rb;
           if (var5 > 640) {
             ed.field_i = ed.field_i + 5;
             return;
@@ -49,7 +49,7 @@ final class rh extends IntrusiveNode {
           return;
         }
         qf.field_c.a((byte) -37, param1);
-        var5Lifetime1 = IntKeyLookup.field_i.j(0) + IntKeyLookup.field_i.field_Rb;
+        var5Lifetime1 = jk.field_i.j(0) + jk.field_i.field_Rb;
         if (var5Lifetime1 > 640) {
           ed.field_i = ed.field_i + 5;
           return;
@@ -108,15 +108,15 @@ final class rh extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, jm param2) {
-        CipherPacketBuffer var3 = null;
+        kj var3 = null;
         if (param1 != 0) {
           return;
         }
         try {
           var3 = mm.field_g;
-          var3.writeCipheredOpcode(param0, (byte) -117);
-          var3.writeByte((byte) 123, param2.field_q);
-          var3.writeShort(param2.field_s, 77);
+          var3.a(param0, (byte) -117);
+          var3.a((byte) 123, param2.field_q);
+          var3.d(param2.field_s, 77);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "rh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -134,7 +134,7 @@ final class rh extends IntrusiveNode {
         field_p = "Logging in...";
         field_t = new String[]{"KNEEL BEFORE YOUR CONQUEROR!", "Lord Ba'al, help me!", "Lord Ba'al, help us!"};
         field_u = null;
-        field_v = new RgbSprite[26];
+        field_v = new wk[26];
         field_s = 0;
     }
 }

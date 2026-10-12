@@ -11,11 +11,11 @@ final class gl extends al {
     static boolean[][] field_x;
     static kg field_t;
     private long field_k;
-    static SceneWidget field_u;
+    static gh field_u;
     private int field_o;
     static String field_r;
     static int field_p;
-    static SceneWidget field_y;
+    static gh field_y;
     static char[] field_w;
     static int field_v;
 
@@ -26,16 +26,16 @@ final class gl extends al {
         }
         if (param0 >= -116) {
           String var3 = (String) null;
-          gl.a((ResourceArchive) null, (byte) 47, (String) null, (String) null);
+          gl.a((cm) null, (byte) 47, (String) null, (String) null);
         }
     }
 
-    final static IndexedSprite a(ResourceArchive param0, byte param1, String param2, String param3) {
+    final static gk a(cm param0, byte param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        IndexedSprite stackIn_2_0 = null;
-        IndexedSprite stackIn_4_0 = null;
+        gk stackIn_2_0 = null;
+        gk stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -45,12 +45,12 @@ final class gl extends al {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.getGroupId(param2, 44);
+          var4_int = param0.a(param2, 44);
           if (param1 != 85) {
-            stackIn_2_0 = (IndexedSprite) null;
+            stackIn_2_0 = (gk) null;
             return stackIn_2_0;
           }
-          var5 = param0.getFileId(var4_int, -32759, param3);
+          var5 = param0.a(var4_int, -32759, param3);
           stackIn_4_0 = va.a(var4_int, param0, true, var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -114,7 +114,7 @@ final class gl extends al {
     final int a(long param0, byte param1) {
         int var4;
         int var5;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         if (param1 != -97) {
           return 92;
         }
@@ -137,7 +137,7 @@ final class gl extends al {
     }
 
     private final long d(byte param0) {
-        int var9 = SteelSentinels.obfuscationControl;
+        int var9 = SteelSentinels.field_G;
         long var2 = System.nanoTime();
         long var4 = -this.field_n + var2;
         this.field_n = var2;

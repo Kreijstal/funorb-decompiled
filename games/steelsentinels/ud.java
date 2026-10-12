@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ud extends IntrusiveNode {
+final class ud extends ck {
     int field_B;
     static long field_v;
     int field_p;
@@ -22,10 +22,10 @@ final class ud extends IntrusiveNode {
     final static void a(boolean param0) {
         if (!param0) {
           field_C = -27;
-          bj.a(-128, Projectile.d((byte) -21));
+          bj.a(-128, wl.d((byte) -21));
           return;
         }
-        bj.a(-128, Projectile.d((byte) -21));
+        bj.a(-128, wl.d((byte) -21));
     }
 
     final static boolean e(int param0) {

@@ -3,12 +3,12 @@
  */
 final class mm {
     static String field_c;
-    static SceneWidget field_a;
-    static NodeDeque field_b;
+    static gh field_a;
+    static ul field_b;
     static String[] field_d;
     static String field_f;
     static ml field_e;
-    static CipherPacketBuffer field_g;
+    static kj field_g;
 
     final synchronized static long a(int param0) {
         long var1 = System.currentTimeMillis();
@@ -138,7 +138,7 @@ final class mm {
         }
     }
 
-    final static boolean a(int param0, ArticulatedPart param1) {
+    final static boolean a(int param0, nk param1) {
         int var3 = 0;
         int[] var2 = null;
         RuntimeException var2_ref = null;
@@ -150,13 +150,13 @@ final class mm {
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
-          if (!ArticulatedPart.f((byte) -23) &&
-            oc.a(param1.componentId, param0 + 16155, false)) {
+          if (!nk.f((byte) -23) &&
+            oc.a(param1.field_N, param0 + 16155, false)) {
             return false;
           }
-          if (t.a(rn.field_D, param1.componentId, -20370)) {
+          if (t.a(rn.field_D, param1.field_N, -20370)) {
             return true;
           }
           if (param1.field_Q == 1) {
@@ -167,7 +167,7 @@ final class mm {
           var5 = var6;
           var2 = var5;
           for (var3 = 0; var3 < var7.length - 8; var3++) {
-            if (var7[var3] == param1.componentId) {
+            if (var7[var3] == param1.field_N) {
               return true;
             }
           }
@@ -203,7 +203,7 @@ final class mm {
     static {
         field_c = "% engineered";
         field_d = new String[]{"PURPLE TEAM", "ORANGE TEAM", "GREEN TEAM"};
-        field_b = new NodeDeque();
+        field_b = new ul();
         field_f = "Cubes needed: ";
         field_e = new ml();
     }

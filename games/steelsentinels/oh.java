@@ -7,12 +7,12 @@ final class oh {
     static boolean field_e;
     static String field_d;
     static int[] field_h;
-    static ResourceArchive field_a;
+    static cm field_a;
     static int field_f;
     static String field_g;
 
     final static boolean a(int param0, boolean param1, int param2, int param3) {
-        ResourceArchive var5;
+        cm var5;
         if (param3 < 0) {
           return false;
         }
@@ -20,27 +20,27 @@ final class oh {
           return false;
         }
         if (param2 >= 1 &&
-          ArticulatedPart.b(-14487, param3, param0) >= param2) {
+          nk.b(-14487, param3, param0) >= param2) {
           if (!param1) {
-            var5 = (ResourceArchive) null;
-            oh.a(-54, (int[]) null, (String[]) null, (String[][]) null, (String[]) null, 77, (String[][]) null, -51, (RgbSprite[][]) null, (RgbSprite[][]) null, 31, (String[]) null, (byte[]) null, (byte[]) null, (ResourceArchive) null);
+            var5 = (cm) null;
+            oh.a(-54, (int[]) null, (String[]) null, (String[][]) null, (String[]) null, 77, (String[][]) null, -51, (wk[][]) null, (wk[][]) null, 31, (String[]) null, (byte[]) null, (byte[]) null, (cm) null);
           }
           return true;
         }
         return false;
     }
 
-    final static void a(int param0, int[] param1, String[] param2, String[][] param3, String[] param4, int param5, String[][] param6, int param7, RgbSprite[][] param8, RgbSprite[][] param9, int param10, String[] param11, byte[] param12, byte[] param13, ResourceArchive param14) {
+    final static void a(int param0, int[] param1, String[] param2, String[][] param3, String[] param4, int param5, String[][] param6, int param7, wk[][] param8, wk[][] param9, int param10, String[] param11, byte[] param12, byte[] param13, cm param14) {
         qh[] array$0 = null;
         qh[] array$1 = null;
         qh[] array$2 = null;
         int var19 = 0;
-        SceneWidget stackIn_5_0;
-        SceneWidget stackIn_5_1;
+        gh stackIn_5_0;
+        gh stackIn_5_1;
         long stackIn_5_2;
-        SceneWidget stackIn_5_3;
-        SceneWidget stackIn_6_0 = null;
-        SceneWidget stackIn_6_1 = null;
+        gh stackIn_5_3;
+        gh stackIn_6_0 = null;
+        gh stackIn_6_1 = null;
         String stackIn_6_4 = null;
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
@@ -67,22 +67,22 @@ final class oh {
         String stackIn_104_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
-        SceneWidget var16 = null;
+        gh var16 = null;
         int var17_int = 0;
-        SceneWidget var17 = null;
+        gh var17 = null;
         int var18 = 0;
         Object var19_ref = null;
         Object var20 = null;
         int var21 = 0;
-        SceneWidget var23 = null;
-        SceneWidget var24 = null;
+        gh var23 = null;
+        gh var24 = null;
         int var18Lifetime1;
         int var18Lifetime2;
         int var17_intLifetime1;
         int var17_intLifetime2;
         int var17_intLifetime3;
         int var17_intLifetime4;
-        var21 = SteelSentinels.obfuscationControl;
+        var21 = SteelSentinels.field_G;
         try {
           bl.field_h = param3;
           e.field_g = param4;
@@ -90,7 +90,7 @@ final class oh {
           dc.field_b = param9;
           ok.field_a = param7;
           al.field_a = param2;
-          IntrusiveNode.field_b = param11;
+          ck.field_b = param11;
           tc.field_z = param0;
           eh.field_e = param12;
           fj.field_b = param6;
@@ -106,11 +106,11 @@ final class oh {
           m.field_j[4] = fm.field_g;
           m.field_j[0] = ei.field_x;
           m.field_j[1] = vn.field_l;
-          fl.field_c = new SceneWidget(0L, (SceneWidget) null);
-          PacketBuffer.field_o = new SceneWidget(0L, sj.field_J, uj.field_g);
-          uj.field_j = new SceneWidget((long)param5, kb.field_b, sf.field_l);
-          mj.field_Sb = new kg(0L, new SceneWidget(0L, (SceneWidget) null), IntKeyLookup.field_h, NodeHashTable.field_j);
-          fl.field_c.a(PacketBuffer.field_o, 119);
+          fl.field_c = new gh(0L, (gh) null);
+          gi.field_o = new gh(0L, sj.field_J, uj.field_g);
+          uj.field_j = new gh((long)param5, kb.field_b, sf.field_l);
+          mj.field_Sb = new kg(0L, new gh(0L, (gh) null), jk.field_h, uh.field_j);
+          fl.field_c.a(gi.field_o, 119);
           if (rm.field_p) {
             fl.field_c.a(uj.field_j, 122);
           }
@@ -120,19 +120,19 @@ final class oh {
           var23 = mj.field_Sb.field_Tb;
           var24 = var23;
           var24.field_Kb = 1;
-          Explosion.field_C = new SceneWidget(0L, bd.field_f);
-          Explosion.field_C.field_Kb = 1;
-          sg.field_i = new SceneWidget(0L, gm.field_c, NodeIterator.field_i.toUpperCase());
-          qi.field_c = new SceneWidget(0L, ParticleEffect.field_E, r.field_q.toUpperCase());
-          q.field_d = new SceneWidget(0L, ce.field_o);
-          td.field_bc = new SceneWidget(0L, sj.field_J, cf.field_p);
-          dj.field_d = new SceneWidget(0L, im.field_f, field_c);
-          BattleTerrain.field_q = new SceneWidget(0L, im.field_f, vf.field_f);
-          pe.field_v = new SceneWidget(0L, im.field_f, ij.field_Q);
-          ql.field_Vb = new SceneWidget(0L, im.field_f, le.field_B);
-          cf.field_w = new SceneWidget(0L, kb.field_b, bf.field_Bb);
-          rn.field_y = new kg(0L, new SceneWidget(0L, (SceneWidget) null), IntKeyLookup.field_h, NodeHashTable.field_j);
-          qm.field_b = new SceneWidget(0L, rm.field_j, fc.field_f.toUpperCase());
+          jb.field_C = new gh(0L, bd.field_f);
+          jb.field_C.field_Kb = 1;
+          sg.field_i = new gh(0L, gm.field_c, jc.field_i.toUpperCase());
+          qi.field_c = new gh(0L, qb.field_E, r.field_q.toUpperCase());
+          q.field_d = new gh(0L, ce.field_o);
+          td.field_bc = new gh(0L, sj.field_J, cf.field_p);
+          dj.field_d = new gh(0L, im.field_f, field_c);
+          hd.field_q = new gh(0L, im.field_f, vf.field_f);
+          pe.field_v = new gh(0L, im.field_f, ij.field_Q);
+          ql.field_Vb = new gh(0L, im.field_f, le.field_B);
+          cf.field_w = new gh(0L, kb.field_b, bf.field_Bb);
+          rn.field_y = new kg(0L, new gh(0L, (gh) null), jk.field_h, uh.field_j);
+          qm.field_b = new gh(0L, rm.field_j, fc.field_f.toUpperCase());
           qm.field_b.field_T = rm.field_p;
           stackIn_5_0 = null;
           stackIn_5_1 = null;
@@ -147,13 +147,13 @@ final class oh {
             stackIn_6_1 = null;
             stackIn_6_4 = kc.field_C;
           }
-          uc.field_j = new SceneWidget(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
-          pc.field_q = new SceneWidget(0L, (SceneWidget) null);
+          uc.field_j = new gh(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
+          pc.field_q = new gh(0L, (gh) null);
           pc.field_q.a(qi.field_c, 118);
           pc.field_q.a(q.field_d, 119);
           q.field_d.a(td.field_bc, 120);
           q.field_d.a(dj.field_d, param5 ^ 124);
-          q.field_d.a(BattleTerrain.field_q, param5 ^ 120);
+          q.field_d.a(hd.field_q, param5 ^ 120);
           if (rm.field_p) {
             q.field_d.a(pe.field_v, 120);
           }
@@ -164,66 +164,66 @@ final class oh {
             pc.field_q.a(qm.field_b, 122);
           }
           pc.field_q.a(uc.field_j, param5 + 121);
-          sj.field_z = new SceneWidget(0L, bd.field_f);
+          sj.field_z = new gh(0L, bd.field_f);
           sj.field_z.field_Kb = 1;
           sj.field_z.field_Fb = 0;
-          pm.field_gb = new SceneWidget(0L, b.field_e, Sentinel.field_D.toUpperCase());
-          fl.field_b = new SceneWidget(0L, an.field_a);
+          pm.field_gb = new gh(0L, b.field_e, mb.field_D.toUpperCase());
+          fl.field_b = new gh(0L, an.field_a);
           fl.field_b.a(sj.field_z, 122);
           fl.field_b.a(pm.field_gb, 122);
-          Projectile.field_J = new SceneWidget(0L, IntKeyLookup.field_h);
-          Projectile.field_J.b(bd.field_f, param5 ^ 6402);
-          var16 = Projectile.field_J;
-          Projectile.field_J.field_Fb = 1;
+          wl.field_J = new gh(0L, jk.field_h);
+          wl.field_J.b(bd.field_f, param5 ^ 6402);
+          var16 = wl.field_J;
+          wl.field_J.field_Fb = 1;
           var16.field_Kb = 1;
-          m.field_i = new SceneWidget(0L, (SceneWidget) null);
-          uj.field_e = new SceneWidget(0L, bd.field_f);
+          m.field_i = new gh(0L, (gh) null);
+          uj.field_e = new gh(0L, bd.field_f);
           uj.field_e.field_Kb = 1;
-          gl.field_u = new SceneWidget(0L, sj.field_J, uj.field_g);
-          ei.field_p = new SceneWidget(0L, kb.field_b, sf.field_l);
-          gl.field_t = new kg(0L, new SceneWidget(0L, (SceneWidget) null), IntKeyLookup.field_h, NodeHashTable.field_j);
+          gl.field_u = new gh(0L, sj.field_J, uj.field_g);
+          ei.field_p = new gh(0L, kb.field_b, sf.field_l);
+          gl.field_t = new kg(0L, new gh(0L, (gh) null), jk.field_h, uh.field_j);
           m.field_i.a(uj.field_e, 120);
           m.field_i.a(gl.field_u, 127);
           if (rm.field_p) {
             m.field_i.a(ei.field_p, param5 + 118);
           }
           m.field_i.a(gl.field_t, 124);
-          mn.field_E = new SceneWidget(0L, gm.field_c, bi.field_c.toUpperCase());
-          nm.field_q = new SceneWidget(0L, ParticleEffect.field_E);
-          qa.field_L = new SceneWidget(0L, ce.field_o);
-          bj.field_d = new SceneWidget(0L, c.field_p, ak.field_b.toUpperCase());
+          mn.field_E = new gh(0L, gm.field_c, bi.field_c.toUpperCase());
+          nm.field_q = new gh(0L, qb.field_E);
+          qa.field_L = new gh(0L, ce.field_o);
+          bj.field_d = new gh(0L, c.field_p, ak.field_b.toUpperCase());
           un.field_h = new qh[4 + param10][];
-          sl.field_k = new SceneWidget[4 + param10];
-          sl.field_k[0] = new SceneWidget(0L, dj.field_b, tm.field_c);
+          sl.field_k = new gh[4 + param10];
+          sl.field_k[0] = new gh(0L, dj.field_b, tm.field_c);
           un.field_h[0] = new qh[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
-            un.field_h[0][var17_int + 1] = new qh(0L, bf.field_Ab, (SceneWidget) null, ParticleEffect.field_K, hg.field_i[var17_int], m.field_j[var17_int]);
+            un.field_h[0][var17_int + 1] = new qh(0L, bf.field_Ab, (gh) null, qb.field_K, hg.field_i[var17_int], m.field_j[var17_int]);
           }
           if (jg.field_l.length >= 2) {
-            sl.field_k[1] = new SceneWidget(0L, dj.field_b, rb.field_d);
+            sl.field_k[1] = new gh(0L, dj.field_b, rb.field_d);
             array$0 = new qh[jg.field_l.length + 1];
             un.field_h[1] = array$0;
-            un.field_h[1][0] = new qh(0L, bf.field_Ab, (SceneWidget) null, ParticleEffect.field_K, (RgbSprite) null, cb.field_e);
+            un.field_h[1][0] = new qh(0L, bf.field_Ab, (gh) null, qb.field_K, (wk) null, cb.field_e);
             for (var17_intLifetime1 = 0; jg.field_l.length > var17_intLifetime1; var17_intLifetime1++) {
-              un.field_h[1][1 + var17_intLifetime1] = new qh(0L, bf.field_Ab, (SceneWidget) null, ParticleEffect.field_K, (RgbSprite) null, Integer.toString(jg.field_l[var17_intLifetime1]));
+              un.field_h[1][1 + var17_intLifetime1] = new qh(0L, bf.field_Ab, (gh) null, qb.field_K, (wk) null, Integer.toString(jg.field_l[var17_intLifetime1]));
             }
           }
-          sl.field_k[2] = new SceneWidget(0L, dj.field_b, SteelSentinels.field_H);
-          un.field_h[2] = new qh[]{new qh(0L, bf.field_Ab, (SceneWidget) null, ParticleEffect.field_K, (RgbSprite) null, cb.field_e), new qh(0L, bf.field_Ab, (SceneWidget) null, ParticleEffect.field_K, bm.field_Z[0], id.field_Sb), new qh(0L, bf.field_Ab, (SceneWidget) null, ParticleEffect.field_K, bm.field_Z[1], m.field_g)};
+          sl.field_k[2] = new gh(0L, dj.field_b, SteelSentinels.field_H);
+          un.field_h[2] = new qh[]{new qh(0L, bf.field_Ab, (gh) null, qb.field_K, (wk) null, cb.field_e), new qh(0L, bf.field_Ab, (gh) null, qb.field_K, bm.field_Z[0], id.field_Sb), new qh(0L, bf.field_Ab, (gh) null, qb.field_K, bm.field_Z[1], m.field_g)};
           if (tc.field_z > 1) {
-            sl.field_k[3] = new SceneWidget(0L, dj.field_b, pc.field_o);
+            sl.field_k[3] = new gh(0L, dj.field_b, pc.field_o);
             array$1 = new qh[1 + tc.field_z];
             un.field_h[3] = array$1;
-            un.field_h[3][0] = new qh(0L, bf.field_Ab, (SceneWidget) null, ParticleEffect.field_K, (RgbSprite) null, cb.field_e);
+            un.field_h[3][0] = new qh(0L, bf.field_Ab, (gh) null, qb.field_K, (wk) null, cb.field_e);
             for (var17_intLifetime2 = 0; tc.field_z > var17_intLifetime2; var17_intLifetime2++) {
-              un.field_h[3][var17_intLifetime2 + 1] = new qh(0L, bf.field_Ab, (SceneWidget) null, ParticleEffect.field_K, (RgbSprite) null, IntrusiveNode.field_b[var17_intLifetime2]);
+              un.field_h[3][var17_intLifetime2 + 1] = new qh(0L, bf.field_Ab, (gh) null, qb.field_K, (wk) null, ck.field_b[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param10 > var17_intLifetime3; var17_intLifetime3++) {
-            sl.field_k[var17_intLifetime3 + 4] = new SceneWidget(0L, dj.field_b, al.field_a[var17_intLifetime3]);
+            sl.field_k[var17_intLifetime3 + 4] = new gh(0L, dj.field_b, al.field_a[var17_intLifetime3]);
             array$2 = new qh[ec.a((int) ub.field_f[var17_intLifetime3], 255) + 1];
             un.field_h[var17_intLifetime3 + 4] = array$2;
-            un.field_h[4 + var17_intLifetime3][0] = new qh(0L, bf.field_Ab, (SceneWidget) null, ParticleEffect.field_K, (RgbSprite) null, cb.field_e);
+            un.field_h[4 + var17_intLifetime3][0] = new qh(0L, bf.field_Ab, (gh) null, qb.field_K, (wk) null, cb.field_e);
             for (var18 = 0; (255 & ub.field_f[var17_intLifetime3]) > var18; var18++) {
               if (null != dc.field_b) {
                 if (dc.field_b[var17_intLifetime3] == null) {
@@ -243,7 +243,7 @@ final class oh {
                   var20 = bl.field_h[var17_intLifetime3][var18];
                 }
               }
-              un.field_h[4 + var17_intLifetime3][1 + var18] = new qh(0L, bf.field_Ab, (SceneWidget) null, ParticleEffect.field_K, (RgbSprite) (var19_ref), (String) (var20));
+              un.field_h[4 + var17_intLifetime3][1 + var18] = new qh(0L, bf.field_Ab, (gh) null, qb.field_K, (wk) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; param10 + 4 > var17_intLifetime4; var17_intLifetime4++) {
@@ -259,14 +259,14 @@ final class oh {
               }
             }
           }
-          rn.field_C = new SceneWidget(0L, rm.field_j);
-          fk.field_q = new SceneWidget(0L, rm.field_j);
-          rh.field_w = new SceneWidget(0L, SceneWidget.field_ib);
+          rn.field_C = new gh(0L, rm.field_j);
+          fk.field_q = new gh(0L, rm.field_j);
+          rh.field_w = new gh(0L, gh.field_ib);
           rh.field_w.b(bd.field_f, 6402);
           var17 = rh.field_w;
           rh.field_w.field_Fb = 1;
           var17.field_Kb = 1;
-          gl.field_y = new SceneWidget(0L, (SceneWidget) null);
+          gl.field_y = new gh(0L, (gh) null);
           gl.field_y.a(nm.field_q, 127);
           gl.field_y.a(qa.field_L, 125);
           qa.field_L.a(bj.field_d, 118);
@@ -285,8 +285,8 @@ final class oh {
           gl.field_y.a(rn.field_C, 123);
           gl.field_y.a(fk.field_q, 120);
           gl.field_y.a(rh.field_w, 120);
-          tf.field_a = new SceneWidget(0L, od.field_g, he.field_j.toUpperCase());
-          ta.field_i = new SceneWidget(0L, b.field_e, NodeHashTable.field_f.toUpperCase());
+          tf.field_a = new gh(0L, od.field_g, he.field_j.toUpperCase());
+          ta.field_i = new gh(0L, b.field_e, uh.field_f.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -364,14 +364,14 @@ final class oh {
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, byte param5, int param6, int param7, boolean param8, boolean param9, boolean param10, boolean param11, int param12, int param13) {
         ll.field_i = null;
-        GameplayController.b((byte) 108);
-        param10 = NodeDeque.a(11, param1, param12, param6, param10, param3, param4);
+        nb.b((byte) 108);
+        param10 = ul.a(11, param1, param12, param6, param10, param3, param4);
         d.a(param10, param1, param7, param0, param13, param2, param8, (byte) -6, param11, param9);
         if (param5 > -121) {
           java.applet.Applet var15 = (java.applet.Applet) null;
           oh.a((java.applet.Applet) null, (byte) -9);
         }
-        PartInstruction.a(param7, (byte) 70, param11);
+        qd.a(param7, (byte) 70, param11);
         ug.a(-1, param10, param6, param7);
     }
 
@@ -383,23 +383,23 @@ final class oh {
         field_c = null;
         field_d = null;
         if (param0 != 1) {
-          ResourceArchive var2 = (ResourceArchive) null;
-          oh.a((int[]) null, false, (ResourceArchive) null, (IndexedSprite[]) null, (ResourceArchive) null);
+          cm var2 = (cm) null;
+          oh.a((int[]) null, false, (cm) null, (gk[]) null, (cm) null);
         }
     }
 
-    final static void a(int[] param0, boolean param1, ResourceArchive param2, IndexedSprite[] param3, ResourceArchive param4) {
-        RgbSprite[] dupTemp$0 = null;
-        RgbSprite[] dupTemp$1 = null;
-        RgbSprite[] dupTemp$2 = null;
-        RgbSprite[] dupTemp$3 = null;
-        IndexedSprite[] var5 = null;
-        IndexedSprite[] var6 = null;
+    final static void a(int[] param0, boolean param1, cm param2, gk[] param3, cm param4) {
+        wk[] dupTemp$0 = null;
+        wk[] dupTemp$1 = null;
+        wk[] dupTemp$2 = null;
+        wk[] dupTemp$3 = null;
+        gk[] var5 = null;
+        gk[] var6 = null;
         int[] var6_array = null;
         int var7_int = 0;
         int var18 = 0;
         int[] var19 = null;
-        IndexedSprite[] var20 = null;
+        gk[] var20 = null;
         int[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
@@ -416,26 +416,26 @@ final class oh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         fh var7 = null;
-        SceneWidget var8 = null;
-        SceneWidget var9 = null;
-        SceneWidget var10 = null;
-        SceneWidget var11 = null;
-        RgbSprite[] var12 = null;
-        RgbSprite[] var13 = null;
-        RgbSprite[] var14 = null;
-        SceneWidget var15 = null;
-        RgbSprite[] var16 = null;
-        RgbSprite[] var17 = null;
+        gh var8 = null;
+        gh var9 = null;
+        gh var10 = null;
+        gh var11 = null;
+        wk[] var12 = null;
+        wk[] var13 = null;
+        wk[] var14 = null;
+        gh var15 = null;
+        wk[] var16 = null;
+        wk[] var17 = null;
         int var7_intLifetime1;
         int var7_intLifetime2;
         int var7_intLifetime3;
-        var18 = SteelSentinels.obfuscationControl;
+        var18 = SteelSentinels.field_G;
         try {
           var20 = cj.a(-115, "lobby", param2, "crowns");
           var5 = var20;
           uc.field_l = var20.length;
           if (param3 != null) {
-            var6 = new IndexedSprite[param3.length + uc.field_l];
+            var6 = new gk[param3.length + uc.field_l];
             for (var7_int = 0; var7_int < uc.field_l; var7_int++) {
               var6[var7_int] = var20[var7_int];
             }
@@ -475,75 +475,75 @@ final class oh {
           var7.a(var5, var24);
           gd.field_kb.a(var5, var24);
           nh.field_d.a(var5, var24);
-          var8 = new SceneWidget(0L, (SceneWidget) null);
+          var8 = new gh(0L, (gh) null);
           var8.field_Ib = db.field_b;
           var8.field_nb = 16777215;
-          var8.field_L = (BitmapFont) ((Object) var7);
+          var8.field_L = (mi) ((Object) var7);
           var9 = var8;
           var8.field_Fb = 1;
           var9.field_Kb = 1;
-          var10 = new SceneWidget(0L, (SceneWidget) null);
+          var10 = new gh(0L, (gh) null);
           var10.field_Ib = db.field_b;
           var10.field_nb = 16777215;
-          var10.field_L = (BitmapFont) ((Object) gd.field_kb);
+          var10.field_L = (mi) ((Object) gd.field_kb);
           var10.field_Fb = 1;
           var11 = var10;
           var11.field_Kb = 1;
-          ParticleEffect.field_E = new SceneWidget(0L, var8);
-          ParticleEffect.field_E.field_I = ei.a(0, cf.a("heading", "lobby", (byte) -30, param2));
-          CipherPacketBuffer.field_H = new SceneWidget(0L, (SceneWidget) null);
-          CipherPacketBuffer.field_H.field_I = nl.a(param1, 8421504, false, -22, 120, 4210752);
-          nc.field_n = new SceneWidget(0L, (SceneWidget) null);
+          qb.field_E = new gh(0L, var8);
+          qb.field_E.field_I = ei.a(0, cf.a("heading", "lobby", (byte) -30, param2));
+          kj.field_H = new gh(0L, (gh) null);
+          kj.field_H.field_I = nl.a(param1, 8421504, false, -22, 120, 4210752);
+          nc.field_n = new gh(0L, (gh) null);
           nc.field_n.field_I = se.a(3, 1, 6316128, 114, 6316128, 13574);
-          kf.field_y = new SceneWidget(0L, (SceneWidget) null);
+          kf.field_y = new gh(0L, (gh) null);
           kf.field_y.field_I = ei.a(0, cf.a("popup", "lobby", (byte) -94, param2));
           var12 = ei.a(0, cf.a("popup_mouseover", "lobby", (byte) -110, param2));
           var13 = cf.a("button", "lobby", (byte) -97, param2);
           var14 = ei.a(0, cf.a("tab_active", "lobby", (byte) -125, param2));
-          od.field_g = new SceneWidget(0L, var8);
+          od.field_g = new gh(0L, var8);
           od.field_g.field_I = var14;
-          hg.field_e = new SceneWidget(0L, (SceneWidget) null);
+          hg.field_e = new gh(0L, (gh) null);
           hg.field_e.field_Pb = rl.a(param2, "lobby", "closebutton", false);
           hg.field_e.field_db = rl.a(param2, "lobby", "closebutton_mouseover", param1);
-          c.field_p = new SceneWidget(0L, var8);
+          c.field_p = new gh(0L, var8);
           c.field_p.field_I = nl.a(true, 3815994, true, -100, 40, 2039583);
-          sj.field_J = new SceneWidget(0L, var10);
+          sj.field_J = new gh(0L, var10);
           sj.field_J.field_ub = 2;
           sj.field_J.field_I = nl.a(true, 3815994, false, -15, 30, 2039583);
-          im.field_f = new SceneWidget(0L, var10);
+          im.field_f = new gh(0L, var10);
           im.field_f.field_ub = 2;
           im.field_f.field_I = nl.a(false, 3815994, false, -52, 30, 2039583);
-          kb.field_b = new SceneWidget(0L, var10);
+          kb.field_b = new gh(0L, var10);
           kb.field_b.field_ub = 2;
           kb.field_b.field_I = nl.a(false, 3815994, true, -47, 30, 2039583);
-          bd.field_f = new SceneWidget(0L, (SceneWidget) null);
-          bd.field_f.field_L = (BitmapFont) ((Object) gd.field_kb);
+          bd.field_f = new gh(0L, (gh) null);
+          bd.field_f.field_L = (mi) ((Object) gd.field_kb);
           bd.field_f.field_nb = 13421772;
           bd.field_f.field_Fb = 1;
           bd.field_f.field_Ib = db.field_b;
-          ParticleEffect.field_K = new SceneWidget(0L, bd.field_f);
-          ParticleEffect.field_K.field_xb = 16777215;
-          ParticleEffect.field_K.field_Mb = 16777215;
-          ParticleEffect.field_K.field_nb = 16764006;
-          ParticleEffect.field_K.field_rb = 16777215;
-          ParticleEffect.field_K.field_yb = 8421504;
-          var15 = new SceneWidget(0L, ParticleEffect.field_K);
+          qb.field_K = new gh(0L, bd.field_f);
+          qb.field_K.field_xb = 16777215;
+          qb.field_K.field_Mb = 16777215;
+          qb.field_K.field_nb = 16764006;
+          qb.field_K.field_rb = 16777215;
+          qb.field_K.field_yb = 8421504;
+          var15 = new gh(0L, qb.field_K);
           var15.field_Ib = db.field_b;
-          var15.field_L = (BitmapFont) ((Object) var7);
+          var15.field_L = (mi) ((Object) var7);
           var15.field_nb = 16777215;
-          SceneWidget.field_ib = new SceneWidget(0L, bd.field_f);
-          SceneWidget.field_ib.field_I = nl.a(false, 2236962, false, -54, 16, 2236962);
-          SceneWidget.field_ib.field_ub = 2;
-          dj.field_b = new SceneWidget(0L, bd.field_f);
+          gh.field_ib = new gh(0L, bd.field_f);
+          gh.field_ib.field_I = nl.a(false, 2236962, false, -54, 16, 2236962);
+          gh.field_ib.field_ub = 2;
+          dj.field_b = new gh(0L, bd.field_f);
           dj.field_b.field_I = nl.a(false, 1513239, false, -75, 16, 1513239);
           dj.field_b.field_ub = 2;
-          SteelSentinels.field_J = new SceneWidget(0L, SceneWidget.field_ib);
-          SteelSentinels.field_J.b(ParticleEffect.field_K, 6402);
-          bb.field_W = new SceneWidget(0L, dj.field_b);
-          bb.field_W.b(ParticleEffect.field_K, 6402);
+          SteelSentinels.field_J = new gh(0L, gh.field_ib);
+          SteelSentinels.field_J.b(qb.field_K, 6402);
+          bb.field_W = new gh(0L, dj.field_b);
+          bb.field_W.b(qb.field_K, 6402);
           var16 = cf.a("button_mouseover", "lobby", (byte) -114, param2);
-          jn.field_h = new dn(kf.field_y, var12, bd.field_f, ParticleEffect.field_K, 3, 2, va.field_e, 3, db.field_b);
-          fl.field_e = new SceneWidget(0L, ParticleEffect.field_K);
+          jn.field_h = new dn(kf.field_y, var12, bd.field_f, qb.field_K, 3, 2, va.field_e, 3, db.field_b);
+          fl.field_e = new gh(0L, qb.field_K);
           fl.field_e.field_I = var13;
           fl.field_e.field_Qb = 1;
           fl.field_e.field_Z = 1;
@@ -554,34 +554,34 @@ final class oh {
           fl.field_e.field_bb = cf.a("button_active", "lobby", (byte) -107, param2);
           fl.field_e.field_H = cf.a("button_disabled", "lobby", (byte) -104, param2);
           fl.field_e.field_Kb = 1;
-          ka.field_U = new SceneWidget(0L, ParticleEffect.field_K);
+          ka.field_U = new gh(0L, qb.field_K);
           ka.field_U.field_Kb = 1;
           ka.field_U.field_I = ei.a(0, cf.a("tab_inactive", "lobby", (byte) -115, param2));
           ka.field_U.field_Ab = ei.a(0, cf.a("tab_mouseover", "lobby", (byte) -29, param2));
           ka.field_U.field_bb = var14;
-          be.field_c = new SceneWidget(0L, (SceneWidget) null);
+          be.field_c = new gh(0L, (gh) null);
           be.field_c.field_I = se.a(3, -1, 1856141, 206, 1127256, 13574);
-          ce.field_o = new SceneWidget(0L, (SceneWidget) null);
+          ce.field_o = new gh(0L, (gh) null);
           ce.field_o.field_I = se.a(3, -1, 11579568, 290, 6052956, 13574);
-          rm.field_j = new SceneWidget(0L, var15);
+          rm.field_j = new gh(0L, var15);
           rm.field_j.field_Kb = 1;
           rm.field_j.field_Qb = 1;
           rm.field_j.field_Z = 1;
           rm.field_j.field_ab = 1;
           rm.field_j.field_ob = 1;
-          b.field_e = new SceneWidget(0L, rm.field_j);
-          gd.field_wb = new SceneWidget(0L, ParticleEffect.field_K);
+          b.field_e = new gh(0L, rm.field_j);
+          gd.field_wb = new gh(0L, qb.field_K);
           gd.field_wb.field_Z = 1;
           gd.field_wb.field_Kb = 1;
           gd.field_wb.field_ob = 1;
           gd.field_wb.field_Qb = 1;
           gd.field_wb.field_ab = 1;
-          ArchiveProvider.field_f = new SceneWidget(0L, gd.field_wb);
-          co.field_c = new SceneWidget(0L, gd.field_wb);
-          gm.field_c = new SceneWidget(0L, rm.field_j);
-          ei.field_o = new SceneWidget(0L, gd.field_wb);
-          ArchiveIndex.field_s = new SceneWidget(0L, gd.field_wb);
-          bf.field_Ab = new SceneWidget(0L, gd.field_wb);
+          fa.field_f = new gh(0L, gd.field_wb);
+          co.field_c = new gh(0L, gd.field_wb);
+          gm.field_c = new gh(0L, rm.field_j);
+          ei.field_o = new gh(0L, gd.field_wb);
+          jl.field_s = new gh(0L, gd.field_wb);
+          bf.field_Ab = new gh(0L, gd.field_wb);
           gd.field_wb.field_I = ei.a(0, cf.a("smallbutton", "lobby", (byte) -39, param2));
           gd.field_wb.field_Ab = ei.a(0, cf.a("smallbutton_mouseover", "lobby", (byte) -72, param2));
           dupTemp$0 = ei.a(0, cf.a("smallbutton_active", "lobby", (byte) -79, param2));
@@ -595,9 +595,9 @@ final class oh {
           rm.field_j.field_Ab = ei.a(0, cf.a("bigbutton_mouseover", "lobby", (byte) -23, param2));
           rm.field_j.field_mb = ei.a(0, cf.a("bigbutton_mouseheld", "lobby", (byte) -66, param2));
           rm.field_j.field_H = ei.a(0, cf.a("bigbutton_disabled", "lobby", (byte) -71, param2));
-          ArchiveProvider.field_f.field_I = ei.a(0, cf.a("greenbutton", "lobby", (byte) -84, param2));
-          ArchiveProvider.field_f.field_Ab = ei.a(0, cf.a("greenbutton_mouseover", "lobby", (byte) -50, param2));
-          ArchiveProvider.field_f.field_mb = ei.a(0, cf.a("greenbutton_mouseheld", "lobby", (byte) -68, param2));
+          fa.field_f.field_I = ei.a(0, cf.a("greenbutton", "lobby", (byte) -84, param2));
+          fa.field_f.field_Ab = ei.a(0, cf.a("greenbutton_mouseover", "lobby", (byte) -50, param2));
+          fa.field_f.field_mb = ei.a(0, cf.a("greenbutton_mouseheld", "lobby", (byte) -68, param2));
           co.field_c.field_I = ei.a(0, cf.a("redbutton", "lobby", (byte) -105, param2));
           co.field_c.field_Ab = ei.a(0, cf.a("redbutton_mouseover", "lobby", (byte) -24, param2));
           co.field_c.field_mb = ei.a(0, cf.a("redbutton_mouseheld", "lobby", (byte) -99, param2));
@@ -616,35 +616,35 @@ final class oh {
           dupTemp$2 = ei.a(0, cf.a("chatbutton_active", "lobby", (byte) -107, param2));
           ei.field_o.field_bb = dupTemp$2;
           ei.field_o.field_mb = dupTemp$2;
-          ArchiveIndex.field_s.field_I = ei.a(0, cf.a("chatfilterbutton", "lobby", (byte) -101, param2));
-          ArchiveIndex.field_s.field_Ab = ei.a(0, cf.a("chatfilterbutton_mouseover", "lobby", (byte) -61, param2));
+          jl.field_s.field_I = ei.a(0, cf.a("chatfilterbutton", "lobby", (byte) -101, param2));
+          jl.field_s.field_Ab = ei.a(0, cf.a("chatfilterbutton_mouseover", "lobby", (byte) -61, param2));
           dupTemp$3 = ei.a(0, cf.a("chatfilterbutton_active", "lobby", (byte) -64, param2));
-          ArchiveIndex.field_s.field_bb = dupTemp$3;
-          ArchiveIndex.field_s.field_mb = dupTemp$3;
+          jl.field_s.field_bb = dupTemp$3;
+          jl.field_s.field_mb = dupTemp$3;
           var17 = cf.a("checkbox", "lobby", (byte) -92, param2);
-          ol.field_Tb = new id(0L, var17[1], var17[0], 1, ParticleEffect.field_K, (String) null);
-          m.field_d = new SceneWidget(0L, (SceneWidget) null);
+          ol.field_Tb = new id(0L, var17[1], var17[0], 1, qb.field_K, (String) null);
+          m.field_d = new gh(0L, (gh) null);
           m.field_d.field_I = hj.a((byte) 26, rl.a(param2, "lobby", "slideregion", param1));
           m.field_d.field_Ab = hj.a((byte) 26, rl.a(param2, "lobby", "slideregion_mouseover", false));
           m.field_d.field_mb = hj.a((byte) 26, rl.a(param2, "lobby", "slideregion_mouseheld", false));
           m.field_d.field_H = hj.a((byte) 26, rl.a(param2, "lobby", "slideregion_disabled", false));
-          mj.field_Zb = new SceneWidget(0L, (SceneWidget) null);
+          mj.field_Zb = new gh(0L, (gh) null);
           mj.field_Zb.field_I = ei.a(0, cf.a("dragbar", "lobby", (byte) -108, param2));
           mj.field_Zb.field_Ab = ei.a(0, cf.a("dragbar_mouseover", "lobby", (byte) -126, param2));
           mj.field_Zb.field_mb = ei.a(0, cf.a("dragbar_mouseheld", "lobby", (byte) -78, param2));
           mj.field_Zb.field_H = ei.a(0, cf.a("dragbar_disabled", "lobby", (byte) -14, param2));
-          ue.field_f = new SceneWidget(0L, (SceneWidget) null);
+          ue.field_f = new gh(0L, (gh) null);
           ue.field_f.field_Pb = rl.a(param2, "lobby", "upbutton", param1);
           ue.field_f.field_db = rl.a(param2, "lobby", "upbutton_mouseover", false);
           ue.field_f.field_fb = rl.a(param2, "lobby", "upbutton_mouseheld", false);
           ue.field_f.field_Ob = rl.a(param2, "lobby", "upbutton_disabled", false);
-          ResourceArchive.field_h = new SceneWidget(0L, (SceneWidget) null);
-          ResourceArchive.field_h.field_Pb = rl.a(param2, "lobby", "downbutton", param1);
-          ResourceArchive.field_h.field_db = rl.a(param2, "lobby", "downbutton_mouseover", false);
-          ResourceArchive.field_h.field_fb = rl.a(param2, "lobby", "downbutton_mouseheld", false);
-          ResourceArchive.field_h.field_Ob = rl.a(param2, "lobby", "downbutton_disabled", false);
-          NodeHashTable.field_j = new lb(0L, ue.field_f, ResourceArchive.field_h, m.field_d, mj.field_Zb);
-          l.field_e = new ql(0L, (SceneWidget) null, IntKeyLookup.field_h, NodeHashTable.field_j, gd.field_wb, (String) null, (String) null);
+          cm.field_h = new gh(0L, (gh) null);
+          cm.field_h.field_Pb = rl.a(param2, "lobby", "downbutton", param1);
+          cm.field_h.field_db = rl.a(param2, "lobby", "downbutton_mouseover", false);
+          cm.field_h.field_fb = rl.a(param2, "lobby", "downbutton_mouseheld", false);
+          cm.field_h.field_Ob = rl.a(param2, "lobby", "downbutton_disabled", false);
+          uh.field_j = new lb(0L, ue.field_f, cm.field_h, m.field_d, mj.field_Zb);
+          l.field_e = new ql(0L, (gh) null, jk.field_h, uh.field_j, gd.field_wb, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -696,7 +696,7 @@ final class oh {
               hn.a("updatelinks", (byte) -41, param0, new Object[]{"gamelist", var3 + "togamelist.ws"});
               hn.a("updatelinks", (byte) -41, param0, new Object[]{"serverlist", var3 + "toserverlist.ws"});
               if (param1 <= 115) {
-                field_a = (ResourceArchive) null;
+                field_a = (cm) null;
               }
               hn.a("updatelinks", (byte) -41, param0, new Object[]{"options", var3 + "options.ws"});
               hn.a("updatelinks", (byte) -41, param0, new Object[]{"terms", var3 + "terms.ws"});

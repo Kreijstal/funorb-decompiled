@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ol extends SceneWidget {
-    private SceneWidget field_Yb;
-    static NodeDeque field_Vb;
+final class ol extends gh {
+    private gh field_Yb;
+    static ul field_Vb;
     static String field_Xb;
     static String field_Zb;
     static dj field_Sb;
-    static IndexedSprite field_Wb;
+    static gk field_Wb;
     static c field_ac;
     static id field_Tb;
     static int[][] field_cc;
@@ -15,14 +15,14 @@ final class ol extends SceneWidget {
     static int field_Ub;
     static int field_dc;
 
-    final static ParticleEffect acquireCyclicParticle(byte obfuscationGuard) {
-        int fieldTemp$0 = mg.particleReuseCursor - 1;
-        mg.particleReuseCursor = mg.particleReuseCursor - 1;
+    final static qb d(byte param0) {
+        int fieldTemp$0 = mg.field_hc - 1;
+        mg.field_hc = mg.field_hc - 1;
         if (0 > fieldTemp$0) {
-          mg.particleReuseCursor = mg.particleReuseCursor + 10000;
+          mg.field_hc = mg.field_hc + 10000;
         }
-        int var1 = -54 % ((-5 - obfuscationGuard) / 60);
-        return k.particleReuseBuffer[mg.particleReuseCursor];
+        int var1 = -54 % ((-5 - param0) / 60);
+        return k.field_Cb[mg.field_hc];
     }
 
     final static void l(int param0) {
@@ -65,13 +65,13 @@ final class ol extends SceneWidget {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (param3 + (param0 + param2) <= SoftwareRaster.field_j) {
+        if (param3 + (param0 + param2) <= pb.field_j) {
           return param0 + param2;
         }
         if (param1 <= param0 - param3) {
           return -param3 + param0;
         }
-        return SoftwareRaster.field_j - param3;
+        return pb.field_j - param3;
     }
 
     final static boolean a(int[] param0, int param1, int param2) {
@@ -105,21 +105,21 @@ final class ol extends SceneWidget {
         ud var4;
         int var5;
         ud var4Lifetime1;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         if (!param1) {
           return (ud) null;
         }
-        var4 = (ud) (uf.field_f.first(13058));
+        var4 = (ud) (uf.field_f.e(13058));
         while (var4 != null) {
           if (var4.field_t == param2) {
             return var4;
           }
-          var4 = (ud) (uf.field_f.next((byte) -86));
+          var4 = (ud) (uf.field_f.a((byte) -86));
         }
         var4Lifetime1 = new ud();
         var4Lifetime1.field_u = param3;
         var4Lifetime1.field_t = param2;
-        uf.field_f.addLast(3, var4Lifetime1);
+        uf.field_f.a(3, var4Lifetime1);
         r.a(27153, var4Lifetime1, param0);
         return var4Lifetime1;
     }
@@ -163,7 +163,7 @@ final class ol extends SceneWidget {
         return true;
     }
 
-    ol(SceneWidget param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, SceneWidget param4, SceneWidget param5) {
+    ol(gh param0, gh param1, gh param2, gh param3, gh param4, gh param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -180,27 +180,27 @@ final class ol extends SceneWidget {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        SceneWidget var8 = null;
-        SceneWidget var9 = null;
+        gh var8 = null;
+        gh var9 = null;
         int var10 = 0;
         int var11 = 0;
-        SceneWidget var13 = null;
-        SceneWidget var14 = null;
+        gh var13 = null;
+        gh var14 = null;
         int var15 = 0;
-        SceneWidget var17 = null;
+        gh var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new SceneWidget(0L, param1, od.field_b.toUpperCase());
+          var17 = new gh(0L, param1, od.field_b.toUpperCase());
           var17.field_Kb = 1;
-          this.field_Yb = new SceneWidget(0L, param2);
-          var8 = new SceneWidget(0L, param3);
-          var9 = new SceneWidget(0L, param3, od.field_f);
+          this.field_Yb = new gh(0L, param2);
+          var8 = new gh(0L, param3);
+          var9 = new gh(0L, param3, od.field_f);
           var9.field_Kb = 1;
           var10 = 50;
           var11 = 0;
           for (var12 = 0; h.field_X.length > var12; var12++) {
-            var13 = new SceneWidget(0L, param3, ci.field_b[var12]);
-            var14 = new SceneWidget(0L, param3, h.field_X[var12]);
+            var13 = new gh(0L, param3, ci.field_b[var12]);
+            var14 = new gh(0L, param3, h.field_X[var12]);
             var15 = param3.field_L.c(h.field_X[var12]);
             var13.a(0, var10, 15, 20, 65);
             if (var11 < var15) {
@@ -284,7 +284,7 @@ final class ol extends SceneWidget {
         int[] var10 = null;
         int[] var1Lifetime1;
         int var2Lifetime1;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         try {
           if (pm.field_T == vb.field_g) {
             return;
@@ -296,7 +296,7 @@ final class ol extends SceneWidget {
             um.f((byte) 3);
           }
           pm.field_T = vb.field_g;
-          pc.field_w = Sprite.field_k;
+          pc.field_w = ea.field_k;
           if (pm.field_T == -3) {
             vl.field_v = false;
           }
@@ -317,7 +317,7 @@ final class ol extends SceneWidget {
           }
           if (td.field_Sb) {
             lc.field_c = null;
-            un.field_b = new NodeDeque();
+            un.field_b = new ul();
             var9 = ge.field_m;
             var7 = var9;
             var4 = var7;
@@ -340,11 +340,11 @@ final class ol extends SceneWidget {
           if (!param0) {
             return;
           }
-          if (NodeIterator.field_d) {
+          if (jc.field_d) {
             oa.f(-12161);
             im.a(true);
             ub.a(true);
-            NodeIterator.field_d = false;
+            jc.field_d = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -356,7 +356,7 @@ final class ol extends SceneWidget {
 
     static {
         field_Xb = "EXCLUSIVE";
-        field_Vb = new NodeDeque();
+        field_Vb = new ul();
         field_Zb = "Not yet achieved";
         field_Sb = new dj(2);
         field_bc = -1;

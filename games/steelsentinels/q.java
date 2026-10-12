@@ -4,19 +4,19 @@
 import java.util.*;
 
 final class q implements Iterable {
-    static NodeDeque field_m;
+    static ul field_m;
     int field_e;
     static ic field_f;
     static int field_h;
     static float field_l;
-    private IntrusiveNode field_b;
+    private ck field_b;
     static String field_a;
     static String field_g;
-    static SceneWidget field_d;
+    static gh field_d;
     static int field_i;
     static String field_c;
     static String field_k;
-    IntrusiveNode[] field_j;
+    ck[] field_j;
 
     public static void a(byte param0) {
         field_d = null;
@@ -58,8 +58,8 @@ final class q implements Iterable {
           if (ok.field_d[param1] > ok.field_d[param2]) {
             return false;
           }
-          var4 = Sentinel.field_T[param1] + ne.field_G[param1] + jm.field_r[param1];
-          var5 = jm.field_r[param2] + ne.field_G[param2] + Sentinel.field_T[param2];
+          var4 = mb.field_T[param1] + ne.field_G[param1] + jm.field_r[param1];
+          var5 = jm.field_r[param2] + ne.field_G[param2] + mb.field_T[param2];
           var6 = -10 % ((-27 - param0) / 47);
           if (var4 < var5) {
             return true;
@@ -81,8 +81,8 @@ final class q implements Iterable {
         if (eb.field_u[param1] > eb.field_u[param2]) {
           return false;
         }
-        var4Lifetime1 = Sentinel.field_T[param1] + ne.field_G[param1] + jm.field_r[param1];
-        var5Lifetime1 = jm.field_r[param2] + ne.field_G[param2] + Sentinel.field_T[param2];
+        var4Lifetime1 = mb.field_T[param1] + ne.field_G[param1] + jm.field_r[param1];
+        var5Lifetime1 = jm.field_r[param2] + ne.field_G[param2] + mb.field_T[param2];
         var6Lifetime1 = -10 % ((-27 - param0) / 47);
         if (var4Lifetime1 < var5Lifetime1) {
           return true;
@@ -100,59 +100,59 @@ final class q implements Iterable {
         return (Iterator) ((Object) new l(this));
     }
 
-    final void a(IntrusiveNode param0, long param1, boolean param2) {
-        IntrusiveNode var5 = null;
+    final void a(ck param0, long param1, boolean param2) {
+        ck var5 = null;
         try {
           if (param2) {
             field_a = (String) null;
           }
-          if (param0.previous != null) {
-            param0.unlink(4);
+          if (param0.field_i != null) {
+            param0.b(4);
           }
           var5 = this.field_j[(int)((long)(this.field_e - 1) & param1)];
-          param0.previous = var5.previous;
-          param0.next = var5;
-          param0.previous.next = param0;
-          param0.next.previous = param0;
-          param0.key = param1;
+          param0.field_i = var5.field_i;
+          param0.field_k = var5;
+          param0.field_i.field_k = param0;
+          param0.field_k.field_i = param0;
+          param0.field_j = param1;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "q.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final IntrusiveNode a(long param0, byte param1) {
-        IntrusiveNode var4;
-        IntrusiveNode var5;
+    final ck a(long param0, byte param1) {
+        ck var4;
+        ck var5;
         int var6;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         var4 = this.field_j[(int)(param0 & (long)(-1 + this.field_e))];
-        this.field_b = var4.next;
+        this.field_b = var4.field_k;
         if (param1 > -118) {
-          return (IntrusiveNode) null;
+          return (ck) null;
         }
         while (true) {
           if (var4 == this.field_b) {
             this.field_b = null;
             return null;
           }
-          if (~this.field_b.key != ~param0) {
-            this.field_b = this.field_b.next;
+          if (~this.field_b.field_j != ~param0) {
+            this.field_b = this.field_b.field_k;
             continue;
           }
           break;
         }
         var5 = this.field_b;
-        this.field_b = this.field_b.next;
+        this.field_b = this.field_b.field_k;
         return var5;
     }
 
-    final static void a(RgbSprite param0, byte param1) {
+    final static void a(wk param0, byte param1) {
         try {
-          ArchiveIndex.a(false);
+          jl.a(false);
           if (param1 >= -60) {
             field_g = (String) null;
           }
-          SoftwareRaster.a(param0.field_E, param0.field_z, param0.field_B);
+          pb.a(param0.field_E, param0.field_z, param0.field_B);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "q.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -160,23 +160,23 @@ final class q implements Iterable {
 
     q(int param0) {
         int var2 = 0;
-        IntrusiveNode dupTemp$1 = null;
-        IntrusiveNode var3;
+        ck dupTemp$1 = null;
+        ck var3;
         this.field_e = param0;
-        this.field_j = new IntrusiveNode[param0];
+        this.field_j = new ck[param0];
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new IntrusiveNode();
+          dupTemp$1 = new ck();
           var3 = dupTemp$1;
           this.field_j[var2] = dupTemp$1;
-          var3.next = var3;
-          var3.previous = var3;
+          var3.field_k = var3;
+          var3.field_i = var3;
         }
     }
 
     final static void a(int param0, boolean param1, int param2, int param3) {
         int var4;
         int var4Lifetime1;
-        SceneWidget.field_Jb = param3;
+        gh.field_Jb = param3;
         boolean decompiledFrameRemainder0 = true;
         if (~vb.field_g == param2) {
           if (qj.field_q[98] == null) {

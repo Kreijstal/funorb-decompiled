@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class id extends SceneWidget {
+final class id extends gh {
     static int[] field_cc;
-    private SceneWidget field_Yb;
+    private gh field_Yb;
     static String field_Sb;
     static String field_Wb;
     static String field_Tb;
-    private SceneWidget field_Vb;
+    private gh field_Vb;
     static String field_Ub;
     static int field_ac;
     static String field_Zb;
     static String field_Xb;
-    static ResourceArchive field_bc;
+    static cm field_bc;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.a(0, param0, param5, param4, param1);
@@ -59,8 +59,8 @@ final class id extends SceneWidget {
         int var1 = -48 % ((param0 + 48) / 47);
     }
 
-    id(long param0, RgbSprite param1, RgbSprite param2, int param3, SceneWidget param4, String param5) {
-        this(param0, (SceneWidget) null, param4, param5);
+    id(long param0, wk param1, wk param2, int param3, gh param4, String param5) {
+        this(param0, (gh) null, param4, param5);
         try {
           this.field_Yb.field_Fb = param3;
           this.field_Yb.field_Pb = param2;
@@ -119,11 +119,11 @@ final class id extends SceneWidget {
         }
     }
 
-    private id(long param0, SceneWidget param1, SceneWidget param2, String param3) {
-        super(param0, (SceneWidget) null);
+    private id(long param0, gh param1, gh param2, String param3) {
+        super(param0, (gh) null);
         try {
-          this.field_Yb = new SceneWidget(0L, param1);
-          this.field_Vb = new SceneWidget(0L, param2);
+          this.field_Yb = new gh(0L, param1);
+          this.field_Vb = new gh(0L, param2);
           this.field_Vb.field_S = param3;
           this.a(this.field_Yb, 127);
           this.a(this.field_Vb, 127);
@@ -150,7 +150,7 @@ final class id extends SceneWidget {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           if (param0 != null) {
             stackIn_4_0 = param0.length();

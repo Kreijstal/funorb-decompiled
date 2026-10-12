@@ -3,7 +3,7 @@
  */
 abstract class ha extends dl implements qn {
     static String field_R;
-    static RgbSprite[] field_Q;
+    static wk[] field_Q;
     static String field_S;
     private vn field_U;
     static int field_V;
@@ -41,86 +41,86 @@ abstract class ha extends dl implements qn {
         int var12Lifetime1;
         int var12Lifetime2;
         int var12Lifetime3;
-        var13 = SteelSentinels.obfuscationControl;
+        var13 = SteelSentinels.field_G;
         try {
           var5_int = param1 + param0;
           var6 = param2 + param4;
-          if (param0 > SoftwareRaster.field_i) {
+          if (param0 > pb.field_i) {
             stackIn_4_0 = param0;
           } else {
-            stackIn_4_0 = SoftwareRaster.field_i;
+            stackIn_4_0 = pb.field_i;
           }
           var7 = stackIn_4_0;
-          if (param4 > SoftwareRaster.field_l) {
+          if (param4 > pb.field_l) {
             stackIn_7_0 = param4;
           } else {
-            stackIn_7_0 = SoftwareRaster.field_l;
+            stackIn_7_0 = pb.field_l;
           }
           var8 = stackIn_7_0;
-          if (var5_int >= SoftwareRaster.field_b) {
-            stackIn_10_0 = SoftwareRaster.field_b;
+          if (var5_int >= pb.field_b) {
+            stackIn_10_0 = pb.field_b;
           } else {
             stackIn_10_0 = var5_int;
           }
           var9 = stackIn_10_0;
-          if (var6 >= SoftwareRaster.field_d) {
-            stackIn_13_0 = SoftwareRaster.field_d;
+          if (var6 >= pb.field_d) {
+            stackIn_13_0 = pb.field_d;
           } else {
             stackIn_13_0 = var6;
           }
           var10 = stackIn_13_0;
-          if (SoftwareRaster.field_i <= param0 &&
-            SoftwareRaster.field_b > param0) {
-            var11 = var8 * SoftwareRaster.field_c + param0;
+          if (pb.field_i <= param0 &&
+            pb.field_b > param0) {
+            var11 = var8 * pb.field_c + param0;
             var12 = 1 + (var10 - var8) >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              SoftwareRaster.field_g[var11] = 16777215;
-              var11 = var11 + SoftwareRaster.field_c * 2;
+              pb.field_g[var11] = 16777215;
+              var11 = var11 + pb.field_c * 2;
             }
           }
-          if (param4 >= SoftwareRaster.field_l &&
-            SoftwareRaster.field_d > var6) {
-            var11Lifetime1 = var7 + param4 * SoftwareRaster.field_c;
+          if (param4 >= pb.field_l &&
+            pb.field_d > var6) {
+            var11Lifetime1 = var7 + param4 * pb.field_c;
             var12Lifetime1 = -var7 + var9 + 1 >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              SoftwareRaster.field_g[var11Lifetime1] = 16777215;
+              pb.field_g[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
           if (param3 != 0) {
             return;
           }
-          if (SoftwareRaster.field_i <= var5_int &&
-            SoftwareRaster.field_b > var5_int) {
-            var11Lifetime2 = ((1 & -param0 + var5_int) + var8) * SoftwareRaster.field_c + var5_int;
+          if (pb.field_i <= var5_int &&
+            pb.field_b > var5_int) {
+            var11Lifetime2 = ((1 & -param0 + var5_int) + var8) * pb.field_c + var5_int;
             var12Lifetime2 = -var8 + var10 + 1 >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
                 break;
               }
-              SoftwareRaster.field_g[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + SoftwareRaster.field_c * 2;
+              pb.field_g[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + pb.field_c * 2;
             }
           }
-          if (SoftwareRaster.field_l <= param4 &&
-            SoftwareRaster.field_d > var6) {
-            var11Lifetime3 = var6 * SoftwareRaster.field_c + (var7 + (1 & var6 - param4));
+          if (pb.field_l <= param4 &&
+            pb.field_d > var6) {
+            var11Lifetime3 = var6 * pb.field_c + (var7 + (1 & var6 - param4));
             var12Lifetime3 = -var7 + 1 + var9 >> 1;
             while (true) {
               var12Lifetime3--;
               if (0 > var12Lifetime3) {
                 return;
               }
-              SoftwareRaster.field_g[var11Lifetime3] = 16777215;
+              pb.field_g[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }
@@ -155,7 +155,7 @@ abstract class ha extends dl implements qn {
           Throwable decompiledCaughtException = null;
           Throwable var3_ref = null;
           RuntimeException var3_ref2 = null;
-          var7 = SteelSentinels.obfuscationControl;
+          var7 = SteelSentinels.field_G;
           try {
             try {
               var3 = (String) (hn.a(param0, (byte) -96, "getcookies"));
@@ -231,7 +231,7 @@ abstract class ha extends dl implements qn {
         field_Q = null;
     }
 
-    final static void a(int param0, int param1, byte param2, BitmapFont param3, int param4, RgbSprite param5, int param6, int param7, int param8, int param9, int param10) {
+    final static void a(int param0, int param1, byte param2, mi param3, int param4, wk param5, int param6, int param7, int param8, int param9, int param10) {
         try {
           pa.field_b = param6;
           ij.field_W = param10;

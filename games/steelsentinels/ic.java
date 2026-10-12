@@ -9,9 +9,9 @@ final class ic extends we {
     int[] field_u;
     private int field_W;
     private hj[][] field_x;
-    static RgbSprite field_db;
+    static wk field_db;
     static me field_T;
-    private NodeHashTable field_bb;
+    private uh field_bb;
     private int[] field_I;
     private hj[][] field_U;
     private int[] field_w;
@@ -19,7 +19,7 @@ final class ic extends we {
     static String field_cb;
     private int field_Q;
     private ab field_M;
-    static NodeDeque field_B;
+    static ul field_B;
     private int[] field_J;
     int[] field_F;
     private int[] field_N;
@@ -29,7 +29,7 @@ final class ic extends we {
     private int[] field_R;
     int[] field_L;
     static String field_E;
-    static NodeDeque field_D;
+    static ul field_D;
     static int[] field_eb;
     private boolean field_S;
     private int field_V;
@@ -47,13 +47,13 @@ final class ic extends we {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
           if (param1 != 0) {
             field_cb = (String) null;
           }
           if ((4 & this.field_F[param0]) != 0) {
-            var3 = (hj) (this.field_v.field_F.first(param1 + 13058));
+            var3 = (hj) (this.field_v.field_F.e(param1 + 13058));
             while (null != var3) {
               if (var4 != 0) {
                 return;
@@ -61,7 +61,7 @@ final class ic extends we {
               if (param0 == var3.field_t) {
                 var3.field_v = 0;
               }
-              var3 = (hj) (this.field_v.field_F.next((byte) -116));
+              var3 = (hj) (this.field_v.field_F.a((byte) -116));
             }
           }
           return;
@@ -92,9 +92,9 @@ final class ic extends we {
         int var4 = 0;
         int stackIn_18_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
-          var3 = (hj) (this.field_v.field_F.first(13058));
+          var3 = (hj) (this.field_v.field_F.e(13058));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
             stackIn_18_0 = param1;
@@ -105,7 +105,7 @@ final class ic extends we {
                 this.field_U[var3.field_t][var3.field_z] = null;
                 var3.field_J = 0;
               }
-              var3 = (hj) (this.field_v.field_F.next((byte) -107));
+              var3 = (hj) (this.field_v.field_F.a((byte) -107));
               continue;
             }
             break;
@@ -159,12 +159,12 @@ final class ic extends we {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
           if (param1 != 1418611526) {
             this.field_J = (int[]) null;
           }
-          var3 = (hj) (this.field_v.field_F.first(param1 - 1418598468));
+          var3 = (hj) (this.field_v.field_F.e(param1 - 1418598468));
           while (null != var3) {
             if (var4 != 0) {
               return;
@@ -181,9 +181,9 @@ final class ic extends we {
               if (var3.field_J < 0) {
                 this.field_U[var3.field_t][var3.field_z] = null;
               }
-              var3.unlink(4);
+              var3.b(4);
             }
-            var3 = (hj) (this.field_v.field_F.next((byte) -94));
+            var3 = (hj) (this.field_v.field_F.a((byte) -94));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -199,7 +199,7 @@ final class ic extends we {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           var5 = this.field_U[param0][param2];
           if (null == var5) {
@@ -210,7 +210,7 @@ final class ic extends we {
             field_eb = (int[]) null;
           }
           if ((2 & this.field_F[param0]) != 0) {
-            var6 = (hj) (this.field_v.field_F.first(13058));
+            var6 = (hj) (this.field_v.field_F.e(13058));
             while (true) {
               if (null != var6) {
                 if (var7 != 0) {
@@ -221,7 +221,7 @@ final class ic extends we {
                   var6 != var5) {
                   var5.field_J = 0;
                 } else {
-                  var6 = (hj) (this.field_v.field_F.next((byte) -61));
+                  var6 = (hj) (this.field_v.field_F.a((byte) -61));
                   continue;
                 }
               }
@@ -286,7 +286,7 @@ final class ic extends we {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           this.a(param3, 27830696);
           this.field_M.a(param2.field_p);
@@ -341,13 +341,13 @@ final class ic extends we {
         int var8 = 0;
         double var9 = 0.0;
         int var11 = 0;
-        var11 = SteelSentinels.obfuscationControl;
+        var11 = SteelSentinels.field_G;
         try {
           param3.field_K = tb.field_g / 100;
           if (param3.field_J >= 0 && (null == param3.field_A ||
             param3.field_A.g())) {
             param3.d(param2 ^ 3043);
-            param3.unlink(param2 - 7135);
+            param3.b(param2 - 7135);
             if (param3.field_p > 0 &&
               param3 == this.field_x[param3.field_t][param3.field_p]) {
               this.field_x[param3.field_t][param3.field_p] = null;
@@ -472,7 +472,7 @@ final class ic extends we {
           }
           param3.d(4096);
           if (param3.field_J >= 0) {
-            param3.unlink(param2 ^ 7143);
+            param3.b(param2 ^ 7143);
             if (param3.field_p > 0 &&
               this.field_x[param3.field_t][param3.field_p] == param3) {
               this.field_x[param3.field_t][param3.field_p] = null;
@@ -504,7 +504,7 @@ final class ic extends we {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
           if (!param1) {
             this.c(0, -1);
@@ -595,7 +595,7 @@ final class ic extends we {
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
         int var5 = 0;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         try {
           var4_int = 80 % ((17 - param0) / 50);
           if (~this.field_J[param2] != ~param1) {
@@ -624,7 +624,7 @@ final class ic extends we {
         RuntimeException var2 = null;
         long var3 = 0L;
         int var5 = 0;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         try {
           if (this.field_M.d()) {
             var2_int = this.field_M.field_e * this.field_Q / tb.field_g;
@@ -661,15 +661,15 @@ final class ic extends we {
         ca var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         try {
-          var2 = (ca) (this.field_bb.first(0));
+          var2 = (ca) (this.field_bb.b(0));
           if (param0 != 25) {
             return;
           }
           while (var2 != null) {
             var2.a((byte) 127);
-            var2 = (ca) (this.field_bb.next((byte) 118));
+            var2 = (ca) (this.field_bb.a((byte) 118));
             if (var3 != 0) {
               return;
             }
@@ -685,7 +685,7 @@ final class ic extends we {
     private final void b(int param0, int param1, byte param2) {
         try {
           if (param2 <= 12) {
-            field_D = (NodeDeque) null;
+            field_D = (ul) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ic.TA(" + param0 + ',' + param1 + ',' + param2 + ')');
@@ -765,7 +765,7 @@ final class ic extends we {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
           if (param0 < 0) {
             param0 = 0;
@@ -817,7 +817,7 @@ final class ic extends we {
         }
     }
 
-    final synchronized boolean a(int param0, tg param1, int param2, ub param3, ResourceArchive param4) {
+    final synchronized boolean a(int param0, tg param1, int param2, ub param3, cm param4) {
         int stackIn_27_0 = 0;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -834,7 +834,7 @@ final class ic extends we {
         int var9 = 0;
         ca var10 = null;
         int var11 = 0;
-        var11 = SteelSentinels.obfuscationControl;
+        var11 = SteelSentinels.field_G;
         try {
           param1.b();
           var6_int = 1;
@@ -845,11 +845,11 @@ final class ic extends we {
           if (param2 != 21687) {
             this.e(-35);
           }
-          var8 = (ce) (param1.field_o.first(0));
+          var8 = (ce) (param1.field_o.b(0));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var8))) {
-            var9 = (int)var8.key;
-            var10 = (ca) (this.field_bb.get((long)var9, param2 ^ 21706));
+            var9 = (int)var8.field_j;
+            var10 = (ca) (this.field_bb.a((long)var9, param2 ^ 21706));
             if (var11 == 0) {
               boolean decompiledFrameRemainder0 = true;
               if (null == var10) {
@@ -859,14 +859,14 @@ final class ic extends we {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  this.field_bb.put((long)var9, var10, -1816);
+                  this.field_bb.a((long)var9, var10, -1816);
                 }
               }
               if ((decompiledFrameRemainder0) &&
                 (!var10.a(var8.field_s, param2 - 34109, param3, (int[]) (var7)))) {
                 var6_int = 0;
               }
-              var8 = (ce) (param1.field_o.next((byte) 94));
+              var8 = (ce) (param1.field_o.a((byte) 94));
               continue;
             }
             break;
@@ -946,7 +946,7 @@ final class ic extends we {
             try {
               var3 = param2.getParameter("cookieprefix");
               if (param0 > -123) {
-                field_db = (RgbSprite) null;
+                field_db = (wk) null;
               }
               var4 = param2.getParameter("cookiehost");
               var5 = var3 + "session=" + param1 + "; version=1; path=/; domain=" + var4;
@@ -1010,7 +1010,7 @@ final class ic extends we {
         int var4Lifetime3Lifetime2;
         int var5Lifetime3Lifetime1;
         int var5Lifetime3Lifetime2;
-        var8 = SteelSentinels.obfuscationControl;
+        var8 = SteelSentinels.field_G;
         try {
           var3_int = param1 & 240;
           if (var3_int == 128) {
@@ -1211,7 +1211,7 @@ final class ic extends we {
             param2.field_q.field_s);
           if (!decompiledSharedTail0) {
             var6 = (int)((long)var4_int * (long)this.field_L[param2.field_t] >> 6);
-            decompiledSharedTail0 = (SteelSentinels.obfuscationControl != 0);
+            decompiledSharedTail0 = (SteelSentinels.field_G != 0);
           }
           if (decompiledSharedTail0) {
             var7 = var4_int - (-var4_int + param2.field_q.field_q);
@@ -1238,17 +1238,17 @@ final class ic extends we {
         }
     }
 
-    final static SceneWidget f(int param0) {
+    final static gh f(int param0) {
         RuntimeException var1 = null;
-        SceneWidget stackIn_2_0 = null;
-        SceneWidget stackIn_4_0 = null;
+        gh stackIn_2_0 = null;
+        gh stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 3443) {
             stackIn_4_0 = ac.k(param0 ^ -8138);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (SceneWidget) null;
+          stackIn_2_0 = (gh) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1262,13 +1262,13 @@ final class ic extends we {
         RuntimeException decompiledCaughtException = null;
         hj var3 = null;
         RuntimeException var3_ref = null;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
           if (param0 != -10931) {
             this.field_H = (tg) null;
           }
           if (0 != (this.field_F[param1] & 2)) {
-            var3 = (hj) (this.field_v.field_F.first(param0 + 23989));
+            var3 = (hj) (this.field_v.field_F.e(param0 + 23989));
             while (null != var3) {
               if (var4 != 0) {
                 return;
@@ -1278,7 +1278,7 @@ final class ic extends we {
                 var3.field_J < 0) {
                 var3.field_J = 0;
               }
-              var3 = (hj) (this.field_v.field_F.next((byte) -65));
+              var3 = (hj) (this.field_v.field_F.a((byte) -65));
             }
           }
           return;
@@ -1295,16 +1295,16 @@ final class ic extends we {
         int stackIn_4_2;
         int stackIn_4_3;
         boolean stackIn_5_4 = false;
-        SceneWidget stackIn_37_0 = null;
+        gh stackIn_37_0 = null;
         String stackIn_38_1 = null;
-        SceneWidget stackIn_41_0 = null;
+        gh stackIn_41_0 = null;
         String stackIn_42_1 = null;
         int stackIn_46_0 = 0;
         Object stackIn_104_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        NodeDeque var4 = null;
+        ul var4 = null;
         Object var5 = null;
         Object var6 = null;
         ah var7 = null;
@@ -1322,7 +1322,7 @@ final class ic extends we {
         int var19 = 0;
         dd var17Lifetime1;
         String var18Lifetime1;
-        var19 = SteelSentinels.obfuscationControl;
+        var19 = SteelSentinels.field_G;
         try {
           stackIn_4_0 = km.field_j.field_Xb;
           stackIn_4_1 = 2;
@@ -1341,17 +1341,17 @@ final class ic extends we {
             vc.field_h.field_S = db.a(eb.field_r, -66, new String[]{nn.field_f});
             km.field_j.field_Xb.field_Tb.field_S = null;
             var6 = null;
-            var7 = (ah) (var4.first(13058));
+            var7 = (ah) (var4.e(13058));
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (null == var7))) {
               var8 = 0;
               if (var19 == 0) {
                 if (null == var7.field_M) {
-                  var7.field_Ub = new SceneWidget(0L, bb.field_W);
+                  var7.field_Ub = new gh(0L, bb.field_W);
                   var7.a(var7.field_Ub, 119);
-                  var7.field_ec = new SceneWidget(0L, SteelSentinels.field_J);
+                  var7.field_ec = new gh(0L, SteelSentinels.field_J);
                   var7.a(var7.field_ec, 125);
-                  var7.field_cc = new SceneWidget(0L, bb.field_W);
+                  var7.field_cc = new gh(0L, bb.field_W);
                   var7.a(var7.field_cc, 125);
                   var7.field_ec.field_Kb = 2;
                   var7.h(109);
@@ -1395,7 +1395,7 @@ final class ic extends we {
                 }
                 stackIn_37_0 = var7.field_Ub;
                 if (var14 > 0) {
-                  stackIn_38_1 = BitmapFont.a(var7.field_Ub.field_L, var7.field_dc, var14);
+                  stackIn_38_1 = mi.a(var7.field_Ub.field_L, var7.field_dc, var14);
                 } else {
                   stackIn_38_1 = var7.field_dc;
                 }
@@ -1416,7 +1416,7 @@ final class ic extends we {
                   var7.field_lb = -var7.field_Lb + var9;
                 }
                 if (var8 != 0) {
-                  km.field_j.field_Wb.a(2, (byte) 96, (SceneWidget) (var6), var7);
+                  km.field_j.field_Wb.a(2, (byte) 96, (gh) (var6), var7);
                 }
                 var6 = var7;
                 if (var7.field_cc != null &&
@@ -1444,7 +1444,7 @@ final class ic extends we {
                     ll.field_i = var7.field_dc;
                   }
                 }
-                var7 = (ah) (var4.next((byte) -123));
+                var7 = (ah) (var4.a((byte) -123));
                 continue;
               }
               break;
@@ -1461,10 +1461,10 @@ final class ic extends we {
             decompiledFrameRemainder0 = false;
           }
           else {
-            vc.field_h.field_S = GameApplet.field_a;
+            vc.field_h.field_S = lg.field_a;
             ig.field_m.field_T = false;
             if (qc.field_P == 1) {
-              km.field_j.field_Xb.field_Tb.field_S = DualNode.field_q;
+              km.field_j.field_Xb.field_Tb.field_S = kd.field_q;
               if (var19 != 0) {
                 km.field_j.field_Xb.field_Tb.field_S = eb.field_q;
               }
@@ -1496,7 +1496,7 @@ final class ic extends we {
             return false;
           }
           if (param0.field_J >= 0) {
-            param0.unlink(4);
+            param0.b(4);
             if (param0.field_p > 0 &&
               param0 == this.field_x[param0.field_t][param0.field_p]) {
               this.field_x[param0.field_t][param0.field_p] = null;
@@ -1634,7 +1634,7 @@ final class ic extends we {
         hj var7 = null;
         hj var8 = null;
         int var9 = 0;
-        var9 = SteelSentinels.obfuscationControl;
+        var9 = SteelSentinels.field_G;
         try {
           boolean decompiledFrameCompleted0 = true;
           this.a(param2, (byte) -87, param0, 64);
@@ -1668,7 +1668,7 @@ final class ic extends we {
           if (stackIn_17_0 <= stackIn_17_1) {
             this.field_Q = -42;
           }
-          var5_ref = (ca) (this.field_bb.get((long)this.field_J[param2], 124));
+          var5_ref = (ca) (this.field_bb.a((long)this.field_J[param2], 124));
           if (null == var5_ref) {
             return;
           }
@@ -1713,7 +1713,7 @@ final class ic extends we {
             }
             this.field_x[param2][var7.field_p] = var7;
           }
-          this.field_v.field_F.addLast(3, var7);
+          this.field_v.field_F.a(3, var7);
           this.field_U[param2][param0] = var7;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1754,7 +1754,7 @@ final class ic extends we {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         try {
           if (param0 >= 0) {
             this.field_Y[param0] = param2;
@@ -1791,7 +1791,7 @@ final class ic extends we {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = SteelSentinels.obfuscationControl;
+        var8 = SteelSentinels.field_G;
         try {
           if (this.field_M.d()) {
             var4_int = this.field_Q * this.field_M.field_e / tb.field_g;
@@ -1872,7 +1872,7 @@ final class ic extends we {
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           var2_int = this.field_V;
           var3 = this.field_s;
@@ -1886,13 +1886,13 @@ final class ic extends we {
           while (true) {
             stackIn_8_0 = var3;
             stackIn_8_1 = this.field_s;
-            regionExit1: {
+            L3: {
               if (stackIn_8_0 == stackIn_8_1) {
-                scanLoop2: while (true) {
+                L6: while (true) {
                   stackIn_39_0 = ~var3;
                   stackIn_39_1 = ~this.field_M.field_a[var2_int];
                   if (var7 != 0) {
-                    break regionExit1;
+                    break L3;
                   }
                   if (stackIn_39_0 == stackIn_39_1) {
                     this.field_M.d(var2_int);
@@ -1904,7 +1904,7 @@ final class ic extends we {
                       this.field_M.e(var2_int);
                       if (!this.field_M.c() &&
                         var7 == 0) {
-                        break scanLoop2;
+                        break L6;
                       }
                       if (null != this.field_H) {
                         this.a(true, this.field_S, this.field_H);
@@ -1914,7 +1914,7 @@ final class ic extends we {
                       if (this.field_S &&
                         var3 != 0) {
                         this.field_M.a(var4);
-                        break scanLoop2;
+                        break L6;
                       }
                       this.a(-1, true);
                       this.field_M.g();
@@ -1939,7 +1939,7 @@ final class ic extends we {
               stackIn_39_1 = 1463;
             }
             if (stackIn_39_0 != stackIn_39_1) {
-              this.field_bb = (NodeHashTable) null;
+              this.field_bb = (uh) null;
             }
             this.field_X = var4;
             this.field_s = var3;
@@ -1982,7 +1982,7 @@ final class ic extends we {
         this.field_M = new ab();
         this.field_v = new ej(this);
         try {
-          this.field_bb = new NodeHashTable(128);
+          this.field_bb = new uh(128);
           this.a(-1, (byte) 109, 256);
           this.a(-1, true);
         } catch (RuntimeException runtimeException) {
@@ -1993,8 +1993,8 @@ final class ic extends we {
     static {
         field_cb = "Please send me news and updates (I can unsubscribe at any time)";
         field_T = null;
-        field_B = new NodeDeque();
+        field_B = new ul();
         field_E = "CAMPAIGN TIME: ";
-        field_D = new NodeDeque();
+        field_D = new ul();
     }
 }

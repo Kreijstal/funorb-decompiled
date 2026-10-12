@@ -8,17 +8,17 @@ final class dd {
     private int[] field_i;
     int field_g;
     static int field_d;
-    static SceneWidget field_b;
+    static gh field_b;
     static volatile boolean field_e;
     static String field_l;
     private long field_h;
     dn field_j;
-    SceneWidget field_c;
+    gh field_c;
 
     final static String a(int param0, byte param1, String param2) {
         RuntimeException var3 = null;
         int var4 = 0;
-        CipherPacketBuffer var5 = null;
+        kj var5 = null;
         CharSequence var6 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -33,11 +33,11 @@ final class dd {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param2);
-          if (!ArchiveProvider.a(true, var6)) {
+          if (!fa.a(true, var6)) {
             stackIn_2_0 = en.field_a;
             return stackIn_2_0;
           }
-          if (Projectile.a(86, param2)) {
+          if (wl.a(86, param2)) {
             stackIn_6_0 = o.field_f;
             return stackIn_6_0;
           }
@@ -53,7 +53,7 @@ final class dd {
             return stackIn_16_0;
           }
           if (cc.field_gc >= 100) {
-            stackIn_19_0 = NodeIterator.field_g;
+            stackIn_19_0 = jc.field_g;
             return stackIn_19_0;
           }
           if (pf.a(param2, -112)) {
@@ -61,12 +61,12 @@ final class dd {
             return stackIn_23_0;
           }
           var5 = mm.field_g;
-          var5.writeCipheredOpcode(param0, (byte) -117);
-          var5.position = var5.position + 1;
-          var4 = var5.position;
-          var5.writeByte((byte) 111, 2);
+          var5.a(param0, (byte) -117);
+          var5.field_p = var5.field_p + 1;
+          var4 = var5.field_p;
+          var5.a((byte) 111, 2);
           var5.a(param2, -93);
-          var5.b((byte) -28, var5.position - var4);
+          var5.b((byte) -28, var5.field_p - var4);
           stackIn_25_0 = null;
           return (String) (stackIn_25_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -88,13 +88,13 @@ final class dd {
         field_l = null;
         if (param0 != 0) {
           String var2 = (String) null;
-          dd.a((ResourceArchive) null, (ResourceArchive) null, false, (String) null, (String) null);
+          dd.a((cm) null, (cm) null, false, (String) null, (String) null);
         }
     }
 
     private final boolean a(int param0, int param1, int param2) {
         if (17 == param0) {
-          FunOrbClient.field_x = new td(this.field_c.field_Rb, this.field_c.field_cb, this.field_c.field_zb, this.field_c.field_Lb, param2, an.field_a, od.field_g, hg.field_e, bd.field_f, ol.field_Tb, ParticleEffect.field_K, this.field_k, this.field_h);
+          n.field_x = new td(this.field_c.field_Rb, this.field_c.field_cb, this.field_c.field_zb, this.field_c.field_Lb, param2, an.field_a, od.field_g, hg.field_e, bd.field_f, ol.field_Tb, qb.field_K, this.field_k, this.field_h);
           return true;
         }
         if (param1 > 115) {
@@ -109,7 +109,7 @@ final class dd {
         String var2Lifetime1;
         if (param0 <= -1) {
           if (this.field_k != null &&
-            this.field_h != GameplayController.field_G) {
+            this.field_h != nb.field_G) {
             var3 = this.b(2);
             var2 = var3;
             this.field_j.a(2, 17, db.a(gd.field_ob, -40, new String[]{var3}));
@@ -118,7 +118,7 @@ final class dd {
         }
         field_l = (String) null;
         if (this.field_k != null &&
-          this.field_h != GameplayController.field_G) {
+          this.field_h != nb.field_G) {
           var3 = this.b(2);
           var2Lifetime1 = var3;
           this.field_j.a(2, 17, db.a(gd.field_ob, -40, new String[]{var3}));
@@ -127,7 +127,7 @@ final class dd {
 
     private final boolean a(int param0, int param1, byte param2) {
         int var4 = 0;
-        int var5 = SteelSentinels.obfuscationControl;
+        int var5 = SteelSentinels.field_G;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
@@ -217,7 +217,7 @@ final class dd {
             this.field_j.a(2, 13, og.field_a);
           }
           if (param1.field_k == 2) {
-            if (CachedArchiveProvider.field_y == 0) {
+            if (fi.field_y == 0) {
               this.field_j.a(2, 12, fj.field_c);
             }
             this.field_j.a(2, 13, he.field_f);
@@ -294,7 +294,7 @@ final class dd {
         int var6 = 0;
         String var7 = null;
         try {
-          if (null != this.field_k && (~GameplayController.field_G != ~this.field_h ||
+          if (null != this.field_k && (~nb.field_G != ~this.field_h ||
             2 == param2) && qc.field_P == 2) {
             var7 = this.b(param1 + 4);
             var4 = var7;
@@ -365,7 +365,7 @@ final class dd {
         String var5;
         int var6;
         cc var7;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         if (null == this.field_k) {
           if (param1 < -73) {
             return;
@@ -373,7 +373,7 @@ final class dd {
           discarded$11 = this.b(96);
           return;
         }
-        if (GameplayController.field_G == this.field_h) {
+        if (nb.field_G == this.field_h) {
           if (param1 < -73) {
             return;
           }
@@ -439,7 +439,7 @@ final class dd {
           }
           if (param0 &&
             var7.field_kc) {
-            this.field_j.a(2, 0, db.a(ArticulatedPart.field_P, -104, new String[]{var5}));
+            this.field_j.a(2, 0, db.a(nk.field_P, -104, new String[]{var5}));
             this.field_j.a(2, 1, db.a(bh.field_o, -54, new String[]{var5}));
             if (param1 < -73) {
               return;
@@ -465,7 +465,7 @@ final class dd {
         String var3;
         int var4;
         hk var5;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         if (null != nf.field_b) {
           if (param0 == 64) {
             return;
@@ -520,7 +520,7 @@ final class dd {
         return lf.field_e[2047 & param1];
     }
 
-    final static ld a(ResourceArchive param0, ResourceArchive param1, boolean param2, String param3, String param4) {
+    final static ld a(cm param0, cm param1, boolean param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -539,8 +539,8 @@ final class dd {
           if (!param2) {
             dd.a(18);
           }
-          var5_int = param0.getGroupId(param3, 46);
-          var6 = param0.getFileId(var5_int, -32759, param4);
+          var5_int = param0.a(param3, 46);
+          var6 = param0.a(var5_int, -32759, param4);
           stackIn_3_0 = in.a(param1, 112, var6, param0, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -577,7 +577,7 @@ final class dd {
 
     private final boolean a(boolean param0, int param1, int param2) {
         int var5;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         if (param0) {
           dd.a(-11);
         }
@@ -659,7 +659,7 @@ final class dd {
         return true;
     }
 
-    dd(SceneWidget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    dd(gh param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
           this.field_j = new dn(jn.field_h);
           this.field_k = param2;

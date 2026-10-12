@@ -5,18 +5,18 @@ final class wn {
     static String field_c;
     static int field_f;
     static fm field_b;
-    static BitmapFont field_a;
+    static mi field_a;
     static String field_e;
     static int field_g;
     static volatile int field_d;
 
-    final static SceneWidget b(byte param0) {
+    final static gh b(byte param0) {
         RuntimeException var1 = null;
-        SceneWidget stackIn_4_0 = null;
+        gh stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 121) {
-            field_a = (BitmapFont) null;
+            field_a = (mi) null;
           }
           stackIn_4_0 = gd.l((byte) 19);
           return stackIn_4_0;
@@ -27,7 +27,7 @@ final class wn {
         }
     }
 
-    final static void a(SceneWidget param0, SceneWidget param1, SceneWidget param2, lb param3, boolean param4, int param5, BitmapFont param6, SceneWidget param7, SceneWidget param8, SceneWidget param9, SceneWidget param10, SceneWidget param11) {
+    final static void a(gh param0, gh param1, gh param2, lb param3, boolean param4, int param5, mi param6, gh param7, gh param8, gh param9, gh param10, gh param11) {
         String stackIn_13_0 = null;
         int stackIn_28_0 = 0;
         RuntimeException stackIn_39_0 = null;
@@ -52,18 +52,18 @@ final class wn {
         StringBuilder stackIn_75_1 = null;
         String stackIn_76_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RgbSprite var12 = null;
+        wk var12 = null;
         RuntimeException var12_ref = null;
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        RgbSprite[] var16 = null;
-        SceneWidget var17 = null;
+        wk[] var16 = null;
+        gh var17 = null;
         int var18 = 0;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
-        var21 = SteelSentinels.obfuscationControl;
+        var21 = SteelSentinels.field_G;
         try {
           ag.field_r[0] = 16764000;
           pl.field_X = param6;
@@ -79,7 +79,7 @@ final class wn {
           pf.field_j[0] = 16764000;
           v.field_e = 8421504;
           pf.field_j[3] = 16736511;
-          var12 = new RgbSprite(4, 4);
+          var12 = new wk(4, 4);
           var13 = var12.field_E;
           var14 = var12.field_E;
           var12.field_E[15] = 7368816;
@@ -87,29 +87,29 @@ final class wn {
           var15[8] = 7368816;
           var13[2] = 7368816;
           var14[5] = 7368816;
-          var16 = new RgbSprite[9];
+          var16 = new wk[9];
           var16[4] = var12;
-          qc.field_V = new SceneWidget(0L, param8);
-          vg.field_g = new SceneWidget(0L, param9);
+          qc.field_V = new gh(0L, param8);
+          vg.field_g = new gh(0L, param9);
           qc.field_V.a(vg.field_g, 118);
-          var17 = new SceneWidget(0L, (SceneWidget) null);
-          var17.field_M = new NodeDeque();
+          var17 = new gh(0L, (gh) null);
+          var17.field_M = new ul();
           sn.field_j = new kg(0L, var17, param7, param3);
           vg.field_g.a(sn.field_j, 123);
-          CombatWorld.field_H = new SceneWidget(0L, param10);
-          vg.field_g.a(CombatWorld.field_H, 125);
-          vd.field_d = new SceneWidget(0L, param11);
+          ee.field_H = new gh(0L, param10);
+          vg.field_g.a(ee.field_H, 125);
+          vd.field_d = new gh(0L, param11);
           vd.field_d.field_L = pl.field_X;
-          CombatWorld.field_H.a(vd.field_d, 121);
+          ee.field_H.a(vd.field_d, 121);
           var18 = -112 / ((71 - param5) / 40);
-          CombatWorld.field_H.h(-87);
-          wh.field_e = new SceneWidget(0L, (SceneWidget) null);
+          ee.field_H.h(-87);
+          wh.field_e = new gh(0L, (gh) null);
           wh.field_e.field_I = var16;
-          CombatWorld.field_H.a(wh.field_e, 118);
-          en.field_b = new SceneWidget[5];
-          IntKeyLookup.field_a = new SceneWidget[5];
-          gb.field_f = new SceneWidget[5];
-          ah.field_Yb = new SceneWidget[5];
+          ee.field_H.a(wh.field_e, 118);
+          en.field_b = new gh[5];
+          jk.field_a = new gh[5];
+          gb.field_f = new gh[5];
+          ah.field_Yb = new gh[5];
           var19 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var19 >= 5))) {
@@ -133,14 +133,14 @@ final class wn {
                 }
               }
               if (decompiledFrameRemainder0) {
-                ah.field_Yb[var19] = new SceneWidget(0L, param0);
-                en.field_b[var19] = new SceneWidget(0L, td.field_ic, var20);
-                IntKeyLookup.field_a[var19] = new SceneWidget(0L, (SceneWidget) null);
-                IntKeyLookup.field_a[var19].field_Fb = 1;
-                gb.field_f[var19] = new SceneWidget(0L, td.field_ic);
+                ah.field_Yb[var19] = new gh(0L, param0);
+                en.field_b[var19] = new gh(0L, td.field_ic, var20);
+                jk.field_a[var19] = new gh(0L, (gh) null);
+                jk.field_a[var19].field_Fb = 1;
+                gb.field_f[var19] = new gh(0L, td.field_ic);
                 gb.field_f[var19].field_Fb = 1;
                 ah.field_Yb[var19].a(en.field_b[var19], 126);
-                ah.field_Yb[var19].a(IntKeyLookup.field_a[var19], 125);
+                ah.field_Yb[var19].a(jk.field_a[var19], 125);
                 ah.field_Yb[var19].a(gb.field_f[var19], 123);
                 ah.field_Yb[var19].h(-94);
                 qc.field_V.a(ah.field_Yb[var19], 119);
@@ -152,7 +152,7 @@ final class wn {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            fm.field_b = new SceneWidget(0L, param1);
+            fm.field_b = new gh(0L, param1);
             fm.field_b.field_S = ok.field_b;
             qc.field_V.a(fm.field_b, 118);
             stackIn_28_0 = ud.e(-107) ? 1 : 0;

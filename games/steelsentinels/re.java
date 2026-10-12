@@ -7,7 +7,7 @@ final class re extends ha {
     static String field_ab;
     static String field_W;
     private jf field_gb;
-    static BitmapFont field_ib;
+    static mi field_ib;
     private boolean field_Y;
     static int field_eb;
     static String field_X;

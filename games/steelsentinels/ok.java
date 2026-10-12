@@ -4,8 +4,8 @@
 final class ok {
     static String field_b;
     static int[] field_d;
-    static ResourceArchive field_f;
-    static ResourceArchive field_e;
+    static cm field_f;
+    static cm field_e;
     static boolean field_g;
     static int field_c;
     static int field_a;
@@ -22,7 +22,7 @@ final class ok {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         java.awt.Frame var5 = null;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
           while (true) {
             var3 = param1.a(param2, -1463474960);
@@ -110,7 +110,7 @@ final class ok {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         try {
           if (param3 != 109) {
             var7 = (byte[]) null;

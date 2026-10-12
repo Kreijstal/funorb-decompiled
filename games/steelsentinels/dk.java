@@ -3,32 +3,32 @@
  */
 final class dk {
     private int field_e;
-    private DualNode field_c;
-    private DualNode[] field_b;
+    private kd field_c;
+    private kd[] field_b;
     private long field_g;
     static String field_i;
     static fh field_h;
     private int field_f;
     static int field_a;
-    private DualNode field_d;
+    private kd field_d;
 
-    final DualNode c(byte param0) {
-        DualNode var3 = null;
-        int var4 = SteelSentinels.obfuscationControl;
+    final kd c(byte param0) {
+        kd var3 = null;
+        int var4 = SteelSentinels.field_G;
         if (this.field_d == null) {
           return null;
         }
         if (param0 <= 85) {
-          return (DualNode) null;
+          return (kd) null;
         }
-        DualNode var2 = this.field_b[(int)((long)(this.field_e - 1) & this.field_g)];
+        kd var2 = this.field_b[(int)((long)(this.field_e - 1) & this.field_g)];
         while (this.field_d != var2) {
           if (~this.field_g == ~this.field_d.field_w) {
             var3 = this.field_d;
-            this.field_d = this.field_d.dualNext;
+            this.field_d = this.field_d.field_o;
             return var3;
           }
-          this.field_d = this.field_d.dualNext;
+          this.field_d = this.field_d.field_o;
         }
         this.field_d = null;
         return null;
@@ -42,25 +42,25 @@ final class dk {
         field_h = null;
     }
 
-    final DualNode a(int param0) {
+    final kd a(int param0) {
         this.field_f = 0;
         if (param0 <= 87) {
-          this.field_c = (DualNode) null;
+          this.field_c = (kd) null;
         }
         return this.a((byte) 95);
     }
 
-    final DualNode a(byte param0) {
+    final kd a(byte param0) {
         int fieldTemp$0 = 0;
-        DualNode var2_ref_kd;
+        kd var2_ref_kd;
         int var2;
-        DualNode var3;
+        kd var3;
         int var4;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         if (this.field_f > 0 &&
           this.field_b[-1 + this.field_f] != this.field_c) {
           var2_ref_kd = this.field_c;
-          this.field_c = var2_ref_kd.dualNext;
+          this.field_c = var2_ref_kd.field_o;
           return var2_ref_kd;
         }
         var2 = 52 % ((4 - param0) / 46);
@@ -70,9 +70,9 @@ final class dk {
           }
           fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
-          var3 = this.field_b[fieldTemp$0].dualNext;
+          var3 = this.field_b[fieldTemp$0].field_o;
         } while (this.field_b[-1 + this.field_f] == var3);
-        this.field_c = var3.dualNext;
+        this.field_c = var3.field_o;
         return var3;
     }
 
@@ -100,7 +100,7 @@ final class dk {
         int var10 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
-        var10 = SteelSentinels.obfuscationControl;
+        var10 = SteelSentinels.field_G;
         try {
           var1_int = ug.field_Q;
           var2 = 0;
@@ -116,10 +116,10 @@ final class dk {
             if (var4 < 0) {
               var5 = se.field_e;
             } else {
-              if (DualNodeDeque.field_f.field_e == var4) {
+              if (ra.field_f.field_e == var4) {
                 var5 = km.field_i;
               } else {
-                var5 = CipherPacketBuffer.field_I;
+                var5 = kj.field_I;
               }
             }
             var6 = r.field_j[var3];
@@ -165,7 +165,7 @@ final class dk {
             var7Lifetime1 = wd.$cfr$intArgs$a$1694234bddb3(stackIn_38_0, stackIn_38_1, stackIn_39_2);
             var8Lifetime1 = mg.field_kc - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
-              if (DualNodeDeque.field_f.field_e != var4) {
+              if (ra.field_f.field_e != var4) {
                 stackIn_44_0 = vd.field_f;
               } else {
                 stackIn_44_0 = kk.field_c;
@@ -247,36 +247,36 @@ final class dk {
         }
     }
 
-    final void a(DualNode param0, int param1, long param2) {
-        DualNode var5 = null;
+    final void a(kd param0, int param1, long param2) {
+        kd var5 = null;
         try {
-          if (param0.dualPrevious != null) {
-            param0.unlinkDual(480);
+          if (param0.field_v != null) {
+            param0.e(480);
           }
           var5 = this.field_b[(int)(param2 & (long)(this.field_e - param1))];
-          param0.dualNext = var5;
-          param0.dualPrevious = var5.dualPrevious;
-          param0.dualPrevious.dualNext = param0;
-          param0.dualNext.dualPrevious = param0;
+          param0.field_o = var5;
+          param0.field_v = var5.field_v;
+          param0.field_v.field_o = param0;
+          param0.field_o.field_v = param0;
           param0.field_w = param2;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "dk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final DualNode a(long param0, byte param1) {
-        DualNode var5_ref_kd = null;
-        int var6 = SteelSentinels.obfuscationControl;
+    final kd a(long param0, byte param1) {
+        kd var5_ref_kd = null;
+        int var6 = SteelSentinels.field_G;
         this.field_g = param0;
-        DualNode var4 = this.field_b[(int)((long)(this.field_e - 1) & param0)];
-        this.field_d = var4.dualNext;
+        kd var4 = this.field_b[(int)((long)(this.field_e - 1) & param0)];
+        this.field_d = var4.field_o;
         while (this.field_d != var4) {
           if (~param0 == ~this.field_d.field_w) {
             var5_ref_kd = this.field_d;
-            this.field_d = this.field_d.dualNext;
+            this.field_d = this.field_d.field_o;
             return var5_ref_kd;
           }
-          this.field_d = this.field_d.dualNext;
+          this.field_d = this.field_d.field_o;
         }
         int var5 = -63 / ((param1 - 11) / 47);
         this.field_d = null;
@@ -294,17 +294,17 @@ final class dk {
 
     dk(int param0) {
         int var2 = 0;
-        DualNode dupTemp$0 = null;
-        DualNode var3 = null;
+        kd dupTemp$0 = null;
+        kd var3 = null;
         this.field_f = 0;
-        this.field_b = new DualNode[param0];
+        this.field_b = new kd[param0];
         this.field_e = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new DualNode();
+          dupTemp$0 = new kd();
           var3 = dupTemp$0;
           this.field_b[var2] = dupTemp$0;
-          var3.dualNext = var3;
-          var3.dualPrevious = var3;
+          var3.field_o = var3;
+          var3.field_v = var3;
         }
     }
 

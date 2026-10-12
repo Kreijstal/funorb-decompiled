@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cf extends IntrusiveNode {
+final class cf extends ck {
     static String[] field_t;
     static int field_q;
     static String field_p;
@@ -16,15 +16,15 @@ final class cf extends IntrusiveNode {
     int field_r;
     int field_B;
     int field_y;
-    static IndexedSprite[] field_u;
-    static SceneWidget field_w;
+    static gk[] field_u;
+    static gh field_w;
     static String field_A;
 
-    final static RgbSprite[] a(String param0, String param1, byte param2, ResourceArchive param3) {
+    final static wk[] a(String param0, String param1, byte param2, cm param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        RgbSprite[] stackIn_3_0 = null;
+        wk[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -34,11 +34,11 @@ final class cf extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.getGroupId(param1, 79);
+          var4_int = param3.a(param1, 79);
           if (param2 >= -11) {
             cf.c((byte) 29);
           }
-          var5 = param3.getFileId(var4_int, -32759, param0);
+          var5 = param3.a(var4_int, -32759, param0);
           stackIn_3_0 = il.a(var5, 20178, var4_int, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

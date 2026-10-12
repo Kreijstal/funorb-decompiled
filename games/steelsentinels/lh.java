@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class lh extends IntrusiveNode {
+class lh extends ck {
     int field_x;
     int field_E;
     da field_s;
@@ -17,7 +17,7 @@ class lh extends IntrusiveNode {
     static int field_B;
     String field_v;
     tn field_A;
-    static IndexedSprite[] field_q;
+    static gk[] field_q;
     int field_z;
     static int field_r;
     qk field_p;
@@ -41,7 +41,7 @@ class lh extends IntrusiveNode {
         h var40;
         h var41;
         int var5Lifetime1;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         if (param0 < 13) {
           this.a(-27, (byte) 80, -80, 119, 8);
           this.a(param3, 71, this, param2);
@@ -192,7 +192,7 @@ class lh extends IntrusiveNode {
                   }
                 }
               } else {
-                regionExit1: {
+                sharedTailExit_4: {
                   if (this.a(rj.field_j, this, param3, oa.field_S, param2, true, lb.field_gc)) {
                     param1 = false;
                     if (var7 == 0) {
@@ -207,7 +207,7 @@ class lh extends IntrusiveNode {
                           nc.field_e = null;
                         }
                       }
-                      break regionExit1;
+                      break sharedTailExit_4;
                     }
                   }
                   if (0 == nc.field_d &&
@@ -303,7 +303,7 @@ class lh extends IntrusiveNode {
         }
     }
 
-    final static void a(int[] param0, RgbSprite[][] param1, int param2, String[][] param3, ResourceArchive param4, int[] param5, boolean param6, ResourceArchive param7, String[] param8, IndexedSprite[] param9, ResourceArchive param10, String[][] param11, byte[] param12, RgbSprite[][] param13, int param14, String[] param15, byte[] param16, int param17, int param18) {
+    final static void a(int[] param0, wk[][] param1, int param2, String[][] param3, cm param4, int[] param5, boolean param6, cm param7, String[] param8, gk[] param9, cm param10, String[][] param11, byte[] param12, wk[][] param13, int param14, String[] param15, byte[] param16, int param17, int param18) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -620,7 +620,7 @@ class lh extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         try {
           if (param2) {
             return;
@@ -836,7 +836,7 @@ class lh extends IntrusiveNode {
         int var5_int;
         String var5;
         int var6;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         var4 = this.b(true);
         var5_int = 0;
         if (param2 == -128) {
@@ -859,7 +859,7 @@ class lh extends IntrusiveNode {
             break;
           }
         }
-        var5 = NodeIterator.b((byte) -122);
+        var5 = jc.b((byte) -122);
         if (var5 != null) {
           ad.field_j.a(eh.field_a, var5, t.field_l, 15658734);
         }

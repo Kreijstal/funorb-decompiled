@@ -12,7 +12,7 @@ final class um extends oa {
     static String[] field_cb;
     int field_ab;
 
-    final static mg a(SceneWidget param0, SceneWidget param1, SceneWidget param2, int[] param3, int param4) {
+    final static mg a(gh param0, gh param1, gh param2, int[] param3, int param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;
@@ -37,7 +37,7 @@ final class um extends oa {
         Throwable decompiledCaughtException = null;
         RuntimeException var5 = null;
         Exception var10 = null;
-        var12 = SteelSentinels.obfuscationControl;
+        var12 = SteelSentinels.field_G;
         try {
           var5_int = param3.length;
           var6 = new String[var5_int];
@@ -51,7 +51,7 @@ final class um extends oa {
               field_db = (String) null;
             }
             for (var10_int = 0; var10_int < var5_int; var10_int++) {
-              var11 = ArchiveIndex.field_w.a(param3[var10_int], -76);
+              var11 = jl.field_w.a(param3[var10_int], -76);
               var6[var10_int] = var11.i(1);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;
@@ -130,7 +130,7 @@ final class um extends oa {
         byte[] var18 = null;
         int var4Lifetime1;
         int var6Lifetime1;
-        var8 = SteelSentinels.obfuscationControl;
+        var8 = SteelSentinels.field_G;
         try {
           var1_int = uc.field_b.length + 7;
           var17 = ue.field_c;
@@ -252,7 +252,7 @@ final class um extends oa {
         int var11 = 0;
         int var13 = 0;
         int var14 = 0;
-        var14 = SteelSentinels.obfuscationControl;
+        var14 = SteelSentinels.field_G;
         try {
           if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
             return false;

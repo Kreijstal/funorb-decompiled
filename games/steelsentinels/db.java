@@ -32,7 +32,7 @@ abstract class db {
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         try {
           var2 = ha.a(param1, "jagex-last-login-method", -15645);
           if (var2 == null) {
@@ -92,7 +92,7 @@ abstract class db {
         java.awt.Component var12 = null;
         int var5Lifetime1;
         int var8Lifetime1;
-        var11 = SteelSentinels.obfuscationControl;
+        var11 = SteelSentinels.field_G;
         try {
           var3_int = param0.length();
           var4 = var3_int;
@@ -201,10 +201,10 @@ abstract class db {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var2 = SteelSentinels.obfuscationControl;
+        var2 = SteelSentinels.field_G;
         try {
           for (var1_int = 0; var1_int < 10000; var1_int++) {
-            k.particleReuseBuffer[var1_int].detachWorld(-15809);
+            k.field_Cb[var1_int].i(-15809);
           }
           if (param0 != 10000) {
             field_f = (String) null;

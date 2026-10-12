@@ -5,44 +5,44 @@ final class vh {
     static int field_c;
     static String[] field_d;
     static int field_a;
-    static RgbSprite[] field_b;
+    static wk[] field_b;
 
     final static void a(int param0, tc param1, byte param2) {
-        CipherPacketBuffer var8 = null;
-        CipherPacketBuffer var9 = null;
+        kj var8 = null;
+        kj var9 = null;
         int var4 = 0;
         int var6 = 0;
-        int var7 = SteelSentinels.obfuscationControl;
+        int var7 = SteelSentinels.field_G;
         try {
           var8 = mm.field_g;
           var9 = var8;
-          var9.writeCipheredOpcode(param0, (byte) -117);
-          var9.position = var9.position + 1;
-          var4 = var9.position;
-          var9.writeByte((byte) 120, 1);
-          var9.writeShort(param1.field_p, 36);
-          var9.writeShort(param1.field_y, 20);
-          var9.writeShort(param1.field_o, 29);
-          var9.writeInt(true, param1.field_C);
-          var9.writeInt(true, param1.field_u);
-          var9.writeInt(true, param1.field_t);
-          var9.writeInt(true, param1.field_w);
-          var9.writeByte((byte) 123, param1.field_q.length);
+          var9.a(param0, (byte) -117);
+          var9.field_p = var9.field_p + 1;
+          var4 = var9.field_p;
+          var9.a((byte) 120, 1);
+          var9.d(param1.field_p, 36);
+          var9.d(param1.field_y, 20);
+          var9.d(param1.field_o, 29);
+          var9.b(true, param1.field_C);
+          var9.b(true, param1.field_u);
+          var9.b(true, param1.field_t);
+          var9.b(true, param1.field_w);
+          var9.a((byte) 123, param1.field_q.length);
           int var5 = -14 / ((57 - param2) / 48);
           for (var6 = 0; var6 < param1.field_q.length; var6++) {
-            var8.writeInt(true, param1.field_q[var6]);
+            var8.b(true, param1.field_q[var6]);
           }
           var9.f(-103, var4);
-          var9.b((byte) 99, -var4 + var9.position);
+          var9.b((byte) 99, -var4 + var9.field_p);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "vh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static RgbSprite[] a(int param0, ResourceArchive param1, int param2, byte param3) {
+    final static wk[] a(int param0, cm param1, int param2, byte param3) {
         RuntimeException var4 = null;
-        ResourceArchive var5 = null;
-        RgbSprite[] stackIn_6_0 = null;
+        cm var5 = null;
+        wk[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -52,8 +52,8 @@ final class vh {
             return null;
           }
           if (param3 <= 16) {
-            var5 = (ResourceArchive) null;
-            vh.a(83, (ResourceArchive) null, 117, (byte) 119);
+            var5 = (cm) null;
+            vh.a(83, (cm) null, 117, (byte) 119);
           }
           stackIn_6_0 = gj.b(0);
           return stackIn_6_0;
@@ -86,7 +86,7 @@ final class vh {
         if (vb.field_e) {
           return ba.a(112, param3, param0);
         }
-        if (BattleTerrain.b(-3, param3, param0)) {
+        if (hd.b(-3, param3, param0)) {
           return true;
         }
         if (uc.field_g) {

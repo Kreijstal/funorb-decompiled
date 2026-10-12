@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ah extends SceneWidget {
-    SceneWidget field_cc;
+final class ah extends gh {
+    gh field_cc;
     String field_dc;
     static int field_Wb;
-    SceneWidget field_Ub;
-    static SceneWidget[] field_Yb;
+    gh field_Ub;
+    static gh[] field_Yb;
     static String field_Sb;
     int field_bc;
     String field_Tb;
     String field_Vb;
-    static RgbSprite[] field_Zb;
+    static wk[] field_Zb;
     String field_ac;
     static String field_Xb;
     static String field_fc;
-    SceneWidget field_ec;
+    gh field_ec;
 
     public static void b(boolean param0) {
         field_Yb = null;
@@ -32,25 +32,25 @@ final class ah extends SceneWidget {
         field_Sb = null;
     }
 
-    final static void a(int param0, ResourceArchive param1) {
-        RgbSprite var2 = null;
+    final static void a(int param0, cm param1) {
+        wk var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
           if (param0 < 54) {
             field_Xb = (String) null;
           }
-          var2 = new RgbSprite(param1.a("", -742, "final_frame.jpg"), (java.awt.Component) ((Object) sl.field_n));
+          var2 = new wk(param1.a("", -742, "final_frame.jpg"), (java.awt.Component) ((Object) sl.field_n));
           var3 = var2.field_A;
           var4 = var2.field_F;
-          ArchiveIndex.a(false);
-          dj.field_c = new RgbSprite(var3, 3 * var4 / 4);
+          jl.a(false);
+          dj.field_c = new wk(var3, 3 * var4 / 4);
           dj.field_c.d();
           var2.f(0, 0);
-          BattleTerrain.field_k = new RgbSprite(var3, -dj.field_c.field_F + var4);
-          BattleTerrain.field_k.d();
+          hd.field_k = new wk(var3, -dj.field_c.field_F + var4);
+          hd.field_k.d();
           var2.f(0, -dj.field_c.field_F);
-          BattleTerrain.field_k.field_H = dj.field_c.field_F;
+          hd.field_k.field_H = dj.field_c.field_F;
           tk.$cfr$intArgs$f$20d51497949f(107);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ah.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -58,7 +58,7 @@ final class ah extends SceneWidget {
     }
 
     ah() {
-        super(0L, (SceneWidget) null);
+        super(0L, (gh) null);
     }
 
     final static Object a(boolean param0, byte[] param1, int param2) {
@@ -105,18 +105,18 @@ final class ah extends SceneWidget {
     }
 
     final static void a(boolean param0, int param1) {
-        ResourceArchive var3;
-        ResourceArchive var3Lifetime1;
-        if (SentinelCommand.field_t <= 0) {
+        cm var3;
+        cm var3Lifetime1;
+        if (je.field_t <= 0) {
           if (bd.field_c > 0) {
             if (vb.field_c) {
-              SoftwareRaster.f(0, 0, SoftwareRaster.field_c, qc.field_V.field_cb);
+              pb.f(0, 0, pb.field_c, qc.field_V.field_cb);
               fb.field_r.a(param0, (byte) 127);
             }
           } else {
             if (fj.field_f > 0 &&
               vb.field_c) {
-              SoftwareRaster.f(0, 0, SoftwareRaster.field_c, qc.field_V.field_cb);
+              pb.f(0, 0, pb.field_c, qc.field_V.field_cb);
               fb.field_r.a(param0, (byte) 127);
             }
           }
@@ -125,23 +125,23 @@ final class ah extends SceneWidget {
             if ((!(bd.field_c <= 0) ||
               !(fj.field_f <= 0)) &&
               vb.field_c) {
-              SoftwareRaster.f(0, 0, SoftwareRaster.field_c, qc.field_V.field_cb);
+              pb.f(0, 0, pb.field_c, qc.field_V.field_cb);
               fb.field_r.a(param0, (byte) 127);
             }
           } else {
-            SoftwareRaster.f(0, 0, SoftwareRaster.field_c, qc.field_V.field_cb);
+            pb.f(0, 0, pb.field_c, qc.field_V.field_cb);
             fl.field_b.a(param0, (byte) 127);
             if (bd.field_c <= 0 &&
               fj.field_f <= 0) {
               if (param1 <= -25) {
                 return;
               }
-              var3 = (ResourceArchive) null;
-              ah.a(87, (ResourceArchive) null);
+              var3 = (cm) null;
+              ah.a(87, (cm) null);
               return;
             }
             if (vb.field_c) {
-              SoftwareRaster.f(0, 0, SoftwareRaster.field_c, qc.field_V.field_cb);
+              pb.f(0, 0, pb.field_c, qc.field_V.field_cb);
               fb.field_r.a(param0, (byte) 127);
             }
           }
@@ -149,8 +149,8 @@ final class ah extends SceneWidget {
         if (param1 <= -25) {
           return;
         }
-        var3Lifetime1 = (ResourceArchive) null;
-        ah.a(87, (ResourceArchive) null);
+        var3Lifetime1 = (cm) null;
+        ah.a(87, (cm) null);
     }
 
     static {

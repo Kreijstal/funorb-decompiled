@@ -14,48 +14,48 @@ final class on extends me {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        PartInstruction[] var2 = null;
-        PartInstruction var4 = null;
+        qd[] var2 = null;
+        qd var4 = null;
         int var5 = 0;
         int var6 = 0;
-        PartInstruction[] var7 = null;
-        PartInstruction[] var8 = null;
-        var6 = SteelSentinels.obfuscationControl;
+        qd[] var7 = null;
+        qd[] var8 = null;
+        var6 = SteelSentinels.field_G;
         try {
           lc.field_f = false;
           qf.field_b = false;
           qh.field_Wb = false;
-          GameplayController.field_I = false;
+          nb.field_I = false;
           bm.field_Q = false;
           if (param0 != 50) {
             return;
           }
           vc.field_d = false;
-          Projectile.field_lb = false;
+          wl.field_lb = false;
           bf.field_Gb = false;
-          var8 = new PartInstruction[]{};
+          var8 = new qd[]{};
           var7 = hl.field_v.a(var8, -21636, 4095);
           var2 = var7;
           for (var3 = 0; var3 < var2.length; var3++) {
             var4 = var2[var3];
-            if (null != var4.attachedPart &&
-              var4.attachedPart.componentId == 89) {
+            if (null != var4.field_d &&
+              var4.field_d.field_N == 89) {
               qh.field_Wb = true;
               lc.field_f = true;
             } else {
-              if (null != var4.attachedPart &&
-                var4.attachedPart.componentId == 66) {
+              if (null != var4.field_d &&
+                var4.field_d.field_N == 66) {
                 qh.field_Wb = true;
               } else {
-                if (null != var4.attachedPart &&
-                  76 == var4.attachedPart.componentId) {
+                if (null != var4.field_d &&
+                  76 == var4.field_d.field_N) {
                   qh.field_Wb = true;
                 } else {
-                  if (null != var4.attachedPart &&
-                    83 != var4.attachedPart.componentId &&
-                    (var4.attachedPart.field_Q & 1008) != 0) {
+                  if (null != var4.field_d &&
+                    83 != var4.field_d.field_N &&
+                    (var4.field_d.field_Q & 1008) != 0) {
                     qh.field_Wb = true;
-                    var5 = ja.a(var4.attachedPart.componentId, false);
+                    var5 = ja.a(var4.field_d.field_N, false);
                     switch (var5) {
                       case 9:
                       default:
@@ -74,29 +74,29 @@ final class on extends me {
                             qf.field_b = true;
                             break;
                           }
-                          GameplayController.field_I = true;
+                          nb.field_I = true;
                           break;
                         }
                         vc.field_d = true;
                         bf.field_Gb = true;
                         break;
                       case 8:
-                        if (var4.attachedPart.componentId == 47) {
+                        if (var4.field_d.field_N == 47) {
                           bm.field_Q = true;
                         }
                         vc.field_d = true;
                         break;
                       case 7:
-                        Projectile.field_lb = true;
+                        wl.field_lb = true;
                         vc.field_d = true;
                         bm.field_Q = true;
                         break;
                       case 0:
                         vc.field_d = true;
-                        Projectile.field_lb = true;
+                        wl.field_lb = true;
                         break;
                       case 1:
-                        Projectile.field_lb = true;
+                        wl.field_lb = true;
                         break;
                     }
                   }
@@ -105,7 +105,7 @@ final class on extends me {
             }
           }
           if (dc.field_g == 8 &&
-            !GameplayController.field_I) {
+            !nb.field_I) {
             rc.a(false);
           }
           ef.field_b = true;
@@ -117,7 +117,7 @@ final class on extends me {
         }
     }
 
-    final void a(PacketBuffer param0, boolean param1) {
+    final void a(gi param0, boolean param1) {
         try {
           param0.a(13588, this.field_m);
           param0.a(this.field_l, (byte) -83);
@@ -144,7 +144,7 @@ final class on extends me {
             return stackIn_2_0;
           }
           var2 = new pc(param0, param0);
-          mm.field_b.addLast(3, var2);
+          mm.field_b.a(3, var2);
           ll.field_e.b(param0);
           stackIn_4_0 = var2;
           return stackIn_4_0;
@@ -164,10 +164,10 @@ final class on extends me {
 
     final dj a(byte param0) {
         if (param0 < 47) {
-          PacketBuffer var3 = (PacketBuffer) null;
-          this.a((PacketBuffer) null, true);
+          gi var3 = (gi) null;
+          this.a((gi) null, true);
         }
-        return ArticulatedPart.field_F;
+        return nk.field_F;
     }
 
     public static void b(byte param0) {

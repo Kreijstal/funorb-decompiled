@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uc {
-    static SceneWidget field_j;
+    static gh field_j;
     static int[] field_c;
     static int[][] field_e;
     static int[] field_k;
@@ -36,20 +36,20 @@ final class uc {
         kf var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         try {
           if (!param0) {
             uc.a(-115, 79);
           }
-          var4 = (tc) (ic.field_B.first(13058));
+          var4 = (tc) (ic.field_B.e(13058));
           while (var4 != null) {
             vh.a(param1, var4, (byte) 107);
-            var4 = (tc) (ic.field_B.next((byte) -53));
+            var4 = (tc) (ic.field_B.a((byte) -53));
           }
-          var5 = (kf) (SentinelCommand.field_w.first(13058));
+          var5 = (kf) (je.field_w.e(13058));
           while (var5 != null) {
             ma.a(param1, var5, -2864);
-            var5 = (kf) (SentinelCommand.field_w.next((byte) -40));
+            var5 = (kf) (je.field_w.a((byte) -40));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -59,7 +59,7 @@ final class uc {
         }
     }
 
-    final static void a(RgbSprite[] param0, int param1, int param2, byte param3, int param4) {
+    final static void a(wk[] param0, int param1, int param2, byte param3, int param4) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -71,7 +71,7 @@ final class uc {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = SteelSentinels.obfuscationControl;
+        var10 = SteelSentinels.field_G;
         try {
           if (param0 != null &&
             param1 > 0) {
@@ -80,8 +80,8 @@ final class uc {
             var7 = param0[1].field_z;
             param0[0].a(param4, param2);
             param0[2].a(param1 + (param4 - var6), param2);
-            SoftwareRaster.b(aj.field_v);
-            SoftwareRaster.h(param4 + var5_int, param2, param4 + param1 - var6, param0[1].field_B + param2);
+            pb.b(aj.field_v);
+            pb.h(param4 + var5_int, param2, param4 + param1 - var6, param0[1].field_B + param2);
             var8 = var5_int + param4;
             var9 = param4 + param1 - var6;
             param4 = var8;
@@ -92,7 +92,7 @@ final class uc {
               param0[1].a(param4, param2);
               param4 = param4 + var7;
             }
-            SoftwareRaster.a(aj.field_v);
+            pb.a(aj.field_v);
             return;
           }
           return;
@@ -116,12 +116,12 @@ final class uc {
         RuntimeException var2_ref = null;
         int var4 = 0;
         int var5 = 0;
-        RgbSprite[] var6 = null;
+        wk[] var6 = null;
         int[] var7 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         try {
-          if (!ArticulatedPart.f((byte) -125) &&
+          if (!nk.f((byte) -125) &&
             oc.a(param0, -105, true)) {
             return false;
           }
@@ -131,8 +131,8 @@ final class uc {
           var7 = dn.field_bc;
           var2 = var7;
           if (param1 != -3958) {
-            var6 = (RgbSprite[]) null;
-            uc.a((RgbSprite[]) null, 91, -31, (byte) -121, -77);
+            var6 = (wk[]) null;
+            uc.a((wk[]) null, 91, -31, (byte) -121, -77);
           }
           for (var3 = 0; var3 < var7.length; var3++) {
             var4 = var7[var3];

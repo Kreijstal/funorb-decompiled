@@ -4,22 +4,22 @@
 abstract class vk {
     static String field_b;
     static int[] field_g;
-    DualNodeDeque field_m;
-    static RgbSprite[] field_l;
-    static RgbSprite field_r;
+    ra field_m;
+    static wk[] field_l;
+    static wk field_r;
     static int[] field_s;
-    static RgbSprite field_q;
+    static wk field_q;
     static String field_k;
-    DualNodeDeque field_a;
+    ra field_a;
     static int[] field_h;
-    DualNodeDeque field_j;
-    DualNodeDeque field_p;
+    ra field_j;
+    ra field_p;
     int field_i;
-    PacketBuffer field_o;
+    gi field_o;
     long field_e;
     byte field_n;
     volatile int field_f;
-    PacketBuffer field_c;
+    gi field_c;
     volatile int field_t;
     qa field_d;
 
@@ -39,7 +39,7 @@ abstract class vk {
         if (param0 != 16) {
           return 76;
         }
-        return this.field_m.size((byte) -115) + this.field_a.size((byte) -105);
+        return this.field_m.a((byte) -115) + this.field_a.a((byte) -105);
     }
 
     final boolean b(byte param0) {
@@ -52,10 +52,10 @@ abstract class vk {
 
     final int d(int param0) {
         if (param0 == -21033) {
-          return this.field_j.size((byte) -102) + this.field_p.size((byte) -85);
+          return this.field_j.a((byte) -102) + this.field_p.a((byte) -85);
         }
         this.a(124);
-        return this.field_j.size((byte) -102) + this.field_p.size((byte) -85);
+        return this.field_j.a((byte) -102) + this.field_p.a((byte) -85);
     }
 
     final static boolean a(long param0, int[] param1, String param2, int param3, int param4) {
@@ -114,30 +114,30 @@ abstract class vk {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         pc var1Lifetime1;
-        var2 = SteelSentinels.obfuscationControl;
+        var2 = SteelSentinels.field_G;
         try {
           fc.field_a.b();
-          ResourceArchive.field_j.b();
+          cm.field_j.b();
           la.field_b = la.field_b - 1;
           if (param0) {
             field_s = (int[]) null;
           }
           if (la.field_b == 0) {
             la.field_b = 200;
-            var1 = (pc) (mm.field_b.first(13058));
+            var1 = (pc) (mm.field_b.e(13058));
             while (var1 != null) {
               if (!var1.field_u.b((byte) -12)) {
-                var1.unlink(4);
+                var1.b(4);
               }
-              var1 = (pc) (mm.field_b.next((byte) -101));
+              var1 = (pc) (mm.field_b.a((byte) -101));
             }
             if (null != rl.field_c) {
-              var1Lifetime1 = (pc) (rl.field_c.first(13058));
+              var1Lifetime1 = (pc) (rl.field_c.e(13058));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_u.b((byte) -12)) {
-                  var1Lifetime1.unlink(4);
+                  var1Lifetime1.b(4);
                 }
-                var1Lifetime1 = (pc) (rl.field_c.next((byte) -6));
+                var1Lifetime1 = (pc) (rl.field_c.a((byte) -6));
               }
             }
           }
@@ -163,7 +163,7 @@ abstract class vk {
         return 20 <= this.a((byte) 16) ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, ak param6, byte param7, BitmapFont param8, int param9, ak param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, BitmapFont param18, ak param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, ak param6, byte param7, mi param8, int param9, ak param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, mi param18, ak param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -236,26 +236,26 @@ abstract class vk {
           if (this.a((byte) 16) >= 20) {
             throw new RuntimeException();
           }
-          this.field_m.addLast((byte) 96, var8);
+          this.field_m.a((byte) 96, var8);
         } else {
           if (!(this.d(-21033) < 20)) {
             throw new RuntimeException();
           }
-          this.field_j.addLast((byte) 47, var8);
+          this.field_j.a((byte) 47, var8);
         }
         return var8;
     }
 
     vk() {
-        this.field_m = new DualNodeDeque();
-        this.field_a = new DualNodeDeque();
-        this.field_j = new DualNodeDeque();
-        this.field_p = new DualNodeDeque();
-        this.field_o = new PacketBuffer(6);
+        this.field_m = new ra();
+        this.field_a = new ra();
+        this.field_j = new ra();
+        this.field_p = new ra();
+        this.field_o = new gi(6);
         this.field_n = (byte) 0;
         this.field_f = 0;
         this.field_t = 0;
-        this.field_c = new PacketBuffer(10);
+        this.field_c = new gi(10);
     }
 
     static {

@@ -134,7 +134,7 @@ final class em extends we {
               this.field_w = 0;
               this.field_t = 0;
               this.field_s = 0;
-              this.unlink(4);
+              this.b(4);
               param0 = this.field_x;
             }
             this.field_x = 0;
@@ -152,7 +152,7 @@ final class em extends we {
         if (this.field_v < 0) {
           if (this.field_E <= 0) {
             this.k();
-            this.unlink(4);
+            this.b(4);
             return;
           }
           this.field_v = 0;
@@ -160,7 +160,7 @@ final class em extends we {
         if (this.field_v >= var5) {
           if (this.field_E >= 0) {
             this.k();
-            this.unlink(4);
+            this.b(4);
             return;
           }
           this.field_v = var5 - 1;
@@ -273,7 +273,7 @@ final class em extends we {
           if (this.field_v >= var5) {
             this.field_v = var5;
             this.k();
-            this.unlink(4);
+            this.b(4);
           }
           return;
         }
@@ -282,7 +282,7 @@ final class em extends we {
         }
         this.field_v = -1;
         this.k();
-        this.unlink(4);
+        this.b(4);
     }
 
     final synchronized int j() {
@@ -749,7 +749,7 @@ final class em extends we {
         if (this.field_v < 0) {
           if (this.field_E <= 0) {
             this.k();
-            this.unlink(4);
+            this.b(4);
             return;
           }
           this.field_v = 0;
@@ -757,7 +757,7 @@ final class em extends we {
         if (this.field_v >= var7) {
           if (this.field_E >= 0) {
             this.k();
-            this.unlink(4);
+            this.b(4);
             return;
           }
           this.field_v = var7 - 1;
@@ -884,7 +884,7 @@ final class em extends we {
           if (this.field_v >= var7) {
             this.field_v = var7;
             this.k();
-            this.unlink(4);
+            this.b(4);
           }
           return;
         }
@@ -894,7 +894,7 @@ final class em extends we {
         }
         this.field_v = -1;
         this.k();
-        this.unlink(4);
+        this.b(4);
         return;
     }
 
@@ -1143,7 +1143,7 @@ final class em extends we {
           this.field_w = 0;
           this.field_t = 0;
           this.field_s = 0;
-          this.unlink(4);
+          this.b(4);
           return true;
         }
         if (this.field_s >= var1) {
@@ -1261,7 +1261,7 @@ final class em extends we {
         int var2Lifetime1;
         if (param0 == 0) {
           this.e(0);
-          this.unlink(4);
+          this.b(4);
           return;
         }
         if (this.field_t != 0) {
@@ -1321,7 +1321,7 @@ final class em extends we {
         this.field_x = 0;
         this.field_G = 0;
         this.field_s = 0;
-        this.unlink(4);
+        this.b(4);
     }
 
     final int a() {

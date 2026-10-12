@@ -4,7 +4,7 @@
 final class vm extends ia {
     static String field_q;
     private jf field_n;
-    static IndexedSprite[] field_r;
+    static gk[] field_r;
     static String field_o;
     private jf field_p;
 
@@ -29,18 +29,18 @@ final class vm extends ia {
             vm.b((String) null, 32);
           }
           if (var4.length() == 0) {
-            stackIn_4_0 = ArchiveProvider.field_d;
+            stackIn_4_0 = fa.field_d;
             return stackIn_4_0;
           }
           if (!lk.a(var4, (byte) 62, var3)) {
-            stackIn_7_0 = ArchiveProvider.field_d;
+            stackIn_7_0 = fa.field_d;
             return stackIn_7_0;
           }
           if (!this.b(1, param0)) {
             stackIn_12_0 = vf.field_b;
             return stackIn_12_0;
           }
-          stackIn_10_0 = ArchiveProvider.field_d;
+          stackIn_10_0 = fa.field_d;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,10 +160,10 @@ final class vm extends ia {
             return stackIn_24_0;
           }
           if (fj.a(var6, -7036, var5)) {
-            stackIn_28_0 = CipherPacketBuffer.field_C;
+            stackIn_28_0 = kj.field_C;
             return stackIn_28_0;
           }
-          if (!Projectile.a(var5, true, var6)) {
+          if (!wl.a(var5, true, var6)) {
             stackIn_33_0 = el.field_Zb;
             return stackIn_33_0;
           }
@@ -204,27 +204,27 @@ final class vm extends ia {
         RuntimeException var3 = null;
         int var4 = 0;
         String var5 = null;
-        CipherPacketBuffer var6 = null;
+        kj var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = mm.field_g;
-          var6.writeCipheredOpcode(param0, (byte) -117);
-          var6.position = var6.position + 1;
-          var4 = var6.position;
-          var6.writeByte((byte) 108, 1);
+          var6.a(param0, (byte) -117);
+          var6.field_p = var6.field_p + 1;
+          var4 = var6.field_p;
+          var6.a((byte) 108, 1);
           if (param2.field_r != null) {
-            var6.writeByte((byte) 125, param2.field_r.length);
-            var6.writeBytes(param2.field_r.length, (byte) -122, 0, param2.field_r);
+            var6.a((byte) 125, param2.field_r.length);
+            var6.a(param2.field_r.length, (byte) -122, 0, param2.field_r);
           } else {
-            var6.writeByte((byte) 113, 0);
+            var6.a((byte) 113, 0);
           }
           var6.f(-101, var4);
-          var6.position = var6.position - 4;
-          param2.field_x = var6.readInt(0);
-          var6.b((byte) 101, var6.position - var4);
+          var6.field_p = var6.field_p - 4;
+          param2.field_x = var6.i(0);
+          var6.b((byte) 101, var6.field_p - var4);
           if (param1 < -38) {
             return;
           }
@@ -255,7 +255,7 @@ final class vm extends ia {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3Lifetime1;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
           for (var2_int = 0; param0.length() > var2_int; var2_int++) {
             var3 = param0.charAt(var2_int);

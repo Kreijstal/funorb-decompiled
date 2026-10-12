@@ -23,13 +23,13 @@ final class ed {
           if (null != va.field_h) {
             try {
               va.field_h.a(-94, 0L);
-              va.field_h.a(rf.field_d.position, 24, param0 ^ -67, rf.field_d.payload);
+              va.field_h.a(rf.field_d.field_p, 24, param0 ^ -67, rf.field_d.field_t);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
             }
           }
-          rf.field_d.position = rf.field_d.position + 24;
+          rf.field_d.field_p = rf.field_d.field_p + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

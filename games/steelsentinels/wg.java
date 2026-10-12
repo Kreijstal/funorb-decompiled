@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wg extends we {
-    private NodeDeque field_u;
-    private NodeDeque field_s;
+    private ul field_u;
+    private ul field_s;
     private int field_t;
     private int field_v;
 
@@ -29,13 +29,13 @@ final class wg extends we {
           param2 = param2 - var4;
           this.field_t = this.field_t + var4;
           this.e();
-          var5 = (w) (this.field_s.first(13058));
+          var5 = (w) (this.field_s.e(13058));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_o = var7;
-              this.a(var5.next, var5);
+              this.a(var5.field_k, var5);
             } else {
               var5.field_o = 0;
               this.a(var5);
@@ -50,14 +50,14 @@ final class wg extends we {
     }
 
     final we d() {
-        return (we) (this.field_u.first(13058));
+        return (we) (this.field_u.e(13058));
     }
 
     private final void a(w param0) {
-        param0.unlink(4);
+        param0.b(4);
         param0.a();
-        IntrusiveNode var2 = this.field_s.sentinel.next;
-        if (var2 == this.field_s.sentinel) {
+        ck var2 = this.field_s.field_e.field_k;
+        if (var2 == this.field_s.field_e) {
           this.field_v = -1;
         } else {
           this.field_v = ((w) (var2)).field_o;
@@ -65,24 +65,24 @@ final class wg extends we {
     }
 
     final we b() {
-        return (we) (this.field_u.next((byte) -25));
+        return (we) (this.field_u.a((byte) -25));
     }
 
-    private final void a(IntrusiveNode param0, w param1) {
+    private final void a(ck param0, w param1) {
         while (true) {
-          if (param0 == this.field_s.sentinel) {
-            IsaacRandom.insertNodeBefore(param0, 30, param1);
-            this.field_v = ((w) (this.field_s.sentinel.next)).field_o;
+          if (param0 == this.field_s.field_e) {
+            ie.a(param0, 30, param1);
+            this.field_v = ((w) (this.field_s.field_e.field_k)).field_o;
             return;
           }
           if (((w) (param0)).field_o <= param1.field_o) {
-            param0 = param0.next;
+            param0 = param0.field_k;
             continue;
           }
           break;
         }
-        IsaacRandom.insertNodeBefore(param0, 30, param1);
-        this.field_v = ((w) (this.field_s.sentinel.next)).field_o;
+        ie.a(param0, 30, param1);
+        this.field_v = ((w) (this.field_s.field_e.field_k)).field_o;
         return;
     }
 
@@ -107,13 +107,13 @@ final class wg extends we {
           param0 = param0 - var2;
           this.field_t = this.field_t + var2;
           this.e();
-          var3 = (w) (this.field_s.first(13058));
+          var3 = (w) (this.field_s.e(13058));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_o = var5;
-              this.a(var3.next, var3);
+              this.a(var3.field_k, var3);
             } else {
               var3.field_o = 0;
               this.a(var3);
@@ -126,10 +126,10 @@ final class wg extends we {
     private final void e() {
         w var1 = null;
         if (this.field_t > 0) {
-          var1 = (w) (this.field_s.first(13058));
+          var1 = (w) (this.field_s.e(13058));
           while (var1 != null) {
             var1.field_o = var1.field_o - this.field_t;
-            var1 = (w) (this.field_s.next((byte) -75));
+            var1 = (w) (this.field_s.a((byte) -75));
           }
           this.field_v = this.field_v - this.field_t;
           this.field_t = 0;
@@ -141,28 +141,28 @@ final class wg extends we {
     }
 
     final synchronized void a(we param0) {
-        param0.unlink(4);
+        param0.b(4);
     }
 
     private final void e(int param0) {
-        we var2 = (we) (this.field_u.first(13058));
+        we var2 = (we) (this.field_u.e(13058));
         while (var2 != null) {
           var2.d(param0);
-          var2 = (we) (this.field_u.next((byte) -58));
+          var2 = (we) (this.field_u.a((byte) -58));
         }
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        we var4 = (we) (this.field_u.first(13058));
+        we var4 = (we) (this.field_u.e(13058));
         while (var4 != null) {
           var4.b(param0, param1, param2);
-          var4 = (we) (this.field_u.next((byte) -29));
+          var4 = (we) (this.field_u.a((byte) -29));
         }
     }
 
     public wg() {
-        this.field_u = new NodeDeque();
-        this.field_s = new NodeDeque();
+        this.field_u = new ul();
+        this.field_s = new ul();
         this.field_t = 0;
         this.field_v = -1;
     }

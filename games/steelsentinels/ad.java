@@ -35,7 +35,7 @@ final class ad {
         int[] var13 = null;
         int[] var15 = null;
         int[] var18 = null;
-        var11 = SteelSentinels.obfuscationControl;
+        var11 = SteelSentinels.field_G;
         try {
           var6_int = param0;
           if (var6_int == 34) {
@@ -48,7 +48,7 @@ final class ad {
               stackIn_12_0 = bj.a(param5, 84, param1, (byte) 125);
               return stackIn_12_0;
             }
-            var15 = FunOrbClient.field_z;
+            var15 = n.field_z;
             var13 = var15;
             var12 = var13;
             var6 = var12;
@@ -98,16 +98,16 @@ final class ad {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = mm.field_g;
-        var2.writeCipheredOpcode(param1, (byte) -117);
-        var2.position = var2.position + 1;
-        int var3 = var2.position;
-        var2.writeByte((byte) 126, 5);
-        var2.writeByte((byte) 114, nf.field_b.field_Ub);
+        kj var2 = mm.field_g;
+        var2.a(param1, (byte) -117);
+        var2.field_p = var2.field_p + 1;
+        int var3 = var2.field_p;
+        var2.a((byte) 126, 5);
+        var2.a((byte) 114, nf.field_b.field_Ub);
         int var4 = nf.field_b.field_Nc + (nf.field_b.field_sc << 6);
-        var2.writeByte((byte) 127, var4);
-        var2.writeBytes(nf.field_b.field_Sb.length, (byte) -122, param0, nf.field_b.field_Sb);
-        var2.b((byte) -113, var2.position - var3);
+        var2.a((byte) 127, var4);
+        var2.a(nf.field_b.field_Sb.length, (byte) -122, param0, nf.field_b.field_Sb);
+        var2.b((byte) -113, var2.field_p - var3);
     }
 
     final static void a(boolean param0, byte param1) {
@@ -120,7 +120,7 @@ final class ad {
         }
     }
 
-    final static void a(int param0, ArticulatedPart param1, int param2) {
+    final static void a(int param0, nk param1, int param2) {
         int stackIn_56_0 = 0;
         int stackIn_56_1 = 0;
         boolean stackIn_57_2 = false;
@@ -135,7 +135,7 @@ final class ad {
         int var4 = 0;
         int[] var5 = null;
         int var6_int = 0;
-        RgbSprite var6 = null;
+        wk var6 = null;
         int var7 = 0;
         int[] var8 = null;
         int[] var9 = null;
@@ -144,7 +144,7 @@ final class ad {
         int[] var13 = null;
         int[] var14 = null;
         int[] var17 = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           if (param0 >= 0 &&
             param0 < ue.field_c.length) {
@@ -166,61 +166,61 @@ final class ad {
                 var5 = var9;
                 ii.a(var3, 0, var5, 0, var13.length);
                 ii.a(var3, var13.length, var4_ref_int__, 0, var14.length);
-                param1 = SentinelDesigner.a(var13, (byte) 97, var14);
+                param1 = ji.a(var13, (byte) 97, var14);
               } else {
                 return;
               }
             }
             if (null != ue.field_g[param0]) {
               ue.field_g[param0].d();
-              SoftwareRaster.a(0, 0, 62, 74, 0);
+              pb.a(0, 0, 62, 74, 0);
             } else {
-              ue.field_g[param0] = new RgbSprite(62, 74);
+              ue.field_g[param0] = new wk(62, 74);
               ue.field_g[param0].d();
             }
             var3_int = hj.field_w;
             if (param2 <= 23) {
               ad.a(true, (byte) -104);
             }
-            if (param1.componentId == 0) {
+            if (param1.field_N == 0) {
               hj.field_w = 1200;
             }
-            if (55 == param1.componentId) {
+            if (55 == param1.field_N) {
               hj.field_w = 1200;
             }
-            if (param1.componentId == 57) {
+            if (param1.field_N == 57) {
               hj.field_w = 1300;
             }
-            if (param1.componentId == 62) {
+            if (param1.field_N == 62) {
               hj.field_w = 1400;
             }
-            if (param1.componentId == 65) {
+            if (param1.field_N == 65) {
               hj.field_w = 1000;
             }
-            if (param1.componentId == 69) {
+            if (param1.field_N == 69) {
               hj.field_w = 1400;
             }
-            if (param1.componentId == 72) {
+            if (param1.field_N == 72) {
               hj.field_w = 1000;
             }
-            if (param1.componentId == 75) {
+            if (param1.field_N == 75) {
               hj.field_w = 1000;
             }
-            if (param1.componentId == 79) {
+            if (param1.field_N == 79) {
               hj.field_w = 1000;
             }
-            if (param1.componentId == 84) {
+            if (param1.field_N == 84) {
               hj.field_w = 1000;
             }
-            if (88 == param1.componentId) {
+            if (88 == param1.field_N) {
               hj.field_w = 1000;
             }
-            if (param1.componentId == 92) {
+            if (param1.field_N == 92) {
               hj.field_w = 700;
             }
             param1.a(0, false, 31, 74, (byte) 49, 0);
             hj.field_w = var3_int;
-            if (!ArticulatedPart.f((byte) -19)) {
+            if (!nk.f((byte) -19)) {
               var4 = 0;
               var17 = ue.field_c[param0];
               var6_int = 0;
@@ -244,7 +244,7 @@ final class ad {
                 if (var4 == 0) {
                   break;
                 }
-                SoftwareRaster.c(0, 0, 62, 74, 0, 128);
+                pb.c(0, 0, 62, 74, 0, 128);
                 var6 = sj.field_F;
                 var6.a((-var6.field_z + 62) / 2, (-var6.field_B + 74) / 2);
                 break;

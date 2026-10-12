@@ -14,8 +14,8 @@ final class pi extends java.awt.Canvas {
         field_b = null;
         field_f = null;
         if (param0 != 61) {
-          SceneWidget var2 = (SceneWidget) null;
-          pi.a((byte) 56, (SceneWidget) null, -94, true);
+          gh var2 = (gh) null;
+          pi.a((byte) 56, (gh) null, -94, true);
         }
         field_e = null;
     }
@@ -28,7 +28,7 @@ final class pi extends java.awt.Canvas {
         }
     }
 
-    final static int a(byte param0, SceneWidget param1, int param2, boolean param3) {
+    final static int a(byte param0, gh param1, int param2, boolean param3) {
         int var7 = 0;
         int var9 = 0;
         int stackIn_4_0 = 0;
@@ -44,12 +44,12 @@ final class pi extends java.awt.Canvas {
         int var6 = 0;
         int var8 = 0;
         String var11 = null;
-        SceneWidget var12 = null;
+        gh var12 = null;
         int var13 = 0;
-        SceneWidget var14 = null;
-        SceneWidget var15 = null;
-        SceneWidget var16 = null;
-        var13 = SteelSentinels.obfuscationControl;
+        gh var14 = null;
+        gh var15 = null;
+        gh var16 = null;
+        var13 = SteelSentinels.field_G;
         try {
           if (!he.a((byte) 116)) {
             stackIn_4_0 = param2;
@@ -72,7 +72,7 @@ final class pi extends java.awt.Canvas {
                 if (!param3) {
                   decompiledFrameRemainder0 = (var5 != 0);
                   if (decompiledFrameRemainder0) {
-                    decompiledFrameRemainder0 = !(!ad.a(var9, ArticulatedPart.f((byte) -28), fe.field_D, (byte) 84, ge.field_m, rn.field_D));
+                    decompiledFrameRemainder0 = !(!ad.a(var9, nk.f((byte) -28), fe.field_D, (byte) 84, ge.field_m, rn.field_D));
                   }
                 } else {
                   decompiledFrameRemainder0 = (var5 == 0);
@@ -84,7 +84,7 @@ final class pi extends java.awt.Canvas {
                   }
                   if (var6 != 0) {
                     var6 = 0;
-                    var14 = new SceneWidget(-1L, (SceneWidget) null);
+                    var14 = new gh(-1L, (gh) null);
                     var14.field_Pb = gj.field_a;
                     var14.field_Kb = 2;
                     var14.a(0, param2, 18, 0, var4_int);
@@ -95,9 +95,9 @@ final class pi extends java.awt.Canvas {
                       stackIn_35_0 = qj.field_c;
                     }
                     var11 = stackIn_35_0;
-                    var12 = new SceneWidget(-1L, kh.field_s, var11);
+                    var12 = new gh(-1L, kh.field_s, var11);
                     var12.field_nb = 0;
-                    var12.field_L = (BitmapFont) ((Object) pl.field_U);
+                    var12.field_L = (mi) ((Object) pl.field_U);
                     var12.a(0, param2, 18, 0, var4_int);
                     var12.field_Fb = 1;
                     var12.field_sb = 1;
@@ -108,7 +108,7 @@ final class pi extends java.awt.Canvas {
                   }
                   if (var8 == 0) {
                     var8 = 1;
-                    var15 = new SceneWidget(-1L, kh.field_s, si.field_D[var7]);
+                    var15 = new gh(-1L, kh.field_s, si.field_D[var7]);
                     var15.field_Kb = 1;
                     var15.field_nb = 11119017;
                     param2 += 2;

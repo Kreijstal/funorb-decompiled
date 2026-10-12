@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qa extends fe {
-    static SceneWidget field_L;
+    static gh field_L;
     static int field_O;
     int field_I;
     byte field_K;
     static int field_M;
     static long field_P;
     static int field_H;
-    static RgbSprite[] field_J;
-    static SceneWidget field_N;
-    PacketBuffer field_G;
+    static wk[] field_J;
+    static gh field_N;
+    gi field_G;
 
     final static void a(String param0, boolean param1, hk param2, int param3) {
         RuntimeException stackIn_16_0 = null;
@@ -33,7 +33,7 @@ final class qa extends fe {
         try {
           kk.a(param2, param2.j(-13), -1, (int[]) null, (String) null, (String) null, 1073741824, 0L, rn.field_y);
           if (param2.field_rc && (param2.field_sc == 2 ||
-            !(NodeDeque.field_d < 2))) {
+            !(ul.field_d < 2))) {
             var7 = an.field_i;
             var8 = db.a(sl.field_o, -71, new String[]{param0});
             var7.field_j.a(2, 10, var8);
@@ -53,7 +53,7 @@ final class qa extends fe {
           var13 = an.field_i;
           var5 = oa.field_S;
           if (param3 <= 78) {
-            field_J = (RgbSprite[]) null;
+            field_J = (wk[]) null;
           }
           var6 = rj.field_j;
           var13.field_j.a(0, 0, var6, (byte) -119, var5);
@@ -95,14 +95,14 @@ final class qa extends fe {
         if (this.field_z) {
           throw new RuntimeException();
         }
-        if (this.field_G.payload.length - this.field_K > this.field_G.position) {
+        if (this.field_G.field_t.length - this.field_K > this.field_G.field_p) {
           throw new RuntimeException();
         }
         if (param0 < -49) {
-          return this.field_G.payload;
+          return this.field_G.field_t;
         }
         field_M = -48;
-        return this.field_G.payload;
+        return this.field_G.field_t;
     }
 
     final static String a(int param0, int param1) {
@@ -123,12 +123,12 @@ final class qa extends fe {
           hk var3 = (hk) null;
           qa.a((String) null, false, (hk) null, 114);
           if (this.field_G != null) {
-            return this.field_G.position * 100 / (-this.field_K + this.field_G.payload.length);
+            return this.field_G.field_p * 100 / (-this.field_K + this.field_G.field_t.length);
           }
           return 0;
         }
         if (this.field_G != null) {
-          return this.field_G.position * 100 / (-this.field_K + this.field_G.payload.length);
+          return this.field_G.field_p * 100 / (-this.field_K + this.field_G.field_t.length);
         }
         return 0;
     }
@@ -136,18 +136,18 @@ final class qa extends fe {
     final static void a(byte param0, boolean param1) {
         if (param0 >= -54) {
           qa.$cfr$intArgs$a$7ffe4b125357(43, true);
-          ArchiveProvider.a(true, (byte) 67, param1);
+          fa.a(true, (byte) 67, param1);
           return;
         }
-        ArchiveProvider.a(true, (byte) 67, param1);
+        fa.a(true, (byte) 67, param1);
     }
 
-    final static void a(RgbSprite param0, byte param1) {
+    final static void a(wk param0, byte param1) {
         try {
           qi.field_i = param0;
           if (param1 != 69) {
-            RgbSprite var3 = (RgbSprite) null;
-            qa.a((RgbSprite) null, (byte) -94);
+            wk var3 = (wk) null;
+            qa.a((wk) null, (byte) -94);
           }
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "qa.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -163,9 +163,9 @@ final class qa extends fe {
     final static void $cfr$intArgs$a$7ffe4b125357(int param0, boolean param1) {
         if (param0 >= -54) {
           qa.$cfr$intArgs$a$7ffe4b125357(43, true);
-          ArchiveProvider.a(true, (byte) 67, param1);
+          fa.a(true, (byte) 67, param1);
           return;
         }
-        ArchiveProvider.a(true, (byte) 67, param1);
+        fa.a(true, (byte) 67, param1);
     }
 }

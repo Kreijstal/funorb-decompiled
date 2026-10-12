@@ -29,7 +29,7 @@ abstract class ch extends lh implements lm {
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = SteelSentinels.obfuscationControl;
+        var8 = SteelSentinels.field_G;
         try {
           if (null == this.field_J) {
             return false;
@@ -117,7 +117,7 @@ abstract class ch extends lh implements lm {
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           if (this.field_J == null) {
             return false;
@@ -131,7 +131,7 @@ abstract class ch extends lh implements lm {
               var5 = this.field_J[var4_int];
               stackIn_9_0 = null;
               stackIn_9_1 = var5;
-              scanLoop1: while (stackIn_9_0 != stackIn_9_1 &&
+              L2: while (stackIn_9_0 != stackIn_9_1 &&
                 var5.d(0)) {
                 var4_int = var4_int + param2;
                 while (this.field_J.length > var4_int) {
@@ -139,7 +139,7 @@ abstract class ch extends lh implements lm {
                   stackIn_9_0 = null;
                   stackIn_9_1 = var6;
                   if (var7 != 0) {
-                    continue scanLoop1;
+                    continue L2;
                   }
                   if ((stackIn_9_0 != stackIn_9_1 ||
                     var7 != 0) &&
@@ -225,7 +225,7 @@ abstract class ch extends lh implements lm {
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           if (param0 > -118) {
             return false;
@@ -239,7 +239,7 @@ abstract class ch extends lh implements lm {
               var5 = this.field_J[var4_int];
               stackIn_11_0 = null;
               stackIn_11_1 = var5;
-              scanLoop1: while (stackIn_11_0 != stackIn_11_1 &&
+              L2: while (stackIn_11_0 != stackIn_11_1 &&
                 var5.d(0)) {
                 var4_int = var4_int - param2;
                 while (0 <= var4_int) {
@@ -247,7 +247,7 @@ abstract class ch extends lh implements lm {
                   stackIn_11_0 = null;
                   stackIn_11_1 = var6;
                   if (var7 != 0) {
-                    continue scanLoop1;
+                    continue L2;
                   }
                   if ((stackIn_11_0 != stackIn_11_1 ||
                     var7 != 0) &&
@@ -297,7 +297,7 @@ abstract class ch extends lh implements lm {
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = SteelSentinels.obfuscationControl;
+        var9 = SteelSentinels.field_G;
         try {
           if (null == this.field_J) {
             return;
@@ -352,7 +352,7 @@ abstract class ch extends lh implements lm {
         int var5;
         lh var6;
         int var7;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         if (0 == param3 &&
           this.field_p != null) {
           this.field_p.a(param2, (lh) (this), (byte) -30, true, param0);
@@ -444,7 +444,7 @@ abstract class ch extends lh implements lm {
         int var14Lifetime2;
         int var15Lifetime2;
         int var15Lifetime3;
-        var40 = SteelSentinels.obfuscationControl;
+        var40 = SteelSentinels.field_G;
         try {
           var44 = param5;
           boolean decompiledSharedTail0 = (null != var44.field_P &&
@@ -515,7 +515,7 @@ abstract class ch extends lh implements lm {
           }
           var13Lifetime1 = 0;
           while (true) {
-            stackIn_26_0Lifetime1 = Projectile.field_D;
+            stackIn_26_0Lifetime1 = wl.field_D;
             stackIn_26_1Lifetime1 = var13Lifetime1;
             if (stackIn_26_0Lifetime1 <= stackIn_26_1Lifetime1) {
               return;
@@ -556,11 +556,11 @@ abstract class ch extends lh implements lm {
             }
             var21 = stackIn_44_0;
             var22 = eh.field_d[var15Lifetime1];
-            var23 = FunOrbClient.field_p[var15Lifetime1];
+            var23 = n.field_p[var15Lifetime1];
             var24 = eh.field_d[var16Lifetime1];
-            var25 = FunOrbClient.field_p[var16Lifetime1];
+            var25 = n.field_p[var16Lifetime1];
             var26 = eh.field_d[var17Lifetime1];
-            var27 = FunOrbClient.field_p[var17Lifetime1];
+            var27 = n.field_p[var17Lifetime1];
             if (var19 != var18 ||
               var20 != var19) {
               var28 = var54[var18];
@@ -623,7 +623,7 @@ abstract class ch extends lh implements lm {
         int var6 = 0;
         lh[] var7 = null;
         Object stackIn_7_0 = null;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         if (this.field_J == null) {
           return null;
         }
@@ -704,7 +704,7 @@ abstract class ch extends lh implements lm {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var11 = SteelSentinels.obfuscationControl;
+        var11 = SteelSentinels.field_G;
         try {
           if (null == this.field_J) {
             return;
@@ -744,7 +744,7 @@ abstract class ch extends lh implements lm {
         lh var4;
         int var5;
         lh[] var6;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         var6 = this.field_J;
         var2 = var6;
         var3 = 0;
@@ -781,17 +781,17 @@ abstract class ch extends lh implements lm {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
-          SoftwareRaster.h(param3, param0, param1, param4, 12105914);
-          SoftwareRaster.e(1 + param3, param0 + 1, param1 - 2, -2 + param4, 10461345, 16251129);
+          pb.h(param3, param0, param1, param4, 12105914);
+          pb.e(1 + param3, param0 + 1, param1 - 2, -2 + param4, 10461345, 16251129);
           var5_int = 64;
           if (param2 != 32308) {
             ch.a((byte) 31);
           }
           var6 = 1;
           while (var6 < 6) {
-            SoftwareRaster.h(param3 + var6, var6 + param0, param1 - 2 * var6, -(2 * var6) + param4, 16251129, var5_int);
+            pb.h(param3 + var6, var6 + param0, param1 - 2 * var6, -(2 * var6) + param4, 16251129, var5_int);
             var5_int = var5_int >> 1;
             var6++;
             if (var7 != 0) {
@@ -817,7 +817,7 @@ abstract class ch extends lh implements lm {
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var11 = SteelSentinels.obfuscationControl;
+        var11 = SteelSentinels.field_G;
         try {
           if (this.field_J == null) {
             return false;
@@ -867,7 +867,7 @@ abstract class ch extends lh implements lm {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = SteelSentinels.obfuscationControl;
+        var8 = SteelSentinels.field_G;
         try {
           super.a(param0, 95, param2, param3);
           if (param1 <= 56) {
@@ -917,7 +917,7 @@ abstract class ch extends lh implements lm {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         try {
           if (param0 != 1) {
             var7 = (lh) null;
@@ -955,7 +955,7 @@ abstract class ch extends lh implements lm {
 
     private final lh a(boolean param0) {
         lh var4 = null;
-        int var5 = SteelSentinels.obfuscationControl;
+        int var5 = SteelSentinels.field_G;
         if (null == this.field_J) {
           return null;
         }
@@ -989,7 +989,7 @@ abstract class ch extends lh implements lm {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var11 = SteelSentinels.obfuscationControl;
+        var11 = SteelSentinels.field_G;
         try {
           if (this.field_J == null) {
             return false;
@@ -1038,7 +1038,7 @@ abstract class ch extends lh implements lm {
         }
     }
 
-    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static wk[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_13_0 = 0;
         int stackIn_24_0 = 0;
         int stackIn_26_0 = 0;
@@ -1046,11 +1046,11 @@ abstract class ch extends lh implements lm {
         int stackIn_36_0 = 0;
         int stackIn_47_0 = 0;
         int var9 = 0;
-        RgbSprite[] var10 = null;
-        RgbSprite[] var11_ref_wk__ = null;
+        wk[] var10 = null;
+        wk[] var11_ref_wk__ = null;
         int var11 = 0;
         int var12 = 0;
-        RgbSprite var13 = null;
+        wk var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var11Lifetime1;
@@ -1058,20 +1058,20 @@ abstract class ch extends lh implements lm {
         int var12Lifetime2;
         int var12Lifetime2Lifetime1;
         int var12Lifetime2Lifetime2;
-        var15 = SteelSentinels.obfuscationControl;
+        var15 = SteelSentinels.field_G;
         var9 = param7 + (param1 + param8);
-        var10 = new RgbSprite[]{new RgbSprite(var9, var9), new RgbSprite(param0, var9), new RgbSprite(var9, var9), new RgbSprite(var9, param0), new RgbSprite(64, 64), new RgbSprite(var9, param0), new RgbSprite(var9, var9), new RgbSprite(param0, var9), new RgbSprite(var9, var9)};
+        var10 = new wk[]{new wk(var9, var9), new wk(param0, var9), new wk(var9, var9), new wk(var9, param0), new wk(64, 64), new wk(var9, param0), new wk(var9, var9), new wk(param0, var9), new wk(var9, var9)};
         var11_ref_wk__ = var10;
         if (param2 != 4) {
           field_N = -114;
         }
         var12 = 0;
-        scanLoop1: while (true) {
+        L1: while (true) {
           if (var12 < var11_ref_wk__.length) {
             var13 = var11_ref_wk__[var12];
             stackIn_13_0 = 0;
             if (var15 != 0) {
-              break scanLoop1;
+              break L1;
             }
             var14 = stackIn_13_0;
             while (var13.field_E.length > var14) {
@@ -1079,17 +1079,17 @@ abstract class ch extends lh implements lm {
               var14++;
             }
             var12++;
-            continue scanLoop1;
+            continue L1;
           }
           stackIn_13_0 = 0;
           break;
         }
         var11 = stackIn_13_0;
-        scanLoop2: while (true) {
+        L7: while (true) {
           if (var11 < param1) {
             stackIn_24_0 = 0;
             if (var15 != 0) {
-              break scanLoop2;
+              break L7;
             }
             var12Lifetime1 = stackIn_24_0;
             while (var9 > var12Lifetime1) {
@@ -1100,7 +1100,7 @@ abstract class ch extends lh implements lm {
               var12Lifetime1++;
             }
             var11++;
-            continue scanLoop2;
+            continue L7;
           }
           stackIn_24_0 = 0;
           break;
@@ -1131,11 +1131,11 @@ abstract class ch extends lh implements lm {
             stackIn_36_0 = 0;
           }
           var11Lifetime1 = stackIn_36_0;
-          scanLoop3: while (true) {
+          L20: while (true) {
             if (var11Lifetime1 < param0) {
               stackIn_47_0 = 0;
               if (var15 != 0) {
-                break scanLoop3;
+                break L20;
               }
               var12Lifetime2Lifetime1 = stackIn_47_0;
               while (var12Lifetime2Lifetime1 < param1) {
@@ -1146,13 +1146,13 @@ abstract class ch extends lh implements lm {
                 var12Lifetime2Lifetime1++;
               }
               var11Lifetime1++;
-              continue scanLoop3;
+              continue L20;
             }
             stackIn_47_0 = 0;
             break;
           }
           var11Lifetime1 = stackIn_47_0;
-          scanLoop4: while (param0 >> 1 > var11Lifetime1) {
+          L26: while (param0 >> 1 > var11Lifetime1) {
             var12Lifetime2Lifetime2 = 0;
             while (true) {
               if (param7 > var12Lifetime2Lifetime2) {
@@ -1170,7 +1170,7 @@ abstract class ch extends lh implements lm {
               break;
             }
             if (var15 == 0) {
-              continue scanLoop4;
+              continue L26;
             }
             break;
           }
@@ -1185,7 +1185,7 @@ abstract class ch extends lh implements lm {
         lh var5;
         int var6;
         int var7;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         var2 = 0;
         var3 = this.field_J;
         if (!param0) {

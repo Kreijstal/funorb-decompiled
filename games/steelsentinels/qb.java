@@ -1,0 +1,1323 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class qb extends kd {
+    static boolean field_J;
+    int field_D;
+    int field_A;
+    boolean field_G;
+    int field_B;
+    int field_P;
+    static gh field_K;
+    int field_M;
+    int field_O;
+    static String[][] field_y;
+    static fm field_H;
+    ee field_z;
+    int field_I;
+    int field_F;
+    static gh field_E;
+    static String field_C;
+    static gk[] field_L;
+    static String field_N;
+
+    public static void h(int param0) {
+        field_E = null;
+        field_L = null;
+        field_y = (String[][]) null;
+        field_H = null;
+        field_K = null;
+        field_N = null;
+        if (param0 == -185837884) {
+          field_C = null;
+          return;
+        }
+    }
+
+    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5) {
+        wk[] var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        String var12 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6_ref = null;
+        var11 = SteelSentinels.field_G;
+        try {
+          var6 = pd.field_Q;
+          if (qd.field_g > 0) {
+            var6 = bg.field_C;
+          }
+          var7 = 8 * a.field_c / 50 % var6.length;
+          de.a(-param1 + param4, param3 - param1, vh.field_b, param0 + 2 * param1, 160, (byte) -31, param1 * 2 + param5);
+          var6[var7].e(param4, param3, 2254472);
+          pb.d(16, 4, -4 + param4, param3 - 4, 8 + param0, param5 + 8);
+          if (param2 < 26) {
+            var12 = (String) null;
+            qb.a(112, -62, (String) null, 84, (String) null);
+          }
+          var6[var7].e(param4, param3, 17561);
+          pb.d(8, 2, -4 + param4, param3 - 4, 8 + param0, param5 + 8);
+          var6[var7].a(param4, param3, 255);
+          var8 = param0 + 2 * param1;
+          var9 = 2 * param1 + param5;
+          var10 = a.field_c / 10 % 2;
+          while (var10 < var8) {
+            pb.f(param4 + (-param1 + var10), param3 - param1, var9, 0, 100);
+            var10 += 2;
+            if (var11 == 0) {
+              continue;
+            }
+            break;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6_ref = decompiledCaughtException;
+          throw ci.a((Throwable) ((Object) var6_ref), "qb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+    }
+
+    final void a(int param0, int param1, boolean param2, byte param3) {
+        ek stackIn_56_0;
+        int stackIn_56_1;
+        int stackIn_56_2;
+        int stackIn_56_3;
+        int stackIn_56_4;
+        int stackIn_57_5;
+        int var5;
+        int var6;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        int var9Lifetime3;
+        var10 = SteelSentinels.field_G;
+        var5 = (this.field_F >> 8) + param0;
+        var6 = -124 / ((-25 - param3) / 54);
+        var7 = (this.field_B >> 8) + param1;
+        if (var5 >= -32 &&
+          var5 <= 672 &&
+          var7 >= -32 &&
+          var7 <= 672) {
+          var8 = this.field_I * 8 / this.field_D;
+          if (var8 < 0) {
+            var8 = 0;
+          }
+          if (var8 > 7) {
+            var8 = 7;
+          }
+          if (this.field_M != 0) {
+            if (this.field_M != 1) {
+              if (this.field_M != 3) {
+                if (this.field_M == 2) {
+                  if (!param2) {
+                    return;
+                  }
+                  var8 = Math.max(0, Math.min(15, 16 * this.field_I / this.field_D));
+                  var9 = 2;
+                  cc.field_pc[var8].c(-var9 + var5, -var9 + var7, 2 * var9, 2 * var9);
+                  if (var10 == 0) {
+                    return;
+                  }
+                }
+                if (this.field_M == 4) {
+                  if (param2) {
+                    return;
+                  }
+                  var9 = 16;
+                  bm.field_S[var8].d(-var9 + var5, -var9 + var7, var9 * 2, 2 * var9, 128);
+                  if (var10 == 0) {
+                    return;
+                  }
+                }
+                if (this.field_M != 5) {
+                  if (this.field_M == 6) {
+                    if (param2) {
+                      return;
+                    }
+                    var9 = 2;
+                    bm.field_S[var8].d(-var9 + var5, var7 - var9, var9 * 2, 2 * var9, 128);
+                    if (var10 == 0) {
+                      return;
+                    }
+                  }
+                  if (7 == this.field_M) {
+                    if (param2) {
+                      return;
+                    }
+                    var9 = 1;
+                    vi.field_gb[var8].d(-var9 + var5, var7 - var9, 2 * var9, var9 * 2, 128);
+                    if (var10 == 0) {
+                      return;
+                    }
+                  }
+                  if (this.field_M != 8) {
+                    if (this.field_M == 9) {
+                      if (param2) {
+                        return;
+                      }
+                      var9 = 4;
+                      vi.field_gb[7 - var8].a(-var9 + var5, -var9 + var7, var9 * 2, var9 * 2, 200 - this.field_I * 200 / this.field_D);
+                      if (var10 == 0) {
+                        return;
+                      }
+                    }
+                    if (12 == this.field_M) {
+                      if (param2) {
+                        return;
+                      }
+                      var9 = 2;
+                      bm.field_S[2 & var8].d(var5 - var9, -var9 + var7, 2 * var9, 2 * var9, -(this.field_I * 250 / this.field_D) + 250);
+                      if (var10 == 0) {
+                        return;
+                      }
+                    }
+                    if (this.field_M != 13) {
+                      if (this.field_M != 14) {
+                        return;
+                      }
+                      if (param2) {
+                        return;
+                      }
+                      var9 = (500 - 2 * this.field_I) / 125;
+                      pb.a(var5 << 4, var7 << 4, var9 << 4, 31, hc.field_W);
+                      if (var10 == 0) {
+                        return;
+                      }
+                    }
+                    if (param2) {
+                      return;
+                    }
+                    var9 = 16;
+                    pb.a(var5 << 4, var7 << 4, var9 << 4, 249, hc.field_X);
+                    if (var10 == 0) {
+                      return;
+                    }
+                  }
+                  if (param2) {
+                    return;
+                  }
+                  var8 = Math.max(0, Math.min(15, 16 * this.field_I / this.field_D));
+                  var9 = 4;
+                  cc.field_pc[var8].c(var5 - var9, var7 - var9, var9 * 2, 2 * var9);
+                  if (var10 == 0) {
+                    return;
+                  }
+                }
+                if (param2) {
+                  return;
+                }
+                var9 = 4;
+                bm.field_S[var8].d(-var9 + var5, -var9 + var7, 2 * var9, 2 * var9, 128);
+                if (var10 == 0) {
+                  return;
+                }
+              }
+              if (param2) {
+                return;
+              }
+              var9Lifetime3 = 2;
+              vi.field_gb[var8].d(var5 - var9Lifetime3, var7 - var9Lifetime3, var9Lifetime3 * 2, 2 * var9Lifetime3, 128);
+              if (var10 == 0) {
+                return;
+              }
+            }
+            if (param2) {
+              return;
+            }
+            var9Lifetime2 = 16;
+            vi.field_gb[var8].d(var5 - var9Lifetime2, var7 - var9Lifetime2, var9Lifetime2 * 2, 2 * var9Lifetime2, 128);
+            if (var10 == 0) {
+              return;
+            }
+          }
+          if (param2) {
+            var8Lifetime1 = Math.max(0, Math.min(15, this.field_I * 16 / this.field_D));
+            var9Lifetime1 = 17;
+            stackIn_56_0 = cc.field_pc[var8Lifetime1];
+            stackIn_56_1 = -var9Lifetime1 + var5;
+            stackIn_56_2 = -var9Lifetime1 + var7;
+            stackIn_56_3 = 2 * var9Lifetime1;
+            stackIn_56_4 = var9Lifetime1 * 2;
+            if (this.field_D / 2 > this.field_I) {
+              stackIn_57_5 = 255;
+            } else {
+              stackIn_57_5 = 505 - this.field_I * 500 / this.field_D;
+            }
+            ((ek) (Object) stackIn_56_0).a(stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_56_4, stackIn_57_5);
+          }
+          return;
+        }
+    }
+
+    final void i(int param0) {
+        if (param0 != -15809) {
+          field_H = (fm) null;
+        }
+        this.field_z = null;
+    }
+
+    final static boolean g(int param0) {
+        if (param0 != 2) {
+          qb.a(-13, 21, (byte) 84, -39, 29, 95);
+        }
+        return wb.field_c == null ? kc.field_q : true;
+    }
+
+    final void c(byte param0) {
+        qb var2;
+        int var3;
+        String var4;
+        var3 = SteelSentinels.field_G;
+        if (this.field_z == null) {
+          return;
+        }
+        this.field_F = this.field_F + this.field_A;
+        this.field_B = this.field_B + this.field_O;
+        if (param0 < 1) {
+          var4 = (String) null;
+          qb.a(-116, -34, (String) null, -4, (String) null);
+        }
+        if (200 > this.field_I) {
+          this.field_I = this.field_I + (int)(Math.random() * 4.0);
+        }
+        if (this.field_z.field_ab.b(110) != 4) {
+          boolean decompiledFrameRemainder0 = true;
+          if (!this.field_G) {
+            if (!(this.field_z.field_ab.a(false, this.field_F >> 4) <= -(this.field_B >> 4))) {
+              if ((this.field_z.field_ab.b(51) != 2 ||
+                !(this.field_z.field_ab.a(false, this.field_F >> 4) > 2048)) &&
+                (decompiledFrameRemainder0 = ((this.field_M != 2 &&
+                3 != this.field_M &&
+                this.field_M != 9 &&
+                10 != this.field_M &&
+                this.field_M != 6) ||
+                this.field_z.field_ab.b((byte) 126, this.field_F >> 4) != this.field_z.field_ab.a(false, this.field_F >> 4)))) {
+                this.field_B = -(this.field_z.field_ab.a(false, this.field_F >> 4) << 4);
+                decompiledFrameRemainder0 = (var3 != 0);
+              }
+              if (decompiledFrameRemainder0) {
+                this.field_F = this.field_F - this.field_A;
+                this.field_A = 0;
+                if ((var3 != 0) &&
+                  (this.field_z.field_ab.b((byte) 122, this.field_F >> 4) < -(this.field_B >> 4))) {
+                  if (this.field_M != 2 &&
+                    this.field_M != 3 &&
+                    this.field_M != 9 &&
+                    this.field_M != 10 &&
+                    this.field_M != 6 ||
+                    this.field_z.field_ab.b((byte) 127, this.field_F >> 4) != this.field_z.field_ab.a(false, this.field_F >> 4)) {
+                    this.field_B = -(this.field_z.field_ab.b((byte) 118, this.field_F >> 4) << 4);
+                  }
+                  if (this.field_z.field_ab.b((byte) 120, this.field_F >> 4) == this.field_z.field_ab.a(false, this.field_F >> 4)) {
+                    this.field_G = false;
+                  }
+                }
+              }
+            }
+          } else {
+            if (this.field_z.field_ab.b((byte) 122, this.field_F >> 4) < -(this.field_B >> 4)) {
+              if (this.field_M != 2 &&
+                this.field_M != 3 &&
+                this.field_M != 9 &&
+                this.field_M != 10 &&
+                this.field_M != 6 ||
+                this.field_z.field_ab.b((byte) 127, this.field_F >> 4) != this.field_z.field_ab.a(false, this.field_F >> 4)) {
+                this.field_B = -(this.field_z.field_ab.b((byte) 118, this.field_F >> 4) << 4);
+              }
+              if (this.field_z.field_ab.b((byte) 120, this.field_F >> 4) == this.field_z.field_ab.a(false, this.field_F >> 4)) {
+                this.field_G = false;
+              }
+            }
+          }
+          if (this.field_z.field_ab.a((byte) -96, this.field_F >> 4) > -(this.field_B >> 4)) {
+            this.field_B = -(this.field_z.field_ab.a((byte) -128, this.field_F >> 4) << 4);
+          }
+        }
+        if (this.field_M != 10) {
+          this.field_A = this.field_A * 9 / 10;
+          this.field_O = this.field_O * 9 / 10;
+          if (var3 != 0) {
+            this.field_O = this.field_O + this.field_z.field_z;
+            var2 = nk.a(9, 0, this.field_z, 105, this.field_B, this.field_G, 100, 0, this.field_F, this.field_P);
+            this.field_z.field_O.a(3, var2);
+          }
+        } else {
+          this.field_O = this.field_O + this.field_z.field_z;
+          var2 = nk.a(9, 0, this.field_z, 105, this.field_B, this.field_G, 100, 0, this.field_F, this.field_P);
+          this.field_z.field_O.a(3, var2);
+        }
+        this.field_I = this.field_I + 1;
+        if (this.field_I > this.field_D) {
+          this.field_z.field_J.a((byte) 110, (kd) (this));
+        }
+    }
+
+    final static void a(int param0, int param1, String param2, int param3, String param4) {
+        try {
+          vd.field_d.field_zb = vd.field_d.field_zb + wh.field_e.field_zb;
+          vd.field_d.field_Db = param4;
+          vd.field_d.field_S = param2;
+          vd.field_d.field_nb = param1;
+          int var5_int = -48 % ((-12 - param0) / 61);
+          wh.field_e.field_Y = wh.field_e.field_Y + wh.field_e.field_zb;
+          wh.field_e.field_zb = param3;
+          vd.field_d.field_zb = vd.field_d.field_zb - wh.field_e.field_zb;
+          wh.field_e.field_Y = wh.field_e.field_Y - wh.field_e.field_zb;
+        } catch (RuntimeException runtimeException) {
+          throw ci.a((Throwable) ((Object) runtimeException), "qb.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    qb() {
+    }
+
+    final static void a(nk param0, gh param1, byte param2, boolean param3, int param4, int param5) {
+        Object stackIn_304_0 = null;
+        StringBuilder stackIn_304_1 = null;
+        String stackIn_305_2 = null;
+        StringBuilder stackIn_307_1 = null;
+        String stackIn_308_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object var6 = null;
+        wk var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        wk[] var13 = null;
+        int var8Lifetime1;
+        var12 = SteelSentinels.field_G;
+        try {
+          var6 = null;
+          if (param3 &&
+            param0.field_N >= 0 &&
+            param0.field_Q != 1) {
+            var13 = hl.field_p;
+            var6 = var13;
+            if (var13.length <= param0.field_N) {
+              var6 = null;
+            }
+          }
+          if (var6 != null &&
+            null != ((Object[]) (var6))[param0.field_N]) {
+            param1.field_Pb = (wk) (((Object[]) (var6))[param0.field_N]);
+            return;
+          }
+          var7 = new wk(param4, param5);
+          param1.field_Pb = var7;
+          if (var6 != null) {
+            ((Object[]) (var6))[param0.field_N] = var7;
+          }
+          if (param2 != -93) {
+            field_C = (String) null;
+          }
+          param1.field_Pb.d();
+          if (param0.field_Q != 1) {
+            var8 = param4 / 2;
+            var9 = param5 / 2;
+            if (param0.field_Q == 16) {
+              var8 -= 10;
+            }
+            var10 = hj.field_w;
+            if (param0.field_N == 31) {
+              var8 -= 20;
+            }
+            if (64 == param0.field_Q) {
+              var8 -= 20;
+              var9 += 7;
+              hj.field_w = 2048;
+            }
+            if (param0.field_Q == 128) {
+              var8 += 5;
+            }
+            if (param0.field_Q == 256) {
+              var8 += 10;
+            }
+            if (param0.field_Q == 2) {
+              var8 -= 10;
+              var9 += 10;
+            }
+            if (param0.field_N == 95) {
+              var8 -= 20;
+            }
+            if (4 == param0.field_Q) {
+              var9 -= 20;
+              hj.field_w = 3072;
+            }
+            if (param0.field_N == 76) {
+              var8 -= 20;
+              param0 = ul.a(102, (byte) 67);
+            }
+            if (66 == param0.field_N) {
+              var8 -= 20;
+              param0 = ul.a(99, (byte) 67);
+            }
+            if (param0.field_Q == 2048) {
+              var9 -= 20;
+              hj.field_w = 2048;
+            }
+            if (param0.field_N == 80) {
+              var8 -= 10;
+              var9 += 10;
+            }
+            if (param0.field_Q == 8) {
+              var9 += 20;
+            }
+            if (param0.field_N == 59) {
+              var9 -= 25;
+            }
+            if (param0.field_N == 71) {
+              var9 -= 15;
+            }
+            if (77 == param0.field_N) {
+              var9 -= 10;
+            }
+            L22: {
+              L23: {
+                L24: {
+                  L25: {
+                    L26: {
+                      L27: {
+                        L28: {
+                          L29: {
+                            L30: {
+                              L31: {
+                                L32: {
+                                  L33: {
+                                    L34: {
+                                      L35: {
+                                        L36: {
+                                          L37: {
+                                            L38: {
+                                              L39: {
+                                                L40: {
+                                                  L41: {
+                                                    L42: {
+                                                      L43: {
+                                                        L44: {
+                                                          L45: {
+                                                            L46: {
+                                                              L47: {
+                                                                L48: {
+                                                                  L49: {
+                                                                    L50: {
+                                                                      L51: {
+                                                                        L52: {
+                                                                          L53: {
+                                                                            L54: {
+                                                                              L55: {
+                                                                                L56: {
+                                                                                  L57: {
+                                                                                    L58: {
+                                                                                      L59: {
+                                                                                        {
+                                                                                          boolean decompiledFrameRemainder13 = true;
+                                                                                          {
+                                                                                            boolean decompiledFrameRemainder12 = true;
+                                                                                            {
+                                                                                              boolean decompiledFrameRemainder11 = true;
+                                                                                              {
+                                                                                                boolean decompiledFrameRemainder10 = true;
+                                                                                                {
+                                                                                                  boolean decompiledFrameRemainder9 = true;
+                                                                                                  {
+                                                                                                    boolean decompiledFrameRemainder8 = true;
+                                                                                                    {
+                                                                                                      boolean decompiledFrameRemainder7 = true;
+                                                                                                      {
+                                                                                                        boolean decompiledFrameRemainder6 = true;
+                                                                                                        {
+                                                                                                          boolean decompiledFrameRemainder5 = true;
+                                                                                                          {
+                                                                                                            boolean decompiledFrameRemainder4 = true;
+                                                                                                            {
+                                                                                                              boolean decompiledFrameRemainder3 = true;
+                                                                                                              {
+                                                                                                                boolean decompiledFrameRemainder2 = true;
+                                                                                                                {
+                                                                                                                  boolean decompiledFrameRemainder1 = true;
+                                                                                                                  {
+                                                                                                                    boolean decompiledFrameRemainder0 = true;
+                                                                                                                    var11 = param0.field_N;
+                                                                                                                    if (1 != var11) {
+                                                                                                                      decompiledFrameRemainder0 = !(53 == var11 &&
+                                                                                                                        var12 == 0);
+                                                                                                                      if (decompiledFrameRemainder0) {
+                                                                                                                        decompiledFrameRemainder1 = !(60 == var11 &&
+                                                                                                                          var12 == 0);
+                                                                                                                        if (decompiledFrameRemainder1) {
+                                                                                                                          decompiledFrameRemainder2 = (var11 != 61);
+                                                                                                                          if (decompiledFrameRemainder2) {
+                                                                                                                            decompiledFrameRemainder3 = !(var11 == 64 &&
+                                                                                                                              var12 == 0);
+                                                                                                                            if (decompiledFrameRemainder3) {
+                                                                                                                              decompiledFrameRemainder4 = (68 != var11);
+                                                                                                                              if (decompiledFrameRemainder4) {
+                                                                                                                                decompiledFrameRemainder5 = !(var11 == 74 &&
+                                                                                                                                  var12 == 0);
+                                                                                                                                if (decompiledFrameRemainder5) {
+                                                                                                                                  decompiledFrameRemainder6 = (var11 != 78);
+                                                                                                                                  if (decompiledFrameRemainder6) {
+                                                                                                                                    decompiledFrameRemainder7 = !(var11 == 82 &&
+                                                                                                                                      var12 == 0);
+                                                                                                                                    if (decompiledFrameRemainder7) {
+                                                                                                                                      decompiledFrameRemainder8 = (var11 != 87);
+                                                                                                                                      if (decompiledFrameRemainder8) {
+                                                                                                                                        decompiledFrameRemainder9 = !(var11 == 91 &&
+                                                                                                                                          var12 == 0);
+                                                                                                                                        if (decompiledFrameRemainder9) {
+                                                                                                                                          decompiledFrameRemainder10 = !(95 == var11 &&
+                                                                                                                                            var12 == 0);
+                                                                                                                                          if (decompiledFrameRemainder10) {
+                                                                                                                                            decompiledFrameRemainder11 = (var11 != 2);
+                                                                                                                                            if (decompiledFrameRemainder11) {
+                                                                                                                                              decompiledFrameRemainder12 = (var11 != 56);
+                                                                                                                                              if (decompiledFrameRemainder12) {
+                                                                                                                                                decompiledFrameRemainder13 = !(var11 == 66 &&
+                                                                                                                                                  var12 == 0);
+                                                                                                                                                if (decompiledFrameRemainder13) {
+                                                                                                                                                  decompiledFrameRemainder13 = (var11 != 99);
+                                                                                                                                                  if (decompiledFrameRemainder13) {
+                                                                                                                                                    if (var11 == 70 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L59;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 76) {
+                                                                                                                                                      break L58;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 102) {
+                                                                                                                                                      break L58;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 85) {
+                                                                                                                                                      break L57;
+                                                                                                                                                    }
+                                                                                                                                                    if (80 == var11 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L56;
+                                                                                                                                                    }
+                                                                                                                                                    if (89 == var11) {
+                                                                                                                                                      break L55;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 93) {
+                                                                                                                                                      break L54;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 3 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L53;
+                                                                                                                                                    }
+                                                                                                                                                    if (54 == var11) {
+                                                                                                                                                      break L52;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 67) {
+                                                                                                                                                      break L51;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 71 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L50;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 73) {
+                                                                                                                                                      break L49;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 77 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L48;
+                                                                                                                                                    }
+                                                                                                                                                    if (81 == var11 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L47;
+                                                                                                                                                    }
+                                                                                                                                                    if (86 == var11) {
+                                                                                                                                                      break L46;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 90) {
+                                                                                                                                                      break L45;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 83 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L44;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 28 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L43;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 29 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L42;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 30) {
+                                                                                                                                                      break L41;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 31 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L40;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 35) {
+                                                                                                                                                      break L39;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 32) {
+                                                                                                                                                      break L38;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 33 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L37;
+                                                                                                                                                    }
+                                                                                                                                                    if (34 == var11) {
+                                                                                                                                                      break L36;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 38 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L35;
+                                                                                                                                                    }
+                                                                                                                                                    if (43 == var11 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L34;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 48) {
+                                                                                                                                                      break L33;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 52) {
+                                                                                                                                                      break L32;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 46) {
+                                                                                                                                                      break L31;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 45 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L30;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 44) {
+                                                                                                                                                      break L29;
+                                                                                                                                                    }
+                                                                                                                                                    if (47 == var11 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L28;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 36 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L27;
+                                                                                                                                                    }
+                                                                                                                                                    if (37 == var11) {
+                                                                                                                                                      break L26;
+                                                                                                                                                    }
+                                                                                                                                                    if (51 == var11 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L25;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 == 50 &&
+                                                                                                                                                      var12 == 0) {
+                                                                                                                                                      break L24;
+                                                                                                                                                    }
+                                                                                                                                                    if (var11 != 49) {
+                                                                                                                                                      break L22;
+                                                                                                                                                    }
+                                                                                                                                                    if (var12 == 0) {
+                                                                                                                                                      break L23;
+                                                                                                                                                    }
+                                                                                                                                                  }
+                                                                                                                                                }
+                                                                                                                                              }
+                                                                                                                                            }
+                                                                                                                                          }
+                                                                                                                                        }
+                                                                                                                                      }
+                                                                                                                                    }
+                                                                                                                                  }
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                    if (decompiledFrameRemainder13) {
+                                                                                                                      if (decompiledFrameRemainder12) {
+                                                                                                                        if (decompiledFrameRemainder11) {
+                                                                                                                          if (decompiledFrameRemainder10) {
+                                                                                                                            if (decompiledFrameRemainder9) {
+                                                                                                                              if (decompiledFrameRemainder8) {
+                                                                                                                                if (decompiledFrameRemainder7) {
+                                                                                                                                  if (decompiledFrameRemainder6) {
+                                                                                                                                    if (decompiledFrameRemainder5) {
+                                                                                                                                      if (decompiledFrameRemainder4) {
+                                                                                                                                        if (decompiledFrameRemainder3) {
+                                                                                                                                          if (decompiledFrameRemainder2) {
+                                                                                                                                            if (decompiledFrameRemainder1) {
+                                                                                                                                              if (decompiledFrameRemainder0) {
+                                                                                                                                                var8 += 5;
+                                                                                                                                                var9 -= 8;
+                                                                                                                                                if (var12 == 0) {
+                                                                                                                                                  break L22;
+                                                                                                                                                }
+                                                                                                                                              }
+                                                                                                                                            }
+                                                                                                                                          }
+                                                                                                                                        }
+                                                                                                                                      }
+                                                                                                                                    }
+                                                                                                                                  }
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                  if (decompiledFrameRemainder13) {
+                                                                                                                    if (decompiledFrameRemainder12) {
+                                                                                                                      if (decompiledFrameRemainder11) {
+                                                                                                                        if (decompiledFrameRemainder10) {
+                                                                                                                          if (decompiledFrameRemainder9) {
+                                                                                                                            if (decompiledFrameRemainder8) {
+                                                                                                                              if (decompiledFrameRemainder7) {
+                                                                                                                                if (decompiledFrameRemainder6) {
+                                                                                                                                  if (decompiledFrameRemainder5) {
+                                                                                                                                    if (decompiledFrameRemainder4) {
+                                                                                                                                      if (decompiledFrameRemainder3) {
+                                                                                                                                        if (decompiledFrameRemainder2) {
+                                                                                                                                          if (decompiledFrameRemainder1) {
+                                                                                                                                            var9 += 2;
+                                                                                                                                            var8 -= 7;
+                                                                                                                                            if (var12 == 0) {
+                                                                                                                                              break L22;
+                                                                                                                                            }
+                                                                                                                                          }
+                                                                                                                                        }
+                                                                                                                                      }
+                                                                                                                                    }
+                                                                                                                                  }
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                                if (decompiledFrameRemainder13) {
+                                                                                                                  if (decompiledFrameRemainder12) {
+                                                                                                                    if (decompiledFrameRemainder11) {
+                                                                                                                      if (decompiledFrameRemainder10) {
+                                                                                                                        if (decompiledFrameRemainder9) {
+                                                                                                                          if (decompiledFrameRemainder8) {
+                                                                                                                            if (decompiledFrameRemainder7) {
+                                                                                                                              if (decompiledFrameRemainder6) {
+                                                                                                                                if (decompiledFrameRemainder5) {
+                                                                                                                                  if (decompiledFrameRemainder4) {
+                                                                                                                                    if (decompiledFrameRemainder3) {
+                                                                                                                                      if (decompiledFrameRemainder2) {
+                                                                                                                                        var9 -= 4;
+                                                                                                                                        var8 += 10;
+                                                                                                                                        if (var12 == 0) {
+                                                                                                                                          break L22;
+                                                                                                                                        }
+                                                                                                                                      }
+                                                                                                                                    }
+                                                                                                                                  }
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                              if (decompiledFrameRemainder13) {
+                                                                                                                if (decompiledFrameRemainder12) {
+                                                                                                                  if (decompiledFrameRemainder11) {
+                                                                                                                    if (decompiledFrameRemainder10) {
+                                                                                                                      if (decompiledFrameRemainder9) {
+                                                                                                                        if (decompiledFrameRemainder8) {
+                                                                                                                          if (decompiledFrameRemainder7) {
+                                                                                                                            if (decompiledFrameRemainder6) {
+                                                                                                                              if (decompiledFrameRemainder5) {
+                                                                                                                                if (decompiledFrameRemainder4) {
+                                                                                                                                  if (decompiledFrameRemainder3) {
+                                                                                                                                    var9 -= 5;
+                                                                                                                                    var8 -= 4;
+                                                                                                                                    if (var12 == 0) {
+                                                                                                                                      break L22;
+                                                                                                                                    }
+                                                                                                                                  }
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                            if (decompiledFrameRemainder13) {
+                                                                                                              if (decompiledFrameRemainder12) {
+                                                                                                                if (decompiledFrameRemainder11) {
+                                                                                                                  if (decompiledFrameRemainder10) {
+                                                                                                                    if (decompiledFrameRemainder9) {
+                                                                                                                      if (decompiledFrameRemainder8) {
+                                                                                                                        if (decompiledFrameRemainder7) {
+                                                                                                                          if (decompiledFrameRemainder6) {
+                                                                                                                            if (decompiledFrameRemainder5) {
+                                                                                                                              if (decompiledFrameRemainder4) {
+                                                                                                                                var9 -= 6;
+                                                                                                                                if (var12 == 0) {
+                                                                                                                                  break L22;
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                          if (decompiledFrameRemainder13) {
+                                                                                                            if (decompiledFrameRemainder12) {
+                                                                                                              if (decompiledFrameRemainder11) {
+                                                                                                                if (decompiledFrameRemainder10) {
+                                                                                                                  if (decompiledFrameRemainder9) {
+                                                                                                                    if (decompiledFrameRemainder8) {
+                                                                                                                      if (decompiledFrameRemainder7) {
+                                                                                                                        if (decompiledFrameRemainder6) {
+                                                                                                                          if (decompiledFrameRemainder5) {
+                                                                                                                            var8 += 4;
+                                                                                                                            var9 -= 10;
+                                                                                                                            if (var12 == 0) {
+                                                                                                                              break L22;
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                        if (decompiledFrameRemainder13) {
+                                                                                                          if (decompiledFrameRemainder12) {
+                                                                                                            if (decompiledFrameRemainder11) {
+                                                                                                              if (decompiledFrameRemainder10) {
+                                                                                                                if (decompiledFrameRemainder9) {
+                                                                                                                  if (decompiledFrameRemainder8) {
+                                                                                                                    if (decompiledFrameRemainder7) {
+                                                                                                                      if (decompiledFrameRemainder6) {
+                                                                                                                        var9 -= 10;
+                                                                                                                        var8 -= 8;
+                                                                                                                        if (var12 == 0) {
+                                                                                                                          break L22;
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                      if (decompiledFrameRemainder13) {
+                                                                                                        if (decompiledFrameRemainder12) {
+                                                                                                          if (decompiledFrameRemainder11) {
+                                                                                                            if (decompiledFrameRemainder10) {
+                                                                                                              if (decompiledFrameRemainder9) {
+                                                                                                                if (decompiledFrameRemainder8) {
+                                                                                                                  if (decompiledFrameRemainder7) {
+                                                                                                                    var9 -= 2;
+                                                                                                                    if (var12 == 0) {
+                                                                                                                      break L22;
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                    if (decompiledFrameRemainder13) {
+                                                                                                      if (decompiledFrameRemainder12) {
+                                                                                                        if (decompiledFrameRemainder11) {
+                                                                                                          if (decompiledFrameRemainder10) {
+                                                                                                            if (decompiledFrameRemainder9) {
+                                                                                                              if (decompiledFrameRemainder8) {
+                                                                                                                var8 -= 4;
+                                                                                                                var9 += 9;
+                                                                                                                if (var12 == 0) {
+                                                                                                                  break L22;
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                  if (decompiledFrameRemainder13) {
+                                                                                                    if (decompiledFrameRemainder12) {
+                                                                                                      if (decompiledFrameRemainder11) {
+                                                                                                        if (decompiledFrameRemainder10) {
+                                                                                                          if (decompiledFrameRemainder9) {
+                                                                                                            var9 -= 3;
+                                                                                                            if (var12 == 0) {
+                                                                                                              break L22;
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                                if (decompiledFrameRemainder13) {
+                                                                                                  if (decompiledFrameRemainder12) {
+                                                                                                    if (decompiledFrameRemainder11) {
+                                                                                                      if (decompiledFrameRemainder10) {
+                                                                                                        hj.field_w = 3000;
+                                                                                                        var8 += 8;
+                                                                                                        if (var12 == 0) {
+                                                                                                          break L22;
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                              if (decompiledFrameRemainder13) {
+                                                                                                if (decompiledFrameRemainder12) {
+                                                                                                  if (decompiledFrameRemainder11) {
+                                                                                                    var9 += 10;
+                                                                                                    hj.field_w = 3300;
+                                                                                                    var8 += 4;
+                                                                                                    if (var12 == 0) {
+                                                                                                      break L22;
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                            if (decompiledFrameRemainder13) {
+                                                                                              if (decompiledFrameRemainder12) {
+                                                                                                var8 -= 7;
+                                                                                                var9 += 8;
+                                                                                                if (var12 == 0) {
+                                                                                                  break L22;
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                          if (decompiledFrameRemainder13) {
+                                                                                            var9--;
+                                                                                            hj.field_w = 2500;
+                                                                                            if (var12 == 0) {
+                                                                                              break L22;
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                        var9 += 4;
+                                                                                        hj.field_w = 2500;
+                                                                                        if (var12 == 0) {
+                                                                                          break L22;
+                                                                                        }
+                                                                                      }
+                                                                                      var9 += 4;
+                                                                                      var8 -= 4;
+                                                                                      if (var12 == 0) {
+                                                                                        break L22;
+                                                                                      }
+                                                                                    }
+                                                                                    hj.field_w = 2700;
+                                                                                    if (var12 == 0) {
+                                                                                      break L22;
+                                                                                    }
+                                                                                  }
+                                                                                  var9 += 10;
+                                                                                  if (var12 == 0) {
+                                                                                    break L22;
+                                                                                  }
+                                                                                }
+                                                                                var8 += 4;
+                                                                                var9 += 2;
+                                                                                if (var12 == 0) {
+                                                                                  break L22;
+                                                                                }
+                                                                              }
+                                                                              var9 += 8;
+                                                                              var8 += 6;
+                                                                              hj.field_w = 1600;
+                                                                              if (var12 == 0) {
+                                                                                break L22;
+                                                                              }
+                                                                            }
+                                                                            var9 += 2;
+                                                                            hj.field_w = 1024;
+                                                                            var8 -= 2;
+                                                                            if (var12 == 0) {
+                                                                              break L22;
+                                                                            }
+                                                                          }
+                                                                          var8 += 12;
+                                                                          var9 -= 4;
+                                                                          if (var12 == 0) {
+                                                                            break L22;
+                                                                          }
+                                                                        }
+                                                                        var9 -= 14;
+                                                                        if (var12 == 0) {
+                                                                          break L22;
+                                                                        }
+                                                                      }
+                                                                      var9 -= 10;
+                                                                      var8 += 12;
+                                                                      if (var12 == 0) {
+                                                                        break L22;
+                                                                      }
+                                                                    }
+                                                                    var9 -= 8;
+                                                                    var8 -= 15;
+                                                                    if (var12 == 0) {
+                                                                      break L22;
+                                                                    }
+                                                                  }
+                                                                  hj.field_w = 2900;
+                                                                  if (var12 == 0) {
+                                                                    break L22;
+                                                                  }
+                                                                }
+                                                                var9 -= 4;
+                                                                var8 += 13;
+                                                                if (var12 == 0) {
+                                                                  break L22;
+                                                                }
+                                                              }
+                                                              hj.field_w = 3000;
+                                                              var9 -= 2;
+                                                              if (var12 == 0) {
+                                                                break L22;
+                                                              }
+                                                            }
+                                                            hj.field_w = 2300;
+                                                            var8 += 25;
+                                                            if (var12 == 0) {
+                                                              break L22;
+                                                            }
+                                                          }
+                                                          var9 -= 6;
+                                                          if (var12 == 0) {
+                                                            break L22;
+                                                          }
+                                                        }
+                                                        var8 += 8;
+                                                        if (var12 == 0) {
+                                                          break L22;
+                                                        }
+                                                      }
+                                                      var8 += 4;
+                                                      if (var12 == 0) {
+                                                        break L22;
+                                                      }
+                                                    }
+                                                    var8 += 3;
+                                                    if (var12 == 0) {
+                                                      break L22;
+                                                    }
+                                                  }
+                                                  var8 += 3;
+                                                  var9 -= 4;
+                                                  if (var12 == 0) {
+                                                    break L22;
+                                                  }
+                                                }
+                                                var8 -= 3;
+                                                hj.field_w = 2800;
+                                                if (var12 == 0) {
+                                                  break L22;
+                                                }
+                                              }
+                                              hj.field_w = 3500;
+                                              var8 -= 2;
+                                              if (var12 == 0) {
+                                                break L22;
+                                              }
+                                            }
+                                            hj.field_w = 2800;
+                                            var8 -= 10;
+                                            if (var12 == 0) {
+                                              break L22;
+                                            }
+                                          }
+                                          var8 -= 3;
+                                          hj.field_w = 3800;
+                                          if (var12 == 0) {
+                                            break L22;
+                                          }
+                                        }
+                                        var8 -= 4;
+                                        hj.field_w = 3800;
+                                        if (var12 == 0) {
+                                          break L22;
+                                        }
+                                      }
+                                      hj.field_w = 3900;
+                                      var8 -= 2;
+                                      if (var12 == 0) {
+                                        break L22;
+                                      }
+                                    }
+                                    var8 += 8;
+                                    if (var12 == 0) {
+                                      break L22;
+                                    }
+                                  }
+                                  var9--;
+                                  var8 += 4;
+                                  if (var12 == 0) {
+                                    break L22;
+                                  }
+                                }
+                                var8 += 3;
+                                hj.field_w = 1800;
+                                if (var12 == 0) {
+                                  break L22;
+                                }
+                              }
+                              var8 += 4;
+                              hj.field_w = 1800;
+                              if (var12 == 0) {
+                                break L22;
+                              }
+                            }
+                            var8 += 2;
+                            hj.field_w = 1550;
+                            if (var12 == 0) {
+                              break L22;
+                            }
+                          }
+                          var9 -= 2;
+                          var8 += 7;
+                          if (var12 == 0) {
+                            break L22;
+                          }
+                        }
+                        var8 += 4;
+                        if (var12 == 0) {
+                          break L22;
+                        }
+                      }
+                      hj.field_w = 3600;
+                      if (var12 == 0) {
+                        break L22;
+                      }
+                    }
+                    hj.field_w = 3600;
+                    if (var12 == 0) {
+                      break L22;
+                    }
+                  }
+                  hj.field_w = 3600;
+                  if (var12 == 0) {
+                    break L22;
+                  }
+                }
+                hj.field_w = 3600;
+                if (var12 == 0) {
+                  break L22;
+                }
+              }
+              var8 += 3;
+              hj.field_w = 2200;
+            }
+            if ((3086 & param0.field_Q) != 0 &&
+              param4 > 100) {
+              var8 -= 5;
+            }
+            param0.a(0, false, var8, var9, (byte) 49, 16384);
+            hj.field_w = var10;
+            if (var12 == 0) {
+              sb.field_bb.b((byte) 123);
+              return;
+            }
+          }
+          var8Lifetime1 = hj.field_w;
+          if (param0.field_N == 0) {
+            hj.field_w = 1200;
+          }
+          if (55 == param0.field_N) {
+            hj.field_w = 1200;
+          }
+          if (57 == param0.field_N) {
+            hj.field_w = 1300;
+          }
+          if (param0.field_N == 62) {
+            hj.field_w = 1400;
+          }
+          if (65 == param0.field_N) {
+            hj.field_w = 1000;
+          }
+          if (param0.field_N == 69) {
+            hj.field_w = 1400;
+          }
+          if (72 == param0.field_N) {
+            hj.field_w = 1000;
+          }
+          if (param0.field_N == 75) {
+            hj.field_w = 1000;
+          }
+          if (param0.field_N == 79) {
+            hj.field_w = 1000;
+          }
+          if (param0.field_N == 84) {
+            hj.field_w = 1000;
+          }
+          if (param0.field_N == 88) {
+            hj.field_w = 1000;
+          }
+          if (param0.field_N == 92) {
+            hj.field_w = 700;
+          }
+          param0.a(0, false, param4 / 2, param5, (byte) 49, 0);
+          hj.field_w = var8Lifetime1;
+          sb.field_bb.b((byte) 123);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_304_0 = var6;
+          stackIn_304_1 = new StringBuilder().append("qb.D(");
+          if (param0 == null) {
+            stackIn_305_2 = "null";
+          } else {
+            stackIn_305_2 = "{...}";
+          }
+          stackIn_307_1 = ((StringBuilder) (Object) stackIn_304_1).append(stackIn_305_2).append(',');
+          if (param1 == null) {
+            stackIn_308_2 = "null";
+          } else {
+            stackIn_308_2 = "{...}";
+          }
+          throw ci.a((Throwable) (stackIn_304_0), ((StringBuilder) (Object) stackIn_307_1).append(stackIn_308_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    static {
+        field_y = new String[][]{new String[]{"Tactical<br>Two-second delay before actions", "Action<br>Very little delay before actions.<br><col=ff0000>This mode is only recommended if you have a good internet connection.</col>"}, new String[]{"Only the default versions of the Slave, Aquila and Golem are allowed within smaller battles.", "Any sentinel with a tech value in the standard range may participate.", "Any sentinel with any tech value may participate in large battles.", "High-tech designs are allowed within larger battles.", "All designs of sentinel are available for massive battles."}, new String[]{"War Zone<br>Join in the eternal solarite war.<br>Anything goes in this massive free-for-all arena!<br>Free-for-all", "Lost World<br>Your team has ten minutes to claim victory before the battle in orbit reaches the surface!<br>Top vs bottom teams", "City<br>This pitted landscape is all that remains of a once mighty metropolis.<br>Collect the MGFN technology and hold it for extra points.<br>Free-for-all", "Moon<br>A crashed cruiser occupies this world. Use its shields for defence and earn extra points while you occupy it.<br>Free-for-all", "Star Fleet<br>Bring your team victory in an epic struggle against the opposing star cruiser!<br>Reach the enemy ship then return safely to help your team win.<br>Top vs bottom team, Capture the Flag", "Co-op Campaign<br>Take your sentinel to aid in the epic fight to maintain the flow of solarite.<br>2-player, Unrated only"}};
+        field_H = new fm(10, 2, 2, 0);
+        field_C = "Enter multiplayer lobby";
+        field_N = "Confirm Password: ";
+    }
+}

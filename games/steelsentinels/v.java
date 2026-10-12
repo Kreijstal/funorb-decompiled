@@ -14,10 +14,10 @@ abstract class v implements tl {
         try {
           tb.a(param2, param1, 10);
           fc.field_a = tb.a(param4, param5, 0, param0);
-          ResourceArchive.field_j = tb.a(param4, param5, 1, param6);
+          cm.field_j = tb.a(param4, param5, 1, param6);
           ll.field_e = new wg();
           ej.field_B = param6 * 1000 / param2;
-          ResourceArchive.field_j.a(ll.field_e);
+          cm.field_j.a(ll.field_e);
           if (param7 > -71) {
             field_g = 'ﾓ';
           }
@@ -80,7 +80,7 @@ abstract class v implements tl {
 
     final static void a(int param0, String param1, int param2) {
         try {
-          SentinelDesigner.field_i = param0;
+          ji.field_i = param0;
           in.field_i = bg.field_G;
           if (param2 != 10) {
             field_d = (String) null;

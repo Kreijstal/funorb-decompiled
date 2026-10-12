@@ -18,7 +18,7 @@ abstract class he {
         if (param0 <= 120) {
           return;
         }
-        SoftwareRaster.a(this.field_a, this.field_c, this.field_i);
+        pb.a(this.field_a, this.field_c, this.field_i);
     }
 
     abstract void a(int param0, byte param1, java.awt.Component param2, int param3);
@@ -35,7 +35,7 @@ abstract class he {
         ag.field_s = param1;
     }
 
-    final static boolean a(int param0, CipherPacketBuffer param1) {
+    final static boolean a(int param0, kj param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -44,7 +44,7 @@ abstract class he {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -1766) {
-            stackIn_6_0 = (param1.readBits(param0 + 1815, 1) == 1);
+            stackIn_6_0 = (param1.g(param0 + 1815, 1) == 1);
             return stackIn_6_0;
           }
           return false;
@@ -94,7 +94,7 @@ abstract class he {
         String var7Lifetime6;
         var21 = null;
         var22 = null;
-        var11 = SteelSentinels.obfuscationControl;
+        var11 = SteelSentinels.field_G;
         var3 = 1;
         if (!rg.field_f &&
           hh.field_a == null) {
@@ -187,10 +187,10 @@ abstract class he {
               if (!cc.field_lc) {
                 var7Lifetime6 = "[" + db.a(pd.field_ab, -98, new String[]{nf.field_b.field_Xb}) + "] ";
               } else {
-                if (null == PartInstruction.field_a) {
+                if (null == qd.field_a) {
                   var7Lifetime6 = "[" + db.a(pd.field_ab, -98, new String[]{nf.field_b.field_Xb}) + "] ";
                 } else {
-                  var7Lifetime6 = "[" + PartInstruction.field_a + "] ";
+                  var7Lifetime6 = "[" + qd.field_a + "] ";
                 }
               }
             }

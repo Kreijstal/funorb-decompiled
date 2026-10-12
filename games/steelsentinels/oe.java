@@ -2,24 +2,24 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oe {
-    private ResourceArchive field_c;
+    private cm field_c;
     private nc field_g;
     static long field_b;
-    static RgbSprite[] field_f;
+    static wk[] field_f;
     static int field_e;
     static int[] field_h;
     static int field_i;
-    private ResourceArchive field_k;
+    private cm field_k;
     static String field_l;
     static String field_j;
     static String[] field_a;
-    static ResourceArchive field_d;
+    static cm field_d;
 
     final static void a(int param0, String param1, int param2, int param3, int param4, String param5) {
-        CipherPacketBuffer var6 = null;
+        kj var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
-        CipherPacketBuffer var8 = null;
+        kj var8 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -29,19 +29,19 @@ final class oe {
         try {
           var8 = mm.field_g;
           var6 = var8;
-          var8.writeCipheredOpcode(param0, (byte) -117);
-          var8.position = var8.position + 1;
-          var7 = var8.position;
-          var8.writeByte((byte) 112, param3);
+          var8.a(param0, (byte) -117);
+          var8.field_p = var8.field_p + 1;
+          var7 = var8.field_p;
+          var8.a((byte) 112, param3);
           if (2 == param3) {
             var8.a(param1, -115);
           }
           if (param5 == null) {
-            var8.writeShort(param4, 117);
+            var8.d(param4, 117);
           } else {
             r.a(var8, param5, 0);
           }
-          var8.b((byte) 100, -var7 + var8.position);
+          var8.b((byte) 100, -var7 + var8.field_p);
           if (param2 == -6988) {
             return;
           }
@@ -77,13 +77,13 @@ final class oe {
           return var3;
         }
         if (32768 > param0) {
-          var4 = this.field_k.getFile(1, (byte) 63, param0);
+          var4 = this.field_k.a(1, (byte) 63, param0);
         } else {
-          var4 = this.field_c.getFile(1, (byte) 54, param0 & 32767);
+          var4 = this.field_c.a(1, (byte) 54, param0 & 32767);
         }
         ao var5 = new ao();
         if (var4 != null) {
-          var5.a(new PacketBuffer(var4), (byte) -116);
+          var5.a(new gi(var4), (byte) -116);
           if (param0 >= 32768) {
             var5.c((byte) -109);
             this.field_g.a((long)param0, var5, 1);
@@ -119,7 +119,7 @@ final class oe {
         field_d = null;
     }
 
-    final static RgbSprite a(int param0, int param1, int param2, ResourceArchive param3) {
+    final static wk a(int param0, int param1, int param2, cm param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -147,7 +147,7 @@ final class oe {
         }
     }
 
-    oe(int param0, ResourceArchive param1, ResourceArchive param2, om param3) {
+    oe(int param0, cm param1, cm param2, om param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -162,12 +162,12 @@ final class oe {
           this.field_c = param2;
           this.field_k = param1;
           if (null != this.field_k) {
-            this.field_k.getFileCapacity(true, 1);
+            this.field_k.a(true, 1);
           }
           if (this.field_c == null) {
             return;
           }
-          this.field_c.getFileCapacity(true, 1);
+          this.field_c.a(true, 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

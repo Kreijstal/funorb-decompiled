@@ -4,16 +4,16 @@
 final class pd extends dl implements ae {
     static int field_V;
     static String field_R;
-    static RgbSprite[] field_Q;
+    static wk[] field_Q;
     static boolean[] field_U;
     private oa field_W;
     static int[] field_S;
-    static RgbSprite[] field_T;
+    static wk[] field_T;
     static String field_ab;
     private oa field_Y;
     private oa field_P;
     static int field_X;
-    static RgbSprite[] field_Z;
+    static wk[] field_Z;
 
     public static void i(int param0) {
         field_S = null;
@@ -47,7 +47,7 @@ final class pd extends dl implements ae {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           var6_int = 70 % ((param1 + 85) / 36);
           if (this.field_Y == param3) {
@@ -123,10 +123,10 @@ final class pd extends dl implements ae {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         try {
           if (param0 > -45) {
-            field_T = (RgbSprite[]) null;
+            field_T = (wk[]) null;
           }
           var2_int = param1.length();
           if (var2_int > 20) {
@@ -176,7 +176,7 @@ final class pd extends dl implements ae {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         try {
           var3_int = 0;
           if (param0 != 2019550017) {

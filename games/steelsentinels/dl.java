@@ -8,18 +8,18 @@ class dl extends lh implements lm {
     static String[][] field_N;
     static int field_M;
     static ka field_J;
-    NodeDeque field_K;
+    ul field_K;
     static String[] field_I;
     static String[][] field_H;
     static byte[][] field_L;
     static int field_G;
 
     lh h(int param0) {
-        NodeIterator var2;
+        jc var2;
         lh var3;
         int var4;
-        var4 = SteelSentinels.obfuscationControl;
-        var2 = new NodeIterator(this.field_K);
+        var4 = SteelSentinels.field_G;
+        var2 = new jc(this.field_K);
         if (param0 != -1) {
           dl.f(-120);
         }
@@ -38,15 +38,15 @@ class dl extends lh implements lm {
         lh var6_ref_lh = null;
         int var6 = 0;
         int var7 = 0;
-        NodeIterator var8 = null;
+        jc var8 = null;
         boolean stackIn_15_0 = false;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
-          var8 = new NodeIterator(this.field_K);
+          var8 = new jc(this.field_K);
           var6_ref_lh = (lh) (var8.b(2));
           if (param0 != 30373) {
             dl.a(76, 69, -95, -115);
@@ -92,14 +92,14 @@ class dl extends lh implements lm {
             lh var4 = (lh) null;
             this.a(-93, (lh) null);
           }
-          this.field_K.addLast(3, param0);
+          this.field_K.a(3, param0);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "dl.IC(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (param2 + param3 <= SoftwareRaster.field_c) {
+        if (param2 + param3 <= pb.field_c) {
           return param2;
         }
         if (param1 != 127) {
@@ -108,16 +108,16 @@ class dl extends lh implements lm {
         if (-param3 + param0 + param2 >= 0) {
           return -param3 + (param0 + param2);
         }
-        return SoftwareRaster.field_c - param3;
+        return pb.field_c - param3;
     }
 
     void a(int param0, byte param1, int param2, int param3) {
-        int var7 = SteelSentinels.obfuscationControl;
+        int var7 = SteelSentinels.field_G;
         if (param3 == 0 &&
           this.field_p != null) {
           this.field_p.a(param2, (lh) (this), (byte) -30, true, param0);
         }
-        NodeIterator var5 = new NodeIterator(this.field_K);
+        jc var5 = new jc(this.field_K);
         lh var6 = (lh) (var5.c(2));
         while (var6 != null) {
           var6.a(this.field_z + param0, (byte) -109, this.field_o + param2, param3);
@@ -131,22 +131,22 @@ class dl extends lh implements lm {
 
     dl(int param0, int param1, int param2, int param3, qk param4) {
         super(param0, param1, param2, param3, param4, (tn) null);
-        this.field_K = new NodeDeque();
+        this.field_K = new ul();
     }
 
     void a(int param0, int param1, lh param2, int param3) {
         RuntimeException runtimeException = null;
-        NodeIterator var5 = null;
+        jc var5 = null;
         lh var6 = null;
         int var7 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           super.a(param0, 108, param2, param3);
-          var5 = new NodeIterator(this.field_K);
+          var5 = new jc(this.field_K);
           if (param1 <= 56) {
             return;
           }
@@ -175,7 +175,7 @@ class dl extends lh implements lm {
     }
 
     final boolean a(int param0, lh param1) {
-        NodeIterator var3 = null;
+        jc var3 = null;
         RuntimeException var3_ref = null;
         lh var4 = null;
         int var5 = 0;
@@ -184,13 +184,13 @@ class dl extends lh implements lm {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         try {
           if (param0 != 1) {
             var6 = (StringBuilder) null;
             this.a((Hashtable) null, (StringBuilder) null, (byte) -47, 62);
           }
-          var3 = new NodeIterator(this.field_K);
+          var3 = new jc(this.field_K);
           var4 = (lh) (var3.b(2));
           while (var4 != null) {
             if (var4.a(1, param1)) {
@@ -216,24 +216,24 @@ class dl extends lh implements lm {
     final boolean b(int param0, lh param1) {
         RuntimeException var3 = null;
         lh var4 = null;
-        NodeIterator var5 = null;
+        jc var5 = null;
         lh var6 = null;
         int var7 = 0;
-        NodeIterator var8 = null;
+        jc var8 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           if (this.field_K.f(param0 + 11970)) {
             return false;
           }
-          var8 = new NodeIterator(this.field_K);
+          var8 = new jc(this.field_K);
           var4 = (lh) (var8.b(2));
           while (var4 != null) {
             if (var4.d(0)) {
-              var5 = new NodeIterator(this.field_K);
+              var5 = new jc(this.field_K);
               var5.a(false, var4);
               var6 = (lh) (var5.d(2));
               while (var6 != null) {
@@ -328,15 +328,15 @@ class dl extends lh implements lm {
     final boolean b(lh param0, int param1) {
         RuntimeException var3 = null;
         lh var4 = null;
-        NodeIterator var5 = null;
+        jc var5 = null;
         lh var6 = null;
         int var7 = 0;
-        NodeIterator var8 = null;
+        jc var8 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           if (param1 <= 55) {
             field_O = (byte[]) null;
@@ -344,11 +344,11 @@ class dl extends lh implements lm {
           if (this.field_K.f(7)) {
             return false;
           }
-          var8 = new NodeIterator(this.field_K);
+          var8 = new jc(this.field_K);
           var4 = (lh) (var8.c(2));
           while (var4 != null) {
             if (var4.d(0)) {
-              var5 = new NodeIterator(this.field_K);
+              var5 = new jc(this.field_K);
               var5.a(24192, var4);
               var6 = (lh) (var5.a(true));
               while (var6 != null) {
@@ -384,7 +384,7 @@ class dl extends lh implements lm {
 
     final void a(byte param0, int param1, int param2, int param3, lh param4, int param5) {
         RuntimeException runtimeException = null;
-        NodeIterator var7 = null;
+        jc var7 = null;
         lh var8 = null;
         int var9 = 0;
         int var10 = 0;
@@ -392,9 +392,9 @@ class dl extends lh implements lm {
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = SteelSentinels.obfuscationControl;
+        var10 = SteelSentinels.field_G;
         try {
-          var7 = new NodeIterator(this.field_K);
+          var7 = new jc(this.field_K);
           var8 = (lh) (var7.b(2));
           var9 = -102 / ((param0 - 36) / 32);
           while (var8 != null) {
@@ -433,11 +433,11 @@ class dl extends lh implements lm {
         int var8_intLifetime4;
         int var8_intLifetime1Lifetime1;
         int var8_intLifetime2Lifetime1;
-        var11 = SteelSentinels.obfuscationControl;
+        var11 = SteelSentinels.field_G;
         try {
-          SoftwareRaster.d(param1, param5, param2, param0, param4);
-          SoftwareRaster.d(param2, param0, param7, param6, param4);
-          SoftwareRaster.d(param7, param6, param1, param5, param4);
+          pb.d(param1, param5, param2, param0, param4);
+          pb.d(param2, param0, param7, param6, param4);
+          pb.d(param7, param6, param1, param5, param4);
           if (param0 < param5) {
             var8_int = param1;
             param1 = param2;
@@ -466,23 +466,23 @@ class dl extends lh implements lm {
             for (var10 = param5; param0 > var10; var10++) {
               var9 = param1 + (var10 - param5) * (-param1 + param7) / (param6 - param5);
               var8_intLifetime3 = (param2 - param1) * (-param5 + var10) / (-param5 + param0) + param1;
-              SoftwareRaster.g(var8_intLifetime3, var10, -var8_intLifetime3 + (var9 + 1), param4);
+              pb.g(var8_intLifetime3, var10, -var8_intLifetime3 + (var9 + 1), param4);
             }
             for (var10 = param0; var10 < param6; var10++) {
               var9 = (-param5 + var10) * (-param1 + param7) / (-param5 + param6) + param1;
               var8_intLifetime3 = param2 + (param7 - param2) * (-param0 + var10) / (param6 - param0);
-              SoftwareRaster.g(var8_intLifetime3, var10, 1 + (-var8_intLifetime3 + var9), param4);
+              pb.g(var8_intLifetime3, var10, 1 + (-var8_intLifetime3 + var9), param4);
             }
           } else {
             for (var10 = param5; param0 > var10; var10++) {
               var9 = (param2 - param1) * (-param5 + var10) / (param0 - param5) + param1;
               var8_intLifetime3 = (param7 - param1) * (var10 - param5) / (-param5 + param6) + param1;
-              SoftwareRaster.g(var8_intLifetime3, var10, 1 - var8_intLifetime3 + var9, param4);
+              pb.g(var8_intLifetime3, var10, 1 - var8_intLifetime3 + var9, param4);
             }
             for (var10 = param0; param6 > var10; var10++) {
               var9 = param2 + (-param2 + param7) * (var10 - param0) / (param6 - param0);
               var8_intLifetime3 = param1 + (var10 - param5) * (-param1 + param7) / (-param5 + param6);
-              SoftwareRaster.g(var8_intLifetime3, var10, 1 - var8_intLifetime3 + var9, param4);
+              pb.g(var8_intLifetime3, var10, 1 - var8_intLifetime3 + var9, param4);
             }
           }
           if (!param3) {
@@ -497,7 +497,7 @@ class dl extends lh implements lm {
     }
 
     final boolean a(int param0, lh param1, int param2, int param3, int param4, boolean param5, int param6) {
-        NodeIterator var8 = null;
+        jc var8 = null;
         RuntimeException var8_ref = null;
         lh var9 = null;
         int var10 = 0;
@@ -505,9 +505,9 @@ class dl extends lh implements lm {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = SteelSentinels.obfuscationControl;
+        var10 = SteelSentinels.field_G;
         try {
-          var8 = new NodeIterator(this.field_K);
+          var8 = new jc(this.field_K);
           if (!param5) {
             field_M = 17;
           }
@@ -538,7 +538,7 @@ class dl extends lh implements lm {
     }
 
     final boolean a(byte param0, int param1, int param2, int param3, lh param4, int param5, int param6) {
-        NodeIterator var8 = null;
+        jc var8 = null;
         RuntimeException var8_ref = null;
         lh var9 = null;
         int var10 = 0;
@@ -546,12 +546,12 @@ class dl extends lh implements lm {
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = SteelSentinels.obfuscationControl;
+        var10 = SteelSentinels.field_G;
         try {
           if (param0 > -34) {
             this.a(-58, (byte) 107, -39, -11);
           }
-          var8 = new NodeIterator(this.field_K);
+          var8 = new jc(this.field_K);
           var9 = (lh) (var8.b(2));
           while (var9 != null) {
             if (var9.b((byte) -12)) {
@@ -609,11 +609,11 @@ class dl extends lh implements lm {
     }
 
     final void d(byte param0) {
-        int var4 = SteelSentinels.obfuscationControl;
+        int var4 = SteelSentinels.field_G;
         if (param0 != -45) {
           field_N = (String[][]) null;
         }
-        NodeIterator var2 = new NodeIterator(this.field_K);
+        jc var2 = new jc(this.field_K);
         lh var3 = (lh) (var2.b(param0 + 47));
         while (var3 != null) {
           var3.d((byte) -45);
@@ -646,7 +646,7 @@ class dl extends lh implements lm {
           if (param2 >= -113) {
             return false;
           }
-          var6 = um.a(Sprite.field_f, fb.field_l, pg.field_u, param1, -90);
+          var6 = um.a(ea.field_f, fb.field_l, pg.field_u, param1, -90);
           pa.a(12105, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -673,7 +673,7 @@ class dl extends lh implements lm {
         StringBuilder discarded$3 = null;
         int var8 = 0;
         StringBuilder discarded$4 = null;
-        NodeIterator var5 = null;
+        jc var5 = null;
         lh var6 = null;
         int var7 = 0;
         int var9 = 0;
@@ -684,9 +684,9 @@ class dl extends lh implements lm {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        var9 = SteelSentinels.obfuscationControl;
+        var9 = SteelSentinels.field_G;
         try {
-          var5 = new NodeIterator(this.field_K);
+          var5 = new jc(this.field_K);
           var7 = -34 % ((-2 - param0) / 43);
           var6 = (lh) (var5.b(2));
           while (var6 != null) {
@@ -720,12 +720,12 @@ class dl extends lh implements lm {
 
     final int b(boolean param0) {
         int var5 = 0;
-        int var6 = SteelSentinels.obfuscationControl;
+        int var6 = SteelSentinels.field_G;
         int var2 = 0;
         if (!param0) {
           field_L = (byte[][]) null;
         }
-        NodeIterator var3 = new NodeIterator(this.field_K);
+        jc var3 = new jc(this.field_K);
         lh var4 = (lh) (var3.b(2));
         while (var4 != null) {
           var5 = var4.b(true);
@@ -738,12 +738,12 @@ class dl extends lh implements lm {
     }
 
     String e(int param0) {
-        NodeIterator var2;
+        jc var2;
         lh var3;
         String var4;
         int var5;
-        var5 = SteelSentinels.obfuscationControl;
-        var2 = new NodeIterator(this.field_K);
+        var5 = SteelSentinels.field_G;
+        var2 = new jc(this.field_K);
         if (param0 != 0) {
           return (String) null;
         }
@@ -759,11 +759,11 @@ class dl extends lh implements lm {
     }
 
     private final void f(byte param0) {
-        int var4 = SteelSentinels.obfuscationControl;
+        int var4 = SteelSentinels.field_G;
         if (param0 != 45) {
           return;
         }
-        NodeIterator var2 = new NodeIterator(this.field_K);
+        jc var2 = new jc(this.field_K);
         lh var3 = (lh) (var2.b(2));
         while (var3 != null) {
           var3.e((byte) 102);

@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ln {
     static int field_g;
-    static RgbSprite field_c;
+    static wk field_c;
     static int field_e;
     static String field_b;
     static int field_a;
@@ -37,7 +37,7 @@ final class ln {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        var12 = SteelSentinels.obfuscationControl;
+        var12 = SteelSentinels.field_G;
         try {
           var4_int = param3.length();
           var5 = param0.length();
@@ -104,10 +104,10 @@ final class ln {
         if (param0 > -53) {
           field_a = 61;
         }
-        return new ik(hl.d(87), IntKeyLookup.c((byte) 105));
+        return new ik(hl.d(87), jk.c((byte) 105));
     }
 
-    final static byte[] decompressContainer(byte[] encodedContainer, byte obfuscationGuard) {
+    final static byte[] a(byte[] param0, byte param1) {
         byte[] stackIn_9_0 = null;
         byte[] stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
@@ -121,29 +121,29 @@ final class ln {
         byte[] var5_ref_byte__ = null;
         byte[] var6 = null;
         Object var7 = null;
-        PacketBuffer var9 = null;
+        gi var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new PacketBuffer(encodedContainer);
-          if (obfuscationGuard < 126) {
+          var9 = new gi(param0);
+          if (param1 < 126) {
             field_e = 55;
           }
-          var3 = var9.readUnsignedByte((byte) -72);
-          var4 = var9.readInt(0);
+          var3 = var9.f((byte) -72);
+          var4 = var9.i(0);
           if (var4 >= 0 && (uf.field_c == 0 ||
             !(var4 > uf.field_c))) {
             if (0 == var3) {
               var12 = new byte[var4];
               var10 = var12;
               var5_ref_byte__ = var10;
-              var9.readBytes(0, var12, 28, var4);
+              var9.a(0, var12, 28, var4);
               stackIn_9_0 = var5_ref_byte__;
               return stackIn_9_0;
             }
-            var5 = var9.readInt(0);
+            var5 = var9.i(0);
             if (var5 >= 0 && (uf.field_c == 0 ||
               !(var5 > uf.field_c))) {
               var13 = new byte[var5];
@@ -155,7 +155,7 @@ final class ln {
                   wc.field_e.a(var9, var13, true);
                 }
               } else {
-                oi.a(var13, var5, encodedContainer, var4, 9);
+                oi.a(var13, var5, param0, var4, 9);
               }
               stackIn_23_0 = var6;
               return stackIn_23_0;
@@ -168,12 +168,12 @@ final class ln {
           var2 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_26_0 = var2;
           stackIn_26_1 = new StringBuilder().append("ln.B(");
-          if (encodedContainer == null) {
+          if (param0 == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ci.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -189,7 +189,7 @@ final class ln {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         try {
           if (param2 != -16121) {
             stackIn_3_0 = (String) null;
@@ -211,7 +211,7 @@ final class ln {
             }
             break;
           }
-          stackIn_12_0 = GameApplet.field_f;
+          stackIn_12_0 = lg.field_f;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -243,7 +243,7 @@ final class ln {
           Throwable decompiledCaughtException = null;
           RuntimeException var1 = null;
           IOException var2 = null;
-          var3 = SteelSentinels.obfuscationControl;
+          var3 = SteelSentinels.field_G;
           try {
             if (ne.field_N != null) {
               ne.field_N.b(111);

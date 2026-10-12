@@ -5,7 +5,7 @@ final class qm {
     static ef field_f;
     static String field_c;
     static String field_e;
-    static SceneWidget field_b;
+    static gh field_b;
     static int field_h;
     static String field_g;
     static String field_a;

@@ -3,13 +3,13 @@
  */
 class fb extends me {
     static String field_n;
-    static ResourceArchive field_h;
-    static SceneWidget field_r;
+    static cm field_h;
+    static gh field_r;
     private long field_i;
     static java.applet.Applet field_o;
     static String[] field_j;
     private String field_m;
-    static SceneWidget field_l;
+    static gh field_l;
     static String field_p;
     static String field_q;
     static String field_k;
@@ -18,7 +18,7 @@ class fb extends me {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        RgbSprite[] var8 = null;
+        wk[] var8 = null;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_20_0 = 0;
@@ -67,7 +67,7 @@ class fb extends me {
         }
     }
 
-    final void a(PacketBuffer param0, boolean param1) {
+    final void a(gi param0, boolean param1) {
         try {
           param0.b(-28875, this.field_i);
           if (param1) {
@@ -121,7 +121,7 @@ class fb extends me {
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
           var5 = qe.field_a;
           var1 = var5;

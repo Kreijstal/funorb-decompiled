@@ -10,7 +10,7 @@ final class nm extends ia {
     static int[] field_s;
     static int[] field_v;
     static boolean field_p;
-    static SceneWidget field_q;
+    static gh field_q;
     private tk field_x;
     static qc field_o;
 
@@ -23,25 +23,25 @@ final class nm extends ia {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         try {
-          param1.unlink(4);
-          var2 = (hk) (ci.field_e.first(13058));
+          param1.b(4);
+          var2 = (hk) (ci.field_e.e(13058));
           if (!param0) {
             var4 = (hk) null;
             nm.a(true, (hk) null);
           }
           while (var2 != null) {
             if (var2.a(param1, (byte) -63)) {
-              var2 = (hk) (ci.field_e.next((byte) -101));
+              var2 = (hk) (ci.field_e.a((byte) -101));
               continue;
             }
             break;
           }
           if (var2 != null) {
-            IsaacRandom.insertNodeBefore(var2, 30, param1);
+            ie.a(var2, 30, param1);
           } else {
-            ci.field_e.addLast(3, param1);
+            ci.field_e.a(3, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -75,7 +75,7 @@ final class nm extends ia {
 
     final String a(int param0, String param1) {
         RuntimeException var3 = null;
-        CipherPacketBuffer var4 = null;
+        kj var4 = null;
         String stackIn_4_0 = null;
         String stackIn_7_0 = null;
         String stackIn_9_0 = null;
@@ -85,14 +85,14 @@ final class nm extends ia {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 100) {
-            var4 = (CipherPacketBuffer) null;
-            nm.a((CipherPacketBuffer) null, (byte) 97);
+            var4 = (kj) null;
+            nm.a((kj) null, (byte) 97);
           }
-          if (this.field_x.a(param1, -1) == ArchiveProvider.field_d) {
+          if (this.field_x.a(param1, -1) == fa.field_d) {
             stackIn_4_0 = this.field_x.a(100, param1);
             return stackIn_4_0;
           }
-          if (this.a(param1, param0 ^ -101) != ArchiveProvider.field_d) {
+          if (this.a(param1, param0 ^ -101) != fa.field_d) {
             stackIn_9_0 = mg.field_lc;
             return stackIn_9_0;
           }
@@ -113,10 +113,10 @@ final class nm extends ia {
     }
 
     final static void a(int param0, byte param1) {
-        CipherPacketBuffer var2 = mm.field_g;
-        var2.writeCipheredOpcode(param0, (byte) -117);
-        var2.writeByte((byte) 109, 1);
-        var2.writeByte((byte) 108, 1);
+        kj var2 = mm.field_g;
+        var2.a(param0, (byte) -117);
+        var2.a((byte) 109, 1);
+        var2.a((byte) 108, 1);
         int var3 = 30 / ((11 - param1) / 51);
     }
 
@@ -131,8 +131,8 @@ final class nm extends ia {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_x.a(param0, param1) == ArchiveProvider.field_d) {
-            stackIn_2_0 = ArchiveProvider.field_d;
+          if (this.field_x.a(param0, param1) == fa.field_d) {
+            stackIn_2_0 = fa.field_d;
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_u)) {
@@ -147,7 +147,7 @@ final class nm extends ia {
           if (this.field_r) {
             stackIn_13_0 = vf.field_b;
           } else {
-            stackIn_13_0 = ArchiveProvider.field_d;
+            stackIn_13_0 = fa.field_d;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -190,12 +190,12 @@ final class nm extends ia {
         if (param6 <= 81) {
           field_n = (String[]) null;
         }
-        if (IntKeyLookup.field_i != null) {
-          IntKeyLookup.field_i.a(param2, param4, param0, (byte) 27, -ed.field_i + param0, param4);
+        if (jk.field_i != null) {
+          jk.field_i.a(param2, param4, param0, (byte) 27, -ed.field_i + param0, param4);
         }
     }
 
-    final static jj[] a(CipherPacketBuffer param0, byte param1) {
+    final static jj[] a(kj param0, byte param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -211,9 +211,9 @@ final class nm extends ia {
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
-          var2_int = param0.readBits(-126, 8);
+          var2_int = param0.g(-126, 8);
           if (0 < var2_int) {
             stackIn_3_0 = null;
             return (jj[]) (stackIn_3_0);
@@ -222,21 +222,21 @@ final class nm extends ia {
             stackIn_6_0 = (jj[]) null;
             return stackIn_6_0;
           }
-          var3 = param0.readBits(-77, 12);
+          var3 = param0.g(-77, 12);
           var4 = new jj[var3];
           for (var5 = 0; var5 < var3; var5++) {
             if (!he.a(-1766, param0)) {
-              var6 = param0.readBits(30, fm.a(-1 + var5, 80));
+              var6 = param0.g(30, fm.a(-1 + var5, 80));
               var4[var5] = var4[var6];
             } else {
               var6_ref_jj = new jj();
-              param0.readBits(-78, 24);
-              param0.readBits(80, 24);
-              var6_ref_jj.field_g = param0.readBits(94, 24);
-              param0.readBits(62, 9);
-              param0.readBits(-75, 12);
-              param0.readBits(122, 12);
-              param0.readBits(-103, 12);
+              param0.g(-78, 24);
+              param0.g(80, 24);
+              var6_ref_jj.field_g = param0.g(94, 24);
+              param0.g(62, 9);
+              param0.g(-75, 12);
+              param0.g(122, 12);
+              param0.g(-103, 12);
               var4[var5] = var6_ref_jj;
             }
           }
@@ -260,10 +260,10 @@ final class nm extends ia {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        RgbSprite[] var8 = null;
+        wk[] var8 = null;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
-        RgbSprite[] stackIn_16_0 = null;
+        wk[] stackIn_16_0 = null;
         int stackIn_23_0 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -318,7 +318,7 @@ final class nm extends ia {
     final static int a(int param0, int param1) {
         int var2;
         int var3;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         var2 = param1;
         if (var2 == 1) {
           return 0;

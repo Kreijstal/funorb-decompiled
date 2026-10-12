@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sf {
-    private BitmapFont field_h;
+    private mi field_h;
     private int field_s;
     static String field_v;
     static String field_p;
-    private RgbSprite[] field_j;
+    private wk[] field_j;
     private int field_o;
     static String field_i;
-    private RgbSprite[] field_k;
+    private wk[] field_k;
     static String field_l;
     private int field_u;
     private boolean field_q;
-    SceneWidget field_a;
+    gh field_a;
     private int field_n;
     private int field_g;
     static int field_d;
@@ -24,7 +24,7 @@ final class sf {
     static String field_f;
     private int field_e;
     private String field_c;
-    private RgbSprite field_r;
+    private wk field_r;
 
     final void b(int param0) {
         if (param0 != -40) {
@@ -33,13 +33,13 @@ final class sf {
         int var2 = ak.a(this.field_r, this.field_g, this.field_c, this.field_u, this.field_o, param0 + 38, this.field_e, 1071146, this.field_q ? al.field_f : null, false);
         if (var2 >= 0) {
           if (!this.field_w) {
-            CombatWorld.c(-2483, 97);
+            ee.c(-2483, 97);
           }
           this.field_w = true;
         } else {
           this.field_w = false;
         }
-        SceneWidget var3 = this.b((byte) 65);
+        gh var3 = this.b((byte) 65);
         if (var3 != null) {
           if (this.field_j == null) {
             this.field_j = var3.field_I;
@@ -72,7 +72,7 @@ final class sf {
     final boolean a(int param0, int param1) {
         int var3;
         int var4;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         var3 = this.field_s;
         if (4 != var3 &&
           var3 != 6) {
@@ -94,10 +94,10 @@ final class sf {
         return true;
     }
 
-    private final SceneWidget b(byte param0) {
+    private final gh b(byte param0) {
         int var2;
         int var3;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         var2 = this.field_s;
         if (3 == var2) {
           return vb.field_a[1];
@@ -117,7 +117,7 @@ final class sf {
         return this.field_a;
     }
 
-    sf(int param0, int param1, int param2, int param3, int param4, RgbSprite param5, boolean param6) {
+    sf(int param0, int param1, int param2, int param3, int param4, wk param5, boolean param6) {
         this(jm.field_u[param0], param1, param2, param3, param4, param5, param6);
         try {
           this.field_s = param0;
@@ -128,12 +128,12 @@ final class sf {
 
     final void a(byte param0) {
         kf.field_s = true;
-        GameApplet.field_l = true;
+        lg.field_l = true;
         if (param0 <= 57) {
           field_d = 94;
         }
-        SceneWidget var4 = this.b((byte) 65);
-        SceneWidget var5 = var4;
+        gh var4 = this.b((byte) 65);
+        gh var5 = var4;
         if (var5 != null &&
           null != this.field_j) {
           var5.field_I = this.field_j;
@@ -155,7 +155,7 @@ final class sf {
 
     final boolean c(int param0) {
         kf.field_s = true;
-        GameApplet.field_l = true;
+        lg.field_l = true;
         if (param0 <= 9) {
           return false;
         }
@@ -168,7 +168,7 @@ final class sf {
         kb.field_a = param2;
     }
 
-    final static void a(int param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, wk param3, int param4, int param5) {
         int var10 = 0;
         int var9 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -181,7 +181,7 @@ final class sf {
         int var8 = 0;
         int var11 = 0;
         int var12 = 0;
-        var12 = SteelSentinels.obfuscationControl;
+        var12 = SteelSentinels.field_G;
         try {
           param1 = param1 & 255;
           param2 = param2 & 255;
@@ -269,14 +269,14 @@ final class sf {
         int var6 = 0;
         kg var7 = null;
         kg var8 = null;
-        SceneWidget var9 = null;
-        var6 = SteelSentinels.obfuscationControl;
+        gh var9 = null;
+        var6 = SteelSentinels.field_G;
         try {
-          GameApplet.field_l = true;
+          lg.field_l = true;
           kf.field_s = true;
           if (this.field_q &&
             this.field_w) {
-            CombatWorld.c(-2483, 95);
+            ee.c(-2483, 95);
             rc.a(false);
           }
           if (param0.field_e == 3) {
@@ -381,8 +381,8 @@ final class sf {
         }
     }
 
-    private sf(String param0, int param1, int param2, int param3, int param4, RgbSprite param5, boolean param6) {
-        this.field_h = (BitmapFont) ((Object) ff.field_lb);
+    private sf(String param0, int param1, int param2, int param3, int param4, wk param5, boolean param6) {
+        this.field_h = (mi) ((Object) ff.field_lb);
         this.field_m = 8;
         this.field_k = bl.field_d;
         this.field_n = 5;

@@ -2,22 +2,22 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bc extends jf implements qn {
-    static RgbSprite field_wb;
+    static wk field_wb;
     private tl field_zb;
-    static RgbSprite field_sb;
+    static wk field_sb;
     static String field_mb;
     static int[] field_ob;
-    static RgbSprite field_ub;
+    static wk field_ub;
     private int field_tb;
-    static RgbSprite field_qb;
+    static wk field_qb;
     static String field_xb;
     static byte[][] field_vb;
-    static RgbSprite field_pb;
+    static wk field_pb;
     static String field_yb;
-    static RgbSprite[] field_rb;
+    static wk[] field_rb;
     static String field_nb;
 
-    final static void a(String param0, CombatWorld param1, byte param2) {
+    final static void a(String param0, ee param1, byte param2) {
         int var6 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -31,28 +31,28 @@ final class bc extends jf implements qn {
         String[] var5 = null;
         String var7 = null;
         int var8 = 0;
-        RgbSprite var9 = null;
-        var8 = SteelSentinels.obfuscationControl;
+        wk var9 = null;
+        var8 = SteelSentinels.field_G;
         try {
           if (ed.field_j == -2) {
             return;
           }
           if (param2 != 100) {
-            var9 = (RgbSprite) null;
-            bc.a(32, 18, 86, -6, (RgbSprite) null, -101, -54);
+            var9 = (wk) null;
+            bc.a(32, 18, 86, -6, (wk) null, -101, -54);
           }
-          var3_int = sn.field_j.field_zb - 20 - pl.field_X.c("[" + db.a(pd.field_ab, -49, new String[]{param1.playerNames[0], "] "}));
+          var3_int = sn.field_j.field_zb - 20 - pl.field_X.c("[" + db.a(pd.field_ab, -49, new String[]{param1.field_bb[0], "] "}));
           if (var3_int < pl.field_X.c(param0)) {
             var4 = ao.a(pl.field_X, new int[]{var3_int}, 18985, param0);
             var5 = var4;
             for (var6 = 0; var6 < var5.length; var6++) {
               var7 = var5[var6];
-              sj.a(param1.playerNames[0], var7, 0, (byte) 21, (String) null, 1);
+              sj.a(param1.field_bb[0], var7, 0, (byte) 21, (String) null, 1);
               ln.field_e = ln.field_e - 1;
             }
             return;
           }
-          sj.a(param1.playerNames[0], param0, 0, (byte) 21, (String) null, 1);
+          sj.a(param1.field_bb[0], param0, 0, (byte) 21, (String) null, 1);
           ln.field_e = ln.field_e - 1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -87,25 +87,25 @@ final class bc extends jf implements qn {
         try {
           dj.field_k[0] = rb.field_g.nextInt();
           dj.field_k[1] = rb.field_g.nextInt();
-          ne.field_y.position = 0;
+          ne.field_y.field_p = 0;
           dj.field_k[param1] = (int)(oa.field_G >> 32);
           dj.field_k[3] = (int)oa.field_G;
-          ne.field_y.writeInt(true, dj.field_k[0]);
-          ne.field_y.writeInt(true, dj.field_k[1]);
-          ne.field_y.writeInt(true, dj.field_k[2]);
-          ne.field_y.writeInt(true, dj.field_k[3]);
-          IntKeyLookup.a(125, ne.field_y);
-          ne.field_y.writeShort(param4, 18);
+          ne.field_y.b(true, dj.field_k[0]);
+          ne.field_y.b(true, dj.field_k[1]);
+          ne.field_y.b(true, dj.field_k[2]);
+          ne.field_y.b(true, dj.field_k[3]);
+          jk.a(125, ne.field_y);
+          ne.field_y.d(param4, 18);
           param3.a(ne.field_y, false);
-          mm.field_g.position = 0;
+          mm.field_g.field_p = 0;
           if (!param0) {
-            mm.field_g.writeByte((byte) 126, 16);
+            mm.field_g.a((byte) 126, 16);
           } else {
-            mm.field_g.writeByte((byte) 120, 18);
+            mm.field_g.a((byte) 120, 18);
           }
-          mm.field_g.position = mm.field_g.position + 2;
-          var5_int = mm.field_g.position;
-          mm.field_g.writeInt(true, kk.field_d);
+          mm.field_g.field_p = mm.field_g.field_p + 2;
+          var5_int = mm.field_g.field_p;
+          mm.field_g.b(true, kk.field_d);
           mm.field_g.b(-28875, og.field_b);
           var6 = 0;
           if (ki.field_ib) {
@@ -120,8 +120,8 @@ final class bc extends jf implements qn {
           if (on.field_k != null) {
             var6 = var6 | 16;
           }
-          mm.field_g.writeByte((byte) 124, var6);
-          var7 = SceneWidget.a(param1 ^ -82, Projectile.d((byte) -21));
+          mm.field_g.a((byte) 124, var6);
+          var7 = gh.a(param1 ^ -82, wl.d((byte) -21));
           if (var7 == null) {
             var7 = "";
           }
@@ -130,7 +130,7 @@ final class bc extends jf implements qn {
             mm.field_g.a(13588, on.field_k);
           }
           qi.a(jd.field_ib, ne.field_y, mm.field_g, qe.field_d, 5);
-          mm.field_g.c(param1 ^ 28, -var5_int + mm.field_g.position);
+          mm.field_g.c(param1 ^ 28, -var5_int + mm.field_g.field_p);
           gj.a(0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -152,7 +152,7 @@ final class bc extends jf implements qn {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         try {
           cj.a(param0, k.field_Lb, (byte) 125, kc.field_z, 0, true, nj.field_S);
           if (param1 <= 94) {
@@ -187,7 +187,7 @@ final class bc extends jf implements qn {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, RgbSprite param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, int param3, wk param4, int param5, int param6) {
         int var11 = 0;
         int var10 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -199,7 +199,7 @@ final class bc extends jf implements qn {
         int var8 = 0;
         int var9 = 0;
         int var12 = 0;
-        var12 = SteelSentinels.obfuscationControl;
+        var12 = SteelSentinels.field_G;
         try {
           param2 = param2 & 255;
           param1 = param1 & param6;
@@ -282,7 +282,7 @@ final class bc extends jf implements qn {
         try {
           super.a(param0, 112, param2, param3);
           if (param1 < 56) {
-            field_wb = (RgbSprite) null;
+            field_wb = (wk) null;
           }
           this.field_tb = oh.field_f - (this.field_o + param0);
         } catch (RuntimeException runtimeException) {

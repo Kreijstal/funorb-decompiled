@@ -4,7 +4,7 @@
 import java.util.*;
 
 class oa extends lh {
-    static RgbSprite[] field_U;
+    static wk[] field_U;
     static String field_R;
     static long field_P;
     static String field_O;
@@ -12,13 +12,13 @@ class oa extends lh {
     private boolean field_L;
     boolean field_K;
     static String[] field_J;
-    static RgbSprite field_N;
+    static wk field_N;
     static int field_S;
     private boolean field_I;
     boolean field_T;
     static int[] field_M;
     static long field_G;
-    static RgbSprite[] field_Q;
+    static wk[] field_Q;
 
     public static void a(byte param0) {
         field_J = null;
@@ -273,8 +273,8 @@ class oa extends lh {
 
     final static void f(int param0) {
         rh.a(false);
-        Explosion.c((byte) -70);
-        FunOrbClient.field_x = null;
+        jb.c((byte) -70);
+        n.field_x = null;
         ke.a(2);
         if (param0 != -12161) {
           oa.f(-6);

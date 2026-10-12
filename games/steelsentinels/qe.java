@@ -7,7 +7,7 @@ final class qe {
     static java.math.BigInteger field_d;
     static String field_f;
     static int[] field_a;
-    static RgbSprite field_g;
+    static wk field_g;
     static String field_b;
 
     final static void a(java.awt.Component param0, int param1) {
@@ -44,15 +44,15 @@ final class qe {
         field_c = null;
         if (param0 != -31914) {
           String var2 = (String) null;
-          qe.a((RgbSprite) null, (byte) 27, (String) null);
+          qe.a((wk) null, (byte) 27, (String) null);
         }
         field_b = null;
     }
 
-    final static IndexedSprite a(RgbSprite param0, byte param1, String param2) {
+    final static gk a(wk param0, byte param1, String param2) {
         int var8_int = 0;
         int var11 = 0;
-        IndexedSprite stackIn_42_0 = null;
+        gk stackIn_42_0 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
         String stackIn_46_2 = null;
@@ -65,7 +65,7 @@ final class qe {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        IndexedSprite var8 = null;
+        gk var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var12 = 0;
@@ -76,7 +76,7 @@ final class qe {
         int var9Lifetime3;
         int var10Lifetime1;
         int var10Lifetime2;
-        var12 = SteelSentinels.obfuscationControl;
+        var12 = SteelSentinels.field_G;
         try {
           for (var3_int = 0; param0.field_E.length > var3_int; var3_int++) {
             param0.field_E[var3_int] = 0;
@@ -113,7 +113,7 @@ final class qe {
           }
           var6++;
           var5++;
-          var8 = new IndexedSprite(8 + (var6 - var3_intLifetime1), 8 + var5 - var4, 3);
+          var8 = new gk(8 + (var6 - var3_intLifetime1), 8 + var5 - var4, 3);
           var8.field_o[0] = 0;
           var8.field_o[2] = 5789784;
           var8.field_o[1] = 10790052;

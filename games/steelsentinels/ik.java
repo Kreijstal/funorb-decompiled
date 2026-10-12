@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ik {
-    static RgbSprite field_g;
+    static wk field_g;
     private boolean field_d;
     static int field_e;
     static boolean field_h;
@@ -27,7 +27,7 @@ final class ik {
     }
 
     final static void a(boolean param0) {
-        ad.field_j = IntrusiveNode.a(125);
+        ad.field_j = ck.a(125);
         ag.field_p = new ka();
         ok.a(true, param0, -73);
     }
@@ -38,23 +38,23 @@ final class ik {
 
     final static void a(long param0, int param1, boolean param2) {
         int var5 = 0;
-        CipherPacketBuffer var4 = mm.field_g;
+        kj var4 = mm.field_g;
         int var5Lifetime1;
-        var4.writeCipheredOpcode(param1, (byte) -117);
+        var4.a(param1, (byte) -117);
         if (!param2) {
-          var4.position = var4.position + 1;
-          var5 = var4.position;
-          var4.writeByte((byte) 115, 6);
+          var4.field_p = var4.field_p + 1;
+          var5 = var4.field_p;
+          var4.a((byte) 115, 6);
           var4.b(-28875, param0);
-          var4.b((byte) -92, -var5 + var4.position);
+          var4.b((byte) -92, -var5 + var4.field_p);
           return;
         }
         ik.b(-47);
-        var4.position = var4.position + 1;
-        var5Lifetime1 = var4.position;
-        var4.writeByte((byte) 115, 6);
+        var4.field_p = var4.field_p + 1;
+        var5Lifetime1 = var4.field_p;
+        var4.a((byte) 115, 6);
         var4.b(-28875, param0);
-        var4.b((byte) -92, -var5Lifetime1 + var4.position);
+        var4.b((byte) -92, -var5Lifetime1 + var4.field_p);
     }
 
     final static int a(int param0, int param1) {

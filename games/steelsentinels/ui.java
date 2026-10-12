@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ui extends ug {
-    static IndexedSprite[] field_V;
+    static gk[] field_V;
     int field_R;
     static boolean field_T;
     static u field_U;
@@ -40,7 +40,7 @@ final class ui extends ug {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = SteelSentinels.obfuscationControl;
+        var9 = SteelSentinels.field_G;
         try {
           if (param1 == null) {
             return null;
@@ -122,7 +122,7 @@ final class ui extends ug {
           this.field_J.a(param0 + this.field_z, (byte) -117, param2 + this.field_o, param3);
           return;
         }
-        RgbSprite var6 = new RgbSprite(this.field_J.field_x, this.field_J.field_E);
+        wk var6 = new wk(this.field_J.field_x, this.field_J.field_E);
         if (param1 <= -99) {
           q.a(var6, (byte) -90);
           this.field_J.a(0, (byte) -128, 0, param3);
@@ -140,10 +140,10 @@ final class ui extends ug {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = mm.field_g;
-        var2.writeCipheredOpcode(param0, (byte) -117);
-        var2.writeByte((byte) 111, 1);
-        var2.writeByte((byte) 119, param1);
+        kj var2 = mm.field_g;
+        var2.a(param0, (byte) -117);
+        var2.a((byte) 111, 1);
+        var2.a((byte) 119, param1);
     }
 
     public ui() {

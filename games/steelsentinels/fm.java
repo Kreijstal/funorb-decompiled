@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fm {
-    static IndexedSprite field_j;
+    static gk field_j;
     int field_k;
     static String field_h;
     static int field_d;
@@ -12,13 +12,13 @@ final class fm {
     static int[] field_l;
     static String field_i;
     static int[] field_f;
-    static SceneWidget field_b;
+    static gh field_b;
     static int[] field_e;
 
     public static void a(int param0) {
         if (param0 != 4314) {
-          BitmapFont var2 = (BitmapFont) null;
-          fm.a(-42, true, 120, 16, -64, 89, -116, -30, -115, 59, 77, (BitmapFont) null, -85);
+          mi var2 = (mi) null;
+          fm.a(-42, true, 120, 16, -64, 89, -116, -30, -115, 59, 77, (mi) null, -85);
         }
         field_j = null;
         field_b = null;
@@ -31,24 +31,24 @@ final class fm {
         field_h = null;
     }
 
-    final static SceneWidget a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, BitmapFont param11, int param12) {
-        SceneWidget var13 = null;
+    final static gh a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, mi param11, int param12) {
+        gh var13 = null;
         RuntimeException var13_ref = null;
-        SceneWidget stackIn_3_0 = null;
+        gh stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var13 = new SceneWidget(0L, (SceneWidget) null);
-          var13.field_I = NodeDeque.a((byte) 0, param12, param8);
-          var13.field_Ab = NodeDeque.a((byte) 0, param6, param10);
-          var13.field_mb = NodeDeque.a((byte) 0, param3, param2);
+          var13 = new gh(0L, (gh) null);
+          var13.field_I = ul.a((byte) 0, param12, param8);
+          var13.field_Ab = ul.a((byte) 0, param6, param10);
+          var13.field_mb = ul.a((byte) 0, param3, param2);
           if (param1) {
             fm.a(-102);
           }
-          var13.field_bb = NodeDeque.a((byte) 0, param5, param9);
-          var13.field_H = NodeDeque.a((byte) 0, param4, param0);
+          var13.field_bb = ul.a((byte) 0, param5, param9);
+          var13.field_H = ul.a((byte) 0, param4, param0);
           var13.field_nb = param7;
           var13.field_L = param11;
           stackIn_3_0 = var13;
@@ -141,7 +141,7 @@ final class fm {
         int var1;
         field_d = 33;
         field_h = "Camera follows sentinel: Off";
-        field_j = new IndexedSprite(192, 192, 256);
+        field_j = new gk(192, 192, 256);
         var0 = 0;
         for (var2 = -96; var2 < 96; var2++) {
           for (var3 = -96; var3 < 96; var3++) {

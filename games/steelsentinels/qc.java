@@ -5,7 +5,7 @@ final class qc extends dl implements oj, ae {
     static int field_P;
     static int[] field_S;
     private oa field_T;
-    static SceneWidget field_V;
+    static gh field_V;
     private bc field_Q;
     ij field_R;
     private oa field_U;
@@ -51,7 +51,7 @@ final class qc extends dl implements oj, ae {
         this.field_Q = new bc("", (tn) null, 12);
         cn var1 = new cn(rc.field_m, 0, 0, 0, 0, 16777215, -1, 3, 0, tj.field_e.field_G, -1, 2147483647, true);
         lh var2 = new lh(na.field_h, var1, (tn) null);
-        this.field_U = new oa(Sentinel.field_D, (tn) null);
+        this.field_U = new oa(mb.field_D, (tn) null);
         this.field_T = new oa(tj.field_b, (tn) null);
         this.field_Q.field_v = lc.field_i;
         this.field_Q.a(true, new ei(this.field_Q));
@@ -177,7 +177,7 @@ final class qc extends dl implements oj, ae {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 > -68) {
-            field_V = (SceneWidget) null;
+            field_V = (gh) null;
           }
           stackIn_3_0 = this.a(param4, param1, param3, 35, param5, 3, param0);
           return stackIn_3_0;

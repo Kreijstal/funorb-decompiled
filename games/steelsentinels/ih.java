@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ih extends ia {
-    static CombatWorld field_s;
+    static ee field_s;
     static int field_t;
     static String field_p;
     static int field_n;
@@ -37,7 +37,7 @@ final class ih extends ia {
           stackIn_3_0 = (gm.a(true, param0) != null) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (var3_int == 0) {
-            stackIn_6_0 = ArchiveProvider.field_d;
+            stackIn_6_0 = fa.field_d;
             return stackIn_6_0;
           }
           if (param1 != -1) {
@@ -74,7 +74,7 @@ final class ih extends ia {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param1, -1) == ArchiveProvider.field_d) {
+          if (this.a(param1, -1) == fa.field_d) {
             stackIn_2_0 = oh.field_g;
             return stackIn_2_0;
           }

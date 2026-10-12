@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kc extends IntrusiveNode {
+final class kc extends ck {
     int field_p;
     static wj field_o;
     static boolean field_A;
     static byte[] field_w;
     static el field_y;
     byte[] field_B;
-    static RgbSprite[][] field_x;
+    static wk[][] field_x;
     static boolean field_q;
     static String field_u;
     static int field_z;
@@ -19,7 +19,7 @@ final class kc extends IntrusiveNode {
     static String field_t;
 
     public static void d(int param0) {
-        field_x = (RgbSprite[][]) null;
+        field_x = (wk[][]) null;
         field_w = null;
         field_o = null;
         field_C = null;
@@ -140,7 +140,7 @@ final class kc extends IntrusiveNode {
         int var6Lifetime1;
         int var6Lifetime2;
         int var8Lifetime1;
-        var9 = SteelSentinels.obfuscationControl;
+        var9 = SteelSentinels.field_G;
         try {
           var3_int = 0;
           var4 = 0;
@@ -157,7 +157,7 @@ final class kc extends IntrusiveNode {
             var3_int = 8388607 & (var3_int ^ 10 * var3_int);
           }
           var5 = cd.field_c[1];
-          var6Lifetime2 = NodeDeque.a((byte) -84, param0[0]);
+          var6Lifetime2 = ul.a((byte) -84, param0[0]);
           if (var6Lifetime2 >= 0 &&
             var6Lifetime2 < cd.field_c.length) {
             var5 = cd.field_c[var6Lifetime2];

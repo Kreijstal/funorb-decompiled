@@ -12,10 +12,10 @@ final class eh {
         if (param1 != -17274) {
           return;
         }
-        CipherPacketBuffer var2 = mm.field_g;
-        var2.writeCipheredOpcode(param0, (byte) -117);
-        var2.writeByte((byte) 114, 1);
-        var2.writeByte((byte) 117, 2);
+        kj var2 = mm.field_g;
+        var2.a(param0, (byte) -117);
+        var2.a((byte) 114, 1);
+        var2.a((byte) 117, 2);
     }
 
     final static char a(byte param0, byte param1) {
@@ -38,7 +38,7 @@ final class eh {
         return (char)var2;
     }
 
-    final static SceneWidget a(boolean param0) {
+    final static gh a(boolean param0) {
         if (param0) {
           field_c = (ng) null;
         }
@@ -55,13 +55,13 @@ final class eh {
         RuntimeException var1 = null;
         long var4 = 0L;
         int var6 = 0;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           var1_int = 0;
           var2 = 0;
           while (dl.f(22759)) {
-            DualNodeDeque.field_f.a(true);
-            if (DualNodeDeque.field_f.c(0)) {
+            ra.field_f.a(true);
+            if (ra.field_f.c(0)) {
               var1_int = 1;
             }
             if (ei.field_q != 13) {
@@ -69,22 +69,22 @@ final class eh {
             }
             var2 = 1;
           }
-          DualNodeDeque.field_f.a(param0 + 125, GameApplet.a(param0 + 5, pi.field_c, oh.field_f), GameApplet.a(param0 + 5, rj.field_j, oa.field_S));
-          if (DualNodeDeque.field_f.c(0)) {
+          ra.field_f.a(param0 + 125, lg.a(param0 + 5, pi.field_c, oh.field_f), lg.a(param0 + 5, rj.field_j, oa.field_S));
+          if (ra.field_f.c(0)) {
             var1_int = 1;
           }
           var3 = param0;
           if (var1_int != 0 &&
-            0 <= DualNodeDeque.field_f.field_e) {
-            var3 = oc.field_b[DualNodeDeque.field_f.field_e];
+            0 <= ra.field_f.field_e) {
+            var3 = oc.field_b[ra.field_f.field_e];
             if (var3 == 2 ||
               5 == var3) {
-              NodeIterator.a((byte) -2);
+              jc.a((byte) -2);
             }
           } else {
             if (var2 != 0 &&
               in.field_a != 2) {
-              NodeIterator.a((byte) -2);
+              jc.a((byte) -2);
             }
           }
           if (var3 == 0 &&
@@ -131,13 +131,13 @@ final class eh {
         int stackIn_5_2;
         int stackIn_5_3;
         boolean stackIn_6_4 = false;
-        SceneWidget stackIn_22_0 = null;
+        gh stackIn_22_0 = null;
         String stackIn_23_1 = null;
         int stackIn_26_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        NodeDeque var4 = null;
+        ul var4 = null;
         Object var5 = null;
         ah var6 = null;
         int var7 = 0;
@@ -151,7 +151,7 @@ final class eh {
         int var15 = 0;
         dd var16 = null;
         dd var17 = null;
-        var15 = SteelSentinels.obfuscationControl;
+        var15 = SteelSentinels.field_G;
         try {
           if (param1 != -1) {
             field_a = 45;
@@ -173,13 +173,13 @@ final class eh {
           vi.field_W.field_Xb.field_Tb.field_S = null;
           vi.field_W.field_T = true;
           var5 = null;
-          var6 = (ah) (var4.first(13058));
+          var6 = (ah) (var4.e(13058));
           while (var6 != null) {
             var7 = 0;
             if (var6.field_M == null) {
-              var6.field_Ub = new SceneWidget(0L, bb.field_W);
+              var6.field_Ub = new gh(0L, bb.field_W);
               var6.a(var6.field_Ub, 121);
-              var6.field_cc = new SceneWidget(0L, bb.field_W);
+              var6.field_cc = new gh(0L, bb.field_W);
               var6.a(var6.field_cc, param1 ^ -123);
               var7 = 1;
               var6.h(-100);
@@ -202,7 +202,7 @@ final class eh {
             }
             stackIn_22_0 = var6.field_Ub;
             if (var10 > 0) {
-              stackIn_23_1 = BitmapFont.a(var6.field_Ub.field_L, var6.field_dc, var10);
+              stackIn_23_1 = mi.a(var6.field_Ub.field_L, var6.field_dc, var10);
             } else {
               stackIn_23_1 = var6.field_dc;
             }
@@ -214,7 +214,7 @@ final class eh {
               var6.field_lb = -var6.field_Lb + db.field_b;
             }
             if (var7 != 0) {
-              vi.field_W.field_Wb.a(2, (byte) 70, (SceneWidget) (var5), var6);
+              vi.field_W.field_Wb.a(2, (byte) 70, (gh) (var5), var6);
             }
             if (null != var6.field_cc &&
               var6.field_cc.field_kb) {
@@ -236,7 +236,7 @@ final class eh {
               var14 = rj.field_j;
               var17.field_j.a(0, 0, var14, (byte) -115, var13);
             }
-            var6 = (ah) (var4.next((byte) -11));
+            var6 = (ah) (var4.a((byte) -11));
           }
           if (vi.field_W.field_bc.field_Eb != 0) {
             kc.field_y = new el(vi.field_W.field_bc.field_Rb, vi.field_W.field_bc.field_cb, vi.field_W.field_bc.field_zb, vi.field_W.field_bc.field_Lb, bm.field_W, kf.field_y, bd.field_f, bd.field_f);

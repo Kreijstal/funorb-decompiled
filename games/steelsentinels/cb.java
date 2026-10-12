@@ -8,7 +8,7 @@ final class cb implements Runnable {
     static int[][] field_h;
     static int field_l;
     static String field_d;
-    private DualNodeDeque field_i;
+    private ra field_i;
     static String field_a;
     private boolean field_b;
     int field_f;
@@ -25,7 +25,7 @@ final class cb implements Runnable {
         try {
           var3 = this.field_i;
           synchronized (var3) {
-            this.field_i.addLast((byte) 47, param1);
+            this.field_i.a((byte) 47, param1);
             if (param0 >= -52) {
               field_g = (String) null;
             }
@@ -60,13 +60,13 @@ final class cb implements Runnable {
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         Throwable decompiledCaughtException = null;
-        var8 = SteelSentinels.obfuscationControl;
+        var8 = SteelSentinels.field_G;
         try {
           var4 = new df();
           var4.field_H = 1;
           var5 = this.field_i;
           synchronized (var5) {
-            var6 = (df) (this.field_i.first(22));
+            var6 = (df) (this.field_i.b(22));
             while (var6 != null) {
               if (~var6.field_w == ~(long)param1 &&
                 var6.field_G == param2 &&
@@ -76,7 +76,7 @@ final class cb implements Runnable {
                 stackIn_9_0 = var4;
                 return stackIn_9_0;
               }
-              var6 = (df) (this.field_i.next(false));
+              var6 = (df) (this.field_i.a(false));
             }
           }
           var4.field_L = param2.b(param1, false);
@@ -227,7 +227,7 @@ final class cb implements Runnable {
         int var16Lifetime1;
         int var18Lifetime1;
         int var16Lifetime2;
-        var26 = SteelSentinels.obfuscationControl;
+        var26 = SteelSentinels.field_G;
         try {
           if (param3) {
             stackIn_12_0 = (ad.field_f) ? 0 : 1;
@@ -372,9 +372,9 @@ final class cb implements Runnable {
               var28.field_Eb != 0) {
               if (param3) {
                 if (var6Lifetime1 != 0) {
-                  GameplayController.field_L = GameplayController.field_L ^ var6Lifetime1;
+                  nb.field_L = nb.field_L ^ var6Lifetime1;
                 } else {
-                  GameplayController.field_L = 0;
+                  nb.field_L = 0;
                 }
               } else {
                 if (var6Lifetime1 != param0.field_sc) {
@@ -390,11 +390,11 @@ final class cb implements Runnable {
             } else {
               if (var6Lifetime1 != 0) {
                 stackIn_129_0 = var28;
-                stackIn_130_1 = ((var6Lifetime1 & GameplayController.field_L) != 0);
+                stackIn_130_1 = ((var6Lifetime1 & nb.field_L) != 0);
                 stackIn_129_0.field_G = stackIn_130_1;
               } else {
                 stackIn_125_0 = var28;
-                stackIn_126_1 = (GameplayController.field_L == 0);
+                stackIn_126_1 = (nb.field_L == 0);
                 stackIn_125_0.field_G = stackIn_126_1;
               }
             }
@@ -408,7 +408,7 @@ final class cb implements Runnable {
               var29 = un.field_h[3][var6Lifetime2];
               if (var4_int != 0 &&
                 0 != var29.field_Eb) {
-                CachedArchiveProvider.field_l = var6Lifetime2;
+                fi.field_l = var6Lifetime2;
               }
               if (var29.field_K &&
                 var6Lifetime2 > 0) {
@@ -423,7 +423,7 @@ final class cb implements Runnable {
                 }
               }
               stackIn_156_0 = var29;
-              stackIn_157_1 = (CachedArchiveProvider.field_l == var6Lifetime2);
+              stackIn_157_1 = (fi.field_l == var6Lifetime2);
               stackIn_156_0.field_G = stackIn_157_1;
               stackIn_159_0 = var29;
               stackIn_160_1 = (var4_int != 0);
@@ -500,7 +500,7 @@ final class cb implements Runnable {
                   }
                 }
               }
-              if (NodeDeque.field_d >= 2 &&
+              if (ul.field_d >= 2 &&
                 fc.field_e[12]) {
                 var11 = 0;
                 var14 = 0;
@@ -523,7 +523,7 @@ final class cb implements Runnable {
                 var9 >= 0 &&
                 null != m.field_b && (!param3 ||
                 !ad.field_f)) {
-                PacketBuffer.field_u = false;
+                gi.field_u = false;
                 ng.field_k = false;
                 if (null == dl.field_O) {
                   m.field_h = new boolean[be.field_a];
@@ -533,7 +533,7 @@ final class cb implements Runnable {
                   m.field_h[var17_int] = false;
                 }
                 lc.a(var9, -1, param0, var7, -1, -89, 0, param3);
-                if (NodeDeque.field_d >= 2 &&
+                if (ul.field_d >= 2 &&
                   fc.field_e[12]) {
                   ng.field_k = true;
                 }
@@ -609,7 +609,7 @@ final class cb implements Runnable {
                     if (var11 != 0) {
                       var22_int = ol.field_cc[var7][var9] - ud.field_D;
                       if (var22_int != 1) {
-                        var21 = db.a(BattleTerrain.field_d, -34, new String[]{Integer.toString(var22_int)});
+                        var21 = db.a(hd.field_d, -34, new String[]{Integer.toString(var22_int)});
                       } else {
                         var21 = wb.field_e;
                       }
@@ -647,7 +647,7 @@ final class cb implements Runnable {
                 if (var4_int != 0 &&
                   !ng.field_k) {
                   var22 = null;
-                  if (PacketBuffer.field_u) {
+                  if (gi.field_u) {
                     var22 = "</col>" + rb.field_d + "<col=A00000>";
                     var25Lifetime1 = var22;
                     var22 = var25Lifetime1;
@@ -673,7 +673,7 @@ final class cb implements Runnable {
                     }
                   }
                   if (var23 != 0) {
-                    var21 = Sentinel.field_Ob + (String) (var22);
+                    var21 = mb.field_Ob + (String) (var22);
                   } else {
                     var21 = db.a(be.field_g, -84, new String[]{(String) (var22)});
                   }
@@ -753,11 +753,11 @@ final class cb implements Runnable {
           Object var2 = null;
           Exception var2_ref = null;
           String var6 = null;
-          var5 = SteelSentinels.obfuscationControl;
+          var5 = SteelSentinels.field_G;
           while (!this.field_b) {
             var2 = this.field_i;
             synchronized (var2) {
-              var7 = (df) (this.field_i.removeFirst(-104));
+              var7 = (df) (this.field_i.c(-104));
               if (var7 != null) {
                 this.field_f = this.field_f - 1;
                 decompiledRegionSelector0 = 1;
@@ -888,7 +888,7 @@ final class cb implements Runnable {
 
     cb(pn param0) {
         wj var2 = null;
-        this.field_i = new DualNodeDeque();
+        this.field_i = new ra();
         this.field_b = false;
         this.field_f = 0;
         try {

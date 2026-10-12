@@ -15,18 +15,18 @@ final class rb {
     static String field_b;
     static int field_f;
 
-    final static int firstQuadrantAngle8192(int deltaX, int obfuscationGuard, int deltaY) {
-        if (obfuscationGuard != 2048) {
-          rb.firstQuadrantAngle8192(-3, -22, 110);
-          if (deltaX < deltaY) {
-            return 2048 - df.atanFixed16ToAngle8192(-3720, (deltaX << 16) / deltaY);
+    final static int a(int param0, int param1, int param2) {
+        if (param1 != 2048) {
+          rb.a(-3, -22, 110);
+          if (param0 < param2) {
+            return 2048 - df.a(-3720, (param0 << 16) / param2);
           }
-          return df.atanFixed16ToAngle8192(-3720, (deltaY << 16) / deltaX);
+          return df.a(-3720, (param2 << 16) / param0);
         }
-        if (deltaX < deltaY) {
-          return 2048 - df.atanFixed16ToAngle8192(-3720, (deltaX << 16) / deltaY);
+        if (param0 < param2) {
+          return 2048 - df.a(-3720, (param0 << 16) / param2);
         }
-        return df.atanFixed16ToAngle8192(-3720, (deltaY << 16) / deltaX);
+        return df.a(-3720, (param2 << 16) / param0);
     }
 
     public static void a(byte param0) {

@@ -7,9 +7,9 @@ final class rf {
     static int field_c;
     static boolean field_b;
     static int field_a;
-    static CipherPacketBuffer field_d;
+    static kj field_d;
 
-    final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4, int param5, RgbSprite[] param6, int param7, int param8, BitmapFont param9, int param10, int param11, int param12, int param13, RgbSprite[] param14) {
+    final static void a(wk[] param0, int param1, int param2, int param3, int param4, int param5, wk[] param6, int param7, int param8, mi param9, int param10, int param11, int param12, int param13, wk[] param14) {
         int var15_int = 0;
         int var16 = 0;
         if (param13 >= -81) {
@@ -49,7 +49,7 @@ final class rf {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         try {
           var2_int = param1.length();
           if (param0 != 16) {
@@ -85,17 +85,17 @@ final class rf {
         if (param0 < 77) {
           rf.a(-62);
         }
-        stackIn_8_0 = (this == uf.field_g) || (Projectile.field_N == this) || (this == jd.field_sb);
+        stackIn_8_0 = (this == uf.field_g) || (wl.field_N == this) || (this == jd.field_sb);
         return stackIn_8_0;
     }
 
-    final static ResourceArchive a(boolean param0, int param1, byte param2, boolean param3, boolean param4, int param5) {
+    final static cm a(boolean param0, int param1, byte param2, boolean param3, boolean param4, int param5) {
         try {
           int var6 = 0;
           Object var7 = null;
           Object var8 = null;
-          CachedArchiveProvider var9 = null;
-          ResourceArchive stackIn_13_0 = null;
+          fi var9 = null;
+          cm stackIn_13_0 = null;
           Throwable decompiledCaughtException = null;
           var6 = 73 % ((-55 - param2) / 59);
           try {
@@ -120,7 +120,7 @@ final class rf {
             if (param4) {
               var9.d((byte) 74);
             }
-            stackIn_13_0 = new ResourceArchive(var9, param0, param1);
+            stackIn_13_0 = new cm(var9, param0, param1);
             return stackIn_13_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -145,7 +145,7 @@ final class rf {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var2_intLifetime1;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         try {
           var2_int = v.field_e;
           if (param0 >= -75) {
@@ -156,7 +156,7 @@ final class rf {
             if (param1.field_k == 4) {
               var2_intLifetime1 = pf.field_j[param1.field_k];
             } else {
-              if (GameplayController.field_G == param1.field_j) {
+              if (nb.field_G == param1.field_j) {
                 var2_intLifetime1 = ag.field_r[param1.field_k];
               } else {
                 var2_intLifetime1 = pf.field_j[param1.field_k];

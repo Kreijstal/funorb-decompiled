@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hj extends IntrusiveNode {
+final class hj extends ck {
     int field_D;
     int field_B;
     int field_I;
-    static PacketBuffer field_H;
+    static gi field_H;
     int field_M;
     static int field_F;
     int field_O;
@@ -38,18 +38,18 @@ final class hj extends IntrusiveNode {
         field_H = null;
     }
 
-    final static RgbSprite[] a(byte param0, RgbSprite param1) {
-        RgbSprite[] var2 = null;
+    final static wk[] a(byte param0, wk param1) {
+        wk[] var2 = null;
         RuntimeException var2_ref = null;
         int[] var3 = null;
-        RgbSprite[] var4 = null;
-        RgbSprite[] stackIn_3_0 = null;
+        wk[] var4 = null;
+        wk[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new RgbSprite[9];
+          var4 = new wk[9];
           var2 = var4;
           if (param0 != 26) {
             var3 = (int[]) null;
@@ -93,12 +93,12 @@ final class hj extends IntrusiveNode {
         this.field_E = null;
     }
 
-    final static ArticulatedPart a(int param0, boolean param1, int[] param2, int[] param3) {
+    final static nk a(int param0, boolean param1, int[] param2, int[] param3) {
         int var9 = 0;
-        ArticulatedPart stackIn_8_0 = null;
+        nk stackIn_8_0 = null;
         Object stackIn_13_0 = null;
         Object stackIn_21_0 = null;
-        ArticulatedPart stackIn_24_0 = null;
+        nk stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -108,11 +108,11 @@ final class hj extends IntrusiveNode {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ArticulatedPart var6 = null;
-        ArticulatedPart var7 = null;
+        nk var6 = null;
+        nk var7 = null;
         int var8 = 0;
         int var10 = 0;
-        var10 = SteelSentinels.obfuscationControl;
+        var10 = SteelSentinels.field_G;
         try {
           if (param3 == null) {
             return null;
@@ -123,13 +123,13 @@ final class hj extends IntrusiveNode {
           var4_int = 0;
           var5 = param3[var4_int++];
           if (param0 != -24809) {
-            stackIn_8_0 = (ArticulatedPart) null;
+            stackIn_8_0 = (nk) null;
             return stackIn_8_0;
           }
-          var6 = NodeDeque.a(var5, (byte) 67);
+          var6 = ul.a(var5, (byte) 67);
           if (var6 != null &&
             var6.field_Q == 1) {
-            var7 = new ArticulatedPart(var6, param1);
+            var7 = new nk(var6, param1);
             var4_int = var7.a(var4_int, param3, param1, 0);
             for (var9 = 0; var9 < 8; var9++) {
               param2[var9] = -1;
@@ -150,11 +150,11 @@ final class hj extends IntrusiveNode {
             }
             dh.a("Too much data", (byte) 121);
             stackIn_21_0 = null;
-            return (ArticulatedPart) (stackIn_21_0);
+            return (nk) (stackIn_21_0);
           }
           dh.a(db.a("Chassis not correct id: ID=<%0>", -43, new String[]{Integer.toString(var5)}), (byte) 120);
           stackIn_13_0 = null;
-          return (ArticulatedPart) (stackIn_13_0);
+          return (nk) (stackIn_13_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -185,7 +185,7 @@ final class hj extends IntrusiveNode {
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
         Throwable decompiledCaughtException = null;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
           try {
             if (!pn.field_w.startsWith("win")) {

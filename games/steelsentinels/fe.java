@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fe extends DualNode {
+abstract class fe extends kd {
     static int[] field_D;
     static int field_y;
     volatile boolean field_z;
@@ -20,9 +20,9 @@ abstract class fe extends DualNode {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        ArchiveIndex.a(false);
+        jl.a(false);
         int var5 = 80 % ((param2 + 37) / 40);
-        SoftwareRaster.h(param0, param1, param3, param4);
+        pb.h(param0, param1, param3, param4);
     }
 
     abstract int g(int param0);
@@ -36,51 +36,51 @@ abstract class fe extends DualNode {
         RuntimeException var1_ref2 = null;
         int var2 = 0;
         cc var1Lifetime1;
-        var2 = SteelSentinels.obfuscationControl;
+        var2 = SteelSentinels.field_G;
         try {
-          var1 = (cc) (q.field_m.first(13058));
+          var1 = (cc) (q.field_m.e(13058));
           while (var1 != null) {
             if (var1.field_Ub > 0) {
               var1.field_Ub = var1.field_Ub - 1;
               if (var1.field_Ub == 0) {
                 var1.field_Wb = 0;
                 if (var1.d((byte) -36)) {
-                  var1.unlink(4);
+                  var1.b(4);
                 }
               }
             }
-            var1 = (cc) (q.field_m.next((byte) -36));
+            var1 = (cc) (q.field_m.a((byte) -36));
           }
           if (param0 <= 102) {
             fe.e((byte) 19);
           }
-          var1_ref = (hk) (ci.field_e.first(13058));
+          var1_ref = (hk) (ci.field_e.e(13058));
           while (var1_ref != null) {
             if (var1_ref.field_mc > 0) {
               var1_ref.field_mc = var1_ref.field_mc - 1;
               if (var1_ref.field_mc == 0) {
                 var1_ref.field_Ac = 0;
                 if (var1_ref.k(4219)) {
-                  var1_ref.unlink(4);
+                  var1_ref.b(4);
                 }
               }
             }
-            var1_ref = (hk) (ci.field_e.next((byte) -33));
+            var1_ref = (hk) (ci.field_e.a((byte) -33));
           }
-          var1Lifetime1 = (cc) (o.field_d.first(13058));
+          var1Lifetime1 = (cc) (o.field_d.e(13058));
           while (var1Lifetime1 != null) {
             if (var1Lifetime1.field_Ub > 0) {
               var1Lifetime1.field_Ub = var1Lifetime1.field_Ub - 1;
               if (var1Lifetime1.field_Ub != 0) {
-                var1Lifetime1 = (cc) (o.field_d.next((byte) -34));
+                var1Lifetime1 = (cc) (o.field_d.a((byte) -34));
                 continue;
               }
               var1Lifetime1.field_Wb = 0;
               if (var1Lifetime1.d((byte) -36)) {
-                var1Lifetime1.unlink(4);
+                var1Lifetime1.b(4);
               }
             }
-            var1Lifetime1 = (cc) (o.field_d.next((byte) -34));
+            var1Lifetime1 = (cc) (o.field_d.a((byte) -34));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

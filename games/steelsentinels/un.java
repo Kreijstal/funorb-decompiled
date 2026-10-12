@@ -4,14 +4,14 @@
 final class un {
     static int field_i;
     static String field_d;
-    static RgbSprite[] field_m;
+    static wk[] field_m;
     static qh[][] field_h;
     static String field_g;
     static int field_n;
-    static RgbSprite field_o;
+    static wk field_o;
     static String[] field_l;
     static int[] field_j;
-    static NodeDeque field_b;
+    static ul field_b;
     static String[] field_k;
     static String field_f;
     static String field_c;
@@ -73,7 +73,7 @@ final class un {
         field_k = new String[]{"<%1> was shocked to see <%0>'s blade", "<%1> was caught in <%0>'s mighty shockwave", "<%1> was destroyed in <%0>'s mighty shockwave", "<%1> was eviscerated by <%0>'s fusion lance"};
         field_f = "Use this alternative as your account name";
         field_c = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";
-        field_b = new NodeDeque();
+        field_b = new ul();
         field_a = "Player";
         field_e = "Control options";
     }

@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class k extends gd implements ae {
-    private BitmapFont field_Bb;
+    private mi field_Bb;
     private boolean field_Jb;
     private boolean field_Db;
     private boolean field_Ab;
-    static ParticleEffect[] particleReuseBuffer;
+    static qb[] field_Cb;
     static String field_zb;
     static String[] field_Ib;
     private boolean field_Mb;
@@ -27,7 +27,7 @@ class k extends gd implements ae {
           this.c(var2, -22908735);
           return;
         }
-        this.field_Bb = (BitmapFont) null;
+        this.field_Bb = (mi) null;
         var2Lifetime1 = new bm(this, this.field_Bb, rg.field_a);
         var2Lifetime1.a(15, fb.field_q, 120);
         this.c(var2Lifetime1, -22908735);
@@ -57,7 +57,7 @@ class k extends gd implements ae {
           oa.a(param1, (byte) -107);
           bf.a((byte) -83, false, rh.field_p);
           if (param0 < 108) {
-            particleReuseBuffer = (ParticleEffect[]) null;
+            field_Cb = (qb[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "k.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -77,7 +77,7 @@ class k extends gd implements ae {
         RuntimeException var4_ref = null;
         int var5 = 0;
         bm var6 = null;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         try {
           if (this.field_Ab) {
             return;
@@ -141,7 +141,7 @@ class k extends gd implements ae {
         }
     }
 
-    k(ka param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    k(ka param0, mi param1, String param2, boolean param3, boolean param4) {
         super(param0, new bm((k) null, param1, param2), 77, 10, 10);
         try {
           this.field_Bb = param1;
@@ -173,7 +173,7 @@ class k extends gd implements ae {
             hc.a(3, 0);
             this.m(106);
           } else {
-            rj.a("tochangedisplayname.ws", Projectile.d((byte) -21), (byte) -47);
+            rj.a("tochangedisplayname.ws", wl.d((byte) -21), (byte) -47);
           }
           int var6_int = 31 / ((param1 + 85) / 36);
         } catch (RuntimeException runtimeException) {
@@ -184,7 +184,7 @@ class k extends gd implements ae {
     public static void n(byte param0) {
         field_Kb = null;
         field_Fb = null;
-        particleReuseBuffer = null;
+        field_Cb = null;
         int var1 = -88 / ((39 - param0) / 56);
         field_Eb = null;
         field_zb = null;
@@ -233,7 +233,7 @@ class k extends gd implements ae {
         int var6 = 0;
         int var7 = 0;
         int[] var9 = null;
-        var8 = SteelSentinels.obfuscationControl;
+        var8 = SteelSentinels.field_G;
         try {
           if (!param0) {
             field_Gb = -108;
@@ -267,9 +267,9 @@ class k extends gd implements ae {
         int var0 = 0;
         field_Ib = new String[]{"NAME", "CHASSIS", "WAVE", "SCORE"};
         field_zb = "<%0> must play <%1> more rated games before playing with the current options.";
-        particleReuseBuffer = new ParticleEffect[10000];
+        field_Cb = new qb[10000];
         for (var0 = 0; 10000 > var0; var0++) {
-          particleReuseBuffer[var0] = new ParticleEffect();
+          field_Cb[var0] = new qb();
         }
         field_Fb = "Friends can be added in the multiplayer<nbsp>lobby";
         field_Kb = "All players have left <%0>'s game.";

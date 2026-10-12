@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ao extends DualNode {
+final class ao extends kd {
     static int[] field_E;
     int[] field_F;
     static int[] field_B;
     static int[] field_A;
     private int[][] field_z;
     static int field_C;
-    static NodeDeque field_H;
+    static ul field_H;
     private String[] field_G;
     private int[] field_D;
-    static RgbSprite field_y;
+    static wk field_y;
 
     final void c(byte param0) {
         int var3 = 0;
-        int var4 = SteelSentinels.obfuscationControl;
+        int var4 = SteelSentinels.field_G;
         int var2 = -79 % ((param0 + 50) / 55);
         if (this.field_F != null) {
           for (var3 = 0; var3 < this.field_F.length; var3++) {
@@ -24,7 +24,7 @@ final class ao extends DualNode {
         }
     }
 
-    final static String[] a(BitmapFont param0, int[] param1, int param2, String param3) {
+    final static String[] a(mi param0, int[] param1, int param2, String param3) {
         ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -41,7 +41,7 @@ final class ao extends DualNode {
         String stackIn_24_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           if (jh.field_b == null) {
             jh.field_b = new String[16];
@@ -101,7 +101,7 @@ final class ao extends DualNode {
         int var3 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
-        int var4 = SteelSentinels.obfuscationControl;
+        int var4 = SteelSentinels.field_G;
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
         if (this.field_G == null) {
@@ -126,7 +126,7 @@ final class ao extends DualNode {
         field_y = null;
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void a(gi param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -134,13 +134,13 @@ final class ao extends DualNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
           if (param1 >= -68) {
             return;
           }
           while (true) {
-            var3_int = param0.readUnsignedByte((byte) -85);
+            var3_int = param0.f((byte) -85);
             if (var3_int == 0) {
               return;
             }
@@ -169,7 +169,7 @@ final class ao extends DualNode {
         og.b(-115);
         ln.a(param0 ^ -8601);
         if (rn.a((byte) -14)) {
-          mm.field_g.writeCipheredOpcode(1, (byte) -117);
+          mm.field_g.a(1, (byte) -117);
           gj.a(0, 0);
         }
         pm.m(param0 - 47);
@@ -178,7 +178,7 @@ final class ao extends DualNode {
     ao() {
     }
 
-    private final void a(int param0, PacketBuffer param1, int param2) {
+    private final void a(int param0, gi param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -192,31 +192,31 @@ final class ao extends DualNode {
         fm var7 = null;
         int var9 = 0;
         int var4_intLifetime1;
-        var9 = SteelSentinels.obfuscationControl;
+        var9 = SteelSentinels.field_G;
         try {
           if (param0 == 1) {
             this.field_G = ka.a('<', false, param1.h(1));
           } else {
             if (param0 == 2) {
-              var4_int = param1.readUnsignedByte((byte) -114);
+              var4_int = param1.f((byte) -114);
               this.field_F = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_F[var5] = param1.readUnsignedShort((byte) -60);
+                this.field_F[var5] = param1.c((byte) -60);
               }
             } else {
               if (3 == param0) {
-                var4_int = param1.readUnsignedByte((byte) -99);
+                var4_int = param1.f((byte) -99);
                 this.field_z = new int[var4_int][];
                 this.field_D = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  var6 = param1.readUnsignedShort((byte) -60);
+                  var6 = param1.c((byte) -60);
                   var7 = wa.b(var6, 99);
                   if (var7 != null) {
                     this.field_D[var5] = var6;
                     array$0 = new int[var7.field_k];
                     this.field_z[var5] = array$0;
                     for (var8 = 0; var7.field_k > var8; var8++) {
-                      this.field_z[var5][var8] = param1.readUnsignedShort((byte) -60);
+                      this.field_z[var5][var8] = param1.c((byte) -60);
                     }
                   }
                 }

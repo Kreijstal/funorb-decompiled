@@ -5,7 +5,7 @@ import java.io.*;
 
 final class sn {
     private long field_m;
-    static NodeDeque field_r;
+    static ul field_r;
     private long field_c;
     private RandomAccessFile field_e;
     static ml field_p;
@@ -31,11 +31,11 @@ final class sn {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
-          var1_int = IntrusiveNode.field_c[param0];
-          for (var2 = 1; var2 < IntrusiveNode.field_c.length; var2++) {
-            var3 = IntrusiveNode.field_c[var2];
+          var1_int = ck.field_c[param0];
+          for (var2 = 1; var2 < ck.field_c.length; var2++) {
+            var3 = ck.field_c[var2];
             ii.a(um.field_bb, var2 << 4, um.field_bb, var1_int, var3);
             var1_int = var1_int + var3;
           }
@@ -79,7 +79,7 @@ final class sn {
             return (fh) (stackIn_2_0);
           }
           var3 = new fh(param0, rl.field_a, oa.field_M, le.field_L, ca.field_r, dl.field_L);
-          NodeHashTable.a(9324);
+          uh.a(9324);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -229,7 +229,7 @@ final class sn {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var2 = SteelSentinels.obfuscationControl;
+        var2 = SteelSentinels.field_G;
         try {
           if (!oc.a((byte) 84)) {
             if (wb.field_c != null &&
@@ -256,7 +256,7 @@ final class sn {
     }
 
     static {
-        field_r = new NodeDeque();
+        field_r = new ul();
         field_p = new ml();
         field_b = 1;
         field_s = "<%0> is already on your ignore list.";

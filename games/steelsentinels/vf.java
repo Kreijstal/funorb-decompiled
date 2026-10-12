@@ -39,23 +39,23 @@ final class vf {
     }
 
     final static void a(boolean param0, int param1) {
-        IntrusiveNode var2 = null;
+        ck var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         String var4 = null;
         rh var5 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         try {
-          var5 = (rh) (ol.field_Vb.first(13058));
+          var5 = (rh) (ol.field_Vb.e(13058));
           while (var5 != null) {
             vm.a(param1, -103, var5);
-            var5 = (rh) (ol.field_Vb.next((byte) -92));
+            var5 = (rh) (ol.field_Vb.a((byte) -92));
           }
-          var2 = fg.field_Ub.first(13058);
+          var2 = fg.field_Ub.e(13058);
           while (var2 != null) {
             tc.a(87, param1);
-            var2 = fg.field_Ub.next((byte) -111);
+            var2 = fg.field_Ub.a((byte) -111);
           }
           if (!param0) {
             return;

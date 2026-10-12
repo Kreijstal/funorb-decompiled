@@ -20,9 +20,9 @@ final class nj extends dl implements cg, ae {
         return "</col></u>";
     }
 
-    final static SceneWidget a(byte param0) {
+    final static gh a(byte param0) {
         if (param0 >= -81) {
-          return (SceneWidget) null;
+          return (gh) null;
         }
         return fk.b((byte) 111);
     }
@@ -112,12 +112,12 @@ final class nj extends dl implements cg, ae {
     }
 
     final static void a(boolean param0, boolean param1) {
-        fg.field_Tb = param0 ? new uf(GameplayController.field_x, Projectile.field_J) : new uf(bk.field_P, m.field_i);
-        ql.field_ec = new SceneWidget(0L, (SceneWidget) null);
+        fg.field_Tb = param0 ? new uf(nb.field_x, wl.field_J) : new uf(bk.field_P, m.field_i);
+        ql.field_ec = new gh(0L, (gh) null);
         ql.field_ec.a(fg.field_Tb.field_d, 126);
         ql.field_ec.a(mn.field_E, 127);
-        fb.field_r = new SceneWidget(0L, an.field_a);
-        nd.field_a = new SceneWidget(0L, (SceneWidget) null);
+        fb.field_r = new gh(0L, an.field_a);
+        nd.field_a = new gh(0L, (gh) null);
         if (param1) {
           fb.field_r.a(tf.field_a, 121);
           fb.field_r.a(nd.field_a, 119);
@@ -182,7 +182,7 @@ final class nj extends dl implements cg, ae {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         try {
           if (param3 <= 124) {
             nj.a((byte) 18);

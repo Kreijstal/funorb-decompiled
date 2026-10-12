@@ -3,7 +3,7 @@
  */
 final class hm {
     static String field_b;
-    static SceneWidget field_a;
+    static gh field_a;
     static String field_e;
     static int[] field_c;
     static String field_d;
@@ -19,12 +19,12 @@ final class hm {
         field_c = null;
         field_a = null;
         if (param0 <= 40) {
-          ArticulatedPart var2 = (ArticulatedPart) null;
-          hm.a((byte) 75, (int[]) null, (ArticulatedPart) null);
+          nk var2 = (nk) null;
+          hm.a((byte) 75, (int[]) null, (nk) null);
         }
     }
 
-    final static int a(byte param0, int[] param1, ArticulatedPart param2) {
+    final static int a(byte param0, int[] param1, nk param2) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -39,7 +39,7 @@ final class hm {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         try {
           if (param0 <= 116) {
             stackIn_3_0 = 49;

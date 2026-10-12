@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class w extends IntrusiveNode {
+abstract class w extends ck {
     int field_o;
 
     abstract int a(wg param0);

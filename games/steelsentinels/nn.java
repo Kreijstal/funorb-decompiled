@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
-    static BitmapFont field_g;
+    static mi field_g;
     java.awt.Frame field_d;
     volatile boolean field_b;
     static String field_f;
     static String field_e;
     static int[] field_c;
     static pe[] field_h;
-    static RgbSprite[] field_a;
+    static wk[] field_a;
 
     final static void a(int param0, boolean param1, int param2, int param3) {
         ib.a(param2, db.field_b, param1, param3, 127, da.field_g, te.field_b);
         if (param0 != -1604006872) {
-          field_g = (BitmapFont) null;
+          field_g = (mi) null;
         }
     }
 
@@ -40,7 +40,7 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         try {
           cb.field_j = sn.field_p;
           if (param1 == 255) {
@@ -51,7 +51,7 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
               param1 <= 105) {
               qf.field_d = fc.a((byte) -76, args);
             } else {
-              qf.field_d = CachedArchiveProvider.a(18, param2, param1);
+              qf.field_d = fi.a(18, param2, param1);
             }
           }
           if (param3 >= -101) {
@@ -141,7 +141,7 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
         RuntimeException var2 = null;
         int var6 = 0;
         int var4Lifetime1;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         try {
           if (param1 <= 36) {
             stackIn_3_0 = -22;
@@ -192,7 +192,7 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, RgbSprite param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, wk param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -217,43 +217,43 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
         int var14Lifetime1;
         int var14Lifetime2;
         int var14Lifetime3;
-        var20 = SteelSentinels.obfuscationControl;
+        var20 = SteelSentinels.field_G;
         try {
           var6_int = (-param2 + param1 << 8) / param4.field_z;
           param3 = param3 + param4.field_H;
           var7 = (param2 << 8) + param4.field_D * var6_int;
           param0 = param0 + param4.field_D;
-          var8 = param3 * SoftwareRaster.field_c + param0;
+          var8 = param3 * pb.field_c + param0;
           var9 = 0;
           var10 = param4.field_F;
           if (param5 != -1) {
             nn.a(-123, false, 41, 13);
           }
           var11 = param4.field_A;
-          var12 = -var11 + SoftwareRaster.field_c;
+          var12 = -var11 + pb.field_c;
           var13 = 0;
-          if (SoftwareRaster.field_l > param3) {
-            var14 = SoftwareRaster.field_l - param3;
+          if (pb.field_l > param3) {
+            var14 = pb.field_l - param3;
             var10 = var10 - var14;
             var9 = var9 + var11 * var14;
-            param3 = SoftwareRaster.field_l;
-            var8 = var8 + SoftwareRaster.field_c * var14;
+            param3 = pb.field_l;
+            var8 = var8 + pb.field_c * var14;
           }
-          if (param0 < SoftwareRaster.field_i) {
-            var14Lifetime1 = SoftwareRaster.field_i - param0;
+          if (param0 < pb.field_i) {
+            var14Lifetime1 = pb.field_i - param0;
             var7 = var7 + var14Lifetime1 * var6_int;
             var12 = var12 + var14Lifetime1;
             var13 = var13 + var14Lifetime1;
             var8 = var8 + var14Lifetime1;
             var11 = var11 - var14Lifetime1;
             var9 = var9 + var14Lifetime1;
-            param0 = SoftwareRaster.field_i;
+            param0 = pb.field_i;
           }
-          if (SoftwareRaster.field_d < var10 + param3) {
-            var10 = var10 - (var10 + (param3 - SoftwareRaster.field_d));
+          if (pb.field_d < var10 + param3) {
+            var10 = var10 - (var10 + (param3 - pb.field_d));
           }
-          if (param0 + var11 > SoftwareRaster.field_b) {
-            var14Lifetime2 = param0 + var11 - SoftwareRaster.field_b;
+          if (param0 + var11 > pb.field_b) {
+            var14Lifetime2 = param0 + var11 - pb.field_b;
             var12 = var12 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;
             var13 = var13 + var14Lifetime2;
@@ -275,11 +275,11 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
                   var17 = param4.field_E[incrementValue$0];
                   if (var17 != 0) {
                     if (255 < var15) {
-                      SoftwareRaster.field_g[var8] = var17;
+                      pb.field_g[var8] = var17;
                     } else {
-                      var18 = SoftwareRaster.field_g[var8];
+                      var18 = pb.field_g[var8];
                       var19 = var16 * (var18 & 16711935) + var15 * (16711935 & var17) >> 8 & 16711935;
-                      SoftwareRaster.field_g[var8] = ec.a(ec.a(65280, var17) * var15 + ec.a(var18, 65280) * var16 >> 8, 65280) + var19;
+                      pb.field_g[var8] = ec.a(ec.a(65280, var17) * var15 + ec.a(var18, 65280) * var16 >> 8, 65280) + var19;
                     }
                   }
                   var8++;

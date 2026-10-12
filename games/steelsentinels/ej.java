@@ -9,11 +9,11 @@ final class ej extends we {
     private ic field_A;
     static int field_v;
     static String field_u;
-    static ResourceArchive field_t;
+    static cm field_t;
     static String field_E;
     static int field_B;
     static String field_x;
-    NodeDeque field_F;
+    ul field_F;
     static int field_H;
     static String field_s;
     static int field_D;
@@ -23,9 +23,9 @@ final class ej extends we {
         int var2;
         hj var3;
         int var4;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         this.field_G.d(param0);
-        var3 = (hj) (this.field_F.first(13058));
+        var3 = (hj) (this.field_F.e(13058));
         while (var3 != null) {
           if (!this.field_A.a(var3, false)) {
             var2 = param0;
@@ -39,7 +39,7 @@ final class ej extends we {
               var2 = var2 - var3.field_K;
             } while (!this.field_A.a(var2, 0, 7139, var3, (int[]) null));
           }
-          var3 = (hj) (this.field_F.next((byte) -28));
+          var3 = (hj) (this.field_F.a((byte) -28));
         }
     }
 
@@ -67,32 +67,32 @@ final class ej extends we {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        var12 = SteelSentinels.obfuscationControl;
+        var12 = SteelSentinels.field_G;
         try {
-          if (SoftwareRaster.field_i > param1) {
-            param2 = param2 - (SoftwareRaster.field_i - param1);
-            param1 = SoftwareRaster.field_i;
+          if (pb.field_i > param1) {
+            param2 = param2 - (pb.field_i - param1);
+            param1 = pb.field_i;
           }
           if (param5 != 40) {
-            field_t = (ResourceArchive) null;
+            field_t = (cm) null;
           }
-          if (SoftwareRaster.field_b < param2 + param1) {
-            param2 = SoftwareRaster.field_b - param1;
+          if (pb.field_b < param2 + param1) {
+            param2 = pb.field_b - param1;
           }
-          if (SoftwareRaster.field_l > param4) {
-            param0 = param0 - (SoftwareRaster.field_l - param4);
-            param4 = SoftwareRaster.field_l;
+          if (pb.field_l > param4) {
+            param0 = param0 - (pb.field_l - param4);
+            param4 = pb.field_l;
           }
-          if (SoftwareRaster.field_d < param0 + param4) {
-            param0 = SoftwareRaster.field_d - param4;
+          if (pb.field_d < param0 + param4) {
+            param0 = pb.field_d - param4;
           }
           if (param2 > 0 &&
             0 < param0) {
-            var6_int = param4 * SoftwareRaster.field_c + param1;
-            var7 = -param2 + SoftwareRaster.field_c;
+            var6_int = param4 * pb.field_c + param1;
+            var7 = -param2 + pb.field_c;
             for (param4 = -param0; param4 < 0; param4++) {
               for (param1 = -param2; param1 < 0; param1++) {
-                var8 = SoftwareRaster.field_g[var6_int];
+                var8 = pb.field_g[var6_int];
                 if ((var8 & 65280) >> 8 > param3 &&
                   (var8 >> 16 & 255) <= (var8 & 65280) >> 8) {
                   var9 = (var8 >> 15 & 510) - 60;
@@ -102,7 +102,7 @@ final class ej extends we {
                   var10 = 65280 & var8;
                   var10 = (var10 >> 1) - (var10 >> 5) & 65280;
                   var11 = var8 >> 3 & 31;
-                  SoftwareRaster.field_g[var6_int] = vn.a(vn.a(var9 << 16, var10), var11);
+                  pb.field_g[var6_int] = vn.a(vn.a(var9 << 16, var10), var11);
                 }
                 var6_int++;
               }
@@ -129,10 +129,10 @@ final class ej extends we {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           this.field_G.a(param0, param1, param2);
-          var6 = (hj) (this.field_F.first(13058));
+          var6 = (hj) (this.field_F.e(13058));
           while (var6 != null) {
             stackIn_4_0 = this.field_A.a(var6, false);
             boolean decompiledFrameCompleted0 = true;
@@ -153,7 +153,7 @@ final class ej extends we {
                 var6.field_K = var6.field_K - var5;
               }
             }
-            var6 = (hj) (this.field_F.next((byte) -37));
+            var6 = (hj) (this.field_F.a((byte) -37));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -177,7 +177,7 @@ final class ej extends we {
     final we b() {
         hj var1;
         while (true) {
-          var1 = (hj) (this.field_F.next((byte) -122));
+          var1 = (hj) (this.field_F.a((byte) -122));
           if (var1 == null) {
             return null;
           }
@@ -253,7 +253,7 @@ final class ej extends we {
         int var11 = 0;
         em var12 = null;
         int var13 = 0;
-        var13 = SteelSentinels.obfuscationControl;
+        var13 = SteelSentinels.field_G;
         try {
           var7_int = -21 % ((-50 - param2) / 62);
           if ((this.field_A.field_F[param3.field_t] & 4) != 0 &&
@@ -318,28 +318,28 @@ final class ej extends we {
     }
 
     final static boolean f(int param0) {
-        if (null != Explosion.field_B) {
+        if (null != jb.field_B) {
           return true;
         }
-        if (!DualNode.field_x.a("benefits", (byte) 90)) {
+        if (!kd.field_x.a("benefits", (byte) 90)) {
           return false;
         }
-        Explosion.field_B = rl.a(DualNode.field_x, "benefits", "members_benefits_borders", false);
+        jb.field_B = rl.a(kd.field_x, "benefits", "members_benefits_borders", false);
         if (param0 > -126) {
           return true;
         }
-        el.field_ac = rl.a(DualNode.field_x, "benefits", "members_benefits_price", false);
-        bc.field_qb = rl.a(DualNode.field_x, "benefits", "members_benefits_logo", false);
-        pg.field_v = cf.a("members_benefits_screenshots", "benefits", (byte) -73, DualNode.field_x);
-        vc.a(uj.field_h, Explosion.field_B, false);
+        el.field_ac = rl.a(kd.field_x, "benefits", "members_benefits_price", false);
+        bc.field_qb = rl.a(kd.field_x, "benefits", "members_benefits_logo", false);
+        pg.field_v = cf.a("members_benefits_screenshots", "benefits", (byte) -73, kd.field_x);
+        vc.a(uj.field_h, jb.field_B, false);
         ha.a(16744576, 2, (byte) 120, va.field_j, -2400, el.field_ac, 80, 40, 15, 80, 40);
-        NodeHashTable.a(1, pg.field_v);
+        uh.a(1, pg.field_v);
         qa.a(bc.field_qb, (byte) 69);
         return true;
     }
 
     final we d() {
-        hj var1 = (hj) (this.field_F.first(13058));
+        hj var1 = (hj) (this.field_F.e(13058));
         if (var1 == null) {
           return null;
         }
@@ -350,7 +350,7 @@ final class ej extends we {
     }
 
     ej(ic param0) {
-        this.field_F = new NodeDeque();
+        this.field_F = new ul();
         this.field_G = new wg();
         try {
           this.field_A = param0;

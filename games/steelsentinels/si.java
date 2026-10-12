@@ -12,21 +12,21 @@ final class si extends da {
     static String field_w;
     static boolean field_p;
     private int field_B;
-    static SceneWidget field_v;
+    static gh field_v;
     private int field_q;
-    static GameplayController field_A;
-    static IndexedSprite[] field_l;
+    static nb field_A;
+    static gk[] field_l;
     private int field_r;
     private String field_n;
     static int field_m;
-    private BitmapFont field_x;
+    private mi field_x;
     static String[] field_D;
     static String[] field_j;
     static String field_C;
     private boolean field_s;
     static String[] field_H;
     static int field_t;
-    static RgbSprite[] field_E;
+    static wk[] field_E;
 
     final static void c(int param0) {
         int var2 = 0;
@@ -34,14 +34,14 @@ final class si extends da {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         try {
           if (param0 <= 12) {
             return;
           }
           var1_int = 255;
           for (var2 = 0; var2 < 50; var2++) {
-            SoftwareRaster.c(0, var2, 640, 1052688, var1_int);
+            pb.c(0, var2, 640, 1052688, var1_int);
             var1_int -= 5;
           }
           return;
@@ -52,7 +52,7 @@ final class si extends da {
         }
     }
 
-    final static int a(SceneWidget param0, boolean param1, int param2) {
+    final static int a(gh param0, boolean param1, int param2) {
         int var8 = 0;
         int stackIn_4_0 = 0;
         int stackIn_17_0 = 0;
@@ -63,13 +63,13 @@ final class si extends da {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        SceneWidget var5 = null;
+        gh var5 = null;
         String var6 = null;
-        SceneWidget var7 = null;
-        SceneWidget var9 = null;
+        gh var7 = null;
+        gh var9 = null;
         int var10 = 0;
-        SceneWidget var11 = null;
-        var10 = SteelSentinels.obfuscationControl;
+        gh var11 = null;
+        var10 = SteelSentinels.field_G;
         try {
           stackIn_4_0 = (1 != fg.field_Ob) ? 64 : 78;
           var3_int = stackIn_4_0;
@@ -77,18 +77,18 @@ final class si extends da {
             var3_int = 36;
           }
           var4 = qa.field_O;
-          var5 = new SceneWidget(-1L, (SceneWidget) null);
+          var5 = new gh(-1L, (gh) null);
           var5.field_Pb = gj.field_a;
           var5.field_Kb = 2;
           var5.a(0, param2, 18, 0, var4);
           param0.a(var5, 118);
-          var6 = ResourceArchive.field_p;
-          var7 = new SceneWidget(-1L, kh.field_s, var6);
+          var6 = cm.field_p;
+          var7 = new gh(-1L, kh.field_s, var6);
           var7.field_nb = 0;
-          var7.field_L = (BitmapFont) ((Object) pl.field_U);
+          var7.field_L = (mi) ((Object) pl.field_U);
           if (!param1) {
-            var11 = (SceneWidget) null;
-            si.a((SceneWidget) null, true, -1);
+            var11 = (gh) null;
+            si.a((gh) null, true, -1);
           }
           var7.a(0, param2, 18, 0, var4);
           var7.field_Fb = 1;
@@ -131,7 +131,7 @@ final class si extends da {
           !(var1.indexOf('@') < 0)) {
           var1 = "";
         }
-        return new ik(jj.a(true), Projectile.j(param0 ^ 16777151));
+        return new ik(jj.a(true), wl.j(param0 ^ 16777151));
     }
 
     public static void a(int param0) {
@@ -153,7 +153,7 @@ final class si extends da {
         field_l = null;
     }
 
-    final void a(String param0, boolean param1, int param2, int param3, BitmapFont param4) {
+    final void a(String param0, boolean param1, int param2, int param3, mi param4) {
         il var8 = null;
         il var9 = null;
         if (param0 == null) {
@@ -185,7 +185,7 @@ final class si extends da {
         }
     }
 
-    final void a(int param0, String param1, int param2, int param3, BitmapFont param4) {
+    final void a(int param0, String param1, int param2, int param3, mi param4) {
         il var7 = null;
         il var8 = null;
         if (param1 == null) {
@@ -217,7 +217,7 @@ final class si extends da {
         }
     }
 
-    final void b(int param0, String param1, int param2, int param3, BitmapFont param4) {
+    final void b(int param0, String param1, int param2, int param3, mi param4) {
         il var8 = null;
         int var7 = 0;
         if (param1 == null) {
@@ -248,7 +248,7 @@ final class si extends da {
         }
     }
 
-    final void a(int param0, int param1, int param2, String param3, int param4, BitmapFont param5, int param6, int param7) {
+    final void a(int param0, int param1, int param2, String param3, int param4, mi param5, int param6, int param7) {
         il stackIn_34_0;
         il stackIn_34_1;
         int stackIn_34_2;
@@ -275,7 +275,7 @@ final class si extends da {
         String[] var16 = null;
         String[] var17 = null;
         int var12Lifetime1;
-        var15 = SteelSentinels.obfuscationControl;
+        var15 = SteelSentinels.field_G;
         try {
           if (0 == param2) {
             param2 = param5.field_W;
@@ -381,7 +381,7 @@ final class si extends da {
         }
     }
 
-    private final il a(String param0, byte param1, BitmapFont param2, int param3) {
+    private final il a(String param0, byte param1, mi param2, int param3) {
         il var5 = null;
         RuntimeException var5_ref = null;
         il var6 = null;

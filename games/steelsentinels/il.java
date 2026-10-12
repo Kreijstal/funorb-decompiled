@@ -11,9 +11,9 @@ final class il {
     static String field_g;
     static String field_d;
 
-    final static RgbSprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
+    final static wk[] a(int param0, int param1, int param2, cm param3) {
         RuntimeException var4 = null;
-        RgbSprite[] stackIn_6_0 = null;
+        wk[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -25,7 +25,7 @@ final class il {
           if (param1 != 20178) {
             field_d = (String) null;
           }
-          stackIn_6_0 = Explosion.g(param1 ^ 20181);
+          stackIn_6_0 = jb.g(param1 ^ 20181);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -66,8 +66,8 @@ final class il {
           b.a(param2, (byte) -96);
         }
         if (param1 == 2 &&
-          param0 != CachedArchiveProvider.field_y) {
-          CachedArchiveProvider.field_y = param0;
+          param0 != fi.field_y) {
+          fi.field_y = param0;
           cn.field_l = true;
           b.a(param2, (byte) -100);
         }
@@ -100,7 +100,7 @@ final class il {
         if (ch.field_O != null) {
           ch.field_O.m(106);
         }
-        String var1 = CachedArchiveProvider.e(35);
+        String var1 = fi.e(35);
         jd.field_kb = new pm(var1, (String) null, true, false, false);
         ag.field_p.a(ci.field_a, -114);
         ci.field_a.c(jd.field_kb, param0 - 22908735);
@@ -121,7 +121,7 @@ final class il {
     final int a(byte param0, int param1) {
         int var3 = 0;
         int var4;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         if (null != this.field_f &&
           this.field_f.length != 0) {
           for (var3 = 1; var3 < this.field_f.length; var3++) {

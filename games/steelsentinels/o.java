@@ -6,7 +6,7 @@ final class o {
     static int field_b;
     static boolean field_c;
     static String field_a;
-    static NodeDeque field_d;
+    static ul field_d;
     static String field_e;
 
     final static int a(byte param0, int param1) {
@@ -66,7 +66,7 @@ final class o {
         field_a = null;
         field_f = null;
         if (param0 > -16) {
-          field_d = (NodeDeque) null;
+          field_d = (ul) null;
           field_d = null;
           return;
         }

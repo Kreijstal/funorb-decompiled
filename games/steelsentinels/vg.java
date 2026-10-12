@@ -5,9 +5,9 @@ import java.io.*;
 
 final class vg extends IOException {
     static String field_e;
-    static RgbSprite[] field_h;
+    static wk[] field_h;
     static String field_d;
-    static SceneWidget field_g;
+    static gh field_g;
     static int field_c;
     static int field_f;
     static String field_b;

@@ -41,20 +41,20 @@ final class og {
     }
 
     final static int a(boolean param0) {
-        PartInstruction[] var1 = null;
-        PartInstruction[] var2 = null;
-        PartInstruction[] var1Lifetime1;
-        PartInstruction[] var1Lifetime2;
-        PartInstruction[] var2Lifetime1;
-        PartInstruction[] var1Lifetime3;
+        qd[] var1 = null;
+        qd[] var2 = null;
+        qd[] var1Lifetime1;
+        qd[] var1Lifetime2;
+        qd[] var2Lifetime1;
+        qd[] var1Lifetime3;
         if (param0) {
-          var1 = new PartInstruction[]{};
+          var1 = new qd[]{};
           var2 = hl.field_v.a(var1, -21636, fg.field_Ob);
           var1Lifetime3 = var2;
           return var2.length * 36;
         }
         og.b(124);
-        var1Lifetime1 = new PartInstruction[]{};
+        var1Lifetime1 = new qd[]{};
         var2Lifetime1 = hl.field_v.a(var1Lifetime1, -21636, fg.field_Ob);
         var1Lifetime2 = var2Lifetime1;
         return var2Lifetime1.length * 36;

@@ -9,8 +9,8 @@ final class na {
     int field_k;
     String field_o;
     static String field_v;
-    static IndexedSprite field_a;
-    SceneWidget field_m;
+    static gk field_a;
+    gh field_m;
     int[] field_l;
     int field_t;
     boolean field_g;
@@ -38,24 +38,24 @@ final class na {
         rn var5_ref_rn = null;
         int[] var6 = null;
         int var8 = 0;
-        CipherPacketBuffer var10 = null;
+        kj var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        var8 = SteelSentinels.obfuscationControl;
+        var8 = SteelSentinels.field_G;
         try {
           if (!param0) {
             field_q = (String) null;
           }
           var10 = rf.field_d;
-          var2 = var10.readUnsignedByte((byte) -87);
-          var3 = var10.readUnsignedByte((byte) -80);
+          var2 = var10.f((byte) -87);
+          var3 = var10.f((byte) -80);
           if (var2 == 0) {
-            var4 = (ob) (ti.field_z.first(13058));
+            var4 = (ob) (ti.field_z.e(13058));
             if (var4 == null) {
               pm.m(123);
               return;
             }
-            var5 = jg.field_f - var10.position;
+            var5 = jg.field_f - var10.field_p;
             var12 = var4.field_p;
             var11 = var12;
             var6 = var11;
@@ -63,24 +63,24 @@ final class na {
               var5 = var12.length << 2;
             }
             for (var7 = 0; var7 < var5; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte((byte) -54) << (ec.a(var7, 3) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.f((byte) -54) << (ec.a(var7, 3) << 8));
             }
-            var4.unlink(4);
+            var4.b(4);
             return;
           }
           if (var2 == 1) {
             var4_int = var10.f(27);
-            var5_ref_rn = (rn) (sn.field_r.first(13058));
+            var5_ref_rn = (rn) (sn.field_r.e(13058));
             while (var5_ref_rn != null) {
               if (var5_ref_rn.field_p != var3 ||
                 var4_int != var5_ref_rn.field_x) {
-                var5_ref_rn = (rn) (sn.field_r.next((byte) -26));
+                var5_ref_rn = (rn) (sn.field_r.a((byte) -26));
                 continue;
               }
               break;
             }
             if (var5_ref_rn != null) {
-              var5_ref_rn.unlink(4);
+              var5_ref_rn.b(4);
               return;
             }
             pm.m(73);
@@ -99,7 +99,7 @@ final class na {
     final int a(byte param0) {
         if (!this.field_g && (this.field_k != 2 ||
           0 >= this.field_t)) {
-          if (~GameplayController.field_G == ~this.field_j) {
+          if (~nb.field_G == ~this.field_j) {
             return 1;
           }
           if (param0 != 58) {
@@ -131,11 +131,11 @@ final class na {
         if (param0 > -39) {
           field_q = (String) null;
         }
-        CipherPacketBuffer var3 = mm.field_g;
-        var3.writeCipheredOpcode(param1, (byte) -117);
-        var3.writeByte((byte) 120, 3);
-        var3.writeByte((byte) 110, 9);
-        var3.writeShort(param2, 47);
+        kj var3 = mm.field_g;
+        var3.a(param1, (byte) -117);
+        var3.a((byte) 120, 3);
+        var3.a((byte) 110, 9);
+        var3.d(param2, 47);
     }
 
     public static void a(int param0) {
@@ -167,7 +167,7 @@ final class na {
           Throwable decompiledCaughtException = null;
           Throwable var2_ref = null;
           RuntimeException var2_ref2 = null;
-          var7 = SteelSentinels.obfuscationControl;
+          var7 = SteelSentinels.field_G;
           try {
             if (sn.field_d) {
               return true;
@@ -209,7 +209,7 @@ final class na {
     }
 
     na(boolean param0) {
-        this.field_p = IntKeyLookup.field_e;
+        this.field_p = jk.field_e;
         this.field_d = b.field_g;
         this.field_t = be.field_b;
         this.field_w = dk.field_a;
@@ -252,7 +252,7 @@ final class na {
         field_c = "You are now cleared for use with the following items:";
         field_q = "Mouse over an icon for details";
         field_u = "Test Field";
-        field_a = new IndexedSprite(1, 1, 1);
+        field_a = new gk(1, 1, 1);
         field_h = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";
         field_r = "RuneScape clan";
     }

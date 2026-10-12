@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class u extends BitmapFont {
+final class u extends mi {
     private byte[][] field_D;
 
     u(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
@@ -18,31 +18,31 @@ final class u extends BitmapFont {
         int var13;
         int var13Lifetime1;
         int var13Lifetime2;
-        var9 = param1 + param2 * SoftwareRaster.field_c;
-        var10 = SoftwareRaster.field_c - param3;
+        var9 = param1 + param2 * pb.field_c;
+        var10 = pb.field_c - param3;
         var11 = 0;
         var12 = 0;
-        if (param2 < SoftwareRaster.field_l) {
-          var13 = SoftwareRaster.field_l - param2;
+        if (param2 < pb.field_l) {
+          var13 = pb.field_l - param2;
           param4 = param4 - var13;
-          param2 = SoftwareRaster.field_l;
+          param2 = pb.field_l;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * SoftwareRaster.field_c;
+          var9 = var9 + var13 * pb.field_c;
         }
-        if (param2 + param4 > SoftwareRaster.field_d) {
-          param4 = param4 - (param2 + param4 - SoftwareRaster.field_d);
+        if (param2 + param4 > pb.field_d) {
+          param4 = param4 - (param2 + param4 - pb.field_d);
         }
-        if (param1 < SoftwareRaster.field_i) {
-          var13Lifetime1 = SoftwareRaster.field_i - param1;
+        if (param1 < pb.field_i) {
+          var13Lifetime1 = pb.field_i - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = SoftwareRaster.field_i;
+          param1 = pb.field_i;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > SoftwareRaster.field_b) {
-          var13Lifetime2 = param1 + param3 - SoftwareRaster.field_b;
+        if (param1 + param3 > pb.field_b) {
+          var13Lifetime2 = param1 + param3 - pb.field_b;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -50,9 +50,9 @@ final class u extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            u.a(SoftwareRaster.field_g, this.field_D[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            u.a(pb.field_g, this.field_D[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           } else {
-            fh.a(SoftwareRaster.field_g, this.field_D[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            fh.a(pb.field_g, this.field_D[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }
@@ -95,31 +95,31 @@ final class u extends BitmapFont {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * SoftwareRaster.field_c;
-        var9 = SoftwareRaster.field_c - param3;
+        var8 = param1 + param2 * pb.field_c;
+        var9 = pb.field_c - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < SoftwareRaster.field_l) {
-          var12 = SoftwareRaster.field_l - param2;
+        if (param2 < pb.field_l) {
+          var12 = pb.field_l - param2;
           param4 = param4 - var12;
-          param2 = SoftwareRaster.field_l;
+          param2 = pb.field_l;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * SoftwareRaster.field_c;
+          var8 = var8 + var12 * pb.field_c;
         }
-        if (param2 + param4 > SoftwareRaster.field_d) {
-          param4 = param4 - (param2 + param4 - SoftwareRaster.field_d);
+        if (param2 + param4 > pb.field_d) {
+          param4 = param4 - (param2 + param4 - pb.field_d);
         }
-        if (param1 < SoftwareRaster.field_i) {
-          var12Lifetime1 = SoftwareRaster.field_i - param1;
+        if (param1 < pb.field_i) {
+          var12Lifetime1 = pb.field_i - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = SoftwareRaster.field_i;
+          param1 = pb.field_i;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > SoftwareRaster.field_b) {
-          var12Lifetime2 = param1 + param3 - SoftwareRaster.field_b;
+        if (param1 + param3 > pb.field_b) {
+          var12Lifetime2 = param1 + param3 - pb.field_b;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
@@ -127,9 +127,9 @@ final class u extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            u.a(SoftwareRaster.field_g, this.field_D[param0], param5, var11, var8, param3, param4, var9, var10);
+            u.a(pb.field_g, this.field_D[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            fh.a(SoftwareRaster.field_g, this.field_D[param0], param5, var11, var8, param3, param4, var9, var10);
+            fh.a(pb.field_g, this.field_D[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }

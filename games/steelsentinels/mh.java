@@ -6,12 +6,12 @@ final class mh {
     private p[] field_a;
     private int field_c;
 
-    final static mh a(ResourceArchive param0, int param1, int param2) {
-        byte[] var3 = param0.getFile(param1, (byte) 100, param2);
+    final static mh a(cm param0, int param1, int param2) {
+        byte[] var3 = param0.a(param1, (byte) 100, param2);
         if (var3 == null) {
           return null;
         }
-        return new mh(new PacketBuffer(var3));
+        return new mh(new gi(var3));
     }
 
     final sk b() {
@@ -59,19 +59,19 @@ final class mh {
         return var3;
     }
 
-    private mh(PacketBuffer param0) {
+    private mh(gi param0) {
         int var2 = 0;
         int var3;
         this.field_a = new p[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.readUnsignedByte((byte) -114);
+          var3 = param0.f((byte) -114);
           if (var3 != 0) {
-            param0.position = param0.position - 1;
+            param0.field_p = param0.field_p - 1;
             this.field_a[var2] = new p();
             this.field_a[var2].a(param0);
           }
         }
-        this.field_c = param0.readUnsignedShort((byte) -60);
-        this.field_b = param0.readUnsignedShort((byte) -60);
+        this.field_c = param0.c((byte) -60);
+        this.field_b = param0.c((byte) -60);
     }
 }

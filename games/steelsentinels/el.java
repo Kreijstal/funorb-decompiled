@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class el extends SceneWidget {
+final class el extends gh {
     static String field_Zb;
-    static RgbSprite field_Ub;
-    static RgbSprite field_ac;
+    static wk field_Ub;
+    static wk field_ac;
     private int field_Yb;
     static byte[][] field_Sb;
     static String[] field_Vb;
-    private SceneWidget field_Xb;
-    private SceneWidget field_Tb;
+    private gh field_Xb;
+    private gh field_Tb;
     private StringBuilder field_Wb;
 
     static long a(long param0, long param1) {
@@ -179,7 +179,7 @@ final class el extends SceneWidget {
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
         int var4;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         this.a((byte) 108, param1);
         if (!param1) {
           if (param0 == -2) {
@@ -267,7 +267,7 @@ final class el extends SceneWidget {
         return 2;
     }
 
-    el(int param0, int param1, int param2, int param3, String param4, SceneWidget param5, SceneWidget param6, SceneWidget param7) {
+    el(int param0, int param1, int param2, int param3, String param4, gh param5, gh param6, gh param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -287,9 +287,9 @@ final class el extends SceneWidget {
         int var13 = 0;
         this.field_Yb = 0;
         try {
-          this.field_Xb = new SceneWidget(0L, param6, param4);
+          this.field_Xb = new gh(0L, param6, param4);
           this.a(this.field_Xb, 124);
-          this.field_Tb = new SceneWidget(0L, param7);
+          this.field_Tb = new gh(0L, param7);
           this.field_Tb.field_nb = 16764006;
           this.a(this.field_Tb, 123);
           this.field_Tb.field_Db = "|";

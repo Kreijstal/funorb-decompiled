@@ -6,12 +6,12 @@ final class kk {
     static String field_f;
     static int[] field_b;
     static int[] field_g;
-    static SceneWidget field_a;
+    static gh field_a;
     static String[] field_h;
     static int field_d;
     static ak field_c;
 
-    final static void a(il param0, int param1, int param2, String param3, BitmapFont param4) {
+    final static void a(il param0, int param1, int param2, String param3, mi param4) {
         int var8 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -27,7 +27,7 @@ final class kk {
         int var7 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = SteelSentinels.obfuscationControl;
+        var10 = SteelSentinels.field_G;
         try {
           var5_int = 0;
           var6 = -1;
@@ -94,17 +94,17 @@ final class kk {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        BitmapFont var5 = null;
+        mi var5 = null;
         int[] var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
           if (param0 != 34) {
-            var5 = (BitmapFont) null;
-            kk.a((il) null, -122, -42, (String) null, (BitmapFont) null);
+            var5 = (mi) null;
+            kk.a((il) null, -122, -42, (String) null, (mi) null);
           }
-          var6 = IntrusiveNode.field_c;
+          var6 = ck.field_c;
           var1 = var6;
           var2 = 0;
           var3 = var6.length;
@@ -126,9 +126,9 @@ final class kk {
         }
     }
 
-    final static String a(ArticulatedPart param0, int param1) {
+    final static String a(nk param0, int param1) {
         int var6_int = 0;
-        ArticulatedPart stackIn_4_0 = null;
+        nk stackIn_4_0 = null;
         Object stackIn_35_0 = null;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
@@ -138,20 +138,20 @@ final class kk {
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        ArticulatedPart var5 = null;
+        nk var5 = null;
         Object var6 = null;
         int var7 = 0;
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
-        BitmapFont var11 = null;
+        mi var11 = null;
         int[] var12 = null;
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
         int[] var16 = null;
         int var7Lifetime1;
-        var10 = SteelSentinels.obfuscationControl;
+        var10 = SteelSentinels.field_G;
         try {
           var15 = new int[16];
           var13 = var15;
@@ -159,16 +159,16 @@ final class kk {
           var16 = var12;
           var14 = var16;
           var2 = var14;
-          var3 = Projectile.a(var15, 0, true, param0);
-          var4 = ub.a(127, param0.componentId);
+          var3 = wl.a(var15, 0, true, param0);
+          var4 = ub.a(127, param0.field_N);
           if (0 > var4) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = NodeDeque.a(var4, (byte) 67);
+            stackIn_4_0 = ul.a(var4, (byte) 67);
           }
           var5 = stackIn_4_0;
           if (var5 != null) {
-            var3 = Projectile.a(var15, var3, true, var5);
+            var3 = wl.a(var15, var3, true, var5);
           }
           for (var6_int = 0; var6_int < var3 - 1; var6_int++) {
             var7 = var6_int;
@@ -201,8 +201,8 @@ final class kk {
             }
           }
           if (param1 != -4097) {
-            var11 = (BitmapFont) null;
-            kk.a((il) null, -28, -91, (String) null, (BitmapFont) null);
+            var11 = (mi) null;
+            kk.a((il) null, -28, -91, (String) null, (mi) null);
           }
           stackIn_35_0 = var6;
           return (String) (stackIn_35_0);
@@ -224,10 +224,10 @@ final class kk {
         if (param0 != -28548) {
           field_g = (int[]) null;
         }
-        return ~GameplayController.field_G == ~nf.field_b.field_fc ? true : false;
+        return ~nb.field_G == ~nf.field_b.field_fc ? true : false;
     }
 
-    final static int approximateVectorLength(int deltaY, int deltaX, int obfuscationGuard) {
+    final static int a(int param0, int param1, int param2) {
         int stackIn_41_0 = 0;
         int stackIn_45_0 = 0;
         int stackIn_50_0 = 0;
@@ -235,107 +235,107 @@ final class kk {
         int var4;
         int var4Lifetime1;
         int var4Lifetime2;
-        if (obfuscationGuard != -22967) {
+        if (param2 != -22967) {
           field_e = (String) null;
         }
-        var4 = deltaX >> 31;
-        deltaX = deltaX + var4 ^ var4;
-        var4Lifetime1 = deltaY >> 31;
-        deltaY = deltaY + var4Lifetime1 ^ var4Lifetime1;
+        var4 = param1 >> 31;
+        param1 = param1 + var4 ^ var4;
+        var4Lifetime1 = param0 >> 31;
+        param0 = param0 + var4Lifetime1 ^ var4Lifetime1;
         var3 = 0;
-        if (deltaY > deltaX) {
-          var4Lifetime2 = deltaX;
-          deltaX = deltaY;
-          deltaY = var4Lifetime2;
+        if (param0 > param1) {
+          var4Lifetime2 = param1;
+          param1 = param0;
+          param0 = var4Lifetime2;
         }
-        if (deltaX >= 32768) {
-          if (1073741824 <= deltaX) {
+        if (param1 >= 32768) {
+          if (1073741824 <= param1) {
             var3 += 16;
-            deltaX = deltaX >> 16;
+            param1 = param1 >> 16;
           }
-          if (4194304 <= deltaX) {
-            deltaX = deltaX >> 8;
+          if (4194304 <= param1) {
+            param1 = param1 >> 8;
             var3 += 8;
           }
-          if (deltaX >= 262144) {
-            deltaX = deltaX >> 4;
+          if (param1 >= 262144) {
+            param1 = param1 >> 4;
             var3 += 4;
           }
-          if (deltaX >= 65536) {
+          if (param1 >= 65536) {
             var3 += 2;
-            deltaX = deltaX >> 2;
+            param1 = param1 >> 2;
           }
-          if (deltaX >= 32768) {
-            deltaX = deltaX >> 1;
+          if (param1 >= 32768) {
+            param1 = param1 >> 1;
             var3++;
           }
-          deltaY = deltaY >> var3;
+          param0 = param0 >> var3;
         }
-        if (deltaY << 5 < deltaX) {
-          return deltaX << var3;
+        if (param0 << 5 < param1) {
+          return param1 << var3;
         }
-        deltaX = deltaY * deltaY + deltaX * deltaX;
-        if (65536 > deltaX) {
-          if (deltaX < 256) {
-            if (0 > deltaX) {
+        param1 = param0 * param0 + param1 * param1;
+        if (65536 > param1) {
+          if (param1 < 256) {
+            if (0 > param1) {
               return -1;
             }
-            return td.field_Xb[deltaX] >> 12;
+            return td.field_Xb[param1] >> 12;
           }
-          if (deltaX < 4096) {
-            if (deltaX >= 1024) {
-              return td.field_Xb[deltaX >> 4] >> 10;
+          if (param1 < 4096) {
+            if (param1 >= 1024) {
+              return td.field_Xb[param1 >> 4] >> 10;
             }
-            return td.field_Xb[deltaX >> 2] >> 11;
+            return td.field_Xb[param1 >> 2] >> 11;
           }
-          if (16384 <= deltaX) {
-            return td.field_Xb[deltaX >> 8] >> 8;
+          if (16384 <= param1) {
+            return td.field_Xb[param1 >> 8] >> 8;
           }
-          return td.field_Xb[deltaX >> 6] >> 9;
+          return td.field_Xb[param1 >> 6] >> 9;
         }
-        if (deltaX < 16777216) {
-          if (1048576 > deltaX) {
-            if (deltaX < 262144) {
-              return td.field_Xb[deltaX >> 10] >> 7;
+        if (param1 < 16777216) {
+          if (1048576 > param1) {
+            if (param1 < 262144) {
+              return td.field_Xb[param1 >> 10] >> 7;
             }
-            return td.field_Xb[deltaX >> 12] >> 6;
+            return td.field_Xb[param1 >> 12] >> 6;
           }
-          if (deltaX < 4194304) {
-            return td.field_Xb[deltaX >> 14] >> 5;
+          if (param1 < 4194304) {
+            return td.field_Xb[param1 >> 14] >> 5;
           }
-          return td.field_Xb[deltaX >> 16] >> 4;
+          return td.field_Xb[param1 >> 16] >> 4;
         }
-        if (deltaX >= 268435456) {
-          if (1073741824 <= deltaX) {
-            return td.field_Xb[deltaX >> 24] << var3;
+        if (param1 >= 268435456) {
+          if (1073741824 <= param1) {
+            return td.field_Xb[param1 >> 24] << var3;
           }
           if (var3 >= 1) {
-            stackIn_50_0 = td.field_Xb[deltaX >> 22] << -1 + var3;
+            stackIn_50_0 = td.field_Xb[param1 >> 22] << -1 + var3;
           } else {
-            stackIn_50_0 = td.field_Xb[deltaX >> 22] >> -var3 + 1;
+            stackIn_50_0 = td.field_Xb[param1 >> 22] >> -var3 + 1;
           }
           return stackIn_50_0;
         }
-        if (67108864 > deltaX) {
+        if (67108864 > param1) {
           if (3 <= var3) {
-            stackIn_45_0 = td.field_Xb[deltaX >> 18] << -3 + var3;
+            stackIn_45_0 = td.field_Xb[param1 >> 18] << -3 + var3;
           } else {
-            stackIn_45_0 = td.field_Xb[deltaX >> 18] >> 3 - var3;
+            stackIn_45_0 = td.field_Xb[param1 >> 18] >> 3 - var3;
           }
           return stackIn_45_0;
         }
         if (var3 >= 2) {
-          stackIn_41_0 = td.field_Xb[deltaX >> 20] << var3 - 2;
+          stackIn_41_0 = td.field_Xb[param1 >> 20] << var3 - 2;
         } else {
-          stackIn_41_0 = td.field_Xb[deltaX >> 20] >> 2 - var3;
+          stackIn_41_0 = td.field_Xb[param1 >> 20] >> 2 - var3;
         }
         return stackIn_41_0;
     }
 
-    final static void a(SceneWidget param0, int param1, int param2, int[] param3, String param4, String param5, int param6, long param7, kg param8) {
+    final static void a(gh param0, int param1, int param2, int[] param3, String param4, String param5, int param6, long param7, kg param8) {
         try {
           if (param6 != 1073741824) {
-            field_a = (SceneWidget) null;
+            field_a = (gh) null;
           }
           la.field_c = param8;
           an.field_i = new dd(param0, param7, param4, param5, param1, param2, param3);

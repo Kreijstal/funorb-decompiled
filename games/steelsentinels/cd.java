@@ -17,59 +17,59 @@ final class cd {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        CipherPacketBuffer var5 = null;
+        kj var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var10 = null;
         int[] var11 = null;
         cf var12 = null;
         hl var13 = null;
-        CipherPacketBuffer var14 = null;
+        kj var14 = null;
         hl var15 = null;
-        var8 = SteelSentinels.obfuscationControl;
+        var8 = SteelSentinels.field_G;
         try {
           var14 = rf.field_d;
-          var2 = var14.readUnsignedByte((byte) -117);
+          var2 = var14.f((byte) -117);
           if (var2 == 0) {
             var11 = jg.a(true);
             var3 = var11;
             var10 = var11;
             var4 = var10;
             var5 = var14;
-            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte((byte) -121);
+            var6 = ((gi) ((Object) var5)).f((byte) -121);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(0);
+              var10[var7] = ((gi) ((Object) var5)).i(0);
             }
-            var13 = (hl) (ic.field_D.first(param0 ^ 13058));
+            var13 = (hl) (ic.field_D.e(param0 ^ 13058));
             if (var13 == null) {
               pm.m(-116);
               return;
             }
             var13.field_t = true;
             var13.field_s = var3;
-            var13.unlink(4);
+            var13.b(4);
           } else {
             if (1 != var2) {
               if (var2 != 2) {
                 sj.a("A1: " + ci.a((byte) 94), -50, (Throwable) null);
                 pm.m(121);
               } else {
-                var15 = (hl) (ic.field_D.first(13058));
+                var15 = (hl) (ic.field_D.e(13058));
                 if (var15 == null) {
                   pm.m(param0 ^ 117);
                   return;
                 }
                 var15.field_s = jg.a(true);
                 var15.field_t = true;
-                var15.unlink(4);
+                var15.b(4);
               }
             } else {
-              var12 = (cf) (Explosion.field_A.first(13058));
+              var12 = (cf) (jb.field_A.e(13058));
               if (var12 == null) {
                 pm.m(-22);
                 return;
               }
-              var12.unlink(4);
+              var12.b(4);
             }
           }
           if (param0 != 0) {
@@ -83,7 +83,7 @@ final class cd {
         }
     }
 
-    final static String a(PacketBuffer param0, int param1, byte param2) {
+    final static String a(gi param0, int param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4_int = 0;
@@ -104,7 +104,7 @@ final class cd {
               var4_int = param1;
             }
             var5 = new byte[var4_int];
-            param0.position = param0.position + ob.field_r.a(var5, var4_int, 4408131, 0, param0.payload, param0.position);
+            param0.field_p = param0.field_p + ob.field_r.a(var5, var4_int, 4408131, 0, param0.field_t, param0.field_p);
             var6 = ub.a((byte) 37, 0, var5, var4_int);
             stackIn_5_0 = var6;
             return stackIn_5_0;
@@ -132,8 +132,8 @@ final class cd {
         field_c = null;
         field_b = null;
         if (param0) {
-          PacketBuffer var2 = (PacketBuffer) null;
-          cd.a((PacketBuffer) null, 20, (byte) -110);
+          gi var2 = (gi) null;
+          cd.a((gi) null, 20, (byte) -110);
         }
         field_e = null;
         field_d = null;

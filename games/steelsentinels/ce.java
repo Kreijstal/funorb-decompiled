@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ce extends IntrusiveNode {
+final class ce extends ck {
     static int[] field_t;
-    static SceneWidget field_o;
+    static gh field_o;
     static int field_r;
-    static RgbSprite[] field_v;
+    static wk[] field_v;
     byte[] field_s;
-    static IndexedSprite[] field_q;
+    static gk[] field_q;
     static volatile boolean field_w;
     static String field_u;
-    static RgbSprite field_p;
+    static wk field_p;
 
     ce(byte[] param0) {
         try {
@@ -30,7 +30,7 @@ final class ce extends IntrusiveNode {
           field_u = null;
           return;
         }
-        field_o = (SceneWidget) null;
+        field_o = (gh) null;
         field_p = null;
         field_q = null;
         field_u = null;

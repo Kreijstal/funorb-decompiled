@@ -3,11 +3,11 @@
  */
 final class qf {
     static String[] field_a;
-    static RgbSprite field_f;
+    static wk field_f;
     static ol field_e;
     static String field_j;
     static boolean field_b;
-    static SceneWidget field_c;
+    static gh field_c;
     static String field_i;
     static String field_g;
     static e field_d;
@@ -69,7 +69,7 @@ final class qf {
         if (!pc.field_w) {
           return;
         }
-        if (!Sprite.field_k) {
+        if (!ea.field_k) {
           return;
         }
         if (ob.field_y) {
@@ -95,7 +95,7 @@ final class qf {
           de.a(stackIn_69_0, -126);
           return;
         }
-        if (!CombatWorld.field_G) {
+        if (!ee.field_G) {
           var2Lifetime1 = 0;
           stackIn_34_0 = -94;
           stackIn_35_1 = (param0) && (li.c(8)) && (var2Lifetime1 == 0);
@@ -143,7 +143,7 @@ final class qf {
         }
         jm.field_r[kc.field_z] = param2;
         ne.field_G[kc.field_z] = param0;
-        Sentinel.field_T[kc.field_z] = param4;
+        mb.field_T[kc.field_z] = param4;
         if (param3 > 36) {
           var6 = param4 + param0 + param2;
           if (var6 != 0) {

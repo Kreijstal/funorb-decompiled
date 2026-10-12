@@ -7,12 +7,12 @@ final class l implements Iterator {
     static String field_a;
     static String field_f;
     static tg field_i;
-    private IntrusiveNode field_h;
+    private ck field_h;
     static ql field_e;
     static int field_g;
     private q field_d;
     private int field_b;
-    private IntrusiveNode field_c;
+    private ck field_c;
 
     final static void a(em param0, byte param1) {
         try {
@@ -23,7 +23,7 @@ final class l implements Iterator {
         }
     }
 
-    final static void a(IndexedSprite[] param0, ResourceArchive param1, String[] param2, int[] param3, int param4, String[] param5, String[][] param6, int param7, ResourceArchive param8, byte param9, String[][] param10, RgbSprite[][] param11, ResourceArchive param12, byte[] param13, RgbSprite[][] param14, boolean param15, int[] param16, int param17, String[] param18, byte[] param19) {
+    final static void a(gk[] param0, cm param1, String[] param2, int[] param3, int param4, String[] param5, String[][] param6, int param7, cm param8, byte param9, String[][] param10, wk[][] param11, cm param12, byte[] param13, wk[][] param14, boolean param15, int[] param16, int param17, String[] param18, byte[] param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -63,7 +63,7 @@ final class l implements Iterator {
           lb.a((byte) 109, param8);
           if (param9 != 94) {
             var21 = (byte[]) null;
-            l.a((IndexedSprite[]) null, (ResourceArchive) null, (String[]) null, (int[]) null, 58, (String[]) null, (String[][]) null, -8, (ResourceArchive) null, (byte) -10, (String[][]) null, (RgbSprite[][]) null, (ResourceArchive) null, (byte[]) null, (RgbSprite[][]) null, true, (int[]) null, 95, (String[]) null, (byte[]) null);
+            l.a((gk[]) null, (cm) null, (String[]) null, (int[]) null, 58, (String[]) null, (String[][]) null, -8, (cm) null, (byte) -10, (String[][]) null, (wk[][]) null, (cm) null, (byte[]) null, (wk[][]) null, true, (int[]) null, 95, (String[]) null, (byte[]) null);
           }
           oh.a(param7, param16, param5, param10, param2, param9 ^ 94, param6, param4, param11, param14, param17, param18, param13, param19, param8);
           vl.a(param8, param1, param15, -119);
@@ -172,15 +172,15 @@ final class l implements Iterator {
     public final boolean hasNext() {
         int fieldTemp$0 = 0;
         int var2;
-        var2 = SteelSentinels.obfuscationControl;
+        var2 = SteelSentinels.field_G;
         if (this.field_d.field_j[this.field_b - 1] != this.field_c) {
           return true;
         }
         while (this.field_d.field_e > this.field_b) {
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          if (this.field_d.field_j[fieldTemp$0].next != this.field_d.field_j[-1 + this.field_b]) {
-            this.field_c = this.field_d.field_j[this.field_b - 1].next;
+          if (this.field_d.field_j[fieldTemp$0].field_k != this.field_d.field_j[-1 + this.field_b]) {
+            this.field_c = this.field_d.field_j[this.field_b - 1].field_k;
             return true;
           }
           this.field_c = this.field_d.field_j[-1 + this.field_b];
@@ -192,19 +192,19 @@ final class l implements Iterator {
         if (this.field_h == null) {
           throw new IllegalStateException();
         }
-        this.field_h.unlink(4);
+        this.field_h.b(4);
         this.field_h = null;
     }
 
     public final Object next() {
         int fieldTemp$0 = 0;
         int var2;
-        IntrusiveNode var3;
-        IntrusiveNode var4;
-        var2 = SteelSentinels.obfuscationControl;
+        ck var3;
+        ck var4;
+        var2 = SteelSentinels.field_G;
         if (this.field_d.field_j[this.field_b - 1] != this.field_c) {
           var4 = this.field_c;
-          this.field_c = var4.next;
+          this.field_c = var4.field_k;
           this.field_h = var4;
           return var4;
         }
@@ -214,10 +214,10 @@ final class l implements Iterator {
           }
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          var3 = this.field_d.field_j[fieldTemp$0].next;
+          var3 = this.field_d.field_j[fieldTemp$0].field_k;
         } while (var3 == this.field_d.field_j[this.field_b - 1]);
         this.field_h = var3;
-        this.field_c = var3.next;
+        this.field_c = var3.field_k;
         return var3;
     }
 
@@ -225,12 +225,12 @@ final class l implements Iterator {
         this.field_b = 1;
         if (param0 == 29329) {
           this.field_h = null;
-          this.field_c = this.field_d.field_j[0].next;
+          this.field_c = this.field_d.field_j[0].field_k;
           return;
         }
         field_i = (tg) null;
         this.field_h = null;
-        this.field_c = this.field_d.field_j[0].next;
+        this.field_c = this.field_d.field_j[0].field_k;
     }
 
     public static void a(byte param0) {
@@ -242,7 +242,7 @@ final class l implements Iterator {
           return;
         }
         byte[] var2 = (byte[]) null;
-        l.a((IndexedSprite[]) null, (ResourceArchive) null, (String[]) null, (int[]) null, 96, (String[]) null, (String[][]) null, -31, (ResourceArchive) null, (byte) 116, (String[][]) null, (RgbSprite[][]) null, (ResourceArchive) null, (byte[]) null, (RgbSprite[][]) null, true, (int[]) null, -127, (String[]) null, (byte[]) null);
+        l.a((gk[]) null, (cm) null, (String[]) null, (int[]) null, 96, (String[]) null, (String[][]) null, -31, (cm) null, (byte) 116, (String[][]) null, (wk[][]) null, (cm) null, (byte[]) null, (wk[][]) null, true, (int[]) null, -127, (String[]) null, (byte[]) null);
         field_i = null;
         field_f = null;
         field_e = null;

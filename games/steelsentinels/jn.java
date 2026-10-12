@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jn {
-    static RgbSprite[] field_f;
+    static wk[] field_f;
     static String field_a;
     static String field_e;
-    static RgbSprite[] field_d;
+    static wk[] field_d;
     static dn field_h;
     static boolean field_g;
     static int field_c;
@@ -21,7 +21,7 @@ final class jn {
           field_a = null;
           return;
         }
-        field_d = (RgbSprite[]) null;
+        field_d = (wk[]) null;
         field_f = null;
         field_h = null;
         field_e = null;

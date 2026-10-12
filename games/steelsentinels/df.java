@@ -32,7 +32,7 @@ final class df extends fe {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var3_intLifetime1;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
           if (nj.field_Q < 10) {
             var3_int = 0;
@@ -40,17 +40,17 @@ final class df extends fe {
               dd.field_e = false;
               var3_int = 1;
             }
-            kc.a(sa.b((byte) 118), CachedArchiveProvider.a(true), var3_int != 0, 300, d.field_S);
+            kc.a(sa.b((byte) 118), fi.a(true), var3_int != 0, 300, d.field_S);
           } else {
             if (!km.a(-124)) {
-              SoftwareRaster.b();
+              pb.b();
               ff.a((byte) 17, 240, 320);
               kg.a(0, 0, 28594, param1);
             } else {
               if (0 != uj.field_d) {
                 en.a(param1, -28003);
               } else {
-                ArchiveProvider.a(false, (byte) 88, param2);
+                fa.a(false, (byte) 88, param2);
                 kg.a(0, 0, 28594, param1);
               }
             }
@@ -76,30 +76,30 @@ final class df extends fe {
         return wi.field_y;
     }
 
-    final static int atanFixed16ToAngle8192(int obfuscationGuard, int tangent16) {
-        if (obfuscationGuard != -3720) {
+    final static int a(int param0, int param1) {
+        if (param0 != -3720) {
           field_J = (String) null;
-          if (tangent16 >= 0) {
-            if (tangent16 > 65536) {
-              return 2048 - vn.field_m[134217728 / tangent16];
+          if (param1 >= 0) {
+            if (param1 > 65536) {
+              return 2048 - vn.field_m[134217728 / param1];
             }
-            return vn.field_m[tangent16 >> 5];
+            return vn.field_m[param1 >> 5];
           }
-          if (-65536 <= tangent16) {
-            return -vn.field_m[-tangent16 >> 5];
+          if (-65536 <= param1) {
+            return -vn.field_m[-param1 >> 5];
           }
-          return vn.field_m[134217728 / -tangent16] - 2048;
+          return vn.field_m[134217728 / -param1] - 2048;
         }
-        if (tangent16 >= 0) {
-          if (tangent16 > 65536) {
-            return 2048 - vn.field_m[134217728 / tangent16];
+        if (param1 >= 0) {
+          if (param1 > 65536) {
+            return 2048 - vn.field_m[134217728 / param1];
           }
-          return vn.field_m[tangent16 >> 5];
+          return vn.field_m[param1 >> 5];
         }
-        if (-65536 <= tangent16) {
-          return -vn.field_m[-tangent16 >> 5];
+        if (-65536 <= param1) {
+          return -vn.field_m[-param1 >> 5];
         }
-        return vn.field_m[134217728 / -tangent16] - 2048;
+        return vn.field_m[134217728 / -param1] - 2048;
     }
 
     final int g(int param0) {

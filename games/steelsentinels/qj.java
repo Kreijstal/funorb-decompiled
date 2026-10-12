@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qj {
-    private Sentinel field_l;
+    private mb field_l;
     static String[] field_d;
     private int field_t;
     static sk[] field_q;
@@ -63,7 +63,7 @@ final class qj {
         int var2;
         int var5;
         int var2Lifetime1;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         if (ei.field_q == 16) {
           this.field_t = jm.field_o;
           this.field_f = -1;
@@ -100,7 +100,7 @@ final class qj {
           }
           this.field_s = -1;
           qa.field_J[this.field_b].d();
-          SoftwareRaster.b();
+          pb.b();
           this.field_l.field_r = this.field_b;
           this.field_l.field_J = this.field_b;
           this.field_l.f(this.field_n, param0 ^ -27248);
@@ -111,7 +111,7 @@ final class qj {
           -1 != this.field_f) {
           ka.field_G[o.a((byte) 84, this.field_n)][this.field_b][this.field_f] = this.field_o;
           qa.field_J[this.field_b].d();
-          SoftwareRaster.b();
+          pb.b();
           this.field_l.field_J = this.field_b;
           this.field_l.field_r = this.field_b;
           this.field_l.f(this.field_n, 22742);
@@ -122,7 +122,7 @@ final class qj {
           this.field_p = ja.field_i;
         }
         if (ei.field_q == 70) {
-          this.field_p = NodeHashTable.field_e;
+          this.field_p = uh.field_e;
         }
         if (ei.field_q == 51) {
           this.field_p = rb.field_j;
@@ -315,7 +315,7 @@ final class qj {
         try {
           wn.field_f = param4;
           hk.field_ic = param2;
-          CachedArchiveProvider.field_t = param1;
+          fi.field_t = param1;
           ob.field_v = true;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "qj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -325,7 +325,7 @@ final class qj {
     final void a(int param0) {
         int fieldTemp$0 = 0;
         int var3;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         if (this.field_t == jm.field_o) {
           this.field_l.field_Lb = false;
           this.field_l.field_U = 0;
@@ -377,10 +377,10 @@ final class qj {
                 }
               } else {
                 this.field_l.field_Lb = true;
-                this.field_l.velocityY = this.field_l.velocityY + 1;
+                this.field_l.field_ab = this.field_l.field_ab + 1;
                 this.field_l.field_oc = 0;
-                if (this.field_l.velocityY > 50) {
-                  this.field_l.velocityY = -50;
+                if (this.field_l.field_ab > 50) {
+                  this.field_l.field_ab = -50;
                 }
               }
             } else {
@@ -402,7 +402,7 @@ final class qj {
           }
           ka.field_G[o.a((byte) 84, this.field_n)][this.field_b][this.field_w] = this.field_r;
           qa.field_J[this.field_b].d();
-          SoftwareRaster.b();
+          pb.b();
           this.field_l.field_r = this.field_b;
           this.field_l.field_J = this.field_b;
           this.field_l.f(this.field_n, 22742);
@@ -479,27 +479,27 @@ final class qj {
         int var8Lifetime2Lifetime1;
         int var8Lifetime2Lifetime2;
         int var8Lifetime2Lifetime3;
-        var11 = SteelSentinels.obfuscationControl;
+        var11 = SteelSentinels.field_G;
         if (null != ka.field_G[o.a((byte) 84, this.field_n)] &&
           ka.field_G[o.a((byte) 84, this.field_n)][25] != null) {
-          SoftwareRaster.a(0, 0, 640, 380, 0);
-          SoftwareRaster.a(0, 0, 640, 396);
+          pb.a(0, 0, 640, 380, 0);
+          pb.a(0, 0, 640, 396);
           var4 = this.field_w;
           this.field_w = param0;
-          if (this.field_l.animatedParts.length > 0) {
+          if (this.field_l.field_Z.length > 0) {
             var2 = 320;
             var3 = 32;
             var5_ref_int__ = ka.field_G[o.a((byte) 84, this.field_n)][this.field_b];
             if (var5_ref_int__ == null) {
               dupTemp$0 = ka.field_G[o.a((byte) 84, this.field_n)];
-              array$1 = new int[2 + this.field_l.animatedParts.length];
+              array$1 = new int[2 + this.field_l.field_Z.length];
               dupTemp$0[this.field_b] = array$1;
               var5_ref_int__ = array$1;
             }
             var6 = var5_ref_int__.length;
             if (var5_ref_int__ == null ||
-              var6 != 2 + this.field_l.animatedParts.length) {
-              var30 = new int[2 + this.field_l.animatedParts.length];
+              var6 != 2 + this.field_l.field_Z.length) {
+              var30 = new int[2 + this.field_l.field_Z.length];
               var13 = var30;
               var12 = var13;
               var5_ref_int__ = var12;
@@ -512,15 +512,15 @@ final class qj {
             }
             var7_int = 48;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
-              if (this.field_l.animatedParts.length > var8Lifetime3) {
-                SoftwareRaster.d(var2, var3, 2 * var7_int, 16777215);
-                SoftwareRaster.g(var2 - 3, var3 + var7_int, 7, 16777215);
+              if (this.field_l.field_Z.length > var8Lifetime3) {
+                pb.d(var2, var3, 2 * var7_int, 16777215);
+                pb.g(var2 - 3, var3 + var7_int, 7, 16777215);
                 var9 = var7_int * var5_ref_int__[var8Lifetime3] / 17763 + (var7_int + var3);
                 var10 = 16777215;
                 if (var5_ref_int__[var8Lifetime3] == 0) {
                   var10 = 26248;
                 }
-                SoftwareRaster.c(var2, var9, 5, var10);
+                pb.c(var2, var9, 5, var10);
                 if ((nc.field_d == 0 ||
                   var8Lifetime3 == var4) && (-5 + var2 <= oh.field_f &&
                   5 + var2 >= oh.field_f &&
@@ -537,15 +537,15 @@ final class qj {
                   if (this.field_r == 0) {
                     var10 = 26248;
                   }
-                  SoftwareRaster.c(var2, var9, 6, var10);
+                  pb.c(var2, var9, 6, var10);
                 }
               } else {
                 if (var6 - 2 != var8Lifetime3) {
                   if (var8Lifetime3 == -1 + var6) {
-                    SoftwareRaster.g(var2, var3, var7_int * 2, 16777215);
-                    SoftwareRaster.d(var7_int + var2, var3 - 3, 7, 16746496);
+                    pb.g(var2, var3, var7_int * 2, 16777215);
+                    pb.d(var7_int + var2, var3 - 3, 7, 16746496);
                     var9 = var7_int * var5_ref_int__[var8Lifetime3] / 2500 + var7_int + var2;
-                    SoftwareRaster.c(var9, var3, 5, 16746496);
+                    pb.c(var9, var3, 5, 16746496);
                     if ((nc.field_d == 0 ||
                       var8Lifetime3 == var4) && (oh.field_f >= var2 &&
                       var7_int * 2 + var2 >= oh.field_f &&
@@ -556,14 +556,14 @@ final class qj {
                       if (Math.abs(-var2 + oh.field_f - var7_int) <= 1) {
                         this.field_r = 0;
                       }
-                      SoftwareRaster.c(var9, var3, 6, 16746496);
+                      pb.c(var9, var3, 6, 16746496);
                     }
                   }
                 } else {
-                  SoftwareRaster.d(var2, var3, 2 * var7_int, 16777215);
-                  SoftwareRaster.g(-3 + var2, var3 + var7_int, 7, 16746496);
+                  pb.d(var2, var3, 2 * var7_int, 16777215);
+                  pb.g(-3 + var2, var3 + var7_int, 7, 16746496);
                   var9 = var7_int * var5_ref_int__[var8Lifetime3] / 2500 + var3 + var7_int;
-                  SoftwareRaster.c(var2, var9, 5, 16746496);
+                  pb.c(var2, var9, 5, 16746496);
                   if ((nc.field_d == 0 ||
                     var4 == var8Lifetime3) && (oh.field_f >= -5 + var2 &&
                     5 + var2 >= oh.field_f &&
@@ -574,7 +574,7 @@ final class qj {
                     if (1 >= Math.abs(-var3 + pi.field_c - var7_int)) {
                       this.field_r = 0;
                     }
-                    SoftwareRaster.c(var2, var9, 6, 16746496);
+                    pb.c(var2, var9, 6, 16746496);
                   }
                 }
               }
@@ -585,10 +585,10 @@ final class qj {
           var3Lifetime1 = 380;
           if (this.field_t == jh.field_d) {
             for (var5 = 0; var5 < 64; var5++) {
-              SoftwareRaster.d(var2Lifetime1 - (64 - (1 & var5)), var3Lifetime1 - (-64 - var5 / 2), (1 & var5) + 128 + var2Lifetime1, var5 / 2 + (-128 + var3Lifetime1), 3351057);
+              pb.d(var2Lifetime1 - (64 - (1 & var5)), var3Lifetime1 - (-64 - var5 / 2), (1 & var5) + 128 + var2Lifetime1, var5 / 2 + (-128 + var3Lifetime1), 3351057);
             }
           } else {
-            SoftwareRaster.a(-128 + var2Lifetime1, var3Lifetime1, 257, 64, 3351057);
+            pb.a(-128 + var2Lifetime1, var3Lifetime1, 257, 64, 3351057);
           }
           var5Lifetime1 = ka.field_G[o.a((byte) 84, this.field_n)][25][0];
           var6Lifetime1 = ka.field_G[o.a((byte) 84, this.field_n)][25][1];
@@ -597,92 +597,92 @@ final class qj {
             var6Lifetime1 = ka.field_G[o.a((byte) 84, this.field_n)][25][6];
           }
           if (this.field_t == wb.field_g) {
-            SoftwareRaster.f(var2Lifetime1, -192 + var3Lifetime1, 192, 16777215, 64);
-            SoftwareRaster.f(-64 + var2Lifetime1, -192 + var3Lifetime1, 192, 16777215, 64);
-            SoftwareRaster.f(var2Lifetime1 + 64, -192 + var3Lifetime1, 192, 16777215, 64);
+            pb.f(var2Lifetime1, -192 + var3Lifetime1, 192, 16777215, 64);
+            pb.f(-64 + var2Lifetime1, -192 + var3Lifetime1, 192, 16777215, 64);
+            pb.f(var2Lifetime1 + 64, -192 + var3Lifetime1, 192, 16777215, 64);
             var7_intLifetime1 = ka.field_G[o.a((byte) 84, this.field_n)][25][3];
-            SoftwareRaster.b(var2Lifetime1 - this.field_g * ((this.field_b - 1) * var5Lifetime1) / var6Lifetime1, 7 + var3Lifetime1, 7, 16777215, 255 - (this.field_b - 1) * 256 / var7_intLifetime1);
-            SoftwareRaster.b(var2Lifetime1 - (var5Lifetime1 * (this.field_b - 1) * this.field_g / var6Lifetime1 + this.field_g * (var5Lifetime1 * var7_intLifetime1) / (var6Lifetime1 * 2)), var3Lifetime1 + 7, 7, 16711680, 128);
-            SoftwareRaster.b(-(var5Lifetime1 * (this.field_b - var7_intLifetime1 - 1) * this.field_g / var6Lifetime1) + var2Lifetime1, var3Lifetime1 + 7, 7, 16777215, (-var7_intLifetime1 + this.field_b - 1) * 256 / var7_intLifetime1 + 255);
-            SoftwareRaster.b(var2Lifetime1 - this.field_g * var5Lifetime1 * (this.field_b - (var7_intLifetime1 + 1)) / var6Lifetime1 - this.field_g * (var7_intLifetime1 * var5Lifetime1) / (var6Lifetime1 * 2), 7 + var3Lifetime1, 7, 16711680, 128);
+            pb.b(var2Lifetime1 - this.field_g * ((this.field_b - 1) * var5Lifetime1) / var6Lifetime1, 7 + var3Lifetime1, 7, 16777215, 255 - (this.field_b - 1) * 256 / var7_intLifetime1);
+            pb.b(var2Lifetime1 - (var5Lifetime1 * (this.field_b - 1) * this.field_g / var6Lifetime1 + this.field_g * (var5Lifetime1 * var7_intLifetime1) / (var6Lifetime1 * 2)), var3Lifetime1 + 7, 7, 16711680, 128);
+            pb.b(-(var5Lifetime1 * (this.field_b - var7_intLifetime1 - 1) * this.field_g / var6Lifetime1) + var2Lifetime1, var3Lifetime1 + 7, 7, 16777215, (-var7_intLifetime1 + this.field_b - 1) * 256 / var7_intLifetime1 + 255);
+            pb.b(var2Lifetime1 - this.field_g * var5Lifetime1 * (this.field_b - (var7_intLifetime1 + 1)) / var6Lifetime1 - this.field_g * (var7_intLifetime1 * var5Lifetime1) / (var6Lifetime1 * 2), 7 + var3Lifetime1, 7, 16711680, 128);
           } else {
             if (jh.field_d != this.field_t) {
-              SoftwareRaster.e(var2Lifetime1, var3Lifetime1 + 7, 7, 16777215);
+              pb.e(var2Lifetime1, var3Lifetime1 + 7, 7, 16777215);
             } else {
-              SoftwareRaster.f(var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
-              SoftwareRaster.f(var2Lifetime1 - 64, var3Lifetime1 - 192, 192, 16777215, 64);
-              SoftwareRaster.f(var2Lifetime1 + 64, var3Lifetime1 - 192, 192, 16777215, 64);
+              pb.f(var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
+              pb.f(var2Lifetime1 - 64, var3Lifetime1 - 192, 192, 16777215, 64);
+              pb.f(var2Lifetime1 + 64, var3Lifetime1 - 192, 192, 16777215, 64);
               var7_intLifetime1 = ka.field_G[o.a((byte) 84, this.field_n)][25][7];
               var8Lifetime1 = this.field_g * var5Lifetime1 * (this.field_b - 17) / var6Lifetime1;
-              SoftwareRaster.b(-var8Lifetime1 + var2Lifetime1, var8Lifetime1 + 7 + var3Lifetime1, 7, 16777215, 255 - (this.field_b - 17) * 256 / var7_intLifetime1);
+              pb.b(-var8Lifetime1 + var2Lifetime1, var8Lifetime1 + 7 + var3Lifetime1, 7, 16777215, 255 - (this.field_b - 17) * 256 / var7_intLifetime1);
               var8Lifetime1Lifetime1 = -(this.field_g * var7_intLifetime1 * var5Lifetime1 / (var6Lifetime1 * 2)) + this.field_g * (this.field_b - 17) * var5Lifetime1 / var6Lifetime1;
-              SoftwareRaster.b(-var8Lifetime1Lifetime1 + var2Lifetime1, var3Lifetime1 + (7 + var8Lifetime1Lifetime1), 7, 16711680, 128);
+              pb.b(-var8Lifetime1Lifetime1 + var2Lifetime1, var3Lifetime1 + (7 + var8Lifetime1Lifetime1), 7, 16711680, 128);
               var8Lifetime1Lifetime2 = (this.field_b + (-var7_intLifetime1 - 17)) * (var5Lifetime1 * this.field_g) / var6Lifetime1;
-              SoftwareRaster.b(var2Lifetime1 - var8Lifetime1Lifetime2, 7 + var3Lifetime1 + var8Lifetime1Lifetime2, 7, 16777215, (-4352 + (-var7_intLifetime1 + this.field_b) * 256) / var7_intLifetime1 + 255);
+              pb.b(var2Lifetime1 - var8Lifetime1Lifetime2, 7 + var3Lifetime1 + var8Lifetime1Lifetime2, 7, 16777215, (-4352 + (-var7_intLifetime1 + this.field_b) * 256) / var7_intLifetime1 + 255);
               var8Lifetime1Lifetime3 = this.field_g * (-var7_intLifetime1 + this.field_b - 17) * var5Lifetime1 / var6Lifetime1 - this.field_g * (var5Lifetime1 * var7_intLifetime1) / (var6Lifetime1 * 2);
-              SoftwareRaster.b(var2Lifetime1 - var8Lifetime1Lifetime3, 7 + var3Lifetime1 + var8Lifetime1Lifetime3, 7, 16711680, 128);
+              pb.b(var2Lifetime1 - var8Lifetime1Lifetime3, 7 + var3Lifetime1 + var8Lifetime1Lifetime3, 7, 16711680, 128);
             }
           }
           qa.field_J[this.field_b].c(var2Lifetime1 - 128, -256 + var3Lifetime1, 256, 256);
           var2Lifetime1 += 320;
           if (this.field_t == jh.field_d) {
             for (var7_intLifetime2 = 0; var7_intLifetime2 < 64; var7_intLifetime2++) {
-              SoftwareRaster.d((1 & var7_intLifetime2) + (var2Lifetime1 - 64), 64 + (var3Lifetime1 + var7_intLifetime2 / 2), 128 + (var2Lifetime1 + (1 & var7_intLifetime2)), var3Lifetime1 + (-128 + var7_intLifetime2 / 2), 3351057);
+              pb.d((1 & var7_intLifetime2) + (var2Lifetime1 - 64), 64 + (var3Lifetime1 + var7_intLifetime2 / 2), 128 + (var2Lifetime1 + (1 & var7_intLifetime2)), var3Lifetime1 + (-128 + var7_intLifetime2 / 2), 3351057);
             }
           } else {
-            SoftwareRaster.a(-128 + var2Lifetime1, var3Lifetime1, 257, 64, 3351057);
+            pb.a(-128 + var2Lifetime1, var3Lifetime1, 257, 64, 3351057);
           }
-          SoftwareRaster.c();
+          pb.c();
           if (this.field_t == wb.field_g) {
-            SoftwareRaster.a(var2Lifetime1 - 128, 130, 128 + var2Lifetime1, var3Lifetime1);
+            pb.a(var2Lifetime1 - 128, 130, 128 + var2Lifetime1, var3Lifetime1);
             if (0 > this.field_w ||
-              !(this.field_l.animatedParts.length > this.field_w)) {
+              !(this.field_l.field_Z.length > this.field_w)) {
               this.field_l.a(var3Lifetime1, this.field_e + var2Lifetime1, (byte) -116, rm.field_n);
             }
             if (ja.field_i == this.field_p) {
               var7_intLifetime3 = ka.field_G[o.a((byte) 84, this.field_n)][25][3];
-              SoftwareRaster.f(var2Lifetime1, -192 + var3Lifetime1, 192, 16777215, 64);
-              SoftwareRaster.f(var2Lifetime1 - 64, -192 + var3Lifetime1, 192, 16777215, 64);
-              SoftwareRaster.f(64 + var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
-              SoftwareRaster.a(-128 + var2Lifetime1, 0, 128 + var2Lifetime1, 480);
+              pb.f(var2Lifetime1, -192 + var3Lifetime1, 192, 16777215, 64);
+              pb.f(var2Lifetime1 - 64, -192 + var3Lifetime1, 192, 16777215, 64);
+              pb.f(64 + var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
+              pb.a(-128 + var2Lifetime1, 0, 128 + var2Lifetime1, 480);
               var2Lifetime1 = var2Lifetime1 - this.field_g * var5Lifetime1 * (-50 + this.field_l.field_mb) / (50 * var6Lifetime1);
-              SoftwareRaster.b(var2Lifetime1 - this.field_g * (var5Lifetime1 * (this.field_l.field_r - 1)) / var6Lifetime1, 7 + var3Lifetime1, 7, 16777215, -(256 * (this.field_l.field_r - 1) / var7_intLifetime3) + 255);
-              SoftwareRaster.b(-(this.field_g * (var7_intLifetime3 * var5Lifetime1) / (var6Lifetime1 * 2)) + var2Lifetime1 - var5Lifetime1 * (this.field_l.field_r - 1) * this.field_g / var6Lifetime1, 7 + var3Lifetime1, 7, 16711680, 128);
-              SoftwareRaster.b(-((-var7_intLifetime3 + (this.field_l.field_r - 1)) * (var5Lifetime1 * this.field_g) / var6Lifetime1) + var2Lifetime1, 7 + var3Lifetime1, 7, 16777215, (-256 + 256 * (this.field_l.field_r - var7_intLifetime3)) / var7_intLifetime3 + 255);
-              SoftwareRaster.b(var2Lifetime1 - this.field_g * (-var7_intLifetime3 + this.field_l.field_r - 1) * var5Lifetime1 / var6Lifetime1 - this.field_g * (var5Lifetime1 * var7_intLifetime3) / (2 * var6Lifetime1), 7 + var3Lifetime1, 7, 16711680, 128);
-              SoftwareRaster.c();
+              pb.b(var2Lifetime1 - this.field_g * (var5Lifetime1 * (this.field_l.field_r - 1)) / var6Lifetime1, 7 + var3Lifetime1, 7, 16777215, -(256 * (this.field_l.field_r - 1) / var7_intLifetime3) + 255);
+              pb.b(-(this.field_g * (var7_intLifetime3 * var5Lifetime1) / (var6Lifetime1 * 2)) + var2Lifetime1 - var5Lifetime1 * (this.field_l.field_r - 1) * this.field_g / var6Lifetime1, 7 + var3Lifetime1, 7, 16711680, 128);
+              pb.b(-((-var7_intLifetime3 + (this.field_l.field_r - 1)) * (var5Lifetime1 * this.field_g) / var6Lifetime1) + var2Lifetime1, 7 + var3Lifetime1, 7, 16777215, (-256 + 256 * (this.field_l.field_r - var7_intLifetime3)) / var7_intLifetime3 + 255);
+              pb.b(var2Lifetime1 - this.field_g * (-var7_intLifetime3 + this.field_l.field_r - 1) * var5Lifetime1 / var6Lifetime1 - this.field_g * (var5Lifetime1 * var7_intLifetime3) / (2 * var6Lifetime1), 7 + var3Lifetime1, 7, 16711680, 128);
+              pb.c();
             }
-            SoftwareRaster.c();
+            pb.c();
           } else {
             if (this.field_t == jh.field_d) {
-              SoftwareRaster.a(-128 + var2Lifetime1, 130, var2Lifetime1 + 128, var3Lifetime1);
+              pb.a(-128 + var2Lifetime1, 130, var2Lifetime1 + 128, var3Lifetime1);
               if (0 > this.field_w ||
-                !(this.field_w < this.field_l.animatedParts.length)) {
+                !(this.field_w < this.field_l.field_Z.length)) {
                 this.field_l.a(var3Lifetime1, var2Lifetime1 + this.field_e, (byte) -116, rm.field_n);
               }
               if (ja.field_i == this.field_p) {
                 var7_intLifetime3 = ka.field_G[o.a((byte) 84, this.field_n)][25][7];
-                SoftwareRaster.f(var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
-                SoftwareRaster.f(-64 + var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
-                SoftwareRaster.f(var2Lifetime1 + 64, -192 + var3Lifetime1, 192, 16777215, 64);
-                SoftwareRaster.a(-128 + var2Lifetime1, 0, var2Lifetime1 + 128, 480);
+                pb.f(var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
+                pb.f(-64 + var2Lifetime1, var3Lifetime1 - 192, 192, 16777215, 64);
+                pb.f(var2Lifetime1 + 64, -192 + var3Lifetime1, 192, 16777215, 64);
+                pb.a(-128 + var2Lifetime1, 0, var2Lifetime1 + 128, 480);
                 var2Lifetime1 = var2Lifetime1 - this.field_g * ((this.field_l.field_mb - 50) * var5Lifetime1) / (50 * var6Lifetime1);
                 var3Lifetime1 = var3Lifetime1 + var5Lifetime1 * (this.field_l.field_mb - 50) * this.field_g / (var6Lifetime1 * 50);
                 var8Lifetime2 = (-17 + this.field_l.field_r) * (var5Lifetime1 * this.field_g) / var6Lifetime1;
-                SoftwareRaster.b(var2Lifetime1 - var8Lifetime2, 7 + var3Lifetime1 + var8Lifetime2, 7, 16777215, -((this.field_l.field_r - 17) * 256 / var7_intLifetime3) + 255);
+                pb.b(var2Lifetime1 - var8Lifetime2, 7 + var3Lifetime1 + var8Lifetime2, 7, 16777215, -((this.field_l.field_r - 17) * 256 / var7_intLifetime3) + 255);
                 var8Lifetime2Lifetime1 = -(this.field_g * var5Lifetime1 * var7_intLifetime3 / (2 * var6Lifetime1)) + this.field_g * var5Lifetime1 * (this.field_l.field_r - 17) / var6Lifetime1;
-                SoftwareRaster.b(-var8Lifetime2Lifetime1 + var2Lifetime1, var8Lifetime2Lifetime1 + (7 + var3Lifetime1), 7, 16711680, 128);
+                pb.b(-var8Lifetime2Lifetime1 + var2Lifetime1, var8Lifetime2Lifetime1 + (7 + var3Lifetime1), 7, 16711680, 128);
                 var8Lifetime2Lifetime2 = var5Lifetime1 * (this.field_l.field_r - var7_intLifetime3 - 17) * this.field_g / var6Lifetime1;
-                SoftwareRaster.b(-var8Lifetime2Lifetime2 + var2Lifetime1, var3Lifetime1 + 7 + var8Lifetime2Lifetime2, 7, 16777215, 255 + 256 * (this.field_l.field_r - (var7_intLifetime3 + 17)) / var7_intLifetime3);
+                pb.b(-var8Lifetime2Lifetime2 + var2Lifetime1, var3Lifetime1 + 7 + var8Lifetime2Lifetime2, 7, 16777215, 255 + 256 * (this.field_l.field_r - (var7_intLifetime3 + 17)) / var7_intLifetime3);
                 var8Lifetime2Lifetime3 = this.field_g * var5Lifetime1 * (-var7_intLifetime3 + (this.field_l.field_r - 17)) / var6Lifetime1 - this.field_g * (var5Lifetime1 * var7_intLifetime3) / (2 * var6Lifetime1);
-                SoftwareRaster.b(var2Lifetime1 - var8Lifetime2Lifetime3, var8Lifetime2Lifetime3 + (var3Lifetime1 + 7), 7, 16711680, 128);
-                SoftwareRaster.c();
+                pb.b(var2Lifetime1 - var8Lifetime2Lifetime3, var8Lifetime2Lifetime3 + (var3Lifetime1 + 7), 7, 16711680, 128);
+                pb.c();
               }
-              SoftwareRaster.c();
+              pb.c();
             } else {
-              SoftwareRaster.a(-128 + var2Lifetime1, 130, 128 + var2Lifetime1, var3Lifetime1);
-              SoftwareRaster.c();
-              SoftwareRaster.e(var2Lifetime1, var3Lifetime1 + 7, 7, 16777215);
+              pb.a(-128 + var2Lifetime1, 130, 128 + var2Lifetime1, var3Lifetime1);
+              pb.c();
+              pb.e(var2Lifetime1, var3Lifetime1 + 7, 7, 16777215);
             }
           }
           var14 = "";

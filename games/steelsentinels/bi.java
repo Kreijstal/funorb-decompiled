@@ -11,30 +11,30 @@ final class bi {
     static String[] field_b;
 
     final static void a(int param0) {
-        CipherPacketBuffer var2 = null;
-        jm var1 = (jm) (ri.field_c.first(13058));
-        CipherPacketBuffer var2Lifetime1;
+        kj var2 = null;
+        jm var1 = (jm) (ri.field_c.e(13058));
+        kj var2Lifetime1;
         if (var1 == null) {
           pm.m(103);
           return;
         }
         if (param0 == 2158) {
           var2 = rf.field_d;
-          var2.readInt(0);
-          var2.readInt(0);
-          var2.readInt(0);
-          var2.readInt(0);
-          var1.unlink(param0 - 2154);
+          var2.i(0);
+          var2.i(0);
+          var2.i(0);
+          var2.i(0);
+          var1.b(param0 - 2154);
           return;
         }
         CharSequence var3 = (CharSequence) null;
         bi.a(false, -110, true, (CharSequence) null);
         var2Lifetime1 = rf.field_d;
-        var2Lifetime1.readInt(0);
-        var2Lifetime1.readInt(0);
-        var2Lifetime1.readInt(0);
-        var2Lifetime1.readInt(0);
-        var1.unlink(param0 - 2154);
+        var2Lifetime1.i(0);
+        var2Lifetime1.i(0);
+        var2Lifetime1.i(0);
+        var2Lifetime1.i(0);
+        var1.b(param0 - 2154);
     }
 
     final static void b(int param0) {
@@ -133,7 +133,7 @@ final class bi {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = SteelSentinels.obfuscationControl;
+        var11 = SteelSentinels.field_G;
         try {
           if (param1 >= 2 &&
             param1 <= 36) {

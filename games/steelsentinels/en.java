@@ -4,7 +4,7 @@
 final class en {
     static String field_e;
     static String field_f;
-    static SceneWidget[] field_b;
+    static gh[] field_b;
     static String field_c;
     static String field_a;
     static int field_d;
@@ -48,7 +48,7 @@ final class en {
           if (param0 > -77) {
             en.a(-66);
           }
-          SoftwareRaster.b();
+          pb.b();
           wn.a(0, true);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "en.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

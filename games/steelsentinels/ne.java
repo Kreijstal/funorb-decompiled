@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ne extends DualNode {
+final class ne extends kd {
     int field_O;
     private int field_C;
     private boolean field_Q;
     int field_z;
-    private Sentinel[] field_A;
+    private mb[] field_A;
     static String field_J;
-    private RgbSprite field_P;
+    private wk field_P;
     private int field_D;
-    static PacketBuffer field_y;
+    static gi field_y;
     int field_S;
     private boolean field_U;
     int field_K;
     boolean field_E;
     static vk field_N;
     int field_F;
-    private CombatWorld field_B;
-    Sentinel field_T;
+    private ee field_B;
+    mb field_T;
     int field_I;
-    static IndexedSprite[] field_R;
+    static gk[] field_R;
     private boolean field_L;
     static String field_H;
     static int[] field_G;
@@ -44,7 +44,7 @@ final class ne extends DualNode {
         int var6 = 0;
         int var7 = 0;
         int var6Lifetime1;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           var2 = nl.a(param0, (byte) 124);
           if (null != var2 &&
@@ -117,7 +117,7 @@ final class ne extends DualNode {
         }
     }
 
-    private final void a(Sentinel param0, byte param1) {
+    private final void a(mb param0, byte param1) {
         RuntimeException stackIn_186_0 = null;
         StringBuilder stackIn_186_1 = null;
         String stackIn_187_2 = null;
@@ -127,18 +127,18 @@ final class ne extends DualNode {
         int var4 = 0;
         int var3_intLifetime1;
         int var3_intLifetime2;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
           this.field_T = param0;
           if (!this.field_Q &&
-            this.field_T.activeModuleType != -1) {
+            this.field_T.field_rc != -1) {
             nh.a(true, this.field_T);
           }
           if (43 != this.field_O) {
             this.field_T.field_tb = this.field_T.field_tb + 1;
           }
           if (!this.field_Q) {
-            param0.activeModuleType = this.field_O;
+            param0.field_rc = this.field_O;
             param0.field_xb = this.field_E;
             param0.field_v = this.field_F;
           }
@@ -403,8 +403,8 @@ final class ne extends DualNode {
             (decompiledFrameRemainder13) &&
             (decompiledFrameRemainder12) &&
             (decompiledFrameRemainder11)) {
-            param0.maximumCharge = param0.maximumCharge + ag.a(111, this.field_O);
-            param0.refillCharge(5);
+            param0.field_x = param0.field_x + ag.a(111, this.field_O);
+            param0.g(5);
             decompiledFrameRemainder18 = (var4 != 0);
           }
           if ((decompiledFrameRemainder18) &&
@@ -431,10 +431,10 @@ final class ne extends DualNode {
             (decompiledFrameRemainder16) &&
             (decompiledFrameRemainder15) &&
             (decompiledFrameRemainder14)) {
-            var3_intLifetime2 = param0.charge;
-            param0.charge = 10;
-            param0.b((byte) -31, (SentinelCommand) null);
-            param0.charge = var3_intLifetime2;
+            var3_intLifetime2 = param0.field_Tb;
+            param0.field_Tb = 10;
+            param0.b((byte) -31, (je) null);
+            param0.field_Tb = var3_intLifetime2;
             decompiledFrameRemainder18 = (var4 != 0);
           }
           if ((decompiledFrameRemainder18) &&
@@ -442,8 +442,8 @@ final class ne extends DualNode {
             (decompiledFrameRemainder16) &&
             (decompiledFrameRemainder15)) {
             this.field_B.field_q = this.field_B.field_q + 6000000;
-            param0.maximumArmour = param0.maximumArmour + 100;
-            param0.restoreArmour(-20039);
+            param0.field_Eb = param0.field_Eb + 100;
+            param0.e(-20039);
             decompiledFrameRemainder18 = (var4 != 0);
           }
           if ((decompiledFrameRemainder18) &&
@@ -463,7 +463,7 @@ final class ne extends DualNode {
             this.field_B.field_f = this.field_B.field_f + 10;
           }
           var3_intLifetime1 = 13 / ((param1 - 5) / 63);
-          if (param0.playerId == ed.field_j) {
+          if (param0.field_Bb == ed.field_j) {
             g.field_h = this.field_O;
             pd.field_X = 0;
           }
@@ -497,15 +497,15 @@ final class ne extends DualNode {
         int var5 = 0;
         int var6 = 0;
         int var7_int = 0;
-        Sentinel[] var7 = null;
+        mb[] var7 = null;
         int var8 = 0;
         double var8_double = 0.0;
         int var9 = 0;
         int var10_int = 0;
         double var10_double = 0.0;
-        Sentinel var10 = null;
+        mb var10 = null;
         int var11 = 0;
-        ParticleEffect var12_ref_qb = null;
+        qb var12_ref_qb = null;
         int var12 = 0;
         int var13 = 0;
         int var3Lifetime1;
@@ -517,7 +517,7 @@ final class ne extends DualNode {
         int var9Lifetime1;
         int var11Lifetime1;
         int var6Lifetime2;
-        var13 = SteelSentinels.obfuscationControl;
+        var13 = SteelSentinels.field_G;
         try {
           this.field_K = this.field_K - 1;
           if (this.field_K <= 0) {
@@ -596,12 +596,12 @@ final class ne extends DualNode {
             }
           }
           if (decompiledFrameCompleted1) {
-            var2_int = -this.field_B.terrain.getGroundHeightAt((byte) -99, this.field_z >> 4) << 4;
-            stackIn_72_0 = -this.field_B.terrain.getSecondaryHeightAt(false, this.field_z >> 4);
+            var2_int = -this.field_B.field_ab.a((byte) -99, this.field_z >> 4) << 4;
+            stackIn_72_0 = -this.field_B.field_ab.a(false, this.field_z >> 4);
             stackIn_72_1 = 1285948708;
           }
           var3Lifetime1 = stackIn_72_0 << stackIn_72_1;
-          var4Lifetime1 = -this.field_B.terrain.getSurfaceProfileAt((byte) 121, this.field_z >> 4) << 4;
+          var4Lifetime1 = -this.field_B.field_ab.b((byte) 121, this.field_z >> 4) << 4;
           var5Lifetime1 = var2_int;
           if (~var3Lifetime1 != ~var4Lifetime1 &&
             this.field_I < var4Lifetime1) {
@@ -609,15 +609,15 @@ final class ne extends DualNode {
           }
           stackIn_83_0 = (this.field_I < var5Lifetime1) ? 0 : 1;
           var6Lifetime1 = stackIn_83_0;
-          if (4 == this.field_B.terrain.getTerrainType(114) &&
+          if (4 == this.field_B.field_ab.b(114) &&
             this.field_I >= 0) {
-            this.field_B.pendingRemovals.addLast((byte) 114, (DualNode) (this));
+            this.field_B.field_J.a((byte) 114, (kd) (this));
             return;
           }
           if (var6Lifetime1 == 0) {
-            this.field_S = this.field_S + this.field_B.gravityAcceleration;
+            this.field_S = this.field_S + this.field_B.field_z;
             if (this.field_U) {
-              this.field_S = this.field_S - 3 * this.field_B.gravityAcceleration / 4;
+              this.field_S = this.field_S - 3 * this.field_B.field_z / 4;
             }
             this.field_I = this.field_I + this.field_S;
             if (var5Lifetime1 <= this.field_I) {
@@ -629,9 +629,9 @@ final class ne extends DualNode {
             this.field_U = false;
             this.field_I = var5Lifetime1;
           }
-          if (this.field_B.terrain.getTerrainType(106) == 3 &&
+          if (this.field_B.field_ab.b(106) == 3 &&
             !this.field_L) {
-            var7_int = this.field_B.terrain.getProfileLength(-116) >> 1;
+            var7_int = this.field_B.field_ab.a(-116) >> 1;
             var8 = 600;
             var9 = 5120;
             var10_int = -var7_int + (this.field_z >> 4);
@@ -649,8 +649,8 @@ final class ne extends DualNode {
               while (2 > var7_intLifetime1) {
                 var8_double = Math.random() * 6.283185307179586;
                 var10_double = Math.random() * 512.0;
-                var12_ref_qb = ArticulatedPart.createParticle(8, (int)(Math.sin(var8_double) * var10_double), this.field_B, 90, this.field_I, false, 250, (int)((double)(this.field_S + 10) - Math.abs(Math.cos(var8_double)) * var10_double), this.field_z, this.field_z);
-                this.field_B.pendingParticles.addLast(3, var12_ref_qb);
+                var12_ref_qb = nk.a(8, (int)(Math.sin(var8_double) * var10_double), this.field_B, 90, this.field_I, false, 250, (int)((double)(this.field_S + 10) - Math.abs(Math.cos(var8_double)) * var10_double), this.field_z, this.field_z);
+                this.field_B.field_O.a(3, var12_ref_qb);
                 var7_intLifetime1++;
                 if (var13 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -660,7 +660,7 @@ final class ne extends DualNode {
             }
           }
           if (decompiledFrameCompleted0) {
-            this.field_z = Math.max(0, Math.min(-128 + (this.field_B.terrain.getProfileLength(106) << 4), this.field_z));
+            this.field_z = Math.max(0, Math.min(-128 + (this.field_B.field_ab.a(106) << 4), this.field_z));
           }
           var8Lifetime1 = 9 % ((param0 + 25) / 39);
           var7 = this.field_A;
@@ -678,10 +678,10 @@ final class ne extends DualNode {
               !var10.field_Hb) {
               var11Lifetime1 = var10.field_Ub << 3;
               var12 = var10.field_Db << 4;
-              if (var10.worldX + var11Lifetime1 >= this.field_z - this.field_M / 2 &&
-                this.field_z + this.field_M / 2 > var10.worldX - var11Lifetime1 &&
-                (this.field_I - this.field_D) <= var10.worldY &&
-                (var10.worldY - var12) < this.field_I) {
+              if (var10.field_hc + var11Lifetime1 >= this.field_z - this.field_M / 2 &&
+                this.field_z + this.field_M / 2 > var10.field_hc - var11Lifetime1 &&
+                (this.field_I - this.field_D) <= var10.field_Gb &&
+                (var10.field_Gb - var12) < this.field_I) {
                 this.a(var10, (byte) -86);
                 fc.a((byte) -73, 102, this.field_z);
                 return;
@@ -725,7 +725,7 @@ final class ne extends DualNode {
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_8_0;
         RuntimeException var3 = null;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         try {
           if (!f.a(param1, 4, param2)) {
             return false;
@@ -799,10 +799,10 @@ final class ne extends DualNode {
           }
           var11 = Math.min(256, this.field_K / 2);
           if (null == sl.field_p) {
-            sl.field_p = new RgbSprite(var9, var8 + (var10 + 5));
+            sl.field_p = new wk(var9, var8 + (var10 + 5));
           }
           sl.field_p.d();
-          SoftwareRaster.a(0, 0, sl.field_p.field_z, sl.field_p.field_B, 0);
+          pb.a(0, 0, sl.field_p.field_z, sl.field_p.field_B, 0);
           var6 = var6 - (var10 - 5);
           var12 = this.field_K / 5 % 3;
           var5_int = var5_int - var9 / 2;
@@ -825,11 +825,11 @@ final class ne extends DualNode {
             } else {
               stackIn_17_4 = 12303138;
             }
-            SoftwareRaster.f(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_17_4, 192);
-            SoftwareRaster.a(-1 + var15, var16, var13);
-            SoftwareRaster.a(var15, var16 - 1, var13);
-            SoftwareRaster.a(1 + var15, var16, var13);
-            SoftwareRaster.a(var15, var16 + 1, var13);
+            pb.f(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_16_3, stackIn_17_4, 192);
+            pb.a(-1 + var15, var16, var13);
+            pb.a(var15, var16 - 1, var13);
+            pb.a(1 + var15, var16, var13);
+            pb.a(var15, var16 + 1, var13);
             stackIn_20_0 = var15;
             stackIn_20_1 = var16;
             if (this.field_Q) {
@@ -837,7 +837,7 @@ final class ne extends DualNode {
             } else {
               stackIn_21_2 = 11206655;
             }
-            SoftwareRaster.a(stackIn_20_0, stackIn_20_1, stackIn_21_2);
+            pb.a(stackIn_20_0, stackIn_20_1, stackIn_21_2);
           }
           ml.field_c[var12].b(0, var14, var9, var10);
           if (this.field_L) {
@@ -846,7 +846,7 @@ final class ne extends DualNode {
           sb.field_bb.b((byte) 123);
           if (var11 >= 256) {
             sl.field_p.a(var5_int, var6);
-            if (SteelSentinels.obfuscationControl == 0) {
+            if (SteelSentinels.field_G == 0) {
               return;
             }
           }
@@ -859,7 +859,7 @@ final class ne extends DualNode {
         }
     }
 
-    ne(CombatWorld param0, int param1) {
+    ne(ee param0, int param1) {
         int incrementValue$0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_14_1 = 0;
@@ -870,11 +870,11 @@ final class ne extends DualNode {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4_int = 0;
-        IndexedSprite var4 = null;
-        NodeIterator var5 = null;
-        Sentinel var6 = null;
+        gk var4 = null;
+        jc var5 = null;
+        mb var6 = null;
         int var7 = 0;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         this.field_Q = false;
         this.field_S = 0;
         this.field_K = 3000;
@@ -886,23 +886,23 @@ final class ne extends DualNode {
         try {
           this.field_O = param1;
           this.field_B = param0;
-          var3_int = this.field_B.playerCount + this.field_B.computerPlayerCount;
-          this.field_A = new Sentinel[var3_int];
+          var3_int = this.field_B.field_kb + this.field_B.field_Q;
+          this.field_A = new mb[var3_int];
           var4_int = 0;
-          var5 = new NodeIterator(this.field_B.sentinels);
-          var6 = (Sentinel) (var5.b(2));
+          var5 = new jc(this.field_B.field_K);
+          var6 = (mb) (var5.b(2));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var6))) {
             stackIn_14_0 = -1;
-            stackIn_14_1 = ~var6.playerId;
+            stackIn_14_1 = ~var6.field_Bb;
             if (var7 == 0) {
               if (stackIn_14_0 >= stackIn_14_1 &&
-                var3_int > var6.playerId) {
+                var3_int > var6.field_Bb) {
                 incrementValue$0 = var4_int;
                 var4_int++;
                 this.field_A[incrementValue$0] = var6;
               }
-              var6 = (Sentinel) (var5.d(2));
+              var6 = (mb) (var5.d(2));
               continue;
             }
             break;
@@ -941,7 +941,7 @@ final class ne extends DualNode {
           }
           if (!this.field_B.field_h) {
             var4 = nc.a(this.field_O, (byte) -97);
-            this.field_P = new RgbSprite(var4.field_a, var4.field_i);
+            this.field_P = new wk(var4.field_a, var4.field_i);
             this.field_P.field_H = var4.field_n / 2;
             this.field_P.field_D = var4.field_j / 2;
           }
@@ -962,7 +962,7 @@ final class ne extends DualNode {
 
     static {
         field_J = "Progress <col=ffffff><%0>%</col>";
-        field_y = new PacketBuffer(256);
+        field_y = new gi(256);
         field_H = "Only show game chat from my friends";
     }
 }

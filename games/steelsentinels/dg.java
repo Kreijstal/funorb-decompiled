@@ -4,7 +4,7 @@
 final class dg {
     static String field_f;
     static String field_e;
-    static SceneWidget field_g;
+    static gh field_g;
     static int field_d;
     static String field_a;
     static boolean[] field_h;

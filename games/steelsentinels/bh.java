@@ -16,7 +16,7 @@ final class bh {
     private int field_m;
     int field_b;
     int field_g;
-    private Sentinel field_c;
+    private mb field_c;
     int field_n;
     private int field_p;
     static boolean field_f;
@@ -32,8 +32,8 @@ final class bh {
     final void a(byte param0, int param1, int param2, int param3, boolean param4, int param5) {
         int[] var9 = null;
         if (param0 >= -11) {
-          SentinelCommand var10 = (SentinelCommand) null;
-          this.a((SentinelCommand) null, false, -87);
+          je var10 = (je) null;
+          this.a((je) null, false, -87);
         }
         int var7 = param2 + (this.field_g >> 8);
         int var8 = param5 + (this.field_q - this.field_c.field_Db * 8 >> 8);
@@ -47,12 +47,12 @@ final class bh {
               var9 = pe.field_q;
             }
           }
-          SoftwareRaster.a(var7 << 4, var8 << 4, param1, var9.length - 1, var9);
+          pb.a(var7 << 4, var8 << 4, param1, var9.length - 1, var9);
           if (param4 &&
-            BattleTerrain.field_a < f.field_w.length) {
-            f.field_w[BattleTerrain.field_a] = var7;
-            nj.field_U[BattleTerrain.field_a] = var8;
-            BattleTerrain.field_a = BattleTerrain.field_a + 1;
+            hd.field_a < f.field_w.length) {
+            f.field_w[hd.field_a] = var7;
+            nj.field_U[hd.field_a] = var8;
+            hd.field_a = hd.field_a + 1;
           }
         }
     }
@@ -109,7 +109,7 @@ final class bh {
         }
     }
 
-    private final void a(boolean param0, SentinelCommand param1) {
+    private final void a(boolean param0, je param1) {
         int stackIn_13_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -121,8 +121,8 @@ final class bh {
         int var5 = 0;
         int var6 = 0;
         try {
-          var3_int = param1.targetWorldX - this.field_g >> 4;
-          var4 = -this.field_q + param1.targetWorldY >> 4;
+          var3_int = param1.field_u - this.field_g >> 4;
+          var4 = -this.field_q + param1.field_y >> 4;
           if (!param0) {
             return;
           }
@@ -184,17 +184,17 @@ final class bh {
         return 0 == ge.field_j ? true : false;
     }
 
-    final SentinelCommand a(SentinelCommand param0, boolean param1, int param2) {
+    final je a(je param0, boolean param1, int param2) {
         int stackIn_18_0 = 0;
-        BattleTerrain stackIn_18_1 = null;
+        hd stackIn_18_1 = null;
         boolean stackIn_19_2 = false;
         int stackIn_106_0 = 0;
-        BattleTerrain stackIn_130_0 = null;
+        hd stackIn_130_0 = null;
         boolean stackIn_131_1 = false;
         int stackIn_145_0 = 0;
         boolean stackIn_152_1 = false;
         int stackIn_189_0 = 0;
-        BattleTerrain stackIn_189_1 = null;
+        hd stackIn_189_1 = null;
         boolean stackIn_190_2 = false;
         int stackIn_200_1 = 0;
         int stackIn_204_1 = 0;
@@ -213,7 +213,7 @@ final class bh {
         Object var4 = null;
         int var5 = 0;
         int var6_int = 0;
-        SentinelCommand var6 = null;
+        je var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -226,19 +226,19 @@ final class bh {
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
-        CombatWorld var19 = null;
-        SentinelCommand var6Lifetime1;
-        SentinelCommand var6Lifetime2;
+        ee var19 = null;
+        je var6Lifetime1;
+        je var6Lifetime2;
         int var7Lifetime1;
-        var18 = SteelSentinels.obfuscationControl;
+        var18 = SteelSentinels.field_G;
         try {
           var4 = null;
           if (this.field_q < -120000 &&
             this.field_m < 0) {
             this.field_m = this.field_m * 15 / 16;
           }
-          if ((this.field_c.world.terrain.getTerrainType(48) != 4 ||
-            (this.field_c.world.simulationTick & 1) == 0) &&
+          if ((this.field_c.field_xc.field_ab.b(48) != 4 ||
+            (this.field_c.field_xc.field_r & 1) == 0) &&
             this.field_p >= 0) {
             this.field_p = this.field_p + 1;
           }
@@ -253,11 +253,11 @@ final class bh {
             this.field_m = 0;
           }
           if (this.field_r &&
-            this.field_c.world.terrain.getTerrainType(91) != 4) {
+            this.field_c.field_xc.field_ab.b(91) != 4) {
             stackIn_18_0 = -50000;
-            stackIn_18_1 = this.field_c.world.terrain;
+            stackIn_18_1 = this.field_c.field_xc.field_ab;
             stackIn_19_2 = !(param1);
-            var6_int = stackIn_18_0 + (-((BattleTerrain) (Object) stackIn_18_1).getSecondaryHeightAt(stackIn_19_2, this.field_g >> 4) << 4);
+            var6_int = stackIn_18_0 + (-((hd) (Object) stackIn_18_1).a(stackIn_19_2, this.field_g >> 4) << 4);
             if (this.field_q > var6_int &&
               this.field_m > 100) {
               this.field_m = this.field_m - 25;
@@ -269,15 +269,15 @@ final class bh {
               }
             }
           }
-          var6 = (SentinelCommand) (this.field_c.pendingCommands.first(13058));
+          var6 = (je) (this.field_c.field_B.e(13058));
           while (var6 != null) {
             boolean decompiledFrameRemainder0 = true;
             if ((!this.field_r ||
-              var6.actionType == 6 ||
+              var6.field_s == 6 ||
               this.field_r &&
-              var6.actionType == 3 &&
-              this.field_p < 0) && param2 == var6.startTick) {
-              if (var6.actionType == 3) {
+              var6.field_s == 3 &&
+              this.field_p < 0) && param2 == var6.field_x) {
+              if (var6.field_s == 3) {
                 if (!this.field_j ||
                   !(this.field_c.field_cb <= 0) ||
                   !(this.field_c.field_Fb <= 0) &&
@@ -291,17 +291,17 @@ final class bh {
                 }
                 var4 = var6;
               } else {
-                if (var6.actionType == 0) {
-                  if (var6.targetWorldX > this.field_g) {
+                if (var6.field_s == 0) {
+                  if (var6.field_u > this.field_g) {
                     this.field_b = 1;
                   } else {
                     this.field_b = -1;
                   }
                   var4 = var6;
                 } else {
-                  if ((6 == var6.actionType)) {
+                  if ((6 == var6.field_s)) {
                     var7 = this.field_d;
-                    this.field_d = var6.actionVariant;
+                    this.field_d = var6.field_A;
                     if (0 > this.field_d ||
                       this.field_d > 1) {
                       this.field_d = -1;
@@ -316,20 +316,20 @@ final class bh {
             }
             else {
               if (!this.field_r &&
-                -100 + var6.endTick + ka.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25][2] == -1 + param2 &&
-                var6.actionType == 3 &&
+                -100 + var6.field_r + ka.field_G[o.a((byte) 84, this.field_c.field_Zb.field_N)][25][2] == -1 + param2 &&
+                var6.field_s == 3 &&
                 !this.field_j) {
                 this.field_a = 0;
                 this.a(param1, var6);
               }
             }
-            var6 = (SentinelCommand) (this.field_c.pendingCommands.next((byte) -59));
+            var6 = (je) (this.field_c.field_B.a((byte) -59));
           }
-          var6Lifetime1 = (SentinelCommand) (this.field_c.secondaryCommands.first(13058));
+          var6Lifetime1 = (je) (this.field_c.field_Ec.e(13058));
           while (var6Lifetime1 != null) {
             if (!this.field_r &&
-              var6Lifetime1.startTick == param2) {
-              if (var6Lifetime1.actionType == 3) {
+              var6Lifetime1.field_x == param2) {
+              if (var6Lifetime1.field_s == 3) {
                 var4 = var6Lifetime1;
                 if (!this.field_j ||
                   !(0 >= this.field_c.field_cb)) {
@@ -339,13 +339,13 @@ final class bh {
                     this.field_d = 0;
                   }
                 }
-              } else if (0 != var6Lifetime1.actionType) {
-                if (6 == var6Lifetime1.actionType) {
-                  this.field_d = var6Lifetime1.actionVariant;
+              } else if (0 != var6Lifetime1.field_s) {
+                if (6 == var6Lifetime1.field_s) {
+                  this.field_d = var6Lifetime1.field_A;
                 }
               } else {
                 var4 = var6Lifetime1;
-                if (this.field_g < var6Lifetime1.targetWorldX) {
+                if (this.field_g < var6Lifetime1.field_u) {
                   this.field_b = 1;
                 } else {
                   this.field_b = -1;
@@ -353,23 +353,23 @@ final class bh {
               }
             } else {
               if (!this.field_r &&
-                var6Lifetime1.endTick - 100 + ka.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25][2] == param2 - 1 &&
-                3 == var6Lifetime1.actionType) {
+                var6Lifetime1.field_r - 100 + ka.field_G[o.a((byte) 84, this.field_c.field_Zb.field_N)][25][2] == param2 - 1 &&
+                3 == var6Lifetime1.field_s) {
                 if (this.field_j) {
-                  var6Lifetime1 = (SentinelCommand) (this.field_c.secondaryCommands.next((byte) -45));
+                  var6Lifetime1 = (je) (this.field_c.field_Ec.a((byte) -45));
                   continue;
                 }
                 this.field_a = 0;
                 this.a(true, var6Lifetime1);
               }
             }
-            var6Lifetime1 = (SentinelCommand) (this.field_c.secondaryCommands.next((byte) -45));
+            var6Lifetime1 = (je) (this.field_c.field_Ec.a((byte) -45));
           }
-          var6Lifetime2 = (SentinelCommand) (this.field_c.pendingCommands.first(13058));
+          var6Lifetime2 = (je) (this.field_c.field_B.e(13058));
           while (var6Lifetime2 != null) {
-            if (~param2 == ~var6Lifetime2.startTick &&
-              var6Lifetime2.actionType == 0) {
-              if (var6Lifetime2.targetWorldX <= this.field_g) {
+            if (~param2 == ~var6Lifetime2.field_x &&
+              var6Lifetime2.field_s == 0) {
+              if (var6Lifetime2.field_u <= this.field_g) {
                 this.field_b = -1;
               } else {
                 this.field_b = 1;
@@ -379,20 +379,20 @@ final class bh {
                 this.field_d = 0;
               }
             }
-            var6Lifetime2 = (SentinelCommand) (this.field_c.pendingCommands.next((byte) -46));
+            var6Lifetime2 = (je) (this.field_c.field_B.a((byte) -46));
           }
           if (param0 != null) {
-            stackIn_106_0 = ~param0.startTick;
+            stackIn_106_0 = ~param0.field_x;
             if (stackIn_106_0 == ~param2) {
-              if (param0.actionType == 3) {
+              if (param0.field_s == 3) {
                 if (!this.field_j ||
                   !(0 >= this.field_c.field_cb) ||
                   this.field_r) {
                   this.a(true, param0);
                 }
               } else {
-                if (param0.actionType == 0) {
-                  if (param0.targetWorldX > this.field_g) {
+                if (param0.field_s == 0) {
+                  if (param0.field_u > this.field_g) {
                     this.field_b = 1;
                   } else {
                     this.field_b = -1;
@@ -400,15 +400,15 @@ final class bh {
                   var4 = param0;
                   if (sn.field_n) {
                     sn.field_n = false;
-                    pm.field_db.clear(6);
+                    pm.field_db.g(6);
                     this.a(param0, (byte) 43);
                   }
                 } else {
-                  if (param0.actionType != 0) {
+                  if (param0.field_s != 0) {
                     cf.field_q = -1;
                     l.field_g = -1;
                   } else {
-                    if (this.field_g < param0.targetWorldX) {
+                    if (this.field_g < param0.field_u) {
                       this.field_b = 1;
                     } else {
                       this.field_b = -1;
@@ -424,12 +424,12 @@ final class bh {
               var4 = param0;
             }
           }
-          var19 = this.field_c.world;
-          var7Lifetime1 = var19.terrain.getGroundHeightAt((byte) -119, this.field_g >> 4) << 4;
-          stackIn_130_0 = var19.terrain;
+          var19 = this.field_c.field_xc;
+          var7Lifetime1 = var19.field_ab.a((byte) -119, this.field_g >> 4) << 4;
+          stackIn_130_0 = var19.field_ab;
           stackIn_131_1 = !(param1);
-          var8 = ((BattleTerrain) (Object) stackIn_130_0).getSecondaryHeightAt(stackIn_131_1, this.field_g >> 4) << 4;
-          var9 = var19.terrain.getSurfaceProfileAt((byte) 124, this.field_g >> 4) << 4;
+          var8 = ((hd) (Object) stackIn_130_0).a(stackIn_131_1, this.field_g >> 4) << 4;
+          var9 = var19.field_ab.b((byte) 124, this.field_g >> 4) << 4;
           var10 = var7Lifetime1;
           if (!this.field_h &&
             var8 != var9) {
@@ -451,7 +451,7 @@ final class bh {
             if (Math.abs(this.field_m) > Math.abs(this.field_l)) {
               this.field_l = 0;
             } else {
-              if (this.field_c.hasModuleType(28, -27)) {
+              if (this.field_c.i(28, -27)) {
                 this.field_l = this.field_l * 7 / 10;
               } else {
                 if (this.field_l < 0) {
@@ -466,9 +466,9 @@ final class bh {
               if (this.field_d != 0 &&
                 !this.field_h) {
                 stackIn_189_0 = 250;
-                stackIn_189_1 = var19.terrain;
+                stackIn_189_1 = var19.field_ab;
                 stackIn_190_2 = !(param1);
-                if (stackIn_189_0 < ((BattleTerrain) (Object) stackIn_189_1).getSecondaryHeightAt(stackIn_190_2, this.field_d * 10 + (this.field_g >> 4)) + (this.field_q >> 4)) {
+                if (stackIn_189_0 < ((hd) (Object) stackIn_189_1).a(stackIn_190_2, this.field_d * 10 + (this.field_g >> 4)) + (this.field_q >> 4)) {
                   this.field_d = 0;
                 }
               }
@@ -478,25 +478,25 @@ final class bh {
                   this.field_a = this.field_a - 1;
                 }
                 if (this.field_h) {
-                  if (var19.terrain.getGroundHeightAt((byte) -106, (this.field_g >> 4) + this.field_b * 10) <= 5 + (-this.field_q >> 4)) {
+                  if (var19.field_ab.a((byte) -106, (this.field_g >> 4) + this.field_b * 10) <= 5 + (-this.field_q >> 4)) {
                     stackIn_204_1 = this.field_a;
                   } else {
                     stackIn_204_1 = 50;
                   }
                   this.field_a = stackIn_204_1;
                 } else {
-                  if (var19.terrain.getSecondaryHeightAt(false, (this.field_g >> 4) + 10 * this.field_b) > (-this.field_q >> 4) + 5) {
+                  if (var19.field_ab.a(false, (this.field_g >> 4) + 10 * this.field_b) > (-this.field_q >> 4) + 5) {
                     stackIn_200_1 = 50;
                   } else {
                     stackIn_200_1 = this.field_a;
                   }
                   this.field_a = stackIn_200_1;
                 }
-                if (39 != this.field_c.activeModuleType) {
+                if (39 != this.field_c.field_rc) {
                   stackIn_209_0 = this;
                   stackIn_209_1 = this.field_g;
                   stackIn_209_2 = this.field_b;
-                  stackIn_209_3 = ka.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25];
+                  stackIn_209_3 = ka.field_G[o.a((byte) 84, this.field_c.field_Zb.field_N)][25];
                   if (0 == this.field_a) {
                     stackIn_210_0 = this;
                     stackIn_210_4 = 0;
@@ -510,9 +510,9 @@ final class bh {
                 }
               }
             }
-            var13 = -var19.terrain.getGroundHeightAt((byte) -113, this.field_g >> 4) << 4;
-            var14 = -var19.terrain.getSurfaceProfileAt((byte) 122, this.field_g >> 4) << 4;
-            var15 = -var19.terrain.getSecondaryHeightAt(false, this.field_g >> 4) << 4;
+            var13 = -var19.field_ab.a((byte) -113, this.field_g >> 4) << 4;
+            var14 = -var19.field_ab.b((byte) 122, this.field_g >> 4) << 4;
+            var15 = -var19.field_ab.a(false, this.field_g >> 4) << 4;
             var16 = var13;
             if (!this.field_h &&
               var14 != var15) {
@@ -535,20 +535,20 @@ final class bh {
               this.field_m = 0;
             } else {
               this.field_l = this.field_b * this.field_e;
-              this.field_m = this.field_m + var19.gravityAcceleration;
+              this.field_m = this.field_m + var19.field_z;
             }
             this.field_j = false;
             this.field_r = false;
           } else {
-            this.field_m = this.field_m + var19.gravityAcceleration;
+            this.field_m = this.field_m + var19.field_z;
             if (this.field_r) {
-              this.field_m = this.field_m - var19.gravityAcceleration * 3 / 4;
+              this.field_m = this.field_m - var19.field_z * 3 / 4;
             }
             this.field_a = 0;
             this.field_j = true;
-            var13 = -var19.terrain.getGroundHeightAt((byte) -103, this.field_g >> 4) << 4;
-            var14 = -var19.terrain.getSecondaryHeightAt(false, this.field_g >> 4) << 4;
-            var15 = -var19.terrain.getSurfaceProfileAt((byte) 125, this.field_g >> 4) << 4;
+            var13 = -var19.field_ab.a((byte) -103, this.field_g >> 4) << 4;
+            var14 = -var19.field_ab.a(false, this.field_g >> 4) << 4;
+            var15 = -var19.field_ab.b((byte) 125, this.field_g >> 4) << 4;
             stackIn_152_1 = (var14 != var13) && (var14 < this.field_q);
             this.field_h = stackIn_152_1;
             if (this.field_h) {
@@ -560,7 +560,7 @@ final class bh {
                   var15 = var15 + (this.field_c.field_Db << 4);
                   if (this.field_q < var15 &&
                     var19.b(this.field_g, -5)) {
-                    if (var19.terrain.getSecondaryHeightAt(false, var5 >> 4) == var19.terrain.getSurfaceProfileAt((byte) 119, var5 >> 4)) {
+                    if (var19.field_ab.a(false, var5 >> 4) == var19.field_ab.b((byte) 119, var5 >> 4)) {
                       this.field_m = this.field_m / 2;
                       this.field_l = -this.field_l / 2;
                       this.field_g = var5;
@@ -593,7 +593,7 @@ final class bh {
             }
           }
           stackIn_229_0 = var4;
-          return (SentinelCommand) (stackIn_229_0);
+          return (je) (stackIn_229_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -608,33 +608,33 @@ final class bh {
         }
     }
 
-    private final void a(SentinelCommand param0, byte param1) {
-        ArticulatedPart[] var3 = null;
+    private final void a(je param0, byte param1) {
+        nk[] var3 = null;
         int var4 = 0;
         int var5 = 0;
-        ArticulatedPart[] var6 = null;
+        nk[] var6 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         try {
-          if (this.field_g >= param0.targetWorldX) {
+          if (this.field_g >= param0.field_u) {
             this.field_b = -1;
           } else {
             this.field_b = 1;
           }
-          if (this.field_c.chassis == null) {
+          if (this.field_c.field_Zb == null) {
             return;
           }
           if (param1 <= 0) {
-            this.field_c = (Sentinel) null;
+            this.field_c = (mb) null;
           }
-          var6 = this.field_c.chassis.a(0, this.field_c, new ArticulatedPart[]{}, this.field_b * param0.aimAngle, param0.actionVariant);
+          var6 = this.field_c.field_Zb.a(0, this.field_c, new nk[]{}, this.field_b * param0.field_B, param0.field_A);
           var3 = var6;
-          this.field_c.chassis.a(param0.aimAngle * this.field_b, -86, param0.actionVariant);
-          this.field_c.chassis.b((byte) -128, this.field_g, this.field_b, this.field_q);
+          this.field_c.field_Zb.a(param0.field_B * this.field_b, -86, param0.field_A);
+          this.field_c.field_Zb.b((byte) -128, this.field_g, this.field_b, this.field_q);
           var4 = 0;
           while (var4 < var6.length) {
             this.a(true, var6[var4], param0);
@@ -664,9 +664,9 @@ final class bh {
         }
     }
 
-    final Projectile a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
-        Projectile stackIn_147_0 = null;
-        Sentinel stackIn_148_1 = null;
+    final wl a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
+        wl stackIn_147_0 = null;
+        mb stackIn_148_1 = null;
         int var8;
         int var9;
         int var10;
@@ -680,7 +680,7 @@ final class bh {
         int var17;
         int var18;
         int var19_int;
-        Projectile var19;
+        wl var19;
         int var20;
         int var21;
         int var9Lifetime1;
@@ -690,7 +690,7 @@ final class bh {
         int var11Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
-        var21 = SteelSentinels.obfuscationControl;
+        var21 = SteelSentinels.field_G;
         if ((18 == param0 ||
           param0 == 29 ||
           param0 == 43 ||
@@ -698,8 +698,8 @@ final class bh {
           34 == param0 ||
           47 == param0 ||
           param0 == 52) && this.field_c.field_Vb != null) {
-          param2 = this.field_c.field_Vb.worldX;
-          param6 = -(this.field_c.field_Vb.field_Db << 3) + this.field_c.field_Vb.worldY;
+          param2 = this.field_c.field_Vb.field_hc;
+          param6 = -(this.field_c.field_Vb.field_Db << 3) + this.field_c.field_Vb.field_Gb;
           var9 = param2 - this.field_g;
           var10 = -param4 + param6;
           if (var9 >= 0) {
@@ -898,7 +898,7 @@ final class bh {
           var15 = 4;
           var14 = 256;
         }
-        var9Lifetime2 = jh.sine16(param3 >> 3, 4096) * 100 >> 16;
+        var9Lifetime2 = jh.a(param3 >> 3, 4096) * 100 >> 16;
         if (var13 < 1) {
           var13 = 1;
         }
@@ -909,40 +909,40 @@ final class bh {
           var17 = 5;
           var18 = 1;
         }
-        var10Lifetime2 = -kg.cosine16(param3 >> 3, (byte) -101) * 100 >> 16;
+        var10Lifetime2 = -kg.a(param3 >> 3, (byte) -101) * 100 >> 16;
         var13Lifetime1 = 100;
-        if (null != IsaacRandom.field_f[param0 - 17]) {
-          var19_int = IsaacRandom.field_f[param0 - 17][0];
-          var20 = IsaacRandom.field_f[param0 - 17][1];
+        if (null != ie.field_f[param0 - 17]) {
+          var19_int = ie.field_f[param0 - 17][0];
+          var20 = ie.field_f[param0 - 17][1];
           var12Lifetime1 = var12Lifetime1 - var20 * (var10Lifetime2 * 32) / var13Lifetime1;
           var11Lifetime1 = var11Lifetime1 - var20 * (var9Lifetime2 * 32) / var13Lifetime1;
           var12Lifetime1 = var12Lifetime1 + 32 * (this.field_b * var9Lifetime2) * var19_int / var13Lifetime1;
           var11Lifetime1 = var11Lifetime1 - 32 * (this.field_b * var10Lifetime2 * var19_int) / var13Lifetime1;
         }
-        var19 = new Projectile(var11Lifetime1, var12Lifetime1, var14 * var9Lifetime2 / var13Lifetime1, var14 * var10Lifetime2 / var13Lifetime1, var17, var16, var15, this.field_c.world, this.field_c, 0, var18, param0 - 17);
-        var19.targetWorldX = var11Lifetime1 + var9Lifetime2 * 100;
-        var19.targetWorldY = 100 * var10Lifetime2 + var12Lifetime1;
+        var19 = new wl(var11Lifetime1, var12Lifetime1, var14 * var9Lifetime2 / var13Lifetime1, var14 * var10Lifetime2 / var13Lifetime1, var17, var16, var15, this.field_c.field_xc, this.field_c, 0, var18, param0 - 17);
+        var19.field_K = var11Lifetime1 + var9Lifetime2 * 100;
+        var19.field_S = 100 * var10Lifetime2 + var12Lifetime1;
         if (var8 == 3) {
-          var19.targetWorldY = param6;
-          var19.targetWorldX = param2;
+          var19.field_S = param6;
+          var19.field_K = param2;
         }
         stackIn_147_0 = var19;
-        if (var19.sourceSentinel != null) {
-          stackIn_148_1 = var19.sourceSentinel.field_Vb;
+        if (var19.field_X != null) {
+          stackIn_148_1 = var19.field_X.field_Vb;
         } else {
           stackIn_148_1 = null;
         }
-        stackIn_147_0.targetSentinel = stackIn_148_1;
-        var19.affectedSentinels = null;
+        stackIn_147_0.field_nb = stackIn_148_1;
+        var19.field_fb = null;
         var19.field_V = true;
         var19.field_I = true;
         return var19;
     }
 
-    private final void a(boolean param0, ArticulatedPart param1, SentinelCommand param2) {
-        Projectile stackIn_151_0 = null;
-        Sentinel stackIn_152_1 = null;
-        Projectile stackIn_154_0 = null;
+    private final void a(boolean param0, nk param1, je param2) {
+        wl stackIn_151_0 = null;
+        mb stackIn_152_1 = null;
+        wl stackIn_154_0 = null;
         boolean stackIn_155_1 = false;
         RuntimeException stackIn_161_0 = null;
         StringBuilder stackIn_161_1 = null;
@@ -964,7 +964,7 @@ final class bh {
         int var13 = 0;
         int var14 = 0;
         int var15_int = 0;
-        Projectile var15 = null;
+        wl var15 = null;
         int var16 = 0;
         int var17 = 0;
         int var5Lifetime1;
@@ -974,20 +974,20 @@ final class bh {
         int var7Lifetime1;
         int var8Lifetime1;
         int var9Lifetime1;
-        var17 = SteelSentinels.obfuscationControl;
+        var17 = SteelSentinels.field_G;
         try {
-          if ((param1.componentId == 18 ||
-            param1.componentId == 29 ||
-            param1.componentId == 43 ||
-            param1.componentId == 21 ||
-            param1.componentId == 34 ||
-            param1.componentId == 47 ||
-            param1.componentId == 52) &&
+          if ((param1.field_N == 18 ||
+            param1.field_N == 29 ||
+            param1.field_N == 43 ||
+            param1.field_N == 21 ||
+            param1.field_N == 34 ||
+            param1.field_N == 47 ||
+            param1.field_N == 52) &&
             null != this.field_c.field_Vb) {
-            param2.targetWorldX = this.field_c.field_Vb.worldX;
-            param2.targetWorldY = -(this.field_c.field_Vb.field_Db << 3) + this.field_c.field_Vb.worldY;
-            var5 = -this.field_g + param2.targetWorldX;
-            var6 = -param1.field_V + param2.targetWorldY;
+            param2.field_u = this.field_c.field_Vb.field_hc;
+            param2.field_y = -(this.field_c.field_Vb.field_Db << 3) + this.field_c.field_Vb.field_Gb;
+            var5 = -this.field_g + param2.field_u;
+            var6 = -param1.field_V + param2.field_y;
             if (0 > var5) {
               this.field_b = -1;
             } else {
@@ -997,26 +997,26 @@ final class bh {
               this.field_d = 0;
             }
             var7_double = Math.atan2((double)var5, (double)(-var6));
-            param2.aimAngle = (int)(var7_double * 65536.0 / 6.283185307179586);
+            param2.field_B = (int)(var7_double * 65536.0 / 6.283185307179586);
             if (this.field_b < 0) {
-              if (param2.aimAngle > 16384) {
-                param2.aimAngle = param2.aimAngle - 65536;
+              if (param2.field_B > 16384) {
+                param2.field_B = param2.field_B - 65536;
               }
             } else {
-              if (param2.aimAngle < -16384) {
-                param2.aimAngle = param2.aimAngle + 65536;
+              if (param2.field_B < -16384) {
+                param2.field_B = param2.field_B + 65536;
               }
             }
-            if (param1.field_K > this.field_b * param2.aimAngle) {
-              param2.aimAngle = this.field_b * param1.field_K;
+            if (param1.field_K > this.field_b * param2.field_B) {
+              param2.field_B = this.field_b * param1.field_K;
             }
-            if (param1.field_W < param2.aimAngle * this.field_b) {
-              param2.aimAngle = this.field_b * param1.field_W;
+            if (param1.field_W < param2.field_B * this.field_b) {
+              param2.field_B = this.field_b * param1.field_W;
             }
           }
           var4_int = 2;
-          var5Lifetime1 = -this.field_g + param2.targetWorldX;
-          var6Lifetime1 = param2.targetWorldY - this.field_q;
+          var5Lifetime1 = -this.field_g + param2.field_u;
+          var6Lifetime1 = param2.field_y - this.field_q;
           if (var5Lifetime1 >= 0) {
             this.field_b = 1;
           } else {
@@ -1030,102 +1030,102 @@ final class bh {
           if (param1 == null) {
             return;
           }
-          if (param1.componentId == 17) {
+          if (param1.field_N == 17) {
             var4_int = 5;
           }
           var8Lifetime1 = param1.field_V;
           var7Lifetime1 = param1.field_T;
-          if (param1.componentId == 18) {
+          if (param1.field_N == 18) {
             var4_int = 0;
           }
-          if (19 == param1.componentId) {
+          if (19 == param1.field_N) {
             var4_int = 1;
           }
-          if (param1.componentId == 20) {
+          if (param1.field_N == 20) {
             var4_int = 6;
           }
-          if (param1.componentId == 21) {
+          if (param1.field_N == 21) {
             var4_int = 4;
           }
-          if (param1.componentId == 22) {
+          if (param1.field_N == 22) {
             var4_int = 7;
           }
-          if (param1.componentId == 23) {
+          if (param1.field_N == 23) {
             var4_int = 3;
           }
-          if (param1.componentId == 24) {
+          if (param1.field_N == 24) {
             var4_int = 2;
           }
-          if (param1.componentId == 25) {
+          if (param1.field_N == 25) {
             var4_int = 2;
           }
-          if (param1.componentId == 26) {
+          if (param1.field_N == 26) {
             var4_int = 2;
           }
-          if (param1.componentId == 27) {
+          if (param1.field_N == 27) {
             var4_int = 4;
           }
-          if (38 == param1.componentId) {
+          if (38 == param1.field_N) {
             var4_int = 4;
           }
-          if (param1.componentId == 28) {
+          if (param1.field_N == 28) {
             var4_int = 5;
           }
-          if (29 == param1.componentId) {
+          if (29 == param1.field_N) {
             var4_int = 0;
           }
-          if (param1.componentId == 30) {
+          if (param1.field_N == 30) {
             var4_int = 1;
           }
-          if (param1.componentId == 31) {
+          if (param1.field_N == 31) {
             var4_int = 1;
           }
-          if (32 == param1.componentId) {
+          if (32 == param1.field_N) {
             var4_int = 1;
           }
-          if (param1.componentId == 33) {
+          if (param1.field_N == 33) {
             var4_int = 6;
           }
-          if (param1.componentId == 34) {
+          if (param1.field_N == 34) {
             var4_int = 4;
           }
-          if (35 == param1.componentId) {
+          if (35 == param1.field_N) {
             var4_int = 7;
           }
-          if (param1.componentId == 36) {
+          if (param1.field_N == 36) {
             var4_int = 2;
           }
-          if (param1.componentId == 37) {
+          if (param1.field_N == 37) {
             var4_int = 2;
           }
-          if (param1.componentId == 46) {
+          if (param1.field_N == 46) {
             var4_int = 6;
           }
-          if (param1.componentId == 43) {
+          if (param1.field_N == 43) {
             var4_int = 0;
           }
-          if (param1.componentId == 44) {
+          if (param1.field_N == 44) {
             var4_int = 1;
           }
-          if (param1.componentId == 47) {
+          if (param1.field_N == 47) {
             var4_int = 4;
           }
-          if (param1.componentId == 45) {
+          if (param1.field_N == 45) {
             var4_int = 1;
           }
-          if (48 == param1.componentId) {
+          if (48 == param1.field_N) {
             var4_int = 7;
           }
-          if (param1.componentId == 52) {
+          if (param1.field_N == 52) {
             var4_int = 4;
           }
-          if (param1.componentId == 51) {
+          if (param1.field_N == 51) {
             var4_int = 3;
           }
-          if (param1.componentId == 50) {
+          if (param1.field_N == 50) {
             var4_int = 2;
           }
-          if (param1.componentId == 49) {
+          if (param1.field_N == 49) {
             var4_int = 2;
           }
           var9 = 10 * (int)Math.sqrt((double)(var6Lifetime1 / 100 * var6Lifetime1 + var5Lifetime1 / 100 * var5Lifetime1));
@@ -1133,13 +1133,13 @@ final class bh {
           var11 = 0;
           var12 = 4;
           var13 = 45;
-          if (18 == param1.componentId) {
+          if (18 == param1.field_N) {
             var13 -= 20;
           }
-          if (param1.componentId == 29) {
+          if (param1.field_N == 29) {
             var13 -= 10;
           }
-          if (param1.componentId == 43) {
+          if (param1.field_N == 43) {
             var13 -= 5;
           }
           var14 = 1;
@@ -1151,12 +1151,12 @@ final class bh {
             var10 = 256;
             var11 = 1;
             var12 = 0;
-            if (param1.componentId == 19) {
+            if (param1.field_N == 19) {
               var11 = 20;
             } else {
-              if (param1.componentId == 31 ||
-                param1.componentId == 45) {
-                var10 = cl.a(param2.aimAngle, -127);
+              if (param1.field_N == 31 ||
+                param1.field_N == 45) {
+                var10 = cl.a(param2.field_B, -127);
               }
             }
             var13 = 5000;
@@ -1193,7 +1193,7 @@ final class bh {
           if (1 > var9) {
             var9 = 1;
           }
-          var5Lifetime2 = jh.sine16(param2.aimAngle >> 3, 4096) * 100 >> 16;
+          var5Lifetime2 = jh.a(param2.field_B >> 3, 4096) * 100 >> 16;
           if (var4_int == 6) {
             var12 = 32;
             var10 = 512;
@@ -1201,37 +1201,37 @@ final class bh {
             var13 = 5;
             var14 = 1;
           }
-          var6Lifetime2 = -kg.cosine16(param2.aimAngle >> 3, (byte) -87) * 100 >> 16;
+          var6Lifetime2 = -kg.a(param2.field_B >> 3, (byte) -87) * 100 >> 16;
           var9Lifetime1 = 100;
-          if (null != IsaacRandom.field_f[-17 + param1.componentId]) {
-            var15_int = -param1.field_G + IsaacRandom.field_f[param1.componentId - 17][0];
-            var16 = IsaacRandom.field_f[-17 + param1.componentId][1] - param1.field_E;
+          if (null != ie.field_f[-17 + param1.field_N]) {
+            var15_int = -param1.field_G + ie.field_f[param1.field_N - 17][0];
+            var16 = ie.field_f[-17 + param1.field_N][1] - param1.field_E;
             var7Lifetime1 = var7Lifetime1 - var16 * var5Lifetime2 * 32 / var9Lifetime1;
             var8Lifetime1 = var8Lifetime1 - var16 * (var6Lifetime2 * 32) / var9Lifetime1;
             var8Lifetime1 = var8Lifetime1 + 32 * (this.field_b * var15_int * var5Lifetime2) / var9Lifetime1;
             var7Lifetime1 = var7Lifetime1 - 32 * var15_int * var6Lifetime2 * this.field_b / var9Lifetime1;
           }
-          var15 = new Projectile(var7Lifetime1, var8Lifetime1, var10 * var5Lifetime2 / var9Lifetime1, var6Lifetime2 * var10 / var9Lifetime1, var13, var12, var11, this.field_c.world, this.field_c, 0, var14, param1.componentId - 17);
-          var15.targetWorldY = 100 * var6Lifetime2 + var8Lifetime1;
-          var15.targetWorldX = var5Lifetime2 * 100 + var7Lifetime1;
+          var15 = new wl(var7Lifetime1, var8Lifetime1, var10 * var5Lifetime2 / var9Lifetime1, var6Lifetime2 * var10 / var9Lifetime1, var13, var12, var11, this.field_c.field_xc, this.field_c, 0, var14, param1.field_N - 17);
+          var15.field_S = 100 * var6Lifetime2 + var8Lifetime1;
+          var15.field_K = var5Lifetime2 * 100 + var7Lifetime1;
           stackIn_151_0 = var15;
-          if (var15.sourceSentinel != null) {
-            stackIn_152_1 = var15.sourceSentinel.field_Vb;
+          if (var15.field_X != null) {
+            stackIn_152_1 = var15.field_X.field_Vb;
           } else {
             stackIn_152_1 = null;
           }
-          stackIn_151_0.targetSentinel = stackIn_152_1;
-          var15.affectedSentinels = null;
+          stackIn_151_0.field_nb = stackIn_152_1;
+          var15.field_fb = null;
           stackIn_154_0 = var15;
           stackIn_155_1 = (param0);
           stackIn_154_0.field_V = stackIn_155_1;
           if (var4_int == 3) {
-            var15.targetWorldY = param2.targetWorldY;
-            var15.targetWorldX = param2.targetWorldX;
+            var15.field_S = param2.field_y;
+            var15.field_K = param2.field_u;
           }
-          pm.field_db.addLast(3, var15);
-          cf.field_q = var15.worldY - this.field_q;
-          l.field_g = -this.field_g + var15.worldX;
+          pm.field_db.a(3, var15);
+          cf.field_q = var15.field_A - this.field_q;
+          l.field_g = -this.field_g + var15.field_U;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1253,22 +1253,22 @@ final class bh {
         }
     }
 
-    bh(Sentinel param0) {
+    bh(mb param0) {
         try {
           this.field_c = param0;
-          this.field_g = this.field_c.worldX;
+          this.field_g = this.field_c.field_hc;
           this.field_d = this.field_c.field_U;
           this.field_p = this.field_c.field_Qb;
-          this.field_l = this.field_c.velocityX;
+          this.field_l = this.field_c.field_K;
           this.field_j = this.field_c.field_Lb;
           this.field_h = this.field_c.field_u;
           this.field_a = this.field_c.field_Pb;
           this.field_r = this.field_c.field_pc;
           this.field_b = this.field_c.field_E;
-          this.field_q = this.field_c.worldY;
+          this.field_q = this.field_c.field_Gb;
           this.field_n = 16777215;
-          this.field_m = this.field_c.velocityY;
-          this.field_e = ka.field_G[o.a((byte) 84, this.field_c.chassis.componentId)][25][0];
+          this.field_m = this.field_c.field_ab;
+          this.field_e = ka.field_G[o.a((byte) 84, this.field_c.field_Zb.field_N)][25][0];
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -1277,12 +1277,12 @@ final class bh {
     final static void a(int param0) {
         int var1 = (re.field_Z - 640) / 2;
         int var2 = an.field_h * an.field_h;
-        int var3 = -(SentinelCommand.field_t * SentinelCommand.field_t) + var2;
-        mg.field_Ub.a(param0 ^ 0, 90, -210 + (SoftwareRaster.field_j - 4), -(199 * var3 / var2) + var1, 199);
-        pc.field_q.a(param0 ^ param0, 0, -4 + (-120 + SoftwareRaster.field_j), 438 * var3 / var2 + (202 + var1), 438);
+        int var3 = -(je.field_t * je.field_t) + var2;
+        mg.field_Ub.a(param0 ^ 0, 90, -210 + (pb.field_j - 4), -(199 * var3 / var2) + var1, 199);
+        pc.field_q.a(param0 ^ param0, 0, -4 + (-120 + pb.field_j), 438 * var3 / var2 + (202 + var1), 438);
     }
 
-    final static int a(int[] param0, int param1, ArticulatedPart param2) {
+    final static int a(int[] param0, int param1, nk param2) {
         int var6 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -1297,7 +1297,7 @@ final class bh {
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           var3_int = 0;
           var4 = param2.i(-121);
@@ -1351,7 +1351,7 @@ final class bh {
         }
     }
 
-    final void a(int param0, SentinelCommand param1, int param2, int param3, int param4) {
+    final void a(int param0, je param1, int param2, int param3, int param4) {
         try {
           if (param3 != -1) {
             this.field_d = 31;

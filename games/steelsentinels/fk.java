@@ -7,11 +7,11 @@ final class fk implements Runnable {
     private wj field_g;
     static String field_f;
     private DataInputStream field_r;
-    static SceneWidget field_q;
-    private PacketBuffer field_b;
+    static gh field_q;
+    private gi field_b;
     private wj field_s;
     static String field_p;
-    static GameplayController field_i;
+    static nb field_i;
     private int field_j;
     static fh field_d;
     static String field_n;
@@ -32,18 +32,18 @@ final class fk implements Runnable {
           Throwable var3 = null;
           int var4 = 0;
           Throwable decompiledCaughtException = null;
-          var4 = SteelSentinels.obfuscationControl;
+          var4 = SteelSentinels.field_G;
           try {
-            while (this.field_b.payload.length > this.field_b.position) {
-              var1_int = this.field_r.read(this.field_b.payload, this.field_b.position, -this.field_b.position + this.field_b.payload.length);
+            while (this.field_b.field_t.length > this.field_b.field_p) {
+              var1_int = this.field_r.read(this.field_b.field_t, this.field_b.field_p, -this.field_b.field_p + this.field_b.field_t.length);
               if (0 <= var1_int) {
-                this.field_b.position = this.field_b.position + var1_int;
+                this.field_b.field_p = this.field_b.field_p + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_b.position == this.field_b.payload.length) {
-              throw fk.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_b.payload.length + " " + this.field_k));
+            if (this.field_b.field_p == this.field_b.field_t.length) {
+              throw fk.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_b.field_t.length + " " + this.field_k));
             }
             var1 = this;
             synchronized (var1) {
@@ -68,7 +68,7 @@ final class fk implements Runnable {
         }
     }
 
-    final PacketBuffer b(int param0) {
+    final gi b(int param0) {
         if (this.field_j == param0) {
           return this.field_b;
         }
@@ -101,15 +101,15 @@ final class fk implements Runnable {
         try {
           this.field_m = param0;
           this.field_k = param1;
-          this.field_b = new PacketBuffer(param2);
+          this.field_b = new gi(param2);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final static SceneWidget b(byte param0) {
+    final static gh b(byte param0) {
         if (param0 < 13) {
-          return (SceneWidget) null;
+          return (gh) null;
         }
         return mj.field_Sb.field_Ub;
     }
@@ -176,7 +176,7 @@ final class fk implements Runnable {
             var3.write(km.a(param0 - 88, var5));
             this.field_r = new DataInputStream(var4.getInputStream());
           }
-          this.field_b.position = 0;
+          this.field_b.field_p = 0;
         } catch (java.io.IOException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (IOException) (Object) decompiledCaughtException;

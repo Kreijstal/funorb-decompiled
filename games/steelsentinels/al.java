@@ -31,10 +31,10 @@ abstract class al {
         if (param0 != 0) {
           field_a = (String[]) null;
         }
-        return SceneWidget.field_hb;
+        return gh.field_hb;
     }
 
-    final static RgbSprite[] a(int param0, byte param1, int param2, int param3) {
+    final static wk[] a(int param0, byte param1, int param2, int param3) {
         if (param1 <= 72) {
           al.a(-2);
         }
@@ -50,7 +50,7 @@ abstract class al {
         return this.a(param1, (byte) -97);
     }
 
-    final static void a(pn param0, boolean param1, PacketBuffer param2, int param3) {
+    final static void a(pn param0, boolean param1, gi param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -85,14 +85,14 @@ abstract class al {
           String var20 = null;
           byte[][] var21 = null;
           int var13Lifetime1;
-          var14 = SteelSentinels.obfuscationControl;
+          var14 = SteelSentinels.field_G;
           try {
             if (param1) {
               al.a(-105, (byte) -107, 76, 3);
             }
             var18 = new ua();
-            var18.field_B = param2.readUnsignedByte((byte) -80);
-            var18.field_q = param2.readInt(0);
+            var18.field_B = param2.f((byte) -80);
+            var18.field_q = param2.i(0);
             var18.field_w = new int[var18.field_B];
             var18.field_F = new byte[var18.field_B][][];
             var18.field_K = new wj[var18.field_B];
@@ -101,7 +101,7 @@ abstract class al {
             var18.field_s = new int[var18.field_B];
             for (var5 = 0; var18.field_B > var5; var5++) {
               try {
-                var6_int = param2.readUnsignedByte((byte) -117);
+                var6_int = param2.f((byte) -117);
                 if (0 != var6_int &&
                   1 != var6_int &&
                   2 != var6_int) {
@@ -109,7 +109,7 @@ abstract class al {
                     4 == var6_int) {
                     var20 = param2.h(1);
                     var8 = param2.h(1);
-                    var9 = param2.readUnsignedByte((byte) -84);
+                    var9 = param2.f((byte) -84);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
                       var10[var11_int] = param2.h(1);
@@ -119,10 +119,10 @@ abstract class al {
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param2.readInt(0);
+                        var13 = param2.i(0);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param2.readBytes(0, var21[var12_int], 28, var13);
+                        param2.a(0, var21[var12_int], 28, var13);
                       }
                     }
                     var18.field_s[var5] = var6_int;
@@ -130,10 +130,10 @@ abstract class al {
                     var17 = 0;
                     var13Lifetime1 = var17;
                     while (var17 < var9) {
-                      var12[var17] = Sprite.a(10126, var10[var17]);
+                      var12[var17] = ea.a(10126, var10[var17]);
                       var17++;
                     }
-                    var18.field_K[var5] = param0.a(var8, (byte) 52, Sprite.a(10126, var20), var12);
+                    var18.field_K[var5] = param0.a(var8, (byte) 52, ea.a(10126, var20), var12);
                     var18.field_F[var5] = var21;
                   }
                 } else {
@@ -143,11 +143,11 @@ abstract class al {
                   var8 = dupTemp$1;
                   var9 = 0;
                   if (1 == var6_int) {
-                    var9 = param2.readInt(0);
+                    var9 = param2.i(0);
                   }
                   var18.field_s[var5] = var6_int;
                   var18.field_w[var5] = var9;
-                  var18.field_y[var5] = param0.a(9, Sprite.a(10126, var15), var16);
+                  var18.field_y[var5] = param0.a(9, ea.a(10126, var15), var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -171,7 +171,7 @@ abstract class al {
                 var18.field_A[var5] = -5;
               }
             }
-            rg.field_d.addLast(3, var18);
+            rg.field_d.a(3, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

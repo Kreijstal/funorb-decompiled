@@ -3,7 +3,7 @@
  */
 final class i implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String[] field_d;
-    static SentinelDesigner[] field_e;
+    static ji[] field_e;
     static String field_c;
     static String field_b;
     static String field_a;
@@ -161,6 +161,6 @@ final class i implements java.awt.event.KeyListener, java.awt.event.FocusListene
         field_b = "Unrated game";
         field_c = "Asking for or providing contact information";
         field_d = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
-        field_e = new SentinelDesigner[23];
+        field_e = new ji[23];
     }
 }

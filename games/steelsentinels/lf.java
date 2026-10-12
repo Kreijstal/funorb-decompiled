@@ -18,7 +18,7 @@ final class lf {
     }
 
     final static void a() {
-        lf.a(SoftwareRaster.field_i, SoftwareRaster.field_l, SoftwareRaster.field_b, SoftwareRaster.field_d);
+        lf.a(pb.field_i, pb.field_l, pb.field_b, pb.field_d);
     }
 
     private final static void a(int param0, int param1, int param2, int param3) {
@@ -29,10 +29,10 @@ final class lf {
         if (field_c.length < field_h) {
           field_c = new int[ge.a(field_h, (byte) -32)];
         }
-        int var4 = param1 * SoftwareRaster.field_c + param0;
+        int var4 = param1 * pb.field_c + param0;
         for (var5 = 0; var5 < field_h; var5++) {
           field_c[var5] = var4;
-          var4 = var4 + SoftwareRaster.field_c;
+          var4 = var4 + pb.field_c;
         }
     }
 

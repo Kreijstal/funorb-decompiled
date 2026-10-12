@@ -5,11 +5,11 @@ final class ei extends ia {
     private String field_w;
     static String field_u;
     static int field_t;
-    static SceneWidget field_n;
+    static gh field_n;
     static String field_x;
     static int field_q;
-    static SceneWidget field_o;
-    static SceneWidget field_p;
+    static gh field_o;
+    static gh field_p;
     private boolean field_s;
     static String field_v;
     static String field_r;
@@ -46,14 +46,14 @@ final class ei extends ia {
         int var8 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var8 = SteelSentinels.obfuscationControl;
+        var8 = SteelSentinels.field_G;
         try {
-          SoftwareRaster.h(param0, param1, param2, param3, 12105914);
-          SoftwareRaster.e(1 + param0, param1 + 1, -2 + param2, param3 - 2, 16251129, 10461345);
+          pb.h(param0, param1, param2, param3, 12105914);
+          pb.e(1 + param0, param1 + 1, -2 + param2, param3 - 2, 16251129, 10461345);
           var6 = -126 / ((param4 - 69) / 50);
           var5_int = 64;
           for (var7 = 1; var7 <= 6; var7++) {
-            SoftwareRaster.h(var7 + param0, var7 + param1, -(var7 * 2) + param2, -(var7 * 2) + param3, 16251129, var5_int);
+            pb.h(var7 + param0, var7 + param1, -(var7 * 2) + param2, -(var7 * 2) + param3, 16251129, var5_int);
             var5_int = var5_int >> 1;
           }
           return;
@@ -134,7 +134,7 @@ final class ei extends ia {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!m.a(var4, (byte) 127)) {
-            stackIn_3_0 = ArchiveProvider.field_d;
+            stackIn_3_0 = fa.field_d;
             return stackIn_3_0;
           }
           if (param1 != -1) {
@@ -153,7 +153,7 @@ final class ei extends ia {
             }
           }
           if (!this.field_s) {
-            stackIn_18_0 = ArchiveProvider.field_d;
+            stackIn_18_0 = fa.field_d;
           } else {
             stackIn_18_0 = vf.field_b;
           }
@@ -200,22 +200,22 @@ final class ei extends ia {
           var2 = pm.field_Z;
         }
         if (param0 == 2) {
-          var2 = CachedArchiveProvider.field_y;
+          var2 = fi.field_y;
         }
         return var2;
     }
 
-    final static RgbSprite[] a(int param0, RgbSprite[] param1) {
+    final static wk[] a(int param0, wk[] param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        RgbSprite var3 = null;
+        wk var3 = null;
         int var4 = 0;
-        RgbSprite[] stackIn_5_0 = null;
+        wk[] stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
           for (var2_int = param0; param1.length > var2_int; var2_int++) {
             var3 = param1[var2_int];
@@ -224,7 +224,7 @@ final class ei extends ia {
             param1[var2_int].field_z = param1[var2_int].field_A;
             param1[var2_int].field_B = param1[var2_int].field_F;
           }
-          stackIn_5_0 = (RgbSprite[]) (param1);
+          stackIn_5_0 = (wk[]) (param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -241,17 +241,17 @@ final class ei extends ia {
     }
 
     final static void a(int param0, byte param1, int param2) {
-        CipherPacketBuffer var3 = mm.field_g;
-        var3.writeCipheredOpcode(param2, (byte) -117);
-        var3.writeByte((byte) 127, 3);
+        kj var3 = mm.field_g;
+        var3.a(param2, (byte) -117);
+        var3.a((byte) 127, 3);
         if (param1 != -23) {
           field_v = (String) null;
-          var3.writeByte((byte) 121, 10);
-          var3.writeShort(param0, 98);
+          var3.a((byte) 121, 10);
+          var3.d(param0, 98);
           return;
         }
-        var3.writeByte((byte) 121, 10);
-        var3.writeShort(param0, 98);
+        var3.a((byte) 121, 10);
+        var3.d(param0, 98);
     }
 
     final static int a(int param0, int param1, boolean param2) {

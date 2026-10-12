@@ -18,13 +18,13 @@ final class sh {
         }
         param3--;
         param2++;
-        SoftwareRaster.a(param4, param3, param4 + param1, param3 + param2);
+        pb.a(param4, param3, param4 + param1, param3 + param2);
         ic.field_db.f(param4, param3 - 17);
-        SoftwareRaster.c();
-        SoftwareRaster.c(param4, param3, param1, 0, 128);
-        SoftwareRaster.c(param4, param3 + 1, param1, 0, 96);
-        SoftwareRaster.c(param4, param3 + 2, param1, 0, 64);
-        SoftwareRaster.c(param4, param3 + 3, param1, 0, 32);
+        pb.c();
+        pb.c(param4, param3, param1, 0, 128);
+        pb.c(param4, param3 + 1, param1, 0, 96);
+        pb.c(param4, param3 + 2, param1, 0, 64);
+        pb.c(param4, param3 + 3, param1, 0, 32);
     }
 
     final static void a(int param0, boolean param1, boolean param2) {
@@ -36,7 +36,7 @@ final class sh {
         int var5 = 0;
         int var7 = 0;
         int var4Lifetime1;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           di.field_g = 10;
           qh.field_Yb = 0;
@@ -96,7 +96,7 @@ final class sh {
         if (param0 > -9) {
           field_c = (String) null;
         }
-        return new de[]{PartInstruction.field_o, mj.field_Vb, h.field_Y};
+        return new de[]{qd.field_o, mj.field_Vb, h.field_Y};
     }
 
     public static void a(int param0) {

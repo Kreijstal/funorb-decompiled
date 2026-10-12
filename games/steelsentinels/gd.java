@@ -7,20 +7,20 @@ abstract class gd extends ac {
     static String field_ob;
     private int field_rb;
     private int field_yb;
-    static SceneWidget field_jb;
+    static gh field_jb;
     static boolean field_ub;
     private ui field_nb;
     private int field_tb;
     private int field_vb;
     private int field_ib;
     static al field_qb;
-    static SceneWidget field_sb;
+    static gh field_sb;
     private lh field_pb;
     static int field_lb;
-    static SceneWidget field_wb;
+    static gh field_wb;
     static int field_mb;
 
-    final static SceneWidget l(byte param0) {
+    final static gh l(byte param0) {
         int var1 = 116 / ((param0 + 52) / 48);
         return vi.field_W.field_Wb;
     }
@@ -29,7 +29,7 @@ abstract class gd extends ac {
         int fieldTemp$11 = 0;
         int fieldTemp$12 = 0;
         int var3;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         if (param0 != -8350) {
           field_ub = false;
         }
@@ -51,7 +51,7 @@ abstract class gd extends ac {
             if (fieldTemp$12 != this.field_yb) {
               this.field_nb.field_R = -((this.field_vb << 8) / this.field_yb) + 256;
             } else {
-              this.field_xb = PacketBuffer.field_q;
+              this.field_xb = gi.field_q;
               this.a((byte) 103, 12 - (-this.field_rb - this.field_pb.field_E), this.field_pb.field_x + 12, this.field_ib);
               this.field_vb = 0;
               this.field_nb.field_R = 0;
@@ -72,7 +72,7 @@ abstract class gd extends ac {
             return;
           }
           this.field_pb = param0;
-          if (PacketBuffer.field_q == this.field_xb) {
+          if (gi.field_q == this.field_xb) {
             this.a((byte) 103, this.field_pb.field_E + this.field_rb + 12, this.field_pb.field_x + 12, this.field_ib);
             this.field_vb = 0;
           } else {
@@ -126,7 +126,7 @@ abstract class gd extends ac {
     final static int[] b(int param0, int param1, byte param2) {
         int var10 = 0;
         int var11 = 0;
-        int var12 = SteelSentinels.obfuscationControl;
+        int var12 = SteelSentinels.field_G;
         int[] var13 = new int[256];
         int[] var3 = var13;
         int var4 = param0 >> 16 & 255;
@@ -148,7 +148,7 @@ abstract class gd extends ac {
     private final void c(int param0, lh param1) {
         try {
           if (this.field_nb != null) {
-            this.field_nb.unlink(4);
+            this.field_nb.b(4);
           }
           if (param0 != -12243) {
             this.field_rb = -45;

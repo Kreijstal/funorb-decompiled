@@ -4,16 +4,16 @@
 import java.util.*;
 
 final class hb implements Iterable {
-    DualNode field_a;
+    kd field_a;
     static String field_h;
     static String[] field_g;
     static int field_b;
     static pn field_i;
     static boolean field_f;
     static int field_d;
-    static RgbSprite[] field_j;
+    static wk[] field_j;
     static java.security.SecureRandom field_c;
-    static RgbSprite field_e;
+    static wk field_e;
 
     final static void a(int param0, java.awt.Component param1) {
         try {
@@ -26,30 +26,30 @@ final class hb implements Iterable {
         }
     }
 
-    final DualNode a(int param0) {
+    final kd a(int param0) {
         if (param0 != 12515) {
           field_b = 114;
         }
-        DualNode var2 = this.field_a.dualNext;
+        kd var2 = this.field_a.field_o;
         if (this.field_a != var2) {
-          var2.unlinkDual(480);
+          var2.e(480);
           return var2;
         }
         return null;
     }
 
-    final void a(byte param0, DualNode param1) {
+    final void a(byte param0, kd param1) {
         try {
           if (param0 <= 16) {
             field_i = (pn) null;
           }
-          if (param1.dualPrevious != null) {
-            param1.unlinkDual(480);
+          if (param1.field_v != null) {
+            param1.e(480);
           }
-          param1.dualNext = this.field_a;
-          param1.dualPrevious = this.field_a.dualPrevious;
-          param1.dualPrevious.dualNext = param1;
-          param1.dualNext.dualPrevious = param1;
+          param1.field_o = this.field_a;
+          param1.field_v = this.field_a.field_v;
+          param1.field_v.field_o = param1;
+          param1.field_o.field_v = param1;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "hb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -83,7 +83,7 @@ final class hb implements Iterable {
         int var17Lifetime2;
         int var17Lifetime3;
         int var18Lifetime2;
-        var20 = SteelSentinels.obfuscationControl;
+        var20 = SteelSentinels.field_G;
         try {
           if (param4 >= 0 &&
             param7 < lf.field_h) {
@@ -139,7 +139,7 @@ final class hb implements Iterable {
                   if (lf.field_h <= param7) {
                     return;
                   }
-                  var17Lifetime2 = var17Lifetime2 + SoftwareRaster.field_c;
+                  var17Lifetime2 = var17Lifetime2 + pb.field_c;
                   var11 = var11 + var13;
                   var10 = var10 + var12;
                 }
@@ -173,7 +173,7 @@ final class hb implements Iterable {
                   if (lf.field_h <= param7) {
                     return;
                   }
-                  var17Lifetime2 = var17Lifetime2 + SoftwareRaster.field_c;
+                  var17Lifetime2 = var17Lifetime2 + pb.field_c;
                   var11 = var11 + var13;
                   var10 = var10 + var12;
                 }
@@ -257,7 +257,7 @@ final class hb implements Iterable {
                 return;
               }
               var10 = var10 + var12;
-              var16Lifetime1 = var16Lifetime1 + SoftwareRaster.field_c;
+              var16Lifetime1 = var16Lifetime1 + pb.field_c;
               var11 = var11 + var13;
             }
             return;
@@ -290,9 +290,9 @@ final class hb implements Iterable {
     }
 
     hb() {
-        this.field_a = new DualNode();
-        this.field_a.dualNext = this.field_a;
-        this.field_a.dualPrevious = this.field_a;
+        this.field_a = new kd();
+        this.field_a.field_o = this.field_a;
+        this.field_a.field_v = this.field_a;
     }
 
     final static void a(int param0, int param1, int param2) {
@@ -313,11 +313,11 @@ final class hb implements Iterable {
           ne.field_G = new int[param1 * 2];
         }
         if (param0 >= -118) {
-          field_j = (RgbSprite[]) null;
+          field_j = (wk[]) null;
         }
-        if (Sentinel.field_T == null ||
-          !(Sentinel.field_T.length >= param1)) {
-          Sentinel.field_T = new int[2 * param1];
+        if (mb.field_T == null ||
+          !(mb.field_T.length >= param1)) {
+          mb.field_T = new int[2 * param1];
         }
         if (null == eb.field_u ||
           !(param1 <= eb.field_u.length)) {
@@ -338,7 +338,7 @@ final class hb implements Iterable {
         mj.field_cc = -2147483648;
     }
 
-    final static void a(byte param0, RgbSprite[] param1, int param2, int param3, int param4, int param5) {
+    final static void a(byte param0, wk[] param1, int param2, int param3, int param4, int param5) {
         int var22 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -370,7 +370,7 @@ final class hb implements Iterable {
         int var21Lifetime2;
         int var21Lifetime3;
         int var21Lifetime4;
-        var23 = SteelSentinels.obfuscationControl;
+        var23 = SteelSentinels.field_G;
         try {
           if (param1 == null) {
             return;
@@ -416,75 +416,75 @@ final class hb implements Iterable {
             }
             var19 = var15;
             var20 = var16;
-            SoftwareRaster.b(me.field_g);
+            pb.b(me.field_g);
             if (var19 > var20) {
               var20 = var8 * param5 / (var8 + var9) + param3;
               var19 = var8 * param5 / (var8 + var9) + param3;
             }
             if (param1[0] != null) {
-              SoftwareRaster.h(param4, param3, var17, var19);
+              pb.h(param4, param3, var17, var19);
               param1[0].a(param4, param3);
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             if (param1[2] != null) {
-              SoftwareRaster.h(var18, param3, var10, var19);
+              pb.h(var18, param3, var10, var19);
               param1[2].a(var14, param3);
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             if (param1[6] != null) {
-              SoftwareRaster.h(param4, var20, var17, var12);
+              pb.h(param4, var20, var17, var12);
               param1[6].a(param4, var16);
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             if (param1[8] != null) {
-              SoftwareRaster.h(var18, var20, var10, var12);
+              pb.h(var18, var20, var10, var12);
               param1[8].a(var14, var16);
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             if (param1[1] != null &&
               0 != param1[1].field_z) {
-              SoftwareRaster.h(var17, param3, var18, var19);
+              pb.h(var17, param3, var18, var19);
               for (var21 = var13; var21 < var14; var21 = var21 + param1[1].field_z) {
                 param1[1].a(var21, param3);
               }
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             if (null != param1[7] &&
               param1[7].field_z != 0) {
-              SoftwareRaster.h(var17, var20, var18, var12);
+              pb.h(var17, var20, var18, var12);
               for (var21Lifetime1 = var13; var21Lifetime1 < var14; var21Lifetime1 = var21Lifetime1 + param1[7].field_z) {
                 param1[7].a(var21Lifetime1, var16);
               }
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             if (param1[3] != null &&
               0 != param1[3].field_B) {
-              SoftwareRaster.h(param4, var19, var17, var20);
+              pb.h(param4, var19, var17, var20);
               for (var21Lifetime2 = var15; var16 > var21Lifetime2; var21Lifetime2 = var21Lifetime2 + param1[3].field_B) {
                 param1[3].a(param4, var21Lifetime2);
               }
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             if (null != param1[5] &&
               0 != param1[5].field_B) {
-              SoftwareRaster.h(var18, var19, var10, var20);
+              pb.h(var18, var19, var10, var20);
               for (var21Lifetime3 = var15; var16 > var21Lifetime3; var21Lifetime3 = var21Lifetime3 + param1[5].field_B) {
                 param1[5].a(var14, var21Lifetime3);
               }
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             if (null != param1[4] &&
               param1[4].field_z != 0) {
               if (param1[4].field_B == 0) {
                 return;
               }
-              SoftwareRaster.h(var17, var19, var18, var20);
+              pb.h(var17, var19, var18, var20);
               for (var21Lifetime4 = var15; var16 > var21Lifetime4; var21Lifetime4 = var21Lifetime4 + param1[4].field_B) {
                 for (var22 = var13; var14 > var22; var22 = var22 + param1[4].field_z) {
                   param1[4].a(var22, var21Lifetime4);
                 }
               }
-              SoftwareRaster.a(me.field_g);
+              pb.a(me.field_g);
             }
             return;
           }

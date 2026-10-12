@@ -6,7 +6,7 @@ class ma extends oa {
     static vd field_Y;
     static ef field_cb;
     static int field_W;
-    private NodeDeque field_ab;
+    private ul field_ab;
     static ek field_eb;
     static Boolean field_bb;
     static String field_Z;
@@ -105,9 +105,9 @@ class ma extends oa {
         vl var16;
         int var17;
         int var8Lifetime1;
-        var17 = SteelSentinels.obfuscationControl;
+        var17 = SteelSentinels.field_G;
         var2 = 48 / ((-24 - param0) / 38);
-        this.field_ab = new NodeDeque();
+        this.field_ab = new ul();
         var3 = 0;
         var4 = (eg) ((Object) this.field_p);
         var5 = var4.b(-1, (lh) (this));
@@ -143,11 +143,11 @@ class ma extends oa {
             var15 = stackIn_13_0;
             var16 = new vl(var8Lifetime1, var14, var13.field_h, var15 - var14, Math.max(var4.a(-40), var13.field_a - var13.field_h));
             if (var11 == null) {
-              this.field_ab.addLast(3, var16);
+              this.field_ab.a(3, var16);
               var11 = var16;
             } else {
               ((vl) (var11)).field_q = var16;
-              this.field_ab.addLast(3, var16);
+              this.field_ab.a(3, var16);
               var11 = var16;
             }
           }
@@ -190,18 +190,18 @@ class ma extends oa {
     }
 
     final static void a(int param0, kf param1, int param2) {
-        CipherPacketBuffer var3 = null;
+        kj var3 = null;
         try {
           var3 = mm.field_g;
-          var3.writeCipheredOpcode(param0, (byte) -117);
-          var3.writeByte((byte) 115, 5);
-          var3.writeByte((byte) 110, 0);
+          var3.a(param0, (byte) -117);
+          var3.a((byte) 115, 5);
+          var3.a((byte) 110, 0);
           if (param2 != -2864) {
             ma.a(false);
           }
-          var3.writeShort(param1.field_C, param2 + 2960);
-          var3.writeByte((byte) 125, param1.field_u);
-          var3.writeByte((byte) 113, param1.field_w);
+          var3.d(param1.field_C, param2 + 2960);
+          var3.a((byte) 125, param1.field_u);
+          var3.a((byte) 113, param1.field_w);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ma.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -238,7 +238,7 @@ class ma extends oa {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         try {
           if (this.field_X == null ||
             this.field_X.length <= param1) {
@@ -347,9 +347,9 @@ class ma extends oa {
         int var6;
         vl var4Lifetime1;
         vl var5Lifetime1;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         if (param0 == -1) {
-          var4 = (vl) (this.field_ab.first(13058));
+          var4 = (vl) (this.field_ab.e(13058));
           while (var4 != null) {
             var5 = var4;
             while (var5 != null) {
@@ -361,12 +361,12 @@ class ma extends oa {
               }
               var5 = var5.field_q;
             }
-            var4 = (vl) (this.field_ab.next((byte) -116));
+            var4 = (vl) (this.field_ab.a((byte) -116));
           }
           return null;
         }
         ma.c(true);
-        var4Lifetime1 = (vl) (this.field_ab.first(13058));
+        var4Lifetime1 = (vl) (this.field_ab.e(13058));
         while (var4Lifetime1 != null) {
           var5Lifetime1 = var4Lifetime1;
           while (var5Lifetime1 != null) {
@@ -378,7 +378,7 @@ class ma extends oa {
             }
             var5Lifetime1 = var5Lifetime1.field_q;
           }
-          var4Lifetime1 = (vl) (this.field_ab.next((byte) -116));
+          var4Lifetime1 = (vl) (this.field_ab.a((byte) -116));
         }
         return null;
     }

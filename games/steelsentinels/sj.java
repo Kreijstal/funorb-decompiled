@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class sj extends we {
-    static SceneWidget field_J;
+    static gh field_J;
     static String field_C;
     static int[] field_v;
     static String field_B;
@@ -13,9 +13,9 @@ final class sj extends we {
     private int field_D;
     private tg field_L;
     private int field_K;
-    static RgbSprite[] field_x;
-    static ResourceArchive field_y;
-    static SceneWidget field_z;
+    static wk[] field_x;
+    static cm field_y;
+    static gh field_z;
     private ic field_O;
     private int[] field_I;
     private ic field_M;
@@ -23,9 +23,9 @@ final class sj extends we {
     private int field_E;
     private ic field_t;
     private int field_A;
-    static RgbSprite field_F;
+    static wk field_F;
     private tg field_w;
-    static PacketBuffer field_u;
+    static gi field_u;
     private boolean field_N;
 
     final synchronized int a() {
@@ -69,7 +69,7 @@ final class sj extends we {
         int var11 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
-        var11 = SteelSentinels.obfuscationControl;
+        var11 = SteelSentinels.field_G;
         try {
           if (this.field_A <= 0) {
             this.d(param2);
@@ -203,7 +203,7 @@ final class sj extends we {
         na var6 = null;
         try {
           if (param3 != 21) {
-            field_x = (RgbSprite[]) null;
+            field_x = (wk[]) null;
           }
           var6 = new na(param5, param4, param2, param0, param1);
           tf.a(var6, (byte) -107);
@@ -214,7 +214,7 @@ final class sj extends we {
 
     final synchronized void d(int param0) {
         int var3;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         if (this.field_D > 0 &&
           null != this.field_s) {
           this.field_O.d(param0);
@@ -304,7 +304,7 @@ final class sj extends we {
           String var8 = null;
           String var9 = null;
           String var10 = null;
-          var6 = SteelSentinels.obfuscationControl;
+          var6 = SteelSentinels.field_G;
           try {
             var3 = "";
             if (param2 != null) {
@@ -316,14 +316,14 @@ final class sj extends we {
               }
               var3 = var3 + param0;
             }
-            SentinelDesigner.a(var3, -29771);
+            ji.a(var3, -29771);
             if (param1 >= -13) {
               return;
             }
-            var7 = CombatWorld.a(":", var3, "%3a", 98);
-            var8 = CombatWorld.a("@", var7, "%40", 101);
-            var9 = CombatWorld.a("&", var8, "%26", -20);
-            var10 = CombatWorld.a("#", var9, "%23", 97);
+            var7 = ee.a(":", var3, "%3a", 98);
+            var8 = ee.a("@", var7, "%40", 101);
+            var9 = ee.a("&", var8, "%26", -20);
+            var10 = ee.a("#", var9, "%23", 97);
             if (null == ug.field_O) {
               return;
             }
@@ -393,7 +393,7 @@ final class sj extends we {
         int var11Lifetime1Lifetime1;
         int var12Lifetime1Lifetime1;
         int var13Lifetime1Lifetime1;
-        var15 = SteelSentinels.obfuscationControl;
+        var15 = SteelSentinels.field_G;
         try {
           var1_int = 0;
           if (!param0) {
@@ -412,36 +412,36 @@ final class sj extends we {
             var8 = (int)(((double)var5 - var3) * 256.0);
             var9 = 200;
             for (var5Lifetime1 = var6 - 1; var5Lifetime1 > var6 - 20; var5Lifetime1--) {
-              var10 = var2 + var5Lifetime1 * SoftwareRaster.field_c;
-              var11 = (16711680 & SoftwareRaster.field_g[var10]) >> 16;
-              var12 = (SoftwareRaster.field_g[var10] & 65280) >> 8;
-              var13 = 255 & SoftwareRaster.field_g[var10];
+              var10 = var2 + var5Lifetime1 * pb.field_c;
+              var11 = (16711680 & pb.field_g[var10]) >> 16;
+              var12 = (pb.field_g[var10] & 65280) >> 8;
+              var13 = 255 & pb.field_g[var10];
               var11 = var11 * (256 - var9) / 256;
               var12 = var12 * (-var9 + 256) / 256;
               var13 = var13 * (256 - var9) / 256;
               var9 = var9 * 6 / 7;
-              SoftwareRaster.field_g[var10] = vn.a(vn.a(var11 << 16, var12 << 8), var13);
+              pb.field_g[var10] = vn.a(vn.a(var11 << 16, var12 << 8), var13);
             }
-            SoftwareRaster.d(var2, var6, -var6 + var7, 4210752);
+            pb.d(var2, var6, -var6 + var7, 4210752);
             if (var8 >= 0) {
-              var10Lifetime1 = var2 + (var6 - 1) * SoftwareRaster.field_c;
-              var11Lifetime1 = (SoftwareRaster.field_g[var10Lifetime1] & 16711680) >> 16;
-              var12Lifetime1 = SoftwareRaster.field_g[var10Lifetime1] >> 8 & 255;
-              var13Lifetime1 = SoftwareRaster.field_g[var10Lifetime1] & 255;
+              var10Lifetime1 = var2 + (var6 - 1) * pb.field_c;
+              var11Lifetime1 = (pb.field_g[var10Lifetime1] & 16711680) >> 16;
+              var12Lifetime1 = pb.field_g[var10Lifetime1] >> 8 & 255;
+              var13Lifetime1 = pb.field_g[var10Lifetime1] & 255;
               var14 = var8 * 64;
               var13Lifetime1 = (var13Lifetime1 * (256 - var8) + var14) / 256;
               var12Lifetime1 = (var14 + var12Lifetime1 * (256 - var8)) / 256;
               var11Lifetime1 = (var14 + var11Lifetime1 * (256 - var8)) / 256;
-              SoftwareRaster.field_g[var10Lifetime1] = vn.a(var13Lifetime1, vn.a(var11Lifetime1 << 16, var12Lifetime1 << 8));
-              var10Lifetime1Lifetime1 = var2 + SoftwareRaster.field_c * var7;
-              var13Lifetime1Lifetime1 = 255 & SoftwareRaster.field_g[var10Lifetime1Lifetime1];
+              pb.field_g[var10Lifetime1] = vn.a(var13Lifetime1, vn.a(var11Lifetime1 << 16, var12Lifetime1 << 8));
+              var10Lifetime1Lifetime1 = var2 + pb.field_c * var7;
+              var13Lifetime1Lifetime1 = 255 & pb.field_g[var10Lifetime1Lifetime1];
               var14Lifetime1 = 16384 - var8 * 64;
-              var12Lifetime1Lifetime1 = SoftwareRaster.field_g[var10Lifetime1Lifetime1] >> 8 & 255;
-              var11Lifetime1Lifetime1 = (SoftwareRaster.field_g[var10Lifetime1Lifetime1] & 16711680) >> 16;
+              var12Lifetime1Lifetime1 = pb.field_g[var10Lifetime1Lifetime1] >> 8 & 255;
+              var11Lifetime1Lifetime1 = (pb.field_g[var10Lifetime1Lifetime1] & 16711680) >> 16;
               var11Lifetime1Lifetime1 = (var11Lifetime1Lifetime1 * var8 + var14Lifetime1) / 256;
               var13Lifetime1Lifetime1 = (var13Lifetime1Lifetime1 * var8 + var14Lifetime1) / 256;
               var12Lifetime1Lifetime1 = (var8 * var12Lifetime1Lifetime1 + var14Lifetime1) / 256;
-              SoftwareRaster.field_g[var10Lifetime1Lifetime1] = vn.a(vn.a(var12Lifetime1Lifetime1 << 8, var11Lifetime1Lifetime1 << 16), var13Lifetime1Lifetime1);
+              pb.field_g[var10Lifetime1Lifetime1] = vn.a(vn.a(var12Lifetime1Lifetime1 << 8, var11Lifetime1Lifetime1 << 16), var13Lifetime1Lifetime1);
             }
           }
           stackIn_17_0 = var1_int;
@@ -476,7 +476,7 @@ final class sj extends we {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
-        var8 = SteelSentinels.obfuscationControl;
+        var8 = SteelSentinels.field_G;
         try {
           if (this.field_N &&
             param4) {

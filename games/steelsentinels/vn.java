@@ -61,14 +61,14 @@ final class vn extends v implements fd, aa {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_intLifetime1;
-        var2 = SteelSentinels.obfuscationControl;
+        var2 = SteelSentinels.field_G;
         try {
           hm.field_a = null;
           gd.field_jb = null;
           vd.field_a = null;
           bi.field_f = null;
           kf.field_s = true;
-          GameApplet.field_l = true;
+          lg.field_l = true;
           rh.field_u = null;
           kk.field_a = null;
           for (var1_int = 0; wc.field_h.length > var1_int; var1_int++) {
@@ -117,7 +117,7 @@ final class vn extends v implements fd, aa {
 
     final static String a(char param0, int param1, int param2) {
         int var4 = 0;
-        int var5 = SteelSentinels.obfuscationControl;
+        int var5 = SteelSentinels.field_G;
         char[] var6 = new char[param2];
         char[] var3 = var6;
         for (var4 = 0; param2 > var4; var4++) {
@@ -154,21 +154,21 @@ final class vn extends v implements fd, aa {
           var4 = this.field_n.h((byte) 79);
           var5 = rg.d(param0 ^ 31644);
           if (var4 < 1890) {
-            stackIn_2_0 = ArchiveProvider.field_d;
+            stackIn_2_0 = fa.field_d;
             return stackIn_2_0;
           }
           if (var4 > -3 + var5) {
-            stackIn_6_0 = ArchiveProvider.field_d;
+            stackIn_6_0 = fa.field_d;
             return stackIn_6_0;
           }
           if (!oh.a(var4, true, var2_int, var3)) {
-            stackIn_10_0 = ArchiveProvider.field_d;
+            stackIn_10_0 = fa.field_d;
             return stackIn_10_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
-          return ArchiveProvider.field_d;
+          return fa.field_d;
         }
         if (param0 == -31992) {
           return vf.field_b;

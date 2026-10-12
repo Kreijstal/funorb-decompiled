@@ -3,7 +3,7 @@
  */
 final class ml {
     static tg field_g;
-    static IndexedSprite[] field_c;
+    static gk[] field_c;
     static fm field_b;
     static int field_e;
     static int[] field_f;
@@ -15,15 +15,15 @@ final class ml {
         ud var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         try {
           if (param0 > -29) {
             return;
           }
-          var4 = (ud) (uf.field_f.first(13058));
+          var4 = (ud) (uf.field_f.e(13058));
           while (var4 != null) {
             r.a(27153, var4, param1);
-            var4 = (ud) (uf.field_f.next((byte) -36));
+            var4 = (ud) (uf.field_f.a((byte) -36));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -34,22 +34,22 @@ final class ml {
     }
 
     final static void a(int param0, cf param1, int param2) {
-        CipherPacketBuffer var3 = null;
+        kj var3 = null;
         int var4 = 0;
         try {
           var3 = mm.field_g;
-          var3.writeCipheredOpcode(param2, (byte) -117);
-          var3.position = var3.position + 1;
-          var4 = var3.position;
-          var3.writeByte((byte) 117, param0);
-          var3.writeByte((byte) 114, param1.field_r);
-          var3.writeByte((byte) 121, param1.field_B);
-          var3.writeInt(true, param1.field_C);
-          var3.writeInt(true, param1.field_E);
-          var3.writeInt(true, param1.field_z);
-          var3.writeInt(true, param1.field_y);
+          var3.a(param2, (byte) -117);
+          var3.field_p = var3.field_p + 1;
+          var4 = var3.field_p;
+          var3.a((byte) 117, param0);
+          var3.a((byte) 114, param1.field_r);
+          var3.a((byte) 121, param1.field_B);
+          var3.b(true, param1.field_C);
+          var3.b(true, param1.field_E);
+          var3.b(true, param1.field_z);
+          var3.b(true, param1.field_y);
           var3.f(-72, var4);
-          var3.b((byte) -115, var3.position - var4);
+          var3.b((byte) -115, var3.field_p - var4);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ml.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -77,18 +77,18 @@ final class ml {
     }
 
     final static void a(byte param0, int param1) {
-        CipherPacketBuffer var2 = mm.field_g;
+        kj var2 = mm.field_g;
         if (param0 == 12) {
-          var2.writeCipheredOpcode(param1, (byte) -117);
-          var2.writeByte((byte) 118, 1);
-          var2.writeByte((byte) 125, 3);
+          var2.a(param1, (byte) -117);
+          var2.a((byte) 118, 1);
+          var2.a((byte) 125, 3);
           return;
         }
         cf var3 = (cf) null;
         ml.a(-28, (cf) null, 56);
-        var2.writeCipheredOpcode(param1, (byte) -117);
-        var2.writeByte((byte) 118, 1);
-        var2.writeByte((byte) 125, 3);
+        var2.a(param1, (byte) -117);
+        var2.a((byte) 118, 1);
+        var2.a((byte) 125, 3);
     }
 
     static {

@@ -5,17 +5,17 @@ final class vc {
     int field_a;
     static String field_k;
     static boolean field_d;
-    static IndexedSprite[] field_b;
-    static SceneWidget field_h;
+    static gk[] field_b;
+    static gh field_h;
     static String field_l;
     int field_g;
     static int field_c;
-    static SceneWidget field_f;
+    static gh field_f;
     int field_i;
-    static RgbSprite[] field_e;
+    static wk[] field_e;
     int field_j;
 
-    final static void a(String param0, RgbSprite param1, boolean param2) {
+    final static void a(String param0, wk param1, boolean param2) {
         try {
           ij.field_P = param0;
           if (param2) {
@@ -52,7 +52,7 @@ final class vc {
     final static int a(byte param0) {
         int var1;
         int var2;
-        var2 = SteelSentinels.obfuscationControl;
+        var2 = SteelSentinels.field_G;
         var1 = di.field_g;
         if (var1 == 0) {
           return 90000;
@@ -75,7 +75,7 @@ final class vc {
         if (param0 == 32) {
           return -1;
         }
-        field_h = (SceneWidget) null;
+        field_h = (gh) null;
         return -1;
     }
 

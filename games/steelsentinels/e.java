@@ -35,7 +35,7 @@ final class e {
           }
           if (var2 != null) {
             var4 = (CharSequence) ((Object) var2);
-            if (SentinelDesigner.a(-92, var4) != 0L) {
+            if (ji.a(-92, var4) != 0L) {
               return;
             }
           }
@@ -64,7 +64,7 @@ final class e {
         int var2Lifetime1;
         int var2Lifetime2;
         int var2Lifetime3;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         if (param1 != 732) {
           return (byte) 29;
         }

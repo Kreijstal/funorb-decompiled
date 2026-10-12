@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dj {
-    static RgbSprite field_c;
+    static wk field_c;
     static String field_i;
     static String[] field_j;
     static String[][] field_g;
     static String field_a;
-    static SceneWidget field_d;
-    static SceneWidget field_b;
+    static gh field_d;
+    static gh field_b;
     static String[] field_f;
     int field_e;
     static int[] field_k;

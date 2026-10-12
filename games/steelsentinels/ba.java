@@ -4,7 +4,7 @@
 final class ba {
     static String field_a;
     static int field_c;
-    static RgbSprite field_e;
+    static wk field_e;
     static int field_b;
     static String field_f;
     static int[] field_d;
@@ -16,13 +16,13 @@ final class ba {
         }
         int var3 = -28 / ((35 - param0) / 54);
         if (ei.field_q == 102) {
-          IntKeyLookup.field_i.l(-128);
+          jk.field_i.l(-128);
           return true;
         }
-        if (IntKeyLookup.field_i == null) {
+        if (jk.field_i == null) {
           return false;
         }
-        if (IntKeyLookup.field_i.a(25542, param2, param1)) {
+        if (jk.field_i.a(25542, param2, param1)) {
           return true;
         }
         return false;
@@ -67,7 +67,7 @@ final class ba {
 
     final static boolean a(byte param0) {
         if (param0 != -57) {
-          field_e = (RgbSprite) null;
+          field_e = (wk) null;
           return ve.a(ge.field_m, 1, 25);
         }
         return ve.a(ge.field_m, 1, 25);

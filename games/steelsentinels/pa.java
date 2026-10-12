@@ -8,11 +8,11 @@ final class pa {
     static String field_j;
     static int field_e;
     static String field_i;
-    static RgbSprite[] field_g;
+    static wk[] field_g;
     static int field_b;
     static int field_c;
-    static ResourceArchive field_a;
-    static BitmapFont field_k;
+    static cm field_a;
+    static mi field_k;
 
     final static void a(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
@@ -56,7 +56,7 @@ final class pa {
           field_h = null;
           return;
         }
-        field_k = (BitmapFont) null;
+        field_k = (mi) null;
         field_j = null;
         field_k = null;
         field_g = null;
@@ -70,9 +70,9 @@ final class pa {
         if (param1 == null) {
           return;
         }
-        IntKeyLookup.field_i = param1;
-        qf.field_c.field_M.clear(6);
-        qf.field_c.a(IntKeyLookup.field_i, 127);
+        jk.field_i = param1;
+        qf.field_c.field_M.g(6);
+        qf.field_c.a(jk.field_i, 127);
         if (param0 != 12105) {
           return;
         }
@@ -85,7 +85,7 @@ final class pa {
 
     final static void a(int param0, byte param1, tc param2) {
         try {
-          ic.field_B.addLast(3, param2);
+          ic.field_B.a(3, param2);
           vh.a(param0, param2, (byte) 109);
           if (param1 > -24) {
             mg var4 = (mg) null;
@@ -96,7 +96,7 @@ final class pa {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
+    final static void a(cm param0, int param1, cm param2) {
         try {
           int var3_int = -47 / ((param1 - 53) / 45);
           rj.field_d = param2;

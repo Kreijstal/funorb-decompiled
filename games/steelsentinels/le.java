@@ -24,7 +24,7 @@ final class le extends bg {
         Exception var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         try {
           if (param2.field_b == null) {
             return;
@@ -69,7 +69,7 @@ final class le extends bg {
     }
 
     final static void a(byte param0, boolean param1) {
-        NodeDeque.field_g = hh.field_i;
+        ul.field_g = hh.field_i;
         ag.field_u = 0;
         ik.field_e = 0;
         lh.field_r = 0;

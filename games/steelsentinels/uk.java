@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class uk extends IntrusiveNode {
+final class uk extends ck {
     private static pj[] field_q;
     private static int[] field_S;
     private static wf[] field_O;
@@ -39,10 +39,10 @@ final class uk extends IntrusiveNode {
     private static byte[] field_B;
     private float[] field_D;
 
-    private final static boolean a(ResourceArchive param0) {
+    private final static boolean a(cm param0) {
         byte[] var1 = null;
         if (!field_t) {
-          var1 = param0.getFile(0, (byte) 71, 0);
+          var1 = param0.a(0, (byte) 71, 0);
           if (var1 == null) {
             return false;
           }
@@ -70,14 +70,14 @@ final class uk extends IntrusiveNode {
         field_z = null;
     }
 
-    final static uk a(ResourceArchive param0, int param1, int param2) {
+    final static uk a(cm param0, int param1, int param2) {
         try {
           uk var4_ref = null;
           if (!uk.a(param0)) {
             param0.a((byte) 86, param2, param1);
             return null;
           }
-          byte[] var3 = param0.getFile(param1, (byte) 67, param2);
+          byte[] var3 = param0.a(param1, (byte) 67, param2);
           if (var3 == null) {
             return null;
           }
@@ -452,16 +452,16 @@ final class uk extends IntrusiveNode {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        PacketBuffer var2 = new PacketBuffer(param0);
-        this.field_P = var2.readInt(0);
-        this.field_x = var2.readInt(0);
-        this.field_F = var2.readInt(0);
-        this.field_V = var2.readInt(0);
+        gi var2 = new gi(param0);
+        this.field_P = var2.i(0);
+        this.field_x = var2.i(0);
+        this.field_F = var2.i(0);
+        this.field_V = var2.i(0);
         if (this.field_V < 0) {
           this.field_V = ~this.field_V;
           this.field_L = true;
         }
-        int var3 = var2.readInt(0);
+        int var3 = var2.i(0);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -469,11 +469,11 @@ final class uk extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.readUnsignedByte((byte) -65);
+            var6_int = var2.f((byte) -65);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.readBytes(0, var6, 28, var5);
+          var2.a(0, var6, 28, var5);
           this.field_J[var4] = var6;
         }
     }
@@ -488,7 +488,7 @@ final class uk extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final static uk a(ResourceArchive param0, String param1, String param2) {
+    final static uk a(cm param0, String param1, String param2) {
         try {
           uk var4_ref = null;
           if (!uk.a(param0)) {

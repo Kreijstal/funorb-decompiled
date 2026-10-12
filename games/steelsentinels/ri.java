@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ri {
-    static NodeDeque field_c;
+    static ul field_c;
     static int[] field_a;
-    static Projectile field_b;
+    static wl field_b;
     static String field_d;
 
     final static boolean b(int param0) {
@@ -60,7 +60,7 @@ final class ri {
     final static boolean c(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 6995) {
-          field_b = (Projectile) null;
+          field_b = (wl) null;
         }
         stackIn_6_0 = (uj.field_d >= 10) && (13 <= nj.field_Q);
         return stackIn_6_0;
@@ -162,7 +162,7 @@ final class ri {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         try {
           var2_int = param1.length();
           var3 = new char[var2_int];
@@ -206,7 +206,7 @@ final class ri {
 
     static {
         field_a = new int[]{2, 20, 21, 6, 37, 45, 5, 13};
-        field_c = new NodeDeque();
+        field_c = new ul();
         field_d = "Spectating";
     }
 }

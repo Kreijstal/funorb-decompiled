@@ -15,7 +15,7 @@ class jf extends oa {
     private int field_bb;
     static String field_db;
     static int field_Z;
-    static RgbSprite field_kb;
+    static wk field_kb;
     static String field_gb;
     private long field_V;
     private long field_Y;
@@ -230,9 +230,9 @@ class jf extends oa {
     }
 
     final static void c(boolean param0) {
-        eb.a(0, IntKeyLookup.field_h, an.field_a, bd.field_f, od.field_g);
+        eb.a(0, jk.field_h, an.field_a, bd.field_f, od.field_g);
         if (!param0) {
-          field_kb = (RgbSprite) null;
+          field_kb = (wk) null;
         }
     }
 
@@ -240,7 +240,7 @@ class jf extends oa {
         int var2;
         int var3;
         int var4;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         var2 = this.field_y.length();
         if (this.field_fb == var2) {
           return this.field_fb;
@@ -409,7 +409,7 @@ class jf extends oa {
     private final int m(int param0) {
         int var2;
         int var3;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         if (param0 == this.field_fb) {
           return this.field_fb;
         }
@@ -541,7 +541,7 @@ class jf extends oa {
         int var7;
         int var8;
         eg var9;
-        var8 = SteelSentinels.obfuscationControl;
+        var8 = SteelSentinels.field_G;
         if (!this.field_ab) {
           this.field_u = 0;
           this.field_F = 0;

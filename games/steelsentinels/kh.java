@@ -5,13 +5,13 @@ final class kh extends cn {
     static String field_p;
     static int field_x;
     private int field_A;
-    static ArticulatedPart field_v;
+    static nk field_v;
     static long field_q;
     private int field_t;
     static int[] field_r;
-    private RgbSprite[] field_y;
+    private wk[] field_y;
     private int field_o;
-    static SceneWidget field_s;
+    static gh field_s;
     static String field_z;
     static ll field_w;
     static int[] field_u;
@@ -70,7 +70,7 @@ final class kh extends cn {
         }
     }
 
-    final static void a(SceneWidget param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8) {
+    final static void a(gh param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8) {
         int var11 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -79,36 +79,36 @@ final class kh extends cn {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var9 = null;
-        SceneWidget var10 = null;
+        gh var10 = null;
         int var12 = 0;
-        SceneWidget var13 = null;
-        var12 = SteelSentinels.obfuscationControl;
+        gh var13 = null;
+        var12 = SteelSentinels.field_G;
         try {
-          var13 = new SceneWidget((long)param3, field_s, param1);
+          var13 = new gh((long)param3, field_s, param1);
           if (!param8) {
             return;
           }
           var13.a(0, param4, 20, -7 + param7, 2 + param5 - param7);
           param0.a(var13, 122);
-          var10 = new SceneWidget((long)param3, (SceneWidget) null);
+          var10 = new gh((long)param3, (gh) null);
           var10.a(0, 1, 12, 22, -20 + (param5 - param7));
-          var10.field_Pb = new RgbSprite(var10.field_zb, var10.field_Lb);
+          var10.field_Pb = new wk(var10.field_zb, var10.field_Lb);
           var10.field_Pb.d();
-          SoftwareRaster.h(0, 0, var10.field_zb, var10.field_Lb, 1995681);
+          pb.h(0, 0, var10.field_zb, var10.field_Lb, 1995681);
           if (param2 > 0) {
             if (param2 <= param6) {
-              SoftwareRaster.a(2, 2, param2 * (-4 + var10.field_zb) / param6, -4 + var10.field_Lb, 1995681);
+              pb.a(2, 2, param2 * (-4 + var10.field_zb) / param6, -4 + var10.field_Lb, 1995681);
               if (param6 > 100 &&
                 param6 < 2000) {
                 for (var11 = 100; param6 > var11; var11 += 100) {
-                  SoftwareRaster.f(var11 * (var10.field_zb - 4) / param6 + 2, 2, var10.field_Lb - 4, 4473924, 96);
+                  pb.f(var11 * (var10.field_zb - 4) / param6 + 2, 2, var10.field_Lb - 4, 4473924, 96);
                 }
               }
             } else {
-              SoftwareRaster.a(2, 2, -4 + var10.field_zb, var10.field_Lb - 4, 5157841);
+              pb.a(2, 2, -4 + var10.field_zb, var10.field_Lb - 4, 5157841);
             }
           } else {
-            SoftwareRaster.h(0, 0, var10.field_zb, var10.field_Lb, 10367841);
+            pb.h(0, 0, var10.field_zb, var10.field_Lb, 10367841);
           }
           var13.a(var10, 121);
           sb.field_bb.b((byte) 121);
@@ -142,7 +142,7 @@ final class kh extends cn {
         field_s = null;
         if (param0 != 100) {
           String var2 = (String) null;
-          kh.a((SceneWidget) null, (String) null, 70, 81, -71, -99, -90, -116, false);
+          kh.a((gh) null, (String) null, 70, 81, -71, -99, -90, -116, false);
         }
         field_r = null;
     }

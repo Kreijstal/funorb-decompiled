@@ -32,7 +32,7 @@ final class ef {
         throw new IllegalStateException();
     }
 
-    final static int a(ArticulatedPart param0, int param1, int[] param2) {
+    final static int a(nk param0, int param1, int[] param2) {
         int var5 = 0;
         int stackIn_23_0 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -45,7 +45,7 @@ final class ef {
         RuntimeException var3 = null;
         int var4 = 0;
         int var6 = 0;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         try {
           var3_int = 0;
           var4 = param0.i(-110);
@@ -102,28 +102,28 @@ final class ef {
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
-        int var4 = SteelSentinels.obfuscationControl;
+        int var4 = SteelSentinels.field_G;
         int var3Lifetime1;
         try {
           var1_int = 1;
           for (var2 = 0; var2 < 30; var2++) {
-            if ((var1_int & Explosion.field_P) == 0) {
+            if ((var1_int & jb.field_P) == 0) {
             } else {
-              mm.field_g.writeCipheredOpcode(71, (byte) -117);
-              mm.field_g.writeByte((byte) 122, var2);
+              mm.field_g.a(71, (byte) -117);
+              mm.field_g.a((byte) 122, var2);
               if (var2 >= 10) {
-                mm.field_g.writeShort(jh.field_a[var2 - 10], 31);
+                mm.field_g.d(jh.field_a[var2 - 10], 31);
               } else {
-                mm.field_g.writeShort(0, 105);
+                mm.field_g.d(0, 105);
               }
               for (var3 = 0; var3 < 4; var3++) {
-                mm.field_g.writeInt(true, 0);
+                mm.field_g.b(true, 0);
               }
             }
             var1_int = var1_int << 1;
           }
           var3Lifetime1 = -70 / ((param0 - 40) / 32);
-          Explosion.field_P = 0;
+          jb.field_P = 0;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "ef.A(" + param0 + ')');
         }
@@ -134,7 +134,7 @@ final class ef {
         int var11 = 0;
         int stackIn_3_0 = 0;
         int stackIn_4_1 = 0;
-        SceneWidget stackIn_6_0;
+        gh stackIn_6_0;
         int stackIn_6_1;
         int stackIn_6_2;
         int stackIn_6_3;
@@ -148,21 +148,21 @@ final class ef {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        SceneWidget var7 = null;
+        gh var7 = null;
         int var7_int = 0;
         int var8 = 0;
-        SceneWidget var8_ref_gh = null;
+        gh var8_ref_gh = null;
         qh var9 = null;
         int var9_int = 0;
         int var10 = 0;
         qh var10_ref_qh = null;
         int var12 = 0;
         int var13 = 0;
-        SceneWidget var14 = null;
-        var13 = SteelSentinels.obfuscationControl;
+        gh var14 = null;
+        var13 = SteelSentinels.field_G;
         try {
-          sf.field_t = SoftwareRaster.field_j;
-          re.field_Z = SoftwareRaster.field_c;
+          sf.field_t = pb.field_j;
+          re.field_Z = pb.field_c;
           stackIn_3_0 = 61;
           if (param1) {
             stackIn_4_1 = bd.field_c;
@@ -183,7 +183,7 @@ final class ef {
           } else {
             stackIn_7_6 = 40 + (ua.field_G + 2) + 2;
           }
-          ((SceneWidget) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_6_5 - stackIn_7_6);
+          ((gh) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_6_5 - stackIn_7_6);
           ei.field_p.a(0, db.field_b + 2, 18, -2 + (m.field_i.field_zb - (ua.field_G + 40)), 42 + ua.field_G);
           gl.field_t.a(m.field_i.field_zb, -2048, ua.field_G, -2 + (-db.field_b + m.field_i.field_Lb) - 20, 2, 0, db.field_b + 22);
           mn.field_E.a(0, -40 + ql.field_ec.field_Lb, 40, 0, ql.field_ec.field_zb);
@@ -285,7 +285,7 @@ final class ef {
               }
             }
           }
-          fb.field_r.a(0, 10, -134 + (SoftwareRaster.field_j - 10), SoftwareRaster.field_c - 360 >> 1, 360);
+          fb.field_r.a(0, 10, -134 + (pb.field_j - 10), pb.field_c - 360 >> 1, 360);
           tf.field_a.a(0, 0, 24, 0, fb.field_r.field_zb);
           nd.field_a.a(0, 24, fb.field_r.field_Lb - 24, 0, fb.field_r.field_zb);
           nd.field_a.field_I = se.a(3, param0, 11579568, nd.field_a.field_Lb, 8421504, 13574);
@@ -304,7 +304,7 @@ final class ef {
         if (!mg.field_ac) {
           throw new IllegalStateException();
         }
-        IntrusiveNode.field_a = true;
+        ck.field_a = true;
         if (param0 != 12) {
           field_b = true;
         }

@@ -5,7 +5,7 @@ final class sa {
     static String field_a;
     static hg[] field_f;
     static String field_d;
-    static RgbSprite[] field_e;
+    static wk[] field_e;
     static int field_c;
     static String field_b;
 
@@ -26,31 +26,31 @@ final class sa {
           return ud.field_w;
         }
         if (null != ok.field_f) {
-          if (ok.field_f.ensureIndex(true)) {
+          if (ok.field_f.a(true)) {
             return nm.field_t;
           }
-          return IntKeyLookup.field_g;
+          return jk.field_g;
         }
         int var1 = -86 / ((69 - param0) / 47);
-        if (!ke.field_k.ensureIndex(true)) {
+        if (!ke.field_k.a(true)) {
           return ai.field_t;
         }
         if (!ke.field_k.a("commonui", (byte) 90)) {
           return en.field_f + " - " + ke.field_k.a((byte) 78, "commonui") + "%";
         }
-        if (!oe.field_d.ensureIndex(true)) {
+        if (!oe.field_d.a(true)) {
           return og.field_c;
         }
         if (!oe.field_d.a("commonui", (byte) 90)) {
           return kb.field_c + " - " + oe.field_d.a((byte) 103, "commonui") + "%";
         }
-        if (!id.field_bc.ensureIndex(true)) {
+        if (!id.field_bc.a(true)) {
           return sl.field_l;
         }
         if (!id.field_bc.a(25)) {
           return qj.field_i + " - " + id.field_bc.a((byte) -33) + "%";
         }
-        return GameApplet.field_a;
+        return lg.field_a;
     }
 
     final static String a(int param0, String param1, byte param2) {
@@ -105,7 +105,7 @@ final class sa {
             return stackIn_23_0;
           }
           if (11 == param0) {
-            stackIn_26_0 = db.a(FunOrbClient.field_y, -107, new String[]{param1});
+            stackIn_26_0 = db.a(n.field_y, -107, new String[]{param1});
             return stackIn_26_0;
           }
           if (param0 == 12) {
@@ -139,23 +139,23 @@ final class sa {
     final static void a(byte param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        CipherPacketBuffer var1 = null;
+        kj var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        var3 = SteelSentinels.obfuscationControl;
+        var3 = SteelSentinels.field_G;
         try {
           var1 = mm.field_g;
           if (param0 != -110) {
             return;
           }
-          while (PartInstruction.a(true)) {
-            var1.writeCipheredOpcode(8, (byte) -117);
-            fieldTemp$0 = var1.position + 1;
-            var1.position = var1.position + 1;
+          while (qd.a(true)) {
+            var1.a(8, (byte) -117);
+            fieldTemp$0 = var1.field_p + 1;
+            var1.field_p = var1.field_p + 1;
             var2 = fieldTemp$0;
             uj.a(true, var1);
-            mm.field_g.b((byte) -93, -var2 + var1.position);
+            mm.field_g.b((byte) -93, -var2 + var1.field_p);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

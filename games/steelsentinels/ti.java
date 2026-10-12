@@ -4,20 +4,20 @@
 import java.util.*;
 
 final class ti extends he implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
-    static ResourceArchive field_t;
+    static cm field_t;
     static int field_w;
     static mg field_m;
     static long field_p;
     static String field_o;
     static String[] field_A;
-    static ArticulatedPart field_B;
+    static nk field_B;
     static String field_r;
     static int[] field_n;
     static byte[] field_s;
     static volatile boolean field_x;
     static byte[] field_u;
     static String field_q;
-    static NodeDeque field_z;
+    static ul field_z;
     static int field_y;
     private java.awt.image.ImageConsumer field_l;
     private java.awt.image.ColorModel field_v;
@@ -130,8 +130,8 @@ final class ti extends he implements java.awt.image.ImageProducer, java.awt.imag
         if (fc.field_a != null) {
           fc.field_a.c();
         }
-        if (ResourceArchive.field_j != null) {
-          ResourceArchive.field_j.c();
+        if (cm.field_j != null) {
+          cm.field_j.c();
           if (param0 != 7094) {
             ti.b(-48);
             return;
@@ -197,6 +197,6 @@ final class ti extends he implements java.awt.image.ImageProducer, java.awt.imag
         field_u = new byte[]{(byte)2, (byte)3, (byte)6};
         field_o = "Wingslot";
         field_y = 200;
-        field_z = new NodeDeque();
+        field_z = new ul();
     }
 }

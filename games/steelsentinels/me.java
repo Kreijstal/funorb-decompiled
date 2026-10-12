@@ -21,7 +21,7 @@ abstract class me {
         field_g = null;
     }
 
-    abstract void a(PacketBuffer param0, boolean param1);
+    abstract void a(gi param0, boolean param1);
 
     final static int a(int param0, int param1) {
         int var2 = 0;

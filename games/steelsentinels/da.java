@@ -5,14 +5,14 @@ abstract class da {
     static String field_c;
     static boolean field_d;
     il[] field_h;
-    static RgbSprite[] field_e;
+    static wk[] field_e;
     static String field_a;
     static vi field_b;
-    static RgbSprite field_f;
+    static wk field_f;
     static String field_i;
     static int field_g;
 
-    final static boolean a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
+    final static boolean a(cm param0, cm param1, int param2, cm param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -23,11 +23,11 @@ abstract class da {
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.ensureIndex(true) &&
+          if (param0.a(true) &&
             param0.a("commonui", (byte) 90)) {
-            if (param3.ensureIndex(true) &&
+            if (param3.a(true) &&
               param3.a("commonui", (byte) 90)) {
-              if (param1.ensureIndex(true) &&
+              if (param1.a(true) &&
                 param1.a("button.gif", (byte) 90)) {
                 if (param2 == -1) {
                   return true;
@@ -71,7 +71,7 @@ abstract class da {
         il var6;
         int var7;
         int var8;
-        var8 = SteelSentinels.obfuscationControl;
+        var8 = SteelSentinels.field_G;
         if (null != this.field_h &&
           0 != this.field_h.length &&
           param2 >= this.field_h[0].field_h) {
@@ -99,17 +99,17 @@ abstract class da {
         return -1;
     }
 
-    final static void a(ResourceArchive param0, int param1, int param2, wg param3) {
+    final static void a(cm param0, int param1, int param2, wg param3) {
         try {
           if (param1 <= 67) {
             da.a(true, -102);
           }
           vc.field_c = param2 * sj.a((byte) -108) / 1000;
-          Sprite.a(param0, 1728986241);
+          ea.a(param0, 1728986241);
           nl.a((byte) 90, param0);
           ah.a(77, param0);
           lk.a(true);
-          CombatWorld.a(true);
+          ee.a(true);
           vn.field_h = 0 - vc.field_c;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "da.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -123,7 +123,7 @@ abstract class da {
         il var5;
         int var7;
         int var6;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         if (param0 != -100) {
           field_g = -5;
         }
@@ -158,7 +158,7 @@ abstract class da {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         try {
           if (null == db.field_h) {
             stackIn_3_0 = null;
@@ -208,10 +208,10 @@ abstract class da {
     final int b(int param0, int param1) {
         int var3 = 0;
         il var4 = null;
-        int var5 = SteelSentinels.obfuscationControl;
+        int var5 = SteelSentinels.field_G;
         if (param0 != -1) {
-          ResourceArchive var6 = (ResourceArchive) null;
-          da.a((ResourceArchive) null, (ResourceArchive) null, -88, (ResourceArchive) null);
+          cm var6 = (cm) null;
+          da.a((cm) null, (cm) null, -88, (cm) null);
         }
         for (var3 = 0; var3 < this.field_h.length; var3++) {
           var4 = this.field_h[var3];
@@ -251,7 +251,7 @@ abstract class da {
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var10 = SteelSentinels.obfuscationControl;
+        var10 = SteelSentinels.field_G;
         try {
           var5_int = 0;
           var6 = 0;
@@ -297,7 +297,7 @@ abstract class da {
     final int a(int param0, int param1) {
         int var4 = 0;
         il var5 = null;
-        int var6 = SteelSentinels.obfuscationControl;
+        int var6 = SteelSentinels.field_G;
         if (param0 != 1) {
           field_b = (vi) null;
         }
@@ -317,12 +317,12 @@ abstract class da {
         if (param1 != 25104) {
           return;
         }
-        if (NodeIterator.a(2)) {
+        if (jc.a(2)) {
           param0 = false;
         }
         bf.a((byte) -112, param0);
         if (di.field_b) {
-          SoftwareRaster.f(fg.field_Tb.field_d.field_Y, fg.field_Tb.field_d.field_eb, fg.field_Tb.field_d.field_zb, fg.field_Tb.field_d.field_Lb);
+          pb.f(fg.field_Tb.field_d.field_Y, fg.field_Tb.field_d.field_eb, fg.field_Tb.field_d.field_zb, fg.field_Tb.field_d.field_Lb);
           fg.field_Tb.field_d.a(param0, (byte) 127);
         }
         il.a(param0, (byte) -125);

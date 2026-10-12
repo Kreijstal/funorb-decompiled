@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tc extends IntrusiveNode {
+final class tc extends ck {
     static String field_s;
     static int[] field_B;
     int field_t;
@@ -34,9 +34,9 @@ final class tc extends IntrusiveNode {
         field_v = null;
     }
 
-    final static SceneWidget d(int param0) {
+    final static gh d(int param0) {
         if (param0 != 800) {
-          return (SceneWidget) null;
+          return (gh) null;
         }
         return eh.a(false);
     }
@@ -73,23 +73,23 @@ final class tc extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = null;
-        CipherPacketBuffer var2Lifetime1;
+        kj var2 = null;
+        kj var2Lifetime1;
         if (param0 == 87) {
           var2 = mm.field_g;
-          var2.writeCipheredOpcode(param1, (byte) -117);
-          var2.writeByte((byte) 124, 1);
-          var2.writeByte((byte) 112, 0);
+          var2.a(param1, (byte) -117);
+          var2.a((byte) 124, 1);
+          var2.a((byte) 112, 0);
           return;
         }
         field_r = (String) null;
         var2Lifetime1 = mm.field_g;
-        var2Lifetime1.writeCipheredOpcode(param1, (byte) -117);
-        var2Lifetime1.writeByte((byte) 124, 1);
-        var2Lifetime1.writeByte((byte) 112, 0);
+        var2Lifetime1.a(param1, (byte) -117);
+        var2Lifetime1.a((byte) 124, 1);
+        var2Lifetime1.a((byte) 112, 0);
     }
 
-    final static int a(int param0, BitmapFont param1, int param2, String param3, String[] param4) {
+    final static int a(int param0, mi param1, int param2, String param3, String[] param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -114,7 +114,7 @@ final class tc extends IntrusiveNode {
         int var12 = 0;
         int var13 = 0;
         int var6Lifetime1;
-        var13 = SteelSentinels.obfuscationControl;
+        var13 = SteelSentinels.field_G;
         try {
           var5_int = param1.c(param3);
           if (param0 >= var5_int &&

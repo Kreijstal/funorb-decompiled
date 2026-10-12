@@ -3,13 +3,13 @@
  */
 final class m {
     static String field_g;
-    static SceneWidget field_d;
+    static gh field_d;
     private int[] field_f;
     private byte[] field_e;
     private int[] field_c;
     static int[][] field_b;
     static String[] field_j;
-    static SceneWidget field_i;
+    static gh field_i;
     static boolean[] field_h;
     static int field_a;
 
@@ -134,10 +134,10 @@ final class m {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        int var21 = SteelSentinels.obfuscationControl;
+        int var21 = SteelSentinels.field_G;
         try {
           if (param2 != 7786) {
-            field_d = (SceneWidget) null;
+            field_d = (gh) null;
           }
           var6_int = 1021128;
           var7 = param1 - 6;
@@ -150,37 +150,37 @@ final class m {
             var6_int = 1044724;
             var11 = var7;
           }
-          SoftwareRaster.a(var8, var10, var11, var9, var6_int);
-          SoftwareRaster.h(param3, param5, param1, param0, 4408131);
-          SoftwareRaster.d(6100 * param1 / 12200 + param3, param5, param0, 4408131);
+          pb.a(var8, var10, var11, var9, var6_int);
+          pb.h(param3, param5, param1, param0, 4408131);
+          pb.d(6100 * param1 / 12200 + param3, param5, param0, 4408131);
           var12 = ej.field_C;
           var13 = param3 + param1 / 4;
           var14 = 6100 < param4 ? 4210752 : 1400960;
           for (var15_int = 0; var15_int < 2; var15_int++) {
-            SoftwareRaster.d(var13 - var7 / 4, -4 + param5, 3, var14);
-            SoftwareRaster.d(var7 / 4 + var13, -4 + param5, 3, var14);
-            SoftwareRaster.g(var13 - var7 / 4, -4 + param5, var7 / 2, var14);
-            SoftwareRaster.d(var13 - var7 / 4, param5 + (param0 + 1), 2, var14);
-            SoftwareRaster.d(var13 + var7 / 4, param5 + param0 + 1, 2, var14);
-            SoftwareRaster.g(var13 - var7 / 4, 3 + (param5 + param0), var7 / 2, var14);
+            pb.d(var13 - var7 / 4, -4 + param5, 3, var14);
+            pb.d(var7 / 4 + var13, -4 + param5, 3, var14);
+            pb.g(var13 - var7 / 4, -4 + param5, var7 / 2, var14);
+            pb.d(var13 - var7 / 4, param5 + (param0 + 1), 2, var14);
+            pb.d(var13 + var7 / 4, param5 + param0 + 1, 2, var14);
+            pb.g(var13 - var7 / 4, 3 + (param5 + param0), var7 / 2, var14);
             fk.field_d.a(var12, var13, -5 + param5, var14, -1);
             var14 = param4 > 6100 ? 1400960 : 4210752;
-            var12 = CachedArchiveProvider.field_z;
+            var12 = fi.field_z;
             var13 = var13 + param1 / 2;
           }
           if (oh.field_f >= param3 &&
             oh.field_f < param1 + param3 &&
             param5 <= pi.field_c &&
             pi.field_c < param0 + param5) {
-            var15 = 6100 < param4 ? CachedArchiveProvider.field_z : ej.field_C;
+            var15 = 6100 < param4 ? fi.field_z : ej.field_C;
             var16 = db.a(bf.field_zb, param2 - 7846, new String[]{Integer.toString(param4), var15});
             var17 = param3 + param1 / 2;
             var18 = param5 - 18;
             var19 = 8 + fk.field_d.c(var16);
             var20 = 13;
             var17 = var17 - var19 / 2;
-            SoftwareRaster.c(var17 - 4, var18, var19, var20, 0, 192);
-            SoftwareRaster.h(-4 + var17, var18, var19, var20, 1400960, 192);
+            pb.c(var17 - 4, var18, var19, var20, 0, 192);
+            pb.h(-4 + var17, var18, var19, var20, 1400960, 192);
             fk.field_d.b(var16, var17, var18 + 10, 41727, -1);
           }
         } catch (RuntimeException runtimeException) {
@@ -227,7 +227,7 @@ final class m {
         int var10Lifetime5;
         int var10Lifetime6;
         int var10Lifetime7;
-        var11 = SteelSentinels.obfuscationControl;
+        var11 = SteelSentinels.field_G;
         try {
           if (param1 == 0) {
             stackIn_3_0 = 0;
@@ -240,7 +240,7 @@ final class m {
           param1 = param1 + param3;
           var7_int = 0;
           var8 = param5;
-          scanLoop1: while (true) {
+          L2: while (true) {
             var9 = param4[var8];
             if (var9 >= 0) {
               var7_int++;
@@ -254,7 +254,7 @@ final class m {
               param3++;
               param0[incrementValue$1] = (byte)(~var10);
               if (param1 <= param3) {
-                break scanLoop1;
+                break L2;
               }
               var7_int = 0;
             }
@@ -270,7 +270,7 @@ final class m {
               param3++;
               param0[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param1 <= param3) {
-                break scanLoop1;
+                break L2;
               }
               var7_int = 0;
             }
@@ -286,7 +286,7 @@ final class m {
               param3++;
               param0[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param3 >= param1) {
-                break scanLoop1;
+                break L2;
               }
               var7_int = 0;
             }
@@ -302,7 +302,7 @@ final class m {
               param3++;
               param0[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param1 <= param3) {
-                break scanLoop1;
+                break L2;
               }
               var7_int = 0;
             }
@@ -318,7 +318,7 @@ final class m {
               param3++;
               param0[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param1 <= param3) {
-                break scanLoop1;
+                break L2;
               }
               var7_int = 0;
             }
@@ -350,7 +350,7 @@ final class m {
               param3++;
               param0[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param3 >= param1) {
-                break scanLoop1;
+                break L2;
               }
               var7_int = 0;
             }
@@ -366,7 +366,7 @@ final class m {
               param3++;
               param0[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param3 >= param1) {
-                break scanLoop1;
+                break L2;
               }
               var7_int = 0;
             }
@@ -428,7 +428,7 @@ final class m {
         int var14 = 0;
         int var15 = 0;
         byte[] var16 = null;
-        var15 = SteelSentinels.obfuscationControl;
+        var15 = SteelSentinels.field_G;
         try {
           var7_int = 0;
           param5 = param5 + param4;

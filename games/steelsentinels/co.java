@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class co {
-    static RgbSprite[] field_d;
-    private ResourceArchive field_e;
-    private ResourceArchive field_b;
-    static SceneWidget field_c;
+    static wk[] field_d;
+    private cm field_e;
+    private cm field_b;
+    static gh field_c;
     static long field_f;
     private nc field_a;
 
@@ -42,16 +42,16 @@ final class co {
           return var3;
         }
         if (param1 >= 32768) {
-          var4 = this.field_e.getFile(0, (byte) 126, param1 & 32767);
+          var4 = this.field_e.a(0, (byte) 126, param1 & 32767);
         } else {
-          var4 = this.field_b.getFile(0, (byte) 40, param1);
+          var4 = this.field_b.a(0, (byte) 40, param1);
         }
         if (param0 != -13) {
           return (mn) null;
         }
         var3Lifetime1 = new mn();
         if (var4 != null) {
-          var3Lifetime1.a(106, new PacketBuffer(var4));
+          var3Lifetime1.a(106, new gi(var4));
         }
         if (param1 >= 32768) {
           var3Lifetime1.c((byte) -3);
@@ -73,7 +73,7 @@ final class co {
         RuntimeException var4_ref = null;
         ig var5 = null;
         byte[] var6 = null;
-        var7 = SteelSentinels.obfuscationControl;
+        var7 = SteelSentinels.field_G;
         try {
           if (param0 != -37) {
             co.a((byte) -53);
@@ -108,7 +108,7 @@ final class co {
         }
     }
 
-    co(int param0, ResourceArchive param1, ResourceArchive param2) {
+    co(int param0, cm param1, cm param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -121,12 +121,12 @@ final class co {
           this.field_b = param1;
           this.field_e = param2;
           if (this.field_b != null) {
-            this.field_b.getFileCapacity(true, 0);
+            this.field_b.a(true, 0);
           }
           if (null == this.field_e) {
             return;
           }
-          this.field_e.getFileCapacity(true, 0);
+          this.field_e.a(true, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

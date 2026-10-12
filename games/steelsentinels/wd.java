@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wd {
-    static RgbSprite[] field_a;
+    static wk[] field_a;
 
     final static int a(String param0, byte param1, boolean param2) {
         RuntimeException var3 = null;
@@ -46,7 +46,7 @@ final class wd {
         }
     }
 
-    final static void a(PacketBuffer param0, boolean param1, hk param2, byte param3) {
+    final static void a(gi param0, boolean param1, hk param2, byte param3) {
         int var9 = 0;
         hk stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
@@ -75,15 +75,15 @@ final class wd {
         int var7 = 0;
         int var8 = 0;
         int var10 = 0;
-        var10 = SteelSentinels.obfuscationControl;
+        var10 = SteelSentinels.field_G;
         try {
           if (param1) {
-            param2.field_wc = param0.readUnsignedByte((byte) -124);
+            param2.field_wc = param0.f((byte) -124);
           }
           var4_int = 99 / ((-4 - param3) / 58);
-          param2.field_Ub = param0.readUnsignedByte((byte) -67);
-          param2.field_Nc = param0.readUnsignedByte((byte) -113);
-          var5 = param0.readUnsignedByte((byte) -66);
+          param2.field_Ub = param0.f((byte) -67);
+          param2.field_Nc = param0.f((byte) -113);
+          var5 = param0.f((byte) -66);
           stackIn_5_0 = (hk) (param2);
           stackIn_6_1 = ((128 & var5) != 0);
           stackIn_5_0.field_nc = stackIn_6_1;
@@ -108,22 +108,22 @@ final class wd {
           stackIn_21_0.field_cc = stackIn_22_1;
           stackIn_25_0 = ((4 & var5) == 0) ? 0 : 1;
           var6 = stackIn_25_0;
-          param0.readBytes(0, param2.field_Sb, 28, param2.field_Sb.length);
+          param0.a(0, param2.field_Sb, 28, param2.field_Sb.length);
           stackIn_28_0 = ((2 & var5) == 0) ? 0 : 1;
           var7 = stackIn_28_0;
-          param2.field_yc = param0.readUnsignedShort((byte) -60);
-          param2.field_Hc = mm.a(-93) - (long)param0.readInt(0);
+          param2.field_yc = param0.c((byte) -60);
+          param2.field_Hc = mm.a(-93) - (long)param0.i(0);
           if (var6 != 0) {
-            param2.field_Mc = param0.readInt(0);
+            param2.field_Mc = param0.i(0);
           } else {
             param2.field_Mc = -1;
           }
           param2.field_fc = param0.g((byte) -104);
-          var8 = param0.position;
+          var8 = param0.field_p;
           param2.field_Xb = param0.h(1);
           if (var7 != 0) {
             param2.field_hc = new String[param2.field_wc];
-            param0.position = var8;
+            param0.field_p = var8;
             for (var9 = 0; var9 < param2.field_wc; var9++) {
               param2.field_hc[var9] = param0.h(1);
             }
@@ -159,7 +159,7 @@ final class wd {
             return;
           }
           try {
-            hn.a("resizing", (byte) -41, Projectile.d((byte) -21), new Object[]{new Integer(param0)});
+            hn.a("resizing", (byte) -41, wl.d((byte) -21), new Object[]{new Integer(param0)});
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

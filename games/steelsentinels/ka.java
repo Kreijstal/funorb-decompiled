@@ -2,20 +2,20 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ka extends ug {
-    private NodeDeque field_T;
+    private ul field_T;
     static vd field_S;
     static long field_R;
     static int[][][] field_G;
     static boolean field_V;
-    static SceneWidget field_U;
+    static gh field_U;
 
     final void h(byte param0) {
-        int var4 = SteelSentinels.obfuscationControl;
-        NodeIterator var2 = new NodeIterator(this.field_T);
+        int var4 = SteelSentinels.field_G;
+        jc var2 = new jc(this.field_T);
         bb var3 = (bb) (var2.b(2));
         while (var3 != null) {
           if (var3.i(-8350)) {
-            var3.unlink(4);
+            var3.b(4);
           }
           var3 = (bb) (var2.d(2));
         }
@@ -26,10 +26,10 @@ final class ka extends ug {
     }
 
     final void h(int param0) {
-        int var4 = SteelSentinels.obfuscationControl;
-        NodeIterator var2 = new NodeIterator(this.field_T);
+        int var4 = SteelSentinels.field_G;
+        jc var2 = new jc(this.field_T);
         if (param0 < 119) {
-          this.field_T = (NodeDeque) null;
+          this.field_T = (ul) null;
         }
         bb var3 = (bb) (var2.b(2));
         while (var3 != null) {
@@ -42,10 +42,10 @@ final class ka extends ug {
     final static int a(String param0, boolean param1, int param2, byte param3, int param4, ik param5, ik param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
-        PacketBuffer stackIn_16_0 = null;
+        gi stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         String stackIn_17_2 = null;
-        PacketBuffer stackIn_19_0 = null;
+        gi stackIn_19_0 = null;
         int stackIn_19_1 = 0;
         String stackIn_20_2 = null;
         int stackIn_32_0 = 0;
@@ -78,7 +78,7 @@ final class ka extends ug {
         int var9Lifetime2;
         int var9Lifetime3;
         var16 = null;
-        var13 = SteelSentinels.obfuscationControl;
+        var13 = SteelSentinels.field_G;
         try {
           var15 = param5.a(2134230754);
           var8 = param6.a(2134230754);
@@ -88,12 +88,12 @@ final class ka extends ug {
             return stackIn_5_0;
           }
           if (lj.field_d == rn.field_v) {
-            mm.field_g.position = 0;
+            mm.field_g.field_p = 0;
             ma.field_bb = null;
             if (param0 == null) {
-              ne.field_y.position = 0;
-              ne.field_y.writeInt(true, rb.field_g.nextInt());
-              ne.field_y.writeInt(true, rb.field_g.nextInt());
+              ne.field_y.field_p = 0;
+              ne.field_y.b(true, rb.field_g.nextInt());
+              ne.field_y.b(true, rb.field_g.nextInt());
               stackIn_16_0 = ne.field_y;
               stackIn_16_1 = 13588;
               if (!param5.a((byte) 51)) {
@@ -101,7 +101,7 @@ final class ka extends ug {
               } else {
                 stackIn_17_2 = var15;
               }
-              ((PacketBuffer) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
+              ((gi) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
               stackIn_19_0 = ne.field_y;
               stackIn_19_1 = 13588;
               if (!param6.a((byte) 51)) {
@@ -109,52 +109,52 @@ final class ka extends ug {
               } else {
                 stackIn_20_2 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
-              mm.field_g.writeByte((byte) 127, 16);
-              mm.field_g.position = mm.field_g.position + 1;
-              var9 = mm.field_g.position;
+              ((gi) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
+              mm.field_g.a((byte) 127, 16);
+              mm.field_g.field_p = mm.field_g.field_p + 1;
+              var9 = mm.field_g.field_p;
               qi.a(jd.field_ib, ne.field_y, mm.field_g, qe.field_d, 5);
-              mm.field_g.b((byte) -32, -var9 + mm.field_g.position);
+              mm.field_g.b((byte) -32, -var9 + mm.field_g.field_p);
             } else {
               var9 = 0;
-              ne.field_y.position = 0;
+              ne.field_y.field_p = 0;
               if (param1) {
                 var9 = var9 | 1;
               }
-              ne.field_y.writeInt(true, rb.field_g.nextInt());
-              ne.field_y.writeInt(true, rb.field_g.nextInt());
+              ne.field_y.b(true, rb.field_g.nextInt());
+              ne.field_y.b(true, rb.field_g.nextInt());
               ne.field_y.a(13588, var15);
               ne.field_y.a(13588, var8);
               var17 = (CharSequence) ((Object) param0);
               ne.field_y.a(13588, pd.a(-105, var17));
-              ne.field_y.writeShort(param4, 104);
-              ne.field_y.writeByte((byte) 124, param2);
-              ne.field_y.writeByte((byte) 117, var9);
-              mm.field_g.writeByte((byte) 117, 18);
-              mm.field_g.position = mm.field_g.position + 2;
-              var10 = mm.field_g.position;
-              var11_ref_String = SceneWidget.a(-58, Projectile.d((byte) -21));
+              ne.field_y.d(param4, 104);
+              ne.field_y.a((byte) 124, param2);
+              ne.field_y.a((byte) 117, var9);
+              mm.field_g.a((byte) 117, 18);
+              mm.field_g.field_p = mm.field_g.field_p + 2;
+              var10 = mm.field_g.field_p;
+              var11_ref_String = gh.a(-58, wl.d((byte) -21));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               mm.field_g.a(var11_ref_String, -63);
               qi.a(jd.field_ib, ne.field_y, mm.field_g, qe.field_d, 5);
-              mm.field_g.c(30, -var10 + mm.field_g.position);
+              mm.field_g.c(30, -var10 + mm.field_g.field_p);
             }
             gj.a(0, -1);
             rn.field_v = mc.field_c;
           }
           if (mc.field_c == rn.field_v &&
             ve.a((byte) -96, 1)) {
-            var9Lifetime1 = rf.field_d.readUnsignedByte((byte) -62);
-            rf.field_d.position = 0;
+            var9Lifetime1 = rf.field_d.f((byte) -62);
+            rf.field_d.field_p = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               vh.field_d = new String[var9Lifetime1 - 100];
               rn.field_v = bl.field_k;
             } else {
               if (var9Lifetime1 == 248) {
-                bj.a(-117, Projectile.d((byte) -21));
+                bj.a(-117, wl.d((byte) -21));
                 di.field_e = ng.field_o;
                 pm.m(83);
                 ui.field_T = false;
@@ -164,7 +164,7 @@ final class ka extends ug {
               if (var9Lifetime1 == 99) {
                 ve.a((byte) -85, rf.a(-58));
                 ma.field_bb = new Boolean(ai.a(rf.field_d, -32599));
-                rf.field_d.position = 0;
+                rf.field_d.field_p = 0;
               } else {
                 rn.field_v = fg.field_Yb;
                 jg.field_f = -1;
@@ -179,8 +179,8 @@ final class ka extends ug {
           if (rn.field_v == bl.field_k) {
             var9Lifetime2 = 2;
             if (ve.a((byte) -128, var9Lifetime2)) {
-              var10Lifetime1 = rf.field_d.readUnsignedShort((byte) -60);
-              rf.field_d.position = 0;
+              var10Lifetime1 = rf.field_d.c((byte) -60);
+              rf.field_d.field_p = 0;
               if (ve.a((byte) -97, var10Lifetime1)) {
                 var11 = vh.field_d.length;
                 for (var12 = 0; var12 < var11; var12++) {
@@ -198,7 +198,7 @@ final class ka extends ug {
             if (ch.field_N == 255) {
               var9_ref_String = rf.field_d.g(-77);
               if (var9_ref_String != null) {
-                ri.a(var9_ref_String, Projectile.d((byte) -21), 124);
+                ri.a(var9_ref_String, wl.d((byte) -21), 124);
               }
             } else {
               di.field_e = rf.field_d.h(1);
@@ -213,7 +213,7 @@ final class ka extends ug {
               if (ki.l(150) <= 30000L) {
                 di.field_e = bc.field_mb;
               } else {
-                di.field_e = CipherPacketBuffer.field_E;
+                di.field_e = kj.field_E;
               }
               ui.field_T = false;
               stackIn_61_0 = 249;
@@ -253,11 +253,11 @@ final class ka extends ug {
     }
 
     final bb i(int param0) {
-        NodeIterator var2;
+        jc var2;
         bb var3;
         int var4;
-        var4 = SteelSentinels.obfuscationControl;
-        var2 = new NodeIterator(this.field_T);
+        var4 = SteelSentinels.field_G;
+        var2 = new jc(this.field_T);
         if (param0 != -1850) {
           field_R = -76L;
         }
@@ -297,14 +297,14 @@ final class ka extends ug {
     }
 
     final lh a(byte param0) {
-        NodeIterator var2;
+        jc var2;
         bb var3;
         int var4;
-        var4 = SteelSentinels.obfuscationControl;
+        var4 = SteelSentinels.field_G;
         if (param0 != -2) {
           field_R = 108L;
         }
-        var2 = new NodeIterator(this.field_T);
+        var2 = new jc(this.field_T);
         var3 = (bb) (var2.b(2));
         while (var3 != null) {
           if (var3.field_Q) {
@@ -316,11 +316,11 @@ final class ka extends ug {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        int var7 = SteelSentinels.obfuscationControl;
+        int var7 = SteelSentinels.field_G;
         if (null != this.field_p) {
           this.field_p.a(param2, (lh) (this), (byte) -30, true, param0);
         }
-        NodeIterator var5 = new NodeIterator(this.field_T);
+        jc var5 = new jc(this.field_T);
         lh var6 = (lh) (var5.c(2));
         while (var6 != null) {
           var6.a(this.field_z + param0, (byte) -109, param2 + this.field_o, param3);
@@ -332,21 +332,21 @@ final class ka extends ug {
     }
 
     final void g(byte param0) {
-        int var4 = SteelSentinels.obfuscationControl;
+        int var4 = SteelSentinels.field_G;
         if (param0 != 103) {
           return;
         }
-        NodeIterator var2 = new NodeIterator(this.field_T);
+        jc var2 = new jc(this.field_T);
         bb var3 = (bb) (var2.b(2));
         while (var3 != null) {
           if (var3.j(-102)) {
-            var3.unlink(param0 - 99);
+            var3.b(param0 - 99);
           }
           var3 = (bb) (var2.d(2));
         }
     }
 
-    final static String a(byte param0, String param1, String param2, ResourceArchive param3) {
+    final static String a(byte param0, String param1, String param2, cm param3) {
         RuntimeException var4 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;
@@ -362,7 +362,7 @@ final class ka extends ug {
           if (param0 > -13) {
             field_G = (int[][][]) null;
           }
-          if (param3.ensureIndex(true)) {
+          if (param3.a(true)) {
             stackIn_6_0 = param1 + " - " + param3.a((byte) -33) + "%";
             return stackIn_6_0;
           }
@@ -401,7 +401,7 @@ final class ka extends ug {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
         try {
-          if (CombatWorld.field_H.field_Eb != 0 &&
+          if (ee.field_H.field_Eb != 0 &&
             !fj.field_e) {
             if (!uc.field_g) {
               jn.field_g = true;
@@ -441,8 +441,8 @@ final class ka extends ug {
     }
 
     public ka() {
-        super(0, 0, IntrusiveNode.field_l, DualNode.field_u, (qk) null, (tn) null);
-        this.field_T = new NodeDeque();
+        super(0, 0, ck.field_l, kd.field_u, (qk) null, (tn) null);
+        this.field_T = new ul();
     }
 
     final static String[] a(char param0, boolean param1, String param2) {
@@ -461,7 +461,7 @@ final class ka extends ug {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = SteelSentinels.obfuscationControl;
+        var9 = SteelSentinels.field_G;
         try {
           if (param1) {
             ka.f((byte) 92);

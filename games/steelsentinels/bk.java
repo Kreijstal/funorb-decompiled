@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bk extends lh {
-    private RgbSprite field_Y;
+    private wk field_Y;
     private int field_S;
-    private RgbSprite field_K;
+    private wk field_K;
     private int field_V;
-    private RgbSprite[] field_R;
+    private wk[] field_R;
     boolean field_N;
     private int field_G;
     static fm field_M;
     private int field_T;
-    private RgbSprite field_L;
+    private wk field_L;
     private int field_Q;
     int field_I;
     static String field_X;
@@ -67,8 +67,8 @@ final class bk extends lh {
         super.a(param0, (byte) -108, param2, param3, param4);
         this.f(-85);
         if (param1 > -71) {
-          RgbSprite var7 = (RgbSprite) null;
-          this.a(13, (byte) 41, 96, (RgbSprite) null);
+          wk var7 = (wk) null;
+          this.a(13, (byte) 41, 96, (wk) null);
         }
     }
 
@@ -103,7 +103,7 @@ final class bk extends lh {
         }
     }
 
-    private final RgbSprite a(int param0, int param1, int param2) {
+    private final wk a(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -111,8 +111,8 @@ final class bk extends lh {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = SteelSentinels.obfuscationControl;
-        RgbSprite var14 = new RgbSprite(2 * this.field_T, this.field_E);
+        int var13 = SteelSentinels.field_G;
+        wk var14 = new wk(2 * this.field_T, this.field_E);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
@@ -128,19 +128,19 @@ final class bk extends lh {
           var10 = var6 - var5;
           var11 = (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0) + 128;
           var12 = 256 > var11 ? (16711680 & var11 * var9 | -16711936 & var11 * var8) >>> 8 : var8 | var9;
-          SoftwareRaster.g(var7, var6, this.field_T, var12);
-          SoftwareRaster.g(var7 - 2 * this.field_T, var6, this.field_T, var12);
+          pb.g(var7, var6, this.field_T, var12);
+          pb.g(var7 - 2 * this.field_T, var6, this.field_T, var12);
           var9Lifetime1 = 65280 & param0;
           var8Lifetime1 = 16711935 & param0;
           var12Lifetime1 = var11 >= 256 ? var8Lifetime1 | var9Lifetime1 : (16711680 & var11 * var9Lifetime1 | var8Lifetime1 * var11 & -16711936) >>> 8;
-          SoftwareRaster.g(var7 + this.field_T, var6, this.field_T, var12Lifetime1);
-          SoftwareRaster.g(-this.field_T + var7, var6, this.field_T, var12Lifetime1);
+          pb.g(var7 + this.field_T, var6, this.field_T, var12Lifetime1);
+          pb.g(-this.field_T + var7, var6, this.field_T, var12Lifetime1);
         }
         tk.$cfr$intArgs$f$20d51497949f(107);
         return var14;
     }
 
-    private final void a(int param0, byte param1, int param2, RgbSprite param3) {
+    private final void a(int param0, byte param1, int param2, wk param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -150,7 +150,7 @@ final class bk extends lh {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = SteelSentinels.obfuscationControl;
+        var8 = SteelSentinels.field_G;
         try {
           var5_int = this.field_x + param0;
           fe.a(this.field_L.field_A + param0, param2, 86, -this.field_L.field_A + var5_int, this.field_E + param2);
@@ -163,7 +163,7 @@ final class bk extends lh {
             var6 = var6 + param3.field_A;
           }
           tk.$cfr$intArgs$f$20d51497949f(113);
-          if (this.field_L.field_A + param0 >= SoftwareRaster.field_i) {
+          if (this.field_L.field_A + param0 >= pb.field_i) {
             q.a(this.field_Y, (byte) -75);
             param3.a(-this.field_G, 0);
             param3.a(2 * this.field_T - this.field_G, 0);
@@ -171,7 +171,7 @@ final class bk extends lh {
             tk.$cfr$intArgs$f$20d51497949f(107);
             this.field_Y.a(param0, param2);
           }
-          if (SoftwareRaster.field_b >= var5_int - this.field_L.field_A) {
+          if (pb.field_b >= var5_int - this.field_L.field_A) {
             q.a(this.field_Y, (byte) -63);
             for (var7 = -this.field_L.field_A + (this.field_x + this.field_G); 2 * this.field_T < var7; var7 = var7 - 2 * this.field_T) {
             }
@@ -219,7 +219,7 @@ final class bk extends lh {
         int var3Lifetime1;
         int var4Lifetime1;
         int var5Lifetime1;
-        var6 = SteelSentinels.obfuscationControl;
+        var6 = SteelSentinels.field_G;
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
@@ -296,53 +296,53 @@ final class bk extends lh {
     }
 
     private final void f(int param0) {
-        this.field_R = new RgbSprite[]{this.a(this.field_J, 18634, this.field_V), this.a(this.field_Q, 18634, this.field_S)};
+        this.field_R = new wk[]{this.a(this.field_J, 18634, this.field_V), this.a(this.field_Q, 18634, this.field_S)};
         if (param0 > -66) {
           return;
         }
         this.field_L = this.a((byte) -127);
         this.field_K = this.field_L.a();
-        this.field_Y = new RgbSprite(this.field_E >> 1, this.field_E);
+        this.field_Y = new wk(this.field_E >> 1, this.field_E);
     }
 
-    final static void a(ResourceArchive param0, byte param1, BitmapFont param2) {
+    final static void a(cm param0, byte param1, mi param2) {
         int var6 = 0;
         int var7 = 0;
         int[] var16 = null;
         int var9 = 0;
-        int var10 = SteelSentinels.obfuscationControl;
+        int var10 = SteelSentinels.field_G;
         int var3_int = dh.field_D;
-        qf.field_c = new SceneWidget(0L, (SceneWidget) null);
+        qf.field_c = new gh(0L, (gh) null);
         int var4 = -124 / ((param1 + 78) / 32);
         if (param0 == null) {
           sj.a("QC1", -29, (Throwable) null);
           return;
         }
-        param0.fileRetentionMode = 0;
-        param0.discardPackedGroups = false;
+        param0.field_d = 0;
+        param0.field_f = false;
         cd.field_e = new co(var3_int, param0, param0);
-        ArchiveIndex.field_w = new oe(var3_int, param0, param0, new kb());
-        mn var5 = NodeDeque.d(0);
+        jl.field_w = new oe(var3_int, param0, param0, new kb());
+        mn var5 = ul.d(0);
         if (var5 == null) {
           sj.a("QC2", -49, (Throwable) null);
           return;
         }
         try {
           fc.a(var5, 101);
-          pg.field_u = fm.a(65793, false, 2245737, 1127256, 65793, 4020342, 1513239, 0, 1513239, 5138823, 8947848, (BitmapFont) null, 65793);
-          Sprite.field_f = fm.a(0, false, 0, 0, 0, 0, 0, 16764006, 0, 0, 0, param2, 0);
+          pg.field_u = fm.a(65793, false, 2245737, 1127256, 65793, 4020342, 1513239, 0, 1513239, 5138823, 8947848, (mi) null, 65793);
+          ea.field_f = fm.a(0, false, 0, 0, 0, 0, 0, 16764006, 0, 0, 0, param2, 0);
           fb.field_l = fm.a(0, false, 0, 0, 0, 0, 0, 16777215, 0, 0, 0, param2, 0);
-          var6 = SoftwareRaster.field_c;
-          var7 = SoftwareRaster.field_j;
-          var16 = SoftwareRaster.field_g;
-          ik.field_g = new RgbSprite(10, 14);
+          var6 = pb.field_c;
+          var7 = pb.field_j;
+          var16 = pb.field_g;
+          ik.field_g = new wk(10, 14);
           ik.field_g.d();
           for (var9 = 2; var9 < 7; var9++) {
-            SoftwareRaster.d(var9, var9 + 1, 14 - (var9 << 1), 16777215);
+            pb.d(var9, var9 + 1, 14 - (var9 << 1), 16777215);
           }
-          SoftwareRaster.a(var16, var6, var7);
-          ti.field_m = sg.a(fb.field_l, var5, false, Sprite.field_f, pg.field_u);
-          qf.field_c.field_M = new NodeDeque();
+          pb.a(var16, var6, var7);
+          ti.field_m = sg.a(fb.field_l, var5, false, ea.field_f, pg.field_u);
+          qf.field_c.field_M = new ul();
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "bk.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -352,14 +352,14 @@ final class bk extends lh {
         this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 1, 8355711 & param6 >> 1);
     }
 
-    private final RgbSprite a(byte param0) {
+    private final wk a(byte param0) {
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
         int var9 = 0;
-        int var10 = SteelSentinels.obfuscationControl;
+        int var10 = SteelSentinels.field_G;
         int var2 = this.field_E >> 1;
-        RgbSprite var3 = new RgbSprite(var2, this.field_E);
+        wk var3 = new wk(var2, this.field_E);
         q.a(var3, (byte) -62);
         int var4 = -8 % ((param0 + 87) / 36);
         for (var5 = 0; var5 < this.field_E; var5++) {
@@ -370,7 +370,7 @@ final class bk extends lh {
               var7 = Math.sqrt(1.0 - var7);
               var9 = var7 >= 1.0 ? 255 : (int)(255.0 * var7);
             }
-            SoftwareRaster.b(var6, var5, var9 | var9 << 8 | var9 << 16);
+            pb.b(var6, var5, var9 | var9 << 8 | var9 << 16);
           }
         }
         tk.$cfr$intArgs$f$20d51497949f(108);

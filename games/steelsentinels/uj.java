@@ -6,7 +6,7 @@ import java.io.*;
 final class uj {
     static String field_h;
     static String field_c;
-    static SceneWidget field_e;
+    static gh field_e;
     static int field_d;
     static boolean field_f;
     static String field_k;
@@ -15,7 +15,7 @@ final class uj {
     static String field_b;
     static String field_l;
     static int[] field_i;
-    static SceneWidget field_j;
+    static gh field_j;
 
     final static int a(int param0, int param1) {
         int var2 = (param0 & 16760920) >> 16;
@@ -30,7 +30,7 @@ final class uj {
         return (var2 << 16) - (-(var3 << 8) - var4);
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, RgbSprite param6, int param7) {
+    final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, wk param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_43_0 = null;
@@ -45,42 +45,42 @@ final class uj {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        RgbSprite var20 = null;
-        RgbSprite var22 = null;
+        wk var20 = null;
+        wk var22 = null;
         int[] var23 = null;
         int[] var26 = null;
         int[] var30 = null;
         int[] var31 = null;
-        var19 = SteelSentinels.obfuscationControl;
+        var19 = SteelSentinels.field_G;
         try {
-          if (SoftwareRaster.field_i > param1) {
-            param7 = param7 - (-param1 + SoftwareRaster.field_i);
-            param1 = SoftwareRaster.field_i;
+          if (pb.field_i > param1) {
+            param7 = param7 - (-param1 + pb.field_i);
+            param1 = pb.field_i;
           }
-          if (SoftwareRaster.field_b < param7 + param1) {
-            param7 = SoftwareRaster.field_b - param1;
+          if (pb.field_b < param7 + param1) {
+            param7 = pb.field_b - param1;
           }
-          if (SoftwareRaster.field_l > param2) {
-            param4 = param4 - (SoftwareRaster.field_l - param2);
-            param2 = SoftwareRaster.field_l;
+          if (pb.field_l > param2) {
+            param4 = param4 - (pb.field_l - param2);
+            param2 = pb.field_l;
           }
-          if (param4 + param2 > SoftwareRaster.field_d) {
-            param4 = -param2 + SoftwareRaster.field_d;
+          if (param4 + param2 > pb.field_d) {
+            param4 = -param2 + pb.field_d;
           }
           if (param7 > 0 &&
             0 < param4) {
             var22 = param6.g();
             if (param3 > -16) {
-              var20 = (RgbSprite) null;
-              uj.a(-28, -57, -101, (byte) 67, 90, 52, (RgbSprite) null, -77);
+              var20 = (wk) null;
+              uj.a(-28, -57, -101, (byte) 67, 90, 52, (wk) null, -77);
             }
-            var31 = SoftwareRaster.field_g;
-            var10 = SoftwareRaster.field_c;
-            var11 = SoftwareRaster.field_j;
+            var31 = pb.field_g;
+            var10 = pb.field_c;
+            var11 = pb.field_j;
             var30 = new int[4];
-            SoftwareRaster.b(var30);
+            pb.b(var30);
             param6.d();
-            SoftwareRaster.h(var30[0], var30[1], var30[2], var30[3]);
+            pb.h(var30[0], var30[1], var30[2], var30[3]);
             var13 = param1 + param2 * param6.field_A;
             var14 = -param7 + param6.field_A;
             var26 = var22.field_E;
@@ -97,15 +97,15 @@ final class uj {
                   var15[1 + var13] == 0 ||
                   !(var16 >= param6.field_F - 1) &&
                   var15[var13 + param6.field_A] == 0)) {
-                  SoftwareRaster.e(var17, var16, param0, param5);
+                  pb.e(var17, var16, param0, param5);
                 }
                 var13++;
               }
               var13 = var13 + var14;
             }
             var22.a(-param6.field_D, -param6.field_H);
-            SoftwareRaster.a(var31, var10, var11);
-            SoftwareRaster.a(var30);
+            pb.a(var31, var10, var11);
+            pb.a(var30);
             return;
           }
           return;
@@ -139,7 +139,7 @@ final class uj {
         field_i = null;
     }
 
-    final static void a(boolean param0, CipherPacketBuffer param1) {
+    final static void a(boolean param0, kj param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -186,9 +186,9 @@ final class uj {
           var16 = null;
           var21 = null;
           var22 = null;
-          var12 = SteelSentinels.obfuscationControl;
+          var12 = SteelSentinels.field_G;
           try {
-            var13 = (ua) (rg.field_d.first(13058));
+            var13 = (ua) (rg.field_d.e(13058));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -215,31 +215,31 @@ final class uj {
             if (var3 != 0) {
               return;
             }
-            var4 = param1.position;
-            param1.writeInt(param0, var17.field_q);
+            var4 = param1.field_p;
+            param1.b(param0, var17.field_q);
             for (var5 = 0; var17.field_B > var5; var5++) {
               if (var17.field_A[var5] != 0) {
-                param1.writeByte((byte) 116, var17.field_A[var5]);
+                param1.a((byte) 116, var17.field_A[var5]);
               } else {
                 try {
                   var6_int = var17.field_s[var5];
                   if (var6_int == 0) {
                     var15 = (java.lang.reflect.Field) (var17.field_y[var5].field_c);
                     var8 = var15.getInt((Object) null);
-                    param1.writeByte((byte) 124, 0);
-                    param1.writeInt(true, var8);
+                    param1.a((byte) 124, 0);
+                    param1.b(true, var8);
                   } else {
                     if (var6_int == 1) {
                       var16_ref = (java.lang.reflect.Field) (var17.field_y[var5].field_c);
                       var19 = var16_ref;
                       var19.setInt((Object) null, var17.field_w[var5]);
-                      param1.writeByte((byte) 117, 0);
+                      param1.a((byte) 117, 0);
                     } else {
                       if (var6_int == 2) {
                         var26 = (java.lang.reflect.Field) (var17.field_y[var5].field_c);
                         var8 = var26.getModifiers();
-                        param1.writeByte((byte) 110, 0);
-                        param1.writeInt(true, var8);
+                        param1.a((byte) 110, 0);
+                        param1.b(true, var8);
                       }
                     }
                   }
@@ -253,77 +253,77 @@ final class uj {
                     }
                     var10 = var27.invoke((Object) null, var9);
                     if (var10 == null) {
-                      param1.writeByte((byte) 125, 0);
+                      param1.a((byte) 125, 0);
                     } else if (var10 instanceof Number) {
-                      param1.writeByte((byte) 120, 1);
+                      param1.a((byte) 120, 1);
                       param1.b(-28875, ((Number) (var10)).longValue());
                     } else if (!(var10 instanceof String)) {
-                      param1.writeByte((byte) 111, 4);
+                      param1.a((byte) 111, 4);
                     } else {
-                      param1.writeByte((byte) 108, 2);
+                      param1.a((byte) 108, 2);
                       param1.a((String) (var10), -120);
                     }
                   } else {
                     if (4 == var6_int) {
                       var28 = (java.lang.reflect.Method) (var17.field_K[var5].field_c);
                       var8Lifetime1 = var28.getModifiers();
-                      param1.writeByte((byte) 112, 0);
-                      param1.writeInt(true, var8Lifetime1);
+                      param1.a((byte) 112, 0);
+                      param1.b(true, var8Lifetime1);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                  param1.writeByte((byte) 116, -10);
+                  param1.a((byte) 116, -10);
                 } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var6_ref = (InvalidClassException) (Object) decompiledCaughtException;
-                  param1.writeByte((byte) 122, -11);
+                  param1.a((byte) 122, -11);
                 } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var6_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
-                  param1.writeByte((byte) 125, -12);
+                  param1.a((byte) 125, -12);
                 } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var6_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
-                  param1.writeByte((byte) 110, -13);
+                  param1.a((byte) 110, -13);
                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                   decompiledCaughtException = decompiledCaughtParameter4;
                   var6_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
-                  param1.writeByte((byte) 119, -14);
+                  param1.a((byte) 119, -14);
                 } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
                   decompiledCaughtException = decompiledCaughtParameter5;
                   var6_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
-                  param1.writeByte((byte) 127, -15);
+                  param1.a((byte) 127, -15);
                 } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
                   decompiledCaughtException = decompiledCaughtParameter6;
                   var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
-                  param1.writeByte((byte) 117, -16);
+                  param1.a((byte) 117, -16);
                 } catch (java.lang.SecurityException decompiledCaughtParameter7) {
                   decompiledCaughtException = decompiledCaughtParameter7;
                   var6_ref7 = (SecurityException) (Object) decompiledCaughtException;
-                  param1.writeByte((byte) 127, -17);
+                  param1.a((byte) 127, -17);
                 } catch (java.io.IOException decompiledCaughtParameter8) {
                   decompiledCaughtException = decompiledCaughtParameter8;
                   var6_ref8 = (IOException) (Object) decompiledCaughtException;
-                  param1.writeByte((byte) 117, -18);
+                  param1.a((byte) 117, -18);
                 } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
                   decompiledCaughtException = decompiledCaughtParameter9;
                   var6_ref9 = (NullPointerException) (Object) decompiledCaughtException;
-                  param1.writeByte((byte) 114, -19);
+                  param1.a((byte) 114, -19);
                 } catch (java.lang.Exception decompiledCaughtParameter10) {
                   decompiledCaughtException = decompiledCaughtParameter10;
                   var6_ref10 = (Exception) (Object) decompiledCaughtException;
-                  param1.writeByte((byte) 121, -20);
+                  param1.a((byte) 121, -20);
                 } catch (java.lang.Throwable decompiledCaughtParameter11) {
                   decompiledCaughtException = decompiledCaughtParameter11;
                   var6_ref11 = decompiledCaughtException;
-                  param1.writeByte((byte) 113, -21);
+                  param1.a((byte) 113, -21);
                 }
               }
             }
             param1.f(-127, var4);
-            var17.unlink(4);
+            var17.b(4);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -349,8 +349,8 @@ final class uj {
           250 - vc.field_c != vn.field_h) {
         }
         if (param0 != 29) {
-          RgbSprite var2 = (RgbSprite) null;
-          uj.a(17, 76, 105, (byte) 99, -38, -93, (RgbSprite) null, 68);
+          wk var2 = (wk) null;
+          uj.a(17, 76, 105, (byte) 99, -38, -93, (wk) null, 68);
         }
         vn.field_h = vn.field_h + 1;
     }

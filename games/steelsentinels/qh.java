@@ -3,13 +3,13 @@
  */
 import java.io.*;
 
-final class qh extends SceneWidget {
+final class qh extends gh {
     static boolean field_Wb;
     static String field_Vb;
-    SceneWidget field_Tb;
+    gh field_Tb;
     static int field_Yb;
     static ak field_Xb;
-    private SceneWidget field_Sb;
+    private gh field_Sb;
     static String field_Ub;
 
     final static int d(byte param0) {
@@ -21,7 +21,7 @@ final class qh extends SceneWidget {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          PacketBuffer var2 = null;
+          gi var2 = null;
           if (ne.field_N.field_f >= 4) {
             if (ne.field_N.field_t == -1) {
               return 3;
@@ -47,11 +47,11 @@ final class qh extends SceneWidget {
             }
             if (2 == wh.field_d) {
               nf.field_c = new sg((java.net.Socket) (ha.field_T.field_c), km.field_k);
-              var2 = new PacketBuffer(13);
+              var2 = new gi(13);
               s.a(var2, 12, jf.field_ib, rb.field_f, sh.field_a);
-              var2.writeByte((byte) 120, 15);
-              var2.writeInt(true, wn.field_g);
-              nf.field_c.a(13, var2.payload, -100, 0);
+              var2.a((byte) 120, 15);
+              var2.b(true, wn.field_g);
+              nf.field_c.a(13, var2.field_t, -100, 0);
               wh.field_d = wh.field_d + 1;
               na.field_f = 30000L + mm.a(-57);
             }
@@ -104,7 +104,7 @@ final class qh extends SceneWidget {
         char[] var2Lifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
-        var5 = SteelSentinels.obfuscationControl;
+        var5 = SteelSentinels.field_G;
         try {
           if (Character.isISOControl(param1)) {
             return false;
@@ -229,9 +229,9 @@ final class qh extends SceneWidget {
         int var29Lifetime1;
         int var30Lifetime1;
         int var31Lifetime1;
-        var32 = SteelSentinels.obfuscationControl;
+        var32 = SteelSentinels.field_G;
         try {
-          if (SoftwareRaster.field_g.length < 307200) {
+          if (pb.field_g.length < 307200) {
             return;
           }
           var5_int = param3;
@@ -310,7 +310,7 @@ final class qh extends SceneWidget {
             var30Lifetime1 = var30Lifetime1 - var25;
             var29Lifetime1 = var29Lifetime1 - var30Lifetime1;
             var28Lifetime1 -= 640;
-            Projectile.a(var31Lifetime1, var29Lifetime1, var17, var19, var26, var7, var27, var8, var9, var10, param0, var28Lifetime1, var5_int, var6);
+            wl.a(var31Lifetime1, var29Lifetime1, var17, var19, var26, var7, var27, var8, var9, var10, param0, var28Lifetime1, var5_int, var6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -328,7 +328,7 @@ final class qh extends SceneWidget {
         }
     }
 
-    qh(long param0, SceneWidget param1, SceneWidget param2, SceneWidget param3, RgbSprite param4, String param5) {
+    qh(long param0, gh param1, gh param2, gh param3, wk param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -345,12 +345,12 @@ final class qh extends SceneWidget {
         RuntimeException var8 = null;
         try {
           if (param4 != null) {
-            this.field_Sb = new SceneWidget(0L, param2);
+            this.field_Sb = new gh(0L, param2);
             this.field_Sb.field_Pb = param4;
             this.a(this.field_Sb, 119);
           }
           if (param5 != null) {
-            this.field_Tb = new SceneWidget(0L, param3, param5);
+            this.field_Tb = new gh(0L, param3, param5);
             this.a(this.field_Tb, 119);
             this.h(99);
           } else {
