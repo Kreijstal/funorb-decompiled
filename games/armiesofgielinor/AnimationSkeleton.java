@@ -3,7 +3,7 @@
  */
 final class AnimationSkeleton extends IntrusiveNode {
     int[] transformTypes;
-    static uv field_n;
+    static PcmStreamMixer field_n;
     int skeletonId;
     private boolean[] encodedTransformFlags;
     static String field_m;

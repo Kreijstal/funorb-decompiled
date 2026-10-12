@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mr extends rc {
+final class mr extends PcmPlayer {
     private int field_w;
     private javax.sound.sampled.SourceDataLine field_y;
     private byte[] field_z;
@@ -13,7 +13,7 @@ final class mr extends rc {
         int var2 = 0;
         int var3 = 0;
         int var1 = 256;
-        if (field_q) {
+        if (stereo) {
           var1 = var1 << 1;
         }
         for (var2 = 0; var2 < var1; var2++) {
@@ -28,7 +28,7 @@ final class mr extends rc {
     }
 
     final int h() {
-        return this.field_w - (this.field_y.available() >> (field_q ? 2 : 1));
+        return this.field_w - (this.field_y.available() >> (stereo ? 2 : 1));
     }
 
     final void e() {
@@ -75,9 +75,9 @@ final class mr extends rc {
         stackIn_16_0 = this;
         stackIn_16_1 = null;
         stackIn_16_2 = null;
-        stackIn_16_3 = (float)field_d;
+        stackIn_16_3 = (float)outputSampleRate;
         stackIn_16_4 = 16;
-        if (!field_q) {
+        if (!stereo) {
           stackIn_17_1 = null;
           stackIn_17_2 = null;
           stackIn_17_5 = 1;
@@ -88,7 +88,7 @@ final class mr extends rc {
         }
         this.field_x = new javax.sound.sampled.AudioFormat(stackIn_16_3, stackIn_16_4, stackIn_17_5, true, false);
         stackIn_19_1 = 256;
-        if (!field_q) {
+        if (!stereo) {
           stackIn_20_2 = 1;
         } else {
           stackIn_20_2 = 2;
@@ -102,7 +102,7 @@ final class mr extends rc {
         if (this.field_v) {
           this.field_y.close();
           this.field_y = null;
-          var1 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_x, this.field_w << (field_q ? 2 : 1));
+          var1 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_x, this.field_w << (stereo ? 2 : 1));
           this.field_y = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) var1)));
           this.field_y.open();
           this.field_y.start();
@@ -112,7 +112,7 @@ final class mr extends rc {
     final void b(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
         try {
-          var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_x, param0 << (field_q ? 2 : 1));
+          var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_x, param0 << (stereo ? 2 : 1));
           this.field_y = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) var2)));
           this.field_y.open();
           this.field_y.start();

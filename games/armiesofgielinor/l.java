@@ -7,7 +7,7 @@ final class l {
     static IndexedSprite[] activeStructureSprites;
     static CampaignMission activeCampaignMission;
     static String field_g;
-    static rc field_a;
+    static PcmPlayer field_a;
     static String field_d;
     static String field_f;
 

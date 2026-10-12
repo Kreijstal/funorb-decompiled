@@ -94,10 +94,10 @@ final class TileMetadata implements TaggedFieldReader {
 
     final static void a(java.awt.Component param0, int param1, PlatformTaskService param2, boolean param3, int param4, nm param5, int param6, int param7) {
         try {
-          rc.a(param7, param3, 10);
-          l.field_a = rc.a(param2, param0, 0, param6);
-          TextCursor.field_e = rc.a(param2, param0, 1, param1);
-          AnimationSkeleton.field_n = new uv();
+          PcmPlayer.a(param7, param3, 10);
+          l.field_a = PcmPlayer.a(param2, param0, 0, param6);
+          TextCursor.field_e = PcmPlayer.a(param2, param0, 1, param1);
+          AnimationSkeleton.field_n = new PcmStreamMixer();
           ku.field_K = param1;
           if (param4 >= -38) {
             field_a = (int[]) null;

@@ -7,7 +7,7 @@ final class rh implements Runnable {
     volatile boolean field_a;
     PlatformTaskService field_b;
     static int decodedPrivateMessageIdHigh16;
-    volatile rc[] field_d;
+    volatile PcmPlayer[] field_d;
     static String field_g;
 
     public static void a(int param0) {
@@ -17,7 +17,7 @@ final class rh implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        rc var2 = null;
+        PcmPlayer var2 = null;
         int var4 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
@@ -61,7 +61,7 @@ final class rh implements Runnable {
     }
 
     rh() {
-        this.field_d = new rc[2];
+        this.field_d = new PcmPlayer[2];
         this.field_f = false;
         this.field_a = false;
     }

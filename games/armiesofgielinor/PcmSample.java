@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PcmSample extends ow {
+final class PcmSample extends SoundData {
     byte[] samples;
     int sampleRate;
     int loopStart;

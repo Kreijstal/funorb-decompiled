@@ -158,7 +158,7 @@ final class wn extends ih {
         field_gb = null;
     }
 
-    final synchronized void b(int[] param0, int param1, int param2) {
+    final synchronized void render(int[] output, int outputOffset, int frameCount) {
         int var6 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_1 = 0;
@@ -176,13 +176,13 @@ final class wn extends ih {
         try {
           var4_int = this.i(4096);
           this.f(-87, this.field_ib * var4_int >> 8);
-          super.b(param0, param1, param2);
+          super.render(output, outputOffset, frameCount);
           if (!this.field_cb) {
             var5 = 1;
             for (var6 = 0; var6 < 16; var6++) {
               var7 = this.field_fb[var6];
               if (0 != var7) {
-                this.field_S[var6] = this.field_S[var6] + var7 * param2;
+                this.field_S[var6] = this.field_S[var6] + var7 * frameCount;
                 var8 = this.field_hb.field_a[var6];
                 stackIn_10_0 = (var7 <= 0) ? 0 : 1;
                 if (this.field_S[var6] >> 12 >= var8) {
@@ -210,12 +210,12 @@ final class wn extends ih {
           var4 = decompiledCaughtException;
           stackIn_25_0 = var4;
           stackIn_25_1 = new StringBuilder().append("wn.E(");
-          if (param0 == null) {
+          if (output == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(outputOffset).append(',').append(frameCount).append(')').toString());
         }
     }
 
@@ -317,7 +317,7 @@ final class wn extends ih {
     final synchronized void a(byte param0, int param1, vk param2) {
         int var4_int = 0;
         try {
-          var4_int = param1 * rc.field_d / 1000;
+          var4_int = param1 * PcmPlayer.outputSampleRate / 1000;
           int var5 = 58 / ((9 - param0) / 36);
           this.a(var4_int, param2, -20751);
         } catch (RuntimeException runtimeException) {

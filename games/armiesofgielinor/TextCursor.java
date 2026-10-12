@@ -5,7 +5,7 @@ final class TextCursor {
     static String field_g;
     static boolean field_f;
     private int length;
-    static rc field_e;
+    static PcmPlayer field_e;
     static int field_d;
     private String text;
     int position;

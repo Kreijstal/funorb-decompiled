@@ -61,7 +61,7 @@ final class jv {
           if (param3 <= 26) {
             field_b = (RgbSprite[]) null;
           }
-          stackIn_3_0 = MapTile.a(-92, aa.a(param0, 100, param2, param1));
+          stackIn_3_0 = MapTile.a(-92, RawPcmStream.createAtRateAndPan(param0, 100, param2, param1));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

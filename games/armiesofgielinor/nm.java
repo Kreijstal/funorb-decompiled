@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nm extends hn {
+final class nm extends PcmStream {
     static int field_z;
     private ih field_r;
     private boolean field_F;
@@ -22,7 +22,7 @@ final class nm extends hn {
     private int field_G;
     private um field_A;
 
-    final void b(int[] param0, int param1, int param2) {
+    final void render(int[] output, int outputOffset, int frameCount) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -46,7 +46,7 @@ final class nm extends hn {
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_x <= 0) {
-            this.a(param2);
+            this.skip(frameCount);
             return;
           }
           if (this.field_F) {
@@ -67,7 +67,7 @@ final class nm extends hn {
           var4_int = (this.field_G >> 12) * this.field_x / 256;
           var5 = -var4_int + this.field_x;
           if (this.field_C != 0) {
-            this.field_G = this.field_G + param2 * this.field_C;
+            this.field_G = this.field_G + frameCount * this.field_C;
             if (1048576 > this.field_G) {
               if (this.field_G <= 0) {
                 this.field_G = 0;
@@ -94,10 +94,10 @@ final class nm extends hn {
               }
             }
           }
-          if (!rc.field_q) {
-            stackIn_32_0 = param2;
+          if (!PcmPlayer.stereo) {
+            stackIn_32_0 = frameCount;
           } else {
-            stackIn_32_0 = param2 << 1;
+            stackIn_32_0 = frameCount << 1;
           }
           var6 = stackIn_32_0;
           if (this.field_v < 256 && (this.field_p != null ||
@@ -112,24 +112,24 @@ final class nm extends hn {
                   this.field_t = new int[var6];
                   this.field_E = new int[var6];
                 }
-                this.field_w.b(this.field_t, 0, param2);
-                this.field_D.b(this.field_E, 0, param2);
-                if (!rc.field_q) {
-                  stackIn_48_0 = param1;
+                this.field_w.render(this.field_t, 0, frameCount);
+                this.field_D.render(this.field_E, 0, frameCount);
+                if (!PcmPlayer.stereo) {
+                  stackIn_48_0 = outputOffset;
                 } else {
-                  localTemp$0 = param1 << 1;
-                  param1 = localTemp$0;
+                  localTemp$0 = outputOffset << 1;
+                  outputOffset = localTemp$0;
                   stackIn_48_0 = localTemp$0;
                 }
                 var7 = stackIn_48_0;
                 for (var8 = 0; var8 < var6; var8++) {
-                  param0[var7 + var8] = param0[var7 + var8] + (var5 * this.field_E[var8] + var4_int * this.field_t[var8] >> 8);
+                  output[var7 + var8] = output[var7 + var8] + (var5 * this.field_E[var8] + var4_int * this.field_t[var8] >> 8);
                 }
               } else {
-                this.field_D.b(param0, param1, param2);
+                this.field_D.render(output, outputOffset, frameCount);
               }
             } else {
-              this.field_w.b(param0, param1, param2);
+              this.field_w.render(output, outputOffset, frameCount);
             }
           }
           if (this.field_q != null) {
@@ -143,19 +143,19 @@ final class nm extends hn {
               this.field_E = new int[var6];
               this.field_t = new int[var6];
             }
-            this.field_r.b(this.field_t, 0, param2);
-            if (!rc.field_q) {
-              stackIn_62_0 = param1;
+            this.field_r.render(this.field_t, 0, frameCount);
+            if (!PcmPlayer.stereo) {
+              stackIn_62_0 = outputOffset;
             } else {
-              localTemp$1 = param1 << 1;
-              param1 = localTemp$1;
+              localTemp$1 = outputOffset << 1;
+              outputOffset = localTemp$1;
               stackIn_62_0 = localTemp$1;
             }
             var7Lifetime1 = stackIn_62_0;
             var8Lifetime1 = this.field_x * this.field_v / 256;
             var9 = -var8Lifetime1 + this.field_x;
             for (var10 = 0; var10 < var6; var10++) {
-              param0[var10 + var7Lifetime1] = param0[var10 + var7Lifetime1] * var9 + var8Lifetime1 * this.field_t[var10] >> 8;
+              output[var10 + var7Lifetime1] = output[var10 + var7Lifetime1] * var9 + var8Lifetime1 * this.field_t[var10] >> 8;
             }
           }
           return;
@@ -164,12 +164,12 @@ final class nm extends hn {
           var4 = decompiledCaughtException;
           stackIn_68_0 = var4;
           stackIn_68_1 = new StringBuilder().append("nm.E(");
-          if (param0 == null) {
+          if (output == null) {
             stackIn_69_2 = "null";
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(outputOffset).append(',').append(frameCount).append(')').toString());
         }
     }
 
@@ -217,7 +217,7 @@ final class nm extends hn {
         }
     }
 
-    final hn a() {
+    final PcmStream firstSubStream() {
         return null;
     }
 
@@ -228,20 +228,20 @@ final class nm extends hn {
         return param0 >= 0 ? true : false;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int frameCount) {
         int var3;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_G > 0 &&
           this.field_p != null) {
-          this.field_w.a(param0);
+          this.field_w.skip(frameCount);
         }
         if (this.field_G < 1048576 &&
           this.field_A != null) {
-          this.field_D.a(param0);
+          this.field_D.skip(frameCount);
         }
         if (this.field_v > 0 &&
           null != this.field_q) {
-          this.field_r.a(param0);
+          this.field_r.skip(frameCount);
         }
         if (this.field_F) {
           if (this.field_C > 0) {
@@ -267,7 +267,7 @@ final class nm extends hn {
           }
         }
         if (this.field_C != 0) {
-          this.field_G = this.field_G + this.field_C * param0;
+          this.field_G = this.field_G + this.field_C * frameCount;
           if (this.field_G < 1048576) {
             if (this.field_G <= 0) {
               this.field_G = 0;
@@ -406,7 +406,7 @@ final class nm extends hn {
         }
     }
 
-    final hn b() {
+    final PcmStream nextSubStream() {
         return null;
     }
 
@@ -415,7 +415,7 @@ final class nm extends hn {
         int var3 = 74 % ((param1 + 65) / 46);
     }
 
-    final synchronized int c() {
+    final synchronized int getSchedulingCost() {
         return 2;
     }
 

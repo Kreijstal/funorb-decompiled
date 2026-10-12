@@ -18,7 +18,7 @@ final class fq {
     static String field_k;
     int field_c;
 
-    final static uv a(int param0) {
+    final static PcmStreamMixer a(int param0) {
         if (param0 != 18757) {
           fq.a((byte) 23, -125L);
           return AnimationSkeleton.field_n;

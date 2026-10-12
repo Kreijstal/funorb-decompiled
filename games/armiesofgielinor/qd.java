@@ -72,7 +72,7 @@ final class qd extends tj implements nq, he {
 
     final static boolean a(String param0, String param1, boolean param2) {
         RuntimeException var3 = null;
-        uv var4 = null;
+        PcmStreamMixer var4 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -99,8 +99,8 @@ final class qd extends tj implements nq, he {
             return false;
           }
           if (param2) {
-            var4 = (uv) null;
-            qd.a((ResourceArchive) null, (byte) 120, (uv) null, -19);
+            var4 = (PcmStreamMixer) null;
+            qd.a((ResourceArchive) null, (byte) 120, (PcmStreamMixer) null, -19);
           }
           if (!Battlefield.a(param0, (byte) -26, param1)) {
             return true;
@@ -161,7 +161,7 @@ final class qd extends tj implements nq, he {
         }
     }
 
-    final static void a(ResourceArchive param0, byte param1, uv param2, int param3) {
+    final static void a(ResourceArchive param0, byte param1, PcmStreamMixer param2, int param3) {
         try {
           fw.field_C = DualNodeHashTable.getNominalTickRate(-74) * param3 / 1000;
           DualNodeDeque.a((byte) -124, param0);

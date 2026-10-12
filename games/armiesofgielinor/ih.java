@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ih extends hn {
+class ih extends PcmStream {
     private dw field_q;
     private int[] field_u;
     static int[] field_E;
@@ -224,13 +224,13 @@ class ih extends hn {
             var5 = (int)((long)this.field_W[param1.field_m] * (long)var6 >> 6);
             var4_int = var4_int << 8;
             if (var4_int <= var5) {
-              param1.field_K.a(true);
+              param1.field_K.setReverse(true);
               var5 = -var5 + var4_int + (var4_int - 1);
             }
           } else {
             var5 = (int)((long)this.field_W[param1.field_m] * (long)var4_int >> 6);
           }
-          param1.field_K.g(var5);
+          param1.field_K.setPosition(var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -246,7 +246,7 @@ class ih extends hn {
         }
     }
 
-    final synchronized hn b() {
+    final synchronized PcmStream nextSubStream() {
         return null;
     }
 
@@ -389,7 +389,7 @@ class ih extends hn {
         }
     }
 
-    synchronized void b(int[] param0, int param1, int param2) {
+    synchronized void render(int[] output, int outputOffset, int frameCount) {
         int var4_int = 0;
         long var5 = 0L;
         int var7 = 0;
@@ -402,39 +402,39 @@ class ih extends hn {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_q.g()) {
-            var4_int = this.field_U * this.field_q.field_c / rc.field_d;
+            var4_int = this.field_U * this.field_q.field_c / PcmPlayer.outputSampleRate;
             while (true) {
-              var5 = this.field_z + (long)param2 * (long)var4_int;
+              var5 = this.field_z + (long)frameCount * (long)var4_int;
               if (0L <= -var5 + this.field_Y) {
                 this.field_z = var5;
                 break;
               }
               var7 = (int)(((long)var4_int + (this.field_Y - (this.field_z + 1L))) / (long)var4_int);
               this.field_z = this.field_z + (long)var4_int * (long)var7;
-              this.field_Q.b(param0, param1, var7);
+              this.field_Q.render(output, outputOffset, var7);
               this.a((byte) 36);
-              param1 = param1 + var7;
-              param2 = param2 - var7;
+              outputOffset = outputOffset + var7;
+              frameCount = frameCount - var7;
               if (this.field_q.g()) {
                 continue;
               }
-              this.field_Q.b(param0, param1, param2);
+              this.field_Q.render(output, outputOffset, frameCount);
               return;
             }
           }
-          this.field_Q.b(param0, param1, param2);
+          this.field_Q.render(output, outputOffset, frameCount);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_11_0 = var4;
           stackIn_11_1 = new StringBuilder().append("ih.E(");
-          if (param0 == null) {
+          if (output == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(outputOffset).append(',').append(frameCount).append(')').toString());
         }
     }
 
@@ -554,7 +554,7 @@ class ih extends hn {
         return "Did that work?";
     }
 
-    final synchronized int c() {
+    final synchronized int getSchedulingCost() {
         return 0;
     }
 
@@ -623,7 +623,7 @@ class ih extends hn {
             var7 = Math.sin(0.01227184630308513 * (double)(param1.field_y & 511));
             var3_int = var3_int + (int)(var7 * (double)var5);
           }
-          var5Lifetime1 = (int)(0.5 + (double)(param1.field_q.sampleRate * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)rc.field_d);
+          var5Lifetime1 = (int)(0.5 + (double)(param1.field_q.sampleRate * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)PcmPlayer.outputSampleRate);
           stackIn_12_0 = (1 > var5Lifetime1) ? 1 : var5Lifetime1;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -640,8 +640,8 @@ class ih extends hn {
         }
     }
 
-    final synchronized hn a() {
-        return (hn) ((Object) this.field_Q);
+    final synchronized PcmStream firstSubStream() {
+        return (PcmStream) ((Object) this.field_Q);
     }
 
     final boolean a(int param0, int param1, mi param2, byte param3, int[] param4) {
@@ -659,9 +659,9 @@ class ih extends hn {
         int var11 = 0;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          param2.field_w = rc.field_d / 100;
+          param2.field_w = PcmPlayer.outputSampleRate / 100;
           if (0 <= param2.field_x && (param2.field_K == null ||
-            param2.field_K.i())) {
+            param2.field_K.isOutOfBounds())) {
             param2.e(13301);
             param2.unlink(-119);
             if (param2.field_F > 0 &&
@@ -679,7 +679,7 @@ class ih extends hn {
             }
             param2.field_n = var6_int;
           }
-          param2.field_K.e(this.a(1370206316, param2));
+          param2.field_K.setStepMagnitude(this.a(1370206316, param2));
           var7 = param2.field_v;
           param2.field_y = param2.field_y + var7.field_b;
           param2.field_I = param2.field_I + 1;
@@ -737,17 +737,17 @@ class ih extends hn {
             }
           }
           if (var8 == 0) {
-            param2.field_K.a(param2.field_w, this.a((byte) -110, param2), this.b((byte) 112, param2));
+            param2.field_K.rampVolumeAndPan(param2.field_w, this.a((byte) -110, param2), this.b((byte) 112, param2));
             return false;
           }
-          param2.field_K.h(param2.field_w);
+          param2.field_K.fadeOut(param2.field_w);
           if (param4 == null) {
-            param2.field_K.a(param0);
+            param2.field_K.skip(param0);
           } else {
-            param2.field_K.b(param4, param1, param0);
+            param2.field_K.render(param4, param1, param0);
           }
-          if (param2.field_K.e()) {
-            this.field_Q.field_s.a(param2.field_K);
+          if (param2.field_K.isRamping()) {
+            this.field_Q.field_s.addSubStream(param2.field_K);
           }
           param2.e(13301);
           if (param2.field_x >= 0) {
@@ -807,9 +807,9 @@ class ih extends hn {
           if (param1 < 0 ||
             param1 == var3.field_m) {
             if (null != var3.field_K) {
-              var3.field_K.h(rc.field_d / 100);
-              if (var3.field_K.e()) {
-                this.field_Q.field_s.a(var3.field_K);
+              var3.field_K.fadeOut(PcmPlayer.outputSampleRate / 100);
+              if (var3.field_K.isRamping()) {
+                this.field_Q.field_s.addSubStream(var3.field_K);
               }
               var3.e(13301);
             }
@@ -1058,7 +1058,7 @@ class ih extends hn {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int frameCount) {
         int var2;
         long var3;
         int var5;
@@ -1066,28 +1066,28 @@ class ih extends hn {
         boolean decompiledFrameCompleted0 = true;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_q.g()) {
-          var2 = this.field_q.field_c * this.field_U / rc.field_d;
+          var2 = this.field_q.field_c * this.field_U / PcmPlayer.outputSampleRate;
           while (true) {
-            var3 = this.field_z + (long)param0 * (long)var2;
+            var3 = this.field_z + (long)frameCount * (long)var2;
             if (-var3 + this.field_Y >= 0L) {
               this.field_z = var3;
               break;
             }
             var5 = (int)((-1L + ((long)var2 - this.field_z) + this.field_Y) / (long)var2);
             this.field_z = this.field_z + (long)var2 * (long)var5;
-            this.field_Q.a(var5);
-            param0 = param0 - var5;
+            this.field_Q.skip(var5);
+            frameCount = frameCount - var5;
             this.a((byte) 36);
             if (this.field_q.g()) {
               continue;
             }
-            this.field_Q.a(param0);
+            this.field_Q.skip(frameCount);
             decompiledFrameCompleted0 = false;
             break;
           }
         }
         if (decompiledFrameCompleted0) {
-          this.field_Q.a(param0);
+          this.field_Q.skip(frameCount);
         }
 
     }
@@ -1148,14 +1148,14 @@ class ih extends hn {
         var7.field_A = 0;
         var7.field_s = 0;
         if (this.field_W[param3] != 0) {
-          var7.field_K = aa.b(var6, this.a(1370206316, var7), 0, this.b((byte) -119, var7));
+          var7.field_K = RawPcmStream.createAtStep(var6, this.a(1370206316, var7), 0, this.b((byte) -119, var7));
           stackIn_16_1 = !(0 <= var12.field_r[param1]);
           this.a(stackIn_16_1, var7, param0 - 48);
         } else {
-          var7.field_K = aa.b(var6, this.a(1370206316, var7), this.a((byte) -110, var7), this.b((byte) -117, var7));
+          var7.field_K = RawPcmStream.createAtStep(var6, this.a(1370206316, var7), this.a((byte) -110, var7), this.b((byte) -117, var7));
         }
         if (0 > var12.field_r[param1]) {
-          var7.field_K.f(-1);
+          var7.field_K.setLoopCount(-1);
         }
         if (var7.field_F >= 0) {
           var8 = this.field_I[param3][var7.field_F];
@@ -1175,7 +1175,7 @@ class ih extends hn {
         try {
           this.a(param1, (byte) -113, true, param2);
           if (param0 != 2) {
-            this.a(-44);
+            this.skip(-44);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ih.S(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

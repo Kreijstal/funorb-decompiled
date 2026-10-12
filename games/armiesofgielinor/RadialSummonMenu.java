@@ -19,7 +19,7 @@ final class RadialSummonMenu {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 24) {
-            stackIn_4_0 = MapTile.a(-69, aa.a(param1, 100, 96));
+            stackIn_4_0 = MapTile.a(-69, RawPcmStream.createAtRate(param1, 100, 96));
             return stackIn_4_0;
           }
           stackIn_2_0 = (te) null;
@@ -289,7 +289,7 @@ final class RadialSummonMenu {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 24) {
-            stackIn_4_0 = MapTile.a(-69, aa.a(param1, 100, 96));
+            stackIn_4_0 = MapTile.a(-69, RawPcmStream.createAtRate(param1, 100, 96));
             return stackIn_4_0;
           }
           stackIn_2_0 = (te) null;

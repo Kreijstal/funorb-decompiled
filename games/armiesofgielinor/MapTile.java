@@ -28,7 +28,7 @@ final class MapTile implements TaggedFieldReader {
     final static void a(PlatformTaskService param0, Object param1, boolean param2) {
         int var3_int = 0;
         int var4 = 0;
-        aa var5 = null;
+        RawPcmStream var5 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -58,8 +58,8 @@ final class MapTile implements TaggedFieldReader {
             var3 = (Exception) (Object) decompiledCaughtException;
           }
           if (!param2) {
-            var5 = (aa) null;
-            MapTile.a(-21, (aa) null);
+            var5 = (RawPcmStream) null;
+            MapTile.a(-21, (RawPcmStream) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -653,7 +653,7 @@ final class MapTile implements TaggedFieldReader {
         }
     }
 
-    final static te a(int param0, aa param1) {
+    final static te a(int param0, RawPcmStream param1) {
         te var2 = null;
         RuntimeException var2_ref = null;
         te stackIn_2_0 = null;
@@ -669,7 +669,7 @@ final class MapTile implements TaggedFieldReader {
             stackIn_2_0 = (te) null;
             return stackIn_2_0;
           }
-          AnimationSkeleton.field_n.a(param1);
+          AnimationSkeleton.field_n.addSubStream(param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

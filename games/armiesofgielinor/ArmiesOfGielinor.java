@@ -1203,7 +1203,7 @@ public final class ArmiesOfGielinor extends wf {
           ih.f(-128);
           lt.b(-51);
           ev.a(960112080);
-          rc.g();
+          PcmPlayer.g();
           NodeHashTable.a(-83);
           mi.a(9480);
           dw.c();

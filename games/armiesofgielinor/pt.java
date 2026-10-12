@@ -13,7 +13,7 @@ abstract class pt extends sf {
     private int field_ab;
     private Widget field_jb;
     private int field_fb;
-    static uv field_eb;
+    static PcmStreamMixer field_eb;
     static String field_Y;
     static String field_gb;
 

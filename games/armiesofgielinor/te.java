@@ -8,7 +8,7 @@ final class te extends IntrusiveNode {
     static int field_l;
     int field_o;
     IntrusiveNode field_k;
-    aa field_q;
+    RawPcmStream field_q;
 
     final static void writePlayerAdmissionCancellation(int packetOpcode, long accountId, byte obfuscationGuard) {
         int var5 = 0;
@@ -122,12 +122,12 @@ final class te extends IntrusiveNode {
         }
     }
 
-    te(aa param0, IntrusiveNode param1) {
+    te(RawPcmStream param0, IntrusiveNode param1) {
         try {
           this.field_q = param0;
-          this.field_o = param0.l();
+          this.field_o = param0.getTargetVolume();
           this.field_k = param1;
-          this.field_q.i(128 + ResourceProtocolClient.field_e * this.field_o >> 8);
+          this.field_q.setVolume(128 + ResourceProtocolClient.field_e * this.field_o >> 8);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

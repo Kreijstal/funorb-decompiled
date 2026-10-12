@@ -71,7 +71,7 @@ final class we {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 100) {
-            stackIn_4_0 = MapTile.a(param0 - 145, aa.a(param2, 100, param1));
+            stackIn_4_0 = MapTile.a(param0 - 145, RawPcmStream.createAtRate(param2, 100, param1));
             return stackIn_4_0;
           }
           stackIn_2_0 = (te) null;

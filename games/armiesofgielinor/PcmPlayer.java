@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class rc {
+class PcmPlayer {
     private static rh field_l;
     private int field_i;
-    static boolean field_q;
+    static boolean stereo;
     private boolean field_u;
-    static int field_d;
+    static int outputSampleRate;
     private long field_t;
     int[] field_k;
     private static int field_h;
-    private hn field_r;
+    private PcmStream field_r;
     private int field_p;
     private int field_f;
     private long field_b;
     private int field_m;
-    private hn[] field_e;
+    private PcmStream[] field_e;
     private long field_g;
-    private hn[] field_a;
+    private PcmStream[] field_a;
     private int field_c;
     private int field_n;
     private int field_o;
@@ -37,42 +37,42 @@ class rc {
           this.field_n = 0;
         }
         if (this.field_r != null) {
-          this.field_r.a(param0);
+          this.field_r.skip(param0);
           return;
         }
     }
 
-    private final void a(hn param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        hn var4 = this.field_e[var3];
+        PcmStream var4 = this.field_e[var3];
         if (var4 == null) {
           this.field_a[var3] = param0;
         } else {
-          var4.field_k = param0;
+          var4.schedulerNext = param0;
         }
         this.field_e[var3] = param0;
-        param0.field_n = param1;
+        param0.schedulerPriority = param1;
     }
 
     void e() {
     }
 
-    private final static void a(hn param0) {
-        param0.field_l = false;
-        if (param0.field_m != null) {
-          param0.field_m.field_k = 0;
+    private final static void deactivateStreamTree(PcmStream stream) {
+        stream.active = false;
+        if (stream.sound != null) {
+          stream.sound.scheduledWork = 0;
         }
-        hn var1 = param0.a();
-        while (var1 != null) {
-          rc.a(var1);
-          var1 = param0.b();
+        PcmStream child = stream.firstSubStream();
+        while (child != null) {
+          PcmPlayer.deactivateStreamTree(child);
+          child = stream.nextSubStream();
         }
     }
 
     void a(java.awt.Component param0) throws Exception {
     }
 
-    final synchronized void b(hn param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_r = param0;
     }
 
@@ -110,31 +110,31 @@ class rc {
         int var7_int;
         Object var7;
         int var8_int;
-        hn[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        hn var11;
-        ow var12;
+        PcmStream var11;
+        SoundData var12;
         int var13;
-        hn var14;
+        PcmStream var14;
         int var15_int;
-        hn var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        hn var14Lifetime1;
-        hn var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
-        if (field_q) {
+        if (stereo) {
           var3 = var3 << 1;
         }
         vm.a(param0, 0, var3);
         this.field_n = this.field_n - param1;
         if (this.field_r != null &&
           this.field_n <= 0) {
-          this.field_n = this.field_n + (field_d >> 4);
-          rc.a(this.field_r);
-          this.a(this.field_r, this.field_r.d());
+          this.field_n = this.field_n + (outputSampleRate >> 4);
+          PcmPlayer.deactivateStreamTree(this.field_r);
+          this.a(this.field_r, this.field_r.getPriority());
           var4 = 0;
           var5 = 255;
           var6 = 7;
@@ -156,40 +156,40 @@ class rc {
                   var14 = var11;
                   var14Lifetime1 = var11;
                   while (var11 != null) {
-                    var12 = var11.field_m;
+                    var12 = var11.sound;
                     if (var12 != null &&
-                      var12.field_k > var8_int) {
+                      var12.scheduledWork > var8_int) {
                       var5 = var5 | 1 << var7_int;
                       var10 = var11;
-                      var11 = var11.field_k;
+                      var11 = var11.schedulerNext;
                       continue;
                     }
-                    var11.field_l = true;
-                    var13 = var11.c();
+                    var11.active = true;
+                    var13 = var11.getSchedulingCost();
                     var4 = var4 + var13;
                     if (var12 != null) {
-                      var12.field_k = var12.field_k + var13;
+                      var12.scheduledWork = var12.scheduledWork + var13;
                     }
                     if (var4 >= this.field_i) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.a();
+                    var14Lifetime2 = var11.firstSubStream();
                     if (var14Lifetime2 != null) {
-                      var15_int = var11.field_n;
+                      var15_int = var11.schedulerPriority;
                       while (var14Lifetime2 != null) {
-                        this.a(var14Lifetime2, var15_int * var14Lifetime2.d() >> 8);
-                        var14Lifetime2 = var11.b();
+                        this.a(var14Lifetime2, var15_int * var14Lifetime2.getPriority() >> 8);
+                        var14Lifetime2 = var11.nextSubStream();
                       }
                     }
-                    var15 = var11.field_k;
-                    var11.field_k = null;
+                    var15 = var11.schedulerNext;
+                    var11.schedulerNext = null;
                     if (var10 != null) {
-                      ((hn) (var10)).field_k = var15;
+                      ((PcmStream) (var10)).schedulerNext = var15;
                     } else {
                       this.field_a[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_e[var7_int] = (hn) (var10);
+                      this.field_e[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -210,8 +210,8 @@ class rc {
             this.field_e[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((hn) (var7)).field_k;
-              ((hn) (var7)).field_k = null;
+              var10Lifetime1 = ((PcmStream) (var7)).schedulerNext;
+              ((PcmStream) (var7)).schedulerNext = null;
               var7 = var10Lifetime1;
             }
           }
@@ -220,7 +220,7 @@ class rc {
           this.field_n = 0;
         }
         if (this.field_r != null) {
-          this.field_r.b(param0, 0, param1);
+          this.field_r.render(param0, 0, param1);
         }
         this.field_t = vi.monotonicMillis(-121);
     }
@@ -251,7 +251,7 @@ class rc {
     void b(int param0) throws Exception {
     }
 
-    final static rc a(PlatformTaskService param0, java.awt.Component param1, int param2, int param3) {
+    final static PcmPlayer a(PlatformTaskService param0, java.awt.Component param1, int param2, int param3) {
         try {
           mr var4 = null;
           Throwable var4_ref = null;
@@ -261,7 +261,7 @@ class rc {
           int stackIn_11_2 = 0;
           mr stackIn_21_0 = null;
           Throwable decompiledCaughtException = null;
-          if (field_d == 0) {
+          if (outputSampleRate == 0) {
             throw new IllegalStateException();
           }
           if (param2 >= 0 &&
@@ -274,19 +274,19 @@ class rc {
               var4 = var5;
               stackIn_10_0 = var4;
               stackIn_10_1 = 256;
-              if (!field_q) {
+              if (!stereo) {
                 stackIn_11_2 = 1;
               } else {
                 stackIn_11_2 = 2;
               }
-              ((rc) ((Object) stackIn_10_0)).field_k = new int[stackIn_10_1 * stackIn_11_2];
-              ((rc) ((Object) var4)).field_m = param3;
-              ((rc) ((Object) var4)).a(param1);
-              ((rc) ((Object) var4)).field_o = (param3 & -1024) + 1024;
-              if (((rc) ((Object) var4)).field_o > 16384) {
-                ((rc) ((Object) var4)).field_o = 16384;
+              ((PcmPlayer) ((Object) stackIn_10_0)).field_k = new int[stackIn_10_1 * stackIn_11_2];
+              ((PcmPlayer) ((Object) var4)).field_m = param3;
+              ((PcmPlayer) ((Object) var4)).a(param1);
+              ((PcmPlayer) ((Object) var4)).field_o = (param3 & -1024) + 1024;
+              if (((PcmPlayer) ((Object) var4)).field_o > 16384) {
+                ((PcmPlayer) ((Object) var4)).field_o = 16384;
               }
-              ((rc) ((Object) var4)).b(((rc) ((Object) var4)).field_o);
+              ((PcmPlayer) ((Object) var4)).b(((PcmPlayer) ((Object) var4)).field_o);
               if (field_h > 0 &&
                 field_l == null) {
                 field_l = new rh();
@@ -297,14 +297,14 @@ class rc {
                 if (field_l.field_d[param2] != null) {
                   throw new IllegalArgumentException();
                 }
-                field_l.field_d[param2] = (rc) ((Object) var5);
+                field_l.field_d[param2] = (PcmPlayer) ((Object) var5);
               }
               stackIn_21_0 = var4;
-              return (rc) ((Object) stackIn_21_0);
+              return (PcmPlayer) ((Object) stackIn_21_0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              return new rc();
+              return new PcmPlayer();
             }
           }
           throw new IllegalArgumentException();
@@ -320,8 +320,8 @@ class rc {
           param0 > 48000) {
           throw new IllegalArgumentException();
         }
-        field_d = param0;
-        field_q = param1 ? true : false;
+        outputSampleRate = param0;
+        stereo = param1 ? true : false;
         field_h = param2;
     }
 
@@ -342,7 +342,7 @@ class rc {
             }
             while (var1 > this.field_t + 5000L) {
               this.a(256);
-              this.field_t = this.field_t + (long)(256000 / field_d);
+              this.field_t = this.field_t + (long)(256000 / outputSampleRate);
               var1 = vi.monotonicMillis(-116);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -420,15 +420,15 @@ class rc {
         }
     }
 
-    rc() {
+    PcmPlayer() {
         this.field_u = false;
         this.field_i = 32;
         this.field_t = vi.monotonicMillis(-89);
-        this.field_e = new hn[8];
+        this.field_e = new PcmStream[8];
         this.field_g = 0L;
         this.field_n = 0;
         this.field_f = 0;
-        this.field_a = new hn[8];
+        this.field_a = new PcmStream[8];
         this.field_c = 0;
         this.field_b = 0L;
         this.field_j = 0;
