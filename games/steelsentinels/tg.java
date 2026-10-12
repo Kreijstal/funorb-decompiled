@@ -108,7 +108,7 @@ final class tg extends IntrusiveNode {
         }
     }
 
-    final static tg a(cm param0, String param1, String param2) {
+    final static tg a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param2, -742, param1);
         if (var3 == null) {
           return null;

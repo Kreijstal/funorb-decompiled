@@ -94,7 +94,7 @@ final class bc extends jf implements qn {
           ne.field_y.writeInt(true, dj.field_k[1]);
           ne.field_y.writeInt(true, dj.field_k[2]);
           ne.field_y.writeInt(true, dj.field_k[3]);
-          jk.a(125, ne.field_y);
+          IntKeyLookup.a(125, ne.field_y);
           ne.field_y.writeShort(param4, 18);
           param3.a(ne.field_y, false);
           mm.field_g.position = 0;

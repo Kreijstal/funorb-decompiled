@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class im {
-    static cm field_h;
+    static ResourceArchive field_h;
     static hm field_a;
     static String field_e;
     static String field_d;
@@ -12,7 +12,7 @@ final class im {
     static SceneWidget field_f;
     static boolean field_b;
 
-    final static RgbSprite a(cm param0, int param1, int param2, int param3) {
+    final static RgbSprite a(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         RgbSprite stackIn_6_0 = null;
@@ -47,7 +47,7 @@ final class im {
     final static void a(boolean param0) {
         RuntimeException var1 = null;
         int var2 = 0;
-        cm var3 = null;
+        ResourceArchive var3 = null;
         cc var4 = null;
         RuntimeException decompiledCaughtException = null;
         var2 = SteelSentinels.obfuscationControl;
@@ -81,8 +81,8 @@ final class im {
           if (param0) {
             return;
           }
-          var3 = (cm) null;
-          im.a((cm) null, 29, -92, 49);
+          var3 = (ResourceArchive) null;
+          im.a((ResourceArchive) null, 29, -92, 49);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

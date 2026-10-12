@@ -18,17 +18,17 @@ final class tk implements kh {
     static boolean[] field_f;
     private int field_c;
 
-    final static kl a(int param0, boolean param1, int param2, boolean param3, boolean param4, int param5) {
+    final static ResourceArchive a(int param0, boolean param1, int param2, boolean param3, boolean param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
-          bm var8 = null;
-          kl stackIn_2_0 = null;
-          kl stackIn_17_0 = null;
+          CachedArchiveProvider var8 = null;
+          ResourceArchive stackIn_2_0 = null;
+          ResourceArchive stackIn_17_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param2 != 1) {
-              stackIn_2_0 = (kl) null;
+              stackIn_2_0 = (ResourceArchive) null;
               return stackIn_2_0;
             }
             var6 = null;
@@ -52,7 +52,7 @@ final class tk implements kh {
             if (param4) {
               var8.c(31637);
             }
-            stackIn_17_0 = new kl(var8, param1, param5);
+            stackIn_17_0 = new ResourceArchive(var8, param1, param5);
             return stackIn_17_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

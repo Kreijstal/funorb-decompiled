@@ -47,10 +47,10 @@ final class wp extends DualLinkedNode {
           if (!jj.field_c.a(11894, this.field_C)) {
             return false;
           }
-          var27 = jj.field_c.b(-26, this.field_C);
+          var27 = jj.field_c.getFileIds(-26, this.field_C);
           this.field_x = new byte[var27.length][];
           for (var3_int = 0; var27.length > var3_int; var3_int++) {
-            this.field_x[var3_int] = jj.field_c.a((byte) 114, var27[var3_int], this.field_C);
+            this.field_x[var3_int] = jj.field_c.getFile((byte) 114, var27[var3_int], this.field_C);
           }
         }
         var2 = 1;
@@ -68,9 +68,9 @@ final class wp extends DualLinkedNode {
           return false;
         }
         var3 = new NodeDeque();
-        var4 = jj.field_c.d(this.field_C, param0 ^ 65);
+        var4 = jj.field_c.getFileCapacity(this.field_C, param0 ^ 65);
         this.field_A = new ht[var4];
-        var29 = jj.field_c.b(-92, this.field_C);
+        var29 = jj.field_c.getFileIds(-92, this.field_C);
         for (var6Lifetime1 = 0; var6Lifetime1 < var29.length; var6Lifetime1++) {
           var30 = this.field_x[var6Lifetime1];
           var8 = new PacketBuffer(var30);

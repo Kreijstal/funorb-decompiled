@@ -107,7 +107,7 @@ final class wn {
           wh.field_e.field_I = var16;
           CombatWorld.field_H.a(wh.field_e, 118);
           en.field_b = new SceneWidget[5];
-          jk.field_a = new SceneWidget[5];
+          IntKeyLookup.field_a = new SceneWidget[5];
           gb.field_f = new SceneWidget[5];
           ah.field_Yb = new SceneWidget[5];
           var19 = 0;
@@ -135,12 +135,12 @@ final class wn {
               if (decompiledFrameRemainder0) {
                 ah.field_Yb[var19] = new SceneWidget(0L, param0);
                 en.field_b[var19] = new SceneWidget(0L, td.field_ic, var20);
-                jk.field_a[var19] = new SceneWidget(0L, (SceneWidget) null);
-                jk.field_a[var19].field_Fb = 1;
+                IntKeyLookup.field_a[var19] = new SceneWidget(0L, (SceneWidget) null);
+                IntKeyLookup.field_a[var19].field_Fb = 1;
                 gb.field_f[var19] = new SceneWidget(0L, td.field_ic);
                 gb.field_f[var19].field_Fb = 1;
                 ah.field_Yb[var19].a(en.field_b[var19], 126);
-                ah.field_Yb[var19].a(jk.field_a[var19], 125);
+                ah.field_Yb[var19].a(IntKeyLookup.field_a[var19], 125);
                 ah.field_Yb[var19].a(gb.field_f[var19], 123);
                 ah.field_Yb[var19].h(-94);
                 qc.field_V.a(ah.field_Yb[var19], 119);

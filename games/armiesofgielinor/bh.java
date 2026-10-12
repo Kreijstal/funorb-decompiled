@@ -6,7 +6,7 @@ final class bh extends nl {
     static String field_L;
     static String[] field_M;
     static String field_I;
-    static kl field_H;
+    static ResourceArchive field_H;
     int field_K;
 
     final static String a(int param0, byte param1) {

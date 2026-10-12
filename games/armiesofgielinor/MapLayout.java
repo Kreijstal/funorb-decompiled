@@ -279,15 +279,15 @@ final class MapLayout extends IntrusiveNode {
     public static void a(int param0) {
         field_o = null;
         if (param0 != 0) {
-          kl var2 = (kl) null;
-          MapLayout.a((String) null, 125, (String) null, (kl) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          MapLayout.a((String) null, 125, (String) null, (ResourceArchive) null);
         }
         field_u = null;
         field_q = null;
         field_m = null;
     }
 
-    final static IndexedSprite[] a(String param0, int param1, String param2, kl param3) {
+    final static IndexedSprite[] a(String param0, int param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -306,8 +306,8 @@ final class MapLayout extends IntrusiveNode {
             stackIn_2_0 = (IndexedSprite[]) null;
             return stackIn_2_0;
           }
-          var4_int = param3.a(param2, 110);
-          var5 = param3.a((byte) -74, var4_int, param0);
+          var4_int = param3.getGroupId(param2, 110);
+          var5 = param3.getFileId((byte) -74, var4_int, param0);
           stackIn_4_0 = ak.a(var5, param3, 0, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

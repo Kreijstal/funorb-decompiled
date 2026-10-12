@@ -6,8 +6,8 @@ final class bl {
     private ri field_e;
     static NodeDeque field_h;
     static boolean field_f;
-    private kl field_c;
-    private kl field_d;
+    private ResourceArchive field_c;
+    private ResourceArchive field_d;
     static String field_g;
     static boolean field_b;
 
@@ -415,9 +415,9 @@ final class bl {
           return var3;
         }
         if (param0 >= 32768) {
-          var4 = this.field_c.a((byte) 94, 32767 & param0, 0);
+          var4 = this.field_c.getFile((byte) 94, 32767 & param0, 0);
         } else {
-          var4 = this.field_d.a((byte) 98, param0, 0);
+          var4 = this.field_d.getFile((byte) 98, param0, 0);
         }
         var3 = new va();
         if (var4 != null) {
@@ -430,7 +430,7 @@ final class bl {
         return var3;
     }
 
-    final static void a(int param0, kl param1) {
+    final static void a(int param0, ResourceArchive param1) {
         kk[] array$0 = null;
         js stackIn_23_0 = null;
         RuntimeException stackIn_36_0 = null;
@@ -521,7 +521,7 @@ final class bl {
         }
     }
 
-    bl(int param0, kl param1, kl param2) {
+    bl(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -534,10 +534,10 @@ final class bl {
           this.field_c = param2;
           this.field_d = param1;
           if (this.field_d != null) {
-            this.field_d.d(0, -2);
+            this.field_d.getFileCapacity(0, -2);
           }
           if (null != this.field_c) {
-            this.field_c.d(0, -2);
+            this.field_c.getFileCapacity(0, -2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

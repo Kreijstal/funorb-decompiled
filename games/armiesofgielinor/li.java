@@ -33,11 +33,11 @@ final class li extends IntrusiveNode {
           MapTile.field_i = stackIn_4_0;
           GameplayController.field_f = (int)(106.0 + Math.sin((double)uk.field_n / 3.141592653589793 / (double)param0) * 50.0);
           if (!cu.field_a) {
-            kl.field_a.g(200);
+            ResourceArchive.field_a.g(200);
             return;
           }
           for (var3 = 0; var3 < 4; var3++) {
-            kl.field_a.b(var3, param0 + 1745035901);
+            ResourceArchive.field_a.b(var3, param0 + 1745035901);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

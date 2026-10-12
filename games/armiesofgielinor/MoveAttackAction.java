@@ -42,7 +42,7 @@ final class MoveAttackAction extends PreparedAction {
         int var8Lifetime2;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          jm.field_g = true;
+          ArchiveIndex.field_g = true;
           DualNodeDeque.field_f = param0;
           var11 = param1;
           if (!param4) {
@@ -103,7 +103,7 @@ final class MoveAttackAction extends PreparedAction {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          bm.field_h = var7Lifetime1 + bt.field_g - (var7Lifetime1 >> 1);
+          CachedArchiveProvider.field_h = var7Lifetime1 + bt.field_g - (var7Lifetime1 >> 1);
           co.field_f = bt.field_g - (var7Lifetime1 >> 1);
           DualLinkedNode.field_r = (ar.field_w + rd.field_b << 1) * MovementPlanner.field_z.itemCount;
           var8Lifetime2 = 0;

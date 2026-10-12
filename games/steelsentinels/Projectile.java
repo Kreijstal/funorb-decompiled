@@ -1612,8 +1612,8 @@ final class Projectile extends DualNode {
             }
             var4 = (-this.worldX + this.field_K) / 10;
             var5 = (-this.worldY + this.field_S) / 10;
-            var6 = cm.a(var5, 200, var4);
-            var7_int = cm.a(this.velocityY, 200, this.velocityX);
+            var6 = ResourceArchive.a(var5, 200, var4);
+            var7_int = ResourceArchive.a(this.velocityY, 200, this.velocityX);
             var8 = -4096 + (8191 & -var7_int + (var6 + 4096));
             var9 = kk.a(this.velocityY, this.velocityX, -22967);
             if (var8 >= -1024 &&

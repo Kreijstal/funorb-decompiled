@@ -181,7 +181,7 @@ final class fg extends k implements ae {
               if (var12 < 5) {
                 ah.field_Yb[var12].a(0, var13, var7Lifetime1, var6_int, var8);
                 en.field_b[var12].a(0, 0, var7Lifetime1, param3, -param3 + var9);
-                jk.field_a[var12].a(0, param5, var7Lifetime1 - param5 - param5, var9, param2);
+                IntKeyLookup.field_a[var12].a(0, param5, var7Lifetime1 - param5 - param5, var9, param2);
                 gb.field_f[var12].a(0, param5, -param5 + (var7Lifetime1 - param5), var10, -var10 + (-param3 + var8));
               } else {
                 fm.field_b.a(param0 - 10, var13, var7Lifetime1, var6_int, var8);
@@ -277,7 +277,7 @@ final class fg extends k implements ae {
     }
 
     final void o(int param0) {
-        this.a(5, true, fi.a(123, ec.field_g, 248));
+        this.a(5, true, CachedArchiveProvider.a(123, ec.field_g, 248));
         if (param0 < 77) {
           field_Yb = (rf) null;
         }

@@ -13,7 +13,7 @@ abstract class wl extends tj {
     static String field_I;
     boolean field_L;
 
-    final static io a(kl param0, int param1, boolean param2) {
+    final static io a(ResourceArchive param0, int param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -159,7 +159,7 @@ abstract class wl extends tj {
     final static void a(int param0, boolean param1) {
         int var2;
         String var3;
-        kl var4;
+        ResourceArchive var4;
         int stackIn_6_0 = 0;
         boolean stackIn_13_0 = false;
         String stackIn_22_0 = null;
@@ -173,8 +173,8 @@ abstract class wl extends tj {
         }
         var2 = stackIn_6_0;
         if (param0 < 9) {
-          var4 = (kl) null;
-          wl.a((kl) null, -105, true);
+          var4 = (ResourceArchive) null;
+          wl.a((ResourceArchive) null, -105, true);
         }
         stackIn_13_0 = (param1) && (sq.c((byte) -103)) && (var2 == 0);
         tq.a(stackIn_13_0, false);

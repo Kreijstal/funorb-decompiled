@@ -203,7 +203,7 @@ final class ac extends IntrusiveNode {
         }
     }
 
-    final static RgbSprite[] a(kl param0, String param1, byte param2, String param3) {
+    final static RgbSprite[] a(ResourceArchive param0, String param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -217,11 +217,11 @@ final class ac extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a(param3, 124);
+          var4_int = param0.getGroupId(param3, 124);
           if (param2 != -4) {
             ac.a((byte) -15);
           }
-          var5 = param0.a((byte) -20, var4_int, param1);
+          var5 = param0.getFileId((byte) -20, var4_int, param1);
           stackIn_3_0 = nk.a(var4_int, (byte) 28, var5, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

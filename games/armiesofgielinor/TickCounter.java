@@ -44,7 +44,7 @@ final class TickCounter {
         }
     }
 
-    final static void loadClientAssets(kl archive, int obfuscationGuard) {
+    final static void loadClientAssets(ResourceArchive archive, int obfuscationGuard) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_4826_0;
             StringBuilder stackIn_4826_1;
@@ -54,10 +54,10 @@ final class TickCounter {
             byte[] var2;
             RuntimeException var2_ref;
             int var3;
-            kl param0;
+            ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(kl initialParam0, int initialParam1) {
+            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_4826_0 = null;
@@ -2469,35 +2469,35 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "HOTSEAT_NAMES,0");
                 if (var2 != null) {
-                  jm.field_w[0] = uu.a(var2, (byte) 13);
+                  ArchiveIndex.field_w[0] = uu.a(var2, (byte) 13);
                 }
                 var2 = fk.a(false, "HOTSEAT_NAMES,1");
                 if (var2 != null) {
-                  jm.field_w[1] = uu.a(var2, (byte) 21);
+                  ArchiveIndex.field_w[1] = uu.a(var2, (byte) 21);
                 }
                 var2 = fk.a(false, "HOTSEAT_NAMES,2");
                 if (var2 != null) {
-                  jm.field_w[2] = uu.a(var2, (byte) 17);
+                  ArchiveIndex.field_w[2] = uu.a(var2, (byte) 17);
                 }
                 var2 = fk.a(false, "HOTSEAT_NAMES,3");
                 if (null != var2) {
-                  jm.field_w[3] = uu.a(var2, (byte) 49);
+                  ArchiveIndex.field_w[3] = uu.a(var2, (byte) 49);
                 }
                 var2 = fk.a(false, "HOTSEAT_NAMES,4");
                 if (var2 != null) {
-                  jm.field_w[4] = uu.a(var2, (byte) 55);
+                  ArchiveIndex.field_w[4] = uu.a(var2, (byte) 55);
                 }
                 var2 = fk.a(false, "HOTSEAT_NAMES,5");
                 if (var2 != null) {
-                  jm.field_w[5] = uu.a(var2, (byte) -105);
+                  ArchiveIndex.field_w[5] = uu.a(var2, (byte) -105);
                 }
                 var2 = fk.a(false, "HOTSEAT_NAMES,6");
                 if (null != var2) {
-                  jm.field_w[6] = uu.a(var2, (byte) -120);
+                  ArchiveIndex.field_w[6] = uu.a(var2, (byte) -120);
                 }
                 var2 = fk.a(false, "HOTSEAT_NAMES,7");
                 if (var2 != null) {
-                  jm.field_w[7] = uu.a(var2, (byte) -101);
+                  ArchiveIndex.field_w[7] = uu.a(var2, (byte) -101);
                 }
                 var2 = fk.a(false, "TUT_PLAYER");
                 if (var2 != null) {
@@ -4767,7 +4767,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_ACCESSORIES");
                 if (var2 != null) {
-                  jm.field_d = uu.a(var2, (byte) 19);
+                  ArchiveIndex.field_d = uu.a(var2, (byte) 19);
                 }
                 var2 = fk.a(false, "TTREEN_PLATE");
                 if (null != var2) {

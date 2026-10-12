@@ -127,7 +127,7 @@ final class uu {
                 lm.field_b.field_X = lm.field_b.field_X + "<br>" + var10_ref_String;
               }
               so.field_d.a(40, -20500, -var9 + pd.field_c.field_gb, pd.field_c.field_ob - 40, var9);
-              so.field_d.field_X = ew.field_b.toUpperCase();
+              so.field_d.field_X = ArchiveProvider.field_b.toUpperCase();
               var8 = so.field_d;
               stackIn_23_0 = so.field_d;
               stackIn_24_1 = (param4) && (ph.field_d == 0L);
@@ -345,10 +345,10 @@ final class uu {
                     if (ij.field_w.field_a.field_Kb != 0) {
                       ad.field_I = fo.a(4800, Battlefield.field_pb, new String[]{ob.field_O});
                       if (var19 != 0) {
-                        ad.field_I = kl.field_f;
+                        ad.field_I = ResourceArchive.field_f;
                       }
                     } else {
-                      ad.field_I = kl.field_f;
+                      ad.field_I = ResourceArchive.field_f;
                     }
                   }
                 }
@@ -482,7 +482,7 @@ final class uu {
     }
 
     final static void a(int param0, int param1, int param2) {
-        kl.field_a.b(param0, param2, (byte) 93);
+        ResourceArchive.field_a.b(param0, param2, (byte) 93);
         if (param1 >= -22) {
           field_c = (String) null;
         }

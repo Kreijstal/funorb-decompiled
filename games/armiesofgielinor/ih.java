@@ -292,7 +292,7 @@ class ih extends hn {
         }
     }
 
-    final synchronized boolean a(p param0, kl param1, int param2, um param3, byte param4) {
+    final synchronized boolean a(p param0, ResourceArchive param1, int param2, um param3, byte param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -507,7 +507,7 @@ class ih extends hn {
         }
         if (param0) {
           var5 = (um) null;
-          this.a((p) null, (kl) null, -24, (um) null, (byte) 111);
+          this.a((p) null, (ResourceArchive) null, -24, (um) null, (byte) 111);
         }
     }
 
@@ -1231,8 +1231,8 @@ class ih extends hn {
             field_R = (String) null;
           }
           for (var7 = 0; var7 < 4; var7++) {
-            var6 = -64 + (param3 + (bm.field_y[var7][1] + (param2 & 3)));
-            var5 = (var4_int & 7) + (bm.field_y[var7][0] + param1) - 44;
+            var6 = -64 + (param3 + (CachedArchiveProvider.field_y[var7][1] + (param2 & 3)));
+            var5 = (var4_int & 7) + (CachedArchiveProvider.field_y[var7][0] + param1) - 44;
             var8 = tn.field_eb[0 + param2 % 6];
             fe.a(var8, var5, var6);
             var4_int = var4_int >> 1;

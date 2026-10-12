@@ -16,7 +16,7 @@ final class tv {
         field_b = null;
     }
 
-    final static void a(IndexedSprite[] param0, byte[] param1, RgbSprite[][] param2, int[] param3, kl param4, RgbSprite[][] param5, int param6, kl param7, int param8, boolean param9, String[][] param10, String[][] param11, int param12, String[] param13, byte[] param14, String[] param15, boolean param16, kl param17, int[] param18) {
+    final static void a(IndexedSprite[] param0, byte[] param1, RgbSprite[][] param2, int[] param3, ResourceArchive param4, RgbSprite[][] param5, int param6, ResourceArchive param7, int param8, boolean param9, String[][] param10, String[][] param11, int param12, String[] param13, byte[] param14, String[] param15, boolean param16, ResourceArchive param17, int[] param18) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -55,7 +55,7 @@ final class tv {
           DamageEvent.a(param14, param11, param8, param5, 1, param16, param10, param12, param7, param13, -5429, param2, param15, param4, param0, param3, param1, (String[]) null, param17, param18);
           if (param9) {
             var20 = (int[]) null;
-            tv.a((IndexedSprite[]) null, (byte[]) null, (RgbSprite[][]) null, (int[]) null, (kl) null, (RgbSprite[][]) null, 85, (kl) null, -90, false, (String[][]) null, (String[][]) null, -90, (String[]) null, (byte[]) null, (String[]) null, true, (kl) null, (int[]) null);
+            tv.a((IndexedSprite[]) null, (byte[]) null, (RgbSprite[][]) null, (int[]) null, (ResourceArchive) null, (RgbSprite[][]) null, 85, (ResourceArchive) null, -90, false, (String[][]) null, (String[][]) null, -90, (String[]) null, (byte[]) null, (String[]) null, true, (ResourceArchive) null, (int[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -88,7 +88,7 @@ final class be {
         }
     }
 
-    final static u a(cm param0, cm param1, byte param2, String param3, String param4) {
+    final static u a(ResourceArchive param0, ResourceArchive param1, byte param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -105,12 +105,12 @@ final class be {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param0.a(param4, 34);
+          var5_int = param0.getGroupId(param4, 34);
           if (param2 >= -44) {
             stackIn_2_0 = (u) null;
             return stackIn_2_0;
           }
-          var6 = param0.a(var5_int, -32759, param3);
+          var6 = param0.getFileId(var5_int, -32759, param3);
           stackIn_4_0 = lj.a(param1, var6, -56, param0, var5_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

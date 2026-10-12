@@ -24,17 +24,17 @@ final class rh extends IntrusiveNode {
           return;
         }
         qf.field_c.a((byte) -80, param1);
-        var4 = jk.field_i.m(109) ? 1 : 0;
+        var4 = IntKeyLookup.field_i.m(109) ? 1 : 0;
         if (lb.field_gc != 0 &&
           var4 == 0) {
           pm.a((byte) 48);
           param1 = false;
         }
         if (param1) {
-          jk.field_i.a((byte) 68, param2, param0);
+          IntKeyLookup.field_i.a((byte) 68, param2, param0);
         }
         if (var4 == 0) {
-          var5 = jk.field_i.j(0) + jk.field_i.field_Rb;
+          var5 = IntKeyLookup.field_i.j(0) + IntKeyLookup.field_i.field_Rb;
           if (var5 > 640) {
             ed.field_i = ed.field_i + 5;
             return;
@@ -49,7 +49,7 @@ final class rh extends IntrusiveNode {
           return;
         }
         qf.field_c.a((byte) -37, param1);
-        var5Lifetime1 = jk.field_i.j(0) + jk.field_i.field_Rb;
+        var5Lifetime1 = IntKeyLookup.field_i.j(0) + IntKeyLookup.field_i.field_Rb;
         if (var5Lifetime1 > 640) {
           ed.field_i = ed.field_i + 5;
           return;

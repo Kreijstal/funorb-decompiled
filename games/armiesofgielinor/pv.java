@@ -248,7 +248,7 @@ final class pv {
         return '_';
     }
 
-    final static IndexedSprite a(String param0, String param1, kl param2, int param3) {
+    final static IndexedSprite a(String param0, String param1, ResourceArchive param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -263,8 +263,8 @@ final class pv {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a(param0, 124);
-          var5 = param2.a((byte) 121, var4_int, param1);
+          var4_int = param2.getGroupId(param0, 124);
+          var5 = param2.getFileId((byte) 121, var4_int, param1);
           if (param3 == 24914) {
             stackIn_4_0 = ls.a(var5, param2, var4_int, -80);
             return stackIn_4_0;

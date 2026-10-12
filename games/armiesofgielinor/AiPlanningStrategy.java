@@ -68,7 +68,7 @@ abstract class AiPlanningStrategy {
             } else {
               mw.field_E.field_Kb.field_Nb.field_X = TeleportAction.field_u;
             }
-            jm.a(mw.field_E.field_Nb, -47);
+            ArchiveIndex.a(mw.field_E.field_Nb, -47);
             decompiledFrameRemainder1 = (var19 != 0);
           }
           if (decompiledFrameRemainder1) {

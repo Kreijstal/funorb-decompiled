@@ -7,7 +7,7 @@ class DualNode extends IntrusiveNode {
     static String field_q;
     static int[] bitMasks;
     static String field_s;
-    static cm field_x;
+    static ResourceArchive field_x;
     long field_w;
     static int field_u;
     DualNode dualPrevious;
@@ -35,7 +35,7 @@ class DualNode extends IntrusiveNode {
           this.dualNext = null;
           return;
         }
-        field_x = (cm) null;
+        field_x = (ResourceArchive) null;
         this.dualPrevious = null;
         this.dualNext = null;
     }

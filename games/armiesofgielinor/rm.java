@@ -11,8 +11,8 @@ final class rm {
         return new sn(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_b / 1000);
     }
 
-    final static rm a(kl param0, int param1, int param2) {
-        byte[] var3 = param0.a((byte) 119, param2, param1);
+    final static rm a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile((byte) 119, param2, param1);
         if (var3 == null) {
           return null;
         }

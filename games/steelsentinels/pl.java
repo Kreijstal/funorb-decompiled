@@ -5,7 +5,7 @@ final class pl extends ch implements ae {
     static u field_U;
     static String field_W;
     static volatile long field_Y;
-    static cm field_S;
+    static ResourceArchive field_S;
     static String field_V;
     private oa field_R;
     private re field_Z;
@@ -189,7 +189,7 @@ final class pl extends ch implements ae {
               if (var8 != 0) {
                 stackIn_29_1 = vi.field_P;
               } else {
-                stackIn_29_1 = cm.field_c;
+                stackIn_29_1 = ResourceArchive.field_c;
               }
               stackIn_28_0.field_S = db.a(stackIn_29_1, -30, new String[]{fk.field_q.field_S});
               mn.field_E.field_T = true;

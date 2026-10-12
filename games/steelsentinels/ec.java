@@ -226,7 +226,7 @@ final class ec {
         rg.a(118);
     }
 
-    final static RgbSprite[] a(byte param0, String param1, cm param2, String param3) {
+    final static RgbSprite[] a(byte param0, String param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -243,10 +243,10 @@ final class ec {
         try {
           if (param0 > -27) {
             var6 = (String) null;
-            ec.a((byte) -7, (String) null, (cm) null, (String) null);
+            ec.a((byte) -7, (String) null, (ResourceArchive) null, (String) null);
           }
-          var4_int = param2.a(param3, 27);
-          var5 = param2.a(var4_int, -32759, param1);
+          var4_int = param2.getGroupId(param3, 27);
+          var5 = param2.getFileId(var4_int, -32759, param1);
           stackIn_3_0 = vh.a(var5, param2, var4_int, (byte) 48);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -60,10 +60,10 @@ final class gf {
         int var4Lifetime3;
         var5 = SteelSentinels.obfuscationControl;
         try {
-          jk.a((byte) 6);
+          IntKeyLookup.a((byte) 6);
           le.field_K = 77;
-          bc.a(49, 9, 56, 0, fa.field_b, 16711680, 255);
-          bc.a(83, 1, 63, 56, fa.field_b, 16711680, 255);
+          bc.a(49, 9, 56, 0, ArchiveProvider.field_b, 16711680, 255);
+          bc.a(83, 1, 63, 56, ArchiveProvider.field_b, 16711680, 255);
           ta.field_e = pf.field_b;
           rf.a(Sprite.field_m, 320, 8, 8, 8, 8, hk.field_Tb, 16777215, 0, pl.field_U, 1146810, 240, 2, param0 - 94, wc.field_d);
           im.a(hk.field_Tb, 0, 8, -13782, Sprite.field_m, 16777215, 8, 8, 2, 240, pl.field_U, 1146810, wc.field_d, 320, 8);

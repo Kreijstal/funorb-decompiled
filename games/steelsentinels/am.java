@@ -27,7 +27,7 @@ final class am {
         int var1 = 0;
         int var2 = SteelSentinels.obfuscationControl;
         int var1Lifetime1;
-        mg.a(jk.field_j, 7411, 5);
+        mg.a(IntKeyLookup.field_j, 7411, 5);
         mg.a(bj.field_b, 7411, 6);
         mg.a(SentinelDesigner.field_d, 7411, 8);
         mg.a(a.field_h, 7411, 13);
@@ -52,7 +52,7 @@ final class am {
             return;
           }
           mg.a(DualNodeDeque.field_c, 7411, 0);
-          mg.a(fa.field_c, 7411, 19);
+          mg.a(ArchiveProvider.field_c, 7411, 19);
           if (ArticulatedPart.f((byte) -128)) {
             ti.field_A[34] = oe.field_l;
           }
@@ -81,7 +81,7 @@ final class am {
           return;
         }
         mg.a(DualNodeDeque.field_c, 7411, 0);
-        mg.a(fa.field_c, 7411, 19);
+        mg.a(ArchiveProvider.field_c, 7411, 19);
         if (ArticulatedPart.f((byte) -128)) {
           ti.field_A[34] = oe.field_l;
         }

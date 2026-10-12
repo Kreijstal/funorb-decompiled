@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ps extends lk {
-    static kl field_u;
+    static ResourceArchive field_u;
     static int field_E;
     static RgbSprite[] field_w;
     static String field_x;
@@ -144,7 +144,7 @@ final class ps extends lk {
         field_z = (String) null;
     }
 
-    final static void a(int param0, kl param1, kl param2) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
         try {
           if (param0 < 30) {
             ps.c(false);

@@ -3,13 +3,13 @@
  */
 import java.io.*;
 
-final class jk {
+final class IntKeyLookup {
     static SceneWidget[] field_a;
     static String field_e;
     static String field_f;
     static String field_b;
     static String field_k;
-    private int[] field_c;
+    private int[] keyIndexSlots;
     static int[] field_j;
     static mg field_i;
     static String field_g;
@@ -18,28 +18,28 @@ final class jk {
 
     final static boolean c(byte param0) {
         if (param0 <= 77) {
-          jk.d((byte) 44);
+          IntKeyLookup.d((byte) 44);
         }
         return !gf.field_a.a((byte) -72) ? true : false;
     }
 
-    final int a(int param0, byte param1) {
-        int var3;
-        int var4;
+    final int get(int key, byte obfuscationGuard) {
+        int bucketMask;
+        int bucket;
         int var5;
-        int var6;
-        var3 = (this.field_c.length >> 1) - 1;
-        var4 = param0 & var3;
-        var5 = 8 / ((48 - param1) / 60);
+        int inputIndex;
+        bucketMask = (this.keyIndexSlots.length >> 1) - 1;
+        bucket = key & bucketMask;
+        var5 = 8 / ((48 - obfuscationGuard) / 60);
         while (true) {
-          var6 = this.field_c[1 + var4 + var4];
-          if (var6 == -1) {
+          inputIndex = this.keyIndexSlots[1 + bucket + bucket];
+          if (inputIndex == -1) {
             return -1;
           }
-          if (this.field_c[var4 + var4] == param0) {
-            return var6;
+          if (this.keyIndexSlots[bucket + bucket] == key) {
+            return inputIndex;
           }
-          var4 = var3 & var4 + 1;
+          bucket = bucketMask & bucket + 1;
         }
     }
 
@@ -70,32 +70,32 @@ final class jk {
         }
     }
 
-    jk(int[] param0) {
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
+    IntKeyLookup(int[] keys) {
+        int capacity = 0;
+        int slotIndex = 0;
+        int bucket = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        int var3Lifetime1;
+        int inputIndex;
         try {
-          var2_int = 1;
-          while ((param0.length >> 1) + param0.length >= var2_int) {
-            var2_int = var2_int << 1;
+          capacity = 1;
+          while ((keys.length >> 1) + keys.length >= capacity) {
+            capacity = capacity << 1;
           }
-          this.field_c = new int[var2_int + var2_int];
-          for (var3 = 0; var2_int + var2_int > var3; var3++) {
-            this.field_c[var3] = -1;
+          this.keyIndexSlots = new int[capacity + capacity];
+          for (slotIndex = 0; capacity + capacity > slotIndex; slotIndex++) {
+            this.keyIndexSlots[slotIndex] = -1;
           }
-          for (var3Lifetime1 = 0; var3Lifetime1 < param0.length; var3Lifetime1++) {
-            var4 = -1 + var2_int & param0[var3Lifetime1];
-            while (this.field_c[1 + var4 + var4] != -1) {
-              var4 = 1 + var4 & -1 + var2_int;
+          for (inputIndex = 0; inputIndex < keys.length; inputIndex++) {
+            bucket = -1 + capacity & keys[inputIndex];
+            while (this.keyIndexSlots[1 + bucket + bucket] != -1) {
+              bucket = 1 + bucket & -1 + capacity;
             }
-            this.field_c[var4 + var4] = param0[var3Lifetime1];
-            this.field_c[1 + var4 + var4] = var3Lifetime1;
+            this.keyIndexSlots[bucket + bucket] = keys[inputIndex];
+            this.keyIndexSlots[1 + bucket + bucket] = inputIndex;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -103,7 +103,7 @@ final class jk {
           var2 = decompiledCaughtException;
           stackIn_16_0 = var2;
           stackIn_16_1 = new StringBuilder().append("jk.<init>(");
-          if (param0 == null) {
+          if (keys == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -194,7 +194,7 @@ final class jk {
 
     public static void b(byte param0) {
         if (param0 >= -67) {
-          jk.c((byte) -9);
+          IntKeyLookup.c((byte) -9);
         }
         field_f = null;
         field_g = null;

@@ -175,12 +175,12 @@ final class la {
           }
           var6_int = param1 ^ param1 >> 1;
           for (var9 = 0; var9 < 4; var9++) {
-            var8 = bm.field_y[var9][1] + (param0 + (3 & param1) - 64);
-            var7 = -44 + bm.field_y[var9][0] + (param3 + (7 & var6_int));
+            var8 = CachedArchiveProvider.field_y[var9][1] + (param0 + (3 & param1) - 64);
+            var7 = -44 + CachedArchiveProvider.field_y[var9][0] + (param3 + (7 & var6_int));
             if (var9 != 0) {
               nr.field_c[param1 % 9 + 25].b(var7, var8, param4, param2);
             } else {
-              nr.field_c[16 + param1 % 9].b(var7, var8 - bm.field_y[var9][1], param4, param2);
+              nr.field_c[16 + param1 % 9].b(var7, var8 - CachedArchiveProvider.field_y[var9][1], param4, param2);
             }
             param1 = param1 >> 1;
             var6_int = var6_int >> 1;

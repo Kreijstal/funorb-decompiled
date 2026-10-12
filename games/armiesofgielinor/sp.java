@@ -23,7 +23,7 @@ final class sp implements Iterator {
         return (java.awt.Container) ((Object) CombatEvent.d((byte) -124));
     }
 
-    final static d a(kl param0, int param1, int param2, int param3, kl param4) {
+    final static d a(ResourceArchive param0, int param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         d stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -39,7 +39,7 @@ final class sp implements Iterator {
           if (!kp.a(false, param3, param0, param1)) {
             return null;
           }
-          stackIn_6_0 = LeaderEscortCondition.a(param4.a((byte) 58, param1, param3), 126);
+          stackIn_6_0 = LeaderEscortCondition.a(param4.getFile((byte) 58, param1, param3), 126);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -9,7 +9,7 @@ final class ej extends we {
     private ic field_A;
     static int field_v;
     static String field_u;
-    static cm field_t;
+    static ResourceArchive field_t;
     static String field_E;
     static int field_B;
     static String field_x;
@@ -74,7 +74,7 @@ final class ej extends we {
             param1 = SoftwareRaster.field_i;
           }
           if (param5 != 40) {
-            field_t = (cm) null;
+            field_t = (ResourceArchive) null;
           }
           if (SoftwareRaster.field_b < param2 + param1) {
             param2 = SoftwareRaster.field_b - param1;

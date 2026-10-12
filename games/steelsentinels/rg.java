@@ -186,7 +186,7 @@ final class rg {
               a.field_a.b(var7, var9, var2 + rm.field_g, var6, -1);
               var2 = var2 + (ig.field_e + (tf.field_c + id.field_ac));
             } else {
-              re.field_ib.b(var7, var9, var2 + jk.field_d, var6, -1);
+              re.field_ib.b(var7, var9, var2 + IntKeyLookup.field_d, var6, -1);
               var2 = var2 + IntrusiveNode.field_e;
             }
           }

@@ -11185,7 +11185,7 @@ final class GameplayController {
         try {
           field_A = null;
           if (param0 >= -95) {
-            GameplayController.a((String) null, (byte) 73, (String) null, (kl) null);
+            GameplayController.a((String) null, (byte) 73, (String) null, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.LA(" + param0 + ')');
@@ -11664,7 +11664,7 @@ final class GameplayController {
         }
     }
 
-    final static RgbSprite a(String param0, byte param1, String param2, kl param3) {
+    final static RgbSprite a(String param0, byte param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -11678,11 +11678,11 @@ final class GameplayController {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.a(param2, 109);
+          var4_int = param3.getGroupId(param2, 109);
           if (param1 != 51) {
             GameplayController.d(45);
           }
-          var5 = param3.a((byte) -115, var4_int, param0);
+          var5 = param3.getFileId((byte) -115, var4_int, param0);
           stackIn_4_0 = ManaEvent.a(var4_int, var5, param1 ^ -9074, param3);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

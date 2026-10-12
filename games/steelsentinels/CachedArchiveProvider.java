@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fi extends fa {
+final class CachedArchiveProvider extends ArchiveProvider {
     private vk field_B;
     static String field_s;
     static String field_z;
@@ -11,7 +11,7 @@ final class fi extends fa {
     private fe field_w;
     private int field_F;
     static int field_l;
-    private jl field_A;
+    private ArchiveIndex index;
     private byte[] field_h;
     static RgbSprite field_j;
     private cb field_k;
@@ -111,12 +111,12 @@ final class fi extends fa {
               f.field_G.reset();
               f.field_G.update(var5, 0, var18.length - 2);
               var6_int = (int)f.field_G.getValue();
-              if (this.field_A.field_a[param1] != var6_int) {
+              if (this.index.groupCrcs[param1] != var6_int) {
                 throw new RuntimeException();
               }
-              if (null != this.field_A.field_t &&
-                null != this.field_A.field_t[param1]) {
-                var30 = this.field_A.field_t[param1];
+              if (null != this.index.groupDigests &&
+                null != this.index.groupDigests[param1]) {
+                var30 = this.index.groupDigests[param1];
                 var29 = co.a((byte) -37, -2 + var18.length, 0, var18);
                 var11 = 0;
                 var9 = var11;
@@ -128,7 +128,7 @@ final class fi extends fa {
                 }
               }
               var7 = ((var5[-2 + var18.length] & 255) << 8) + (var5[-1 + var18.length] & 255);
-              if ((this.field_A.field_m[param1] & 65535) != var7) {
+              if ((this.index.groupVersions[param1] & 65535) != var7) {
                 throw new RuntimeException();
               }
               if (this.field_h[param1] != 1) {
@@ -164,12 +164,12 @@ final class fi extends fa {
             f.field_G.reset();
             f.field_G.update(var5, 0, var18.length - 2);
             var6_int = (int)f.field_G.getValue();
-            if (var6_int != this.field_A.field_a[param1]) {
+            if (var6_int != this.index.groupCrcs[param1]) {
               throw new RuntimeException();
             }
-            if (null != this.field_A.field_t &&
-              null != this.field_A.field_t[param1]) {
-              var27 = this.field_A.field_t[param1];
+            if (null != this.index.groupDigests &&
+              null != this.index.groupDigests[param1]) {
+              var27 = this.index.groupDigests[param1];
               var28 = co.a((byte) -37, var18.length - 2, 0, var18);
               for (var9 = 0; var9 < 64; var9++) {
                 if (~var27[var9] != ~var28[var9]) {
@@ -196,8 +196,8 @@ final class fi extends fa {
           }
           return null;
         }
-        var5[-2 + var18.length] = (byte)(this.field_A.field_m[param1] >>> 8);
-        var5[var18.length - 1] = (byte)this.field_A.field_m[param1];
+        var5[-2 + var18.length] = (byte)(this.index.groupVersions[param1] >>> 8);
+        var5[var18.length - 1] = (byte)this.index.groupVersions[param1];
         if (null != this.field_E) {
           this.field_k.a((byte) 98, this.field_E, param1, var18);
           stackIn_63_0 = -2;
@@ -220,7 +220,7 @@ final class fi extends fa {
         if (null == this.field_C) {
           return;
         }
-        if (null == this.b((byte) 114)) {
+        if (null == this.getIndex((byte) 114)) {
           return;
         }
         IntrusiveNode var2 = this.field_i.first(13058);
@@ -230,10 +230,10 @@ final class fi extends fa {
           if (0 > var4) {
             var2.unlink(4);
           } else {
-            if (this.field_A.field_u <= var4) {
+            if (this.index.groupCapacity <= var4) {
               var2.unlink(4);
             } else {
-              if (0 == this.field_A.field_j[var4]) {
+              if (0 == this.index.fileCounts[var4]) {
                 var2.unlink(4);
               } else {
                 if (this.field_h[var4] == 0) {
@@ -277,7 +277,7 @@ final class fi extends fa {
           var3.field_e = param1;
           if (param0 < 4) {
             var4 = (String) null;
-            fi.a(-111, (String) null, 49);
+            CachedArchiveProvider.a(-111, (String) null, 49);
           }
           var3.field_a = param2;
           stackIn_3_0 = var3;
@@ -296,7 +296,7 @@ final class fi extends fa {
         }
     }
 
-    final jl b(byte param0) {
+    final ArchiveIndex getIndex(byte obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var3 = null;
@@ -307,14 +307,14 @@ final class fi extends fa {
         byte[] var8 = null;
         byte[] var9 = null;
         var4 = SteelSentinels.obfuscationControl;
-        if (param0 != 114) {
-          return (jl) null;
+        if (obfuscationGuard != 114) {
+          return (ArchiveIndex) null;
         }
-        if (null != this.field_A) {
-          return this.field_A;
+        if (null != this.index) {
+          return this.index;
         }
         if (this.field_w == null) {
-          if (this.field_B.c(param0 ^ -8)) {
+          if (this.field_B.c(obfuscationGuard ^ -8)) {
             return null;
           }
           this.field_w = (fe) ((Object) this.field_B.a((byte) 0, 255, this.field_r, true, (byte) -114));
@@ -333,14 +333,14 @@ final class fi extends fa {
             if (var2 == null) {
               throw new RuntimeException();
             }
-            this.field_A = new jl(var9, this.field_F, this.field_o);
-            if (this.field_q != this.field_A.field_k) {
+            this.index = new ArchiveIndex(var9, this.field_F, this.field_o);
+            if (this.field_q != this.index.revision) {
               throw new RuntimeException();
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
-            this.field_A = null;
+            this.index = null;
             if (this.field_B.c(62)) {
               this.field_w = null;
             } else {
@@ -353,12 +353,12 @@ final class fi extends fa {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_A = new jl(var8, this.field_F, this.field_o);
+            this.index = new ArchiveIndex(var8, this.field_F, this.field_o);
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
             this.field_B.a(14900);
-            this.field_A = null;
+            this.index = null;
             if (!this.field_B.c(89)) {
               this.field_w = (fe) ((Object) this.field_B.a((byte) 0, 255, this.field_r, true, (byte) -127));
             } else {
@@ -372,9 +372,9 @@ final class fi extends fa {
         }
         this.field_w = null;
         if (null != this.field_E) {
-          this.field_h = new byte[this.field_A.field_u];
+          this.field_h = new byte[this.index.groupCapacity];
         }
-        return this.field_A;
+        return this.index;
     }
 
     final void c(byte param0) {
@@ -399,7 +399,7 @@ final class fi extends fa {
         }
         boolean decompiledFrameRemainder0 = true;
         if (null != this.field_C) {
-          if (this.b((byte) 114) == null) {
+          if (this.getIndex((byte) 114) == null) {
             return;
           }
           if (this.field_D) {
@@ -417,8 +417,8 @@ final class fi extends fa {
               }
               var3 = this.field_C.next((byte) -101);
             }
-            while (this.field_p < this.field_A.field_j.length) {
-              if (0 == this.field_A.field_j[this.field_p]) {
+            while (this.field_p < this.index.fileCounts.length) {
+              if (0 == this.index.fileCounts[this.field_p]) {
                 this.field_p = this.field_p + 1;
                 continue;
               }
@@ -461,8 +461,8 @@ final class fi extends fa {
                 var3Lifetime1 = this.field_C.next((byte) -19);
               }
               scanLoop1: while (true) {
-                if (this.field_A.field_j.length > this.field_p) {
-                  if (this.field_A.field_j[this.field_p] != 0) {
+                if (this.index.fileCounts.length > this.field_p) {
+                  if (this.index.fileCounts[this.field_p] != 0) {
                     if (this.field_B.b((byte) 102)) {
                       var2_intLifetime1 = 0;
                       break scanLoop1;
@@ -513,23 +513,23 @@ final class fi extends fa {
         }
     }
 
-    final byte[] a(int param0, int param1) {
-        fe var3 = this.a((byte) -109, param0, 0);
+    final byte[] getEncodedGroup(int groupId, int obfuscationGuard) {
+        fe var3 = this.a((byte) -109, groupId, 0);
         if (var3 == null) {
           return null;
         }
-        int var4 = -50 % ((40 - param1) / 32);
+        int var4 = -50 % ((40 - obfuscationGuard) / 32);
         byte[] var5 = var3.d((byte) -80);
         var3.unlink(4);
         return var5;
     }
 
-    final int a(boolean param0, int param1) {
-        fe var3 = (fe) (this.field_m.get((long)param1, 127));
+    final int getGroupProgress(boolean obfuscationGuard, int groupId) {
+        fe var3 = (fe) (this.field_m.get((long)groupId, 127));
         if (var3 != null) {
           return var3.g(16);
         }
-        if (param0) {
+        if (obfuscationGuard) {
           this.field_C = (NodeDeque) null;
           return 0;
         }
@@ -570,7 +570,7 @@ final class fi extends fa {
         }
         if (dh.field_D != 0) {
           if (ok.field_f != null) {
-            if (!ok.field_f.a(param0)) {
+            if (!ok.field_f.ensureIndex(param0)) {
               return 14;
             }
             if (!ok.field_f.a(12145, "")) {
@@ -580,38 +580,38 @@ final class fi extends fa {
               return 29;
             }
           }
-          if (!ke.field_k.a(true)) {
+          if (!ke.field_k.ensureIndex(true)) {
             return 43;
           }
           if (!ke.field_k.a("commonui", (byte) 90)) {
             return 57;
           }
-          if (!oe.field_d.a(true)) {
+          if (!oe.field_d.ensureIndex(true)) {
             return 71;
           }
           if (!oe.field_d.a("commonui", (byte) 90)) {
             return 80;
           }
-          if (!id.field_bc.a(true)) {
+          if (!id.field_bc.ensureIndex(true)) {
             return 82;
           }
           if (!id.field_bc.a(25)) {
             return 86;
           }
         } else {
-          if (!ke.field_k.a(true)) {
+          if (!ke.field_k.ensureIndex(true)) {
             return 20;
           }
           if (!ke.field_k.a("commonui", (byte) 90)) {
             return 40;
           }
-          if (!oe.field_d.a(true)) {
+          if (!oe.field_d.ensureIndex(true)) {
             return 50;
           }
           if (!oe.field_d.a("commonui", (byte) 90)) {
             return 60;
           }
-          if (!id.field_bc.a(true)) {
+          if (!id.field_bc.ensureIndex(true)) {
             return 70;
           }
           if (!id.field_bc.a(25)) {
@@ -619,12 +619,12 @@ final class fi extends fa {
           }
         }
         if (!param0) {
-          fi.c(-55);
+          CachedArchiveProvider.c(-55);
         }
         return 100;
     }
 
-    fi(int param0, rc param1, rc param2, vk param3, cb param4, int param5, byte[] param6, int param7, boolean param8) {
+    CachedArchiveProvider(int param0, rc param1, rc param2, vk param3, cb param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

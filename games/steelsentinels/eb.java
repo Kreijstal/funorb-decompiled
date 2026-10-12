@@ -79,7 +79,7 @@ final class eb extends ia {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!fg.a(var4, -71)) {
-            stackIn_3_0 = fa.field_d;
+            stackIn_3_0 = ArchiveProvider.field_d;
             return stackIn_3_0;
           }
           if (param1 != -1) {
@@ -91,7 +91,7 @@ final class eb extends ia {
             var3_int <= 130) {
             return vf.field_b;
           }
-          stackIn_10_0 = fa.field_d;
+          stackIn_10_0 = ArchiveProvider.field_d;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -116,7 +116,7 @@ final class eb extends ia {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param1, -1) == fa.field_d) {
+          if (this.a(param1, -1) == ArchiveProvider.field_d) {
             stackIn_3_0 = vn.field_j;
             return stackIn_3_0;
           }
@@ -262,9 +262,9 @@ final class eb extends ia {
           field_s = (RgbSprite[]) null;
         }
         if (var4 != 0) {
-          jk.field_e = var8.h(1);
+          IntKeyLookup.field_e = var8.h(1);
         } else {
-          jk.field_e = b.field_g;
+          IntKeyLookup.field_e = b.field_g;
         }
         if (m.field_a == 1) {
           gd.field_lb = var8.readUnsignedShort((byte) -60);
@@ -285,9 +285,9 @@ final class eb extends ia {
         }
         var5 = var8.readUnsignedShort((byte) -60);
         try {
-          var9 = jl.field_w.a(var5, -81);
+          var9 = ArchiveIndex.field_w.a(var5, -81);
           bg.field_F = var9.i(1);
-          if (jk.field_e.equals(g.field_l)) {
+          if (IntKeyLookup.field_e.equals(g.field_l)) {
             stackIn_25_0 = null;
           } else {
             stackIn_25_0 = var9.field_F;
@@ -352,9 +352,9 @@ final class eb extends ia {
           field_s = (RgbSprite[]) null;
         }
         if (var4 != 0) {
-          jk.field_e = var8.h(1);
+          IntKeyLookup.field_e = var8.h(1);
         } else {
-          jk.field_e = b.field_g;
+          IntKeyLookup.field_e = b.field_g;
         }
         if (m.field_a == 1) {
           gd.field_lb = var8.readUnsignedShort((byte) -60);
@@ -375,9 +375,9 @@ final class eb extends ia {
         }
         var5 = var8.readUnsignedShort((byte) -60);
         try {
-          var9 = jl.field_w.a(var5, -81);
+          var9 = ArchiveIndex.field_w.a(var5, -81);
           bg.field_F = var9.i(1);
-          if (jk.field_e.equals(g.field_l)) {
+          if (IntKeyLookup.field_e.equals(g.field_l)) {
             stackIn_25_0 = null;
           } else {
             stackIn_25_0 = var9.field_F;

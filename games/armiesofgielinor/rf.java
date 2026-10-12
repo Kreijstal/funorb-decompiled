@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rf {
-    private kl field_f;
+    private ResourceArchive field_f;
     static String field_e;
     static je field_d;
     private ri field_b;
-    private kl field_c;
+    private ResourceArchive field_c;
     static String field_a;
 
     final static boolean c(int param0) {
@@ -185,9 +185,9 @@ final class rf {
           return var3;
         }
         if (32768 <= param0) {
-          var5 = this.field_c.a((byte) 99, 32767 & param0, 1);
+          var5 = this.field_c.getFile((byte) 99, 32767 & param0, 1);
         } else {
-          var5 = this.field_f.a((byte) 118, param0, 1);
+          var5 = this.field_f.getFile((byte) 118, param0, 1);
         }
         ar var6 = new ar();
         if (var5 != null) {
@@ -209,7 +209,7 @@ final class rf {
         return var6;
     }
 
-    rf(int param0, kl param1, kl param2, gj param3) {
+    rf(int param0, ResourceArchive param1, ResourceArchive param2, gj param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -224,12 +224,12 @@ final class rf {
           this.field_c = param2;
           this.field_f = param1;
           if (null != this.field_f) {
-            this.field_f.d(1, -2);
+            this.field_f.getFileCapacity(1, -2);
           }
           if (this.field_c == null) {
             return;
           }
-          this.field_c.d(1, -2);
+          this.field_c.getFileCapacity(1, -2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

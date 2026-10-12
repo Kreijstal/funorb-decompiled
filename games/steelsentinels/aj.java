@@ -4,7 +4,7 @@
 final class aj extends IntrusiveNode {
     int field_o;
     static int[] field_v;
-    static cm field_x;
+    static ResourceArchive field_x;
     int field_z;
     int field_t;
     int field_w;

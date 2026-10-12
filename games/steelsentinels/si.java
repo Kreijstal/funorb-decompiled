@@ -82,7 +82,7 @@ final class si extends da {
           var5.field_Kb = 2;
           var5.a(0, param2, 18, 0, var4);
           param0.a(var5, 118);
-          var6 = cm.field_p;
+          var6 = ResourceArchive.field_p;
           var7 = new SceneWidget(-1L, kh.field_s, var6);
           var7.field_nb = 0;
           var7.field_L = (BitmapFont) ((Object) pl.field_U);

@@ -4,7 +4,7 @@
 final class tm {
     static String field_g;
     static long[] field_e;
-    static cm field_d;
+    static ResourceArchive field_d;
     static boolean field_h;
     static String field_c;
     static long[][] field_i;

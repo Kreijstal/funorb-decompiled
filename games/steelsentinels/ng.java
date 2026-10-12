@@ -76,12 +76,12 @@ final class ng {
         }
         this.d((byte) -117);
         if (null != pa.field_a &&
-          pa.field_a.a(param0) &&
+          pa.field_a.ensureIndex(param0) &&
           pa.field_a.a("members_expansion_screen", (byte) 90) &&
           pa.field_a.a("arialish12", (byte) 90) &&
           pa.field_a.a("pump32", (byte) 90) &&
           null != rj.field_d &&
-          rj.field_d.a(true) &&
+          rj.field_d.ensureIndex(true) &&
           rj.field_d.a("arialish12", (byte) 90) &&
           rj.field_d.a("pump32", (byte) 90)) {
           ol.field_Wb = gl.a(pa.field_a, (byte) 85, "members_expansion_screen", "frame");
@@ -307,7 +307,7 @@ final class ng {
           var7 = eb.field_t;
           this.a(var5.field_F, 0.5f, var5, 0, var5.field_A, var6, -16, FunOrbClient.field_w, var17, 259);
           this.a(var5.field_F, 0.5f, var5, 0, var5.field_A, var7, 20, FunOrbClient.field_w, var17, 259);
-          this.a(var5.field_F / 3, 0.699999988079071f, var5, 0, var5.field_A, cm.field_m[this.field_g], 12 + (var5.field_F / 2 - FunOrbClient.field_w.field_G), FunOrbClient.field_w, var17, 259);
+          this.a(var5.field_F / 3, 0.699999988079071f, var5, 0, var5.field_A, ResourceArchive.field_m[this.field_g], 12 + (var5.field_F / 2 - FunOrbClient.field_w.field_G), FunOrbClient.field_w, var17, 259);
           tk.$cfr$intArgs$f$20d51497949f(118);
           this.field_a = new RgbSprite(121, 122);
           q.a(this.field_a, (byte) -75);
@@ -434,7 +434,7 @@ final class ng {
         int var11 = 0;
         int var12 = SteelSentinels.obfuscationControl;
         try {
-          jl.a(false);
+          ArchiveIndex.a(false);
           var9_int = param3;
           if (param7 != -27) {
             this.field_a = (RgbSprite) null;

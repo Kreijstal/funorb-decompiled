@@ -119,7 +119,7 @@ final class sa {
         if (param0 >= -64) {
           field_c = (String) null;
         }
-        stackIn_8_0 = (this == NetworkResourceRequest.field_D) || (this == oq.field_m) || (this == kl.field_k);
+        stackIn_8_0 = (this == NetworkResourceRequest.field_D) || (this == oq.field_m) || (this == ResourceArchive.field_k);
         return stackIn_8_0;
     }
 

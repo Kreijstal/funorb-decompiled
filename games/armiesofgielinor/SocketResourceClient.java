@@ -9,7 +9,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
     private BufferedSocket socket;
     static String field_x;
     static String field_s;
-    static kl field_u;
+    static ResourceArchive field_u;
 
     final void close(int obfuscationGuard) {
         if (obfuscationGuard != -5758) {

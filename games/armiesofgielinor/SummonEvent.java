@@ -8,7 +8,7 @@ final class SummonEvent extends GameEvent {
     static je field_F;
     int tileX;
     static long field_G;
-    static kl field_B;
+    static ResourceArchive field_B;
     int tileY;
     private int unitType;
     private boolean field_y;

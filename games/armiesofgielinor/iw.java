@@ -3,9 +3,9 @@
  */
 final class iw extends IntrusiveNode {
     int field_m;
-    static kl field_p;
+    static ResourceArchive field_p;
     int field_k;
-    static kl field_l;
+    static ResourceArchive field_l;
     int field_s;
     static String field_o;
     static int field_n;
@@ -17,7 +17,7 @@ final class iw extends IntrusiveNode {
         field_o = null;
         field_p = null;
         if (param0 != -25771) {
-          field_l = (kl) null;
+          field_l = (ResourceArchive) null;
           field_l = null;
           return;
         }

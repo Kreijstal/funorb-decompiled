@@ -3,8 +3,8 @@
  */
 final class ub {
     static wc field_e;
-    private cm field_l;
-    private cm field_c;
+    private ResourceArchive field_l;
+    private ResourceArchive field_c;
     private NodeHashTable field_i;
     static int field_g;
     static String field_h;
@@ -24,11 +24,11 @@ final class ub {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_c.b((byte) -61) == 1) {
+          if (this.field_c.getGroupCapacity((byte) -61) == 1) {
             stackIn_3_0 = this.a(param1, false, 0, param0);
             return stackIn_3_0;
           }
-          if (this.field_c.a(true, param1) == 1) {
+          if (this.field_c.getFileCapacity(true, param1) == 1) {
             stackIn_7_0 = this.a(0, false, param1, param0);
             return stackIn_7_0;
           }
@@ -166,11 +166,11 @@ final class ub {
           if (param0 != -35) {
             ub.a(-82);
           }
-          if (this.field_l.b((byte) 121) == 1) {
+          if (this.field_l.getGroupCapacity((byte) 121) == 1) {
             stackIn_4_0 = this.a(0, 0, param2, param1);
             return stackIn_4_0;
           }
-          if (1 != this.field_l.a(true, param2)) {
+          if (1 != this.field_l.getFileCapacity(true, param2)) {
             throw new RuntimeException();
           }
           stackIn_7_0 = this.a(param2, 0, 0, param1);
@@ -287,7 +287,7 @@ final class ub {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_c.a(param0, 103);
+          var5_int = this.field_c.getGroupId(param0, 103);
           if (var5_int < 0) {
             return null;
           }
@@ -295,7 +295,7 @@ final class ub {
             var7 = (int[]) null;
             discarded$1 = this.a((String) null, 67, (String) null, (int[]) null);
           }
-          var6 = this.field_c.a(var5_int, -32759, param2);
+          var6 = this.field_c.getFileId(var5_int, -32759, param2);
           if (var6 < 0) {
             return null;
           }
@@ -519,7 +519,7 @@ final class ub {
         return km.field_f;
     }
 
-    ub(cm param0, cm param1) {
+    ub(ResourceArchive param0, ResourceArchive param1) {
         this.field_i = new NodeHashTable(256);
         this.field_d = new NodeHashTable(256);
         try {

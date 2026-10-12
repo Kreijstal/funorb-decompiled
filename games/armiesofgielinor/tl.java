@@ -169,7 +169,7 @@ final class tl implements Iterator {
         return false;
     }
 
-    final static void a(byte param0, kl param1, kl param2) {
+    final static void a(byte param0, ResourceArchive param1, ResourceArchive param2) {
         try {
           jj.field_c = param2;
           PortalLossCondition.field_e = param1;

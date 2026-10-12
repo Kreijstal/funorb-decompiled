@@ -19,7 +19,7 @@ final class DamageEvent extends GameEvent {
         return var3;
     }
 
-    final static kl a(int param0, int param1, byte param2, boolean param3, boolean param4) {
+    final static ResourceArchive a(int param0, int param1, byte param2, boolean param3, boolean param4) {
         if (param2 >= 98) {
           return tk.a(param1, param4, 1, false, param3, param0);
         }
@@ -71,7 +71,7 @@ final class DamageEvent extends GameEvent {
         return bl.field_b;
     }
 
-    final static void a(byte[] param0, String[][] param1, int param2, RgbSprite[][] param3, int param4, boolean param5, String[][] param6, int param7, kl param8, String[] param9, int param10, RgbSprite[][] param11, String[] param12, kl param13, IndexedSprite[] param14, int[] param15, byte[] param16, String[] param17, kl param18, int[] param19) {
+    final static void a(byte[] param0, String[][] param1, int param2, RgbSprite[][] param3, int param4, boolean param5, String[][] param6, int param7, ResourceArchive param8, String[] param9, int param10, RgbSprite[][] param11, String[] param12, ResourceArchive param13, IndexedSprite[] param14, int[] param15, byte[] param16, String[] param17, ResourceArchive param18, int[] param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

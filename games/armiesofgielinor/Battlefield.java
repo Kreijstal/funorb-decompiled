@@ -5421,18 +5421,18 @@ final class Battlefield {
           }
           regionExit1: {
             if (param1 != 0) {
-              var3 = ew.field_e.a((byte) 59, param1 - 1);
+              var3 = ArchiveProvider.field_e.a((byte) 59, param1 - 1);
               if (var6 == 0) {
                 break regionExit1;
               }
             }
             if (null == this.campaignMission) {
-              var4_int = ew.field_e.a(param0 + 0, this.mapSizeSetting, this.mapTheme, this.playerCount);
+              var4_int = ArchiveProvider.field_e.a(param0 + 0, this.mapSizeSetting, this.mapTheme, this.playerCount);
               if (var4_int <= 0) {
                 throw new RuntimeException((String) null);
               }
               var5 = this.randomSeed % var4_int;
-              var3 = ew.field_e.a(this.playerCount, 4136, this.mapSizeSetting, this.mapTheme, var5);
+              var3 = ArchiveProvider.field_e.a(this.playerCount, 4136, this.mapSizeSetting, this.mapTheme, var5);
               if (var3 == null) {
                 throw new RuntimeException((String) null);
               }

@@ -51,7 +51,7 @@ final class um extends oa {
               field_db = (String) null;
             }
             for (var10_int = 0; var10_int < var5_int; var10_int++) {
-              var11 = jl.field_w.a(param3[var10_int], -76);
+              var11 = ArchiveIndex.field_w.a(param3[var10_int], -76);
               var6[var10_int] = var11.i(1);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;

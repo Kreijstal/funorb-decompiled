@@ -63,7 +63,7 @@ final class ci {
         field_b = null;
     }
 
-    final static void a(cm param0, byte param1, cm param2, cm param3) {
+    final static void a(ResourceArchive param0, byte param1, ResourceArchive param2, ResourceArchive param3) {
         RgbSprite var17 = null;
         IndexedSprite[] var5 = null;
         IndexedSprite[][] var6 = null;
@@ -119,7 +119,7 @@ final class ci {
             }
           }
           var9Lifetime1 = var17.field_F;
-          jl.a(false);
+          ArchiveIndex.a(false);
           var17.d();
           SoftwareRaster.b(0, 0, SoftwareRaster.field_c, SoftwareRaster.field_j);
           var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
@@ -139,7 +139,7 @@ final class ci {
         }
     }
 
-    final static String a(cm param0, byte param1, String param2, String param3, String param4) {
+    final static String a(ResourceArchive param0, byte param1, String param2, String param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -154,7 +154,7 @@ final class ci {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0.a(true)) {
+          if (!param0.ensureIndex(true)) {
             stackIn_2_0 = (String) (param4);
             return stackIn_2_0;
           }

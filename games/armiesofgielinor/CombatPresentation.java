@@ -8,7 +8,7 @@ final class CombatPresentation implements EventPresentation {
     static String field_N;
     private BattleCamera camera;
     static jp field_G;
-    static kl field_M;
+    static ResourceArchive field_M;
     RgbSprite framebuffer;
     private boolean field_d;
     private EventPresenter presenter;
@@ -3250,7 +3250,7 @@ final class CombatPresentation implements EventPresentation {
           if (param0 >= -30) {
             field_G = (jp) null;
           }
-          jm.field_g = false;
+          ArchiveIndex.field_g = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class p {
-    private kl field_g;
+    private ResourceArchive field_g;
     static String field_d;
     static int field_b;
     static wd field_a;
     static String field_i;
     static String field_f;
-    private kl field_h;
+    private ResourceArchive field_h;
     private NodeHashTable field_e;
     static String field_c;
     private NodeHashTable field_j;
@@ -28,12 +28,12 @@ final class p {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_g.a(param1, 125);
+          var5_int = this.field_g.getGroupId(param1, 125);
           if (var5_int < param2) {
             stackIn_2_0 = null;
             return (sn) (stackIn_2_0);
           }
-          var6 = this.field_g.a((byte) 119, var5_int, param0);
+          var6 = this.field_g.getFileId((byte) 119, var5_int, param0);
           if (var6 < 0) {
             return null;
           }
@@ -74,11 +74,11 @@ final class p {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_g.e(-113) == 1) {
+          if (this.field_g.getGroupCapacity(-113) == 1) {
             stackIn_2_0 = this.a(0, param1, param2, 0);
             return stackIn_2_0;
           }
-          if (1 == this.field_g.d(param2, -2)) {
+          if (1 == this.field_g.getFileCapacity(param2, -2)) {
             stackIn_6_0 = this.a(0, param1, 0, param2);
             return stackIn_6_0;
           }
@@ -288,11 +288,11 @@ final class p {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_h.e(-111) == 1) {
+          if (this.field_h.getGroupCapacity(-111) == 1) {
             stackIn_2_0 = this.b(-648691772, param0, 0, param2);
             return stackIn_2_0;
           }
-          if (this.field_h.d(param2, -2) == 1) {
+          if (this.field_h.getFileCapacity(param2, -2) == 1) {
             stackIn_6_0 = this.b(-648691772, param0, param2, 0);
             return stackIn_6_0;
           }
@@ -447,7 +447,7 @@ final class p {
         return param0 + "ª";
     }
 
-    p(kl param0, kl param1) {
+    p(ResourceArchive param0, ResourceArchive param1) {
         this.field_e = new NodeHashTable(256);
         this.field_j = new NodeHashTable(256);
         try {
@@ -474,12 +474,12 @@ final class p {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_h.a(param3, 108);
+          var5_int = this.field_h.getGroupId(param3, 108);
           if (var5_int < 0) {
             stackIn_2_0 = null;
             return (sn) (stackIn_2_0);
           }
-          var6 = this.field_h.a((byte) 119, var5_int, param2);
+          var6 = this.field_h.getFileId((byte) 119, var5_int, param2);
           if (var6 < 0) {
             return null;
           }

@@ -16,13 +16,13 @@ final class ba {
         }
         int var3 = -28 / ((35 - param0) / 54);
         if (ei.field_q == 102) {
-          jk.field_i.l(-128);
+          IntKeyLookup.field_i.l(-128);
           return true;
         }
-        if (jk.field_i == null) {
+        if (IntKeyLookup.field_i == null) {
           return false;
         }
-        if (jk.field_i.a(25542, param2, param1)) {
+        if (IntKeyLookup.field_i.a(25542, param2, param1)) {
           return true;
         }
         return false;

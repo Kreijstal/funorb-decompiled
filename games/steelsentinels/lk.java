@@ -232,7 +232,7 @@ final class lk extends oa {
         var8 = this.field_db.a((byte) 21);
         if (nh.field_J != var8 &&
           ma.field_Y != var8) {
-          if (var8 == fa.field_d) {
+          if (var8 == ArchiveProvider.field_d) {
             var14 = t.field_i[2];
             var14.a(var5 - (var14.field_A >> 1), -(var14.field_F >> 1) + var6, 256);
           } else if (vf.field_b == var8) {

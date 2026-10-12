@@ -8,7 +8,7 @@ final class rj {
     static int field_j;
     private long field_e;
     private int field_g;
-    static cm field_d;
+    static ResourceArchive field_d;
     private long field_i;
     private long field_o;
     private sn field_q;
@@ -20,7 +20,7 @@ final class rj {
     static int field_b;
     static String[] field_m;
     private int field_h;
-    static cm field_k;
+    static ResourceArchive field_k;
 
     final void a(byte param0, byte[] param1, int param2, int param3) throws IOException {
         int incrementValue$0 = 0;
@@ -1186,7 +1186,7 @@ final class rj {
             var9.field_I = vh.field_b;
             dg.field_g = new SceneWidget("", var7);
             dg.field_g.field_I = ng.field_p;
-            dg.field_g.field_Ab = cm.field_b;
+            dg.field_g.field_Ab = ResourceArchive.field_b;
             var10 = new SceneWidget("", var7);
             var10.field_Ab = ta.field_c;
             var10.field_nb = 16777215;
@@ -1502,9 +1502,9 @@ final class rj {
         ig.field_e = param0;
         IntrusiveNode.field_e = param3;
         if (param4 != -89) {
-          field_k = (cm) null;
+          field_k = (ResourceArchive) null;
         }
-        jk.field_d = param1;
+        IntKeyLookup.field_d = param1;
     }
 
     final static void a(String param0, java.applet.Applet param1, byte param2) {

@@ -3,7 +3,7 @@
  */
 class fb extends me {
     static String field_n;
-    static cm field_h;
+    static ResourceArchive field_h;
     static SceneWidget field_r;
     private long field_i;
     static java.applet.Applet field_o;

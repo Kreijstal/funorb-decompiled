@@ -37,7 +37,7 @@ final class lb extends SceneWidget {
         }
     }
 
-    final static void a(byte param0, cm param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         SceneWidget var5 = null;
         SceneWidget var6 = null;
         SceneWidget var3 = null;

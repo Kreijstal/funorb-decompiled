@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ta {
-    private fi[] field_j;
+    private CachedArchiveProvider[] field_j;
     static int field_l;
     private PacketBuffer field_a;
     private cb field_m;
@@ -12,7 +12,7 @@ final class ta {
     private java.math.BigInteger field_b;
     static SceneWidget field_i;
     private vk field_g;
-    static cm field_d;
+    static ResourceArchive field_d;
     static String[] field_f;
     static RgbSprite[] field_c;
 
@@ -103,14 +103,14 @@ final class ta {
             throw new RuntimeException();
           }
         }
-        this.field_j = new fi[var3];
+        this.field_j = new CachedArchiveProvider[var3];
         this.field_a = var10;
         return true;
     }
 
-    final fi a(rc param0, byte param1, boolean param2, rc param3, int param4) {
-        fi stackIn_10_0 = null;
-        fi stackIn_14_0 = null;
+    final CachedArchiveProvider a(rc param0, byte param1, boolean param2, rc param3, int param4) {
+        CachedArchiveProvider stackIn_10_0 = null;
+        CachedArchiveProvider stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -120,7 +120,7 @@ final class ta {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        fi var9 = null;
+        CachedArchiveProvider var9 = null;
         rc var10 = null;
         byte[] var14 = null;
         try {
@@ -142,7 +142,7 @@ final class ta {
             var7 = this.field_a.readInt(0);
             var14 = new byte[64];
             this.field_a.readBytes(0, var14, 28, 64);
-            var9 = new fi(param4, param3, param0, this.field_g, this.field_m, var6_int, var14, var7, param2);
+            var9 = new CachedArchiveProvider(param4, param3, param0, this.field_g, this.field_m, var6_int, var14, var7, param2);
             this.field_j[param4] = var9;
             stackIn_14_0 = var9;
             return stackIn_14_0;
@@ -182,7 +182,7 @@ final class ta {
     final void a(boolean param0) {
         int var2;
         int var3;
-        fi stackIn_15_0 = null;
+        CachedArchiveProvider stackIn_15_0 = null;
         int var2Lifetime1;
         var3 = SteelSentinels.obfuscationControl;
         if (null == this.field_j) {

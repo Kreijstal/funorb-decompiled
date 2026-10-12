@@ -11,9 +11,9 @@ final class wh {
     static String field_d;
     static NodeDeque field_c;
 
-    final static boolean a(kl param0, byte param1, kl param2, kl param3) {
+    final static boolean a(ResourceArchive param0, byte param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
-        kl var5 = null;
+        ResourceArchive var5 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -24,18 +24,18 @@ final class wh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 127) {
-            var5 = (kl) null;
-            wh.a((kl) null, (byte) 105, (kl) null, (kl) null);
+            var5 = (ResourceArchive) null;
+            wh.a((ResourceArchive) null, (byte) 105, (ResourceArchive) null, (ResourceArchive) null);
           }
-          if (!param0.a((byte) 82)) {
+          if (!param0.ensureIndex((byte) 82)) {
             return false;
           }
           if (!param0.a(28979, "commonui")) {
             return false;
           }
-          if (param3.a((byte) 82) &&
+          if (param3.ensureIndex((byte) 82) &&
             param3.a(28979, "commonui")) {
-            if (param2.a((byte) 82) &&
+            if (param2.ensureIndex((byte) 82) &&
               param2.a(param1 ^ 29004, "button.gif")) {
               return true;
             }
@@ -68,7 +68,7 @@ final class wh {
         }
     }
 
-    final static boolean a(kl param0, int param1) {
+    final static boolean a(ResourceArchive param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;

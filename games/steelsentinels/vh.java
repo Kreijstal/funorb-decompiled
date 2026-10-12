@@ -39,9 +39,9 @@ final class vh {
         }
     }
 
-    final static RgbSprite[] a(int param0, cm param1, int param2, byte param3) {
+    final static RgbSprite[] a(int param0, ResourceArchive param1, int param2, byte param3) {
         RuntimeException var4 = null;
-        cm var5 = null;
+        ResourceArchive var5 = null;
         RgbSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -52,8 +52,8 @@ final class vh {
             return null;
           }
           if (param3 <= 16) {
-            var5 = (cm) null;
-            vh.a(83, (cm) null, 117, (byte) 119);
+            var5 = (ResourceArchive) null;
+            vh.a(83, (ResourceArchive) null, 117, (byte) 119);
           }
           stackIn_6_0 = gj.b(0);
           return stackIn_6_0;

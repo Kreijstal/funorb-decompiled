@@ -109,7 +109,7 @@ final class ls {
         return var8;
     }
 
-    final static IndexedSprite a(int param0, kl param1, int param2, int param3) {
+    final static IndexedSprite a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         IndexedSprite stackIn_5_0 = null;
         IndexedSprite stackIn_7_0 = null;

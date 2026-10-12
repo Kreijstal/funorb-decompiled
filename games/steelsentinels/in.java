@@ -370,7 +370,7 @@ final class in {
           for (var3Lifetime2 = 0; var3Lifetime2 < rb.field_i.length; var3Lifetime2++) {
             rb.field_i[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte((byte) -2);
           }
-          fi.field_l = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -93);
+          CachedArchiveProvider.field_l = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -93);
           GameplayController.field_L = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -59);
           for (var3Lifetime3 = 0; var3Lifetime3 < ti.field_s.length; var3Lifetime3++) {
             ti.field_s[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte((byte) -2);
@@ -383,7 +383,7 @@ final class in {
         }
     }
 
-    final static ld a(cm param0, int param1, int param2, cm param3, int param4) {
+    final static ld a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         ld stackIn_5_0 = null;
         ld stackIn_7_0 = null;
@@ -398,7 +398,7 @@ final class in {
             return null;
           }
           if (param1 >= 97) {
-            stackIn_7_0 = nc.a(param0.a(param4, (byte) 38, param2), 7045);
+            stackIn_7_0 = nc.a(param0.getFile(param4, (byte) 38, param2), 7045);
             return stackIn_7_0;
           }
           stackIn_5_0 = (ld) null;
@@ -445,12 +445,12 @@ final class in {
         if (sg.field_c > 2) {
           sg.field_c = 2;
         }
-        fi.field_y = 3 & param1;
+        CachedArchiveProvider.field_y = 3 & param1;
         if (!(pm.field_Z <= 2)) {
           pm.field_Z = 2;
         }
-        if (!(fi.field_y <= 2)) {
-          fi.field_y = 2;
+        if (!(CachedArchiveProvider.field_y <= 2)) {
+          CachedArchiveProvider.field_y = 2;
         }
         if (param0 <= 16) {
           field_g = (int[]) null;

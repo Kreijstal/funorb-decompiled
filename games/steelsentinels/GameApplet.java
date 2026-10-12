@@ -450,15 +450,15 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException var2 = null;
         try {
           var2_long = mm.a(59);
-          var4 = bm.field_T[cm.field_g];
-          bm.field_T[cm.field_g] = var2_long;
+          var4 = bm.field_T[ResourceArchive.field_g];
+          bm.field_T[ResourceArchive.field_g] = var2_long;
           if (var4 != 0L &&
             var2_long > var4) {
           }
           if (param0 != -7035) {
             return;
           }
-          cm.field_g = 1 + cm.field_g & 31;
+          ResourceArchive.field_g = 1 + ResourceArchive.field_g & 31;
           fieldTemp$1 = ml.field_a;
           ml.field_a = ml.field_a + 1;
           if (fieldTemp$1 > 50) {

@@ -3,7 +3,7 @@
  */
 final class PortalLossCondition implements MatchCondition {
     static String[][] instructionSectionTitles;
-    static kl field_e;
+    static ResourceArchive field_e;
     static String[][][][] instructionParagraphs;
     private int playerId;
     static String[][][] instructionRowHeadings;

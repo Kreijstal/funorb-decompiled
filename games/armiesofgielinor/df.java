@@ -323,7 +323,7 @@ final class df extends tj implements fb, he {
     final static void a(int param0) {
         if (param0 != -20) {
           String var2 = (String) null;
-          df.a((String) null, -20, (kl) null, -114, (String) null);
+          df.a((String) null, -20, (ResourceArchive) null, -114, (String) null);
         }
         MoveEvent.campaignMenu = new CampaignMenu();
         gb.configureTutorialStage(30, 21, 220, 420, 440, 470, new int[]{7}, -121);
@@ -355,7 +355,7 @@ final class df extends tj implements fb, he {
         hf.field_a = param0;
     }
 
-    final static String a(String param0, int param1, kl param2, int param3, String param4) {
+    final static String a(String param0, int param1, ResourceArchive param2, int param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -373,11 +373,11 @@ final class df extends tj implements fb, he {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (!param2.a((byte) 82)) {
+          if (!param2.ensureIndex((byte) 82)) {
             stackIn_6_0 = (String) (param4);
             return stackIn_6_0;
           }
-          stackIn_8_0 = param0 + " - " + param2.b(param1, (byte) 73) + "%";
+          stackIn_8_0 = param0 + " - " + param2.getGroupProgress(param1, (byte) 73) + "%";
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

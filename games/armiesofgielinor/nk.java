@@ -147,7 +147,7 @@ final class nk {
         }
     }
 
-    final static RgbSprite[] a(int param0, byte param1, int param2, kl param3) {
+    final static RgbSprite[] a(int param0, byte param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RgbSprite[] stackIn_5_0 = null;
         RgbSprite[] stackIn_7_0 = null;

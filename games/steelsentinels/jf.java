@@ -230,7 +230,7 @@ class jf extends oa {
     }
 
     final static void c(boolean param0) {
-        eb.a(0, jk.field_h, an.field_a, bd.field_f, od.field_g);
+        eb.a(0, IntKeyLookup.field_h, an.field_a, bd.field_f, od.field_g);
         if (!param0) {
           field_kb = (RgbSprite) null;
         }

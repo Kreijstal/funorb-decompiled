@@ -291,7 +291,7 @@ final class jg {
 
     final static void a(int param0, int param1) {
         ud.field_w = i.field_d[param0];
-        jk.field_g = ArticulatedPart.field_X[param0];
+        IntKeyLookup.field_g = ArticulatedPart.field_X[param0];
         nm.field_t = si.field_j[param0];
         if (param1 != 1000) {
           jg.a(126, (byte) -10, -36);

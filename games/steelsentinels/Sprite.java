@@ -197,7 +197,7 @@ abstract class Sprite {
         return (na) (var4);
     }
 
-    final static void a(cm param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         uk var2 = null;
         try {
           uk.b(param0.a("", -742, "headers.packvorbis"));

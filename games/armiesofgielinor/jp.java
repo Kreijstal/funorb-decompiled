@@ -20,13 +20,13 @@ final class jp {
         }
         while (this.field_f > this.field_e) {
           var4 = this.field_c[this.field_e];
-          if (!var4.field_c.a((byte) 82)) {
+          if (!var4.field_c.ensureIndex((byte) 82)) {
             this.a(0, var4, (byte) -126);
             return false;
           }
           if (var4.field_d >= 0 &&
             !var4.field_c.a(11894, var4.field_d)) {
-            this.a(var4.field_c.b(var4.field_d, (byte) 73), var4, (byte) -89);
+            this.a(var4.field_c.getGroupProgress(var4.field_d, (byte) 73), var4, (byte) -89);
             return false;
           }
           if (var4.field_b != null &&

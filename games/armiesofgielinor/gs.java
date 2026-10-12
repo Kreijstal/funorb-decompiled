@@ -86,7 +86,7 @@ final class gs implements kh {
         field_c = null;
     }
 
-    final static tu a(String param0, kl param1, kl param2, byte param3, String param4) {
+    final static tu a(String param0, ResourceArchive param1, ResourceArchive param2, byte param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -102,8 +102,8 @@ final class gs implements kh {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param1.a(param0, 106);
-          var6 = param1.a((byte) -65, var5_int, param4);
+          var5_int = param1.getGroupId(param0, 106);
+          var6 = param1.getFileId((byte) -65, var5_int, param4);
           if (param3 != -53) {
             field_a = true;
           }
@@ -236,7 +236,7 @@ final class gs implements kh {
                         if (param0 == 42) {
                             /* Inlined CFG state: 4. */
                             {
-                                if (ov.field_g != kl.field_k) {
+                                if (ov.field_g != ResourceArchive.field_k) {
                                     /* Inlined CFG state: 6. */
                                     {
                                         stackIn_7_0 = 0;

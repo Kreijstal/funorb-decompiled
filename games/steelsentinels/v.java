@@ -14,10 +14,10 @@ abstract class v implements tl {
         try {
           tb.a(param2, param1, 10);
           fc.field_a = tb.a(param4, param5, 0, param0);
-          cm.field_j = tb.a(param4, param5, 1, param6);
+          ResourceArchive.field_j = tb.a(param4, param5, 1, param6);
           ll.field_e = new wg();
           ej.field_B = param6 * 1000 / param2;
-          cm.field_j.a(ll.field_e);
+          ResourceArchive.field_j.a(ll.field_e);
           if (param7 > -71) {
             field_g = 'ﾓ';
           }

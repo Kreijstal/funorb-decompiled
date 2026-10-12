@@ -754,7 +754,7 @@ final class BattleCharacter {
         }
     }
 
-    final static CampaignMission readCampaignMission(CampaignDefinition campaign, CipherPacketBuffer packet, kl archive, byte obfuscationGuard) {
+    final static CampaignMission readCampaignMission(CampaignDefinition campaign, CipherPacketBuffer packet, ResourceArchive archive, byte obfuscationGuard) {
         CampaignMission mission = null;
         RuntimeException var4_ref = null;
         int var5 = 0;

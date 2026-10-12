@@ -387,7 +387,7 @@ final class TutorialController {
                 var3Lifetime1 = (TrianglePulse.field_c - 312) * ou.field_c / 291;
               }
               if (wg.a(-33, db.a(param0, 34), db.a(param0, 292), MatchConditionEntry.a(64, (byte) 94), MatchConditionEntry.a(380, (byte) 94))) {
-                discarded$0 = this.a(bm.spellMenuRoot, true, var3Lifetime1, 0, 0, 97);
+                discarded$0 = this.a(CachedArchiveProvider.spellMenuRoot, true, var3Lifetime1, 0, 0, 97);
               }
               if (fa.field_j != 2 &&
                 wg.a(-33, db.a(true, 279), db.a(true, 293), MatchConditionEntry.a(68 + ou.field_c, (byte) 94), MatchConditionEntry.a(60 - (-ou.field_c - 24), (byte) 94))) {
@@ -3718,7 +3718,7 @@ final class TutorialController {
               SoftwareRaster.f(db.a(true, 279), MatchConditionEntry.a(67, (byte) 94), 14, 310, 1250067);
               mp.field_Jb.g(db.a(true, 280), MatchConditionEntry.a(68, (byte) 94), 128);
             }
-            discarded$3 = this.a(0, bm.spellMenuRoot, true, 0, var4, (byte) 116);
+            discarded$3 = this.a(0, CachedArchiveProvider.spellMenuRoot, true, 0, var4, (byte) 116);
             this.c(0);
             SoftwareRaster.a();
             fe.b(ou.field_j, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, true);

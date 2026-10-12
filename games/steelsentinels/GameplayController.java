@@ -298,7 +298,7 @@ final class GameplayController {
               stackIn_32_0 = param2;
             }
             if (stackIn_32_0 != 0) {
-              GameplayController.a((cm) null, (byte) 6, (String) null, (String) null);
+              GameplayController.a((ResourceArchive) null, (byte) 6, (String) null, (String) null);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
@@ -3546,7 +3546,7 @@ final class GameplayController {
                 }
               }
               var9 = fk.field_d.c(hj.field_s.toUpperCase());
-              jl.field_c = jl.field_c + 0.05000000074505806f * ((float)var9 - jl.field_c);
+              ArchiveIndex.field_c = ArchiveIndex.field_c + 0.05000000074505806f * ((float)var9 - ArchiveIndex.field_c);
             }
             if (!this.field_d ||
               !param1 ||
@@ -3576,7 +3576,7 @@ final class GameplayController {
                 stackIn_1512_0 = co.field_d;
               }
               var12 = stackIn_1512_0;
-              var13 = var12[2].field_A + var12[0].field_A + (int)jl.field_c;
+              var13 = var12[2].field_A + var12[0].field_A + (int)ArchiveIndex.field_c;
               if (oh.field_f >= 0 &&
                 oh.field_f < var13 &&
                 var10 <= pi.field_c &&
@@ -4072,7 +4072,7 @@ final class GameplayController {
               }
             }
             var9 = fk.field_d.c(hj.field_s.toUpperCase());
-            jl.field_c = jl.field_c + 0.05000000074505806f * ((float)var9 - jl.field_c);
+            ArchiveIndex.field_c = ArchiveIndex.field_c + 0.05000000074505806f * ((float)var9 - ArchiveIndex.field_c);
           }
           if (!this.field_d ||
             !param1 ||
@@ -4105,7 +4105,7 @@ final class GameplayController {
             stackIn_2063_0 = be.field_f;
           }
           var12 = stackIn_2063_0;
-          var13 = var12[0].field_A + ((int)jl.field_c + var12[2].field_A);
+          var13 = var12[0].field_A + ((int)ArchiveIndex.field_c + var12[2].field_A);
           if (oh.field_f >= 0 &&
             var13 > oh.field_f &&
             pi.field_c >= var10 &&
@@ -5470,7 +5470,7 @@ final class GameplayController {
                 var28 = 255;
               }
               var28 = var28 * (-var27 + 6) / 6;
-              var29 = fi.field_g[var27];
+              var29 = CachedArchiveProvider.field_g[var27];
               var30 = 6 + fk.field_d.c(ke.field_b[var27]);
               SoftwareRaster.c(-3 + var24, var23 - fk.field_d.field_G, var30, fk.field_d.field_G, 0, var28 * 2 / 3);
               if (var30 > var26) {
@@ -5718,7 +5718,7 @@ final class GameplayController {
         }
     }
 
-    final static RgbSprite[] a(cm param0, byte param1, String param2, String param3) {
+    final static RgbSprite[] a(ResourceArchive param0, byte param1, String param2, String param3) {
         RgbSprite[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -6828,7 +6828,7 @@ final class GameplayController {
               stackIn_161_0 = co.field_d;
             }
             var7_ref_wk__ = stackIn_161_0;
-            var8 = var7_ref_wk__[2].field_A + ((int)jl.field_c + var7_ref_wk__[0].field_A);
+            var8 = var7_ref_wk__[2].field_A + ((int)ArchiveIndex.field_c + var7_ref_wk__[0].field_A);
             var9Lifetime2 = 24;
             var10Lifetime2 = 356;
             if (vl.field_v) {
@@ -6860,7 +6860,7 @@ final class GameplayController {
             var11 = new int[4];
             SoftwareRaster.b(var11);
             if (hj.field_s != null) {
-              fk.field_d.c(hj.field_s.toUpperCase(), var7_ref_wk__[0].field_A + (int)jl.field_c, -var7_ref_wk__[6].field_F + var10Lifetime2 - (-var9Lifetime2 - 3), this.field_M[0], -1);
+              fk.field_d.c(hj.field_s.toUpperCase(), var7_ref_wk__[0].field_A + (int)ArchiveIndex.field_c, -var7_ref_wk__[6].field_F + var10Lifetime2 - (-var9Lifetime2 - 3), this.field_M[0], -1);
             }
             SoftwareRaster.a(var11);
           }
@@ -7211,9 +7211,9 @@ final class GameplayController {
         }
     }
 
-    final static cm a(boolean param0, int param1, int param2, int param3, boolean param4) {
+    final static ResourceArchive a(boolean param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException var5 = null;
-        cm stackIn_4_0 = null;
+        ResourceArchive stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 256) {
@@ -8670,7 +8670,7 @@ final class GameplayController {
               var13 = -180 + ((var13 * 3 - 720) / 10 + 240);
               if (null == un.field_o ||
                 h.field_T == null) {
-                im.field_h.field_d = 0;
+                im.field_h.fileRetentionMode = 0;
                 un.field_o = (RgbSprite) ((Object) new ek(im.field_h.a("planet.jpg", -742, "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
                 h.field_T = (RgbSprite) ((Object) new ek(im.field_h.a("moon.jpg", param0 ^ -665, "fleetbattle/"), (java.awt.Component) ((Object) gl.a(false))));
               }
@@ -8700,7 +8700,7 @@ final class GameplayController {
                   var11Lifetime2 -= 4;
                 }
                 if (null == jh.field_h) {
-                  im.field_h.field_d = 0;
+                  im.field_h.fileRetentionMode = 0;
                   if (this.world.terrain.getTerrainType(55) == 0) {
                     jh.field_h = new RgbSprite(im.field_h.a("wz_background.jpg", -742, "warzone/"), (java.awt.Component) ((Object) gl.a(false)));
                   }
@@ -11481,7 +11481,7 @@ final class GameplayController {
               stackIn_27_0 = co.field_d;
             }
             var6 = stackIn_27_0;
-            var7 = var6[2].field_A + (var6[0].field_A + (int)jl.field_c);
+            var7 = var6[2].field_A + (var6[0].field_A + (int)ArchiveIndex.field_c);
             var8 = 24;
             var9 = 356;
             if (vl.field_v) {
@@ -11513,7 +11513,7 @@ final class GameplayController {
             var10 = new int[4];
             SoftwareRaster.b(var10);
             if (null != hj.field_s) {
-              fk.field_d.c(hj.field_s.toUpperCase(), (int)jl.field_c + var6[0].field_A, 3 + (var9 + (-var6[6].field_F + var8)), this.field_M[0], -1);
+              fk.field_d.c(hj.field_s.toUpperCase(), (int)ArchiveIndex.field_c + var6[0].field_A, 3 + (var9 + (-var6[6].field_F + var8)), this.field_M[0], -1);
             }
             SoftwareRaster.a(var10);
           }
@@ -12755,7 +12755,7 @@ final class GameplayController {
           pm.field_db = new NodeDeque();
           hh.field_c = new int[6];
           this.field_D = new int[this.field_S];
-          fi.field_g = new int[6];
+          CachedArchiveProvider.field_g = new int[6];
           this.field_K = new int[this.field_S];
           ke.field_b = new String[6];
           ed.field_j = param4;

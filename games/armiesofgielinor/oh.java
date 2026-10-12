@@ -10,7 +10,7 @@ final class oh extends dr {
     static RgbSprite field_I;
     static int field_E;
     static long field_H;
-    static kl field_M;
+    static ResourceArchive field_M;
 
     public static void g(int param0) {
         field_G = null;

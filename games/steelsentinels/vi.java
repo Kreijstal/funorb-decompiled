@@ -318,8 +318,8 @@ final class vi extends dl implements cg, ae, oj {
           field_W = null;
           return;
         }
-        cm var2 = (cm) null;
-        vi.a((byte) 115, true, (cm) null, (cm) null, (cm) null);
+        ResourceArchive var2 = (ResourceArchive) null;
+        vi.a((byte) 115, true, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
         field_ab = null;
         field_Z = null;
         field_W = null;
@@ -462,7 +462,7 @@ final class vi extends dl implements cg, ae, oj {
             field_Z = (String) null;
           }
           var4 = var3.a((byte) 21);
-          if (fa.field_d == var4) {
+          if (ArchiveProvider.field_d == var4) {
             return false;
           }
           if (nh.field_J == var4) {
@@ -533,7 +533,7 @@ final class vi extends dl implements cg, ae, oj {
         }
     }
 
-    final static void a(byte param0, boolean param1, cm param2, cm param3, cm param4) {
+    final static void a(byte param0, boolean param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4) {
         gf.field_a = sf.a("", 16);
         if (param0 != -127) {
           return;

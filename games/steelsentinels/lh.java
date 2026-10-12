@@ -303,7 +303,7 @@ class lh extends IntrusiveNode {
         }
     }
 
-    final static void a(int[] param0, RgbSprite[][] param1, int param2, String[][] param3, cm param4, int[] param5, boolean param6, cm param7, String[] param8, IndexedSprite[] param9, cm param10, String[][] param11, byte[] param12, RgbSprite[][] param13, int param14, String[] param15, byte[] param16, int param17, int param18) {
+    final static void a(int[] param0, RgbSprite[][] param1, int param2, String[][] param3, ResourceArchive param4, int[] param5, boolean param6, ResourceArchive param7, String[] param8, IndexedSprite[] param9, ResourceArchive param10, String[][] param11, byte[] param12, RgbSprite[][] param13, int param14, String[] param15, byte[] param16, int param17, int param18) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

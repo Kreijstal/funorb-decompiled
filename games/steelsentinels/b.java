@@ -70,7 +70,7 @@ final class b implements qk {
         int var3 = var2.position;
         var2.writeByte((byte) 113, 2);
         var2.writeBytes(rb.field_i.length, (byte) -122, 0, rb.field_i);
-        var2.writeByte((byte) 125, fi.field_l);
+        var2.writeByte((byte) 125, CachedArchiveProvider.field_l);
         var2.writeByte((byte) 110, GameplayController.field_L);
         var2.writeBytes(ti.field_s.length, (byte) -122, 0, ti.field_s);
         var2.b((byte) 123, var2.position - var3);

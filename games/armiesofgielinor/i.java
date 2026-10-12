@@ -5,7 +5,7 @@ final class i extends je {
     private fp field_Qb;
     private je field_Ib;
     long field_Sb;
-    static kl field_Lb;
+    static ResourceArchive field_Lb;
     private je field_Vb;
     private StringBuilder field_Jb;
     static int[] field_Nb;
@@ -187,7 +187,7 @@ final class i extends je {
         field_Nb = null;
         field_Ob = null;
         if (param0 < 60) {
-          field_Lb = (kl) null;
+          field_Lb = (ResourceArchive) null;
         }
         field_Lb = null;
     }

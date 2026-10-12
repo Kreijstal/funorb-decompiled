@@ -26,11 +26,11 @@ final class gl extends al {
         }
         if (param0 >= -116) {
           String var3 = (String) null;
-          gl.a((cm) null, (byte) 47, (String) null, (String) null);
+          gl.a((ResourceArchive) null, (byte) 47, (String) null, (String) null);
         }
     }
 
-    final static IndexedSprite a(cm param0, byte param1, String param2, String param3) {
+    final static IndexedSprite a(ResourceArchive param0, byte param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -45,12 +45,12 @@ final class gl extends al {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a(param2, 44);
+          var4_int = param0.getGroupId(param2, 44);
           if (param1 != 85) {
             stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
-          var5 = param0.a(var4_int, -32759, param3);
+          var5 = param0.getFileId(var4_int, -32759, param3);
           stackIn_4_0 = va.a(var4_int, param0, true, var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

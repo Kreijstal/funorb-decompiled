@@ -120,7 +120,7 @@ final class sg implements Runnable {
                 var9[var12Lifetime1 + var14] = param1.field_F[var14];
                 var10[var12Lifetime1 + var14] = param1.field_A[var14];
               } else {
-                var16 = jl.field_w.a(var15, -118);
+                var16 = ArchiveIndex.field_w.a(var15, -118);
                 var8[var14 + var12Lifetime1] = var16.i(1);
                 var9[var14 + var12Lifetime1] = param1.field_F[var14];
                 if (var9[var14 + var12Lifetime1] <= 0) {

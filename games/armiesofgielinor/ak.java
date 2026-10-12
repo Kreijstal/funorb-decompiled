@@ -149,8 +149,8 @@ final class ak extends ju {
         ts var9 = null;
         ts var10 = null;
         if (param3 != -31932) {
-          kl var7 = (kl) null;
-          ak.a(-2, (kl) null, 6, -12);
+          ResourceArchive var7 = (ResourceArchive) null;
+          ak.a(-2, (ResourceArchive) null, 6, -12);
         }
         if (param1 == null) {
           this.field_b = null;
@@ -175,7 +175,7 @@ final class ak extends ju {
         }
     }
 
-    final static IndexedSprite[] a(int param0, kl param1, int param2, int param3) {
+    final static IndexedSprite[] a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         IndexedSprite[] stackIn_5_0 = null;
@@ -190,7 +190,7 @@ final class ak extends ju {
             return (IndexedSprite[]) (stackIn_2_0);
           }
           if (param2 == 0) {
-            stackIn_7_0 = lr.a(111);
+            stackIn_7_0 = IntKeyLookup.a(111);
             return stackIn_7_0;
           }
           stackIn_5_0 = (IndexedSprite[]) null;
@@ -352,7 +352,7 @@ final class ak extends ju {
 
     final static void b(boolean param0) {
         tq.field_c = SoftwareRaster.width;
-        bm.field_p = SoftwareRaster.height;
+        CachedArchiveProvider.field_p = SoftwareRaster.height;
         bh.d(false);
         SpellCastEvent.field_E.a(-2 + no.field_T.field_ob - 40, (byte) -124, 0, no.field_T.field_gb, 0);
         t.field_g.a(jn.field_d, -20500, GlobalSpell.field_f.field_gb, 0, 0);
@@ -399,8 +399,8 @@ final class ak extends ju {
           vl.outgoingPacket.writeByteLengthPrefix(-var4 + vl.outgoingPacket.position, param3 + 5900);
           return;
         }
-        kl var5 = (kl) null;
-        ak.a(81, (kl) null, -36, 38);
+        ResourceArchive var5 = (ResourceArchive) null;
+        ak.a(81, (ResourceArchive) null, -36, 38);
         vd.field_b.writeByte(1, param0);
         vd.field_b.writeByte(1, param1);
         vd.field_b.writeShort(true, param2);

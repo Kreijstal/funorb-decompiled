@@ -297,43 +297,43 @@ public final class SteelSentinels extends FunOrbClient {
         try {
           ec.a(35);
           if (null != aj.field_x) {
-            if (tm.field_d.a(true) &&
+            if (tm.field_d.ensureIndex(true) &&
               tm.field_d.a("basic", (byte) 90)) {
-              if (tm.field_d.a(true) &&
+              if (tm.field_d.ensureIndex(true) &&
                 tm.field_d.a("roman20", (byte) 90)) {
-                if (ej.field_t.a(true) &&
+                if (ej.field_t.ensureIndex(true) &&
                   ej.field_t.a("roman20", (byte) 90)) {
-                  if (tm.field_d.a(true) &&
+                  if (tm.field_d.ensureIndex(true) &&
                     tm.field_d.a("lobby", (byte) 90)) {
-                    if (tm.field_d.a(true) &&
+                    if (tm.field_d.ensureIndex(true) &&
                       tm.field_d.a("basicfont12", (byte) 90)) {
-                      if (ej.field_t.a(true) &&
+                      if (ej.field_t.ensureIndex(true) &&
                         ej.field_t.a("basicfont12", (byte) 90)) {
-                        if (ej.field_t.a(true) &&
+                        if (ej.field_t.ensureIndex(true) &&
                           ej.field_t.a("lobby", (byte) 90)) {
-                          if (aj.field_x.a(true) &&
+                          if (aj.field_x.ensureIndex(true) &&
                             aj.field_x.a(param0 ^ -43)) {
-                            if (dh.field_z.a(true) &&
+                            if (dh.field_z.ensureIndex(true) &&
                               dh.field_z.a(param0 ^ -43)) {
                               qi.field_l = false;
-                              if (ti.field_t.a(true) &&
+                              if (ti.field_t.ensureIndex(true) &&
                                 ti.field_t.a(25)) {
-                                if (rc.field_i.a(true) &&
+                                if (rc.field_i.ensureIndex(true) &&
                                   rc.field_i.a(param0 + 77)) {
-                                  if (g.field_i.a(true) &&
+                                  if (g.field_i.ensureIndex(true) &&
                                     g.field_i.a(25)) {
-                                    if (DualNode.field_x.a(true) &&
+                                    if (DualNode.field_x.ensureIndex(true) &&
                                       DualNode.field_x.a("basic", (byte) 90)) {
-                                      if (im.field_h.a(true) &&
+                                      if (im.field_h.ensureIndex(true) &&
                                         im.field_h.a(25)) {
-                                        if (oh.field_a.a(true) &&
+                                        if (oh.field_a.ensureIndex(true) &&
                                           oh.field_a.a("basic", (byte) 90)) {
-                                          if (IsaacRandom.field_k.a(true) &&
+                                          if (IsaacRandom.field_k.ensureIndex(true) &&
                                             IsaacRandom.field_k.a(25)) {
-                                            if (rj.field_k.a(true) &&
+                                            if (rj.field_k.ensureIndex(true) &&
                                               rj.field_k.a(param0 + 77)) {
                                               en.a(-59);
-                                              mc.a(cm.field_n, 82.0f, param0 ^ 21787);
+                                              mc.a(ResourceArchive.field_n, 82.0f, param0 ^ 21787);
                                               this.a((byte) 111);
                                               he.field_e = new ub(aj.field_x, dh.field_z);
                                               aj.field_x = null;
@@ -392,7 +392,7 @@ public final class SteelSentinels extends FunOrbClient {
             return false;
           }
           if (ti.field_t != null) {
-            mc.a(cm.field_n, 85.0f, -21801);
+            mc.a(ResourceArchive.field_n, 85.0f, -21801);
             this.a((byte) -116);
             qj.field_q[71] = uk.a(ti.field_t, "default", "deploying_in").a();
             qj.field_q[72] = uk.a(ti.field_t, "default", "five").a();
@@ -462,7 +462,7 @@ public final class SteelSentinels extends FunOrbClient {
             }
             return true;
           }
-          mc.a(jl.field_i, 90.0f, param0 - 21749);
+          mc.a(ArchiveIndex.field_i, 90.0f, param0 - 21749);
           this.a((byte) 109);
           var2_array = cj.a(-126, "basic", DualNode.field_x, "ranks");
           va.field_j = vd.a(ej.field_t, "roman20", tm.field_d, param0 + 51, "");
@@ -503,7 +503,7 @@ public final class SteelSentinels extends FunOrbClient {
               rg.a(false, ug.field_P);
               rg.a(false, d.field_G);
               ig.field_o = new RgbSprite[5][];
-              wa.a((cm) null, 2, DualNode.field_x);
+              wa.a((ResourceArchive) null, 2, DualNode.field_x);
               Sprite.field_m = cf.a("darkblueboxfilled", "basic", (byte) -52, DualNode.field_x);
               be.field_f = cf.a("obviousdarkbluebox", "basic", (byte) -56, DualNode.field_x);
               tk.field_t = cf.a("darkbluebox", "basic", (byte) -54, DualNode.field_x);
@@ -570,7 +570,7 @@ public final class SteelSentinels extends FunOrbClient {
               qi.field_a = cf.a("scrollvert", "basic", (byte) -104, DualNode.field_x);
               wc.field_k = cf.a("frame_shiny", "basic", (byte) -123, DualNode.field_x);
               ta.field_c = cf.a("frame_shiny_bright", "basic", (byte) -43, DualNode.field_x);
-              cm.field_b = cf.a("frame_basic_bright", "basic", (byte) -128, DualNode.field_x);
+              ResourceArchive.field_b = cf.a("frame_basic_bright", "basic", (byte) -128, DualNode.field_x);
               ng.field_p = cf.a("frame_basic_thin", "basic", (byte) -55, DualNode.field_x);
               vh.field_b = cf.a("frame_basic", "basic", (byte) -127, DualNode.field_x);
               oa.field_U = cf.a("display_frame", "basic", (byte) -35, DualNode.field_x);
@@ -596,7 +596,7 @@ public final class SteelSentinels extends FunOrbClient {
               cf.field_u = cj.a(param0 - 65, "basic", DualNode.field_x, "bits_commando");
               Sprite.field_b = cj.a(param0 ^ -112, "basic", DualNode.field_x, "bits_turtle");
               ml.field_c = cj.a(param0 + 19, "basic", DualNode.field_x, "droppod");
-              fa.field_a = cj.a(param0 ^ -128, "basic", DualNode.field_x, "infantary");
+              ArchiveProvider.field_a = cj.a(param0 ^ -128, "basic", DualNode.field_x, "infantary");
               IsaacRandom.field_d = cj.a(-123, "basic", DualNode.field_x, "modules");
               break;
             }
@@ -626,10 +626,10 @@ public final class SteelSentinels extends FunOrbClient {
           var3_array[19] = rl.a(DualNode.field_x, "basic", "instr_coop", false);
           var3_array[20] = rl.a(DualNode.field_x, "basic", "instr_team", false);
           var3_array[25] = rl.a(DualNode.field_x, "basic", "instr_techvalue", false);
-          fa.field_b = rl.a(DualNode.field_x, "basic", "logo_menu_chromakey", false);
+          ArchiveProvider.field_b = rl.a(DualNode.field_x, "basic", "logo_menu_chromakey", false);
           ob.field_z = (ek) (dn.a("basic", -63, "main_lower_panel", DualNode.field_x));
           ma.field_eb = (ek) (dn.a("basic", param0 ^ 75, "main_title_panel", DualNode.field_x));
-          fi.field_j = rl.a(DualNode.field_x, "basic", "menu_mesh", false);
+          CachedArchiveProvider.field_j = rl.a(DualNode.field_x, "basic", "menu_mesh", false);
           ic.field_db = rl.a(DualNode.field_x, "basic", "menu_titlebar", false);
           pl.field_T = GameplayController.a(DualNode.field_x, (byte) -62, "menu_button_1", "basic");
           GameplayController.a(DualNode.field_x, (byte) 107, "empty_button", "basic");
@@ -682,7 +682,7 @@ public final class SteelSentinels extends FunOrbClient {
           var5 = 0;
           do {
             if (!(nc.field_m.length > var5)) {
-              cm.a(te.field_c, (byte) 74, tm.field_d, (int[]) null, rj.field_k, var4, true, 4, 3, bb.field_R, var2_array, v.field_b, var3_array2, ej.field_t, kc.field_w, ParticleEffect.field_y, ti.field_u);
+              ResourceArchive.a(te.field_c, (byte) 74, tm.field_d, (int[]) null, rj.field_k, var4, true, 4, 3, bb.field_R, var2_array, v.field_b, var3_array2, ej.field_t, kc.field_w, ParticleEffect.field_y, ti.field_u);
               pa.a(tm.field_d, 111, ej.field_t);
               un.a(200, 126);
               oh.field_a = null;
@@ -750,7 +750,7 @@ public final class SteelSentinels extends FunOrbClient {
           if (DualNode.field_x != null) {
             ua.field_r = 13;
             cb.field_l = 0;
-            if (!DualNode.field_x.a(true)) {
+            if (!DualNode.field_x.ensureIndex(true)) {
               return;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -883,7 +883,7 @@ public final class SteelSentinels extends FunOrbClient {
             im.field_h != null) {
             ua.field_r = 23;
             cb.field_l = 1;
-            if (!im.field_h.a(true)) {
+            if (!im.field_h.ensureIndex(true)) {
               return;
             }
             if (al.field_g == 0 &&
@@ -1961,7 +1961,7 @@ public final class SteelSentinels extends FunOrbClient {
               stackIn_179_0 = bg.field_H;
             }
             if (!stackIn_179_0) {
-              jk.d((byte) -66);
+              IntKeyLookup.d((byte) -66);
             }
             if (!vl.field_v) {
               if (!(on.field_i <= 0)) {
@@ -2890,7 +2890,7 @@ public final class SteelSentinels extends FunOrbClient {
           wc.a(true);
           a.c(72);
           SoftwareRaster.a();
-          cm.b(false);
+          ResourceArchive.b(false);
           un.a(false);
           if (param0 < 22) {
             this.a(48);
@@ -2965,9 +2965,9 @@ public final class SteelSentinels extends FunOrbClient {
           dk.b((byte) -91);
           cc.k(102);
           lj.a((byte) 109);
-          jl.a(0);
+          ArchiveIndex.a(0);
           vb.a(-1);
-          fa.b(38);
+          ArchiveProvider.b(38);
           wi.g(573);
           DualNode.f(8191);
           rd.a(8192);
@@ -3028,7 +3028,7 @@ public final class SteelSentinels extends FunOrbClient {
           qa.h(10);
           rc.a(15598);
           df.i(-58);
-          fi.c(2);
+          CachedArchiveProvider.c(2);
           ok.a(true);
           fe.e((byte) 21);
           se.a((byte) -114);
@@ -3042,7 +3042,7 @@ public final class SteelSentinels extends FunOrbClient {
           sa.a(false);
           pi.b((byte) 61);
           mc.a(23225);
-          jk.b((byte) -81);
+          IntKeyLookup.b((byte) -81);
           gb.a(false);
           oi.a();
           nh.a(-120);

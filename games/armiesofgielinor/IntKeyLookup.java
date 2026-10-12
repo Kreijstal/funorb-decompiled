@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lr {
+final class IntKeyLookup {
     static iv field_a;
-    private int[] field_b;
+    private int[] keyIndexSlots;
 
-    lr(int[] param0) {
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
+    IntKeyLookup(int[] keys) {
+        int capacity = 0;
+        int slotIndex = 0;
+        int bucket = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        int var3Lifetime1;
+        int inputIndex;
         try {
-          var2_int = 1;
-          while ((param0.length >> 1) + param0.length >= var2_int) {
-            var2_int = var2_int << 1;
+          capacity = 1;
+          while ((keys.length >> 1) + keys.length >= capacity) {
+            capacity = capacity << 1;
           }
-          this.field_b = new int[var2_int + var2_int];
-          for (var3 = 0; var2_int + var2_int > var3; var3++) {
-            this.field_b[var3] = -1;
+          this.keyIndexSlots = new int[capacity + capacity];
+          for (slotIndex = 0; capacity + capacity > slotIndex; slotIndex++) {
+            this.keyIndexSlots[slotIndex] = -1;
           }
-          for (var3Lifetime1 = 0; param0.length > var3Lifetime1; var3Lifetime1++) {
-            for (var4 = var2_int - 1 & param0[var3Lifetime1]; this.field_b[var4 + (var4 + 1)] != -1; var4 = var4 + 1 & var2_int - 1) {
+          for (inputIndex = 0; keys.length > inputIndex; inputIndex++) {
+            for (bucket = capacity - 1 & keys[inputIndex]; this.keyIndexSlots[bucket + (bucket + 1)] != -1; bucket = bucket + 1 & capacity - 1) {
             }
-            this.field_b[var4 + var4] = param0[var3Lifetime1];
-            this.field_b[var4 + var4 + 1] = var3Lifetime1;
+            this.keyIndexSlots[bucket + bucket] = keys[inputIndex];
+            this.keyIndexSlots[bucket + bucket + 1] = inputIndex;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -36,7 +36,7 @@ final class lr {
           var2 = decompiledCaughtException;
           stackIn_16_0 = var2;
           stackIn_16_1 = new StringBuilder().append("lr.<init>(");
-          if (param0 == null) {
+          if (keys == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -54,32 +54,32 @@ final class lr {
         }
         if (param0 < 102) {
           co[] var4 = (co[]) null;
-          lr.a((co[]) null, (byte) -34);
+          IntKeyLookup.a((co[]) null, (byte) -34);
         }
         rj.d((byte) 103);
         return var1;
     }
 
-    final int a(int param0, int param1) {
-        int var3;
-        int var4;
-        int var5;
+    final int get(int key, int obfuscationGuard) {
+        int bucketMask;
+        int bucket;
+        int inputIndex;
         int var6;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var3 = -1 + (this.field_b.length >> 1);
-        if (param1 != 1) {
+        bucketMask = -1 + (this.keyIndexSlots.length >> 1);
+        if (obfuscationGuard != 1) {
           return -110;
         }
-        var4 = var3 & param0;
+        bucket = bucketMask & key;
         while (true) {
-          var5 = this.field_b[1 + (var4 + var4)];
-          if (var5 == -1) {
+          inputIndex = this.keyIndexSlots[1 + (bucket + bucket)];
+          if (inputIndex == -1) {
             return -1;
           }
-          if (this.field_b[var4 + var4] == param0) {
-            return var5;
+          if (this.keyIndexSlots[bucket + bucket] == key) {
+            return inputIndex;
           }
-          var4 = var3 & 1 + var4;
+          bucket = bucketMask & 1 + bucket;
         }
     }
 
@@ -98,7 +98,7 @@ final class lr {
           var5 = param0;
           var2 = var5;
           if (param1 <= 35) {
-            lr.a(-11);
+            IntKeyLookup.a(-11);
           }
           for (var3 = 0; var3 < var5.length; var3++) {
           }

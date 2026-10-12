@@ -7,7 +7,7 @@ final class bt {
     static String field_b;
     static int field_g;
     static String field_a;
-    static kl field_e;
+    static ResourceArchive field_e;
     static String field_d;
 
     final static void b(int param0) {

@@ -6,7 +6,7 @@ final class CorpseConditionMarker extends PreparedAction {
     static vk field_u;
     static String[] field_s;
     static String field_t;
-    static kl field_w;
+    static ResourceArchive field_w;
     static String field_x;
 
     final static void a(int param0, boolean param1) {
@@ -91,7 +91,7 @@ final class CorpseConditionMarker extends PreparedAction {
             CorpseConditionMarker.a(param0, 1 + var6, (byte) -127, param3, param4);
           }
           if (param2 != -127) {
-            field_w = (kl) null;
+            field_w = (ResourceArchive) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

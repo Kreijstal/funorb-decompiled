@@ -37,7 +37,7 @@ final class rn extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var8 = (CharSequence) ((Object) param2);
-          if (!fa.a(param3, var8)) {
+          if (!ArchiveProvider.a(param3, var8)) {
             stackIn_3_0 = en.field_a;
             return stackIn_3_0;
           }

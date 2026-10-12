@@ -4,7 +4,7 @@
 final class ke {
     static String[] field_b;
     private int field_f;
-    static cm field_k;
+    static ResourceArchive field_k;
     private int field_j;
     private int field_c;
     private int field_d;
@@ -162,7 +162,7 @@ final class ke {
               var12.field_cc = new SceneWidget(0L, bd.field_f);
               var12.a(var12.field_cc, param4 + 121);
               var12.h(-123);
-              var12.field_hc = new SceneWidget(0L, fa.field_f);
+              var12.field_hc = new SceneWidget(0L, ArchiveProvider.field_f);
               var12.a(var12.field_hc, 127);
               var12.field_Yb = new SceneWidget(0L, co.field_c);
               var13 = 1;
@@ -761,8 +761,8 @@ final class ke {
           field_b = (String[]) null;
         }
         vb.field_e = false;
-        if (null != jk.field_i) {
-          jk.field_i.l(param0 ^ -125);
+        if (null != IntKeyLookup.field_i) {
+          IntKeyLookup.field_i.l(param0 ^ -125);
         }
         if (ib.field_b != 0) {
           pg.d(86);

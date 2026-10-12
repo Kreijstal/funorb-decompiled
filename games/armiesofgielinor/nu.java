@@ -17,7 +17,7 @@ final class nu extends lk {
         field_w = null;
     }
 
-    final static CampaignDefinition loadCampaign(int obfuscationGuard, kl archive, int campaignIndex) {
+    final static CampaignDefinition loadCampaign(int obfuscationGuard, ResourceArchive archive, int campaignIndex) {
         CampaignDefinition stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -138,7 +138,7 @@ final class nu extends lk {
         }
     }
 
-    final static kl a(int param0, boolean param1) {
+    final static ResourceArchive a(int param0, boolean param1) {
         if (!param1) {
           nu.a(-81L, -76);
         }
@@ -210,7 +210,7 @@ final class nu extends lk {
     }
 
     static {
-        bm.a((byte) -81, 50);
+        CachedArchiveProvider.a((byte) -81, 50);
         field_z = new int[]{20, 10, 5};
         field_w = "Store";
     }

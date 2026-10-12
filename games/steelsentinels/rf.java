@@ -89,13 +89,13 @@ final class rf {
         return stackIn_8_0;
     }
 
-    final static cm a(boolean param0, int param1, byte param2, boolean param3, boolean param4, int param5) {
+    final static ResourceArchive a(boolean param0, int param1, byte param2, boolean param3, boolean param4, int param5) {
         try {
           int var6 = 0;
           Object var7 = null;
           Object var8 = null;
-          fi var9 = null;
-          cm stackIn_13_0 = null;
+          CachedArchiveProvider var9 = null;
+          ResourceArchive stackIn_13_0 = null;
           Throwable decompiledCaughtException = null;
           var6 = 73 % ((-55 - param2) / 59);
           try {
@@ -120,7 +120,7 @@ final class rf {
             if (param4) {
               var9.d((byte) 74);
             }
-            stackIn_13_0 = new cm(var9, param0, param1);
+            stackIn_13_0 = new ResourceArchive(var9, param0, param1);
             return stackIn_13_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

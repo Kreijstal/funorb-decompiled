@@ -11,7 +11,7 @@ final class an extends dr {
         if (param0 <= 84) {
           return false;
         }
-        return jm.field_g;
+        return ArchiveIndex.field_g;
     }
 
     an(String param0, Class[] param1, String param2) {

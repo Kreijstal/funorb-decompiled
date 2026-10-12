@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class bi {
-    static kl field_f;
+    static ResourceArchive field_f;
     static String field_d;
     java.awt.Image field_h;
     static String field_c;
@@ -84,7 +84,7 @@ abstract class bi {
           SoftwareRaster.a(this.field_b, this.field_a, this.field_g);
           return;
         }
-        field_f = (kl) null;
+        field_f = (ResourceArchive) null;
         SoftwareRaster.a(this.field_b, this.field_a, this.field_g);
     }
 

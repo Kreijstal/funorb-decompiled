@@ -20,7 +20,7 @@ final class CampaignUnitOverride {
         }
     }
 
-    final static void a(byte param0, kl param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2613_0;
             StringBuilder stackIn_2613_1;
@@ -30,9 +30,9 @@ final class CampaignUnitOverride {
             RuntimeException var2_ref;
             int var3;
             byte param0;
-            kl param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, kl initialParam1) {
+            $CfrPartitionedBody(byte initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2613_0 = null;
@@ -71,7 +71,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "error_js5connect_full");
                 if (null != var2) {
-                  kl.field_d = uu.a(var2, (byte) 34);
+                  ResourceArchive.field_d = uu.a(var2, (byte) 34);
                 }
                 var2 = NodeIterator.a(50, "error_js5connect");
                 if (var2 != null) {
@@ -259,7 +259,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_lobby_name_rm");
                 if (var2 != null) {
-                  jm.field_u = uu.a(var2, (byte) -127);
+                  ArchiveIndex.field_u = uu.a(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "mu_lobby_location");
                 if (null != var2) {
@@ -875,7 +875,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "gameopt_playersdontqualify");
                 if (null != var2) {
-                  kl.field_f = uu.a(var2, (byte) 46);
+                  ResourceArchive.field_f = uu.a(var2, (byte) 46);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "gameopt_playersdontqualify_selectgametab");
                 if (var2 != null) {
@@ -1117,7 +1117,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "connectionlost_reconnecting");
                 if (null != var2) {
-                  bm.field_z = uu.a(var2, (byte) 80);
+                  CachedArchiveProvider.field_z = uu.a(var2, (byte) 80);
                 }
                 var2 = NodeIterator.a(50, "connectionlost_withreason");
                 if (null != var2) {
@@ -1533,7 +1533,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_password_tooltip");
                 if (null != var2) {
-                  bm.field_k = uu.a(var2, (byte) 87);
+                  CachedArchiveProvider.field_k = uu.a(var2, (byte) 87);
                 }
                 var2 = NodeIterator.a(50, "create_password_hint");
                 if (null != var2) {
@@ -1987,7 +1987,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "startgame");
                 if (var2 != null) {
-                  ew.field_b = uu.a(var2, (byte) 48);
+                  ArchiveProvider.field_b = uu.a(var2, (byte) 48);
                 }
                 var2 = NodeIterator.a(50, "newgame");
                 if (null != var2) {

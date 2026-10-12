@@ -117,7 +117,7 @@ abstract class nl extends kb implements gw {
 
     StringBuilder a(int param0, StringBuilder param1, int param2, Hashtable param3) {
         RuntimeException var5 = null;
-        kl var6 = null;
+        ResourceArchive var6 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -131,8 +131,8 @@ abstract class nl extends kb implements gw {
             this.a(param3, param0, 106, param1);
           }
           if (param2 != 26477) {
-            var6 = (kl) null;
-            nl.a((kl) null, (AnimationSequence[][]) null, (kl) null, (byte) -118);
+            var6 = (ResourceArchive) null;
+            nl.a((ResourceArchive) null, (AnimationSequence[][]) null, (ResourceArchive) null, (byte) -118);
           }
           stackIn_6_0 = (StringBuilder) (param1);
           return stackIn_6_0;
@@ -242,7 +242,7 @@ abstract class nl extends kb implements gw {
         }
     }
 
-    final static void a(byte[] param0, int param1, int param2, String[] param3, String[][] param4, byte[] param5, String[][] param6, kl param7, RgbSprite[][] param8, RgbSprite[][] param9, String[] param10, int[] param11, String[] param12, boolean param13, int param14) {
+    final static void a(byte[] param0, int param1, int param2, String[] param3, String[][] param4, byte[] param5, String[][] param6, ResourceArchive param7, RgbSprite[][] param8, RgbSprite[][] param9, String[] param10, int[] param11, String[] param12, boolean param13, int param14) {
         nf[] array$0 = null;
         nf[] array$1 = null;
         nf[] array$2 = null;
@@ -381,7 +381,7 @@ abstract class nl extends kb implements gw {
           vu.field_Q.field_Eb = 1;
           vu.field_Q.field_Fb = 0;
           td.field_g = new je(0L, bw.field_h, ul.field_f.toUpperCase());
-          qc.field_c = new je(0L, jm.field_b);
+          qc.field_c = new je(0L, ArchiveIndex.field_b);
           qc.field_c.a(vu.field_Q, 116);
           qc.field_c.a(td.field_g, 89);
           uj.field_l = new je(0L, cb.field_c);
@@ -677,7 +677,7 @@ abstract class nl extends kb implements gw {
         try {
           if (param3 != -12215) {
             var6 = (String[]) null;
-            nl.a((byte[]) null, 101, 110, (String[]) null, (String[][]) null, (byte[]) null, (String[][]) null, (kl) null, (RgbSprite[][]) null, (RgbSprite[][]) null, (String[]) null, (int[]) null, (String[]) null, true, 39);
+            nl.a((byte[]) null, 101, 110, (String[]) null, (String[][]) null, (byte[]) null, (String[][]) null, (ResourceArchive) null, (RgbSprite[][]) null, (RgbSprite[][]) null, (String[]) null, (int[]) null, (String[]) null, true, 39);
           }
           if (this.field_E != null &&
             this.field_E.a(false) &&
@@ -726,7 +726,7 @@ abstract class nl extends kb implements gw {
         this.b(true);
     }
 
-    final static void a(kl param0, AnimationSequence[][] param1, kl param2, byte param3) {
+    final static void a(ResourceArchive param0, AnimationSequence[][] param1, ResourceArchive param2, byte param3) {
         int var5 = 0;
         int var7 = 0;
         int var11 = 0;

@@ -768,7 +768,7 @@ final class se {
             }
             var17Lifetime1 = new SceneWidget("engineer", (SceneWidget) null);
             var17Lifetime1.a(param4 - 14, (-var15Lifetime2 + var14.field_Lb) / 2 + var14.field_eb, var16Lifetime3, (var14.field_zb - var15Lifetime2) / 2 + var14.field_Y, var15Lifetime2);
-            var17Lifetime1.field_Ab = cm.field_b;
+            var17Lifetime1.field_Ab = ResourceArchive.field_b;
             var17Lifetime1.field_I = lj.field_b;
             var17Lifetime1.field_qb = 2;
             var17Lifetime1.field_sb = 2;

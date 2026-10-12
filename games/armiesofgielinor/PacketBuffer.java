@@ -412,7 +412,7 @@ class PacketBuffer extends IntrusiveNode {
         return this.payload[fieldTemp$0];
     }
 
-    final static RgbSprite a(int param0, int param1, kl param2, int param3) {
+    final static RgbSprite a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         RgbSprite stackIn_5_0 = null;
@@ -757,8 +757,8 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[fieldTemp$6] = (byte)(int)param1;
     }
 
-    final int f(byte param0) {
-        if (param0 < 91) {
+    final int readLargeSmart(byte obfuscationGuard) {
+        if (obfuscationGuard < 91) {
           return -51;
         }
         if (this.payload[this.position] >= 0) {

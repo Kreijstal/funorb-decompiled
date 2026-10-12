@@ -6,8 +6,8 @@ final class mh {
     private p[] field_a;
     private int field_c;
 
-    final static mh a(cm param0, int param1, int param2) {
-        byte[] var3 = param0.a(param1, (byte) 100, param2);
+    final static mh a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.getFile(param1, (byte) 100, param2);
         if (var3 == null) {
           return null;
         }

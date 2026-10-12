@@ -94,11 +94,11 @@ abstract class a {
             return;
           }
           if (100 > param2) {
-            vl.field_x = fi.a(79, param0, param2);
+            vl.field_x = CachedArchiveProvider.a(79, param0, param2);
             return;
           }
           if (105 < param2) {
-            vl.field_x = fi.a(79, param0, param2);
+            vl.field_x = CachedArchiveProvider.a(79, param0, param2);
             return;
           }
           var5 = param3;

@@ -14,7 +14,7 @@ final class va {
     static int[] field_k;
     static int field_b;
 
-    final static IndexedSprite a(int param0, cm param1, boolean param2, int param3) {
+    final static IndexedSprite a(int param0, ResourceArchive param1, boolean param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         IndexedSprite stackIn_6_0 = null;

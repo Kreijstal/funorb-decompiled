@@ -23,7 +23,7 @@ final class qh {
             vu.field_M.field_Ub >= vu.field_M.field_nc) {
             MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
             nf.field_Kb.field_xb = false;
-            jm.a(MapTile.field_f.field_Jb, param7 - 77);
+            ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
           } else {
             nf.field_Kb.field_xb = true;
             MapTile.field_f.field_Nb.field_X = null;
@@ -31,7 +31,7 @@ final class qh {
           }
         } else {
           if (SoftwareRaster.width == tq.field_c &&
-            SoftwareRaster.height == bm.field_p) {
+            SoftwareRaster.height == CachedArchiveProvider.field_p) {
             if (!param9) {
               va.field_u = (-640 + tq.field_c) / 2;
               je.c(param9, -120);
@@ -50,7 +50,7 @@ final class qh {
                 vu.field_M.field_Ub >= vu.field_M.field_nc) {
                 MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
                 nf.field_Kb.field_xb = false;
-                jm.a(MapTile.field_f.field_Jb, param7 - 77);
+                ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
               } else {
                 nf.field_Kb.field_xb = true;
                 MapTile.field_f.field_Nb.field_X = null;
@@ -74,7 +74,7 @@ final class qh {
                 vu.field_M.field_Ub >= vu.field_M.field_nc) {
                 MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
                 nf.field_Kb.field_xb = false;
-                jm.a(MapTile.field_f.field_Jb, param7 - 77);
+                ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
               } else {
                 nf.field_Kb.field_xb = true;
                 MapTile.field_f.field_Nb.field_X = null;
@@ -111,7 +111,7 @@ final class qh {
                 vu.field_M.field_Ub >= vu.field_M.field_nc) {
                 MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
                 nf.field_Kb.field_xb = false;
-                jm.a(MapTile.field_f.field_Jb, param7 - 77);
+                ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
               } else {
                 nf.field_Kb.field_xb = true;
                 MapTile.field_f.field_Nb.field_X = null;
@@ -146,7 +146,7 @@ final class qh {
               vu.field_M.field_Ub >= vu.field_M.field_nc) {
               MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
               nf.field_Kb.field_xb = false;
-              jm.a(MapTile.field_f.field_Jb, param7 - 77);
+              ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
             } else {
               nf.field_Kb.field_xb = true;
               MapTile.field_f.field_Nb.field_X = null;
@@ -169,7 +169,7 @@ final class qh {
                 vu.field_M.field_Ub >= vu.field_M.field_nc) {
                 MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
                 nf.field_Kb.field_xb = false;
-                jm.a(MapTile.field_f.field_Jb, param7 - 77);
+                ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
               } else {
                 nf.field_Kb.field_xb = true;
                 MapTile.field_f.field_Nb.field_X = null;
@@ -192,7 +192,7 @@ final class qh {
                 if (vu.field_M.field_Ub >= vu.field_M.field_nc) {
                   MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
                   nf.field_Kb.field_xb = false;
-                  jm.a(MapTile.field_f.field_Jb, param7 - 77);
+                  ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
                 } else {
                   nf.field_Kb.field_xb = true;
                   MapTile.field_f.field_Nb.field_X = null;

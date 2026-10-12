@@ -30,7 +30,7 @@ final class lj {
         RuntimeException var3_ref = null;
         int var4 = 0;
         try {
-          if (!fa.a(true, (CharSequence) ((Object) param0))) {
+          if (!ArchiveProvider.a(true, (CharSequence) ((Object) param0))) {
             stackIn_4_0 = en.field_a;
             return stackIn_4_0;
           }
@@ -211,7 +211,7 @@ final class lj {
               }
               if ((decompiledSharedTail0) &&
                 (uc.field_g)) {
-                var4 = "<col=999999>" + var4 + jl.field_f + "</col>";
+                var4 = "<col=999999>" + var4 + ArchiveIndex.field_f + "</col>";
                 var5 = "";
               }
               var9 = pl.field_X.c(var4);
@@ -221,7 +221,7 @@ final class lj {
                   if (fj.field_e) {
                     var1 = "Broken!";
                   } else {
-                    var1 = jl.field_f;
+                    var1 = ArchiveIndex.field_f;
                   }
                 }
                 if (vd.field_d.field_Eb != 0 &&
@@ -248,7 +248,7 @@ final class lj {
         }
     }
 
-    final static u a(cm param0, int param1, int param2, cm param3, int param4) {
+    final static u a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_7_0 = null;
         u stackIn_9_0 = null;
@@ -266,7 +266,7 @@ final class lj {
             stackIn_7_0 = null;
             return (u) (stackIn_7_0);
           }
-          stackIn_9_0 = SentinelCommand.a(96, param0.a(param4, (byte) 75, param1));
+          stackIn_9_0 = SentinelCommand.a(96, param0.getFile(param4, (byte) 75, param1));
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -522,7 +522,7 @@ final class lj {
             var21Lifetime1.a(0, var17.field_eb + (var17.field_Lb - var20Lifetime2) / 2, var20Lifetime2, var17.field_Y + (-var19Lifetime1 + var17.field_zb) / 2, var19Lifetime1);
             var21Lifetime1.field_qb = 2;
             var21Lifetime1.field_I = field_b;
-            var21Lifetime1.field_Ab = cm.field_b;
+            var21Lifetime1.field_Ab = ResourceArchive.field_b;
             var21Lifetime1.field_sb = 2;
             var21Lifetime1.field_Pb = aj.field_r[param4];
             var22 = new SceneWidget(-1L, (SceneWidget) null);

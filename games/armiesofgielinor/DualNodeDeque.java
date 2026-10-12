@@ -308,7 +308,7 @@ final class DualNodeDeque {
         }
     }
 
-    final static void a(byte param0, kl param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         qs var2 = null;
         try {
           qs.a(param1.a("", 96, "headers.packvorbis"));

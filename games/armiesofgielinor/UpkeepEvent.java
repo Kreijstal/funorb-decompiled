@@ -64,7 +64,7 @@ final class UpkeepEvent extends GameEvent {
         }
     }
 
-    final static void a(kl param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         try {
           SectorCacheStore.field_j = new IndexedSprite[6][];
           lt.field_h = new RgbSprite[6];
@@ -74,8 +74,8 @@ final class UpkeepEvent extends GameEvent {
           lt.field_h[4] = GameplayController.a("coatofarms_topperspace", (byte) 51, "basic", param0);
           SectorCacheStore.field_j[0] = MapLayout.a("coatofarms_bases", -28106, "basic", param0);
           if (param1 <= 20) {
-            kl var3 = (kl) null;
-            UpkeepEvent.a((kl) null, 74);
+            ResourceArchive var3 = (ResourceArchive) null;
+            UpkeepEvent.a((ResourceArchive) null, 74);
           }
           SectorCacheStore.field_j[1] = MapLayout.a("coatofarms_lbarers", -28106, "basic", param0);
           SectorCacheStore.field_j[2] = MapLayout.a("coatofarms_rbarers", -28106, "basic", param0);

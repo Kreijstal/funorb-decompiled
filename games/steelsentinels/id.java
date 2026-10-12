@@ -12,7 +12,7 @@ final class id extends SceneWidget {
     static int field_ac;
     static String field_Zb;
     static String field_Xb;
-    static cm field_bc;
+    static ResourceArchive field_bc;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.a(0, param0, param5, param4, param1);

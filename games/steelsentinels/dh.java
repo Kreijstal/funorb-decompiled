@@ -9,7 +9,7 @@ class dh extends DualNode {
     static int field_F;
     static byte[][] field_A;
     static int[][][] field_C;
-    static cm field_z;
+    static ResourceArchive field_z;
 
     final static String a(String param0, byte param1, int param2) {
         int var3_int = 0;
@@ -78,7 +78,7 @@ class dh extends DualNode {
     final static String a(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        cm var3 = null;
+        ResourceArchive var3 = null;
         String stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -90,8 +90,8 @@ class dh extends DualNode {
             param1 = "<img=0>" + param1;
           }
           if (param0 != -27905) {
-            var3 = (cm) null;
-            dh.a(78, -81, (cm) null, (byte) 87, (cm) null);
+            var3 = (ResourceArchive) null;
+            dh.a(78, -81, (ResourceArchive) null, (byte) 87, (ResourceArchive) null);
           }
           if (var2_int == 2) {
             param1 = "<img=1>" + param1;
@@ -123,7 +123,7 @@ class dh extends DualNode {
         }
     }
 
-    final static cm a(int param0, int param1) {
+    final static ResourceArchive a(int param0, int param1) {
         int var2 = 88 % ((4 - param0) / 44);
         return rf.a(true, 1, (byte) -127, false, false, param1);
     }
@@ -140,7 +140,7 @@ class dh extends DualNode {
     dh() {
     }
 
-    final static fh a(int param0, int param1, cm param2, byte param3, cm param4) {
+    final static fh a(int param0, int param1, ResourceArchive param2, byte param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         fh stackIn_4_0 = null;
@@ -155,7 +155,7 @@ class dh extends DualNode {
             return null;
           }
           var5_int = -18 % ((param3 - 56) / 45);
-          stackIn_4_0 = sn.a(param4.a(param0, (byte) 79, param1), 103);
+          stackIn_4_0 = sn.a(param4.getFile(param0, (byte) 79, param1), 103);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

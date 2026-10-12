@@ -14,7 +14,7 @@ final class sj extends we {
     private tg field_L;
     private int field_K;
     static RgbSprite[] field_x;
-    static cm field_y;
+    static ResourceArchive field_y;
     static SceneWidget field_z;
     private ic field_O;
     private int[] field_I;

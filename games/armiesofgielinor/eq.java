@@ -44,8 +44,8 @@ final class eq extends af {
           param3 = param3 | param3 << 8;
           var8_int = param3 ^ param3 >> 1;
           for (var11 = 0; var11 < 4; var11++) {
-            var9 = -44 + bm.field_y[var11][0] + (param6 + (7 & var8_int));
-            var10 = -64 + (param0 + bm.field_y[var11][1] + (param3 & 3));
+            var9 = -44 + CachedArchiveProvider.field_y[var11][0] + (param6 + (7 & var8_int));
+            var10 = -64 + (param0 + CachedArchiveProvider.field_y[var11][1] + (param3 & 3));
             stackIn_7_0 = param1;
             stackIn_8_1 = !(var10 <= param0 - 60);
             if (stackIn_7_0 ^ stackIn_8_1) {
@@ -127,8 +127,8 @@ final class eq extends af {
           param3 = param3 | param3 << 8;
           var8_int = param3 ^ param3 >> 1;
           for (var11 = 0; var11 < 4; var11++) {
-            var9 = -44 + bm.field_y[var11][0] + (param6 + (7 & var8_int));
-            var10 = -64 + (param0 + bm.field_y[var11][1] + (param3 & 3));
+            var9 = -44 + CachedArchiveProvider.field_y[var11][0] + (param6 + (7 & var8_int));
+            var10 = -64 + (param0 + CachedArchiveProvider.field_y[var11][1] + (param3 & 3));
             stackIn_7_0 = param1;
             stackIn_8_1 = !(var10 <= param0 - 60);
             if (stackIn_7_0 ^ stackIn_8_1) {

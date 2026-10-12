@@ -51,7 +51,7 @@ final class BattleTerrain {
           if (ei.field_q == 11 &&
             ob.field_v) {
             if (hk.field_ic == 2 &&
-              !qm.a((byte) -31, fi.field_t, kh.field_q)) {
+              !qm.a((byte) -31, CachedArchiveProvider.field_t, kh.field_q)) {
               return false;
             }
             if (hk.field_ic != 2 &&
@@ -59,7 +59,7 @@ final class BattleTerrain {
               return false;
             }
             if (NodeDeque.e((byte) 17)) {
-              oe.a(param2, fi.field_t, -6988, hk.field_ic, wn.field_f, (String) null);
+              oe.a(param2, CachedArchiveProvider.field_t, -6988, hk.field_ic, wn.field_f, (String) null);
             }
             return true;
           }
@@ -1554,10 +1554,10 @@ final class BattleTerrain {
                         }
                         case 30: {
                             try {
-                                if (fa.field_a == null) {
+                                if (ArchiveProvider.field_a == null) {
                                     /* Inlined CFG state: 33. */
                                     {
-                                        fa.field_a = new IndexedSprite[12];
+                                        ArchiveProvider.field_a = new IndexedSprite[12];
                                         statePc = 34;
                                         continue scanLoop1;
                                     }
@@ -1745,7 +1745,7 @@ final class BattleTerrain {
                     switch (statePc) {
                         case 57: {
                             try {
-                                var1 = new ArticulatedPart(fa.field_a[0], 1, 32, 53, 0, 0, new PartInstruction[]{new PartInstruction("Land Drone Body - THIS SHOULD NEVER EVER EVER BE SEEN"), new PartInstruction(1, 1, 100), new PartInstruction(64), new PartInstruction(58, -20, 16384, 16384, 144), new PartInstruction(58, -20, 16384, 16384, 144)});
+                                var1 = new ArticulatedPart(ArchiveProvider.field_a[0], 1, 32, 53, 0, 0, new PartInstruction[]{new PartInstruction("Land Drone Body - THIS SHOULD NEVER EVER EVER BE SEEN"), new PartInstruction(1, 1, 100), new PartInstruction(64), new PartInstruction(58, -20, 16384, 16384, 144), new PartInstruction(58, -20, 16384, 16384, 144)});
                                 var1.componentId = 109;
                                 ao.field_H.addLast(3, var1);
                                 var1 = new ArticulatedPart(lb.field_Zb[0], 1, 64, 98, 0, 0, new PartInstruction[]{new PartInstruction("Land Drone Body - THIS SHOULD NEVER EVER EVER BE SEEN"), new PartInstruction(100, 4, 200), new PartInstruction(64), new PartInstruction(64, 35, -8192, 16384, new ArticulatedPart(jd.field_qb[6], 50, 63, new PartInstruction[]{new PartInstruction(74, 62, 16384, 0, 288)}), true), new PartInstruction(64, 70, 0, 0, new ArticulatedPart(lb.field_Zb[1], 64, 70, new PartInstruction[]{}))});

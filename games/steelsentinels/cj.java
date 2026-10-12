@@ -14,7 +14,7 @@ final class cj {
     static String field_f;
     static int field_j;
 
-    final static IndexedSprite[] a(int param0, String param1, cm param2, String param3) {
+    final static IndexedSprite[] a(int param0, String param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -29,8 +29,8 @@ final class cj {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a(param1, 41);
-          var5 = param2.a(var4_int, -32759, param3);
+          var4_int = param2.getGroupId(param1, 41);
+          var5 = param2.getFileId(var4_int, -32759, param3);
           var6 = -61 % ((-77 - param0) / 38);
           stackIn_1_0 = rd.a(true, param2, var4_int, var5);
           return stackIn_1_0;
@@ -68,13 +68,13 @@ final class cj {
         var2 = 69 / ((71 - param0) / 55);
         while (this.field_k > this.field_d) {
           var3 = this.field_c[this.field_d];
-          if (!var3.field_d.a(true)) {
+          if (!var3.field_d.ensureIndex(true)) {
             this.a(var3, -9803, 0);
             return false;
           }
           if (var3.field_a >= 0 &&
             !var3.field_d.a(var3.field_a, true)) {
-            this.a(var3, -9803, var3.field_d.b(10407, var3.field_a));
+            this.a(var3, -9803, var3.field_d.getGroupProgress(10407, var3.field_a));
             return false;
           }
           if (null != var3.field_g &&

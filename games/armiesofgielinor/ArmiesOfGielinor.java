@@ -656,18 +656,18 @@ public final class ArmiesOfGielinor extends wf {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ki.field_b.a((byte) 82) &&
+          if (ki.field_b.ensureIndex((byte) 82) &&
             ki.field_b.d(-27927)) {
-            if (i.field_Lb.a((byte) 82) &&
+            if (i.field_Lb.ensureIndex((byte) 82) &&
               i.field_Lb.d(-27927)) {
               if (param0 > -18) {
                 return false;
               }
-              if (op.field_b.a((byte) 82) &&
+              if (op.field_b.ensureIndex((byte) 82) &&
                 op.field_b.d(-27927)) {
-                if (bi.field_f.a((byte) 82) &&
+                if (bi.field_f.ensureIndex((byte) 82) &&
                   bi.field_f.d(-27927)) {
-                  if (nm.field_s.a((byte) 82) &&
+                  if (nm.field_s.ensureIndex((byte) 82) &&
                     nm.field_s.d(-27927)) {
                     return true;
                   }
@@ -773,12 +773,12 @@ public final class ArmiesOfGielinor extends wf {
                       (nm.a(jt.field_a, true))) {
                       rq.field_p[jt.field_a].d((byte) -109);
                       if (var8 != 0) {
-                        kl.c(-20193);
+                        ResourceArchive.c(-20193);
                         var3_int = 1;
                       }
                     }
                   } else {
-                    kl.c(-20193);
+                    ResourceArchive.c(-20193);
                     if (var8 != 0) {
                       var3_int = 1;
                     }
@@ -1128,7 +1128,7 @@ public final class ArmiesOfGielinor extends wf {
           ArmiesOfGielinor.s(3);
           jg.a(-112);
           NodeDeque.c(param0 + 322);
-          kl.b(param0 + 71);
+          ResourceArchive.b(param0 + 71);
           rr.a(-114);
           et.c(13626);
           ed.b(15000);
@@ -1215,9 +1215,9 @@ public final class ArmiesOfGielinor extends wf {
           tp.a(-116);
           of.e((byte) 20);
           ii.a((byte) -1);
-          jm.a(param0 + 2);
+          ArchiveIndex.a(param0 + 2);
           lg.a((byte) 126);
-          ew.a(false);
+          ArchiveProvider.a(false);
           aq.a((byte) -22);
           hq.a((byte) -73);
           wl.f((byte) 97);
@@ -1410,7 +1410,7 @@ public final class ArmiesOfGielinor extends wf {
           NetworkResourceRequest.h(param0 ^ 29322);
           SectorCacheStore.b(1);
           DiskCacheRequest.h(param0 ^ -61);
-          bm.e(param0 - 56);
+          CachedArchiveProvider.e(param0 - 56);
           ek.a(236611664);
           ResourceRequest.e((byte) -126);
           is.a((byte) -5);
@@ -1698,7 +1698,7 @@ public final class ArmiesOfGielinor extends wf {
         try {
           if (null != RegionAnchor.field_o) {
             TickCounter.loadClientAssets(RegionAnchor.field_o, 10207);
-            lr.a(UnitLossCondition.field_d, (byte) 62);
+            IntKeyLookup.a(UnitLossCondition.field_d, (byte) 62);
             RegionAnchor.field_o = null;
             wl.a(0);
           }
@@ -1805,7 +1805,7 @@ public final class ArmiesOfGielinor extends wf {
             var3 = new String[r.field_B];
             var4 = 0;
             while (var4 < r.field_B) {
-              var3[var4] = jm.field_w[var4];
+              var3[var4] = ArchiveIndex.field_w[var4];
               var4++;
               if (var6 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -1928,42 +1928,42 @@ public final class ArmiesOfGielinor extends wf {
           j.a((byte) 119);
           var4 = "basicfont12";
           if (null != br.field_d) {
-            if (gg.field_K.a((byte) 82) &&
+            if (gg.field_K.ensureIndex((byte) 82) &&
               gg.field_K.a(28979, "basic")) {
-              if (gg.field_K.a((byte) 82) &&
+              if (gg.field_K.ensureIndex((byte) 82) &&
                 gg.field_K.a(28979, var4)) {
-                if (ResourceRequest.field_A.a((byte) 82) &&
+                if (ResourceRequest.field_A.ensureIndex((byte) 82) &&
                   ResourceRequest.field_A.a(28979, var4)) {
-                  if (gg.field_K.a((byte) 82) &&
+                  if (gg.field_K.ensureIndex((byte) 82) &&
                     gg.field_K.a(28979, "lobby")) {
-                    if (ResourceRequest.field_A.a((byte) 82) &&
+                    if (ResourceRequest.field_A.ensureIndex((byte) 82) &&
                       ResourceRequest.field_A.a(28979, "lobby")) {
-                      if (br.field_d.a((byte) 82) &&
+                      if (br.field_d.ensureIndex((byte) 82) &&
                         br.field_d.d(-27927)) {
-                        if (uf.field_f.a((byte) 82) &&
+                        if (uf.field_f.ensureIndex((byte) 82) &&
                           uf.field_f.d(-27927)) {
-                          if (ep.field_b.a((byte) 82) &&
+                          if (ep.field_b.ensureIndex((byte) 82) &&
                             ep.field_b.d(-27927)) {
-                            if (SummonAction.field_w.a((byte) 82) &&
+                            if (SummonAction.field_w.ensureIndex((byte) 82) &&
                               SummonAction.field_w.d(-27927)) {
-                              if (iw.field_l.a((byte) 82) &&
+                              if (iw.field_l.ensureIndex((byte) 82) &&
                                 iw.field_l.a(28979, "basic") &&
                                 iw.field_l.a(28979, "campaign")) {
-                                if (sh.field_j.a((byte) 82) &&
+                                if (sh.field_j.ensureIndex((byte) 82) &&
                                   sh.field_j.a(28979, "basic")) {
-                                  if (bt.field_e.a((byte) 82) &&
+                                  if (bt.field_e.ensureIndex((byte) 82) &&
                                     bt.field_e.d(-27927)) {
-                                    if (CorpseConditionMarker.field_w.a((byte) 82) &&
+                                    if (CorpseConditionMarker.field_w.ensureIndex((byte) 82) &&
                                       CorpseConditionMarker.field_w.d(-27927)) {
-                                      if (ce.field_M.a((byte) 82) &&
+                                      if (ce.field_M.ensureIndex((byte) 82) &&
                                         ce.field_M.d(-27927)) {
-                                        if (oh.field_M.a((byte) 82) &&
+                                        if (oh.field_M.ensureIndex((byte) 82) &&
                                           oh.field_M.d(-27927)) {
-                                          if (fw.field_F.a((byte) 82) &&
+                                          if (fw.field_F.ensureIndex((byte) 82) &&
                                             fw.field_F.d(-27927)) {
-                                            if (AiInfluenceMap.field_f.a((byte) 82) &&
+                                            if (AiInfluenceMap.field_f.ensureIndex((byte) 82) &&
                                               AiInfluenceMap.field_f.d(-27927)) {
-                                              if (vc.field_m.a((byte) 82) &&
+                                              if (vc.field_m.ensureIndex((byte) 82) &&
                                                 vc.field_m.d(-27927)) {
                                                 if (!this.q(-46)) {
                                                   return false;
@@ -2147,7 +2147,7 @@ public final class ArmiesOfGielinor extends wf {
             }
             if (null != ce.field_M &&
               oh.field_M != null) {
-              ew.field_e = new ou(ce.field_M, oh.field_M, false);
+              ArchiveProvider.field_e = new ou(ce.field_M, oh.field_M, false);
               ce.field_M = null;
               oh.field_M = null;
               return false;

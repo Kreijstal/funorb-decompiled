@@ -3,7 +3,7 @@
  */
 final class SummonAction extends PreparedAction {
     static NodeDeque field_u;
-    static kl field_w;
+    static ResourceArchive field_w;
     static String field_D;
     static int field_E;
     private int unitType;

@@ -6,7 +6,7 @@ final class dd {
     private java.math.BigInteger field_h;
     static String field_g;
     static RgbSprite field_k;
-    private bm[] field_i;
+    private CachedArchiveProvider[] field_i;
     private ResourceProtocolClient field_d;
     private NetworkResourceRequest field_c;
     private PacketBuffer field_f;
@@ -14,14 +14,14 @@ final class dd {
     static boolean field_a;
     static int field_e;
 
-    final bm a(boolean param0, SectorCacheStore param1, int param2, int param3, SectorCacheStore param4) {
+    final CachedArchiveProvider a(boolean param0, SectorCacheStore param1, int param2, int param3, SectorCacheStore param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        bm var9 = null;
+        CachedArchiveProvider var9 = null;
         byte[] var13 = null;
-        bm stackIn_8_0 = null;
-        bm stackIn_10_0 = null;
+        CachedArchiveProvider stackIn_8_0 = null;
+        CachedArchiveProvider stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -43,7 +43,7 @@ final class dd {
             var7 = this.field_f.readInt(1);
             var13 = new byte[64];
             this.field_f.readBytes(param3, 64, 0, var13);
-            var9 = new bm(param2, param1, param4, this.field_d, this.field_b, var6_int, var13, var7, param0);
+            var9 = new CachedArchiveProvider(param2, param1, param4, this.field_d, this.field_b, var6_int, var13, var7, param0);
             this.field_i[param2] = var9;
             stackIn_10_0 = var9;
             return stackIn_10_0;
@@ -93,19 +93,19 @@ final class dd {
           field_a = false;
         }
         if (0 == og.field_m) {
-          if (!ps.field_u.a((byte) 82)) {
+          if (!ps.field_u.ensureIndex((byte) 82)) {
             return 20;
           }
           if (!ps.field_u.a(28979, "commonui")) {
             return 40;
           }
-          if (!CombatPresentation.field_M.a((byte) 82)) {
+          if (!CombatPresentation.field_M.ensureIndex((byte) 82)) {
             return 50;
           }
           if (!CombatPresentation.field_M.a(28979, "commonui")) {
             return 60;
           }
-          if (!h.field_g.a((byte) 82)) {
+          if (!h.field_g.ensureIndex((byte) 82)) {
             return 70;
           }
           if (!h.field_g.d(-27927)) {
@@ -113,7 +113,7 @@ final class dd {
           }
         } else {
           if (nf.field_Nb != null) {
-            if (!nf.field_Nb.a((byte) 82)) {
+            if (!nf.field_Nb.ensureIndex((byte) 82)) {
               return 14;
             }
             if (!nf.field_Nb.a((byte) -128, "")) {
@@ -123,19 +123,19 @@ final class dd {
               return 29;
             }
           }
-          if (!ps.field_u.a((byte) 82)) {
+          if (!ps.field_u.ensureIndex((byte) 82)) {
             return 43;
           }
           if (!ps.field_u.a(28979, "commonui")) {
             return 57;
           }
-          if (!CombatPresentation.field_M.a((byte) 82)) {
+          if (!CombatPresentation.field_M.ensureIndex((byte) 82)) {
             return 71;
           }
           if (!CombatPresentation.field_M.a(28979, "commonui")) {
             return 80;
           }
-          if (!h.field_g.a((byte) 82)) {
+          if (!h.field_g.ensureIndex((byte) 82)) {
             return 82;
           }
           if (!h.field_g.d(-27927)) {
@@ -238,7 +238,7 @@ final class dd {
             throw new RuntimeException();
           }
         }
-        this.field_i = new bm[var3];
+        this.field_i = new CachedArchiveProvider[var3];
         this.field_f = var10;
         return true;
     }

@@ -1804,7 +1804,7 @@ final class ff extends ma {
             if (var16 <= 6100) {
               stackIn_39_2 = ej.field_C;
             } else {
-              stackIn_39_2 = fi.field_z;
+              stackIn_39_2 = CachedArchiveProvider.field_z;
             }
           }
           stackIn_38_0.field_S = ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).toString();
@@ -1933,7 +1933,7 @@ final class ff extends ma {
         var10 = var8.a((byte) -115, (lh) (this), param0) + (var8.b(-1, (lh) (this)).a((byte) 24) >> 1);
         if (nh.field_J != var6Lifetime1 &&
           var6Lifetime1 != ma.field_Y) {
-          if (fa.field_d == var6Lifetime1) {
+          if (ArchiveProvider.field_d == var6Lifetime1) {
             var15 = t.field_i[2];
             var15.a(var9, var10 - (var15.field_F >> 1), 256);
           } else if (vf.field_b == var6Lifetime1) {

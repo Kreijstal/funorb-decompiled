@@ -51,7 +51,7 @@ final class nn extends java.awt.Canvas implements java.awt.event.FocusListener {
               param1 <= 105) {
               qf.field_d = fc.a((byte) -76, args);
             } else {
-              qf.field_d = fi.a(18, param2, param1);
+              qf.field_d = CachedArchiveProvider.a(18, param2, param1);
             }
           }
           if (param3 >= -101) {

@@ -348,7 +348,7 @@ final class Sentinel extends IntrusiveNode {
                         !this.field_M) {
                         var8 = pf.field_r;
                       } else {
-                        var8 = jk.field_k;
+                        var8 = IntKeyLookup.field_k;
                       }
                     } else {
                       if (this.field_yc != -2) {
@@ -4613,9 +4613,9 @@ final class Sentinel extends IntrusiveNode {
           }
           var13_int = stackIn_16_0 + param7 - 11;
           if (0 < this.field_E) {
-            fa.field_a[var11Lifetime1].b(var12, var13_int);
+            ArchiveProvider.field_a[var11Lifetime1].b(var12, var13_int);
           } else {
-            fa.field_a[var11Lifetime1].b().b(var12, var13_int);
+            ArchiveProvider.field_a[var11Lifetime1].b().b(var12, var13_int);
           }
           return false;
         }

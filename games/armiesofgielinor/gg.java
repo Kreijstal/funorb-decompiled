@@ -9,7 +9,7 @@ final class gg extends dr {
     static int field_I;
     static Random field_J;
     static String field_H;
-    static kl field_K;
+    static ResourceArchive field_K;
     static je field_E;
 
     final nd a(int param0, nd[] param1) {

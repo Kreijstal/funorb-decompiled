@@ -219,7 +219,7 @@ final class co {
         }
     }
 
-    final void a(kl param0, int param1, kl param2) {
+    final void a(ResourceArchive param0, int param1, ResourceArchive param2) {
         try {
           SocketResourceClient.field_u = param2;
           fd.field_m = param0;
@@ -231,7 +231,7 @@ final class co {
         }
     }
 
-    final void a(p param0, kl param1, kl param2, int param3, ih param4) {
+    final void a(p param0, ResourceArchive param1, ResourceArchive param2, int param3, ih param4) {
         if (null == this.field_l ||
           param4 == null ||
           param2 == null) {

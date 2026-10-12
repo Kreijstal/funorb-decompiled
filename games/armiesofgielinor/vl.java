@@ -10,7 +10,7 @@ final class vl extends mk {
     static String field_p;
     static String[] field_m;
 
-    final static String a(kl param0, int param1, String param2, String param3, String param4) {
+    final static String a(ResourceArchive param0, int param1, String param2, String param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -30,7 +30,7 @@ final class vl extends mk {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (!param0.a((byte) 82)) {
+          if (!param0.ensureIndex((byte) 82)) {
             stackIn_6_0 = (String) (param4);
             return stackIn_6_0;
           }

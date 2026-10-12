@@ -52,7 +52,7 @@ abstract class ug extends lh implements lm {
                 bl.a(12, var4_int, var5);
               }
               var6 = ei.a(var4_int, 1);
-              jk.field_a[var4_int].field_Pb = dh.field_y[var6];
+              IntKeyLookup.field_a[var4_int].field_Pb = dh.field_y[var6];
               gb.field_f[var4_int].field_S = ec.field_e[var6];
             }
           }

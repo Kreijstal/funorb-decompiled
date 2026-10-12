@@ -738,11 +738,11 @@ final class ng {
         ed.field_e = null;
         if (jl.field_b != null) {
           UpkeepEvent.field_z = jl.field_b;
-          rb.field_b = ew.field_d;
+          rb.field_b = ArchiveProvider.field_d;
           UpkeepEvent.field_z.field_W = -1;
           UpkeepEvent.field_z.field_T = -1;
           jl.field_b = null;
-          ew.field_d = null;
+          ArchiveProvider.field_d = null;
         }
         eu.field_g = null;
         hf.field_c = true;

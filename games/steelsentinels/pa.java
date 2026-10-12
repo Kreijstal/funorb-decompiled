@@ -11,7 +11,7 @@ final class pa {
     static RgbSprite[] field_g;
     static int field_b;
     static int field_c;
-    static cm field_a;
+    static ResourceArchive field_a;
     static BitmapFont field_k;
 
     final static void a(java.awt.Canvas param0, int param1) {
@@ -70,9 +70,9 @@ final class pa {
         if (param1 == null) {
           return;
         }
-        jk.field_i = param1;
+        IntKeyLookup.field_i = param1;
         qf.field_c.field_M.clear(6);
-        qf.field_c.a(jk.field_i, 127);
+        qf.field_c.a(IntKeyLookup.field_i, 127);
         if (param0 != 12105) {
           return;
         }
@@ -96,7 +96,7 @@ final class pa {
         }
     }
 
-    final static void a(cm param0, int param1, cm param2) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
         try {
           int var3_int = -47 / ((param1 - 53) / 45);
           rj.field_d = param2;

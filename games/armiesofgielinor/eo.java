@@ -35,7 +35,7 @@ final class eo {
         if (param0 != 1) {
           return 66;
         }
-        return kl.field_a.currentPosition[1];
+        return ResourceArchive.field_a.currentPosition[1];
     }
 
     final boolean a(int param0, int param1, int param2, int param3, Unit param4) {

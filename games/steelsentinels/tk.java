@@ -149,12 +149,12 @@ final class tk extends ia {
             var3 = ((qn) ((Object) this.field_o)).a(false);
             if (var3 != null &&
               var3.a((byte) 21) != vf.field_b) {
-              stackIn_7_0 = fa.field_d;
+              stackIn_7_0 = ArchiveProvider.field_d;
               return stackIn_7_0;
             }
           }
           if (!param0.equals(this.field_o.field_y)) {
-            stackIn_11_0 = fa.field_d;
+            stackIn_11_0 = ArchiveProvider.field_d;
           } else {
             stackIn_11_0 = vf.field_b;
           }

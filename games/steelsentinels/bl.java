@@ -226,11 +226,11 @@ final class bl implements qk {
           for (var3_int = 5; var3_int > 0; var3_int--) {
             ke.field_b[var3_int] = ke.field_b[-1 + var3_int];
             hh.field_c[var3_int] = hh.field_c[-1 + var3_int];
-            fi.field_g[var3_int] = fi.field_g[var3_int - 1];
+            CachedArchiveProvider.field_g[var3_int] = CachedArchiveProvider.field_g[var3_int - 1];
           }
           ke.field_b[0] = ke.a(42, param1);
           hh.field_c[0] = 750;
-          fi.field_g[0] = param0;
+          CachedArchiveProvider.field_g[0] = param0;
           var3_intLifetime1 = 18 % ((param2 - 86) / 34);
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "bl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

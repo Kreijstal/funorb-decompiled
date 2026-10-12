@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class ti extends he implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
-    static cm field_t;
+    static ResourceArchive field_t;
     static int field_w;
     static mg field_m;
     static long field_p;
@@ -130,8 +130,8 @@ final class ti extends he implements java.awt.image.ImageProducer, java.awt.imag
         if (fc.field_a != null) {
           fc.field_a.c();
         }
-        if (cm.field_j != null) {
-          cm.field_j.c();
+        if (ResourceArchive.field_j != null) {
+          ResourceArchive.field_j.c();
           if (param0 != 7094) {
             ti.b(-48);
             return;

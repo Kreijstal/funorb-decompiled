@@ -20,7 +20,7 @@ final class ao extends lk {
         }
     }
 
-    final static String a(String param0, boolean param1, String param2, kl param3) {
+    final static String a(String param0, boolean param1, String param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -34,7 +34,7 @@ final class ao extends lk {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param3.a((byte) 82)) {
+          if (!param3.ensureIndex((byte) 82)) {
             stackIn_3_0 = (String) (param0);
             return stackIn_3_0;
           }

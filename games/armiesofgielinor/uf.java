@@ -12,7 +12,7 @@ final class uf {
     static int field_e;
     static RgbSprite field_j;
     int field_d;
-    static kl field_f;
+    static ResourceArchive field_f;
     private String field_h;
 
     final static void a(ls[] param0, int param1) {

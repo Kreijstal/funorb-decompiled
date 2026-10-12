@@ -136,10 +136,10 @@ final class qa extends fe {
     final static void a(byte param0, boolean param1) {
         if (param0 >= -54) {
           qa.$cfr$intArgs$a$7ffe4b125357(43, true);
-          fa.a(true, (byte) 67, param1);
+          ArchiveProvider.a(true, (byte) 67, param1);
           return;
         }
-        fa.a(true, (byte) 67, param1);
+        ArchiveProvider.a(true, (byte) 67, param1);
     }
 
     final static void a(RgbSprite param0, byte param1) {
@@ -163,9 +163,9 @@ final class qa extends fe {
     final static void $cfr$intArgs$a$7ffe4b125357(int param0, boolean param1) {
         if (param0 >= -54) {
           qa.$cfr$intArgs$a$7ffe4b125357(43, true);
-          fa.a(true, (byte) 67, param1);
+          ArchiveProvider.a(true, (byte) 67, param1);
           return;
         }
-        fa.a(true, (byte) 67, param1);
+        ArchiveProvider.a(true, (byte) 67, param1);
     }
 }

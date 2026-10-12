@@ -574,8 +574,8 @@ class PacketBuffer extends IntrusiveNode {
         return this.readUnsignedShort((byte) -60) - 32768;
     }
 
-    final int c(boolean param0) {
-        if (!param0) {
+    final int readLargeSmart(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           field_q = (ja) null;
         }
         if (this.payload[this.position] >= 0) {

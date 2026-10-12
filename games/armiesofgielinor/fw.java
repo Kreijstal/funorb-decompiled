@@ -10,7 +10,7 @@ class fw extends kb {
     private boolean field_D;
     static String field_H;
     int field_G;
-    static kl field_F;
+    static ResourceArchive field_F;
     private boolean field_E;
     boolean field_K;
 
@@ -124,7 +124,7 @@ class fw extends kb {
           if (param3 == -12215) {
             return false;
           }
-          field_F = (kl) null;
+          field_F = (ResourceArchive) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

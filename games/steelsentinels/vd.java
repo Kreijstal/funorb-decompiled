@@ -11,7 +11,7 @@ final class vd {
     static int field_h;
     static java.awt.Frame field_c;
 
-    final static fh a(cm param0, String param1, cm param2, int param3, String param4) {
+    final static fh a(ResourceArchive param0, String param1, ResourceArchive param2, int param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -27,11 +27,11 @@ final class vd {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param2.a(param1, 45);
+          var5_int = param2.getGroupId(param1, 45);
           if (param3 != -1) {
             vd.a((byte) 19);
           }
-          var6 = param2.a(var5_int, -32759, param4);
+          var6 = param2.getFileId(var5_int, -32759, param4);
           stackIn_3_0 = dh.a(var5_int, var6, param2, (byte) 126, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

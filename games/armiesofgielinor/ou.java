@@ -9,7 +9,7 @@ final class ou {
     private NodeDeque[][] field_i;
     private MapLayout[] field_b;
     static String field_g;
-    private kl[] field_e;
+    private ResourceArchive[] field_e;
     private boolean field_d;
     static String field_j;
 
@@ -48,7 +48,7 @@ final class ou {
         }
     }
 
-    private final void a(int param0, int param1, kl param2) {
+    private final void a(int param0, int param1, ResourceArchive param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -373,7 +373,7 @@ final class ou {
               }
               if (param4) {
                 uh.field_f[var23] = var27 >> fn.field_M;
-                ew.field_a[var23] = var28 >> fn.field_M;
+                ArchiveProvider.field_a[var23] = var28 >> fn.field_M;
                 qt.field_c[var23] = var29;
               }
               var23++;
@@ -547,14 +547,14 @@ final class ou {
         }
     }
 
-    private final kl a(int param0, int param1) {
+    private final ResourceArchive a(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Object stackIn_5_0 = null;
         Object stackIn_13_0 = null;
         Object stackIn_21_0 = null;
         Object stackIn_30_0 = null;
-        kl stackIn_32_0 = null;
+        ResourceArchive stackIn_32_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_e != null &&
@@ -565,22 +565,22 @@ final class ou {
               if (~var3_int != param0 &&
                 var3_int != 1) {
                 stackIn_21_0 = null;
-                return (kl) (stackIn_21_0);
+                return (ResourceArchive) (stackIn_21_0);
               }
               if (var3_int == 1 &&
                 !this.field_d &&
                 0 >= df.field_M) {
                 stackIn_30_0 = null;
-                return (kl) (stackIn_30_0);
+                return (ResourceArchive) (stackIn_30_0);
               }
               stackIn_32_0 = this.field_e[var3_int];
               return stackIn_32_0;
             }
             stackIn_13_0 = null;
-            return (kl) (stackIn_13_0);
+            return (ResourceArchive) (stackIn_13_0);
           }
           stackIn_5_0 = null;
-          return (kl) (stackIn_5_0);
+          return (ResourceArchive) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -696,7 +696,7 @@ final class ou {
         }
     }
 
-    ou(kl param0, kl param1, boolean param2) {
+    ou(ResourceArchive param0, ResourceArchive param1, boolean param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -705,7 +705,7 @@ final class ou {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_e = new kl[2];
+          this.field_e = new ResourceArchive[2];
           this.field_d = param2;
           this.a(24402, 0, param0);
           this.a(24402, 1, param1);
@@ -735,7 +735,7 @@ final class ou {
     }
 
     private final void a(int param0, int param1, int param2) {
-        kl var4 = null;
+        ResourceArchive var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         byte[] var6 = null;

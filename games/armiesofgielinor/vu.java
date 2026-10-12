@@ -79,8 +79,8 @@ final class vu extends fw {
             param5 = param5 << 8 | param5;
             var7_int = param5 >> 1 ^ param5;
             for (var10 = 0; var10 < 4; var10++) {
-              var8 = 40 + (-44 + (var7_int & 7)) + bm.field_y[var10][0];
-              var9 = 20 + bm.field_y[var10][1] + ((param5 & 3) - 64);
+              var8 = 40 + (-44 + (var7_int & 7)) + CachedArchiveProvider.field_y[var10][0];
+              var9 = 20 + CachedArchiveProvider.field_y[var10][1] + ((param5 & 3) - 64);
               if (param1) {
                 var9 = var9 >> 1;
                 var8 = var8 >> 1;

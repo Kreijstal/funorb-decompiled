@@ -7,7 +7,7 @@ final class br {
     static mp field_g;
     static je field_e;
     static boolean[] field_f;
-    static kl field_d;
+    static ResourceArchive field_d;
     static int[] field_c;
 
     public static void a(int param0) {

@@ -172,7 +172,7 @@ final class tg {
         }
     }
 
-    final static void a(kl param0, int param1, boolean param2, kl param3) {
+    final static void a(ResourceArchive param0, int param1, boolean param2, ResourceArchive param3) {
         try {
           bk.a(param2, fp.field_Lb, eq.field_h, LeaderEscortCondition.field_f, DualLinkedNode.field_k, -106, ke.field_e, im.field_x, qc.field_e, ri.field_b, PreparedAction.field_o, rd.field_e);
           dh.field_n = fk.a("chatfilter", (byte) -125, param3, "lobby");
@@ -194,8 +194,8 @@ final class tg {
           field_l = null;
           return;
         }
-        kl var2 = (kl) null;
-        tg.a((kl) null, 28, false, (kl) null);
+        ResourceArchive var2 = (ResourceArchive) null;
+        tg.a((ResourceArchive) null, 28, false, (ResourceArchive) null);
         field_b = null;
         field_j = null;
         field_n = null;
@@ -468,13 +468,13 @@ final class tg {
         if (param1 <= 38) {
           tg.a(-18);
           if (param0 == 17) {
-            Spell.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, jm.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, this.field_m, this.field_f);
+            Spell.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, this.field_m, this.field_f);
             return true;
           }
           return false;
         }
         if (param0 == 17) {
-          Spell.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, jm.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, this.field_m, this.field_f);
+          Spell.field_b = new i(this.field_g.field_V, this.field_g.field_D, this.field_g.field_gb, this.field_g.field_ob, param2, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, this.field_m, this.field_f);
           return true;
         }
         return false;

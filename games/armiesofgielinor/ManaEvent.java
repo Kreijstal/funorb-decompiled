@@ -295,7 +295,7 @@ final class ManaEvent extends GameEvent {
         this.playerId = param2;
     }
 
-    final static RgbSprite a(int param0, int param1, int param2, kl param3) {
+    final static RgbSprite a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

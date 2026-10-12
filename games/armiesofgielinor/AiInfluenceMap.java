@@ -7,7 +7,7 @@ final class AiInfluenceMap {
     static BattleCamera field_d;
     private int mapWidth;
     static String field_j;
-    static kl field_f;
+    static ResourceArchive field_f;
     private int minimumX;
     private int maximumX;
     static String field_l;
@@ -528,7 +528,7 @@ final class AiInfluenceMap {
           if ((decompiledFrameRemainder0) &&
             (decompiledFrameCompleted0)) {
             if (param1 >= -23) {
-              field_f = (kl) null;
+              field_f = (ResourceArchive) null;
             }
             if (param4 == 0) {
               stackIn_45_0 = (param3 <= 0) ? -1 : 1;
@@ -797,7 +797,7 @@ final class AiInfluenceMap {
                 ut.a(RevivalEvent.field_D, nk.field_m, ov.field_e, la.field_d, (byte) 125, var6_intLifetime1);
               }
             }
-            jm.a(var5, 0);
+            ArchiveIndex.a(var5, 0);
             dupTemp$0 = new String[2][var5];
             var3.field_t = dupTemp$0;
             var6 = dupTemp$0;

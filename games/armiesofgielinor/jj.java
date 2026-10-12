@@ -8,7 +8,7 @@ final class jj {
     static String[] field_a;
     static String field_f;
     static String field_e;
-    static kl field_c;
+    static ResourceArchive field_c;
     static je[] field_i;
     static BufferedSocket field_g;
 
@@ -168,7 +168,7 @@ final class jj {
         }
     }
 
-    final static void a(int param0, kl param1) {
+    final static void a(int param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
         pu var5 = null;

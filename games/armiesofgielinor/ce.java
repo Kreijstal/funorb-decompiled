@@ -10,7 +10,7 @@ final class ce extends tj implements he {
     private fw field_G;
     static int field_N;
     private fw field_E;
-    static kl field_M;
+    static ResourceArchive field_M;
     static int field_Q;
     static rf field_K;
     static int[] field_O;

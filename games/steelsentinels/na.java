@@ -209,7 +209,7 @@ final class na {
     }
 
     na(boolean param0) {
-        this.field_p = jk.field_e;
+        this.field_p = IntKeyLookup.field_e;
         this.field_d = b.field_g;
         this.field_t = be.field_b;
         this.field_w = dk.field_a;

@@ -616,10 +616,10 @@ final class qs extends IntrusiveNode {
         field_C = null;
     }
 
-    private final static boolean a(kl param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_r) {
-          var1 = param0.a((byte) 49, 0, 0);
+          var1 = param0.getFile((byte) 49, 0, 0);
           if (var1 == null) {
             return false;
           }
@@ -663,7 +663,7 @@ final class qs extends IntrusiveNode {
         return new sn(this.field_m, var1, this.field_D, this.field_S, this.field_z);
     }
 
-    final static qs a(kl param0, String param1, String param2) {
+    final static qs a(ResourceArchive param0, String param1, String param2) {
         try {
           qs var4_ref = null;
           if (!qs.a(param0)) {
@@ -719,14 +719,14 @@ final class qs extends IntrusiveNode {
         }
     }
 
-    final static qs a(kl param0, int param1, int param2) {
+    final static qs a(ResourceArchive param0, int param1, int param2) {
         try {
           qs var4_ref = null;
           if (!qs.a(param0)) {
             param0.a(param1, param2, 0);
             return null;
           }
-          byte[] var3 = param0.a((byte) 69, param2, param1);
+          byte[] var3 = param0.getFile((byte) 69, param2, param1);
           if (var3 == null) {
             return null;
           }

@@ -23,7 +23,7 @@ final class l implements Iterator {
         }
     }
 
-    final static void a(IndexedSprite[] param0, cm param1, String[] param2, int[] param3, int param4, String[] param5, String[][] param6, int param7, cm param8, byte param9, String[][] param10, RgbSprite[][] param11, cm param12, byte[] param13, RgbSprite[][] param14, boolean param15, int[] param16, int param17, String[] param18, byte[] param19) {
+    final static void a(IndexedSprite[] param0, ResourceArchive param1, String[] param2, int[] param3, int param4, String[] param5, String[][] param6, int param7, ResourceArchive param8, byte param9, String[][] param10, RgbSprite[][] param11, ResourceArchive param12, byte[] param13, RgbSprite[][] param14, boolean param15, int[] param16, int param17, String[] param18, byte[] param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -63,7 +63,7 @@ final class l implements Iterator {
           lb.a((byte) 109, param8);
           if (param9 != 94) {
             var21 = (byte[]) null;
-            l.a((IndexedSprite[]) null, (cm) null, (String[]) null, (int[]) null, 58, (String[]) null, (String[][]) null, -8, (cm) null, (byte) -10, (String[][]) null, (RgbSprite[][]) null, (cm) null, (byte[]) null, (RgbSprite[][]) null, true, (int[]) null, 95, (String[]) null, (byte[]) null);
+            l.a((IndexedSprite[]) null, (ResourceArchive) null, (String[]) null, (int[]) null, 58, (String[]) null, (String[][]) null, -8, (ResourceArchive) null, (byte) -10, (String[][]) null, (RgbSprite[][]) null, (ResourceArchive) null, (byte[]) null, (RgbSprite[][]) null, true, (int[]) null, 95, (String[]) null, (byte[]) null);
           }
           oh.a(param7, param16, param5, param10, param2, param9 ^ 94, param6, param4, param11, param14, param17, param18, param13, param19, param8);
           vl.a(param8, param1, param15, -119);
@@ -242,7 +242,7 @@ final class l implements Iterator {
           return;
         }
         byte[] var2 = (byte[]) null;
-        l.a((IndexedSprite[]) null, (cm) null, (String[]) null, (int[]) null, 96, (String[]) null, (String[][]) null, -31, (cm) null, (byte) 116, (String[][]) null, (RgbSprite[][]) null, (cm) null, (byte[]) null, (RgbSprite[][]) null, true, (int[]) null, -127, (String[]) null, (byte[]) null);
+        l.a((IndexedSprite[]) null, (ResourceArchive) null, (String[]) null, (int[]) null, 96, (String[]) null, (String[][]) null, -31, (ResourceArchive) null, (byte) 116, (String[][]) null, (RgbSprite[][]) null, (ResourceArchive) null, (byte[]) null, (RgbSprite[][]) null, true, (int[]) null, -127, (String[]) null, (byte[]) null);
         field_i = null;
         field_f = null;
         field_e = null;

@@ -21,7 +21,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
     int mapSizeSetting;
     int missionId;
     CampaignDefinition campaign;
-    kl mapArchive;
+    ResourceArchive mapArchive;
     int difficulty;
     int playerSlot;
     int scoreDamageTarget;
@@ -258,7 +258,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         if (obfuscationGuard < 86) {
           CampaignMission.c((byte) 8);
         }
-        byte[] var3 = this.mapArchive.a((byte) 76, this.mapResourceId, this.mapArchive.a(gk.field_O[this.campaign.campaignIndex], 102));
+        byte[] var3 = this.mapArchive.getFile((byte) 76, this.mapResourceId, this.mapArchive.getGroupId(gk.field_O[this.campaign.campaignIndex], 102));
         byte[] var2 = var3;
         return new MapLayout(this.missionId, var3);
     }
@@ -305,7 +305,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         return new CampaignRewardPreview(this.rewardUnitTypes, this.rewardSpellId, this.manaBonusPercent);
     }
 
-    final static RgbSprite[] a(byte param0, String param1, String param2, kl param3) {
+    final static RgbSprite[] a(byte param0, String param1, String param2, ResourceArchive param3) {
         RgbSprite[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -384,8 +384,8 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
 
     final static gl c(byte param0) {
         if (param0 >= -11) {
-          kl var2 = (kl) null;
-          CampaignMission.a((byte) -102, (String) null, (String) null, (kl) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          CampaignMission.a((byte) -102, (String) null, (String) null, (ResourceArchive) null);
         }
         return new gl(cn.e(488997228), rf.c(-104));
     }

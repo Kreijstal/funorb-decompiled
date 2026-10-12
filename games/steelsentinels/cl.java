@@ -290,7 +290,7 @@ final class cl {
             for (var8 = 0; var7 > var8; var8++) {
               bl.field_m[var8] = -1;
             }
-            r.field_j[1] = fi.field_s;
+            r.field_j[1] = CachedArchiveProvider.field_s;
             bl.field_m[1] = 0;
             oc.field_b = new int[2];
             r.field_j[0] = ki.field_kb;

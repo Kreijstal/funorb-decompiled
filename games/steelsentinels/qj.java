@@ -315,7 +315,7 @@ final class qj {
         try {
           wn.field_f = param4;
           hk.field_ic = param2;
-          fi.field_t = param1;
+          CachedArchiveProvider.field_t = param1;
           ob.field_v = true;
         } catch (RuntimeException runtimeException) {
           throw ci.a((Throwable) ((Object) runtimeException), "qj.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');

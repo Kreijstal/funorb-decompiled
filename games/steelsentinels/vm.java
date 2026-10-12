@@ -29,18 +29,18 @@ final class vm extends ia {
             vm.b((String) null, 32);
           }
           if (var4.length() == 0) {
-            stackIn_4_0 = fa.field_d;
+            stackIn_4_0 = ArchiveProvider.field_d;
             return stackIn_4_0;
           }
           if (!lk.a(var4, (byte) 62, var3)) {
-            stackIn_7_0 = fa.field_d;
+            stackIn_7_0 = ArchiveProvider.field_d;
             return stackIn_7_0;
           }
           if (!this.b(1, param0)) {
             stackIn_12_0 = vf.field_b;
             return stackIn_12_0;
           }
-          stackIn_10_0 = fa.field_d;
+          stackIn_10_0 = ArchiveProvider.field_d;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

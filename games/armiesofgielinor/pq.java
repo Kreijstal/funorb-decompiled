@@ -21,7 +21,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           av.field_a = 0;
           DiskCacheRequest.field_B = -1;
-          kl.field_i = -1;
+          ResourceArchive.field_i = -1;
           ku.field_I = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -61,10 +61,10 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             BoundedFile.field_d = param0.getY();
             vi.b(-112);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              jm.field_k = 2;
+              ArchiveIndex.field_k = 2;
               ob.field_J = 2;
             } else {
-              jm.field_k = 1;
+              ArchiveIndex.field_k = 1;
               ob.field_J = 1;
             }
             var2_int = param0.getModifiers();
@@ -110,7 +110,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           av.field_a = 0;
           DiskCacheRequest.field_B = param0.getX();
-          kl.field_i = param0.getY();
+          ResourceArchive.field_i = param0.getY();
           ku.field_I = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -160,7 +160,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           av.field_a = 0;
           DiskCacheRequest.field_B = param0.getX();
-          kl.field_i = param0.getY();
+          ResourceArchive.field_i = param0.getY();
           ku.field_I = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -197,7 +197,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (BattleCharacter.field_q != null) {
             av.field_a = 0;
             DiskCacheRequest.field_B = param0.getX();
-            kl.field_i = param0.getY();
+            ResourceArchive.field_i = param0.getY();
             ku.field_I = true;
           }
         } catch (RuntimeException runtimeException) {

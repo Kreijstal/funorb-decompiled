@@ -8,7 +8,7 @@ final class sb extends rb implements fb, rp {
     static String field_f;
     static PacketBuffer field_h;
     static int field_d;
-    static kl field_e;
+    static ResourceArchive field_e;
 
     public final void b(fn param0, int param1) {
         try {
@@ -115,7 +115,7 @@ final class sb extends rb implements fb, rp {
                 return stackIn_18_0;
               }
             } else {
-              if (ew.field_c.indexOf(var4) == -1) {
+              if (ArchiveProvider.field_c.indexOf(var4) == -1) {
                 stackIn_21_0 = ov.field_h;
                 return stackIn_21_0;
               }

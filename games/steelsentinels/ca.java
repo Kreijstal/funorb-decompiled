@@ -324,7 +324,7 @@ final class ca extends IntrusiveNode {
               var12.field_xc = new SceneWidget(0L, bd.field_f);
               var12.a(var12.field_xc, 121);
               var12.h(param1 ^ -104);
-              var12.field_gc = new SceneWidget(0L, fa.field_f);
+              var12.field_gc = new SceneWidget(0L, ArchiveProvider.field_f);
               var13 = 1;
               var12.a(var12.field_gc, 120);
             }

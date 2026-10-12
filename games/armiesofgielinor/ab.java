@@ -68,11 +68,11 @@ final class ab {
           param1 = param1 | param1 << 8;
           var4_int = param1 >> 1 ^ param1;
           for (var7 = 0; 4 > var7; var7++) {
-            var6 = -64 + (bm.field_y[var7][1] + param0 + (param1 & 3));
-            var5 = -44 + ((var4_int & 7) + bm.field_y[var7][0] + param2);
+            var6 = -64 + (CachedArchiveProvider.field_y[var7][1] + param0 + (param1 & 3));
+            var5 = -44 + ((var4_int & 7) + CachedArchiveProvider.field_y[var7][0] + param2);
             if (0 == var7) {
               var10 = tn.field_eb[16 + param1 % 9];
-              fe.a(var10, var5, -bm.field_y[var7][1] + var6);
+              fe.a(var10, var5, -CachedArchiveProvider.field_y[var7][1] + var6);
             } else {
               var11 = tn.field_eb[25 + param1 % 9];
               fe.a(var11, var5, var6);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bm extends ew {
+final class CachedArchiveProvider extends ArchiveProvider {
     private int field_r;
     private int field_j;
     static String field_z;
@@ -17,7 +17,7 @@ final class bm extends ew {
     static int[][] field_y;
     private SectorCacheStore field_f;
     private byte[] field_g;
-    private jm field_q;
+    private ArchiveIndex index;
     private ResourceRequest field_n;
     private DiskCacheWorker field_A;
     private int field_s;
@@ -54,7 +54,7 @@ final class bm extends ew {
           }
           boolean decompiledFrameRemainder0 = true;
           if (this.field_i != null) {
-            if (null == this.a(param0 ^ -10433)) {
+            if (null == this.getIndex(param0 ^ -10433)) {
               return;
             }
             if (this.field_o) {
@@ -72,8 +72,8 @@ final class bm extends ew {
                 }
                 var3 = this.field_i.next((byte) 123);
               }
-              while (this.field_s < this.field_q.field_p.length) {
-                if (this.field_q.field_p[this.field_s] == 0) {
+              while (this.field_s < this.index.fileCounts.length) {
+                if (this.index.fileCounts[this.field_s] == 0) {
                   this.field_s = this.field_s + 1;
                   continue;
                 }
@@ -116,8 +116,8 @@ final class bm extends ew {
                   var3Lifetime1 = this.field_i.next((byte) 123);
                 }
                 scanLoop1: while (true) {
-                  if (this.field_q.field_p.length > this.field_s) {
-                    if (0 != this.field_q.field_p[this.field_s]) {
+                  if (this.index.fileCounts.length > this.field_s) {
+                    if (0 != this.index.fileCounts[this.field_s]) {
                       if (this.field_x.isNormalFull((byte) 51)) {
                         var2_intLifetime1 = 0;
                         break scanLoop1;
@@ -176,12 +176,12 @@ final class bm extends ew {
         }
     }
 
-    final jm a(int param0) {
-        jm stackIn_3_0 = null;
+    final ArchiveIndex getIndex(int obfuscationGuard) {
+        ArchiveIndex stackIn_3_0 = null;
         Object stackIn_9_0 = null;
         Object stackIn_29_0 = null;
         Object stackIn_41_0 = null;
-        jm stackIn_53_0 = null;
+        ArchiveIndex stackIn_53_0 = null;
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var2_ref = null;
@@ -192,14 +192,14 @@ final class bm extends ew {
         byte[] var7 = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (this.field_q != null) {
-            stackIn_3_0 = this.field_q;
+          if (this.index != null) {
+            stackIn_3_0 = this.index;
             return stackIn_3_0;
           }
           if (null == this.field_n) {
             if (this.field_x.isPriorityFull(101)) {
               stackIn_9_0 = null;
-              return (jm) (stackIn_9_0);
+              return (ArchiveIndex) (stackIn_9_0);
             }
             this.field_n = (ResourceRequest) ((Object) this.field_x.request(this.field_r, false, 255, (byte) 0, true));
           }
@@ -215,19 +215,19 @@ final class bm extends ew {
               if (var5 == null) {
                 throw new RuntimeException();
               }
-              this.field_q = new jm(var7, this.field_B, this.field_g);
+              this.index = new ArchiveIndex(var7, this.field_B, this.field_g);
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
               this.field_x.invalidateTransport((byte) 4);
-              this.field_q = null;
-              if (this.field_x.isPriorityFull(param0 - 20152)) {
+              this.index = null;
+              if (this.field_x.isPriorityFull(obfuscationGuard - 20152)) {
                 this.field_n = null;
               } else {
                 this.field_n = (ResourceRequest) ((Object) this.field_x.request(this.field_r, false, 255, (byte) 0, true));
               }
               stackIn_41_0 = null;
-              return (jm) (stackIn_41_0);
+              return (ArchiveIndex) (stackIn_41_0);
             }
             if (null != this.field_f) {
               this.field_A.queueWrite(this.field_r, this.field_f, false, var7);
@@ -237,36 +237,36 @@ final class bm extends ew {
               if (var5 == null) {
                 throw new RuntimeException();
               }
-              this.field_q = new jm(var7, this.field_B, this.field_g);
-              if (this.field_j != this.field_q.field_c) {
+              this.index = new ArchiveIndex(var7, this.field_B, this.field_g);
+              if (this.field_j != this.index.revision) {
                 throw new RuntimeException();
               }
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = decompiledCaughtException;
-              this.field_q = null;
+              this.index = null;
               if (!this.field_x.isPriorityFull(92)) {
                 this.field_n = (ResourceRequest) ((Object) this.field_x.request(this.field_r, false, 255, (byte) 0, true));
               } else {
                 this.field_n = null;
               }
               stackIn_29_0 = null;
-              return (jm) (stackIn_29_0);
+              return (ArchiveIndex) (stackIn_29_0);
             }
           }
           this.field_n = null;
           if (null != this.field_w) {
-            this.field_C = new byte[this.field_q.field_i];
+            this.field_C = new byte[this.index.groupCapacity];
           }
-          if (param0 != 20179) {
+          if (obfuscationGuard != 20179) {
             field_k = (String) null;
           }
-          stackIn_53_0 = this.field_q;
+          stackIn_53_0 = this.index;
           return stackIn_53_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var2_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "bm.B(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "bm.B(" + obfuscationGuard + ')');
         }
     }
 
@@ -356,12 +356,12 @@ final class bm extends ew {
                 ab.field_b.reset();
                 ab.field_b.update(var5, 0, -2 + var18.length);
                 var6_int = (int)ab.field_b.getValue();
-                if (var6_int != this.field_q.field_e[param1]) {
+                if (var6_int != this.index.groupCrcs[param1]) {
                   throw new RuntimeException();
                 }
-                if (this.field_q.field_v != null &&
-                  null != this.field_q.field_v[param1]) {
-                  var27 = this.field_q.field_v[param1];
+                if (this.index.groupDigests != null &&
+                  null != this.index.groupDigests[param1]) {
+                  var27 = this.index.groupDigests[param1];
                   var28 = SpellCastAction.a(param0 ^ -18424, -2 + var18.length, var18, 0);
                   for (var9 = 0; var9 < 64; var9++) {
                     if (~var27[var9] != ~var28[var9]) {
@@ -370,7 +370,7 @@ final class bm extends ew {
                   }
                 }
                 var7 = (255 & var5[var18.length - 1]) + (65280 & var5[-2 + var18.length] << 8);
-                if ((65535 & this.field_q.field_t[param1]) != var7) {
+                if ((65535 & this.index.groupVersions[param1]) != var7) {
                   throw new RuntimeException();
                 }
                 if (this.field_C[param1] != 1) {
@@ -407,12 +407,12 @@ final class bm extends ew {
               ab.field_b.reset();
               ab.field_b.update(var5, 0, var18.length - 2);
               var6_int = (int)ab.field_b.getValue();
-              if (var6_int != this.field_q.field_e[param1]) {
+              if (var6_int != this.index.groupCrcs[param1]) {
                 throw new RuntimeException();
               }
-              if (null != this.field_q.field_v &&
-                this.field_q.field_v[param1] != null) {
-                var29 = this.field_q.field_v[param1];
+              if (null != this.index.groupDigests &&
+                this.index.groupDigests[param1] != null) {
+                var29 = this.index.groupDigests[param1];
                 var30 = SpellCastAction.a(-18423, -2 + var18.length, var18, 0);
                 var11 = 0;
                 var9 = var11;
@@ -441,8 +441,8 @@ final class bm extends ew {
             stackIn_112_0 = null;
             return (ResourceRequest) (stackIn_112_0);
           }
-          var5[-2 + var18.length] = (byte)(this.field_q.field_t[param1] >>> 8);
-          var5[-1 + var18.length] = (byte)this.field_q.field_t[param1];
+          var5[-2 + var18.length] = (byte)(this.index.groupVersions[param1] >>> 8);
+          var5[-1 + var18.length] = (byte)this.index.groupVersions[param1];
           if (null != this.field_w) {
             this.field_A.queueWrite(param1, this.field_w, false, var18);
             if (this.field_C[param1] != 1) {
@@ -464,14 +464,14 @@ final class bm extends ew {
     final static void a(byte param0, int param1) {
         try {
           if (param0 > -43) {
-            bm.e(41);
+            CachedArchiveProvider.e(41);
           }
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "bm.J(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final byte[] a(int param0, int param1) {
+    final byte[] getEncodedGroup(int groupId, int obfuscationGuard) {
         ResourceRequest var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -479,12 +479,12 @@ final class bm extends ew {
         byte[] stackIn_6_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.a(1, param0, 0);
+          var3 = this.a(1, groupId, 0);
           if (var3 == null) {
             stackIn_2_0 = null;
             return (byte[]) (stackIn_2_0);
           }
-          if (param1 != 4) {
+          if (obfuscationGuard != 4) {
             this.b(-9);
           }
           var4 = var3.getBytes((byte) -113);
@@ -494,11 +494,11 @@ final class bm extends ew {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "bm.C(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "bm.C(" + groupId + ',' + obfuscationGuard + ')');
         }
     }
 
-    final int b(int param0, int param1) {
+    final int getGroupProgress(int obfuscationGuard, int groupId) {
         ResourceRequest var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_2_0 = 0;
@@ -506,12 +506,12 @@ final class bm extends ew {
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = (ResourceRequest) (this.field_t.get(param0 - 5958, (long)param1));
+          var3 = (ResourceRequest) (this.field_t.get(obfuscationGuard - 5958, (long)groupId));
           if (var3 != null) {
             stackIn_2_0 = var3.getProgress(0);
             return stackIn_2_0;
           }
-          if (param0 == 5926) {
+          if (obfuscationGuard == 5926) {
             stackIn_7_0 = 0;
             return stackIn_7_0;
           }
@@ -520,7 +520,7 @@ final class bm extends ew {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "bm.D(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "bm.D(" + obfuscationGuard + ',' + groupId + ')');
         }
     }
 
@@ -547,7 +547,7 @@ final class bm extends ew {
           }
           this.field_u = true;
           if (param0 != 31637) {
-            this.a(-26);
+            this.getIndex(-26);
           }
           if (null == this.field_i) {
             this.field_i = new NodeDeque();
@@ -574,7 +574,7 @@ final class bm extends ew {
           if (this.field_i == null) {
             return;
           }
-          if (null == this.a(20179)) {
+          if (null == this.getIndex(20179)) {
             return;
           }
           var3 = 1 % ((72 - param0) / 39);
@@ -582,8 +582,8 @@ final class bm extends ew {
           while (var2 != null) {
             var4 = (int)var2.key;
             if (var4 >= 0) {
-              if (var4 < this.field_q.field_i) {
-                if (this.field_q.field_p[var4] != 0) {
+              if (var4 < this.index.groupCapacity) {
+                if (this.index.fileCounts[var4] != 0) {
                   if (0 == this.field_C[var4]) {
                     discarded$0 = this.a(1, var4, 1);
                   }
@@ -612,7 +612,7 @@ final class bm extends ew {
         }
     }
 
-    bm(int param0, SectorCacheStore param1, SectorCacheStore param2, ResourceProtocolClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
+    CachedArchiveProvider(int param0, SectorCacheStore param1, SectorCacheStore param2, ResourceProtocolClient param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;

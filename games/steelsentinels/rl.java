@@ -9,7 +9,7 @@ final class rl {
     static int field_d;
     static String field_e;
 
-    final static RgbSprite a(cm param0, String param1, String param2, boolean param3) {
+    final static RgbSprite a(ResourceArchive param0, String param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -24,12 +24,12 @@ final class rl {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.a(param1, 32);
+          var4_int = param0.getGroupId(param1, 32);
           if (param3) {
             stackIn_2_0 = (RgbSprite) null;
             return stackIn_2_0;
           }
-          var5 = param0.a(var4_int, -32759, param2);
+          var5 = param0.getFileId(var4_int, -32759, param2);
           stackIn_4_0 = im.a(param0, var5, var4_int, 1048576);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

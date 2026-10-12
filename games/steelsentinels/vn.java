@@ -154,21 +154,21 @@ final class vn extends v implements fd, aa {
           var4 = this.field_n.h((byte) 79);
           var5 = rg.d(param0 ^ 31644);
           if (var4 < 1890) {
-            stackIn_2_0 = fa.field_d;
+            stackIn_2_0 = ArchiveProvider.field_d;
             return stackIn_2_0;
           }
           if (var4 > -3 + var5) {
-            stackIn_6_0 = fa.field_d;
+            stackIn_6_0 = ArchiveProvider.field_d;
             return stackIn_6_0;
           }
           if (!oh.a(var4, true, var2_int, var3)) {
-            stackIn_10_0 = fa.field_d;
+            stackIn_10_0 = ArchiveProvider.field_d;
             return stackIn_10_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
-          return fa.field_d;
+          return ArchiveProvider.field_d;
         }
         if (param0 == -31992) {
           return vf.field_b;

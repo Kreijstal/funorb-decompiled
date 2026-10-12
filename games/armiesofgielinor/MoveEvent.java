@@ -140,7 +140,7 @@ final class MoveEvent extends GameEvent {
         }
     }
 
-    final static void a(kl param0, boolean param1, kl param2, kl param3) {
+    final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
         int stackIn_23_0 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;

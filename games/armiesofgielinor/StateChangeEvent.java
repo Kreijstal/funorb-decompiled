@@ -211,8 +211,8 @@ final class StateChangeEvent extends GameEvent {
             return;
           }
           for (var7 = 0; 4 > var7; var7++) {
-            var5 = -54 + (bm.field_y[var7][0] + param3) + (var4_int & 15);
-            var6 = param2 + (bm.field_y[var7][1] + (param0 & 7) - 64);
+            var5 = -54 + (CachedArchiveProvider.field_y[var7][0] + param3) + (var4_int & 15);
+            var6 = param2 + (CachedArchiveProvider.field_y[var7][1] + (param0 & 7) - 64);
             fe.a(jq.field_G[3], 60 + var5, var6 + 50, jq.field_G[3].canvasWidth >> 1, jq.field_G[3].canvasHeight >> 1);
             var4_int = var4_int >> 1;
             param0 = param0 >> 1;
@@ -244,7 +244,7 @@ final class StateChangeEvent extends GameEvent {
           }
           MoveEvent.matchSetupPanel.initializePanel(param0 + 0);
           MoveEvent.matchSetupPanel.loadItemLabels((byte) 97);
-          ts.currentSpellMenu = bm.spellMenuRoot;
+          ts.currentSpellMenu = CachedArchiveProvider.spellMenuRoot;
           if (param0 != 1) {
             field_A = (String) null;
           }
@@ -465,7 +465,7 @@ final class StateChangeEvent extends GameEvent {
         }
     }
 
-    final static void a(kl param0, kl param1, kl param2, int param3, boolean param4) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3, boolean param4) {
         se.field_g = cr.a("", 4210752);
         se.field_g.a(false, true);
         if (param3 != 0) {

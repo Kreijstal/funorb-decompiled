@@ -817,7 +817,7 @@ final class ic extends we {
         }
     }
 
-    final synchronized boolean a(int param0, tg param1, int param2, ub param3, cm param4) {
+    final synchronized boolean a(int param0, tg param1, int param2, ub param3, ResourceArchive param4) {
         int stackIn_27_0 = 0;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;

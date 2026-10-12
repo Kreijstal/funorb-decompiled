@@ -163,7 +163,7 @@ final class ub {
         lk.field_a = new je(0L, (je) null);
         lk.field_a.a(ij.field_w.field_a, 126);
         lk.field_a.a(mp.field_Lb, 97);
-        ta.field_R = new je(0L, jm.field_b);
+        ta.field_R = new je(0L, ArchiveIndex.field_b);
         df.field_K = new je(0L, (je) null);
         ta.field_R.a(bk.field_f, 54);
         ta.field_R.a(df.field_K, 70);

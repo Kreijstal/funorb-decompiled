@@ -5,7 +5,7 @@ final class dg {
     static String field_b;
     static String field_a;
     static int field_c;
-    private kl field_d;
+    private ResourceArchive field_d;
 
     final static void b(byte param0) {
         int stackIn_5_0 = 0;
@@ -123,7 +123,7 @@ final class dg {
         wl.field_N = fk.a("shadows", (byte) -128, this.field_d, "basic")[0];
     }
 
-    dg(kl param0) {
+    dg(ResourceArchive param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

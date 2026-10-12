@@ -3,7 +3,7 @@
  */
 final class fd extends IntrusiveNode {
     int field_k;
-    static kl field_m;
+    static ResourceArchive field_m;
     static String field_o;
     static String field_l;
     wp field_p;
@@ -39,7 +39,7 @@ final class fd extends IntrusiveNode {
         field_l = null;
     }
 
-    fd(kl param0, kl param1, int param2) {
+    fd(ResourceArchive param0, ResourceArchive param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

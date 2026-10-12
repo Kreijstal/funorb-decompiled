@@ -551,7 +551,7 @@ class je extends im {
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           tq.field_c = SoftwareRaster.width;
-          bm.field_p = SoftwareRaster.height;
+          CachedArchiveProvider.field_p = SoftwareRaster.height;
           if (param1) {
             stackIn_4_0 = PreparedAction.field_r;
           } else {

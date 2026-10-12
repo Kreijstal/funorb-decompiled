@@ -20,7 +20,7 @@ abstract class fe extends DualNode {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        jl.a(false);
+        ArchiveIndex.a(false);
         int var5 = 80 % ((param2 + 37) / 40);
         SoftwareRaster.h(param0, param1, param3, param4);
     }

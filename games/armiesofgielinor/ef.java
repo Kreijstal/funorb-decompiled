@@ -14,7 +14,7 @@ final class ef extends Exception {
         vs.field_e = null;
         NetworkResourceRequest.field_C = null;
         PaletteRegionMap.field_g = null;
-        kl.field_a = null;
+        ResourceArchive.field_a = null;
         CampaignMenuEntry.field_u = null;
         if (param0 != -1) {
           ef.b(95);

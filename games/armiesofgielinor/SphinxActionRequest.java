@@ -16,10 +16,10 @@ final class SphinxActionRequest extends ActionRequest {
         RuntimeException var2 = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4 = (bj) (jm.field_o.first((byte) 121));
+          var4 = (bj) (ArchiveIndex.field_o.first((byte) 121));
           while (var4 != null) {
             te.a(param0, var4, -17006);
-            var4 = (bj) (jm.field_o.next((byte) 123));
+            var4 = (bj) (ArchiveIndex.field_o.next((byte) 123));
           }
           if (param1 <= 33) {
             field_v = (gk) null;
@@ -32,7 +32,7 @@ final class SphinxActionRequest extends ActionRequest {
         }
     }
 
-    final static void a(IndexedSprite[] param0, kl param1, int param2, int[] param3, kl param4) {
+    final static void a(IndexedSprite[] param0, ResourceArchive param1, int param2, int[] param3, ResourceArchive param4) {
         RgbSprite[] dupTemp$0 = null;
         RgbSprite[] dupTemp$1 = null;
         RgbSprite[] dupTemp$2 = null;
@@ -384,13 +384,13 @@ final class SphinxActionRequest extends ActionRequest {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        kl var4 = null;
+        ResourceArchive var4 = null;
         Unit var5 = null;
         try {
           this.unlink(44);
           if (obfuscationGuard <= 31) {
-            var4 = (kl) null;
-            SphinxActionRequest.a((IndexedSprite[]) null, (kl) null, 4, (int[]) null, (kl) null);
+            var4 = (ResourceArchive) null;
+            SphinxActionRequest.a((IndexedSprite[]) null, (ResourceArchive) null, 4, (int[]) null, (ResourceArchive) null);
           }
           var5 = battlefield.getUnitAt(this.sphinxY, true, this.sphinxX);
           if (var5 == null) {

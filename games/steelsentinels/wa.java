@@ -46,7 +46,7 @@ final class wa extends cn {
         }
     }
 
-    final static void a(cm param0, int param1, cm param2) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
         java.awt.Canvas var3 = null;
         try {
           var3 = gl.a(false);
@@ -199,7 +199,7 @@ final class wa extends cn {
         return g.field_l;
     }
 
-    final static boolean a(byte param0, int param1, int param2, cm param3) {
+    final static boolean a(byte param0, int param1, int param2, ResourceArchive param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -211,7 +211,7 @@ final class wa extends cn {
           if (param0 != 30) {
             field_o = (String) null;
           }
-          var5 = param3.a(param2, (byte) 92, param1);
+          var5 = param3.getFile(param2, (byte) 92, param1);
           var4 = var5;
           if (var5 == null) {
             return false;

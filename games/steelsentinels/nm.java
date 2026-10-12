@@ -88,11 +88,11 @@ final class nm extends ia {
             var4 = (CipherPacketBuffer) null;
             nm.a((CipherPacketBuffer) null, (byte) 97);
           }
-          if (this.field_x.a(param1, -1) == fa.field_d) {
+          if (this.field_x.a(param1, -1) == ArchiveProvider.field_d) {
             stackIn_4_0 = this.field_x.a(100, param1);
             return stackIn_4_0;
           }
-          if (this.a(param1, param0 ^ -101) != fa.field_d) {
+          if (this.a(param1, param0 ^ -101) != ArchiveProvider.field_d) {
             stackIn_9_0 = mg.field_lc;
             return stackIn_9_0;
           }
@@ -131,8 +131,8 @@ final class nm extends ia {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_x.a(param0, param1) == fa.field_d) {
-            stackIn_2_0 = fa.field_d;
+          if (this.field_x.a(param0, param1) == ArchiveProvider.field_d) {
+            stackIn_2_0 = ArchiveProvider.field_d;
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_u)) {
@@ -147,7 +147,7 @@ final class nm extends ia {
           if (this.field_r) {
             stackIn_13_0 = vf.field_b;
           } else {
-            stackIn_13_0 = fa.field_d;
+            stackIn_13_0 = ArchiveProvider.field_d;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -190,8 +190,8 @@ final class nm extends ia {
         if (param6 <= 81) {
           field_n = (String[]) null;
         }
-        if (jk.field_i != null) {
-          jk.field_i.a(param2, param4, param0, (byte) 27, -ed.field_i + param0, param4);
+        if (IntKeyLookup.field_i != null) {
+          IntKeyLookup.field_i.a(param2, param4, param0, (byte) 27, -ed.field_i + param0, param4);
         }
     }
 

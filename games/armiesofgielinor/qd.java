@@ -100,7 +100,7 @@ final class qd extends tj implements nq, he {
           }
           if (param2) {
             var4 = (uv) null;
-            qd.a((kl) null, (byte) 120, (uv) null, -19);
+            qd.a((ResourceArchive) null, (byte) 120, (uv) null, -19);
           }
           if (!Battlefield.a(param0, (byte) -26, param1)) {
             return true;
@@ -161,7 +161,7 @@ final class qd extends tj implements nq, he {
         }
     }
 
-    final static void a(kl param0, byte param1, uv param2, int param3) {
+    final static void a(ResourceArchive param0, byte param1, uv param2, int param3) {
         try {
           fw.field_C = tp.b(-74) * param3 / 1000;
           DualNodeDeque.a((byte) -124, param0);

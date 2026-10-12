@@ -32,7 +32,7 @@ final class ah extends SceneWidget {
         field_Sb = null;
     }
 
-    final static void a(int param0, cm param1) {
+    final static void a(int param0, ResourceArchive param1) {
         RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -43,7 +43,7 @@ final class ah extends SceneWidget {
           var2 = new RgbSprite(param1.a("", -742, "final_frame.jpg"), (java.awt.Component) ((Object) sl.field_n));
           var3 = var2.field_A;
           var4 = var2.field_F;
-          jl.a(false);
+          ArchiveIndex.a(false);
           dj.field_c = new RgbSprite(var3, 3 * var4 / 4);
           dj.field_c.d();
           var2.f(0, 0);
@@ -105,8 +105,8 @@ final class ah extends SceneWidget {
     }
 
     final static void a(boolean param0, int param1) {
-        cm var3;
-        cm var3Lifetime1;
+        ResourceArchive var3;
+        ResourceArchive var3Lifetime1;
         if (SentinelCommand.field_t <= 0) {
           if (bd.field_c > 0) {
             if (vb.field_c) {
@@ -136,8 +136,8 @@ final class ah extends SceneWidget {
               if (param1 <= -25) {
                 return;
               }
-              var3 = (cm) null;
-              ah.a(87, (cm) null);
+              var3 = (ResourceArchive) null;
+              ah.a(87, (ResourceArchive) null);
               return;
             }
             if (vb.field_c) {
@@ -149,8 +149,8 @@ final class ah extends SceneWidget {
         if (param1 <= -25) {
           return;
         }
-        var3Lifetime1 = (cm) null;
-        ah.a(87, (cm) null);
+        var3Lifetime1 = (ResourceArchive) null;
+        ah.a(87, (ResourceArchive) null);
     }
 
     static {

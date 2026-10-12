@@ -180,7 +180,7 @@ final class nl extends oa {
         return new RgbSprite[]{null, null, null, (RgbSprite) (var10), var9, (RgbSprite) (var11), null, null, null};
     }
 
-    final static void a(byte param0, cm param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         CipherPacketBuffer var8 = null;
         CipherPacketBuffer var10 = null;
         int var3 = 0;
@@ -323,7 +323,7 @@ final class nl extends oa {
         var6 = SteelSentinels.obfuscationControl;
         try {
           var10 = (CharSequence) ((Object) param0);
-          if (!fa.a(param2, var10)) {
+          if (!ArchiveProvider.a(param2, var10)) {
             stackIn_4_0 = en.field_a;
             return stackIn_4_0;
           }

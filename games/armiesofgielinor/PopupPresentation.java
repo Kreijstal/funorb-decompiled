@@ -17,7 +17,7 @@ final class PopupPresentation implements EventPresentation {
     private int field_m;
     static String field_p;
     private int field_n;
-    static kl field_j;
+    static ResourceArchive field_j;
     private int elapsedFrames;
     static String field_l;
     private int field_r;

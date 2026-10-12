@@ -22,7 +22,7 @@ final class TeamRoster {
         int var1;
         boolean stackIn_4_0 = false;
         var1 = -85 / ((param0 + 50) / 45);
-        stackIn_4_0 = (MoveAttackRequest.field_z != null) && (kl.field_k == ov.field_g);
+        stackIn_4_0 = (MoveAttackRequest.field_z != null) && (ResourceArchive.field_k == ov.field_g);
         return stackIn_4_0;
     }
 

@@ -24,14 +24,14 @@ final class ds {
           ro.field_ub = ob.field_J;
           av.field_a = av.field_a + 1;
           AiPlanningStrategy.field_d = DiskCacheRequest.field_B;
-          ko.field_b = kl.field_i;
+          ko.field_b = ResourceArchive.field_i;
           lk.field_f = ku.field_I;
           var2 = 48 / ((36 - param0) / 56);
           ku.field_I = false;
-          DeployEvent.field_A = jm.field_k;
+          DeployEvent.field_A = ArchiveIndex.field_k;
           iu.field_t = mq.field_Xb;
           TeleportAction.field_z = BoundedFile.field_d;
-          jm.field_k = 0;
+          ArchiveIndex.field_k = 0;
           eq.field_l = EffectPresentation.field_g;
         }
     }

@@ -509,7 +509,7 @@ final class CampaignMenu {
         }
     }
 
-    final static void a(kl param0, int param1, int param2) {
+    final static void a(ResourceArchive param0, int param1, int param2) {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         RuntimeException stackIn_10_0 = null;

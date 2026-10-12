@@ -165,14 +165,14 @@ final class m {
             SoftwareRaster.g(var13 - var7 / 4, 3 + (param5 + param0), var7 / 2, var14);
             fk.field_d.a(var12, var13, -5 + param5, var14, -1);
             var14 = param4 > 6100 ? 1400960 : 4210752;
-            var12 = fi.field_z;
+            var12 = CachedArchiveProvider.field_z;
             var13 = var13 + param1 / 2;
           }
           if (oh.field_f >= param3 &&
             oh.field_f < param1 + param3 &&
             param5 <= pi.field_c &&
             pi.field_c < param0 + param5) {
-            var15 = 6100 < param4 ? fi.field_z : ej.field_C;
+            var15 = 6100 < param4 ? CachedArchiveProvider.field_z : ej.field_C;
             var16 = db.a(bf.field_zb, param2 - 7846, new String[]{Integer.toString(param4), var15});
             var17 = param3 + param1 / 2;
             var18 = param5 - 18;

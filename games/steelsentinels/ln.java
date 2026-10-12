@@ -104,10 +104,10 @@ final class ln {
         if (param0 > -53) {
           field_a = 61;
         }
-        return new ik(hl.d(87), jk.c((byte) 105));
+        return new ik(hl.d(87), IntKeyLookup.c((byte) 105));
     }
 
-    final static byte[] a(byte[] param0, byte param1) {
+    final static byte[] decompressContainer(byte[] encodedContainer, byte obfuscationGuard) {
         byte[] stackIn_9_0 = null;
         byte[] stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
@@ -127,8 +127,8 @@ final class ln {
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new PacketBuffer(param0);
-          if (param1 < 126) {
+          var9 = new PacketBuffer(encodedContainer);
+          if (obfuscationGuard < 126) {
             field_e = 55;
           }
           var3 = var9.readUnsignedByte((byte) -72);
@@ -155,7 +155,7 @@ final class ln {
                   wc.field_e.a(var9, var13, true);
                 }
               } else {
-                oi.a(var13, var5, param0, var4, 9);
+                oi.a(var13, var5, encodedContainer, var4, 9);
               }
               stackIn_23_0 = var6;
               return stackIn_23_0;
@@ -168,12 +168,12 @@ final class ln {
           var2 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_26_0 = var2;
           stackIn_26_1 = new StringBuilder().append("ln.B(");
-          if (param0 == null) {
+          if (encodedContainer == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw ci.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

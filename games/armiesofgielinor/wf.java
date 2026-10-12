@@ -593,7 +593,7 @@ abstract class wf extends iv {
                       wv.a(wm.field_a, 10, 256);
                     }
                   } else {
-                    wv.a(kl.field_d, 10, 256);
+                    wv.a(ResourceArchive.field_d, 10, 256);
                   }
                 } else {
                   wv.a(CampaignMenu.field_k, 10, 256);
@@ -637,7 +637,7 @@ abstract class wf extends iv {
         }
         if (f.field_E == 2) {
           if (null != nf.field_Nb &&
-            nf.field_Nb.a((byte) 82)) {
+            nf.field_Nb.ensureIndex((byte) 82)) {
             if (!nf.field_Nb.a((byte) -128, "")) {
               nf.field_Nb = null;
             } else {
@@ -691,7 +691,7 @@ abstract class wf extends iv {
         }
         boolean decompiledFrameRemainder0 = true;
         if (f.field_E == 11) {
-          if (RegionAnchor.field_o != null && (!RegionAnchor.field_o.a((byte) 82) ||
+          if (RegionAnchor.field_o != null && (!RegionAnchor.field_o.ensureIndex((byte) 82) ||
             !RegionAnchor.field_o.d(-27927))) {
             bn.a((byte) -24, 0.0f, ao.a(db.field_b, true, of.field_Jb, RegionAnchor.field_o));
             decompiledFrameRemainder0 = false;

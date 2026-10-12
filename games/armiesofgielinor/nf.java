@@ -9,7 +9,7 @@ final class nf extends je {
     static int field_Mb;
     je field_Ob;
     static String field_Pb;
-    static kl field_Nb;
+    static ResourceArchive field_Nb;
 
     private final void a(byte param0, int param1, int param2) {
         int var4;
@@ -56,7 +56,7 @@ final class nf extends je {
         if (param0 != 26136) {
           nf.l(77);
         }
-        return kl.field_a.currentPosition[0];
+        return ResourceArchive.field_a.currentPosition[0];
     }
 
     public static void k(int param0) {

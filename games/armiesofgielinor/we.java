@@ -8,7 +8,7 @@ final class we {
     static String field_h;
     static byte[] field_a;
     String field_b;
-    kl field_c;
+    ResourceArchive field_c;
     static je field_f;
     static String field_i;
     String field_e;

@@ -154,7 +154,7 @@ final class mg extends SceneWidget {
           var12 = "</col>";
           for (var13 = 0; var13 < this.field_dc; var13++) {
             if (0 < this.field_cc[var13]) {
-              param6[var13] = var11 + fa.a(this.field_cc[var13], 29448).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + ArchiveProvider.a(this.field_cc[var13], 29448).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (null != this.field_Vb[var13] ||
@@ -326,7 +326,7 @@ final class mg extends SceneWidget {
           return this.field_mc.a(25542, param1, param2);
         }
         if (this.field_mc == null &&
-          this == jk.field_i &&
+          this == IntKeyLookup.field_i &&
           var4 != 0) {
           ke.a(2);
           return true;

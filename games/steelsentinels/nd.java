@@ -8,7 +8,7 @@ final class nd {
         if (param0 != 56) {
           return 7;
         }
-        return (pm.field_Z << 2) + (sg.field_c << 4) + fi.field_y;
+        return (pm.field_Z << 2) + (sg.field_c << 4) + CachedArchiveProvider.field_y;
     }
 
     final static void a(boolean param0, int param1) {

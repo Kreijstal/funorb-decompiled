@@ -114,10 +114,10 @@ final class la {
         var11 = SteelSentinels.obfuscationControl;
         try {
           if (null != ta.field_d &&
-            ta.field_d.a(true) &&
+            ta.field_d.ensureIndex(true) &&
             ta.field_d.a("benefits", (byte) 90) &&
             fb.field_h != null &&
-            fb.field_h.a(true) &&
+            fb.field_h.ensureIndex(true) &&
             fb.field_h.a("benefits", (byte) 90)) {
             c.field_o = rl.a(ta.field_d, "benefits", "headline", false);
             wb.field_i = rl.a(ta.field_d, "benefits", "blurbpane", false);
@@ -144,7 +144,7 @@ final class la {
             nn.field_g.a(db.a(hg.field_a, -127, new String[]{vb.field_d}), var6, 40, 16777215, -1);
             wn.field_a.a(db.a(SceneWidget.field_Bb, -119, new String[]{vb.field_d}), var6, 60, 16777215, -1);
             nn.field_g.a(db.a(rn.field_z, -40, new String[]{rg.field_c}), var6, 110, 16777215, -1);
-            wn.field_a.a(db.a(jk.field_f, -25, new String[]{rg.field_c}), var6, 130, 16777215, -1);
+            wn.field_a.a(db.a(IntKeyLookup.field_f, -25, new String[]{rg.field_c}), var6, 130, 16777215, -1);
             nn.field_g.a(ol.field_Xb, var6, 180, 16777215, -1);
             wn.field_a.a(wn.field_c, var6, 200, 16777215, -1);
             uj.a(3, 0, 0, (byte) -45, var12.field_F, 1, var12, var12.field_A);
@@ -177,7 +177,7 @@ final class la {
             var3Lifetime1 = SoftwareRaster.field_c;
             var4 = SoftwareRaster.field_j;
             SoftwareRaster.b(ti.field_n);
-            var14 = db.a(CombatWorld.field_x, -69, new String[]{cm.field_m[wc.field_j]});
+            var14 = db.a(CombatWorld.field_x, -69, new String[]{ResourceArchive.field_m[wc.field_j]});
             var6Lifetime1 = nn.field_g.a(var14, pa.field_b);
             var7Lifetime1 = nn.field_g.a(var14, pa.field_b, nn.field_g.field_G + nn.field_g.field_F);
             var8 = sg.field_e + (-var6Lifetime1 + pa.field_b) / 2;
@@ -229,11 +229,11 @@ final class la {
             uj.a(3, 0, 0, (byte) -119, var10.field_B, 1, var10, var10.field_z);
             hl.field_r.d();
             var10.a(0, 0);
-            fa.field_e = new RgbSprite(640, 480);
-            fa.field_e.d();
+            ArchiveProvider.field_e = new RgbSprite(640, 480);
+            ArchiveProvider.field_e.d();
             hl.field_r.d((hl.field_r.field_z >> 1) + vl.field_t, (hl.field_r.field_B >> 1) + ej.field_y, be.field_e, 4096);
             hl.field_r = null;
-            fa.field_e.f();
+            ArchiveProvider.field_e.f();
             SoftwareRaster.a(var28, var3Lifetime1, var4);
             SoftwareRaster.a(ti.field_n);
           }
@@ -283,8 +283,8 @@ final class la {
             wb.field_i.a(0, 0);
           }
           jf.field_kb.a(0, 0);
-          if (null != fa.field_e) {
-            fa.field_e.a(0, 0);
+          if (null != ArchiveProvider.field_e) {
+            ArchiveProvider.field_e.a(0, 0);
           }
           if (null != ba.field_e &&
             null != bc.field_ub) {

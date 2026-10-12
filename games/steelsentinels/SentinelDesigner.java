@@ -181,7 +181,7 @@ final class SentinelDesigner {
               lb.field_gc == 1) {
               boolean decompiledFrameRemainder1 = true;
               boolean decompiledFrameCompleted2 = true;
-              if (jl.field_p == 0 &&
+              if (ArchiveIndex.field_p == 0 &&
                 !ni.b(47)) {
                 if (128 > sn.field_q) {
                   mm.field_g.writeCipheredOpcode(66, (byte) -117);
@@ -220,13 +220,13 @@ final class SentinelDesigner {
                   }
                 }
               }
-              if (jl.field_p >= 0) {
+              if (ArchiveIndex.field_p >= 0) {
                 CombatWorld.c(-2483, 95);
                 GameApplet.field_l = true;
                 kf.field_s = true;
                 sn.field_q = -1;
                 lb.field_gc = 0;
-                jl.field_p = -1;
+                ArchiveIndex.field_p = -1;
                 ln.field_c = null;
                 km.field_a = null;
               }
@@ -720,7 +720,7 @@ final class SentinelDesigner {
             return stackIn_69_0;
           }
           if (this.field_c == 19) {
-            if (fa.field_c == uc.field_e[this.field_c]) {
+            if (ArchiveProvider.field_c == uc.field_e[this.field_c]) {
               if (param1 >= 0 &&
                 param1 < 10) {
                 stackIn_95_0 = 30;
@@ -1499,7 +1499,7 @@ final class SentinelDesigner {
                 stackIn_112_0 = 0;
                 return stackIn_112_0;
               }
-              stackIn_117_0 = (fa.field_c != uc.field_e[this.field_c]) ? 20 : 30;
+              stackIn_117_0 = (ArchiveProvider.field_c != uc.field_e[this.field_c]) ? 20 : 30;
               var5 = stackIn_117_0;
               if (~var2_int == ~(var5 - 1)) {
                 stackIn_121_0 = -1 + uc.field_e[this.field_c].length;
@@ -4671,7 +4671,7 @@ final class SentinelDesigner {
               }
               if (this.field_c == 19 &&
                 19 == this.field_c) {
-                stackIn_99_0 = (uc.field_e[this.field_c] != fa.field_c) ? 20 : 30;
+                stackIn_99_0 = (uc.field_e[this.field_c] != ArchiveProvider.field_c) ? 20 : 30;
                 var4 = stackIn_99_0;
                 if (var2_int >= 0 &&
                   var2_int < -10 + var4) {
@@ -4788,7 +4788,7 @@ final class SentinelDesigner {
             uc.field_e[this.field_c][var2_int] != -1) {
             if (this.field_c == 19 &&
               0 <= var3) {
-              stackIn_45_0 = (uc.field_e[this.field_c] != fa.field_c) ? 19 : 29;
+              stackIn_45_0 = (uc.field_e[this.field_c] != ArchiveProvider.field_c) ? 19 : 29;
               return stackIn_45_0;
             }
             if (this.field_c == 20) {
@@ -5106,7 +5106,7 @@ final class SentinelDesigner {
             }
             if (this.field_c == 19) {
               stackIn_67_0 = this.g(126, param0);
-              if (uc.field_e[this.field_c] != fa.field_c) {
+              if (uc.field_e[this.field_c] != ArchiveProvider.field_c) {
                 stackIn_68_1 = 260;
               } else {
                 stackIn_68_1 = 180;
@@ -5994,12 +5994,12 @@ final class SentinelDesigner {
           if (this.field_c == 21) {
             if (!tm.field_h &&
               tm.field_d != null &&
-              tm.field_d.a(true) &&
+              tm.field_d.ensureIndex(true) &&
               tm.field_d.a("members_expansion_screen", (byte) 90) &&
               tm.field_d.a("arialish12", (byte) 90) &&
               tm.field_d.a("pump32", (byte) 90) &&
               ej.field_t != null &&
-              ej.field_t.a(true) &&
+              ej.field_t.ensureIndex(true) &&
               ej.field_t.a("arialish12", (byte) 90) &&
               ej.field_t.a("pump32", (byte) 90)) {
               tm.field_h = true;
@@ -6043,7 +6043,7 @@ final class SentinelDesigner {
               SoftwareRaster.c(550, var8 + var5_int, 10, this.field_k + 450 - (var8 + var5_int), var7, 192);
             }
             SoftwareRaster.c();
-            fa.field_b.a((-fa.field_b.field_z + 640) / 2, -this.field_h + 15);
+            ArchiveProvider.field_b.a((-ArchiveProvider.field_b.field_z + 640) / 2, -this.field_h + 15);
             if (!ni.b(param0 + 98) &&
               NodeDeque.field_d >= 2) {
               var9 = 520;
@@ -6170,8 +6170,8 @@ final class SentinelDesigner {
           }
           if (this.field_c != 0) {
             var5_int = this.d((byte) 114);
-            fi.field_j.a(0, -5, 80, 7);
-            fi.field_j.a(0, 474 - var5_int, 80, 2 + var5_int / 8);
+            CachedArchiveProvider.field_j.a(0, -5, 80, 7);
+            CachedArchiveProvider.field_j.a(0, 474 - var5_int, 80, 2 + var5_int / 8);
             si.c(103);
             if (var3 != 0 ||
               this.field_c == 7 &&
@@ -6322,7 +6322,7 @@ final class SentinelDesigner {
                                 break regionExit1;
                               }
                             case 19:
-                              if (uc.field_e[this.field_c] != fa.field_c) {
+                              if (uc.field_e[this.field_c] != ArchiveProvider.field_c) {
                                 ui.field_U.a(ke.a(42, cc.field_ic[0]), 180, 98, 1021128, -1);
                                 ui.field_U.a(ke.a(42, cc.field_ic[1]), 460, 98, 1021128, -1);
                                 var5_int = 0;
@@ -6614,10 +6614,10 @@ final class SentinelDesigner {
           var9 = (-var8 + 480) / 2;
           var10 = ak.a(ln.field_c, var9, km.field_a, 300, 170, -2, var8, 1071146, el.field_Vb, true);
           if (0 <= var10 &&
-            jl.field_p != var10) {
+            ArchiveIndex.field_p != var10) {
             CombatWorld.c(-2483, 97);
           }
-          jl.field_p = var10;
+          ArchiveIndex.field_p = var10;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -7730,7 +7730,7 @@ final class SentinelDesigner {
               return stackIn_95_0;
             }
             if (this.field_c == 19) {
-              stackIn_103_0 = (uc.field_e[this.field_c] == fa.field_c) ? 30 : 20;
+              stackIn_103_0 = (uc.field_e[this.field_c] == ArchiveProvider.field_c) ? 30 : 20;
               var4 = stackIn_103_0;
               if (var2_int >= 10 &&
                 var2_int < var4) {

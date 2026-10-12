@@ -6,7 +6,7 @@ final class rd {
     static int field_b;
     static String field_c;
 
-    final static IndexedSprite[] a(boolean param0, cm param1, int param2, int param3) {
+    final static IndexedSprite[] a(boolean param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         IndexedSprite[] stackIn_6_0 = null;

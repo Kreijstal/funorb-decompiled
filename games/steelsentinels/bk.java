@@ -305,7 +305,7 @@ final class bk extends lh {
         this.field_Y = new RgbSprite(this.field_E >> 1, this.field_E);
     }
 
-    final static void a(cm param0, byte param1, BitmapFont param2) {
+    final static void a(ResourceArchive param0, byte param1, BitmapFont param2) {
         int var6 = 0;
         int var7 = 0;
         int[] var16 = null;
@@ -318,10 +318,10 @@ final class bk extends lh {
           sj.a("QC1", -29, (Throwable) null);
           return;
         }
-        param0.field_d = 0;
-        param0.field_f = false;
+        param0.fileRetentionMode = 0;
+        param0.discardPackedGroups = false;
         cd.field_e = new co(var3_int, param0, param0);
-        jl.field_w = new oe(var3_int, param0, param0, new kb());
+        ArchiveIndex.field_w = new oe(var3_int, param0, param0, new kb());
         mn var5 = NodeDeque.d(0);
         if (var5 == null) {
           sj.a("QC2", -49, (Throwable) null);

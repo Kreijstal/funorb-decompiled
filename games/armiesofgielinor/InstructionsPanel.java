@@ -1314,7 +1314,7 @@ final class InstructionsPanel {
 
     final static void e(int param0) {
         int var2 = 122 % ((param0 + 31) / 56);
-        bj var1 = (bj) (jm.field_o.first((byte) 126));
+        bj var1 = (bj) (ArchiveIndex.field_o.first((byte) 126));
         if (var1 == null) {
           dj.a((byte) -128);
           return;
@@ -1479,9 +1479,9 @@ final class InstructionsPanel {
           var7 = param2 >> 1 ^ param2;
           for (var10 = 0; var10 < 4; var10++) {
             var9 = -64 + ((param2 & 3) + 20);
-            var8 = -44 + ((7 & var7) + bm.field_y[var10][0] + 40);
+            var8 = -44 + ((7 & var7) + CachedArchiveProvider.field_y[var10][0] + 40);
             if (var10 != 0) {
-              var9 = var9 + bm.field_y[var10][1];
+              var9 = var9 + CachedArchiveProvider.field_y[var10][1];
             }
             if (param3) {
               var8 = var8 >> 1;
@@ -2464,7 +2464,7 @@ final class InstructionsPanel {
               var11 = (CharSequence) ((Object) mv.field_d);
               IntPair.field_p = k.a(var11, false);
               vt.field_n = mg.field_e.readUnsignedByte(0);
-              ov.field_g = kl.field_k;
+              ov.field_g = ResourceArchive.field_k;
               if (CampaignRewardPreview.field_g.a((byte) 50) != pt.field_db) {
                 if (CampaignRewardPreview.field_g.a((byte) -11) == fl.field_u) {
                   ps.field_y.a(param0 - 84, CombatEvent.d((byte) -120));

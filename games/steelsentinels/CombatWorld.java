@@ -3244,7 +3244,7 @@ final class CombatWorld {
         try {
           if (qj.field_q != null &&
             qj.field_q[param1] != null) {
-            fl.a((byte) 28, qj.field_q[param1], cm.field_e[param1]);
+            fl.a((byte) 28, qj.field_q[param1], ResourceArchive.field_e[param1]);
           }
           if (param0 != -2483) {
             CombatWorld.a((String) null, (String) null, (String) null, -92);

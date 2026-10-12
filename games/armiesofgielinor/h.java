@@ -5,7 +5,7 @@ final class h {
     static String[] field_e;
     static je field_d;
     int field_c;
-    static kl field_g;
+    static ResourceArchive field_g;
     static String field_b;
     static String field_h;
     static String field_f;

@@ -408,7 +408,7 @@ final class cb implements Runnable {
               var29 = un.field_h[3][var6Lifetime2];
               if (var4_int != 0 &&
                 0 != var29.field_Eb) {
-                fi.field_l = var6Lifetime2;
+                CachedArchiveProvider.field_l = var6Lifetime2;
               }
               if (var29.field_K &&
                 var6Lifetime2 > 0) {
@@ -423,7 +423,7 @@ final class cb implements Runnable {
                 }
               }
               stackIn_156_0 = var29;
-              stackIn_157_1 = (fi.field_l == var6Lifetime2);
+              stackIn_157_1 = (CachedArchiveProvider.field_l == var6Lifetime2);
               stackIn_156_0.field_G = stackIn_157_1;
               stackIn_159_0 = var29;
               stackIn_160_1 = (var4_int != 0);

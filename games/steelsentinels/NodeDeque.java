@@ -623,7 +623,7 @@ final class NodeDeque {
                   km.field_h[var24Lifetime1] = -2147483648;
                 }
                 if (param5) {
-                  cm.field_l[var24Lifetime1] = var28Lifetime1 >> cj.field_j;
+                  ResourceArchive.field_l[var24Lifetime1] = var28Lifetime1 >> cj.field_j;
                   sb.field_V[var24Lifetime1] = var29Lifetime1 >> cj.field_j;
                   jd.field_lb[var24Lifetime1] = var30;
                 }

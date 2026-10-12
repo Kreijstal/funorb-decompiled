@@ -206,7 +206,7 @@ final class hc {
             var4 = var3.occupant;
             if (var4 != null &&
               param0 == var4.ownerPlayer) {
-              kl.field_a.a((byte) 53, var2_int);
+              ResourceArchive.field_a.a((byte) 53, var2_int);
               return;
             }
           }

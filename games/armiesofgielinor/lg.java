@@ -10,7 +10,7 @@ final class lg {
     static String field_c;
     static int field_d;
 
-    final static void a(int param0, kl param1) {
+    final static void a(int param0, ResourceArchive param1) {
         RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;

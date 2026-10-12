@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IsaacRandom {
-    static cm field_k;
+    static ResourceArchive field_k;
     static boolean field_c;
     private int[] results;
     static String field_a;

@@ -33,7 +33,7 @@ final class dd {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param2);
-          if (!fa.a(true, var6)) {
+          if (!ArchiveProvider.a(true, var6)) {
             stackIn_2_0 = en.field_a;
             return stackIn_2_0;
           }
@@ -88,7 +88,7 @@ final class dd {
         field_l = null;
         if (param0 != 0) {
           String var2 = (String) null;
-          dd.a((cm) null, (cm) null, false, (String) null, (String) null);
+          dd.a((ResourceArchive) null, (ResourceArchive) null, false, (String) null, (String) null);
         }
     }
 
@@ -217,7 +217,7 @@ final class dd {
             this.field_j.a(2, 13, og.field_a);
           }
           if (param1.field_k == 2) {
-            if (fi.field_y == 0) {
+            if (CachedArchiveProvider.field_y == 0) {
               this.field_j.a(2, 12, fj.field_c);
             }
             this.field_j.a(2, 13, he.field_f);
@@ -520,7 +520,7 @@ final class dd {
         return lf.field_e[2047 & param1];
     }
 
-    final static ld a(cm param0, cm param1, boolean param2, String param3, String param4) {
+    final static ld a(ResourceArchive param0, ResourceArchive param1, boolean param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -539,8 +539,8 @@ final class dd {
           if (!param2) {
             dd.a(18);
           }
-          var5_int = param0.a(param3, 46);
-          var6 = param0.a(var5_int, -32759, param4);
+          var5_int = param0.getGroupId(param3, 46);
+          var6 = param0.getFileId(var5_int, -32759, param4);
           stackIn_3_0 = in.a(param1, 112, var6, param0, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

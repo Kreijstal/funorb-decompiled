@@ -7,7 +7,7 @@ final class op {
     static String field_g;
     static String field_d;
     static String field_e;
-    static kl field_b;
+    static ResourceArchive field_b;
     static int[] field_f;
 
     final static void a(int param0, String param1) {

@@ -11,7 +11,7 @@ final class il {
     static String field_g;
     static String field_d;
 
-    final static RgbSprite[] a(int param0, int param1, int param2, cm param3) {
+    final static RgbSprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RgbSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -66,8 +66,8 @@ final class il {
           b.a(param2, (byte) -96);
         }
         if (param1 == 2 &&
-          param0 != fi.field_y) {
-          fi.field_y = param0;
+          param0 != CachedArchiveProvider.field_y) {
+          CachedArchiveProvider.field_y = param0;
           cn.field_l = true;
           b.a(param2, (byte) -100);
         }
@@ -100,7 +100,7 @@ final class il {
         if (ch.field_O != null) {
           ch.field_O.m(106);
         }
-        String var1 = fi.e(35);
+        String var1 = CachedArchiveProvider.e(35);
         jd.field_kb = new pm(var1, (String) null, true, false, false);
         ag.field_p.a(ci.field_a, -114);
         ci.field_a.c(jd.field_kb, param0 - 22908735);

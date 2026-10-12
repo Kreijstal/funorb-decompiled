@@ -7,12 +7,12 @@ final class oh {
     static boolean field_e;
     static String field_d;
     static int[] field_h;
-    static cm field_a;
+    static ResourceArchive field_a;
     static int field_f;
     static String field_g;
 
     final static boolean a(int param0, boolean param1, int param2, int param3) {
-        cm var5;
+        ResourceArchive var5;
         if (param3 < 0) {
           return false;
         }
@@ -22,15 +22,15 @@ final class oh {
         if (param2 >= 1 &&
           ArticulatedPart.b(-14487, param3, param0) >= param2) {
           if (!param1) {
-            var5 = (cm) null;
-            oh.a(-54, (int[]) null, (String[]) null, (String[][]) null, (String[]) null, 77, (String[][]) null, -51, (RgbSprite[][]) null, (RgbSprite[][]) null, 31, (String[]) null, (byte[]) null, (byte[]) null, (cm) null);
+            var5 = (ResourceArchive) null;
+            oh.a(-54, (int[]) null, (String[]) null, (String[][]) null, (String[]) null, 77, (String[][]) null, -51, (RgbSprite[][]) null, (RgbSprite[][]) null, 31, (String[]) null, (byte[]) null, (byte[]) null, (ResourceArchive) null);
           }
           return true;
         }
         return false;
     }
 
-    final static void a(int param0, int[] param1, String[] param2, String[][] param3, String[] param4, int param5, String[][] param6, int param7, RgbSprite[][] param8, RgbSprite[][] param9, int param10, String[] param11, byte[] param12, byte[] param13, cm param14) {
+    final static void a(int param0, int[] param1, String[] param2, String[][] param3, String[] param4, int param5, String[][] param6, int param7, RgbSprite[][] param8, RgbSprite[][] param9, int param10, String[] param11, byte[] param12, byte[] param13, ResourceArchive param14) {
         qh[] array$0 = null;
         qh[] array$1 = null;
         qh[] array$2 = null;
@@ -109,7 +109,7 @@ final class oh {
           fl.field_c = new SceneWidget(0L, (SceneWidget) null);
           PacketBuffer.field_o = new SceneWidget(0L, sj.field_J, uj.field_g);
           uj.field_j = new SceneWidget((long)param5, kb.field_b, sf.field_l);
-          mj.field_Sb = new kg(0L, new SceneWidget(0L, (SceneWidget) null), jk.field_h, NodeHashTable.field_j);
+          mj.field_Sb = new kg(0L, new SceneWidget(0L, (SceneWidget) null), IntKeyLookup.field_h, NodeHashTable.field_j);
           fl.field_c.a(PacketBuffer.field_o, 119);
           if (rm.field_p) {
             fl.field_c.a(uj.field_j, 122);
@@ -131,7 +131,7 @@ final class oh {
           pe.field_v = new SceneWidget(0L, im.field_f, ij.field_Q);
           ql.field_Vb = new SceneWidget(0L, im.field_f, le.field_B);
           cf.field_w = new SceneWidget(0L, kb.field_b, bf.field_Bb);
-          rn.field_y = new kg(0L, new SceneWidget(0L, (SceneWidget) null), jk.field_h, NodeHashTable.field_j);
+          rn.field_y = new kg(0L, new SceneWidget(0L, (SceneWidget) null), IntKeyLookup.field_h, NodeHashTable.field_j);
           qm.field_b = new SceneWidget(0L, rm.field_j, fc.field_f.toUpperCase());
           qm.field_b.field_T = rm.field_p;
           stackIn_5_0 = null;
@@ -171,7 +171,7 @@ final class oh {
           fl.field_b = new SceneWidget(0L, an.field_a);
           fl.field_b.a(sj.field_z, 122);
           fl.field_b.a(pm.field_gb, 122);
-          Projectile.field_J = new SceneWidget(0L, jk.field_h);
+          Projectile.field_J = new SceneWidget(0L, IntKeyLookup.field_h);
           Projectile.field_J.b(bd.field_f, param5 ^ 6402);
           var16 = Projectile.field_J;
           Projectile.field_J.field_Fb = 1;
@@ -181,7 +181,7 @@ final class oh {
           uj.field_e.field_Kb = 1;
           gl.field_u = new SceneWidget(0L, sj.field_J, uj.field_g);
           ei.field_p = new SceneWidget(0L, kb.field_b, sf.field_l);
-          gl.field_t = new kg(0L, new SceneWidget(0L, (SceneWidget) null), jk.field_h, NodeHashTable.field_j);
+          gl.field_t = new kg(0L, new SceneWidget(0L, (SceneWidget) null), IntKeyLookup.field_h, NodeHashTable.field_j);
           m.field_i.a(uj.field_e, 120);
           m.field_i.a(gl.field_u, 127);
           if (rm.field_p) {
@@ -383,12 +383,12 @@ final class oh {
         field_c = null;
         field_d = null;
         if (param0 != 1) {
-          cm var2 = (cm) null;
-          oh.a((int[]) null, false, (cm) null, (IndexedSprite[]) null, (cm) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          oh.a((int[]) null, false, (ResourceArchive) null, (IndexedSprite[]) null, (ResourceArchive) null);
         }
     }
 
-    final static void a(int[] param0, boolean param1, cm param2, IndexedSprite[] param3, cm param4) {
+    final static void a(int[] param0, boolean param1, ResourceArchive param2, IndexedSprite[] param3, ResourceArchive param4) {
         RgbSprite[] dupTemp$0 = null;
         RgbSprite[] dupTemp$1 = null;
         RgbSprite[] dupTemp$2 = null;
@@ -576,11 +576,11 @@ final class oh {
           gd.field_wb.field_ob = 1;
           gd.field_wb.field_Qb = 1;
           gd.field_wb.field_ab = 1;
-          fa.field_f = new SceneWidget(0L, gd.field_wb);
+          ArchiveProvider.field_f = new SceneWidget(0L, gd.field_wb);
           co.field_c = new SceneWidget(0L, gd.field_wb);
           gm.field_c = new SceneWidget(0L, rm.field_j);
           ei.field_o = new SceneWidget(0L, gd.field_wb);
-          jl.field_s = new SceneWidget(0L, gd.field_wb);
+          ArchiveIndex.field_s = new SceneWidget(0L, gd.field_wb);
           bf.field_Ab = new SceneWidget(0L, gd.field_wb);
           gd.field_wb.field_I = ei.a(0, cf.a("smallbutton", "lobby", (byte) -39, param2));
           gd.field_wb.field_Ab = ei.a(0, cf.a("smallbutton_mouseover", "lobby", (byte) -72, param2));
@@ -595,9 +595,9 @@ final class oh {
           rm.field_j.field_Ab = ei.a(0, cf.a("bigbutton_mouseover", "lobby", (byte) -23, param2));
           rm.field_j.field_mb = ei.a(0, cf.a("bigbutton_mouseheld", "lobby", (byte) -66, param2));
           rm.field_j.field_H = ei.a(0, cf.a("bigbutton_disabled", "lobby", (byte) -71, param2));
-          fa.field_f.field_I = ei.a(0, cf.a("greenbutton", "lobby", (byte) -84, param2));
-          fa.field_f.field_Ab = ei.a(0, cf.a("greenbutton_mouseover", "lobby", (byte) -50, param2));
-          fa.field_f.field_mb = ei.a(0, cf.a("greenbutton_mouseheld", "lobby", (byte) -68, param2));
+          ArchiveProvider.field_f.field_I = ei.a(0, cf.a("greenbutton", "lobby", (byte) -84, param2));
+          ArchiveProvider.field_f.field_Ab = ei.a(0, cf.a("greenbutton_mouseover", "lobby", (byte) -50, param2));
+          ArchiveProvider.field_f.field_mb = ei.a(0, cf.a("greenbutton_mouseheld", "lobby", (byte) -68, param2));
           co.field_c.field_I = ei.a(0, cf.a("redbutton", "lobby", (byte) -105, param2));
           co.field_c.field_Ab = ei.a(0, cf.a("redbutton_mouseover", "lobby", (byte) -24, param2));
           co.field_c.field_mb = ei.a(0, cf.a("redbutton_mouseheld", "lobby", (byte) -99, param2));
@@ -616,11 +616,11 @@ final class oh {
           dupTemp$2 = ei.a(0, cf.a("chatbutton_active", "lobby", (byte) -107, param2));
           ei.field_o.field_bb = dupTemp$2;
           ei.field_o.field_mb = dupTemp$2;
-          jl.field_s.field_I = ei.a(0, cf.a("chatfilterbutton", "lobby", (byte) -101, param2));
-          jl.field_s.field_Ab = ei.a(0, cf.a("chatfilterbutton_mouseover", "lobby", (byte) -61, param2));
+          ArchiveIndex.field_s.field_I = ei.a(0, cf.a("chatfilterbutton", "lobby", (byte) -101, param2));
+          ArchiveIndex.field_s.field_Ab = ei.a(0, cf.a("chatfilterbutton_mouseover", "lobby", (byte) -61, param2));
           dupTemp$3 = ei.a(0, cf.a("chatfilterbutton_active", "lobby", (byte) -64, param2));
-          jl.field_s.field_bb = dupTemp$3;
-          jl.field_s.field_mb = dupTemp$3;
+          ArchiveIndex.field_s.field_bb = dupTemp$3;
+          ArchiveIndex.field_s.field_mb = dupTemp$3;
           var17 = cf.a("checkbox", "lobby", (byte) -92, param2);
           ol.field_Tb = new id(0L, var17[1], var17[0], 1, ParticleEffect.field_K, (String) null);
           m.field_d = new SceneWidget(0L, (SceneWidget) null);
@@ -638,13 +638,13 @@ final class oh {
           ue.field_f.field_db = rl.a(param2, "lobby", "upbutton_mouseover", false);
           ue.field_f.field_fb = rl.a(param2, "lobby", "upbutton_mouseheld", false);
           ue.field_f.field_Ob = rl.a(param2, "lobby", "upbutton_disabled", false);
-          cm.field_h = new SceneWidget(0L, (SceneWidget) null);
-          cm.field_h.field_Pb = rl.a(param2, "lobby", "downbutton", param1);
-          cm.field_h.field_db = rl.a(param2, "lobby", "downbutton_mouseover", false);
-          cm.field_h.field_fb = rl.a(param2, "lobby", "downbutton_mouseheld", false);
-          cm.field_h.field_Ob = rl.a(param2, "lobby", "downbutton_disabled", false);
-          NodeHashTable.field_j = new lb(0L, ue.field_f, cm.field_h, m.field_d, mj.field_Zb);
-          l.field_e = new ql(0L, (SceneWidget) null, jk.field_h, NodeHashTable.field_j, gd.field_wb, (String) null, (String) null);
+          ResourceArchive.field_h = new SceneWidget(0L, (SceneWidget) null);
+          ResourceArchive.field_h.field_Pb = rl.a(param2, "lobby", "downbutton", param1);
+          ResourceArchive.field_h.field_db = rl.a(param2, "lobby", "downbutton_mouseover", false);
+          ResourceArchive.field_h.field_fb = rl.a(param2, "lobby", "downbutton_mouseheld", false);
+          ResourceArchive.field_h.field_Ob = rl.a(param2, "lobby", "downbutton_disabled", false);
+          NodeHashTable.field_j = new lb(0L, ue.field_f, ResourceArchive.field_h, m.field_d, mj.field_Zb);
+          l.field_e = new ql(0L, (SceneWidget) null, IntKeyLookup.field_h, NodeHashTable.field_j, gd.field_wb, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -696,7 +696,7 @@ final class oh {
               hn.a("updatelinks", (byte) -41, param0, new Object[]{"gamelist", var3 + "togamelist.ws"});
               hn.a("updatelinks", (byte) -41, param0, new Object[]{"serverlist", var3 + "toserverlist.ws"});
               if (param1 <= 115) {
-                field_a = (cm) null;
+                field_a = (ResourceArchive) null;
               }
               hn.a("updatelinks", (byte) -41, param0, new Object[]{"options", var3 + "options.ws"});
               hn.a("updatelinks", (byte) -41, param0, new Object[]{"terms", var3 + "terms.ws"});

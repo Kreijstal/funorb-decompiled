@@ -262,7 +262,7 @@ final class TurnEffectEvent extends GameEvent {
           jl.field_b = UpkeepEvent.field_z;
           UpkeepEvent.field_z.field_T = (8355711 & uf.field_i.field_T >> 1) + (ni.field_d - ((ni.field_d & 16711422) >> 1));
           UpkeepEvent.field_z.field_wb = -((16711423 & ni.field_d) >> 1) + ni.field_d + ((uf.field_i.field_wb & 16711423) >> 1);
-          ew.field_d = rb.field_b;
+          ArchiveProvider.field_d = rb.field_b;
           eu.field_g = new je(0L, param2);
           sb.field_i = new je(0L, param4);
           f.field_C = new je(0L, (je) null);
@@ -270,7 +270,7 @@ final class TurnEffectEvent extends GameEvent {
           UpkeepEvent.field_z = new je(0L, param1);
           UpkeepEvent.field_z.field_Z = IntrusiveNode.field_e;
           SummonEvent.field_F.a(UpkeepEvent.field_z, 102);
-          rb.field_b = new je(0L, ew.field_d);
+          rb.field_b = new je(0L, ArchiveProvider.field_d);
           SummonEvent.field_F.a(rb.field_b, 66);
           qf.field_e = new je(0L, uf.field_i, nk.field_t);
           ed.field_e = new je(0L, uf.field_i);
@@ -337,7 +337,7 @@ final class TurnEffectEvent extends GameEvent {
         }
     }
 
-    final static d a(String param0, kl param1, kl param2, String param3, int param4) {
+    final static d a(String param0, ResourceArchive param1, ResourceArchive param2, String param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -356,8 +356,8 @@ final class TurnEffectEvent extends GameEvent {
           if (param4 != -2088) {
             TurnEffectEvent.a(false);
           }
-          var5_int = param2.a(param3, param4 ^ -2139);
-          var6 = param2.a((byte) 120, var5_int, param0);
+          var5_int = param2.getGroupId(param3, param4 ^ -2139);
+          var6 = param2.getFileId((byte) 120, var5_int, param0);
           stackIn_4_0 = sp.a(param2, var6, 0, var5_int, param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

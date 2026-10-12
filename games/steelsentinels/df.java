@@ -40,7 +40,7 @@ final class df extends fe {
               dd.field_e = false;
               var3_int = 1;
             }
-            kc.a(sa.b((byte) 118), fi.a(true), var3_int != 0, 300, d.field_S);
+            kc.a(sa.b((byte) 118), CachedArchiveProvider.a(true), var3_int != 0, 300, d.field_S);
           } else {
             if (!km.a(-124)) {
               SoftwareRaster.b();
@@ -50,7 +50,7 @@ final class df extends fe {
               if (0 != uj.field_d) {
                 en.a(param1, -28003);
               } else {
-                fa.a(false, (byte) 88, param2);
+                ArchiveProvider.a(false, (byte) 88, param2);
                 kg.a(0, 0, 28594, param1);
               }
             }

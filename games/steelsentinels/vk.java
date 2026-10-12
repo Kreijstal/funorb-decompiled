@@ -117,7 +117,7 @@ abstract class vk {
         var2 = SteelSentinels.obfuscationControl;
         try {
           fc.field_a.b();
-          cm.field_j.b();
+          ResourceArchive.field_j.b();
           la.field_b = la.field_b - 1;
           if (param0) {
             field_s = (int[]) null;

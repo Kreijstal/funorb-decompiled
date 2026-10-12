@@ -12,7 +12,7 @@ abstract class da {
     static String field_i;
     static int field_g;
 
-    final static boolean a(cm param0, cm param1, int param2, cm param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -23,11 +23,11 @@ abstract class da {
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.a(true) &&
+          if (param0.ensureIndex(true) &&
             param0.a("commonui", (byte) 90)) {
-            if (param3.a(true) &&
+            if (param3.ensureIndex(true) &&
               param3.a("commonui", (byte) 90)) {
-              if (param1.a(true) &&
+              if (param1.ensureIndex(true) &&
                 param1.a("button.gif", (byte) 90)) {
                 if (param2 == -1) {
                   return true;
@@ -99,7 +99,7 @@ abstract class da {
         return -1;
     }
 
-    final static void a(cm param0, int param1, int param2, wg param3) {
+    final static void a(ResourceArchive param0, int param1, int param2, wg param3) {
         try {
           if (param1 <= 67) {
             da.a(true, -102);
@@ -210,8 +210,8 @@ abstract class da {
         il var4 = null;
         int var5 = SteelSentinels.obfuscationControl;
         if (param0 != -1) {
-          cm var6 = (cm) null;
-          da.a((cm) null, (cm) null, -88, (cm) null);
+          ResourceArchive var6 = (ResourceArchive) null;
+          da.a((ResourceArchive) null, (ResourceArchive) null, -88, (ResourceArchive) null);
         }
         for (var3 = 0; var3 < this.field_h.length; var3++) {
           var4 = this.field_h[var3];

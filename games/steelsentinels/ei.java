@@ -134,7 +134,7 @@ final class ei extends ia {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!m.a(var4, (byte) 127)) {
-            stackIn_3_0 = fa.field_d;
+            stackIn_3_0 = ArchiveProvider.field_d;
             return stackIn_3_0;
           }
           if (param1 != -1) {
@@ -153,7 +153,7 @@ final class ei extends ia {
             }
           }
           if (!this.field_s) {
-            stackIn_18_0 = fa.field_d;
+            stackIn_18_0 = ArchiveProvider.field_d;
           } else {
             stackIn_18_0 = vf.field_b;
           }
@@ -200,7 +200,7 @@ final class ei extends ia {
           var2 = pm.field_Z;
         }
         if (param0 == 2) {
-          var2 = fi.field_y;
+          var2 = CachedArchiveProvider.field_y;
         }
         return var2;
     }

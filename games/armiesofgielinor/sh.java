@@ -15,7 +15,7 @@ final class sh {
     private int field_f;
     static int field_l;
     private ModelMesh field_e;
-    static kl field_j;
+    static ResourceArchive field_j;
     private int field_k;
     static int[] field_a;
     private int field_i;

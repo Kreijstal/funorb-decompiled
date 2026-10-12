@@ -70,7 +70,7 @@ final class CoatOfArms {
         field_d = null;
     }
 
-    final static void a(kl param0, kl param1, kl param2, int param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         AnimationSequence[] array$0 = null;
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -187,7 +187,7 @@ final class CoatOfArms {
           }
           MatchSetupPanel.a(-1, -1, this.parts, -1, false, this.colourIndices, -1, false, 0, false, 0, param0);
           no.field_P.b();
-          stackIn_5_0 = ew.a((byte) 107, ku.field_J);
+          stackIn_5_0 = ArchiveProvider.a((byte) 107, ku.field_J);
           return (RgbSprite) ((Object) stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -17,7 +17,7 @@ final class nm extends hn {
     private um field_p;
     private um field_q;
     private int[] field_t;
-    static kl field_s;
+    static ResourceArchive field_s;
     private int field_v;
     private int field_G;
     private um field_A;

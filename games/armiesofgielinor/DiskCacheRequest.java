@@ -14,7 +14,7 @@ final class DiskCacheRequest extends ResourceRequest {
     static int field_E;
     static tp field_K;
 
-    final static RgbSprite a(String param0, String param1, kl param2, boolean param3) {
+    final static RgbSprite a(String param0, String param1, ResourceArchive param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -28,11 +28,11 @@ final class DiskCacheRequest extends ResourceRequest {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.a(param1, 96);
+          var4_int = param2.getGroupId(param1, 96);
           if (param3) {
             field_G = (RgbSprite[]) null;
           }
-          var5 = param2.a((byte) -107, var4_int, param0);
+          var5 = param2.getFileId((byte) -107, var4_int, param0);
           stackIn_3_0 = PacketBuffer.a(-1, var4_int, param2, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

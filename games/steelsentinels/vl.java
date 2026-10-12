@@ -48,7 +48,7 @@ final class vl extends IntrusiveNode {
         field_x = null;
     }
 
-    final static ca a(cm param0, int param1, int param2) {
+    final static ca a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -82,9 +82,9 @@ final class vl extends IntrusiveNode {
         }
     }
 
-    final static void a(cm param0, cm param1, boolean param2, int param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, int param3) {
         try {
-          wn.a(jl.field_s, ei.field_o, ParticleEffect.field_K, NodeHashTable.field_j, param2, 127, nh.field_d, dj.field_b, CipherPacketBuffer.field_H, nc.field_n, SceneWidget.field_ib, bd.field_f);
+          wn.a(ArchiveIndex.field_s, ei.field_o, ParticleEffect.field_K, NodeHashTable.field_j, param2, 127, nh.field_d, dj.field_b, CipherPacketBuffer.field_H, nc.field_n, SceneWidget.field_ib, bd.field_f);
           dh.field_y = cf.a("chatfilter", "lobby", (byte) -62, param0);
           ec.field_e[2] = b.field_j;
           if (param3 >= -10) {
@@ -124,8 +124,8 @@ final class vl extends IntrusiveNode {
           hb.a(param7, 123, param3, SoftwareRaster.field_g, param2, param4, param0, param1, param5);
           return;
         }
-        cm var10 = (cm) null;
-        vl.a((cm) null, 23, -121);
+        ResourceArchive var10 = (ResourceArchive) null;
+        vl.a((ResourceArchive) null, 23, -121);
         if (param2 < param1) {
           if (param1 < param0) {
             hb.a(param4, 114, param7, SoftwareRaster.field_g, param0, param3, param1, param2, param5);

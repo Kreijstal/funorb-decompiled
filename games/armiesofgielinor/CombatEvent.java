@@ -173,7 +173,7 @@ final class CombatEvent extends GameEvent {
           return la.field_g;
         }
         int var1 = 90 % ((param0 + 67) / 44);
-        return (java.applet.Applet) ((Object) lr.field_a);
+        return (java.applet.Applet) ((Object) IntKeyLookup.field_a);
     }
 
     CombatEvent(int unseenUnitType, int attackerX, int attackerY, int targetDeltaX, int targetDeltaY, int attackerDamage, int defenderDamage, boolean attackerDies, boolean defenderDies, int attackerAnimationCount, int defenderAnimationCount, boolean attackerDeployed, boolean defenderDeployed, int battleId) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ew {
+abstract class ArchiveProvider {
     static String field_b;
     static ou field_e;
     static int[] field_a;
@@ -48,7 +48,7 @@ abstract class ew {
           var6 = var3 >> 2;
           if (param0 != 107) {
             var21 = (String) null;
-            ew.a((String) null, (byte) 84);
+            ArchiveProvider.a((String) null, (byte) 84);
           }
           var7 = new nj(var5, var6);
           var23 = var7.pixels;
@@ -105,7 +105,7 @@ abstract class ew {
         }
     }
 
-    abstract jm a(int param0);
+    abstract ArchiveIndex getIndex(int obfuscationGuard);
 
     public static void a(boolean param0) {
         field_c = null;
@@ -113,7 +113,7 @@ abstract class ew {
         field_a = null;
         if (param0) {
           RgbSprite var2 = (RgbSprite) null;
-          ew.a((byte) 24, (RgbSprite) null);
+          ArchiveProvider.a((byte) 24, (RgbSprite) null);
         }
         field_e = null;
         field_d = null;
@@ -180,9 +180,9 @@ abstract class ew {
         }
     }
 
-    abstract int b(int param0, int param1);
+    abstract int getGroupProgress(int obfuscationGuard, int groupId);
 
-    abstract byte[] a(int param0, int param1);
+    abstract byte[] getEncodedGroup(int groupId, int obfuscationGuard);
 
     static {
         field_b = "Start Game";

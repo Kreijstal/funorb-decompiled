@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fa {
+abstract class ArchiveProvider {
     static vd field_d;
     static SceneWidget field_f;
     static RgbSprite field_e;
@@ -9,7 +9,7 @@ abstract class fa {
     static RgbSprite field_b;
     static IndexedSprite[] field_a;
 
-    abstract jl b(byte param0);
+    abstract ArchiveIndex getIndex(byte obfuscationGuard);
 
     final static boolean a(boolean param0, CharSequence param1) {
         int var2_int = 0;
@@ -53,13 +53,13 @@ abstract class fa {
     final static String a(char param0, int param1) {
         if (param1 != 29448) {
           CharSequence var3 = (CharSequence) null;
-          fa.a(true, (CharSequence) null);
+          ArchiveProvider.a(true, (CharSequence) null);
           return String.valueOf(param0);
         }
         return String.valueOf(param0);
     }
 
-    abstract int a(boolean param0, int param1);
+    abstract int getGroupProgress(boolean obfuscationGuard, int groupId);
 
     final static boolean a(int param0) {
         if (param0 != 38) {
@@ -85,7 +85,7 @@ abstract class fa {
           qj.field_a[61] = 27;
           return;
         }
-        fa.a(-119);
+        ArchiveProvider.a(-119);
         qj.field_a[222] = 58;
         qj.field_a[192] = 28;
         qj.field_a[520] = 59;
@@ -95,7 +95,7 @@ abstract class fa {
         qj.field_a[61] = 27;
     }
 
-    abstract byte[] a(int param0, int param1);
+    abstract byte[] getEncodedGroup(int groupId, int obfuscationGuard);
 
     final static void a(boolean param0, byte param1, boolean param2) {
         if (param0) {

@@ -134,8 +134,8 @@ final class jr {
           var8 = -74 % ((55 - param1) / 32);
           var9 = 0;
           while (var9 < 4) {
-            var7 = (7 & param0) + param2 + (bm.field_y[var9][1] - 64);
-            var6 = -54 + (param4 + (bm.field_y[var9][0] + (var5_int & 15)));
+            var7 = (7 & param0) + param2 + (CachedArchiveProvider.field_y[var9][1] - 64);
+            var6 = -54 + (param4 + (CachedArchiveProvider.field_y[var9][0] + (var5_int & 15)));
             var10 = (param0 + param3 / (4 + (param0 & 3))) % 3;
             param0 = param0 >> 1;
             var5_int = var5_int >> 1;

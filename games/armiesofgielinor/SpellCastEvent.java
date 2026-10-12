@@ -53,9 +53,9 @@ final class SpellCastEvent extends GameEvent {
         int var10 = 0;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var1_int = bm.field_h - co.field_f;
+          var1_int = CachedArchiveProvider.field_h - co.field_f;
           co.field_f = bt.field_g - (var1_int >> 1);
-          bm.field_h = var1_int + co.field_f;
+          CachedArchiveProvider.field_h = var1_int + co.field_f;
           if (param0 != 15) {
             field_E = (ea) null;
           }
@@ -140,12 +140,12 @@ final class SpellCastEvent extends GameEvent {
           return eo.field_c;
         }
         if (null != nf.field_Nb) {
-          if (!nf.field_Nb.a((byte) 82)) {
+          if (!nf.field_Nb.ensureIndex((byte) 82)) {
             return db.field_b;
           }
           return of.field_Jb;
         }
-        if (!ps.field_u.a((byte) 82)) {
+        if (!ps.field_u.ensureIndex((byte) 82)) {
           return TileMetadata.field_i;
         }
         if (param0 != -15862) {
@@ -154,13 +154,13 @@ final class SpellCastEvent extends GameEvent {
         if (!ps.field_u.a(28979, "commonui")) {
           return Battlefield.field_nb + " - " + ps.field_u.a("commonui", (byte) -34) + "%";
         }
-        if (!CombatPresentation.field_M.a((byte) 82)) {
+        if (!CombatPresentation.field_M.ensureIndex((byte) 82)) {
           return is.field_f;
         }
         if (!CombatPresentation.field_M.a(28979, "commonui")) {
           return rf.field_a + " - " + CombatPresentation.field_M.a("commonui", (byte) 122) + "%";
         }
-        if (!h.field_g.a((byte) 82)) {
+        if (!h.field_g.ensureIndex((byte) 82)) {
           return cr.field_eb;
         }
         if (!h.field_g.d(param0 ^ 20707)) {

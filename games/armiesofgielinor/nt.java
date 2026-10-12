@@ -111,7 +111,7 @@ final class nt extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = kl.c(tf.field_l, -76, BufferedSocket.field_j);
+          var2_int = ResourceArchive.c(tf.field_l, -76, BufferedSocket.field_j);
           if (var2_int == 1) {
             param1 = "<img=0>" + param1;
           }

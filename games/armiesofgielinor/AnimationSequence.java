@@ -166,8 +166,8 @@ final class AnimationSequence {
         }
     }
 
-    private AnimationSequence(kl param0, int param1, String param2) {
-        this(param0, param1, param0.a((byte) 28, param1, param2));
+    private AnimationSequence(ResourceArchive param0, int param1, String param2) {
+        this(param0, param1, param0.getFileId((byte) 28, param1, param2));
     }
 
     final static void a(int param0, int param1) {
@@ -226,11 +226,11 @@ final class AnimationSequence {
         field_c = null;
     }
 
-    AnimationSequence(kl param0, String param1, String param2) {
-        this(param0, param0.a(param1, 122), param2);
+    AnimationSequence(ResourceArchive param0, String param1, String param2) {
+        this(param0, param0.getGroupId(param1, 122), param2);
     }
 
-    private AnimationSequence(kl param0, int param1, int param2) {
+    private AnimationSequence(ResourceArchive param0, int param1, int param2) {
         int var7 = 0;
         byte[] var4 = null;
         int var5 = 0;
@@ -248,7 +248,7 @@ final class AnimationSequence {
         this.loopStartFrame = -1;
         try {
           this.unlimitedLoops = true;
-          var11 = param0.a((byte) 113, param2, param1);
+          var11 = param0.getFile((byte) 113, param2, param1);
           var10 = var11;
           var9 = var10;
           var4 = var9;

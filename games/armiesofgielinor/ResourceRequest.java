@@ -5,7 +5,7 @@ abstract class ResourceRequest extends DualLinkedNode {
     boolean requestFlag;
     static String[] field_u;
     static String field_v;
-    static kl field_A;
+    static ResourceArchive field_A;
     static int field_y;
     volatile boolean pending;
     boolean field_w;

@@ -4,7 +4,7 @@
 final class vr {
     static int[] field_a;
 
-    final static void a(kl param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         RgbSprite[][] array$0 = null;
         int var4 = 0;
         RgbSprite[] array$1 = null;

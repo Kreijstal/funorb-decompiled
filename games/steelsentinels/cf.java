@@ -20,7 +20,7 @@ final class cf extends IntrusiveNode {
     static SceneWidget field_w;
     static String field_A;
 
-    final static RgbSprite[] a(String param0, String param1, byte param2, cm param3) {
+    final static RgbSprite[] a(String param0, String param1, byte param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -34,11 +34,11 @@ final class cf extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.a(param1, 79);
+          var4_int = param3.getGroupId(param1, 79);
           if (param2 >= -11) {
             cf.c((byte) 29);
           }
-          var5 = param3.a(var4_int, -32759, param0);
+          var5 = param3.getFileId(var4_int, -32759, param0);
           stackIn_3_0 = il.a(var5, 20178, var4_int, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

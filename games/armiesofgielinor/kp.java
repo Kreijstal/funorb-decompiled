@@ -95,7 +95,7 @@ final class kp implements kh {
         field_c = null;
     }
 
-    final static boolean a(boolean param0, int param1, kl param2, int param3) {
+    final static boolean a(boolean param0, int param1, ResourceArchive param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -107,7 +107,7 @@ final class kp implements kh {
           if (param0) {
             kp.a(81);
           }
-          var5 = param2.a((byte) 72, param3, param1);
+          var5 = param2.getFile((byte) 72, param3, param1);
           var4 = var5;
           if (var5 == null) {
             return false;

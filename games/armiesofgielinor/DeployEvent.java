@@ -202,7 +202,7 @@ final class DeployEvent extends GameEvent {
             th.field_a != 1) {
             TaggedMapData.field_g.field_Kb.field_Nb.field_X = ef.field_a;
             TaggedMapData.field_g.field_xb = false;
-            jm.a(TaggedMapData.field_g.field_Nb, -71);
+            ArchiveIndex.a(TaggedMapData.field_g.field_Nb, -71);
             return;
           }
           TaggedMapData.field_g.field_Kb.field_Nb.field_X = null;
@@ -263,7 +263,7 @@ final class DeployEvent extends GameEvent {
             if (0 != var6.field_yb) {
               ng.a(TaggedMapData.field_g.field_Kb, var6, (int[]) null, var6.field_Mb, -1, -110, -1, var6.field_Pb, 0L);
               var16 = tn.field_Z;
-              var13_ref_String = jm.field_u;
+              var13_ref_String = ArchiveIndex.field_u;
               var16.field_i.a(7, var13_ref_String, (byte) -100);
               var17 = tn.field_Z;
               var13 = iu.field_t;

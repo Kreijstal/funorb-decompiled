@@ -167,7 +167,7 @@ final class BufferedFile {
         return param0 ^ param1;
     }
 
-    final static nc a(kl param0, int param1, kl param2, byte param3, int param4) {
+    final static nc a(ResourceArchive param0, int param1, ResourceArchive param2, byte param3, int param4) {
         RuntimeException var5 = null;
         nc stackIn_2_0 = null;
         nc stackIn_7_0 = null;
@@ -185,7 +185,7 @@ final class BufferedFile {
           if (!kp.a(false, param1, param0, param4)) {
             return null;
           }
-          stackIn_7_0 = lq.a(param2.a((byte) 103, param4, param1), 0);
+          stackIn_7_0 = lq.a(param2.getFile((byte) 103, param4, param1), 0);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -402,12 +402,12 @@ final class BufferedFile {
         int var2;
         int var3;
         int var4;
-        kl var5;
+        ResourceArchive var5;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.readBufferLength = 0;
         if (obfuscationGuard != -42) {
-          var5 = (kl) null;
-          BufferedFile.a((kl) null, 70, (kl) null, (byte) -40, 15);
+          var5 = (ResourceArchive) null;
+          BufferedFile.a((ResourceArchive) null, 70, (ResourceArchive) null, (byte) -40, 15);
         }
         if (~this.filePosition != ~this.position) {
           this.file.seek(this.position, 110);

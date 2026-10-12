@@ -37,7 +37,7 @@ final class hb {
           boolean decompiledFrameRemainder0 = true;
           if (null != MoveAttackRequest.field_z) {
             if (param1 >= 0) {
-              decompiledFrameRemainder0 = (kl.field_k == ov.field_g);
+              decompiledFrameRemainder0 = (ResourceArchive.field_k == ov.field_g);
               if ((decompiledFrameRemainder0) && (0 == vl.outgoingPacket.position &&
                 (10000L + SummonEvent.field_G) < vi.b(-60))) {
                 vl.outgoingPacket.writeCipheredOpcode(32161, param1);
@@ -87,7 +87,7 @@ final class hb {
           boolean decompiledFrameRemainder0 = true;
           if (null != MoveAttackRequest.field_z) {
             if (param1 >= 0) {
-              decompiledFrameRemainder0 = (kl.field_k == ov.field_g);
+              decompiledFrameRemainder0 = (ResourceArchive.field_k == ov.field_g);
               if ((decompiledFrameRemainder0) && (0 == vl.outgoingPacket.position &&
                 (10000L + SummonEvent.field_G) < vi.b(-60))) {
                 vl.outgoingPacket.writeCipheredOpcode(32161, param1);

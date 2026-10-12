@@ -7,7 +7,7 @@ final class ep {
     private double field_d;
     private int field_g;
     private int field_m;
-    static kl field_b;
+    static ResourceArchive field_b;
     private int[] field_i;
     static String field_h;
     static int field_o;
@@ -445,7 +445,7 @@ final class ep {
         field_a = null;
     }
 
-    ep(kl param0) {
+    ep(ResourceArchive param0) {
         this.field_m = 50;
         this.field_i = new int[]{350, 350, 450, 450, 3500};
         this.field_q = 0;

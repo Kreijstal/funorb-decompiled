@@ -39,10 +39,10 @@ final class uk extends IntrusiveNode {
     private static byte[] field_B;
     private float[] field_D;
 
-    private final static boolean a(cm param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_t) {
-          var1 = param0.a(0, (byte) 71, 0);
+          var1 = param0.getFile(0, (byte) 71, 0);
           if (var1 == null) {
             return false;
           }
@@ -70,14 +70,14 @@ final class uk extends IntrusiveNode {
         field_z = null;
     }
 
-    final static uk a(cm param0, int param1, int param2) {
+    final static uk a(ResourceArchive param0, int param1, int param2) {
         try {
           uk var4_ref = null;
           if (!uk.a(param0)) {
             param0.a((byte) 86, param2, param1);
             return null;
           }
-          byte[] var3 = param0.a(param1, (byte) 67, param2);
+          byte[] var3 = param0.getFile(param1, (byte) 67, param2);
           if (var3 == null) {
             return null;
           }
@@ -488,7 +488,7 @@ final class uk extends IntrusiveNode {
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
-    final static uk a(cm param0, String param1, String param2) {
+    final static uk a(ResourceArchive param0, String param1, String param2) {
         try {
           uk var4_ref = null;
           if (!uk.a(param0)) {

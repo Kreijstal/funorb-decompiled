@@ -21,7 +21,7 @@ final class fk implements kh {
         field_f = null;
     }
 
-    final static RgbSprite[] a(String param0, byte param1, kl param2, String param3) {
+    final static RgbSprite[] a(String param0, byte param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -40,8 +40,8 @@ final class fk implements kh {
             var6 = (String) null;
             fk.a(false, (String) null);
           }
-          var4_int = param2.a(param3, 110);
-          var5 = param2.a((byte) -72, var4_int, param0);
+          var4_int = param2.getGroupId(param3, 110);
+          var5 = param2.getFileId((byte) -72, var4_int, param0);
           stackIn_3_0 = cb.a(false, param2, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

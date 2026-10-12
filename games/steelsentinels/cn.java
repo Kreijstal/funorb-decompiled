@@ -178,7 +178,7 @@ class cn implements qk, eg {
                 }
               }
               fk.field_q.a(0, -40 + gl.field_y.field_Lb, 40, var9, -var9 + gl.field_y.field_zb);
-              fk.field_q.field_S = jk.field_b.toUpperCase();
+              fk.field_q.field_S = IntKeyLookup.field_b.toUpperCase();
               stackIn_19_0 = fk.field_q;
               stackIn_20_1 = (param3) && (ka.field_R == 0L);
               stackIn_19_0.field_T = stackIn_20_1;
@@ -586,13 +586,13 @@ class cn implements qk, eg {
             return ba.a(123, param0, param1);
           }
           if (ei.field_q == 80 &&
-            fa.a(38)) {
+            ArchiveProvider.a(38)) {
             jn.field_g = true;
             return true;
           }
           return false;
         }
-        if (!fa.a(38)) {
+        if (!ArchiveProvider.a(38)) {
           return false;
         }
         int var4 = he.a((byte) -125, param2, param0) ? 1 : 0;

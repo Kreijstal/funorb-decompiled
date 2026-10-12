@@ -67,7 +67,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          if (this == lr.field_a &&
+          if (this == IntKeyLookup.field_a &&
             !rh.field_c) {
             ol.field_z = true;
             if (se.field_c &&
@@ -107,7 +107,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (lr.field_a == this &&
+          if (IntKeyLookup.field_a == this &&
             !rh.field_c) {
             ActionRequest.field_s = vi.b(-46);
             nu.a(5000L, 0);
@@ -170,7 +170,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
     }
 
     public final void stop() {
-        if (lr.field_a != this ||
+        if (IntKeyLookup.field_a != this ||
           rh.field_c) {
           return;
         }
@@ -199,7 +199,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             try {
-              if (lr.field_a != null) {
+              if (IntKeyLookup.field_a != null) {
                 gs.field_b = gs.field_b + 1;
                 if (gs.field_b >= 3) {
                   this.a("alreadyloaded", (byte) -85);
@@ -215,7 +215,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               SummonRequest.field_B = param4;
               dt.field_a = param6;
               MatchSetupPanel.field_D = param6;
-              lr.field_a = this;
+              IntKeyLookup.field_a = this;
               if (param3 != 10) {
                 return;
               }
@@ -594,7 +594,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = lr.field_a;
+                var1 = IntKeyLookup.field_a;
                 if (null != la.field_g) {
                   var1 = la.field_g;
                 }
@@ -682,7 +682,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
     }
 
     public final void start() {
-        if (lr.field_a != this ||
+        if (IntKeyLookup.field_a != this ||
           rh.field_c) {
           return;
         }
@@ -848,19 +848,19 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               if (var4 != 0) {
                 if (la.field_g != null) {
                   var2 = la.field_g;
-                  var2 = lr.field_a;
+                  var2 = IntKeyLookup.field_a;
                 } else {
-                  var2 = lr.field_a;
+                  var2 = IntKeyLookup.field_a;
                 }
               }
             } else {
               if (la.field_g != null) {
                 var2 = la.field_g;
                 if (var4 != 0) {
-                  var2 = lr.field_a;
+                  var2 = IntKeyLookup.field_a;
                 }
               } else {
-                var2 = lr.field_a;
+                var2 = IntKeyLookup.field_a;
               }
             }
           }

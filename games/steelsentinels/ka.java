@@ -346,7 +346,7 @@ final class ka extends ug {
         }
     }
 
-    final static String a(byte param0, String param1, String param2, cm param3) {
+    final static String a(byte param0, String param1, String param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;
@@ -362,7 +362,7 @@ final class ka extends ug {
           if (param0 > -13) {
             field_G = (int[][][]) null;
           }
-          if (param3.a(true)) {
+          if (param3.ensureIndex(true)) {
             stackIn_6_0 = param1 + " - " + param3.a((byte) -33) + "%";
             return stackIn_6_0;
           }

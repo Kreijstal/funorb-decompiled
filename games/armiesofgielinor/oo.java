@@ -409,12 +409,12 @@ final class oo {
           }
           this.d(1439);
           if (null != iw.field_p &&
-            iw.field_p.a((byte) 82) &&
+            iw.field_p.ensureIndex((byte) 82) &&
             iw.field_p.a(28979, "members_expansion_screen") &&
             iw.field_p.a(28979, "arialish12") &&
             iw.field_p.a(28979, "pump32") &&
             bh.field_H != null &&
-            bh.field_H.a((byte) 82) &&
+            bh.field_H.ensureIndex((byte) 82) &&
             bh.field_H.a(28979, "arialish12") &&
             bh.field_H.a(28979, "pump32")) {
             UnitLossCondition.field_a = pv.a("members_expansion_screen", "frame", iw.field_p, 24914);

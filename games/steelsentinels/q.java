@@ -148,7 +148,7 @@ final class q implements Iterable {
 
     final static void a(RgbSprite param0, byte param1) {
         try {
-          jl.a(false);
+          ArchiveIndex.a(false);
           if (param1 >= -60) {
             field_g = (String) null;
           }

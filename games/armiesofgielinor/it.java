@@ -39,7 +39,7 @@ final class it {
         }
     }
 
-    final static nc a(String param0, kl param1, kl param2, byte param3, String param4) {
+    final static nc a(String param0, ResourceArchive param1, ResourceArchive param2, byte param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -55,8 +55,8 @@ final class it {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param1.a(param4, 110);
-          var6 = param1.a((byte) -15, var5_int, param0);
+          var5_int = param1.getGroupId(param4, 110);
+          var6 = param1.getFileId((byte) -15, var5_int, param0);
           if (param3 != -87) {
             field_a = (RgbSprite) null;
           }
@@ -117,7 +117,7 @@ final class it {
           CipherPacketBuffer var6 = var9;
           if (param1 > -71) {
             String var8 = (String) null;
-            it.a((String) null, (kl) null, (kl) null, (byte) -14, (String) null);
+            it.a((String) null, (ResourceArchive) null, (ResourceArchive) null, (byte) -14, (String) null);
           }
           var9.writeCipheredOpcode(32161, param4);
           var9.position = var9.position + 1;

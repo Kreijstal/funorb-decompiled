@@ -3,7 +3,7 @@
  */
 final class qk {
     static String field_f;
-    static kl field_e;
+    static ResourceArchive field_e;
     static int field_a;
     static int field_d;
     static String field_b;
@@ -13,7 +13,7 @@ final class qk {
         if (param1 == -2823) {
           return 1 + param2 + hs.field_I + param0;
         }
-        field_e = (kl) null;
+        field_e = (ResourceArchive) null;
         return 1 + param2 + hs.field_I + param0;
     }
 

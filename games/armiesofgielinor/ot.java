@@ -112,11 +112,11 @@ final class ot extends dr {
           CipherPacketBuffer.currentBattlefield = param0;
           PaletteRegionMap.field_g = new AnimationPlayer(param2);
           PaletteRegionMap.field_g.selectSequence(-1, ck.field_e[sf.field_P[76]][0]);
-          kl.field_a = NetworkResourceRequest.field_C.camera;
+          ResourceArchive.field_a = NetworkResourceRequest.field_C.camera;
           discarded$1 = new RgbSprite(80, 40);
           ef.field_c = CipherPacketBuffer.currentBattlefield.mapHeight;
           ResourceRequest.field_y = CipherPacketBuffer.currentBattlefield.mapWidth;
-          og.field_p = kl.field_a.field_o;
+          og.field_p = ResourceArchive.field_a.field_o;
           vs.field_e = CipherPacketBuffer.currentBattlefield.tiles;
           bt.field_f = CipherPacketBuffer.currentBattlefield.mapTheme;
           nk.a((byte) 111);

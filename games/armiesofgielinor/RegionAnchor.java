@@ -7,7 +7,7 @@ final class RegionAnchor extends IntrusiveNode {
     static String field_n;
     static String field_k;
     int row;
-    static kl field_o;
+    static ResourceArchive field_o;
 
     final static int a(int param0, int param1, int param2, int param3) {
         int stackIn_52_0 = 0;
@@ -218,7 +218,7 @@ final class RegionAnchor extends IntrusiveNode {
           }
           var6 = CipherPacketBuffer.currentBattlefield.a(param2, -1, true) & 28;
           if (param0 != 16711680) {
-            field_o = (kl) null;
+            field_o = (ResourceArchive) null;
           }
           for (var7 = 0; 5 > var7; var7++) {
             if ((var6 & 1 << var7) != 0 &&

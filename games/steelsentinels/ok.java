@@ -4,8 +4,8 @@
 final class ok {
     static String field_b;
     static int[] field_d;
-    static cm field_f;
-    static cm field_e;
+    static ResourceArchive field_f;
+    static ResourceArchive field_e;
     static boolean field_g;
     static int field_c;
     static int field_a;

@@ -26,25 +26,25 @@ final class sa {
           return ud.field_w;
         }
         if (null != ok.field_f) {
-          if (ok.field_f.a(true)) {
+          if (ok.field_f.ensureIndex(true)) {
             return nm.field_t;
           }
-          return jk.field_g;
+          return IntKeyLookup.field_g;
         }
         int var1 = -86 / ((69 - param0) / 47);
-        if (!ke.field_k.a(true)) {
+        if (!ke.field_k.ensureIndex(true)) {
           return ai.field_t;
         }
         if (!ke.field_k.a("commonui", (byte) 90)) {
           return en.field_f + " - " + ke.field_k.a((byte) 78, "commonui") + "%";
         }
-        if (!oe.field_d.a(true)) {
+        if (!oe.field_d.ensureIndex(true)) {
           return og.field_c;
         }
         if (!oe.field_d.a("commonui", (byte) 90)) {
           return kb.field_c + " - " + oe.field_d.a((byte) 103, "commonui") + "%";
         }
-        if (!id.field_bc.a(true)) {
+        if (!id.field_bc.ensureIndex(true)) {
           return sl.field_l;
         }
         if (!id.field_bc.a(25)) {

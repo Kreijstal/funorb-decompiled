@@ -29,7 +29,7 @@ final class mu {
         return false;
     }
 
-    final static void a(BitmapFont param0, int param1, kl param2) {
+    final static void a(BitmapFont param0, int param1, ResourceArchive param2) {
         int var8 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -56,8 +56,8 @@ final class mu {
             af.a((Throwable) null, -116, "QC1");
             return;
           }
-          param2.field_b = false;
-          param2.field_e = 0;
+          param2.discardPackedGroups = false;
+          param2.fileRetentionMode = 0;
           mp.field_Sb = new bl(var3_int, param2, param2);
           ce.field_K = new rf(var3_int, param2, param2, new cu());
           var4 = ps.b((byte) -83);

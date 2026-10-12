@@ -277,11 +277,11 @@ abstract class FunOrbClient extends GameApplet {
         jg.a(dh.field_D, param2 ^ 4192);
         lk.a(hb.field_i, this.field_t, param1, this.field_v, param3, this.field_C, this.field_B, dh.field_D, 5000, this.field_r, (byte) 120, param2, this.field_F, this.field_D);
         g.a(this.field_F, this.field_D, param3, this.field_B, hb.field_i, (byte) -95, dh.field_D, this.field_v, this.field_t);
-        fa.a((byte) 127);
+        ArchiveProvider.a((byte) 127);
         nc.field_j = pi.a((byte) 68);
         hg.a((byte) -93, sl.field_n);
         Sprite.field_h = param5;
-        jl.field_r = param7;
+        ArchiveIndex.field_r = param7;
         ed.field_h = param4;
         DualNode.field_p = param6;
         rf.field_c = param0;
@@ -403,7 +403,7 @@ abstract class FunOrbClient extends GameApplet {
         int var4 = -1 + jg.field_f;
         byte[] var5 = new byte[var4];
         rf.field_d.readCipheredBytes(0, var4, var5, 103);
-        be.a(var3 != 0, (byte) 99, jk.a(13, var5), Projectile.d((byte) -21));
+        be.a(var3 != 0, (byte) 99, IntKeyLookup.a(13, var5), Projectile.d((byte) -21));
         if (param0 != 3894) {
           this.f((byte) -96);
         }
@@ -560,7 +560,7 @@ abstract class FunOrbClient extends GameApplet {
             ok.field_f = dh.a(73, Sprite.field_h);
           }
           ke.field_k = GameplayController.a(true, ed.field_h, param0 + 251, 1, false);
-          oe.field_d = GameplayController.a(true, jl.field_r, param0 ^ 261, 1, false);
+          oe.field_d = GameplayController.a(true, ArchiveIndex.field_r, param0 ^ 261, 1, false);
           id.field_bc = GameplayController.a(true, rf.field_c, 256, 1, false);
           nj.field_Q = 2;
           tm.field_d = ke.field_k;
@@ -568,7 +568,7 @@ abstract class FunOrbClient extends GameApplet {
         }
         if (nj.field_Q == 2) {
           if (null != ok.field_f &&
-            ok.field_f.a(true)) {
+            ok.field_f.ensureIndex(true)) {
             if (!ok.field_f.a(12145, "")) {
               ok.field_f = null;
             } else {
@@ -621,9 +621,9 @@ abstract class FunOrbClient extends GameApplet {
         }
         boolean decompiledFrameRemainder0 = true;
         if (nj.field_Q == 11) {
-          if (pl.field_S != null && (!pl.field_S.a(true) ||
+          if (pl.field_S != null && (!pl.field_S.ensureIndex(true) ||
             !pl.field_S.a(25))) {
-            mc.a(ka.a((byte) -119, nm.field_t, jk.field_g, pl.field_S), 0.0f, -21801);
+            mc.a(ka.a((byte) -119, nm.field_t, IntKeyLookup.field_g, pl.field_S), 0.0f, -21801);
             decompiledFrameRemainder0 = false;
           }
           else {

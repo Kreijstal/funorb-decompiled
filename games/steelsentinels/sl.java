@@ -6,7 +6,7 @@ final class sl {
     static String field_f;
     static int field_i;
     static String[] field_j;
-    cm field_d;
+    ResourceArchive field_d;
     static NodeDeque field_b;
     String field_e;
     String field_g;

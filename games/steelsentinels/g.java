@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class g {
-    static cm field_i;
+    static ResourceArchive field_i;
     private int field_f;
     private boolean field_e;
     private int[] field_k;

@@ -76,7 +76,7 @@ abstract class el {
 
     abstract int a(int param0);
 
-    final static byte[] a(boolean param0, byte[] param1) {
+    final static byte[] decompressContainer(boolean obfuscationGuard, byte[] encodedContainer) {
         byte[] stackIn_21_0 = null;
         byte[] stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
@@ -96,10 +96,10 @@ abstract class el {
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          if (param0) {
+          if (obfuscationGuard) {
             field_c = 69;
           }
-          var9 = new PacketBuffer(param1);
+          var9 = new PacketBuffer(encodedContainer);
           var3 = var9.readUnsignedByte(0);
           var4 = var9.readInt(1);
           if (0 <= var4 && (CombatEvent.field_P == 0 ||
@@ -124,7 +124,7 @@ abstract class el {
                   ph.field_c.a((byte) -71, var9, var12);
                 }
               } else {
-                pb.a(var12, var5_int, param1, var4, 9);
+                pb.a(var12, var5_int, encodedContainer, var4, 9);
               }
               stackIn_21_0 = var6;
               return stackIn_21_0;
@@ -136,8 +136,8 @@ abstract class el {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_26_0 = var2;
-          stackIn_26_1 = new StringBuilder().append("el.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_26_1 = new StringBuilder().append("el.E(").append(obfuscationGuard).append(',');
+          if (encodedContainer == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";

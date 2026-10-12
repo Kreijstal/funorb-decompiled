@@ -3,7 +3,7 @@
  */
 final class vc extends IntrusiveNode {
     static RgbSprite[] field_k;
-    static kl field_m;
+    static ResourceArchive field_m;
     byte[] field_n;
     static je field_l;
 
