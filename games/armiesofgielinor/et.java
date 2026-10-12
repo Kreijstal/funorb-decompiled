@@ -44,7 +44,7 @@ final class et {
         int var13Lifetime1;
         var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var5_int = wl.b((-param3 + param4) * 3, param1 ^ 13329);
+          var5_int = wl.bitLength((-param3 + param4) * 3, param1 ^ 13329);
           var6 = 3 * param3;
           EditableTextField.n(0);
           var7 = param1 + var5_int;

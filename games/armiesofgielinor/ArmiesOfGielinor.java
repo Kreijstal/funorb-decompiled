@@ -1424,7 +1424,7 @@ public final class ArmiesOfGielinor extends wf {
           bk.a(true);
           od.a(param0 ^ 71);
           cw.a((byte) -118);
-          un.a();
+          VorbisFloor.releaseScratch();
           mj.c((byte) -82);
           lp.a(param0 ^ -13095008);
           cu.a((byte) -121);

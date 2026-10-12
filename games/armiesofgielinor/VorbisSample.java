@@ -30,7 +30,7 @@ final class VorbisSample extends IntrusiveNode {
     private static int[] smallBitReverse;
     private static byte[] bitData;
     private static VorbisResidue[] residues;
-    private static un[] floors;
+    private static VorbisFloor[] floors;
     private static boolean[] modeUsesLargeBlock;
     private byte[] decodedSamples;
     private static VorbisMapping[] mappings;
@@ -48,117 +48,117 @@ final class VorbisSample extends IntrusiveNode {
     }
 
     final static void decodeSetup(byte[] encodedSetup) {
-        int var7_int = 0;
-        int var8_int = 0;
-        int var9_int = 0;
-        int var11 = 0;
-        int var6 = 0;
-        int stackIn_5_0 = 0;
-        boolean[] stackIn_41_0 = null;
-        int stackIn_41_1 = 0;
-        boolean stackIn_42_2 = false;
-        int var1;
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        float[] var6_ref_float__;
-        float[] var7;
-        float[] var8;
-        int[] var9;
-        int var10;
-        int var1Lifetime1;
-        int var2Lifetime1;
-        int var2Lifetime2;
-        int var2Lifetime3;
-        int var3Lifetime1;
-        int var3Lifetime2;
-        int var3Lifetime3;
-        int var4Lifetime1;
-        int var4Lifetime2;
-        int var5Lifetime1;
-        int var5Lifetime2;
+        int trigAIndex = 0;
+        int trigBIndex = 0;
+        int trigCIndex = 0;
+        int reverseIndex = 0;
+        int modeIndex = 0;
+        int selectedBlockSize = 0;
+        boolean[] modeFlagsTarget = null;
+        int modeFlagIndex = 0;
+        boolean modeLargeBlockFlag = false;
+        int blockKind;
+        int blockSize;
+        int halfBlockSize;
+        int quarterBlockSize;
+        int eighthBlockSize;
+        float[] trigA;
+        float[] trigB;
+        float[] trigC;
+        int[] bitReverse;
+        int reverseBits;
+        int codebookCount;
+        int codebookIndex;
+        int timeTransformCount;
+        int floorCount;
+        int timeTransformIndex;
+        int floorIndex;
+        int residueCount;
+        int residueIndex;
+        int mappingCount;
+        int mappingIndex;
+        int modeCount;
         VorbisSample.setBitStream(encodedSetup, 0);
         smallBlockSize = 1 << VorbisSample.readBits(4);
         largeBlockSize = 1 << VorbisSample.readBits(4);
         transformScratch = new float[largeBlockSize];
-        for (var1 = 0; var1 < 2; var1++) {
-          if (var1 == 0) {
-            stackIn_5_0 = smallBlockSize;
+        for (blockKind = 0; blockKind < 2; blockKind++) {
+          if (blockKind == 0) {
+            selectedBlockSize = smallBlockSize;
           } else {
-            stackIn_5_0 = largeBlockSize;
+            selectedBlockSize = largeBlockSize;
           }
-          var2 = stackIn_5_0;
-          var3 = var2 >> 1;
-          var4 = var2 >> 2;
-          var5 = var2 >> 3;
-          var6_ref_float__ = new float[var3];
-          for (var7_int = 0; var7_int < var4; var7_int++) {
-            var6_ref_float__[2 * var7_int] = (float)Math.cos((double)(4 * var7_int) * 3.141592653589793 / (double)var2);
-            var6_ref_float__[2 * var7_int + 1] = -(float)Math.sin((double)(4 * var7_int) * 3.141592653589793 / (double)var2);
+          blockSize = selectedBlockSize;
+          halfBlockSize = blockSize >> 1;
+          quarterBlockSize = blockSize >> 2;
+          eighthBlockSize = blockSize >> 3;
+          trigA = new float[halfBlockSize];
+          for (trigAIndex = 0; trigAIndex < quarterBlockSize; trigAIndex++) {
+            trigA[2 * trigAIndex] = (float)Math.cos((double)(4 * trigAIndex) * 3.141592653589793 / (double)blockSize);
+            trigA[2 * trigAIndex + 1] = -(float)Math.sin((double)(4 * trigAIndex) * 3.141592653589793 / (double)blockSize);
           }
-          var7 = new float[var3];
-          for (var8_int = 0; var8_int < var4; var8_int++) {
-            var7[2 * var8_int] = (float)Math.cos((double)(2 * var8_int + 1) * 3.141592653589793 / (double)(2 * var2));
-            var7[2 * var8_int + 1] = (float)Math.sin((double)(2 * var8_int + 1) * 3.141592653589793 / (double)(2 * var2));
+          trigB = new float[halfBlockSize];
+          for (trigBIndex = 0; trigBIndex < quarterBlockSize; trigBIndex++) {
+            trigB[2 * trigBIndex] = (float)Math.cos((double)(2 * trigBIndex + 1) * 3.141592653589793 / (double)(2 * blockSize));
+            trigB[2 * trigBIndex + 1] = (float)Math.sin((double)(2 * trigBIndex + 1) * 3.141592653589793 / (double)(2 * blockSize));
           }
-          var8 = new float[var4];
-          for (var9_int = 0; var9_int < var5; var9_int++) {
-            var8[2 * var9_int] = (float)Math.cos((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
-            var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
+          trigC = new float[quarterBlockSize];
+          for (trigCIndex = 0; trigCIndex < eighthBlockSize; trigCIndex++) {
+            trigC[2 * trigCIndex] = (float)Math.cos((double)(4 * trigCIndex + 2) * 3.141592653589793 / (double)blockSize);
+            trigC[2 * trigCIndex + 1] = -(float)Math.sin((double)(4 * trigCIndex + 2) * 3.141592653589793 / (double)blockSize);
           }
-          var9 = new int[var5];
-          var10 = wl.b(var5 - 1, -13337);
-          for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = qt.a(var11, var10, (byte) -114);
+          bitReverse = new int[eighthBlockSize];
+          reverseBits = wl.bitLength(eighthBlockSize - 1, -13337);
+          for (reverseIndex = 0; reverseIndex < eighthBlockSize; reverseIndex++) {
+            bitReverse[reverseIndex] = qt.reverseBits(reverseIndex, reverseBits, (byte) -114);
           }
-          if (var1 == 0) {
-            smallTrigA = var6_ref_float__;
-            smallTrigB = var7;
-            smallTrigC = var8;
-            smallBitReverse = var9;
+          if (blockKind == 0) {
+            smallTrigA = trigA;
+            smallTrigB = trigB;
+            smallTrigC = trigC;
+            smallBitReverse = bitReverse;
           } else {
-            largeTrigA = var6_ref_float__;
-            largeTrigB = var7;
-            largeTrigC = var8;
-            largeBitReverse = var9;
+            largeTrigA = trigA;
+            largeTrigB = trigB;
+            largeTrigC = trigC;
+            largeBitReverse = bitReverse;
           }
         }
-        var1Lifetime1 = VorbisSample.readBits(8) + 1;
-        codebooks = new VorbisCodebook[var1Lifetime1];
-        for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
-          codebooks[var2Lifetime1] = new VorbisCodebook();
+        codebookCount = VorbisSample.readBits(8) + 1;
+        codebooks = new VorbisCodebook[codebookCount];
+        for (codebookIndex = 0; codebookIndex < codebookCount; codebookIndex++) {
+          codebooks[codebookIndex] = new VorbisCodebook();
         }
-        var2Lifetime2 = VorbisSample.readBits(6) + 1;
-        for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
+        timeTransformCount = VorbisSample.readBits(6) + 1;
+        for (timeTransformIndex = 0; timeTransformIndex < timeTransformCount; timeTransformIndex++) {
           VorbisSample.readBits(16);
         }
-        var2Lifetime3 = VorbisSample.readBits(6) + 1;
-        floors = new un[var2Lifetime3];
-        for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
-          floors[var3Lifetime2] = new un();
+        floorCount = VorbisSample.readBits(6) + 1;
+        floors = new VorbisFloor[floorCount];
+        for (floorIndex = 0; floorIndex < floorCount; floorIndex++) {
+          floors[floorIndex] = new VorbisFloor();
         }
-        var3Lifetime3 = VorbisSample.readBits(6) + 1;
-        residues = new VorbisResidue[var3Lifetime3];
-        for (var4Lifetime1 = 0; var4Lifetime1 < var3Lifetime3; var4Lifetime1++) {
-          residues[var4Lifetime1] = new VorbisResidue();
+        residueCount = VorbisSample.readBits(6) + 1;
+        residues = new VorbisResidue[residueCount];
+        for (residueIndex = 0; residueIndex < residueCount; residueIndex++) {
+          residues[residueIndex] = new VorbisResidue();
         }
-        var4Lifetime2 = VorbisSample.readBits(6) + 1;
-        mappings = new VorbisMapping[var4Lifetime2];
-        for (var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime2; var5Lifetime1++) {
-          mappings[var5Lifetime1] = new VorbisMapping();
+        mappingCount = VorbisSample.readBits(6) + 1;
+        mappings = new VorbisMapping[mappingCount];
+        for (mappingIndex = 0; mappingIndex < mappingCount; mappingIndex++) {
+          mappings[mappingIndex] = new VorbisMapping();
         }
-        var5Lifetime2 = VorbisSample.readBits(6) + 1;
-        modeUsesLargeBlock = new boolean[var5Lifetime2];
-        modeMappingIds = new int[var5Lifetime2];
-        for (var6 = 0; var6 < var5Lifetime2; var6++) {
-          stackIn_41_0 = (boolean[]) (modeUsesLargeBlock);
-          stackIn_41_1 = var6;
-          stackIn_42_2 = (VorbisSample.readBit() != 0);
-          stackIn_41_0[stackIn_41_1] = stackIn_42_2;
+        modeCount = VorbisSample.readBits(6) + 1;
+        modeUsesLargeBlock = new boolean[modeCount];
+        modeMappingIds = new int[modeCount];
+        for (modeIndex = 0; modeIndex < modeCount; modeIndex++) {
+          modeFlagsTarget = (boolean[]) (modeUsesLargeBlock);
+          modeFlagIndex = modeIndex;
+          modeLargeBlockFlag = (VorbisSample.readBit() != 0);
+          modeFlagsTarget[modeFlagIndex] = modeLargeBlockFlag;
           VorbisSample.readBits(16);
           VorbisSample.readBits(16);
-          modeMappingIds[var6] = VorbisSample.readBits(8);
+          modeMappingIds[modeIndex] = VorbisSample.readBits(8);
         }
         setupInitialized = true;
     }
@@ -246,16 +246,16 @@ final class VorbisSample extends IntrusiveNode {
     }
 
     private final float[] decodePacket(int packetIndex) {
-        int var32_int = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_22_0 = 0;
-        float[] stackIn_40_0 = null;
-        float[] stackIn_43_0 = null;
-        float[] stackIn_46_0 = null;
-        int[] stackIn_49_0 = null;
-        boolean stackIn_113_1 = false;
+        int butterflyIndex = 0;
+        int selectedBlockSize = 0;
+        int previousWindowFlag = 0;
+        int nextWindowFlag = 0;
+        int floorSilentFlag = 0;
+        float[] selectedTrigA = null;
+        float[] selectedTrigB = null;
+        float[] selectedTrigC = null;
+        int[] selectedBitReverse = null;
+        boolean blockSilentFlag = false;
         int modeId;
         int usesLargeBlock;
         int blockSize;
@@ -271,109 +271,109 @@ final class VorbisSample extends IntrusiveNode {
         VorbisMapping mapping;
         int silent;
         int selectedSubmap;
-        int var17_int;
-        Object var17;
-        int var18_int;
-        float[] var18;
-        int var19;
-        float[] var20_ref_float__;
-        int var20;
-        int var21_int;
-        float[] var21;
-        float[] var22;
-        float[] var23;
-        int[] var24;
-        int var25;
-        int var26;
-        float var26_float;
-        float var27;
-        int var27_int;
-        float var28;
-        int var28_int;
-        float var29;
-        int var29_int;
-        float var30;
-        int var30_int;
-        float var31;
-        int var31_int;
-        float var32;
-        float var33;
-        int var33_int;
-        float var34;
-        float var35;
-        float var36;
-        float var37;
-        float var38;
-        float var39;
-        float[] var40;
-        int var41;
+        int floorId;
+        Object overlapOutputReference;
+        int activeFloorId;
+        float[] oldPreviousBlock;
+        int eighthBlockSize;
+        float[] transformBuffer;
+        int previousOverlapSampleIndex;
+        int scaleIndex;
+        float[] trigA;
+        float[] trigB;
+        float[] trigC;
+        int[] bitReverseAlias;
+        int preRotationIndex;
+        int stage;
+        float preRotationReal;
+        float preRotationImaginary;
+        int groupSize;
+        float preRotationCosine;
+        int trigStride;
+        float preRotationSine;
+        int groupIndex;
+        float firstButterflyCosine;
+        int firstGroupEnd;
+        float firstButterflySine;
+        int secondGroupEnd;
+        float postRotationImaginaryB;
+        float postRotationMixReal;
+        int butterflyOffset;
+        float butterflyRealA;
+        float butterflyImaginaryA;
+        float butterflyRealB;
+        float butterflyImaginaryB;
+        float stageCosine;
+        float stageSine;
+        float[] overlapOutput;
+        int mirrorIndex;
         VorbisResidue residue;
-        int[] var44;
-        float[] var45;
-        float[] var46;
-        int[] var48;
-        float[] var49;
-        float[] var50;
-        float[] var52;
-        int var16Lifetime1;
-        int var17_intLifetime1;
-        int var17_intLifetime2;
-        int var17_intLifetime3;
-        int var19Lifetime1;
-        int var20Lifetime1;
-        int var21_intLifetime1;
-        int var25Lifetime1;
-        int var25Lifetime2;
-        int var26Lifetime1;
-        int var26Lifetime2;
-        int var26Lifetime3;
-        int var26Lifetime4;
-        int var26Lifetime5;
-        int var26Lifetime6;
-        int var26Lifetime7;
-        int var26Lifetime8;
-        int var26Lifetime9;
-        int var26Lifetime10;
-        int var26Lifetime11;
-        float var26_floatLifetime1;
-        float var27Lifetime1;
-        float var27Lifetime2;
-        float var27Lifetime3;
-        float var27Lifetime4;
-        int var27_intLifetime1;
-        float var28Lifetime1;
-        float var28Lifetime2;
-        int var28_intLifetime1;
-        float var29Lifetime1;
-        float var29Lifetime2;
-        int var29_intLifetime1;
-        float var30Lifetime1;
-        float var30Lifetime2;
-        float var31Lifetime1;
-        float var33Lifetime1;
-        int var19Lifetime1Lifetime1;
-        float var30Lifetime1Lifetime1;
-        float var30Lifetime1Lifetime2;
-        float var30Lifetime1Lifetime3;
-        int var18_intLifetime1;
-        int var18_intLifetime2;
+        int[] bitReverseBufferAlias;
+        float[] transformBufferAlias;
+        float[] overlapBufferAlias;
+        int[] bitReverse;
+        float[] transformBufferSource;
+        float[] overlapBuffer;
+        float[] residueOutput;
+        int skipResidue;
+        int submapIndex;
+        int activeSubmap;
+        int halfTransformSize;
+        int previousOverlapIndex;
+        int currentOverlapOutputIndex;
+        int initialMirrorIndex;
+        int firstButterflyIndex;
+        int blockLog2;
+        int reverseIndex;
+        int compactIndex;
+        int reorderIndex;
+        int postRotationIndex;
+        int finalRotationIndex;
+        int copyTailIndex;
+        int copyHeadIndex;
+        int reflectHeadIndex;
+        int reflectTailIndex;
+        int leftWindowIndex;
+        int rightWindowIndex;
+        float firstButterflyRealA;
+        float firstButterflyImaginaryA;
+        float postRotationCosine;
+        float leftWindowSine;
+        float rightWindowSine;
+        int reversedIndex;
+        float firstButterflyRealB;
+        float postRotationSine;
+        int firstSwapOffset;
+        float firstButterflyImaginaryB;
+        float postRotationRealA;
+        int secondSwapOffset;
+        float swapOne;
+        float postRotationImaginaryA;
+        float postRotationRealB;
+        float postRotationMixImaginary;
+        int currentOverlapIndex;
+        float swapThree;
+        float swapFive;
+        float swapSeven;
+        int quarterTransformSize;
+        int overlapLength;
         VorbisSample.setBitStream(this.packets[packetIndex], 0);
         VorbisSample.readBit();
-        modeId = VorbisSample.readBits(wl.b(modeMappingIds.length - 1, -13337));
+        modeId = VorbisSample.readBits(wl.bitLength(modeMappingIds.length - 1, -13337));
         usesLargeBlock = modeUsesLargeBlock[modeId] ? 1 : 0;
         if (usesLargeBlock == 0) {
-          stackIn_3_0 = smallBlockSize;
+          selectedBlockSize = smallBlockSize;
         } else {
-          stackIn_3_0 = largeBlockSize;
+          selectedBlockSize = largeBlockSize;
         }
-        blockSize = stackIn_3_0;
+        blockSize = selectedBlockSize;
         previousUsesLargeBlock = 0;
         nextUsesLargeBlock = 0;
         if (usesLargeBlock != 0) {
-          stackIn_7_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
-          previousUsesLargeBlock = stackIn_7_0;
-          stackIn_10_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
-          nextUsesLargeBlock = stackIn_10_0;
+          previousWindowFlag = (VorbisSample.readBit() == 0) ? 0 : 1;
+          previousUsesLargeBlock = previousWindowFlag;
+          nextWindowFlag = (VorbisSample.readBit() == 0) ? 0 : 1;
+          nextUsesLargeBlock = nextWindowFlag;
         }
         halfBlockSize = blockSize >> 1;
         if (usesLargeBlock != 0 &&
@@ -398,203 +398,203 @@ final class VorbisSample extends IntrusiveNode {
         }
         mapping = mappings[modeMappingIds[modeId]];
         selectedSubmap = mapping.selectedSubmap;
-        var17_int = mapping.floorIds[selectedSubmap];
-        stackIn_22_0 = (floors[var17_int].b()) ? 0 : 1;
-        silent = stackIn_22_0;
-        var16Lifetime1 = silent;
-        for (var17_intLifetime1 = 0; var17_intLifetime1 < mapping.submapCount; var17_intLifetime1++) {
-          residue = residues[mapping.residueIds[var17_intLifetime1]];
-          var52 = transformScratch;
-          residue.decode(var52, blockSize >> 1, var16Lifetime1 != 0);
+        floorId = mapping.floorIds[selectedSubmap];
+        floorSilentFlag = (floors[floorId].decodeFloor()) ? 0 : 1;
+        silent = floorSilentFlag;
+        skipResidue = silent;
+        for (submapIndex = 0; submapIndex < mapping.submapCount; submapIndex++) {
+          residue = residues[mapping.residueIds[submapIndex]];
+          residueOutput = transformScratch;
+          residue.decode(residueOutput, blockSize >> 1, skipResidue != 0);
         }
         if (silent == 0) {
-          var17_intLifetime2 = mapping.selectedSubmap;
-          var18_int = mapping.floorIds[var17_intLifetime2];
-          floors[var18_int].a(transformScratch, blockSize >> 1);
+          activeSubmap = mapping.selectedSubmap;
+          activeFloorId = mapping.floorIds[activeSubmap];
+          floors[activeFloorId].applyFloor(transformScratch, blockSize >> 1);
         }
         if (silent != 0) {
-          for (var17_intLifetime3 = blockSize >> 1; var17_intLifetime3 < blockSize; var17_intLifetime3++) {
-            transformScratch[var17_intLifetime3] = 0.0f;
+          for (halfTransformSize = blockSize >> 1; halfTransformSize < blockSize; halfTransformSize++) {
+            transformScratch[halfTransformSize] = 0.0f;
           }
         } else {
-          var17_intLifetime3 = blockSize >> 1;
-          var18_intLifetime1 = blockSize >> 2;
-          var19 = blockSize >> 3;
-          var49 = transformScratch;
-          var45 = var49;
-          var20_ref_float__ = var45;
-          for (var21_int = 0; var21_int < var17_intLifetime3; var21_int++) {
-            var20_ref_float__[var21_int] = var20_ref_float__[var21_int] * 0.5f;
+          halfTransformSize = blockSize >> 1;
+          quarterTransformSize = blockSize >> 2;
+          eighthBlockSize = blockSize >> 3;
+          transformBufferSource = transformScratch;
+          transformBufferAlias = transformBufferSource;
+          transformBuffer = transformBufferAlias;
+          for (scaleIndex = 0; scaleIndex < halfTransformSize; scaleIndex++) {
+            transformBuffer[scaleIndex] = transformBuffer[scaleIndex] * 0.5f;
           }
-          var41 = var17_intLifetime3;
-          var21_intLifetime1 = var41;
-          while (var41 < blockSize) {
-            var20_ref_float__[var41] = -var20_ref_float__[blockSize - var41 - 1];
-            var41++;
+          mirrorIndex = halfTransformSize;
+          initialMirrorIndex = mirrorIndex;
+          while (mirrorIndex < blockSize) {
+            transformBuffer[mirrorIndex] = -transformBuffer[blockSize - mirrorIndex - 1];
+            mirrorIndex++;
           }
           if (usesLargeBlock == 0) {
-            stackIn_40_0 = (float[]) (smallTrigA);
+            selectedTrigA = (float[]) (smallTrigA);
           } else {
-            stackIn_40_0 = (float[]) (largeTrigA);
+            selectedTrigA = (float[]) (largeTrigA);
           }
-          var21 = stackIn_40_0;
+          trigA = selectedTrigA;
           if (usesLargeBlock == 0) {
-            stackIn_43_0 = (float[]) (smallTrigB);
+            selectedTrigB = (float[]) (smallTrigB);
           } else {
-            stackIn_43_0 = (float[]) (largeTrigB);
+            selectedTrigB = (float[]) (largeTrigB);
           }
-          var22 = stackIn_43_0;
+          trigB = selectedTrigB;
           if (usesLargeBlock == 0) {
-            stackIn_46_0 = (float[]) (smallTrigC);
+            selectedTrigC = (float[]) (smallTrigC);
           } else {
-            stackIn_46_0 = (float[]) (largeTrigC);
+            selectedTrigC = (float[]) (largeTrigC);
           }
-          var23 = stackIn_46_0;
+          trigC = selectedTrigC;
           if (usesLargeBlock == 0) {
-            stackIn_49_0 = (int[]) (smallBitReverse);
+            selectedBitReverse = (int[]) (smallBitReverse);
           } else {
-            stackIn_49_0 = (int[]) (largeBitReverse);
+            selectedBitReverse = (int[]) (largeBitReverse);
           }
-          var48 = stackIn_49_0;
-          var44 = var48;
-          var24 = var44;
-          for (var25 = 0; var25 < var18_intLifetime1; var25++) {
-            var26_float = var20_ref_float__[4 * var25] - var20_ref_float__[blockSize - 4 * var25 - 1];
-            var27 = var20_ref_float__[4 * var25 + 2] - var20_ref_float__[blockSize - 4 * var25 - 3];
-            var28 = var21[2 * var25];
-            var29 = var21[2 * var25 + 1];
-            var20_ref_float__[blockSize - 4 * var25 - 1] = var26_float * var28 - var27 * var29;
-            var20_ref_float__[blockSize - 4 * var25 - 3] = var26_float * var29 + var27 * var28;
+          bitReverse = selectedBitReverse;
+          bitReverseBufferAlias = bitReverse;
+          bitReverseAlias = bitReverseBufferAlias;
+          for (preRotationIndex = 0; preRotationIndex < quarterTransformSize; preRotationIndex++) {
+            preRotationReal = transformBuffer[4 * preRotationIndex] - transformBuffer[blockSize - 4 * preRotationIndex - 1];
+            preRotationImaginary = transformBuffer[4 * preRotationIndex + 2] - transformBuffer[blockSize - 4 * preRotationIndex - 3];
+            preRotationCosine = trigA[2 * preRotationIndex];
+            preRotationSine = trigA[2 * preRotationIndex + 1];
+            transformBuffer[blockSize - 4 * preRotationIndex - 1] = preRotationReal * preRotationCosine - preRotationImaginary * preRotationSine;
+            transformBuffer[blockSize - 4 * preRotationIndex - 3] = preRotationReal * preRotationSine + preRotationImaginary * preRotationCosine;
           }
-          for (var25Lifetime1 = 0; var25Lifetime1 < var19; var25Lifetime1++) {
-            var26_floatLifetime1 = var20_ref_float__[var17_intLifetime3 + 3 + 4 * var25Lifetime1];
-            var27Lifetime1 = var20_ref_float__[var17_intLifetime3 + 1 + 4 * var25Lifetime1];
-            var28Lifetime1 = var20_ref_float__[4 * var25Lifetime1 + 3];
-            var29Lifetime1 = var20_ref_float__[4 * var25Lifetime1 + 1];
-            var20_ref_float__[var17_intLifetime3 + 3 + 4 * var25Lifetime1] = var26_floatLifetime1 + var28Lifetime1;
-            var20_ref_float__[var17_intLifetime3 + 1 + 4 * var25Lifetime1] = var27Lifetime1 + var29Lifetime1;
-            var30 = var21[var17_intLifetime3 - 4 - 4 * var25Lifetime1];
-            var31 = var21[var17_intLifetime3 - 3 - 4 * var25Lifetime1];
-            var20_ref_float__[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
-            var20_ref_float__[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
+          for (firstButterflyIndex = 0; firstButterflyIndex < eighthBlockSize; firstButterflyIndex++) {
+            firstButterflyRealA = transformBuffer[halfTransformSize + 3 + 4 * firstButterflyIndex];
+            firstButterflyImaginaryA = transformBuffer[halfTransformSize + 1 + 4 * firstButterflyIndex];
+            firstButterflyRealB = transformBuffer[4 * firstButterflyIndex + 3];
+            firstButterflyImaginaryB = transformBuffer[4 * firstButterflyIndex + 1];
+            transformBuffer[halfTransformSize + 3 + 4 * firstButterflyIndex] = firstButterflyRealA + firstButterflyRealB;
+            transformBuffer[halfTransformSize + 1 + 4 * firstButterflyIndex] = firstButterflyImaginaryA + firstButterflyImaginaryB;
+            firstButterflyCosine = trigA[halfTransformSize - 4 - 4 * firstButterflyIndex];
+            firstButterflySine = trigA[halfTransformSize - 3 - 4 * firstButterflyIndex];
+            transformBuffer[4 * firstButterflyIndex + 3] = (firstButterflyRealA - firstButterflyRealB) * firstButterflyCosine - (firstButterflyImaginaryA - firstButterflyImaginaryB) * firstButterflySine;
+            transformBuffer[4 * firstButterflyIndex + 1] = (firstButterflyImaginaryA - firstButterflyImaginaryB) * firstButterflyCosine + (firstButterflyRealA - firstButterflyRealB) * firstButterflySine;
           }
-          var25Lifetime2 = wl.b(blockSize - 1, -13337);
-          for (var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
-            var27_int = blockSize >> var26 + 2;
-            var28_int = 8 << var26;
-            for (var29_int = 0; var29_int < 2 << var26; var29_int++) {
-              var30_int = blockSize - var27_int * 2 * var29_int;
-              var31_int = blockSize - var27_int * (2 * var29_int + 1);
-              for (var32_int = 0; var32_int < blockSize >> var26 + 4; var32_int++) {
-                var33_int = 4 * var32_int;
-                var34 = var20_ref_float__[var30_int - 1 - var33_int];
-                var35 = var20_ref_float__[var30_int - 3 - var33_int];
-                var36 = var20_ref_float__[var31_int - 1 - var33_int];
-                var37 = var20_ref_float__[var31_int - 3 - var33_int];
-                var20_ref_float__[var30_int - 1 - var33_int] = var34 + var36;
-                var20_ref_float__[var30_int - 3 - var33_int] = var35 + var37;
-                var38 = var21[var32_int * var28_int];
-                var39 = var21[var32_int * var28_int + 1];
-                var20_ref_float__[var31_int - 1 - var33_int] = (var34 - var36) * var38 - (var35 - var37) * var39;
-                var20_ref_float__[var31_int - 3 - var33_int] = (var35 - var37) * var38 + (var34 - var36) * var39;
+          blockLog2 = wl.bitLength(blockSize - 1, -13337);
+          for (stage = 0; stage < blockLog2 - 3; stage++) {
+            groupSize = blockSize >> stage + 2;
+            trigStride = 8 << stage;
+            for (groupIndex = 0; groupIndex < 2 << stage; groupIndex++) {
+              firstGroupEnd = blockSize - groupSize * 2 * groupIndex;
+              secondGroupEnd = blockSize - groupSize * (2 * groupIndex + 1);
+              for (butterflyIndex = 0; butterflyIndex < blockSize >> stage + 4; butterflyIndex++) {
+                butterflyOffset = 4 * butterflyIndex;
+                butterflyRealA = transformBuffer[firstGroupEnd - 1 - butterflyOffset];
+                butterflyImaginaryA = transformBuffer[firstGroupEnd - 3 - butterflyOffset];
+                butterflyRealB = transformBuffer[secondGroupEnd - 1 - butterflyOffset];
+                butterflyImaginaryB = transformBuffer[secondGroupEnd - 3 - butterflyOffset];
+                transformBuffer[firstGroupEnd - 1 - butterflyOffset] = butterflyRealA + butterflyRealB;
+                transformBuffer[firstGroupEnd - 3 - butterflyOffset] = butterflyImaginaryA + butterflyImaginaryB;
+                stageCosine = trigA[butterflyIndex * trigStride];
+                stageSine = trigA[butterflyIndex * trigStride + 1];
+                transformBuffer[secondGroupEnd - 1 - butterflyOffset] = (butterflyRealA - butterflyRealB) * stageCosine - (butterflyImaginaryA - butterflyImaginaryB) * stageSine;
+                transformBuffer[secondGroupEnd - 3 - butterflyOffset] = (butterflyImaginaryA - butterflyImaginaryB) * stageCosine + (butterflyRealA - butterflyRealB) * stageSine;
               }
             }
           }
-          for (var26Lifetime1 = 1; var26Lifetime1 < var19 - 1; var26Lifetime1++) {
-            var27_intLifetime1 = var48[var26Lifetime1];
-            if (var26Lifetime1 < var27_intLifetime1) {
-              var28_intLifetime1 = 8 * var26Lifetime1;
-              var29_intLifetime1 = 8 * var27_intLifetime1;
-              var30Lifetime1 = var20_ref_float__[var28_intLifetime1 + 1];
-              var20_ref_float__[var28_intLifetime1 + 1] = var20_ref_float__[var29_intLifetime1 + 1];
-              var20_ref_float__[var29_intLifetime1 + 1] = var30Lifetime1;
-              var30Lifetime1Lifetime1 = var20_ref_float__[var28_intLifetime1 + 3];
-              var20_ref_float__[var28_intLifetime1 + 3] = var20_ref_float__[var29_intLifetime1 + 3];
-              var20_ref_float__[var29_intLifetime1 + 3] = var30Lifetime1Lifetime1;
-              var30Lifetime1Lifetime2 = var20_ref_float__[var28_intLifetime1 + 5];
-              var20_ref_float__[var28_intLifetime1 + 5] = var20_ref_float__[var29_intLifetime1 + 5];
-              var20_ref_float__[var29_intLifetime1 + 5] = var30Lifetime1Lifetime2;
-              var30Lifetime1Lifetime3 = var20_ref_float__[var28_intLifetime1 + 7];
-              var20_ref_float__[var28_intLifetime1 + 7] = var20_ref_float__[var29_intLifetime1 + 7];
-              var20_ref_float__[var29_intLifetime1 + 7] = var30Lifetime1Lifetime3;
+          for (reverseIndex = 1; reverseIndex < eighthBlockSize - 1; reverseIndex++) {
+            reversedIndex = bitReverse[reverseIndex];
+            if (reverseIndex < reversedIndex) {
+              firstSwapOffset = 8 * reverseIndex;
+              secondSwapOffset = 8 * reversedIndex;
+              swapOne = transformBuffer[firstSwapOffset + 1];
+              transformBuffer[firstSwapOffset + 1] = transformBuffer[secondSwapOffset + 1];
+              transformBuffer[secondSwapOffset + 1] = swapOne;
+              swapThree = transformBuffer[firstSwapOffset + 3];
+              transformBuffer[firstSwapOffset + 3] = transformBuffer[secondSwapOffset + 3];
+              transformBuffer[secondSwapOffset + 3] = swapThree;
+              swapFive = transformBuffer[firstSwapOffset + 5];
+              transformBuffer[firstSwapOffset + 5] = transformBuffer[secondSwapOffset + 5];
+              transformBuffer[secondSwapOffset + 5] = swapFive;
+              swapSeven = transformBuffer[firstSwapOffset + 7];
+              transformBuffer[firstSwapOffset + 7] = transformBuffer[secondSwapOffset + 7];
+              transformBuffer[secondSwapOffset + 7] = swapSeven;
             }
           }
-          for (var26Lifetime2 = 0; var26Lifetime2 < var17_intLifetime3; var26Lifetime2++) {
-            var20_ref_float__[var26Lifetime2] = var20_ref_float__[2 * var26Lifetime2 + 1];
+          for (compactIndex = 0; compactIndex < halfTransformSize; compactIndex++) {
+            transformBuffer[compactIndex] = transformBuffer[2 * compactIndex + 1];
           }
-          for (var26Lifetime3 = 0; var26Lifetime3 < var19; var26Lifetime3++) {
-            var20_ref_float__[blockSize - 1 - 2 * var26Lifetime3] = var20_ref_float__[4 * var26Lifetime3];
-            var20_ref_float__[blockSize - 2 - 2 * var26Lifetime3] = var20_ref_float__[4 * var26Lifetime3 + 1];
-            var20_ref_float__[blockSize - var18_intLifetime1 - 1 - 2 * var26Lifetime3] = var20_ref_float__[4 * var26Lifetime3 + 2];
-            var20_ref_float__[blockSize - var18_intLifetime1 - 2 - 2 * var26Lifetime3] = var20_ref_float__[4 * var26Lifetime3 + 3];
+          for (reorderIndex = 0; reorderIndex < eighthBlockSize; reorderIndex++) {
+            transformBuffer[blockSize - 1 - 2 * reorderIndex] = transformBuffer[4 * reorderIndex];
+            transformBuffer[blockSize - 2 - 2 * reorderIndex] = transformBuffer[4 * reorderIndex + 1];
+            transformBuffer[blockSize - quarterTransformSize - 1 - 2 * reorderIndex] = transformBuffer[4 * reorderIndex + 2];
+            transformBuffer[blockSize - quarterTransformSize - 2 - 2 * reorderIndex] = transformBuffer[4 * reorderIndex + 3];
           }
-          for (var26Lifetime4 = 0; var26Lifetime4 < var19; var26Lifetime4++) {
-            var27Lifetime2 = var23[2 * var26Lifetime4];
-            var28Lifetime2 = var23[2 * var26Lifetime4 + 1];
-            var29Lifetime2 = var20_ref_float__[var17_intLifetime3 + 2 * var26Lifetime4];
-            var30Lifetime2 = var20_ref_float__[var17_intLifetime3 + 2 * var26Lifetime4 + 1];
-            var31Lifetime1 = var20_ref_float__[blockSize - 2 - 2 * var26Lifetime4];
-            var32 = var20_ref_float__[blockSize - 1 - 2 * var26Lifetime4];
-            var33 = var28Lifetime2 * (var29Lifetime2 - var31Lifetime1) + var27Lifetime2 * (var30Lifetime2 + var32);
-            var20_ref_float__[var17_intLifetime3 + 2 * var26Lifetime4] = (var29Lifetime2 + var31Lifetime1 + var33) * 0.5f;
-            var20_ref_float__[blockSize - 2 - 2 * var26Lifetime4] = (var29Lifetime2 + var31Lifetime1 - var33) * 0.5f;
-            var33Lifetime1 = var28Lifetime2 * (var30Lifetime2 + var32) - var27Lifetime2 * (var29Lifetime2 - var31Lifetime1);
-            var20_ref_float__[var17_intLifetime3 + 2 * var26Lifetime4 + 1] = (var30Lifetime2 - var32 + var33Lifetime1) * 0.5f;
-            var20_ref_float__[blockSize - 1 - 2 * var26Lifetime4] = (-var30Lifetime2 + var32 + var33Lifetime1) * 0.5f;
+          for (postRotationIndex = 0; postRotationIndex < eighthBlockSize; postRotationIndex++) {
+            postRotationCosine = trigC[2 * postRotationIndex];
+            postRotationSine = trigC[2 * postRotationIndex + 1];
+            postRotationRealA = transformBuffer[halfTransformSize + 2 * postRotationIndex];
+            postRotationImaginaryA = transformBuffer[halfTransformSize + 2 * postRotationIndex + 1];
+            postRotationRealB = transformBuffer[blockSize - 2 - 2 * postRotationIndex];
+            postRotationImaginaryB = transformBuffer[blockSize - 1 - 2 * postRotationIndex];
+            postRotationMixReal = postRotationSine * (postRotationRealA - postRotationRealB) + postRotationCosine * (postRotationImaginaryA + postRotationImaginaryB);
+            transformBuffer[halfTransformSize + 2 * postRotationIndex] = (postRotationRealA + postRotationRealB + postRotationMixReal) * 0.5f;
+            transformBuffer[blockSize - 2 - 2 * postRotationIndex] = (postRotationRealA + postRotationRealB - postRotationMixReal) * 0.5f;
+            postRotationMixImaginary = postRotationSine * (postRotationImaginaryA + postRotationImaginaryB) - postRotationCosine * (postRotationRealA - postRotationRealB);
+            transformBuffer[halfTransformSize + 2 * postRotationIndex + 1] = (postRotationImaginaryA - postRotationImaginaryB + postRotationMixImaginary) * 0.5f;
+            transformBuffer[blockSize - 1 - 2 * postRotationIndex] = (-postRotationImaginaryA + postRotationImaginaryB + postRotationMixImaginary) * 0.5f;
           }
-          for (var26Lifetime5 = 0; var26Lifetime5 < var18_intLifetime1; var26Lifetime5++) {
-            var20_ref_float__[var26Lifetime5] = var20_ref_float__[2 * var26Lifetime5 + var17_intLifetime3] * var22[2 * var26Lifetime5] + var20_ref_float__[2 * var26Lifetime5 + 1 + var17_intLifetime3] * var22[2 * var26Lifetime5 + 1];
-            var20_ref_float__[var17_intLifetime3 - 1 - var26Lifetime5] = var20_ref_float__[2 * var26Lifetime5 + var17_intLifetime3] * var22[2 * var26Lifetime5 + 1] - var20_ref_float__[2 * var26Lifetime5 + 1 + var17_intLifetime3] * var22[2 * var26Lifetime5];
+          for (finalRotationIndex = 0; finalRotationIndex < quarterTransformSize; finalRotationIndex++) {
+            transformBuffer[finalRotationIndex] = transformBuffer[2 * finalRotationIndex + halfTransformSize] * trigB[2 * finalRotationIndex] + transformBuffer[2 * finalRotationIndex + 1 + halfTransformSize] * trigB[2 * finalRotationIndex + 1];
+            transformBuffer[halfTransformSize - 1 - finalRotationIndex] = transformBuffer[2 * finalRotationIndex + halfTransformSize] * trigB[2 * finalRotationIndex + 1] - transformBuffer[2 * finalRotationIndex + 1 + halfTransformSize] * trigB[2 * finalRotationIndex];
           }
-          for (var26Lifetime6 = 0; var26Lifetime6 < var18_intLifetime1; var26Lifetime6++) {
-            var20_ref_float__[blockSize - var18_intLifetime1 + var26Lifetime6] = -var49[var26Lifetime6];
+          for (copyTailIndex = 0; copyTailIndex < quarterTransformSize; copyTailIndex++) {
+            transformBuffer[blockSize - quarterTransformSize + copyTailIndex] = -transformBufferSource[copyTailIndex];
           }
-          for (var26Lifetime7 = 0; var26Lifetime7 < var18_intLifetime1; var26Lifetime7++) {
-            var20_ref_float__[var26Lifetime7] = var20_ref_float__[var18_intLifetime1 + var26Lifetime7];
+          for (copyHeadIndex = 0; copyHeadIndex < quarterTransformSize; copyHeadIndex++) {
+            transformBuffer[copyHeadIndex] = transformBuffer[quarterTransformSize + copyHeadIndex];
           }
-          for (var26Lifetime8 = 0; var26Lifetime8 < var18_intLifetime1; var26Lifetime8++) {
-            var20_ref_float__[var18_intLifetime1 + var26Lifetime8] = -var20_ref_float__[var18_intLifetime1 - var26Lifetime8 - 1];
+          for (reflectHeadIndex = 0; reflectHeadIndex < quarterTransformSize; reflectHeadIndex++) {
+            transformBuffer[quarterTransformSize + reflectHeadIndex] = -transformBuffer[quarterTransformSize - reflectHeadIndex - 1];
           }
-          for (var26Lifetime9 = 0; var26Lifetime9 < var18_intLifetime1; var26Lifetime9++) {
-            var20_ref_float__[var17_intLifetime3 + var26Lifetime9] = var20_ref_float__[blockSize - var26Lifetime9 - 1];
+          for (reflectTailIndex = 0; reflectTailIndex < quarterTransformSize; reflectTailIndex++) {
+            transformBuffer[halfTransformSize + reflectTailIndex] = transformBuffer[blockSize - reflectTailIndex - 1];
           }
-          for (var26Lifetime10 = leftWindowStart; var26Lifetime10 < leftWindowEnd; var26Lifetime10++) {
-            var27Lifetime3 = (float)Math.sin(((double)(var26Lifetime10 - leftWindowStart) + 0.5) / (double)leftWindowSize * 0.5 * 3.141592653589793);
-            transformScratch[var26Lifetime10] = transformScratch[var26Lifetime10] * (float)Math.sin(1.5707963267948966 * (double)var27Lifetime3 * (double)var27Lifetime3);
+          for (leftWindowIndex = leftWindowStart; leftWindowIndex < leftWindowEnd; leftWindowIndex++) {
+            leftWindowSine = (float)Math.sin(((double)(leftWindowIndex - leftWindowStart) + 0.5) / (double)leftWindowSize * 0.5 * 3.141592653589793);
+            transformScratch[leftWindowIndex] = transformScratch[leftWindowIndex] * (float)Math.sin(1.5707963267948966 * (double)leftWindowSine * (double)leftWindowSine);
           }
-          for (var26Lifetime11 = rightWindowStart; var26Lifetime11 < rightWindowEnd; var26Lifetime11++) {
-            var27Lifetime4 = (float)Math.sin(((double)(var26Lifetime11 - rightWindowStart) + 0.5) / (double)rightWindowSize * 0.5 * 3.141592653589793 + 1.5707963267948966);
-            transformScratch[var26Lifetime11] = transformScratch[var26Lifetime11] * (float)Math.sin(1.5707963267948966 * (double)var27Lifetime4 * (double)var27Lifetime4);
+          for (rightWindowIndex = rightWindowStart; rightWindowIndex < rightWindowEnd; rightWindowIndex++) {
+            rightWindowSine = (float)Math.sin(((double)(rightWindowIndex - rightWindowStart) + 0.5) / (double)rightWindowSize * 0.5 * 3.141592653589793 + 1.5707963267948966);
+            transformScratch[rightWindowIndex] = transformScratch[rightWindowIndex] * (float)Math.sin(1.5707963267948966 * (double)rightWindowSine * (double)rightWindowSine);
           }
         }
-        var17 = null;
+        overlapOutputReference = null;
         if (this.previousBlockSize > 0) {
-          var18_intLifetime2 = this.previousBlockSize + blockSize >> 2;
-          var50 = new float[var18_intLifetime2];
-          var46 = var50;
-          var40 = var46;
-          var17 = var40;
+          overlapLength = this.previousBlockSize + blockSize >> 2;
+          overlapBuffer = new float[overlapLength];
+          overlapBufferAlias = overlapBuffer;
+          overlapOutput = overlapBufferAlias;
+          overlapOutputReference = overlapOutput;
           if (!this.previousBlockSilent) {
-            for (var19Lifetime1 = 0; var19Lifetime1 < this.previousRightWindowSize; var19Lifetime1++) {
-              var20 = (this.previousBlockSize >> 1) + var19Lifetime1;
-              var40[var19Lifetime1] = var40[var19Lifetime1] + this.previousBlock[var20];
+            for (previousOverlapIndex = 0; previousOverlapIndex < this.previousRightWindowSize; previousOverlapIndex++) {
+              previousOverlapSampleIndex = (this.previousBlockSize >> 1) + previousOverlapIndex;
+              overlapOutput[previousOverlapIndex] = overlapOutput[previousOverlapIndex] + this.previousBlock[previousOverlapSampleIndex];
             }
           }
           if (silent == 0) {
-            for (var19Lifetime1Lifetime1 = leftWindowStart; var19Lifetime1Lifetime1 < blockSize >> 1; var19Lifetime1Lifetime1++) {
-              var20Lifetime1 = var50.length - (blockSize >> 1) + var19Lifetime1Lifetime1;
-              var40[var20Lifetime1] = var40[var20Lifetime1] + transformScratch[var19Lifetime1Lifetime1];
+            for (currentOverlapIndex = leftWindowStart; currentOverlapIndex < blockSize >> 1; currentOverlapIndex++) {
+              currentOverlapOutputIndex = overlapBuffer.length - (blockSize >> 1) + currentOverlapIndex;
+              overlapOutput[currentOverlapOutputIndex] = overlapOutput[currentOverlapOutputIndex] + transformScratch[currentOverlapIndex];
             }
           }
         }
-        var18 = this.previousBlock;
+        oldPreviousBlock = this.previousBlock;
         this.previousBlock = transformScratch;
-        transformScratch = var18;
+        transformScratch = oldPreviousBlock;
         this.previousBlockSize = blockSize;
         this.previousRightWindowSize = rightWindowEnd - (blockSize >> 1);
-        stackIn_113_1 = (silent != 0);
-        this.previousBlockSilent = stackIn_113_1;
-        return (float[]) (var17);
+        blockSilentFlag = (silent != 0);
+        this.previousBlockSilent = blockSilentFlag;
+        return (float[]) (overlapOutputReference);
     }
 
     public static void releaseSetup() {
@@ -617,130 +617,130 @@ final class VorbisSample extends IntrusiveNode {
     }
 
     private final static boolean ensureSetup(ResourceArchive archive) {
-        byte[] var1 = null;
+        byte[] encodedSetup = null;
         if (!setupInitialized) {
-          var1 = archive.getFile((byte) 49, 0, 0);
-          if (var1 == null) {
+          encodedSetup = archive.getFile((byte) 49, 0, 0);
+          if (encodedSetup == null) {
             return false;
           }
-          VorbisSample.decodeSetup(var1);
+          VorbisSample.decodeSetup(encodedSetup);
         }
         return true;
     }
 
     final PcmSample decodeAllToPcm() {
-        int var3 = 0;
-        int var6 = 0;
-        int incrementValue$0 = 0;
-        byte[] var1;
-        int var2;
-        float[] var4;
-        int var5;
-        int var7;
+        int packetIndex = 0;
+        int sampleIndex = 0;
+        int writeIndex = 0;
+        byte[] samples;
+        int outputPosition;
+        float[] packetSamples;
+        int outputCount;
+        int unsignedSample;
         this.previousBlockSize = 0;
         this.previousBlock = new float[largeBlockSize];
-        var1 = new byte[this.sampleCount];
-        var2 = 0;
-        for (var3 = 0; var3 < this.packets.length; var3++) {
-          var4 = this.decodePacket(var3);
-          if (var4 != null) {
-            var5 = var4.length;
-            if (var5 > this.sampleCount - var2) {
-              var5 = this.sampleCount - var2;
+        samples = new byte[this.sampleCount];
+        outputPosition = 0;
+        for (packetIndex = 0; packetIndex < this.packets.length; packetIndex++) {
+          packetSamples = this.decodePacket(packetIndex);
+          if (packetSamples != null) {
+            outputCount = packetSamples.length;
+            if (outputCount > this.sampleCount - outputPosition) {
+              outputCount = this.sampleCount - outputPosition;
             }
-            for (var6 = 0; var6 < var5; var6++) {
-              var7 = (int)(128.0f + var4[var6] * 128.0f);
-              if ((var7 & -256) != 0) {
-                var7 = ~var7 >> 31;
+            for (sampleIndex = 0; sampleIndex < outputCount; sampleIndex++) {
+              unsignedSample = (int)(128.0f + packetSamples[sampleIndex] * 128.0f);
+              if ((unsignedSample & -256) != 0) {
+                unsignedSample = ~unsignedSample >> 31;
               }
-              incrementValue$0 = var2;
-              var2++;
-              var1[incrementValue$0] = (byte)(var7 - 128);
+              writeIndex = outputPosition;
+              outputPosition++;
+              samples[writeIndex] = (byte)(unsignedSample - 128);
             }
           }
         }
         this.previousBlock = null;
-        return new PcmSample(this.sampleRate, var1, this.loopStart, this.loopEnd, this.loopModeFlag);
+        return new PcmSample(this.sampleRate, samples, this.loopStart, this.loopEnd, this.loopModeFlag);
     }
 
     final static VorbisSample loadByName(ResourceArchive archive, String groupName, String fileName) {
         try {
-          VorbisSample var4_ref = null;
+          VorbisSample sample = null;
           if (!VorbisSample.ensureSetup(archive)) {
             archive.ensureFileAvailableByName(-88, fileName, groupName);
             return null;
           }
-          byte[] var3 = archive.getFileByName(fileName, 46, groupName);
-          if (var3 == null) {
+          byte[] encodedSample = archive.getFileByName(fileName, 46, groupName);
+          if (encodedSample == null) {
             return null;
           }
-          Object var4 = null;
+          Object unusedSampleReference = null;
           try {
-            var4_ref = new VorbisSample(var3);
-          } catch (IOException iOException) {
-            iOException.printStackTrace();
+            sample = new VorbisSample(encodedSample);
+          } catch (IOException containerError) {
+            containerError.printStackTrace();
           }
-          return var4_ref;
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+          return sample;
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 
     private final void decodePacketContainer(byte[] encodedSample) throws IOException {
-        int var4 = 0;
-        int var5 = 0;
-        int var6_int = 0;
-        byte[] var6 = null;
-        PacketBuffer var2 = new PacketBuffer(encodedSample);
-        this.sampleRate = var2.readInt(1);
-        this.sampleCount = var2.readInt(1);
-        this.loopStart = var2.readInt(1);
-        this.loopEnd = var2.readInt(1);
+        int packetIndex = 0;
+        int packetLength = 0;
+        int lengthByte = 0;
+        byte[] packet = null;
+        PacketBuffer buffer = new PacketBuffer(encodedSample);
+        this.sampleRate = buffer.readInt(1);
+        this.sampleCount = buffer.readInt(1);
+        this.loopStart = buffer.readInt(1);
+        this.loopEnd = buffer.readInt(1);
         if (this.loopEnd < 0) {
           this.loopEnd = ~this.loopEnd;
           this.loopModeFlag = true;
         }
-        int var3 = var2.readInt(1);
-        if (var3 < 0) {
+        int packetCount = buffer.readInt(1);
+        if (packetCount < 0) {
           throw new IOException();
         }
-        this.packets = new byte[var3][];
-        for (var4 = 0; var4 < var3; var4++) {
-          var5 = 0;
+        this.packets = new byte[packetCount][];
+        for (packetIndex = 0; packetIndex < packetCount; packetIndex++) {
+          packetLength = 0;
           do {
-            var6_int = var2.readUnsignedByte(0);
-            var5 = var5 + var6_int;
-          } while (var6_int >= 255);
-          var6 = new byte[var5];
-          var2.readBytes(0, var5, 0, var6);
-          this.packets[var4] = var6;
+            lengthByte = buffer.readUnsignedByte(0);
+            packetLength = packetLength + lengthByte;
+          } while (lengthByte >= 255);
+          packet = new byte[packetLength];
+          buffer.readBytes(0, packetLength, 0, packet);
+          this.packets[packetIndex] = packet;
         }
     }
 
     final static VorbisSample load(ResourceArchive archive, int groupId, int fileId) {
         try {
-          VorbisSample var4_ref = null;
+          VorbisSample sample = null;
           if (!VorbisSample.ensureSetup(archive)) {
             archive.ensureFileAvailable(groupId, fileId, 0);
             return null;
           }
-          byte[] var3 = archive.getFile((byte) 69, fileId, groupId);
-          if (var3 == null) {
+          byte[] encodedSample = archive.getFile((byte) 69, fileId, groupId);
+          if (encodedSample == null) {
             return null;
           }
-          Object var4 = null;
+          Object unusedSampleReference = null;
           try {
-            var4_ref = new VorbisSample(var3);
-          } catch (IOException iOException) {
-            iOException.printStackTrace();
+            sample = new VorbisSample(encodedSample);
+          } catch (IOException containerError) {
+            containerError.printStackTrace();
           }
-          return var4_ref;
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+          return sample;
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 

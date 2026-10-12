@@ -44,7 +44,7 @@ final class lq {
         }
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int integerPower(int base, int exponent, byte obfuscationGuard) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -53,25 +53,25 @@ final class lq {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = 1;
-          while (param1 > 1) {
-            if (0 != (1 & param1)) {
-              var3_int = var3_int * param0;
+          while (exponent > 1) {
+            if (0 != (1 & exponent)) {
+              var3_int = var3_int * base;
             }
-            param0 = param0 * param0;
-            param1 = param1 >> 1;
+            base = base * base;
+            exponent = exponent >> 1;
           }
-          if (param2 != 21) {
-            lq.a(-54, -42, (byte) -105);
+          if (obfuscationGuard != 21) {
+            lq.integerPower(-54, -42, (byte) -105);
           }
-          if (param1 != 1) {
+          if (exponent != 1) {
             return var3_int;
           }
-          stackIn_13_0 = var3_int * param0;
+          stackIn_13_0 = var3_int * base;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "lq.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "lq.B(" + base + ',' + exponent + ',' + obfuscationGuard + ')');
         }
     }
 

@@ -96,33 +96,33 @@ abstract class wl extends tj {
         TutorialLayout.field_b.e(this.x + param0, this.y + param1, this.field_H);
     }
 
-    final static int b(int param0, int param1) {
+    final static int bitLength(int value, int obfuscationGuard) {
         int var2 = 0;
-        if (param0 < 0 ||
-          param0 >= 65536) {
-          param0 = param0 >>> 16;
+        if (value < 0 ||
+          value >= 65536) {
+          value = value >>> 16;
           var2 += 16;
         }
-        if (param0 >= 256) {
-          param0 = param0 >>> 8;
+        if (value >= 256) {
+          value = value >>> 8;
           var2 += 8;
         }
-        if (param0 >= 16) {
-          param0 = param0 >>> 4;
+        if (value >= 16) {
+          value = value >>> 4;
           var2 += 4;
         }
-        if (param1 != -13337) {
+        if (obfuscationGuard != -13337) {
           field_K = (ClientUiComponent) null;
         }
-        if (param0 >= 4) {
-          param0 = param0 >>> 2;
+        if (value >= 4) {
+          value = value >>> 2;
           var2 += 2;
         }
-        if (param0 >= 1) {
+        if (value >= 1) {
           var2++;
-          param0 = param0 >>> 1;
+          value = value >>> 1;
         }
-        return var2 + param0;
+        return var2 + value;
     }
 
     boolean a(byte param0) {

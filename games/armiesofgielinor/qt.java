@@ -15,11 +15,11 @@ final class qt {
         field_c = null;
         field_b = null;
         if (param0 <= 89) {
-          qt.a(70, 71, (byte) -22);
+          qt.reverseBits(70, 71, (byte) -22);
         }
     }
 
-    final static int a(int param0, int param1, byte param2) {
+    final static int reverseBits(int value, int bitCount, byte obfuscationGuard) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -28,12 +28,12 @@ final class qt {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = 0;
-          while (param1 > 0) {
-            var3_int = var3_int << 1 | param0 & 1;
-            param1--;
-            param0 = param0 >>> 1;
+          while (bitCount > 0) {
+            var3_int = var3_int << 1 | value & 1;
+            bitCount--;
+            value = value >>> 1;
           }
-          if (param2 > -49) {
+          if (obfuscationGuard > -49) {
             field_b = (String) null;
           }
           stackIn_7_0 = var3_int;
@@ -41,7 +41,7 @@ final class qt {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "qt.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "qt.A(" + value + ',' + bitCount + ',' + obfuscationGuard + ')');
         }
     }
 

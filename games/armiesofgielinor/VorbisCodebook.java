@@ -111,7 +111,7 @@ final class VorbisCodebook {
 
     private final static int lookupValueCount(int entryCount, int dimensions) {
         int valueCount = 0;
-        for (valueCount = (int)Math.pow((double)entryCount, 1.0 / (double)dimensions) + 1; lq.a(valueCount, dimensions, (byte) 21) > entryCount; valueCount--) {
+        for (valueCount = (int)Math.pow((double)entryCount, 1.0 / (double)dimensions) + 1; lq.integerPower(valueCount, dimensions, (byte) 21) > entryCount; valueCount--) {
         }
         return valueCount;
     }
@@ -163,7 +163,7 @@ final class VorbisCodebook {
           lengthCursorOrSparseFlag = 0;
           currentCodeLength = VorbisSample.readBits(5) + 1;
           while (lengthCursorOrSparseFlag < this.entryCount) {
-            lengthRunCount = VorbisSample.readBits(wl.b(this.entryCount - lengthCursorOrSparseFlag, -13337));
+            lengthRunCount = VorbisSample.readBits(wl.bitLength(this.entryCount - lengthCursorOrSparseFlag, -13337));
             for (runEntryIndex = 0; runEntryIndex < lengthRunCount; runEntryIndex++) {
               lengthEntryIndex = lengthCursorOrSparseFlag;
               lengthCursorOrSparseFlag++;
