@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ho {
-    int field_c;
+final class CampaignResult {
+    int damageTaken;
     static String field_d;
     static je field_a;
-    int field_b;
+    int turnsTaken;
 
     final static void a(int param0) {
         int var1 = 20 % ((param0 + 6) / 45);
@@ -14,7 +14,7 @@ final class ho {
     }
 
     public final String toString() {
-        return "(turnsTaken: " + this.field_b + " damageTaken: " + this.field_c + ")";
+        return "(turnsTaken: " + this.turnsTaken + " damageTaken: " + this.damageTaken + ")";
     }
 
     final static void a(java.applet.Applet param0, byte param1) {
@@ -40,7 +40,7 @@ final class ho {
               return;
             }
             var3 = (java.applet.Applet) null;
-            ho.a((java.applet.Applet) null, (byte) -10);
+            CampaignResult.a((java.applet.Applet) null, (byte) -10);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -52,7 +52,7 @@ final class ho {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -63,7 +63,7 @@ final class ho {
 
     public static void a(byte param0) {
         if (param0 >= -113) {
-          ho.a(3);
+          CampaignResult.a(3);
           field_d = null;
           field_a = null;
           return;
@@ -72,9 +72,9 @@ final class ho {
         field_a = null;
     }
 
-    ho(int param0, int param1) {
-        this.field_b = param0;
-        this.field_c = param1;
+    CampaignResult(int turnsTaken, int damageTaken) {
+        this.turnsTaken = turnsTaken;
+        this.damageTaken = damageTaken;
     }
 
     static {

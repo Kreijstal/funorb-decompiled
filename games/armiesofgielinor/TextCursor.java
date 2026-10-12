@@ -74,7 +74,7 @@ final class TextCursor {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class TextCursor {
           this.text = text;
           this.length = this.text.length();
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "mt.<init>(" + (text != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "mt.<init>(" + (text != null ? "{...}" : "null") + ')');
         }
     }
 

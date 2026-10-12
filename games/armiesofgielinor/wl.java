@@ -47,7 +47,7 @@ abstract class wl extends tj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -224,7 +224,7 @@ abstract class wl extends tj {
           this.field_L = false;
           this.field_H = 0;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -242,7 +242,7 @@ abstract class wl extends tj {
           }
           kb.field_A = 0;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "wl.GA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "wl.GA(" + param0 + ')');
         }
     }
 

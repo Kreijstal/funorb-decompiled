@@ -39,7 +39,7 @@ final class cj extends mg {
           }
           this.field_p.put(param1);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "cj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

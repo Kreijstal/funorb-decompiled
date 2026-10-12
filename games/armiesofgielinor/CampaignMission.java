@@ -13,18 +13,18 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
     private int field_A;
     String description;
     int[] rewardIds;
-    int gameType;
+    int scoreTurnTarget;
     int field_u;
     int[] participantIds;
     int[] neighborMissionIds;
     static el field_I;
     int mapSizeSetting;
     int missionId;
-    cf field_G;
+    CampaignDefinition campaign;
     kl field_H;
     int difficulty;
     int playerSlot;
-    int godSetting;
+    int scoreDamageTarget;
     private int[] teamAssignments;
     String name;
     private int mapResourceId;
@@ -129,12 +129,12 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                                     if (0 >= encodedLength) {
                                       return;
                                     }
-                                    this.gameType = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                                    this.scoreTurnTarget = (int)tn.readTaggedInteger(false, encodedLength, packet);
                                     return;
                                   }
                                   if (fieldName.equals("gd")) {
                                     if (encodedLength > 0) {
-                                      this.godSetting = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                                      this.scoreDamageTarget = (int)tn.readTaggedInteger(false, encodedLength, packet);
                                       return;
                                     }
                                   } else {
@@ -230,7 +230,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
           } else {
             stackIn_95_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_91_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -258,29 +258,29 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         if (obfuscationGuard < 86) {
           CampaignMission.c((byte) 8);
         }
-        byte[] var3 = this.field_H.a((byte) 76, this.mapResourceId, this.field_H.a(gk.field_O[this.field_G.field_r], 102));
+        byte[] var3 = this.field_H.a((byte) 76, this.mapResourceId, this.field_H.a(gk.field_O[this.campaign.campaignIndex], 102));
         byte[] var2 = var3;
         return new MapLayout(this.missionId, var3);
     }
 
-    final String[] e(int param0) {
+    final String[] getParticipantNames(int obfuscationGuard) {
         int var3 = 0;
         String[] var2;
-        sd var4;
+        CampaignParticipant var4;
         int var5;
         String[] var6;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param0 != -23209) {
+        if (obfuscationGuard != -23209) {
           return (String[]) null;
         }
         var6 = new String[this.participantIds.length];
         var2 = var6;
         for (var3 = 0; var6.length > var3; var3++) {
           if (var3 == this.playerSlot) {
-            var6[var3] = this.field_G.field_l;
+            var6[var3] = this.campaign.localPlayerName;
           } else {
-            var4 = this.field_G.field_q[this.participantIds[var3]];
-            var6[var3] = var4.field_u;
+            var4 = this.campaign.participants[this.participantIds[var3]];
+            var6[var3] = var4.displayName;
           }
         }
         return var2;
@@ -353,7 +353,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

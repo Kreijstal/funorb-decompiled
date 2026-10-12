@@ -21,7 +21,7 @@ final class StateChangeMarker extends PreparedAction {
             field_s = (String[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ss.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ss.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 

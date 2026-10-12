@@ -42,7 +42,7 @@ final class AnimationSequence {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "qb.E(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "qb.E(" + param0 + ')');
         }
     }
 
@@ -162,7 +162,7 @@ final class AnimationSequence {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(opcode).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(opcode).append(')').toString());
         }
     }
 
@@ -211,7 +211,7 @@ final class AnimationSequence {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -278,7 +278,7 @@ final class AnimationSequence {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

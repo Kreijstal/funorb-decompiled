@@ -43,7 +43,7 @@ abstract class nl extends kb implements gw {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ abstract class nl extends kb implements gw {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ abstract class nl extends kb implements gw {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -152,7 +152,7 @@ abstract class nl extends kb implements gw {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -199,7 +199,7 @@ abstract class nl extends kb implements gw {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -238,7 +238,7 @@ abstract class nl extends kb implements gw {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -321,11 +321,11 @@ abstract class nl extends kb implements gw {
           ks.field_u[4] = io.field_p;
           nf.field_Kb = new je(0L, (je) null);
           rj.field_F = new je(0L, te.field_p, su.field_b);
-          cm.field_a = new je(0L, br.field_e, rh.field_g);
+          CampaignProgress.field_a = new je(0L, br.field_e, rh.field_g);
           MapTile.field_f = new dn(0L, new je(0L, (je) null), cb.field_c, ri.field_b);
           nf.field_Kb.a(rj.field_F, 79);
           if (fh.field_c) {
-            nf.field_Kb.a(cm.field_a, 69);
+            nf.field_Kb.a(CampaignProgress.field_a, 69);
           }
           nf.field_Kb.a(MapTile.field_f, 59);
           MapTile.field_f.field_Nb.a(0, eq.field_h);
@@ -339,10 +339,10 @@ abstract class nl extends kb implements gw {
           tg.field_n = new je(0L, SummonAction.field_y, nr.field_d.toUpperCase());
           of.field_Lb = new je(0L, sh.field_m);
           r.field_v = new je(0L, te.field_p, IntrusiveNode.field_a);
-          ek.field_c = new je(0L, ho.field_a, wb.field_c);
-          CombatViewTransition.field_p = new je(0L, ho.field_a, fk.field_g);
-          bs.field_a = new je(0L, ho.field_a, fw.field_H);
-          SphinxActionRequest.field_A = new je(0L, ho.field_a, hs.field_D);
+          ek.field_c = new je(0L, CampaignResult.field_a, wb.field_c);
+          CombatViewTransition.field_p = new je(0L, CampaignResult.field_a, fk.field_g);
+          bs.field_a = new je(0L, CampaignResult.field_a, fw.field_H);
+          SphinxActionRequest.field_A = new je(0L, CampaignResult.field_a, hs.field_D);
           wl.field_K = new je(0L, br.field_e, RevivalEvent.field_B);
           CipherPacketBuffer.field_x = new dn(0L, new je(0L, (je) null), cb.field_c, ri.field_b);
           fj.field_d = new je(0L, nd.field_a, l.field_f.toUpperCase());
@@ -575,7 +575,7 @@ abstract class nl extends kb implements gw {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -661,7 +661,7 @@ abstract class nl extends kb implements gw {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -704,7 +704,7 @@ abstract class nl extends kb implements gw {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -717,7 +717,7 @@ abstract class nl extends kb implements gw {
           cg.field_c.addLast((byte) -119, (IntrusiveNode) (param2));
           ot.a((byte) 112, param1, param2);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "nl.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "nl.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -809,7 +809,7 @@ abstract class nl extends kb implements gw {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -836,7 +836,7 @@ abstract class nl extends kb implements gw {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -863,7 +863,7 @@ abstract class nl extends kb implements gw {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

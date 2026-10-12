@@ -25,11 +25,11 @@ final class CombatSandbox {
         this.field_l[1] = new r(this.field_b, this.field_f, this.field_m, this.field_i, af.field_a, 0, 0);
         this.field_l[2] = new r(this.field_b, this.field_f, this.field_m, this.field_i, ts.field_d, 0, 0);
         this.field_l[3] = new r(this.field_b, this.field_f, this.field_m, this.field_i, ts.field_d, 0, 0);
-        this.field_l[4] = new r(this.field_b, this.field_f, this.field_m, this.field_i, hm.field_i, 0, 0);
+        this.field_l[4] = new r(this.field_b, this.field_f, this.field_m, this.field_i, PlayerProfile.field_i, 0, 0);
         if (param0 != -49) {
           this.field_a = (ia) null;
         }
-        this.field_l[5] = new r(this.field_b, this.field_f, this.field_m, this.field_i, hm.field_i, 0, 0);
+        this.field_l[5] = new r(this.field_b, this.field_f, this.field_m, this.field_i, PlayerProfile.field_i, 0, 0);
     }
 
     private final int a(int param0, byte param1) {
@@ -263,7 +263,7 @@ final class CombatSandbox {
           rq.a((byte) -56);
           SoftwareRaster.a(param0.field_B, param0.field_A, param0.field_x);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "vn.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "vn.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -323,7 +323,7 @@ final class CombatSandbox {
           this.b((byte) -49);
           this.c((byte) -103);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "vn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "vn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

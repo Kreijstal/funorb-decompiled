@@ -53,7 +53,7 @@ final class SummonEvent extends GameEvent {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class SummonEvent extends GameEvent {
           }
           fl.a(battlefield, obfuscationGuard + 26537);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "mb.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "mb.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class SummonEvent extends GameEvent {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(obfuscationGuard).append(',').append(detached).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(obfuscationGuard).append(',').append(detached).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class SummonEvent extends GameEvent {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

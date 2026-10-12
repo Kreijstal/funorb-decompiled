@@ -46,7 +46,7 @@ final class oq extends wv {
           param1.addKeyListener(va.field_w);
           param1.addFocusListener(va.field_w);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "oq.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "oq.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

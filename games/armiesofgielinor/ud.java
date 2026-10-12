@@ -104,7 +104,7 @@ final class ud extends sf implements he {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class ud extends sf implements he {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = null;
-          if (param1 != hm.field_h) {
+          if (param1 != PlayerProfile.field_h) {
             if (mp.field_Mb == param1) {
               this.field_w = this.field_w + 10;
               var3 = MoveAttackRequest.field_y;
@@ -162,7 +162,7 @@ final class ud extends sf implements he {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ig.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class ud extends sf implements he {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

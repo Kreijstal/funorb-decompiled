@@ -754,7 +754,7 @@ final class BattleCharacter {
         }
     }
 
-    final static CampaignMission a(cf param0, CipherPacketBuffer param1, kl param2, byte param3) {
+    final static CampaignMission a(CampaignDefinition param0, CipherPacketBuffer param1, kl param2, byte param3) {
         CampaignMission var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -770,7 +770,7 @@ final class BattleCharacter {
         try {
           var5 = -81 % ((param3 - 51) / 60);
           var4 = na.a(param1, 44);
-          var4.field_G = param0;
+          var4.campaign = param0;
           var4.field_H = param2;
           stackIn_1_0 = var4;
           return stackIn_1_0;
@@ -796,7 +796,7 @@ final class BattleCharacter {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 

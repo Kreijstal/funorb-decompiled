@@ -200,7 +200,7 @@ final class ManaEvent extends GameEvent {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -250,7 +250,7 @@ final class ManaEvent extends GameEvent {
           }
           fl.a(battlefield, -120);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "vp.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "vp.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -284,7 +284,7 @@ final class ManaEvent extends GameEvent {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -319,7 +319,7 @@ final class ManaEvent extends GameEvent {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

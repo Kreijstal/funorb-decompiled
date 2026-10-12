@@ -29,7 +29,7 @@ final class qp extends dr {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class qp extends dr {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -563,7 +563,7 @@ final class qp extends dr {
           } else {
             stackIn_195_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_191_0), ((StringBuilder) (Object) stackIn_194_1).append(stackIn_195_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_191_0), ((StringBuilder) (Object) stackIn_194_1).append(stackIn_195_2).append(')').toString());
         }
     }
 

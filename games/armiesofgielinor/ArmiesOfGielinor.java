@@ -143,7 +143,7 @@ public final class ArmiesOfGielinor extends wf {
                         ck.b(-104);
                       }
                       if (var2_int == 2) {
-                        ho.a((java.applet.Applet) (this), (byte) -3);
+                        CampaignResult.a((java.applet.Applet) (this), (byte) -3);
                       }
                     }
                     this.d(0, true);
@@ -160,7 +160,7 @@ public final class ArmiesOfGielinor extends wf {
                     ck.b(-104);
                   }
                   if (var2_int == 2) {
-                    ho.a((java.applet.Applet) (this), (byte) -3);
+                    CampaignResult.a((java.applet.Applet) (this), (byte) -3);
                   }
                 }
                 this.d(0, true);
@@ -265,7 +265,7 @@ public final class ArmiesOfGielinor extends wf {
                 }
                 if (nm.field_o == 75) {
                   var2 = mg.field_e;
-                  EffectPresentation.a(ah.field_a.field_a, (PacketBuffer) (var2), false, ah.field_a.field_b);
+                  EffectPresentation.readCoatOfArms(ah.localCoat.parts, (PacketBuffer) (var2), false, ah.localCoat.colourIndices);
                   im.field_w = true;
                   continue;
                 }
@@ -287,7 +287,7 @@ public final class ArmiesOfGielinor extends wf {
                   continue;
                 }
                 if (nm.field_o == 80) {
-                  pg.field_d = new hm(mg.field_e, true);
+                  pg.playerProfile = new PlayerProfile(mg.field_e, true);
                   ve.field_b = true;
                   continue;
                 }
@@ -487,8 +487,8 @@ public final class ArmiesOfGielinor extends wf {
                     ((GameplayController) (var2)).battlefield.field_G = var4_ref_int__;
                     if (0 <= ((GameplayController) (var2)).field_q) {
                       ((GameplayController) (var2)).field_Gb = ((GameplayController) (var2)).battlefield.field_rb[((GameplayController) (var2)).field_q] * 768 >> 8;
-                      if (!(((GameplayController) (var2)).field_Gb <= pg.field_d.field_j)) {
-                        ((GameplayController) (var2)).field_Gb = pg.field_d.field_j;
+                      if (!(((GameplayController) (var2)).field_Gb <= pg.playerProfile.progressionCredit)) {
+                        ((GameplayController) (var2)).field_Gb = pg.playerProfile.progressionCredit;
                       }
                     } else {
                       ((GameplayController) (var2)).field_Gb = 0;
@@ -577,11 +577,11 @@ public final class ArmiesOfGielinor extends wf {
                   if (!fj.field_c) {
                     CipherPacketBuffer.a(false, 0, 1, 0);
                     if (var11 != 0) {
-                      pr.field_i = g.field_d;
+                      pr.field_i = ContextualRuntimeException.field_d;
                       CipherPacketBuffer.a(false, 11, 1, 0);
                     }
                   } else {
-                    pr.field_i = g.field_d;
+                    pr.field_i = ContextualRuntimeException.field_d;
                     CipherPacketBuffer.a(false, 11, 1, 0);
                   }
                   ut.i((byte) 126);
@@ -625,7 +625,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (var2), "ArmiesOfGielinor.QA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) (var2), "ArmiesOfGielinor.QA(" + param0 + ')');
         }
     }
 
@@ -648,7 +648,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ArmiesOfGielinor.OA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ArmiesOfGielinor.OA(" + param0 + ')');
         }
     }
 
@@ -688,7 +688,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ArmiesOfGielinor.KA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ArmiesOfGielinor.KA(" + param0 + ')');
         }
     }
 
@@ -696,7 +696,7 @@ public final class ArmiesOfGielinor extends wf {
         try {
           this.a((byte) 31, 25, "armiesofgielinor");
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.init()");
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.init()");
         }
     }
 
@@ -1001,7 +1001,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ArmiesOfGielinor.EA(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ArmiesOfGielinor.EA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1088,7 +1088,7 @@ public final class ArmiesOfGielinor extends wf {
             }
           }
           if (hi.field_j >= 2 &&
-            ln.field_e) {
+            CoatOfArms.field_e) {
             rs.field_n.b(Integer.toString(UnitModelPreview.field_i), 8, 23, 16777215, 1);
             rs.field_n.a((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024L + "kB", 500, 100, 16777215, 1);
             rs.field_n.a(Runtime.getRuntime().totalMemory() / 1024L + "kB", 500, 120, 16777215, 1);
@@ -1099,7 +1099,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "ArmiesOfGielinor.DA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ArmiesOfGielinor.DA(" + param0 + ')');
         }
     }
 
@@ -1119,7 +1119,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "ArmiesOfGielinor.MA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "ArmiesOfGielinor.MA(" + param0 + ')');
         }
     }
 
@@ -1153,7 +1153,7 @@ public final class ArmiesOfGielinor extends wf {
           fe.b();
           vi.a(true);
           wf.h(71);
-          g.c(1);
+          ContextualRuntimeException.c(1);
           iv.d(105);
           fa.a((byte) 100);
           pq.a((byte) -79);
@@ -1175,10 +1175,10 @@ public final class ArmiesOfGielinor extends wf {
           jp.a((byte) -82);
           rd.a(param0 ^ -20000072);
           fj.b((byte) -67);
-          ln.a(false);
+          CoatOfArms.a(false);
           co.a((byte) -117);
           ep.a((byte) 11);
-          hm.b(0);
+          PlayerProfile.b(0);
           sl.a(param0 + 157);
           p.a((byte) -58);
           TutorialController.h(param0 + 71);
@@ -1238,7 +1238,7 @@ public final class ArmiesOfGielinor extends wf {
           eb.a(1);
           da.a(false);
           fm.a(95);
-          cm.a(false);
+          CampaignProgress.a(false);
           MapLayout.a(0);
           db.a(-3);
           pr.a(param0 + 7814);
@@ -1520,8 +1520,8 @@ public final class ArmiesOfGielinor extends wf {
           nt.a((byte) 97);
           vk.a(-4740);
           te.a((byte) -75);
-          cf.a((byte) 9);
-          sd.a((byte) -95);
+          CampaignDefinition.a((byte) 9);
+          CampaignParticipant.a((byte) -95);
           CampaignUnitOverride.a(param0 ^ -10);
           iq.c(param0 ^ -72);
           cq.a(-101);
@@ -1554,7 +1554,7 @@ public final class ArmiesOfGielinor extends wf {
           wd.a(200);
           ad.a((byte) 63);
           fg.a(-22856);
-          ho.a((byte) -116);
+          CampaignResult.a((byte) -116);
           a.a(true);
           pf.b((byte) -49);
           wv.c((byte) -3);
@@ -1595,7 +1595,7 @@ public final class ArmiesOfGielinor extends wf {
           rn.a(false);
           this.field_p = null;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.GA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.GA(" + param0 + ')');
         }
     }
 
@@ -1688,7 +1688,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "ArmiesOfGielinor.FA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ArmiesOfGielinor.FA(" + param0 + ')');
         }
     }
 
@@ -1724,7 +1724,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ArmiesOfGielinor.JA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ArmiesOfGielinor.JA(" + param0 + ')');
         }
     }
 
@@ -1759,7 +1759,7 @@ public final class ArmiesOfGielinor extends wf {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1871,11 +1871,11 @@ public final class ArmiesOfGielinor extends wf {
             stackIn_25_14 = false;
           }
           rd.field_j = new GameplayController(stackIn_20_2, (int) stackIn_20_3, stackIn_20_4, stackIn_20_5, stackIn_20_6, stackIn_20_7, stackIn_21_8, stackIn_24_9, stackIn_24_10, stackIn_24_11, stackIn_24_12, stackIn_24_13, stackIn_25_14, (CampaignMission) null);
-          rd.field_j.battlefield.field_T = new ln[r.field_B];
+          rd.field_j.battlefield.playerCoats = new CoatOfArms[r.field_B];
           rd.field_j.battlefield.field_F = true;
           var5 = 0;
           while (r.field_B > var5) {
-            rd.field_j.battlefield.field_T[var5] = ah.field_a;
+            rd.field_j.battlefield.playerCoats[var5] = ah.localCoat;
             var5++;
             if (var6 != 0) {
               return;
@@ -1886,7 +1886,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3_ref), "ArmiesOfGielinor.HA(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "ArmiesOfGielinor.HA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2232,7 +2232,7 @@ public final class ArmiesOfGielinor extends wf {
           jv.field_b = fk.a("chatbubbles", (byte) -128, iw.field_l, "basic");
           AttackEvent.field_O = GameplayController.a("results_award_badge", (byte) 51, "basic", iw.field_l);
           ih.field_H = (nj) (nh.a("shine", "basic", iw.field_l, false));
-          cf.field_t = pv.a("basic", "statboxbg", iw.field_l, 24914);
+          CampaignDefinition.field_t = pv.a("basic", "statboxbg", iw.field_l, 24914);
           qt.field_e = pv.a("basic", "popupbg", iw.field_l, 24914);
           vq.field_b = pv.a("basic", "gameinfobg", iw.field_l, 24914);
           vc.field_k = fk.a("manastars", (byte) -127, iw.field_l, "basic");
@@ -2341,7 +2341,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ArmiesOfGielinor.IA(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ArmiesOfGielinor.IA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2374,7 +2374,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.PA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.PA(" + param0 + ')');
         }
     }
 
@@ -2395,7 +2395,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.BA(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ArmiesOfGielinor.BA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2429,7 +2429,7 @@ public final class ArmiesOfGielinor extends wf {
             ki.field_b == null) {
             bn.a((byte) -24, 99.0f, AiPlanner.field_R);
             this.a(0);
-            ln.a(nm.field_s, bi.field_f, op.field_b, 0);
+            CoatOfArms.a(nm.field_s, bi.field_f, op.field_b, 0);
             op.field_b = null;
             bi.field_f = null;
             nm.field_s = null;
@@ -2440,7 +2440,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ArmiesOfGielinor.CA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ArmiesOfGielinor.CA(" + param0 + ')');
         }
     }
 
@@ -2487,7 +2487,7 @@ public final class ArmiesOfGielinor extends wf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "ArmiesOfGielinor.LA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ArmiesOfGielinor.LA(" + param0 + ')');
         }
     }
 

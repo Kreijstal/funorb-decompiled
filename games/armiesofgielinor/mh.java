@@ -44,22 +44,22 @@ final class mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "mh.A(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "mh.A(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (pg.field_d == null) {
+        if (pg.playerProfile == null) {
           return 0;
         }
-        if (null == pg.field_d.field_g) {
+        if (null == pg.playerProfile.campaignProgress) {
           return 0;
         }
         if (param1 < -111) {
-          return pg.field_d.field_g.a(param0, 127, param2);
+          return pg.playerProfile.campaignProgress.getMissionScore(param0, 127, param2);
         }
         field_b = (wm) null;
-        return pg.field_d.field_g.a(param0, 127, param2);
+        return pg.playerProfile.campaignProgress.getMissionScore(param0, 127, param2);
     }
 
     public static void a(byte param0) {

@@ -26,10 +26,10 @@ abstract class ks extends ms {
 
     abstract int g(int param0);
 
-    final static sd a(int param0, cf param1, PacketBuffer param2) {
-        sd var3 = null;
+    final static CampaignParticipant readCampaignParticipant(int obfuscationGuard, CampaignDefinition campaign, PacketBuffer packet) {
+        CampaignParticipant var3 = null;
         RuntimeException var3_ref = null;
-        sd stackIn_3_0 = null;
+        CampaignParticipant stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -37,35 +37,35 @@ abstract class ks extends ms {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 900) {
+          if (obfuscationGuard != 900) {
             ks.e((byte) 15);
           }
-          var3 = new sd();
-          var3.field_m = param2.readUnsignedByte(0);
-          var3.field_u = param2.readNullCircumfixedString((byte) 121);
-          var3.field_p = ev.a(param2, (byte) -98);
-          var3.field_q = uq.a(param2, false);
-          var3.field_t = gt.a(-2, param2);
-          var3.field_n = en.a(param2, (byte) -24);
+          var3 = new CampaignParticipant();
+          var3.participantId = packet.readUnsignedByte(0);
+          var3.displayName = packet.readNullCircumfixedString((byte) 121);
+          var3.field_p = ev.readNullableUnsignedByteArray(packet, (byte) -98);
+          var3.coatOfArms = uq.readSignedCoatOfArms(packet, false);
+          var3.godFavourLevels = gt.readSixUnsignedBytes(-2, packet);
+          var3.field_n = en.readUnsignedByteArray(packet, (byte) -24);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_6_0 = var3_ref;
-          stackIn_6_1 = new StringBuilder().append("ks.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("ks.F(").append(obfuscationGuard).append(',');
+          if (campaign == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param2 == null) {
+          if (packet == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ abstract class ks extends ms {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param8).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param8).append(')').toString());
         }
     }
 

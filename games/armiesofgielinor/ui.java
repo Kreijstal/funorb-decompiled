@@ -57,7 +57,7 @@ final class ui {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(recordBitLength).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(recordBitLength).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class ui {
           param0.field_l.field_s = param0;
           param0.field_s.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ui.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ui.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -318,7 +318,7 @@ final class ui {
           }
           var2.c();
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ui.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ui.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -112,7 +112,7 @@ final class on extends IntrusiveNode {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 

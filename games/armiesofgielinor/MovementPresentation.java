@@ -69,7 +69,7 @@ final class MovementPresentation implements EventPresentation {
           var6.a(param4, 0, param4.length, 102);
           var6.e(var6.position - var7, 5930);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "qv.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "qv.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -157,7 +157,7 @@ final class MovementPresentation implements EventPresentation {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -194,7 +194,7 @@ final class MovementPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1_ref), "qv.P(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1_ref), "qv.P(" + param0 + ')');
         }
     }
 
@@ -282,7 +282,7 @@ final class MovementPresentation implements EventPresentation {
         String var11;
         int var12;
         int var13;
-        g var14;
+        ContextualRuntimeException var14;
         StringWriter var15;
         String var16;
         String var17;
@@ -310,15 +310,15 @@ final class MovementPresentation implements EventPresentation {
         String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (!(param1 instanceof g)) {
+        if (!(param1 instanceof ContextualRuntimeException)) {
           var2 = "";
           var11 = var2;
           var2 = var11;
           var11Lifetime6 = var2;
         } else {
-          var14 = (g) ((Object) param1);
-          param1 = var14.field_b;
-          var2 = var14.field_g + " | ";
+          var14 = (ContextualRuntimeException) ((Object) param1);
+          param1 = var14.originalCause;
+          var2 = var14.context + " | ";
         }
         var15 = new StringWriter();
         var4 = new PrintWriter((Writer) ((Object) var15));
@@ -500,7 +500,7 @@ final class MovementPresentation implements EventPresentation {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -559,7 +559,7 @@ final class MovementPresentation implements EventPresentation {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -592,7 +592,7 @@ final class MovementPresentation implements EventPresentation {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -638,7 +638,7 @@ final class MovementPresentation implements EventPresentation {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

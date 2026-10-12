@@ -180,7 +180,7 @@ abstract class wf extends iv {
           this.a(param1, -26261, 480, 640, param2);
           int var4_int = -77 % ((param0 + 5) / 34);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "wf.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "wf.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -270,7 +270,7 @@ abstract class wf extends iv {
             }
           }
           if (5 == var4) {
-            ho.a(CombatEvent.d((byte) -115), (byte) -3);
+            CampaignResult.a(CombatEvent.d((byte) -115), (byte) -3);
           }
           if (6 == var4 &&
             it.field_b) {
@@ -433,7 +433,7 @@ abstract class wf extends iv {
                       fq.b((byte) 119);
                       break regionExit1;
                     default:
-                      af.a((Throwable) null, param0 ^ -100, "MGS1: " + cm.b(false));
+                      af.a((Throwable) null, param0 ^ -100, "MGS1: " + CampaignProgress.b(false));
                       dj.a((byte) -124);
                       break regionExit1;
                   }
@@ -465,7 +465,7 @@ abstract class wf extends iv {
           }
           return;
         }
-        af.a((Throwable) null, -115, "MGS2: " + cm.b(false));
+        af.a((Throwable) null, -115, "MGS2: " + CampaignProgress.b(false));
         dj.a((byte) -126);
     }
 
@@ -793,7 +793,7 @@ abstract class wf extends iv {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -871,7 +871,7 @@ abstract class wf extends iv {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 

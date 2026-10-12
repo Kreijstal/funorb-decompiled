@@ -80,7 +80,7 @@ final class wm {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class wm {
               }
               var10 = af.a(var8_ref_mo, (byte) 103);
               var11 = var10 + BitmapFont.c(var8_ref_mo.field_h);
-              var12 = hm.a(var8_ref_mo, -5);
+              var12 = PlayerProfile.a(var8_ref_mo, -5);
               var8_ref_mo.field_u = new je(0L, uf.field_i, var11);
               var8_ref_mo.field_u.field_T = (uf.field_i.field_T >> 1 & 8355711) + (var12 - ((var12 & 16711423) >> 1));
               var8_ref_mo.field_u.field_Z = IntrusiveNode.field_e;

@@ -83,7 +83,7 @@ final class AiActionCandidate extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -143,7 +143,7 @@ final class AiActionCandidate extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "jb.F(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "jb.F(" + param0 + ',' + param1 + ')');
         }
     }
 

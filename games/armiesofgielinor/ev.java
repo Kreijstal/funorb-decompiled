@@ -11,12 +11,12 @@ class ev implements ok {
     public static void a(int param0) {
         if (param0 != 960112080) {
           PacketBuffer var2 = (PacketBuffer) null;
-          ev.a((PacketBuffer) null, (byte) 105);
+          ev.readNullableUnsignedByteArray((PacketBuffer) null, (byte) 105);
         }
         field_e = null;
     }
 
-    final static int[] a(PacketBuffer param0, byte param1) {
+    final static int[] readNullableUnsignedByteArray(PacketBuffer packet, byte obfuscationGuard) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -29,15 +29,15 @@ class ev implements ok {
         RuntimeException decompiledCaughtException = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2_int = param0.readUnsignedByte(param1 ^ -98);
+          var2_int = packet.readUnsignedByte(obfuscationGuard ^ -98);
           if (var2_int == 0) {
             return null;
           }
           var3 = new int[var2_int];
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3[var4] = param0.readUnsignedByte(0);
+            var3[var4] = packet.readUnsignedByte(0);
           }
-          if (param1 != -98) {
+          if (obfuscationGuard != -98) {
             ev.a(4);
           }
           stackIn_10_0 = var3;
@@ -47,12 +47,12 @@ class ev implements ok {
           var2 = decompiledCaughtException;
           stackIn_13_0 = var2;
           stackIn_13_1 = new StringBuilder().append("ev.D(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

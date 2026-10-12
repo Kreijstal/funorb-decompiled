@@ -197,7 +197,7 @@ final class GameplayController {
             if (var9 != 0) {
               param0 -= 18;
             }
-            var17 = b.a(var5.gameType, var5.godSetting, var16, (byte) 25, var15);
+            var17 = b.calculateMissionScore(var5.scoreTurnTarget, var5.scoreDamageTarget, var16, (byte) 25, var15);
             SoftwareRaster.e(db.a(true, var10), MatchConditionEntry.a(param0 + 113, (byte) 94), var11 - var10, 12303155);
             fe.b(qf.field_g, db.a(true, param1 + 111), MatchConditionEntry.a(param0 + 128, (byte) 94), true);
             fe.c(qf.field_g, db.a(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), nd.field_b, true);
@@ -219,7 +219,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.SD(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.SD(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -351,7 +351,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var8), "ic.WD(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var8), "ic.WD(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -421,7 +421,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "ic.C(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ic.C(" + param0 + ')');
         }
     }
 
@@ -439,7 +439,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ic.NC(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "ic.NC(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -535,7 +535,7 @@ final class GameplayController {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(')').toString());
         }
     }
 
@@ -588,7 +588,7 @@ final class GameplayController {
           if (param1 != 54) {
             this.a(true, -57, (Unit) null);
           }
-          var7 = param0.field_G.field_p;
+          var7 = param0.campaign.field_p;
           var8 = 0;
           while (var7.length > var8) {
             var9_int = var7[var8];
@@ -601,7 +601,7 @@ final class GameplayController {
             }
             break;
           }
-          var7_array = param0.field_G.field_n;
+          var7_array = param0.campaign.missions;
           var8Lifetime1 = 0;
           scanLoop1: while (true) {
             stackIn_12_0 = var8Lifetime1;
@@ -701,7 +701,7 @@ final class GameplayController {
           } else {
             stackIn_84_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(')').toString());
         }
     }
 
@@ -724,7 +724,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var11 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var11), "ic.KC(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var11), "ic.KC(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -874,7 +874,7 @@ final class GameplayController {
           } else {
             stackIn_194_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_189_0), ((StringBuilder) (Object) stackIn_193_1).append(stackIn_194_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_189_0), ((StringBuilder) (Object) stackIn_193_1).append(stackIn_194_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -953,13 +953,13 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var7), "ic.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var7), "ic.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     private final void b(int param0, int param1, int param2, int param3, int param4) {
         boolean discarded$0 = false;
-        ln stackIn_19_0 = null;
+        CoatOfArms stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
         int stackIn_23_2;
         int stackIn_23_3;
@@ -1003,7 +1003,7 @@ final class GameplayController {
             }
             if (param0 == this.battlefield.getPlayerTeamIndex(var9, param2 ^ -19)) {
               var10 = this.battlefield.playerNames[var9 % this.battlefield.playerCount].toUpperCase();
-              stackIn_19_0 = this.battlefield.field_T[var9 % this.battlefield.playerCount];
+              stackIn_19_0 = this.battlefield.playerCoats[var9 % this.battlefield.playerCount];
               stackIn_20_1 = ((this.battlefield.eliminatedPlayerMask & 1 << var9) != 0);
               stackIn_23_2 = 0;
               stackIn_23_3 = MatchConditionEntry.a(param1 + 50, (byte) 94);
@@ -1012,7 +1012,7 @@ final class GameplayController {
               stackIn_27_6 = var10;
               stackIn_27_7 = true;
               stackIn_28_8 = (0 != (this.battlefield.inactivePlayerMask & 1 << var9));
-              ((ln) (Object) stackIn_19_0).a(stackIn_20_1, stackIn_23_2, stackIn_23_3, stackIn_24_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, false, -19744);
+              ((CoatOfArms) (Object) stackIn_19_0).a(stackIn_20_1, stackIn_23_2, stackIn_23_3, stackIn_24_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, false, -19744);
               en.field_E.c(var10, db.a(true, var8 + 33), MatchConditionEntry.a(param1 + 125, (byte) 94), 16777215, -1);
               stackIn_32_1 = (~this.field_Rb == ~var9);
               this.a(stackIn_32_1, var9, (byte) 116, var8 + 0, param1 + 128);
@@ -1025,7 +1025,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var6_ref), "ic.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var6_ref), "ic.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1060,7 +1060,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.FD(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.FD(" + param0 + ')');
         }
     }
 
@@ -1080,7 +1080,7 @@ final class GameplayController {
         int stackIn_25_1 = 0;
         int stackIn_25_2 = 0;
         int[] stackIn_26_3;
-        ln stackIn_30_0 = null;
+        CoatOfArms stackIn_30_0 = null;
         boolean stackIn_31_1 = false;
         int[][] stackIn_34_2 = null;
         int stackIn_35_3 = 0;
@@ -1146,7 +1146,7 @@ final class GameplayController {
               }
               fe.c(stackIn_25_0, stackIn_25_1, stackIn_25_2, stackIn_26_3, true);
             }
-            stackIn_30_0 = this.battlefield.field_T[var7];
+            stackIn_30_0 = this.battlefield.playerCoats[var7];
             stackIn_31_1 = (0 != (this.battlefield.eliminatedPlayerMask & 1 << var7));
             stackIn_34_2 = op.field_c;
             if (!this.battlefield.teamGame) {
@@ -1161,7 +1161,7 @@ final class GameplayController {
             stackIn_42_6 = var6;
             stackIn_42_7 = true;
             stackIn_43_8 = ((1 << var7 & this.battlefield.inactivePlayerMask) != 0);
-            ((ln) (Object) stackIn_30_0).a(stackIn_31_1, stackIn_38_2, stackIn_38_3, stackIn_39_4, stackIn_42_5, stackIn_42_6, stackIn_42_7, stackIn_43_8, false, param2 + 1033);
+            ((CoatOfArms) (Object) stackIn_30_0).a(stackIn_31_1, stackIn_38_2, stackIn_38_3, stackIn_39_4, stackIn_42_5, stackIn_42_6, stackIn_42_7, stackIn_43_8, false, param2 + 1033);
             en.field_E.c(var6, db.a(true, param0 + 129), MatchConditionEntry.a(17 + param3, (byte) 94), 16777215, -1);
             this.b(var7, param0 + 104, param3 + 21, -12857);
             stackIn_47_1 = (this.field_Rb == 2);
@@ -1171,7 +1171,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var6_ref), "ic.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var6_ref), "ic.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -1225,7 +1225,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.MC(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.MC(" + param0 + ')');
         }
     }
 
@@ -1244,7 +1244,7 @@ final class GameplayController {
             this.field_Tb = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.TA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.TA(" + param0 + ')');
         }
     }
 
@@ -1262,7 +1262,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.CD(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.CD(" + param0 + ')');
         }
     }
 
@@ -1308,7 +1308,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ic.RA(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.RA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1376,7 +1376,7 @@ final class GameplayController {
           } else {
             stackIn_66_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(')').toString());
         }
     }
 
@@ -1489,7 +1489,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "ic.AC(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ic.AC(" + param0 + ')');
         }
     }
 
@@ -1550,7 +1550,7 @@ final class GameplayController {
               stackIn_31_0 = (this.battlefield.field_h[l.field_c.playerSlot] <= 0) ? 0 : 1;
               var4 = stackIn_31_0;
               var5 = this.battlefield.field_zb[l.field_c.playerSlot];
-              var6 = b.a(l.field_c.gameType, l.field_c.godSetting, var5, (byte) 25, var3);
+              var6 = b.calculateMissionScore(l.field_c.scoreTurnTarget, l.field_c.scoreDamageTarget, var5, (byte) 25, var3);
               var7 = var5;
               var8_int = var3;
               var9_int = 996394 ^ this.field_G;
@@ -1593,7 +1593,7 @@ final class GameplayController {
                   throw new IllegalStateException("");
               }
               ActionSpell.a(4, var5, l.field_c, var4 != 0, var6, var3);
-              if (1 == l.field_c.field_G.field_r &&
+              if (1 == l.field_c.campaign.campaignIndex &&
                 l.field_c.missionId == 3) {
                 var7 = 0;
                 var8 = this.battlefield.unitsByPlayer[l.field_c.playerSlot];
@@ -1627,7 +1627,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.I(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.I(" + param0 + ')');
         }
     }
 
@@ -1656,7 +1656,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.QA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.QA(" + param0 + ')');
         }
     }
 
@@ -1683,7 +1683,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "ic.ED(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ic.ED(" + param0 + ')');
         }
     }
 
@@ -1733,7 +1733,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4_ref), "ic.UA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4_ref), "ic.UA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1920,7 +1920,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "ic.N(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ic.N(" + param0 + ')');
         }
     }
 
@@ -1995,7 +1995,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.QB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.QB(" + param0 + ')');
         }
     }
 
@@ -2017,7 +2017,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.GC(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.GC(" + param0 + ')');
         }
     }
 
@@ -2080,7 +2080,7 @@ final class GameplayController {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2097,7 +2097,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.W(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.W(" + param0 + ')');
         }
     }
 
@@ -2342,7 +2342,7 @@ final class GameplayController {
             boolean decompiledFrameCompleted4 = true;
             boolean decompiledFrameCompleted3 = true;
             boolean decompiledFrameRemainder0 = true;
-            if (this.battlefield.field_T != null) {
+            if (this.battlefield.playerCoats != null) {
               if (!this.battlefield.teamGame) {
                 var7Lifetime2 = 10;
                 var8Lifetime1 = 0;
@@ -2756,7 +2756,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.WB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.WB(" + param0 + ')');
         }
     }
 
@@ -2850,7 +2850,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ic.CB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "ic.CB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2879,7 +2879,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.DA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.DA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -3049,7 +3049,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.HB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.HB(" + param0 + ')');
         }
     }
 
@@ -3185,7 +3185,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ic.J(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3203,7 +3203,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.RD(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.RD(" + param0 + ')');
         }
     }
 
@@ -3249,7 +3249,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.KD(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.KD(" + param0 + ')');
         }
     }
 
@@ -3313,7 +3313,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.FA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.FA(" + param0 + ')');
         }
     }
 
@@ -3344,7 +3344,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ic.QC(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.QC(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3364,7 +3364,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var5), "ic.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var5), "ic.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -3383,7 +3383,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.HD(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.HD(" + param0 + ')');
         }
     }
 
@@ -3401,9 +3401,9 @@ final class GameplayController {
         try {
           int var3 = -15 % ((19 - param0) / 42);
           fe.c(this.battlefield.playerNames[this.battlefield.currentPlayer], db.a(true, var2_int + 320), MatchConditionEntry.a(170, (byte) 94), nd.field_b, false);
-          this.battlefield.field_T[this.battlefield.currentPlayer].a(db.a(true, var2_int + 264), this.battlefield.playerNames[this.battlefield.currentPlayer], false, false, MatchConditionEntry.a(this.battlefield.field_T[this.battlefield.currentPlayer].b((byte) -62) + 190, (byte) 94), false, false, 74);
+          this.battlefield.playerCoats[this.battlefield.currentPlayer].a(db.a(true, var2_int + 264), this.battlefield.playerNames[this.battlefield.currentPlayer], false, false, MatchConditionEntry.a(this.battlefield.playerCoats[this.battlefield.currentPlayer].getMissingPartOffset((byte) -62) + 190, (byte) 94), false, false, 74);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.GA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.GA(" + param0 + ')');
         }
     }
 
@@ -3500,7 +3500,7 @@ final class GameplayController {
           } else {
             stackIn_67_2 = "{...}";
           }
-          throw ig.a((Throwable) (stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) (stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(')').toString());
         }
     }
 
@@ -4046,7 +4046,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) (var3), "ic.PD(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) (var3), "ic.PD(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4090,7 +4090,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "ic.O(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ic.O(" + param0 + ')');
         }
     }
 
@@ -4112,7 +4112,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.SC(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.SC(" + param0 + ')');
         }
     }
 
@@ -4170,7 +4170,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.AB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.AB(" + param0 + ')');
         }
     }
 
@@ -4217,7 +4217,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ic.QD(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "ic.QD(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -4319,7 +4319,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.VA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.VA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -4345,7 +4345,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.KB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.KB(" + param0 + ')');
         }
     }
 
@@ -4393,7 +4393,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ic.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "ic.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -4422,7 +4422,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ic.WA(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.WA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -4487,14 +4487,14 @@ final class GameplayController {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param3).append(')').toString());
         }
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
         int stackIn_7_0 = 0;
         int[] stackIn_11_0 = null;
-        ln stackIn_20_0 = null;
+        CoatOfArms stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         int[][] stackIn_24_2 = null;
         int stackIn_25_3 = 0;
@@ -4539,7 +4539,7 @@ final class GameplayController {
             fe.c(sp.field_g, db.a(true, 240), MatchConditionEntry.a(75 + var5_int, (byte) 94), nd.field_b, true);
           }
           var9 = -26 % ((-25 - param0) / 49);
-          stackIn_20_0 = this.battlefield.field_T[var6];
+          stackIn_20_0 = this.battlefield.playerCoats[var6];
           stackIn_21_1 = ((this.battlefield.eliminatedPlayerMask & 1 << var6) != 0);
           stackIn_24_2 = op.field_c;
           if (!this.battlefield.teamGame) {
@@ -4554,7 +4554,7 @@ final class GameplayController {
           stackIn_32_6 = var7;
           stackIn_32_7 = true;
           stackIn_33_8 = (0 != (1 << var6 & this.battlefield.inactivePlayerMask));
-          ((ln) (Object) stackIn_20_0).a(stackIn_21_1, stackIn_28_2, stackIn_28_3, stackIn_29_4, stackIn_32_5, stackIn_32_6, stackIn_32_7, stackIn_33_8, false, -19744);
+          ((CoatOfArms) (Object) stackIn_20_0).a(stackIn_21_1, stackIn_28_2, stackIn_28_3, stackIn_29_4, stackIn_32_5, stackIn_32_6, stackIn_32_7, stackIn_33_8, false, -19744);
           en.field_E.c(var7, db.a(true, 310), MatchConditionEntry.a(var5_int + 74, (byte) 94), 16777215, -1);
           this.b(var6, 285, 78 + var5_int, -12857);
           stackIn_37_1 = (~this.field_Rb == ~param3);
@@ -4563,7 +4563,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var5), "ic.PC(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var5), "ic.PC(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -4580,7 +4580,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.PA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.PA(" + param0 + ')');
         }
     }
 
@@ -4591,13 +4591,13 @@ final class GameplayController {
         RuntimeException var2 = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.field_Wb = new RgbSprite[this.battlefield.field_T.length];
+          this.field_Wb = new RgbSprite[this.battlefield.playerCoats.length];
           if (param0 != 16) {
             this.field_Ub = (NodeDeque) null;
           }
           var2_int = 0;
-          while (var2_int < this.battlefield.field_T.length) {
-            this.field_Wb[var2_int] = this.battlefield.field_T[var2_int].a(this.battlefield.e(var2_int, -1), (byte) -70, this.battlefield.teamGame);
+          while (var2_int < this.battlefield.playerCoats.length) {
+            this.field_Wb[var2_int] = this.battlefield.playerCoats[var2_int].a(this.battlefield.e(var2_int, -1), (byte) -70, this.battlefield.teamGame);
             var2_int++;
             if (var3 != 0) {
               return;
@@ -4607,7 +4607,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.DC(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.DC(" + param0 + ')');
         }
     }
 
@@ -4689,7 +4689,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.JA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.JA(" + param0 + ')');
         }
     }
 
@@ -4706,7 +4706,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.EB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.EB(" + param0 + ')');
         }
     }
 
@@ -4860,7 +4860,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.OC(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.OC(" + param0 + ')');
         }
     }
 
@@ -4889,7 +4889,7 @@ final class GameplayController {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -4976,7 +4976,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.UD(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.UD(" + param0 + ')');
         }
     }
 
@@ -5060,7 +5060,7 @@ final class GameplayController {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
         }
     }
 
@@ -5148,7 +5148,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ic.JC(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "ic.JC(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -5206,7 +5206,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3_ref), "ic.WC(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "ic.WC(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5295,8 +5295,8 @@ final class GameplayController {
           }
           if (rs.field_q == 12 &&
             this.field_E) {
-            stackIn_47_0 = !(ln.field_e);
-            ln.field_e = stackIn_47_0;
+            stackIn_47_0 = !(CoatOfArms.field_e);
+            CoatOfArms.field_e = stackIn_47_0;
             return;
           }
           if (rs.field_q == 11 &&
@@ -5586,7 +5586,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.VB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.VB(" + param0 + ')');
         }
     }
 
@@ -5610,7 +5610,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ic.BB(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.BB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5656,7 +5656,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.D(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.D(" + param0 + ')');
         }
     }
 
@@ -5675,20 +5675,20 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ic.BC(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.BC(" + param0 + ',' + param1 + ')');
         }
     }
 
     private final int a(int param0, String param1, boolean param2, int param3) {
         int stackIn_3_0 = 0;
-        ln stackIn_31_0;
+        CoatOfArms stackIn_31_0;
         int stackIn_31_1;
         String stackIn_31_2;
         boolean stackIn_31_3;
         boolean stackIn_31_4;
         int stackIn_31_5;
         boolean stackIn_32_6 = false;
-        ln stackIn_38_0;
+        CoatOfArms stackIn_38_0;
         int stackIn_38_1;
         String stackIn_38_2;
         boolean stackIn_38_3;
@@ -5696,7 +5696,7 @@ final class GameplayController {
         int stackIn_38_5;
         boolean stackIn_39_6 = false;
         boolean stackIn_55_0 = false;
-        ln stackIn_69_0 = null;
+        CoatOfArms stackIn_69_0 = null;
         boolean stackIn_70_1 = false;
         int stackIn_73_2;
         int stackIn_73_3;
@@ -5705,12 +5705,12 @@ final class GameplayController {
         String stackIn_73_6;
         boolean stackIn_73_7;
         boolean stackIn_74_8 = false;
-        ln stackIn_80_0 = null;
+        CoatOfArms stackIn_80_0 = null;
         int stackIn_80_1 = 0;
         String stackIn_80_2 = null;
         boolean stackIn_81_3 = false;
         boolean stackIn_85_4;
-        ln stackIn_95_0 = null;
+        CoatOfArms stackIn_95_0 = null;
         int stackIn_95_1 = 0;
         String stackIn_95_2 = null;
         boolean stackIn_96_3 = false;
@@ -5750,36 +5750,36 @@ final class GameplayController {
             if (!param2 ||
               var7 <= 1) {
               if (!(0 > this.battlefield.currentPlayer) ||
-                ah.field_a == null) {
+                ah.localCoat == null) {
                 if (0 > this.battlefield.currentPlayer) {
                   break regionExit1;
                 }
-                if (this.battlefield.field_T.length <= this.battlefield.currentPlayer) {
+                if (this.battlefield.playerCoats.length <= this.battlefield.currentPlayer) {
                   break regionExit1;
                 }
                 if (this.battlefield.currentPlayer >= this.battlefield.playerNames.length) {
                   break regionExit1;
                 }
-                stackIn_31_0 = this.battlefield.field_T[this.battlefield.currentPlayer];
+                stackIn_31_0 = this.battlefield.playerCoats[this.battlefield.currentPlayer];
                 stackIn_31_1 = var6 / 2 - 56 + var5_int;
                 stackIn_31_2 = this.battlefield.playerNames[this.battlefield.currentPlayer];
                 stackIn_31_3 = false;
                 stackIn_31_4 = false;
-                stackIn_31_5 = this.battlefield.field_T[this.battlefield.currentPlayer].b((byte) 112) + 190;
+                stackIn_31_5 = this.battlefield.playerCoats[this.battlefield.currentPlayer].getMissingPartOffset((byte) 112) + 190;
                 stackIn_32_6 = (-1 == this.battlefield.currentPlayer);
-                ((ln) (Object) stackIn_31_0).a(stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_31_4, stackIn_31_5, stackIn_32_6, false, 120);
+                ((CoatOfArms) (Object) stackIn_31_0).a(stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_31_4, stackIn_31_5, stackIn_32_6, false, 120);
                 if (var12 == 0) {
                   break regionExit1;
                 }
               }
-              stackIn_38_0 = ah.field_a;
+              stackIn_38_0 = ah.localCoat;
               stackIn_38_1 = var5_int - 56 + var6 / 2;
               stackIn_38_2 = mv.field_d;
               stackIn_38_3 = false;
               stackIn_38_4 = false;
-              stackIn_38_5 = 190 + ah.field_a.b((byte) 125);
+              stackIn_38_5 = 190 + ah.localCoat.getMissingPartOffset((byte) 125);
               stackIn_39_6 = (this.battlefield.currentPlayer == -1);
-              ((ln) (Object) stackIn_38_0).a(stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_38_4, stackIn_38_5, stackIn_39_6, false, 92);
+              ((CoatOfArms) (Object) stackIn_38_0).a(stackIn_38_1, stackIn_38_2, stackIn_38_3, stackIn_38_4, stackIn_38_5, stackIn_39_6, false, 92);
             }
             if (param2 &&
               !(var7 <= 1) || var12 != 0) {
@@ -5790,12 +5790,12 @@ final class GameplayController {
                 var10 = 0;
                 if (this.field_q <= 0 ||
                   this.battlefield.getPlayerTeamIndex(this.field_q, param3 ^ -65) != this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, param3 - 65)) {
-                  var10 = this.battlefield.field_T[this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, -1) + (this.battlefield.playerCount - 2)].b((byte) -68);
+                  var10 = this.battlefield.playerCoats[this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, -1) + (this.battlefield.playerCount - 2)].getMissingPartOffset((byte) -68);
                   if (var12 != 0) {
-                    var10 = this.battlefield.field_T[this.field_q].b((byte) -47);
+                    var10 = this.battlefield.playerCoats[this.field_q].getMissingPartOffset((byte) -47);
                   }
                 } else {
-                  var10 = this.battlefield.field_T[this.field_q].b((byte) -47);
+                  var10 = this.battlefield.playerCoats[this.field_q].getMissingPartOffset((byte) -47);
                 }
                 try {
                   boolean decompiledFrameCompleted0 = true;
@@ -5812,7 +5812,7 @@ final class GameplayController {
                     if (stackIn_55_0 &&
                       this.field_q != var11_int) {
                       if (var8 != 0) {
-                        stackIn_69_0 = this.battlefield.field_T[var11_int];
+                        stackIn_69_0 = this.battlefield.playerCoats[var11_int];
                         stackIn_70_1 = ((1 << var11_int & this.battlefield.eliminatedPlayerMask) != 0);
                         stackIn_73_2 = 0;
                         stackIn_73_3 = 190 + (var10 + ph.field_e[var8][var9][1]) - 10;
@@ -5821,32 +5821,32 @@ final class GameplayController {
                         stackIn_73_6 = this.battlefield.e(var11_int, param3 ^ -65);
                         stackIn_73_7 = true;
                         stackIn_74_8 = ((this.battlefield.inactivePlayerMask & 1 << var11_int) != 0);
-                        ((ln) (Object) stackIn_69_0).a(stackIn_70_1, stackIn_73_2, stackIn_73_3, stackIn_73_4, stackIn_73_5, stackIn_73_6, stackIn_73_7, stackIn_74_8, false, -19744);
+                        ((CoatOfArms) (Object) stackIn_69_0).a(stackIn_70_1, stackIn_73_2, stackIn_73_3, stackIn_73_4, stackIn_73_5, stackIn_73_6, stackIn_73_7, stackIn_74_8, false, -19744);
                         if (var12 != 0) {
-                          stackIn_80_0 = this.battlefield.field_T[var11_int];
+                          stackIn_80_0 = this.battlefield.playerCoats[var11_int];
                           stackIn_80_1 = ph.field_e[var8][var9][0] + var5_int + (var6 / 2 - 56);
                           stackIn_80_2 = this.battlefield.e(var11_int, -1);
                           stackIn_81_3 = ((this.battlefield.eliminatedPlayerMask & 1 << var11_int) != 0);
                           stackIn_85_4 = ((this.battlefield.inactivePlayerMask & 1 << var11_int) != 0);
-                          ((ln) (Object) stackIn_80_0).a(stackIn_80_1, stackIn_80_2, stackIn_81_3, stackIn_85_4, 190 + var10 + ph.field_e[var8][var9][1], false, false, 96);
+                          ((CoatOfArms) (Object) stackIn_80_0).a(stackIn_80_1, stackIn_80_2, stackIn_81_3, stackIn_85_4, 190 + var10 + ph.field_e[var8][var9][1], false, false, 96);
                         }
                       } else {
-                        stackIn_80_0 = this.battlefield.field_T[var11_int];
+                        stackIn_80_0 = this.battlefield.playerCoats[var11_int];
                         stackIn_80_1 = ph.field_e[var8][var9][0] + var5_int + (var6 / 2 - 56);
                         stackIn_80_2 = this.battlefield.e(var11_int, -1);
                         stackIn_81_3 = ((this.battlefield.eliminatedPlayerMask & 1 << var11_int) != 0);
                         stackIn_85_4 = ((this.battlefield.inactivePlayerMask & 1 << var11_int) != 0);
-                        ((ln) (Object) stackIn_80_0).a(stackIn_80_1, stackIn_80_2, stackIn_81_3, stackIn_85_4, 190 + var10 + ph.field_e[var8][var9][1], false, false, 96);
+                        ((CoatOfArms) (Object) stackIn_80_0).a(stackIn_80_1, stackIn_80_2, stackIn_81_3, stackIn_85_4, 190 + var10 + ph.field_e[var8][var9][1], false, false, 96);
                       }
                     }
                     if (this.field_q > -1 &&
                       ~this.battlefield.getPlayerTeamIndex(this.field_q, -1) == ~this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, -1)) {
-                      stackIn_95_0 = this.battlefield.field_T[this.field_q];
+                      stackIn_95_0 = this.battlefield.playerCoats[this.field_q];
                       stackIn_95_1 = ph.field_e[var8][var9][0] + var5_int + (var6 / 2 - 56);
                       stackIn_95_2 = this.battlefield.e(this.field_q, param3 - 65);
                       stackIn_96_3 = ((1 << this.field_q & this.battlefield.eliminatedPlayerMask) != 0);
                       stackIn_100_4 = (0 != (this.battlefield.inactivePlayerMask & 1 << this.field_q));
-                      ((ln) (Object) stackIn_95_0).a(stackIn_95_1, stackIn_95_2, stackIn_96_3, stackIn_100_4, 190 + var10, false, false, 78);
+                      ((CoatOfArms) (Object) stackIn_95_0).a(stackIn_95_1, stackIn_95_2, stackIn_96_3, stackIn_100_4, 190 + var10, false, false, 78);
                     }
                     var11_int++;
                     if (var12 == 0) {
@@ -5865,10 +5865,10 @@ final class GameplayController {
                 decompiledFrameRemainder0 = (decompiledRegionSelector0 != 0);
                 if ((decompiledFrameRemainder0) &&
                   (var12 != 0)) {
-                  ah.field_a.a(var6 / 2 - 56 + var5_int, mv.field_d, false, false, ah.field_a.b((byte) -39) + 190, true, false, 34);
+                  ah.localCoat.a(var6 / 2 - 56 + var5_int, mv.field_d, false, false, ah.localCoat.getMissingPartOffset((byte) -39) + 190, true, false, 34);
                 }
               } else {
-                ah.field_a.a(var6 / 2 - 56 + var5_int, mv.field_d, false, false, ah.field_a.b((byte) -39) + 190, true, false, 34);
+                ah.localCoat.a(var6 / 2 - 56 + var5_int, mv.field_d, false, false, ah.localCoat.getMissingPartOffset((byte) -39) + 190, true, false, 34);
               }
             }
           }
@@ -5886,7 +5886,7 @@ final class GameplayController {
           } else {
             stackIn_113_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_112_0), ((StringBuilder) (Object) stackIn_112_1).append(stackIn_113_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_112_0), ((StringBuilder) (Object) stackIn_112_1).append(stackIn_113_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -5904,7 +5904,7 @@ final class GameplayController {
           this.field_bc = false;
           this.field_Tb = true;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.HA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.HA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -5926,7 +5926,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.U(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.U(" + param0 + ')');
         }
     }
 
@@ -6180,7 +6180,7 @@ final class GameplayController {
                           if (this.field_ub != null) {
                             return;
                           }
-                          if (null != this.battlefield.field_T) {
+                          if (null != this.battlefield.playerCoats) {
                             if (this.battlefield.teamGame) {
                               var6 = 80;
                               var7 = 0;
@@ -6443,7 +6443,7 @@ final class GameplayController {
                     if (0 < this.selectedUnit.bonusStrength) {
                       var2 = fo.a(4800, ki.field_c, new String[]{Integer.toString(this.selectedUnit.strength), Integer.toString(this.selectedUnit.maximumStrength), Integer.toString(this.selectedUnit.bonusStrength)});
                     }
-                    var2 = fo.a(param0 ^ 4792, ln.field_c, new String[]{Integer.toString(this.selectedUnit.strength), Integer.toString(this.selectedUnit.maximumStrength)});
+                    var2 = fo.a(param0 ^ 4792, CoatOfArms.field_c, new String[]{Integer.toString(this.selectedUnit.strength), Integer.toString(this.selectedUnit.maximumStrength)});
                   }
                   if (wg.a(-33, 312, 342, 39, 79)) {
                     var2 = fh.field_f[eb.a((byte) -109, 3 & ~var13)];
@@ -7218,7 +7218,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (var2), "ic.UB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) (var2), "ic.UB(" + param0 + ')');
         }
     }
 
@@ -7305,7 +7305,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.NA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.NA(" + param0 + ')');
         }
     }
 
@@ -7392,7 +7392,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "ic.B(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ic.B(" + param0 + ')');
         }
     }
 
@@ -7409,13 +7409,13 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.K(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.K(" + param0 + ')');
         }
     }
 
     private final void a(int param0, int param1, byte param2, int param3, int param4) {
         int[] stackIn_7_0 = null;
-        ln stackIn_10_0 = null;
+        CoatOfArms stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         String stackIn_10_2 = null;
         boolean stackIn_11_3 = false;
@@ -7442,14 +7442,14 @@ final class GameplayController {
           var8 = stackIn_7_0;
           fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, io.field_m, var8, 0, 180);
           CampaignUnitOverride.a(db.a(true, param1), db.a(true, 134), MatchConditionEntry.a(228, (byte) 94), MatchConditionEntry.a(param0, (byte) 94), (byte) 73);
-          stackIn_10_0 = this.battlefield.field_T[var6_int];
+          stackIn_10_0 = this.battlefield.playerCoats[var6_int];
           stackIn_10_1 = db.a(true, 13 + param1);
           stackIn_10_2 = var7;
           stackIn_11_3 = ((this.battlefield.eliminatedPlayerMask & 1 << var6_int) != 0);
           stackIn_15_4 = ((1 << var6_int & this.battlefield.inactivePlayerMask) != 0);
           stackIn_18_5 = MatchConditionEntry.a(param0 - 2, (byte) 94);
           stackIn_19_6 = !((1 << var6_int & this.battlefield.field_C) <= 0);
-          ((ln) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2, stackIn_11_3, stackIn_15_4, stackIn_18_5, stackIn_19_6, false, param2 ^ -3);
+          ((CoatOfArms) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2, stackIn_11_3, stackIn_15_4, stackIn_18_5, stackIn_19_6, false, param2 ^ -3);
           rf.b(-18862);
           fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, io.field_m, var8, 0, 0);
           if (param3 <= -1) {
@@ -7469,7 +7469,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var6), "ic.TB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var6), "ic.TB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -7740,7 +7740,7 @@ final class GameplayController {
               this.field_s.h((byte) 21);
             }
             if (this.field_E &&
-              ln.field_e) {
+              CoatOfArms.field_e) {
               if (this.field_q > -1) {
                 var4Lifetime1 = 16777215;
                 if (~this.field_Bb != ~this.battlefield.playerMana[this.field_q] &&
@@ -7778,7 +7778,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ic.R(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.R(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -7800,7 +7800,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.LB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.LB(" + param0 + ')');
         }
     }
 
@@ -7855,7 +7855,7 @@ final class GameplayController {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -8789,7 +8789,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ic.SB(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.SB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -8858,7 +8858,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.BA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.BA(" + param0 + ')');
         }
     }
 
@@ -8888,7 +8888,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.P(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.P(" + param0 + ')');
         }
     }
 
@@ -8956,7 +8956,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "ic.VC(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "ic.VC(" + param0 + ')');
         }
     }
 
@@ -9060,7 +9060,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.VD(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.VD(" + param0 + ')');
         }
     }
 
@@ -9082,7 +9082,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ic.G(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -9305,7 +9305,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.IC(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.IC(" + param0 + ')');
         }
     }
 
@@ -9476,7 +9476,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.MB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.MB(" + param0 + ')');
         }
     }
 
@@ -9672,7 +9672,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.CA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.CA(" + param0 + ')');
         }
     }
 
@@ -9768,7 +9768,7 @@ final class GameplayController {
             this.field_q = 1;
           }
           var2_int = so.field_b.field_a;
-          if (this.battlefield.field_T != null) {
+          if (this.battlefield.playerCoats != null) {
             if (this.field_Wb == null) {
               this.e(16);
             }
@@ -10019,7 +10019,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.TC(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.TC(" + param0 + ')');
         }
     }
 
@@ -10055,7 +10055,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.SA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -10074,7 +10074,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.BD(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.BD(" + param0 + ')');
         }
     }
 
@@ -10091,7 +10091,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.CC(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.CC(" + param0 + ')');
         }
     }
 
@@ -10143,7 +10143,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.PB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.PB(" + param0 + ')');
         }
     }
 
@@ -10159,7 +10159,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.OD(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.OD(" + param0 + ')');
         }
     }
 
@@ -10213,7 +10213,7 @@ final class GameplayController {
         int var16Lifetime1;
         var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          cf.field_t.b(param3 + 2, -73 + (param5 + param0));
+          CampaignDefinition.field_t.b(param3 + 2, -73 + (param5 + param0));
           fe.b(param3 + 0, -76 - (-param5 - param0), 309, 71, io.field_m, nd.field_b, 0, 0);
           SoftwareRaster.b(7 + param3, param5 - 70 + param0, 25, 25, 0, 128);
           if (-1 < param4.ownerPlayer) {
@@ -10398,7 +10398,7 @@ final class GameplayController {
           } else {
             stackIn_143_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_142_0), ((StringBuilder) (Object) stackIn_142_1).append(stackIn_143_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_142_0), ((StringBuilder) (Object) stackIn_142_1).append(stackIn_143_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -10441,7 +10441,7 @@ final class GameplayController {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -10494,7 +10494,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4_ref), "ic.JD(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4_ref), "ic.JD(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -10506,7 +10506,7 @@ final class GameplayController {
           this.field_p = param0;
           this.field_Tb = true;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.AD(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.AD(" + param0 + ')');
         }
     }
 
@@ -10555,7 +10555,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ic.LD(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "ic.LD(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -10722,7 +10722,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.CE(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.CE(" + param0 + ')');
         }
     }
 
@@ -10792,7 +10792,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var7_ref), "ic.DD(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var7_ref), "ic.DD(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -10814,7 +10814,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.IB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.IB(" + param0 + ')');
         }
     }
 
@@ -11017,7 +11017,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.EA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.EA(" + param0 + ')');
         }
     }
 
@@ -11077,7 +11077,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.OB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.OB(" + param0 + ')');
         }
     }
 
@@ -11177,7 +11177,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.GB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.GB(" + param0 + ')');
         }
     }
 
@@ -11188,12 +11188,12 @@ final class GameplayController {
             GameplayController.a((String) null, (byte) 73, (String) null, (kl) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.LA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.LA(" + param0 + ')');
         }
     }
 
     private final void b(int param0, byte param1, int param2) {
-        ln stackIn_25_0 = null;
+        CoatOfArms stackIn_25_0 = null;
         boolean stackIn_26_1 = false;
         int[][] stackIn_29_2 = null;
         int stackIn_30_3 = 0;
@@ -11236,7 +11236,7 @@ final class GameplayController {
               } else {
                 fe.c(sp.field_g, db.a(true, 98 + var4_int), MatchConditionEntry.a(323, (byte) 94), nd.field_b, true);
               }
-              stackIn_25_0 = this.battlefield.field_T[var5];
+              stackIn_25_0 = this.battlefield.playerCoats[var5];
               stackIn_26_1 = (0 != (1 << var5 & this.battlefield.eliminatedPlayerMask));
               stackIn_29_2 = op.field_c;
               if (this.battlefield.teamGame) {
@@ -11251,7 +11251,7 @@ final class GameplayController {
               stackIn_37_6 = var6;
               stackIn_37_7 = true;
               stackIn_38_8 = ((1 << var5 & this.battlefield.inactivePlayerMask) != 0);
-              ((ln) (Object) stackIn_25_0).a(stackIn_26_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, stackIn_37_5, stackIn_37_6, stackIn_37_7, stackIn_38_8, false, -19744);
+              ((CoatOfArms) (Object) stackIn_25_0).a(stackIn_26_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, stackIn_37_5, stackIn_37_6, stackIn_37_7, stackIn_38_8, false, -19744);
               en.field_E.c(var6, db.a(true, 98 + var4_int), MatchConditionEntry.a(380, (byte) 94), 16777215, -1);
               stackIn_42_1 = (~this.field_Rb == ~var7);
               this.a(stackIn_42_1, var5, (byte) -64, 66 + var4_int, 385);
@@ -11264,19 +11264,19 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ic.NB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "ic.NB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     private final void s(byte param0) {
         try {
-          of.a(this.battlefield, this.battlefield.field_zb[this.battlefield.campaignMission.playerSlot], this.battlefield.field_h[this.battlefield.campaignMission.playerSlot], (byte) -80, this.battlefield.campaignMission.missionId, this.battlefield.campaignMission.field_G.field_r);
+          of.a(this.battlefield, this.battlefield.field_zb[this.battlefield.campaignMission.playerSlot], this.battlefield.field_h[this.battlefield.campaignMission.playerSlot], (byte) -80, this.battlefield.campaignMission.missionId, this.battlefield.campaignMission.campaign.campaignIndex);
           ul.$cfr$intArgs$a$5d483ac33914(-80, PacketBuffer.field_p, this.field_Nb);
           if (param0 >= -39) {
             this.s(-24);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ic.EC(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ic.EC(" + param0 + ')');
         }
     }
 
@@ -11311,12 +11311,12 @@ final class GameplayController {
             this.battlefield.playerNames[0] = ei.field_i;
           }
           this.battlefield.playerNames[1] = vs.field_b;
-          this.battlefield.field_T = new ln[2];
-          this.battlefield.field_T[0] = ah.field_a;
+          this.battlefield.playerCoats = new CoatOfArms[2];
+          this.battlefield.playerCoats[0] = ah.localCoat;
           if (param0 != 60) {
             this.v(-13);
           }
-          this.battlefield.field_T[1] = new ln(GrowthEvent.field_E, su.field_a);
+          this.battlefield.playerCoats[1] = new CoatOfArms(GrowthEvent.field_E, su.field_a);
           this.battlefield.currentPlayer = 0;
           this.field_V = false;
           this.field_p = ce.field_O[this.battlefield.field_ib];
@@ -11324,7 +11324,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.BE(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.BE(" + param0 + ')');
         }
     }
 
@@ -11356,7 +11356,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4_ref), "ic.DB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4_ref), "ic.DB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -11388,7 +11388,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ic.HC(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.HC(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -11660,7 +11660,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.UC(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.UC(" + param0 + ')');
         }
     }
 
@@ -11707,7 +11707,7 @@ final class GameplayController {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -11725,7 +11725,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.TD(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.TD(" + param0 + ')');
         }
     }
 
@@ -11744,7 +11744,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ic.V(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "ic.V(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -11787,7 +11787,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var9), "ic.JB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var9), "ic.JB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -11817,7 +11817,7 @@ final class GameplayController {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -11843,7 +11843,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ic.M(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -11899,7 +11899,7 @@ final class GameplayController {
               (param3 + var8) > AiPlanningStrategy.field_d &&
               ko.field_b >= param4 &&
               ko.field_b <= (24 + param4)) {
-              var11 = fo.a(4800, qf.field_b, new String[]{Integer.toString(var7 + pg.field_d.field_j)});
+              var11 = fo.a(4800, qf.field_b, new String[]{Integer.toString(var7 + pg.playerProfile.progressionCredit)});
               var12 = AiPlanningStrategy.field_d;
               var13 = ko.field_b;
               var14 = en.field_E.a(var11, 320);
@@ -11912,7 +11912,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var6), "ic.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var6), "ic.T(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -11962,9 +11962,9 @@ final class GameplayController {
             this.battlefield.playerNames[0] = ei.field_i;
           }
           this.battlefield.playerNames[1] = vs.field_b;
-          this.battlefield.field_T = new ln[2];
-          this.battlefield.field_T[0] = ah.field_a;
-          this.battlefield.field_T[1] = new ln(GrowthEvent.field_E, su.field_a);
+          this.battlefield.playerCoats = new CoatOfArms[2];
+          this.battlefield.playerCoats[0] = ah.localCoat;
+          this.battlefield.playerCoats[1] = new CoatOfArms(GrowthEvent.field_E, su.field_a);
           this.battlefield.currentPlayer = 0;
           this.field_V = false;
           this.field_p = ce.field_O[this.battlefield.field_ib];
@@ -11975,7 +11975,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ic.RC(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ic.RC(" + param0 + ')');
         }
     }
 
@@ -12039,7 +12039,7 @@ final class GameplayController {
                 this.field_a)) {
                 this.s((byte) -79);
               }
-              MoveEvent.field_C.a(l.field_c.field_G.field_r, true);
+              MoveEvent.field_C.a(l.field_c.campaign.campaignIndex, true);
             }
           }
           du.field_h = false;
@@ -12051,7 +12051,7 @@ final class GameplayController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ic.L(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ic.L(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -12112,14 +12112,14 @@ final class GameplayController {
         int var19 = 0;
         int[] var20_ref_int__ = null;
         int var20 = 0;
-        sd var21_ref_sd = null;
+        CampaignParticipant var21_ref_sd = null;
         int var21 = 0;
         int var22 = 0;
         int[] var22_ref_int__ = null;
         int var23 = 0;
         int var24 = 0;
         int var25_int = 0;
-        sd var25 = null;
+        CampaignParticipant var25 = null;
         Unit var25_ref = null;
         int var26 = 0;
         Battlefield stackIn_67_1Lifetime1;
@@ -12217,18 +12217,18 @@ final class GameplayController {
           if (0 >= df.field_M) {
             this.field_Y = kb.field_o;
             if (var26 != 0) {
-              this.field_Y = pg.field_d.field_b;
+              this.field_Y = pg.playerProfile.unitUnlockMasks;
             }
           } else {
-            this.field_Y = pg.field_d.field_b;
+            this.field_Y = pg.playerProfile.unitUnlockMasks;
           }
           this.field_P = param12;
-          if (null == pg.field_d) {
+          if (null == pg.playerProfile) {
             param10 = 0;
           }
           var15_array = (int[][]) null;
           if (param10 != 0) {
-            var15_array = new int[][]{pg.field_d.field_d};
+            var15_array = new int[][]{pg.playerProfile.equippedSpellIds};
           }
           boolean decompiledFrameRemainder5 = true;
           boolean decompiledFrameRemainder4 = true;
@@ -12254,7 +12254,7 @@ final class GameplayController {
               }
               boolean decompiledFrameRemainder6 = true;
               if (stackIn_90_0 != stackIn_90_1) {
-                var21_ref_sd = param13.field_G.field_q[param13.participantIds[var18_int]];
+                var21_ref_sd = param13.campaign.participants[param13.participantIds[var18_int]];
                 var20_ref_int__ = new int[var21_ref_sd.field_n.length];
                 vm.a(var21_ref_sd.field_n, 0, var20_ref_int__, 0, var21_ref_sd.field_n.length);
                 var22 = 0;
@@ -12410,7 +12410,7 @@ final class GameplayController {
               this.battlefield.chosenGods[this.field_q][1] = 1;
               this.battlefield.chosenGods[this.field_q][2] = 2;
               if (null != param13) {
-                this.battlefield.chosenGods[this.field_q] = new int[]{this.battlefield.campaignMission.field_G.field_s};
+                this.battlefield.chosenGods[this.field_q] = new int[]{this.battlefield.campaignMission.campaign.localGodId};
               }
             }
             this.f(true);
@@ -12478,8 +12478,8 @@ final class GameplayController {
                   stackIn_162_1 = ~var23Lifetime1;
                   if (var26 == 0) {
                     if (stackIn_162_0 != stackIn_162_1) {
-                      var25 = this.battlefield.campaignMission.field_G.field_q[this.battlefield.campaignMission.participantIds[var24Lifetime1Lifetime1]];
-                      this.aiPlanners[var24Lifetime1Lifetime1] = new AiPlanner(this.battlefield, var24Lifetime1Lifetime1, false, var25.field_k);
+                      var25 = this.battlefield.campaignMission.campaign.participants[this.battlefield.campaignMission.participantIds[var24Lifetime1Lifetime1]];
+                      this.aiPlanners[var24Lifetime1Lifetime1] = new AiPlanner(this.battlefield, var24Lifetime1Lifetime1, false, var25.unitOverrides);
                     }
                     var25_ref = (Unit) (this.battlefield.unitsByPlayer[var24Lifetime1Lifetime1].first((byte) 115));
                     while (var25_ref != null) {
@@ -12500,7 +12500,7 @@ final class GameplayController {
                   }
                 } else {
                   this.field_r = this.battlefield.field_eb;
-                  stackIn_162_0 = ~this.battlefield.campaignMission.field_G.field_r;
+                  stackIn_162_0 = ~this.battlefield.campaignMission.campaign.campaignIndex;
                   stackIn_162_1 = -1;
                 }
                 if (stackIn_162_0 == stackIn_162_1 &&
@@ -12628,7 +12628,7 @@ final class GameplayController {
           } else {
             stackIn_253_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_244_0), ((StringBuilder) (Object) stackIn_252_1).append(stackIn_253_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_244_0), ((StringBuilder) (Object) stackIn_252_1).append(stackIn_253_2).append(')').toString());
         }
     }
 

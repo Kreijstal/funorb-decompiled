@@ -66,7 +66,7 @@ final class la {
           }
           int var4 = 57 % ((-6 - param0) / 49);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "la.K(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "la.K(" + param0 + ')');
         }
     }
 
@@ -189,7 +189,7 @@ final class la {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var6), "la.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var6), "la.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -66,7 +66,7 @@ final class ActionSpell extends Spell {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -94,10 +94,10 @@ final class ActionSpell extends Spell {
           if (DamageEvent.g(117)) {
             return;
           }
-          var6_int = param2.field_G.field_r;
+          var6_int = param2.campaign.campaignIndex;
           var7 = param2.missionId;
           MoveEvent.field_C.a(var7, (byte) 33, param4);
-          if (!(pg.field_d.field_g.a(var6_int, -63, var7) >= param4) ||
+          if (!(pg.playerProfile.campaignProgress.getMissionScore(var6_int, -63, var7) >= param4) ||
             param4 == 1) {
             if (1 < param4) {
               hc.field_b = hc.field_b + 1;
@@ -146,7 +146,7 @@ final class ActionSpell extends Spell {
                 }
               }
             }
-            pg.field_d.field_g.a(65535, var7, param5, var6_int, param1);
+            pg.playerProfile.campaignProgress.setResult(65535, var7, param5, var6_int, param1);
             vl.field_n.writeCipheredOpcode(32161, 79);
             vl.field_n.writeByte(param0 - 3, var6_int);
             vl.field_n.writeByte(1, var7);
@@ -182,7 +182,7 @@ final class ActionSpell extends Spell {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class ActionSpell extends Spell {
         SoftwareRaster.a((int[]) null, 0, 0);
         so.field_b = rj.a(param0, param2, 1423111778, (java.awt.Component) ((Object) si.field_b));
         so.field_b.a(param1 - 17900);
-        g.a((byte) -85, param0 / 2, param2 / 2);
+        ContextualRuntimeException.a((byte) -85, param0 / 2, param2 / 2);
         if (param1 == 23505) {
           ni.a(-8994, param0, param2);
           CampaignMission.a(param2, -22696, param0);
@@ -219,7 +219,7 @@ final class ActionSpell extends Spell {
           }
           this.request.spellId = spellId;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ra.<init>(" + spellId + ',' + (request != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ra.<init>(" + spellId + ',' + (request != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class ActionSpell extends Spell {
             this.finishEffect((Battlefield) null, 42);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ra.A(" + castingPlayer + ',' + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ra.A(" + castingPlayer + ',' + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -271,7 +271,7 @@ final class ActionSpell extends Spell {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ final class ActionSpell extends Spell {
             this.finishEffect((Battlefield) null, -62);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ra.D(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ra.D(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -294,7 +294,7 @@ final class ActionSpell extends Spell {
             field_i = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ra.E(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ra.E(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class NodeDeque {
-    static int[] field_c;
+    static int[] unlockLevelCosts;
     static boolean field_a;
     static int[] field_b;
     IntrusiveNode sentinel;
@@ -15,7 +15,7 @@ final class NodeDeque {
             this.b(-29);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "at.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "at.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class NodeDeque {
     }
 
     public static void c(int param0) {
-        field_c = null;
+        unlockLevelCosts = null;
         field_b = null;
         if (param0 != 250) {
           field_b = (int[]) null;
@@ -57,7 +57,7 @@ final class NodeDeque {
         if (obfuscationGuard > 86) {
           return var2;
         }
-        field_c = (int[]) null;
+        unlockLevelCosts = (int[]) null;
         return var2;
     }
 
@@ -97,7 +97,7 @@ final class NodeDeque {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ final class NodeDeque {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 >= -69) {
-          field_c = (int[]) null;
+          unlockLevelCosts = (int[]) null;
           var2 = this.sentinel.previous;
           if (var2 != this.sentinel) {
             this.traversalCursor = var2.previous;
@@ -171,7 +171,7 @@ final class NodeDeque {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ final class NodeDeque {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -307,7 +307,7 @@ final class NodeDeque {
           node.previous.next = node;
           node.next.previous = node;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "at.B(" + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "at.B(" + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -318,6 +318,6 @@ final class NodeDeque {
     }
 
     static {
-        field_c = new int[]{50, 100, 250, 500, 750, 1000, 2500, 5000, 7500, 10000};
+        unlockLevelCosts = new int[]{50, 100, 250, 500, 750, 1000, 2500, 5000, 7500, 10000};
     }
 }

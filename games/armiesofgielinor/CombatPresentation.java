@@ -75,7 +75,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "sk.OA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sk.OA(" + param0 + ')');
         }
     }
 
@@ -222,7 +222,7 @@ final class CombatPresentation implements EventPresentation {
           } else {
             stackIn_153_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_148_0), ((StringBuilder) (Object) stackIn_152_1).append(stackIn_153_2).append(',').append(param4).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_148_0), ((StringBuilder) (Object) stackIn_152_1).append(stackIn_153_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -262,7 +262,7 @@ final class CombatPresentation implements EventPresentation {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -411,7 +411,7 @@ final class CombatPresentation implements EventPresentation {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -431,7 +431,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "sk.I(" + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "sk.I(" + obfuscationGuard + ')');
         }
     }
 
@@ -896,7 +896,7 @@ final class CombatPresentation implements EventPresentation {
           } else {
             stackIn_272_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_271_0), ((StringBuilder) (Object) stackIn_271_1).append(stackIn_272_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_271_0), ((StringBuilder) (Object) stackIn_271_1).append(stackIn_272_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -915,7 +915,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "sk.D(" + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "sk.D(" + obfuscationGuard + ')');
         }
     }
 
@@ -993,7 +993,7 @@ final class CombatPresentation implements EventPresentation {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_56_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -1023,7 +1023,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "sk.JA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "sk.JA(" + param0 + ')');
         }
     }
 
@@ -1033,7 +1033,7 @@ final class CombatPresentation implements EventPresentation {
             this.a(61, (Unit) null, 33, true, (Unit) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "sk.O(" + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sk.O(" + obfuscationGuard + ')');
         }
     }
 
@@ -1061,7 +1061,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "sk.BA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "sk.BA(" + param0 + ')');
         }
     }
 
@@ -1175,7 +1175,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "sk.DA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "sk.DA(" + param0 + ')');
         }
     }
 
@@ -1225,7 +1225,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "sk.P(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sk.P(" + param0 + ')');
         }
     }
 
@@ -1591,7 +1591,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "sk.S(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "sk.S(" + param0 + ')');
         }
     }
 
@@ -1656,7 +1656,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "sk.L(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "sk.L(" + param0 + ')');
         }
     }
 
@@ -2072,7 +2072,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "sk.AA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "sk.AA(" + param0 + ')');
         }
     }
 
@@ -2083,7 +2083,7 @@ final class CombatPresentation implements EventPresentation {
           this.a(this.attackers, this.field_J, this.field_u, this.defenders, param0);
           this.a(this.defenders, this.field_u, this.field_J, this.attackers, param0);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "sk.N(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sk.N(" + param0 + ')');
         }
     }
 
@@ -2620,7 +2620,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "sk.CA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "sk.CA(" + param0 + ')');
         }
     }
 
@@ -2641,7 +2641,7 @@ final class CombatPresentation implements EventPresentation {
           this.presenter.screenX = this.field_l[0];
           this.presenter.screenY = this.field_l[1];
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "sk.W(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sk.W(" + param0 + ')');
         }
     }
 
@@ -2660,7 +2660,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "sk.A(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "sk.A(" + param0 + ')');
         }
     }
 
@@ -2692,7 +2692,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "sk.G(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "sk.G(" + param0 + ')');
         }
     }
 
@@ -2784,7 +2784,7 @@ final class CombatPresentation implements EventPresentation {
           var3Lifetime1 = mp.k(-104) + (var5 >> 1);
           fe.c(TickCounter.field_c, var2_intLifetime1 + var6, var7 + var3Lifetime1, 2236962, true);
           if (this.battlefield != null &&
-            this.battlefield.field_T != null) {
+            this.battlefield.playerCoats != null) {
             var3Lifetime2 = 19;
             if (ku.field_J != null) {
               stackIn_63_0 = ku.field_J.field_x >> 1;
@@ -2802,11 +2802,11 @@ final class CombatPresentation implements EventPresentation {
             var6Lifetime1 = 0 + var2_intLifetime2;
             var7Lifetime1 = -var5Lifetime1 + (CombatEvent.field_I.field_D - var3Lifetime2);
             if (this.field_e > -1) {
-              this.battlefield.field_T[this.field_e].a(var6Lifetime1, this.battlefield.playerNames[this.field_e], false, false, var7Lifetime1, false, false, 122);
+              this.battlefield.playerCoats[this.field_e].a(var6Lifetime1, this.battlefield.playerNames[this.field_e], false, false, var7Lifetime1, false, false, 122);
             }
             var6Lifetime1Lifetime1 = -var2_intLifetime2 + (so.field_b.field_a - var4Lifetime1);
             if (this.field_g > -1) {
-              this.battlefield.field_T[this.field_g].a(var6Lifetime1Lifetime1, this.battlefield.playerNames[this.field_g], false, false, var7Lifetime1, false, false, 28);
+              this.battlefield.playerCoats[this.field_g].a(var6Lifetime1Lifetime1, this.battlefield.playerNames[this.field_g], false, false, var7Lifetime1, false, false, 28);
             }
           }
           fe.b(0, 0, rs.field_k, se.field_a, dq.field_i, nd.field_b, 0, 0);
@@ -2822,7 +2822,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "sk.H(" + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "sk.H(" + obfuscationGuard + ')');
         }
     }
 
@@ -2994,7 +2994,7 @@ final class CombatPresentation implements EventPresentation {
           } else {
             stackIn_183_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_178_0), ((StringBuilder) (Object) stackIn_182_1).append(stackIn_183_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_178_0), ((StringBuilder) (Object) stackIn_182_1).append(stackIn_183_2).append(')').toString());
         }
     }
 
@@ -3062,7 +3062,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "sk.KA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "sk.KA(" + param0 + ')');
         }
     }
 
@@ -3093,7 +3093,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var5), "sk.LA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var5), "sk.LA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -3164,7 +3164,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3_ref), "sk.J(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "sk.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3239,7 +3239,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "sk.IA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "sk.IA(" + param0 + ')');
         }
     }
 
@@ -3255,7 +3255,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "sk.M(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "sk.M(" + param0 + ')');
         }
     }
 
@@ -3386,7 +3386,7 @@ final class CombatPresentation implements EventPresentation {
           } else {
             stackIn_195_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_190_0), ((StringBuilder) (Object) stackIn_194_1).append(stackIn_195_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_190_0), ((StringBuilder) (Object) stackIn_194_1).append(stackIn_195_2).append(')').toString());
         }
     }
 
@@ -3672,7 +3672,7 @@ final class CombatPresentation implements EventPresentation {
           } else {
             stackIn_137_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_132_0), ((StringBuilder) (Object) stackIn_136_1).append(stackIn_137_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_132_0), ((StringBuilder) (Object) stackIn_136_1).append(stackIn_137_2).append(')').toString());
         }
     }
 
@@ -3688,7 +3688,7 @@ final class CombatPresentation implements EventPresentation {
             this.phase = 8;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "sk.R(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sk.R(" + param0 + ')');
         }
     }
 
@@ -3702,7 +3702,7 @@ final class CombatPresentation implements EventPresentation {
         try {
           field_j = (int[][]) null;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "sk.V(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sk.V(" + param0 + ')');
         }
     }
 
@@ -3735,7 +3735,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "sk.K(" + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "sk.K(" + obfuscationGuard + ')');
         }
     }
 
@@ -3766,7 +3766,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "sk.MA(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sk.MA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3804,7 +3804,7 @@ final class CombatPresentation implements EventPresentation {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3881,7 +3881,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "sk.PA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "sk.PA(" + param0 + ')');
         }
     }
 
@@ -3897,7 +3897,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "sk.EA(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "sk.EA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3920,7 +3920,7 @@ final class CombatPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "sk.NA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "sk.NA(" + param0 + ')');
         }
     }
 
@@ -4377,7 +4377,7 @@ final class CombatPresentation implements EventPresentation {
           } else {
             stackIn_271_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_266_0), ((StringBuilder) (Object) stackIn_270_1).append(stackIn_271_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_266_0), ((StringBuilder) (Object) stackIn_270_1).append(stackIn_271_2).append(')').toString());
         }
     }
 
@@ -4440,7 +4440,7 @@ final class CombatPresentation implements EventPresentation {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

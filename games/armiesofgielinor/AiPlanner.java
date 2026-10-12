@@ -176,7 +176,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -447,7 +447,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -645,7 +645,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -656,7 +656,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           }
           this.a(80, unit);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ej.A(" + (unit != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ej.A(" + (unit != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -870,7 +870,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -905,7 +905,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -934,7 +934,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -969,7 +969,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1468,7 +1468,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -1643,7 +1643,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -1923,7 +1923,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           }
           this.influenceMap.a(param2 ^ -19507, param3.tileY, (float)param0 * var5_float, param1, param3.getUnitCategory(0), this.field_n, param3.tileX);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ej.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ej.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1982,7 +1982,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -2031,7 +2031,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           this.bestScoreStrategy = (AiPlanningStrategy) ((Object) new BestScoreStrategy(this));
           this.weightedScoreStrategy = (AiPlanningStrategy) ((Object) new WeightedScoreStrategy(this));
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (battlefield != null ? "{...}" : "null") + ',' + playerId + ',' + configurationFlag + ',' + (campaignOverrides != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ej.<init>(" + (battlefield != null ? "{...}" : "null") + ',' + playerId + ',' + configurationFlag + ',' + (campaignOverrides != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -168,7 +168,7 @@ final class tg {
             this.field_i.a(13, ai.field_R, (byte) -119);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "tg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "tg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -181,7 +181,7 @@ final class tg {
           co.field_k[param1] = cd.field_d;
           mu.a(t.field_a, param1 - 2, param0);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "tg.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "tg.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -345,7 +345,7 @@ final class tg {
           if (!var6.field_gc &&
             var6.field_tc) {
             if (!var6.field_kc) {
-              this.field_i.a(2, fo.a(4800, ho.field_d, new String[]{var3}), (byte) -123);
+              this.field_i.a(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
               if (var6.field_gc) {
                 this.field_i.a(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
               }
@@ -357,7 +357,7 @@ final class tg {
               }
               return;
             }
-            this.field_i.a(2, fo.a(4800, ho.field_d, new String[]{var3}), (byte) -123);
+            this.field_i.a(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
           }
           if (!var6.field_gc) {
             return;
@@ -385,10 +385,10 @@ final class tg {
           if (!var7.field_gc &&
             var7.field_tc) {
             if (!var7.field_kc) {
-              this.field_i.a(2, fo.a(4800, ho.field_d, new String[]{var3}), (byte) -123);
+              this.field_i.a(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
             } else {
               if (var7.field_Sb) {
-                this.field_i.a(2, fo.a(4800, ho.field_d, new String[]{var3}), (byte) -123);
+                this.field_i.a(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
               }
             }
           }
@@ -570,7 +570,7 @@ final class tg {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -600,7 +600,7 @@ final class tg {
           this.field_e = param5;
           param0.field_rb = true;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "tg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "tg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

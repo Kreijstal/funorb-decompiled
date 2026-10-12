@@ -39,7 +39,7 @@ final class GlobalSpell extends Spell {
             field_m = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "al.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "al.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class GlobalSpell extends Spell {
             this.getPayloadSize(-111);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "al.E(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "al.E(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -85,12 +85,12 @@ final class GlobalSpell extends Spell {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     final static void a(int param0, boolean param1) {
-        cm.a(2000, param1);
+        CampaignProgress.a(2000, param1);
         if (param0 >= -21) {
           GlobalSpell.a(-83, true);
           da.a(-10820, param1);
@@ -106,7 +106,7 @@ final class GlobalSpell extends Spell {
             this.applyEffect(-41, (Battlefield) null, -67);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "al.D(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "al.D(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 

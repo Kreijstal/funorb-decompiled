@@ -222,8 +222,8 @@ final class a extends IntrusiveNode {
           }
           for (var7 = 0; 5 > var7; var7++) {
             if ((var6 & 1 << var7) != 0 &&
-              0 != (-16777216 & hm.field_l[var7])) {
-              var4_int = fm.a(var4_int, hm.field_l[var7], 789485328);
+              0 != (-16777216 & PlayerProfile.field_l[var7])) {
+              var4_int = fm.a(var4_int, PlayerProfile.field_l[var7], 789485328);
             }
           }
           stackIn_126_0 = var4_int;
@@ -231,7 +231,7 @@ final class a extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "a.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "a.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -274,7 +274,7 @@ final class a extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

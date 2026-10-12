@@ -194,7 +194,7 @@ final class es {
             } else {
               var11 = 0;
               while (!(var11 >= lm.field_e.length)) {
-                if ((ln.field_d[var11 / 8] & 1 << (var11 & 7)) == 0) {
+                if ((CoatOfArms.field_d[var11 / 8] & 1 << (var11 & 7)) == 0) {
                   var11++;
                   continue;
                 }
@@ -277,7 +277,7 @@ final class es {
           } else {
             stackIn_96_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_95_1).append(stackIn_96_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_95_0), ((StringBuilder) (Object) stackIn_95_1).append(stackIn_96_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -313,7 +313,7 @@ final class es {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

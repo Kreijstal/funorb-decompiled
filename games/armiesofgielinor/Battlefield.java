@@ -25,7 +25,7 @@ final class Battlefield {
     CampaignMission campaignMission;
     int field_Q;
     int[] remainingRuneCap;
-    ln[] field_T;
+    CoatOfArms[] playerCoats;
     private boolean field_Fb;
     static String field_q;
     NodeDeque pendingEvents;
@@ -138,7 +138,7 @@ final class Battlefield {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class Battlefield {
             unit.hasTileEffect8 = (var3_int & 8) != 0 ? true : false;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ha.DA(" + (unit != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ha.DA(" + (unit != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class Battlefield {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ final class Battlefield {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1107,7 +1107,7 @@ final class Battlefield {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1368,7 +1368,7 @@ final class Battlefield {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -1400,7 +1400,7 @@ final class Battlefield {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -1739,7 +1739,7 @@ final class Battlefield {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1801,7 +1801,7 @@ final class Battlefield {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1867,7 +1867,7 @@ final class Battlefield {
           effectType = (header & 31) >> 3;
           this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new StateChangeEvent(effectType, tileX, tileY, playerId)));
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ha.GD(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ha.GD(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1922,7 +1922,7 @@ final class Battlefield {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -1954,7 +1954,7 @@ final class Battlefield {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(',').append(attackTypeMask).append(',').append(attackPower).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(',').append(attackTypeMask).append(',').append(attackPower).append(')').toString());
         }
     }
 
@@ -2670,7 +2670,7 @@ final class Battlefield {
           } else {
             stackIn_140_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_136_0), ((StringBuilder) (Object) stackIn_139_1).append(stackIn_140_2).append(',').append(targetDeltaX).append(',').append(attackOriginX).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_136_0), ((StringBuilder) (Object) stackIn_139_1).append(stackIn_140_2).append(',').append(targetDeltaX).append(',').append(attackOriginX).append(')').toString());
         }
     }
 
@@ -2724,7 +2724,7 @@ final class Battlefield {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -2795,7 +2795,7 @@ final class Battlefield {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -2810,7 +2810,7 @@ final class Battlefield {
           var6 = SummonEvent.readStoredUnit(var5_int, 0, tileY, tileX, packet, this, -102, true);
           this.unitsByPlayer[var6.ownerPlayer].addLast((byte) -119, (IntrusiveNode) (var6));
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ha.WD(" + tileX + ',' + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ',' + tileY + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ha.WD(" + tileX + ',' + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ',' + tileY + ')');
         }
     }
 
@@ -3008,7 +3008,7 @@ final class Battlefield {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -3034,7 +3034,7 @@ final class Battlefield {
           this.pendingEvents.b(param0 ^ 98);
           Spell.a("Dropping conection: turn: " + this.turnNumber + ", player: " + this.currentPlayer + "\n" + var4, (byte) 40);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ha.JC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ha.JC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -3171,7 +3171,7 @@ final class Battlefield {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -3297,7 +3297,7 @@ final class Battlefield {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -3396,15 +3396,15 @@ final class Battlefield {
         try {
           this.randomSeed = packet.readInt(obfuscationGuard + 1);
           this.turnLimit = packet.readUnsignedShort((byte) -104);
-          this.field_T = new ln[this.playerCount];
+          this.playerCoats = new CoatOfArms[this.playerCount];
           var3_int = 0;
           do {
             if (var3_int >= this.playerCount) {
               var3_int = packet.readUnsignedByte(obfuscationGuard ^ 0);
               break;
             }
-            this.field_T[var3_int] = new ln();
-            EffectPresentation.a(this.field_T[var3_int].field_a, packet, false, this.field_T[var3_int].field_b);
+            this.playerCoats[var3_int] = new CoatOfArms();
+            EffectPresentation.readCoatOfArms(this.playerCoats[var3_int].parts, packet, false, this.playerCoats[var3_int].colourIndices);
             var3_int++;
           } while (var13 == 0);
           stackIn_10_1 = !((var3_int & 1) <= 0);
@@ -3631,7 +3631,7 @@ final class Battlefield {
           } else {
             stackIn_105_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(')').toString());
         }
     }
 
@@ -4034,7 +4034,7 @@ final class Battlefield {
           var5 = 0;
           scanLoop1: while (true) {
             if (var5 < this.playerCount) {
-              AiInfluenceMap.a(this.field_T[var5].field_a, (byte) 100, packet, this.field_T[var5].field_b);
+              AiInfluenceMap.writeCoatOfArms(this.playerCoats[var5].parts, (byte) 100, packet, this.playerCoats[var5].colourIndices);
               var5++;
               if (var12 == 0) {
                 continue;
@@ -4324,7 +4324,7 @@ final class Battlefield {
           } else {
             stackIn_149_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_148_0), ((StringBuilder) (Object) stackIn_148_1).append(stackIn_149_2).append(',').append(obfuscationGuard).append(',').append(playerId).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_148_0), ((StringBuilder) (Object) stackIn_148_1).append(stackIn_149_2).append(',').append(obfuscationGuard).append(',').append(playerId).append(')').toString());
         }
     }
 
@@ -4358,7 +4358,7 @@ final class Battlefield {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -4629,7 +4629,7 @@ final class Battlefield {
           } else {
             stackIn_107_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_106_1).append(stackIn_107_2).append(')').toString());
         }
     }
 
@@ -4686,7 +4686,7 @@ final class Battlefield {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param5).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -4806,7 +4806,7 @@ final class Battlefield {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -4835,7 +4835,7 @@ final class Battlefield {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -4851,7 +4851,7 @@ final class Battlefield {
           packet.readBytes(0, chunkLength, this.snapshotBuffer.position, this.snapshotBuffer.payload);
           this.snapshotBuffer.position = this.snapshotBuffer.position + chunkLength;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ha.AC(" + chunkLength + ',' + (packet != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ha.AC(" + chunkLength + ',' + (packet != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -4885,7 +4885,7 @@ final class Battlefield {
           strengthBonus = (16 ^ strengthBonus) - 16;
           this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(unitType, tileX, tileY, strengthBonus, ownerAndBonus >> 5)));
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ha.CB(" + (packet != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ha.CB(" + (packet != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -4933,7 +4933,7 @@ final class Battlefield {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -5379,7 +5379,7 @@ final class Battlefield {
             }
             if (campaignKillMarker != 0 &&
               this.campaignMission != null &&
-              this.campaignMission.field_G.field_r == 2) {
+              this.campaignMission.campaign.campaignIndex == 2) {
               if (this.campaignMission.missionId != 5) {
                 return;
               }
@@ -5496,7 +5496,7 @@ final class Battlefield {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -5563,7 +5563,7 @@ final class Battlefield {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -5684,7 +5684,7 @@ final class Battlefield {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -5779,7 +5779,7 @@ final class Battlefield {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -5874,7 +5874,7 @@ final class Battlefield {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -6415,7 +6415,7 @@ final class Battlefield {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -6529,7 +6529,7 @@ final class Battlefield {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -6963,7 +6963,7 @@ final class Battlefield {
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
-        sd var30 = null;
+        CampaignParticipant var30 = null;
         int[] var31 = null;
         int[] var32 = null;
         int[] var33 = null;
@@ -7001,7 +7001,7 @@ final class Battlefield {
         this.field_o = false;
         this.field_V = true;
         this.kingBlackDragonSummoned = false;
-        this.field_T = null;
+        this.playerCoats = null;
         this.field_A = 0;
         this.field_r = true;
         this.field_qb = false;
@@ -7051,12 +7051,12 @@ final class Battlefield {
               (this.mapSizeSetting != 4)) {
               this.mapSizeSetting = 2;
               if (var25 != 0) {
-                stackIn_35_1 = (mh.a(this.campaignMission.field_G.field_r, -126, this.campaignMission.missionId) == 0);
+                stackIn_35_1 = (mh.a(this.campaignMission.campaign.campaignIndex, -126, this.campaignMission.missionId) == 0);
                 this.field_kb = stackIn_35_1;
               }
             }
           } else {
-            stackIn_35_1 = (mh.a(this.campaignMission.field_G.field_r, -126, this.campaignMission.missionId) == 0);
+            stackIn_35_1 = (mh.a(this.campaignMission.campaign.campaignIndex, -126, this.campaignMission.missionId) == 0);
             this.field_kb = stackIn_35_1;
           }
           boolean decompiledFrameCompleted5 = true;
@@ -7487,9 +7487,9 @@ final class Battlefield {
                     break;
                   }
                   if (stackIn_220_0 == ~var18Lifetime2) {
-                    this.chosenGods[var18Lifetime2] = new int[]{this.campaignMission.field_G.field_s};
+                    this.chosenGods[var18Lifetime2] = new int[]{this.campaignMission.campaign.localGodId};
                   } else {
-                    var30 = this.campaignMission.field_G.field_q[this.campaignMission.participantIds[var18Lifetime2]];
+                    var30 = this.campaignMission.campaign.participants[this.campaignMission.participantIds[var18Lifetime2]];
                     var20Lifetime1 = 0;
                     var21Lifetime1Lifetime1 = 1;
                     while (var21Lifetime1Lifetime1 < this.field_a[var18Lifetime2].length) {
@@ -7506,7 +7506,7 @@ final class Battlefield {
                     var22Lifetime1 = stackIn_204_0Lifetime1;
                     var23Lifetime1 = 1;
                     while (var23Lifetime1 < this.field_a[var18Lifetime2].length) {
-                      var24 = var30.field_t[var23Lifetime1 - 1];
+                      var24 = var30.godFavourLevels[var23Lifetime1 - 1];
                       stackIn_215_0 = ~this.field_a[var18Lifetime2][var23Lifetime1];
                       stackIn_215_1 = -1;
                       if (stackIn_215_0 == stackIn_215_1) {
@@ -7579,7 +7579,7 @@ final class Battlefield {
           } else {
             stackIn_236_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_226_0), ((StringBuilder) (Object) stackIn_235_1).append(stackIn_236_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_226_0), ((StringBuilder) (Object) stackIn_235_1).append(stackIn_236_2).append(')').toString());
         }
     }
 
@@ -7617,7 +7617,7 @@ final class Battlefield {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

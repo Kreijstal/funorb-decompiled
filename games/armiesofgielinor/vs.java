@@ -26,7 +26,7 @@ final class vs {
           }
           iu.field_h = true;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "vs.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "vs.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

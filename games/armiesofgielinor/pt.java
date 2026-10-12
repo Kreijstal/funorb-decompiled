@@ -58,7 +58,7 @@ abstract class pt extends sf {
           if (this.field_ib != fieldTemp$2) {
             this.field_cb.field_K = 256 - (this.field_hb << 8) / this.field_ib;
           } else {
-            this.field_bb = g.field_c;
+            this.field_bb = ContextualRuntimeException.field_c;
             this.a(this.field_Z, false, this.field_jb.field_w + 12 + this.field_ab, this.field_jb.field_l + 12);
             this.field_hb = 0;
             this.field_cb.field_K = 0;
@@ -138,7 +138,7 @@ abstract class pt extends sf {
         try {
           var3_int = 116 % ((-27 - param1) / 44);
           this.field_jb = param0;
-          if (this.field_bb == g.field_c) {
+          if (this.field_bb == ContextualRuntimeException.field_c) {
             this.a(this.field_Z, false, this.field_jb.field_w + (12 + this.field_ab), 12 + this.field_jb.field_l);
             this.field_hb = 0;
             return;
@@ -159,7 +159,7 @@ abstract class pt extends sf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -193,7 +193,7 @@ abstract class pt extends sf {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ abstract class pt extends sf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ abstract class pt extends sf {
           this.a((byte) 10, (kb) (this.field_cb));
           this.field_jb = null;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "pt.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "pt.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -268,7 +268,7 @@ abstract class pt extends sf {
           this.field_ib = param3;
           this.b(-36, param1);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "pt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "pt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -23,13 +23,13 @@ final class ig extends IntrusiveNode {
         }
     }
 
-    final static g a(Throwable param0, String param1) {
-        g var2 = null;
-        if (param0 instanceof g) {
-          var2 = (g) ((Object) param0);
-          var2.field_g = var2.field_g + ' ' + param1;
+    final static ContextualRuntimeException addExceptionContext(Throwable cause, String context) {
+        ContextualRuntimeException var2 = null;
+        if (cause instanceof ContextualRuntimeException) {
+          var2 = (ContextualRuntimeException) ((Object) cause);
+          var2.context = var2.context + ' ' + context;
         } else {
-          var2 = new g(param0, param1);
+          var2 = new ContextualRuntimeException(cause, context);
         }
         return var2;
     }
@@ -93,14 +93,14 @@ final class ig extends IntrusiveNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
     final static boolean a(int param0) {
         if (param0 != -8327) {
           String var2 = (String) null;
-          ig.a((Throwable) null, (String) null);
+          ig.addExceptionContext((Throwable) null, (String) null);
         }
         return da.a(23660, CombatEvent.d((byte) 16));
     }

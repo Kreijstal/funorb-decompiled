@@ -36,7 +36,7 @@ final class gt {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class gt {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class gt {
         }
     }
 
-    final static int[] a(int param0, PacketBuffer param1) {
+    final static int[] readSixUnsignedBytes(int obfuscationGuard, PacketBuffer packet) {
         int var3 = 0;
         int[] var2 = null;
         RuntimeException var2_ref = null;
@@ -120,11 +120,11 @@ final class gt {
           var6 = new int[6];
           var2 = var6;
           for (var3 = 0; var6.length > var3; var3++) {
-            var6[var3] = param1.readUnsignedByte(param0 + 2);
+            var6[var3] = packet.readUnsignedByte(obfuscationGuard + 2);
           }
-          if (param0 != -2) {
+          if (obfuscationGuard != -2) {
             var5 = (PacketBuffer) null;
-            gt.a(115, (PacketBuffer) null);
+            gt.readSixUnsignedBytes(115, (PacketBuffer) null);
           }
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -132,13 +132,13 @@ final class gt {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_10_0 = var2_ref;
-          stackIn_10_1 = new StringBuilder().append("gt.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("gt.D(").append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

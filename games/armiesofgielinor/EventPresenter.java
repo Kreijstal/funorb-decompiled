@@ -389,7 +389,7 @@ final class EventPresenter extends IntrusiveNode {
           this.field_w = blocking ? true : false;
           this.acknowledged = false;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "vb.<init>(" + (controller != null ? "{...}" : "null") + ',' + (battlefield != null ? "{...}" : "null") + ',' + (effectSprites != null ? "{...}" : "null") + ',' + (event != null ? "{...}" : "null") + ',' + blocking + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "vb.<init>(" + (controller != null ? "{...}" : "null") + ',' + (battlefield != null ? "{...}" : "null") + ',' + (effectSprites != null ? "{...}" : "null") + ',' + (event != null ? "{...}" : "null") + ',' + blocking + ')');
         }
     }
 
@@ -407,7 +407,7 @@ final class EventPresenter extends IntrusiveNode {
           this.presentationActive = false;
           this.field_w = param6 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "vb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "vb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

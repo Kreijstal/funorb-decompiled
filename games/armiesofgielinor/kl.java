@@ -100,7 +100,7 @@ final class kl {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ig.a((Throwable) (stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) (stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -135,7 +135,7 @@ final class kl {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class kl {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -318,7 +318,7 @@ final class kl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -448,7 +448,7 @@ final class kl {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -489,7 +489,7 @@ final class kl {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -523,8 +523,8 @@ final class kl {
               CipherPacketBuffer.a(true, 0, param0 + 20194, jt.field_a);
             }
             if (12 == rs.field_q) {
-              stackIn_17_0 = !(ln.field_e);
-              ln.field_e = stackIn_17_0;
+              stackIn_17_0 = !(CoatOfArms.field_e);
+              CoatOfArms.field_e = stackIn_17_0;
             }
             if (rs.field_q != 11) {
               continue;
@@ -540,7 +540,7 @@ final class kl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "kl.G(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "kl.G(" + param0 + ')');
         }
     }
 
@@ -594,7 +594,7 @@ final class kl {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -742,7 +742,7 @@ final class kl {
             stackIn_33_0 = var11_ref_RuntimeException;
             stackIn_33_1 = new StringBuilder();
             stackIn_34_2 = (param2 != null);
-            throw ig.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(pk.a(var9, var9.length, 113)).append(" ").append(pk.a(var9, -2 + var9.length, 115)).append(" ").append(this.field_j.field_e[param3]).append(" ").append(this.field_j.field_s).toString());
+            throw ig.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(pk.a(var9, var9.length, 113)).append(" ").append(pk.a(var9, -2 + var9.length, 115)).append(" ").append(this.field_j.field_e[param3]).append(" ").append(this.field_j.field_s).toString());
           }
           if (this.field_b) {
             this.field_h[param3] = null;
@@ -868,7 +868,7 @@ final class kl {
           } else {
             stackIn_104_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -904,7 +904,7 @@ final class kl {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -919,7 +919,7 @@ final class kl {
           this.field_b = param1 ? true : false;
           this.field_e = param2;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "kl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "kl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

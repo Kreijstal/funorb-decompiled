@@ -334,7 +334,7 @@ final class de {
                   return stackIn_167_0;
                 }
                 if (decompiledFrameRemainder1) {
-                  stackIn_163_0 = sd.field_l;
+                  stackIn_163_0 = CampaignParticipant.field_l;
                   return stackIn_163_0;
                 }
               }
@@ -399,7 +399,7 @@ final class de {
                   var7.unitType != 4 &&
                   74 != var7.unitType &&
                   var7.unitType != 34) {
-                  stackIn_219_0 = sd.field_r;
+                  stackIn_219_0 = CampaignParticipant.field_r;
                   return stackIn_219_0;
                 }
                 if (uc.spellDefinitions[param4][6] == 6 &&
@@ -489,7 +489,7 @@ final class de {
           } else {
             stackIn_333_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_332_0), ((StringBuilder) (Object) stackIn_332_1).append(stackIn_333_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_332_0), ((StringBuilder) (Object) stackIn_332_1).append(stackIn_333_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -557,7 +557,7 @@ final class de {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(tier0Bits).append(',').append(tier1Bits).append(',').append(tier3Bits).append(',').append(tier2Bits).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(tier0Bits).append(',').append(tier1Bits).append(',').append(tier3Bits).append(',').append(tier2Bits).append(')').toString());
         }
     }
 

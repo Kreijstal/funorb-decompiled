@@ -7,7 +7,7 @@ final class pg {
     static int field_f;
     static bq[] field_a;
     static int field_e;
-    static hm field_d;
+    static PlayerProfile playerProfile;
     static RgbSprite field_c;
     static String[] field_b;
 
@@ -64,7 +64,7 @@ final class pg {
         }
         dj.a((byte) -126);
         if (param0) {
-          field_d = (hm) null;
+          playerProfile = (PlayerProfile) null;
         }
     }
 
@@ -147,7 +147,7 @@ final class pg {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class pg {
         }
         field_b = null;
         field_c = null;
-        field_d = null;
+        playerProfile = null;
         field_a = null;
     }
 

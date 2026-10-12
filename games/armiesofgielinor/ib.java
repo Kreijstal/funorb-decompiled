@@ -80,7 +80,7 @@ final class ib extends mk {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class ib extends mk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -236,7 +236,7 @@ final class ib extends mk {
               if (var11 != param6) {
                 if (var9_int == var11) {
                   stackIn_40_0 = kd.field_X;
-                  stackIn_40_1 = pg.field_d.a(param7 ^ -40);
+                  stackIn_40_1 = pg.playerProfile.getUnlockLevel(param7 ^ -40);
                   stackIn_41_2 = !(2 > hi.field_j);
                   if (!ue.a(stackIn_40_0, stackIn_40_1, stackIn_41_2, var11, -1208926000, ei.field_e[0])) {
                     fe.a(var13, var14, (param5 >> 1) - 9, 78, io.field_m, MoveAttackAction.field_x, 0, 128, false);
@@ -245,7 +245,7 @@ final class ib extends mk {
                   }
                 } else {
                   stackIn_34_0 = kd.field_X;
-                  stackIn_34_1 = pg.field_d.a(0);
+                  stackIn_34_1 = pg.playerProfile.getUnlockLevel(0);
                   stackIn_35_2 = !(hi.field_j < 2);
                   if (!ue.a(stackIn_34_0, stackIn_34_1, stackIn_35_2, var11, -1208926000, ei.field_e[0])) {
                     fe.a(var13, var14, (param5 >> 1) - 9, 78, io.field_m, dh.field_l, 0, 128, false);
@@ -344,13 +344,13 @@ final class ib extends mk {
           SoftwareRaster.a();
           if (kd.field_X > -1) {
             stackIn_87_0 = kd.field_X;
-            stackIn_87_1 = pg.field_d.a(0);
+            stackIn_87_1 = pg.playerProfile.getUnlockLevel(0);
             stackIn_88_2 = !(hi.field_j < 2);
             if (!ue.a(stackIn_87_0, stackIn_87_1, stackIn_88_2, var9_int, -1208926000, ei.field_e[0])) {
               param4 += 10;
               param3 += 30;
               var12 = null;
-              if (el.field_f[kd.field_X][var9_int] <= pg.field_d.a(param7 ^ -40)) {
+              if (el.field_f[kd.field_X][var9_int] <= pg.playerProfile.getUnlockLevel(param7 ^ -40)) {
                 if (ve.field_a[kd.field_X][var9_int] < 0) {
                   var12 = "Unavailable to lowly players";
                 } else {
@@ -397,7 +397,7 @@ final class ib extends mk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var9), "ib.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var9), "ib.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -445,7 +445,7 @@ final class ib extends mk {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -455,7 +455,7 @@ final class ib extends mk {
           this.field_k = param2;
           this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

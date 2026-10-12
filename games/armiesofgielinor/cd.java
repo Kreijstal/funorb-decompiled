@@ -3,7 +3,7 @@
  */
 final class cd {
     static int field_c;
-    static cf[] field_a;
+    static CampaignDefinition[] campaigns;
     static String field_e;
     static String field_b;
     static String field_d;
@@ -31,7 +31,7 @@ final class cd {
           var2 = var8.readUnsignedByte(0);
           if (var2 != 0) {
             if (var2 != 1) {
-              af.a((Throwable) null, 76, "A1: " + cm.b(false));
+              af.a((Throwable) null, 76, "A1: " + CampaignProgress.b(false));
               dj.a((byte) -128);
               return;
             }
@@ -78,7 +78,7 @@ final class cd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "cd.D(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "cd.D(" + param0 + ')');
         }
     }
 
@@ -94,7 +94,7 @@ final class cd {
 
     final static boolean a(int param0, int param1, boolean param2) {
         if (param2) {
-          field_a = (cf[]) null;
+          campaigns = (CampaignDefinition[]) null;
           if (rs.field_q == 13) {
             qu.e(-3);
             return true;
@@ -154,7 +154,7 @@ final class cd {
     }
 
     public static void a(boolean param0) {
-        field_a = null;
+        campaigns = null;
         field_b = null;
         if (!param0) {
           field_e = null;
@@ -168,7 +168,7 @@ final class cd {
 
     static {
         field_c = 2;
-        field_a = new cf[3];
+        campaigns = new CampaignDefinition[3];
         field_b = "You have declined the invitation.";
         field_d = "Off";
     }

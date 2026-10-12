@@ -166,8 +166,8 @@ abstract class vf {
               decompiledFrameRemainder0 = (var6 != 0);
               if (decompiledFrameRemainder0) {
                 var7 = bp.field_c;
-                for (var8_int = 0; var8_int < ln.field_d.length; var8_int++) {
-                  ln.field_d[var8_int] = (byte) 0;
+                for (var8_int = 0; var8_int < CoatOfArms.field_d.length; var8_int++) {
+                  CoatOfArms.field_d[var8_int] = (byte) 0;
                 }
               }
             }
@@ -208,15 +208,15 @@ abstract class vf {
               decompiledFrameRemainder0 = (var6 != 0);
               if (decompiledFrameRemainder0) {
                 var7 = bp.field_c;
-                for (var8_int = 0; var8_int < ln.field_d.length; var8_int++) {
-                  ln.field_d[var8_int] = (byte) 0;
+                for (var8_int = 0; var8_int < CoatOfArms.field_d.length; var8_int++) {
+                  CoatOfArms.field_d[var8_int] = (byte) 0;
                 }
               }
             }
           }
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            ln.field_d[var7 / 8] = (byte)oe.c((int) ln.field_d[var7 / 8], 1 << var7 % 8);
+            CoatOfArms.field_d[var7 / 8] = (byte)oe.c((int) CoatOfArms.field_d[var7 / 8], 1 << var7 % 8);
           }
           if (decompiledFrameRemainder1) {
             stackIn_64_0 = (param1) ? -1 : 0;
@@ -238,11 +238,11 @@ abstract class vf {
                 } else {
                   if (var6 == 0) {
                     if (var7 == -1) {
-                      for (var9 = 0; var9 < ln.field_d.length; var9++) {
-                        ln.field_d[var9] = (byte) 0;
+                      for (var9 = 0; var9 < CoatOfArms.field_d.length; var9++) {
+                        CoatOfArms.field_d[var9] = (byte) 0;
                       }
                     } else {
-                      ln.field_d[var7 / 8] = (byte)GrowthEvent.b((int) ln.field_d[var7 / 8], 1 << rn.a(var7, 7));
+                      CoatOfArms.field_d[var7 / 8] = (byte)GrowthEvent.b((int) CoatOfArms.field_d[var7 / 8], 1 << rn.a(var7, 7));
                     }
                   }
                 }
@@ -259,12 +259,12 @@ abstract class vf {
                     dupTemp$0 = pu.field_k[1][var7 + 1];
                     stackIn_96_0 = dupTemp$0;
                     stackIn_96_1 = dupTemp$0.field_rb;
-                    stackIn_97_2 = (0 == (ln.field_d[var9 / 8] & 1 << (7 & var9)));
+                    stackIn_97_2 = (0 == (CoatOfArms.field_d[var9 / 8] & 1 << (7 & var9)));
                     stackIn_96_0.field_rb = stackIn_96_1 & stackIn_97_2;
                   }
                 } else {
                   stackIn_90_0 = pu.field_k[1][var7 + 1];
-                  stackIn_91_1 = ((ln.field_d[var7 / 8] & 1 << (var7 & 7)) != 0);
+                  stackIn_91_1 = ((CoatOfArms.field_d[var7 / 8] & 1 << (var7 & 7)) != 0);
                   stackIn_90_0.field_rb = stackIn_91_1;
                 }
               }
@@ -647,7 +647,7 @@ abstract class vf {
           } else {
             stackIn_355_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_354_0), ((StringBuilder) (Object) stackIn_354_1).append(stackIn_355_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_354_0), ((StringBuilder) (Object) stackIn_354_1).append(stackIn_355_2).append(')').toString());
         }
     }
 
@@ -801,7 +801,7 @@ abstract class vf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

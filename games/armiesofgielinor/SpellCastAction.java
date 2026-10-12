@@ -25,7 +25,7 @@ final class SpellCastAction extends PreparedAction {
         try {
           this.spell.finishEffect(battlefield, obfuscationGuard - 1700635504);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ua.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ua.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class SpellCastAction extends PreparedAction {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class SpellCastAction extends PreparedAction {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class SpellCastAction extends PreparedAction {
           if (this.selectionMode > -1) {
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (spell != null ? "{...}" : "null") + ',' + selectionMode + ',' + actingPlayer + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ua.<init>(" + (spell != null ? "{...}" : "null") + ',' + selectionMode + ',' + actingPlayer + ')');
         }
     }
 

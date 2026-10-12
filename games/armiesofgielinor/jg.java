@@ -545,7 +545,7 @@ final class jg extends IntrusiveNode {
               if (var12.field_vc) {
                 stackIn_156_0 = uu.field_a;
               } else {
-                stackIn_156_0 = cm.field_c;
+                stackIn_156_0 = CampaignProgress.field_c;
               }
               ad.field_I = stackIn_156_0;
             }
@@ -596,7 +596,7 @@ final class jg extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var7), "jg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var7), "jg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -658,7 +658,7 @@ final class jg extends IntrusiveNode {
               var14.field_m = true;
               var14.unlink(param0 ^ 35);
             } else {
-              af.a((Throwable) null, 78, "A1: " + cm.b(false));
+              af.a((Throwable) null, 78, "A1: " + CampaignProgress.b(false));
               dj.a((byte) -127);
             }
           }
@@ -666,7 +666,7 @@ final class jg extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "jg.A(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "jg.A(" + param0 + ')');
         }
     }
 

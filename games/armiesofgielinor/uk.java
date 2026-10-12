@@ -26,7 +26,7 @@ final class uk extends qc {
           }
           lk.field_h = 0;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "uk.B(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "uk.B(" + param0 + ')');
         }
     }
 

@@ -21,7 +21,7 @@ class im extends ms {
           if (param1 != 19) {
             im.b(49, 30);
           }
-          var2_int = param0.field_G.field_r;
+          var2_int = param0.campaign.campaignIndex;
           var3 = param0.missionId;
           stackIn_3_0 = mh.a(var2_int, -125, var3);
           return stackIn_3_0;
@@ -35,7 +35,7 @@ class im extends ms {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ class im extends ms {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -131,9 +131,9 @@ class im extends ms {
           }
           for (var4 = 0; var4 < var3.length; var4++) {
             if (var4 % 2 == 0) {
-              ah.field_a.a(119, Integer.parseInt(var3[var4]), var4 / 2);
+              ah.localCoat.setPart(119, Integer.parseInt(var3[var4]), var4 / 2);
             } else {
-              ah.field_a.a(var4 / 2, Integer.parseInt(var3[var4]), (byte) -128);
+              ah.localCoat.setColour(var4 / 2, Integer.parseInt(var3[var4]), (byte) -128);
             }
           }
           stackIn_11_0 = "done.";
@@ -155,7 +155,7 @@ class im extends ms {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+            throw ig.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
           }
         }
     }

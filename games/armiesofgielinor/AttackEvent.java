@@ -89,7 +89,7 @@ final class AttackEvent extends GameEvent {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class AttackEvent extends GameEvent {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -146,13 +146,13 @@ final class AttackEvent extends GameEvent {
             field_A = (String[][][]) null;
           }
           for (var1_int = 0; 5 > var1_int; var1_int++) {
-            vl.field_n.writeShort(true, pg.field_d.field_d[var1_int]);
+            vl.field_n.writeShort(true, pg.playerProfile.equippedSpellIds[var1_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "ns.B(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "ns.B(" + param0 + ')');
         }
     }
 
@@ -269,7 +269,7 @@ final class AttackEvent extends GameEvent {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -285,7 +285,7 @@ final class AttackEvent extends GameEvent {
           this.targetDeltaX = targetDeltaX;
           this.defenderAnimationCount = defenderAnimationCount;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ns.<init>(" + attackerX + ',' + attackerY + ',' + targetDeltaX + ',' + targetDeltaY + ',' + (targetUnit != null ? "{...}" : "null") + ',' + attackerAnimationCount + ',' + defenderAnimationCount + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ns.<init>(" + attackerX + ',' + attackerY + ',' + targetDeltaX + ',' + targetDeltaY + ',' + (targetUnit != null ? "{...}" : "null") + ',' + attackerAnimationCount + ',' + defenderAnimationCount + ')');
         }
     }
 

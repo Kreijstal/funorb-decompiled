@@ -35,9 +35,9 @@ final class ek {
         int var9 = 0;
         int var10 = 0;
         int var3 = ae.b(param1, 100);
-        int var4 = g.a(-1, param1);
+        int var4 = ContextualRuntimeException.a(-1, param1);
         int var5 = ae.b(param2, 100);
-        int var6 = g.a(-1, param2);
+        int var6 = ContextualRuntimeException.a(-1, param2);
         int var7 = (int)((long)var3 * (long)var5 >> 16);
         if (param0 <= -114) {
           var8 = (int)((long)var6 * (long)var3 >> 16);

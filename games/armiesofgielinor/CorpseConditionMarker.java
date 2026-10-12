@@ -110,7 +110,7 @@ final class CorpseConditionMarker extends PreparedAction {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class CorpseConditionMarker extends PreparedAction {
             CorpseConditionMarker.a(12, -29, (byte) 33, (int[]) null, (int[]) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "dk.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "dk.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 

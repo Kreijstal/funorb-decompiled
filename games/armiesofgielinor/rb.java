@@ -44,7 +44,7 @@ abstract class rb implements n {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -89,7 +89,7 @@ abstract class rb implements n {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ abstract class rb implements n {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ abstract class rb implements n {
           var6Lifetime1 = ib.field_j << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = ae.b(var6Lifetime1, 100) >> 8;
-          var9Lifetime1 = g.a(param0 - 10, var6Lifetime1) >> 8;
+          var9Lifetime1 = ContextualRuntimeException.a(param0 - 10, var6Lifetime1) >> 8;
           if (AiPlanningStrategy.field_d != -1 &&
             ko.field_b != -1) {
             var9Lifetime1 = -128;
@@ -221,7 +221,7 @@ abstract class rb implements n {
             var17 = iq.field_a[var16];
             cq.a((byte) -116, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              pd.field_a[var18] = pd.field_a[var18] + sd.field_s[var15][var18];
+              pd.field_a[var18] = pd.field_a[var18] + CampaignParticipant.field_s[var15][var18];
             }
             ou.a(var17, true, true, false, false, pd.field_a, ActionRequest.field_t);
             fp.a(var13Lifetime1, var17, var9Lifetime1, var8Lifetime1, var12Lifetime1, var7Lifetime1, var14, (byte) 120);
@@ -230,7 +230,7 @@ abstract class rb implements n {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "rb.C(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "rb.C(" + param0 + ')');
         }
     }
 
@@ -363,7 +363,7 @@ abstract class rb implements n {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -390,7 +390,7 @@ abstract class rb implements n {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -149,7 +149,7 @@ final class jr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var5), "jr.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var5), "jr.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -205,7 +205,7 @@ final class jr {
           if (param8 >= -52) {
             field_h = (int[][]) null;
           }
-          ln.field_d = new byte[(uf.field_a + 7) / 8];
+          CoatOfArms.field_d = new byte[(uf.field_a + 7) / 8];
           vu.field_M = null;
           var10_int = 0;
           var11 = 0;
@@ -271,7 +271,7 @@ final class jr {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 

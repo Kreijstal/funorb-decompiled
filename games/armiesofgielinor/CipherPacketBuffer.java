@@ -155,7 +155,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           }
           this.opcodeCipher = new IsaacRandom(seed);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "bv.I(" + (seed != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "bv.I(" + (seed != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -201,7 +201,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -212,7 +212,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           return;
         }
         hi.field_i = null;
-        ho.a(73);
+        CampaignResult.a(73);
         ui.field_c = param3;
         if (0 != param1) {
           if (param1 == 23) {

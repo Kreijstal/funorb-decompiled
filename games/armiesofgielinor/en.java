@@ -21,18 +21,18 @@ abstract class en extends tj implements eg {
         try {
           if (param0 >= -21) {
             PacketBuffer var4 = (PacketBuffer) null;
-            en.a((PacketBuffer) null, (byte) -110);
+            en.readUnsignedByteArray((PacketBuffer) null, (byte) -110);
           }
           this.field_H = param1;
           this.field_H.field_j = this;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "en.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "en.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     abstract int l(int param0);
 
-    final static int[] a(PacketBuffer param0, byte param1) {
+    final static int[] readUnsignedByteArray(PacketBuffer packet, byte obfuscationGuard) {
         int var3 = 0;
         int[] var2 = null;
         RuntimeException var2_ref = null;
@@ -45,13 +45,13 @@ abstract class en extends tj implements eg {
         RuntimeException decompiledCaughtException = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param1 != -24) {
+          if (obfuscationGuard != -24) {
             en.n(-95);
           }
-          var5 = new int[param0.readUnsignedByte(param1 ^ -24)];
+          var5 = new int[packet.readUnsignedByte(obfuscationGuard ^ -24)];
           var2 = var5;
           for (var3 = 0; var5.length > var3; var3++) {
-            var5[var3] = param0.readUnsignedByte(0);
+            var5[var3] = packet.readUnsignedByte(0);
           }
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -60,12 +60,12 @@ abstract class en extends tj implements eg {
           var2_ref = decompiledCaughtException;
           stackIn_10_0 = var2_ref;
           stackIn_10_1 = new StringBuilder().append("en.D(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -76,7 +76,7 @@ abstract class en extends tj implements eg {
     public final n a(int param0) {
         if (param0 != -918933630) {
           PacketBuffer var3 = (PacketBuffer) null;
-          en.a((PacketBuffer) null, (byte) 126);
+          en.readUnsignedByteArray((PacketBuffer) null, (byte) 126);
           return (n) ((Object) this.field_H);
         }
         return (n) ((Object) this.field_H);

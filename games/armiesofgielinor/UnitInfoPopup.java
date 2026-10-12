@@ -147,7 +147,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -243,7 +243,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           this.scrollPauseFrames = 100;
           this.maximumNameScroll = this.maximumNameScroll << 1;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "fi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "fi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -423,7 +423,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           } else {
             stackIn_66_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_62_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(')').toString());
         }
     }
 

@@ -14,7 +14,7 @@ final class br {
         field_a = null;
         field_b = null;
         if (param0 <= 11) {
-          br.a(65, (byte) 100);
+          br.getCampaign(65, (byte) 100);
         }
         field_c = null;
         field_d = null;
@@ -45,7 +45,7 @@ final class br {
             }
             var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
             if (!param1) {
-              br.a(-60, (byte) -36);
+              br.getCampaign(-60, (byte) -36);
             }
             for (var3 = 0; var3 < param0.length(); var3++) {
               if (var2.indexOf((int) param0.charAt(var3)) == -1) {
@@ -69,23 +69,23 @@ final class br {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(byte param0) {
         vo.a(-10232);
-        g.b(-6145);
+        ContextualRuntimeException.b(-6145);
         if (param0 != -97) {
           field_e = (je) null;
         }
     }
 
-    final static cf a(int param0, byte param1) {
-        if (param1 > -4) {
+    final static CampaignDefinition getCampaign(int campaignIndex, byte obfuscationGuard) {
+        if (obfuscationGuard > -4) {
           field_f = (boolean[]) null;
         }
-        return cd.field_a[param0];
+        return cd.campaigns[campaignIndex];
     }
 
     final static void a(BitmapFont param0, int param1, int param2, BitmapFont param3) {
@@ -99,7 +99,7 @@ final class br {
             field_f = (boolean[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "br.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "br.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

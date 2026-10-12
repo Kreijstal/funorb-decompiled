@@ -62,7 +62,7 @@ final class jj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class jj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ final class jj {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -194,7 +194,7 @@ final class jj {
           }
           pg.field_a = fk.a(12, var10);
           iq.field_a = new pu[var3];
-          sd.field_s = new int[var3][];
+          CampaignParticipant.field_s = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
             iq.field_a[var4] = GameEvent.a(-86, var8);
           }
@@ -206,7 +206,7 @@ final class jj {
             var5.a(1, 6, 6, 6, 115);
             var5.a(-3831);
             var6 = new int[]{var5.field_p + var5.field_L >> 1, var5.field_H + var5.field_P >> 1, var5.field_J + var5.field_D >> 1};
-            sd.field_s[var9] = var6;
+            CampaignParticipant.field_s[var9] = var6;
             var5.a(-var6[2], 0, -var6[1], -var6[0]);
             var9++;
           }
@@ -221,7 +221,7 @@ final class jj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

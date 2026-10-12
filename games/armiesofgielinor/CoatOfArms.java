@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ln {
+final class CoatOfArms {
     static boolean field_e;
-    int[] field_b;
+    int[] colourIndices;
     static byte[] field_d;
     static String field_c;
-    int[] field_a;
+    int[] parts;
 
-    final int b(byte param0) {
-        if (this.field_a[4] == -1) {
+    final int getMissingPartOffset(byte obfuscationGuard) {
+        if (this.parts[4] == -1) {
           return -20;
         }
-        int var2 = -4 % ((47 - param0) / 62);
+        int var2 = -4 % ((47 - obfuscationGuard) / 62);
         return 0;
     }
 
@@ -25,9 +25,9 @@ final class ln {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            this.b((byte) 83);
+            this.getMissingPartOffset((byte) 83);
           }
-          stackIn_3_0 = cc.a(param5, param3, this.field_a, param6, -1, true, param2, param4, this.field_b, param0);
+          stackIn_3_0 = cc.a(param5, param3, this.parts, param6, -1, true, param2, param4, this.colourIndices, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -39,25 +39,25 @@ final class ln {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     final int a(int param0, int param1, int param2, int param3, int param4) {
         if (param1 == 21930) {
-          return MatchConditionRegistry.a(param0 - param3, param4 - param2, this.field_a, false);
+          return MatchConditionRegistry.a(param0 - param3, param4 - param2, this.parts, false);
         }
-        this.a(42, -104, -118);
-        return MatchConditionRegistry.a(param0 - param3, param4 - param2, this.field_a, false);
+        this.setPart(42, -104, -118);
+        return MatchConditionRegistry.a(param0 - param3, param4 - param2, this.parts, false);
     }
 
-    final String a(byte param0) {
+    final String toQueryString(byte obfuscationGuard) {
         int var4 = 0;
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         String var2 = "coat=";
-        int var3 = -16 % ((param0 + 23) / 40);
-        for (var4 = 0; this.field_a.length > var4; var4++) {
-          var2 = var2 + this.field_a[var4] + ":" + this.field_b[var4] + ":";
+        int var3 = -16 % ((obfuscationGuard + 23) / 40);
+        for (var4 = 0; this.parts.length > var4; var4++) {
+          var2 = var2 + this.parts[var4] + ":" + this.colourIndices[var4] + ":";
         }
         return var2;
     }
@@ -149,15 +149,15 @@ final class ln {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2) {
-        if (param0 < 52) {
+    final void setPart(int obfuscationGuard, int partId, int layer) {
+        if (obfuscationGuard < 52) {
           return;
         }
-        this.field_a[param2] = param1;
+        this.parts[layer] = partId;
     }
 
     final RgbSprite a(String param0, byte param1, boolean param2) {
@@ -180,12 +180,12 @@ final class ln {
           ku.field_J.b();
           SoftwareRaster.b();
           if (!param2) {
-            var4_int = this.field_a[3];
-            this.field_a[3] = -1;
-            cc.a(0, -1, this.field_a, -1, -1, false, -1, param0, this.field_b, 0);
-            this.field_a[3] = var4_int;
+            var4_int = this.parts[3];
+            this.parts[3] = -1;
+            cc.a(0, -1, this.parts, -1, -1, false, -1, param0, this.colourIndices, 0);
+            this.parts[3] = var4_int;
           }
-          MatchSetupPanel.a(-1, -1, this.field_a, -1, false, this.field_b, -1, false, 0, false, 0, param0);
+          MatchSetupPanel.a(-1, -1, this.parts, -1, false, this.colourIndices, -1, false, 0, false, 0, param0);
           no.field_P.b();
           stackIn_5_0 = ew.a((byte) 107, ku.field_J);
           return (RgbSprite) ((Object) stackIn_5_0);
@@ -199,7 +199,7 @@ final class ln {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -247,12 +247,12 @@ final class ln {
           ku.field_J.b();
           SoftwareRaster.b();
           if (param6) {
-            cc.a(0, -1, this.field_a, -1, -1, false, -1, param5, this.field_b, 0);
+            cc.a(0, -1, this.parts, -1, -1, false, -1, param5, this.colourIndices, 0);
           } else {
-            var11_int = this.field_a[3];
-            this.field_a[3] = -1;
-            cc.a(0, -1, this.field_a, -1, -1, false, -1, param5, this.field_b, 0);
-            this.field_a[3] = var11_int;
+            var11_int = this.parts[3];
+            this.parts[3] = -1;
+            cc.a(0, -1, this.parts, -1, -1, false, -1, param5, this.colourIndices, 0);
+            this.parts[3] = var11_int;
           }
           if (!param7) {
             if (!param0) {
@@ -284,7 +284,7 @@ final class ln {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -304,12 +304,12 @@ final class ln {
           ku.field_J.b();
           SoftwareRaster.b();
           if (!param3) {
-            var10_int = this.field_a[3];
-            this.field_a[3] = -1;
-            cc.a(0, -1, this.field_a, -1, -1, false, -1, param7, this.field_b, 0);
-            this.field_a[3] = var10_int;
+            var10_int = this.parts[3];
+            this.parts[3] = -1;
+            cc.a(0, -1, this.parts, -1, -1, false, -1, param7, this.colourIndices, 0);
+            this.parts[3] = var10_int;
           } else {
-            cc.a(0, -1, this.field_a, -1, -1, false, -1, param7, this.field_b, 0);
+            cc.a(0, -1, this.parts, -1, -1, false, -1, param7, this.colourIndices, 0);
           }
           if (param0) {
             a.field_m[1].g(0, 0);
@@ -342,14 +342,14 @@ final class ln {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param8).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param8).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, byte param2) {
-        this.field_b[param0] = param1;
-        if (param2 > -93) {
-          this.field_b = (int[]) null;
+    final void setColour(int layer, int colourIndex, byte obfuscationGuard) {
+        this.colourIndices[layer] = colourIndex;
+        if (obfuscationGuard > -93) {
+          this.colourIndices = (int[]) null;
         }
     }
 
@@ -373,7 +373,7 @@ final class ln {
           }
           ku.field_J.b();
           SoftwareRaster.b();
-          cc.a(0, -1, this.field_a, -1, -1, false, -1, param1, this.field_b, 0);
+          cc.a(0, -1, this.parts, -1, -1, false, -1, param1, this.colourIndices, 0);
           if (!param3) {
             if (!param2) {
               if (param5) {
@@ -399,34 +399,34 @@ final class ln {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
-    ln(int[] param0, int[] param1) {
+    CoatOfArms(int[] parts, int[] colourIndices) {
         try {
-          this.field_a = param0;
-          this.field_b = param1;
+          this.parts = parts;
+          this.colourIndices = colourIndices;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ln.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ln.<init>(" + (parts != null ? "{...}" : "null") + ',' + (colourIndices != null ? "{...}" : "null") + ')');
         }
     }
 
-    ln() {
-        this.field_a = new int[6];
-        this.field_b = new int[6];
-        this.field_a[0] = 0;
-        this.field_a[3] = 0;
-        this.field_a[2] = -1;
-        this.field_a[4] = -1;
-        this.field_a[1] = -1;
-        this.field_a[5] = 0;
-        this.field_b[3] = 0;
-        this.field_b[5] = 0;
-        this.field_b[2] = 0;
-        this.field_b[1] = 0;
-        this.field_b[4] = 0;
-        this.field_b[0] = 0;
+    CoatOfArms() {
+        this.parts = new int[6];
+        this.colourIndices = new int[6];
+        this.parts[0] = 0;
+        this.parts[3] = 0;
+        this.parts[2] = -1;
+        this.parts[4] = -1;
+        this.parts[1] = -1;
+        this.parts[5] = 0;
+        this.colourIndices[3] = 0;
+        this.colourIndices[5] = 0;
+        this.colourIndices[2] = 0;
+        this.colourIndices[1] = 0;
+        this.colourIndices[4] = 0;
+        this.colourIndices[0] = 0;
     }
 
     static {

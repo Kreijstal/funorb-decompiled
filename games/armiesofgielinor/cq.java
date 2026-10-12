@@ -98,7 +98,7 @@ final class cq extends IntrusiveNode {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class cq extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ final class cq extends IntrusiveNode {
         int var10 = 0;
         MapLayout var12 = null;
         MapTile var13 = null;
-        sd var14 = null;
+        CampaignParticipant var14 = null;
         int[] var18 = null;
         int var5Lifetime1;
         try {
@@ -294,7 +294,7 @@ final class cq extends IntrusiveNode {
           for (var4 = 0; var4 < param0.participantIds.length; var4++) {
             var5Lifetime1 = param0.participantIds[var4];
             if (var5Lifetime1 != -1) {
-              var14 = param0.field_G.field_q[var5Lifetime1];
+              var14 = param0.campaign.participants[var5Lifetime1];
               if (null != var14.field_p) {
                 var18 = var14.field_p;
                 for (var8 = 0; var18.length > var8; var8++) {
@@ -318,7 +318,7 @@ final class cq extends IntrusiveNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -328,7 +328,7 @@ final class cq extends IntrusiveNode {
           this.field_v = 1073741823;
           this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "cq.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cq.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

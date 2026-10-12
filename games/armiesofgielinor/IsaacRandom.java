@@ -213,7 +213,7 @@ final class IsaacRandom {
           }
           this.b(true);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ga.<init>(" + (seed != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ga.<init>(" + (seed != null ? "{...}" : "null") + ')');
         }
     }
 

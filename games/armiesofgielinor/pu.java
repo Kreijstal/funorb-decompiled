@@ -104,7 +104,7 @@ final class pu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "pu.E(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "pu.E(" + param0 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ final class pu {
             field_h = (String) null;
           }
           var1 = vl.field_n;
-          while (g.a(param0 ^ -13083)) {
+          while (ContextualRuntimeException.a(param0 ^ -13083)) {
             var1.writeCipheredOpcode(32161, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
@@ -213,7 +213,7 @@ final class pu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1_ref), "pu.C(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1_ref), "pu.C(" + param0 + ')');
         }
     }
 

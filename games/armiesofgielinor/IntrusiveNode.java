@@ -15,7 +15,7 @@ class IntrusiveNode {
 
     final static int a(int param0, int param1) {
         int var2 = -103 / ((27 - param0) / 46);
-        return cd.field_a[param1].field_n.length;
+        return cd.campaigns[param1].missions.length;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -213,7 +213,7 @@ class IntrusiveNode {
           var5.b((byte) -39, var4);
           var5.e(-var4 + var5.position, param2 + 5825);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "tc.OB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "tc.OB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -303,7 +303,7 @@ class IntrusiveNode {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
+            throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class g extends RuntimeException {
+final class ContextualRuntimeException extends RuntimeException {
     static tv field_c;
     static String field_e;
-    Throwable field_b;
+    Throwable originalCause;
     static java.awt.Frame field_f;
-    String field_g;
+    String context;
     static String field_a;
     static String field_d;
 
@@ -32,7 +32,7 @@ final class g extends RuntimeException {
     final static int a(int param0, int param1) {
         param1 = param1 & 8191;
         if (param0 != -1) {
-          g.a((byte) 1, -105, -40);
+          ContextualRuntimeException.a((byte) 1, -105, -40);
         }
         if (param1 >= 4096) {
           return param1 < 6144 ? -e.field_a[-param1 + 6144] : e.field_a[-6144 + param1];
@@ -53,12 +53,12 @@ final class g extends RuntimeException {
           bn.field_c.field_Eb = 1;
           wn.field_kb = new je(0L, te.field_p, su.field_b);
           ek.field_a = new je(0L, br.field_e, nl.field_C);
-          hm.field_f = new je(0L, ms.field_k);
+          PlayerProfile.field_f = new je(0L, ms.field_k);
           su.field_d.a(bn.field_c, 49);
           su.field_d.a(wn.field_kb, 109);
           su.field_d.a(ek.field_a, 49);
           su.field_d.a(mw.field_E, 105);
-          su.field_d.a(hm.field_f, 56);
+          su.field_d.a(PlayerProfile.field_f, 56);
           mw.field_E.field_Kb.field_Nb.a(param0 + 6145, eq.field_h);
           mw.field_E.field_Kb.field_Nb.field_Fb = 1;
           var6 = mw.field_E.field_Kb.field_Nb;
@@ -67,13 +67,13 @@ final class g extends RuntimeException {
           TaggedMapData.field_g.field_Kb.field_Nb.a(0, eq.field_h);
           if (param0 != -6145) {
             kl var4 = (kl) null;
-            g.a(-105, (kl) null);
+            ContextualRuntimeException.a(-105, (kl) null);
           }
           TaggedMapData.field_g.field_Kb.field_Nb.field_Fb = 1;
           var3 = TaggedMapData.field_g.field_Kb.field_Nb;
           var3.field_Eb = 1;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "g.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "g.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -105,9 +105,9 @@ final class g extends RuntimeException {
         }
     }
 
-    g(Throwable param0, String param1) {
-        this.field_b = param0;
-        this.field_g = param1;
+    ContextualRuntimeException(Throwable originalCause, String context) {
+        this.originalCause = originalCause;
+        this.context = context;
     }
 
     final static boolean a(int param0) {
@@ -141,7 +141,7 @@ final class g extends RuntimeException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1_ref), "g.D(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1_ref), "g.D(" + param0 + ')');
         }
     }
 

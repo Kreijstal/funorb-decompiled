@@ -11,7 +11,7 @@ final class SkeletonLimitMarker extends PreparedAction {
             SkeletonLimitMarker.a(true, -124);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "kj.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "kj.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class SkeletonLimitMarker extends PreparedAction {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -72,13 +72,13 @@ final class SkeletonLimitMarker extends PreparedAction {
         String var1 = null;
         String var1Lifetime1;
         if (param0 > 26) {
-          var1 = ah.field_a.a((byte) -109);
+          var1 = ah.localCoat.toQueryString((byte) -109);
           System.out.println(var1);
           return var1;
         }
         byte[] var2 = (byte[]) null;
         SkeletonLimitMarker.a((byte[]) null, -39);
-        var1Lifetime1 = ah.field_a.a((byte) -109);
+        var1Lifetime1 = ah.localCoat.toQueryString((byte) -109);
         System.out.println(var1Lifetime1);
         return var1Lifetime1;
     }

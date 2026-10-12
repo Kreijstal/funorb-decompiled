@@ -74,7 +74,7 @@ final class eu {
             var15 = var11;
             var15 = var11 + var15 >> 1 << 8;
             var16 = (var13 << 8) / 6;
-            var17 = var16 / 2 + (var15 + (g.a(-1, param2 + var8 << 5) * 4 >> 8));
+            var17 = var16 / 2 + (var15 + (ContextualRuntimeException.a(-1, param2 + var8 << 5) * 4 >> 8));
             var18 = var9 >> 3;
             for (var19 = 0; 3 > var19; var19++) {
               SoftwareRaster.c(var17 >> 8, var12, var16 >> 8, var5_int, var18);
@@ -128,7 +128,7 @@ final class eu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var5), "eu.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var5), "eu.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class eu {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -216,7 +216,7 @@ final class eu {
           cd.a(27, param2 - 16, param1, 2);
           int var4_int = 110 / ((49 - param0) / 39);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "eu.J(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "eu.J(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -250,7 +250,7 @@ final class eu {
           this.field_b = param0;
           this.field_f = new NodeIterator(this.field_b);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "eu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "eu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

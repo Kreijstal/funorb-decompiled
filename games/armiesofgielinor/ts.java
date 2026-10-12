@@ -76,7 +76,7 @@ final class ts {
           var12 = var12 + param3;
           eu.field_g.a(var12, -20500, var9_int, param8 - var12 / 2, -(var9_int / 2) + param1);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ts.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ts.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -135,10 +135,10 @@ final class ts {
         int var5_int = 0;
         Exception var5 = null;
         Unit var6 = null;
-        sd var6_ref = null;
+        CampaignParticipant var6_ref = null;
         int var7 = 0;
         String[] var8 = null;
-        sd var9 = null;
+        CampaignParticipant var9 = null;
         GameplayController stackIn_4_0Lifetime1;
         GameplayController stackIn_4_1Lifetime1;
         GameplayController stackIn_5_0Lifetime1;
@@ -149,7 +149,7 @@ final class ts {
           regionExit1: {
             l.field_c = param0;
             pq.field_f = null;
-            var8 = param0.e(-23209);
+            var8 = param0.getParticipantNames(-23209);
             var3 = var8;
             r.field_B = var8.length;
             var4 = param0.playerSlot;
@@ -185,14 +185,14 @@ final class ts {
           }
           rd.field_j = new GameplayController(stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_4_6, stackIn_4_7, stackIn_4_8, stackIn_4_9, stackIn_4_10, stackIn_4_11, stackIn_4_12, stackIn_4_13, stackIn_5_14, param0);
           rd.field_j.battlefield.field_F = true;
-          rd.field_j.battlefield.field_T = new ln[param0.participantIds.length];
-          for (var5_int = 0; rd.field_j.battlefield.field_T.length > var5_int; var5_int++) {
+          rd.field_j.battlefield.playerCoats = new CoatOfArms[param0.participantIds.length];
+          for (var5_int = 0; rd.field_j.battlefield.playerCoats.length > var5_int; var5_int++) {
             if (~var5_int == ~param0.playerSlot) {
-              rd.field_j.battlefield.field_T[var5_int] = ah.field_a;
+              rd.field_j.battlefield.playerCoats[var5_int] = ah.localCoat;
             } else {
-              var9 = param0.field_G.field_q[param0.participantIds[var5_int]];
+              var9 = param0.campaign.participants[param0.participantIds[var5_int]];
               var6_ref = var9;
-              rd.field_j.battlefield.field_T[var5_int] = var9.field_q;
+              rd.field_j.battlefield.playerCoats[var5_int] = var9.coatOfArms;
             }
           }
           if ((1 & param0.flags) != 0) {
@@ -233,7 +233,7 @@ final class ts {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

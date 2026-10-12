@@ -62,7 +62,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "cv.N(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "cv.N(" + param0 + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "cv.FA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.FA(" + param0 + ')');
         }
     }
 
@@ -112,7 +112,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "cv.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -129,7 +129,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "cv.CA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "cv.CA(" + param0 + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "cv.F(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "cv.F(" + param0 + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "cv.EA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.EA(" + param0 + ')');
         }
     }
 
@@ -282,7 +282,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "cv.A(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.A(" + param0 + ')');
         }
     }
 
@@ -347,7 +347,7 @@ final class cv {
             }
             if (decompiledSharedTail0) {
               vk.field_e[this.field_d.field_k].g(var4, var5);
-              this.field_d.field_m.f(var4, var5, Math.abs(g.a(param0 ^ -397, uk.field_n << 5) * 100 >> 16) + 80);
+              this.field_d.field_m.f(var4, var5, Math.abs(ContextualRuntimeException.a(param0 ^ -397, uk.field_n << 5) * 100 >> 16) + 80);
             }
             rf.b(param0 ^ -18466);
             var6 = 5;
@@ -400,7 +400,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (var2), "cv.M(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) (var2), "cv.M(" + param0 + ')');
         }
     }
 
@@ -422,7 +422,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "cv.U(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "cv.U(" + param0 + ')');
         }
     }
 
@@ -505,7 +505,7 @@ final class cv {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -537,7 +537,7 @@ final class cv {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -694,7 +694,7 @@ final class cv {
           } else {
             stackIn_91_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_90_1).append(stackIn_91_2).append(',').append(param4).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_90_1).append(stackIn_91_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -775,7 +775,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "cv.R(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.R(" + param0 + ')');
         }
     }
 
@@ -855,7 +855,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (var2), "cv.AA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) (var2), "cv.AA(" + param0 + ')');
         }
     }
 
@@ -883,7 +883,7 @@ final class cv {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -932,7 +932,7 @@ final class cv {
         RgbSprite var24 = null;
         int var25_int = 0;
         sl var25 = null;
-        sd var26_ref_sd = null;
+        CampaignParticipant var26_ref_sd = null;
         int var26 = 0;
         int var27 = 0;
         int var28 = 0;
@@ -1113,15 +1113,15 @@ final class cv {
               stackIn_70_0 = 0;
               if (var29 == 0) {
                 if (stackIn_70_0 <= var25_int) {
-                  var26_ref_sd = var15.field_G.field_q[var25_int];
+                  var26_ref_sd = var15.campaign.participants[var25_int];
                   if (var20Lifetime1 > 2) {
-                    var26_ref_sd.field_q.a(false, false, (byte) 68, false, false, false, MatchConditionEntry.a(var17Lifetime2, (byte) 94), var26_ref_sd.field_u, db.a(true, -5 + var18Lifetime2));
+                    var26_ref_sd.coatOfArms.a(false, false, (byte) 68, false, false, false, MatchConditionEntry.a(var17Lifetime2, (byte) 94), var26_ref_sd.displayName, db.a(true, -5 + var18Lifetime2));
                   } else {
-                    var26_ref_sd.field_q.a(false, 0, MatchConditionEntry.a(var17Lifetime2, (byte) 94), false, db.a(true, var18Lifetime2 - 5), var26_ref_sd.field_u, false, false, false, param0 - 19764);
+                    var26_ref_sd.coatOfArms.a(false, 0, MatchConditionEntry.a(var17Lifetime2, (byte) 94), false, db.a(true, var18Lifetime2 - 5), var26_ref_sd.displayName, false, false, false, param0 - 19764);
                   }
                   var27 = var18Lifetime2 + 60;
                   var28 = 5 + var4Lifetime1 - var27;
-                  rs.field_n.a(var26_ref_sd.field_u, db.a(true, var27), MatchConditionEntry.a(var17Lifetime2 + var22, (byte) 94), var28, 20, 16777215, 1, 0, 2, 0);
+                  rs.field_n.a(var26_ref_sd.displayName, db.a(true, var27), MatchConditionEntry.a(var17Lifetime2 + var22, (byte) 94), var28, 20, 16777215, 1, 0, 2, 0);
                   var17Lifetime2 = var17Lifetime2 - var21;
                 }
                 var24_int++;
@@ -1149,10 +1149,10 @@ final class cv {
             if (null != var19) {
               var25_intLifetime2 = 100;
               var26Lifetime1 = AiPlanningStrategy.field_d;
-              var27Lifetime2 = rs.field_n.a(((sd) (var19)).field_u, var25_intLifetime2, 0);
+              var27Lifetime2 = rs.field_n.a(((CampaignParticipant) (var19)).displayName, var25_intLifetime2, 0);
               var28Lifetime2 = -(var27Lifetime2 / 2) + (25 + ko.field_b);
               SoftwareRaster.b(db.a(true, var26Lifetime1), MatchConditionEntry.a(var28Lifetime2, (byte) 94), var25_intLifetime2, var27Lifetime2 + 2, 0, 255);
-              rs.field_n.a(((sd) (var19)).field_u, db.a(true, var26Lifetime1), MatchConditionEntry.a(var28Lifetime2, (byte) 94), var25_intLifetime2, 472, 16777215, 1, 1, 0, 0);
+              rs.field_n.a(((CampaignParticipant) (var19)).displayName, db.a(true, var26Lifetime1), MatchConditionEntry.a(var28Lifetime2, (byte) 94), var25_intLifetime2, 472, 16777215, 1, 1, 0, 0);
             }
             var6Lifetime3 = 436;
             if (this.field_t == null) {
@@ -1186,7 +1186,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "cv.K(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "cv.K(" + param0 + ')');
         }
     }
 
@@ -1279,7 +1279,7 @@ final class cv {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -1399,7 +1399,7 @@ final class cv {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1430,7 +1430,7 @@ final class cv {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -1449,7 +1449,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3_ref), "cv.W(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "cv.W(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1485,7 +1485,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "cv.D(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "cv.D(" + param0 + ')');
         }
     }
 
@@ -1517,7 +1517,7 @@ final class cv {
             cg.field_j = 72584621;
             wr.field_L = 224;
             ii.field_b = 4452;
-            var2 = br.a(this.field_l, (byte) -125).field_n;
+            var2 = br.getCampaign(this.field_l, (byte) -125).missions;
             var3_int = 0;
             while (true) {
               if (java.lang.reflect.Array.getLength(var2) > var3_int) {
@@ -1528,7 +1528,7 @@ final class cv {
                   continue;
                 }
               } else {
-                pg.field_d.field_g = new cm();
+                pg.playerProfile.campaignProgress = new CampaignProgress();
               }
               break;
             }
@@ -1611,9 +1611,9 @@ final class cv {
                         default:
                           throw new IllegalStateException("");
                       }
-                      var5 = b.a(2, 10, 12, (byte) 25, 3);
+                      var5 = b.calculateMissionScore(2, 10, 12, (byte) 25, 3);
                       ActionSpell.a(4, 12, ((cq) (var3)).field_p, true, var5, 3);
-                      this.a(((cq) (var3)).field_p.field_G.field_r, true);
+                      this.a(((cq) (var3)).field_p.campaign.campaignIndex, true);
                       System.out.println("m  id " + ((cq) (var3)).field_k + " " + ((cq) (var3)).field_w);
                       var4_int = 1;
                       decompiledSharedTail0 = (var7 != 0);
@@ -1622,7 +1622,7 @@ final class cv {
                       (br.field_f[82])) {
                       var4_int = 1;
                       ActionSpell.a(4, -1, ((cq) (var3)).field_p, true, 1, -1);
-                      this.a(((cq) (var3)).field_p.field_G.field_r, true);
+                      this.a(((cq) (var3)).field_p.campaign.campaignIndex, true);
                     }
                   }
                   if (var4_int == 0) {
@@ -1741,7 +1741,7 @@ final class cv {
                 if (!br.field_f[81]) {
                   return;
                 }
-                pg.field_d.field_g.a(65535, ((cq) (var2)).field_k, uk.field_n % 10 + ((cq) (var2)).field_k * 10, this.field_l, ((cq) (var2)).field_k * 200 + uk.field_n % 200);
+                pg.playerProfile.campaignProgress.setResult(65535, ((cq) (var2)).field_k, uk.field_n % 10 + ((cq) (var2)).field_k * 10, this.field_l, ((cq) (var2)).field_k * 200 + uk.field_n % 200);
                 this.a(this.field_l, true);
                 if (var7 == 0) {
                   return;
@@ -1765,7 +1765,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (var2), "cv.H(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) (var2), "cv.H(" + param0 + ')');
         }
     }
 
@@ -1806,22 +1806,22 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "cv.S(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cv.S(" + param0 + ')');
         }
     }
 
-    private final cq a(boolean param0, cf param1) {
+    private final cq a(boolean param0, CampaignDefinition param1) {
         cq stackIn_3_0 = null;
         cq stackIn_11_0 = null;
         boolean stackIn_14_1 = false;
-        cf stackIn_18_0 = null;
+        CampaignDefinition stackIn_18_0 = null;
         Object stackIn_34_0 = null;
         cq stackIn_39_0 = null;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
         String stackIn_44_2 = null;
         RuntimeException decompiledCaughtException = null;
-        cf stackOut_17_0;
+        CampaignDefinition stackOut_17_0;
         cq var3 = null;
         RuntimeException var3_ref = null;
         int var4_int = 0;
@@ -1838,8 +1838,8 @@ final class cv {
             stackIn_3_0 = (cq) null;
             return stackIn_3_0;
           }
-          var3 = new cq(param1.field_r, param1.field_k);
-          var3.field_D = param1.field_s;
+          var3 = new cq(param1.campaignIndex, param1.name);
+          var3.field_D = param1.localGodId;
           var3.field_q = param1.field_o;
           stackIn_11_0 = var3;
           stackIn_14_1 = (param1.c((byte) -45)) || !(0 >= df.field_M) || !(hi.field_j < 2);
@@ -1847,17 +1847,17 @@ final class cv {
           stackIn_11_0.field_l = stackIn_14_1;
           if (var3.field_l) {
             var4_int = 0;
-            var5 = param1.field_n.length;
+            var5 = param1.missions.length;
             var6_int = 0;
             while (var5 > var6_int) {
-              stackOut_17_0 = (cf) (param1);
+              stackOut_17_0 = (CampaignDefinition) (param1);
               stackIn_34_0 = stackOut_17_0;
               stackIn_18_0 = stackOut_17_0;
               if (var9 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              if (mh.a(stackIn_18_0.field_r, -120, var6_int) > 0) {
+              if (mh.a(stackIn_18_0.campaignIndex, -120, var6_int) > 0) {
                 var4_int++;
               }
               var6_int++;
@@ -1906,7 +1906,7 @@ final class cv {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 
@@ -1914,7 +1914,7 @@ final class cv {
         int stackIn_26_0 = 0;
         cq stackIn_42_0 = null;
         RuntimeException decompiledCaughtException = null;
-        cf var3 = null;
+        CampaignDefinition var3 = null;
         RuntimeException var3_ref = null;
         CampaignMission[] var4_ref_om__ = null;
         int var4 = 0;
@@ -1941,9 +1941,9 @@ final class cv {
         try {
           this.field_e = new pr(mu.field_g[param0][1], 1, 16777215);
           this.field_i = new bg(32);
-          var3 = br.a(param0, (byte) -118);
+          var3 = br.getCampaign(param0, (byte) -118);
           if (var3 != null) {
-            var4_ref_om__ = var3.field_n;
+            var4_ref_om__ = var3.missions;
             var5 = 0;
             while (var4_ref_om__.length > var5) {
               var6_ref_om = var4_ref_om__[var5];
@@ -2022,7 +2022,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3_ref), "cv.C(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "cv.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2050,7 +2050,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "cv.P(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "cv.P(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2127,7 +2127,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "cv.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "cv.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2296,7 +2296,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "cv.O(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "cv.O(" + param0 + ')');
         }
     }
 
@@ -2315,7 +2315,7 @@ final class cv {
         sl var10_ref_sl = null;
         RuntimeException var10_ref_RuntimeException = null;
         cq var11 = null;
-        cf var11_ref = null;
+        CampaignDefinition var11_ref = null;
         CampaignMission var12 = null;
         cq var12_ref = null;
         int var13_int = 0;
@@ -2359,13 +2359,13 @@ final class cv {
                   var12 = ar.a(var10_ref_sl.field_g, var10_ref_sl.field_e, 0);
                   var13_int = Battlefield.a(var12.participantIds.length, var10_ref_sl.field_c, false);
                   var14 = fo.a(4800, wd.field_e, new String[]{var12.name, Integer.toString(var13_int)});
-                  var11.field_w = var12.field_G.field_k;
+                  var11.field_w = var12.campaign.name;
                   var11.field_l = true;
                   var11.field_p = var12;
-                  var11.field_D = var12.field_G.field_s;
+                  var11.field_D = var12.campaign.localGodId;
                   var11.field_r = var14;
                   var11.field_q = var12.description;
-                  if (!var12.field_G.c((byte) -45) &&
+                  if (!var12.campaign.c((byte) -45) &&
                     rf.a(27875)) {
                     var11.field_l = false;
                     var11.field_r = bn.field_g + " (" + var11.field_r + ")";
@@ -2383,7 +2383,7 @@ final class cv {
               var10 = 0;
               scanLoop1: while (true) {
                 if (var10 < 3) {
-                  var11_ref = br.a(var10, (byte) -12);
+                  var11_ref = br.getCampaign(var10, (byte) -12);
                   if (var16 == 0) {
                     if (var11_ref != null) {
                       var12_ref = this.a(true, var11_ref);
@@ -2428,7 +2428,7 @@ final class cv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "cv.T(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "cv.T(" + param0 + ',' + param1 + ')');
         }
     }
 

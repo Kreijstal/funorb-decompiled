@@ -26,7 +26,7 @@ final class gs implements kh {
           }
           rf.b(-18862);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "gs.F(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "gs.F(" + param0 + ')');
         }
     }
 
@@ -36,7 +36,7 @@ final class gs implements kh {
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.writeByte(1, 2);
-        var2.a(ln.field_d, 0, ln.field_d.length, 113);
+        var2.a(CoatOfArms.field_d, 0, CoatOfArms.field_d.length, 113);
         var2.writeByte(1, nh.field_E);
         var2.writeByte(1, AiPlanningStrategy.field_b);
         var2.a(tg.field_d, 0, tg.field_d.length, -72);
@@ -77,7 +77,7 @@ final class gs implements kh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "gs.D(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "gs.D(" + param0 + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class gs implements kh {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class gs implements kh {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -597,7 +597,7 @@ final class gs implements kh {
                     continue scanLoop1;
                 }
                 case 46: {
-                    throw ig.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_46_2).append(')').toString());
+                    throw ig.addExceptionContext((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_46_2).append(')').toString());
                 }
                 default: throw new IllegalStateException("invalid CFG state " + statePc);
             }

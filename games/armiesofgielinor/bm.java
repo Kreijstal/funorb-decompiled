@@ -172,7 +172,7 @@ final class bm extends ew {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref2), "bm.K(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref2), "bm.K(" + param0 + ')');
         }
     }
 
@@ -266,7 +266,7 @@ final class bm extends ew {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "bm.B(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "bm.B(" + param0 + ')');
         }
     }
 
@@ -457,7 +457,7 @@ final class bm extends ew {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var4 = (RuntimeException) (Object) decompiledCaughtException;
-          throw ig.a((Throwable) (var4), "bm.I(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) (var4), "bm.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -467,7 +467,7 @@ final class bm extends ew {
             bm.e(41);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "bm.J(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "bm.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -494,7 +494,7 @@ final class bm extends ew {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3_ref), "bm.C(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "bm.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -520,7 +520,7 @@ final class bm extends ew {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3_ref), "bm.D(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "bm.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -534,7 +534,7 @@ final class bm extends ew {
           field_z = null;
           field_y = (int[][]) null;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "bm.H(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "bm.H(" + param0 + ')');
         }
     }
 
@@ -556,7 +556,7 @@ final class bm extends ew {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "bm.G(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "bm.G(" + param0 + ')');
         }
     }
 
@@ -608,7 +608,7 @@ final class bm extends ew {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "bm.L(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "bm.L(" + param0 + ')');
         }
     }
 
@@ -706,7 +706,7 @@ final class bm extends ew {
             stackIn_32_0 = stackIn_28_0;
             stackIn_32_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

@@ -43,7 +43,7 @@ final class li extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "li.B(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "li.B(" + param0 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class li extends IntrusiveNode {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

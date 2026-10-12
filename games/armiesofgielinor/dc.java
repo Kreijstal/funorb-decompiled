@@ -25,7 +25,7 @@ final class dc extends IntrusiveNode {
           param0.removeFocusListener(BattleCharacter.field_q);
           ob.field_J = 0;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "dc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "dc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

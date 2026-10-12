@@ -21,7 +21,7 @@ final class vi {
           np.field_Qb = new df(param0, param2, false, true, true);
           lt.field_g.a(np.field_Qb, (byte) -77);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "vi.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "vi.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -31,7 +31,7 @@ final class vi {
         int var3 = sh.field_l + var2 * (-sh.field_l + gb.field_y) / var1;
         if (param0 < -53) {
           CombatEvent.field_I.a(120, -20500, 640, var3, va.field_u);
-          hm.a(-1, mi.field_l, 0, io.field_n, 5, gb.field_y - 24, 640);
+          PlayerProfile.a(-1, mi.field_l, 0, io.field_n, 5, gb.field_y - 24, 640);
           return;
         }
     }

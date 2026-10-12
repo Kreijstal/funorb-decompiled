@@ -24,7 +24,7 @@ final class TickCounter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "em.D(" + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "em.D(" + obfuscationGuard + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class TickCounter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "em.F(" + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "em.F(" + obfuscationGuard + ')');
         }
     }
 
@@ -2401,7 +2401,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "STATS_MULTIRANGE");
                 if (var2 != null) {
-                  g.field_e = uu.a(var2, (byte) 67);
+                  ContextualRuntimeException.field_e = uu.a(var2, (byte) 67);
                 }
                 var2 = fk.a(false, "STATS_SINGLERANGE");
                 if (var2 != null) {
@@ -2457,7 +2457,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ROLLOVER_STRENGTH");
                 if (null != var2) {
-                  ln.field_c = uu.a(var2, (byte) 14);
+                  CoatOfArms.field_c = uu.a(var2, (byte) 14);
                 }
                 var2 = fk.a(false, "ROLLOVER_BONUS");
                 if (var2 != null) {
@@ -3343,7 +3343,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_RETURN_COFNIRM");
                 if (null != var2) {
-                  hm.field_e = uu.a(var2, (byte) 26);
+                  PlayerProfile.field_e = uu.a(var2, (byte) 26);
                 }
                 var2 = fk.a(false, "LABEL_RETURN_QUESTION");
                 if (var2 != null) {
@@ -5143,7 +5143,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_CLONEIMMOBILE");
                 if (var2 != null) {
-                  sd.field_l = uu.a(var2, (byte) -95);
+                  CampaignParticipant.field_l = uu.a(var2, (byte) -95);
                 }
                 var2 = fk.a(false, "TERROR_CLONEJADEVINE");
                 if (var2 != null) {
@@ -5193,7 +5193,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_FIRENOFLAME");
                 if (var2 != null) {
-                  sd.field_r = uu.a(var2, (byte) -120);
+                  CampaignParticipant.field_r = uu.a(var2, (byte) -120);
                 }
                 var2 = fk.a(false, "TERROR_CANNONFIREONLY");
                 if (null != var2) {
@@ -5611,7 +5611,7 @@ final class TickCounter {
                   } else {
                     stackIn_4827_2 = "{...}";
                   }
-                  throw ig.a((Throwable) ((Object) stackIn_4826_0), ((StringBuilder) (Object) stackIn_4826_1).append(stackIn_4827_2).append(',').append(param1).append(')').toString());
+                  throw ig.addExceptionContext((Throwable) ((Object) stackIn_4826_0), ((StringBuilder) (Object) stackIn_4826_1).append(stackIn_4827_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_4835_0 = (!iv.field_k);
@@ -5623,7 +5623,7 @@ final class TickCounter {
         decompiledBody.run();
     }
 
-    final static void a(cf param0, byte param1, CipherPacketBuffer param2) {
+    final static void readCampaignUnitOverride(CampaignDefinition campaign, byte obfuscationGuard, CipherPacketBuffer packet) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -5636,33 +5636,33 @@ final class TickCounter {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        sd var7 = null;
+        CampaignParticipant var7 = null;
         CampaignUnitOverride[] var8 = null;
         int var9 = 0;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3 = new CampaignUnitOverride();
-          var3.unitType = param2.readUnsignedByte(0);
-          var3.displayName = param2.readNullCircumfixedString((byte) 121);
-          var3.strength = param2.readUnsignedShort((byte) -104);
-          if (param1 != -7) {
+          var3.unitType = packet.readUnsignedByte(0);
+          var3.displayName = packet.readNullCircumfixedString((byte) 121);
+          var3.strength = packet.readUnsignedShort((byte) -104);
+          if (obfuscationGuard != -7) {
             return;
           }
-          var4 = param2.readUnsignedByte(0);
+          var4 = packet.readUnsignedByte(0);
           var5 = 0;
           while (var5 < var4) {
-            var6 = param2.readUnsignedByte(param1 + 7);
-            var7 = param0.field_q[var6];
-            fieldTemp$0 = var7.field_o;
-            var7.field_o = var7.field_o + 1;
-            var7.field_k[fieldTemp$0] = var3;
+            var6 = packet.readUnsignedByte(obfuscationGuard + 7);
+            var7 = campaign.participants[var6];
+            fieldTemp$0 = var7.overrideCount;
+            var7.overrideCount = var7.overrideCount + 1;
+            var7.unitOverrides[fieldTemp$0] = var3;
             if (var9 != 0) {
               return;
             }
-            if (~var7.field_o == ~var7.field_k.length) {
-              var8 = var7.field_k;
-              var7.field_k = new CampaignUnitOverride[10 + var8.length];
-              vm.a(var8, 0, var7.field_k, 0, var8.length);
+            if (~var7.overrideCount == ~var7.unitOverrides.length) {
+              var8 = var7.unitOverrides;
+              var7.unitOverrides = new CampaignUnitOverride[10 + var8.length];
+              vm.a(var8, 0, var7.unitOverrides, 0, var8.length);
             }
             var5++;
           }
@@ -5672,18 +5672,18 @@ final class TickCounter {
           var3_ref = decompiledCaughtException;
           stackIn_15_0 = var3_ref;
           stackIn_15_1 = new StringBuilder().append("em.A(");
-          if (param0 == null) {
+          if (campaign == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          stackIn_19_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_19_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -5814,13 +5814,13 @@ final class TickCounter {
             }
           }
           if (param5 != 0) {
-            TickCounter.a((cf) null, (byte) -46, (CipherPacketBuffer) null);
+            TickCounter.readCampaignUnitOverride((CampaignDefinition) null, (byte) -46, (CipherPacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var9), "em.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var9), "em.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -5839,7 +5839,7 @@ final class TickCounter {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "em.B(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "em.B(" + param0 + ')');
         }
     }
 
@@ -5848,7 +5848,7 @@ final class TickCounter {
           this.limit = limit;
           this.elapsedTicks = 0;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "em.<init>(" + limit + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "em.<init>(" + limit + ')');
         }
     }
 

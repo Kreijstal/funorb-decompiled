@@ -400,7 +400,7 @@ final class AiUnitPlanner extends IntrusiveNode {
           } else {
             stackIn_235_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_234_0), ((StringBuilder) (Object) stackIn_234_1).append(stackIn_235_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_234_0), ((StringBuilder) (Object) stackIn_234_1).append(stackIn_235_2).append(')').toString());
         }
     }
 
@@ -568,7 +568,7 @@ final class AiUnitPlanner extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -790,7 +790,7 @@ final class AiUnitPlanner extends IntrusiveNode {
           this.unit = unit;
           this.unit.aiPlanner = this;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "cl.<init>(" + (planner != null ? "{...}" : "null") + ',' + (unit != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "cl.<init>(" + (planner != null ? "{...}" : "null") + ',' + (unit != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -30,11 +30,11 @@ final class sj {
         } else {
           var4 = 0;
           var5 = SoftwareRaster.field_l * param0 + param1;
-          var6 = SoftwareRaster.field_l - cm.field_b;
+          var6 = SoftwareRaster.field_l - CampaignProgress.field_b;
           var12 = 0;
           while (ac.field_m > var12) {
             var13 = 0;
-            while (var13 < cm.field_b) {
+            while (var13 < CampaignProgress.field_b) {
               var7 = vg.field_q[0].field_B[var4];
               var11 = var7 >>> 24;
               if (0 != var11) {
@@ -71,7 +71,7 @@ final class sj {
             var5 = var5 + var6;
           }
         }
-        DeployEvent.field_z.b(384, 2464, param1 + (cm.field_b >> 1) << 4, param0 + (ac.field_m >> 1) << 4, this.field_h * 65535 / this.field_c, 1024);
+        DeployEvent.field_z.b(384, 2464, param1 + (CampaignProgress.field_b >> 1) << 4, param0 + (ac.field_m >> 1) << 4, this.field_h * 65535 / this.field_c, 1024);
         if (param2 == 121) {
           return;
         }
@@ -189,7 +189,7 @@ final class sj {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -219,7 +219,7 @@ final class sj {
           ke.a((byte) 90, param1);
           wh.field_f = true;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "sj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -242,11 +242,11 @@ final class sj {
         this.field_i = false;
         this.field_c = param0;
         var2 = 2147483647;
-        this.field_f = new int[ac.field_m * cm.field_b];
+        this.field_f = new int[ac.field_m * CampaignProgress.field_b];
         var3 = -2147483648;
-        for (var4 = 0; ac.field_m * cm.field_b > var4; var4++) {
-          var5 = var4 % cm.field_b - (cm.field_b >> 1);
-          var6 = -(ac.field_m >> 1) + var4 / cm.field_b;
+        for (var4 = 0; ac.field_m * CampaignProgress.field_b > var4; var4++) {
+          var5 = var4 % CampaignProgress.field_b - (CampaignProgress.field_b >> 1);
+          var6 = -(ac.field_m >> 1) + var4 / CampaignProgress.field_b;
           var7 = (this.field_c - (int)(Math.atan2((double)(-var5), (double)var6) * (double)this.field_c / 3.141592653589793)) / 2;
           if (var3 < var7) {
             var3 = var7;
@@ -353,7 +353,7 @@ final class sj {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 }

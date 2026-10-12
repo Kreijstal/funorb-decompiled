@@ -13,8 +13,8 @@ final class sp implements Iterator {
     static double field_e;
 
     final static java.awt.Container a(int param0) {
-        if (null != g.field_f) {
-          return (java.awt.Container) ((Object) g.field_f);
+        if (null != ContextualRuntimeException.field_f) {
+          return (java.awt.Container) ((Object) ContextualRuntimeException.field_f);
         }
         if (param0 != 0) {
           field_g = (String) null;
@@ -57,7 +57,7 @@ final class sp implements Iterator {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class sp implements Iterator {
           this.field_a = null;
           this.field_f = this.field_c.field_f.field_s;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "sp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "sp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

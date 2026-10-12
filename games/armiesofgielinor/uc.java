@@ -30,7 +30,7 @@ final class uc {
           }
           ds.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "uc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "uc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

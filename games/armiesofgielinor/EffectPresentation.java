@@ -135,7 +135,7 @@ final class EffectPresentation implements EventPresentation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var6), "tb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var6), "tb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -201,11 +201,11 @@ final class EffectPresentation implements EventPresentation {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final static void a(int[] param0, PacketBuffer param1, boolean param2, int[] param3) {
+    final static void readCoatOfArms(int[] parts, PacketBuffer packet, boolean obfuscationGuard, int[] colourIndices) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -220,14 +220,14 @@ final class EffectPresentation implements EventPresentation {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var4_int = 0;
-          if (param2) {
+          if (obfuscationGuard) {
             field_d = (String) null;
           }
           while (var4_int < 6) {
-            param0[var4_int] = param1.readUnsignedByte(0);
-            param3[var4_int] = param1.readUnsignedByte(0);
-            if (param0[var4_int] == 255) {
-              param0[var4_int] = -1;
+            parts[var4_int] = packet.readUnsignedByte(0);
+            colourIndices[var4_int] = packet.readUnsignedByte(0);
+            if (parts[var4_int] == 255) {
+              parts[var4_int] = -1;
             }
             var4_int++;
           }
@@ -237,24 +237,24 @@ final class EffectPresentation implements EventPresentation {
           var4 = decompiledCaughtException;
           stackIn_10_0 = var4;
           stackIn_10_1 = new StringBuilder().append("tb.A(");
-          if (param0 == null) {
+          if (parts == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param1 == null) {
+          if (packet == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(',');
+          if (colourIndices == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -472,7 +472,7 @@ final class EffectPresentation implements EventPresentation {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -527,7 +527,7 @@ final class EffectPresentation implements EventPresentation {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

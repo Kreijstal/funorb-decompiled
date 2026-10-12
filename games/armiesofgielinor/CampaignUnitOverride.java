@@ -16,7 +16,7 @@ final class CampaignUnitOverride {
             field_c = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "id.C(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "id.C(" + param0 + ')');
         }
     }
 
@@ -383,7 +383,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "join_request_xs_game");
                 if (null != var2) {
-                  ho.field_d = uu.a(var2, (byte) 2);
+                  CampaignResult.field_d = uu.a(var2, (byte) 2);
                 }
                 var2 = NodeIterator.a(50, "join_withdraw_request_xs_game");
                 if (var2 != null) {
@@ -419,7 +419,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "unable_to_send_message_password_b");
                 if (var2 != null) {
-                  g.field_a = uu.a(var2, (byte) -122);
+                  ContextualRuntimeException.field_a = uu.a(var2, (byte) -122);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_lobby_show_all");
                 if (var2 != null) {
@@ -487,7 +487,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "unrated_game");
                 if (null != var2) {
-                  cm.field_c = uu.a(var2, (byte) -126);
+                  CampaignProgress.field_c = uu.a(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(50, "rated_game_tips");
                 if (var2 != null) {
@@ -1745,7 +1745,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "text_removed_from_game");
                 if (null != var2) {
-                  g.field_d = uu.a(var2, (byte) 58);
+                  ContextualRuntimeException.field_d = uu.a(var2, (byte) 58);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "text_lobby_pleaselogin_free");
                 if (var2 != null) {
@@ -3053,7 +3053,7 @@ final class CampaignUnitOverride {
                   } else {
                     stackIn_2614_2 = "{...}";
                   }
-                  throw ig.a((Throwable) ((Object) stackIn_2613_0), ((StringBuilder) (Object) stackIn_2613_1).append(stackIn_2614_2).append(')').toString());
+                  throw ig.addExceptionContext((Throwable) ((Object) stackIn_2613_0), ((StringBuilder) (Object) stackIn_2613_1).append(stackIn_2614_2).append(')').toString());
                 }
                 if (iv.field_k) {
                   ArmiesOfGielinor.obfuscationControl = (var3 == 0);
@@ -3072,7 +3072,7 @@ final class CampaignUnitOverride {
             field_c = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -3147,7 +3147,7 @@ final class CampaignUnitOverride {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

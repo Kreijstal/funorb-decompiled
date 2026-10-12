@@ -31,7 +31,7 @@ final class SpellCastEvent extends GameEvent {
           this.spell.applyEffect(this.castingPlayer, battlefield, 26123);
           battlefield.a((byte) -49, this.spell, this.selectionMode, this.castingPlayer);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "pj.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "pj.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -102,7 +102,7 @@ final class SpellCastEvent extends GameEvent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "pj.B(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "pj.B(" + param0 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class SpellCastEvent extends GameEvent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "pj.F(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2_ref), "pj.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -322,7 +322,7 @@ final class SpellCastEvent extends GameEvent {
           } else {
             stackIn_85_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_84_1).append(stackIn_85_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 
@@ -431,7 +431,7 @@ final class SpellCastEvent extends GameEvent {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
@@ -442,7 +442,7 @@ final class SpellCastEvent extends GameEvent {
           this.spell = spell;
           this.eventKind = 24;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "pj.<init>(" + (spell != null ? "{...}" : "null") + ',' + selectionMode + ',' + castingPlayer + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "pj.<init>(" + (spell != null ? "{...}" : "null") + ',' + selectionMode + ',' + castingPlayer + ')');
         }
     }
 
@@ -471,7 +471,7 @@ final class SpellCastEvent extends GameEvent {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

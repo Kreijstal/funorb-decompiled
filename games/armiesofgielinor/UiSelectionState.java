@@ -217,7 +217,7 @@ final class UiSelectionState {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "dl.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "dl.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

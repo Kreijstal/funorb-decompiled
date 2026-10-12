@@ -17,8 +17,8 @@ final class nu extends lk {
         field_w = null;
     }
 
-    final static cf a(int param0, kl param1, int param2) {
-        cf stackIn_24_0 = null;
+    final static CampaignDefinition a(int param0, kl param1, int param2) {
+        CampaignDefinition stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -31,7 +31,7 @@ final class nu extends lk {
         String var7 = null;
         String var8 = null;
         int[] var9 = null;
-        cf var10 = null;
+        CampaignDefinition var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -41,9 +41,9 @@ final class nu extends lk {
         int var16 = 0;
         byte[] var17 = null;
         byte[] var18 = null;
-        sd var19 = null;
-        sd[] var20 = null;
-        sd var21 = null;
+        CampaignParticipant var19 = null;
+        CampaignParticipant[] var20 = null;
+        CampaignParticipant var21 = null;
         CampaignMission var22 = null;
         byte[] var23 = null;
         var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -57,20 +57,20 @@ final class nu extends lk {
           var6 = var4.readUnsignedByte(param0 - 23948);
           var7 = var4.readNullCircumfixedString((byte) 121);
           var8 = var4.readNullCircumfixedString((byte) 121);
-          var9 = ev.a(var4, (byte) -98);
-          var10 = new cf(var5);
+          var9 = ev.readNullableUnsignedByteArray(var4, (byte) -98);
+          var10 = new CampaignDefinition(var5);
           var10.field_o = var8;
-          var10.field_r = param2;
-          var10.field_l = var7;
-          var10.field_s = var6;
+          var10.campaignIndex = param2;
+          var10.localPlayerName = var7;
+          var10.localGodId = var6;
           var10.field_p = var9;
-          cd.field_a[param2] = var10;
+          cd.campaigns[param2] = var10;
           var11 = var4.readUnsignedByte(param0 - 23948);
-          var10.field_q = new sd[var11];
+          var10.participants = new CampaignParticipant[var11];
           for (var12 = 0; var11 > var12; var12++) {
             try {
-              var19 = ks.a(900, var10, var4);
-              var10.field_q[var19.field_m] = var19;
+              var19 = ks.readCampaignParticipant(900, var10, var4);
+              var10.participants[var19.participantId] = var19;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var13_ref_RuntimeException = decompiledCaughtException;
@@ -78,26 +78,26 @@ final class nu extends lk {
           }
           var12 = var4.readUnsignedByte(0);
           for (var13 = 0; var13 < var12; var13++) {
-            TickCounter.a(var10, (byte) -7, var4);
+            TickCounter.readCampaignUnitOverride(var10, (byte) -7, var4);
           }
-          var20 = var10.field_q;
+          var20 = var10.participants;
           var14 = 0;
           if (param0 != 23948) {
             nu.a(49L, 110);
           }
           while (var14 < var20.length) {
             var21 = var20[var14];
-            if (0 == var21.field_o) {
-              var21.field_k = null;
+            if (0 == var21.overrideCount) {
+              var21.unitOverrides = null;
             }
             var14++;
           }
           var13 = var4.readUnsignedByte(0);
-          var10.field_n = new CampaignMission[var13];
+          var10.missions = new CampaignMission[var13];
           for (var14 = 0; var13 > var14; var14++) {
             try {
               var22 = BattleCharacter.a(var10, var4, param1, (byte) -73);
-              var10.field_n[var22.missionId] = var22;
+              var10.missions[var22.missionId] = var22;
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var15 = decompiledCaughtException;
@@ -118,7 +118,7 @@ final class nu extends lk {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class nu extends lk {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

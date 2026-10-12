@@ -27,7 +27,7 @@ final class SummonAction extends PreparedAction {
           }
           battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new SummonEvent(this.unitType, this.tileX, this.tileY, this.summoningBonus, this.actingPlayer)));
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "be.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "be.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class SummonAction extends PreparedAction {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(')').toString());
         }
     }
 

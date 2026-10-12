@@ -42,7 +42,7 @@ final class bl {
         try {
           t.a((byte) -118, param0);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "bl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "bl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -280,7 +280,7 @@ final class bl {
                                     oh.field_H = ((PacketBuffer) ((Object) var1)).j((byte) -2);
                                     break regionExit1;
                                   default:
-                                    af.a((Throwable) null, 118, "L1: " + cm.b(false));
+                                    af.a((Throwable) null, 118, "L1: " + CampaignProgress.b(false));
                                     dj.a((byte) -124);
                                     break regionExit1;
                                 }
@@ -384,8 +384,8 @@ final class bl {
               SpellCastAction.field_s = false;
             } else {
               SpellCastAction.field_s = true;
-              for (var3 = 0; var3 < ln.field_d.length; var3++) {
-                ln.field_d[var3] = ((PacketBuffer) ((Object) var1)).readByte((byte) -1);
+              for (var3 = 0; var3 < CoatOfArms.field_d.length; var3++) {
+                CoatOfArms.field_d[var3] = ((PacketBuffer) ((Object) var1)).readByte((byte) -1);
               }
               nh.field_E = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
               AiPlanningStrategy.field_b = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
@@ -401,7 +401,7 @@ final class bl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1_ref), "bl.C(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1_ref), "bl.C(" + param0 + ')');
         }
     }
 
@@ -517,7 +517,7 @@ final class bl {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -556,7 +556,7 @@ final class bl {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

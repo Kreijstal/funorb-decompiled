@@ -20,7 +20,7 @@ final class ar extends ms {
             ar.a(87, 100, -49);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ar.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ar.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -56,18 +56,18 @@ final class ar extends ms {
     }
 
     final static CampaignMission a(int param0, int param1, int param2) {
-        cf var4 = br.a(param0, (byte) -14);
-        cf var3 = var4;
+        CampaignDefinition var4 = br.getCampaign(param0, (byte) -14);
+        CampaignDefinition var3 = var4;
         if (var3 == null) {
           return null;
         }
         if (param1 < param2) {
           return null;
         }
-        if (param1 >= var3.field_n.length) {
+        if (param1 >= var3.missions.length) {
           return null;
         }
-        return var4.field_n[param1];
+        return var4.missions[param1];
     }
 
     final static void a(RgbSprite[][] param0, int[] param1, byte param2, byte[] param3, int param4, kl param5, kl param6, byte[] param7, String[] param8, int[] param9, boolean param10, int param11, String[][] param12, ru[] param13, kl param14, String[][] param15, RgbSprite[][] param16) {
@@ -189,7 +189,7 @@ final class ar extends ms {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ final class ar extends ms {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -320,7 +320,7 @@ final class ar extends ms {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

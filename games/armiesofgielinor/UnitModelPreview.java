@@ -417,7 +417,7 @@ final class UnitModelPreview {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(unitType).append(',').append(yaw).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(unitType).append(',').append(yaw).append(')').toString());
         }
     }
 

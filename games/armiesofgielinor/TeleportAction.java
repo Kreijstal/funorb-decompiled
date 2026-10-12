@@ -90,7 +90,7 @@ final class TeleportAction extends PreparedAction {
             field_z = 2;
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ur.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ur.C(" + obfuscationGuard + ',' + (battlefield != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -114,7 +114,7 @@ final class TeleportAction extends PreparedAction {
           this.actingPlayer = actingPlayer;
           this.targetDeltaX = targetDeltaX;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ur.<init>(" + suppliedSourceX + ',' + suppliedSourceY + ',' + targetDeltaX + ',' + targetDeltaY + ',' + actingPlayer + ',' + (unit != null ? "{...}" : "null") + ',' + skipDestinationPlacement + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ur.<init>(" + suppliedSourceX + ',' + suppliedSourceY + ',' + targetDeltaX + ',' + targetDeltaY + ',' + actingPlayer + ',' + (unit != null ? "{...}" : "null") + ',' + skipDestinationPlacement + ')');
         }
     }
 

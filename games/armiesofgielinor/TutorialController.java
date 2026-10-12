@@ -94,7 +94,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ci.RA(" + highlighted + ',' + itemIndex + ',' + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "ci.RA(" + highlighted + ',' + itemIndex + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ci.JB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ci.JB(" + param0 + ')');
         }
     }
 
@@ -166,7 +166,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.EA(" + obfuscationGuard + ',' + itemIndex + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.EA(" + obfuscationGuard + ',' + itemIndex + ')');
         }
     }
 
@@ -233,27 +233,27 @@ final class TutorialController {
                   stackIn_30_3 = !(stackIn_24_3);
                   if (ml.a(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_30_3)) {
                     if (DeployEvent.field_A == 2 &&
-                      pg.field_d.field_d[var2_int] > -1) {
-                      pg.field_d.field_d[var2_int] = -1;
+                      pg.playerProfile.equippedSpellIds[var2_int] > -1) {
+                      pg.playerProfile.equippedSpellIds[var2_int] = -1;
                       AttackEvent.b(false);
                       ub.$cfr$intArgs$a$6d836999ad61(101, MoveAttackRequest.field_v[45]);
                     }
-                    if (pg.field_d.field_d[var2_int] > -1) {
+                    if (pg.playerProfile.equippedSpellIds[var2_int] > -1) {
                       if (hi.field_j >= 2 &&
                         br.field_f[82]) {
-                        hs.b(119, pg.field_d.field_d[var2_int]);
+                        hs.b(119, pg.playerProfile.equippedSpellIds[var2_int]);
                         return;
                       }
                       if (tg.field_k != 0) {
                         ab.field_a = ev.field_d;
-                        ev.field_d = pg.field_d.field_d[var2_int];
+                        ev.field_d = pg.playerProfile.equippedSpellIds[var2_int];
                         ts.currentSpellMenu = ct.spellMenuById[ev.field_d];
                         this.a((byte) 96, ev.field_d, (SpellMenuGroup) null);
                         return;
                       }
                       wj.field_q = 248;
                       ab.field_a = ev.field_d;
-                      ev.field_d = pg.field_d.field_d[var2_int];
+                      ev.field_d = pg.playerProfile.equippedSpellIds[var2_int];
                       ih.field_p = ct.spellMenuById[ev.field_d];
                       this.a((byte) 88, ev.field_d, (SpellMenuGroup) null);
                       if (ts.currentSpellMenu != ih.field_p) {
@@ -286,11 +286,11 @@ final class TutorialController {
                 if (wg.a(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
                   if (ev.field_d > -1 &&
                     ev.field_d < 135 &&
-                    pg.field_d.field_a[ev.field_d] < 250 &&
-                    pg.field_d.a(uc.spellDefinitions[ev.field_d][0], (byte) 103)) {
+                    pg.playerProfile.spellQuantities[ev.field_d] < 250 &&
+                    pg.playerProfile.tryDebitRunes(uc.spellDefinitions[ev.field_d][0], (byte) 103)) {
                     vl.field_n.writeCipheredOpcode(32161, 70);
                     vl.field_n.writeShort(true, ev.field_d + 2000);
-                    pg.field_d.field_a[ev.field_d] = pg.field_d.field_a[ev.field_d] + 1;
+                    pg.playerProfile.spellQuantities[ev.field_d] = pg.playerProfile.spellQuantities[ev.field_d] + 1;
                     this.a((byte) 48, ev.field_d, (SpellMenuGroup) null);
                     ub.$cfr$intArgs$a$6d836999ad61(58, im.field_v[2]);
                   }
@@ -397,8 +397,8 @@ final class TutorialController {
               if (wg.a(-33, db.a(true, 469), db.a(param0, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
                 var4Lifetime1 = 4;
                 while (var4Lifetime1 >= 0) {
-                  if (~pg.field_d.field_d[var4Lifetime1] == ~ev.field_d) {
-                    pg.field_d.field_d[var4Lifetime1] = -1;
+                  if (~pg.playerProfile.equippedSpellIds[var4Lifetime1] == ~ev.field_d) {
+                    pg.playerProfile.equippedSpellIds[var4Lifetime1] = -1;
                     AttackEvent.b(false);
                     return;
                   }
@@ -415,8 +415,8 @@ final class TutorialController {
               }
               var4Lifetime2 = 0;
               while (var4Lifetime2 < 5) {
-                if (pg.field_d.field_d[var4Lifetime2] == -1) {
-                  pg.field_d.field_d[var4Lifetime2] = ev.field_d;
+                if (pg.playerProfile.equippedSpellIds[var4Lifetime2] == -1) {
+                  pg.playerProfile.equippedSpellIds[var4Lifetime2] = ev.field_d;
                   AttackEvent.b(false);
                   return;
                 }
@@ -441,7 +441,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.IB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.IB(" + param0 + ')');
         }
     }
 
@@ -471,7 +471,7 @@ final class TutorialController {
             ud.field_X = new RgbSprite[pc.field_k.length];
             var2_int = 0;
             while (!(pc.field_k.length <= var2_int)) {
-              ud.field_X[var2_int] = DeathEvent.a(ah.field_a.field_b, pc.field_k[var2_int], mv.field_d, GrowthEvent.b(param0, -6583));
+              ud.field_X[var2_int] = DeathEvent.a(ah.localCoat.colourIndices, pc.field_k[var2_int], mv.field_d, GrowthEvent.b(param0, -6583));
               var2_int++;
               if (var4 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -492,13 +492,13 @@ final class TutorialController {
               if (stackIn_26_0 == stackIn_26_1) {
                 TeamRoster.field_e.f(db.a(true, 26 + 57 * var2_int), MatchConditionEntry.a(60, (byte) 94), 256);
               }
-              if (pg.field_d.a(0) <= var2_int) {
+              if (pg.playerProfile.getUnlockLevel(0) <= var2_int) {
                 TeamRoster.field_e.f(db.a(true, var2_int * 57 + 26), MatchConditionEntry.a(60, (byte) 94), 64);
               }
               stackIn_23_0 = ud.field_X[var2_int];
               stackIn_23_1 = db.a(true, 34 + var2_int * 57);
               stackIn_23_2 = MatchConditionEntry.a(64, (byte) 94);
-              if (var2_int >= pg.field_d.a(0)) {
+              if (var2_int >= pg.playerProfile.getUnlockLevel(0)) {
                 stackIn_24_3 = 0;
               } else {
                 stackIn_24_3 = 256;
@@ -513,7 +513,7 @@ final class TutorialController {
             SoftwareRaster.a();
             fe.b(db.a(true, 30), MatchConditionEntry.a(150, (byte) 94), 270, 270, EffectPresentation.field_j, jh.field_k, 0, 256);
             SoftwareRaster.f(db.a(true, 34), MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
-            stackIn_26_0 = pg.field_d.a(0);
+            stackIn_26_0 = pg.playerProfile.getUnlockLevel(0);
             stackIn_26_1 = ah.field_b;
           }
           if (stackIn_26_0 <= stackIn_26_1) {
@@ -522,18 +522,18 @@ final class TutorialController {
           stackIn_32_0 = MatchConditionEntry.a(165, (byte) 94);
           stackIn_32_1 = true;
           stackIn_32_2 = pc.field_k[ah.field_b];
-          stackIn_32_3 = ah.field_a.field_b;
+          stackIn_32_3 = ah.localCoat.colourIndices;
           stackIn_32_4 = mv.field_d;
-          stackIn_33_5 = !(pg.field_d.a(0) > ah.field_b);
+          stackIn_33_5 = !(pg.playerProfile.getUnlockLevel(0) > ah.field_b);
           uh.a(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5, db.a(true, 50));
           SoftwareRaster.a();
           fe.b(db.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, jh.field_k, 0, 128);
           fe.b(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, nd.field_b, 0, 128);
           fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, jh.field_k, 0, 0);
           fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
-          fe.c(dd.a(pg.field_d.a((byte) 45), param0 ^ -23666), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), nd.field_b, true);
+          fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 45), param0 ^ -23666), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), nd.field_b, true);
           if (hi.field_j >= 2) {
-            rs.field_n.c(pg.field_d.a((byte) 127) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
+            rs.field_n.c(pg.playerProfile.getAvailableRunes((byte) 127) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
           }
           fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
           fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
@@ -541,14 +541,14 @@ final class TutorialController {
           var3 = 0;
           do {
             if (!(var3 <= ah.field_b)) {
-              var3 = -pg.field_d.field_j - pg.field_d.field_c + var2_int;
+              var3 = -pg.playerProfile.progressionCredit - pg.playerProfile.runeCredit + var2_int;
               fe.c(fo.a(4800, hf.field_e, new String[]{Integer.toString(1 + ah.field_b)}), db.a(true, 460), MatchConditionEntry.a(190, (byte) 94), nd.field_b, true);
               break;
             }
-            var2_int = var2_int + NodeDeque.field_c[var3];
+            var2_int = var2_int + NodeDeque.unlockLevelCosts[var3];
             var3++;
           } while (var4 == 0);
-          boolean decompiledSharedTail1 = !(pg.field_d.a(0) <= ah.field_b);
+          boolean decompiledSharedTail1 = !(pg.playerProfile.getUnlockLevel(0) <= ah.field_b);
           if (!decompiledSharedTail1) {
             rs.field_n.a(fo.a(4800, SummonRequest.field_w, new String[]{this.c(param0 ^ 23558, var2_int), this.c(-38, var3)}), db.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
             decompiledSharedTail1 = (var4 != 0);
@@ -556,10 +556,10 @@ final class TutorialController {
           if (decompiledSharedTail1) {
             rs.field_n.a(fo.a(4800, gt.field_g, new String[]{this.c(-38, var2_int)}), db.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
           }
-          if (pg.field_d.a(param0 ^ param0) < NodeDeque.field_c.length) {
-            fe.c(this.c(-38, NodeDeque.field_c[ah.field_b]), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
-            if (pg.field_d.a(0) == ah.field_b &&
-              pg.field_d.a((byte) 123) >= NodeDeque.field_c[pg.field_d.a(0)]) {
+          if (pg.playerProfile.getUnlockLevel(param0 ^ param0) < NodeDeque.unlockLevelCosts.length) {
+            fe.c(this.c(-38, NodeDeque.unlockLevelCosts[ah.field_b]), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
+            if (pg.playerProfile.getUnlockLevel(0) == ah.field_b &&
+              pg.playerProfile.getAvailableRunes((byte) 123) >= NodeDeque.unlockLevelCosts[pg.playerProfile.getUnlockLevel(0)]) {
               boolean decompiledSharedTail0 = !(wg.a(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
               if (!decompiledSharedTail0) {
                 fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
@@ -576,7 +576,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.O(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.O(" + param0 + ')');
         }
     }
 
@@ -594,7 +594,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.F(" + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.F(" + obfuscationGuard + ')');
         }
     }
 
@@ -663,7 +663,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.AA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.AA(" + param0 + ')');
         }
     }
 
@@ -741,7 +741,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ci.I(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "ci.I(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -788,7 +788,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.A(" + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.A(" + obfuscationGuard + ')');
         }
     }
 
@@ -885,7 +885,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.J(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.J(" + param0 + ')');
         }
     }
 
@@ -934,7 +934,7 @@ final class TutorialController {
                 continue;
               }
               if (stackIn_25_0 > stackIn_25_1) {
-                stackIn_46_0 = ~pg.field_d.field_a[param0.spellIds[var7_int]];
+                stackIn_46_0 = ~pg.playerProfile.spellQuantities[param0.spellIds[var7_int]];
                 decompiledFrameCompleted3 = false;
                 break;
               }
@@ -953,7 +953,7 @@ final class TutorialController {
                 decompiledFrameCompleted1 = false;
                 break;
               }
-              stackIn_46_0 = ~pg.field_d.field_a[param0.spellIds[var7_intLifetime1]];
+              stackIn_46_0 = ~pg.playerProfile.spellQuantities[param0.spellIds[var7_intLifetime1]];
               if (var9 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
@@ -997,7 +997,7 @@ final class TutorialController {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -2080,7 +2080,7 @@ final class TutorialController {
                                 if (!this.selectionState.hasActivationInput((byte) 67)) {
                                   return;
                                 }
-                                ho.a(CombatEvent.d((byte) -128), (byte) -3);
+                                CampaignResult.a(CombatEvent.d((byte) -128), (byte) -3);
                                 if (var9 == 0) {
                                   return;
                                 }
@@ -2260,7 +2260,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ci.HA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "ci.HA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -2268,7 +2268,7 @@ final class TutorialController {
         try {
           fe.a(eq.field_n, db.a(true, param0), MatchConditionEntry.a(220, (byte) 94), 400, 16777215, true);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ci.H(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ci.H(" + param0 + ')');
         }
     }
 
@@ -2295,7 +2295,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.PA(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.PA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2375,7 +2375,7 @@ final class TutorialController {
           var16 = 1;
           var17 = 0;
           if (var7 == 0) {
-            fe.a(fo.a(4800, me.field_a, new String[]{Integer.toString(pg.field_d.field_a[param1])}), var8 >> 1, 82 + var11, var8 - 45, nd.field_b, true);
+            fe.a(fo.a(4800, me.field_a, new String[]{Integer.toString(pg.playerProfile.spellQuantities[param1])}), var8 >> 1, 82 + var11, var8 - 45, nd.field_b, true);
           }
           stackIn_24_0 = en.field_E;
           stackIn_24_1 = var5;
@@ -2412,7 +2412,7 @@ final class TutorialController {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -2436,7 +2436,7 @@ final class TutorialController {
             AiPlanningStrategy.field_d < db.a(true, 376) &&
             ko.field_b > MatchConditionEntry.a(330, (byte) 94) &&
             ko.field_b < MatchConditionEntry.a(414, (byte) 94)) {
-            ah.field_a.a(wh.field_a, (AiPlanningStrategy.field_d - db.a(true, 40)) / 21 + 16 * ((ko.field_b - MatchConditionEntry.a(330, (byte) 94)) / 42), (byte) -110);
+            ah.localCoat.setColour(wh.field_a, (AiPlanningStrategy.field_d - db.a(true, 40)) / 21 + 16 * ((ko.field_b - MatchConditionEntry.a(330, (byte) 94)) / 42), (byte) -110);
             ub.$cfr$intArgs$a$6d836999ad61(62, im.field_v[10]);
             return;
           }
@@ -2446,10 +2446,10 @@ final class TutorialController {
           }
           if (var2_int > -2) {
             stackIn_25_0 = wh.field_a;
-            stackIn_25_1 = pg.field_d.a(0);
+            stackIn_25_1 = pg.playerProfile.getUnlockLevel(0);
             stackIn_26_2 = !(hi.field_j < 2);
             if (ue.a(stackIn_25_0, stackIn_25_1, stackIn_26_2, var2_int, -1208926000, ei.field_e[0])) {
-              ah.field_a.a(73, var2_int, wh.field_a);
+              ah.localCoat.setPart(73, var2_int, wh.field_a);
               ub.$cfr$intArgs$a$6d836999ad61(121, im.field_v[9]);
               if (var5 == 0) {
                 return;
@@ -2489,7 +2489,7 @@ final class TutorialController {
             }
           }
           if (decompiledFrameCompleted0) {
-            var2_int = ah.field_a.a(ko.field_b, param0 ^ 21728, db.a(true, 55), MatchConditionEntry.a(70, (byte) 94), AiPlanningStrategy.field_d);
+            var2_int = ah.localCoat.a(ko.field_b, param0 ^ 21728, db.a(true, 55), MatchConditionEntry.a(70, (byte) 94), AiPlanningStrategy.field_d);
             stackIn_58_0 = ~var2_int;
             stackIn_58_1 = 1;
           }
@@ -2507,7 +2507,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.SA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.SA(" + param0 + ')');
         }
     }
 
@@ -2643,7 +2643,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.NA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.NA(" + param0 + ')');
         }
     }
 
@@ -2661,7 +2661,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.GB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.GB(" + param0 + ')');
         }
     }
 
@@ -2673,7 +2673,7 @@ final class TutorialController {
             TutorialController.h((byte) -22);
           }
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ci.BA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ci.BA(" + param0 + ')');
         }
     }
 
@@ -2737,7 +2737,7 @@ final class TutorialController {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -2914,7 +2914,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.OA(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.OA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2926,9 +2926,9 @@ final class TutorialController {
           if (param0 != -35) {
             this.a(true);
           }
-          if (0 == pg.field_d.field_b[param1]) {
+          if (0 == pg.playerProfile.unitUnlockMasks[param1]) {
             fe.c(this.c(-38, 50), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
-            if (pg.field_d.a((byte) 120) >= 50) {
+            if (pg.playerProfile.getAvailableRunes((byte) 120) >= 50) {
               boolean decompiledSharedTail0 = !(wg.a(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
               if (!decompiledSharedTail0) {
                 fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
@@ -2945,7 +2945,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.LB(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.LB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2964,7 +2964,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "ci.QA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "ci.QA(" + param0 + ')');
         }
     }
 
@@ -3020,7 +3020,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ci.KA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "ci.KA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3125,7 +3125,7 @@ final class TutorialController {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -3170,7 +3170,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) (var2), "ci.K(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) (var2), "ci.K(" + param0 + ')');
         }
     }
 
@@ -3221,7 +3221,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ci.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "ci.G(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3286,7 +3286,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.AB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.AB(" + param0 + ')');
         }
     }
 
@@ -3311,7 +3311,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.P(" + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.P(" + obfuscationGuard + ')');
         }
     }
 
@@ -3405,7 +3405,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.S(" + itemIndex + ',' + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.S(" + itemIndex + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -3526,9 +3526,9 @@ final class TutorialController {
               }
               if (decompiledFrameCompleted0) {
                 if (var10 == 0 &&
-                  null != pg.field_d) {
+                  null != pg.playerProfile) {
                   var6Lifetime1Lifetime1 = nd.field_b;
-                  this.a((byte) 63, -1, pg.field_d.field_g.a(false, var4) / IntrusiveNode.a(108, var4), var5Lifetime1, var6Lifetime1Lifetime1, mv.field_d);
+                  this.a((byte) 63, -1, pg.playerProfile.campaignProgress.getCampaignScore(false, var4) / IntrusiveNode.a(108, var4), var5Lifetime1, var6Lifetime1Lifetime1, mv.field_d);
                 }
                 if (var13 != 0) {
                   var7 = ae.field_s;
@@ -3551,7 +3551,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.MA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.MA(" + param0 + ')');
         }
     }
 
@@ -3601,7 +3601,7 @@ final class TutorialController {
               var2_int = -var2_int;
             }
           }
-          if (null == pg.field_d) {
+          if (null == pg.playerProfile) {
             return;
           }
           fe.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
@@ -3733,21 +3733,21 @@ final class TutorialController {
               stackIn_111_0 = var4Lifetime1;
               break;
             }
-            stackIn_111_0 = ~pg.field_d.field_d[var5];
+            stackIn_111_0 = ~pg.playerProfile.equippedSpellIds[var5];
             if (var8 == 0) {
               if (stackIn_111_0 < 0) {
-                var6 = pg.field_d.field_a[pg.field_d.field_d[var5]];
+                var6 = pg.playerProfile.spellQuantities[pg.playerProfile.equippedSpellIds[var5]];
                 var7 = 0;
                 while (var5 > var7) {
-                  stackIn_105_0 = pg.field_d.field_d[var7];
-                  stackIn_105_1 = pg.field_d.field_d[var5];
+                  stackIn_105_0 = pg.playerProfile.equippedSpellIds[var7];
+                  stackIn_105_1 = pg.playerProfile.equippedSpellIds[var5];
                   if (stackIn_105_0 == stackIn_105_1) {
                     var6--;
                   }
                   var7++;
                 }
                 var4Lifetime1 = 0;
-                stackIn_102_0 = BattleCharacter.field_h[uc.spellDefinitions[pg.field_d.field_d[var5]][2]];
+                stackIn_102_0 = BattleCharacter.field_h[uc.spellDefinitions[pg.playerProfile.equippedSpellIds[var5]][2]];
                 stackIn_102_1 = db.a(true, 310 + var5 * 55 + 20);
                 stackIn_102_2 = MatchConditionEntry.a(78, (byte) 94);
                 if (var6 > 0) {
@@ -3785,10 +3785,10 @@ final class TutorialController {
           fe.b(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, nd.field_b, 0, 128);
           fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, jh.field_k, 0, 0);
           fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
-          fe.c(dd.a(pg.field_d.a((byte) 48), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), nd.field_b, true);
+          fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 48), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), nd.field_b, true);
           if (2 <= hi.field_j &&
-            ln.field_e) {
-            rs.field_n.c(pg.field_d.a((byte) 114) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
+            CoatOfArms.field_e) {
+            rs.field_n.c(pg.playerProfile.getAvailableRunes((byte) 114) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
           }
           fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
           fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
@@ -3807,7 +3807,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.KB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.KB(" + param0 + ')');
         }
     }
 
@@ -3862,7 +3862,7 @@ final class TutorialController {
             var3 = ((StringBuilder) (Object) stackIn_33_0).append(stackIn_34_1).toString();
           }
           if (itemId == 38) {
-            var3 = DisplacedUnitMarker.field_t[38] + cf.field_m[ek.field_d];
+            var3 = DisplacedUnitMarker.field_t[38] + CampaignDefinition.field_m[ek.field_d];
           }
           if (itemId == 29) {
             var3 = DisplacedUnitMarker.field_t[29] + h.field_e[t.field_e];
@@ -3893,7 +3893,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3_ref), "ci.C(" + itemId + ',' + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "ci.C(" + itemId + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -3910,7 +3910,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.CB(" + x + ',' + obfuscationGuard + ',' + y + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.CB(" + x + ',' + obfuscationGuard + ',' + y + ')');
         }
     }
 
@@ -4024,8 +4024,8 @@ final class TutorialController {
               if ((!(li.field_q <= -1)) &&
                 (-1 == jq.field_F) &&
                 (!(-1 >= li.field_q)) &&
-                (pg.field_d.field_b[1 + li.field_q] == 0) &&
-                (pg.field_d.a(50, (byte) 103))) {
+                (pg.playerProfile.unitUnlockMasks[1 + li.field_q] == 0) &&
+                (pg.playerProfile.tryDebitRunes(50, (byte) 103))) {
                 vl.field_n.writeCipheredOpcode(32161, 70);
                 vl.field_n.writeShort(true, wp.field_H[li.field_q + 1][0]);
                 var2_intLifetime2 = 0;
@@ -4034,7 +4034,7 @@ final class TutorialController {
                     stackIn_72_0 = bw.unitDefinitions[wp.field_H[li.field_q + 1][var2_intLifetime2]][11];
                     if (var8 == 0) {
                       if (stackIn_72_0 == 0) {
-                        pg.field_d.field_b[li.field_q] = oe.c(pg.field_d.field_b[li.field_q], 1 << var2_intLifetime2);
+                        pg.playerProfile.unitUnlockMasks[li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[li.field_q], 1 << var2_intLifetime2);
                       }
                       var2_intLifetime2++;
                       continue;
@@ -4046,24 +4046,24 @@ final class TutorialController {
                 }
                 ub.$cfr$intArgs$a$6d836999ad61(stackIn_72_0, im.field_v[14]);
                 if ((var8 != 0) && (jq.field_F > -1 &&
-                  0 < pg.field_d.field_b[li.field_q + 1] &&
-                  0 == (pg.field_d.field_b[1 + li.field_q] & 1 << jq.field_F) &&
-                  pg.field_d.a((byte) 91) >= bw.unitDefinitions[jq.field_F][11])) {
+                  0 < pg.playerProfile.unitUnlockMasks[li.field_q + 1] &&
+                  0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << jq.field_F) &&
+                  pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[jq.field_F][11])) {
                   vl.field_n.writeCipheredOpcode(32161, 70);
                   vl.field_n.writeShort(true, wp.field_H[1 + li.field_q][jq.field_F]);
                   ub.$cfr$intArgs$a$6d836999ad61(62, im.field_v[14]);
-                  pg.field_d.field_b[1 + li.field_q] = oe.c(pg.field_d.field_b[1 + li.field_q], 1 << jq.field_F);
+                  pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
                 }
               }
             } else {
               if (jq.field_F > -1 &&
-                0 < pg.field_d.field_b[li.field_q + 1] &&
-                0 == (pg.field_d.field_b[1 + li.field_q] & 1 << jq.field_F) &&
-                pg.field_d.a((byte) 91) >= bw.unitDefinitions[jq.field_F][11]) {
+                0 < pg.playerProfile.unitUnlockMasks[li.field_q + 1] &&
+                0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << jq.field_F) &&
+                pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[jq.field_F][11]) {
                 vl.field_n.writeCipheredOpcode(32161, 70);
                 vl.field_n.writeShort(true, wp.field_H[1 + li.field_q][jq.field_F]);
                 ub.$cfr$intArgs$a$6d836999ad61(62, im.field_v[14]);
-                pg.field_d.field_b[1 + li.field_q] = oe.c(pg.field_d.field_b[1 + li.field_q], 1 << jq.field_F);
+                pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
               }
             }
           }
@@ -4076,7 +4076,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.V(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.V(" + param0 + ')');
         }
     }
 
@@ -4116,7 +4116,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ci.D(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ci.D(" + param0 + ')');
         }
     }
 
@@ -4151,7 +4151,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ci.E(" + obfuscationGuard + ',' + pointerDriven + ',' + fallbackIndex + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "ci.E(" + obfuscationGuard + ',' + pointerDriven + ',' + fallbackIndex + ')');
         }
     }
 
@@ -4236,7 +4236,7 @@ final class TutorialController {
           if (null != b.field_n) {
             tm.a(db.a(true, 34), MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
             tm.c();
-            stackIn_25_0 = ((pg.field_d.field_b[1 + li.field_q] & 1 << jq.field_F) != 0) ? 0 : 1;
+            stackIn_25_0 = ((pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << jq.field_F) != 0) ? 0 : 1;
             var7Lifetime1 = stackIn_25_0;
             fieldTemp$0 = kq.field_L;
             kq.field_L = kq.field_L + 1;
@@ -4267,7 +4267,7 @@ final class TutorialController {
                 }
                 lw.field_ob.d(db.a(true, var8Lifetime1 - 20), MatchConditionEntry.a(-20 + var9Lifetime1, (byte) 94), TutorialLayout.field_g[MoveAttackAction.field_s + 1]);
                 km.field_h[0].g(db.a(true, var8Lifetime1 - 23), MatchConditionEntry.a(-23 + var9Lifetime1, (byte) 94));
-                if ((1 << var7Lifetime2 & pg.field_d.field_b[1 + MoveAttackAction.field_s]) > 0) {
+                if ((1 << var7Lifetime2 & pg.playerProfile.unitUnlockMasks[1 + MoveAttackAction.field_s]) > 0) {
                   DeployAction.field_x[wp.field_H[MoveAttackAction.field_s + 1][var7Lifetime2]].g(db.a(true, -19 + var8Lifetime1), MatchConditionEntry.a(-19 + var9Lifetime1, (byte) 94));
                   km.field_h[0].g(db.a(true, var8Lifetime1 - 23), MatchConditionEntry.a(-23 + var9Lifetime1, (byte) 94));
                 } else {
@@ -4307,7 +4307,7 @@ final class TutorialController {
                   TeamRoster.field_e.f(db.a(true, var8Lifetime1Lifetime1 - 35), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 35, (byte) 94), var2_int);
                 }
                 lw.field_ob.d(db.a(true, var8Lifetime1Lifetime1 - 20), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 20, (byte) 94), TutorialLayout.field_g[1 + li.field_q]);
-                if ((1 << var7Lifetime2 & pg.field_d.field_b[li.field_q + 1]) <= 0) {
+                if ((1 << var7Lifetime2 & pg.playerProfile.unitUnlockMasks[li.field_q + 1]) <= 0) {
                   DeployAction.field_x[wp.field_H[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94), 0);
                   km.field_h[0].g(db.a(true, var8Lifetime1Lifetime1 - 23), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 23, (byte) 94), 10);
                 } else {
@@ -4322,13 +4322,13 @@ final class TutorialController {
             fe.b(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, nd.field_b, 0, 128);
             fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, jh.field_k, 0, 0);
             fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
-            fe.c(dd.a(pg.field_d.a((byte) 55), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), nd.field_b, true);
+            fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 55), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), nd.field_b, true);
             stackIn_71_0 = hi.field_j;
             break;
           }
           if (stackIn_71_0 >= 2 &&
-            ln.field_e) {
-            rs.field_n.c(pg.field_d.a((byte) 96) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
+            CoatOfArms.field_e) {
+            rs.field_n.c(pg.playerProfile.getAvailableRunes((byte) 96) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
           }
           fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
           fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
@@ -4343,7 +4343,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) runtimeException), "ci.T(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ci.T(" + param0 + ')');
         }
     }
 
@@ -4418,7 +4418,7 @@ final class TutorialController {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -4480,7 +4480,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.<init>(" + tutorialStage + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.<init>(" + tutorialStage + ')');
         }
     }
 
@@ -4528,7 +4528,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.WA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.WA(" + param0 + ')');
         }
     }
 
@@ -4552,7 +4552,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.W(" + obfuscationGuard + ',' + itemIndex + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.W(" + obfuscationGuard + ',' + itemIndex + ')');
         }
     }
 
@@ -4644,8 +4644,8 @@ final class TutorialController {
                   return;
                 }
                 if (rs.field_q == 12) {
-                  stackIn_95_0 = !(ln.field_e);
-                  ln.field_e = stackIn_95_0;
+                  stackIn_95_0 = !(CoatOfArms.field_e);
+                  CoatOfArms.field_e = stackIn_95_0;
                 }
                 if (11 == rs.field_q &&
                   2 <= hi.field_j) {
@@ -4655,8 +4655,8 @@ final class TutorialController {
                 }
                 if (12 == rs.field_q &&
                   hi.field_j >= 2) {
-                  stackIn_118_0 = !(ln.field_e);
-                  ln.field_e = stackIn_118_0;
+                  stackIn_118_0 = !(CoatOfArms.field_e);
+                  CoatOfArms.field_e = stackIn_118_0;
                 }
                 if (rs.field_q == 11 &&
                   hi.field_j >= 2) {
@@ -4666,8 +4666,8 @@ final class TutorialController {
                 }
                 if (12 == rs.field_q &&
                   hi.field_j >= 2) {
-                  stackIn_141_0 = !(ln.field_e);
-                  ln.field_e = stackIn_141_0;
+                  stackIn_141_0 = !(CoatOfArms.field_e);
+                  CoatOfArms.field_e = stackIn_141_0;
                 }
                 if (rs.field_q == 11 &&
                   hi.field_j >= 2) {
@@ -4918,7 +4918,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.DB(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.DB(" + param0 + ')');
         }
     }
 
@@ -4934,7 +4934,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.Q(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.Q(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5001,7 +5001,7 @@ final class TutorialController {
           if (param1.spellIds != null) {
             var8Lifetime1 = 0;
             while (!(var8Lifetime1 >= param1.spellIds.length)) {
-              stackIn_48_0 = pg.field_d.field_a[param1.spellIds[var8Lifetime1]];
+              stackIn_48_0 = pg.playerProfile.spellQuantities[param1.spellIds[var8Lifetime1]];
               if (var10 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
@@ -5022,7 +5022,7 @@ final class TutorialController {
                   SoftwareRaster.f(stackIn_40_0, stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4);
                   BattleCharacter.field_h[uc.spellDefinitions[param1.spellIds[var8Lifetime1]][2]].g(db.a(true, 50 + (param3 & 3) * 58), MatchConditionEntry.a(63 + var9Lifetime1, (byte) 94));
                   km.field_h[0].g(db.a(true, (3 & param3) * 58 + 47), MatchConditionEntry.a(60 + var9Lifetime1, (byte) 94));
-                  en.field_E.c(Integer.toString(pg.field_d.field_a[param1.spellIds[var8Lifetime1]]), db.a(true, 70 + (3 & param3) * 58), MatchConditionEntry.a(var9Lifetime1 + 60 + 55, (byte) 94), 16777215, 0);
+                  en.field_E.c(Integer.toString(pg.playerProfile.spellQuantities[param1.spellIds[var8Lifetime1]]), db.a(true, 70 + (3 & param3) * 58), MatchConditionEntry.a(var9Lifetime1 + 60 + 55, (byte) 94), 16777215, 0);
                   if (ml.a(MatchConditionEntry.a(60 + var9Lifetime1 + 23, (byte) 94), db.a(true, 70 + (3 & param3) * 58), 22, false)) {
                     na.field_F = 200 + param1.spellIds[var8Lifetime1];
                   }
@@ -5054,7 +5054,7 @@ final class TutorialController {
           } else {
             stackIn_65_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -5142,7 +5142,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.DA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.DA(" + param0 + ')');
         }
     }
 
@@ -5158,7 +5158,7 @@ final class TutorialController {
           var5 = 69 % ((14 - param2) / 40);
           this.b(true);
           if (bw.unitDefinitions[var4_int][11] <= 0) {
-            if ((pg.field_d.field_b[param0] & 1 << param1) != 0) {
+            if ((pg.playerProfile.unitUnlockMasks[param0] & 1 << param1) != 0) {
               fe.c(iq.field_b, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
               if (var6 == 0) {
                 return;
@@ -5169,12 +5169,12 @@ final class TutorialController {
               return;
             }
           }
-          if (0 == (pg.field_d.field_b[param0] & 1 << param1)) {
+          if (0 == (pg.playerProfile.unitUnlockMasks[param0] & 1 << param1)) {
             fe.c(this.c(-38, bw.unitDefinitions[var4_int][11]), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
-            if (pg.field_d.field_b[param0] == 0) {
+            if (pg.playerProfile.unitUnlockMasks[param0] == 0) {
               return;
             }
-            if (pg.field_d.a((byte) 78) < bw.unitDefinitions[var4_int][11]) {
+            if (pg.playerProfile.getAvailableRunes((byte) 78) < bw.unitDefinitions[var4_int][11]) {
               return;
             }
             boolean decompiledSharedTail0 = !(wg.a(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
@@ -5196,7 +5196,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "ci.HB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "ci.HB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -5221,9 +5221,9 @@ final class TutorialController {
           if (tg.field_k == 0) {
             var4 = uc.spellDefinitions[param0][0];
             fe.c(this.c(-38, var4), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), nd.field_b, true);
-            if (pg.field_d.a((byte) 125) >= var4 &&
-              param0 < pg.field_d.field_a.length &&
-              pg.field_d.field_a[param0] < 250) {
+            if (pg.playerProfile.getAvailableRunes((byte) 125) >= var4 &&
+              param0 < pg.playerProfile.spellQuantities.length &&
+              pg.playerProfile.spellQuantities[param0] < 250) {
               boolean decompiledSharedTail2 = !(!wg.a(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
               if (!decompiledSharedTail2) {
                 fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
@@ -5243,12 +5243,12 @@ final class TutorialController {
             while (true) {
               if (var6 < 5) {
                 stackIn_47_0 = -1;
-                stackIn_47_1 = pg.field_d.field_d[var6];
+                stackIn_47_1 = pg.playerProfile.equippedSpellIds[var6];
                 if (var7 == 0) {
                   if (stackIn_47_0 == stackIn_47_1) {
                     var5 = 1;
                   }
-                  if (pg.field_d.field_d[var6] == ev.field_d) {
+                  if (pg.playerProfile.equippedSpellIds[var6] == ev.field_d) {
                     var4Lifetime1 = 1;
                   }
                   var6++;
@@ -5291,7 +5291,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.UA(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.UA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5356,7 +5356,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.BB(" + obfuscationGuard + ',' + itemIndex + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.BB(" + obfuscationGuard + ',' + itemIndex + ')');
         }
     }
 
@@ -5388,7 +5388,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.LA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.LA(" + param0 + ')');
         }
     }
 
@@ -5413,7 +5413,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3_ref), "ci.MB(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "ci.MB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5437,7 +5437,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.EB(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.EB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5487,7 +5487,7 @@ final class TutorialController {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -5787,7 +5787,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.R(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.R(" + param0 + ')');
         }
     }
 
@@ -5836,7 +5836,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.CA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.CA(" + param0 + ')');
         }
     }
 
@@ -5872,7 +5872,7 @@ final class TutorialController {
             return stackIn_9_0;
           }
           if (~var8 != ~var9) {
-            stackIn_7_0 = fo.a(4800, g.field_e, new String[]{Integer.toString(var4), Integer.toString(var5), Integer.toString(var6), Integer.toString(var7), Integer.toString(var8), Integer.toString(var9), Integer.toString(var10)});
+            stackIn_7_0 = fo.a(4800, ContextualRuntimeException.field_e, new String[]{Integer.toString(var4), Integer.toString(var5), Integer.toString(var6), Integer.toString(var7), Integer.toString(var8), Integer.toString(var9), Integer.toString(var10)});
             return stackIn_7_0;
           }
           stackIn_5_0 = fo.a(4800, Unit.field_y, new String[]{Integer.toString(var4), Integer.toString(var5), Integer.toString(var6), Integer.toString(var7), Integer.toString(var8), Integer.toString(var10)});
@@ -5880,7 +5880,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3_ref), "ci.M(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3_ref), "ci.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5898,7 +5898,7 @@ final class TutorialController {
               return;
             }
             if (ml.a(MatchConditionEntry.a(98, (byte) 94), db.a(true, 350 + 55 * var2_int), 22, false)) {
-              pg.field_d.field_d[var2_int] = ev.field_d;
+              pg.playerProfile.equippedSpellIds[var2_int] = ev.field_d;
               ub.$cfr$intArgs$a$6d836999ad61(51, MoveAttackRequest.field_v[44]);
               AttackEvent.b(false);
               return;
@@ -5909,7 +5909,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.GA(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.GA(" + param0 + ')');
         }
     }
 
@@ -5948,7 +5948,7 @@ final class TutorialController {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -6010,7 +6010,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var3), "ci.FB(" + itemIndex + ',' + obfuscationGuard + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var3), "ci.FB(" + itemIndex + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -6038,7 +6038,7 @@ final class TutorialController {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           fe.a(db.a(true, 40), MatchConditionEntry.a(60, (byte) 94), 264, 260, EffectPresentation.field_j, jh.field_k, 0, 128, false);
-          na.field_F = ah.field_a.a(db.a(true, 55), 0, AiPlanningStrategy.field_d, wh.field_a, mv.field_d, MatchConditionEntry.a(70, (byte) 94), ko.field_b);
+          na.field_F = ah.localCoat.a(db.a(true, 55), 0, AiPlanningStrategy.field_d, wh.field_a, mv.field_d, MatchConditionEntry.a(70, (byte) 94), ko.field_b);
           var2_int = 44;
           var3 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -6108,7 +6108,7 @@ final class TutorialController {
                   stackIn_59_0 = kd.field_X;
                   stackIn_59_1 = -1;
                   if (stackIn_59_0 > stackIn_59_1 &&
-                    var5Lifetime1 + var4Lifetime1 * 16 == ah.field_a.field_b[kd.field_X]) {
+                    var5Lifetime1 + var4Lifetime1 * 16 == ah.localCoat.colourIndices[kd.field_X]) {
                     fe.a(var6, var7, 20, 40, EffectPresentation.field_j, nd.field_b, 0, 128, false);
                   } else if (kd.field_X > -1 &&
                     ~(var5Lifetime1 + var4Lifetime1 * 16) == ~var3Lifetime1) {
@@ -6130,7 +6130,7 @@ final class TutorialController {
             }
             if (stackIn_89_0 > ~kd.field_X) {
               stackIn_96_0 = !(ro.field_ub <= 0);
-              var4Lifetime1 = ib.a(stackIn_96_0, 352, db.a(true, 380), ko.field_b, AiPlanningStrategy.field_d, 224, ah.field_a.field_a[kd.field_X], -40, MatchConditionEntry.a(60, (byte) 94));
+              var4Lifetime1 = ib.a(stackIn_96_0, 352, db.a(true, 380), ko.field_b, AiPlanningStrategy.field_d, 224, ah.localCoat.parts[kd.field_X], -40, MatchConditionEntry.a(60, (byte) 94));
               if (var8 != 0) {
                 stackIn_103_0 = !(ro.field_ub <= 0);
                 var4Lifetime1 = ib.a(stackIn_103_0, 352, db.a(true, 380), ko.field_b, AiPlanningStrategy.field_d, 224, -1, -40, MatchConditionEntry.a(60, (byte) 94));
@@ -6154,7 +6154,7 @@ final class TutorialController {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ci.L(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ci.L(" + param0 + ')');
         }
     }
 

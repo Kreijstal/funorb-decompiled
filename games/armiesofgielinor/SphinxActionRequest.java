@@ -28,7 +28,7 @@ final class SphinxActionRequest extends ActionRequest {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "ee.I(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "ee.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -154,9 +154,9 @@ final class SphinxActionRequest extends ActionRequest {
           te.field_p = new je(0L, var10);
           te.field_p.field_O = 2;
           te.field_p.field_G = jq.a(true, 2039583, -20600, 30, false, 3815994);
-          ho.field_a = new je(0L, var10);
-          ho.field_a.field_O = 2;
-          ho.field_a.field_G = jq.a(false, 2039583, -20600, 30, false, 3815994);
+          CampaignResult.field_a = new je(0L, var10);
+          CampaignResult.field_a.field_O = 2;
+          CampaignResult.field_a.field_G = jq.a(false, 2039583, -20600, 30, false, 3815994);
           br.field_e = new je(0L, var10);
           br.field_e.field_O = 2;
           br.field_e.field_G = jq.a(false, 2039583, -20600, 30, true, 3815994);
@@ -321,7 +321,7 @@ final class SphinxActionRequest extends ActionRequest {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -350,7 +350,7 @@ final class SphinxActionRequest extends ActionRequest {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -420,7 +420,7 @@ final class SphinxActionRequest extends ActionRequest {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -432,7 +432,7 @@ final class SphinxActionRequest extends ActionRequest {
           this.sphinxX = sphinxX;
           this.sphinxY = sphinxY;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ee.<init>(" + actingPlayer + ',' + sphinxX + ',' + sphinxY + ',' + (delegatedRequest != null ? "{...}" : "null") + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ee.<init>(" + actingPlayer + ',' + sphinxX + ',' + sphinxY + ',' + (delegatedRequest != null ? "{...}" : "null") + ')');
         }
     }
 

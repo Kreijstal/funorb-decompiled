@@ -30,7 +30,7 @@ final class da {
           }
           th.field_a = 0;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "da.I(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "da.I(" + param0 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class da {
             } else {
               stackIn_24_2 = "{...}";
             }
-            throw ig.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+            throw ig.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -167,7 +167,7 @@ final class da {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -252,13 +252,13 @@ final class da {
             dj.a((byte) -125);
             return;
           }
-          af.a((Throwable) null, 70, "LR1: " + cm.b(false));
+          af.a((Throwable) null, 70, "LR1: " + CampaignProgress.b(false));
           dj.a((byte) -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "da.G(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "da.G(" + param0 + ')');
         }
     }
 

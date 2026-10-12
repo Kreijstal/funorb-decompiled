@@ -210,7 +210,7 @@ abstract class uq extends ms {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param6).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -233,27 +233,27 @@ abstract class uq extends ms {
         this.field_z = param0;
     }
 
-    final static ln a(PacketBuffer param0, boolean param1) {
+    final static CoatOfArms readSignedCoatOfArms(PacketBuffer packet, boolean obfuscationGuard) {
         int var3 = 0;
-        ln var2 = null;
+        CoatOfArms var2 = null;
         RuntimeException var2_ref = null;
         int var4 = 0;
-        ln var5 = null;
-        ln stackIn_7_0 = null;
+        CoatOfArms var5 = null;
+        CoatOfArms stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var5 = new ln();
+          var5 = new CoatOfArms();
           var2 = var5;
-          if (param1) {
+          if (obfuscationGuard) {
             uq.g(56);
           }
           for (var3 = 0; var3 < 6; var3++) {
-            var5.field_a[var3] = param0.readByte((byte) 103);
-            var5.field_b[var3] = param0.readByte((byte) 120);
+            var5.parts[var3] = packet.readByte((byte) 103);
+            var5.colourIndices[var3] = packet.readByte((byte) 120);
           }
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -262,12 +262,12 @@ abstract class uq extends ms {
           var2_ref = decompiledCaughtException;
           stackIn_10_0 = var2_ref;
           stackIn_10_1 = new StringBuilder().append("uq.E(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

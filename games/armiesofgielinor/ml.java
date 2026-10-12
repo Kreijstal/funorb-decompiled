@@ -29,7 +29,7 @@ final class ml extends je {
           }
           wh.field_f = true;
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "ml.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ml.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -148,7 +148,7 @@ final class ml extends je {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -194,10 +194,10 @@ final class ml extends je {
         int var3Lifetime1;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var8 = param0.e(-23209);
+          var8 = param0.getParticipantNames(-23209);
           var9 = var8;
-          if (param0.field_G.field_s != 1) {
-            if (param0.field_G.field_s == 2) {
+          if (param0.campaign.localGodId != 1) {
+            if (param0.campaign.localGodId == 2) {
               op.field_c[0][2] = lp.field_c[0];
             }
           } else {
@@ -208,7 +208,7 @@ final class ml extends je {
             var4 = stackIn_8_0;
             op.field_c[0][var4] = lp.field_c[3];
           }
-          op.field_c[0][0] = lp.field_c[param0.field_G.field_s];
+          op.field_c[0][0] = lp.field_c[param0.campaign.localGodId];
           var7 = 0;
           var3Lifetime1 = var7;
           if (param1 != -26) {
@@ -230,7 +230,7 @@ final class ml extends je {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -278,7 +278,7 @@ final class ml extends je {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -354,7 +354,7 @@ final class ml extends je {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
         }
     }
 

@@ -94,7 +94,7 @@ final class j {
           DisplacedUnitMarker.field_t[48] = lw.field_lb;
           DisplacedUnitMarker.field_t[44] = dd.field_g;
           DisplacedUnitMarker.field_t[37] = lg.field_c;
-          cf.field_m = new String[3];
+          CampaignDefinition.field_m = new String[3];
           DisplacedUnitMarker.field_t[52] = oa.field_G;
           DisplacedUnitMarker.field_t[38] = PortalLossCondition.field_f;
           ParasiteEvent.field_A = new String[]{wi.field_a, rf.field_e, je.field_lb, ob.field_P};
@@ -108,9 +108,9 @@ final class j {
           DisplacedUnitMarker.field_t[29] = qm.field_I;
           DisplacedUnitMarker.field_t[39] = StateChangeEvent.field_y;
           wb.field_b = new String[29];
-          cf.field_m[0] = on.field_o;
-          cf.field_m[2] = uq.field_v;
-          cf.field_m[1] = uh.field_b;
+          CampaignDefinition.field_m[0] = on.field_o;
+          CampaignDefinition.field_m[2] = uq.field_v;
+          CampaignDefinition.field_m[1] = uh.field_b;
           wb.field_b[0] = null;
           wb.field_b[10] = DamageEvent.field_z;
           if (param0 < 81) {
@@ -139,7 +139,7 @@ final class j {
           wb.field_b[8] = pu.field_h;
           wb.field_b[3] = l.field_g;
           wb.field_b[11] = nh.field_J;
-          wb.field_b[19] = hm.field_e;
+          wb.field_b[19] = PlayerProfile.field_e;
           wb.field_b[9] = jn.field_e;
           wb.field_b[20] = CorpseConditionMarker.field_x;
           oi.field_a[10] = fo.a(4800, oi.field_a[10], new String[]{Integer.toString(20)});
@@ -162,7 +162,7 @@ final class j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var1), "j.C(" + param0 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var1), "j.C(" + param0 + ')');
         }
     }
 
@@ -199,7 +199,7 @@ final class j {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -267,7 +267,7 @@ final class j {
               var10 = 0;
               while (true) {
                 if (lm.field_e.length > var10) {
-                  stackIn_10_0 = ((ln.field_d[var10 / 8] & 1 << (var10 & 7)) == 0) ? 0 : 1;
+                  stackIn_10_0 = ((CoatOfArms.field_d[var10 / 8] & 1 << (var10 & 7)) == 0) ? 0 : 1;
                   var11_int = stackIn_10_0;
                   if (var11_int != 0) {
                     var9_int++;
@@ -413,7 +413,7 @@ final class j {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var4), "j.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var4), "j.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -444,7 +444,7 @@ final class j {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 

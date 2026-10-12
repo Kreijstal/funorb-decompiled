@@ -152,50 +152,50 @@ final class b extends IntrusiveNode {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void a(boolean param0) {
         field_n = null;
         if (!param0) {
-          b.a(94, 33, -110, (byte) 28, -37);
+          b.calculateMissionScore(94, 33, -110, (byte) 28, -37);
         }
     }
 
-    final static int a(int param0, int param1, int param2, byte param3, int param4) {
-        int var5;
-        int var6;
-        int var7;
-        int var6Lifetime1;
-        if (param0 == 0) {
+    final static int calculateMissionScore(int turnTarget, int damageTarget, int damageTaken, byte obfuscationGuard, int turnsTaken) {
+        int turnScore;
+        int turnBonus;
+        int damageBonus;
+        int damageScore;
+        if (turnTarget == 0) {
           return 1;
         }
-        if (param1 == 0) {
+        if (damageTarget == 0) {
           return 1;
         }
-        if (param3 != 25) {
+        if (obfuscationGuard != 25) {
           return -81;
         }
-        var5 = (-param4 + param0 * 2) * 500 / param0;
-        var5 = Math.max(0, var5);
-        if (var5 > 500) {
-          var6 = var5 - 500;
-          var5 = var6 / 3 + 500;
-          if (var5 > 1000) {
-            var5 = 1000;
+        turnScore = (-turnsTaken + turnTarget * 2) * 500 / turnTarget;
+        turnScore = Math.max(0, turnScore);
+        if (turnScore > 500) {
+          turnBonus = turnScore - 500;
+          turnScore = turnBonus / 3 + 500;
+          if (turnScore > 1000) {
+            turnScore = 1000;
           }
         }
-        var6Lifetime1 = (2 * param1 - param2) * 500 / param1;
-        var6Lifetime1 = Math.max(0, var6Lifetime1);
-        if (var6Lifetime1 > 500) {
-          var7 = var6Lifetime1 - 500;
-          var6Lifetime1 = 500 + var7 / 2;
-          if (var6Lifetime1 > 1000) {
-            var6Lifetime1 = 1000;
+        damageScore = (2 * damageTarget - damageTaken) * 500 / damageTarget;
+        damageScore = Math.max(0, damageScore);
+        if (damageScore > 500) {
+          damageBonus = damageScore - 500;
+          damageScore = 500 + damageBonus / 2;
+          if (damageScore > 1000) {
+            damageScore = 1000;
           }
         }
-        return Math.max(100, Math.min(var5 + var6Lifetime1, 2000));
+        return Math.max(100, Math.min(turnScore + damageScore, 2000));
     }
 
     b() {
@@ -228,7 +228,7 @@ final class b extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2), "b.A(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "b.A(" + param0 + ',' + param1 + ')');
         }
     }
 
