@@ -120,14 +120,14 @@ final class CampaignMenuEntry extends IntrusiveNode {
           }
           if (255 == param3) {
             stackIn_11_0 = !(nm.field_z >= 13);
-            p.field_a = dc.a(stackIn_11_0, false);
+            SoundCache.field_a = dc.a(stackIn_11_0, false);
           } else {
             if (param3 >= 100 &&
               param3 <= 105) {
-              p.field_a = BoundedFile.a(2, param2);
+              SoundCache.field_a = BoundedFile.a(2, param2);
               return;
             }
-            p.field_a = DisplacedUnitMarker.a(-1, param3, param0);
+            SoundCache.field_a = DisplacedUnitMarker.a(-1, param3, param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -247,7 +247,7 @@ final class BattleUnitRenderer {
           KingBlackDragonEvent.field_C.a(var9, 0);
           if (!AnimationSkeleton.a(-8327)) {
             cd.field_e = param3;
-            p.field_a = null;
+            SoundCache.field_a = null;
             BufferedFile.field_a = param6;
             nm.field_z = param4;
             oh.field_L = du.field_d;

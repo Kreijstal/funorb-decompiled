@@ -26,7 +26,7 @@ final class ed {
         if (param0 <= -66) {
           TurnEffectEvent.field_C = true;
           jl.field_a = vi.monotonicMillis(124) + 15000L;
-          return 11 == p.field_b ? true : false;
+          return 11 == SoundCache.field_b ? true : false;
         }
         return true;
     }
@@ -38,12 +38,12 @@ final class ed {
         it.field_b = true;
         if (!param0) {
           wc.a(true, -49);
-          p.field_b = 0;
+          SoundCache.field_b = 0;
           return;
         }
         ed.a(-80);
         wc.a(true, -49);
-        p.field_b = 0;
+        SoundCache.field_b = 0;
     }
 
     static {

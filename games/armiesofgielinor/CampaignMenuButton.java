@@ -64,12 +64,12 @@ final class CampaignMenuButton {
         it.field_b = true;
         if (param0 == -20267) {
           wc.a(false, -49);
-          p.field_b = 0;
+          SoundCache.field_b = 0;
           return;
         }
         CampaignMenuButton.c(56);
         wc.a(false, -49);
-        p.field_b = 0;
+        SoundCache.field_b = 0;
     }
 
     public static void c(int param0) {

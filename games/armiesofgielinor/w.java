@@ -40,7 +40,7 @@ final class w {
         if (param2) {
           return;
         }
-        var4Lifetime1 = qs.field_M[this.field_a].field_b;
+        var4Lifetime1 = VorbisSample.field_M[this.field_a].field_b;
         var5 = this.field_d - this.field_b;
         var6 = var5 / this.field_g;
         var22 = new int[var6];
@@ -50,7 +50,7 @@ final class w {
           var9 = 0;
           while (var9 < var6) {
             if (var8 == 0) {
-              var10 = qs.field_M[this.field_a].b();
+              var10 = VorbisSample.field_M[this.field_a].b();
               for (var11 = var4Lifetime1 - 1; var11 >= 0; var11--) {
                 if (var9 + var11 < var6) {
                   var7[var9 + var11] = var10 % this.field_f;
@@ -65,7 +65,7 @@ final class w {
               var12 = this.field_e[var11Lifetime1 * 8 + var8];
               if (var12 >= 0) {
                 var13 = this.field_b + var9 * this.field_g;
-                var14 = qs.field_M[var12];
+                var14 = VorbisSample.field_M[var12];
                 if (this.field_c != 0) {
                   var15 = 0;
                   while (var15 < this.field_g) {
@@ -102,19 +102,19 @@ final class w {
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_c = qs.a(16);
-        this.field_b = qs.a(24);
-        this.field_d = qs.a(24);
-        this.field_g = qs.a(24) + 1;
-        this.field_f = qs.a(6) + 1;
-        this.field_a = qs.a(8);
+        this.field_c = VorbisSample.a(16);
+        this.field_b = VorbisSample.a(24);
+        this.field_d = VorbisSample.a(24);
+        this.field_g = VorbisSample.a(24) + 1;
+        this.field_f = VorbisSample.a(6) + 1;
+        this.field_a = VorbisSample.a(8);
         int[] var1 = new int[this.field_f];
         for (var2 = 0; var2 < this.field_f; var2++) {
           var3 = 0;
-          var4 = qs.a(3);
-          var5 = qs.a() != 0 ? 1 : 0;
+          var4 = VorbisSample.a(3);
+          var5 = VorbisSample.a() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = qs.a(5);
+            var3 = VorbisSample.a(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class w {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_f * 8) {
-          this.field_e[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? qs.a(8) : -1;
+          this.field_e[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? VorbisSample.a(8) : -1;
           var6++;
         }
     }

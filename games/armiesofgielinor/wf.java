@@ -104,7 +104,7 @@ abstract class wf extends iv {
           return -1;
         }
         if (var2 == 0) {
-          if (p.field_b != 11) {
+          if (SoundCache.field_b != 11) {
             return var2;
           }
           if (gk.field_K != 0) {
@@ -122,7 +122,7 @@ abstract class wf extends iv {
           ol.field_C = true;
           jl.field_a = vi.monotonicMillis(-111) + 15000L;
         } else {
-          if (p.field_b == 11 &&
+          if (SoundCache.field_b == 11 &&
             gk.field_K == 0) {
             DualLinkedNode.e(116);
           }
@@ -256,7 +256,7 @@ abstract class wf extends iv {
                   ck.field_b = dc.field_o;
                   DualLinkedNode.e(112);
                   QuickChatCategoryRepository.field_b = false;
-                  p.field_b = 10;
+                  SoundCache.field_b = 10;
                 }
               }
             }
@@ -266,7 +266,7 @@ abstract class wf extends iv {
               QuickChatCategoryRepository.a(CombatEvent.d((byte) -116), true);
             } else {
               QuickChatCategoryRepository.field_b = true;
-              p.field_b = 10;
+              SoundCache.field_b = 10;
             }
           }
           if (5 == var4) {
@@ -274,7 +274,7 @@ abstract class wf extends iv {
           }
           if (6 == var4 &&
             it.field_b) {
-            p.field_b = 10;
+            SoundCache.field_b = 10;
           }
           if (var4 == 7) {
             ws.a(CombatEvent.d((byte) 53), -126);
@@ -320,7 +320,7 @@ abstract class wf extends iv {
             }
           }
           if (15 == var4) {
-            p.field_b = 10;
+            SoundCache.field_b = 10;
           }
           if (var4 == 16) {
             return 1;
@@ -379,7 +379,7 @@ abstract class wf extends iv {
             if (!lk.b(true)) {
               StateChangeEvent.e((byte) -84);
             } else {
-              if (p.field_b == 0) {
+              if (SoundCache.field_b == 0) {
                 discarded$6 = this.a(false, false, (byte) -92);
               } else {
                 ii.a(el.field_d, (byte) -89);
@@ -525,7 +525,7 @@ abstract class wf extends iv {
           return;
         }
         if (!PopupPresentation.h(31337) &&
-          p.field_b != 11) {
+          SoundCache.field_b != 11) {
           pf.a((byte) 73);
         }
         if (CampaignMission.field_I != null) {
@@ -552,7 +552,7 @@ abstract class wf extends iv {
           gk.field_K = IntrusiveNode.b(86);
           if (var3Lifetime1 != 0 &&
             gk.field_K == 0 &&
-            11 == p.field_b &&
+            11 == SoundCache.field_b &&
             !MovementPresentation.j(-11)) {
             DualLinkedNode.e(112);
           }
@@ -582,7 +582,7 @@ abstract class wf extends iv {
               }
             }
           } else {
-            if (p.field_b >= 10) {
+            if (SoundCache.field_b >= 10) {
               er.b(-11);
               if (3 != gk.field_K) {
                 if (gk.field_K != 4) {
@@ -679,7 +679,7 @@ abstract class wf extends iv {
           ps.field_u = null;
           CombatPresentation.field_M = null;
           h.field_g = null;
-          p.a(-24602, (java.applet.Applet) (this));
+          SoundCache.a(-24602, (java.applet.Applet) (this));
           wl.a(0);
           StrongCacheEntry.field_E = 10;
         }

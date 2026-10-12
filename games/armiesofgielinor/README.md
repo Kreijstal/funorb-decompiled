@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild from pinned raw Git input using Deko’s `readable/reproduce-armiesofgielinor.mjs`. The current reverse dictionary is `../../decompilation/armiesofgielinor-naming.json`.
 
-This gameplay naming pass reviews 210 class identities across all 542 compiled classes. Other class/member names remain unresolved. Unresolved packed flags use bit-position names without guessing gameplay effects. Renamed identifiers have no opaque suffixes; the dictionary records their original identities.
+This gameplay naming pass reviews 213 class identities across all 542 compiled classes. Other class/member names remain unresolved. Unresolved packed flags use bit-position names without guessing gameplay effects. Renamed identifiers have no opaque suffixes; the dictionary records their original identities.
 
 Widget, WidgetPainter, DropdownSelector, DropdownOptionList and DropdownArrowPainter expose the shared UI bounds and dropdown flow. Controlled fixtures check half-open base hit bounds, case-insensitive first-prefix matching, option validation/selection and the arrow painter’s pixels. The option-list hit override retains its different inclusive edges; complete interactive menu behavior remains unverified.
 
@@ -20,6 +20,7 @@ Widget, WidgetPainter, DropdownSelector, DropdownOptionList and DropdownArrowPai
 | [SocialListPanel](SocialListPanel.java) / [AccountNamePrompt](AccountNamePrompt.java) | Scrollable social-list buttons and anchored account-name entry prompt. |
 | [CommunityTabGroup](CommunityTabGroup.java) | First/lobby-or-game, friends and ignore tabs; static incoming-chat decode entry points. |
 | [HuffmanCodec](HuffmanCodec.java) | Huffman symbol lengths/code words, compressed chat text and bounded decode traversal. |
+| [SoundCache](SoundCache.java) / [SynthesizedSoundEffect](SynthesizedSoundEffect.java) / [VorbisSample](VorbisSample.java) | PCM caches, synthesized effects, music packet headers and resumable decode ownership. |
 | [BattleGraphicsAssets](BattleGraphicsAssets.java) / [BattlefieldTheme](BattlefieldTheme.java) / [PcmSample](PcmSample.java) | Basic battle sprite loading, theme-owned graphics/audio resources and retained PCM samples. |
 | [MapRepository](MapRepository.java) | Free/member map archives, theme/size candidate lists, player-capacity selection and tutorial fallback. |
 | [LineOfSightGrid](LineOfSightGrid.java) / [MovementPlanner](MovementPlanner.java) | Local terrain-blocked visibility and procedural center/sector map generation. |
@@ -277,6 +278,8 @@ BattlefieldTheme owns the terrain/foliage/structure sprite arrays and filenames,
 loadSpriteSheets uses structureShadowSprites alone as its readiness gate: a partially cleared theme with retained structure shadows does not reload other arrays. releaseSprites clears five sprite arrays but preserves filenames, ambient samples and music. Native identity/reload/switch fixtures preserve those rules and the guard path that clears foliage shadows after loading them. Background JPEG decoding, actual sound-cache resolution, music-sample preparation and end-to-end theme rendering remain unverified.
 
 PcmSample retains the supplied sample bytes, rate, loop endpoints and loopModeFlag without copying or validating the endpoints. Constructor and ambient-selection fixtures use real sample objects, controlled unsigned random words, null/empty ambient-name cases and sprite release retaining audio samples. Empty sample selection preserves the bounded-random IllegalArgumentException. Live audio playback and loop-mode interpretation remain unverified.
+
+SoundCache separates effect/music archives, shared decoded PCM and unfinished VorbisSample objects. Cache hits precede budget checks; effect misses subtract decoded byte length, while music packet decoding may retain partial output. Completion unlinks the unfinished object and moves its output bytes into cached PcmSample without copying. Fixed key vectors preserve signed extension and the music XOR namespace. SynthesizedSoundEffect names its ten voices, clipped mixing and millisecond loop endpoints. Controlled fixtures cover empty effects, zero-packet headers, exhausted budgets, named lookup, malformed packet counts and injected completed decoder ownership; full synthesis/Vorbis packet math, positive-length budget overshoot and live playback remain unverified.
 
 decodeSpriteSheet reads a trailing frame count, canvas size, four per-frame geometry arrays and a palette, then decodes row- or column-major index bytes and optional alpha lanes. Palette entry zero remains transparent; other encoded black entries become colour one. Independent two-frame byte fixtures cover all four layout/alpha flag combinations, opaque/nonopaque alpha, dimensions, offsets and row-major reconstruction. Indexed builders retain the decoded palette and index arrays. The tested RGB-array builder uses palette colours while ignoring decoded alpha lanes.
 

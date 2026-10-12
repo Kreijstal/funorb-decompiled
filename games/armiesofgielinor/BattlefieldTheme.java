@@ -100,7 +100,7 @@ final class BattlefieldTheme {
         return stackIn_34_0;
     }
 
-    final void loadAmbientSounds(int obfuscationGuard, p soundCache) {
+    final void loadAmbientSounds(int obfuscationGuard, SoundCache soundCache) {
         int soundIndex = 0;
         int obfuscationControl = 0;
         byte[] discardedBytes = null;
@@ -120,7 +120,7 @@ final class BattlefieldTheme {
             BattlefieldTheme.decodeSingleByteText(102, -75, -58, (byte[]) null);
           }
           for (soundIndex = 0; soundIndex < this.ambientSoundNames.length; soundIndex++) {
-            this.ambientSounds[soundIndex] = soundCache.a(this.ambientSoundNames[soundIndex], (byte) -97, "");
+            this.ambientSounds[soundIndex] = soundCache.getSoundEffectByName(this.ambientSoundNames[soundIndex], (byte) -97, "");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -231,7 +231,7 @@ final class BattlefieldTheme {
         }
     }
 
-    final void prepareMusicSamples(p soundCache, ResourceArchive patchArchive, ResourceArchive musicArchive, int sampleBudget, ih audioEngine) {
+    final void prepareMusicSamples(SoundCache soundCache, ResourceArchive patchArchive, ResourceArchive musicArchive, int sampleBudget, ih audioEngine) {
         if (null == this.musicTrackName ||
           audioEngine == null ||
           musicArchive == null) {

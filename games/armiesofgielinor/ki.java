@@ -15,7 +15,7 @@ final class ki {
         }
         if (lm.field_d == oh.field_L) {
           oh.field_L = nb.field_i;
-          return p.field_a;
+          return SoundCache.field_a;
         }
         if (param0 != -61440) {
           field_e = (tv) null;

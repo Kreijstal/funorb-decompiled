@@ -282,7 +282,7 @@ final class wd {
           if (param0 <= 19) {
             return false;
           }
-          stackIn_10_0 = (10 <= p.field_b) && (13 <= StrongCacheEntry.field_E);
+          stackIn_10_0 = (10 <= SoundCache.field_b) && (13 <= StrongCacheEntry.field_E);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

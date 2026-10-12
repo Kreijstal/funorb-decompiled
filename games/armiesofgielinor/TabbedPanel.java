@@ -9,7 +9,7 @@ final class TabbedPanel extends ClientUiComponent {
     int activeTab;
     private ClientUiComponent[] panels;
 
-    final static void a(p param0, byte param1) {
+    final static void a(SoundCache param0, byte param1) {
         int var2_int = 0;
         PcmSample var3 = null;
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
@@ -17,9 +17,9 @@ final class TabbedPanel extends ClientUiComponent {
           wh.field_f = false;
           MoveAttackRequest.field_v = new PcmSample[47];
           for (var2_int = 0; var2_int < 47; var2_int++) {
-            var3 = param0.a(wl.field_M[var2_int], (byte) -97, "");
+            var3 = param0.getSoundEffectByName(wl.field_M[var2_int], (byte) -97, "");
             if (var3 == null) {
-              var3 = param0.a((byte) -128, "", wl.field_M[var2_int]);
+              var3 = param0.getMusicSampleByName((byte) -128, "", wl.field_M[var2_int]);
             }
             MoveAttackRequest.field_v[var2_int] = var3;
           }
@@ -48,8 +48,8 @@ final class TabbedPanel extends ClientUiComponent {
         field_Nb = null;
         field_Lb = null;
         if (param0 != 2) {
-          p var2 = (p) null;
-          TabbedPanel.a((p) null, (byte) 111);
+          SoundCache var2 = (SoundCache) null;
+          TabbedPanel.a((SoundCache) null, (byte) 111);
         }
     }
 

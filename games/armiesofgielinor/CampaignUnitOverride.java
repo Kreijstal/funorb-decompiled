@@ -499,7 +499,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "searching_for_opponents_plural");
                 if (null != var2) {
-                  p.field_f = uu.a(var2, (byte) 114);
+                  SoundCache.field_f = uu.a(var2, (byte) 114);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "find_opponent_singular");
                 if (null != var2) {
@@ -1625,7 +1625,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_alert_passcontainsemail");
                 if (var2 != null) {
-                  p.field_d = uu.a(var2, (byte) -118);
+                  SoundCache.field_d = uu.a(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(param0 + 132, "create_alert_passcontainsname_partial");
                 if (null != var2) {

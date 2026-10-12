@@ -99,7 +99,7 @@ final class ah {
         if (param1 != 22) {
           return (String) null;
         }
-        return p.a(param2, 0, (byte) -123, param0);
+        return SoundCache.a(param2, 0, (byte) -123, param0);
     }
 
     final static void a(byte param0, int param1) {

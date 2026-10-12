@@ -3,7 +3,7 @@
  */
 final class jl {
     static String[][] field_c;
-    static p field_d;
+    static SoundCache field_d;
     static ClientUiComponent field_b;
     static long field_a;
 

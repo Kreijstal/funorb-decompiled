@@ -356,7 +356,7 @@ final class j {
               uj.field_l.text = AiActionCandidate.field_v;
               SocialListPanel.field_Lb.inputEnabled = false;
               if (var8 != 0) {
-                stackIn_23_0 = p.field_f;
+                stackIn_23_0 = SoundCache.field_f;
               } else {
                 stackIn_23_0 = PreparedAction.field_l;
               }

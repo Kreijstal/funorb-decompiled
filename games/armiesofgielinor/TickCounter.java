@@ -1725,7 +1725,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ANNOUNCE_WINNER");
                 if (var2 != null) {
-                  p.field_i = uu.a(var2, (byte) -92);
+                  SoundCache.field_i = uu.a(var2, (byte) -92);
                 }
                 var2 = fk.a(false, "ANNOUNCE_WINNERYOU");
                 if (var2 != null) {
@@ -5023,7 +5023,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_POLYMORPHICS");
                 if (null != var2) {
-                  p.field_c = uu.a(var2, (byte) 40);
+                  SoundCache.field_c = uu.a(var2, (byte) 40);
                 }
                 var2 = fk.a(false, "TTREED_MUTAGENS");
                 if (var2 != null) {

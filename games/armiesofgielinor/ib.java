@@ -49,7 +49,7 @@ final class ib extends mk {
             return stackIn_15_0;
           }
           if (this.a(param1, 127)) {
-            stackIn_19_0 = p.field_d;
+            stackIn_19_0 = SoundCache.field_d;
             return stackIn_19_0;
           }
           if (var6.length() <= 0) {

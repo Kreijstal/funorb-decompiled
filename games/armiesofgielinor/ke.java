@@ -9,7 +9,7 @@ final class ke {
     static String field_d;
     static ClientUiComponent field_e;
 
-    final static void a(byte param0, p param1) {
+    final static void a(byte param0, SoundCache param1) {
         int var3 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
@@ -31,7 +31,7 @@ final class ke {
           var2 = var7;
           for (var3 = 0; var3 < km.field_j.length; var3++) {
             var4 = km.field_j[var3];
-            var5 = param1.a(var4, (byte) -97, var7);
+            var5 = param1.getSoundEffectByName(var4, (byte) -97, var7);
             vi.field_a[var3] = var5;
           }
           return;

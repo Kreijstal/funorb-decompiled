@@ -1180,7 +1180,7 @@ public final class ArmiesOfGielinor extends wf {
           ep.a((byte) 11);
           PlayerProfile.b(0);
           CampaignQuicksave.a(param0 + 157);
-          p.a((byte) -58);
+          SoundCache.a((byte) -58);
           TutorialController.h(param0 + 71);
           cg.a((byte) -109);
           GameplayController.d(param0 ^ 49);
@@ -1414,7 +1414,7 @@ public final class ArmiesOfGielinor extends wf {
           ek.a(236611664);
           ResourceRequest.e((byte) -126);
           is.a((byte) -5);
-          qs.b();
+          VorbisSample.b();
           bq.a(30156);
           pu.a((byte) -114);
           uc.a((byte) -39);
@@ -1974,30 +1974,30 @@ public final class ArmiesOfGielinor extends wf {
                                                 UpkeepEvent.h(65);
                                                 bn.a((byte) -24, 70.0f, ph.field_a);
                                                 this.a(0);
-                                                jl.field_d = new p(br.field_d, SpellConfirmationDialog.field_f);
-                                                ClientUiNode.field_v[0] = jl.field_d.a("sword_slash_4", (byte) -97, "");
-                                                ClientUiNode.field_v[1] = jl.field_d.a("runewars_menu_mouseover", (byte) -97, "");
-                                                ClientUiNode.field_v[2] = jl.field_d.a("runewars_select_menu_item", (byte) -97, "");
-                                                ClientUiNode.field_v[3] = jl.field_d.a("runewars_select_unit", (byte) -97, "");
-                                                ClientUiNode.field_v[4] = jl.field_d.a("runewars_select_position", (byte) -97, "");
-                                                ClientUiNode.field_v[5] = jl.field_d.a("runewars_errorsound", (byte) -97, "");
-                                                ClientUiNode.field_v[6] = jl.field_d.a("runewars_teleport_all", (byte) -97, "");
-                                                ClientUiNode.field_v[8] = jl.field_d.a((byte) -128, "", "runewars_capture_fanfare");
-                                                ClientUiNode.field_v[9] = jl.field_d.a("runewars_select_flag", (byte) -97, "");
-                                                ClientUiNode.field_v[10] = jl.field_d.a("runewars_paint_flag", (byte) -97, "");
-                                                ClientUiNode.field_v[11] = jl.field_d.a("runewars_swap_spellbook", (byte) -97, "");
-                                                ClientUiNode.field_v[12] = jl.field_d.a("runewars_select_spell", (byte) -97, "");
-                                                ClientUiNode.field_v[13] = jl.field_d.a("runewars_transition", (byte) -97, "");
-                                                ClientUiNode.field_v[14] = jl.field_d.a("runewars_purchase_unit", (byte) -97, "");
-                                                ClientUiNode.field_v[15] = jl.field_d.a("runewars_choose_alignment", (byte) -97, "");
-                                                ClientUiNode.field_v[16] = jl.field_d.a("runewars_clock_tick", (byte) -97, "");
-                                                ClientUiNode.field_v[17] = jl.field_d.a("runewars_time_over_dong", (byte) -97, "");
-                                                ClientUiNode.field_v[18] = jl.field_d.a("runewars_turnover_page_map", (byte) -97, "");
+                                                jl.field_d = new SoundCache(br.field_d, SpellConfirmationDialog.field_f);
+                                                ClientUiNode.field_v[0] = jl.field_d.getSoundEffectByName("sword_slash_4", (byte) -97, "");
+                                                ClientUiNode.field_v[1] = jl.field_d.getSoundEffectByName("runewars_menu_mouseover", (byte) -97, "");
+                                                ClientUiNode.field_v[2] = jl.field_d.getSoundEffectByName("runewars_select_menu_item", (byte) -97, "");
+                                                ClientUiNode.field_v[3] = jl.field_d.getSoundEffectByName("runewars_select_unit", (byte) -97, "");
+                                                ClientUiNode.field_v[4] = jl.field_d.getSoundEffectByName("runewars_select_position", (byte) -97, "");
+                                                ClientUiNode.field_v[5] = jl.field_d.getSoundEffectByName("runewars_errorsound", (byte) -97, "");
+                                                ClientUiNode.field_v[6] = jl.field_d.getSoundEffectByName("runewars_teleport_all", (byte) -97, "");
+                                                ClientUiNode.field_v[8] = jl.field_d.getMusicSampleByName((byte) -128, "", "runewars_capture_fanfare");
+                                                ClientUiNode.field_v[9] = jl.field_d.getSoundEffectByName("runewars_select_flag", (byte) -97, "");
+                                                ClientUiNode.field_v[10] = jl.field_d.getSoundEffectByName("runewars_paint_flag", (byte) -97, "");
+                                                ClientUiNode.field_v[11] = jl.field_d.getSoundEffectByName("runewars_swap_spellbook", (byte) -97, "");
+                                                ClientUiNode.field_v[12] = jl.field_d.getSoundEffectByName("runewars_select_spell", (byte) -97, "");
+                                                ClientUiNode.field_v[13] = jl.field_d.getSoundEffectByName("runewars_transition", (byte) -97, "");
+                                                ClientUiNode.field_v[14] = jl.field_d.getSoundEffectByName("runewars_purchase_unit", (byte) -97, "");
+                                                ClientUiNode.field_v[15] = jl.field_d.getSoundEffectByName("runewars_choose_alignment", (byte) -97, "");
+                                                ClientUiNode.field_v[16] = jl.field_d.getSoundEffectByName("runewars_clock_tick", (byte) -97, "");
+                                                ClientUiNode.field_v[17] = jl.field_d.getSoundEffectByName("runewars_time_over_dong", (byte) -97, "");
+                                                ClientUiNode.field_v[18] = jl.field_d.getSoundEffectByName("runewars_turnover_page_map", (byte) -97, "");
                                                 var5_array2 = UnitLossCondition.battlefieldThemes;
                                                 var6_int = 0;
                                                 do {
                                                   if (var6_int >= var5_array2.length) {
-                                                    el.field_b[0] = jl.field_d.a("runewars_mana_whoosh", (byte) -97, "");
+                                                    el.field_b[0] = jl.field_d.getSoundEffectByName("runewars_mana_whoosh", (byte) -97, "");
                                                     break;
                                                   }
                                                   var7_ref = var5_array2[var6_int];
@@ -2013,7 +2013,7 @@ public final class ArmiesOfGielinor extends wf {
                                                     wl.a(0);
                                                     break;
                                                   }
-                                                  el.field_b[var5_int + 1] = jl.field_d.a("runewars_mana_stars_" + (1 + var5_int), (byte) -97, "");
+                                                  el.field_b[var5_int + 1] = jl.field_d.getSoundEffectByName("runewars_mana_stars_" + (1 + var5_int), (byte) -97, "");
                                                   var5_int++;
                                                 } while (var18 == 0);
                                                 return false;

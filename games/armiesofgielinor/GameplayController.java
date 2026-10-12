@@ -404,7 +404,7 @@ final class GameplayController {
                 ~var2_int == ~this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, -1)) {
                 stackIn_33_0 = DeployEvent.field_y;
               } else {
-                stackIn_33_0 = fo.a(param0 - 20367, p.field_i, new String[]{var3});
+                stackIn_33_0 = fo.a(param0 - 20367, SoundCache.field_i, new String[]{var3});
               }
             }
             var4 = stackIn_33_0;

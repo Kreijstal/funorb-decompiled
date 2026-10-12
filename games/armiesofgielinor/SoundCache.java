@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class p {
-    private ResourceArchive field_g;
+final class SoundCache {
+    private ResourceArchive soundEffectArchive;
     static String field_d;
     static int field_b;
     static wd field_a;
     static String field_i;
     static String field_f;
-    private ResourceArchive field_h;
-    private NodeHashTable field_e;
+    private ResourceArchive musicSampleArchive;
+    private NodeHashTable unfinishedMusicSamples;
     static String field_c;
-    private NodeHashTable field_j;
+    private NodeHashTable pcmSamples;
 
-    private final PcmSample a(String param0, String param1, int param2, int[] param3) {
+    private final PcmSample loadSoundEffectByName(String fileName, String groupName, int obfuscationGuard, int[] sampleBudget) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -28,35 +28,35 @@ final class p {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_g.getGroupId(param1, 125);
-          if (var5_int < param2) {
+          var5_int = this.soundEffectArchive.getGroupId(groupName, 125);
+          if (var5_int < obfuscationGuard) {
             stackIn_2_0 = null;
             return (PcmSample) (stackIn_2_0);
           }
-          var6 = this.field_g.getFileId((byte) 119, var5_int, param0);
+          var6 = this.soundEffectArchive.getFileId((byte) 119, var5_int, fileName);
           if (var6 < 0) {
             return null;
           }
-          stackIn_7_0 = this.a(param2 ^ 0, param3, var6, var5_int);
+          stackIn_7_0 = this.loadSoundEffect(obfuscationGuard ^ 0, sampleBudget, var6, var5_int);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_10_0 = var5;
           stackIn_10_1 = new StringBuilder().append("p.E(");
-          if (param0 == null) {
+          if (fileName == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param1 == null) {
+          if (groupName == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(',');
+          if (sampleBudget == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -65,7 +65,7 @@ final class p {
         }
     }
 
-    final PcmSample a(boolean param0, int[] param1, int param2) {
+    final PcmSample loadSoundEffectById(boolean obfuscationGuard, int[] sampleBudget, int sampleId) {
         RuntimeException var4 = null;
         PcmSample stackIn_2_0 = null;
         PcmSample stackIn_6_0 = null;
@@ -74,15 +74,15 @@ final class p {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_g.getGroupCapacity(-113) == 1) {
-            stackIn_2_0 = this.a(0, param1, param2, 0);
+          if (this.soundEffectArchive.getGroupCapacity(-113) == 1) {
+            stackIn_2_0 = this.loadSoundEffect(0, sampleBudget, sampleId, 0);
             return stackIn_2_0;
           }
-          if (1 == this.field_g.getFileCapacity(param2, -2)) {
-            stackIn_6_0 = this.a(0, param1, 0, param2);
+          if (1 == this.soundEffectArchive.getFileCapacity(sampleId, -2)) {
+            stackIn_6_0 = this.loadSoundEffect(0, sampleBudget, 0, sampleId);
             return stackIn_6_0;
           }
-          if (!param0) {
+          if (!obfuscationGuard) {
             field_a = (wd) null;
           }
           throw new RuntimeException();
@@ -90,17 +90,17 @@ final class p {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_12_0 = var4;
-          stackIn_12_1 = new StringBuilder().append("p.I(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_12_1 = new StringBuilder().append("p.I(").append(obfuscationGuard).append(',');
+          if (sampleBudget == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(sampleId).append(')').toString());
         }
     }
 
-    final PcmSample a(byte param0, String param1, String param2) {
+    final PcmSample getMusicSampleByName(byte obfuscationGuard, String groupName, String fileName) {
         RuntimeException var4 = null;
         java.applet.Applet var5 = null;
         PcmSample stackIn_3_0 = null;
@@ -111,24 +111,24 @@ final class p {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 >= -125) {
+          if (obfuscationGuard >= -125) {
             var5 = (java.applet.Applet) null;
-            p.a(-46, (java.applet.Applet) null);
+            SoundCache.a(-46, (java.applet.Applet) null);
           }
-          stackIn_3_0 = this.a((int[]) null, (byte) 115, param2, param1);
+          stackIn_3_0 = this.loadMusicSampleByName((int[]) null, (byte) 115, fileName, groupName);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_6_0 = var4;
-          stackIn_6_1 = new StringBuilder().append("p.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("p.A(").append(obfuscationGuard).append(',');
+          if (groupName == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param2 == null) {
+          if (fileName == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -137,7 +137,7 @@ final class p {
         }
     }
 
-    private final PcmSample b(int param0, int[] param1, int param2, int param3) {
+    private final PcmSample loadMusicSample(int obfuscationGuard, int[] sampleBudget, int groupId, int fileId) {
         PcmSample stackIn_2_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_10_0 = null;
@@ -147,58 +147,58 @@ final class p {
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
+        int mixedResourceId = 0;
         RuntimeException var5 = null;
-        long var6 = 0L;
-        PcmSample var8 = null;
-        qs var9 = null;
-        PcmSample var8Lifetime1;
+        long cacheKey = 0L;
+        PcmSample cachedSample = null;
+        VorbisSample musicSample = null;
+        PcmSample decodedSample;
         try {
-          var5_int = param3 ^ (65532 & param2 << 4 | param2 >>> 12);
-          var5_int = var5_int | param2 << 16;
-          var6 = 4294967296L ^ (long)var5_int;
-          var8 = (PcmSample) (this.field_j.get(-56, var6));
-          if (var8 != null) {
-            stackIn_2_0 = var8;
+          mixedResourceId = fileId ^ (65532 & groupId << 4 | groupId >>> 12);
+          mixedResourceId = mixedResourceId | groupId << 16;
+          cacheKey = 4294967296L ^ (long)mixedResourceId;
+          cachedSample = (PcmSample) (this.pcmSamples.get(-56, cacheKey));
+          if (cachedSample != null) {
+            stackIn_2_0 = cachedSample;
             return stackIn_2_0;
           }
-          if (param1 != null &&
-            0 >= param1[0]) {
+          if (sampleBudget != null &&
+            0 >= sampleBudget[0]) {
             stackIn_6_0 = null;
             return (PcmSample) (stackIn_6_0);
           }
-          var9 = (qs) (this.field_e.get(param0 + 648691672, var6));
-          if (var9 == null) {
-            var9 = qs.a(this.field_h, param2, param3);
-            if (var9 == null) {
+          musicSample = (VorbisSample) (this.unfinishedMusicSamples.get(obfuscationGuard + 648691672, cacheKey));
+          if (musicSample == null) {
+            musicSample = VorbisSample.load(this.musicSampleArchive, groupId, fileId);
+            if (musicSample == null) {
               stackIn_10_0 = null;
               return (PcmSample) (stackIn_10_0);
             }
-            this.field_e.put(var9, var6, param0 + 648691834);
+            this.unfinishedMusicSamples.put(musicSample, cacheKey, obfuscationGuard + 648691834);
           }
-          var8Lifetime1 = var9.a(param1);
-          if (var8Lifetime1 == null) {
+          decodedSample = musicSample.decodeToPcm(sampleBudget);
+          if (decodedSample == null) {
             return null;
           }
-          var9.unlink(param0 + 648691815);
-          if (param0 != -648691772) {
+          musicSample.unlink(obfuscationGuard + 648691815);
+          if (obfuscationGuard != -648691772) {
             stackIn_17_0 = (PcmSample) null;
             return stackIn_17_0;
           }
-          this.field_j.put(var8Lifetime1, var6, 32);
-          stackIn_19_0 = var8Lifetime1;
+          this.pcmSamples.put(decodedSample, cacheKey, 32);
+          stackIn_19_0 = decodedSample;
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_22_0 = var5;
-          stackIn_22_1 = new StringBuilder().append("p.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_22_1 = new StringBuilder().append("p.D(").append(obfuscationGuard).append(',');
+          if (sampleBudget == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(groupId).append(',').append(fileId).append(')').toString());
         }
     }
 
@@ -212,17 +212,17 @@ final class p {
           return;
         }
         java.applet.Applet var2 = (java.applet.Applet) null;
-        p.a(114, (java.applet.Applet) null);
+        SoundCache.a(114, (java.applet.Applet) null);
         field_d = null;
     }
 
-    private final PcmSample a(int param0, int[] param1, int param2, int param3) {
-        int var5_int = 0;
+    private final PcmSample loadSoundEffect(int obfuscationGuard, int[] sampleBudget, int fileId, int groupId) {
+        int mixedResourceId = 0;
         RuntimeException var5 = null;
-        long var6 = 0L;
-        PcmSample var8 = null;
-        rm var9 = null;
-        PcmSample var10 = null;
+        long cacheKey = 0L;
+        PcmSample cachedSample = null;
+        SynthesizedSoundEffect soundEffect = null;
+        PcmSample decodedSample = null;
         PcmSample stackIn_2_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_9_0 = null;
@@ -232,53 +232,53 @@ final class p {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        PcmSample var8Lifetime1;
+        PcmSample sampleToCache;
         try {
-          var5_int = (param3 >>> 12 | (1073745919 & param3) << 4) ^ param2;
-          var5_int = var5_int | param3 << 16;
-          var6 = (long)var5_int;
-          var8 = (PcmSample) (this.field_j.get(param0 ^ -121, var6));
-          if (var8 != null) {
-            stackIn_2_0 = var8;
+          mixedResourceId = (groupId >>> 12 | (1073745919 & groupId) << 4) ^ fileId;
+          mixedResourceId = mixedResourceId | groupId << 16;
+          cacheKey = (long)mixedResourceId;
+          cachedSample = (PcmSample) (this.pcmSamples.get(obfuscationGuard ^ -121, cacheKey));
+          if (cachedSample != null) {
+            stackIn_2_0 = cachedSample;
             return stackIn_2_0;
           }
-          if (param1 != null &&
-            param1[0] <= 0) {
+          if (sampleBudget != null &&
+            sampleBudget[0] <= 0) {
             stackIn_6_0 = null;
             return (PcmSample) (stackIn_6_0);
           }
-          var9 = rm.a(this.field_g, param3, param2);
-          if (var9 == null) {
+          soundEffect = SynthesizedSoundEffect.load(this.soundEffectArchive, groupId, fileId);
+          if (soundEffect == null) {
             stackIn_9_0 = null;
             return (PcmSample) (stackIn_9_0);
           }
-          if (param0 != 0) {
+          if (obfuscationGuard != 0) {
             stackIn_12_0 = (PcmSample) null;
             return stackIn_12_0;
           }
-          var10 = var9.b();
-          var8Lifetime1 = var10;
-          this.field_j.put(var8Lifetime1, var6, 77);
-          if (param1 != null) {
-            param1[0] = param1[0] - var10.samples.length;
+          decodedSample = soundEffect.toPcmSample();
+          sampleToCache = decodedSample;
+          this.pcmSamples.put(sampleToCache, cacheKey, 77);
+          if (sampleBudget != null) {
+            sampleBudget[0] = sampleBudget[0] - decodedSample.samples.length;
           }
-          stackIn_17_0 = var8Lifetime1;
+          stackIn_17_0 = sampleToCache;
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_20_0 = var5;
-          stackIn_20_1 = new StringBuilder().append("p.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_20_1 = new StringBuilder().append("p.B(").append(obfuscationGuard).append(',');
+          if (sampleBudget == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(fileId).append(',').append(groupId).append(')').toString());
         }
     }
 
-    final PcmSample a(int[] param0, int param1, int param2) {
+    final PcmSample loadMusicSampleById(int[] sampleBudget, int obfuscationGuard, int sampleId) {
         int var4_int = 0;
         RuntimeException var4 = null;
         PcmSample stackIn_2_0 = null;
@@ -288,27 +288,27 @@ final class p {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_h.getGroupCapacity(-111) == 1) {
-            stackIn_2_0 = this.b(-648691772, param0, 0, param2);
+          if (this.musicSampleArchive.getGroupCapacity(-111) == 1) {
+            stackIn_2_0 = this.loadMusicSample(-648691772, sampleBudget, 0, sampleId);
             return stackIn_2_0;
           }
-          if (this.field_h.getFileCapacity(param2, -2) == 1) {
-            stackIn_6_0 = this.b(-648691772, param0, param2, 0);
+          if (this.musicSampleArchive.getFileCapacity(sampleId, -2) == 1) {
+            stackIn_6_0 = this.loadMusicSample(-648691772, sampleBudget, sampleId, 0);
             return stackIn_6_0;
           }
-          var4_int = 50 % ((param1 + 62) / 45);
+          var4_int = 50 % ((obfuscationGuard + 62) / 45);
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_10_0 = var4;
           stackIn_10_1 = new StringBuilder().append("p.G(");
-          if (param0 == null) {
+          if (sampleBudget == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(',').append(sampleId).append(')').toString());
         }
     }
 
@@ -346,7 +346,7 @@ final class p {
         }
     }
 
-    final PcmSample a(String param0, byte param1, String param2) {
+    final PcmSample getSoundEffectByName(String fileName, byte obfuscationGuard, String groupName) {
         RuntimeException var4 = null;
         PcmSample stackIn_2_0 = null;
         PcmSample stackIn_4_0 = null;
@@ -357,8 +357,8 @@ final class p {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == -97) {
-            stackIn_4_0 = this.a(param0, param2, param1 + 97, (int[]) null);
+          if (obfuscationGuard == -97) {
+            stackIn_4_0 = this.loadSoundEffectByName(fileName, groupName, obfuscationGuard + 97, (int[]) null);
             return stackIn_4_0;
           }
           stackIn_2_0 = (PcmSample) null;
@@ -368,13 +368,13 @@ final class p {
           var4 = decompiledCaughtException;
           stackIn_7_0 = var4;
           stackIn_7_1 = new StringBuilder().append("p.F(");
-          if (param0 == null) {
+          if (fileName == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(',');
+          if (groupName == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -447,18 +447,18 @@ final class p {
         return param0 + "ª";
     }
 
-    p(ResourceArchive param0, ResourceArchive param1) {
-        this.field_e = new NodeHashTable(256);
-        this.field_j = new NodeHashTable(256);
+    SoundCache(ResourceArchive soundEffectArchive, ResourceArchive musicSampleArchive) {
+        this.unfinishedMusicSamples = new NodeHashTable(256);
+        this.pcmSamples = new NodeHashTable(256);
         try {
-          this.field_g = param0;
-          this.field_h = param1;
+          this.soundEffectArchive = soundEffectArchive;
+          this.musicSampleArchive = musicSampleArchive;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "p.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "p.<init>(" + (soundEffectArchive != null ? "{...}" : "null") + ',' + (musicSampleArchive != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final PcmSample a(int[] param0, byte param1, String param2, String param3) {
+    private final PcmSample loadMusicSampleByName(int[] sampleBudget, byte obfuscationGuard, String fileName, String groupName) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -474,36 +474,36 @@ final class p {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_h.getGroupId(param3, 108);
+          var5_int = this.musicSampleArchive.getGroupId(groupName, 108);
           if (var5_int < 0) {
             stackIn_2_0 = null;
             return (PcmSample) (stackIn_2_0);
           }
-          var6 = this.field_h.getFileId((byte) 119, var5_int, param2);
+          var6 = this.musicSampleArchive.getFileId((byte) 119, var5_int, fileName);
           if (var6 < 0) {
             return null;
           }
-          var7 = -61 / ((param1 - 48) / 33);
-          stackIn_7_0 = this.b(-648691772, param0, var5_int, var6);
+          var7 = -61 / ((obfuscationGuard - 48) / 33);
+          stackIn_7_0 = this.loadMusicSample(-648691772, sampleBudget, var5_int, var6);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_10_0 = var5;
           stackIn_10_1 = new StringBuilder().append("p.H(");
-          if (param0 == null) {
+          if (sampleBudget == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(',');
+          if (fileName == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
           stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param3 == null) {
+          if (groupName == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";

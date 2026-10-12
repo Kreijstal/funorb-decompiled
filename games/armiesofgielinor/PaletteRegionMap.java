@@ -23,7 +23,7 @@ final class PaletteRegionMap {
     }
 
     final static void a(byte param0, java.awt.Canvas param1) {
-        if (11 == p.field_b) {
+        if (11 == SoundCache.field_b) {
           AnimationFrameSet.d((byte) -13);
         }
         SpellCastRequest.a(dd.field_a, TelepopEvent.field_C, UnitSpell.field_e, -1);

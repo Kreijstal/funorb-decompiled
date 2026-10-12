@@ -15,10 +15,10 @@ final class er {
     }
 
     final static void b(int param0) {
-        if (~p.field_b == param0 ||
+        if (~SoundCache.field_b == param0 ||
           !du.c(10)) {
           EffectPresentation.d(7);
-          p.field_b = 11;
+          SoundCache.field_b = 11;
         }
         dd.field_a = true;
     }

@@ -292,7 +292,7 @@ class ih extends hn {
         }
     }
 
-    final synchronized boolean a(p param0, ResourceArchive param1, int param2, um param3, byte param4) {
+    final synchronized boolean a(SoundCache param0, ResourceArchive param1, int param2, um param3, byte param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -507,7 +507,7 @@ class ih extends hn {
         }
         if (param0) {
           var5 = (um) null;
-          this.a((p) null, (ResourceArchive) null, -24, (um) null, (byte) 111);
+          this.a((SoundCache) null, (ResourceArchive) null, -24, (um) null, (byte) 111);
         }
     }
 
