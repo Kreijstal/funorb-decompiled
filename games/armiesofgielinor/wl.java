@@ -89,7 +89,7 @@ abstract class wl extends tj {
         SoftwareRaster.b();
         this.b(0, 1851680193, 0);
         super.a(-param0 - this.x, -param1 - this.y, (byte) -106, param3);
-        QuickChatPhraseRepository.b(-18862);
+        QuickChatPhraseRepository.popRasterState(-18862);
         if (param2 >= -82) {
           field_J = (String) null;
         }

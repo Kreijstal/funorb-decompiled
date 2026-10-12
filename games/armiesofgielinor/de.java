@@ -230,7 +230,7 @@ final class de {
               if (115 != var8Lifetime2) {
                 if (var8Lifetime2 == 119) {
                   if (var7.unitType != 43) {
-                    stackIn_96_0 = fg.field_n;
+                    stackIn_96_0 = RasterState.field_n;
                     return stackIn_96_0;
                   }
                   if (var7.packedFlag32) {

@@ -4,12 +4,12 @@
 final class MapLayout extends IntrusiveNode {
     private int formatVersion;
     private byte[] encodedMap;
-    int field_p;
+    int mapTheme;
     private MapTile[] decodedTiles;
     int mapWidth;
     static QuickChatCommandDefinition field_q;
     int mapHeight;
-    int field_k;
+    int playerCapacity;
     static um field_u;
     static String field_m;
     static String field_o;
@@ -234,10 +234,10 @@ final class MapLayout extends IntrusiveNode {
         if (this.formatVersion == 2) {
           var3_ref_sc = po.readLengthPrefixedMap(var8, obfuscationGuard - 24046);
           this.mapWidth = var3_ref_sc.mapWidth;
-          this.field_p = var3_ref_sc.mapTheme;
+          this.mapTheme = var3_ref_sc.mapTheme;
           this.mapHeight = var3_ref_sc.mapHeight;
           this.decodedTiles = var3_ref_sc.tiles;
-          this.field_k = var3_ref_sc.playerCount;
+          this.playerCapacity = var3_ref_sc.playerCount;
           var4 = this.decodedTiles;
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
@@ -248,16 +248,16 @@ final class MapLayout extends IntrusiveNode {
         this.mapWidth = var8.readUnsignedByte(0);
         this.mapHeight = var8.readUnsignedByte(0);
         if (this.formatVersion < 1) {
-          this.field_p = 0;
+          this.mapTheme = 0;
         } else {
-          this.field_p = var8.readUnsignedByte(0);
+          this.mapTheme = var8.readUnsignedByte(0);
         }
         if (this.formatVersion >= 0) {
-          this.field_k = var8.readUnsignedByte(0);
+          this.playerCapacity = var8.readUnsignedByte(0);
         } else {
           var3 = this.mapWidth * this.mapHeight;
           var8.position = var8.position + var3;
-          this.field_k = var8.readUnsignedByte(0);
+          this.playerCapacity = var8.readUnsignedByte(0);
           var8.position = var8.position - (var3 + 1);
         }
         return (PacketBuffer) ((Object) var8);

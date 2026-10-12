@@ -435,7 +435,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_chat_lobby_hide");
                 if (null != var2) {
-                  ou.field_g = uu.a(var2, (byte) 47);
+                  MapRepository.field_g = uu.a(var2, (byte) 47);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_game_show_all");
                 if (var2 != null) {
@@ -2542,7 +2542,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "rating_played");
                 if (var2 != null) {
-                  ou.field_f = uu.a(var2, (byte) 108);
+                  MapRepository.field_f = uu.a(var2, (byte) 108);
                 }
                 var2 = NodeIterator.a(50, "rating_won");
                 if (var2 != null) {
@@ -3066,7 +3066,7 @@ final class CampaignUnitOverride {
 
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
         try {
-          rq.a((byte) -56);
+          rq.pushRasterState((byte) -56);
           SoftwareRaster.b(param0, param3, param1, param2);
           if (param4 < 70) {
             field_c = (String) null;

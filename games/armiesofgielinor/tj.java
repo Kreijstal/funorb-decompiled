@@ -608,8 +608,8 @@ class tj extends Widget implements gw {
             if (ai.field_T != null) {
               ai.field_T.close(-5758);
             }
-            if (ou.field_h != null) {
-              ou.field_h.stop((byte) -117);
+            if (MapRepository.field_h != null) {
+              MapRepository.field_h.stop((byte) -117);
             }
             if (null != SpellMenuGroup.field_b) {
               try {

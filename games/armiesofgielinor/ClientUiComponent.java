@@ -454,7 +454,7 @@ class ClientUiComponent extends ClientUiNode {
         if (this.hovered) {
           QuickChatCategoryRepository.field_f = true;
         }
-        SoftwareRaster.f(savedClipLeft, savedClipTop, savedClipRight, savedClipBottom);
+        SoftwareRaster.setClip(savedClipLeft, savedClipTop, savedClipRight, savedClipBottom);
         if (this.heldPressButton != 0 &&
           this.draggable) {
           this.x = -this.dragGrabX + AiPlanningStrategy.pointerX - parentX;
@@ -935,7 +935,7 @@ class ClientUiComponent extends ClientUiNode {
             var23_ref = (ClientUiComponent) (this.children.next((byte) 123));
           }
         }
-        SoftwareRaster.f(var12, var13, var14, var15);
+        SoftwareRaster.setClip(var12, var13, var14, var15);
         return;
     }
 

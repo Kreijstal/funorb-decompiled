@@ -12,7 +12,7 @@ final class EventPresenter extends IntrusiveNode {
     private boolean acknowledged;
     boolean field_w;
     boolean presentationActive;
-    static NodeDeque field_q;
+    static NodeDeque rasterStatePool;
     private GameplayController controller;
     EventPresentation presentation;
     GameEvent event;
@@ -262,7 +262,7 @@ final class EventPresenter extends IntrusiveNode {
     }
 
     public static void f(int param0) {
-        field_q = null;
+        rasterStatePool = null;
         field_t = null;
         field_o = null;
         int var1 = -72 % ((param0 - 30) / 51);
@@ -413,6 +413,6 @@ final class EventPresenter extends IntrusiveNode {
 
     static {
         field_l = "You have not yet unlocked this option for use.";
-        field_q = new NodeDeque();
+        rasterStatePool = new NodeDeque();
     }
 }

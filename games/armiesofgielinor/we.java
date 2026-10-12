@@ -103,7 +103,7 @@ final class we {
           return (char)var2;
         }
         if (var2 < 160) {
-          var3 = ou.field_a[var2 - 128];
+          var3 = MapRepository.field_a[var2 - 128];
           if (var3 == 0) {
             var3 = 63;
           }

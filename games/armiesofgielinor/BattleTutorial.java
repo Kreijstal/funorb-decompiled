@@ -1650,7 +1650,7 @@ class BattleTutorial {
         boolean decompiledFrameRemainder0 = true;
         var2 = so.field_b.field_a;
         var3 = so.field_b.field_g;
-        SoftwareRaster.f(-10 + var2 - this.panelWidth, -this.panelHeight + var3 - 10, -10 + var2, var3);
+        SoftwareRaster.setClip(-10 + var2 - this.panelWidth, -this.panelHeight + var3 - 10, -10 + var2, var3);
         fe.b(-10 + (-this.panelWidth + var2), -10 - this.panelHeight + var3, this.panelWidth, this.panelHeight, io.field_m, nd.field_b, 0, 192);
         if (4 != this.buttonMode) {
           stackIn_12_0 = -5 + var2 - this.panelWidth;
@@ -1722,7 +1722,7 @@ class BattleTutorial {
           fe.a(-5 - this.panelWidth + var2, -45 + var3, -10 + this.panelWidth, 30, DisplacedUnitMarker.field_s, jh.field_k, 0, 192, true);
         }
         if (this.message != null) {
-          SoftwareRaster.f(var2 - this.panelWidth, -this.panelHeight + var3, var2 - 10, var3 - 45);
+          SoftwareRaster.setClip(var2 - this.panelWidth, -this.panelHeight + var3, var2 - 10, var3 - 45);
           rs.field_n.a(this.message, -this.panelWidth + var2, -this.panelHeight + var3, 220, 400, 16777215, -1, 0, 0, 0);
         }
         SoftwareRaster.a();

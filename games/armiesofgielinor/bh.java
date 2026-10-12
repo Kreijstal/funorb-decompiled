@@ -55,14 +55,14 @@ final class bh extends nl {
         if (param2 < -82) {
           CombatSandbox.a(var6, 3);
           this.field_E.a(0, 0, (byte) -86, param3);
-          QuickChatPhraseRepository.b(-18862);
+          QuickChatPhraseRepository.popRasterState(-18862);
           var6.e(this.x + param0, param1 + this.y, this.field_K);
           return;
         }
         field_M = (String[]) null;
         CombatSandbox.a(var6, 3);
         this.field_E.a(0, 0, (byte) -86, param3);
-        QuickChatPhraseRepository.b(-18862);
+        QuickChatPhraseRepository.popRasterState(-18862);
         var6.e(this.x + param0, param1 + this.y, this.field_K);
     }
 

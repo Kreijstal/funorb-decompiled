@@ -126,7 +126,7 @@ final class kw extends fw {
             }
           }
           var21.b(112, 144, var21.canvasWidth << 4, var21.canvasHeight << 4, -this.field_L << 10, 4096);
-          QuickChatPhraseRepository.b(-18862);
+          QuickChatPhraseRepository.popRasterState(-18862);
           PreparedAction.field_p.f(-var21.canvasWidth + var5, -var21.canvasHeight + var6, 256);
           return;
         }
@@ -146,7 +146,7 @@ final class kw extends fw {
             CombatSandbox.a(PreparedAction.field_p, 3);
           }
           var15.b(112, 144, var15.canvasWidth << 4, var15.canvasHeight << 4, -this.field_L << 10, 4096);
-          QuickChatPhraseRepository.b(-18862);
+          QuickChatPhraseRepository.popRasterState(-18862);
           PreparedAction.field_p.f(-var15.canvasWidth + var5, -var15.canvasHeight + var6, 256);
           return;
         }
@@ -185,7 +185,7 @@ final class kw extends fw {
           }
         }
         var16.b(112, 144, var16.canvasWidth << 4, var16.canvasHeight << 4, -this.field_L << 10, 4096);
-        QuickChatPhraseRepository.b(-18862);
+        QuickChatPhraseRepository.popRasterState(-18862);
         PreparedAction.field_p.f(-var16.canvasWidth + var5, -var16.canvasHeight + var6, 256);
     }
 

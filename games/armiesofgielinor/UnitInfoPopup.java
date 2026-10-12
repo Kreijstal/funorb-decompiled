@@ -69,7 +69,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           SoftwareRaster.b(5, 5, 124, 18, 0, 192);
           SoftwareRaster.b(5, 25, 30, 30, 0, 192);
           var7 = this.unit.displayName;
-          SoftwareRaster.f(5, param2, 95, 23);
+          SoftwareRaster.setClip(5, param2, 95, 23);
           stackIn_3_0 = en.field_E;
           stackIn_3_1 = var7;
           stackIn_3_2 = 10 - (this.nameScrollOffset >> 1);

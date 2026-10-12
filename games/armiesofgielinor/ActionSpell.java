@@ -194,7 +194,7 @@ final class ActionSpell extends Spell {
         tq.field_a = true;
         so.field_b = null;
         int[] var4 = (int[]) null;
-        SoftwareRaster.a((int[]) null, 0, 0);
+        SoftwareRaster.setTarget((int[]) null, 0, 0);
         so.field_b = rj.a(param0, param2, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
         so.field_b.a(param1 - 17900);
         ContextualRuntimeException.a((byte) -85, param0 / 2, param2 / 2);

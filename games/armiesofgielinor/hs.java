@@ -139,7 +139,7 @@ abstract class hs extends Widget implements gw {
           SoftwareRaster.b(37 + param4, param7 - 70 + param6, 265, 25, 0, 128);
           var21 = param2.q((byte) 67);
           var8 = var21.toLowerCase();
-          SoftwareRaster.f(param4 + 37, param7 - 70 + param6, 245 + param4, param6 + (param7 - 45));
+          SoftwareRaster.setClip(param4 + 37, param7 - 70 + param6, 245 + param4, param6 + (param7 - 45));
           fe.a(var8, -param3 + (param4 + 42), param6 - 43 + param7, 16777215, true);
           SoftwareRaster.a();
           fe.c(param2.strength + param2.bonusStrength + "/" + param2.maximumStrength, param4 + 272, param6 - (42 - param7), 16777215, param1);

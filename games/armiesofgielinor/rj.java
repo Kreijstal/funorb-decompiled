@@ -52,7 +52,7 @@ final class rj extends Widget {
           SoftwareRaster.e(var7 + this.field_C, var6, this.field_C, var12Lifetime1);
           SoftwareRaster.e(-this.field_C + var7, var6, this.field_C, var12Lifetime1);
         }
-        QuickChatPhraseRepository.b(-18862);
+        QuickChatPhraseRepository.popRasterState(-18862);
         return var14;
     }
 
@@ -93,13 +93,13 @@ final class rj extends Widget {
             param2.g(var6, param1);
             var6 = var6 + param2.pixelWidth;
           }
-          QuickChatPhraseRepository.b(-18862);
+          QuickChatPhraseRepository.popRasterState(-18862);
           if (SoftwareRaster.clipLeft <= param3 + this.field_J.pixelWidth) {
             CombatSandbox.a(this.field_K, 3);
             param2.g(-this.field_N, 0);
             param2.g(this.field_C * 2 - this.field_N, 0);
             this.field_S.b(0, 0);
-            QuickChatPhraseRepository.b(-18862);
+            QuickChatPhraseRepository.popRasterState(-18862);
             this.field_K.g(param3, param1);
           }
           if (-this.field_J.pixelWidth + var5_int <= SoftwareRaster.clipRight) {
@@ -109,7 +109,7 @@ final class rj extends Widget {
             param2.g(-var8, 0);
             param2.g(-var8 + this.field_C * 2, 0);
             this.field_J.b(0, 0);
-            QuickChatPhraseRepository.b(-18862);
+            QuickChatPhraseRepository.popRasterState(-18862);
             this.field_K.g(var5_int - this.field_J.pixelWidth, param1);
             return;
           }
@@ -207,7 +207,7 @@ final class rj extends Widget {
         if (65536 > this.field_D) {
           CampaignUnitOverride.a((this.width * this.field_D >> 16) + var5, var5 + this.width, this.height + var6, var6, (byte) 74);
           this.a(-103, var6, this.field_O[1], var5);
-          QuickChatPhraseRepository.b(-18862);
+          QuickChatPhraseRepository.popRasterState(-18862);
         }
     }
 
@@ -287,7 +287,7 @@ final class rj extends Widget {
             SoftwareRaster.a(var5, var4, var8 | var8 << 8 | var8 << 16);
           }
         }
-        QuickChatPhraseRepository.b(param0 - 19612);
+        QuickChatPhraseRepository.popRasterState(param0 - 19612);
         return var3;
     }
 

@@ -192,7 +192,7 @@ final class co {
             if (var7 != 0) {
               if (var7 >= 128 &&
                 var7 < 160) {
-                var8 = ou.field_a[-128 + var7];
+                var8 = MapRepository.field_a[-128 + var7];
                 if (var8 == 0) {
                   var8 = 63;
                 }

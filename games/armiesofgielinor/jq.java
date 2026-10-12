@@ -72,11 +72,11 @@ final class jq extends dr {
           SoftwareRaster.e(15, 4, 1, 0);
         }
         if (param2 == -20600) {
-          SoftwareRaster.a(var16, var7, var8);
+          SoftwareRaster.setTarget(var16, var7, var8);
           return new RgbSprite[]{null, null, null, (RgbSprite) (var10), var9, (RgbSprite) (var11), null, null, null};
         }
         field_I = (String[][]) null;
-        SoftwareRaster.a(var16, var7, var8);
+        SoftwareRaster.setTarget(var16, var7, var8);
         return new RgbSprite[]{null, null, null, (RgbSprite) (var10), var9, (RgbSprite) (var11), null, null, null};
     }
 

@@ -57,7 +57,7 @@ final class na extends tj implements mf, he {
             this.field_L = (fw) null;
           }
           if (param4 == this.field_L) {
-            ou.b((byte) 115);
+            MapRepository.b((byte) 115);
             return;
           }
           if (param4 != this.field_O) {

@@ -315,7 +315,7 @@ final class QuickChatMenu extends ClientUiComponent {
             var16 = dh.field_n[2];
             var28Lifetime6 = var16;
             var28Lifetime7 = var16;
-            var15 = ou.field_g;
+            var15 = MapRepository.field_g;
             var14.menu.addIconAction(param2, var15, 13, var16);
           }
           if (param1 == 1) {

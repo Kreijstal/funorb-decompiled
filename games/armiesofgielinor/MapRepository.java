@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ou {
+final class MapRepository {
     static int field_c;
     static String field_f;
     static char[] field_a;
     static DiskCacheWorker field_h;
-    private NodeDeque[][] field_i;
-    private MapLayout[] field_b;
+    private NodeDeque[][] mapsByThemeAndSize;
+    private MapLayout[] tutorialMaps;
     static String field_g;
-    private ResourceArchive[] field_e;
-    private boolean field_d;
+    private ResourceArchive[] archives;
+    private boolean bypassMembershipChecks;
     static String field_j;
 
     public static void a(int param0) {
@@ -20,7 +20,7 @@ final class ou {
           field_j = null;
           field_g = null;
           if (param0 != 4116) {
-            ou.a(-15);
+            MapRepository.a(-15);
           }
           field_h = null;
           field_f = null;
@@ -48,28 +48,28 @@ final class ou {
         }
     }
 
-    private final void a(int param0, int param1, ResourceArchive param2) {
+    private final void installArchive(int obfuscationGuard, int archiveGroup, ResourceArchive archive) {
         RuntimeException var4 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 24402) {
-            this.field_d = false;
+          if (obfuscationGuard != 24402) {
+            this.bypassMembershipChecks = false;
           }
-          if (null != this.field_e &&
-            2 <= this.field_e.length) {
-            if (param1 != 0 &&
-              param1 != 1) {
+          if (null != this.archives &&
+            2 <= this.archives.length) {
+            if (archiveGroup != 0 &&
+              archiveGroup != 1) {
               return;
             }
             if (df.field_M <= 0 &&
-              param1 == 1 &&
-              !this.field_d) {
+              archiveGroup == 1 &&
+              !this.bypassMembershipChecks) {
               return;
             }
-            this.field_e[param1] = param2;
+            this.archives[archiveGroup] = archive;
             return;
           }
           return;
@@ -77,8 +77,8 @@ final class ou {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_26_0 = var4;
-          stackIn_26_1 = new StringBuilder().append("ou.I(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_26_1 = new StringBuilder().append("ou.I(").append(obfuscationGuard).append(',').append(archiveGroup).append(',');
+          if (archive == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
@@ -98,46 +98,46 @@ final class ou {
         }
     }
 
-    final int a(int param0, int param1, int param2, int param3) {
+    final int countAvailableMaps(int initialCount, int mapSizeSetting, int mapTheme, int minimumPlayerCapacity) {
         int stackIn_9_0 = 0;
         int stackIn_20_0 = 0;
         int stackIn_25_0 = 0;
         int stackIn_36_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
+        int matchingCount = 0;
         RuntimeException var5 = null;
-        NodeIterator var6 = null;
-        MapLayout var7 = null;
-        int var8 = 0;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        NodeIterator maps = null;
+        MapLayout map = null;
+        int obfuscationControl = 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (this.field_i != null &&
-            param2 >= 0 &&
-            this.field_i.length > param2) {
-            if (this.field_i[param2] != null &&
-              param1 >= 0 &&
-              this.field_i[param2].length > param1) {
-              if (null == this.field_i[param2][param1]) {
+          if (this.mapsByThemeAndSize != null &&
+            mapTheme >= 0 &&
+            this.mapsByThemeAndSize.length > mapTheme) {
+            if (this.mapsByThemeAndSize[mapTheme] != null &&
+              mapSizeSetting >= 0 &&
+              this.mapsByThemeAndSize[mapTheme].length > mapSizeSetting) {
+              if (null == this.mapsByThemeAndSize[mapTheme][mapSizeSetting]) {
                 stackIn_25_0 = 0;
                 return stackIn_25_0;
               }
-              var5_int = param0;
-              var6 = new NodeIterator(this.field_i[param2][param1]);
-              var7 = (MapLayout) (var6.first(param0 + 50));
+              matchingCount = initialCount;
+              maps = new NodeIterator(this.mapsByThemeAndSize[mapTheme][mapSizeSetting]);
+              map = (MapLayout) (maps.first(initialCount + 50));
               boolean decompiledNaturalLoopExit0 = false;
-              while (!(decompiledNaturalLoopExit0 = (null == var7))) {
-                stackIn_36_0 = var7.field_k;
-                if (var8 == 0) {
-                  if (stackIn_36_0 >= param3) {
-                    var5_int++;
+              while (!(decompiledNaturalLoopExit0 = (null == map))) {
+                stackIn_36_0 = map.playerCapacity;
+                if (obfuscationControl == 0) {
+                  if (stackIn_36_0 >= minimumPlayerCapacity) {
+                    matchingCount++;
                   }
-                  var7 = (MapLayout) (var6.next(param0 + 50));
+                  map = (MapLayout) (maps.next(initialCount + 50));
                   continue;
                 }
                 break;
               }
               if (decompiledNaturalLoopExit0) {
-                stackIn_36_0 = var5_int;
+                stackIn_36_0 = matchingCount;
               }
               return stackIn_36_0;
             }
@@ -149,32 +149,32 @@ final class ou {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var5), "ou.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var5), "ou.H(" + initialCount + ',' + mapSizeSetting + ',' + mapTheme + ',' + minimumPlayerCapacity + ')');
         }
     }
 
-    private final void a(byte param0) {
-        int var2_int = 0;
-        byte[] var3 = null;
-        int var4 = 0;
+    private final void loadTutorialMaps(byte obfuscationGuard) {
+        int tutorialIndex = 0;
+        byte[] encodedMap = null;
+        int obfuscationControl = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.field_b = new MapLayout[wn.field_eb.length];
-          var2_int = 0;
-          if (param0 <= 110) {
-            this.a((byte) -41);
+          this.tutorialMaps = new MapLayout[wn.tutorialMapNames.length];
+          tutorialIndex = 0;
+          if (obfuscationGuard <= 110) {
+            this.loadTutorialMaps((byte) -41);
           }
-          while (wn.field_eb.length > var2_int) {
-            var3 = this.field_e[0].getFileByName(wn.field_eb[var2_int], 35, "");
-            if (var4 != 0) {
+          while (wn.tutorialMapNames.length > tutorialIndex) {
+            encodedMap = this.archives[0].getFileByName(wn.tutorialMapNames[tutorialIndex], 35, "");
+            if (obfuscationControl != 0) {
               return;
             }
-            if (var3 != null &&
-              var3.length != 0) {
-              this.field_b[var2_int] = new MapLayout(-1, var3);
-              var2_int++;
+            if (encodedMap != null &&
+              encodedMap.length != 0) {
+              this.tutorialMaps[tutorialIndex] = new MapLayout(-1, encodedMap);
+              tutorialIndex++;
               continue;
             } else {
               return;
@@ -184,11 +184,11 @@ final class ou {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ou.F(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ou.F(" + obfuscationGuard + ')');
         }
     }
 
-    final MapLayout a(int param0, int param1, int param2, int param3, int param4) {
+    final MapLayout selectAvailableMap(int minimumPlayerCapacity, int obfuscationGuard, int mapSizeSetting, int mapTheme, int matchingOrdinal) {
         Object stackIn_12_0 = null;
         Object stackIn_23_0 = null;
         Object stackIn_31_0 = null;
@@ -197,54 +197,54 @@ final class ou {
         Object stackIn_50_0 = null;
         MapLayout stackIn_67_0 = null;
         RuntimeException decompiledCaughtException = null;
-        NodeIterator var6 = null;
+        NodeIterator maps = null;
         RuntimeException var6_ref = null;
-        MapLayout var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        MapLayout map = null;
+        int matchingIndex = 0;
+        int obfuscationControl = 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (null != this.field_i &&
-            param3 >= 0 &&
-            param3 < this.field_i.length &&
-            AttackEvent.field_A.length > param3) {
-            if (null != this.field_i[param3] &&
-              0 <= param2 &&
-              param2 < this.field_i[param3].length) {
-              if (this.field_i.length == AttackEvent.field_A.length &&
-                AttackEvent.field_A[param3].length == this.field_i[param3].length) {
-                if (param3 == 1 &&
-                  !this.field_d &&
+          if (null != this.mapsByThemeAndSize &&
+            mapTheme >= 0 &&
+            mapTheme < this.mapsByThemeAndSize.length &&
+            AttackEvent.mapNamesByThemeAndSize.length > mapTheme) {
+            if (null != this.mapsByThemeAndSize[mapTheme] &&
+              0 <= mapSizeSetting &&
+              mapSizeSetting < this.mapsByThemeAndSize[mapTheme].length) {
+              if (this.mapsByThemeAndSize.length == AttackEvent.mapNamesByThemeAndSize.length &&
+                AttackEvent.mapNamesByThemeAndSize[mapTheme].length == this.mapsByThemeAndSize[mapTheme].length) {
+                if (mapTheme == 1 &&
+                  !this.bypassMembershipChecks &&
                   df.field_M < 0) {
                   stackIn_42_0 = null;
                   return (MapLayout) (stackIn_42_0);
                 }
-                if (param1 != 4136) {
+                if (obfuscationGuard != 4136) {
                   stackIn_45_0 = (MapLayout) null;
                   return stackIn_45_0;
                 }
-                if (null == this.field_i[param3][param2]) {
+                if (null == this.mapsByThemeAndSize[mapTheme][mapSizeSetting]) {
                   stackIn_50_0 = null;
                   return (MapLayout) (stackIn_50_0);
                 }
-                var6 = new NodeIterator(this.field_i[param3][param2]);
-                var7 = (MapLayout) (var6.first(param1 - 4086));
-                var8 = 0;
-                while (var7 != null) {
-                  if (!(param0 <= var7.field_k) ||
-                    ~var8 != ~param4 ||
-                    var9 != 0) {
-                    if (param0 <= var7.field_k) {
-                      var8++;
+                maps = new NodeIterator(this.mapsByThemeAndSize[mapTheme][mapSizeSetting]);
+                map = (MapLayout) (maps.first(obfuscationGuard - 4086));
+                matchingIndex = 0;
+                while (map != null) {
+                  if (!(minimumPlayerCapacity <= map.playerCapacity) ||
+                    ~matchingIndex != ~matchingOrdinal ||
+                    obfuscationControl != 0) {
+                    if (minimumPlayerCapacity <= map.playerCapacity) {
+                      matchingIndex++;
                     }
-                    var7 = (MapLayout) (var6.next(50));
-                    if (var9 == 0) {
+                    map = (MapLayout) (maps.next(50));
+                    if (obfuscationControl == 0) {
                       continue;
                     }
                   }
                   break;
                 }
-                stackIn_67_0 = var7;
+                stackIn_67_0 = map;
                 return stackIn_67_0;
               }
               stackIn_31_0 = null;
@@ -258,7 +258,7 @@ final class ou {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var6_ref), "ou.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var6_ref), "ou.K(" + minimumPlayerCapacity + ',' + obfuscationGuard + ',' + mapSizeSetting + ',' + mapTheme + ',' + matchingOrdinal + ')');
         }
     }
 
@@ -473,12 +473,12 @@ final class ou {
         }
     }
 
-    private final int b(int param0, int param1) {
-        int var3_int = 0;
+    private final int findArchiveGroup(int obfuscationGuard, int mapTheme) {
+        int archiveGroup = 0;
         RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int groupIndex = 0;
+        int themeIndex = 0;
+        int obfuscationControl = 0;
         int stackIn_11_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_23_1 = 0;
@@ -489,38 +489,38 @@ final class ou {
         RuntimeException decompiledCaughtException = null;
         int stackIn_23_0Lifetime1;
         int stackIn_23_1Lifetime1;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3_int = -1;
-          var4 = 0;
+          archiveGroup = -1;
+          groupIndex = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
-            if (var4 <= 1) {
+            if (groupIndex <= 1) {
               stackIn_31_0 = -1;
-              stackIn_31_1 = ~var4;
-              if (var6 != 0) {
+              stackIn_31_1 = ~groupIndex;
+              if (obfuscationControl != 0) {
                 break scanLoop1;
               }
               if (stackIn_31_0 >= stackIn_31_1 &&
-                var4 < lp.field_a.length) {
-                var5 = 0;
-                while (lp.field_a[var4].length > var5) {
-                  stackIn_23_0 = ~lp.field_a[var4][var5];
-                  stackIn_23_1 = ~param1;
+                groupIndex < lp.mapThemesByArchive.length) {
+                themeIndex = 0;
+                while (lp.mapThemesByArchive[groupIndex].length > themeIndex) {
+                  stackIn_23_0 = ~lp.mapThemesByArchive[groupIndex][themeIndex];
+                  stackIn_23_1 = ~mapTheme;
                   if (stackIn_23_0 == stackIn_23_1) {
-                    var3_int = var4;
+                    archiveGroup = groupIndex;
                   } else {
-                    var5++;
+                    themeIndex++;
                     continue;
                   }
                   break;
                 }
                 stackIn_23_0Lifetime1 = 0;
-                stackIn_23_1Lifetime1 = var3_int;
+                stackIn_23_1Lifetime1 = archiveGroup;
                 decompiledFrameRemainder0 = (!(stackIn_23_0Lifetime1 <= stackIn_23_1Lifetime1) ||
-                  var6 != 0);
+                  obfuscationControl != 0);
                 if (decompiledFrameRemainder0) {
-                  var4++;
+                  groupIndex++;
                   continue scanLoop1;
                 }
               }
@@ -529,26 +529,26 @@ final class ou {
                 return stackIn_11_0;
               }
             }
-            stackIn_31_0 = param0;
-            stackIn_31_1 = var3_int;
+            stackIn_31_0 = obfuscationGuard;
+            stackIn_31_1 = archiveGroup;
             break;
           }
           if (stackIn_31_0 != stackIn_31_1 &&
-            1 != var3_int) {
+            1 != archiveGroup) {
             stackIn_38_0 = -1;
             return stackIn_38_0;
           }
-          stackIn_40_0 = var3_int;
+          stackIn_40_0 = archiveGroup;
           return stackIn_40_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ou.C(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ou.C(" + obfuscationGuard + ',' + mapTheme + ')');
         }
     }
 
-    private final ResourceArchive a(int param0, int param1) {
-        int var3_int = 0;
+    private final ResourceArchive getArchiveForTheme(int obfuscationGuard, int mapTheme) {
+        int archiveGroup = 0;
         RuntimeException var3 = null;
         Object stackIn_5_0 = null;
         Object stackIn_13_0 = null;
@@ -557,23 +557,23 @@ final class ou {
         ResourceArchive stackIn_32_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_e != null &&
-            this.field_e.length == 2) {
-            if (param1 >= 0 &&
-              AttackEvent.field_A.length > param1) {
-              var3_int = this.b(0, param1);
-              if (~var3_int != param0 &&
-                var3_int != 1) {
+          if (this.archives != null &&
+            this.archives.length == 2) {
+            if (mapTheme >= 0 &&
+              AttackEvent.mapNamesByThemeAndSize.length > mapTheme) {
+              archiveGroup = this.findArchiveGroup(0, mapTheme);
+              if (~archiveGroup != obfuscationGuard &&
+                archiveGroup != 1) {
                 stackIn_21_0 = null;
                 return (ResourceArchive) (stackIn_21_0);
               }
-              if (var3_int == 1 &&
-                !this.field_d &&
+              if (archiveGroup == 1 &&
+                !this.bypassMembershipChecks &&
                 0 >= df.field_M) {
                 stackIn_30_0 = null;
                 return (ResourceArchive) (stackIn_30_0);
               }
-              stackIn_32_0 = this.field_e[var3_int];
+              stackIn_32_0 = this.archives[archiveGroup];
               return stackIn_32_0;
             }
             stackIn_13_0 = null;
@@ -584,27 +584,27 @@ final class ou {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ou.J(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ou.J(" + obfuscationGuard + ',' + mapTheme + ')');
         }
     }
 
-    private final void b(int param0) {
-        NodeDeque[] array$1 = null;
-        int var2_int = 0;
+    private final void initializeMapLists(int obfuscationGuard) {
+        NodeDeque[] sizeLists = null;
+        int guardQuotient = 0;
         RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
+        int mapTheme = 0;
+        int obfuscationControl = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.field_i = new NodeDeque[AttackEvent.field_A.length][];
-          var2_int = 35 / ((70 - param0) / 47);
-          var3 = 0;
-          while (var3 < AttackEvent.field_A.length) {
-            array$1 = new NodeDeque[AttackEvent.field_A[var3].length];
-            this.field_i[var3] = array$1;
-            var3++;
-            if (var4 == 0) {
+          this.mapsByThemeAndSize = new NodeDeque[AttackEvent.mapNamesByThemeAndSize.length][];
+          guardQuotient = 35 / ((70 - obfuscationGuard) / 47);
+          mapTheme = 0;
+          while (mapTheme < AttackEvent.mapNamesByThemeAndSize.length) {
+            sizeLists = new NodeDeque[AttackEvent.mapNamesByThemeAndSize[mapTheme].length];
+            this.mapsByThemeAndSize[mapTheme] = sizeLists;
+            mapTheme++;
+            if (obfuscationControl == 0) {
               continue;
             }
             break;
@@ -613,55 +613,55 @@ final class ou {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ou.N(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ou.N(" + obfuscationGuard + ')');
         }
     }
 
-    private final void a(boolean param0, int param1) {
-        int[] var3 = null;
+    private final void loadArchiveMaps(boolean obfuscationGuard, int archiveGroup) {
+        int[] themeIndices = null;
         RuntimeException var3_ref = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
+        int themeIndex = 0;
+        int mapTheme = 0;
+        int sizeCount = 0;
+        int sizeIndex = 0;
+        int obfuscationControl = 0;
         RuntimeException decompiledCaughtException = null;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param1 != 0 &&
-            param1 != 1) {
+          if (archiveGroup != 0 &&
+            archiveGroup != 1) {
             return;
           }
           if (0 >= df.field_M &&
-            param1 == 1 &&
-            !this.field_d) {
+            archiveGroup == 1 &&
+            !this.bypassMembershipChecks) {
             return;
           }
-          var3 = lp.field_a[param1];
-          if (param0) {
+          themeIndices = lp.mapThemesByArchive[archiveGroup];
+          if (obfuscationGuard) {
             field_h = (DiskCacheWorker) null;
           }
-          var4 = 0;
-          while (var4 < var3.length) {
+          themeIndex = 0;
+          while (themeIndex < themeIndices.length) {
             boolean decompiledFrameCompleted0 = true;
-            var5 = var3[var4];
-            if (var5 >= 0 && (!(var5 >= AttackEvent.field_A.length) ||
-              var8 != 0)) {
-              var6 = AttackEvent.field_A[var5].length;
-              var7 = 0;
-              while (var6 > var7) {
-                this.a(5301, var7, var5);
-                var7++;
-                if (var8 != 0) {
+            mapTheme = themeIndices[themeIndex];
+            if (mapTheme >= 0 && (!(mapTheme >= AttackEvent.mapNamesByThemeAndSize.length) ||
+              obfuscationControl != 0)) {
+              sizeCount = AttackEvent.mapNamesByThemeAndSize[mapTheme].length;
+              sizeIndex = 0;
+              while (sizeCount > sizeIndex) {
+                this.loadMapList(5301, sizeIndex, mapTheme);
+                sizeIndex++;
+                if (obfuscationControl != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
               }
             }
             if (decompiledFrameCompleted0) {
-              var4++;
+              themeIndex++;
             }
-            if (var8 == 0) {
+            if (obfuscationControl == 0) {
               continue;
             }
             break;
@@ -670,33 +670,33 @@ final class ou {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3_ref), "ou.B(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3_ref), "ou.B(" + obfuscationGuard + ',' + archiveGroup + ')');
         }
     }
 
-    final MapLayout a(byte param0, int param1) {
+    final MapLayout getTutorialMap(byte obfuscationGuard, int tutorialIndex) {
         RuntimeException var3 = null;
         MapLayout stackIn_4_0 = null;
         MapLayout stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 < this.field_b.length) {
-            stackIn_4_0 = this.field_b[param1];
+          if (tutorialIndex < this.tutorialMaps.length) {
+            stackIn_4_0 = this.tutorialMaps[tutorialIndex];
             return stackIn_4_0;
           }
-          if (param0 != 59) {
+          if (obfuscationGuard != 59) {
             field_c = 32;
           }
-          stackIn_9_0 = this.field_b[0];
+          stackIn_9_0 = this.tutorialMaps[0];
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ou.E(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ou.E(" + obfuscationGuard + ',' + tutorialIndex + ')');
         }
     }
 
-    ou(ResourceArchive param0, ResourceArchive param1, boolean param2) {
+    MapRepository(ResourceArchive freeArchive, ResourceArchive memberArchive, boolean bypassMembershipChecks) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -705,61 +705,61 @@ final class ou {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_e = new ResourceArchive[2];
-          this.field_d = param2;
-          this.a(24402, 0, param0);
-          this.a(24402, 1, param1);
-          this.b(-127);
-          this.a(false, 0);
-          this.a(false, 1);
-          this.a((byte) 111);
+          this.archives = new ResourceArchive[2];
+          this.bypassMembershipChecks = bypassMembershipChecks;
+          this.installArchive(24402, 0, freeArchive);
+          this.installArchive(24402, 1, memberArchive);
+          this.initializeMapLists(-127);
+          this.loadArchiveMaps(false, 0);
+          this.loadArchiveMaps(false, 1);
+          this.loadTutorialMaps((byte) 111);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_6_0 = var4;
           stackIn_6_1 = new StringBuilder().append("ou.<init>(");
-          if (param0 == null) {
+          if (freeArchive == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param1 == null) {
+          if (memberArchive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(bypassMembershipChecks).append(')').toString());
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
-        ResourceArchive var4 = null;
+    private final void loadMapList(int obfuscationGuard, int mapSizeSetting, int mapTheme) {
+        ResourceArchive archive = null;
         RuntimeException var4_ref = null;
-        int var5 = 0;
-        byte[] var6 = null;
-        int var7 = 0;
+        int mapIndex = 0;
+        byte[] encodedMap = null;
+        int obfuscationControl = 0;
         RuntimeException decompiledCaughtException = null;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4 = this.a(param0 ^ -5302, param2);
-          if (param0 != 5301) {
+          archive = this.getArchiveForTheme(obfuscationGuard ^ -5302, mapTheme);
+          if (obfuscationGuard != 5301) {
             return;
           }
-          if (var4 == null) {
+          if (archive == null) {
             return;
           }
-          this.field_i[param2][param1] = new NodeDeque();
-          var5 = 0;
-          while (AttackEvent.field_A[param2][param1].length > var5) {
-            var6 = var4.getFileByName(AttackEvent.field_A[param2][param1][var5], param0 - 5249, "");
-            if (var6 != null && (var6.length != 0 ||
-              var7 != 0)) {
-              this.field_i[param2][param1].addLast((byte) -119, (IntrusiveNode) (new MapLayout(var5, var6)));
+          this.mapsByThemeAndSize[mapTheme][mapSizeSetting] = new NodeDeque();
+          mapIndex = 0;
+          while (AttackEvent.mapNamesByThemeAndSize[mapTheme][mapSizeSetting].length > mapIndex) {
+            encodedMap = archive.getFileByName(AttackEvent.mapNamesByThemeAndSize[mapTheme][mapSizeSetting][mapIndex], obfuscationGuard - 5249, "");
+            if (encodedMap != null && (encodedMap.length != 0 ||
+              obfuscationControl != 0)) {
+              this.mapsByThemeAndSize[mapTheme][mapSizeSetting].addLast((byte) -119, (IntrusiveNode) (new MapLayout(mapIndex, encodedMap)));
             }
-            var5++;
-            if (var7 == 0) {
+            mapIndex++;
+            if (obfuscationControl == 0) {
               continue;
             }
             break;
@@ -768,7 +768,7 @@ final class ou {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4_ref), "ou.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4_ref), "ou.G(" + obfuscationGuard + ',' + mapSizeSetting + ',' + mapTheme + ')');
         }
     }
 

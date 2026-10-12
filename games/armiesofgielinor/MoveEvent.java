@@ -214,7 +214,7 @@ final class MoveEvent extends GameEvent {
               continue scanLoop1;
             }
             var9 = var4.pixelHeight;
-            rq.a((byte) -56);
+            rq.pushRasterState((byte) -56);
             var4.b();
             stackIn_23_0 = 0;
             break;
@@ -229,7 +229,7 @@ final class MoveEvent extends GameEvent {
           var12 = new RgbSprite(-(var9 * 2) + var4.pixelWidth, var9);
           var12.b();
           var4.f(-var9, 0);
-          QuickChatPhraseRepository.b(-18862);
+          QuickChatPhraseRepository.popRasterState(-18862);
           NodeIterator.field_b = new RgbSprite[]{var10_ref, var12, var11};
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

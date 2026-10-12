@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 204 reviewed class names, not a complete semantic map. Shared widget
+Armies has 206 reviewed class names, not a complete semantic map. Shared widget
 bounds, dropdown options/prefix selection, painter dispatch and expansion now
 have reviewed names with pointer, selection and arrow-pixel fixtures. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
@@ -125,6 +125,12 @@ chat decoders. Private identifier words have precise u16/u24 names. Decoded
 snapshots, response-target retention, duplicate suppression, prefixes and history
 category quotas have native fixtures and reading-guide documentation. Full network
 dispatch, malformed quick-chat reporting and rendered history remain unverified.
+
+MapRepository and RasterState now have reviewed names. Real archive/header
+fixtures cover theme/size/player-capacity selection, membership gates and tutorial
+fallback. Nested raster fixtures preserve target/clip restoration and pooled
+pixel-reference release. Production map loading, full battlefield setup and
+rendered raster behavior remain unverified.
 
 Camera overview grouping, centroid bounds, hold state and explicit tile focus
 now have reviewed names, alongside directional panning, dragging and velocity

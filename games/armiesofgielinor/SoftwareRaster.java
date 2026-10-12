@@ -53,23 +53,23 @@ final class SoftwareRaster {
         }
     }
 
-    final static void f(int param0, int param1, int param2, int param3) {
-        if (param0 < 0) {
-          param0 = 0;
+    final static void setClip(int left, int top, int right, int bottom) {
+        if (left < 0) {
+          left = 0;
         }
-        if (param1 < 0) {
-          param1 = 0;
+        if (top < 0) {
+          top = 0;
         }
-        if (param2 > width) {
-          param2 = width;
+        if (right > width) {
+          right = width;
         }
-        if (param3 > height) {
-          param3 = height;
+        if (bottom > height) {
+          bottom = height;
         }
-        clipLeft = param0;
-        clipTop = param1;
-        clipRight = param2;
-        clipBottom = param3;
+        clipLeft = left;
+        clipTop = top;
+        clipRight = right;
+        clipBottom = bottom;
         SoftwareRaster.c();
     }
 
@@ -1346,11 +1346,11 @@ final class SoftwareRaster {
         return;
     }
 
-    final static void a(int[] param0, int param1, int param2) {
-        pixels = param0;
-        width = param1;
-        height = param2;
-        SoftwareRaster.f(0, 0, param1, param2);
+    final static void setTarget(int[] targetPixels, int targetWidth, int targetHeight) {
+        pixels = targetPixels;
+        width = targetWidth;
+        height = targetHeight;
+        SoftwareRaster.setClip(0, 0, targetWidth, targetHeight);
     }
 
     final static void f(int param0, int param1, int param2, int param3, int param4) {

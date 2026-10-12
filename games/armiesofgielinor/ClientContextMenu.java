@@ -153,7 +153,7 @@ final class ClientContextMenu {
             if (ol.field_B == 0) {
               this.menu.addTextAction(12, pk.field_S, (byte) -110);
             }
-            this.menu.addTextAction(13, ou.field_g, (byte) -116);
+            this.menu.addTextAction(13, MapRepository.field_g, (byte) -116);
           }
           if (message.channelId == 1) {
             if (QuickChatCategory.field_D == 0) {

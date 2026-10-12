@@ -9,7 +9,7 @@ final class wn extends ih {
     static String lastQuickChatRecipientName;
     static String field_gb;
     private int[] field_S;
-    static String[] field_eb;
+    static String[] tutorialMapNames;
     static QuickChatMenu defaultQuickChatMenu;
     private vk field_hb;
     static String field_bb;
@@ -152,7 +152,7 @@ final class wn extends ih {
         }
         field_kb = null;
         defaultQuickChatMenu = null;
-        field_eb = null;
+        tutorialMapNames = null;
         field_bb = null;
         lastQuickChatRecipientName = null;
         field_gb = null;
@@ -340,7 +340,7 @@ final class wn extends ih {
 
     static {
         field_gb = "Move here";
-        field_eb = new String[]{"tutorial.lev", "tutorial2.lev"};
+        tutorialMapNames = new String[]{"tutorial.lev", "tutorial2.lev"};
         field_bb = "This unit cannot use ranged weapons.";
     }
 }

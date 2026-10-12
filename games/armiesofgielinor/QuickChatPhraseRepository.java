@@ -151,30 +151,30 @@ final class QuickChatPhraseRepository {
         }
     }
 
-    final static void b(int param0) {
-        fg var1_ref = null;
+    final static void popRasterState(int obfuscationGuard) {
+        RasterState guardedSnapshot = null;
         Object var1 = null;
-        fg var1_refLifetime1;
-        if (param0 != -18862) {
+        RasterState snapshot;
+        if (obfuscationGuard != -18862) {
           field_a = (String) null;
-          var1_ref = (fg) (ParasiteEvent.field_y.popLast((byte) -125));
-          if (var1_ref == null) {
+          guardedSnapshot = (RasterState) (ParasiteEvent.rasterStateStack.popLast((byte) -125));
+          if (guardedSnapshot == null) {
             throw new IllegalStateException();
           }
-          SoftwareRaster.a(var1_ref.field_t, var1_ref.field_u, var1_ref.field_q);
-          SoftwareRaster.f(var1_ref.field_p, var1_ref.field_r, var1_ref.field_s, var1_ref.field_o);
-          var1_ref.field_t = null;
-          EventPresenter.field_q.addLast((byte) -119, (IntrusiveNode) (var1_ref));
+          SoftwareRaster.setTarget(guardedSnapshot.pixels, guardedSnapshot.width, guardedSnapshot.height);
+          SoftwareRaster.setClip(guardedSnapshot.clipLeft, guardedSnapshot.clipTop, guardedSnapshot.clipRight, guardedSnapshot.clipBottom);
+          guardedSnapshot.pixels = null;
+          EventPresenter.rasterStatePool.addLast((byte) -119, (IntrusiveNode) (guardedSnapshot));
           return;
         }
-        var1_refLifetime1 = (fg) (ParasiteEvent.field_y.popLast((byte) -125));
-        if (var1_refLifetime1 == null) {
+        snapshot = (RasterState) (ParasiteEvent.rasterStateStack.popLast((byte) -125));
+        if (snapshot == null) {
           throw new IllegalStateException();
         }
-        SoftwareRaster.a(var1_refLifetime1.field_t, var1_refLifetime1.field_u, var1_refLifetime1.field_q);
-        SoftwareRaster.f(var1_refLifetime1.field_p, var1_refLifetime1.field_r, var1_refLifetime1.field_s, var1_refLifetime1.field_o);
-        var1_refLifetime1.field_t = null;
-        EventPresenter.field_q.addLast((byte) -119, (IntrusiveNode) (var1_refLifetime1));
+        SoftwareRaster.setTarget(snapshot.pixels, snapshot.width, snapshot.height);
+        SoftwareRaster.setClip(snapshot.clipLeft, snapshot.clipTop, snapshot.clipRight, snapshot.clipBottom);
+        snapshot.pixels = null;
+        EventPresenter.rasterStatePool.addLast((byte) -119, (IntrusiveNode) (snapshot));
     }
 
     final QuickChatPhrase getPhrase(int phraseId, int obfuscationGuard) {

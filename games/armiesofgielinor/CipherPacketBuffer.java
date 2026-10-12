@@ -249,7 +249,7 @@ final class CipherPacketBuffer extends PacketBuffer {
               if (!nm.a(jt.field_a, true)) {
                 if (!nm.a(param1, true)) {
                   if (jt.field_a == 16) {
-                    fg.a((byte) 111);
+                    RasterState.a((byte) 111);
                     ts.a((byte) -41);
                     vr.a(iw.field_l, 18);
                   }
@@ -288,7 +288,7 @@ final class CipherPacketBuffer extends PacketBuffer {
                   SkeletonLimitMarker.a(param0, param2 - 1);
                 }
                 if (jt.field_a == 16) {
-                  fg.a((byte) 111);
+                  RasterState.a((byte) 111);
                   ts.a((byte) -41);
                   vr.a(iw.field_l, 18);
                 }
@@ -333,7 +333,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           }
         }
         if (jt.field_a == 16) {
-          fg.a((byte) 111);
+          RasterState.a((byte) 111);
           ts.a((byte) -41);
           vr.a(iw.field_l, 18);
         }

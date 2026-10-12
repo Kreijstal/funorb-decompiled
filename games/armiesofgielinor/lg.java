@@ -22,7 +22,7 @@ final class lg {
           var2 = new RgbSprite(param1.getFileByName("", 49, "final_frame.jpg"), (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
           var3 = var2.pixelWidth;
           var4 = var2.pixelHeight;
-          rq.a((byte) -56);
+          rq.pushRasterState((byte) -56);
           wd.field_k = new RgbSprite(var3, 3 * var4 / 4);
           wd.field_k.b();
           var2.f(0, 0);
@@ -30,7 +30,7 @@ final class lg {
           vt.field_k.b();
           var2.f(0, -wd.field_k.pixelHeight);
           vt.field_k.offsetY = wd.field_k.pixelHeight;
-          QuickChatPhraseRepository.b(-18862);
+          QuickChatPhraseRepository.popRasterState(-18862);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

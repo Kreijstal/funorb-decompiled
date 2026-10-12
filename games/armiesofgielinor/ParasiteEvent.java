@@ -6,7 +6,7 @@ final class ParasiteEvent extends GameEvent {
     int sourceX;
     int destinationY;
     int destinationX;
-    static NodeDeque field_y;
+    static NodeDeque rasterStateStack;
     private int newOwnerPlayer;
     int sourceY;
     static String field_F;
@@ -25,7 +25,7 @@ final class ParasiteEvent extends GameEvent {
 
     public static void d(byte param0) {
         field_A = null;
-        field_y = null;
+        rasterStateStack = null;
         field_F = null;
         if (param0 != 46) {
           field_F = (String) null;
@@ -137,7 +137,7 @@ final class ParasiteEvent extends GameEvent {
     }
 
     static {
-        field_y = new NodeDeque();
+        rasterStateStack = new NodeDeque();
         field_F = "This game option has not yet been unlocked for use.";
     }
 }

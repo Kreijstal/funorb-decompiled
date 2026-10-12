@@ -591,7 +591,7 @@ final class ng {
           }
           kq.field_P.b();
           var1.h(0, 0);
-          QuickChatPhraseRepository.b(-18862);
+          QuickChatPhraseRepository.popRasterState(-18862);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ng.V(" + param0 + ')');
         }

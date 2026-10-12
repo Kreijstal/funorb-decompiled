@@ -174,7 +174,7 @@ final class fk implements WidgetPainter {
           if (widget.a(false)) {
             na.c(-4 + widget.width, 2 + var6_int, -67, widget.height - 4, 2 + var7);
           }
-          SoftwareRaster.f(var6_int, var7, var6_int + widget.width - 2, widget.height + var7);
+          SoftwareRaster.setClip(var6_int, var7, var6_int + widget.width - 2, widget.height + var7);
           var8 = this.field_c.optionList.getSelectedOption(-6508);
           if (var8 != null) {
             var9 = var8.toString();

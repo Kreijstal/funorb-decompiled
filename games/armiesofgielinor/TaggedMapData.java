@@ -44,7 +44,7 @@ final class TaggedMapData implements TaggedFieldReader {
         rb.e(9);
         if (var5 < 256) {
           SoftwareRaster.b(0, 0, SoftwareRaster.width, SoftwareRaster.height, 0, -var5 + 256);
-          QuickChatPhraseRepository.b(-18862);
+          QuickChatPhraseRepository.popRasterState(-18862);
           if (param2 > -60) {
             return;
           }
@@ -97,7 +97,7 @@ final class TaggedMapData implements TaggedFieldReader {
           }
           return;
         }
-        QuickChatPhraseRepository.b(-18862);
+        QuickChatPhraseRepository.popRasterState(-18862);
         if (param2 > -60) {
           return;
         }

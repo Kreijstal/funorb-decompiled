@@ -81,11 +81,11 @@ abstract class bi {
 
     final void a(int param0) {
         if (param0 == 5605) {
-          SoftwareRaster.a(this.field_b, this.field_a, this.field_g);
+          SoftwareRaster.setTarget(this.field_b, this.field_a, this.field_g);
           return;
         }
         field_f = (ResourceArchive) null;
-        SoftwareRaster.a(this.field_b, this.field_a, this.field_g);
+        SoftwareRaster.setTarget(this.field_b, this.field_a, this.field_g);
     }
 
     public static void b(int param0) {

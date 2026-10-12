@@ -43,7 +43,7 @@ final class rn {
 
     final static void a(int param0, String param1, boolean param2, boolean param3) {
         try {
-          ou.a(true);
+          MapRepository.a(true);
           KingBlackDragonEvent.field_C.j(param0 ^ -124);
           ContextActionMenu.field_Qb = new df(IsaacRandom.field_d, (String) null, fh.field_i, param2, param3);
           if (param0 != 3) {

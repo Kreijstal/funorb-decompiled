@@ -3,7 +3,7 @@
  */
 abstract class ArchiveProvider {
     static String field_b;
-    static ou field_e;
+    static MapRepository mapRepository;
     static int[] field_a;
     static ClientUiComponent field_d;
     static String field_c;
@@ -115,7 +115,7 @@ abstract class ArchiveProvider {
           RgbSprite var2 = (RgbSprite) null;
           ArchiveProvider.a((byte) 24, (RgbSprite) null);
         }
-        field_e = null;
+        mapRepository = null;
         field_d = null;
     }
 

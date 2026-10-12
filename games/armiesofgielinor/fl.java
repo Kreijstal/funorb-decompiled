@@ -204,7 +204,7 @@ final class fl {
     }
 
     final void a(int param0) {
-        QuickChatPhraseRepository.b(-18862);
+        QuickChatPhraseRepository.popRasterState(-18862);
         if (param0 < 15) {
           field_l = (String) null;
         }

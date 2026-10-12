@@ -349,7 +349,7 @@ final class CampaignMenu {
               vk.field_e[this.selectedCampaignEntry.entryId].g(var4, var5);
               this.selectedCampaignEntry.previewSprite.f(var4, var5, Math.abs(ContextualRuntimeException.a(param0 ^ -397, uk.field_n << 5) * 100 >> 16) + 80);
             }
-            QuickChatPhraseRepository.b(param0 ^ -18466);
+            QuickChatPhraseRepository.popRasterState(param0 ^ -18466);
             var6 = 5;
             var7 = 5 + rs.field_n.getParagraphHeight(this.selectedCampaignEntry.description, 232, 0);
             en.field_E.a(this.selectedCampaignEntry.description, var4 + var6, 200 + var5, -(2 * var6) + 236, var7, 16777215, -1, 1, 0, 0);
@@ -475,7 +475,7 @@ final class CampaignMenu {
           if (param0 != 13) {
             field_n = (String) null;
           }
-          QuickChatPhraseRepository.b(param0 - 18875);
+          QuickChatPhraseRepository.popRasterState(param0 - 18875);
           stackIn_17_0 = db.a(true, param2.left);
           stackIn_17_1 = MatchConditionEntry.a(param2.top, (byte) 94);
           stackIn_17_2 = param2.width;
@@ -1011,7 +1011,7 @@ final class CampaignMenu {
                 var16 = stackIn_26_0;
                 while (var16 < var13[0].length) {
                   var17 = var13[var15_int][-var16 + var13[0].length - 1];
-                  var18 = UnitLossCondition.field_d[var7.field_p].field_i[var17];
+                  var18 = UnitLossCondition.field_d[var7.mapTheme].field_i[var17];
                   var19_int = db.a(true, var8Lifetime1 + var9Lifetime1 * (var14 - var16) + var5);
                   var20 = MatchConditionEntry.a(var6Lifetime1 + var10Lifetime1 * var15_int, (byte) 94);
                   SoftwareRaster.f(var19_int, var20, var9Lifetime1, var10Lifetime1, var18);
@@ -1334,7 +1334,7 @@ final class CampaignMenu {
             }
             break;
           }
-          previewBattlefield = new Battlefield(0, participantNames, -1, terrain, 0, true, false, mission.mapSizeSetting, 1, layout.field_p, false, (int[][]) null, 4, 0, 0, mission);
+          previewBattlefield = new Battlefield(0, participantNames, -1, terrain, 0, true, false, mission.mapSizeSetting, 1, layout.mapTheme, false, (int[][]) null, 4, 0, 0, mission);
           previewBattlefield.localPlayer = 0;
           try {
             TabbedPanel.a(mission, (byte) -26);
@@ -1359,7 +1359,7 @@ final class CampaignMenu {
               if (stackIn_20_0 >= stackIn_20_1) {
                 terrainType = 0;
               }
-              tileColour = UnitLossCondition.field_d[layout.field_p].field_i[terrainType];
+              tileColour = UnitLossCondition.field_d[layout.mapTheme].field_i[terrainType];
               if (null != tile.occupant) {
                 unit = tile.occupant;
                 tileColour = op.field_c[0][unit.ownerPlayer];
@@ -1380,7 +1380,7 @@ final class CampaignMenu {
             stackIn_20_0 = obfuscationGuard;
             stackIn_20_1 = -18863;
           }
-          QuickChatPhraseRepository.b(stackIn_20_0 + stackIn_20_1);
+          QuickChatPhraseRepository.popRasterState(stackIn_20_0 + stackIn_20_1);
           stackIn_21_0 = sprite;
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -1877,7 +1877,7 @@ final class CampaignMenu {
               if (decompiledSharedTail0) {
                 SoftwareRaster.c(var8, var8, 0, var8, var6.canvasWidth, -var8 + var6.canvasHeight);
               }
-              QuickChatPhraseRepository.b(-18862);
+              QuickChatPhraseRepository.popRasterState(-18862);
               var3.previewSprite = var7;
               if (var9 != 0) {
                 var3.statusText = bn.field_g;

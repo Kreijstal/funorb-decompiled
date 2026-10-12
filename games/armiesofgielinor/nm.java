@@ -488,7 +488,7 @@ final class nm extends hn {
           stackIn_28_1 = (param1) && (!vk.field_f);
           ((ClientUiComponent) (Object) stackIn_27_0).draw(stackIn_28_1, 20);
         }
-        QuickChatPhraseRepository.b(-18862);
+        QuickChatPhraseRepository.popRasterState(-18862);
     }
 
     final static li a(int param0, int param1, byte[] param2) {

@@ -3,17 +3,17 @@
  */
 import java.io.*;
 
-final class fg extends IntrusiveNode {
+final class RasterState extends IntrusiveNode {
     static String field_l;
-    int field_q;
+    int height;
     static String field_k;
-    int[] field_t;
+    int[] pixels;
     static String field_m;
-    int field_o;
-    int field_r;
-    int field_p;
-    int field_s;
-    int field_u;
+    int clipBottom;
+    int clipTop;
+    int clipLeft;
+    int clipRight;
+    int width;
     static String field_n;
 
     public static void a(int param0) {
@@ -157,7 +157,7 @@ final class fg extends IntrusiveNode {
               var8[var10_int] = null;
             }
             if (obfuscationGuard >= -7) {
-              fg.a(-20);
+              RasterState.a(-20);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -199,21 +199,21 @@ final class fg extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7) {
+    final void capture(int clipBottom, int clipLeft, int clipRight, int[] pixels, int clipTop, int height, int width, int obfuscationGuard) {
         try {
-          this.field_o = param0;
-          this.field_u = param6;
-          this.field_p = param1;
-          this.field_t = param3;
-          if (param7 > -55) {
+          this.clipBottom = clipBottom;
+          this.width = width;
+          this.clipLeft = clipLeft;
+          this.pixels = pixels;
+          if (obfuscationGuard > -55) {
             ClientUiComponent var10 = (ClientUiComponent) null;
-            fg.buildQuickChatResponseMenu(-76, (ClientUiComponent) null, (int[]) null, (ClientUiComponent) null, (ClientUiComponent) null);
+            RasterState.buildQuickChatResponseMenu(-76, (ClientUiComponent) null, (int[]) null, (ClientUiComponent) null, (ClientUiComponent) null);
           }
-          this.field_r = param4;
-          this.field_s = param2;
-          this.field_q = param5;
+          this.clipTop = clipTop;
+          this.clipRight = clipRight;
+          this.height = height;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fg.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fg.F(" + clipBottom + ',' + clipLeft + ',' + clipRight + ',' + (pixels != null ? "{...}" : "null") + ',' + clipTop + ',' + height + ',' + width + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -424,7 +424,7 @@ final class fg extends IntrusiveNode {
         }
     }
 
-    fg() {
+    RasterState() {
     }
 
     static {

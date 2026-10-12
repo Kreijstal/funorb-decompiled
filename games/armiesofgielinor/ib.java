@@ -225,7 +225,7 @@ final class ib extends mk {
           scanLoop1: while (true) {
             stackIn_25_0 = (!od.field_c[kd.field_X]) ? 0 : 1;
             if (stackIn_25_0 + SectorCacheStore.field_j[kd.field_X].length > var12_int) {
-              SoftwareRaster.f(8 + param2, 44 + param8, param2 + param5 - 8, param1 + (param8 - 40 - 4));
+              SoftwareRaster.setClip(8 + param2, 44 + param8, param2 + param5 - 8, param1 + (param8 - 40 - 4));
               if (var12_int % 2 != 1) {
                 stackIn_29_0 = 0;
               } else {
@@ -276,7 +276,7 @@ final class ib extends mk {
               } else {
                 stackIn_53_3 = -44 + (param8 + param1);
               }
-              SoftwareRaster.f(stackIn_52_0, stackIn_52_1, stackIn_52_2, stackIn_53_3);
+              SoftwareRaster.setClip(stackIn_52_0, stackIn_52_1, stackIn_52_2, stackIn_53_3);
               if ((uh.field_e[kd.field_X][1] >> 1) + var10 >= 0) {
                 if (var11 > -1) {
                   if (kd.field_X != 1) {
@@ -328,7 +328,7 @@ final class ib extends mk {
                 if (1 == var12_int % 2) {
                   var10 += 80;
                 }
-                SoftwareRaster.f(param2 + 8, 40 + param8 + 4, param2 + param5 - 8, -4 + param8 - (-param1 + 40));
+                SoftwareRaster.setClip(param2 + 8, 40 + param8 + 4, param2 + param5 - 8, -4 + param8 - (-param1 + 40));
                 var11++;
               } else {
                 var11++;

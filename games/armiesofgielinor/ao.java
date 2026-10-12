@@ -134,7 +134,7 @@ final class ao extends lk {
             }
           }
           this.field_v.a(widget, (byte) 113, originY, originX, this);
-          QuickChatPhraseRepository.b(-18862);
+          QuickChatPhraseRepository.popRasterState(-18862);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -127,7 +127,7 @@ final class AiActionCandidate extends IntrusiveNode {
             return true;
           }
           if (param0 != 0) {
-            var6 = ou.field_a;
+            var6 = MapRepository.field_a;
             var2 = var6;
             var3 = 0;
             while (var3 < var6.length) {

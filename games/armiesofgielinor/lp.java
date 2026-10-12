@@ -3,7 +3,7 @@
  */
 final class lp {
     static int[] field_c;
-    static int[][] field_a;
+    static int[][] mapThemesByArchive;
     static IndexedSprite[] field_b;
 
     final static int a(String param0, boolean param1, boolean param2) {
@@ -44,12 +44,12 @@ final class lp {
         }
         field_b = null;
         field_c = null;
-        field_a = (int[][]) null;
+        mapThemesByArchive = (int[][]) null;
     }
 
     final static ClientUiComponent b(int param0) {
         if (param0 > -122) {
-          field_a = (int[][]) null;
+          mapThemesByArchive = (int[][]) null;
           return TaggedMapData.field_g.listContent;
         }
         return TaggedMapData.field_g.listContent;
@@ -57,6 +57,6 @@ final class lp {
 
     static {
         field_c = new int[]{2718708, 13182994, 7325724, 13094936, 16351443, 39065, 11545598, 14322432};
-        field_a = new int[][]{new int[]{0, 1, 2, 3}, new int[]{}};
+        mapThemesByArchive = new int[][]{new int[]{0, 1, 2, 3}, new int[]{}};
     }
 }

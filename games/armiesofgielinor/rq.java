@@ -21,14 +21,14 @@ final class rq extends IntrusiveNode {
         field_n = null;
     }
 
-    final static void a(byte param0) {
-        fg var1 = (fg) (EventPresenter.field_q.popLast((byte) -121));
-        if (var1 == null) {
-          var1 = new fg();
+    final static void pushRasterState(byte obfuscationGuard) {
+        RasterState snapshot = (RasterState) (EventPresenter.rasterStatePool.popLast((byte) -121));
+        if (snapshot == null) {
+          snapshot = new RasterState();
         }
-        if (param0 == -56) {
-          var1.a(SoftwareRaster.clipBottom, SoftwareRaster.clipLeft, SoftwareRaster.clipRight, SoftwareRaster.pixels, SoftwareRaster.clipTop, SoftwareRaster.height, SoftwareRaster.width, -89);
-          ParasiteEvent.field_y.addLast((byte) -119, (IntrusiveNode) (var1));
+        if (obfuscationGuard == -56) {
+          snapshot.capture(SoftwareRaster.clipBottom, SoftwareRaster.clipLeft, SoftwareRaster.clipRight, SoftwareRaster.pixels, SoftwareRaster.clipTop, SoftwareRaster.height, SoftwareRaster.width, -89);
+          ParasiteEvent.rasterStateStack.addLast((byte) -119, (IntrusiveNode) (snapshot));
           return;
         }
     }
@@ -36,7 +36,7 @@ final class rq extends IntrusiveNode {
     final static void a(boolean param0) {
         IsaacRandom.field_g = new kd();
         if (param0) {
-          rq.a((byte) 79);
+          rq.pushRasterState((byte) 79);
           lt.field_g.a(IsaacRandom.field_g, (byte) 78);
           return;
         }

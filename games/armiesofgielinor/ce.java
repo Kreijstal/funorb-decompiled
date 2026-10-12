@@ -125,7 +125,7 @@ final class ce extends tj implements he {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (this.field_G == param4) {
-            ou.b((byte) 126);
+            MapRepository.b((byte) 126);
           } else {
             if (this.field_L != param4) {
               if (this.field_E == param4) {

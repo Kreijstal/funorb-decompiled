@@ -304,7 +304,7 @@ final class fe {
           field_g.b();
           SoftwareRaster.b();
           field_i.b(param0, 0, field_i.field_H + 3, 0, -1);
-          SoftwareRaster.a(var5, var6, var7);
+          SoftwareRaster.setTarget(var5, var6, var7);
           fe.c();
           if (param4) {
             fe.a(field_g, param1, param2, var8, param3);
@@ -451,7 +451,7 @@ final class fe {
           field_g.b();
           SoftwareRaster.b();
           field_i.b(param0, 0, field_i.field_H + 3, 0, -1);
-          SoftwareRaster.a(var5, var6, var7);
+          SoftwareRaster.setTarget(var5, var6, var7);
           fe.c();
           if (param4) {
             fe.b(field_g, param1, param2, var8, param3);

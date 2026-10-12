@@ -119,7 +119,7 @@ final class pk extends hv {
             }
           }
           var18.b(112, 144, var18.canvasWidth << 4, var18.canvasHeight << 4, -this.field_U << 10, 4096);
-          QuickChatPhraseRepository.b(-18862);
+          QuickChatPhraseRepository.popRasterState(-18862);
           this.field_Y.f(var9 - (var18.canvasWidth >> 1), -var18.canvasHeight + var10, 256);
           return;
         }
@@ -158,7 +158,7 @@ final class pk extends hv {
           }
         }
         var17.b(112, 144, var17.canvasWidth << 4, var17.canvasHeight << 4, -this.field_U << 10, 4096);
-        QuickChatPhraseRepository.b(-18862);
+        QuickChatPhraseRepository.popRasterState(-18862);
         this.field_Y.f(var9 - (var17.canvasWidth >> 1), -var17.canvasHeight + var10, 256);
         return;
     }

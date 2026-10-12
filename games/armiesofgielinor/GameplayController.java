@@ -188,7 +188,7 @@ final class GameplayController {
           var16 = this.battlefield.damageTakenByPlayer[var5.playerSlot];
           var10 -= 32;
           var11 += 42;
-          rs.field_n.b(fg.field_m, db.a(true, var10), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
+          rs.field_n.b(RasterState.field_m, db.a(true, var10), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
           rs.field_n.a(Integer.toString(var15), db.a(true, var11), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
           var14 = var14 + var13;
           rs.field_n.b(OwnerChangeEvent.field_y, db.a(true, var10), MatchConditionEntry.a(var14, (byte) 94), 16777215, -1);
@@ -2833,7 +2833,7 @@ final class GameplayController {
           if (stackIn_35_0 != stackIn_35_1) {
             this.startEquipmentTutorial((byte) 125);
           }
-          SoftwareRaster.f(db.a(true, 374), MatchConditionEntry.a(33 + param0, (byte) 94), db.a(true, 591), MatchConditionEntry.a(192 + (param0 + 33), (byte) 94));
+          SoftwareRaster.setClip(db.a(true, 374), MatchConditionEntry.a(33 + param0, (byte) 94), db.a(true, 591), MatchConditionEntry.a(192 + (param0 + 33), (byte) 94));
           var6Lifetime1 = -(uk.field_n / 3) % pc.field_j.pixelHeight;
           pc.field_j.f(db.a(true, 374), MatchConditionEntry.a(var6Lifetime1 + param0 + 33, (byte) 94));
           pc.field_j.f(db.a(true, 374), MatchConditionEntry.a(pc.field_j.pixelHeight + var6Lifetime1 + (param0 + 33), (byte) 94));
@@ -5129,7 +5129,7 @@ final class GameplayController {
             }
           }
           if (decompiledFrameCompleted0) {
-            SoftwareRaster.f(4 + param0, param2 + 33, param0 + 4 + 217, param2 + 33 + 192);
+            SoftwareRaster.setClip(4 + param0, param2 + 33, param0 + 4 + 217, param2 + 33 + 192);
             var6Lifetime1 = -(uk.field_n / param1) % pc.field_j.pixelHeight;
             pc.field_j.f(param0 + 3, var6Lifetime1 + (param2 + 33));
             pc.field_j.f(param0 + 3, pc.field_j.pixelHeight + (33 + param2) + var6Lifetime1);
@@ -6171,7 +6171,7 @@ final class GameplayController {
                         !this.battlefield.field_X &&
                         this.battlefield.currentPlayer == this.controlledPlayerId &&
                         !this.field_bc) {
-                        var2 = fg.field_k;
+                        var2 = RasterState.field_k;
                         decompiledFrameRemainder11 = (var20 != 0);
                       }
                       if (decompiledFrameRemainder11) {
@@ -7450,7 +7450,7 @@ final class GameplayController {
           stackIn_18_5 = MatchConditionEntry.a(param0 - 2, (byte) 94);
           stackIn_19_6 = !((1 << var6_int & this.battlefield.field_C) <= 0);
           ((CoatOfArms) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2, stackIn_11_3, stackIn_15_4, stackIn_18_5, stackIn_19_6, false, param2 ^ -3);
-          QuickChatPhraseRepository.b(-18862);
+          QuickChatPhraseRepository.popRasterState(-18862);
           fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, io.field_m, var8, 0, 0);
           if (param3 <= -1) {
             fe.b(DualNodeIterator.field_g, db.a(true, param1 + 67), MatchConditionEntry.a(18 + param0, (byte) 94), true);
@@ -9233,7 +9233,7 @@ final class GameplayController {
                     var8 = var3 * (-(20 * this.battlefield.mapHeight) + (var5 + var6)) / 40;
                     var8 = var8 + (120 + var4);
                     var7 = var7 + (var4 + (-220 + this.field_H));
-                    SoftwareRaster.f(var4 + (-220 + this.field_H), var4 + 120, var3 * this.battlefield.mapWidth + this.field_H - 220 + var4, var3 * this.battlefield.mapHeight + 120 + var4);
+                    SoftwareRaster.setClip(var4 + (-220 + this.field_H), var4 + 120, var3 * this.battlefield.mapWidth + this.field_H - 220 + var4, var3 * this.battlefield.mapHeight + 120 + var4);
                     SoftwareRaster.d(-(var3 * 8) + var7, var8, var7, -(8 * var3) + var8, 16777215, 128);
                     SoftwareRaster.d(var7 + 8 * var3, var8, var7, 8 * var3 + var8, 16777215, 128);
                     SoftwareRaster.d(var7 + 8 * var3, var8, var7, var8 - var3 * 8, 16777215, 128);
@@ -10221,7 +10221,7 @@ final class GameplayController {
           }
           SoftwareRaster.b(param3 + 37, param0 + param5 - 70, 265, 25, 0, 128);
           var9 = param4.getDisplayName((byte) 124).toLowerCase();
-          SoftwareRaster.f(37 + param3, param0 - 70 + param5, 245 + param3, param0 + param5 - 45);
+          SoftwareRaster.setClip(37 + param3, param0 - 70 + param5, 245 + param3, param0 + param5 - 45);
           fe.a(var9, -param2 + 42 + param3, param0 + (-43 + param5), 16777215, true);
           SoftwareRaster.a();
           lp.field_b[vg.field_r[param4.terrainType]].draw(param3 + 273, param0 + (param5 - 74));

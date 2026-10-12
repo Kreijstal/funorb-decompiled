@@ -35,8 +35,8 @@ final class qf {
           er.field_a = param6;
           LeaderEscortCondition.field_i = param7;
           ai.field_T = (ResourceProtocolClient) ((Object) new SocketResourceClient());
-          ou.field_h = new DiskCacheWorker(param8);
-          oi.field_c = new dd(ai.field_T, ou.field_h);
+          MapRepository.field_h = new DiskCacheWorker(param8);
+          oi.field_c = new dd(ai.field_T, MapRepository.field_h);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

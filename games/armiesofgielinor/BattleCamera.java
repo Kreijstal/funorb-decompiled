@@ -357,7 +357,7 @@ final class BattleCamera {
         var10 = var4;
         var11 = so.field_b.field_a;
         var12 = so.field_b.field_g;
-        SoftwareRaster.f(0, 0, var11, var12);
+        SoftwareRaster.setClip(0, 0, var11, var12);
         var13 = 0;
         while (var8 < 256 + var12 + 40) {
           while (80 + var11 > var7) {
@@ -372,7 +372,7 @@ final class BattleCamera {
               stackIn_19_4 = 99;
               stackIn_19_5 = var7;
               stackIn_20_6 = !(var8 <= var12 + 40);
-              fg.a(stackIn_19_0, stackIn_19_1, stackIn_19_2, stackIn_19_3, stackIn_19_4, stackIn_19_5, stackIn_20_6);
+              RasterState.a(stackIn_19_0, stackIn_19_1, stackIn_19_2, stackIn_19_3, stackIn_19_4, stackIn_19_5, stackIn_20_6);
             }
             var7 += 80;
             var10++;
@@ -1059,7 +1059,7 @@ final class BattleCamera {
         var9 = var3;
         var10 = so.field_b.field_a;
         var11 = so.field_b.field_g;
-        SoftwareRaster.f(0, 0, var10, var11);
+        SoftwareRaster.setClip(0, 0, var10, var11);
         var12 = 0;
         while (var11 + 200 + 256 > var7) {
           while (var6 < var10 + 80) {

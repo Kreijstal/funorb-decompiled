@@ -1239,7 +1239,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_AWARD_HEALTHGAINED");
                 if (null != var2) {
-                  fg.field_l = uu.a(var2, (byte) -107);
+                  RasterState.field_l = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "LABEL_AWARD_MOSTUNITS");
                 if (null != var2) {
@@ -1687,7 +1687,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "BUTTON_ENDTURN");
                 if (null != var2) {
-                  fg.field_k = uu.a(var2, (byte) 11);
+                  RasterState.field_k = uu.a(var2, (byte) 11);
                 }
                 var2 = fk.a(false, "BUTTON_TOGGLEMAP");
             }
@@ -3395,7 +3395,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "RESULTS_TURNSUSED");
                 if (null != var2) {
-                  fg.field_m = uu.a(var2, (byte) -123);
+                  RasterState.field_m = uu.a(var2, (byte) -123);
                 }
                 var2 = fk.a(false, "RESULTS_DAMAGETAKEN");
                 if (null != var2) {
@@ -5083,7 +5083,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_NOTSONGSTRESS");
                 if (var2 != null) {
-                  fg.field_n = uu.a(var2, (byte) 16);
+                  RasterState.field_n = uu.a(var2, (byte) 16);
                 }
                 var2 = fk.a(false, "TERROR_NOTCYCLOPS");
                 if (var2 != null) {
@@ -5480,7 +5480,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_STOCK");
                 if (null != var2) {
-                  ou.field_j = uu.a(var2, (byte) 20);
+                  MapRepository.field_j = uu.a(var2, (byte) 20);
                 }
                 var2 = fk.a(false, "LABEL_STORE");
                 if (var2 != null) {

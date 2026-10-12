@@ -87,7 +87,7 @@ final class TutorialController {
             stackIn_53_0 = te.field_n * 100 / 256;
           }
           var13 = stackIn_53_0;
-          SoftwareRaster.f(var10, 5 + var9, var10 + var13, var9 + 19);
+          SoftwareRaster.setClip(var10, 5 + var9, var10 + var13, var9 + 19);
           kt.field_o[1].g(var10, 5 + var9);
           SoftwareRaster.a();
           return;
@@ -384,15 +384,15 @@ final class TutorialController {
               }
               var3Lifetime1 = 0;
               if (TrianglePulse.field_c > 312) {
-                var3Lifetime1 = (TrianglePulse.field_c - 312) * ou.field_c / 291;
+                var3Lifetime1 = (TrianglePulse.field_c - 312) * MapRepository.field_c / 291;
               }
               if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(param0, 34), db.a(param0, 292), MatchConditionEntry.a(64, (byte) 94), MatchConditionEntry.a(380, (byte) 94))) {
                 discarded$0 = this.a(CachedArchiveProvider.spellMenuRoot, true, var3Lifetime1, 0, 0, 97);
               }
               if (fa.field_j != 2 &&
-                IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 279), db.a(true, 293), MatchConditionEntry.a(68 + ou.field_c, (byte) 94), MatchConditionEntry.a(60 - (-ou.field_c - 24), (byte) 94))) {
+                IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 279), db.a(true, 293), MatchConditionEntry.a(68 + MapRepository.field_c, (byte) 94), MatchConditionEntry.a(60 - (-MapRepository.field_c - 24), (byte) 94))) {
                 fa.field_j = 2;
-                RgbSpriteBase.field_u = -ou.field_c + (-68 + ko.pointerY);
+                RgbSpriteBase.field_u = -MapRepository.field_c + (-68 + ko.pointerY);
               }
               if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(param0, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
                 var4Lifetime1 = 4;
@@ -481,7 +481,7 @@ final class TutorialController {
           }
           if (decompiledFrameCompleted0) {
             fe.b(db.a(true, 30), MatchConditionEntry.a(50, (byte) 94), 580, 90, EffectPresentation.field_j, jh.field_k, 0, 256);
-            SoftwareRaster.f(db.a(true, 34), MatchConditionEntry.a(54, (byte) 94), db.a(true, 606), MatchConditionEntry.a(136, (byte) 94));
+            SoftwareRaster.setClip(db.a(true, 34), MatchConditionEntry.a(54, (byte) 94), db.a(true, 606), MatchConditionEntry.a(136, (byte) 94));
           }
           var2_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -512,7 +512,7 @@ final class TutorialController {
           if (decompiledNaturalLoopExit0) {
             SoftwareRaster.a();
             fe.b(db.a(true, 30), MatchConditionEntry.a(150, (byte) 94), 270, 270, EffectPresentation.field_j, jh.field_k, 0, 256);
-            SoftwareRaster.f(db.a(true, 34), MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
+            SoftwareRaster.setClip(db.a(true, 34), MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
             stackIn_26_0 = pg.playerProfile.getUnlockLevel(0);
             stackIn_26_1 = ah.field_b;
           }
@@ -625,7 +625,7 @@ final class TutorialController {
             field_b = (String) null;
           }
           if (BattleUnitRenderer.field_a != null) {
-            SoftwareRaster.f(db.a(true, 314), MatchConditionEntry.a(158, (byte) 94), db.a(param0, 606), MatchConditionEntry.a(311, (byte) 94));
+            SoftwareRaster.setClip(db.a(true, 314), MatchConditionEntry.a(158, (byte) 94), db.a(param0, 606), MatchConditionEntry.a(311, (byte) 94));
             BattleUnitRenderer.field_a.g(db.a(true, 326), MatchConditionEntry.a(-var2_int + 154, (byte) 94));
           }
           if (1 == fa.field_j) {
@@ -827,7 +827,7 @@ final class TutorialController {
           var4 = 89;
           var5 = field_e;
           fe.c(CampaignQuicksave.field_i, db.a(true, var3[0]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
-          fe.c(ou.field_f, db.a(true, var3[1]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
+          fe.c(MapRepository.field_f, db.a(true, var3[1]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           fe.c(ts.field_g, db.a(true, var3[2]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           fe.c(vi.field_c, db.a(true, var3[3]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           fe.c(hq.field_c, db.a(true, var3[4]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
@@ -3648,7 +3648,7 @@ final class TutorialController {
           boolean decompiledFrameRemainder0 = true;
           fe.b(db.a(true, 30), MatchConditionEntry.a(60, (byte) 94), 270, 324, EffectPresentation.field_j, jh.field_k, 0, 256);
           if (ClientContextMenu.field_k == 0) {
-            SoftwareRaster.f(db.a(true, 34), MatchConditionEntry.a(64, (byte) 94), db.a(true, 296), MatchConditionEntry.a(380, (byte) 94));
+            SoftwareRaster.setClip(db.a(true, 34), MatchConditionEntry.a(64, (byte) 94), db.a(true, 296), MatchConditionEntry.a(380, (byte) 94));
             if (vu.field_O == null ||
               ts.currentSpellMenu == vu.field_O.parent ||
               vu.field_O == ts.currentSpellMenu.parent) {
@@ -3705,13 +3705,13 @@ final class TutorialController {
             }
           }
           if (decompiledFrameRemainder0) {
-            SoftwareRaster.f(db.a(true, 34), MatchConditionEntry.a(64, (byte) 94), db.a(true, 296), MatchConditionEntry.a(380, (byte) 94));
+            SoftwareRaster.setClip(db.a(true, 34), MatchConditionEntry.a(64, (byte) 94), db.a(true, 296), MatchConditionEntry.a(380, (byte) 94));
             var4 = 0;
             boolean decompiledSharedTail0 = !(TrianglePulse.field_c > 312);
             if (!decompiledSharedTail0) {
-              var4 = ou.field_c * (-312 + TrianglePulse.field_c) / 291;
+              var4 = MapRepository.field_c * (-312 + TrianglePulse.field_c) / 291;
               SoftwareRaster.f(db.a(true, 279), MatchConditionEntry.a(67, (byte) 94), 14, 310, 2302755);
-              SocialListPanel.field_Jb.g(db.a(true, 280), MatchConditionEntry.a(68 + ou.field_c, (byte) 94));
+              SocialListPanel.field_Jb.g(db.a(true, 280), MatchConditionEntry.a(68 + MapRepository.field_c, (byte) 94));
               decompiledSharedTail0 = (var8 != 0);
             }
             if (decompiledSharedTail0) {
@@ -3721,8 +3721,8 @@ final class TutorialController {
             discarded$3 = this.a(0, CachedArchiveProvider.spellMenuRoot, true, 0, var4, (byte) 116);
             this.c(0);
             SoftwareRaster.a();
-            fe.b(ou.field_j, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, true);
-            fe.a(ou.field_j, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, nd.field_b, true);
+            fe.b(MapRepository.field_j, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, true);
+            fe.a(MapRepository.field_j, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, nd.field_b, true);
           }
           SoftwareRaster.a();
           fe.b(db.a(true, 310), MatchConditionEntry.a(60, (byte) 94), 300, 80, EffectPresentation.field_j, jh.field_k, 0, 256);
@@ -4196,7 +4196,7 @@ final class TutorialController {
           var4 = (int)(128.0 - 128.0 * Math.cos((double)tf.field_k * 3.141592653589793 / 256.0));
           var5 = (int)(-(128.0 * Math.cos((double)vs.field_f * 3.141592653589793 / 256.0)) + 128.0);
           var6 = -54 / ((-52 - param0) / 42);
-          SoftwareRaster.f(db.a(true, 34), MatchConditionEntry.a(54, (byte) 94), db.a(true, 606), MatchConditionEntry.a(136, (byte) 94));
+          SoftwareRaster.setClip(db.a(true, 34), MatchConditionEntry.a(54, (byte) 94), db.a(true, 606), MatchConditionEntry.a(136, (byte) 94));
           var7 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (7 <= var7))) {
@@ -4230,7 +4230,7 @@ final class TutorialController {
             fe.b(db.a(true, 30), MatchConditionEntry.a(150, (byte) 94), 270, 270, EffectPresentation.field_j, jh.field_k, 0, 256);
             stackIn_18_0 = db.a(true, 34);
           }
-          SoftwareRaster.f(stackIn_18_0, MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
+          SoftwareRaster.setClip(stackIn_18_0, MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
           ce.field_F[li.field_q + 1].f(db.a(true, 36), MatchConditionEntry.a(156, (byte) 94), 256 - var4);
           ce.field_F[1 + MoveAttackAction.field_s].f(db.a(true, 36), MatchConditionEntry.a(156, (byte) 94), 256 - var5);
           if (null != b.field_n) {
@@ -4500,23 +4500,23 @@ final class TutorialController {
             if (decompiledFrameRemainder0) {
               var2_int = ko.pointerY + (-RgbSpriteBase.field_u - 68);
               if (var2_int < 0) {
-                ou.field_c = 0;
+                MapRepository.field_c = 0;
                 if (var3 != 0) {
                   if (291 >= var2_int) {
-                    ou.field_c = var2_int;
-                    ou.field_c = 291;
+                    MapRepository.field_c = var2_int;
+                    MapRepository.field_c = 291;
                   } else {
-                    ou.field_c = 291;
+                    MapRepository.field_c = 291;
                   }
                 }
               } else {
                 if (291 >= var2_int) {
-                  ou.field_c = var2_int;
+                  MapRepository.field_c = var2_int;
                   if (var3 != 0) {
-                    ou.field_c = 291;
+                    MapRepository.field_c = 291;
                   }
                 } else {
-                  ou.field_c = 291;
+                  MapRepository.field_c = 291;
                 }
               }
             }

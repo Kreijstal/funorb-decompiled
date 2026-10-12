@@ -1326,7 +1326,7 @@ public final class ArmiesOfGielinor extends wf {
           IndexedSpriteBase.a(18347);
           hf.a((byte) 19);
           HuffmanCodec.a(-1);
-          ou.a(4116);
+          MapRepository.a(4116);
           NodeIterator.a((byte) -121);
           vs.a(param0 ^ 21);
           nr.a((byte) -119);
@@ -1553,7 +1553,7 @@ public final class ArmiesOfGielinor extends wf {
           wm.a(-10743);
           wd.a(200);
           ad.a((byte) 63);
-          fg.a(-22856);
+          RasterState.a(-22856);
           CampaignResult.a((byte) -116);
           RegionAnchor.a(true);
           pf.b((byte) -49);
@@ -2147,7 +2147,7 @@ public final class ArmiesOfGielinor extends wf {
             }
             if (null != ce.field_M &&
               oh.field_M != null) {
-              ArchiveProvider.field_e = new ou(ce.field_M, oh.field_M, false);
+              ArchiveProvider.mapRepository = new MapRepository(ce.field_M, oh.field_M, false);
               ce.field_M = null;
               oh.field_M = null;
               return false;

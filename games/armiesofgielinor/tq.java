@@ -72,7 +72,7 @@ final class tq {
             var16.b();
             SoftwareRaster.f(0, 0, 16, 16, param3);
           }
-          SoftwareRaster.a(var18, var7, var8);
+          SoftwareRaster.setTarget(var18, var7, var8);
           return new RgbSprite[]{var10, var11, var10, var9, (RgbSprite) (var14), var9, var12, var13, var12};
         }
         return (RgbSprite[]) null;
