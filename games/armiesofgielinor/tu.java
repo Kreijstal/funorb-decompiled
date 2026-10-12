@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tu extends BitmapFont {
+final class tu extends ka {
     private byte[][] field_J;
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
@@ -15,8 +15,8 @@ final class tu extends BitmapFont {
         int var18;
         int var19;
         int var19Lifetime1;
-        var13 = param2 - SoftwareRaster.clipLeft;
-        var14 = param3 - SoftwareRaster.clipTop;
+        var13 = param2 - qn.field_j;
+        var14 = param3 - qn.field_a;
         for (var15 = var14; var15 < var14 + param5; var15++) {
           boolean decompiledFrameRemainder0 = true;
           var16 = param11[var15];
@@ -58,7 +58,7 @@ final class tu extends BitmapFont {
               } else {
                 incrementValue$1 = param8;
                 param8++;
-                SoftwareRaster.pixels[incrementValue$1] = param6;
+                qn.field_d[incrementValue$1] = param6;
               }
             }
             param7 = param7 + (var19Lifetime1 + param10);
@@ -69,33 +69,33 @@ final class tu extends BitmapFont {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var13 = 0;
-        int var9 = param1 + param2 * SoftwareRaster.width;
-        int var10 = SoftwareRaster.width - param3;
+        int var9 = param1 + param2 * qn.field_l;
+        int var10 = qn.field_l - param3;
         int var11 = 0;
         int var12 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
-        if (param2 < SoftwareRaster.clipTop) {
-          var13 = SoftwareRaster.clipTop - param2;
+        if (param2 < qn.field_a) {
+          var13 = qn.field_a - param2;
           param4 = param4 - var13;
-          param2 = SoftwareRaster.clipTop;
+          param2 = qn.field_a;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * SoftwareRaster.width;
+          var9 = var9 + var13 * qn.field_l;
         }
-        if (param2 + param4 > SoftwareRaster.clipBottom) {
-          param4 = param4 - (param2 + param4 - SoftwareRaster.clipBottom);
+        if (param2 + param4 > qn.field_f) {
+          param4 = param4 - (param2 + param4 - qn.field_f);
         }
-        if (param1 < SoftwareRaster.clipLeft) {
-          var13Lifetime1 = SoftwareRaster.clipLeft - param1;
+        if (param1 < qn.field_j) {
+          var13Lifetime1 = qn.field_j - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = SoftwareRaster.clipLeft;
+          param1 = qn.field_j;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > SoftwareRaster.clipRight) {
-          var13Lifetime2 = param1 + param3 - SoftwareRaster.clipRight;
+        if (param1 + param3 > qn.field_e) {
+          var13Lifetime2 = param1 + param3 - qn.field_e;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -104,7 +104,7 @@ final class tu extends BitmapFont {
           param4 <= 0) {
           return;
         }
-        tu.a(SoftwareRaster.pixels, this.field_J[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        tu.a(qn.field_d, this.field_J[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 
     final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -186,41 +186,41 @@ final class tu extends BitmapFont {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * SoftwareRaster.width;
-        var9 = SoftwareRaster.width - param3;
+        var8 = param1 + param2 * qn.field_l;
+        var9 = qn.field_l - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < SoftwareRaster.clipTop) {
-          var12 = SoftwareRaster.clipTop - param2;
+        if (param2 < qn.field_a) {
+          var12 = qn.field_a - param2;
           param4 = param4 - var12;
-          param2 = SoftwareRaster.clipTop;
+          param2 = qn.field_a;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * SoftwareRaster.width;
+          var8 = var8 + var12 * qn.field_l;
         }
-        if (param2 + param4 > SoftwareRaster.clipBottom) {
-          param4 = param4 - (param2 + param4 - SoftwareRaster.clipBottom);
+        if (param2 + param4 > qn.field_f) {
+          param4 = param4 - (param2 + param4 - qn.field_f);
         }
-        if (param1 < SoftwareRaster.clipLeft) {
-          var12Lifetime1 = SoftwareRaster.clipLeft - param1;
+        if (param1 < qn.field_j) {
+          var12Lifetime1 = qn.field_j - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = SoftwareRaster.clipLeft;
+          param1 = qn.field_j;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > SoftwareRaster.clipRight) {
-          var12Lifetime2 = param1 + param3 - SoftwareRaster.clipRight;
+        if (param1 + param3 > qn.field_e) {
+          var12Lifetime2 = param1 + param3 - qn.field_e;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
         }
         if (param3 > 0 &&
           param4 > 0) {
-          if (SoftwareRaster.field_k == null) {
-            tu.a(SoftwareRaster.pixels, this.field_J[param0], param5, var11, var8, param3, param4, var9, var10);
+          if (qn.field_k == null) {
+            tu.a(qn.field_d, this.field_J[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            tu.a(SoftwareRaster.pixels, this.field_J[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRaster.field_k, SoftwareRaster.field_c);
+            tu.a(qn.field_d, this.field_J[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, qn.field_k, qn.field_c);
           }
           return;
         }

@@ -6,18 +6,18 @@ class ro extends pt implements he {
     private boolean field_sb;
     static String field_kb;
     private boolean field_wb;
-    static BattleCamera modelProjectionCamera;
+    static v field_ob;
     private boolean field_mb;
     static int field_pb;
     static int[] field_lb;
     private boolean field_qb;
     static String field_vb;
     static int field_ub;
-    static IndexedSprite[] field_rb;
-    private BitmapFont field_nb;
+    static ru[] field_rb;
+    private ka field_nb;
 
-    final static void a(IntrusiveNode param0, IntrusiveNode param1, boolean param2) {
-        IntrusiveNode var4 = null;
+    final static void a(tc param0, tc param1, boolean param2) {
+        tc var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -26,16 +26,16 @@ class ro extends pt implements he {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param1.previous != null) {
-            param1.unlink(76);
+          if (param1.field_j != null) {
+            param1.d(76);
           }
-          param1.previous = param0;
-          param1.next = param0.next;
-          param1.previous.next = param1;
-          param1.next.previous = param1;
+          param1.field_j = param0;
+          param1.field_b = param0.field_b;
+          param1.field_j.field_b = param1;
+          param1.field_b.field_j = param1;
           if (!param2) {
-            var4 = (IntrusiveNode) null;
-            ro.a((IntrusiveNode) null, (IntrusiveNode) null, false);
+            var4 = (tc) null;
+            ro.a((tc) null, (tc) null, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -54,11 +54,11 @@ class ro extends pt implements he {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean a(kb param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -85,11 +85,11 @@ class ro extends pt implements he {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    ro(gk param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    ro(gk param0, ka param1, String param2, boolean param3, boolean param4) {
         super(param0, new ad((ro) null, param1, param2), 77, 10, 10);
         try {
           this.field_qb = false;
@@ -99,9 +99,9 @@ class ro extends pt implements he {
           this.field_nb = param1;
           this.field_tb = new rj(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_tb.field_R = true;
-          this.a((byte) 10, (Widget) (this.field_tb));
+          this.a((byte) 10, (kb) (this.field_tb));
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ro.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ro.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -110,10 +110,10 @@ class ro extends pt implements he {
           return;
         }
         if (!param0) {
-          field_rb = (IndexedSprite[]) null;
+          field_rb = (ru[]) null;
           this.field_L = false;
           if (this.field_mb) {
-            AttackEvent.d((byte) 83);
+            ns.d((byte) 83);
             return;
           }
           if (this.field_sb) {
@@ -124,7 +124,7 @@ class ro extends pt implements he {
         }
         this.field_L = false;
         if (this.field_mb) {
-          AttackEvent.d((byte) 83);
+          ns.d((byte) 83);
           return;
         }
         if (!this.field_sb) {
@@ -135,7 +135,7 @@ class ro extends pt implements he {
 
     public static void n(int param0) {
         field_lb = null;
-        modelProjectionCamera = null;
+        field_ob = null;
         field_rb = null;
         if (param0 != 0) {
           return;
@@ -175,10 +175,10 @@ class ro extends pt implements he {
         String var54Lifetime1;
         String var54Lifetime2;
         var55 = null;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         var3 = 1;
         if (!cu.field_c &&
-          null == UnitCycler.field_g) {
+          null == eu.field_g) {
           var3 = 0;
         }
         if (0 == rs.field_t &&
@@ -197,18 +197,18 @@ class ro extends pt implements he {
             rd.b(8445);
             return true;
           }
-          if (UpkeepEvent.field_C.length() <= 0) {
+          if (qj.field_C.length() <= 0) {
             rd.b(8445);
             return true;
           }
-          var4_ref_String = UpkeepEvent.field_C.toString();
-          if (FaceNormal.a(var4_ref_String, param1 + 134)) {
+          var4_ref_String = qj.field_C.toString();
+          if (kg.a(var4_ref_String, param1 + 134)) {
             var13 = (String) null;
             var12 = (String) null;
-            ta.a((String) null, 2, -18119, (String) null, KingBlackDragonEvent.field_y, 0);
+            ta.a((String) null, 2, -18119, (String) null, rl.field_y, 0);
             var15 = (String) null;
             var14 = (String) null;
-            ta.a((String) null, 2, -18119, (String) null, ContextualRuntimeException.field_a, 0);
+            ta.a((String) null, 2, -18119, (String) null, g.field_a, 0);
             rd.b(8445);
             return true;
           }
@@ -228,13 +228,13 @@ class ro extends pt implements he {
           if (var3 == 0) {
             return true;
           }
-          if (UpkeepEvent.field_C.length() <= 0) {
+          if (qj.field_C.length() <= 0) {
             return true;
           }
-          PortalLossCondition.a(' ', -1 + UpkeepEvent.field_C.length(), UpkeepEvent.field_C, true);
+          up.a(' ', -1 + qj.field_C.length(), qj.field_C, true);
           return true;
         }
-        var4 = DualNodeDeque.field_i;
+        var4 = ui.field_i;
         if (!uu.a(true, (char) var4)) {
           if (param1 == -59) {
           }
@@ -243,10 +243,10 @@ class ro extends pt implements he {
         if (var3 == 0) {
           return true;
         }
-        if (UpkeepEvent.field_C.length() >= 80) {
+        if (qj.field_C.length() >= 80) {
           return true;
         }
-        discarded$0 = UpkeepEvent.field_C.append((char) var4);
+        discarded$0 = qj.field_C.append((char) var4);
         var5Lifetime1 = 485;
         var17 = mv.field_d;
         var16 = nt.a(param1 - 47, var17);
@@ -255,28 +255,28 @@ class ro extends pt implements he {
           var56 = (CharSequence) ((Object) qd.field_G);
           var20 = fo.a(4800, ta.field_Q, new String[]{ug.a(16, var56)});
           var8 = fo.a(4800, ov.field_l, new String[]{var16});
-          var9 = IntrusiveNode.field_e.a(var20);
-          var10 = IntrusiveNode.field_e.a(var8);
+          var9 = tc.field_e.a(var20);
+          var10 = tc.field_e.a(var8);
           if (var9 > var10) {
             var5Lifetime1 = var5Lifetime1 - var9;
-            if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {
-              PortalLossCondition.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
+            if (tc.field_e.a(qj.field_C.toString()) > var5Lifetime1) {
+              up.a(' ', qj.field_C.length() - 1, qj.field_C, true);
             }
             return true;
           }
           var5Lifetime1 = var5Lifetime1 - var10;
-          if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) <= var5Lifetime1) {
+          if (tc.field_e.a(qj.field_C.toString()) <= var5Lifetime1) {
             return true;
           }
-          PortalLossCondition.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
+          up.a(' ', qj.field_C.length() - 1, qj.field_C, true);
           return true;
         }
         var7 = "";
         if (0 != rs.field_t) {
           var51 = var7 + var18 + ": ";
-          var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var51);
-          if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {
-            PortalLossCondition.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
+          var5Lifetime1 = var5Lifetime1 - tc.field_e.a(var51);
+          if (tc.field_e.a(qj.field_C.toString()) > var5Lifetime1) {
+            up.a(' ', qj.field_C.length() - 1, qj.field_C, true);
           }
           return true;
         }
@@ -286,35 +286,35 @@ class ro extends pt implements he {
         }
         if (vu.field_M == null) {
           var54 = var7 + var18 + ": ";
-          var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var54);
-          if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {
-            PortalLossCondition.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
+          var5Lifetime1 = var5Lifetime1 - tc.field_e.a(var54);
+          if (tc.field_e.a(qj.field_C.toString()) > var5Lifetime1) {
+            up.a(' ', qj.field_C.length() - 1, qj.field_C, true);
           }
           return true;
         }
-        if (!TextCursor.field_f) {
-          var7Lifetime1 = "[" + fo.a(param1 ^ -4859, CampaignMenu.field_m, new String[]{vu.field_M.field_rc}) + "] ";
+        if (!mt.field_f) {
+          var7Lifetime1 = "[" + fo.a(param1 ^ -4859, cv.field_m, new String[]{vu.field_M.field_rc}) + "] ";
           var54Lifetime1 = var7Lifetime1 + var18 + ": ";
-          var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var54Lifetime1);
-          if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {
-            PortalLossCondition.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
+          var5Lifetime1 = var5Lifetime1 - tc.field_e.a(var54Lifetime1);
+          if (tc.field_e.a(qj.field_C.toString()) > var5Lifetime1) {
+            up.a(' ', qj.field_C.length() - 1, qj.field_C, true);
           }
           return true;
         }
-        if (TeleportAction.field_C != null) {
-          var52 = "[" + TeleportAction.field_C + "] ";
+        if (ur.field_C != null) {
+          var52 = "[" + ur.field_C + "] ";
           var53 = var52 + var18 + ": ";
-          var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var53);
-          if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {
-            PortalLossCondition.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
+          var5Lifetime1 = var5Lifetime1 - tc.field_e.a(var53);
+          if (tc.field_e.a(qj.field_C.toString()) > var5Lifetime1) {
+            up.a(' ', qj.field_C.length() - 1, qj.field_C, true);
           }
           return true;
         }
-        var7Lifetime2 = "[" + fo.a(param1 ^ -4859, CampaignMenu.field_m, new String[]{vu.field_M.field_rc}) + "] ";
+        var7Lifetime2 = "[" + fo.a(param1 ^ -4859, cv.field_m, new String[]{vu.field_M.field_rc}) + "] ";
         var54Lifetime2 = var7Lifetime2 + var18 + ": ";
-        var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var54Lifetime2);
-        if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {
-          PortalLossCondition.a(' ', UpkeepEvent.field_C.length() - 1, UpkeepEvent.field_C, true);
+        var5Lifetime1 = var5Lifetime1 - tc.field_e.a(var54Lifetime2);
+        if (tc.field_e.a(qj.field_C.toString()) > var5Lifetime1) {
+          up.a(' ', qj.field_C.length() - 1, qj.field_C, true);
         }
         return true;
     }
@@ -330,7 +330,7 @@ class ro extends pt implements he {
             gl.a(122, 3);
             this.b(true);
           } else {
-            ActionSpell.a(CombatEvent.d((byte) -125), -113, "tochangedisplayname.ws");
+            ra.a(ag.d((byte) -125), -113, "tochangedisplayname.ws");
           }
           if (param1 != 11) {
             ro.n(46);
@@ -346,7 +346,7 @@ class ro extends pt implements he {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -373,7 +373,7 @@ class ro extends pt implements he {
         RuntimeException var4_ref = null;
         int var5 = 0;
         ad var6 = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (this.field_qb) {
             return;
@@ -391,13 +391,13 @@ class ro extends pt implements he {
             if (param0 != 256) {
               stackIn_12_0 = var6;
               if (this.field_mb) {
-                stackIn_13_1 = RegionAnchor.field_k;
+                stackIn_13_1 = a.field_k;
               } else {
                 stackIn_13_1 = fj.field_a;
               }
               ((ad) (Object) stackIn_12_0).a(stackIn_13_1, -1, param1 ^ 99);
             } else {
-              var6.a(RegionAnchor.field_k, (qo) (this), (byte) -89);
+              var6.a(a.field_k, (qo) (this), (byte) -89);
             }
           }
           if (param0 == 3) {
@@ -406,10 +406,10 @@ class ro extends pt implements he {
             if (param0 != 4) {
               if (param0 != 6) {
                 if (param0 == 9) {
-                  var6.a(BattleTutorial.field_b, (qo) (this), (byte) -55);
+                  var6.a(iu.field_b, (qo) (this), (byte) -55);
                 }
               } else {
-                var6.a(CombatEvent.field_O, 9, 1);
+                var6.a(ag.field_O, 9, 1);
               }
             } else {
               var6.a(nf.field_Jb, 8, 1);
@@ -427,7 +427,7 @@ class ro extends pt implements he {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ip {
-    RgbSprite field_j;
+    wk field_j;
     static boolean field_e;
     private int field_g;
     private int field_h;
     private int field_a;
-    RgbSprite[] field_d;
+    wk[] field_d;
     private int field_i;
     private boolean field_f;
-    static RgbSprite[] field_c;
+    static wk[] field_c;
     private int field_b;
 
     final ip a(byte param0, int param1) {
@@ -22,8 +22,8 @@ final class ip {
         return this;
     }
 
-    final void a(Widget param0, byte param1, int param2, int param3, ao param4) {
-        BitmapFont stackIn_19_0;
+    final void a(kb param0, byte param1, int param2, int param3, ao param4) {
+        ka stackIn_19_0;
         String stackIn_19_1;
         int stackIn_19_2;
         int stackIn_19_3;
@@ -47,21 +47,21 @@ final class ip {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          i.a(this.field_d, param0.height, param0.x + param3, (byte) -47, param2 + param0.y, param0.width);
+          i.a(this.field_d, param0.field_w, param0.field_B + param3, (byte) -47, param2 + param0.field_p, param0.field_l);
           if (null != this.field_j) {
-            var6_int = this.field_i + param0.x + param3;
+            var6_int = this.field_i + param0.field_B + param3;
             if (1 == param4.field_n) {
-              var6_int = var6_int + (param0.width - this.field_j.canvasWidth) / 2;
+              var6_int = var6_int + (param0.field_l - this.field_j.field_A) / 2;
             }
-            var7 = this.field_a + (param2 + param0.y);
+            var7 = this.field_a + (param2 + param0.field_p);
             if (param4.field_k == 1) {
-              var7 = var7 + (-this.field_j.canvasHeight + param0.height) / 2;
+              var7 = var7 + (-this.field_j.field_x + param0.field_w) / 2;
             }
             if (param4.field_n == 2) {
-              var6_int = var6_int + (param0.width - this.field_j.canvasWidth);
+              var6_int = var6_int + (param0.field_l - this.field_j.field_A);
             }
             if (param4.field_k == 2) {
-              var7 = var7 + (param0.height - this.field_j.canvasHeight);
+              var7 = var7 + (param0.field_w - this.field_j.field_x);
             }
             this.field_j.g(var6_int, var7);
           }
@@ -77,7 +77,7 @@ final class ip {
             stackIn_19_0 = param4.field_q;
             stackIn_19_1 = var6;
             stackIn_19_2 = param4.field_i + param3;
-            stackIn_19_3 = param0.x;
+            stackIn_19_3 = param0.field_B;
             if (-2147483648 != this.field_i) {
               stackIn_20_4 = this.field_i;
             } else {
@@ -89,9 +89,9 @@ final class ip {
             } else {
               stackIn_23_3 = this.field_a;
             }
-            stackIn_25_3 = stackIn_23_3 + param4.field_g + (param2 + param0.y);
-            stackIn_25_4 = -param4.field_t - param4.field_i + param0.width;
-            stackIn_25_5 = -param4.field_g + param0.height - param4.field_m;
+            stackIn_25_3 = stackIn_23_3 + param4.field_g + (param2 + param0.field_p);
+            stackIn_25_4 = -param4.field_t - param4.field_i + param0.field_l;
+            stackIn_25_5 = -param4.field_g + param0.field_w - param4.field_m;
             stackIn_25_6 = this.field_b;
             stackIn_25_7 = this.field_g;
             if (-2147483648 == this.field_h) {
@@ -99,7 +99,7 @@ final class ip {
             } else {
               stackIn_26_8 = this.field_h;
             }
-            ((BitmapFont) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param4.field_n, param4.field_k, param4.field_j);
+            ((ka) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param4.field_n, param4.field_k, param4.field_j);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -118,7 +118,7 @@ final class ip {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -132,11 +132,11 @@ final class ip {
           param1.field_b = this.field_b;
           param1.field_h = this.field_h;
           if (param0) {
-            this.field_d = (RgbSprite[]) null;
+            this.field_d = (wk[]) null;
           }
           param1.field_i = this.field_i;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ip.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ip.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -153,13 +153,13 @@ final class ip {
     final ip a(int param0, int param1) {
         this.field_i = param0;
         if (param1 != 1) {
-          this.field_d = (RgbSprite[]) null;
+          this.field_d = (wk[]) null;
           return this;
         }
         return this;
     }
 
-    final void a(int param0, ip param1, int param2, ao param3, int param4, Widget param5) {
+    final void a(int param0, ip param1, int param2, ao param3, int param4, kb param5) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -200,7 +200,7 @@ final class ip {
             return;
           }
           var8 = (ao) null;
-          this.a((Widget) null, (byte) -95, -90, -1, (ao) null);
+          this.a((kb) null, (byte) -95, -90, -1, (ao) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -224,7 +224,7 @@ final class ip {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -250,7 +250,7 @@ final class ip {
           return;
         }
         ao var3 = (ao) null;
-        this.a((Widget) null, (byte) 78, -97, 60, (ao) null);
+        this.a((kb) null, (byte) 78, -97, 60, (ao) null);
         this.field_g = -1;
         this.field_b = 0;
         this.field_d = null;
@@ -258,7 +258,7 @@ final class ip {
         this.field_j = null;
     }
 
-    final ip a(RgbSprite[] param0, int param1) {
+    final ip a(wk[] param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -279,7 +279,7 @@ final class ip {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -291,7 +291,7 @@ final class ip {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, tu param4, RgbSprite[] param5, int param6, String param7, int param8) {
+    final static void a(int param0, int param1, boolean param2, int param3, tu param4, wk[] param5, int param6, String param7, int param8) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -305,9 +305,9 @@ final class ip {
         int var10 = 0;
         int var11 = 0;
         try {
-          var9_int = param4.a(param7) + (param5[0].pixelWidth << 1);
+          var9_int = param4.a(param7) + (param5[0].field_y << 1);
           if (param1 > -92) {
-            field_c = (RgbSprite[]) null;
+            field_c = (wk[]) null;
           }
           var10 = param6 - (var9_int >> 1);
           var11 = param6 + (var9_int >> 1);
@@ -347,7 +347,7 @@ final class ip {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param8).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param8).append(')').toString());
         }
     }
 

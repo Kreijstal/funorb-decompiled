@@ -5,7 +5,7 @@ final class no extends en {
     static au field_K;
     static int[] field_U;
     static je field_M;
-    static RgbSprite field_P;
+    static wk field_P;
     static int field_J;
     private fn field_Q;
     static int field_S;
@@ -52,24 +52,24 @@ final class no extends en {
         return true;
     }
 
-    private final void a(String param0, Widget param1, int param2, int param3, int param4) {
+    private final void a(String param0, kb param1, int param2, int param3, int param4) {
         try {
-          gl.field_e.c(param0, param4 - (-param1.x - (param1.width >> 1)), param1.y + (param2 - 5), param3, -1);
+          gl.field_e.c(param0, param4 - (-param1.field_B - (param1.field_l >> 1)), param1.field_p + (param2 - 5), param3, -1);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "no.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "no.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    no(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
+    no(kh param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-          this.setBounds(param2, param4, param3, 8192, param5);
+          this.a(param2, param4, param3, 8192, param5);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "no.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "no.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final static void readTaggedFields(CipherPacketBuffer packet, TaggedFieldReader target, int recordBitLength, int obfuscationGuard) {
+    final static void a(bv param0, uo param1, int param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String var5 = null;
@@ -83,19 +83,19 @@ final class no extends en {
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          var4_int = recordBitLength + packet.getReadBitPosition(false);
-          while (packet.getReadBitPosition(false) < var4_int) {
-            var5 = TextCursor.readTagName(packet, true);
-            var6 = packet.getReadBitPosition(false);
-            var7 = AiPlanner.readCompactInt(packet, true);
-            var8 = packet.getReadBitPosition(false) - var6;
-            kq.enterTaggedPayload(var6, obfuscationGuard + 489, var8, var7, packet);
-            target.decodeTaggedField(var7, packet, var5, (byte) 37);
-            ao.finishTaggedPayload(var6, 4, var8, packet, var7);
+          var4_int = param2 + param0.a(false);
+          while (param0.a(false) < var4_int) {
+            var5 = mt.a(param0, true);
+            var6 = param0.a(false);
+            var7 = ej.a(param0, true);
+            var8 = param0.a(false) - var6;
+            kq.a(var6, param3 + 489, var8, var7, param0);
+            param1.a(var7, param0, var5, (byte) 37);
+            ao.a(var6, 4, var8, param0, var7);
           }
-          if (obfuscationGuard == -24721) {
+          if (param3 == -24721) {
             return;
           }
           field_M = (je) null;
@@ -105,18 +105,18 @@ final class no extends en {
           var4 = decompiledCaughtException;
           stackIn_9_0 = var4;
           stackIn_9_1 = new StringBuilder().append("no.K(");
-          if (packet == null) {
+          if (param0 == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (target == null) {
+          if (param1 == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(recordBitLength).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class no extends en {
           }
           this.field_O.field_x = (qo) ((Object) param1);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "no.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "no.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class no extends en {
     }
 
     final static void b(boolean param0) {
-        tf.a((byte) -99, CombatEvent.d((byte) -111));
+        tf.a((byte) -99, ag.d((byte) -111));
         if (param0) {
           field_N = (String) null;
         }
@@ -191,18 +191,18 @@ final class no extends en {
           return;
         }
         if (param2 < -82) {
-          param0 = param0 + this.x;
-          param1 = param1 + this.y;
+          param0 = param0 + this.field_B;
+          param1 = param1 + this.field_p;
           this.a(mi.field_z, this.field_L, param1, 16777215, param0);
           this.a(eb.field_e, this.field_Q, param1, 16777215, param0);
-          this.a(BattleTutorial.field_l, this.field_O, param1, 16777215, param0);
+          this.a(iu.field_l, this.field_O, param1, 16777215, param0);
           return;
         }
     }
 
     final static String a(char param0, boolean param1, int param2) {
         int var4 = 0;
-        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         char[] var6 = new char[param2];
         char[] var3 = var6;
         if (param1) {
@@ -214,41 +214,41 @@ final class no extends en {
         return (String) null;
     }
 
-    private no(WidgetPainter param0, boolean param1) {
-        super(0, 0, 0, 0, (WidgetPainter) null);
+    private no(kh param0, boolean param1) {
+        super(0, 0, 0, 0, (kh) null);
         try {
           this.field_L = (fn) ((Object) new ma("", (qo) null, 2));
           this.field_Q = (fn) ((Object) new ma("", (qo) null, 2));
           this.field_O = (fn) ((Object) new ma("", (qo) null, 4));
-          this.field_O.painter = param0;
-          this.field_Q.painter = param0;
-          this.field_L.painter = param0;
+          this.field_O.field_k = param0;
+          this.field_Q.field_k = param0;
+          this.field_L.field_k = param0;
           this.field_R = param1 ? true : false;
           if (!this.field_R) {
-            this.a((byte) 10, (Widget) (this.field_L));
-            this.a((byte) 10, (Widget) (this.field_Q));
+            this.a((byte) 10, (kb) (this.field_L));
+            this.a((byte) 10, (kb) (this.field_Q));
           } else {
-            this.a((byte) 10, (Widget) (this.field_Q));
-            this.a((byte) 10, (Widget) (this.field_L));
+            this.a((byte) 10, (kb) (this.field_Q));
+            this.a((byte) 10, (kb) (this.field_L));
           }
-          this.a((byte) 10, (Widget) (this.field_O));
+          this.a((byte) 10, (kb) (this.field_O));
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "no.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "no.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void setBounds(int x, int width, int y, int obfuscationGuard, int height) {
-        super.setBounds(x, width, y, 8192, height);
-        int var6 = width - 130 >> 1;
+    final void a(int param0, int param1, int param2, int param3, int param4) {
+        super.a(param0, param1, param2, 8192, param4);
+        int var6 = param1 - 130 >> 1;
         if (this.field_R) {
-          this.field_Q.setBounds(var6, 25, 0, 8192, height);
-          this.field_L.setBounds(var6 + 45, 25, 0, 8192, height);
-          this.field_O.setBounds(90 + var6, 40, 0, obfuscationGuard, height);
+          this.field_Q.a(var6, 25, 0, 8192, param4);
+          this.field_L.a(var6 + 45, 25, 0, 8192, param4);
+          this.field_O.a(90 + var6, 40, 0, param3, param4);
           return;
         }
-        this.field_L.setBounds(var6, 25, 0, 8192, height);
-        this.field_Q.setBounds(45 + var6, 25, 0, 8192, height);
-        this.field_O.setBounds(90 + var6, 40, 0, obfuscationGuard, height);
+        this.field_L.a(var6, 25, 0, 8192, param4);
+        this.field_Q.a(45 + var6, 25, 0, 8192, param4);
+        this.field_O.a(90 + var6, 40, 0, param3, param4);
     }
 
     final int a(byte param0) {
@@ -269,6 +269,6 @@ final class no extends en {
     }
 
     static {
-        field_P = new RgbSprite(0, 0);
+        field_P = new wk(0, 0);
     }
 }

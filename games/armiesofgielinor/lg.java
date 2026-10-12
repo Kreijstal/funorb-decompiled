@@ -10,8 +10,8 @@ final class lg {
     static String field_c;
     static int field_d;
 
-    final static void a(int param0, ResourceArchive param1) {
-        RgbSprite var2 = null;
+    final static void a(int param0, kl param1) {
+        wk var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
@@ -19,20 +19,20 @@ final class lg {
             String var5 = (String) null;
             lg.a((String) null, (byte) 32);
           }
-          var2 = new RgbSprite(param1.getFileByName("", 49, "final_frame.jpg"), (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
-          var3 = var2.pixelWidth;
-          var4 = var2.pixelHeight;
+          var2 = new wk(param1.a("", 49, "final_frame.jpg"), (java.awt.Component) ((Object) si.field_b));
+          var3 = var2.field_y;
+          var4 = var2.field_v;
           rq.a((byte) -56);
-          wd.field_k = new RgbSprite(var3, 3 * var4 / 4);
+          wd.field_k = new wk(var3, 3 * var4 / 4);
           wd.field_k.b();
           var2.f(0, 0);
-          vt.field_k = new RgbSprite(var3, var4 - wd.field_k.pixelHeight);
+          vt.field_k = new wk(var3, var4 - wd.field_k.field_v);
           vt.field_k.b();
-          var2.f(0, -wd.field_k.pixelHeight);
-          vt.field_k.offsetY = wd.field_k.pixelHeight;
+          var2.f(0, -wd.field_k.field_v);
+          vt.field_k.field_z = wd.field_k.field_v;
           rf.b(-18862);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "lg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -54,9 +54,9 @@ final class lg {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          if (DiskCacheRequest.field_K == null) {
+          if (nh.field_K == null) {
             return null;
           }
           if (param0 == null) {
@@ -74,7 +74,7 @@ final class lg {
           if (var2 == null) {
             return null;
           }
-          var3 = (hl) (DiskCacheRequest.field_K.a((byte) -27, (long)var2.hashCode()));
+          var3 = (hl) (nh.field_K.a((byte) -27, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Mb);
             var4 = k.a(var7, false);
@@ -82,7 +82,7 @@ final class lg {
               stackIn_19_0 = var3;
               return stackIn_19_0;
             }
-            var3 = (hl) (DiskCacheRequest.field_K.d(-348));
+            var3 = (hl) (nh.field_K.d(-348));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -95,14 +95,14 @@ final class lg {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
     private lg(int param0, int param1, int param2) {
     }
 
-    final void a(byte param0, PacketBuffer param1, byte[] param2) {
+    final void a(byte param0, vh param1, byte[] param2) {
         try {
           Exception exception = null;
           RuntimeException var4 = null;
@@ -113,13 +113,13 @@ final class lg {
           String stackIn_18_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (param1.payload[param1.position] == 31 &&
-              -117 == param1.payload[param1.position + 1]) {
+            if (param1.field_o[param1.field_q] == 31 &&
+              -117 == param1.field_o[param1.field_q + 1]) {
               if (null == this.field_a) {
                 this.field_a = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_a.setInput(param1.payload, param1.position + 10, param1.payload.length + (-10 - param1.position - 8));
+                this.field_a.setInput(param1.field_o, param1.field_q + 10, param1.field_o.length + (-10 - param1.field_q - 8));
                 this.field_a.inflate(param2);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -151,7 +151,7 @@ final class lg {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -175,10 +175,10 @@ final class lg {
             return stackIn_2_0;
           }
           if (param1) {
-            stackIn_7_0 = AiInfluenceMap.field_h.a(param0);
+            stackIn_7_0 = ir.field_h.a(param0);
             return stackIn_7_0;
           }
-          stackIn_5_0 = TaggedMapData.field_b.a(param0);
+          stackIn_5_0 = sc.field_b.a(param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -190,7 +190,7 @@ final class lg {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

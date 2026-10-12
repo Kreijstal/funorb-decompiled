@@ -9,11 +9,11 @@ final class wh {
     static je field_g;
     static boolean field_f;
     static String field_d;
-    static NodeDeque field_c;
+    static at field_c;
 
-    final static boolean a(ResourceArchive param0, byte param1, ResourceArchive param2, ResourceArchive param3) {
+    final static boolean a(kl param0, byte param1, kl param2, kl param3) {
         RuntimeException var4 = null;
-        ResourceArchive var5 = null;
+        kl var5 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -24,19 +24,19 @@ final class wh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 127) {
-            var5 = (ResourceArchive) null;
-            wh.a((ResourceArchive) null, (byte) 105, (ResourceArchive) null, (ResourceArchive) null);
+            var5 = (kl) null;
+            wh.a((kl) null, (byte) 105, (kl) null, (kl) null);
           }
-          if (!param0.ensureIndex((byte) 82)) {
+          if (!param0.a((byte) 82)) {
             return false;
           }
-          if (!param0.ensureGroupAvailableByName(28979, "commonui")) {
+          if (!param0.a(28979, "commonui")) {
             return false;
           }
-          if (param3.ensureIndex((byte) 82) &&
-            param3.ensureGroupAvailableByName(28979, "commonui")) {
-            if (param2.ensureIndex((byte) 82) &&
-              param2.ensureGroupAvailableByName(param1 ^ 29004, "button.gif")) {
+          if (param3.a((byte) 82) &&
+            param3.a(28979, "commonui")) {
+            if (param2.a((byte) 82) &&
+              param2.a(param1 ^ 29004, "button.gif")) {
               return true;
             }
             return false;
@@ -64,11 +64,11 @@ final class wh {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
-    final static boolean a(ResourceArchive param0, int param1) {
+    final static boolean a(kl param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -77,7 +77,7 @@ final class wh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -27701) {
-            stackIn_4_0 = param0.ensureAllGroupsAvailable(-27927);
+            stackIn_4_0 = param0.d(-27927);
             return stackIn_4_0;
           }
           return false;
@@ -91,7 +91,7 @@ final class wh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class wh {
         String var10;
         String var11;
         int var6Lifetime1;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         var2 = 77 / ((param0 + 24) / 63);
         var1 = fd.field_n.length;
         var3 = fd.field_n[0].length;
@@ -139,7 +139,7 @@ final class wh {
           var6Lifetime1 = var9;
           while (var3 > var9) {
             var10 = var4[var5][var9][0];
-            var4[var5][var9][0] = NetworkResourceRequest.a(var4[var5], var9, var10, var5, (byte) 15);
+            var4[var5][var9][0] = jf.a(var4[var5], var9, var10, var5, (byte) 15);
             var11 = var4[var5][var9][0];
             var4[var5][var9] = od.a(-16399, var11);
             if (null == var4[var5][var9]) {

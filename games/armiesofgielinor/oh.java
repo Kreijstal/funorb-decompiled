@@ -3,14 +3,14 @@
  */
 final class oh extends dr {
     static wm field_L;
-    static RgbSprite[] field_J;
+    static wk[] field_J;
     static boolean[] field_G;
     static String field_F;
     static um field_K;
-    static RgbSprite field_I;
+    static wk field_I;
     static int field_E;
     static long field_H;
-    static ResourceArchive field_M;
+    static kl field_M;
 
     public static void g(int param0) {
         field_G = null;
@@ -27,11 +27,11 @@ final class oh extends dr {
 
     final static void e(byte param0) {
         String var2 = null;
-        if (PopupPresentation.field_e != null) {
-          var2 = PopupPresentation.field_e;
+        if (ql.field_e != null) {
+          var2 = ql.field_e;
           String var1 = var2;
-          wr.a((byte) 68, fo.a(4800, ActionSpell.field_l, new String[]{var2}));
-          PopupPresentation.field_e = null;
+          wr.a((byte) 68, fo.a(4800, ra.field_l, new String[]{var2}));
+          ql.field_e = null;
         }
         if (param0 <= -127) {
           return;
@@ -49,7 +49,7 @@ final class oh extends dr {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -24872) {
-            stackIn_4_0 = new nd(DisplacedUnitMarker.b(256, param1[0].a(2)));
+            stackIn_4_0 = new nd(il.b(256, param1[0].a(2)));
             return stackIn_4_0;
           }
           stackIn_2_0 = (nd) null;
@@ -64,7 +64,7 @@ final class oh extends dr {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

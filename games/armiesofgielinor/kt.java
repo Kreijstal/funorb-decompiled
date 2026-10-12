@@ -6,7 +6,7 @@ final class kt extends mk {
     private String field_k;
     static String field_m;
     static boolean field_l;
-    static RgbSprite[] field_o;
+    static wk[] field_o;
     private di field_q;
     static int field_p;
     private boolean field_j;
@@ -54,7 +54,7 @@ final class kt extends mk {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -76,7 +76,7 @@ final class kt extends mk {
             return stackIn_5_0;
           }
           if (this.a(-3137, param1) != rn.field_e) {
-            stackIn_10_0 = CampaignRewardPreview.field_a;
+            stackIn_10_0 = fu.field_a;
             return stackIn_10_0;
           }
           stackIn_8_0 = hk.field_Ib;
@@ -91,7 +91,7 @@ final class kt extends mk {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class kt extends mk {
         try {
           this.field_q = new di(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "kt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

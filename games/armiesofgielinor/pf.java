@@ -13,20 +13,20 @@ final class pf {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
-        var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var2 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (!cd.c(9501)) {
-            if (FixedQuaternion.field_a != null &&
-              FixedQuaternion.field_a.field_k) {
+            if (wq.field_a != null &&
+              wq.field_a.field_k) {
               ck.b(-110);
-              SphinxActionRequest.field_v.a(new ud(SphinxActionRequest.field_v, mp.field_Mb), 0);
+              ee.field_v.a(new ud(ee.field_v, mp.field_Mb), 0);
             }
             return;
           }
-          SphinxActionRequest.field_v.a(true, -6226, en.field_F, AiUnitPlanner.field_s);
-          SphinxActionRequest.field_v.d((byte) -117);
-          while (Unit.i((byte) 107)) {
-            SphinxActionRequest.field_v.a(rs.field_q, DualNodeDeque.field_i, 80);
+          ee.field_v.a(true, -6226, en.field_F, cl.field_s);
+          ee.field_v.d((byte) -117);
+          while (jd.i((byte) 107)) {
+            ee.field_v.a(rs.field_q, ui.field_i, 80);
           }
           if (param0 >= 10) {
             return;
@@ -36,7 +36,7 @@ final class pf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "pf.C(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "pf.C(" + param0 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class pf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class pf {
           return;
         }
         byte[] var2 = (byte[]) null;
-        pf.storeBytes(-6, (byte[]) null, false);
+        pf.a(-6, (byte[]) null, false);
         field_f = null;
         field_a = null;
     }
@@ -84,11 +84,11 @@ final class pf {
         throw new IllegalStateException();
     }
 
-    final static CampaignMission a(int param0, byte param1, CipherPacketBuffer param2) {
+    final static om a(int param0, byte param1, bv param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        CampaignMission var4 = null;
-        CampaignMission stackIn_4_0 = null;
+        om var4 = null;
+        om stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -98,8 +98,8 @@ final class pf {
           if (param0 == 0) {
             return null;
           }
-          var4 = new CampaignMission();
-          no.readTaggedFields(param2, var4, param0, -24721);
+          var4 = new om();
+          no.a(param2, var4, param0, -24721);
           var4.a(true);
           stackIn_4_0 = var4;
           return stackIn_4_0;
@@ -113,15 +113,15 @@ final class pf {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    final static Object storeBytes(int obfuscationGuard, byte[] bytes, boolean copySmallArrays) {
-        DirectByteStorage directStorage = null;
+    final static Object a(int param0, byte[] param1, boolean param2) {
+        cj var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
-        DirectByteStorage stackIn_8_0 = null;
+        cj stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
         byte[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -129,47 +129,47 @@ final class pf {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (obfuscationGuard != 0) {
+          if (param0 != 0) {
             var4 = (byte[]) null;
-            pf.storeBytes(113, (byte[]) null, true);
+            pf.a(113, (byte[]) null, true);
           }
-          if (bytes == null) {
+          if (param1 == null) {
             return null;
           }
-          if (bytes.length > 136) {
-            directStorage = new DirectByteStorage();
-            ((ByteStorage) ((Object) directStorage)).setBytes((byte) 126, bytes);
-            stackIn_8_0 = directStorage;
+          if (param1.length > 136) {
+            var3 = new cj();
+            ((mg) ((Object) var3)).a((byte) 126, param1);
+            stackIn_8_0 = var3;
             return stackIn_8_0;
           }
-          if (!copySmallArrays) {
-            stackIn_13_0 = (byte[]) (bytes);
+          if (!param2) {
+            stackIn_13_0 = (byte[]) (param1);
             return stackIn_13_0;
           }
-          stackIn_11_0 = SkeletonLimitMarker.a(bytes, 31732);
+          stackIn_11_0 = kj.a(param1, 31732);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("pf.E(").append(obfuscationGuard).append(',');
-          if (bytes == null) {
+          stackIn_16_1 = new StringBuilder().append("pf.E(").append(param0).append(',');
+          if (param1 == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(copySmallArrays).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final void a(int param0, java.applet.Applet param1) {
         try {
-          IntrusiveNode.a(param1, this.field_c, (byte) 29, "jagex-last-login-method", 31536000L);
+          tc.a(param1, this.field_c, (byte) 29, "jagex-last-login-method", 31536000L);
           if (param0 != -137) {
             pf.a((byte) 95);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "pf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -180,12 +180,12 @@ final class pf {
         if (param0 != -15291) {
           field_a = (String[]) null;
         }
-        if (null == BattleCharacter.field_q) {
+        if (null == lf.field_q) {
           return;
         }
-        var1 = BattleCharacter.field_q;
+        var1 = lf.field_q;
         synchronized (var1) {
-          BattleCharacter.field_q = null;
+          lf.field_q = null;
         }
     }
 
@@ -193,7 +193,7 @@ final class pf {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "pf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

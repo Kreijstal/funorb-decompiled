@@ -14,10 +14,10 @@ final class jt {
 
     final static boolean a(byte param0) {
         int var1 = 72 / ((7 - param0) / 51);
-        if (EffectPresentation.field_e == null) {
+        if (tb.field_e == null) {
           return false;
         }
-        if (EffectPresentation.field_e.d((byte) -101)) {
+        if (tb.field_e.d((byte) -101)) {
           return true;
         }
         return false;

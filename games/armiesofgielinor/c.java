@@ -20,16 +20,16 @@ final class c {
 
     final static boolean a(int param0, byte param1) {
         int var2 = -3 % ((23 - param1) / 60);
-        if (bw.unitDefinitions[param0][0] == 4) {
+        if (bw.field_m[param0][0] == 4) {
           return true;
         }
-        if (bw.unitDefinitions[param0][0] == 3) {
+        if (bw.field_m[param0][0] == 3) {
           return true;
         }
-        if (2 == bw.unitDefinitions[param0][0]) {
+        if (2 == bw.field_m[param0][0]) {
           return true;
         }
-        if ((2048 & bw.unitDefinitions[param0][10]) == 0) {
+        if ((2048 & bw.field_m[param0][10]) == 0) {
           return false;
         }
         return true;

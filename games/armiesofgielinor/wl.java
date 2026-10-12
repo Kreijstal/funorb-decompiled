@@ -3,17 +3,17 @@
  */
 abstract class wl extends tj {
     static String field_J;
-    static RgbSprite field_N;
+    static wk field_N;
     static String[] field_M;
     static je field_K;
     static int field_E;
-    static NodeDeque field_F;
+    static at field_F;
     private int field_H;
     gk field_G;
     static String field_I;
     boolean field_L;
 
-    final static io a(ResourceArchive param0, int param1, boolean param2) {
+    final static io a(kl param0, int param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -25,7 +25,7 @@ abstract class wl extends tj {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param0.getFlatFile(param1, (byte) 81);
+          var4 = param0.c(param1, (byte) 81);
           var3 = var4;
           if (var4 == null) {
             stackIn_2_0 = null;
@@ -47,7 +47,7 @@ abstract class wl extends tj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -55,7 +55,7 @@ abstract class wl extends tj {
         if (param1 < 95) {
           field_K = (je) null;
         }
-        this.setBounds(te.field_l - param0 >> 1, param0, ij.field_x - param2 >> 1, 8192, param2);
+        this.a(te.field_l - param0 >> 1, param0, ij.field_x - param2 >> 1, 8192, param2);
     }
 
     public static void f(byte param0) {
@@ -76,24 +76,24 @@ abstract class wl extends tj {
           if (param3 != 0) {
             return;
           }
-          this.b(this.x + param0, 1851680193, param1 + this.y);
+          this.b(this.field_B + param0, 1851680193, param1 + this.field_p);
           super.a(param0, param1, (byte) -121, param3);
           return;
         }
-        if (TutorialLayout.field_b == null ||
-          !(this.width <= TutorialLayout.field_b.pixelWidth) ||
-          !(TutorialLayout.field_b.pixelHeight >= this.height)) {
-          TutorialLayout.field_b = new RgbSprite(this.width, this.height);
+        if (bo.field_b == null ||
+          !(this.field_l <= bo.field_b.field_y) ||
+          !(bo.field_b.field_v >= this.field_w)) {
+          bo.field_b = new wk(this.field_l, this.field_w);
         }
-        CombatSandbox.a(TutorialLayout.field_b, 3);
-        SoftwareRaster.b();
+        vn.a(bo.field_b, 3);
+        qn.b();
         this.b(0, 1851680193, 0);
-        super.a(-param0 - this.x, -param1 - this.y, (byte) -106, param3);
+        super.a(-param0 - this.field_B, -param1 - this.field_p, (byte) -106, param3);
         rf.b(-18862);
         if (param2 >= -82) {
           field_J = (String) null;
         }
-        TutorialLayout.field_b.e(this.x + param0, this.y + param1, this.field_H);
+        bo.field_b.e(this.field_B + param0, this.field_p + param1, this.field_H);
     }
 
     final static int b(int param0, int param1) {
@@ -144,22 +144,22 @@ abstract class wl extends tj {
         return stackIn_12_0;
     }
 
-    final Widget e(byte param0) {
+    final kb e(byte param0) {
         int discarded$0 = 0;
-        Widget var2 = super.e((byte) 66);
+        kb var2 = super.e((byte) 66);
         if (var2 != null) {
           return var2;
         }
         if (param0 < 24) {
           discarded$0 = this.g((byte) -91);
         }
-        return (Widget) (this);
+        return (kb) (this);
     }
 
     final static void a(int param0, boolean param1) {
         int var2;
         String var3;
-        ResourceArchive var4;
+        kl var4;
         int stackIn_6_0 = 0;
         boolean stackIn_13_0 = false;
         String stackIn_22_0 = null;
@@ -173,21 +173,21 @@ abstract class wl extends tj {
         }
         var2 = stackIn_6_0;
         if (param0 < 9) {
-          var4 = (ResourceArchive) null;
-          wl.a((ResourceArchive) null, -105, true);
+          var4 = (kl) null;
+          wl.a((kl) null, -105, true);
         }
         stackIn_13_0 = (param1) && (sq.c((byte) -103)) && (var2 == 0);
         tq.a(stackIn_13_0, false);
         if (null != rd.field_j) {
           rd.field_j.b(0, param1);
         }
-        if (null != SectorCacheStore.field_a) {
-          SectorCacheStore.field_a.b(0, param1);
+        if (null != bc.field_a) {
+          bc.field_a.b(0, param1);
         }
         fe.b(0, 0, so.field_b.field_a, so.field_b.field_g, dq.field_i, nd.field_b, 0, 0);
         if (var2 != 0) {
           if (!qa.field_F) {
-            stackIn_22_0 = CampaignMenu.field_q;
+            stackIn_22_0 = cv.field_q;
           } else {
             stackIn_22_0 = l.field_d;
           }
@@ -195,7 +195,7 @@ abstract class wl extends tj {
           stackIn_25_0 = false;
           stackIn_25_1 = var3;
           stackIn_26_2 = (param1) && (sq.c((byte) -103));
-          RevivalEvent.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
+          rt.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
         }
     }
 
@@ -218,31 +218,31 @@ abstract class wl extends tj {
     abstract void b(int param0, int param1, int param2);
 
     wl(gk param0, int param1, int param2) {
-        super(te.field_l - param1 >> 1, ij.field_x - param2 >> 1, param1, param2, (WidgetPainter) null);
+        super(te.field_l - param1 >> 1, ij.field_x - param2 >> 1, param1, param2, (kh) null);
         try {
           this.field_G = param0;
           this.field_L = false;
           this.field_H = 0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(int param0) {
         int var1_int = 0;
-        int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var2 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var1_intLifetime1;
         try {
           qc.field_h.a(param0);
           for (var1_int = 0; var1_int < 32; var1_int++) {
-            AiActionCandidate.field_u[var1_int] = 0L;
+            jb.field_u[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            CampaignMission.field_r[var1_intLifetime1] = 0L;
+            om.field_r[var1_intLifetime1] = 0L;
           }
-          Widget.field_A = 0;
+          kb.field_A = 0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wl.GA(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "wl.GA(" + param0 + ')');
         }
     }
 

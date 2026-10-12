@@ -28,7 +28,7 @@ final class df extends tj implements fb, he {
           }
           this.field_S.k(110);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "df.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "df.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,12 +38,12 @@ final class df extends tj implements fb, he {
             df.a(84);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "df.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "df.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     df(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (WidgetPainter) null);
+        super(0, 0, 310, 190, (kh) null);
         ta dupTemp$0 = null;
         ta dupTemp$1 = null;
         boolean stackIn_4_1 = false;
@@ -62,7 +62,7 @@ final class df extends tj implements fb, he {
         RuntimeException decompiledCaughtException = null;
         nu var6 = null;
         RuntimeException var6_ref = null;
-        BitmapFont var7 = null;
+        ka var7 = null;
         String var8 = null;
         pf var9 = null;
         ta var12 = null;
@@ -82,7 +82,7 @@ final class df extends tj implements fb, he {
           this.field_Q = (fn) ((Object) new ma(param0, (qo) (this), 100));
           this.field_S = (fn) ((Object) new ma("", (qo) (this), 20));
           if (!this.field_P) {
-            this.field_O = new fw(ResourceRequest.field_v, (qo) null);
+            this.field_O = new fw(ks.field_v, (qo) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_F) {
@@ -99,19 +99,19 @@ final class df extends tj implements fb, he {
               this.field_R = new fw(li.field_p, (qo) (this));
             }
           } else {
-            this.field_O = new fw(RegionAnchor.field_k, (qo) null);
+            this.field_O = new fw(a.field_k, (qo) null);
             this.field_N = new fw(dt.field_c, (qo) null);
             this.field_Q.field_I = false;
           }
-          this.field_Q.painter = (WidgetPainter) ((Object) new lu(10000536));
-          this.field_S.painter = (WidgetPainter) ((Object) new ol(10000536));
+          this.field_Q.field_k = (kh) ((Object) new lu(10000536));
+          this.field_S.field_k = (kh) ((Object) new ol(10000536));
           var6 = new nu();
-          this.field_O.painter = (WidgetPainter) ((Object) var6);
+          this.field_O.field_k = (kh) ((Object) var6);
           if (this.field_N != null) {
-            this.field_N.painter = (WidgetPainter) ((Object) var6);
+            this.field_N.field_k = (kh) ((Object) var6);
           }
           if (this.field_R != null) {
-            this.field_R.painter = (WidgetPainter) ((Object) var6);
+            this.field_R.field_k = (kh) ((Object) var6);
           }
           this.field_Q.field_s = de.field_d;
           if (null != this.field_R) {
@@ -119,37 +119,37 @@ final class df extends tj implements fb, he {
           }
           if (!this.field_P) {
             if (this.field_F) {
-              this.field_N.field_s = CombatSandbox.field_e;
-              this.field_N.painter = (WidgetPainter) ((Object) new td());
+              this.field_N.field_s = vn.field_e;
+              this.field_N.field_k = (kh) ((Object) new td());
             } else {
-              this.field_N.painter = (WidgetPainter) ((Object) new td());
+              this.field_N.field_k = (kh) ((Object) new td());
             }
           } else {
-            this.field_N.field_s = VineGrowthAction.field_v;
+            this.field_N.field_s = pe.field_v;
           }
-          this.y = 15;
+          this.field_p = 15;
           var7 = ArmiesOfGielinor.field_J;
           if (null != this.field_I) {
-            this.y = this.y + (5 + var7.getParagraphHeight(this.field_I, this.width - 40, var7.field_H));
+            this.field_p = this.field_p + (5 + var7.a(this.field_I, this.field_l - 40, var7.field_H));
           }
           var8 = bh.field_J;
-          var9 = ea.a(0, CombatEvent.d((byte) 34));
-          if (var9 != CombatSandbox.field_j) {
+          var9 = ea.a(0, ag.d((byte) 34));
+          if (var9 != vn.field_j) {
             if (var9 == ps.field_y) {
-              var8 = DualNodeDeque.field_h;
+              var8 = ui.field_h;
             }
           } else {
-            var8 = DeployAction.field_t;
+            var8 = pl.field_t;
           }
-          dupTemp$0 = new ta(10, this.y, this.width - 20, 25, this.field_Q, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new ta(10, this.field_p, this.field_l - 20, 25, this.field_Q, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
-          this.a((byte) 10, (Widget) (dupTemp$0));
-          this.y = this.y + (((Widget) ((Object) var12)).height + 5);
-          dupTemp$1 = new ta(10, this.y, -20 + this.width, 25, this.field_S, false, 80, 3, var7, 16777215, jj.field_h);
+          this.a((byte) 10, (kb) (dupTemp$0));
+          this.field_p = this.field_p + (((kb) ((Object) var12)).field_w + 5);
+          dupTemp$1 = new ta(10, this.field_p, -20 + this.field_l, 25, this.field_S, false, 80, 3, var7, 16777215, jj.field_h);
           var13 = dupTemp$1;
-          this.a((byte) 10, (Widget) (dupTemp$1));
+          this.a((byte) 10, (kb) (dupTemp$1));
           this.field_O.field_x = (qo) (this);
-          this.y = this.y + (5 + ((Widget) ((Object) var13)).height);
+          this.field_p = this.field_p + (5 + ((kb) ((Object) var13)).field_w);
           if (this.field_R != null) {
             this.field_R.field_x = (qo) (this);
           }
@@ -157,33 +157,33 @@ final class df extends tj implements fb, he {
             this.field_N.field_x = (qo) (this);
           }
           if (null == this.field_R) {
-            this.field_O.setBounds(8, -10 + (this.width - 6), this.y, 8192, 30);
-            this.y = this.y + 35;
+            this.field_O.a(8, -10 + (this.field_l - 6), this.field_p, 8192, 30);
+            this.field_p = this.field_p + 35;
           } else {
-            this.field_O.setBounds(85, this.width - 95, this.y, 8192, 30);
-            this.y = this.y + 60;
+            this.field_O.a(85, this.field_l - 95, this.field_p, 8192, 30);
+            this.field_p = this.field_p + 60;
           }
           if (null != this.field_R) {
-            this.field_R.setBounds(8, -10 + (this.width - 6), this.y, 8192, 30);
-            this.y = this.y + 35;
+            this.field_R.a(8, -10 + (this.field_l - 6), this.field_p, 8192, 30);
+            this.field_p = this.field_p + 35;
           }
           if (this.field_N != null) {
             if (!this.field_P &&
               !this.field_F) {
-              this.field_N.setBounds(8, 40, this.y, 8192, 20);
-              this.y = this.y + 25;
+              this.field_N.a(8, 40, this.field_p, 8192, 20);
+              this.field_p = this.field_p + 25;
             } else {
-              this.field_N.setBounds(8, -16 + this.width, this.y, 8192, 30);
-              this.y = this.y + 35;
+              this.field_N.a(8, -16 + this.field_l, this.field_p, 8192, 30);
+              this.field_p = this.field_p + 35;
             }
           }
-          this.setBounds(0, this.width, 0, 8192, 3 + this.y);
-          this.a((byte) 10, (Widget) (this.field_O));
+          this.a(0, this.field_l, 0, 8192, 3 + this.field_p);
+          this.a((byte) 10, (kb) (this.field_O));
           if (this.field_R != null) {
-            this.a((byte) 10, (Widget) (this.field_R));
+            this.a((byte) 10, (kb) (this.field_R));
           }
           if (this.field_N != null) {
-            this.a((byte) 10, (Widget) (this.field_N));
+            this.a((byte) 10, (kb) (this.field_N));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -202,7 +202,7 @@ final class df extends tj implements fb, he {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ final class df extends tj implements fb, he {
         RuntimeException var3 = null;
         try {
           if (this.field_Q == param0) {
-            this.field_S.a(11, (Widget) (this));
+            this.field_S.a(11, (kb) (this));
           }
           if (param1 != 80) {
             var4 = (fn) null;
@@ -235,7 +235,7 @@ final class df extends tj implements fb, he {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -244,10 +244,10 @@ final class df extends tj implements fb, he {
           df.a(-77);
         }
         if (null != this.field_I) {
-          ArmiesOfGielinor.field_J.a(this.field_I, param0 - (-this.x - 20), 15 + param1 + this.y, -40 + this.width, this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.field_H);
+          ArmiesOfGielinor.field_J.a(this.field_I, param0 - (-this.field_B - 20), 15 + param1 + this.field_p, -40 + this.field_l, this.field_w, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.field_H);
         }
         if (this.field_R != null) {
-          SoftwareRaster.e(10 + param0, 134 + param1, -20 + this.width, 4210752);
+          qn.e(10 + param0, 134 + param1, -20 + this.field_l, 4210752);
         }
         super.a(param0, param1, (byte) -104, param3);
     }
@@ -259,7 +259,7 @@ final class df extends tj implements fb, he {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param1 != 11) {
             this.m(64);
@@ -268,7 +268,7 @@ final class df extends tj implements fb, he {
             if (this.field_R != param4) {
               if (param4 == this.field_N) {
                 if (this.field_P) {
-                  IntPair.e(17);
+                  ft.e(17);
                 } else {
                   if (!this.field_F) {
                     me.a(param1 ^ 26573);
@@ -294,7 +294,7 @@ final class df extends tj implements fb, he {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -316,18 +316,18 @@ final class df extends tj implements fb, he {
         try {
           int var3_int = 14 % ((param1 + 80) / 33);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "df.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "df.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0) {
         if (param0 != -20) {
           String var2 = (String) null;
-          df.a((String) null, -20, (ResourceArchive) null, -114, (String) null);
+          df.a((String) null, -20, (kl) null, -114, (String) null);
         }
-        MoveEvent.campaignMenu = new CampaignMenu();
-        EquipmentBattleTutorial.configureTutorialStage(30, 21, 220, 420, 440, 470, new int[]{7}, -121);
-        EquipmentBattleTutorial.configureTutorialStage(30, 22, 490, 610, 20, 50, new int[]{47}, param0 - 55);
+        kr.field_C = new cv();
+        gb.a(30, 21, 220, 420, 440, 470, new int[]{7}, -121);
+        gb.a(30, 22, 490, 610, 20, 50, new int[]{47}, param0 - 55);
     }
 
     final String m(int param0) {
@@ -347,7 +347,7 @@ final class df extends tj implements fb, he {
         if (df.k(30) ||
           !(0 >= this.field_Q.field_v.length()) &&
           !(0 >= this.field_S.field_v.length())) {
-          CampaignProgress.a(this.field_S.field_v, 0, this.field_Q.field_v);
+          cm.a(this.field_S.field_v, 0, this.field_Q.field_v);
         }
     }
 
@@ -355,7 +355,7 @@ final class df extends tj implements fb, he {
         hf.field_a = param0;
     }
 
-    final static String a(String param0, int param1, ResourceArchive param2, int param3, String param4) {
+    final static String a(String param0, int param1, kl param2, int param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -373,11 +373,11 @@ final class df extends tj implements fb, he {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (!param2.ensureIndex((byte) 82)) {
+          if (!param2.a((byte) 82)) {
             stackIn_6_0 = (String) (param4);
             return stackIn_6_0;
           }
-          stackIn_8_0 = param0 + " - " + param2.getGroupProgress(param1, (byte) 73) + "%";
+          stackIn_8_0 = param0 + " - " + param2.b(param1, (byte) 73) + "%";
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -401,7 +401,7 @@ final class df extends tj implements fb, he {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -413,7 +413,7 @@ final class df extends tj implements fb, he {
         this.field_S.k(-79);
     }
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean a(kb param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -444,7 +444,7 @@ final class df extends tj implements fb, he {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

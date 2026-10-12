@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og extends IntrusiveNode {
+final class og extends tc {
     static int field_m;
     static String field_t;
-    NodeDeque field_k;
+    at field_k;
     int field_q;
     static int[] field_p;
     static String field_l;
@@ -19,21 +19,21 @@ final class og extends IntrusiveNode {
     }
 
     final static void a(int param0, boolean param1) {
-        if (Spell.field_d == null) {
+        if (ik.field_d == null) {
           if (param0 != 16756) {
             og.a(-87, true);
             return;
           }
           return;
         }
-        if (!Spell.field_d.a((byte) 102, param1)) {
+        if (!ik.field_d.a((byte) 102, param1)) {
           if (param0 != 16756) {
             og.a(-87, true);
             return;
           }
           return;
         }
-        Spell.field_d = null;
+        ik.field_d = null;
         if (param0 == 16756) {
           return;
         }
@@ -47,19 +47,19 @@ final class og extends IntrusiveNode {
         if (gg.field_G == this.field_q) {
           return "Number{" + this.field_o + "}";
         }
-        if (EquipmentBattleTutorial.field_z == this.field_q) {
+        if (gb.field_z == this.field_q) {
           return "Boolean{" + this.field_o + "}";
         }
         if (this.field_q == hf.field_h) {
           return "Char{" + this.field_o + "}";
         }
-        if (this.field_q == BattleTutorial.field_x) {
+        if (this.field_q == iu.field_x) {
           return "String{" + this.field_o + "}";
         }
         if (mo.field_j == this.field_q) {
           return "ArgStart";
         }
-        if (LeaderEscortCondition.field_d == this.field_q) {
+        if (gm.field_d == this.field_q) {
           return "ArgEnd";
         }
         if (this.field_q == sb.field_d) {
@@ -76,12 +76,12 @@ final class og extends IntrusiveNode {
           var5 = (CharSequence) ((Object) param2);
           wm.field_b = k.a(var5, false);
           dj.field_e = param0;
-          TrianglePulse.a((byte) 118);
+          hh.a((byte) 118);
           if (param1 != 1) {
             field_r = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "og.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "og.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class og extends IntrusiveNode {
         nd[] var7 = null;
         nd[] var8 = null;
         String var9 = null;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           try {
             if (param0 != 1) {
@@ -118,12 +118,12 @@ final class og extends IntrusiveNode {
               var7 = new nd[this.field_k.b(false)];
               var8 = var7;
               var4 = 0;
-              var5 = (og) (this.field_k.first((byte) 106));
+              var5 = (og) (this.field_k.e((byte) 106));
               while (var5 != null) {
                 incrementValue$0 = var4;
                 var4++;
                 var7[incrementValue$0] = var5.a(1, param1);
-                var5 = (og) (this.field_k.next((byte) 123));
+                var5 = (og) (this.field_k.a((byte) 123));
               }
               stackIn_9_0 = na.a(param1, (byte) 2, var8, this.field_o);
               return stackIn_9_0;
@@ -145,7 +145,7 @@ final class og extends IntrusiveNode {
               stackIn_23_0 = new nd(Integer.parseInt(this.field_o));
               return stackIn_23_0;
             }
-            if (EquipmentBattleTutorial.field_z == this.field_q) {
+            if (gb.field_z == this.field_q) {
               stackIn_27_0 = new nd(this.field_o.equals("true"));
               return stackIn_27_0;
             }
@@ -157,7 +157,7 @@ final class og extends IntrusiveNode {
               stackIn_33_0 = new nd(var9.charAt(0));
               return stackIn_33_0;
             }
-            if (BattleTutorial.field_x == this.field_q) {
+            if (iu.field_x == this.field_q) {
               stackIn_36_0 = new nd(this.field_o.substring(1, this.field_o.length() - 1));
               return stackIn_36_0;
             }
@@ -177,7 +177,7 @@ final class og extends IntrusiveNode {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
         }
     }
 
@@ -199,7 +199,7 @@ final class og extends IntrusiveNode {
           this.field_o = param2;
           this.field_s = param1;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "og.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "og.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

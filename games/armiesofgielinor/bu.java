@@ -3,10 +3,10 @@
  */
 final class bu {
     static dn field_a;
-    static RgbSprite[] field_c;
-    static CampaignQuicksave storedQuicksave;
+    static wk[] field_c;
+    static sl field_b;
 
-    final static void a(int param0, Unit param1, int param2, PacketBuffer param3) {
+    final static void a(int param0, jd param1, int param2, vh param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -17,34 +17,34 @@ final class bu {
         RuntimeException var4 = null;
         int var5 = 0;
         try {
-          var4_int = param1.packStatusFlags((byte) 117);
-          param3.writeByte(param2 - 1, param1.bonusStrength & 31 | param1.ownerPlayer << 5);
-          param3.writeShort(true, var4_int);
-          param3.writeByte(1, param0 + param1.maximumStrength);
-          param3.writeByte(1, param1.strength + param0);
-          param3.writeByte(1, param1.statusEffectValue << 4 | param1.statusEffectType);
-          param3.writeByte(1, param1.accessoryType);
-          param3.writeByte(1, param1.equipmentDescriptor);
-          param3.writeByte(param2 - 1, param1.immobilizedTurns);
-          param3.writeByte(1, param1.movementFlags);
-          if ((4 & param1.movementFlags) != 0) {
-            param3.a(param1.displayName, 413740432);
+          var4_int = param1.h((byte) 117);
+          param3.b(param2 - 1, param1.field_A & 31 | param1.field_O << 5);
+          param3.b(true, var4_int);
+          param3.b(1, param0 + param1.field_t);
+          param3.b(1, param1.field_Y + param0);
+          param3.b(1, param1.field_o << 4 | param1.field_P);
+          param3.b(1, param1.field_ab);
+          param3.b(1, param1.field_r);
+          param3.b(param2 - 1, param1.field_cb);
+          param3.b(1, param1.field_V);
+          if ((4 & param1.field_V) != 0) {
+            param3.a(param1.field_K, 413740432);
           }
           var5 = 0;
-          if (0 != param1.tag) {
+          if (0 != param1.field_E) {
             var5 = var5 | 2;
           }
-          if (param1.objectiveId != 0) {
+          if (param1.field_H != 0) {
             var5 = var5 | 1;
           }
-          param3.writeByte(1, var5);
+          param3.b(1, var5);
           if (0 != (var5 & param2)) {
-            param3.writeByte(1, param1.tag);
+            param3.b(1, param1.field_E);
           }
           if ((var5 & 1) == 0) {
             return;
           }
-          param3.writeByte(1, param1.objectiveId);
+          param3.b(1, param1.field_H);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -62,13 +62,13 @@ final class bu {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_a = null;
-        storedQuicksave = null;
+        field_b = null;
         field_c = null;
         if (param0 >= -76) {
           field_a = (dn) null;

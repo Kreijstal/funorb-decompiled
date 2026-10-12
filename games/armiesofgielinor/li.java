@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class li extends IntrusiveNode {
+final class li extends tc {
     static Random field_n;
     static int[] field_k;
     static String field_p;
@@ -15,35 +15,35 @@ final class li extends IntrusiveNode {
     final static void a(int param0) {
         int var3 = 0;
         int var1_int = 0;
-        AnimationFrameSet var2 = null;
+        wp var2 = null;
         int var4 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          var1_int = PaletteRegionMap.field_g.frameId >> 16;
+          var1_int = pr.field_g.field_i >> 16;
           var2 = we.a(var1_int, true);
           io.a(var2, (byte) -34);
-          if (CipherPacketBuffer.currentBattlefield.localPlayer <= -1) {
-            stackIn_4_0 = CipherPacketBuffer.currentBattlefield.currentPlayer;
+          if (bv.field_w.field_sb <= -1) {
+            stackIn_4_0 = bv.field_w.field_gb;
           } else {
-            stackIn_4_0 = CipherPacketBuffer.currentBattlefield.localPlayer;
+            stackIn_4_0 = bv.field_w.field_sb;
           }
-          MapTile.field_i = stackIn_4_0;
-          GameplayController.field_f = (int)(106.0 + Math.sin((double)uk.field_n / 3.141592653589793 / (double)param0) * 50.0);
+          ne.field_i = stackIn_4_0;
+          ic.field_f = (int)(106.0 + Math.sin((double)uk.field_n / 3.141592653589793 / (double)param0) * 50.0);
           if (!cu.field_a) {
-            ResourceArchive.field_a.g(200);
+            kl.field_a.g(200);
             return;
           }
           for (var3 = 0; var3 < 4; var3++) {
-            ResourceArchive.field_a.b(var3, param0 + 1745035901);
+            kl.field_a.b(var3, param0 + 1745035901);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "li.B(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "li.B(" + param0 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class li extends IntrusiveNode {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

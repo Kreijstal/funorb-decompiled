@@ -26,28 +26,28 @@ final class cw {
         int var18 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
-        var18 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var18 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          var6_int = 50 + GameplayController.field_f;
+          var6_int = 50 + ic.field_f;
           if (param3 > -116) {
             field_b = (String) null;
           }
-          if (null != NetworkResourceRequest.field_C.selectedUnit) {
-            if (NetworkResourceRequest.field_C.controlledPlayerId != CipherPacketBuffer.currentBattlefield.currentPlayer &&
-              NetworkResourceRequest.field_C.selectedUnit.ownerPlayer == NetworkResourceRequest.field_C.controlledPlayerId) {
+          if (null != jf.field_C.field_T) {
+            if (jf.field_C.field_q != bv.field_w.field_gb &&
+              jf.field_C.field_T.field_O == jf.field_C.field_q) {
               return;
             }
-            if (NetworkResourceRequest.field_C.selectedUnit.attacksRemaining > 0) {
-              if (!NetworkResourceRequest.field_C.selectedUnit.movementSpent &&
-                NetworkResourceRequest.field_C.selectedUnit.ownerPlayer == NetworkResourceRequest.field_C.controlledPlayerId &&
-                !NetworkResourceRequest.field_C.selectedUnit.h(-13494)) {
-                var7 = NetworkResourceRequest.field_C.selectedUnit.getMaximumAttackRange(3257);
-                var8 = NetworkResourceRequest.field_C.selectedUnit.getMinimumAttackRange((byte) -79);
-                var9 = NetworkResourceRequest.field_C.movementPlanner.targetX;
-                var10 = NetworkResourceRequest.field_C.movementPlanner.targetY;
-                if (NetworkResourceRequest.field_C.selectedUnit.hasMovementTarget(-28467)) {
-                  var9 = NetworkResourceRequest.field_C.selectedUnit.a(false);
-                  var10 = NetworkResourceRequest.field_C.selectedUnit.D(-65);
+            if (jf.field_C.field_T.field_B > 0) {
+              if (!jf.field_C.field_T.field_s &&
+                jf.field_C.field_T.field_O == jf.field_C.field_q &&
+                !jf.field_C.field_T.h(-13494)) {
+                var7 = jf.field_C.field_T.B(3257);
+                var8 = jf.field_C.field_T.l((byte) -79);
+                var9 = jf.field_C.field_vb.field_n;
+                var10 = jf.field_C.field_vb.field_b;
+                if (jf.field_C.field_T.o(-28467)) {
+                  var9 = jf.field_C.field_T.a(false);
+                  var10 = jf.field_C.field_T.D(-65);
                 }
                 var11 = Math.abs(var9 - param4);
                 var12 = Math.abs(var10 - param5);
@@ -56,9 +56,9 @@ final class cw {
                   stackIn_19_0 = (var12 + var11 != 1) ? 0 : 1;
                   var13 = stackIn_19_0;
                   if (var13 == 0) {
-                    if ((CipherPacketBuffer.currentBattlefield.getTileEffects(31, var10, var9, NetworkResourceRequest.field_C.selectedUnit.ownerPlayer) & 2) == 0) {
-                      if ((2 & CipherPacketBuffer.currentBattlefield.getTileEffects(31, param5, param4, NetworkResourceRequest.field_C.selectedUnit.ownerPlayer)) == 0) {
-                        stackIn_29_0 = (CipherPacketBuffer.currentBattlefield.field_j.a(var10, param4, var9, NetworkResourceRequest.field_C.selectedUnit.isFlying(-111), var7, param5, (byte) 62)) ? 1 : 0;
+                    if ((bv.field_w.b(31, var10, var9, jf.field_C.field_T.field_O) & 2) == 0) {
+                      if ((2 & bv.field_w.b(31, param5, param4, jf.field_C.field_T.field_O)) == 0) {
+                        stackIn_29_0 = (bv.field_w.field_j.a(var10, param4, var9, jf.field_C.field_T.x(-111), var7, param5, (byte) 62)) ? 1 : 0;
                       } else {
                         stackIn_29_0 = 0;
                       }
@@ -74,47 +74,47 @@ final class cw {
                     for (var15 = 1; var15 < 40; var15 += 2) {
                       var16 = Math.abs(-(var15 * 2) + 40);
                       var17 = -20 + (param1 + var15);
-                      SoftwareRaster.d(-40 + param2 + var16, var17, -1 - var16 + param2 + 40, var17, 16711680, var6_int);
+                      qn.d(-40 + param2 + var16, var17, -1 - var16 + param2 + 40, var17, 16711680, var6_int);
                     }
                   }
                 }
               }
-              stackIn_38_0 = (NetworkResourceRequest.field_C.selectedUnit.movementSpent) ? 1 : 3;
+              stackIn_38_0 = (jf.field_C.field_T.field_s) ? 1 : 3;
               var7Lifetime1 = stackIn_38_0;
-              var8Lifetime1 = NetworkResourceRequest.field_C.movementPlanner.getMovementBudget(27732);
-              if ((NetworkResourceRequest.field_C.movementPlanner.field_e[param0] & var7Lifetime1) != 0) {
-                if (!NetworkResourceRequest.field_C.selectedUnit.movementSpent &&
-                  NetworkResourceRequest.field_C.movementPlanner.movementCosts[param0] <= var8Lifetime1) {
+              var8Lifetime1 = jf.field_C.field_vb.c(27732);
+              if ((jf.field_C.field_vb.field_e[param0] & var7Lifetime1) != 0) {
+                if (!jf.field_C.field_T.field_s &&
+                  jf.field_C.field_vb.field_q[param0] <= var8Lifetime1) {
                   return;
                 }
                 if (param5 == 0 ||
-                  (!(var8Lifetime1 >= NetworkResourceRequest.field_C.movementPlanner.movementCosts[-CipherPacketBuffer.currentBattlefield.mapWidth + param0]) ||
-                  NetworkResourceRequest.field_C.selectedUnit.movementSpent) &&
-                  (var7Lifetime1 & NetworkResourceRequest.field_C.movementPlanner.field_e[param0 - ResourceRequest.field_y]) == 0) {
-                  SoftwareRaster.d(-40 + param2, param1, param2, -20 + param1, 16711680, var6_int);
+                  (!(var8Lifetime1 >= jf.field_C.field_vb.field_q[-bv.field_w.field_v + param0]) ||
+                  jf.field_C.field_T.field_s) &&
+                  (var7Lifetime1 & jf.field_C.field_vb.field_e[param0 - ks.field_y]) == 0) {
+                  qn.d(-40 + param2, param1, param2, -20 + param1, 16711680, var6_int);
                 }
                 if (param5 == -1 + ef.field_c ||
-                  (!(var8Lifetime1 >= NetworkResourceRequest.field_C.movementPlanner.movementCosts[ResourceRequest.field_y + param0]) ||
-                  NetworkResourceRequest.field_C.selectedUnit.movementSpent) &&
-                  (NetworkResourceRequest.field_C.movementPlanner.field_e[ResourceRequest.field_y + param0] & var7Lifetime1) == 0) {
-                  SoftwareRaster.d(40 + param2, param1, param2, param1 + 20, 16711680, var6_int);
+                  (!(var8Lifetime1 >= jf.field_C.field_vb.field_q[ks.field_y + param0]) ||
+                  jf.field_C.field_T.field_s) &&
+                  (jf.field_C.field_vb.field_e[ks.field_y + param0] & var7Lifetime1) == 0) {
+                  qn.d(40 + param2, param1, param2, param1 + 20, 16711680, var6_int);
                 }
                 if (0 == param4 ||
-                  (!(NetworkResourceRequest.field_C.movementPlanner.movementCosts[-1 + param0] <= var8Lifetime1) ||
-                  NetworkResourceRequest.field_C.selectedUnit.movementSpent) &&
-                  (var7Lifetime1 & NetworkResourceRequest.field_C.movementPlanner.field_e[param0 - 1]) == 0) {
-                  SoftwareRaster.d(param2 - 40, param1, param2, 20 + param1, 16711680, var6_int);
+                  (!(jf.field_C.field_vb.field_q[-1 + param0] <= var8Lifetime1) ||
+                  jf.field_C.field_T.field_s) &&
+                  (var7Lifetime1 & jf.field_C.field_vb.field_e[param0 - 1]) == 0) {
+                  qn.d(param2 - 40, param1, param2, 20 + param1, 16711680, var6_int);
                 }
-                if (param4 != -1 + ResourceRequest.field_y) {
-                  if (var8Lifetime1 >= NetworkResourceRequest.field_C.movementPlanner.movementCosts[1 + param0] &&
-                    !NetworkResourceRequest.field_C.selectedUnit.movementSpent) {
+                if (param4 != -1 + ks.field_y) {
+                  if (var8Lifetime1 >= jf.field_C.field_vb.field_q[1 + param0] &&
+                    !jf.field_C.field_T.field_s) {
                     return;
                   }
-                  if ((var7Lifetime1 & NetworkResourceRequest.field_C.movementPlanner.field_e[param0 + 1]) != 0) {
+                  if ((var7Lifetime1 & jf.field_C.field_vb.field_e[param0 + 1]) != 0) {
                     return;
                   }
                 }
-                SoftwareRaster.d(40 + param2, param1, param2, -20 + param1, 16711680, var6_int);
+                qn.d(40 + param2, param1, param2, -20 + param1, 16711680, var6_int);
                 return;
               }
               return;
@@ -124,7 +124,7 @@ final class cw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var6), "cw.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.a((Throwable) ((Object) var6), "cw.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

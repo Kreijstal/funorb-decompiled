@@ -9,13 +9,13 @@ final class ef extends Exception {
 
     final static void b(int param0) {
         ro.field_lb = null;
-        CipherPacketBuffer.currentBattlefield = null;
+        bv.field_w = null;
         og.field_p = null;
         vs.field_e = null;
-        NetworkResourceRequest.field_C = null;
-        PaletteRegionMap.field_g = null;
-        ResourceArchive.field_a = null;
-        CampaignMenuEntry.field_u = null;
+        jf.field_C = null;
+        pr.field_g = null;
+        kl.field_a = null;
+        cq.field_u = null;
         if (param0 != -1) {
           ef.b(95);
         }
@@ -32,7 +32,7 @@ final class ef extends Exception {
         try {
           if (0 == we.field_f.field_yb) {
           } else {
-            if (NodeIterator.field_a) {
+            if (bb.field_a) {
             } else {
               if (!vi.field_d) {
                 hf.field_c = true;
@@ -45,7 +45,7 @@ final class ef extends Exception {
             return;
           }
           ts.a(param7, param2, param4, 20, param0, param0, param5, 15676, param6);
-          UnitCycler.field_g.a(true, param3);
+          eu.field_g.a(true, param3);
           if (param3) {
             if (qf.field_e.field_yb != 0) {
               hf.field_c = false;
@@ -57,7 +57,7 @@ final class ef extends Exception {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ef.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ef.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 

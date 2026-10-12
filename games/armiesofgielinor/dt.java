@@ -47,10 +47,10 @@ final class dt {
           }
           fj.a((java.awt.Component) ((Object) param0), (byte) 35);
           dc.a((java.awt.Component) ((Object) param0), -37);
-          if (CampaignMission.field_I == null) {
+          if (om.field_I == null) {
             return;
           }
-          CampaignMission.field_I.a((java.awt.Component) ((Object) param0), true);
+          om.field_I.a((java.awt.Component) ((Object) param0), true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -62,7 +62,7 @@ final class dt {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

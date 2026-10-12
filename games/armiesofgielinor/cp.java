@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cp {
-    static IndexedSprite[] field_e;
+    static ru[] field_e;
     static boolean field_h;
     static String field_g;
     static int field_a;
@@ -11,11 +11,11 @@ final class cp {
     static String field_f;
     static je field_d;
 
-    final static EventPresenter a(GameplayController param0, int param1, Battlefield param2, boolean param3, GameEvent param4, BattleUnitRenderer param5) {
-        EventPresenter var6 = null;
+    final static vb a(ic param0, int param1, ha param2, boolean param3, oj param4, eo param5) {
+        vb var6 = null;
         RuntimeException var6_ref = null;
-        EventPresenter stackIn_2_0 = null;
-        EventPresenter stackIn_6_0 = null;
+        vb stackIn_2_0 = null;
+        vb stackIn_6_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -28,11 +28,11 @@ final class cp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 10120) {
-            stackIn_2_0 = (EventPresenter) null;
+            stackIn_2_0 = (vb) null;
             return stackIn_2_0;
           }
-          var6 = new EventPresenter(param0, param2, param5, param4, param3);
-          if (!var6.initialize(-19702)) {
+          var6 = new vb(param0, param2, param5, param4, param3);
+          if (!var6.e(-19702)) {
             return null;
           }
           stackIn_6_0 = var6;
@@ -65,7 +65,7 @@ final class cp {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -79,8 +79,8 @@ final class cp {
           field_c = null;
           return;
         }
-        BattleUnitRenderer var2 = (BattleUnitRenderer) null;
-        cp.a((GameplayController) null, -1, (Battlefield) null, false, (GameEvent) null, (BattleUnitRenderer) null);
+        eo var2 = (eo) null;
+        cp.a((ic) null, -1, (ha) null, false, (oj) null, (eo) null);
         field_b = null;
         field_g = null;
         field_c = null;

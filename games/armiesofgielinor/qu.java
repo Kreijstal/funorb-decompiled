@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qu extends IntrusiveNode {
+final class qu extends tc {
     static String field_r;
     static String field_n;
-    static IndexedSprite[] field_k;
+    static ru[] field_k;
     static int field_p;
     byte[] field_m;
     int field_o;
@@ -13,7 +13,7 @@ final class qu extends IntrusiveNode {
     static String[] field_s;
 
     final static void e(int param0) {
-        if (BattleTutorial.field_h) {
+        if (iu.field_h) {
           e.a((byte) -93);
           if (param0 == -3) {
             return;
@@ -28,27 +28,27 @@ final class qu extends IntrusiveNode {
     }
 
     final static String a(int param0, byte param1) {
-        int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        GameplayController var10 = rd.field_j;
-        GameplayController var11 = var10;
+        int var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        ic var10 = rd.field_j;
+        ic var11 = var10;
         if (var11 == null) {
           return "No game in progress.";
         }
         if (param0 < 0) {
           return "Please choose a player, 0-based.";
         }
-        if (var11.battlefield.playerCount < param0) {
+        if (var11.field_xb.field_W < param0) {
           return "Please choose a player, 0-based.";
         }
-        var11.battlefield.eliminatePlayer(10001, param0, false);
-        kw.campaignPacketWord0 = 2297;
-        cg.campaignPacketWord2 = 72584621;
-        wr.campaignPacketWord3 = 224;
-        ii.campaignPacketWord1 = 4452;
-        int var3 = var10.battlefield.playerTurnCounts[var10.controlledPlayerId];
-        int var4 = var10.battlefield.damageTakenByPlayer[var10.controlledPlayerId];
+        var11.field_xb.b(10001, param0, false);
+        kw.field_R = 2297;
+        cg.field_j = 72584621;
+        wr.field_L = 224;
+        ii.field_b = 4452;
+        int var3 = var10.field_xb.field_mb[var10.field_q];
+        int var4 = var10.field_xb.field_zb[var10.field_q];
         hc.field_b = hc.field_b + 1;
-        hc.field_b = hc.field_b + (ko.field_b ^ AiPlanningStrategy.field_d);
+        hc.field_b = hc.field_b + (ko.field_b ^ sm.field_d);
         if (param1 <= 31) {
           qu.a(-2, (byte) 45);
         }
@@ -58,86 +58,86 @@ final class qu extends IntrusiveNode {
         int var7 = hc.field_b % 4;
         int var8 = var7;
         if (0 == var8) {
-          kw.campaignPacketWord0 = kw.campaignPacketWord0 - var6;
-          ii.campaignPacketWord1 = ii.campaignPacketWord1 - var5;
+          kw.field_R = kw.field_R - var6;
+          ii.field_b = ii.field_b - var5;
           return "Done.";
         }
         if (var8 != 1) {
           if (var8 == 2) {
-            kw.campaignPacketWord0 = kw.campaignPacketWord0 + (var5 - var6);
+            kw.field_R = kw.field_R + (var5 - var6);
             return "Done.";
           }
           if (var8 != 3) {
             throw new IllegalStateException("");
           }
-          ii.campaignPacketWord1 = ii.campaignPacketWord1 - (-var6 + var5);
+          ii.field_b = ii.field_b - (-var6 + var5);
           return "Done.";
         }
-        ii.campaignPacketWord1 = ii.campaignPacketWord1 + var6;
-        kw.campaignPacketWord0 = kw.campaignPacketWord0 + var5;
+        ii.field_b = ii.field_b + var6;
+        kw.field_R = kw.field_R + var5;
         return "Done.";
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (DropdownOptionList.field_R == null) {
-          DropdownOptionList.field_R = new int[param2 * 2];
+        if (pp.field_R == null) {
+          pp.field_R = new int[param2 * 2];
           if (no.field_U == null ||
             !(param2 <= no.field_U.length)) {
             no.field_U = new int[param2 * 2];
           }
-          if (AnimationFrameSet.field_w == null ||
-            !(param2 <= AnimationFrameSet.field_w.length)) {
-            AnimationFrameSet.field_w = new int[param2 * 2];
+          if (wp.field_w == null ||
+            !(param2 <= wp.field_w.length)) {
+            wp.field_w = new int[param2 * 2];
           }
-          if (TutorialController.field_c == null ||
-            !(param2 <= TutorialController.field_c.length)) {
-            TutorialController.field_c = new int[param2 * 2];
+          if (ci.field_c == null ||
+            !(param2 <= ci.field_c.length)) {
+            ci.field_c = new int[param2 * 2];
           }
-          if (null == VineGrowthAction.field_s ||
-            !(param2 <= VineGrowthAction.field_s.length)) {
-            VineGrowthAction.field_s = new int[param2 * 2];
+          if (null == pe.field_s ||
+            !(param2 <= pe.field_s.length)) {
+            pe.field_s = new int[param2 * 2];
           }
-          if (EffectPresentation.field_h == null) {
-            EffectPresentation.field_h = new int[2 * param2];
+          if (tb.field_h == null) {
+            tb.field_h = new int[2 * param2];
             if (vt.field_m == null ||
               !(param2 + param1 <= vt.field_m.length)) {
               vt.field_m = new int[(param2 + param1) * 2];
             }
-            if (AiUnitPlanner.field_q == null ||
-              !(AiUnitPlanner.field_q.length >= param2)) {
-              AiUnitPlanner.field_q = new boolean[2 * param2];
+            if (cl.field_q == null ||
+              !(cl.field_q.length >= param2)) {
+              cl.field_q = new boolean[2 * param2];
             }
           } else {
-            if (EffectPresentation.field_h.length < param2) {
-              EffectPresentation.field_h = new int[2 * param2];
+            if (tb.field_h.length < param2) {
+              tb.field_h = new int[2 * param2];
               if (vt.field_m == null ||
                 !(param2 + param1 <= vt.field_m.length)) {
                 vt.field_m = new int[(param2 + param1) * 2];
               }
-              if (AiUnitPlanner.field_q == null ||
-                !(AiUnitPlanner.field_q.length >= param2)) {
-                AiUnitPlanner.field_q = new boolean[2 * param2];
+              if (cl.field_q == null ||
+                !(cl.field_q.length >= param2)) {
+                cl.field_q = new boolean[2 * param2];
               }
             } else {
               if (vt.field_m == null) {
                 vt.field_m = new int[(param2 + param1) * 2];
-                if (AiUnitPlanner.field_q == null ||
-                  !(AiUnitPlanner.field_q.length >= param2)) {
-                  AiUnitPlanner.field_q = new boolean[2 * param2];
+                if (cl.field_q == null ||
+                  !(cl.field_q.length >= param2)) {
+                  cl.field_q = new boolean[2 * param2];
                 }
               } else {
                 if (param2 + param1 > vt.field_m.length) {
                   vt.field_m = new int[(param2 + param1) * 2];
-                  if (AiUnitPlanner.field_q == null ||
-                    !(AiUnitPlanner.field_q.length >= param2)) {
-                    AiUnitPlanner.field_q = new boolean[2 * param2];
+                  if (cl.field_q == null ||
+                    !(cl.field_q.length >= param2)) {
+                    cl.field_q = new boolean[2 * param2];
                   }
                 } else {
-                  if (AiUnitPlanner.field_q == null) {
-                    AiUnitPlanner.field_q = new boolean[2 * param2];
+                  if (cl.field_q == null) {
+                    cl.field_q = new boolean[2 * param2];
                   } else {
-                    if (AiUnitPlanner.field_q.length < param2) {
-                      AiUnitPlanner.field_q = new boolean[2 * param2];
+                    if (cl.field_q.length < param2) {
+                      cl.field_q = new boolean[2 * param2];
                     }
                   }
                 }
@@ -145,64 +145,64 @@ final class qu extends IntrusiveNode {
             }
           }
         } else {
-          if (DropdownOptionList.field_R.length >= param2) {
+          if (pp.field_R.length >= param2) {
             if (no.field_U == null ||
               !(param2 <= no.field_U.length)) {
               no.field_U = new int[param2 * 2];
             }
-            if (AnimationFrameSet.field_w == null ||
-              !(param2 <= AnimationFrameSet.field_w.length)) {
-              AnimationFrameSet.field_w = new int[param2 * 2];
+            if (wp.field_w == null ||
+              !(param2 <= wp.field_w.length)) {
+              wp.field_w = new int[param2 * 2];
             }
-            if (TutorialController.field_c == null ||
-              !(param2 <= TutorialController.field_c.length)) {
-              TutorialController.field_c = new int[param2 * 2];
+            if (ci.field_c == null ||
+              !(param2 <= ci.field_c.length)) {
+              ci.field_c = new int[param2 * 2];
             }
-            if (null == VineGrowthAction.field_s ||
-              !(param2 <= VineGrowthAction.field_s.length)) {
-              VineGrowthAction.field_s = new int[param2 * 2];
+            if (null == pe.field_s ||
+              !(param2 <= pe.field_s.length)) {
+              pe.field_s = new int[param2 * 2];
             }
-            if (EffectPresentation.field_h == null) {
-              EffectPresentation.field_h = new int[2 * param2];
+            if (tb.field_h == null) {
+              tb.field_h = new int[2 * param2];
               if (vt.field_m == null ||
                 !(param2 + param1 <= vt.field_m.length)) {
                 vt.field_m = new int[(param2 + param1) * 2];
               }
-              if (AiUnitPlanner.field_q == null ||
-                !(AiUnitPlanner.field_q.length >= param2)) {
-                AiUnitPlanner.field_q = new boolean[2 * param2];
+              if (cl.field_q == null ||
+                !(cl.field_q.length >= param2)) {
+                cl.field_q = new boolean[2 * param2];
               }
             } else {
-              if (EffectPresentation.field_h.length < param2) {
-                EffectPresentation.field_h = new int[2 * param2];
+              if (tb.field_h.length < param2) {
+                tb.field_h = new int[2 * param2];
                 if (vt.field_m == null ||
                   !(param2 + param1 <= vt.field_m.length)) {
                   vt.field_m = new int[(param2 + param1) * 2];
                 }
-                if (AiUnitPlanner.field_q == null ||
-                  !(AiUnitPlanner.field_q.length >= param2)) {
-                  AiUnitPlanner.field_q = new boolean[2 * param2];
+                if (cl.field_q == null ||
+                  !(cl.field_q.length >= param2)) {
+                  cl.field_q = new boolean[2 * param2];
                 }
               } else {
                 if (vt.field_m == null) {
                   vt.field_m = new int[(param2 + param1) * 2];
-                  if (AiUnitPlanner.field_q == null ||
-                    !(AiUnitPlanner.field_q.length >= param2)) {
-                    AiUnitPlanner.field_q = new boolean[2 * param2];
+                  if (cl.field_q == null ||
+                    !(cl.field_q.length >= param2)) {
+                    cl.field_q = new boolean[2 * param2];
                   }
                 } else {
                   if (param2 + param1 > vt.field_m.length) {
                     vt.field_m = new int[(param2 + param1) * 2];
-                    if (AiUnitPlanner.field_q == null ||
-                      !(AiUnitPlanner.field_q.length >= param2)) {
-                      AiUnitPlanner.field_q = new boolean[2 * param2];
+                    if (cl.field_q == null ||
+                      !(cl.field_q.length >= param2)) {
+                      cl.field_q = new boolean[2 * param2];
                     }
                   } else {
-                    if (AiUnitPlanner.field_q == null) {
-                      AiUnitPlanner.field_q = new boolean[2 * param2];
+                    if (cl.field_q == null) {
+                      cl.field_q = new boolean[2 * param2];
                     } else {
-                      if (AiUnitPlanner.field_q.length < param2) {
-                        AiUnitPlanner.field_q = new boolean[2 * param2];
+                      if (cl.field_q.length < param2) {
+                        cl.field_q = new boolean[2 * param2];
                       }
                     }
                   }
@@ -210,46 +210,46 @@ final class qu extends IntrusiveNode {
               }
             }
           } else {
-            DropdownOptionList.field_R = new int[param2 * 2];
+            pp.field_R = new int[param2 * 2];
             if (no.field_U == null ||
               !(param2 <= no.field_U.length)) {
               no.field_U = new int[param2 * 2];
             }
-            if (AnimationFrameSet.field_w == null ||
-              !(param2 <= AnimationFrameSet.field_w.length)) {
-              AnimationFrameSet.field_w = new int[param2 * 2];
+            if (wp.field_w == null ||
+              !(param2 <= wp.field_w.length)) {
+              wp.field_w = new int[param2 * 2];
             }
-            if (TutorialController.field_c == null ||
-              !(param2 <= TutorialController.field_c.length)) {
-              TutorialController.field_c = new int[param2 * 2];
+            if (ci.field_c == null ||
+              !(param2 <= ci.field_c.length)) {
+              ci.field_c = new int[param2 * 2];
             }
-            if (null == VineGrowthAction.field_s ||
-              !(param2 <= VineGrowthAction.field_s.length)) {
-              VineGrowthAction.field_s = new int[param2 * 2];
+            if (null == pe.field_s ||
+              !(param2 <= pe.field_s.length)) {
+              pe.field_s = new int[param2 * 2];
             }
-            if (EffectPresentation.field_h == null) {
-              EffectPresentation.field_h = new int[2 * param2];
+            if (tb.field_h == null) {
+              tb.field_h = new int[2 * param2];
               if (vt.field_m == null ||
                 !(param2 + param1 <= vt.field_m.length)) {
                 vt.field_m = new int[(param2 + param1) * 2];
               }
-              if (AiUnitPlanner.field_q == null) {
-                AiUnitPlanner.field_q = new boolean[2 * param2];
+              if (cl.field_q == null) {
+                cl.field_q = new boolean[2 * param2];
               } else {
-                if (AiUnitPlanner.field_q.length < param2) {
-                  AiUnitPlanner.field_q = new boolean[2 * param2];
+                if (cl.field_q.length < param2) {
+                  cl.field_q = new boolean[2 * param2];
                 }
               }
             } else {
-              if (EffectPresentation.field_h.length < param2) {
-                EffectPresentation.field_h = new int[2 * param2];
+              if (tb.field_h.length < param2) {
+                tb.field_h = new int[2 * param2];
                 if (vt.field_m == null ||
                   !(param2 + param1 <= vt.field_m.length)) {
                   vt.field_m = new int[(param2 + param1) * 2];
                 }
-                if (AiUnitPlanner.field_q == null ||
-                  !(AiUnitPlanner.field_q.length >= param2)) {
-                  AiUnitPlanner.field_q = new boolean[2 * param2];
+                if (cl.field_q == null ||
+                  !(cl.field_q.length >= param2)) {
+                  cl.field_q = new boolean[2 * param2];
                 }
               } else {
                 if (vt.field_m == null) {
@@ -259,11 +259,11 @@ final class qu extends IntrusiveNode {
                     vt.field_m = new int[(param2 + param1) * 2];
                   }
                 }
-                if (AiUnitPlanner.field_q == null) {
-                  AiUnitPlanner.field_q = new boolean[2 * param2];
+                if (cl.field_q == null) {
+                  cl.field_q = new boolean[2 * param2];
                 } else {
-                  if (AiUnitPlanner.field_q.length < param2) {
-                    AiUnitPlanner.field_q = new boolean[2 * param2];
+                  if (cl.field_q.length < param2) {
+                    cl.field_q = new boolean[2 * param2];
                   }
                 }
               }
@@ -294,7 +294,7 @@ final class qu extends IntrusiveNode {
           this.field_l = param0;
           this.field_m = param2;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qu.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "qu.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

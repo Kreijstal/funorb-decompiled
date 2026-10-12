@@ -9,7 +9,7 @@ final class vs {
     static String field_i;
     static int field_f;
     static je field_g;
-    static MapTile[] field_e;
+    static ne[] field_e;
     static String field_h;
     static String field_b;
 
@@ -19,14 +19,14 @@ final class vs {
         }
         try {
           qd.field_I = param1;
-          OwnerChangeEvent.field_E.field_fb.b(75);
-          OwnerChangeEvent.field_E.a(qd.field_I, 105);
+          as.field_E.field_fb.b(75);
+          as.field_E.a(qd.field_I, 105);
           if (param0 != 256) {
             field_j = true;
           }
-          BattleTutorial.field_h = true;
+          iu.field_h = true;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vs.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "vs.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

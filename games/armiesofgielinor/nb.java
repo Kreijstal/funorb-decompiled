@@ -5,7 +5,7 @@ final class nb {
     private int field_d;
     private int field_e;
     private int field_n;
-    private RgbSprite[] field_k;
+    private wk[] field_k;
     private int field_l;
     private int field_o;
     private int field_q;
@@ -22,16 +22,16 @@ final class nb {
     private boolean field_a;
     private int field_j;
 
-    final static void a(int param0, int param1, byte param2, Unit param3) {
+    final static void a(int param0, int param1, byte param2, jd param3) {
         if (param2 != -97) {
           return;
         }
         try {
           param0 -= 16;
-          AttackEvent.field_E.h(param0 + 48, 12 + param1);
+          ns.field_E.h(param0 + 48, 12 + param1);
           km.field_h[0].h(46 + param0, param1 + 10);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "nb.S(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "nb.S(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -53,8 +53,8 @@ final class nb {
         int var3 = 0;
         if (this.field_l == 0) {
           var2 = this.field_q;
-          var3 = this.field_k[0].canvasHeight;
-          SoftwareRaster.b(this.field_c, this.field_d, var2, var3, this.field_m[0]);
+          var3 = this.field_k[0].field_x;
+          qn.b(this.field_c, this.field_d, var2, var3, this.field_m[0]);
           if (param0 != 1043) {
             this.g(61);
             return;
@@ -63,9 +63,9 @@ final class nb {
         }
         if (this.field_l == 1) {
           var3 = this.field_q;
-          var2 = this.field_k[0].canvasWidth;
+          var2 = this.field_k[0].field_A;
         }
-        SoftwareRaster.b(this.field_c, this.field_d, var2, var3, this.field_m[0]);
+        qn.b(this.field_c, this.field_d, var2, var3, this.field_m[0]);
         if (param0 == 1043) {
           return;
         }
@@ -74,8 +74,8 @@ final class nb {
 
     final static int c(byte param0) {
         if (param0 < 93) {
-          Unit var2 = (Unit) null;
-          nb.a(-81, 18, (byte) -44, (Unit) null);
+          jd var2 = (jd) null;
+          nb.a(-81, 18, (byte) -44, (jd) null);
           return ku.field_K;
         }
         return ku.field_K;
@@ -84,7 +84,7 @@ final class nb {
     final boolean a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = 0;
-        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var4Lifetime1;
         int var4Lifetime2;
         int var5Lifetime1;
@@ -122,8 +122,8 @@ final class nb {
         int var5 = 0;
         int var6 = this.b(param3 ^ 0, param0);
         int var7 = this.a(param3, param0);
-        int var8 = this.field_k[0].canvasWidth;
-        int var9 = this.field_k[0].canvasHeight;
+        int var8 = this.field_k[0].field_A;
+        int var9 = this.field_k[0].field_x;
         var5 = mo.a(param1, var6, var7, param2, var8, (byte) -110, var9) ? 1 : 0;
         return var5 != 0;
     }
@@ -210,7 +210,7 @@ final class nb {
         if (param0 != 27150) {
           return;
         }
-        this.field_j = this.field_k[0].canvasWidth;
+        this.field_j = this.field_k[0].field_A;
     }
 
     final void f(int param0) {
@@ -281,7 +281,7 @@ final class nb {
 
     private final int a(int param0, int param1) {
         int var4 = 0;
-        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var3 = param0;
         if (param1 != 0) {
           if (param1 != 1) {
@@ -302,7 +302,7 @@ final class nb {
           return var3;
         }
         if (1 == this.field_l) {
-          var4 = this.field_k[0].canvasHeight;
+          var4 = this.field_k[0].field_x;
           var3 = this.field_d - (-this.field_q + var4);
           return var3;
         }
@@ -328,19 +328,19 @@ final class nb {
     }
 
     private final void a(byte param0, int param1) {
-        RgbSprite var9 = null;
-        RgbSprite var11 = null;
-        RgbSprite var10 = null;
-        RgbSprite var12 = null;
-        int var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        wk var9 = null;
+        wk var11 = null;
+        wk var10 = null;
+        wk var12 = null;
+        int var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var3 = this.b(0, param1);
         int var4 = this.a(0, param1);
         int var6 = -12 / ((-44 - param0) / 33);
         int var5 = this.c(param1, 1);
-        RgbSprite var10Lifetime1;
-        RgbSprite var12Lifetime1;
-        RgbSprite var10Lifetime2;
-        RgbSprite var12Lifetime2;
+        wk var10Lifetime1;
+        wk var12Lifetime1;
+        wk var10Lifetime2;
+        wk var12Lifetime2;
         if (param1 != 0) {
           if (1 != param1) {
             return;
@@ -608,7 +608,7 @@ final class nb {
     }
 
     private final int b(int param0, int param1) {
-        int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var3 = param0;
         if (param1 != 0) {
           if (param1 != 1) {
@@ -630,7 +630,7 @@ final class nb {
           }
           return var3;
         }
-        int var4 = this.field_k[0].canvasWidth;
+        int var4 = this.field_k[0].field_A;
         var3 = this.field_c - (-this.field_q + var4);
         return var3;
     }
@@ -651,7 +651,7 @@ final class nb {
           var6 = 1;
         }
         if (this.field_l == 0) {
-          var7 = this.field_k[0].canvasWidth;
+          var7 = this.field_k[0].field_A;
           var2 = var7 + (this.b(0, 1) + (-(var7 << 1) + this.field_q) * this.field_b / var6);
           var3 = this.field_d;
           var4 = this.field_f * (this.field_q - (var7 << 1)) / var6;
@@ -662,22 +662,22 @@ final class nb {
         }
         if (this.field_l == 1) {
           var2 = this.field_c;
-          var7Lifetime1 = this.field_k[0].canvasHeight;
+          var7Lifetime1 = this.field_k[0].field_x;
           var3 = var7Lifetime1 + this.a(0, 1) + (-(var7Lifetime1 << 1) + this.field_q) * this.field_b / var6;
           var4 = this.field_j;
           var5 = this.field_f * (-(var7Lifetime1 << 1) + this.field_q) / var6;
           if (this.field_b + this.field_f == this.field_o) {
             var5 = this.a(0, 0) - var3;
           }
-          SoftwareRaster.f(var2, var3, var4, var5, this.field_m[1]);
-          SoftwareRaster.b(var2, var3, var4, var5, this.field_m[0]);
+          qn.f(var2, var3, var4, var5, this.field_m[1]);
+          qn.b(var2, var3, var4, var5, this.field_m[0]);
           return;
         }
-        SoftwareRaster.f(var2, var3, var4, var5, this.field_m[1]);
-        SoftwareRaster.b(var2, var3, var4, var5, this.field_m[0]);
+        qn.f(var2, var3, var4, var5, this.field_m[1]);
+        qn.b(var2, var3, var4, var5, this.field_m[0]);
     }
 
-    nb(RgbSprite[] param0, int[] param1, int param2) {
+    nb(wk[] param0, int[] param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -709,7 +709,7 @@ final class nb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 

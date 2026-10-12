@@ -9,8 +9,8 @@ final class dq {
     private int[] field_h;
     static int field_c;
     private byte[] field_a;
-    static RgbSprite[] field_i;
-    static IndexedSprite[] field_e;
+    static wk[] field_i;
+    static ru[] field_e;
     private int[] field_b;
 
     final static int a(byte param0, int param1) {
@@ -19,7 +19,7 @@ final class dq {
         int var4;
         int var5;
         int var3Lifetime1;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         var2 = 76 % ((param0 - 52) / 39);
         var3 = param1;
         var4 = param1;
@@ -54,22 +54,22 @@ final class dq {
     final static void a(int param0, int param1, String param2, boolean param3, byte param4, int param5) {
         try {
           if (param3) {
-            no.field_P.pixelWidth = SoftwareRaster.width;
-            no.field_P.pixels = SoftwareRaster.pixels;
-            no.field_P.pixelHeight = SoftwareRaster.height;
+            no.field_P.field_y = qn.field_l;
+            no.field_P.field_B = qn.field_d;
+            no.field_P.field_v = qn.field_g;
             ku.field_J.b();
-            SoftwareRaster.b();
-            gq.b(SectorCacheStore.field_j[3][0], 0, 0, param1);
-            fe.c(DeployRequest.a(param2, (byte) 42), uh.field_e[3][0] >> 1, 20 + (uh.field_e[3][1] >> 1), 2, true);
+            qn.b();
+            gq.b(bc.field_j[3][0], 0, 0, param1);
+            fe.c(jc.a(param2, (byte) 42), uh.field_e[3][0] >> 1, 20 + (uh.field_e[3][1] >> 1), 2, true);
             no.field_P.b();
             ku.field_J.h(param0, param5);
           } else {
-            gq.b(SectorCacheStore.field_j[3][0], param0, param5, param1);
-            fe.c(DeployRequest.a(param2, (byte) 42), (uh.field_e[3][0] >> 1) + param0, 20 + (uh.field_e[3][1] >> 1) + param5, 2, true);
+            gq.b(bc.field_j[3][0], param0, param5, param1);
+            fe.c(jc.a(param2, (byte) 42), (uh.field_e[3][0] >> 1) + param0, 20 + (uh.field_e[3][1] >> 1) + param5, 2, true);
           }
           int var6_int = 67 % ((param4 - 48) / 53);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dq.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "dq.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class dq {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class dq {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var15 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var7_int = 0;
           var8 = param4 << 3;
@@ -193,7 +193,7 @@ final class dq {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -310,7 +310,7 @@ final class dq {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -352,7 +352,7 @@ final class dq {
         int var10Lifetime5;
         int var10Lifetime6;
         int var10Lifetime7;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param3 == 0) {
             stackIn_3_0 = 0;
@@ -364,7 +364,7 @@ final class dq {
           param3 = param3 + param4;
           var7_int = 0;
           var8 = param1;
-          scanLoop1: while (true) {
+          L3: while (true) {
             var9 = param0[var8];
             if (0 > var9) {
               var7_int = this.field_b[var7_int];
@@ -378,7 +378,7 @@ final class dq {
               param4++;
               param5[incrementValue$1] = (byte)(~var10);
               if (param3 <= param4) {
-                break scanLoop1;
+                break L3;
               }
               var7_int = 0;
             }
@@ -394,7 +394,7 @@ final class dq {
               param4++;
               param5[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param4 >= param3) {
-                break scanLoop1;
+                break L3;
               }
               var7_int = 0;
             }
@@ -410,7 +410,7 @@ final class dq {
               param4++;
               param5[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param3 <= param4) {
-                break scanLoop1;
+                break L3;
               }
               var7_int = 0;
             }
@@ -426,7 +426,7 @@ final class dq {
               param4++;
               param5[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param3 <= param4) {
-                break scanLoop1;
+                break L3;
               }
               var7_int = 0;
             }
@@ -458,7 +458,7 @@ final class dq {
               param4++;
               param5[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param4 >= param3) {
-                break scanLoop1;
+                break L3;
               }
               var7_int = 0;
             }
@@ -474,7 +474,7 @@ final class dq {
               param4++;
               param5[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param4 >= param3) {
-                break scanLoop1;
+                break L3;
               }
               var7_int = 0;
             }
@@ -490,7 +490,7 @@ final class dq {
               param4++;
               param5[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param4 >= param3) {
-                break scanLoop1;
+                break L3;
               }
               var7_int = 0;
             }
@@ -516,7 +516,7 @@ final class dq {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
         }
     }
 

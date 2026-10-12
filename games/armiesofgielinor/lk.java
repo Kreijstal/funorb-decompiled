@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class lk implements WidgetPainter, pm {
-    BitmapFont field_q;
+class lk implements kh, pm {
+    ka field_q;
     int field_m;
     int field_n;
     int field_g;
@@ -23,11 +23,11 @@ class lk implements WidgetPainter, pm {
     int field_t;
     int field_k;
 
-    lk(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    lk(ka param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final int a(Widget param0, int param1, int param2, int param3) {
+    private final int a(kb param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -38,7 +38,7 @@ class lk implements WidgetPainter, pm {
           if (param2 != 0) {
             field_f = false;
           }
-          stackIn_3_0 = param1 + this.field_g + param0.y + (param3 + param0.field_z);
+          stackIn_3_0 = param1 + this.field_g + param0.field_p + (param3 + param0.field_z);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -50,7 +50,7 @@ class lk implements WidgetPainter, pm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -70,15 +70,15 @@ class lk implements WidgetPainter, pm {
           param0.field_d = this.field_d;
           param0.field_t = this.field_t;
           if (param1 != 24978) {
-            Widget var4 = (Widget) null;
-            this.a((Widget) null, -24, 63, -48, 119, -128);
+            kb var4 = (kb) null;
+            this.a((kb) null, -24, 63, -48, 119, -128);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lk.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "lk.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void a(int param0, int param1, int param2, Widget param3, int param4) {
+    public final void a(int param0, int param1, int param2, kb param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         ts var8 = null;
@@ -86,7 +86,7 @@ class lk implements WidgetPainter, pm {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        Widget var13 = null;
+        kb var13 = null;
         ju var14 = null;
         ju var15 = null;
         int stackIn_3_0 = 0;
@@ -115,15 +115,15 @@ class lk implements WidgetPainter, pm {
               stackIn_4_3 = var14.field_b[1 + var7].field_n;
             }
             var12 = stackIn_3_0 + Math.min(stackIn_3_1, Math.min(stackIn_3_2, stackIn_4_3));
-            CampaignUnitOverride.a(param2 + param3.x, param3.x + param2 + param3.width, param3.height + (param3.y + param0), param3.y + param0, (byte) 100);
+            id.a(param2 + param3.field_B, param3.field_B + param2 + param3.field_l, param3.field_w + (param3.field_p + param0), param3.field_p + param0, (byte) 100);
             t.field_c.a(this.field_o, var12, var10, (byte) 101, var11, var10);
             rf.b(-18862);
           }
           if (param1 == 1024) {
             return;
           }
-          var13 = (Widget) null;
-          this.d(35, (Widget) null);
+          var13 = (kb) null;
+          this.d(35, (kb) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -135,11 +135,11 @@ class lk implements WidgetPainter, pm {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    private final int c(int param0, Widget param1) {
+    private final int c(int param0, kb param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -149,7 +149,7 @@ class lk implements WidgetPainter, pm {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 16 / ((-48 - param0) / 33);
-          stackIn_1_0 = -this.field_m + (param1.height - this.field_g);
+          stackIn_1_0 = -this.field_m + (param1.field_w - this.field_g);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -161,11 +161,11 @@ class lk implements WidgetPainter, pm {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
-    private final void b(Widget param0, byte param1) {
+    private final void b(kb param0, byte param1) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -178,7 +178,7 @@ class lk implements WidgetPainter, pm {
         int var7 = 0;
         int var8 = 0;
         int var7Lifetime1;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0.field_u == null) {
             param0.field_u = (ju) ((Object) new ak());
@@ -233,11 +233,11 @@ class lk implements WidgetPainter, pm {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    public final int a(Widget param0, int param1) {
+    public final int a(kb param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -261,11 +261,11 @@ class lk implements WidgetPainter, pm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    private final int a(int param0, Widget param1, int param2, int param3) {
+    private final int a(int param0, kb param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
@@ -275,7 +275,7 @@ class lk implements WidgetPainter, pm {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = 42 / ((param3 + 63) / 35);
-          stackIn_1_0 = param2 + param1.field_r + param0 - (-param1.x - this.field_i);
+          stackIn_1_0 = param2 + param1.field_r + param0 - (-param1.field_B - this.field_i);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -287,11 +287,11 @@ class lk implements WidgetPainter, pm {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    public final int a(int param0, int param1, Widget param2) {
+    public final int a(int param0, int param1, kb param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -316,11 +316,11 @@ class lk implements WidgetPainter, pm {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    public final int a(Widget param0, int param1, byte param2) {
+    public final int a(kb param0, int param1, byte param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -345,11 +345,11 @@ class lk implements WidgetPainter, pm {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    public final int b(int param0, Widget param1) {
+    public final int b(int param0, kb param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -360,7 +360,7 @@ class lk implements WidgetPainter, pm {
           if (param0 < 44) {
             field_p = -118;
           }
-          stackIn_3_0 = -this.field_t + param1.width - this.field_i;
+          stackIn_3_0 = -this.field_t + param1.field_l - this.field_i;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -372,11 +372,11 @@ class lk implements WidgetPainter, pm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    public final ju a(int param0, Widget param1) {
+    public final ju a(int param0, kb param1) {
         RuntimeException var3 = null;
         ju stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
@@ -407,26 +407,26 @@ class lk implements WidgetPainter, pm {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    public void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {
+    public void a(kb param0, int param1, int param2, boolean param3, int param4) {
         if (this.field_q == null) {
           return;
         }
         try {
-          if (obfuscationGuard >= -79) {
-            Widget var7 = (Widget) null;
-            this.a((Widget) null, 119, (byte) 95);
+          if (param2 >= -79) {
+            kb var7 = (kb) null;
+            this.a((kb) null, 119, (byte) 95);
           }
-          this.a(originX, -251, originY, widget);
+          this.a(param1, -251, param4, param0);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lk.C(" + (widget != null ? "{...}" : "null") + ',' + originX + ',' + obfuscationGuard + ',' + renderFlag + ',' + originY + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "lk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    String d(int param0, Widget param1) {
+    String d(int param0, kb param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -449,11 +449,11 @@ class lk implements WidgetPainter, pm {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    public final int a(Widget param0, int param1, int param2, int param3, int param4, int param5) {
+    public final int a(kb param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -479,11 +479,11 @@ class lk implements WidgetPainter, pm {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    public final void a(int param0, int param1, int param2, Widget param3, int param4, int param5) {
+    public final void a(int param0, int param1, int param2, kb param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
@@ -502,7 +502,7 @@ class lk implements WidgetPainter, pm {
         int var16 = 0;
         ju var17 = null;
         ju var18 = null;
-        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0 != -21259) {
             return;
@@ -524,7 +524,7 @@ class lk implements WidgetPainter, pm {
           }
           var10 = var18.a(param0 ^ -21259, var8);
           var11 = var18.a(param0 ^ -21259, var9);
-          CampaignUnitOverride.a(param5 + param3.x, param3.width + (param5 + param3.x), param3.height + (param4 + param3.y), param3.y + param4, (byte) 116);
+          id.a(param5 + param3.field_B, param3.field_l + (param5 + param3.field_B), param3.field_w + (param4 + param3.field_p), param3.field_p + param4, (byte) 116);
           for (var12 = var10; var11 >= var12; var12++) {
             var13 = var17.field_b[var12];
             if (~var12 != ~var10) {
@@ -543,7 +543,7 @@ class lk implements WidgetPainter, pm {
               stackIn_21_0 = var18.a((byte) -66, var9);
             }
             var15 = stackIn_21_0;
-            t.field_c.a(this.field_l >>> 24, this.a(param5, param3, var14, -109), this.field_g + param4 + (param3.y + param3.field_z) + var13.field_n, true, var13.field_c, -var14 + var15, this.field_l);
+            t.field_c.a(this.field_l >>> 24, this.a(param5, param3, var14, -109), this.field_g + param4 + (param3.field_p + param3.field_z) + var13.field_n, true, var13.field_c, -var14 + var15, this.field_l);
           }
           rf.b(param0 + 2397);
           return;
@@ -557,7 +557,7 @@ class lk implements WidgetPainter, pm {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -576,18 +576,18 @@ class lk implements WidgetPainter, pm {
         return ib.field_j > 250 ? true : false;
     }
 
-    private final void a(int param0, int param1, int param2, Widget param3) {
+    private final void a(int param0, int param1, int param2, kb param3) {
         try {
           this.a(0, param2, param0, this.field_d, 0, this.field_b, param3, 2);
           if (param1 != -251) {
             this.field_m = 1;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lk.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "lk.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, Widget param6, int param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, kb param6, int param7) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -599,13 +599,13 @@ class lk implements WidgetPainter, pm {
         int var12 = 0;
         int var13 = 0;
         int var12Lifetime1;
-        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param7 != 2) {
             this.field_b = -74;
           }
           boolean decompiledFrameRemainder0 = true;
-          CampaignUnitOverride.a(param6.x + param2, param6.width + param2 + param6.x, param6.height + (param6.y + param1), param6.y + param1, (byte) 91);
+          id.a(param6.field_B + param2, param6.field_l + param2 + param6.field_B, param6.field_w + (param6.field_p + param1), param6.field_p + param1, (byte) 91);
           var9_int = this.b(103, param6);
           var10 = this.c(-99, param6);
           if (!this.field_c) {
@@ -652,11 +652,11 @@ class lk implements WidgetPainter, pm {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param7).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param7).append(')').toString());
         }
     }
 
-    public final int a(Widget param0, byte param1) {
+    public final int a(kb param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -679,7 +679,7 @@ class lk implements WidgetPainter, pm {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -701,11 +701,11 @@ class lk implements WidgetPainter, pm {
             return;
           }
           oq.a(27080, (java.awt.Component) ((Object) param1));
-          DisplacedUnitMarker.a((java.awt.Component) ((Object) param1), (byte) 74);
-          if (CampaignMission.field_I == null) {
+          il.a((java.awt.Component) ((Object) param1), (byte) 74);
+          if (om.field_I == null) {
             return;
           }
-          CampaignMission.field_I.a(0, (java.awt.Component) ((Object) param1));
+          om.field_I.a(0, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -717,7 +717,7 @@ class lk implements WidgetPainter, pm {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -727,13 +727,13 @@ class lk implements WidgetPainter, pm {
     final static void a(hd param0, int param1, nm param2, byte param3, boolean param4, java.awt.Component param5) {
         try {
           int var6_int = -98 / ((param3 + 3) / 46);
-          TileMetadata.a(param5, 1024, param0, param4, -115, param2, param1, param1);
+          ca.a(param5, 1024, param0, param4, -115, param2, param1, param1);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lk.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "lk.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    lk(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    lk(ka param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_g = param3;
           this.field_c = param12 ? true : false;
@@ -749,7 +749,7 @@ class lk implements WidgetPainter, pm {
           this.field_t = param2;
           this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 

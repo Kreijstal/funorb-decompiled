@@ -7,17 +7,17 @@ final class wg implements Iterable {
     static String field_a;
     static String field_e;
     static String field_c;
-    DualLinkedNode field_f;
+    ms field_f;
     static String field_d;
-    static Unit[] field_b;
+    static jd[] field_b;
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4) {
         if (param0 != -33) {
           wg.a(-108);
-          if (AiPlanningStrategy.field_d < param1) {
+          if (sm.field_d < param1) {
             return false;
           }
-          if (AiPlanningStrategy.field_d > param2) {
+          if (sm.field_d > param2) {
             return false;
           }
           if (param3 > ko.field_b) {
@@ -28,10 +28,10 @@ final class wg implements Iterable {
           }
           return false;
         }
-        if (AiPlanningStrategy.field_d < param1) {
+        if (sm.field_d < param1) {
           return false;
         }
-        if (AiPlanningStrategy.field_d > param2) {
+        if (sm.field_d > param2) {
           return false;
         }
         if (param3 > ko.field_b) {
@@ -43,32 +43,32 @@ final class wg implements Iterable {
         return false;
     }
 
-    final DualLinkedNode a(boolean param0) {
-        DualLinkedNode var2 = this.field_f.secondaryNext;
+    final ms a(boolean param0) {
+        ms var2 = this.field_f.field_s;
         if (this.field_f == var2) {
           return null;
         }
         if (!param0) {
-          var2.unlinkSecondary((byte) -76);
+          var2.c((byte) -76);
           return var2;
         }
-        return (DualLinkedNode) null;
+        return (ms) null;
     }
 
-    final void a(int param0, DualLinkedNode param1) {
+    final void a(int param0, ms param1) {
         try {
-          if (null != param1.secondaryPrevious) {
-            param1.unlinkSecondary((byte) -76);
+          if (null != param1.field_l) {
+            param1.c((byte) -76);
           }
-          param1.secondaryPrevious = this.field_f.secondaryPrevious;
+          param1.field_l = this.field_f.field_l;
           if (param0 != -96) {
             field_a = (String) null;
           }
-          param1.secondaryNext = this.field_f;
-          param1.secondaryPrevious.secondaryNext = param1;
-          param1.secondaryNext.secondaryPrevious = param1;
+          param1.field_s = this.field_f;
+          param1.field_l.field_s = param1;
+          param1.field_s.field_l = param1;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "wg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -88,7 +88,7 @@ final class wg implements Iterable {
           }
           return true;
         }
-        field_b = (Unit[]) null;
+        field_b = (jd[]) null;
         if (Character.isISOControl(param0)) {
           return false;
         }
@@ -113,9 +113,9 @@ final class wg implements Iterable {
     }
 
     wg() {
-        this.field_f = new DualLinkedNode();
-        this.field_f.secondaryPrevious = this.field_f;
-        this.field_f.secondaryNext = this.field_f;
+        this.field_f = new ms();
+        this.field_f.field_l = this.field_f;
+        this.field_f.field_s = this.field_f;
     }
 
     public static void a(int param0) {

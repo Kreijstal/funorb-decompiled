@@ -8,21 +8,21 @@ class je extends im {
     private int field_ib;
     static je field_Q;
     boolean field_ub;
-    RgbSprite[] field_A;
-    NodeDeque field_fb;
-    RgbSprite[] field_mb;
+    wk[] field_A;
+    at field_fb;
+    wk[] field_mb;
     int field_R;
     int field_N;
     boolean field_M;
     int field_hb;
-    RgbSprite[] field_G;
+    wk[] field_G;
     boolean field_eb;
     int field_O;
     int field_W;
     private int field_E;
     private boolean field_Cb;
     String field_X;
-    RgbSprite field_cb;
+    wk field_cb;
     int field_tb;
     static String field_zb;
     String field_I;
@@ -31,7 +31,7 @@ class je extends im {
     boolean field_Gb;
     int field_Bb;
     int field_pb;
-    RgbSprite[] field_H;
+    wk[] field_H;
     int field_nb;
     int field_F;
     private int field_J;
@@ -44,7 +44,7 @@ class je extends im {
     int field_yb;
     int field_S;
     int field_ob;
-    RgbSprite field_P;
+    wk field_P;
     int field_z;
     int field_db;
     static String field_lb;
@@ -55,17 +55,17 @@ class je extends im {
     boolean field_Y;
     int field_Fb;
     private int field_Ab;
-    RgbSprite[] field_U;
+    wk[] field_U;
     static int[][] field_K;
-    RgbSprite field_sb;
+    wk field_sb;
     private int field_kb;
-    RgbSprite field_vb;
+    wk field_vb;
     int field_ab;
-    RgbSprite field_qb;
-    BitmapFont field_Z;
+    wk field_qb;
+    ka field_Z;
 
     final void b(boolean param0, int param1) {
-        this.a((byte) -26, SoftwareRaster.height, param0, SoftwareRaster.width, 0, false, false, false, 0, true, false);
+        this.a((byte) -26, qn.field_g, param0, qn.field_l, 0, false, false, false, 0, true, false);
         if (param1 != 20) {
           je var4 = (je) null;
           this.a((je) null, false, 64, (je) null);
@@ -74,7 +74,7 @@ class je extends im {
 
     final static void c(boolean param0, int param1) {
         int var3;
-        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param1 > -101) {
           field_K = (int[][]) null;
         }
@@ -85,15 +85,15 @@ class je extends im {
         if (!param0) {
           if (null != vu.field_M) {
             if (gk.field_J <= 0) {
-              if (PreparedAction.field_r <= 0) {
-                if (mj.field_c > InstructionsPanel.field_D) {
-                  if (InstructionsPanel.field_D == 0) {
-                    RadialSummonMenu.a(false, false);
+              if (bd.field_r <= 0) {
+                if (mj.field_c > rk.field_D) {
+                  if (rk.field_D == 0) {
+                    ub.a(false, false);
                   }
-                  InstructionsPanel.field_D = InstructionsPanel.field_D + 1;
+                  rk.field_D = rk.field_D + 1;
                 }
               } else {
-                PreparedAction.field_r = PreparedAction.field_r - 1;
+                bd.field_r = bd.field_r - 1;
               }
             } else {
               gk.field_J = gk.field_J - 1;
@@ -101,15 +101,15 @@ class je extends im {
           } else {
             if (null == no.field_K) {
               vk.field_f = false;
-              if (PreparedAction.field_r > 0) {
-                PreparedAction.field_r = PreparedAction.field_r - 1;
+              if (bd.field_r > 0) {
+                bd.field_r = bd.field_r - 1;
               } else {
-                if (InstructionsPanel.field_D > 0) {
-                  InstructionsPanel.field_D = InstructionsPanel.field_D - 1;
+                if (rk.field_D > 0) {
+                  rk.field_D = rk.field_D - 1;
                 } else {
                   if (mj.field_c > gk.field_J) {
                     if (gk.field_J == 0) {
-                      DeployEvent.h(14570);
+                      tr.h(14570);
                     }
                     gk.field_J = gk.field_J + 1;
                   }
@@ -119,15 +119,15 @@ class je extends im {
               if (gk.field_J > 0) {
                 gk.field_J = gk.field_J - 1;
               } else {
-                if (InstructionsPanel.field_D <= 0) {
-                  if (mj.field_c > PreparedAction.field_r) {
-                    if (0 == PreparedAction.field_r) {
-                      RadialSummonMenu.a(false, true);
+                if (rk.field_D <= 0) {
+                  if (mj.field_c > bd.field_r) {
+                    if (0 == bd.field_r) {
+                      ub.a(false, true);
                     }
-                    PreparedAction.field_r = PreparedAction.field_r + 1;
+                    bd.field_r = bd.field_r + 1;
                   }
                 } else {
-                  InstructionsPanel.field_D = InstructionsPanel.field_D - 1;
+                  rk.field_D = rk.field_D - 1;
                 }
               }
             }
@@ -136,12 +136,12 @@ class je extends im {
           if (0 < gk.field_J) {
             gk.field_J = gk.field_J - 1;
           } else {
-            if (PreparedAction.field_r <= 0) {
-              if (0 < InstructionsPanel.field_D) {
-                InstructionsPanel.field_D = InstructionsPanel.field_D - 1;
+            if (bd.field_r <= 0) {
+              if (0 < rk.field_D) {
+                rk.field_D = rk.field_D - 1;
               }
             } else {
-              PreparedAction.field_r = PreparedAction.field_r - 1;
+              bd.field_r = bd.field_r - 1;
             }
           }
         }
@@ -285,7 +285,7 @@ class je extends im {
           } else {
             stackIn_102_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_101_1).append(stackIn_102_2).append(')').toString());
         }
     }
 
@@ -297,9 +297,9 @@ class je extends im {
         RuntimeException var3 = null;
         try {
           if (null == this.field_fb) {
-            this.field_fb = new NodeDeque();
+            this.field_fb = new at();
           }
-          this.field_fb.addLast((byte) -119, (IntrusiveNode) (param0));
+          this.field_fb.a((byte) -119, (tc) (param0));
           if (param1 < 36) {
             this.field_M = true;
           }
@@ -314,14 +314,14 @@ class je extends im {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
         je var10_ref_je = null;
         int var9 = 0;
-        int var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var9Lifetime1;
         if (param3 != -1379) {
           return;
@@ -332,11 +332,11 @@ class je extends im {
         int var8 = this.field_nb + var7;
         if (!param0) {
           var9 = 0;
-          var10_ref_je = (je) (this.field_fb.first((byte) 124));
+          var10_ref_je = (je) (this.field_fb.e((byte) 124));
           while (var10_ref_je != null) {
             var10_ref_je.field_db = -var10_ref_je.field_ab + var9;
             var9 = var9 + (param2 + (var10_ref_je.field_nb + var10_ref_je.field_ob));
-            var10_ref_je = (je) (this.field_fb.next((byte) 123));
+            var10_ref_je = (je) (this.field_fb.a((byte) 123));
           }
           var8 = var9 - param2;
         }
@@ -378,7 +378,7 @@ class je extends im {
         int var7Lifetime1;
         int var7Lifetime2;
         int var7Lifetime3;
-        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (this.field_J > 0) {
           var7 = -(-this.field_J >> 2);
         } else {
@@ -410,31 +410,31 @@ class je extends im {
         this.field_ob = this.field_ob + var7Lifetime3;
         this.field_nb = this.field_nb - var7Lifetime3;
         this.field_D = this.field_ab + param2;
-        var8 = SoftwareRaster.clipLeft;
-        var9 = SoftwareRaster.clipTop;
-        var10 = SoftwareRaster.clipRight;
-        var11 = SoftwareRaster.clipBottom;
-        SoftwareRaster.b(this.field_V, this.field_D, this.field_V + this.field_gb, this.field_D + this.field_ob);
+        var8 = qn.field_j;
+        var9 = qn.field_a;
+        var10 = qn.field_e;
+        var11 = qn.field_f;
+        qn.b(this.field_V, this.field_D, this.field_V + this.field_gb, this.field_D + this.field_ob);
         var12 = param1 ? 1 : 0;
-        if (!SectorCacheStore.field_e &&
+        if (!bc.field_e &&
           param0 &&
-          DeployEvent.field_A != 0 &&
-          SoftwareRaster.clipLeft <= BattleTutorial.field_t &&
-          BattleTutorial.field_t < SoftwareRaster.clipRight &&
-          TeleportAction.field_z >= SoftwareRaster.clipTop &&
-          TeleportAction.field_z < SoftwareRaster.clipBottom) {
-          this.field_yb = DeployEvent.field_A;
-          this.field_hb = DeployEvent.field_A;
-          this.field_bb = -this.field_V + BattleTutorial.field_t;
+          tr.field_A != 0 &&
+          qn.field_j <= iu.field_t &&
+          iu.field_t < qn.field_e &&
+          ur.field_z >= qn.field_a &&
+          ur.field_z < qn.field_f) {
+          this.field_yb = tr.field_A;
+          this.field_hb = tr.field_A;
+          this.field_bb = -this.field_V + iu.field_t;
           var12 = 1;
-          this.field_Ab = -this.field_D + TeleportAction.field_z;
+          this.field_Ab = -this.field_D + ur.field_z;
         } else {
           this.field_yb = 0;
-          if (DeployEvent.field_A != 0) {
+          if (tr.field_A != 0) {
             this.field_hb = 0;
           }
         }
-        stackIn_30_1 = (!bl.field_f) && (SoftwareRaster.clipLeft <= AiPlanningStrategy.field_d) && (SoftwareRaster.clipRight > AiPlanningStrategy.field_d) && (SoftwareRaster.clipTop <= ko.field_b) && (SoftwareRaster.clipBottom > ko.field_b);
+        stackIn_30_1 = (!bl.field_f) && (qn.field_j <= sm.field_d) && (qn.field_e > sm.field_d) && (qn.field_a <= ko.field_b) && (qn.field_f > ko.field_b);
         this.field_jb = stackIn_30_1;
         if (ro.field_ub == 0) {
           this.field_hb = 0;
@@ -449,15 +449,15 @@ class je extends im {
           }
         }
         if (var12 != 0) {
-          SectorCacheStore.field_e = true;
+          bc.field_e = true;
         }
         if (this.field_jb) {
           bl.field_f = true;
         }
-        SoftwareRaster.f(var8, var9, var10, var11);
+        qn.f(var8, var9, var10, var11);
         if (this.field_hb != 0 &&
           this.field_Gb) {
-          this.field_S = -this.field_bb + AiPlanningStrategy.field_d - param5;
+          this.field_S = -this.field_bb + sm.field_d - param5;
           this.field_ab = -this.field_Ab + ko.field_b - param2;
           if (0 > this.field_S) {
             this.field_S = 0;
@@ -479,7 +479,7 @@ class je extends im {
     }
 
     final void b(int param0, je param1) {
-        NodeIterator var3 = null;
+        bb var3 = null;
         je var4 = null;
         int var5 = 0;
         boolean stackIn_11_1 = false;
@@ -488,17 +488,17 @@ class je extends im {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0 != 3) {
             this.a(true, 119, -41, -35);
           }
           if (null != this.field_fb) {
-            var3 = new NodeIterator(this.field_fb);
-            var4 = (je) (var3.first(param0 + 47));
+            var3 = new bb(this.field_fb);
+            var4 = (je) (var3.c(param0 + 47));
             while (var4 != null) {
               var4.b(param0 ^ 0, param1);
-              var4 = (je) (var3.next(param0 + 47));
+              var4 = (je) (var3.b(param0 + 47));
             }
           }
           stackIn_11_1 = (param1 == this);
@@ -517,7 +517,7 @@ class je extends im {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -548,16 +548,16 @@ class je extends im {
         int var12 = 0;
         int var13 = 0;
         je var14 = null;
-        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          tq.field_c = SoftwareRaster.width;
-          CachedArchiveProvider.field_p = SoftwareRaster.height;
+          tq.field_c = qn.field_l;
+          bm.field_p = qn.field_g;
           if (param1) {
-            stackIn_4_0 = PreparedAction.field_r;
+            stackIn_4_0 = bd.field_r;
           } else {
-            stackIn_4_0 = InstructionsPanel.field_D;
+            stackIn_4_0 = rk.field_D;
           }
-          AnimationSequence.a(stackIn_4_0, -106);
+          qb.a(stackIn_4_0, -106);
           ij.field_w.a(-40 + lk.field_a.field_ob - 2, (byte) -125, 0, lk.field_a.field_gb, 0);
           gg.field_E.a(jn.field_d, -20500, eb.field_c.field_gb, 0, 0);
           stackIn_6_0 = di.field_l;
@@ -570,7 +570,7 @@ class je extends im {
             stackIn_7_4 = 0;
           }
           ((je) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, stackIn_6_3 - stackIn_7_4, 2 + jn.field_d, 0);
-          SpellCastEvent.field_D.a(18, -20500, 42 + jn.field_c, 2 + jn.field_d, -40 + (eb.field_c.field_gb - jn.field_c - 2));
+          pj.field_D.a(18, -20500, 42 + jn.field_c, 2 + jn.field_d, -40 + (eb.field_c.field_gb - jn.field_c - 2));
           bu.field_a.a(0, false, eb.field_c.field_gb, 2, jn.field_c, 20 + (2 + jn.field_d), -20 + (-2 + (-jn.field_d + eb.field_c.field_ob)));
           mp.field_Lb.a(40, -20500, lk.field_a.field_gb, lk.field_a.field_ob - 40, 0);
           kd.field_F.a(30, -20500, pd.field_c.field_gb, 0, 0);
@@ -593,16 +593,16 @@ class je extends im {
           if (var4 > 40) {
             var4 = 40;
           }
-          BattleTutorial.field_d.a(var4, -20500, vc.field_l.field_gb - 5 - 5, 5, 5);
+          iu.field_d.a(var4, -20500, vc.field_l.field_gb - 5 - 5, 5, 5);
           var5 = 5 + var4 + 2;
           for (var6 = 0; 4 + tq.field_b > var6; var6++) {
             if ((var6 != 1 ||
               !(lm.field_e.length < 2)) && (3 != var6 ||
-              !(1 >= BoundedFile.field_h))) {
+              !(1 >= ei.field_h))) {
               if (!param1 &&
                 var6 == 3) {
-                var7 = KingBlackDragonEvent.field_z[var6];
-                KingBlackDragonEvent.field_z[var6].field_ob = 0;
+                var7 = rl.field_z[var6];
+                rl.field_z[var6].field_ob = 0;
                 var7.field_gb = 0;
                 for (var8 = 0; var8 < pu.field_k[var6].length; var8++) {
                   if (null != pu.field_k[var6][var8]) {
@@ -613,9 +613,9 @@ class je extends im {
                 }
               } else if (param1 &&
                 var6 == 0) {
-                var14 = KingBlackDragonEvent.field_z[var6];
+                var14 = rl.field_z[var6];
                 var7 = var14;
-                KingBlackDragonEvent.field_z[var6].field_ob = 0;
+                rl.field_z[var6].field_ob = 0;
                 var14.field_gb = 0;
                 for (var8 = 0; pu.field_k[var6].length > var8; var8++) {
                   if (null != pu.field_k[var6][var8]) {
@@ -627,8 +627,8 @@ class je extends im {
               } else {
                 if (param1) {
                   if (var6 >= 4) {
-                    if (EventPresenter.field_o != null) {
-                      stackIn_43_0 = (EventPresenter.field_o[var6 - 4]) ? 1 : 0;
+                    if (vb.field_o != null) {
+                      stackIn_43_0 = (vb.field_o[var6 - 4]) ? 1 : 0;
                     } else {
                       stackIn_43_0 = 0;
                     }
@@ -640,8 +640,8 @@ class je extends im {
                 }
                 var7_int = stackIn_43_0;
                 if (var7_int != 0) {
-                  var8_ref_je = KingBlackDragonEvent.field_z[var6];
-                  KingBlackDragonEvent.field_z[var6].field_ob = 0;
+                  var8_ref_je = rl.field_z[var6];
+                  rl.field_z[var6].field_ob = 0;
                   var8_ref_je.field_gb = 0;
                   for (var9_int = 0; var9_int < pu.field_k[var6].length; var9_int++) {
                     if (pu.field_k[var6][var9_int] != null) {
@@ -651,7 +651,7 @@ class je extends im {
                     }
                   }
                 } else {
-                  KingBlackDragonEvent.field_z[var6].a(var3, -20500, 103, var5, 5);
+                  rl.field_z[var6].a(var3, -20500, 103, var5, 5);
                   var8 = 110;
                   if (param1) {
                     pu.field_k[var6][0].a(var3, 2, -30061, 38, var5, var8, io.field_n);
@@ -674,7 +674,7 @@ class je extends im {
               }
             }
           }
-          ta.field_R.a(-134 + (SoftwareRaster.height - 10), -20500, 360, 10, SoftwareRaster.width - 360 >> 1);
+          ta.field_R.a(-134 + (qn.field_g - 10), -20500, 360, 10, qn.field_l - 360 >> 1);
           bk.field_f.a(24, -20500, ta.field_R.field_gb, 0, 0);
           df.field_K.a(-24 + ta.field_R.field_ob, -20500, ta.field_R.field_gb, 24, 0);
           df.field_K.field_G = tq.a(11579568, false, df.field_K.field_ob, 1, 3, 8421504);
@@ -685,14 +685,14 @@ class je extends im {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "je.CB(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var2), "je.CB(" + param0 + ',' + param1 + ')');
         }
     }
 
     final void a(boolean param0, boolean param1) {
-        SectorCacheStore.field_e = !param1 ? true : false;
+        bc.field_e = !param1 ? true : false;
         bl.field_f = !param1 ? true : false;
-        this.a(param0, false, 0, SoftwareRaster.height, SoftwareRaster.width, 0);
+        this.a(param0, false, 0, qn.field_g, qn.field_l, 0);
     }
 
     je(long param0, je param1, String param2) {
@@ -701,7 +701,7 @@ class je extends im {
 
     final void i(int param0) {
         je var4 = null;
-        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (null != this.field_fb) {
           var4 = (je) (this.field_fb.d((byte) -112));
           while (var4 != null) {
@@ -711,7 +711,7 @@ class je extends im {
           }
         }
         if (param0 != -10027) {
-          this.field_fb = (NodeDeque) null;
+          this.field_fb = (at) null;
         }
     }
 
@@ -751,7 +751,7 @@ class je extends im {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -761,8 +761,8 @@ class je extends im {
         int var13;
         int var14;
         int var15;
-        RgbSprite[] var16;
-        RgbSprite var17;
+        wk[] var16;
+        wk var17;
         int var18;
         int var19;
         int var20;
@@ -776,14 +776,14 @@ class je extends im {
         String var26;
         String var23Lifetime1;
         String var23Lifetime2;
-        var25 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var25 = ArmiesOfGielinor.field_M ? 1 : 0;
         this.field_V = this.field_S + param8;
         this.field_D = this.field_ab + param4;
-        var12 = SoftwareRaster.clipLeft;
-        var13 = SoftwareRaster.clipTop;
-        var14 = SoftwareRaster.clipRight;
-        var15 = SoftwareRaster.clipBottom;
-        SoftwareRaster.b(this.field_V, this.field_D, this.field_gb + this.field_V, this.field_ob + this.field_D);
+        var12 = qn.field_j;
+        var13 = qn.field_a;
+        var14 = qn.field_e;
+        var15 = qn.field_f;
+        qn.b(this.field_V, this.field_D, this.field_gb + this.field_V, this.field_ob + this.field_D);
         param9 = param9 & this.field_xb;
         if (!this.field_Cb) {
           param7 = this.field_rb;
@@ -871,17 +871,17 @@ class je extends im {
         if (var17 != null) {
           var23_int = var21 + this.field_V;
           if (1 == this.field_Eb) {
-            var23_int = var23_int + (this.field_gb - var17.canvasWidth) / 2;
+            var23_int = var23_int + (this.field_gb - var17.field_A) / 2;
           }
           var24 = this.field_D + var22;
           if (this.field_Fb == 1) {
-            var24 = var24 + (-var17.canvasHeight + this.field_ob) / 2;
+            var24 = var24 + (-var17.field_x + this.field_ob) / 2;
           }
           if (2 == this.field_Eb) {
-            var23_int = var23_int + (this.field_gb - var17.canvasWidth);
+            var23_int = var23_int + (this.field_gb - var17.field_A);
           }
           if (2 == this.field_Fb) {
-            var24 = var24 + (this.field_ob - var17.canvasHeight);
+            var24 = var24 + (this.field_ob - var17.field_x);
           }
           if (256 <= this.field_kb) {
             var17.g(var23_int, var24);
@@ -929,13 +929,13 @@ class je extends im {
           }
         }
         if (this.field_fb != null) {
-          var23_ref = (je) (this.field_fb.first((byte) 118));
+          var23_ref = (je) (this.field_fb.e((byte) 118));
           while (var23_ref != null) {
             var23_ref.a((byte) -26, this.field_ob, param2, this.field_gb, var20 + this.field_D, param5, this.field_Y, param7, this.field_V + var19, param9, param10);
-            var23_ref = (je) (this.field_fb.next((byte) 123));
+            var23_ref = (je) (this.field_fb.a((byte) 123));
           }
         }
-        SoftwareRaster.f(var12, var13, var14, var15);
+        qn.f(var12, var13, var14, var15);
         return;
     }
 
@@ -962,7 +962,7 @@ class je extends im {
         je var4 = null;
         int var5 = 0;
         int var4_int = 0;
-        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var4_intLifetime1;
         if (!param0) {
           this.field_ab = -10;
@@ -976,19 +976,19 @@ class je extends im {
           }
         }
         if (this.field_cb != null) {
-          var4_intLifetime1 = this.field_cb.canvasWidth;
+          var4_intLifetime1 = this.field_cb.field_A;
           if (var3 < var4_intLifetime1) {
             var3 = var4_intLifetime1;
           }
         }
         if (this.field_fb != null) {
-          var4 = (je) (this.field_fb.first((byte) 93));
+          var4 = (je) (this.field_fb.e((byte) 93));
           while (var4 != null) {
             var5 = var4.field_S + var4.field_gb;
             if (var5 > var3) {
               var3 = var5;
             }
-            var4 = (je) (this.field_fb.next((byte) 123));
+            var4 = (je) (this.field_fb.a((byte) 123));
           }
         }
         return var3;
@@ -1043,13 +1043,13 @@ class je extends im {
           this.field_S = param2;
           this.field_ab = param3;
           this.field_gb = param4;
-          this.key = param0;
+          this.field_i = param0;
           this.a(0, param1);
           if (param6 != null) {
             this.field_X = param6;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "je.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "je.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

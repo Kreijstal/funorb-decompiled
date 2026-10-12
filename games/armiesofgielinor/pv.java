@@ -5,14 +5,14 @@ final class pv {
     static int field_b;
     static String field_d;
     static boolean field_c;
-    static RgbSprite field_e;
-    static AnimationSequence[][] field_a;
+    static wk field_e;
+    static qb[][] field_a;
 
     final static char a(int param0, char param1) {
         int var2;
         int var3;
         int var2Lifetime1;
-        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 > 114) {
           var2 = param1;
           if (var2 != 32) {
@@ -248,12 +248,12 @@ final class pv {
         return '_';
     }
 
-    final static IndexedSprite a(String param0, String param1, ResourceArchive param2, int param3) {
+    final static ru a(String param0, String param1, kl param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        IndexedSprite stackIn_2_0 = null;
-        IndexedSprite stackIn_4_0 = null;
+        ru stackIn_2_0 = null;
+        ru stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -263,13 +263,13 @@ final class pv {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.getGroupId(param0, 124);
-          var5 = param2.getFileId((byte) 121, var4_int, param1);
+          var4_int = param2.a(param0, 124);
+          var5 = param2.a((byte) 121, var4_int, param1);
           if (param3 == 24914) {
             stackIn_4_0 = ls.a(var5, param2, var4_int, -80);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (IndexedSprite) null;
+          stackIn_2_0 = (ru) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -293,7 +293,7 @@ final class pv {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -301,17 +301,17 @@ final class pv {
         field_e = null;
         if (param0 == 213) {
           field_d = null;
-          field_a = (AnimationSequence[][]) null;
+          field_a = (qb[][]) null;
           return;
         }
         field_d = (String) null;
         field_d = null;
-        field_a = (AnimationSequence[][]) null;
+        field_a = (qb[][]) null;
     }
 
     static {
         field_d = "Back to Map";
-        field_e = new RgbSprite(64, 64);
-        field_a = new AnimationSequence[6][];
+        field_e = new wk(64, 64);
+        field_a = new qb[6][];
     }
 }

@@ -9,7 +9,7 @@ final class nf extends je {
     static int field_Mb;
     je field_Ob;
     static String field_Pb;
-    static ResourceArchive field_Nb;
+    static kl field_Nb;
 
     private final void a(byte param0, int param1, int param2) {
         int var4;
@@ -56,7 +56,7 @@ final class nf extends je {
         if (param0 != 26136) {
           nf.l(77);
         }
-        return ResourceArchive.field_a.currentPosition[0];
+        return kl.field_a.field_p[0];
     }
 
     public static void k(int param0) {
@@ -104,7 +104,7 @@ final class nf extends je {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var2_int = param1.length();
           if (!param0) {
@@ -126,11 +126,11 @@ final class nf extends je {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    nf(long param0, je param1, je param2, je param3, RgbSprite param4, String param5) {
+    nf(long param0, je param1, je param2, je param3, wk param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -193,7 +193,7 @@ final class nf extends je {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -233,7 +233,7 @@ final class nf extends je {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -26,7 +26,7 @@ final class ma extends fn implements eg {
         if (this.field_s == null) {
           return null;
         }
-        ip.a(ko.field_b, this.width - this.field_W + AiPlanningStrategy.field_d, (byte) 113);
+        ip.a(ko.field_b, this.field_l - this.field_W + sm.field_d, (byte) 113);
         if (param0 != 21384) {
           return (String) null;
         }
@@ -50,7 +50,7 @@ final class ma extends fn implements eg {
         wo var8 = null;
         int[] var9 = null;
         int[] var10 = null;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (!param1.b(false)) {
             stackIn_3_0 = new ls[]{};
@@ -91,7 +91,7 @@ final class ma extends fn implements eg {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -121,19 +121,19 @@ final class ma extends fn implements eg {
             this.a((byte) -62, (n) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ma.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ma.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, Widget param3) {
+    final void a(int param0, int param1, int param2, kb param3) {
         try {
           if (param0 != 32722) {
             this.field_W = 103;
           }
           super.a(param0 + 0, param1, param2, param3);
-          this.field_W = AiPlanningStrategy.field_d - this.x - param1;
+          this.field_W = sm.field_d - this.field_B - param1;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ma.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ma.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

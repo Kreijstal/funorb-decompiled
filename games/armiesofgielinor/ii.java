@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ii {
-    static RgbSprite[] field_a;
-    static int campaignPacketWord1;
+    static wk[] field_a;
+    static int field_b;
     static String field_c;
 
     public static void a(byte param0) {

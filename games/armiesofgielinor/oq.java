@@ -4,7 +4,7 @@
 final class oq extends wv {
     static String field_j;
     static sa field_m;
-    static RgbSprite[] field_l;
+    static wk[] field_l;
     static String field_k;
 
     oq(long param0, String param1) {
@@ -27,14 +27,14 @@ final class oq extends wv {
 
     final h a(byte param0) {
         int var2 = -72 / ((-63 - param0) / 45);
-        return MovementPresentation.field_l;
+        return qv.field_l;
     }
 
-    final static int getCampaignPacketWord1(boolean obfuscationGuard) {
-        if (obfuscationGuard) {
+    final static int a(boolean param0) {
+        if (param0) {
           return -112;
         }
-        return ii.campaignPacketWord1;
+        return ii.field_b;
     }
 
     final static void a(int param0, java.awt.Component param1) {
@@ -46,7 +46,7 @@ final class oq extends wv {
           param1.addKeyListener(va.field_w);
           param1.addFocusListener(va.field_w);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oq.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "oq.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

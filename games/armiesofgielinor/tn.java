@@ -5,7 +5,7 @@ final class tn extends sf implements he {
     private fw field_bb;
     static rn field_ab;
     private fw field_fb;
-    static RgbSprite[] field_eb;
+    static wk[] field_eb;
     static jl field_cb;
     static byte[] field_db;
     static tg field_Z;
@@ -29,21 +29,21 @@ final class tn extends sf implements he {
 
     tn(gk param0) {
         super(param0, 200, 130);
-        Widget var2 = null;
+        kb var2 = null;
         try {
-          var2 = new Widget(SummonRequest.field_z, (qo) null);
-          var2.height = 80;
-          var2.width = this.width;
-          var2.x = 0;
-          var2.y = 50;
-          var2.painter = (WidgetPainter) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var2 = new kb(hw.field_z, (qo) null);
+          var2.field_w = 80;
+          var2.field_l = this.field_l;
+          var2.field_B = 0;
+          var2.field_p = 50;
+          var2.field_k = (kh) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, var2);
-          if (DamageEvent.g(98)) {
+          if (nw.g(98)) {
             this.field_fb = this.a((qo) (this), true, tg.field_j);
           }
           this.field_bb = this.a((qo) (this), true, pd.field_f);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "tn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -76,14 +76,14 @@ final class tn extends sf implements he {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     private final void o(int param0) {
         if (param0 != 1) {
-          CipherPacketBuffer var3 = (CipherPacketBuffer) null;
-          tn.readTaggedInteger(false, 35, (CipherPacketBuffer) null);
+          bv var3 = (bv) null;
+          tn.a(false, 35, (bv) null);
         }
         if (!this.field_L) {
           return;
@@ -107,11 +107,11 @@ final class tn extends sf implements he {
           if (!param1) {
             tn.a(false, -22, 101);
           }
-          var4.painter = (WidgetPainter) ((Object) new nu());
-          var5 = -6 + this.height;
-          this.height = this.height + 38;
-          var4.setBounds(15, -14 + this.width - 16, var5, 8192, 30);
-          this.a((byte) 10, (Widget) (var4));
+          var4.field_k = (kh) ((Object) new nu());
+          var5 = -6 + this.field_w;
+          this.field_w = this.field_w + 38;
+          var4.a(15, -14 + this.field_l - 16, var5, 8192, 30);
+          this.a((byte) 10, (kb) (var4));
           this.e(0);
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -131,11 +131,11 @@ final class tn extends sf implements he {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean a(kb param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_12_0 = false;
         RuntimeException stackIn_15_0 = null;
@@ -145,10 +145,10 @@ final class tn extends sf implements he {
         try {
           if (98 == param1) {
             if (this.field_fb == null) {
-              this.field_bb.a(11, (Widget) (this));
+              this.field_bb.a(11, (kb) (this));
               return true;
             }
-            this.field_fb.a(11, (Widget) (this));
+            this.field_fb.a(11, (kb) (this));
             return true;
           }
           if (param3 != -12215) {
@@ -158,7 +158,7 @@ final class tn extends sf implements he {
             stackIn_12_0 = super.a(param0, param1, param2, param3 + 0);
             return stackIn_12_0;
           }
-          this.field_bb.a(11, (Widget) (this));
+          this.field_bb.a(11, (kb) (this));
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -170,11 +170,11 @@ final class tn extends sf implements he {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(byte param0, RgbSprite[] param1) {
+    final static void a(byte param0, wk[] param1) {
         int var3 = 0;
         int var8 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -194,7 +194,7 @@ final class tn extends sf implements he {
         int var13 = 0;
         int[] var14 = null;
         int[] var15 = null;
-        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0 < 67) {
             field_ab = (rn) null;
@@ -208,12 +208,12 @@ final class tn extends sf implements he {
             var2_int = 1;
           }
           for (var3 = 0; var3 < param1.length; var3++) {
-            var15 = param1[var3].pixels;
+            var15 = param1[var3].field_B;
             var14 = var15;
             var4 = var14;
-            var5 = 16711680 & TutorialLayout.field_g[var2_int + var3];
-            var6 = 65280 & TutorialLayout.field_g[var2_int + var3];
-            var7 = 255 & TutorialLayout.field_g[var3 + var2_int];
+            var5 = 16711680 & bo.field_g[var2_int + var3];
+            var6 = 65280 & bo.field_g[var2_int + var3];
+            var7 = 255 & bo.field_g[var3 + var2_int];
             for (var8 = 0; var15.length > var8; var8++) {
               var9 = var15[var8] & 16711680;
               var10 = 65280 & var15[var8];
@@ -241,11 +241,11 @@ final class tn extends sf implements he {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
-    final static long readTaggedInteger(boolean obfuscationGuard, int encodedLength, CipherPacketBuffer packet) {
+    final static long a(boolean param0, int param1, bv param2) {
         RuntimeException var3 = null;
         long stackIn_2_0 = 0L;
         long stackIn_4_0 = 0L;
@@ -254,8 +254,8 @@ final class tn extends sf implements he {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!obfuscationGuard) {
-            stackIn_4_0 = (long)de.readTieredSignedInt(-111, packet, 4, 14, 30, 20);
+          if (!param0) {
+            stackIn_4_0 = (long)de.a(-111, param2, 4, 14, 30, 20);
             return stackIn_4_0;
           }
           stackIn_2_0 = 100L;
@@ -264,22 +264,22 @@ final class tn extends sf implements he {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("tn.C(").append(obfuscationGuard).append(',').append(encodedLength).append(',');
-          if (packet == null) {
+          stackIn_7_1 = new StringBuilder().append("tn.C(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
-    final static RgbSprite[] a(boolean param0, int param1, int param2) {
+    final static wk[] a(boolean param0, int param1, int param2) {
         if (!param0) {
-          CipherPacketBuffer var4 = (CipherPacketBuffer) null;
-          tn.readTaggedInteger(false, 58, (CipherPacketBuffer) null);
+          bv var4 = (bv) null;
+          tn.a(false, 58, (bv) null);
         }
-        return IntPair.a(param1, (byte) -114, param2, 1);
+        return ft.a(param1, (byte) -114, param2, 1);
     }
 
     static {

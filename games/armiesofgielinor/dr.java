@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dr extends DualLinkedNode {
+abstract class dr extends ms {
     static String field_y;
     static String field_D;
     Class[] field_u;
@@ -39,7 +39,7 @@ abstract class dr extends DualLinkedNode {
             dr.a(125, (byte) -9, 20, (nr) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dr.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "dr.G(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -55,7 +55,7 @@ abstract class dr extends DualLinkedNode {
         RuntimeException var4 = null;
         Class var6 = null;
         int var7 = 0;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (!this.field_B.equals(param0)) {
             return false;
@@ -66,7 +66,7 @@ abstract class dr extends DualLinkedNode {
           var4_int = -96 / ((-2 - param1) / 52);
           for (var5 = 0; var5 < this.field_u.length; var5++) {
             if (param2[var5].field_e) {
-              var6 = CampaignMenuEntry.getBoxedPrimitiveType(param2[var5].field_c, (byte) -75);
+              var6 = cq.a(param2[var5].field_c, (byte) -75);
               if (Boolean.TYPE == var6 &&
                 this.field_u[var5] != Boolean.TYPE) {
                 return false;
@@ -75,8 +75,8 @@ abstract class dr extends DualLinkedNode {
                 this.field_u[var5] != Character.TYPE) {
                 return false;
               }
-              if (RevivalEvent.a(false, var6) &&
-                !RevivalEvent.a(false, this.field_u[var5])) {
+              if (rt.a(false, var6) &&
+                !rt.a(false, this.field_u[var5])) {
                 return false;
               }
             } else {
@@ -102,7 +102,7 @@ abstract class dr extends DualLinkedNode {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ abstract class dr extends DualLinkedNode {
           var7 = new StringBuilder(this.field_B).append('(');
           var8 = var7;
           for (var5 = 0; var5 < this.field_u.length; var5++) {
-            discarded$18 = var7.append(SummonRequest.a(640, this.field_u[var5]));
+            discarded$18 = var7.append(hw.a(640, this.field_u[var5]));
             if (-1 + this.field_u.length > var5) {
               discarded$19 = var8.append(", ");
             }
@@ -131,7 +131,7 @@ abstract class dr extends DualLinkedNode {
           }
           this.field_A = var8.toString();
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "dr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

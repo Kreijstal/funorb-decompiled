@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sq extends IntrusiveNode {
+final class sq extends tc {
     private int field_l;
     private int field_p;
     static String field_n;
     private int field_m;
     static String field_o;
     static String field_s;
-    private IntrusiveNode field_q;
+    private tc field_q;
     static int field_k;
     private String field_r;
 
@@ -25,18 +25,18 @@ final class sq extends IntrusiveNode {
 
     final static String a(int param0, byte param1, int param2, int param3) {
         int var4 = -110 / ((param1 + 76) / 36);
-        GameplayController var5 = rd.field_j;
+        ic var5 = rd.field_j;
         if (var5 == null) {
           return "No game in progress.";
         }
         if (param2 < 0) {
           return "Please choose a player, 0-based.";
         }
-        if (var5.battlefield.playerCount >= param2) {
-          var5.battlefield.eliminatePlayer(10001, param2, false);
-          var5.battlefield.playerTurnCounts[var5.controlledPlayerId] = param3;
-          var5.battlefield.damageTakenByPlayer[var5.controlledPlayerId] = param0;
-          var5.trackCampaignMetrics(true);
+        if (var5.field_xb.field_W >= param2) {
+          var5.field_xb.b(10001, param2, false);
+          var5.field_xb.field_mb[var5.field_q] = param3;
+          var5.field_xb.field_zb[var5.field_q] = param0;
+          var5.j(true);
           return "Done.";
         }
         return "Please choose a player, 0-based.";
@@ -47,13 +47,13 @@ final class sq extends IntrusiveNode {
         if (0 < this.field_m &&
           this.field_l > this.field_m) {
           var3 = (int)(127.0 * (1.0 - Math.cos((double)this.field_m * 3.141592653589793 / (double)(this.field_l / 2))));
-          SoftwareRaster.a(-(this.field_p >> 1) + 320, param1 + (-this.field_m - 14), this.field_p, 20, 5, 0, var3);
+          qn.a(-(this.field_p >> 1) + 320, param1 + (-this.field_m - 14), this.field_p, 20, 5, 0, var3);
           rs.field_n.a(this.field_r, 320, param1 - this.field_m, 16777215, 0, var3);
         }
-        if (null != this.next &&
-          this.next != this.field_q &&
-          ((sq) (this.next)).field_m > 0) {
-          ((sq) (this.next)).b(500, param1);
+        if (null != this.field_b &&
+          this.field_b != this.field_q &&
+          ((sq) (this.field_b)).field_m > 0) {
+          ((sq) (this.field_b)).b(500, param1);
         }
         if (param0 == 500) {
           return;
@@ -70,24 +70,24 @@ final class sq extends IntrusiveNode {
         }
     }
 
-    sq(String param0, boolean param1, NodeDeque param2) {
+    sq(String param0, boolean param1, at param2) {
         try {
           this.field_m = 0;
           this.field_r = param0;
           this.field_p = 8 + rs.field_n.a(this.field_r);
-          this.field_q = param2.sentinel;
+          this.field_q = param2.field_d;
           this.field_l = !param1 ? 128 : 500;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "sq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(byte param0) {
         this.field_m = this.field_m + 1;
         if (this.field_m >= 16 &&
-          null != this.next &&
-          this.field_q != this.next) {
-          ((sq) (this.next)).a((byte) 66);
+          null != this.field_b &&
+          this.field_q != this.field_b) {
+          ((sq) (this.field_b)).a((byte) 66);
         }
         if (param0 != 66) {
           sq.c((byte) -116);
@@ -95,7 +95,7 @@ final class sq extends IntrusiveNode {
         if (this.field_l > this.field_m) {
           return;
         }
-        this.unlink(-122);
+        this.d(-122);
     }
 
     static {

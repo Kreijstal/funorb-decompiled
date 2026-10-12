@@ -25,7 +25,7 @@ final class rh implements Runnable {
         Throwable var3 = null;
         Object var5 = null;
         String var6 = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         this.field_a = true;
         try {
           try {
@@ -38,7 +38,7 @@ final class rh implements Runnable {
               }
               nu.a(10L, 0);
               var5 = (Object) null;
-              MapTile.a(this.field_b, (Object) null, true);
+              ne.a(this.field_b, (Object) null, true);
             }
             decompiledRegionSelector0 = 0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

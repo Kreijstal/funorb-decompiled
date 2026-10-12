@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vg extends IntrusiveNode {
+final class vg extends tc {
     static int field_p;
-    static RgbSprite[] field_q;
+    static wk[] field_q;
     byte[] field_s;
     static String field_t;
     static String field_k;
@@ -16,15 +16,15 @@ final class vg extends IntrusiveNode {
     final static boolean a(int param0) {
         if (param0 != 10) {
           vg.a((byte) 89);
-          if (Spell.field_d == null) {
-            return BattleTutorial.field_h ? true : false;
+          if (ik.field_d == null) {
+            return iu.field_h ? true : false;
           }
           return true;
         }
-        if (Spell.field_d != null) {
+        if (ik.field_d != null) {
           return true;
         }
-        if (!BattleTutorial.field_h) {
+        if (!iu.field_h) {
           return false;
         }
         return true;

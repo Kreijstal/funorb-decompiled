@@ -12,7 +12,7 @@ final class ws extends fw {
     int field_M;
     static String field_T;
 
-    final boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -22,7 +22,7 @@ final class ws extends fw {
         int var9 = 0;
         double var10 = 0.0;
         int var12 = 0;
-        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (!super.a(param0, param1, param2, 120, param4, param5, param6)) {
             if (param3 >= 103) {
@@ -31,10 +31,10 @@ final class ws extends fw {
             field_O = 36;
             return false;
           }
-          var8_int = param0 + (-this.x + (-param1 - this.field_S));
-          var9 = param5 - this.field_M + (-this.y - param2);
+          var8_int = param0 + (-this.field_B + (-param1 - this.field_S));
+          var9 = param5 - this.field_M + (-this.field_p - param2);
           if (var8_int * var8_int + var9 * var9 < this.field_Q * this.field_Q) {
-            var10 = Math.atan2((double)var9, (double)var8_int) - BattleCharacter.field_b;
+            var10 = Math.atan2((double)var9, (double)var8_int) - lf.field_b;
             if (!(0.0 > var10)) {
               if (var10 > 0.0) {
                 var10 = var10 + 3.141592653589793 / (double)this.field_L;
@@ -61,48 +61,48 @@ final class ws extends fw {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     final static void b(boolean param0) {
         if (param0) {
-          SummonRequest.a((byte) 52, wf.field_y, 6);
-          SummonRequest.a((byte) 33, sh.field_r, 26);
-          MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(26, (byte) -107) + 30, 26, (byte) 126);
-          SummonRequest.a((byte) 111, pu.field_B, 8);
-          SummonRequest.a((byte) 67, sh.field_r, 27);
-          MoveEvent.tutorialLayout.setTopY(30 + MoveEvent.tutorialLayout.getTopY(27, (byte) -126), 27, (byte) 125);
-          SummonRequest.a((byte) 78, sh.field_r, 28);
-          MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(28, (byte) -122) + 30, 28, (byte) 120);
-          SummonRequest.a((byte) 45, pu.field_B, 9);
+          hw.a((byte) 52, wf.field_y, 6);
+          hw.a((byte) 33, sh.field_r, 26);
+          kr.field_D.a(kr.field_D.a(26, (byte) -107) + 30, 26, (byte) 126);
+          hw.a((byte) 111, pu.field_B, 8);
+          hw.a((byte) 67, sh.field_r, 27);
+          kr.field_D.a(30 + kr.field_D.a(27, (byte) -126), 27, (byte) 125);
+          hw.a((byte) 78, sh.field_r, 28);
+          kr.field_D.a(kr.field_D.a(28, (byte) -122) + 30, 28, (byte) 120);
+          hw.a((byte) 45, pu.field_B, 9);
           if (!rf.a(27875)) {
-            SummonRequest.a((byte) 54, cg.field_b, 1);
-            SummonRequest.a((byte) 91, GameEvent.field_t, 24);
-            SummonRequest.a((byte) 101, op.field_f, 17);
-            SummonRequest.a((byte) 39, sa.field_i, 3);
-            SummonRequest.a((byte) 78, AnimationFrameSet.field_D, 4);
-            DisplacedUnitMarker.field_t[40] = od.field_f;
+            hw.a((byte) 54, cg.field_b, 1);
+            hw.a((byte) 91, oj.field_t, 24);
+            hw.a((byte) 101, op.field_f, 17);
+            hw.a((byte) 39, sa.field_i, 3);
+            hw.a((byte) 78, wp.field_D, 4);
+            il.field_t[40] = od.field_f;
           }
           return;
         }
         field_P = (je) null;
-        SummonRequest.a((byte) 52, wf.field_y, 6);
-        SummonRequest.a((byte) 33, sh.field_r, 26);
-        MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(26, (byte) -107) + 30, 26, (byte) 126);
-        SummonRequest.a((byte) 111, pu.field_B, 8);
-        SummonRequest.a((byte) 67, sh.field_r, 27);
-        MoveEvent.tutorialLayout.setTopY(30 + MoveEvent.tutorialLayout.getTopY(27, (byte) -126), 27, (byte) 125);
-        SummonRequest.a((byte) 78, sh.field_r, 28);
-        MoveEvent.tutorialLayout.setTopY(MoveEvent.tutorialLayout.getTopY(28, (byte) -122) + 30, 28, (byte) 120);
-        SummonRequest.a((byte) 45, pu.field_B, 9);
+        hw.a((byte) 52, wf.field_y, 6);
+        hw.a((byte) 33, sh.field_r, 26);
+        kr.field_D.a(kr.field_D.a(26, (byte) -107) + 30, 26, (byte) 126);
+        hw.a((byte) 111, pu.field_B, 8);
+        hw.a((byte) 67, sh.field_r, 27);
+        kr.field_D.a(30 + kr.field_D.a(27, (byte) -126), 27, (byte) 125);
+        hw.a((byte) 78, sh.field_r, 28);
+        kr.field_D.a(kr.field_D.a(28, (byte) -122) + 30, 28, (byte) 120);
+        hw.a((byte) 45, pu.field_B, 9);
         if (!rf.a(27875)) {
-          SummonRequest.a((byte) 54, cg.field_b, 1);
-          SummonRequest.a((byte) 91, GameEvent.field_t, 24);
-          SummonRequest.a((byte) 101, op.field_f, 17);
-          SummonRequest.a((byte) 39, sa.field_i, 3);
-          SummonRequest.a((byte) 78, AnimationFrameSet.field_D, 4);
-          DisplacedUnitMarker.field_t[40] = od.field_f;
+          hw.a((byte) 54, cg.field_b, 1);
+          hw.a((byte) 91, oj.field_t, 24);
+          hw.a((byte) 101, op.field_f, 17);
+          hw.a((byte) 39, sa.field_i, 3);
+          hw.a((byte) 78, wp.field_D, 4);
+          il.field_t[40] = od.field_f;
         }
     }
 
@@ -141,7 +141,7 @@ final class ws extends fw {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -5,32 +5,32 @@ import java.util.*;
 
 final class m implements Iterable {
     static int[] field_a;
-    IntrusiveNode[] field_c;
+    tc[] field_c;
     int field_d;
     static boolean[][] field_f;
-    private IntrusiveNode field_e;
+    private tc field_e;
     static String field_b;
     static String field_h;
     static int field_i;
     static String field_g;
 
-    final void a(IntrusiveNode param0, boolean param1, long param2) {
-        IntrusiveNode var5 = null;
+    final void a(tc param0, boolean param1, long param2) {
+        tc var5 = null;
         try {
           if (param1) {
             field_i = -49;
           }
-          if (param0.previous != null) {
-            param0.unlink(-118);
+          if (param0.field_j != null) {
+            param0.d(-118);
           }
           var5 = this.field_c[(int)((long)(this.field_d - 1) & param2)];
-          param0.next = var5;
-          param0.previous = var5.previous;
-          param0.previous.next = param0;
-          param0.next.previous = param0;
-          param0.key = param2;
+          param0.field_b = var5;
+          param0.field_j = var5.field_j;
+          param0.field_j.field_b = param0;
+          param0.field_b.field_j = param0;
+          param0.field_i = param2;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "m.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "m.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -49,62 +49,62 @@ final class m implements Iterable {
         return (Iterator) ((Object) new tl(this));
     }
 
-    final IntrusiveNode a(int param0, long param1) {
-        IntrusiveNode var4;
-        IntrusiveNode var5;
+    final tc a(int param0, long param1) {
+        tc var4;
+        tc var5;
         int var6;
-        IntrusiveNode var4Lifetime1;
-        IntrusiveNode var5Lifetime1;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        tc var4Lifetime1;
+        tc var5Lifetime1;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 == 13497) {
           var4 = this.field_c[(int)((long)(this.field_d - 1) & param1)];
-          this.field_e = var4.next;
+          this.field_e = var4.field_b;
           while (true) {
             if (var4 == this.field_e) {
               this.field_e = null;
               return null;
             }
-            if (param1 != this.field_e.key) {
-              this.field_e = this.field_e.next;
+            if (param1 != this.field_e.field_i) {
+              this.field_e = this.field_e.field_b;
               continue;
             }
             break;
           }
           var5 = this.field_e;
-          this.field_e = this.field_e.next;
+          this.field_e = this.field_e.field_b;
           return var5;
         }
         field_f = (boolean[][]) null;
         var4Lifetime1 = this.field_c[(int)((long)(this.field_d - 1) & param1)];
-        this.field_e = var4Lifetime1.next;
+        this.field_e = var4Lifetime1.field_b;
         while (true) {
           if (var4Lifetime1 == this.field_e) {
             this.field_e = null;
             return null;
           }
-          if (param1 != this.field_e.key) {
-            this.field_e = this.field_e.next;
+          if (param1 != this.field_e.field_i) {
+            this.field_e = this.field_e.field_b;
             continue;
           }
           break;
         }
         var5Lifetime1 = this.field_e;
-        this.field_e = this.field_e.next;
+        this.field_e = this.field_e.field_b;
         return var5Lifetime1;
     }
 
     m(int param0) {
         int var2 = 0;
-        IntrusiveNode dupTemp$0 = null;
-        IntrusiveNode var3 = null;
-        this.field_c = new IntrusiveNode[param0];
+        tc dupTemp$0 = null;
+        tc var3 = null;
+        this.field_c = new tc[param0];
         this.field_d = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new IntrusiveNode();
+          dupTemp$0 = new tc();
           var3 = dupTemp$0;
           this.field_c[var2] = dupTemp$0;
-          var3.next = var3;
-          var3.previous = var3;
+          var3.field_b = var3;
+          var3.field_j = var3;
         }
     }
 

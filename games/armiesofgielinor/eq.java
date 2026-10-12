@@ -14,7 +14,7 @@ final class eq extends af {
     static String field_j;
     private String field_f;
 
-    final void a(PacketBuffer param0, int param1) {
+    final void a(vh param0, int param1) {
         try {
           param0.a(this.field_f, 413740432);
           param0.a(-33, this.field_d);
@@ -22,7 +22,7 @@ final class eq extends af {
             this.field_d = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "eq.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "eq.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -36,7 +36,7 @@ final class eq extends af {
         int var9 = 0;
         int var10 = 0;
         int var12 = 0;
-        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param2 <= 125) {
             field_g = (String) null;
@@ -44,8 +44,8 @@ final class eq extends af {
           param3 = param3 | param3 << 8;
           var8_int = param3 ^ param3 >> 1;
           for (var11 = 0; var11 < 4; var11++) {
-            var9 = -44 + CachedArchiveProvider.field_y[var11][0] + (param6 + (7 & var8_int));
-            var10 = -64 + (param0 + CachedArchiveProvider.field_y[var11][1] + (param3 & 3));
+            var9 = -44 + bm.field_y[var11][0] + (param6 + (7 & var8_int));
+            var10 = -64 + (param0 + bm.field_y[var11][1] + (param3 & 3));
             stackIn_7_0 = param1;
             stackIn_8_1 = !(var10 <= param0 - 60);
             if (stackIn_7_0 ^ stackIn_8_1) {
@@ -58,7 +58,7 @@ final class eq extends af {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var8), "eq.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ig.a((Throwable) ((Object) var8), "eq.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class eq extends af {
           this.field_d = param1;
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "eq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "eq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class eq extends af {
         int var9 = 0;
         int var10 = 0;
         int var12 = 0;
-        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param2 <= 125) {
             field_g = (String) null;
@@ -127,8 +127,8 @@ final class eq extends af {
           param3 = param3 | param3 << 8;
           var8_int = param3 ^ param3 >> 1;
           for (var11 = 0; var11 < 4; var11++) {
-            var9 = -44 + CachedArchiveProvider.field_y[var11][0] + (param6 + (7 & var8_int));
-            var10 = -64 + (param0 + CachedArchiveProvider.field_y[var11][1] + (param3 & 3));
+            var9 = -44 + bm.field_y[var11][0] + (param6 + (7 & var8_int));
+            var10 = -64 + (param0 + bm.field_y[var11][1] + (param3 & 3));
             stackIn_7_0 = param1;
             stackIn_8_1 = !(var10 <= param0 - 60);
             if (stackIn_7_0 ^ stackIn_8_1) {
@@ -141,7 +141,7 @@ final class eq extends af {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var8), "eq.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ig.a((Throwable) ((Object) var8), "eq.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 }

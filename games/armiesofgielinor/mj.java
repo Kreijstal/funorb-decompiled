@@ -8,8 +8,8 @@ final class mj {
 
     final static void a(byte param0) {
         rj.field_F.a(18, -20500, nf.field_Kb.field_gb - (!fh.field_c ? 0 : 40 + (jn.field_c + 4)), 0, 0);
-        CampaignProgress.field_a.a(18, -20500, jn.field_c + 42, 0, -2 + (nf.field_Kb.field_gb - jn.field_c - 40));
-        MapTile.field_f.a(0, false, nf.field_Kb.field_gb, 2, jn.field_c, 20, nf.field_Kb.field_ob - 20);
+        cm.field_a.a(18, -20500, jn.field_c + 42, 0, -2 + (nf.field_Kb.field_gb - jn.field_c - 40));
+        ne.field_f.a(0, false, nf.field_Kb.field_gb, 2, jn.field_c, 20, nf.field_Kb.field_ob - 20);
         if (param0 >= 29) {
           return;
         }
@@ -19,8 +19,8 @@ final class mj {
     final static void b(byte param0) {
         if (l.field_a != null) {
           l.field_a.f();
-          if (TextCursor.field_e != null) {
-            TextCursor.field_e.f();
+          if (mt.field_e != null) {
+            mt.field_e.f();
           }
           if (param0 > -79) {
             mj.b((byte) 93);
@@ -28,8 +28,8 @@ final class mj {
           }
           return;
         }
-        if (TextCursor.field_e != null) {
-          TextCursor.field_e.f();
+        if (mt.field_e != null) {
+          mt.field_e.f();
         }
         if (param0 <= -79) {
           return;

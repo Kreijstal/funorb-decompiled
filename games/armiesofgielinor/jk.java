@@ -30,7 +30,7 @@ abstract class jk {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param1.length != param3.length) {
             return null;
@@ -81,7 +81,7 @@ abstract class jk {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

@@ -7,8 +7,8 @@ final class pg {
     static int field_f;
     static bq[] field_a;
     static int field_e;
-    static PlayerProfile playerProfile;
-    static RgbSprite field_c;
+    static hm field_d;
+    static wk field_c;
     static String[] field_b;
 
     final static boolean a(int param0, int param1) {
@@ -18,53 +18,53 @@ final class pg {
         return (param0 & -param0) == param0 ? true : false;
     }
 
-    final static AnimationSequence selectUnitAnimation(int animationIndex, int obfuscationGuard, boolean allowDefaultFallback, int unitType) {
-        int variantOrdinal = 0;
-        int variant = 0;
-        int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (animationIndex < 0 ||
-          animationIndex >= 9) {
-          animationIndex = 0;
+    final static qb a(int param0, int param1, boolean param2, int param3) {
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = ArmiesOfGielinor.field_M ? 1 : 0;
+        if (param0 < 0 ||
+          param0 >= 9) {
+          param0 = 0;
         }
-        int[] variants = BestScoreStrategy.unitAnimationVariants[unitType][animationIndex];
-        int[] variantsAlias = variants;
-        int[] variantChoices = variantsAlias;
-        int[] slotVariants = variantChoices;
-        int selectedVariant = variantChoices[AttackEvent.a(false, variants.length, gg.animationRandom)];
-        if (selectedVariant >= 0) {
-          return ck.animationSequencesByGroup[sf.unitAnimationGroups[unitType]][selectedVariant];
+        int[] var13 = aw.field_j[param3][param0];
+        int[] var11 = var13;
+        int[] var10 = var11;
+        int[] var4 = var10;
+        int var5 = var10[ns.a(false, var13.length, gg.field_J)];
+        if (var5 >= 0) {
+          return ck.field_e[sf.field_P[param3]][var5];
         }
-        if (obfuscationGuard != 176) {
-          return (AnimationSequence) null;
+        if (param1 != 176) {
+          return (qb) null;
         }
-        int[] fallbackChoices = slotVariants;
-        for (variantOrdinal = 0; variantOrdinal < fallbackChoices.length; variantOrdinal++) {
-          variant = fallbackChoices[variantOrdinal];
-          if (0 <= variant) {
-            return ck.animationSequencesByGroup[sf.unitAnimationGroups[unitType]][variant];
+        int[] var14 = var4;
+        for (var7 = 0; var7 < var14.length; var7++) {
+          var8 = var14[var7];
+          if (0 <= var8) {
+            return ck.field_e[sf.field_P[param3]][var8];
           }
         }
-        if (!allowDefaultFallback) {
+        if (!param2) {
           return null;
         }
-        return ck.animationSequencesByGroup[sf.unitAnimationGroups[unitType]][BestScoreStrategy.unitAnimationVariants[unitType][0][0]];
+        return ck.field_e[sf.field_P[param3]][aw.field_j[param3][0][0]];
     }
 
     final static void a(boolean param0) {
         ck.b(-111);
-        if (IndexedSpriteBase.field_b != null) {
-          dt.a(IndexedSpriteBase.field_b, 23678);
+        if (si.field_b != null) {
+          dt.a(si.field_b, 23678);
         }
-        BufferedSocket.a((byte) 41);
+        hi.a((byte) 41);
         pf.a(-15291);
         tj.j(-118);
         if (fh.b((byte) -88)) {
-          vl.outgoingPacket.writeCipheredOpcode(32161, 1);
+          vl.field_n.h(32161, 1);
           hb.$cfr$intArgs$a$e9dea5688aa5(124, 0);
         }
         dj.a((byte) -126);
         if (param0) {
-          playerProfile = (PlayerProfile) null;
+          field_d = (hm) null;
         }
     }
 
@@ -111,7 +111,7 @@ final class pg {
               var5.field_i.a(14, var6, (byte) -128);
             }
             var7 = tn.field_Z;
-            var8 = FixedQuaternion.field_g;
+            var8 = wq.field_g;
             var7.field_i.a(20, var8, (byte) -115);
           }
           if (1 == param1.field_b &&
@@ -120,11 +120,11 @@ final class pg {
             param1.field_v == vu.field_M.d((byte) -88)) {
             if (!vi.field_d) {
               var9 = tn.field_Z;
-              var10 = CampaignMenu.field_q;
+              var10 = cv.field_q;
               var9.field_i.a(14, var10, (byte) -108);
             }
             var11 = tn.field_Z;
-            var12 = CampaignMenuEntry.field_E;
+            var12 = cq.field_E;
             var11.field_i.a(20, var12, (byte) -117);
           }
           tn.field_Z.a((byte) 68);
@@ -133,8 +133,8 @@ final class pg {
           tn.field_Z.b((byte) 92);
           tn.field_Z.a(param1, 0);
           var13 = tn.field_Z;
-          var3 = BattleTutorial.field_t;
-          var4 = TeleportAction.field_z;
+          var3 = iu.field_t;
+          var4 = ur.field_z;
           var13.field_i.a(0, var4, param0, (byte) -118, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,7 +147,7 @@ final class pg {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class pg {
         }
         field_b = null;
         field_c = null;
-        playerProfile = null;
+        field_d = null;
         field_a = null;
     }
 

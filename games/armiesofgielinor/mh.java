@@ -13,27 +13,27 @@ final class mh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         te var2Lifetime1;
-        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          ResourceProtocolClient.field_e = param0;
-          var2 = (te) (bl.field_h.first((byte) 110));
+          bp.field_e = param0;
+          var2 = (te) (bl.field_h.e((byte) 110));
           while (var2 != null) {
             if (!var2.field_k.c(65280)) {
-              var2.unlink(-110);
+              var2.d(-110);
             } else {
-              var2.field_q.i(var2.field_o * ResourceProtocolClient.field_e + 128 >> 8);
+              var2.field_q.i(var2.field_o * bp.field_e + 128 >> 8);
             }
-            var2 = (te) (bl.field_h.next((byte) 123));
+            var2 = (te) (bl.field_h.a((byte) 123));
           }
           if (ts.field_e != null) {
-            var2Lifetime1 = (te) (ts.field_e.first((byte) 95));
+            var2Lifetime1 = (te) (ts.field_e.e((byte) 95));
             while (var2Lifetime1 != null) {
               if (!var2Lifetime1.field_k.c(65280)) {
-                var2Lifetime1.unlink(47);
+                var2Lifetime1.d(47);
               } else {
-                var2Lifetime1.field_q.i(128 + ResourceProtocolClient.field_e * var2Lifetime1.field_o >> 8);
+                var2Lifetime1.field_q.i(128 + bp.field_e * var2Lifetime1.field_o >> 8);
               }
-              var2Lifetime1 = (te) (ts.field_e.next((byte) 123));
+              var2Lifetime1 = (te) (ts.field_e.a((byte) 123));
             }
           }
           if (param1 < -26) {
@@ -44,22 +44,22 @@ final class mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "mh.A(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var2_ref), "mh.A(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final static int getProfileMissionScore(int campaignIndex, int obfuscationGuard, int missionIndex) {
-        if (pg.playerProfile == null) {
+    final static int a(int param0, int param1, int param2) {
+        if (pg.field_d == null) {
           return 0;
         }
-        if (null == pg.playerProfile.campaignProgress) {
+        if (null == pg.field_d.field_g) {
           return 0;
         }
-        if (obfuscationGuard < -111) {
-          return pg.playerProfile.campaignProgress.getMissionScore(campaignIndex, 127, missionIndex);
+        if (param1 < -111) {
+          return pg.field_d.field_g.a(param0, 127, param2);
         }
         field_b = (wm) null;
-        return pg.playerProfile.campaignProgress.getMissionScore(campaignIndex, 127, missionIndex);
+        return pg.field_d.field_g.a(param0, 127, param2);
     }
 
     public static void a(byte param0) {

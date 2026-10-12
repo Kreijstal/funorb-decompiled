@@ -29,7 +29,7 @@ abstract class mk extends rb implements fb {
           this.a(126);
           int var3_int = 59 % ((-80 - param1) / 33);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mk.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "mk.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -37,7 +37,7 @@ abstract class mk extends rb implements fb {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,7 +62,7 @@ abstract class mk extends rb implements fb {
             field_i = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mk.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "mk.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

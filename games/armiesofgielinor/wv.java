@@ -3,22 +3,22 @@
  */
 class wv extends af {
     private long field_f;
-    static RgbSprite[] field_h;
+    static wk[] field_h;
     static String field_d;
     private String field_i;
     static int[] field_g;
     static String field_e;
 
-    final void a(PacketBuffer param0, int param1) {
+    final void a(vh param0, int param1) {
         try {
           param0.a(this.field_f, 38359632);
           param0.a(-28, this.field_i);
           if (param1 != -11436) {
-            PacketBuffer var4 = (PacketBuffer) null;
-            this.a((PacketBuffer) null, 16);
+            vh var4 = (vh) null;
+            this.a((vh) null, 16);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wv.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "wv.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -43,7 +43,7 @@ class wv extends af {
             String var4 = (String) null;
             wv.a((String) null, -77, -29);
           }
-          DeployAction.field_A = false;
+          pl.field_A = false;
           ac.field_n = false;
           if (qc.field_a != null &&
             qc.field_a.field_L) {
@@ -55,7 +55,7 @@ class wv extends af {
                 param0 = rq.field_o;
               }
               param2 = 2;
-              np.field_Qb.a(-17376, IsaacRandom.field_d);
+              np.field_Qb.a(-17376, ga.field_d);
             }
             var3_int = 1;
             if (param2 == 10) {
@@ -63,11 +63,11 @@ class wv extends af {
               var3_int = 0;
             }
             if (var3_int != 0) {
-              if (DeployAction.field_A) {
+              if (pl.field_A) {
                 param0 = fo.a(4800, field_d, new String[]{param0});
               }
               if (se.field_f) {
-                param0 = SummonAction.field_D;
+                param0 = be.field_D;
               }
               qc.field_a.a(param2, (byte) 98, param0);
             }
@@ -79,7 +79,7 @@ class wv extends af {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wv.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "wv.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -93,7 +93,7 @@ class wv extends af {
           this.field_i = param1;
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wv.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "wv.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

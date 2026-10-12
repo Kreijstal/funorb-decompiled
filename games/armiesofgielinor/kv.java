@@ -20,7 +20,7 @@ final class kv extends tj implements he {
         RuntimeException var3 = null;
         td var4 = null;
         int var6 = 0;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           this.field_D.b(param0 - 11);
           if (param1 != null &&
@@ -28,21 +28,21 @@ final class kv extends tj implements he {
             var3_int = param1.length;
             this.field_H = new String[var3_int];
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.field_H[var4_int] = ug.a(GrowthEvent.b(param0, 116), (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
+              this.field_H[var4_int] = ug.a(kf.b(param0, 116), (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
             var4 = new td(ArmiesOfGielinor.field_J, 0, 1);
             this.field_E = new fw[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_E[var5] = new fw(this.field_H[var5], (qo) (this));
-              this.field_E[var5].painter = (WidgetPainter) ((Object) var4);
+              this.field_E[var5].field_k = (kh) ((Object) var4);
               this.field_E[var5].field_s = wl.field_J;
-              this.field_E[var5].setBounds(0, 80, 20 + 16 * var5, 8192, 15);
-              this.a((byte) 10, (Widget) (this.field_E[var5]));
+              this.field_E[var5].a(0, 80, 20 + 16 * var5, 8192, 15);
+              this.a((byte) 10, (kb) (this.field_E[var5]));
             }
             this.field_E[var3_int] = new fw(h.field_h, (qo) (this));
-            this.field_E[var3_int].painter = (WidgetPainter) ((Object) var4);
-            this.field_E[var3_int].setBounds(0, param0, var3_int * 16 + 16 + 20, param0 ^ 8292, 15);
-            this.a((byte) 10, (Widget) (this.field_E[var3_int]));
+            this.field_E[var3_int].field_k = (kh) ((Object) var4);
+            this.field_E[var3_int].a(0, param0, var3_int * 16 + 16 + 20, param0 ^ 8292, 15);
+            this.a((byte) 10, (kb) (this.field_E[var3_int]));
             return;
           }
           this.field_H = null;
@@ -57,7 +57,7 @@ final class kv extends tj implements he {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -67,13 +67,13 @@ final class kv extends tj implements he {
         var2[0] = 1;
         var2[2] = 16777215;
         var2[1] = 14737632;
-        ll.field_Rb = new CombatSandbox(oh.field_J, IsaacRandom.field_k, rs.field_n, var2, 0, 0);
+        ll.field_Rb = new vn(oh.field_J, ga.field_k, rs.field_n, var2, 0, 0);
         if (param0 != -28541) {
           field_F = 18;
         }
         le.field_b = new cg();
-        TriangleRasterizer.useRasterClip();
-        TriangleRasterizer.b(0.75f);
+        tm.a();
+        tm.b(0.75f);
     }
 
     final static fl k(int param0) {
@@ -100,12 +100,12 @@ final class kv extends tj implements he {
         if (0 != param3) {
           return;
         }
-        BitmapFont var5 = ArmiesOfGielinor.field_J;
+        ka var5 = ArmiesOfGielinor.field_J;
         if (param2 > -82) {
           kv.b(true);
         }
         if (this.field_H != null) {
-          var5.a(we.field_i, param0 + this.x, param1 + this.y, this.width, 20, 16777215, -1, 0, 0, var5.field_L + var5.field_H);
+          var5.a(we.field_i, param0 + this.field_B, param1 + this.field_p, this.field_l, 20, 16777215, -1, 0, 0, var5.field_L + var5.field_H);
         }
     }
 
@@ -147,11 +147,11 @@ final class kv extends tj implements he {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean a(kb param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_12_0 = false;
@@ -185,16 +185,16 @@ final class kv extends tj implements he {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     kv(mf param0) {
-        super(0, 0, 0, 0, (WidgetPainter) null);
+        super(0, 0, 0, 0, (kh) null);
         try {
           this.field_G = param0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kv.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "kv.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class kv extends tj implements he {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param1 != 11) {
             kv.a(false, (CharSequence) null, 'ﾪ');
@@ -230,7 +230,7 @@ final class kv extends tj implements he {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

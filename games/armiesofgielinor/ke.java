@@ -21,7 +21,7 @@ final class ke {
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0 != 90) {
             field_c = (je) null;
@@ -45,7 +45,7 @@ final class ke {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

@@ -5,11 +5,11 @@ final class ou {
     static int field_c;
     static String field_f;
     static char[] field_a;
-    static DiskCacheWorker field_h;
-    private NodeDeque[][] field_i;
-    private MapLayout[] field_b;
+    static vo field_h;
+    private at[][] field_i;
+    private lo[] field_b;
     static String field_g;
-    private ResourceArchive[] field_e;
+    private kl[] field_e;
     private boolean field_d;
     static String field_j;
 
@@ -29,7 +29,7 @@ final class ou {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "ou.A(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "ou.A(" + param0 + ')');
         }
     }
 
@@ -44,11 +44,11 @@ final class ou {
           oh.field_L = nb.field_i;
           mh.field_b = nb.field_i;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ou.M(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ou.M(" + param0 + ')');
         }
     }
 
-    private final void a(int param0, int param1, ResourceArchive param2) {
+    private final void a(int param0, int param1, kl param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -83,7 +83,7 @@ final class ou {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class ou {
         try {
           vi.a("", 640, (String) null);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ou.D(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ou.D(" + param0 + ')');
         }
     }
 
@@ -106,10 +106,10 @@ final class ou {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        NodeIterator var6 = null;
-        MapLayout var7 = null;
+        bb var6 = null;
+        lo var7 = null;
         int var8 = 0;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (this.field_i != null &&
             param2 >= 0 &&
@@ -122,8 +122,8 @@ final class ou {
                 return stackIn_25_0;
               }
               var5_int = param0;
-              var6 = new NodeIterator(this.field_i[param2][param1]);
-              var7 = (MapLayout) (var6.first(param0 + 50));
+              var6 = new bb(this.field_i[param2][param1]);
+              var7 = (lo) (var6.c(param0 + 50));
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (null == var7))) {
                 stackIn_36_0 = var7.field_k;
@@ -131,7 +131,7 @@ final class ou {
                   if (stackIn_36_0 >= param3) {
                     var5_int++;
                   }
-                  var7 = (MapLayout) (var6.next(param0 + 50));
+                  var7 = (lo) (var6.b(param0 + 50));
                   continue;
                 }
                 break;
@@ -149,7 +149,7 @@ final class ou {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var5), "ou.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.a((Throwable) ((Object) var5), "ou.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -159,21 +159,21 @@ final class ou {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          this.field_b = new MapLayout[wn.field_eb.length];
+          this.field_b = new lo[wn.field_eb.length];
           var2_int = 0;
           if (param0 <= 110) {
             this.a((byte) -41);
           }
           while (wn.field_eb.length > var2_int) {
-            var3 = this.field_e[0].getFileByName(wn.field_eb[var2_int], 35, "");
+            var3 = this.field_e[0].a(wn.field_eb[var2_int], 35, "");
             if (var4 != 0) {
               return;
             }
             if (var3 != null &&
               var3.length != 0) {
-              this.field_b[var2_int] = new MapLayout(-1, var3);
+              this.field_b[var2_int] = new lo(-1, var3);
               var2_int++;
               continue;
             } else {
@@ -184,51 +184,51 @@ final class ou {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ou.F(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "ou.F(" + param0 + ')');
         }
     }
 
-    final MapLayout a(int param0, int param1, int param2, int param3, int param4) {
+    final lo a(int param0, int param1, int param2, int param3, int param4) {
         Object stackIn_12_0 = null;
         Object stackIn_23_0 = null;
         Object stackIn_31_0 = null;
         Object stackIn_42_0 = null;
-        MapLayout stackIn_45_0 = null;
+        lo stackIn_45_0 = null;
         Object stackIn_50_0 = null;
-        MapLayout stackIn_67_0 = null;
+        lo stackIn_67_0 = null;
         RuntimeException decompiledCaughtException = null;
-        NodeIterator var6 = null;
+        bb var6 = null;
         RuntimeException var6_ref = null;
-        MapLayout var7 = null;
+        lo var7 = null;
         int var8 = 0;
         int var9 = 0;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (null != this.field_i &&
             param3 >= 0 &&
             param3 < this.field_i.length &&
-            AttackEvent.field_A.length > param3) {
+            ns.field_A.length > param3) {
             if (null != this.field_i[param3] &&
               0 <= param2 &&
               param2 < this.field_i[param3].length) {
-              if (this.field_i.length == AttackEvent.field_A.length &&
-                AttackEvent.field_A[param3].length == this.field_i[param3].length) {
+              if (this.field_i.length == ns.field_A.length &&
+                ns.field_A[param3].length == this.field_i[param3].length) {
                 if (param3 == 1 &&
                   !this.field_d &&
                   df.field_M < 0) {
                   stackIn_42_0 = null;
-                  return (MapLayout) (stackIn_42_0);
+                  return (lo) (stackIn_42_0);
                 }
                 if (param1 != 4136) {
-                  stackIn_45_0 = (MapLayout) null;
+                  stackIn_45_0 = (lo) null;
                   return stackIn_45_0;
                 }
                 if (null == this.field_i[param3][param2]) {
                   stackIn_50_0 = null;
-                  return (MapLayout) (stackIn_50_0);
+                  return (lo) (stackIn_50_0);
                 }
-                var6 = new NodeIterator(this.field_i[param3][param2]);
-                var7 = (MapLayout) (var6.first(param1 - 4086));
+                var6 = new bb(this.field_i[param3][param2]);
+                var7 = (lo) (var6.c(param1 - 4086));
                 var8 = 0;
                 while (var7 != null) {
                   if (!(param0 <= var7.field_k) ||
@@ -237,7 +237,7 @@ final class ou {
                     if (param0 <= var7.field_k) {
                       var8++;
                     }
-                    var7 = (MapLayout) (var6.next(50));
+                    var7 = (lo) (var6.b(50));
                     if (var9 == 0) {
                       continue;
                     }
@@ -248,17 +248,17 @@ final class ou {
                 return stackIn_67_0;
               }
               stackIn_31_0 = null;
-              return (MapLayout) (stackIn_31_0);
+              return (lo) (stackIn_31_0);
             }
             stackIn_23_0 = null;
-            return (MapLayout) (stackIn_23_0);
+            return (lo) (stackIn_23_0);
           }
           stackIn_12_0 = null;
-          return (MapLayout) (stackIn_12_0);
+          return (lo) (stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var6_ref), "ou.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) var6_ref), "ou.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -298,7 +298,7 @@ final class ou {
         int var28 = 0;
         int var29 = 0;
         int var30 = 0;
-        var30 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var30 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var7_int = 2147483647;
           var8 = -2147483648;
@@ -329,10 +329,10 @@ final class ou {
           }
           var11 = var23 * param6[11] + var22 * param6[10] + var21 * param6[9] >> 16;
           var10 = param6[6] * var21 + param6[7] * var22 + param6[8] * var23 >> -fn.field_M + 16;
-          var21 = TriangleRasterizer.projectionCenterX;
-          var22 = TriangleRasterizer.projectionCenterY;
+          var21 = tm.field_c;
+          var22 = tm.field_j;
           var23 = 0;
-          scanLoop1: while (true) {
+          L2: while (true) {
             if (var23 < param0.field_O) {
               var24 = param0.field_z[var23];
               var25 = param0.field_y[var23];
@@ -345,23 +345,23 @@ final class ou {
               if (var30 != 0) {
                 if (stackIn_59_0 > stackIn_59_1) {
                   if (var18 >= ArmiesOfGielinor.field_I.length) {
-                    break scanLoop1;
+                    break L2;
                   }
                   var19 = param0.field_l[var18];
                   var20 = param0.field_f[var18];
                   var21 = param0.field_x[var18];
                   ArmiesOfGielinor.field_I[var18] = var12 * var20 + (var19 * var9 + var21 * var15) >> 16;
-                  Widget.field_m[var18] = var16 * var21 + var10 * var19 + var20 * var13 >> 16;
+                  kb.field_m[var18] = var16 * var21 + var10 * var19 + var20 * var13 >> 16;
                   rj.field_Q[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> 16;
                   var18++;
-                  break scanLoop1;
+                  break L2;
                 }
-                break scanLoop1;
+                break L2;
               }
               if (stackIn_59_0 > stackIn_59_1) {
                 ls.field_c[var23] = -2147483648;
               } else {
-                TileMetadata.field_f[var23] = var21 + var27 / var29;
+                ca.field_f[var23] = var21 + var27 / var29;
                 fa.field_k[var23] = var28 / var29 + var22;
                 ls.field_c[var23] = var29;
                 if (var29 > var8) {
@@ -373,7 +373,7 @@ final class ou {
               }
               if (param4) {
                 uh.field_f[var23] = var27 >> fn.field_M;
-                ArchiveProvider.field_a[var23] = var28 >> fn.field_M;
+                ew.field_a[var23] = var28 >> fn.field_M;
                 qt.field_c[var23] = var29;
               }
               var23++;
@@ -393,8 +393,8 @@ final class ou {
                 var24 = param0.field_g[var23];
                 var25 = param0.field_M[var23];
                 var26 = param0.field_v[var23];
-                UiSelectionState.field_c[var23] = (var26 * var18 + (var24 * var12 + var15 * var25) >> 16) + var9;
-                AiActionCandidate.field_p[var23] = (var26 * var19 + var13 * var24 + var16 * var25 >> 16) + var10;
+                dl.field_c[var23] = (var26 * var18 + (var24 * var12 + var15 * var25) >> 16) + var9;
+                jb.field_p[var23] = (var26 * var19 + var13 * var24 + var16 * var25 >> 16) + var10;
                 uq.field_u[var23] = (var24 * var14 + (var17 * var25 + var26 * var20) >> 16) + var11;
                 var24 = param0.field_N[var23];
                 var25 = param0.field_a[var23];
@@ -438,7 +438,7 @@ final class ou {
                 var20 = param0.field_f[var18];
                 var21 = param0.field_x[var18];
                 ArmiesOfGielinor.field_I[var18] = var12 * var20 + (var19 * var9 + var21 * var15) >> 16;
-                Widget.field_m[var18] = var16 * var21 + var10 * var19 + var20 * var13 >> 16;
+                kb.field_m[var18] = var16 * var21 + var10 * var19 + var20 * var13 >> 16;
                 rj.field_Q[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> 16;
                 var18++;
               } while (var30 == 0);
@@ -469,7 +469,7 @@ final class ou {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(')').toString());
         }
     }
 
@@ -489,17 +489,17 @@ final class ou {
         RuntimeException decompiledCaughtException = null;
         int stackIn_23_0Lifetime1;
         int stackIn_23_1Lifetime1;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var3_int = -1;
           var4 = 0;
-          scanLoop1: while (true) {
+          L0: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var4 <= 1) {
               stackIn_31_0 = -1;
               stackIn_31_1 = ~var4;
               if (var6 != 0) {
-                break scanLoop1;
+                break L0;
               }
               if (stackIn_31_0 >= stackIn_31_1 &&
                 var4 < lp.field_a.length) {
@@ -521,7 +521,7 @@ final class ou {
                   var6 != 0);
                 if (decompiledFrameRemainder0) {
                   var4++;
-                  continue scanLoop1;
+                  continue L0;
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -543,65 +543,65 @@ final class ou {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ou.C(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var3), "ou.C(" + param0 + ',' + param1 + ')');
         }
     }
 
-    private final ResourceArchive a(int param0, int param1) {
+    private final kl a(int param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Object stackIn_5_0 = null;
         Object stackIn_13_0 = null;
         Object stackIn_21_0 = null;
         Object stackIn_30_0 = null;
-        ResourceArchive stackIn_32_0 = null;
+        kl stackIn_32_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_e != null &&
             this.field_e.length == 2) {
             if (param1 >= 0 &&
-              AttackEvent.field_A.length > param1) {
+              ns.field_A.length > param1) {
               var3_int = this.b(0, param1);
               if (~var3_int != param0 &&
                 var3_int != 1) {
                 stackIn_21_0 = null;
-                return (ResourceArchive) (stackIn_21_0);
+                return (kl) (stackIn_21_0);
               }
               if (var3_int == 1 &&
                 !this.field_d &&
                 0 >= df.field_M) {
                 stackIn_30_0 = null;
-                return (ResourceArchive) (stackIn_30_0);
+                return (kl) (stackIn_30_0);
               }
               stackIn_32_0 = this.field_e[var3_int];
               return stackIn_32_0;
             }
             stackIn_13_0 = null;
-            return (ResourceArchive) (stackIn_13_0);
+            return (kl) (stackIn_13_0);
           }
           stackIn_5_0 = null;
-          return (ResourceArchive) (stackIn_5_0);
+          return (kl) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ou.J(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var3), "ou.J(" + param0 + ',' + param1 + ')');
         }
     }
 
     private final void b(int param0) {
-        NodeDeque[] array$1 = null;
+        at[] array$1 = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          this.field_i = new NodeDeque[AttackEvent.field_A.length][];
+          this.field_i = new at[ns.field_A.length][];
           var2_int = 35 / ((70 - param0) / 47);
           var3 = 0;
-          while (var3 < AttackEvent.field_A.length) {
-            array$1 = new NodeDeque[AttackEvent.field_A[var3].length];
+          while (var3 < ns.field_A.length) {
+            array$1 = new at[ns.field_A[var3].length];
             this.field_i[var3] = array$1;
             var3++;
             if (var4 == 0) {
@@ -613,7 +613,7 @@ final class ou {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ou.N(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "ou.N(" + param0 + ')');
         }
     }
 
@@ -626,7 +626,7 @@ final class ou {
         int var7 = 0;
         int var8 = 0;
         RuntimeException decompiledCaughtException = null;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param1 != 0 &&
             param1 != 1) {
@@ -639,15 +639,15 @@ final class ou {
           }
           var3 = lp.field_a[param1];
           if (param0) {
-            field_h = (DiskCacheWorker) null;
+            field_h = (vo) null;
           }
           var4 = 0;
           while (var4 < var3.length) {
             boolean decompiledFrameCompleted0 = true;
             var5 = var3[var4];
-            if (var5 >= 0 && (!(var5 >= AttackEvent.field_A.length) ||
+            if (var5 >= 0 && (!(var5 >= ns.field_A.length) ||
               var8 != 0)) {
-              var6 = AttackEvent.field_A[var5].length;
+              var6 = ns.field_A[var5].length;
               var7 = 0;
               while (var6 > var7) {
                 this.a(5301, var7, var5);
@@ -670,14 +670,14 @@ final class ou {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3_ref), "ou.B(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var3_ref), "ou.B(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final MapLayout a(byte param0, int param1) {
+    final lo a(byte param0, int param1) {
         RuntimeException var3 = null;
-        MapLayout stackIn_4_0 = null;
-        MapLayout stackIn_9_0 = null;
+        lo stackIn_4_0 = null;
+        lo stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < this.field_b.length) {
@@ -692,11 +692,11 @@ final class ou {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "ou.E(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var3), "ou.E(" + param0 + ',' + param1 + ')');
         }
     }
 
-    ou(ResourceArchive param0, ResourceArchive param1, boolean param2) {
+    ou(kl param0, kl param1, boolean param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -705,7 +705,7 @@ final class ou {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_e = new ResourceArchive[2];
+          this.field_e = new kl[2];
           this.field_d = param2;
           this.a(24402, 0, param0);
           this.a(24402, 1, param1);
@@ -730,18 +730,18 @@ final class ou {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
     private final void a(int param0, int param1, int param2) {
-        ResourceArchive var4 = null;
+        kl var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         byte[] var6 = null;
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var4 = this.a(param0 ^ -5302, param2);
           if (param0 != 5301) {
@@ -750,13 +750,13 @@ final class ou {
           if (var4 == null) {
             return;
           }
-          this.field_i[param2][param1] = new NodeDeque();
+          this.field_i[param2][param1] = new at();
           var5 = 0;
-          while (AttackEvent.field_A[param2][param1].length > var5) {
-            var6 = var4.getFileByName(AttackEvent.field_A[param2][param1][var5], param0 - 5249, "");
+          while (ns.field_A[param2][param1].length > var5) {
+            var6 = var4.a(ns.field_A[param2][param1][var5], param0 - 5249, "");
             if (var6 != null && (var6.length != 0 ||
               var7 != 0)) {
-              this.field_i[param2][param1].addLast((byte) -119, (IntrusiveNode) (new MapLayout(var5, var6)));
+              this.field_i[param2][param1].a((byte) -119, (tc) (new lo(var5, var6)));
             }
             var5++;
             if (var7 == 0) {
@@ -768,7 +768,7 @@ final class ou {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4_ref), "ou.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) var4_ref), "ou.G(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -21,7 +21,7 @@ abstract class af {
         String var5 = null;
         Object var3Lifetime1;
         Object var3Lifetime1Lifetime1;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var2 = null;
           if (param0.field_q != null) {
@@ -58,11 +58,11 @@ abstract class af {
               var3_ref = "[" + sa.field_c + "] ";
             }
             if (param0.field_b == 1) {
-              var3_ref = "[" + fo.a(param1 + 4697, CampaignMenu.field_m, new String[]{param0.field_k}) + "] ";
+              var3_ref = "[" + fo.a(param1 + 4697, cv.field_m, new String[]{param0.field_k}) + "] ";
             }
             if (4 == param0.field_b &&
-              null != TeleportAction.field_C) {
-              var3_ref = "[" + TeleportAction.field_C + "] ";
+              null != ur.field_C) {
+              var3_ref = "[" + ur.field_C + "] ";
             }
             if (param0.field_b == 3) {
               var3_ref = "[#" + param0.field_k + "] ";
@@ -83,11 +83,11 @@ abstract class af {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) (stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) (stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    abstract void a(PacketBuffer param0, int param1);
+    abstract void a(vh param0, int param1);
 
     public static void b(byte param0) {
         if (param0 >= -95) {
@@ -117,12 +117,12 @@ abstract class af {
           String var9 = null;
           String var10 = null;
           String var11 = null;
-          var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+          var7 = ArmiesOfGielinor.field_M ? 1 : 0;
           try {
             var3_int = 16 % ((7 - param1) / 62);
             var4 = "";
             if (param0 != null) {
-              var4 = MovementPresentation.a(0, param0);
+              var4 = qv.a(0, param0);
             }
             if (param2 != null) {
               if (param0 != null) {
@@ -130,7 +130,7 @@ abstract class af {
               }
               var4 = var4 + param2;
             }
-            FixedQuaternion.a(var4, false);
+            wq.a(var4, false);
             var8 = dv.a(var4, -75, ":", "%3a");
             var9 = dv.a(var8, -110, "@", "%40");
             var10 = dv.a(var9, -68, "&", "%26");
@@ -138,11 +138,11 @@ abstract class af {
             if (vu.field_L == null) {
               return;
             }
-            stackIn_12_0 = PacketBuffer.field_s;
+            stackIn_12_0 = vh.field_s;
             stackIn_12_1 = null;
             stackIn_12_2 = null;
             stackIn_12_3 = vu.field_L.getCodeBase();
-            stackIn_12_4 = new StringBuilder().append("clienterror.ws?c=").append(SummonRequest.field_B).append("&u=");
+            stackIn_12_4 = new StringBuilder().append("clienterror.ws?c=").append(hw.field_B).append("&u=");
             if (uk.field_l == null) {
               stackIn_13_1 = null;
               stackIn_13_2 = null;
@@ -181,10 +181,10 @@ abstract class af {
         try {
           se.field_f = param0;
           ac.field_n = true;
-          qc.field_a = new ro(KingBlackDragonEvent.field_C, CipherPacketBuffer.field_t, param1, fh.field_i, se.field_f);
-          KingBlackDragonEvent.field_C.a(qc.field_a, param2 ^ param2);
+          qc.field_a = new ro(rl.field_C, bv.field_t, param1, fh.field_i, se.field_f);
+          rl.field_C.a(qc.field_a, param2 ^ param2);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "af.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "af.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

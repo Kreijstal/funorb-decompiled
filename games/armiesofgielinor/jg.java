@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class jg extends IntrusiveNode {
+final class jg extends tc {
     int field_l;
-    static RgbSprite field_m;
+    static wk field_m;
     static String field_n;
     static int field_k;
 
@@ -22,7 +22,7 @@ final class jg extends IntrusiveNode {
         }
         int var5 = kd.field_Z[param4][param3];
         if (var5 > -1) {
-          var6 = AttackEvent.a(false, td.field_d[var5].length, li.field_n);
+          var6 = ns.a(false, td.field_d[var5].length, li.field_n);
           if (td.field_d[var5][var6] != null &&
             td.field_d[var5][var6].field_o.length != 0) {
             param0 = 512 - (param0 - 800);
@@ -34,9 +34,9 @@ final class jg extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        if (BattleTutorial.field_h) {
-          SoftwareRaster.d(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, SoftwareRaster.clipRight - SoftwareRaster.clipLeft, SoftwareRaster.clipBottom - SoftwareRaster.clipTop);
-          OwnerChangeEvent.field_E.b(false, 20);
+        if (iu.field_h) {
+          qn.d(qn.field_j, qn.field_a, qn.field_e - qn.field_j, qn.field_f - qn.field_a);
+          as.field_E.b(false, 20);
         }
         if (param0 != 102) {
           jg.a(-122, true, false, -112, 41, -27, 39);
@@ -77,9 +77,9 @@ final class jg extends IntrusiveNode {
         int stackIn_36_0 = 0;
         int stackIn_72_0 = 0;
         int stackIn_83_0 = 0;
-        RgbSprite[] stackIn_85_0 = null;
+        wk[] stackIn_85_0 = null;
         int stackIn_86_1 = 0;
-        RgbSprite[] stackIn_93_0 = null;
+        wk[] stackIn_93_0 = null;
         int stackIn_94_1 = 0;
         String stackIn_156_0 = null;
         String stackIn_166_0 = null;
@@ -87,7 +87,7 @@ final class jg extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        NodeDeque var8 = null;
+        at var8 = null;
         long var9 = 0L;
         Object var11 = null;
         au var12 = null;
@@ -121,7 +121,7 @@ final class jg extends IntrusiveNode {
         int var39 = 0;
         int var40 = 0;
         int var41 = 0;
-        RgbSprite var42 = null;
+        wk var42 = null;
         je var43 = null;
         je var44 = null;
         je var45 = null;
@@ -130,14 +130,14 @@ final class jg extends IntrusiveNode {
         je var48 = null;
         je var49 = null;
         Object var50 = null;
-        RgbSprite var50_ref = null;
+        wk var50_ref = null;
         Object var51 = null;
-        RgbSprite var51_ref = null;
+        wk var51_ref = null;
         Object var52 = null;
-        RgbSprite var52_ref = null;
+        wk var52_ref = null;
         Object var53 = null;
-        RgbSprite var53_ref = null;
-        RgbSprite var54 = null;
+        wk var53_ref = null;
+        wk var54 = null;
         int var14Lifetime1;
         int var33_intLifetime1;
         int var34_intLifetime1;
@@ -151,18 +151,18 @@ final class jg extends IntrusiveNode {
         var51 = null;
         var52 = null;
         var53 = null;
-        var41 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var41 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          stackIn_3_0 = CipherPacketBuffer.field_x;
+          stackIn_3_0 = bv.field_x;
           stackIn_3_1 = param1;
           stackIn_3_2 = param3 * (8 + 4 * jn.field_d);
           stackIn_3_3 = jn.field_d * 2 + 4;
-          stackIn_4_4 = (CipherPacketBuffer.field_x == pq.field_b);
+          stackIn_4_4 = (bv.field_x == pq.field_b);
           var7_int = ((dn) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param0, 2) ? 1 : 0;
-          var8 = CipherPacketBuffer.field_x.field_Jb.field_fb;
+          var8 = bv.field_x.field_Jb.field_fb;
           var9 = vi.b(-118);
           var11 = null;
-          var12 = (au) (var8.first((byte) 120));
+          var12 = (au) (var8.e((byte) 120));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_fb) {
@@ -170,7 +170,7 @@ final class jg extends IntrusiveNode {
               var14 = param4 | param5;
               var12.a(var12.field_Xb, param0 + 107);
               var12.field_Xb.field_Eb = 1;
-              var12.field_lc = new je(0L, IsaacRandom.field_i);
+              var12.field_lc = new je(0L, ga.field_i);
               var12.a(var12.field_lc, 102);
               var12.field_cc = new je(0L, ws.field_P);
               var12.a(var12.field_cc, 59);
@@ -178,7 +178,7 @@ final class jg extends IntrusiveNode {
               var12.field_hc = new je(0L, ws.field_P);
               var12.a(var12.field_hc, 61);
               var12.field_hc.field_O = 0;
-              var12.field_Zb = new je(0L, IsaacRandom.field_i);
+              var12.field_Zb = new je(0L, ga.field_i);
               var12.a(var12.field_Zb, 78);
               var12.field_Zb.field_Eb = 2;
               stackIn_10_0 = var12;
@@ -188,7 +188,7 @@ final class jg extends IntrusiveNode {
               if (!fh.field_c) {
                 stackIn_11_1 = null;
                 stackIn_11_2 = null;
-                stackIn_11_4 = IsaacRandom.field_i;
+                stackIn_11_4 = ga.field_i;
               } else {
                 stackIn_11_1 = null;
                 stackIn_11_2 = null;
@@ -234,7 +234,7 @@ final class jg extends IntrusiveNode {
               if (fh.field_c) {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
-                stackIn_32_4 = IsaacRandom.field_i;
+                stackIn_32_4 = ga.field_i;
               } else {
                 stackIn_32_1 = null;
                 stackIn_32_2 = null;
@@ -243,11 +243,11 @@ final class jg extends IntrusiveNode {
               stackIn_31_0.field_Rb = new je(stackIn_31_3, stackIn_32_4);
               var12.a(var12.field_Rb, 39);
               var12.field_Rb.field_Eb = 2;
-              var12.field_Pb = new je(0L, IsaacRandom.field_i);
+              var12.field_Pb = new je(0L, ga.field_i);
               var12.a(var12.field_Pb, 85);
-              var12.field_Ib = new je(0L, DualLinkedNode.field_k);
+              var12.field_Ib = new je(0L, ms.field_k);
               var12.a(var12.field_Ib, 78);
-              var12.field_sc = new je(0L, DualLinkedNode.field_k);
+              var12.field_sc = new je(0L, ms.field_k);
               var12.a(var12.field_sc, param0 ^ 47);
               var12.field_Wb = new je(0L, eq.field_h);
               var12.a(var12.field_Wb, 51);
@@ -328,7 +328,7 @@ final class jg extends IntrusiveNode {
             var30 = var12.field_Wb;
             var12.field_Wb.field_ob = 0;
             var30.field_gb = 0;
-            var12.field_gb = CipherPacketBuffer.field_x.field_Jb.field_gb;
+            var12.field_gb = bv.field_x.field_Jb.field_gb;
             var31 = 0;
             var32 = var12.field_rc;
             if (!var12.k(param0 ^ -7)) {
@@ -354,7 +354,7 @@ final class jg extends IntrusiveNode {
                 if (!var12.field_Sb &&
                   !var12.field_Nb) {
                   if (var12.field_uc) {
-                    var12.field_Xb.field_X = AnimationFrameSet.field_I;
+                    var12.field_Xb.field_X = wp.field_I;
                   } else {
                     var12.field_Xb.field_X = je.field_zb;
                   }
@@ -369,7 +369,7 @@ final class jg extends IntrusiveNode {
               } else {
                 var12.field_Yb.a(jn.field_d, -20500, 68, var31, 0);
               }
-              var12.field_lc.field_X = BitmapFont.a(var12.field_lc.field_Z, var32, 78);
+              var12.field_lc.field_X = ka.a(var12.field_lc.field_Z, var32, 78);
               var12.field_lc.a(jn.field_d, -20500, 78, var31, 70);
               if (var12.field_lc.field_eb &&
                 !var12.field_lc.field_X.equals(var32)) {
@@ -395,8 +395,8 @@ final class jg extends IntrusiveNode {
               if ((1 << ev.field_c & var14Lifetime1) != 0) {
                 var50_ref = rs.field_p[var12.field_Tb];
                 var12.field_ic.field_cb = var50_ref;
-                var12.field_ic.a(var12.field_oc.field_ob, param0 ^ -20500, var50_ref.canvasWidth, 0, var34_int);
-                var34_int = var34_int + (var50_ref.canvasWidth + io.field_n);
+                var12.field_ic.a(var12.field_oc.field_ob, param0 ^ -20500, var50_ref.field_A, 0, var34_int);
+                var34_int = var34_int + (var50_ref.field_A + io.field_n);
               }
               if ((1 << ai.field_M & var14Lifetime1) != 0) {
                 if (!var12.field_Sb) {
@@ -413,17 +413,17 @@ final class jg extends IntrusiveNode {
                 }
                 var51_ref = stackIn_85_0[stackIn_86_1];
                 var12.field_ec.field_cb = var51_ref;
-                var12.field_ec.a(var12.field_oc.field_ob, param0 ^ -20500, var51_ref.canvasWidth, 0, var34_int);
-                var34_int = var34_int + (var51_ref.canvasWidth + io.field_n);
+                var12.field_ec.a(var12.field_oc.field_ob, param0 ^ -20500, var51_ref.field_A, 0, var34_int);
+                var34_int = var34_int + (var51_ref.field_A + io.field_n);
               }
               if ((1 << gg.field_I & var14Lifetime1) != 0) {
                 var52_ref = lm.field_h[var12.field_ac - 1];
                 var12.field_fc.field_cb = var52_ref;
-                var12.field_fc.a(var12.field_oc.field_ob, -20500, var52_ref.canvasWidth, 0, var34_int);
-                var34_int = var34_int + (var52_ref.canvasWidth + io.field_n);
+                var12.field_fc.a(var12.field_oc.field_ob, -20500, var52_ref.field_A, 0, var34_int);
+                var34_int = var34_int + (var52_ref.field_A + io.field_n);
               }
               if ((1 << uj.field_j & var14Lifetime1) != 0) {
-                stackIn_93_0 = ResourceProtocolClient.field_d;
+                stackIn_93_0 = bp.field_d;
                 if (!var12.field_vc) {
                   stackIn_94_1 = 0;
                 } else {
@@ -431,8 +431,8 @@ final class jg extends IntrusiveNode {
                 }
                 var53_ref = stackIn_93_0[stackIn_94_1];
                 var12.field_Vb.field_cb = var53_ref;
-                var12.field_Vb.a(var12.field_oc.field_ob, -20500, var53_ref.canvasWidth, 0, var34_int);
-                var34_int = var34_int + (io.field_n + var53_ref.canvasWidth);
+                var12.field_Vb.a(var12.field_oc.field_ob, -20500, var53_ref.field_A, 0, var34_int);
+                var34_int = var34_int + (io.field_n + var53_ref.field_A);
               }
               if (ju.field_a != null) {
                 for (var36Lifetime1 = 0; var36Lifetime1 < tq.field_b; var36Lifetime1++) {
@@ -441,8 +441,8 @@ final class jg extends IntrusiveNode {
                     var42 = ju.field_a[var36Lifetime1][var12.field_pc[var36Lifetime1] & 255];
                     var54 = var42;
                     var12.field_Qb[var36Lifetime1].field_cb = var42;
-                    var12.field_Qb[var36Lifetime1].a(var12.field_oc.field_ob, -20500, var54.canvasWidth, 0, var34_int);
-                    var34_int = var34_int + (var54.canvasWidth + io.field_n);
+                    var12.field_Qb[var36Lifetime1].a(var12.field_oc.field_ob, -20500, var54.field_A, 0, var34_int);
+                    var34_int = var34_int + (var54.field_A + io.field_n);
                   }
                 }
               }
@@ -496,12 +496,12 @@ final class jg extends IntrusiveNode {
                 var31 = var31 + jn.field_d;
               }
               if (var12.field_gc) {
-                var12.field_sc.field_X = fo.a(4800, GameplayController.field_A, new String[]{var32});
+                var12.field_sc.field_X = fo.a(4800, ic.field_A, new String[]{var32});
                 var12.field_sc.a(jn.field_d, -20500, var12.field_gb - 2 * mi.field_l, var31, mi.field_l);
                 var31 = var31 + jn.field_d;
               }
             }
-            var33 = LeaderEscortCondition.a(var12.field_mc, 6, var32);
+            var33 = gm.a(var12.field_mc, 6, var32);
             if (var33 != null) {
               var34_intLifetime1 = var12.field_Wb.field_Z.c(var33, var12.field_gb - mi.field_l - mi.field_l);
               var12.field_Wb.field_X = var33;
@@ -513,7 +513,7 @@ final class jg extends IntrusiveNode {
               var12.field_nb = var31 - var12.field_ob;
             }
             if (var13 != 0) {
-              CipherPacketBuffer.field_x.field_Jb.a(var12, true, 2, (je) (var11));
+              bv.field_x.field_Jb.a(var12, true, 2, (je) (var11));
             }
             for (var34_intLifetime2 = 0; var34_intLifetime2 < tq.field_b; var34_intLifetime2++) {
               if (var12.field_Qb[var34_intLifetime2].field_eb) {
@@ -535,9 +535,9 @@ final class jg extends IntrusiveNode {
             }
             if (var12.field_ic.field_eb) {
               if (1 == var12.field_Tb) {
-                var34 = AiInfluenceMap.field_j;
+                var34 = ir.field_j;
               } else {
-                var34 = ResourceRequest.field_u[var12.field_Tb];
+                var34 = ks.field_u[var12.field_Tb];
               }
               ad.field_I = vu.field_P + " - " + var34;
             }
@@ -545,7 +545,7 @@ final class jg extends IntrusiveNode {
               if (var12.field_vc) {
                 stackIn_156_0 = uu.field_a;
               } else {
-                stackIn_156_0 = CampaignProgress.field_c;
+                stackIn_156_0 = cm.field_c;
               }
               ad.field_I = stackIn_156_0;
             }
@@ -555,10 +555,10 @@ final class jg extends IntrusiveNode {
                 if (var12.field_tc) {
                   stackIn_166_0 = mv.field_e;
                 } else {
-                  stackIn_166_0 = SummonRequest.field_y;
+                  stackIn_166_0 = hw.field_y;
                 }
               } else {
-                stackIn_166_0 = AttackEvent.field_K;
+                stackIn_166_0 = ns.field_K;
               }
               ad.field_I = stackIn_166_0;
             }
@@ -573,7 +573,7 @@ final class jg extends IntrusiveNode {
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_yb != 0) {
               if (var12.k(param0 ^ -7)) {
-                var12 = (au) (var8.next((byte) 123));
+                var12 = (au) (var8.a((byte) 123));
                 continue;
               }
               if (var12.field_Yb.field_yb == 0) {
@@ -586,17 +586,17 @@ final class jg extends IntrusiveNode {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  CombatEvent.a(param6, -99, var12.d((byte) -97));
+                  ag.a(param6, -99, var12.d((byte) -97));
                 }
               }
             }
-            var12 = (au) (var8.next((byte) 123));
+            var12 = (au) (var8.a((byte) 123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var7), "jg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ig.a((Throwable) ((Object) var7), "jg.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -607,58 +607,58 @@ final class jg extends IntrusiveNode {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        CipherPacketBuffer var5 = null;
+        bv var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         iw var11 = null;
         b var12 = null;
-        CipherPacketBuffer var13 = null;
+        bv var13 = null;
         b var14 = null;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          var13 = ByteStorage.field_e;
-          var2 = var13.readUnsignedByte(param0);
+          var13 = mg.field_e;
+          var2 = var13.k(param0);
           if (var2 == 0) {
             var10 = ce.a(-80);
             var3 = var10;
             var9 = var10;
             var4 = var9;
             var5 = var13;
-            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(0);
+            var6 = ((vh) ((Object) var5)).k(0);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(1);
+              var9[var7] = ((vh) ((Object) var5)).i(1);
             }
-            var12 = (b) (ta.field_O.first((byte) 98));
+            var12 = (b) (ta.field_O.e((byte) 98));
             if (var12 == null) {
               dj.a((byte) -127);
               return;
             }
             var12.field_m = true;
             var12.field_l = var3;
-            var12.unlink(param0 + 65);
+            var12.d(param0 + 65);
             return;
           }
           if (var2 == 1) {
-            var11 = (iw) (cg.field_c.first((byte) 104));
+            var11 = (iw) (cg.field_c.e((byte) 104));
             if (var11 == null) {
               dj.a((byte) -126);
               return;
             }
-            var11.unlink(41);
+            var11.d(41);
           } else {
             if (var2 == 2) {
-              var14 = (b) (ta.field_O.first((byte) 125));
+              var14 = (b) (ta.field_O.e((byte) 125));
               if (var14 == null) {
                 dj.a((byte) -125);
                 return;
               }
               var14.field_l = ce.a(-120);
               var14.field_m = true;
-              var14.unlink(param0 ^ 35);
+              var14.d(param0 ^ 35);
             } else {
-              af.a((Throwable) null, 78, "A1: " + CampaignProgress.b(false));
+              af.a((Throwable) null, 78, "A1: " + cm.b(false));
               dj.a((byte) -127);
             }
           }
@@ -666,7 +666,7 @@ final class jg extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "jg.A(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "jg.A(" + param0 + ')');
         }
     }
 

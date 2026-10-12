@@ -262,42 +262,144 @@
         },
         "sources": {
           "files": 542,
-          "sha256": "a335a5dc8ceefc629e9ddd18c57c3ce19734ff22b3026833869d1fd193ad0637"
+          "sha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c"
         },
         "pipelineFingerprint": "19e050a31e64006d000166781d27a1358ab030210ec6946d9d890e4bf1fb0a5f",
         "pipelineEnvironment": {
           "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
         },
         "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+          "base": {
+            "repository": "Kreijstal/java-tools",
+            "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
+            "trackedClean": true,
+            "sourceArchive": {
+              "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
+              "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
+              "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+            },
+            "sourceTreeSha256": "a335a5dc8ceefc629e9ddd18c57c3ce19734ff22b3026833869d1fd193ad0637",
+            "correctedFailures": {
+              "pipeline": 0,
+              "cli": 1,
+              "verify": 0,
+              "javac": 1
+            },
+            "runner": {
+              "repository": "Kreijstal/dekobloko-work",
+              "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
+              "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
+            }
           },
-          "sourceTreeSha256": "a335a5dc8ceefc629e9ddd18c57c3ce19734ff22b3026833869d1fd193ad0637",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 1,
-            "verify": 0,
-            "javac": 1
+          "methodReconstruction": {
+            "baseSource": {
+              "repository": "Kreijstal/funorb-decompiled",
+              "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
+              "subdirectory": "games/armiesofgielinor"
+            },
+            "baseSourceTreeSha256": "a335a5dc8ceefc629e9ddd18c57c3ce19734ff22b3026833869d1fd193ad0637",
+            "bytecode": {
+              "files": 542,
+              "sha256": "e85e17bfa81c859e973427b53083553b59aabbe27319c2174ef0baeb723f0886"
+            },
+            "generator": {
+              "repository": "Kreijstal/java-tools",
+              "commit": "ef1fb8596761b757a3ddf5288ca96dcc186a070f",
+              "trackedClean": true,
+              "sourceArchive": {
+                "sha256": "b972fd2a60c5d2ddad0f9f80b426942804db9b591789f8a70929679a7c1e58a1",
+                "reproduce": "git archive --format=tar ef1fb8596761b757a3ddf5288ca96dcc186a070f | sha256sum"
+              }
+            },
+            "methods": [
+              {
+                "owner": "ha",
+                "name": "b",
+                "descriptor": "(IIZ)V",
+                "oldBodySha256": "c19446be507696f6c6930f72ed6e53ce0ef5e7160cd44b2233c0f44064b052ec",
+                "newBodySha256": "836f6dc47a41db523d4dd8844835a554486755d4ab75efe24db976777e38424a",
+                "deterministic": true,
+                "splitBlocks": 8,
+                "normalFlowVerified": true
+              },
+              {
+                "owner": "ej",
+                "name": "a",
+                "descriptor": "(ZII)V",
+                "oldBodySha256": "9a6cb9643bae694dcc6870173c113d142900cbff6eb42db6dce8f49995e3ee6c",
+                "newBodySha256": "f818b90b93587497c514599640140e57264a5a86bf729d80592417d2313eb12c",
+                "deterministic": true,
+                "splitBlocks": 26,
+                "normalFlowVerified": true
+              },
+              {
+                "owner": "gs",
+                "name": "a",
+                "descriptor": "(B[I)Z",
+                "oldBodySha256": "29cb1507567cc43a491b924eeeebf3bd390fdf4d72df202ca98ce65cd4e13663",
+                "newBodySha256": "6ad438bf3835c128b235bad82185dfa5f1e73932c098374489d4d4252a347e93",
+                "deterministic": true,
+                "exceptionTableRows": 6,
+                "regions": 2,
+                "regionExitsVerified": true,
+                "regionSourceFlowVerified": true,
+                "outerRoutingVerified": true
+              }
+            ],
+            "sourceTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
+            "verification": {
+              "checks": 60889,
+              "rawNamedIdentical": true,
+              "independentExpectations": true,
+              "headlessClientBoundary": true,
+              "clientAppletSubtypePreserved": true,
+              "battlefieldConstructorBypassed": true,
+              "archiveProviderFixture": true,
+              "xteaIndependentEncoder": true,
+              "archiveChunkExtraction": true,
+              "directByteStorageThreshold": 136,
+              "summonMenuFixtures": true,
+              "unitCycleFixtures": true,
+              "turnTimerFixtures": true,
+              "spellConfirmationFixtures": true,
+              "battleHintFixtures": true,
+              "equipmentTutorialGates": true,
+              "meshPreprocessingFixtures": true,
+              "meshSharingFixtures": true,
+              "quaternionFixtures": true,
+              "battleProjectionFixtures": true,
+              "modelLifetimeFixtures": true,
+              "unitAnimationSelectionFixtures": true,
+              "animationFrameDecodingFixtures": true,
+              "animationBlendFixtures": true,
+              "modelCoordinateStorageFixtures": true,
+              "animationArchiveLoadingFixtures": true,
+              "maskedMeshTransformFixtures": true,
+              "matrixTranslationFixtures": true,
+              "animationSlotSelectionFixtures": true,
+              "animationDecoderScratchFixtures": true,
+              "triangleClipFixtures": true,
+              "flatAndUniformShadedTriangleFixtures": true,
+              "modelBoundsFixtures": true,
+              "aiSpellCandidateFixtures": true,
+              "incomingPacketFramingFixtures": true,
+              "delayedPacketFixtures": true,
+              "packetPollingFailureFixtures": true,
+              "dropdownWidgetFixtures": true,
+              "dropdownArrowPixelFixture": true,
+              "traceSha256": "aed4049a37fa9c86bc4d14f0df129096b7930618772413d4eddc90d46f7b4459"
+            }
           },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
+          "sourceTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c"
         },
         "diagnostics": {
           "hardFailures": 0,
-          "validFallbacks": 3,
+          "validFallbacks": 0,
           "totals": {
             "stackUnderflow": 0,
             "rawControlFlow": 0,
             "placeholders": 0,
-            "stateMachineFallback": 3
+            "stateMachineFallback": 0
           }
         },
         "validation": {
@@ -314,10 +416,6 @@
             "-classpath",
             "batch-stubs"
           ]
-        },
-        "publishedSources": {
-          "files": 542,
-          "sha256": "42bbb193063f848463831a879231c1a065cd36dab881ad87760ad02d30b6ce7e"
         }
       },
       "bachelorfridge": {
@@ -2612,130 +2710,6 @@
           "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
           "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
         }
-      }
-    },
-    "armiesofgielinor": {
-      "source": {
-        "repository": "Kreijstal/funorb-decompiled",
-        "commit": "b9cfce0e13ffae9ae44870e1d959c628663a96dc",
-        "subdirectory": "games/armiesofgielinor"
-      },
-      "inputTreeSha256": "2c88a51ecea2c0b981a5b108eb38d0ea276180435a22f4cbd552997163f5a433",
-      "sources": {
-        "files": 542,
-        "sha256": "42bbb193063f848463831a879231c1a065cd36dab881ad87760ad02d30b6ce7e"
-      },
-      "dictionary": {
-        "path": "decompilation/armiesofgielinor-naming.json",
-        "sha256": "086ff81d0eae97ec96190bb37864f0d5f52a3bf3ad04e1ee942fc0408a5c0de7"
-      },
-      "readingGuide": {
-        "path": "games/armiesofgielinor/README.md",
-        "sha256": "ffcafd0cf019aeb3447d02c8cc0ec4d116b956cddd5d2b0585591acc458c11bc"
-      },
-      "rulesSha256": "580867b12222359722e9d8174b01ce5ad8e7eea5c3b1025b90481f8b95546e8e",
-      "compiler": {
-        "base": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "a335a5dc8ceefc629e9ddd18c57c3ce19734ff22b3026833869d1fd193ad0637",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 1,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "methodReconstruction": {
-          "baseSource": {
-            "repository": "Kreijstal/funorb-decompiled",
-            "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
-            "subdirectory": "games/armiesofgielinor"
-          },
-          "baseSourceTreeSha256": "a335a5dc8ceefc629e9ddd18c57c3ce19734ff22b3026833869d1fd193ad0637",
-          "bytecode": {
-            "files": 542,
-            "sha256": "e85e17bfa81c859e973427b53083553b59aabbe27319c2174ef0baeb723f0886"
-          },
-          "generator": {
-            "repository": "Kreijstal/java-tools",
-            "commit": "71adcd0171f6926ae054f86bf2c96d87e045faf8",
-            "trackedClean": true,
-            "sourceArchive": {
-              "sha256": "789cb63546e126182923ac21046e2e9ec8c64a06b38a323a898f2c705adb26e8",
-              "reproduce": "git archive --format=tar 71adcd0171f6926ae054f86bf2c96d87e045faf8 | sha256sum"
-            }
-          },
-          "methods": [
-            {
-              "owner": "ha",
-              "name": "b",
-              "descriptor": "(IIZ)V",
-              "oldBodySha256": "c19446be507696f6c6930f72ed6e53ce0ef5e7160cd44b2233c0f44064b052ec",
-              "newBodySha256": "836f6dc47a41db523d4dd8844835a554486755d4ab75efe24db976777e38424a",
-              "splitBlocks": 8,
-              "normalFlowVerified": true
-            },
-            {
-              "owner": "ej",
-              "name": "a",
-              "descriptor": "(ZII)V",
-              "oldBodySha256": "9a6cb9643bae694dcc6870173c113d142900cbff6eb42db6dce8f49995e3ee6c",
-              "newBodySha256": "f818b90b93587497c514599640140e57264a5a86bf729d80592417d2313eb12c",
-              "splitBlocks": 26,
-              "normalFlowVerified": true
-            }
-          ],
-          "sourceTreeSha256": "2c88a51ecea2c0b981a5b108eb38d0ea276180435a22f4cbd552997163f5a433",
-          "verification": {
-            "checks": 58911,
-            "rawNamedIdentical": true,
-            "independentExpectations": true,
-            "headlessClientBoundary": true,
-            "clientAppletSubtypePreserved": true,
-            "battlefieldConstructorBypassed": true,
-            "archiveProviderFixture": true,
-            "xteaIndependentEncoder": true,
-            "archiveChunkExtraction": true,
-            "directByteStorageThreshold": 136,
-            "summonMenuFixtures": true,
-            "unitCycleFixtures": true,
-            "turnTimerFixtures": true,
-            "spellConfirmationFixtures": true,
-            "battleHintFixtures": true,
-            "equipmentTutorialGates": true,
-            "meshPreprocessingFixtures": true,
-            "meshSharingFixtures": true,
-            "quaternionFixtures": true,
-            "battleProjectionFixtures": true,
-            "modelLifetimeFixtures": true,
-            "unitAnimationSelectionFixtures": true,
-            "animationFrameDecodingFixtures": true,
-            "animationBlendFixtures": true,
-            "modelCoordinateStorageFixtures": true,
-            "animationArchiveLoadingFixtures": true,
-            "maskedMeshTransformFixtures": true,
-            "matrixTranslationFixtures": true,
-            "animationSlotSelectionFixtures": true,
-            "animationDecoderScratchFixtures": true,
-            "triangleClipFixtures": true,
-            "flatAndUniformShadedTriangleFixtures": true,
-            "modelBoundsFixtures": true,
-            "traceSha256": "23f16ae89c77139fd012a6b4be863862c097cc606d48ad603f5e6a88afd5a0b2"
-          }
-        },
-        "sourceTreeSha256": "2c88a51ecea2c0b981a5b108eb38d0ea276180435a22f4cbd552997163f5a433"
       }
     },
     "steelsentinels": {

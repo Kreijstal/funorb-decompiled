@@ -12,16 +12,16 @@ final class ml extends je {
     final static void a(p param0, byte param1) {
         int var2_int = 0;
         sn var3 = null;
-        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           wh.field_f = false;
-          MoveAttackRequest.field_v = new sn[47];
+          am.field_v = new sn[47];
           for (var2_int = 0; var2_int < 47; var2_int++) {
             var3 = param0.a(wl.field_M[var2_int], (byte) -97, "");
             if (var3 == null) {
               var3 = param0.a((byte) -128, "", wl.field_M[var2_int]);
             }
-            MoveAttackRequest.field_v[var2_int] = var3;
+            am.field_v[var2_int] = var3;
           }
           if (param1 != 123) {
             String var5 = (String) null;
@@ -29,7 +29,7 @@ final class ml extends je {
           }
           wh.field_f = true;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ml.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ml.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class ml extends je {
         int var7;
         int var8;
         int var4Lifetime1;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         var4 = 0;
         if (param2 != -20199) {
           ml.a(96, -94, -90, false);
@@ -107,11 +107,11 @@ final class ml extends je {
         String var13 = null;
         tg var14 = null;
         try {
-          ng.a(CipherPacketBuffer.field_x, param1, (int[]) null, (String) null, param1.d((byte) -84), 92, -1, (String) null, 0L);
+          ng.a(bv.field_x, param1, (int[]) null, (String) null, param1.d((byte) -84), 92, -1, (String) null, 0L);
           if (param1.field_kc && (2 == param1.field_ac ||
-            !(BufferedSocket.field_j < 2))) {
+            !(hi.field_j < 2))) {
             var8 = tn.field_Z;
-            var9 = fo.a(4800, SectorCacheStore.field_k, new String[]{param3});
+            var9 = fo.a(4800, bc.field_k, new String[]{param3});
             var8.field_i.a(10, var9, (byte) -118);
           }
           tn.field_Z.a((byte) 96);
@@ -127,8 +127,8 @@ final class ml extends je {
             }
           }
           var14 = tn.field_Z;
-          var5 = BattleTutorial.field_t;
-          var6 = TeleportAction.field_z;
+          var5 = iu.field_t;
+          var6 = ur.field_z;
           var7 = 125 / ((22 - param0) / 38);
           var14.field_i.a(0, var6, 0, (byte) -118, var5);
           return;
@@ -148,7 +148,7 @@ final class ml extends je {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class ml extends je {
         je dupTemp$1 = null;
         int var3;
         String var4;
-        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 != 10000) {
           var4 = (String) null;
           ml.a(10, (au) null, false, (String) null);
@@ -177,7 +177,7 @@ final class ml extends je {
         }
     }
 
-    final static void a(CampaignMission param0, byte param1) {
+    final static void a(om param0, byte param1) {
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -192,12 +192,12 @@ final class ml extends je {
         String[] var8 = null;
         String[] var9 = null;
         int var3Lifetime1;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          var8 = param0.getParticipantNames(-23209);
+          var8 = param0.e(-23209);
           var9 = var8;
-          if (param0.campaign.localGodId != 1) {
-            if (param0.campaign.localGodId == 2) {
+          if (param0.field_G.field_s != 1) {
+            if (param0.field_G.field_s == 2) {
               op.field_c[0][2] = lp.field_c[0];
             }
           } else {
@@ -208,15 +208,15 @@ final class ml extends je {
             var4 = stackIn_8_0;
             op.field_c[0][var4] = lp.field_c[3];
           }
-          op.field_c[0][0] = lp.field_c[param0.campaign.localGodId];
+          op.field_c[0][0] = lp.field_c[param0.field_G.field_s];
           var7 = 0;
           var3Lifetime1 = var7;
           if (param1 != -26) {
             return;
           }
           while (var7 < op.field_c[0].length) {
-            ActionRequest.unitModels[76][var7] = WeightedScoreStrategy.b(op.field_c[0][var7], -20849);
-            ResourceProtocolClient.a(var7, op.field_c[0][var7], param1 - 100);
+            mn.field_k[76][var7] = ge.b(op.field_c[0][var7], -20849);
+            bp.a(var7, op.field_c[0][var7], param1 - 100);
             var7++;
           }
           return;
@@ -230,7 +230,7 @@ final class ml extends je {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -278,7 +278,7 @@ final class ml extends je {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -286,7 +286,7 @@ final class ml extends je {
         if (param3) {
           return true;
         }
-        return (ko.field_b - param0) * (-param0 + ko.field_b) + (-param1 + AiPlanningStrategy.field_d) * (-param1 + AiPlanningStrategy.field_d) < param2 * param2 ? true : false;
+        return (ko.field_b - param0) * (-param0 + ko.field_b) + (-param1 + sm.field_d) * (-param1 + sm.field_d) < param2 * param2 ? true : false;
     }
 
     ml(long param0, je param1, String[] param2, je param3, je[] param4, int param5) {
@@ -354,7 +354,7 @@ final class ml extends je {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
         }
     }
 

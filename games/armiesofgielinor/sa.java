@@ -9,10 +9,10 @@ final class sa {
     static long[] field_h;
     static String field_f;
     static String field_e;
-    static RgbSprite field_a;
+    static wk field_a;
     static String field_c;
 
-    final static long readTagCharacter(CipherPacketBuffer packet, int unusedValue, int obfuscationGuard) {
+    final static long a(bv param0, int param1, int param2) {
         RuntimeException var3 = null;
         String var4 = null;
         long stackIn_3_0 = 0L;
@@ -21,23 +21,23 @@ final class sa {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (obfuscationGuard != -15329) {
+          if (param2 != -15329) {
             var4 = (String) null;
             sa.a(18, -42, -58, (String) null);
           }
-          stackIn_3_0 = (long)vt.readTwoTierUnsignedInt(-9202, 8, 4, packet);
+          stackIn_3_0 = (long)vt.a(-9202, 8, 4, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("sa.E(");
-          if (packet == null) {
+          if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(unusedValue).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class sa {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class sa {
         if (param0 >= -64) {
           field_c = (String) null;
         }
-        stackIn_8_0 = (this == NetworkResourceRequest.field_D) || (this == oq.field_m) || (this == ResourceArchive.field_k);
+        stackIn_8_0 = (this == jf.field_D) || (this == oq.field_m) || (this == kl.field_k);
         return stackIn_8_0;
     }
 
@@ -133,11 +133,11 @@ final class sa {
           return;
         }
         try {
-          var5 = en.field_E.getParagraphHeight(param3, -20 + var4_int, 0);
-          fe.b(50 + param2, 80 + param1, var4_int, var5 + 20, io.field_m, TutorialController.field_e, 0, 192);
+          var5 = en.field_E.a(param3, -20 + var4_int, 0);
+          fe.b(50 + param2, 80 + param1, var4_int, var5 + 20, io.field_m, ci.field_e, 0, 192);
           en.field_E.a(param3, 62 + param2, 90 + param1, -20 + var4_int, var5, 16777215, -1, 1, 0, 0);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sa.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "sa.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -187,7 +187,7 @@ final class sa {
         var0 = var15;
         while (var15 <= 10) {
             var1 = -8 + var15 * 8;
-            field_h[var15] = BufferedFile.a(we.a(field_g[7][7 + var1], 255L), BufferedFile.a(we.a(65280L, field_g[6][var1 + 6]), BufferedFile.a(we.a(field_g[5][var1 + 5], 16711680L), BufferedFile.a(we.a(4278190080L, field_g[4][var1 + 4]), BufferedFile.a(we.a(field_g[3][var1 + 3], 1095216660480L), BufferedFile.a(we.a(280375465082880L, field_g[2][var1 + 2]), BufferedFile.a(we.a(71776119061217280L, field_g[1][1 + var1]), we.a(-72057594037927936L, field_g[0][var1]))))))));
+            field_h[var15] = ue.a(we.a(field_g[7][7 + var1], 255L), ue.a(we.a(65280L, field_g[6][var1 + 6]), ue.a(we.a(field_g[5][var1 + 5], 16711680L), ue.a(we.a(4278190080L, field_g[4][var1 + 4]), ue.a(we.a(field_g[3][var1 + 3], 1095216660480L), ue.a(we.a(280375465082880L, field_g[2][var1 + 2]), ue.a(we.a(71776119061217280L, field_g[1][1 + var1]), we.a(-72057594037927936L, field_g[0][var1]))))))));
             var15++;
         }
     }

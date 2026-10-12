@@ -13,13 +13,13 @@ final class rr {
         }
     }
 
-    final static IndexedSprite b(int param0) {
-        IndexedSprite var1 = new IndexedSprite(lg.field_d, wr.field_J, j.field_e[0], CampaignMenuButton.field_g[0], qm.field_K[0], c.field_e[param0], AnimationPlayer.field_j[0], MovementPresentation.field_j);
+    final static ru b(int param0) {
+        ru var1 = new ru(lg.field_d, wr.field_J, j.field_e[0], iq.field_g[0], qm.field_K[0], c.field_e[param0], vj.field_j[0], qv.field_j);
         rj.d((byte) 99);
         return var1;
     }
 
-    final static boolean a(byte param0, PacketBuffer param1) {
+    final static boolean a(byte param0, vh param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -30,7 +30,7 @@ final class rr {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.readUnsignedByte(0);
+          var2_int = param1.k(0);
           stackIn_3_0 = (1 != var2_int) ? 0 : 1;
           var3 = stackIn_3_0;
           if (param0 != -76) {
@@ -48,7 +48,7 @@ final class rr {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

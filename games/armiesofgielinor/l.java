@@ -4,8 +4,8 @@
 final class l {
     static String field_h;
     static String field_e;
-    static IndexedSprite[] field_b;
-    static CampaignMission activeCampaignMission;
+    static ru[] field_b;
+    static om field_c;
     static String field_g;
     static rc field_a;
     static String field_d;
@@ -45,7 +45,7 @@ final class l {
         int[] var20 = null;
         char[] var21 = null;
         int var12Lifetime1;
-        var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var17 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0 == null) {
             return null;
@@ -97,7 +97,7 @@ final class l {
                 }
                 var10[var14 + var12Lifetime1] = param0.field_y[var14];
               } else {
-                var8[var14 + var12Lifetime1] = GameEvent.field_x;
+                var8[var14 + var12Lifetime1] = oj.field_x;
                 var9[var12Lifetime1 + var14] = param0.field_v[var14];
                 var10[var14 + var12Lifetime1] = param0.field_y[var14];
               }
@@ -133,7 +133,7 @@ final class l {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class l {
         field_f = null;
         field_d = null;
         field_b = null;
-        activeCampaignMission = null;
+        field_c = null;
     }
 
     static {

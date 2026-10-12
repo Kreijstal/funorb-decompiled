@@ -32,17 +32,17 @@ final class kd extends tj implements nq, he, mf {
         try {
           if (param0 != -1) {
             byte[] var5 = (byte[]) null;
-            kd.a(11, (CipherPacketBuffer) null, (byte[]) null, (byte) -8);
+            kd.a(11, (bv) null, (byte[]) null, (byte) -8);
           }
           var3 = this.field_O;
           var4 = param1;
           ((fn) ((Object) var3)).a(false, var4, -27934);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kd.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "kd.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static byte[] a(int param0, CipherPacketBuffer param1, byte[] param2, byte param3) {
+    final static byte[] a(int param0, bv param1, byte[] param2, byte param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -57,13 +57,13 @@ final class kd extends tj implements nq, he, mf {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param3 > -101) {
             var9 = (byte[]) null;
-            kd.a(-26, (CipherPacketBuffer) null, (byte[]) null, (byte) -65);
+            kd.a(-26, (bv) null, (byte[]) null, (byte) -65);
           }
-          var4_int = param1.readBits(-122, param0);
+          var4_int = param1.g(-122, param0);
           if (var4_int == 0) {
             return null;
           }
@@ -71,15 +71,15 @@ final class kd extends tj implements nq, he, mf {
             var4_int != param2.length) {
             param2 = new byte[var4_int];
           }
-          var5 = param1.readBits(-117, 3);
-          var6 = (byte)param1.readBits(77, 8);
+          var5 = param1.g(-117, 3);
+          var6 = (byte)param1.g(77, 8);
           if (var5 <= 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param2[var7] = (byte)var6;
             }
           } else {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param2[var7] = (byte)(var6 + param1.readBits(44, var5));
+              param2[var7] = (byte)(var6 + param1.g(44, var5));
             }
           }
           stackIn_18_0 = (byte[]) (param2);
@@ -100,11 +100,11 @@ final class kd extends tj implements nq, he, mf {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static void a(int param0, String param1, ts param2, BitmapFont param3, byte param4) {
+    final static void a(int param0, String param1, ts param2, ka param3, byte param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -119,7 +119,7 @@ final class kd extends tj implements nq, he, mf {
         int var6 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param4 <= 78) {
             return;
@@ -166,12 +166,12 @@ final class kd extends tj implements nq, he, mf {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
         }
     }
 
     public kd() {
-        super(0, 0, 496, 0, (WidgetPainter) null);
+        super(0, 0, 496, 0, (kh) null);
         this.field_O = new ma("", (qo) null, 12);
         this.field_I = new ma("", (qo) null, 100);
         this.field_H = new ma("", (qo) null, 100);
@@ -182,11 +182,11 @@ final class kd extends tj implements nq, he, mf {
         this.field_ab = new vu("", (qo) null, var1 != 0);
         this.field_bb = new fw(ed.field_c, (qo) null);
         this.field_G = new fw(pt.field_Y, (qo) null);
-        this.field_O.field_s = DualLinkedNode.field_m;
-        this.field_I.field_s = NodeIterator.field_d;
+        this.field_O.field_s = ms.field_m;
+        this.field_I.field_s = bb.field_d;
         this.field_H.field_s = oc.field_Jb;
-        this.field_V.field_s = CachedArchiveProvider.field_k;
-        this.field_K.field_s = WeightedScoreStrategy.field_i;
+        this.field_V.field_s = bm.field_k;
+        this.field_K.field_s = ge.field_i;
         this.field_N.field_s = f.field_A;
         this.field_ab.field_s = rd.field_g;
         this.field_O.a((byte) 16, new uj(this.field_O));
@@ -196,49 +196,49 @@ final class kd extends tj implements nq, he, mf {
         this.field_K.a((byte) 16, new di(this.field_K, this.field_V));
         this.field_N.a((byte) 16, new jh(this.field_N));
         this.field_bb.field_I = false;
-        this.field_bb.painter = (WidgetPainter) ((Object) new nu());
-        this.field_G.painter = (WidgetPainter) ((Object) new td());
-        this.field_O.painter = (WidgetPainter) ((Object) new lu(10000536));
+        this.field_bb.field_k = (kh) ((Object) new nu());
+        this.field_G.field_k = (kh) ((Object) new td());
+        this.field_O.field_k = (kh) ((Object) new lu(10000536));
         lu dupTemp$0 = new lu(10000536);
-        this.field_H.painter = (WidgetPainter) ((Object) dupTemp$0);
-        this.field_I.painter = (WidgetPainter) ((Object) dupTemp$0);
-        this.field_N.painter = (WidgetPainter) ((Object) new lu(10000536));
-        this.field_ab.painter = (WidgetPainter) ((Object) new oi());
+        this.field_H.field_k = (kh) ((Object) dupTemp$0);
+        this.field_I.field_k = (kh) ((Object) dupTemp$0);
+        this.field_N.field_k = (kh) ((Object) new lu(10000536));
+        this.field_ab.field_k = (kh) ((Object) new oi());
         ol dupTemp$1 = new ol(10000536);
-        this.field_K.painter = (WidgetPainter) ((Object) dupTemp$1);
-        this.field_V.painter = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = fo.a(4800, StateChangeEvent.field_D, new String[]{this.m(150), this.l(29406)});
+        this.field_K.field_k = (kh) ((Object) dupTemp$1);
+        this.field_V.field_k = (kh) ((Object) dupTemp$1);
+        String var2 = fo.a(4800, qq.field_D, new String[]{this.m(150), this.l(29406)});
         int var3 = 20;
         var3 = var3 + this.a(tn.field_X, var3, 170, (byte) 18, this.field_I);
-        var3 = var3 + (this.a(false, 170, this.field_H, TrianglePulse.field_j, 20, "", var3) + 5);
+        var3 = var3 + (this.a(false, 170, this.field_H, hh.field_j, 20, "", var3) + 5);
         var3 = var3 + this.a(jj.field_h, var3, 170, (byte) 18, this.field_V);
-        var3 = var3 + (this.a(TurnEffectEvent.field_B, this.field_K, 170, tf.field_m, 210, var3) + 5);
+        var3 = var3 + (this.a(st.field_B, this.field_K, 170, tf.field_m, 210, var3) + 5);
         var3 = var3 + (5 + this.a(dn.field_Ob, this.field_O, 170, fq.field_k, 210, var3));
         var3 = var3 + this.a(var3, this.field_N, 170, field_S, 27270);
-        ta var4 = new ta(46, var3, this.width - 90, 25, this.field_ab, true, this.width - 120, 5, gl.field_e, 11579568, wg.field_c);
-        this.a((byte) 10, (Widget) (var4));
-        var3 = var3 + var4.height;
+        ta var4 = new ta(46, var3, this.field_l - 90, 25, this.field_ab, true, this.field_l - 120, 5, gl.field_e, 11579568, wg.field_c);
+        this.a((byte) 10, (kb) (var4));
+        var3 = var3 + var4.field_w;
         lk var5 = new lk(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, ArmiesOfGielinor.field_J.field_H, -1, 2147483647, true);
         this.field_W = new hv(var2, var5);
         this.field_W.field_s = "";
-        this.field_W.a(DiskCacheRequest.field_I, false, 0);
-        this.field_W.a(DiskCacheRequest.field_I, false, 1);
+        this.field_W.a(nh.field_I, false, 0);
+        this.field_W.a(nh.field_I, false, 1);
         this.field_W.field_x = (qo) (this);
-        this.field_W.a(this.width - 90, 9567, 46, var3);
-        var3 = var3 + (this.field_W.height + 15);
-        this.a((byte) 10, (Widget) (this.field_W));
+        this.field_W.a(this.field_l - 90, 9567, 46, var3);
+        var3 = var3 + (this.field_W.field_w + 15);
+        this.a((byte) 10, (kb) (this.field_W));
         int var6 = 4;
         int var7 = 200;
-        this.field_bb.setBounds(496 - var7 >> 1, var7, var3, 8192, 40);
-        this.field_G.setBounds(var6 + 3, 60, 15 + var3, 8192, 40);
+        this.field_bb.a(496 - var7 >> 1, var7, var3, 8192, 40);
+        this.field_G.a(var6 + 3, 60, 15 + var3, 8192, 40);
         this.field_G.field_x = (qo) (this);
         this.field_bb.field_x = (qo) (this);
-        this.a((byte) 10, (Widget) (this.field_bb));
-        this.a((byte) 10, (Widget) (this.field_G));
+        this.a((byte) 10, (kb) (this.field_bb));
+        this.a((byte) 10, (kb) (this.field_G));
         this.field_T = new kv((mf) (this));
-        this.field_T.setBounds(this.field_O.x - (-this.field_O.width - 60), this.width + (-this.field_O.x - this.field_O.width - 60), this.field_O.y + 20, 8192, 150);
-        this.a((byte) 10, (Widget) (this.field_T));
-        this.setBounds(0, 496, 0, 8192, var3 + (55 + var6));
+        this.field_T.a(this.field_O.field_B - (-this.field_O.field_l - 60), this.field_l + (-this.field_O.field_B - this.field_O.field_l - 60), this.field_O.field_p + 20, 8192, 150);
+        this.a((byte) 10, (kb) (this.field_T));
+        this.a(0, 496, 0, 8192, var3 + (55 + var6));
     }
 
     private final String m(int param0) {
@@ -285,7 +285,7 @@ final class kd extends tj implements nq, he, mf {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -313,7 +313,7 @@ final class kd extends tj implements nq, he, mf {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param2 < 102) {
             field_F = (je) null;
@@ -340,11 +340,11 @@ final class kd extends tj implements nq, he, mf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    private final int a(int param0, Widget param1, int param2, String param3, int param4) {
+    private final int a(int param0, kb param1, int param2, String param3, int param4) {
         RuntimeException var6 = null;
         kw var7 = null;
         ta var8 = null;
@@ -362,11 +362,11 @@ final class kd extends tj implements nq, he, mf {
             stackIn_2_0 = -80;
             return stackIn_2_0;
           }
-          this.a((byte) 10, (Widget) (var8));
+          this.a((byte) 10, (kb) (var8));
           var7 = new kw(((eg) ((Object) param1)).a(-918933630));
-          this.a((byte) 10, (Widget) (var7));
-          var7.setBounds(3 + var8.width + var8.x, 15, var8.y + (-15 + var8.height >> 1), 8192, 15);
-          stackIn_4_0 = var8.height;
+          this.a((byte) 10, (kb) (var7));
+          var7.a(3 + var8.field_l + var8.field_B, 15, var8.field_p + (-15 + var8.field_w >> 1), 8192, 15);
+          stackIn_4_0 = var8.field_w;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -384,7 +384,7 @@ final class kd extends tj implements nq, he, mf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -417,16 +417,16 @@ final class kd extends tj implements nq, he, mf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, Widget param3) {
+    final void a(int param0, int param1, int param2, kb param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_bb.field_I = this.k(param0 ^ 32673);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kd.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "kd.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -454,7 +454,7 @@ final class kd extends tj implements nq, he, mf {
         return false;
     }
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean a(kb param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -485,7 +485,7 @@ final class kd extends tj implements nq, he, mf {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -496,7 +496,7 @@ final class kd extends tj implements nq, he, mf {
         ((uj) (this.field_O.a(-918933630))).g(50);
     }
 
-    private final int a(boolean param0, int param1, Widget param2, String param3, int param4, String param5, int param6) {
+    private final int a(boolean param0, int param1, kb param2, String param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         pk var9 = null;
         ta var10 = null;
@@ -511,11 +511,11 @@ final class kd extends tj implements nq, he, mf {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new ta(20, param6, 120 + param1, 25, param2, param0, 120, 3, ArmiesOfGielinor.field_J, 16777215, param3);
-          this.a((byte) 10, (Widget) (var10));
-          var9 = new pk(((eg) ((Object) param2)).a(-918933630), param5, 126, var10.height + param6, param1 + 50, param4);
+          this.a((byte) 10, (kb) (var10));
+          var9 = new pk(((eg) ((Object) param2)).a(-918933630), param5, 126, var10.field_w + param6, param1 + 50, param4);
           var9.field_x = (qo) (this);
-          this.a((byte) 10, (Widget) (var9));
-          stackIn_1_0 = var10.height + var9.height;
+          this.a((byte) 10, (kb) (var9));
+          stackIn_1_0 = var10.field_w + var9.field_w;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -539,11 +539,11 @@ final class kd extends tj implements nq, he, mf {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
         }
     }
 
-    private final int a(String param0, Widget param1, int param2, String param3, int param4, int param5) {
+    private final int a(String param0, kb param1, int param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -582,11 +582,11 @@ final class kd extends tj implements nq, he, mf {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    private final int a(String param0, int param1, int param2, byte param3, Widget param4) {
+    private final int a(String param0, int param1, int param2, byte param3, kb param4) {
         ta var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_3_0 = 0;
@@ -598,11 +598,11 @@ final class kd extends tj implements nq, he, mf {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new ta(20, param1, param2 + 120, 25, param4, false, 120, 3, ArmiesOfGielinor.field_J, 16777215, param0);
-          this.a((byte) 10, (Widget) (var6));
+          this.a((byte) 10, (kb) (var6));
           if (param3 != 18) {
             this.field_G = (fw) null;
           }
-          stackIn_3_0 = var6.height;
+          stackIn_3_0 = var6.field_w;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -620,7 +620,7 @@ final class kd extends tj implements nq, he, mf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -631,17 +631,17 @@ final class kd extends tj implements nq, he, mf {
         Object var5 = null;
         Object var5Lifetime1;
         Object var5Lifetime2;
-        if (null != EffectPresentation.field_e) {
-          var3 = EffectPresentation.field_e.b(true, param2);
+        if (null != tb.field_e) {
+          var3 = tb.field_e.b(true, param2);
           if (0 == var3) {
           } else {
             if (var3 == 2 &&
-              EffectPresentation.field_e.field_X != null &&
-              !EffectPresentation.field_e.field_X.equals("")) {
-              if (EffectPresentation.field_e.field_X.charAt(0) == 91) {
-                var4 = EffectPresentation.field_e.field_X;
+              tb.field_e.field_X != null &&
+              !tb.field_e.field_X.equals("")) {
+              if (tb.field_e.field_X.charAt(0) == 91) {
+                var4 = tb.field_e.field_X;
               } else {
-                var6 = (CharSequence) ((Object) EffectPresentation.field_e.field_X);
+                var6 = (CharSequence) ((Object) tb.field_e.field_X);
                 var4 = k.a(var6, false);
                 var5 = var4;
                 var5Lifetime2 = var4;
@@ -651,7 +651,7 @@ final class kd extends tj implements nq, he, mf {
                 var5Lifetime1 = op.a(20, var4, param1);
               }
               if (ut.field_fb == 1) {
-                var5Lifetime1 = DamageEvent.a(var4, (byte) -27, param1);
+                var5Lifetime1 = nw.a(var4, (byte) -27, param1);
               }
               if (ut.field_fb == 2) {
                 var5Lifetime1 = se.a(var4, param1, param0 - 83);
@@ -663,7 +663,7 @@ final class kd extends tj implements nq, he, mf {
                 ta.a((String) null, 2, param0 ^ -18117, var4, (String) (var5Lifetime1), 0);
               }
             }
-            EffectPresentation.field_e = null;
+            tb.field_e = null;
             ut.field_fb = -1;
           }
         }
@@ -681,7 +681,7 @@ final class kd extends tj implements nq, he, mf {
           var2 = Integer.parseInt(this.field_N.field_v);
         } catch (NumberFormatException numberFormatException) {
         }
-        return BattleUnitRenderer.a(this.field_ab.field_K, this, this.field_V.field_v, this.field_I.field_v, var2, (byte) -110, this.field_O.field_v);
+        return eo.a(this.field_ab.field_K, this, this.field_V.field_v, this.field_I.field_v, var2, (byte) -110, this.field_O.field_v);
     }
 
     static {

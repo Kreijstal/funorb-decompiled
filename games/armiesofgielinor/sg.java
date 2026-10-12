@@ -3,7 +3,7 @@
  */
 final class sg {
     static sa field_a;
-    static IndexedSprite[] field_b;
+    static ru[] field_b;
     static nr field_c;
     private static String field_z;
 

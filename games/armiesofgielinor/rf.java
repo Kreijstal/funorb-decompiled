@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rf {
-    private ResourceArchive field_f;
+    private kl field_f;
     static String field_e;
     static je field_d;
     private ri field_b;
-    private ResourceArchive field_c;
+    private kl field_c;
     static String field_a;
 
     final static boolean c(int param0) {
@@ -29,12 +29,12 @@ final class rf {
     final static boolean a(int param0) {
         if (param0 != 27875) {
           field_d = (je) null;
-          if (!DamageEvent.g(81)) {
+          if (!nw.g(81)) {
             return df.field_M <= 0 ? true : false;
           }
           return true;
         }
-        if (DamageEvent.g(81)) {
+        if (nw.g(81)) {
           return true;
         }
         if (df.field_M > 0) {
@@ -96,7 +96,7 @@ final class rf {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -115,23 +115,23 @@ final class rf {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          param1.unlink(76);
-          var2 = (au) (qc.field_g.first((byte) 92));
+          param1.d(76);
+          var2 = (au) (qc.field_g.e((byte) 92));
           if (param0 > -66) {
             var4 = (java.applet.Applet) null;
             rf.a(-6, (java.applet.Applet) null);
           }
           while (var2 != null) {
             if (var2.a((byte) -76, param1)) {
-              var2 = (au) (qc.field_g.next((byte) 123));
+              var2 = (au) (qc.field_g.a((byte) 123));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            qc.field_g.addLast((byte) -119, (IntrusiveNode) (param1));
+            qc.field_g.a((byte) -119, (tc) (param1));
             return;
           }
           stackIn_9_0 = -123;
@@ -147,7 +147,7 @@ final class rf {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -157,24 +157,24 @@ final class rf {
         fg var1_refLifetime1;
         if (param0 != -18862) {
           field_a = (String) null;
-          var1_ref = (fg) (ParasiteEvent.field_y.c((byte) -125));
+          var1_ref = (fg) (md.field_y.c((byte) -125));
           if (var1_ref == null) {
             throw new IllegalStateException();
           }
-          SoftwareRaster.a(var1_ref.field_t, var1_ref.field_u, var1_ref.field_q);
-          SoftwareRaster.f(var1_ref.field_p, var1_ref.field_r, var1_ref.field_s, var1_ref.field_o);
+          qn.a(var1_ref.field_t, var1_ref.field_u, var1_ref.field_q);
+          qn.f(var1_ref.field_p, var1_ref.field_r, var1_ref.field_s, var1_ref.field_o);
           var1_ref.field_t = null;
-          EventPresenter.field_q.addLast((byte) -119, (IntrusiveNode) (var1_ref));
+          vb.field_q.a((byte) -119, (tc) (var1_ref));
           return;
         }
-        var1_refLifetime1 = (fg) (ParasiteEvent.field_y.c((byte) -125));
+        var1_refLifetime1 = (fg) (md.field_y.c((byte) -125));
         if (var1_refLifetime1 == null) {
           throw new IllegalStateException();
         }
-        SoftwareRaster.a(var1_refLifetime1.field_t, var1_refLifetime1.field_u, var1_refLifetime1.field_q);
-        SoftwareRaster.f(var1_refLifetime1.field_p, var1_refLifetime1.field_r, var1_refLifetime1.field_s, var1_refLifetime1.field_o);
+        qn.a(var1_refLifetime1.field_t, var1_refLifetime1.field_u, var1_refLifetime1.field_q);
+        qn.f(var1_refLifetime1.field_p, var1_refLifetime1.field_r, var1_refLifetime1.field_s, var1_refLifetime1.field_o);
         var1_refLifetime1.field_t = null;
-        EventPresenter.field_q.addLast((byte) -119, (IntrusiveNode) (var1_refLifetime1));
+        vb.field_q.a((byte) -119, (tc) (var1_refLifetime1));
     }
 
     final ar a(int param0, int param1) {
@@ -185,13 +185,13 @@ final class rf {
           return var3;
         }
         if (32768 <= param0) {
-          var5 = this.field_c.getFile((byte) 99, 32767 & param0, 1);
+          var5 = this.field_c.a((byte) 99, 32767 & param0, 1);
         } else {
-          var5 = this.field_f.getFile((byte) 118, param0, 1);
+          var5 = this.field_f.a((byte) 118, param0, 1);
         }
         ar var6 = new ar();
         if (var5 != null) {
-          var6.a(new PacketBuffer(var5), (byte) 91);
+          var6.a(new vh(var5), (byte) 91);
           if (32768 <= param0) {
             var6.a(true);
             this.field_b.a(var6, 100, (long)param0);
@@ -209,7 +209,7 @@ final class rf {
         return var6;
     }
 
-    rf(int param0, ResourceArchive param1, ResourceArchive param2, gj param3) {
+    rf(int param0, kl param1, kl param2, gj param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -224,12 +224,12 @@ final class rf {
           this.field_c = param2;
           this.field_f = param1;
           if (null != this.field_f) {
-            this.field_f.getFileCapacity(1, -2);
+            this.field_f.d(1, -2);
           }
           if (this.field_c == null) {
             return;
           }
-          this.field_c.getFileCapacity(1, -2);
+          this.field_c.d(1, -2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -253,7 +253,7 @@ final class rf {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

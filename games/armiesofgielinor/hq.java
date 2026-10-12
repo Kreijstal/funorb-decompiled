@@ -5,7 +5,7 @@ import java.io.*;
 
 final class hq {
     static char[] field_b;
-    static IndexedSprite[] field_a;
+    static ru[] field_a;
     static String field_c;
     static String field_d;
     static int field_f;
@@ -32,22 +32,22 @@ final class hq {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            ByteStorage.field_e = new CipherPacketBuffer(param3);
-            vl.outgoingPacket = new CipherPacketBuffer(param1);
+            mg.field_e = new bv(param3);
+            vl.field_n = new bv(param1);
             io.field_t = param5;
             k.field_c = param10;
-            BestScoreStrategy.field_l = param9;
-            AiPlanningStrategy.field_c = param2;
+            aw.field_l = param9;
+            sm.field_c = param2;
             wj.field_n = param11;
             rn.field_d = param8;
             ul.field_a = param4;
             an.field_E = param12;
-            CampaignRewardPreview.field_d = param0;
+            fu.field_d = param0;
             fl.field_e = param13;
             ng.field_v = param6;
             if (null != wj.field_n.field_m) {
               try {
-                le.field_d = new BufferedFile(wj.field_n.field_m, 64, 0);
+                le.field_d = new ue(wj.field_n.field_m, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;
@@ -75,7 +75,7 @@ final class hq {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

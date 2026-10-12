@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class im extends DualLinkedNode {
+class im extends ms {
     private static int[] field_u;
     static sn[] field_v;
     static je field_x;
-    static RgbSprite field_y;
+    static wk field_y;
     static boolean field_w;
 
-    final static int getProfileMissionScore(CampaignMission mission, int obfuscationGuard) {
+    final static int a(om param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -18,24 +18,24 @@ class im extends DualLinkedNode {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (obfuscationGuard != 19) {
+          if (param1 != 19) {
             im.b(49, 30);
           }
-          var2_int = mission.campaign.campaignIndex;
-          var3 = mission.missionId;
-          stackIn_3_0 = mh.getProfileMissionScore(var2_int, -125, var3);
+          var2_int = param0.field_G.field_r;
+          var3 = param0.field_v;
+          stackIn_3_0 = mh.a(var2_int, -125, var3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("im.BA(");
-          if (mission == null) {
+          if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ class im extends DualLinkedNode {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var4_int = -1;
           for (var5 = param2; var5 < param0; var5++) {
@@ -104,7 +104,7 @@ class im extends DualLinkedNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ class im extends DualLinkedNode {
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var2 = param1;
           var3 = dj.a(14, ':', var2.substring(var2.indexOf('=') + 1));
@@ -131,9 +131,9 @@ class im extends DualLinkedNode {
           }
           for (var4 = 0; var4 < var3.length; var4++) {
             if (var4 % 2 == 0) {
-              ah.localCoat.setPart(119, Integer.parseInt(var3[var4]), var4 / 2);
+              ah.field_a.a(119, Integer.parseInt(var3[var4]), var4 / 2);
             } else {
-              ah.localCoat.setColour(var4 / 2, Integer.parseInt(var3[var4]), (byte) -128);
+              ah.field_a.a(var4 / 2, Integer.parseInt(var3[var4]), (byte) -128);
             }
           }
           stackIn_11_0 = "done.";
@@ -155,7 +155,7 @@ class im extends DualLinkedNode {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+            throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
           }
         }
     }

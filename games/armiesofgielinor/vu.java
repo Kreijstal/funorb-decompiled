@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vu extends fw {
-    static SpellMenuGroup field_O;
+    static rg field_O;
     static je field_Q;
     static java.applet.Applet field_L;
     static String field_P;
@@ -14,18 +14,18 @@ final class vu extends fw {
         super.a(param0, param1, param2, param3);
     }
 
-    private vu(String param0, WidgetPainter param1, qo param2) {
+    private vu(String param0, kh param1, qo param2) {
         super(param0, param1, param2);
         try {
-          this.painter = t.field_c.field_i;
+          this.field_k = t.field_c.field_i;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 < 43) {
-          field_O = (SpellMenuGroup) null;
+          field_O = (rg) null;
         }
         field_Q = null;
         field_O = null;
@@ -46,15 +46,15 @@ final class vu extends fw {
         if (param0 != 6) {
           field_P = (String) null;
         }
-        return FixedQuaternion.a(dj.field_e, wm.field_b, (byte) -116);
+        return wq.a(dj.field_e, wm.field_b, (byte) -116);
     }
 
     private vu(String param0, qo param1) {
         this(param0, t.field_c.field_j, param1);
         try {
-          this.painter = t.field_c.field_i;
+          this.field_k = t.field_c.field_i;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -68,9 +68,9 @@ final class vu extends fw {
         int var8 = 0;
         int var9 = 0;
         int var11 = 0;
-        IndexedSprite var12 = null;
+        ru var12 = null;
         int var13 = 0;
-        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (null != nr.field_c &&
             param4 >= 0 &&
@@ -79,8 +79,8 @@ final class vu extends fw {
             param5 = param5 << 8 | param5;
             var7_int = param5 >> 1 ^ param5;
             for (var10 = 0; var10 < 4; var10++) {
-              var8 = 40 + (-44 + (var7_int & 7)) + CachedArchiveProvider.field_y[var10][0];
-              var9 = 20 + CachedArchiveProvider.field_y[var10][1] + ((param5 & 3) - 64);
+              var8 = 40 + (-44 + (var7_int & 7)) + bm.field_y[var10][0];
+              var9 = 20 + bm.field_y[var10][1] + ((param5 & 3) - 64);
               if (param1) {
                 var9 = var9 >> 1;
                 var8 = var8 >> 1;
@@ -94,9 +94,9 @@ final class vu extends fw {
                   nr.field_c[var11] != null) {
                   var12 = nr.field_c[var11];
                   if (param1) {
-                    var12.d(db.a(true, param2 + var8), MatchConditionEntry.a(var9 + param3, (byte) 94));
+                    var12.d(db.a(true, param2 + var8), u.a(var9 + param3, (byte) 94));
                   } else {
-                    var12.draw(db.a(true, var8 + param2), MatchConditionEntry.a(var9 + param3, (byte) 94));
+                    var12.a(db.a(true, var8 + param2), u.a(var9 + param3, (byte) 94));
                   }
                 }
               }
@@ -112,7 +112,7 @@ final class vu extends fw {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var7), "vu.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ig.a((Throwable) ((Object) var7), "vu.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -121,7 +121,7 @@ final class vu extends fw {
         try {
           this.field_K = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

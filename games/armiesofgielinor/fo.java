@@ -54,7 +54,7 @@ final class fo {
         int var11 = 0;
         int var5Lifetime1;
         int var8Lifetime1;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var3_int = param1.length();
           var4 = var3_int;
@@ -136,7 +136,7 @@ final class fo {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class fo {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fo.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fo.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

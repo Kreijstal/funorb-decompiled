@@ -6,9 +6,9 @@ final class fe {
     static int field_b;
     private static String[] field_k;
     private static int field_a;
-    private static RgbSprite field_g;
+    private static wk field_g;
     private static int field_f;
-    static RgbSprite[] field_l;
+    static wk[] field_l;
     private static int[] field_d;
     private static int field_n;
     static int[][] field_o;
@@ -18,7 +18,7 @@ final class fe {
     private static int field_m;
     private static int[] field_e;
 
-    private final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int[] param5, boolean param6) {
+    private final static void a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5, boolean param6) {
         int var14 = 0;
         int var7;
         int var8;
@@ -36,8 +36,8 @@ final class fe {
         var7 = 0;
         var8 = (param5.length << 16) / param3;
         var9 = 0;
-        var11 = param4[0].pixelWidth;
-        var12 = param4[0].pixelHeight;
+        var11 = param4[0].field_y;
+        var12 = param4[0].field_v;
         for (var14 = 0; var14 < param3; var14++) {
           if (var14 >= var12) {
             if (param3 - var14 > var12) {
@@ -53,19 +53,19 @@ final class fe {
           }
           var10 = param5[var9 >> 16];
           var9 = var9 + var8;
-          var17 = (param1 + var14) * SoftwareRaster.width + param0;
+          var17 = (param1 + var14) * qn.field_l + param0;
           var18 = 0;
           while (var18 < 3) {
             var19 = var7 % var12 * var11;
             if (var18 != 1) {
               var15 = -var11;
               while (var15 < 0) {
-                var20 = param4[var13].pixels[var19];
+                var20 = param4[var13].field_B[var19];
                 if (var20 != 0) {
                   if ((var20 & -65281) == 0) {
                     var20 = fe.a(var10, var20 >> 8, 0, 0);
                   }
-                  SoftwareRaster.pixels[var17] = var20;
+                  qn.field_d[var17] = var20;
                 }
                 var15++;
                 var19++;
@@ -77,14 +77,14 @@ final class fe {
                 !param6) {
                 var17 = var17 + var16;
               } else {
-                var20 = param4[var13].pixels[var19];
+                var20 = param4[var13].field_B[var19];
                 if (var20 != 0) {
                   if ((var20 & -65281) == 0) {
                     var20 = fe.a(var10, var20 >> 8, 0, 0);
                   }
                   var15 = -var16;
                   while (var15 < 0) {
-                    SoftwareRaster.pixels[var17] = var20;
+                    qn.field_d[var17] = var20;
                     var15++;
                     var17++;
                   }
@@ -100,7 +100,7 @@ final class fe {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int[] param5, int param6, int param7) {
+    final static void a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5, int param6, int param7) {
         fe.a(param0, param1, param2, param3, param4, param5, param6, param7, true);
     }
 
@@ -158,26 +158,26 @@ final class fe {
         return false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, wk[] param4, int param5) {
         int var6;
         int var7;
         int var8;
         param4[0].e(param0, param1, param5);
-        param4[1].e(param0 + param2 - param4[0].pixelWidth, param1, param5);
-        param4[2].e(param0, param1 + param3 - param4[0].pixelHeight, param5);
-        param4[3].e(param0 + param2 - param4[0].pixelWidth, param1 + param3 - param4[0].pixelHeight, param5);
+        param4[1].e(param0 + param2 - param4[0].field_y, param1, param5);
+        param4[2].e(param0, param1 + param3 - param4[0].field_v, param5);
+        param4[3].e(param0 + param2 - param4[0].field_y, param1 + param3 - param4[0].field_v, param5);
         var6 = param1;
-        var7 = param3 - param4[0].pixelHeight;
-        var8 = param2 - param4[0].pixelWidth;
+        var7 = param3 - param4[0].field_v;
+        var8 = param2 - param4[0].field_y;
         for (param1 = 0; param1 < param3; param1++) {
-          if (param1 >= param4[0].pixelHeight) {
+          if (param1 >= param4[0].field_v) {
             if (param1 < var7) {
-              SoftwareRaster.d(param0, var6, param0 + param2 - 1, var6, 0, param5);
+              qn.d(param0, var6, param0 + param2 - 1, var6, 0, param5);
             } else {
-              SoftwareRaster.d(param0 + param4[0].pixelWidth, var6, param0 + var8 - 1, var6, 0, param5);
+              qn.d(param0 + param4[0].field_y, var6, param0 + var8 - 1, var6, 0, param5);
             }
           } else {
-            SoftwareRaster.d(param0 + param4[0].pixelWidth, var6, param0 + var8 - 1, var6, 0, param5);
+            qn.d(param0 + param4[0].field_y, var6, param0 + var8 - 1, var6, 0, param5);
           }
           var6++;
         }
@@ -193,11 +193,11 @@ final class fe {
         for (var8 = 0; var8 < param3; var8++) {
           var9 = (double)param4 * 3.141592653589793 * 2.0 / 100.0;
           var11 = (double)var8 * 3.141592653589793 * 2.0 / (double)param3;
-          SoftwareRaster.a((int)(((double)param0 + (Math.cos(var9) * Math.cos(var11) * (double)param5 - Math.sin(var9) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)param1 + (Math.sin(var9) * Math.cos(var11) * (double)var7 + Math.cos(var9) * Math.sin(var11) * (double)param5)) * 16.0), param6, 15, field_o[param2]);
+          qn.a((int)(((double)param0 + (Math.cos(var9) * Math.cos(var11) * (double)param5 - Math.sin(var9) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)param1 + (Math.sin(var9) * Math.cos(var11) * (double)var7 + Math.cos(var9) * Math.sin(var11) * (double)param5)) * 16.0), param6, 15, field_o[param2]);
           var9Lifetime1 = (double)(param4 + 5) * 3.141592653589793 * 2.0 / 100.0;
-          SoftwareRaster.a((int)(((double)param0 + (Math.cos(var9Lifetime1) * Math.cos(var11) * (double)param5 - Math.sin(var9Lifetime1) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)param1 + (Math.sin(var9Lifetime1) * Math.cos(var11) * (double)var7 + Math.cos(var9Lifetime1) * Math.sin(var11) * (double)param5)) * 16.0), param6, 31, field_o[param2]);
+          qn.a((int)(((double)param0 + (Math.cos(var9Lifetime1) * Math.cos(var11) * (double)param5 - Math.sin(var9Lifetime1) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)param1 + (Math.sin(var9Lifetime1) * Math.cos(var11) * (double)var7 + Math.cos(var9Lifetime1) * Math.sin(var11) * (double)param5)) * 16.0), param6, 31, field_o[param2]);
           var9Lifetime2 = (double)(param4 + 10) * 3.141592653589793 * 2.0 / 100.0;
-          SoftwareRaster.a((int)(((double)param0 + (Math.cos(var9Lifetime2) * Math.cos(var11) * (double)param5 - Math.sin(var9Lifetime2) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)param1 + (Math.sin(var9Lifetime2) * Math.cos(var11) * (double)var7 + Math.cos(var9Lifetime2) * Math.sin(var11) * (double)param5)) * 16.0), param6, 63, field_o[param2]);
+          qn.a((int)(((double)param0 + (Math.cos(var9Lifetime2) * Math.cos(var11) * (double)param5 - Math.sin(var9Lifetime2) * Math.sin(var11) * (double)var7)) * 16.0), (int)(((double)param1 + (Math.sin(var9Lifetime2) * Math.cos(var11) * (double)var7 + Math.cos(var9Lifetime2) * Math.sin(var11) * (double)param5)) * 16.0), param6, 63, field_o[param2]);
         }
     }
 
@@ -207,15 +207,15 @@ final class fe {
           var4 = var4 >> 1;
           param2 -= 26;
           param1 -= 10;
-          fe.a(field_l[0], param1, param2, field_l[2].pixelWidth >> 1, field_l[2].pixelHeight >> 1);
-          fe.a(field_l[2], param1 + var4 - (field_l[2].pixelWidth >> 1), param2, field_l[2].pixelWidth >> 1, field_l[2].pixelHeight >> 1);
-          fe.a(field_l[1], param1 + (field_l[0].pixelWidth >> 1), param2, var4 - field_l[0].pixelWidth, field_l[1].pixelHeight >> 1);
+          fe.a(field_l[0], param1, param2, field_l[2].field_y >> 1, field_l[2].field_v >> 1);
+          fe.a(field_l[2], param1 + var4 - (field_l[2].field_y >> 1), param2, field_l[2].field_y >> 1, field_l[2].field_v >> 1);
+          fe.a(field_l[1], param1 + (field_l[0].field_y >> 1), param2, var4 - field_l[0].field_y, field_l[1].field_v >> 1);
         } else {
           param2 -= 26;
           param1 -= 20;
           fe.a(field_l[0], param1, param2);
-          fe.a(field_l[2], param1 + var4 - field_l[2].pixelWidth, param2);
-          fe.a(field_l[1], param1 + field_l[0].pixelWidth, param2, var4 - (field_l[0].pixelWidth << 1), field_l[1].pixelHeight);
+          fe.a(field_l[2], param1 + var4 - field_l[2].field_y, param2);
+          fe.a(field_l[1], param1 + field_l[0].field_y, param2, var4 - (field_l[0].field_y << 1), field_l[1].field_v);
         }
     }
 
@@ -289,9 +289,9 @@ final class fe {
     final static void a(String param0, int param1, int param2, int[] param3, boolean param4) {
         int var8 = 0;
         fe.a();
-        int[] var5 = SoftwareRaster.pixels;
-        int var6 = SoftwareRaster.width;
-        int var7 = SoftwareRaster.height;
+        int[] var5 = qn.field_d;
+        int var6 = qn.field_l;
+        int var7 = qn.field_g;
         if (field_g != null) {
           if (field_i == null) {
             return;
@@ -302,9 +302,9 @@ final class fe {
             var8++;
           }
           field_g.b();
-          SoftwareRaster.b();
+          qn.b();
           field_i.b(param0, 0, field_i.field_H + 3, 0, -1);
-          SoftwareRaster.a(var5, var6, var7);
+          qn.a(var5, var6, var7);
           fe.c();
           if (param4) {
             fe.a(field_g, param1, param2, var8, param3);
@@ -315,7 +315,7 @@ final class fe {
         }
     }
 
-    final static void a(RgbSprite param0, int param1, int param2, int param3, int param4) {
+    final static void a(wk param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -335,23 +335,23 @@ final class fe {
           if (param4 <= 0) {
             return;
           }
-          var5 = param0.pixelWidth;
-          var6 = param0.pixelHeight;
+          var5 = param0.field_y;
+          var6 = param0.field_v;
           var7 = 0;
           var8 = 0;
-          var9 = param0.canvasWidth;
-          var10 = param0.canvasHeight;
+          var9 = param0.field_A;
+          var10 = param0.field_x;
           var11 = (var9 << 16) / param3;
           var12 = (var10 << 16) / param4;
-          if (param0.offsetX > 0) {
-            var13 = ((param0.offsetX << 16) + var11 - 1) / var11;
+          if (param0.field_w > 0) {
+            var13 = ((param0.field_w << 16) + var11 - 1) / var11;
             param1 = param1 + var13;
-            var7 = var7 + (var13 * var11 - (param0.offsetX << 16));
+            var7 = var7 + (var13 * var11 - (param0.field_w << 16));
           }
-          if (param0.offsetY > 0) {
-            var13Lifetime1 = ((param0.offsetY << 16) + var12 - 1) / var12;
+          if (param0.field_z > 0) {
+            var13Lifetime1 = ((param0.field_z << 16) + var12 - 1) / var12;
             param2 = param2 + var13Lifetime1;
-            var8 = var8 + (var13Lifetime1 * var12 - (param0.offsetY << 16));
+            var8 = var8 + (var13Lifetime1 * var12 - (param0.field_z << 16));
           }
           if (var5 < var9) {
             param3 = ((var5 << 16) - var7 + var11 - 1) / var11;
@@ -359,67 +359,67 @@ final class fe {
           if (var6 < var10) {
             param4 = ((var6 << 16) - var8 + var12 - 1) / var12;
           }
-          var13Lifetime2 = param1 + param2 * SoftwareRaster.width;
-          var14 = SoftwareRaster.width - param3;
-          if (param2 + param4 > SoftwareRaster.clipBottom) {
-            param4 = param4 - (param2 + param4 - SoftwareRaster.clipBottom);
+          var13Lifetime2 = param1 + param2 * qn.field_l;
+          var14 = qn.field_l - param3;
+          if (param2 + param4 > qn.field_f) {
+            param4 = param4 - (param2 + param4 - qn.field_f);
           }
-          if (param2 < SoftwareRaster.clipTop) {
-            var15 = SoftwareRaster.clipTop - param2;
+          if (param2 < qn.field_a) {
+            var15 = qn.field_a - param2;
             param4 = param4 - var15;
-            var13Lifetime2 = var13Lifetime2 + var15 * SoftwareRaster.width;
+            var13Lifetime2 = var13Lifetime2 + var15 * qn.field_l;
             var8 = var8 + var12 * var15;
           }
-          if (param1 + param3 > SoftwareRaster.clipRight) {
-            var15Lifetime1 = param1 + param3 - SoftwareRaster.clipRight;
+          if (param1 + param3 > qn.field_e) {
+            var15Lifetime1 = param1 + param3 - qn.field_e;
             param3 = param3 - var15Lifetime1;
             var14 = var14 + var15Lifetime1;
           }
-          if (param1 < SoftwareRaster.clipLeft) {
-            var15Lifetime2 = SoftwareRaster.clipLeft - param1;
+          if (param1 < qn.field_j) {
+            var15Lifetime2 = qn.field_j - param1;
             param3 = param3 - var15Lifetime2;
             var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          fe.a(0, 0, 0, var7, param0.pixels, SoftwareRaster.pixels, 0, 0, -param4, var8, var13Lifetime2, var14, param3, var11, var12, var5);
+          fe.a(0, 0, 0, var7, param0.field_B, qn.field_d, 0, 0, -param4, var8, var13Lifetime2, var14, param3, var11, var12, var5);
           return;
         }
     }
 
-    final static void a(RgbSprite param0, int param1, int param2, int param3) {
+    final static void a(wk param0, int param1, int param2, int param3) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param1 = param1 + param0.offsetX;
-        param2 = param2 + param0.offsetY;
-        int var4 = param1 + param2 * SoftwareRaster.width;
+        param1 = param1 + param0.field_w;
+        param2 = param2 + param0.field_z;
+        int var4 = param1 + param2 * qn.field_l;
         int var5 = 0;
-        int var6 = param0.pixelHeight;
-        int var7 = param0.pixelWidth;
-        int var8 = SoftwareRaster.width - var7;
+        int var6 = param0.field_v;
+        int var7 = param0.field_y;
+        int var8 = qn.field_l - var7;
         int var9 = 0;
-        if (param2 < SoftwareRaster.clipTop) {
-          var10 = SoftwareRaster.clipTop - param2;
+        if (param2 < qn.field_a) {
+          var10 = qn.field_a - param2;
           var6 = var6 - var10;
-          param2 = SoftwareRaster.clipTop;
+          param2 = qn.field_a;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * SoftwareRaster.width;
+          var4 = var4 + var10 * qn.field_l;
         }
-        if (param2 + var6 > SoftwareRaster.clipBottom) {
-          var6 = var6 - (param2 + var6 - SoftwareRaster.clipBottom);
+        if (param2 + var6 > qn.field_f) {
+          var6 = var6 - (param2 + var6 - qn.field_f);
         }
-        if (param1 < SoftwareRaster.clipLeft) {
-          var10Lifetime1 = SoftwareRaster.clipLeft - param1;
+        if (param1 < qn.field_j) {
+          var10Lifetime1 = qn.field_j - param1;
           var7 = var7 - var10Lifetime1;
-          param1 = SoftwareRaster.clipLeft;
+          param1 = qn.field_j;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param1 + var7 > SoftwareRaster.clipRight) {
-          var10Lifetime2 = param1 + var7 - SoftwareRaster.clipRight;
+        if (param1 + var7 > qn.field_e) {
+          var10Lifetime2 = param1 + var7 - qn.field_e;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -428,7 +428,7 @@ final class fe {
           if (var6 <= 0) {
             return;
           }
-          fe.a(0, SoftwareRaster.pixels, param0.pixels, 0, var5, var4, var7, var6, var8, var9, param3);
+          fe.a(0, qn.field_d, param0.field_B, 0, var5, var4, var7, var6, var8, var9, param3);
           return;
         }
     }
@@ -436,9 +436,9 @@ final class fe {
     final static void a(String param0, int param1, int param2, int param3, boolean param4) {
         int var8 = 0;
         fe.a();
-        int[] var5 = SoftwareRaster.pixels;
-        int var6 = SoftwareRaster.width;
-        int var7 = SoftwareRaster.height;
+        int[] var5 = qn.field_d;
+        int var6 = qn.field_l;
+        int var7 = qn.field_g;
         if (field_g != null) {
           if (field_i == null) {
             return;
@@ -449,9 +449,9 @@ final class fe {
             var8++;
           }
           field_g.b();
-          SoftwareRaster.b();
+          qn.b();
           field_i.b(param0, 0, field_i.field_H + 3, 0, -1);
-          SoftwareRaster.a(var5, var6, var7);
+          qn.a(var5, var6, var7);
           fe.c();
           if (param4) {
             fe.b(field_g, param1, param2, var8, param3);
@@ -467,9 +467,9 @@ final class fe {
         fe.a(param0, param1, param2, param3, param4);
     }
 
-    final static RgbSprite[] a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int[] param5) {
+    final static wk[] a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5) {
         int var14 = 0;
-        RgbSprite[] var6;
+        wk[] var6;
         int var7;
         int var8;
         int var9;
@@ -481,11 +481,11 @@ final class fe {
         int var16;
         int var17;
         int var11Lifetime1;
-        var6 = new RgbSprite[4];
-        var6[0] = new RgbSprite(param2, param4[0].pixelHeight);
-        var6[3] = new RgbSprite(param2, param4[0].pixelHeight);
-        var6[1] = new RgbSprite(param4[0].pixelWidth, param3 - param4[0].pixelHeight * 2);
-        var6[2] = new RgbSprite(param4[0].pixelWidth, param3 - param4[0].pixelHeight * 2);
+        var6 = new wk[4];
+        var6[0] = new wk(param2, param4[0].field_v);
+        var6[3] = new wk(param2, param4[0].field_v);
+        var6[1] = new wk(param4[0].field_y, param3 - param4[0].field_v * 2);
+        var6[2] = new wk(param4[0].field_y, param3 - param4[0].field_v * 2);
         var9 = 0;
         var10 = 0;
         var11 = 0;
@@ -494,14 +494,14 @@ final class fe {
         for (var14 = 0; var14 < param3; var14++) {
           var11Lifetime1 = param5[var13 >> 16];
           var13 = var13 + var12;
-          if (var14 < param4[0].pixelHeight) {
+          if (var14 < param4[0].field_v) {
             var8 = 0;
             for (var15 = 0; var15 < param2; var15++) {
-              if (var15 >= param4[0].pixelWidth) {
-                if (param2 - var15 > param4[0].pixelWidth) {
+              if (var15 >= param4[0].field_y) {
+                if (param2 - var15 > param4[0].field_y) {
                   var7 = 1;
                 } else {
-                  if (param2 - var15 == param4[0].pixelWidth) {
+                  if (param2 - var15 == param4[0].field_y) {
                     var10 = 0;
                   }
                   var7 = 2;
@@ -510,48 +510,48 @@ final class fe {
                 var7 = 0;
               }
               var16 = var7 + var8;
-              var17 = param4[var16].pixels[var10 % param4[0].pixelWidth + var9 % param4[0].pixelHeight * param4[0].pixelWidth];
+              var17 = param4[var16].field_B[var10 % param4[0].field_y + var9 % param4[0].field_v * param4[0].field_y];
               var10++;
               if (var17 != 0) {
                 if ((var17 & 65280) == var17) {
                   var17 = fe.a(var11Lifetime1, var17 >> 8, 0, 0);
                 }
-                var6[0].pixels[var15 + var14 * param2] = var17;
+                var6[0].field_B[var15 + var14 * param2] = var17;
               }
             }
-          } else if (var14 < param3 - param4[0].pixelHeight) {
+          } else if (var14 < param3 - param4[0].field_v) {
             var10 = 0;
-            for (var15 = 0; var15 < param4[0].pixelWidth; var15++) {
+            for (var15 = 0; var15 < param4[0].field_y; var15++) {
               var16 = 3;
-              var17 = param4[var16].pixels[var10 % param4[0].pixelWidth + var9 % param4[0].pixelHeight * param4[0].pixelWidth];
+              var17 = param4[var16].field_B[var10 % param4[0].field_y + var9 % param4[0].field_v * param4[0].field_y];
               if (var17 != 0) {
                 if ((var17 & 65280) == var17) {
                   var17 = fe.a(var11Lifetime1, var17 >> 8, 0, 0);
                 }
-                var6[1].pixels[var15 + (var14 - param4[0].pixelHeight) * param4[0].pixelWidth] = var17;
+                var6[1].field_B[var15 + (var14 - param4[0].field_v) * param4[0].field_y] = var17;
               }
               var16 = 5;
-              var17 = param4[var16].pixels[var10 % param4[0].pixelWidth + var9 % param4[0].pixelHeight * param4[0].pixelWidth];
+              var17 = param4[var16].field_B[var10 % param4[0].field_y + var9 % param4[0].field_v * param4[0].field_y];
               if (var17 != 0) {
                 if ((var17 & 65280) == var17) {
                   var17 = fe.a(var11Lifetime1, var17 >> 8, 0, 0);
                 }
-                var6[2].pixels[var15 + (var14 - param4[0].pixelHeight) * param4[0].pixelWidth] = var17;
+                var6[2].field_B[var15 + (var14 - param4[0].field_v) * param4[0].field_y] = var17;
               }
               var10++;
             }
             var9++;
           } else {
-            if (var14 == param3 - param4[0].pixelHeight) {
+            if (var14 == param3 - param4[0].field_v) {
               var9 = 0;
             }
             var8 = 6;
             for (var15 = 0; var15 < param2; var15++) {
-              if (var15 >= param4[0].pixelWidth) {
-                if (param2 - var15 > param4[0].pixelWidth) {
+              if (var15 >= param4[0].field_y) {
+                if (param2 - var15 > param4[0].field_y) {
                   var7 = 1;
                 } else {
-                  if (param2 - var15 == param4[0].pixelWidth) {
+                  if (param2 - var15 == param4[0].field_y) {
                     var10 = 0;
                   }
                   var7 = 2;
@@ -560,13 +560,13 @@ final class fe {
                 var7 = 0;
               }
               var16 = var7 + var8;
-              var17 = param4[var16].pixels[var10 % param4[0].pixelWidth + var9 % param4[0].pixelHeight * param4[0].pixelWidth];
+              var17 = param4[var16].field_B[var10 % param4[0].field_y + var9 % param4[0].field_v * param4[0].field_y];
               var10++;
               if (var17 != 0) {
                 if ((var17 & 65280) == var17) {
                   var17 = fe.a(var11Lifetime1, var17 >> 8, 0, 0);
                 }
-                var6[3].pixels[var15 + (var14 - param3 + param4[0].pixelHeight) * param2] = var17;
+                var6[3].field_B[var15 + (var14 - param3 + param4[0].field_v) * param2] = var17;
               }
             }
           }
@@ -575,17 +575,17 @@ final class fe {
         return var6;
     }
 
-    final static void a(RgbSprite param0) {
+    final static void a(wk param0) {
         int var1 = 0;
         if (param0 == null) {
           return;
         }
-        if (param0.pixels == null) {
+        if (param0.field_B == null) {
           return;
         }
-        for (var1 = 0; var1 < param0.pixels.length; var1++) {
-          if (param0.pixels[var1] == 1) {
-            param0.pixels[var1] = 0;
+        for (var1 = 0; var1 < param0.field_B.length; var1++) {
+          if (param0.field_B[var1] == 1) {
+            param0.field_B[var1] = 0;
           }
         }
     }
@@ -594,7 +594,7 @@ final class fe {
         fe.a(param0, param1, param2, false);
     }
 
-    final static void a(RgbSprite param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    final static void a(wk param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         Throwable decompiledCaughtException = null;
         int var7 = 0;
         int var8 = 0;
@@ -619,24 +619,24 @@ final class fe {
         int var13Lifetime1;
         int var14Lifetime1;
         if (field_e == null ||
-          field_e.length != SoftwareRaster.width) {
-          field_e = new int[SoftwareRaster.width];
+          field_e.length != qn.field_l) {
+          field_e = new int[qn.field_l];
         }
         var7 = param2 & 15;
         var8 = param1 & 15;
         param2 = param2 >> 4;
         param1 = param1 >> 4;
-        var15 = param3 + param4 * SoftwareRaster.width;
-        var16 = SoftwareRaster.width - param5;
-        var17 = param2 * param0.pixelWidth + param1;
-        var18 = param0.pixelWidth - param5;
+        var15 = param3 + param4 * qn.field_l;
+        var16 = qn.field_l - param5;
+        var17 = param2 * param0.field_y + param1;
+        var18 = param0.field_y - param5;
         try {
-          var19_int = -SoftwareRaster.height;
+          var19_int = -qn.field_g;
           while (var19_int < 0) {
             var20 = param6[-1 - var19_int];
             var21 = param5 - 1;
             while (var21 >= 0) {
-              var9 = param0.pixels[var17];
+              var9 = param0.field_B[var17];
               var10 = var9 & 16711935;
               var11 = var9 & 65280;
               var13 = var10 * var8 & 267390960;
@@ -649,7 +649,7 @@ final class fe {
               var13Lifetime1 = var10Lifetime1 * var7 & -16711936;
               var14Lifetime1 = var9Lifetime1 * var7 & 16711680;
               var12Lifetime1 = var13Lifetime1 | var14Lifetime1;
-              SoftwareRaster.pixels[var15] = var12Lifetime1 + field_e[var21] >> 8;
+              qn.field_d[var15] = var12Lifetime1 + field_e[var21] >> 8;
               field_e[var21] = (var11Lifetime1 << 4) - var12Lifetime1;
               var21--;
               var15++;
@@ -695,31 +695,31 @@ final class fe {
         var7 = var5 - var6;
         var8 = param0 - param2 - 1;
         var9 = param0 + param2 + 1;
-        if (var8 < SoftwareRaster.clipLeft) {
-          var8 = SoftwareRaster.clipLeft;
+        if (var8 < qn.field_j) {
+          var8 = qn.field_j;
         }
-        if (var8 > SoftwareRaster.clipRight) {
+        if (var8 > qn.field_e) {
           return;
         }
-        if (var9 < SoftwareRaster.clipLeft) {
+        if (var9 < qn.field_j) {
           return;
         }
-        if (var9 > SoftwareRaster.clipRight) {
-          var9 = SoftwareRaster.clipRight;
+        if (var9 > qn.field_e) {
+          var9 = qn.field_e;
         }
         var10 = param1 - param2 - 1;
         var11 = param1 + param2 + 1;
-        if (var10 < SoftwareRaster.clipTop) {
-          var10 = SoftwareRaster.clipTop;
+        if (var10 < qn.field_a) {
+          var10 = qn.field_a;
         }
-        if (var10 > SoftwareRaster.clipBottom) {
+        if (var10 > qn.field_f) {
           return;
         }
-        if (var11 < SoftwareRaster.clipTop) {
+        if (var11 < qn.field_a) {
           return;
         }
-        if (var11 > SoftwareRaster.clipBottom) {
-          var11 = SoftwareRaster.clipBottom;
+        if (var11 > qn.field_f) {
+          var11 = qn.field_f;
         }
         if (field_m > 0) {
           var12 = field_f - field_m;
@@ -751,8 +751,8 @@ final class fe {
             var11 = var15;
           }
         }
-        var12Lifetime1 = var8 + var10 * SoftwareRaster.width;
-        var13Lifetime1 = SoftwareRaster.width + var8 - var9;
+        var12Lifetime1 = var8 + var10 * qn.field_l;
+        var13Lifetime1 = qn.field_l + var8 - var9;
         for (var14Lifetime1 = var10; var14Lifetime1 < var11; var14Lifetime1++) {
           var15Lifetime1 = var8;
           while (var15Lifetime1 < var9) {
@@ -766,9 +766,9 @@ final class fe {
               if (var18 < var5) {
                 if (var18 >= var6) {
                   var18 = 256 - (var18 - var6 << 8) / var7;
-                  SoftwareRaster.pixels[var12Lifetime1] = fe.a(SoftwareRaster.pixels[var12Lifetime1], param3, var18);
+                  qn.field_d[var12Lifetime1] = fe.a(qn.field_d[var12Lifetime1], param3, var18);
                 } else {
-                  SoftwareRaster.pixels[var12Lifetime1] = param3;
+                  qn.field_d[var12Lifetime1] = param3;
                   if (var16 > 0) {
                     var19 = 0;
                     while (true) {
@@ -782,7 +782,7 @@ final class fe {
                         decompiledFrameCompleted0 = false;
                         break;
                       }
-                      SoftwareRaster.pixels[var12Lifetime1] = param3;
+                      qn.field_d[var12Lifetime1] = param3;
                       var12Lifetime1++;
                       var15Lifetime1++;
                       if (!fe.c(var15Lifetime1, var14Lifetime1)) {
@@ -842,22 +842,22 @@ final class fe {
         field_e = null;
     }
 
-    final static void c(RgbSprite param0, int param1, int param2, int param3, int param4) {
+    final static void c(wk param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var5;
         param2 -= 3;
-        param1 = param1 + param0.offsetX;
-        param2 = param2 + param0.offsetY;
+        param1 = param1 + param0.field_w;
+        param2 = param2 + param0.field_z;
         var5 = 0;
-        for (var6 = 0; var6 < param0.pixelHeight; var6++) {
+        for (var6 = 0; var6 < param0.field_v; var6++) {
           for (var7 = 0; var7 < param3; var7++) {
-            if (param0.pixels[var5] > 0) {
-              fe.b(param1 + var7, param2 + var6, param4, param0.pixels[var5] & 255);
+            if (param0.field_B[var5] > 0) {
+              fe.b(param1 + var7, param2 + var6, param4, param0.field_B[var5] & 255);
             }
             var5++;
           }
-          var5 = var5 + (param0.pixelWidth - param3);
+          var5 = var5 + (param0.field_y - param3);
         }
     }
 
@@ -915,23 +915,23 @@ final class fe {
     }
 
     private final static void a() {
-        field_h = SoftwareRaster.clipLeft;
-        field_a = SoftwareRaster.clipTop;
-        field_j = SoftwareRaster.clipRight;
-        field_c = SoftwareRaster.clipBottom;
+        field_h = qn.field_j;
+        field_a = qn.field_a;
+        field_j = qn.field_e;
+        field_c = qn.field_f;
     }
 
     private final static void b(int param0, int param1, int param2, int param3) {
-        if (param0 < SoftwareRaster.clipLeft) {
+        if (param0 < qn.field_j) {
           return;
         }
-        if (param0 >= SoftwareRaster.clipRight) {
+        if (param0 >= qn.field_e) {
           return;
         }
-        if (param1 < SoftwareRaster.clipTop) {
+        if (param1 < qn.field_a) {
           return;
         }
-        if (param1 >= SoftwareRaster.clipBottom) {
+        if (param1 >= qn.field_f) {
           return;
         }
         int var4 = param2 & 65280;
@@ -940,46 +940,46 @@ final class fe {
         param2 = param2 * param3;
         var4 = var4 & 16711680;
         param2 = param2 & -16711936;
-        int var5 = SoftwareRaster.width * param1 + param0;
-        int var6 = SoftwareRaster.pixels[var5];
+        int var5 = qn.field_l * param1 + param0;
+        int var6 = qn.field_d[var5];
         var4 = var4 + ((var6 & 65280) * (256 - param3) & 16711680);
         param2 = param2 + ((var6 & 16711935) * (256 - param3) & -16711936);
-        SoftwareRaster.pixels[var5] = (param2 | var4) >>> 8;
+        qn.field_d[var5] = (param2 | var4) >>> 8;
     }
 
-    final static void a(RgbSprite param0, int param1, int param2) {
+    final static void a(wk param0, int param1, int param2) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param1 = param1 + param0.offsetX;
-        param2 = param2 + param0.offsetY;
-        int var3 = param1 + param2 * SoftwareRaster.width;
+        param1 = param1 + param0.field_w;
+        param2 = param2 + param0.field_z;
+        int var3 = param1 + param2 * qn.field_l;
         int var4 = 0;
-        int var5 = param0.pixelHeight;
-        int var6 = param0.pixelWidth;
-        int var7 = SoftwareRaster.width - var6;
+        int var5 = param0.field_v;
+        int var6 = param0.field_y;
+        int var7 = qn.field_l - var6;
         int var8 = 0;
-        if (param2 < SoftwareRaster.clipTop) {
-          var9 = SoftwareRaster.clipTop - param2;
+        if (param2 < qn.field_a) {
+          var9 = qn.field_a - param2;
           var5 = var5 - var9;
-          param2 = SoftwareRaster.clipTop;
+          param2 = qn.field_a;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * SoftwareRaster.width;
+          var3 = var3 + var9 * qn.field_l;
         }
-        if (param2 + var5 > SoftwareRaster.clipBottom) {
-          var5 = var5 - (param2 + var5 - SoftwareRaster.clipBottom);
+        if (param2 + var5 > qn.field_f) {
+          var5 = var5 - (param2 + var5 - qn.field_f);
         }
-        if (param1 < SoftwareRaster.clipLeft) {
-          var9Lifetime1 = SoftwareRaster.clipLeft - param1;
+        if (param1 < qn.field_j) {
+          var9Lifetime1 = qn.field_j - param1;
           var6 = var6 - var9Lifetime1;
-          param1 = SoftwareRaster.clipLeft;
+          param1 = qn.field_j;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param1 + var6 > SoftwareRaster.clipRight) {
-          var9Lifetime2 = param1 + var6 - SoftwareRaster.clipRight;
+        if (param1 + var6 > qn.field_e) {
+          var9Lifetime2 = param1 + var6 - qn.field_e;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -988,12 +988,12 @@ final class fe {
           if (var5 <= 0) {
             return;
           }
-          fe.a(0, SoftwareRaster.pixels, param0.pixels, 0, var4, var3, var6, var5, var7, var8);
+          fe.a(0, qn.field_d, param0.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void a(RgbSprite param0, int param1, int param2, int param3, int[] param4) {
+    private final static void a(wk param0, int param1, int param2, int param3, int[] param4) {
         int var7 = 0;
         int var9 = 0;
         int incrementValue$20 = 0;
@@ -1005,46 +1005,46 @@ final class fe {
         int var8;
         int var10;
         param2 -= 3;
-        if (param3 > param0.pixelWidth) {
-          param3 = param0.pixelWidth;
+        if (param3 > param0.field_y) {
+          param3 = param0.field_y;
         }
         var5 = 0;
-        var6 = param0.pixelWidth;
-        for (var7 = 0; var7 < param0.pixelHeight >> 1; var7++) {
-          var8 = param4[var7 * param4.length / (param0.pixelHeight >> 1)];
+        var6 = param0.field_y;
+        for (var7 = 0; var7 < param0.field_v >> 1; var7++) {
+          var8 = param4[var7 * param4.length / (param0.field_v >> 1)];
           for (var9 = 0; var9 < param3 >> 1; var9++) {
             incrementValue$20 = var5;
             var5++;
-            var10 = param0.pixels[incrementValue$20] & 255;
+            var10 = param0.field_B[incrementValue$20] & 255;
             incrementValue$21 = var5;
             var5++;
-            var10 = var10 + (param0.pixels[incrementValue$21] & 255);
+            var10 = var10 + (param0.field_B[incrementValue$21] & 255);
             incrementValue$22 = var6;
             var6++;
-            var10 = var10 + (param0.pixels[incrementValue$22] & 255);
+            var10 = var10 + (param0.field_B[incrementValue$22] & 255);
             incrementValue$23 = var6;
             var6++;
-            var10 = var10 + (param0.pixels[incrementValue$23] & 255);
+            var10 = var10 + (param0.field_B[incrementValue$23] & 255);
             var10 = var10 >> 2;
             if (var10 > 0) {
               fe.b(param1 + var9, param2 + var7, var8, var10);
             }
           }
-          var5 = var5 + (param0.pixelWidth - param3);
-          var5 = var5 + param0.pixelWidth;
-          var6 = var6 + (param0.pixelWidth - param3);
-          var6 = var6 + param0.pixelWidth;
+          var5 = var5 + (param0.field_y - param3);
+          var5 = var5 + param0.field_y;
+          var6 = var6 + (param0.field_y - param3);
+          var6 = var6 + param0.field_y;
         }
     }
 
     private final static void c() {
-        SoftwareRaster.clipLeft = field_h;
-        SoftwareRaster.clipTop = field_a;
-        SoftwareRaster.clipRight = field_j;
-        SoftwareRaster.clipBottom = field_c;
+        qn.field_j = field_h;
+        qn.field_a = field_a;
+        qn.field_e = field_j;
+        qn.field_f = field_c;
     }
 
-    private final static void b(RgbSprite param0, int param1, int param2, int param3, int param4) {
+    private final static void b(wk param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$20 = 0;
@@ -1055,34 +1055,34 @@ final class fe {
         int var6;
         int var9;
         param2 -= 3;
-        if (param3 > param0.pixelWidth) {
-          param3 = param0.pixelWidth;
+        if (param3 > param0.field_y) {
+          param3 = param0.field_y;
         }
         var5 = 0;
-        var6 = param0.pixelWidth;
-        for (var7 = 0; var7 < param0.pixelHeight >> 1; var7++) {
+        var6 = param0.field_y;
+        for (var7 = 0; var7 < param0.field_v >> 1; var7++) {
           for (var8 = 0; var8 < param3 >> 1; var8++) {
             incrementValue$20 = var5;
             var5++;
-            var9 = param0.pixels[incrementValue$20] & 255;
+            var9 = param0.field_B[incrementValue$20] & 255;
             incrementValue$21 = var5;
             var5++;
-            var9 = var9 + (param0.pixels[incrementValue$21] & 255);
+            var9 = var9 + (param0.field_B[incrementValue$21] & 255);
             incrementValue$22 = var6;
             var6++;
-            var9 = var9 + (param0.pixels[incrementValue$22] & 255);
+            var9 = var9 + (param0.field_B[incrementValue$22] & 255);
             incrementValue$23 = var6;
             var6++;
-            var9 = var9 + (param0.pixels[incrementValue$23] & 255);
+            var9 = var9 + (param0.field_B[incrementValue$23] & 255);
             var9 = var9 >> 2;
             if (var9 > 0) {
               fe.b(param1 + var8, param2 + var7, param4, var9);
             }
           }
-          var5 = var5 + (param0.pixelWidth - param3);
-          var5 = var5 + param0.pixelWidth;
-          var6 = var6 + (param0.pixelWidth - param3);
-          var6 = var6 + param0.pixelWidth;
+          var5 = var5 + (param0.field_y - param3);
+          var5 = var5 + param0.field_y;
+          var6 = var6 + (param0.field_y - param3);
+          var6 = var6 + param0.field_y;
         }
     }
 
@@ -1113,7 +1113,7 @@ final class fe {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int[] param5, int param6, int param7, boolean param8) {
+    final static void a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5, int param6, int param7, boolean param8) {
         int var16 = 0;
         int var9;
         int var10;
@@ -1130,12 +1130,12 @@ final class fe {
         int var22;
         int var10Lifetime1;
         if (param7 > 0) {
-          SoftwareRaster.b(param0, param1, param2, param3, param6, param7);
+          qn.b(param0, param1, param2, param3, param6, param7);
         }
-        if (param0 >= SoftwareRaster.clipLeft &&
-          param1 >= SoftwareRaster.clipTop &&
-          param0 + param2 < SoftwareRaster.clipRight &&
-          param1 + param3 < SoftwareRaster.clipBottom) {
+        if (param0 >= qn.field_j &&
+          param1 >= qn.field_a &&
+          param0 + param2 < qn.field_e &&
+          param1 + param3 < qn.field_f) {
           fe.a(param0, param1, param2, param3, param4, param5, param8);
           return;
         }
@@ -1143,8 +1143,8 @@ final class fe {
         var10 = 0;
         var11 = (param5.length << 16) / param3;
         var12 = 0;
-        var13 = param4[0].pixelWidth;
-        var14 = param4[0].pixelHeight;
+        var13 = param4[0].field_y;
+        var14 = param4[0].field_v;
         for (var16 = 0; var16 < param3; var16++) {
           if (var16 >= var14) {
             if (param3 - var16 > var14) {
@@ -1167,12 +1167,12 @@ final class fe {
             if (var20 != 1) {
               var17 = -var13;
               while (var17 < 0) {
-                var22 = param4[var15].pixels[var21];
+                var22 = param4[var15].field_B[var21];
                 if (var22 != 0) {
                   if ((var22 & -65281) == 0) {
                     var22 = fe.a(var10Lifetime1, var22 >> 8, 0, 0);
                   }
-                  SoftwareRaster.a(var19, param1 + var16, var22);
+                  qn.a(var19, param1 + var16, var22);
                 }
                 var17++;
                 var21++;
@@ -1184,14 +1184,14 @@ final class fe {
                 !param8) {
                 var19 = var19 + var18;
               } else {
-                var22 = param4[var15].pixels[var21];
+                var22 = param4[var15].field_B[var21];
                 if (var22 != 0) {
                   var17 = -var18;
                   while (var17 < 0) {
                     if ((var22 & -65281) == 0) {
                       var22 = fe.a(var10Lifetime1, var22 >> 8, 0, 0);
                     }
-                    SoftwareRaster.a(var19, param1 + var16, var22);
+                    qn.a(var19, param1 + var16, var22);
                     var17++;
                     var19++;
                   }
@@ -1219,10 +1219,10 @@ final class fe {
         if ((var2 & 1) == 1) {
           var2++;
         }
-        field_g = new RgbSprite(var1, var2);
+        field_g = new wk(var1, var2);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int[] param5, int param6, int param7, String param8, boolean param9, int[] param10) {
+    final static void a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5, int param6, int param7, String param8, boolean param9, int[] param10) {
         fe.b(param0, param1, param2, param3, param4, param5, param6, param7);
         int var11 = param0 + param2 / 2;
         int var12 = param1 + field_i.field_v / (param9 ? 2 : 1) - 4;
@@ -1256,7 +1256,7 @@ final class fe {
         return param0;
     }
 
-    final static void b(int param0, int param1, int param2, int param3, RgbSprite[] param4, int[] param5, int param6, int param7) {
+    final static void b(int param0, int param1, int param2, int param3, wk[] param4, int[] param5, int param6, int param7) {
         fe.a(param0, param1, param2, param3, param4, param5, param6, param7, false);
     }
 
@@ -1294,25 +1294,25 @@ final class fe {
         }
     }
 
-    private final static void b(RgbSprite param0, int param1, int param2, int param3, int[] param4) {
+    private final static void b(wk param0, int param1, int param2, int param3, int[] param4) {
         int var6 = 0;
         int var8 = 0;
         int var5;
         int var7;
         param2 -= 3;
         var5 = 0;
-        if (param3 > param0.pixelWidth) {
-          param3 = param0.pixelWidth;
+        if (param3 > param0.field_y) {
+          param3 = param0.field_y;
         }
-        for (var6 = 0; var6 < param0.pixelHeight; var6++) {
-          var7 = param4[var6 * param4.length / param0.pixelHeight];
+        for (var6 = 0; var6 < param0.field_v; var6++) {
+          var7 = param4[var6 * param4.length / param0.field_v];
           for (var8 = 0; var8 < param3; var8++) {
-            if (param0.pixels[var5] > 0) {
-              fe.b(param1 + var8, param2 + var6, var7, param0.pixels[var5] & 255);
+            if (param0.field_B[var5] > 0) {
+              fe.b(param1 + var8, param2 + var6, var7, param0.field_B[var5] & 255);
             }
             var5++;
           }
-          var5 = var5 + (param0.pixelWidth - param3);
+          var5 = var5 + (param0.field_y - param3);
         }
     }
 

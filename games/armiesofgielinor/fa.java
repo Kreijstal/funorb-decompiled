@@ -8,7 +8,7 @@ final class fa implements Runnable {
     private java.net.URL field_b;
     private wo field_l;
     private wo field_a;
-    private PacketBuffer field_o;
+    private vh field_o;
     private int field_n;
     static int[] field_k;
     static String field_c;
@@ -111,7 +111,7 @@ final class fa implements Runnable {
             var3.write(nr.a(var5, false));
             this.field_m = new DataInputStream(var4.getInputStream());
           }
-          this.field_o.position = 0;
+          this.field_o.field_q = 0;
         } catch (java.io.IOException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (IOException) (Object) decompiledCaughtException;
@@ -160,18 +160,18 @@ final class fa implements Runnable {
           Throwable var3 = null;
           int var4 = 0;
           Throwable decompiledCaughtException = null;
-          var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+          var4 = ArmiesOfGielinor.field_M ? 1 : 0;
           try {
-            while (this.field_o.payload.length > this.field_o.position) {
-              var1_int = this.field_m.read(this.field_o.payload, this.field_o.position, -this.field_o.position + this.field_o.payload.length);
+            while (this.field_o.field_o.length > this.field_o.field_q) {
+              var1_int = this.field_m.read(this.field_o.field_o, this.field_o.field_q, -this.field_o.field_q + this.field_o.field_o.length);
               if (0 <= var1_int) {
-                this.field_o.position = this.field_o.position + var1_int;
+                this.field_o.field_q = this.field_o.field_q + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_o.position == this.field_o.payload.length) {
-              throw fa.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_o.payload.length + " " + this.field_b));
+            if (this.field_o.field_q == this.field_o.field_o.length) {
+              throw fa.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_o.field_o.length + " " + this.field_b));
             }
             var1 = this;
             synchronized (var1) {
@@ -196,7 +196,7 @@ final class fa implements Runnable {
         }
     }
 
-    final PacketBuffer a(int param0) {
+    final vh a(int param0) {
         if (param0 != this.field_n) {
           return null;
         }
@@ -219,9 +219,9 @@ final class fa implements Runnable {
         try {
           this.field_h = param0;
           this.field_b = param1;
-          this.field_o = new PacketBuffer(param2);
+          this.field_o = new vh(param2);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

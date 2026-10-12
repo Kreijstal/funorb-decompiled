@@ -5,53 +5,53 @@ final class ud extends sf implements he {
     static String field_Y;
     static String field_Z;
     static String field_W;
-    static RgbSprite[] field_X;
+    static wk[] field_X;
     static String field_ab;
     private fw field_bb;
 
     final static void b(int param0, boolean param1, int param2, int param3) {
         if (param1) {
-          field_X = (RgbSprite[]) null;
+          field_X = (wk[]) null;
           if (param2 != 0) {
             if (param2 == 1) {
               if (va.field_D == param0) {
                 if (2 == param2 &&
                   cd.field_c != param0) {
                   cd.field_c = param0;
-                  MoveEvent.field_J = true;
-                  SocketResourceClient.a(896, param3);
+                  kr.field_J = true;
+                  ae.a(896, param3);
                 }
                 return;
               }
               va.field_D = param0;
-              MoveEvent.field_J = true;
-              SocketResourceClient.a(896, param3);
+              kr.field_J = true;
+              ae.a(896, param3);
             }
           } else {
             if (param0 != ol.field_B) {
               ol.field_B = param0;
-              MoveEvent.field_J = true;
-              SocketResourceClient.a(896, param3);
+              kr.field_J = true;
+              ae.a(896, param3);
             }
             if (param2 == 1 &&
               va.field_D != param0) {
               va.field_D = param0;
-              MoveEvent.field_J = true;
-              SocketResourceClient.a(896, param3);
+              kr.field_J = true;
+              ae.a(896, param3);
             }
           }
         } else {
           if (param2 == 0 &&
             param0 != ol.field_B) {
             ol.field_B = param0;
-            MoveEvent.field_J = true;
-            SocketResourceClient.a(896, param3);
+            kr.field_J = true;
+            ae.a(896, param3);
           }
           if (param2 == 1 &&
             va.field_D != param0) {
             va.field_D = param0;
-            MoveEvent.field_J = true;
-            SocketResourceClient.a(896, param3);
+            kr.field_J = true;
+            ae.a(896, param3);
           }
         }
         if (2 != param2) {
@@ -61,8 +61,8 @@ final class ud extends sf implements he {
           return;
         }
         cd.field_c = param0;
-        MoveEvent.field_J = true;
-        SocketResourceClient.a(896, param3);
+        kr.field_J = true;
+        ae.a(896, param3);
     }
 
     private final fw a(String param0, qo param1, int param2) {
@@ -79,11 +79,11 @@ final class ud extends sf implements he {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new fw(param0, param1);
-          var4.painter = (WidgetPainter) ((Object) new nu());
-          var5 = this.height - 6;
-          this.height = this.height + 38;
-          var4.setBounds(15, -16 + (-14 + this.width), var5, 8192, 30);
-          this.a((byte) 10, (Widget) (var4));
+          var4.field_k = (kh) ((Object) new nu());
+          var5 = this.field_w - 6;
+          this.field_w = this.field_w + 38;
+          var4.a(15, -16 + (-14 + this.field_l), var5, 8192, 30);
+          this.a((byte) 10, (kb) (var4));
           this.e(0);
           var6 = -126 / ((-6 - param2) / 40);
           stackIn_1_0 = var4;
@@ -104,14 +104,14 @@ final class ud extends sf implements he {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
     ud(gk param0, jl param1) {
         super(param0, 200, 150);
         Object var3 = null;
-        Widget var4 = null;
+        kb var4 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -120,29 +120,29 @@ final class ud extends sf implements he {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = null;
-          if (param1 != PlayerProfile.field_h) {
+          if (param1 != hm.field_h) {
             if (mp.field_Mb == param1) {
-              this.height = this.height + 10;
-              var3 = MoveAttackRequest.field_y;
-              if (PaletteRegionMap.b(-108)) {
-                this.height = this.height + 20;
+              this.field_w = this.field_w + 10;
+              var3 = am.field_y;
+              if (pr.b(-108)) {
+                this.field_w = this.field_w + 20;
                 var3 = field_W;
               }
             } else {
               if (param1 == tn.field_cb) {
-                this.height = this.height + 30;
+                this.field_w = this.field_w + 30;
                 var3 = hb.field_a;
               }
             }
           } else {
             var3 = tl.field_a;
           }
-          var4 = new Widget((String) (var3), (qo) null);
-          var4.x = 0;
-          var4.y = 50;
-          var4.width = this.width;
-          var4.height = 80;
-          var4.painter = (WidgetPainter) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4 = new kb((String) (var3), (qo) null);
+          var4.field_B = 0;
+          var4.field_p = 50;
+          var4.field_l = this.field_l;
+          var4.field_w = 80;
+          var4.field_k = (kh) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, var4);
           this.field_bb = this.a(pd.field_f, (qo) (this), 93);
           return;
@@ -162,7 +162,7 @@ final class ud extends sf implements he {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ final class ud extends sf implements he {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

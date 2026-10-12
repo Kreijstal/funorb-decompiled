@@ -9,7 +9,7 @@ final class pi extends fw {
     static int[][] field_M;
     static String field_P;
     static je field_N;
-    static RgbSprite field_T;
+    static wk field_T;
     static String field_O;
 
     final int a(int param0, byte param1) {
@@ -32,7 +32,7 @@ final class pi extends fw {
         return this.field_Q.a(param0 ^ 85);
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -45,7 +45,7 @@ final class pi extends fw {
         int var11 = 0;
         int var13 = 0;
         int var14 = 0;
-        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param3 <= 103) {
             field_N = (je) null;
@@ -54,7 +54,7 @@ final class pi extends fw {
             return false;
           }
           var8_int = -param1 + (param0 - this.field_R);
-          var9 = -(this.field_R * 2) + this.width;
+          var9 = -(this.field_R * 2) + this.field_l;
           if (var8_int > var9) {
             var8_int = var9;
           }
@@ -93,7 +93,7 @@ final class pi extends fw {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -101,8 +101,8 @@ final class pi extends fw {
         if (param0 == -1) {
           return this.field_L;
         }
-        Widget var3 = (Widget) null;
-        this.a(104, -75, 118, -4, (Widget) null, 10, 30);
+        kb var3 = (kb) null;
+        this.a(104, -75, 118, -4, (kb) null, 10, 30);
         return this.field_L;
     }
 

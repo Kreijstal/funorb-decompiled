@@ -3,7 +3,7 @@
  */
 final class gl {
     private String field_a;
-    static BitmapFont field_e;
+    static ka field_e;
     private boolean field_d;
     static int field_c;
     static boolean field_b;
@@ -65,7 +65,7 @@ final class gl {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

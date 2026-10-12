@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aj extends IntrusiveNode {
+final class aj extends tc {
     int field_m;
     static String field_p;
     int field_q;
@@ -85,7 +85,7 @@ final class aj extends IntrusiveNode {
           param0[29] = 1.0f;
           param0[21] = 80.0f;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "aj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "aj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

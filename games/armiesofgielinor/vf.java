@@ -6,7 +6,7 @@ import java.util.*;
 abstract class vf {
     private short[] field_g;
     static String field_h;
-    static RgbSprite[] field_j;
+    static wk[] field_j;
     private int field_d;
     static String field_e;
     private int field_a;
@@ -24,11 +24,11 @@ abstract class vf {
         if (param0 != 0) {
           field_f = -108;
         }
-        pg.field_f = DirectByteStorage.field_h;
+        pg.field_f = cj.field_h;
     }
 
     private final void b(int param0) {
-        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         this.field_g = new short[this.field_b];
         int var2 = 0;
         int var3 = -49 / ((-69 - param0) / 56);
@@ -138,10 +138,10 @@ abstract class vf {
         int var16Lifetime1;
         int var18Lifetime1;
         int var16Lifetime2;
-        var26 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var26 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param1) {
-            stackIn_12_0 = (SpellCastAction.field_s) ? 0 : 1;
+            stackIn_12_0 = (ua.field_s) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
             if (vu.b(false)) {
@@ -158,16 +158,16 @@ abstract class vf {
             decompiledFrameRemainder1 = !(lm.field_e.length < 2);
             if (decompiledFrameRemainder1) {
               if (param1) {
-                stackIn_22_0 = (-1 != ResourceProtocolClient.field_c) ? 1 : 0;
+                stackIn_22_0 = (-1 != bp.field_c) ? 1 : 0;
               } else {
                 stackIn_22_0 = 0;
               }
               var6 = stackIn_22_0;
               decompiledFrameRemainder0 = (var6 != 0);
               if (decompiledFrameRemainder0) {
-                var7 = ResourceProtocolClient.field_c;
-                for (var8_int = 0; var8_int < CoatOfArms.field_d.length; var8_int++) {
-                  CoatOfArms.field_d[var8_int] = (byte) 0;
+                var7 = bp.field_c;
+                for (var8_int = 0; var8_int < ln.field_d.length; var8_int++) {
+                  ln.field_d[var8_int] = (byte) 0;
                 }
               }
             }
@@ -194,35 +194,35 @@ abstract class vf {
               if (!vu.b(false)) {
                 ad.field_I = fo.a(4800, op.field_a, new String[]{vu.field_M.field_rc});
               } else {
-                ad.field_I = ActionSpell.field_f;
+                ad.field_I = ra.field_f;
               }
             }
             decompiledFrameRemainder1 = !(lm.field_e.length < 2);
             if (decompiledFrameRemainder1) {
               if (param1) {
-                stackIn_55_0 = (-1 != ResourceProtocolClient.field_c) ? 1 : 0;
+                stackIn_55_0 = (-1 != bp.field_c) ? 1 : 0;
               } else {
                 stackIn_55_0 = 0;
               }
               var6 = stackIn_55_0;
               decompiledFrameRemainder0 = (var6 != 0);
               if (decompiledFrameRemainder0) {
-                var7 = ResourceProtocolClient.field_c;
-                for (var8_int = 0; var8_int < CoatOfArms.field_d.length; var8_int++) {
-                  CoatOfArms.field_d[var8_int] = (byte) 0;
+                var7 = bp.field_c;
+                for (var8_int = 0; var8_int < ln.field_d.length; var8_int++) {
+                  ln.field_d[var8_int] = (byte) 0;
                 }
               }
             }
           }
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            CoatOfArms.field_d[var7 / 8] = (byte)oe.c((int) CoatOfArms.field_d[var7 / 8], 1 << var7 % 8);
+            ln.field_d[var7 / 8] = (byte)oe.c((int) ln.field_d[var7 / 8], 1 << var7 % 8);
           }
           if (decompiledFrameRemainder1) {
             stackIn_64_0 = (param1) ? -1 : 0;
             for (var7 = stackIn_64_0; var7 < lm.field_e.length; var7++) {
               if (var6 != 0) {
-                stackIn_72_0 = (ResourceProtocolClient.field_c != var7) ? 1 : 0;
+                stackIn_72_0 = (bp.field_c != var7) ? 1 : 0;
               } else {
                 stackIn_72_0 = 0;
               }
@@ -238,11 +238,11 @@ abstract class vf {
                 } else {
                   if (var6 == 0) {
                     if (var7 == -1) {
-                      for (var9 = 0; var9 < CoatOfArms.field_d.length; var9++) {
-                        CoatOfArms.field_d[var9] = (byte) 0;
+                      for (var9 = 0; var9 < ln.field_d.length; var9++) {
+                        ln.field_d[var9] = (byte) 0;
                       }
                     } else {
-                      CoatOfArms.field_d[var7 / 8] = (byte)GrowthEvent.b((int) CoatOfArms.field_d[var7 / 8], 1 << rn.a(var7, 7));
+                      ln.field_d[var7 / 8] = (byte)kf.b((int) ln.field_d[var7 / 8], 1 << rn.a(var7, 7));
                     }
                   }
                 }
@@ -259,12 +259,12 @@ abstract class vf {
                     dupTemp$0 = pu.field_k[1][var7 + 1];
                     stackIn_96_0 = dupTemp$0;
                     stackIn_96_1 = dupTemp$0.field_rb;
-                    stackIn_97_2 = (0 == (CoatOfArms.field_d[var9 / 8] & 1 << (7 & var9)));
+                    stackIn_97_2 = (0 == (ln.field_d[var9 / 8] & 1 << (7 & var9)));
                     stackIn_96_0.field_rb = stackIn_96_1 & stackIn_97_2;
                   }
                 } else {
                   stackIn_90_0 = pu.field_k[1][var7 + 1];
-                  stackIn_91_1 = ((CoatOfArms.field_d[var7 / 8] & 1 << (var7 & 7)) != 0);
+                  stackIn_91_1 = ((ln.field_d[var7 / 8] & 1 << (var7 & 7)) != 0);
                   stackIn_90_0.field_rb = stackIn_91_1;
                 }
               }
@@ -280,9 +280,9 @@ abstract class vf {
               var28.field_yb != 0) {
               if (param1) {
                 if (var6Lifetime1 == 0) {
-                  AiPlanningStrategy.field_b = 0;
+                  sm.field_b = 0;
                 } else {
-                  AiPlanningStrategy.field_b = AiPlanningStrategy.field_b ^ var6Lifetime1;
+                  sm.field_b = sm.field_b ^ var6Lifetime1;
                 }
               } else {
                 if (var6Lifetime1 != param3.field_ac) {
@@ -301,27 +301,27 @@ abstract class vf {
             } else {
               if (var6Lifetime1 != 0) {
                 stackIn_132_0 = var28;
-                stackIn_133_1 = ((var6Lifetime1 & AiPlanningStrategy.field_b) != 0);
+                stackIn_133_1 = ((var6Lifetime1 & sm.field_b) != 0);
                 stackIn_132_0.field_rb = stackIn_133_1;
               } else {
                 stackIn_128_0 = var28;
-                stackIn_129_1 = (AiPlanningStrategy.field_b == 0);
+                stackIn_129_1 = (sm.field_b == 0);
                 stackIn_128_0.field_rb = stackIn_129_1;
               }
             }
           }
           if (param1 &&
-            BoundedFile.field_h > 1) {
-            for (var6Lifetime2 = 0; 1 + BoundedFile.field_h > var6Lifetime2; var6Lifetime2++) {
+            ei.field_h > 1) {
+            for (var6Lifetime2 = 0; 1 + ei.field_h > var6Lifetime2; var6Lifetime2++) {
               var29 = pu.field_k[3][var6Lifetime2];
               if (var4_int != 0 &&
                 var29.field_yb != 0) {
-                DiskCacheRequest.field_E = var6Lifetime2;
+                nh.field_E = var6Lifetime2;
               }
               if (var29.field_jb &&
                 0 < var6Lifetime2) {
-                if (DirectByteStorage.field_j != null) {
-                  stackIn_153_0 = DirectByteStorage.field_j[var6Lifetime2 - 1];
+                if (cj.field_j != null) {
+                  stackIn_153_0 = cj.field_j[var6Lifetime2 - 1];
                 } else {
                   stackIn_153_0 = null;
                 }
@@ -331,7 +331,7 @@ abstract class vf {
                 }
               }
               stackIn_158_0 = var29;
-              stackIn_159_1 = (var6Lifetime2 == DiskCacheRequest.field_E);
+              stackIn_159_1 = (var6Lifetime2 == nh.field_E);
               stackIn_158_0.field_rb = stackIn_159_1;
               stackIn_161_0 = var29;
               stackIn_162_1 = (var4_int != 0);
@@ -355,11 +355,11 @@ abstract class vf {
               var15 = 0;
               if (var4_int != 0 &&
                 var9 >= 0) {
-                if (CombatPresentation.field_j != null &&
-                  CombatPresentation.field_j[var7] != null &&
-                  (~BoundedFile.field_a & CombatPresentation.field_j[var7][var9]) > 0) {
+                if (sk.field_j != null &&
+                  sk.field_j[var7] != null &&
+                  (~ei.field_a & sk.field_j[var7][var9]) > 0) {
                   var14 = 1;
-                  var15 = fd.a(true, CombatPresentation.field_j[var7][var9] & ~BoundedFile.field_a);
+                  var15 = fd.a(true, sk.field_j[var7][var9] & ~ei.field_a);
                 }
                 if (ep.field_p != null &&
                   null != ep.field_p[var7] &&
@@ -376,7 +376,7 @@ abstract class vf {
                     var10 = 1;
                   }
                   if (0 < var16 &&
-                    GlobalSpell.field_g < var16) {
+                    al.field_g < var16) {
                     var12 = 1;
                   }
                 }
@@ -384,7 +384,7 @@ abstract class vf {
                   jv.field_d[var7] != null) {
                   var16Lifetime2 = jv.field_d[var7][var9];
                   if (0 < var16Lifetime2 &&
-                    var16Lifetime2 > SummonAction.field_s) {
+                    var16Lifetime2 > be.field_s) {
                     var11 = 1;
                   }
                   if (var16Lifetime2 != 0 &&
@@ -408,7 +408,7 @@ abstract class vf {
                 }
                 var13 = stackIn_217_0;
               }
-              if (BufferedSocket.field_j >= 2 &&
+              if (hi.field_j >= 2 &&
                 br.field_f[12]) {
                 var11 = 0;
                 var12 = 0;
@@ -430,18 +430,18 @@ abstract class vf {
               if (var16Lifetime1 == 0 &&
                 0 <= var9 &&
                 null != fs.field_d && (!param1 ||
-                !SpellCastAction.field_s)) {
+                !ua.field_s)) {
                 jp.field_a = false;
                 fc.field_a = false;
-                if (null == TeleportAction.field_B) {
-                  TeleportAction.field_B = new byte[tq.field_b];
+                if (null == ur.field_B) {
+                  ur.field_B = new byte[tq.field_b];
                   dt.field_d = new boolean[tq.field_b];
                 }
                 for (var17_int = 0; var17_int < var7; var17_int++) {
                   dt.field_d[var17_int] = false;
                 }
                 es.a(0, var7, param3, -1, param1, var9, (byte) 103, -1);
-                if (BufferedSocket.field_j >= 2 &&
+                if (hi.field_j >= 2 &&
                   br.field_f[12]) {
                   fc.field_a = true;
                 }
@@ -464,7 +464,7 @@ abstract class vf {
                       tg.field_d[var18 / 8] = (byte)rn.a((int) tg.field_d[var18 / 8], ~(1 << rn.a(7, var18)));
                     }
                   } else {
-                    tg.field_d[(var6Lifetime3 + var9) / 8] = (byte)GrowthEvent.b((int) tg.field_d[(var6Lifetime3 + var9) / 8], 1 << rn.a(var9 + var6Lifetime3, 7));
+                    tg.field_d[(var6Lifetime3 + var9) / 8] = (byte)kf.b((int) tg.field_d[(var6Lifetime3 + var9) / 8], 1 << rn.a(var9 + var6Lifetime3, 7));
                   }
                 }
               }
@@ -499,7 +499,7 @@ abstract class vf {
                 }
                 var21 = null;
                 if (var13 != 0) {
-                  var21 = TaggedMapData.field_h;
+                  var21 = sc.field_h;
                   var22 = var21;
                   var25 = var22;
                   var22 = var25;
@@ -515,15 +515,15 @@ abstract class vf {
                     var21 = gt.field_a;
                   } else {
                     if (var11 != 0) {
-                      var22_int = jv.field_d[var7][var9] - SummonAction.field_s;
+                      var22_int = jv.field_d[var7][var9] - be.field_s;
                       if (var22_int != 1) {
-                        var21 = fo.a(4800, ByteStorage.field_a, new String[]{Integer.toString(var22_int)});
+                        var21 = fo.a(4800, mg.field_a, new String[]{Integer.toString(var22_int)});
                       } else {
                         var21 = bt.field_a;
                       }
                     }
                     if (var12 != 0) {
-                      var31 = fo.a(4800, AnimationSequence.field_k, new String[]{Integer.toString(GlobalSpell.field_g), Integer.toString(iv.field_e[var7][var9])});
+                      var31 = fo.a(4800, qb.field_k, new String[]{Integer.toString(al.field_g), Integer.toString(iv.field_e[var7][var9])});
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;
@@ -537,7 +537,7 @@ abstract class vf {
                       }
                     }
                     if (var14 != 0) {
-                      var22 = ParasiteEvent.field_F;
+                      var22 = md.field_F;
                       if (var15 > 0 &&
                         jl.field_c != null &&
                         var15 <= jl.field_c.length &&
@@ -634,7 +634,7 @@ abstract class vf {
             if (param1) {
               return;
             }
-            AiUnitPlanner.b(5, param2);
+            cl.b(5, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -647,7 +647,7 @@ abstract class vf {
           } else {
             stackIn_355_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_354_0), ((StringBuilder) (Object) stackIn_354_1).append(stackIn_355_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_354_0), ((StringBuilder) (Object) stackIn_354_1).append(stackIn_355_2).append(')').toString());
         }
     }
 
@@ -696,7 +696,7 @@ abstract class vf {
         int var27Lifetime2;
         int var18Lifetime1;
         int var19Lifetime1;
-        var28 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var28 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param1 != 1) {
           field_l = (String) null;
         }
@@ -760,10 +760,10 @@ abstract class vf {
         }
     }
 
-    final static IndexedSprite a(int[] param0, int param1, IndexedSprite param2) {
-        IndexedSprite var3 = null;
+    final static ru a(int[] param0, int param1, ru param2) {
+        ru var3 = null;
         RuntimeException var3_ref = null;
-        IndexedSprite stackIn_3_0 = null;
+        ru stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -774,15 +774,15 @@ abstract class vf {
           if (param1 != -13546) {
             field_l = (String) null;
           }
-          var3 = new IndexedSprite(0, 0, 0);
-          var3.palette = param0;
-          var3.offsetY = param2.offsetY;
-          var3.pixelWidth = param2.pixelWidth;
-          var3.pixelIndices = param2.pixelIndices;
-          var3.offsetX = param2.offsetX;
-          var3.canvasHeight = param2.canvasHeight;
-          var3.pixelHeight = param2.pixelHeight;
-          var3.canvasWidth = param2.canvasWidth;
+          var3 = new ru(0, 0, 0);
+          var3.field_j = param0;
+          var3.field_d = param2.field_d;
+          var3.field_e = param2.field_e;
+          var3.field_k = param2.field_k;
+          var3.field_i = param2.field_i;
+          var3.field_f = param2.field_f;
+          var3.field_h = param2.field_h;
+          var3.field_g = param2.field_g;
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -801,7 +801,7 @@ abstract class vf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -830,12 +830,12 @@ abstract class vf {
         if (rs.field_o == null) {
           return -1;
         }
-        if (param0 >= VertexNormal.field_c && VertexNormal.field_c + rs.field_o.pixelWidth > param0 && param2 >= ro.field_pb &&
-          !(param2 >= ro.field_pb + rs.field_o.pixelHeight)) {
+        if (param0 >= wi.field_c && wi.field_c + rs.field_o.field_y > param0 && param2 >= ro.field_pb &&
+          !(param2 >= ro.field_pb + rs.field_o.field_v)) {
           return 0;
         }
-        if (param0 >= co.field_h && co.field_h + rs.field_o.pixelWidth > param0 && ug.field_a <= param2 &&
-          !(rs.field_o.pixelHeight + ug.field_a <= param2)) {
+        if (param0 >= co.field_h && co.field_h + rs.field_o.field_y > param0 && ug.field_a <= param2 &&
+          !(rs.field_o.field_v + ug.field_a <= param2)) {
           return 1;
         }
         return -1;
@@ -849,7 +849,7 @@ abstract class vf {
         int var6;
         int var7;
         int var3Lifetime1;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var7 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 != -256) {
           field_f = 9;
         }
@@ -859,7 +859,7 @@ abstract class vf {
         }
         for (var3Lifetime1 = 0; var3Lifetime1 < 255; var3Lifetime1++) {
           var4 = 255 - var3Lifetime1;
-          var5 = AttackEvent.a(false, var4, var2);
+          var5 = ns.a(false, var4, var2);
           var6 = this.field_k[var5];
           this.field_k[var5] = this.field_k[var4];
           this.field_k[256 + var4] = (short) var6;

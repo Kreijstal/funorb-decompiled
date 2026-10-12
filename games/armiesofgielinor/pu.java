@@ -68,14 +68,14 @@ final class pu {
         of var3 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var2 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           vu.field_M = null;
           no.field_K = null;
-          SpellCastAction.field_s = false;
-          if (null != SummonAction.field_u) {
-            SummonAction.field_u.b(76);
-            SummonAction.field_u = null;
+          ua.field_s = false;
+          if (null != be.field_u) {
+            be.field_u.b(76);
+            be.field_u = null;
           }
           oi.field_d = null;
           if (param0 > -86) {
@@ -90,11 +90,11 @@ final class pu {
             wl.field_F.b(87);
             wl.field_F = null;
           }
-          UnitCycler.field_e = null;
+          eu.field_e = null;
           if (null != oi.field_d) {
             var3 = (of) (oi.field_d.a((byte) 66));
             while (var3 != null) {
-              var3.unlinkSecondary((byte) -76);
+              var3.c((byte) -76);
               var3 = (of) (oi.field_d.c(1));
             }
             oi.field_d = null;
@@ -104,13 +104,13 @@ final class pu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "pu.E(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "pu.E(" + param0 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
-        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         for (var5 = param1; var5 < this.field_O; var5++) {
           this.field_z[var5] = (short)(this.field_z[var5] + param3);
           this.field_y[var5] = (short)(this.field_y[var5] + param2);
@@ -131,7 +131,7 @@ final class pu {
         int var10;
         int var11;
         int var12;
-        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (this.field_C) {
           return;
         }
@@ -178,7 +178,7 @@ final class pu {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
-        int var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var7 = -96 / ((param4 - 36) / 55);
         for (var6 = 0; var6 < this.field_O; var6++) {
           this.field_z[var6] = (short)(param3 * this.field_z[var6] / param0);
@@ -191,29 +191,29 @@ final class pu {
     final static void b(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        CipherPacketBuffer var1 = null;
+        bv var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0 != 28704) {
             field_h = (String) null;
           }
-          var1 = vl.outgoingPacket;
-          while (ContextualRuntimeException.a(param0 ^ -13083)) {
-            var1.writeCipheredOpcode(32161, 8);
-            fieldTemp$0 = var1.position + 1;
-            var1.position = var1.position + 1;
+          var1 = vl.field_n;
+          while (g.a(param0 ^ -13083)) {
+            var1.h(32161, 8);
+            fieldTemp$0 = var1.field_q + 1;
+            var1.field_q = var1.field_q + 1;
             var2 = fieldTemp$0;
             fg.a(param0 ^ 28704, var1);
-            vl.outgoingPacket.writeByteLengthPrefix(-var2 + var1.position, param0 - 22774);
+            vl.field_n.e(-var2 + var1.field_q, param0 - 22774);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1_ref), "pu.C(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1_ref), "pu.C(" + param0 + ')');
         }
     }
 

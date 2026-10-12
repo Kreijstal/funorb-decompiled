@@ -21,7 +21,7 @@ final class fh {
         this.a(param1, this.field_a + 1, param0 ^ -27002);
     }
 
-    final static void a(int param0, ModelMesh param1) {
+    final static void a(int param0, gd param1) {
         try {
           if (param0 <= 123) {
             field_c = false;
@@ -30,7 +30,7 @@ final class fh {
           param1.field_t = ih.field_E;
           param1.field_R = ih.field_E;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -115,7 +115,7 @@ final class fh {
     private final int a(int param0, int param1) {
         int var3;
         int var4;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         var3 = this.field_d.length;
         while (param0 >= var3) {
           if (!this.field_g) {
@@ -137,7 +137,7 @@ final class fh {
 
     final static boolean b(byte param0) {
         int var1 = -84 % ((-51 - param0) / 32);
-        if (null == MoveAttackRequest.field_z) {
+        if (null == am.field_z) {
           return false;
         }
         if (ov.field_g.b((byte) -121)) {
@@ -156,19 +156,19 @@ final class fh {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        ModelMesh var15 = null;
+        gd var15 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7_int = TriangleRasterizer.projectionCenterX;
-          var8 = TriangleRasterizer.projectionCenterY;
-          var9 = TriangleRasterizer.sineTable[150];
-          var10 = TriangleRasterizer.cosineTable[150];
+          var7_int = tm.field_c;
+          var8 = tm.field_j;
+          var9 = tm.field_n[150];
+          var10 = tm.field_e[150];
           if (param2 != 56) {
-            var15 = (ModelMesh) null;
-            fh.a(104, (ModelMesh) null);
+            var15 = (gd) null;
+            fh.a(104, (gd) null);
           }
           var11 = -(param6 * var9) + var10 * param0 >> 16;
           var12 = param0 * var9 + param6 * var10 >> 16;
@@ -177,7 +177,7 @@ final class fh {
           }
           var13 = (param5 << 9) / var12 + var7_int;
           var14 = var8 + (var11 << 9) / var12;
-          SoftwareRaster.a(var13 << 4, var14 << 4, param1, param4, param3);
+          qn.a(var13 << 4, var14 << 4, param1, param4, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -189,7 +189,7 @@ final class fh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -209,19 +209,19 @@ final class fh {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        ModelMesh var15 = null;
+        gd var15 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7_int = TriangleRasterizer.projectionCenterX;
-          var8 = TriangleRasterizer.projectionCenterY;
-          var9 = TriangleRasterizer.sineTable[150];
-          var10 = TriangleRasterizer.cosineTable[150];
+          var7_int = tm.field_c;
+          var8 = tm.field_j;
+          var9 = tm.field_n[150];
+          var10 = tm.field_e[150];
           if (param2 != 56) {
-            var15 = (ModelMesh) null;
-            fh.a(104, (ModelMesh) null);
+            var15 = (gd) null;
+            fh.a(104, (gd) null);
           }
           var11 = -(param6 * var9) + var10 * param0 >> 16;
           var12 = param0 * var9 + param6 * var10 >> 16;
@@ -230,7 +230,7 @@ final class fh {
           }
           var13 = (param5 << 9) / var12 + var7_int;
           var14 = var8 + (var11 << 9) / var12;
-          SoftwareRaster.a(var13 << 4, var14 << 4, param1, param4, param3);
+          qn.a(var13 << 4, var14 << 4, param1, param4, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -242,7 +242,7 @@ final class fh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 }

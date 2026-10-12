@@ -1,44 +1,44 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class te extends IntrusiveNode {
+final class te extends tc {
     static je field_p;
     static String field_m;
     static int field_n;
     static int field_l;
     int field_o;
-    IntrusiveNode field_k;
+    tc field_k;
     aa field_q;
 
     final static void a(int param0, long param1, byte param2) {
         int var5 = 0;
-        CipherPacketBuffer var4 = vl.outgoingPacket;
+        bv var4 = vl.field_n;
         int var5Lifetime1;
         if (param2 >= 88) {
-          var4.writeCipheredOpcode(32161, param0);
-          var4.position = var4.position + 1;
-          var5 = var4.position;
-          var4.writeByte(1, 7);
+          var4.h(32161, param0);
+          var4.field_q = var4.field_q + 1;
+          var5 = var4.field_q;
+          var4.b(1, 7);
           var4.a(param1, 38359632);
-          var4.writeByteLengthPrefix(-var5 + var4.position, 5930);
+          var4.e(-var5 + var4.field_q, 5930);
           return;
         }
         te.b(-87, -88);
-        var4.writeCipheredOpcode(32161, param0);
-        var4.position = var4.position + 1;
-        var5Lifetime1 = var4.position;
-        var4.writeByte(1, 7);
+        var4.h(32161, param0);
+        var4.field_q = var4.field_q + 1;
+        var5Lifetime1 = var4.field_q;
+        var4.b(1, 7);
         var4.a(param1, 38359632);
-        var4.writeByteLengthPrefix(-var5Lifetime1 + var4.position, 5930);
+        var4.e(-var5Lifetime1 + var4.field_q, 5930);
     }
 
     final static String b(int param0, int param1) {
-        GameplayController var2;
+        ic var2;
         int var3;
-        GameplayController var5;
-        GameplayController var6;
-        GameplayController var7;
-        GameplayController var8;
+        ic var5;
+        ic var6;
+        ic var7;
+        ic var8;
         int var3Lifetime1;
         if (param0 == 128) {
           var8 = rd.field_j;
@@ -48,13 +48,13 @@ final class te extends IntrusiveNode {
           }
           var3 = var7.field_h;
           if (0 <= var3 &&
-            var3 < var7.battlefield.tiles.length) {
+            var3 < var7.field_xb.field_Eb.length) {
             if (-1 <= param1 &&
-              var7.battlefield.playerCount > param1) {
-              var8.battlefield.tiles[var3].ownerPlayer = param1;
+              var7.field_xb.field_W > param1) {
+              var8.field_xb.field_Eb[var3].field_a = param1;
               return "Done.";
             }
-            return "Invalid owner; use -1 to " + var7.battlefield.playerCount;
+            return "Invalid owner; use -1 to " + var7.field_xb.field_W;
           }
           return "Please select a tile before using this.";
         }
@@ -69,16 +69,16 @@ final class te extends IntrusiveNode {
         if (0 > var3Lifetime1) {
           return "Please select a tile before using this.";
         }
-        if (var3Lifetime1 >= var5.battlefield.tiles.length) {
+        if (var3Lifetime1 >= var5.field_xb.field_Eb.length) {
           return "Please select a tile before using this.";
         }
         if (-1 > param1) {
-          return "Invalid owner; use -1 to " + var5.battlefield.playerCount;
+          return "Invalid owner; use -1 to " + var5.field_xb.field_W;
         }
-        if (var5.battlefield.playerCount <= param1) {
-          return "Invalid owner; use -1 to " + var5.battlefield.playerCount;
+        if (var5.field_xb.field_W <= param1) {
+          return "Invalid owner; use -1 to " + var5.field_xb.field_W;
         }
-        var6.battlefield.tiles[var3Lifetime1].ownerPlayer = param1;
+        var6.field_xb.field_Eb[var3Lifetime1].field_a = param1;
         return "Done.";
     }
 
@@ -92,17 +92,17 @@ final class te extends IntrusiveNode {
     }
 
     final static void a(int param0, bj param1, int param2) {
-        CipherPacketBuffer var3 = null;
+        bv var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = vl.outgoingPacket;
-          var3.writeCipheredOpcode(32161, param0);
-          var3.writeByte(1, param1.field_n);
-          var3.writeShort(true, param1.field_m);
+          var3 = vl.field_n;
+          var3.h(32161, param0);
+          var3.b(1, param1.field_n);
+          var3.b(true, param1.field_m);
           if (param2 == -17006) {
             return;
           }
@@ -118,18 +118,18 @@ final class te extends IntrusiveNode {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    te(aa param0, IntrusiveNode param1) {
+    te(aa param0, tc param1) {
         try {
           this.field_q = param0;
           this.field_o = param0.l();
           this.field_k = param1;
-          this.field_q.i(128 + ResourceProtocolClient.field_e * this.field_o >> 8);
+          this.field_q.i(128 + bp.field_e * this.field_o >> 8);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

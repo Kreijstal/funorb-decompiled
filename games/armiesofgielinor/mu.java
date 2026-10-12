@@ -4,11 +4,11 @@
 final class mu {
     static cg field_a;
     static java.math.BigInteger field_c;
-    static IndexedSprite[][] field_g;
+    static ru[][] field_g;
     static int field_d;
     static String field_e;
     static int field_f;
-    static BufferedFile[] field_b;
+    static ue[] field_b;
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param4 != 5138823) {
@@ -29,7 +29,7 @@ final class mu {
         return false;
     }
 
-    final static void a(BitmapFont param0, int param1, ResourceArchive param2) {
+    final static void a(ka param0, int param1, kl param2) {
         int var8 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -45,19 +45,19 @@ final class mu {
         int var9 = 0;
         Throwable var10 = null;
         Throwable var11 = null;
-        BitmapFont var12 = null;
+        ka var12 = null;
         int[] var16 = null;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var3_int = og.field_m;
-          OwnerChangeEvent.field_E = new je(0L, (je) null);
+          as.field_E = new je(0L, (je) null);
           if (param2 == null) {
             var10 = (Throwable) null;
             af.a((Throwable) null, -116, "QC1");
             return;
           }
-          param2.discardPackedGroups = false;
-          param2.fileRetentionMode = 0;
+          param2.field_b = false;
+          param2.field_e = 0;
           mp.field_Sb = new bl(var3_int, param2, param2);
           ce.field_K = new rf(var3_int, param2, param2, new cu());
           var4 = ps.b((byte) -83);
@@ -66,22 +66,22 @@ final class mu {
             af.a((Throwable) null, 124, "QC2");
             return;
           }
-          MapLayout.a(var4, 19003);
-          var12 = (BitmapFont) null;
-          hf.field_f = PaletteRegionMap.a(65793, 2245737, 65793, 65793, 8947848, 0, (BitmapFont) null, 1127256, 1513239, 4020342, 5138823, (byte) 39, 1513239);
-          vs.field_g = PaletteRegionMap.a(param1, 0, 0, 0, 0, 16764006, param0, 0, 0, 0, 0, (byte) 107, 0);
-          uj.field_n = PaletteRegionMap.a(0, 0, 0, 0, 0, 16777215, param0, 0, 0, 0, 0, (byte) -124, 0);
-          var5 = SoftwareRaster.width;
-          var6 = SoftwareRaster.height;
-          var16 = SoftwareRaster.pixels;
-          s.field_c = new RgbSprite(10, 14);
+          lo.a(var4, 19003);
+          var12 = (ka) null;
+          hf.field_f = pr.a(65793, 2245737, 65793, 65793, 8947848, 0, (ka) null, 1127256, 1513239, 4020342, 5138823, (byte) 39, 1513239);
+          vs.field_g = pr.a(param1, 0, 0, 0, 0, 16764006, param0, 0, 0, 0, 0, (byte) 107, 0);
+          uj.field_n = pr.a(0, 0, 0, 0, 0, 16777215, param0, 0, 0, 0, 0, (byte) -124, 0);
+          var5 = qn.field_l;
+          var6 = qn.field_g;
+          var16 = qn.field_d;
+          s.field_c = new wk(10, 14);
           s.field_c.b();
           for (var8 = 2; var8 < 7; var8++) {
-            SoftwareRaster.h(var8, var8 + 1, 14 - (var8 << 1), 16777215);
+            qn.h(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
-          SoftwareRaster.a(var16, var5, var6);
+          qn.a(var16, var5, var6);
           wn.field_jb = l.a(var4, hf.field_f, param1 ^ 0, vs.field_g, uj.field_n);
-          OwnerChangeEvent.field_E.field_fb = new NodeDeque();
+          as.field_E.field_fb = new at();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -99,12 +99,12 @@ final class mu {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
-        field_g = (IndexedSprite[][]) null;
+        field_g = (ru[][]) null;
         field_c = null;
         if (param0 == 0) {
           field_b = null;
@@ -112,7 +112,7 @@ final class mu {
           field_e = null;
           return;
         }
-        field_g = (IndexedSprite[][]) null;
+        field_g = (ru[][]) null;
         field_b = null;
         field_a = null;
         field_e = null;

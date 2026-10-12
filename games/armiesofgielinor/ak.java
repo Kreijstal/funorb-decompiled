@@ -3,7 +3,7 @@
  */
 final class ak extends ju {
     static String field_e;
-    private BitmapFont field_m;
+    private ka field_m;
     private int field_k;
     private int field_d;
     private int field_i;
@@ -13,7 +13,7 @@ final class ak extends ju {
     private String field_h;
     private int field_f;
 
-    final void a(String param0, byte param1, int param2, int param3, int param4, int param5, int param6, BitmapFont param7) {
+    final void a(String param0, byte param1, int param2, int param3, int param4, int param5, int param6, ka param7) {
         ts stackIn_36_0;
         ts stackIn_36_1;
         int stackIn_36_2;
@@ -38,7 +38,7 @@ final class ak extends ju {
         String[] var16 = null;
         String[] var17 = null;
         int var12Lifetime1;
-        var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var15 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param4 == 0) {
             param4 = param7.field_v;
@@ -141,16 +141,16 @@ final class ak extends ju {
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(')').toString());
         }
     }
 
-    final void a(int param0, String param1, BitmapFont param2, int param3, int param4) {
+    final void a(int param0, String param1, ka param2, int param3, int param4) {
         ts var9 = null;
         ts var10 = null;
         if (param3 != -31932) {
-          ResourceArchive var7 = (ResourceArchive) null;
-          ak.a(-2, (ResourceArchive) null, 6, -12);
+          kl var7 = (kl) null;
+          ak.a(-2, (kl) null, 6, -12);
         }
         if (param1 == null) {
           this.field_b = null;
@@ -171,15 +171,15 @@ final class ak extends ju {
           var10.field_i[param1.length()] = param0;
           kd.a(0, param1, var10, param2, (byte) 97);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ak.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ak.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static IndexedSprite[] a(int param0, ResourceArchive param1, int param2, int param3) {
+    final static ru[] a(int param0, kl param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        IndexedSprite[] stackIn_5_0 = null;
-        IndexedSprite[] stackIn_7_0 = null;
+        ru[] stackIn_5_0 = null;
+        ru[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -187,13 +187,13 @@ final class ak extends ju {
         try {
           if (!kp.a(false, param3, param1, param0)) {
             stackIn_2_0 = null;
-            return (IndexedSprite[]) (stackIn_2_0);
+            return (ru[]) (stackIn_2_0);
           }
           if (param2 == 0) {
-            stackIn_7_0 = IntKeyLookup.a(111);
+            stackIn_7_0 = lr.a(111);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (IndexedSprite[]) null;
+          stackIn_5_0 = (ru[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,7 +205,7 @@ final class ak extends ju {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -217,11 +217,11 @@ final class ak extends ju {
             field_e = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ak.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ak.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, byte param1, BitmapFont param2, String param3, int param4) {
+    final void a(int param0, byte param1, ka param2, String param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         ts var8 = null;
@@ -272,7 +272,7 @@ final class ak extends ju {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -284,7 +284,7 @@ final class ak extends ju {
         field_e = null;
     }
 
-    private final ts a(BitmapFont param0, String param1, byte param2, int param3) {
+    private final ts a(ka param0, String param1, byte param2, int param3) {
         ts var5 = null;
         RuntimeException var5_ref = null;
         ts var6 = null;
@@ -320,11 +320,11 @@ final class ak extends ju {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(String param0, int param1, BitmapFont param2, int param3, int param4) {
+    final void a(String param0, int param1, ka param2, int param3, int param4) {
         ts var7 = null;
         ts var8 = null;
         if (param0 == null) {
@@ -346,83 +346,83 @@ final class ak extends ju {
           var8.field_i[param0.length()] = param4 + param2.a(param0);
           kd.a(0, param0, var8, param2, (byte) 83);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ak.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ak.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void b(boolean param0) {
-        tq.field_c = SoftwareRaster.width;
-        CachedArchiveProvider.field_p = SoftwareRaster.height;
+        tq.field_c = qn.field_l;
+        bm.field_p = qn.field_g;
         bh.d(false);
-        SpellCastEvent.field_E.a(-2 + no.field_T.field_ob - 40, (byte) -124, 0, no.field_T.field_gb, 0);
-        t.field_g.a(jn.field_d, -20500, GlobalSpell.field_f.field_gb, 0, 0);
+        pj.field_E.a(-2 + no.field_T.field_ob - 40, (byte) -124, 0, no.field_T.field_gb, 0);
+        t.field_g.a(jn.field_d, -20500, al.field_f.field_gb, 0, 0);
         int var1 = 2 + jn.field_d;
-        nf.field_Kb.a(GlobalSpell.field_f.field_ob - (!fh.field_c ? 0 : var1), -20500, GlobalSpell.field_f.field_gb, !fh.field_c ? 0 : var1, 0);
+        nf.field_Kb.a(al.field_f.field_ob - (!fh.field_c ? 0 : var1), -20500, al.field_f.field_gb, !fh.field_c ? 0 : var1, 0);
         mj.a((byte) 91);
         cp.field_d.a(40, -20500, no.field_T.field_gb, no.field_T.field_ob - 40, 0);
         tg.field_n.a(30, -20500, ov.field_i.field_gb, 0, 0);
         of.field_Lb.a(-30 + (-40 + ov.field_i.field_ob) - 2, -20500, ov.field_i.field_gb, 30, 0);
         r.field_v.a(30, -20500, 68, 5, 5);
         ek.field_c.a(30, -20500, 78, 5, 75);
-        CombatViewTransition.field_p.a(30, -20500, 48, 5, 155);
+        sr.field_p.a(30, -20500, 48, 5, 155);
         bs.field_a.a(30, -20500, 48, 5, 205);
         int var2 = !fh.field_c ? 200 : 250;
-        SphinxActionRequest.field_A.a(30, -20500, -var2 + 363, 5, var2 + 5);
+        ee.field_A.a(30, -20500, -var2 + 363, 5, var2 + 5);
         wl.field_K.a(30, -20500, -370 + (-5 + ov.field_i.field_gb), 5, 370);
-        CipherPacketBuffer.field_x.a(5, param0, of.field_Lb.field_gb - 5 - 5, 2, jn.field_c, 37, -32 + (of.field_Lb.field_ob - 5 - 5));
+        bv.field_x.a(5, param0, of.field_Lb.field_gb - 5 - 5, 2, jn.field_c, 37, -32 + (of.field_Lb.field_ob - 5 - 5));
         int var3 = (ov.field_i.field_gb + 2) / 2;
         fj.field_d.a(40, -20500, var3 - 2, ov.field_i.field_ob - 40, 0);
         if (!fh.field_c) {
           var3 = 0;
         }
-        VineGrowthAction.field_x.a(40, -20500, ov.field_i.field_gb - var3, -40 + ov.field_i.field_ob, var3);
+        pe.field_x.a(40, -20500, ov.field_i.field_gb - var3, -40 + ov.field_i.field_ob, var3);
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
         int fieldTemp$0 = 0;
         int var4 = 0;
         int var4Lifetime1;
-        vd.field_b.position = 0;
-        vd.field_b.writeByte(1, 12);
-        vd.field_b.writeInt((byte) -128, CampaignMenuButton.field_e.nextInt());
-        vd.field_b.writeInt((byte) -75, CampaignMenuButton.field_e.nextInt());
+        vd.field_b.field_q = 0;
+        vd.field_b.b(1, 12);
+        vd.field_b.a((byte) -128, iq.field_e.nextInt());
+        vd.field_b.a((byte) -75, iq.field_e.nextInt());
         if (param3 == 30) {
-          vd.field_b.writeByte(1, param0);
-          vd.field_b.writeByte(1, param1);
-          vd.field_b.writeShort(true, param2);
+          vd.field_b.b(1, param0);
+          vd.field_b.b(1, param1);
+          vd.field_b.b(true, param2);
           vd.field_b.a(-5247, cs.field_cb, mu.field_c);
-          vl.outgoingPacket.writeCipheredOpcode(32161, 18);
-          fieldTemp$0 = vl.outgoingPacket.position + 1;
-          vl.outgoingPacket.position = vl.outgoingPacket.position + 1;
+          vl.field_n.h(32161, 18);
+          fieldTemp$0 = vl.field_n.field_q + 1;
+          vl.field_n.field_q = vl.field_n.field_q + 1;
           var4 = fieldTemp$0;
-          vl.outgoingPacket.writeBytes(vd.field_b.payload, 0, vd.field_b.position, param3 + 69);
-          vl.outgoingPacket.writeByteLengthPrefix(-var4 + vl.outgoingPacket.position, param3 + 5900);
+          vl.field_n.a(vd.field_b.field_o, 0, vd.field_b.field_q, param3 + 69);
+          vl.field_n.e(-var4 + vl.field_n.field_q, param3 + 5900);
           return;
         }
-        ResourceArchive var5 = (ResourceArchive) null;
-        ak.a(81, (ResourceArchive) null, -36, 38);
-        vd.field_b.writeByte(1, param0);
-        vd.field_b.writeByte(1, param1);
-        vd.field_b.writeShort(true, param2);
+        kl var5 = (kl) null;
+        ak.a(81, (kl) null, -36, 38);
+        vd.field_b.b(1, param0);
+        vd.field_b.b(1, param1);
+        vd.field_b.b(true, param2);
         vd.field_b.a(-5247, cs.field_cb, mu.field_c);
-        vl.outgoingPacket.writeCipheredOpcode(32161, 18);
-        int fieldTemp$1 = vl.outgoingPacket.position + 1;
-        vl.outgoingPacket.position = vl.outgoingPacket.position + 1;
+        vl.field_n.h(32161, 18);
+        int fieldTemp$1 = vl.field_n.field_q + 1;
+        vl.field_n.field_q = vl.field_n.field_q + 1;
         var4Lifetime1 = fieldTemp$1;
-        vl.outgoingPacket.writeBytes(vd.field_b.payload, 0, vd.field_b.position, param3 + 69);
-        vl.outgoingPacket.writeByteLengthPrefix(-var4Lifetime1 + vl.outgoingPacket.position, param3 + 5900);
+        vl.field_n.a(vd.field_b.field_o, 0, vd.field_b.field_q, param3 + 69);
+        vl.field_n.e(-var4Lifetime1 + vl.field_n.field_q, param3 + 5900);
     }
 
-    final static RgbSprite[] b(int param0, int param1) {
-        RgbSprite[] var3 = null;
-        RgbSprite[] var2 = null;
+    final static wk[] b(int param0, int param1) {
+        wk[] var3 = null;
+        wk[] var2 = null;
         if (param1 == 5) {
-          var3 = new RgbSprite[9];
+          var3 = new wk[9];
           var2 = var3;
           var3[4] = hl.a(false, param0, 64);
           return var2;
         }
-        return (RgbSprite[]) null;
+        return (wk[]) null;
     }
 
     public ak() {

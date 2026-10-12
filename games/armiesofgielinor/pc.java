@@ -7,11 +7,11 @@ import java.util.*;
 final class pc extends du {
     static String field_i;
     static int[][] field_k;
-    static RgbSprite field_j;
+    static wk field_j;
     private java.net.ProxySelector field_l;
 
     final static void b(byte param0) {
-        UiSelectionState.f(0);
+        dl.f(0);
         if (param0 != 16) {
           pc.d(-107);
         }
@@ -50,7 +50,7 @@ final class pc extends du {
         ug var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
-        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
           System.setProperty("java.net.useSystemProxies", "true");
         }
@@ -213,7 +213,7 @@ final class pc extends du {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class pc extends du {
         int var12 = 0;
         java.net.Socket var13 = null;
         String var14 = null;
-        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var13 = new java.net.Socket(param1, param3);
           var13.setSoTimeout(10000);
@@ -314,7 +314,7 @@ final class pc extends du {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

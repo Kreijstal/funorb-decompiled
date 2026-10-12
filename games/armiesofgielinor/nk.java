@@ -54,40 +54,40 @@ final class nk {
         int var3 = 0;
         int var4 = 0;
         int var1_intLifetime1;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          CampaignMenuEntry.field_u = new int[vs.field_e.length];
+          cq.field_u = new int[vs.field_e.length];
           for (var1_int = 0; var1_int < vs.field_e.length; var1_int++) {
-            CampaignMenuEntry.field_u[var1_int] = va.field_G[vs.field_e[var1_int].terrainType];
+            cq.field_u[var1_int] = va.field_G[vs.field_e[var1_int].field_h];
           }
           if (param0 <= 79) {
             nk.a((byte) 84);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < ef.field_c; var1_intLifetime1++) {
-            for (var2 = 0; ResourceRequest.field_y > var2; var2++) {
-              var3 = CampaignMenuEntry.field_u[var1_intLifetime1 * ResourceRequest.field_y + var2];
+            for (var2 = 0; ks.field_y > var2; var2++) {
+              var3 = cq.field_u[var1_intLifetime1 * ks.field_y + var2];
               if (1 == var3) {
                 var3 = 7;
                 if (ta.field_L) {
                   var3 = 4;
                 }
                 if (0 == var2 ||
-                  CampaignMenuEntry.field_u[-1 + (var2 + var1_intLifetime1 * ResourceRequest.field_y)] == 1) {
+                  cq.field_u[-1 + (var2 + var1_intLifetime1 * ks.field_y)] == 1) {
                   var3 = 1;
                 }
-                if (-1 + ResourceRequest.field_y == var2 ||
-                  1 == CampaignMenuEntry.field_u[1 + var2 + var1_intLifetime1 * ResourceRequest.field_y]) {
+                if (-1 + ks.field_y == var2 ||
+                  1 == cq.field_u[1 + var2 + var1_intLifetime1 * ks.field_y]) {
                   var3 = 1;
                 }
                 if (var1_intLifetime1 == 0 ||
-                  CampaignMenuEntry.field_u[var2 + ResourceRequest.field_y * (var1_intLifetime1 - 1)] == 1) {
+                  cq.field_u[var2 + ks.field_y * (var1_intLifetime1 - 1)] == 1) {
                   var3 = 1;
                 }
                 if (-1 + ef.field_c == var1_intLifetime1 ||
-                  CampaignMenuEntry.field_u[(var1_intLifetime1 + 1) * ResourceRequest.field_y + var2] == 1) {
+                  cq.field_u[(var1_intLifetime1 + 1) * ks.field_y + var2] == 1) {
                   var3 = 1;
                 }
-                CampaignMenuEntry.field_u[var1_intLifetime1 * ResourceRequest.field_y + var2] = var3;
+                cq.field_u[var1_intLifetime1 * ks.field_y + var2] = var3;
               }
             }
           }
@@ -95,7 +95,7 @@ final class nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1), "nk.C(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1), "nk.C(" + param0 + ')');
         }
     }
 
@@ -110,9 +110,9 @@ final class nk {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          var3 = SummonAction.a(-127, param1, param0);
+          var3 = be.a(-127, param1, param0);
           if (param2 > -34) {
             nk.b((byte) -25);
           }
@@ -143,14 +143,14 @@ final class nk {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static RgbSprite[] a(int param0, byte param1, int param2, ResourceArchive param3) {
+    final static wk[] a(int param0, byte param1, int param2, kl param3) {
         RuntimeException var4 = null;
-        RgbSprite[] stackIn_5_0 = null;
-        RgbSprite[] stackIn_7_0 = null;
+        wk[] stackIn_5_0 = null;
+        wk[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -163,7 +163,7 @@ final class nk {
             stackIn_7_0 = se.a((byte) 32);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (RgbSprite[]) null;
+          stackIn_5_0 = (wk[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -175,7 +175,7 @@ final class nk {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

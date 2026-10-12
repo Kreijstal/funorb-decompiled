@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-class fw extends Widget {
+class fw extends kb {
     boolean field_I;
     static int field_C;
     static int[] field_J;
     private boolean field_D;
     static String field_H;
     int field_G;
-    static ResourceArchive field_F;
+    static kl field_F;
     private boolean field_E;
     boolean field_K;
 
@@ -21,8 +21,8 @@ class fw extends Widget {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != IsaacRandom.field_g) {
-            IsaacRandom.field_g.field_T.a(100, param1);
+          if (null != ga.field_g) {
+            ga.field_g.field_T.a(100, param1);
           }
           if (null != tj.field_C) {
             tj.field_C.field_M.a(100, param1);
@@ -42,11 +42,11 @@ class fw extends Widget {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
-    boolean a(int param0, Widget param1) {
+    boolean a(int param0, kb param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -66,7 +66,7 @@ class fw extends Widget {
           this.field_E = true;
           if (this.field_x != null &&
             this.field_x instanceof ie) {
-            ((ie) (this.field_x)).a((Widget) (this), this.field_E, (byte) -41);
+            ((ie) (this.field_x)).a((kb) (this), this.field_E, (byte) -41);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -79,11 +79,11 @@ class fw extends Widget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
-    void a(int param0, int param1, int param2, Widget param3) {
+    void a(int param0, int param1, int param2, kb param3) {
         try {
           super.a(param0 + 0, param1, param2, param3);
           this.field_G = 0;
@@ -94,14 +94,14 @@ class fw extends Widget {
             if (this.field_q == ro.field_ub) {
               return;
             }
-            if (this.containsPointer(param0 - 32721, param1, ko.field_b, AiPlanningStrategy.field_d, param2) &&
+            if (this.b(param0 - 32721, param1, ko.field_b, sm.field_d, param2) &&
               ro.field_ub == 0) {
-              this.a(this.field_q, AiPlanningStrategy.field_d - param1, ko.field_b - param2, true);
+              this.a(this.field_q, sm.field_d - param1, ko.field_b - param2, true);
             }
-            this.a(param2, param3, AiPlanningStrategy.field_d, (byte) -118, ko.field_b, param1);
+            this.a(param2, param3, sm.field_d, (byte) -118, ko.field_b, param1);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fw.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fw.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,7 +109,7 @@ class fw extends Widget {
         this(param0, t.field_c.field_j, param1);
     }
 
-    boolean a(Widget param0, int param1, char param2, int param3) {
+    boolean a(kb param0, int param1, char param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -124,7 +124,7 @@ class fw extends Widget {
           if (param3 == -12215) {
             return false;
           }
-          field_F = (ResourceArchive) null;
+          field_F = (kl) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -136,7 +136,7 @@ class fw extends Widget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ class fw extends Widget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -216,7 +216,7 @@ class fw extends Widget {
         }
     }
 
-    fw(String param0, WidgetPainter param1, qo param2) {
+    fw(String param0, kh param1, qo param2) {
         super(param0, param1, param2);
         this.field_I = true;
         this.field_D = true;
@@ -224,7 +224,7 @@ class fw extends Widget {
         this.field_G = 0;
     }
 
-    final void a(int param0, Widget param1, int param2, byte param3, int param4, int param5) {
+    final void a(int param0, kb param1, int param2, byte param3, int param4, int param5) {
         try {
           if (this.field_x != null &&
             this.field_x instanceof qe) {
@@ -233,20 +233,20 @@ class fw extends Widget {
           int var7_int = -87 % ((param3 + 58) / 53);
           this.field_q = 0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fw.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "fw.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
+    boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
         RuntimeException var8 = null;
-        Widget var9 = null;
+        kb var9 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_I &&
-            this.containsPointer(1, param1, param5, param0, param2)) {
+            this.b(1, param1, param5, param0, param2)) {
             this.a(11, param4);
             this.field_q = param6;
             if (null != this.field_x &&
@@ -258,8 +258,8 @@ class fw extends Widget {
           if (param3 > 103) {
             return false;
           }
-          var9 = (Widget) null;
-          this.a(67, -21, 92, 52, (Widget) null, -105, -128);
+          var9 = (kb) null;
+          this.a(67, -21, 92, 52, (kb) null, -105, -128);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -271,11 +271,11 @@ class fw extends Widget {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    fw(int param0, int param1, int param2, int param3, WidgetPainter param4, qo param5) {
+    fw(int param0, int param1, int param2, int param3, kh param4, qo param5) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_I = true;
         this.field_D = true;
@@ -306,7 +306,7 @@ class fw extends Widget {
           return;
         }
         if (this.field_x instanceof ie) {
-          ((ie) (this.field_x)).a((Widget) (this), this.field_E, (byte) -41);
+          ((ie) (this.field_x)).a((kb) (this), this.field_E, (byte) -41);
           if (param0 == 1) {
             return;
           }
@@ -326,7 +326,7 @@ class fw extends Widget {
         this.field_D = true;
         this.field_E = false;
         this.field_G = 0;
-        this.painter = t.field_c.field_q;
+        this.field_k = t.field_c.field_q;
     }
 
     static {

@@ -3,7 +3,7 @@
  */
 final class ds {
     static dq field_c;
-    static RgbSprite[] field_a;
+    static wk[] field_a;
     static String field_b;
 
     public static void a(int param0) {
@@ -19,27 +19,27 @@ final class ds {
         int var2 = 0;
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = BattleCharacter.field_q;
+        var1 = lf.field_q;
         synchronized (var1) {
           ro.field_ub = ob.field_J;
           av.field_a = av.field_a + 1;
-          AiPlanningStrategy.field_d = DiskCacheRequest.field_B;
-          ko.field_b = ResourceArchive.field_i;
+          sm.field_d = nh.field_B;
+          ko.field_b = kl.field_i;
           lk.field_f = ku.field_I;
           var2 = 48 / ((36 - param0) / 56);
           ku.field_I = false;
-          DeployEvent.field_A = ArchiveIndex.field_k;
-          BattleTutorial.field_t = mq.field_Xb;
-          TeleportAction.field_z = BoundedFile.field_d;
-          ArchiveIndex.field_k = 0;
-          eq.field_l = EffectPresentation.field_g;
+          tr.field_A = jm.field_k;
+          iu.field_t = mq.field_Xb;
+          ur.field_z = ei.field_d;
+          jm.field_k = 0;
+          eq.field_l = tb.field_g;
         }
     }
 
     final static void a(int param0, int param1) {
         try {
           try {
-            lj.a(CombatEvent.d((byte) -117), "resizing", new Object[]{new Integer(param0)}, 90);
+            lj.a(ag.d((byte) -117), "resizing", new Object[]{new Integer(param0)}, 90);
           } catch (Throwable throwable) {
           }
           int var2 = 87 % ((param1 - 39) / 40);
@@ -53,16 +53,16 @@ final class ds {
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, int param7) {
         boolean stackIn_20_0 = false;
         RuntimeException decompiledCaughtException = null;
-        IndexedSprite var8 = null;
+        ru var8 = null;
         int var8_int = 0;
         RuntimeException var8_ref = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        IndexedSprite var13 = null;
+        ru var13 = null;
         int var14 = 0;
-        var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var14 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (null != ac.field_k &&
             0 <= param5 &&
@@ -73,9 +73,9 @@ final class ds {
               var8 = ac.field_k[0];
               if (var8 != null) {
                 if (param4) {
-                  var8.d(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
+                  var8.d(db.a(true, param0), u.a(param1, (byte) 94));
                 } else {
-                  var8.draw(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
+                  var8.a(db.a(true, param0), u.a(param1, (byte) 94));
                 }
               }
             }
@@ -105,9 +105,9 @@ final class ds {
                   var13 = ac.field_k[var12];
                   if (var13 != null) {
                     if (!param4) {
-                      var13.draw(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
+                      var13.a(db.a(true, param0), u.a(param1, (byte) 94));
                     } else {
-                      var13.d(db.a(true, param0), MatchConditionEntry.a(param1, (byte) 94));
+                      var13.d(db.a(true, param0), u.a(param1, (byte) 94));
                     }
                   }
                   var8_int++;
@@ -122,7 +122,7 @@ final class ds {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var8_ref), "ds.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ig.a((Throwable) ((Object) var8_ref), "ds.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

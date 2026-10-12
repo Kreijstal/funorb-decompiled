@@ -4,7 +4,7 @@
 final class oe extends ro implements he {
     private boolean field_Ab;
     private kd field_xb;
-    static NodeDeque field_Bb;
+    static at field_Bb;
     private boolean field_yb;
     static je field_Cb;
     static String field_zb;
@@ -50,38 +50,38 @@ final class oe extends ro implements he {
     }
 
     final void k(byte param0) {
-        this.a(true, (byte) -103, DisplacedUnitMarker.a(-1, 248, ResourceProtocolClient.field_m));
+        this.a(true, (byte) -103, il.a(-1, 248, bp.field_m));
         if (param0 >= -81) {
           this.field_Ab = false;
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 != -6) {
           return;
         }
         if (param6 >= param4) {
           if (param2 > param6) {
-            ManaEvent.a(param6, param4, param7, param2, param1, param5, SoftwareRaster.pixels, param3, (byte) 20);
+            vp.a(param6, param4, param7, param2, param1, param5, qn.field_d, param3, (byte) 20);
             return;
           }
           if (param4 >= param2) {
-            ManaEvent.a(param4, param2, param1, param6, param3, param5, SoftwareRaster.pixels, param7, (byte) 20);
+            vp.a(param4, param2, param1, param6, param3, param5, qn.field_d, param7, (byte) 20);
             return;
           }
-          ManaEvent.a(param2, param4, param1, param6, param7, param5, SoftwareRaster.pixels, param3, (byte) 20);
+          vp.a(param2, param4, param1, param6, param7, param5, qn.field_d, param3, (byte) 20);
           return;
         }
         if (param2 > param4) {
-          ManaEvent.a(param4, param6, param7, param2, param3, param5, SoftwareRaster.pixels, param1, (byte) 20);
+          vp.a(param4, param6, param7, param2, param3, param5, qn.field_d, param1, (byte) 20);
           return;
         }
         if (param6 >= param2) {
-          ManaEvent.a(param6, param2, param3, param4, param1, param5, SoftwareRaster.pixels, param7, (byte) 20);
+          vp.a(param6, param2, param3, param4, param1, param5, qn.field_d, param7, (byte) 20);
           return;
         }
-        ManaEvent.a(param2, param6, param3, param4, param7, param5, SoftwareRaster.pixels, param1, (byte) 20);
+        vp.a(param2, param6, param3, param4, param7, param5, qn.field_d, param1, (byte) 20);
     }
 
     public final void a(int param0, int param1, int param2, int param3, fw param4) {
@@ -93,7 +93,7 @@ final class oe extends ro implements he {
           bt.b(param1 ^ param1);
           this.b(true);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oe.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "oe.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class oe extends ro implements he {
         RuntimeException var4_ref = null;
         ad var5 = null;
         int var6 = 0;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           this.field_Ab = true;
           if (!param2.field_a) {
@@ -116,7 +116,7 @@ final class oe extends ro implements he {
                 if (!param0) {
                   no.b(false);
                 }
-                var4 = ResourceProtocolClient.field_m;
+                var4 = bp.field_m;
                 this.field_yb = true;
               }
             } else {
@@ -131,7 +131,7 @@ final class oe extends ro implements he {
           if (param1 >= -2) {
             this.field_xb = (kd) null;
           }
-          var5 = new ad((ro) (this), CipherPacketBuffer.field_t, var4);
+          var5 = new ad((ro) (this), bv.field_t, var4);
           if (param2.field_a) {
             if (param2.field_h) {
               this.a(new qd(this), (byte) -81);
@@ -153,7 +153,7 @@ final class oe extends ro implements he {
               var5.a(te.field_m, 7, 1);
             } else {
               if (6 == param2.field_d) {
-                var5.a(CombatEvent.field_O, 9, 1);
+                var5.a(ag.field_O, 9, 1);
               }
             }
           }
@@ -169,16 +169,16 @@ final class oe extends ro implements he {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
     oe(gk param0, kd param1) {
-        super(param0, CipherPacketBuffer.field_t, wm.field_d, false, false);
+        super(param0, bv.field_t, wm.field_d, false, false);
         try {
           this.field_xb = param1;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "oe.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -191,14 +191,14 @@ final class oe extends ro implements he {
           return;
         }
         try {
-          AnimationFrameSet.field_E = param0[1];
+          wp.field_E = param0[1];
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oe.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "oe.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     static {
-        field_Bb = new NodeDeque();
+        field_Bb = new at();
         field_zb = "Withdraw invitation to <%0> to join this game";
     }
 }

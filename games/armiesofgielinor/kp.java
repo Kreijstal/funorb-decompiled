@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kp implements WidgetPainter {
+final class kp implements kh {
     private int field_f;
-    private BitmapFont field_a;
+    private ka field_a;
     static String field_k;
     private int field_g;
     static String field_c;
@@ -29,9 +29,9 @@ final class kp implements WidgetPainter {
         return var3;
     }
 
-    public final void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {
+    public final void a(kb param0, int param1, int param2, boolean param3, int param4) {
         int var10 = 0;
-        Widget stackIn_4_0 = null;
+        kb stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -42,26 +42,26 @@ final class kp implements WidgetPainter {
         int var9 = 0;
         int var11 = 0;
         pi var12 = null;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          if (widget instanceof pi) {
-            stackIn_4_0 = (Widget) (widget);
+          if (param0 instanceof pi) {
+            stackIn_4_0 = (kb) (param0);
           } else {
             stackIn_4_0 = null;
           }
           var12 = (pi) (stackIn_4_0);
-          SoftwareRaster.f(widget.x + originX, originY + widget.y, widget.width, widget.height, this.field_d);
+          qn.f(param0.field_B + param1, param4 + param0.field_p, param0.field_l, param0.field_w, this.field_d);
           if (var12 != null) {
           }
-          var7 = widget.width - 2 * var12.field_R;
-          var8 = widget.x + originX + var12.field_R;
-          if (obfuscationGuard > -79) {
+          var7 = param0.field_l - 2 * var12.field_R;
+          var8 = param0.field_B + param1 + var12.field_R;
+          if (param2 > -79) {
             return;
           }
-          var9 = originY - (-widget.y - var12.field_S);
-          SoftwareRaster.h(var8, var9, var7 + var8, var9, this.field_b);
+          var9 = param4 - (-param0.field_p - var12.field_S);
+          qn.h(var8, var9, var7 + var8, var9, this.field_b);
           for (var10 = var12.d((byte) -39) - 1; var10 >= 0; var10--) {
-            SoftwareRaster.a(var7 * var12.a(var10, (byte) -47) / var12.a(-1) + var8, var9, this.field_h, this.field_f);
+            qn.a(var7 * var12.a(var10, (byte) -47) / var12.a(-1) + var8, var9, this.field_h, this.field_f);
           }
           if (null == this.field_a) {
             return;
@@ -73,12 +73,12 @@ final class kp implements WidgetPainter {
           var6 = decompiledCaughtException;
           stackIn_16_0 = var6;
           stackIn_16_1 = new StringBuilder().append("kp.C(");
-          if (widget == null) {
+          if (param0 == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(originX).append(',').append(obfuscationGuard).append(',').append(renderFlag).append(',').append(originY).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class kp implements WidgetPainter {
         field_c = null;
     }
 
-    final static boolean a(boolean param0, int param1, ResourceArchive param2, int param3) {
+    final static boolean a(boolean param0, int param1, kl param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -107,7 +107,7 @@ final class kp implements WidgetPainter {
           if (param0) {
             kp.a(81);
           }
-          var5 = param2.getFile((byte) 72, param3, param1);
+          var5 = param2.a((byte) 72, param3, param1);
           var4 = var5;
           if (var5 == null) {
             return false;
@@ -124,11 +124,11 @@ final class kp implements WidgetPainter {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    kp(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    kp(ka param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_b = param3;
           this.field_a = param0;
@@ -138,7 +138,7 @@ final class kp implements WidgetPainter {
           this.field_i = param2;
           this.field_h = param5;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "kp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

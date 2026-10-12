@@ -4,7 +4,7 @@
 final class qh {
     final static void a(boolean param0, int param1, int param2, boolean param3, int param4, int param5, boolean param6, int param7, boolean param8, boolean param9) {
         int var11;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param9) {
           va.field_u = qm.field_L;
           je.c(param9, -120);
@@ -13,25 +13,25 @@ final class qh {
           }
           pi.field_N.field_O = ke.field_e.field_O;
           pi.field_N.field_Eb = 1;
-          if (param7 > ~PreparedAction.field_r) {
+          if (param7 > ~bd.field_r) {
             j.a(1, param9, param0, param5);
           }
-          if (0 < InstructionsPanel.field_D) {
+          if (0 < rk.field_D) {
             uu.a(param0, param9, param5, param7 + 1, param8);
           }
           if (vk.field_f &&
             vu.field_M.field_Ub >= vu.field_M.field_nc) {
-            MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
+            ne.field_f.field_Nb.field_X = kn.field_y;
             nf.field_Kb.field_xb = false;
-            ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
+            jm.a(ne.field_f.field_Jb, param7 - 77);
           } else {
             nf.field_Kb.field_xb = true;
-            MapTile.field_f.field_Nb.field_X = null;
-            VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
+            ne.field_f.field_Nb.field_X = null;
+            wi.a(param1, 255, param3, param5, ne.field_f);
           }
         } else {
-          if (SoftwareRaster.width == tq.field_c &&
-            SoftwareRaster.height == CachedArchiveProvider.field_p) {
+          if (qn.field_l == tq.field_c &&
+            qn.field_g == bm.field_p) {
             if (!param9) {
               va.field_u = (-640 + tq.field_c) / 2;
               je.c(param9, -120);
@@ -40,21 +40,21 @@ final class qh {
               }
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
-              if (param7 > ~PreparedAction.field_r) {
+              if (param7 > ~bd.field_r) {
                 j.a(1, param9, param0, param5);
               }
-              if (0 < InstructionsPanel.field_D) {
+              if (0 < rk.field_D) {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
               if (vk.field_f &&
                 vu.field_M.field_Ub >= vu.field_M.field_nc) {
-                MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
+                ne.field_f.field_Nb.field_X = kn.field_y;
                 nf.field_Kb.field_xb = false;
-                ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
+                jm.a(ne.field_f.field_Jb, param7 - 77);
               } else {
                 nf.field_Kb.field_xb = true;
-                MapTile.field_f.field_Nb.field_X = null;
-                VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
+                ne.field_f.field_Nb.field_X = null;
+                wi.a(param1, 255, param3, param5, ne.field_f);
               }
             } else {
               va.field_u = qm.field_L;
@@ -64,30 +64,30 @@ final class qh {
               }
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
-              if (param7 > ~PreparedAction.field_r) {
+              if (param7 > ~bd.field_r) {
                 j.a(1, param9, param0, param5);
               }
-              if (0 < InstructionsPanel.field_D) {
+              if (0 < rk.field_D) {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
               if (vk.field_f &&
                 vu.field_M.field_Ub >= vu.field_M.field_nc) {
-                MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
+                ne.field_f.field_Nb.field_X = kn.field_y;
                 nf.field_Kb.field_xb = false;
-                ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
+                jm.a(ne.field_f.field_Jb, param7 - 77);
               } else {
                 nf.field_Kb.field_xb = true;
-                MapTile.field_f.field_Nb.field_X = null;
-                VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
+                ne.field_f.field_Nb.field_X = null;
+                wi.a(param1, 255, param3, param5, ne.field_f);
               }
             }
             jg.a(0, param3, param6, param1, param2, param4, param5);
-            VertexNormal.a(param1, param7 ^ -256, param3, param5, bu.field_a);
+            wi.a(param1, param7 ^ -256, param3, param5, bu.field_a);
             hg.field_b = hg.field_b + 1;
             return;
           }
-          if (so.field_b.field_g == SoftwareRaster.height &&
-            SoftwareRaster.width == so.field_b.field_a) {
+          if (so.field_b.field_g == qn.field_g &&
+            qn.field_l == so.field_b.field_a) {
             if (null != vu.field_M) {
               je.a(45, false);
               if (param9) {
@@ -101,24 +101,24 @@ final class qh {
               }
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
-              if (param7 > ~PreparedAction.field_r) {
+              if (param7 > ~bd.field_r) {
                 j.a(1, param9, param0, param5);
               }
-              if (0 < InstructionsPanel.field_D) {
+              if (0 < rk.field_D) {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
               if (vk.field_f &&
                 vu.field_M.field_Ub >= vu.field_M.field_nc) {
-                MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
+                ne.field_f.field_Nb.field_X = kn.field_y;
                 nf.field_Kb.field_xb = false;
-                ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
+                jm.a(ne.field_f.field_Jb, param7 - 77);
               } else {
                 nf.field_Kb.field_xb = true;
-                MapTile.field_f.field_Nb.field_X = null;
-                VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
+                ne.field_f.field_Nb.field_X = null;
+                wi.a(param1, 255, param3, param5, ne.field_f);
               }
               jg.a(0, param3, param6, param1, param2, param4, param5);
-              VertexNormal.a(param1, param7 ^ -256, param3, param5, bu.field_a);
+              wi.a(param1, param7 ^ -256, param3, param5, bu.field_a);
               hg.field_b = hg.field_b + 1;
               return;
             }
@@ -136,21 +136,21 @@ final class qh {
             }
             pi.field_N.field_O = ke.field_e.field_O;
             pi.field_N.field_Eb = 1;
-            if (param7 > ~PreparedAction.field_r) {
+            if (param7 > ~bd.field_r) {
               j.a(1, param9, param0, param5);
             }
-            if (0 < InstructionsPanel.field_D) {
+            if (0 < rk.field_D) {
               uu.a(param0, param9, param5, param7 + 1, param8);
             }
             if (vk.field_f &&
               vu.field_M.field_Ub >= vu.field_M.field_nc) {
-              MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
+              ne.field_f.field_Nb.field_X = kn.field_y;
               nf.field_Kb.field_xb = false;
-              ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
+              jm.a(ne.field_f.field_Jb, param7 - 77);
             } else {
               nf.field_Kb.field_xb = true;
-              MapTile.field_f.field_Nb.field_X = null;
-              VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
+              ne.field_f.field_Nb.field_X = null;
+              wi.a(param1, 255, param3, param5, ne.field_f);
             }
           } else {
             va.field_u = qm.field_L;
@@ -159,83 +159,83 @@ final class qh {
               bn.a(param0, param9, 117, param5);
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
-              if (param7 > ~PreparedAction.field_r) {
+              if (param7 > ~bd.field_r) {
                 j.a(1, param9, param0, param5);
               }
-              if (0 < InstructionsPanel.field_D) {
+              if (0 < rk.field_D) {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
               if (vk.field_f &&
                 vu.field_M.field_Ub >= vu.field_M.field_nc) {
-                MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
+                ne.field_f.field_Nb.field_X = kn.field_y;
                 nf.field_Kb.field_xb = false;
-                ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
+                jm.a(ne.field_f.field_Jb, param7 - 77);
               } else {
                 nf.field_Kb.field_xb = true;
-                MapTile.field_f.field_Nb.field_X = null;
-                VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
+                ne.field_f.field_Nb.field_X = null;
+                wi.a(param1, 255, param3, param5, ne.field_f);
               }
             } else {
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
-              if (param7 > ~PreparedAction.field_r) {
+              if (param7 > ~bd.field_r) {
                 j.a(1, param9, param0, param5);
               }
-              if (0 < InstructionsPanel.field_D) {
+              if (0 < rk.field_D) {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
               if (!vk.field_f) {
                 nf.field_Kb.field_xb = true;
-                MapTile.field_f.field_Nb.field_X = null;
-                VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
+                ne.field_f.field_Nb.field_X = null;
+                wi.a(param1, 255, param3, param5, ne.field_f);
               } else {
                 if (vu.field_M.field_Ub >= vu.field_M.field_nc) {
-                  MapTile.field_f.field_Nb.field_X = TelefragEvent.field_y;
+                  ne.field_f.field_Nb.field_X = kn.field_y;
                   nf.field_Kb.field_xb = false;
-                  ArchiveIndex.a(MapTile.field_f.field_Jb, param7 - 77);
+                  jm.a(ne.field_f.field_Jb, param7 - 77);
                 } else {
                   nf.field_Kb.field_xb = true;
-                  MapTile.field_f.field_Nb.field_X = null;
-                  VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
+                  ne.field_f.field_Nb.field_X = null;
+                  wi.a(param1, 255, param3, param5, ne.field_f);
                 }
               }
             }
           }
         }
         jg.a(0, param3, param6, param1, param2, param4, param5);
-        VertexNormal.a(param1, param7 ^ -256, param3, param5, bu.field_a);
+        wi.a(param1, param7 ^ -256, param3, param5, bu.field_a);
         hg.field_b = hg.field_b + 1;
     }
 
     final static void a(boolean param0, int param1) {
         if (param1 == 0) {
-          if (null != Spell.field_d) {
-            SoftwareRaster.d(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, -SoftwareRaster.clipLeft + SoftwareRaster.clipRight, -SoftwareRaster.clipTop + SoftwareRaster.clipBottom);
-            Spell.field_d.b(param0, 20);
+          if (null != ik.field_d) {
+            qn.d(qn.field_j, qn.field_a, -qn.field_j + qn.field_e, -qn.field_a + qn.field_f);
+            ik.field_d.b(param0, 20);
           }
           return;
         }
         qh.a((byte) -15);
-        if (null != Spell.field_d) {
-          SoftwareRaster.d(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, -SoftwareRaster.clipLeft + SoftwareRaster.clipRight, -SoftwareRaster.clipTop + SoftwareRaster.clipBottom);
-          Spell.field_d.b(param0, 20);
+        if (null != ik.field_d) {
+          qn.d(qn.field_j, qn.field_a, -qn.field_j + qn.field_e, -qn.field_a + qn.field_f);
+          ik.field_d.b(param0, 20);
         }
     }
 
-    final static void requestDeleteQuicksave(byte obfuscationGuard) {
-        if (obfuscationGuard != 27) {
+    final static void b(byte param0) {
+        if (param0 != 27) {
           return;
         }
-        if (!DamageEvent.g(81)) {
-          vl.outgoingPacket.writeCipheredOpcode(32161, 81);
-          bu.storedQuicksave = null;
+        if (!nw.g(81)) {
+          vl.field_n.h(32161, 81);
+          bu.field_b = null;
         }
     }
 
     final static void a(byte param0) {
         lq.field_e = -1;
         ev.field_a = 0;
-        BoundedFile.field_b = false;
+        ei.field_b = false;
         ts.field_a = null;
         int var1 = 110 % ((66 - param0) / 44);
         cc.field_b = -1;

@@ -31,18 +31,18 @@ final class uh {
           ro.field_lb = param0;
           int var2_int = 102 % ((69 - param1) / 54);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "uh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "uh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, boolean param1, int[] param2, int[] param3, String param4, boolean param5, int param6) {
         try {
-          no.field_P.pixelWidth = SoftwareRaster.width;
-          no.field_P.pixelHeight = SoftwareRaster.height;
-          no.field_P.pixels = SoftwareRaster.pixels;
+          no.field_P.field_y = qn.field_l;
+          no.field_P.field_v = qn.field_g;
+          no.field_P.field_B = qn.field_d;
           ku.field_J.b();
-          SoftwareRaster.b();
-          MatchSetupPanel.a(-1, -1, param2, -1, param5, param3, -1, false, 0, false, 0, param4);
+          qn.b();
+          dm.a(-1, -1, param2, -1, param5, param3, -1, false, 0, false, 0, param4);
           no.field_P.b();
           ku.field_J.g(param6, param0);
           if (!param1) {
@@ -50,7 +50,7 @@ final class uh {
             uh.a((int[]) null, -31);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "uh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "uh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 

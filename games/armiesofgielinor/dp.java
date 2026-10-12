@@ -28,7 +28,7 @@ final class dp extends je {
         int var6 = 0;
         int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0 != 48) {
             this.field_Qb = -37;
@@ -50,18 +50,18 @@ final class dp extends je {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var3), "dp.U(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var3), "dp.U(" + param0 + ',' + param1 + ')');
         }
     }
 
     final void a(boolean param0) {
         try {
-          PortalLossCondition.a(' ', 0, this.field_Rb, param0);
+          up.a(' ', 0, this.field_Rb, param0);
           this.field_Qb = 0;
           this.field_Jb = 0;
           this.field_Pb.field_X = this.field_Rb.toString();
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dp.A(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "dp.A(" + param0 + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class dp extends je {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -99,9 +99,9 @@ final class dp extends je {
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          var5 = MoveAttackRequest.field_K;
+          var5 = am.field_K;
           var1 = var5;
           var2 = param0;
           var3 = var5.length;
@@ -119,7 +119,7 @@ final class dp extends je {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1_ref), "dp.O(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var1_ref), "dp.O(" + param0 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class dp extends je {
           }
           field_Vb = (int[][]) null;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dp.R(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "dp.R(" + param0 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class dp extends je {
           this.field_Pb.field_X = this.field_Rb.toString();
           this.field_Ob.field_X = "";
           this.field_Ob.field_I = "|";
-          this.field_fb = new NodeDeque();
+          this.field_fb = new at();
           this.a(this.field_Xb, 48);
           this.a(this.field_Pb, 48);
           this.a(this.field_Ob, 89);
@@ -216,7 +216,7 @@ final class dp extends je {
             stackIn_18_0 = stackIn_14_0;
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -226,7 +226,7 @@ final class dp extends je {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var4_int = this.field_Rb.length();
           if (0 > param1) {
@@ -252,7 +252,7 @@ final class dp extends je {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dp.Q(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "dp.Q(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -282,7 +282,7 @@ final class dp extends je {
             this.field_Jb = var2_int;
             this.field_Qb = var2_int;
             var4 = this.field_Rb.toString().substring(var3, this.field_Rb.length());
-            PortalLossCondition.a(' ', var2_int, this.field_Rb, true);
+            up.a(' ', var2_int, this.field_Rb, true);
             discarded$0 = this.field_Rb.append(var4);
             this.field_Pb.field_X = this.field_Rb.toString();
           }
@@ -294,7 +294,7 @@ final class dp extends je {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "dp.M(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "dp.M(" + param0 + ')');
         }
     }
 
@@ -322,7 +322,7 @@ final class dp extends je {
             discarded$0 = this.field_Rb.append(param1);
           } else {
             var4 = this.field_Rb.toString().substring(this.field_Qb, this.field_Rb.length());
-            PortalLossCondition.a(' ', this.field_Qb, this.field_Rb, true);
+            up.a(' ', this.field_Qb, this.field_Rb, true);
             discarded$1 = this.field_Rb.append(param1);
             discarded$2 = this.field_Rb.append(var4);
           }
@@ -341,7 +341,7 @@ final class dp extends je {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -376,7 +376,7 @@ final class dp extends je {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "dp.D(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2_ref), "dp.D(" + param0 + ')');
         }
     }
 
@@ -406,7 +406,7 @@ final class dp extends je {
               !(this.field_Rb.length() >= this.field_Ub)) {
               if (this.field_Qb != this.field_Rb.length()) {
                 var5 = this.field_Rb.toString().substring(this.field_Qb, this.field_Rb.length());
-                PortalLossCondition.a(' ', this.field_Qb, this.field_Rb, true);
+                up.a(' ', this.field_Qb, this.field_Rb, true);
                 discarded$0 = this.field_Rb.append(param2);
                 discarded$1 = this.field_Rb.append(var5);
               } else {
@@ -502,7 +502,7 @@ final class dp extends je {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var4), "dp.K(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) var4), "dp.K(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -514,7 +514,7 @@ final class dp extends je {
           int var2_int = -66 / ((72 - param0) / 35);
           this.field_Sb = this.field_Tb.a(0);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dp.N(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "dp.N(" + param0 + ')');
         }
     }
 
@@ -536,7 +536,7 @@ final class dp extends je {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "dp.G(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "dp.G(" + param0 + ')');
         }
     }
 
@@ -555,7 +555,7 @@ final class dp extends je {
             var4 = new java.awt.datatransfer.StringSelection(this.d((byte) 115));
             this.field_Tb.a((java.awt.datatransfer.Transferable) ((Object) var4), -26522);
           } catch (RuntimeException runtimeException) {
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dp.H(" + param0 + ')');
+            throw ig.a((Throwable) ((Object) runtimeException), "dp.H(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -577,7 +577,7 @@ final class dp extends je {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "dp.I(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "dp.I(" + param0 + ')');
         }
     }
 
@@ -593,7 +593,7 @@ final class dp extends je {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "dp.S(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "dp.S(" + param0 + ')');
         }
     }
 
@@ -634,7 +634,7 @@ final class dp extends je {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -645,7 +645,7 @@ final class dp extends je {
           this.field_Ob.a(param3, -20500, param2, 0, 0);
           this.field_Kb = -4 + param3;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dp.V(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "dp.V(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -659,7 +659,7 @@ final class dp extends je {
             this.field_Jb = this.field_Qb;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dp.C(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "dp.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -675,7 +675,7 @@ final class dp extends je {
             this.a(-36, 44, '\177');
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dp.E(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "dp.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -695,10 +695,10 @@ final class dp extends je {
           int var6 = 0;
           java.awt.datatransfer.Transferable var7 = null;
           String var8 = null;
-          var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+          var6 = ArmiesOfGielinor.field_M ? 1 : 0;
           try {
             boolean decompiledFrameRemainder0 = true;
-            var2_int = this.c(param0 ^ 48, AiPlanningStrategy.field_d - (this.field_V + this.field_Pb.field_F));
+            var2_int = this.c(param0 ^ 48, sm.field_d - (this.field_V + this.field_Pb.field_F));
             if (this.field_yb == 1) {
               this.b(var2_int, false);
               this.field_Ib = true;
@@ -776,7 +776,7 @@ final class dp extends je {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "dp.F(" + param0 + ')');
+            throw ig.a((Throwable) ((Object) var2), "dp.F(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -792,7 +792,7 @@ final class dp extends je {
         int stackIn_10_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (~this.field_Qb == param0) {
             stackIn_3_0 = this.field_Qb;
@@ -809,7 +809,7 @@ final class dp extends je {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "dp.J(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "dp.J(" + param0 + ')');
         }
     }
 
@@ -821,7 +821,7 @@ final class dp extends je {
         int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param0 != 109) {
             this.field_Ib = false;
@@ -842,7 +842,7 @@ final class dp extends je {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "dp.B(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2), "dp.B(" + param0 + ')');
         }
     }
 

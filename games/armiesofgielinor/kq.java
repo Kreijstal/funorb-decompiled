@@ -3,12 +3,12 @@
  */
 class kq extends fw {
     static int field_L;
-    private Widget field_Q;
+    private kb field_Q;
     static me field_M;
     static je field_N;
-    static RgbSprite field_P;
+    static wk field_P;
 
-    final static String getSpellConfirmationPrompt(int tileY, int obfuscationGuard, int spellId, Battlefield battlefield, int tileX) {
+    final static String a(int param0, int param1, int param2, ha param3, int param4) {
         String[] array$0 = null;
         String[] array$1 = null;
         String[] array$2 = null;
@@ -47,26 +47,26 @@ class kq extends fw {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        Unit var7 = null;
-        Unit var8 = null;
+        jd var7 = null;
+        jd var8 = null;
         int var6Lifetime1;
         int var6Lifetime2;
         try {
-          if (obfuscationGuard != 7) {
+          if (param1 != 7) {
             field_N = (je) null;
           }
-          if (uc.spellDefinitions[spellId][3] != 0) {
+          if (uc.field_d[param2][3] != 0) {
             return null;
           }
-          var7 = battlefield.getUnitAt(tileY, true, tileX);
+          var7 = param3.c(param0, true, param4);
           var8 = var7;
           if (var8 == null) {
             stackIn_7_0 = null;
             return (String) (stackIn_7_0);
           }
-          if (uc.spellDefinitions[spellId][4] == 1 &&
-            var8.getEquipmentId((byte) 81) > 0) {
-            var6 = UiSelectionState.field_e[var7.getEquipmentId((byte) 81)][var7.getEquipmentCategory(20640)];
+          if (uc.field_d[param2][4] == 1 &&
+            var8.c((byte) 81) > 0) {
+            var6 = dl.field_e[var7.c((byte) 81)][var7.j(20640)];
             array$0 = new String[3];
             stackIn_13_0 = 4800;
             stackIn_13_1 = rb.field_c;
@@ -74,9 +74,9 @@ class kq extends fw {
             stackIn_13_3 = array$0;
             stackIn_13_4 = 1;
             if (og.field_m != 1) {
-              stackIn_14_5 = fq.field_f[spellId].toLowerCase();
+              stackIn_14_5 = fq.field_f[param2].toLowerCase();
             } else {
-              stackIn_14_5 = fq.field_f[spellId];
+              stackIn_14_5 = fq.field_f[param2];
             }
             stackIn_13_3[stackIn_13_4] = stackIn_14_5;
             stackIn_16_4 = 2;
@@ -89,12 +89,12 @@ class kq extends fw {
             stackIn_18_0 = fo.a(stackIn_13_0, stackIn_13_1, stackIn_13_2);
             return stackIn_18_0;
           }
-          if (uc.spellDefinitions[spellId][4] == 0 &&
-            0 != var8.statusEffectType) {
-            var6Lifetime1 = PaletteRegionMap.field_f[var7.statusEffectType];
-            if (7 != var8.statusEffectType &&
-              var8.statusEffectType != 8) {
-              var6Lifetime1 = var6Lifetime1 + (-1 + var8.statusEffectValue);
+          if (uc.field_d[param2][4] == 0 &&
+            0 != var8.field_P) {
+            var6Lifetime1 = pr.field_f[var7.field_P];
+            if (7 != var8.field_P &&
+              var8.field_P != 8) {
+              var6Lifetime1 = var6Lifetime1 + (-1 + var8.field_o);
             }
             array$1 = new String[3];
             stackIn_29_0 = 4800;
@@ -103,9 +103,9 @@ class kq extends fw {
             stackIn_29_3 = array$1;
             stackIn_29_4 = 1;
             if (og.field_m == 1) {
-              stackIn_30_5 = fq.field_f[spellId];
+              stackIn_30_5 = fq.field_f[param2];
             } else {
-              stackIn_30_5 = fq.field_f[spellId].toLowerCase();
+              stackIn_30_5 = fq.field_f[param2].toLowerCase();
             }
             stackIn_29_3[stackIn_29_4] = stackIn_30_5;
             stackIn_32_4 = 2;
@@ -118,14 +118,14 @@ class kq extends fw {
             stackIn_34_0 = fo.a(stackIn_29_0, stackIn_29_1, stackIn_29_2);
             return stackIn_34_0;
           }
-          if (uc.spellDefinitions[spellId][4] != 3) {
+          if (uc.field_d[param2][4] != 3) {
             stackIn_48_0 = null;
             return (String) (stackIn_48_0);
           }
-          if (var8.accessoryType == 0) {
+          if (var8.field_ab == 0) {
             return null;
           }
-          var6Lifetime2 = bw.field_f[var7.accessoryType];
+          var6Lifetime2 = bw.field_f[var7.field_ab];
           array$2 = new String[3];
           stackIn_41_0 = 4800;
           stackIn_41_1 = io.field_u;
@@ -133,9 +133,9 @@ class kq extends fw {
           stackIn_41_3 = array$2;
           stackIn_41_4 = 1;
           if (og.field_m == 1) {
-            stackIn_42_5 = fq.field_f[spellId];
+            stackIn_42_5 = fq.field_f[param2];
           } else {
-            stackIn_42_5 = fq.field_f[spellId].toLowerCase();
+            stackIn_42_5 = fq.field_f[param2].toLowerCase();
           }
           stackIn_41_3[stackIn_41_4] = stackIn_42_5;
           stackIn_44_4 = 2;
@@ -151,13 +151,13 @@ class kq extends fw {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_51_0 = var5;
-          stackIn_51_1 = new StringBuilder().append("kq.G(").append(tileY).append(',').append(obfuscationGuard).append(',').append(spellId).append(',');
-          if (battlefield == null) {
+          stackIn_51_1 = new StringBuilder().append("kq.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
             stackIn_52_2 = "null";
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(tileX).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -167,16 +167,16 @@ class kq extends fw {
         cn.field_o = param1;
         ia.field_g = param3;
         if (param2 != 87) {
-          Battlefield var6 = (Battlefield) null;
-          kq.getSpellConfirmationPrompt(-11, 19, 8, (Battlefield) null, -83);
+          ha var6 = (ha) null;
+          kq.a(-11, 19, 8, (ha) null, -83);
         }
     }
 
-    kq(Widget param0) {
+    kq(kb param0) {
         try {
           this.field_Q = param0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "kq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -187,27 +187,27 @@ class kq extends fw {
         field_M = null;
     }
 
-    final static void enterTaggedPayload(int headerBitPosition, int obfuscationGuard, int headerBitLength, int payloadBitLength, CipherPacketBuffer packet) {
+    final static void a(int param0, int param1, int param2, int param3, bv param4) {
         int var5_int = 0;
-        if (payloadBitLength <= headerBitLength) {
-          packet.setReadBitPosition((byte) -88, headerBitPosition + headerBitLength);
+        if (param3 <= param2) {
+          param4.d((byte) -88, param0 + param2);
           return;
         }
-        packet.setReadBitPosition((byte) -40, payloadBitLength + headerBitPosition);
-        if (obfuscationGuard != -24232) {
+        param4.d((byte) -40, param3 + param0);
+        if (param1 != -24232) {
           return;
         }
         try {
-          var5_int = packet.readBits(-99, headerBitLength);
-          packet.setWriteBitPosition(headerBitPosition, (byte) 0);
-          packet.writeBits(-16807, headerBitLength, var5_int);
-          packet.setReadBitPosition((byte) -73, headerBitPosition);
+          var5_int = param4.g(-99, param2);
+          param4.c(param0, (byte) 0);
+          param4.a(-16807, param2, var5_int);
+          param4.d((byte) -73, param0);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kq.E(" + headerBitPosition + ',' + obfuscationGuard + ',' + headerBitLength + ',' + payloadBitLength + ',' + (packet != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "kq.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(int param0, Widget param1) {
+    final boolean a(int param0, kb param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -230,7 +230,7 @@ class kq extends fw {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -265,13 +265,13 @@ class kq extends fw {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
     static {
         field_L = 0;
         field_M = new me(15, 0, 1, 0);
-        field_P = new RgbSprite(270, 70);
+        field_P = new wk(270, 70);
     }
 }

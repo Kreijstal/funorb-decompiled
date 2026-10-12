@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ar extends DualLinkedNode {
+final class ar extends ms {
     static int field_w;
     static String field_v;
     int[] field_A;
     private int[][] field_u;
-    static RgbSprite field_D;
+    static wk field_D;
     static String field_y;
     private String[] field_z;
     static int field_C;
@@ -17,24 +17,24 @@ final class ar extends DualLinkedNode {
         try {
           ku.a((byte) -93, true, param1);
           if (param0 != 2) {
-            ar.getCampaignMission(87, 100, -49);
+            ar.a(87, 100, -49);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ar.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ar.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(boolean param0) {
         int var2 = 0;
-        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (this.field_A != null) {
           for (var2 = 0; this.field_A.length > var2; var2++) {
             this.field_A[var2] = oe.c(this.field_A[var2], 32768);
           }
         }
         if (!param0) {
-          PacketBuffer var4 = (PacketBuffer) null;
-          this.a((byte) -5, 7, (PacketBuffer) null);
+          vh var4 = (vh) null;
+          this.a((byte) -5, 7, (vh) null);
         }
     }
 
@@ -55,22 +55,22 @@ final class ar extends DualLinkedNode {
         return cp.field_b[var4];
     }
 
-    final static CampaignMission getCampaignMission(int campaignIndex, int missionIndex, int minimumMissionIndex) {
-        CampaignDefinition var4 = br.getCampaign(campaignIndex, (byte) -14);
-        CampaignDefinition var3 = var4;
+    final static om a(int param0, int param1, int param2) {
+        cf var4 = br.a(param0, (byte) -14);
+        cf var3 = var4;
         if (var3 == null) {
           return null;
         }
-        if (missionIndex < minimumMissionIndex) {
+        if (param1 < param2) {
           return null;
         }
-        if (missionIndex >= var3.missions.length) {
+        if (param1 >= var3.field_n.length) {
           return null;
         }
-        return var4.missions[missionIndex];
+        return var4.field_n[param1];
     }
 
-    final static void a(RgbSprite[][] param0, int[] param1, byte param2, byte[] param3, int param4, ResourceArchive param5, ResourceArchive param6, byte[] param7, String[] param8, int[] param9, boolean param10, int param11, String[][] param12, IndexedSprite[] param13, ResourceArchive param14, String[][] param15, RgbSprite[][] param16) {
+    final static void a(wk[][] param0, int[] param1, byte param2, byte[] param3, int param4, kl param5, kl param6, byte[] param7, String[] param8, int[] param9, boolean param10, int param11, String[][] param12, ru[] param13, kl param14, String[][] param15, wk[][] param16) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -189,11 +189,11 @@ final class ar extends DualLinkedNode {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void a(vh param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -201,13 +201,13 @@ final class ar extends DualLinkedNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           if (param1 != 91) {
             return;
           }
           while (true) {
-            var3_int = param0.readUnsignedByte(0);
+            var3_int = param0.k(0);
             if (var3_int == 0) {
               return;
             }
@@ -223,7 +223,7 @@ final class ar extends DualLinkedNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ final class ar extends DualLinkedNode {
         int var3 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
-        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
         if (this.field_z == null) {
@@ -243,7 +243,7 @@ final class ar extends DualLinkedNode {
           discarded$2 = var5.append(this.field_z[var3]);
         }
         if (param0 != 97) {
-          field_D = (RgbSprite) null;
+          field_D = (wk) null;
         }
         return var2.toString();
     }
@@ -261,7 +261,7 @@ final class ar extends DualLinkedNode {
     ar() {
     }
 
-    private final void a(byte param0, int param1, PacketBuffer param2) {
+    private final void a(byte param0, int param1, vh param2) {
         int[] array$0 = null;
         int var9 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -275,29 +275,29 @@ final class ar extends DualLinkedNode {
         int var7 = 0;
         me var8 = null;
         int var10 = 0;
-        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var10 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
           var4_int = -110 % ((13 - param0) / 56);
           if (param1 != 1) {
             if (param1 == 2) {
-              var5 = param2.readUnsignedByte(0);
+              var5 = param2.k(0);
               this.field_A = new int[var5];
               for (var6 = 0; var5 > var6; var6++) {
-                this.field_A[var6] = param2.readUnsignedShort((byte) -104);
+                this.field_A[var6] = param2.e((byte) -104);
               }
             } else if (param1 == 3) {
-              var5 = param2.readUnsignedByte(0);
+              var5 = param2.k(0);
               this.field_B = new int[var5];
               this.field_u = new int[var5][];
               for (var6 = 0; var5 > var6; var6++) {
-                var7 = param2.readUnsignedShort((byte) -104);
-                var8 = UnitInfoPopup.b(0, var7);
+                var7 = param2.e((byte) -104);
+                var8 = fi.b(0, var7);
                 if (var8 != null) {
                   this.field_B[var6] = var7;
                   array$0 = new int[var8.field_f];
                   this.field_u[var6] = array$0;
                   for (var9 = 0; var9 < var8.field_f; var9++) {
-                    this.field_u[var6][var9] = param2.readUnsignedShort((byte) -104);
+                    this.field_u[var6][var9] = param2.e((byte) -104);
                   }
                 }
               }
@@ -320,7 +320,7 @@ final class ar extends DualLinkedNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

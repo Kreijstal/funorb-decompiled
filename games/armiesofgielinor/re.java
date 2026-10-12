@@ -15,16 +15,16 @@ final class re extends dr {
         return (hf.field_a & 1 << param0) != 0 ? true : false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, wk[] param4, int param5) {
         try {
           if (param2 >= -112) {
             field_E = (String) null;
           }
           param4[0].f(param1, param0, param5);
-          param4[1].d(param4[1].pixelWidth + param1, param0, -(param4[2].pixelWidth << 1) + param3, param4[2].pixelHeight, param5);
-          param4[2].f(param3 + (param1 - param4[2].pixelWidth), param0, param5);
+          param4[1].d(param4[1].field_y + param1, param0, -(param4[2].field_y << 1) + param3, param4[2].field_v, param5);
+          param4[2].f(param3 + (param1 - param4[2].field_y), param0, param5);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "re.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "re.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class re extends dr {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

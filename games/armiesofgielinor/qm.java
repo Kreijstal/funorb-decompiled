@@ -15,12 +15,12 @@ final class qm extends nl {
         }
     }
 
-    qm(int param0, int param1, int param2, int param3, WidgetPainter param4, Widget param5) {
+    qm(int param0, int param1, int param2, int param3, kh param4, kb param5) {
         super(param0, param1, param2, param3, param4, (qo) null);
         try {
           this.field_E = param5;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "qm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -29,42 +29,42 @@ final class qm extends nl {
           return;
         }
         if (0 != param3) {
-          if (this.width == 0) {
+          if (this.field_l == 0) {
             return;
           }
-          if (this.height != 0) {
-            t.field_c.a(this.y + param1 + this.height, this.x + param0 + this.width, this.y + param1, -101, this.x + param0);
-            this.field_E.a(this.x + param0, this.y + param1, (byte) -110, param3);
+          if (this.field_w != 0) {
+            t.field_c.a(this.field_p + param1 + this.field_w, this.field_B + param0 + this.field_l, this.field_p + param1, -101, this.field_B + param0);
+            this.field_E.a(this.field_B + param0, this.field_p + param1, (byte) -110, param3);
             t.field_c.a(58);
             return;
           }
           return;
         }
-        if (this.painter == null) {
-          if (this.width == 0) {
+        if (this.field_k == null) {
+          if (this.field_l == 0) {
             return;
           }
-          if (this.height != 0) {
-            t.field_c.a(this.y + param1 + this.height, this.x + param0 + this.width, this.y + param1, -101, this.x + param0);
-            this.field_E.a(this.x + param0, this.y + param1, (byte) -110, param3);
+          if (this.field_w != 0) {
+            t.field_c.a(this.field_p + param1 + this.field_w, this.field_B + param0 + this.field_l, this.field_p + param1, -101, this.field_B + param0);
+            this.field_E.a(this.field_B + param0, this.field_p + param1, (byte) -110, param3);
             t.field_c.a(58);
             return;
           }
           return;
         }
-        this.painter.paintWidget((Widget) (this), param0, -102, true, param1);
-        if (this.width == 0) {
+        this.field_k.a((kb) (this), param0, -102, true, param1);
+        if (this.field_l == 0) {
           return;
         }
-        if (this.height != 0) {
-          t.field_c.a(this.y + param1 + this.height, this.x + param0 + this.width, this.y + param1, -101, this.x + param0);
-          this.field_E.a(this.x + param0, this.y + param1, (byte) -110, param3);
+        if (this.field_w != 0) {
+          t.field_c.a(this.field_p + param1 + this.field_w, this.field_B + param0 + this.field_l, this.field_p + param1, -101, this.field_B + param0);
+          this.field_E.a(this.field_B + param0, this.field_p + param1, (byte) -110, param3);
           t.field_c.a(58);
           return;
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -75,7 +75,7 @@ final class qm extends nl {
           if (param3 <= 103) {
             field_J = (tp) null;
           }
-          stackIn_6_0 = (this.containsPointer(1, param1, param5, param0, param2)) && (super.a(param0, param1, param2, 127, param4, param5, param6));
+          stackIn_6_0 = (this.b(1, param1, param5, param0, param2)) && (super.a(param0, param1, param2, 127, param4, param5, param6));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,7 +87,7 @@ final class qm extends nl {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

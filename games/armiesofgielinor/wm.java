@@ -21,7 +21,7 @@ final class wm {
         field_b = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, nr param6, int param7, byte param8, int param9, int param10, int param11, nr param12, int param13, BitmapFont param14, int param15, int param16, BitmapFont param17, int param18, int param19, nr param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, nr param6, int param7, byte param8, int param9, int param10, int param11, nr param12, int param13, ka param14, int param15, int param16, ka param17, int param18, int param19, nr param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -80,7 +80,7 @@ final class wm {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class wm {
         int var9Lifetime3;
         int var8Lifetime1;
         int var9Lifetime1Lifetime1;
-        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
         vq.field_a.field_Jb.field_fb.b(108);
         var4 = null;
         var5 = 0;
@@ -120,27 +120,27 @@ final class wm {
         for (var7 = -1 + lk.field_h; var7 >= 0; var7--) {
           var8_ref_mo = an.field_F[var7];
           var9 = 0;
-          if (!NodeIterator.field_a &&
-            AnimationPlayer.field_g > var5) {
+          if (!bb.field_a &&
+            vj.field_g > var5) {
             var10_int = kp.a(var8_ref_mo.field_b, -125);
             if (var8_ref_mo.a(true) >= var10_int && (var8_ref_mo.field_f ||
-              !IndexedSpriteBase.a(var8_ref_mo.field_m, -3404))) {
+              !si.a(var8_ref_mo.field_m, -3404))) {
               var9 = 1;
             }
           }
           if (var9 != 0) {
             if (null == var8_ref_mo.field_u ||
-              MoveEvent.field_J) {
+              kr.field_J) {
               if (null == var8_ref_mo.field_u) {
                 s.field_d = s.field_d + 1;
               }
               var10 = af.a(var8_ref_mo, (byte) 103);
-              var11 = var10 + BitmapFont.c(var8_ref_mo.field_h);
-              var12 = PlayerProfile.a(var8_ref_mo, -5);
-              var8_ref_mo.field_u = new je(0L, SpellConfirmationDialog.field_i, var11);
-              var8_ref_mo.field_u.field_T = (SpellConfirmationDialog.field_i.field_T >> 1 & 8355711) + (var12 - ((var12 & 16711423) >> 1));
-              var8_ref_mo.field_u.field_Z = IntrusiveNode.field_e;
-              var8_ref_mo.field_u.field_W = (SpellConfirmationDialog.field_i.field_W >> 1 & 8355711) + var12 - (8355711 & var12 >> 1);
+              var11 = var10 + ka.c(var8_ref_mo.field_h);
+              var12 = hm.a(var8_ref_mo, -5);
+              var8_ref_mo.field_u = new je(0L, uf.field_i, var11);
+              var8_ref_mo.field_u.field_T = (uf.field_i.field_T >> 1 & 8355711) + (var12 - ((var12 & 16711423) >> 1));
+              var8_ref_mo.field_u.field_Z = tc.field_e;
+              var8_ref_mo.field_u.field_W = (uf.field_i.field_W >> 1 & 8355711) + var12 - (8355711 & var12 >> 1);
               var6 = var6 + param0;
               var8_ref_mo.field_u.field_N = var12;
             }
@@ -169,17 +169,17 @@ final class wm {
         var8Lifetime1 = -var7Lifetime1 + (var6 + (vq.field_a.field_Jb.field_ob + vq.field_a.field_Jb.field_nb));
         vq.field_a.field_Jb.field_ob = vq.field_a.field_Jb.field_ob - var8Lifetime1;
         vq.field_a.field_Jb.field_ab = vq.field_a.field_Jb.field_ab + var8Lifetime1;
-        if (MoveEvent.field_J) {
+        if (kr.field_J) {
           vq.field_a.field_Jb.field_ob = var7Lifetime1;
           vq.field_a.field_Jb.field_nb = -vq.field_a.field_Jb.field_ob + var7Lifetime1;
-          if (MoveEvent.field_J) {
+          if (kr.field_J) {
             vq.field_a.field_Jb.field_ab = vq.field_a.field_Nb.field_ob - vq.field_a.field_Jb.field_ob;
             vq.field_a.field_Jb.field_db = 0;
-            MoveEvent.field_J = false;
+            kr.field_J = false;
             cu.field_c = true;
           }
           if (hf.field_c) {
-            if (null == UnitCycler.field_g) {
+            if (null == eu.field_g) {
               var9Lifetime1 = -vq.field_a.field_Jb.field_nb - (vq.field_a.field_Jb.field_ob - vq.field_a.field_Nb.field_ob);
               if (cu.field_c) {
                 vq.field_a.field_Jb.field_db = var9Lifetime1 - vq.field_a.field_Jb.field_ab;
@@ -205,14 +205,14 @@ final class wm {
           return (mo) (var4);
         }
         vq.field_a.field_Jb.field_nb = -vq.field_a.field_Jb.field_ob + var7Lifetime1;
-        if (MoveEvent.field_J) {
+        if (kr.field_J) {
           vq.field_a.field_Jb.field_ab = vq.field_a.field_Nb.field_ob - vq.field_a.field_Jb.field_ob;
           vq.field_a.field_Jb.field_db = 0;
-          MoveEvent.field_J = false;
+          kr.field_J = false;
           cu.field_c = true;
         }
         if (hf.field_c) {
-          if (null == UnitCycler.field_g) {
+          if (null == eu.field_g) {
             var9Lifetime2 = -vq.field_a.field_Jb.field_nb - (vq.field_a.field_Jb.field_ob - vq.field_a.field_Nb.field_ob);
             if (!cu.field_c) {
               vq.field_a.a(param0, true, 2 * param0 * param3, false);
@@ -249,31 +249,31 @@ final class wm {
         int var4Lifetime1;
         if (param0 != 0) {
           wm.a(-77, -115, (byte) -120, -123);
-          if (null == Spell.field_b) {
+          if (null == ik.field_b) {
             return;
           }
-          var3 = Spell.field_b.a(param2, (byte) -112);
+          var3 = ik.field_b.a(param2, (byte) -112);
           if (var3 != -2) {
             if (var3 != -1) {
-              var4 = Spell.field_b.o(0) ? 1 : 0;
-              CampaignRewardPreview.a(Spell.field_b.k(1), var3, Spell.field_b.field_Sb, 29231, var4 != 0, param1);
+              var4 = ik.field_b.o(0) ? 1 : 0;
+              fu.a(ik.field_b.k(1), var3, ik.field_b.field_Sb, 29231, var4 != 0, param1);
             }
-            Spell.field_b = null;
+            ik.field_b = null;
             ot.g(76);
             return;
           }
           return;
         }
-        if (null == Spell.field_b) {
+        if (null == ik.field_b) {
           return;
         }
-        var3Lifetime1 = Spell.field_b.a(param2, (byte) -112);
+        var3Lifetime1 = ik.field_b.a(param2, (byte) -112);
         if (var3Lifetime1 != -2) {
           if (var3Lifetime1 != -1) {
-            var4Lifetime1 = Spell.field_b.o(0) ? 1 : 0;
-            CampaignRewardPreview.a(Spell.field_b.k(1), var3Lifetime1, Spell.field_b.field_Sb, 29231, var4Lifetime1 != 0, param1);
+            var4Lifetime1 = ik.field_b.o(0) ? 1 : 0;
+            fu.a(ik.field_b.k(1), var3Lifetime1, ik.field_b.field_Sb, 29231, var4Lifetime1 != 0, param1);
           }
-          Spell.field_b = null;
+          ik.field_b = null;
           ot.g(76);
           return;
         }

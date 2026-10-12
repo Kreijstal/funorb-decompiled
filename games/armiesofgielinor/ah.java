@@ -5,11 +5,11 @@ final class ah {
     static String field_c;
     static int field_b;
     static String field_d;
-    static CoatOfArms localCoat;
+    static ln field_a;
 
     public static void a(byte param0) {
         field_c = null;
-        localCoat = null;
+        field_a = null;
         field_d = null;
         if (param0 == 32) {
           return;
@@ -19,13 +19,13 @@ final class ah {
 
     final static void b(byte param0) {
         if (param0 == 90) {
-          vl.outgoingPacket.writeCipheredOpcode(32161, 71);
-          AiInfluenceMap.writeCoatOfArms(localCoat.parts, (byte) 100, vl.outgoingPacket, localCoat.colourIndices);
+          vl.field_n.h(32161, 71);
+          ir.a(field_a.field_a, (byte) 100, vl.field_n, field_a.field_b);
           return;
         }
         ah.a((byte) 9, -104);
-        vl.outgoingPacket.writeCipheredOpcode(32161, 71);
-        AiInfluenceMap.writeCoatOfArms(localCoat.parts, (byte) 100, vl.outgoingPacket, localCoat.colourIndices);
+        vl.field_n.h(32161, 71);
+        ir.a(field_a.field_a, (byte) 100, vl.field_n, field_a.field_b);
     }
 
     final static Class a(String param0, byte param1) throws ClassNotFoundException {
@@ -49,7 +49,7 @@ final class ah {
             return stackIn_3_0;
           }
           if (param1 != 90) {
-            localCoat = (CoatOfArms) null;
+            field_a = (ln) null;
           }
           if (param0.equals("I")) {
             stackIn_8_0 = Integer.TYPE;
@@ -91,7 +91,7 @@ final class ah {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -103,22 +103,22 @@ final class ah {
     }
 
     final static void a(byte param0, int param1) {
-        IntrusiveNode var2 = null;
+        tc var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         iw var4 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          var4 = (iw) (cg.field_c.first((byte) 107));
+          var4 = (iw) (cg.field_c.e((byte) 107));
           while (var4 != null) {
             ot.a((byte) 112, param1, var4);
-            var4 = (iw) (cg.field_c.next((byte) 123));
+            var4 = (iw) (cg.field_c.a((byte) 123));
           }
-          var2 = ta.field_O.first((byte) 116);
+          var2 = ta.field_O.e((byte) 116);
           while (var2 != null) {
-            RegionAnchor.a(param1, (byte) -32);
-            var2 = ta.field_O.next((byte) 123);
+            a.a(param1, (byte) -32);
+            var2 = ta.field_O.a((byte) 123);
           }
           if (param0 == 33) {
             return;
@@ -128,13 +128,13 @@ final class ah {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2_ref), "ah.E(" + param0 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) var2_ref), "ah.E(" + param0 + ',' + param1 + ')');
         }
     }
 
     static {
         field_b = 0;
         field_c = "Flying units cannot carry additional melee weapons.";
-        localCoat = new CoatOfArms();
+        field_a = new ln();
     }
 }

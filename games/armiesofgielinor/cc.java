@@ -20,7 +20,7 @@ final class cc {
           if (param4 != -1) {
             field_b = -105;
           }
-          stackIn_3_0 = MatchSetupPanel.a(param3, -1, param2, param1, false, param8, param6, param5, param9, false, param0, param7);
+          stackIn_3_0 = dm.a(param3, -1, param2, param1, false, param8, param6, param5, param9, false, param0, param7);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -44,11 +44,11 @@ final class cc {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param9).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param9).append(')').toString());
         }
     }
 
-    final static tu a(ResourceArchive param0, int param1, ResourceArchive param2, boolean param3, int param4) {
+    final static tu a(kl param0, int param1, kl param2, boolean param3, int param4) {
         RuntimeException var5 = null;
         boolean stackIn_3_0 = false;
         tu stackIn_9_0 = null;
@@ -66,7 +66,7 @@ final class cc {
           if (!param3) {
             field_a = 104;
           }
-          stackIn_9_0 = ArmiesOfGielinor.a(param2.getFile((byte) 107, param4, param1), true);
+          stackIn_9_0 = ArmiesOfGielinor.a(param2.a((byte) 107, param4, param1), true);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -84,7 +84,7 @@ final class cc {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

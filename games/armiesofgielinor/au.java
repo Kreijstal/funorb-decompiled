@@ -53,15 +53,15 @@ final class au extends je {
 
     final boolean k(int param0) {
         if (param0 == -7) {
-          return !this.isSecondaryLinked((byte) 90) ? true : false;
+          return !this.a((byte) 90) ? true : false;
         }
         this.d((byte) -65);
-        return !this.isSecondaryLinked((byte) 90) ? true : false;
+        return !this.a((byte) 90) ? true : false;
     }
 
     final int d(byte param0) {
         int var2 = -52 / ((35 - param0) / 38);
-        return (int)this.getSecondaryKey(116);
+        return (int)this.a(116);
     }
 
     au(int param0) {
@@ -175,7 +175,7 @@ final class au extends je {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
         }
     }
 

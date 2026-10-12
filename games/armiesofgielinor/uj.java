@@ -56,7 +56,7 @@ final class uj extends mk {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class uj extends mk {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param1);
-          var3 = SummonRequest.a(var5, false);
+          var3 = hw.a(var5, false);
           if (var3 != null) {
             stackIn_2_0 = var3;
             return stackIn_2_0;
@@ -109,7 +109,7 @@ final class uj extends mk {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -133,10 +133,10 @@ final class uj extends mk {
 
     final static me[] c(byte param0) {
         if (param0 > 100) {
-          return new me[]{jk.field_b, na.field_G, oa.field_F, PacketBuffer.field_l, tl.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, Widget.field_y, MapLayout.field_q, nf.field_Ib, rs.field_v, kq.field_M};
+          return new me[]{jk.field_b, na.field_G, oa.field_F, vh.field_l, tl.field_i, nn.field_c, ab.field_d, lg.field_e, du.field_e, kb.field_y, lo.field_q, nf.field_Ib, rs.field_v, kq.field_M};
         }
         uj.h(67);
-        return new me[]{jk.field_b, na.field_G, oa.field_F, PacketBuffer.field_l, tl.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, Widget.field_y, MapLayout.field_q, nf.field_Ib, rs.field_v, kq.field_M};
+        return new me[]{jk.field_b, na.field_G, oa.field_F, vh.field_l, tl.field_i, nn.field_c, ab.field_d, lg.field_e, du.field_e, kb.field_y, lo.field_q, nf.field_Ib, rs.field_v, kq.field_M};
     }
 
     uj(fn param0) {

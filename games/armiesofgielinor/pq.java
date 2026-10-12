@@ -16,12 +16,12 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (BattleCharacter.field_q == null) {
+          if (lf.field_q == null) {
             return;
           }
           av.field_a = 0;
-          DiskCacheRequest.field_B = -1;
-          ResourceArchive.field_i = -1;
+          nh.field_B = -1;
+          kl.field_i = -1;
           ku.field_I = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -34,17 +34,17 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, int param2) {
-        CipherPacketBuffer var3 = vl.outgoingPacket;
-        var3.writeCipheredOpcode(32161, param2);
-        var3.writeByte(1, 3);
+        bv var3 = vl.field_n;
+        var3.h(32161, param2);
+        var3.b(1, 3);
         int var4 = -78 % ((param0 - 10) / 46);
-        var3.writeByte(1, 9);
-        var3.writeShort(true, param1);
+        var3.b(1, 9);
+        var3.b(true, param1);
     }
 
     public final synchronized void mousePressed(java.awt.event.MouseEvent param0) {
@@ -55,27 +55,27 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (BattleCharacter.field_q != null) {
+          if (lf.field_q != null) {
             av.field_a = 0;
             mq.field_Xb = param0.getX();
-            BoundedFile.field_d = param0.getY();
+            ei.field_d = param0.getY();
             vi.b(-112);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              ArchiveIndex.field_k = 2;
+              jm.field_k = 2;
               ob.field_J = 2;
             } else {
-              ArchiveIndex.field_k = 1;
+              jm.field_k = 1;
               ob.field_J = 1;
             }
             var2_int = param0.getModifiers();
             if ((var2_int & 16) != 0) {
-              EffectPresentation.field_g = EffectPresentation.field_g | 1;
+              tb.field_g = tb.field_g | 1;
             }
             if ((var2_int & 8) != 0) {
-              EffectPresentation.field_g = EffectPresentation.field_g | 2;
+              tb.field_g = tb.field_g | 2;
             }
             if ((4 & var2_int) != 0) {
-              EffectPresentation.field_g = EffectPresentation.field_g | 4;
+              tb.field_g = tb.field_g | 4;
             }
             ku.field_I = true;
           }
@@ -94,7 +94,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -105,12 +105,12 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (BattleCharacter.field_q == null) {
+          if (lf.field_q == null) {
             return;
           }
           av.field_a = 0;
-          DiskCacheRequest.field_B = param0.getX();
-          ResourceArchive.field_i = param0.getY();
+          nh.field_B = param0.getX();
+          kl.field_i = param0.getY();
           ku.field_I = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -123,7 +123,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -133,18 +133,18 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             param0.consume();
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pq.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "pq.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0) {
         if (param0 == 4) {
-          PaletteRegionMap.field_g.advance(-99);
+          pr.field_g.a(-99);
           ug.field_b = ug.field_b + 1;
           return;
         }
         field_a = (cr) null;
-        PaletteRegionMap.field_g.advance(-99);
+        pr.field_g.a(-99);
         ug.field_b = ug.field_b + 1;
     }
 
@@ -155,12 +155,12 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (BattleCharacter.field_q == null) {
+          if (lf.field_q == null) {
             return;
           }
           av.field_a = 0;
-          DiskCacheRequest.field_B = param0.getX();
-          ResourceArchive.field_i = param0.getY();
+          nh.field_B = param0.getX();
+          kl.field_i = param0.getY();
           ku.field_I = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -173,7 +173,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -194,24 +194,24 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-          if (BattleCharacter.field_q != null) {
+          if (lf.field_q != null) {
             av.field_a = 0;
-            DiskCacheRequest.field_B = param0.getX();
-            ResourceArchive.field_i = param0.getY();
+            nh.field_B = param0.getX();
+            kl.field_i = param0.getY();
             ku.field_I = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pq.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "pq.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (BattleCharacter.field_q != null) {
+          if (lf.field_q != null) {
             ob.field_J = 0;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pq.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "pq.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -223,19 +223,19 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != BattleCharacter.field_q) {
+          if (null != lf.field_q) {
             av.field_a = 0;
             ob.field_J = 0;
             ku.field_I = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 16) != 0) {
-              EffectPresentation.field_g = EffectPresentation.field_g & -2;
+              tb.field_g = tb.field_g & -2;
             }
             if ((var2_int & 8) != 0) {
-              EffectPresentation.field_g = EffectPresentation.field_g & -3;
+              tb.field_g = tb.field_g & -3;
             }
             if ((var2_int & 4) != 0) {
-              EffectPresentation.field_g = EffectPresentation.field_g & -5;
+              tb.field_g = tb.field_g & -5;
             }
           }
           if (!param0.isPopupTrigger()) {
@@ -253,7 +253,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

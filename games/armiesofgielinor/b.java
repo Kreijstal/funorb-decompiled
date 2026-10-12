@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class b extends IntrusiveNode {
+final class b extends tc {
     boolean field_m;
     static la field_n;
     int[] field_l;
@@ -32,8 +32,8 @@ final class b extends IntrusiveNode {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        PacketBuffer var16 = null;
-        PacketBuffer var17 = null;
+        vh var16 = null;
+        vh var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -43,47 +43,47 @@ final class b extends IntrusiveNode {
         int var4Lifetime3;
         int var4Lifetime4;
         int var4Lifetime5;
-        var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var15 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          var16 = new PacketBuffer(param0);
+          var16 = new vh(param0);
           var17 = var16;
-          var17.position = param0.length - 2;
-          iw.field_n = var17.readUnsignedShort((byte) -104);
+          var17.field_q = param0.length - 2;
+          iw.field_n = var17.e((byte) -104);
           j.field_e = new int[iw.field_n];
           c.field_e = new int[iw.field_n];
-          CampaignMenuButton.field_g = new int[iw.field_n];
-          MapTile.field_e = new boolean[iw.field_n];
+          iq.field_g = new int[iw.field_n];
+          ne.field_e = new boolean[iw.field_n];
           qm.field_K = new int[iw.field_n];
-          AnimationPlayer.field_j = new byte[iw.field_n][];
-          CampaignMenuEntry.field_z = new byte[iw.field_n][];
-          var17.position = -(iw.field_n * 8) - 7 + param0.length;
-          lg.field_d = var17.readUnsignedShort((byte) -104);
-          wr.field_J = var17.readUnsignedShort((byte) -104);
-          var3 = 1 + (255 & var17.readUnsignedByte(param1 + 1));
+          vj.field_j = new byte[iw.field_n][];
+          cq.field_z = new byte[iw.field_n][];
+          var17.field_q = -(iw.field_n * 8) - 7 + param0.length;
+          lg.field_d = var17.e((byte) -104);
+          wr.field_J = var17.e((byte) -104);
+          var3 = 1 + (255 & var17.k(param1 + 1));
           for (var4 = 0; iw.field_n > var4; var4++) {
-            j.field_e[var4] = var16.readUnsignedShort((byte) -104);
+            j.field_e[var4] = var16.e((byte) -104);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < iw.field_n; var4Lifetime1++) {
-            CampaignMenuButton.field_g[var4Lifetime1] = var17.readUnsignedShort((byte) -104);
+            iq.field_g[var4Lifetime1] = var17.e((byte) -104);
           }
           for (var4Lifetime2 = 0; iw.field_n > var4Lifetime2; var4Lifetime2++) {
-            qm.field_K[var4Lifetime2] = var17.readUnsignedShort((byte) -104);
+            qm.field_K[var4Lifetime2] = var17.e((byte) -104);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < iw.field_n; var4Lifetime3++) {
-            c.field_e[var4Lifetime3] = var17.readUnsignedShort((byte) -104);
+            c.field_e[var4Lifetime3] = var17.e((byte) -104);
           }
           if (param1 != -1) {
             field_n = (la) null;
           }
-          var17.position = 3 + (-(var3 * 3) + (-(8 * iw.field_n) - 7) + param0.length);
-          MovementPresentation.field_j = new int[var3];
+          var17.field_q = 3 + (-(var3 * 3) + (-(8 * iw.field_n) - 7) + param0.length);
+          qv.field_j = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            MovementPresentation.field_j[var4Lifetime4] = var17.d((byte) -13);
-            if (MovementPresentation.field_j[var4Lifetime4] == 0) {
-              MovementPresentation.field_j[var4Lifetime4] = 1;
+            qv.field_j[var4Lifetime4] = var17.d((byte) -13);
+            if (qv.field_j[var4Lifetime4] == 0) {
+              qv.field_j[var4Lifetime4] = 1;
             }
           }
-          var17.position = 0;
+          var17.field_q = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < iw.field_n; var4Lifetime5++) {
             var5 = qm.field_K[var4Lifetime5];
             var6 = c.field_e[var4Lifetime5];
@@ -91,20 +91,20 @@ final class b extends IntrusiveNode {
             var20 = new byte[var7];
             var18 = var20;
             var8 = var18;
-            AnimationPlayer.field_j[var4Lifetime5] = var20;
+            vj.field_j[var4Lifetime5] = var20;
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            CampaignMenuEntry.field_z[var4Lifetime5] = var21;
+            cq.field_z[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.readUnsignedByte(0);
+            var11 = var17.k(0);
             if ((1 & var11) == 0) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.readByte((byte) -90);
+                var8[var12] = var17.a((byte) -90);
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$0 = var17.readByte((byte) 102);
+                  dupTemp$0 = var17.a((byte) 102);
                   var9[var12] = dupTemp$0;
                   var13 = dupTemp$0;
                   stackIn_49_0 = var10;
@@ -119,13 +119,13 @@ final class b extends IntrusiveNode {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var6 > var13; var13++) {
-                  var8[var13 * var5 + var12] = var17.readByte((byte) -106);
+                  var8[var13 * var5 + var12] = var17.a((byte) -106);
                 }
               }
               if ((2 & var11) != 0) {
                 for (var12 = 0; var12 < var5; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$1 = var17.readByte((byte) -67);
+                    dupTemp$1 = var17.a((byte) -67);
                     var9[var12 + var5 * var13] = dupTemp$1;
                     var14 = dupTemp$1;
                     stackIn_37_0 = var10;
@@ -139,7 +139,7 @@ final class b extends IntrusiveNode {
                 }
               }
             }
-            MapTile.field_e[var4Lifetime5] = var10 != 0;
+            ne.field_e[var4Lifetime5] = var10 != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -152,57 +152,57 @@ final class b extends IntrusiveNode {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void a(boolean param0) {
         field_n = null;
         if (!param0) {
-          b.calculateMissionScore(94, 33, -110, (byte) 28, -37);
+          b.a(94, 33, -110, (byte) 28, -37);
         }
     }
 
-    final static int calculateMissionScore(int turnTarget, int damageTarget, int damageTaken, byte obfuscationGuard, int turnsTaken) {
-        int turnScore;
-        int turnBonus;
-        int damageBonus;
-        int damageScore;
-        if (turnTarget == 0) {
+    final static int a(int param0, int param1, int param2, byte param3, int param4) {
+        int var5;
+        int var6;
+        int var7;
+        int var6Lifetime1;
+        if (param0 == 0) {
           return 1;
         }
-        if (damageTarget == 0) {
+        if (param1 == 0) {
           return 1;
         }
-        if (obfuscationGuard != 25) {
+        if (param3 != 25) {
           return -81;
         }
-        turnScore = (-turnsTaken + turnTarget * 2) * 500 / turnTarget;
-        turnScore = Math.max(0, turnScore);
-        if (turnScore > 500) {
-          turnBonus = turnScore - 500;
-          turnScore = turnBonus / 3 + 500;
-          if (turnScore > 1000) {
-            turnScore = 1000;
+        var5 = (-param4 + param0 * 2) * 500 / param0;
+        var5 = Math.max(0, var5);
+        if (var5 > 500) {
+          var6 = var5 - 500;
+          var5 = var6 / 3 + 500;
+          if (var5 > 1000) {
+            var5 = 1000;
           }
         }
-        damageScore = (2 * damageTarget - damageTaken) * 500 / damageTarget;
-        damageScore = Math.max(0, damageScore);
-        if (damageScore > 500) {
-          damageBonus = damageScore - 500;
-          damageScore = 500 + damageBonus / 2;
-          if (damageScore > 1000) {
-            damageScore = 1000;
+        var6Lifetime1 = (2 * param1 - param2) * 500 / param1;
+        var6Lifetime1 = Math.max(0, var6Lifetime1);
+        if (var6Lifetime1 > 500) {
+          var7 = var6Lifetime1 - 500;
+          var6Lifetime1 = 500 + var7 / 2;
+          if (var6Lifetime1 > 1000) {
+            var6Lifetime1 = 1000;
           }
         }
-        return Math.max(100, Math.min(turnScore + damageScore, 2000));
+        return Math.max(100, Math.min(var5 + var6Lifetime1, 2000));
     }
 
     b() {
         this.field_m = false;
     }
 
-    final static int getUnitUnlockOrdinal(boolean obfuscationGuard, int unitType) {
+    final static int a(boolean param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException var2 = null;
@@ -210,14 +210,14 @@ final class b extends IntrusiveNode {
         int stackIn_10_0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          if (obfuscationGuard) {
+          if (param0) {
             field_n = (la) null;
           }
-          for (var2_int = 0; var2_int < AnimationFrameSet.unitUnlockGroups.length; var2_int++) {
-            for (var3 = 0; AnimationFrameSet.unitUnlockGroups[var2_int].length > var3; var3++) {
-              if (~AnimationFrameSet.unitUnlockGroups[var2_int][var3] == ~unitType) {
+          for (var2_int = 0; var2_int < wp.field_H.length; var2_int++) {
+            for (var3 = 0; wp.field_H[var2_int].length > var3; var3++) {
+              if (~wp.field_H[var2_int][var3] == ~param1) {
                 stackIn_10_0 = var3;
                 return stackIn_10_0;
               }
@@ -228,7 +228,7 @@ final class b extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "b.A(" + obfuscationGuard + ',' + unitType + ')');
+          throw ig.a((Throwable) ((Object) var2), "b.A(" + param0 + ',' + param1 + ')');
         }
     }
 

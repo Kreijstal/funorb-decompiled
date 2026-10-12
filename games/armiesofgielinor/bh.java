@@ -6,7 +6,7 @@ final class bh extends nl {
     static String field_L;
     static String[] field_M;
     static String field_I;
-    static ResourceArchive field_H;
+    static kl field_H;
     int field_K;
 
     final static String a(int param0, byte param1) {
@@ -33,7 +33,7 @@ final class bh extends nl {
     }
 
     public bh() {
-        super(0, 0, 0, 0, (WidgetPainter) null, (qo) null);
+        super(0, 0, 0, 0, (kh) null, (qo) null);
         this.field_K = 256;
     }
 
@@ -48,32 +48,32 @@ final class bh extends nl {
           return;
         }
         if (this.field_K == 256) {
-          this.field_E.a(this.x + param0, param1 + this.y, (byte) -125, param3);
+          this.field_E.a(this.field_B + param0, param1 + this.field_p, (byte) -125, param3);
           return;
         }
-        RgbSprite var6 = new RgbSprite(this.field_E.width, this.field_E.height);
+        wk var6 = new wk(this.field_E.field_l, this.field_E.field_w);
         if (param2 < -82) {
-          CombatSandbox.a(var6, 3);
+          vn.a(var6, 3);
           this.field_E.a(0, 0, (byte) -86, param3);
           rf.b(-18862);
-          var6.e(this.x + param0, param1 + this.y, this.field_K);
+          var6.e(this.field_B + param0, param1 + this.field_p, this.field_K);
           return;
         }
         field_M = (String[]) null;
-        CombatSandbox.a(var6, 3);
+        vn.a(var6, 3);
         this.field_E.a(0, 0, (byte) -86, param3);
         rf.b(-18862);
-        var6.e(this.x + param0, param1 + this.y, this.field_K);
+        var6.e(this.field_B + param0, param1 + this.field_p, this.field_K);
     }
 
-    bh(Widget param0) {
-        super(param0.x, param0.y, param0.width, param0.height, (WidgetPainter) null, (qo) null);
+    bh(kb param0) {
+        super(param0.field_B, param0.field_p, param0.field_l, param0.field_w, (kh) null, (qo) null);
         try {
-          param0.setBounds(0, this.width, 0, 8192, this.height);
+          param0.a(0, this.field_l, 0, 8192, this.field_w);
           this.field_K = 256;
           this.field_E = param0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -82,8 +82,8 @@ final class bh extends nl {
         int var2 = mj.field_c * mj.field_c;
         int var3 = -(gk.field_J * gk.field_J) + var2;
         if (!param0) {
-          no.field_T.a(-4 + (SoftwareRaster.height - 120) - 90, -20500, 199, 90, var1 - var3 * 199 / var2);
-          ov.field_i.a(-4 + (SoftwareRaster.height - 120), -20500, 438, 0, var3 * 438 / var2 + 202 + var1);
+          no.field_T.a(-4 + (qn.field_g - 120) - 90, -20500, 199, 90, var1 - var3 * 199 / var2);
+          ov.field_i.a(-4 + (qn.field_g - 120), -20500, 438, 0, var3 * 438 / var2 + 202 + var1);
           return;
         }
     }

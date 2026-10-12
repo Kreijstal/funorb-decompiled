@@ -14,7 +14,7 @@ final class se {
     final static String a(String param0, int param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
-        CipherPacketBuffer var5 = null;
+        bv var5 = null;
         CharSequence var6 = null;
         String stackIn_5_0 = null;
         String stackIn_8_0 = null;
@@ -33,18 +33,18 @@ final class se {
           }
           var6 = (CharSequence) ((Object) param0);
           if (!hg.a((byte) -90, var6)) {
-            stackIn_5_0 = SectorCacheStore.field_d;
+            stackIn_5_0 = bc.field_d;
             return stackIn_5_0;
           }
           if (gt.a(param0, (byte) -114)) {
-            stackIn_8_0 = MoveAttackRequest.field_F;
+            stackIn_8_0 = am.field_F;
             return stackIn_8_0;
           }
           if (2 != th.field_a) {
             stackIn_11_0 = ct.field_m;
             return stackIn_11_0;
           }
-          if (IndexedSpriteBase.a(param0, -3404)) {
+          if (si.a(param0, -3404)) {
             stackIn_14_0 = fo.a(4800, ts.field_k, new String[]{param0});
             return stackIn_14_0;
           }
@@ -53,16 +53,16 @@ final class se {
             return stackIn_17_0;
           }
           if (jj.a(89, param0)) {
-            stackIn_20_0 = fo.a(4800, PopupPresentation.field_p, new String[]{param0});
+            stackIn_20_0 = fo.a(4800, ql.field_p, new String[]{param0});
             return stackIn_20_0;
           }
-          var5 = vl.outgoingPacket;
-          var5.writeCipheredOpcode(32161, param1);
-          var5.position = var5.position + 1;
-          var4 = var5.position;
-          var5.writeByte(1, 2);
+          var5 = vl.field_n;
+          var5.h(32161, param1);
+          var5.field_q = var5.field_q + 1;
+          var4 = var5.field_q;
+          var5.b(1, 2);
           var5.b(param0, 13851);
-          var5.writeByteLengthPrefix(var5.position - var4, 5930);
+          var5.e(var5.field_q - var4, 5930);
           stackIn_22_0 = null;
           return (String) (stackIn_22_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -75,7 +75,7 @@ final class se {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -88,11 +88,11 @@ final class se {
         field_h = null;
     }
 
-    final static RgbSprite[] a(byte param0) {
+    final static wk[] a(byte param0) {
         int var2 = 0;
         int var6_int = 0;
         int var7 = 0;
-        RgbSprite[] var1;
+        wk[] var1;
         int var3;
         int[] var6;
         int var8;
@@ -102,31 +102,31 @@ final class se {
         byte[] var20;
         int[] var21;
         byte[] var22;
-        var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var1 = new RgbSprite[iw.field_n];
+        var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+        var1 = new wk[iw.field_n];
         for (var2 = 0; iw.field_n > var2; var2++) {
           var3 = c.field_e[var2] * qm.field_K[var2];
-          var20 = AnimationPlayer.field_j[var2];
-          if (!MapTile.field_e[var2]) {
+          var20 = vj.field_j[var2];
+          if (!ne.field_e[var2]) {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var6_int < var3; var6_int++) {
-              var9[var6_int] = MovementPresentation.field_j[rn.a(255, (int) var20[var6_int])];
+              var9[var6_int] = qv.field_j[rn.a(255, (int) var20[var6_int])];
             }
-            var1[var2] = new RgbSprite(lg.field_d, wr.field_J, j.field_e[var2], CampaignMenuButton.field_g[var2], qm.field_K[var2], c.field_e[var2], var21);
+            var1[var2] = new wk(lg.field_d, wr.field_J, j.field_e[var2], iq.field_g[var2], qm.field_K[var2], c.field_e[var2], var21);
           } else {
-            var22 = CampaignMenuEntry.field_z[var2];
+            var22 = cq.field_z[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = oe.c(MovementPresentation.field_j[rn.a((int) var20[var7], 255)], rn.a((int) var22[var7], 255) << 24);
+              var6[var7] = oe.c(qv.field_j[rn.a((int) var20[var7], 255)], rn.a((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (RgbSprite) ((Object) new nj(lg.field_d, wr.field_J, j.field_e[var2], CampaignMenuButton.field_g[var2], qm.field_K[var2], c.field_e[var2], var16));
+            var1[var2] = (wk) ((Object) new nj(lg.field_d, wr.field_J, j.field_e[var2], iq.field_g[var2], qm.field_K[var2], c.field_e[var2], var16));
           }
         }
         if (param0 != 32) {
-          return (RgbSprite[]) null;
+          return (wk[]) null;
         }
         rj.d((byte) 101);
         return var1;
