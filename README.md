@@ -159,6 +159,14 @@ restoration/registration, village upgrades and owner-removal recounts. Loaded
 spell tables, casting eligibility, rendered effects and complex match endings
 remain unverified.
 
+Global spell effects, favour updates and spell consumption now have native
+fixtures and guide documentation. The pending-cast lock and defeat/consumption bypass
+have names. Tests preserve successful cast idempotency, partial-failure ordering,
+mana gates/caps/overflow and shared-team updates. State/player/unit/tile checksum
+helpers now have names and fixed vectors, with omitted fields and the discarded
+post-event calculation documented. Original-bytecode checksum matching, loaded
+spell tables and live server compatibility remain unverified.
+
 Camera overview grouping, centroid bounds, hold state and explicit tile focus
 now have reviewed names, alongside directional panning, dragging and velocity
 smoothing. Native fixtures preserve integer truncation/overflow and the speed-1

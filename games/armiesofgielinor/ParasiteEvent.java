@@ -130,7 +130,7 @@ final class ParasiteEvent extends GameEvent {
             GameplayController var6 = (GameplayController) null;
             this.a((NodeDeque) null, (byte) 109, (GameplayController) null);
           }
-          fl.a(battlefield, -126);
+          fl.recomputeClientStateChecksum(battlefield, -126);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "md.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

@@ -238,7 +238,7 @@ final class DamageEvent extends GameEvent {
             battlefield.damageTakenByPlayer[this.unit.ownerPlayer] = battlefield.damageTakenByPlayer[this.unit.ownerPlayer] + var3_int;
             battlefield.d(this.unit.ownerPlayer, battlefield.damageTakenByPlayer[this.unit.ownerPlayer], 72, 11);
           }
-          hf.a(battlefield, (byte) 9, true);
+          hf.recomputeClientStateChecksum(battlefield, (byte) 9, true);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "nw.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

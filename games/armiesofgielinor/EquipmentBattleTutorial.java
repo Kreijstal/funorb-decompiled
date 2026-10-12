@@ -28,7 +28,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
           } else {
             this.setEquipmentStage(-124, 1);
           }
-          controller.battlefield.field_f = true;
+          controller.battlefield.bypassDefeatAndSpellConsumption = true;
           controller.battlefield.tiles[157].ownerPlayer = 1;
           controller.battlefield.playerTurnCounts[0] = 10;
           controller.battlefield.tiles[217].ownerPlayer = 1;

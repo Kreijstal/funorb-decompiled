@@ -223,7 +223,7 @@ final class DeathEvent extends GameEvent {
             stackIn_9_1 = !(this.field_z);
             ((Unit) (Object) stackIn_8_0).a(stackIn_9_1, (byte) 105);
           }
-          hf.a(battlefield, (byte) 9, true);
+          hf.recomputeClientStateChecksum(battlefield, (byte) 9, true);
           if (obfuscationGuard == -26661) {
             return;
           }

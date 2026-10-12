@@ -451,7 +451,7 @@ final class MoveEvent extends GameEvent {
             battlefield.registerUnit(obfuscationGuard ^ -18501, var9.occupant);
           }
           this.unit.movementSpent = true;
-          fl.a(battlefield, obfuscationGuard ^ 26718);
+          fl.recomputeClientStateChecksum(battlefield, obfuscationGuard ^ 26718);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -92,7 +92,7 @@ final class TelepopEvent extends GameEvent {
             var6.packedFlag256 = false;
             this.unit.unlink(obfuscationGuard ^ 26707);
           }
-          fl.a(battlefield, -112);
+          fl.recomputeClientStateChecksum(battlefield, -112);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "q.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

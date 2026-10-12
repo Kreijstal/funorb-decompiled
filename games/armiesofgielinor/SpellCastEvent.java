@@ -29,7 +29,7 @@ final class SpellCastEvent extends GameEvent {
         try {
           this.applied = true;
           this.spell.applyEffect(this.castingPlayer, battlefield, 26123);
-          battlefield.a((byte) -49, this.spell, this.selectionMode, this.castingPlayer);
+          battlefield.consumeEquippedSpell((byte) -49, this.spell, this.selectionMode, this.castingPlayer);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pj.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

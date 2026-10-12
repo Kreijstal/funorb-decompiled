@@ -27,14 +27,14 @@ final class fl {
     WidgetPainter field_q;
     static int[] field_f;
 
-    final static void a(Battlefield param0, int param1) {
+    final static void recomputeClientStateChecksum(Battlefield battlefield, int obfuscationGuard) {
         try {
-          if (param1 >= -107) {
+          if (obfuscationGuard >= -107) {
             field_f = (int[]) null;
           }
-          hf.a(param0, (byte) 9, true);
+          hf.recomputeClientStateChecksum(battlefield, (byte) 9, true);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fl.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fl.I(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class fl {
         field_u = null;
         if (param0 <= 75) {
           Battlefield var2 = (Battlefield) null;
-          fl.a((Battlefield) null, -110);
+          fl.recomputeClientStateChecksum((Battlefield) null, -110);
         }
         field_l = null;
     }

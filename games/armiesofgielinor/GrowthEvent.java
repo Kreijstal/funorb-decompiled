@@ -50,7 +50,7 @@ final class GrowthEvent extends GameEvent {
           if (var6 != null) {
             var6.movementSpent = true;
           }
-          fl.a(battlefield, obfuscationGuard ^ 26716);
+          fl.recomputeClientStateChecksum(battlefield, obfuscationGuard ^ 26716);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kf.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

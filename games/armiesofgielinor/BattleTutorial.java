@@ -2028,7 +2028,7 @@ class BattleTutorial {
           this.field_o = false;
           this.setStage(0, -30659);
           this.controller.battlefield.tiles[DeployAction.field_s[0]].ownerPlayer = 1;
-          this.controller.battlefield.field_f = true;
+          this.controller.battlefield.bypassDefeatAndSpellConsumption = true;
           this.controller.battlefield.teamStructureCounts[1][1] = 1;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "iu.<init>(" + (controller != null ? "{...}" : "null") + ')');

@@ -324,7 +324,7 @@ final class StateChangeEvent extends GameEvent {
             battlefield.e(14, this.tileX, this.playerId, 1 + this.tileY);
             battlefield.e(obfuscationGuard + 26675, this.tileX, this.playerId, -1 + this.tileY);
           }
-          fl.a(battlefield, -111);
+          fl.recomputeClientStateChecksum(battlefield, -111);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

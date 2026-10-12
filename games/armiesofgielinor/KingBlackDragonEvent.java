@@ -97,7 +97,7 @@ final class KingBlackDragonEvent extends GameEvent {
             this.describeEvent((byte) -70, false);
           }
           battlefield.kingBlackDragonSummoned = true;
-          fl.a(battlefield, -117);
+          fl.recomputeClientStateChecksum(battlefield, -117);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rl.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

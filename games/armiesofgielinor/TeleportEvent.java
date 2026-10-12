@@ -107,7 +107,7 @@ final class TeleportEvent extends GameEvent {
               battlefield.refreshTileEffectsNear(this.unit.tileY, this.unit.tileX, 0, 3);
             }
           }
-          fl.a(battlefield, -124);
+          fl.recomputeClientStateChecksum(battlefield, -124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

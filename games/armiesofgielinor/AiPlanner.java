@@ -1168,7 +1168,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           }
           var7 = var5.selectCandidate((byte) -102);
           if (var7 != null) {
-            this.battlefield.field_J = true;
+            this.battlefield.spellCastPending = true;
             var8 = new UnitSpell(var4, var7.destinationX, var7.destinationY);
             var9 = new SpellCastRequest(var8, -1, this.playerId);
             this.executeActionRequest(var9, -126);

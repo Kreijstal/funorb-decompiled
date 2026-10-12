@@ -87,7 +87,7 @@ final class TelefragEvent extends GameEvent {
             TelefragEvent.g(99);
           }
           this.unit.movementSpent = true;
-          fl.a(battlefield, -114);
+          fl.recomputeClientStateChecksum(battlefield, -114);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kn.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

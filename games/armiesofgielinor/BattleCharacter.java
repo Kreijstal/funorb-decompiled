@@ -38,7 +38,7 @@ final class BattleCharacter {
     static PointerInputHandler pointerInputHandler;
     static java.awt.Font field_g;
     static NodeDeque field_c;
-    static int[] field_i;
+    static int[] runeCapsByOption;
     static int field_t;
 
     final void d(byte param0) {
@@ -611,7 +611,7 @@ final class BattleCharacter {
     }
 
     public static void c(int param0) {
-        field_i = null;
+        runeCapsByOption = null;
         field_v = null;
         pointerInputHandler = null;
         field_c = null;
@@ -861,7 +861,7 @@ final class BattleCharacter {
         field_v = "The magic of creating Mana.";
         pointerInputHandler = new PointerInputHandler();
         field_c = new NodeDeque();
-        field_i = new int[]{0, 25, 75, 150, 0};
+        runeCapsByOption = new int[]{0, 25, 75, 150, 0};
         field_t = -7;
     }
 }

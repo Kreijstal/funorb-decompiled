@@ -763,7 +763,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         if (this.battlefield.field_b) {
           this.battlefield.unitLossCounts[this.ownerPlayer] = this.battlefield.unitLossCounts[this.ownerPlayer] + 1;
         }
-        this.battlefield.b(this.ownerPlayer, true);
+        this.battlefield.checkPlayerDefeat(this.ownerPlayer, true);
     }
 
     final boolean s(int param0) {

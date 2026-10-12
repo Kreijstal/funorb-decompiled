@@ -159,7 +159,7 @@ final class CombatEvent extends GameEvent {
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {
         try {
           battlefield.queueCombatConsequences(this.attackerY, this.targetDeltaX, this.attackerDies, this.attackerX, this.targetDeltaY, 111, this.defenderDies, this.attackerDamage, this.defenderDamage, this.unseenUnitType);
-          hf.a(battlefield, (byte) 9, true);
+          hf.recomputeClientStateChecksum(battlefield, (byte) 9, true);
           if (obfuscationGuard != -26661) {
             this.targetDeltaY = -38;
           }

@@ -5,7 +5,7 @@ final class ManaEvent extends GameEvent {
     static String field_A;
     int manaPoints;
     int playerId;
-    int field_z;
+    int manaTypeCode;
     static String[] field_y;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, byte param8) {
@@ -248,7 +248,7 @@ final class ManaEvent extends GameEvent {
               battlefield.teamManaCollected[battlefield.getPlayerTeamIndex(this.playerId, -1)] = 1000000000;
             }
           }
-          fl.a(battlefield, -120);
+          fl.recomputeClientStateChecksum(battlefield, -120);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vp.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
@@ -266,7 +266,7 @@ final class ManaEvent extends GameEvent {
           if (param1 < -84) {
             return false;
           }
-          this.field_z = -20;
+          this.manaTypeCode = -20;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -288,11 +288,11 @@ final class ManaEvent extends GameEvent {
         }
     }
 
-    ManaEvent(int param0, int param1, int param2) {
+    ManaEvent(int manaTypeCode, int manaPoints, int playerId) {
         this.eventKind = 9;
-        this.field_z = param0;
-        this.manaPoints = param1;
-        this.playerId = param2;
+        this.manaTypeCode = manaTypeCode;
+        this.manaPoints = manaPoints;
+        this.playerId = playerId;
     }
 
     final static RgbSprite a(int param0, int param1, int param2, ResourceArchive param3) {

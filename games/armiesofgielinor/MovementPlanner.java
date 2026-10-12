@@ -843,7 +843,7 @@ final class MovementPlanner {
         if (this.spellId <= -1) {
           return (ActionRequest) ((Object) var4);
         }
-        this.battlefield.field_J = true;
+        this.battlefield.spellCastPending = true;
         return (ActionRequest) ((Object) new SpellCastRequest(new ActionSpell(this.spellId, var4), this.selectionMode, actingPlayer));
     }
 
@@ -1180,7 +1180,7 @@ final class MovementPlanner {
             packet.writeByte(1, 160);
             packet.writeByte(1, this.selectionMode);
             packet.writeShort(true, this.spellId);
-            this.battlefield.field_J = true;
+            this.battlefield.spellCastPending = true;
           }
           packet.writeByte(1, this.pathLength >> 8 | 0);
           packet.writeByte(1, this.pathLength & 255);

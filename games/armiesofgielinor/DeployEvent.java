@@ -144,7 +144,7 @@ final class DeployEvent extends GameEvent {
               battlefield.a(var5, var4, (byte) -13, var6.ownerPlayer);
             }
           }
-          fl.a(battlefield, -115);
+          fl.recomputeClientStateChecksum(battlefield, -115);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

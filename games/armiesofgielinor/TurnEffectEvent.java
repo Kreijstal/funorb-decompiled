@@ -119,7 +119,7 @@ final class TurnEffectEvent extends GameEvent {
             this.unit.bonusStrength = this.unit.bonusStrength - 1;
             this.unit.queueDeathOrRevival(22331);
           }
-          fl.a(battlefield, -112);
+          fl.recomputeClientStateChecksum(battlefield, -112);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

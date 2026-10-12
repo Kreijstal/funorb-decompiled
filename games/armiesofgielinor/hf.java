@@ -45,18 +45,18 @@ final class hf {
         }
     }
 
-    final static void a(Battlefield param0, byte param1, boolean param2) {
-        if (param0 == null ||
-          param0.field_b) {
+    final static void recomputeClientStateChecksum(Battlefield battlefield, byte obfuscationGuard, boolean unusedFlag) {
+        if (battlefield == null ||
+          battlefield.field_b) {
           return;
         }
         try {
-          if (param1 != 9) {
+          if (obfuscationGuard != 9) {
             field_e = (String) null;
           }
-          param0.a(true, param0.localPlayer);
+          battlefield.computeStateChecksum(true, battlefield.localPlayer);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hf.C(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + unusedFlag + ')');
         }
     }
 

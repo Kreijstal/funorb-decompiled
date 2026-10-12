@@ -10,8 +10,8 @@ final class ug extends IOException {
 
     final static void a(int param0, Battlefield param1, boolean param2) {
         int var3_int = param1.localPlayer;
-        int var4 = param1.a(true, var3_int);
-        System.out.println("--- STATE DUMP REQUESTED - SERVER CHECKSUM: " + Integer.toString(RadialSummonMenu.field_d, 16) + " SERVER CHECKSUM: " + Integer.toString(param1.a(true, var3_int), 16) + " ---");
+        int var4 = param1.computeStateChecksum(true, var3_int);
+        System.out.println("--- STATE DUMP REQUESTED - SERVER CHECKSUM: " + Integer.toString(RadialSummonMenu.field_d, 16) + " SERVER CHECKSUM: " + Integer.toString(param1.computeStateChecksum(true, var3_int), 16) + " ---");
         System.out.println(param1.describeBattlefield(var3_int, -248));
         if (param0 != 0) {
           return;

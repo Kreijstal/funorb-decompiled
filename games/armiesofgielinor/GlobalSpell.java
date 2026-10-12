@@ -62,7 +62,7 @@ final class GlobalSpell extends Spell {
         RuntimeException decompiledCaughtException = null;
         try {
           if (uc.spellDefinitions[this.spellId][5] == 1) {
-            battlefield.b(uc.spellDefinitions[this.spellId][6], castingPlayer, 1, (byte) 92);
+            battlefield.addGodFavour(uc.spellDefinitions[this.spellId][6], castingPlayer, 1, (byte) 92);
           }
           if (uc.spellDefinitions[this.spellId][5] == 0) {
             battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new ManaEvent(4, uc.spellDefinitions[this.spellId][6], castingPlayer)));

@@ -44,7 +44,7 @@ final class UpkeepEvent extends GameEvent {
               battlefield.d(var5.ownerPlayer, battlefield.field_ub[var4.ownerPlayer], 85, 10);
             }
           }
-          fl.a(battlefield, -113);
+          fl.recomputeClientStateChecksum(battlefield, -113);
           if (obfuscationGuard == -26661) {
             return;
           }

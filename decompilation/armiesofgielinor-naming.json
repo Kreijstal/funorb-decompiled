@@ -1001,7 +1001,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:Battlefield.a(ZI)I#0"
+      "renamedSymbol": "B:Battlefield.computeStateChecksum(ZI)I#0"
     },
     {
       "symbol": "B:ha.a(ZI)I#1",
@@ -1009,7 +1009,7 @@
       "to": "scanLoop2",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:Battlefield.a(ZI)I#1"
+      "renamedSymbol": "B:Battlefield.computeStateChecksum(ZI)I#1"
     },
     {
       "symbol": "B:ha.a(ZZI)Lat;#0",
@@ -6428,6 +6428,14 @@
       "renamedSymbol": "F:Battlefield.playerMana:[I"
     },
     {
+      "symbol": "F:ha.field_J:Z",
+      "originalName": "field_J",
+      "to": "spellCastPending",
+      "evidence": "ha.java: Spell requests set this lock; successful post-effect bookkeeping clears it and gameplay selection refuses while it is set.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:Battlefield.spellCastPending:Z"
+    },
+    {
       "symbol": "F:ha.field_K:Lom;",
       "originalName": "field_K",
       "to": "campaignMission",
@@ -6450,6 +6458,14 @@
       "evidence": "ha.java: Match condition initialization, elimination-mask/order maintenance and outcome/ranking calculations. The secondary inactive mask meaning is limited to observed player exclusion.",
       "confidence": "reviewed",
       "renamedSymbol": "F:Battlefield.matchConditions:LMatchConditionRegistry;"
+    },
+    {
+      "symbol": "F:ha.field_Q:I",
+      "originalName": "field_Q",
+      "to": "runeCapOption",
+      "evidence": "ha.java: Constructor/snapshot stores this option index; diagnostics, initialization and player checksum read runeCapsByOption.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:Battlefield.runeCapOption:I"
     },
     {
       "symbol": "F:ha.field_R:I",
@@ -6530,6 +6546,14 @@
       "evidence": "ha.java: Match condition initialization, elimination-mask/order maintenance and outcome/ranking calculations. The secondary inactive mask meaning is limited to observed player exclusion.",
       "confidence": "reviewed",
       "renamedSymbol": "F:Battlefield.eliminatedPlayerMask:I"
+    },
+    {
+      "symbol": "F:ha.field_f:Z",
+      "originalName": "field_f",
+      "to": "bypassDefeatAndSpellConsumption",
+      "evidence": "ha.java: The two battlefield uses skip defeat elimination and equipped-spell/rune consumption; no unverified game-mode label is assigned.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:Battlefield.bypassDefeatAndSpellConsumption:Z"
     },
     {
       "symbol": "F:ha.field_fb:[I",
@@ -9698,6 +9722,14 @@
       "evidence": "lf.java: BattleCharacter constructor and idle/arrival tests. Model variants may differ from the logical unit type.",
       "confidence": "reviewed",
       "renamedSymbol": "F:BattleCharacter.animationFrame:I"
+    },
+    {
+      "symbol": "F:lf.field_i:[I",
+      "originalName": "field_i",
+      "to": "runeCapsByOption",
+      "evidence": "lf.java: Fixed option table 0/25/75/150/0 initializes rune caps and decides whether remaining cap enters the player checksum.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:BattleCharacter.runeCapsByOption:[I"
     },
     {
       "symbol": "F:lf.field_j:I",
@@ -14252,6 +14284,14 @@
       "renamedSymbol": "F:ManaEvent.manaPoints:I"
     },
     {
+      "symbol": "F:vp.field_z:I",
+      "originalName": "field_z",
+      "to": "manaTypeCode",
+      "evidence": "vp.java: Constructor retains the supplied numeric type, but applyToBattlefield does not branch on it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ManaEvent.manaTypeCode:I"
+    },
+    {
       "symbol": "F:vt.field_l:I",
       "originalName": "field_l",
       "to": "lastQuickChatChannel",
@@ -17364,6 +17404,30 @@
       "renamedSymbol": "L:ModelMesh.applyMaskedGroupTransform(I[IIIIZI[I)V#8"
     },
     {
+      "symbol": "L:ha.a(BILne;)I#0",
+      "originalName": "var4_int",
+      "to": "checksum",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computeTileChecksum(BILMapTile;)I#0"
+    },
+    {
+      "symbol": "L:ha.a(BLik;II)V#1",
+      "originalName": "var5_int",
+      "to": "consumeSlot",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.consumeEquippedSpell(BLSpell;II)V#1"
+    },
+    {
+      "symbol": "L:ha.a(BLik;II)V#2",
+      "originalName": "stackIn_4_0",
+      "to": "consumptionEnabled",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.consumeEquippedSpell(BLSpell;II)V#2"
+    },
+    {
       "symbol": "L:ha.a(BLvh;)V#1",
       "originalName": "var3_int",
       "to": "stepsRemaining",
@@ -17780,6 +17844,102 @@
       "renamedSymbol": "L:Battlefield.readSummonEvent(LPacketBuffer;Z)V#4"
     },
     {
+      "symbol": "L:ha.a(ZI)I#1",
+      "originalName": "var3",
+      "to": "checksum",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#1"
+    },
+    {
+      "symbol": "L:ha.a(ZI)I#10",
+      "originalName": "var5Lifetime1",
+      "to": "unitOwner",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#10"
+    },
+    {
+      "symbol": "L:ha.a(ZI)I#11",
+      "originalName": "var7Lifetime1",
+      "to": "unitX",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#11"
+    },
+    {
+      "symbol": "L:ha.a(ZI)I#2",
+      "originalName": "var4",
+      "to": "tilePlayerScope",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#2"
+    },
+    {
+      "symbol": "L:ha.a(ZI)I#3",
+      "originalName": "var5",
+      "to": "tileX",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#3"
+    },
+    {
+      "symbol": "L:ha.a(ZI)I#4",
+      "originalName": "var6_int",
+      "to": "tileY",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#4"
+    },
+    {
+      "symbol": "L:ha.a(ZI)I#5",
+      "originalName": "var6",
+      "to": "unit",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#5"
+    },
+    {
+      "symbol": "L:ha.a(ZI)I#6",
+      "originalName": "var7",
+      "to": "tileIndex",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#6"
+    },
+    {
+      "symbol": "L:ha.a(ZI)I#7",
+      "originalName": "var8_ref_ne",
+      "to": "tile",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#7"
+    },
+    {
+      "symbol": "L:ha.a(ZI)I#8",
+      "originalName": "var8",
+      "to": "unitY",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#8"
+    },
+    {
+      "symbol": "L:ha.a(ZI)I#9",
+      "originalName": "var9",
+      "to": "obfuscationControl",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#9"
+    },
+    {
+      "symbol": "L:ha.b(IIIB)V#0",
+      "originalName": "dupTemp$1",
+      "to": "playerFavour",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.addGodFavour(IIIB)V#0"
+    },
+    {
       "symbol": "L:ha.b(IIZ)V#13",
       "originalName": "var10",
       "to": "receivingPlayers",
@@ -17810,6 +17970,14 @@
       "evidence": "ha.java: Reviewed lexical ordinal and condition, survivor, elimination-order or leader-registration data flow.",
       "confidence": "reviewed",
       "renamedSymbol": "L:Battlefield.eliminatePlayer(IIZ)V#7"
+    },
+    {
+      "symbol": "L:ha.b(ILjd;)I#0",
+      "originalName": "var3_int",
+      "to": "checksum",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computeUnitChecksum(ILUnit;)I#0"
     },
     {
       "symbol": "L:ha.b(Lvh;B)V#10",
@@ -17986,6 +18154,38 @@
       "evidence": "ha.java: Reviewed lexical ordinal and condition, survivor, elimination-order or leader-registration data flow.",
       "confidence": "reviewed",
       "renamedSymbol": "L:Battlefield.initializeMatchConditions(I)V#9"
+    },
+    {
+      "symbol": "L:ha.n(II)I#2",
+      "originalName": "var3",
+      "to": "checksum",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computePlayerChecksum(II)I#2"
+    },
+    {
+      "symbol": "L:ha.n(II)I#3",
+      "originalName": "var4",
+      "to": "godSlot",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computePlayerChecksum(II)I#3"
+    },
+    {
+      "symbol": "L:ha.n(II)I#4",
+      "originalName": "var5",
+      "to": "godId",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computePlayerChecksum(II)I#4"
+    },
+    {
+      "symbol": "L:ha.n(II)I#5",
+      "originalName": "var6",
+      "to": "obfuscationControl",
+      "evidence": "ha.java: Reviewed spell resource policy or fixed state-checksum contribution at this exact declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Battlefield.computePlayerChecksum(II)I#5"
     },
     {
       "symbol": "L:hd.a(IILjava/lang/Object;BI)Lwo;#0",
@@ -27436,6 +27636,14 @@
       "renamedSymbol": "M:fk.paintWidget(LWidget;IIZI)V"
     },
     {
+      "symbol": "M:fl.a(Lha;I)V",
+      "originalName": "a",
+      "to": "recomputeClientStateChecksum",
+      "evidence": "fl.java: Delegates the post-event checksum hook; the pinned caller discards the computed value.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:fl.recomputeClientStateChecksum(LBattlefield;I)V"
+    },
+    {
       "symbol": "M:fp.a(BIIIII)V",
       "originalName": "a",
       "to": "setLayout",
@@ -27812,6 +28020,22 @@
       "renamedSymbol": "M:Battlefield.installMap(BII[LMapTile;)V"
     },
     {
+      "symbol": "M:ha.a(BILne;)I",
+      "originalName": "a",
+      "to": "computeTileChecksum",
+      "evidence": "ha.java: Uses terrain, corpse/explicit owner and tile owner contributions when the inclusion helper is true; preserves the fallback terrain-only branch.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Battlefield.computeTileChecksum(BILMapTile;)I"
+    },
+    {
+      "symbol": "M:ha.a(BLik;II)V",
+      "originalName": "a",
+      "to": "consumeEquippedSpell",
+      "evidence": "ha.java: Conditionally clears the equipped slot and subtracts the definition rune cost, with campaign-player gating; clears the pending lock after success.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Battlefield.consumeEquippedSpell(BLSpell;II)V"
+    },
+    {
       "symbol": "M:ha.a(BLvh;)V",
       "originalName": "a",
       "to": "readMoveEvent",
@@ -27924,6 +28148,14 @@
       "renamedSymbol": "M:Battlefield.registerUnit(ILUnit;)V"
     },
     {
+      "symbol": "M:ha.a(ILne;I)Z",
+      "originalName": "a",
+      "to": "includesTileInChecksum",
+      "evidence": "ha.java: The pinned implementation always returns true after guard arithmetic, independent of player and tile arguments.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Battlefield.includesTileInChecksum(ILMapTile;I)Z"
+    },
+    {
       "symbol": "M:ha.a(ILvh;)V",
       "originalName": "a",
       "to": "readStateChangeEvent",
@@ -28020,6 +28252,14 @@
       "renamedSymbol": "M:Battlefield.readSummonEvent(LPacketBuffer;Z)V"
     },
     {
+      "symbol": "M:ha.a(ZI)I",
+      "originalName": "a",
+      "to": "computeStateChecksum",
+      "evidence": "ha.java: XORs header/player/tile/unit contributions; negative player omits player-specific data and tile scope falls back to zero. Traversal consumes deque cursors.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Battlefield.computeStateChecksum(ZI)I"
+    },
+    {
       "symbol": "M:ha.a(ZII)V",
       "originalName": "a",
       "to": "applyTurnChange",
@@ -28068,6 +28308,14 @@
       "renamedSymbol": "M:Battlefield.isPlayerInactive(II)Z"
     },
     {
+      "symbol": "M:ha.b(IIIB)V",
+      "originalName": "b",
+      "to": "addGodFavour",
+      "evidence": "ha.java: Checks player/god bounds, adds with Java-int wrap, caps above five and updates high-water slot six only for guard 92.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Battlefield.addGodFavour(IIIB)V"
+    },
+    {
       "symbol": "M:ha.b(IIII)I",
       "originalName": "b",
       "to": "getTileEffects",
@@ -28092,12 +28340,28 @@
       "renamedSymbol": "M:Battlefield.eliminatePlayer(IIZ)V"
     },
     {
+      "symbol": "M:ha.b(ILjd;)I",
+      "originalName": "b",
+      "to": "computeUnitChecksum",
+      "evidence": "ha.java: XORs owner, selected flags, attacks, coordinates, strength/bonus/type fields with fixed integer multipliers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Battlefield.computeUnitChecksum(ILUnit;)I"
+    },
+    {
       "symbol": "M:ha.b(ILvh;)V",
       "originalName": "b",
       "to": "readLegacySnapshot",
       "evidence": "ha.java: Reads seed, turn limit, player designs, turn/player state and tile/unit data.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Battlefield.readLegacySnapshot(ILPacketBuffer;)V"
+    },
+    {
+      "symbol": "M:ha.b(IZ)Z",
+      "originalName": "b",
+      "to": "checkPlayerDefeat",
+      "evidence": "ha.java: Returns false for bypass mode or an unmet defeat condition, otherwise eliminates the player; retains the boolean guard side effect.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Battlefield.checkPlayerDefeat(IZ)Z"
     },
     {
       "symbol": "M:ha.b(IZIII)V",
@@ -28244,6 +28508,14 @@
       "renamedSymbol": "M:Battlefield.checkPlayerVictory(II)Z"
     },
     {
+      "symbol": "M:ha.n(II)I",
+      "originalName": "n",
+      "to": "computePlayerChecksum",
+      "evidence": "ha.java: XORs selected god favour, positive mana/collected mana, turn count and optionally remaining rune cap.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Battlefield.computePlayerChecksum(II)I"
+    },
+    {
       "symbol": "M:ha.o(II)I",
       "originalName": "o",
       "to": "getPlayerTeamIndex",
@@ -28346,6 +28618,14 @@
       "evidence": "hd.java: Requires privileged services and the selected Microsoft or reflective fullscreen adapter.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PlatformTaskService.supportsFullscreen(Z)Z"
+    },
+    {
+      "symbol": "M:hf.a(Lha;BZ)V",
+      "originalName": "a",
+      "to": "recomputeClientStateChecksum",
+      "evidence": "hf.java: Returns for null or battlefield flag b, otherwise computes the local-player checksum and discards it; the boolean parameter is unused.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:hf.recomputeClientStateChecksum(LBattlefield;BZ)V"
     },
     {
       "symbol": "M:hg.a(BLjava/lang/CharSequence;)Z",
@@ -39580,6 +39860,22 @@
       "renamedSymbol": "P:fk.paintWidget(LWidget;IIZI)V#4"
     },
     {
+      "symbol": "P:fl.a(Lha;I)V#0",
+      "originalName": "param0",
+      "to": "battlefield",
+      "evidence": "fl.java: Delegates the post-event checksum hook; the pinned caller discards the computed value.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:fl.recomputeClientStateChecksum(LBattlefield;I)V#0"
+    },
+    {
+      "symbol": "P:fl.a(Lha;I)V#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "fl.java: Delegates the post-event checksum hook; the pinned caller discards the computed value.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:fl.recomputeClientStateChecksum(LBattlefield;I)V#1"
+    },
+    {
       "symbol": "P:fp.<init>(JLfp;Ljava/lang/String;)V#0",
       "originalName": "param0",
       "to": "key",
@@ -40724,6 +41020,62 @@
       "renamedSymbol": "P:Battlefield.installMap(BII[LMapTile;)V#3"
     },
     {
+      "symbol": "P:ha.a(BILne;)I#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "ha.java: Uses terrain, corpse/explicit owner and tile owner contributions when the inclusion helper is true; preserves the fallback terrain-only branch.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.computeTileChecksum(BILMapTile;)I#0"
+    },
+    {
+      "symbol": "P:ha.a(BILne;)I#1",
+      "originalName": "param1",
+      "to": "playerId",
+      "evidence": "ha.java: Uses terrain, corpse/explicit owner and tile owner contributions when the inclusion helper is true; preserves the fallback terrain-only branch.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.computeTileChecksum(BILMapTile;)I#1"
+    },
+    {
+      "symbol": "P:ha.a(BILne;)I#2",
+      "originalName": "param2",
+      "to": "tile",
+      "evidence": "ha.java: Uses terrain, corpse/explicit owner and tile owner contributions when the inclusion helper is true; preserves the fallback terrain-only branch.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.computeTileChecksum(BILMapTile;)I#2"
+    },
+    {
+      "symbol": "P:ha.a(BLik;II)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "ha.java: Conditionally clears the equipped slot and subtracts the definition rune cost, with campaign-player gating; clears the pending lock after success.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.consumeEquippedSpell(BLSpell;II)V#0"
+    },
+    {
+      "symbol": "P:ha.a(BLik;II)V#1",
+      "originalName": "param1",
+      "to": "spell",
+      "evidence": "ha.java: Conditionally clears the equipped slot and subtracts the definition rune cost, with campaign-player gating; clears the pending lock after success.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.consumeEquippedSpell(BLSpell;II)V#1"
+    },
+    {
+      "symbol": "P:ha.a(BLik;II)V#2",
+      "originalName": "param2",
+      "to": "equippedSlot",
+      "evidence": "ha.java: Conditionally clears the equipped slot and subtracts the definition rune cost, with campaign-player gating; clears the pending lock after success.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.consumeEquippedSpell(BLSpell;II)V#2"
+    },
+    {
+      "symbol": "P:ha.a(BLik;II)V#3",
+      "originalName": "param3",
+      "to": "castingPlayer",
+      "evidence": "ha.java: Conditionally clears the equipped slot and subtracts the definition rune cost, with campaign-player gating; clears the pending lock after success.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.consumeEquippedSpell(BLSpell;II)V#3"
+    },
+    {
       "symbol": "P:ha.a(BLvh;)V#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
@@ -41164,6 +41516,30 @@
       "renamedSymbol": "P:Battlefield.registerUnit(ILUnit;)V#1"
     },
     {
+      "symbol": "P:ha.a(ILne;I)Z#0",
+      "originalName": "param0",
+      "to": "playerId",
+      "evidence": "ha.java: The pinned implementation always returns true after guard arithmetic, independent of player and tile arguments.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.includesTileInChecksum(ILMapTile;I)Z#0"
+    },
+    {
+      "symbol": "P:ha.a(ILne;I)Z#1",
+      "originalName": "param1",
+      "to": "tile",
+      "evidence": "ha.java: The pinned implementation always returns true after guard arithmetic, independent of player and tile arguments.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.includesTileInChecksum(ILMapTile;I)Z#1"
+    },
+    {
+      "symbol": "P:ha.a(ILne;I)Z#2",
+      "originalName": "param2",
+      "to": "obfuscationGuard",
+      "evidence": "ha.java: The pinned implementation always returns true after guard arithmetic, independent of player and tile arguments.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.includesTileInChecksum(ILMapTile;I)Z#2"
+    },
+    {
       "symbol": "P:ha.a(ILvh;)V#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
@@ -41476,6 +41852,22 @@
       "renamedSymbol": "P:Battlefield.readSummonEvent(LPacketBuffer;Z)V#1"
     },
     {
+      "symbol": "P:ha.a(ZI)I#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "ha.java: XORs header/player/tile/unit contributions; negative player omits player-specific data and tile scope falls back to zero. Traversal consumes deque cursors.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.computeStateChecksum(ZI)I#0"
+    },
+    {
+      "symbol": "P:ha.a(ZI)I#1",
+      "originalName": "param1",
+      "to": "playerId",
+      "evidence": "ha.java: XORs header/player/tile/unit contributions; negative player omits player-specific data and tile scope falls back to zero. Traversal consumes deque cursors.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.computeStateChecksum(ZI)I#1"
+    },
+    {
       "symbol": "P:ha.a(ZII)V#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
@@ -41596,6 +41988,38 @@
       "renamedSymbol": "P:Battlefield.isPlayerInactive(II)Z#1"
     },
     {
+      "symbol": "P:ha.b(IIIB)V#0",
+      "originalName": "param0",
+      "to": "godId",
+      "evidence": "ha.java: Checks player/god bounds, adds with Java-int wrap, caps above five and updates high-water slot six only for guard 92.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.addGodFavour(IIIB)V#0"
+    },
+    {
+      "symbol": "P:ha.b(IIIB)V#1",
+      "originalName": "param1",
+      "to": "playerId",
+      "evidence": "ha.java: Checks player/god bounds, adds with Java-int wrap, caps above five and updates high-water slot six only for guard 92.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.addGodFavour(IIIB)V#1"
+    },
+    {
+      "symbol": "P:ha.b(IIIB)V#2",
+      "originalName": "param2",
+      "to": "delta",
+      "evidence": "ha.java: Checks player/god bounds, adds with Java-int wrap, caps above five and updates high-water slot six only for guard 92.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.addGodFavour(IIIB)V#2"
+    },
+    {
+      "symbol": "P:ha.b(IIIB)V#3",
+      "originalName": "param3",
+      "to": "obfuscationGuard",
+      "evidence": "ha.java: Checks player/god bounds, adds with Java-int wrap, caps above five and updates high-water slot six only for guard 92.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.addGodFavour(IIIB)V#3"
+    },
+    {
       "symbol": "P:ha.b(IIII)I#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
@@ -41692,6 +42116,22 @@
       "renamedSymbol": "P:Battlefield.eliminatePlayer(IIZ)V#2"
     },
     {
+      "symbol": "P:ha.b(ILjd;)I#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "ha.java: XORs owner, selected flags, attacks, coordinates, strength/bonus/type fields with fixed integer multipliers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.computeUnitChecksum(ILUnit;)I#0"
+    },
+    {
+      "symbol": "P:ha.b(ILjd;)I#1",
+      "originalName": "param1",
+      "to": "unit",
+      "evidence": "ha.java: XORs owner, selected flags, attacks, coordinates, strength/bonus/type fields with fixed integer multipliers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.computeUnitChecksum(ILUnit;)I#1"
+    },
+    {
       "symbol": "P:ha.b(ILvh;)V#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
@@ -41706,6 +42146,22 @@
       "evidence": "ha.java: Reads seed, turn limit, player designs, turn/player state and tile/unit data.",
       "confidence": "reviewed",
       "renamedSymbol": "P:Battlefield.readLegacySnapshot(ILPacketBuffer;)V#1"
+    },
+    {
+      "symbol": "P:ha.b(IZ)Z#0",
+      "originalName": "param0",
+      "to": "playerId",
+      "evidence": "ha.java: Returns false for bypass mode or an unmet defeat condition, otherwise eliminates the player; retains the boolean guard side effect.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.checkPlayerDefeat(IZ)Z#0"
+    },
+    {
+      "symbol": "P:ha.b(IZ)Z#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "ha.java: Returns false for bypass mode or an unmet defeat condition, otherwise eliminates the player; retains the boolean guard side effect.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.checkPlayerDefeat(IZ)Z#1"
     },
     {
       "symbol": "P:ha.b(IZIII)V#0",
@@ -42020,6 +42476,22 @@
       "renamedSymbol": "P:Battlefield.checkPlayerVictory(II)Z#1"
     },
     {
+      "symbol": "P:ha.n(II)I#0",
+      "originalName": "param0",
+      "to": "playerId",
+      "evidence": "ha.java: XORs selected god favour, positive mana/collected mana, turn count and optionally remaining rune cap.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.computePlayerChecksum(II)I#0"
+    },
+    {
+      "symbol": "P:ha.n(II)I#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "ha.java: XORs selected god favour, positive mana/collected mana, turn count and optionally remaining rune cap.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Battlefield.computePlayerChecksum(II)I#1"
+    },
+    {
       "symbol": "P:ha.o(II)I#0",
       "originalName": "param0",
       "to": "playerId",
@@ -42290,6 +42762,30 @@
       "evidence": "hd.java: Requires privileged services and the selected Microsoft or reflective fullscreen adapter.",
       "confidence": "reviewed",
       "renamedSymbol": "P:PlatformTaskService.supportsFullscreen(Z)Z#0"
+    },
+    {
+      "symbol": "P:hf.a(Lha;BZ)V#0",
+      "originalName": "param0",
+      "to": "battlefield",
+      "evidence": "hf.java: Returns for null or battlefield flag b, otherwise computes the local-player checksum and discards it; the boolean parameter is unused.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:hf.recomputeClientStateChecksum(LBattlefield;BZ)V#0"
+    },
+    {
+      "symbol": "P:hf.a(Lha;BZ)V#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "hf.java: Returns for null or battlefield flag b, otherwise computes the local-player checksum and discards it; the boolean parameter is unused.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:hf.recomputeClientStateChecksum(LBattlefield;BZ)V#1"
+    },
+    {
+      "symbol": "P:hf.a(Lha;BZ)V#2",
+      "originalName": "param2",
+      "to": "unusedFlag",
+      "evidence": "hf.java: Returns for null or battlefield flag b, otherwise computes the local-player checksum and discards it; the boolean parameter is unused.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:hf.recomputeClientStateChecksum(LBattlefield;BZ)V#2"
     },
     {
       "symbol": "P:hg.a(BLjava/lang/CharSequence;)Z#0",
@@ -58596,6 +59092,30 @@
       "renamedSymbol": "P:DiskCacheWorker.reportCampaignTurn(ZIILCampaignMission;)V#3"
     },
     {
+      "symbol": "P:vp.<init>(III)V#0",
+      "originalName": "param0",
+      "to": "manaTypeCode",
+      "evidence": "vp.java: Retains type/amount/player and event kind 9; application consumes only amount and player.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ManaEvent.<init>(III)V#0"
+    },
+    {
+      "symbol": "P:vp.<init>(III)V#1",
+      "originalName": "param1",
+      "to": "manaPoints",
+      "evidence": "vp.java: Retains type/amount/player and event kind 9; application consumes only amount and player.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ManaEvent.<init>(III)V#1"
+    },
+    {
+      "symbol": "P:vp.<init>(III)V#2",
+      "originalName": "param2",
+      "to": "playerId",
+      "evidence": "vp.java: Retains type/amount/player and event kind 9; application consumes only amount and player.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ManaEvent.<init>(III)V#2"
+    },
+    {
       "symbol": "P:vp.a(BZ)Ljava/lang/String;#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
@@ -60675,7 +61195,7 @@
     },
     {
       "symbol": "B:ha.a(ZI)I#0",
-      "renamedSymbol": "B:Battlefield.a(ZI)I#0",
+      "renamedSymbol": "B:Battlefield.computeStateChecksum(ZI)I#0",
       "originalName": "L4",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -60686,7 +61206,7 @@
     },
     {
       "symbol": "B:ha.a(ZI)I#1",
-      "renamedSymbol": "B:Battlefield.a(ZI)I#1",
+      "renamedSymbol": "B:Battlefield.computeStateChecksum(ZI)I#1",
       "originalName": "L10",
       "renamedName": "scanLoop2",
       "declaration": {
@@ -83973,9 +84493,9 @@
     },
     {
       "symbol": "F:ha.field_J:Z",
-      "renamedSymbol": "F:Battlefield.field_J:Z",
+      "renamedSymbol": "F:Battlefield.spellCastPending:Z",
       "originalName": "field_J",
-      "renamedName": "field_J",
+      "renamedName": "spellCastPending",
       "declaration": {
         "file": "ha.java",
         "start": 1198,
@@ -84050,9 +84570,9 @@
     },
     {
       "symbol": "F:ha.field_Q:I",
-      "renamedSymbol": "F:Battlefield.field_Q:I",
+      "renamedSymbol": "F:Battlefield.runeCapOption:I",
       "originalName": "field_Q",
-      "renamedName": "field_Q",
+      "renamedName": "runeCapOption",
       "declaration": {
         "file": "ha.java",
         "start": 485,
@@ -84270,9 +84790,9 @@
     },
     {
       "symbol": "F:ha.field_f:Z",
-      "renamedSymbol": "F:Battlefield.field_f:Z",
+      "renamedSymbol": "F:Battlefield.bypassDefeatAndSpellConsumption:Z",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "bypassDefeatAndSpellConsumption",
       "declaration": {
         "file": "ha.java",
         "start": 1537,
@@ -96689,9 +97209,9 @@
     },
     {
       "symbol": "F:lf.field_i:[I",
-      "renamedSymbol": "F:BattleCharacter.field_i:[I",
+      "renamedSymbol": "F:BattleCharacter.runeCapsByOption:[I",
       "originalName": "field_i",
-      "renamedName": "field_i",
+      "renamedName": "runeCapsByOption",
       "declaration": {
         "file": "lf.java",
         "start": 906,
@@ -120284,9 +120804,9 @@
     },
     {
       "symbol": "F:vp.field_z:I",
-      "renamedSymbol": "F:ManaEvent.field_z:I",
+      "renamedSymbol": "F:ManaEvent.manaTypeCode:I",
       "originalName": "field_z",
-      "renamedName": "field_z",
+      "renamedName": "manaTypeCode",
       "declaration": {
         "file": "vp.java",
         "start": 135,
@@ -193170,7 +193690,7 @@
     },
     {
       "symbol": "L:fl.a(Lha;I)V#0",
-      "renamedSymbol": "L:fl.a(LBattlefield;I)V#0",
+      "renamedSymbol": "L:fl.recomputeClientStateChecksum(LBattlefield;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -210385,9 +210905,9 @@
     },
     {
       "symbol": "L:ha.a(BILne;)I#0",
-      "renamedSymbol": "L:Battlefield.a(BILMapTile;)I#0",
+      "renamedSymbol": "L:Battlefield.computeTileChecksum(BILMapTile;)I#0",
       "originalName": "var4_int",
-      "renamedName": "var4_int",
+      "renamedName": "checksum",
       "declaration": {
         "file": "ha.java",
         "start": 206210,
@@ -210396,7 +210916,7 @@
     },
     {
       "symbol": "L:ha.a(BILne;)I#1",
-      "renamedSymbol": "L:Battlefield.a(BILMapTile;)I#1",
+      "renamedSymbol": "L:Battlefield.computeTileChecksum(BILMapTile;)I#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -210407,7 +210927,7 @@
     },
     {
       "symbol": "L:ha.a(BILne;)I#2",
-      "renamedSymbol": "L:Battlefield.a(BILMapTile;)I#2",
+      "renamedSymbol": "L:Battlefield.computeTileChecksum(BILMapTile;)I#2",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -210418,7 +210938,7 @@
     },
     {
       "symbol": "L:ha.a(BILne;)I#3",
-      "renamedSymbol": "L:Battlefield.a(BILMapTile;)I#3",
+      "renamedSymbol": "L:Battlefield.computeTileChecksum(BILMapTile;)I#3",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -210429,7 +210949,7 @@
     },
     {
       "symbol": "L:ha.a(BILne;)I#4",
-      "renamedSymbol": "L:Battlefield.a(BILMapTile;)I#4",
+      "renamedSymbol": "L:Battlefield.computeTileChecksum(BILMapTile;)I#4",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -210440,7 +210960,7 @@
     },
     {
       "symbol": "L:ha.a(BILne;)I#5",
-      "renamedSymbol": "L:Battlefield.a(BILMapTile;)I#5",
+      "renamedSymbol": "L:Battlefield.computeTileChecksum(BILMapTile;)I#5",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -210451,7 +210971,7 @@
     },
     {
       "symbol": "L:ha.a(BILne;)I#6",
-      "renamedSymbol": "L:Battlefield.a(BILMapTile;)I#6",
+      "renamedSymbol": "L:Battlefield.computeTileChecksum(BILMapTile;)I#6",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -210462,7 +210982,7 @@
     },
     {
       "symbol": "L:ha.a(BILne;)I#7",
-      "renamedSymbol": "L:Battlefield.a(BILMapTile;)I#7",
+      "renamedSymbol": "L:Battlefield.computeTileChecksum(BILMapTile;)I#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -210473,7 +210993,7 @@
     },
     {
       "symbol": "L:ha.a(BILne;)I#8",
-      "renamedSymbol": "L:Battlefield.a(BILMapTile;)I#8",
+      "renamedSymbol": "L:Battlefield.computeTileChecksum(BILMapTile;)I#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -210484,7 +211004,7 @@
     },
     {
       "symbol": "L:ha.a(BLik;II)V#0",
-      "renamedSymbol": "L:Battlefield.a(BLSpell;II)V#0",
+      "renamedSymbol": "L:Battlefield.consumeEquippedSpell(BLSpell;II)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -210495,9 +211015,9 @@
     },
     {
       "symbol": "L:ha.a(BLik;II)V#1",
-      "renamedSymbol": "L:Battlefield.a(BLSpell;II)V#1",
+      "renamedSymbol": "L:Battlefield.consumeEquippedSpell(BLSpell;II)V#1",
       "originalName": "var5_int",
-      "renamedName": "var5_int",
+      "renamedName": "consumeSlot",
       "declaration": {
         "file": "ha.java",
         "start": 47752,
@@ -210506,9 +211026,9 @@
     },
     {
       "symbol": "L:ha.a(BLik;II)V#2",
-      "renamedSymbol": "L:Battlefield.a(BLSpell;II)V#2",
+      "renamedSymbol": "L:Battlefield.consumeEquippedSpell(BLSpell;II)V#2",
       "originalName": "stackIn_4_0",
-      "renamedName": "stackIn_4_0",
+      "renamedName": "consumptionEnabled",
       "declaration": {
         "file": "ha.java",
         "start": 47778,
@@ -210517,7 +211037,7 @@
     },
     {
       "symbol": "L:ha.a(BLik;II)V#3",
-      "renamedSymbol": "L:Battlefield.a(BLSpell;II)V#3",
+      "renamedSymbol": "L:Battlefield.consumeEquippedSpell(BLSpell;II)V#3",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -210528,7 +211048,7 @@
     },
     {
       "symbol": "L:ha.a(BLik;II)V#4",
-      "renamedSymbol": "L:Battlefield.a(BLSpell;II)V#4",
+      "renamedSymbol": "L:Battlefield.consumeEquippedSpell(BLSpell;II)V#4",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -210539,7 +211059,7 @@
     },
     {
       "symbol": "L:ha.a(BLik;II)V#5",
-      "renamedSymbol": "L:Battlefield.a(BLSpell;II)V#5",
+      "renamedSymbol": "L:Battlefield.consumeEquippedSpell(BLSpell;II)V#5",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -210550,7 +211070,7 @@
     },
     {
       "symbol": "L:ha.a(BLik;II)V#6",
-      "renamedSymbol": "L:Battlefield.a(BLSpell;II)V#6",
+      "renamedSymbol": "L:Battlefield.consumeEquippedSpell(BLSpell;II)V#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -210561,7 +211081,7 @@
     },
     {
       "symbol": "L:ha.a(BLik;II)V#7",
-      "renamedSymbol": "L:Battlefield.a(BLSpell;II)V#7",
+      "renamedSymbol": "L:Battlefield.consumeEquippedSpell(BLSpell;II)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -213344,7 +213864,7 @@
     },
     {
       "symbol": "L:ha.a(ILne;I)Z#0",
-      "renamedSymbol": "L:Battlefield.a(ILMapTile;I)Z#0",
+      "renamedSymbol": "L:Battlefield.includesTileInChecksum(ILMapTile;I)Z#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -213355,7 +213875,7 @@
     },
     {
       "symbol": "L:ha.a(ILne;I)Z#1",
-      "renamedSymbol": "L:Battlefield.a(ILMapTile;I)Z#1",
+      "renamedSymbol": "L:Battlefield.includesTileInChecksum(ILMapTile;I)Z#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -213366,7 +213886,7 @@
     },
     {
       "symbol": "L:ha.a(ILne;I)Z#2",
-      "renamedSymbol": "L:Battlefield.a(ILMapTile;I)Z#2",
+      "renamedSymbol": "L:Battlefield.includesTileInChecksum(ILMapTile;I)Z#2",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -213377,7 +213897,7 @@
     },
     {
       "symbol": "L:ha.a(ILne;I)Z#3",
-      "renamedSymbol": "L:Battlefield.a(ILMapTile;I)Z#3",
+      "renamedSymbol": "L:Battlefield.includesTileInChecksum(ILMapTile;I)Z#3",
       "originalName": "stackIn_4_1",
       "renamedName": "stackIn_4_1",
       "declaration": {
@@ -213388,7 +213908,7 @@
     },
     {
       "symbol": "L:ha.a(ILne;I)Z#4",
-      "renamedSymbol": "L:Battlefield.a(ILMapTile;I)Z#4",
+      "renamedSymbol": "L:Battlefield.includesTileInChecksum(ILMapTile;I)Z#4",
       "originalName": "stackIn_5_2",
       "renamedName": "stackIn_5_2",
       "declaration": {
@@ -213399,7 +213919,7 @@
     },
     {
       "symbol": "L:ha.a(ILne;I)Z#5",
-      "renamedSymbol": "L:Battlefield.a(ILMapTile;I)Z#5",
+      "renamedSymbol": "L:Battlefield.includesTileInChecksum(ILMapTile;I)Z#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -213410,7 +213930,7 @@
     },
     {
       "symbol": "L:ha.a(ILne;I)Z#6",
-      "renamedSymbol": "L:Battlefield.a(ILMapTile;I)Z#6",
+      "renamedSymbol": "L:Battlefield.includesTileInChecksum(ILMapTile;I)Z#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -216303,7 +216823,7 @@
     },
     {
       "symbol": "L:ha.a(ZI)I#0",
-      "renamedSymbol": "L:Battlefield.a(ZI)I#0",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#0",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -216314,9 +216834,9 @@
     },
     {
       "symbol": "L:ha.a(ZI)I#1",
-      "renamedSymbol": "L:Battlefield.a(ZI)I#1",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#1",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "checksum",
       "declaration": {
         "file": "ha.java",
         "start": 59895,
@@ -216325,9 +216845,9 @@
     },
     {
       "symbol": "L:ha.a(ZI)I#10",
-      "renamedSymbol": "L:Battlefield.a(ZI)I#10",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#10",
       "originalName": "var5Lifetime1",
-      "renamedName": "var5Lifetime1",
+      "renamedName": "unitOwner",
       "declaration": {
         "file": "ha.java",
         "start": 60108,
@@ -216336,9 +216856,9 @@
     },
     {
       "symbol": "L:ha.a(ZI)I#11",
-      "renamedSymbol": "L:Battlefield.a(ZI)I#11",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#11",
       "originalName": "var7Lifetime1",
-      "renamedName": "var7Lifetime1",
+      "renamedName": "unitX",
       "declaration": {
         "file": "ha.java",
         "start": 60135,
@@ -216347,9 +216867,9 @@
     },
     {
       "symbol": "L:ha.a(ZI)I#2",
-      "renamedSymbol": "L:Battlefield.a(ZI)I#2",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#2",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "tilePlayerScope",
       "declaration": {
         "file": "ha.java",
         "start": 59917,
@@ -216358,9 +216878,9 @@
     },
     {
       "symbol": "L:ha.a(ZI)I#3",
-      "renamedSymbol": "L:Battlefield.a(ZI)I#3",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#3",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "tileX",
       "declaration": {
         "file": "ha.java",
         "start": 59939,
@@ -216369,9 +216889,9 @@
     },
     {
       "symbol": "L:ha.a(ZI)I#4",
-      "renamedSymbol": "L:Battlefield.a(ZI)I#4",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#4",
       "originalName": "var6_int",
-      "renamedName": "var6_int",
+      "renamedName": "tileY",
       "declaration": {
         "file": "ha.java",
         "start": 59961,
@@ -216380,9 +216900,9 @@
     },
     {
       "symbol": "L:ha.a(ZI)I#5",
-      "renamedSymbol": "L:Battlefield.a(ZI)I#5",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#5",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "unit",
       "declaration": {
         "file": "ha.java",
         "start": 59986,
@@ -216391,9 +216911,9 @@
     },
     {
       "symbol": "L:ha.a(ZI)I#6",
-      "renamedSymbol": "L:Battlefield.a(ZI)I#6",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#6",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "tileIndex",
       "declaration": {
         "file": "ha.java",
         "start": 60011,
@@ -216402,9 +216922,9 @@
     },
     {
       "symbol": "L:ha.a(ZI)I#7",
-      "renamedSymbol": "L:Battlefield.a(ZI)I#7",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#7",
       "originalName": "var8_ref_ne",
-      "renamedName": "var8_ref_ne",
+      "renamedName": "tile",
       "declaration": {
         "file": "ha.java",
         "start": 60032,
@@ -216413,9 +216933,9 @@
     },
     {
       "symbol": "L:ha.a(ZI)I#8",
-      "renamedSymbol": "L:Battlefield.a(ZI)I#8",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#8",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "unitY",
       "declaration": {
         "file": "ha.java",
         "start": 60064,
@@ -216424,9 +216944,9 @@
     },
     {
       "symbol": "L:ha.a(ZI)I#9",
-      "renamedSymbol": "L:Battlefield.a(ZI)I#9",
+      "renamedSymbol": "L:Battlefield.computeStateChecksum(ZI)I#9",
       "originalName": "var9",
-      "renamedName": "var9",
+      "renamedName": "obfuscationControl",
       "declaration": {
         "file": "ha.java",
         "start": 60086,
@@ -217249,9 +217769,9 @@
     },
     {
       "symbol": "L:ha.b(IIIB)V#0",
-      "renamedSymbol": "L:Battlefield.b(IIIB)V#0",
+      "renamedSymbol": "L:Battlefield.addGodFavour(IIIB)V#0",
       "originalName": "dupTemp$1",
-      "renamedName": "dupTemp$1",
+      "renamedName": "playerFavour",
       "declaration": {
         "file": "ha.java",
         "start": 49586,
@@ -217656,9 +218176,9 @@
     },
     {
       "symbol": "L:ha.b(ILjd;)I#0",
-      "renamedSymbol": "L:Battlefield.b(ILUnit;)I#0",
+      "renamedSymbol": "L:Battlefield.computeUnitChecksum(ILUnit;)I#0",
       "originalName": "var3_int",
-      "renamedName": "var3_int",
+      "renamedName": "checksum",
       "declaration": {
         "file": "ha.java",
         "start": 157194,
@@ -217667,7 +218187,7 @@
     },
     {
       "symbol": "L:ha.b(ILjd;)I#1",
-      "renamedSymbol": "L:Battlefield.b(ILUnit;)I#1",
+      "renamedSymbol": "L:Battlefield.computeUnitChecksum(ILUnit;)I#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -217678,7 +218198,7 @@
     },
     {
       "symbol": "L:ha.b(ILjd;)I#2",
-      "renamedSymbol": "L:Battlefield.b(ILUnit;)I#2",
+      "renamedSymbol": "L:Battlefield.computeUnitChecksum(ILUnit;)I#2",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -217689,7 +218209,7 @@
     },
     {
       "symbol": "L:ha.b(ILjd;)I#3",
-      "renamedSymbol": "L:Battlefield.b(ILUnit;)I#3",
+      "renamedSymbol": "L:Battlefield.computeUnitChecksum(ILUnit;)I#3",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -217700,7 +218220,7 @@
     },
     {
       "symbol": "L:ha.b(ILjd;)I#4",
-      "renamedSymbol": "L:Battlefield.b(ILUnit;)I#4",
+      "renamedSymbol": "L:Battlefield.computeUnitChecksum(ILUnit;)I#4",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -217711,7 +218231,7 @@
     },
     {
       "symbol": "L:ha.b(ILjd;)I#5",
-      "renamedSymbol": "L:Battlefield.b(ILUnit;)I#5",
+      "renamedSymbol": "L:Battlefield.computeUnitChecksum(ILUnit;)I#5",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -217722,7 +218242,7 @@
     },
     {
       "symbol": "L:ha.b(ILjd;)I#6",
-      "renamedSymbol": "L:Battlefield.b(ILUnit;)I#6",
+      "renamedSymbol": "L:Battlefield.computeUnitChecksum(ILUnit;)I#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -217733,7 +218253,7 @@
     },
     {
       "symbol": "L:ha.b(ILjd;)I#7",
-      "renamedSymbol": "L:Battlefield.b(ILUnit;)I#7",
+      "renamedSymbol": "L:Battlefield.computeUnitChecksum(ILUnit;)I#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -220725,7 +221245,7 @@
     },
     {
       "symbol": "L:ha.n(II)I#0",
-      "renamedSymbol": "L:Battlefield.n(II)I#0",
+      "renamedSymbol": "L:Battlefield.computePlayerChecksum(II)I#0",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -220736,7 +221256,7 @@
     },
     {
       "symbol": "L:ha.n(II)I#1",
-      "renamedSymbol": "L:Battlefield.n(II)I#1",
+      "renamedSymbol": "L:Battlefield.computePlayerChecksum(II)I#1",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -220747,9 +221267,9 @@
     },
     {
       "symbol": "L:ha.n(II)I#2",
-      "renamedSymbol": "L:Battlefield.n(II)I#2",
+      "renamedSymbol": "L:Battlefield.computePlayerChecksum(II)I#2",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "checksum",
       "declaration": {
         "file": "ha.java",
         "start": 198551,
@@ -220758,9 +221278,9 @@
     },
     {
       "symbol": "L:ha.n(II)I#3",
-      "renamedSymbol": "L:Battlefield.n(II)I#3",
+      "renamedSymbol": "L:Battlefield.computePlayerChecksum(II)I#3",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "godSlot",
       "declaration": {
         "file": "ha.java",
         "start": 198569,
@@ -220769,9 +221289,9 @@
     },
     {
       "symbol": "L:ha.n(II)I#4",
-      "renamedSymbol": "L:Battlefield.n(II)I#4",
+      "renamedSymbol": "L:Battlefield.computePlayerChecksum(II)I#4",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "godId",
       "declaration": {
         "file": "ha.java",
         "start": 198587,
@@ -220780,9 +221300,9 @@
     },
     {
       "symbol": "L:ha.n(II)I#5",
-      "renamedSymbol": "L:Battlefield.n(II)I#5",
+      "renamedSymbol": "L:Battlefield.computePlayerChecksum(II)I#5",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "obfuscationControl",
       "declaration": {
         "file": "ha.java",
         "start": 198605,
@@ -220791,7 +221311,7 @@
     },
     {
       "symbol": "L:ha.n(II)I#6",
-      "renamedSymbol": "L:Battlefield.n(II)I#6",
+      "renamedSymbol": "L:Battlefield.computePlayerChecksum(II)I#6",
       "originalName": "decompiledNaturalLoopExit0",
       "renamedName": "decompiledNaturalLoopExit0",
       "declaration": {
@@ -222430,7 +222950,7 @@
     },
     {
       "symbol": "L:hf.a(Lha;BZ)V#0",
-      "renamedSymbol": "L:hf.a(LBattlefield;BZ)V#0",
+      "renamedSymbol": "L:hf.recomputeClientStateChecksum(LBattlefield;BZ)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -441209,9 +441729,9 @@
     },
     {
       "symbol": "M:fl.a(Lha;I)V",
-      "renamedSymbol": "M:fl.a(LBattlefield;I)V",
+      "renamedSymbol": "M:fl.recomputeClientStateChecksum(LBattlefield;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "recomputeClientStateChecksum",
       "declaration": {
         "file": "fl.java",
         "start": 529,
@@ -443992,9 +444512,9 @@
     },
     {
       "symbol": "M:ha.a(BILne;)I",
-      "renamedSymbol": "M:Battlefield.a(BILMapTile;)I",
+      "renamedSymbol": "M:Battlefield.computeTileChecksum(BILMapTile;)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "computeTileChecksum",
       "declaration": {
         "file": "ha.java",
         "start": 206158,
@@ -444003,9 +444523,9 @@
     },
     {
       "symbol": "M:ha.a(BLik;II)V",
-      "renamedSymbol": "M:Battlefield.a(BLSpell;II)V",
+      "renamedSymbol": "M:Battlefield.consumeEquippedSpell(BLSpell;II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "consumeEquippedSpell",
       "declaration": {
         "file": "ha.java",
         "start": 47638,
@@ -444267,9 +444787,9 @@
     },
     {
       "symbol": "M:ha.a(ILne;I)Z",
-      "renamedSymbol": "M:Battlefield.a(ILMapTile;I)Z",
+      "renamedSymbol": "M:Battlefield.includesTileInChecksum(ILMapTile;I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "includesTileInChecksum",
       "declaration": {
         "file": "ha.java",
         "start": 153010,
@@ -444531,9 +445051,9 @@
     },
     {
       "symbol": "M:ha.a(ZI)I",
-      "renamedSymbol": "M:Battlefield.a(ZI)I",
+      "renamedSymbol": "M:Battlefield.computeStateChecksum(ZI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "computeStateChecksum",
       "declaration": {
         "file": "ha.java",
         "start": 59821,
@@ -444674,9 +445194,9 @@
     },
     {
       "symbol": "M:ha.b(IIIB)V",
-      "renamedSymbol": "M:Battlefield.b(IIIB)V",
+      "renamedSymbol": "M:Battlefield.addGodFavour(IIIB)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "addGodFavour",
       "declaration": {
         "file": "ha.java",
         "start": 49519,
@@ -444718,9 +445238,9 @@
     },
     {
       "symbol": "M:ha.b(ILjd;)I",
-      "renamedSymbol": "M:Battlefield.b(ILUnit;)I",
+      "renamedSymbol": "M:Battlefield.computeUnitChecksum(ILUnit;)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "computeUnitChecksum",
       "declaration": {
         "file": "ha.java",
         "start": 157155,
@@ -444740,9 +445260,9 @@
     },
     {
       "symbol": "M:ha.b(IZ)Z",
-      "renamedSymbol": "M:Battlefield.b(IZ)Z",
+      "renamedSymbol": "M:Battlefield.checkPlayerDefeat(IZ)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "checkPlayerDefeat",
       "declaration": {
         "file": "ha.java",
         "start": 41313,
@@ -445235,9 +445755,9 @@
     },
     {
       "symbol": "M:ha.n(II)I",
-      "renamedSymbol": "M:Battlefield.n(II)I",
+      "renamedSymbol": "M:Battlefield.computePlayerChecksum(II)I",
       "originalName": "n",
-      "renamedName": "n",
+      "renamedName": "computePlayerChecksum",
       "declaration": {
         "file": "ha.java",
         "start": 198451,
@@ -445796,9 +446316,9 @@
     },
     {
       "symbol": "M:hf.a(Lha;BZ)V",
-      "renamedSymbol": "M:hf.a(LBattlefield;BZ)V",
+      "renamedSymbol": "M:hf.recomputeClientStateChecksum(LBattlefield;BZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "recomputeClientStateChecksum",
       "declaration": {
         "file": "hf.java",
         "start": 1224,
@@ -512313,9 +512833,9 @@
     },
     {
       "symbol": "P:fl.a(Lha;I)V#0",
-      "renamedSymbol": "P:fl.a(LBattlefield;I)V#0",
+      "renamedSymbol": "P:fl.recomputeClientStateChecksum(LBattlefield;I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "battlefield",
       "declaration": {
         "file": "fl.java",
         "start": 534,
@@ -512324,9 +512844,9 @@
     },
     {
       "symbol": "P:fl.a(Lha;I)V#1",
-      "renamedSymbol": "P:fl.a(LBattlefield;I)V#1",
+      "renamedSymbol": "P:fl.recomputeClientStateChecksum(LBattlefield;I)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "fl.java",
         "start": 546,
@@ -519078,9 +519598,9 @@
     },
     {
       "symbol": "P:ha.a(BILne;)I#0",
-      "renamedSymbol": "P:Battlefield.a(BILMapTile;)I#0",
+      "renamedSymbol": "P:Battlefield.computeTileChecksum(BILMapTile;)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ha.java",
         "start": 206165,
@@ -519089,9 +519609,9 @@
     },
     {
       "symbol": "P:ha.a(BILne;)I#1",
-      "renamedSymbol": "P:Battlefield.a(BILMapTile;)I#1",
+      "renamedSymbol": "P:Battlefield.computeTileChecksum(BILMapTile;)I#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "playerId",
       "declaration": {
         "file": "ha.java",
         "start": 206177,
@@ -519100,9 +519620,9 @@
     },
     {
       "symbol": "P:ha.a(BILne;)I#2",
-      "renamedSymbol": "P:Battlefield.a(BILMapTile;)I#2",
+      "renamedSymbol": "P:Battlefield.computeTileChecksum(BILMapTile;)I#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "tile",
       "declaration": {
         "file": "ha.java",
         "start": 206188,
@@ -519111,9 +519631,9 @@
     },
     {
       "symbol": "P:ha.a(BLik;II)V#0",
-      "renamedSymbol": "P:Battlefield.a(BLSpell;II)V#0",
+      "renamedSymbol": "P:Battlefield.consumeEquippedSpell(BLSpell;II)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ha.java",
         "start": 47645,
@@ -519122,9 +519642,9 @@
     },
     {
       "symbol": "P:ha.a(BLik;II)V#1",
-      "renamedSymbol": "P:Battlefield.a(BLSpell;II)V#1",
+      "renamedSymbol": "P:Battlefield.consumeEquippedSpell(BLSpell;II)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "spell",
       "declaration": {
         "file": "ha.java",
         "start": 47656,
@@ -519133,9 +519653,9 @@
     },
     {
       "symbol": "P:ha.a(BLik;II)V#2",
-      "renamedSymbol": "P:Battlefield.a(BLSpell;II)V#2",
+      "renamedSymbol": "P:Battlefield.consumeEquippedSpell(BLSpell;II)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "equippedSlot",
       "declaration": {
         "file": "ha.java",
         "start": 47668,
@@ -519144,9 +519664,9 @@
     },
     {
       "symbol": "P:ha.a(BLik;II)V#3",
-      "renamedSymbol": "P:Battlefield.a(BLSpell;II)V#3",
+      "renamedSymbol": "P:Battlefield.consumeEquippedSpell(BLSpell;II)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "castingPlayer",
       "declaration": {
         "file": "ha.java",
         "start": 47680,
@@ -520134,9 +520654,9 @@
     },
     {
       "symbol": "P:ha.a(ILne;I)Z#0",
-      "renamedSymbol": "P:Battlefield.a(ILMapTile;I)Z#0",
+      "renamedSymbol": "P:Battlefield.includesTileInChecksum(ILMapTile;I)Z#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "playerId",
       "declaration": {
         "file": "ha.java",
         "start": 153016,
@@ -520145,9 +520665,9 @@
     },
     {
       "symbol": "P:ha.a(ILne;I)Z#1",
-      "renamedSymbol": "P:Battlefield.a(ILMapTile;I)Z#1",
+      "renamedSymbol": "P:Battlefield.includesTileInChecksum(ILMapTile;I)Z#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "tile",
       "declaration": {
         "file": "ha.java",
         "start": 153027,
@@ -520156,9 +520676,9 @@
     },
     {
       "symbol": "P:ha.a(ILne;I)Z#2",
-      "renamedSymbol": "P:Battlefield.a(ILMapTile;I)Z#2",
+      "renamedSymbol": "P:Battlefield.includesTileInChecksum(ILMapTile;I)Z#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ha.java",
         "start": 153039,
@@ -521102,9 +521622,9 @@
     },
     {
       "symbol": "P:ha.a(ZI)I#0",
-      "renamedSymbol": "P:Battlefield.a(ZI)I#0",
+      "renamedSymbol": "P:Battlefield.computeStateChecksum(ZI)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ha.java",
         "start": 59831,
@@ -521113,9 +521633,9 @@
     },
     {
       "symbol": "P:ha.a(ZI)I#1",
-      "renamedSymbol": "P:Battlefield.a(ZI)I#1",
+      "renamedSymbol": "P:Battlefield.computeStateChecksum(ZI)I#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "playerId",
       "declaration": {
         "file": "ha.java",
         "start": 59843,
@@ -521509,9 +522029,9 @@
     },
     {
       "symbol": "P:ha.b(IIIB)V#0",
-      "renamedSymbol": "P:Battlefield.b(IIIB)V#0",
+      "renamedSymbol": "P:Battlefield.addGodFavour(IIIB)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "godId",
       "declaration": {
         "file": "ha.java",
         "start": 49525,
@@ -521520,9 +522040,9 @@
     },
     {
       "symbol": "P:ha.b(IIIB)V#1",
-      "renamedSymbol": "P:Battlefield.b(IIIB)V#1",
+      "renamedSymbol": "P:Battlefield.addGodFavour(IIIB)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "playerId",
       "declaration": {
         "file": "ha.java",
         "start": 49537,
@@ -521531,9 +522051,9 @@
     },
     {
       "symbol": "P:ha.b(IIIB)V#2",
-      "renamedSymbol": "P:Battlefield.b(IIIB)V#2",
+      "renamedSymbol": "P:Battlefield.addGodFavour(IIIB)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "delta",
       "declaration": {
         "file": "ha.java",
         "start": 49549,
@@ -521542,9 +522062,9 @@
     },
     {
       "symbol": "P:ha.b(IIIB)V#3",
-      "renamedSymbol": "P:Battlefield.b(IIIB)V#3",
+      "renamedSymbol": "P:Battlefield.addGodFavour(IIIB)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ha.java",
         "start": 49562,
@@ -521685,9 +522205,9 @@
     },
     {
       "symbol": "P:ha.b(ILjd;)I#0",
-      "renamedSymbol": "P:Battlefield.b(ILUnit;)I#0",
+      "renamedSymbol": "P:Battlefield.computeUnitChecksum(ILUnit;)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ha.java",
         "start": 157161,
@@ -521696,9 +522216,9 @@
     },
     {
       "symbol": "P:ha.b(ILjd;)I#1",
-      "renamedSymbol": "P:Battlefield.b(ILUnit;)I#1",
+      "renamedSymbol": "P:Battlefield.computeUnitChecksum(ILUnit;)I#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "unit",
       "declaration": {
         "file": "ha.java",
         "start": 157172,
@@ -521729,9 +522249,9 @@
     },
     {
       "symbol": "P:ha.b(IZ)Z#0",
-      "renamedSymbol": "P:Battlefield.b(IZ)Z#0",
+      "renamedSymbol": "P:Battlefield.checkPlayerDefeat(IZ)Z#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "playerId",
       "declaration": {
         "file": "ha.java",
         "start": 41319,
@@ -521740,9 +522260,9 @@
     },
     {
       "symbol": "P:ha.b(IZ)Z#1",
-      "renamedSymbol": "P:Battlefield.b(IZ)Z#1",
+      "renamedSymbol": "P:Battlefield.checkPlayerDefeat(IZ)Z#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ha.java",
         "start": 41335,
@@ -522818,9 +523338,9 @@
     },
     {
       "symbol": "P:ha.n(II)I#0",
-      "renamedSymbol": "P:Battlefield.n(II)I#0",
+      "renamedSymbol": "P:Battlefield.computePlayerChecksum(II)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "playerId",
       "declaration": {
         "file": "ha.java",
         "start": 198457,
@@ -522829,9 +523349,9 @@
     },
     {
       "symbol": "P:ha.n(II)I#1",
-      "renamedSymbol": "P:Battlefield.n(II)I#1",
+      "renamedSymbol": "P:Battlefield.computePlayerChecksum(II)I#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ha.java",
         "start": 198469,
@@ -524281,9 +524801,9 @@
     },
     {
       "symbol": "P:hf.a(Lha;BZ)V#0",
-      "renamedSymbol": "P:hf.a(LBattlefield;BZ)V#0",
+      "renamedSymbol": "P:hf.recomputeClientStateChecksum(LBattlefield;BZ)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "battlefield",
       "declaration": {
         "file": "hf.java",
         "start": 1229,
@@ -524292,9 +524812,9 @@
     },
     {
       "symbol": "P:hf.a(Lha;BZ)V#1",
-      "renamedSymbol": "P:hf.a(LBattlefield;BZ)V#1",
+      "renamedSymbol": "P:hf.recomputeClientStateChecksum(LBattlefield;BZ)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "hf.java",
         "start": 1242,
@@ -524303,9 +524823,9 @@
     },
     {
       "symbol": "P:hf.a(Lha;BZ)V#2",
-      "renamedSymbol": "P:hf.a(LBattlefield;BZ)V#2",
+      "renamedSymbol": "P:hf.recomputeClientStateChecksum(LBattlefield;BZ)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "unusedFlag",
       "declaration": {
         "file": "hf.java",
         "start": 1258,
@@ -606244,7 +606764,7 @@
       "symbol": "P:vp.<init>(III)V#0",
       "renamedSymbol": "P:ManaEvent.<init>(III)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "manaTypeCode",
       "declaration": {
         "file": "vp.java",
         "start": 10784,
@@ -606255,7 +606775,7 @@
       "symbol": "P:vp.<init>(III)V#1",
       "renamedSymbol": "P:ManaEvent.<init>(III)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "manaPoints",
       "declaration": {
         "file": "vp.java",
         "start": 10796,
@@ -606266,7 +606786,7 @@
       "symbol": "P:vp.<init>(III)V#2",
       "renamedSymbol": "P:ManaEvent.<init>(III)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "playerId",
       "declaration": {
         "file": "vp.java",
         "start": 10808,
@@ -628621,7 +629141,7 @@
       "original": "ag.java",
       "renamed": "CombatEvent.java",
       "inputSha256": "03ec894dd3b905e87a33b5820dcde386e92058df33251836c5df0843caaaa947",
-      "outputSha256": "94dec8084e6916e216aa4784c325fc0a50d5fd7a8290d92f9c219c67c9673482",
+      "outputSha256": "f4cbb55ac109118796b028f9e68d325c4e28b821235dabd9c0f08246cc04c1f6",
       "edits": [
         {
           "start": 50,
@@ -629595,6 +630115,13 @@
           "symbol": "F:ag.field_z:I",
           "original": "field_z",
           "renamed": "unseenUnitType"
+        },
+        {
+          "start": 6201,
+          "end": 6202,
+          "symbol": "M:hf.a(Lha;BZ)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
         },
         {
           "start": 6203,
@@ -633449,7 +633976,7 @@
       "original": "al.java",
       "renamed": "GlobalSpell.java",
       "inputSha256": "b42eb119badf762604f02ecdcfba3bd82725dfbbc2a6eba956714a02497b42bc",
-      "outputSha256": "ce01ae8e2574ac73efcb41dedce60241a58f6a989355d7f91c59d4113ca2fd97",
+      "outputSha256": "e3142f4973ade0e2bf86a47ead3c45a32b17b219ee6703e49cc9e5ddb6893255",
       "edits": [
         {
           "start": 50,
@@ -633723,6 +634250,13 @@
           "symbol": "P:al.a(ILha;I)V#1",
           "original": "param1",
           "renamed": "battlefield"
+        },
+        {
+          "start": 1770,
+          "end": 1771,
+          "symbol": "M:ha.b(IIIB)V",
+          "original": "b",
+          "renamed": "addGodFavour"
         },
         {
           "start": 1775,
@@ -737005,7 +737539,7 @@
       "original": "ec.java",
       "renamed": "TeleportEvent.java",
       "inputSha256": "3ee4f4db7e4c908704f9998ae4c08eb44d55f52ffe3ad07a13f016d51d756944",
-      "outputSha256": "7ebbc5d159db445b1eed7e879e48054d792a8b54599432e1fe00c6445c97e1fe",
+      "outputSha256": "328ca9d4e691d70e5824f95c5ddde11a808db0f241c32d082687d23efd5b8702",
       "edits": [
         {
           "start": 50,
@@ -737741,6 +738275,13 @@
           "symbol": "F:jd.field_J:I",
           "original": "field_J",
           "renamed": "tileX"
+        },
+        {
+          "start": 4301,
+          "end": 4302,
+          "symbol": "M:fl.a(Lha;I)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
         },
         {
           "start": 4303,
@@ -741840,7 +742381,7 @@
       "original": "ej.java",
       "renamed": "AiPlanner.java",
       "inputSha256": "6e52113b2d59fa10010314954604c91eea64452b8f6866c4c25baa53a21a9a3d",
-      "outputSha256": "7deeda614a6b14fa3b5115665909e06d47b73644f1de4ffca9ffd822dc8324ee",
+      "outputSha256": "0d266668e581aad701c77e427cae054e6ec5655ed2609191ec6b09d3b0f38dc5",
       "edits": [
         {
           "start": 71,
@@ -745138,6 +745679,13 @@
           "symbol": "F:ej.field_D:Lha;",
           "original": "field_D",
           "renamed": "battlefield"
+        },
+        {
+          "start": 40256,
+          "end": 40263,
+          "symbol": "F:ha.field_J:Z",
+          "original": "field_J",
+          "renamed": "spellCastPending"
         },
         {
           "start": 40295,
@@ -767267,7 +767815,7 @@
       "original": "fl.java",
       "renamed": "fl.java",
       "inputSha256": "c75cc5eee41e4a75748c549a9f339623d770d2a3d71417e04a15a0aacbae6444",
-      "outputSha256": "75ca822f744a05d470cec127485681fc563752e19df39f3aeccc9f34f032c716",
+      "outputSha256": "48557321e11f3f70d40b5eb7fc0ae7674701e37100871ff03296437a8b07dc3f",
       "edits": [
         {
           "start": 93,
@@ -767326,11 +767874,53 @@
           "renamed": "WidgetPainter"
         },
         {
+          "start": 529,
+          "end": 530,
+          "symbol": "M:fl.a(Lha;I)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
+        },
+        {
           "start": 531,
           "end": 533,
           "symbol": "C:ha",
           "original": "ha",
           "renamed": "Battlefield"
+        },
+        {
+          "start": 534,
+          "end": 540,
+          "symbol": "P:fl.a(Lha;I)V#0",
+          "original": "param0",
+          "renamed": "battlefield"
+        },
+        {
+          "start": 546,
+          "end": 552,
+          "symbol": "P:fl.a(Lha;I)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 584,
+          "end": 590,
+          "symbol": "P:fl.a(Lha;I)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 663,
+          "end": 664,
+          "symbol": "M:hf.a(Lha;BZ)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
+        },
+        {
+          "start": 665,
+          "end": 671,
+          "symbol": "P:fl.a(Lha;I)V#0",
+          "original": "param0",
+          "renamed": "battlefield"
         },
         {
           "start": 760,
@@ -767345,6 +767935,20 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 817,
+          "end": 823,
+          "symbol": "P:fl.a(Lha;I)V#0",
+          "original": "param0",
+          "renamed": "battlefield"
+        },
+        {
+          "start": 860,
+          "end": 866,
+          "symbol": "P:fl.a(Lha;I)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 1068,
@@ -767450,6 +768054,13 @@
           "symbol": "C:ha",
           "original": "ha",
           "renamed": "Battlefield"
+        },
+        {
+          "start": 2338,
+          "end": 2339,
+          "symbol": "M:fl.a(Lha;I)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
         },
         {
           "start": 2341,
@@ -773306,7 +773917,7 @@
       "original": "gb.java",
       "renamed": "EquipmentBattleTutorial.java",
       "inputSha256": "8f701cdbd282b473af3fd65ec8facd5b819f546c818d6e20a17a14b6807de995",
-      "outputSha256": "7a7eafd6a73e9042a965ba8fcc085c05670d94f9bf5c36bfa5c3bfbe80d20982",
+      "outputSha256": "9322bc4f4c80ab100477016dc893ffcdaafd195bf7466ffa4c1c990da5ab5c6a",
       "edits": [
         {
           "start": 50,
@@ -773426,6 +774037,13 @@
           "symbol": "F:ic.field_xb:Lha;",
           "original": "field_xb",
           "renamed": "battlefield"
+        },
+        {
+          "start": 839,
+          "end": 846,
+          "symbol": "F:ha.field_f:Z",
+          "original": "field_f",
+          "renamed": "bypassDefeatAndSpellConsumption"
         },
         {
           "start": 865,
@@ -797588,7 +798206,7 @@
       "original": "ha.java",
       "renamed": "Battlefield.java",
       "inputSha256": "497394c1a80e1f195102b424e5c49233d47661e2b6b68b19424647da045fe8aa",
-      "outputSha256": "aec0e041ff3cc4d47d15f4464ac7653f8d639841578e64d916e4171897e5d963",
+      "outputSha256": "6cfb6a6c6b60777280a66307a2cc8a98881ed3708281c3620c851e8df4e0d39c",
       "edits": [
         {
           "start": 71,
@@ -797680,6 +798298,13 @@
           "symbol": "F:ha.field_K:Lom;",
           "original": "field_K",
           "renamed": "campaignMission"
+        },
+        {
+          "start": 485,
+          "end": 492,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
         },
         {
           "start": 504,
@@ -797864,6 +798489,13 @@
           "renamed": "eliminationOrder"
         },
         {
+          "start": 1198,
+          "end": 1205,
+          "symbol": "F:ha.field_J:Z",
+          "original": "field_J",
+          "renamed": "spellCastPending"
+        },
+        {
           "start": 1215,
           "end": 1222,
           "symbol": "F:ha.field_u:I",
@@ -797918,6 +798550,13 @@
           "symbol": "F:ha.field_Bb:Z",
           "original": "field_Bb",
           "renamed": "kingBlackDragonSummoned"
+        },
+        {
+          "start": 1537,
+          "end": 1544,
+          "symbol": "F:ha.field_f:Z",
+          "original": "field_f",
+          "renamed": "bypassDefeatAndSpellConsumption"
         },
         {
           "start": 1550,
@@ -801366,6 +802005,13 @@
           "renamed": "godFavourLevels"
         },
         {
+          "start": 30458,
+          "end": 30459,
+          "symbol": "M:ha.b(IIIB)V",
+          "original": "b",
+          "renamed": "addGodFavour"
+        },
+        {
           "start": 30678,
           "end": 30679,
           "symbol": "M:oe.c(II)I",
@@ -801392,6 +802038,13 @@
           "symbol": "F:ha.field_E:[[I",
           "original": "field_E",
           "renamed": "godFavourLevels"
+        },
+        {
+          "start": 31185,
+          "end": 31186,
+          "symbol": "M:ha.b(IIIB)V",
+          "original": "b",
+          "renamed": "addGodFavour"
         },
         {
           "start": 31389,
@@ -802263,6 +802916,34 @@
           "renamed": "terrainType"
         },
         {
+          "start": 41313,
+          "end": 41314,
+          "symbol": "M:ha.b(IZ)Z",
+          "original": "b",
+          "renamed": "checkPlayerDefeat"
+        },
+        {
+          "start": 41319,
+          "end": 41325,
+          "symbol": "P:ha.b(IZ)Z#0",
+          "original": "param0",
+          "renamed": "playerId"
+        },
+        {
+          "start": 41335,
+          "end": 41341,
+          "symbol": "P:ha.b(IZ)Z#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 41362,
+          "end": 41369,
+          "symbol": "F:ha.field_f:Z",
+          "original": "field_f",
+          "renamed": "bypassDefeatAndSpellConsumption"
+        },
+        {
           "start": 41425,
           "end": 41432,
           "symbol": "F:ha.field_P:Ltt;",
@@ -802277,11 +802958,32 @@
           "renamed": "hasDefeat"
         },
         {
+          "start": 41447,
+          "end": 41453,
+          "symbol": "P:ha.b(IZ)Z#0",
+          "original": "param0",
+          "renamed": "playerId"
+        },
+        {
+          "start": 41505,
+          "end": 41511,
+          "symbol": "P:ha.b(IZ)Z#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 41569,
           "end": 41570,
           "symbol": "M:ha.b(IIZ)V",
           "original": "b",
           "renamed": "eliminatePlayer"
+        },
+        {
+          "start": 41578,
+          "end": 41584,
+          "symbol": "P:ha.b(IZ)Z#0",
+          "original": "param0",
+          "renamed": "playerId"
         },
         {
           "start": 41632,
@@ -802664,6 +803366,20 @@
           "renamed": "maximumStrength"
         },
         {
+          "start": 47638,
+          "end": 47639,
+          "symbol": "M:ha.a(BLik;II)V",
+          "original": "a",
+          "renamed": "consumeEquippedSpell"
+        },
+        {
+          "start": 47645,
+          "end": 47651,
+          "symbol": "P:ha.a(BLik;II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 47653,
           "end": 47655,
           "symbol": "C:ik",
@@ -802671,11 +803387,95 @@
           "renamed": "Spell"
         },
         {
+          "start": 47656,
+          "end": 47662,
+          "symbol": "P:ha.a(BLik;II)V#1",
+          "original": "param1",
+          "renamed": "spell"
+        },
+        {
+          "start": 47668,
+          "end": 47674,
+          "symbol": "P:ha.a(BLik;II)V#2",
+          "original": "param2",
+          "renamed": "equippedSlot"
+        },
+        {
+          "start": 47680,
+          "end": 47686,
+          "symbol": "P:ha.a(BLik;II)V#3",
+          "original": "param3",
+          "renamed": "castingPlayer"
+        },
+        {
+          "start": 47752,
+          "end": 47760,
+          "symbol": "L:ha.a(BLik;II)V#1",
+          "original": "var5_int",
+          "renamed": "consumeSlot"
+        },
+        {
+          "start": 47778,
+          "end": 47789,
+          "symbol": "L:ha.a(BLik;II)V#2",
+          "original": "stackIn_4_0",
+          "renamed": "consumptionEnabled"
+        },
+        {
+          "start": 48013,
+          "end": 48020,
+          "symbol": "F:ha.field_f:Z",
+          "original": "field_f",
+          "renamed": "bypassDefeatAndSpellConsumption"
+        },
+        {
+          "start": 48036,
+          "end": 48042,
+          "symbol": "P:ha.a(BLik;II)V#2",
+          "original": "param2",
+          "renamed": "equippedSlot"
+        },
+        {
+          "start": 48063,
+          "end": 48074,
+          "symbol": "L:ha.a(BLik;II)V#2",
+          "original": "stackIn_4_0",
+          "renamed": "consumptionEnabled"
+        },
+        {
+          "start": 48111,
+          "end": 48122,
+          "symbol": "L:ha.a(BLik;II)V#2",
+          "original": "stackIn_4_0",
+          "renamed": "consumptionEnabled"
+        },
+        {
+          "start": 48150,
+          "end": 48158,
+          "symbol": "L:ha.a(BLik;II)V#1",
+          "original": "var5_int",
+          "renamed": "consumeSlot"
+        },
+        {
+          "start": 48161,
+          "end": 48172,
+          "symbol": "L:ha.a(BLik;II)V#2",
+          "original": "stackIn_4_0",
+          "renamed": "consumptionEnabled"
+        },
+        {
           "start": 48193,
           "end": 48200,
           "symbol": "F:ha.field_K:Lom;",
           "original": "field_K",
           "renamed": "campaignMission"
+        },
+        {
+          "start": 48225,
+          "end": 48231,
+          "symbol": "P:ha.a(BLik;II)V#3",
+          "original": "param3",
+          "renamed": "castingPlayer"
         },
         {
           "start": 48241,
@@ -802692,11 +803492,32 @@
           "renamed": "playerSlot"
         },
         {
+          "start": 48272,
+          "end": 48280,
+          "symbol": "L:ha.a(BLik;II)V#1",
+          "original": "var5_int",
+          "renamed": "consumeSlot"
+        },
+        {
+          "start": 48312,
+          "end": 48318,
+          "symbol": "P:ha.a(BLik;II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 48346,
           "end": 48347,
           "symbol": "M:ha.b(IZIII)V",
           "original": "b",
           "renamed": "applyTerrainChange"
+        },
+        {
+          "start": 48402,
+          "end": 48410,
+          "symbol": "L:ha.a(BLik;II)V#1",
+          "original": "var5_int",
+          "renamed": "consumeSlot"
         },
         {
           "start": 48436,
@@ -802706,11 +803527,32 @@
           "renamed": "equippedSpellIds"
         },
         {
+          "start": 48444,
+          "end": 48450,
+          "symbol": "P:ha.a(BLik;II)V#3",
+          "original": "param3",
+          "renamed": "castingPlayer"
+        },
+        {
+          "start": 48452,
+          "end": 48458,
+          "symbol": "P:ha.a(BLik;II)V#2",
+          "original": "param2",
+          "renamed": "equippedSlot"
+        },
+        {
           "start": 48483,
           "end": 48490,
           "symbol": "F:ha.field_m:[I",
           "original": "field_m",
           "renamed": "remainingRuneCap"
+        },
+        {
+          "start": 48491,
+          "end": 48497,
+          "symbol": "P:ha.a(BLik;II)V#3",
+          "original": "param3",
+          "renamed": "castingPlayer"
         },
         {
           "start": 48506,
@@ -802720,6 +803562,13 @@
           "renamed": "remainingRuneCap"
         },
         {
+          "start": 48514,
+          "end": 48520,
+          "symbol": "P:ha.a(BLik;II)V#3",
+          "original": "param3",
+          "renamed": "castingPlayer"
+        },
+        {
           "start": 48527,
           "end": 48534,
           "symbol": "F:uc.field_d:[[I",
@@ -802727,11 +803576,39 @@
           "renamed": "spellDefinitions"
         },
         {
+          "start": 48535,
+          "end": 48541,
+          "symbol": "P:ha.a(BLik;II)V#1",
+          "original": "param1",
+          "renamed": "spell"
+        },
+        {
           "start": 48542,
           "end": 48549,
           "symbol": "F:ik.field_c:I",
           "original": "field_c",
           "renamed": "spellId"
+        },
+        {
+          "start": 48582,
+          "end": 48589,
+          "symbol": "F:ha.field_J:Z",
+          "original": "field_J",
+          "renamed": "spellCastPending"
+        },
+        {
+          "start": 48925,
+          "end": 48931,
+          "symbol": "P:ha.a(BLik;II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 48960,
+          "end": 48966,
+          "symbol": "P:ha.a(BLik;II)V#1",
+          "original": "param1",
+          "renamed": "spell"
         },
         {
           "start": 49096,
@@ -802748,11 +803625,81 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 49218,
+          "end": 49224,
+          "symbol": "P:ha.a(BLik;II)V#2",
+          "original": "param2",
+          "renamed": "equippedSlot"
+        },
+        {
+          "start": 49245,
+          "end": 49251,
+          "symbol": "P:ha.a(BLik;II)V#3",
+          "original": "param3",
+          "renamed": "castingPlayer"
+        },
+        {
           "start": 49447,
           "end": 49455,
           "symbol": "F:ha.field_ib:I",
           "original": "field_ib",
           "renamed": "turnDurationOption"
+        },
+        {
+          "start": 49519,
+          "end": 49520,
+          "symbol": "M:ha.b(IIIB)V",
+          "original": "b",
+          "renamed": "addGodFavour"
+        },
+        {
+          "start": 49525,
+          "end": 49531,
+          "symbol": "P:ha.b(IIIB)V#0",
+          "original": "param0",
+          "renamed": "godId"
+        },
+        {
+          "start": 49537,
+          "end": 49543,
+          "symbol": "P:ha.b(IIIB)V#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 49549,
+          "end": 49555,
+          "symbol": "P:ha.b(IIIB)V#2",
+          "original": "param2",
+          "renamed": "delta"
+        },
+        {
+          "start": 49562,
+          "end": 49568,
+          "symbol": "P:ha.b(IIIB)V#3",
+          "original": "param3",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 49586,
+          "end": 49595,
+          "symbol": "L:ha.b(IIIB)V#0",
+          "original": "dupTemp$1",
+          "renamed": "playerFavour"
+        },
+        {
+          "start": 49616,
+          "end": 49622,
+          "symbol": "P:ha.b(IIIB)V#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 49645,
+          "end": 49651,
+          "symbol": "P:ha.b(IIIB)V#1",
+          "original": "param1",
+          "renamed": "playerId"
         },
         {
           "start": 49660,
@@ -802762,11 +803709,39 @@
           "renamed": "godFavourLevels"
         },
         {
+          "start": 49724,
+          "end": 49730,
+          "symbol": "P:ha.b(IIIB)V#0",
+          "original": "param0",
+          "renamed": "godId"
+        },
+        {
+          "start": 49755,
+          "end": 49761,
+          "symbol": "P:ha.b(IIIB)V#0",
+          "original": "param0",
+          "renamed": "godId"
+        },
+        {
           "start": 49770,
           "end": 49777,
           "symbol": "F:ha.field_E:[[I",
           "original": "field_E",
           "renamed": "godFavourLevels"
+        },
+        {
+          "start": 49778,
+          "end": 49784,
+          "symbol": "P:ha.b(IIIB)V#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 49844,
+          "end": 49853,
+          "symbol": "L:ha.b(IIIB)V#0",
+          "original": "dupTemp$1",
+          "renamed": "playerFavour"
         },
         {
           "start": 49861,
@@ -802776,11 +803751,67 @@
           "renamed": "godFavourLevels"
         },
         {
+          "start": 49869,
+          "end": 49875,
+          "symbol": "P:ha.b(IIIB)V#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 49890,
+          "end": 49899,
+          "symbol": "L:ha.b(IIIB)V#0",
+          "original": "dupTemp$1",
+          "renamed": "playerFavour"
+        },
+        {
+          "start": 49900,
+          "end": 49906,
+          "symbol": "P:ha.b(IIIB)V#0",
+          "original": "param0",
+          "renamed": "godId"
+        },
+        {
+          "start": 49910,
+          "end": 49919,
+          "symbol": "L:ha.b(IIIB)V#0",
+          "original": "dupTemp$1",
+          "renamed": "playerFavour"
+        },
+        {
+          "start": 49920,
+          "end": 49926,
+          "symbol": "P:ha.b(IIIB)V#0",
+          "original": "param0",
+          "renamed": "godId"
+        },
+        {
+          "start": 49930,
+          "end": 49936,
+          "symbol": "P:ha.b(IIIB)V#2",
+          "original": "param2",
+          "renamed": "delta"
+        },
+        {
           "start": 49959,
           "end": 49966,
           "symbol": "F:ha.field_E:[[I",
           "original": "field_E",
           "renamed": "godFavourLevels"
+        },
+        {
+          "start": 49967,
+          "end": 49973,
+          "symbol": "P:ha.b(IIIB)V#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 49975,
+          "end": 49981,
+          "symbol": "P:ha.b(IIIB)V#0",
+          "original": "param0",
+          "renamed": "godId"
         },
         {
           "start": 50009,
@@ -802790,11 +803821,53 @@
           "renamed": "godFavourLevels"
         },
         {
+          "start": 50017,
+          "end": 50023,
+          "symbol": "P:ha.b(IIIB)V#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 50025,
+          "end": 50031,
+          "symbol": "P:ha.b(IIIB)V#0",
+          "original": "param0",
+          "renamed": "godId"
+        },
+        {
+          "start": 50068,
+          "end": 50074,
+          "symbol": "P:ha.b(IIIB)V#3",
+          "original": "param3",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 50136,
+          "end": 50142,
+          "symbol": "P:ha.b(IIIB)V#0",
+          "original": "param0",
+          "renamed": "godId"
+        },
+        {
           "start": 50209,
           "end": 50216,
           "symbol": "F:ha.field_E:[[I",
           "original": "field_E",
           "renamed": "godFavourLevels"
+        },
+        {
+          "start": 50217,
+          "end": 50223,
+          "symbol": "P:ha.b(IIIB)V#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 50225,
+          "end": 50231,
+          "symbol": "P:ha.b(IIIB)V#0",
+          "original": "param0",
+          "renamed": "godId"
         },
         {
           "start": 50240,
@@ -802804,6 +803877,13 @@
           "renamed": "godFavourLevels"
         },
         {
+          "start": 50248,
+          "end": 50254,
+          "symbol": "P:ha.b(IIIB)V#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
           "start": 50281,
           "end": 50288,
           "symbol": "F:ha.field_E:[[I",
@@ -802811,11 +803891,32 @@
           "renamed": "godFavourLevels"
         },
         {
+          "start": 50289,
+          "end": 50295,
+          "symbol": "P:ha.b(IIIB)V#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
           "start": 50307,
           "end": 50314,
           "symbol": "F:ha.field_E:[[I",
           "original": "field_E",
           "renamed": "godFavourLevels"
+        },
+        {
+          "start": 50315,
+          "end": 50321,
+          "symbol": "P:ha.b(IIIB)V#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 50323,
+          "end": 50329,
+          "symbol": "P:ha.b(IIIB)V#0",
+          "original": "param0",
+          "renamed": "godId"
         },
         {
           "start": 50523,
@@ -803271,6 +804372,20 @@
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "BattleCharacter"
+        },
+        {
+          "start": 52761,
+          "end": 52768,
+          "symbol": "F:lf.field_i:[I",
+          "original": "field_i",
+          "renamed": "runeCapsByOption"
+        },
+        {
+          "start": 52774,
+          "end": 52781,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
         },
         {
           "start": 52843,
@@ -804246,11 +805361,74 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 59821,
+          "end": 59822,
+          "symbol": "M:ha.a(ZI)I",
+          "original": "a",
+          "renamed": "computeStateChecksum"
+        },
+        {
+          "start": 59831,
+          "end": 59837,
+          "symbol": "P:ha.a(ZI)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 59843,
+          "end": 59849,
+          "symbol": "P:ha.a(ZI)I#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 59895,
+          "end": 59899,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 59917,
+          "end": 59921,
+          "symbol": "L:ha.a(ZI)I#2",
+          "original": "var4",
+          "renamed": "tilePlayerScope"
+        },
+        {
+          "start": 59939,
+          "end": 59943,
+          "symbol": "L:ha.a(ZI)I#3",
+          "original": "var5",
+          "renamed": "tileX"
+        },
+        {
+          "start": 59961,
+          "end": 59969,
+          "symbol": "L:ha.a(ZI)I#4",
+          "original": "var6_int",
+          "renamed": "tileY"
+        },
+        {
           "start": 59983,
           "end": 59985,
           "symbol": "C:jd",
           "original": "jd",
           "renamed": "Unit"
+        },
+        {
+          "start": 59986,
+          "end": 59990,
+          "symbol": "L:ha.a(ZI)I#5",
+          "original": "var6",
+          "renamed": "unit"
+        },
+        {
+          "start": 60011,
+          "end": 60015,
+          "symbol": "L:ha.a(ZI)I#6",
+          "original": "var7",
+          "renamed": "tileIndex"
         },
         {
           "start": 60029,
@@ -804260,11 +805438,60 @@
           "renamed": "MapTile"
         },
         {
+          "start": 60032,
+          "end": 60043,
+          "symbol": "L:ha.a(ZI)I#7",
+          "original": "var8_ref_ne",
+          "renamed": "tile"
+        },
+        {
+          "start": 60064,
+          "end": 60068,
+          "symbol": "L:ha.a(ZI)I#8",
+          "original": "var8",
+          "renamed": "unitY"
+        },
+        {
+          "start": 60086,
+          "end": 60090,
+          "symbol": "L:ha.a(ZI)I#9",
+          "original": "var9",
+          "renamed": "obfuscationControl"
+        },
+        {
+          "start": 60108,
+          "end": 60121,
+          "symbol": "L:ha.a(ZI)I#10",
+          "original": "var5Lifetime1",
+          "renamed": "unitOwner"
+        },
+        {
+          "start": 60135,
+          "end": 60148,
+          "symbol": "L:ha.a(ZI)I#11",
+          "original": "var7Lifetime1",
+          "renamed": "unitX"
+        },
+        {
+          "start": 60158,
+          "end": 60162,
+          "symbol": "L:ha.a(ZI)I#9",
+          "original": "var9",
+          "renamed": "obfuscationControl"
+        },
+        {
           "start": 60182,
           "end": 60189,
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
           "original": "field_M",
           "renamed": "obfuscationControl"
+        },
+        {
+          "start": 60207,
+          "end": 60211,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
         },
         {
           "start": 60219,
@@ -804281,11 +805508,53 @@
           "renamed": "kingBlackDragonSummoned"
         },
         {
+          "start": 60268,
+          "end": 60272,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 60275,
+          "end": 60279,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 60311,
+          "end": 60315,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 60318,
+          "end": 60322,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
           "start": 60330,
           "end": 60338,
           "symbol": "F:ha.field_cb:I",
           "original": "field_cb",
           "renamed": "mapSizeSetting"
+        },
+        {
+          "start": 60354,
+          "end": 60358,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 60361,
+          "end": 60365,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
         },
         {
           "start": 60382,
@@ -804295,11 +805564,116 @@
           "renamed": "mapTheme"
         },
         {
+          "start": 60400,
+          "end": 60404,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 60407,
+          "end": 60411,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 60419,
+          "end": 60426,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
+        },
+        {
+          "start": 60449,
+          "end": 60455,
+          "symbol": "P:ha.a(ZI)I#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 60474,
+          "end": 60478,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 60481,
+          "end": 60485,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 60493,
+          "end": 60494,
+          "symbol": "M:ha.n(II)I",
+          "original": "n",
+          "renamed": "computePlayerChecksum"
+        },
+        {
+          "start": 60495,
+          "end": 60501,
+          "symbol": "P:ha.a(ZI)I#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 60516,
+          "end": 60522,
+          "symbol": "P:ha.a(ZI)I#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 60548,
+          "end": 60552,
+          "symbol": "L:ha.a(ZI)I#2",
+          "original": "var4",
+          "renamed": "tilePlayerScope"
+        },
+        {
+          "start": 60555,
+          "end": 60561,
+          "symbol": "P:ha.a(ZI)I#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 60579,
+          "end": 60583,
+          "symbol": "L:ha.a(ZI)I#2",
+          "original": "var4",
+          "renamed": "tilePlayerScope"
+        },
+        {
+          "start": 60597,
+          "end": 60601,
+          "symbol": "L:ha.a(ZI)I#2",
+          "original": "var4",
+          "renamed": "tilePlayerScope"
+        },
+        {
+          "start": 60630,
+          "end": 60636,
+          "symbol": "P:ha.a(ZI)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 60655,
           "end": 60663,
           "symbol": "F:ha.field_ib:I",
           "original": "field_ib",
           "renamed": "turnDurationOption"
+        },
+        {
+          "start": 60689,
+          "end": 60693,
+          "symbol": "L:ha.a(ZI)I#3",
+          "original": "var5",
+          "renamed": "tileX"
         },
         {
           "start": 60707,
@@ -804317,12 +805691,33 @@
           "renamed": "mapWidth"
         },
         {
+          "start": 60755,
+          "end": 60759,
+          "symbol": "L:ha.a(ZI)I#3",
+          "original": "var5",
+          "renamed": "tileX"
+        },
+        {
+          "start": 60809,
+          "end": 60813,
+          "symbol": "L:ha.a(ZI)I#9",
+          "original": "var9",
+          "renamed": "obfuscationControl"
+        },
+        {
           "start": 60842,
           "end": 60844,
           "symbol": "B:ha.a(ZI)I#0",
           "original": "L4",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 60872,
+          "end": 60880,
+          "symbol": "L:ha.a(ZI)I#4",
+          "original": "var6_int",
+          "renamed": "tileY"
         },
         {
           "start": 60921,
@@ -804332,6 +805727,20 @@
           "renamed": "mapHeight"
         },
         {
+          "start": 60932,
+          "end": 60940,
+          "symbol": "L:ha.a(ZI)I#4",
+          "original": "var6_int",
+          "renamed": "tileY"
+        },
+        {
+          "start": 60958,
+          "end": 60962,
+          "symbol": "L:ha.a(ZI)I#6",
+          "original": "var7",
+          "renamed": "tileIndex"
+        },
+        {
           "start": 60970,
           "end": 60977,
           "symbol": "F:ha.field_v:I",
@@ -804339,11 +805748,95 @@
           "renamed": "mapWidth"
         },
         {
+          "start": 60980,
+          "end": 60988,
+          "symbol": "L:ha.a(ZI)I#4",
+          "original": "var6_int",
+          "renamed": "tileY"
+        },
+        {
+          "start": 60991,
+          "end": 60995,
+          "symbol": "L:ha.a(ZI)I#3",
+          "original": "var5",
+          "renamed": "tileX"
+        },
+        {
+          "start": 61011,
+          "end": 61022,
+          "symbol": "L:ha.a(ZI)I#7",
+          "original": "var8_ref_ne",
+          "renamed": "tile"
+        },
+        {
           "start": 61030,
           "end": 61038,
           "symbol": "F:ha.field_Eb:[Lne;",
           "original": "field_Eb",
           "renamed": "tiles"
+        },
+        {
+          "start": 61039,
+          "end": 61043,
+          "symbol": "L:ha.a(ZI)I#6",
+          "original": "var7",
+          "renamed": "tileIndex"
+        },
+        {
+          "start": 61060,
+          "end": 61064,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 61067,
+          "end": 61071,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 61079,
+          "end": 61080,
+          "symbol": "M:ha.a(BILne;)I",
+          "original": "a",
+          "renamed": "computeTileChecksum"
+        },
+        {
+          "start": 61093,
+          "end": 61097,
+          "symbol": "L:ha.a(ZI)I#2",
+          "original": "var4",
+          "renamed": "tilePlayerScope"
+        },
+        {
+          "start": 61099,
+          "end": 61110,
+          "symbol": "L:ha.a(ZI)I#7",
+          "original": "var8_ref_ne",
+          "renamed": "tile"
+        },
+        {
+          "start": 61115,
+          "end": 61119,
+          "symbol": "L:ha.a(ZI)I#6",
+          "original": "var7",
+          "renamed": "tileIndex"
+        },
+        {
+          "start": 61146,
+          "end": 61154,
+          "symbol": "L:ha.a(ZI)I#4",
+          "original": "var6_int",
+          "renamed": "tileY"
+        },
+        {
+          "start": 61184,
+          "end": 61188,
+          "symbol": "L:ha.a(ZI)I#3",
+          "original": "var5",
+          "renamed": "tileX"
         },
         {
           "start": 61213,
@@ -804354,6 +805847,13 @@
           "kind": "label"
         },
         {
+          "start": 61292,
+          "end": 61305,
+          "symbol": "L:ha.a(ZI)I#10",
+          "original": "var5Lifetime1",
+          "renamed": "unitOwner"
+        },
+        {
           "start": 61330,
           "end": 61333,
           "symbol": "B:ha.a(ZI)I#1",
@@ -804362,11 +805862,25 @@
           "kind": "label"
         },
         {
+          "start": 61342,
+          "end": 61355,
+          "symbol": "L:ha.a(ZI)I#10",
+          "original": "var5Lifetime1",
+          "renamed": "unitOwner"
+        },
+        {
           "start": 61363,
           "end": 61370,
           "symbol": "F:ha.field_W:I",
           "original": "field_W",
           "renamed": "playerCount"
+        },
+        {
+          "start": 61384,
+          "end": 61388,
+          "symbol": "L:ha.a(ZI)I#5",
+          "original": "var6",
+          "renamed": "unit"
         },
         {
           "start": 61392,
@@ -804383,11 +805897,39 @@
           "renamed": "unitsByPlayer"
         },
         {
+          "start": 61410,
+          "end": 61423,
+          "symbol": "L:ha.a(ZI)I#10",
+          "original": "var5Lifetime1",
+          "renamed": "unitOwner"
+        },
+        {
           "start": 61425,
           "end": 61426,
           "symbol": "M:at.e(B)Ltc;",
           "original": "e",
           "renamed": "first"
+        },
+        {
+          "start": 61482,
+          "end": 61486,
+          "symbol": "L:ha.a(ZI)I#5",
+          "original": "var6",
+          "renamed": "unit"
+        },
+        {
+          "start": 61512,
+          "end": 61525,
+          "symbol": "L:ha.a(ZI)I#11",
+          "original": "var7Lifetime1",
+          "renamed": "unitX"
+        },
+        {
+          "start": 61528,
+          "end": 61532,
+          "symbol": "L:ha.a(ZI)I#5",
+          "original": "var6",
+          "renamed": "unit"
         },
         {
           "start": 61533,
@@ -804397,11 +805939,74 @@
           "renamed": "tileX"
         },
         {
+          "start": 61556,
+          "end": 61560,
+          "symbol": "L:ha.a(ZI)I#8",
+          "original": "var8",
+          "renamed": "unitY"
+        },
+        {
+          "start": 61563,
+          "end": 61567,
+          "symbol": "L:ha.a(ZI)I#5",
+          "original": "var6",
+          "renamed": "unit"
+        },
+        {
           "start": 61568,
           "end": 61575,
           "symbol": "F:jd.field_w:I",
           "original": "field_w",
           "renamed": "tileY"
+        },
+        {
+          "start": 61591,
+          "end": 61595,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 61598,
+          "end": 61602,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 61610,
+          "end": 61611,
+          "symbol": "M:ha.b(ILjd;)I",
+          "original": "b",
+          "renamed": "computeUnitChecksum"
+        },
+        {
+          "start": 61618,
+          "end": 61622,
+          "symbol": "L:ha.a(ZI)I#5",
+          "original": "var6",
+          "renamed": "unit"
+        },
+        {
+          "start": 61627,
+          "end": 61640,
+          "symbol": "L:ha.a(ZI)I#11",
+          "original": "var7Lifetime1",
+          "renamed": "unitX"
+        },
+        {
+          "start": 61651,
+          "end": 61655,
+          "symbol": "L:ha.a(ZI)I#8",
+          "original": "var8",
+          "renamed": "unitY"
+        },
+        {
+          "start": 61678,
+          "end": 61682,
+          "symbol": "L:ha.a(ZI)I#5",
+          "original": "var6",
+          "renamed": "unit"
         },
         {
           "start": 61686,
@@ -804418,11 +806023,39 @@
           "renamed": "unitsByPlayer"
         },
         {
+          "start": 61704,
+          "end": 61717,
+          "symbol": "L:ha.a(ZI)I#10",
+          "original": "var5Lifetime1",
+          "renamed": "unitOwner"
+        },
+        {
           "start": 61719,
           "end": 61720,
           "symbol": "M:at.a(B)Ltc;",
           "original": "a",
           "renamed": "next"
+        },
+        {
+          "start": 61753,
+          "end": 61757,
+          "symbol": "L:ha.a(ZI)I#9",
+          "original": "var9",
+          "renamed": "obfuscationControl"
+        },
+        {
+          "start": 61843,
+          "end": 61856,
+          "symbol": "L:ha.a(ZI)I#10",
+          "original": "var5Lifetime1",
+          "renamed": "unitOwner"
+        },
+        {
+          "start": 61919,
+          "end": 61923,
+          "symbol": "L:ha.a(ZI)I#9",
+          "original": "var9",
+          "renamed": "obfuscationControl"
         },
         {
           "start": 61953,
@@ -804431,6 +806064,13 @@
           "original": "L10",
           "renamed": "scanLoop2",
           "kind": "label"
+        },
+        {
+          "start": 62012,
+          "end": 62016,
+          "symbol": "L:ha.a(ZI)I#1",
+          "original": "var3",
+          "renamed": "checksum"
         },
         {
           "start": 62040,
@@ -804846,6 +806486,13 @@
           "symbol": "F:ha.field_K:Lom;",
           "original": "field_K",
           "renamed": "campaignMission"
+        },
+        {
+          "start": 67106,
+          "end": 67107,
+          "symbol": "M:ha.b(IZ)Z",
+          "original": "b",
+          "renamed": "checkPlayerDefeat"
         },
         {
           "start": 67144,
@@ -807492,6 +809139,13 @@
           "symbol": "P:ha.a(IIILjd;Ljd;B)I#5",
           "original": "param5",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 82520,
+          "end": 82521,
+          "symbol": "M:ha.a(BILne;)I",
+          "original": "a",
+          "renamed": "computeTileChecksum"
         },
         {
           "start": 82540,
@@ -810349,6 +812003,13 @@
           "renamed": "readUnsignedShort"
         },
         {
+          "start": 106549,
+          "end": 106556,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
+        },
+        {
           "start": 106559,
           "end": 106565,
           "symbol": "P:ha.b(ILvh;)V#1",
@@ -810361,6 +812022,13 @@
           "symbol": "M:vh.k(I)I",
           "original": "k",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 106644,
+          "end": 106651,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
         },
         {
           "start": 106800,
@@ -810417,6 +812085,20 @@
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "BattleCharacter"
+        },
+        {
+          "start": 107600,
+          "end": 107607,
+          "symbol": "F:lf.field_i:[I",
+          "original": "field_i",
+          "renamed": "runeCapsByOption"
+        },
+        {
+          "start": 107613,
+          "end": 107620,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
         },
         {
           "start": 107747,
@@ -810963,6 +812645,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 112022,
+          "end": 112023,
+          "symbol": "M:fl.a(Lha;I)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
+        },
+        {
           "start": 112341,
           "end": 112347,
           "symbol": "P:ha.b(ILvh;)V#0",
@@ -811010,6 +812699,13 @@
           "symbol": "F:ha.field_W:I",
           "original": "field_W",
           "renamed": "playerCount"
+        },
+        {
+          "start": 113204,
+          "end": 113205,
+          "symbol": "M:ha.b(IZ)Z",
+          "original": "b",
+          "renamed": "checkPlayerDefeat"
         },
         {
           "start": 113492,
@@ -812755,6 +814451,20 @@
           "renamed": "writeByte"
         },
         {
+          "start": 127254,
+          "end": 127261,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
+        },
+        {
+          "start": 127285,
+          "end": 127292,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
+        },
+        {
           "start": 127374,
           "end": 127380,
           "symbol": "P:ha.a(Lvh;II)V#0",
@@ -812788,6 +814498,20 @@
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "BattleCharacter"
+        },
+        {
+          "start": 127696,
+          "end": 127703,
+          "symbol": "F:lf.field_i:[I",
+          "original": "field_i",
+          "renamed": "runeCapsByOption"
+        },
+        {
+          "start": 127709,
+          "end": 127716,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
         },
         {
           "start": 127742,
@@ -814710,6 +816434,13 @@
           "renamed": "MapTile"
         },
         {
+          "start": 148317,
+          "end": 148318,
+          "symbol": "M:ha.a(ILne;I)Z",
+          "original": "a",
+          "renamed": "includesTileInChecksum"
+        },
+        {
           "start": 148406,
           "end": 148413,
           "symbol": "F:ne.field_b:Z",
@@ -815200,11 +816931,60 @@
           "renamed": "teamStructureCounts"
         },
         {
+          "start": 153010,
+          "end": 153011,
+          "symbol": "M:ha.a(ILne;I)Z",
+          "original": "a",
+          "renamed": "includesTileInChecksum"
+        },
+        {
+          "start": 153016,
+          "end": 153022,
+          "symbol": "P:ha.a(ILne;I)Z#0",
+          "original": "param0",
+          "renamed": "playerId"
+        },
+        {
           "start": 153024,
           "end": 153026,
           "symbol": "C:ne",
           "original": "ne",
           "renamed": "MapTile"
+        },
+        {
+          "start": 153027,
+          "end": 153033,
+          "symbol": "P:ha.a(ILne;I)Z#1",
+          "original": "param1",
+          "renamed": "tile"
+        },
+        {
+          "start": 153039,
+          "end": 153045,
+          "symbol": "P:ha.a(ILne;I)Z#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 153342,
+          "end": 153348,
+          "symbol": "P:ha.a(ILne;I)Z#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 153662,
+          "end": 153668,
+          "symbol": "P:ha.a(ILne;I)Z#0",
+          "original": "param0",
+          "renamed": "playerId"
+        },
+        {
+          "start": 153697,
+          "end": 153703,
+          "symbol": "P:ha.a(ILne;I)Z#1",
+          "original": "param1",
+          "renamed": "tile"
         },
         {
           "start": 153831,
@@ -815219,6 +816999,13 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 153950,
+          "end": 153956,
+          "symbol": "P:ha.a(ILne;I)Z#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 154014,
@@ -816061,11 +817848,53 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 157155,
+          "end": 157156,
+          "symbol": "M:ha.b(ILjd;)I",
+          "original": "b",
+          "renamed": "computeUnitChecksum"
+        },
+        {
+          "start": 157161,
+          "end": 157167,
+          "symbol": "P:ha.b(ILjd;)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 157169,
           "end": 157171,
           "symbol": "C:jd",
           "original": "jd",
           "renamed": "Unit"
+        },
+        {
+          "start": 157172,
+          "end": 157178,
+          "symbol": "P:ha.b(ILjd;)I#1",
+          "original": "param1",
+          "renamed": "unit"
+        },
+        {
+          "start": 157194,
+          "end": 157202,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 157484,
+          "end": 157492,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 157495,
+          "end": 157501,
+          "symbol": "P:ha.b(ILjd;)I#1",
+          "original": "param1",
+          "renamed": "unit"
         },
         {
           "start": 157502,
@@ -816075,11 +817904,39 @@
           "renamed": "ownerPlayer"
         },
         {
+          "start": 157525,
+          "end": 157531,
+          "symbol": "P:ha.b(ILjd;)I#1",
+          "original": "param1",
+          "renamed": "unit"
+        },
+        {
           "start": 157532,
           "end": 157539,
           "symbol": "F:jd.field_I:Z",
           "original": "field_I",
           "renamed": "poisoned"
+        },
+        {
+          "start": 157555,
+          "end": 157563,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 157566,
+          "end": 157574,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 157609,
+          "end": 157615,
+          "symbol": "P:ha.b(ILjd;)I#1",
+          "original": "param1",
+          "renamed": "unit"
         },
         {
           "start": 157616,
@@ -816089,11 +817946,53 @@
           "renamed": "packedFlag8"
         },
         {
+          "start": 157639,
+          "end": 157647,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 157650,
+          "end": 157658,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 157691,
+          "end": 157699,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 157702,
+          "end": 157710,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 157721,
+          "end": 157727,
+          "symbol": "P:ha.b(ILjd;)I#1",
+          "original": "param1",
+          "renamed": "unit"
+        },
+        {
           "start": 157728,
           "end": 157735,
           "symbol": "F:jd.field_B:I",
           "original": "field_B",
           "renamed": "attacksRemaining"
+        },
+        {
+          "start": 157751,
+          "end": 157757,
+          "symbol": "P:ha.b(ILjd;)I#1",
+          "original": "param1",
+          "renamed": "unit"
         },
         {
           "start": 157758,
@@ -816103,11 +818002,67 @@
           "renamed": "movementSpent"
         },
         {
+          "start": 157781,
+          "end": 157789,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 157792,
+          "end": 157800,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 157839,
+          "end": 157845,
+          "symbol": "P:ha.b(ILjd;)I#1",
+          "original": "param1",
+          "renamed": "unit"
+        },
+        {
           "start": 157846,
           "end": 157853,
           "symbol": "F:jd.field_D:Z",
           "original": "field_D",
           "renamed": "packedFlag512"
+        },
+        {
+          "start": 157869,
+          "end": 157877,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 157880,
+          "end": 157888,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 157921,
+          "end": 157929,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 157932,
+          "end": 157940,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 157948,
+          "end": 157954,
+          "symbol": "P:ha.b(ILjd;)I#1",
+          "original": "param1",
+          "renamed": "unit"
         },
         {
           "start": 157955,
@@ -816117,11 +818072,53 @@
           "renamed": "tileX"
         },
         {
+          "start": 157974,
+          "end": 157982,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 157985,
+          "end": 157993,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 157996,
+          "end": 158002,
+          "symbol": "P:ha.b(ILjd;)I#1",
+          "original": "param1",
+          "renamed": "unit"
+        },
+        {
           "start": 158003,
           "end": 158010,
           "symbol": "F:jd.field_w:I",
           "original": "field_w",
           "renamed": "tileY"
+        },
+        {
+          "start": 158028,
+          "end": 158036,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 158039,
+          "end": 158047,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 158050,
+          "end": 158056,
+          "symbol": "P:ha.b(ILjd;)I#1",
+          "original": "param1",
+          "renamed": "unit"
         },
         {
           "start": 158057,
@@ -816131,11 +818128,53 @@
           "renamed": "bonusStrength"
         },
         {
+          "start": 158082,
+          "end": 158090,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 158093,
+          "end": 158101,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 158112,
+          "end": 158118,
+          "symbol": "P:ha.b(ILjd;)I#1",
+          "original": "param1",
+          "renamed": "unit"
+        },
+        {
           "start": 158119,
           "end": 158126,
           "symbol": "F:jd.field_N:I",
           "original": "field_N",
           "renamed": "unitType"
+        },
+        {
+          "start": 158138,
+          "end": 158146,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 158149,
+          "end": 158157,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 158160,
+          "end": 158166,
+          "symbol": "P:ha.b(ILjd;)I#1",
+          "original": "param1",
+          "renamed": "unit"
         },
         {
           "start": 158167,
@@ -816145,11 +818184,60 @@
           "renamed": "strength"
         },
         {
+          "start": 158195,
+          "end": 158203,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 158206,
+          "end": 158214,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 158226,
+          "end": 158232,
+          "symbol": "P:ha.b(ILjd;)I#1",
+          "original": "param1",
+          "renamed": "unit"
+        },
+        {
           "start": 158233,
           "end": 158240,
           "symbol": "F:jd.field_t:I",
           "original": "field_t",
           "renamed": "maximumStrength"
+        },
+        {
+          "start": 158256,
+          "end": 158262,
+          "symbol": "P:ha.b(ILjd;)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 158351,
+          "end": 158359,
+          "symbol": "L:ha.b(ILjd;)I#0",
+          "original": "var3_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 158676,
+          "end": 158682,
+          "symbol": "P:ha.b(ILjd;)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 158711,
+          "end": 158717,
+          "symbol": "P:ha.b(ILjd;)I#1",
+          "original": "param1",
+          "renamed": "unit"
         },
         {
           "start": 158847,
@@ -816164,6 +818252,13 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 159153,
+          "end": 159154,
+          "symbol": "M:ha.a(ILne;I)Z",
+          "original": "a",
+          "renamed": "includesTileInChecksum"
         },
         {
           "start": 159161,
@@ -821489,11 +823584,81 @@
           "renamed": "UnitLossCondition"
         },
         {
+          "start": 198451,
+          "end": 198452,
+          "symbol": "M:ha.n(II)I",
+          "original": "n",
+          "renamed": "computePlayerChecksum"
+        },
+        {
+          "start": 198457,
+          "end": 198463,
+          "symbol": "P:ha.n(II)I#0",
+          "original": "param0",
+          "renamed": "playerId"
+        },
+        {
+          "start": 198469,
+          "end": 198475,
+          "symbol": "P:ha.n(II)I#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 198551,
+          "end": 198555,
+          "symbol": "L:ha.n(II)I#2",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 198569,
+          "end": 198573,
+          "symbol": "L:ha.n(II)I#3",
+          "original": "var4",
+          "renamed": "godSlot"
+        },
+        {
+          "start": 198587,
+          "end": 198591,
+          "symbol": "L:ha.n(II)I#4",
+          "original": "var5",
+          "renamed": "godId"
+        },
+        {
+          "start": 198605,
+          "end": 198609,
+          "symbol": "L:ha.n(II)I#5",
+          "original": "var6",
+          "renamed": "obfuscationControl"
+        },
+        {
+          "start": 198619,
+          "end": 198623,
+          "symbol": "L:ha.n(II)I#5",
+          "original": "var6",
+          "renamed": "obfuscationControl"
+        },
+        {
           "start": 198643,
           "end": 198650,
           "symbol": "F:ArmiesOfGielinor.field_M:Z",
           "original": "field_M",
           "renamed": "obfuscationControl"
+        },
+        {
+          "start": 198668,
+          "end": 198672,
+          "symbol": "L:ha.n(II)I#2",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 198690,
+          "end": 198696,
+          "symbol": "P:ha.n(II)I#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 198722,
@@ -821503,11 +823668,39 @@
           "renamed": "getSummoningFavourAt"
         },
         {
+          "start": 198768,
+          "end": 198772,
+          "symbol": "L:ha.n(II)I#3",
+          "original": "var4",
+          "renamed": "godSlot"
+        },
+        {
+          "start": 198877,
+          "end": 198881,
+          "symbol": "L:ha.n(II)I#3",
+          "original": "var4",
+          "renamed": "godSlot"
+        },
+        {
           "start": 198890,
           "end": 198897,
           "symbol": "F:ha.field_c:[[I",
           "original": "field_c",
           "renamed": "chosenGods"
+        },
+        {
+          "start": 198898,
+          "end": 198904,
+          "symbol": "P:ha.n(II)I#0",
+          "original": "param0",
+          "renamed": "playerId"
+        },
+        {
+          "start": 198928,
+          "end": 198932,
+          "symbol": "L:ha.n(II)I#4",
+          "original": "var5",
+          "renamed": "godId"
         },
         {
           "start": 198940,
@@ -821517,11 +823710,81 @@
           "renamed": "chosenGods"
         },
         {
+          "start": 198948,
+          "end": 198954,
+          "symbol": "P:ha.n(II)I#0",
+          "original": "param0",
+          "renamed": "playerId"
+        },
+        {
+          "start": 198956,
+          "end": 198960,
+          "symbol": "L:ha.n(II)I#3",
+          "original": "var4",
+          "renamed": "godSlot"
+        },
+        {
+          "start": 198989,
+          "end": 198993,
+          "symbol": "L:ha.n(II)I#4",
+          "original": "var5",
+          "renamed": "godId"
+        },
+        {
+          "start": 199038,
+          "end": 199042,
+          "symbol": "L:ha.n(II)I#5",
+          "original": "var6",
+          "renamed": "obfuscationControl"
+        },
+        {
+          "start": 199113,
+          "end": 199117,
+          "symbol": "L:ha.n(II)I#2",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 199120,
+          "end": 199124,
+          "symbol": "L:ha.n(II)I#2",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 199142,
+          "end": 199146,
+          "symbol": "L:ha.n(II)I#4",
+          "original": "var5",
+          "renamed": "godId"
+        },
+        {
           "start": 199155,
           "end": 199162,
           "symbol": "F:ha.field_E:[[I",
           "original": "field_E",
           "renamed": "godFavourLevels"
+        },
+        {
+          "start": 199163,
+          "end": 199169,
+          "symbol": "P:ha.n(II)I#0",
+          "original": "param0",
+          "renamed": "playerId"
+        },
+        {
+          "start": 199171,
+          "end": 199175,
+          "symbol": "L:ha.n(II)I#4",
+          "original": "var5",
+          "renamed": "godId"
+        },
+        {
+          "start": 199204,
+          "end": 199208,
+          "symbol": "L:ha.n(II)I#3",
+          "original": "var4",
+          "renamed": "godSlot"
         },
         {
           "start": 199346,
@@ -821531,11 +823794,39 @@
           "renamed": "playerMana"
         },
         {
+          "start": 199354,
+          "end": 199360,
+          "symbol": "P:ha.n(II)I#0",
+          "original": "param0",
+          "renamed": "playerId"
+        },
+        {
+          "start": 199456,
+          "end": 199460,
+          "symbol": "L:ha.n(II)I#2",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 199463,
+          "end": 199467,
+          "symbol": "L:ha.n(II)I#2",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
           "start": 199475,
           "end": 199482,
           "symbol": "F:ha.field_H:[I",
           "original": "field_H",
           "renamed": "playerMana"
+        },
+        {
+          "start": 199483,
+          "end": 199489,
+          "symbol": "P:ha.n(II)I#0",
+          "original": "param0",
+          "renamed": "playerId"
         },
         {
           "start": 199527,
@@ -821552,6 +823843,27 @@
           "renamed": "playerTeamIndices"
         },
         {
+          "start": 199550,
+          "end": 199556,
+          "symbol": "P:ha.n(II)I#0",
+          "original": "param0",
+          "renamed": "playerId"
+        },
+        {
+          "start": 199577,
+          "end": 199581,
+          "symbol": "L:ha.n(II)I#2",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 199584,
+          "end": 199588,
+          "symbol": "L:ha.n(II)I#2",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
           "start": 199596,
           "end": 199604,
           "symbol": "F:ha.field_fb:[I",
@@ -821566,11 +823878,39 @@
           "renamed": "playerTeamIndices"
         },
         {
+          "start": 199619,
+          "end": 199625,
+          "symbol": "P:ha.n(II)I#0",
+          "original": "param0",
+          "renamed": "playerId"
+        },
+        {
+          "start": 199655,
+          "end": 199659,
+          "symbol": "L:ha.n(II)I#2",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 199662,
+          "end": 199666,
+          "symbol": "L:ha.n(II)I#2",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
           "start": 199681,
           "end": 199689,
           "symbol": "F:ha.field_mb:[I",
           "original": "field_mb",
           "renamed": "playerTurnCounts"
+        },
+        {
+          "start": 199690,
+          "end": 199696,
+          "symbol": "P:ha.n(II)I#0",
+          "original": "param0",
+          "renamed": "playerId"
         },
         {
           "start": 199711,
@@ -821580,11 +823920,53 @@
           "renamed": "BattleCharacter"
         },
         {
+          "start": 199714,
+          "end": 199721,
+          "symbol": "F:lf.field_i:[I",
+          "original": "field_i",
+          "renamed": "runeCapsByOption"
+        },
+        {
+          "start": 199727,
+          "end": 199734,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
+        },
+        {
+          "start": 199754,
+          "end": 199758,
+          "symbol": "L:ha.n(II)I#2",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
+          "start": 199761,
+          "end": 199765,
+          "symbol": "L:ha.n(II)I#2",
+          "original": "var3",
+          "renamed": "checksum"
+        },
+        {
           "start": 199780,
           "end": 199787,
           "symbol": "F:ha.field_m:[I",
           "original": "field_m",
           "renamed": "remainingRuneCap"
+        },
+        {
+          "start": 199788,
+          "end": 199794,
+          "symbol": "P:ha.n(II)I#0",
+          "original": "param0",
+          "renamed": "playerId"
+        },
+        {
+          "start": 199822,
+          "end": 199826,
+          "symbol": "L:ha.n(II)I#2",
+          "original": "var3",
+          "renamed": "checksum"
         },
         {
           "start": 199849,
@@ -822343,11 +824725,95 @@
           "renamed": "eliminateAllPlayers"
         },
         {
+          "start": 206158,
+          "end": 206159,
+          "symbol": "M:ha.a(BILne;)I",
+          "original": "a",
+          "renamed": "computeTileChecksum"
+        },
+        {
+          "start": 206165,
+          "end": 206171,
+          "symbol": "P:ha.a(BILne;)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 206177,
+          "end": 206183,
+          "symbol": "P:ha.a(BILne;)I#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
           "start": 206185,
           "end": 206187,
           "symbol": "C:ne",
           "original": "ne",
           "renamed": "MapTile"
+        },
+        {
+          "start": 206188,
+          "end": 206194,
+          "symbol": "P:ha.a(BILne;)I#2",
+          "original": "param2",
+          "renamed": "tile"
+        },
+        {
+          "start": 206210,
+          "end": 206218,
+          "symbol": "L:ha.a(BILne;)I#0",
+          "original": "var4_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 206529,
+          "end": 206537,
+          "symbol": "L:ha.a(BILne;)I#0",
+          "original": "var4_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 206563,
+          "end": 206564,
+          "symbol": "M:ha.a(ILne;I)Z",
+          "original": "a",
+          "renamed": "includesTileInChecksum"
+        },
+        {
+          "start": 206565,
+          "end": 206571,
+          "symbol": "P:ha.a(BILne;)I#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 206573,
+          "end": 206579,
+          "symbol": "P:ha.a(BILne;)I#2",
+          "original": "param2",
+          "renamed": "tile"
+        },
+        {
+          "start": 206601,
+          "end": 206609,
+          "symbol": "L:ha.a(BILne;)I#0",
+          "original": "var4_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 206612,
+          "end": 206620,
+          "symbol": "L:ha.a(BILne;)I#0",
+          "original": "var4_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 206623,
+          "end": 206629,
+          "symbol": "P:ha.a(BILne;)I#2",
+          "original": "param2",
+          "renamed": "tile"
         },
         {
           "start": 206630,
@@ -822357,11 +824823,46 @@
           "renamed": "terrainType"
         },
         {
+          "start": 206665,
+          "end": 206673,
+          "symbol": "L:ha.a(BILne;)I#0",
+          "original": "var4_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 206729,
+          "end": 206737,
+          "symbol": "L:ha.a(BILne;)I#0",
+          "original": "var4_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 206740,
+          "end": 206748,
+          "symbol": "L:ha.a(BILne;)I#0",
+          "original": "var4_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 206751,
+          "end": 206757,
+          "symbol": "P:ha.a(BILne;)I#2",
+          "original": "param2",
+          "renamed": "tile"
+        },
+        {
           "start": 206758,
           "end": 206765,
           "symbol": "F:ne.field_h:I",
           "original": "field_h",
           "renamed": "terrainType"
+        },
+        {
+          "start": 206786,
+          "end": 206792,
+          "symbol": "P:ha.a(BILne;)I#2",
+          "original": "param2",
+          "renamed": "tile"
         },
         {
           "start": 206793,
@@ -822371,11 +824872,67 @@
           "renamed": "hasCorpse"
         },
         {
+          "start": 206816,
+          "end": 206824,
+          "symbol": "L:ha.a(BILne;)I#0",
+          "original": "var4_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 206827,
+          "end": 206835,
+          "symbol": "L:ha.a(BILne;)I#0",
+          "original": "var4_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 206869,
+          "end": 206875,
+          "symbol": "P:ha.a(BILne;)I#2",
+          "original": "param2",
+          "renamed": "tile"
+        },
+        {
           "start": 206876,
           "end": 206877,
           "symbol": "M:ne.c(B)Z",
           "original": "c",
           "renamed": "hasExplicitOwner"
+        },
+        {
+          "start": 206905,
+          "end": 206913,
+          "symbol": "L:ha.a(BILne;)I#0",
+          "original": "var4_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 206916,
+          "end": 206924,
+          "symbol": "L:ha.a(BILne;)I#0",
+          "original": "var4_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 206945,
+          "end": 206953,
+          "symbol": "L:ha.a(BILne;)I#0",
+          "original": "var4_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 206956,
+          "end": 206964,
+          "symbol": "L:ha.a(BILne;)I#0",
+          "original": "var4_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 206967,
+          "end": 206973,
+          "symbol": "P:ha.a(BILne;)I#2",
+          "original": "param2",
+          "renamed": "tile"
         },
         {
           "start": 206974,
@@ -822385,11 +824942,67 @@
           "renamed": "getExplicitOwner"
         },
         {
+          "start": 207020,
+          "end": 207026,
+          "symbol": "P:ha.a(BILne;)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 207089,
+          "end": 207097,
+          "symbol": "L:ha.a(BILne;)I#0",
+          "original": "var4_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 207100,
+          "end": 207108,
+          "symbol": "L:ha.a(BILne;)I#0",
+          "original": "var4_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 207118,
+          "end": 207124,
+          "symbol": "P:ha.a(BILne;)I#2",
+          "original": "param2",
+          "renamed": "tile"
+        },
+        {
           "start": 207125,
           "end": 207132,
           "symbol": "F:ne.field_a:I",
           "original": "field_a",
           "renamed": "ownerPlayer"
+        },
+        {
+          "start": 207159,
+          "end": 207167,
+          "symbol": "L:ha.a(BILne;)I#0",
+          "original": "var4_int",
+          "renamed": "checksum"
+        },
+        {
+          "start": 207484,
+          "end": 207490,
+          "symbol": "P:ha.a(BILne;)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 207511,
+          "end": 207517,
+          "symbol": "P:ha.a(BILne;)I#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 207546,
+          "end": 207552,
+          "symbol": "P:ha.a(BILne;)I#2",
+          "original": "param2",
+          "renamed": "tile"
         },
         {
           "start": 207682,
@@ -823718,6 +826331,13 @@
           "renamed": "snapshotBuffer"
         },
         {
+          "start": 225630,
+          "end": 225637,
+          "symbol": "F:ha.field_J:Z",
+          "original": "field_J",
+          "renamed": "spellCastPending"
+        },
+        {
           "start": 225719,
           "end": 225727,
           "symbol": "F:ha.field_Bb:Z",
@@ -823800,6 +826420,13 @@
           "symbol": "F:ha.field_hb:I",
           "original": "field_hb",
           "renamed": "mapTheme"
+        },
+        {
+          "start": 226412,
+          "end": 226419,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
         },
         {
           "start": 226543,
@@ -824977,6 +827604,20 @@
           "symbol": "C:lf",
           "original": "lf",
           "renamed": "BattleCharacter"
+        },
+        {
+          "start": 240436,
+          "end": 240443,
+          "symbol": "F:lf.field_i:[I",
+          "original": "field_i",
+          "renamed": "runeCapsByOption"
+        },
+        {
+          "start": 240449,
+          "end": 240456,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
         },
         {
           "start": 240561,
@@ -828537,7 +831178,7 @@
       "original": "hf.java",
       "renamed": "hf.java",
       "inputSha256": "7eab8462e7800249d70dc281da2f23e5ba9e59e48edb780e8e473af1436d8c33",
-      "outputSha256": "6d94a696642cba83c8f67a38cb8578ae68d2e244353102e094b1acb6d86ff265",
+      "outputSha256": "81cc77c88c52888ab59bcf922fd7e6c3a942f0aefe8d423eccdff7bf636d0a3b",
       "edits": [
         {
           "start": 98,
@@ -828603,11 +831244,81 @@
           "renamed": "ClientConnectionState"
         },
         {
+          "start": 1224,
+          "end": 1225,
+          "symbol": "M:hf.a(Lha;BZ)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
+        },
+        {
           "start": 1226,
           "end": 1228,
           "symbol": "C:ha",
           "original": "ha",
           "renamed": "Battlefield"
+        },
+        {
+          "start": 1229,
+          "end": 1235,
+          "symbol": "P:hf.a(Lha;BZ)V#0",
+          "original": "param0",
+          "renamed": "battlefield"
+        },
+        {
+          "start": 1242,
+          "end": 1248,
+          "symbol": "P:hf.a(Lha;BZ)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1258,
+          "end": 1264,
+          "symbol": "P:hf.a(Lha;BZ)V#2",
+          "original": "param2",
+          "renamed": "unusedFlag"
+        },
+        {
+          "start": 1280,
+          "end": 1286,
+          "symbol": "P:hf.a(Lha;BZ)V#0",
+          "original": "param0",
+          "renamed": "battlefield"
+        },
+        {
+          "start": 1308,
+          "end": 1314,
+          "symbol": "P:hf.a(Lha;BZ)V#0",
+          "original": "param0",
+          "renamed": "battlefield"
+        },
+        {
+          "start": 1382,
+          "end": 1388,
+          "symbol": "P:hf.a(Lha;BZ)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1456,
+          "end": 1462,
+          "symbol": "P:hf.a(Lha;BZ)V#0",
+          "original": "param0",
+          "renamed": "battlefield"
+        },
+        {
+          "start": 1463,
+          "end": 1464,
+          "symbol": "M:ha.a(ZI)I",
+          "original": "a",
+          "renamed": "computeStateChecksum"
+        },
+        {
+          "start": 1471,
+          "end": 1477,
+          "symbol": "P:hf.a(Lha;BZ)V#0",
+          "original": "param0",
+          "renamed": "battlefield"
         },
         {
           "start": 1478,
@@ -828629,6 +831340,27 @@
           "symbol": "M:ig.a(Ljava/lang/Throwable;Ljava/lang/String;)Lg;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 1616,
+          "end": 1622,
+          "symbol": "P:hf.a(Lha;BZ)V#0",
+          "original": "param0",
+          "renamed": "battlefield"
+        },
+        {
+          "start": 1659,
+          "end": 1665,
+          "symbol": "P:hf.a(Lha;BZ)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1674,
+          "end": 1680,
+          "symbol": "P:hf.a(Lha;BZ)V#2",
+          "original": "param2",
+          "renamed": "unusedFlag"
         },
         {
           "start": 1742,
@@ -834223,7 +836955,7 @@
       "original": "hp.java",
       "renamed": "DeathEvent.java",
       "inputSha256": "e5697f587bd2d92e3abca85d1ca13d61cfd320519d2052bfe20832f45e194085",
-      "outputSha256": "cd4e84c56e6bce2f44975e72289e1d851441d74175c0e74c582e8c130fddd425",
+      "outputSha256": "e6f131b04419a9c6798ccb1a14b1f0db4e258e2c03567436400a15d080c4a36e",
       "edits": [
         {
           "start": 50,
@@ -834952,6 +837684,13 @@
           "symbol": "C:jd",
           "original": "jd",
           "renamed": "Unit"
+        },
+        {
+          "start": 8327,
+          "end": 8328,
+          "symbol": "M:hf.a(Lha;BZ)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
         },
         {
           "start": 8329,
@@ -847146,7 +849885,7 @@
       "original": "ic.java",
       "renamed": "GameplayController.java",
       "inputSha256": "807c18d2e3ff729e80e0e5158ab16fc972b965707919ee846c6d5759e02a1ab6",
-      "outputSha256": "a06682e297601edab4ff167a6ae346b5b85244dbbaeaadfb8fbd6a3f209e36ad",
+      "outputSha256": "c60869b0b466d4f00ade9e8e132f81e2e0dd8b361d70fb88ce4ce00ec9873e67",
       "edits": [
         {
           "start": 71,
@@ -854192,6 +856931,13 @@
           "renamed": "battlefield"
         },
         {
+          "start": 64461,
+          "end": 64468,
+          "symbol": "F:ha.field_J:Z",
+          "original": "field_J",
+          "renamed": "spellCastPending"
+        },
+        {
           "start": 64610,
           "end": 64617,
           "symbol": "F:ic.field_q:I",
@@ -856724,6 +859470,13 @@
           "symbol": "F:ic.field_xb:Lha;",
           "original": "field_xb",
           "renamed": "battlefield"
+        },
+        {
+          "start": 97623,
+          "end": 97630,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
         },
         {
           "start": 98192,
@@ -861301,6 +864054,13 @@
           "renamed": "ManaEvent"
         },
         {
+          "start": 144847,
+          "end": 144854,
+          "symbol": "F:vp.field_z:I",
+          "original": "field_z",
+          "renamed": "manaTypeCode"
+        },
+        {
           "start": 144889,
           "end": 144891,
           "symbol": "C:vp",
@@ -861434,6 +864194,13 @@
           "renamed": "ManaEvent"
         },
         {
+          "start": 146340,
+          "end": 146347,
+          "symbol": "F:vp.field_z:I",
+          "original": "field_z",
+          "renamed": "manaTypeCode"
+        },
+        {
           "start": 146375,
           "end": 146378,
           "symbol": "B:ic.a(IZ)V#2",
@@ -861477,6 +864244,13 @@
           "renamed": "ManaEvent"
         },
         {
+          "start": 146566,
+          "end": 146573,
+          "symbol": "F:vp.field_z:I",
+          "original": "field_z",
+          "renamed": "manaTypeCode"
+        },
+        {
           "start": 146592,
           "end": 146599,
           "symbol": "F:ic.field_q:I",
@@ -861491,11 +864265,25 @@
           "renamed": "ManaEvent"
         },
         {
+          "start": 146620,
+          "end": 146627,
+          "symbol": "F:vp.field_z:I",
+          "original": "field_z",
+          "renamed": "manaTypeCode"
+        },
+        {
           "start": 146648,
           "end": 146650,
           "symbol": "C:vp",
           "original": "vp",
           "renamed": "ManaEvent"
+        },
+        {
+          "start": 146660,
+          "end": 146667,
+          "symbol": "F:vp.field_z:I",
+          "original": "field_z",
+          "renamed": "manaTypeCode"
         },
         {
           "start": 146702,
@@ -861602,6 +864390,13 @@
           "symbol": "C:vp",
           "original": "vp",
           "renamed": "ManaEvent"
+        },
+        {
+          "start": 147657,
+          "end": 147664,
+          "symbol": "F:vp.field_z:I",
+          "original": "field_z",
+          "renamed": "manaTypeCode"
         },
         {
           "start": 147731,
@@ -863573,6 +866368,13 @@
           "renamed": "battlefield"
         },
         {
+          "start": 172861,
+          "end": 172868,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
+        },
+        {
           "start": 172894,
           "end": 172902,
           "symbol": "F:ic.field_xb:Lha;",
@@ -864553,6 +867355,13 @@
           "renamed": "battlefield"
         },
         {
+          "start": 191449,
+          "end": 191456,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
+        },
+        {
           "start": 191581,
           "end": 191589,
           "symbol": "F:ic.field_xb:Lha;",
@@ -864628,6 +867437,13 @@
           "symbol": "F:ic.field_xb:Lha;",
           "original": "field_xb",
           "renamed": "battlefield"
+        },
+        {
+          "start": 193590,
+          "end": 193597,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
         },
         {
           "start": 193677,
@@ -865804,6 +868620,13 @@
           "symbol": "F:ic.field_xb:Lha;",
           "original": "field_xb",
           "renamed": "battlefield"
+        },
+        {
+          "start": 210211,
+          "end": 210218,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
         },
         {
           "start": 210549,
@@ -867435,6 +870258,13 @@
           "renamed": "battlefield"
         },
         {
+          "start": 233735,
+          "end": 233742,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
+        },
+        {
           "start": 233801,
           "end": 233809,
           "symbol": "F:ic.field_ub:Luf;",
@@ -867587,6 +870417,13 @@
           "symbol": "F:ic.field_xb:Lha;",
           "original": "field_xb",
           "renamed": "battlefield"
+        },
+        {
+          "start": 239100,
+          "end": 239107,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
         },
         {
           "start": 239132,
@@ -873840,6 +876677,13 @@
           "renamed": "battlefield"
         },
         {
+          "start": 311686,
+          "end": 311687,
+          "symbol": "M:ha.a(ZI)I",
+          "original": "a",
+          "renamed": "computeStateChecksum"
+        },
+        {
           "start": 311699,
           "end": 311706,
           "symbol": "F:ic.field_q:I",
@@ -877139,6 +879983,13 @@
           "symbol": "F:ic.field_xb:Lha;",
           "original": "field_xb",
           "renamed": "battlefield"
+        },
+        {
+          "start": 358705,
+          "end": 358712,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
         },
         {
           "start": 359360,
@@ -882262,6 +885113,13 @@
           "renamed": "battlefield"
         },
         {
+          "start": 419635,
+          "end": 419642,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
+        },
+        {
           "start": 419733,
           "end": 419740,
           "symbol": "F:uc.field_d:[[I",
@@ -883134,6 +885992,13 @@
           "renamed": "battlefield"
         },
         {
+          "start": 431761,
+          "end": 431768,
+          "symbol": "F:ha.field_J:Z",
+          "original": "field_J",
+          "renamed": "spellCastPending"
+        },
+        {
           "start": 431911,
           "end": 431918,
           "symbol": "F:uc.field_d:[[I",
@@ -883370,6 +886235,13 @@
           "symbol": "F:ic.field_xb:Lha;",
           "original": "field_xb",
           "renamed": "battlefield"
+        },
+        {
+          "start": 432599,
+          "end": 432606,
+          "symbol": "F:ha.field_J:Z",
+          "original": "field_J",
+          "renamed": "spellCastPending"
         },
         {
           "start": 432630,
@@ -886268,6 +889140,13 @@
           "symbol": "F:ic.field_xb:Lha;",
           "original": "field_xb",
           "renamed": "battlefield"
+        },
+        {
+          "start": 479154,
+          "end": 479161,
+          "symbol": "F:ha.field_Q:I",
+          "original": "field_Q",
+          "renamed": "runeCapOption"
         },
         {
           "start": 479186,
@@ -903654,7 +906533,7 @@
       "original": "iu.java",
       "renamed": "BattleTutorial.java",
       "inputSha256": "c05cb6133cf8147968b413ca4f396b6a0766595cb932167c4c52172dc64f2d31",
-      "outputSha256": "5a05f06132097c3974fef46b37dafb4257defbf0cb65f58573147104bc00a02a",
+      "outputSha256": "ce4905809fe177d38effe7aa05180df207d1b26e491ac8464c51acc60717a83e",
       "edits": [
         {
           "start": 44,
@@ -908769,6 +911648,13 @@
           "symbol": "F:ic.field_xb:Lha;",
           "original": "field_xb",
           "renamed": "battlefield"
+        },
+        {
+          "start": 90617,
+          "end": 90624,
+          "symbol": "F:ha.field_f:Z",
+          "original": "field_f",
+          "renamed": "bypassDefeatAndSpellConsumption"
         },
         {
           "start": 90648,
@@ -914627,7 +917513,7 @@
       "original": "jd.java",
       "renamed": "Unit.java",
       "inputSha256": "4de0582a172a93cf80bd7666dd74397cd0a7599aed3376cb751b6c0bbb0545d9",
-      "outputSha256": "aa6cd7ea0fa4ced085cb5bb1b6deae68b6fc44164082c479fdb7fbbff074860e",
+      "outputSha256": "6bacb0a28953aef90a47f95cd1cf712fa4d14ba8b32ba245ac932104b1b3be94",
       "edits": [
         {
           "start": 50,
@@ -918408,6 +921294,13 @@
           "symbol": "F:jd.field_l:Lha;",
           "original": "field_l",
           "renamed": "battlefield"
+        },
+        {
+          "start": 21844,
+          "end": 21845,
+          "symbol": "M:ha.b(IZ)Z",
+          "original": "b",
+          "renamed": "checkPlayerDefeat"
         },
         {
           "start": 21851,
@@ -949283,7 +952176,7 @@
       "original": "kf.java",
       "renamed": "GrowthEvent.java",
       "inputSha256": "9216ef7d9cb915f1bac3325db267c1b41cafb58698b0b922d52580e4900cb4c7",
-      "outputSha256": "168ec756e74bade3c5f51992b6e1a986459e55a86d338fabe46a813245967ad2",
+      "outputSha256": "bc4eefe85c0c785ebb11d424cfe6d0cd80b00b28661d1e27d98d09ee5b2e1be3",
       "edits": [
         {
           "start": 50,
@@ -949592,6 +952485,13 @@
           "symbol": "F:jd.field_s:Z",
           "original": "field_s",
           "renamed": "movementSpent"
+        },
+        {
+          "start": 1365,
+          "end": 1366,
+          "symbol": "M:fl.a(Lha;I)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
         },
         {
           "start": 1367,
@@ -959168,7 +962068,7 @@
       "original": "kn.java",
       "renamed": "TelefragEvent.java",
       "inputSha256": "f985f5c2003bf50183d9ab64d04163fecc39b71a311eef5505e7f1b5d2862243",
-      "outputSha256": "47e5d1e8e6c43c2847f99c45894873580b382429504c2982e5f0e83d6743ffca",
+      "outputSha256": "483e93c220a5eb41fa573300734709b83d54a58e918bf9fb9a485f575497636e",
       "edits": [
         {
           "start": 50,
@@ -959617,6 +962517,13 @@
           "symbol": "F:jd.field_s:Z",
           "original": "field_s",
           "renamed": "movementSpent"
+        },
+        {
+          "start": 3051,
+          "end": 3052,
+          "symbol": "M:fl.a(Lha;I)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
         },
         {
           "start": 3053,
@@ -961118,7 +964025,7 @@
       "original": "kr.java",
       "renamed": "MoveEvent.java",
       "inputSha256": "0cabe3deec57b27fd16a379982953aa723ddcac5146a02aba59b35809c70f496",
-      "outputSha256": "c5b7a925109718e46680f01117b4f9d181b94ea29547f51a7e83c1526317d0e7",
+      "outputSha256": "9ce95cb3f0619dac9c60008e158db0b8358eb27da9e0f5be051523b64c604b12",
       "edits": [
         {
           "start": 50,
@@ -962914,6 +965821,13 @@
           "symbol": "F:jd.field_s:Z",
           "original": "field_s",
           "renamed": "movementSpent"
+        },
+        {
+          "start": 16805,
+          "end": 16806,
+          "symbol": "M:fl.a(Lha;I)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
         },
         {
           "start": 16807,
@@ -968294,7 +971208,7 @@
       "original": "lf.java",
       "renamed": "BattleCharacter.java",
       "inputSha256": "dfe09d011d37fd52ab6386f3697ce9ed5b06d2b0212802ebd3bbac2f70977c40",
-      "outputSha256": "3b8789b53bd982fc6eb6e1594015ccb2ec29fde95953ab6d570d79d811daa0f7",
+      "outputSha256": "9a39bc46d741742d5ccd4af5ac7e3b4643bb82d627be0f4f351742ad075c635b",
       "edits": [
         {
           "start": 71,
@@ -968414,6 +971328,13 @@
           "symbol": "C:at",
           "original": "at",
           "renamed": "NodeDeque"
+        },
+        {
+          "start": 906,
+          "end": 913,
+          "symbol": "F:lf.field_i:[I",
+          "original": "field_i",
+          "renamed": "runeCapsByOption"
         },
         {
           "start": 2277,
@@ -969928,6 +972849,13 @@
           "renamed": "animationFrame"
         },
         {
+          "start": 21928,
+          "end": 21935,
+          "symbol": "F:lf.field_i:[I",
+          "original": "field_i",
+          "renamed": "runeCapsByOption"
+        },
+        {
           "start": 21976,
           "end": 21983,
           "symbol": "F:lf.field_q:Lpq;",
@@ -970955,6 +973883,13 @@
           "symbol": "C:at",
           "original": "at",
           "renamed": "NodeDeque"
+        },
+        {
+          "start": 30607,
+          "end": 30614,
+          "symbol": "F:lf.field_i:[I",
+          "original": "field_i",
+          "renamed": "runeCapsByOption"
         }
       ]
     },
@@ -982320,7 +985255,7 @@
       "original": "mb.java",
       "renamed": "SummonEvent.java",
       "inputSha256": "4136264208fa4c64bfcb0331c54783f085b2788c2d4c3dc5eaca3f0391f22a65",
-      "outputSha256": "4ef934c1a0ef24fccfbfd053dd561e4de72aabaaef32e054f2cc63ad6e1df6bd",
+      "outputSha256": "9ddcddada1c306e29b0d748bc0d2d8c59f58bcdecd59c5c73708473221ddc41c",
       "edits": [
         {
           "start": 50,
@@ -982573,6 +985508,13 @@
           "symbol": "F:mb.field_A:I",
           "original": "field_A",
           "renamed": "unitType"
+        },
+        {
+          "start": 2325,
+          "end": 2326,
+          "symbol": "M:fl.a(Lha;I)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
         },
         {
           "start": 2327,
@@ -983792,7 +986734,7 @@
       "original": "md.java",
       "renamed": "ParasiteEvent.java",
       "inputSha256": "35edc29d82faf693e4da1d6fc81c1858f211669bc4fc31f07c44a729eda186e8",
-      "outputSha256": "12b0154aff46559b894cf35ab2a01ca4110fd8de17f2c07210d327d7c1db8f29",
+      "outputSha256": "7707bb1d48a64be79fa965399e2697db2c6e5d2dca55b8afadf0b0a1f4f47121",
       "edits": [
         {
           "start": 50,
@@ -984486,6 +987428,13 @@
           "symbol": "C:ic",
           "original": "ic",
           "renamed": "GameplayController"
+        },
+        {
+          "start": 4561,
+          "end": 4562,
+          "symbol": "M:fl.a(Lha;I)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
         },
         {
           "start": 4563,
@@ -1008694,7 +1011643,7 @@
       "original": "nn.java",
       "renamed": "MovementPlanner.java",
       "inputSha256": "31a52cea85e165b499e833299cd319390d7f767254ce3561ec9d607d65bb865e",
-      "outputSha256": "9fc901b58957c387a941581e0706354d2fff3bf90cf9d07c92b7b183475173ec",
+      "outputSha256": "ff97d622b9b6379c02521b21887e46efa842b2ef64be1013fc693b911daf2257",
       "edits": [
         {
           "start": 71,
@@ -1017181,6 +1020130,13 @@
           "renamed": "battlefield"
         },
         {
+          "start": 29885,
+          "end": 29892,
+          "symbol": "F:ha.field_J:Z",
+          "original": "field_J",
+          "renamed": "spellCastPending"
+        },
+        {
           "start": 29917,
           "end": 29919,
           "symbol": "C:mn",
@@ -1020868,6 +1023824,13 @@
           "symbol": "F:nn.field_r:Lha;",
           "original": "field_r",
           "renamed": "battlefield"
+        },
+        {
+          "start": 43302,
+          "end": 43309,
+          "symbol": "F:ha.field_J:Z",
+          "original": "field_J",
+          "renamed": "spellCastPending"
         },
         {
           "start": 43340,
@@ -1028603,7 +1031566,7 @@
       "original": "nw.java",
       "renamed": "DamageEvent.java",
       "inputSha256": "0ba48e6a92728869a421fd82a2d96ca3c710ae11fa49578750d4ceede3d9bbcd",
-      "outputSha256": "0cb3e016db35e938370b4c0bc7c9fce33167969f530d08d04a3a14d8a9f9d6f6",
+      "outputSha256": "0584de655295c1b0914d44c0cd99b8b7d5f544d5f739255d9d12ce14aa913fbc",
       "edits": [
         {
           "start": 50,
@@ -1029192,6 +1032155,13 @@
           "symbol": "F:jd.field_O:I",
           "original": "field_O",
           "renamed": "ownerPlayer"
+        },
+        {
+          "start": 9575,
+          "end": 9576,
+          "symbol": "M:hf.a(Lha;BZ)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
         },
         {
           "start": 9577,
@@ -1047829,7 +1050799,7 @@
       "original": "pj.java",
       "renamed": "SpellCastEvent.java",
       "inputSha256": "3034bed2a6c64d371490c92e211df1eca159405920a958aa3540f9524f1e7535",
-      "outputSha256": "9ebdfcbda317477f91a7d8fabf2247abb8c3033e7e984f84cd08d667cf92f26c",
+      "outputSha256": "dc624f38cfac2effbb5d61c02b50236568a30bcec6d3e75e88890e7a5d63dfa2",
       "edits": [
         {
           "start": 50,
@@ -1048026,6 +1050996,13 @@
           "symbol": "P:pj.a(Lha;I)V#0",
           "original": "param0",
           "renamed": "battlefield"
+        },
+        {
+          "start": 772,
+          "end": 773,
+          "symbol": "M:ha.a(BLik;II)V",
+          "original": "a",
+          "renamed": "consumeEquippedSpell"
         },
         {
           "start": 791,
@@ -1059637,7 +1062614,7 @@
       "original": "q.java",
       "renamed": "TelepopEvent.java",
       "inputSha256": "000b0cdda62b91c81651a7806656f1989abb3a51f03233bb79e0e9f3a48460fa",
-      "outputSha256": "1478d2ed9ebbc6ce1a9292c66e0ccd57a7ade3fd5d94c669d4c9a93578ad2fc5",
+      "outputSha256": "d0cfe37ff5cbae1f22451bf10c6c3e1d544ee3952bfbfa96ad1b3a91ff0b2006",
       "edits": [
         {
           "start": 50,
@@ -1059974,6 +1062951,13 @@
           "symbol": "P:q.a(Lha;I)V#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 3099,
+          "end": 3100,
+          "symbol": "M:fl.a(Lha;I)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
         },
         {
           "start": 3101,
@@ -1064272,7 +1067256,7 @@
       "original": "qj.java",
       "renamed": "UpkeepEvent.java",
       "inputSha256": "87d89a9cd6980b7d06509e4bfdab2cc763e69f006b237c46dbb530f1952cbcb5",
-      "outputSha256": "88fbb54a7945a482952dc0928f4a1a9e4085d7f7a4c964d555185acaddbb7170",
+      "outputSha256": "7fdc02f929626d2f66d611610f13ef8c0b12aca81e219666a46ed3a0aa528195",
       "edits": [
         {
           "start": 50,
@@ -1064546,6 +1067530,13 @@
           "symbol": "F:jd.field_O:I",
           "original": "field_O",
           "renamed": "ownerPlayer"
+        },
+        {
+          "start": 1446,
+          "end": 1447,
+          "symbol": "M:fl.a(Lha;I)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
         },
         {
           "start": 1448,
@@ -1074541,7 +1077532,7 @@
       "original": "qq.java",
       "renamed": "StateChangeEvent.java",
       "inputSha256": "927214dbf51259134733e85644d6585f0cf80ac405de644684151b9b095e2428",
-      "outputSha256": "4a49518aaddec3093b7e2ba9497e85abcdd8eb391a0e65369581da13473d70fb",
+      "outputSha256": "75b46ff2d4f09f564f633c0330d37c10fad77f984ac94eea4d5cc9e2f42b0186",
       "edits": [
         {
           "start": 50,
@@ -1076719,6 +1079710,13 @@
           "symbol": "F:qq.field_J:I",
           "original": "field_J",
           "renamed": "tileY"
+        },
+        {
+          "start": 12975,
+          "end": 12976,
+          "symbol": "M:fl.a(Lha;I)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
         },
         {
           "start": 12977,
@@ -1098591,7 +1101589,7 @@
       "original": "rl.java",
       "renamed": "KingBlackDragonEvent.java",
       "inputSha256": "ee5b5846e13ce77cb9221ac81a1a99184028933ab41fb28fbfb1e65099771d66",
-      "outputSha256": "090b5b30d52d3fecdd74094f1d38abe3b380764b030a39e7311efab8f2f5f8f7",
+      "outputSha256": "94751862308b839f13274264e657fb2f818093fb3ddfb5599a38dec25fafa872",
       "edits": [
         {
           "start": 50,
@@ -1098872,6 +1101870,13 @@
           "symbol": "F:ha.field_Bb:Z",
           "original": "field_Bb",
           "renamed": "kingBlackDragonSummoned"
+        },
+        {
+          "start": 3353,
+          "end": 3354,
+          "symbol": "M:fl.a(Lha;I)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
         },
         {
           "start": 3355,
@@ -1125670,7 +1128675,7 @@
       "original": "st.java",
       "renamed": "TurnEffectEvent.java",
       "inputSha256": "735818fca616c4ea75818cb0c1f005d581715363a76fa801ef6b9db9dc7ee2bd",
-      "outputSha256": "6d4cd24908f043f31dab01f3b3c6dc3b37e724016ef5fa3f9e8feb1dc5ec0c5e",
+      "outputSha256": "2f7ce613b67dab7d29ca0dd72f8a4ffe08d9e6b31852e64277b44b9e016463a3",
       "edits": [
         {
           "start": 50,
@@ -1126501,6 +1129506,13 @@
           "symbol": "M:jd.w(I)V",
           "original": "w",
           "renamed": "queueDeathOrRevival"
+        },
+        {
+          "start": 4331,
+          "end": 4332,
+          "symbol": "M:fl.a(Lha;I)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
         },
         {
           "start": 4333,
@@ -1154992,7 +1158004,7 @@
       "original": "tr.java",
       "renamed": "DeployEvent.java",
       "inputSha256": "8d864b90d1c985707efd7322617485a7584a962a744036e3d5318ad69aa1c8be",
-      "outputSha256": "2b0a5f10688c4d8e9b6314ca2ba15d48aede089aa87eda9e87810cdf6b682a03",
+      "outputSha256": "37b88d6691cf1faf6fd232d7717381e21dee2ed3b672d71e7fb121c851a0af31",
       "edits": [
         {
           "start": 50,
@@ -1155658,6 +1158670,13 @@
           "symbol": "F:jd.field_O:I",
           "original": "field_O",
           "renamed": "ownerPlayer"
+        },
+        {
+          "start": 4833,
+          "end": 4834,
+          "symbol": "M:fl.a(Lha;I)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
         },
         {
           "start": 4835,
@@ -1167258,7 +1170277,7 @@
       "original": "ug.java",
       "renamed": "ug.java",
       "inputSha256": "e92e9ebf7c186f9bcd328c5722694bc94422ade366c50377e4f319a7bf908890",
-      "outputSha256": "2b280e634834db43e07af159eb053b525f4a480989cbe0ec7244e4353056ea80",
+      "outputSha256": "846cbc72f8b7e3dfeae7666287a745965e0c5794decc88859ea6c600628be3cd",
       "edits": [
         {
           "start": 105,
@@ -1167282,11 +1170301,25 @@
           "renamed": "localPlayer"
         },
         {
+          "start": 297,
+          "end": 298,
+          "symbol": "M:ha.a(ZI)I",
+          "original": "a",
+          "renamed": "computeStateChecksum"
+        },
+        {
           "start": 409,
           "end": 411,
           "symbol": "C:ub",
           "original": "ub",
           "renamed": "RadialSummonMenu"
+        },
+        {
+          "start": 474,
+          "end": 475,
+          "symbol": "M:ha.a(ZI)I",
+          "original": "a",
+          "renamed": "computeStateChecksum"
         },
         {
           "start": 542,
@@ -1203348,7 +1206381,7 @@
       "original": "vp.java",
       "renamed": "ManaEvent.java",
       "inputSha256": "ff5d4737da47eb352d32bda00f838c735256e85fe89629d75495fc712327b7fb",
-      "outputSha256": "0d7c2dc2c8c494f3286ae61661def6477bd55ac2f0defcf22757d17b7fe28591",
+      "outputSha256": "14277565c4c1adfd622ecd3a9cb11d01b39cf43aba60ac516427a7157ff1360a",
       "edits": [
         {
           "start": 50,
@@ -1203377,6 +1206410,13 @@
           "symbol": "F:vp.field_C:I",
           "original": "field_C",
           "renamed": "playerId"
+        },
+        {
+          "start": 135,
+          "end": 142,
+          "symbol": "F:vp.field_z:I",
+          "original": "field_z",
+          "renamed": "manaTypeCode"
         },
         {
           "start": 990,
@@ -1204030,6 +1207070,13 @@
           "renamed": "playerId"
         },
         {
+          "start": 9241,
+          "end": 9242,
+          "symbol": "M:fl.a(Lha;I)V",
+          "original": "a",
+          "renamed": "recomputeClientStateChecksum"
+        },
+        {
           "start": 9243,
           "end": 9249,
           "symbol": "P:vp.a(Lha;I)V#0",
@@ -1204079,6 +1207126,13 @@
           "renamed": "GameplayController"
         },
         {
+          "start": 9911,
+          "end": 9918,
+          "symbol": "F:vp.field_z:I",
+          "original": "field_z",
+          "renamed": "manaTypeCode"
+        },
+        {
           "start": 10630,
           "end": 10632,
           "symbol": "C:ig",
@@ -1204100,11 +1207154,46 @@
           "renamed": "ManaEvent"
         },
         {
+          "start": 10784,
+          "end": 10790,
+          "symbol": "P:vp.<init>(III)V#0",
+          "original": "param0",
+          "renamed": "manaTypeCode"
+        },
+        {
+          "start": 10796,
+          "end": 10802,
+          "symbol": "P:vp.<init>(III)V#1",
+          "original": "param1",
+          "renamed": "manaPoints"
+        },
+        {
+          "start": 10808,
+          "end": 10814,
+          "symbol": "P:vp.<init>(III)V#2",
+          "original": "param2",
+          "renamed": "playerId"
+        },
+        {
           "start": 10831,
           "end": 10838,
           "symbol": "F:oj.field_m:I",
           "original": "field_m",
           "renamed": "eventKind"
+        },
+        {
+          "start": 10857,
+          "end": 10864,
+          "symbol": "F:vp.field_z:I",
+          "original": "field_z",
+          "renamed": "manaTypeCode"
+        },
+        {
+          "start": 10867,
+          "end": 10873,
+          "symbol": "P:vp.<init>(III)V#0",
+          "original": "param0",
+          "renamed": "manaTypeCode"
         },
         {
           "start": 10888,
@@ -1204114,10 +1207203,24 @@
           "renamed": "manaPoints"
         },
         {
+          "start": 10898,
+          "end": 10904,
+          "symbol": "P:vp.<init>(III)V#1",
+          "original": "param1",
+          "renamed": "manaPoints"
+        },
+        {
           "start": 10919,
           "end": 10926,
           "symbol": "F:vp.field_C:I",
           "original": "field_C",
+          "renamed": "playerId"
+        },
+        {
+          "start": 10929,
+          "end": 10935,
+          "symbol": "P:vp.<init>(III)V#2",
+          "original": "param2",
           "renamed": "playerId"
         },
         {
@@ -1232143,10 +1235246,10 @@
       "commit": "f9a6dd401349b0d2b3a426a62d2ee09c32514c63",
       "subdirectory": "games/armiesofgielinor"
     },
-    "rulesSha256": "374e70f97a28b0f047923de2c058c0e8dd18765ba0d5bb8d3b882497a87b5351",
+    "rulesSha256": "73237091c4bbf726e3c17a9f5ae1e591cad34f2e13646c0e63968be7c1b11f5a",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "da234d1d0aacadddcf2056dd95c5f3a1032062e03f27dddb0e4f2914ca7c704c",
-    "outputTreeSha256": "d93d3089257d3dd27b7fee5f4c7a523a12d02a2fab39b7a8324ff0df78efc556",
+    "outputTreeSha256": "57b219235be0d8a61e188976be21e62f33768d2f94446493cf1bbcd7196a7da2",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -1232166,7 +1235269,7 @@
       "labelEdits": 947,
       "runtimeEquivalenceVerified": false,
       "gameplayCore": {
-        "checks": 142953,
+        "checks": 143249,
         "rawNamedIdentical": true,
         "independentExpectations": true,
         "headlessClientBoundary": true,
@@ -1232257,6 +1235360,12 @@
         "unitSpellDispatchFixtures": true,
         "unitSpellQueueFixtures": true,
         "unitSpellTerrainFixtures": true,
+        "globalSpellFixtures": true,
+        "godFavourMutationFixtures": true,
+        "spellConsumptionFixtures": true,
+        "spellEventIdempotencyFixtures": true,
+        "manaApplicationFixtures": true,
+        "stateChecksumFixtures": true,
         "pointerBoundsFixtures": true,
         "pointerInputFixtures": true,
         "modelLifetimeFixtures": true,
@@ -1232278,7 +1235387,7 @@
         "packetPollingFailureFixtures": true,
         "dropdownWidgetFixtures": true,
         "dropdownArrowPixelFixture": true,
-        "traceSha256": "21c54f17f71d8b0c2dbae46d60e088142f4e4f7f33e7909d6175acbc3142a2bd"
+        "traceSha256": "e45556a0d6f19a815161c66ef9f7236a90913fefb7fc081d79b3d4589525daf6"
       }
     }
   },

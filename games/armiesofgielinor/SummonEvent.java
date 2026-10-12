@@ -69,7 +69,7 @@ final class SummonEvent extends GameEvent {
           if (obfuscationGuard != -26661) {
             this.unitType = -119;
           }
-          fl.a(battlefield, obfuscationGuard + 26537);
+          fl.recomputeClientStateChecksum(battlefield, obfuscationGuard + 26537);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mb.G(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

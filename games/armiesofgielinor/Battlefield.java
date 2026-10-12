@@ -23,7 +23,7 @@ final class Battlefield {
     int field_D;
     int currentPlayer;
     CampaignMission campaignMission;
-    int field_Q;
+    int runeCapOption;
     int[] remainingRuneCap;
     CoatOfArms[] playerCoats;
     private boolean field_Fb;
@@ -58,7 +58,7 @@ final class Battlefield {
     int field_i;
     boolean field_o;
     int[] field_ub;
-    boolean field_J;
+    boolean spellCastPending;
     int inactivePlayerMask;
     boolean field_x;
     private int[] field_g;
@@ -74,7 +74,7 @@ final class Battlefield {
     int[][] teamStructureCounts;
     int[][] equippedSpellIds;
     boolean kingBlackDragonSummoned;
-    boolean field_f;
+    boolean bypassDefeatAndSpellConsumption;
     LineOfSightGrid lineOfSightGrid;
     private int field_I;
     int[][] chosenGods;
@@ -867,7 +867,7 @@ final class Battlefield {
         if ((var13 == -1) &&
           (decompiledFrameRemainder0 = (var12Lifetime1 == this.godFavourLevels[param5][6])) &&
           (decompiledFrameRemainder0 = !(this.godFavourLevels[param5][6] >= 5))) {
-          this.b(6, param5, 1, (byte) 92);
+          this.addGodFavour(6, param5, 1, (byte) 92);
         }
         if ((decompiledFrameRemainder0) &&
           (var13 != -1 ||
@@ -886,7 +886,7 @@ final class Battlefield {
               }
               if (stackIn_76_0 == stackIn_76_1 &&
                 5 > this.godFavourLevels[param5][var15]) {
-                this.b(var15, param5, 1, (byte) 92);
+                this.addGodFavour(var15, param5, 1, (byte) 92);
               }
               var15++;
             }
@@ -1210,17 +1210,17 @@ final class Battlefield {
         }
     }
 
-    final boolean b(int param0, boolean param1) {
-        if (this.field_f) {
+    final boolean checkPlayerDefeat(int playerId, boolean obfuscationGuard) {
+        if (this.bypassDefeatAndSpellConsumption) {
           return false;
         }
-        if (!this.matchConditions.hasDefeat((byte) -88, param0)) {
+        if (!this.matchConditions.hasDefeat((byte) -88, playerId)) {
           return false;
         }
-        if (!param1) {
+        if (!obfuscationGuard) {
           this.field_vb = 102;
         }
-        this.eliminatePlayer(10001, param0, false);
+        this.eliminatePlayer(10001, playerId, false);
         return true;
     }
 
@@ -1391,46 +1391,46 @@ final class Battlefield {
         }
     }
 
-    final void a(byte param0, Spell param1, int param2, int param3) {
+    final void consumeEquippedSpell(byte obfuscationGuard, Spell spell, int equippedSlot, int castingPlayer) {
         RuntimeException runtimeException = null;
-        int var5_int = 0;
-        int stackIn_4_0 = 0;
+        int consumeSlot = 0;
+        int consumptionEnabled = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.field_f &&
-            param2 > -1) {
-            stackIn_4_0 = 1;
+          if (!this.bypassDefeatAndSpellConsumption &&
+            equippedSlot > -1) {
+            consumptionEnabled = 1;
           } else {
-            stackIn_4_0 = 0;
+            consumptionEnabled = 0;
           }
-          var5_int = stackIn_4_0;
+          consumeSlot = consumptionEnabled;
           if (this.campaignMission != null &&
-            ~param3 != ~this.campaignMission.playerSlot) {
-            var5_int = 0;
+            ~castingPlayer != ~this.campaignMission.playerSlot) {
+            consumeSlot = 0;
           }
-          if (param0 != -49) {
+          if (obfuscationGuard != -49) {
             this.applyTerrainChange(-42, true, -106, -92, 114);
           }
-          if (var5_int != 0) {
-            this.equippedSpellIds[param3][param2] = -1;
-            this.remainingRuneCap[param3] = this.remainingRuneCap[param3] - uc.spellDefinitions[param1.spellId][0];
+          if (consumeSlot != 0) {
+            this.equippedSpellIds[castingPlayer][equippedSlot] = -1;
+            this.remainingRuneCap[castingPlayer] = this.remainingRuneCap[castingPlayer] - uc.spellDefinitions[spell.spellId][0];
           }
-          this.field_J = false;
+          this.spellCastPending = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_15_0 = runtimeException;
-          stackIn_15_1 = new StringBuilder().append("ha.TA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("ha.TA(").append(obfuscationGuard).append(',');
+          if (spell == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(equippedSlot).append(',').append(castingPlayer).append(')').toString());
         }
     }
 
@@ -1443,29 +1443,29 @@ final class Battlefield {
         return var2 != 0;
     }
 
-    final void b(int param0, int param1, int param2, byte param3) {
-        int[] dupTemp$1 = null;
-        if (param1 >= 0) {
-          if (param1 >= this.godFavourLevels.length) {
+    final void addGodFavour(int godId, int playerId, int delta, byte obfuscationGuard) {
+        int[] playerFavour = null;
+        if (playerId >= 0) {
+          if (playerId >= this.godFavourLevels.length) {
             return;
           }
-          if (param0 >= 0) {
-            if (param0 >= this.godFavourLevels[param1].length) {
+          if (godId >= 0) {
+            if (godId >= this.godFavourLevels[playerId].length) {
               return;
             }
-            dupTemp$1 = this.godFavourLevels[param1];
-            dupTemp$1[param0] = dupTemp$1[param0] + param2;
-            if (this.godFavourLevels[param1][param0] > 5) {
-              this.godFavourLevels[param1][param0] = 5;
+            playerFavour = this.godFavourLevels[playerId];
+            playerFavour[godId] = playerFavour[godId] + delta;
+            if (this.godFavourLevels[playerId][godId] > 5) {
+              this.godFavourLevels[playerId][godId] = 5;
             }
-            if (param3 != 92) {
+            if (obfuscationGuard != 92) {
               return;
             }
-            if (param0 == -1) {
+            if (godId == -1) {
               return;
             }
-            if (this.godFavourLevels[param1][param0] > this.godFavourLevels[param1][6]) {
-              this.godFavourLevels[param1][6] = this.godFavourLevels[param1][param0];
+            if (this.godFavourLevels[playerId][godId] > this.godFavourLevels[playerId][6]) {
+              this.godFavourLevels[playerId][6] = this.godFavourLevels[playerId][godId];
             }
             return;
           }
@@ -1531,7 +1531,7 @@ final class Battlefield {
           if (decompiledNaturalLoopExit0) {
             output.a(new String[]{"mana: ", Integer.toString(this.playerMana[playerId]), ", collected: ", Integer.toString(this.teamManaCollected[this.playerTeamIndices[playerId]])}, (byte) -49);
             output.a(new String[]{"turns: ", Integer.toString(this.playerTurnCounts[playerId])}, (byte) -102);
-            stackIn_9_0 = ~BattleCharacter.field_i[this.field_Q];
+            stackIn_9_0 = ~BattleCharacter.runeCapsByOption[this.runeCapOption];
           }
           if (stackIn_9_0 != -1) {
             output.a(new String[]{"rune cap remaining: ", Integer.toString(this.remainingRuneCap[playerId])}, (byte) -62);
@@ -1740,80 +1740,80 @@ final class Battlefield {
         return (int[]) null;
     }
 
-    final int a(boolean param0, int param1) {
+    final int computeStateChecksum(boolean obfuscationGuard, int playerId) {
         int stackIn_21_0 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6_int = 0;
-        Unit var6 = null;
-        int var7 = 0;
-        MapTile var8_ref_ne = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var5Lifetime1;
-        int var7Lifetime1;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var3 = this.randomSeed;
+        int checksum = 0;
+        int tilePlayerScope = 0;
+        int tileX = 0;
+        int tileY = 0;
+        Unit unit = null;
+        int tileIndex = 0;
+        MapTile tile = null;
+        int unitY = 0;
+        int obfuscationControl = 0;
+        int unitOwner;
+        int unitX;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        checksum = this.randomSeed;
         if (this.kingBlackDragonSummoned) {
-          var3 = var3 ^ 313485252;
+          checksum = checksum ^ 313485252;
         }
-        var3 = var3 ^ this.mapSizeSetting * 137;
-        var3 = var3 ^ 783246 * this.mapTheme;
-        var3 = var3 ^ this.field_Q * 545542;
-        if (param1 >= 0) {
-          var3 = var3 ^ this.n(param1, -111) * (7 * param1 + 11);
+        checksum = checksum ^ this.mapSizeSetting * 137;
+        checksum = checksum ^ 783246 * this.mapTheme;
+        checksum = checksum ^ this.runeCapOption * 545542;
+        if (playerId >= 0) {
+          checksum = checksum ^ this.computePlayerChecksum(playerId, -111) * (7 * playerId + 11);
         }
-        var4 = param1;
-        if (0 > var4) {
-          var4 = 0;
+        tilePlayerScope = playerId;
+        if (0 > tilePlayerScope) {
+          tilePlayerScope = 0;
         }
-        if (!param0) {
+        if (!obfuscationGuard) {
           this.turnDurationOption = -38;
         }
-        var5 = 0;
+        tileX = 0;
         scanLoop1: while (true) {
-          if (this.mapWidth > var5) {
+          if (this.mapWidth > tileX) {
             stackIn_21_0 = 0;
-            if (var9 != 0) {
+            if (obfuscationControl != 0) {
               break scanLoop1;
             }
-            var6_int = stackIn_21_0;
-            while (this.mapHeight > var6_int) {
-              var7 = this.mapWidth * var6_int + var5;
-              var8_ref_ne = this.tiles[var7];
-              var3 = var3 ^ this.a((byte) 103, var4, var8_ref_ne) * (var7 * 3 + 351);
-              var6_int++;
+            tileY = stackIn_21_0;
+            while (this.mapHeight > tileY) {
+              tileIndex = this.mapWidth * tileY + tileX;
+              tile = this.tiles[tileIndex];
+              checksum = checksum ^ this.computeTileChecksum((byte) 103, tilePlayerScope, tile) * (tileIndex * 3 + 351);
+              tileY++;
             }
-            var5++;
+            tileX++;
             continue scanLoop1;
           }
           stackIn_21_0 = 0;
           break;
         }
-        var5Lifetime1 = stackIn_21_0;
-        scanLoop2: while (var5Lifetime1 < this.playerCount) {
-          var6 = (Unit) (this.unitsByPlayer[var5Lifetime1].first((byte) 101));
+        unitOwner = stackIn_21_0;
+        scanLoop2: while (unitOwner < this.playerCount) {
+          unit = (Unit) (this.unitsByPlayer[unitOwner].first((byte) 101));
           while (true) {
-            if (var6 != null) {
-              var7Lifetime1 = var6.tileX;
-              var8 = var6.tileY;
-              var3 = var3 ^ this.b(-125, var6) * (var7Lifetime1 + 372) * (var8 + 723);
-              var6 = (Unit) (this.unitsByPlayer[var5Lifetime1].next((byte) 123));
-              if (var9 == 0) {
+            if (unit != null) {
+              unitX = unit.tileX;
+              unitY = unit.tileY;
+              checksum = checksum ^ this.computeUnitChecksum(-125, unit) * (unitX + 372) * (unitY + 723);
+              unit = (Unit) (this.unitsByPlayer[unitOwner].next((byte) 123));
+              if (obfuscationControl == 0) {
                 continue;
               }
             } else {
-              var5Lifetime1++;
+              unitOwner++;
             }
             break;
           }
-          if (var9 == 0) {
+          if (obfuscationControl == 0) {
             continue scanLoop2;
           }
           break;
         }
-        return var3;
+        return checksum;
     }
 
     final void setEliminatedPlayerMask(int playerMask, int obfuscationGuard) {
@@ -1970,7 +1970,7 @@ final class Battlefield {
         }
         if (this.campaignMission != null &&
           var6 != -1) {
-          this.b(var6, true);
+          this.checkPlayerDefeat(var6, true);
         }
         this.updateMatchOutcome(1);
     }
@@ -2396,7 +2396,7 @@ final class Battlefield {
           }
           matchupPercent = fk.matchupDamagePercent[attacker.getUnitCategory(0)][defender.getUnitCategory(0)];
           if (obfuscationGuard > -127) {
-            discarded$0 = this.a((byte) -69, -60, (MapTile) null);
+            discarded$0 = this.computeTileChecksum((byte) -69, -60, (MapTile) null);
           }
           if ((this.getTileEffects(31, attackerY, attackerX, attacker.ownerPlayer) & 16) != 0) {
             matchupPercent = 90;
@@ -3096,9 +3096,9 @@ final class Battlefield {
               } else {
                 this.playerMana[this.localPlayer] = packet.readInt(1);
                 this.playerTurnCounts[this.localPlayer] = packet.readUnsignedShort((byte) -104);
-                this.field_Q = packet.readUnsignedByte(0);
+                this.runeCapOption = packet.readUnsignedByte(0);
                 stackIn_38_0 = -1;
-                stackIn_38_1 = ~this.field_Q;
+                stackIn_38_1 = ~this.runeCapOption;
               }
               boolean decompiledFrameCompleted0 = true;
               if (stackIn_38_0 != stackIn_38_1) {
@@ -3123,7 +3123,7 @@ final class Battlefield {
               }
               if (decompiledFrameCompleted0) {
                 stackIn_50_0 = -1;
-                stackIn_50_1 = ~BattleCharacter.field_i[this.field_Q];
+                stackIn_50_1 = ~BattleCharacter.runeCapsByOption[this.runeCapOption];
               }
               if (stackIn_50_0 == stackIn_50_1) {
                 break;
@@ -3248,7 +3248,7 @@ final class Battlefield {
           this.collectedManaTarget = this.f((byte) -82);
           this.recountStructures(obfuscationGuard ^ 2);
           this.refreshTileEffectsNear(0, 0, obfuscationGuard + 0, -1);
-          fl.a(this, -118);
+          fl.recomputeClientStateChecksum(this, -118);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3279,7 +3279,7 @@ final class Battlefield {
           stackIn_7_1 = var2 & 1 << var3;
           if (var4 == 0) {
             if (stackIn_7_0 != stackIn_7_1) {
-              this.b(var3, param0);
+              this.checkPlayerDefeat(var3, param0);
             }
             var3++;
             continue;
@@ -3718,8 +3718,8 @@ final class Battlefield {
             }
             boolean decompiledFrameCompleted1 = true;
             packet.writeShort(true, this.playerTurnCounts[playerId]);
-            packet.writeByte(1, this.field_Q);
-            if (this.field_Q != 0) {
+            packet.writeByte(1, this.runeCapOption);
+            if (this.runeCapOption != 0) {
               var6 = 0;
               while (var6 < 5) {
                 packet.writeShort(true, this.equippedSpellIds[playerId][var6]);
@@ -3731,7 +3731,7 @@ final class Battlefield {
               }
             }
             if ((decompiledFrameCompleted1) &&
-              (decompiledFrameRemainder0 = (BattleCharacter.field_i[this.field_Q] != 0))) {
+              (decompiledFrameRemainder0 = (BattleCharacter.runeCapsByOption[this.runeCapOption] != 0))) {
               packet.writeShort(true, this.remainingRuneCap[playerId]);
             }
           }
@@ -4271,7 +4271,7 @@ final class Battlefield {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          if (!this.a(param0, param1, param2 ^ -88)) {
+          if (!this.includesTileInChecksum(param0, param1, param2 ^ -88)) {
             return;
           }
           if (!param1.terrainChanged &&
@@ -4415,7 +4415,7 @@ final class Battlefield {
         return this.teamStructureCounts[param1][0] * 10 - (-(5 * this.teamStructureCounts[param1][1]) - 2 * this.teamStructureCounts[param1][2]);
     }
 
-    private final boolean a(int param0, MapTile param1, int param2) {
+    private final boolean includesTileInChecksum(int playerId, MapTile tile, int obfuscationGuard) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_4_0 = null;
@@ -4423,19 +4423,19 @@ final class Battlefield {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = 94 % ((-56 - param2) / 50);
+          var4_int = 94 % ((-56 - obfuscationGuard) / 50);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_4_0 = var4;
-          stackIn_4_1 = new StringBuilder().append("ha.TB(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_4_1 = new StringBuilder().append("ha.TB(").append(playerId).append(',');
+          if (tile == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -4518,8 +4518,8 @@ final class Battlefield {
         }
     }
 
-    private final int b(int param0, Unit param1) {
-        int var3_int = 0;
+    private final int computeUnitChecksum(int obfuscationGuard, Unit unit) {
+        int checksum = 0;
         RuntimeException var3 = null;
         int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -4527,37 +4527,37 @@ final class Battlefield {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param1.ownerPlayer;
-          if (param1.poisoned) {
-            var3_int = var3_int ^ 5637;
+          checksum = unit.ownerPlayer;
+          if (unit.poisoned) {
+            checksum = checksum ^ 5637;
           }
-          if (param1.packedFlag8) {
-            var3_int = var3_int ^ 757314;
+          if (unit.packedFlag8) {
+            checksum = checksum ^ 757314;
           }
-          var3_int = var3_int ^ 12643 * param1.attacksRemaining;
-          if (param1.movementSpent) {
-            var3_int = var3_int ^ 76756163;
+          checksum = checksum ^ 12643 * unit.attacksRemaining;
+          if (unit.movementSpent) {
+            checksum = checksum ^ 76756163;
           }
-          if (param1.packedFlag512) {
-            var3_int = var3_int ^ 847523;
+          if (unit.packedFlag512) {
+            checksum = checksum ^ 847523;
           }
-          var3_int = var3_int ^ 38 * param1.tileX;
-          var3_int = var3_int ^ param1.tileY * 391;
-          var3_int = var3_int ^ param1.bonusStrength * 874;
-          var3_int = var3_int ^ 23874 * param1.unitType;
-          var3_int = var3_int ^ param1.strength * 584668;
-          var3_int = var3_int ^ 445235 * param1.maximumStrength;
-          if (param0 >= -6) {
+          checksum = checksum ^ 38 * unit.tileX;
+          checksum = checksum ^ unit.tileY * 391;
+          checksum = checksum ^ unit.bonusStrength * 874;
+          checksum = checksum ^ 23874 * unit.unitType;
+          checksum = checksum ^ unit.strength * 584668;
+          checksum = checksum ^ 445235 * unit.maximumStrength;
+          if (obfuscationGuard >= -6) {
             this.field_rb = (int[]) null;
           }
-          stackIn_12_0 = var3_int;
+          stackIn_12_0 = checksum;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_15_0 = var3;
-          stackIn_15_1 = new StringBuilder().append("ha.TC(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("ha.TC(").append(obfuscationGuard).append(',');
+          if (unit == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -4569,7 +4569,7 @@ final class Battlefield {
     final void e(int param0, int param1, int param2, int param3) {
         boolean discarded$0 = false;
         if (param0 != 14) {
-          discarded$0 = this.a(-18, (MapTile) null, 8);
+          discarded$0 = this.includesTileInChecksum(-18, (MapTile) null, 8);
         }
         Unit var5 = this.getUnitAt(param3, true, param1);
         if (var5 != null &&
@@ -5733,48 +5733,48 @@ final class Battlefield {
         return;
     }
 
-    private final int n(int param0, int param1) {
+    private final int computePlayerChecksum(int playerId, int obfuscationGuard) {
         int stackIn_10_0 = 0;
         int stackIn_10_1 = 0;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var3 = 0;
-        if (param1 >= -60) {
+        int checksum;
+        int godSlot;
+        int godId;
+        int obfuscationControl;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        checksum = 0;
+        if (obfuscationGuard >= -60) {
           this.getSummoningFavourAt(53, (byte) 105, 32, 124);
         }
-        var4 = 0;
+        godSlot = 0;
         boolean decompiledNaturalLoopExit0 = false;
-        while (!(decompiledNaturalLoopExit0 = (var4 >= this.chosenGods[param0].length))) {
-          var5 = this.chosenGods[param0][var4];
-          stackIn_10_0 = ~var5;
+        while (!(decompiledNaturalLoopExit0 = (godSlot >= this.chosenGods[playerId].length))) {
+          godId = this.chosenGods[playerId][godSlot];
+          stackIn_10_0 = ~godId;
           stackIn_10_1 = -1;
-          if (var6 == 0) {
+          if (obfuscationControl == 0) {
             if (stackIn_10_0 <= stackIn_10_1) {
-              var3 = var3 ^ (17232 + 312 * var5) * this.godFavourLevels[param0][var5];
+              checksum = checksum ^ (17232 + 312 * godId) * this.godFavourLevels[playerId][godId];
             }
-            var4++;
+            godSlot++;
             continue;
           }
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          stackIn_10_0 = ~this.playerMana[param0];
+          stackIn_10_0 = ~this.playerMana[playerId];
           stackIn_10_1 = -2;
         }
         if (stackIn_10_0 <= stackIn_10_1) {
-          var3 = var3 ^ this.playerMana[param0] * 88357;
+          checksum = checksum ^ this.playerMana[playerId] * 88357;
         }
-        if (this.teamManaCollected[this.playerTeamIndices[param0]] >= 1) {
-          var3 = var3 ^ this.teamManaCollected[this.playerTeamIndices[param0]] * 12473;
+        if (this.teamManaCollected[this.playerTeamIndices[playerId]] >= 1) {
+          checksum = checksum ^ this.teamManaCollected[this.playerTeamIndices[playerId]] * 12473;
         }
-        var3 = var3 ^ 7563 * this.playerTurnCounts[param0];
-        if (BattleCharacter.field_i[this.field_Q] != 0) {
-          var3 = var3 ^ 7317 * this.remainingRuneCap[param0];
+        checksum = checksum ^ 7563 * this.playerTurnCounts[playerId];
+        if (BattleCharacter.runeCapsByOption[this.runeCapOption] != 0) {
+          checksum = checksum ^ 7317 * this.remainingRuneCap[playerId];
         }
-        return var3;
+        return checksum;
     }
 
     final int getPlayerTeamIndex(int playerId, int obfuscationGuard) {
@@ -6004,8 +6004,8 @@ final class Battlefield {
         }
     }
 
-    private final int a(byte param0, int param1, MapTile param2) {
-        int var4_int = 0;
+    private final int computeTileChecksum(byte obfuscationGuard, int playerId, MapTile tile) {
+        int checksum = 0;
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_12_0 = 0;
@@ -6014,32 +6014,32 @@ final class Battlefield {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = 0;
-          if (!this.a(param1, param2, 115)) {
-            var4_int = var4_int ^ param2.terrainType;
-            stackIn_2_0 = var4_int;
+          checksum = 0;
+          if (!this.includesTileInChecksum(playerId, tile, 115)) {
+            checksum = checksum ^ tile.terrainType;
+            stackIn_2_0 = checksum;
             return stackIn_2_0;
           }
-          var4_int = var4_int ^ param2.terrainType * 47;
-          if (param2.hasCorpse(-120)) {
-            var4_int = var4_int ^ 234;
+          checksum = checksum ^ tile.terrainType * 47;
+          if (tile.hasCorpse(-120)) {
+            checksum = checksum ^ 234;
           }
-          if (param2.hasExplicitOwner((byte) -79)) {
-            var4_int = var4_int ^ 2823;
-            var4_int = var4_int ^ param2.getExplicitOwner((byte) -71) * 75;
+          if (tile.hasExplicitOwner((byte) -79)) {
+            checksum = checksum ^ 2823;
+            checksum = checksum ^ tile.getExplicitOwner((byte) -71) * 75;
           }
-          if (param0 != 103) {
+          if (obfuscationGuard != 103) {
             this.c(-105, 88);
           }
-          var4_int = var4_int ^ 7657 * param2.ownerPlayer;
-          stackIn_12_0 = var4_int;
+          checksum = checksum ^ 7657 * tile.ownerPlayer;
+          stackIn_12_0 = checksum;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_15_0 = var4;
-          stackIn_15_1 = new StringBuilder().append("ha.KA(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_15_1 = new StringBuilder().append("ha.KA(").append(obfuscationGuard).append(',').append(playerId).append(',');
+          if (tile == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -6626,7 +6626,7 @@ final class Battlefield {
         this.snapshotBuffer = null;
         this.field_Cb = false;
         this.field_D = 0;
-        this.field_J = false;
+        this.spellCastPending = false;
         this.field_o = false;
         this.field_V = true;
         this.kingBlackDragonSummoned = false;
@@ -6651,7 +6651,7 @@ final class Battlefield {
           }
           this.teamCount = stackIn_10_1;
           this.mapTheme = param9;
-          this.field_Q = param12;
+          this.runeCapOption = param12;
           stackIn_13_1 = !(param13 <= 0);
           this.field_L = stackIn_13_1;
           stackIn_16_2 = (this.campaignMission == null);
@@ -7013,7 +7013,7 @@ final class Battlefield {
                   break;
                 }
                 this.godFavourLevels[var17_int][6] = 1;
-                this.remainingRuneCap[var17_int] = BattleCharacter.field_i[this.field_Q];
+                this.remainingRuneCap[var17_int] = BattleCharacter.runeCapsByOption[this.runeCapOption];
                 var17_int++;
                 continue;
               }

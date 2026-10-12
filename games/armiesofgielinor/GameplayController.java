@@ -1693,7 +1693,7 @@ final class GameplayController {
         String var4 = null;
         RuntimeException var4_ref = null;
         try {
-          if (this.battlefield.field_J) {
+          if (this.battlefield.spellCastPending) {
             return;
           }
           this.field_gc = -1;
@@ -2567,7 +2567,7 @@ final class GameplayController {
                 }
               }
             }
-            if (TabbedPanel.a(-95 + this.o(126), 130, 22, false) && (this.battlefield.field_Q != 0 ||
+            if (TabbedPanel.a(-95 + this.o(126), 130, 22, false) && (this.battlefield.runeCapOption != 0 ||
               this.field_E)) {
               stackIn_309_0 = 23;
               return stackIn_309_0;
@@ -3740,7 +3740,7 @@ final class GameplayController {
                     boolean decompiledFrameRemainder5 = true;
                     boolean decompiledFrameCompleted1 = true;
                     var4 = 0;
-                    if (3 == ((ManaEvent) (var3)).field_z) {
+                    if (3 == ((ManaEvent) (var3)).manaTypeCode) {
                       var5 = ((ManaEvent) (var3)).manaPoints;
                       var6 = 0;
                       var7 = ce.turnDurationTicks[this.battlefield.turnDurationOption] / 50;
@@ -3768,10 +3768,10 @@ final class GameplayController {
                     }
                     if ((decompiledFrameRemainder5) &&
                       (decompiledFrameCompleted1)) {
-                      if (4 != ((ManaEvent) (var3)).field_z) {
+                      if (4 != ((ManaEvent) (var3)).manaTypeCode) {
                         scanLoop3: while (true) {
                           if (((ManaEvent) (var3)).manaPoints > 0) {
-                            this.field_Ub.addLast((byte) -119, (IntrusiveNode) (new ac(20, -120 + this.f(128, 0) + ((ManaEvent) (var3)).field_z * 25, 30, 0, this.controlledPlayerId, 10 * ((ManaEvent) (var3)).field_z + (var4 >> 2), 1, ((ManaEvent) (var3)).field_z)));
+                            this.field_Ub.addLast((byte) -119, (IntrusiveNode) (new ac(20, -120 + this.f(128, 0) + ((ManaEvent) (var3)).manaTypeCode * 25, 30, 0, this.controlledPlayerId, 10 * ((ManaEvent) (var3)).manaTypeCode + (var4 >> 2), 1, ((ManaEvent) (var3)).manaTypeCode)));
                             ((ManaEvent) (var3)).manaPoints = ((ManaEvent) (var3)).manaPoints - 1;
                             var4++;
                             if (var10 != 0) {
@@ -3791,7 +3791,7 @@ final class GameplayController {
                           if (((ManaEvent) (var3)).manaPoints <= 0) {
                             break;
                           }
-                          this.field_Ub.addLast((byte) -119, (IntrusiveNode) (new ac(AttackEvent.nextBoundedInt(false, 30, vv.field_b) + 115, this.f(128, 0) - (110 - AttackEvent.nextBoundedInt(false, 30, vv.field_b)), 30, 0, this.controlledPlayerId, var4 >> 3, 1, ((ManaEvent) (var3)).field_z)));
+                          this.field_Ub.addLast((byte) -119, (IntrusiveNode) (new ac(AttackEvent.nextBoundedInt(false, 30, vv.field_b) + 115, this.f(128, 0) - (110 - AttackEvent.nextBoundedInt(false, 30, vv.field_b)), 30, 0, this.controlledPlayerId, var4 >> 3, 1, ((ManaEvent) (var3)).manaTypeCode)));
                           var4++;
                           ((ManaEvent) (var3)).manaPoints = ((ManaEvent) (var3)).manaPoints - 1;
                           if (var10 != 0) {
@@ -4412,7 +4412,7 @@ final class GameplayController {
             stackIn_4_0 = fo.a(4800, kv.field_I, new String[]{Integer.toString(var3_int - (-this.battlefield.playerTurnCounts[this.controlledPlayerId] - 1))});
             return stackIn_4_0;
           }
-          if (this.battlefield.field_Q != 4 &&
+          if (this.battlefield.runeCapOption != 4 &&
             this.battlefield.remainingRuneCap[this.controlledPlayerId] < uc.spellDefinitions[param0][0]) {
             stackIn_10_0 = fo.a(4800, MovementPlanner.field_v, new String[]{Integer.toString(this.battlefield.remainingRuneCap[this.controlledPlayerId]), Integer.toString(uc.spellDefinitions[param0][0])});
             return stackIn_10_0;
@@ -4909,7 +4909,7 @@ final class GameplayController {
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameCompleted0 = true;
-          if (0 != this.battlefield.field_Q ||
+          if (0 != this.battlefield.runeCapOption ||
             256 > this.field_B) {
             var2_int = 0;
             while (var2_int < 5) {
@@ -4963,7 +4963,7 @@ final class GameplayController {
           if (stackIn_54_0 != -5) {
             return;
           }
-          if (this.battlefield.field_Q == 0 &&
+          if (this.battlefield.runeCapOption == 0 &&
             !this.field_P) {
             return;
           }
@@ -5435,7 +5435,7 @@ final class GameplayController {
             stackIn_212_0 = !(kt.field_l);
             kt.field_l = stackIn_212_0;
           }
-          if (rs.field_q == 34 && (this.battlefield.field_Q != 0 ||
+          if (rs.field_q == 34 && (this.battlefield.runeCapOption != 0 ||
             this.field_E)) {
             this.c(param0);
           }
@@ -6020,7 +6020,7 @@ final class GameplayController {
             ko.pointerY >= 0) {
             var5 = 0;
             if (0 <= this.controlledPlayerId &&
-              0 != this.battlefield.field_Q &&
+              0 != this.battlefield.runeCapOption &&
               this.field_pb == 1 &&
               this.spellConfirmation == null) {
               var6 = 0;
@@ -6142,7 +6142,7 @@ final class GameplayController {
             if (var2 == null &&
               this.controlledPlayerId >= 0 &&
               TabbedPanel.a(-95 + this.o(param0 ^ 6), 130, 22, false) &&
-              0 != this.battlefield.field_Q) {
+              0 != this.battlefield.runeCapOption) {
               var2 = MatchSetupPanel.field_x;
             }
             boolean decompiledFrameRemainder13 = true;
@@ -7750,7 +7750,7 @@ final class GameplayController {
                 en.field_E.c(Integer.toString(this.field_Bb), 180, 3 * en.field_E.field_H + 25, var4Lifetime1, 0);
               }
               if (this.field_lb) {
-                var4Lifetime1Lifetime1 = this.battlefield.a(true, this.controlledPlayerId);
+                var4Lifetime1Lifetime1 = this.battlefield.computeStateChecksum(true, this.controlledPlayerId);
                 stackIn_226_0 = (RadialSummonMenu.field_d == var4Lifetime1Lifetime1) ? 0 : 1;
                 var5Lifetime1 = stackIn_226_0;
                 en.field_E.c(Integer.toString(var4Lifetime1Lifetime1, 16) + " (client)", 320, 40, 16777215, -1);
@@ -8868,7 +8868,7 @@ final class GameplayController {
         try {
           this.field_pb = this.field_pb + 1;
           if (1 == this.field_pb &&
-            0 == this.battlefield.field_Q) {
+            0 == this.battlefield.runeCapOption) {
             this.field_pb = this.field_pb + 1;
           }
           if (this.field_pb == 2 && (!this.field_P ||
@@ -10418,7 +10418,7 @@ final class GameplayController {
           }
           var6_int = 200;
           var7 = ActionRequest.field_l[param0];
-          if (this.battlefield.field_Q != 4) {
+          if (this.battlefield.runeCapOption != 4) {
             var7 = var7 + fo.a(4800, lt.field_f, new String[]{Integer.toString(uc.spellDefinitions[param0][0]), Integer.toString(this.battlefield.remainingRuneCap[this.controlledPlayerId])});
           }
           var8 = en.field_E.getParagraphHeight(var7, var6_int - 20, 0);
@@ -10750,7 +10750,7 @@ final class GameplayController {
               return;
             }
           }
-          if (this.battlefield.field_J) {
+          if (this.battlefield.spellCastPending) {
             return;
           }
           this.field_gc = -1;
@@ -10775,7 +10775,7 @@ final class GameplayController {
               return;
             }
           }
-          this.battlefield.field_J = true;
+          this.battlefield.spellCastPending = true;
           this.notifyTutorialInteraction(25, ((Spell) (spell)).spellId, -118);
           if (this.field_lb) {
             vl.outgoingPacket.writeCipheredOpcode(32161, 65);
@@ -11932,7 +11932,7 @@ final class GameplayController {
           var2_int = 0;
           do {
             if (var2_int >= this.aiPlanners.length) {
-              this.battlefield.field_Q = 0;
+              this.battlefield.runeCapOption = 0;
               this.battlefield.field_V = false;
               this.battlefield.equippedSpellIds = (int[][]) null;
               this.battlefield.field_D = 3;
