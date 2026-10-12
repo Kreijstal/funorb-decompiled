@@ -700,7 +700,7 @@ class lk implements WidgetPainter, pm {
           if (param0 < 70) {
             return;
           }
-          oq.a(27080, (java.awt.Component) ((Object) param1));
+          oq.attachKeyboard(27080, (java.awt.Component) ((Object) param1));
           DisplacedUnitMarker.a((java.awt.Component) ((Object) param1), (byte) 74);
           if (CampaignMission.field_I == null) {
             return;

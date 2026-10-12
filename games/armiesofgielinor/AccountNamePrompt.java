@@ -46,7 +46,7 @@ final class AccountNamePrompt extends ClientUiComponent {
           return this.pendingResult;
         }
         while (true) {
-          if (!Unit.i((byte) -51)) {
+          if (!Unit.pollKeyEvent((byte) -51)) {
             this.inputComponent.text = this.nameBuffer.toString();
             if (enableCapture &&
               0 != DeployEvent.pointerPressButton &&
@@ -64,29 +64,29 @@ final class AccountNamePrompt extends ClientUiComponent {
             this.pollInput(false, true);
             return this.pendingResult;
           }
-          if (rs.field_q == 85 &&
+          if (rs.keyCode == 85 &&
             this.nameBuffer.length() > 0) {
             PortalLossCondition.a(' ', -1 + this.nameBuffer.length(), this.nameBuffer, true);
           }
-          if (kv.a(false, (CharSequence) ((Object) this.nameBuffer), DualNodeDeque.field_i)) {
-            discarded$1 = this.nameBuffer.append(DualNodeDeque.field_i);
+          if (kv.a(false, (CharSequence) ((Object) this.nameBuffer), DualNodeDeque.typedCharacter)) {
+            discarded$1 = this.nameBuffer.append(DualNodeDeque.typedCharacter);
           } else {
             if (this.nameBuffer.length() == 0 &&
-              91 == DualNodeDeque.field_i) {
-              discarded$2 = this.nameBuffer.append(DualNodeDeque.field_i);
+              91 == DualNodeDeque.typedCharacter) {
+              discarded$2 = this.nameBuffer.append(DualNodeDeque.typedCharacter);
             } else {
               if (this.nameBuffer.length() == 1 &&
-                DualNodeDeque.field_i == 35) {
-                discarded$3 = this.nameBuffer.append(DualNodeDeque.field_i);
+                DualNodeDeque.typedCharacter == 35) {
+                discarded$3 = this.nameBuffer.append(DualNodeDeque.typedCharacter);
               } else {
-                if (DualNodeDeque.field_i == 93) {
-                  discarded$4 = this.nameBuffer.append(DualNodeDeque.field_i);
+                if (DualNodeDeque.typedCharacter == 93) {
+                  discarded$4 = this.nameBuffer.append(DualNodeDeque.typedCharacter);
                 }
               }
             }
           }
-          if (rs.field_q != 84) {
-            if (rs.field_q != 13) {
+          if (rs.keyCode != 84) {
+            if (rs.keyCode != 13) {
               continue;
             }
             return 1;
@@ -119,9 +119,9 @@ final class AccountNamePrompt extends ClientUiComponent {
         if (0 != this.pendingResult) {
           return false;
         }
-        if (rs.field_q != 85) {
+        if (rs.keyCode != 85) {
           if (this.nameBuffer.length() >= 12) {
-            if (84 == rs.field_q) {
+            if (84 == rs.keyCode) {
               if (this.nameBuffer.length() <= 0) {
                 this.pendingResult = 1;
               } else {
@@ -129,7 +129,7 @@ final class AccountNamePrompt extends ClientUiComponent {
                 this.pendingResult = 2;
               }
             }
-            if (rs.field_q == 13) {
+            if (rs.keyCode == 13) {
               this.pendingResult = 1;
             }
             if (obfuscationGuard != -101) {
@@ -137,7 +137,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             }
             return true;
           }
-          var2 = Character.toLowerCase(DualNodeDeque.field_i);
+          var2 = Character.toLowerCase(DualNodeDeque.typedCharacter);
           if (var2 == 32) {
             var2 = 95;
             if (var2 == 95 &&
@@ -152,7 +152,7 @@ final class AccountNamePrompt extends ClientUiComponent {
           }
           if (MeshObject.a((byte) -125, (char) var2)) {
             discarded$10 = this.nameBuffer.append((char) var2);
-            if (84 == rs.field_q) {
+            if (84 == rs.keyCode) {
               if (this.nameBuffer.length() <= 0) {
                 this.pendingResult = 1;
               } else {
@@ -160,7 +160,7 @@ final class AccountNamePrompt extends ClientUiComponent {
                 this.pendingResult = 2;
               }
             }
-            if (rs.field_q == 13) {
+            if (rs.keyCode == 13) {
               this.pendingResult = 1;
             }
             if (obfuscationGuard != -101) {
@@ -169,7 +169,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             return true;
           }
           if (!mu.a(28799, (char) var2)) {
-            if (84 == rs.field_q) {
+            if (84 == rs.keyCode) {
               if (this.nameBuffer.length() <= 0) {
                 this.pendingResult = 1;
               } else {
@@ -177,7 +177,7 @@ final class AccountNamePrompt extends ClientUiComponent {
                 this.pendingResult = 2;
               }
             }
-            if (rs.field_q == 13) {
+            if (rs.keyCode == 13) {
               this.pendingResult = 1;
             }
             if (obfuscationGuard != -101) {
@@ -186,7 +186,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             return true;
           }
           discarded$11 = this.nameBuffer.append((char) var2);
-          if (84 == rs.field_q) {
+          if (84 == rs.keyCode) {
             if (this.nameBuffer.length() <= 0) {
               this.pendingResult = 1;
             } else {
@@ -194,7 +194,7 @@ final class AccountNamePrompt extends ClientUiComponent {
               this.pendingResult = 2;
             }
           }
-          if (rs.field_q == 13) {
+          if (rs.keyCode == 13) {
             this.pendingResult = 1;
           }
           if (obfuscationGuard != -101) {
@@ -204,7 +204,7 @@ final class AccountNamePrompt extends ClientUiComponent {
         }
         if (this.nameBuffer.length() <= 0) {
           if (this.nameBuffer.length() >= 12) {
-            if (84 == rs.field_q) {
+            if (84 == rs.keyCode) {
               if (this.nameBuffer.length() <= 0) {
                 this.pendingResult = 1;
               } else {
@@ -212,7 +212,7 @@ final class AccountNamePrompt extends ClientUiComponent {
                 this.pendingResult = 2;
               }
             }
-            if (rs.field_q == 13) {
+            if (rs.keyCode == 13) {
               this.pendingResult = 1;
             }
             if (obfuscationGuard == -101) {
@@ -220,7 +220,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             }
             return false;
           }
-          var2Lifetime1 = Character.toLowerCase(DualNodeDeque.field_i);
+          var2Lifetime1 = Character.toLowerCase(DualNodeDeque.typedCharacter);
           if (var2Lifetime1 == 32) {
             var2Lifetime1 = 95;
             if (var2Lifetime1 == 95 &&
@@ -235,7 +235,7 @@ final class AccountNamePrompt extends ClientUiComponent {
           }
           if (MeshObject.a((byte) -125, (char) var2Lifetime1)) {
             discarded$6 = this.nameBuffer.append((char) var2Lifetime1);
-            if (84 == rs.field_q) {
+            if (84 == rs.keyCode) {
               if (this.nameBuffer.length() <= 0) {
                 this.pendingResult = 1;
               } else {
@@ -243,7 +243,7 @@ final class AccountNamePrompt extends ClientUiComponent {
                 this.pendingResult = 2;
               }
             }
-            if (rs.field_q == 13) {
+            if (rs.keyCode == 13) {
               this.pendingResult = 1;
             }
             if (obfuscationGuard != -101) {
@@ -252,7 +252,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             return true;
           }
           if (!mu.a(28799, (char) var2Lifetime1)) {
-            if (84 == rs.field_q) {
+            if (84 == rs.keyCode) {
               if (this.nameBuffer.length() <= 0) {
                 this.pendingResult = 1;
               } else {
@@ -260,7 +260,7 @@ final class AccountNamePrompt extends ClientUiComponent {
                 this.pendingResult = 2;
               }
             }
-            if (rs.field_q == 13) {
+            if (rs.keyCode == 13) {
               this.pendingResult = 1;
             }
             if (obfuscationGuard != -101) {
@@ -269,7 +269,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             return true;
           }
           discarded$7 = this.nameBuffer.append((char) var2Lifetime1);
-          if (84 == rs.field_q) {
+          if (84 == rs.keyCode) {
             if (this.nameBuffer.length() <= 0) {
               this.pendingResult = 1;
             } else {
@@ -277,7 +277,7 @@ final class AccountNamePrompt extends ClientUiComponent {
               this.pendingResult = 2;
             }
           }
-          if (rs.field_q == 13) {
+          if (rs.keyCode == 13) {
             this.pendingResult = 1;
           }
           if (obfuscationGuard == -101) {
@@ -287,7 +287,7 @@ final class AccountNamePrompt extends ClientUiComponent {
         }
         PortalLossCondition.a(' ', this.nameBuffer.length() - 1, this.nameBuffer, true);
         if (this.nameBuffer.length() >= 12) {
-          if (84 == rs.field_q) {
+          if (84 == rs.keyCode) {
             if (this.nameBuffer.length() <= 0) {
               this.pendingResult = 1;
             } else {
@@ -295,7 +295,7 @@ final class AccountNamePrompt extends ClientUiComponent {
               this.pendingResult = 2;
             }
           }
-          if (rs.field_q == 13) {
+          if (rs.keyCode == 13) {
             this.pendingResult = 1;
           }
           if (obfuscationGuard == -101) {
@@ -303,7 +303,7 @@ final class AccountNamePrompt extends ClientUiComponent {
           }
           return false;
         }
-        var2Lifetime2 = Character.toLowerCase(DualNodeDeque.field_i);
+        var2Lifetime2 = Character.toLowerCase(DualNodeDeque.typedCharacter);
         if (var2Lifetime2 == 32) {
           var2Lifetime2 = 95;
           if (var2Lifetime2 == 95 &&
@@ -318,7 +318,7 @@ final class AccountNamePrompt extends ClientUiComponent {
         }
         if (MeshObject.a((byte) -125, (char) var2Lifetime2)) {
           discarded$2 = this.nameBuffer.append((char) var2Lifetime2);
-          if (84 == rs.field_q) {
+          if (84 == rs.keyCode) {
             if (this.nameBuffer.length() <= 0) {
               this.pendingResult = 1;
             } else {
@@ -326,7 +326,7 @@ final class AccountNamePrompt extends ClientUiComponent {
               this.pendingResult = 2;
             }
           }
-          if (rs.field_q == 13) {
+          if (rs.keyCode == 13) {
             this.pendingResult = 1;
           }
           if (obfuscationGuard == -101) {
@@ -335,7 +335,7 @@ final class AccountNamePrompt extends ClientUiComponent {
           return false;
         }
         if (!mu.a(28799, (char) var2Lifetime2)) {
-          if (84 == rs.field_q) {
+          if (84 == rs.keyCode) {
             if (this.nameBuffer.length() <= 0) {
               this.pendingResult = 1;
             } else {
@@ -343,7 +343,7 @@ final class AccountNamePrompt extends ClientUiComponent {
               this.pendingResult = 2;
             }
           }
-          if (rs.field_q == 13) {
+          if (rs.keyCode == 13) {
             this.pendingResult = 1;
           }
           if (obfuscationGuard == -101) {
@@ -352,7 +352,7 @@ final class AccountNamePrompt extends ClientUiComponent {
           return false;
         }
         discarded$3 = this.nameBuffer.append((char) var2Lifetime2);
-        if (84 == rs.field_q) {
+        if (84 == rs.keyCode) {
           if (this.nameBuffer.length() <= 0) {
             this.pendingResult = 1;
           } else {
@@ -360,7 +360,7 @@ final class AccountNamePrompt extends ClientUiComponent {
             this.pendingResult = 2;
           }
         }
-        if (rs.field_q == 13) {
+        if (rs.keyCode == 13) {
           this.pendingResult = 1;
         }
         if (obfuscationGuard == -101) {

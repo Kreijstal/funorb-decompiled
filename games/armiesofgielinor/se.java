@@ -32,7 +32,7 @@ final class se {
             se.a(93);
           }
           nameCharacters = (CharSequence) ((Object) name);
-          if (!hg.isValidSocialTargetName((byte) -90, nameCharacters)) {
+          if (!KeyboardInputListener.isValidSocialTargetName((byte) -90, nameCharacters)) {
             stackIn_5_0 = SectorCacheStore.field_d;
             return stackIn_5_0;
           }

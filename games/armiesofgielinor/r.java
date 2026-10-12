@@ -253,44 +253,44 @@ final class r extends vt {
         return this.field_L;
     }
 
-    final static void c(boolean param0) {
-        Object var1 = null;
-        int var2 = 0;
-        int var4 = 0;
-        Throwable decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final static void snapshotKeyboard(boolean obfuscationGuard) {
+        Object listenerLock = null;
+        int keyEvent = 0;
+        int obfuscationControl = 0;
+        Throwable caughtFailure = null;
+        RuntimeException failure = null;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var1 = QuickChatCategory.field_w;
-          synchronized (var1) {
-            SummonAction.field_E = rd.field_d;
-            if (!param0) {
+          listenerLock = QuickChatCategory.keyboardListener;
+          synchronized (listenerLock) {
+            SummonAction.keyEventReadIndex = rd.keyEventFrameEndIndex;
+            if (!obfuscationGuard) {
               r.d((byte) 47);
             }
-            fc.field_b = fc.field_b + 1;
-            if (us.field_c < 0) {
-              for (var2 = 0; var2 < 112; var2++) {
-                br.field_f[var2] = false;
+            fc.keyboardIdleTicks = fc.keyboardIdleTicks + 1;
+            if (us.keyStateWriteIndex < 0) {
+              for (keyEvent = 0; keyEvent < 112; keyEvent++) {
+                br.heldKeys[keyEvent] = false;
               }
-              us.field_c = cc.field_a;
+              us.keyStateWriteIndex = cc.keyStateReadIndex;
             } else {
-              while (cc.field_a != us.field_c) {
-                var2 = SphinxActionRequest.field_x[cc.field_a];
-                cc.field_a = 127 & 1 + cc.field_a;
-                if (0 > var2) {
-                  br.field_f[~var2] = false;
+              while (cc.keyStateReadIndex != us.keyStateWriteIndex) {
+                keyEvent = SphinxActionRequest.keyStateEvents[cc.keyStateReadIndex];
+                cc.keyStateReadIndex = 127 & 1 + cc.keyStateReadIndex;
+                if (0 > keyEvent) {
+                  br.heldKeys[~keyEvent] = false;
                   continue;
                 }
-                br.field_f[var2] = true;
+                br.heldKeys[keyEvent] = true;
               }
             }
-            rd.field_d = cr.field_Z;
+            rd.keyEventFrameEndIndex = cr.keyEventWriteIndex;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1_ref), "r.G(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = (RuntimeException) (Object) caughtFailure;
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "r.G(" + obfuscationGuard + ')');
         }
     }
 

@@ -37,16 +37,16 @@ final class oq extends wv {
         return ii.campaignPacketWord1;
     }
 
-    final static void a(int param0, java.awt.Component param1) {
-        param1.setFocusTraversalKeysEnabled(false);
-        if (param0 != 27080) {
+    final static void attachKeyboard(int obfuscationGuard, java.awt.Component component) {
+        component.setFocusTraversalKeysEnabled(false);
+        if (obfuscationGuard != 27080) {
           return;
         }
         try {
-          param1.addKeyListener(QuickChatCategory.field_w);
-          param1.addFocusListener(QuickChatCategory.field_w);
+          component.addKeyListener(QuickChatCategory.keyboardListener);
+          component.addFocusListener(QuickChatCategory.keyboardListener);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oq.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oq.F(" + obfuscationGuard + ',' + (component != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -252,7 +252,7 @@ final class jj {
           if (Spell.field_b != null) {
             stackIn_20_0 = true;
           } else {
-            if (vg.a(10)) {
+            if (vg.hasQuickChatOverlay(10)) {
               return true;
             }
             stackIn_20_0 = false;
@@ -270,7 +270,7 @@ final class jj {
         if (Spell.field_b != null) {
           stackIn_10_0 = true;
         } else {
-          if (vg.a(10)) {
+          if (vg.hasQuickChatOverlay(10)) {
             return true;
           }
           stackIn_10_0 = false;

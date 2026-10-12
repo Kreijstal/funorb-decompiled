@@ -115,7 +115,7 @@ final class IconLabelControl extends ClientUiComponent {
             }
             var14Lifetime2 = stackIn_18_0;
             var15 = var64[var13] * param6 + (param4 * var62[var13] + var63[var13] * param0) >> 8;
-            stackIn_20_0 = hg.field_a;
+            stackIn_20_0 = KeyboardInputListener.field_a;
             if (0 <= var15) {
               stackIn_21_1 = var15;
             } else {

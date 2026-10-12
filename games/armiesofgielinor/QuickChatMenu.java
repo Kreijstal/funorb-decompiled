@@ -79,7 +79,7 @@ final class QuickChatMenu extends ClientUiComponent {
     final boolean handleKeyboard(boolean obfuscationGuard, int selectionContext, int messageContext) {
         int var6 = 0;
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        int var4 = 85 == rs.field_q ? 1 : 0;
+        int var4 = 85 == rs.keyCode ? 1 : 0;
         if (this.activeSubmenu != null) {
           if (var4 != 0 &&
             -1 == this.activeSubmenu.openItemIndex) {
@@ -94,7 +94,7 @@ final class QuickChatMenu extends ClientUiComponent {
           e.closeQuickChatMenu((byte) -101);
           return true;
         }
-        int var5 = DualNodeDeque.field_i;
+        int var5 = DualNodeDeque.typedCharacter;
         if (obfuscationGuard) {
           this.advanceMenu(-72, (byte) -60, -60);
         }
@@ -155,7 +155,7 @@ final class QuickChatMenu extends ClientUiComponent {
             this.activeSubmenu.setCollapseTicks(12, 42);
           } else {
             if (this.phraseIds[itemIndex] == -1) {
-              gn.d(5);
+              gn.openQuickChatHelp(5);
               e.closeQuickChatMenu((byte) -115);
             } else {
               var5 = 32768 | this.phraseIds[itemIndex];

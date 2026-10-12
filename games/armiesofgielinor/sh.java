@@ -138,7 +138,7 @@ final class sh {
           if (this.field_b) {
             var22_ref = (ModelMesh) (this.field_n.applyCurrentFrame(var2 != 0, true, var3 != 0, this.field_e));
             var23 = var22_ref;
-            var22_ref.scaleGeometry(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
+            var22_ref.scaleGeometry(QuickChatHelpDialog.field_Jb[this.field_c], QuickChatHelpDialog.field_Jb[this.field_c], QuickChatHelpDialog.field_Jb[this.field_c]);
             TriangleRasterizer.useRasterClip();
             TriangleRasterizer.setProjectionCenter(this.field_i, this.field_g);
             var23.a(var4, var5, var6, var9, var10, var11, var12);
@@ -147,7 +147,7 @@ final class sh {
             TriangleRasterizer.setProjectionCenter(this.field_i, this.field_g);
             var24_ref = (ModelMesh) (this.field_e.a(var2 != 0, false, var3 != 0));
             var25 = var24_ref;
-            var24_ref.scaleGeometry(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
+            var24_ref.scaleGeometry(QuickChatHelpDialog.field_Jb[this.field_c], QuickChatHelpDialog.field_Jb[this.field_c], QuickChatHelpDialog.field_Jb[this.field_c]);
             var25.a(var4, var5, var6, var9, var10, var11, var12);
           }
           return;
@@ -167,7 +167,7 @@ final class sh {
         if (this.field_b) {
           var18_ref = (ModelMesh) (this.field_n.applyCurrentFrame(var2Lifetime1 != 0, true, var3Lifetime1 != 0, this.field_e));
           var19 = var18_ref;
-          var18_ref.scaleGeometry(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
+          var18_ref.scaleGeometry(QuickChatHelpDialog.field_Jb[this.field_c], QuickChatHelpDialog.field_Jb[this.field_c], QuickChatHelpDialog.field_Jb[this.field_c]);
           TriangleRasterizer.useRasterClip();
           TriangleRasterizer.setProjectionCenter(this.field_i, this.field_g);
           var19.a(var4Lifetime1, var5Lifetime1, var6Lifetime1, var9Lifetime1, var10Lifetime1, var11Lifetime1, var12Lifetime1);
@@ -176,7 +176,7 @@ final class sh {
           TriangleRasterizer.setProjectionCenter(this.field_i, this.field_g);
           var20_ref = (ModelMesh) (this.field_e.a(var2Lifetime1 != 0, false, var3Lifetime1 != 0));
           var21 = var20_ref;
-          var20_ref.scaleGeometry(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
+          var20_ref.scaleGeometry(QuickChatHelpDialog.field_Jb[this.field_c], QuickChatHelpDialog.field_Jb[this.field_c], QuickChatHelpDialog.field_Jb[this.field_c]);
           var21.a(var4Lifetime1, var5Lifetime1, var6Lifetime1, var9Lifetime1, var10Lifetime1, var11Lifetime1, var12Lifetime1);
         }
     }

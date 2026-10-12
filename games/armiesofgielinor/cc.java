@@ -3,7 +3,7 @@
  */
 final class cc {
     static int field_b;
-    static int field_a;
+    static int keyStateReadIndex;
 
     final static int a(int param0, int param1, int[] param2, int param3, int param4, boolean param5, int param6, String param7, int[] param8, int param9) {
         RuntimeException var10 = null;
@@ -64,7 +64,7 @@ final class cc {
             return null;
           }
           if (!param3) {
-            field_a = 104;
+            keyStateReadIndex = 104;
           }
           stackIn_9_0 = ArmiesOfGielinor.a(param2.getFile((byte) 107, param4, param1), true);
           return stackIn_9_0;
@@ -90,6 +90,6 @@ final class cc {
 
     static {
         field_b = -1;
-        field_a = 0;
+        keyStateReadIndex = 0;
     }
 }

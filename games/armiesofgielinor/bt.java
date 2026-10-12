@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bt {
-    static String[] field_c;
+    static String[] quickChatShortcutLabels;
     static int field_f;
     static String field_b;
     static int field_g;
@@ -22,7 +22,7 @@ final class bt {
     }
 
     public static void c(int param0) {
-        field_c = null;
+        quickChatShortcutLabels = null;
         field_e = null;
         field_d = null;
         field_a = null;
@@ -58,7 +58,7 @@ final class bt {
     }
 
     static {
-        field_c = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
+        quickChatShortcutLabels = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
         field_b = "<%0> rune";
         field_a = "You need to play 1 more rated game to unlock this option.";
         field_d = "MP";

@@ -58,19 +58,19 @@ final class DropdownArrowPainter implements WidgetPainter {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           TriangleRasterizer.useRasterClip();
-          hg.field_a = new int[260];
+          KeyboardInputListener.field_a = new int[260];
           fn.field_M = 11;
           var1_int = 0;
           var2 = -93 / ((-68 - param0) / 57);
           while (256 > var1_int) {
             var3 = 15.0;
-            hg.field_a[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var3) * 255.0);
+            KeyboardInputListener.field_a[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var3) * 255.0);
             var1_int++;
           }
           var6 = 256;
           var1_intLifetime1 = var6;
-          while (var6 < hg.field_a.length) {
-            hg.field_a[var6] = 255;
+          while (var6 < KeyboardInputListener.field_a.length) {
+            KeyboardInputListener.field_a[var6] = 255;
             var6++;
           }
           return;

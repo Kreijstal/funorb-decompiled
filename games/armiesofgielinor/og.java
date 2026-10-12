@@ -18,26 +18,26 @@ final class og extends IntrusiveNode {
         this(param0, param1, (String) null);
     }
 
-    final static void a(int param0, boolean param1) {
-        if (Spell.field_d == null) {
-          if (param0 != 16756) {
-            og.a(-87, true);
+    final static void updateQuickChatHelp(int obfuscationGuard, boolean unusedFlag) {
+        if (Spell.quickChatHelpDialog == null) {
+          if (obfuscationGuard != 16756) {
+            og.updateQuickChatHelp(-87, true);
             return;
           }
           return;
         }
-        if (!Spell.field_d.a((byte) 102, param1)) {
-          if (param0 != 16756) {
-            og.a(-87, true);
+        if (!Spell.quickChatHelpDialog.pollClose((byte) 102, unusedFlag)) {
+          if (obfuscationGuard != 16756) {
+            og.updateQuickChatHelp(-87, true);
             return;
           }
           return;
         }
-        Spell.field_d = null;
-        if (param0 == 16756) {
+        Spell.quickChatHelpDialog = null;
+        if (obfuscationGuard == 16756) {
           return;
         }
-        og.a(-87, true);
+        og.updateQuickChatHelp(-87, true);
     }
 
     public final String toString() {
@@ -112,7 +112,7 @@ final class og extends IntrusiveNode {
         try {
           try {
             if (param0 != 1) {
-              og.a(64, true);
+              og.updateQuickChatHelp(64, true);
             }
             if (this.field_q == rn.field_c) {
               var7 = new nd[this.field_k.size(false)];

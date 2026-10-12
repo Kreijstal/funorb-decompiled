@@ -409,7 +409,7 @@ abstract class vf {
                 var13 = stackIn_217_0;
               }
               if (BufferedSocket.field_j >= 2 &&
-                br.field_f[12]) {
+                br.heldKeys[12]) {
                 var11 = 0;
                 var12 = 0;
                 var10 = 0;
@@ -442,7 +442,7 @@ abstract class vf {
                 }
                 es.a(0, var7, param3, -1, param1, var9, (byte) 103, -1);
                 if (BufferedSocket.field_j >= 2 &&
-                  br.field_f[12]) {
+                  br.heldKeys[12]) {
                   fc.field_a = true;
                 }
                 if (!fc.field_a) {

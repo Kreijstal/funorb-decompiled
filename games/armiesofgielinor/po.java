@@ -64,17 +64,17 @@ final class po {
         String var4Lifetime1Lifetime1;
         stackIn_3_0 = (null == no.roomSetup) ? 0 : 1;
         var3 = stackIn_3_0;
-        if (rs.field_q != 9) {
+        if (rs.keyCode != 9) {
           if (obfuscationGuard != 6150) {
             field_a = (String) null;
-            if (10 == rs.field_q) {
+            if (10 == rs.keyCode) {
               if (var3 != 0) {
                 return false;
               }
               ContextActionMenu.openPublicQuickChat(obfuscationGuard ^ 6217);
               return true;
             }
-            if (11 != rs.field_q) {
+            if (11 != rs.keyCode) {
               return false;
             }
             if (!lq.hasLastQuickChat) {
@@ -89,14 +89,14 @@ final class po {
               return false;
             }
           } else {
-            if (10 == rs.field_q) {
+            if (10 == rs.keyCode) {
               if (var3 != 0) {
                 return false;
               }
               ContextActionMenu.openPublicQuickChat(obfuscationGuard ^ 6217);
               return true;
             }
-            if (11 != rs.field_q) {
+            if (11 != rs.keyCode) {
               return false;
             }
             if (!lq.hasLastQuickChat) {
@@ -141,14 +141,14 @@ final class po {
         }
         if (obfuscationGuard != 6150) {
           field_a = (String) null;
-          if (10 == rs.field_q) {
+          if (10 == rs.keyCode) {
             if (var3 != 0) {
               return false;
             }
             ContextActionMenu.openPublicQuickChat(obfuscationGuard ^ 6217);
             return true;
           }
-          if (11 != rs.field_q) {
+          if (11 != rs.keyCode) {
             return false;
           }
           if (!lq.hasLastQuickChat) {
@@ -181,14 +181,14 @@ final class po {
           }
           return true;
         }
-        if (10 == rs.field_q) {
+        if (10 == rs.keyCode) {
           if (var3 != 0) {
             return false;
           }
           ContextActionMenu.openPublicQuickChat(obfuscationGuard ^ 6217);
           return true;
         }
-        if (11 != rs.field_q) {
+        if (11 != rs.keyCode) {
           return false;
         }
         if (!lq.hasLastQuickChat) {

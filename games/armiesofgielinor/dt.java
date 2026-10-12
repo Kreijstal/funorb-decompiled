@@ -45,7 +45,7 @@ final class dt {
           if (param1 != 23678) {
             dt.a(4);
           }
-          fj.a((java.awt.Component) ((Object) param0), (byte) 35);
+          fj.detachKeyboard((java.awt.Component) ((Object) param0), (byte) 35);
           dc.a((java.awt.Component) ((Object) param0), -37);
           if (CampaignMission.field_I == null) {
             return;

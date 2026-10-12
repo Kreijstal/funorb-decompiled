@@ -3,13 +3,13 @@
  */
 final class fc implements WidgetPainter {
     static boolean field_a;
-    static volatile int field_b;
+    static volatile int keyboardIdleTicks;
     static String field_c;
 
     public final void paintWidget(Widget widget, int originX, int obfuscationGuard, boolean renderFlag, int originY) {
         try {
           if (obfuscationGuard >= -79) {
-            field_b = 123;
+            keyboardIdleTicks = 123;
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fc.C(" + (widget != null ? "{...}" : "null") + ',' + originX + ',' + obfuscationGuard + ',' + renderFlag + ',' + originY + ')');
@@ -27,6 +27,6 @@ final class fc implements WidgetPainter {
 
     static {
         field_c = "This cannon can only use fire weapons.";
-        field_b = 0;
+        keyboardIdleTicks = 0;
     }
 }

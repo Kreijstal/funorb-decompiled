@@ -20,7 +20,7 @@ final class BattlefieldTheme {
     String foliageShadowFile;
     IndexedSprite[] structureSprites;
     RgbSprite[] foliageShadowSprites;
-    static String field_j;
+    static String quickChatHelpSubtitle;
     String structureSpriteFile;
     private PcmSample[] ambientSounds;
     static String field_s;
@@ -149,10 +149,10 @@ final class BattlefieldTheme {
         field_k = null;
         if (param0 >= -100) {
           BattlefieldTheme.a(true, 87, 46, 119);
-          field_j = null;
+          quickChatHelpSubtitle = null;
           return;
         }
-        field_j = null;
+        quickChatHelpSubtitle = null;
     }
 
     final RgbSprite loadBackgroundImage(byte obfuscationGuard) {
@@ -292,6 +292,6 @@ final class BattlefieldTheme {
         field_k = new String[3];
         field_r = "<%0> must play 1 more rated game before playing with the current options.";
         field_s = "Requires <%0>";
-        field_j = "Shortcut Reference";
+        quickChatHelpSubtitle = "Shortcut Reference";
     }
 }

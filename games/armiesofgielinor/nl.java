@@ -688,7 +688,7 @@ abstract class nl extends Widget implements gw {
           if (80 != var5_int) {
             return false;
           }
-          if (!br.field_f[81]) {
+          if (!br.heldKeys[81]) {
             stackIn_12_0 = this.a(param0, (byte) 107);
           } else {
             stackIn_12_0 = this.b(4, param0);

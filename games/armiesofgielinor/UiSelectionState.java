@@ -18,7 +18,7 @@ final class UiSelectionState {
         this.keyCode = 0;
         this.buttonPress = 0;
         if (this.pressedPointerButton == 0 &&
-          rs.field_q == 98) {
+          rs.keyCode == 98) {
           if (this.selectedIndex <= 0) {
             this.selectedIndex = this.itemCount;
           }
@@ -29,10 +29,10 @@ final class UiSelectionState {
           return;
         }
         if (0 == this.pressedPointerButton) {
-          this.keyCode = rs.field_q;
+          this.keyCode = rs.keyCode;
         }
         if (this.pressedPointerButton == 0 &&
-          rs.field_q == 99) {
+          rs.keyCode == 99) {
           this.selectedIndex = this.selectedIndex + 1;
           if (this.selectedIndex >= this.itemCount) {
             this.selectedIndex = 0;
@@ -98,10 +98,10 @@ final class UiSelectionState {
         int var3 = 61 % ((obfuscationGuard - 78) / 48);
         this.buttonPress = 0;
         if (this.pressedPointerButton == 0) {
-          this.keyCode = rs.field_q;
+          this.keyCode = rs.keyCode;
         }
         if (0 == this.pressedPointerButton &&
-          rs.field_q == 96) {
+          rs.keyCode == 96) {
           if (this.selectedIndex <= 0) {
             this.selectedIndex = this.itemCount;
           }
@@ -109,7 +109,7 @@ final class UiSelectionState {
           this.pointerDrivenSelection = false;
         }
         if (0 == this.pressedPointerButton &&
-          rs.field_q == 97) {
+          rs.keyCode == 97) {
           this.selectedIndex = this.selectedIndex + 1;
           this.pointerDrivenSelection = false;
           if (this.selectedIndex >= this.itemCount) {
@@ -117,7 +117,7 @@ final class UiSelectionState {
           }
         }
         if (this.pressedPointerButton == 0 &&
-          (rs.field_q == 98 || rs.field_q == 99)) {
+          (rs.keyCode == 98 || rs.keyCode == 99)) {
           this.pointerDrivenSelection = false;
           if (this.selectedIndex < 0) {
             this.selectedIndex = fallbackIndex;
@@ -150,7 +150,7 @@ final class UiSelectionState {
         this.buttonPress = 0;
         this.keyCode = 0;
         if (pointerButton == this.pressedPointerButton) {
-          this.keyCode = rs.field_q;
+          this.keyCode = rs.keyCode;
         }
     }
 

@@ -201,7 +201,7 @@ final class nv extends hs implements he {
             }
             if (param1 == 102) {
               if (this.field_M &&
-                br.field_f[82]) {
+                br.heldKeys[82]) {
                 this.d(0, param3 ^ -12215);
                 return true;
               }
@@ -212,7 +212,7 @@ final class nv extends hs implements he {
             } else {
               if (param1 == 103) {
                 if (this.field_M &&
-                  br.field_f[82]) {
+                  br.heldKeys[82]) {
                   this.d(65536, param3 + 12215);
                   return true;
                 }

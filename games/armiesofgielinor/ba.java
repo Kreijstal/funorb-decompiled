@@ -63,7 +63,7 @@ final class ba extends dr {
             secondPreviousOpcode = 107;
           }
           var1_int = 0;
-          while (Unit.i((byte) -52)) {
+          while (Unit.pollKeyEvent((byte) -52)) {
             MovementPlanner.field_z.pollNavigationKeys((byte) -120);
             if (!MovementPlanner.field_z.hasActivationInput((byte) 82)) {
               continue;

@@ -97,7 +97,7 @@ final class l {
                 }
                 var10[var14 + var12Lifetime1] = category.phraseIds[var14];
               } else {
-                var8[var14 + var12Lifetime1] = GameEvent.field_x;
+                var8[var14 + var12Lifetime1] = GameEvent.quickChatHelpTitle;
                 var9[var12Lifetime1 + var14] = category.phraseShortcuts[var14];
                 var10[var14 + var12Lifetime1] = category.phraseIds[var14];
               }

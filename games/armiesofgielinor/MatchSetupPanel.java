@@ -943,10 +943,10 @@ final class MatchSetupPanel {
           var4 = stackIn_7_0;
           VerticalScrollbar.field_Rb.advanceFrame(el.field_d, param0 - 56, var2, var3 != 0, var1_int, var4 != 0);
           while (true) {
-            if (!Unit.i((byte) 90)) {
+            if (!Unit.pollKeyEvent((byte) 90)) {
               return;
             }
-            if (rs.field_q == 13) {
+            if (rs.keyCode == 13) {
               CipherPacketBuffer.a(true, 0, 1, jt.field_a);
               if (null != VerticalScrollbar.field_Rb.combatPresentation) {
                 VerticalScrollbar.field_Rb.combatPresentation.framebuffer = null;
@@ -958,11 +958,11 @@ final class MatchSetupPanel {
               }
               VerticalScrollbar.field_Rb = null;
             }
-            if (rs.field_q == 12) {
+            if (rs.keyCode == 12) {
               stackIn_20_0 = !(CoatOfArms.field_e);
               CoatOfArms.field_e = stackIn_20_0;
             }
-            if (rs.field_q != 11) {
+            if (rs.keyCode != 11) {
               continue;
             }
             if (BufferedSocket.field_j < 2) {

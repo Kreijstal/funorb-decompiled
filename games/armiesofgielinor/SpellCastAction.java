@@ -4,7 +4,7 @@
 final class SpellCastAction extends PreparedAction {
     static String field_y;
     static String field_v;
-    static char[] field_u;
+    static char[] keyEventCharacters;
     private int selectionMode;
     private Spell spell;
     static boolean field_t;
@@ -148,7 +148,7 @@ final class SpellCastAction extends PreparedAction {
 
     public static void e(int param0) {
         field_v = null;
-        field_u = null;
+        keyEventCharacters = null;
         field_y = null;
         if (param0 != -4541) {
           SpellCastAction.b(-26, 75);
@@ -157,7 +157,7 @@ final class SpellCastAction extends PreparedAction {
 
     static {
         field_y = "Respect";
-        field_u = new char[128];
+        keyEventCharacters = new char[128];
         field_v = "Mute this player for 48 hours";
     }
 }

@@ -83,7 +83,7 @@ final class qh {
             }
             jg.a(0, param3, param6, param1, param2, param4, param5);
             VertexNormal.a(param1, param7 ^ -256, param3, param5, bu.field_a);
-            hg.field_b = hg.field_b + 1;
+            KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
             return;
           }
           if (so.field_b.field_g == SoftwareRaster.height &&
@@ -119,7 +119,7 @@ final class qh {
               }
               jg.a(0, param3, param6, param1, param2, param4, param5);
               VertexNormal.a(param1, param7 ^ -256, param3, param5, bu.field_a);
-              hg.field_b = hg.field_b + 1;
+              KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
               return;
             }
             if (no.roomSetup != null) {
@@ -204,21 +204,21 @@ final class qh {
         }
         jg.a(0, param3, param6, param1, param2, param4, param5);
         VertexNormal.a(param1, param7 ^ -256, param3, param5, bu.field_a);
-        hg.field_b = hg.field_b + 1;
+        KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
     }
 
     final static void a(boolean param0, int param1) {
         if (param1 == 0) {
-          if (null != Spell.field_d) {
+          if (null != Spell.quickChatHelpDialog) {
             SoftwareRaster.d(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, -SoftwareRaster.clipLeft + SoftwareRaster.clipRight, -SoftwareRaster.clipTop + SoftwareRaster.clipBottom);
-            Spell.field_d.draw(param0, 20);
+            Spell.quickChatHelpDialog.draw(param0, 20);
           }
           return;
         }
         qh.a((byte) -15);
-        if (null != Spell.field_d) {
+        if (null != Spell.quickChatHelpDialog) {
           SoftwareRaster.d(SoftwareRaster.clipLeft, SoftwareRaster.clipTop, -SoftwareRaster.clipLeft + SoftwareRaster.clipRight, -SoftwareRaster.clipTop + SoftwareRaster.clipBottom);
-          Spell.field_d.draw(param0, 20);
+          Spell.quickChatHelpDialog.draw(param0, 20);
         }
     }
 

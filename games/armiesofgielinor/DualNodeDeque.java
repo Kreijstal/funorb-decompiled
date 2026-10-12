@@ -6,7 +6,7 @@ final class DualNodeDeque {
     static String field_e;
     static String field_k;
     static int field_c;
-    static char field_i;
+    static char typedCharacter;
     static String field_h;
     private DualLinkedNode sentinel;
     static int field_f;
@@ -112,7 +112,7 @@ final class DualNodeDeque {
           }
           node.secondaryNext = this.sentinel;
           if (obfuscationGuard) {
-            field_i = '￠';
+            typedCharacter = '￠';
           }
           node.secondaryPrevious = this.sentinel.secondaryPrevious;
           node.secondaryPrevious.secondaryNext = node;

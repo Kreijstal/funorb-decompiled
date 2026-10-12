@@ -227,7 +227,7 @@ final class oo {
               }
             }
             if (mk.field_h) {
-              while (Unit.i((byte) -71)) {
+              while (Unit.pollKeyEvent((byte) -71)) {
                 var5 = this.c(127);
                 if (0 == var5) {
                   continue;
@@ -298,7 +298,7 @@ final class oo {
               return stackIn_10_0;
             }
           }
-          if (rs.field_q != 13) {
+          if (rs.keyCode != 13) {
             stackIn_15_0 = 0;
             return stackIn_15_0;
           }

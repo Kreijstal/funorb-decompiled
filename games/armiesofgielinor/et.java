@@ -172,7 +172,7 @@ final class et {
             et.a(103);
           }
           do {
-            if (!Unit.i((byte) 80)) {
+            if (!Unit.pollKeyEvent((byte) 80)) {
               if (cn.field_r == -1) {
                 if (ac.field_n) {
                   stackIn_18_0 = 3;
@@ -195,7 +195,7 @@ final class et {
               }
               break;
             }
-            KingBlackDragonEvent.field_C.a(rs.field_q, DualNodeDeque.field_i, 80);
+            KingBlackDragonEvent.field_C.a(rs.keyCode, DualNodeDeque.typedCharacter, 80);
           } while (var2 == 0);
           var1_int = cn.field_r;
           gl.a(param0 ^ -127, -1);

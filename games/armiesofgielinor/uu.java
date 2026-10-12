@@ -120,7 +120,7 @@ final class uu {
                 if (decompiledSharedTail0) {
                   var10_ref_String = fo.a(4800, UnitSpell.field_h, new String[]{Integer.toString(AnimationPlayer.pendingJoinRequestCount)});
                 }
-                if (0 == (16 & hg.field_b) &&
+                if (0 == (16 & KeyboardInputListener.field_b) &&
                   !ChannelGainProfile.field_f) {
                   lm.field_b.skinSprites = nd.field_a.matchedButtonSkinSprites;
                 }
@@ -226,7 +226,7 @@ final class uu {
                   break;
                 }
                 if (stackIn_73_0 <= -3 &&
-                  br.field_f[12]) {
+                  br.heldKeys[12]) {
                   var10 = 2;
                 }
               }
@@ -336,7 +336,7 @@ final class uu {
                   break;
                 }
                 if (stackIn_132_0 <= -3 &&
-                  br.field_f[12]) {
+                  br.heldKeys[12]) {
                   var16 = 0;
                 }
                 if (var16 != 0) {

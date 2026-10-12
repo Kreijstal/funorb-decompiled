@@ -168,17 +168,17 @@ final class fj {
         this.field_j = -64;
     }
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void detachKeyboard(java.awt.Component component, byte obfuscationGuard) {
         try {
-          if (param1 != 35) {
+          if (obfuscationGuard != 35) {
             IntrusiveNode var3 = (IntrusiveNode) null;
             fj.$cfr$intArgs$a$f94c566f195c(-121, (IntrusiveNode) null, (IntrusiveNode) null);
           }
-          param0.removeKeyListener(QuickChatCategory.field_w);
-          param0.removeFocusListener(QuickChatCategory.field_w);
-          us.field_c = -1;
+          component.removeKeyListener(QuickChatCategory.keyboardListener);
+          component.removeFocusListener(QuickChatCategory.keyboardListener);
+          us.keyStateWriteIndex = -1;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fj.D(" + (component != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

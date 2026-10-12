@@ -167,8 +167,8 @@ final class vq {
             }
             ChatMessage.field_i = new String[var4];
             vm.a(du.field_b, 0, ChatMessage.field_i, 0, var4);
-            hg.field_d = new String[var3_int + (-var4 - 1)];
-            vm.a(du.field_b, 1 + var4, hg.field_d, 0, -1 + var3_int - var4);
+            KeyboardInputListener.field_d = new String[var3_int + (-var4 - 1)];
+            vm.a(du.field_b, 1 + var4, KeyboardInputListener.field_d, 0, -1 + var3_int - var4);
             var4 = -1;
             var3_int = BattleTutorial.a(pf.field_d, fo.a(4800, SummonAction.field_v, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, du.field_b);
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -191,10 +191,10 @@ final class vq {
               stackIn_31_0 = QuickChatCategory.field_A.length;
             }
             var5 = stackIn_31_0;
-            if (IntrusiveNode.field_f.length > hg.field_d.length) {
+            if (IntrusiveNode.field_f.length > KeyboardInputListener.field_d.length) {
               stackIn_34_0 = IntrusiveNode.field_f.length;
             } else {
-              stackIn_34_0 = hg.field_d.length;
+              stackIn_34_0 = KeyboardInputListener.field_d.length;
             }
             var6 = stackIn_34_0;
             var7 = var6 + var5 + 7;
@@ -258,7 +258,7 @@ final class vq {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = hg.field_d;
+            var4_ref_String__Lifetime1 = KeyboardInputListener.field_d;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = lg.a(var12, false, (byte) -122);

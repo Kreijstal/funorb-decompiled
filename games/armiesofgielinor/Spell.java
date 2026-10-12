@@ -3,7 +3,7 @@
  */
 abstract class Spell {
     int spellId;
-    static hk field_d;
+    static QuickChatHelpDialog quickChatHelpDialog;
     static String field_a;
     static ReportAbuseDialog field_b;
 
@@ -38,11 +38,11 @@ abstract class Spell {
         field_b = null;
         if (param0 != -1700635440) {
           Spell.b(-53);
-          field_d = null;
+          quickChatHelpDialog = null;
           field_a = null;
           return;
         }
-        field_d = null;
+        quickChatHelpDialog = null;
         field_a = null;
     }
 

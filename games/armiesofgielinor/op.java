@@ -96,7 +96,7 @@ final class op {
         CharSequence nameCharacters = null;
         try {
           nameCharacters = (CharSequence) ((Object) name);
-          if (!hg.isValidSocialTargetName((byte) -18, nameCharacters)) {
+          if (!KeyboardInputListener.isValidSocialTargetName((byte) -18, nameCharacters)) {
             stackIn_2_0 = SectorCacheStore.field_d;
             return stackIn_2_0;
           }

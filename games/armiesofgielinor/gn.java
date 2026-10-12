@@ -95,10 +95,10 @@ final class gn {
         }
     }
 
-    final static void d(int param0) {
-        Spell.field_d = new hk(ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k);
-        if (param0 != 5) {
-          gn.d(-31);
+    final static void openQuickChatHelp(int obfuscationGuard) {
+        Spell.quickChatHelpDialog = new QuickChatHelpDialog(ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k);
+        if (obfuscationGuard != 5) {
+          gn.openQuickChatHelp(-31);
         }
     }
 

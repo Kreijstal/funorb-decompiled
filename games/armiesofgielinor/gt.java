@@ -7,7 +7,7 @@ final class gt {
     static String field_g;
     static int field_i;
     static String field_a;
-    static int[] field_d;
+    static int[] keyEventCodes;
     static RgbSprite field_e;
     static String field_h;
     static String[] field_f;
@@ -96,7 +96,7 @@ final class gt {
         field_b = null;
         field_f = null;
         field_e = null;
-        field_d = null;
+        keyEventCodes = null;
         if (param0 == 494) {
           field_h = null;
           return;
@@ -145,7 +145,7 @@ final class gt {
     static {
         field_g = "This coat of arms became unlocked at <%0>. All parts of it are available to add to your own coat of arms.";
         field_a = "This game option is only available to members.";
-        field_d = new int[128];
+        keyEventCodes = new int[128];
         field_h = "Checking";
     }
 }

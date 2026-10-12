@@ -12,7 +12,7 @@ final class QuickChatCategory extends DualLinkedNode {
     static String field_B;
     String title;
     char[] subcategoryShortcuts;
-    static hg field_w;
+    static KeyboardInputListener keyboardListener;
     static int[] field_G;
     int[] phraseIds;
     static String[] field_A;
@@ -126,7 +126,7 @@ final class QuickChatCategory extends DualLinkedNode {
         }
         field_A = null;
         field_G = null;
-        field_w = null;
+        keyboardListener = null;
     }
 
     final void decode(byte obfuscationGuard, PacketBuffer packet) {
@@ -172,6 +172,6 @@ final class QuickChatCategory extends DualLinkedNode {
         field_G = new int[]{7, 1, 0, 0, 2, 5, 4, 1, 1, 1, 9, 7, 11, 11, 1, 11};
         field_B = "Connection restored.";
         field_u = 0;
-        field_w = new hg();
+        keyboardListener = new KeyboardInputListener();
     }
 }

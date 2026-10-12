@@ -79,7 +79,7 @@ final class kt extends mk {
             stackIn_10_0 = CampaignRewardPreview.field_a;
             return stackIn_10_0;
           }
-          stackIn_8_0 = hk.field_Ib;
+          stackIn_8_0 = QuickChatHelpDialog.field_Ib;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

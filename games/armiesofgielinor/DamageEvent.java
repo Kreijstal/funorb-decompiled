@@ -270,7 +270,7 @@ final class DamageEvent extends GameEvent {
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           nameCharacters = (CharSequence) ((Object) name);
-          if (!hg.isValidSocialTargetName((byte) -31, nameCharacters)) {
+          if (!KeyboardInputListener.isValidSocialTargetName((byte) -31, nameCharacters)) {
             stackIn_3_0 = SectorCacheStore.field_d;
             return stackIn_3_0;
           }

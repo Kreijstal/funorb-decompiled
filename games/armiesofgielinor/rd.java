@@ -4,7 +4,7 @@
 final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
     static String field_a;
     volatile boolean field_k;
-    static int field_d;
+    static int keyEventFrameEndIndex;
     static int field_b;
     static String field_g;
     static String field_h;
@@ -70,7 +70,7 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     static {
         field_h = "Orb points: ";
-        field_d = 0;
+        keyEventFrameEndIndex = 0;
         field_f = "The game options are not all set.";
         field_a = "Spells to impose your will upon the world.";
         field_i = 20000000L;

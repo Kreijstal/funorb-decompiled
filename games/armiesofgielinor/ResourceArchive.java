@@ -516,17 +516,17 @@ final class ResourceArchive {
           var4 = stackIn_8_0;
           TurnEffectEvent.field_z.a(87, var4 != 0, var3 != 0, var1_int, var2, el.field_d);
           while (true) {
-            if (!Unit.i((byte) -61)) {
+            if (!Unit.pollKeyEvent((byte) -61)) {
               return;
             }
-            if (13 == rs.field_q) {
+            if (13 == rs.keyCode) {
               CipherPacketBuffer.a(true, 0, param0 + 20194, jt.field_a);
             }
-            if (12 == rs.field_q) {
+            if (12 == rs.keyCode) {
               stackIn_17_0 = !(CoatOfArms.field_e);
               CoatOfArms.field_e = stackIn_17_0;
             }
-            if (rs.field_q != 11) {
+            if (rs.keyCode != 11) {
               continue;
             }
             if (BufferedSocket.field_j < 2) {

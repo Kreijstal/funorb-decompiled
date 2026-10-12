@@ -21,18 +21,18 @@ final class BufferedSocket implements Runnable {
     private boolean writeError;
     static int field_j;
 
-    final static void a(byte param0) {
+    final static void disableKeyboard(byte obfuscationGuard) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        if (param0 != 41) {
+        if (obfuscationGuard != 41) {
           return;
         }
-        if (QuickChatCategory.field_w == null) {
+        if (QuickChatCategory.keyboardListener == null) {
           return;
         }
-        var1 = QuickChatCategory.field_w;
+        var1 = QuickChatCategory.keyboardListener;
         synchronized (var1) {
-          QuickChatCategory.field_w = null;
+          QuickChatCategory.keyboardListener = null;
         }
         return;
     }

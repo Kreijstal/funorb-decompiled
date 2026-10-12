@@ -377,7 +377,7 @@ final class UnitModelPreview {
           TriangleRasterizer.setProjectionCenter(screenX, screenY);
           var18_ref = (ModelMesh) (this.model.a(var5 != 0, false, var6 != 0));
           var20 = var18_ref;
-          var18_ref.scaleGeometry(hk.field_Jb[this.unitType], hk.field_Jb[this.unitType], hk.field_Jb[this.unitType]);
+          var18_ref.scaleGeometry(QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType]);
           if (highlighted) {
             ContextActionMenu.a(false, var20);
           }
@@ -388,7 +388,7 @@ final class UnitModelPreview {
         TriangleRasterizer.setProjectionCenter(screenX, screenY);
         ModelMesh var17_ref = (ModelMesh) (this.animationPlayer.applyCurrentFrame(var5 != 0, true, var6 != 0, this.model));
         ModelMesh var19 = var17_ref;
-        var17_ref.scaleGeometry(hk.field_Jb[this.unitType], hk.field_Jb[this.unitType], hk.field_Jb[this.unitType]);
+        var17_ref.scaleGeometry(QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType], QuickChatHelpDialog.field_Jb[this.unitType]);
         if (highlighted) {
           ContextActionMenu.a(copyVariant, var19);
         } else {

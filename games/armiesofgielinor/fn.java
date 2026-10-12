@@ -295,24 +295,24 @@ class fn extends fw {
                     this.n(-92);
                     return true;
                   }
-                  if (br.field_f[82] &&
+                  if (br.heldKeys[82] &&
                     param1 == 65) {
                     this.b(true);
                     return true;
                   }
-                  if (br.field_f[82] &&
+                  if (br.heldKeys[82] &&
                     param1 == 66) {
                     this.a((byte) -53);
                     return true;
                   }
-                  if (br.field_f[82] &&
+                  if (br.heldKeys[82] &&
                     67 == param1) {
                     this.f((byte) -104);
                     return true;
                   }
                 } else {
                   if (this.field_O < this.field_v.length()) {
-                    if (!br.field_f[82]) {
+                    if (!br.heldKeys[82]) {
                       stackIn_34_1 = this.field_O + 1;
                     } else {
                       stackIn_34_1 = this.p(-97);
@@ -323,7 +323,7 @@ class fn extends fw {
                 }
               } else {
                 if (this.field_O > 0) {
-                  if (br.field_f[82]) {
+                  if (br.heldKeys[82]) {
                     stackIn_27_1 = this.e((byte) 81);
                   } else {
                     stackIn_27_1 = -1 + this.field_O;
@@ -521,7 +521,7 @@ class fn extends fw {
 
     private final void a(int param0, byte param1) {
         this.field_O = param0;
-        if (!br.field_f[81]) {
+        if (!br.heldKeys[81]) {
           this.field_L = this.field_O;
         }
         if (param1 != -59) {

@@ -62,7 +62,7 @@ final class ContextActionMenu extends ClientUiComponent {
         if (this.pendingResult != -2) {
           return false;
         }
-        if (rs.field_q == 13) {
+        if (rs.keyCode == 13) {
           this.pendingResult = -1;
           return true;
         }

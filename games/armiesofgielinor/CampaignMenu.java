@@ -1511,8 +1511,8 @@ final class CampaignMenu {
             return;
           }
           if (2 <= BufferedSocket.field_j &&
-            br.field_f[5] &&
-            br.field_f[81]) {
+            br.heldKeys[5] &&
+            br.heldKeys[81]) {
             kw.campaignPacketWord0 = 2297;
             cg.campaignPacketWord2 = 72584621;
             wr.campaignPacketWord3 = 224;
@@ -1571,7 +1571,7 @@ final class CampaignMenu {
                   ((CampaignMenuEntry) (var3)).selectable)) {
                   var4_int = 0;
                   if (BufferedSocket.field_j >= 2) {
-                    boolean decompiledSharedTail0 = !(br.field_f[81]);
+                    boolean decompiledSharedTail0 = !(br.heldKeys[81]);
                     if (!decompiledSharedTail0) {
                       cg.campaignPacketWord2 = 72584621;
                       ii.campaignPacketWord1 = 4452;
@@ -1619,7 +1619,7 @@ final class CampaignMenu {
                       decompiledSharedTail0 = (var7 != 0);
                     }
                     if ((decompiledSharedTail0) &&
-                      (br.field_f[82])) {
+                      (br.heldKeys[82])) {
                       var4_int = 1;
                       ActionSpell.submitCampaignResult(4, -1, ((CampaignMenuEntry) (var3)).mission, true, 1, -1);
                       this.openCampaign(((CampaignMenuEntry) (var3)).mission.campaign.campaignIndex, true);
@@ -1738,7 +1738,7 @@ final class CampaignMenu {
                 if (BufferedSocket.field_j < 2) {
                   return;
                 }
-                if (!br.field_f[81]) {
+                if (!br.heldKeys[81]) {
                   return;
                 }
                 pg.playerProfile.campaignProgress.setResult(65535, ((CampaignMenuEntry) (var2)).entryId, uk.field_n % 10 + ((CampaignMenuEntry) (var2)).entryId * 10, this.campaignIndex, ((CampaignMenuEntry) (var2)).entryId * 200 + uk.field_n % 200);
@@ -2116,7 +2116,7 @@ final class CampaignMenu {
             } else {
               var4_int = param0 - 16;
             }
-            stackIn_46_0 = (!br.field_f[81]) ? 256 : 0;
+            stackIn_46_0 = (!br.heldKeys[81]) ? 256 : 0;
             var5Lifetime1 = stackIn_46_0;
             if (var4_int != -2) {
               lk.musicCrossfadeStream.firstSequencer.setChannelGain(var5Lifetime1, var4_int, (byte) -52);

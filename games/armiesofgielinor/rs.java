@@ -12,7 +12,7 @@ final class rs extends IntrusiveNode {
     static tu field_n;
     static RgbSprite field_o;
     int field_u;
-    static int field_q;
+    static int keyCode;
     static int field_k;
     static RgbSprite[] field_p;
     static int outgoingChatChannel;

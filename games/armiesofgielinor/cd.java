@@ -95,11 +95,11 @@ final class cd {
     final static boolean a(int param0, int param1, boolean param2) {
         if (param2) {
           campaigns = (CampaignDefinition[]) null;
-          if (rs.field_q == 13) {
+          if (rs.keyCode == 13) {
             DelayedPacket.e(-3);
             return true;
           }
-          if (rs.field_q == 102) {
+          if (rs.keyCode == 102) {
             qd.activeQuickChatMenu.resetSelection((byte) -106);
             return true;
           }
@@ -111,11 +111,11 @@ final class cd {
           }
           return false;
         }
-        if (rs.field_q == 13) {
+        if (rs.keyCode == 13) {
           DelayedPacket.e(-3);
           return true;
         }
-        if (rs.field_q == 102) {
+        if (rs.keyCode == 102) {
           qd.activeQuickChatMenu.resetSelection((byte) -106);
           return true;
         }

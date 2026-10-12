@@ -3,7 +3,7 @@
  */
 final class SphinxActionRequest extends ActionRequest {
     private int sphinxY;
-    static int[] field_x;
+    static int[] keyStateEvents;
     private int sphinxX;
     static ClientUiComponent field_A;
     private ActionRequest delegatedRequest;
@@ -360,7 +360,7 @@ final class SphinxActionRequest extends ActionRequest {
         if (param0 != -27538) {
           return;
         }
-        field_x = null;
+        keyStateEvents = null;
     }
 
     final static void e(int param0) {
@@ -437,6 +437,6 @@ final class SphinxActionRequest extends ActionRequest {
     }
 
     static {
-        field_x = new int[128];
+        keyStateEvents = new int[128];
     }
 }

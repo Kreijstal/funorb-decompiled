@@ -78,7 +78,7 @@ public final class ArmiesOfGielinor extends wf {
         try {
           bs.a((byte) -127);
           r.field_u = MusicPatchPcmStream.getPointerIdleTicks(4);
-          hk.pumpAudioAndPruneSounds(128);
+          QuickChatHelpDialog.pumpAudioAndPruneSounds(128);
           if (FixedQuaternion.field_a != null &&
             FixedQuaternion.field_a.field_k) {
             ck.b(-127);
@@ -551,8 +551,8 @@ public final class ArmiesOfGielinor extends wf {
           if (ma.field_Z) {
             s.field_d = 0;
           }
-          if (br.field_f[82] &&
-            br.field_f[74]) {
+          if (br.heldKeys[82] &&
+            br.heldKeys[74]) {
             stackIn_348_0 = 1;
           } else {
             stackIn_348_0 = 0;
@@ -741,7 +741,7 @@ public final class ArmiesOfGielinor extends wf {
                   }
                   if (decompiledFrameRemainder2) {
                     rd.field_j.a(112, true);
-                    while (Unit.i((byte) -89)) {
+                    while (Unit.pollKeyEvent((byte) -89)) {
                       if (gu.a(param0 + 56)) {
                         continue;
                       }
@@ -813,7 +813,7 @@ public final class ArmiesOfGielinor extends wf {
                 PaletteRegionMap.a(320, 180, var4 != 0, 0);
                 rd.field_j.a(param0 + 119, var4 != 0);
               }
-              while (Unit.i((byte) -127)) {
+              while (Unit.pollKeyEvent((byte) -127)) {
                 if (gu.a(param0 - 126) &&
                   var8 == 0) {
                   continue;
@@ -1145,7 +1145,7 @@ public final class ArmiesOfGielinor extends wf {
           qt.a((byte) 93);
           s.a(53);
           Spell.b(param0 - 1700635368);
-          hg.a(true);
+          KeyboardInputListener.a(true);
           t.a(0);
           cd.a(false);
           bt.c(0);
@@ -1351,7 +1351,7 @@ public final class ArmiesOfGielinor extends wf {
           r.d((byte) -11);
           sh.b((byte) 40);
           pd.a((byte) 95);
-          hk.l(param0 ^ 55);
+          QuickChatHelpDialog.l(param0 ^ 55);
           jk.a(param0 ^ -28);
           AiUnitPlanner.a(-31116);
           DeathEvent.g(-81);
@@ -2324,7 +2324,7 @@ public final class ArmiesOfGielinor extends wf {
           do {
             if (var17 >= 64) {
               if (BufferedSocket.field_j >= 2) {
-                oa.field_I = new ij(hg.a(101), rs.field_n, IntPair.field_m);
+                oa.field_I = new ij(KeyboardInputListener.createDebugCommandRegistry(101), rs.field_n, IntPair.field_m);
               }
               break;
             }

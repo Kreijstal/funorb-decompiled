@@ -495,7 +495,7 @@ class tj extends Widget implements gw {
             this.field_D = (NodeDeque) null;
             return false;
           }
-          if (!br.field_f[81]) {
+          if (!br.heldKeys[81]) {
             stackIn_13_0 = this.b((byte) -123, param0);
           } else {
             stackIn_13_0 = this.a(false, param0);

@@ -1613,17 +1613,17 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         if (param2 != -14) {
           field_G = (BitmapFont) null;
         }
-        if (null != Spell.field_d &&
-          rs.field_q == 13) {
-          Spell.field_d = null;
+        if (null != Spell.quickChatHelpDialog &&
+          rs.keyCode == 13) {
+          Spell.quickChatHelpDialog = null;
           return true;
         }
         if (!hf.textChatActive) {
           if (!BattleTutorial.quickChatMenuVisible &&
-            rs.field_q != 9 &&
-            rs.field_q != 10 &&
-            rs.field_q != 11) {
-            if (80 != rs.field_q) {
+            rs.keyCode != 9 &&
+            rs.keyCode != 10 &&
+            rs.keyCode != 11) {
+            if (80 != rs.keyCode) {
               return false;
             }
             if (!MusicPatchPcmStream.e(-1)) {
@@ -1639,12 +1639,12 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
         stackIn_22_0 = (!ro.b(param3, (byte) -59, param0)) ? 0 : 1;
         var4 = stackIn_22_0;
-        if (80 == rs.field_q ||
-          84 == rs.field_q) {
+        if (80 == rs.keyCode ||
+          84 == rs.keyCode) {
           hf.textChatActive = false;
           var4 = 1;
         }
-        if (rs.field_q == 13) {
+        if (rs.keyCode == 13) {
           rd.clearChatText(8445);
           hf.textChatActive = false;
           var4 = 1;

@@ -4971,7 +4971,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_MOVES");
                 if (var2 != null) {
-                  hg.field_c = uu.a(var2, (byte) 104);
+                  KeyboardInputListener.field_c = uu.a(var2, (byte) 104);
                 }
                 var2 = fk.a(false, "TTREED_INSTANTS");
                 if (var2 != null) {

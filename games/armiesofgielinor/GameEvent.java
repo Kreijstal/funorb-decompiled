@@ -10,7 +10,7 @@ abstract class GameEvent extends IntrusiveNode {
     boolean presentationComplete;
     static int field_v;
     Unit unit;
-    static String field_x;
+    static String quickChatHelpTitle;
     static int[] field_t;
     int eventKind;
     static int[] field_q;
@@ -210,7 +210,7 @@ abstract class GameEvent extends IntrusiveNode {
         field_t = null;
         field_u = null;
         field_q = null;
-        field_x = null;
+        quickChatHelpTitle = null;
         if (param0 != -103) {
           return;
         }
@@ -419,7 +419,7 @@ abstract class GameEvent extends IntrusiveNode {
         field_p = "Allow spectators?";
         field_v = 0;
         field_t = new int[]{2, 17, 18, 36, 37, 38, 6, 5, 50, 9};
-        field_x = "Quick Chat Help";
+        quickChatHelpTitle = "Quick Chat Help";
         field_k = 4;
         bitMasks = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
         field_q = new int[56];

@@ -6,7 +6,7 @@ final class br {
     static String[] field_b;
     static SocialListPanel field_g;
     static ClientUiComponent field_e;
-    static boolean[] field_f;
+    static boolean[] heldKeys;
     static ResourceArchive field_d;
     static int[] field_c;
 
@@ -20,7 +20,7 @@ final class br {
         field_d = null;
         field_g = null;
         field_e = null;
-        field_f = null;
+        heldKeys = null;
     }
 
     final static boolean a(String param0, boolean param1) {
@@ -83,7 +83,7 @@ final class br {
 
     final static CampaignDefinition getCampaign(int campaignIndex, byte obfuscationGuard) {
         if (obfuscationGuard > -4) {
-          field_f = (boolean[]) null;
+          heldKeys = (boolean[]) null;
         }
         return cd.campaigns[campaignIndex];
     }
@@ -96,7 +96,7 @@ final class br {
           pt.c(SoftwareRaster.width / 2, SoftwareRaster.height / 2, 75);
           uc.a(param0.field_L + param0.field_z, param0.field_z, param3.field_z, false, param3.field_L + param3.field_z);
           if (param2 != 333) {
-            field_f = (boolean[]) null;
+            heldKeys = (boolean[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "br.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -104,7 +104,7 @@ final class br {
     }
 
     static {
-        field_f = new boolean[112];
+        heldKeys = new boolean[112];
         field_c = new int[]{276, 215, 253, 292, 329, 288, 333, 353, 244, 182, 122, 160, 126, 147, 189, 68};
     }
 }

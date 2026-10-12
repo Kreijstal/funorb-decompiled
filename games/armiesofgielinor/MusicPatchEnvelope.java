@@ -147,7 +147,7 @@ final class MusicPatchEnvelope {
         RuntimeException decompiledCaughtException = null;
         try {
           accountNameCharacters = (CharSequence) ((Object) accountName);
-          if (!hg.isValidSocialTargetName((byte) -113, accountNameCharacters)) {
+          if (!KeyboardInputListener.isValidSocialTargetName((byte) -113, accountNameCharacters)) {
             stackIn_3_0 = SectorCacheStore.field_d;
             return stackIn_3_0;
           }

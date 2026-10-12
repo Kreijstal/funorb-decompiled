@@ -43,24 +43,24 @@ final class QuickChatPhraseRepository {
         return true;
     }
 
-    final static void b(byte param0) {
-        kw.field_M[46] = 72;
-        kw.field_M[61] = 27;
-        kw.field_M[192] = 28;
-        kw.field_M[222] = 58;
-        kw.field_M[520] = 59;
-        kw.field_M[44] = 71;
-        kw.field_M[93] = 43;
-        kw.field_M[45] = 26;
-        kw.field_M[92] = 74;
-        kw.field_M[59] = 57;
-        kw.field_M[91] = 42;
-        if (param0 >= 109) {
-          kw.field_M[47] = 73;
+    final static void configurePunctuationKeys(byte obfuscationGuard) {
+        kw.awtToClientKeyCodes[46] = 72;
+        kw.awtToClientKeyCodes[61] = 27;
+        kw.awtToClientKeyCodes[192] = 28;
+        kw.awtToClientKeyCodes[222] = 58;
+        kw.awtToClientKeyCodes[520] = 59;
+        kw.awtToClientKeyCodes[44] = 71;
+        kw.awtToClientKeyCodes[93] = 43;
+        kw.awtToClientKeyCodes[45] = 26;
+        kw.awtToClientKeyCodes[92] = 74;
+        kw.awtToClientKeyCodes[59] = 57;
+        kw.awtToClientKeyCodes[91] = 42;
+        if (obfuscationGuard >= 109) {
+          kw.awtToClientKeyCodes[47] = 73;
           return;
         }
         field_d = (ClientUiComponent) null;
-        kw.field_M[47] = 73;
+        kw.awtToClientKeyCodes[47] = 73;
     }
 
     final static void a(int param0, java.applet.Applet param1) {

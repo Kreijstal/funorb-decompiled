@@ -117,7 +117,7 @@ final class bn {
                 gu.a(-61, param3);
               } else {
                 if (2 <= BufferedSocket.field_j &&
-                  br.field_f[12]) {
+                  br.heldKeys[12]) {
                   gu.a(-61, param3);
                 } else {
                   ChatMessage.field_w = true;
@@ -154,7 +154,7 @@ final class bn {
                 gu.a(-61, param3);
               } else {
                 if (2 <= BufferedSocket.field_j) {
-                  if (br.field_f[12]) {
+                  if (br.heldKeys[12]) {
                     gu.a(-61, param3);
                   } else {
                     ChatMessage.field_w = true;

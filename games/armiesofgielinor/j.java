@@ -322,7 +322,7 @@ final class j {
                 }
                 es.a(0, tq.gameOptionCount, no.roomSetup, -1, true, -1, (byte) 89, -1);
                 if (!(BufferedSocket.field_j < 2) &&
-                  br.field_f[12]) {
+                  br.heldKeys[12]) {
                   fc.field_a = true;
                 }
               }
@@ -366,14 +366,14 @@ final class j {
               var9 = var16;
               var10Lifetime1 = pi.field_N.font.a(var16) + 3 * pi.field_N.font.a('.');
               pi.field_N.textHorizontalPadding = (-var10Lifetime1 + pi.field_N.width) / 2;
-              if ((hg.field_b & 48) == 16) {
+              if ((KeyboardInputListener.field_b & 48) == 16) {
                 var9 = var16 + ".";
               }
               pi.field_N.horizontalAlignment = 0;
-              if (32 == (48 & hg.field_b)) {
+              if (32 == (48 & KeyboardInputListener.field_b)) {
                 var9 = (String) (var9) + "..";
               }
-              if (48 == (48 & hg.field_b)) {
+              if (48 == (48 & KeyboardInputListener.field_b)) {
                 var9 = (String) (var9) + "...";
               }
               pi.field_N.text = (String) (var9);

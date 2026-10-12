@@ -397,24 +397,24 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         return this.movementTargetY;
     }
 
-    final static boolean i(byte param0) {
-        Object var1 = null;
-        int var2 = 0;
-        Throwable var3 = null;
-        boolean stackIn_6_0 = false;
-        Throwable decompiledCaughtException = null;
-        var1 = QuickChatCategory.field_w;
-        synchronized (var1) {
-          if (rd.field_d == SummonAction.field_E) {
+    final static boolean pollKeyEvent(byte obfuscationGuard) {
+        Object listenerLock = null;
+        int guardRemainder = 0;
+        Throwable monitorFailure = null;
+        boolean eventAvailable = false;
+        Throwable caughtFailure = null;
+        listenerLock = QuickChatCategory.keyboardListener;
+        synchronized (listenerLock) {
+          if (rd.keyEventFrameEndIndex == SummonAction.keyEventReadIndex) {
             return false;
           }
-          rs.field_q = gt.field_d[SummonAction.field_E];
-          DualNodeDeque.field_i = SpellCastAction.field_u[SummonAction.field_E];
-          var2 = 86 % ((param0 - 0) / 48);
-          SummonAction.field_E = 127 & SummonAction.field_E + 1;
-          stackIn_6_0 = true;
+          rs.keyCode = gt.keyEventCodes[SummonAction.keyEventReadIndex];
+          DualNodeDeque.typedCharacter = SpellCastAction.keyEventCharacters[SummonAction.keyEventReadIndex];
+          guardRemainder = 86 % ((obfuscationGuard - 0) / 48);
+          SummonAction.keyEventReadIndex = 127 & SummonAction.keyEventReadIndex + 1;
+          eventAvailable = true;
         }
-        return stackIn_6_0;
+        return eventAvailable;
     }
 
     final void refreshForTurnChange(byte obfuscationGuard) {
@@ -856,7 +856,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
     final boolean u(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 8) {
-          Unit.i((byte) 14);
+          Unit.pollKeyEvent((byte) 14);
         }
         stackIn_6_0 = (0 != (this.movementFlags & 8)) && (this.strength >= this.maximumStrength);
         return stackIn_6_0;

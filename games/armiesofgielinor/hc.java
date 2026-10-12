@@ -70,16 +70,16 @@ final class hc {
         if (param0 <= 116) {
           this.e((byte) -94);
         }
-        if (br.field_f[96]) {
+        if (br.heldKeys[96]) {
           this.field_t = this.field_t + 5;
         }
-        if (br.field_f[97]) {
+        if (br.heldKeys[97]) {
           this.field_t = this.field_t - 5;
         }
-        if (br.field_f[98]) {
+        if (br.heldKeys[98]) {
           this.field_r = this.field_r + 2;
         }
-        if (br.field_f[99]) {
+        if (br.heldKeys[99]) {
           this.field_r = this.field_r - 2;
         }
     }

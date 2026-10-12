@@ -650,7 +650,7 @@ abstract class hs extends Widget implements gw {
             field_E = (String[]) null;
             return false;
           }
-          if (!br.field_f[81]) {
+          if (!br.heldKeys[81]) {
             stackIn_16_0 = this.b(-57, param0);
           } else {
             stackIn_16_0 = this.a((byte) 88, param0);

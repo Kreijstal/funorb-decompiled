@@ -5,7 +5,7 @@ final class SummonAction extends PreparedAction {
     static NodeDeque lobbyPlayerOrder;
     static ResourceArchive field_w;
     static String field_D;
-    static int field_E;
+    static int keyEventReadIndex;
     private int unitType;
     static ClientUiComponent field_y;
     static ClientConnectionState field_z;
@@ -135,7 +135,7 @@ final class SummonAction extends PreparedAction {
         field_D = "Please try again in a few minutes.";
         field_A = "Ongoing Mission";
         field_v = "If you do nothing the game will revert to normal view in <%0> seconds.";
-        field_E = 0;
+        keyEventReadIndex = 0;
         field_z = new ClientConnectionState();
         field_x = 77;
         field_F = "Choose three alignments";

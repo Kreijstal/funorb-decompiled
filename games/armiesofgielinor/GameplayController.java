@@ -5254,7 +5254,7 @@ final class GameplayController {
           if (!this.battlefield.field_Ab) {
             return;
           }
-          if (rs.field_q == 13 &&
+          if (rs.keyCode == 13 &&
             mu.field_a == null) {
             var2_int = 1;
             if (this.campaignMode) {
@@ -5286,20 +5286,20 @@ final class GameplayController {
             CipherPacketBuffer.a(false, var3, 1, 0);
             return;
           }
-          if (rs.field_q == 9 &&
+          if (rs.keyCode == 9 &&
             this.field_E &&
             !this.field_lb &&
             null != this.selectedUnit) {
             this.selectedUnit.strength = 89;
             this.selectedUnit.maximumStrength = 89;
           }
-          if (rs.field_q == 12 &&
+          if (rs.keyCode == 12 &&
             this.field_E) {
             stackIn_47_0 = !(CoatOfArms.field_e);
             CoatOfArms.field_e = stackIn_47_0;
             return;
           }
-          if (rs.field_q == 11 &&
+          if (rs.keyCode == 11 &&
             this.field_E) {
             stackIn_59_0 = !(jv.field_a);
             jv.field_a = stackIn_59_0;
@@ -5309,7 +5309,7 @@ final class GameplayController {
             hf.textChatActive) {
             return;
           }
-          if (rs.field_q == 83) {
+          if (rs.keyCode == 83) {
             boolean decompiledSharedTail0 = (null != this.eventPresenters.first((byte) 102) &&
               ((EventPresenter) (this.eventPresenters.first((byte) 102))).fullCombatScene);
             if (!decompiledSharedTail0) {
@@ -5323,12 +5323,12 @@ final class GameplayController {
           if (param0) {
             discarded$0 = this.g(74, -31);
           }
-          if (70 == rs.field_q) {
+          if (70 == rs.keyCode) {
             stackIn_90_1 = !(this.field_tb);
             this.field_tb = stackIn_90_1;
           }
-          if (rs.field_q == 84 &&
-            br.field_f[86]) {
+          if (rs.keyCode == 84 &&
+            br.heldKeys[86]) {
             if (null != FixedQuaternion.field_a) {
               ck.b(-122);
               if (var8 != 0) {
@@ -5340,15 +5340,15 @@ final class GameplayController {
               AiPlanningStrategy.a(false, 8028);
             }
           }
-          if (84 == rs.field_q &&
-            br.field_f[82]) {
+          if (84 == rs.keyCode &&
+            br.heldKeys[82]) {
             stackIn_113_1 = !(param0);
             if (this.a(stackIn_113_1)) {
               this.r((byte) 83);
             }
           }
           boolean decompiledFrameCompleted2 = true;
-          if (rs.field_q == 72 &&
+          if (rs.keyCode == 72 &&
             !this.field_bb &&
             ~this.battlefield.currentPlayer == ~this.controlledPlayerId &&
             !this.field_mb &&
@@ -5392,7 +5392,7 @@ final class GameplayController {
           if (decompiledFrameCompleted2) {
             stackIn_159_0 = 71;
           }
-          if (stackIn_159_0 == rs.field_q &&
+          if (stackIn_159_0 == rs.keyCode &&
             !this.field_bb &&
             this.battlefield.currentPlayer == this.controlledPlayerId &&
             !this.field_mb &&
@@ -5427,25 +5427,25 @@ final class GameplayController {
               }
             } while (var8 == 0);
           }
-          if (rs.field_q == 84 &&
+          if (rs.keyCode == 84 &&
             this.field_L == 0) {
             this.field_L = 200;
           }
-          if (rs.field_q == 39) {
+          if (rs.keyCode == 39) {
             stackIn_212_0 = !(kt.field_l);
             kt.field_l = stackIn_212_0;
           }
-          if (rs.field_q == 34 && (this.battlefield.runeCapOption != 0 ||
+          if (rs.keyCode == 34 && (this.battlefield.runeCapOption != 0 ||
             this.field_E)) {
             this.c(param0);
           }
           boolean decompiledFrameCompleted1 = true;
           if (!this.field_lb &&
             this.field_E) {
-            if (rs.field_q == 4) {
+            if (rs.keyCode == 4) {
               this.c(0, true);
             }
-            if (rs.field_q == 3) {
+            if (rs.keyCode == 3) {
               var2_int = (ActionSpell.field_j + 1) % this.battlefield.playerCount;
               while (true) {
                 if (ActionSpell.field_j % this.battlefield.playerCount != var2_int &&
@@ -5461,8 +5461,8 @@ final class GameplayController {
               }
               this.c(0, false);
             }
-            if (rs.field_q == 2) {
-              if (br.field_f[81]) {
+            if (rs.keyCode == 2) {
+              if (br.heldKeys[81]) {
                 BattleGraphicsAssets.field_c = (BattleGraphicsAssets.field_c + 1) % 9;
                 if (var8 != 0) {
                   mu.field_f = (mu.field_f + 1) % 5;
@@ -5472,10 +5472,10 @@ final class GameplayController {
               }
               this.c(0, false);
             }
-            if (rs.field_q == 1) {
+            if (rs.keyCode == 1) {
               var2_int = 0;
               while (!(this.battlefield.playerCount <= var2_int)) {
-                stackIn_283_0 = br.field_f[81];
+                stackIn_283_0 = br.heldKeys[81];
                 if (var8 != 0) {
                   decompiledFrameCompleted1 = false;
                   break;
@@ -5512,12 +5512,12 @@ final class GameplayController {
             stackIn_283_0 = this.field_E;
           }
           if (stackIn_283_0 &&
-            rs.field_q == 54 &&
-            br.field_f[82]) {
+            rs.keyCode == 54 &&
+            br.heldKeys[82]) {
             this.c(70);
           }
           boolean decompiledFrameCompleted0 = true;
-          if (rs.field_q == 1 &&
+          if (rs.keyCode == 1 &&
             !this.field_lb &&
             this.field_E) {
             var2_int = 0;
@@ -5545,7 +5545,7 @@ final class GameplayController {
           if (decompiledFrameCompleted0) {
             stackIn_313_0 = 9;
           }
-          if (stackIn_313_0 == rs.field_q &&
+          if (stackIn_313_0 == rs.keyCode &&
             this.field_E &&
             this.field_h > 0 &&
             this.battlefield.tiles.length > this.field_h &&
@@ -5553,13 +5553,13 @@ final class GameplayController {
             var2_int = this.field_h % this.battlefield.mapWidth;
             var3Lifetime3 = this.field_h / this.battlefield.mapWidth;
             var4 = 40;
-            stackIn_332_0 = (!br.field_f[81]) ? 0 : 1;
+            stackIn_332_0 = (!br.heldKeys[81]) ? 0 : 1;
             var5 = stackIn_332_0;
             var6 = bw.unitDefinitions[var4][4];
             var7 = new Unit(var2_int, var3Lifetime3, var4, var5, var6, var6, 1, 0, 0, this.battlefield, 0, 0, -1, false, 0);
             this.battlefield.registerUnit(8288, var7);
           }
-          if (rs.field_q == 10 &&
+          if (rs.keyCode == 10 &&
             this.field_E) {
             stackIn_343_1 = !(this.field_Db);
             this.field_Db = stackIn_343_1;
@@ -5573,11 +5573,11 @@ final class GameplayController {
             LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(stackIn_346_0, ((StringBuilder) (Object) stackIn_346_1).append(stackIn_347_2).append("paused").toString(), this.field_Nb);
           }
           if (this.field_E &&
-            rs.field_q == 54 &&
-            br.field_f[82]) {
+            rs.keyCode == 54 &&
+            br.heldKeys[82]) {
             this.c(-103);
           }
-          if (50 == rs.field_q &&
+          if (50 == rs.keyCode &&
             this.field_lb &&
             this.field_E) {
             ug.a(0, this.battlefield, true);
@@ -8872,8 +8872,8 @@ final class GameplayController {
             this.field_pb = this.field_pb + 1;
           }
           if (this.field_pb == 2 && (!this.field_P ||
-            !br.field_f[82] ||
-            !br.field_f[86])) {
+            !br.heldKeys[82] ||
+            !br.heldKeys[86])) {
             this.field_pb = 0;
           }
           if (this.field_pb == 3) {
@@ -9534,7 +9534,7 @@ final class GameplayController {
           directionKeysEnabled = stackIn_19_0;
           stackIn_26_0 = this.camera;
           stackIn_26_1 = obfuscationGuard + 145;
-          if (!br.field_f[99] && (!br.field_f[49] ||
+          if (!br.heldKeys[99] && (!br.heldKeys[49] ||
             directionKeysEnabled == 0)) {
             stackIn_29_2 = false;
             decompiledFrameRemainder4 = false;
@@ -9544,7 +9544,7 @@ final class GameplayController {
           }
           boolean decompiledFrameRemainder3 = true;
           stackIn_36_3 = ko.pointerY;
-          if (!br.field_f[98] && (!br.field_f[33] ||
+          if (!br.heldKeys[98] && (!br.heldKeys[33] ||
             directionKeysEnabled == 0)) {
             stackIn_39_4 = false;
             decompiledFrameRemainder3 = false;
@@ -9553,7 +9553,7 @@ final class GameplayController {
             stackIn_39_4 = true;
           }
           boolean decompiledFrameRemainder2 = true;
-          if (!br.field_f[97] && (!br.field_f[50] ||
+          if (!br.heldKeys[97] && (!br.heldKeys[50] ||
             directionKeysEnabled == 0)) {
             stackIn_49_5 = false;
             decompiledFrameRemainder2 = false;
@@ -9562,7 +9562,7 @@ final class GameplayController {
             stackIn_49_5 = true;
           }
           boolean decompiledFrameRemainder1 = true;
-          if (!br.field_f[96] && (!br.field_f[48] ||
+          if (!br.heldKeys[96] && (!br.heldKeys[48] ||
             directionKeysEnabled == 0)) {
             stackIn_59_6 = false;
             decompiledFrameRemainder1 = false;

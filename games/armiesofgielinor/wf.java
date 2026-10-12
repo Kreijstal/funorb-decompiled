@@ -35,7 +35,7 @@ abstract class wf extends iv {
         qa.b(og.field_m, 1);
         hq.a(param6, 5000, this.field_E, 5000, param2, og.field_m, this.field_C, 0, this.field_t, this.field_o, this.field_p, IntPair.field_m, this.field_x, this.field_G);
         qf.a(og.field_m, this.field_p, this.field_G, (byte) 103, this.field_C, param6, this.field_E, this.field_t, IntPair.field_m);
-        QuickChatPhraseRepository.b((byte) 112);
+        QuickChatPhraseRepository.configurePunctuationKeys((byte) 112);
         CampaignMission.field_I = jk.b(68);
         lk.a(101, IndexedSpriteBase.field_b);
         ChatMessage.field_c = param7;
@@ -519,7 +519,7 @@ abstract class wf extends iv {
           }
           ActionSpell.field_e.a(0);
         }
-        r.c(true);
+        r.snapshotKeyboard(true);
         ds.capturePointerInput((byte) 118);
         if (param0 <= 124) {
           return;

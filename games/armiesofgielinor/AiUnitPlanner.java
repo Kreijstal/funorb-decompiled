@@ -9,7 +9,7 @@ final class AiUnitPlanner extends IntrusiveNode {
     static boolean[] field_q;
     private float field_p;
     private int decisionPriority;
-    static String[] field_z;
+    static String[] quickChatShortcutDescriptions;
     Unit unit;
     static int field_s;
     private float field_x;
@@ -529,7 +529,7 @@ final class AiUnitPlanner extends IntrusiveNode {
 
     public static void a(int param0) {
         field_q = null;
-        field_z = null;
+        quickChatShortcutDescriptions = null;
         field_w = null;
         if (param0 != -31116) {
           field_w = (String) null;
@@ -795,7 +795,7 @@ final class AiUnitPlanner extends IntrusiveNode {
     }
 
     static {
-        field_z = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
+        quickChatShortcutDescriptions = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
         field_w = "Leaders cannot carry a ring of life.";
     }
 }

@@ -189,7 +189,7 @@ class ro extends pt implements he {
           !vu.isChatRecipientAvailable(6)) {
           var3 = 0;
         }
-        if (rs.field_q == 84) {
+        if (rs.keyCode == 84) {
           if (var3 == 0) {
             if (0 == rs.outgoingChatChannel) {
               return true;
@@ -224,7 +224,7 @@ class ro extends pt implements he {
           rd.clearChatText(8445);
           return true;
         }
-        if (85 == rs.field_q) {
+        if (85 == rs.keyCode) {
           if (var3 == 0) {
             return true;
           }
@@ -234,7 +234,7 @@ class ro extends pt implements he {
           PortalLossCondition.a(' ', -1 + UpkeepEvent.chatTextBuffer.length(), UpkeepEvent.chatTextBuffer, true);
           return true;
         }
-        var4 = DualNodeDeque.field_i;
+        var4 = DualNodeDeque.typedCharacter;
         if (!uu.a(true, (char) var4)) {
           if (param1 == -59) {
           }

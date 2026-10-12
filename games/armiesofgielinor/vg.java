@@ -13,15 +13,15 @@ final class vg extends IntrusiveNode {
     static String field_l;
     boolean field_n;
 
-    final static boolean a(int param0) {
-        if (param0 != 10) {
+    final static boolean hasQuickChatOverlay(int obfuscationGuard) {
+        if (obfuscationGuard != 10) {
           vg.a((byte) 89);
-          if (Spell.field_d == null) {
+          if (Spell.quickChatHelpDialog == null) {
             return BattleTutorial.quickChatMenuVisible ? true : false;
           }
           return true;
         }
-        if (Spell.field_d != null) {
+        if (Spell.quickChatHelpDialog != null) {
           return true;
         }
         if (!BattleTutorial.quickChatMenuVisible) {

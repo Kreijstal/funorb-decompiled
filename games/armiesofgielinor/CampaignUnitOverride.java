@@ -1641,7 +1641,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_alert_email_unavailable");
                 if (null != var2) {
-                  hk.field_Ib = uu.a(var2, (byte) -120);
+                  QuickChatHelpDialog.field_Ib = uu.a(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "create_alert_invaliddate");
                 if (var2 != null) {
@@ -2474,59 +2474,59 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "quickchat_help");
                 if (var2 != null) {
-                  GameEvent.field_x = uu.a(var2, (byte) -111);
+                  GameEvent.quickChatHelpTitle = uu.a(var2, (byte) -111);
                 }
                 var2 = NodeIterator.a(50, "quickchat_help_title");
                 if (null != var2) {
-                  BattlefieldTheme.field_j = uu.a(var2, (byte) -115);
+                  BattlefieldTheme.quickChatHelpSubtitle = uu.a(var2, (byte) -115);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_help,0");
                 if (var2 != null) {
-                  AiUnitPlanner.field_z[0] = uu.a(var2, (byte) -105);
+                  AiUnitPlanner.quickChatShortcutDescriptions[0] = uu.a(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_help,1");
                 if (null != var2) {
-                  AiUnitPlanner.field_z[1] = uu.a(var2, (byte) -102);
+                  AiUnitPlanner.quickChatShortcutDescriptions[1] = uu.a(var2, (byte) -102);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_help,2");
                 if (var2 != null) {
-                  AiUnitPlanner.field_z[2] = uu.a(var2, (byte) 84);
+                  AiUnitPlanner.quickChatShortcutDescriptions[2] = uu.a(var2, (byte) 84);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_help,3");
                 if (var2 != null) {
-                  AiUnitPlanner.field_z[3] = uu.a(var2, (byte) 61);
+                  AiUnitPlanner.quickChatShortcutDescriptions[3] = uu.a(var2, (byte) 61);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_help,4");
                 if (var2 != null) {
-                  AiUnitPlanner.field_z[4] = uu.a(var2, (byte) -118);
+                  AiUnitPlanner.quickChatShortcutDescriptions[4] = uu.a(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(param0 + 132, "quickchat_shortcut_help,5");
                 if (var2 != null) {
-                  AiUnitPlanner.field_z[5] = uu.a(var2, (byte) -112);
+                  AiUnitPlanner.quickChatShortcutDescriptions[5] = uu.a(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,0");
                 if (var2 != null) {
-                  bt.field_c[0] = uu.a(var2, (byte) -124);
+                  bt.quickChatShortcutLabels[0] = uu.a(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,1");
                 if (var2 != null) {
-                  bt.field_c[1] = uu.a(var2, (byte) -95);
+                  bt.quickChatShortcutLabels[1] = uu.a(var2, (byte) -95);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,2");
                 if (var2 != null) {
-                  bt.field_c[2] = uu.a(var2, (byte) 56);
+                  bt.quickChatShortcutLabels[2] = uu.a(var2, (byte) 56);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,3");
                 if (null != var2) {
-                  bt.field_c[3] = uu.a(var2, (byte) 95);
+                  bt.quickChatShortcutLabels[3] = uu.a(var2, (byte) 95);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,4");
                 if (null != var2) {
-                  bt.field_c[4] = uu.a(var2, (byte) -106);
+                  bt.quickChatShortcutLabels[4] = uu.a(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(50, "quickchat_shortcut_keys,5");
                 if (var2 != null) {
-                  bt.field_c[5] = uu.a(var2, (byte) -126);
+                  bt.quickChatShortcutLabels[5] = uu.a(var2, (byte) -126);
                 }
                 var2 = NodeIterator.a(param0 + 132, "keychar_the_character_under_questionmark");
                 if (var2 != null) {

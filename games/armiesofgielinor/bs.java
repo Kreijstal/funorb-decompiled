@@ -17,7 +17,7 @@ final class bs {
 
     final static int a(byte param0) {
         int var1 = 0 % ((-32 - param0) / 48);
-        return fc.field_b;
+        return fc.keyboardIdleTicks;
     }
 
     final static int a(PacketBuffer param0, int param1) {

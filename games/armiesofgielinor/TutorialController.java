@@ -240,7 +240,7 @@ final class TutorialController {
                     }
                     if (pg.playerProfile.equippedSpellIds[var2_int] > -1) {
                       if (BufferedSocket.field_j >= 2 &&
-                        br.field_f[82]) {
+                        br.heldKeys[82]) {
                         hs.b(119, pg.playerProfile.equippedSpellIds[var2_int]);
                         return;
                       }
@@ -3235,7 +3235,7 @@ final class TutorialController {
           if (param0 < 30) {
             discarded$0 = this.isItemEnabled((byte) 126, 58);
           }
-          if (96 == rs.field_q) {
+          if (96 == rs.keyCode) {
             if (this.selectionState.selectedIndex <= 0) {
               this.selectionState.selectIndex(1, false);
               if ((var3 != 0) &&
@@ -3248,7 +3248,7 @@ final class TutorialController {
               }
             }
           }
-          if (rs.field_q == 97) {
+          if (rs.keyCode == 97) {
             if (this.selectionState.selectedIndex != 1) {
               if (this.selectionState.selectedIndex != 2) {
                 this.selectionState.selectIndex(1, false);
@@ -3260,7 +3260,7 @@ final class TutorialController {
               this.selectionState.selectIndex(0, false);
             }
           }
-          if (99 == rs.field_q) {
+          if (99 == rs.keyCode) {
             if (!(this.selectionState.selectedIndex >= 0) ||
               !(this.selectionState.selectedIndex <= 1)) {
               this.selectionState.selectIndex(IconTextComponent.field_Mb, false);
@@ -3271,7 +3271,7 @@ final class TutorialController {
               this.selectionState.selectIndex(2, false);
             }
           }
-          if (rs.field_q == 98) {
+          if (rs.keyCode == 98) {
             if (2 != this.selectionState.selectedIndex) {
               this.selectionState.selectIndex(2, false);
               if (var3 != 0) {
@@ -3769,7 +3769,7 @@ final class TutorialController {
             break;
           }
           if ((stackIn_111_0 != 0 ||
-            br.field_f[82] &&
+            br.heldKeys[82] &&
             !(2 > BufferedSocket.field_j)) && ClientContextMenu.field_k == 0) {
             if (null == ts.currentSpellMenu.parent) {
               rs.field_n.a(SocketResourceClient.field_x, db.a(true, 40), MatchConditionEntry.a(284, (byte) 94), 250, 55, 16777215, -1, var2_int + 256, 1, 1, 0);
@@ -4240,7 +4240,7 @@ final class TutorialController {
             var7Lifetime1 = stackIn_25_0;
             fieldTemp$0 = kq.field_L;
             kq.field_L = kq.field_L + 1;
-            b.field_n.b(2 * hk.field_Jb[b.field_n.field_f] / 3, MatchConditionEntry.a(145, (byte) 94), db.a(true, 165), fieldTemp$0, 98, var7Lifetime1 != 0);
+            b.field_n.b(2 * QuickChatHelpDialog.field_Jb[b.field_n.field_f] / 3, MatchConditionEntry.a(145, (byte) 94), db.a(true, 165), fieldTemp$0, 98, var7Lifetime1 != 0);
           }
           var7Lifetime2 = 0;
           scanLoop1: while (true) {
@@ -4608,21 +4608,21 @@ final class TutorialController {
             !ScrollContainer.field_Qb &&
             null == mu.field_a) {
             while (true) {
-              if (Unit.i((byte) 102)) {
+              if (Unit.pollKeyEvent((byte) 102)) {
                 if (gu.a(121) &&
                   var4 == 0) {
                   continue;
                 }
                 if (2 <= BufferedSocket.field_j &&
-                  rs.field_q == 1 &&
-                  br.field_f[82]) {
+                  rs.keyCode == 1 &&
+                  br.heldKeys[82]) {
                   RevivalEvent.d((byte) 122);
                   var3_ref_int__ = BoundedFile.field_e;
                   var3_ref_int__[0] = oe.bitwiseOr(var3_ref_int__[0], 2);
                   ai.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(0)));
                   UnitInfoPopup.field_u.addLast((byte) -119, (IntrusiveNode) (new iw(0, 255, 0, 0, 0, 0)));
                 }
-                if (rs.field_q == 13) {
+                if (rs.keyCode == 13) {
                   boolean decompiledSharedTail0 = (1 != this.tutorialStage &&
                     this.tutorialStage != 2 &&
                     this.tutorialStage != 24 &&
@@ -4637,45 +4637,45 @@ final class TutorialController {
                     CipherPacketBuffer.a(false, DualNodeDeque.field_c, 1, DualNodeDeque.field_c);
                   }
                 }
-                if (rs.field_q == 11 &&
+                if (rs.keyCode == 11 &&
                   2 <= BufferedSocket.field_j) {
                   stackIn_86_0 = !(jv.field_a);
                   jv.field_a = stackIn_86_0;
                   return;
                 }
-                if (rs.field_q == 12) {
+                if (rs.keyCode == 12) {
                   stackIn_95_0 = !(CoatOfArms.field_e);
                   CoatOfArms.field_e = stackIn_95_0;
                 }
-                if (11 == rs.field_q &&
+                if (11 == rs.keyCode &&
                   2 <= BufferedSocket.field_j) {
                   stackIn_106_0 = !(jv.field_a);
                   jv.field_a = stackIn_106_0;
                   return;
                 }
-                if (12 == rs.field_q &&
+                if (12 == rs.keyCode &&
                   BufferedSocket.field_j >= 2) {
                   stackIn_118_0 = !(CoatOfArms.field_e);
                   CoatOfArms.field_e = stackIn_118_0;
                 }
-                if (rs.field_q == 11 &&
+                if (rs.keyCode == 11 &&
                   BufferedSocket.field_j >= 2) {
                   stackIn_129_0 = !(jv.field_a);
                   jv.field_a = stackIn_129_0;
                   return;
                 }
-                if (12 == rs.field_q &&
+                if (12 == rs.keyCode &&
                   BufferedSocket.field_j >= 2) {
                   stackIn_141_0 = !(CoatOfArms.field_e);
                   CoatOfArms.field_e = stackIn_141_0;
                 }
-                if (rs.field_q == 11 &&
+                if (rs.keyCode == 11 &&
                   BufferedSocket.field_j >= 2) {
                   stackIn_152_0 = !(jv.field_a);
                   jv.field_a = stackIn_152_0;
                   return;
                 }
-                if (rs.field_q == 80 &&
+                if (rs.keyCode == 80 &&
                   this.tutorialStage == 12 &&
                   tf.field_k == 0) {
                   MoveAttackAction.field_s = li.field_q;
@@ -5067,8 +5067,8 @@ final class TutorialController {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var2_int = 17 % ((26 - param0) / 35);
-          if (rs.field_q == 84 &&
-            br.field_f[86]) {
+          if (rs.keyCode == 84 &&
+            br.heldKeys[86]) {
             if (null != FixedQuaternion.field_a) {
               ck.b(-83);
               if (var3 == 0) {
@@ -5083,7 +5083,7 @@ final class TutorialController {
           if (jt.field_a != 7) {
             if (jt.field_a == 22 ||
               this.tutorialStage == 21) {
-              MoveEvent.campaignMenu.a(rs.field_q, (int) DualNodeDeque.field_i, 2);
+              MoveEvent.campaignMenu.a(rs.keyCode, (int) DualNodeDeque.typedCharacter, 2);
               decompiledFrameRemainder0 = (var3 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -5131,10 +5131,10 @@ final class TutorialController {
             return;
           }
           if (2 > BufferedSocket.field_j) {
-            if (rs.field_q == 98) {
+            if (rs.keyCode == 98) {
               this.selectionState.selectedIndex = -1 + this.selectionState.itemCount;
             }
-            if (rs.field_q == 99) {
+            if (rs.keyCode == 99) {
               this.selectionState.selectedIndex = 2;
             }
           }
@@ -5809,7 +5809,7 @@ final class TutorialController {
           stackIn_11_0 = (!this.isItemEnabled((byte) -102, 2)) ? 1 : 2;
           var3 = stackIn_11_0;
           if (!this.selectionState.isPointerPressed(false)) {
-            if (rs.field_q == 96) {
+            if (rs.keyCode == 96) {
               if (this.selectionState.selectedIndex <= var2_int) {
                 this.selectionState.selectIndex(var3, false);
                 if (var4 != 0) {
@@ -5819,7 +5819,7 @@ final class TutorialController {
                 this.selectionState.selectIndex(-1 + this.selectionState.selectedIndex, false);
               }
             }
-            if (rs.field_q == 97) {
+            if (rs.keyCode == 97) {
               if (0 <= this.selectionState.selectedIndex &&
                 this.selectionState.selectedIndex < var3) {
                 this.selectionState.selectIndex(this.selectionState.selectedIndex + 1, false);
