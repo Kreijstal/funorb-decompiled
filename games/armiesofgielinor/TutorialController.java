@@ -3635,7 +3635,7 @@ final class TutorialController {
           if (decompiledSharedTail1) {
             fe.a(db.a(true, 44), MatchConditionEntry.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, nd.field_b, 0, 0);
           }
-          fe.c(fu.field_b, db.a(true, 101), MatchConditionEntry.a(416, (byte) 94), 0, true);
+          fe.c(CampaignRewardPreview.field_b, db.a(true, 101), MatchConditionEntry.a(416, (byte) 94), 0, true);
           if (param0 != 100) {
             discarded$0 = this.d(78, 100, 70);
           }
@@ -3974,9 +3974,9 @@ final class TutorialController {
           boolean decompiledFrameCompleted0 = true;
           if (stackIn_18_0) {
             var4Lifetime1 = 0;
-            while (!(wp.field_H[li.field_q + 1].length <= var4Lifetime1)) {
-              var2_intLifetime1 = 135 + (int)(100.0 * Math.sin(2.0 * (3.141592653589793 * (double)var4Lifetime1) / (double)wp.field_H[1 + li.field_q].length)) + 30;
-              var3Lifetime1 = (int)(-(Math.cos(3.141592653589793 * (double)var4Lifetime1 * 2.0 / (double)wp.field_H[li.field_q + 1].length) * 100.0)) + 150 + 135;
+            while (!(wp.unitUnlockGroups[li.field_q + 1].length <= var4Lifetime1)) {
+              var2_intLifetime1 = 135 + (int)(100.0 * Math.sin(2.0 * (3.141592653589793 * (double)var4Lifetime1) / (double)wp.unitUnlockGroups[1 + li.field_q].length)) + 30;
+              var3Lifetime1 = (int)(-(Math.cos(3.141592653589793 * (double)var4Lifetime1 * 2.0 / (double)wp.unitUnlockGroups[li.field_q + 1].length) * 100.0)) + 150 + 135;
               stackIn_42_0 = ml.a(MatchConditionEntry.a(var3Lifetime1, (byte) 94), db.a(true, var2_intLifetime1), 25, false);
               if (var8 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -3991,7 +3991,7 @@ final class TutorialController {
                 MoveAttackAction.field_s = li.field_q;
                 vf.field_f = jq.field_F;
                 jq.field_F = var4Lifetime1;
-                b.field_n = new la(wp.field_H[li.field_q + 1][jq.field_F]);
+                b.field_n = new la(wp.unitUnlockGroups[li.field_q + 1][jq.field_F]);
                 ri.field_d = GlobalSpell.field_h;
                 GlobalSpell.field_h = 256;
               } else {
@@ -4004,7 +4004,7 @@ final class TutorialController {
                 GlobalSpell.field_h = 256;
               }
               if (jq.field_F > -1) {
-                var5 = wp.field_H[1 + li.field_q][jq.field_F];
+                var5 = wp.unitUnlockGroups[1 + li.field_q][jq.field_F];
                 var6 = "";
                 var6Lifetime1 = ut.field_cb[var5];
                 var7 = bh.field_M[var5];
@@ -4027,11 +4027,11 @@ final class TutorialController {
                 (pg.playerProfile.unitUnlockMasks[1 + li.field_q] == 0) &&
                 (pg.playerProfile.tryDebitRunes(50, (byte) 103))) {
                 vl.field_n.writeCipheredOpcode(32161, 70);
-                vl.field_n.writeShort(true, wp.field_H[li.field_q + 1][0]);
+                vl.field_n.writeShort(true, wp.unitUnlockGroups[li.field_q + 1][0]);
                 var2_intLifetime2 = 0;
                 while (true) {
-                  if (var2_intLifetime2 < wp.field_H[li.field_q + 1].length) {
-                    stackIn_72_0 = bw.unitDefinitions[wp.field_H[li.field_q + 1][var2_intLifetime2]][11];
+                  if (var2_intLifetime2 < wp.unitUnlockGroups[li.field_q + 1].length) {
+                    stackIn_72_0 = bw.unitDefinitions[wp.unitUnlockGroups[li.field_q + 1][var2_intLifetime2]][11];
                     if (var8 == 0) {
                       if (stackIn_72_0 == 0) {
                         pg.playerProfile.unitUnlockMasks[li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[li.field_q], 1 << var2_intLifetime2);
@@ -4050,7 +4050,7 @@ final class TutorialController {
                   0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << jq.field_F) &&
                   pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[jq.field_F][11])) {
                   vl.field_n.writeCipheredOpcode(32161, 70);
-                  vl.field_n.writeShort(true, wp.field_H[1 + li.field_q][jq.field_F]);
+                  vl.field_n.writeShort(true, wp.unitUnlockGroups[1 + li.field_q][jq.field_F]);
                   ub.$cfr$intArgs$a$6d836999ad61(62, im.field_v[14]);
                   pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
                 }
@@ -4061,7 +4061,7 @@ final class TutorialController {
                 0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << jq.field_F) &&
                 pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[jq.field_F][11]) {
                 vl.field_n.writeCipheredOpcode(32161, 70);
-                vl.field_n.writeShort(true, wp.field_H[1 + li.field_q][jq.field_F]);
+                vl.field_n.writeShort(true, wp.unitUnlockGroups[1 + li.field_q][jq.field_F]);
                 ub.$cfr$intArgs$a$6d836999ad61(62, im.field_v[14]);
                 pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.c(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << jq.field_F);
               }
@@ -4245,15 +4245,15 @@ final class TutorialController {
           var7Lifetime2 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
-            if (var7Lifetime2 < wp.field_H[1 + MoveAttackAction.field_s].length) {
-              var8Lifetime1 = 135 + ((int)(Math.sin(3.141592653589793 * (double)var7Lifetime2 * 2.0 / (double)wp.field_H[1 + MoveAttackAction.field_s].length) * (double)(100 + var5 * 150 / 256)) + 30);
-              var9Lifetime1 = 285 + (int)(-(Math.cos(3.141592653589793 * (double)var7Lifetime2 * 2.0 / (double)wp.field_H[MoveAttackAction.field_s + 1].length) * (double)(100 + var5 * 150 / 256)));
+            if (var7Lifetime2 < wp.unitUnlockGroups[1 + MoveAttackAction.field_s].length) {
+              var8Lifetime1 = 135 + ((int)(Math.sin(3.141592653589793 * (double)var7Lifetime2 * 2.0 / (double)wp.unitUnlockGroups[1 + MoveAttackAction.field_s].length) * (double)(100 + var5 * 150 / 256)) + 30);
+              var9Lifetime1 = 285 + (int)(-(Math.cos(3.141592653589793 * (double)var7Lifetime2 * 2.0 / (double)wp.unitUnlockGroups[MoveAttackAction.field_s + 1].length) * (double)(100 + var5 * 150 / 256)));
               stackIn_43_0 = vf.field_f;
               stackIn_43_1 = var7Lifetime2;
               if (var10 != 0) {
                 if (stackIn_43_0 < stackIn_43_1) {
-                  var8Lifetime1 = 135 + (30 + (int)((double)(100 + var4 * 150 / 256) * Math.sin(2.0 * (3.141592653589793 * (double)var7Lifetime2) / (double)wp.field_H[li.field_q + 1].length)));
-                  var9Lifetime1 = 135 + (150 + (int)(-(Math.cos((double)var7Lifetime2 * 3.141592653589793 * 2.0 / (double)wp.field_H[1 + li.field_q].length) * (double)(var4 * 150 / 256 + 100))));
+                  var8Lifetime1 = 135 + (30 + (int)((double)(100 + var4 * 150 / 256) * Math.sin(2.0 * (3.141592653589793 * (double)var7Lifetime2) / (double)wp.unitUnlockGroups[li.field_q + 1].length)));
+                  var9Lifetime1 = 135 + (150 + (int)(-(Math.cos((double)var7Lifetime2 * 3.141592653589793 * 2.0 / (double)wp.unitUnlockGroups[1 + li.field_q].length) * (double)(var4 * 150 / 256 + 100))));
                   stackOut_44_0 = ml.a(MatchConditionEntry.a(var9Lifetime1, (byte) 94), db.a(true, var8Lifetime1), 25, false);
                   stackIn_71_0 = stackOut_44_0 ? 1 : 0;
                   stackIn_45_0 = stackOut_44_0;
@@ -4268,10 +4268,10 @@ final class TutorialController {
                 lw.field_ob.d(db.a(true, var8Lifetime1 - 20), MatchConditionEntry.a(-20 + var9Lifetime1, (byte) 94), TutorialLayout.field_g[MoveAttackAction.field_s + 1]);
                 km.field_h[0].g(db.a(true, var8Lifetime1 - 23), MatchConditionEntry.a(-23 + var9Lifetime1, (byte) 94));
                 if ((1 << var7Lifetime2 & pg.playerProfile.unitUnlockMasks[1 + MoveAttackAction.field_s]) > 0) {
-                  DeployAction.field_x[wp.field_H[MoveAttackAction.field_s + 1][var7Lifetime2]].g(db.a(true, -19 + var8Lifetime1), MatchConditionEntry.a(-19 + var9Lifetime1, (byte) 94));
+                  DeployAction.field_x[wp.unitUnlockGroups[MoveAttackAction.field_s + 1][var7Lifetime2]].g(db.a(true, -19 + var8Lifetime1), MatchConditionEntry.a(-19 + var9Lifetime1, (byte) 94));
                   km.field_h[0].g(db.a(true, var8Lifetime1 - 23), MatchConditionEntry.a(-23 + var9Lifetime1, (byte) 94));
                 } else {
-                  DeployAction.field_x[wp.field_H[MoveAttackAction.field_s + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1 - 19, (byte) 94), 0);
+                  DeployAction.field_x[wp.unitUnlockGroups[MoveAttackAction.field_s + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1 - 19, (byte) 94), 0);
                   km.field_h[0].g(db.a(true, -23 + var8Lifetime1), MatchConditionEntry.a(-23 + var9Lifetime1, (byte) 94), 10);
                 }
                 var7Lifetime2++;
@@ -4281,13 +4281,13 @@ final class TutorialController {
             if (decompiledFrameRemainder0) {
               var7Lifetime2 = 0;
               while (true) {
-                stackIn_43_0Lifetime1 = ~wp.field_H[1 + li.field_q].length;
+                stackIn_43_0Lifetime1 = ~wp.unitUnlockGroups[1 + li.field_q].length;
                 stackIn_43_1Lifetime1 = ~var7Lifetime2;
                 if (stackIn_43_0Lifetime1 >= stackIn_43_1Lifetime1) {
                   break;
                 }
-                var8Lifetime1Lifetime1 = 135 + (30 + (int)((double)(100 + var4 * 150 / 256) * Math.sin(2.0 * (3.141592653589793 * (double)var7Lifetime2) / (double)wp.field_H[li.field_q + 1].length)));
-                var9Lifetime1Lifetime1 = 135 + (150 + (int)(-(Math.cos((double)var7Lifetime2 * 3.141592653589793 * 2.0 / (double)wp.field_H[1 + li.field_q].length) * (double)(var4 * 150 / 256 + 100))));
+                var8Lifetime1Lifetime1 = 135 + (30 + (int)((double)(100 + var4 * 150 / 256) * Math.sin(2.0 * (3.141592653589793 * (double)var7Lifetime2) / (double)wp.unitUnlockGroups[li.field_q + 1].length)));
+                var9Lifetime1Lifetime1 = 135 + (150 + (int)(-(Math.cos((double)var7Lifetime2 * 3.141592653589793 * 2.0 / (double)wp.unitUnlockGroups[1 + li.field_q].length) * (double)(var4 * 150 / 256 + 100))));
                 stackOut_44_0Lifetime1 = ml.a(MatchConditionEntry.a(var9Lifetime1Lifetime1, (byte) 94), db.a(true, var8Lifetime1Lifetime1), 25, false);
                 stackIn_71_0 = stackOut_44_0Lifetime1 ? 1 : 0;
                 stackIn_45_0Lifetime1 = stackOut_44_0Lifetime1;
@@ -4308,10 +4308,10 @@ final class TutorialController {
                 }
                 lw.field_ob.d(db.a(true, var8Lifetime1Lifetime1 - 20), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 20, (byte) 94), TutorialLayout.field_g[1 + li.field_q]);
                 if ((1 << var7Lifetime2 & pg.playerProfile.unitUnlockMasks[li.field_q + 1]) <= 0) {
-                  DeployAction.field_x[wp.field_H[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94), 0);
+                  DeployAction.field_x[wp.unitUnlockGroups[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94), 0);
                   km.field_h[0].g(db.a(true, var8Lifetime1Lifetime1 - 23), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 23, (byte) 94), 10);
                 } else {
-                  DeployAction.field_x[wp.field_H[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94));
+                  DeployAction.field_x[wp.unitUnlockGroups[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94));
                   km.field_h[0].g(db.a(true, -23 + var8Lifetime1Lifetime1), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 23, (byte) 94));
                 }
                 var7Lifetime2++;
@@ -5154,7 +5154,7 @@ final class TutorialController {
         int var6 = 0;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4_int = wp.field_H[param0][param1];
+          var4_int = wp.unitUnlockGroups[param0][param1];
           var5 = 69 % ((14 - param2) / 40);
           this.b(true);
           if (bw.unitDefinitions[var4_int][11] <= 0) {

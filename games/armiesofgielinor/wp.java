@@ -3,7 +3,7 @@
  */
 final class wp extends ms {
     private byte[][] field_x;
-    static int[][] field_H;
+    static int[][] unitUnlockGroups;
     static int[] field_w;
     private int field_C;
     static int[] field_D;
@@ -108,7 +108,7 @@ final class wp extends ms {
 
     public static void e(byte param0) {
         field_z = null;
-        field_H = (int[][]) null;
+        unitUnlockGroups = (int[][]) null;
         if (param0 >= -54) {
           field_B = (String) null;
         }
@@ -126,7 +126,7 @@ final class wp extends ms {
         field_y = "Remove friend";
         field_I = "Full";
         field_E = 4;
-        field_H = new int[][]{new int[]{0, 2, 1, 3, 5, 6, 7, 74, 4}, new int[]{10, 8, 9, 16, 12, 11, 15, 13, 14, 17, 18}, new int[]{19, 20, 21, 25, 23, 22, 26, 27, 24, 28, 29}, new int[]{31, 32, 33, 36, 30, 34, 38, 35, 37, 39, 40}, new int[]{42, 41, 47, 48, 46, 44, 43, 45, 49, 50, 51}, new int[]{52, 53, 54, 55, 57, 59, 61, 58, 60, 56, 62}, new int[]{64, 68, 70, 67, 66, 69, 65, 71, 72, 63, 73}};
+        unitUnlockGroups = new int[][]{new int[]{0, 2, 1, 3, 5, 6, 7, 74, 4}, new int[]{10, 8, 9, 16, 12, 11, 15, 13, 14, 17, 18}, new int[]{19, 20, 21, 25, 23, 22, 26, 27, 24, 28, 29}, new int[]{31, 32, 33, 36, 30, 34, 38, 35, 37, 39, 40}, new int[]{42, 41, 47, 48, 46, 44, 43, 45, 49, 50, 51}, new int[]{52, 53, 54, 55, 57, 59, 61, 58, 60, 56, 62}, new int[]{64, 68, 70, 67, 66, 69, 65, 71, 72, 63, 73}};
         field_D = new int[]{2, 17, 18, 36, 37, 38, 6, 5, 13};
         field_z = null;
         field_u = "Match by...";

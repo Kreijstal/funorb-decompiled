@@ -144,7 +144,7 @@ final class GameplayController {
         int stackIn_11_0 = 0;
         int stackIn_22_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        fu var18 = null;
+        CampaignRewardPreview var18 = null;
         int var19 = 0;
         try {
           param0 += 32;
@@ -207,12 +207,12 @@ final class GameplayController {
               SoftwareRaster.e(db.a(true, var10), MatchConditionEntry.a(113 + param0, (byte) 94), -var10 + var11, 12303155);
               fe.b(InstructionsPanel.field_gb, db.a(true, param1 + 111), MatchConditionEntry.a(128 + param0, (byte) 94), true);
               fe.c(InstructionsPanel.field_gb, db.a(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), nd.field_b, true);
-              var18 = var5.g(-1);
+              var18 = var5.createRewardPreview(-1);
               lw.field_ob.g(db.a(true, 4 + (15 + var10)), MatchConditionEntry.a(param0 + 132, (byte) 94));
-              var18.field_h.g(db.a(true, 4 + var10 + 15), MatchConditionEntry.a(128 + param0 + 4, (byte) 94));
+              var18.icon.g(db.a(true, 4 + var10 + 15), MatchConditionEntry.a(128 + param0 + 4, (byte) 94));
               km.field_h[2].g(db.a(true, var10 + 15), MatchConditionEntry.a(param0 + 128, (byte) 94));
               var19 = 10 + km.field_h[2].field_A + (var10 + 15);
-              rs.field_n.a(var18.field_c, db.a(true, var19), MatchConditionEntry.a(132 + param0, (byte) 94), -var19 + var11, 32, 16777215, -1, 1, 1, 0);
+              rs.field_n.a(var18.title, db.a(true, var19), MatchConditionEntry.a(132 + param0, (byte) 94), -var19 + var11, 32, 16777215, -1, 1, 1, 0);
             }
           }
           return;
@@ -539,7 +539,7 @@ final class GameplayController {
         }
     }
 
-    private final float a(CampaignMission param0, byte param1, int[] param2, int[] param3) {
+    private final float buildCampaignLoadout(CampaignMission mission, byte obfuscationGuard, int[] equippedSpellIds, int[] unitUnlockMasks) {
         int stackIn_12_0 = 0;
         int stackIn_12_1 = 0;
         float stackIn_71_0 = 0.0f;
@@ -551,75 +551,75 @@ final class GameplayController {
         StringBuilder stackIn_83_1 = null;
         String stackIn_84_2 = null;
         RuntimeException decompiledCaughtException = null;
-        float var5_float = 0.0f;
+        float manaMultiplier = 0.0f;
         RuntimeException var5 = null;
-        int var6 = 0;
-        int var7_int = 0;
-        int[] var7 = null;
-        CampaignMission[] var7_array = null;
-        int var8 = 0;
-        int var9_int = 0;
-        CampaignMission var9 = null;
-        int var10 = 0;
-        int[] var10_ref_int__ = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
+        int insertedSpellCount = 0;
+        int maskIndex = 0;
+        int[] initialUnits = null;
+        CampaignMission[] campaignMissions = null;
+        int initialUnitIndex = 0;
+        int initialUnitType = 0;
+        CampaignMission completedMission = null;
+        int initialUnlockGroup = 0;
+        int[] rewardUnits = null;
+        int initialUnlockOrdinal = 0;
+        int rewardUnitType = 0;
+        int rewardUnlockGroup = 0;
+        int rewardUnlockOrdinal = 0;
         int var15 = 0;
-        int var8Lifetime1;
-        int var10Lifetime1;
-        int var11Lifetime1;
-        int var12Lifetime1;
-        int var11Lifetime1Lifetime1;
+        int missionIndex;
+        int rewardSpell;
+        int rewardUnitIndex;
+        int equippedSpell;
+        int spellSlot;
         var15 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var6 = 0;
-          var7_int = 0;
-          while (param3.length > var7_int) {
-            param3[var7_int] = 0;
-            var7_int++;
+          insertedSpellCount = 0;
+          maskIndex = 0;
+          while (unitUnlockMasks.length > maskIndex) {
+            unitUnlockMasks[maskIndex] = 0;
+            maskIndex++;
             if (var15 == 0) {
               continue;
             }
             break;
           }
-          var5_float = 1.0f;
-          if (param1 != 54) {
+          manaMultiplier = 1.0f;
+          if (obfuscationGuard != 54) {
             this.a(true, -57, (Unit) null);
           }
-          var7 = param0.campaign.field_p;
-          var8 = 0;
-          while (var7.length > var8) {
-            var9_int = var7[var8];
-            var10 = jv.a(false, var9_int);
-            var11 = b.a(false, var9_int);
-            param3[var10] = oe.c(param3[var10], 1 << var11);
-            var8++;
+          initialUnits = mission.campaign.initialUnitTypes;
+          initialUnitIndex = 0;
+          while (initialUnits.length > initialUnitIndex) {
+            initialUnitType = initialUnits[initialUnitIndex];
+            initialUnlockGroup = jv.getUnitUnlockGroup(false, initialUnitType);
+            initialUnlockOrdinal = b.getUnitUnlockOrdinal(false, initialUnitType);
+            unitUnlockMasks[initialUnlockGroup] = oe.c(unitUnlockMasks[initialUnlockGroup], 1 << initialUnlockOrdinal);
+            initialUnitIndex++;
             if (var15 == 0) {
               continue;
             }
             break;
           }
-          var7_array = param0.campaign.missions;
-          var8Lifetime1 = 0;
+          campaignMissions = mission.campaign.missions;
+          missionIndex = 0;
           scanLoop1: while (true) {
-            stackIn_12_0 = var8Lifetime1;
-            stackIn_12_1 = var7_array.length;
+            stackIn_12_0 = missionIndex;
+            stackIn_12_1 = campaignMissions.length;
             scanLoop2: while (stackIn_12_0 < stackIn_12_1) {
-              var9 = var7_array[var8Lifetime1];
-              if (im.a(var9, 19) > 0) {
+              completedMission = campaignMissions[missionIndex];
+              if (im.getProfileMissionScore(completedMission, 19) > 0) {
                 boolean decompiledFrameRemainder0 = true;
                 boolean decompiledFrameCompleted0 = true;
-                if (null != var9.rewardIds) {
-                  var10_ref_int__ = var9.rewardIds;
-                  var11Lifetime1 = 0;
-                  while (var10_ref_int__.length > var11Lifetime1) {
-                    var12 = var10_ref_int__[var11Lifetime1];
-                    var13 = jv.a(false, var12);
-                    var14 = b.a(false, var12);
-                    param3[var13] = oe.c(param3[var13], 1 << var14);
-                    var11Lifetime1++;
+                if (null != completedMission.rewardUnitTypes) {
+                  rewardUnits = completedMission.rewardUnitTypes;
+                  rewardUnitIndex = 0;
+                  while (rewardUnits.length > rewardUnitIndex) {
+                    rewardUnitType = rewardUnits[rewardUnitIndex];
+                    rewardUnlockGroup = jv.getUnitUnlockGroup(false, rewardUnitType);
+                    rewardUnlockOrdinal = b.getUnitUnlockOrdinal(false, rewardUnitType);
+                    unitUnlockMasks[rewardUnlockGroup] = oe.c(unitUnlockMasks[rewardUnlockGroup], 1 << rewardUnlockOrdinal);
+                    rewardUnitIndex++;
                     if (var15 != 0) {
                       decompiledFrameCompleted0 = false;
                       break;
@@ -627,49 +627,49 @@ final class GameplayController {
                   }
                 }
                 if (decompiledFrameCompleted0) {
-                  decompiledFrameRemainder0 = (var9.field_u != 0);
+                  decompiledFrameRemainder0 = (completedMission.manaBonusPercent != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  var5_float = var5_float + (float)var9.field_u / 100.0f;
+                  manaMultiplier = manaMultiplier + (float)completedMission.manaBonusPercent / 100.0f;
                 }
-                var10Lifetime1 = var9.field_l;
-                if (var10Lifetime1 != -1) {
-                  var11Lifetime1Lifetime1 = 0;
-                  while (1 + var6 > var11Lifetime1Lifetime1) {
-                    var12Lifetime1 = -1;
-                    stackIn_12_0 = param2.length;
-                    stackIn_12_1 = var11Lifetime1Lifetime1;
+                rewardSpell = completedMission.rewardSpellId;
+                if (rewardSpell != -1) {
+                  spellSlot = 0;
+                  while (1 + insertedSpellCount > spellSlot) {
+                    equippedSpell = -1;
+                    stackIn_12_0 = equippedSpellIds.length;
+                    stackIn_12_1 = spellSlot;
                     if (var15 != 0) {
                       continue scanLoop2;
                     }
                     if (stackIn_12_0 > stackIn_12_1) {
-                      var12Lifetime1 = param2[var11Lifetime1Lifetime1];
+                      equippedSpell = equippedSpellIds[spellSlot];
                     }
-                    if (var12Lifetime1 == -1) {
-                      if (var11Lifetime1Lifetime1 >= param2.length) {
+                    if (equippedSpell == -1) {
+                      if (spellSlot >= equippedSpellIds.length) {
                         break;
                       }
-                      var6++;
-                      param2[var11Lifetime1Lifetime1] = var10Lifetime1;
+                      insertedSpellCount++;
+                      equippedSpellIds[spellSlot] = rewardSpell;
                       break;
                     }
-                    if (uc.spellDefinitions[var12Lifetime1][6] != 4 &&
-                      uc.spellDefinitions[var12Lifetime1][6] != 5 &&
-                      ~uc.spellDefinitions[var12Lifetime1][3] == ~uc.spellDefinitions[var10Lifetime1][3] &&
-                      ~uc.spellDefinitions[var10Lifetime1][4] == ~uc.spellDefinitions[var12Lifetime1][4] &&
-                      uc.spellDefinitions[var12Lifetime1][5] == uc.spellDefinitions[var10Lifetime1][5]) {
-                      if (uc.spellDefinitions[var10Lifetime1][6] <= uc.spellDefinitions[var12Lifetime1][6] &&
-                        uc.spellDefinitions[var10Lifetime1][7] <= uc.spellDefinitions[var12Lifetime1][7]) {
+                    if (uc.spellDefinitions[equippedSpell][6] != 4 &&
+                      uc.spellDefinitions[equippedSpell][6] != 5 &&
+                      ~uc.spellDefinitions[equippedSpell][3] == ~uc.spellDefinitions[rewardSpell][3] &&
+                      ~uc.spellDefinitions[rewardSpell][4] == ~uc.spellDefinitions[equippedSpell][4] &&
+                      uc.spellDefinitions[equippedSpell][5] == uc.spellDefinitions[rewardSpell][5]) {
+                      if (uc.spellDefinitions[rewardSpell][6] <= uc.spellDefinitions[equippedSpell][6] &&
+                        uc.spellDefinitions[rewardSpell][7] <= uc.spellDefinitions[equippedSpell][7]) {
                         break;
                       }
-                      param2[var11Lifetime1Lifetime1] = var10Lifetime1;
+                      equippedSpellIds[spellSlot] = rewardSpell;
                       break;
                     }
-                    var11Lifetime1Lifetime1++;
+                    spellSlot++;
                   }
                 }
               }
-              var8Lifetime1++;
+              missionIndex++;
               if (var15 == 0) {
                 continue scanLoop1;
               }
@@ -677,26 +677,26 @@ final class GameplayController {
             }
             break;
           }
-          stackIn_71_0 = var5_float;
+          stackIn_71_0 = manaMultiplier;
           return stackIn_71_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_75_0 = var5;
           stackIn_75_1 = new StringBuilder().append("ic.MA(");
-          if (param0 == null) {
+          if (mission == null) {
             stackIn_76_2 = "null";
           } else {
             stackIn_76_2 = "{...}";
           }
-          stackIn_79_1 = ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_79_1 = ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(obfuscationGuard).append(',');
+          if (equippedSpellIds == null) {
             stackIn_80_2 = "null";
           } else {
             stackIn_80_2 = "{...}";
           }
           stackIn_83_1 = ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',');
-          if (param3 == null) {
+          if (unitUnlockMasks == null) {
             stackIn_84_2 = "null";
           } else {
             stackIn_84_2 = "{...}";
@@ -1427,14 +1427,14 @@ final class GameplayController {
             this.field_w = new ub[this.battlefield.chosenGods[this.field_q].length + 1];
           }
           var2_int = 0;
-          var3 = new jr[wp.field_H[0].length - 1];
+          var3 = new jr[wp.unitUnlockGroups[0].length - 1];
           if (l.field_c != null) {
             var3 = new jr[eb.a((byte) -107, 1 | this.field_Y[0])];
           }
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(-1 + wp.field_H[0].length > var4)))) {
-            var5 = wp.field_H[0][var4];
+          while (!(decompiledNaturalLoopExit0 = (!(-1 + wp.unitUnlockGroups[0].length > var4)))) {
+            var5 = wp.unitUnlockGroups[0][var4];
             if (var7 == 0) {
               if (l.field_c == null ||
                 (1 << var4 & this.field_Y[0]) != 0) {
@@ -1472,7 +1472,7 @@ final class GameplayController {
               }
               var5Lifetime1 = 0;
               while (var5Lifetime1 < 11) {
-                var6 = wp.field_H[1 + this.battlefield.chosenGods[this.field_q][var4Lifetime1]][var5Lifetime1];
+                var6 = wp.unitUnlockGroups[1 + this.battlefield.chosenGods[this.field_q][var4Lifetime1]][var5Lifetime1];
                 stackIn_58_0Lifetime1 = 0;
                 stackIn_58_1Lifetime1 = this.field_Y[this.battlefield.chosenGods[this.field_q][var4Lifetime1] + 1] & 1 << var5Lifetime1;
                 if (stackIn_58_0Lifetime1 < stackIn_58_1Lifetime1) {
@@ -9121,22 +9121,22 @@ final class GameplayController {
             || var2_int == 3
             ) ? var2_int : -1) {
             case 0:
-              fu.field_e.c(-242 + this.field_H, 100, 253, 247);
+              CampaignRewardPreview.field_e.c(-242 + this.field_H, 100, 253, 247);
               if (var12 == 0) {
                 break;
               }
             case 1:
-              fu.field_e.c(-245 + this.field_H, 95, 260, 260);
+              CampaignRewardPreview.field_e.c(-245 + this.field_H, 95, 260, 260);
               if (var12 == 0) {
                 break;
               }
             case 2:
-              fu.field_e.c(this.field_H - 240, 105, 253, 247);
+              CampaignRewardPreview.field_e.c(this.field_H - 240, 105, 253, 247);
               if (var12 == 0) {
                 break;
               }
             case 3:
-              fu.field_e.c(this.field_H - 232, 110, 230, 230);
+              CampaignRewardPreview.field_e.c(this.field_H - 232, 110, 230, 230);
             default:
               break;
           }
@@ -12255,20 +12255,20 @@ final class GameplayController {
               boolean decompiledFrameRemainder6 = true;
               if (stackIn_90_0 != stackIn_90_1) {
                 var21_ref_sd = param13.campaign.participants[param13.participantIds[var18_int]];
-                var20_ref_int__ = new int[var21_ref_sd.field_n.length];
-                vm.a(var21_ref_sd.field_n, 0, var20_ref_int__, 0, var21_ref_sd.field_n.length);
+                var20_ref_int__ = new int[var21_ref_sd.equippedSpellIds.length];
+                vm.a(var21_ref_sd.equippedSpellIds, 0, var20_ref_int__, 0, var21_ref_sd.equippedSpellIds.length);
                 var22 = 0;
                 while (var22 < var19_ref_int__.length) {
                   var19_ref_int__[var22] = 0;
                   var22++;
                 }
-                if (null != var21_ref_sd.field_p) {
-                  var22_ref_int__ = var21_ref_sd.field_p;
+                if (null != var21_ref_sd.availableUnitTypes) {
+                  var22_ref_int__ = var21_ref_sd.availableUnitTypes;
                   var23 = 0;
                   while (var22_ref_int__.length > var23) {
                     var24 = var22_ref_int__[var23];
-                    var25_int = jv.a(false, var24);
-                    var19_ref_int__[var25_int] = oe.c(var19_ref_int__[var25_int], 1 << b.a(false, var24));
+                    var25_int = jv.getUnitUnlockGroup(false, var24);
+                    var19_ref_int__[var25_int] = oe.c(var19_ref_int__[var25_int], 1 << b.getUnitUnlockOrdinal(false, var24));
                     var23++;
                   }
                 }
@@ -12285,7 +12285,7 @@ final class GameplayController {
                   }
                   break;
                 }
-                var17 = this.a(param13, (byte) 54, var20_ref_int__, var19_ref_int__);
+                var17 = this.buildCampaignLoadout(param13, (byte) 54, var20_ref_int__, var19_ref_int__);
                 this.field_Y = var19_ref_int__;
               }
               var15_array[var18_int] = var20_ref_int__;
@@ -12359,7 +12359,7 @@ final class GameplayController {
               stackIn_73_17 = 0;
             }
             this.battlefield = new Battlefield(stackIn_66_3, stackIn_66_4, stackIn_66_5, stackIn_66_6, stackIn_67_7, stackIn_70_8, stackIn_72_9, stackIn_72_10, stackIn_72_11, stackIn_72_12, stackIn_72_13, stackIn_72_14, stackIn_72_15, stackIn_72_16, stackIn_73_17, param13);
-            this.battlefield.field_bb = var17;
+            this.battlefield.campaignManaMultiplier = var17;
             if (!this.field_lb) {
               this.movementPlanner = new MovementPlanner(this.battlefield);
             }

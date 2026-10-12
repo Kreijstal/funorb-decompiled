@@ -17,7 +17,7 @@ final class nu extends lk {
         field_w = null;
     }
 
-    final static CampaignDefinition a(int param0, kl param1, int param2) {
+    final static CampaignDefinition loadCampaign(int obfuscationGuard, kl archive, int campaignIndex) {
         CampaignDefinition stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -25,79 +25,79 @@ final class nu extends lk {
         RuntimeException decompiledCaughtException = null;
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        CipherPacketBuffer var4 = null;
-        String var5 = null;
-        int var6 = 0;
-        String var7 = null;
-        String var8 = null;
-        int[] var9 = null;
-        CampaignDefinition var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
+        CipherPacketBuffer packet = null;
+        String campaignName = null;
+        int localGodId = 0;
+        String localPlayerName = null;
+        String description = null;
+        int[] initialUnitTypes = null;
+        CampaignDefinition campaign = null;
+        int participantCount = 0;
+        int participantIndexThenOverrideCount = 0;
+        int overrideIndexThenMissionCount = 0;
         RuntimeException var13_ref_RuntimeException = null;
-        int var14 = 0;
+        int participantThenMissionIndex = 0;
         RuntimeException var15 = null;
         int var16 = 0;
         byte[] var17 = null;
         byte[] var18 = null;
-        CampaignParticipant var19 = null;
-        CampaignParticipant[] var20 = null;
-        CampaignParticipant var21 = null;
-        CampaignMission var22 = null;
+        CampaignParticipant decodedParticipant = null;
+        CampaignParticipant[] participants = null;
+        CampaignParticipant participant = null;
+        CampaignMission decodedMission = null;
         byte[] var23 = null;
         var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var23 = param1.a("missions", -91, gk.field_O[param2]);
+          var23 = archive.a("missions", -91, gk.field_O[campaignIndex]);
           var18 = var23;
           var17 = var18;
           var3 = var17;
-          var4 = new CipherPacketBuffer(var23);
-          var5 = var4.readNullCircumfixedString((byte) 121);
-          var6 = var4.readUnsignedByte(param0 - 23948);
-          var7 = var4.readNullCircumfixedString((byte) 121);
-          var8 = var4.readNullCircumfixedString((byte) 121);
-          var9 = ev.readNullableUnsignedByteArray(var4, (byte) -98);
-          var10 = new CampaignDefinition(var5);
-          var10.field_o = var8;
-          var10.campaignIndex = param2;
-          var10.localPlayerName = var7;
-          var10.localGodId = var6;
-          var10.field_p = var9;
-          cd.campaigns[param2] = var10;
-          var11 = var4.readUnsignedByte(param0 - 23948);
-          var10.participants = new CampaignParticipant[var11];
-          for (var12 = 0; var11 > var12; var12++) {
+          packet = new CipherPacketBuffer(var23);
+          campaignName = packet.readNullCircumfixedString((byte) 121);
+          localGodId = packet.readUnsignedByte(obfuscationGuard - 23948);
+          localPlayerName = packet.readNullCircumfixedString((byte) 121);
+          description = packet.readNullCircumfixedString((byte) 121);
+          initialUnitTypes = ev.readNullableUnsignedByteArray(packet, (byte) -98);
+          campaign = new CampaignDefinition(campaignName);
+          campaign.description = description;
+          campaign.campaignIndex = campaignIndex;
+          campaign.localPlayerName = localPlayerName;
+          campaign.localGodId = localGodId;
+          campaign.initialUnitTypes = initialUnitTypes;
+          cd.campaigns[campaignIndex] = campaign;
+          participantCount = packet.readUnsignedByte(obfuscationGuard - 23948);
+          campaign.participants = new CampaignParticipant[participantCount];
+          for (participantIndexThenOverrideCount = 0; participantCount > participantIndexThenOverrideCount; participantIndexThenOverrideCount++) {
             try {
-              var19 = ks.readCampaignParticipant(900, var10, var4);
-              var10.participants[var19.participantId] = var19;
+              decodedParticipant = ks.readCampaignParticipant(900, campaign, packet);
+              campaign.participants[decodedParticipant.participantId] = decodedParticipant;
             } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var13_ref_RuntimeException = decompiledCaughtException;
             }
           }
-          var12 = var4.readUnsignedByte(0);
-          for (var13 = 0; var13 < var12; var13++) {
-            TickCounter.readCampaignUnitOverride(var10, (byte) -7, var4);
+          participantIndexThenOverrideCount = packet.readUnsignedByte(0);
+          for (overrideIndexThenMissionCount = 0; overrideIndexThenMissionCount < participantIndexThenOverrideCount; overrideIndexThenMissionCount++) {
+            TickCounter.readCampaignUnitOverride(campaign, (byte) -7, packet);
           }
-          var20 = var10.participants;
-          var14 = 0;
-          if (param0 != 23948) {
+          participants = campaign.participants;
+          participantThenMissionIndex = 0;
+          if (obfuscationGuard != 23948) {
             nu.a(49L, 110);
           }
-          while (var14 < var20.length) {
-            var21 = var20[var14];
-            if (0 == var21.overrideCount) {
-              var21.unitOverrides = null;
+          while (participantThenMissionIndex < participants.length) {
+            participant = participants[participantThenMissionIndex];
+            if (0 == participant.overrideCount) {
+              participant.unitOverrides = null;
             }
-            var14++;
+            participantThenMissionIndex++;
           }
-          var13 = var4.readUnsignedByte(0);
-          var10.missions = new CampaignMission[var13];
-          for (var14 = 0; var13 > var14; var14++) {
+          overrideIndexThenMissionCount = packet.readUnsignedByte(0);
+          campaign.missions = new CampaignMission[overrideIndexThenMissionCount];
+          for (participantThenMissionIndex = 0; overrideIndexThenMissionCount > participantThenMissionIndex; participantThenMissionIndex++) {
             try {
-              var22 = BattleCharacter.a(var10, var4, param1, (byte) -73);
-              var10.missions[var22.missionId] = var22;
+              decodedMission = BattleCharacter.readCampaignMission(campaign, packet, archive, (byte) -73);
+              campaign.missions[decodedMission.missionId] = decodedMission;
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var15 = decompiledCaughtException;
@@ -105,20 +105,20 @@ final class nu extends lk {
               var15.printStackTrace();
             }
           }
-          var4.l(param0 ^ 24048);
-          stackIn_24_0 = var10;
+          packet.l(obfuscationGuard ^ 24048);
+          stackIn_24_0 = campaign;
           return stackIn_24_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var3_ref = decompiledCaughtException;
           stackIn_27_0 = var3_ref;
-          stackIn_27_1 = new StringBuilder().append("nu.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_27_1 = new StringBuilder().append("nu.A(").append(obfuscationGuard).append(',');
+          if (archive == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(campaignIndex).append(')').toString());
         }
     }
 

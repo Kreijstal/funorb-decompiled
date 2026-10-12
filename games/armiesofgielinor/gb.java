@@ -329,11 +329,11 @@ final class gb extends iu {
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = b.a(false, param0);
-          if (this.field_q.battlefield.godFavourLevels[0][-1 + jv.a(false, param0)] == 0) {
+          var3_int = b.getUnitUnlockOrdinal(false, param0);
+          if (this.field_q.battlefield.godFavourLevels[0][-1 + jv.getUnitUnlockGroup(false, param0)] == 0) {
             return true;
           }
-          if ((this.field_q.battlefield.field_a[0][jv.a(false, param0) - 1] & 1 << var3_int) == 0) {
+          if ((this.field_q.battlefield.field_a[0][jv.getUnitUnlockGroup(false, param0) - 1] & 1 << var3_int) == 0) {
             return true;
           }
           if (param1 > 0) {

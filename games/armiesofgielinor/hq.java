@@ -42,7 +42,7 @@ final class hq {
             rn.field_d = param8;
             ul.field_a = param4;
             an.field_E = param12;
-            fu.field_d = param0;
+            CampaignRewardPreview.field_d = param0;
             fl.field_e = param13;
             ng.field_v = param6;
             if (null != wj.field_n.field_m) {

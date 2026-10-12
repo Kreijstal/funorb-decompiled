@@ -202,7 +202,7 @@ final class b extends IntrusiveNode {
         this.field_m = false;
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int getUnitUnlockOrdinal(boolean obfuscationGuard, int unitType) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException var2 = null;
@@ -212,12 +212,12 @@ final class b extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0) {
+          if (obfuscationGuard) {
             field_n = (la) null;
           }
-          for (var2_int = 0; var2_int < wp.field_H.length; var2_int++) {
-            for (var3 = 0; wp.field_H[var2_int].length > var3; var3++) {
-              if (~wp.field_H[var2_int][var3] == ~param1) {
+          for (var2_int = 0; var2_int < wp.unitUnlockGroups.length; var2_int++) {
+            for (var3 = 0; wp.unitUnlockGroups[var2_int].length > var3; var3++) {
+              if (~wp.unitUnlockGroups[var2_int][var3] == ~unitType) {
                 stackIn_10_0 = var3;
                 return stackIn_10_0;
               }
@@ -228,7 +228,7 @@ final class b extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "b.A(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "b.A(" + obfuscationGuard + ',' + unitType + ')');
         }
     }
 

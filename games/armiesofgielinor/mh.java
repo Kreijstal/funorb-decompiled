@@ -48,18 +48,18 @@ final class mh {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int getProfileMissionScore(int campaignIndex, int obfuscationGuard, int missionIndex) {
         if (pg.playerProfile == null) {
           return 0;
         }
         if (null == pg.playerProfile.campaignProgress) {
           return 0;
         }
-        if (param1 < -111) {
-          return pg.playerProfile.campaignProgress.getMissionScore(param0, 127, param2);
+        if (obfuscationGuard < -111) {
+          return pg.playerProfile.campaignProgress.getMissionScore(campaignIndex, 127, missionIndex);
         }
         field_b = (wm) null;
-        return pg.playerProfile.campaignProgress.getMissionScore(param0, 127, param2);
+        return pg.playerProfile.campaignProgress.getMissionScore(campaignIndex, 127, missionIndex);
     }
 
     public static void a(byte param0) {

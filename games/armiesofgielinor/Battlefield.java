@@ -17,7 +17,7 @@ final class Battlefield {
     boolean field_kb;
     private int[] playerTeamIndices;
     boolean field_eb;
-    float field_bb;
+    float campaignManaMultiplier;
     int winnerCount;
     int[] field_h;
     int field_D;
@@ -3343,7 +3343,7 @@ final class Battlefield {
           return param1 * var4 / var5;
         }
         if (~this.campaignMission.playerSlot == ~param0) {
-          param1 = (int)((float)param1 * this.field_bb);
+          param1 = (int)((float)param1 * this.campaignManaMultiplier);
         }
         return param1;
     }
@@ -3711,7 +3711,7 @@ final class Battlefield {
         var11 = var12;
         var7 = var11;
         var8 = bw.unitDefinitions[unitType][1];
-        var9 = b.a(false, unitType);
+        var9 = b.getUnitUnlockOrdinal(false, unitType);
         if (unitType != 74 &&
           unitType >= 8 &&
           0 == (1 << var9 & this.field_a[playerId][var8 + 1])) {
@@ -4303,7 +4303,7 @@ final class Battlefield {
                       stackIn_140_2 = 128;
                     }
                     ((PacketBuffer) (Object) stackIn_139_0).writeByte(stackIn_139_1, stackIn_140_2 | var10Lifetime1.unitType);
-                    fu.a(29712, var10Lifetime1, packet);
+                    CampaignRewardPreview.a(29712, var10Lifetime1, packet);
                   }
                   var10Lifetime1 = (Unit) (this.unitsByPlayer[var9Lifetime1].next((byte) 123));
                 }
@@ -4750,7 +4750,7 @@ final class Battlefield {
         var10 = var11;
         var6 = var10;
         var7 = bw.unitDefinitions[unitType][1];
-        var8 = b.a(false, unitType);
+        var8 = b.getUnitUnlockOrdinal(false, unitType);
         if (unitType != 74 &&
           unitType >= 8 &&
           0 == (this.field_a[playerId][1 + var7] & 1 << var8)) {
@@ -5573,7 +5573,7 @@ final class Battlefield {
         int var4;
         if (this.campaignMission != null &&
           this.campaignMission.playerSlot == playerId) {
-          stackIn_5_0 = this.field_bb;
+          stackIn_5_0 = this.campaignManaMultiplier;
         } else {
           stackIn_5_0 = 1.0f;
         }
@@ -6993,7 +6993,7 @@ final class Battlefield {
         this.field_ab = 1;
         this.winnerCount = 0;
         this.field_eb = false;
-        this.field_bb = 1.0f;
+        this.campaignManaMultiplier = 1.0f;
         this.snapshotBuffer = null;
         this.field_Cb = false;
         this.field_D = 0;
@@ -7051,12 +7051,12 @@ final class Battlefield {
               (this.mapSizeSetting != 4)) {
               this.mapSizeSetting = 2;
               if (var25 != 0) {
-                stackIn_35_1 = (mh.a(this.campaignMission.campaign.campaignIndex, -126, this.campaignMission.missionId) == 0);
+                stackIn_35_1 = (mh.getProfileMissionScore(this.campaignMission.campaign.campaignIndex, -126, this.campaignMission.missionId) == 0);
                 this.field_kb = stackIn_35_1;
               }
             }
           } else {
-            stackIn_35_1 = (mh.a(this.campaignMission.campaign.campaignIndex, -126, this.campaignMission.missionId) == 0);
+            stackIn_35_1 = (mh.getProfileMissionScore(this.campaignMission.campaign.campaignIndex, -126, this.campaignMission.missionId) == 0);
             this.field_kb = stackIn_35_1;
           }
           boolean decompiledFrameCompleted5 = true;

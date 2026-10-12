@@ -754,8 +754,8 @@ final class BattleCharacter {
         }
     }
 
-    final static CampaignMission a(CampaignDefinition param0, CipherPacketBuffer param1, kl param2, byte param3) {
-        CampaignMission var4 = null;
+    final static CampaignMission readCampaignMission(CampaignDefinition campaign, CipherPacketBuffer packet, kl archive, byte obfuscationGuard) {
+        CampaignMission mission = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         CampaignMission stackIn_1_0 = null;
@@ -768,35 +768,35 @@ final class BattleCharacter {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = -81 % ((param3 - 51) / 60);
-          var4 = na.a(param1, 44);
-          var4.campaign = param0;
-          var4.field_H = param2;
-          stackIn_1_0 = var4;
+          var5 = -81 % ((obfuscationGuard - 51) / 60);
+          mission = na.a(packet, 44);
+          mission.campaign = campaign;
+          mission.mapArchive = archive;
+          stackIn_1_0 = mission;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_4_0 = var4_ref;
           stackIn_4_1 = new StringBuilder().append("lf.A(");
-          if (param0 == null) {
+          if (campaign == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param1 == null) {
+          if (packet == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param2 == null) {
+          if (archive == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

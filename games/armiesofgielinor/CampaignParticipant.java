@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CampaignParticipant extends IntrusiveNode {
-    int[] field_p;
+    int[] availableUnitTypes;
     String displayName;
     static String field_l;
     int[] godFavourLevels;
     static int[][] field_s;
     int overrideCount;
-    int[] field_n;
+    int[] equippedSpellIds;
     static String field_r;
     CampaignUnitOverride[] unitOverrides;
     int participantId;

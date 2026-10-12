@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fu {
+final class CampaignRewardPreview {
     static int field_d;
-    String field_i;
+    String description;
     private static long[] field_f;
     static String field_b;
-    RgbSprite field_h;
-    String field_c;
+    RgbSprite icon;
+    String title;
     static String field_a;
     static RgbSprite field_e;
     static af field_g;
@@ -53,41 +53,41 @@ final class fu {
         }
     }
 
-    fu(int[] param0, int param1, int param2) {
+    CampaignRewardPreview(int[] rewardUnitTypes, int rewardSpellId, int manaBonusPercent) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (param0 != null) {
-            this.field_h = DeployAction.field_x[param0[0]];
+          if (rewardUnitTypes != null) {
+            this.icon = DeployAction.field_x[rewardUnitTypes[0]];
           } else {
-            if (param1 == -1) {
-              if (param2 > 0) {
-                this.field_h = BattleCharacter.field_h[161];
+            if (rewardSpellId == -1) {
+              if (manaBonusPercent > 0) {
+                this.icon = BattleCharacter.field_h[161];
               } else {
-                this.field_h = null;
+                this.icon = null;
               }
             } else {
-              this.field_h = BattleCharacter.field_h[uc.spellDefinitions[param1][2]];
+              this.icon = BattleCharacter.field_h[uc.spellDefinitions[rewardSpellId][2]];
             }
           }
-          if (param0 != null) {
-            this.field_c = dn.unitDisplayNames[param0[0]];
-            this.field_i = ut.field_cb[param0[0]];
+          if (rewardUnitTypes != null) {
+            this.title = dn.unitDisplayNames[rewardUnitTypes[0]];
+            this.description = ut.field_cb[rewardUnitTypes[0]];
           } else {
-            if (-1 == param1) {
-              if (param2 > 0) {
-                this.field_c = dj.a(6609, hf.field_b, "<MANA>", Integer.toString(param2));
-                this.field_i = SummonRequest.field_D;
+            if (-1 == rewardSpellId) {
+              if (manaBonusPercent > 0) {
+                this.title = dj.a(6609, hf.field_b, "<MANA>", Integer.toString(manaBonusPercent));
+                this.description = SummonRequest.field_D;
               } else {
-                this.field_c = null;
-                this.field_i = null;
+                this.title = null;
+                this.description = null;
               }
             } else {
-              this.field_c = fq.field_f[param1];
-              this.field_i = ActionRequest.field_l[param1];
+              this.title = fq.field_f[rewardSpellId];
+              this.description = ActionRequest.field_l[rewardSpellId];
             }
           }
           return;
@@ -96,12 +96,12 @@ final class fu {
           var4 = decompiledCaughtException;
           stackIn_18_0 = var4;
           stackIn_18_1 = new StringBuilder().append("fu.<init>(");
-          if (param0 == null) {
+          if (rewardUnitTypes == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(rewardSpellId).append(',').append(manaBonusPercent).append(')').toString());
         }
     }
 

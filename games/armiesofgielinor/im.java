@@ -8,7 +8,7 @@ class im extends ms {
     static RgbSprite field_y;
     static boolean field_w;
 
-    final static int a(CampaignMission param0, int param1) {
+    final static int getProfileMissionScore(CampaignMission mission, int obfuscationGuard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -18,24 +18,24 @@ class im extends ms {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 19) {
+          if (obfuscationGuard != 19) {
             im.b(49, 30);
           }
-          var2_int = param0.campaign.campaignIndex;
-          var3 = param0.missionId;
-          stackIn_3_0 = mh.a(var2_int, -125, var3);
+          var2_int = mission.campaign.campaignIndex;
+          var3 = mission.missionId;
+          stackIn_3_0 = mh.getProfileMissionScore(var2_int, -125, var3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("im.BA(");
-          if (param0 == null) {
+          if (mission == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ig.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

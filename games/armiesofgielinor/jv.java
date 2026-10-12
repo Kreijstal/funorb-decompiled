@@ -8,7 +8,7 @@ final class jv {
     static RgbSprite[] field_b;
     static String field_e;
 
-    final static int a(boolean param0, int param1) {
+    final static int getUnitUnlockGroup(boolean obfuscationGuard, int unitType) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException var2 = null;
@@ -19,13 +19,13 @@ final class jv {
         RuntimeException decompiledCaughtException = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0) {
+          if (obfuscationGuard) {
             stackIn_3_0 = -40;
             return stackIn_3_0;
           }
-          for (var2_int = 0; var2_int < wp.field_H.length; var2_int++) {
-            for (var3 = 0; var3 < wp.field_H[var2_int].length; var3++) {
-              if (wp.field_H[var2_int][var3] == param1) {
+          for (var2_int = 0; var2_int < wp.unitUnlockGroups.length; var2_int++) {
+            for (var3 = 0; var3 < wp.unitUnlockGroups[var2_int].length; var3++) {
+              if (wp.unitUnlockGroups[var2_int][var3] == unitType) {
                 stackIn_11_0 = var2_int;
                 return stackIn_11_0;
               }
@@ -36,7 +36,7 @@ final class jv {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ig.addExceptionContext((Throwable) ((Object) var2), "jv.A(" + param0 + ',' + param1 + ')');
+          throw ig.addExceptionContext((Throwable) ((Object) var2), "jv.A(" + obfuscationGuard + ',' + unitType + ')');
         }
     }
 

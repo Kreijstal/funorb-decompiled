@@ -75,7 +75,7 @@ final class cv {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = ku.j(124);
-          var3 = ar.a(var2.field_g, var2.field_e, 0);
+          var3 = ar.getCampaignMission(var2.field_g, var2.field_e, 0);
           ts.a(var3, -1, var2);
           var4 = var3.playerSlot;
           var5 = rd.field_j.battlefield.playerTurnCounts[var4];
@@ -232,7 +232,7 @@ final class cv {
         int var9Lifetime1;
         try {
           var2 = ku.j(111);
-          var3 = ar.a(var2.field_g, var2.field_e, 0);
+          var3 = ar.getCampaignMission(var2.field_g, var2.field_e, 0);
           var4 = Battlefield.a(var3.participantIds.length, var2.field_c, false);
           var5 = fo.a(4800, wd.field_e, new String[]{var3.name, Integer.toString(var4)});
           var6 = fo.a(4800, hi.field_h, new String[]{var5});
@@ -519,13 +519,13 @@ final class cv {
         try {
           var3_int = 12 % ((param2 + 16) / 40);
           if (0 == param1) {
-            nu.a(23948, param0, 0);
+            nu.loadCampaign(23948, param0, 0);
             if (!ArmiesOfGielinor.obfuscationControl) {
               return;
             }
           }
-          nu.a(23948, param0, 1);
-          nu.a(23948, param0, 2);
+          nu.loadCampaign(23948, param0, 1);
+          nu.loadCampaign(23948, param0, 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -637,7 +637,7 @@ final class cv {
                     var9 = DeployAction.field_D[this.field_l];
                   } else {
                     var8 = km.field_h[2];
-                    var9 = param3.field_p.g(-1).field_h;
+                    var9 = param3.field_p.createRewardPreview(-1).icon;
                   }
                   if (var8 == null &&
                     null == var9) {
@@ -720,7 +720,7 @@ final class cv {
         int var9Lifetime1;
         try {
           var2 = ku.j(97);
-          var3 = ar.a(var2.field_g, var2.field_e, param0 - 26);
+          var3 = ar.getCampaignMission(var2.field_g, var2.field_e, param0 - 26);
           var4 = Battlefield.a(var3.participantIds.length, var2.field_c, false);
           var5 = fo.a(4800, sb.field_f, new String[]{Integer.toString(var4)});
           boolean decompiledSharedTail0 = (null == this.field_c);
@@ -927,7 +927,7 @@ final class cv {
         int var21 = 0;
         int var22 = 0;
         int[] var23 = null;
-        fu var23_ref = null;
+        CampaignRewardPreview var23_ref = null;
         int var24_int = 0;
         RgbSprite var24 = null;
         int var25_int = 0;
@@ -1130,22 +1130,22 @@ final class cv {
               break;
             }
             var6Lifetime2 = stackIn_70_0;
-            var23_ref = var15.g(-1);
+            var23_ref = var15.createRewardPreview(-1);
             var24 = km.field_h[2];
-            this.a(var24, 0, 0, 10 + var6Lifetime2, var23_ref.field_h, param0 - 19, 1.0f, 18 + var23_ref.field_h.field_A / 2);
-            if (var23_ref.field_i != null &&
-              ml.a(MatchConditionEntry.a(var6Lifetime2 + 10, (byte) 94), db.a(true, var23_ref.field_h.field_A / 2 + 18), 25, false)) {
+            this.a(var24, 0, 0, 10 + var6Lifetime2, var23_ref.icon, param0 - 19, 1.0f, 18 + var23_ref.icon.field_A / 2);
+            if (var23_ref.description != null &&
+              ml.a(MatchConditionEntry.a(var6Lifetime2 + 10, (byte) 94), db.a(true, var23_ref.icon.field_A / 2 + 18), 25, false)) {
               var25_intLifetime1 = var4Lifetime1 * 2;
               var26 = var3Lifetime1 + 5;
               if (so.field_b.field_a < var26 + var25_intLifetime1) {
                 var25_intLifetime1 = so.field_b.field_a - var26;
               }
-              var27Lifetime1 = rs.field_n.a(var23_ref.field_i, var25_intLifetime1, 0);
+              var27Lifetime1 = rs.field_n.a(var23_ref.description, var25_intLifetime1, 0);
               var28Lifetime1 = var6Lifetime2 - var27Lifetime1 / 2;
               SoftwareRaster.b(db.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, var27Lifetime1 + 2, 0, 128);
-              rs.field_n.a(var23_ref.field_i, db.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, 472, 16777215, 1, 1, 0, 0);
+              rs.field_n.a(var23_ref.description, db.a(true, var26), MatchConditionEntry.a(var28Lifetime1, (byte) 94), var25_intLifetime1, 472, 16777215, 1, 1, 0, 0);
             }
-            rs.field_n.a(IntPair.field_l + var23_ref.field_c, db.a(true, var23_ref.field_h.field_A + 31), MatchConditionEntry.a(-10 + var6Lifetime2, (byte) 94), -13 + (-var23_ref.field_h.field_A + var4Lifetime1), var23_ref.field_h.field_x, 16776960, 0, 0, 1, 0);
+            rs.field_n.a(IntPair.field_l + var23_ref.title, db.a(true, var23_ref.icon.field_A + 31), MatchConditionEntry.a(-10 + var6Lifetime2, (byte) 94), -13 + (-var23_ref.icon.field_A + var4Lifetime1), var23_ref.icon.field_x, 16776960, 0, 0, 1, 0);
             if (null != var19) {
               var25_intLifetime2 = 100;
               var26Lifetime1 = AiPlanningStrategy.field_d;
@@ -1413,7 +1413,7 @@ final class cv {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new cq(param1);
-          var4 = mh.a(this.field_l, param0 - 119, var3.field_k);
+          var4 = mh.getProfileMissionScore(this.field_l, param0 - 119, var3.field_k);
           if (~var4 < param0) {
             var3.field_r = AiInfluenceMap.a(10602, var4);
             var3.field_A = var4;
@@ -1469,7 +1469,7 @@ final class cv {
               return;
             }
             this.b(var2.field_g, 53);
-            var3 = ar.a(var2.field_g, var2.field_e, 0);
+            var3 = ar.getCampaignMission(var2.field_g, var2.field_e, 0);
             l.field_c = var3;
             CipherPacketBuffer.a(true, -11, param0 + 1, 0);
             if (ArmiesOfGielinor.obfuscationControl) {
@@ -1656,7 +1656,7 @@ final class cv {
                   this.field_c != null &&
                   this.field_c.a((byte) -49)) {
                   var2 = ku.j(86);
-                  var3 = ar.a(((sl) (var2)).field_g, ((sl) (var2)).field_e, 0);
+                  var3 = ar.getCampaignMission(((sl) (var2)).field_g, ((sl) (var2)).field_e, 0);
                   l.field_c = (CampaignMission) (var3);
                   CipherPacketBuffer.a(true, -11, 1, 0);
                 }
@@ -1840,7 +1840,7 @@ final class cv {
           }
           var3 = new cq(param1.campaignIndex, param1.name);
           var3.field_D = param1.localGodId;
-          var3.field_q = param1.field_o;
+          var3.field_q = param1.description;
           stackIn_11_0 = var3;
           stackIn_14_1 = (param1.c((byte) -45)) || !(0 >= df.field_M) || !(hi.field_j < 2);
           boolean decompiledFrameCompleted0 = true;
@@ -1857,7 +1857,7 @@ final class cv {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              if (mh.a(stackIn_18_0.campaignIndex, -120, var6_int) > 0) {
+              if (mh.getProfileMissionScore(stackIn_18_0.campaignIndex, -120, var6_int) > 0) {
                 var4_int++;
               }
               var6_int++;
@@ -2356,7 +2356,7 @@ final class cv {
                   var11.field_x = 341;
                   var11.field_o = 57;
                   var11.field_y = 45;
-                  var12 = ar.a(var10_ref_sl.field_g, var10_ref_sl.field_e, 0);
+                  var12 = ar.getCampaignMission(var10_ref_sl.field_g, var10_ref_sl.field_e, 0);
                   var13_int = Battlefield.a(var12.participantIds.length, var10_ref_sl.field_c, false);
                   var14 = fo.a(4800, wd.field_e, new String[]{var12.name, Integer.toString(var13_int)});
                   var11.field_w = var12.campaign.name;

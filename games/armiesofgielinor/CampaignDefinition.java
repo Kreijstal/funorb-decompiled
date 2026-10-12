@@ -5,8 +5,8 @@ final class CampaignDefinition extends IntrusiveNode {
     static ru field_t;
     static String[] field_m;
     CampaignMission[] missions;
-    String field_o;
-    int[] field_p;
+    String description;
+    int[] initialUnitTypes;
     int localGodId;
     int campaignIndex;
     String localPlayerName;

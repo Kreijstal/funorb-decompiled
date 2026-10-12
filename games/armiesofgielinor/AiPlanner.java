@@ -1762,7 +1762,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                   if ((var36Lifetime1.terrainType != 11 ||
                     var36Lifetime1.godId == var19) &&
                     (-1 != var19 ||
-                    (this.battlefield.field_a[this.playerId][var19 + 1] & 1 << b.a(false, var18)) != 0)) {
+                    (this.battlefield.field_a[this.playerId][var19 + 1] & 1 << b.getUnitUnlockOrdinal(false, var18)) != 0)) {
                     var20 = this.battlefield.canSummonUnitAt(var17, -26813, var18, var16, this.playerId) ? 1 : 0;
                     var21 = var20;
                     if (var20 == 0) {

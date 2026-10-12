@@ -295,8 +295,8 @@ final class cq extends IntrusiveNode {
             var5Lifetime1 = param0.participantIds[var4];
             if (var5Lifetime1 != -1) {
               var14 = param0.campaign.participants[var5Lifetime1];
-              if (null != var14.field_p) {
-                var18 = var14.field_p;
+              if (null != var14.availableUnitTypes) {
+                var18 = var14.availableUnitTypes;
                 for (var8 = 0; var18.length > var8; var8++) {
                   var9 = var18[var8];
                   var10 = bw.unitDefinitions[var9][0];

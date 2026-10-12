@@ -17,7 +17,7 @@ final class ar extends ms {
         try {
           ku.a((byte) -93, true, param1);
           if (param0 != 2) {
-            ar.a(87, 100, -49);
+            ar.getCampaignMission(87, 100, -49);
           }
         } catch (RuntimeException runtimeException) {
           throw ig.addExceptionContext((Throwable) ((Object) runtimeException), "ar.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -55,19 +55,19 @@ final class ar extends ms {
         return cp.field_b[var4];
     }
 
-    final static CampaignMission a(int param0, int param1, int param2) {
-        CampaignDefinition var4 = br.getCampaign(param0, (byte) -14);
+    final static CampaignMission getCampaignMission(int campaignIndex, int missionIndex, int minimumMissionIndex) {
+        CampaignDefinition var4 = br.getCampaign(campaignIndex, (byte) -14);
         CampaignDefinition var3 = var4;
         if (var3 == null) {
           return null;
         }
-        if (param1 < param2) {
+        if (missionIndex < minimumMissionIndex) {
           return null;
         }
-        if (param1 >= var3.missions.length) {
+        if (missionIndex >= var3.missions.length) {
           return null;
         }
-        return var4.missions[param1];
+        return var4.missions[missionIndex];
     }
 
     final static void a(RgbSprite[][] param0, int[] param1, byte param2, byte[] param3, int param4, kl param5, kl param6, byte[] param7, String[] param8, int[] param9, boolean param10, int param11, String[][] param12, ru[] param13, kl param14, String[][] param15, RgbSprite[][] param16) {

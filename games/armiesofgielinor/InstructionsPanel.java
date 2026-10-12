@@ -2353,13 +2353,13 @@ final class InstructionsPanel {
             if (ov.field_g == sg.field_a) {
               if (param5) {
                 var10 = (String) null;
-                fu.field_g = oi.a((String) null, param3, false, 1, dc.field_o);
+                CampaignRewardPreview.field_g = oi.a((String) null, param3, false, 1, dc.field_o);
               } else {
-                fu.field_g = ml.a(false, param4, (byte) 10, param3);
+                CampaignRewardPreview.field_g = ml.a(false, param4, (byte) 10, param3);
               }
               vl.field_n.position = 0;
               vl.field_n.writeByte(1, 14);
-              vl.field_n.writeByte(param0 ^ -54, fu.field_g.a((byte) -16).field_c);
+              vl.field_n.writeByte(param0 ^ -54, CampaignRewardPreview.field_g.a((byte) -16).field_c);
               hb.$cfr$intArgs$a$e9dea5688aa5(67, -1);
               ov.field_g = gi.field_d;
             }
@@ -2379,7 +2379,7 @@ final class InstructionsPanel {
               es.a(-115, 8)) {
               ts.field_h = mg.field_e.j((byte) -2);
               mg.field_e.position = 0;
-              bk.a(param2, param5, fu.field_g, 0, param1);
+              bk.a(param2, param5, CampaignRewardPreview.field_g, 0, param1);
               ov.field_g = jf.field_D;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -2465,8 +2465,8 @@ final class InstructionsPanel {
               IntPair.field_p = k.a(var11, false);
               vt.field_n = mg.field_e.readUnsignedByte(0);
               ov.field_g = kl.field_k;
-              if (fu.field_g.a((byte) 50) != pt.field_db) {
-                if (fu.field_g.a((byte) -11) == fl.field_u) {
+              if (CampaignRewardPreview.field_g.a((byte) 50) != pt.field_db) {
+                if (CampaignRewardPreview.field_g.a((byte) -11) == fl.field_u) {
                   ps.field_y.a(param0 - 84, CombatEvent.d((byte) -120));
                 }
               } else {

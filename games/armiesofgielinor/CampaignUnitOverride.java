@@ -1665,7 +1665,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_emailvalid");
                 if (var2 != null) {
-                  fu.field_a = uu.a(var2, (byte) -92);
+                  CampaignRewardPreview.field_a = uu.a(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(50, "create_account_success");
                 if (null != var2) {

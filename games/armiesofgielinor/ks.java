@@ -43,10 +43,10 @@ abstract class ks extends ms {
           var3 = new CampaignParticipant();
           var3.participantId = packet.readUnsignedByte(0);
           var3.displayName = packet.readNullCircumfixedString((byte) 121);
-          var3.field_p = ev.readNullableUnsignedByteArray(packet, (byte) -98);
+          var3.availableUnitTypes = ev.readNullableUnsignedByteArray(packet, (byte) -98);
           var3.coatOfArms = uq.readSignedCoatOfArms(packet, false);
           var3.godFavourLevels = gt.readSixUnsignedBytes(-2, packet);
-          var3.field_n = en.readUnsignedByteArray(packet, (byte) -24);
+          var3.equippedSpellIds = en.readUnsignedByteArray(packet, (byte) -24);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

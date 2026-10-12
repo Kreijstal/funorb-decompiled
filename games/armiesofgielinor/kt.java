@@ -76,7 +76,7 @@ final class kt extends mk {
             return stackIn_5_0;
           }
           if (this.a(-3137, param1) != rn.field_e) {
-            stackIn_10_0 = fu.field_a;
+            stackIn_10_0 = CampaignRewardPreview.field_a;
             return stackIn_10_0;
           }
           stackIn_8_0 = hk.field_Ib;

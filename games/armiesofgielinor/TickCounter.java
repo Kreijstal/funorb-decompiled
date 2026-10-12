@@ -5492,7 +5492,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_STOCKBUTTON");
                 if (null != var2) {
-                  fu.field_b = uu.a(var2, (byte) 94);
+                  CampaignRewardPreview.field_b = uu.a(var2, (byte) 94);
                 }
                 var2 = fk.a(false, "LABEL_STOREBUTTON");
                 if (var2 != null) {

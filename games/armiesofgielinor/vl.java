@@ -140,7 +140,7 @@ final class vl extends mk {
             vl.c((byte) -118);
           }
           if (this.a(-3137, param1) != rn.field_e) {
-            stackIn_6_0 = fu.field_a;
+            stackIn_6_0 = CampaignRewardPreview.field_a;
             return stackIn_6_0;
           }
           stackIn_4_0 = ArmiesOfGielinor.field_H;

@@ -3,7 +3,7 @@
  */
 final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
     int flags;
-    int field_l;
+    int rewardSpellId;
     static String field_s;
     static long[] field_r;
     int mapTheme;
@@ -12,16 +12,16 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
     static String field_p;
     private int field_A;
     String description;
-    int[] rewardIds;
+    int[] rewardUnitTypes;
     int scoreTurnTarget;
-    int field_u;
+    int manaBonusPercent;
     int[] participantIds;
     int[] neighborMissionIds;
     static el field_I;
     int mapSizeSetting;
     int missionId;
     CampaignDefinition campaign;
-    kl field_H;
+    kl mapArchive;
     int difficulty;
     int playerSlot;
     int scoreDamageTarget;
@@ -43,7 +43,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (obfuscationGuard != 37) {
-            this.g(-112);
+            this.createRewardPreview(-112);
           }
           if (!fieldName.equals("id")) {
             if (fieldName.equals("flg")) {
@@ -107,14 +107,14 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                                   if (0 >= encodedLength) {
                                     return;
                                   }
-                                  this.field_u = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                                  this.manaBonusPercent = (int)tn.readTaggedInteger(false, encodedLength, packet);
                                   return;
                                 }
                                 if (fieldName.equals("tr")) {
                                   if (encodedLength <= 0) {
                                     return;
                                   }
-                                  this.field_l = (int)tn.readTaggedInteger(false, encodedLength, packet);
+                                  this.rewardSpellId = (int)tn.readTaggedInteger(false, encodedLength, packet);
                                   return;
                                 }
                                 if (!fieldName.equals("df")) {
@@ -172,9 +172,9 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                               } else {
                                 if (encodedLength > 0) {
                                   var5_int = ai.readCompactInt(packet, true);
-                                  this.rewardIds = new int[var5_int];
+                                  this.rewardUnitTypes = new int[var5_int];
                                   for (var6 = 0; var6 < var5_int; var6++) {
-                                    this.rewardIds[var6] = (int)tn.readTaggedInteger(false, 2, packet);
+                                    this.rewardUnitTypes[var6] = (int)tn.readTaggedInteger(false, 2, packet);
                                   }
                                 }
                               }
@@ -258,7 +258,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         if (obfuscationGuard < 86) {
           CampaignMission.c((byte) 8);
         }
-        byte[] var3 = this.field_H.a((byte) 76, this.mapResourceId, this.field_H.a(gk.field_O[this.campaign.campaignIndex], 102));
+        byte[] var3 = this.mapArchive.a((byte) 76, this.mapResourceId, this.mapArchive.a(gk.field_O[this.campaign.campaignIndex], 102));
         byte[] var2 = var3;
         return new MapLayout(this.missionId, var3);
     }
@@ -298,11 +298,11 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         return (this.flags & 2) != 0 ? true : false;
     }
 
-    final fu g(int param0) {
-        if (param0 != -1) {
-          this.g(-55);
+    final CampaignRewardPreview createRewardPreview(int obfuscationGuard) {
+        if (obfuscationGuard != -1) {
+          this.createRewardPreview(-55);
         }
-        return new fu(this.rewardIds, this.field_l, this.field_u);
+        return new CampaignRewardPreview(this.rewardUnitTypes, this.rewardSpellId, this.manaBonusPercent);
     }
 
     final static RgbSprite[] a(byte param0, String param1, String param2, kl param3) {
@@ -392,7 +392,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
 
     CampaignMission() {
         this.musicId = -1;
-        this.field_l = -1;
+        this.rewardSpellId = -1;
         this.difficulty = 1;
     }
 

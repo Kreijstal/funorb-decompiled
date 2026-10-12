@@ -1256,7 +1256,7 @@ public final class ArmiesOfGielinor extends wf {
           SpellCastAction.e(-4541);
           AiPlanner.a(-27464);
           su.a(true);
-          fu.a(126);
+          CampaignRewardPreview.a(126);
           CombatEvent.e((byte) -127);
           ManaEvent.g(-829);
           MoveEvent.g(param0 ^ -29395);
@@ -1641,8 +1641,8 @@ public final class ArmiesOfGielinor extends wf {
               if (var7 == 0) {
                 if (stackIn_26_0 > -5) {
                   var6 = 0;
-                  while (!(var6 >= wp.field_H[var5].length)) {
-                    stackIn_10_0 = ~bw.unitDefinitions[wp.field_H[var5][var6]][11];
+                  while (!(var6 >= wp.unitUnlockGroups[var5].length)) {
+                    stackIn_10_0 = ~bw.unitDefinitions[wp.unitUnlockGroups[var5][var6]][11];
                     stackIn_10_1 = -1;
                     if (stackIn_10_0 == stackIn_10_1) {
                       kb.field_o[var5] = oe.c(kb.field_o[var5], 1 << var6);
@@ -2197,7 +2197,7 @@ public final class ArmiesOfGielinor extends wf {
           ro.field_rb = MapLayout.a("trait_icons", -28106, "basic", iw.field_l);
           lp.field_b = MapLayout.a("terrain_icons", -28106, "basic", iw.field_l);
           sg.field_b = MapLayout.a("compare_icons", -28106, "basic", iw.field_l);
-          fu.field_e = nh.a("mapf", "basic", iw.field_l, false);
+          CampaignRewardPreview.field_e = nh.a("mapf", "basic", iw.field_l, false);
           io.field_z = nh.a("mapi", "basic", iw.field_l, false);
           ig.field_t = pv.a("basic", "turn", iw.field_l, 24914);
           AttackEvent.field_y = fk.a("mapsquares", (byte) -127, iw.field_l, "basic");
