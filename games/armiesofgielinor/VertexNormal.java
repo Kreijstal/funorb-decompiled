@@ -39,7 +39,7 @@ final class VertexNormal {
         NodeDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
-        of var12 = null;
+        LobbyPlayer var12 = null;
         int var13 = 0;
         ClientUiComponent var14 = null;
         ClientUiComponent var15 = null;
@@ -85,12 +85,12 @@ final class VertexNormal {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (vu.field_M != null && (null != ep.field_p ||
+          if (vu.currentRoom != null && (null != ep.field_p ||
             iv.field_e != null ||
             jv.field_d != null ||
             CombatPresentation.field_j != null)) {
-            for (var9 = 0; var9 < tq.field_b; var9++) {
-              var10_int = vu.field_M.field_pc[var9] & 255;
+            for (var9 = 0; var9 < tq.gameOptionCount; var9++) {
+              var10_int = vu.currentRoom.gameOptions[var9] & 255;
               if (null != ep.field_p &&
                 null != ep.field_p[var9] &&
                 ep.field_p[var9][var10_int]) {
@@ -136,41 +136,41 @@ final class VertexNormal {
           if (param1 != 255) {
             return;
           }
-          var12 = (of) (var10.first((byte) 124));
+          var12 = (LobbyPlayer) (var10.first((byte) 124));
           while (var12 != null) {
             var13 = 0;
             if (var12.children == null) {
-              var12.field_ac = new ClientUiComponent(0L, IsaacRandom.field_i);
-              var12.addChild(var12.field_ac, 106);
-              var12.field_Tb = new ClientUiComponent(0L, ws.field_P);
+              var12.nameComponent = new ClientUiComponent(0L, IsaacRandom.field_i);
+              var12.addChild(var12.nameComponent, 106);
+              var12.ratingComponent = new ClientUiComponent(0L, ws.field_P);
               if (fh.field_c) {
-                var12.addChild(var12.field_Tb, param1 ^ 157);
+                var12.addChild(var12.ratingComponent, param1 ^ 157);
               }
-              var12.field_Tb.horizontalAlignment = 2;
+              var12.ratingComponent.horizontalAlignment = 2;
               var12.field_fc = new ClientUiComponent(0L, eq.field_h);
               var12.addChild(var12.field_fc, 62);
               var12.inheritVisualStateForDescendants(-10027);
-              var12.field_dc = new ClientUiComponent(0L, QuickChatPhraseRepository.field_d);
-              var12.addChild(var12.field_dc, param1 - 194);
-              var12.field_ec = new ClientUiComponent(0L, pt.field_X);
-              var12.addChild(var12.field_ec, 90);
+              var12.admissionButton = new ClientUiComponent(0L, QuickChatPhraseRepository.field_d);
+              var12.addChild(var12.admissionButton, param1 - 194);
+              var12.cancelRejectButton = new ClientUiComponent(0L, pt.field_X);
+              var12.addChild(var12.cancelRejectButton, 90);
               var13 = 1;
             }
-            var12.field_ac.text = null;
-            var14 = var12.field_ac;
-            var12.field_ac.height = 0;
-            var12.field_Tb.text = null;
+            var12.nameComponent.text = null;
+            var14 = var12.nameComponent;
+            var12.nameComponent.height = 0;
+            var12.ratingComponent.text = null;
             var14.width = 0;
-            var12.field_Tb.height = 0;
-            var15 = var12.field_Tb;
+            var12.ratingComponent.height = 0;
+            var15 = var12.ratingComponent;
             var15.width = 0;
-            var12.field_dc.text = null;
-            var12.field_dc.height = 0;
-            var16 = var12.field_dc;
+            var12.admissionButton.text = null;
+            var12.admissionButton.height = 0;
+            var16 = var12.admissionButton;
             var16.width = 0;
-            var12.field_ec.text = null;
-            var12.field_ec.height = 0;
-            var17 = var12.field_ec;
+            var12.cancelRejectButton.text = null;
+            var12.cancelRejectButton.height = 0;
+            var17 = var12.cancelRejectButton;
             var17.width = 0;
             var12.field_fc.text = null;
             var12.field_fc.height = 0;
@@ -178,84 +178,84 @@ final class VertexNormal {
             var18.width = 0;
             var12.width = param4.content.width;
             var19 = 0;
-            var32 = var12.field_Yb;
+            var32 = var12.displayName;
             var21 = 72;
             if (MapTile.field_f == param4) {
               var21 += 42;
             }
-            var33 = BitmapFont.a(var12.field_ac.font, var32, var21);
+            var33 = BitmapFont.a(var12.nameComponent.font, var32, var21);
             var20 = var33;
-            stackIn_60_0 = (var33.equals(var12.field_Yb)) ? 0 : 1;
+            stackIn_60_0 = (var33.equals(var12.displayName)) ? 0 : 1;
             var22 = stackIn_60_0;
-            if (var12.field_Qb < 4) {
-              if (var12.field_Qb > 0) {
-                var20 = "<img=" + (-1 + var12.field_Qb) + ">" + var33;
+            if (var12.chatIconId < 4) {
+              if (var12.chatIconId > 0) {
+                var20 = "<img=" + (-1 + var12.chatIconId) + ">" + var33;
               }
             } else {
-              var20 = "<img=" + (var12.field_Qb - (4 - PacketBuffer.field_n)) + ">" + var33;
+              var20 = "<img=" + (var12.chatIconId - (4 - PacketBuffer.field_n)) + ">" + var33;
             }
-            var12.field_ac.text = var20;
-            if (!var12.k(0)) {
+            var12.nameComponent.text = var20;
+            if (!var12.isRemovedFromIndex(0)) {
               var23_int = 16764006;
               var24_int = 16777215;
               if (var5_int != 0 &&
-                !var12.field_Zb ||
-                (!(var6 <= var12.field_Sb) ||
-                !(var7 <= var12.field_Xb) ||
-                !((var8 & ~var12.field_Ob) <= 0))) {
+                !var12.packedFlag0 ||
+                (!(var6 <= var12.rating) ||
+                !(var7 <= var12.ratedGamesPlayed) ||
+                !((var8 & ~var12.optionUnlockMask) <= 0))) {
                 var23_int = 8414771;
                 var24_int = 8421504;
               }
-              var12.field_ac.selectedTextColour = var24_int;
-              var12.field_ac.heldPressTextColour = var24_int;
-              var12.field_ac.matchedButtonTextColour = var24_int;
-              var12.field_dc.textColour = var23_int;
-              var12.field_Tb.textColour = var23_int;
-              var12.field_ac.textColour = var23_int;
-              var12.field_Tb.selectedTextColour = var24_int;
-              var12.field_Tb.heldPressTextColour = var24_int;
-              var12.field_Tb.matchedButtonTextColour = var24_int;
-              var12.field_dc.selectedTextColour = var24_int;
-              var12.field_dc.heldPressTextColour = var24_int;
-              var12.field_dc.matchedButtonTextColour = var24_int;
+              var12.nameComponent.selectedTextColour = var24_int;
+              var12.nameComponent.heldPressTextColour = var24_int;
+              var12.nameComponent.matchedButtonTextColour = var24_int;
+              var12.admissionButton.textColour = var23_int;
+              var12.ratingComponent.textColour = var23_int;
+              var12.nameComponent.textColour = var23_int;
+              var12.ratingComponent.selectedTextColour = var24_int;
+              var12.ratingComponent.heldPressTextColour = var24_int;
+              var12.ratingComponent.matchedButtonTextColour = var24_int;
+              var12.admissionButton.selectedTextColour = var24_int;
+              var12.admissionButton.heldPressTextColour = var24_int;
+              var12.admissionButton.matchedButtonTextColour = var24_int;
               if (bu.field_a != param4) {
-                if (var12.field_Wb) {
-                  var12.field_ac.text = fo.a(param1 ^ 4671, AiPlanningStrategy.field_g, new String[]{var20});
-                  var12.field_ec.text = ac.field_s;
+                if (var12.invitationSent) {
+                  var12.nameComponent.text = fo.a(param1 ^ 4671, AiPlanningStrategy.field_g, new String[]{var20});
+                  var12.cancelRejectButton.text = ac.field_s;
                 } else {
-                  if (var12.field_Ub) {
-                    var12.field_ac.text = fo.a(param1 + 4545, DeployEvent.field_G, new String[]{var20});
-                    var12.field_dc.text = LeaderEscortCondition.field_g;
-                    var12.field_ec.text = SpellConfirmationDialog.field_l;
+                  if (var12.joinRequested) {
+                    var12.nameComponent.text = fo.a(param1 + 4545, DeployEvent.field_G, new String[]{var20});
+                    var12.admissionButton.text = LeaderEscortCondition.field_g;
+                    var12.cancelRejectButton.text = SpellConfirmationDialog.field_l;
                   } else {
-                    var12.field_dc.text = bq.field_b;
+                    var12.admissionButton.text = bq.field_b;
                   }
                 }
               } else {
-                if (!vu.field_M.field_kc) {
-                  var12.field_ec.text = bq.field_a;
+                if (!vu.currentRoom.playing) {
+                  var12.cancelRejectButton.text = bq.field_a;
                 }
               }
               var25_int = 0;
-              if (null != vu.field_M &&
-                vu.b(false) &&
-                oh.field_H != var12.field_Pb) {
-                if (null != var12.field_dc.text) {
-                  var26 = var12.field_dc.getPreferredWidth(104) + mi.field_l * 2;
-                  var12.field_dc.setBounds(jn.field_d, -20500, var26, var19, var25_int);
+              if (null != vu.currentRoom &&
+                vu.isCurrentRoomOwner(false) &&
+                oh.localAccountId != var12.accountId) {
+                if (null != var12.admissionButton.text) {
+                  var26 = var12.admissionButton.getPreferredWidth(104) + mi.field_l * 2;
+                  var12.admissionButton.setBounds(jn.field_d, -20500, var26, var19, var25_int);
                   var25_int = var25_int + var26;
                 }
-                if (var12.field_ec.text != null) {
+                if (var12.cancelRejectButton.text != null) {
                   if (bu.field_a != param4) {
-                    var26Lifetime2 = var12.field_ec.getPreferredWidth(param1 - 328) + mi.field_l * 2;
+                    var26Lifetime2 = var12.cancelRejectButton.getPreferredWidth(param1 - 328) + mi.field_l * 2;
                   } else {
                     var26Lifetime2 = 40;
                   }
-                  var12.field_ec.setBounds(jn.field_d, param1 - 20755, var26Lifetime2, var19, var25_int);
+                  var12.cancelRejectButton.setBounds(jn.field_d, param1 - 20755, var26Lifetime2, var19, var25_int);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
-              stackIn_96_0 = var12.field_ac;
+              stackIn_96_0 = var12.nameComponent;
               stackIn_96_1 = jn.field_d;
               stackIn_96_2 = -20500;
               stackIn_96_3 = -var25_int + var12.width;
@@ -265,32 +265,32 @@ final class VertexNormal {
                 stackIn_97_4 = 0;
               }
               ((ClientUiComponent) (Object) stackIn_96_0).setBounds(stackIn_96_1, stackIn_96_2, stackIn_96_3 - stackIn_97_4, var19, var25_int);
-              var12.field_Tb.text = Integer.toString(var12.field_Sb);
-              var12.field_Tb.setBounds(jn.field_d, -20500, 40, var19, var12.width - 40);
-              if (var12.field_ac.heldButtonMatches &&
+              var12.ratingComponent.text = Integer.toString(var12.rating);
+              var12.ratingComponent.setBounds(jn.field_d, -20500, 40, var19, var12.width - 40);
+              if (var12.nameComponent.heldButtonMatches &&
                 var22 != 0) {
-                ad.field_I = var12.field_Yb;
+                ad.field_I = var12.displayName;
                 if (DeployRequest.field_v != null &&
-                  DeployRequest.field_v[var12.field_Qb] != null) {
-                  ad.field_I = ad.field_I + " - " + DeployRequest.field_v[var12.field_Qb];
+                  DeployRequest.field_v[var12.chatIconId] != null) {
+                  ad.field_I = ad.field_I + " - " + DeployRequest.field_v[var12.chatIconId];
                 }
               } else {
-                if (var12.field_ac.heldButtonMatches &&
+                if (var12.nameComponent.heldButtonMatches &&
                   DeployRequest.field_v != null &&
-                  null != DeployRequest.field_v[var12.field_Qb]) {
-                  ad.field_I = DeployRequest.field_v[var12.field_Qb];
+                  null != DeployRequest.field_v[var12.chatIconId]) {
+                  ad.field_I = DeployRequest.field_v[var12.chatIconId];
                 }
               }
               var19 = var19 + jn.field_d;
             }
-            var23 = s.a(false, var20, var12.field_Kb);
+            var23 = s.a(false, var20, var12.notificationCode);
             var24 = var23;
             var30 = var24;
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
               var24_intLifetime1 = var12.field_fc.font.c(var23, -mi.field_l + (var12.width - mi.field_l));
-              var12.field_fc.textOpacity = var12.field_Rb * 256 / qd.field_K;
+              var12.field_fc.textOpacity = var12.notificationTicks * 256 / qd.lobbyNotificationDuration;
               var12.field_fc.text = var23;
               var12.field_fc.setBounds(var24_intLifetime1 * jn.field_d, -20500, var12.width - 2 * mi.field_l, var19, mi.field_l);
               var19 = var19 + jn.field_d * var24_intLifetime1;
@@ -302,27 +302,27 @@ final class VertexNormal {
               param4.content.positionAfter(var12, true, 2, (ClientUiComponent) (var11));
             }
             if (var12.pressedButton != 0 &&
-              !var12.k(0)) {
-              if (var12.field_dc.pressedButton != 0) {
-                ActionSpell.a(var12.field_Pb, param3, 6);
+              !var12.isRemovedFromIndex(0)) {
+              if (var12.admissionButton.pressedButton != 0) {
+                ActionSpell.a(var12.accountId, param3, 6);
               } else {
-                if (0 == var12.field_ec.pressedButton) {
+                if (0 == var12.cancelRejectButton.pressedButton) {
                   bk.a(false, 0, BattleTutorial.pointerPressX, 0, var12, param4, TeleportAction.pointerPressY);
                 } else {
-                  te.a(param3, var12.field_Pb, (byte) 97);
+                  te.a(param3, var12.accountId, (byte) 97);
                 }
               }
             }
             var11 = var12;
             if (var12.hovered) {
-              if (var12.k(0)) {
-                var12 = (of) (var10.next((byte) 123));
+              if (var12.isRemovedFromIndex(0)) {
+                var12 = (LobbyPlayer) (var10.next((byte) 123));
                 continue;
               }
               var24Lifetime2 = null;
-              if (oh.field_H != var12.field_Pb) {
+              if (oh.localAccountId != var12.accountId) {
                 if (var5_int != 0 &&
-                  !var12.field_Zb) {
+                  !var12.packedFlag0) {
                   var24Lifetime2 = fo.a(param1 + 4545, TickCounter.field_b, new String[]{var20});
                   var30Lifetime1 = var24Lifetime2;
                   var25 = var30Lifetime1;
@@ -330,10 +330,10 @@ final class VertexNormal {
                   var30Lifetime1Lifetime1 = var24Lifetime2;
                   var25 = var30Lifetime1Lifetime1;
                 } else {
-                  if (var7 <= var12.field_Xb) {
-                    if (var6 <= var12.field_Sb) {
-                      if ((~var12.field_Ob & var8) != 0) {
-                        var25_int = fd.a(true, ~var12.field_Ob & var8);
+                  if (var7 <= var12.ratedGamesPlayed) {
+                    if (var6 <= var12.rating) {
+                      if ((~var12.optionUnlockMask & var8) != 0) {
+                        var25_int = fd.a(true, ~var12.optionUnlockMask & var8);
                         var24Lifetime2 = fo.a(4800, h.field_f, new String[]{var20});
                         if (0 < var25_int &&
                           jl.field_c != null &&
@@ -346,7 +346,7 @@ final class VertexNormal {
                       var24Lifetime2 = fo.a(4800, bk.field_g, new String[]{var20, Integer.toString(var6)});
                     }
                   } else {
-                    var25_int = -var12.field_Xb + var7;
+                    var25_int = -var12.ratedGamesPlayed + var7;
                     if (var25_int == 1) {
                       var24Lifetime2 = fo.a(4800, co.field_r, new String[]{var20});
                     }
@@ -355,19 +355,19 @@ final class VertexNormal {
                 }
               } else {
                 if (var5_int != 0 &&
-                  !var12.field_Zb) {
+                  !var12.packedFlag0) {
                   var24Lifetime2 = is.field_a;
                 } else {
-                  if (var7 > var12.field_Xb) {
-                    var25_int = -var12.field_Xb + var7;
+                  if (var7 > var12.ratedGamesPlayed) {
+                    var25_int = -var12.ratedGamesPlayed + var7;
                     if (var25_int == 1) {
                       var24Lifetime2 = tn.field_Y;
                     }
                     var24Lifetime2 = fo.a(4800, GlobalSpell.field_j, new String[]{null, Integer.toString(var25_int)});
                   } else {
-                    if (var6 <= var12.field_Sb) {
-                      if (0 != (var8 & ~var12.field_Ob)) {
-                        var25_int = fd.a(true, ~var12.field_Ob & var8);
+                    if (var6 <= var12.rating) {
+                      if (0 != (var8 & ~var12.optionUnlockMask)) {
+                        var25_int = fd.a(true, ~var12.optionUnlockMask & var8);
                         var24Lifetime2 = EventPresenter.field_l;
                         if (var25_int > 0 &&
                           null != jl.field_c &&
@@ -391,13 +391,13 @@ final class VertexNormal {
                 var25 = var30_refLifetime1;
                 var25 = null;
                 var26Lifetime1 = 0;
-                for (var27_int = 0; var27_int < tq.field_b; var27_int++) {
-                  var28 = vu.field_M.field_pc[var27_int] & 255;
+                for (var27_int = 0; var27_int < tq.gameOptionCount; var27_int++) {
+                  var28 = vu.currentRoom.gameOptions[var27_int] & 255;
                   var29 = 0;
                   if (ep.field_p != null &&
                     ep.field_p[var27_int] != null &&
                     ep.field_p[var27_int][var28] &&
-                    !var12.field_Zb) {
+                    !var12.packedFlag0) {
                     var29 = 1;
                   }
                   if (null != iv.field_e &&
@@ -405,10 +405,10 @@ final class VertexNormal {
                     var30_int = iv.field_e[var27_int][var28];
                     if (var30_int != 0 &&
                       !bj.field_k &&
-                      !var12.field_Zb) {
+                      !var12.packedFlag0) {
                       var29 = 1;
                     }
-                    if (var12.field_Sb < var30_int) {
+                    if (var12.rating < var30_int) {
                       var29 = 1;
                     }
                   }
@@ -417,16 +417,16 @@ final class VertexNormal {
                     var30_intLifetime1 = jv.field_d[var27_int][var28];
                     if (var30_intLifetime1 != 0 &&
                       !bj.field_k &&
-                      !var12.field_Zb) {
+                      !var12.packedFlag0) {
                       var29 = 1;
                     }
-                    if (var12.field_Xb < var30_intLifetime1) {
+                    if (var12.ratedGamesPlayed < var30_intLifetime1) {
                       var29 = 1;
                     }
                   }
                   if (CombatPresentation.field_j != null &&
                     null != CombatPresentation.field_j[var27_int] &&
-                    (~var12.field_Ob & CombatPresentation.field_j[var27_int][var28]) != 0) {
+                    (~var12.optionUnlockMask & CombatPresentation.field_j[var27_int][var28]) != 0) {
                     var29 = 1;
                   }
                   if (var29 != 0) {
@@ -445,11 +445,11 @@ final class VertexNormal {
                   }
                 }
                 if (param4 == bu.field_a &&
-                  vu.b(false)) {
+                  vu.isCurrentRoomOwner(false)) {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + IterableDualNodeDeque.field_d + (String) (var25);
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + fo.a(4800, tp.field_c, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + fo.a(4800, DualNodeHashTable.field_c, new String[]{(String) (var25)});
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
@@ -459,14 +459,14 @@ final class VertexNormal {
                   }
                 }
                 if (param4 == bu.field_a &&
-                  !vu.b(false)) {
-                  var27 = vu.field_M.field_rc;
+                  !vu.isCurrentRoomOwner(false)) {
+                  var27 = vu.currentRoom.ownerName;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + fo.a(param1 ^ 4671, DirectByteStorage.field_l, new String[]{var27});
                 }
                 ad.field_I = (String) (var24Lifetime2);
               }
             }
-            var12 = (of) (var10.next((byte) 123));
+            var12 = (LobbyPlayer) (var10.next((byte) 123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

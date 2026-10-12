@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SummonAction extends PreparedAction {
-    static NodeDeque field_u;
+    static NodeDeque lobbyPlayerOrder;
     static ResourceArchive field_w;
     static String field_D;
     static int field_E;
@@ -112,7 +112,7 @@ final class SummonAction extends PreparedAction {
 
     public static void a(byte param0) {
         field_A = null;
-        field_u = null;
+        lobbyPlayerOrder = null;
         field_w = null;
         field_y = null;
         if (param0 < 61) {

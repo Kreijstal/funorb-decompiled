@@ -243,7 +243,7 @@ final class TurnEffectEvent extends GameEvent {
           hf.field_c = false;
           if (!NodeIterator.field_a) {
             if (vi.field_d) {
-              var5 = ml.field_Lb;
+              var5 = TabbedPanel.field_Lb;
               if (var6 != 0) {
                 var5 = VerticalScrollbar.field_Tb;
                 var5 = dc.field_l;

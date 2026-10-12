@@ -3,7 +3,7 @@
  */
 final class AnimationPlayer {
     static int field_g;
-    static int field_a;
+    static int pendingJoinRequestCount;
     private int completedLoops;
     private AnimationSequence[] scheduledSequences;
     private int[] scheduledDelays;

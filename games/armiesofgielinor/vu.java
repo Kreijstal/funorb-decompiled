@@ -7,7 +7,7 @@ final class vu extends fw {
     static java.applet.Applet field_L;
     static String field_P;
     static int[] field_N;
-    static au field_M;
+    static LobbyRoom currentRoom;
 
     final void a(int param0, int param1, int param2, boolean param3) {
         this.field_K = !this.field_K ? true : false;
@@ -32,14 +32,14 @@ final class vu extends fw {
         field_P = null;
         field_L = null;
         field_N = null;
-        field_M = null;
+        currentRoom = null;
     }
 
-    final static boolean b(boolean param0) {
-        if (param0) {
-          vu.b(false);
+    final static boolean isCurrentRoomOwner(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
+          vu.isCurrentRoomOwner(false);
         }
-        return field_M.field_dc == oh.field_H ? true : false;
+        return currentRoom.ownerAccountId == oh.localAccountId ? true : false;
     }
 
     final static boolean j(int param0) {

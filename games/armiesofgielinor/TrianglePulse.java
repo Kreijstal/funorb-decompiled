@@ -164,19 +164,19 @@ final class TrianglePulse {
         }
     }
 
-    final static void a(au param0, boolean param1, PacketBuffer param2, int param3) {
-        int var8 = 0;
-        au stackIn_5_0 = null;
+    final static void decodeLobbyRoom(LobbyRoom room, boolean includePlayerCount, PacketBuffer packet, int obfuscationGuard) {
+        int playerIndex = 0;
+        LobbyRoom stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
-        au stackIn_8_0 = null;
+        LobbyRoom stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
-        au stackIn_11_0 = null;
+        LobbyRoom stackIn_11_0 = null;
         int stackIn_12_1 = 0;
-        au stackIn_15_0 = null;
+        LobbyRoom stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
-        au stackIn_18_0 = null;
+        LobbyRoom stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
-        au stackIn_21_0 = null;
+        LobbyRoom stackIn_21_0 = null;
         boolean stackIn_22_1 = false;
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
@@ -186,87 +186,87 @@ final class TrianglePulse {
         StringBuilder stackIn_44_1 = null;
         String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
+        int packedFlags = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var9 = 0;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int hasCompletedDuration = 0;
+        int hasPlayerNames = 0;
+        int namesStart = 0;
+        int obfuscationControl = 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param1) {
-            param0.field_Ub = param2.readUnsignedByte(0);
+          if (includePlayerCount) {
+            room.playerCount = packet.readUnsignedByte(0);
           }
-          param0.field_nc = param2.readUnsignedByte(0);
-          param0.field_Tb = param2.readUnsignedByte(0);
-          var4_int = param2.readUnsignedByte(0);
-          stackIn_5_0 = (au) (param0);
-          stackIn_6_1 = (0 != (128 & var4_int));
-          stackIn_5_0.field_uc = stackIn_6_1;
-          stackIn_8_0 = (au) (param0);
-          stackIn_9_1 = ((var4_int & 64) != 0);
-          stackIn_8_0.field_kc = stackIn_9_1;
-          stackIn_11_0 = (au) (param0);
-          if ((16 & var4_int) != 0) {
+          room.playerCapacity = packet.readUnsignedByte(0);
+          room.gameType = packet.readUnsignedByte(0);
+          packedFlags = packet.readUnsignedByte(0);
+          stackIn_5_0 = (LobbyRoom) (room);
+          stackIn_6_1 = (0 != (128 & packedFlags));
+          stackIn_5_0.openToJoin = stackIn_6_1;
+          stackIn_8_0 = (LobbyRoom) (room);
+          stackIn_9_1 = ((packedFlags & 64) != 0);
+          stackIn_8_0.playing = stackIn_9_1;
+          stackIn_11_0 = (LobbyRoom) (room);
+          if ((16 & packedFlags) != 0) {
             stackIn_12_1 = 2;
           } else {
             stackIn_12_1 = 1;
           }
-          stackIn_11_0.field_ac = stackIn_12_1;
-          stackIn_15_0 = (au) (param0);
-          stackIn_16_1 = (param0.field_uc) && (param0.field_Ub < param0.field_nc);
-          stackIn_15_0.field_Sb = stackIn_16_1;
-          stackIn_18_0 = (au) (param0);
-          stackIn_19_1 = (0 != (8 & var4_int));
-          stackIn_18_0.field_tc = stackIn_19_1;
-          stackIn_21_0 = (au) (param0);
-          stackIn_22_1 = ((32 & var4_int) != 0);
-          stackIn_21_0.field_vc = stackIn_22_1;
-          stackIn_25_0 = (0 == (var4_int & 4)) ? 0 : 1;
-          var5 = stackIn_25_0;
-          stackIn_28_0 = ((var4_int & 2) == 0) ? 0 : 1;
-          var6 = stackIn_28_0;
-          param2.readBytes(0, param0.field_pc.length, 0, param0.field_pc);
-          param0.field_qc = param2.readUnsignedShort((byte) -104);
-          param0.field_Mb = vi.monotonicMillis(39) - (long)param2.readInt(1);
-          if (var5 == 0) {
-            param0.field_bc = -1;
+          stackIn_11_0.spectatorMode = stackIn_12_1;
+          stackIn_15_0 = (LobbyRoom) (room);
+          stackIn_16_1 = (room.openToJoin) && (room.playerCount < room.playerCapacity);
+          stackIn_15_0.joinable = stackIn_16_1;
+          stackIn_18_0 = (LobbyRoom) (room);
+          stackIn_19_1 = (0 != (8 & packedFlags));
+          stackIn_18_0.allowsAdmissionRequests = stackIn_19_1;
+          stackIn_21_0 = (LobbyRoom) (room);
+          stackIn_22_1 = ((32 & packedFlags) != 0);
+          stackIn_21_0.rated = stackIn_22_1;
+          stackIn_25_0 = (0 == (packedFlags & 4)) ? 0 : 1;
+          hasCompletedDuration = stackIn_25_0;
+          stackIn_28_0 = ((packedFlags & 2) == 0) ? 0 : 1;
+          hasPlayerNames = stackIn_28_0;
+          packet.readBytes(0, room.gameOptions.length, 0, room.gameOptions);
+          room.displayRating = packet.readUnsignedShort((byte) -104);
+          room.activityStartedMillis = vi.monotonicMillis(39) - (long)packet.readInt(1);
+          if (hasCompletedDuration == 0) {
+            room.completedDurationMillis = -1;
           } else {
-            param0.field_bc = param2.readInt(1);
+            room.completedDurationMillis = packet.readInt(1);
           }
-          param0.field_dc = param2.j((byte) -2);
-          var7 = param2.position;
-          if (param3 < 73) {
+          room.ownerAccountId = packet.j((byte) -2);
+          namesStart = packet.position;
+          if (obfuscationGuard < 73) {
             return;
           }
-          param0.field_rc = param2.readNullTerminatedString(1);
-          if (var6 != 0) {
-            param0.field_jc = new String[param0.field_Ub];
-            param2.position = var7;
-            for (var8 = 0; var8 < param0.field_Ub; var8++) {
-              param0.field_jc[var8] = param2.readNullTerminatedString(1);
+          room.ownerName = packet.readNullTerminatedString(1);
+          if (hasPlayerNames != 0) {
+            room.playerNames = new String[room.playerCount];
+            packet.position = namesStart;
+            for (playerIndex = 0; playerIndex < room.playerCount; playerIndex++) {
+              room.playerNames[playerIndex] = packet.readNullTerminatedString(1);
             }
             return;
           }
-          param0.field_jc = null;
+          room.playerNames = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_41_0 = var4;
           stackIn_41_1 = new StringBuilder().append("hh.E(");
-          if (param0 == null) {
+          if (room == null) {
             stackIn_42_2 = "null";
           } else {
             stackIn_42_2 = "{...}";
           }
-          stackIn_44_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_44_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(includePlayerCount).append(',');
+          if (packet == null) {
             stackIn_45_2 = "null";
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

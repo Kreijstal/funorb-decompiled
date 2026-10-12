@@ -3,7 +3,7 @@
  */
 final class oi implements WidgetPainter {
     static String field_b;
-    static tp field_d;
+    static DualNodeHashTable lobbyPlayersById;
     static String[] field_a;
     static dd field_c;
 
@@ -11,7 +11,7 @@ final class oi implements WidgetPainter {
         if (!param0) {
           return;
         }
-        field_d = null;
+        lobbyPlayersById = null;
         field_c = null;
         field_b = null;
         field_a = null;

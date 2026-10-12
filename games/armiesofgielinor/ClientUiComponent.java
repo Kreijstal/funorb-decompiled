@@ -79,11 +79,11 @@ class ClientUiComponent extends ClientUiNode {
           field_K = (int[][]) null;
         }
         if (param0 ||
-          null == vu.field_M) {
+          null == vu.currentRoom) {
           vk.field_f = false;
         }
         if (!param0) {
-          if (null != vu.field_M) {
+          if (null != vu.currentRoom) {
             if (gk.field_J <= 0) {
               if (PreparedAction.field_r <= 0) {
                 if (mj.field_c > InstructionsPanel.field_D) {
@@ -99,7 +99,7 @@ class ClientUiComponent extends ClientUiNode {
               gk.field_J = gk.field_J - 1;
             }
           } else {
-            if (null == no.field_K) {
+            if (null == no.roomSetup) {
               vk.field_f = false;
               if (PreparedAction.field_r > 0) {
                 PreparedAction.field_r = PreparedAction.field_r - 1;
@@ -578,7 +578,7 @@ class ClientUiComponent extends ClientUiNode {
             return;
           }
           vc.field_l.setBounds(-2 + pd.field_c.height - 70, -20500, pd.field_c.width, 30, 0);
-          var2_int = 3 + tq.field_b;
+          var2_int = 3 + tq.gameOptionCount;
           if (2 > lm.field_e.length) {
             var2_int--;
           }
@@ -595,7 +595,7 @@ class ClientUiComponent extends ClientUiNode {
           }
           BattleTutorial.field_d.setBounds(var4, -20500, vc.field_l.width - 5 - 5, 5, 5);
           var5 = 5 + var4 + 2;
-          for (var6 = 0; 4 + tq.field_b > var6; var6++) {
+          for (var6 = 0; 4 + tq.gameOptionCount > var6; var6++) {
             if ((var6 != 1 ||
               !(lm.field_e.length < 2)) && (3 != var6 ||
               !(1 >= BoundedFile.field_h))) {

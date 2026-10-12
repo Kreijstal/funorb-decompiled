@@ -53,11 +53,11 @@ final class QuickChatCategoryRepository {
         field_h = null;
     }
 
-    final static void a(byte param0) {
+    final static void processLobbyUpdate(byte obfuscationGuard) {
         int stackIn_10_0 = 0;
-        of stackIn_16_0 = null;
+        LobbyPlayer stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
-        of stackIn_80_0 = null;
+        LobbyPlayer stackIn_80_0 = null;
         boolean stackIn_81_1 = false;
         RuntimeException decompiledCaughtException = null;
         CipherPacketBuffer var1 = null;
@@ -65,40 +65,40 @@ final class QuickChatCategoryRepository {
         int var2 = 0;
         int var3 = 0;
         long var3_long = 0L;
-        of var3_ref_of = null;
+        LobbyPlayer var3_ref_of = null;
         int var4 = 0;
-        au var4_ref_au = null;
+        LobbyRoom var4_ref_au = null;
         int var5 = 0;
-        au var6 = null;
-        of var7 = null;
+        LobbyRoom var6 = null;
+        LobbyPlayer var7 = null;
         int var8 = 0;
-        of var8_ref_of = null;
+        LobbyPlayer var8_ref_of = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        au var12 = null;
-        of var13 = null;
-        of var14 = null;
-        au var15 = null;
+        LobbyRoom var12 = null;
+        LobbyPlayer var13 = null;
+        LobbyPlayer var14 = null;
+        LobbyRoom var15 = null;
         Object var16 = null;
         Object var17 = null;
-        au var17_ref = null;
+        LobbyRoom var17_ref = null;
         Object var18 = null;
         String var19 = null;
-        of var20 = null;
+        LobbyPlayer var20 = null;
         String var21 = null;
         String var22 = null;
-        of var23 = null;
+        LobbyPlayer var23 = null;
         Object var24 = null;
-        of var25 = null;
-        of var26 = null;
+        LobbyPlayer var25 = null;
+        LobbyPlayer var26 = null;
         String var27 = null;
         String var28 = null;
-        of var29 = null;
-        au var30 = null;
-        of var31 = null;
-        au var32 = null;
-        au var33 = null;
+        LobbyPlayer var29 = null;
+        LobbyRoom var30 = null;
+        LobbyPlayer var31 = null;
+        LobbyRoom var32 = null;
+        LobbyRoom var33 = null;
         var16 = null;
         var24 = null;
         var17 = null;
@@ -118,75 +118,75 @@ final class QuickChatCategoryRepository {
                 var22 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(1);
                 var19 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(1);
                 var21 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(1);
-                var20 = DeployEvent.a((byte) 121, var3_long);
+                var20 = DeployEvent.getLobbyPlayer((byte) 121, var3_long);
                 var8_ref_of = var20;
                 stackIn_10_0 = (var19.equals("")) ? 0 : 1;
                 var9 = stackIn_10_0;
                 if (var20 == null) {
-                  var8_ref_of = new of(var22, var21, var3_long);
-                  oi.field_d.a(-1, var3_long, var8_ref_of);
+                  var8_ref_of = new LobbyPlayer(var22, var21, var3_long);
+                  oi.lobbyPlayersById.put(-1, var3_long, var8_ref_of);
                 } else {
                   if (var9 != 0) {
-                    var20.a((byte) 53, var21, var22);
+                    var20.setNames((byte) 53, var21, var22);
                   }
                 }
-                var8_ref_of.field_Vb = vi.monotonicMillis(82) - (long)((PacketBuffer) ((Object) var1)).readInt(1);
-                var8_ref_of.field_Sb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
+                var8_ref_of.lastActivityMillis = vi.monotonicMillis(82) - (long)((PacketBuffer) ((Object) var1)).readInt(1);
+                var8_ref_of.rating = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                 var10 = ((PacketBuffer) ((Object) var1)).h(-27);
                 stackIn_16_0 = var8_ref_of;
                 stackIn_17_1 = ((1 & var10) != 0);
-                stackIn_16_0.field_Zb = stackIn_17_1;
-                var8_ref_of.field_Xb = var10 >> 1;
-                var8_ref_of.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                var8_ref_of.field_Ob = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                sf.a((byte) -115, var8_ref_of);
+                stackIn_16_0.packedFlag0 = stackIn_17_1;
+                var8_ref_of.ratedGamesPlayed = var10 >> 1;
+                var8_ref_of.chatIconId = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
+                var8_ref_of.optionUnlockMask = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
+                sf.insertLobbyPlayerSorted((byte) -115, var8_ref_of);
                 break regionExit1;
               }
               if (var2 == 6) {
                 var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
                 var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                var23 = DeployEvent.a((byte) 121, var3_long);
+                var23 = DeployEvent.getLobbyPlayer((byte) 121, var3_long);
                 if ((var23 != null)) {
-                  if (var23.field_Ub) {
-                    AnimationPlayer.field_a = AnimationPlayer.field_a - 1;
-                    var23.field_Ub = false;
+                  if (var23.joinRequested) {
+                    AnimationPlayer.pendingJoinRequestCount = AnimationPlayer.pendingJoinRequestCount - 1;
+                    var23.joinRequested = false;
                   }
                   if (var5 == 0) {
                     var23.unlink(126);
                   } else {
-                    var23.field_Rb = qd.field_K;
-                    var23.field_Kb = var5;
+                    var23.notificationTicks = qd.lobbyNotificationDuration;
+                    var23.notificationCode = var5;
                   }
                   var23.unlinkSecondary((byte) -76);
                 }
               } else {
                 if (var2 == 7) {
-                  var31 = (of) (SummonAction.field_u.first((byte) 106));
+                  var31 = (LobbyPlayer) (SummonAction.lobbyPlayerOrder.first((byte) 106));
                   while (var31 != null) {
                     var31.unlink(122);
                     var31.unlinkSecondary((byte) -76);
-                    var31 = (of) (SummonAction.field_u.next((byte) 123));
+                    var31 = (LobbyPlayer) (SummonAction.lobbyPlayerOrder.next((byte) 123));
                   }
-                  AnimationPlayer.field_a = 0;
+                  AnimationPlayer.pendingJoinRequestCount = 0;
                 } else {
                   if (8 == var2) {
                     var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
-                    var4_ref_au = (au) (qm.field_J.a((byte) -27, (long)var3));
+                    var4_ref_au = (LobbyRoom) (qm.lobbyRoomsById.get((byte) -27, (long)var3));
                     if (var4_ref_au == null) {
-                      var4_ref_au = new au(tq.field_b);
-                      qm.field_J.a(-1, (long)var3, var4_ref_au);
+                      var4_ref_au = new LobbyRoom(tq.gameOptionCount);
+                      qm.lobbyRoomsById.put(-1, (long)var3, var4_ref_au);
                     }
-                    TrianglePulse.a(var4_ref_au, true, var1, 78);
-                    QuickChatPhraseRepository.a(-107, var4_ref_au);
+                    TrianglePulse.decodeLobbyRoom(var4_ref_au, true, var1, 78);
+                    QuickChatPhraseRepository.insertLobbyRoomSorted(-107, var4_ref_au);
                   } else {
                     if (var2 == 9) {
                       var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                       var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                      var32 = (au) (qm.field_J.a((byte) -27, (long)var3));
+                      var32 = (LobbyRoom) (qm.lobbyRoomsById.get((byte) -27, (long)var3));
                       if ((var32 != null)) {
                         if (var4 != 0) {
-                          var32.field_Lb = qd.field_K;
-                          var32.field_mc = var4;
+                          var32.notificationTicks = qd.lobbyNotificationDuration;
+                          var32.notificationCode = var4;
                         } else {
                           var32.unlink(118);
                         }
@@ -194,11 +194,11 @@ final class QuickChatCategoryRepository {
                       }
                     } else {
                       if (var2 == 10) {
-                        var33 = (au) (qc.field_g.first((byte) 105));
+                        var33 = (LobbyRoom) (qc.lobbyRoomOrder.first((byte) 105));
                         while (var33 != null) {
                           var33.unlink(-112);
                           var33.unlinkSecondary((byte) -76);
-                          var33 = (au) (qc.field_g.next((byte) 123));
+                          var33 = (LobbyRoom) (qc.lobbyRoomOrder.next((byte) 123));
                         }
                       } else {
                         if (var2 != 11 &&
@@ -206,17 +206,17 @@ final class QuickChatCategoryRepository {
                           if (var2 == 13) {
                             var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                             var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                            var17_ref = (au) (qm.field_J.a((byte) -27, (long)var3));
+                            var17_ref = (LobbyRoom) (qm.lobbyRoomsById.get((byte) -27, (long)var3));
                             if ((var17_ref != null)) {
-                              var17_ref.field_gc = false;
+                              var17_ref.joinRequestSent = false;
                               var12 = var17_ref;
                               var6 = var12;
-                              var12.field_Nb = false;
+                              var12.invitationReceived = false;
                               if (var4 != 0) {
-                                var17_ref.field_mc = var4;
-                                var17_ref.field_Lb = qd.field_K;
+                                var17_ref.notificationCode = var4;
+                                var17_ref.notificationTicks = qd.lobbyNotificationDuration;
                               }
-                              QuickChatPhraseRepository.a(-127, var17_ref);
+                              QuickChatPhraseRepository.insertLobbyRoomSorted(-127, var17_ref);
                             }
                           } else {
                             if (14 != var2 &&
@@ -228,26 +228,26 @@ final class QuickChatCategoryRepository {
                                     var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
                                     var27 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(1);
                                     var28 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(1);
-                                    var7 = UnitModelPreview.a(var3_long, -79);
+                                    var7 = UnitModelPreview.getCurrentRoomPlayer(var3_long, -79);
                                     if (var7 == null) {
-                                      var7 = new of(var27, var28, var3_long);
-                                      UnitCycler.field_e.a(-1, var3_long, var7);
-                                      vu.field_M.field_Ub = vu.field_M.field_Ub + 1;
+                                      var7 = new LobbyPlayer(var27, var28, var3_long);
+                                      UnitCycler.currentRoomPlayersById.put(-1, var3_long, var7);
+                                      vu.currentRoom.playerCount = vu.currentRoom.playerCount + 1;
                                     }
-                                    var7.field_Sb = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
+                                    var7.rating = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                                     var8 = ((PacketBuffer) ((Object) var1)).h(120);
-                                    var7.field_Xb = var8 >> 1;
+                                    var7.ratedGamesPlayed = var8 >> 1;
                                     stackIn_80_0 = var7;
                                     stackIn_81_1 = ((var8 & 1) != 0);
-                                    stackIn_80_0.field_Zb = stackIn_81_1;
-                                    var7.field_Qb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                                    var7.field_Ob = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                                    wl.field_F.addLast((byte) -119, (IntrusiveNode) (var7));
+                                    stackIn_80_0.packedFlag0 = stackIn_81_1;
+                                    var7.chatIconId = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
+                                    var7.optionUnlockMask = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
+                                    wl.currentRoomPlayers.addLast((byte) -119, (IntrusiveNode) (var7));
                                     break regionExit1;
                                   case 19:
                                     var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
                                     var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                                    var14 = UnitModelPreview.a(var3_long, -111);
+                                    var14 = UnitModelPreview.getCurrentRoomPlayer(var3_long, -111);
                                     var29 = var14;
                                     if (var14 == null) {
                                       break regionExit1;
@@ -255,14 +255,14 @@ final class QuickChatCategoryRepository {
                                     if (0 == var5) {
                                       var29.unlink(68);
                                     } else {
-                                      var14.field_Rb = qd.field_K;
-                                      var14.field_Kb = var5;
+                                      var14.notificationTicks = qd.lobbyNotificationDuration;
+                                      var14.notificationCode = var5;
                                     }
                                     var29.unlinkSecondary((byte) -76);
-                                    vu.field_M.field_Ub = vu.field_M.field_Ub - 1;
+                                    vu.currentRoom.playerCount = vu.currentRoom.playerCount - 1;
                                     break regionExit1;
                                   case 20:
-                                    TrianglePulse.a(vu.field_M, false, var1, 83);
+                                    TrianglePulse.decodeLobbyRoom(vu.currentRoom, false, var1, 83);
                                     break regionExit1;
                                   case 21:
                                     var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
@@ -277,7 +277,7 @@ final class QuickChatCategoryRepository {
                                     SummonAction.field_s = ((PacketBuffer) ((Object) var1)).h(95);
                                     break regionExit1;
                                   case 23:
-                                    oh.field_H = ((PacketBuffer) ((Object) var1)).j((byte) -2);
+                                    oh.localAccountId = ((PacketBuffer) ((Object) var1)).j((byte) -2);
                                     break regionExit1;
                                   default:
                                     af.a((Throwable) null, 118, "L1: " + CampaignProgress.b(false));
@@ -287,50 +287,50 @@ final class QuickChatCategoryRepository {
                               }
                               var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
                               var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                              var13 = DeployEvent.a((byte) 121, var3_long);
+                              var13 = DeployEvent.getLobbyPlayer((byte) 121, var3_long);
                               var26 = var13;
                               if ((var13 != null)) {
                                 if (var5 != 0) {
-                                  var13.field_Rb = qd.field_K;
-                                  var13.field_Kb = var5;
+                                  var13.notificationTicks = qd.lobbyNotificationDuration;
+                                  var13.notificationCode = var5;
                                 }
                                 if (var2 != 15) {
-                                  if (var26.field_Ub) {
-                                    var26.field_Ub = false;
-                                    AnimationPlayer.field_a = AnimationPlayer.field_a - 1;
+                                  if (var26.joinRequested) {
+                                    var26.joinRequested = false;
+                                    AnimationPlayer.pendingJoinRequestCount = AnimationPlayer.pendingJoinRequestCount - 1;
                                   }
                                 } else {
-                                  var13.field_Wb = false;
+                                  var13.invitationSent = false;
                                 }
-                                sf.a((byte) 107, var26);
+                                sf.insertLobbyPlayerSorted((byte) 107, var26);
                               }
                             } else {
                               var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
-                              var25 = DeployEvent.a((byte) 121, var3_long);
+                              var25 = DeployEvent.getLobbyPlayer((byte) 121, var3_long);
                               if ((var25 != null)) {
                                 if (var2 == 14) {
-                                  var25.field_Wb = true;
+                                  var25.invitationSent = true;
                                 } else {
-                                  if (!var25.field_Ub) {
-                                    var25.field_Ub = true;
-                                    AnimationPlayer.field_a = AnimationPlayer.field_a + 1;
+                                  if (!var25.joinRequested) {
+                                    var25.joinRequested = true;
+                                    AnimationPlayer.pendingJoinRequestCount = AnimationPlayer.pendingJoinRequestCount + 1;
                                   }
                                 }
-                                sf.a((byte) 66, var25);
+                                sf.insertLobbyPlayerSorted((byte) 66, var25);
                               }
                             }
                           }
                         } else {
                           var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
-                          var15 = (au) (qm.field_J.a((byte) -27, (long)var3));
+                          var15 = (LobbyRoom) (qm.lobbyRoomsById.get((byte) -27, (long)var3));
                           var30 = var15;
                           if ((var15 != null)) {
                             if (var2 != 11) {
-                              var30.field_gc = true;
+                              var30.joinRequestSent = true;
                             } else {
-                              var15.field_Nb = true;
+                              var15.invitationReceived = true;
                             }
-                            QuickChatPhraseRepository.a(-121, var30);
+                            QuickChatPhraseRepository.insertLobbyRoomSorted(-121, var30);
                           }
                         }
                       }
@@ -340,44 +340,44 @@ final class QuickChatCategoryRepository {
               }
               break regionExit1;
             }
-            var3_ref_of = (of) (wl.field_F.first((byte) 93));
+            var3_ref_of = (LobbyPlayer) (wl.currentRoomPlayers.first((byte) 93));
             while (var3_ref_of != null) {
               var3_ref_of.unlink(99);
               var3_ref_of.unlinkSecondary((byte) -76);
-              var3_ref_of = (of) (wl.field_F.next((byte) 123));
+              var3_ref_of = (LobbyPlayer) (wl.currentRoomPlayers.next((byte) 123));
             }
-            var3_ref_of = (of) (oi.field_d.a((byte) 66));
+            var3_ref_of = (LobbyPlayer) (oi.lobbyPlayersById.first((byte) 66));
             while (var3_ref_of != null) {
-              if (var3_ref_of.field_Wb ||
-                var3_ref_of.field_Ub) {
-                if (var3_ref_of.field_Ub) {
-                  AnimationPlayer.field_a = AnimationPlayer.field_a - 1;
-                  var3_ref_of.field_Ub = false;
+              if (var3_ref_of.invitationSent ||
+                var3_ref_of.joinRequested) {
+                if (var3_ref_of.joinRequested) {
+                  AnimationPlayer.pendingJoinRequestCount = AnimationPlayer.pendingJoinRequestCount - 1;
+                  var3_ref_of.joinRequested = false;
                 }
-                var3_ref_of.field_Wb = false;
-                sf.a((byte) 122, var3_ref_of);
+                var3_ref_of.invitationSent = false;
+                sf.insertLobbyPlayerSorted((byte) 122, var3_ref_of);
               }
-              var3_ref_of = (of) (oi.field_d.c(1));
+              var3_ref_of = (LobbyPlayer) (oi.lobbyPlayersById.next(1));
             }
             if (1 == var2 &&
-              vu.field_M != null) {
-              PopupPresentation.field_e = vu.field_M.field_rc;
+              vu.currentRoom != null) {
+              PopupPresentation.field_e = vu.currentRoom.ownerName;
             }
             if (4 == var2) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
-              vu.field_M = new au(tq.field_b);
-              vu.field_M.setSecondaryKey(true, (long)var3);
-              TrianglePulse.a(vu.field_M, false, var1, 97);
+              vu.currentRoom = new LobbyRoom(tq.gameOptionCount);
+              vu.currentRoom.setSecondaryKey(true, (long)var3);
+              TrianglePulse.decodeLobbyRoom(vu.currentRoom, false, var1, 97);
               ph.field_d = 0L;
             } else {
-              vu.field_M = null;
+              vu.currentRoom = null;
             }
             if (2 != var2 &&
               var2 != 3) {
-              no.field_K = null;
+              no.roomSetup = null;
             } else {
-              if (null == no.field_K) {
-                no.field_K = new au(tq.field_b);
+              if (null == no.roomSetup) {
+                no.roomSetup = new LobbyRoom(tq.gameOptionCount);
               }
             }
             if (3 != var2) {
@@ -394,14 +394,14 @@ final class QuickChatCategoryRepository {
               }
             }
           }
-          if (param0 >= -36) {
+          if (obfuscationGuard >= -36) {
             QuickChatCategoryRepository.b(122);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1_ref), "bl.C(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1_ref), "bl.C(" + obfuscationGuard + ')');
         }
     }
 

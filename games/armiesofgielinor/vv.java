@@ -258,7 +258,7 @@ final class vv {
             }
           } else {
             if (var12.attacksRemaining == 0) {
-              of.field_Mb[2].draw(param0 + 8, param5 + 12);
+              LobbyPlayer.field_Mb[2].draw(param0 + 8, param5 + 12);
               if (var12.accessoryType == 1) {
                 i.a(false, param5, param0);
               }
@@ -313,7 +313,7 @@ final class vv {
                 }
               }
             } else {
-              of.field_Mb[1].draw(param0 + 8, param5 + 12);
+              LobbyPlayer.field_Mb[1].draw(param0 + 8, param5 + 12);
               if (var12.accessoryType == 1) {
                 i.a(false, param5, param0);
               }

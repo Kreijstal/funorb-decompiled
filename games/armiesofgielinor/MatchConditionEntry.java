@@ -57,7 +57,7 @@ final class MatchConditionEntry extends IntrusiveNode {
           var2 = var1.readUnsignedByte(0);
           if (var2 == 0) {
             if (null == bk.field_a) {
-              bk.field_a = new tp(128);
+              bk.field_a = new DualNodeHashTable(128);
               vg.field_p = 0;
             }
             stackIn_12_0 = (1 != var1.readUnsignedByte(0)) ? 0 : 1;
@@ -79,12 +79,12 @@ final class MatchConditionEntry extends IntrusiveNode {
             if (null == var6) {
               var6 = db.a(var7_ref, param0 - 47);
               if (null != var6) {
-                bk.field_a.a(-1, (long)var8.hashCode(), var6);
+                bk.field_a.put(-1, (long)var8.hashCode(), var6);
               }
             }
             if (null == var6) {
               var6 = new hl();
-              bk.field_a.a(-1, (long)var8.hashCode(), var6);
+              bk.field_a.put(-1, (long)var8.hashCode(), var6);
               fieldTemp$1 = vg.field_p;
               vg.field_p = vg.field_p + 1;
               var6.field_Ob = fieldTemp$1;
@@ -124,7 +124,7 @@ final class MatchConditionEntry extends IntrusiveNode {
             return;
           }
           if (DiskCacheRequest.field_K == null) {
-            DiskCacheRequest.field_K = new tp(128);
+            DiskCacheRequest.field_K = new DualNodeHashTable(128);
             dj.field_a = 0;
           }
           var3Lifetime1 = var1.readNullTerminatedString(1);
@@ -137,12 +137,12 @@ final class MatchConditionEntry extends IntrusiveNode {
           if (null == var6Lifetime1) {
             var6Lifetime1 = lg.a(var5Lifetime1, (byte) -34);
             if (null != var6Lifetime1) {
-              DiskCacheRequest.field_K.a(-1, (long)k.a((CharSequence) ((Object) var4_ref_StringLifetime1), false).hashCode(), var6Lifetime1);
+              DiskCacheRequest.field_K.put(-1, (long)k.a((CharSequence) ((Object) var4_ref_StringLifetime1), false).hashCode(), var6Lifetime1);
             }
           }
           if (var6Lifetime1 == null) {
             var6Lifetime1 = new hl();
-            DiskCacheRequest.field_K.a(-1, (long)k.a((CharSequence) ((Object) var4_ref_StringLifetime1), false).hashCode(), var6Lifetime1);
+            DiskCacheRequest.field_K.put(-1, (long)k.a((CharSequence) ((Object) var4_ref_StringLifetime1), false).hashCode(), var6Lifetime1);
             fieldTemp$0 = dj.field_a;
             dj.field_a = dj.field_a + 1;
             var6Lifetime1.field_Ob = fieldTemp$0;

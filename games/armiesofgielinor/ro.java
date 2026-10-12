@@ -117,7 +117,7 @@ class ro extends pt implements he {
             return;
           }
           if (this.field_sb) {
-            of.d((byte) -24);
+            LobbyPlayer.d((byte) -24);
             return;
           }
           return;
@@ -130,7 +130,7 @@ class ro extends pt implements he {
         if (!this.field_sb) {
           return;
         }
-        of.d((byte) -24);
+        LobbyPlayer.d((byte) -24);
     }
 
     public static void n(int param0) {
@@ -182,7 +182,7 @@ class ro extends pt implements he {
           var3 = 0;
         }
         if (0 == rs.field_t &&
-          null != no.field_K) {
+          null != no.roomSetup) {
           var3 = 0;
         }
         if (rs.field_t == 2 &&
@@ -214,7 +214,7 @@ class ro extends pt implements he {
           }
           var5 = rs.field_t;
           if (var5 == 0 &&
-            null != vu.field_M) {
+            null != vu.currentRoom) {
             var5 = 1;
           }
           if (kp.a(var5, param1 ^ -97) == 2) {
@@ -280,11 +280,11 @@ class ro extends pt implements he {
           }
           return true;
         }
-        if (null == vu.field_M &&
+        if (null == vu.currentRoom &&
           bq.field_c) {
           var7 = "[" + ClientConnectionState.field_c + "] ";
         }
-        if (vu.field_M == null) {
+        if (vu.currentRoom == null) {
           var54 = var7 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var54);
           if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {
@@ -293,7 +293,7 @@ class ro extends pt implements he {
           return true;
         }
         if (!TextCursor.field_f) {
-          var7Lifetime1 = "[" + fo.a(param1 ^ -4859, CampaignMenu.field_m, new String[]{vu.field_M.field_rc}) + "] ";
+          var7Lifetime1 = "[" + fo.a(param1 ^ -4859, CampaignMenu.field_m, new String[]{vu.currentRoom.ownerName}) + "] ";
           var54Lifetime1 = var7Lifetime1 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var54Lifetime1);
           if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {
@@ -310,7 +310,7 @@ class ro extends pt implements he {
           }
           return true;
         }
-        var7Lifetime2 = "[" + fo.a(param1 ^ -4859, CampaignMenu.field_m, new String[]{vu.field_M.field_rc}) + "] ";
+        var7Lifetime2 = "[" + fo.a(param1 ^ -4859, CampaignMenu.field_m, new String[]{vu.currentRoom.ownerName}) + "] ";
         var54Lifetime2 = var7Lifetime2 + var18 + ": ";
         var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.a(var54Lifetime2);
         if (IntrusiveNode.field_e.a(UpkeepEvent.field_C.toString()) > var5Lifetime1) {

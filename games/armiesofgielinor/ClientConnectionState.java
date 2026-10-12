@@ -176,9 +176,9 @@ final class ClientConnectionState {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_g[0][var0] = tp.a(var12, tp.a(tp.a(var8 << 16, tp.a(tp.a(var2 << 32, tp.a(var6 << 40, tp.a(var2 << 48, var2 << 56))), var10 << 24)), var4 << 8));
+            field_g[0][var0] = DualNodeHashTable.a(var12, DualNodeHashTable.a(DualNodeHashTable.a(var8 << 16, DualNodeHashTable.a(DualNodeHashTable.a(var2 << 32, DualNodeHashTable.a(var6 << 40, DualNodeHashTable.a(var2 << 48, var2 << 56))), var10 << 24)), var4 << 8));
             for (var14 = 1; var14 < 8; var14++) {
-                field_g[var14][var0] = tp.a(field_g[-1 + var14][var0] << 56, field_g[-1 + var14][var0] >>> 8);
+                field_g[var14][var0] = DualNodeHashTable.a(field_g[-1 + var14][var0] << 56, field_g[-1 + var14][var0] >>> 8);
             }
             var0++;
         }

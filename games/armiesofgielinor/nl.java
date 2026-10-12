@@ -337,7 +337,7 @@ abstract class nl extends Widget implements gw {
           t.field_g.horizontalAlignment = 1;
           cp.field_d = new ClientUiComponent(0L, kd.field_M, eq.field_e.toUpperCase());
           tg.field_n = new ClientUiComponent(0L, SummonAction.field_y, nr.field_d.toUpperCase());
-          of.field_Lb = new ClientUiComponent(0L, sh.field_m);
+          LobbyPlayer.field_Lb = new ClientUiComponent(0L, sh.field_m);
           r.field_v = new ClientUiComponent(0L, te.field_p, IntrusiveNode.field_a);
           ek.field_c = new ClientUiComponent(0L, CampaignResult.field_a, wb.field_c);
           CombatViewTransition.field_p = new ClientUiComponent(0L, CampaignResult.field_a, fk.field_g);
@@ -363,16 +363,16 @@ abstract class nl extends Widget implements gw {
           VineGrowthAction.field_x = new ClientUiComponent(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
           ov.field_i = new ClientUiComponent(0L, (ClientUiComponent) null);
           ov.field_i.addChild(tg.field_n, 92);
-          ov.field_i.addChild(of.field_Lb, 47);
-          of.field_Lb.addChild(r.field_v, 38);
-          of.field_Lb.addChild(ek.field_c, 114);
-          of.field_Lb.addChild(CombatViewTransition.field_p, 121);
+          ov.field_i.addChild(LobbyPlayer.field_Lb, 47);
+          LobbyPlayer.field_Lb.addChild(r.field_v, 38);
+          LobbyPlayer.field_Lb.addChild(ek.field_c, 114);
+          LobbyPlayer.field_Lb.addChild(CombatViewTransition.field_p, 121);
           if (fh.field_c) {
-            of.field_Lb.addChild(bs.field_a, 114);
+            LobbyPlayer.field_Lb.addChild(bs.field_a, 114);
           }
-          of.field_Lb.addChild(SphinxActionRequest.field_A, 78);
-          of.field_Lb.addChild(wl.field_K, 99);
-          of.field_Lb.addChild(CipherPacketBuffer.field_x, 70);
+          LobbyPlayer.field_Lb.addChild(SphinxActionRequest.field_A, 78);
+          LobbyPlayer.field_Lb.addChild(wl.field_K, 99);
+          LobbyPlayer.field_Lb.addChild(CipherPacketBuffer.field_x, 70);
           if (fh.field_c) {
             ov.field_i.addChild(fj.field_d, 127);
           }

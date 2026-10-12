@@ -161,7 +161,7 @@ final class QuickChatMenu extends ClientUiComponent {
               var5 = 32768 | this.phraseIds[itemIndex];
               var6 = rs.field_t;
               if (var6 == 0 &&
-                null != vu.field_M) {
+                null != vu.currentRoom) {
                 var6 = 1;
               }
               if (kp.a(var6, 114) == 2) {

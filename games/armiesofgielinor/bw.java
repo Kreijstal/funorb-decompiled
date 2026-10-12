@@ -27,7 +27,7 @@ final class bw {
               if ((1 << rd.field_j.controlledPlayerId | rd.field_j.field_hb) != (1 << rd.field_j.battlefield.playerCount) - 1) {
                 DisplacedUnitMarker.field_t[12] = fa.field_e;
               } else {
-                DisplacedUnitMarker.field_t[12] = ml.field_Nb;
+                DisplacedUnitMarker.field_t[12] = TabbedPanel.field_Nb;
               }
             }
           } else {
@@ -189,15 +189,15 @@ final class bw {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        au var6 = null;
-        au var7 = null;
+        LobbyRoom var6 = null;
+        LobbyRoom var7 = null;
         CipherPacketBuffer var4 = null;
         if (param1 != oo.field_a) {
-          var6 = (au) (qm.field_J.a((byte) -27, (long)oo.field_a));
+          var6 = (LobbyRoom) (qm.lobbyRoomsById.get((byte) -27, (long)oo.field_a));
           var7 = var6;
           oo.field_a = param1;
           if (var7 != null) {
-            var7.field_jc = null;
+            var7.playerNames = null;
           }
           var4 = vl.outgoingPacket;
           var4.writeCipheredOpcode(param2 ^ -32211, param0);

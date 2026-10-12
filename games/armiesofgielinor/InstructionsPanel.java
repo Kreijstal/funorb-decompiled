@@ -2355,7 +2355,7 @@ final class InstructionsPanel {
                 var10 = (String) null;
                 CampaignRewardPreview.field_g = oi.a((String) null, param3, false, 1, dc.field_o);
               } else {
-                CampaignRewardPreview.field_g = ml.a(false, param4, (byte) 10, param3);
+                CampaignRewardPreview.field_g = TabbedPanel.a(false, param4, (byte) 10, param3);
               }
               vl.outgoingPacket.position = 0;
               vl.outgoingPacket.writeByte(1, 14);
@@ -2440,9 +2440,9 @@ final class InstructionsPanel {
                   ByteStorage.incomingPacket.readUnsignedByte(0);
                   ByteStorage.incomingPacket.readUnsignedByte(param0 ^ -53);
                   ByteStorage.incomingPacket.readInt(param0 + 54);
-                  of.field_Nb = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
-                  nk.field_C = new byte[of.field_Nb];
-                  for (var8 = 0; of.field_Nb > var8; var8++) {
+                  LobbyPlayer.field_Nb = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
+                  nk.field_C = new byte[LobbyPlayer.field_Nb];
+                  for (var8 = 0; LobbyPlayer.field_Nb > var8; var8++) {
                     nk.field_C[var8] = ByteStorage.incomingPacket.readByte((byte) -49);
                   }
                 }
@@ -2453,9 +2453,9 @@ final class InstructionsPanel {
                   ByteStorage.incomingPacket.readUnsignedByte(0);
                   ByteStorage.incomingPacket.readUnsignedByte(param0 ^ -53);
                   ByteStorage.incomingPacket.readInt(param0 + 54);
-                  of.field_Nb = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
-                  nk.field_C = new byte[of.field_Nb];
-                  for (var8 = 0; of.field_Nb > var8; var8++) {
+                  LobbyPlayer.field_Nb = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
+                  nk.field_C = new byte[LobbyPlayer.field_Nb];
+                  for (var8 = 0; LobbyPlayer.field_Nb > var8; var8++) {
                     nk.field_C[var8] = ByteStorage.incomingPacket.readByte((byte) -49);
                   }
                 }

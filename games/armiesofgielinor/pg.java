@@ -103,8 +103,8 @@ final class pg {
           ng.a((ScrollContainer) (stackIn_2_0), stackIn_2_1, (int[]) (stackIn_2_2), stackIn_2_3, stackIn_3_4, 1, param1.field_b, param1.field_m, param1.field_n);
           if (param1.field_b == 0 &&
             !bn.a(false) &&
-            null == vu.field_M &&
-            no.field_K == null) {
+            null == vu.currentRoom &&
+            no.roomSetup == null) {
             if (!vi.field_d) {
               var5 = tn.field_Z;
               var6 = wh.field_b;
@@ -116,8 +116,8 @@ final class pg {
           }
           if (1 == param1.field_b &&
             !bn.a(false) &&
-            vu.field_M != null &&
-            param1.field_v == vu.field_M.d((byte) -88)) {
+            vu.currentRoom != null &&
+            param1.field_v == vu.currentRoom.getRoomId((byte) -88)) {
             if (!vi.field_d) {
               var9 = tn.field_Z;
               var10 = CampaignMenu.field_q;

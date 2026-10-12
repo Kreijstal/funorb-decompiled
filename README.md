@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 190 reviewed class names, not a complete semantic map. Shared widget
+Armies has 194 reviewed class names, not a complete semantic map. Shared widget
 bounds, dropdown options/prefix selection, painter dispatch and expansion now
 have reviewed names with pointer, selection and arrow-pixel fixtures. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
@@ -91,6 +91,14 @@ rows, popup placement and waiting/cancellation. Native edit/clipboard/menu
 fixtures preserve existing quirks, including a short bounded paste deleting the
 old selection before failure. Actual system clipboard, pointer word-drag timing,
 network execution and full rendered interaction remain unverified.
+
+LobbyRoom, LobbyPlayer, DualNodeHashTable and TabbedPanel now name lobby records,
+secondary indexes, ordered display lists, admission state and tab switching.
+The Armies reading guide records incoming lobby update payloads for types 0–23.
+Native fixtures verify room flags/name rewind, player rename gating, invitation
+and request transitions, member reuse/removal, notification expiry, ownership,
+setup masks and list clearing. Live server compatibility and a complete rendered
+lobby session remain unverified.
 
 Camera overview grouping, centroid bounds, hold state and explicit tile focus
 now have reviewed names, alongside directional panning, dragging and velocity

@@ -38,7 +38,7 @@ abstract class vf {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, au param3) {
+    final static void a(int param0, boolean param1, int param2, LobbyRoom param3) {
         IconTextComponent dupTemp$0 = null;
         int var17_int = 0;
         int var24 = 0;
@@ -144,8 +144,8 @@ abstract class vf {
             stackIn_12_0 = (SpellCastAction.field_s) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
-            if (vu.b(false)) {
-              stackIn_8_0 = (!param3.field_kc) ? 1 : 0;
+            if (vu.isCurrentRoomOwner(false)) {
+              stackIn_8_0 = (!param3.playing) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
             }
@@ -175,9 +175,9 @@ abstract class vf {
             for (var6 = 0; var6 < 5; var6++) {
               if (var4_int != 0 &&
                 pu.field_k[0][var6 + 1].pressedButton != 0 &&
-                var6 != param3.field_Tb) {
+                var6 != param3.gameType) {
                 var5 = 1;
-                param3.field_Tb = var6;
+                param3.gameType = var6;
               }
               stackIn_35_0 = pu.field_k[0][1 + var6];
               stackIn_36_1 = (var4_int != 0);
@@ -187,12 +187,12 @@ abstract class vf {
                 pu.field_k[0][var6 + 1].inputEnabled = false;
               }
               stackIn_41_0 = pu.field_k[0][1 + var6];
-              stackIn_42_1 = (var6 == param3.field_Tb);
+              stackIn_42_1 = (var6 == param3.gameType);
               stackIn_41_0.selected = stackIn_42_1;
             }
             if (pu.field_k[0][2].hovered) {
-              if (!vu.b(false)) {
-                ad.field_I = fo.a(4800, op.field_a, new String[]{vu.field_M.field_rc});
+              if (!vu.isCurrentRoomOwner(false)) {
+                ad.field_I = fo.a(4800, op.field_a, new String[]{vu.currentRoom.ownerName});
               } else {
                 ad.field_I = ActionSpell.field_f;
               }
@@ -231,8 +231,8 @@ abstract class vf {
                 0 != pu.field_k[1][var7 + 1].pressedButton) {
                 if (!param1) {
                   var9 = lm.field_e[var7];
-                  if (var9 != param3.field_nc) {
-                    param3.field_nc = var9;
+                  if (var9 != param3.playerCapacity) {
+                    param3.playerCapacity = var9;
                     var5 = 1;
                   }
                 } else {
@@ -250,7 +250,7 @@ abstract class vf {
               if (!param1) {
                 var9 = lm.field_e[var7];
                 stackIn_100_0 = pu.field_k[1][var7 + 1];
-                stackIn_101_1 = (var9 == param3.field_nc);
+                stackIn_101_1 = (var9 == param3.playerCapacity);
                 stackIn_100_0.selected = stackIn_101_1;
               } else {
                 if (var7 == -1) {
@@ -285,8 +285,8 @@ abstract class vf {
                   AiPlanningStrategy.field_b = AiPlanningStrategy.field_b ^ var6Lifetime1;
                 }
               } else {
-                if (var6Lifetime1 != param3.field_ac) {
-                  param3.field_ac = var6Lifetime1;
+                if (var6Lifetime1 != param3.spectatorMode) {
+                  param3.spectatorMode = var6Lifetime1;
                   var5 = 1;
                 }
               }
@@ -296,7 +296,7 @@ abstract class vf {
             stackIn_123_0.inputEnabled = stackIn_124_1;
             if (!param1) {
               stackIn_136_0 = var28;
-              stackIn_137_1 = ((var6Lifetime1 & param3.field_ac) != 0);
+              stackIn_137_1 = ((var6Lifetime1 & param3.spectatorMode) != 0);
               stackIn_136_0.selected = stackIn_137_1;
             } else {
               if (var6Lifetime1 != 0) {
@@ -342,7 +342,7 @@ abstract class vf {
           if (param0 != 1) {
             field_e = (String) null;
           }
-          for (var7 = 0; tq.field_b > var7; var7++) {
+          for (var7 = 0; tq.gameOptionCount > var7; var7++) {
             var30 = pu.field_k[var7 + 4];
             var8_array = var30;
             stackIn_170_0 = (param1) ? -1 : 0;
@@ -434,8 +434,8 @@ abstract class vf {
                 jp.field_a = false;
                 fc.field_a = false;
                 if (null == TeleportAction.field_B) {
-                  TeleportAction.field_B = new byte[tq.field_b];
-                  dt.field_d = new boolean[tq.field_b];
+                  TeleportAction.field_B = new byte[tq.gameOptionCount];
+                  dt.field_d = new boolean[tq.gameOptionCount];
                 }
                 for (var17_int = 0; var17_int < var7; var17_int++) {
                   dt.field_d[var17_int] = false;
@@ -454,9 +454,9 @@ abstract class vf {
                 var17.pressedButton != 0) {
                 if (!param1) {
                   if (var16Lifetime1 == 0 &&
-                    param3.field_pc[var7] != (byte)var9) {
+                    param3.gameOptions[var7] != (byte)var9) {
                     var5 = 1;
-                    param3.field_pc[var7] = (byte)var9;
+                    param3.gameOptions[var7] = (byte)var9;
                   }
                 } else {
                   if (var9 == -1) {
@@ -621,7 +621,7 @@ abstract class vf {
                 }
               } else {
                 stackIn_327_0 = var17;
-                stackIn_328_1 = (fc.field_a) && ((byte)var9 == param3.field_pc[var7]);
+                stackIn_328_1 = (fc.field_a) && ((byte)var9 == param3.gameOptions[var7]);
                 stackIn_327_0.selected = stackIn_328_1;
               }
               stackIn_344_0 = var17;

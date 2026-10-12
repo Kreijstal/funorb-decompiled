@@ -232,9 +232,9 @@ abstract class sf extends wl {
         }
     }
 
-    final static void a(byte param0, of param1) {
+    final static void insertLobbyPlayerSorted(byte obfuscationGuard, LobbyPlayer player) {
         int var2_int = 0;
-        of var3 = null;
+        LobbyPlayer var3 = null;
         int var4 = 0;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -244,29 +244,29 @@ abstract class sf extends wl {
         RuntimeException var2 = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          param1.unlink(-123);
-          var2_int = -20 % ((param0 + 16) / 62);
-          var3 = (of) (SummonAction.field_u.first((byte) 125));
+          player.unlink(-123);
+          var2_int = -20 % ((obfuscationGuard + 16) / 62);
+          var3 = (LobbyPlayer) (SummonAction.lobbyPlayerOrder.first((byte) 125));
           while (var3 != null) {
-            if (var3.a(9687, param1)) {
-              var3 = (of) (SummonAction.field_u.next((byte) 123));
+            if (var3.sortsBefore(9687, player)) {
+              var3 = (LobbyPlayer) (SummonAction.lobbyPlayerOrder.next((byte) 123));
               continue;
             }
             break;
           }
           if (var3 == null) {
-            SummonAction.field_u.addLast((byte) -119, (IntrusiveNode) (param1));
+            SummonAction.lobbyPlayerOrder.addLast((byte) -119, (IntrusiveNode) (player));
           } else {
             stackIn_7_0 = -123;
-            fj.$cfr$intArgs$a$f94c566f195c(stackIn_7_0, param1, var3);
+            fj.$cfr$intArgs$a$f94c566f195c(stackIn_7_0, player, var3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_12_0 = var2;
-          stackIn_12_1 = new StringBuilder().append("sf.KB(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_12_1 = new StringBuilder().append("sf.KB(").append(obfuscationGuard).append(',');
+          if (player == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";

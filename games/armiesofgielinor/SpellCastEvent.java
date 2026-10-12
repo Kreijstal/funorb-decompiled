@@ -143,7 +143,7 @@ final class SpellCastEvent extends GameEvent {
           if (!IconTextComponent.field_Nb.ensureIndex((byte) 82)) {
             return db.field_b;
           }
-          return of.field_Jb;
+          return LobbyPlayer.field_Jb;
         }
         if (!ps.field_u.ensureIndex((byte) 82)) {
           return TileMetadata.field_i;

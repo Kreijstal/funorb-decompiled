@@ -129,7 +129,7 @@ final class UnitModelPreview {
 
     final static String b(byte param0) {
         if (param0 < 46) {
-          UnitModelPreview.a(-107L, 79);
+          UnitModelPreview.getCurrentRoomPlayer(-107L, 79);
           return ByteStorage.incomingPacket.readNullTerminatedString(1);
         }
         return ByteStorage.incomingPacket.readNullTerminatedString(1);
@@ -207,11 +207,11 @@ final class UnitModelPreview {
         }
     }
 
-    final static of a(long param0, int param1) {
-        if (param1 >= -68) {
-          return (of) null;
+    final static LobbyPlayer getCurrentRoomPlayer(long accountId, int obfuscationGuard) {
+        if (obfuscationGuard >= -68) {
+          return (LobbyPlayer) null;
         }
-        return (of) (UnitCycler.field_e.a((byte) -27, param0));
+        return (LobbyPlayer) (UnitCycler.currentRoomPlayersById.get((byte) -27, accountId));
     }
 
     final void selectAnimation(int obfuscationGuard, int animationIndex) {

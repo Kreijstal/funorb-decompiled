@@ -105,8 +105,8 @@ final class QuickChatPhraseRepository {
         }
     }
 
-    final static void a(int param0, au param1) {
-        au var2 = null;
+    final static void insertLobbyRoomSorted(int obfuscationGuard, LobbyRoom room) {
+        LobbyRoom var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         java.applet.Applet var4 = null;
@@ -117,32 +117,32 @@ final class QuickChatPhraseRepository {
         RuntimeException decompiledCaughtException = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          param1.unlink(76);
-          var2 = (au) (qc.field_g.first((byte) 92));
-          if (param0 > -66) {
+          room.unlink(76);
+          var2 = (LobbyRoom) (qc.lobbyRoomOrder.first((byte) 92));
+          if (obfuscationGuard > -66) {
             var4 = (java.applet.Applet) null;
             QuickChatPhraseRepository.a(-6, (java.applet.Applet) null);
           }
           while (var2 != null) {
-            if (var2.a((byte) -76, param1)) {
-              var2 = (au) (qc.field_g.next((byte) 123));
+            if (var2.sortsBefore((byte) -76, room)) {
+              var2 = (LobbyRoom) (qc.lobbyRoomOrder.next((byte) 123));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            qc.field_g.addLast((byte) -119, (IntrusiveNode) (param1));
+            qc.lobbyRoomOrder.addLast((byte) -119, (IntrusiveNode) (room));
             return;
           }
           stackIn_9_0 = -123;
-          fj.$cfr$intArgs$a$f94c566f195c(stackIn_9_0, param1, var2);
+          fj.$cfr$intArgs$a$f94c566f195c(stackIn_9_0, room, var2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_13_0 = var2_ref;
-          stackIn_13_1 = new StringBuilder().append("rf.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_13_1 = new StringBuilder().append("rf.F(").append(obfuscationGuard).append(',');
+          if (room == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";

@@ -144,7 +144,7 @@ final class TutorialLayout {
     }
 
     final static void a(boolean param0) {
-        tp.field_e = new NodeDeque();
+        DualNodeHashTable.field_e = new NodeDeque();
         if (!param0) {
           field_b = (RgbSprite) null;
         }

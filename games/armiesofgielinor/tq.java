@@ -5,7 +5,7 @@ final class tq {
     static int field_c;
     static volatile boolean field_a;
     static String field_d;
-    static int field_b;
+    static int gameOptionCount;
 
     final static void a(boolean param0, boolean param1) {
         GlobalSpell.a(-47, param0);

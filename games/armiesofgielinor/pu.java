@@ -65,39 +65,39 @@ final class pu {
 
     final static void d(int param0) {
         int var2 = 0;
-        of var3 = null;
+        LobbyPlayer var3 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          vu.field_M = null;
-          no.field_K = null;
+          vu.currentRoom = null;
+          no.roomSetup = null;
           SpellCastAction.field_s = false;
-          if (null != SummonAction.field_u) {
-            SummonAction.field_u.clear(76);
-            SummonAction.field_u = null;
+          if (null != SummonAction.lobbyPlayerOrder) {
+            SummonAction.lobbyPlayerOrder.clear(76);
+            SummonAction.lobbyPlayerOrder = null;
           }
-          oi.field_d = null;
+          oi.lobbyPlayersById = null;
           if (param0 > -86) {
             return;
           }
-          if (null != qc.field_g) {
-            qc.field_g.clear(94);
-            qc.field_g = null;
+          if (null != qc.lobbyRoomOrder) {
+            qc.lobbyRoomOrder.clear(94);
+            qc.lobbyRoomOrder = null;
           }
-          qm.field_J = null;
-          if (wl.field_F != null) {
-            wl.field_F.clear(87);
-            wl.field_F = null;
+          qm.lobbyRoomsById = null;
+          if (wl.currentRoomPlayers != null) {
+            wl.currentRoomPlayers.clear(87);
+            wl.currentRoomPlayers = null;
           }
-          UnitCycler.field_e = null;
-          if (null != oi.field_d) {
-            var3 = (of) (oi.field_d.a((byte) 66));
+          UnitCycler.currentRoomPlayersById = null;
+          if (null != oi.lobbyPlayersById) {
+            var3 = (LobbyPlayer) (oi.lobbyPlayersById.first((byte) 66));
             while (var3 != null) {
               var3.unlinkSecondary((byte) -76);
-              var3 = (of) (oi.field_d.c(1));
+              var3 = (LobbyPlayer) (oi.lobbyPlayersById.next(1));
             }
-            oi.field_d = null;
+            oi.lobbyPlayersById = null;
             return;
           }
           return;

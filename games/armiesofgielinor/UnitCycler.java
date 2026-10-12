@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class UnitCycler {
-    static tp field_e;
+    static DualNodeHashTable currentRoomPlayersById;
     static int field_a;
     private IntrusiveNode selectedNode;
     private NodeDeque units;
@@ -146,7 +146,7 @@ final class UnitCycler {
         if (param0 != -55) {
           UnitCycler.a((byte) 5);
         }
-        field_e = null;
+        currentRoomPlayersById = null;
     }
 
     private final boolean isSelectionUnlinked(byte obfuscationGuard) {

@@ -1,71 +1,71 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class of extends ClientUiComponent {
-    long field_Pb;
-    String field_Yb;
-    int field_Kb;
+final class LobbyPlayer extends ClientUiComponent {
+    long accountId;
+    String displayName;
+    int notificationCode;
     static IndexedSprite[] field_Mb;
-    ClientUiComponent field_dc;
-    boolean field_Wb;
+    ClientUiComponent admissionButton;
+    boolean invitationSent;
     ClientUiComponent field_fc;
-    boolean field_Zb;
+    boolean packedFlag0;
     static String field_bc;
-    int field_Qb;
-    int field_Xb;
-    String field_cc;
+    int chatIconId;
+    int ratedGamesPlayed;
+    String accountName;
     static int field_Ib;
-    int field_Sb;
-    ClientUiComponent field_ac;
-    ClientUiComponent field_ec;
-    long field_Vb;
-    int field_Rb;
+    int rating;
+    ClientUiComponent nameComponent;
+    ClientUiComponent cancelRejectButton;
+    long lastActivityMillis;
+    int notificationTicks;
     static ClientUiComponent field_Lb;
     static String field_Jb;
     static int field_Nb;
-    ClientUiComponent field_Tb;
-    int field_Ob;
-    boolean field_Ub;
+    ClientUiComponent ratingComponent;
+    int optionUnlockMask;
+    boolean joinRequested;
 
-    final boolean k(int param0) {
-        if (param0 == 0) {
+    final boolean isRemovedFromIndex(int obfuscationGuard) {
+        if (obfuscationGuard == 0) {
           return !this.isSecondaryLinked((byte) -70) ? true : false;
         }
-        of var3 = (of) null;
-        this.a(-15, (of) null);
+        LobbyPlayer var3 = (LobbyPlayer) null;
+        this.sortsBefore(-15, (LobbyPlayer) null);
         return !this.isSecondaryLinked((byte) -70) ? true : false;
     }
 
-    final void a(byte param0, String param1, String param2) {
+    final void setNames(byte obfuscationGuard, String displayName, String accountName) {
         CharSequence var5 = null;
         try {
-          this.field_Yb = param1;
-          this.field_cc = param2;
-          var5 = (CharSequence) ((Object) this.field_cc);
+          this.displayName = displayName;
+          this.accountName = accountName;
+          var5 = (CharSequence) ((Object) this.accountName);
           k.a(var5, false);
-          if (param0 != 53) {
-            of.e((byte) -11);
+          if (obfuscationGuard != 53) {
+            LobbyPlayer.e((byte) -11);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "of.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "of.D(" + obfuscationGuard + ',' + (displayName != null ? "{...}" : "null") + ',' + (accountName != null ? "{...}" : "null") + ')');
         }
     }
 
-    of(String param0, String param1, long param2) {
+    LobbyPlayer(String accountName, String displayName, long accountId) {
         super(0L, (ClientUiComponent) null);
         CharSequence var6 = null;
         try {
-          this.field_Pb = param2;
-          this.field_cc = param0;
-          this.field_Yb = param1;
-          var6 = (CharSequence) ((Object) this.field_cc);
+          this.accountId = accountId;
+          this.accountName = accountName;
+          this.displayName = displayName;
+          var6 = (CharSequence) ((Object) this.accountName);
           k.a(var6, false);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "of.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "of.<init>(" + (accountName != null ? "{...}" : "null") + ',' + (displayName != null ? "{...}" : "null") + ',' + accountId + ')');
         }
     }
 
-    final boolean a(int param0, of param1) {
+    final boolean sortsBefore(int obfuscationGuard, LobbyPlayer other) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_5_0 = 0;
@@ -80,38 +80,38 @@ final class of extends ClientUiComponent {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 9687) {
+          if (obfuscationGuard != 9687) {
             var4 = (String) null;
-            this.a((byte) 41, (String) null, (String) null);
+            this.setNames((byte) 41, (String) null, (String) null);
           }
-          stackIn_5_0 = (param1.field_Ub) ? 0 : 1;
-          if (this.field_Ub) {
+          stackIn_5_0 = (other.joinRequested) ? 0 : 1;
+          if (this.joinRequested) {
             stackIn_8_1 = 0;
           } else {
             stackIn_8_1 = 1;
           }
           if (stackIn_5_0 != stackIn_8_1) {
-            stackIn_11_0 = this.field_Ub;
+            stackIn_11_0 = this.joinRequested;
             return stackIn_11_0;
           }
-          stackIn_14_0 = param1.field_Wb;
-          if (this.field_Wb) {
+          stackIn_14_0 = other.invitationSent;
+          if (this.invitationSent) {
             stackIn_15_1 = 0;
           } else {
             stackIn_15_1 = 1;
           }
           if ((stackIn_14_0 ? 1 : 0) != stackIn_15_1) {
-            stackIn_21_0 = !(this.field_Vb >= param1.field_Vb);
+            stackIn_21_0 = !(this.lastActivityMillis >= other.lastActivityMillis);
             return stackIn_21_0;
           }
-          stackIn_17_0 = this.field_Wb;
+          stackIn_17_0 = this.invitationSent;
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_24_0 = var3;
-          stackIn_24_1 = new StringBuilder().append("of.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_24_1 = new StringBuilder().append("of.A(").append(obfuscationGuard).append(',');
+          if (other == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
@@ -124,13 +124,13 @@ final class of extends ClientUiComponent {
         String var2 = (String) null;
         vi.a(cd.field_e, 640, (String) null);
         if (param0 != -24) {
-          of.d((byte) -75);
+          LobbyPlayer.d((byte) -75);
         }
     }
 
     public static void e(byte param0) {
         if (param0 != 20) {
-          of.e((byte) 74);
+          LobbyPlayer.e((byte) 74);
           field_Jb = null;
           field_bc = null;
           field_Mb = null;
@@ -156,7 +156,7 @@ final class of extends ClientUiComponent {
           vl.outgoingPacket.position = vl.outgoingPacket.position + 2;
           if (obfuscationGuard != -80) {
             Battlefield var8 = (Battlefield) null;
-            of.uploadQuicksave((Battlefield) null, -98, 73, (byte) 105, 55, -24);
+            LobbyPlayer.uploadQuicksave((Battlefield) null, -98, 73, (byte) 105, 55, -24);
           }
           payloadStart = vl.outgoingPacket.position;
           quicksave.write(0, vl.outgoingPacket);

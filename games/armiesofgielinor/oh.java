@@ -9,7 +9,7 @@ final class oh extends dr {
     static um field_K;
     static RgbSprite field_I;
     static int field_E;
-    static long field_H;
+    static long localAccountId;
     static ResourceArchive field_M;
 
     public static void g(int param0) {

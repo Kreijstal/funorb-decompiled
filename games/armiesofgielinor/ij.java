@@ -307,28 +307,28 @@ final class ij extends dv {
         }
     }
 
-    final static au b(byte param0, int param1) {
-        au stackIn_2_0 = null;
+    final static LobbyRoom getLobbyRoom(byte obfuscationGuard, int roomId) {
+        LobbyRoom stackIn_2_0 = null;
         DualLinkedNode stackIn_7_0 = null;
-        au stackIn_8_0 = null;
+        LobbyRoom stackIn_8_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (param0 != 74) {
-            stackIn_2_0 = (au) null;
+          if (obfuscationGuard != 74) {
+            stackIn_2_0 = (LobbyRoom) null;
             return stackIn_2_0;
           }
-          if (null != qm.field_J) {
-            stackIn_7_0 = qm.field_J.a((byte) -27, (long)param1);
+          if (null != qm.lobbyRoomsById) {
+            stackIn_7_0 = qm.lobbyRoomsById.get((byte) -27, (long)roomId);
           } else {
             stackIn_7_0 = null;
           }
-          stackIn_8_0 = (au) (stackIn_7_0);
+          stackIn_8_0 = (LobbyRoom) (stackIn_7_0);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ij.AA(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "ij.AA(" + obfuscationGuard + ',' + roomId + ')');
         }
     }
 

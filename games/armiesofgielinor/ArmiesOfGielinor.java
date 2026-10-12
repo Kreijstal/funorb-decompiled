@@ -232,7 +232,7 @@ public final class ArmiesOfGielinor extends wf {
                 }
                 if (nm.deliveredOpcode == 10 &&
                   FaceNormal.field_d) {
-                  QuickChatCategoryRepository.a((byte) -105);
+                  QuickChatCategoryRepository.processLobbyUpdate((byte) -105);
                   continue;
                 }
                 if (nm.deliveredOpcode == 11 ||
@@ -993,7 +993,7 @@ public final class ArmiesOfGielinor extends wf {
             }
             if ((decompiledSharedTail0) &&
               (fj.field_c)) {
-              PointerInputHandler.a(-81, vu.field_M.d((byte) 117), 11);
+              PointerInputHandler.a(-81, vu.currentRoom.getRoomId((byte) 117), 11);
             }
             ScrollContainer.field_Qb = true;
           }
@@ -1211,9 +1211,9 @@ public final class ArmiesOfGielinor extends wf {
           dj.b((byte) 116);
           it.a(param0 + 76);
           ClientUiComponent.h(-117);
-          au.e((byte) -58);
-          tp.a(-116);
-          of.e((byte) 20);
+          LobbyRoom.e((byte) -58);
+          DualNodeHashTable.a(-116);
+          LobbyPlayer.e((byte) 20);
           ii.a((byte) -1);
           ArchiveIndex.a(param0 + 2);
           lg.a((byte) 126);
@@ -1335,7 +1335,7 @@ public final class ArmiesOfGielinor extends wf {
           op.a(true);
           IsaacRandom.b(-119);
           pg.a(20);
-          ml.k(2);
+          TabbedPanel.k(2);
           oc.k(param0 ^ -72);
           MatchConditionRegistry.a(true);
           LeaderEscortCondition.e(25931);
@@ -2008,7 +2008,7 @@ public final class ArmiesOfGielinor extends wf {
                                                 do {
                                                   if (var5_int >= 8) {
                                                     TurnTimerDial.a(126, jl.field_d);
-                                                    ml.a(jl.field_d, (byte) 123);
+                                                    TabbedPanel.a(jl.field_d, (byte) 123);
                                                     br.field_d = null;
                                                     wl.a(0);
                                                     break;

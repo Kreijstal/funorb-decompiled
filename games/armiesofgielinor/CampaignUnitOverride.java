@@ -59,7 +59,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "idlemessage20min");
                 if (var2 != null) {
-                  of.field_bc = uu.a(var2, (byte) -92);
+                  LobbyPlayer.field_bc = uu.a(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "error_js5crc");
                 if (var2 != null) {
@@ -523,7 +523,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "your_game");
                 if (var2 != null) {
-                  tp.field_f = uu.a(var2, (byte) 10);
+                  DualNodeHashTable.field_f = uu.a(var2, (byte) 10);
                 }
                 var2 = NodeIterator.a(50, "game_full");
                 if (var2 != null) {
@@ -715,7 +715,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "pressf10toquickchat");
                 if (var2 != null) {
-                  ml.field_Lb = uu.a(var2, (byte) 6);
+                  TabbedPanel.field_Lb = uu.a(var2, (byte) 6);
                 }
                 var2 = NodeIterator.a(50, "dob_chatdisabled");
                 if (null != var2) {
@@ -855,7 +855,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "gameopt_trychanging1");
                 if (var2 != null) {
-                  tp.field_c = uu.a(var2, (byte) 113);
+                  DualNodeHashTable.field_c = uu.a(var2, (byte) 113);
                 }
                 var2 = NodeIterator.a(50, "gameopt_trychanging2");
                 if (var2 != null) {
@@ -903,7 +903,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "gameopt_inviteplayers_or_trychanging2");
                 if (null != var2) {
-                  au.field_Jb = uu.a(var2, (byte) 58);
+                  LobbyRoom.field_Jb = uu.a(var2, (byte) 58);
                 }
                 var2 = NodeIterator.a(50, "gameopt_novalidcombos");
                 if (var2 != null) {
@@ -2370,7 +2370,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mp_rematchnewgame_unrated");
                 if (null != var2) {
-                  ml.field_Nb = uu.a(var2, (byte) 4);
+                  TabbedPanel.field_Nb = uu.a(var2, (byte) 4);
                 }
                 var2 = NodeIterator.a(50, "mp_x_wantstodraw");
                 if (null != var2) {

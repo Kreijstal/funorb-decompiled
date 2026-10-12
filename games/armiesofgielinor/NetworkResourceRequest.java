@@ -46,8 +46,8 @@ final class NetworkResourceRequest extends ResourceRequest {
     final static void b(int param0, int param1) {
         te.field_n = param0;
         if (param1 >= 83) {
-          if (null != au.field_Kb) {
-            au.field_Kb.f(-122, param0);
+          if (null != LobbyRoom.field_Kb) {
+            LobbyRoom.field_Kb.f(-122, param0);
           }
           if (null != lk.field_e) {
             lk.field_e.b(param0, 6);
@@ -55,8 +55,8 @@ final class NetworkResourceRequest extends ResourceRequest {
           return;
         }
         field_C = (GameplayController) null;
-        if (null != au.field_Kb) {
-          au.field_Kb.f(-122, param0);
+        if (null != LobbyRoom.field_Kb) {
+          LobbyRoom.field_Kb.f(-122, param0);
         }
         if (null != lk.field_e) {
           lk.field_e.b(param0, 6);

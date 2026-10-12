@@ -164,7 +164,7 @@ final class wd {
           var1 = null;
           var2 = null;
           if (rs.field_t == 0 &&
-            no.field_K != null) {
+            no.roomSetup != null) {
             var2 = wc.field_K;
           }
           if (rs.field_t == 2 &&
@@ -205,15 +205,15 @@ final class wd {
               }
             } else {
               if (0 == var6) {
-                if (null == vu.field_M &&
+                if (null == vu.currentRoom &&
                   bq.field_c) {
                   var4 = "[" + ClientConnectionState.field_c + "] ";
                 }
-                if (null != vu.field_M) {
+                if (null != vu.currentRoom) {
                   var6 = 1;
                   if (!TextCursor.field_f ||
                     TeleportAction.field_C == null) {
-                    var4 = "[" + fo.a(4800, CampaignMenu.field_m, new String[]{vu.field_M.field_rc}) + "] ";
+                    var4 = "[" + fo.a(4800, CampaignMenu.field_m, new String[]{vu.currentRoom.ownerName}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + TeleportAction.field_C + "] ";
                     }

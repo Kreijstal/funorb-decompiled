@@ -127,63 +127,63 @@ final class ad extends tj implements he {
         }
     }
 
-    final static void a(int param0) {
+    final static void advanceLobbyNotifications(int obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
-        of var1 = null;
-        au var1_ref = null;
+        LobbyPlayer var1 = null;
+        LobbyRoom var1_ref = null;
         RuntimeException var1_ref2 = null;
         int var2 = 0;
         int var3 = 0;
-        of var1Lifetime1;
+        LobbyPlayer var1Lifetime1;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var1 = (of) (SummonAction.field_u.first((byte) 97));
+          var1 = (LobbyPlayer) (SummonAction.lobbyPlayerOrder.first((byte) 97));
           while (var1 != null) {
-            if (0 < var1.field_Rb) {
-              var1.field_Rb = var1.field_Rb - 1;
-              if (var1.field_Rb == 0) {
-                var1.field_Kb = 0;
-                if (var1.k(0)) {
+            if (0 < var1.notificationTicks) {
+              var1.notificationTicks = var1.notificationTicks - 1;
+              if (var1.notificationTicks == 0) {
+                var1.notificationCode = 0;
+                if (var1.isRemovedFromIndex(0)) {
                   var1.unlink(-126);
                 }
               }
             }
-            var1 = (of) (SummonAction.field_u.next((byte) 123));
+            var1 = (LobbyPlayer) (SummonAction.lobbyPlayerOrder.next((byte) 123));
           }
-          var1_ref = (au) (qc.field_g.first((byte) 89));
+          var1_ref = (LobbyRoom) (qc.lobbyRoomOrder.first((byte) 89));
           while (var1_ref != null) {
-            if (0 < var1_ref.field_Lb) {
-              var1_ref.field_Lb = var1_ref.field_Lb - 1;
-              if (var1_ref.field_Lb == 0) {
-                var1_ref.field_mc = 0;
-                if (var1_ref.k(-7)) {
+            if (0 < var1_ref.notificationTicks) {
+              var1_ref.notificationTicks = var1_ref.notificationTicks - 1;
+              if (var1_ref.notificationTicks == 0) {
+                var1_ref.notificationCode = 0;
+                if (var1_ref.isRemovedFromIndex(-7)) {
                   var1_ref.unlink(106);
                 }
               }
             }
-            var1_ref = (au) (qc.field_g.next((byte) 123));
+            var1_ref = (LobbyRoom) (qc.lobbyRoomOrder.next((byte) 123));
           }
-          var2 = -62 % ((param0 + 41) / 60);
-          var1Lifetime1 = (of) (wl.field_F.first((byte) 115));
+          var2 = -62 % ((obfuscationGuard + 41) / 60);
+          var1Lifetime1 = (LobbyPlayer) (wl.currentRoomPlayers.first((byte) 115));
           while (var1Lifetime1 != null) {
-            if (0 < var1Lifetime1.field_Rb) {
-              var1Lifetime1.field_Rb = var1Lifetime1.field_Rb - 1;
-              if (var1Lifetime1.field_Rb != 0) {
-                var1Lifetime1 = (of) (wl.field_F.next((byte) 123));
+            if (0 < var1Lifetime1.notificationTicks) {
+              var1Lifetime1.notificationTicks = var1Lifetime1.notificationTicks - 1;
+              if (var1Lifetime1.notificationTicks != 0) {
+                var1Lifetime1 = (LobbyPlayer) (wl.currentRoomPlayers.next((byte) 123));
                 continue;
               }
-              var1Lifetime1.field_Kb = 0;
-              if (var1Lifetime1.k(0)) {
+              var1Lifetime1.notificationCode = 0;
+              if (var1Lifetime1.isRemovedFromIndex(0)) {
                 var1Lifetime1.unlink(-123);
               }
             }
-            var1Lifetime1 = (of) (wl.field_F.next((byte) 123));
+            var1Lifetime1 = (LobbyPlayer) (wl.currentRoomPlayers.next((byte) 123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1_ref2), "ad.E(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var1_ref2), "ad.E(" + obfuscationGuard + ')');
         }
     }
 

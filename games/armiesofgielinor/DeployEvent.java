@@ -84,11 +84,11 @@ final class DeployEvent extends GameEvent {
         }
     }
 
-    final static of a(byte param0, long param1) {
-        if (param0 != 121) {
+    final static LobbyPlayer getLobbyPlayer(byte obfuscationGuard, long accountId) {
+        if (obfuscationGuard != 121) {
           DeployEvent.h(23);
         }
-        return (of) (oi.field_d.a((byte) -27, param1));
+        return (LobbyPlayer) (oi.lobbyPlayersById.get((byte) -27, accountId));
     }
 
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {

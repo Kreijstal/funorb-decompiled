@@ -319,12 +319,12 @@ class Widget extends IntrusiveNode {
                   if (DeployEvent.pointerPressButton != 0) {
                     if (!this.a(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
                       if (ro.pointerButton != 0) {
-                        au.field_Ob = ro.pointerButton;
+                        LobbyRoom.field_Ob = ro.pointerButton;
                         OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                         return param0;
                       }
-                      if (au.field_Ob == 0) {
-                        au.field_Ob = ro.pointerButton;
+                      if (LobbyRoom.field_Ob == 0) {
+                        LobbyRoom.field_Ob = ro.pointerButton;
                         OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                         return param0;
                       }
@@ -341,19 +341,19 @@ class Widget extends IntrusiveNode {
                         DeployEvent.pointerPressButton != 0) {
                         this.f(1);
                       }
-                      au.field_Ob = ro.pointerButton;
+                      LobbyRoom.field_Ob = ro.pointerButton;
                       OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                       return param0;
                     }
                     param0 = false;
                   }
                   if (ro.pointerButton != 0) {
-                    au.field_Ob = ro.pointerButton;
+                    LobbyRoom.field_Ob = ro.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
-                  if (au.field_Ob == 0) {
-                    au.field_Ob = ro.pointerButton;
+                  if (LobbyRoom.field_Ob == 0) {
+                    LobbyRoom.field_Ob = ro.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
@@ -366,22 +366,22 @@ class Widget extends IntrusiveNode {
                     bn.field_f = null;
                   }
                   if (var7 == 0) {
-                    au.field_Ob = ro.pointerButton;
+                    LobbyRoom.field_Ob = ro.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
                   if (var5 == 0) {
-                    au.field_Ob = ro.pointerButton;
+                    LobbyRoom.field_Ob = ro.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
                   if (DeployEvent.pointerPressButton == 0) {
-                    au.field_Ob = ro.pointerButton;
+                    LobbyRoom.field_Ob = ro.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
                   this.f(1);
-                  au.field_Ob = ro.pointerButton;
+                  LobbyRoom.field_Ob = ro.pointerButton;
                   OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                   return param0;
                 }
@@ -391,8 +391,8 @@ class Widget extends IntrusiveNode {
                 if (!this.a(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
                   if (var5 == 0) {
                     if (ro.pointerButton == 0) {
-                      if (au.field_Ob == 0) {
-                        au.field_Ob = ro.pointerButton;
+                      if (LobbyRoom.field_Ob == 0) {
+                        LobbyRoom.field_Ob = ro.pointerButton;
                         OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                         return param0;
                       }
@@ -409,12 +409,12 @@ class Widget extends IntrusiveNode {
                         var5 != 0 &&
                         DeployEvent.pointerPressButton != 0) {
                         this.f(1);
-                        au.field_Ob = ro.pointerButton;
+                        LobbyRoom.field_Ob = ro.pointerButton;
                         OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                         return param0;
                       }
                     }
-                    au.field_Ob = ro.pointerButton;
+                    LobbyRoom.field_Ob = ro.pointerButton;
                     OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                     return param0;
                   }
@@ -429,8 +429,8 @@ class Widget extends IntrusiveNode {
               if (ro.pointerButton != 0) {
                 break regionExit1;
               }
-              if (au.field_Ob == 0) {
-                au.field_Ob = ro.pointerButton;
+              if (LobbyRoom.field_Ob == 0) {
+                LobbyRoom.field_Ob = ro.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
@@ -449,7 +449,7 @@ class Widget extends IntrusiveNode {
             if (var5 != 0 &&
               DeployEvent.pointerPressButton != 0) {
               this.f(1);
-              au.field_Ob = ro.pointerButton;
+              LobbyRoom.field_Ob = ro.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
@@ -472,12 +472,12 @@ class Widget extends IntrusiveNode {
                 }
               }
               if (ro.pointerButton != 0) {
-                au.field_Ob = ro.pointerButton;
+                LobbyRoom.field_Ob = ro.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
-              if (au.field_Ob == 0) {
-                au.field_Ob = ro.pointerButton;
+              if (LobbyRoom.field_Ob == 0) {
+                LobbyRoom.field_Ob = ro.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
@@ -495,7 +495,7 @@ class Widget extends IntrusiveNode {
                 DeployEvent.pointerPressButton != 0) {
                 this.f(1);
               }
-              au.field_Ob = ro.pointerButton;
+              LobbyRoom.field_Ob = ro.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
@@ -504,12 +504,12 @@ class Widget extends IntrusiveNode {
             }
             if (DeployEvent.pointerPressButton == 0) {
               if (ro.pointerButton != 0) {
-                au.field_Ob = ro.pointerButton;
+                LobbyRoom.field_Ob = ro.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
-              if (au.field_Ob == 0) {
-                au.field_Ob = ro.pointerButton;
+              if (LobbyRoom.field_Ob == 0) {
+                LobbyRoom.field_Ob = ro.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
@@ -527,19 +527,19 @@ class Widget extends IntrusiveNode {
                 DeployEvent.pointerPressButton != 0) {
                 this.f(1);
               }
-              au.field_Ob = ro.pointerButton;
+              LobbyRoom.field_Ob = ro.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
             if (!this.a(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
               if (var5 == 0) {
                 if (ro.pointerButton != 0) {
-                  au.field_Ob = ro.pointerButton;
+                  LobbyRoom.field_Ob = ro.pointerButton;
                   OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                   return param0;
                 }
-                if (au.field_Ob == 0) {
-                  au.field_Ob = ro.pointerButton;
+                if (LobbyRoom.field_Ob == 0) {
+                  LobbyRoom.field_Ob = ro.pointerButton;
                   OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                   return param0;
                 }
@@ -556,7 +556,7 @@ class Widget extends IntrusiveNode {
                   DeployEvent.pointerPressButton != 0) {
                   this.f(1);
                 }
-                au.field_Ob = ro.pointerButton;
+                LobbyRoom.field_Ob = ro.pointerButton;
                 OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
                 return param0;
               }
@@ -568,12 +568,12 @@ class Widget extends IntrusiveNode {
               param0 = false;
             }
             if (ro.pointerButton != 0) {
-              au.field_Ob = ro.pointerButton;
+              LobbyRoom.field_Ob = ro.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
-            if (au.field_Ob == 0) {
-              au.field_Ob = ro.pointerButton;
+            if (LobbyRoom.field_Ob == 0) {
+              LobbyRoom.field_Ob = ro.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
@@ -586,7 +586,7 @@ class Widget extends IntrusiveNode {
               bn.field_f = null;
             }
             if (var7 == 0) {
-              au.field_Ob = ro.pointerButton;
+              LobbyRoom.field_Ob = ro.pointerButton;
               OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
               return param0;
             }
@@ -596,7 +596,7 @@ class Widget extends IntrusiveNode {
             this.f(1);
           }
         }
-        au.field_Ob = ro.pointerButton;
+        LobbyRoom.field_Ob = ro.pointerButton;
         OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
         return param0;
     }

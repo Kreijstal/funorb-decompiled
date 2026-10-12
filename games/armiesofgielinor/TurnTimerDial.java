@@ -92,7 +92,7 @@ final class TurnTimerDial {
         int guardArithmetic = 23 % ((obfuscationGuard - 82) / 42);
         if (this.sweepPosition > targetPosition) {
           distanceToTarget = -targetPosition + this.sweepPosition;
-          maximumStep = tp.getNominalTickRate(-84) * 2;
+          maximumStep = DualNodeHashTable.getNominalTickRate(-84) * 2;
           this.sweepPosition = this.sweepPosition - (maximumStep <= distanceToTarget ? maximumStep : distanceToTarget);
         }
         if (0 > this.sweepPosition) {

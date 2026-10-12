@@ -243,7 +243,7 @@ final class j {
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           AnimationSequence.a(PreparedAction.field_r, param0 + 114);
-          if (no.field_K != null) {
+          if (no.roomSetup != null) {
             var15 = lm.field_b;
             var17 = var15;
             lm.field_b.height = 0;
@@ -311,16 +311,16 @@ final class j {
                 jp.field_a = false;
                 fc.field_a = false;
                 if (null == TeleportAction.field_B) {
-                  dt.field_d = new boolean[tq.field_b];
-                  TeleportAction.field_B = new byte[tq.field_b];
+                  dt.field_d = new boolean[tq.gameOptionCount];
+                  TeleportAction.field_B = new byte[tq.gameOptionCount];
                 }
                 var13 = 0;
                 var9_intLifetime1 = var13;
-                while (var13 < tq.field_b) {
+                while (var13 < tq.gameOptionCount) {
                   dt.field_d[var13] = false;
                   var13++;
                 }
-                es.a(0, tq.field_b, no.field_K, -1, true, -1, (byte) 89, -1);
+                es.a(0, tq.gameOptionCount, no.roomSetup, -1, true, -1, (byte) 89, -1);
                 if (!(BufferedSocket.field_j < 2) &&
                   br.field_f[12]) {
                   fc.field_a = true;
@@ -337,7 +337,7 @@ final class j {
                     var11Lifetime1 = var9;
                     var9 = var11Lifetime1;
                   }
-                  for (var10Lifetime1 = 0; var10Lifetime1 < tq.field_b; var10Lifetime1++) {
+                  for (var10Lifetime1 = 0; var10Lifetime1 < tq.gameOptionCount; var10Lifetime1++) {
                     if (dt.field_d[var10Lifetime1]) {
                       var11_ref = "<col=A00000>" + ob.field_M[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
@@ -395,8 +395,8 @@ final class j {
           stackIn_76_1 = true;
           stackIn_77_2 = (param2) && (!param1) && (vk.field_f);
           ((ClientUiComponent) (Object) stackIn_76_0).updateInput(stackIn_76_1, stackIn_77_2);
-          ij.field_w.field_a.l(10000);
-          if (null != no.field_K) {
+          ij.field_w.field_a.advanceTabSelection(10000);
+          if (null != no.roomSetup) {
             if (0 != mp.field_Lb.pressedButton) {
               lu.a(-127, param3);
             }
@@ -407,7 +407,7 @@ final class j {
                 DropdownArrowPainter.a(param3, -8006);
               }
             }
-            vf.a(1, true, param3, no.field_K);
+            vf.a(1, true, param3, no.roomSetup);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

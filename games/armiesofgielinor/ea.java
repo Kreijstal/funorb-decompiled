@@ -3,7 +3,7 @@
  */
 final class ea {
     static String field_b;
-    ml field_a;
+    TabbedPanel field_a;
     static String field_d;
     static String field_c;
 
@@ -197,7 +197,7 @@ final class ea {
         if (param1 > -117) {
           ea.$cfr$intArgs$a$72f70aa7c69d(-115, true);
         }
-        this.field_a.a(param3, param4, param2, var7, 0, var6, param0);
+        this.field_a.setLayout(param3, param4, param2, var7, 0, var6, param0);
         bn.field_c.setBounds(jn.field_d, -20500, su.field_d.width, 0, 0);
         wn.field_kb.setBounds(18, -20500, -2 + (-2 + su.field_d.width + (-jn.field_c - 80)), 2 + jn.field_d, 0);
         ek.field_a.setBounds(18, -20500, 82 + jn.field_c, jn.field_d + 2, -82 + (su.field_d.width - jn.field_c));
@@ -211,7 +211,7 @@ final class ea {
         try {
           var3 = new String[]{param0, IterableDualNodeDeque.field_a, op.field_e};
           var4 = new ClientUiComponent[]{param1, su.field_d, (ClientUiComponent) ((Object) TaggedMapData.field_g)};
-          this.field_a = new ml(0L, h.field_d, var3, wm.field_c, var4, 0);
+          this.field_a = new TabbedPanel(0L, h.field_d, var3, wm.field_c, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

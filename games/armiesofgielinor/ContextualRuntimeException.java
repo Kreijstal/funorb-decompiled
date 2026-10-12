@@ -119,7 +119,7 @@ final class ContextualRuntimeException extends RuntimeException {
         RuntimeException decompiledCaughtException = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4 = (dc) (tp.field_e.first((byte) 115));
+          var4 = (dc) (DualNodeHashTable.field_e.first((byte) 115));
           var1 = var4;
           if (var1 == null) {
             return false;

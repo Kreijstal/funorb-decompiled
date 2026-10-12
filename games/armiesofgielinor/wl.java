@@ -7,7 +7,7 @@ abstract class wl extends tj {
     static String[] field_M;
     static ClientUiComponent field_K;
     static int field_E;
-    static NodeDeque field_F;
+    static NodeDeque currentRoomPlayers;
     private int field_H;
     gk field_G;
     static String field_I;
@@ -64,7 +64,7 @@ abstract class wl extends tj {
         field_N = null;
         int var1 = -89 % ((8 - param0) / 57);
         field_K = null;
-        field_F = null;
+        currentRoomPlayers = null;
         field_J = null;
     }
 

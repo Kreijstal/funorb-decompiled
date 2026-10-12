@@ -82,7 +82,7 @@ final class es {
         return this.field_a >= this.field_e.length ? true : false;
     }
 
-    final static void a(int param0, int param1, au param2, int param3, boolean param4, int param5, byte param6, int param7) {
+    final static void a(int param0, int param1, LobbyRoom param2, int param3, boolean param4, int param5, byte param6, int param7) {
         IconTextComponent[][] stackIn_33_0 = null;
         int stackIn_34_1 = 0;
         int stackIn_51_0 = 0;
@@ -131,7 +131,7 @@ final class es {
               scanLoop1: while (true) {
                 if (var13 >= var18.length) {
                   if (var12 == 0 &&
-                    param3 != tq.field_b) {
+                    param3 != tq.gameOptionCount) {
                     break scanLoop1;
                   }
                   var9_int = 0;
@@ -251,9 +251,9 @@ final class es {
                 var13 = stackIn_75_0;
               } else {
                 if (param3 == -1) {
-                  stackIn_66_0 = (vu.field_M.field_nc != lm.field_e[var12]) ? 0 : 1;
+                  stackIn_66_0 = (vu.currentRoom.playerCapacity != lm.field_e[var12]) ? 0 : 1;
                 } else {
-                  stackIn_66_0 = ((vu.field_M.field_pc[param3] & 255) != var12) ? 0 : 1;
+                  stackIn_66_0 = ((vu.currentRoom.gameOptions[param3] & 255) != var12) ? 0 : 1;
                 }
                 var13 = stackIn_66_0;
               }

@@ -11,7 +11,7 @@ abstract class qc {
     static ClientUiComponent field_e;
     static ClientUiComponent field_c;
     static String field_f;
-    static NodeDeque field_g;
+    static NodeDeque lobbyRoomOrder;
 
     public static void a(byte param0) {
         field_i = null;
@@ -21,7 +21,7 @@ abstract class qc {
           field_c = null;
           field_a = null;
           field_d = null;
-          field_g = null;
+          lobbyRoomOrder = null;
           field_h = null;
           field_f = null;
           return;
@@ -30,7 +30,7 @@ abstract class qc {
         field_c = null;
         field_a = null;
         field_d = null;
-        field_g = null;
+        lobbyRoomOrder = null;
         field_h = null;
         field_f = null;
     }

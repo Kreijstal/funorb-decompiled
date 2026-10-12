@@ -5,7 +5,7 @@ final class qm extends nl {
     static String field_I;
     static String field_H;
     static int field_L;
-    static tp field_J;
+    static DualNodeHashTable lobbyRoomsById;
     static int[] field_K;
 
     final void b(boolean param0) {
@@ -73,7 +73,7 @@ final class qm extends nl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 <= 103) {
-            field_J = (tp) null;
+            lobbyRoomsById = (DualNodeHashTable) null;
           }
           stackIn_6_0 = (this.containsPointer(1, param1, param5, param0, param2)) && (super.a(param0, param1, param2, 127, param4, param5, param6));
           return stackIn_6_0;
@@ -94,13 +94,13 @@ final class qm extends nl {
     public static void j(int param0) {
         field_H = null;
         if (param0 >= 38) {
-          field_J = null;
+          lobbyRoomsById = null;
           field_I = null;
           field_K = null;
           return;
         }
         field_K = (int[]) null;
-        field_J = null;
+        lobbyRoomsById = null;
         field_I = null;
         field_K = null;
     }

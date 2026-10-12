@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild from pinned raw Git input using Deko’s `readable/reproduce-armiesofgielinor.mjs`. The current reverse dictionary is `../../decompilation/armiesofgielinor-naming.json`.
 
-This gameplay naming pass reviews 190 class identities across all 542 compiled classes. Other class/member names remain unresolved. Unresolved packed flags use bit-position names without guessing gameplay effects. Renamed identifiers have no opaque suffixes; the dictionary records their original identities.
+This gameplay naming pass reviews 194 class identities across all 542 compiled classes. Other class/member names remain unresolved. Unresolved packed flags use bit-position names without guessing gameplay effects. Renamed identifiers have no opaque suffixes; the dictionary records their original identities.
 
 Widget, WidgetPainter, DropdownSelector, DropdownOptionList and DropdownArrowPainter expose the shared UI bounds and dropdown flow. Controlled fixtures check half-open base hit bounds, case-insensitive first-prefix matching, option validation/selection and the arrow painter’s pixels. The option-list hit override retains its different inclusive edges; complete interactive menu behavior remains unverified.
 
@@ -12,6 +12,8 @@ Widget, WidgetPainter, DropdownSelector, DropdownOptionList and DropdownArrowPai
 | [VerticalScrollbar](VerticalScrollbar.java) / [ScrollContainer](ScrollContainer.java) | Scrollbar geometry, held-button repeat, draggable thumb and clipped scrolling content. |
 | [EditableTextField](EditableTextField.java) / [ContextActionMenu](ContextActionMenu.java) | Editable text, selection/clipboard lifecycle and popup action rows. |
 | [PlatformTaskService](PlatformTaskService.java) / [PlatformTask](PlatformTask.java) | FIFO platform requests and asynchronous status/results. |
+| [LobbyRoom](LobbyRoom.java) / [LobbyPlayer](LobbyPlayer.java) / [DualNodeHashTable](DualNodeHashTable.java) | Lobby room/player records, secondary-key indexes and ordered display lists. |
+| [TabbedPanel](TabbedPanel.java) | Retained tab panels, integer tab geometry and active-panel switching. |
 | [QuickChatCategory](QuickChatCategory.java) / [QuickChatPhrase](QuickChatPhrase.java) / [QuickChatCommandDefinition](QuickChatCommandDefinition.java) | Quick-chat category/phrase decoding, shortcuts and command definition arguments. |
 | [QuickChatCategoryRepository](QuickChatCategoryRepository.java) / [QuickChatPhraseRepository](QuickChatPhraseRepository.java) | Local/global quick-chat archives and cached definition lookup. |
 | [WeightedLruCache](WeightedLruCache.java) / [CacheEntry](CacheEntry.java) / [StrongCacheEntry](StrongCacheEntry.java) | Weighted retained values, LRU eviction and reference-backed entry promotion. |
@@ -131,6 +133,24 @@ EditableTextField retains a mutable buffer with independent caret/selection anch
 PlatformTaskService queues PlatformTask objects under its monitor with retained object arguments, FIFO links and volatile status/result. Status 0 is pending, 1 successful and 2 failed. Enqueue guards retain their existing return/partial-mutation behavior. Controlled queue fixtures inspect clipboard, thread, reflection, socket and URL request payloads without executing network or system-clipboard requests. A real worker services reflection lookups, records missing/unknown request failures, drains its queue and stops. The service constructor is bypassed so cache/property/fullscreen setup and networking remain unverified.
 
 ContextActionMenu retains up to 256 icon/text rows and action IDs, measures a popup against raster bounds, inserts an empty placeholder and polls clipped row presses. Result -2 means waiting and -1 means cancellation/no action; internal key 13 cancels while returning true on its first waiting check. Native fixtures verify text/icon measurement, popup placement, half-open row edges, any nonzero press button, capture-disabled polling, cancellation, empty rows and retained capacity after overflow. Complete rendered menu interaction and action dispatch remain unverified.
+
+LobbyRoom and LobbyPlayer separate room identity/admission/options from account/display names, player rating/unlocks and invitation/request state. Secondary-key indexes are independent of primary display lists. Native fixtures check all 256 room-header flags, optional player-count retention, options/rating/timing/owner fields and explicit name lists. The first string is retained as ownerName even when names are present; the name-list decoder rewinds to that string. With explicit names and count zero, it leaves the cursor at the name start. The spectator policy is 1/2; room bit 32 is rated and bit 64 is playing. Player packedFlag0 remains unresolved. Existing player names update only when the middle rename marker is nonempty. These names and fixtures describe the pinned Java rather than proving a live server protocol.
+
+QuickChatCategoryRepository.processLobbyUpdate names the otherwise unrelated static lobby dispatcher. Local packet fixtures exercise update types 0–23, room/player indexes, invitation/request transitions, request counts, notification expiry, current-room member reuse/removal, ownership, setup masks and list clearing. Sorted insertion preserves secondary index links; removed records can stay in primary lists until notification expiry. Ordering fixtures retain equal-time false results and distinct play/admission/type priorities. DualNodeHashTable checks duplicate lookup, non-power-of-two masks, independent iteration/lookup, secondary-link moves retaining primary membership and zero-bucket refusal. TabbedPanel retains caller panel arrays, partitions tab width by integer boundaries and hides inactive panels by adding 10000 to X. Native constructor/layout/switch fixtures preserve negative padded widths. Complete rendered lobby interaction and outgoing request delivery remain unverified.
+
+| Lobby update type | Retained behavior / payload after the type byte |
+| --- | --- |
+| 0–4 | Clear current-room members and admission flags; 1 retains the previous owner name, 2/3 retain setup state, 3 reads configured preference masks/options, 4 reads u16 room ID then a room header without player count. |
+| 5 | Player u64 ID, account/rename-marker/display strings, i32 activity age, u16 rating, variable integer containing games count shifted left one plus unresolved low flag, u8 chat icon and u8 unlock mask. |
+| 6/7 | Remove/update one player by u64 ID plus u8 notification code, or clear all lobby players. |
+| 8/9/10 | u16 room ID plus full room header; remove/update room by ID plus u8 code; or clear listed rooms. |
+| 11/12/13 | u16 room ID: receive invitation, mark join request sent, or clear both states with a u8 notification code. |
+| 14/16 | u64 player ID: mark invitation sent or join requested. |
+| 15/17 | u64 player ID plus u8 notification: clear invitation or join request; request-count changes are guarded against repeats. |
+| 18/19/20 | Add/update current-room member by u64 ID and name/stats; remove member by ID plus u8 notification; update current-room header without count. |
+| 21/22/23 | u16 relative start time (zero clears); u16 plus variable integer status fields; u64 local account ID. Finer type-22 status meaning remains unresolved. |
+
+Room headers: optional u8 player count, u8 capacity, u8 game type, u8 flags, configured count of raw option bytes, u16 display rating, i32 activity age, optional i32 completed duration (bit 2), u64 owner ID, then zero-terminated names. Bits 7/6/5/4/3 denote open-to-join/playing/rated/spectator-mode-2/admission-requests; bit 1 supplies the counted name list. No live connection, unknown-type disconnect path or complete malformed lobby packet matrix is verified by these fixtures.
 
 QuickChatMenu retains supplied ID/shortcut/submenu arrays and mutates label entries with shortcut markup. Row height derives from font metrics; setCollapseTicks uses the original unclamped ticks-squared interpolation over 144. Shortcut activation opens a submenu, and internal key code 85 closes it when that child has no deeper open item. resetSelection clears press/selection state and unlinks an active submenu from the overlay. Native fixtures use real menu/item constructors and verify animation, shortcut opening, back navigation and recursive category menu construction. Missing phrase shortcuts start at character 2, then 3; this original numbering is preserved. Selection/message context integer meanings, message dispatch and rendered interaction remain unverified.
 

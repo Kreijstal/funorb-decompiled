@@ -92,17 +92,17 @@ final class bn {
           t.field_g.text = fo.a(4800, AttackEvent.field_F, new String[]{Integer.toString(GlobalSpell.field_g)});
           stackIn_56_0 = no.field_T;
           stackIn_56_1 = true;
-          stackIn_57_2 = (param0) && (!param1) && (!bw.field_g) && (vu.field_M == null) && (null == no.field_K);
+          stackIn_57_2 = (param0) && (!param1) && (!bw.field_g) && (vu.currentRoom == null) && (null == no.roomSetup);
           ((ClientUiComponent) (Object) stackIn_56_0).updateInput(stackIn_56_1, stackIn_57_2);
           stackIn_63_0 = ov.field_i;
           stackIn_63_1 = true;
-          stackIn_64_2 = (param0) && (!param1) && (!bw.field_g) && (vu.field_M == null) && (no.field_K == null);
+          stackIn_64_2 = (param0) && (!param1) && (!bw.field_g) && (vu.currentRoom == null) && (no.roomSetup == null);
           ((ClientUiComponent) (Object) stackIn_63_0).updateInput(stackIn_63_1, stackIn_64_2);
           stackIn_68_0 = qc.field_c;
           stackIn_68_1 = true;
           stackIn_69_2 = (param0) && (!param1) && (bw.field_g);
           ((ClientUiComponent) (Object) stackIn_68_0).updateInput(stackIn_68_1, stackIn_69_2);
-          SpellCastEvent.field_E.field_a.l(10000);
+          SpellCastEvent.field_E.field_a.advanceTabSelection(10000);
           if (cp.field_d.pressedButton != 0) {
             cg.field_a = true;
           }
@@ -129,17 +129,17 @@ final class bn {
           t.field_g.text = null;
           stackIn_7_0 = no.field_T;
           stackIn_7_1 = true;
-          stackIn_8_2 = (param0) && (!param1) && (!bw.field_g) && (vu.field_M == null) && (null == no.field_K);
+          stackIn_8_2 = (param0) && (!param1) && (!bw.field_g) && (vu.currentRoom == null) && (null == no.roomSetup);
           ((ClientUiComponent) (Object) stackIn_7_0).updateInput(stackIn_7_1, stackIn_8_2);
           stackIn_14_0 = ov.field_i;
           stackIn_14_1 = true;
-          stackIn_15_2 = (param0) && (!param1) && (!bw.field_g) && (vu.field_M == null) && (no.field_K == null);
+          stackIn_15_2 = (param0) && (!param1) && (!bw.field_g) && (vu.currentRoom == null) && (no.roomSetup == null);
           ((ClientUiComponent) (Object) stackIn_14_0).updateInput(stackIn_14_1, stackIn_15_2);
           stackIn_19_0 = qc.field_c;
           stackIn_19_1 = true;
           stackIn_20_2 = (param0) && (!param1) && (bw.field_g);
           ((ClientUiComponent) (Object) stackIn_19_0).updateInput(stackIn_19_1, stackIn_20_2);
-          SpellCastEvent.field_E.field_a.l(10000);
+          SpellCastEvent.field_E.field_a.advanceTabSelection(10000);
           if (cp.field_d.pressedButton != 0) {
             cg.field_a = true;
           }

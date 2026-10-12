@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ml extends ClientUiComponent {
-    private ClientUiComponent field_Mb;
-    private ClientUiComponent[] field_Ib;
+final class TabbedPanel extends ClientUiComponent {
+    private ClientUiComponent contentHost;
+    private ClientUiComponent[] tabButtons;
     static String field_Nb;
     static String field_Lb;
-    int field_Kb;
-    private ClientUiComponent[] field_Jb;
+    int activeTab;
+    private ClientUiComponent[] panels;
 
     final static void a(p param0, byte param1) {
         int var2_int = 0;
@@ -25,7 +25,7 @@ final class ml extends ClientUiComponent {
           }
           if (param1 != 123) {
             String var5 = (String) null;
-            ml.a(42, (au) null, false, (String) null);
+            TabbedPanel.a(42, (LobbyRoom) null, false, (String) null);
           }
           wh.field_f = true;
         } catch (RuntimeException runtimeException) {
@@ -33,15 +33,15 @@ final class ml extends ClientUiComponent {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.y = param1;
-        this.height = param6;
-        this.x = param2;
-        this.width = param0;
-        if (param4 != 0) {
+    final void setLayout(int width, int y, int x, int contentPadding, int obfuscationGuard, int tabHeight, int height) {
+        this.y = y;
+        this.height = height;
+        this.x = x;
+        this.width = width;
+        if (obfuscationGuard != 0) {
           return;
         }
-        this.a(param3, param5, param4 - 20199);
+        this.layoutTabs(contentPadding, tabHeight, obfuscationGuard - 20199);
     }
 
     public static void k(int param0) {
@@ -49,46 +49,46 @@ final class ml extends ClientUiComponent {
         field_Lb = null;
         if (param0 != 2) {
           p var2 = (p) null;
-          ml.a((p) null, (byte) 111);
+          TabbedPanel.a((p) null, (byte) 111);
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
-        ClientUiComponent dupTemp$0 = null;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var4Lifetime1;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var4 = 0;
-        if (param2 != -20199) {
-          ml.a(96, -94, -90, false);
+    private final void layoutTabs(int contentPadding, int tabHeight, int obfuscationGuard) {
+        ClientUiComponent inactivePanel = null;
+        int tabIndex;
+        int tabLeft;
+        int tabRight;
+        int obfuscationControl;
+        int panelIndex;
+        int initialPanelIndex;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        tabIndex = 0;
+        if (obfuscationGuard != -20199) {
+          TabbedPanel.a(96, -94, -90, false);
         }
-        while (this.field_Ib.length > var4) {
-          var5 = this.width * var4 / this.field_Ib.length;
-          var6 = this.width * (1 + var4) / this.field_Ib.length;
-          this.field_Ib[var4].x = var5;
-          this.field_Ib[var4].y = 0;
-          this.field_Ib[var4].width = -var5 + var6;
-          this.field_Ib[var4].height = param1;
-          var4++;
+        while (this.tabButtons.length > tabIndex) {
+          tabLeft = this.width * tabIndex / this.tabButtons.length;
+          tabRight = this.width * (1 + tabIndex) / this.tabButtons.length;
+          this.tabButtons[tabIndex].x = tabLeft;
+          this.tabButtons[tabIndex].y = 0;
+          this.tabButtons[tabIndex].width = -tabLeft + tabRight;
+          this.tabButtons[tabIndex].height = tabHeight;
+          tabIndex++;
         }
-        this.field_Mb.setBounds(-param1 + this.height, -20500, this.width, param1, 0);
-        var8 = 0;
-        var4Lifetime1 = var8;
-        while (var8 < this.field_Jb.length) {
-          this.field_Jb[var8].setBounds(this.field_Mb.height - 2 * param0, -20500, -(param0 * 2) + this.field_Mb.width, param0, param0);
-          if (var8 != this.field_Kb) {
-            dupTemp$0 = this.field_Jb[var8];
-            dupTemp$0.x = dupTemp$0.x + 10000;
+        this.contentHost.setBounds(-tabHeight + this.height, -20500, this.width, tabHeight, 0);
+        panelIndex = 0;
+        initialPanelIndex = panelIndex;
+        while (panelIndex < this.panels.length) {
+          this.panels[panelIndex].setBounds(this.contentHost.height - 2 * contentPadding, -20500, -(contentPadding * 2) + this.contentHost.width, contentPadding, contentPadding);
+          if (panelIndex != this.activeTab) {
+            inactivePanel = this.panels[panelIndex];
+            inactivePanel.x = inactivePanel.x + 10000;
           }
-          var8++;
+          panelIndex++;
         }
     }
 
-    final static void a(int param0, au param1, boolean param2, String param3) {
+    final static void a(int param0, LobbyRoom param1, boolean param2, String param3) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -107,8 +107,8 @@ final class ml extends ClientUiComponent {
         String var13 = null;
         tg var14 = null;
         try {
-          ng.a(CipherPacketBuffer.field_x, param1, (int[]) null, (String) null, param1.d((byte) -84), 92, -1, (String) null, 0L);
-          if (param1.field_kc && (2 == param1.field_ac ||
+          ng.a(CipherPacketBuffer.field_x, param1, (int[]) null, (String) null, param1.getRoomId((byte) -84), 92, -1, (String) null, 0L);
+          if (param1.playing && (2 == param1.spectatorMode ||
             !(BufferedSocket.field_j < 2))) {
             var8 = tn.field_Z;
             var9 = fo.a(4800, SectorCacheStore.field_k, new String[]{param3});
@@ -152,26 +152,26 @@ final class ml extends ClientUiComponent {
         }
     }
 
-    final void l(int param0) {
+    final void advanceTabSelection(int obfuscationGuard) {
         int var2 = 0;
         ClientUiComponent dupTemp$0 = null;
         ClientUiComponent dupTemp$1 = null;
         int var3;
         String var4;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param0 != 10000) {
+        if (obfuscationGuard != 10000) {
           var4 = (String) null;
-          ml.a(10, (au) null, false, (String) null);
+          TabbedPanel.a(10, (LobbyRoom) null, false, (String) null);
         }
-        for (var2 = 0; this.field_Ib.length > var2; var2++) {
-          if (this.field_Kb != var2 &&
-            this.field_Ib[var2].pressedButton != 0) {
-            this.field_Ib[this.field_Kb].selected = false;
-            dupTemp$0 = this.field_Jb[this.field_Kb];
+        for (var2 = 0; this.tabButtons.length > var2; var2++) {
+          if (this.activeTab != var2 &&
+            this.tabButtons[var2].pressedButton != 0) {
+            this.tabButtons[this.activeTab].selected = false;
+            dupTemp$0 = this.panels[this.activeTab];
             dupTemp$0.x = dupTemp$0.x + 10000;
-            this.field_Kb = var2;
-            this.field_Ib[var2].selected = true;
-            dupTemp$1 = this.field_Jb[var2];
+            this.activeTab = var2;
+            this.tabButtons[var2].selected = true;
+            dupTemp$1 = this.panels[var2];
             dupTemp$1.x = dupTemp$1.x - 10000;
           }
         }
@@ -250,7 +250,7 @@ final class ml extends ClientUiComponent {
         try {
           if (param2 != 10) {
             var7 = (String) null;
-            ml.a(-33, (au) null, true, (String) null);
+            TabbedPanel.a(-33, (LobbyRoom) null, true, (String) null);
           }
           var4_long = 0L;
           var6 = null;
@@ -289,8 +289,8 @@ final class ml extends ClientUiComponent {
         return (ko.pointerY - param0) * (-param0 + ko.pointerY) + (-param1 + AiPlanningStrategy.pointerX) * (-param1 + AiPlanningStrategy.pointerX) < param2 * param2 ? true : false;
     }
 
-    ml(long param0, ClientUiComponent param1, String[] param2, ClientUiComponent param3, ClientUiComponent[] param4, int param5) {
-        super(param0, (ClientUiComponent) null);
+    TabbedPanel(long key, ClientUiComponent tabStyle, String[] labels, ClientUiComponent contentStyle, ClientUiComponent[] panels, int activeTab) {
+        super(key, (ClientUiComponent) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -307,54 +307,54 @@ final class ml extends ClientUiComponent {
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_Ib = new ClientUiComponent[param2.length];
-          this.field_Mb = new ClientUiComponent(0L, param3);
-          this.field_Jb = param4;
-          for (var8_int = 0; param2.length > var8_int; var8_int++) {
-            var9 = new ClientUiComponent(0L, param1);
-            var9.text = param2[var8_int];
-            this.field_Ib[var8_int] = var9;
+          this.tabButtons = new ClientUiComponent[labels.length];
+          this.contentHost = new ClientUiComponent(0L, contentStyle);
+          this.panels = panels;
+          for (var8_int = 0; labels.length > var8_int; var8_int++) {
+            var9 = new ClientUiComponent(0L, tabStyle);
+            var9.text = labels[var8_int];
+            this.tabButtons[var8_int] = var9;
             this.addChild(var9, 121);
           }
-          this.addChild(this.field_Mb, 122);
+          this.addChild(this.contentHost, 122);
           var11 = 0;
           var8_intLifetime1 = var11;
-          while (param4.length > var11) {
-            this.field_Mb.addChild(param4[var11], 75);
+          while (panels.length > var11) {
+            this.contentHost.addChild(panels[var11], 75);
             var11++;
           }
-          this.field_Kb = param5;
-          this.field_Ib[param5].selected = true;
+          this.activeTab = activeTab;
+          this.tabButtons[activeTab].selected = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_11_0 = var8;
-          stackIn_11_1 = new StringBuilder().append("ml.<init>(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("ml.<init>(").append(key).append(',');
+          if (tabStyle == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param2 == null) {
+          if (labels == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
           stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-          if (param3 == null) {
+          if (contentStyle == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
           stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
-          if (param4 == null) {
+          if (panels == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(activeTab).append(')').toString());
         }
     }
 

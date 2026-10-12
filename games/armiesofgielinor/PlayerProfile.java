@@ -56,7 +56,7 @@ final class PlayerProfile {
             if (param0.field_b == 4) {
               var2_intLifetime1 = fm.field_d[param0.field_b];
             } else {
-              if (~oh.field_H == ~param0.field_n) {
+              if (~oh.localAccountId == ~param0.field_n) {
                 var2_intLifetime1 = CombatEvent.field_A[param0.field_b];
               } else {
                 var2_intLifetime1 = fm.field_d[param0.field_b];

@@ -204,34 +204,34 @@ final class tg {
     }
 
     final void a(int param0, boolean param1) {
-        of var4;
+        LobbyPlayer var4;
         String var5;
         int var6;
-        of var7;
-        of var10;
-        of var11;
-        of var4Lifetime1;
+        LobbyPlayer var7;
+        LobbyPlayer var10;
+        LobbyPlayer var11;
+        LobbyPlayer var4Lifetime1;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 != 23899) {
           this.field_e = 127;
           if (this.field_m == null) {
             return;
           }
-          if (this.field_f == oh.field_H) {
+          if (this.field_f == oh.localAccountId) {
             return;
           }
-          if (null == vu.field_M) {
+          if (null == vu.currentRoom) {
             return;
           }
-          if (!vu.b(false)) {
+          if (!vu.isCurrentRoomOwner(false)) {
             return;
           }
-          var11 = DeployEvent.a((byte) 121, this.field_f);
-          var4 = UnitModelPreview.a(this.field_f, -86);
+          var11 = DeployEvent.getLobbyPlayer((byte) 121, this.field_f);
+          var4 = UnitModelPreview.getCurrentRoomPlayer(this.field_f, -86);
           var5 = this.b(param0 - 24004);
           if (var4 != null) {
-            if (vu.field_M.field_kc &&
-              vu.field_M.field_bc < 0) {
+            if (vu.currentRoom.playing &&
+              vu.currentRoom.completedDurationMillis < 0) {
               return;
             }
             this.field_i.addTextAction(1, fo.a(4800, wc.field_R, new String[]{var5}), (byte) -103);
@@ -240,19 +240,19 @@ final class tg {
           if (var11 == null) {
             return;
           }
-          if (!vu.field_M.field_tc) {
+          if (!vu.currentRoom.allowsAdmissionRequests) {
             return;
           }
-          if (vu.field_M.field_nc <= vu.field_M.field_Ub) {
+          if (vu.currentRoom.playerCapacity <= vu.currentRoom.playerCount) {
             return;
           }
-          if (var11.field_Wb) {
+          if (var11.invitationSent) {
             this.field_i.addTextAction(1, fo.a(4800, oe.field_zb, new String[]{var5}), (byte) -124);
           } else {
             if (!param1) {
               this.field_i.addTextAction(0, fo.a(4800, pk.field_W, new String[]{var5}), (byte) -118);
             } else {
-              if (!var11.field_Ub) {
+              if (!var11.joinRequested) {
                 this.field_i.addTextAction(0, fo.a(4800, pk.field_W, new String[]{var5}), (byte) -118);
               } else {
                 this.field_i.addTextAction(0, fo.a(4800, ac.field_x, new String[]{var5}), (byte) -126);
@@ -265,22 +265,22 @@ final class tg {
         if (this.field_m == null) {
           return;
         }
-        if (this.field_f == oh.field_H) {
+        if (this.field_f == oh.localAccountId) {
           return;
         }
-        if (null == vu.field_M) {
+        if (null == vu.currentRoom) {
           return;
         }
-        if (!vu.b(false)) {
+        if (!vu.isCurrentRoomOwner(false)) {
           return;
         }
-        var10 = DeployEvent.a((byte) 121, this.field_f);
+        var10 = DeployEvent.getLobbyPlayer((byte) 121, this.field_f);
         var7 = var10;
-        var4Lifetime1 = UnitModelPreview.a(this.field_f, -86);
+        var4Lifetime1 = UnitModelPreview.getCurrentRoomPlayer(this.field_f, -86);
         var5 = this.b(param0 - 24004);
         if (var4Lifetime1 != null) {
-          if (vu.field_M.field_kc &&
-            vu.field_M.field_bc < 0) {
+          if (vu.currentRoom.playing &&
+            vu.currentRoom.completedDurationMillis < 0) {
             return;
           }
           this.field_i.addTextAction(1, fo.a(4800, wc.field_R, new String[]{var5}), (byte) -103);
@@ -289,19 +289,19 @@ final class tg {
         if (var10 == null) {
           return;
         }
-        if (!vu.field_M.field_tc) {
+        if (!vu.currentRoom.allowsAdmissionRequests) {
           return;
         }
-        if (vu.field_M.field_nc <= vu.field_M.field_Ub) {
+        if (vu.currentRoom.playerCapacity <= vu.currentRoom.playerCount) {
           return;
         }
-        if (var10.field_Wb) {
+        if (var10.invitationSent) {
           this.field_i.addTextAction(1, fo.a(4800, oe.field_zb, new String[]{var5}), (byte) -124);
         } else {
           if (!param1) {
             this.field_i.addTextAction(0, fo.a(4800, pk.field_W, new String[]{var5}), (byte) -118);
           } else {
-            if (!var10.field_Ub) {
+            if (!var10.joinRequested) {
               this.field_i.addTextAction(0, fo.a(4800, pk.field_W, new String[]{var5}), (byte) -118);
             } else {
               this.field_i.addTextAction(0, fo.a(4800, ac.field_x, new String[]{var5}), (byte) -126);
@@ -316,84 +316,84 @@ final class tg {
         boolean discarded$0 = false;
         String var3;
         int var4;
-        au var5;
-        au var6;
-        au var7;
+        LobbyRoom var5;
+        LobbyRoom var6;
+        LobbyRoom var7;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 > 46) {
-          if (vu.field_M != null) {
+          if (vu.currentRoom != null) {
             return;
           }
-          var6 = ij.b((byte) 74, this.field_c);
+          var6 = ij.getLobbyRoom((byte) 74, this.field_c);
           var5 = var6;
           if (var6 == null) {
             return;
           }
-          var3 = var6.field_rc;
-          if (var6.field_Nb) {
+          var3 = var6.ownerName;
+          if (var6.invitationReceived) {
             this.field_i.addTextAction(2, fo.a(4800, ByteStorage.field_b, new String[]{var3}), (byte) -108);
             this.field_i.addTextAction(3, fo.a(4800, or.field_a, new String[]{var3}), (byte) -120);
             return;
           }
-          if (var6.field_Sb) {
+          if (var6.joinable) {
             this.field_i.addTextAction(2, fo.a(4800, ev.field_e, new String[]{var3}), (byte) -114);
-            if (var6.field_gc) {
+            if (var6.joinRequestSent) {
               this.field_i.addTextAction(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
             }
             return;
           }
-          if (!var6.field_gc &&
-            var6.field_tc) {
-            if (!var6.field_kc) {
+          if (!var6.joinRequestSent &&
+            var6.allowsAdmissionRequests) {
+            if (!var6.playing) {
               this.field_i.addTextAction(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
-              if (var6.field_gc) {
+              if (var6.joinRequestSent) {
                 this.field_i.addTextAction(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
               }
               return;
             }
-            if (!var6.field_Sb) {
-              if (var6.field_gc) {
+            if (!var6.joinable) {
+              if (var6.joinRequestSent) {
                 this.field_i.addTextAction(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
               }
               return;
             }
             this.field_i.addTextAction(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
           }
-          if (!var6.field_gc) {
+          if (!var6.joinRequestSent) {
             return;
           }
           this.field_i.addTextAction(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
           return;
         }
         discarded$0 = this.a(107, -75, (byte) 100);
-        if (vu.field_M != null) {
+        if (vu.currentRoom != null) {
           return;
         }
-        var7 = ij.b((byte) 74, this.field_c);
+        var7 = ij.getLobbyRoom((byte) 74, this.field_c);
         if (var7 == null) {
           return;
         }
-        var3 = var7.field_rc;
-        if (var7.field_Nb) {
+        var3 = var7.ownerName;
+        if (var7.invitationReceived) {
           this.field_i.addTextAction(2, fo.a(4800, ByteStorage.field_b, new String[]{var3}), (byte) -108);
           this.field_i.addTextAction(3, fo.a(4800, or.field_a, new String[]{var3}), (byte) -120);
           return;
         }
-        if (var7.field_Sb) {
+        if (var7.joinable) {
           this.field_i.addTextAction(2, fo.a(4800, ev.field_e, new String[]{var3}), (byte) -114);
         } else {
-          if (!var7.field_gc &&
-            var7.field_tc) {
-            if (!var7.field_kc) {
+          if (!var7.joinRequestSent &&
+            var7.allowsAdmissionRequests) {
+            if (!var7.playing) {
               this.field_i.addTextAction(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
             } else {
-              if (var7.field_Sb) {
+              if (var7.joinable) {
                 this.field_i.addTextAction(2, fo.a(4800, CampaignResult.field_d, new String[]{var3}), (byte) -123);
               }
             }
           }
         }
-        if (!var7.field_gc) {
+        if (!var7.joinRequestSent) {
           return;
         }
         this.field_i.addTextAction(3, fo.a(4800, eq.field_j, new String[]{var3}), (byte) -119);
@@ -521,7 +521,7 @@ final class tg {
         int var6 = 0;
         String var7 = null;
         try {
-          if (null != this.field_m && (this.field_f != oh.field_H ||
+          if (null != this.field_m && (this.field_f != oh.localAccountId ||
             2 == param2) && 2 == th.field_a) {
             var7 = this.b(-97);
             var4 = var7;
@@ -577,7 +577,7 @@ final class tg {
     final void b(byte param0) {
         String var3 = null;
         if (null != this.field_m &&
-          ~this.field_f != ~oh.field_H) {
+          ~this.field_f != ~oh.localAccountId) {
           var3 = this.b(96);
           String var2 = var3;
           this.field_i.addTextAction(17, fo.a(4800, IterableDualNodeDeque.field_e, new String[]{var3}), (byte) -127);

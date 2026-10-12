@@ -46,11 +46,11 @@ final class qa extends dr {
         BattleUnitRenderer.field_c = wf.field_F[param0];
         db.field_b = eq.field_m[param0];
         if (param1 == 1) {
-          of.field_Jb = CorpseConditionMarker.field_s[param0];
+          LobbyPlayer.field_Jb = CorpseConditionMarker.field_s[param0];
           return;
         }
         field_F = true;
-        of.field_Jb = CorpseConditionMarker.field_s[param0];
+        LobbyPlayer.field_Jb = CorpseConditionMarker.field_s[param0];
     }
 
     public static void g(int param0) {

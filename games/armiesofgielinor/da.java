@@ -15,18 +15,18 @@ final class da {
           vg.field_p = 0;
           wh.field_c.clear(126);
           ot.field_E.clear(81);
-          var1 = DiskCacheRequest.field_K.a((byte) 66);
+          var1 = DiskCacheRequest.field_K.first((byte) 66);
           while (var1 != null) {
             var1.unlinkSecondary((byte) -76);
-            var1 = DiskCacheRequest.field_K.c(1);
+            var1 = DiskCacheRequest.field_K.next(1);
           }
           if (param0 > -112) {
             da.a(89, true);
           }
-          var1Lifetime1 = bk.field_a.a((byte) 66);
+          var1Lifetime1 = bk.field_a.first((byte) 66);
           while (var1Lifetime1 != null) {
             var1Lifetime1.unlinkSecondary((byte) -76);
-            var1Lifetime1 = bk.field_a.c(1);
+            var1Lifetime1 = bk.field_a.next(1);
           }
           th.field_a = 0;
         } catch (RuntimeException runtimeException) {

@@ -128,7 +128,7 @@ final class db {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (hl) (bk.field_a.a((byte) -27, (long)var2.hashCode()));
+          var3 = (hl) (bk.field_a.get((byte) -27, (long)var2.hashCode()));
           if (param1 > -40) {
             db.a(-88);
           }
@@ -142,7 +142,7 @@ final class db {
               var4 = var3.field_Mb;
             }
             if (!var4.equals(var2)) {
-              var3 = (hl) (bk.field_a.d(-348));
+              var3 = (hl) (bk.field_a.getNextMatch(-348));
               continue;
             }
             break;

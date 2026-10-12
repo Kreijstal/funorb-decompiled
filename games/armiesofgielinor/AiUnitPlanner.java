@@ -520,10 +520,10 @@ final class AiUnitPlanner extends IntrusiveNode {
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.writeByte(1, param0);
-        var2.writeByte(1, vu.field_M.field_nc);
-        int var4 = (vu.field_M.field_ac << 6) + vu.field_M.field_Tb;
+        var2.writeByte(1, vu.currentRoom.playerCapacity);
+        int var4 = (vu.currentRoom.spectatorMode << 6) + vu.currentRoom.gameType;
         var2.writeByte(1, var4);
-        var2.writeBytes(vu.field_M.field_pc, 0, vu.field_M.field_pc.length, -38);
+        var2.writeBytes(vu.currentRoom.gameOptions, 0, vu.currentRoom.gameOptions.length, -38);
         var2.writeByteLengthPrefix(var2.position - var3, param0 ^ 5935);
     }
 

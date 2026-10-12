@@ -268,7 +268,7 @@ final class fg extends IntrusiveNode {
           var23 = null;
           var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
-            var13 = (dc) (tp.field_e.first((byte) 125));
+            var13 = (dc) (DualNodeHashTable.field_e.first((byte) 125));
             var17 = var13;
             if (var17 == null) {
               return;

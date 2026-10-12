@@ -26,7 +26,7 @@ final class FixedQuaternion {
             var5.field_Ib != null) {
             return true;
           }
-          stackIn_8_0 = (vu.field_M != null) && (null != UnitModelPreview.a(param0, -77));
+          stackIn_8_0 = (vu.currentRoom != null) && (null != UnitModelPreview.getCurrentRoomPlayer(param0, -77));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

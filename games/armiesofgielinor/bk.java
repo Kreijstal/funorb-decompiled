@@ -5,7 +5,7 @@ final class bk {
     static ClientUiComponent field_f;
     static String field_g;
     static String field_b;
-    static tp field_a;
+    static DualNodeHashTable field_a;
     static String field_c;
     static NodeDeque field_e;
     static IndexedSprite[] field_d;
@@ -339,7 +339,7 @@ final class bk {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, of param4, ScrollContainer param5, int param6) {
+    final static void a(boolean param0, int param1, int param2, int param3, LobbyPlayer param4, ScrollContainer param5, int param6) {
         tg var7 = null;
         int var8 = 0;
         int var9 = 0;
@@ -353,7 +353,7 @@ final class bk {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7_ref = null;
         try {
-          ng.a(param5, param4, (int[]) null, param4.field_Yb, -1, 111, -1, param4.field_cc, param4.field_Pb);
+          ng.a(param5, param4, (int[]) null, param4.displayName, -1, 111, -1, param4.accountName, param4.accountId);
           tn.field_Z.a(23899, true);
           tn.field_Z.a((int[]) null, 7, 0);
           tn.field_Z.b((byte) 44);

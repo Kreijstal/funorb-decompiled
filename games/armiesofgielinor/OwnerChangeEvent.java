@@ -238,8 +238,8 @@ final class OwnerChangeEvent extends GameEvent {
         try {
           ev.field_a = ev.field_a + 1;
           if (QuickChatCommandDefinition.field_e == -1 &&
-            of.field_Ib == -1) {
-            of.field_Ib = ko.pointerY;
+            LobbyPlayer.field_Ib == -1) {
+            LobbyPlayer.field_Ib = ko.pointerY;
             QuickChatCommandDefinition.field_e = AiPlanningStrategy.pointerX;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -272,7 +272,7 @@ final class OwnerChangeEvent extends GameEvent {
                 }
               }
             }
-            cc.field_b = of.field_Ib;
+            cc.field_b = LobbyPlayer.field_Ib;
             if (param1 != null) {
               BoundedFile.field_b = false;
             } else {
@@ -285,13 +285,13 @@ final class OwnerChangeEvent extends GameEvent {
           if (!BoundedFile.field_b &&
             ev.field_a < NodeIterator.field_c &&
             lk.pointerChangedSnapshot) {
-            cc.field_b = of.field_Ib;
+            cc.field_b = LobbyPlayer.field_Ib;
             lq.field_e = QuickChatCommandDefinition.field_e;
             ev.field_a = 0;
           }
           ts.field_a = param1;
           QuickChatCommandDefinition.field_e = param0;
-          of.field_Ib = -1;
+          LobbyPlayer.field_Ib = -1;
           if (BoundedFile.field_b &&
             ce.field_J == ev.field_a) {
             BoundedFile.field_b = false;

@@ -54,7 +54,7 @@ final class uu {
         NodeDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
-        of var18_ref = null;
+        LobbyPlayer var18_ref = null;
         int var19 = 0;
         int[] var20 = null;
         ClientUiComponent var22 = null;
@@ -74,7 +74,7 @@ final class uu {
             uu.a((byte) -86);
           }
           AnimationSequence.a(InstructionsPanel.field_D, 125);
-          if (vu.field_M != null) {
+          if (vu.currentRoom != null) {
             boolean decompiledFrameRemainder1 = true;
             mp.field_Lb.inputEnabled = true;
             lm.field_b.height = 0;
@@ -87,8 +87,8 @@ final class uu {
             var7 = pi.field_N;
             pi.field_N.height = 0;
             var7.width = 0;
-            if (!vu.b(false)) {
-              var9_ref_String = vu.field_M.field_rc;
+            if (!vu.isCurrentRoomOwner(false)) {
+              var9_ref_String = vu.currentRoom.ownerName;
               kd.field_F.text = fo.a(4800, CampaignMenu.field_m, new String[]{var9_ref_String}).toUpperCase();
               pi.field_N.setBounds(40, param3 - 20500, pd.field_c.width, -40 + pd.field_c.height, 0);
               pi.field_N.text = fo.a(4800, wt.field_F, new String[]{var9_ref_String});
@@ -96,10 +96,10 @@ final class uu {
               decompiledFrameRemainder1 = (var19 != 0);
             }
             if (decompiledFrameRemainder1) {
-              kd.field_F.text = tp.field_f.toUpperCase();
+              kd.field_F.text = DualNodeHashTable.field_f.toUpperCase();
               var9 = (2 + pd.field_c.width) / 2;
               lm.field_b.setBounds(40, -20500, var9 - 2, -40 + pd.field_c.height, 0);
-              if (vu.field_M.field_nc > vu.field_M.field_Ub) {
+              if (vu.currentRoom.playerCapacity > vu.currentRoom.playerCount) {
                 lm.field_b.text = TickCounter.field_d.toUpperCase();
                 lm.field_b.inputEnabled = true;
                 if (var19 != 0) {
@@ -111,14 +111,14 @@ final class uu {
                 lm.field_b.inputEnabled = false;
               }
               lm.field_b.skinSprites = nd.field_a.skinSprites;
-              if (0 < AnimationPlayer.field_a) {
-                boolean decompiledSharedTail0 = (1 != AnimationPlayer.field_a);
+              if (0 < AnimationPlayer.pendingJoinRequestCount) {
+                boolean decompiledSharedTail0 = (1 != AnimationPlayer.pendingJoinRequestCount);
                 if (!decompiledSharedTail0) {
                   var10_ref_String = vf.field_c;
                   decompiledSharedTail0 = (var19 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  var10_ref_String = fo.a(4800, UnitSpell.field_h, new String[]{Integer.toString(AnimationPlayer.field_a)});
+                  var10_ref_String = fo.a(4800, UnitSpell.field_h, new String[]{Integer.toString(AnimationPlayer.pendingJoinRequestCount)});
                 }
                 if (0 == (16 & hg.field_b) &&
                   !vk.field_f) {
@@ -135,12 +135,12 @@ final class uu {
               var10 = 2;
               if (null != fs.field_d) {
                 if (null == TeleportAction.field_B) {
-                  TeleportAction.field_B = new byte[tq.field_b];
-                  dt.field_d = new boolean[tq.field_b];
+                  TeleportAction.field_B = new byte[tq.gameOptionCount];
+                  dt.field_d = new boolean[tq.gameOptionCount];
                 }
                 var11_int = 0;
                 do {
-                  if (!(var11_int < tq.field_b)) {
+                  if (!(var11_int < tq.gameOptionCount)) {
                     var10 = 0;
                     break;
                   }
@@ -173,9 +173,9 @@ final class uu {
                             stackIn_60_1 = ~var15;
                             if (stackIn_60_0 == stackIn_60_1) {
                               if (var10 != 0) {
-                                stackIn_48_0 = vu.field_M.field_Ub;
+                                stackIn_48_0 = vu.currentRoom.playerCount;
                               } else {
-                                stackIn_48_0 = vu.field_M.field_nc;
+                                stackIn_48_0 = vu.currentRoom.playerCapacity;
                               }
                               var17_int = stackIn_48_0;
                               if (var17_int != var16 &&
@@ -183,7 +183,7 @@ final class uu {
                                 break scanLoop2;
                               }
                             } else {
-                              if (var16 != (vu.field_M.field_pc[var15] & 255) &&
+                              if (var16 != (vu.currentRoom.gameOptions[var15] & 255) &&
                                 var19 == 0) {
                                 break scanLoop2;
                               }
@@ -242,8 +242,8 @@ final class uu {
                 var15 = 0;
                 var16 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
-                while (!(decompiledNaturalLoopExit0 = (!(var16 < tq.field_b)))) {
-                  var17_int = 255 & vu.field_M.field_pc[var16];
+                while (!(decompiledNaturalLoopExit0 = (!(var16 < tq.gameOptionCount)))) {
+                  var17_int = 255 & vu.currentRoom.gameOptions[var16];
                   if (var19 == 0) {
                     if (null != ep.field_p &&
                       null != ep.field_p[var16] &&
@@ -285,11 +285,11 @@ final class uu {
                   var16 = 0;
                 }
                 var17 = bu.field_a.content.children;
-                var18_ref = (of) (var17.first((byte) 110));
+                var18_ref = (LobbyPlayer) (var17.first((byte) 110));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
                   if (var18_ref != null) {
-                    stackOut_113_0 = var18_ref.k(param3 ^ 0);
+                    stackOut_113_0 = var18_ref.isRemovedFromIndex(param3 ^ 0);
                     stackIn_132_0 = stackOut_113_0 ? 1 : 0;
                     stackIn_114_0 = stackOut_113_0;
                     if (var19 != 0) {
@@ -298,22 +298,22 @@ final class uu {
                     if (!stackIn_114_0 ||
                       var19 != 0) {
                       if (var11_int != 0 &&
-                        !var18_ref.field_Zb) {
+                        !var18_ref.packedFlag0) {
                         var16 = 1;
                         decompiledFrameRemainder0 = false;
                       }
                       else {
-                        if (var18_ref.field_Sb < var13_int) {
+                        if (var18_ref.rating < var13_int) {
                           var16 = 1;
                           decompiledFrameRemainder0 = false;
                         }
                         else {
-                          if (var18_ref.field_Xb < var14_int) {
+                          if (var18_ref.ratedGamesPlayed < var14_int) {
                             var16 = 1;
                             decompiledFrameRemainder0 = false;
                           }
                           else {
-                            if ((~var18_ref.field_Ob & var15) > 0) {
+                            if ((~var18_ref.optionUnlockMask & var15) > 0) {
                               var16 = 1;
                               decompiledFrameRemainder0 = false;
                             }
@@ -328,7 +328,7 @@ final class uu {
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      var18_ref = (of) (var17.next((byte) 123));
+                      var18_ref = (LobbyPlayer) (var17.next((byte) 123));
                       continue;
                     }
                   }
@@ -342,7 +342,7 @@ final class uu {
                 if (var16 != 0) {
                   so.field_d.inputEnabled = false;
                   if (so.field_d.hovered) {
-                    if (ij.field_w.field_a.field_Kb != 0) {
+                    if (ij.field_w.field_a.activeTab != 0) {
                       ad.field_I = fo.a(4800, Battlefield.field_pb, new String[]{ob.field_O});
                       if (var19 != 0) {
                         ad.field_I = ResourceArchive.field_f;
@@ -362,7 +362,7 @@ final class uu {
                   var12 = 0;
                   var13_intLifetime1 = 0;
                   while (true) {
-                    if (var13_intLifetime1 < tq.field_b) {
+                    if (var13_intLifetime1 < tq.gameOptionCount) {
                       stackOut_147_0 = dt.field_d[var13_intLifetime1];
                       stackIn_155_0 = stackOut_147_0 ? 1 : 0;
                       stackIn_148_0 = stackOut_147_0;
@@ -389,10 +389,10 @@ final class uu {
                     if (var12 == 0) {
                       var14 = fo.a(4800, er.field_c, new String[]{(String) (var11)});
                       if (var19 != 0) {
-                        var14 = au.field_Jb + (String) (var11);
+                        var14 = LobbyRoom.field_Jb + (String) (var11);
                       }
                     } else {
-                      var14 = au.field_Jb + (String) (var11);
+                      var14 = LobbyRoom.field_Jb + (String) (var11);
                     }
                   } else {
                     var13_ref = rd.field_f;
@@ -417,7 +417,7 @@ final class uu {
               }
               var8.text = fo.a(4800, CorpseConditionMarker.field_t, new String[]{Integer.toString(var9)});
             }
-            gg.field_E.text = fo.a(4800, ws.field_T, new String[]{Integer.toString(vu.field_M.field_Ub), Integer.toString(vu.field_M.field_nc)});
+            gg.field_E.text = fo.a(4800, ws.field_T, new String[]{Integer.toString(vu.currentRoom.playerCount), Integer.toString(vu.currentRoom.playerCapacity)});
           }
           stackIn_173_0 = lk.field_a;
           stackIn_173_1 = true;
@@ -431,10 +431,10 @@ final class uu {
           stackIn_183_1 = true;
           stackIn_184_2 = (param0) && (!param1) && (vk.field_f);
           ((ClientUiComponent) (Object) stackIn_183_0).updateInput(stackIn_183_1, stackIn_184_2);
-          ij.field_w.field_a.l(param3 ^ 10000);
-          if (vu.field_M != null) {
+          ij.field_w.field_a.advanceTabSelection(param3 ^ 10000);
+          if (vu.currentRoom != null) {
             if (mp.field_Lb.pressedButton != 0) {
-              PointerInputHandler.a(69, vu.field_M.d((byte) -68), param2);
+              PointerInputHandler.a(69, vu.currentRoom.getRoomId((byte) -68), param2);
             }
             if (lm.field_b.pressedButton != 0) {
               vk.field_f = true;
@@ -445,7 +445,7 @@ final class uu {
             if (dv.field_m.pressedButton != 0) {
               vk.field_f = false;
             }
-            vf.a(param3 + 1, false, param2, vu.field_M);
+            vf.a(param3 + 1, false, param2, vu.currentRoom);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

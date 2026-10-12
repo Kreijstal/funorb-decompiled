@@ -284,7 +284,7 @@ final class ip {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        of.field_Ib = param0;
+        LobbyPlayer.field_Ib = param0;
         QuickChatCommandDefinition.field_e = param1;
         if (param2 <= 77) {
           field_e = true;

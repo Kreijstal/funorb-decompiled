@@ -1134,7 +1134,7 @@ final class CampaignMenu {
             var24 = km.field_h[2];
             this.a(var24, 0, 0, 10 + var6Lifetime2, var23_ref.icon, param0 - 19, 1.0f, 18 + var23_ref.icon.canvasWidth / 2);
             if (var23_ref.description != null &&
-              ml.a(MatchConditionEntry.a(var6Lifetime2 + 10, (byte) 94), db.a(true, var23_ref.icon.canvasWidth / 2 + 18), 25, false)) {
+              TabbedPanel.a(MatchConditionEntry.a(var6Lifetime2 + 10, (byte) 94), db.a(true, var23_ref.icon.canvasWidth / 2 + 18), 25, false)) {
               var25_intLifetime1 = var4Lifetime1 * 2;
               var26 = var3Lifetime1 + 5;
               if (so.field_b.field_a < var26 + var25_intLifetime1) {
@@ -1337,7 +1337,7 @@ final class CampaignMenu {
           previewBattlefield = new Battlefield(0, participantNames, -1, terrain, 0, true, false, mission.mapSizeSetting, 1, layout.field_p, false, (int[][]) null, 4, 0, 0, mission);
           previewBattlefield.localPlayer = 0;
           try {
-            ml.a(mission, (byte) -26);
+            TabbedPanel.a(mission, (byte) -26);
             previewBattlefield.readLegacySnapshot(obfuscationGuard ^ obfuscationGuard, new PacketBuffer(quicksave.snapshotBytes));
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

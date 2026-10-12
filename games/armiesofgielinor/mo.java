@@ -32,7 +32,7 @@ final class mo {
         }
         if (!this.field_f && (2 != this.field_b ||
           this.field_p <= 0)) {
-          if (oh.field_H == this.field_n) {
+          if (oh.localAccountId == this.field_n) {
             return 1;
           }
           if (th.field_a == 2 &&

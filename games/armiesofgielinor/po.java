@@ -62,7 +62,7 @@ final class po {
         String var4Lifetime3;
         String var4Lifetime4;
         String var4Lifetime1Lifetime1;
-        stackIn_3_0 = (null == no.field_K) ? 0 : 1;
+        stackIn_3_0 = (null == no.roomSetup) ? 0 : 1;
         var3 = stackIn_3_0;
         if (rs.field_q != 9) {
           if (param1 != 6150) {

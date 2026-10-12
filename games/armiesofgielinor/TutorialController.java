@@ -231,7 +231,7 @@ final class TutorialController {
                 stackIn_24_3 = stackOut_23_3;
                 if (var7 == 0) {
                   stackIn_30_3 = !(stackIn_24_3);
-                  if (ml.a(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_30_3)) {
+                  if (TabbedPanel.a(stackIn_70_0, stackIn_70_1, stackIn_70_2, stackIn_30_3)) {
                     if (DeployEvent.pointerPressButton == 2 &&
                       pg.playerProfile.equippedSpellIds[var2_int] > -1) {
                       pg.playerProfile.equippedSpellIds[var2_int] = -1;
@@ -296,7 +296,7 @@ final class TutorialController {
                   }
                   return;
                 }
-                if (ml.a(MatchConditionEntry.a(212, (byte) 94), db.a(true, 165), 20, false)) {
+                if (TabbedPanel.a(MatchConditionEntry.a(212, (byte) 94), db.a(true, 165), 20, false)) {
                   if (null != ts.currentSpellMenu.parent) {
                     vu.field_O = ts.currentSpellMenu;
                     wj.field_q = 248;
@@ -318,7 +318,7 @@ final class TutorialController {
                   while (var3 > var4) {
                     var5 = 165 + (int)(Math.sin(6.283185307179586 * (double)var4 / (double)var3) * 90.0);
                     var6 = 212 - (int)(Math.cos(6.283185307179586 * (double)var4 / (double)var3) * 90.0);
-                    stackOut_102_0 = ml.a(MatchConditionEntry.a(var6, (byte) 94), db.a(param0, var5), 20, false);
+                    stackOut_102_0 = TabbedPanel.a(MatchConditionEntry.a(var6, (byte) 94), db.a(param0, var5), 20, false);
                     stackIn_123_0 = stackOut_102_0 ? 1 : 0;
                     stackIn_103_0 = stackOut_102_0;
                     if (var7 != 0) {
@@ -350,7 +350,7 @@ final class TutorialController {
                   while (var4Lifetime3 < var3Lifetime2) {
                     var5Lifetime1 = (int)(Math.sin(6.283185307179586 * (double)var4Lifetime3 / (double)var3Lifetime2) * 90.0) + 165;
                     var6Lifetime1 = 212 - (int)(90.0 * Math.cos(6.283185307179586 * (double)var4Lifetime3 / (double)var3Lifetime2));
-                    stackOut_115_0 = ml.a(MatchConditionEntry.a(var6Lifetime1, (byte) 94), db.a(true, var5Lifetime1), 20, false);
+                    stackOut_115_0 = TabbedPanel.a(MatchConditionEntry.a(var6Lifetime1, (byte) 94), db.a(true, var5Lifetime1), 20, false);
                     stackIn_123_0Lifetime2 = stackOut_115_0 ? 1 : 0;
                     stackIn_116_0 = stackOut_115_0;
                     if (var7 != 0) {
@@ -962,7 +962,7 @@ final class TutorialController {
                 var8 = 7 + param3 + ((param4 >> 2) * 70 - param2);
                 if (var8 > -40 &&
                   var8 < 324 &&
-                  ml.a(MatchConditionEntry.a(var8 + 60 + 23, (byte) 94), db.a(true, (param4 & 3) * 58 + 70), 22, false)) {
+                  TabbedPanel.a(MatchConditionEntry.a(var8 + 60 + 23, (byte) 94), db.a(true, (param4 & 3) * 58 + 70), 22, false)) {
                   break;
                 }
                 param4++;
@@ -2714,7 +2714,7 @@ final class TutorialController {
           param0.icon.h(db.a(true, var5_int * 50 + 50), MatchConditionEntry.a(348, (byte) 94));
           km.field_h[1].h(db.a(true, 50 * var5_int + 30 + 19), MatchConditionEntry.a(347, (byte) 94));
           SoftwareRaster.a(db.a(true, 30 + var5_int * 50 + 30), MatchConditionEntry.a(358, (byte) 94), 12, 2500134, -param3 + 256);
-          if (ml.a(MatchConditionEntry.a(359, (byte) 94), db.a(true, 30 + (50 * var5_int + 30)), 10, false)) {
+          if (TabbedPanel.a(MatchConditionEntry.a(359, (byte) 94), db.a(true, 30 + (50 * var5_int + 30)), 10, false)) {
             na.field_F = param0.iconIndex + 400;
             if (!param1) {
               vi.field_f = fo.a(4800, rr.field_a, new String[]{param0.label});
@@ -3760,7 +3760,7 @@ final class TutorialController {
               km.field_h[0].g(db.a(true, var5 * 55 + 327), MatchConditionEntry.a(75, (byte) 94));
               stackIn_105_0Lifetime1 = MatchConditionEntry.a(98, (byte) 94);
               stackIn_105_1Lifetime1 = db.a(true, 310 + (var5 * 55 + 40));
-              if (ml.a(stackIn_105_0Lifetime1, stackIn_105_1Lifetime1, 22, false)) {
+              if (TabbedPanel.a(stackIn_105_0Lifetime1, stackIn_105_1Lifetime1, 22, false)) {
                 na.field_F = var5;
               }
               var5++;
@@ -3942,7 +3942,7 @@ final class TutorialController {
           while (!(decompiledNaturalLoopExit0 = (var2_int >= 7))) {
             var3 = 50 + 80 * var2_int + 30;
             var4 = 95;
-            stackIn_18_0 = ml.a(MatchConditionEntry.a(var4, (byte) 94), db.a(true, var3), 25, false);
+            stackIn_18_0 = TabbedPanel.a(MatchConditionEntry.a(var4, (byte) 94), db.a(true, var3), 25, false);
             if (var8 == 0) {
               if (stackIn_18_0) {
                 ep.field_o = 0;
@@ -3977,7 +3977,7 @@ final class TutorialController {
             while (!(AnimationFrameSet.unitUnlockGroups[li.field_q + 1].length <= var4Lifetime1)) {
               var2_intLifetime1 = 135 + (int)(100.0 * Math.sin(2.0 * (3.141592653589793 * (double)var4Lifetime1) / (double)AnimationFrameSet.unitUnlockGroups[1 + li.field_q].length)) + 30;
               var3Lifetime1 = (int)(-(Math.cos(3.141592653589793 * (double)var4Lifetime1 * 2.0 / (double)AnimationFrameSet.unitUnlockGroups[li.field_q + 1].length) * 100.0)) + 150 + 135;
-              stackIn_42_0 = ml.a(MatchConditionEntry.a(var3Lifetime1, (byte) 94), db.a(true, var2_intLifetime1), 25, false);
+              stackIn_42_0 = TabbedPanel.a(MatchConditionEntry.a(var3Lifetime1, (byte) 94), db.a(true, var2_intLifetime1), 25, false);
               if (var8 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
@@ -4202,7 +4202,7 @@ final class TutorialController {
           while (!(decompiledNaturalLoopExit0 = (7 <= var7))) {
             var8 = 24 + (30 + var7 * 80);
             var9 = 69;
-            stackOut_3_0 = ml.a(MatchConditionEntry.a(26 + var9, (byte) 94), db.a(true, 25 + var8), 25, false);
+            stackOut_3_0 = TabbedPanel.a(MatchConditionEntry.a(26 + var9, (byte) 94), db.a(true, 25 + var8), 25, false);
             stackIn_18_0 = stackOut_3_0 ? 1 : 0;
             stackIn_4_0 = stackOut_3_0;
             if (var10 == 0) {
@@ -4254,7 +4254,7 @@ final class TutorialController {
                 if (stackIn_43_0 < stackIn_43_1) {
                   var8Lifetime1 = 135 + (30 + (int)((double)(100 + var4 * 150 / 256) * Math.sin(2.0 * (3.141592653589793 * (double)var7Lifetime2) / (double)AnimationFrameSet.unitUnlockGroups[li.field_q + 1].length)));
                   var9Lifetime1 = 135 + (150 + (int)(-(Math.cos((double)var7Lifetime2 * 3.141592653589793 * 2.0 / (double)AnimationFrameSet.unitUnlockGroups[1 + li.field_q].length) * (double)(var4 * 150 / 256 + 100))));
-                  stackOut_44_0 = ml.a(MatchConditionEntry.a(var9Lifetime1, (byte) 94), db.a(true, var8Lifetime1), 25, false);
+                  stackOut_44_0 = TabbedPanel.a(MatchConditionEntry.a(var9Lifetime1, (byte) 94), db.a(true, var8Lifetime1), 25, false);
                   stackIn_71_0 = stackOut_44_0 ? 1 : 0;
                   stackIn_45_0 = stackOut_44_0;
                   break scanLoop1;
@@ -4288,7 +4288,7 @@ final class TutorialController {
                 }
                 var8Lifetime1Lifetime1 = 135 + (30 + (int)((double)(100 + var4 * 150 / 256) * Math.sin(2.0 * (3.141592653589793 * (double)var7Lifetime2) / (double)AnimationFrameSet.unitUnlockGroups[li.field_q + 1].length)));
                 var9Lifetime1Lifetime1 = 135 + (150 + (int)(-(Math.cos((double)var7Lifetime2 * 3.141592653589793 * 2.0 / (double)AnimationFrameSet.unitUnlockGroups[1 + li.field_q].length) * (double)(var4 * 150 / 256 + 100))));
-                stackOut_44_0Lifetime1 = ml.a(MatchConditionEntry.a(var9Lifetime1Lifetime1, (byte) 94), db.a(true, var8Lifetime1Lifetime1), 25, false);
+                stackOut_44_0Lifetime1 = TabbedPanel.a(MatchConditionEntry.a(var9Lifetime1Lifetime1, (byte) 94), db.a(true, var8Lifetime1Lifetime1), 25, false);
                 stackIn_71_0 = stackOut_44_0Lifetime1 ? 1 : 0;
                 stackIn_45_0Lifetime1 = stackOut_44_0Lifetime1;
                 if (var10 != 0) {
@@ -5023,7 +5023,7 @@ final class TutorialController {
                   BattleCharacter.field_h[uc.spellDefinitions[param1.spellIds[var8Lifetime1]][2]].g(db.a(true, 50 + (param3 & 3) * 58), MatchConditionEntry.a(63 + var9Lifetime1, (byte) 94));
                   km.field_h[0].g(db.a(true, (3 & param3) * 58 + 47), MatchConditionEntry.a(60 + var9Lifetime1, (byte) 94));
                   en.field_E.c(Integer.toString(pg.playerProfile.spellQuantities[param1.spellIds[var8Lifetime1]]), db.a(true, 70 + (3 & param3) * 58), MatchConditionEntry.a(var9Lifetime1 + 60 + 55, (byte) 94), 16777215, 0);
-                  if (ml.a(MatchConditionEntry.a(60 + var9Lifetime1 + 23, (byte) 94), db.a(true, 70 + (3 & param3) * 58), 22, false)) {
+                  if (TabbedPanel.a(MatchConditionEntry.a(60 + var9Lifetime1 + 23, (byte) 94), db.a(true, 70 + (3 & param3) * 58), 22, false)) {
                     na.field_F = 200 + param1.spellIds[var8Lifetime1];
                   }
                 }
@@ -5897,7 +5897,7 @@ final class TutorialController {
             if (var3 != 0) {
               return;
             }
-            if (ml.a(MatchConditionEntry.a(98, (byte) 94), db.a(true, 350 + 55 * var2_int), 22, false)) {
+            if (TabbedPanel.a(MatchConditionEntry.a(98, (byte) 94), db.a(true, 350 + 55 * var2_int), 22, false)) {
               pg.playerProfile.equippedSpellIds[var2_int] = ev.field_d;
               RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(51, MoveAttackRequest.field_v[44]);
               AttackEvent.b(false);
@@ -5928,7 +5928,7 @@ final class TutorialController {
           if (param0.parent != null) {
             var3_int = this.a(param0.parent, (byte) -88);
           }
-          if (ml.a(MatchConditionEntry.a(359, (byte) 94), db.a(true, 30 + var3_int * 50 + 30), 10, false)) {
+          if (TabbedPanel.a(MatchConditionEntry.a(359, (byte) 94), db.a(true, 30 + var3_int * 50 + 30), 10, false)) {
             ih.field_p = param0;
             this.a((byte) 116, -1, param0);
             if (-1 != ev.field_d) {

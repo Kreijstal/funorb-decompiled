@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class no extends en {
-    static au field_K;
+    static LobbyRoom roomSetup;
     static int[] field_U;
     static ClientUiComponent field_M;
     static RgbSprite field_P;
@@ -157,7 +157,7 @@ final class no extends en {
         field_P = null;
         field_T = null;
         field_M = null;
-        field_K = null;
+        roomSetup = null;
         if (param0) {
           field_U = (int[]) null;
         }
@@ -172,7 +172,7 @@ final class no extends en {
           return this.field_s == null ? this.field_v : this.field_s;
         }
         if (param0 != 21384) {
-          field_K = (au) null;
+          roomSetup = (LobbyRoom) null;
           return null;
         }
         return null;

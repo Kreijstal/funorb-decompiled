@@ -109,7 +109,7 @@ final class dg {
     final void b(int param0) {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        of.field_Mb = MapLayout.a("cantmove", -28106, "basic", this.field_d);
+        LobbyPlayer.field_Mb = MapLayout.a("cantmove", -28106, "basic", this.field_d);
         bk.field_d = MapLayout.a("attacktargets", -28106, "basic", this.field_d);
         hq.field_a = MapLayout.a("surround_tiles", -28106, "basic", this.field_d);
         vf.field_j = fk.a("smoke", (byte) -124, this.field_d, "basic");

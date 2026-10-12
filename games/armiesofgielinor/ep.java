@@ -246,13 +246,13 @@ final class ep {
             param0.children = new NodeDeque();
           }
           if (null == DiskCacheRequest.field_K) {
-            DiskCacheRequest.field_K = new tp(64);
+            DiskCacheRequest.field_K = new DualNodeHashTable(64);
           }
           if (param1 > -20) {
             field_o = -46;
           }
           if (bk.field_a == null) {
-            bk.field_a = new tp(64);
+            bk.field_a = new DualNodeHashTable(64);
           }
           ot.field_E = param0.children;
           wh.field_c = param2.children;

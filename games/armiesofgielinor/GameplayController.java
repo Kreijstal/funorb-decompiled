@@ -2248,7 +2248,7 @@ final class GameplayController {
             }
             if (this.field_lb &&
               this.battlefield.teamGame &&
-              ml.a(this.o(125) - 26, 88, 14, false)) {
+              TabbedPanel.a(this.o(125) - 26, 88, 14, false)) {
               stackIn_42_0 = 26;
               return stackIn_42_0;
             }
@@ -2331,7 +2331,7 @@ final class GameplayController {
               stackIn_97_0 = 4;
               return stackIn_97_0;
             }
-            if (ml.a(29, 129, 19, false)) {
+            if (TabbedPanel.a(29, 129, 19, false)) {
               stackIn_100_0 = 5;
               return stackIn_100_0;
             }
@@ -2567,7 +2567,7 @@ final class GameplayController {
                 }
               }
             }
-            if (ml.a(-95 + this.o(126), 130, 22, false) && (this.battlefield.field_Q != 0 ||
+            if (TabbedPanel.a(-95 + this.o(126), 130, 22, false) && (this.battlefield.field_Q != 0 ||
               this.field_E)) {
               stackIn_309_0 = 23;
               return stackIn_309_0;
@@ -2578,7 +2578,7 @@ final class GameplayController {
               while (var7Lifetime4 < 5) {
                 var8Lifetime2 = 130 + (int)(Math.sin((double)var7Lifetime4 * 3.141592653589793 / 4.0) * 64.0);
                 var9Lifetime3 = (int)(Math.cos(3.141592653589793 * (double)var7Lifetime4 / 4.0) * -64.0) - (-this.o(126) + 95);
-                stackOut_313_0 = ml.a(var9Lifetime3, var8Lifetime2, 22, false);
+                stackOut_313_0 = TabbedPanel.a(var9Lifetime3, var8Lifetime2, 22, false);
                 stackIn_321_0 = stackOut_313_0 ? 1 : 0;
                 stackIn_314_0 = stackOut_313_0;
                 if (var13 != 0) {
@@ -2599,7 +2599,7 @@ final class GameplayController {
             if (stackIn_321_0 == this.field_n) {
               var7Lifetime5 = -1;
               while (var7Lifetime5 < 6) {
-                stackOut_324_0 = ml.a(this.o(127) - 100, 230 + 45 * var7Lifetime5, 22, false);
+                stackOut_324_0 = TabbedPanel.a(this.o(127) - 100, 230 + 45 * var7Lifetime5, 22, false);
                 stackIn_332_0 = stackOut_324_0 ? 1 : 0;
                 stackIn_325_0 = stackOut_324_0;
                 if (var13 != 0) {
@@ -2622,7 +2622,7 @@ final class GameplayController {
             }
             if (80 == this.field_fb) {
               if (this.selectedUnit != null &&
-                ml.a(59, 279, 19, false)) {
+                TabbedPanel.a(59, 279, 19, false)) {
                 stackIn_347_0 = 6;
                 return stackIn_347_0;
               }
@@ -2647,7 +2647,7 @@ final class GameplayController {
                 var11Lifetime2 = var11Lifetime2 - var9_ref_int__.length * var10Lifetime3 / 2;
                 var12Lifetime2 = 0;
                 while (var9_ref_int__.length > var12Lifetime2) {
-                  stackIn_388_0 = ml.a(25 + var8Lifetime3, var11Lifetime2 + 25, 25, false);
+                  stackIn_388_0 = TabbedPanel.a(25 + var8Lifetime3, var11Lifetime2 + 25, 25, false);
                   if (var13 != 0) {
                     decompiledFrameCompleted0 = false;
                     break;
@@ -2665,15 +2665,15 @@ final class GameplayController {
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameCompleted0)) {
-                if (ml.a(var8Lifetime3 + 55, 40 + var7Lifetime6, 25, false)) {
+                if (TabbedPanel.a(var8Lifetime3 + 55, 40 + var7Lifetime6, 25, false)) {
                   stackIn_378_0 = 7;
                   return stackIn_378_0;
                 }
-                if (ml.a(var8Lifetime3, 80 + var7Lifetime6, 25, false)) {
+                if (TabbedPanel.a(var8Lifetime3, 80 + var7Lifetime6, 25, false)) {
                   stackIn_383_0 = 8;
                   return stackIn_383_0;
                 }
-                if (ml.a(var8Lifetime3, var7Lifetime6, 25, false)) {
+                if (TabbedPanel.a(var8Lifetime3, var7Lifetime6, 25, false)) {
                   stackIn_386_0 = 9;
                   return stackIn_386_0;
                 }
@@ -2979,15 +2979,15 @@ final class GameplayController {
             var4 = this.battlefield.chosenGods[this.controlledPlayerId];
             if (var4.length == 3) {
               UnitModelPreview.field_d[1 + this.battlefield.chosenGods[this.controlledPlayerId][1]].g(15 + var2_intLifetime2, 30 + var3Lifetime2);
-              if (ml.a(var3Lifetime2 + 55, 40 + var2_intLifetime2, 25, false)) {
+              if (TabbedPanel.a(var3Lifetime2 + 55, 40 + var2_intLifetime2, 25, false)) {
                 UnitModelPreview.field_d[0].f(var2_intLifetime2 + 15, 30 + var3Lifetime2, 256);
               }
               UnitModelPreview.field_d[this.battlefield.chosenGods[this.controlledPlayerId][2] + 1].g(55 + var2_intLifetime2, var3Lifetime2 - 25);
-              if (ml.a(var3Lifetime2, var2_intLifetime2 + 80, 25, false)) {
+              if (TabbedPanel.a(var3Lifetime2, var2_intLifetime2 + 80, 25, false)) {
                 UnitModelPreview.field_d[0].f(var2_intLifetime2 + 55, -25 + var3Lifetime2, 256);
               }
               UnitModelPreview.field_d[this.battlefield.chosenGods[this.controlledPlayerId][0] + 1].g(var2_intLifetime2 - 25, var3Lifetime2 - 25);
-              decompiledFrameRemainder1 = !(!ml.a(var3Lifetime2, var2_intLifetime2, 25, false));
+              decompiledFrameRemainder1 = !(!TabbedPanel.a(var3Lifetime2, var2_intLifetime2, 25, false));
               if (decompiledFrameRemainder1) {
                 UnitModelPreview.field_d[0].f(var2_intLifetime2 - 25, -25 + var3Lifetime2, 256);
                 decompiledFrameRemainder1 = (var8 != 0);
@@ -3000,7 +3000,7 @@ final class GameplayController {
               var7 = 0;
               while (var7 < var4.length) {
                 UnitModelPreview.field_d[var4[var7] + 1].g(var6, var3Lifetime2);
-                stackOut_59_0 = ml.a(var3Lifetime2 + 25, var6 + 25, 25, false);
+                stackOut_59_0 = TabbedPanel.a(var3Lifetime2 + 25, var6 + 25, 25, false);
                 stackIn_67_0 = stackOut_59_0 ? 1 : 0;
                 stackIn_60_0 = stackOut_59_0;
                 if (var8 != 0) {
@@ -4161,7 +4161,7 @@ final class GameplayController {
           }
           if (this.battlefield.mapSizeSetting != 4) {
             DropdownSelector.field_M.g(110, 10);
-            if (ml.a(29, 129, 19, false)) {
+            if (TabbedPanel.a(29, 129, 19, false)) {
               DropdownSelector.field_M.f(110, 10, 128);
             }
             ul.field_g.g(110, 10);
@@ -6028,7 +6028,7 @@ final class GameplayController {
                 if (5 > var6) {
                   var7 = 130 + (int)(Math.sin(3.141592653589793 * (double)var6 / 4.0) * (double)(-(this.field_B / 4) + 64));
                   var8 = -95 + ((int)(Math.cos(3.141592653589793 * (double)var6 / 4.0) * (double)(-(64 - this.field_B / 4))) + this.o(127));
-                  stackOut_21_0 = ml.a(var8, var7, 22, false);
+                  stackOut_21_0 = TabbedPanel.a(var8, var7, 22, false);
                   stackIn_38_0 = stackOut_21_0 ? 1 : 0;
                   stackIn_22_0 = stackOut_21_0;
                   if (var20 == 0) {
@@ -6083,7 +6083,7 @@ final class GameplayController {
               if (null == this.spellConfirmation) {
                 var6 = -1;
                 while (var6 < 6) {
-                  stackOut_54_0 = ml.a(-95 + this.o(127), 230 + var6 * 45, 22, false);
+                  stackOut_54_0 = TabbedPanel.a(-95 + this.o(127), 230 + var6 * 45, 22, false);
                   stackIn_83_0 = stackOut_54_0 ? 1 : 0;
                   stackIn_55_0 = stackOut_54_0;
                   if (var20 != 0) {
@@ -6141,7 +6141,7 @@ final class GameplayController {
             }
             if (var2 == null &&
               this.controlledPlayerId >= 0 &&
-              ml.a(-95 + this.o(param0 ^ 6), 130, 22, false) &&
+              TabbedPanel.a(-95 + this.o(param0 ^ 6), 130, 22, false) &&
               0 != this.battlefield.field_Q) {
               var2 = MatchSetupPanel.field_x;
             }
@@ -6157,7 +6157,7 @@ final class GameplayController {
                     !IterableDualNodeDeque.isPointerInBounds(-33, 10, 74, this.o(param0 ^ 5) - 40, -10 + this.o(125))) {
                     if (this.field_lb &&
                       this.battlefield.teamGame &&
-                      ml.a(-40 + this.o(125) + 14, 88, 14, false)) {
+                      TabbedPanel.a(-40 + this.o(125) + 14, 88, 14, false)) {
                       if (qa.field_F) {
                         stackIn_132_0 = or.field_e;
                       } else {
@@ -6175,7 +6175,7 @@ final class GameplayController {
                         decompiledFrameRemainder11 = (var20 != 0);
                       }
                       if (decompiledFrameRemainder11) {
-                        if (!ml.a(29, 129, 19, false) ||
+                        if (!TabbedPanel.a(29, 129, 19, false) ||
                           this.battlefield.mapSizeSetting == 4) {
                           if (this.spellConfirmation != null) {
                             return;
@@ -6432,7 +6432,7 @@ final class GameplayController {
                   stackIn_336_1 = 1;
                 }
                 var15 = stackIn_335_0 + stackIn_336_1;
-                if ((!ml.a(59, 279, 21, false)) &&
+                if ((!TabbedPanel.a(59, 279, 21, false)) &&
                   (decompiledFrameRemainder9 = (IterableDualNodeDeque.isPointerInBounds(-33, 253, 562, 0, 75) ||
                   IterableDualNodeDeque.isPointerInBounds(-33, 387, 517, 39, 39 + 30 * var15)))) {
                   var2 = "";
@@ -6759,7 +6759,7 @@ final class GameplayController {
                     var2 = ps.field_x;
                   }
                 }
-                if (ml.a(50, 535, 16, false)) {
+                if (TabbedPanel.a(50, 535, 16, false)) {
                   boolean decompiledSharedTail1 = (WeightedLruCache.terrainDamageTakenPercent[var13_ref_ne.terrainType] != 100);
                   if (!decompiledSharedTail1) {
                     var2 = ek.field_b[1][17];
@@ -6899,7 +6899,7 @@ final class GameplayController {
                 while (var13_ref_int__.length > var16) {
                   var17 = var16 * var14 + var15;
                   var18 = this.f(128, this.g(2)) - 30;
-                  stackIn_758_0 = ml.a(var18, var17, 13, false);
+                  stackIn_758_0 = TabbedPanel.a(var18, var17, 13, false);
                   if (var20 != 0) {
                     decompiledFrameCompleted1 = false;
                     break;
@@ -6959,13 +6959,13 @@ final class GameplayController {
                 var14 = this.camera.screenPosition[1];
                 var15_ref_int__ = this.battlefield.chosenGods[this.controlledPlayerId];
                 if (3 == var15_ref_int__.length) {
-                  if (ml.a(var14 + 55, var13 + 40, 25, false)) {
+                  if (TabbedPanel.a(var14 + 55, var13 + 40, 25, false)) {
                     var2 = fo.a(param0 ^ 4792, SpellConfirmationDialog.field_g, new String[]{wf.field_q[1 + this.battlefield.chosenGods[this.controlledPlayerId][1]]});
                   }
-                  if (ml.a(var14, 80 + var13, 25, false)) {
+                  if (TabbedPanel.a(var14, 80 + var13, 25, false)) {
                     var2 = fo.a(4800, SpellConfirmationDialog.field_g, new String[]{wf.field_q[this.battlefield.chosenGods[this.controlledPlayerId][2] + 1]});
                   }
-                  decompiledFrameRemainder4 = !(!ml.a(var14, var13, 25, false));
+                  decompiledFrameRemainder4 = !(!TabbedPanel.a(var14, var13, 25, false));
                   if (decompiledFrameRemainder4) {
                     var2 = fo.a(4800, SpellConfirmationDialog.field_g, new String[]{wf.field_q[1 + this.battlefield.chosenGods[this.controlledPlayerId][0]]});
                     decompiledFrameRemainder4 = (var20 != 0);
@@ -6977,7 +6977,7 @@ final class GameplayController {
                   var17 = var17 - var15_ref_int__.length * var16 / 2;
                   var18 = 0;
                   while (var18 < var15_ref_int__.length) {
-                    stackOut_797_0 = ml.a(var14 + 25, var17 + 25, 25, false);
+                    stackOut_797_0 = TabbedPanel.a(var14 + 25, var17 + 25, 25, false);
                     stackIn_807_0 = stackOut_797_0 ? 1 : 0;
                     stackIn_798_0 = stackOut_797_0;
                     if (var20 != 0) {
@@ -8442,7 +8442,7 @@ final class GameplayController {
                 while (5 > var10Lifetime1Lifetime2) {
                   var11Lifetime1Lifetime1 = (int)(Math.sin(3.141592653589793 * (double)var10Lifetime1Lifetime2 / 4.0) * 64.0) + 130;
                   var12Lifetime1Lifetime1 = (int)(-64.0 * Math.cos(3.141592653589793 * (double)var10Lifetime1Lifetime2 / 4.0)) - (-this.o(126) + 95);
-                  stackOut_416_0 = ml.a(var12Lifetime1Lifetime1, var11Lifetime1Lifetime1, 22, false);
+                  stackOut_416_0 = TabbedPanel.a(var12Lifetime1Lifetime1, var11Lifetime1Lifetime1, 22, false);
                   stackIn_428_0 = stackOut_416_0 ? 1 : 0;
                   stackIn_417_0 = stackOut_416_0;
                   if (var16 != 0) {
@@ -8465,7 +8465,7 @@ final class GameplayController {
               if (stackIn_428_0 == param0) {
                 var10Lifetime1Lifetime2 = -1;
                 while (var10Lifetime1Lifetime2 < 6) {
-                  stackOut_431_0 = ml.a(this.o(125) - 82, 45 * var10Lifetime1Lifetime2 + 230, 22, false);
+                  stackOut_431_0 = TabbedPanel.a(this.o(125) - 82, 45 * var10Lifetime1Lifetime2 + 230, 22, false);
                   stackIn_457_0 = stackOut_431_0 ? 1 : 0;
                   stackIn_432_0 = stackOut_431_0;
                   if (var16 != 0) {
@@ -11270,7 +11270,7 @@ final class GameplayController {
 
     private final void saveCampaignQuicksave(byte obfuscationGuard) {
         try {
-          of.uploadQuicksave(this.battlefield, this.battlefield.damageTakenByPlayer[this.battlefield.campaignMission.playerSlot], this.battlefield.unitLossCounts[this.battlefield.campaignMission.playerSlot], (byte) -80, this.battlefield.campaignMission.missionId, this.battlefield.campaignMission.campaign.campaignIndex);
+          LobbyPlayer.uploadQuicksave(this.battlefield, this.battlefield.damageTakenByPlayer[this.battlefield.campaignMission.playerSlot], this.battlefield.unitLossCounts[this.battlefield.campaignMission.playerSlot], (byte) -80, this.battlefield.campaignMission.missionId, this.battlefield.campaignMission.campaign.campaignIndex);
           ul.$cfr$intArgs$a$5d483ac33914(-80, PacketBuffer.field_p, this.field_Nb);
           if (obfuscationGuard >= -39) {
             this.s(-24);
@@ -12240,7 +12240,7 @@ final class GameplayController {
           var17 = 1.0f;
           if (param13 != null) {
             this.campaignMode = true;
-            ml.a(param13, (byte) -26);
+            TabbedPanel.a(param13, (byte) -26);
             var16 = new int[param2.length][7];
             var15_array = new int[param2.length][];
             var18_int = 0;

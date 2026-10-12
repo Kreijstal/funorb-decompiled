@@ -532,14 +532,14 @@ abstract class wf extends iv {
           el.field_d = CampaignMission.field_I.a(9);
         }
         if (TeamRoster.a(99)) {
-          var3 = tp.getNominalTickRate(-113) * 1200;
+          var3 = DualNodeHashTable.getNominalTickRate(-113) * 1200;
           if (this.field_r ||
             !(var3 >= bs.a((byte) 99)) &&
             !(os.g(4) <= var3)) {
             this.field_r = false;
             dj.a((byte) -126);
             er.b(-11);
-            wv.a(of.field_bc, 10, 2);
+            wv.a(LobbyPlayer.field_bc, 10, 2);
             qf.b(56);
             ol.field_C = true;
             jl.field_a = 15000L + vi.monotonicMillis(-49);
@@ -693,7 +693,7 @@ abstract class wf extends iv {
         if (StrongCacheEntry.field_E == 11) {
           if (RegionAnchor.field_o != null && (!RegionAnchor.field_o.ensureIndex((byte) 82) ||
             !RegionAnchor.field_o.ensureAllGroupsAvailable(-27927))) {
-            bn.a((byte) -24, 0.0f, ao.a(db.field_b, true, of.field_Jb, RegionAnchor.field_o));
+            bn.a((byte) -24, 0.0f, ao.a(db.field_b, true, LobbyPlayer.field_Jb, RegionAnchor.field_o));
             decompiledFrameRemainder0 = false;
           }
           else {

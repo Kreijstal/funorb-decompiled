@@ -97,9 +97,9 @@ final class wt extends dr {
         int stackIn_12_9;
         boolean stackIn_14_10 = false;
         int var3;
-        ad.a(-117);
-        if (vu.field_M != null) {
-          stackIn_6_0 = (r.c(vu.field_M.field_Ub, 2)) ? 1 : 0;
+        ad.advanceLobbyNotifications(-117);
+        if (vu.currentRoom != null) {
+          stackIn_6_0 = (r.c(vu.currentRoom.playerCount, 2)) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
