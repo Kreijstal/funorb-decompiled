@@ -53,7 +53,7 @@ final class ib extends mk {
             return stackIn_19_0;
           }
           if (var6.length() <= 0) {
-            stackIn_22_0 = vk.field_b;
+            stackIn_22_0 = ChannelGainProfile.field_b;
             return stackIn_22_0;
           }
           if (rb.a(var6, var5, -76)) {

@@ -32,15 +32,15 @@ final class oa extends dr {
         ContextActionMenu.a(true, (byte) -113);
     }
 
-    final static void a(int param0, MusicTrack param1) {
+    final static void selectMusicWithDefaultProfile(int obfuscationGuard, MusicTrack track) {
         try {
-          if (param1 != null) {
-            TrianglePulse.a(-16147, 50, param1, true);
-            ((wn) (lk.musicCrossfadeStream.selectedSequencer)).a((byte) -111, 1, CorpseConditionMarker.field_u);
+          if (track != null) {
+            TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, track, true);
+            ((AdaptiveMidiPcmStream) (lk.musicCrossfadeStream.selectedSequencer)).rampToProfile((byte) -111, 1, CorpseConditionMarker.defaultMusicProfile);
           }
-          int var2_int = 100 / ((-17 - param0) / 33);
+          int var2_int = 100 / ((-17 - obfuscationGuard) / 33);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oa.B(" + obfuscationGuard + ',' + (track != null ? "{...}" : "null") + ')');
         }
     }
 

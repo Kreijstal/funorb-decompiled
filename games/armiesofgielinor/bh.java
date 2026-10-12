@@ -12,8 +12,8 @@ final class bh extends nl {
     final static String a(int param0, byte param1) {
         String var2 = null;
         if (param1 == 74) {
-          var2 = "old time: " + wf.field_v;
-          wf.field_v = param0;
+          var2 = "old time: " + wf.musicProfileTransitionMillis;
+          wf.musicProfileTransitionMillis = param0;
           return var2;
         }
         return (String) null;

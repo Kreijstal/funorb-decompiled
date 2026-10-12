@@ -59,7 +59,7 @@ final class wt extends dr {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = -83 % ((-9 - param1) / 39);
-          if (!wn.hasValidAccountNameShape(param0, 1, param2)) {
+          if (!AdaptiveMidiPcmStream.hasValidAccountNameShape(param0, 1, param2)) {
             return false;
           }
           for (var4 = 0; var4 < param0.length(); var4++) {

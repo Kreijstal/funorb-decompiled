@@ -3,7 +3,7 @@
  */
 final class gi {
     static ClientConnectionState field_d;
-    static int field_b;
+    static int campaignBaseChannelGain;
     static String[] field_c;
     static String field_a;
 
@@ -27,7 +27,7 @@ final class gi {
     }
 
     static {
-        field_b = 180;
+        campaignBaseChannelGain = 180;
         field_c = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_d = new ClientConnectionState();
         field_a = "Vile toxins to weaken your enemies.";

@@ -385,15 +385,15 @@ final class j {
           }
           stackIn_66_0 = lk.field_a;
           stackIn_66_1 = true;
-          stackIn_67_2 = (param2) && (!param1) && (!vk.field_f);
+          stackIn_67_2 = (param2) && (!param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_66_0).updateInput(stackIn_66_1, stackIn_67_2);
           stackIn_71_0 = pd.field_c;
           stackIn_71_1 = true;
-          stackIn_72_2 = (param2) && (!param1) && (!vk.field_f);
+          stackIn_72_2 = (param2) && (!param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_71_0).updateInput(stackIn_71_1, stackIn_72_2);
           stackIn_76_0 = ta.field_R;
           stackIn_76_1 = true;
-          stackIn_77_2 = (param2) && (!param1) && (vk.field_f);
+          stackIn_77_2 = (param2) && (!param1) && (ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_76_0).updateInput(stackIn_76_1, stackIn_77_2);
           ij.field_w.tabs.advanceTabSelection(10000);
           if (null != no.roomSetup) {

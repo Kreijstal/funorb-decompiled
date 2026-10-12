@@ -4416,7 +4416,7 @@ final class CombatPresentation implements EventPresentation {
           }
           this.framebuffer = new RgbSprite(640, 480);
           var4 = cb.field_a[AttackEvent.nextBoundedInt(false, cb.field_a.length, vv.field_b)];
-          TrianglePulse.a(-16147, 50, var4, true);
+          TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, var4, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

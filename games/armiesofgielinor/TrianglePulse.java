@@ -27,7 +27,7 @@ final class TrianglePulse {
     }
 
     final static void openDefaultQuickChatMenu(byte obfuscationGuard) {
-        vs.showQuickChatMenu(256, wn.defaultQuickChatMenu);
+        vs.showQuickChatMenu(256, AdaptiveMidiPcmStream.defaultQuickChatMenu);
         if (obfuscationGuard < 113) {
           field_d = (RgbSprite) null;
         }
@@ -60,14 +60,14 @@ final class TrianglePulse {
         }
     }
 
-    final static void a(int param0, int param1, MusicTrack param2, boolean param3) {
-        if (param0 != -16147) {
+    final static void selectMusicTrackWithDefaultGain(int obfuscationGuard, int fadeRate, MusicTrack track, boolean loop) {
+        if (obfuscationGuard != -16147) {
           return;
         }
         try {
-          lk.musicCrossfadeStream.selectTrack(256, !param3 ? true : false, param2, -1, param1, 1000000);
+          lk.musicCrossfadeStream.selectTrack(256, !loop ? true : false, track, -1, fadeRate, 1000000);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hh.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "hh.H(" + obfuscationGuard + ',' + fadeRate + ',' + (track != null ? "{...}" : "null") + ',' + loop + ')');
         }
     }
 

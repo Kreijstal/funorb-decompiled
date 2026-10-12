@@ -482,10 +482,10 @@ final class MusicCrossfadeStream extends PcmStream {
             dh.field_k.f(lk.field_a.x, 0);
           }
           stackIn_23_0 = lk.field_a;
-          stackIn_24_1 = (param1) && (!vk.field_f);
+          stackIn_24_1 = (param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_23_0).draw(stackIn_24_1, 20);
           stackIn_27_0 = pd.field_c;
-          stackIn_28_1 = (param1) && (!vk.field_f);
+          stackIn_28_1 = (param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_27_0).draw(stackIn_28_1, 20);
         }
         QuickChatPhraseRepository.popRasterState(-18862);

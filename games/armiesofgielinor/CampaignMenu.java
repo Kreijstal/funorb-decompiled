@@ -151,9 +151,9 @@ final class CampaignMenu {
           rd.field_j = null;
           SectorCacheStore.field_a = null;
           System.gc();
-          vk.field_e[0] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_1.jpg", -105, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
-          vk.field_e[1] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_2.jpg", 13, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
-          vk.field_e[2] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_3.jpg", -91, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
+          ChannelGainProfile.campaignBackgrounds[0] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_1.jpg", -105, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
+          ChannelGainProfile.campaignBackgrounds[1] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_2.jpg", 13, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
+          ChannelGainProfile.campaignBackgrounds[2] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_3.jpg", -91, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
           mu.field_g = new IndexedSprite[3][3];
           var2_int = 0;
           while (3 > var2_int) {
@@ -190,7 +190,7 @@ final class CampaignMenu {
         try {
           var2_int = 0;
           while (var2_int < 3) {
-            vk.field_e[var2_int] = null;
+            ChannelGainProfile.campaignBackgrounds[var2_int] = null;
             var2_int++;
             if (var3 != 0) {
               return;
@@ -346,7 +346,7 @@ final class CampaignMenu {
               decompiledSharedTail0 = (var8 != 0);
             }
             if (decompiledSharedTail0) {
-              vk.field_e[this.selectedCampaignEntry.entryId].g(var4, var5);
+              ChannelGainProfile.campaignBackgrounds[this.selectedCampaignEntry.entryId].g(var4, var5);
               this.selectedCampaignEntry.previewSprite.f(var4, var5, Math.abs(ContextualRuntimeException.a(param0 ^ -397, uk.field_n << 5) * 100 >> 16) + 80);
             }
             QuickChatPhraseRepository.popRasterState(param0 ^ -18466);
@@ -779,83 +779,83 @@ final class CampaignMenu {
         }
     }
 
-    final void b(int param0) {
-        int stackIn_32_0 = 0;
-        int[] stackIn_38_0 = null;
-        int stackIn_38_1 = 0;
-        int stackIn_39_2 = 0;
-        RuntimeException decompiledCaughtException = null;
-        Object var2 = null;
-        int var3 = 0;
-        vk var4 = null;
-        int[] var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var3Lifetime1;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final void updateMusicProfile(int obfuscationGuard) {
+        int baseGainToApply = 0;
+        int[] targetGains = null;
+        int targetChannel = 0;
+        int targetGain = 0;
+        RuntimeException caughtFailure = null;
+        Object enabledChannelIds = null;
+        int campaign = 0;
+        ChannelGainProfile profile = null;
+        int[] channelIds = null;
+        int enabledChannelIndex = 0;
+        int channel = 0;
+        int baseGain = 0;
+        int obfuscationControl = 0;
+        int guardRemainder;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          boolean decompiledFrameRemainder0 = true;
-          TrianglePulse.a(-16147, 50, qf.field_f, true);
-          var2 = null;
+          boolean useDefaultChannels = true;
+          TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, qf.interfaceMusicTrack, true);
+          enabledChannelIds = null;
           if (0 != this.viewMode) {
-            var3 = this.campaignIndex;
-            if (var3 != 0) {
-              if (var3 == 1 &&
-                var9 == 0) {
-                var2 = new int[]{1, 2, 4, 11, 12, 13};
-                decompiledFrameRemainder0 = false;
+            campaign = this.campaignIndex;
+            if (campaign != 0) {
+              if (campaign == 1 &&
+                obfuscationControl == 0) {
+                enabledChannelIds = new int[]{1, 2, 4, 11, 12, 13};
+                useDefaultChannels = false;
               }
-              if (((decompiledFrameRemainder0) &&
-                (decompiledFrameRemainder0 = (var3 == 2))) && (var9 == 0)) {
-                var2 = new int[]{1, 14, 15, 16};
-                decompiledFrameRemainder0 = false;
+              if (((useDefaultChannels) &&
+                (useDefaultChannels = (campaign == 2))) && (obfuscationControl == 0)) {
+                enabledChannelIds = new int[]{1, 14, 15, 16};
+                useDefaultChannels = false;
               }
             }
-            if (decompiledFrameRemainder0) {
-              var2 = new int[]{1, 2, 3, 9, 10};
+            if (useDefaultChannels) {
+              enabledChannelIds = new int[]{1, 2, 3, 9, 10};
             }
           } else {
-            var2 = new int[]{1, 2, 3, 5, 6, 7, 8};
+            enabledChannelIds = new int[]{1, 2, 3, 5, 6, 7, 8};
           }
-          var3Lifetime1 = 113 % ((-3 - param0) / 56);
-          if (null != var2) {
-            var4 = new vk();
-            var5 = (int[]) var2;
-            var6 = 0;
-            while (var6 < var5.length) {
-              var7 = var5[var6];
-              var7--;
-              if (var9 != 0) {
+          guardRemainder = 113 % ((-3 - obfuscationGuard) / 56);
+          if (null != enabledChannelIds) {
+            profile = new ChannelGainProfile();
+            channelIds = (int[]) enabledChannelIds;
+            enabledChannelIndex = 0;
+            while (enabledChannelIndex < channelIds.length) {
+              channel = channelIds[enabledChannelIndex];
+              channel--;
+              if (obfuscationControl != 0) {
                 return;
               }
               if (2 == this.campaignIndex &&
-                var7 == 0) {
-                stackIn_32_0 = 20 + gi.field_b;
+                channel == 0) {
+                baseGainToApply = 20 + gi.campaignBaseChannelGain;
               } else {
-                stackIn_32_0 = gi.field_b;
+                baseGainToApply = gi.campaignBaseChannelGain;
               }
-              var8 = stackIn_32_0;
-              stackIn_38_0 = var4.field_a;
-              stackIn_38_1 = var7;
+              baseGain = baseGainToApply;
+              targetGains = profile.gains;
+              targetChannel = channel;
               if (this.viewMode != 0 &&
-                3 >= var7) {
-                stackIn_39_2 = var8;
+                3 >= channel) {
+                targetGain = baseGain;
               } else {
-                stackIn_39_2 = 256;
+                targetGain = 256;
               }
-              stackIn_38_0[stackIn_38_1] = stackIn_39_2;
-              var6++;
+              targetGains[targetChannel] = targetGain;
+              enabledChannelIndex++;
             }
-            ((wn) (lk.musicCrossfadeStream.selectedSequencer)).a((byte) 48, wf.field_v, var4);
+            ((AdaptiveMidiPcmStream) (lk.musicCrossfadeStream.selectedSequencer)).rampToProfile((byte) 48, wf.musicProfileTransitionMillis, profile);
             return;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) (var2), "cv.AA(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          enabledChannelIds = caughtFailure;
+          throw AnimationSkeleton.addExceptionContext((Throwable) (enabledChannelIds), "cv.AA(" + obfuscationGuard + ')');
         }
     }
 
@@ -2423,7 +2423,7 @@ final class CampaignMenu {
           if (obfuscationGuard != 42) {
             discarded$0 = this.getMissionEntry(122, 13);
           }
-          this.b(78);
+          this.updateMusicProfile(78);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

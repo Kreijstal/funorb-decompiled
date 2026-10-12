@@ -1447,7 +1447,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ACTION_MOVE");
                 if (var2 != null) {
-                  wn.field_gb = uu.a(var2, (byte) -102);
+                  AdaptiveMidiPcmStream.field_gb = uu.a(var2, (byte) -102);
                 }
                 var2 = fk.a(false, "ACTION_TOOFAR");
                 if (var2 != null) {
@@ -2421,7 +2421,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TXT_RANGE");
                 if (null != var2) {
-                  vk.field_d = uu.a(var2, (byte) -92);
+                  ChannelGainProfile.field_d = uu.a(var2, (byte) -92);
                 }
                 var2 = fk.a(false, "TXT_STRENGTH");
                 if (var2 != null) {
@@ -5181,7 +5181,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_BOWNORANGE");
                 if (var2 != null) {
-                  wn.field_bb = uu.a(var2, (byte) -126);
+                  AdaptiveMidiPcmStream.field_bb = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "TERROR_HATNOMAGIC");
                 if (null != var2) {

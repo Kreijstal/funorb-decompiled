@@ -439,7 +439,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_chat_game_show_all");
                 if (var2 != null) {
-                  vk.field_c = uu.a(var2, (byte) 43);
+                  ChannelGainProfile.field_c = uu.a(var2, (byte) 43);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_game_friends_only");
                 if (var2 != null) {
@@ -1661,7 +1661,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_passwordvalid");
                 if (var2 != null) {
-                  vk.field_b = uu.a(var2, (byte) -105);
+                  ChannelGainProfile.field_b = uu.a(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(50, "create_emailvalid");
                 if (var2 != null) {

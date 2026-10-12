@@ -1541,7 +1541,7 @@ final class GameplayController {
           } else {
             stackIn_23_2 = oh.field_K;
           }
-          TrianglePulse.a(stackIn_20_0, stackIn_20_1, stackIn_23_2, false);
+          TrianglePulse.selectMusicTrackWithDefaultGain(stackIn_20_0, stackIn_20_1, stackIn_23_2, false);
           this.battleTutorial = null;
           if (l.activeCampaignMission != null) {
             turnsTaken = this.battlefield.playerTurnCounts[l.activeCampaignMission.playerSlot];
@@ -4279,7 +4279,7 @@ final class GameplayController {
           }
           en.field_E.b(mk.field_i, param3 - 45, param0 + 12, 16777215, -1);
           en.field_E.b(lq.field_a, param3 - 45, 29 + param0, 16777215, -1);
-          en.field_E.b(vk.field_d, -45 + param3, param0 + 46, 16777215, -1);
+          en.field_E.b(ChannelGainProfile.field_d, -45 + param3, param0 + 46, 16777215, -1);
           en.field_E.a(Integer.toString(bw.unitDefinitions[param1][4] + this.battlefield.a((byte) 11, bw.unitDefinitions[param1][1], this.controlledPlayerId)), param3 + 45, 12 + param0, 16763904, -1);
           en.field_E.a(Integer.toString(bw.unitDefinitions[param1][3]), param3 + 45, param0 + 29, 16763904, -1);
           if (34 != param1) {
@@ -7091,7 +7091,7 @@ final class GameplayController {
                       }
                     }
                     if (decompiledFrameRemainder13) {
-                      var2 = wn.field_gb;
+                      var2 = AdaptiveMidiPcmStream.field_gb;
                       if (this.battlefield.tiles[var16].occupant == null ||
                         ~this.battlefield.tiles[var16].occupant.ownerPlayer != ~this.controlledPlayerId ||
                         this.movementPlanner.controlsOtherPlayerUnit) {
@@ -12604,7 +12604,7 @@ final class GameplayController {
             this.unitCycler = new UnitCycler(this.battlefield.unitsByPlayer[this.battlefield.campaignMission.playerSlot]);
             this.rebuildOverviewTargets(0);
           }
-          oa.a(-63, this.field_d);
+          oa.selectMusicWithDefaultProfile(-63, this.field_d);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

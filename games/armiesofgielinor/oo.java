@@ -741,10 +741,10 @@ final class oo {
         RuntimeException var1 = null;
         try {
           if (rd.field_j != null) {
-            oa.a(90, rd.field_j.field_d);
+            oa.selectMusicWithDefaultProfile(90, rd.field_j.field_d);
           } else {
             if (SectorCacheStore.field_a != null) {
-              oa.a(102, SectorCacheStore.field_a.field_d);
+              oa.selectMusicWithDefaultProfile(102, SectorCacheStore.field_a.field_d);
             }
           }
           if (param0 != -387) {

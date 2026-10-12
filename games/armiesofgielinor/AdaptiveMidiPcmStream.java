@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wn extends MidiPcmStream {
-    private boolean field_cb;
-    private int[] field_fb;
-    private int field_ib;
+final class AdaptiveMidiPcmStream extends MidiPcmStream {
+    private boolean gainsSettled;
+    private int[] gainSteps;
+    private int overallGain;
     static ClientUiComponent field_kb;
     static String lastQuickChatRecipientName;
     static String field_gb;
-    private int[] field_S;
+    private int[] fixedChannelGains;
     static String[] tutorialMapNames;
     static QuickChatMenu defaultQuickChatMenu;
-    private vk field_hb;
+    private ChannelGainProfile targetProfile;
     static String field_bb;
 
     final static boolean hasValidAccountNameShape(CharSequence name, int minimumLength, boolean allowRepeatedSeparators) {
@@ -78,22 +78,22 @@ final class wn extends MidiPcmStream {
 
     final synchronized void setChannelGain(int gain, int channel, byte obfuscationGuard) {
         if (-1 == channel) {
-          this.field_ib = gain;
+          this.overallGain = gain;
           return;
         }
         super.setChannelGain(gain, channel, (byte) -28);
-        this.field_S[channel] = gain << 12;
+        this.fixedChannelGains[channel] = gain << 12;
         if (obfuscationGuard > -13) {
-          MusicTrack var5 = (MusicTrack) null;
+          MusicTrack unusedTrack = (MusicTrack) null;
           this.startTrack(true, (byte) 40, true, (MusicTrack) null);
         }
     }
 
-    public wn() {
-        this.field_fb = new int[16];
-        this.field_ib = 256;
-        this.field_S = new int[16];
-        this.k(3933);
+    public AdaptiveMidiPcmStream() {
+        this.gainSteps = new int[16];
+        this.overallGain = 256;
+        this.fixedChannelGains = new int[16];
+        this.resetChannelGains(3933);
     }
 
     final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4, int param5) {
@@ -120,7 +120,7 @@ final class wn extends MidiPcmStream {
             SoftwareRaster.b(an.field_H);
             SoftwareRaster.b(var6_int + param3, param4, param3 + param2 - var7, param1[1].canvasHeight + param4);
             if (param5 != -3225) {
-              wn.a(true);
+              AdaptiveMidiPcmStream.a(true);
             }
             var9 = var6_int + param3;
             var10 = -var7 + param2 + param3;
@@ -148,7 +148,7 @@ final class wn extends MidiPcmStream {
     public static void c(byte param0) {
         if (param0 != 52) {
           CharSequence var2 = (CharSequence) null;
-          wn.hasValidAccountNameShape((CharSequence) null, -50, false);
+          AdaptiveMidiPcmStream.hasValidAccountNameShape((CharSequence) null, -50, false);
         }
         field_kb = null;
         defaultQuickChatMenu = null;
@@ -159,130 +159,130 @@ final class wn extends MidiPcmStream {
     }
 
     final synchronized void render(int[] output, int outputOffset, int frameCount) {
-        int var6 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_1 = 0;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int channel = 0;
+        int increasingStep = 0;
+        int belowTarget = 0;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String outputDescription = null;
+        RuntimeException caughtFailure = null;
+        int originalMasterVolume = 0;
+        RuntimeException failure = null;
+        int allSettled = 0;
+        int step = 0;
+        int targetGain = 0;
+        int obfuscationControl = 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4_int = this.getMasterVolume(4096);
-          this.setMasterVolume(-87, this.field_ib * var4_int >> 8);
+          originalMasterVolume = this.getMasterVolume(4096);
+          this.setMasterVolume(-87, this.overallGain * originalMasterVolume >> 8);
           super.render(output, outputOffset, frameCount);
-          if (!this.field_cb) {
-            var5 = 1;
-            for (var6 = 0; var6 < 16; var6++) {
-              var7 = this.field_fb[var6];
-              if (0 != var7) {
-                this.field_S[var6] = this.field_S[var6] + var7 * frameCount;
-                var8 = this.field_hb.field_a[var6];
-                stackIn_10_0 = (var7 <= 0) ? 0 : 1;
-                if (this.field_S[var6] >> 12 >= var8) {
-                  stackIn_13_1 = 0;
+          if (!this.gainsSettled) {
+            allSettled = 1;
+            for (channel = 0; channel < 16; channel++) {
+              step = this.gainSteps[channel];
+              if (0 != step) {
+                this.fixedChannelGains[channel] = this.fixedChannelGains[channel] + step * frameCount;
+                targetGain = this.targetProfile.gains[channel];
+                increasingStep = (step <= 0) ? 0 : 1;
+                if (this.fixedChannelGains[channel] >> 12 >= targetGain) {
+                  belowTarget = 0;
                 } else {
-                  stackIn_13_1 = 1;
+                  belowTarget = 1;
                 }
-                if ((stackIn_10_0 ^ stackIn_13_1) != 0) {
-                  this.field_fb[var6] = 0;
-                  this.field_S[var6] = var8 << 12;
+                if ((increasingStep ^ belowTarget) != 0) {
+                  this.gainSteps[channel] = 0;
+                  this.fixedChannelGains[channel] = targetGain << 12;
                 } else {
-                  var5 = 0;
+                  allSettled = 0;
                 }
-                super.setChannelGain(this.field_S[var6] >> 12, var6, (byte) -123);
+                super.setChannelGain(this.fixedChannelGains[channel] >> 12, channel, (byte) -123);
               }
             }
-            if (var5 != 0) {
-              this.field_cb = true;
+            if (allSettled != 0) {
+              this.gainsSettled = true;
             }
           }
-          this.setMasterVolume(-54, var4_int);
+          this.setMasterVolume(-54, originalMasterVolume);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_25_0 = var4;
-          stackIn_25_1 = new StringBuilder().append("wn.E(");
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("wn.E(");
           if (output == null) {
-            stackIn_26_2 = "null";
+            outputDescription = "null";
           } else {
-            stackIn_26_2 = "{...}";
+            outputDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(outputOffset).append(',').append(frameCount).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(outputDescription).append(',').append(outputOffset).append(',').append(frameCount).append(')').toString());
         }
     }
 
-    private final synchronized void a(int param0, vk param1, int param2) {
-        int var4_int = 0;
-        int var5 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    private final synchronized void beginProfileRamp(int durationFrames, ChannelGainProfile profile, int obfuscationGuard) {
+        int channel = 0;
+        int obfuscationControl = 0;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String profileDescription = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.field_hb = param1;
-          if (param2 != -20751) {
+          this.targetProfile = profile;
+          if (obfuscationGuard != -20751) {
             field_kb = (ClientUiComponent) null;
           }
-          for (var4_int = 0; 16 > var4_int; var4_int++) {
-            this.c(param0, var4_int, -128, this.field_hb.field_a[var4_int]);
+          for (channel = 0; 16 > channel; channel++) {
+            this.scheduleChannelRamp(durationFrames, channel, -128, this.targetProfile.gains[channel]);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("wn.WA(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_10_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("wn.WA(").append(durationFrames).append(',');
+          if (profile == null) {
+            profileDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            profileDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(profileDescription).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    private final synchronized void c(int param0, int param1, int param2, int param3) {
-        this.field_cb = false;
-        if (null == this.field_hb) {
-          this.field_hb = new vk();
+    private final synchronized void scheduleChannelRamp(int durationFrames, int channel, int obfuscationGuard, int targetGain) {
+        this.gainsSettled = false;
+        if (null == this.targetProfile) {
+          this.targetProfile = new ChannelGainProfile();
         }
-        this.field_hb.field_a[param1] = param3;
-        if (param2 >= -126) {
+        this.targetProfile.gains[channel] = targetGain;
+        if (obfuscationGuard >= -126) {
           this.setChannelGain(82, -42, (byte) 31);
         }
-        int var5 = this.field_S[param1];
-        int var6 = (this.field_hb.field_a[param1] << 12) - var5;
-        int var7 = 0;
-        int var8 = 0;
-        if (var6 < 0) {
-          var6 = -var6;
-          var8 = 1;
+        int currentFixedGain = this.fixedChannelGains[channel];
+        int difference = (this.targetProfile.gains[channel] << 12) - currentFixedGain;
+        int step = 0;
+        int decreasingStep = 0;
+        if (difference < 0) {
+          difference = -difference;
+          decreasingStep = 1;
         }
-        if (var6 > 0) {
-          var7 = (1 + var6) / (param0 + 1);
+        if (difference > 0) {
+          step = (1 + difference) / (durationFrames + 1);
         }
-        this.field_fb[param1] = var8 != 0 ? -var7 : var7;
+        this.gainSteps[channel] = decreasingStep != 0 ? -step : step;
     }
 
-    wn(MidiPcmStream param0) {
-        super(param0);
-        this.field_fb = new int[16];
-        this.field_ib = 256;
-        this.field_S = new int[16];
+    AdaptiveMidiPcmStream(MidiPcmStream sharedPatchOwner) {
+        super(sharedPatchOwner);
+        this.gainSteps = new int[16];
+        this.overallGain = 256;
+        this.fixedChannelGains = new int[16];
         try {
-          this.k(3933);
+          this.resetChannelGains(3933);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wn.<init>(" + (sharedPatchOwner != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -305,35 +305,35 @@ final class wn extends MidiPcmStream {
     final synchronized void startTrack(boolean loop, byte obfuscationGuard, boolean stopSounds, MusicTrack track) {
         try {
           if (obfuscationGuard > -78) {
-            this.field_hb = (vk) null;
+            this.targetProfile = (ChannelGainProfile) null;
           }
-          this.k(3933);
+          this.resetChannelGains(3933);
           super.startTrack(loop, (byte) -110, stopSounds, track);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wn.EA(" + loop + ',' + obfuscationGuard + ',' + stopSounds + ',' + (track != null ? "{...}" : "null") + ')');
         }
     }
 
-    final synchronized void a(byte param0, int param1, vk param2) {
-        int var4_int = 0;
+    final synchronized void rampToProfile(byte obfuscationGuard, int durationMillis, ChannelGainProfile profile) {
+        int durationFrames = 0;
         try {
-          var4_int = param1 * PcmPlayer.outputSampleRate / 1000;
-          int var5 = 58 / ((9 - param0) / 36);
-          this.a(var4_int, param2, -20751);
+          durationFrames = durationMillis * PcmPlayer.outputSampleRate / 1000;
+          int guardQuotient = 58 / ((9 - obfuscationGuard) / 36);
+          this.beginProfileRamp(durationFrames, profile, -20751);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wn.BB(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wn.BB(" + obfuscationGuard + ',' + durationMillis + ',' + (profile != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void k(int param0) {
-        int var2 = 0;
-        int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        for (var2 = 0; var2 < 16; var2++) {
-          this.field_S[var2] = 1048576;
+    private final void resetChannelGains(int obfuscationGuard) {
+        int channel = 0;
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        for (channel = 0; channel < 16; channel++) {
+          this.fixedChannelGains[channel] = 1048576;
         }
-        if (param0 != 3933) {
-          RgbSprite[] var4 = (RgbSprite[]) null;
-          wn.a(47, (RgbSprite[]) null, 67, -125, 49, -47);
+        if (obfuscationGuard != 3933) {
+          RgbSprite[] unusedSprites = (RgbSprite[]) null;
+          AdaptiveMidiPcmStream.a(47, (RgbSprite[]) null, 67, -125, 49, -47);
         }
         super.setChannelGain(256, -1, (byte) -20);
     }

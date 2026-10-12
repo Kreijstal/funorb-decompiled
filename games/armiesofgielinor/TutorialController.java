@@ -1467,7 +1467,7 @@ final class TutorialController {
                                                                                                                                 b.field_n = null;
                                                                                                                                 BattleUnitRenderer.field_a = null;
                                                                                                                               }
-                                                                                                                              TrianglePulse.a(-16147, 50, SocialListPanel.field_Ob, true);
+                                                                                                                              TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, SocialListPanel.field_Ob, true);
                                                                                                                               var6 = param0 ? 1 : 0;
                                                                                                                               CipherPacketBuffer.a(var6 != 0, 0, 1, jt.field_a);
                                                                                                                               if (var9 == 0) {
@@ -1875,7 +1875,7 @@ final class TutorialController {
                                                                     }
                                                                   }
                                                                   if (this.selectionState.isDecrementKeyPressed((byte) -62)) {
-                                                                    wn.a(true);
+                                                                    AdaptiveMidiPcmStream.a(true);
                                                                   }
                                                                   if (!this.selectionState.isIncrementKeyPressed(param1 ^ -98)) {
                                                                     return;
@@ -1952,7 +1952,7 @@ final class TutorialController {
                                                         return;
                                                       }
                                                       ov.writeSpectateRoomRequest(11, 3, 0);
-                                                      TrianglePulse.a(-16147, 50, SocialListPanel.field_Ob, true);
+                                                      TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, SocialListPanel.field_Ob, true);
                                                       if (var9 == 0) {
                                                         return;
                                                       }
@@ -4139,7 +4139,7 @@ final class TutorialController {
             rd.field_j = null;
             System.gc();
             MoveEvent.campaignMenu.loadCampaignResources((byte) -120);
-            MoveEvent.campaignMenu.b(92);
+            MoveEvent.campaignMenu.updateMusicProfile(92);
           }
           if (obfuscationGuard < 50) {
             discarded$1 = this.getItemText(-53, 92);

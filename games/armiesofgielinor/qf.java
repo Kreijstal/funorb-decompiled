@@ -5,7 +5,7 @@ final class qf {
     static String field_b;
     static ClientUiComponent field_e;
     static int[] field_d;
-    static MusicTrack field_f;
+    static MusicTrack interfaceMusicTrack;
     static String field_g;
     static String field_a;
     static String field_c;
@@ -18,7 +18,7 @@ final class qf {
         field_d = null;
         field_a = null;
         field_b = null;
-        field_f = null;
+        interfaceMusicTrack = null;
     }
 
     final static void a(int param0, String param1, int param2, byte param3, int param4, int param5, int param6, int param7, PlatformTaskService param8) {

@@ -161,13 +161,13 @@ final class MapRepository {
         RuntimeException var2 = null;
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.tutorialMaps = new MapLayout[wn.tutorialMapNames.length];
+          this.tutorialMaps = new MapLayout[AdaptiveMidiPcmStream.tutorialMapNames.length];
           tutorialIndex = 0;
           if (obfuscationGuard <= 110) {
             this.loadTutorialMaps((byte) -41);
           }
-          while (wn.tutorialMapNames.length > tutorialIndex) {
-            encodedMap = this.archives[0].getFileByName(wn.tutorialMapNames[tutorialIndex], 35, "");
+          while (AdaptiveMidiPcmStream.tutorialMapNames.length > tutorialIndex) {
+            encodedMap = this.archives[0].getFileByName(AdaptiveMidiPcmStream.tutorialMapNames[tutorialIndex], 35, "");
             if (obfuscationControl != 0) {
               return;
             }

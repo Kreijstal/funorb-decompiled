@@ -19,7 +19,7 @@ abstract class wf extends iv {
     private int field_n;
     private int field_t;
     private int field_z;
-    static int field_v;
+    static int musicProfileTransitionMillis;
     private int field_E;
     static String[] field_q;
 
@@ -29,7 +29,7 @@ abstract class wf extends iv {
         var10.dispose();
         this.setBackground(java.awt.Color.black);
         if (param3 <= 73) {
-          field_v = 91;
+          musicProfileTransitionMillis = 91;
         }
         og.field_m = this.field_z;
         qa.b(og.field_m, 1);
@@ -880,7 +880,7 @@ abstract class wf extends iv {
         field_A = "Attack";
         field_y = new int[]{14, 15, 8};
         field_F = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
-        field_v = 3000;
+        musicProfileTransitionMillis = 3000;
         field_D = 0;
         field_u = "Public";
         field_q = new String[]{"Neutral", "Saradomin", "Zamorak", "Guthix", "Seren", "Bandos", "Menaphite pantheon"};

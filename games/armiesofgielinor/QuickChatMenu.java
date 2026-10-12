@@ -323,7 +323,7 @@ final class QuickChatMenu extends ClientUiComponent {
             var19 = dh.field_n[0];
             var28Lifetime1 = var19;
             var28Lifetime1Lifetime1 = var19;
-            var18 = vk.field_c;
+            var18 = ChannelGainProfile.field_c;
             var17.menu.addIconAction(false, var18, 11, var19);
             var20 = tn.activeContextMenu;
             var22 = dh.field_n[1];

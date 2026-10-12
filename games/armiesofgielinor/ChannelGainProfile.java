@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vk {
+final class ChannelGainProfile {
     static boolean field_f;
     static String field_d;
     static String field_b;
-    static RgbSprite[] field_e;
+    static RgbSprite[] campaignBackgrounds;
     static String field_c;
-    int[] field_a;
+    int[] gains;
     private static String field_z;
 
-    public vk() {
-        this.field_a = new int[16];
+    public ChannelGainProfile() {
+        this.gains = new int[16];
     }
 
     public static void a(int param0) {
@@ -20,7 +20,7 @@ final class vk {
           return;
         }
         field_c = null;
-        field_e = null;
+        campaignBackgrounds = null;
         field_b = null;
     }
 
@@ -28,7 +28,7 @@ final class vk {
         field_z = "vk.A(";
         field_b = "Password is valid";
         field_c = "Show all game chat";
-        field_e = new RgbSprite[3];
+        campaignBackgrounds = new RgbSprite[3];
         field_d = "RANGE";
     }
 }

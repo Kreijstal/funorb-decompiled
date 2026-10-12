@@ -133,7 +133,7 @@ final class TileMetadata implements TaggedFieldReader {
         }
         if ((!(PreparedAction.field_r <= 0) ||
           !(0 >= InstructionsPanel.field_D)) &&
-          vk.field_f) {
+          ChannelGainProfile.field_f) {
           SoftwareRaster.d(0, 0, SoftwareRaster.width, CombatEvent.field_I.screenY);
           ta.field_R.draw(param1, 20);
         }

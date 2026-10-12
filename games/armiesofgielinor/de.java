@@ -368,7 +368,7 @@ final class de {
                   if (2 != var7.getUnitCategory(0) &&
                     var7.unitType != 18 &&
                     var7.unitType != 28) {
-                    stackIn_195_0 = wn.field_bb;
+                    stackIn_195_0 = AdaptiveMidiPcmStream.field_bb;
                     return stackIn_195_0;
                   }
                 }

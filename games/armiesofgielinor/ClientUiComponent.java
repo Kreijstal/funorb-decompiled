@@ -80,7 +80,7 @@ class ClientUiComponent extends ClientUiNode {
         }
         if (param0 ||
           null == vu.currentRoom) {
-          vk.field_f = false;
+          ChannelGainProfile.field_f = false;
         }
         if (!param0) {
           if (null != vu.currentRoom) {
@@ -100,7 +100,7 @@ class ClientUiComponent extends ClientUiNode {
             }
           } else {
             if (null == no.roomSetup) {
-              vk.field_f = false;
+              ChannelGainProfile.field_f = false;
               if (PreparedAction.field_r > 0) {
                 PreparedAction.field_r = PreparedAction.field_r - 1;
               } else {

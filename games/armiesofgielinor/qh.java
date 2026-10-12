@@ -19,7 +19,7 @@ final class qh {
           if (0 < InstructionsPanel.field_D) {
             uu.a(param0, param9, param5, param7 + 1, param8);
           }
-          if (vk.field_f &&
+          if (ChannelGainProfile.field_f &&
             vu.currentRoom.playerCount >= vu.currentRoom.playerCapacity) {
             MapTile.field_f.viewport.text = TelefragEvent.field_y;
             IconTextComponent.field_Kb.inputEnabled = false;
@@ -46,7 +46,7 @@ final class qh {
               if (0 < InstructionsPanel.field_D) {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
-              if (vk.field_f &&
+              if (ChannelGainProfile.field_f &&
                 vu.currentRoom.playerCount >= vu.currentRoom.playerCapacity) {
                 MapTile.field_f.viewport.text = TelefragEvent.field_y;
                 IconTextComponent.field_Kb.inputEnabled = false;
@@ -70,7 +70,7 @@ final class qh {
               if (0 < InstructionsPanel.field_D) {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
-              if (vk.field_f &&
+              if (ChannelGainProfile.field_f &&
                 vu.currentRoom.playerCount >= vu.currentRoom.playerCapacity) {
                 MapTile.field_f.viewport.text = TelefragEvent.field_y;
                 IconTextComponent.field_Kb.inputEnabled = false;
@@ -107,7 +107,7 @@ final class qh {
               if (0 < InstructionsPanel.field_D) {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
-              if (vk.field_f &&
+              if (ChannelGainProfile.field_f &&
                 vu.currentRoom.playerCount >= vu.currentRoom.playerCapacity) {
                 MapTile.field_f.viewport.text = TelefragEvent.field_y;
                 IconTextComponent.field_Kb.inputEnabled = false;
@@ -142,7 +142,7 @@ final class qh {
             if (0 < InstructionsPanel.field_D) {
               uu.a(param0, param9, param5, param7 + 1, param8);
             }
-            if (vk.field_f &&
+            if (ChannelGainProfile.field_f &&
               vu.currentRoom.playerCount >= vu.currentRoom.playerCapacity) {
               MapTile.field_f.viewport.text = TelefragEvent.field_y;
               IconTextComponent.field_Kb.inputEnabled = false;
@@ -165,7 +165,7 @@ final class qh {
               if (0 < InstructionsPanel.field_D) {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
-              if (vk.field_f &&
+              if (ChannelGainProfile.field_f &&
                 vu.currentRoom.playerCount >= vu.currentRoom.playerCapacity) {
                 MapTile.field_f.viewport.text = TelefragEvent.field_y;
                 IconTextComponent.field_Kb.inputEnabled = false;
@@ -184,7 +184,7 @@ final class qh {
               if (0 < InstructionsPanel.field_D) {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
-              if (!vk.field_f) {
+              if (!ChannelGainProfile.field_f) {
                 IconTextComponent.field_Kb.inputEnabled = true;
                 MapTile.field_f.viewport.text = null;
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);

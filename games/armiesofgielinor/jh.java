@@ -220,7 +220,7 @@ final class jh extends mk {
 
     final static void rememberLastQuickChat(String recipientName, long accountId, int phraseId, int channelId, int obfuscationGuard) {
         vt.lastQuickChatChannel = channelId;
-        wn.lastQuickChatRecipientName = recipientName;
+        AdaptiveMidiPcmStream.lastQuickChatRecipientName = recipientName;
         vi.lastQuickChatPhraseId = phraseId;
         if (obfuscationGuard != 19212) {
           return;

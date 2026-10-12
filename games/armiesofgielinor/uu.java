@@ -121,7 +121,7 @@ final class uu {
                   var10_ref_String = fo.a(4800, UnitSpell.field_h, new String[]{Integer.toString(AnimationPlayer.pendingJoinRequestCount)});
                 }
                 if (0 == (16 & hg.field_b) &&
-                  !vk.field_f) {
+                  !ChannelGainProfile.field_f) {
                   lm.field_b.skinSprites = nd.field_a.matchedButtonSkinSprites;
                 }
                 lm.field_b.text = lm.field_b.text + "<br>" + var10_ref_String;
@@ -421,15 +421,15 @@ final class uu {
           }
           stackIn_173_0 = lk.field_a;
           stackIn_173_1 = true;
-          stackIn_174_2 = (param0) && (!param1) && (!vk.field_f);
+          stackIn_174_2 = (param0) && (!param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_173_0).updateInput(stackIn_173_1, stackIn_174_2);
           stackIn_178_0 = pd.field_c;
           stackIn_178_1 = true;
-          stackIn_179_2 = (param0) && (!param1) && (!vk.field_f);
+          stackIn_179_2 = (param0) && (!param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_178_0).updateInput(stackIn_178_1, stackIn_179_2);
           stackIn_183_0 = ta.field_R;
           stackIn_183_1 = true;
-          stackIn_184_2 = (param0) && (!param1) && (vk.field_f);
+          stackIn_184_2 = (param0) && (!param1) && (ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_183_0).updateInput(stackIn_183_1, stackIn_184_2);
           ij.field_w.tabs.advanceTabSelection(param3 ^ 10000);
           if (vu.currentRoom != null) {
@@ -437,13 +437,13 @@ final class uu {
               PointerInputHandler.writeRoomAdmissionCancellation(69, vu.currentRoom.getRoomId((byte) -68), param2);
             }
             if (lm.field_b.pressedButton != 0) {
-              vk.field_f = true;
+              ChannelGainProfile.field_f = true;
             }
             if (0 != so.field_d.pressedButton) {
               cp.field_h = true;
             }
             if (dv.field_m.pressedButton != 0) {
-              vk.field_f = false;
+              ChannelGainProfile.field_f = false;
             }
             vf.a(param3 + 1, false, param2, vu.currentRoom);
           }

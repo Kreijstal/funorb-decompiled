@@ -11,8 +11,8 @@ final class DisplacedUnitMarker extends PreparedAction {
           return "Please use a value from 0 to 256, inclusive.";
         }
         if (param1 >= 0) {
-          var2 = "old volume: " + gi.field_b;
-          gi.field_b = param1;
+          var2 = "old volume: " + gi.campaignBaseChannelGain;
+          gi.campaignBaseChannelGain = param1;
           return var2;
         }
         return "Please use a value from 0 to 256, inclusive.";

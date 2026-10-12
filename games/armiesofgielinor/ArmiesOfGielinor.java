@@ -207,7 +207,7 @@ public final class ArmiesOfGielinor extends wf {
                   SpellCastAction.field_t = false;
                   FaceNormal.field_d = true;
                   jt.field_a = -2;
-                  TrianglePulse.a(-16147, 50, DeployRequest.field_B, true);
+                  TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, DeployRequest.field_B, true);
                   continue;
                 }
                 if (MusicCrossfadeStream.deliveredOpcode == 15) {
@@ -225,7 +225,7 @@ public final class ArmiesOfGielinor extends wf {
                     vs.field_j = true;
                     uc.a(0);
                   }
-                  TrianglePulse.a(-16147, 50, SocialListPanel.field_Ob, true);
+                  TrianglePulse.selectMusicTrackWithDefaultGain(-16147, 50, SocialListPanel.field_Ob, true);
                   ScrollContainer.field_Qb = false;
                   SpellCastAction.field_t = false;
                   continue;
@@ -1133,7 +1133,7 @@ public final class ArmiesOfGielinor extends wf {
           et.c(13626);
           ed.b(15000);
           gi.a(180);
-          wn.c((byte) 52);
+          AdaptiveMidiPcmStream.c((byte) 52);
           MusicCrossfadeStream.e(256);
           gp.a((byte) 115);
           us.a(param0 ^ 30);
@@ -1518,7 +1518,7 @@ public final class ArmiesOfGielinor extends wf {
           aj.a(param0 + 155);
           ko.a(false);
           nt.a((byte) 97);
-          vk.a(-4740);
+          ChannelGainProfile.a(-4740);
           te.a((byte) -75);
           CampaignDefinition.a((byte) 9);
           CampaignParticipant.a((byte) -95);
@@ -1604,9 +1604,9 @@ public final class ArmiesOfGielinor extends wf {
         int stackIn_10_1 = 0;
         int stackIn_26_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        wn var2 = null;
+        AdaptiveMidiPcmStream var2 = null;
         RuntimeException var2_ref = null;
-        wn var3 = null;
+        AdaptiveMidiPcmStream var3 = null;
         MusicCrossfadeStream var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -1616,19 +1616,19 @@ public final class ArmiesOfGielinor extends wf {
           li.field_n = new Random(vi.monotonicMillis(-108));
           this.a(4, 68, 24, 2, -119, 0, 1);
           UnitSpell.a(52, new lt());
-          var2 = new wn();
-          var3 = new wn(var2);
+          var2 = new AdaptiveMidiPcmStream();
+          var3 = new AdaptiveMidiPcmStream(var2);
           var4 = new MusicCrossfadeStream(var2, var3);
           var4.firstSequencer.setChannelProgram(-1, 128, 9);
           var4.secondSequencer.setChannelProgram(-1, 128, 9);
           var5 = 0;
           do {
-            if (!(CorpseConditionMarker.field_u.field_a.length > var5)) {
+            if (!(CorpseConditionMarker.defaultMusicProfile.gains.length > var5)) {
               lk.a(IntPair.field_m, 22050, var4, (byte) 68, true, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
               Widget.field_o = new int[7];
               break;
             }
-            CorpseConditionMarker.field_u.field_a[var5] = 256;
+            CorpseConditionMarker.defaultMusicProfile.gains[var5] = 256;
             var5++;
           } while (var7 == 0);
           var5 = 0;
@@ -2099,7 +2099,7 @@ public final class ArmiesOfGielinor extends wf {
                 fh.field_b[6] = MusicTrack.load(SummonAction.field_w, "", "fight or flight");
                 fh.field_b[7] = MusicTrack.load(SummonAction.field_w, "", "soul wars");
                 fh.field_b[8] = MusicTrack.load(SummonAction.field_w, "", "brain_barrelchest_battle");
-                qf.field_f = MusicTrack.load(SummonAction.field_w, "", "AoG_interface_guthix");
+                qf.interfaceMusicTrack = MusicTrack.load(SummonAction.field_w, "", "AoG_interface_guthix");
                 break;
               }
               cb.field_a[var5_int] = MusicTrack.load(SummonAction.field_w, "", "attack" + (var5_int + 1));
@@ -2114,7 +2114,7 @@ public final class ArmiesOfGielinor extends wf {
             var7_int = 0;
             do {
               if (var7_int >= var6.length) {
-                var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, qf.field_f, (byte) 86);
+                var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, qf.interfaceMusicTrack, (byte) 86);
                 break;
               }
               var8 = var6[var7_int];

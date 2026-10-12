@@ -191,7 +191,7 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (obfuscationGuard > -5) {
             return true;
           }
-          if (!wn.hasValidAccountNameShape(name, 1, true)) {
+          if (!AdaptiveMidiPcmStream.hasValidAccountNameShape(name, 1, true)) {
             return false;
           }
           var2_int = 0;

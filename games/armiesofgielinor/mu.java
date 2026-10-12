@@ -80,7 +80,7 @@ final class mu {
             SoftwareRaster.h(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           SoftwareRaster.setTarget(var16, var5, var6);
-          wn.defaultQuickChatMenu = l.buildQuickChatCategoryMenu(var4, hf.field_f, param1 ^ 0, vs.field_g, uj.field_n);
+          AdaptiveMidiPcmStream.defaultQuickChatMenu = l.buildQuickChatCategoryMenu(var4, hf.field_f, param1 ^ 0, vs.field_g, uj.field_n);
           OwnerChangeEvent.quickChatMenuHost.children = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

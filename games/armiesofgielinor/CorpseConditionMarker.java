@@ -3,7 +3,7 @@
  */
 final class CorpseConditionMarker extends PreparedAction {
     static RgbSprite field_v;
-    static vk field_u;
+    static ChannelGainProfile defaultMusicProfile;
     static String[] field_s;
     static String field_t;
     static ResourceArchive field_w;
@@ -23,7 +23,7 @@ final class CorpseConditionMarker extends PreparedAction {
           Widget.field_n = 0;
         }
         if (param0 != -28309) {
-          field_u = (vk) null;
+          defaultMusicProfile = (ChannelGainProfile) null;
         }
         if (uk.field_q < dd.field_e &&
           -1 < uk.field_q) {
@@ -132,7 +132,7 @@ final class CorpseConditionMarker extends PreparedAction {
     }
 
     public static void a(boolean param0) {
-        field_u = null;
+        defaultMusicProfile = null;
         field_s = null;
         field_t = null;
         field_x = null;
@@ -145,7 +145,7 @@ final class CorpseConditionMarker extends PreparedAction {
 
     static {
         field_s = new String[]{"Loading text", "Lade Text", "Chargement du texte", "Carregando textos", "Tekst laden", "Cargando texto"};
-        field_u = new vk();
+        defaultMusicProfile = new ChannelGainProfile();
         field_t = "Game options changed (<%0>)";
         field_x = "Prestige";
     }
