@@ -329,8 +329,8 @@ final class ou {
           }
           var11 = var23 * param6[11] + var22 * param6[10] + var21 * param6[9] >> 16;
           var10 = param6[6] * var21 + param6[7] * var22 + param6[8] * var23 >> -fn.field_M + 16;
-          var21 = tm.field_c;
-          var22 = tm.field_j;
+          var21 = TriangleRasterizer.projectionCenterX;
+          var22 = TriangleRasterizer.projectionCenterY;
           var23 = 0;
           scanLoop1: while (true) {
             if (var23 < param0.field_O) {

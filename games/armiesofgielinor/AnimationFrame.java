@@ -2,144 +2,144 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AnimationFrame {
-    private static short[] field_j;
+    private static short[] scratchTransformSlots;
     AnimationSkeleton skeleton;
     short[] transformSlots;
-    private static short[] field_b;
-    private static short[] field_g;
+    private static short[] scratchTransformZ;
+    private static short[] scratchPivotSlots;
     short[] transformY;
     short[] transformZ;
-    private static byte[] field_c;
+    private static byte[] scratchInterpolationFlags;
     int transformCount;
     byte[] interpolationFlags;
-    private static short[] field_k;
+    private static short[] scratchTransformX;
     short[] transformX;
-    private static short[] field_e;
+    private static short[] scratchTransformY;
     short[] precedingPivotSlots;
 
     AnimationFrame(byte[] encodedFrame, AnimationSkeleton skeleton) {
         Throwable decompiledCaughtException = null;
-        Exception var3 = null;
-        PacketBuffer var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        PacketBuffer var14 = null;
-        int var9Lifetime1;
+        Exception decodeFailure = null;
+        PacketBuffer componentPacket = null;
+        int encodedSlotCount = 0;
+        int decodedTransformCount = 0;
+        int latestPivotSlot = 0;
+        int lastEmittedPivotSlot = 0;
+        int slot = 0;
+        int transformType = 0;
+        int componentFlags = 0;
+        int defaultComponent = 0;
+        int copiedTransform = 0;
+        PacketBuffer flagsPacket = null;
+        int initialCopyCursor;
         this.transformCount = -1;
         this.skeleton = null;
         this.skeleton = skeleton;
         try {
-          var14 = new PacketBuffer(encodedFrame);
-          var4 = new PacketBuffer(encodedFrame);
-          var14.readUnsignedByte(0);
-          var14.position = var14.position + 2;
-          var5 = var14.readUnsignedByte(0);
-          var6 = 0;
-          var7 = -1;
-          var8 = -1;
-          var4.position = var14.position + var5;
-          for (var9 = 0; var9 < var5; var9++) {
-            var10 = this.skeleton.transformTypes[var9];
-            if (var10 == 0) {
-              var7 = var9;
+          flagsPacket = new PacketBuffer(encodedFrame);
+          componentPacket = new PacketBuffer(encodedFrame);
+          flagsPacket.readUnsignedByte(0);
+          flagsPacket.position = flagsPacket.position + 2;
+          encodedSlotCount = flagsPacket.readUnsignedByte(0);
+          decodedTransformCount = 0;
+          latestPivotSlot = -1;
+          lastEmittedPivotSlot = -1;
+          componentPacket.position = flagsPacket.position + encodedSlotCount;
+          for (slot = 0; slot < encodedSlotCount; slot++) {
+            transformType = this.skeleton.transformTypes[slot];
+            if (transformType == 0) {
+              latestPivotSlot = slot;
             }
-            var11 = var14.readUnsignedByte(0);
-            if (var11 > 0) {
-              if (var10 == 0) {
-                var8 = var9;
+            componentFlags = flagsPacket.readUnsignedByte(0);
+            if (componentFlags > 0) {
+              if (transformType == 0) {
+                lastEmittedPivotSlot = slot;
               }
-              field_j[var6] = (short)var9;
-              var12 = 0;
-              if (var10 == 3) {
-                var12 = 128;
+              scratchTransformSlots[decodedTransformCount] = (short)slot;
+              defaultComponent = 0;
+              if (transformType == 3) {
+                defaultComponent = 128;
               }
-              if ((var11 & 1) == 0) {
-                field_k[var6] = (short)var12;
+              if ((componentFlags & 1) == 0) {
+                scratchTransformX[decodedTransformCount] = (short)defaultComponent;
               } else {
-                field_k[var6] = (short)var4.readSignedSmart(114);
+                scratchTransformX[decodedTransformCount] = (short)componentPacket.readSignedSmart(114);
               }
-              if ((var11 & 2) == 0) {
-                field_e[var6] = (short)var12;
+              if ((componentFlags & 2) == 0) {
+                scratchTransformY[decodedTransformCount] = (short)defaultComponent;
               } else {
-                field_e[var6] = (short)var4.readSignedSmart(95);
+                scratchTransformY[decodedTransformCount] = (short)componentPacket.readSignedSmart(95);
               }
-              if ((var11 & 4) == 0) {
-                field_b[var6] = (short)var12;
+              if ((componentFlags & 4) == 0) {
+                scratchTransformZ[decodedTransformCount] = (short)defaultComponent;
               } else {
-                field_b[var6] = (short)var4.readSignedSmart(55);
+                scratchTransformZ[decodedTransformCount] = (short)componentPacket.readSignedSmart(55);
               }
-              field_c[var6] = (byte)(var11 >>> 3 & 3);
-              if (var10 == 2) {
-                field_k[var6] = (short)(((field_k[var6] & 255) << 3) + (field_k[var6] >> 8 & 7));
-                field_e[var6] = (short)(((field_e[var6] & 255) << 3) + (field_e[var6] >> 8 & 7));
-                field_b[var6] = (short)(((field_b[var6] & 255) << 3) + (field_b[var6] >> 8 & 7));
+              scratchInterpolationFlags[decodedTransformCount] = (byte)(componentFlags >>> 3 & 3);
+              if (transformType == 2) {
+                scratchTransformX[decodedTransformCount] = (short)(((scratchTransformX[decodedTransformCount] & 255) << 3) + (scratchTransformX[decodedTransformCount] >> 8 & 7));
+                scratchTransformY[decodedTransformCount] = (short)(((scratchTransformY[decodedTransformCount] & 255) << 3) + (scratchTransformY[decodedTransformCount] >> 8 & 7));
+                scratchTransformZ[decodedTransformCount] = (short)(((scratchTransformZ[decodedTransformCount] & 255) << 3) + (scratchTransformZ[decodedTransformCount] >> 8 & 7));
               }
-              field_g[var6] = (short)-1;
-              if (var10 != 1 &&
-                var10 != 2 &&
-                var10 != 3) {
-                if (var10 != 5 &&
-                  var10 != 7) {
+              scratchPivotSlots[decodedTransformCount] = (short)-1;
+              if (transformType != 1 &&
+                transformType != 2 &&
+                transformType != 3) {
+                if (transformType != 5 &&
+                  transformType != 7) {
                 }
               } else {
-                if (var7 > var8) {
-                  field_g[var6] = (short)var7;
-                  var8 = var7;
+                if (latestPivotSlot > lastEmittedPivotSlot) {
+                  scratchPivotSlots[decodedTransformCount] = (short)latestPivotSlot;
+                  lastEmittedPivotSlot = latestPivotSlot;
                 }
               }
-              var6++;
+              decodedTransformCount++;
             }
           }
-          if (var4.position != encodedFrame.length) {
+          if (componentPacket.position != encodedFrame.length) {
             throw new RuntimeException();
           }
-          this.transformCount = var6;
-          this.transformSlots = new short[var6];
-          this.transformX = new short[var6];
-          this.transformY = new short[var6];
-          this.transformZ = new short[var6];
-          this.precedingPivotSlots = new short[var6];
-          this.interpolationFlags = new byte[var6];
-          var13 = 0;
-          var9Lifetime1 = var13;
-          while (var13 < var6) {
-            this.transformSlots[var13] = field_j[var13];
-            this.transformX[var13] = field_k[var13];
-            this.transformY[var13] = field_e[var13];
-            this.transformZ[var13] = field_b[var13];
-            this.precedingPivotSlots[var13] = field_g[var13];
-            this.interpolationFlags[var13] = field_c[var13];
-            var13++;
+          this.transformCount = decodedTransformCount;
+          this.transformSlots = new short[decodedTransformCount];
+          this.transformX = new short[decodedTransformCount];
+          this.transformY = new short[decodedTransformCount];
+          this.transformZ = new short[decodedTransformCount];
+          this.precedingPivotSlots = new short[decodedTransformCount];
+          this.interpolationFlags = new byte[decodedTransformCount];
+          copiedTransform = 0;
+          initialCopyCursor = copiedTransform;
+          while (copiedTransform < decodedTransformCount) {
+            this.transformSlots[copiedTransform] = scratchTransformSlots[copiedTransform];
+            this.transformX[copiedTransform] = scratchTransformX[copiedTransform];
+            this.transformY[copiedTransform] = scratchTransformY[copiedTransform];
+            this.transformZ[copiedTransform] = scratchTransformZ[copiedTransform];
+            this.precedingPivotSlots[copiedTransform] = scratchPivotSlots[copiedTransform];
+            this.interpolationFlags[copiedTransform] = scratchInterpolationFlags[copiedTransform];
+            copiedTransform++;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = (Exception) (Object) decompiledCaughtException;
+          decodeFailure = (Exception) (Object) decompiledCaughtException;
           this.transformCount = 0;
         }
     }
 
-    public static void a() {
-        field_j = null;
-        field_k = null;
-        field_e = null;
-        field_b = null;
-        field_g = null;
-        field_c = null;
+    public static void releaseDecoderScratch() {
+        scratchTransformSlots = null;
+        scratchTransformX = null;
+        scratchTransformY = null;
+        scratchTransformZ = null;
+        scratchPivotSlots = null;
+        scratchInterpolationFlags = null;
     }
 
     static {
-        field_j = new short[500];
-        field_b = new short[500];
-        field_g = new short[500];
-        field_k = new short[500];
-        field_c = new byte[500];
-        field_e = new short[500];
+        scratchTransformSlots = new short[500];
+        scratchTransformZ = new short[500];
+        scratchPivotSlots = new short[500];
+        scratchTransformX = new short[500];
+        scratchInterpolationFlags = new byte[500];
+        scratchTransformY = new short[500];
     }
 }

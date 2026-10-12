@@ -8,7 +8,7 @@ final class jj {
     static String[] field_a;
     static String field_f;
     static String field_e;
-    static ResourceArchive field_c;
+    static ResourceArchive animationFramesArchive;
     static je[] field_i;
     static BufferedSocket field_g;
 
@@ -19,7 +19,7 @@ final class jj {
           jj.a(-113, (String) null);
           field_i = null;
           field_d = null;
-          field_c = null;
+          animationFramesArchive = null;
           field_h = null;
           field_b = null;
           field_a = null;
@@ -29,7 +29,7 @@ final class jj {
         }
         field_i = null;
         field_d = null;
-        field_c = null;
+        animationFramesArchive = null;
         field_h = null;
         field_b = null;
         field_a = null;

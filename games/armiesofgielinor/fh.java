@@ -162,10 +162,10 @@ final class fh {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7_int = tm.field_c;
-          var8 = tm.field_j;
-          var9 = tm.field_n[150];
-          var10 = tm.field_e[150];
+          var7_int = TriangleRasterizer.projectionCenterX;
+          var8 = TriangleRasterizer.projectionCenterY;
+          var9 = TriangleRasterizer.sineTable[150];
+          var10 = TriangleRasterizer.cosineTable[150];
           if (param2 != 56) {
             var15 = (ModelMesh) null;
             fh.a(104, (ModelMesh) null);
@@ -215,10 +215,10 @@ final class fh {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7_int = tm.field_c;
-          var8 = tm.field_j;
-          var9 = tm.field_n[150];
-          var10 = tm.field_e[150];
+          var7_int = TriangleRasterizer.projectionCenterX;
+          var8 = TriangleRasterizer.projectionCenterY;
+          var9 = TriangleRasterizer.sineTable[150];
+          var10 = TriangleRasterizer.cosineTable[150];
           if (param2 != 56) {
             var15 = (ModelMesh) null;
             fh.a(104, (ModelMesh) null);

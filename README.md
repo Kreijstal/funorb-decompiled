@@ -23,7 +23,7 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 157 reviewed class names, not a complete semantic map. Campaign
+Armies has 159 reviewed class names, not a complete semantic map. Campaign
 loadouts now name unit/spell rewards, equipped slots and cumulative mana bonuses;
 reward previews retain unit-before-spell-before-mana precedence. Campaign menu
 entries, buttons and intrusive hash lookup/traversal now have reviewed names;
@@ -85,8 +85,10 @@ participants, coats of arms and contextual errors have names and versioned
 packet fixtures. Mission gt/gd fields now correctly identify score targets.
 Animation skeleton/frame decoding and mesh blending now have reviewed names
 and fixtures, including wrapped interpolation and skeleton identity checks.
-Coordinate and texture-index arrays have separate names. Three
-dispatcher files remain.
+Coordinate and texture-index arrays have separate names. Frame loading, masked
+mesh transforms, decoder cleanup and flat/constant-shade rasterization now have
+reviewed names and fixtures. Matrix-backed rotation/scale and full animation
+rendering remain unverified. Three dispatcher files remain.
 
 Steel has 33 reviewed class names. Its controlled raw/named core checks cover
 module aliases, armour/charge mutations, terrain bounds, recursive part armour

@@ -171,8 +171,8 @@ final class tl implements Iterator {
 
     final static void a(byte param0, ResourceArchive param1, ResourceArchive param2) {
         try {
-          jj.field_c = param2;
-          PortalLossCondition.field_e = param1;
+          jj.animationFramesArchive = param2;
+          PortalLossCondition.animationSkeletonsArchive = param1;
           if (param0 > -117) {
             field_a = (String) null;
           }

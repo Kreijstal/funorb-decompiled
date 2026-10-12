@@ -145,15 +145,15 @@ final class TelepopEvent extends GameEvent {
         var42 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param11 >= 0 &&
-            param15 < tm.field_q) {
+            param15 < TriangleRasterizer.clipHeight) {
             if (param14 < 0 &&
               param12 < 0 &&
               0 > param9) {
               return;
             }
-            if (param14 >= tm.field_l &&
-              tm.field_l <= param12 &&
-              tm.field_l <= param9) {
+            if (param14 >= TriangleRasterizer.clipWidth &&
+              TriangleRasterizer.clipWidth <= param12 &&
+              TriangleRasterizer.clipWidth <= param9) {
               return;
             }
             if (!param13) {
@@ -221,22 +221,22 @@ final class TelepopEvent extends GameEvent {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = tm.field_k[param15];
+                var36Lifetime2 = TriangleRasterizer.scanlineOffsets[param15];
                 while (param15 < param10) {
                   var37 = var17_int >> 16;
-                  if (var37 < tm.field_l) {
+                  if (var37 < TriangleRasterizer.clipWidth) {
                     var38 = -(var17_int >> 16) + (var18 >> 16);
                     if (var38 == 0) {
                       if (0 <= var37 &&
-                        tm.field_l > var37) {
+                        TriangleRasterizer.clipWidth > var37) {
                         jn.a(var29, var21, 0, 33423424, var37 + var36Lifetime2, var38, var25, param0, 0, 0);
                       }
                     } else {
                       var39 = (var22 - var21) / var38;
                       var40 = (-var25 + var26) / var38;
                       var41 = (-var29 + var30) / var38;
-                      if (tm.field_l <= var38 + var37) {
-                        var38 = tm.field_l - (var37 + 1);
+                      if (TriangleRasterizer.clipWidth <= var38 + var37) {
+                        var38 = TriangleRasterizer.clipWidth - (var37 + 1);
                       }
                       if (var37 >= 0) {
                         jn.a(var29, var21, var39, 33423424, var36Lifetime2 + var37, var38, var25, param0, var40, var41);
@@ -246,7 +246,7 @@ final class TelepopEvent extends GameEvent {
                     }
                   }
                   param15++;
-                  if (tm.field_q <= param15) {
+                  if (TriangleRasterizer.clipHeight <= param15) {
                     return;
                   }
                   var18 = var18 + var20;
@@ -377,17 +377,17 @@ final class TelepopEvent extends GameEvent {
               var21 = var21 + var23 * param15;
               param15 = 0;
             }
-            var35Lifetime1 = tm.field_k[param15];
+            var35Lifetime1 = TriangleRasterizer.scanlineOffsets[param15];
             while (param15 < param11) {
               var36Lifetime1 = var17_int >> 16;
-              if (var36Lifetime1 < tm.field_l) {
+              if (var36Lifetime1 < TriangleRasterizer.clipWidth) {
                 var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
                 if (var37Lifetime1 != 0) {
                   var38Lifetime1 = (var22 - var21) / var37Lifetime1;
                   var39Lifetime1 = (-var25 + var26) / var37Lifetime1;
                   var40Lifetime1 = (var30 - var29) / var37Lifetime1;
-                  if (var37Lifetime1 + var36Lifetime1 >= tm.field_l) {
-                    var37Lifetime1 = -var36Lifetime1 + (tm.field_l - 1);
+                  if (var37Lifetime1 + var36Lifetime1 >= TriangleRasterizer.clipWidth) {
+                    var37Lifetime1 = -var36Lifetime1 + (TriangleRasterizer.clipWidth - 1);
                   }
                   if (var36Lifetime1 >= 0) {
                     jn.a(var29, var21, var38Lifetime1, 33423424, var35Lifetime1 + var36Lifetime1, var37Lifetime1, var25, param0, var39Lifetime1, var40Lifetime1);
@@ -396,13 +396,13 @@ final class TelepopEvent extends GameEvent {
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
-                    var36Lifetime1 < tm.field_l) {
+                    var36Lifetime1 < TriangleRasterizer.clipWidth) {
                     jn.a(var29, var21, 0, 33423424, var35Lifetime1 + var36Lifetime1, var37Lifetime1, var25, param0, 0, 0);
                   }
                 }
               }
               param15++;
-              if (param15 >= tm.field_q) {
+              if (param15 >= TriangleRasterizer.clipHeight) {
                 return;
               }
               var35Lifetime1 = var35Lifetime1 + SoftwareRaster.width;

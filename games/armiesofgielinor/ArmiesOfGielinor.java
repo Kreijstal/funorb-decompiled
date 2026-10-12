@@ -1242,7 +1242,7 @@ public final class ArmiesOfGielinor extends wf {
           MapLayout.a(0);
           db.a(-3);
           PaletteRegionMap.a(param0 + 7814);
-          tm.b();
+          TriangleRasterizer.b();
           MatchSetupPanel.g(256);
           InstructionsPanel.q(-114);
           la.b((byte) -111);
@@ -1400,7 +1400,7 @@ public final class ArmiesOfGielinor extends wf {
           VertexNormal.a(param0 - 14619);
           AnimationSkeleton.e(77);
           mv.a((byte) -48);
-          AnimationFrame.a();
+          AnimationFrame.releaseDecoderScratch();
           rv.a(param0 ^ -72);
           PreparedAction.a(28038);
           VineGrowthAction.a((byte) 119);

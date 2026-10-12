@@ -18,25 +18,25 @@ final class AnimationFrameSet extends DualLinkedNode {
     static String field_F;
 
     final boolean ensureFramesAvailable(byte obfuscationGuard) {
-        int var2;
-        int var3_int;
-        NodeDeque var3;
-        int var4;
-        int var6;
-        PacketBuffer var8;
-        int var9;
-        Object var10;
-        AnimationSkeleton var11;
-        int var12;
-        int var13;
-        PacketBuffer var16;
-        int[] var27;
-        byte[] var28;
-        int[] var29;
-        byte[] var30;
-        int var3_intLifetime1;
-        int var6Lifetime1;
-        var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int allSkeletonsAvailable;
+        int encodedFileOrdinal;
+        NodeDeque loadedSkeletons;
+        int frameCapacity;
+        int requiredSkeletonId;
+        PacketBuffer frameHeader;
+        int skeletonId;
+        Object resolvedSkeleton;
+        AnimationSkeleton cachedSkeleton;
+        int obfuscationControl;
+        int dependencyOrdinal;
+        PacketBuffer dependencyHeader;
+        int[] encodedFileIds;
+        byte[] dependencyBytes;
+        int[] frameFileIds;
+        byte[] frameBytes;
+        int initialDependencyCursor;
+        int decodedFileOrdinal;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (obfuscationGuard != -65) {
           field_v = (String[]) null;
         }
@@ -44,53 +44,53 @@ final class AnimationFrameSet extends DualLinkedNode {
           return true;
         }
         if (this.encodedFrames == null) {
-          if (!jj.field_c.ensureGroupAvailable(11894, this.groupId)) {
+          if (!jj.animationFramesArchive.ensureGroupAvailable(11894, this.groupId)) {
             return false;
           }
-          var27 = jj.field_c.getFileIds(-26, this.groupId);
-          this.encodedFrames = new byte[var27.length][];
-          for (var3_int = 0; var27.length > var3_int; var3_int++) {
-            this.encodedFrames[var3_int] = jj.field_c.getFile((byte) 114, var27[var3_int], this.groupId);
+          encodedFileIds = jj.animationFramesArchive.getFileIds(-26, this.groupId);
+          this.encodedFrames = new byte[encodedFileIds.length][];
+          for (encodedFileOrdinal = 0; encodedFileIds.length > encodedFileOrdinal; encodedFileOrdinal++) {
+            this.encodedFrames[encodedFileOrdinal] = jj.animationFramesArchive.getFile((byte) 114, encodedFileIds[encodedFileOrdinal], this.groupId);
           }
         }
-        var2 = 1;
-        var13 = 0;
-        var3_intLifetime1 = var13;
-        while (var13 < this.encodedFrames.length) {
-          var28 = this.encodedFrames[var13];
-          var16 = new PacketBuffer(var28);
-          var16.position = 1;
-          var6 = var16.readUnsignedShort((byte) -104);
-          var2 = var2 != 0 & PortalLossCondition.field_e.ensureFlatFileAvailable(var6, (byte) -56) ? 1 : 0;
-          var13++;
+        allSkeletonsAvailable = 1;
+        dependencyOrdinal = 0;
+        initialDependencyCursor = dependencyOrdinal;
+        while (dependencyOrdinal < this.encodedFrames.length) {
+          dependencyBytes = this.encodedFrames[dependencyOrdinal];
+          dependencyHeader = new PacketBuffer(dependencyBytes);
+          dependencyHeader.position = 1;
+          requiredSkeletonId = dependencyHeader.readUnsignedShort((byte) -104);
+          allSkeletonsAvailable = allSkeletonsAvailable != 0 & PortalLossCondition.animationSkeletonsArchive.ensureFlatFileAvailable(requiredSkeletonId, (byte) -56) ? 1 : 0;
+          dependencyOrdinal++;
         }
-        if (var2 == 0) {
+        if (allSkeletonsAvailable == 0) {
           return false;
         }
-        var3 = new NodeDeque();
-        var4 = jj.field_c.getFileCapacity(this.groupId, obfuscationGuard ^ 65);
-        this.frames = new AnimationFrame[var4];
-        var29 = jj.field_c.getFileIds(-92, this.groupId);
-        for (var6Lifetime1 = 0; var6Lifetime1 < var29.length; var6Lifetime1++) {
-          var30 = this.encodedFrames[var6Lifetime1];
-          var8 = new PacketBuffer(var30);
-          var8.position = 1;
-          var9 = var8.readUnsignedShort((byte) -104);
-          var10 = null;
-          var11 = (AnimationSkeleton) (var3.first((byte) 124));
-          while (var11 != null) {
-            if (~var11.skeletonId != ~var9) {
-              var11 = (AnimationSkeleton) (var3.next((byte) 123));
+        loadedSkeletons = new NodeDeque();
+        frameCapacity = jj.animationFramesArchive.getFileCapacity(this.groupId, obfuscationGuard ^ 65);
+        this.frames = new AnimationFrame[frameCapacity];
+        frameFileIds = jj.animationFramesArchive.getFileIds(-92, this.groupId);
+        for (decodedFileOrdinal = 0; decodedFileOrdinal < frameFileIds.length; decodedFileOrdinal++) {
+          frameBytes = this.encodedFrames[decodedFileOrdinal];
+          frameHeader = new PacketBuffer(frameBytes);
+          frameHeader.position = 1;
+          skeletonId = frameHeader.readUnsignedShort((byte) -104);
+          resolvedSkeleton = null;
+          cachedSkeleton = (AnimationSkeleton) (loadedSkeletons.first((byte) 124));
+          while (cachedSkeleton != null) {
+            if (~cachedSkeleton.skeletonId != ~skeletonId) {
+              cachedSkeleton = (AnimationSkeleton) (loadedSkeletons.next((byte) 123));
               continue;
             }
-            var10 = var11;
+            resolvedSkeleton = cachedSkeleton;
             break;
           }
-          if (var10 == null) {
-            var10 = new AnimationSkeleton(var9, PortalLossCondition.field_e.getFlatFile(var9, (byte) 81));
-            var3.addLast((byte) -119, (IntrusiveNode) (var10));
+          if (resolvedSkeleton == null) {
+            resolvedSkeleton = new AnimationSkeleton(skeletonId, PortalLossCondition.animationSkeletonsArchive.getFlatFile(skeletonId, (byte) 81));
+            loadedSkeletons.addLast((byte) -119, (IntrusiveNode) (resolvedSkeleton));
           }
-          this.frames[var29[var6Lifetime1]] = new AnimationFrame(var30, (AnimationSkeleton) (var10));
+          this.frames[frameFileIds[decodedFileOrdinal]] = new AnimationFrame(frameBytes, (AnimationSkeleton) (resolvedSkeleton));
         }
         this.encodedFrames = (byte[][]) null;
         return true;

@@ -4234,8 +4234,8 @@ final class TutorialController {
           ce.field_F[li.field_q + 1].f(db.a(true, 36), MatchConditionEntry.a(156, (byte) 94), 256 - var4);
           ce.field_F[1 + MoveAttackAction.field_s].f(db.a(true, 36), MatchConditionEntry.a(156, (byte) 94), 256 - var5);
           if (null != b.field_n) {
-            tm.a(db.a(true, 34), MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
-            tm.c();
+            TriangleRasterizer.setClip(db.a(true, 34), MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
+            TriangleRasterizer.centerProjection();
             stackIn_25_0 = ((pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << jq.field_F) != 0) ? 0 : 1;
             var7Lifetime1 = stackIn_25_0;
             fieldTemp$0 = kq.field_L;

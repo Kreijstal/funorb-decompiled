@@ -247,7 +247,7 @@ final class CombatViewTransition {
         if (param1 < 67) {
           return 4;
         }
-        return tm.field_n[param0 & 2047];
+        return TriangleRasterizer.sineTable[param0 & 2047];
     }
 
     public static void b(byte param0) {

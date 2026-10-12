@@ -39,7 +39,7 @@ final class TaggedMapData implements TaggedFieldReader {
           var5 = (250 - ib.field_j << 8) / 50;
         }
         CombatSandbox.a(dc.field_n, 3);
-        tm.a();
+        TriangleRasterizer.useRasterClip();
         SoftwareRaster.b();
         rb.e(9);
         if (var5 < 256) {

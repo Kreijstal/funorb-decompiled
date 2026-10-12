@@ -34,15 +34,15 @@ final class ManaEvent extends GameEvent {
         var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (0 <= param3 &&
-            param1 < tm.field_q) {
+            param1 < TriangleRasterizer.clipHeight) {
             if (param7 < 0 &&
               0 > param4 &&
               param2 < 0) {
               return;
             }
-            if (tm.field_l <= param7 &&
-              tm.field_l <= param4 &&
-              tm.field_l <= param2) {
+            if (TriangleRasterizer.clipWidth <= param7 &&
+              TriangleRasterizer.clipWidth <= param4 &&
+              TriangleRasterizer.clipWidth <= param2) {
               return;
             }
             var14 = -param1 + param3;
@@ -104,14 +104,14 @@ final class ManaEvent extends GameEvent {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var16Lifetime2 = tm.field_k[param1];
+                var16Lifetime2 = TriangleRasterizer.scanlineOffsets[param1];
                 while (param0 > param1) {
                   var17 = var9_int >> 16;
-                  if (var17 < tm.field_l) {
+                  if (var17 < TriangleRasterizer.clipWidth) {
                     var18 = (var10 >> 16) - (var9_int >> 16);
                     if (var18 != 0) {
-                      if (tm.field_l <= var17 + var18) {
-                        var18 = -var17 + tm.field_l - 1;
+                      if (TriangleRasterizer.clipWidth <= var17 + var18) {
+                        var18 = -var17 + TriangleRasterizer.clipWidth - 1;
                       }
                       if (var17 < 0) {
                         tf.a(var16Lifetime2, param8 - 1432128883, var17 + var18, param6, param5);
@@ -120,13 +120,13 @@ final class ManaEvent extends GameEvent {
                       }
                     } else {
                       if (var17 >= 0 &&
-                        tm.field_l > var17) {
+                        TriangleRasterizer.clipWidth > var17) {
                         tf.a(var16Lifetime2 + var17, -1432128863, var18, param6, param5);
                       }
                     }
                   }
                   param1++;
-                  if (param1 >= tm.field_q) {
+                  if (param1 >= TriangleRasterizer.clipHeight) {
                     return;
                   }
                   var16Lifetime2 = var16Lifetime2 + SoftwareRaster.width;
@@ -158,19 +158,19 @@ final class ManaEvent extends GameEvent {
               var9_int = var9_int + param1 * var11;
               param1 = 0;
             }
-            var15Lifetime1 = tm.field_k[param1];
+            var15Lifetime1 = TriangleRasterizer.scanlineOffsets[param1];
             while (param1 < param3) {
               var16Lifetime1 = var9_int >> 16;
-              if (var16Lifetime1 < tm.field_l) {
+              if (var16Lifetime1 < TriangleRasterizer.clipWidth) {
                 var17Lifetime1 = -(var9_int >> 16) + (var10 >> 16);
                 if (var17Lifetime1 == 0) {
                   if (var16Lifetime1 >= 0 &&
-                    var16Lifetime1 < tm.field_l) {
+                    var16Lifetime1 < TriangleRasterizer.clipWidth) {
                     tf.a(var15Lifetime1 + var16Lifetime1, -1432128863, var17Lifetime1, param6, param5);
                   }
                 } else {
-                  if (tm.field_l <= var16Lifetime1 + var17Lifetime1) {
-                    var17Lifetime1 = tm.field_l - (var16Lifetime1 + 1);
+                  if (TriangleRasterizer.clipWidth <= var16Lifetime1 + var17Lifetime1) {
+                    var17Lifetime1 = TriangleRasterizer.clipWidth - (var16Lifetime1 + 1);
                   }
                   if (var16Lifetime1 >= 0) {
                     tf.a(var16Lifetime1 + var15Lifetime1, -1432128863, var17Lifetime1, param6, param5);
@@ -180,7 +180,7 @@ final class ManaEvent extends GameEvent {
                 }
               }
               param1++;
-              if (tm.field_q <= param1) {
+              if (TriangleRasterizer.clipHeight <= param1) {
                 return;
               }
               var10 = var10 + var12;

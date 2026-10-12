@@ -580,7 +580,7 @@ final class ng {
           if (!param0) {
             ng.w(33);
           }
-          tm.a();
+          TriangleRasterizer.useRasterClip();
           SoftwareRaster.b();
           ib.field_j = 0;
           rb.e(9);

@@ -35,8 +35,8 @@ final class AnimationSkeleton extends IntrusiveNode {
     }
 
     AnimationSkeleton(int skeletonId, byte[] encodedSkeleton) {
-        int[] array$0 = null;
-        int var5 = 0;
+        int[] groupIndices = null;
+        int groupIndexOrdinal = 0;
         boolean[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         boolean stackIn_9_2 = false;
@@ -44,49 +44,49 @@ final class AnimationSkeleton extends IntrusiveNode {
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        PacketBuffer var7 = null;
-        PacketBuffer var8 = null;
-        int var4Lifetime1;
-        int var4Lifetime2;
-        int var4Lifetime3;
-        int var4Lifetime4;
+        RuntimeException failure = null;
+        int typeSlot = 0;
+        PacketBuffer packet = null;
+        PacketBuffer packetAlias = null;
+        int flagSlot;
+        int maskSlot;
+        int groupSizeSlot;
+        int groupSlot;
         try {
           this.skeletonId = skeletonId;
-          var7 = new PacketBuffer(encodedSkeleton);
-          var8 = var7;
-          this.transformCount = var8.readUnsignedByte(0);
+          packet = new PacketBuffer(encodedSkeleton);
+          packetAlias = packet;
+          this.transformCount = packetAlias.readUnsignedByte(0);
           this.transformGroups = new int[this.transformCount][];
           this.encodedTransformFlags = new boolean[this.transformCount];
           this.transformTypes = new int[this.transformCount];
           this.transformMasks = new int[this.transformCount];
-          for (var4 = 0; var4 < this.transformCount; var4++) {
-            this.transformTypes[var4] = var7.readUnsignedByte(0);
+          for (typeSlot = 0; typeSlot < this.transformCount; typeSlot++) {
+            this.transformTypes[typeSlot] = packet.readUnsignedByte(0);
           }
-          for (var4Lifetime1 = 0; var4Lifetime1 < this.transformCount; var4Lifetime1++) {
+          for (flagSlot = 0; flagSlot < this.transformCount; flagSlot++) {
             stackIn_8_0 = this.encodedTransformFlags;
-            stackIn_8_1 = var4Lifetime1;
-            stackIn_9_2 = (var8.readUnsignedByte(0) == 1);
+            stackIn_8_1 = flagSlot;
+            stackIn_9_2 = (packetAlias.readUnsignedByte(0) == 1);
             stackIn_8_0[stackIn_8_1] = stackIn_9_2;
           }
-          for (var4Lifetime2 = 0; this.transformCount > var4Lifetime2; var4Lifetime2++) {
-            this.transformMasks[var4Lifetime2] = var7.readUnsignedShort((byte) -104);
+          for (maskSlot = 0; this.transformCount > maskSlot; maskSlot++) {
+            this.transformMasks[maskSlot] = packet.readUnsignedShort((byte) -104);
           }
-          for (var4Lifetime3 = 0; var4Lifetime3 < this.transformCount; var4Lifetime3++) {
-            array$0 = new int[var7.readUnsignedByte(0)];
-            this.transformGroups[var4Lifetime3] = array$0;
+          for (groupSizeSlot = 0; groupSizeSlot < this.transformCount; groupSizeSlot++) {
+            groupIndices = new int[packet.readUnsignedByte(0)];
+            this.transformGroups[groupSizeSlot] = groupIndices;
           }
-          for (var4Lifetime4 = 0; this.transformCount > var4Lifetime4; var4Lifetime4++) {
-            for (var5 = 0; var5 < this.transformGroups[var4Lifetime4].length; var5++) {
-              this.transformGroups[var4Lifetime4][var5] = var7.readUnsignedByte(0);
+          for (groupSlot = 0; this.transformCount > groupSlot; groupSlot++) {
+            for (groupIndexOrdinal = 0; groupIndexOrdinal < this.transformGroups[groupSlot].length; groupIndexOrdinal++) {
+              this.transformGroups[groupSlot][groupIndexOrdinal] = packet.readUnsignedByte(0);
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_25_0 = var3;
+          failure = decompiledCaughtException;
+          stackIn_25_0 = failure;
           stackIn_25_1 = new StringBuilder().append("ig.<init>(").append(skeletonId).append(',');
           if (encodedSkeleton == null) {
             stackIn_26_2 = "null";

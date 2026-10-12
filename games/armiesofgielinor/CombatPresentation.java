@@ -2724,8 +2724,8 @@ final class CombatPresentation implements EventPresentation {
           boolean decompiledFrameRemainder0 = true;
           this.framebuffer.b();
           this.a((byte) 99, 0, 0, -1);
-          tm.a();
-          tm.c();
+          TriangleRasterizer.useRasterClip();
+          TriangleRasterizer.centerProjection();
           if (this.field_d) {
             if (this.phase != 5) {
               if (this.phase != 6 && (this.phase != 8 ||

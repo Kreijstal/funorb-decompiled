@@ -3,7 +3,7 @@
  */
 final class PortalLossCondition implements MatchCondition {
     static String[][] instructionSectionTitles;
-    static ResourceArchive field_e;
+    static ResourceArchive animationSkeletonsArchive;
     static String[][][][] instructionParagraphs;
     private int playerId;
     static String[][][] instructionRowHeadings;
@@ -14,7 +14,7 @@ final class PortalLossCondition implements MatchCondition {
         field_f = null;
         instructionRowHeadings = (String[][][]) null;
         instructionSectionTitles = (String[][]) null;
-        field_e = null;
+        animationSkeletonsArchive = null;
         if (param0 != -12428) {
           return;
         }

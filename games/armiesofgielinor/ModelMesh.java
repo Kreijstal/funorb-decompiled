@@ -8,18 +8,18 @@ final class ModelMesh extends ModelMeshBase {
     private byte[] field_lb;
     private int faceCount;
     private short[] field_ab;
-    private byte[] field_H;
-    private boolean field_k;
+    private byte[] faceAlpha;
+    private boolean boundsValid;
     private int[] verticesZ;
     private int[] faceVertexA;
     private int[] faceVertexB;
     private int textureTriangleCount;
-    private short field_A;
+    private short boundingRadius;
     int[] field_Z;
     private byte[] field_ob;
     int vertexCount;
     int[] verticesY;
-    private boolean field_db;
+    private boolean faceColorsDirty;
     private int[][] faceGroups;
     private int[] verticesX;
     private int[][] vertexGroups;
@@ -28,9 +28,9 @@ final class ModelMesh extends ModelMeshBase {
     private short[] faceColors;
     int[] field_t;
     private int referencedVertexCapacity;
-    private short[] field_g;
+    private short[] faceTransformMasks;
     private int[] faceVertexC;
-    private short[] field_e;
+    private short[] vertexTransformMasks;
     private static byte[] field_u;
     private static int[] field_gb;
     private static short[] field_C;
@@ -43,7 +43,7 @@ final class ModelMesh extends ModelMeshBase {
     private static int[] field_z;
     private static int[] field_M;
     private static int[] field_eb;
-    private static int field_cb;
+    private static int animationPivotZ;
     private static int field_x;
     private static int[] field_W;
     private static int[] field_O;
@@ -57,15 +57,15 @@ final class ModelMesh extends ModelMeshBase {
     private static int[] field_X;
     private static int[] field_n;
     private static int[][] field_U;
-    private static int field_v;
+    private static int animationPivotX;
     private static int[] field_T;
     private static int[] field_L;
     private static int[] field_J;
-    private static int field_mb;
+    private static int animationPivotY;
     private static int[] field_Q;
     private static int[] field_fb;
 
-    private final void e() {
+    private final void refreshFaceLighting() {
         int var4 = 0;
         int var3;
         int stackIn_5_0 = 0;
@@ -110,11 +110,11 @@ final class ModelMesh extends ModelMeshBase {
     }
 
     final void finishAnimation() {
-        if (this.field_db) {
-          this.e();
-          this.field_db = false;
+        if (this.faceColorsDirty) {
+          this.refreshFaceLighting();
+          this.faceColorsDirty = false;
         }
-        this.field_k = false;
+        this.boundsValid = false;
     }
 
     private final void c(int param0) {
@@ -166,8 +166,8 @@ final class ModelMesh extends ModelMeshBase {
         int var14Lifetime1Lifetime1;
         int var14Lifetime2Lifetime1;
         int var20Lifetime1Lifetime1;
-        var2 = tm.field_c;
-        var3 = tm.field_j;
+        var2 = TriangleRasterizer.projectionCenterX;
+        var3 = TriangleRasterizer.projectionCenterY;
         var4 = 0;
         var5 = this.faceVertexA[param0];
         var6 = this.faceVertexB[param0];
@@ -175,17 +175,17 @@ final class ModelMesh extends ModelMeshBase {
         var8 = field_O[var5];
         var9 = field_O[var6];
         var10 = field_O[var7];
-        if (this.field_H != null) {
-          tm.field_f = this.field_H[param0] & 255;
+        if (this.faceAlpha != null) {
+          TriangleRasterizer.blendAlpha = this.faceAlpha[param0] & 255;
         } else {
-          tm.field_f = 0;
+          TriangleRasterizer.blendAlpha = 0;
         }
         if (var8 < 50) {
           var11 = field_X[var5];
           var12 = field_Q[var5];
           var13 = this.field_Z[param0] & 65535;
           if (var10 >= 50) {
-            var14 = (50 - var8) * tm.field_m[var10 - var8];
+            var14 = (50 - var8) * TriangleRasterizer.field_m[var10 - var8];
             field_n[var4] = var2 + (var11 + ((field_X[var7] - var11) * var14 >> 16) << 9) / 50;
             field_eb[var4] = var3 + (var12 + ((field_Q[var7] - var12) * var14 >> 16) << 9) / 50;
             incrementValue$0 = var4;
@@ -193,7 +193,7 @@ final class ModelMesh extends ModelMeshBase {
             field_fb[incrementValue$0] = var13 + (((this.field_R[param0] & 65535) - var13) * var14 >> 16);
           }
           if (var9 >= 50) {
-            var14Lifetime4 = (50 - var8) * tm.field_m[var9 - var8];
+            var14Lifetime4 = (50 - var8) * TriangleRasterizer.field_m[var9 - var8];
             field_n[var4] = var2 + (var11 + ((field_X[var6] - var11) * var14Lifetime4 >> 16) << 9) / 50;
             field_eb[var4] = var3 + (var12 + ((field_Q[var6] - var12) * var14Lifetime4 >> 16) << 9) / 50;
             incrementValue$1 = var4;
@@ -212,7 +212,7 @@ final class ModelMesh extends ModelMeshBase {
           var12Lifetime1 = field_Q[var6];
           var13Lifetime1 = this.field_t[param0] & 65535;
           if (var8 >= 50) {
-            var14Lifetime1 = (50 - var9) * tm.field_m[var8 - var9];
+            var14Lifetime1 = (50 - var9) * TriangleRasterizer.field_m[var8 - var9];
             field_n[var4] = var2 + (var11Lifetime1 + ((field_X[var5] - var11Lifetime1) * var14Lifetime1 >> 16) << 9) / 50;
             field_eb[var4] = var3 + (var12Lifetime1 + ((field_Q[var5] - var12Lifetime1) * var14Lifetime1 >> 16) << 9) / 50;
             incrementValue$3 = var4;
@@ -220,7 +220,7 @@ final class ModelMesh extends ModelMeshBase {
             field_fb[incrementValue$3] = var13Lifetime1 + (((this.field_Z[param0] & 65535) - var13Lifetime1) * var14Lifetime1 >> 16);
           }
           if (var10 >= 50) {
-            var14Lifetime1Lifetime1 = (50 - var9) * tm.field_m[var10 - var9];
+            var14Lifetime1Lifetime1 = (50 - var9) * TriangleRasterizer.field_m[var10 - var9];
             field_n[var4] = var2 + (var11Lifetime1 + ((field_X[var7] - var11Lifetime1) * var14Lifetime1Lifetime1 >> 16) << 9) / 50;
             field_eb[var4] = var3 + (var12Lifetime1 + ((field_Q[var7] - var12Lifetime1) * var14Lifetime1Lifetime1 >> 16) << 9) / 50;
             incrementValue$4 = var4;
@@ -239,7 +239,7 @@ final class ModelMesh extends ModelMeshBase {
           var12Lifetime2 = field_Q[var7];
           var13Lifetime2 = this.field_R[param0] & 65535;
           if (var9 >= 50) {
-            var14Lifetime2 = (50 - var10) * tm.field_m[var9 - var10];
+            var14Lifetime2 = (50 - var10) * TriangleRasterizer.field_m[var9 - var10];
             field_n[var4] = var2 + (var11Lifetime2 + ((field_X[var6] - var11Lifetime2) * var14Lifetime2 >> 16) << 9) / 50;
             field_eb[var4] = var3 + (var12Lifetime2 + ((field_Q[var6] - var12Lifetime2) * var14Lifetime2 >> 16) << 9) / 50;
             incrementValue$6 = var4;
@@ -247,7 +247,7 @@ final class ModelMesh extends ModelMeshBase {
             field_fb[incrementValue$6] = var13Lifetime2 + (((this.field_t[param0] & 65535) - var13Lifetime2) * var14Lifetime2 >> 16);
           }
           if (var8 >= 50) {
-            var14Lifetime2Lifetime1 = (50 - var10) * tm.field_m[var8 - var10];
+            var14Lifetime2Lifetime1 = (50 - var10) * TriangleRasterizer.field_m[var8 - var10];
             field_n[var4] = var2 + (var11Lifetime2 + ((field_X[var5] - var11Lifetime2) * var14Lifetime2Lifetime1 >> 16) << 9) / 50;
             field_eb[var4] = var3 + (var12Lifetime2 + ((field_Q[var5] - var12Lifetime2) * var14Lifetime2Lifetime1 >> 16) << 9) / 50;
             incrementValue$7 = var4;
@@ -268,15 +268,15 @@ final class ModelMesh extends ModelMeshBase {
         var14Lifetime3 = field_eb[0];
         var15 = field_eb[1];
         var16 = field_eb[2];
-        tm.field_a = false;
+        TriangleRasterizer.clipHorizontalSpans = false;
         if (var4 == 3) {
           if (var11Lifetime3 < 0 ||
             var12Lifetime3 < 0 ||
             var13Lifetime3 < 0 ||
-            !(var11Lifetime3 <= tm.field_l) ||
-            !(var12Lifetime3 <= tm.field_l) ||
-            !(var13Lifetime3 <= tm.field_l)) {
-            tm.field_a = true;
+            !(var11Lifetime3 <= TriangleRasterizer.clipWidth) ||
+            !(var12Lifetime3 <= TriangleRasterizer.clipWidth) ||
+            !(var13Lifetime3 <= TriangleRasterizer.clipWidth)) {
+            TriangleRasterizer.clipHorizontalSpans = true;
           }
           if (this.field_ab != null &&
             this.field_ab[param0] != -1) {
@@ -292,17 +292,17 @@ final class ModelMesh extends ModelMeshBase {
               var19 = var7;
             }
             if (this.field_R[param0] != -1) {
-              tm.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_fb[0], field_fb[1], field_fb[2], field_X[var17], field_X[var18], field_X[var19], field_Q[var17], field_Q[var18], field_Q[var19], field_O[var17], field_O[var18], field_O[var19], (int) this.field_ab[param0]);
+              TriangleRasterizer.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_fb[0], field_fb[1], field_fb[2], field_X[var17], field_X[var18], field_X[var19], field_Q[var17], field_Q[var18], field_Q[var19], field_O[var17], field_O[var18], field_O[var19], (int) this.field_ab[param0]);
             } else {
-              tm.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_Z[param0], this.field_Z[param0], this.field_Z[param0], field_X[var17], field_X[var18], field_X[var19], field_Q[var17], field_Q[var18], field_Q[var19], field_O[var17], field_O[var18], field_O[var19], (int) this.field_ab[param0]);
+              TriangleRasterizer.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_Z[param0], this.field_Z[param0], this.field_Z[param0], field_X[var17], field_X[var18], field_X[var19], field_Q[var17], field_Q[var18], field_Q[var19], field_O[var17], field_O[var18], field_O[var19], (int) this.field_ab[param0]);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
             if (this.field_R[param0] != -1) {
-              tm.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_fb[0], field_fb[1], field_fb[2]);
+              TriangleRasterizer.drawShadedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_fb[0], field_fb[1], field_fb[2]);
             } else {
-              tm.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, tm.field_h[this.field_Z[param0] & 65535]);
+              TriangleRasterizer.drawFlatTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, TriangleRasterizer.colorPalette[this.field_Z[param0] & 65535]);
             }
           }
         }
@@ -312,12 +312,12 @@ final class ModelMesh extends ModelMeshBase {
         if (var11Lifetime3 < 0 ||
           var12Lifetime3 < 0 ||
           var13Lifetime3 < 0 ||
-          !(var11Lifetime3 <= tm.field_l) ||
-          !(var12Lifetime3 <= tm.field_l) ||
-          !(var13Lifetime3 <= tm.field_l) ||
+          !(var11Lifetime3 <= TriangleRasterizer.clipWidth) ||
+          !(var12Lifetime3 <= TriangleRasterizer.clipWidth) ||
+          !(var13Lifetime3 <= TriangleRasterizer.clipWidth) ||
           !(field_n[3] >= 0) ||
-          !(field_n[3] <= tm.field_l)) {
-          tm.field_a = true;
+          !(field_n[3] <= TriangleRasterizer.clipWidth)) {
+          TriangleRasterizer.clipHorizontalSpans = true;
         }
         if (this.field_ab != null &&
           this.field_ab[param0] != -1) {
@@ -334,20 +334,20 @@ final class ModelMesh extends ModelMeshBase {
           }
           var20Lifetime1Lifetime1 = this.field_ab[param0];
           if (this.field_R[param0] != -1) {
-            tm.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_fb[0], field_fb[1], field_fb[2], field_X[var17Lifetime1], field_X[var18Lifetime1], field_X[var19Lifetime1], field_Q[var17Lifetime1], field_Q[var18Lifetime1], field_Q[var19Lifetime1], field_O[var17Lifetime1], field_O[var18Lifetime1], field_O[var19Lifetime1], var20Lifetime1Lifetime1);
-            tm.a(var14Lifetime3, var16, field_eb[3], var11Lifetime3, var13Lifetime3, field_n[3], field_fb[0], field_fb[2], field_fb[3], field_X[var17Lifetime1], field_X[var18Lifetime1], field_X[var19Lifetime1], field_Q[var17Lifetime1], field_Q[var18Lifetime1], field_Q[var19Lifetime1], field_O[var17Lifetime1], field_O[var18Lifetime1], field_O[var19Lifetime1], var20Lifetime1Lifetime1);
+            TriangleRasterizer.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_fb[0], field_fb[1], field_fb[2], field_X[var17Lifetime1], field_X[var18Lifetime1], field_X[var19Lifetime1], field_Q[var17Lifetime1], field_Q[var18Lifetime1], field_Q[var19Lifetime1], field_O[var17Lifetime1], field_O[var18Lifetime1], field_O[var19Lifetime1], var20Lifetime1Lifetime1);
+            TriangleRasterizer.a(var14Lifetime3, var16, field_eb[3], var11Lifetime3, var13Lifetime3, field_n[3], field_fb[0], field_fb[2], field_fb[3], field_X[var17Lifetime1], field_X[var18Lifetime1], field_X[var19Lifetime1], field_Q[var17Lifetime1], field_Q[var18Lifetime1], field_Q[var19Lifetime1], field_O[var17Lifetime1], field_O[var18Lifetime1], field_O[var19Lifetime1], var20Lifetime1Lifetime1);
           } else {
-            tm.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_Z[param0], this.field_Z[param0], this.field_Z[param0], field_X[var17Lifetime1], field_X[var18Lifetime1], field_X[var19Lifetime1], field_Q[var17Lifetime1], field_Q[var18Lifetime1], field_Q[var19Lifetime1], field_O[var17Lifetime1], field_O[var18Lifetime1], field_O[var19Lifetime1], var20Lifetime1Lifetime1);
-            tm.a(var14Lifetime3, var16, field_eb[3], var11Lifetime3, var13Lifetime3, field_n[3], this.field_Z[param0], this.field_Z[param0], this.field_Z[param0], field_X[var17Lifetime1], field_X[var18Lifetime1], field_X[var19Lifetime1], field_Q[var17Lifetime1], field_Q[var18Lifetime1], field_Q[var19Lifetime1], field_O[var17Lifetime1], field_O[var18Lifetime1], field_O[var19Lifetime1], var20Lifetime1Lifetime1);
+            TriangleRasterizer.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, this.field_Z[param0], this.field_Z[param0], this.field_Z[param0], field_X[var17Lifetime1], field_X[var18Lifetime1], field_X[var19Lifetime1], field_Q[var17Lifetime1], field_Q[var18Lifetime1], field_Q[var19Lifetime1], field_O[var17Lifetime1], field_O[var18Lifetime1], field_O[var19Lifetime1], var20Lifetime1Lifetime1);
+            TriangleRasterizer.a(var14Lifetime3, var16, field_eb[3], var11Lifetime3, var13Lifetime3, field_n[3], this.field_Z[param0], this.field_Z[param0], this.field_Z[param0], field_X[var17Lifetime1], field_X[var18Lifetime1], field_X[var19Lifetime1], field_Q[var17Lifetime1], field_Q[var18Lifetime1], field_Q[var19Lifetime1], field_O[var17Lifetime1], field_O[var18Lifetime1], field_O[var19Lifetime1], var20Lifetime1Lifetime1);
           }
         } else {
           if (this.field_R[param0] != -1) {
-            tm.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_fb[0], field_fb[1], field_fb[2]);
-            tm.a(var14Lifetime3, var16, field_eb[3], var11Lifetime3, var13Lifetime3, field_n[3], field_fb[0], field_fb[2], field_fb[3]);
+            TriangleRasterizer.drawShadedTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, field_fb[0], field_fb[1], field_fb[2]);
+            TriangleRasterizer.drawShadedTriangle(var14Lifetime3, var16, field_eb[3], var11Lifetime3, var13Lifetime3, field_n[3], field_fb[0], field_fb[2], field_fb[3]);
           } else {
-            var17Lifetime1 = tm.field_h[this.field_Z[param0] & 65535];
-            tm.a(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, var17Lifetime1);
-            tm.a(var14Lifetime3, var16, field_eb[3], var11Lifetime3, var13Lifetime3, field_n[3], var17Lifetime1);
+            var17Lifetime1 = TriangleRasterizer.colorPalette[this.field_Z[param0] & 65535];
+            TriangleRasterizer.drawFlatTriangle(var14Lifetime3, var15, var16, var11Lifetime3, var12Lifetime3, var13Lifetime3, var17Lifetime1);
+            TriangleRasterizer.drawFlatTriangle(var14Lifetime3, var16, field_eb[3], var11Lifetime3, var13Lifetime3, field_n[3], var17Lifetime1);
           }
         }
     }
@@ -395,9 +395,9 @@ final class ModelMesh extends ModelMeshBase {
         if (this.vertexGroups == null) {
           return false;
         }
-        field_v = 0;
-        field_mb = 0;
-        field_cb = 0;
+        animationPivotX = 0;
+        animationPivotY = 0;
+        animationPivotZ = 0;
         return true;
     }
 
@@ -408,7 +408,7 @@ final class ModelMesh extends ModelMeshBase {
           this.verticesY[var4] = this.verticesY[var4] * scaleY / 128;
           this.verticesZ[var4] = this.verticesZ[var4] * scaleZ / 128;
         }
-        this.field_k = false;
+        this.boundsValid = false;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -430,11 +430,11 @@ final class ModelMesh extends ModelMeshBase {
         var2 = this.faceVertexA[param0];
         var3 = this.faceVertexB[param0];
         var4 = this.faceVertexC[param0];
-        tm.field_a = field_s[param0];
-        if (this.field_H != null) {
-          tm.field_f = this.field_H[param0] & 255;
+        TriangleRasterizer.clipHorizontalSpans = field_s[param0];
+        if (this.faceAlpha != null) {
+          TriangleRasterizer.blendAlpha = this.faceAlpha[param0] & 255;
         } else {
-          tm.field_f = 0;
+          TriangleRasterizer.blendAlpha = 0;
         }
         if (this.field_ab != null &&
           this.field_ab[param0] != -1) {
@@ -450,15 +450,15 @@ final class ModelMesh extends ModelMeshBase {
             var7 = var4;
           }
           if (this.field_R[param0] != -1) {
-            tm.a(field_V[var2], field_V[var3], field_V[var4], field_B[var2], field_B[var3], field_B[var4], this.field_Z[param0], this.field_t[param0], this.field_R[param0], field_X[var5], field_X[var6], field_X[var7], field_Q[var5], field_Q[var6], field_Q[var7], field_O[var5], field_O[var6], field_O[var7], (int) this.field_ab[param0]);
+            TriangleRasterizer.a(field_V[var2], field_V[var3], field_V[var4], field_B[var2], field_B[var3], field_B[var4], this.field_Z[param0], this.field_t[param0], this.field_R[param0], field_X[var5], field_X[var6], field_X[var7], field_Q[var5], field_Q[var6], field_Q[var7], field_O[var5], field_O[var6], field_O[var7], (int) this.field_ab[param0]);
           } else {
-            tm.a(field_V[var2], field_V[var3], field_V[var4], field_B[var2], field_B[var3], field_B[var4], this.field_Z[param0], this.field_Z[param0], this.field_Z[param0], field_X[var5], field_X[var6], field_X[var7], field_Q[var5], field_Q[var6], field_Q[var7], field_O[var5], field_O[var6], field_O[var7], (int) this.field_ab[param0]);
+            TriangleRasterizer.a(field_V[var2], field_V[var3], field_V[var4], field_B[var2], field_B[var3], field_B[var4], this.field_Z[param0], this.field_Z[param0], this.field_Z[param0], field_X[var5], field_X[var6], field_X[var7], field_Q[var5], field_Q[var6], field_Q[var7], field_O[var5], field_O[var6], field_O[var7], (int) this.field_ab[param0]);
           }
         } else {
           if (this.field_R[param0] != -1) {
-            tm.a(field_V[var2], field_V[var3], field_V[var4], field_B[var2], field_B[var3], field_B[var4], this.field_Z[param0] & 65535, this.field_t[param0] & 65535, this.field_R[param0] & 65535);
+            TriangleRasterizer.drawShadedTriangle(field_V[var2], field_V[var3], field_V[var4], field_B[var2], field_B[var3], field_B[var4], this.field_Z[param0] & 65535, this.field_t[param0] & 65535, this.field_R[param0] & 65535);
           } else {
-            tm.a(field_V[var2], field_V[var3], field_V[var4], field_B[var2], field_B[var3], field_B[var4], tm.field_h[this.field_Z[param0] & 65535]);
+            TriangleRasterizer.drawFlatTriangle(field_V[var2], field_V[var3], field_V[var4], field_B[var2], field_B[var3], field_B[var4], TriangleRasterizer.colorPalette[this.field_Z[param0] & 65535]);
           }
         }
     }
@@ -494,18 +494,18 @@ final class ModelMesh extends ModelMeshBase {
           param2.verticesZ[var9] = this.verticesZ[var9];
         }
         if (!param0) {
-          param2.field_H = param3;
-          if (this.field_H != null) {
+          param2.faceAlpha = param3;
+          if (this.faceAlpha != null) {
             for (var9Lifetime1 = 0; var9Lifetime1 < this.faceCount; var9Lifetime1++) {
-              param2.field_H[var9Lifetime1] = this.field_H[var9Lifetime1];
+              param2.faceAlpha[var9Lifetime1] = this.faceAlpha[var9Lifetime1];
             }
           } else {
             for (var9Lifetime1 = 0; var9Lifetime1 < this.faceCount; var9Lifetime1++) {
-              param2.field_H[var9Lifetime1] = (byte) 0;
+              param2.faceAlpha[var9Lifetime1] = (byte) 0;
             }
           }
         } else {
-          param2.field_H = this.field_H;
+          param2.faceAlpha = this.faceAlpha;
         }
         if (!param1) {
           param2.faceColors = param4;
@@ -535,154 +535,154 @@ final class ModelMesh extends ModelMeshBase {
         param2.textureVertexC = this.textureVertexC;
         param2.vertexGroups = this.vertexGroups;
         param2.faceGroups = this.faceGroups;
-        param2.field_e = this.field_e;
-        param2.field_g = this.field_g;
-        param2.field_k = false;
+        param2.vertexTransformMasks = this.vertexTransformMasks;
+        param2.faceTransformMasks = this.faceTransformMasks;
+        param2.boundsValid = false;
         return (ModelMeshBase) ((Object) param2);
     }
 
     final void applyGroupTransform(int transformType, int[] groups, int x, int y, int z, boolean transformOption) {
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        int var16;
-        int[] var35;
-        int[] var36;
-        int[] var37;
-        int[] var38;
-        int[] var39;
-        int[] var40;
-        int var8Lifetime1;
-        int var8Lifetime2;
-        int var8Lifetime3;
-        int var8Lifetime4;
-        int var9Lifetime1;
-        int var9Lifetime2;
-        int var9Lifetime3;
-        int var9Lifetime4;
-        int var11Lifetime1;
-        int var11Lifetime2;
-        int var11Lifetime3;
-        int var12Lifetime1;
-        int var12Lifetime2;
-        int var12Lifetime3;
-        int var12Lifetime4;
-        int var13Lifetime1;
-        int var13Lifetime2;
-        int var14Lifetime1;
-        int var15Lifetime1;
-        int var14Lifetime2;
-        int var14Lifetime3;
-        int var15Lifetime2;
-        int var15Lifetime3;
-        int var13Lifetime1Lifetime1;
-        int var13Lifetime1Lifetime2;
-        var7 = groups.length;
+        int groupCount;
+        int pivotVertexCount;
+        int pivotGroupOrdinal;
+        int pivotGroupId;
+        int translationVertexOrdinal;
+        int pivotVertexOrdinal;
+        int pivotVertexIndex;
+        int cosZ;
+        int rotatedXAfterZ;
+        int lightness;
+        int[] pivotVertices;
+        int[] translatedVertices;
+        int[] rotatedVertices;
+        int[] scaledVertices;
+        int[] alphaFaces;
+        int[] colorFaces;
+        int translationGroupOrdinal;
+        int rotationGroupOrdinal;
+        int scaleGroupOrdinal;
+        int faceGroupOrdinal;
+        int translationGroupId;
+        int rotationGroupId;
+        int scaleGroupId;
+        int faceGroupId;
+        int rotationVertexOrdinal;
+        int scaleVertexOrdinal;
+        int faceOrdinal;
+        int translationVertexIndex;
+        int rotationVertexIndex;
+        int scaleVertexIndex;
+        int faceIndex;
+        int sinZ;
+        int packedColorOrAlpha;
+        int hue;
+        int saturation;
+        int cosX;
+        int cosY;
+        int rotatedYAfterX;
+        int rotatedXAfterY;
+        int sinX;
+        int sinY;
+        groupCount = groups.length;
         if (transformType == 0) {
-          var8 = 0;
-          field_v = 0;
-          field_mb = 0;
-          field_cb = 0;
-          for (var9 = 0; var9 < var7; var9++) {
-            var10 = groups[var9];
-            if (var10 < this.vertexGroups.length) {
-              var35 = this.vertexGroups[var10];
-              for (var12 = 0; var12 < var35.length; var12++) {
-                var13 = var35[var12];
-                field_v = field_v + this.verticesX[var13];
-                field_mb = field_mb + this.verticesY[var13];
-                field_cb = field_cb + this.verticesZ[var13];
-                var8++;
+          pivotVertexCount = 0;
+          animationPivotX = 0;
+          animationPivotY = 0;
+          animationPivotZ = 0;
+          for (pivotGroupOrdinal = 0; pivotGroupOrdinal < groupCount; pivotGroupOrdinal++) {
+            pivotGroupId = groups[pivotGroupOrdinal];
+            if (pivotGroupId < this.vertexGroups.length) {
+              pivotVertices = this.vertexGroups[pivotGroupId];
+              for (pivotVertexOrdinal = 0; pivotVertexOrdinal < pivotVertices.length; pivotVertexOrdinal++) {
+                pivotVertexIndex = pivotVertices[pivotVertexOrdinal];
+                animationPivotX = animationPivotX + this.verticesX[pivotVertexIndex];
+                animationPivotY = animationPivotY + this.verticesY[pivotVertexIndex];
+                animationPivotZ = animationPivotZ + this.verticesZ[pivotVertexIndex];
+                pivotVertexCount++;
               }
             }
           }
-          if (var8 <= 0) {
-            field_v = x;
-            field_mb = y;
-            field_cb = z;
+          if (pivotVertexCount <= 0) {
+            animationPivotX = x;
+            animationPivotY = y;
+            animationPivotZ = z;
           } else {
-            field_v = field_v / var8 + x;
-            field_mb = field_mb / var8 + y;
-            field_cb = field_cb / var8 + z;
+            animationPivotX = animationPivotX / pivotVertexCount + x;
+            animationPivotY = animationPivotY / pivotVertexCount + y;
+            animationPivotZ = animationPivotZ / pivotVertexCount + z;
           }
           return;
         }
         if (transformType == 1) {
-          for (var8Lifetime1 = 0; var8Lifetime1 < var7; var8Lifetime1++) {
-            var9Lifetime1 = groups[var8Lifetime1];
-            if (var9Lifetime1 < this.vertexGroups.length) {
-              var36 = this.vertexGroups[var9Lifetime1];
-              for (var11 = 0; var11 < var36.length; var11++) {
-                var12Lifetime1 = var36[var11];
-                this.verticesX[var12Lifetime1] = this.verticesX[var12Lifetime1] + x;
-                this.verticesY[var12Lifetime1] = this.verticesY[var12Lifetime1] + y;
-                this.verticesZ[var12Lifetime1] = this.verticesZ[var12Lifetime1] + z;
+          for (translationGroupOrdinal = 0; translationGroupOrdinal < groupCount; translationGroupOrdinal++) {
+            translationGroupId = groups[translationGroupOrdinal];
+            if (translationGroupId < this.vertexGroups.length) {
+              translatedVertices = this.vertexGroups[translationGroupId];
+              for (translationVertexOrdinal = 0; translationVertexOrdinal < translatedVertices.length; translationVertexOrdinal++) {
+                translationVertexIndex = translatedVertices[translationVertexOrdinal];
+                this.verticesX[translationVertexIndex] = this.verticesX[translationVertexIndex] + x;
+                this.verticesY[translationVertexIndex] = this.verticesY[translationVertexIndex] + y;
+                this.verticesZ[translationVertexIndex] = this.verticesZ[translationVertexIndex] + z;
               }
             }
           }
           return;
         }
         if (transformType == 2) {
-          for (var8Lifetime2 = 0; var8Lifetime2 < var7; var8Lifetime2++) {
-            var9Lifetime2 = groups[var8Lifetime2];
-            if (var9Lifetime2 < this.vertexGroups.length) {
-              var37 = this.vertexGroups[var9Lifetime2];
-              for (var11Lifetime1 = 0; var11Lifetime1 < var37.length; var11Lifetime1++) {
-                var12Lifetime2 = var37[var11Lifetime1];
-                this.verticesX[var12Lifetime2] = this.verticesX[var12Lifetime2] - field_v;
-                this.verticesY[var12Lifetime2] = this.verticesY[var12Lifetime2] - field_mb;
-                this.verticesZ[var12Lifetime2] = this.verticesZ[var12Lifetime2] - field_cb;
+          for (rotationGroupOrdinal = 0; rotationGroupOrdinal < groupCount; rotationGroupOrdinal++) {
+            rotationGroupId = groups[rotationGroupOrdinal];
+            if (rotationGroupId < this.vertexGroups.length) {
+              rotatedVertices = this.vertexGroups[rotationGroupId];
+              for (rotationVertexOrdinal = 0; rotationVertexOrdinal < rotatedVertices.length; rotationVertexOrdinal++) {
+                rotationVertexIndex = rotatedVertices[rotationVertexOrdinal];
+                this.verticesX[rotationVertexIndex] = this.verticesX[rotationVertexIndex] - animationPivotX;
+                this.verticesY[rotationVertexIndex] = this.verticesY[rotationVertexIndex] - animationPivotY;
+                this.verticesZ[rotationVertexIndex] = this.verticesZ[rotationVertexIndex] - animationPivotZ;
                 if (z != 0) {
-                  var13Lifetime1 = tm.field_n[z];
-                  var14 = tm.field_e[z];
-                  var15 = this.verticesY[var12Lifetime2] * var13Lifetime1 + this.verticesX[var12Lifetime2] * var14 + 32767 >> 16;
-                  this.verticesY[var12Lifetime2] = this.verticesY[var12Lifetime2] * var14 - this.verticesX[var12Lifetime2] * var13Lifetime1 + 32767 >> 16;
-                  this.verticesX[var12Lifetime2] = var15;
+                  sinZ = TriangleRasterizer.sineTable[z];
+                  cosZ = TriangleRasterizer.cosineTable[z];
+                  rotatedXAfterZ = this.verticesY[rotationVertexIndex] * sinZ + this.verticesX[rotationVertexIndex] * cosZ + 32767 >> 16;
+                  this.verticesY[rotationVertexIndex] = this.verticesY[rotationVertexIndex] * cosZ - this.verticesX[rotationVertexIndex] * sinZ + 32767 >> 16;
+                  this.verticesX[rotationVertexIndex] = rotatedXAfterZ;
                 }
                 if (x != 0) {
-                  var13Lifetime1Lifetime1 = tm.field_n[x];
-                  var14Lifetime2 = tm.field_e[x];
-                  var15Lifetime2 = this.verticesY[var12Lifetime2] * var14Lifetime2 - this.verticesZ[var12Lifetime2] * var13Lifetime1Lifetime1 + 32767 >> 16;
-                  this.verticesZ[var12Lifetime2] = this.verticesY[var12Lifetime2] * var13Lifetime1Lifetime1 + this.verticesZ[var12Lifetime2] * var14Lifetime2 + 32767 >> 16;
-                  this.verticesY[var12Lifetime2] = var15Lifetime2;
+                  sinX = TriangleRasterizer.sineTable[x];
+                  cosX = TriangleRasterizer.cosineTable[x];
+                  rotatedYAfterX = this.verticesY[rotationVertexIndex] * cosX - this.verticesZ[rotationVertexIndex] * sinX + 32767 >> 16;
+                  this.verticesZ[rotationVertexIndex] = this.verticesY[rotationVertexIndex] * sinX + this.verticesZ[rotationVertexIndex] * cosX + 32767 >> 16;
+                  this.verticesY[rotationVertexIndex] = rotatedYAfterX;
                 }
                 if (y != 0) {
-                  var13Lifetime1Lifetime2 = tm.field_n[y];
-                  var14Lifetime3 = tm.field_e[y];
-                  var15Lifetime3 = this.verticesZ[var12Lifetime2] * var13Lifetime1Lifetime2 + this.verticesX[var12Lifetime2] * var14Lifetime3 + 32767 >> 16;
-                  this.verticesZ[var12Lifetime2] = this.verticesZ[var12Lifetime2] * var14Lifetime3 - this.verticesX[var12Lifetime2] * var13Lifetime1Lifetime2 + 32767 >> 16;
-                  this.verticesX[var12Lifetime2] = var15Lifetime3;
+                  sinY = TriangleRasterizer.sineTable[y];
+                  cosY = TriangleRasterizer.cosineTable[y];
+                  rotatedXAfterY = this.verticesZ[rotationVertexIndex] * sinY + this.verticesX[rotationVertexIndex] * cosY + 32767 >> 16;
+                  this.verticesZ[rotationVertexIndex] = this.verticesZ[rotationVertexIndex] * cosY - this.verticesX[rotationVertexIndex] * sinY + 32767 >> 16;
+                  this.verticesX[rotationVertexIndex] = rotatedXAfterY;
                 }
-                this.verticesX[var12Lifetime2] = this.verticesX[var12Lifetime2] + field_v;
-                this.verticesY[var12Lifetime2] = this.verticesY[var12Lifetime2] + field_mb;
-                this.verticesZ[var12Lifetime2] = this.verticesZ[var12Lifetime2] + field_cb;
+                this.verticesX[rotationVertexIndex] = this.verticesX[rotationVertexIndex] + animationPivotX;
+                this.verticesY[rotationVertexIndex] = this.verticesY[rotationVertexIndex] + animationPivotY;
+                this.verticesZ[rotationVertexIndex] = this.verticesZ[rotationVertexIndex] + animationPivotZ;
               }
             }
           }
           return;
         }
         if (transformType == 3) {
-          for (var8Lifetime3 = 0; var8Lifetime3 < var7; var8Lifetime3++) {
-            var9Lifetime3 = groups[var8Lifetime3];
-            if (var9Lifetime3 < this.vertexGroups.length) {
-              var38 = this.vertexGroups[var9Lifetime3];
-              for (var11Lifetime2 = 0; var11Lifetime2 < var38.length; var11Lifetime2++) {
-                var12Lifetime3 = var38[var11Lifetime2];
-                this.verticesX[var12Lifetime3] = this.verticesX[var12Lifetime3] - field_v;
-                this.verticesY[var12Lifetime3] = this.verticesY[var12Lifetime3] - field_mb;
-                this.verticesZ[var12Lifetime3] = this.verticesZ[var12Lifetime3] - field_cb;
-                this.verticesX[var12Lifetime3] = this.verticesX[var12Lifetime3] * x / 128;
-                this.verticesY[var12Lifetime3] = this.verticesY[var12Lifetime3] * y / 128;
-                this.verticesZ[var12Lifetime3] = this.verticesZ[var12Lifetime3] * z / 128;
-                this.verticesX[var12Lifetime3] = this.verticesX[var12Lifetime3] + field_v;
-                this.verticesY[var12Lifetime3] = this.verticesY[var12Lifetime3] + field_mb;
-                this.verticesZ[var12Lifetime3] = this.verticesZ[var12Lifetime3] + field_cb;
+          for (scaleGroupOrdinal = 0; scaleGroupOrdinal < groupCount; scaleGroupOrdinal++) {
+            scaleGroupId = groups[scaleGroupOrdinal];
+            if (scaleGroupId < this.vertexGroups.length) {
+              scaledVertices = this.vertexGroups[scaleGroupId];
+              for (scaleVertexOrdinal = 0; scaleVertexOrdinal < scaledVertices.length; scaleVertexOrdinal++) {
+                scaleVertexIndex = scaledVertices[scaleVertexOrdinal];
+                this.verticesX[scaleVertexIndex] = this.verticesX[scaleVertexIndex] - animationPivotX;
+                this.verticesY[scaleVertexIndex] = this.verticesY[scaleVertexIndex] - animationPivotY;
+                this.verticesZ[scaleVertexIndex] = this.verticesZ[scaleVertexIndex] - animationPivotZ;
+                this.verticesX[scaleVertexIndex] = this.verticesX[scaleVertexIndex] * x / 128;
+                this.verticesY[scaleVertexIndex] = this.verticesY[scaleVertexIndex] * y / 128;
+                this.verticesZ[scaleVertexIndex] = this.verticesZ[scaleVertexIndex] * z / 128;
+                this.verticesX[scaleVertexIndex] = this.verticesX[scaleVertexIndex] + animationPivotX;
+                this.verticesY[scaleVertexIndex] = this.verticesY[scaleVertexIndex] + animationPivotY;
+                this.verticesZ[scaleVertexIndex] = this.verticesZ[scaleVertexIndex] + animationPivotZ;
               }
             }
           }
@@ -693,58 +693,58 @@ final class ModelMesh extends ModelMeshBase {
             return;
           }
           if (this.faceGroups != null) {
-            for (var8Lifetime4 = 0; var8Lifetime4 < var7; var8Lifetime4++) {
-              var9Lifetime4 = groups[var8Lifetime4];
-              if (var9Lifetime4 < this.faceGroups.length) {
-                var40 = this.faceGroups[var9Lifetime4];
-                for (var11Lifetime3 = 0; var11Lifetime3 < var40.length; var11Lifetime3++) {
-                  var12Lifetime4 = var40[var11Lifetime3];
-                  var13Lifetime2 = this.faceColors[var12Lifetime4] & 65535;
-                  var14Lifetime1 = var13Lifetime2 >> 10 & 63;
-                  var15Lifetime1 = var13Lifetime2 >> 7 & 7;
-                  var16 = var13Lifetime2 & 127;
-                  var14Lifetime1 = var14Lifetime1 + x & 63;
-                  var15Lifetime1 = var15Lifetime1 + y;
-                  if (var15Lifetime1 >= 0) {
-                    if (var15Lifetime1 > 7) {
-                      var15Lifetime1 = 7;
+            for (faceGroupOrdinal = 0; faceGroupOrdinal < groupCount; faceGroupOrdinal++) {
+              faceGroupId = groups[faceGroupOrdinal];
+              if (faceGroupId < this.faceGroups.length) {
+                colorFaces = this.faceGroups[faceGroupId];
+                for (faceOrdinal = 0; faceOrdinal < colorFaces.length; faceOrdinal++) {
+                  faceIndex = colorFaces[faceOrdinal];
+                  packedColorOrAlpha = this.faceColors[faceIndex] & 65535;
+                  hue = packedColorOrAlpha >> 10 & 63;
+                  saturation = packedColorOrAlpha >> 7 & 7;
+                  lightness = packedColorOrAlpha & 127;
+                  hue = hue + x & 63;
+                  saturation = saturation + y;
+                  if (saturation >= 0) {
+                    if (saturation > 7) {
+                      saturation = 7;
                     }
                   } else {
-                    var15Lifetime1 = 0;
+                    saturation = 0;
                   }
-                  var16 = var16 + z;
-                  if (var16 >= 0) {
-                    if (var16 > 127) {
-                      var16 = 127;
+                  lightness = lightness + z;
+                  if (lightness >= 0) {
+                    if (lightness > 127) {
+                      lightness = 127;
                     }
                   } else {
-                    var16 = 0;
+                    lightness = 0;
                   }
-                  this.faceColors[var12Lifetime4] = (short)(var14Lifetime1 << 10 | var15Lifetime1 << 7 | var16);
+                  this.faceColors[faceIndex] = (short)(hue << 10 | saturation << 7 | lightness);
                 }
-                this.field_db = true;
+                this.faceColorsDirty = true;
               }
             }
             return;
           }
         } else {
           if (this.faceGroups != null) {
-            if (this.field_H != null) {
-              for (var8Lifetime4 = 0; var8Lifetime4 < var7; var8Lifetime4++) {
-                var9Lifetime4 = groups[var8Lifetime4];
-                if (var9Lifetime4 < this.faceGroups.length) {
-                  var39 = this.faceGroups[var9Lifetime4];
-                  for (var11Lifetime3 = 0; var11Lifetime3 < var39.length; var11Lifetime3++) {
-                    var12Lifetime4 = var39[var11Lifetime3];
-                    var13Lifetime2 = (this.field_H[var12Lifetime4] & 255) + x * 8;
-                    if (var13Lifetime2 >= 0) {
-                      if (var13Lifetime2 > 255) {
-                        var13Lifetime2 = 255;
+            if (this.faceAlpha != null) {
+              for (faceGroupOrdinal = 0; faceGroupOrdinal < groupCount; faceGroupOrdinal++) {
+                faceGroupId = groups[faceGroupOrdinal];
+                if (faceGroupId < this.faceGroups.length) {
+                  alphaFaces = this.faceGroups[faceGroupId];
+                  for (faceOrdinal = 0; faceOrdinal < alphaFaces.length; faceOrdinal++) {
+                    faceIndex = alphaFaces[faceOrdinal];
+                    packedColorOrAlpha = (this.faceAlpha[faceIndex] & 255) + x * 8;
+                    if (packedColorOrAlpha >= 0) {
+                      if (packedColorOrAlpha > 255) {
+                        packedColorOrAlpha = 255;
                       }
                     } else {
-                      var13Lifetime2 = 0;
+                      packedColorOrAlpha = 0;
                     }
-                    this.field_H[var12Lifetime4] = (byte)var13Lifetime2;
+                    this.faceAlpha[faceIndex] = (byte)packedColorOrAlpha;
                   }
                 }
               }
@@ -755,7 +755,7 @@ final class ModelMesh extends ModelMeshBase {
         }
     }
 
-    private final void d() {
+    private final void calculateBounds() {
         int var9 = 0;
         int var1;
         int var2;
@@ -809,8 +809,8 @@ final class ModelMesh extends ModelMeshBase {
           }
         }
         Math.sqrt((double)var7);
-        this.field_A = (short)(int)(Math.sqrt((double)var8) + 0.99);
-        this.field_k = true;
+        this.boundingRadius = (short)(int)(Math.sqrt((double)var8) + 0.99);
+        this.boundsValid = true;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, long param7) {
@@ -835,19 +835,19 @@ final class ModelMesh extends ModelMeshBase {
         int var25Lifetime2;
         int var25Lifetime3;
         try {
-          if (!this.field_k) {
-            this.d();
+          if (!this.boundsValid) {
+            this.calculateBounds();
           }
-          var10_int = tm.field_c;
-          var11 = tm.field_j;
-          var12 = tm.field_n[param0];
-          var13 = tm.field_e[param0];
-          var14 = tm.field_n[param1];
-          var15 = tm.field_e[param1];
-          var16 = tm.field_n[param2];
-          var17 = tm.field_e[param2];
-          var18 = tm.field_n[param3];
-          var19 = tm.field_e[param3];
+          var10_int = TriangleRasterizer.projectionCenterX;
+          var11 = TriangleRasterizer.projectionCenterY;
+          var12 = TriangleRasterizer.sineTable[param0];
+          var13 = TriangleRasterizer.cosineTable[param0];
+          var14 = TriangleRasterizer.sineTable[param1];
+          var15 = TriangleRasterizer.cosineTable[param1];
+          var16 = TriangleRasterizer.sineTable[param2];
+          var17 = TriangleRasterizer.cosineTable[param2];
+          var18 = TriangleRasterizer.sineTable[param3];
+          var19 = TriangleRasterizer.cosineTable[param3];
           var20 = param5 * var18 + param6 * var19 >> 16;
           for (var21 = 0; var21 < this.vertexCount; var21++) {
             var22 = this.verticesX[var21];
@@ -883,7 +883,7 @@ final class ModelMesh extends ModelMeshBase {
               field_O[var21] = var24;
             }
           }
-          this.a(false, param7 >= 0L ? true : false, param7, (int) this.field_A, this.field_A << 1);
+          this.a(false, param7 >= 0L ? true : false, param7, (int) this.boundingRadius, this.boundingRadius << 1);
         } catch (RuntimeException runtimeException) {
         }
     }
@@ -1043,7 +1043,7 @@ final class ModelMesh extends ModelMeshBase {
                 break regionExit1;
               }
               if (param1 &&
-                this.a(ot.field_G + tm.field_c, vl.field_j + tm.field_j, field_V[var9], field_V[var10], field_V[var11], var12, var13, var14_int)) {
+                this.a(ot.field_G + TriangleRasterizer.projectionCenterX, vl.field_j + TriangleRasterizer.projectionCenterY, field_V[var9], field_V[var10], field_V[var11], var12, var13, var14_int)) {
                 fieldTemp$13 = ws.field_O;
                 ws.field_O = ws.field_O + 1;
                 MoveAttackRequest.field_I[fieldTemp$13] = param2;
@@ -1054,9 +1054,9 @@ final class ModelMesh extends ModelMeshBase {
                 if (var12 >= 0 &&
                   var13 >= 0 &&
                   var14_int >= 0 &&
-                  var12 <= tm.field_l &&
-                  var13 <= tm.field_l &&
-                  var14_int <= tm.field_l) {
+                  var12 <= TriangleRasterizer.clipWidth &&
+                  var13 <= TriangleRasterizer.clipWidth &&
+                  var14_int <= TriangleRasterizer.clipWidth) {
                   field_s[var8Lifetime1] = false;
                 } else {
                   field_s[var8Lifetime1] = true;
@@ -1358,13 +1358,13 @@ final class ModelMesh extends ModelMeshBase {
     final void applyMaskedGroupTransform(int transformType, int[] groups, int x, int y, int z, boolean transformOption, int transformMask, int[] transformMatrix) {
         int var35_int = 0;
         int var42 = 0;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
+        int groupCount;
+        int pivotVertexCount;
+        int pivotGroupOrdinal;
+        int pivotGroupId;
+        int translationVertexOrdinal;
+        int pivotVertexOrdinal;
+        int pivotVertexIndex;
         int var16;
         int[] var16_ref_int__;
         int var17;
@@ -1394,7 +1394,7 @@ final class ModelMesh extends ModelMeshBase {
         int var38;
         int var39;
         int var40;
-        int var43;
+        int matrixRotationVertexIndex;
         int var44;
         int var45;
         int var46;
@@ -1405,81 +1405,81 @@ final class ModelMesh extends ModelMeshBase {
         int[] var61;
         int[] var63;
         int[] var66;
-        int[] var78;
-        int[] var79;
-        int[] var80;
-        int[] var81;
-        int[] var82;
-        int[] var83;
-        int[] var84;
-        int[] var85;
-        int var10Lifetime1;
-        int var10Lifetime2;
-        int var11Lifetime1;
-        int var11Lifetime2;
-        int var12Lifetime1;
-        int var12Lifetime2;
+        int[] pivotVertices;
+        int[] translatedVertices;
+        int[] matrixRotationVertices;
+        int[] rotatedVertices;
+        int[] matrixScaleVertices;
+        int[] scaledVertices;
+        int[] alphaFaces;
+        int[] colorFaces;
+        int transformedTranslationX;
+        int groupOrdinalOrBasisOffsetX;
+        int transformedTranslationY;
+        int groupIdOrBasisOffsetY;
+        int transformedTranslationZ;
+        int basisOffsetZ;
         int var13Lifetime1;
-        int var14Lifetime1;
+        int translationVertexIndex;
         int var14Lifetime2;
         int var15Lifetime1;
         int var31Lifetime1;
-        int var10Lifetime1Lifetime1;
-        int var11Lifetime1Lifetime1;
-        var9 = groups.length;
+        int translationGroupOrdinal;
+        int translationGroupId;
+        groupCount = groups.length;
         if (transformType == 0) {
-          var10 = 0;
-          field_v = 0;
-          field_mb = 0;
-          field_cb = 0;
-          for (var11 = 0; var11 < var9; var11++) {
-            var12 = groups[var11];
-            if (var12 < this.vertexGroups.length) {
-              var78 = this.vertexGroups[var12];
-              for (var14 = 0; var14 < var78.length; var14++) {
-                var15 = var78[var14];
-                if (this.field_e == null ||
-                  (transformMask & this.field_e[var15]) != 0) {
-                  field_v = field_v + this.verticesX[var15];
-                  field_mb = field_mb + this.verticesY[var15];
-                  field_cb = field_cb + this.verticesZ[var15];
-                  var10++;
+          pivotVertexCount = 0;
+          animationPivotX = 0;
+          animationPivotY = 0;
+          animationPivotZ = 0;
+          for (pivotGroupOrdinal = 0; pivotGroupOrdinal < groupCount; pivotGroupOrdinal++) {
+            pivotGroupId = groups[pivotGroupOrdinal];
+            if (pivotGroupId < this.vertexGroups.length) {
+              pivotVertices = this.vertexGroups[pivotGroupId];
+              for (pivotVertexOrdinal = 0; pivotVertexOrdinal < pivotVertices.length; pivotVertexOrdinal++) {
+                pivotVertexIndex = pivotVertices[pivotVertexOrdinal];
+                if (this.vertexTransformMasks == null ||
+                  (transformMask & this.vertexTransformMasks[pivotVertexIndex]) != 0) {
+                  animationPivotX = animationPivotX + this.verticesX[pivotVertexIndex];
+                  animationPivotY = animationPivotY + this.verticesY[pivotVertexIndex];
+                  animationPivotZ = animationPivotZ + this.verticesZ[pivotVertexIndex];
+                  pivotVertexCount++;
                 }
               }
             }
           }
-          if (var10 <= 0) {
-            field_v = x;
-            field_mb = y;
-            field_cb = z;
+          if (pivotVertexCount <= 0) {
+            animationPivotX = x;
+            animationPivotY = y;
+            animationPivotZ = z;
           } else {
-            field_v = field_v / var10 + x;
-            field_mb = field_mb / var10 + y;
-            field_cb = field_cb / var10 + z;
+            animationPivotX = animationPivotX / pivotVertexCount + x;
+            animationPivotY = animationPivotY / pivotVertexCount + y;
+            animationPivotZ = animationPivotZ / pivotVertexCount + z;
             field_y = true;
           }
           return;
         }
         if (transformType == 1) {
           if (transformMatrix != null) {
-            var10Lifetime1 = transformMatrix[0] * x + transformMatrix[1] * y + transformMatrix[2] * z + 16384 >> 15;
-            var11Lifetime1 = transformMatrix[3] * x + transformMatrix[4] * y + transformMatrix[5] * z + 16384 >> 15;
-            var12Lifetime1 = transformMatrix[6] * x + transformMatrix[7] * y + transformMatrix[8] * z + 16384 >> 15;
-            x = var10Lifetime1;
-            y = var11Lifetime1;
-            z = var12Lifetime1;
+            transformedTranslationX = transformMatrix[0] * x + transformMatrix[1] * y + transformMatrix[2] * z + 16384 >> 15;
+            transformedTranslationY = transformMatrix[3] * x + transformMatrix[4] * y + transformMatrix[5] * z + 16384 >> 15;
+            transformedTranslationZ = transformMatrix[6] * x + transformMatrix[7] * y + transformMatrix[8] * z + 16384 >> 15;
+            x = transformedTranslationX;
+            y = transformedTranslationY;
+            z = transformedTranslationZ;
           }
-          for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < var9; var10Lifetime1Lifetime1++) {
-            var11Lifetime1Lifetime1 = groups[var10Lifetime1Lifetime1];
-            if (var11Lifetime1Lifetime1 < this.vertexGroups.length) {
-              var79 = this.vertexGroups[var11Lifetime1Lifetime1];
-              for (var13 = 0; var13 < var79.length; var13++) {
-                var14Lifetime1 = var79[var13];
-                if (this.field_e == null ||
-                  (transformMask & this.field_e[var14Lifetime1]) != 0) {
-                  this.verticesX[var14Lifetime1] = this.verticesX[var14Lifetime1] + x;
-                  this.verticesY[var14Lifetime1] = this.verticesY[var14Lifetime1] + y;
-                  this.verticesZ[var14Lifetime1] = this.verticesZ[var14Lifetime1] + z;
+          for (translationGroupOrdinal = 0; translationGroupOrdinal < groupCount; translationGroupOrdinal++) {
+            translationGroupId = groups[translationGroupOrdinal];
+            if (translationGroupId < this.vertexGroups.length) {
+              translatedVertices = this.vertexGroups[translationGroupId];
+              for (translationVertexOrdinal = 0; translationVertexOrdinal < translatedVertices.length; translationVertexOrdinal++) {
+                translationVertexIndex = translatedVertices[translationVertexOrdinal];
+                if (this.vertexTransformMasks == null ||
+                  (transformMask & this.vertexTransformMasks[translationVertexIndex]) != 0) {
+                  this.verticesX[translationVertexIndex] = this.verticesX[translationVertexIndex] + x;
+                  this.verticesY[translationVertexIndex] = this.verticesY[translationVertexIndex] + y;
+                  this.verticesZ[translationVertexIndex] = this.verticesZ[translationVertexIndex] + z;
                 }
               }
             }
@@ -1488,74 +1488,74 @@ final class ModelMesh extends ModelMeshBase {
         }
         if (transformType == 2) {
           if (transformMatrix == null) {
-            for (var10Lifetime2 = 0; var10Lifetime2 < var9; var10Lifetime2++) {
-              var11Lifetime2 = groups[var10Lifetime2];
-              if (var11Lifetime2 < this.vertexGroups.length) {
-                var81 = this.vertexGroups[var11Lifetime2];
-                for (var13Lifetime1 = 0; var13Lifetime1 < var81.length; var13Lifetime1++) {
-                  var14Lifetime2 = var81[var13Lifetime1];
-                  if (this.field_e == null ||
-                    (transformMask & this.field_e[var14Lifetime2]) != 0) {
-                    this.verticesX[var14Lifetime2] = this.verticesX[var14Lifetime2] - field_v;
-                    this.verticesY[var14Lifetime2] = this.verticesY[var14Lifetime2] - field_mb;
-                    this.verticesZ[var14Lifetime2] = this.verticesZ[var14Lifetime2] - field_cb;
+            for (groupOrdinalOrBasisOffsetX = 0; groupOrdinalOrBasisOffsetX < groupCount; groupOrdinalOrBasisOffsetX++) {
+              groupIdOrBasisOffsetY = groups[groupOrdinalOrBasisOffsetX];
+              if (groupIdOrBasisOffsetY < this.vertexGroups.length) {
+                rotatedVertices = this.vertexGroups[groupIdOrBasisOffsetY];
+                for (var13Lifetime1 = 0; var13Lifetime1 < rotatedVertices.length; var13Lifetime1++) {
+                  var14Lifetime2 = rotatedVertices[var13Lifetime1];
+                  if (this.vertexTransformMasks == null ||
+                    (transformMask & this.vertexTransformMasks[var14Lifetime2]) != 0) {
+                    this.verticesX[var14Lifetime2] = this.verticesX[var14Lifetime2] - animationPivotX;
+                    this.verticesY[var14Lifetime2] = this.verticesY[var14Lifetime2] - animationPivotY;
+                    this.verticesZ[var14Lifetime2] = this.verticesZ[var14Lifetime2] - animationPivotZ;
                     if (z != 0) {
-                      var15Lifetime1 = tm.field_n[z];
-                      var16 = tm.field_e[z];
+                      var15Lifetime1 = TriangleRasterizer.sineTable[z];
+                      var16 = TriangleRasterizer.cosineTable[z];
                       var17 = this.verticesY[var14Lifetime2] * var15Lifetime1 + this.verticesX[var14Lifetime2] * var16 + 32767 >> 16;
                       this.verticesY[var14Lifetime2] = this.verticesY[var14Lifetime2] * var16 - this.verticesX[var14Lifetime2] * var15Lifetime1 + 32767 >> 16;
                       this.verticesX[var14Lifetime2] = var17;
                     }
                     if (x != 0) {
-                      var15Lifetime1 = tm.field_n[x];
-                      var16 = tm.field_e[x];
+                      var15Lifetime1 = TriangleRasterizer.sineTable[x];
+                      var16 = TriangleRasterizer.cosineTable[x];
                       var17 = this.verticesY[var14Lifetime2] * var16 - this.verticesZ[var14Lifetime2] * var15Lifetime1 + 32767 >> 16;
                       this.verticesZ[var14Lifetime2] = this.verticesY[var14Lifetime2] * var15Lifetime1 + this.verticesZ[var14Lifetime2] * var16 + 32767 >> 16;
                       this.verticesY[var14Lifetime2] = var17;
                     }
                     if (y != 0) {
-                      var15Lifetime1 = tm.field_n[y];
-                      var16 = tm.field_e[y];
+                      var15Lifetime1 = TriangleRasterizer.sineTable[y];
+                      var16 = TriangleRasterizer.cosineTable[y];
                       var17 = this.verticesZ[var14Lifetime2] * var15Lifetime1 + this.verticesX[var14Lifetime2] * var16 + 32767 >> 16;
                       this.verticesZ[var14Lifetime2] = this.verticesZ[var14Lifetime2] * var16 - this.verticesX[var14Lifetime2] * var15Lifetime1 + 32767 >> 16;
                       this.verticesX[var14Lifetime2] = var17;
                     }
-                    this.verticesX[var14Lifetime2] = this.verticesX[var14Lifetime2] + field_v;
-                    this.verticesY[var14Lifetime2] = this.verticesY[var14Lifetime2] + field_mb;
-                    this.verticesZ[var14Lifetime2] = this.verticesZ[var14Lifetime2] + field_cb;
+                    this.verticesX[var14Lifetime2] = this.verticesX[var14Lifetime2] + animationPivotX;
+                    this.verticesY[var14Lifetime2] = this.verticesY[var14Lifetime2] + animationPivotY;
+                    this.verticesZ[var14Lifetime2] = this.verticesZ[var14Lifetime2] + animationPivotZ;
                   }
                 }
               }
             }
             return;
           }
-          var10Lifetime2 = transformMatrix[9];
-          var11Lifetime2 = transformMatrix[10];
-          var12Lifetime2 = transformMatrix[11];
+          groupOrdinalOrBasisOffsetX = transformMatrix[9];
+          groupIdOrBasisOffsetY = transformMatrix[10];
+          basisOffsetZ = transformMatrix[11];
           var13Lifetime1 = transformMatrix[12];
           var14Lifetime2 = transformMatrix[13];
           var15Lifetime1 = transformMatrix[14];
           if (field_y) {
-            var16 = transformMatrix[0] * field_v + transformMatrix[3] * field_mb + transformMatrix[6] * field_cb + 16384 >> 15;
-            var17 = transformMatrix[1] * field_v + transformMatrix[4] * field_mb + transformMatrix[7] * field_cb + 16384 >> 15;
-            var18 = transformMatrix[2] * field_v + transformMatrix[5] * field_mb + transformMatrix[8] * field_cb + 16384 >> 15;
+            var16 = transformMatrix[0] * animationPivotX + transformMatrix[3] * animationPivotY + transformMatrix[6] * animationPivotZ + 16384 >> 15;
+            var17 = transformMatrix[1] * animationPivotX + transformMatrix[4] * animationPivotY + transformMatrix[7] * animationPivotZ + 16384 >> 15;
+            var18 = transformMatrix[2] * animationPivotX + transformMatrix[5] * animationPivotY + transformMatrix[8] * animationPivotZ + 16384 >> 15;
             var16 = var16 + var13Lifetime1;
             var17 = var17 + var14Lifetime2;
             var18 = var18 + var15Lifetime1;
-            field_v = var16;
-            field_mb = var17;
-            field_cb = var18;
+            animationPivotX = var16;
+            animationPivotY = var17;
+            animationPivotZ = var18;
             field_y = false;
           }
           var61 = new int[9];
           var50 = var61;
           var16_ref_int__ = var50;
-          var17 = tm.field_e[x] >> 1;
-          var18 = tm.field_n[x] >> 1;
-          var19 = tm.field_e[y] >> 1;
-          var20 = tm.field_n[y] >> 1;
-          var21 = tm.field_e[z] >> 1;
-          var22 = tm.field_n[z] >> 1;
+          var17 = TriangleRasterizer.cosineTable[x] >> 1;
+          var18 = TriangleRasterizer.sineTable[x] >> 1;
+          var19 = TriangleRasterizer.cosineTable[y] >> 1;
+          var20 = TriangleRasterizer.sineTable[y] >> 1;
+          var21 = TriangleRasterizer.cosineTable[z] >> 1;
+          var22 = TriangleRasterizer.sineTable[z] >> 1;
           var23 = var18 * var21 + 16384 >> 15;
           var24 = var18 * var22 + 16384 >> 15;
           var16_ref_int__[0] = var19 * var21 + var20 * var24 + 16384 >> 15;
@@ -1567,12 +1567,12 @@ final class ModelMesh extends ModelMeshBase {
           var16_ref_int__[6] = -var20 * var21 + var19 * var24 + 16384 >> 15;
           var16_ref_int__[7] = var20 * var22 + var19 * var23 + 16384 >> 15;
           var16_ref_int__[8] = var19 * var17 + 16384 >> 15;
-          var25_int = var61[0] * -field_v + var61[1] * -field_mb + var61[2] * -field_cb + 16384 >> 15;
-          var26 = var61[3] * -field_v + var61[4] * -field_mb + var61[5] * -field_cb + 16384 >> 15;
-          var27 = var61[6] * -field_v + var61[7] * -field_mb + var61[8] * -field_cb + 16384 >> 15;
-          var28 = var25_int + field_v;
-          var29_int = var26 + field_mb;
-          var30 = var27 + field_cb;
+          var25_int = var61[0] * -animationPivotX + var61[1] * -animationPivotY + var61[2] * -animationPivotZ + 16384 >> 15;
+          var26 = var61[3] * -animationPivotX + var61[4] * -animationPivotY + var61[5] * -animationPivotZ + 16384 >> 15;
+          var27 = var61[6] * -animationPivotX + var61[7] * -animationPivotY + var61[8] * -animationPivotZ + 16384 >> 15;
+          var28 = var25_int + animationPivotX;
+          var29_int = var26 + animationPivotY;
+          var30 = var27 + animationPivotZ;
           var31_ref_int__ = new int[9];
           for (var32 = 0; var32 < 3; var32++) {
             for (var33 = 0; var33 < 3; var33++) {
@@ -1605,26 +1605,26 @@ final class ModelMesh extends ModelMeshBase {
           var36 = transformMatrix[0] * var32 + transformMatrix[1] * var33 + transformMatrix[2] * var34 + 16384 >> 15;
           var37 = transformMatrix[3] * var32 + transformMatrix[4] * var33 + transformMatrix[5] * var34 + 16384 >> 15;
           var38 = transformMatrix[6] * var32 + transformMatrix[7] * var33 + transformMatrix[8] * var34 + 16384 >> 15;
-          var36 = var36 + var10Lifetime2;
-          var37 = var37 + var11Lifetime2;
-          var38 = var38 + var12Lifetime2;
-          for (var39 = 0; var39 < var9; var39++) {
+          var36 = var36 + groupOrdinalOrBasisOffsetX;
+          var37 = var37 + groupIdOrBasisOffsetY;
+          var38 = var38 + basisOffsetZ;
+          for (var39 = 0; var39 < groupCount; var39++) {
             var40 = groups[var39];
             if (var40 < this.vertexGroups.length) {
-              var80 = this.vertexGroups[var40];
-              for (var42 = 0; var42 < var80.length; var42++) {
-                var43 = var80[var42];
-                if (this.field_e == null ||
-                  (transformMask & this.field_e[var43]) != 0) {
-                  var44 = var63[0] * this.verticesX[var43] + var63[1] * this.verticesY[var43] + var63[2] * this.verticesZ[var43] + 16384 >> 15;
-                  var45 = var63[3] * this.verticesX[var43] + var63[4] * this.verticesY[var43] + var63[5] * this.verticesZ[var43] + 16384 >> 15;
-                  var46 = var63[6] * this.verticesX[var43] + var63[7] * this.verticesY[var43] + var63[8] * this.verticesZ[var43] + 16384 >> 15;
+              matrixRotationVertices = this.vertexGroups[var40];
+              for (var42 = 0; var42 < matrixRotationVertices.length; var42++) {
+                matrixRotationVertexIndex = matrixRotationVertices[var42];
+                if (this.vertexTransformMasks == null ||
+                  (transformMask & this.vertexTransformMasks[matrixRotationVertexIndex]) != 0) {
+                  var44 = var63[0] * this.verticesX[matrixRotationVertexIndex] + var63[1] * this.verticesY[matrixRotationVertexIndex] + var63[2] * this.verticesZ[matrixRotationVertexIndex] + 16384 >> 15;
+                  var45 = var63[3] * this.verticesX[matrixRotationVertexIndex] + var63[4] * this.verticesY[matrixRotationVertexIndex] + var63[5] * this.verticesZ[matrixRotationVertexIndex] + 16384 >> 15;
+                  var46 = var63[6] * this.verticesX[matrixRotationVertexIndex] + var63[7] * this.verticesY[matrixRotationVertexIndex] + var63[8] * this.verticesZ[matrixRotationVertexIndex] + 16384 >> 15;
                   var44 = var44 + var36;
                   var45 = var45 + var37;
                   var46 = var46 + var38;
-                  this.verticesX[var43] = var44;
-                  this.verticesY[var43] = var45;
-                  this.verticesZ[var43] = var46;
+                  this.verticesX[matrixRotationVertexIndex] = var44;
+                  this.verticesY[matrixRotationVertexIndex] = var45;
+                  this.verticesZ[matrixRotationVertexIndex] = var46;
                 }
               }
             }
@@ -1636,14 +1636,14 @@ final class ModelMesh extends ModelMeshBase {
                 return;
               }
               if (this.faceGroups != null) {
-                for (var10Lifetime2 = 0; var10Lifetime2 < var9; var10Lifetime2++) {
-                  var11Lifetime2 = groups[var10Lifetime2];
-                  if (var11Lifetime2 < this.faceGroups.length) {
-                    var85 = this.faceGroups[var11Lifetime2];
-                    for (var13Lifetime1 = 0; var13Lifetime1 < var85.length; var13Lifetime1++) {
-                      var14Lifetime2 = var85[var13Lifetime1];
-                      if (this.field_g == null ||
-                        (transformMask & this.field_g[var14Lifetime2]) != 0) {
+                for (groupOrdinalOrBasisOffsetX = 0; groupOrdinalOrBasisOffsetX < groupCount; groupOrdinalOrBasisOffsetX++) {
+                  groupIdOrBasisOffsetY = groups[groupOrdinalOrBasisOffsetX];
+                  if (groupIdOrBasisOffsetY < this.faceGroups.length) {
+                    colorFaces = this.faceGroups[groupIdOrBasisOffsetY];
+                    for (var13Lifetime1 = 0; var13Lifetime1 < colorFaces.length; var13Lifetime1++) {
+                      var14Lifetime2 = colorFaces[var13Lifetime1];
+                      if (this.faceTransformMasks == null ||
+                        (transformMask & this.faceTransformMasks[var14Lifetime2]) != 0) {
                         var15Lifetime1 = this.faceColors[var14Lifetime2] & 65535;
                         var16 = var15Lifetime1 >> 10 & 63;
                         var17 = var15Lifetime1 >> 7 & 7;
@@ -1668,23 +1668,23 @@ final class ModelMesh extends ModelMeshBase {
                         this.faceColors[var14Lifetime2] = (short)(var16 << 10 | var17 << 7 | var18);
                       }
                     }
-                    this.field_db = true;
+                    this.faceColorsDirty = true;
                   }
                 }
                 return;
               }
             } else {
               if (this.faceGroups != null) {
-                if (this.field_H != null) {
-                  for (var10Lifetime2 = 0; var10Lifetime2 < var9; var10Lifetime2++) {
-                    var11Lifetime2 = groups[var10Lifetime2];
-                    if (var11Lifetime2 < this.faceGroups.length) {
-                      var84 = this.faceGroups[var11Lifetime2];
-                      for (var13Lifetime1 = 0; var13Lifetime1 < var84.length; var13Lifetime1++) {
-                        var14Lifetime2 = var84[var13Lifetime1];
-                        if (this.field_g == null ||
-                          (transformMask & this.field_g[var14Lifetime2]) != 0) {
-                          var15Lifetime1 = (this.field_H[var14Lifetime2] & 255) + x * 8;
+                if (this.faceAlpha != null) {
+                  for (groupOrdinalOrBasisOffsetX = 0; groupOrdinalOrBasisOffsetX < groupCount; groupOrdinalOrBasisOffsetX++) {
+                    groupIdOrBasisOffsetY = groups[groupOrdinalOrBasisOffsetX];
+                    if (groupIdOrBasisOffsetY < this.faceGroups.length) {
+                      alphaFaces = this.faceGroups[groupIdOrBasisOffsetY];
+                      for (var13Lifetime1 = 0; var13Lifetime1 < alphaFaces.length; var13Lifetime1++) {
+                        var14Lifetime2 = alphaFaces[var13Lifetime1];
+                        if (this.faceTransformMasks == null ||
+                          (transformMask & this.faceTransformMasks[var14Lifetime2]) != 0) {
+                          var15Lifetime1 = (this.faceAlpha[var14Lifetime2] & 255) + x * 8;
                           if (var15Lifetime1 >= 0) {
                             if (var15Lifetime1 > 255) {
                               var15Lifetime1 = 255;
@@ -1692,7 +1692,7 @@ final class ModelMesh extends ModelMeshBase {
                           } else {
                             var15Lifetime1 = 0;
                           }
-                          this.field_H[var14Lifetime2] = (byte)var15Lifetime1;
+                          this.faceAlpha[var14Lifetime2] = (byte)var15Lifetime1;
                         }
                       }
                     }
@@ -1705,56 +1705,56 @@ final class ModelMesh extends ModelMeshBase {
             return;
           }
           if (transformMatrix == null) {
-            for (var10Lifetime2 = 0; var10Lifetime2 < var9; var10Lifetime2++) {
-              var11Lifetime2 = groups[var10Lifetime2];
-              if (var11Lifetime2 < this.vertexGroups.length) {
-                var83 = this.vertexGroups[var11Lifetime2];
-                for (var13Lifetime1 = 0; var13Lifetime1 < var83.length; var13Lifetime1++) {
-                  var14Lifetime2 = var83[var13Lifetime1];
-                  if (this.field_e == null ||
-                    (transformMask & this.field_e[var14Lifetime2]) != 0) {
-                    this.verticesX[var14Lifetime2] = this.verticesX[var14Lifetime2] - field_v;
-                    this.verticesY[var14Lifetime2] = this.verticesY[var14Lifetime2] - field_mb;
-                    this.verticesZ[var14Lifetime2] = this.verticesZ[var14Lifetime2] - field_cb;
+            for (groupOrdinalOrBasisOffsetX = 0; groupOrdinalOrBasisOffsetX < groupCount; groupOrdinalOrBasisOffsetX++) {
+              groupIdOrBasisOffsetY = groups[groupOrdinalOrBasisOffsetX];
+              if (groupIdOrBasisOffsetY < this.vertexGroups.length) {
+                scaledVertices = this.vertexGroups[groupIdOrBasisOffsetY];
+                for (var13Lifetime1 = 0; var13Lifetime1 < scaledVertices.length; var13Lifetime1++) {
+                  var14Lifetime2 = scaledVertices[var13Lifetime1];
+                  if (this.vertexTransformMasks == null ||
+                    (transformMask & this.vertexTransformMasks[var14Lifetime2]) != 0) {
+                    this.verticesX[var14Lifetime2] = this.verticesX[var14Lifetime2] - animationPivotX;
+                    this.verticesY[var14Lifetime2] = this.verticesY[var14Lifetime2] - animationPivotY;
+                    this.verticesZ[var14Lifetime2] = this.verticesZ[var14Lifetime2] - animationPivotZ;
                     this.verticesX[var14Lifetime2] = this.verticesX[var14Lifetime2] * x / 128;
                     this.verticesY[var14Lifetime2] = this.verticesY[var14Lifetime2] * y / 128;
                     this.verticesZ[var14Lifetime2] = this.verticesZ[var14Lifetime2] * z / 128;
-                    this.verticesX[var14Lifetime2] = this.verticesX[var14Lifetime2] + field_v;
-                    this.verticesY[var14Lifetime2] = this.verticesY[var14Lifetime2] + field_mb;
-                    this.verticesZ[var14Lifetime2] = this.verticesZ[var14Lifetime2] + field_cb;
+                    this.verticesX[var14Lifetime2] = this.verticesX[var14Lifetime2] + animationPivotX;
+                    this.verticesY[var14Lifetime2] = this.verticesY[var14Lifetime2] + animationPivotY;
+                    this.verticesZ[var14Lifetime2] = this.verticesZ[var14Lifetime2] + animationPivotZ;
                   }
                 }
               }
             }
             return;
           }
-          var10Lifetime2 = transformMatrix[9];
-          var11Lifetime2 = transformMatrix[10];
-          var12Lifetime2 = transformMatrix[11];
+          groupOrdinalOrBasisOffsetX = transformMatrix[9];
+          groupIdOrBasisOffsetY = transformMatrix[10];
+          basisOffsetZ = transformMatrix[11];
           var13Lifetime1 = transformMatrix[12];
           var14Lifetime2 = transformMatrix[13];
           var15Lifetime1 = transformMatrix[14];
           if (field_y) {
-            var16 = transformMatrix[0] * field_v + transformMatrix[3] * field_mb + transformMatrix[6] * field_cb + 16384 >> 15;
-            var17 = transformMatrix[1] * field_v + transformMatrix[4] * field_mb + transformMatrix[7] * field_cb + 16384 >> 15;
-            var18 = transformMatrix[2] * field_v + transformMatrix[5] * field_mb + transformMatrix[8] * field_cb + 16384 >> 15;
+            var16 = transformMatrix[0] * animationPivotX + transformMatrix[3] * animationPivotY + transformMatrix[6] * animationPivotZ + 16384 >> 15;
+            var17 = transformMatrix[1] * animationPivotX + transformMatrix[4] * animationPivotY + transformMatrix[7] * animationPivotZ + 16384 >> 15;
+            var18 = transformMatrix[2] * animationPivotX + transformMatrix[5] * animationPivotY + transformMatrix[8] * animationPivotZ + 16384 >> 15;
             var16 = var16 + var13Lifetime1;
             var17 = var17 + var14Lifetime2;
             var18 = var18 + var15Lifetime1;
-            field_v = var16;
-            field_mb = var17;
-            field_cb = var18;
+            animationPivotX = var16;
+            animationPivotY = var17;
+            animationPivotZ = var18;
             field_y = false;
           }
           var16 = x << 15 >> 7;
           var17 = y << 15 >> 7;
           var18 = z << 15 >> 7;
-          var19 = var16 * -field_v + 16384 >> 15;
-          var20 = var17 * -field_mb + 16384 >> 15;
-          var21 = var18 * -field_cb + 16384 >> 15;
-          var22 = var19 + field_v;
-          var23 = var20 + field_mb;
-          var24 = var21 + field_cb;
+          var19 = var16 * -animationPivotX + 16384 >> 15;
+          var20 = var17 * -animationPivotY + 16384 >> 15;
+          var21 = var18 * -animationPivotZ + 16384 >> 15;
+          var22 = var19 + animationPivotX;
+          var23 = var20 + animationPivotY;
+          var24 = var21 + animationPivotZ;
           var25 = new int[9];
           var25[0] = var16 * transformMatrix[0] + 16384 >> 15;
           var25[1] = var16 * transformMatrix[3] + 16384 >> 15;
@@ -1786,17 +1786,17 @@ final class ModelMesh extends ModelMeshBase {
           var30 = transformMatrix[0] * var26 + transformMatrix[1] * var27 + transformMatrix[2] * var28 + 16384 >> 15;
           var31Lifetime1 = transformMatrix[3] * var26 + transformMatrix[4] * var27 + transformMatrix[5] * var28 + 16384 >> 15;
           var32 = transformMatrix[6] * var26 + transformMatrix[7] * var27 + transformMatrix[8] * var28 + 16384 >> 15;
-          var30 = var30 + var10Lifetime2;
-          var31Lifetime1 = var31Lifetime1 + var11Lifetime2;
-          var32 = var32 + var12Lifetime2;
-          for (var33 = 0; var33 < var9; var33++) {
+          var30 = var30 + groupOrdinalOrBasisOffsetX;
+          var31Lifetime1 = var31Lifetime1 + groupIdOrBasisOffsetY;
+          var32 = var32 + basisOffsetZ;
+          for (var33 = 0; var33 < groupCount; var33++) {
             var34 = groups[var33];
             if (var34 < this.vertexGroups.length) {
-              var82 = this.vertexGroups[var34];
-              for (var36 = 0; var36 < var82.length; var36++) {
-                var37 = var82[var36];
-                if (this.field_e == null ||
-                  (transformMask & this.field_e[var37]) != 0) {
+              matrixScaleVertices = this.vertexGroups[var34];
+              for (var36 = 0; var36 < matrixScaleVertices.length; var36++) {
+                var37 = matrixScaleVertices[var36];
+                if (this.vertexTransformMasks == null ||
+                  (transformMask & this.vertexTransformMasks[var37]) != 0) {
                   var38 = var66[0] * this.verticesX[var37] + var66[1] * this.verticesY[var37] + var66[2] * this.verticesZ[var37] + 16384 >> 15;
                   var39 = var66[3] * this.verticesX[var37] + var66[4] * this.verticesY[var37] + var66[5] * this.verticesZ[var37] + 16384 >> 15;
                   var40 = var66[6] * this.verticesX[var37] + var66[7] * this.verticesY[var37] + var66[8] * this.verticesZ[var37] + 16384 >> 15;
@@ -1817,12 +1817,12 @@ final class ModelMesh extends ModelMeshBase {
         this.faceCount = 0;
         this.textureTriangleCount = 0;
         this.vertexCount = 0;
-        this.field_k = false;
-        this.field_db = false;
+        this.boundsValid = false;
+        this.faceColorsDirty = false;
         this.referencedVertexCapacity = 0;
     }
 
-    ModelMesh(MeshData param0, int param1, int param2, int param3, int param4, int param5) {
+    ModelMesh(MeshData source, int ambient, int contrast, int lightX, int lightY, int lightZ) {
         int dupTemp$1 = 0;
         int incrementValue$0 = 0;
         int var7;
@@ -1850,38 +1850,38 @@ final class ModelMesh extends ModelMeshBase {
         this.faceCount = 0;
         this.textureTriangleCount = 0;
         this.vertexCount = 0;
-        this.field_k = false;
-        this.field_db = false;
+        this.boundsValid = false;
+        this.faceColorsDirty = false;
         this.referencedVertexCapacity = 0;
-        param0.calculateNormals();
-        param0.buildSkinGroups();
-        this.vertexCount = param0.vertexCount;
-        this.referencedVertexCapacity = param0.referencedVertexCapacity;
-        this.verticesX = param0.verticesX;
-        this.verticesY = param0.verticesY;
-        this.verticesZ = param0.verticesZ;
-        this.faceCount = param0.faceCount;
-        this.faceVertexA = param0.faceVertexA;
-        this.faceVertexB = param0.faceVertexB;
-        this.faceVertexC = param0.faceVertexC;
-        this.field_ob = param0.field_w;
-        this.field_H = param0.faceAlpha;
-        this.faceColors = param0.faceColors;
-        this.vertexGroups = param0.vertexGroups;
-        this.faceGroups = param0.faceGroups;
-        this.field_g = param0.field_A;
-        this.field_e = param0.field_j;
-        var7 = (int)Math.sqrt((double)(param3 * param3 + param4 * param4 + param5 * param5));
-        var8 = param2 * var7 >> 8;
+        source.calculateNormals();
+        source.buildSkinGroups();
+        this.vertexCount = source.vertexCount;
+        this.referencedVertexCapacity = source.referencedVertexCapacity;
+        this.verticesX = source.verticesX;
+        this.verticesY = source.verticesY;
+        this.verticesZ = source.verticesZ;
+        this.faceCount = source.faceCount;
+        this.faceVertexA = source.faceVertexA;
+        this.faceVertexB = source.faceVertexB;
+        this.faceVertexC = source.faceVertexC;
+        this.field_ob = source.field_w;
+        this.faceAlpha = source.faceAlpha;
+        this.faceColors = source.faceColors;
+        this.vertexGroups = source.vertexGroups;
+        this.faceGroups = source.faceGroups;
+        this.faceTransformMasks = source.field_A;
+        this.vertexTransformMasks = source.field_j;
+        var7 = (int)Math.sqrt((double)(lightX * lightX + lightY * lightY + lightZ * lightZ));
+        var8 = contrast * var7 >> 8;
         this.field_Z = new int[this.faceCount];
         this.field_t = new int[this.faceCount];
         this.field_R = new int[this.faceCount];
-        if (param0.faceTextureIds != null) {
+        if (source.faceTextureIds != null) {
           this.field_ab = new short[this.faceCount];
           for (var9 = 0; var9 < this.faceCount; var9++) {
-            var10 = param0.faceTextureIds[var9];
+            var10 = source.faceTextureIds[var9];
             if (var10 != -1 &&
-              tm.field_o.a(true, var10)) {
+              TriangleRasterizer.textureProvider.hasTexture(true, var10)) {
               this.field_ab[var9] = (short)var10;
             } else {
               this.field_ab[var9] = (short)-1;
@@ -1890,21 +1890,21 @@ final class ModelMesh extends ModelMeshBase {
         } else {
           this.field_ab = null;
         }
-        if (param0.field_E > 0 &&
-          param0.field_G != null) {
-          var20 = new int[param0.field_E];
+        if (source.field_E > 0 &&
+          source.field_G != null) {
+          var20 = new int[source.field_E];
           var17 = var20;
           var9_ref_int__ = var17;
           for (var10Lifetime1 = 0; var10Lifetime1 < this.faceCount; var10Lifetime1++) {
-            if (param0.field_G[var10Lifetime1] != -1) {
-              dupTemp$1 = param0.field_G[var10Lifetime1] & 255;
+            if (source.field_G[var10Lifetime1] != -1) {
+              dupTemp$1 = source.field_G[var10Lifetime1] & 255;
               var9_ref_int__[dupTemp$1] = var9_ref_int__[dupTemp$1] + 1;
             }
           }
           this.textureTriangleCount = 0;
-          for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < param0.field_E; var10Lifetime1Lifetime1++) {
+          for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < source.field_E; var10Lifetime1Lifetime1++) {
             if (var20[var10Lifetime1Lifetime1] > 0 &&
-              param0.field_t[var10Lifetime1Lifetime1] == 0) {
+              source.field_t[var10Lifetime1Lifetime1] == 0) {
               this.textureTriangleCount = this.textureTriangleCount + 1;
             }
           }
@@ -1912,12 +1912,12 @@ final class ModelMesh extends ModelMeshBase {
           this.textureVertexB = new int[this.textureTriangleCount];
           this.textureVertexC = new int[this.textureTriangleCount];
           var10Lifetime1Lifetime2 = 0;
-          for (var11 = 0; var11 < param0.field_E; var11++) {
+          for (var11 = 0; var11 < source.field_E; var11++) {
             if (var20[var11] > 0 &&
-              param0.field_t[var11] == 0) {
-              this.textureVertexA[var10Lifetime1Lifetime2] = param0.field_M[var11] & 65535;
-              this.textureVertexB[var10Lifetime1Lifetime2] = param0.field_n[var11] & 65535;
-              this.textureVertexC[var10Lifetime1Lifetime2] = param0.field_C[var11] & 65535;
+              source.field_t[var11] == 0) {
+              this.textureVertexA[var10Lifetime1Lifetime2] = source.field_M[var11] & 65535;
+              this.textureVertexB[var10Lifetime1Lifetime2] = source.field_n[var11] & 65535;
+              this.textureVertexC[var10Lifetime1Lifetime2] = source.field_C[var11] & 65535;
               incrementValue$0 = var10Lifetime1Lifetime2;
               var10Lifetime1Lifetime2++;
               var9_ref_int__[var11] = incrementValue$0;
@@ -1927,10 +1927,10 @@ final class ModelMesh extends ModelMeshBase {
           }
           this.field_lb = new byte[this.faceCount];
           for (var11Lifetime2 = 0; var11Lifetime2 < this.faceCount; var11Lifetime2++) {
-            if (param0.field_G[var11Lifetime2] == -1) {
+            if (source.field_G[var11Lifetime2] == -1) {
               this.field_lb[var11Lifetime2] = (byte)-1;
             } else {
-              this.field_lb[var11Lifetime2] = (byte)var9_ref_int__[param0.field_G[var11Lifetime2] & 255];
+              this.field_lb[var11Lifetime2] = (byte)var9_ref_int__[source.field_G[var11Lifetime2] & 255];
               if (this.field_lb[var11Lifetime2] == -1 &&
                 this.field_ab != null) {
                 this.field_ab[var11Lifetime2] = (short)-1;
@@ -1941,13 +1941,13 @@ final class ModelMesh extends ModelMeshBase {
         var16 = 0;
         var9Lifetime1 = var16;
         while (var16 < this.faceCount) {
-          if (param0.faceRenderTypes != null) {
-            var10Lifetime2 = param0.faceRenderTypes[var16];
+          if (source.faceRenderTypes != null) {
+            var10Lifetime2 = source.faceRenderTypes[var16];
           } else {
             var10Lifetime2 = 0;
           }
-          if (param0.faceAlpha != null) {
-            var11Lifetime1 = param0.faceAlpha[var16];
+          if (source.faceAlpha != null) {
+            var11Lifetime1 = source.faceAlpha[var16];
           } else {
             var11Lifetime1 = 0;
           }
@@ -1967,35 +1967,35 @@ final class ModelMesh extends ModelMeshBase {
               if (var10Lifetime2 != 1) {
                 this.field_R[var16] = -2;
               } else {
-                var19 = param0.faceNormals[var16];
-                var14 = param1 + (param3 * var19.x + param4 * var19.y + param5 * var19.z) / (var8 + var8 / 2);
+                var19 = source.faceNormals[var16];
+                var14 = ambient + (lightX * var19.x + lightY * var19.y + lightZ * var19.z) / (var8 + var8 / 2);
                 this.field_Z[var16] = ModelMesh.d(var14);
                 this.field_R[var16] = -1;
               }
             } else {
-              if (param0.field_g != null &&
-                param0.field_g[this.faceVertexA[var16]] != null) {
-                var13 = param0.field_g[this.faceVertexA[var16]];
+              if (source.field_g != null &&
+                source.field_g[this.faceVertexA[var16]] != null) {
+                var13 = source.field_g[this.faceVertexA[var16]];
               } else {
-                var13 = param0.vertexNormals[this.faceVertexA[var16]];
+                var13 = source.vertexNormals[this.faceVertexA[var16]];
               }
-              var14 = param1 + (param3 * var13.x + param4 * var13.y + param5 * var13.z) / (var8 * var13.contributions);
+              var14 = ambient + (lightX * var13.x + lightY * var13.y + lightZ * var13.z) / (var8 * var13.contributions);
               this.field_Z[var16] = ModelMesh.d(var14);
-              if (param0.field_g != null &&
-                param0.field_g[this.faceVertexB[var16]] != null) {
-                var13 = param0.field_g[this.faceVertexB[var16]];
+              if (source.field_g != null &&
+                source.field_g[this.faceVertexB[var16]] != null) {
+                var13 = source.field_g[this.faceVertexB[var16]];
               } else {
-                var13 = param0.vertexNormals[this.faceVertexB[var16]];
+                var13 = source.vertexNormals[this.faceVertexB[var16]];
               }
-              var14 = param1 + (param3 * var13.x + param4 * var13.y + param5 * var13.z) / (var8 * var13.contributions);
+              var14 = ambient + (lightX * var13.x + lightY * var13.y + lightZ * var13.z) / (var8 * var13.contributions);
               this.field_t[var16] = ModelMesh.d(var14);
-              if (param0.field_g != null &&
-                param0.field_g[this.faceVertexC[var16]] != null) {
-                var13 = param0.field_g[this.faceVertexC[var16]];
+              if (source.field_g != null &&
+                source.field_g[this.faceVertexC[var16]] != null) {
+                var13 = source.field_g[this.faceVertexC[var16]];
               } else {
-                var13 = param0.vertexNormals[this.faceVertexC[var16]];
+                var13 = source.vertexNormals[this.faceVertexC[var16]];
               }
-              var14 = param1 + (param3 * var13.x + param4 * var13.y + param5 * var13.z) / (var8 * var13.contributions);
+              var14 = ambient + (lightX * var13.x + lightY * var13.y + lightZ * var13.z) / (var8 * var13.contributions);
               this.field_R[var16] = ModelMesh.d(var14);
             }
           } else {
@@ -2008,36 +2008,36 @@ final class ModelMesh extends ModelMeshBase {
                   this.field_R[var16] = -1;
                 }
               } else {
-                var18 = param0.faceNormals[var16];
-                var14 = param1 + (param3 * var18.x + param4 * var18.y + param5 * var18.z) / (var8 + var8 / 2) << 17;
-                this.field_Z[var16] = var14 | ModelMesh.a(param0.faceColors[var16] & 65535, var14 >> 17);
+                var18 = source.faceNormals[var16];
+                var14 = ambient + (lightX * var18.x + lightY * var18.y + lightZ * var18.z) / (var8 + var8 / 2) << 17;
+                this.field_Z[var16] = var14 | ModelMesh.a(source.faceColors[var16] & 65535, var14 >> 17);
                 this.field_R[var16] = -1;
               }
             } else {
-              var15 = param0.faceColors[var16] & 65535;
-              if (param0.field_g != null &&
-                param0.field_g[this.faceVertexA[var16]] != null) {
-                var13 = param0.field_g[this.faceVertexA[var16]];
+              var15 = source.faceColors[var16] & 65535;
+              if (source.field_g != null &&
+                source.field_g[this.faceVertexA[var16]] != null) {
+                var13 = source.field_g[this.faceVertexA[var16]];
               } else {
-                var13 = param0.vertexNormals[this.faceVertexA[var16]];
+                var13 = source.vertexNormals[this.faceVertexA[var16]];
               }
-              var14 = param1 + (param3 * var13.x + param4 * var13.y + param5 * var13.z) / (var8 * var13.contributions) << 17;
+              var14 = ambient + (lightX * var13.x + lightY * var13.y + lightZ * var13.z) / (var8 * var13.contributions) << 17;
               this.field_Z[var16] = var14 | ModelMesh.a(var15, var14 >> 17);
-              if (param0.field_g != null &&
-                param0.field_g[this.faceVertexB[var16]] != null) {
-                var13 = param0.field_g[this.faceVertexB[var16]];
+              if (source.field_g != null &&
+                source.field_g[this.faceVertexB[var16]] != null) {
+                var13 = source.field_g[this.faceVertexB[var16]];
               } else {
-                var13 = param0.vertexNormals[this.faceVertexB[var16]];
+                var13 = source.vertexNormals[this.faceVertexB[var16]];
               }
-              var14 = param1 + (param3 * var13.x + param4 * var13.y + param5 * var13.z) / (var8 * var13.contributions) << 17;
+              var14 = ambient + (lightX * var13.x + lightY * var13.y + lightZ * var13.z) / (var8 * var13.contributions) << 17;
               this.field_t[var16] = var14 | ModelMesh.a(var15, var14 >> 17);
-              if (param0.field_g != null &&
-                param0.field_g[this.faceVertexC[var16]] != null) {
-                var13 = param0.field_g[this.faceVertexC[var16]];
+              if (source.field_g != null &&
+                source.field_g[this.faceVertexC[var16]] != null) {
+                var13 = source.field_g[this.faceVertexC[var16]];
               } else {
-                var13 = param0.vertexNormals[this.faceVertexC[var16]];
+                var13 = source.vertexNormals[this.faceVertexC[var16]];
               }
-              var14 = param1 + (param3 * var13.x + param4 * var13.y + param5 * var13.z) / (var8 * var13.contributions) << 17;
+              var14 = ambient + (lightX * var13.x + lightY * var13.y + lightZ * var13.z) / (var8 * var13.contributions) << 17;
               this.field_R[var16] = var14 | ModelMesh.a(var15, var14 >> 17);
             }
           }

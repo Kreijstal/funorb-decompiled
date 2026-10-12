@@ -103,8 +103,8 @@ abstract class ResourceRequest extends DualLinkedNode {
           stackIn_5_0 = (param1) ? 900 : 800;
           var16 = stackIn_5_0;
           var17 = -1400;
-          tm.a();
-          tm.c(40 + param6, 60 + param2);
+          TriangleRasterizer.useRasterClip();
+          TriangleRasterizer.setProjectionCenter(40 + param6, 60 + param2);
           if (param7 == null &&
             param0 == null) {
             return;

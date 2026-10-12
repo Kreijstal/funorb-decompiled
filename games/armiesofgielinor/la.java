@@ -220,7 +220,7 @@ final class la {
           this.field_f = 63;
         }
         int var10 = 0;
-        tm.c(param2, param1);
+        TriangleRasterizer.setProjectionCenter(param2, param1);
         int var11 = 20;
         int var12 = 0;
         int var13 = 500;

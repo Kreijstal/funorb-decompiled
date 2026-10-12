@@ -48,7 +48,7 @@ final class UnitModelPreview {
           this.setUnitType((byte) 125, unitType);
           this.animationIndex = -1;
           this.selectAnimation(-23162, 0);
-          tm.a();
+          TriangleRasterizer.useRasterClip();
           this.screenPosition = new int[2];
           this.yaw = yaw;
           return;
@@ -57,7 +57,7 @@ final class UnitModelPreview {
         this.setUnitType((byte) 125, unitType);
         this.animationIndex = -1;
         this.selectAnimation(-23162, 0);
-        tm.a();
+        TriangleRasterizer.useRasterClip();
         this.screenPosition = new int[2];
         this.yaw = yaw;
     }
@@ -373,8 +373,8 @@ final class UnitModelPreview {
         int var14 = this.projectionVariant & (!highlighted ? true : false) ? 900 : 800;
         int var15 = -1400;
         if (!this.animationAvailable) {
-          tm.a();
-          tm.c(screenX, screenY);
+          TriangleRasterizer.useRasterClip();
+          TriangleRasterizer.setProjectionCenter(screenX, screenY);
           var18_ref = (ModelMesh) (this.model.a(var5 != 0, false, var6 != 0));
           var20 = var18_ref;
           var18_ref.scaleGeometry(hk.field_Jb[this.unitType], hk.field_Jb[this.unitType], hk.field_Jb[this.unitType]);
@@ -384,8 +384,8 @@ final class UnitModelPreview {
           var20.a(var7, var8, var9, var12, var13, var14, var15);
           return;
         }
-        tm.a();
-        tm.c(screenX, screenY);
+        TriangleRasterizer.useRasterClip();
+        TriangleRasterizer.setProjectionCenter(screenX, screenY);
         ModelMesh var17_ref = (ModelMesh) (this.animationPlayer.applyCurrentFrame(var5 != 0, true, var6 != 0, this.model));
         ModelMesh var19 = var17_ref;
         var17_ref.scaleGeometry(hk.field_Jb[this.unitType], hk.field_Jb[this.unitType], hk.field_Jb[this.unitType]);

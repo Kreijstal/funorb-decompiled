@@ -46,11 +46,11 @@ final class qt {
     }
 
     final static void a(boolean param0) {
-        tm.a();
+        TriangleRasterizer.useRasterClip();
         if (param0) {
           return;
         }
-        tm.b(0.75f);
+        TriangleRasterizer.b(0.75f);
     }
 
     static {

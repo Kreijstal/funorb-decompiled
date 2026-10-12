@@ -24,10 +24,10 @@ final class cb extends Exception {
         int var13 = 0;
         int var14 = 0;
         try {
-          var6_int = tm.field_c;
-          var7 = tm.field_j;
-          var8 = tm.field_n[150];
-          var9 = tm.field_e[150];
+          var6_int = TriangleRasterizer.projectionCenterX;
+          var7 = TriangleRasterizer.projectionCenterY;
+          var8 = TriangleRasterizer.sineTable[150];
+          var9 = TriangleRasterizer.cosineTable[150];
           var10 = param5 * var9 - param0 * var8 >> 16;
           int var12 = 69 % ((-24 - param3) / 46);
           var11 = param5 * var8 + var9 * param0 >> 16;

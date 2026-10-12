@@ -57,7 +57,7 @@ final class gs implements kh {
         int var1_intLifetime1;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          tm.a();
+          TriangleRasterizer.useRasterClip();
           hg.field_a = new int[260];
           fn.field_M = 11;
           var1_int = 0;

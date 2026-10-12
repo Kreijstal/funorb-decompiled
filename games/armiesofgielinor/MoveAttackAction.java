@@ -143,7 +143,7 @@ final class MoveAttackAction extends PreparedAction {
           java.applet.Applet var3 = (java.applet.Applet) null;
           MoveAttackAction.a(-105, (java.applet.Applet) null);
         }
-        return tm.field_e[param1 & 2047];
+        return TriangleRasterizer.cosineTable[param1 & 2047];
     }
 
     final static void a(int param0, java.applet.Applet param1) {

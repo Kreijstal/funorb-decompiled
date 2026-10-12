@@ -72,8 +72,8 @@ final class kv extends tj implements he {
           field_F = 18;
         }
         le.field_b = new cg();
-        tm.a();
-        tm.b(0.75f);
+        TriangleRasterizer.useRasterClip();
+        TriangleRasterizer.b(0.75f);
     }
 
     final static fl k(int param0) {

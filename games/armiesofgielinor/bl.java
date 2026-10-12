@@ -505,7 +505,7 @@ final class bl {
             }
           }
           fn.a(false, 76, -32596);
-          tm.b(0.75f);
+          TriangleRasterizer.b(0.75f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
