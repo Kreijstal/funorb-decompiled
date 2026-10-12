@@ -44,7 +44,7 @@ final class CampaignRewardPreview {
         try {
           var7_int = vl.outgoingPacket.position;
           vl.outgoingPacket.writeLong(accountId, obfuscationGuard ^ 38346879);
-          vl.outgoingPacket.b(targetName, obfuscationGuard ^ 17460);
+          vl.outgoingPacket.writeNullTerminatedString(targetName, obfuscationGuard ^ 17460);
           vl.outgoingPacket.writeByte(1, offenceId);
           vl.outgoingPacket.writeByte(obfuscationGuard - 29230, mute ? 1 : 0);
           vl.outgoingPacket.writeByteLengthPrefix(-var7_int + vl.outgoingPacket.position, 5930);

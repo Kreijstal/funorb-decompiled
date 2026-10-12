@@ -134,7 +134,7 @@ final class op {
             stackIn_27_0 = (String) null;
             return stackIn_27_0;
           }
-          packet.b(name, 13851);
+          packet.writeNullTerminatedString(name, 13851);
           packet.writeByteLengthPrefix(-payloadStart + packet.position, 5930);
           stackIn_29_0 = null;
           return (String) (stackIn_29_0);

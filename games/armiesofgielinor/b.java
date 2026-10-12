@@ -78,7 +78,7 @@ final class b extends IntrusiveNode {
           var17.position = 3 + (-(var3 * 3) + (-(8 * iw.field_n) - 7) + param0.length);
           MovementPresentation.field_j = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            MovementPresentation.field_j[var4Lifetime4] = var17.d((byte) -13);
+            MovementPresentation.field_j[var4Lifetime4] = var17.readUnsignedMedium((byte) -13);
             if (MovementPresentation.field_j[var4Lifetime4] == 0) {
               MovementPresentation.field_j[var4Lifetime4] = 1;
             }

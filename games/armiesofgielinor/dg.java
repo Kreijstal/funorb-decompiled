@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dg {
-    static String field_b;
+    static String decodedChatText;
     static String field_a;
     static int field_c;
     private ResourceArchive field_d;
@@ -74,7 +74,7 @@ final class dg {
     }
 
     public static void a(byte param0) {
-        field_b = null;
+        decodedChatText = null;
         field_a = null;
         if (param0 != -12) {
           field_a = (String) null;

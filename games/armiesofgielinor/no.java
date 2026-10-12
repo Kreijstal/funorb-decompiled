@@ -8,7 +8,7 @@ final class no extends en {
     static RgbSprite field_P;
     static int field_J;
     private fn field_Q;
-    static int field_S;
+    static int responseTargetChannel;
     private fn field_O;
     static ClientUiComponent field_T;
     private boolean field_R;

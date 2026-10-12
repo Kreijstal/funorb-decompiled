@@ -7,7 +7,7 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
     static String field_i;
     static String field_m;
     private float totalWeight;
-    static String field_h;
+    static String responseTargetAccountName;
 
     final static ModelMeshBase b(int param0, int param1) {
         int var5 = 0;
@@ -146,7 +146,7 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
         if (param0 > -98) {
           WeightedScoreStrategy.a(39, 60);
         }
-        field_h = null;
+        responseTargetAccountName = null;
         field_m = null;
         field_i = null;
     }

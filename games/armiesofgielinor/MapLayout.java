@@ -14,50 +14,50 @@ final class MapLayout extends IntrusiveNode {
     static String field_m;
     static String field_o;
 
-    final static void a(ChatMessage param0, int param1) {
-        int var2_int = 0;
-        ChatMessage var3 = null;
-        int var4 = 0;
+    final static void acceptReceivedChatMessage(ChatMessage message, int obfuscationGuard) {
+        int historyIndex = 0;
+        ChatMessage previousMessage = null;
+        int obfuscationControl = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (null == param0.text) {
+          if (null == message.text) {
             return;
           }
-          if (~param0.identityWord0 != param1 ||
-            0 != param0.identityWord1) {
-            for (var2_int = 0; lk.field_h > var2_int; var2_int++) {
-              var3 = an.field_F[var2_int];
-              if (2 == var3.channelId &&
-                param0.identityWord0 == var3.identityWord0 &&
-                var3.identityWord1 == param0.identityWord1) {
+          if (~message.privateMessageIdHigh16 != obfuscationGuard ||
+            0 != message.privateMessageIdLow24) {
+            for (historyIndex = 0; lk.chatHistorySize > historyIndex; historyIndex++) {
+              previousMessage = an.chatHistory[historyIndex];
+              if (2 == previousMessage.channelId &&
+                message.privateMessageIdHigh16 == previousMessage.privateMessageIdHigh16 &&
+                previousMessage.privateMessageIdLow24 == message.privateMessageIdLow24) {
                 return;
               }
             }
           }
-          if (null != param0.quickChatValues) {
-            ma.field_ab = param0.accountId;
-            rv.field_b = param0.quickChatValues;
-            WeightedScoreStrategy.field_h = param0.accountName;
-            no.field_S = param0.channelId;
+          if (null != message.responsePhraseIds) {
+            ma.responseTargetAccountId = message.accountId;
+            rv.responsePhraseIds = message.responsePhraseIds;
+            WeightedScoreStrategy.responseTargetAccountName = message.accountName;
+            no.responseTargetChannel = message.channelId;
           }
-          SectorCacheStore.a(3208, param0);
+          SectorCacheStore.appendChatHistory(3208, message);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_20_0 = var2;
           stackIn_20_1 = new StringBuilder().append("lo.D(");
-          if (param0 == null) {
+          if (message == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

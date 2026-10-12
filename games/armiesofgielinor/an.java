@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class an extends dr {
-    static ChatMessage[] field_F;
+    static ChatMessage[] chatHistory;
     static int[] field_H;
     static long field_E;
     static String field_G;
@@ -66,7 +66,7 @@ final class an extends dr {
     public static void g(int param0) {
         field_H = null;
         field_G = null;
-        field_F = null;
+        chatHistory = null;
         if (param0 != 1746174305) {
           an.g(-72);
         }

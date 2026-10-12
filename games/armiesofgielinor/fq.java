@@ -172,7 +172,7 @@ final class fq {
             stackIn_13_0 = (String) null;
             return stackIn_13_0;
           }
-          packet.b(accountName, 13851);
+          packet.writeNullTerminatedString(accountName, 13851);
           packet.writeByteLengthPrefix(packet.position - payloadStart, 5930);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);

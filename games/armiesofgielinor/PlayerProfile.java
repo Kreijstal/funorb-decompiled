@@ -64,8 +64,8 @@ final class PlayerProfile {
             }
           } else {
             if (!param0.systemMessage) {
-              if (0 == param0.identityWord0 &&
-                param0.identityWord1 == 0) {
+              if (0 == param0.privateMessageIdHigh16 &&
+                param0.privateMessageIdLow24 == 0) {
                 var2_intLifetime1 = CombatEvent.field_A[param0.channelId];
               } else {
                 var2_intLifetime1 = fm.field_d[param0.channelId];

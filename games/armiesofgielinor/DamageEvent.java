@@ -303,7 +303,7 @@ final class DamageEvent extends GameEvent {
           packet.position = packet.position + 1;
           payloadStart = packet.position;
           packet.writeByte(1, 1);
-          packet.b(name, 13851);
+          packet.writeNullTerminatedString(name, 13851);
           packet.writeByteLengthPrefix(packet.position - payloadStart, 5930);
           stackIn_17_0 = null;
           return (String) (stackIn_17_0);

@@ -118,7 +118,7 @@ final class AnimationSequence {
                                     if (rowLength > 0) {
                                       rowValues = new int[rowLength];
                                       this.opcode13Rows[elementIndex] = rowValues;
-                                      this.opcode13Rows[elementIndex][0] = packet.d((byte) -13);
+                                      this.opcode13Rows[elementIndex][0] = packet.readUnsignedMedium((byte) -13);
                                       for (wordIndex = 1; wordIndex < rowLength; wordIndex++) {
                                         this.opcode13Rows[elementIndex][wordIndex] = packet.readUnsignedShort((byte) -104);
                                       }

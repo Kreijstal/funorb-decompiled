@@ -114,7 +114,7 @@ final class QuickChatCategoryRepository {
               var2 != 3 &&
               var2 != 4) {
               if (var2 == 5) {
-                var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
+                var3_long = ((PacketBuffer) ((Object) var1)).readLong((byte) -2);
                 var22 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(1);
                 var19 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(1);
                 var21 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(1);
@@ -143,7 +143,7 @@ final class QuickChatCategoryRepository {
                 break regionExit1;
               }
               if (var2 == 6) {
-                var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
+                var3_long = ((PacketBuffer) ((Object) var1)).readLong((byte) -2);
                 var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
                 var23 = DeployEvent.getLobbyPlayer((byte) 121, var3_long);
                 if ((var23 != null)) {
@@ -225,7 +225,7 @@ final class QuickChatCategoryRepository {
                                 var2 != 17) {
                                 switch (var2) {
                                   case 18:
-                                    var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
+                                    var3_long = ((PacketBuffer) ((Object) var1)).readLong((byte) -2);
                                     var27 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(1);
                                     var28 = ((PacketBuffer) ((Object) var1)).readNullTerminatedString(1);
                                     var7 = UnitModelPreview.getCurrentRoomPlayer(var3_long, -79);
@@ -245,7 +245,7 @@ final class QuickChatCategoryRepository {
                                     wl.currentRoomPlayers.addLast((byte) -119, (IntrusiveNode) (var7));
                                     break regionExit1;
                                   case 19:
-                                    var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
+                                    var3_long = ((PacketBuffer) ((Object) var1)).readLong((byte) -2);
                                     var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
                                     var14 = UnitModelPreview.getCurrentRoomPlayer(var3_long, -111);
                                     var29 = var14;
@@ -277,7 +277,7 @@ final class QuickChatCategoryRepository {
                                     SummonAction.field_s = ((PacketBuffer) ((Object) var1)).h(95);
                                     break regionExit1;
                                   case 23:
-                                    oh.localAccountId = ((PacketBuffer) ((Object) var1)).j((byte) -2);
+                                    oh.localAccountId = ((PacketBuffer) ((Object) var1)).readLong((byte) -2);
                                     break regionExit1;
                                   default:
                                     af.a((Throwable) null, 118, "L1: " + CampaignProgress.b(false));
@@ -285,7 +285,7 @@ final class QuickChatCategoryRepository {
                                     break regionExit1;
                                 }
                               }
-                              var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
+                              var3_long = ((PacketBuffer) ((Object) var1)).readLong((byte) -2);
                               var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
                               var13 = DeployEvent.getLobbyPlayer((byte) 121, var3_long);
                               var26 = var13;
@@ -305,7 +305,7 @@ final class QuickChatCategoryRepository {
                                 sf.insertLobbyPlayerSorted((byte) 107, var26);
                               }
                             } else {
-                              var3_long = ((PacketBuffer) ((Object) var1)).j((byte) -2);
+                              var3_long = ((PacketBuffer) ((Object) var1)).readLong((byte) -2);
                               var25 = DeployEvent.getLobbyPlayer((byte) 121, var3_long);
                               if ((var25 != null)) {
                                 if (var2 == 14) {

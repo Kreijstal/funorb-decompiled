@@ -12,7 +12,7 @@ final class hc {
     static int field_b;
     private String[] field_k;
     private int[] field_j;
-    static int field_e;
+    static int decodedChatIconId;
     static String field_w;
     private int field_g;
     private r field_p;

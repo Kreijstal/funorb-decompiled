@@ -66,7 +66,7 @@ abstract class CacheEntry extends DualLinkedNode {
               vd.field_b.a(var14, 413740432);
               vd.field_b.a(var8, 413740432);
               var15 = (CharSequence) ((Object) param0);
-              vd.field_b.a(ea.a(param2 + 18820, var15), 413740432);
+              vd.field_b.a(CommunityTabGroup.a(param2 + 18820, var15), 413740432);
               vd.field_b.writeShort(true, param4);
               vd.field_b.writeByte(1, param3);
               vd.field_b.writeByte(param2 + 20033, var9);
@@ -77,7 +77,7 @@ abstract class CacheEntry extends DualLinkedNode {
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              vl.outgoingPacket.b(var11_ref_String, param2 + 33883);
+              vl.outgoingPacket.writeNullTerminatedString(var11_ref_String, param2 + 33883);
               IconLabelControl.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
               vl.outgoingPacket.f(0, -var10 + vl.outgoingPacket.position);
             } else {

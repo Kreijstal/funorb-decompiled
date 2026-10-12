@@ -243,7 +243,7 @@ final class LeaderEscortCondition implements MatchCondition {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var27.readUnsignedByte(0);
                   var21 = th.field_b[var20].field_f;
-                  var22 = var27.j((byte) -2);
+                  var22 = var27.readLong((byte) -2);
                   var24 = var27.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
@@ -292,7 +292,7 @@ final class LeaderEscortCondition implements MatchCondition {
           }
           if (var2 == 1) {
             var3Lifetime1 = var27.readUnsignedShort((byte) -104);
-            var27.j((byte) -2);
+            var27.readLong((byte) -2);
             var4 = (aj) (GameEvent.field_r.first((byte) 99));
             while (var4 != null) {
               if (var4.field_s != var3Lifetime1) {

@@ -11,7 +11,7 @@ class lk implements WidgetPainter, pm {
     private boolean field_c;
     int field_d;
     static String field_r;
-    static int field_h;
+    static int chatHistorySize;
     static int field_p;
     int field_l;
     static String field_s;

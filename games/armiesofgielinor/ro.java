@@ -205,10 +205,10 @@ class ro extends pt implements he {
           if (FaceNormal.a(var4_ref_String, param1 + 134)) {
             var13 = (String) null;
             var12 = (String) null;
-            ta.a((String) null, 2, -18119, (String) null, KingBlackDragonEvent.field_y, 0);
+            ta.appendSystemChatMessage((String) null, 2, -18119, (String) null, KingBlackDragonEvent.field_y, 0);
             var15 = (String) null;
             var14 = (String) null;
-            ta.a((String) null, 2, -18119, (String) null, ContextualRuntimeException.field_a, 0);
+            ta.appendSystemChatMessage((String) null, 2, -18119, (String) null, ContextualRuntimeException.field_a, 0);
             rd.clearChatText(8445);
             return true;
           }

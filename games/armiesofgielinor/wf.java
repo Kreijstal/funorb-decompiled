@@ -440,8 +440,8 @@ abstract class wf extends iv {
                 }
                 stackIn_30_0 = -34;
                 stackIn_31_1 = (var2 == 12);
-                var3 = ea.$cfr$intArgs$a$72f70aa7c69d(stackIn_30_0, stackIn_31_1);
-                MapLayout.a(var3, -1);
+                var3 = CommunityTabGroup.decodeChatMessageWithIntGuard(stackIn_30_0, stackIn_31_1);
+                MapLayout.acceptReceivedChatMessage(var3, -1);
                 break;
               case 8:
                 jh.a(ByteStorage.incomingPacket, IntPair.field_m, fk.packetPayloadLength, param0 - 13);

@@ -13,7 +13,7 @@ final class MoveAttackRequest extends ActionRequest {
     static sn[] field_v;
     static long[] field_I;
     static String field_F;
-    static int[] field_D;
+    static int[] chatHistoryPriorityCounts;
     static int field_x;
     static byte[] field_B;
     static int[] field_K;
@@ -48,7 +48,7 @@ final class MoveAttackRequest extends ActionRequest {
 
     public static void e(int param0) {
         field_C = null;
-        field_D = null;
+        chatHistoryPriorityCounts = null;
         sessionSocket = null;
         field_F = null;
         field_K = null;
@@ -56,7 +56,7 @@ final class MoveAttackRequest extends ActionRequest {
         field_B = null;
         field_I = null;
         if (param0 != -1) {
-          field_D = (int[]) null;
+          chatHistoryPriorityCounts = (int[]) null;
         }
         field_v = null;
         field_A = null;

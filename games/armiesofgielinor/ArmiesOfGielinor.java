@@ -239,7 +239,7 @@ public final class ArmiesOfGielinor extends wf {
                   nm.deliveredOpcode == 12) {
                   stackIn_119_0 = 96;
                   stackIn_120_1 = (12 == nm.deliveredOpcode);
-                  var2 = ea.$cfr$intArgs$a$72f70aa7c69d(stackIn_119_0, stackIn_120_1);
+                  var2 = CommunityTabGroup.decodeChatMessageWithIntGuard(stackIn_119_0, stackIn_120_1);
                   if (((ChatMessage) (var2)).channelId == 4) {
                     if (null != rd.field_j) {
                       NodeHashTable.a(-1, rd.field_j.battlefield.a(((ChatMessage) (var2)).displayName, (byte) -64));
@@ -248,7 +248,7 @@ public final class ArmiesOfGielinor extends wf {
                       NodeHashTable.a(-1, SectorCacheStore.field_a.battlefield.a(((ChatMessage) (var2)).displayName, (byte) -64));
                     }
                   }
-                  MapLayout.a((ChatMessage) (var2), -1);
+                  MapLayout.acceptReceivedChatMessage((ChatMessage) (var2), -1);
                   continue;
                 }
                 if (nm.deliveredOpcode == 74) {
@@ -1309,7 +1309,7 @@ public final class ArmiesOfGielinor extends wf {
           SocialListPanel.l(-8291);
           ClientContextMenu.a(-97);
           ReportAbuseDialog.m(73);
-          ea.a(-47);
+          CommunityTabGroup.a(-47);
           bn.a(29022);
           lm.a(1638);
           ki.a((byte) 117);
@@ -2313,7 +2313,7 @@ public final class ArmiesOfGielinor extends wf {
           if (!ta.field_L) {
             dh.field_k = GameplayController.a("lobby_game_logo", (byte) 51, "basic", iw.field_l);
             QuickChatPhrase.a(var16, bs.field_b, (byte) 53, MoveAttackRequest.field_B, 4, gg.field_K, ResourceRequest.field_A, CipherPacketBuffer.field_A, pf.field_a, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, true, pf.field_a.length, ku.field_L, km.field_c, CorpseConditionMarker.field_w, ki.field_d, var16);
-            la.b((byte) 30, 200);
+            la.initializeChatHistory((byte) 30, 200);
             ps.a(124, ResourceRequest.field_A, gg.field_K);
           }
           sh.field_j = null;

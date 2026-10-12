@@ -3,7 +3,7 @@
  */
 final class rv {
     static String field_a;
-    static int[] field_b;
+    static int[] responsePhraseIds;
 
     final static java.net.URL a(String param0, String param1, int param2, int param3, java.net.URL param4) {
         try {
@@ -145,7 +145,7 @@ final class rv {
           field_a = (String) null;
         }
         field_a = null;
-        field_b = null;
+        responsePhraseIds = null;
     }
 
     final static void a(boolean param0, int param1, int param2, int param3) {

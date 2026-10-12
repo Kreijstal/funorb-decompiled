@@ -4,7 +4,7 @@
 final class ChatMessage {
     static String field_l;
     static int field_c;
-    int identityWord1;
+    int privateMessageIdLow24;
     String accountName;
     static String[] field_i;
     int chatIconId;
@@ -18,10 +18,10 @@ final class ChatMessage {
     ClientUiComponent rowComponent;
     static String field_o;
     long accountId;
-    int[] quickChatValues;
+    int[] responsePhraseIds;
     String channelLabel;
     String text;
-    int identityWord0;
+    int privateMessageIdHigh16;
     static int field_j;
     int contextId;
     boolean systemMessage;
@@ -77,23 +77,23 @@ final class ChatMessage {
         }
     }
 
-    ChatMessage(boolean retainQuickChatValues) {
-        this.text = dg.field_b;
-        if (retainQuickChatValues) {
-          this.quickChatValues = hv.field_R;
+    ChatMessage(boolean retainResponsePhraseIds) {
+        this.text = dg.decodedChatText;
+        if (retainResponsePhraseIds) {
+          this.responsePhraseIds = hv.decodedChatResponsePhraseIds;
         } else {
-          this.quickChatValues = null;
+          this.responsePhraseIds = null;
         }
-        this.identityWord0 = rh.field_e;
-        this.channelId = MatchConditionEntry.field_k;
-        this.channelLabel = BestScoreStrategy.field_k;
-        this.systemMessage = DualNodeDeque.field_b;
-        this.accountName = gp.field_b;
-        this.displayName = qd.field_L;
-        this.contextId = ut.field_eb;
-        this.identityWord1 = th.field_c;
-        this.chatIconId = hc.field_e;
-        this.accountId = gk.field_I;
+        this.privateMessageIdHigh16 = rh.decodedPrivateMessageIdHigh16;
+        this.channelId = MatchConditionEntry.decodedChatChannel;
+        this.channelLabel = BestScoreStrategy.decodedChatChannelLabel;
+        this.systemMessage = DualNodeDeque.decodedChatSystemMessage;
+        this.accountName = gp.decodedChatAccountName;
+        this.displayName = qd.decodedChatDisplayName;
+        this.contextId = ut.decodedChatContextId;
+        this.privateMessageIdLow24 = th.decodedPrivateMessageIdLow24;
+        this.chatIconId = hc.decodedChatIconId;
+        this.accountId = gk.decodedChatAccountId;
     }
 
     ChatMessage(int channelId, String accountName, int contextId, String channelLabel, String text) {
@@ -105,11 +105,11 @@ final class ChatMessage {
           this.channelLabel = channelLabel;
           this.contextId = contextId;
           this.chatIconId = 0;
-          this.quickChatValues = null;
-          this.identityWord1 = 0;
+          this.responsePhraseIds = null;
+          this.privateMessageIdLow24 = 0;
           this.channelId = channelId;
           this.text = text;
-          this.identityWord0 = 0;
+          this.privateMessageIdHigh16 = 0;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mo.<init>(" + channelId + ',' + (accountName != null ? "{...}" : "null") + ',' + contextId + ',' + (channelLabel != null ? "{...}" : "null") + ',' + (text != null ? "{...}" : "null") + ')');
         }

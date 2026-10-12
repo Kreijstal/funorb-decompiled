@@ -4895,7 +4895,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_SPELLS");
                 if (null != var2) {
-                  ea.field_b = uu.a(var2, (byte) 13);
+                  CommunityTabGroup.field_b = uu.a(var2, (byte) 13);
                 }
                 var2 = fk.a(false, "TTREED_POTIONS");
                 if (null != var2) {

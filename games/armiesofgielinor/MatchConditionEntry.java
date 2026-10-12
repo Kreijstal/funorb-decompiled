@@ -7,7 +7,7 @@ final class MatchConditionEntry extends IntrusiveNode {
     static int[][] field_o;
     static CombatViewTransition field_p;
     static IndexedSprite field_n;
-    static int field_k;
+    static int decodedChatChannel;
 
     final static int a(int param0, byte param1) {
         RuntimeException var2 = null;

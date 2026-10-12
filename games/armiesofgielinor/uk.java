@@ -21,10 +21,10 @@ final class uk extends qc {
           if (param0 != 22963) {
             uk.d(-122);
           }
-          for (var1_int = 0; var1_int < lk.field_h; var1_int++) {
-            an.field_F[var1_int] = null;
+          for (var1_int = 0; var1_int < lk.chatHistorySize; var1_int++) {
+            an.chatHistory[var1_int] = null;
           }
-          lk.field_h = 0;
+          lk.chatHistorySize = 0;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "uk.B(" + param0 + ')');
         }

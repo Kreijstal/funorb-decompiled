@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class th {
-    static int field_c;
+    static int decodedPrivateMessageIdLow24;
     static ko[] field_b;
     static int socialListState;
 

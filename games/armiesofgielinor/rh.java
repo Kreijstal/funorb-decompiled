@@ -6,7 +6,7 @@ final class rh implements Runnable {
     volatile boolean field_f;
     volatile boolean field_a;
     PlatformTaskService field_b;
-    static int field_e;
+    static int decodedPrivateMessageIdHigh16;
     volatile rc[] field_d;
     static String field_g;
 

@@ -234,7 +234,7 @@ final class TrianglePulse {
           } else {
             room.completedDurationMillis = packet.readInt(1);
           }
-          room.ownerAccountId = packet.j((byte) -2);
+          room.ownerAccountId = packet.readLong((byte) -2);
           namesStart = packet.position;
           if (obfuscationGuard < 73) {
             return;

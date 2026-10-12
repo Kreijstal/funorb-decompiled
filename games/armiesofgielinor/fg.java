@@ -341,7 +341,7 @@ final class fg extends IntrusiveNode {
                       param1.writeByte(1, 4);
                     } else {
                       param1.writeByte(1, 2);
-                      param1.b((String) (var10), param0 + 13851);
+                      param1.writeNullTerminatedString((String) (var10), param0 + 13851);
                     }
                   } else {
                     if (4 == var6_int) {

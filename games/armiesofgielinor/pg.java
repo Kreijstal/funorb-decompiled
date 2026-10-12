@@ -129,7 +129,7 @@ final class pg {
           }
           tn.activeContextMenu.addRoomAdmissionActions((byte) 68);
           tn.activeContextMenu.addPlayerAdmissionActions(obfuscationGuard + 23899, false);
-          tn.activeContextMenu.addSocialActions(message.quickChatValues, 7, message.channelId);
+          tn.activeContextMenu.addSocialActions(message.responsePhraseIds, 7, message.channelId);
           tn.activeContextMenu.addReportAction((byte) 92);
           tn.activeContextMenu.addChatFilterActions(message, 0);
           var13 = tn.activeContextMenu;

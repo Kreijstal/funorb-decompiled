@@ -8,7 +8,7 @@ final class SpellCastEvent extends GameEvent {
     private int castingPlayer;
     static ClientUiComponent field_D;
     int selectionMode;
-    static ea field_E;
+    static CommunityTabGroup field_E;
 
     final String describeEvent(byte obfuscationGuard, boolean verbose) {
         int var3 = 3 % ((53 - obfuscationGuard) / 51);
@@ -57,7 +57,7 @@ final class SpellCastEvent extends GameEvent {
           co.field_f = bt.field_g - (var1_int >> 1);
           CachedArchiveProvider.field_h = var1_int + co.field_f;
           if (param0 != 15) {
-            field_E = (ea) null;
+            field_E = (CommunityTabGroup) null;
           }
           InstructionsPanel.field_r = -(DualLinkedNode.field_r >> 1) + lm.field_g;
           var2 = InstructionsPanel.field_r;

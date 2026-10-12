@@ -9,7 +9,7 @@ final class gk extends nl {
     private NodeDeque field_M;
     static String field_N;
     static String[] field_O;
-    static long field_I;
+    static long decodedChatAccountId;
     static String field_P;
 
     public gk() {
@@ -24,7 +24,7 @@ final class gk extends nl {
         }
         NodeIterator var5 = new NodeIterator(this.field_M);
         if (param2 > -82) {
-          field_I = -21L;
+          decodedChatAccountId = -21L;
         }
         Widget var6 = (Widget) (var5.last(50));
         while (var6 != null) {
@@ -190,7 +190,7 @@ final class gk extends nl {
         if (param0 == -1848) {
           return null;
         }
-        field_I = -68L;
+        decodedChatAccountId = -68L;
         return null;
     }
 

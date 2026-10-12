@@ -167,7 +167,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_x_joined_your_game");
                 if (var2 != null) {
-                  ea.field_d = uu.a(var2, (byte) 24);
+                  CommunityTabGroup.field_d = uu.a(var2, (byte) 24);
                 }
                 var2 = NodeIterator.a(50, "mu_x_entered_other_game");
                 if (var2 != null) {
@@ -1609,7 +1609,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "create_alert_passchars");
                 if (null != var2) {
-                  ea.field_c = uu.a(var2, (byte) 13);
+                  CommunityTabGroup.field_c = uu.a(var2, (byte) 13);
                 }
                 var2 = NodeIterator.a(50, "create_alert_passrepeated");
                 if (var2 != null) {

@@ -129,14 +129,14 @@ final class la {
         }
     }
 
-    final static void b(byte param0, int param1) {
-        if (param0 != 30) {
+    final static void initializeChatHistory(byte obfuscationGuard, int categoryLimit) {
+        if (obfuscationGuard != 30) {
           la.openPublicTextChat(104);
         }
-        lk.field_h = 0;
-        MoveAttackRequest.field_D = new int[3];
-        an.field_F = new ChatMessage[param1 * 15];
-        AnimationPlayer.field_g = param1;
+        lk.chatHistorySize = 0;
+        MoveAttackRequest.chatHistoryPriorityCounts = new int[3];
+        an.chatHistory = new ChatMessage[categoryLimit * 15];
+        AnimationPlayer.chatHistoryCategoryLimit = categoryLimit;
     }
 
     final void a(byte param0) {

@@ -130,14 +130,14 @@ final class po {
           }
           return true;
         }
-        if (rb.canOpenQuickChatResponses(ma.field_ab, WeightedScoreStrategy.field_h, -17231, no.field_S, rv.field_b)) {
-          if (2 == no.field_S) {
-            return QuickChatCommandDefinition.openQuickChatResponses(obfuscationGuard ^ 6251, WeightedScoreStrategy.field_h, rv.field_b, ma.field_ab, no.field_S);
+        if (rb.canOpenQuickChatResponses(ma.responseTargetAccountId, WeightedScoreStrategy.responseTargetAccountName, -17231, no.responseTargetChannel, rv.responsePhraseIds)) {
+          if (2 == no.responseTargetChannel) {
+            return QuickChatCommandDefinition.openQuickChatResponses(obfuscationGuard ^ 6251, WeightedScoreStrategy.responseTargetAccountName, rv.responsePhraseIds, ma.responseTargetAccountId, no.responseTargetChannel);
           }
           if (var3 != 0) {
             return false;
           }
-          return QuickChatCommandDefinition.openQuickChatResponses(obfuscationGuard ^ 6251, WeightedScoreStrategy.field_h, rv.field_b, ma.field_ab, no.field_S);
+          return QuickChatCommandDefinition.openQuickChatResponses(obfuscationGuard ^ 6251, WeightedScoreStrategy.responseTargetAccountName, rv.responsePhraseIds, ma.responseTargetAccountId, no.responseTargetChannel);
         }
         if (obfuscationGuard != 6150) {
           field_a = (String) null;

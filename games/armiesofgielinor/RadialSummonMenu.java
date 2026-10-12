@@ -156,12 +156,12 @@ final class RadialSummonMenu {
     }
 
     final static void a(boolean param0, boolean param1) {
-        ij.field_w = !param1 ? new ea(ob.field_O, eb.field_c) : new ea(TeleportAction.field_x, uj.field_l);
+        ij.field_w = !param1 ? new CommunityTabGroup(ob.field_O, eb.field_c) : new CommunityTabGroup(TeleportAction.field_x, uj.field_l);
         if (param0) {
           return;
         }
         lk.field_a = new ClientUiComponent(0L, (ClientUiComponent) null);
-        lk.field_a.addChild(ij.field_w.field_a, 126);
+        lk.field_a.addChild(ij.field_w.tabs, 126);
         lk.field_a.addChild(SocialListPanel.field_Lb, 97);
         ta.field_R = new ClientUiComponent(0L, ArchiveIndex.field_b);
         df.field_K = new ClientUiComponent(0L, (ClientUiComponent) null);

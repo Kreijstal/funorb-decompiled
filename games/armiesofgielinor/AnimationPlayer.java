@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AnimationPlayer {
-    static int field_g;
+    static int chatHistoryCategoryLimit;
     static int pendingJoinRequestCount;
     private int completedLoops;
     private AnimationSequence[] scheduledSequences;

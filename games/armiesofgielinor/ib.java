@@ -41,7 +41,7 @@ final class ib extends mk {
             return stackIn_7_0;
           }
           if (ab.a(var5, 0)) {
-            stackIn_11_0 = ea.field_c;
+            stackIn_11_0 = CommunityTabGroup.field_c;
             return stackIn_11_0;
           }
           if (ph.a(var5, (byte) 113)) {

@@ -4,13 +4,13 @@
 final class gp {
     static String[] field_d;
     static java.awt.Image field_e;
-    static String field_b;
+    static String decodedChatAccountName;
     static String field_a;
     static String field_c;
     private static String field_z;
 
     public static void a(byte param0) {
-        field_b = null;
+        decodedChatAccountName = null;
         field_e = null;
         field_d = null;
         if (param0 >= 69) {

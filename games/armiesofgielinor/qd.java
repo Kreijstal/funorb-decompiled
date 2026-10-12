@@ -8,11 +8,11 @@ final class qd extends tj implements nq, he {
     private hv field_F;
     private oe field_H;
     private fw field_M;
-    static String field_L;
+    static String decodedChatDisplayName;
     static String field_J;
 
     public static void k(int param0) {
-        field_L = null;
+        decodedChatDisplayName = null;
         chatRecipientName = null;
         activeQuickChatMenu = null;
         if (param0 != -15) {
@@ -221,7 +221,7 @@ final class qd extends tj implements nq, he {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 11) {
-            field_L = (String) null;
+            decodedChatDisplayName = (String) null;
           }
           if (param4 != this.field_M) {
             return;

@@ -395,7 +395,7 @@ final class j {
           stackIn_76_1 = true;
           stackIn_77_2 = (param2) && (!param1) && (vk.field_f);
           ((ClientUiComponent) (Object) stackIn_76_0).updateInput(stackIn_76_1, stackIn_77_2);
-          ij.field_w.field_a.advanceTabSelection(10000);
+          ij.field_w.tabs.advanceTabSelection(10000);
           if (null != no.roomSetup) {
             if (0 != SocialListPanel.field_Lb.pressedButton) {
               lu.a(-127, param3);

@@ -29,12 +29,12 @@ final class DeployEvent extends GameEvent {
           GlobalSpell.field_f.addChild(t.field_g, 84);
         }
         GlobalSpell.field_f.addChild(IconTextComponent.field_Kb, 104);
-        SpellCastEvent.field_E = new ea(ClientConnectionState.field_c, GlobalSpell.field_f);
+        SpellCastEvent.field_E = new CommunityTabGroup(ClientConnectionState.field_c, GlobalSpell.field_f);
         if (param0 != 14570) {
           return;
         }
         no.field_T = new ClientUiComponent(0L, (ClientUiComponent) null);
-        no.field_T.addChild(SpellCastEvent.field_E.field_a, 127);
+        no.field_T.addChild(SpellCastEvent.field_E.tabs, 127);
         no.field_T.addChild(cp.field_d, 39);
         ak.b(false);
     }

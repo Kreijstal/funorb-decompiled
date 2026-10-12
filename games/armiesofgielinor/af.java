@@ -45,8 +45,8 @@ abstract class af {
           var3_ref = "";
           if (2 == message.channelId) {
             if (!message.systemMessage) {
-              if (0 == message.identityWord0 &&
-                message.identityWord1 == 0) {
+              if (0 == message.privateMessageIdHigh16 &&
+                message.privateMessageIdLow24 == 0) {
                 var3_ref = fo.a(obfuscationGuard + 4697, ta.field_Q, new String[]{(String) (var2)});
               } else {
                 var3_ref = fo.a(obfuscationGuard + 4697, ov.field_l, new String[]{(String) (var2)});

@@ -63,7 +63,7 @@ final class bk {
           if (var7 == null) {
             var7 = "";
           }
-          vl.outgoingPacket.b(var7, param3 + 13851);
+          vl.outgoingPacket.writeNullTerminatedString(var7, param3 + 13851);
           if (DropdownSelector.field_P != null) {
             vl.outgoingPacket.a(DropdownSelector.field_P, 413740432);
           }

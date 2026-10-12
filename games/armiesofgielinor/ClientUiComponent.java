@@ -558,7 +558,7 @@ class ClientUiComponent extends ClientUiNode {
             stackIn_4_0 = InstructionsPanel.field_D;
           }
           AnimationSequence.a(stackIn_4_0, -106);
-          ij.field_w.a(-40 + lk.field_a.height - 2, (byte) -125, 0, lk.field_a.width, 0);
+          ij.field_w.setLayout(-40 + lk.field_a.height - 2, (byte) -125, 0, lk.field_a.width, 0);
           gg.field_E.setBounds(jn.field_d, -20500, eb.field_c.width, 0, 0);
           stackIn_6_0 = di.field_l;
           stackIn_6_1 = 18;

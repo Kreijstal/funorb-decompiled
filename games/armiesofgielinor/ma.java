@@ -7,7 +7,7 @@ final class ma extends fn implements eg {
     private n field_bb;
     static String field_Y;
     static String field_X;
-    static long field_ab;
+    static long responseTargetAccountId;
 
     final void d(byte param0) {
         if (param0 >= -114) {

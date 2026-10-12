@@ -3,7 +3,7 @@
  */
 final class BestScoreStrategy extends AiPlanningStrategy {
     static RgbSprite field_m;
-    static String field_k;
+    static String decodedChatChannelLabel;
     static boolean field_l;
     static int[][][] unitAnimationVariants;
     static String field_h;
@@ -199,7 +199,7 @@ final class BestScoreStrategy extends AiPlanningStrategy {
     public static void c(byte param0) {
         int var1 = 13 % ((-54 - param0) / 57);
         field_h = null;
-        field_k = null;
+        decodedChatChannelLabel = null;
         field_m = null;
         unitAnimationVariants = (int[][][]) null;
         field_i = null;

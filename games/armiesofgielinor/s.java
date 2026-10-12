@@ -48,7 +48,7 @@ final class s {
             return stackIn_2_0;
           }
           if (2 == param2) {
-            stackIn_6_0 = fo.a(4800, ea.field_d, new String[]{param1});
+            stackIn_6_0 = fo.a(4800, CommunityTabGroup.field_d, new String[]{param1});
             return stackIn_6_0;
           }
           if (param2 == 3) {

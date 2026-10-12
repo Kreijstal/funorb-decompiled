@@ -45,7 +45,7 @@ final class ta extends nl {
         field_R = null;
     }
 
-    final static void a(String param0, int param1, int param2, String param3, String param4, int param5) {
+    final static void appendSystemChatMessage(String channelLabel, int channelId, int obfuscationGuard, String accountName, String text, int contextId) {
         ChatMessage var6 = null;
         RuntimeException var6_ref = null;
         RuntimeException stackIn_5_0 = null;
@@ -57,9 +57,9 @@ final class ta extends nl {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new ChatMessage(param1, param3, param5, param0, param4);
-          SectorCacheStore.a(param2 ^ -19023, var6);
-          if (param2 == -18119) {
+          var6 = new ChatMessage(channelId, accountName, contextId, channelLabel, text);
+          SectorCacheStore.appendChatHistory(obfuscationGuard ^ -19023, var6);
+          if (obfuscationGuard == -18119) {
             return;
           }
           field_N = 8;
@@ -69,24 +69,24 @@ final class ta extends nl {
           var6_ref = decompiledCaughtException;
           stackIn_5_0 = var6_ref;
           stackIn_5_1 = new StringBuilder().append("ta.A(");
-          if (param0 == null) {
+          if (channelLabel == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
           }
-          stackIn_8_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_8_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(channelId).append(',').append(obfuscationGuard).append(',');
+          if (accountName == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
           stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-          if (param4 == null) {
+          if (text == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param5).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(contextId).append(')').toString());
         }
     }
 

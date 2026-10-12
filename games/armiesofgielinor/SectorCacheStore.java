@@ -61,70 +61,70 @@ final class SectorCacheStore {
     final static void a(int param0) {
         if (param0 != 2858) {
           ChatMessage var2 = (ChatMessage) null;
-          SectorCacheStore.a(-95, (ChatMessage) null);
+          SectorCacheStore.appendChatHistory(-95, (ChatMessage) null);
         }
         ng.x(90);
     }
 
-    final static void a(int param0, ChatMessage param1) {
-        int dupTemp$3 = 0;
-        int dupTemp$0 = 0;
-        int var3 = 0;
-        int incrementValue$2 = 0;
-        int fieldTemp$1 = 0;
+    final static void appendChatHistory(int obfuscationGuard, ChatMessage message) {
+        int existingPriority = 0;
+        int incomingPriority = 0;
+        int readIndex = 0;
+        int destinationIndex = 0;
+        int appendIndex = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
+        int priorityIndex = 0;
         RuntimeException var2 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var2_intLifetime1;
-        int var2_intLifetime2;
-        var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int messagePriority = 0;
+        int obfuscationControl = 0;
+        int countIndex;
+        int writeIndex;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          for (var2_int = 0; var2_int < 3; var2_int++) {
-            MoveAttackRequest.field_D[var2_int] = 0;
+          for (priorityIndex = 0; priorityIndex < 3; priorityIndex++) {
+            MoveAttackRequest.chatHistoryPriorityCounts[priorityIndex] = 0;
           }
-          for (var2_intLifetime1 = 0; var2_intLifetime1 < lk.field_h; var2_intLifetime1++) {
-            if (param1.channelId == an.field_F[var2_intLifetime1].channelId) {
-              dupTemp$3 = an.field_F[var2_intLifetime1].getFilterPriority(true);
-              MoveAttackRequest.field_D[dupTemp$3] = MoveAttackRequest.field_D[dupTemp$3] + 1;
+          for (countIndex = 0; countIndex < lk.chatHistorySize; countIndex++) {
+            if (message.channelId == an.chatHistory[countIndex].channelId) {
+              existingPriority = an.chatHistory[countIndex].getFilterPriority(true);
+              MoveAttackRequest.chatHistoryPriorityCounts[existingPriority] = MoveAttackRequest.chatHistoryPriorityCounts[existingPriority] + 1;
             }
           }
-          dupTemp$0 = param1.getFilterPriority(true);
-          MoveAttackRequest.field_D[dupTemp$0] = MoveAttackRequest.field_D[dupTemp$0] + 1;
-          var2_intLifetime2 = 0;
-          for (var3 = 0; var3 < lk.field_h; var3++) {
+          incomingPriority = message.getFilterPriority(true);
+          MoveAttackRequest.chatHistoryPriorityCounts[incomingPriority] = MoveAttackRequest.chatHistoryPriorityCounts[incomingPriority] + 1;
+          writeIndex = 0;
+          for (readIndex = 0; readIndex < lk.chatHistorySize; readIndex++) {
             boolean decompiledFrameRemainder0 = true;
-            if (~param1.channelId == ~an.field_F[var3].channelId) {
-              var4 = an.field_F[var3].getFilterPriority(true);
-              if (MoveAttackRequest.field_D[var4] > AnimationPlayer.field_g) {
-                MoveAttackRequest.field_D[var4] = MoveAttackRequest.field_D[var4] - 1;
+            if (~message.channelId == ~an.chatHistory[readIndex].channelId) {
+              messagePriority = an.chatHistory[readIndex].getFilterPriority(true);
+              if (MoveAttackRequest.chatHistoryPriorityCounts[messagePriority] > AnimationPlayer.chatHistoryCategoryLimit) {
+                MoveAttackRequest.chatHistoryPriorityCounts[messagePriority] = MoveAttackRequest.chatHistoryPriorityCounts[messagePriority] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }
             if (decompiledFrameRemainder0) {
-              incrementValue$2 = var2_intLifetime2;
-              var2_intLifetime2++;
-              an.field_F[incrementValue$2] = an.field_F[var3];
+              destinationIndex = writeIndex;
+              writeIndex++;
+              an.chatHistory[destinationIndex] = an.chatHistory[readIndex];
             }
           }
-          lk.field_h = var2_intLifetime2;
-          if (param0 != 3208) {
+          lk.chatHistorySize = writeIndex;
+          if (obfuscationGuard != 3208) {
             field_k = (String) null;
           }
-          fieldTemp$1 = lk.field_h;
-          lk.field_h = lk.field_h + 1;
-          an.field_F[fieldTemp$1] = param1;
+          appendIndex = lk.chatHistorySize;
+          lk.chatHistorySize = lk.chatHistorySize + 1;
+          an.chatHistory[appendIndex] = message;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_24_0 = var2;
-          stackIn_24_1 = new StringBuilder().append("bc.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_24_1 = new StringBuilder().append("bc.E(").append(obfuscationGuard).append(',');
+          if (message == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";

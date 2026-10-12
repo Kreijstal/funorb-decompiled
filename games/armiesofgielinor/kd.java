@@ -660,7 +660,7 @@ final class kd extends tj implements nq, he, mf {
                 var5Lifetime1 = fq.requestRemoveIgnoredAccount(param1, var4, false, var4);
               }
               if (var5Lifetime1 != null) {
-                ta.a((String) null, 2, param0 ^ -18117, var4, (String) (var5Lifetime1), 0);
+                ta.appendSystemChatMessage((String) null, 2, param0 ^ -18117, var4, (String) (var5Lifetime1), 0);
               }
             }
             EffectPresentation.field_e = null;

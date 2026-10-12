@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ij extends dv {
     static String field_A;
-    static ea field_w;
+    static CommunityTabGroup field_w;
     static String field_B;
     static String field_C;
     static int field_y;

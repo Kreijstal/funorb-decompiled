@@ -10,7 +10,7 @@ final class DualNodeDeque {
     static String field_h;
     private DualLinkedNode sentinel;
     static int field_f;
-    static boolean field_b;
+    static boolean decodedChatSystemMessage;
     static String field_a;
     private DualLinkedNode traversalCursor;
 

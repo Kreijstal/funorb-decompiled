@@ -2377,7 +2377,7 @@ final class InstructionsPanel {
             }
             if (mh.field_a == ov.connectionState &&
               es.receivePacketBytes(-115, 8)) {
-              ts.field_h = ByteStorage.incomingPacket.j((byte) -2);
+              ts.field_h = ByteStorage.incomingPacket.readLong((byte) -2);
               ByteStorage.incomingPacket.position = 0;
               bk.a(param2, param5, CampaignRewardPreview.field_g, 0, param1);
               ov.connectionState = NetworkResourceRequest.field_D;
@@ -2414,7 +2414,7 @@ final class InstructionsPanel {
             }
             if (oq.field_m == ov.connectionState &&
               jh.isPacketPayloadReady(2)) {
-              dc.field_o = ByteStorage.incomingPacket.j((byte) -2);
+              dc.field_o = ByteStorage.incomingPacket.readLong((byte) -2);
               wl.field_I = param3;
               BufferedSocket.field_j = ByteStorage.incomingPacket.readUnsignedByte(0);
               tf.field_l = ByteStorage.incomingPacket.readUnsignedByte(0);

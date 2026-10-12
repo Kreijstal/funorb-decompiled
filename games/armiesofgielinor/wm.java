@@ -117,11 +117,11 @@ final class wm {
         var4 = null;
         var5 = 0;
         var6 = 0;
-        for (var7 = -1 + lk.field_h; var7 >= 0; var7--) {
-          var8_ref_mo = an.field_F[var7];
+        for (var7 = -1 + lk.chatHistorySize; var7 >= 0; var7--) {
+          var8_ref_mo = an.chatHistory[var7];
           var9 = 0;
           if (!NodeIterator.field_a &&
-            AnimationPlayer.field_g > var5) {
+            AnimationPlayer.chatHistoryCategoryLimit > var5) {
             var10_int = kp.getChatFilter(var8_ref_mo.channelId, -125);
             if (var8_ref_mo.getFilterPriority(true) >= var10_int && (var8_ref_mo.systemMessage ||
               !IndexedSpriteBase.isIgnoredAccount(var8_ref_mo.accountName, -3404))) {
@@ -154,8 +154,8 @@ final class wm {
         if (param2 <= 126) {
           wm.a(44);
         }
-        while (lk.field_h > var8) {
-          var9_ref_mo = an.field_F[var8];
+        while (lk.chatHistorySize > var8) {
+          var9_ref_mo = an.chatHistory[var8];
           if (null != var9_ref_mo.rowComponent) {
             vq.field_a.content.addChild(var9_ref_mo.rowComponent, 65);
             var9_ref_mo.rowComponent.setBounds(param0, -20500, var9_ref_mo.rowComponent.getPreferredWidth(-49), var7Lifetime1, param1);

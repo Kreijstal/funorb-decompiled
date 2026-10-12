@@ -102,7 +102,7 @@ final class bn {
           stackIn_68_1 = true;
           stackIn_69_2 = (param0) && (!param1) && (bw.field_g);
           ((ClientUiComponent) (Object) stackIn_68_0).updateInput(stackIn_68_1, stackIn_69_2);
-          SpellCastEvent.field_E.field_a.advanceTabSelection(10000);
+          SpellCastEvent.field_E.tabs.advanceTabSelection(10000);
           if (cp.field_d.pressedButton != 0) {
             cg.field_a = true;
           }
@@ -139,7 +139,7 @@ final class bn {
           stackIn_19_1 = true;
           stackIn_20_2 = (param0) && (!param1) && (bw.field_g);
           ((ClientUiComponent) (Object) stackIn_19_0).updateInput(stackIn_19_1, stackIn_20_2);
-          SpellCastEvent.field_E.field_a.advanceTabSelection(10000);
+          SpellCastEvent.field_E.tabs.advanceTabSelection(10000);
           if (cp.field_d.pressedButton != 0) {
             cg.field_a = true;
           }

@@ -61,7 +61,7 @@ final class se {
           packet.position = packet.position + 1;
           payloadStart = packet.position;
           packet.writeByte(1, 2);
-          packet.b(name, 13851);
+          packet.writeNullTerminatedString(name, 13851);
           packet.writeByteLengthPrefix(packet.position - payloadStart, 5930);
           stackIn_22_0 = null;
           return (String) (stackIn_22_0);

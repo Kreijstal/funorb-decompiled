@@ -77,7 +77,7 @@ final class dw {
             return 1;
           }
           if (var3 == 81) {
-            var5 = this.field_b.d((byte) -13);
+            var5 = this.field_b.readUnsignedMedium((byte) -13);
             var4 -= 3;
             var6 = this.field_i[param0];
             this.field_g = this.field_g + (long)var6 * (long)(this.field_e - var5);

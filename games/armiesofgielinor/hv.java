@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class hv extends fw {
-    static int[] field_R;
+    static int[] decodedChatResponsePhraseIds;
     private NodeDeque field_P;
     private String[] field_Q;
     static String field_O;
@@ -166,7 +166,7 @@ class hv extends fw {
 
     final void setBounds(int x, int width, int y, int obfuscationGuard, int height) {
         if (obfuscationGuard != 8192) {
-          field_R = (int[]) null;
+          decodedChatResponsePhraseIds = (int[]) null;
         }
         super.setBounds(x, width, y, obfuscationGuard ^ 0, height);
         this.a(-128);
@@ -178,7 +178,7 @@ class hv extends fw {
         if (!param0) {
           field_N = (rn) null;
         }
-        field_R = null;
+        decodedChatResponsePhraseIds = null;
     }
 
     String h(int param0) {

@@ -133,7 +133,7 @@ final class df extends tj implements fb, he {
             this.y = this.y + (5 + var7.getParagraphHeight(this.field_I, this.width - 40, var7.field_H));
           }
           var8 = bh.field_J;
-          var9 = ea.a(0, CombatEvent.d((byte) 34));
+          var9 = CommunityTabGroup.a(0, CombatEvent.d((byte) 34));
           if (var9 != CombatSandbox.field_j) {
             if (var9 == ps.field_y) {
               var8 = DualNodeDeque.field_h;

@@ -454,10 +454,10 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[-1 + (-param1 + this.position)] = (byte)param1;
     }
 
-    final long j(byte param0) {
+    final long readLong(byte obfuscationGuard) {
         long var2 = 4294967295L & (long)this.readInt(1);
         long var4 = 4294967295L & (long)this.readInt(1);
-        if (param0 != -2) {
+        if (obfuscationGuard != -2) {
           return 69L;
         }
         return (var2 << 32) + var4;
@@ -556,26 +556,26 @@ class PacketBuffer extends IntrusiveNode {
         return var3;
     }
 
-    final void b(String param0, int param1) {
+    final void writeNullTerminatedString(String text, int obfuscationGuard) {
         int var3_int = 0;
         CharSequence var5 = null;
         int fieldTemp$0 = 0;
         try {
-          var3_int = param0.indexOf('\0');
+          var3_int = text.indexOf('\0');
           if (var3_int >= 0) {
             throw new IllegalArgumentException("");
           }
-          if (param1 != 13851) {
+          if (obfuscationGuard != 13851) {
             byte[] var4 = (byte[]) null;
             this.writeBytes((byte[]) null, -81, 60, -69);
           }
-          var5 = (CharSequence) ((Object) param0);
-          this.position = this.position + GameplayController.a(this.payload, 0, var5, param0.length(), this.position, (byte) 114);
+          var5 = (CharSequence) ((Object) text);
+          this.position = this.position + GameplayController.a(this.payload, 0, var5, text.length(), this.position, (byte) 114);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vh.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vh.DA(" + (text != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -672,8 +672,8 @@ class PacketBuffer extends IntrusiveNode {
         throw new IllegalArgumentException();
     }
 
-    final int d(byte param0) {
-        if (param0 != -13) {
+    final int readUnsignedMedium(byte obfuscationGuard) {
+        if (obfuscationGuard != -13) {
           this.position = -28;
         }
         this.position = this.position + 3;

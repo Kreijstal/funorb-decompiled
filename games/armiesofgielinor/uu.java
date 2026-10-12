@@ -342,7 +342,7 @@ final class uu {
                 if (var16 != 0) {
                   so.field_d.inputEnabled = false;
                   if (so.field_d.hovered) {
-                    if (ij.field_w.field_a.activeTab != 0) {
+                    if (ij.field_w.tabs.activeTab != 0) {
                       ad.field_I = fo.a(4800, Battlefield.field_pb, new String[]{ob.field_O});
                       if (var19 != 0) {
                         ad.field_I = ResourceArchive.field_f;
@@ -431,7 +431,7 @@ final class uu {
           stackIn_183_1 = true;
           stackIn_184_2 = (param0) && (!param1) && (vk.field_f);
           ((ClientUiComponent) (Object) stackIn_183_0).updateInput(stackIn_183_1, stackIn_184_2);
-          ij.field_w.field_a.advanceTabSelection(param3 ^ 10000);
+          ij.field_w.tabs.advanceTabSelection(param3 ^ 10000);
           if (vu.currentRoom != null) {
             if (SocialListPanel.field_Lb.pressedButton != 0) {
               PointerInputHandler.writeRoomAdmissionCancellation(69, vu.currentRoom.getRoomId((byte) -68), param2);

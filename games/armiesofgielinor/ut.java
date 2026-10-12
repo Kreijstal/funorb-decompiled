@@ -13,7 +13,7 @@ final class ut extends sf implements he {
     static byte[][] field_W;
     private boolean field_jb;
     private ob field_gb;
-    static int field_eb;
+    static int decodedChatContextId;
     static String[] field_cb;
     static int field_fb;
     private fw[] field_kb;
@@ -575,7 +575,7 @@ final class ut extends sf implements he {
           var4 = new fw(param1, param2);
           var4.painter = (WidgetPainter) ((Object) new nu());
           if (param0 != 38) {
-            field_eb = 126;
+            decodedChatContextId = 126;
           }
           var5 = this.height - 46;
           var4.setBounds(15, -14 + (this.width - 16), var5, 8192, 30);

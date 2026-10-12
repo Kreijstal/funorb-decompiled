@@ -178,7 +178,7 @@ final class wd {
               var2 = fo.a(4800, pt.field_gb, new String[]{qd.chatRecipientName});
             }
             if (BattleTutorial.quickChatMenuVisible) {
-              ta.a((String) null, 2, -18119, (String) null, (String) (var2), 0);
+              ta.appendSystemChatMessage((String) null, 2, -18119, (String) null, (String) (var2), 0);
               DelayedPacket.e(-3);
             }
           }
