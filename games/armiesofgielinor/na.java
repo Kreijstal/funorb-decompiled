@@ -33,7 +33,7 @@ final class na extends tj implements mf, he {
         var2.setBounds(20, 270, var3, 8192, 50);
         var3 += 50;
         this.a((byte) 10, var2);
-        var3 = var3 + (5 + this.a(-124, fq.field_k, ScrollContainer.field_Ob, 170, var3, this.field_P));
+        var3 = var3 + (5 + this.a(-124, MusicPatchEnvelope.field_k, ScrollContainer.field_Ob, 170, var3, this.field_P));
         this.field_O.setBounds(496 - var5 >> 1, var5, var3, 8192, 40);
         this.field_L.setBounds(var4 + 3, 60, var3 + 15, 8192, 40);
         this.field_L.field_x = (qo) (this);

@@ -171,9 +171,9 @@ final class ContextActionMenu extends ClientUiComponent {
           for (var2_int = 0; var2_int < param1.vertexCount; var2_int++) {
             param1.verticesY[var2_int] = 0;
           }
-          param1.field_R = ih.field_E;
-          param1.field_Z = ih.field_E;
-          param1.field_t = ih.field_E;
+          param1.field_R = MidiPcmStream.field_E;
+          param1.field_Z = MidiPcmStream.field_E;
+          param1.field_t = MidiPcmStream.field_E;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "np.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

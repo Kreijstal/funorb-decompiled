@@ -241,13 +241,13 @@ final class VertexNormal {
                 vu.isCurrentRoomOwner(false) &&
                 oh.localAccountId != var12.accountId) {
                 if (null != var12.admissionButton.text) {
-                  var26 = var12.admissionButton.getPreferredWidth(104) + mi.field_l * 2;
+                  var26 = var12.admissionButton.getPreferredWidth(104) + MusicPatchNode.field_l * 2;
                   var12.admissionButton.setBounds(jn.field_d, -20500, var26, var19, var25_int);
                   var25_int = var25_int + var26;
                 }
                 if (var12.cancelRejectButton.text != null) {
                   if (bu.field_a != param4) {
-                    var26Lifetime2 = var12.cancelRejectButton.getPreferredWidth(param1 - 328) + mi.field_l * 2;
+                    var26Lifetime2 = var12.cancelRejectButton.getPreferredWidth(param1 - 328) + MusicPatchNode.field_l * 2;
                   } else {
                     var26Lifetime2 = 40;
                   }
@@ -289,10 +289,10 @@ final class VertexNormal {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_fc.font.c(var23, -mi.field_l + (var12.width - mi.field_l));
+              var24_intLifetime1 = var12.field_fc.font.c(var23, -MusicPatchNode.field_l + (var12.width - MusicPatchNode.field_l));
               var12.field_fc.textOpacity = var12.notificationTicks * 256 / qd.lobbyNotificationDuration;
               var12.field_fc.text = var23;
-              var12.field_fc.setBounds(var24_intLifetime1 * jn.field_d, -20500, var12.width - 2 * mi.field_l, var19, mi.field_l);
+              var12.field_fc.setBounds(var24_intLifetime1 * jn.field_d, -20500, var12.width - 2 * MusicPatchNode.field_l, var19, MusicPatchNode.field_l);
               var19 = var19 + jn.field_d * var24_intLifetime1;
             }
             if (var9Lifetime1 == 0) {

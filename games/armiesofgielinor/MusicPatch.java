@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class io extends IntrusiveNode {
+final class MusicPatch extends IntrusiveNode {
     static int field_n;
     static String field_u;
     static int field_t;
-    int field_s;
+    int globalGain;
     static boolean field_w;
     static String field_p;
     static RgbSprite field_z;
-    byte[] field_x;
-    short[] field_r;
-    private int[] field_q;
-    fq[] field_v;
+    byte[] notePans;
+    short[] pitchAndLoopFlags;
+    private int[] sampleIds;
+    MusicPatchEnvelope[] envelopes;
     static String field_o;
-    byte[] field_l;
-    byte[] field_k;
+    byte[] noteGains;
+    byte[] exclusiveGroups;
     static RgbSprite[] field_m;
-    PcmSample[] field_y;
+    PcmSample[] samples;
 
     final static void a(AnimationFrameSet param0, byte param1) {
         try {
@@ -41,11 +41,11 @@ final class io extends IntrusiveNode {
         field_u = null;
     }
 
-    final void a(int param0) {
-        if (param0 <= 117) {
-          this.field_q = (int[]) null;
+    final void releaseSampleIds(int obfuscationGuard) {
+        if (obfuscationGuard <= 117) {
+          this.sampleIds = (int[]) null;
         }
-        this.field_q = null;
+        this.sampleIds = null;
     }
 
     final static boolean a(int[] param0, byte param1) {
@@ -61,7 +61,7 @@ final class io extends IntrusiveNode {
         try {
           if (param1 <= 106) {
             var4 = (int[]) null;
-            io.a((int[]) null, (byte) -31);
+            MusicPatch.a((int[]) null, (byte) -31);
           }
           var2_int = 0;
           while (true) {
@@ -89,87 +89,87 @@ final class io extends IntrusiveNode {
         }
     }
 
-    final boolean a(int param0, byte[] param1, int[] param2, SoundCache param3) {
-        int var8 = 0;
-        int stackIn_20_0 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_24_2 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_27_2 = null;
-        StringBuilder stackIn_29_1 = null;
-        String stackIn_30_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        Object var7 = null;
-        int var9 = 0;
-        int var10 = 0;
-        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final boolean prepareSamples(int obfuscationGuard, byte[] noteMask, int[] budget, SoundCache soundCache) {
+        int key = 0;
+        int resultSuccess = 0;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String maskDescription = null;
+        StringBuilder budgetContext = null;
+        String budgetDescription = null;
+        StringBuilder cacheContext = null;
+        String cacheDescription = null;
+        RuntimeException caughtFailure = null;
+        int prepared = 0;
+        RuntimeException failure = null;
+        int previousSampleId = 0;
+        Object sample = null;
+        int sampleId = 0;
+        int obfuscationControl = 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var5_int = 1;
-          var6 = 0;
-          var7 = null;
-          if (param0 != 11008) {
+          prepared = 1;
+          previousSampleId = 0;
+          sample = null;
+          if (obfuscationGuard != 11008) {
             field_o = (String) null;
           }
-          for (var8 = 0; var8 < 128; var8++) {
-            if (param1 == null ||
-              param1[var8] != 0) {
-              var9 = this.field_q[var8];
-              if (var9 != 0) {
-                if (var6 != var9) {
-                  var6 = var9;
-                  var9--;
-                  if ((1 & var9) != 0) {
-                    var7 = param3.loadMusicSampleById(param2, 36, var9 >> 2);
+          for (key = 0; key < 128; key++) {
+            if (noteMask == null ||
+              noteMask[key] != 0) {
+              sampleId = this.sampleIds[key];
+              if (sampleId != 0) {
+                if (previousSampleId != sampleId) {
+                  previousSampleId = sampleId;
+                  sampleId--;
+                  if ((1 & sampleId) != 0) {
+                    sample = soundCache.loadMusicSampleById(budget, 36, sampleId >> 2);
                   } else {
-                    var7 = param3.loadSoundEffectById(true, param2, var9 >> 2);
+                    sample = soundCache.loadSoundEffectById(true, budget, sampleId >> 2);
                   }
-                  if (var7 == null) {
-                    var5_int = 0;
+                  if (sample == null) {
+                    prepared = 0;
                   }
                 }
-                if (var7 != null) {
-                  this.field_y[var8] = (PcmSample) (var7);
-                  this.field_q[var8] = 0;
+                if (sample != null) {
+                  this.samples[key] = (PcmSample) (sample);
+                  this.sampleIds[key] = 0;
                 }
               }
             }
           }
-          stackIn_20_0 = var5_int;
-          return stackIn_20_0 != 0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_23_0 = var5;
-          stackIn_23_1 = new StringBuilder().append("io.C(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_24_2 = "null";
+          resultSuccess = prepared;
+          return resultSuccess != 0;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("io.C(").append(obfuscationGuard).append(',');
+          if (noteMask == null) {
+            maskDescription = "null";
           } else {
-            stackIn_24_2 = "{...}";
+            maskDescription = "{...}";
           }
-          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',');
-          if (param2 == null) {
-            stackIn_27_2 = "null";
+          budgetContext = ((StringBuilder) (Object) errorContext).append(maskDescription).append(',');
+          if (budget == null) {
+            budgetDescription = "null";
           } else {
-            stackIn_27_2 = "{...}";
+            budgetDescription = "{...}";
           }
-          stackIn_29_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',');
-          if (param3 == null) {
-            stackIn_30_2 = "null";
+          cacheContext = ((StringBuilder) (Object) budgetContext).append(budgetDescription).append(',');
+          if (soundCache == null) {
+            cacheDescription = "null";
           } else {
-            stackIn_30_2 = "{...}";
+            cacheDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) cacheContext).append(cacheDescription).append(')').toString());
         }
     }
 
-    io(byte[] param0) {
+    MusicPatch(byte[] packedPatch) {
         int var11_int = 0;
         int incrementValue$0 = 0;
-        fq dupTemp$8 = null;
+        MusicPatchEnvelope dupTemp$8 = null;
         int incrementValue$5 = 0;
         int var25_int = 0;
         int incrementValue$3 = 0;
@@ -191,11 +191,11 @@ final class io extends IntrusiveNode {
         byte[] var11 = null;
         int var12 = 0;
         int var13_int = 0;
-        fq[] var13 = null;
+        MusicPatchEnvelope[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
         byte[] var15 = null;
-        fq var15_ref = null;
+        MusicPatchEnvelope var15_ref = null;
         byte[] var16 = null;
         int var16_int = 0;
         int var17 = 0;
@@ -220,19 +220,19 @@ final class io extends IntrusiveNode {
         int var37 = 0;
         PacketBuffer var38 = null;
         byte[] var39 = null;
-        fq var40 = null;
+        MusicPatchEnvelope var40 = null;
         byte[] var41 = null;
         byte[] var42 = null;
         byte[] var43 = null;
         byte[] var44 = null;
-        fq var45 = null;
+        MusicPatchEnvelope var45 = null;
         byte[] var46 = null;
         byte[] var47 = null;
-        fq var48 = null;
-        fq var49 = null;
-        fq var50 = null;
-        fq var51 = null;
-        fq var52 = null;
+        MusicPatchEnvelope var48 = null;
+        MusicPatchEnvelope var49 = null;
+        MusicPatchEnvelope var50 = null;
+        MusicPatchEnvelope var51 = null;
+        MusicPatchEnvelope var52 = null;
         byte[] var53 = null;
         byte[] var54 = null;
         byte[] var55 = null;
@@ -296,14 +296,14 @@ final class io extends IntrusiveNode {
         int var30Lifetime1Lifetime2;
         int var31Lifetime1Lifetime1;
         try {
-          this.field_x = new byte[128];
-          this.field_y = new PcmSample[128];
-          this.field_k = new byte[128];
-          this.field_r = new short[128];
-          this.field_q = new int[128];
-          this.field_v = new fq[128];
-          this.field_l = new byte[128];
-          var38 = new PacketBuffer(param0);
+          this.notePans = new byte[128];
+          this.samples = new PcmSample[128];
+          this.exclusiveGroups = new byte[128];
+          this.pitchAndLoopFlags = new short[128];
+          this.sampleIds = new int[128];
+          this.envelopes = new MusicPatchEnvelope[128];
+          this.noteGains = new byte[128];
+          var38 = new PacketBuffer(packedPatch);
           for (var3 = 0; var38.payload[var3 + var38.position] != 0; var3++) {
           }
           var55 = new byte[var3];
@@ -362,20 +362,20 @@ final class io extends IntrusiveNode {
           } else {
             var12 = var9;
           }
-          var13 = new fq[var12];
+          var13 = new MusicPatchEnvelope[var12];
           for (var14Lifetime1 = 0; var14Lifetime1 < var13.length; var14Lifetime1++) {
-            dupTemp$8 = new fq();
+            dupTemp$8 = new MusicPatchEnvelope();
             var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
             var16_int = var38.readUnsignedByte(0);
             if (var16_int > 0) {
-              var15_ref.field_l = new byte[2 * var16_int];
+              var15_ref.volumeEnvelope = new byte[2 * var16_int];
             }
             var16_intLifetime1 = var38.readUnsignedByte(0);
             if (0 < var16_intLifetime1) {
-              var15_ref.field_g = new byte[2 + var16_intLifetime1 * 2];
-              var40.field_g[1] = (byte)64;
+              var15_ref.releaseEnvelope = new byte[2 + var16_intLifetime1 * 2];
+              var40.releaseEnvelope[1] = (byte)64;
             }
           }
           var14Lifetime2 = var38.readUnsignedByte(0);
@@ -408,12 +408,12 @@ final class io extends IntrusiveNode {
           var19Lifetime1 = 0;
           for (var20 = 0; 128 > var20; var20++) {
             var19Lifetime1 = var19Lifetime1 + var38.readUnsignedByte(0);
-            this.field_r[var20] = (short)var19Lifetime1;
+            this.pitchAndLoopFlags[var20] = (short)var19Lifetime1;
           }
           var19Lifetime2 = 0;
           for (var20Lifetime1 = 0; 128 > var20Lifetime1; var20Lifetime1++) {
             var19Lifetime2 = var19Lifetime2 + var38.readUnsignedByte(0);
-            this.field_r[var20Lifetime1] = (short)(this.field_r[var20Lifetime1] + (var19Lifetime2 << 8));
+            this.pitchAndLoopFlags[var20Lifetime1] = (short)(this.pitchAndLoopFlags[var20Lifetime1] + (var19Lifetime2 << 8));
           }
           var20Lifetime2 = 0;
           var21 = 0;
@@ -427,15 +427,15 @@ final class io extends IntrusiveNode {
               }
               var22 = var38.readVarInt(110);
             }
-            this.field_r[var23] = (short)(this.field_r[var23] + (rn.bitwiseAnd(-1 + var22, 2) << 14));
-            this.field_q[var23] = var22;
+            this.pitchAndLoopFlags[var23] = (short)(this.pitchAndLoopFlags[var23] + (rn.bitwiseAnd(-1 + var22, 2) << 14));
+            this.sampleIds[var23] = var22;
             var20Lifetime2--;
           }
           var20Lifetime3 = 0;
           var21Lifetime1 = 0;
           var23Lifetime1 = 0;
           for (var24 = 0; var24 < 128; var24++) {
-            if (this.field_q[var24] != 0) {
+            if (this.sampleIds[var24] != 0) {
               if (var20Lifetime3 == 0) {
                 incrementValue$5 = var5Lifetime1;
                 var5Lifetime1++;
@@ -447,14 +447,14 @@ final class io extends IntrusiveNode {
                 }
               }
               var20Lifetime3--;
-              this.field_k[var24] = (byte)var23Lifetime1;
+              this.exclusiveGroups[var24] = (byte)var23Lifetime1;
             }
           }
           var21Lifetime2 = 0;
           var20Lifetime4 = 0;
           var24Lifetime1 = 0;
           for (var25_int = 0; var25_int < 128; var25_int++) {
-            if (this.field_q[var25_int] != 0) {
+            if (this.sampleIds[var25_int] != 0) {
               if (var20Lifetime4 == 0) {
                 incrementValue$3 = var8Lifetime1;
                 var8Lifetime1++;
@@ -466,14 +466,14 @@ final class io extends IntrusiveNode {
                 }
               }
               var20Lifetime4--;
-              this.field_x[var25_int] = (byte)var24Lifetime1;
+              this.notePans[var25_int] = (byte)var24Lifetime1;
             }
           }
           var21Lifetime3 = 0;
           var20Lifetime5 = 0;
           var25 = null;
           for (var26 = 0; var26 < 128; var26++) {
-            if (0 != this.field_q[var26]) {
+            if (0 != this.sampleIds[var26]) {
               if (var20Lifetime5 == 0) {
                 var25 = var13[var53[var21Lifetime3]];
                 if (var21Lifetime3 < var57.length) {
@@ -482,7 +482,7 @@ final class io extends IntrusiveNode {
                   var20Lifetime5 = -1;
                 }
               }
-              this.field_v[var26] = (fq) (var25);
+              this.envelopes[var26] = (MusicPatchEnvelope) (var25);
               var20Lifetime5--;
             }
           }
@@ -496,24 +496,24 @@ final class io extends IntrusiveNode {
               } else {
                 var20Lifetime6 = var18[var21Lifetime4++];
               }
-              if (this.field_q[var27] > 0) {
+              if (this.sampleIds[var27] > 0) {
                 var26Lifetime1 = var38.readUnsignedByte(0) + 1;
               }
             }
-            this.field_l[var27] = (byte)var26Lifetime1;
+            this.noteGains[var27] = (byte)var26Lifetime1;
             var20Lifetime6--;
           }
-          this.field_s = var38.readUnsignedByte(0) + 1;
+          this.globalGain = var38.readUnsignedByte(0) + 1;
           for (var27Lifetime1 = 0; var27Lifetime1 < var12; var27Lifetime1++) {
             var45 = var13[var27Lifetime1];
-            if (null != var45.field_l) {
-              for (var29 = 1; var29 < var45.field_l.length; var29 += 2) {
-                var45.field_l[var29] = var38.readByte((byte) -89);
+            if (null != var45.volumeEnvelope) {
+              for (var29 = 1; var29 < var45.volumeEnvelope.length; var29 += 2) {
+                var45.volumeEnvelope[var29] = var38.readByte((byte) -89);
               }
             }
-            if (null != var45.field_g) {
-              for (var29Lifetime5 = 3; var29Lifetime5 < var45.field_g.length - 2; var29Lifetime5 += 2) {
-                var45.field_g[var29Lifetime5] = var38.readByte((byte) 103);
+            if (null != var45.releaseEnvelope) {
+              for (var29Lifetime5 = 3; var29Lifetime5 < var45.releaseEnvelope.length - 2; var29Lifetime5 += 2) {
+                var45.releaseEnvelope[var29Lifetime5] = var38.readByte((byte) 103);
               }
             }
           }
@@ -529,21 +529,21 @@ final class io extends IntrusiveNode {
           }
           for (var27Lifetime4 = 0; var12 > var27Lifetime4; var27Lifetime4++) {
             var48 = var13[var27Lifetime4];
-            if (null != var48.field_g) {
+            if (null != var48.releaseEnvelope) {
               var19Lifetime3 = 0;
-              for (var29Lifetime1 = 2; var29Lifetime1 < var48.field_g.length; var29Lifetime1 += 2) {
+              for (var29Lifetime1 = 2; var29Lifetime1 < var48.releaseEnvelope.length; var29Lifetime1 += 2) {
                 var19Lifetime3 = 1 + var19Lifetime3 + var38.readUnsignedByte(0);
-                var48.field_g[var29Lifetime1] = (byte)var19Lifetime3;
+                var48.releaseEnvelope[var29Lifetime1] = (byte)var19Lifetime3;
               }
             }
           }
           for (var27Lifetime5 = 0; var27Lifetime5 < var12; var27Lifetime5++) {
             var49 = var13[var27Lifetime5];
-            if (null != var49.field_l) {
+            if (null != var49.volumeEnvelope) {
               var19Lifetime4 = 0;
-              for (var29Lifetime2 = 2; var29Lifetime2 < var49.field_l.length; var29Lifetime2 += 2) {
+              for (var29Lifetime2 = 2; var29Lifetime2 < var49.volumeEnvelope.length; var29Lifetime2 += 2) {
                 var19Lifetime4 = var38.readUnsignedByte(0) + (1 + var19Lifetime4);
-                var49.field_l[var29Lifetime2] = (byte)var19Lifetime4;
+                var49.volumeEnvelope[var29Lifetime2] = (byte)var19Lifetime4;
               }
             }
           }
@@ -557,22 +557,22 @@ final class io extends IntrusiveNode {
             var27Lifetime6Lifetime1 = var46[0];
             var28 = var46[1];
             for (var29Lifetime3 = 0; var27Lifetime6Lifetime1 > var29Lifetime3; var29Lifetime3++) {
-              this.field_l[var29Lifetime3] = (byte)(32 + var28 * this.field_l[var29Lifetime3] >> 6);
+              this.noteGains[var29Lifetime3] = (byte)(32 + var28 * this.noteGains[var29Lifetime3] >> 6);
             }
             for (var29Lifetime3Lifetime1 = 2; var29Lifetime3Lifetime1 < var46.length; var29Lifetime3Lifetime1 += 2) {
               var30 = var46[var29Lifetime3Lifetime1];
               var31 = var15[1 + var29Lifetime3Lifetime1];
               var32 = (-var27Lifetime6Lifetime1 + var30) * var28 + (-var27Lifetime6Lifetime1 + var30) / 2;
               for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
-                var34 = os.a(-var27Lifetime6Lifetime1 + var30, var32, 1589591487);
+                var34 = MusicPatchPcmStream.floorDivide(-var27Lifetime6Lifetime1 + var30, var32, 1589591487);
                 var32 = var32 + (var31 - var28);
-                this.field_l[var33] = (byte)(32 + var34 * this.field_l[var33] >> 6);
+                this.noteGains[var33] = (byte)(32 + var34 * this.noteGains[var33] >> 6);
               }
               var28 = var31;
               var27Lifetime6Lifetime1 = var30;
             }
             for (var30Lifetime2 = var27Lifetime6Lifetime1; var30Lifetime2 < 128; var30Lifetime2++) {
-              this.field_l[var30Lifetime2] = (byte)(32 + this.field_l[var30Lifetime2] * var28 >> 6);
+              this.noteGains[var30Lifetime2] = (byte)(32 + this.noteGains[var30Lifetime2] * var28 >> 6);
             }
             var15 = null;
           }
@@ -586,14 +586,14 @@ final class io extends IntrusiveNode {
             var27Lifetime7Lifetime1 = var58[0];
             var28Lifetime1 = var58[1] << 1;
             for (var29Lifetime4 = 0; var29Lifetime4 < var27Lifetime7Lifetime1; var29Lifetime4++) {
-              var30Lifetime1 = var28Lifetime1 + (255 & this.field_x[var29Lifetime4]);
+              var30Lifetime1 = var28Lifetime1 + (255 & this.notePans[var29Lifetime4]);
               if (var30Lifetime1 < 0) {
                 var30Lifetime1 = 0;
               }
               if (var30Lifetime1 > 128) {
                 var30Lifetime1 = 128;
               }
-              this.field_x[var29Lifetime4] = (byte)var30Lifetime1;
+              this.notePans[var29Lifetime4] = (byte)var30Lifetime1;
             }
             var29Lifetime4Lifetime1 = 2;
             while (var29Lifetime4Lifetime1 < var58.length) {
@@ -603,15 +603,15 @@ final class io extends IntrusiveNode {
               var37 = var27Lifetime7Lifetime1;
               var33Lifetime1 = var37;
               while (var37 < var30Lifetime1Lifetime1) {
-                var34Lifetime1 = os.a(-var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1, var32Lifetime1, 1589591487);
-                var35 = var34Lifetime1 + (255 & this.field_x[var37]);
+                var34Lifetime1 = MusicPatchPcmStream.floorDivide(-var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1, var32Lifetime1, 1589591487);
+                var35 = var34Lifetime1 + (255 & this.notePans[var37]);
                 if (var35 < 0) {
                   var35 = 0;
                 }
                 if (128 < var35) {
                   var35 = 128;
                 }
-                this.field_x[var37] = (byte)var35;
+                this.notePans[var37] = (byte)var35;
                 var32Lifetime1 = var32Lifetime1 + (var31Lifetime1 - var28Lifetime1);
                 var37++;
               }
@@ -621,44 +621,44 @@ final class io extends IntrusiveNode {
             }
             var16 = null;
             for (var30Lifetime1Lifetime2 = var27Lifetime7Lifetime1; var30Lifetime1Lifetime2 < 128; var30Lifetime1Lifetime2++) {
-              var31Lifetime1Lifetime1 = var28Lifetime1 + (this.field_x[var30Lifetime1Lifetime2] & 255);
+              var31Lifetime1Lifetime1 = var28Lifetime1 + (this.notePans[var30Lifetime1Lifetime2] & 255);
               if (var31Lifetime1Lifetime1 < 0) {
                 var31Lifetime1Lifetime1 = 0;
               }
               if (var31Lifetime1Lifetime1 > 128) {
                 var31Lifetime1Lifetime1 = 128;
               }
-              this.field_x[var30Lifetime1Lifetime2] = (byte)var31Lifetime1Lifetime1;
+              this.notePans[var30Lifetime1Lifetime2] = (byte)var31Lifetime1Lifetime1;
             }
           }
           for (var27Lifetime8 = 0; var12 > var27Lifetime8; var27Lifetime8++) {
-            var13[var27Lifetime8].field_d = var38.readUnsignedByte(0);
+            var13[var27Lifetime8].decayRate = var38.readUnsignedByte(0);
           }
           for (var27Lifetime9 = 0; var27Lifetime9 < var12; var27Lifetime9++) {
             var50 = var13[var27Lifetime9];
-            if (var50.field_l != null) {
-              var50.field_m = var38.readUnsignedByte(0);
+            if (var50.volumeEnvelope != null) {
+              var50.volumeKeyScaling = var38.readUnsignedByte(0);
             }
-            if (null != var50.field_g) {
-              var50.field_c = var38.readUnsignedByte(0);
+            if (null != var50.releaseEnvelope) {
+              var50.releaseKeyScaling = var38.readUnsignedByte(0);
             }
-            if (0 < var50.field_d) {
-              var50.field_i = var38.readUnsignedByte(0);
+            if (0 < var50.decayRate) {
+              var50.decayKeyScaling = var38.readUnsignedByte(0);
             }
           }
           for (var27Lifetime10 = 0; var12 > var27Lifetime10; var27Lifetime10++) {
-            var13[var27Lifetime10].field_b = var38.readUnsignedByte(0);
+            var13[var27Lifetime10].vibratoRate = var38.readUnsignedByte(0);
           }
           for (var27Lifetime11 = 0; var27Lifetime11 < var12; var27Lifetime11++) {
             var51 = var13[var27Lifetime11];
-            if (var51.field_b > 0) {
-              var51.field_j = var38.readUnsignedByte(0);
+            if (var51.vibratoRate > 0) {
+              var51.vibratoDepth = var38.readUnsignedByte(0);
             }
           }
           for (var27Lifetime12 = 0; var27Lifetime12 < var12; var27Lifetime12++) {
             var52 = var13[var27Lifetime12];
-            if (var52.field_j > 0) {
-              var52.field_e = var38.readUnsignedByte(0);
+            if (var52.vibratoDepth > 0) {
+              var52.vibratoDelay = var38.readUnsignedByte(0);
             }
           }
           return;
@@ -667,7 +667,7 @@ final class io extends IntrusiveNode {
           var2 = decompiledCaughtException;
           stackIn_204_0 = var2;
           stackIn_204_1 = new StringBuilder().append("io.<init>(");
-          if (param0 == null) {
+          if (packedPatch == null) {
             stackIn_205_2 = "null";
           } else {
             stackIn_205_2 = "{...}";

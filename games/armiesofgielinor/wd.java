@@ -262,7 +262,7 @@ final class wd {
               rb.field_b.heldButtonMatches = false;
             }
             if (rb.field_b.heldButtonMatches) {
-              var1 = fo.a(4800, os.field_q, new String[]{var3, qd.chatRecipientName});
+              var1 = fo.a(4800, MusicPatchPcmStream.field_q, new String[]{var3, qd.chatRecipientName});
             }
           }
           stackIn_96_0 = var1;

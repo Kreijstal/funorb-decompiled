@@ -180,7 +180,7 @@ final class MatchSetupPanel {
             if (var5 == 0) {
               return;
             }
-            fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, io.field_m, nd.field_b, this.field_Q, this.field_p);
+            fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, nd.field_b, this.field_Q, this.field_p);
             return;
           }
         }
@@ -204,7 +204,7 @@ final class MatchSetupPanel {
             if (var5 == 0) {
               return;
             }
-            fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, io.field_m, TutorialController.field_e, this.field_Q, this.field_p);
+            fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_Q, this.field_p);
             if (param0 != 33) {
               discarded$0 = this.d(true);
             }
@@ -541,7 +541,7 @@ final class MatchSetupPanel {
             if (var5 == 0) {
               return;
             }
-            fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, io.field_m, TutorialController.field_e, this.field_Q, this.field_p);
+            fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_Q, this.field_p);
             return;
           }
         }
@@ -877,7 +877,7 @@ final class MatchSetupPanel {
               this.option33Enabled = true;
             }
             SoftwareRaster.f(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, this.field_M);
-            fe.b(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, io.field_m, nd.field_b, this.field_Q, this.field_p);
+            fe.b(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, MusicPatch.field_m, nd.field_b, this.field_Q, this.field_p);
             var10 = MatchConditionEntry.a(param0.second, (byte) 94);
             var11 = MatchConditionEntry.a(param3.second, (byte) 94);
             var7Lifetime1 = var10 + var11 >> 1;
@@ -1016,7 +1016,7 @@ final class MatchSetupPanel {
               var10 = TutorialController.field_e;
             }
             fe.a(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, DisplacedUnitMarker.field_s, var10, this.field_Q, this.field_b, true);
-            fe.b(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, io.field_m, TutorialController.field_e, this.field_Q, this.field_A);
+            fe.b(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, MusicPatch.field_m, TutorialController.field_e, this.field_Q, this.field_A);
             var11 = param1.second;
             var12 = param2.second;
             var7Lifetime1 = var11 + var12 >> 1;

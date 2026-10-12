@@ -7,7 +7,7 @@ final class LobbyRoom extends ClientUiComponent {
     ClientUiComponent field_ec;
     ClientUiComponent field_Wb;
     int displayRating;
-    static ih field_Kb;
+    static MidiPcmStream field_Kb;
     ClientUiComponent field_sc;
     static String field_Jb;
     ClientUiComponent capacityComponent;

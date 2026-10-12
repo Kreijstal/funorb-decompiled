@@ -86,7 +86,7 @@ final class CampaignRewardPreview {
                 this.description = null;
               }
             } else {
-              this.title = fq.field_f[rewardSpellId];
+              this.title = MusicPatchEnvelope.field_f[rewardSpellId];
               this.description = ActionRequest.field_l[rewardSpellId];
             }
           }

@@ -47,7 +47,7 @@ final class NetworkResourceRequest extends ResourceRequest {
         te.field_n = param0;
         if (param1 >= 83) {
           if (null != LobbyRoom.field_Kb) {
-            LobbyRoom.field_Kb.f(-122, param0);
+            LobbyRoom.field_Kb.setMasterVolume(-122, param0);
           }
           if (null != lk.field_e) {
             lk.field_e.b(param0, 6);
@@ -56,7 +56,7 @@ final class NetworkResourceRequest extends ResourceRequest {
         }
         field_C = (GameplayController) null;
         if (null != LobbyRoom.field_Kb) {
-          LobbyRoom.field_Kb.f(-122, param0);
+          LobbyRoom.field_Kb.setMasterVolume(-122, param0);
         }
         if (null != lk.field_e) {
           lk.field_e.b(param0, 6);

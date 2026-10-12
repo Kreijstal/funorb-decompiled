@@ -320,7 +320,7 @@ abstract class sf extends wl {
                 fe.a(oq.activeStructureShadows[17], -10 + param3, param5 - 25);
               } else {
                 if (vs.field_e[param4].terrainType == 3) {
-                  ih.a((byte) -124, param3 + 30, param4 + og.field_p[param4], 32 + param5);
+                  MidiPcmStream.a((byte) -124, param3 + 30, param4 + og.field_p[param4], 32 + param5);
                 } else {
                   if (var9 == 1) {
                     fe.a(oq.activeStructureShadows[8 + var6_int % 3], -10 + param3, param5 - 55);

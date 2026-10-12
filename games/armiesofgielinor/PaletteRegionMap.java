@@ -251,7 +251,7 @@ final class PaletteRegionMap {
         if (param3 != 0) {
           PaletteRegionMap.b(-81);
         }
-        DiskCacheWorker.a(mi.field_l, 2, jn.field_d, param0, gl.field_c, param1, param2);
+        DiskCacheWorker.a(MusicPatchNode.field_l, 2, jn.field_d, param0, gl.field_c, param1, param2);
     }
 
     PaletteRegionMap(IndexedSprite sourceImage, int ignoredColour, int anchorColour) {

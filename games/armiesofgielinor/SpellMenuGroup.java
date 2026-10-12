@@ -136,7 +136,7 @@ final class SpellMenuGroup {
                 iconY = -(int)((double)(90 + extraRadius) * Math.cos(((double)angularPhase + 6.283185307179586 * (double)spellIndex * 256.0) / (double)(256 * entryCount))) + 212;
                 if (0 == transition &&
                   TabbedPanel.a(iconY, iconX, 20, false)) {
-                  vi.field_f = fq.field_f[this.spellIds[spellIndex]];
+                  vi.field_f = MusicPatchEnvelope.field_f[this.spellIds[spellIndex]];
                   hoveredSelection = 50 + spellIndex;
                   TeamRoster.field_e.f(db.a(true, -35 + iconX), MatchConditionEntry.a(-35 + iconY, (byte) 94), 128);
                 }

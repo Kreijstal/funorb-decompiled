@@ -305,7 +305,7 @@ abstract class nl extends Widget implements gw {
           DirectByteStorage.field_j = param3;
           gt.field_f = param12;
           BoundedFile.field_h = param14;
-          mi.field_r = param0;
+          MusicPatchNode.field_r = param0;
           jn.field_b = param8;
           ju.field_a = param9;
           TextCursor.field_d = param2;
@@ -318,7 +318,7 @@ abstract class nl extends Widget implements gw {
           ResourceRequest.field_u[3] = ek.field_f;
           ResourceRequest.field_u[2] = kd.field_L;
           ResourceRequest.field_u[0] = AttackEvent.field_D;
-          ResourceRequest.field_u[4] = io.field_p;
+          ResourceRequest.field_u[4] = MusicPatch.field_p;
           IconTextComponent.field_Kb = new ClientUiComponent(0L, (ClientUiComponent) null);
           rj.field_F = new ClientUiComponent(0L, te.field_p, su.field_b);
           CampaignProgress.field_a = new ClientUiComponent(0L, br.field_e, PcmPlayerService.ratingLabel);
@@ -434,10 +434,10 @@ abstract class nl extends Widget implements gw {
           }
           for (var17_intLifetime3 = 0; param1 > var17_intLifetime3; var17_intLifetime3++) {
             KingBlackDragonEvent.field_z[var17_intLifetime3 + 4] = new ClientUiComponent(0L, IconLabelControl.field_Lb, ob.field_M[var17_intLifetime3]);
-            array$2 = new IconTextComponent[rn.bitwiseAnd(255, (int) mi.field_r[var17_intLifetime3]) + 1];
+            array$2 = new IconTextComponent[rn.bitwiseAnd(255, (int) MusicPatchNode.field_r[var17_intLifetime3]) + 1];
             pu.field_k[var17_intLifetime3 + 4] = array$2;
             pu.field_k[var17_intLifetime3 + 4][0] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
-            for (var18 = 0; var18 < (mi.field_r[var17_intLifetime3] & 255); var18++) {
+            for (var18 = 0; var18 < (MusicPatchNode.field_r[var17_intLifetime3] & 255); var18++) {
               if (jn.field_b == null) {
                 var19_ref = null;
               } else {

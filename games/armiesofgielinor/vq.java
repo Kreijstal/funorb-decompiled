@@ -65,17 +65,17 @@ final class vq {
             for (var5 = 0; var4 > var5; var5++) {
               TileMetadata.field_h[var5] = -1;
             }
-            mi.field_G = new int[2];
+            MusicPatchNode.field_G = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
               AnimationFrameSet.field_v[var5] = du.field_b[var5];
             }
             AnimationFrameSet.field_v[-3 + var4] = "";
             AnimationFrameSet.field_v[-2 + var4] = ClientContextMenu.field_j;
             TileMetadata.field_h[var4 - 2] = 0;
-            mi.field_G[0] = 4;
+            MusicPatchNode.field_G[0] = 4;
             AnimationFrameSet.field_v[-1 + var4] = pd.field_f;
             TileMetadata.field_h[-1 + var4] = 1;
-            mi.field_G[1] = 5;
+            MusicPatchNode.field_G[1] = 5;
           } else if (1 == no.field_J) {
             var3_int = BattleTutorial.a(pf.field_d, SummonRequest.field_z, 7502, TaggedMapData.field_b, du.field_b);
             var4 = var3_int + 2;
@@ -84,14 +84,14 @@ final class vq {
             for (var5 = 0; var4 > var5; var5++) {
               TileMetadata.field_h[var5] = -1;
             }
-            mi.field_G = new int[1];
+            MusicPatchNode.field_G = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
               AnimationFrameSet.field_v[var5] = du.field_b[var5];
             }
             AnimationFrameSet.field_v[var4 - 2] = "";
             AnimationFrameSet.field_v[-1 + var4] = pd.field_f;
             TileMetadata.field_h[-1 + var4] = 0;
-            mi.field_G[0] = 5;
+            MusicPatchNode.field_G[0] = 5;
           } else if (no.field_J != 2) {
             if (no.field_J == 3) {
               if (!IntPair.field_m.privilegedServicesEnabled) {
@@ -105,14 +105,14 @@ final class vq {
               for (var5 = 0; var5 < var4; var5++) {
                 TileMetadata.field_h[var5] = -1;
               }
-              mi.field_G = new int[1];
+              MusicPatchNode.field_G = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 AnimationFrameSet.field_v[var5] = du.field_b[var5];
               }
               AnimationFrameSet.field_v[-2 + var4] = "";
               AnimationFrameSet.field_v[var4 - 1] = pd.field_f;
               TileMetadata.field_h[-1 + var4] = 0;
-              mi.field_G[0] = 5;
+              MusicPatchNode.field_G[0] = 5;
             } else if (no.field_J == 4) {
               var3_int = BattleTutorial.a(pf.field_d, MoveAttackRequest.field_y, 7502, TaggedMapData.field_b, du.field_b);
               var4 = 2 + var3_int;
@@ -121,14 +121,14 @@ final class vq {
               for (var5 = 0; var4 > var5; var5++) {
                 TileMetadata.field_h[var5] = -1;
               }
-              mi.field_G = new int[1];
+              MusicPatchNode.field_G = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 AnimationFrameSet.field_v[var5] = du.field_b[var5];
               }
               AnimationFrameSet.field_v[-2 + var4] = "";
               AnimationFrameSet.field_v[-1 + var4] = pd.field_f;
               TileMetadata.field_h[-1 + var4] = 0;
-              mi.field_G[0] = 5;
+              MusicPatchNode.field_G[0] = 5;
             } else {
               if (no.field_J != 5) {
                 throw new IllegalArgumentException();
@@ -140,17 +140,17 @@ final class vq {
               for (var5 = 0; var5 < var4; var5++) {
                 TileMetadata.field_h[var5] = -1;
               }
-              mi.field_G = new int[2];
+              MusicPatchNode.field_G = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
                 AnimationFrameSet.field_v[var5] = du.field_b[var5];
               }
               AnimationFrameSet.field_v[var4 - 3] = "";
               AnimationFrameSet.field_v[var4 - 2] = oo.field_j;
               TileMetadata.field_h[-2 + var4] = 0;
-              mi.field_G[0] = 3;
+              MusicPatchNode.field_G[0] = 3;
               AnimationFrameSet.field_v[-1 + var4] = pd.field_f;
               TileMetadata.field_h[var4 - 1] = 1;
-              mi.field_G[1] = 5;
+              MusicPatchNode.field_G[1] = 5;
             }
           } else {
             var3_int = BattleTutorial.a(pf.field_d, fo.a(4800, db.field_f, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, du.field_b);
@@ -204,12 +204,12 @@ final class vq {
               TileMetadata.field_h[var8] = -1;
             }
             TileMetadata.field_h[1] = 0;
-            mi.field_G = new int[2];
+            MusicPatchNode.field_G = new int[2];
             AnimationFrameSet.field_v[0] = c.field_d;
             AnimationFrameSet.field_v[1] = DualNodeDeque.field_e;
-            mi.field_G[1] = 2;
+            MusicPatchNode.field_G[1] = 2;
             AnimationFrameSet.field_v[5] = "";
-            mi.field_G[0] = 5;
+            MusicPatchNode.field_G[0] = 5;
             AnimationFrameSet.field_v[4] = ts.field_f;
             AnimationFrameSet.field_v[2] = od.field_e;
             AnimationFrameSet.field_v[3] = WeightedScoreStrategy.field_m;
@@ -238,7 +238,7 @@ final class vq {
             }
             vi.monotonicMillis(71);
           }
-          ug.field_c.itemCount = mi.field_G.length;
+          ug.field_c.itemCount = MusicPatchNode.field_G.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < AnimationFrameSet.field_v.length; var4Lifetime1++) {
             stackIn_89_0 = AnimationFrameSet.field_v[var4Lifetime1];

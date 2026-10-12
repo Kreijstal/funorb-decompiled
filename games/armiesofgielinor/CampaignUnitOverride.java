@@ -359,7 +359,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "send_pm_to_x");
                 if (null != var2) {
-                  mi.field_k = uu.a(var2, (byte) -105);
+                  MusicPatchNode.field_k = uu.a(var2, (byte) -105);
                 }
                 var2 = NodeIterator.a(50, "send_qc_to_x");
                 if (null != var2) {
@@ -699,7 +699,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "multiconst_open");
                 if (var2 != null) {
-                  io.field_p = uu.a(var2, (byte) 83);
+                  MusicPatch.field_p = uu.a(var2, (byte) 83);
                 }
                 var2 = NodeIterator.a(50, "no_options_available");
                 if (null != var2) {
@@ -747,7 +747,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "privatechat_blankarea_explanation");
                 if (null != var2) {
-                  os.field_q = uu.a(var2, (byte) -100);
+                  MusicPatchPcmStream.field_q = uu.a(var2, (byte) -100);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "publicchat_unavailable_ratedgame");
                 if (null != var2) {
@@ -985,7 +985,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "rule_1_3");
                 if (null != var2) {
-                  ih.field_X = uu.a(var2, (byte) -113);
+                  MidiPcmStream.field_X = uu.a(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "rule_1_4");
                 if (var2 != null) {
@@ -1329,7 +1329,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "day");
                 if (null != var2) {
-                  mi.field_z = uu.a(var2, (byte) 107);
+                  MusicPatchNode.field_z = uu.a(var2, (byte) 107);
                 }
                 var2 = NodeIterator.a(50, "month");
                 if (var2 != null) {
@@ -1405,7 +1405,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_displayname");
                 if (var2 != null) {
-                  fq.field_k = uu.a(var2, (byte) -99);
+                  MusicPatchEnvelope.field_k = uu.a(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "create_password");
                 if (null != var2) {
@@ -1473,7 +1473,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_u13terms");
                 if (var2 != null) {
-                  ih.field_R = uu.a(var2, (byte) -114);
+                  MidiPcmStream.field_R = uu.a(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(param0 + 132, "login_username_email");
                 if (null != var2) {

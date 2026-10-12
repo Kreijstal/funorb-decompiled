@@ -267,15 +267,15 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         Object var6 = null;
         try {
           var2_long = vi.monotonicMillis(120);
-          var4 = CampaignMission.field_r[os.field_o];
-          CampaignMission.field_r[os.field_o] = var2_long;
+          var4 = CampaignMission.field_r[MusicPatchPcmStream.field_o];
+          CampaignMission.field_r[MusicPatchPcmStream.field_o] = var2_long;
           if (0L != var4 &&
             var4 >= var2_long) {
           }
           if (param0 != 17684) {
             this.destroy();
           }
-          os.field_o = 1 + os.field_o & 31;
+          MusicPatchPcmStream.field_o = 1 + MusicPatchPcmStream.field_o & 31;
           var6 = this;
           synchronized (var6) {
             ph.field_f = wj.field_l;
@@ -784,9 +784,9 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           var2_long = vi.monotonicMillis(94);
-          var4 = AiActionCandidate.field_u[ih.field_ab];
-          AiActionCandidate.field_u[ih.field_ab] = var2_long;
-          ih.field_ab = ih.field_ab + 1 & 31;
+          var4 = AiActionCandidate.field_u[MidiPcmStream.field_ab];
+          AiActionCandidate.field_u[MidiPcmStream.field_ab] = var2_long;
+          MidiPcmStream.field_ab = MidiPcmStream.field_ab + 1 & 31;
           if (0L != var4 &&
             var4 < var2_long) {
             var6_int = (int)(-var4 + var2_long);

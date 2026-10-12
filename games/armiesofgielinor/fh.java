@@ -26,9 +26,9 @@ final class fh {
           if (param0 <= 123) {
             field_c = false;
           }
-          param1.field_Z = ih.field_E;
-          param1.field_t = ih.field_E;
-          param1.field_R = ih.field_E;
+          param1.field_Z = MidiPcmStream.field_E;
+          param1.field_t = MidiPcmStream.field_E;
+          param1.field_R = MidiPcmStream.field_E;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

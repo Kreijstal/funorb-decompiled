@@ -391,12 +391,12 @@ final class jg extends IntrusiveNode {
               stackIn_72_0 = (!fh.field_c) ? 200 : 250;
               var33_intLifetime1 = stackIn_72_0;
               var12.optionIconContainer.setBounds(jn.field_d, param0 ^ -20500, 365 - var33_intLifetime1 - 2, var31, var33_intLifetime1);
-              var34_int = io.field_n;
+              var34_int = MusicPatch.field_n;
               if ((1 << ev.field_c & var14Lifetime1) != 0) {
                 var50_ref = rs.field_p[var12.gameType];
                 var12.gameTypeIcon.sprite = var50_ref;
                 var12.gameTypeIcon.setBounds(var12.optionIconContainer.height, param0 ^ -20500, var50_ref.canvasWidth, 0, var34_int);
-                var34_int = var34_int + (var50_ref.canvasWidth + io.field_n);
+                var34_int = var34_int + (var50_ref.canvasWidth + MusicPatch.field_n);
               }
               if ((1 << ai.field_M & var14Lifetime1) != 0) {
                 if (!var12.joinable) {
@@ -414,13 +414,13 @@ final class jg extends IntrusiveNode {
                 var51_ref = stackIn_85_0[stackIn_86_1];
                 var12.field_ec.sprite = var51_ref;
                 var12.field_ec.setBounds(var12.optionIconContainer.height, param0 ^ -20500, var51_ref.canvasWidth, 0, var34_int);
-                var34_int = var34_int + (var51_ref.canvasWidth + io.field_n);
+                var34_int = var34_int + (var51_ref.canvasWidth + MusicPatch.field_n);
               }
               if ((1 << gg.field_I & var14Lifetime1) != 0) {
                 var52_ref = lm.field_h[var12.spectatorMode - 1];
                 var12.spectatorIcon.sprite = var52_ref;
                 var12.spectatorIcon.setBounds(var12.optionIconContainer.height, -20500, var52_ref.canvasWidth, 0, var34_int);
-                var34_int = var34_int + (var52_ref.canvasWidth + io.field_n);
+                var34_int = var34_int + (var52_ref.canvasWidth + MusicPatch.field_n);
               }
               if ((1 << uj.field_j & var14Lifetime1) != 0) {
                 stackIn_93_0 = ResourceProtocolClient.field_d;
@@ -432,7 +432,7 @@ final class jg extends IntrusiveNode {
                 var53_ref = stackIn_93_0[stackIn_94_1];
                 var12.ratedIcon.sprite = var53_ref;
                 var12.ratedIcon.setBounds(var12.optionIconContainer.height, -20500, var53_ref.canvasWidth, 0, var34_int);
-                var34_int = var34_int + (io.field_n + var53_ref.canvasWidth);
+                var34_int = var34_int + (MusicPatch.field_n + var53_ref.canvasWidth);
               }
               if (ju.field_a != null) {
                 for (var36Lifetime1 = 0; var36Lifetime1 < tq.gameOptionCount; var36Lifetime1++) {
@@ -442,7 +442,7 @@ final class jg extends IntrusiveNode {
                     var54 = var42;
                     var12.optionIcons[var36Lifetime1].sprite = var42;
                     var12.optionIcons[var36Lifetime1].setBounds(var12.optionIconContainer.height, -20500, var54.canvasWidth, 0, var34_int);
-                    var34_int = var34_int + (var54.canvasWidth + io.field_n);
+                    var34_int = var34_int + (var54.canvasWidth + MusicPatch.field_n);
                   }
                 }
               }
@@ -492,21 +492,21 @@ final class jg extends IntrusiveNode {
               }
               if (var12.invitationReceived) {
                 var12.field_Ib.text = fo.a(4800, sq.field_n, new String[]{var32});
-                var12.field_Ib.setBounds(jn.field_d, -20500, -(2 * mi.field_l) + var12.width, var31, mi.field_l);
+                var12.field_Ib.setBounds(jn.field_d, -20500, -(2 * MusicPatchNode.field_l) + var12.width, var31, MusicPatchNode.field_l);
                 var31 = var31 + jn.field_d;
               }
               if (var12.joinRequestSent) {
                 var12.field_sc.text = fo.a(4800, GameplayController.field_A, new String[]{var32});
-                var12.field_sc.setBounds(jn.field_d, -20500, var12.width - 2 * mi.field_l, var31, mi.field_l);
+                var12.field_sc.setBounds(jn.field_d, -20500, var12.width - 2 * MusicPatchNode.field_l, var31, MusicPatchNode.field_l);
                 var31 = var31 + jn.field_d;
               }
             }
             var33 = LeaderEscortCondition.a(var12.notificationCode, 6, var32);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Wb.font.c(var33, var12.width - mi.field_l - mi.field_l);
+              var34_intLifetime1 = var12.field_Wb.font.c(var33, var12.width - MusicPatchNode.field_l - MusicPatchNode.field_l);
               var12.field_Wb.text = var33;
               var12.field_Wb.textOpacity = var12.notificationTicks * 256 / qd.lobbyNotificationDuration;
-              var12.field_Wb.setBounds(jn.field_d * var34_intLifetime1, -20500, var12.width - mi.field_l * 2, var31, mi.field_l);
+              var12.field_Wb.setBounds(jn.field_d * var34_intLifetime1, -20500, var12.width - MusicPatchNode.field_l * 2, var31, MusicPatchNode.field_l);
               var31 = var31 + var34_intLifetime1 * jn.field_d;
             }
             if (var7_int == 0) {

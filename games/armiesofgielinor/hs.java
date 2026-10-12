@@ -134,7 +134,7 @@ abstract class hs extends Widget implements gw {
         var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           CampaignDefinition.field_t.drawOpaque(param4 + 2, param7 + param6 - 73);
-          fe.b(param4 + 0, -76 + param6 + param7, 309, 71, io.field_m, nd.field_b, 0, 0);
+          fe.b(param4 + 0, -76 + param6 + param7, 309, 71, MusicPatch.field_m, nd.field_b, 0, 0);
           SoftwareRaster.b(param4 + 7, param7 - 70 + param6, 25, 25, 0, 128);
           SoftwareRaster.b(37 + param4, param7 - 70 + param6, 265, 25, 0, 128);
           var21 = param2.q((byte) 67);

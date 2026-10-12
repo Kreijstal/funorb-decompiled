@@ -77,7 +77,7 @@ public final class ArmiesOfGielinor extends wf {
         var11 = obfuscationControl ? 1 : 0;
         try {
           bs.a((byte) -127);
-          r.field_u = os.g(4);
+          r.field_u = MusicPatchPcmStream.getPointerIdleTicks(4);
           hk.k(128);
           if (FixedQuaternion.field_a != null &&
             FixedQuaternion.field_a.field_k) {
@@ -362,7 +362,7 @@ public final class ArmiesOfGielinor extends wf {
                   SoftwareRaster.b();
                   CipherPacketBuffer.a(false, -1, 1, jt.field_a);
                   ScrollContainer.field_Qb = false;
-                  io.field_w = true;
+                  MusicPatch.field_w = true;
                   continue;
                 }
                 if (66 == nm.deliveredOpcode) {
@@ -1031,11 +1031,11 @@ public final class ArmiesOfGielinor extends wf {
           stackIn_21_0 = ((rd.field_j != null ||
             null != SectorCacheStore.field_a) &&
             jt.field_a == 7);
-          io.field_w = stackIn_21_0;
+          MusicPatch.field_w = stackIn_21_0;
           if (param0 > ~AiPlanningStrategy.pointerX &&
             -1 < ko.pointerY) {
           }
-          BoundedFile.a(jt.field_a, true, io.field_w, false);
+          BoundedFile.a(jt.field_a, true, MusicPatch.field_w, false);
           if (null != mu.field_a) {
             mu.field_a.a(param0 ^ 8, qc.field_j);
             qc.field_j = qc.field_j + 1;
@@ -1043,7 +1043,7 @@ public final class ArmiesOfGielinor extends wf {
               ut.i((byte) 126);
             }
           }
-          if (!io.field_w ||
+          if (!MusicPatch.field_w ||
             !du.field_h) {
             tq.a(sq.c((byte) 54), false);
           }
@@ -1200,14 +1200,14 @@ public final class ArmiesOfGielinor extends wf {
           IntrusiveNode.b((byte) 4);
           wh.b(0);
           ji.a(0);
-          ih.f(-128);
+          MidiPcmStream.f(-128);
           lt.b(-51);
           ev.a(960112080);
           PcmPlayer.clearServiceReference();
           NodeHashTable.a(-83);
-          mi.a(9480);
+          MusicPatchNode.a(9480);
           MidiFileReader.releaseMessageTable();
-          os.f(1048575);
+          MusicPatchPcmStream.f(1048575);
           dj.b((byte) 116);
           it.a(param0 + 76);
           ClientUiComponent.h(-117);
@@ -1461,8 +1461,8 @@ public final class ArmiesOfGielinor extends wf {
           KingBlackDragonEvent.g(-43);
           TelepopEvent.g(param0 - 9);
           GrowthEvent.g(-74);
-          io.a((byte) 52);
-          fq.a((byte) 99);
+          MusicPatch.a((byte) 52);
+          MusicPatchEnvelope.a((byte) 99);
           ta.j(-12819);
           ma.g((byte) -127);
           fn.m(32);
@@ -1619,8 +1619,8 @@ public final class ArmiesOfGielinor extends wf {
           var2 = new wn();
           var3 = new wn(var2);
           var4 = new nm(var2, var3);
-          var4.field_w.a(-1, 128, 9);
-          var4.field_D.a(-1, 128, 9);
+          var4.field_w.setChannelProgram(-1, 128, 9);
+          var4.field_D.setChannelProgram(-1, 128, 9);
           var5 = 0;
           do {
             if (!(CorpseConditionMarker.field_u.field_a.length > var5)) {
@@ -1896,7 +1896,7 @@ public final class ArmiesOfGielinor extends wf {
         RuntimeException var3 = null;
         String var4 = null;
         int var5_int = 0;
-        ih var5 = null;
+        MidiPcmStream var5 = null;
         IndexedSprite[] var5_array = null;
         BattlefieldTheme[] var5_array2 = null;
         MusicTrack[] var6 = null;
@@ -2106,26 +2106,26 @@ public final class ArmiesOfGielinor extends wf {
               var5_int++;
             } while (var18 == 0);
             var5 = lk.field_e.field_w;
-            var5.a(jl.field_d, ep.field_b, 0, SocialListPanel.field_Ob, (byte) 86);
-            var5.a(jl.field_d, ep.field_b, 0, DeployRequest.field_B, (byte) 86);
-            var5.a(jl.field_d, ep.field_b, 0, oh.field_K, (byte) 86);
-            var5.a(jl.field_d, ep.field_b, 0, se.field_h, (byte) 86);
+            var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, SocialListPanel.field_Ob, (byte) 86);
+            var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, DeployRequest.field_B, (byte) 86);
+            var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, oh.field_K, (byte) 86);
+            var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, se.field_h, (byte) 86);
             var6 = cb.field_a;
             var7_int = 0;
             do {
               if (var7_int >= var6.length) {
-                var5.a(jl.field_d, ep.field_b, 0, qf.field_f, (byte) 86);
+                var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, qf.field_f, (byte) 86);
                 break;
               }
               var8 = var6[var7_int];
-              var5.a(jl.field_d, ep.field_b, 0, var8, (byte) 86);
+              var5.prepareTrackSamples(jl.field_d, ep.field_b, 0, var8, (byte) 86);
               var7_int++;
             } while (var18 == 0);
             var6_array = UnitLossCondition.battlefieldThemes;
             var7_int = 0;
             do {
               if (var6_array.length <= var7_int) {
-                var5.h(-117);
+                var5.releasePatchSampleIds(-117);
                 SummonAction.field_w = null;
                 ep.field_b = null;
                 jl.field_d = null;
@@ -2198,7 +2198,7 @@ public final class ArmiesOfGielinor extends wf {
           lp.field_b = MapLayout.loadIndexedSpritesByName("terrain_icons", -28106, "basic", iw.field_l);
           sg.field_b = MapLayout.loadIndexedSpritesByName("compare_icons", -28106, "basic", iw.field_l);
           CampaignRewardPreview.field_e = DiskCacheRequest.loadRgbSpriteByName("mapf", "basic", iw.field_l, false);
-          io.field_z = DiskCacheRequest.loadRgbSpriteByName("mapi", "basic", iw.field_l, false);
+          MusicPatch.field_z = DiskCacheRequest.loadRgbSpriteByName("mapi", "basic", iw.field_l, false);
           AnimationSkeleton.field_t = pv.a("basic", "turn", iw.field_l, 24914);
           AttackEvent.field_y = fk.loadRgbSpritesByName("mapsquares", (byte) -127, iw.field_l, "basic");
           SkeletonLimitMarker.field_s = fk.loadRgbSpritesByName("isomapsquares", (byte) -127, iw.field_l, "basic");
@@ -2231,7 +2231,7 @@ public final class ArmiesOfGielinor extends wf {
           km.field_h = ac.a(iw.field_l, "summonrings", (byte) -4, "basic");
           jv.field_b = fk.loadRgbSpritesByName("chatbubbles", (byte) -128, iw.field_l, "basic");
           AttackEvent.field_O = GameplayController.a("results_award_badge", (byte) 51, "basic", iw.field_l);
-          ih.field_H = (nj) (DiskCacheRequest.loadRgbSpriteByName("shine", "basic", iw.field_l, false));
+          MidiPcmStream.field_H = (nj) (DiskCacheRequest.loadRgbSpriteByName("shine", "basic", iw.field_l, false));
           CampaignDefinition.field_t = pv.a("basic", "statboxbg", iw.field_l, 24914);
           qt.field_e = pv.a("basic", "popupbg", iw.field_l, 24914);
           vq.field_b = pv.a("basic", "gameinfobg", iw.field_l, 24914);
@@ -2255,7 +2255,7 @@ public final class ArmiesOfGielinor extends wf {
             if (var6_array.length <= var7_int) {
               BufferedSocket.field_i = new ep(MusicPatchUsage.backgroundArchive);
               HuffmanCodec.field_i = CampaignMission.a((byte) -125, "frame_outer", "basic", iw.field_l);
-              io.field_m = CampaignMission.a((byte) 83, "frame_inner", "basic", iw.field_l);
+              MusicPatch.field_m = CampaignMission.a((byte) 83, "frame_inner", "basic", iw.field_l);
               oh.field_J = CampaignMission.a((byte) 83, "frame_ingame", "basic", iw.field_l);
               EffectPresentation.field_j = CampaignMission.a((byte) -108, "frame_boxes", "basic", iw.field_l);
               DisplacedUnitMarker.field_s = CampaignMission.a((byte) 89, "frame_button", "basic", iw.field_l);
@@ -2368,8 +2368,8 @@ public final class ArmiesOfGielinor extends wf {
           jt.field_a = 16;
           ClientConnectionState.a(50, true);
           QuickChatPhrase.a(param0 ^ -68, SocialListPanel.field_Ob);
-          DropdownSelector.a(128, 8, rs.field_n.field_z, rs.field_n.field_L + rs.field_n.field_z, rs.field_n, io.field_m[0].pixelHeight, 8, 2, 16777215, 240, rs.field_n.field_z, -99, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 255, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 320, io.field_m[0].pixelWidth, rs.field_n.field_z + rs.field_n.field_L, new pn(io.field_m, nd.field_b, 0, 224, false), rs.field_n);
-          wm.a(320, 128, 240, 16777215, rs.field_n.field_z + rs.field_n.field_L, rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 8, (byte) 90, 480, 8, rs.field_n.field_L + rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), io.field_m[0].pixelHeight, rs.field_n, 2, io.field_m[0].pixelWidth, rs.field_n, 255, rs.field_n.field_z, new pn(io.field_m, nd.field_b, 0, 224, false));
+          DropdownSelector.a(128, 8, rs.field_n.field_z, rs.field_n.field_L + rs.field_n.field_z, rs.field_n, MusicPatch.field_m[0].pixelHeight, 8, 2, 16777215, 240, rs.field_n.field_z, -99, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 255, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 320, MusicPatch.field_m[0].pixelWidth, rs.field_n.field_z + rs.field_n.field_L, new pn(MusicPatch.field_m, nd.field_b, 0, 224, false), rs.field_n);
+          wm.a(320, 128, 240, 16777215, rs.field_n.field_z + rs.field_n.field_L, rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), 8, (byte) 90, 480, 8, rs.field_n.field_L + rs.field_n.field_z, new pn(DisplacedUnitMarker.field_s, nd.field_b, 0, 128, true), MusicPatch.field_m[0].pixelHeight, rs.field_n, 2, MusicPatch.field_m[0].pixelWidth, rs.field_n, 255, rs.field_n.field_z, new pn(MusicPatch.field_m, nd.field_b, 0, 224, false));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2479,7 +2479,7 @@ public final class ArmiesOfGielinor extends wf {
                 var3 = 8;
               }
             }
-            fe.b(-5, var3 - 10, rs.field_n.a(so.field_a[var2.field_l]) + 62, 48, io.field_m, nd.field_b, 0, 128);
+            fe.b(-5, var3 - 10, rs.field_n.a(so.field_a[var2.field_l]) + 62, 48, MusicPatch.field_m, nd.field_b, 0, 128);
             DelayedPacket.field_k[var2.field_l].c(8, var3);
             rs.field_n.b(so.field_a[var2.field_l], 42, var3 - (-5 - rs.field_n.field_H), 15658734, -1);
           }

@@ -267,7 +267,7 @@ final class DropdownSelector extends tj implements he {
               UpkeepEvent.h(-78);
               ws.b(true);
               if (ClientContextMenu.field_a == 9 &&
-                !io.a(ReportAbuseDialog.field_Nb, (byte) 116)) {
+                !MusicPatch.a(ReportAbuseDialog.field_Nb, (byte) 116)) {
                 ClientContextMenu.field_a = 0;
               }
             }
@@ -285,7 +285,7 @@ final class DropdownSelector extends tj implements he {
           var1_int = -118 / ((16 - param0) / 35);
           if (!sh.field_h) {
             if (null == RadialSummonItem.field_f) {
-              RadialSummonItem.field_f = fq.a(14663, 6);
+              RadialSummonItem.field_f = MusicPatchEnvelope.a(14663, 6);
             }
             if (RadialSummonItem.field_f.field_n) {
               if (null != RadialSummonItem.field_f.field_s) {
@@ -557,7 +557,7 @@ final class DropdownSelector extends tj implements he {
           }
           op.a(param7, param1, param12, param14, -3, param6);
           ContextualRuntimeException.a((byte) -85, param15, param9);
-          mi.a(param8, param0, param13, 3815);
+          MusicPatchNode.a(param8, param0, param13, 3815);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

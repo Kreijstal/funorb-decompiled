@@ -258,7 +258,7 @@ final class CampaignMenu {
           var11 = -(var8Lifetime1 / 2) + 320;
           var12 = -(var10 / 2) + 240;
           var13 = 13 + var11;
-          fe.b(db.a(true, var11), MatchConditionEntry.a(var12, (byte) 94), var8Lifetime1, var10, io.field_m, TutorialController.field_e, 0, 192);
+          fe.b(db.a(true, var11), MatchConditionEntry.a(var12, (byte) 94), var8Lifetime1, var10, MusicPatch.field_m, TutorialController.field_e, 0, 192);
           var14 = -26 + var8Lifetime1;
           var15 = var13;
           var16 = var12 + 30;
@@ -310,8 +310,8 @@ final class CampaignMenu {
         int var4Lifetime1;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          fe.a(db.a(true, 32), MatchConditionEntry.a(71, (byte) 94), 305, 228, io.field_m, jh.field_k, 0, 128, ai.field_V, true, nd.field_b);
-          fe.a(db.a(true, 32), MatchConditionEntry.a(321, (byte) 94), 305, 92, io.field_m, jh.field_k, 0, 128, SummonAction.field_A, true, nd.field_b);
+          fe.a(db.a(true, 32), MatchConditionEntry.a(71, (byte) 94), 305, 228, MusicPatch.field_m, jh.field_k, 0, 128, ai.field_V, true, nd.field_b);
+          fe.a(db.a(true, 32), MatchConditionEntry.a(321, (byte) 94), 305, 92, MusicPatch.field_m, jh.field_k, 0, 128, SummonAction.field_A, true, nd.field_b);
           if (null != this.selectedCampaignEntry) {
             if (this.selectedCampaignEntry.entryId == -1) {
               stackIn_8_0 = SummonAction.field_A;
@@ -319,7 +319,7 @@ final class CampaignMenu {
               stackIn_8_0 = this.selectedCampaignEntry.title;
             }
             var2 = stackIn_8_0;
-            fe.a(db.a(true, 346), MatchConditionEntry.a(70, (byte) 94), 262, 343, io.field_m, jh.field_k, 0, 128, (String) (var2), true, nd.field_b);
+            fe.a(db.a(true, 346), MatchConditionEntry.a(70, (byte) 94), 262, 343, MusicPatch.field_m, jh.field_k, 0, 128, (String) (var2), true, nd.field_b);
             stackIn_11_0 = db.a(true, 354);
             stackIn_11_1 = MatchConditionEntry.a(361, (byte) 94);
             stackIn_11_2 = 246;
@@ -331,7 +331,7 @@ final class CampaignMenu {
               stackIn_12_5 = TutorialController.field_e;
             }
             fe.a(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_12_5, 0, 0);
-            var3 = io.field_o;
+            var3 = MusicPatch.field_o;
             if (this.selectedCampaignEntry.entryId == -1) {
               var3 = es.field_b;
             }
@@ -749,7 +749,7 @@ final class CampaignMenu {
           var10 = -(var7Lifetime1 / 2) + 320;
           var11 = 240 - var9Lifetime1 / 2;
           var12 = var10 + 13;
-          fe.b(db.a(true, var10), MatchConditionEntry.a(var11, (byte) 94), var7Lifetime1, var9Lifetime1, io.field_m, TutorialController.field_e, 0, 192);
+          fe.b(db.a(true, var10), MatchConditionEntry.a(var11, (byte) 94), var7Lifetime1, var9Lifetime1, MusicPatch.field_m, TutorialController.field_e, 0, 192);
           var13 = var7Lifetime1 - 26;
           var14 = var12;
           var15 = 30 + var11;
@@ -984,7 +984,7 @@ final class CampaignMenu {
             }
             var3Lifetime1 = var2_int + 26;
             var4Lifetime1 = -26 + var3Lifetime1;
-            fe.b(db.a(true, 5), MatchConditionEntry.a(4, (byte) 94), var3Lifetime1, 472, io.field_m, TutorialController.field_e, 0, 112);
+            fe.b(db.a(true, 5), MatchConditionEntry.a(4, (byte) 94), var3Lifetime1, 472, MusicPatch.field_m, TutorialController.field_e, 0, 112);
             var5 = 18;
             var6 = 34;
             var6Lifetime1 = 34;
@@ -1024,7 +1024,7 @@ final class CampaignMenu {
                 var15_int++;
                 continue scanLoop1;
               }
-              fe.b(db.a(true, var5 + var8Lifetime1), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var9Lifetime1 * var7.mapWidth, var7.mapHeight * var10Lifetime1, io.field_m, TutorialController.field_e, 0, 0);
+              fe.b(db.a(true, var5 + var8Lifetime1), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var9Lifetime1 * var7.mapWidth, var7.mapHeight * var10Lifetime1, MusicPatch.field_m, TutorialController.field_e, 0, 0);
               var6Lifetime1 = var6Lifetime1 + (124 + ro.field_rb[0].canvasHeight);
               stackIn_26_0 = 18;
               break;
@@ -2119,8 +2119,8 @@ final class CampaignMenu {
             stackIn_46_0 = (!br.field_f[81]) ? 256 : 0;
             var5Lifetime1 = stackIn_46_0;
             if (var4_int != -2) {
-              lk.field_e.field_w.a(var5Lifetime1, var4_int, (byte) -52);
-              lk.field_e.field_D.a(var5Lifetime1, var4_int, (byte) -116);
+              lk.field_e.field_w.setChannelGain(var5Lifetime1, var4_int, (byte) -52);
+              lk.field_e.field_D.setChannelGain(var5Lifetime1, var4_int, (byte) -116);
             }
           }
           return;

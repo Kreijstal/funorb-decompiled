@@ -171,7 +171,7 @@ abstract class AiPlanningStrategy {
                       !NodeIterator.field_a) {
                       if (!vi.field_d) {
                         var17 = tn.activeContextMenu;
-                        var18 = fo.a(4800, mi.field_k, new String[]{var16});
+                        var18 = fo.a(4800, MusicPatchNode.field_k, new String[]{var16});
                         var17.menu.addTextAction(8, var18, (byte) -115);
                       }
                       var17Lifetime1 = tn.activeContextMenu;

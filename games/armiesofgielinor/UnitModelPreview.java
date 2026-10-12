@@ -429,11 +429,11 @@ final class UnitModelPreview {
         int var2 = this.animationPlayer.frameId >> 16;
         AnimationFrameSet var3 = we.a(var2, true);
         if (obfuscationGuard == -298276720) {
-          io.a(var3, (byte) -34);
+          MusicPatch.a(var3, (byte) -34);
           return;
         }
         this.model = (ModelMesh) null;
-        io.a(var3, (byte) -34);
+        MusicPatch.a(var3, (byte) -34);
     }
 
     final void setScreenPosition(int screenX, int screenY, byte obfuscationGuard) {

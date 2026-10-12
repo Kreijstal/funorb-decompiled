@@ -1626,7 +1626,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
             if (80 != rs.field_q) {
               return false;
             }
-            if (!os.e(-1)) {
+            if (!MusicPatchPcmStream.e(-1)) {
               return false;
             }
             hf.textChatActive = true;
@@ -1634,7 +1634,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           }
           return cd.a(param0, param1, false);
         }
-        if (!os.e(-1)) {
+        if (!MusicPatchPcmStream.e(-1)) {
           return false;
         }
         stackIn_22_0 = (!ro.b(param3, (byte) -59, param0)) ? 0 : 1;

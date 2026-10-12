@@ -555,7 +555,7 @@ final class InstructionsPanel {
         int var4 = this.footerEnd.first - var2;
         int var5 = -var3 + this.footerEnd.second;
         SoftwareRaster.f(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, this.field_cb);
-        fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, io.field_m, nd.field_b, this.field_A, this.field_e);
+        fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, nd.field_b, this.field_A, this.field_e);
         int var6 = this.footerStart.second;
         int var7 = this.footerEnd.second;
         var3 = var6 + var7 >> 1;
@@ -643,7 +643,7 @@ final class InstructionsPanel {
         int var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         SpellConfirmationDialog.field_j.b();
         SoftwareRaster.b();
-        fe.b(0, 0, 134, 61, io.field_m, nd.field_b, 0, 0);
+        fe.b(0, 0, 134, 61, MusicPatch.field_m, nd.field_b, 0, 0);
         qt.field_e.drawOpaque(2, 2);
         SoftwareRaster.b(5, 5, 124, 18, 0, 192);
         if (param4 < 70) {
@@ -1353,7 +1353,7 @@ final class InstructionsPanel {
             Object var3_ref = null;
             return;
           }
-          io.a(var3, (byte) -34);
+          MusicPatch.a(var3, (byte) -34);
         } else {
           this.f(-11195);
         }
@@ -2872,13 +2872,13 @@ final class InstructionsPanel {
         int var3 = this.field_C.second;
         int var4 = this.field_V.first - var2;
         int var5 = this.field_V.second - var3;
-        fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, io.field_m, nd.field_b, this.field_A, this.field_e);
+        fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, nd.field_b, this.field_A, this.field_e);
         this.g(120);
         var2 = this.field_x.first;
         var3 = this.field_x.second;
         var4 = -var2 + this.field_K.first;
         var5 = -var3 + this.field_K.second;
-        fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, io.field_m, TutorialController.field_e, this.field_A, this.field_e);
+        fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_A, this.field_e);
         this.drawPageSections(-107);
         this.l(obfuscationGuard + 19);
         this.g((byte) 10);

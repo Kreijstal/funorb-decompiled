@@ -29,7 +29,7 @@ final class hf {
         ef.field_d[9] = wt.field_E;
         ef.field_d[18] = sf.field_Q;
         ef.field_d[17] = qc.field_b;
-        ef.field_d[19] = ih.field_X;
+        ef.field_d[19] = MidiPcmStream.field_X;
         ef.field_d[11] = pf.field_f;
         ef.field_d[6] = bs.field_c;
         ef.field_d[13] = EffectPresentation.field_b;

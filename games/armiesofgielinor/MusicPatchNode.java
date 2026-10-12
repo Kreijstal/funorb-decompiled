@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mi extends IntrusiveNode {
+final class MusicPatchNode extends IntrusiveNode {
     static byte[] field_r;
     static String field_C;
-    int field_D;
+    int key;
     static int field_l;
-    int field_J;
-    int field_n;
-    int field_F;
-    RawPcmStream field_K;
-    PcmSample field_q;
-    int field_m;
-    int field_w;
-    int field_x;
+    int portamentoPitchDelta;
+    int portamentoScale;
+    int exclusiveGroup;
+    RawPcmStream stream;
+    PcmSample sample;
+    int channel;
+    int framesUntilUpdate;
+    int releaseTime;
     static String field_k;
-    io field_H;
-    int field_o;
+    MusicPatch patch;
+    int decayTime;
     static int[] field_G;
-    int field_A;
-    int field_B;
-    int field_E;
-    int field_u;
-    int field_y;
-    int field_t;
-    int field_p;
+    int volumeEnvelopeIndex;
+    int retriggerPhase;
+    int notePan;
+    int velocityGain;
+    int vibratoPhase;
+    int basePitch;
+    int releaseEnvelopeIndex;
     static String field_z;
-    int field_s;
-    int field_I;
-    fq field_v;
+    int volumeEnvelopeTime;
+    int ageTicks;
+    MusicPatchEnvelope envelope;
 
     public static void a(int param0) {
         field_r = null;
@@ -37,20 +37,20 @@ final class mi extends IntrusiveNode {
         field_C = null;
         field_G = null;
         if (param0 != 9480) {
-          mi.f(69);
+          MusicPatchNode.f(69);
         }
     }
 
-    final void e(int param0) {
-        this.field_K = null;
-        this.field_H = null;
-        this.field_q = null;
-        if (param0 == 13301) {
-          this.field_v = null;
+    final void releaseReferences(int obfuscationGuard) {
+        this.stream = null;
+        this.patch = null;
+        this.sample = null;
+        if (obfuscationGuard == 13301) {
+          this.envelope = null;
           return;
         }
-        mi.a(-82);
-        this.field_v = null;
+        MusicPatchNode.a(-82);
+        this.envelope = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
@@ -58,20 +58,20 @@ final class mi extends IntrusiveNode {
         DualNodeDeque.field_g = param1;
         ActionRequest.field_n = param0;
         if (param3 != 3815) {
-          mi.a(-70, -81, 66, 75);
+          MusicPatchNode.a(-70, -81, 66, 75);
         }
     }
 
     final static void f(int param0) {
         if (param0 != -28093) {
-          mi.a(38);
+          MusicPatchNode.a(38);
           BufferedFile.a((byte) 102);
           return;
         }
         BufferedFile.a((byte) 102);
     }
 
-    mi() {
+    MusicPatchNode() {
     }
 
     static {

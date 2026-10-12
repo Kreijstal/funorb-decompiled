@@ -3,24 +3,24 @@
  */
 import java.util.*;
 
-final class fq {
-    int field_m;
-    int field_e;
-    int field_b;
-    int field_j;
-    byte[] field_l;
-    int field_d;
+final class MusicPatchEnvelope {
+    int volumeKeyScaling;
+    int vibratoDelay;
+    int vibratoRate;
+    int vibratoDepth;
+    byte[] volumeEnvelope;
+    int decayRate;
     static String field_a;
     static fa field_h;
-    int field_i;
+    int decayKeyScaling;
     static String[] field_f;
-    byte[] field_g;
+    byte[] releaseEnvelope;
     static String field_k;
-    int field_c;
+    int releaseKeyScaling;
 
     final static PcmStreamMixer a(int param0) {
         if (param0 != 18757) {
-          fq.a((byte) 23, -125L);
+          MusicPatchEnvelope.a((byte) 23, -125L);
           return AnimationSkeleton.field_n;
         }
         return AnimationSkeleton.field_n;
@@ -35,7 +35,7 @@ final class fq {
           return;
         }
         String var2 = (String) null;
-        fq.requestRemoveIgnoredAccount(-122, (String) null, true, (String) null);
+        MusicPatchEnvelope.requestRemoveIgnoredAccount(-122, (String) null, true, (String) null);
         field_k = null;
         field_h = null;
         field_f = null;
@@ -121,7 +121,7 @@ final class fq {
           tq.a(param1, 0);
           return var2;
         }
-        fq.a((byte) -111, -125L);
+        MusicPatchEnvelope.a((byte) -111, -125L);
         var2Lifetime1 = new vg();
         oe.field_Bb.addLast((byte) -119, (IntrusiveNode) (var2Lifetime1));
         tq.a(param1, 0);

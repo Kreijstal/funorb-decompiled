@@ -654,7 +654,7 @@ class ClientUiComponent extends ClientUiNode {
                   KingBlackDragonEvent.field_z[var6].setBounds(var3, -20500, 103, var5, 5);
                   var8 = 110;
                   if (param1) {
-                    pu.field_k[var6][0].setLayout(var3, 2, -30061, 38, var5, var8, io.field_n);
+                    pu.field_k[var6][0].setLayout(var3, 2, -30061, 38, var5, var8, MusicPatch.field_n);
                     var8 += 40;
                   } else {
                     if (pu.field_k[var6][0] != null) {
@@ -667,7 +667,7 @@ class ClientUiComponent extends ClientUiNode {
                   var10 = pu.field_k[var6].length - 1;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9_int / var10;
-                    pu.field_k[var6][var11 + 1].setLayout(var3, 2, -30061, var9_int * (1 + var11) / var10 - 2 - var12, var5, var8 + var12, io.field_n);
+                    pu.field_k[var6][var11 + 1].setLayout(var3, 2, -30061, var9_int * (1 + var11) / var10 - 2 - var12, var5, var8 + var12, MusicPatch.field_n);
                   }
                   var5 = var5 + (var3 + 2);
                 }

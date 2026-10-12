@@ -2193,7 +2193,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
                   break scanLoop1;
                 }
                 if (stackIn_87_0 == ~this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]) {
-                  this.setMessage(fo.a(4800, r.equipmentTutorialMessages[31], new String[]{fq.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]}), (byte) 119);
+                  this.setMessage(fo.a(4800, r.equipmentTutorialMessages[31], new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]}), (byte) 119);
                   this.buttonMode = 0;
                   this.stage = 9;
                   while (true) {
@@ -2234,12 +2234,12 @@ final class EquipmentBattleTutorial extends BattleTutorial {
                 var7 != 0) {
                 var4 = r.equipmentTutorialMessages[22];
               }
-              var4 = fo.a(4800, var4, new String[]{fq.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]});
+              var4 = fo.a(4800, var4, new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]});
               this.buttonMode = 1;
               this.stage = 8;
               this.d(-37, this.equipmentSlot);
             }
-            this.setMessage(fo.a(4800, r.equipmentTutorialMessages[3 + this.equipmentSlot], new String[]{fq.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]], ActionRequest.field_l[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]], var4}), (byte) 109);
+            this.setMessage(fo.a(4800, r.equipmentTutorialMessages[3 + this.equipmentSlot], new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]], ActionRequest.field_l[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]], var4}), (byte) 109);
             if (var7 == 0) {
               return;
             }
@@ -2249,7 +2249,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
             var4 = r.equipmentTutorialMessages[26];
-            var4 = fo.a(4800, var4, new String[]{fq.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]});
+            var4 = fo.a(4800, var4, new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]});
             stackIn_101_1 = 4800;
             stackIn_101_2 = r.equipmentTutorialMessages;
             if (this.controller.field_gc < 0) {

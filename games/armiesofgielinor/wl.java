@@ -13,13 +13,13 @@ abstract class wl extends tj {
     static String field_I;
     boolean field_L;
 
-    final static io a(ResourceArchive param0, int param1, boolean param2) {
+    final static MusicPatch a(ResourceArchive param0, int param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
         Object stackIn_2_0 = null;
-        io stackIn_5_0 = null;
-        io stackIn_7_0 = null;
+        MusicPatch stackIn_5_0 = null;
+        MusicPatch stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -29,13 +29,13 @@ abstract class wl extends tj {
           var3 = var4;
           if (var4 == null) {
             stackIn_2_0 = null;
-            return (io) (stackIn_2_0);
+            return (MusicPatch) (stackIn_2_0);
           }
           if (param2) {
-            stackIn_7_0 = new io(var4);
+            stackIn_7_0 = new MusicPatch(var4);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (io) null;
+          stackIn_5_0 = (MusicPatch) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

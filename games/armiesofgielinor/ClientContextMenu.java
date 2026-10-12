@@ -73,7 +73,7 @@ final class ClientContextMenu {
                 if (actionId != 7) {
                   return false;
                 }
-                var5 = fq.requestRemoveIgnoredAccount(socialPacketOpcode, this.displayName, false, this.accountName);
+                var5 = MusicPatchEnvelope.requestRemoveIgnoredAccount(socialPacketOpcode, this.displayName, false, this.accountName);
                 if (var5 == null) {
                   return true;
                 }
@@ -120,7 +120,7 @@ final class ClientContextMenu {
         if (actionId != 7) {
           return false;
         }
-        var8 = fq.requestRemoveIgnoredAccount(socialPacketOpcode, this.displayName, false, this.accountName);
+        var8 = MusicPatchEnvelope.requestRemoveIgnoredAccount(socialPacketOpcode, this.displayName, false, this.accountName);
         if (var8 == null) {
           return true;
         }
@@ -542,7 +542,7 @@ final class ClientContextMenu {
               if (!fs.isActivePrivateTextRecipient((byte) 111, this.accountName) &&
                 !NodeIterator.field_a) {
                 if (!vi.field_d) {
-                  this.menu.addTextAction(8, fo.a(4800, mi.field_k, new String[]{var7}), (byte) -114);
+                  this.menu.addTextAction(8, fo.a(4800, MusicPatchNode.field_k, new String[]{var7}), (byte) -114);
                 }
                 this.menu.addTextAction(18, fo.a(obfuscationGuard ^ 4807, DeployRequest.field_w, new String[]{var7}), (byte) -111);
                 if (quickChatContext != null) {

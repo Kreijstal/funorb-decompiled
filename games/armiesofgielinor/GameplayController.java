@@ -176,7 +176,7 @@ final class GameplayController {
             fe.b(this.battlefield.campaignMission.name, db.a(true, 320), MatchConditionEntry.a(80, (byte) 94), true);
             fe.c(this.battlefield.campaignMission.name, db.a(true, 320), MatchConditionEntry.a(80, (byte) 94), nd.field_b, true);
           }
-          fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 223, var8, io.field_m, nd.field_b, 0, 180);
+          fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 223, var8, MusicPatch.field_m, nd.field_b, 0, 180);
           fe.b(cs.field_eb, db.a(true, param1 + 111), MatchConditionEntry.a(param0 + 18, (byte) 94), true);
           fe.c(cs.field_eb, db.a(true, 111 + param1), MatchConditionEntry.a(18 + param0, (byte) 94), nd.field_b, true);
           var10 = param1 + 55;
@@ -712,7 +712,7 @@ final class GameplayController {
           if (param3 != 89) {
             return;
           }
-          fe.b(param0, param8, param7, param2, io.field_m, nd.field_b, 0, 0);
+          fe.b(param0, param8, param7, param2, MusicPatch.field_m, nd.field_b, 0, 0);
           if (param4) {
             vq.field_b.drawScaled(param0 + param9, param8 + param1, param5, param6);
             if (!ArmiesOfGielinor.obfuscationControl) {
@@ -983,7 +983,7 @@ final class GameplayController {
             discarded$0 = this.a(false);
           }
           var6 = nd.field_b;
-          fe.b(db.a(true, param4), MatchConditionEntry.a(param1, (byte) 94), 340, 160, io.field_m, var6, 0, 180);
+          fe.b(db.a(true, param4), MatchConditionEntry.a(param1, (byte) 94), 340, 160, MusicPatch.field_m, var6, 0, 180);
           if (-1 < param3) {
             fe.b(ph.field_b[param3], db.a(true, param4 + 137), MatchConditionEntry.a(18 + param1, (byte) 94), true);
             fe.c(ph.field_b[param3], db.a(true, param4 + 137), MatchConditionEntry.a(param1 + 18, (byte) 94), nd.field_b, true);
@@ -1114,7 +1114,7 @@ final class GameplayController {
             stackIn_11_1 = MatchConditionEntry.a(param3, (byte) 94);
             stackIn_11_2 = 184;
             stackIn_11_3 = 111;
-            stackIn_11_4 = io.field_m;
+            stackIn_11_4 = MusicPatch.field_m;
             if (param4 <= 2) {
               stackIn_12_5 = jh.field_k;
             } else {
@@ -2782,7 +2782,7 @@ final class GameplayController {
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameCompleted0 = true;
-          fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 223, 228, io.field_m, TutorialController.field_e, 0, 180);
+          fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 223, 228, MusicPatch.field_m, TutorialController.field_e, 0, 180);
           var4_int = this.battlefield.rankedParticipants[this.field_Rb];
           var5 = this.battlefield.playerNames[var4_int];
           var5 = BitmapFont.a(nr.field_e, var5, 400);
@@ -4312,7 +4312,7 @@ final class GameplayController {
           ro.field_rb[bw.unitDefinitions[param1][0]].draw(var5_int - 8, var6 - 71);
           if (null != bh.field_M[param1]) {
             var10 = en.field_E.getParagraphHeight(bh.field_M[param1], 220, 0);
-            fe.b(-120 + var5_int, 130 + var6, 240, 20 + var10, io.field_m, TutorialController.field_e, 0, 192);
+            fe.b(-120 + var5_int, 130 + var6, 240, 20 + var10, MusicPatch.field_m, TutorialController.field_e, 0, 192);
             en.field_E.a(bh.field_M[param1], var5_int - 110, 140 + var6, 220, 100, 16777215, -1, 1, 0, 0);
           }
           return;
@@ -4528,7 +4528,7 @@ final class GameplayController {
             stackIn_11_0 = TutorialController.field_e;
           }
           var8 = stackIn_11_0;
-          fe.b(db.a(true, 181), MatchConditionEntry.a(var5_int + 57, (byte) 94), 184, 111, io.field_m, var8, 0, 180);
+          fe.b(db.a(true, 181), MatchConditionEntry.a(var5_int + 57, (byte) 94), 184, 111, MusicPatch.field_m, var8, 0, 180);
           if (param2 > -1) {
             fe.b(ph.field_b[param2], db.a(true, 240), MatchConditionEntry.a(75 + var5_int, (byte) 94), true);
             fe.c(ph.field_b[param2], db.a(true, 240), MatchConditionEntry.a(var5_int + 75, (byte) 94), nd.field_b, true);
@@ -4749,7 +4749,7 @@ final class GameplayController {
           var2_int = this.battlefield.playerCount;
           SoftwareRaster.b();
           jg.field_m.f(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94));
-          fe.b(db.a(param0, 15), MatchConditionEntry.a(33, (byte) 94), 610, 414, io.field_m, nd.field_b, 0, 180);
+          fe.b(db.a(param0, 15), MatchConditionEntry.a(33, (byte) 94), 610, 414, MusicPatch.field_m, nd.field_b, 0, 180);
           fe.b(l.field_g, db.a(true, 320), MatchConditionEntry.a(35, (byte) 94));
           fe.c(l.field_g, db.a(true, 320), MatchConditionEntry.a(35, (byte) 94), nd.field_b, false);
           var3 = this.battlefield.winnerCount;
@@ -5085,7 +5085,7 @@ final class GameplayController {
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameCompleted0 = true;
-          fe.b(param0, param2, 223, 228, io.field_m, TutorialController.field_e, 0, 180);
+          fe.b(param0, param2, 223, 228, MusicPatch.field_m, TutorialController.field_e, 0, 180);
           var4_int = this.field_Rb;
           var5 = this.battlefield.playerNames[var4_int];
           var5 = BitmapFont.a(nr.field_e, var5, 400);
@@ -6098,8 +6098,8 @@ final class GameplayController {
                       } else {
                         var7 = th.floorModWithOffset(this.field_Lb + var6, param0 ^ 121, 135);
                         if (-1 < var7 &&
-                          var7 < fq.field_f.length) {
-                          stackIn_72_0 = fq.field_f[var7];
+                          var7 < MusicPatchEnvelope.field_f.length) {
+                          stackIn_72_0 = MusicPatchEnvelope.field_f[var7];
                         } else {
                           stackIn_72_0 = StateChangeEvent.field_A;
                         }
@@ -6134,7 +6134,7 @@ final class GameplayController {
               }
               if (stackIn_83_0 == 0 &&
                 -1 < this.field_gc) {
-                var6_ref_String = fq.field_f[this.field_gc];
+                var6_ref_String = MusicPatchEnvelope.field_f[this.field_gc];
                 fe.b(var6_ref_String, 320, this.o(125) - 45, true);
                 fe.c(var6_ref_String, 320, this.o(126) - 45, nd.field_b, true);
               }
@@ -7440,7 +7440,7 @@ final class GameplayController {
             stackIn_7_0 = TutorialController.field_e;
           }
           var8 = stackIn_7_0;
-          fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, io.field_m, var8, 0, 180);
+          fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, MusicPatch.field_m, var8, 0, 180);
           CampaignUnitOverride.a(db.a(true, param1), db.a(true, 134), MatchConditionEntry.a(228, (byte) 94), MatchConditionEntry.a(param0, (byte) 94), (byte) 73);
           stackIn_10_0 = this.battlefield.playerCoats[var6_int];
           stackIn_10_1 = db.a(true, 13 + param1);
@@ -7451,7 +7451,7 @@ final class GameplayController {
           stackIn_19_6 = !((1 << var6_int & this.battlefield.field_C) <= 0);
           ((CoatOfArms) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2, stackIn_11_3, stackIn_15_4, stackIn_18_5, stackIn_19_6, false, param2 ^ -3);
           QuickChatPhraseRepository.popRasterState(-18862);
-          fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, io.field_m, var8, 0, 0);
+          fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, MusicPatch.field_m, var8, 0, 0);
           if (param3 <= -1) {
             fe.b(DualNodeIterator.field_g, db.a(true, param1 + 67), MatchConditionEntry.a(18 + param0, (byte) 94), true);
             fe.c(DualNodeIterator.field_g, db.a(true, 67 + param1), MatchConditionEntry.a(param0 + 18, (byte) 94), nd.field_b, true);
@@ -8981,7 +8981,7 @@ final class GameplayController {
               if (!this.field_a) {
                 var3 = this.battlefield.g(-1);
                 if (var3 > 0) {
-                  fq.a(this.field_Nb, fo.a(4800, DeployRequest.field_x, new String[]{Integer.toString(var3)}), 0, true);
+                  MusicPatchEnvelope.a(this.field_Nb, fo.a(4800, DeployRequest.field_x, new String[]{Integer.toString(var3)}), 0, true);
                 }
               }
             }
@@ -10214,7 +10214,7 @@ final class GameplayController {
         var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           CampaignDefinition.field_t.drawOpaque(param3 + 2, -73 + (param5 + param0));
-          fe.b(param3 + 0, -76 - (-param5 - param0), 309, 71, io.field_m, nd.field_b, 0, 0);
+          fe.b(param3 + 0, -76 - (-param5 - param0), 309, 71, MusicPatch.field_m, nd.field_b, 0, 0);
           SoftwareRaster.b(7 + param3, param5 - 70 + param0, 25, 25, 0, 128);
           if (-1 < param4.ownerPlayer) {
             wb.a(7816226, -8 + param3, param4.ownerPlayer, uk.field_n, -52 + param5 + param0);
@@ -10422,14 +10422,14 @@ final class GameplayController {
             var7 = var7 + fo.a(4800, lt.field_f, new String[]{Integer.toString(uc.spellDefinitions[param0][0]), Integer.toString(this.battlefield.remainingRuneCap[this.controlledPlayerId])});
           }
           var8 = en.field_E.getParagraphHeight(var7, var6_int - 20, 0);
-          var9 = (nr.field_e.getParagraphHeight(fq.field_f[param0], -20 + var6_int << 1, 0) >> 1) - 30;
+          var9 = (nr.field_e.getParagraphHeight(MusicPatchEnvelope.field_f[param0], -20 + var6_int << 1, 0) >> 1) - 30;
           if (param4 != 11951) {
             this.field_l = false;
           }
-          fe.b(param2 - (var6_int >> 1), -20 + param1 - var8 - var9, var6_int, var8 - (-var9 - 30), io.field_m, param3, 0, 192);
+          fe.b(param2 - (var6_int >> 1), -20 + param1 - var8 - var9, var6_int, var8 - (-var9 - 30), MusicPatch.field_m, param3, 0, 192);
           en.field_E.a(var7, param2 - (var6_int >> 1) + 10, param1 - var8, var6_int - 20, var8, 16777215, -1, 1, 0, 0);
-          fe.b(fq.field_f[param0], param2, -3 - var8 + param1 - var9, var6_int - 20, true);
-          fe.a(fq.field_f[param0], param2, -3 - var9 + (-var8 + param1), -20 + var6_int, param3, true);
+          fe.b(MusicPatchEnvelope.field_f[param0], param2, -3 - var8 + param1 - var9, var6_int - 20, true);
+          fe.a(MusicPatchEnvelope.field_f[param0], param2, -3 - var9 + (-var8 + param1), -20 + var6_int, param3, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -11220,7 +11220,7 @@ final class GameplayController {
           var4_int = 0;
           param0 = -param0;
           if (param2 > 3) {
-            fe.b(db.a(true, 41), MatchConditionEntry.a(292, (byte) 94), 553, 127, io.field_m, nd.field_b, 0, 180);
+            fe.b(db.a(true, 41), MatchConditionEntry.a(292, (byte) 94), 553, 127, MusicPatch.field_m, nd.field_b, 0, 180);
             var7 = 3;
             while (param2 > var7) {
               var5 = this.battlefield.rankedParticipants[var7];
@@ -11445,22 +11445,22 @@ final class GameplayController {
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            io.field_z.c(this.field_H * 2 - 475, 138, 390, 200);
+            MusicPatch.field_z.c(this.field_H * 2 - 475, 138, 390, 200);
             decompiledFrameRemainder3 = (var16 != 0);
           }
           if ((decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1)) {
-            io.field_z.c(-490 + this.field_H * 2, 128, 430, 220);
+            MusicPatch.field_z.c(-490 + this.field_H * 2, 128, 430, 220);
             decompiledFrameRemainder3 = (var16 != 0);
           }
           if ((decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2)) {
-            io.field_z.c(-480 + 2 * this.field_H, 138, 400, 200);
+            MusicPatch.field_z.c(-480 + 2 * this.field_H, 138, 400, 200);
             decompiledFrameRemainder3 = (var16 != 0);
           }
           if (decompiledFrameRemainder3) {
-            io.field_z.c(2 * (this.field_H - 240) - 15, 93, 430, 290);
+            MusicPatch.field_z.c(2 * (this.field_H - 240) - 15, 93, 430, 290);
           }
           var2_int = 0;
           var3 = 2;
@@ -12000,7 +12000,7 @@ final class GameplayController {
                 var5 = param1 ? 1 : 0;
                 CipherPacketBuffer.a(var5 != 0, var4, 1, 0);
                 if (var6 != 0) {
-                  if (io.a(ReportAbuseDialog.field_Nb, (byte) 124) ||
+                  if (MusicPatch.a(ReportAbuseDialog.field_Nb, (byte) 124) ||
                     null != PointerInputHandler.field_f) {
                     var4 = param1 ? 1 : 0;
                     CipherPacketBuffer.a(var4 != 0, 10, 1, 0);
@@ -12014,7 +12014,7 @@ final class GameplayController {
                   }
                 }
               } else {
-                boolean decompiledSharedTail1 = (!(io.a(ReportAbuseDialog.field_Nb, (byte) 124)) &&
+                boolean decompiledSharedTail1 = (!(MusicPatch.a(ReportAbuseDialog.field_Nb, (byte) 124)) &&
                   null == PointerInputHandler.field_f);
                 if (!decompiledSharedTail1) {
                   var4 = param1 ? 1 : 0;

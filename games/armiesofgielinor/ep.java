@@ -223,15 +223,15 @@ final class ep {
             SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(2614, 4592))), this.a((byte) -74, 219) << 4, 80, (SocketResourceClient.b(var6Lifetime1, 100) >> 13) + 32 >> 2, fe.field_o[1]);
             var7 = 256 + (SocketResourceClient.b(var6Lifetime1 / 4, 100) - 65536);
             if (var7 > 0) {
-              ih.field_H.e((int)(-var3 + (double)this.a(2568, 4592)), this.a((byte) -29, 141), var7);
+              MidiPcmStream.field_H.e((int)(-var3 + (double)this.a(2568, 4592)), this.a((byte) -29, 141), var7);
             }
             var7 = 256 + (SocketResourceClient.b(var6Lifetime1 / 2, 100) - 65536);
             if (var7 > 0) {
-              ih.field_H.e((int)((double)this.a(2516, 4592) - var3), this.a((byte) -119, 206), var7);
+              MidiPcmStream.field_H.e((int)((double)this.a(2516, 4592) - var3), this.a((byte) -119, 206), var7);
             }
             var7 = -65536 + SocketResourceClient.b(var6Lifetime1 / 3, 100) + 256;
             if (var7 > 0) {
-              ih.field_H.e((int)((double)this.a(2665, param0 + 4336) - var3), this.a((byte) -53, 168), var7);
+              MidiPcmStream.field_H.e((int)((double)this.a(2665, param0 + 4336) - var3), this.a((byte) -53, 168), var7);
             }
           }
         }

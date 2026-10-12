@@ -106,7 +106,7 @@ final class TutorialController {
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = io.a(ReportAbuseDialog.field_Nb, (byte) 127) ? 1 : 0;
+          var2_int = MusicPatch.a(ReportAbuseDialog.field_Nb, (byte) 127) ? 1 : 0;
           stackIn_4_0 = (PointerInputHandler.field_f == null) ? 0 : 1;
           var3 = stackIn_4_0;
           if (var3 == 0 &&
@@ -116,7 +116,7 @@ final class TutorialController {
           }
           var4 = pk.field_V;
           var4 = var4 + " " + ia.a(fo.a(param0 ^ 4800, QuickChatPhrase.a(var2_int != 0, false, (byte) -115, var3 != 0), new String[]{dv.field_r}), '#', param0 ^ 3, "<br><br>");
-          fe.b(40, 180, 560, 150, io.field_m, nd.field_b, param0, 128);
+          fe.b(40, 180, 560, 150, MusicPatch.field_m, nd.field_b, param0, 128);
           rs.field_n.a(var4, 80, 200, 480, 300, 16777215, -1, 1, 0, 30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -206,10 +206,10 @@ final class TutorialController {
           if (1 == DeployEvent.pointerPressButton) {
             if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 44), db.a(true, 159), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
               ClientContextMenu.field_k = 1;
-              if (ih.field_p != null &&
+              if (MidiPcmStream.field_p != null &&
                 ClientContextMenu.field_k == 0) {
                 KingBlackDragonEvent.field_A = 0;
-                ts.currentSpellMenu = ih.field_p;
+                ts.currentSpellMenu = MidiPcmStream.field_p;
                 wj.field_q = 0;
               }
               RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(123, ClientUiNode.field_v[2]);
@@ -254,9 +254,9 @@ final class TutorialController {
                       wj.field_q = 248;
                       ab.field_a = ev.field_d;
                       ev.field_d = pg.playerProfile.equippedSpellIds[var2_int];
-                      ih.field_p = ct.spellMenuById[ev.field_d];
+                      MidiPcmStream.field_p = ct.spellMenuById[ev.field_d];
                       this.a((byte) 88, ev.field_d, (SpellMenuGroup) null);
-                      if (ts.currentSpellMenu != ih.field_p) {
+                      if (ts.currentSpellMenu != MidiPcmStream.field_p) {
                         RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(127, MoveAttackRequest.field_v[44]);
                         return;
                       }
@@ -1888,7 +1888,7 @@ final class TutorialController {
                                                                 if (!this.selectionState.hasActivationInput((byte) 76)) {
                                                                   return;
                                                                 }
-                                                                mi.f(param1 - 28093);
+                                                                MusicPatchNode.f(param1 - 28093);
                                                                 if (var9 == 0) {
                                                                   return;
                                                                 }
@@ -2342,7 +2342,7 @@ final class TutorialController {
             var4 = param2.label;
           } else {
             if (-1 < param1) {
-              var4 = fq.field_f[param1];
+              var4 = MusicPatchEnvelope.field_f[param1];
               var6 = uc.spellDefinitions[param1][2];
               var5 = ActionRequest.field_l[param1];
             }
@@ -3594,7 +3594,7 @@ final class TutorialController {
           na.field_F = -1;
           var2_int = KingBlackDragonEvent.field_A;
           var3 = wj.field_q;
-          if (null == ih.field_p) {
+          if (null == MidiPcmStream.field_p) {
             var3 = (int)((Math.cos((double)wj.field_q * 3.141592653589793 / 256.0) + 1.0) * 128.0);
             var2_int = (int)(128.0 * (Math.cos((double)KingBlackDragonEvent.field_A * 3.141592653589793 / 256.0) - 1.0));
             if (KingBlackDragonEvent.field_A > 0) {
@@ -4758,7 +4758,7 @@ final class TutorialController {
                     }
                     if (KingBlackDragonEvent.field_A > 0) {
                       stackIn_247_0 = KingBlackDragonEvent.field_A;
-                      if (ih.field_p == null) {
+                      if (MidiPcmStream.field_p == null) {
                         stackIn_248_1 = 8;
                       } else {
                         stackIn_248_1 = 16;
@@ -4773,7 +4773,7 @@ final class TutorialController {
                     }
                     if (0 > KingBlackDragonEvent.field_A) {
                       stackIn_260_0 = KingBlackDragonEvent.field_A;
-                      if (null != ih.field_p) {
+                      if (null != MidiPcmStream.field_p) {
                         stackIn_261_1 = 16;
                       } else {
                         stackIn_261_1 = 8;
@@ -4786,13 +4786,13 @@ final class TutorialController {
                     boolean decompiledFrameRemainder2 = true;
                     if (0 == KingBlackDragonEvent.field_A) {
                       vu.field_O = null;
-                      if (ih.field_p != null) {
-                        if (ts.currentSpellMenu == ih.field_p) {
-                          ih.field_p = null;
+                      if (MidiPcmStream.field_p != null) {
+                        if (ts.currentSpellMenu == MidiPcmStream.field_p) {
+                          MidiPcmStream.field_p = null;
                           decompiledFrameRemainder2 = (var4 != 0);
                         }
                         if (decompiledFrameRemainder2) {
-                          var3_ref_rg = ih.field_p;
+                          var3_ref_rg = MidiPcmStream.field_p;
                           while (true) {
                             boolean decompiledFrameRemainder1 = true;
                             boolean decompiledFrameRemainder0 = true;
@@ -4812,7 +4812,7 @@ final class TutorialController {
                               ts.currentSpellMenu = var3_ref_rg;
                               KingBlackDragonEvent.field_A = 240;
                               stackIn_284_0 = ts.currentSpellMenu;
-                              stackIn_284_1 = ih.field_p;
+                              stackIn_284_1 = MidiPcmStream.field_p;
                             }
                             if (decompiledFrameRemainder1) {
                               if (stackIn_284_0 != stackIn_284_1) {
@@ -4821,7 +4821,7 @@ final class TutorialController {
                                   break;
                                 }
                               }
-                              ih.field_p = null;
+                              MidiPcmStream.field_p = null;
                               RadialSummonMenu.$cfr$intArgs$a$6d836999ad61(83, MoveAttackRequest.field_v[42]);
                               if (var4 == 0) {
                                 break;
@@ -5551,8 +5551,8 @@ final class TutorialController {
                   this.tutorialStage != 27 &&
                   28 != this.tutorialStage) {
                   if (18 == this.tutorialStage) {
-                    fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, io.field_m, nd.field_b, 0, 180);
-                    fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -117) - 10, MoveEvent.tutorialLayout.getRightX((byte) -73, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) + 10), io.field_m, nd.field_b, 0, 256);
+                    fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, nd.field_b, 0, 180);
+                    fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -117) - 10, MoveEvent.tutorialLayout.getRightX((byte) -73, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) + 10), MusicPatch.field_m, nd.field_b, 0, 256);
                     this.m(100);
                     fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
                     fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), nd.field_b, false);
@@ -5560,8 +5560,8 @@ final class TutorialController {
                   }
                   if (decompiledFrameRemainder0) {
                     if (this.tutorialStage == 12) {
-                      fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, io.field_m, nd.field_b, 0, 180);
-                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -118), MoveEvent.tutorialLayout.getRightX((byte) -101, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -109) + 10, io.field_m, nd.field_b, 0, 256);
+                      fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, nd.field_b, 0, 180);
+                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -118), MoveEvent.tutorialLayout.getRightX((byte) -101, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -109) + 10, MusicPatch.field_m, nd.field_b, 0, 256);
                       this.k(-128);
                       stackIn_68_0 = wb.field_b[this.tutorialStage];
                       stackIn_69_1 = !(param0);
@@ -5572,8 +5572,8 @@ final class TutorialController {
                     if (decompiledFrameRemainder0) {
                       if (20 != this.tutorialStage) {
                         if (this.tutorialStage == 13) {
-                          fe.b(db.a(!param0, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, io.field_m, nd.field_b, 0, 180);
-                          fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -127) - 10, MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - (MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -114) - 10), io.field_m, nd.field_b, 0, 256);
+                          fe.b(db.a(!param0, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, nd.field_b, 0, 180);
+                          fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -127) - 10, MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - (MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -114) - 10), MusicPatch.field_m, nd.field_b, 0, 256);
                           this.i((byte) 41);
                           fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
                           fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), nd.field_b, false);
@@ -5581,8 +5581,8 @@ final class TutorialController {
                         }
                         if (decompiledFrameRemainder0) {
                           if (this.tutorialStage == 0) {
-                            fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -106) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -33) - 10), MoveEvent.tutorialLayout.getRightX((byte) -125, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 113)), io.field_m, nd.field_b, 0, 128);
-                            fe.b(10 + MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -104) + (MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -22) + 10), -20 + MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -120) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -125) - 10) - 20, io.field_m, field_e, 0, 128);
+                            fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -106) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -33) - 10), MoveEvent.tutorialLayout.getRightX((byte) -125, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 113)), MusicPatch.field_m, nd.field_b, 0, 128);
+                            fe.b(10 + MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -104) + (MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -22) + 10), -20 + MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -120) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -125) - 10) - 20, MusicPatch.field_m, field_e, 0, 128);
                             var2_int = so.field_b.field_a;
                             ol.field_y.g(var2_int / 2 - ol.field_y.canvasWidth / 2, 50 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -111) - ol.field_y.canvasHeight);
                             decompiledFrameRemainder0 = (var4 != 0);
@@ -5595,15 +5595,15 @@ final class TutorialController {
                             if (this.tutorialStage != 5) {
                               if (this.tutorialStage == 22 ||
                                 21 == this.tutorialStage) {
-                                fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, io.field_m, nd.field_b, 0, 180);
+                                fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, nd.field_b, 0, 180);
                                 MoveEvent.campaignMenu.draw((byte) 17);
-                                fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - 10, MoveEvent.tutorialLayout.getRightX((byte) 103, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - (MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - 10), io.field_m, nd.field_b, 0, 256);
+                                fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - 10, MoveEvent.tutorialLayout.getRightX((byte) 103, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - (MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - 10), MusicPatch.field_m, nd.field_b, 0, 256);
                                 decompiledFrameRemainder0 = (var4 != 0);
                               }
                               if (decompiledFrameRemainder0) {
                                 if (this.tutorialStage == 16) {
                                   BufferedSocket.field_i.a(256);
-                                  fe.b(-3 + MoveEvent.tutorialLayout.getLeftX(16, 29), MoveEvent.tutorialLayout.getTopY(16, (byte) -118) - 3, 6 + (MoveEvent.tutorialLayout.getRightX((byte) -83, 16) - MoveEvent.tutorialLayout.getLeftX(16, 29)), 6 + this.getItemHeight(12, 0), io.field_m, nd.field_b, 0, 128);
+                                  fe.b(-3 + MoveEvent.tutorialLayout.getLeftX(16, 29), MoveEvent.tutorialLayout.getTopY(16, (byte) -118) - 3, 6 + (MoveEvent.tutorialLayout.getRightX((byte) -83, 16) - MoveEvent.tutorialLayout.getLeftX(16, 29)), 6 + this.getItemHeight(12, 0), MusicPatch.field_m, nd.field_b, 0, 128);
                                   decompiledFrameRemainder0 = (var4 != 0);
                                 }
                                 if (decompiledFrameRemainder0) {
@@ -5618,7 +5618,7 @@ final class TutorialController {
                                         ma.field_Z) {
                                         var2_int -= 32;
                                       }
-                                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -64), MoveEvent.tutorialLayout.getRightX((byte) 92, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -115) + MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112)), io.field_m, nd.field_b, 0, 128);
+                                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -64), MoveEvent.tutorialLayout.getRightX((byte) 92, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -115) + MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112)), MusicPatch.field_m, nd.field_b, 0, 128);
                                       if (wb.field_b[this.tutorialStage] != null) {
                                         fe.b(wb.field_b[this.tutorialStage], this.getItemLeftX(true, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true));
                                         fe.c(wb.field_b[this.tutorialStage], this.getItemLeftX(true, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true), nd.field_b, false);
@@ -5627,7 +5627,7 @@ final class TutorialController {
                                     }
                                     if (decompiledFrameRemainder0) {
                                       var2_int = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -102);
-                                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -34), MoveEvent.tutorialLayout.getRightX((byte) 97, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), (1 + MoveEvent.tutorialStageItems[this.tutorialStage].length) * MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -121) + (MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 117) >> 2), io.field_m, nd.field_b, 0, 128);
+                                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -34), MoveEvent.tutorialLayout.getRightX((byte) 97, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), (1 + MoveEvent.tutorialStageItems[this.tutorialStage].length) * MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -121) + (MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 117) >> 2), MusicPatch.field_m, nd.field_b, 0, 128);
                                       if (null != wb.field_b[this.tutorialStage]) {
                                         fe.b(wb.field_b[this.tutorialStage], this.getItemLeftX(true, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true));
                                         stackIn_143_0 = wb.field_b[this.tutorialStage];
@@ -5638,12 +5638,12 @@ final class TutorialController {
                                     }
                                   }
                                   if (decompiledFrameRemainder0) {
-                                    fe.b(db.a(true, 25), MatchConditionEntry.a(33, (byte) 94), 590, 414, io.field_m, nd.field_b, 0, 180);
-                                    fe.b(db.a(true, 42), MatchConditionEntry.a(48, (byte) 94), 556, 158, io.field_m, jh.field_k, 0, 256);
-                                    fe.b(db.a(true, 42), MatchConditionEntry.a(215, (byte) 94), 556, 205, io.field_m, jh.field_k, 0, 128);
-                                    fe.b(db.a(true, 52), MatchConditionEntry.a(228, (byte) 94), 191, 180, io.field_m, jh.field_k, 0, 128);
-                                    fe.b(db.a(true, 251), MatchConditionEntry.a(228, (byte) 94), 337, 180, io.field_m, jh.field_k, 0, 128);
-                                    fe.b(db.a(!param0, 30), MatchConditionEntry.a(431, (byte) 94), 581, 32, io.field_m, nd.field_b, 0, 256);
+                                    fe.b(db.a(true, 25), MatchConditionEntry.a(33, (byte) 94), 590, 414, MusicPatch.field_m, nd.field_b, 0, 180);
+                                    fe.b(db.a(true, 42), MatchConditionEntry.a(48, (byte) 94), 556, 158, MusicPatch.field_m, jh.field_k, 0, 256);
+                                    fe.b(db.a(true, 42), MatchConditionEntry.a(215, (byte) 94), 556, 205, MusicPatch.field_m, jh.field_k, 0, 128);
+                                    fe.b(db.a(true, 52), MatchConditionEntry.a(228, (byte) 94), 191, 180, MusicPatch.field_m, jh.field_k, 0, 128);
+                                    fe.b(db.a(true, 251), MatchConditionEntry.a(228, (byte) 94), 337, 180, MusicPatch.field_m, jh.field_k, 0, 128);
+                                    fe.b(db.a(!param0, 30), MatchConditionEntry.a(431, (byte) 94), 581, 32, MusicPatch.field_m, nd.field_b, 0, 256);
                                     decompiledFrameRemainder0 = (null != wb.field_b[this.tutorialStage]);
                                     if (decompiledFrameRemainder0) {
                                       var2_int = MatchConditionEntry.a(33, (byte) 94);
@@ -5665,8 +5665,8 @@ final class TutorialController {
                         }
                       }
                       if (decompiledFrameRemainder0) {
-                        fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, io.field_m, nd.field_b, 0, 180);
-                        fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -108) - 10, MoveEvent.tutorialLayout.getRightX((byte) -85, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -105)), io.field_m, nd.field_b, 0, 256);
+                        fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, nd.field_b, 0, 180);
+                        fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -108) - 10, MoveEvent.tutorialLayout.getRightX((byte) -85, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -105)), MusicPatch.field_m, nd.field_b, 0, 256);
                         this.l(-23588);
                         fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
                         fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), nd.field_b, false);
@@ -5676,7 +5676,7 @@ final class TutorialController {
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  fe.b(db.a(true, 20), MatchConditionEntry.a(40, (byte) 94), 600, 420, io.field_m, nd.field_b, 0, 180);
+                  fe.b(db.a(true, 20), MatchConditionEntry.a(40, (byte) 94), 600, 420, MusicPatch.field_m, nd.field_b, 0, 180);
                   fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(40, (byte) 94));
                   stackIn_168_0 = wb.field_b[this.tutorialStage];
                   stackIn_169_1 = !(param0);
@@ -5685,7 +5685,7 @@ final class TutorialController {
                 }
               }
               if (decompiledFrameRemainder0) {
-                fe.b(db.a(!param0, 20), MatchConditionEntry.a(40, (byte) 94), 600, 420, io.field_m, nd.field_b, 0, 180);
+                fe.b(db.a(!param0, 20), MatchConditionEntry.a(40, (byte) 94), 600, 420, MusicPatch.field_m, nd.field_b, 0, 180);
                 fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(40, (byte) 94));
                 fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(40, (byte) 94), nd.field_b, false);
                 decompiledFrameRemainder0 = (var4 != 0);
@@ -5694,7 +5694,7 @@ final class TutorialController {
             if (decompiledFrameRemainder0) {
               var2_int = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -117);
               var3 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -66) - (nr.field_e.getParagraphHeight(vd.field_a, 500, 0) >> 1));
-              fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112), MoveEvent.tutorialLayout.getRightX((byte) 94, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3, io.field_m, nd.field_b, 0, 128);
+              fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112), MoveEvent.tutorialLayout.getRightX((byte) 94, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3, MusicPatch.field_m, nd.field_b, 0, 128);
               fe.a(vd.field_a, this.getItemLeftX(true, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, var2_int + 20, 250, 16777215, true);
               stackIn_180_0 = wb.field_b[this.tutorialStage];
               stackIn_180_1 = this.getItemLeftX(true, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1;
@@ -5711,7 +5711,7 @@ final class TutorialController {
           if (decompiledFrameRemainder0) {
             var2_intLifetime2 = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -124);
             var3Lifetime1 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -103) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 122) - (nr.field_e.getParagraphHeight(mu.field_e, 500, 0) >> 1));
-            fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 123) + var2_intLifetime2, MoveEvent.tutorialLayout.getRightX((byte) -61, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3Lifetime1, io.field_m, nd.field_b, 0, 128);
+            fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 123) + var2_intLifetime2, MoveEvent.tutorialLayout.getRightX((byte) -61, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3Lifetime1, MusicPatch.field_m, nd.field_b, 0, 128);
             stackIn_189_0 = mu.field_e;
             stackIn_190_2 = !(param0);
             fe.a(stackIn_189_0, this.getItemLeftX(stackIn_190_2, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, 20 + var2_intLifetime2, 250, 16777215, true);
@@ -5929,7 +5929,7 @@ final class TutorialController {
             var3_int = this.a(param0.parent, (byte) -88);
           }
           if (TabbedPanel.a(MatchConditionEntry.a(359, (byte) 94), db.a(true, 30 + var3_int * 50 + 30), 10, false)) {
-            ih.field_p = param0;
+            MidiPcmStream.field_p = param0;
             this.a((byte) 116, -1, param0);
             if (-1 != ev.field_d) {
               wj.field_q = 248;

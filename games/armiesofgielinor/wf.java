@@ -296,11 +296,11 @@ abstract class wf extends iv {
           }
           if (var4 == 13) {
             try {
-              if (fq.field_h == null) {
-                fq.field_h = new fa(IntPair.field_m, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              if (MusicPatchEnvelope.field_h == null) {
+                MusicPatchEnvelope.field_h = new fa(IntPair.field_m, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (fq.field_h.b(0)) {
-                var12 = fq.field_h.a(3);
+              if (MusicPatchEnvelope.field_h.b(0)) {
+                var12 = MusicPatchEnvelope.field_h.a(3);
                 if (var12 != null) {
                   var7 = BattlefieldTheme.decodeSingleByteText(0, var12.position, -127, var12.payload);
                   df.a(var7, -73);
@@ -308,7 +308,7 @@ abstract class wf extends iv {
                   var9 = (String) null;
                   df.a((String) null, -108);
                 }
-                fq.field_h = null;
+                MusicPatchEnvelope.field_h = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -316,7 +316,7 @@ abstract class wf extends iv {
               af.a((Throwable) ((Object) var5), -99, "S1");
               var10 = (String) null;
               df.a((String) null, -119);
-              fq.field_h = null;
+              MusicPatchEnvelope.field_h = null;
             }
           }
           if (15 == var4) {
@@ -430,7 +430,7 @@ abstract class wf extends iv {
                       this.n(16433);
                       break regionExit1;
                     case 18:
-                      fq.b((byte) 119);
+                      MusicPatchEnvelope.b((byte) 119);
                       break regionExit1;
                     default:
                       af.a((Throwable) null, param0 ^ -100, "MGS1: " + CampaignProgress.b(false));
@@ -535,7 +535,7 @@ abstract class wf extends iv {
           var3 = DualNodeHashTable.getNominalTickRate(-113) * 1200;
           if (this.field_r ||
             !(var3 >= bs.a((byte) 99)) &&
-            !(os.g(4) <= var3)) {
+            !(MusicPatchPcmStream.getPointerIdleTicks(4) <= var3)) {
             this.field_r = false;
             dj.a((byte) -126);
             er.b(-11);
@@ -672,7 +672,7 @@ abstract class wf extends iv {
             di.c((byte) -128);
           }
           if (null == pt.field_eb) {
-            pt.field_eb = fq.a(18757);
+            pt.field_eb = MusicPatchEnvelope.a(18757);
             ko.field_e = nb.c((byte) 111);
           }
           qd.a(h.field_g, (byte) 76, pt.field_eb, ko.field_e);

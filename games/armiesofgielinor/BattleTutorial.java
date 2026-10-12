@@ -1651,7 +1651,7 @@ class BattleTutorial {
         var2 = so.field_b.field_a;
         var3 = so.field_b.field_g;
         SoftwareRaster.setClip(-10 + var2 - this.panelWidth, -this.panelHeight + var3 - 10, -10 + var2, var3);
-        fe.b(-10 + (-this.panelWidth + var2), -10 - this.panelHeight + var3, this.panelWidth, this.panelHeight, io.field_m, nd.field_b, 0, 192);
+        fe.b(-10 + (-this.panelWidth + var2), -10 - this.panelHeight + var3, this.panelWidth, this.panelHeight, MusicPatch.field_m, nd.field_b, 0, 192);
         if (4 != this.buttonMode) {
           stackIn_12_0 = -5 + var2 - this.panelWidth;
           stackIn_12_1 = -45 + var3;

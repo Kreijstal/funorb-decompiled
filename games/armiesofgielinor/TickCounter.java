@@ -1303,7 +1303,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "PLAY_CAMPAIGN");
                 if (null != var2) {
-                  io.field_o = uu.a(var2, (byte) 111);
+                  MusicPatch.field_o = uu.a(var2, (byte) 111);
                 }
                 var2 = fk.a(false, "LOAD_QUICKSAVE");
                 if (var2 != null) {
@@ -3657,543 +3657,543 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "trinketnames,0");
                 if (null != var2) {
-                  fq.field_f[0] = uu.a(var2, (byte) -116);
+                  MusicPatchEnvelope.field_f[0] = uu.a(var2, (byte) -116);
                 }
                 var2 = fk.a(false, "trinketnames,1");
                 if (var2 != null) {
-                  fq.field_f[1] = uu.a(var2, (byte) -96);
+                  MusicPatchEnvelope.field_f[1] = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "trinketnames,2");
                 if (null != var2) {
-                  fq.field_f[2] = uu.a(var2, (byte) 42);
+                  MusicPatchEnvelope.field_f[2] = uu.a(var2, (byte) 42);
                 }
                 var2 = fk.a(false, "trinketnames,3");
                 if (null != var2) {
-                  fq.field_f[3] = uu.a(var2, (byte) 108);
+                  MusicPatchEnvelope.field_f[3] = uu.a(var2, (byte) 108);
                 }
                 var2 = fk.a(false, "trinketnames,4");
                 if (var2 != null) {
-                  fq.field_f[4] = uu.a(var2, (byte) 94);
+                  MusicPatchEnvelope.field_f[4] = uu.a(var2, (byte) 94);
                 }
                 var2 = fk.a(false, "trinketnames,5");
                 if (var2 != null) {
-                  fq.field_f[5] = uu.a(var2, (byte) -128);
+                  MusicPatchEnvelope.field_f[5] = uu.a(var2, (byte) -128);
                 }
                 var2 = fk.a(false, "trinketnames,6");
                 if (var2 != null) {
-                  fq.field_f[6] = uu.a(var2, (byte) -125);
+                  MusicPatchEnvelope.field_f[6] = uu.a(var2, (byte) -125);
                 }
                 var2 = fk.a(false, "trinketnames,7");
                 if (null != var2) {
-                  fq.field_f[7] = uu.a(var2, (byte) -114);
+                  MusicPatchEnvelope.field_f[7] = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "trinketnames,8");
                 if (null != var2) {
-                  fq.field_f[8] = uu.a(var2, (byte) 43);
+                  MusicPatchEnvelope.field_f[8] = uu.a(var2, (byte) 43);
                 }
                 var2 = fk.a(false, "trinketnames,9");
                 if (var2 != null) {
-                  fq.field_f[9] = uu.a(var2, (byte) -109);
+                  MusicPatchEnvelope.field_f[9] = uu.a(var2, (byte) -109);
                 }
                 var2 = fk.a(false, "trinketnames,10");
                 if (var2 != null) {
-                  fq.field_f[10] = uu.a(var2, (byte) -127);
+                  MusicPatchEnvelope.field_f[10] = uu.a(var2, (byte) -127);
                 }
                 var2 = fk.a(false, "trinketnames,11");
                 if (null != var2) {
-                  fq.field_f[11] = uu.a(var2, (byte) -122);
+                  MusicPatchEnvelope.field_f[11] = uu.a(var2, (byte) -122);
                 }
                 var2 = fk.a(false, "trinketnames,12");
                 if (null != var2) {
-                  fq.field_f[12] = uu.a(var2, (byte) -102);
+                  MusicPatchEnvelope.field_f[12] = uu.a(var2, (byte) -102);
                 }
                 var2 = fk.a(false, "trinketnames,13");
                 if (var2 != null) {
-                  fq.field_f[13] = uu.a(var2, (byte) 112);
+                  MusicPatchEnvelope.field_f[13] = uu.a(var2, (byte) 112);
                 }
                 var2 = fk.a(false, "trinketnames,14");
                 if (var2 != null) {
-                  fq.field_f[14] = uu.a(var2, (byte) 11);
+                  MusicPatchEnvelope.field_f[14] = uu.a(var2, (byte) 11);
                 }
                 var2 = fk.a(false, "trinketnames,15");
                 if (var2 != null) {
-                  fq.field_f[15] = uu.a(var2, (byte) 98);
+                  MusicPatchEnvelope.field_f[15] = uu.a(var2, (byte) 98);
                 }
                 var2 = fk.a(false, "trinketnames,16");
                 if (null != var2) {
-                  fq.field_f[16] = uu.a(var2, (byte) -95);
+                  MusicPatchEnvelope.field_f[16] = uu.a(var2, (byte) -95);
                 }
                 var2 = fk.a(false, "trinketnames,17");
                 if (var2 != null) {
-                  fq.field_f[17] = uu.a(var2, (byte) -121);
+                  MusicPatchEnvelope.field_f[17] = uu.a(var2, (byte) -121);
                 }
                 var2 = fk.a(false, "trinketnames,18");
                 if (null != var2) {
-                  fq.field_f[18] = uu.a(var2, (byte) 121);
+                  MusicPatchEnvelope.field_f[18] = uu.a(var2, (byte) 121);
                 }
                 var2 = fk.a(false, "trinketnames,19");
                 if (null != var2) {
-                  fq.field_f[19] = uu.a(var2, (byte) 108);
+                  MusicPatchEnvelope.field_f[19] = uu.a(var2, (byte) 108);
                 }
                 var2 = fk.a(false, "trinketnames,20");
                 if (var2 != null) {
-                  fq.field_f[20] = uu.a(var2, (byte) 16);
+                  MusicPatchEnvelope.field_f[20] = uu.a(var2, (byte) 16);
                 }
                 var2 = fk.a(false, "trinketnames,21");
                 if (var2 != null) {
-                  fq.field_f[21] = uu.a(var2, (byte) -117);
+                  MusicPatchEnvelope.field_f[21] = uu.a(var2, (byte) -117);
                 }
                 var2 = fk.a(false, "trinketnames,22");
                 if (null != var2) {
-                  fq.field_f[22] = uu.a(var2, (byte) 98);
+                  MusicPatchEnvelope.field_f[22] = uu.a(var2, (byte) 98);
                 }
                 var2 = fk.a(false, "trinketnames,23");
                 if (null != var2) {
-                  fq.field_f[23] = uu.a(var2, (byte) 16);
+                  MusicPatchEnvelope.field_f[23] = uu.a(var2, (byte) 16);
                 }
                 var2 = fk.a(false, "trinketnames,24");
                 if (var2 != null) {
-                  fq.field_f[24] = uu.a(var2, (byte) -107);
+                  MusicPatchEnvelope.field_f[24] = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "trinketnames,25");
                 if (var2 != null) {
-                  fq.field_f[25] = uu.a(var2, (byte) 123);
+                  MusicPatchEnvelope.field_f[25] = uu.a(var2, (byte) 123);
                 }
                 var2 = fk.a(false, "trinketnames,26");
                 if (var2 != null) {
-                  fq.field_f[26] = uu.a(var2, (byte) 105);
+                  MusicPatchEnvelope.field_f[26] = uu.a(var2, (byte) 105);
                 }
                 var2 = fk.a(false, "trinketnames,27");
                 if (null != var2) {
-                  fq.field_f[27] = uu.a(var2, (byte) -127);
+                  MusicPatchEnvelope.field_f[27] = uu.a(var2, (byte) -127);
                 }
                 var2 = fk.a(false, "trinketnames,28");
                 if (var2 != null) {
-                  fq.field_f[28] = uu.a(var2, (byte) 12);
+                  MusicPatchEnvelope.field_f[28] = uu.a(var2, (byte) 12);
                 }
                 var2 = fk.a(false, "trinketnames,29");
                 if (var2 != null) {
-                  fq.field_f[29] = uu.a(var2, (byte) 89);
+                  MusicPatchEnvelope.field_f[29] = uu.a(var2, (byte) 89);
                 }
                 var2 = fk.a(false, "trinketnames,30");
                 if (var2 != null) {
-                  fq.field_f[30] = uu.a(var2, (byte) -127);
+                  MusicPatchEnvelope.field_f[30] = uu.a(var2, (byte) -127);
                 }
                 var2 = fk.a(false, "trinketnames,31");
                 if (null != var2) {
-                  fq.field_f[31] = uu.a(var2, (byte) -122);
+                  MusicPatchEnvelope.field_f[31] = uu.a(var2, (byte) -122);
                 }
                 var2 = fk.a(false, "trinketnames,32");
                 if (var2 != null) {
-                  fq.field_f[32] = uu.a(var2, (byte) -118);
+                  MusicPatchEnvelope.field_f[32] = uu.a(var2, (byte) -118);
                 }
                 var2 = fk.a(false, "trinketnames,33");
                 if (null != var2) {
-                  fq.field_f[33] = uu.a(var2, (byte) -113);
+                  MusicPatchEnvelope.field_f[33] = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "trinketnames,34");
                 if (var2 != null) {
-                  fq.field_f[34] = uu.a(var2, (byte) 12);
+                  MusicPatchEnvelope.field_f[34] = uu.a(var2, (byte) 12);
                 }
                 var2 = fk.a(false, "trinketnames,35");
                 if (null != var2) {
-                  fq.field_f[35] = uu.a(var2, (byte) -113);
+                  MusicPatchEnvelope.field_f[35] = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "trinketnames,36");
                 if (null != var2) {
-                  fq.field_f[36] = uu.a(var2, (byte) 60);
+                  MusicPatchEnvelope.field_f[36] = uu.a(var2, (byte) 60);
                 }
                 var2 = fk.a(false, "trinketnames,37");
                 if (null != var2) {
-                  fq.field_f[37] = uu.a(var2, (byte) 9);
+                  MusicPatchEnvelope.field_f[37] = uu.a(var2, (byte) 9);
                 }
                 var2 = fk.a(false, "trinketnames,38");
                 if (null != var2) {
-                  fq.field_f[38] = uu.a(var2, (byte) 28);
+                  MusicPatchEnvelope.field_f[38] = uu.a(var2, (byte) 28);
                 }
                 var2 = fk.a(false, "trinketnames,39");
                 if (var2 != null) {
-                  fq.field_f[39] = uu.a(var2, (byte) -100);
+                  MusicPatchEnvelope.field_f[39] = uu.a(var2, (byte) -100);
                 }
                 var2 = fk.a(false, "trinketnames,40");
                 if (var2 != null) {
-                  fq.field_f[40] = uu.a(var2, (byte) -94);
+                  MusicPatchEnvelope.field_f[40] = uu.a(var2, (byte) -94);
                 }
                 var2 = fk.a(false, "trinketnames,41");
                 if (var2 != null) {
-                  fq.field_f[41] = uu.a(var2, (byte) -113);
+                  MusicPatchEnvelope.field_f[41] = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "trinketnames,42");
                 if (var2 != null) {
-                  fq.field_f[42] = uu.a(var2, (byte) 75);
+                  MusicPatchEnvelope.field_f[42] = uu.a(var2, (byte) 75);
                 }
                 var2 = fk.a(false, "trinketnames,43");
                 if (var2 != null) {
-                  fq.field_f[43] = uu.a(var2, (byte) -93);
+                  MusicPatchEnvelope.field_f[43] = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "trinketnames,44");
                 if (null != var2) {
-                  fq.field_f[44] = uu.a(var2, (byte) -108);
+                  MusicPatchEnvelope.field_f[44] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "trinketnames,45");
                 if (null != var2) {
-                  fq.field_f[45] = uu.a(var2, (byte) 116);
+                  MusicPatchEnvelope.field_f[45] = uu.a(var2, (byte) 116);
                 }
                 var2 = fk.a(false, "trinketnames,46");
                 if (null != var2) {
-                  fq.field_f[46] = uu.a(var2, (byte) -119);
+                  MusicPatchEnvelope.field_f[46] = uu.a(var2, (byte) -119);
                 }
                 var2 = fk.a(false, "trinketnames,47");
                 if (var2 != null) {
-                  fq.field_f[47] = uu.a(var2, (byte) -128);
+                  MusicPatchEnvelope.field_f[47] = uu.a(var2, (byte) -128);
                 }
                 var2 = fk.a(false, "trinketnames,48");
                 if (var2 != null) {
-                  fq.field_f[48] = uu.a(var2, (byte) -103);
+                  MusicPatchEnvelope.field_f[48] = uu.a(var2, (byte) -103);
                 }
                 var2 = fk.a(false, "trinketnames,49");
                 if (null != var2) {
-                  fq.field_f[49] = uu.a(var2, (byte) -112);
+                  MusicPatchEnvelope.field_f[49] = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "trinketnames,50");
                 if (null != var2) {
-                  fq.field_f[50] = uu.a(var2, (byte) -121);
+                  MusicPatchEnvelope.field_f[50] = uu.a(var2, (byte) -121);
                 }
                 var2 = fk.a(false, "trinketnames,51");
                 if (var2 != null) {
-                  fq.field_f[51] = uu.a(var2, (byte) -102);
+                  MusicPatchEnvelope.field_f[51] = uu.a(var2, (byte) -102);
                 }
                 var2 = fk.a(false, "trinketnames,52");
                 if (var2 != null) {
-                  fq.field_f[52] = uu.a(var2, (byte) 4);
+                  MusicPatchEnvelope.field_f[52] = uu.a(var2, (byte) 4);
                 }
                 var2 = fk.a(false, "trinketnames,53");
                 if (null != var2) {
-                  fq.field_f[53] = uu.a(var2, (byte) -101);
+                  MusicPatchEnvelope.field_f[53] = uu.a(var2, (byte) -101);
                 }
                 var2 = fk.a(false, "trinketnames,54");
                 if (null != var2) {
-                  fq.field_f[54] = uu.a(var2, (byte) 110);
+                  MusicPatchEnvelope.field_f[54] = uu.a(var2, (byte) 110);
                 }
                 var2 = fk.a(false, "trinketnames,55");
                 if (var2 != null) {
-                  fq.field_f[55] = uu.a(var2, (byte) -108);
+                  MusicPatchEnvelope.field_f[55] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "trinketnames,56");
                 if (var2 != null) {
-                  fq.field_f[56] = uu.a(var2, (byte) -110);
+                  MusicPatchEnvelope.field_f[56] = uu.a(var2, (byte) -110);
                 }
                 var2 = fk.a(false, "trinketnames,57");
                 if (var2 != null) {
-                  fq.field_f[57] = uu.a(var2, (byte) -120);
+                  MusicPatchEnvelope.field_f[57] = uu.a(var2, (byte) -120);
                 }
                 var2 = fk.a(false, "trinketnames,58");
                 if (var2 != null) {
-                  fq.field_f[58] = uu.a(var2, (byte) 43);
+                  MusicPatchEnvelope.field_f[58] = uu.a(var2, (byte) 43);
                 }
                 var2 = fk.a(false, "trinketnames,59");
                 if (var2 != null) {
-                  fq.field_f[59] = uu.a(var2, (byte) 17);
+                  MusicPatchEnvelope.field_f[59] = uu.a(var2, (byte) 17);
                 }
                 var2 = fk.a(false, "trinketnames,60");
                 if (null != var2) {
-                  fq.field_f[60] = uu.a(var2, (byte) 20);
+                  MusicPatchEnvelope.field_f[60] = uu.a(var2, (byte) 20);
                 }
                 var2 = fk.a(false, "trinketnames,61");
                 if (var2 != null) {
-                  fq.field_f[61] = uu.a(var2, (byte) 7);
+                  MusicPatchEnvelope.field_f[61] = uu.a(var2, (byte) 7);
                 }
                 var2 = fk.a(false, "trinketnames,62");
                 if (null != var2) {
-                  fq.field_f[62] = uu.a(var2, (byte) 14);
+                  MusicPatchEnvelope.field_f[62] = uu.a(var2, (byte) 14);
                 }
                 var2 = fk.a(false, "trinketnames,63");
                 if (null != var2) {
-                  fq.field_f[63] = uu.a(var2, (byte) -96);
+                  MusicPatchEnvelope.field_f[63] = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "trinketnames,64");
                 if (var2 != null) {
-                  fq.field_f[64] = uu.a(var2, (byte) 62);
+                  MusicPatchEnvelope.field_f[64] = uu.a(var2, (byte) 62);
                 }
                 var2 = fk.a(false, "trinketnames,65");
                 if (null != var2) {
-                  fq.field_f[65] = uu.a(var2, (byte) 123);
+                  MusicPatchEnvelope.field_f[65] = uu.a(var2, (byte) 123);
                 }
                 var2 = fk.a(false, "trinketnames,66");
                 if (var2 != null) {
-                  fq.field_f[66] = uu.a(var2, (byte) -106);
+                  MusicPatchEnvelope.field_f[66] = uu.a(var2, (byte) -106);
                 }
                 var2 = fk.a(false, "trinketnames,67");
                 if (null != var2) {
-                  fq.field_f[67] = uu.a(var2, (byte) -108);
+                  MusicPatchEnvelope.field_f[67] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "trinketnames,68");
                 if (null != var2) {
-                  fq.field_f[68] = uu.a(var2, (byte) 56);
+                  MusicPatchEnvelope.field_f[68] = uu.a(var2, (byte) 56);
                 }
                 var2 = fk.a(false, "trinketnames,69");
                 if (null != var2) {
-                  fq.field_f[69] = uu.a(var2, (byte) 42);
+                  MusicPatchEnvelope.field_f[69] = uu.a(var2, (byte) 42);
                 }
                 var2 = fk.a(false, "trinketnames,70");
                 if (var2 != null) {
-                  fq.field_f[70] = uu.a(var2, (byte) -118);
+                  MusicPatchEnvelope.field_f[70] = uu.a(var2, (byte) -118);
                 }
                 var2 = fk.a(false, "trinketnames,71");
                 if (null != var2) {
-                  fq.field_f[71] = uu.a(var2, (byte) 121);
+                  MusicPatchEnvelope.field_f[71] = uu.a(var2, (byte) 121);
                 }
                 var2 = fk.a(false, "trinketnames,72");
                 if (var2 != null) {
-                  fq.field_f[72] = uu.a(var2, (byte) -114);
+                  MusicPatchEnvelope.field_f[72] = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "trinketnames,73");
                 if (null != var2) {
-                  fq.field_f[73] = uu.a(var2, (byte) -126);
+                  MusicPatchEnvelope.field_f[73] = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "trinketnames,74");
                 if (null != var2) {
-                  fq.field_f[74] = uu.a(var2, (byte) -127);
+                  MusicPatchEnvelope.field_f[74] = uu.a(var2, (byte) -127);
                 }
                 var2 = fk.a(false, "trinketnames,75");
                 if (null != var2) {
-                  fq.field_f[75] = uu.a(var2, (byte) -109);
+                  MusicPatchEnvelope.field_f[75] = uu.a(var2, (byte) -109);
                 }
                 var2 = fk.a(false, "trinketnames,76");
                 if (null != var2) {
-                  fq.field_f[76] = uu.a(var2, (byte) 61);
+                  MusicPatchEnvelope.field_f[76] = uu.a(var2, (byte) 61);
                 }
                 var2 = fk.a(false, "trinketnames,77");
                 if (null != var2) {
-                  fq.field_f[77] = uu.a(var2, (byte) -103);
+                  MusicPatchEnvelope.field_f[77] = uu.a(var2, (byte) -103);
                 }
                 var2 = fk.a(false, "trinketnames,78");
                 if (var2 != null) {
-                  fq.field_f[78] = uu.a(var2, (byte) 41);
+                  MusicPatchEnvelope.field_f[78] = uu.a(var2, (byte) 41);
                 }
                 var2 = fk.a(false, "trinketnames,79");
                 if (null != var2) {
-                  fq.field_f[79] = uu.a(var2, (byte) 8);
+                  MusicPatchEnvelope.field_f[79] = uu.a(var2, (byte) 8);
                 }
                 var2 = fk.a(false, "trinketnames,80");
                 if (null != var2) {
-                  fq.field_f[80] = uu.a(var2, (byte) 3);
+                  MusicPatchEnvelope.field_f[80] = uu.a(var2, (byte) 3);
                 }
                 var2 = fk.a(false, "trinketnames,81");
                 if (null != var2) {
-                  fq.field_f[81] = uu.a(var2, (byte) 67);
+                  MusicPatchEnvelope.field_f[81] = uu.a(var2, (byte) 67);
                 }
                 var2 = fk.a(false, "trinketnames,82");
                 if (null != var2) {
-                  fq.field_f[82] = uu.a(var2, (byte) -103);
+                  MusicPatchEnvelope.field_f[82] = uu.a(var2, (byte) -103);
                 }
                 var2 = fk.a(false, "trinketnames,83");
                 if (null != var2) {
-                  fq.field_f[83] = uu.a(var2, (byte) 98);
+                  MusicPatchEnvelope.field_f[83] = uu.a(var2, (byte) 98);
                 }
                 var2 = fk.a(false, "trinketnames,84");
                 if (null != var2) {
-                  fq.field_f[84] = uu.a(var2, (byte) 126);
+                  MusicPatchEnvelope.field_f[84] = uu.a(var2, (byte) 126);
                 }
                 var2 = fk.a(false, "trinketnames,85");
                 if (null != var2) {
-                  fq.field_f[85] = uu.a(var2, (byte) -105);
+                  MusicPatchEnvelope.field_f[85] = uu.a(var2, (byte) -105);
                 }
                 var2 = fk.a(false, "trinketnames,86");
                 if (var2 != null) {
-                  fq.field_f[86] = uu.a(var2, (byte) -117);
+                  MusicPatchEnvelope.field_f[86] = uu.a(var2, (byte) -117);
                 }
                 var2 = fk.a(false, "trinketnames,87");
                 if (var2 != null) {
-                  fq.field_f[87] = uu.a(var2, (byte) -115);
+                  MusicPatchEnvelope.field_f[87] = uu.a(var2, (byte) -115);
                 }
                 var2 = fk.a(false, "trinketnames,88");
                 if (var2 != null) {
-                  fq.field_f[88] = uu.a(var2, (byte) -115);
+                  MusicPatchEnvelope.field_f[88] = uu.a(var2, (byte) -115);
                 }
                 var2 = fk.a(false, "trinketnames,89");
                 if (null != var2) {
-                  fq.field_f[89] = uu.a(var2, (byte) -127);
+                  MusicPatchEnvelope.field_f[89] = uu.a(var2, (byte) -127);
                 }
                 var2 = fk.a(false, "trinketnames,90");
                 if (null != var2) {
-                  fq.field_f[90] = uu.a(var2, (byte) -105);
+                  MusicPatchEnvelope.field_f[90] = uu.a(var2, (byte) -105);
                 }
                 var2 = fk.a(false, "trinketnames,91");
                 if (null != var2) {
-                  fq.field_f[91] = uu.a(var2, (byte) -122);
+                  MusicPatchEnvelope.field_f[91] = uu.a(var2, (byte) -122);
                 }
                 var2 = fk.a(false, "trinketnames,92");
                 if (var2 != null) {
-                  fq.field_f[92] = uu.a(var2, (byte) 20);
+                  MusicPatchEnvelope.field_f[92] = uu.a(var2, (byte) 20);
                 }
                 var2 = fk.a(false, "trinketnames,93");
                 if (var2 != null) {
-                  fq.field_f[93] = uu.a(var2, (byte) -128);
+                  MusicPatchEnvelope.field_f[93] = uu.a(var2, (byte) -128);
                 }
                 var2 = fk.a(false, "trinketnames,94");
                 if (null != var2) {
-                  fq.field_f[94] = uu.a(var2, (byte) -123);
+                  MusicPatchEnvelope.field_f[94] = uu.a(var2, (byte) -123);
                 }
                 var2 = fk.a(false, "trinketnames,95");
                 if (null != var2) {
-                  fq.field_f[95] = uu.a(var2, (byte) -93);
+                  MusicPatchEnvelope.field_f[95] = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "trinketnames,96");
                 if (var2 != null) {
-                  fq.field_f[96] = uu.a(var2, (byte) 76);
+                  MusicPatchEnvelope.field_f[96] = uu.a(var2, (byte) 76);
                 }
                 var2 = fk.a(false, "trinketnames,97");
                 if (var2 != null) {
-                  fq.field_f[97] = uu.a(var2, (byte) -94);
+                  MusicPatchEnvelope.field_f[97] = uu.a(var2, (byte) -94);
                 }
                 var2 = fk.a(false, "trinketnames,98");
                 if (var2 != null) {
-                  fq.field_f[98] = uu.a(var2, (byte) 126);
+                  MusicPatchEnvelope.field_f[98] = uu.a(var2, (byte) 126);
                 }
                 var2 = fk.a(false, "trinketnames,99");
                 if (null != var2) {
-                  fq.field_f[99] = uu.a(var2, (byte) -104);
+                  MusicPatchEnvelope.field_f[99] = uu.a(var2, (byte) -104);
                 }
                 var2 = fk.a(false, "trinketnames,100");
                 if (var2 != null) {
-                  fq.field_f[100] = uu.a(var2, (byte) 10);
+                  MusicPatchEnvelope.field_f[100] = uu.a(var2, (byte) 10);
                 }
                 var2 = fk.a(false, "trinketnames,101");
                 if (null != var2) {
-                  fq.field_f[101] = uu.a(var2, (byte) -113);
+                  MusicPatchEnvelope.field_f[101] = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "trinketnames,102");
                 if (var2 != null) {
-                  fq.field_f[102] = uu.a(var2, (byte) 92);
+                  MusicPatchEnvelope.field_f[102] = uu.a(var2, (byte) 92);
                 }
                 var2 = fk.a(false, "trinketnames,103");
                 if (null != var2) {
-                  fq.field_f[103] = uu.a(var2, (byte) 103);
+                  MusicPatchEnvelope.field_f[103] = uu.a(var2, (byte) 103);
                 }
                 var2 = fk.a(false, "trinketnames,104");
                 if (null != var2) {
-                  fq.field_f[104] = uu.a(var2, (byte) -112);
+                  MusicPatchEnvelope.field_f[104] = uu.a(var2, (byte) -112);
                 }
                 var2 = fk.a(false, "trinketnames,105");
                 if (null != var2) {
-                  fq.field_f[105] = uu.a(var2, (byte) 16);
+                  MusicPatchEnvelope.field_f[105] = uu.a(var2, (byte) 16);
                 }
                 var2 = fk.a(false, "trinketnames,106");
                 if (var2 != null) {
-                  fq.field_f[106] = uu.a(var2, (byte) -123);
+                  MusicPatchEnvelope.field_f[106] = uu.a(var2, (byte) -123);
                 }
                 var2 = fk.a(false, "trinketnames,107");
                 if (var2 != null) {
-                  fq.field_f[107] = uu.a(var2, (byte) 121);
+                  MusicPatchEnvelope.field_f[107] = uu.a(var2, (byte) 121);
                 }
                 var2 = fk.a(false, "trinketnames,108");
                 if (null != var2) {
-                  fq.field_f[108] = uu.a(var2, (byte) 123);
+                  MusicPatchEnvelope.field_f[108] = uu.a(var2, (byte) 123);
                 }
                 var2 = fk.a(false, "trinketnames,109");
                 if (var2 != null) {
-                  fq.field_f[109] = uu.a(var2, (byte) -113);
+                  MusicPatchEnvelope.field_f[109] = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "trinketnames,110");
                 if (null != var2) {
-                  fq.field_f[110] = uu.a(var2, (byte) -105);
+                  MusicPatchEnvelope.field_f[110] = uu.a(var2, (byte) -105);
                 }
                 var2 = fk.a(false, "trinketnames,111");
                 if (var2 != null) {
-                  fq.field_f[111] = uu.a(var2, (byte) -97);
+                  MusicPatchEnvelope.field_f[111] = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "trinketnames,112");
                 if (null != var2) {
-                  fq.field_f[112] = uu.a(var2, (byte) 66);
+                  MusicPatchEnvelope.field_f[112] = uu.a(var2, (byte) 66);
                 }
                 var2 = fk.a(false, "trinketnames,113");
                 if (null != var2) {
-                  fq.field_f[113] = uu.a(var2, (byte) 93);
+                  MusicPatchEnvelope.field_f[113] = uu.a(var2, (byte) 93);
                 }
                 var2 = fk.a(false, "trinketnames,114");
                 if (null != var2) {
-                  fq.field_f[114] = uu.a(var2, (byte) 61);
+                  MusicPatchEnvelope.field_f[114] = uu.a(var2, (byte) 61);
                 }
                 var2 = fk.a(false, "trinketnames,115");
                 if (var2 != null) {
-                  fq.field_f[115] = uu.a(var2, (byte) -97);
+                  MusicPatchEnvelope.field_f[115] = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "trinketnames,116");
                 if (var2 != null) {
-                  fq.field_f[116] = uu.a(var2, (byte) 18);
+                  MusicPatchEnvelope.field_f[116] = uu.a(var2, (byte) 18);
                 }
                 var2 = fk.a(false, "trinketnames,117");
                 if (null != var2) {
-                  fq.field_f[117] = uu.a(var2, (byte) -92);
+                  MusicPatchEnvelope.field_f[117] = uu.a(var2, (byte) -92);
                 }
                 var2 = fk.a(false, "trinketnames,118");
                 if (null != var2) {
-                  fq.field_f[118] = uu.a(var2, (byte) -99);
+                  MusicPatchEnvelope.field_f[118] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "trinketnames,119");
                 if (var2 != null) {
-                  fq.field_f[119] = uu.a(var2, (byte) 75);
+                  MusicPatchEnvelope.field_f[119] = uu.a(var2, (byte) 75);
                 }
                 var2 = fk.a(false, "trinketnames,120");
                 if (var2 != null) {
-                  fq.field_f[120] = uu.a(var2, (byte) -110);
+                  MusicPatchEnvelope.field_f[120] = uu.a(var2, (byte) -110);
                 }
                 var2 = fk.a(false, "trinketnames,121");
                 if (null != var2) {
-                  fq.field_f[121] = uu.a(var2, (byte) 85);
+                  MusicPatchEnvelope.field_f[121] = uu.a(var2, (byte) 85);
                 }
                 var2 = fk.a(false, "trinketnames,122");
                 if (null != var2) {
-                  fq.field_f[122] = uu.a(var2, (byte) -99);
+                  MusicPatchEnvelope.field_f[122] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "trinketnames,123");
                 if (null != var2) {
-                  fq.field_f[123] = uu.a(var2, (byte) -101);
+                  MusicPatchEnvelope.field_f[123] = uu.a(var2, (byte) -101);
                 }
                 var2 = fk.a(false, "trinketnames,124");
                 if (var2 != null) {
-                  fq.field_f[124] = uu.a(var2, (byte) -103);
+                  MusicPatchEnvelope.field_f[124] = uu.a(var2, (byte) -103);
                 }
                 var2 = fk.a(false, "trinketnames,125");
                 if (null != var2) {
-                  fq.field_f[125] = uu.a(var2, (byte) -97);
+                  MusicPatchEnvelope.field_f[125] = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "trinketnames,126");
                 if (var2 != null) {
-                  fq.field_f[126] = uu.a(var2, (byte) 69);
+                  MusicPatchEnvelope.field_f[126] = uu.a(var2, (byte) 69);
                 }
                 var2 = fk.a(false, "trinketnames,127");
                 if (null != var2) {
-                  fq.field_f[127] = uu.a(var2, (byte) 38);
+                  MusicPatchEnvelope.field_f[127] = uu.a(var2, (byte) 38);
                 }
                 var2 = fk.a(false, "trinketnames,128");
                 if (var2 != null) {
-                  fq.field_f[128] = uu.a(var2, (byte) -114);
+                  MusicPatchEnvelope.field_f[128] = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "trinketnames,129");
                 if (null != var2) {
-                  fq.field_f[129] = uu.a(var2, (byte) 19);
+                  MusicPatchEnvelope.field_f[129] = uu.a(var2, (byte) 19);
                 }
                 var2 = fk.a(false, "trinketnames,130");
                 if (null != var2) {
-                  fq.field_f[130] = uu.a(var2, (byte) 99);
+                  MusicPatchEnvelope.field_f[130] = uu.a(var2, (byte) 99);
                 }
                 var2 = fk.a(false, "trinketnames,131");
                 if (null != var2) {
-                  fq.field_f[131] = uu.a(var2, (byte) -126);
+                  MusicPatchEnvelope.field_f[131] = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "trinketnames,132");
                 if (null != var2) {
-                  fq.field_f[132] = uu.a(var2, (byte) 108);
+                  MusicPatchEnvelope.field_f[132] = uu.a(var2, (byte) 108);
                 }
                 var2 = fk.a(false, "trinketnames,133");
                 if (var2 != null) {
-                  fq.field_f[133] = uu.a(var2, (byte) -126);
+                  MusicPatchEnvelope.field_f[133] = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "trinketnames,134");
                 if (var2 != null) {
-                  fq.field_f[134] = uu.a(var2, (byte) -110);
+                  MusicPatchEnvelope.field_f[134] = uu.a(var2, (byte) -110);
                 }
                 var2 = fk.a(false, "trinketdescriptions,0");
                 if (var2 != null) {
@@ -4819,7 +4819,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_HEALING");
                 if (var2 != null) {
-                  mi.field_C = uu.a(var2, (byte) -117);
+                  MusicPatchNode.field_C = uu.a(var2, (byte) -117);
                 }
                 var2 = fk.a(false, "TTREEN_HARMING");
                 if (null != var2) {
@@ -4839,7 +4839,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_INFLUENCE");
                 if (null != var2) {
-                  fq.field_a = uu.a(var2, (byte) -93);
+                  MusicPatchEnvelope.field_a = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "TTREEN_RAYS");
                 if (null != var2) {
@@ -5552,7 +5552,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TRINKET_ACCESSORY_CONFIRM");
                 if (var2 != null) {
-                  io.field_u = uu.a(var2, (byte) 11);
+                  MusicPatch.field_u = uu.a(var2, (byte) 11);
                 }
                 var2 = fk.a(false, "TRINKET_ARMOUR_CONFIRM");
                 if (null != var2) {

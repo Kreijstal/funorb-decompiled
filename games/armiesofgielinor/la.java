@@ -99,7 +99,7 @@ final class la {
           this.a(91);
         }
         AnimationFrameSet var3 = we.a(var2, true);
-        io.a(var3, (byte) -34);
+        MusicPatch.a(var3, (byte) -34);
     }
 
     private final void a(byte param0, int param1) {

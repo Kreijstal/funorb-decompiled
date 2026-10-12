@@ -231,7 +231,7 @@ final class BattlefieldTheme {
         }
     }
 
-    final void prepareMusicSamples(SoundCache soundCache, ResourceArchive patchArchive, ResourceArchive musicArchive, int sampleBudget, ih audioEngine) {
+    final void prepareMusicSamples(SoundCache soundCache, ResourceArchive patchArchive, ResourceArchive musicArchive, int sampleBudget, MidiPcmStream audioEngine) {
         if (null == this.musicTrackName ||
           audioEngine == null ||
           musicArchive == null) {
@@ -242,7 +242,7 @@ final class BattlefieldTheme {
           return;
         }
         try {
-          audioEngine.a(soundCache, patchArchive, sampleBudget, this.musicTrack, (byte) 86);
+          audioEngine.prepareTrackSamples(soundCache, patchArchive, sampleBudget, this.musicTrack, (byte) 86);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "co.J(" + (soundCache != null ? "{...}" : "null") + ',' + (patchArchive != null ? "{...}" : "null") + ',' + (musicArchive != null ? "{...}" : "null") + ',' + sampleBudget + ',' + (audioEngine != null ? "{...}" : "null") + ')');
         }

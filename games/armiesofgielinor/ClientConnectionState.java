@@ -134,7 +134,7 @@ final class ClientConnectionState {
         }
         try {
           var5 = en.field_E.getParagraphHeight(param3, -20 + var4_int, 0);
-          fe.b(50 + param2, 80 + param1, var4_int, var5 + 20, io.field_m, TutorialController.field_e, 0, 192);
+          fe.b(50 + param2, 80 + param1, var4_int, var5 + 20, MusicPatch.field_m, TutorialController.field_e, 0, 192);
           en.field_E.a(param3, 62 + param2, 90 + param1, -20 + var4_int, var5, 16777215, -1, 1, 0, 0);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sa.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

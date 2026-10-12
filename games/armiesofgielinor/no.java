@@ -193,7 +193,7 @@ final class no extends en {
         if (param2 < -82) {
           param0 = param0 + this.x;
           param1 = param1 + this.y;
-          this.a(mi.field_z, this.field_L, param1, 16777215, param0);
+          this.a(MusicPatchNode.field_z, this.field_L, param1, 16777215, param0);
           this.a(eb.field_e, this.field_Q, param1, 16777215, param0);
           this.a(BattleTutorial.field_l, this.field_O, param1, 16777215, param0);
           return;

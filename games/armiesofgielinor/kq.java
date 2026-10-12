@@ -74,16 +74,16 @@ class kq extends fw {
             stackIn_13_3 = array$0;
             stackIn_13_4 = 1;
             if (og.field_m != 1) {
-              stackIn_14_5 = fq.field_f[spellId].toLowerCase();
+              stackIn_14_5 = MusicPatchEnvelope.field_f[spellId].toLowerCase();
             } else {
-              stackIn_14_5 = fq.field_f[spellId];
+              stackIn_14_5 = MusicPatchEnvelope.field_f[spellId];
             }
             stackIn_13_3[stackIn_13_4] = stackIn_14_5;
             stackIn_16_4 = 2;
             if (og.field_m != 1) {
-              stackIn_17_5 = fq.field_f[var6].toLowerCase();
+              stackIn_17_5 = MusicPatchEnvelope.field_f[var6].toLowerCase();
             } else {
-              stackIn_17_5 = fq.field_f[var6];
+              stackIn_17_5 = MusicPatchEnvelope.field_f[var6];
             }
             stackIn_13_2[stackIn_16_4] = stackIn_17_5;
             stackIn_18_0 = fo.a(stackIn_13_0, stackIn_13_1, stackIn_13_2);
@@ -103,16 +103,16 @@ class kq extends fw {
             stackIn_29_3 = array$1;
             stackIn_29_4 = 1;
             if (og.field_m == 1) {
-              stackIn_30_5 = fq.field_f[spellId];
+              stackIn_30_5 = MusicPatchEnvelope.field_f[spellId];
             } else {
-              stackIn_30_5 = fq.field_f[spellId].toLowerCase();
+              stackIn_30_5 = MusicPatchEnvelope.field_f[spellId].toLowerCase();
             }
             stackIn_29_3[stackIn_29_4] = stackIn_30_5;
             stackIn_32_4 = 2;
             if (og.field_m == 1) {
-              stackIn_33_5 = fq.field_f[var6Lifetime1];
+              stackIn_33_5 = MusicPatchEnvelope.field_f[var6Lifetime1];
             } else {
-              stackIn_33_5 = fq.field_f[var6Lifetime1].toLowerCase();
+              stackIn_33_5 = MusicPatchEnvelope.field_f[var6Lifetime1].toLowerCase();
             }
             stackIn_29_2[stackIn_32_4] = stackIn_33_5;
             stackIn_34_0 = fo.a(stackIn_29_0, stackIn_29_1, stackIn_29_2);
@@ -128,21 +128,21 @@ class kq extends fw {
           var6Lifetime2 = bw.field_f[var7.accessoryType];
           array$2 = new String[3];
           stackIn_41_0 = 4800;
-          stackIn_41_1 = io.field_u;
+          stackIn_41_1 = MusicPatch.field_u;
           stackIn_41_2 = array$2;
           stackIn_41_3 = array$2;
           stackIn_41_4 = 1;
           if (og.field_m == 1) {
-            stackIn_42_5 = fq.field_f[spellId];
+            stackIn_42_5 = MusicPatchEnvelope.field_f[spellId];
           } else {
-            stackIn_42_5 = fq.field_f[spellId].toLowerCase();
+            stackIn_42_5 = MusicPatchEnvelope.field_f[spellId].toLowerCase();
           }
           stackIn_41_3[stackIn_41_4] = stackIn_42_5;
           stackIn_44_4 = 2;
           if (og.field_m == 1) {
-            stackIn_45_5 = fq.field_f[var6Lifetime2];
+            stackIn_45_5 = MusicPatchEnvelope.field_f[var6Lifetime2];
           } else {
-            stackIn_45_5 = fq.field_f[var6Lifetime2].toLowerCase();
+            stackIn_45_5 = MusicPatchEnvelope.field_f[var6Lifetime2].toLowerCase();
           }
           stackIn_41_2[stackIn_44_4] = stackIn_45_5;
           stackIn_46_0 = fo.a(stackIn_41_0, stackIn_41_1, stackIn_41_2);

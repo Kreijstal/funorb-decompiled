@@ -62,7 +62,7 @@ final class hk extends ClientUiComponent {
             }
           }
           if (LobbyRoom.field_Kb != null &&
-            !LobbyRoom.field_Kb.g(param0 + 11771)) {
+            !LobbyRoom.field_Kb.isPlaying(param0 + 11771)) {
             MapLayout.field_u = null;
             return;
           }

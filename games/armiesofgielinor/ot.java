@@ -70,7 +70,7 @@ final class ot extends dr {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -24872) {
-            stackIn_4_0 = new nd(ih.e(90));
+            stackIn_4_0 = new nd(MidiPcmStream.e(90));
             return stackIn_4_0;
           }
           stackIn_2_0 = (nd) null;

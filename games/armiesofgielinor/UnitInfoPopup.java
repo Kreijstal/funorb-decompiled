@@ -64,7 +64,7 @@ final class UnitInfoPopup extends IntrusiveNode {
         try {
           SpellConfirmationDialog.field_j.b();
           SoftwareRaster.b();
-          fe.b(0, 0, 134, 61, io.field_m, nd.field_b, 0, 0);
+          fe.b(0, 0, 134, 61, MusicPatch.field_m, nd.field_b, 0, 0);
           qt.field_e.drawOpaque(2, 2);
           SoftwareRaster.b(5, 5, 124, 18, 0, 192);
           SoftwareRaster.b(5, 25, 30, 30, 0, 192);

@@ -29,13 +29,13 @@ final class sh {
         if (param0 >= 20) {
           var2 = this.field_n.frameId >> 16;
           var3 = we.a(var2, true);
-          io.a(var3, (byte) -34);
+          MusicPatch.a(var3, (byte) -34);
           return;
         }
         field_m = (ClientUiComponent) null;
         var2Lifetime1 = this.field_n.frameId >> 16;
         var3Lifetime1 = we.a(var2Lifetime1, true);
-        io.a(var3Lifetime1, (byte) -34);
+        MusicPatch.a(var3Lifetime1, (byte) -34);
     }
 
     final void b(int param0) {

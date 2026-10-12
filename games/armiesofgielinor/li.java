@@ -24,7 +24,7 @@ final class li extends IntrusiveNode {
         try {
           var1_int = PaletteRegionMap.field_g.frameId >> 16;
           var2 = we.a(var1_int, true);
-          io.a(var2, (byte) -34);
+          MusicPatch.a(var2, (byte) -34);
           if (CipherPacketBuffer.currentBattlefield.localPlayer <= -1) {
             stackIn_4_0 = CipherPacketBuffer.currentBattlefield.currentPlayer;
           } else {

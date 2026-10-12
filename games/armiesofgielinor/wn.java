@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wn extends ih {
+final class wn extends MidiPcmStream {
     private boolean field_cb;
     private int[] field_fb;
     private int field_ib;
@@ -76,16 +76,16 @@ final class wn extends ih {
         }
     }
 
-    final synchronized void a(int param0, int param1, byte param2) {
-        if (-1 == param1) {
-          this.field_ib = param0;
+    final synchronized void setChannelGain(int gain, int channel, byte obfuscationGuard) {
+        if (-1 == channel) {
+          this.field_ib = gain;
           return;
         }
-        super.a(param0, param1, (byte) -28);
-        this.field_S[param1] = param0 << 12;
-        if (param2 > -13) {
+        super.setChannelGain(gain, channel, (byte) -28);
+        this.field_S[channel] = gain << 12;
+        if (obfuscationGuard > -13) {
           MusicTrack var5 = (MusicTrack) null;
-          this.a(true, (byte) 40, true, (MusicTrack) null);
+          this.startTrack(true, (byte) 40, true, (MusicTrack) null);
         }
     }
 
@@ -174,8 +174,8 @@ final class wn extends ih {
         int var9 = 0;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4_int = this.i(4096);
-          this.f(-87, this.field_ib * var4_int >> 8);
+          var4_int = this.getMasterVolume(4096);
+          this.setMasterVolume(-87, this.field_ib * var4_int >> 8);
           super.render(output, outputOffset, frameCount);
           if (!this.field_cb) {
             var5 = 1;
@@ -196,14 +196,14 @@ final class wn extends ih {
                 } else {
                   var5 = 0;
                 }
-                super.a(this.field_S[var6] >> 12, var6, (byte) -123);
+                super.setChannelGain(this.field_S[var6] >> 12, var6, (byte) -123);
               }
             }
             if (var5 != 0) {
               this.field_cb = true;
             }
           }
-          this.f(-54, var4_int);
+          this.setMasterVolume(-54, var4_int);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -258,7 +258,7 @@ final class wn extends ih {
         }
         this.field_hb.field_a[param1] = param3;
         if (param2 >= -126) {
-          this.a(82, -42, (byte) 31);
+          this.setChannelGain(82, -42, (byte) 31);
         }
         int var5 = this.field_S[param1];
         int var6 = (this.field_hb.field_a[param1] << 12) - var5;
@@ -274,7 +274,7 @@ final class wn extends ih {
         this.field_fb[param1] = var8 != 0 ? -var7 : var7;
     }
 
-    wn(ih param0) {
+    wn(MidiPcmStream param0) {
         super(param0);
         this.field_fb = new int[16];
         this.field_ib = 256;
@@ -302,15 +302,15 @@ final class wn extends ih {
         }
     }
 
-    final synchronized void a(boolean param0, byte param1, boolean param2, MusicTrack param3) {
+    final synchronized void startTrack(boolean loop, byte obfuscationGuard, boolean stopSounds, MusicTrack track) {
         try {
-          if (param1 > -78) {
+          if (obfuscationGuard > -78) {
             this.field_hb = (vk) null;
           }
           this.k(3933);
-          super.a(param0, (byte) -110, param2, param3);
+          super.startTrack(loop, (byte) -110, stopSounds, track);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wn.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wn.EA(" + loop + ',' + obfuscationGuard + ',' + stopSounds + ',' + (track != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -335,7 +335,7 @@ final class wn extends ih {
           RgbSprite[] var4 = (RgbSprite[]) null;
           wn.a(47, (RgbSprite[]) null, 67, -125, 49, -47);
         }
-        super.a(256, -1, (byte) -20);
+        super.setChannelGain(256, -1, (byte) -20);
     }
 
     static {

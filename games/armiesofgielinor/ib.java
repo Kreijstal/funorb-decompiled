@@ -239,22 +239,22 @@ final class ib extends mk {
                   stackIn_40_1 = pg.playerProfile.getUnlockLevel(param7 ^ -40);
                   stackIn_41_2 = !(2 > BufferedSocket.field_j);
                   if (!BufferedFile.a(stackIn_40_0, stackIn_40_1, stackIn_41_2, var11, -1208926000, BoundedFile.field_e[0])) {
-                    fe.a(var13, var14, (param5 >> 1) - 9, 78, io.field_m, MoveAttackAction.field_x, 0, 128, false);
+                    fe.a(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, MoveAttackAction.field_x, 0, 128, false);
                   } else {
-                    fe.a(var13, var14, -9 + (param5 >> 1), 78, io.field_m, TutorialController.field_e, 0, 128, false);
+                    fe.a(var13, var14, -9 + (param5 >> 1), 78, MusicPatch.field_m, TutorialController.field_e, 0, 128, false);
                   }
                 } else {
                   stackIn_34_0 = kd.field_X;
                   stackIn_34_1 = pg.playerProfile.getUnlockLevel(0);
                   stackIn_35_2 = !(BufferedSocket.field_j < 2);
                   if (!BufferedFile.a(stackIn_34_0, stackIn_34_1, stackIn_35_2, var11, -1208926000, BoundedFile.field_e[0])) {
-                    fe.a(var13, var14, (param5 >> 1) - 9, 78, io.field_m, dh.field_l, 0, 128, false);
+                    fe.a(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, dh.field_l, 0, 128, false);
                   } else {
-                    fe.a(var13, var14, -9 + (param5 >> 1), 78, io.field_m, jh.field_k, 0, 128, false);
+                    fe.a(var13, var14, -9 + (param5 >> 1), 78, MusicPatch.field_m, jh.field_k, 0, 128, false);
                   }
                 }
               } else {
-                fe.a(var13, var14, (param5 >> 1) - 9, 78, io.field_m, nd.field_b, 0, 128, false);
+                fe.a(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, nd.field_b, 0, 128, false);
               }
               if (var12_int % 2 != 1) {
                 stackIn_47_0 = 0;
